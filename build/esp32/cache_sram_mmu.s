@@ -1,7 +1,7 @@
 	.file	"cache_sram_mmu.c"
 	.text
 .Ltext0:
-	.section	.iram1,"ax",@progbits
+	.section	.iram1.3,"ax",@progbits
 	.literal_position
 	.literal .LC0, 65535
 	.literal .LC1, 1065353215
@@ -267,18 +267,19 @@ cache_sram_mmu_set:
 .Letext0:
 	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
 	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
-	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h"
+	.file 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x290
+	.4byte	0x2d5
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF32
+	.4byte	.LASF36
 	.byte	0xc
-	.4byte	.LASF33
-	.4byte	.LASF34
+	.4byte	.LASF37
+	.4byte	.LASF38
 	.4byte	.Ldebug_ranges0+0
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -324,96 +325,127 @@ cache_sram_mmu_set:
 	.byte	0x4
 	.byte	0x2d
 	.4byte	0x48
+	.uleb128 0x4
+	.4byte	.LASF9
+	.byte	0x5
+	.byte	0xd8
+	.4byte	0x53
 	.uleb128 0x2
 	.byte	0x4
 	.byte	0x5
-	.4byte	.LASF9
-	.uleb128 0x2
-	.byte	0x4
-	.byte	0x7
 	.4byte	.LASF10
 	.uleb128 0x2
 	.byte	0x4
 	.byte	0x7
 	.4byte	.LASF11
+	.uleb128 0x2
+	.byte	0x4
+	.byte	0x7
+	.4byte	.LASF12
 	.uleb128 0x5
 	.byte	0x4
-	.4byte	0x8e
+	.4byte	0x99
 	.uleb128 0x6
 	.uleb128 0x2
 	.byte	0x1
 	.byte	0x8
-	.4byte	.LASF12
-	.uleb128 0x7
 	.4byte	.LASF13
-	.byte	0x5
-	.2byte	0x12f
-	.4byte	0x88
 	.uleb128 0x7
 	.4byte	.LASF14
-	.byte	0x5
-	.2byte	0x133
-	.4byte	0x88
+	.byte	0x6
+	.2byte	0x12f
+	.4byte	0x93
 	.uleb128 0x7
 	.4byte	.LASF15
-	.byte	0x5
-	.2byte	0x137
-	.4byte	0x88
+	.byte	0x6
+	.2byte	0x133
+	.4byte	0x93
 	.uleb128 0x7
 	.4byte	.LASF16
-	.byte	0x5
-	.2byte	0x13b
-	.4byte	0x88
-	.uleb128 0x8
-	.byte	0x10
-	.byte	0x5
-	.2byte	0x159
-	.4byte	0x104
-	.uleb128 0x9
+	.byte	0x6
+	.2byte	0x137
+	.4byte	0x93
+	.uleb128 0x7
 	.4byte	.LASF17
-	.byte	0x5
-	.2byte	0x15a
-	.4byte	0x96
-	.byte	0
-	.uleb128 0xa
-	.string	"end"
-	.byte	0x5
-	.2byte	0x15b
-	.4byte	0xa2
-	.byte	0x4
-	.uleb128 0x9
+	.byte	0x6
+	.2byte	0x13b
+	.4byte	0x93
+	.uleb128 0x7
 	.4byte	.LASF18
-	.byte	0x5
-	.2byte	0x15c
-	.4byte	0xae
-	.byte	0x8
+	.byte	0x6
+	.2byte	0x13f
+	.4byte	0xdd
+	.uleb128 0x5
+	.byte	0x4
+	.4byte	0xe3
+	.uleb128 0x8
+	.4byte	0xf7
+	.4byte	0xf7
 	.uleb128 0x9
+	.4byte	0x73
+	.uleb128 0x9
+	.4byte	0x73
+	.byte	0
+	.uleb128 0x2
+	.byte	0x1
+	.byte	0x2
 	.4byte	.LASF19
-	.byte	0x5
-	.2byte	0x15d
-	.4byte	0xba
+	.uleb128 0xa
+	.byte	0x14
+	.byte	0x6
+	.2byte	0x160
+	.4byte	0x149
+	.uleb128 0xb
+	.4byte	.LASF20
+	.byte	0x6
+	.2byte	0x161
+	.4byte	0xa1
+	.byte	0
+	.uleb128 0xc
+	.string	"end"
+	.byte	0x6
+	.2byte	0x162
+	.4byte	0xad
+	.byte	0x4
+	.uleb128 0xb
+	.4byte	.LASF21
+	.byte	0x6
+	.2byte	0x163
+	.4byte	0xb9
+	.byte	0x8
+	.uleb128 0xb
+	.4byte	.LASF22
+	.byte	0x6
+	.2byte	0x164
+	.4byte	0xc5
 	.byte	0xc
+	.uleb128 0xb
+	.4byte	.LASF23
+	.byte	0x6
+	.2byte	0x166
+	.4byte	0xd1
+	.byte	0x10
 	.byte	0
 	.uleb128 0x7
-	.4byte	.LASF20
-	.byte	0x5
-	.2byte	0x15e
-	.4byte	0xc6
-	.uleb128 0xb
-	.4byte	.LASF35
+	.4byte	.LASF24
+	.byte	0x6
+	.2byte	0x168
+	.4byte	0xfe
+	.uleb128 0xd
+	.4byte	.LASF39
 	.byte	0x2
 	.byte	0x4a
 	.4byte	0x68
 	.byte	0x3
-	.4byte	0x12c
-	.uleb128 0xc
+	.4byte	0x171
+	.uleb128 0xe
 	.string	"reg"
 	.byte	0x2
 	.byte	0x4a
 	.4byte	0x68
 	.byte	0
-	.uleb128 0xd
-	.4byte	.LASF36
+	.uleb128 0xf
+	.4byte	.LASF40
 	.byte	0x1
 	.byte	0x3d
 	.4byte	0x53
@@ -421,139 +453,139 @@ cache_sram_mmu_set:
 	.4byte	.LFE3-.LFB3
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x271
-	.uleb128 0xe
-	.4byte	.LASF21
+	.4byte	0x2b6
+	.uleb128 0x10
+	.4byte	.LASF25
 	.byte	0x1
 	.byte	0x3d
 	.4byte	0x41
 	.4byte	.LLST0
-	.uleb128 0xf
+	.uleb128 0x11
 	.string	"pid"
 	.byte	0x1
 	.byte	0x3d
 	.4byte	0x41
 	.4byte	.LLST1
-	.uleb128 0xe
-	.4byte	.LASF22
+	.uleb128 0x10
+	.4byte	.LASF26
 	.byte	0x1
 	.byte	0x3d
 	.4byte	0x53
 	.4byte	.LLST2
-	.uleb128 0xe
-	.4byte	.LASF23
+	.uleb128 0x10
+	.4byte	.LASF27
 	.byte	0x1
 	.byte	0x3d
 	.4byte	0x53
 	.4byte	.LLST3
-	.uleb128 0xe
-	.4byte	.LASF24
+	.uleb128 0x10
+	.4byte	.LASF28
 	.byte	0x1
 	.byte	0x3d
 	.4byte	0x41
 	.4byte	.LLST4
-	.uleb128 0xf
+	.uleb128 0x11
 	.string	"num"
 	.byte	0x1
 	.byte	0x3d
 	.4byte	0x41
 	.4byte	.LLST5
-	.uleb128 0x10
-	.4byte	.LASF25
+	.uleb128 0x12
+	.4byte	.LASF29
 	.byte	0x1
 	.byte	0x3f
-	.4byte	0x271
+	.4byte	0x2b6
 	.4byte	.LLST6
-	.uleb128 0x11
+	.uleb128 0x13
 	.string	"i"
 	.byte	0x1
 	.byte	0x45
 	.4byte	0x53
 	.4byte	.LLST7
-	.uleb128 0x10
-	.4byte	.LASF26
+	.uleb128 0x12
+	.4byte	.LASF30
 	.byte	0x1
 	.byte	0x45
 	.4byte	0x53
 	.4byte	.LLST8
-	.uleb128 0x10
-	.4byte	.LASF27
+	.uleb128 0x12
+	.4byte	.LASF31
 	.byte	0x1
 	.byte	0x45
 	.4byte	0x53
 	.4byte	.LLST9
-	.uleb128 0x10
-	.4byte	.LASF28
+	.uleb128 0x12
+	.4byte	.LASF32
 	.byte	0x1
 	.byte	0x46
 	.4byte	0x53
 	.4byte	.LLST10
-	.uleb128 0x10
-	.4byte	.LASF29
+	.uleb128 0x12
+	.4byte	.LASF33
 	.byte	0x1
 	.byte	0x47
 	.4byte	0x53
 	.4byte	.LLST11
-	.uleb128 0x12
-	.4byte	0x110
+	.uleb128 0x14
+	.4byte	0x155
 	.4byte	.LBB6
 	.4byte	.LBE6-.LBB6
 	.byte	0x1
 	.byte	0x7b
-	.4byte	0x214
-	.uleb128 0x13
-	.4byte	0x120
+	.4byte	0x259
+	.uleb128 0x15
+	.4byte	0x165
 	.4byte	.LLST12
 	.byte	0
-	.uleb128 0x12
-	.4byte	0x110
+	.uleb128 0x14
+	.4byte	0x155
 	.4byte	.LBB8
 	.4byte	.LBE8-.LBB8
 	.byte	0x1
 	.byte	0x7d
-	.4byte	0x231
-	.uleb128 0x13
-	.4byte	0x120
+	.4byte	0x276
+	.uleb128 0x15
+	.4byte	0x165
 	.4byte	.LLST13
 	.byte	0
-	.uleb128 0x14
-	.4byte	.LVL1
-	.4byte	0x27c
-	.uleb128 0x15
-	.4byte	.LVL3
-	.4byte	0x288
-	.4byte	0x260
 	.uleb128 0x16
+	.4byte	.LVL1
+	.4byte	0x2c1
+	.uleb128 0x17
+	.4byte	.LVL3
+	.4byte	0x2cd
+	.4byte	0x2a5
+	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x2
 	.byte	0x72
 	.sleb128 0
-	.uleb128 0x16
+	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5b
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
-	.uleb128 0x16
+	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5c
 	.uleb128 0x2
 	.byte	0x74
 	.sleb128 0
-	.uleb128 0x16
+	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5e
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x19
 	.4byte	.LVL17
 	.uleb128 0x2
 	.byte	0x74
 	.sleb128 0
-	.uleb128 0x17
+	.uleb128 0x19
 	.4byte	.LVL27
 	.uleb128 0x2
 	.byte	0x72
@@ -561,17 +593,17 @@ cache_sram_mmu_set:
 	.byte	0
 	.uleb128 0x5
 	.byte	0x4
-	.4byte	0x277
-	.uleb128 0x18
-	.4byte	0x104
-	.uleb128 0x19
-	.4byte	.LASF30
-	.4byte	.LASF30
-	.byte	0x5
-	.2byte	0x171
+	.4byte	0x2bc
 	.uleb128 0x1a
-	.4byte	.LASF31
-	.4byte	.LASF31
+	.4byte	0x149
+	.uleb128 0x1b
+	.4byte	.LASF34
+	.4byte	.LASF34
+	.byte	0x6
+	.2byte	0x17a
+	.uleb128 0x1c
+	.4byte	.LASF35
+	.4byte	.LASF35
 	.byte	0x1
 	.byte	0x32
 	.byte	0
@@ -661,6 +693,24 @@ cache_sram_mmu_set:
 	.byte	0
 	.byte	0
 	.uleb128 0x8
+	.uleb128 0x15
+	.byte	0x1
+	.uleb128 0x27
+	.uleb128 0x19
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x9
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xa
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0xb
@@ -673,7 +723,7 @@ cache_sram_mmu_set:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x9
+	.uleb128 0xb
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -688,7 +738,7 @@ cache_sram_mmu_set:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -703,7 +753,7 @@ cache_sram_mmu_set:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0xb
+	.uleb128 0xd
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3
@@ -722,7 +772,7 @@ cache_sram_mmu_set:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0xe
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -735,7 +785,7 @@ cache_sram_mmu_set:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xd
+	.uleb128 0xf
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -762,38 +812,8 @@ cache_sram_mmu_set:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xe
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x17
-	.byte	0
-	.byte	0
-	.uleb128 0xf
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x17
-	.byte	0
-	.byte	0
 	.uleb128 0x10
-	.uleb128 0x34
+	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
@@ -808,7 +828,7 @@ cache_sram_mmu_set:
 	.byte	0
 	.byte	0
 	.uleb128 0x11
-	.uleb128 0x34
+	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0x8
@@ -823,6 +843,36 @@ cache_sram_mmu_set:
 	.byte	0
 	.byte	0
 	.uleb128 0x12
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x17
+	.byte	0
+	.byte	0
+	.uleb128 0x13
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x17
+	.byte	0
+	.byte	0
+	.uleb128 0x14
 	.uleb128 0x1d
 	.byte	0x1
 	.uleb128 0x31
@@ -839,7 +889,7 @@ cache_sram_mmu_set:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x15
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x31
@@ -848,7 +898,7 @@ cache_sram_mmu_set:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x16
 	.uleb128 0x4109
 	.byte	0
 	.uleb128 0x11
@@ -857,7 +907,7 @@ cache_sram_mmu_set:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x15
+	.uleb128 0x17
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
@@ -868,7 +918,7 @@ cache_sram_mmu_set:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x16
+	.uleb128 0x18
 	.uleb128 0x410a
 	.byte	0
 	.uleb128 0x2
@@ -877,7 +927,7 @@ cache_sram_mmu_set:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x19
 	.uleb128 0x4109
 	.byte	0
 	.uleb128 0x11
@@ -886,14 +936,14 @@ cache_sram_mmu_set:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x18
+	.uleb128 0x1a
 	.uleb128 0x26
 	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x19
+	.uleb128 0x1b
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -910,7 +960,7 @@ cache_sram_mmu_set:
 	.uleb128 0x5
 	.byte	0
 	.byte	0
-	.uleb128 0x1a
+	.uleb128 0x1c
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -1240,78 +1290,86 @@ cache_sram_mmu_set:
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
-.LASF18:
+.LASF21:
 	.string	"op_lock"
-.LASF36:
+.LASF40:
 	.string	"cache_sram_mmu_set"
-.LASF26:
-	.string	"shift"
-.LASF14:
-	.string	"spi_flash_guard_end_func_t"
 .LASF23:
+	.string	"is_safe_write_address"
+.LASF30:
+	.string	"shift"
+.LASF9:
+	.string	"size_t"
+.LASF15:
+	.string	"spi_flash_guard_end_func_t"
+.LASF27:
 	.string	"paddr"
-.LASF17:
-	.string	"start"
 .LASF20:
-	.string	"spi_flash_guard_funcs_t"
+	.string	"start"
 .LASF24:
+	.string	"spi_flash_guard_funcs_t"
+.LASF28:
 	.string	"psize"
-.LASF19:
+.LASF22:
 	.string	"op_unlock"
-.LASF32:
+.LASF36:
 	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
-.LASF25:
+.LASF29:
 	.string	"guard"
 .LASF1:
 	.string	"unsigned char"
-.LASF11:
+.LASF12:
 	.string	"long unsigned int"
 .LASF3:
 	.string	"short unsigned int"
-.LASF30:
+.LASF34:
 	.string	"spi_flash_guard_get"
-.LASF21:
+.LASF25:
 	.string	"cpu_no"
-.LASF22:
+.LASF26:
 	.string	"vaddr"
 .LASF7:
 	.string	"__uint32_t"
+.LASF18:
+	.string	"spi_flash_is_safe_write_address_t"
 .LASF4:
 	.string	"unsigned int"
-.LASF28:
+.LASF32:
 	.string	"mmu_addr"
 .LASF6:
 	.string	"long long unsigned int"
-.LASF34:
+.LASF38:
 	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/esp32"
-.LASF29:
+.LASF33:
 	.string	"mmu_table_val"
-.LASF16:
+.LASF17:
 	.string	"spi_flash_op_unlock_func_t"
-.LASF10:
+.LASF11:
 	.string	"sizetype"
 .LASF5:
 	.string	"long long int"
-.LASF15:
+.LASF16:
 	.string	"spi_flash_op_lock_func_t"
-.LASF12:
+.LASF13:
 	.string	"char"
-.LASF31:
+.LASF35:
 	.string	"cache_sram_mmu_set_rom"
-.LASF27:
+.LASF31:
 	.string	"mask_s"
 .LASF2:
 	.string	"short int"
-.LASF33:
+.LASF37:
 	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/cache_sram_mmu.c"
 .LASF8:
 	.string	"uint32_t"
-.LASF9:
+.LASF10:
 	.string	"long int"
-.LASF35:
+.LASF39:
 	.string	"DPORT_REG_READ"
-.LASF13:
+.LASF14:
 	.string	"spi_flash_guard_start_func_t"
 .LASF0:
 	.string	"signed char"
+.LASF19:
+	.string	"_Bool"
 	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

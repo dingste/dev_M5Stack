@@ -771,7 +771,7 @@ void __assert_func (const char *, int, const char *, const char *) __attribute__
 # 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/sdmmc_reg.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/sdmmc_periph.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/sdmmc_struct.h" 1
-# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/sdmmc_struct.h"
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/sdmmc_struct.h"
 typedef struct {
     uint32_t reserved1: 1;
     uint32_t disable_int_on_completion: 1;

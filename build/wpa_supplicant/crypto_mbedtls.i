@@ -1615,7 +1615,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h" 2
 
@@ -2138,9 +2138,7 @@ int crypto_ec_point_cmp(const struct crypto_ec *e,
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h" 1
-# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h" 1
-# 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 42 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 1
 # 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h"
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
@@ -2155,7 +2153,7 @@ int crypto_ec_point_cmp(const struct crypto_ec *e,
 void *esp_mbedtls_mem_calloc(size_t n, size_t size);
 void esp_mbedtls_mem_free(void *ptr);
 # 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
-# 2717 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h"
+# 2758 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h" 1
 # 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 1
@@ -2163,20 +2161,22 @@ void esp_mbedtls_mem_free(void *ptr);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed/limits.h" 1 3 4
 # 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 2
 # 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h" 2
-# 681 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
+# 706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
 typedef int mbedtls_iso_c_forbids_empty_translation_units;
-# 2718 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
-# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h" 2
+# 2759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
+# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h" 2
 
 
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
 # 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h" 2
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
     typedef int32_t mbedtls_mpi_sint;
     typedef uint32_t mbedtls_mpi_uint;
 
         typedef uint64_t mbedtls_t_udbl;
-# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 187 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 typedef struct mbedtls_mpi
 {
     int s;
@@ -2184,20 +2184,15 @@ typedef struct mbedtls_mpi
     mbedtls_mpi_uint *p;
 }
 mbedtls_mpi;
-# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 void mbedtls_mpi_init( mbedtls_mpi *X );
-
-
-
-
-
-
+# 212 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 void mbedtls_mpi_free( mbedtls_mpi *X );
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_grow( mbedtls_mpi *X, size_t nblimbs );
-# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_shrink( mbedtls_mpi *X, size_t nblimbs );
-# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_copy( mbedtls_mpi *X, const mbedtls_mpi *Y );
 
 
@@ -2207,96 +2202,127 @@ int mbedtls_mpi_copy( mbedtls_mpi *X, const mbedtls_mpi *Y );
 
 
 void mbedtls_mpi_swap( mbedtls_mpi *X, mbedtls_mpi *Y );
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_safe_cond_assign( mbedtls_mpi *X, const mbedtls_mpi *Y, unsigned char assign );
-# 289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 318 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_safe_cond_swap( mbedtls_mpi *X, mbedtls_mpi *Y, unsigned char assign );
-# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_lset( mbedtls_mpi *X, mbedtls_mpi_sint z );
-# 310 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_get_bit( const mbedtls_mpi *X, size_t pos );
-# 326 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_set_bit( mbedtls_mpi *X, size_t pos, unsigned char val );
-# 336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 373 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 size_t mbedtls_mpi_lsb( const mbedtls_mpi *X );
-# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 size_t mbedtls_mpi_bitlen( const mbedtls_mpi *X );
-
-
-
-
-
-
+# 402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 size_t mbedtls_mpi_size( const mbedtls_mpi *X );
-# 364 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 414 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_read_string( mbedtls_mpi *X, int radix, const char *s );
-# 382 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_write_string( const mbedtls_mpi *X, int radix,
                               char *buf, size_t buflen, size_t *olen );
-# 406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_read_file( mbedtls_mpi *X, int radix, FILE *fin );
-# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_write_file( const char *p, const mbedtls_mpi *X, int radix, FILE *fout );
-# 433 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_read_binary( mbedtls_mpi *X, const unsigned char *buf, size_t buflen );
-# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_write_binary( const mbedtls_mpi *X, unsigned char *buf, size_t buflen );
-# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 480 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_write_file( const char *p, const mbedtls_mpi *X,
+                            int radix, FILE *fout );
+# 496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_read_binary( mbedtls_mpi *X, const unsigned char *buf,
+                             size_t buflen );
+# 513 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_write_binary( const mbedtls_mpi *X, unsigned char *buf,
+                              size_t buflen );
+# 526 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_shift_l( mbedtls_mpi *X, size_t count );
-# 469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_shift_r( mbedtls_mpi *X, size_t count );
-# 481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_cmp_abs( const mbedtls_mpi *X, const mbedtls_mpi *Y );
-# 493 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_cmp_mpi( const mbedtls_mpi *X, const mbedtls_mpi *Y );
-# 505 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 579 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_lt_mpi_ct( const mbedtls_mpi *X, const mbedtls_mpi *Y,
+        unsigned *ret );
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_cmp_int( const mbedtls_mpi *X, mbedtls_mpi_sint z );
-# 517 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_add_abs( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 529 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_sub_abs( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 541 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_add_mpi( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_sub_mpi( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_add_int( mbedtls_mpi *X, const mbedtls_mpi *A, mbedtls_mpi_sint b );
-# 577 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_sub_int( mbedtls_mpi *X, const mbedtls_mpi *A, mbedtls_mpi_sint b );
-# 589 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_mul_mpi( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 603 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_mul_int( mbedtls_mpi *X, const mbedtls_mpi *A, mbedtls_mpi_uint b );
-# 619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_div_mpi( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_div_int( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A, mbedtls_mpi_sint b );
-# 649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_mod_mpi( mbedtls_mpi *R, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 663 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_mod_int( mbedtls_mpi_uint *r, const mbedtls_mpi *A, mbedtls_mpi_sint b );
-# 683 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_exp_mod( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *E, const mbedtls_mpi *N, mbedtls_mpi *_RR );
-# 700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_add_abs( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 620 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_sub_abs( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 634 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_add_mpi( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 648 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_sub_mpi( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 662 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_add_int( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b );
+# 677 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_sub_int( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b );
+# 692 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_mul_mpi( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 708 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_mul_int( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         mbedtls_mpi_uint b );
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_div_mpi( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 750 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_div_int( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b );
+# 770 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_mod_mpi( mbedtls_mpi *R, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 789 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_mod_int( mbedtls_mpi_uint *r, const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b );
+# 818 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_exp_mod( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *E, const mbedtls_mpi *N,
+                         mbedtls_mpi *_RR );
+# 839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_fill_random( mbedtls_mpi *X, size_t size,
                      int (*f_rng)(void *, unsigned char *, size_t),
                      void *p_rng );
-# 714 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_gcd( mbedtls_mpi *G, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 728 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_inv_mod( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *N );
-# 741 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_is_prime( const mbedtls_mpi *X,
-                  int (*f_rng)(void *, unsigned char *, size_t),
-                  void *p_rng );
-# 759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_gen_prime( mbedtls_mpi *X, size_t nbits, int dh_flag,
+# 854 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_gcd( mbedtls_mpi *G, const mbedtls_mpi *A,
+                     const mbedtls_mpi *B );
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_inv_mod( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *N );
+# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+ int mbedtls_mpi_is_prime( const mbedtls_mpi *X,
+                          int (*f_rng)(void *, unsigned char *, size_t),
+                          void *p_rng );
+# 934 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_is_prime_ext( const mbedtls_mpi *X, int rounds,
+                              int (*f_rng)(void *, unsigned char *, size_t),
+                              void *p_rng );
+
+
+
+
+
+
+typedef enum {
+    MBEDTLS_MPI_GEN_PRIME_FLAG_DH = 0x0001,
+    MBEDTLS_MPI_GEN_PRIME_FLAG_LOW_ERR = 0x0002,
+} mbedtls_mpi_gen_prime_flag_t;
+# 967 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_gen_prime( mbedtls_mpi *X, size_t nbits, int flags,
                    int (*f_rng)(void *, unsigned char *, size_t),
                    void *p_rng );
-# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 981 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_self_test( int verbose );
-# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h" 2
-# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h" 2
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 typedef enum
 {
     MBEDTLS_ECP_DP_NONE = 0,
@@ -2314,7 +2340,7 @@ typedef enum
     MBEDTLS_ECP_DP_SECP256K1,
     MBEDTLS_ECP_DP_CURVE448,
 } mbedtls_ecp_group_id;
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 typedef struct mbedtls_ecp_curve_info
 {
     mbedtls_ecp_group_id grp_id;
@@ -2322,7 +2348,7 @@ typedef struct mbedtls_ecp_curve_info
     uint16_t bit_size;
     const char *name;
 } mbedtls_ecp_curve_info;
-# 114 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 typedef struct mbedtls_ecp_point
 {
     mbedtls_mpi X;
@@ -2330,7 +2356,7 @@ typedef struct mbedtls_ecp_point
     mbedtls_mpi Z;
 }
 mbedtls_ecp_point;
-# 159 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 typedef struct mbedtls_ecp_group
 {
     mbedtls_ecp_group_id id;
@@ -2355,7 +2381,9 @@ typedef struct mbedtls_ecp_group
     size_t T_size;
 }
 mbedtls_ecp_group;
-# 254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 320 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+typedef void mbedtls_ecp_restart_ctx;
+# 332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 typedef struct mbedtls_ecp_keypair
 {
     mbedtls_ecp_group grp;
@@ -2363,15 +2391,15 @@ typedef struct mbedtls_ecp_keypair
     mbedtls_ecp_point Q;
 }
 mbedtls_ecp_keypair;
-# 280 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 const mbedtls_ecp_curve_info *mbedtls_ecp_curve_list( void );
-# 290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 const mbedtls_ecp_group_id *mbedtls_ecp_grp_id_list( void );
-# 301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 448 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 const mbedtls_ecp_curve_info *mbedtls_ecp_curve_info_from_grp_id( mbedtls_ecp_group_id grp_id );
-# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 459 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 const mbedtls_ecp_curve_info *mbedtls_ecp_curve_info_from_tls_id( uint16_t tls_id );
-# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 const mbedtls_ecp_curve_info *mbedtls_ecp_curve_info_from_name( const char *name );
 
 
@@ -2380,7 +2408,7 @@ const mbedtls_ecp_curve_info *mbedtls_ecp_curve_info_from_name( const char *name
 
 
 void mbedtls_ecp_point_init( mbedtls_ecp_point *pt );
-# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 void mbedtls_ecp_group_init( mbedtls_ecp_group *grp );
 
 
@@ -2396,81 +2424,104 @@ void mbedtls_ecp_keypair_init( mbedtls_ecp_keypair *key );
 
 
 void mbedtls_ecp_point_free( mbedtls_ecp_point *pt );
-
-
-
-
-
+# 511 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 void mbedtls_ecp_group_free( mbedtls_ecp_group *grp );
-
-
-
-
-
+# 520 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 void mbedtls_ecp_keypair_free( mbedtls_ecp_keypair *key );
-# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 552 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_copy( mbedtls_ecp_point *P, const mbedtls_ecp_point *Q );
-# 391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_group_copy( mbedtls_ecp_group *dst, const mbedtls_ecp_group *src );
-# 401 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_group_copy( mbedtls_ecp_group *dst,
+                            const mbedtls_ecp_group *src );
+# 577 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_set_zero( mbedtls_ecp_point *pt );
-# 411 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 588 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_is_zero( mbedtls_ecp_point *pt );
-# 425 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_point_cmp( const mbedtls_ecp_point *P,
                            const mbedtls_ecp_point *Q );
-# 440 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 617 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_point_read_string( mbedtls_ecp_point *P, int radix,
                            const char *x, const char *y );
-# 457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 640 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_point_write_binary( const mbedtls_ecp_group *grp, const mbedtls_ecp_point *P,
                             int format, size_t *olen,
                             unsigned char *buf, size_t buflen );
-# 480 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_point_read_binary( const mbedtls_ecp_group *grp, mbedtls_ecp_point *P,
-                           const unsigned char *buf, size_t ilen );
-# 498 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_tls_read_point( const mbedtls_ecp_group *grp, mbedtls_ecp_point *pt,
-                        const unsigned char **buf, size_t len );
-# 516 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_tls_write_point( const mbedtls_ecp_group *grp, const mbedtls_ecp_point *pt,
-                         int format, size_t *olen,
-                         unsigned char *buf, size_t blen );
-# 536 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 666 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_point_read_binary( const mbedtls_ecp_group *grp,
+                                   mbedtls_ecp_point *P,
+                                   const unsigned char *buf, size_t ilen );
+# 688 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_tls_read_point( const mbedtls_ecp_group *grp,
+                                mbedtls_ecp_point *pt,
+                                const unsigned char **buf, size_t len );
+# 714 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_tls_write_point( const mbedtls_ecp_group *grp,
+                                 const mbedtls_ecp_point *pt,
+                                 int format, size_t *olen,
+                                 unsigned char *buf, size_t blen );
+# 736 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_group_load( mbedtls_ecp_group *grp, mbedtls_ecp_group_id id );
-# 552 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_tls_read_group( mbedtls_ecp_group *grp, const unsigned char **buf, size_t len );
-# 565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_tls_write_group( const mbedtls_ecp_group *grp, size_t *olen,
-                         unsigned char *buf, size_t blen );
-# 596 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 755 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_tls_read_group( mbedtls_ecp_group *grp,
+                                const unsigned char **buf, size_t len );
+# 776 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_tls_read_group_id( mbedtls_ecp_group_id *grp,
+                                   const unsigned char **buf,
+                                   size_t len );
+# 797 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_tls_write_group( const mbedtls_ecp_group *grp,
+                                 size_t *olen,
+                                 unsigned char *buf, size_t blen );
+# 834 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_mul( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
              const mbedtls_mpi *m, const mbedtls_ecp_point *P,
              int (*f_rng)(void *, unsigned char *, size_t), void *p_rng );
-# 622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_mul_restartable( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
+             const mbedtls_mpi *m, const mbedtls_ecp_point *P,
+             int (*f_rng)(void *, unsigned char *, size_t), void *p_rng,
+             mbedtls_ecp_restart_ctx *rs_ctx );
+# 902 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_muladd( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
              const mbedtls_mpi *m, const mbedtls_ecp_point *P,
              const mbedtls_mpi *n, const mbedtls_ecp_point *Q );
-# 649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_check_pubkey( const mbedtls_ecp_group *grp, const mbedtls_ecp_point *pt );
-# 666 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_check_privkey( const mbedtls_ecp_group *grp, const mbedtls_mpi *d );
-# 688 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 940 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_muladd_restartable(
+             mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
+             const mbedtls_mpi *m, const mbedtls_ecp_point *P,
+             const mbedtls_mpi *n, const mbedtls_ecp_point *Q,
+             mbedtls_ecp_restart_ctx *rs_ctx );
+# 973 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_check_pubkey( const mbedtls_ecp_group *grp,
+                              const mbedtls_ecp_point *pt );
+# 995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_check_privkey( const mbedtls_ecp_group *grp,
+                               const mbedtls_mpi *d );
+# 1013 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_gen_privkey( const mbedtls_ecp_group *grp,
+                     mbedtls_mpi *d,
+                     int (*f_rng)(void *, unsigned char *, size_t),
+                     void *p_rng );
+# 1045 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_gen_keypair_base( mbedtls_ecp_group *grp,
-                     const mbedtls_ecp_point *G,
-                     mbedtls_mpi *d, mbedtls_ecp_point *Q,
-                     int (*f_rng)(void *, unsigned char *, size_t),
-                     void *p_rng );
-# 712 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_gen_keypair( mbedtls_ecp_group *grp, mbedtls_mpi *d, mbedtls_ecp_point *Q,
-                     int (*f_rng)(void *, unsigned char *, size_t),
-                     void *p_rng );
-# 728 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+                                  const mbedtls_ecp_point *G,
+                                  mbedtls_mpi *d, mbedtls_ecp_point *Q,
+                                  int (*f_rng)(void *, unsigned char *, size_t),
+                                  void *p_rng );
+# 1074 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_gen_keypair( mbedtls_ecp_group *grp, mbedtls_mpi *d,
+                             mbedtls_ecp_point *Q,
+                             int (*f_rng)(void *, unsigned char *, size_t),
+                             void *p_rng );
+# 1092 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_gen_key( mbedtls_ecp_group_id grp_id, mbedtls_ecp_keypair *key,
-                int (*f_rng)(void *, unsigned char *, size_t), void *p_rng );
-# 746 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_check_pub_priv( const mbedtls_ecp_keypair *pub, const mbedtls_ecp_keypair *prv );
-# 756 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+                         int (*f_rng)(void *, unsigned char *, size_t),
+                         void *p_rng );
+# 1113 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_check_pub_priv( const mbedtls_ecp_keypair *pub,
+                                const mbedtls_ecp_keypair *prv );
+# 1124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_self_test( int verbose );
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/entropy.h" 1
@@ -2483,7 +2534,7 @@ int mbedtls_ecp_self_test( int verbose );
 # 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
 # 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h" 2
-# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
+# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/sha512_alt.h" 1
 # 32 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/sha512_alt.h"
 typedef enum {
@@ -2504,21 +2555,10 @@ typedef struct
     esp_mbedtls_sha512_mode mode;
 }
 mbedtls_sha512_context;
-# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h" 2
-
-
-
-
-
-
-
+# 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h" 2
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
 void mbedtls_sha512_init( mbedtls_sha512_context *ctx );
-
-
-
-
-
-
+# 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
 void mbedtls_sha512_free( mbedtls_sha512_context *ctx );
 
 
@@ -2529,43 +2569,43 @@ void mbedtls_sha512_free( mbedtls_sha512_context *ctx );
 
 void mbedtls_sha512_clone( mbedtls_sha512_context *dst,
                            const mbedtls_sha512_context *src );
-# 102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
+# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
 int mbedtls_sha512_starts_ret( mbedtls_sha512_context *ctx, int is384 );
-# 114 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
+# 124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
 int mbedtls_sha512_update_ret( mbedtls_sha512_context *ctx,
                     const unsigned char *input,
                     size_t ilen );
-# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
+# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
 int mbedtls_sha512_finish_ret( mbedtls_sha512_context *ctx,
                                unsigned char output[64] );
-# 140 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
+# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
 int mbedtls_internal_sha512_process( mbedtls_sha512_context *ctx,
                                      const unsigned char data[128] );
-# 158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
+# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
  void mbedtls_sha512_starts( mbedtls_sha512_context *ctx,
                                                int is384 );
-# 171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
+# 188 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
  void mbedtls_sha512_update( mbedtls_sha512_context *ctx,
                                                const unsigned char *input,
                                                size_t ilen );
-# 184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
  void mbedtls_sha512_finish( mbedtls_sha512_context *ctx,
                                                unsigned char output[64] );
-# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
+# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
  void mbedtls_sha512_process(
                                             mbedtls_sha512_context *ctx,
                                             const unsigned char data[128] );
-# 222 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
+# 245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
 int mbedtls_sha512_ret( const unsigned char *input,
                         size_t ilen,
                         unsigned char output[64],
                         int is384 );
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
+# 277 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
  void mbedtls_sha512( const unsigned char *input,
                                         size_t ilen,
                                         unsigned char output[64],
                                         int is384 );
-# 264 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha512.h"
 int mbedtls_sha512_self_test( int verbose );
 # 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/entropy.h" 2
 # 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/entropy.h"
@@ -2636,12 +2676,12 @@ int mbedtls_entropy_self_test( int verbose );
 int mbedtls_entropy_source_self_test( int verbose );
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h" 1
-# 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
+# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h" 1
 # 50 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
 # 51 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h" 2
-# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/aes_alt.h" 1
 # 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/aes_alt.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h" 1
@@ -2700,12 +2740,12 @@ _Bool
 
 void ets_aes_crypt(const uint8_t input[16], uint8_t output[16]);
 # 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h" 2
-# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
 typedef struct {
     uint8_t key_bytes;
+    volatile uint8_t key_in_hardware;
     uint8_t key[32];
 } esp_aes_context;
-
 
 
 
@@ -2717,9 +2757,9 @@ typedef struct
     esp_aes_context tweak;
 
 } esp_aes_xts_context;
-# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
+# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
 void esp_aes_acquire_hardware( void );
-# 86 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
+# 82 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
 void esp_aes_release_hardware( void );
 
 
@@ -2735,7 +2775,7 @@ void esp_aes_init( esp_aes_context *ctx );
 
 
 void esp_aes_free( esp_aes_context *ctx );
-# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
 void esp_aes_xts_init( esp_aes_xts_context *ctx );
 
 
@@ -2744,18 +2784,18 @@ void esp_aes_xts_init( esp_aes_xts_context *ctx );
 
 
 void esp_aes_xts_free( esp_aes_xts_context *ctx );
-# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
+# 124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
 int esp_aes_setkey( esp_aes_context *ctx, const unsigned char *key, unsigned int keybits );
-# 140 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
+# 136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
 int esp_aes_crypt_ecb( esp_aes_context *ctx, int mode, const unsigned char input[16], unsigned char output[16] );
-# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
+# 160 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
 int esp_aes_crypt_cbc( esp_aes_context *ctx,
                        int mode,
                        size_t length,
                        unsigned char iv[16],
                        const unsigned char *input,
                        unsigned char *output );
-# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
 int esp_aes_crypt_cfb128( esp_aes_context *ctx,
                           int mode,
                           size_t length,
@@ -2763,14 +2803,14 @@ int esp_aes_crypt_cfb128( esp_aes_context *ctx,
                           unsigned char iv[16],
                           const unsigned char *input,
                           unsigned char *output );
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
+# 225 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
 int esp_aes_crypt_cfb8( esp_aes_context *ctx,
                         int mode,
                         size_t length,
                         unsigned char iv[16],
                         const unsigned char *input,
                         unsigned char *output );
-# 258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
+# 254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
 int esp_aes_crypt_ctr( esp_aes_context *ctx,
                        size_t length,
                        size_t *nc_off,
@@ -2778,20 +2818,20 @@ int esp_aes_crypt_ctr( esp_aes_context *ctx,
                        unsigned char stream_block[16],
                        const unsigned char *input,
                        unsigned char *output );
-# 280 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
+# 276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
 int esp_aes_xts_setkey_enc( esp_aes_xts_context *ctx,
                                 const unsigned char *key,
                                 unsigned int keybits );
-# 298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
+# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
 int esp_aes_xts_setkey_dec( esp_aes_xts_context *ctx,
                                 const unsigned char *key,
                                 unsigned int keybits );
-# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
+# 308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
 int esp_internal_aes_encrypt( esp_aes_context *ctx, const unsigned char input[16], unsigned char output[16] );
 
 
 void esp_aes_encrypt( esp_aes_context *ctx, const unsigned char input[16], unsigned char output[16] ) __attribute__((deprecated));
-# 326 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
+# 322 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/aes.h"
 int esp_internal_aes_decrypt( esp_aes_context *ctx, const unsigned char input[16], unsigned char output[16] );
 
 
@@ -2801,59 +2841,49 @@ void esp_aes_decrypt( esp_aes_context *ctx, const unsigned char input[16], unsig
 typedef esp_aes_context mbedtls_aes_context;
 # 51 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/aes_alt.h"
 typedef esp_aes_xts_context mbedtls_aes_xts_context;
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h" 2
-# 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
+# 116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h" 2
+# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
 void esp_aes_init( mbedtls_aes_context *ctx );
-
-
-
-
-
-
+# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
 void esp_aes_free( mbedtls_aes_context *ctx );
-# 140 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
+# 146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
 void esp_aes_xts_init( mbedtls_aes_xts_context *ctx );
-
-
-
-
-
-
+# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
 void esp_aes_xts_free( mbedtls_aes_xts_context *ctx );
-# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
+# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
 int esp_aes_setkey( mbedtls_aes_context *ctx, const unsigned char *key,
                     unsigned int keybits );
-# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
+# 191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
 int esp_aes_setkey( mbedtls_aes_context *ctx, const unsigned char *key,
                     unsigned int keybits );
-# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
+# 211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
 int esp_aes_xts_setkey_enc( mbedtls_aes_xts_context *ctx,
                                 const unsigned char *key,
                                 unsigned int keybits );
-# 215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
+# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
 int esp_aes_xts_setkey_dec( mbedtls_aes_xts_context *ctx,
                                 const unsigned char *key,
                                 unsigned int keybits );
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
+# 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
 int esp_aes_crypt_ecb( mbedtls_aes_context *ctx,
                     int mode,
                     const unsigned char input[16],
                     unsigned char output[16] );
-# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
 int esp_aes_crypt_cbc( mbedtls_aes_context *ctx,
                     int mode,
                     size_t length,
                     unsigned char iv[16],
                     const unsigned char *input,
                     unsigned char *output );
-# 326 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
+# 350 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
 int esp_aes_crypt_xts( mbedtls_aes_xts_context *ctx,
                            int mode,
                            size_t length,
                            const unsigned char data_unit[16],
                            const unsigned char *input,
                            unsigned char *output );
-# 369 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
+# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
 int esp_aes_crypt_cfb128( mbedtls_aes_context *ctx,
                        int mode,
                        size_t length,
@@ -2861,14 +2891,14 @@ int esp_aes_crypt_cfb128( mbedtls_aes_context *ctx,
                        unsigned char iv[16],
                        const unsigned char *input,
                        unsigned char *output );
-# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
+# 442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
 int esp_aes_crypt_cfb8( mbedtls_aes_context *ctx,
                     int mode,
                     size_t length,
                     unsigned char iv[16],
                     const unsigned char *input,
                     unsigned char *output );
-# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
+# 582 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
 int esp_aes_crypt_ctr( mbedtls_aes_context *ctx,
                        size_t length,
                        size_t *nc_off,
@@ -2876,26 +2906,26 @@ int esp_aes_crypt_ctr( mbedtls_aes_context *ctx,
                        unsigned char stream_block[16],
                        const unsigned char *input,
                        unsigned char *output );
-# 558 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
+# 602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
 int esp_internal_aes_encrypt( mbedtls_aes_context *ctx,
                                   const unsigned char input[16],
                                   unsigned char output[16] );
-# 573 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
+# 617 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
 int esp_internal_aes_decrypt( mbedtls_aes_context *ctx,
                                   const unsigned char input[16],
                                   unsigned char output[16] );
-# 593 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
+# 637 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
  void mbedtls_aes_encrypt( mbedtls_aes_context *ctx,
                                              const unsigned char input[16],
                                              unsigned char output[16] );
-# 607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
+# 651 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
  void mbedtls_aes_decrypt( mbedtls_aes_context *ctx,
                                              const unsigned char input[16],
                                              unsigned char output[16] );
-# 620 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
+# 666 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/aes.h"
 int mbedtls_aes_self_test( int verbose );
-# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h" 2
-# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
+# 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h" 2
+# 169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
 typedef struct mbedtls_ctr_drbg_context
 {
     unsigned char counter[16];
@@ -2923,9 +2953,9 @@ typedef struct mbedtls_ctr_drbg_context
 
 }
 mbedtls_ctr_drbg_context;
-# 146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
+# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
 void mbedtls_ctr_drbg_init( mbedtls_ctr_drbg_context *ctx );
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
+# 276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
 int mbedtls_ctr_drbg_seed( mbedtls_ctr_drbg_context *ctx,
                    int (*f_entropy)(void *, unsigned char *, size_t),
                    void *p_entropy,
@@ -2938,34 +2968,42 @@ int mbedtls_ctr_drbg_seed( mbedtls_ctr_drbg_context *ctx,
 
 
 void mbedtls_ctr_drbg_free( mbedtls_ctr_drbg_context *ctx );
-# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
+# 302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
 void mbedtls_ctr_drbg_set_prediction_resistance( mbedtls_ctr_drbg_context *ctx,
                                          int resistance );
-# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
+# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
 void mbedtls_ctr_drbg_set_entropy_len( mbedtls_ctr_drbg_context *ctx,
                                size_t len );
-# 213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
 void mbedtls_ctr_drbg_set_reseed_interval( mbedtls_ctr_drbg_context *ctx,
                                    int interval );
-# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
+# 360 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
 int mbedtls_ctr_drbg_reseed( mbedtls_ctr_drbg_context *ctx,
                      const unsigned char *additional, size_t len );
-# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
-void mbedtls_ctr_drbg_update( mbedtls_ctr_drbg_context *ctx,
-                      const unsigned char *additional, size_t add_len );
-# 263 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
+# 378 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
+int mbedtls_ctr_drbg_update_ret( mbedtls_ctr_drbg_context *ctx,
+                                 const unsigned char *additional,
+                                 size_t add_len );
+# 408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
 int mbedtls_ctr_drbg_random_with_add( void *p_rng,
                               unsigned char *output, size_t output_len,
                               const unsigned char *additional, size_t add_len );
-# 281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
+# 428 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
 int mbedtls_ctr_drbg_random( void *p_rng,
                      unsigned char *output, size_t output_len );
-# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
+# 453 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
+ void mbedtls_ctr_drbg_update(
+    mbedtls_ctr_drbg_context *ctx,
+    const unsigned char *additional,
+    size_t add_len );
+# 472 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
 int mbedtls_ctr_drbg_write_seed_file( mbedtls_ctr_drbg_context *ctx, const char *path );
-# 310 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
+# 488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
 int mbedtls_ctr_drbg_update_seed_file( mbedtls_ctr_drbg_context *ctx, const char *path );
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
+# 499 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ctr_drbg.h"
 int mbedtls_ctr_drbg_self_test( int verbose );
+
+
 
 
 int mbedtls_ctr_drbg_seed_entropy_len( mbedtls_ctr_drbg_context *,
@@ -2990,7 +3028,7 @@ int mbedtls_ctr_drbg_seed_entropy_len( mbedtls_ctr_drbg_context *,
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
 typedef volatile struct {
     uint32_t bt_select;
     uint32_t out;
@@ -3209,6 +3247,9 @@ static inline void __attribute__ ((deprecated)) PIN_PULLDWN_EN(uint32_t PIN_NAME
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_pins.h" 1
@@ -3330,7 +3371,7 @@ void esp_intr_noniram_disable();
 void esp_intr_noniram_enable();
 # 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
 extern const uint32_t GPIO_PIN_MUX_REG[40];
 # 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
@@ -4420,25 +4461,25 @@ typedef enum {
 typedef esp_sleep_source_t esp_sleep_wakeup_cause_t;
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_disable_wakeup_source(esp_sleep_source_t source);
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ulp_wakeup();
-# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_timer_wakeup(uint64_t time_in_us);
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_touchpad_wakeup();
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 touch_pad_t esp_sleep_get_touchpad_wakeup_status();
-# 161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext0_wakeup(gpio_num_t gpio_num, int level);
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext1_wakeup(uint64_t mask, esp_sleep_ext1_wakeup_mode_t mode);
-# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_gpio_wakeup();
-# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_uart_wakeup(int uart_num);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 uint64_t esp_sleep_get_ext1_wakeup_status();
-# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
                                    esp_sleep_pd_option_t option);
 
@@ -4448,11 +4489,11 @@ esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
 
 
 void esp_deep_sleep_start() __attribute__((noreturn));
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_light_sleep_start();
-# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_deep_sleep(uint64_t time_in_us) __attribute__((noreturn));
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated));
 
 
@@ -4462,7 +4503,7 @@ void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated)
 
 
 esp_sleep_wakeup_cause_t esp_sleep_get_wakeup_cause();
-# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_wake_deep_sleep(void);
 
 
@@ -4470,7 +4511,7 @@ void esp_wake_deep_sleep(void);
 
 
 typedef void (*esp_deep_sleep_wake_stub_fn_t)(void);
-# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_set_deep_sleep_wake_stub(esp_deep_sleep_wake_stub_fn_t new_stub);
 
 
@@ -4494,6 +4535,12 @@ void esp_default_wake_deep_sleep(void);
 
 void esp_deep_sleep_disable_rom_logging(void);
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+       
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+const char* esp_get_idf_version(void);
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
 
 
 
@@ -4505,7 +4552,7 @@ typedef enum {
     ESP_MAC_BT,
     ESP_MAC_ETH,
 } esp_mac_type_t;
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef enum {
     ESP_RST_UNKNOWN,
     ESP_RST_POWERON,
@@ -4548,9 +4595,9 @@ typedef void (*shutdown_handler_t)(void);
 
 
 esp_err_t esp_register_shutdown_handler(shutdown_handler_t handle);
-# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_restart(void) __attribute__ ((noreturn));
-# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
@@ -4559,11 +4606,11 @@ void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
 esp_reset_reason_t esp_reset_reason(void);
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_time(void) __attribute__ ((deprecated));
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_get_free_heap_size(void);
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
@@ -4573,36 +4620,28 @@ uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
 uint32_t esp_get_minimum_free_heap_size( void );
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_random(void);
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_fill_random(void *buf, size_t len);
-# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_set(uint8_t *mac);
-# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_get(uint8_t *mac);
-# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_custom(uint8_t *mac);
-# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_default(uint8_t *mac);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t system_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_read_mac(uint8_t* mac, esp_mac_type_t type);
-# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_derive_local_mac(uint8_t* local_mac, const uint8_t* universal_mac);
-# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 const char* system_get_sdk_version(void) __attribute__ ((deprecated));
-
-
-
-
-
-
-
-const char* esp_get_idf_version(void);
 
 
 
@@ -4611,7 +4650,7 @@ const char* esp_get_idf_version(void);
 typedef enum {
     CHIP_ESP32 = 1,
 } esp_chip_model_t;
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef struct {
     esp_chip_model_t model;
     uint32_t features;
@@ -4689,7 +4728,7 @@ struct crypto_bignum *crypto_bignum_init_set(const u8 *buf, size_t len)
                   ;
     }
 
-    do { if( ( ret = mbedtls_mpi_read_binary(bn, buf, len) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_read_binary(bn, buf, len)) ) != 0 ) goto cleanup; } while( 0 );
     return (struct crypto_bignum *) bn;
 
 cleanup:
@@ -4846,13 +4885,13 @@ int crypto_bignum_legendre(const struct crypto_bignum *a,
     mbedtls_mpi_init(&tmp);
 
 
-    do { if( ( ret = mbedtls_mpi_sub_int(&exp, (const mbedtls_mpi *) p, 1) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_shift_r(&exp, 1) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_exp_mod(&tmp, (const mbedtls_mpi *) a, &exp, (const mbedtls_mpi *) p, 
+    do { if( ( ret = (mbedtls_mpi_sub_int(&exp, (const mbedtls_mpi *) p, 1)) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_shift_r(&exp, 1)) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_exp_mod(&tmp, (const mbedtls_mpi *) a, &exp, (const mbedtls_mpi *) p, 
 # 223 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 3 4
    ((void *)0)
 # 223 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c"
-   ) ) != 0 ) goto cleanup; } while( 0 );
+   )) ) != 0 ) goto cleanup; } while( 0 );
 
     if (mbedtls_mpi_cmp_int(&tmp, 1) == 0) {
         res = 1;
@@ -4913,7 +4952,7 @@ struct crypto_ec *crypto_ec_init(int group)
                   ;
     }
 
-    mbedtls_ecp_group_init( &e->group );
+    mbedtls_ecp_group_init(&e->group);
 
     if (mbedtls_ecp_group_load(&e->group, grp_id)) {
         crypto_ec_deinit(e);
@@ -4938,7 +4977,7 @@ void crypto_ec_deinit(struct crypto_ec *e)
         return;
     }
 
-    mbedtls_ecp_group_free( &e->group );
+    mbedtls_ecp_group_free(&e->group);
     free((e));
 }
 
@@ -5056,9 +5095,9 @@ struct crypto_ec_point *crypto_ec_point_from_bin(struct crypto_ec *e,
     pt = calloc(1, (sizeof(mbedtls_ecp_point)));
     mbedtls_ecp_point_init(pt);
 
-    do { if( ( ret = mbedtls_mpi_read_binary(&pt->X, val, len) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_read_binary(&pt->Y, val + len, len) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_lset((&pt->Z), 1) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_read_binary(&pt->X, val, len)) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_read_binary(&pt->Y, val + len, len)) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_lset((&pt->Z), 1)) ) != 0 ) goto cleanup; } while( 0 );
 
     return (struct crypto_ec_point *) pt;
 
@@ -5082,8 +5121,8 @@ int crypto_ec_point_add(struct crypto_ec *e, const struct crypto_ec_point *a,
 
     mbedtls_mpi_init(&one);
 
-    do { if( ( ret = mbedtls_mpi_lset( &one, 1 ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_ecp_muladd(&e->group, (mbedtls_ecp_point *) c, &one, (const mbedtls_ecp_point *)a , &one, (const mbedtls_ecp_point *)b) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_lset( &one, 1 )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_ecp_muladd(&e->group, (mbedtls_ecp_point *) c, &one, (const mbedtls_ecp_point *)a , &one, (const mbedtls_ecp_point *)b)) ) != 0 ) goto cleanup; } while( 0 );
 
 cleanup:
     mbedtls_mpi_free(&one);
@@ -5100,23 +5139,24 @@ int crypto_ec_point_mul(struct crypto_ec *e, const struct crypto_ec_point *p,
     mbedtls_ctr_drbg_context ctr_drbg;
 
     mbedtls_entropy_init(&entropy);
+    mbedtls_ctr_drbg_init(&ctr_drbg);
 
-    do { if( ( ret = mbedtls_ctr_drbg_seed(&ctr_drbg, mbedtls_entropy_func, &entropy, 
-# 424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 3 4
+    do { if( ( ret = (mbedtls_ctr_drbg_seed(&ctr_drbg, mbedtls_entropy_func, &entropy, 
+# 425 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 3 4
    ((void *)0)
-# 424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c"
-   , 0) ) != 0 ) goto cleanup; } while( 0 )
+# 425 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c"
+   , 0)) ) != 0 ) goto cleanup; } while( 0 )
                                              ;
 
-    do { if( ( ret = mbedtls_ecp_mul(&e->group, (mbedtls_ecp_point *) res, (const mbedtls_mpi *)b, (const mbedtls_ecp_point *)p, mbedtls_ctr_drbg_random, &ctr_drbg) ) != 0 ) goto cleanup; } while( 0 )
+    do { if( ( ret = (mbedtls_ecp_mul(&e->group, (mbedtls_ecp_point *) res, (const mbedtls_mpi *)b, (const mbedtls_ecp_point *)p, mbedtls_ctr_drbg_random, &ctr_drbg)) ) != 0 ) goto cleanup; } while( 0 )
 
 
 
 
                            ;
 cleanup:
-    mbedtls_ctr_drbg_free( &ctr_drbg );
-    mbedtls_entropy_free( &entropy );
+    mbedtls_ctr_drbg_free(&ctr_drbg);
+    mbedtls_entropy_free(&entropy);
     return ret ? -1 : 0;
 }
 
@@ -5131,12 +5171,12 @@ static int ecp_opp( const mbedtls_ecp_group *grp, mbedtls_ecp_point *R, const mb
 
 
     if (R != P) {
-        do { if( ( ret = mbedtls_ecp_copy(R, P) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_ecp_copy(R, P)) ) != 0 ) goto cleanup; } while( 0 );
     }
 
 
     if (mbedtls_mpi_cmp_int( &R->Y, 0) != 0) {
-        do { if( ( ret = mbedtls_mpi_sub_mpi(&R->Y, &grp->P, &R->Y) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_sub_mpi(&R->Y, &grp->P, &R->Y)) ) != 0 ) goto cleanup; } while( 0 );
     }
 
 cleanup:
@@ -5158,25 +5198,25 @@ int crypto_ec_point_solve_y_coord(struct crypto_ec *e,
     int ret = 0;
 
     y = &((mbedtls_ecp_point *)p)->Y;
-# 487 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c"
+# 488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c"
     y_sqr = (mbedtls_mpi *) crypto_ec_point_compute_y_sqr(e, x);
 
     if (y_sqr) {
 
-        do { if( ( ret = mbedtls_mpi_add_int(&temp, &e->group.P, 1) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_div_int(&temp, 
-# 492 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 3 4
-       ((void *)0)
-# 492 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c"
-       , &temp, 4) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_exp_mod(y, y_sqr, &temp, &e->group.P, 
+        do { if( ( ret = (mbedtls_mpi_add_int(&temp, &e->group.P, 1)) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_div_int(&temp, 
 # 493 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 3 4
        ((void *)0)
 # 493 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c"
-       ) ) != 0 ) goto cleanup; } while( 0 );
+       , &temp, 4)) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_exp_mod(y, y_sqr, &temp, &e->group.P, 
+# 494 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 3 4
+       ((void *)0)
+# 494 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c"
+       )) ) != 0 ) goto cleanup; } while( 0 );
 
         if (y_bit) {
-            do { if( ( ret = mbedtls_mpi_sub_mpi(y, &e->group.P, y) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_sub_mpi(y, &e->group.P, y)) ) != 0 ) goto cleanup; } while( 0 );
         }
     } else {
         ret = 1;
@@ -5197,14 +5237,14 @@ crypto_ec_point_compute_y_sqr(struct crypto_ec *e,
 
     mbedtls_mpi *y_sqr = calloc(1, (sizeof(mbedtls_mpi)));
     if (y_sqr == 
-# 516 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 3 4
+# 517 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 3 4
                 ((void *)0)
-# 516 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c"
+# 517 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c"
                     ) {
         return 
-# 517 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 3 4
+# 518 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 3 4
               ((void *)0)
-# 517 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c"
+# 518 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c"
                   ;
     }
 
@@ -5219,25 +5259,25 @@ crypto_ec_point_compute_y_sqr(struct crypto_ec *e,
 
 
 
-    do { if( ( ret = mbedtls_mpi_lset( &num, 3) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_exp_mod(&temp, (const mbedtls_mpi *) x, &num, &e->group.P, 
-# 532 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 3 4
+    do { if( ( ret = (mbedtls_mpi_lset( &num, 3)) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_exp_mod(&temp, (const mbedtls_mpi *) x, &num, &e->group.P, 
+# 533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 3 4
    ((void *)0)
-# 532 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c"
-   ) ) != 0 ) goto cleanup; } while( 0 );
+# 533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c"
+   )) ) != 0 ) goto cleanup; } while( 0 );
 
 
-    do { if( ( ret = mbedtls_mpi_lset( &num, -3) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi(&temp2, (const mbedtls_mpi *) x, &num) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mod_mpi(&temp2, &temp2, &e->group.P) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_lset( &num, -3)) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi(&temp2, (const mbedtls_mpi *) x, &num)) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mod_mpi(&temp2, &temp2, &e->group.P)) ) != 0 ) goto cleanup; } while( 0 );
 
 
-    do { if( ( ret = mbedtls_mpi_add_mpi(&temp2, &temp2, &e->group.B) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mod_mpi(&temp2, &temp2, &e->group.P) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_add_mpi(&temp2, &temp2, &e->group.B)) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mod_mpi(&temp2, &temp2, &e->group.P)) ) != 0 ) goto cleanup; } while( 0 );
 
 
-    do { if( ( ret = mbedtls_mpi_add_mpi(&temp2, &temp2, &temp) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mod_mpi(y_sqr, &temp2, &e->group.P) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_add_mpi(&temp2, &temp2, &temp)) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mod_mpi(y_sqr, &temp2, &e->group.P)) ) != 0 ) goto cleanup; } while( 0 );
 
 
 cleanup:
@@ -5248,9 +5288,9 @@ cleanup:
         mbedtls_mpi_free(y_sqr);
         free((y_sqr));
         return 
-# 555 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 3 4
+# 556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 3 4
               ((void *)0)
-# 555 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c"
+# 556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c"
                   ;
     } else {
         return (struct crypto_bignum *) y_sqr;
@@ -5269,9 +5309,9 @@ int crypto_ec_point_is_on_curve(struct crypto_ec *e,
                                 const struct crypto_ec_point *p)
 {
     mbedtls_mpi y_sqr_lhs, *y_sqr_rhs = 
-# 572 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 3 4
+# 573 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 3 4
                                        ((void *)0)
-# 572 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c"
+# 573 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c"
                                            , two;
     int ret = 0, on_curve = 0;
 
@@ -5279,12 +5319,12 @@ int crypto_ec_point_is_on_curve(struct crypto_ec *e,
     mbedtls_mpi_init(&two);
 
 
-    do { if( ( ret = mbedtls_mpi_lset( &two, 2) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_exp_mod(&y_sqr_lhs, &((const mbedtls_ecp_point *)p)->Y , &two, &e->group.P, 
-# 580 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 3 4
+    do { if( ( ret = (mbedtls_mpi_lset( &two, 2)) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_exp_mod(&y_sqr_lhs, &((const mbedtls_ecp_point *)p)->Y , &two, &e->group.P, 
+# 581 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c" 3 4
    ((void *)0)
-# 580 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c"
-   ) ) != 0 ) goto cleanup; } while( 0 );
+# 581 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_mbedtls.c"
+   )) ) != 0 ) goto cleanup; } while( 0 );
 
     y_sqr_rhs = (mbedtls_mpi *) crypto_ec_point_compute_y_sqr(e, (const struct crypto_bignum *) & ((const mbedtls_ecp_point *)p)->X);
 

@@ -294,9 +294,9 @@ bootloader_random_enable:
 	.size	bootloader_random_enable, .-bootloader_random_enable
 	.section	.text.bootloader_random_disable,"ax",@progbits
 	.literal_position
-	.literal .LC30, 1072693440
+	.literal .LC30, 1073016840
 	.literal .LC31, 1073017000
-	.literal .LC32, 1073016840
+	.literal .LC32, 1072693440
 	.literal .LC33, 1072990208
 	.literal .LC34, -134217729
 	.literal .LC35, 1072990352
@@ -321,27 +321,29 @@ bootloader_random_disable:
 	.loc 1 116 0
 	entry	sp, 32
 .LCFI2:
-.LVL4:
-.LBB20:
-.LBB21:
-	.loc 2 170 0
-	l32r	a10, .LC30
-.LBE21:
-.LBE20:
-	.loc 1 118 0
-	movi.n	a9, -0x11
-.LBB23:
-.LBB22:
-	.loc 2 170 0
+	.loc 1 119 0
+	l32r	a8, .LC30
+	movi	a9, -0x21
 	memw
-	l32i.n	a8, a10, 0
-.LBE22:
-.LBE23:
-	.loc 1 118 0
-	and	a8, a8, a9
+	l32i.n	a10, a8, 0
+	and	a10, a10, a9
 	memw
-	s32i.n	a8, a10, 0
-	.loc 1 123 0
+	s32i.n	a10, a8, 0
+	.loc 1 120 0
+	memw
+	l32i.n	a11, a8, 0
+	movi.n	a10, 2
+	or	a10, a11, a10
+	memw
+	s32i.n	a10, a8, 0
+	.loc 1 121 0
+	memw
+	l32i.n	a11, a8, 0
+	movi.n	a10, -3
+	and	a10, a11, a10
+	memw
+	s32i.n	a10, a8, 0
+	.loc 1 122 0
 	l32r	a8, .LC31
 	movi.n	a10, -2
 	memw
@@ -349,34 +351,40 @@ bootloader_random_disable:
 	and	a10, a11, a10
 	memw
 	s32i.n	a10, a8, 0
+	.loc 1 123 0
+	memw
+	l32i.n	a10, a8, 0
+	and	a9, a10, a9
+	memw
+	s32i.n	a9, a8, 0
 	.loc 1 124 0
 	memw
-	l32i.n	a11, a8, 0
-	movi	a10, -0x21
-	and	a11, a11, a10
+	l32i.n	a10, a8, 0
+	movi.n	a9, -9
+	and	a9, a10, a9
 	memw
-	s32i.n	a11, a8, 0
+	s32i.n	a9, a8, 0
 	.loc 1 125 0
 	memw
-	l32i.n	a12, a8, 0
-	movi.n	a11, -9
-	and	a11, a12, a11
-	memw
-	s32i.n	a11, a8, 0
-	.loc 1 126 0
-	memw
-	l32i.n	a11, a8, 0
-	and	a11, a11, a9
-	memw
-	s32i.n	a11, a8, 0
-	.loc 1 127 0
-	l32r	a8, .LC32
-	memw
-	l32i.n	a11, a8, 0
-	and	a10, a11, a10
+	l32i.n	a10, a8, 0
+	movi.n	a9, -0x11
+	and	a10, a10, a9
 	memw
 	s32i.n	a10, a8, 0
-	.loc 1 130 0
+.LVL4:
+.LBB20:
+.LBB21:
+	.loc 2 170 0
+	l32r	a10, .LC32
+	memw
+	l32i.n	a8, a10, 0
+.LBE21:
+.LBE20:
+	.loc 1 128 0
+	and	a8, a8, a9
+	memw
+	s32i.n	a8, a10, 0
+	.loc 1 131 0
 	l32r	a10, .LC33
 	l32r	a8, .LC34
 	memw
@@ -384,7 +392,7 @@ bootloader_random_disable:
 	and	a8, a11, a8
 	memw
 	s32i.n	a8, a10, 0
-	.loc 1 131 0
+	.loc 1 132 0
 	l32r	a10, .LC35
 	l32r	a8, .LC36
 	memw
@@ -392,33 +400,33 @@ bootloader_random_disable:
 	and	a8, a11, a8
 	memw
 	s32i.n	a8, a10, 0
-	.loc 1 134 0
+	.loc 1 135 0
 	l32r	a10, .LC37
 	memw
 	l32i.n	a8, a10, 0
 	and	a8, a8, a9
 	memw
 	s32i.n	a8, a10, 0
-	.loc 1 135 0
+	.loc 1 136 0
 	l32r	a10, .LC38
+	memw
+	l32i.n	a11, a10, 0
 	l32r	a8, .LC39
-	memw
-	l32i.n	a11, a10, 0
 	and	a8, a11, a8
 	memw
 	s32i.n	a8, a10, 0
-	.loc 1 137 0
+	.loc 1 138 0
 	l32r	a10, .LC40
+	l32r	a8, .LC41
 	memw
 	l32i.n	a11, a10, 0
-	l32r	a8, .LC41
 	and	a8, a11, a8
-	.loc 1 138 0
+	.loc 1 139 0
 	l32r	a11, .LC42
-	.loc 1 137 0
+	.loc 1 138 0
 	memw
 	s32i.n	a8, a10, 0
-	.loc 1 138 0
+	.loc 1 139 0
 	memw
 	l32i.n	a10, a11, 0
 	l32r	a8, .LC43
@@ -428,38 +436,38 @@ bootloader_random_disable:
 	memw
 	s32i.n	a8, a11, 0
 .LVL5:
-.LBB24:
-.LBB25:
+.LBB22:
+.LBB23:
 	.loc 2 170 0
 	l32r	a8, .LC45
-.LBE25:
-.LBE24:
-	.loc 1 141 0
+.LBE23:
+.LBE22:
+	.loc 1 142 0
 	movi.n	a10, 0x10
-.LBB27:
-.LBB26:
+.LBB25:
+.LBB24:
 	.loc 2 170 0
 	memw
 	l32i.n	a11, a8, 0
-.LBE26:
-.LBE27:
-	.loc 1 141 0
+.LBE24:
+.LBE25:
+	.loc 1 142 0
 	or	a10, a11, a10
 	memw
 	s32i.n	a10, a8, 0
 .LVL6:
-.LBB28:
-.LBB29:
+.LBB26:
+.LBB27:
 	.loc 2 170 0
 	memw
 	l32i.n	a10, a8, 0
-.LBE29:
-.LBE28:
-	.loc 1 142 0
+.LBE27:
+.LBE26:
+	.loc 1 143 0
 	and	a9, a10, a9
 	memw
 	s32i.n	a9, a8, 0
-	.loc 1 145 0
+	.loc 1 146 0
 	l32r	a8, .LC46
 	l32r	a9, .LC47
 	memw
@@ -467,7 +475,7 @@ bootloader_random_disable:
 	and	a9, a10, a9
 	memw
 	s32i.n	a9, a8, 0
-	.loc 1 146 0
+	.loc 1 147 0
 	memw
 	l32i.n	a10, a8, 0
 	l32r	a9, .LC48
@@ -545,7 +553,7 @@ bootloader_random_disable:
 	.byte	0xc
 	.4byte	.LASF21
 	.4byte	.LASF22
-	.4byte	.Ldebug_ranges0+0x60
+	.4byte	.Ldebug_ranges0+0x48
 	.4byte	0
 	.4byte	.Ldebug_line0
 	.uleb128 0x2
@@ -710,12 +718,12 @@ bootloader_random_disable:
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1ba
-	.uleb128 0xc
+	.uleb128 0xf
 	.4byte	0xa3
 	.4byte	.LBB20
-	.4byte	.Ldebug_ranges0+0x30
+	.4byte	.LBE20-.LBB20
 	.byte	0x1
-	.byte	0x76
+	.byte	0x80
 	.4byte	0x183
 	.uleb128 0xd
 	.4byte	0xb3
@@ -723,31 +731,31 @@ bootloader_random_disable:
 	.byte	0
 	.uleb128 0xc
 	.4byte	0xa3
-	.4byte	.LBB24
-	.4byte	.Ldebug_ranges0+0x48
+	.4byte	.LBB22
+	.4byte	.Ldebug_ranges0+0x30
 	.byte	0x1
-	.byte	0x8d
+	.byte	0x8e
 	.4byte	0x1a0
 	.uleb128 0xd
 	.4byte	0xb3
 	.4byte	0x3ff000c4
 	.byte	0
-	.uleb128 0xf
+	.uleb128 0x10
 	.4byte	0xa3
-	.4byte	.LBB28
-	.4byte	.LBE28-.LBB28
+	.4byte	.LBB26
+	.4byte	.LBE26-.LBB26
 	.byte	0x1
-	.byte	0x8e
+	.byte	0x8f
 	.uleb128 0xd
 	.4byte	0xb3
 	.4byte	0x3ff000c4
 	.byte	0
 	.byte	0
-	.uleb128 0x10
+	.uleb128 0x11
 	.4byte	.LASF24
 	.4byte	.LASF24
 	.byte	0x6
-	.byte	0xb1
+	.byte	0xb2
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -956,9 +964,26 @@ bootloader_random_disable:
 	.uleb128 0xb
 	.uleb128 0x59
 	.uleb128 0xb
+	.uleb128 0x1
+	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x10
+	.uleb128 0x1d
+	.byte	0x1
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x6
+	.uleb128 0x58
+	.uleb128 0xb
+	.uleb128 0x59
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x11
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -1006,16 +1031,10 @@ bootloader_random_disable:
 	.4byte	.LBE19
 	.4byte	0
 	.4byte	0
-	.4byte	.LBB20
-	.4byte	.LBE20
-	.4byte	.LBB23
-	.4byte	.LBE23
-	.4byte	0
-	.4byte	0
-	.4byte	.LBB24
-	.4byte	.LBE24
-	.4byte	.LBB27
-	.4byte	.LBE27
+	.4byte	.LBB22
+	.4byte	.LBE22
+	.4byte	.LBB25
+	.4byte	.LBE25
 	.4byte	0
 	.4byte	0
 	.4byte	.LFB14

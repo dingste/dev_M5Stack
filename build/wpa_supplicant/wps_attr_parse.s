@@ -15,87 +15,87 @@
 	.global	wps_parse_msg
 	.type	wps_parse_msg, @function
 wps_parse_msg:
-.LFB38:
+.LFB39:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_attr_parse.c"
-	.loc 1 563 0
+	.loc 1 597 0
 .LVL0:
 	entry	sp, 32
 .LCFI0:
-	.loc 1 570 0
+	.loc 1 604 0
 	movi	a12, 0x1f4
 	movi.n	a11, 0
 	mov.n	a10, a3
 	call8	memset
 .LVL1:
-.LBB20:
-.LBB21:
+.LBB22:
+.LBB23:
 	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpabuf.h"
 	.loc 2 81 0
 	l32i.n	a12, a2, 8
 	.loc 2 83 0
 	addi.n	a10, a2, 12
-.LBE21:
-.LBE20:
-	.loc 1 572 0
+.LBE23:
+.LBE22:
+	.loc 1 606 0
 	l32i.n	a15, a2, 4
-.LBB23:
-.LBB22:
+.LBB25:
+.LBB24:
 	.loc 2 83 0
 	movnez	a10, a12, a12
 .LVL2:
-.LBE22:
-.LBE23:
-	.loc 1 572 0
+.LBE24:
+.LBE25:
+	.loc 1 606 0
 	add.n	a15, a10, a15
 .LVL3:
-.LBB24:
-.LBB25:
 .LBB26:
 .LBB27:
+.LBB28:
+.LBB29:
 	.loc 1 118 0
 	movi.n	a5, 9
+.LBE29:
+.LBE28:
+	.loc 1 299 0
+	movi.n	a7, 0x10
 .LBE27:
 .LBE26:
-	.loc 1 265 0
-	movi.n	a7, 0x10
-.LBE25:
-.LBE24:
-	.loc 1 574 0
+	.loc 1 608 0
 	j	.L3
 .LVL4:
 .L80:
-	.loc 1 575 0
+	.loc 1 609 0
 	sub	a4, a15, a10
 	blti	a4, 4, .L4
-	.loc 1 582 0
+	.loc 1 616 0
 	l8ui	a4, a10, 0
 	l8ui	a8, a10, 1
 	slli	a4, a4, 8
 	or	a4, a8, a4
-	.loc 1 584 0
+	.loc 1 618 0
 	l8ui	a8, a10, 2
 	l8ui	a9, a10, 3
 	slli	a8, a8, 8
 	or	a8, a9, a8
-	.loc 1 585 0
+	.loc 1 619 0
 	addi.n	a9, a10, 4
-	.loc 1 588 0
+	.loc 1 622 0
 	sub	a11, a15, a9
-	.loc 1 582 0
+	.loc 1 616 0
 	sext	a4, a4, 15
 .LVL5:
-	.loc 1 588 0
+	.loc 1 622 0
 	bge	a11, a8, .L5
 .LVL6:
-.LBB37:
-.LBB38:
 .LBB39:
 .LBB40:
+.LBB41:
+.LBB42:
 	.loc 2 83 0
 	addi.n	a3, a2, 12
 .LVL7:
-.LBE40:
-.LBE39:
+.LBE42:
+.LBE41:
 	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h"
 	.loc 3 93 0
 	l32i.n	a13, a2, 4
@@ -107,11 +107,11 @@ wps_parse_msg:
 	j	.L4
 .LVL9:
 .L5:
-.LBE38:
-.LBE37:
-.LBB41:
-.LBB36:
-	.loc 1 135 0
+.LBE40:
+.LBE39:
+.LBB43:
+.LBB38:
+	.loc 1 169 0
 	l32r	a6, .LC2
 	movi	a11, 0x69
 	add.n	a4, a4, a6
@@ -235,465 +235,465 @@ wps_parse_msg:
 	.word	.L65
 	.section	.text.wps_parse_msg
 .L56:
-	.loc 1 137 0
+	.loc 1 171 0
 	bnei	a8, 1, .L4
-	.loc 1 142 0
+	.loc 1 176 0
 	s32i.n	a9, a3, 0
 .LVL12:
 	j	.L81
 .LVL13:
 .L32:
-	.loc 1 145 0
+	.loc 1 179 0
 	bnei	a8, 1, .L4
-	.loc 1 150 0
+	.loc 1 184 0
 	s32i.n	a9, a3, 8
 .LVL14:
 	j	.L81
 .LVL15:
 .L28:
-	.loc 1 153 0
+	.loc 1 187 0
 	bnei	a8, 16, .L4
-	.loc 1 158 0
+	.loc 1 192 0
 	s32i.n	a9, a3, 12
 .LVL16:
 	j	.L81
 .LVL17:
 .L41:
-	.loc 1 161 0
+	.loc 1 195 0
 	bnei	a8, 16, .L4
-	.loc 1 166 0
+	.loc 1 200 0
 	s32i.n	a9, a3, 16
 .LVL18:
 	j	.L81
 .LVL19:
 .L53:
-	.loc 1 169 0
+	.loc 1 203 0
 	bnei	a8, 16, .L4
-	.loc 1 174 0
+	.loc 1 208 0
 	s32i.n	a9, a3, 24
 .LVL20:
 	j	.L81
 .LVL21:
 .L54:
-	.loc 1 177 0
+	.loc 1 211 0
 	bnei	a8, 16, .L4
-	.loc 1 182 0
+	.loc 1 216 0
 	s32i.n	a9, a3, 20
 .LVL22:
 	j	.L81
 .LVL23:
 .L13:
-	.loc 1 185 0
+	.loc 1 219 0
 	bnei	a8, 2, .L4
-	.loc 1 190 0
+	.loc 1 224 0
 	s32i.n	a9, a3, 28
 .LVL24:
 	j	.L81
 .LVL25:
 .L20:
-	.loc 1 193 0
+	.loc 1 227 0
 	bnei	a8, 2, .L4
-	.loc 1 198 0
+	.loc 1 232 0
 	s32i.n	a9, a3, 32
 .LVL26:
 	j	.L81
 .LVL27:
 .L17:
-	.loc 1 201 0
+	.loc 1 235 0
 	bnei	a8, 1, .L4
-	.loc 1 206 0
+	.loc 1 240 0
 	s32i.n	a9, a3, 36
 .LVL28:
 	j	.L81
 .LVL29:
 .L15:
-	.loc 1 209 0
+	.loc 1 243 0
 	bnei	a8, 2, .L4
-	.loc 1 214 0
+	.loc 1 248 0
 	s32i.n	a9, a3, 40
 .LVL30:
 	j	.L81
 .LVL31:
 .L58:
-	.loc 1 217 0
+	.loc 1 251 0
 	bnei	a8, 2, .L4
-	.loc 1 222 0
+	.loc 1 256 0
 	s32i.n	a9, a3, 44
 .LVL32:
 	j	.L81
 .LVL33:
 .L59:
-	.loc 1 225 0
+	.loc 1 259 0
 	bnei	a8, 8, .L4
-	.loc 1 230 0
+	.loc 1 264 0
 	s32i.n	a9, a3, 48
 .LVL34:
 	j	.L81
 .LVL35:
 .L44:
-	.loc 1 233 0
+	.loc 1 267 0
 	bnei	a8, 1, .L4
-	.loc 1 238 0
+	.loc 1 272 0
 	s32i.n	a9, a3, 52
 .LVL36:
 	j	.L81
 .LVL37:
 .L11:
-	.loc 1 241 0
+	.loc 1 275 0
 	bnei	a8, 2, .L4
-	.loc 1 246 0
+	.loc 1 280 0
 	s32i.n	a9, a3, 56
 .LVL38:
 	j	.L81
 .LVL39:
 .L16:
-	.loc 1 249 0
+	.loc 1 283 0
 	bnei	a8, 2, .L4
-	.loc 1 254 0
+	.loc 1 288 0
 	s32i.n	a9, a3, 60
 .LVL40:
 	j	.L81
 .LVL41:
 .L22:
-	.loc 1 257 0
+	.loc 1 291 0
 	bnei	a8, 2, .L4
-	.loc 1 262 0
+	.loc 1 296 0
 	s32i	a9, a3, 64
 .LVL42:
 	j	.L81
 .LVL43:
 .L38:
-	.loc 1 265 0
+	.loc 1 299 0
 	addi	a4, a8, -38
 	extui	a4, a4, 0, 16
 	bltu	a7, a4, .L4
-	.loc 1 273 0
+	.loc 1 307 0
 	s32i	a9, a3, 280
 .LVL44:
-	.loc 1 274 0
+	.loc 1 308 0
 	s32i	a8, a3, 284
 	j	.L81
 .LVL45:
 .L39:
-	.loc 1 277 0
+	.loc 1 311 0
 	bnei	a8, 4, .L4
-	.loc 1 282 0
+	.loc 1 316 0
 	s32i	a9, a3, 68
 .LVL46:
 	j	.L81
 .LVL47:
 .L51:
-	.loc 1 285 0
+	.loc 1 319 0
 	bnei	a8, 1, .L4
-	.loc 1 290 0
+	.loc 1 324 0
 	s32i	a9, a3, 72
 .LVL48:
 	j	.L81
 .LVL49:
 .L14:
-	.loc 1 293 0
+	.loc 1 327 0
 	bnei	a8, 8, .L4
-	.loc 1 298 0
+	.loc 1 332 0
 	s32i	a9, a3, 76
 .LVL50:
 	j	.L81
 .LVL51:
 .L45:
-	.loc 1 301 0
+	.loc 1 335 0
 	bnei	a8, 32, .L4
-	.loc 1 306 0
+	.loc 1 340 0
 	s32i	a9, a3, 80
 .LVL52:
 	j	.L81
 .LVL53:
 .L46:
-	.loc 1 309 0
+	.loc 1 343 0
 	bnei	a8, 32, .L4
-	.loc 1 314 0
+	.loc 1 348 0
 	s32i	a9, a3, 84
 .LVL54:
 	j	.L81
 .LVL55:
 .L23:
-	.loc 1 317 0
+	.loc 1 351 0
 	bnei	a8, 32, .L4
-	.loc 1 322 0
+	.loc 1 356 0
 	s32i	a9, a3, 88
 .LVL56:
 	j	.L81
 .LVL57:
 .L24:
-	.loc 1 325 0
+	.loc 1 359 0
 	bnei	a8, 32, .L4
-	.loc 1 330 0
+	.loc 1 364 0
 	s32i	a9, a3, 92
 .LVL58:
 	j	.L81
 .LVL59:
 .L47:
-	.loc 1 333 0
+	.loc 1 367 0
 	bnei	a8, 16, .L4
-	.loc 1 338 0
+	.loc 1 372 0
 	s32i	a9, a3, 96
 .LVL60:
 	j	.L81
 .LVL61:
 .L48:
-	.loc 1 341 0
+	.loc 1 375 0
 	bnei	a8, 16, .L4
-	.loc 1 346 0
+	.loc 1 380 0
 	s32i	a9, a3, 100
 .LVL62:
 	j	.L81
 .LVL63:
 .L25:
-	.loc 1 349 0
+	.loc 1 383 0
 	bnei	a8, 16, .L4
-	.loc 1 354 0
+	.loc 1 388 0
 	s32i	a9, a3, 104
 .LVL64:
 	j	.L81
 .LVL65:
 .L26:
-	.loc 1 357 0
+	.loc 1 391 0
 	bnei	a8, 16, .L4
-	.loc 1 362 0
+	.loc 1 396 0
 	s32i	a9, a3, 108
 .LVL66:
 	j	.L81
 .LVL67:
 .L29:
-	.loc 1 365 0
+	.loc 1 399 0
 	bnei	a8, 8, .L4
-	.loc 1 370 0
+	.loc 1 404 0
 	s32i	a9, a3, 112
 .LVL68:
 	j	.L81
 .LVL69:
 .L12:
-	.loc 1 373 0
+	.loc 1 407 0
 	bnei	a8, 2, .L4
-	.loc 1 378 0
+	.loc 1 412 0
 	s32i	a9, a3, 116
 .LVL70:
 	j	.L81
 .LVL71:
 .L19:
-	.loc 1 381 0
+	.loc 1 415 0
 	bnei	a8, 2, .L4
-	.loc 1 386 0
+	.loc 1 420 0
 	s32i	a9, a3, 120
 .LVL72:
 	j	.L81
 .LVL73:
 .L35:
-	.loc 1 389 0
+	.loc 1 423 0
 	bnei	a8, 1, .L4
-	.loc 1 394 0
+	.loc 1 428 0
 	s32i	a9, a3, 124
 .LVL74:
 	j	.L81
 .LVL75:
 .L37:
-	.loc 1 397 0
+	.loc 1 431 0
 	bnei	a8, 1, .L4
-	.loc 1 402 0
+	.loc 1 436 0
 	s32i	a9, a3, 128
 .LVL76:
 	j	.L81
 .LVL77:
 .L30:
-	.loc 1 405 0
+	.loc 1 439 0
 	bnei	a8, 6, .L4
-	.loc 1 410 0
+	.loc 1 444 0
 	s32i	a9, a3, 132
 .LVL78:
 	j	.L81
 .LVL79:
 .L63:
-	.loc 1 413 0
+	.loc 1 447 0
 	bnei	a8, 1, .L4
-	.loc 1 418 0
+	.loc 1 452 0
 	s32i	a9, a3, 136
 .LVL80:
 	j	.L81
 .LVL81:
 .L64:
-	.loc 1 421 0
+	.loc 1 455 0
 	bnei	a8, 1, .L4
-	.loc 1 426 0
+	.loc 1 460 0
 	s32i	a9, a3, 140
 .LVL82:
 	j	.L81
 .LVL83:
 .L49:
-	.loc 1 429 0
+	.loc 1 463 0
 	bnei	a8, 1, .L4
-	.loc 1 434 0
+	.loc 1 468 0
 	s32i	a9, a3, 144
 .LVL84:
 	j	.L81
 .LVL85:
 .L42:
-	.loc 1 437 0
+	.loc 1 471 0
 	bnei	a8, 1, .L4
-	.loc 1 442 0
+	.loc 1 476 0
 	s32i	a9, a3, 148
 .LVL86:
 	j	.L81
 .LVL87:
 .L43:
-	.loc 1 445 0
+	.loc 1 479 0
 	bnei	a8, 1, .L4
-	.loc 1 450 0
+	.loc 1 484 0
 	s32i	a9, a3, 152
 .LVL88:
 	j	.L81
 .LVL89:
 .L31:
-	.loc 1 453 0
+	.loc 1 487 0
 	s32i	a9, a3, 176
 .LVL90:
-	.loc 1 454 0
+	.loc 1 488 0
 	s32i	a8, a3, 180
 	j	.L81
 .LVL91:
 .L33:
-	.loc 1 457 0
+	.loc 1 491 0
 	s32i	a9, a3, 184
 .LVL92:
-	.loc 1 458 0
+	.loc 1 492 0
 	s32i	a8, a3, 188
 	j	.L81
 .LVL93:
 .L34:
-	.loc 1 461 0
+	.loc 1 495 0
 	s32i	a9, a3, 192
 .LVL94:
-	.loc 1 462 0
+	.loc 1 496 0
 	s32i	a8, a3, 196
 	j	.L81
 .LVL95:
 .L50:
-	.loc 1 465 0
+	.loc 1 499 0
 	s32i	a9, a3, 200
 .LVL96:
-	.loc 1 466 0
+	.loc 1 500 0
 	s32i	a8, a3, 204
 	j	.L81
 .LVL97:
 .L21:
-	.loc 1 469 0
+	.loc 1 503 0
 	s32i	a9, a3, 208
 .LVL98:
-	.loc 1 470 0
+	.loc 1 504 0
 	s32i	a8, a3, 212
 	j	.L81
 .LVL99:
 .L40:
-	.loc 1 473 0
+	.loc 1 507 0
 	s32i	a9, a3, 216
 .LVL100:
-	.loc 1 474 0
+	.loc 1 508 0
 	s32i	a8, a3, 220
 	j	.L81
 .LVL101:
 .L27:
-	.loc 1 477 0
+	.loc 1 511 0
 	s32i	a9, a3, 224
 .LVL102:
-	.loc 1 478 0
+	.loc 1 512 0
 	s32i	a8, a3, 228
 	j	.L81
 .LVL103:
 .L18:
-	.loc 1 481 0
+	.loc 1 515 0
 	l32i	a4, a3, 368
 	bltu	a5, a4, .L81
 	addx4	a10, a4, a3
 .LVL104:
-	.loc 1 487 0
+	.loc 1 521 0
 	s32i	a9, a10, 288
 .LVL105:
-	.loc 1 488 0
+	.loc 1 522 0
 	s32i	a8, a10, 328
-	.loc 1 489 0
+	.loc 1 523 0
 	addi.n	a4, a4, 1
 	s32i	a4, a3, 368
 	j	.L81
 .LVL106:
 .L52:
-	.loc 1 492 0
+	.loc 1 526 0
 	s32i	a9, a3, 232
 .LVL107:
-	.loc 1 493 0
+	.loc 1 527 0
 	s32i	a8, a3, 236
 	j	.L81
 .LVL108:
 .L36:
-	.loc 1 496 0
+	.loc 1 530 0
 	s32i	a9, a3, 240
 .LVL109:
-	.loc 1 497 0
+	.loc 1 531 0
 	s32i	a8, a3, 244
 	j	.L81
 .LVL110:
 .L62:
-	.loc 1 500 0
+	.loc 1 534 0
 	s32i	a9, a3, 248
 .LVL111:
-	.loc 1 501 0
+	.loc 1 535 0
 	s32i	a8, a3, 252
 	j	.L81
 .LVL112:
 .L57:
-	.loc 1 504 0
+	.loc 1 538 0
 	s32i	a9, a3, 256
 .LVL113:
-	.loc 1 505 0
+	.loc 1 539 0
 	s32i	a8, a3, 260
 	j	.L81
 .LVL114:
 .L61:
-	.loc 1 508 0
+	.loc 1 542 0
 	bnei	a8, 1, .L4
-	.loc 1 513 0
+	.loc 1 547 0
 	s32i	a9, a3, 156
 .LVL115:
 	j	.L81
 .LVL116:
 .L65:
-	.loc 1 516 0
+	.loc 1 550 0
 	bnei	a8, 8, .L4
-	.loc 1 521 0
+	.loc 1 555 0
 	l32i	a4, a3, 412
 	bltu	a5, a4, .L81
-	.loc 1 527 0
+	.loc 1 561 0
 	addx4	a10, a4, a3
 .LVL117:
 	s32i	a9, a10, 372
 .LVL118:
-	.loc 1 528 0
+	.loc 1 562 0
 	addi.n	a4, a4, 1
 	s32i	a4, a3, 412
 	j	.L81
 .LVL119:
 .L60:
-	.loc 1 531 0
+	.loc 1 565 0
 	movi	a11, 0x80
 	bltu	a11, a8, .L4
 	extui	a4, a8, 0, 3
 	bnez.n	a4, .L4
-	.loc 1 537 0
+	.loc 1 571 0
 	s32i	a9, a3, 272
 .LVL120:
-	.loc 1 538 0
+	.loc 1 572 0
 	s32i	a8, a3, 276
 	j	.L81
 .LVL121:
 .L55:
-.LBB35:
-.LBB34:
+.LBB37:
+.LBB36:
 	.loc 1 96 0
 	bltui	a8, 3, .L81
 .LVL122:
@@ -707,17 +707,17 @@ wps_parse_msg:
 	l8ui	a11, a10, 6
 	or	a4, a4, a11
 	bne	a4, a6, .L85
-.LBB28:
-.LBB29:
+.LBB30:
+.LBB31:
 	.loc 1 74 0
 	addi	a13, a8, -3
-.LBE29:
-.LBE28:
+.LBE31:
+.LBE30:
 	.loc 1 104 0
 	addi.n	a10, a10, 7
 .LVL123:
-.LBB33:
-.LBB32:
+.LBB35:
+.LBB34:
 	.loc 1 74 0
 	extui	a13, a13, 0, 16
 	add.n	a13, a10, a13
@@ -735,8 +735,8 @@ wps_parse_msg:
 .LVL127:
 	bltu	a13, a10, .L81
 .LVL128:
-.LBB30:
-.LBB31:
+.LBB32:
+.LBB33:
 	.loc 1 24 0
 	bgeui	a4, 5, .L70
 	l32r	a6, .LC5
@@ -792,16 +792,16 @@ wps_parse_msg:
 	s32i	a11, a3, 160
 .LVL137:
 .L70:
-.LBE31:
-.LBE30:
+.LBE33:
+.LBE32:
 	.loc 1 77 0
 	addi.n	a11, a10, 2
 	bltu	a11, a13, .L78
 	j	.L81
 .LVL138:
 .L85:
-.LBE32:
-.LBE33:
+.LBE34:
+.LBE35:
 	.loc 1 112 0
 	movi	a11, 0x400
 	bltu	a11, a8, .L4
@@ -821,34 +821,34 @@ wps_parse_msg:
 	j	.L81
 .LVL141:
 .L9:
-.LBE34:
-.LBE35:
-	.loc 1 545 0
+.LBE36:
+.LBE37:
+	.loc 1 579 0
 	bnei	a8, 2, .L4
-	.loc 1 550 0
+	.loc 1 584 0
 	s32i	a9, a3, 172
 .LVL142:
 .L81:
-.LBE36:
-.LBE41:
-	.loc 1 636 0
+.LBE38:
+.LBE43:
+	.loc 1 670 0
 	add.n	a10, a9, a8
 .LVL143:
 .L3:
-	.loc 1 574 0
+	.loc 1 608 0
 	bltu	a10, a15, .L80
-	.loc 1 639 0
+	.loc 1 673 0
 	movi.n	a2, 0
 .LVL144:
 	retw.n
 .LVL145:
 .L4:
-	.loc 1 631 0
+	.loc 1 665 0
 	movi.n	a2, -1
 .LVL146:
-	.loc 1 640 0
+	.loc 1 674 0
 	retw.n
-.LFE38:
+.LFE39:
 	.size	wps_parse_msg, .-wps_parse_msg
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -869,10 +869,10 @@ wps_parse_msg:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI0-.LFB38
+	.4byte	.LCFI0-.LFB39
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -888,15 +888,15 @@ wps_parse_msg:
 	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps_attr_parse.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0xba2
+	.4byte	0xbf5
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF215
-	.byte	0xc
-	.4byte	.LASF216
 	.4byte	.LASF217
+	.byte	0xc
+	.4byte	.LASF218
+	.4byte	.LASF219
 	.4byte	.Ldebug_ranges0+0x60
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -1061,7 +1061,7 @@ wps_parse_msg:
 	.byte	0x5
 	.byte	0
 	.uleb128 0xd
-	.4byte	.LASF218
+	.4byte	.LASF220
 	.byte	0x4
 	.4byte	0x69
 	.byte	0x9
@@ -1870,7 +1870,7 @@ wps_parse_msg:
 	.byte	0x9
 	.byte	0
 	.uleb128 0x13
-	.4byte	.LASF205
+	.4byte	.LASF203
 	.byte	0x2
 	.byte	0x3b
 	.4byte	0x7e
@@ -1882,19 +1882,47 @@ wps_parse_msg:
 	.byte	0x3b
 	.4byte	0x416
 	.byte	0
+	.uleb128 0x13
+	.4byte	.LASF204
+	.byte	0x1
+	.byte	0x83
+	.4byte	0xe3
+	.byte	0x1
+	.4byte	0x878
+	.uleb128 0x14
+	.string	"pos"
+	.byte	0x1
+	.byte	0x83
+	.4byte	0x40b
 	.uleb128 0x15
-	.4byte	.LASF219
+	.4byte	.LASF205
+	.byte	0x1
+	.byte	0x83
+	.4byte	0xe3
+	.uleb128 0x15
+	.4byte	.LASF206
+	.byte	0x1
+	.byte	0x83
+	.4byte	0xe3
+	.uleb128 0x16
+	.string	"len"
+	.byte	0x1
+	.byte	0x85
+	.4byte	0xe3
+	.byte	0
+	.uleb128 0x17
+	.4byte	.LASF221
 	.byte	0x3
 	.byte	0x5a
 	.byte	0x3
-	.4byte	0x869
-	.uleb128 0x16
-	.4byte	.LASF203
+	.4byte	0x8a6
+	.uleb128 0x15
+	.4byte	.LASF207
 	.byte	0x3
 	.byte	0x5a
 	.4byte	0x57
-	.uleb128 0x16
-	.4byte	.LASF204
+	.uleb128 0x15
+	.4byte	.LASF208
 	.byte	0x3
 	.byte	0x5a
 	.4byte	0xc6
@@ -1905,12 +1933,12 @@ wps_parse_msg:
 	.4byte	0x416
 	.byte	0
 	.uleb128 0x13
-	.4byte	.LASF206
+	.4byte	.LASF209
 	.byte	0x2
 	.byte	0x4f
 	.4byte	0xd1
 	.byte	0x3
-	.4byte	0x885
+	.4byte	0x8c2
 	.uleb128 0x14
 	.string	"buf"
 	.byte	0x2
@@ -1918,48 +1946,53 @@ wps_parse_msg:
 	.4byte	0x416
 	.byte	0
 	.uleb128 0x13
-	.4byte	.LASF207
+	.4byte	.LASF210
 	.byte	0x1
-	.byte	0x84
+	.byte	0xa2
 	.4byte	0x57
 	.byte	0x1
-	.4byte	0x8c2
-	.uleb128 0x16
-	.4byte	.LASF208
+	.4byte	0x90a
+	.uleb128 0x15
+	.4byte	.LASF211
 	.byte	0x1
-	.byte	0x84
-	.4byte	0x8c2
-	.uleb128 0x16
-	.4byte	.LASF209
+	.byte	0xa2
+	.4byte	0x90a
+	.uleb128 0x15
+	.4byte	.LASF205
 	.byte	0x1
-	.byte	0x84
+	.byte	0xa2
 	.4byte	0xe3
 	.uleb128 0x14
 	.string	"pos"
 	.byte	0x1
-	.byte	0x85
+	.byte	0xa3
 	.4byte	0x40b
-	.uleb128 0x14
+	.uleb128 0x15
+	.4byte	.LASF206
+	.byte	0x1
+	.byte	0xa3
+	.4byte	0xe3
+	.uleb128 0x16
 	.string	"len"
 	.byte	0x1
-	.byte	0x85
+	.byte	0xa5
 	.4byte	0xe3
 	.byte	0
 	.uleb128 0x5
 	.byte	0x4
 	.4byte	0x421
 	.uleb128 0x13
-	.4byte	.LASF210
+	.4byte	.LASF212
 	.byte	0x1
 	.byte	0x5b
 	.4byte	0x57
 	.byte	0x1
-	.4byte	0x905
-	.uleb128 0x16
-	.4byte	.LASF208
+	.4byte	0x94d
+	.uleb128 0x15
+	.4byte	.LASF211
 	.byte	0x1
 	.byte	0x5b
-	.4byte	0x8c2
+	.4byte	0x90a
 	.uleb128 0x14
 	.string	"pos"
 	.byte	0x1
@@ -1970,24 +2003,24 @@ wps_parse_msg:
 	.byte	0x1
 	.byte	0x5c
 	.4byte	0xe3
-	.uleb128 0x17
-	.4byte	.LASF212
+	.uleb128 0x18
+	.4byte	.LASF213
 	.byte	0x1
 	.byte	0x5e
 	.4byte	0xd8
 	.byte	0
 	.uleb128 0x13
-	.4byte	.LASF211
+	.4byte	.LASF214
 	.byte	0x1
 	.byte	0x47
 	.4byte	0x57
 	.byte	0x1
-	.4byte	0x957
-	.uleb128 0x16
-	.4byte	.LASF208
+	.4byte	0x99f
+	.uleb128 0x15
+	.4byte	.LASF211
 	.byte	0x1
 	.byte	0x47
-	.4byte	0x8c2
+	.4byte	0x90a
 	.uleb128 0x14
 	.string	"pos"
 	.byte	0x1
@@ -1998,34 +2031,34 @@ wps_parse_msg:
 	.byte	0x1
 	.byte	0x48
 	.4byte	0xe3
-	.uleb128 0x18
+	.uleb128 0x16
 	.string	"end"
 	.byte	0x1
 	.byte	0x4a
 	.4byte	0x40b
-	.uleb128 0x18
+	.uleb128 0x16
 	.string	"id"
 	.byte	0x1
 	.byte	0x4b
 	.4byte	0xee
-	.uleb128 0x17
-	.4byte	.LASF213
+	.uleb128 0x18
+	.4byte	.LASF215
 	.byte	0x1
 	.byte	0x4b
 	.4byte	0xee
 	.byte	0
 	.uleb128 0x13
-	.4byte	.LASF214
+	.4byte	.LASF216
 	.byte	0x1
 	.byte	0x13
 	.4byte	0x57
 	.byte	0x1
-	.4byte	0x993
-	.uleb128 0x16
-	.4byte	.LASF208
+	.4byte	0x9db
+	.uleb128 0x15
+	.4byte	.LASF211
 	.byte	0x1
 	.byte	0x13
-	.4byte	0x8c2
+	.4byte	0x90a
 	.uleb128 0x14
 	.string	"id"
 	.byte	0x1
@@ -2043,183 +2076,188 @@ wps_parse_msg:
 	.4byte	0x40b
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF220
+	.4byte	.LASF222
 	.byte	0x1
-	.2byte	0x232
+	.2byte	0x254
 	.4byte	0x57
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xb91
+	.4byte	0xbe4
 	.uleb128 0x1a
 	.string	"msg"
 	.byte	0x1
-	.2byte	0x232
+	.2byte	0x254
 	.4byte	0x416
 	.4byte	.LLST0
 	.uleb128 0x1b
-	.4byte	.LASF208
+	.4byte	.LASF211
 	.byte	0x1
-	.2byte	0x232
-	.4byte	0x8c2
+	.2byte	0x254
+	.4byte	0x90a
 	.4byte	.LLST1
 	.uleb128 0x1c
 	.string	"pos"
 	.byte	0x1
-	.2byte	0x234
+	.2byte	0x256
 	.4byte	0x40b
 	.4byte	.LLST2
 	.uleb128 0x1c
 	.string	"end"
 	.byte	0x1
-	.2byte	0x234
+	.2byte	0x256
 	.4byte	0x40b
 	.4byte	.LLST3
 	.uleb128 0x1d
-	.4byte	.LASF209
+	.4byte	.LASF205
 	.byte	0x1
-	.2byte	0x235
+	.2byte	0x257
 	.4byte	0xe3
 	.4byte	.LLST4
 	.uleb128 0x1c
 	.string	"len"
 	.byte	0x1
-	.2byte	0x235
+	.2byte	0x257
 	.4byte	0xe3
 	.4byte	.LLST5
 	.uleb128 0x1e
-	.4byte	0x869
-	.4byte	.LBB20
+	.4byte	0x8a6
+	.4byte	.LBB22
 	.4byte	.Ldebug_ranges0+0
 	.byte	0x1
-	.2byte	0x23b
-	.4byte	0xa2b
+	.2byte	0x25d
+	.4byte	0xa73
 	.uleb128 0x1f
-	.4byte	0x879
+	.4byte	0x8b6
 	.4byte	.LLST6
 	.byte	0
 	.uleb128 0x1e
-	.4byte	0x885
-	.4byte	.LBB24
+	.4byte	0x8c2
+	.4byte	.LBB26
 	.4byte	.Ldebug_ranges0+0x18
 	.byte	0x1
-	.2byte	0x276
-	.4byte	0xb0f
+	.2byte	0x298
+	.4byte	0xb62
 	.uleb128 0x1f
-	.4byte	0x8b6
+	.4byte	0x8f3
 	.4byte	.LLST7
 	.uleb128 0x1f
-	.4byte	0x8ab
+	.4byte	0x8e8
 	.4byte	.LLST8
 	.uleb128 0x1f
-	.4byte	0x8a0
+	.4byte	0x8dd
 	.4byte	.LLST9
 	.uleb128 0x20
-	.4byte	0x895
+	.4byte	0x8d2
 	.uleb128 0x21
-	.4byte	0x8c8
-	.4byte	.LBB26
+	.4byte	.Ldebug_ranges0+0x18
+	.uleb128 0x22
+	.4byte	0x8fe
+	.uleb128 0x23
+	.4byte	0x910
+	.4byte	.LBB28
 	.4byte	.Ldebug_ranges0+0x30
 	.byte	0x1
-	.2byte	0x21d
+	.2byte	0x23f
 	.uleb128 0x1f
-	.4byte	0x8ee
+	.4byte	0x936
 	.4byte	.LLST10
 	.uleb128 0x1f
-	.4byte	0x8e3
+	.4byte	0x92b
 	.4byte	.LLST11
 	.uleb128 0x20
-	.4byte	0x8d8
-	.uleb128 0x22
+	.4byte	0x920
+	.uleb128 0x21
 	.4byte	.Ldebug_ranges0+0x30
-	.uleb128 0x23
-	.4byte	0x8f9
-	.4byte	.LLST12
 	.uleb128 0x24
-	.4byte	0x905
-	.4byte	.LBB28
+	.4byte	0x941
+	.4byte	.LLST12
+	.uleb128 0x25
+	.4byte	0x94d
+	.4byte	.LBB30
 	.4byte	.Ldebug_ranges0+0x48
 	.byte	0x1
 	.byte	0x68
 	.uleb128 0x1f
-	.4byte	0x92b
+	.4byte	0x973
 	.4byte	.LLST13
 	.uleb128 0x1f
-	.4byte	0x920
+	.4byte	0x968
 	.4byte	.LLST14
 	.uleb128 0x20
-	.4byte	0x915
-	.uleb128 0x22
+	.4byte	0x95d
+	.uleb128 0x21
 	.4byte	.Ldebug_ranges0+0x48
-	.uleb128 0x23
-	.4byte	0x936
+	.uleb128 0x24
+	.4byte	0x97e
 	.4byte	.LLST15
-	.uleb128 0x23
-	.4byte	0x941
+	.uleb128 0x24
+	.4byte	0x989
 	.4byte	.LLST16
-	.uleb128 0x23
-	.4byte	0x94b
+	.uleb128 0x24
+	.4byte	0x993
 	.4byte	.LLST17
-	.uleb128 0x25
-	.4byte	0x957
-	.4byte	.LBB30
-	.4byte	.LBE30-.LBB30
+	.uleb128 0x26
+	.4byte	0x99f
+	.4byte	.LBB32
+	.4byte	.LBE32-.LBB32
 	.byte	0x1
 	.byte	0x52
 	.uleb128 0x1f
-	.4byte	0x987
+	.4byte	0x9cf
 	.4byte	.LLST18
 	.uleb128 0x1f
-	.4byte	0x97c
+	.4byte	0x9c4
 	.4byte	.LLST19
 	.uleb128 0x1f
-	.4byte	0x972
+	.4byte	0x9ba
 	.4byte	.LLST20
 	.uleb128 0x20
-	.4byte	0x967
+	.4byte	0x9af
 	.byte	0
 	.byte	0
 	.byte	0
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x26
-	.4byte	0x83b
-	.4byte	.LBB37
-	.4byte	.LBE37-.LBB37
-	.byte	0x1
-	.2byte	0x24e
-	.4byte	0xb74
-	.uleb128 0x1f
-	.4byte	0x847
-	.4byte	.LLST21
-	.uleb128 0x1f
-	.4byte	0x852
-	.4byte	.LLST22
-	.uleb128 0x1f
-	.4byte	0x85d
-	.4byte	.LLST23
+	.byte	0
 	.uleb128 0x27
-	.4byte	0x869
+	.4byte	0x878
 	.4byte	.LBB39
 	.4byte	.LBE39-.LBB39
+	.byte	0x1
+	.2byte	0x270
+	.4byte	0xbc7
+	.uleb128 0x1f
+	.4byte	0x884
+	.4byte	.LLST21
+	.uleb128 0x1f
+	.4byte	0x88f
+	.4byte	.LLST22
+	.uleb128 0x1f
+	.4byte	0x89a
+	.4byte	.LLST23
+	.uleb128 0x28
+	.4byte	0x8a6
+	.4byte	.LBB41
+	.4byte	.LBE41-.LBB41
 	.byte	0x3
 	.byte	0x5d
-	.4byte	0xb5b
+	.4byte	0xbae
 	.uleb128 0x1f
-	.4byte	0x879
+	.4byte	0x8b6
 	.4byte	.LLST23
 	.byte	0
-	.uleb128 0x28
-	.4byte	.LVL8
-	.4byte	0xb91
 	.uleb128 0x29
+	.4byte	.LVL8
+	.4byte	0xbe4
+	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x1
 	.byte	0x35
-	.uleb128 0x29
+	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x5b
 	.uleb128 0x5
@@ -2227,21 +2265,21 @@ wps_parse_msg:
 	.4byte	.LC0
 	.byte	0
 	.byte	0
-	.uleb128 0x28
-	.4byte	.LVL1
-	.4byte	0xb9c
 	.uleb128 0x29
+	.4byte	.LVL1
+	.4byte	0xbef
+	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x5b
 	.uleb128 0x1
 	.byte	0x30
-	.uleb128 0x29
+	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x5c
 	.uleb128 0x3
@@ -2249,14 +2287,14 @@ wps_parse_msg:
 	.2byte	0x1f4
 	.byte	0
 	.byte	0
-	.uleb128 0x2a
-	.4byte	.LASF221
-	.4byte	.LASF221
+	.uleb128 0x2b
+	.4byte	.LASF223
+	.4byte	.LASF223
 	.byte	0x3
 	.byte	0x58
-	.uleb128 0x2b
-	.4byte	.LASF222
-	.4byte	.LASF222
+	.uleb128 0x2c
+	.4byte	.LASF224
+	.4byte	.LASF224
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -2509,6 +2547,32 @@ wps_parse_msg:
 	.byte	0
 	.byte	0
 	.uleb128 0x15
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x16
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x17
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3
@@ -2525,37 +2589,11 @@ wps_parse_msg:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x16
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x17
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
 	.uleb128 0x18
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
-	.uleb128 0x8
+	.uleb128 0xe
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
@@ -2685,6 +2723,20 @@ wps_parse_msg:
 	.byte	0
 	.byte	0
 	.uleb128 0x21
+	.uleb128 0xb
+	.byte	0x1
+	.uleb128 0x55
+	.uleb128 0x17
+	.byte	0
+	.byte	0
+	.uleb128 0x22
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x31
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x23
 	.uleb128 0x1d
 	.byte	0x1
 	.uleb128 0x31
@@ -2699,14 +2751,7 @@ wps_parse_msg:
 	.uleb128 0x5
 	.byte	0
 	.byte	0
-	.uleb128 0x22
-	.uleb128 0xb
-	.byte	0x1
-	.uleb128 0x55
-	.uleb128 0x17
-	.byte	0
-	.byte	0
-	.uleb128 0x23
+	.uleb128 0x24
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x31
@@ -2715,7 +2760,7 @@ wps_parse_msg:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x24
+	.uleb128 0x25
 	.uleb128 0x1d
 	.byte	0x1
 	.uleb128 0x31
@@ -2724,21 +2769,6 @@ wps_parse_msg:
 	.uleb128 0x1
 	.uleb128 0x55
 	.uleb128 0x17
-	.uleb128 0x58
-	.uleb128 0xb
-	.uleb128 0x59
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x25
-	.uleb128 0x1d
-	.byte	0x1
-	.uleb128 0x31
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x6
 	.uleb128 0x58
 	.uleb128 0xb
 	.uleb128 0x59
@@ -2757,12 +2787,27 @@ wps_parse_msg:
 	.uleb128 0x58
 	.uleb128 0xb
 	.uleb128 0x59
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x27
+	.uleb128 0x1d
+	.byte	0x1
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x6
+	.uleb128 0x58
+	.uleb128 0xb
+	.uleb128 0x59
 	.uleb128 0x5
 	.uleb128 0x1
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x27
+	.uleb128 0x28
 	.uleb128 0x1d
 	.byte	0x1
 	.uleb128 0x31
@@ -2779,7 +2824,7 @@ wps_parse_msg:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x28
+	.uleb128 0x29
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
@@ -2788,7 +2833,7 @@ wps_parse_msg:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.uleb128 0x410a
 	.byte	0
 	.uleb128 0x2
@@ -2797,7 +2842,7 @@ wps_parse_msg:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x2b
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -2814,7 +2859,7 @@ wps_parse_msg:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -2847,7 +2892,7 @@ wps_parse_msg:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL146
-	.4byte	.LFE38
+	.4byte	.LFE39
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2872,7 +2917,7 @@ wps_parse_msg:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL145
-	.4byte	.LFE38
+	.4byte	.LFE39
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4232,7 +4277,7 @@ wps_parse_msg:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL146
-	.4byte	.LFE38
+	.4byte	.LFE39
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5919,38 +5964,38 @@ wps_parse_msg:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LBB20
-	.4byte	.LBE20
-	.4byte	.LBB23
-	.4byte	.LBE23
-	.4byte	0
-	.4byte	0
-	.4byte	.LBB24
-	.4byte	.LBE24
-	.4byte	.LBB41
-	.4byte	.LBE41
+	.4byte	.LBB22
+	.4byte	.LBE22
+	.4byte	.LBB25
+	.4byte	.LBE25
 	.4byte	0
 	.4byte	0
 	.4byte	.LBB26
 	.4byte	.LBE26
-	.4byte	.LBB35
-	.4byte	.LBE35
+	.4byte	.LBB43
+	.4byte	.LBE43
 	.4byte	0
 	.4byte	0
 	.4byte	.LBB28
 	.4byte	.LBE28
-	.4byte	.LBB33
-	.4byte	.LBE33
+	.4byte	.LBB37
+	.4byte	.LBE37
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB38
-	.4byte	.LFE38
+	.4byte	.LBB30
+	.4byte	.LBE30
+	.4byte	.LBB35
+	.4byte	.LBE35
+	.4byte	0
+	.4byte	0
+	.4byte	.LFB39
+	.4byte	.LFE39
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -5990,7 +6035,7 @@ wps_parse_msg:
 	.string	"ATTR_UUID_E"
 .LASF112:
 	.string	"ATTR_WEPTRANSMITKEY"
-.LASF209:
+.LASF205:
 	.string	"type"
 .LASF14:
 	.string	"long int"
@@ -6002,7 +6047,7 @@ wps_parse_msg:
 	.string	"network_key_len"
 .LASF90:
 	.string	"ATTR_UUID_R"
-.LASF218:
+.LASF220:
 	.string	"wps_attribute"
 .LASF28:
 	.string	"ATTR_ASSOC_STATE"
@@ -6012,8 +6057,8 @@ wps_parse_msg:
 	.string	"eap_type"
 .LASF52:
 	.string	"ATTR_KEY_WRAP_AUTH"
-.LASF60:
-	.string	"ATTR_NETWORK_KEY"
+.LASF204:
+	.string	"wps_ignore_null_padding_in_attr"
 .LASF31:
 	.string	"ATTR_AUTHENTICATOR"
 .LASF179:
@@ -6054,7 +6099,7 @@ wps_parse_msg:
 	.string	"public_key"
 .LASF165:
 	.string	"request_to_enroll"
-.LASF217:
+.LASF219:
 	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/wpa_supplicant"
 .LASF46:
 	.string	"ATTR_E_SNONCE2"
@@ -6068,7 +6113,7 @@ wps_parse_msg:
 	.string	"long long unsigned int"
 .LASF57:
 	.string	"ATTR_MODEL_NAME"
-.LASF205:
+.LASF203:
 	.string	"wpabuf_len"
 .LASF134:
 	.string	"sel_reg_config_methods"
@@ -6112,11 +6157,11 @@ wps_parse_msg:
 	.string	"unsigned int"
 .LASF155:
 	.string	"network_key_idx"
-.LASF213:
+.LASF215:
 	.string	"elen"
 .LASF181:
 	.string	"ssid"
-.LASF207:
+.LASF210:
 	.string	"wps_set_attr"
 .LASF70:
 	.string	"ATTR_RADIO_ENABLE"
@@ -6128,11 +6173,11 @@ wps_parse_msg:
 	.string	"ATTR_AUTH_TYPE"
 .LASF166:
 	.string	"ap_channel"
-.LASF215:
+.LASF217:
 	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
 .LASF158:
 	.string	"dot1x_enabled"
-.LASF203:
+.LASF207:
 	.string	"level"
 .LASF18:
 	.string	"size"
@@ -6154,7 +6199,7 @@ wps_parse_msg:
 	.string	"dev_name"
 .LASF23:
 	.string	"ESP_LOG_WARN"
-.LASF219:
+.LASF221:
 	.string	"wpa_hexdump_buf"
 .LASF68:
 	.string	"ATTR_PSK_MAX"
@@ -6192,13 +6237,13 @@ wps_parse_msg:
 	.string	"ATTR_FEATURE_ID"
 .LASF38:
 	.string	"ATTR_CRED"
-.LASF216:
+.LASF218:
 	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_attr_parse.c"
 .LASF104:
 	.string	"ATTR_PORTABLE_DEV"
 .LASF156:
 	.string	"mac_addr"
-.LASF204:
+.LASF208:
 	.string	"title"
 .LASF163:
 	.string	"settings_delay_time"
@@ -6212,7 +6257,7 @@ wps_parse_msg:
 	.string	"oob_dev_password_len"
 .LASF83:
 	.string	"ATTR_R_SNONCE2"
-.LASF212:
+.LASF213:
 	.string	"vendor_id"
 .LASF19:
 	.string	"used"
@@ -6222,11 +6267,11 @@ wps_parse_msg:
 	.string	"cred_len"
 .LASF178:
 	.string	"public_key_len"
-.LASF206:
+.LASF209:
 	.string	"wpabuf_head"
 .LASF53:
 	.string	"ATTR_KEY_ID"
-.LASF208:
+.LASF211:
 	.string	"attr"
 .LASF176:
 	.string	"dev_name_len"
@@ -6238,6 +6283,8 @@ wps_parse_msg:
 	.string	"unsigned char"
 .LASF164:
 	.string	"network_key_shareable"
+.LASF60:
+	.string	"ATTR_NETWORK_KEY"
 .LASF86:
 	.string	"ATTR_WPS_STATE"
 .LASF33:
@@ -6248,10 +6295,12 @@ wps_parse_msg:
 	.string	"ext_data"
 .LASF182:
 	.string	"ssid_len"
-.LASF222:
+.LASF224:
 	.string	"memset"
 .LASF95:
 	.string	"ATTR_EAP_IDENTITY"
+.LASF206:
+	.string	"attr_data_len"
 .LASF22:
 	.string	"ESP_LOG_ERROR"
 .LASF115:
@@ -6264,11 +6313,11 @@ wps_parse_msg:
 	.string	"ATTR_SELECTED_REGISTRAR"
 .LASF167:
 	.string	"manufacturer"
-.LASF220:
+.LASF222:
 	.string	"wps_parse_msg"
-.LASF221:
+.LASF223:
 	.string	"wpa_hexdump"
-.LASF211:
+.LASF214:
 	.string	"wps_parse_vendor_ext_wfa"
 .LASF13:
 	.string	"uint32_t"
@@ -6296,7 +6345,7 @@ wps_parse_msg:
 	.string	"ATTR_RF_BANDS"
 .LASF4:
 	.string	"__uint16_t"
-.LASF210:
+.LASF212:
 	.string	"wps_parse_vendor_ext"
 .LASF21:
 	.string	"ESP_LOG_NONE"
@@ -6314,7 +6363,7 @@ wps_parse_msg:
 	.string	"ATTR_ENCR_SETTINGS"
 .LASF76:
 	.string	"ATTR_REGISTRAR_NONCE"
-.LASF214:
+.LASF216:
 	.string	"wps_set_vendor_ext_wfa_subelem"
 .LASF199:
 	.string	"num_req_dev_type"

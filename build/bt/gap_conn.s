@@ -7,7 +7,7 @@
 	.align	4
 	.type	gap_find_ccb_by_cid, @function
 gap_find_ccb_by_cid:
-.LFB52:
+.LFB61:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/gap/gap_conn.c"
 	.loc 1 1061 0
 .LVL0:
@@ -42,7 +42,7 @@ gap_find_ccb_by_cid:
 .LVL7:
 	.loc 1 1074 0
 	retw.n
-.LFE52:
+.LFE61:
 	.size	gap_find_ccb_by_cid, .-gap_find_ccb_by_cid
 	.section	.text.gap_find_ccb_by_handle,"ax",@progbits
 	.literal_position
@@ -50,7 +50,7 @@ gap_find_ccb_by_cid:
 	.align	4
 	.type	gap_find_ccb_by_handle, @function
 gap_find_ccb_by_handle:
-.LFB53:
+.LFB62:
 	.loc 1 1088 0
 .LVL8:
 	entry	sp, 32
@@ -82,13 +82,13 @@ gap_find_ccb_by_handle:
 	.loc 1 1102 0
 	mov.n	a2, a9
 	retw.n
-.LFE53:
+.LFE62:
 	.size	gap_find_ccb_by_handle, .-gap_find_ccb_by_handle
 	.section	.text.gap_congestion_ind,"ax",@progbits
 	.align	4
 	.type	gap_congestion_ind, @function
 gap_congestion_ind:
-.LFB51:
+.LFB60:
 	.loc 1 1016 0
 .LVL12:
 	entry	sp, 32
@@ -147,13 +147,13 @@ gap_congestion_ind:
 .LVL24:
 .L14:
 	retw.n
-.LFE51:
+.LFE60:
 	.size	gap_congestion_ind, .-gap_congestion_ind
 	.section	.text.gap_data_ind,"ax",@progbits
 	.align	4
 	.type	gap_data_ind, @function
 gap_data_ind:
-.LFB50:
+.LFB59:
 	.loc 1 982 0
 .LVL25:
 	entry	sp, 32
@@ -198,7 +198,7 @@ gap_data_ind:
 	callx8	a3
 .LVL31:
 	retw.n
-.LFE50:
+.LFE59:
 	.size	gap_data_ind, .-gap_data_ind
 	.section	.text.gap_release_ccb,"ax",@progbits
 	.literal_position
@@ -206,7 +206,7 @@ gap_data_ind:
 	.align	4
 	.type	gap_release_ccb, @function
 gap_release_ccb:
-.LFB55:
+.LFB64:
 	.loc 1 1148 0
 .LVL32:
 	entry	sp, 32
@@ -297,13 +297,13 @@ gap_release_ccb:
 .LVL49:
 .L27:
 	retw.n
-.LFE55:
+.LFE64:
 	.size	gap_release_ccb, .-gap_release_ccb
 	.section	.text.gap_disconnect_ind,"ax",@progbits
 	.align	4
 	.type	gap_disconnect_ind, @function
 gap_disconnect_ind:
-.LFB49:
+.LFB58:
 	.loc 1 953 0
 .LVL50:
 	entry	sp, 32
@@ -340,7 +340,7 @@ gap_disconnect_ind:
 .LVL56:
 .L39:
 	retw.n
-.LFE49:
+.LFE58:
 	.size	gap_disconnect_ind, .-gap_disconnect_ind
 	.section	.text.gap_connect_cfm,"ax",@progbits
 	.literal_position
@@ -348,7 +348,7 @@ gap_disconnect_ind:
 	.align	4
 	.type	gap_connect_cfm, @function
 gap_connect_cfm:
-.LFB46:
+.LFB55:
 	.loc 1 825 0
 .LVL57:
 	entry	sp, 48
@@ -410,7 +410,7 @@ gap_connect_cfm:
 .LVL63:
 .L48:
 	retw.n
-.LFE46:
+.LFE55:
 	.size	gap_connect_cfm, .-gap_connect_cfm
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC9:
@@ -430,7 +430,7 @@ gap_connect_cfm:
 	.align	4
 	.type	gap_connect_ind, @function
 gap_connect_ind:
-.LFB43:
+.LFB52:
 	.loc 1 720 0
 .LVL64:
 	entry	sp, 32
@@ -553,13 +553,13 @@ gap_connect_ind:
 .LVL83:
 	bgeui	a2, 2, .L67
 	j	.L68
-.LFE43:
+.LFE52:
 	.size	gap_connect_ind, .-gap_connect_ind
 	.section	.text.gap_checks_con_flags,"ax",@progbits
 	.align	4
 	.type	gap_checks_con_flags, @function
 gap_checks_con_flags:
-.LFB44:
+.LFB53:
 	.loc 1 772 0
 .LVL84:
 	entry	sp, 32
@@ -586,13 +586,13 @@ gap_checks_con_flags:
 	retw.n
 .LBE5:
 .LBE4:
-.LFE44:
+.LFE53:
 	.size	gap_checks_con_flags, .-gap_checks_con_flags
 	.section	.text.gap_config_cfm,"ax",@progbits
 	.align	4
 	.type	gap_config_cfm, @function
 gap_config_cfm:
-.LFB48:
+.LFB57:
 	.loc 1 916 0
 .LVL87:
 	entry	sp, 32
@@ -646,13 +646,13 @@ gap_config_cfm:
 .LVL97:
 .L79:
 	retw.n
-.LFE48:
+.LFE57:
 	.size	gap_config_cfm, .-gap_config_cfm
 	.section	.text.gap_config_ind,"ax",@progbits
 	.align	4
 	.type	gap_config_ind, @function
 gap_config_ind:
-.LFB47:
+.LFB56:
 	.loc 1 867 0
 .LVL98:
 	entry	sp, 32
@@ -721,13 +721,13 @@ gap_config_ind:
 .LVL106:
 .L87:
 	retw.n
-.LFE47:
+.LFE56:
 	.size	gap_config_ind, .-gap_config_ind
 	.section	.text.gap_sec_check_complete,"ax",@progbits
 	.align	4
 	.type	gap_sec_check_complete, @function
 gap_sec_check_complete:
-.LFB45:
+.LFB54:
 	.loc 1 793 0
 .LVL107:
 	entry	sp, 32
@@ -764,7 +764,7 @@ gap_sec_check_complete:
 .LVL112:
 .L100:
 	retw.n
-.LFE45:
+.LFE54:
 	.size	gap_sec_check_complete, .-gap_sec_check_complete
 	.section	.text.gap_conn_init,"ax",@progbits
 	.literal_position
@@ -780,7 +780,7 @@ gap_sec_check_complete:
 	.global	gap_conn_init
 	.type	gap_conn_init, @function
 gap_conn_init:
-.LFB30:
+.LFB39:
 	.loc 1 59 0
 	entry	sp, 32
 .LCFI12:
@@ -824,7 +824,7 @@ gap_conn_init:
 	.loc 1 88 0
 	s32i	a9, a8, 84
 	retw.n
-.LFE30:
+.LFE39:
 	.size	gap_conn_init, .-gap_conn_init
 	.section	.rodata.str1.1
 .LC29:
@@ -850,7 +850,7 @@ gap_conn_init:
 	.global	GAP_ConnOpen
 	.type	GAP_ConnOpen, @function
 GAP_ConnOpen:
-.LFB31:
+.LFB40:
 	.loc 1 130 0
 .LVL113:
 	entry	sp, 80
@@ -1147,14 +1147,14 @@ GAP_ConnOpen:
 	l32r	a2, .LC25
 	.loc 1 245 0
 	retw.n
-.LFE31:
+.LFE40:
 	.size	GAP_ConnOpen, .-GAP_ConnOpen
 	.section	.text.GAP_ConnClose,"ax",@progbits
 	.align	4
 	.global	GAP_ConnClose
 	.type	GAP_ConnClose, @function
 GAP_ConnClose:
-.LFB32:
+.LFB41:
 	.loc 1 261 0
 .LVL145:
 	entry	sp, 32
@@ -1187,14 +1187,14 @@ GAP_ConnClose:
 .L165:
 	.loc 1 278 0
 	retw.n
-.LFE32:
+.LFE41:
 	.size	GAP_ConnClose, .-GAP_ConnClose
 	.section	.text.GAP_ConnReadData,"ax",@progbits
 	.align	4
 	.global	GAP_ConnReadData
 	.type	GAP_ConnReadData, @function
 GAP_ConnReadData:
-.LFB33:
+.LFB42:
 	.loc 1 300 0
 .LVL151:
 	entry	sp, 32
@@ -1315,7 +1315,7 @@ GAP_ConnReadData:
 .L173:
 	.loc 1 346 0
 	retw.n
-.LFE33:
+.LFE42:
 	.size	GAP_ConnReadData, .-GAP_ConnReadData
 	.section	.text.GAP_GetRxQueueCnt,"ax",@progbits
 	.literal_position
@@ -1325,7 +1325,7 @@ GAP_ConnReadData:
 	.global	GAP_GetRxQueueCnt
 	.type	GAP_GetRxQueueCnt, @function
 GAP_GetRxQueueCnt:
-.LFB34:
+.LFB43:
 	.loc 1 360 0
 .LVL171:
 	entry	sp, 32
@@ -1358,14 +1358,14 @@ GAP_GetRxQueueCnt:
 .L188:
 	.loc 1 381 0
 	retw.n
-.LFE34:
+.LFE43:
 	.size	GAP_GetRxQueueCnt, .-GAP_GetRxQueueCnt
 	.section	.text.GAP_ConnBTRead,"ax",@progbits
 	.align	4
 	.global	GAP_ConnBTRead
 	.type	GAP_ConnBTRead, @function
 GAP_ConnBTRead:
-.LFB35:
+.LFB44:
 	.loc 1 399 0
 .LVL177:
 	entry	sp, 32
@@ -1406,14 +1406,14 @@ GAP_ConnBTRead:
 .L192:
 	.loc 1 418 0
 	retw.n
-.LFE35:
+.LFE44:
 	.size	GAP_ConnBTRead, .-GAP_ConnBTRead
 	.section	.text.GAP_ConnBTWrite,"ax",@progbits
 	.align	4
 	.global	GAP_ConnBTWrite
 	.type	GAP_ConnBTWrite, @function
 GAP_ConnBTWrite:
-.LFB36:
+.LFB45:
 	.loc 1 436 0
 .LVL185:
 	entry	sp, 32
@@ -1514,7 +1514,7 @@ GAP_ConnBTWrite:
 .LBE21:
 	.loc 1 476 0
 	retw.n
-.LFE36:
+.LFE45:
 	.size	GAP_ConnBTWrite, .-GAP_ConnBTWrite
 	.section	.text.GAP_ConnWriteData,"ax",@progbits
 	.literal_position
@@ -1525,7 +1525,7 @@ GAP_ConnBTWrite:
 	.global	GAP_ConnWriteData
 	.type	GAP_ConnWriteData, @function
 GAP_ConnWriteData:
-.LFB37:
+.LFB46:
 	.loc 1 498 0
 .LVL207:
 	entry	sp, 32
@@ -1667,14 +1667,14 @@ GAP_ConnWriteData:
 .L211:
 	.loc 1 559 0
 	retw.n
-.LFE37:
+.LFE46:
 	.size	GAP_ConnWriteData, .-GAP_ConnWriteData
 	.section	.text.GAP_ConnReconfig,"ax",@progbits
 	.align	4
 	.global	GAP_ConnReconfig
 	.type	GAP_ConnReconfig, @function
 GAP_ConnReconfig:
-.LFB38:
+.LFB47:
 	.loc 1 575 0
 .LVL230:
 	entry	sp, 32
@@ -1710,14 +1710,14 @@ GAP_ConnReconfig:
 .L233:
 	.loc 1 589 0
 	retw.n
-.LFE38:
+.LFE47:
 	.size	GAP_ConnReconfig, .-GAP_ConnReconfig
 	.section	.text.GAP_ConnSetIdleTimeout,"ax",@progbits
 	.align	4
 	.global	GAP_ConnSetIdleTimeout
 	.type	GAP_ConnSetIdleTimeout, @function
 GAP_ConnSetIdleTimeout:
-.LFB39:
+.LFB48:
 	.loc 1 615 0
 .LVL236:
 	entry	sp, 32
@@ -1748,14 +1748,14 @@ GAP_ConnSetIdleTimeout:
 .L239:
 	.loc 1 627 0
 	retw.n
-.LFE39:
+.LFE48:
 	.size	GAP_ConnSetIdleTimeout, .-GAP_ConnSetIdleTimeout
 	.section	.text.GAP_ConnGetRemoteAddr,"ax",@progbits
 	.align	4
 	.global	GAP_ConnGetRemoteAddr
 	.type	GAP_ConnGetRemoteAddr, @function
 GAP_ConnGetRemoteAddr:
-.LFB40:
+.LFB49:
 	.loc 1 645 0
 .LVL241:
 	entry	sp, 32
@@ -1780,14 +1780,14 @@ GAP_ConnGetRemoteAddr:
 .L245:
 	.loc 1 659 0
 	retw.n
-.LFE40:
+.LFE49:
 	.size	GAP_ConnGetRemoteAddr, .-GAP_ConnGetRemoteAddr
 	.section	.text.GAP_ConnGetRemMtuSize,"ax",@progbits
 	.align	4
 	.global	GAP_ConnGetRemMtuSize
 	.type	GAP_ConnGetRemMtuSize, @function
 GAP_ConnGetRemMtuSize:
-.LFB41:
+.LFB50:
 	.loc 1 674 0
 .LVL244:
 	entry	sp, 32
@@ -1806,14 +1806,14 @@ GAP_ConnGetRemMtuSize:
 .L249:
 	.loc 1 682 0
 	retw.n
-.LFE41:
+.LFE50:
 	.size	GAP_ConnGetRemMtuSize, .-GAP_ConnGetRemMtuSize
 	.section	.text.GAP_ConnGetL2CAPCid,"ax",@progbits
 	.align	4
 	.global	GAP_ConnGetL2CAPCid
 	.type	GAP_ConnGetL2CAPCid, @function
 GAP_ConnGetL2CAPCid:
-.LFB42:
+.LFB51:
 	.loc 1 697 0
 .LVL247:
 	entry	sp, 32
@@ -1832,7 +1832,7 @@ GAP_ConnGetL2CAPCid:
 .L252:
 	.loc 1 705 0
 	retw.n
-.LFE42:
+.LFE51:
 	.size	GAP_ConnGetL2CAPCid, .-GAP_ConnGetL2CAPCid
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -1853,10 +1853,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
 	.byte	0x4
-	.4byte	.LCFI0-.LFB52
+	.4byte	.LCFI0-.LFB61
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1865,10 +1865,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB53
-	.4byte	.LFE53-.LFB53
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
 	.byte	0x4
-	.4byte	.LCFI1-.LFB53
+	.4byte	.LCFI1-.LFB62
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1877,10 +1877,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.byte	0x4
-	.4byte	.LCFI2-.LFB51
+	.4byte	.LCFI2-.LFB60
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1889,10 +1889,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB50
-	.4byte	.LFE50-.LFB50
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
 	.byte	0x4
-	.4byte	.LCFI3-.LFB50
+	.4byte	.LCFI3-.LFB59
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1901,10 +1901,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB55
-	.4byte	.LFE55-.LFB55
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
 	.byte	0x4
-	.4byte	.LCFI4-.LFB55
+	.4byte	.LCFI4-.LFB64
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1913,10 +1913,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
 	.byte	0x4
-	.4byte	.LCFI5-.LFB49
+	.4byte	.LCFI5-.LFB58
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1925,10 +1925,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.byte	0x4
-	.4byte	.LCFI6-.LFB46
+	.4byte	.LCFI6-.LFB55
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1937,10 +1937,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.byte	0x4
-	.4byte	.LCFI7-.LFB43
+	.4byte	.LCFI7-.LFB52
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1949,10 +1949,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.byte	0x4
-	.4byte	.LCFI8-.LFB44
+	.4byte	.LCFI8-.LFB53
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1961,10 +1961,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.4byte	.Lframe0
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
 	.byte	0x4
-	.4byte	.LCFI9-.LFB48
+	.4byte	.LCFI9-.LFB57
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1973,10 +1973,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE20-.LASFDE20
 .LASFDE20:
 	.4byte	.Lframe0
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.byte	0x4
-	.4byte	.LCFI10-.LFB47
+	.4byte	.LCFI10-.LFB56
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1985,10 +1985,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE22-.LASFDE22
 .LASFDE22:
 	.4byte	.Lframe0
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.byte	0x4
-	.4byte	.LCFI11-.LFB45
+	.4byte	.LCFI11-.LFB54
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1997,10 +1997,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE24-.LASFDE24
 .LASFDE24:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI12-.LFB30
+	.4byte	.LCFI12-.LFB39
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2009,10 +2009,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE26-.LASFDE26
 .LASFDE26:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI13-.LFB31
+	.4byte	.LCFI13-.LFB40
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -2021,10 +2021,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE28-.LASFDE28
 .LASFDE28:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.byte	0x4
-	.4byte	.LCFI14-.LFB32
+	.4byte	.LCFI14-.LFB41
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2033,10 +2033,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE30-.LASFDE30
 .LASFDE30:
 	.4byte	.Lframe0
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.byte	0x4
-	.4byte	.LCFI15-.LFB33
+	.4byte	.LCFI15-.LFB42
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2045,10 +2045,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE32-.LASFDE32
 .LASFDE32:
 	.4byte	.Lframe0
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.byte	0x4
-	.4byte	.LCFI16-.LFB34
+	.4byte	.LCFI16-.LFB43
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2057,10 +2057,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE34-.LASFDE34
 .LASFDE34:
 	.4byte	.Lframe0
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.byte	0x4
-	.4byte	.LCFI17-.LFB35
+	.4byte	.LCFI17-.LFB44
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2069,10 +2069,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE36-.LASFDE36
 .LASFDE36:
 	.4byte	.Lframe0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.byte	0x4
-	.4byte	.LCFI18-.LFB36
+	.4byte	.LCFI18-.LFB45
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2081,10 +2081,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE38-.LASFDE38
 .LASFDE38:
 	.4byte	.Lframe0
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.byte	0x4
-	.4byte	.LCFI19-.LFB37
+	.4byte	.LCFI19-.LFB46
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2093,10 +2093,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE40-.LASFDE40
 .LASFDE40:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI20-.LFB38
+	.4byte	.LCFI20-.LFB47
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2105,10 +2105,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE42-.LASFDE42
 .LASFDE42:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI21-.LFB39
+	.4byte	.LCFI21-.LFB48
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2117,10 +2117,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE44-.LASFDE44
 .LASFDE44:
 	.4byte	.Lframe0
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.byte	0x4
-	.4byte	.LCFI22-.LFB40
+	.4byte	.LCFI22-.LFB49
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2129,10 +2129,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE46-.LASFDE46
 .LASFDE46:
 	.4byte	.Lframe0
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.byte	0x4
-	.4byte	.LCFI23-.LFB41
+	.4byte	.LCFI23-.LFB50
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2141,10 +2141,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LEFDE48-.LASFDE48
 .LASFDE48:
 	.4byte	.Lframe0
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.byte	0x4
-	.4byte	.LCFI24-.LFB42
+	.4byte	.LCFI24-.LFB51
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2154,7 +2154,7 @@ GAP_ConnGetL2CAPCid:
 	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
 	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
 	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/fixed_queue.h"
+	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h"
 	.file 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/hcidefs.h"
 	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_api.h"
@@ -2166,7 +2166,7 @@ GAP_ConnGetL2CAPCid:
 	.file 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 	.file 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
 	.file 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
-	.file 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/mutex.h"
+	.file 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/mutex.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
 	.4byte	0x1d35
@@ -2243,209 +2243,209 @@ GAP_ConnGetL2CAPCid:
 	.byte	0x3
 	.byte	0x2d
 	.4byte	0x5e
-	.uleb128 0x3
-	.4byte	.LASF13
-	.byte	0x4
-	.byte	0x21
-	.4byte	0x7e
-	.uleb128 0x3
-	.4byte	.LASF14
-	.byte	0x4
-	.byte	0x22
-	.4byte	0x89
-	.uleb128 0x3
-	.4byte	.LASF15
-	.byte	0x4
-	.byte	0x23
-	.4byte	0x94
-	.uleb128 0x3
-	.4byte	.LASF16
-	.byte	0x4
-	.byte	0x29
-	.4byte	0xcb
-	.uleb128 0x2
-	.byte	0x1
-	.byte	0x2
-	.4byte	.LASF17
 	.uleb128 0x5
-	.byte	0x8
 	.byte	0x4
-	.byte	0xc6
-	.4byte	0x117
+	.uleb128 0x2
+	.byte	0x4
+	.byte	0x5
+	.4byte	.LASF13
+	.uleb128 0x2
+	.byte	0x4
+	.byte	0x7
+	.4byte	.LASF14
+	.uleb128 0x2
+	.byte	0x4
+	.byte	0x7
+	.4byte	.LASF15
 	.uleb128 0x6
-	.4byte	.LASF18
 	.byte	0x4
-	.byte	0xc7
-	.4byte	0x89
-	.byte	0
+	.4byte	0xbc
+	.uleb128 0x2
+	.byte	0x1
+	.byte	0x8
+	.4byte	.LASF16
+	.uleb128 0x6
+	.byte	0x4
+	.4byte	0xc9
 	.uleb128 0x7
-	.string	"len"
-	.byte	0x4
-	.byte	0xc8
-	.4byte	0x89
-	.byte	0x2
-	.uleb128 0x6
-	.4byte	.LASF19
-	.byte	0x4
-	.byte	0xc9
-	.4byte	0x89
-	.byte	0x4
-	.uleb128 0x6
-	.4byte	.LASF20
-	.byte	0x4
-	.byte	0xca
-	.4byte	0x89
-	.byte	0x6
-	.uleb128 0x6
-	.4byte	.LASF21
-	.byte	0x4
-	.byte	0xcb
-	.4byte	0x117
-	.byte	0x8
-	.byte	0
+	.4byte	0xbc
 	.uleb128 0x8
-	.4byte	0x7e
-	.4byte	0x126
+	.4byte	0xd9
 	.uleb128 0x9
-	.4byte	0x126
-	.byte	0
-	.uleb128 0x2
-	.byte	0x4
-	.byte	0x7
-	.4byte	.LASF22
-	.uleb128 0x3
-	.4byte	.LASF23
-	.byte	0x4
-	.byte	0xcc
-	.4byte	0xd2
-	.uleb128 0xa
-	.4byte	.LASF24
-	.byte	0x4
-	.2byte	0x132
-	.4byte	0x144
-	.uleb128 0x8
 	.4byte	0x9f
-	.4byte	0x154
-	.uleb128 0xb
-	.4byte	0x126
-	.byte	0x5
-	.byte	0
-	.uleb128 0xc
-	.byte	0x4
-	.4byte	0x9f
-	.uleb128 0xd
-	.byte	0x18
-	.byte	0x4
-	.2byte	0x16c
-	.4byte	0x1bf
-	.uleb128 0xe
-	.4byte	.LASF25
-	.byte	0x4
-	.2byte	0x16d
-	.4byte	0x9f
-	.byte	0
-	.uleb128 0xe
-	.4byte	.LASF26
-	.byte	0x4
-	.2byte	0x16e
-	.4byte	0x9f
-	.byte	0x1
-	.uleb128 0xe
-	.4byte	.LASF27
-	.byte	0x4
-	.2byte	0x16f
-	.4byte	0xb5
-	.byte	0x4
-	.uleb128 0xe
-	.4byte	.LASF28
-	.byte	0x4
-	.2byte	0x170
-	.4byte	0xb5
-	.byte	0x8
-	.uleb128 0xe
-	.4byte	.LASF29
-	.byte	0x4
-	.2byte	0x171
-	.4byte	0xb5
-	.byte	0xc
-	.uleb128 0xe
-	.4byte	.LASF30
-	.byte	0x4
-	.2byte	0x172
-	.4byte	0xb5
-	.byte	0x10
-	.uleb128 0xe
-	.4byte	.LASF31
-	.byte	0x4
-	.2byte	0x173
-	.4byte	0xb5
-	.byte	0x14
 	.byte	0
 	.uleb128 0xa
-	.4byte	.LASF32
-	.byte	0x4
-	.2byte	0x174
-	.4byte	0x15a
-	.uleb128 0xa
-	.4byte	.LASF33
-	.byte	0x4
-	.2byte	0x1fe
-	.4byte	0x9f
-	.uleb128 0xc
-	.byte	0x4
-	.4byte	0x1e4
-	.uleb128 0x2
-	.byte	0x1
-	.byte	0x8
-	.4byte	.LASF34
-	.uleb128 0xf
-	.4byte	0x1dd
-	.uleb128 0x10
-	.byte	0x4
-	.uleb128 0x2
-	.byte	0x4
-	.byte	0x5
-	.4byte	.LASF35
-	.uleb128 0x2
-	.byte	0x4
-	.byte	0x7
-	.4byte	.LASF36
-	.uleb128 0xc
-	.byte	0x4
-	.4byte	0x1dd
-	.uleb128 0x11
-	.4byte	0x20a
-	.uleb128 0x12
-	.4byte	0x1e9
-	.byte	0
-	.uleb128 0x13
 	.byte	0x4
 	.4byte	0x69
 	.byte	0x7
 	.byte	0x1f
-	.4byte	0x23b
-	.uleb128 0x14
-	.4byte	.LASF37
+	.4byte	0x10a
+	.uleb128 0xb
+	.4byte	.LASF17
 	.byte	0
-	.uleb128 0x14
-	.4byte	.LASF38
+	.uleb128 0xb
+	.4byte	.LASF18
 	.byte	0x1
-	.uleb128 0x14
-	.4byte	.LASF39
+	.uleb128 0xb
+	.4byte	.LASF19
 	.byte	0x2
-	.uleb128 0x14
-	.4byte	.LASF40
+	.uleb128 0xb
+	.4byte	.LASF20
 	.byte	0x3
-	.uleb128 0x14
-	.4byte	.LASF41
+	.uleb128 0xb
+	.4byte	.LASF21
 	.byte	0x4
-	.uleb128 0x14
-	.4byte	.LASF42
+	.uleb128 0xb
+	.4byte	.LASF22
 	.byte	0x5
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0x3
+	.4byte	.LASF23
 	.byte	0x4
-	.4byte	0x12d
+	.byte	0x1a
+	.4byte	0x7e
+	.uleb128 0x3
+	.4byte	.LASF24
+	.byte	0x4
+	.byte	0x1b
+	.4byte	0x89
+	.uleb128 0x3
+	.4byte	.LASF25
+	.byte	0x4
+	.byte	0x1c
+	.4byte	0x94
+	.uleb128 0x3
+	.4byte	.LASF26
+	.byte	0x4
+	.byte	0x22
+	.4byte	0x136
+	.uleb128 0x2
+	.byte	0x1
+	.byte	0x2
+	.4byte	.LASF27
+	.uleb128 0xc
+	.byte	0x8
+	.byte	0x4
+	.byte	0xbf
+	.4byte	0x182
+	.uleb128 0xd
+	.4byte	.LASF28
+	.byte	0x4
+	.byte	0xc0
+	.4byte	0x89
+	.byte	0
+	.uleb128 0xe
+	.string	"len"
+	.byte	0x4
+	.byte	0xc1
+	.4byte	0x89
+	.byte	0x2
+	.uleb128 0xd
+	.4byte	.LASF29
+	.byte	0x4
+	.byte	0xc2
+	.4byte	0x89
+	.byte	0x4
+	.uleb128 0xd
+	.4byte	.LASF30
+	.byte	0x4
+	.byte	0xc3
+	.4byte	0x89
+	.byte	0x6
+	.uleb128 0xd
+	.4byte	.LASF31
+	.byte	0x4
+	.byte	0xc4
+	.4byte	0x182
+	.byte	0x8
+	.byte	0
+	.uleb128 0xf
+	.4byte	0x7e
+	.4byte	0x191
+	.uleb128 0x10
+	.4byte	0xa8
+	.byte	0
+	.uleb128 0x3
+	.4byte	.LASF32
+	.byte	0x4
+	.byte	0xc5
+	.4byte	0x13d
+	.uleb128 0x11
+	.4byte	.LASF33
+	.byte	0x4
+	.2byte	0x12b
+	.4byte	0x1a8
+	.uleb128 0xf
+	.4byte	0x10a
+	.4byte	0x1b8
+	.uleb128 0x12
+	.4byte	0xa8
+	.byte	0x5
+	.byte	0
+	.uleb128 0x6
+	.byte	0x4
+	.4byte	0x10a
+	.uleb128 0x13
+	.byte	0x18
+	.byte	0x4
+	.2byte	0x165
+	.4byte	0x223
+	.uleb128 0x14
+	.4byte	.LASF34
+	.byte	0x4
+	.2byte	0x166
+	.4byte	0x10a
+	.byte	0
+	.uleb128 0x14
+	.4byte	.LASF35
+	.byte	0x4
+	.2byte	0x167
+	.4byte	0x10a
+	.byte	0x1
+	.uleb128 0x14
+	.4byte	.LASF36
+	.byte	0x4
+	.2byte	0x168
+	.4byte	0x120
+	.byte	0x4
+	.uleb128 0x14
+	.4byte	.LASF37
+	.byte	0x4
+	.2byte	0x169
+	.4byte	0x120
+	.byte	0x8
+	.uleb128 0x14
+	.4byte	.LASF38
+	.byte	0x4
+	.2byte	0x16a
+	.4byte	0x120
+	.byte	0xc
+	.uleb128 0x14
+	.4byte	.LASF39
+	.byte	0x4
+	.2byte	0x16b
+	.4byte	0x120
+	.byte	0x10
+	.uleb128 0x14
+	.4byte	.LASF40
+	.byte	0x4
+	.2byte	0x16c
+	.4byte	0x120
+	.byte	0x14
+	.byte	0
+	.uleb128 0x11
+	.4byte	.LASF41
+	.byte	0x4
+	.2byte	0x16d
+	.4byte	0x1be
+	.uleb128 0x11
+	.4byte	.LASF42
+	.byte	0x4
+	.2byte	0x1f7
+	.4byte	0x10a
+	.uleb128 0x6
+	.byte	0x4
+	.4byte	0x191
 	.uleb128 0x3
 	.4byte	.LASF43
 	.byte	0x5
@@ -2453,10 +2453,10 @@ GAP_ConnGetL2CAPCid:
 	.4byte	0x24c
 	.uleb128 0x15
 	.4byte	.LASF43
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x241
-	.uleb128 0xd
+	.uleb128 0x13
 	.byte	0x10
 	.byte	0x6
 	.2byte	0x56c
@@ -2465,141 +2465,141 @@ GAP_ConnGetL2CAPCid:
 	.string	"id"
 	.byte	0x6
 	.2byte	0x56d
-	.4byte	0x9f
+	.4byte	0x10a
 	.byte	0
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF44
 	.byte	0x6
 	.2byte	0x56e
-	.4byte	0x9f
+	.4byte	0x10a
 	.byte	0x1
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF45
 	.byte	0x6
 	.2byte	0x56f
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0x2
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF46
 	.byte	0x6
 	.2byte	0x570
-	.4byte	0xb5
+	.4byte	0x120
 	.byte	0x4
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF47
 	.byte	0x6
 	.2byte	0x571
-	.4byte	0xb5
+	.4byte	0x120
 	.byte	0x8
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF48
 	.byte	0x6
 	.2byte	0x572
-	.4byte	0xb5
+	.4byte	0x120
 	.byte	0xc
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0x11
 	.4byte	.LASF49
 	.byte	0x6
 	.2byte	0x573
 	.4byte	0x257
-	.uleb128 0x11
+	.uleb128 0x8
 	.4byte	0x2c5
-	.uleb128 0x12
-	.4byte	0xaa
+	.uleb128 0x9
+	.4byte	0x115
 	.byte	0
-	.uleb128 0x11
+	.uleb128 0x8
 	.4byte	0x2d5
-	.uleb128 0x12
-	.4byte	0xaa
-	.uleb128 0x12
-	.4byte	0x1e9
+	.uleb128 0x9
+	.4byte	0x115
+	.uleb128 0x9
+	.4byte	0x9f
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0xa
 	.byte	0x4
 	.4byte	0x69
 	.byte	0x8
 	.byte	0x31
 	.4byte	0x384
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF50
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF51
 	.byte	0x1
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF52
 	.byte	0x2
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF53
 	.byte	0x3
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF54
 	.byte	0x4
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF55
 	.byte	0x5
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF56
 	.byte	0x6
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF57
 	.byte	0x7
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF58
 	.byte	0x8
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF59
 	.byte	0x9
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF60
 	.byte	0xa
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF61
 	.byte	0xb
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF62
 	.byte	0xc
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF63
 	.byte	0xd
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF64
 	.byte	0xe
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF65
 	.byte	0xf
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF66
 	.byte	0x10
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF67
 	.byte	0x11
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF68
 	.byte	0x12
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF69
 	.byte	0x13
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF70
 	.byte	0x14
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF71
 	.byte	0x15
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF72
 	.byte	0x16
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF73
 	.byte	0x17
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF74
 	.byte	0x18
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF75
 	.byte	0x19
-	.uleb128 0x14
+	.uleb128 0xb
 	.4byte	.LASF76
 	.byte	0x1a
 	.byte	0
@@ -2607,47 +2607,47 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF77
 	.byte	0x8
 	.byte	0xaa
-	.4byte	0x1ff
-	.uleb128 0x5
+	.4byte	0xce
+	.uleb128 0xc
 	.byte	0xa
 	.byte	0x9
 	.byte	0x86
 	.4byte	0x3e0
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF78
 	.byte	0x9
 	.byte	0x8b
-	.4byte	0x9f
+	.4byte	0x10a
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF79
 	.byte	0x9
 	.byte	0x8d
-	.4byte	0x9f
+	.4byte	0x10a
 	.byte	0x1
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF80
 	.byte	0x9
 	.byte	0x8e
-	.4byte	0x9f
+	.4byte	0x10a
 	.byte	0x2
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF81
 	.byte	0x9
 	.byte	0x8f
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0x4
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF82
 	.byte	0x9
 	.byte	0x90
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0x6
-	.uleb128 0x7
+	.uleb128 0xe
 	.string	"mps"
 	.byte	0x9
 	.byte	0x91
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0x8
 	.byte	0
 	.uleb128 0x3
@@ -2655,94 +2655,94 @@ GAP_ConnGetL2CAPCid:
 	.byte	0x9
 	.byte	0x92
 	.4byte	0x38f
-	.uleb128 0x5
+	.uleb128 0xc
 	.byte	0x48
 	.byte	0x9
 	.byte	0x98
 	.4byte	0x49c
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF84
 	.byte	0x9
 	.byte	0x99
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF85
 	.byte	0x9
 	.byte	0x9a
-	.4byte	0xc0
+	.4byte	0x12b
 	.byte	0x2
-	.uleb128 0x7
+	.uleb128 0xe
 	.string	"mtu"
 	.byte	0x9
 	.byte	0x9b
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0x4
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF86
 	.byte	0x9
 	.byte	0x9c
-	.4byte	0xc0
+	.4byte	0x12b
 	.byte	0x6
-	.uleb128 0x7
+	.uleb128 0xe
 	.string	"qos"
 	.byte	0x9
 	.byte	0x9d
-	.4byte	0x1bf
+	.4byte	0x223
 	.byte	0x8
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF87
 	.byte	0x9
 	.byte	0x9e
-	.4byte	0xc0
+	.4byte	0x12b
 	.byte	0x20
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF88
 	.byte	0x9
 	.byte	0x9f
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0x22
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF89
 	.byte	0x9
 	.byte	0xa0
-	.4byte	0xc0
+	.4byte	0x12b
 	.byte	0x24
-	.uleb128 0x7
+	.uleb128 0xe
 	.string	"fcr"
 	.byte	0x9
 	.byte	0xa1
 	.4byte	0x3e0
 	.byte	0x26
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF90
 	.byte	0x9
 	.byte	0xa2
-	.4byte	0xc0
+	.4byte	0x12b
 	.byte	0x30
-	.uleb128 0x7
+	.uleb128 0xe
 	.string	"fcs"
 	.byte	0x9
 	.byte	0xa3
-	.4byte	0x9f
+	.4byte	0x10a
 	.byte	0x31
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF91
 	.byte	0x9
 	.byte	0xa4
-	.4byte	0xc0
+	.4byte	0x12b
 	.byte	0x32
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF92
 	.byte	0x9
 	.byte	0xa5
 	.4byte	0x2ae
 	.byte	0x34
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF93
 	.byte	0x9
 	.byte	0xa6
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0x44
 	.byte	0
 	.uleb128 0x3
@@ -2755,28 +2755,28 @@ GAP_ConnGetL2CAPCid:
 	.byte	0x9
 	.byte	0xc8
 	.4byte	0x4b2
-	.uleb128 0x11
+	.uleb128 0x8
 	.4byte	0x4cc
-	.uleb128 0x12
-	.4byte	0x154
-	.uleb128 0x12
-	.4byte	0xaa
-	.uleb128 0x12
-	.4byte	0xaa
-	.uleb128 0x12
-	.4byte	0x9f
+	.uleb128 0x9
+	.4byte	0x1b8
+	.uleb128 0x9
+	.4byte	0x115
+	.uleb128 0x9
+	.4byte	0x115
+	.uleb128 0x9
+	.4byte	0x10a
 	.byte	0
 	.uleb128 0x3
 	.4byte	.LASF96
 	.byte	0x9
 	.byte	0xcf
 	.4byte	0x4d7
-	.uleb128 0x11
+	.uleb128 0x8
 	.4byte	0x4e7
-	.uleb128 0x12
-	.4byte	0xaa
-	.uleb128 0x12
-	.4byte	0xaa
+	.uleb128 0x9
+	.4byte	0x115
+	.uleb128 0x9
+	.4byte	0x115
 	.byte	0
 	.uleb128 0x3
 	.4byte	.LASF97
@@ -2788,14 +2788,14 @@ GAP_ConnGetL2CAPCid:
 	.byte	0x9
 	.byte	0xdc
 	.4byte	0x4fd
-	.uleb128 0x11
+	.uleb128 0x8
 	.4byte	0x50d
-	.uleb128 0x12
-	.4byte	0xaa
-	.uleb128 0x12
+	.uleb128 0x9
+	.4byte	0x115
+	.uleb128 0x9
 	.4byte	0x50d
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x49c
 	.uleb128 0x3
@@ -2808,12 +2808,12 @@ GAP_ConnGetL2CAPCid:
 	.byte	0x9
 	.byte	0xea
 	.4byte	0x529
-	.uleb128 0x11
+	.uleb128 0x8
 	.4byte	0x539
-	.uleb128 0x12
-	.4byte	0xaa
-	.uleb128 0x12
-	.4byte	0xc0
+	.uleb128 0x9
+	.4byte	0x115
+	.uleb128 0x9
+	.4byte	0x12b
 	.byte	0
 	.uleb128 0x3
 	.4byte	.LASF101
@@ -2825,186 +2825,186 @@ GAP_ConnGetL2CAPCid:
 	.byte	0x9
 	.byte	0xf7
 	.4byte	0x54f
-	.uleb128 0x11
+	.uleb128 0x8
 	.4byte	0x55a
-	.uleb128 0x12
-	.4byte	0x154
+	.uleb128 0x9
+	.4byte	0x1b8
 	.byte	0
 	.uleb128 0x3
 	.4byte	.LASF103
 	.byte	0x9
 	.byte	0xfe
 	.4byte	0x565
-	.uleb128 0x11
+	.uleb128 0x8
 	.4byte	0x575
-	.uleb128 0x12
-	.4byte	0xaa
-	.uleb128 0x12
+	.uleb128 0x9
+	.4byte	0x115
+	.uleb128 0x9
 	.4byte	0x23b
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0x11
 	.4byte	.LASF104
 	.byte	0x9
 	.2byte	0x114
 	.4byte	0x529
-	.uleb128 0xa
+	.uleb128 0x11
 	.4byte	.LASF105
 	.byte	0x9
 	.2byte	0x126
 	.4byte	0x4d7
-	.uleb128 0xd
+	.uleb128 0x13
 	.byte	0x2c
 	.byte	0x9
 	.2byte	0x12d
 	.4byte	0x626
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF106
 	.byte	0x9
 	.2byte	0x12e
 	.4byte	0x626
 	.byte	0
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF107
 	.byte	0x9
 	.2byte	0x12f
 	.4byte	0x62c
 	.byte	0x4
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF108
 	.byte	0x9
 	.2byte	0x130
 	.4byte	0x632
 	.byte	0x8
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF109
 	.byte	0x9
 	.2byte	0x131
 	.4byte	0x638
 	.byte	0xc
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF110
 	.byte	0x9
 	.2byte	0x132
 	.4byte	0x63e
 	.byte	0x10
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF111
 	.byte	0x9
 	.2byte	0x133
 	.4byte	0x644
 	.byte	0x14
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF112
 	.byte	0x9
 	.2byte	0x134
 	.4byte	0x64a
 	.byte	0x18
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF113
 	.byte	0x9
 	.2byte	0x135
 	.4byte	0x650
 	.byte	0x1c
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF114
 	.byte	0x9
 	.2byte	0x136
 	.4byte	0x656
 	.byte	0x20
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF115
 	.byte	0x9
 	.2byte	0x137
 	.4byte	0x65c
 	.byte	0x24
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF116
 	.byte	0x9
 	.2byte	0x138
 	.4byte	0x662
 	.byte	0x28
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x4a7
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x4cc
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x4e7
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x4f2
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x513
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x51e
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x539
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x544
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x55a
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x575
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x581
-	.uleb128 0xa
+	.uleb128 0x11
 	.4byte	.LASF117
 	.byte	0x9
 	.2byte	0x13a
 	.4byte	0x58d
-	.uleb128 0xd
+	.uleb128 0x13
 	.byte	0xa
 	.byte	0x9
 	.2byte	0x13f
 	.4byte	0x6cc
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF118
 	.byte	0x9
 	.2byte	0x140
-	.4byte	0x9f
+	.4byte	0x10a
 	.byte	0
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF119
 	.byte	0x9
 	.2byte	0x141
-	.4byte	0x9f
+	.4byte	0x10a
 	.byte	0x1
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF120
 	.byte	0x9
 	.2byte	0x142
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0x2
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF121
 	.byte	0x9
 	.2byte	0x143
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0x4
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF122
 	.byte	0x9
 	.2byte	0x144
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0x6
-	.uleb128 0xe
+	.uleb128 0x14
 	.4byte	.LASF123
 	.byte	0x9
 	.2byte	0x145
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0x8
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0x11
 	.4byte	.LASF124
 	.byte	0x9
 	.2byte	0x147
@@ -3019,34 +3019,34 @@ GAP_ConnGetL2CAPCid:
 	.byte	0xa
 	.byte	0x63
 	.4byte	0x2c5
-	.uleb128 0x5
+	.uleb128 0xc
 	.byte	0x8
 	.byte	0xa
 	.byte	0x6d
 	.4byte	0x727
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF127
 	.byte	0xa
 	.byte	0x6e
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF128
 	.byte	0xa
 	.byte	0x6f
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0x2
-	.uleb128 0x6
-	.4byte	.LASF30
+	.uleb128 0xd
+	.4byte	.LASF39
 	.byte	0xa
 	.byte	0x70
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0x4
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF129
 	.byte	0xa
 	.byte	0x71
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0x6
 	.byte	0
 	.uleb128 0x3
@@ -3068,22 +3068,22 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF132
 	.byte	0xa
 	.byte	0x76
-	.4byte	0x138
+	.4byte	0x19c
 	.uleb128 0x18
 	.4byte	.LASF133
 	.byte	0xa
 	.byte	0x77
-	.4byte	0xaa
+	.4byte	0x115
 	.uleb128 0x18
 	.4byte	.LASF134
 	.byte	0xa
 	.byte	0x78
-	.4byte	0x154
+	.4byte	0x1b8
 	.uleb128 0x18
 	.4byte	.LASF135
 	.byte	0xa
 	.byte	0x79
-	.4byte	0x9f
+	.4byte	0x10a
 	.byte	0
 	.uleb128 0x3
 	.4byte	.LASF136
@@ -3095,71 +3095,71 @@ GAP_ConnGetL2CAPCid:
 	.byte	0xa
 	.byte	0x7d
 	.4byte	0x788
-	.uleb128 0x11
+	.uleb128 0x8
 	.4byte	0x7a2
-	.uleb128 0x12
-	.4byte	0xc0
-	.uleb128 0x12
-	.4byte	0x154
-	.uleb128 0x12
-	.4byte	0xaa
-	.uleb128 0x12
-	.4byte	0x1f9
+	.uleb128 0x9
+	.4byte	0x12b
+	.uleb128 0x9
+	.4byte	0x1b8
+	.uleb128 0x9
+	.4byte	0x115
+	.uleb128 0x9
+	.4byte	0xb6
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
-	.4byte	0xaa
-	.uleb128 0xc
+	.4byte	0x115
+	.uleb128 0x6
 	.byte	0x4
-	.4byte	0xb5
-	.uleb128 0xa
+	.4byte	0x120
+	.uleb128 0x11
 	.4byte	.LASF138
 	.byte	0xb
-	.2byte	0x207
-	.4byte	0x9f
-	.uleb128 0x5
+	.2byte	0x209
+	.4byte	0x10a
+	.uleb128 0xc
 	.byte	0x10
 	.byte	0xc
 	.byte	0x1d
 	.4byte	0x80b
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF139
 	.byte	0xc
 	.byte	0x1e
-	.4byte	0x1e9
+	.4byte	0x9f
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF140
 	.byte	0xc
 	.byte	0x1f
 	.4byte	0x80b
 	.byte	0x4
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF141
 	.byte	0xc
 	.byte	0x20
 	.4byte	0x80b
 	.byte	0x8
-	.uleb128 0x6
-	.4byte	.LASF18
+	.uleb128 0xd
+	.4byte	.LASF28
 	.byte	0xc
 	.byte	0x21
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0xc
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF142
 	.byte	0xc
 	.byte	0x22
-	.4byte	0x9f
+	.4byte	0x10a
 	.byte	0xe
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF143
 	.byte	0xc
 	.byte	0x23
-	.4byte	0xc0
+	.4byte	0x12b
 	.byte	0xf
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x6e3
 	.uleb128 0x3
@@ -3167,115 +3167,115 @@ GAP_ConnGetL2CAPCid:
 	.byte	0xc
 	.byte	0x24
 	.4byte	0x7ba
-	.uleb128 0x5
+	.uleb128 0xc
 	.byte	0x7c
 	.byte	0xc
 	.byte	0x30
 	.4byte	0x8f1
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF145
 	.byte	0xc
 	.byte	0x37
-	.4byte	0x9f
+	.4byte	0x10a
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF146
 	.byte	0xc
 	.byte	0x3e
-	.4byte	0x9f
+	.4byte	0x10a
 	.byte	0x1
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF147
 	.byte	0xc
 	.byte	0x40
-	.4byte	0x9f
+	.4byte	0x10a
 	.byte	0x2
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF148
 	.byte	0xc
 	.byte	0x41
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0x4
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF149
 	.byte	0xc
 	.byte	0x42
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0x6
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF150
 	.byte	0xc
 	.byte	0x43
-	.4byte	0xc0
+	.4byte	0x12b
 	.byte	0x8
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF151
 	.byte	0xc
 	.byte	0x44
-	.4byte	0x9f
+	.4byte	0x10a
 	.byte	0x9
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF152
 	.byte	0xc
 	.byte	0x45
-	.4byte	0x138
+	.4byte	0x19c
 	.byte	0xa
-	.uleb128 0x7
+	.uleb128 0xe
 	.string	"psm"
 	.byte	0xc
 	.byte	0x46
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0x10
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF153
 	.byte	0xc
 	.byte	0x47
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0x12
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF154
 	.byte	0xc
 	.byte	0x49
-	.4byte	0xc0
+	.4byte	0x12b
 	.byte	0x14
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF155
 	.byte	0xc
 	.byte	0x4a
 	.4byte	0x251
 	.byte	0x18
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF156
 	.byte	0xc
 	.byte	0x4b
 	.4byte	0x251
 	.byte	0x1c
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF157
 	.byte	0xc
 	.byte	0x4d
-	.4byte	0xb5
+	.4byte	0x120
 	.byte	0x20
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF158
 	.byte	0xc
 	.byte	0x4f
 	.4byte	0x8f1
 	.byte	0x24
-	.uleb128 0x7
+	.uleb128 0xe
 	.string	"cfg"
 	.byte	0xc
 	.byte	0x51
 	.4byte	0x49c
 	.byte	0x28
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF159
 	.byte	0xc
 	.byte	0x52
 	.4byte	0x6cc
 	.byte	0x70
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x6d8
 	.uleb128 0x3
@@ -3288,24 +3288,24 @@ GAP_ConnGetL2CAPCid:
 	.byte	0xc
 	.byte	0x55
 	.4byte	0x924
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF161
 	.byte	0xc
 	.byte	0x59
 	.4byte	0x668
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF162
 	.byte	0xc
 	.byte	0x5b
 	.4byte	0x924
 	.byte	0x2c
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0xf
 	.4byte	0x8f7
 	.4byte	0x934
-	.uleb128 0xb
-	.4byte	0x126
+	.uleb128 0x12
+	.4byte	0xa8
 	.byte	0x9
 	.byte	0
 	.uleb128 0x3
@@ -3313,24 +3313,24 @@ GAP_ConnGetL2CAPCid:
 	.byte	0xc
 	.byte	0x5c
 	.4byte	0x902
-	.uleb128 0x5
+	.uleb128 0xc
 	.byte	0xc
 	.byte	0xc
 	.byte	0x62
 	.4byte	0x96c
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF164
 	.byte	0xc
 	.byte	0x63
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF165
 	.byte	0xc
 	.byte	0x64
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0x2
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF166
 	.byte	0xc
 	.byte	0x65
@@ -3342,51 +3342,51 @@ GAP_ConnGetL2CAPCid:
 	.byte	0xc
 	.byte	0x66
 	.4byte	0x93f
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x77d
-	.uleb128 0x5
+	.uleb128 0xc
 	.byte	0x18
 	.byte	0xc
 	.byte	0x73
 	.4byte	0x9da
-	.uleb128 0x7
+	.uleb128 0xe
 	.string	"bda"
 	.byte	0xc
 	.byte	0x74
-	.4byte	0x138
+	.4byte	0x19c
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF168
 	.byte	0xc
 	.byte	0x75
 	.4byte	0x977
 	.byte	0x8
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF169
 	.byte	0xc
 	.byte	0x76
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0xc
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF170
 	.byte	0xc
 	.byte	0x77
-	.4byte	0xaa
+	.4byte	0x115
 	.byte	0xe
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF143
 	.byte	0xc
 	.byte	0x78
-	.4byte	0xc0
+	.4byte	0x12b
 	.byte	0x10
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF171
 	.byte	0xc
 	.byte	0x79
-	.4byte	0xc0
+	.4byte	0x12b
 	.byte	0x11
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF172
 	.byte	0xc
 	.byte	0x7a
@@ -3403,25 +3403,25 @@ GAP_ConnGetL2CAPCid:
 	.byte	0xc
 	.byte	0x7e
 	.4byte	0xa46
-	.uleb128 0x7
+	.uleb128 0xe
 	.string	"blk"
 	.byte	0xc
 	.byte	0x7f
 	.4byte	0xa46
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF174
 	.byte	0xc
 	.byte	0x80
 	.4byte	0xa56
 	.byte	0x20
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF175
 	.byte	0xc
 	.byte	0x81
-	.4byte	0x9f
+	.4byte	0x10a
 	.byte	0x28
-	.uleb128 0x6
+	.uleb128 0xd
 	.4byte	.LASF176
 	.byte	0xc
 	.byte	0x86
@@ -3446,35 +3446,35 @@ GAP_ConnGetL2CAPCid:
 	.4byte	0x7ae
 	.2byte	0x680
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0xf
 	.4byte	0x811
 	.4byte	0xa56
-	.uleb128 0xb
-	.4byte	0x126
+	.uleb128 0x12
+	.4byte	0xa8
 	.byte	0x1
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0xf
 	.4byte	0xa66
 	.4byte	0xa66
-	.uleb128 0xb
-	.4byte	0x126
+	.uleb128 0x12
+	.4byte	0xa8
 	.byte	0x1
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x384
-	.uleb128 0x8
+	.uleb128 0xf
 	.4byte	0x96c
 	.4byte	0xa7c
-	.uleb128 0xb
-	.4byte	0x126
+	.uleb128 0x12
+	.4byte	0xa8
 	.byte	0x3
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0xf
 	.4byte	0x9da
 	.4byte	0xa8c
-	.uleb128 0xb
-	.4byte	0x126
+	.uleb128 0x12
+	.4byte	0xa8
 	.byte	0xb
 	.byte	0
 	.uleb128 0x3
@@ -3494,7 +3494,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x303
 	.4byte	0xab1
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x8f7
 	.uleb128 0x1b
@@ -3507,22 +3507,22 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF184
 	.byte	0x1
 	.2byte	0x318
-	.4byte	0x154
+	.4byte	0x1b8
 	.uleb128 0x1c
 	.4byte	.LASF185
 	.byte	0x1
 	.2byte	0x318
-	.4byte	0x1cb
+	.4byte	0x22f
 	.uleb128 0x1c
 	.4byte	.LASF186
 	.byte	0x1
 	.2byte	0x318
-	.4byte	0x1e9
+	.4byte	0x9f
 	.uleb128 0x1d
 	.string	"res"
 	.byte	0x1
 	.2byte	0x318
-	.4byte	0x9f
+	.4byte	0x10a
 	.uleb128 0x1e
 	.4byte	.LASF183
 	.byte	0x1
@@ -3534,8 +3534,8 @@ GAP_ConnGetL2CAPCid:
 	.byte	0x1
 	.2byte	0x424
 	.4byte	0xab1
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xb4b
@@ -3543,13 +3543,13 @@ GAP_ConnGetL2CAPCid:
 	.string	"cid"
 	.byte	0x1
 	.2byte	0x424
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST0
 	.uleb128 0x21
 	.string	"xx"
 	.byte	0x1
 	.2byte	0x426
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST1
 	.uleb128 0x22
 	.4byte	.LASF183
@@ -3563,8 +3563,8 @@ GAP_ConnGetL2CAPCid:
 	.byte	0x1
 	.2byte	0x43f
 	.4byte	0xab1
-	.4byte	.LFB53
-	.4byte	.LFE53-.LFB53
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xb86
@@ -3572,7 +3572,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF164
 	.byte	0x1
 	.2byte	0x43f
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST3
 	.uleb128 0x22
 	.4byte	.LASF183
@@ -3585,8 +3585,8 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF192
 	.byte	0x1
 	.2byte	0x3f7
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xc42
@@ -3594,13 +3594,13 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF189
 	.byte	0x1
 	.2byte	0x3f7
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST5
 	.uleb128 0x23
 	.4byte	.LASF154
 	.byte	0x1
 	.2byte	0x3f7
-	.4byte	0xc0
+	.4byte	0x12b
 	.4byte	.LLST6
 	.uleb128 0x25
 	.4byte	.LASF183
@@ -3610,10 +3610,10 @@ GAP_ConnGetL2CAPCid:
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x22
-	.4byte	.LASF18
+	.4byte	.LASF28
 	.byte	0x1
 	.2byte	0x3fa
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST7
 	.uleb128 0x22
 	.4byte	.LASF190
@@ -3625,7 +3625,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF191
 	.byte	0x1
 	.2byte	0x3fc
-	.4byte	0x9f
+	.4byte	0x10a
 	.4byte	.LLST9
 	.uleb128 0x26
 	.4byte	.LVL13
@@ -3672,8 +3672,8 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF193
 	.byte	0x1
 	.2byte	0x3d5
-	.4byte	.LFB50
-	.4byte	.LFE50-.LFB50
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xcd7
@@ -3681,7 +3681,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF194
 	.byte	0x1
 	.2byte	0x3d5
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST10
 	.uleb128 0x23
 	.4byte	.LASF195
@@ -3749,8 +3749,8 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF196
 	.byte	0x1
 	.2byte	0x47b
-	.4byte	.LFB55
-	.4byte	.LFE55-.LFB55
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xdad
@@ -3764,19 +3764,19 @@ GAP_ConnGetL2CAPCid:
 	.string	"xx"
 	.byte	0x1
 	.2byte	0x47d
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST13
 	.uleb128 0x21
 	.string	"psm"
 	.byte	0x1
 	.2byte	0x47e
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST14
 	.uleb128 0x22
 	.4byte	.LASF147
 	.byte	0x1
 	.2byte	0x47f
-	.4byte	0x9f
+	.4byte	0x10a
 	.4byte	.LLST15
 	.uleb128 0x29
 	.4byte	.LVL36
@@ -3842,8 +3842,8 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF197
 	.byte	0x1
 	.2byte	0x3b8
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xe3c
@@ -3851,13 +3851,13 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF194
 	.byte	0x1
 	.2byte	0x3b8
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST16
 	.uleb128 0x2c
 	.4byte	.LASF198
 	.byte	0x1
 	.2byte	0x3b8
-	.4byte	0xc0
+	.4byte	0x12b
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x25
@@ -3917,8 +3917,8 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF199
 	.byte	0x1
 	.2byte	0x338
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xef5
@@ -3926,14 +3926,14 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF194
 	.byte	0x1
 	.2byte	0x338
-	.4byte	0xaa
+	.4byte	0x115
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x2c
 	.4byte	.LASF84
 	.byte	0x1
 	.2byte	0x338
-	.4byte	0xaa
+	.4byte	0x115
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x25
@@ -4025,8 +4025,8 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF200
 	.byte	0x1
 	.2byte	0x2cf
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x10a3
@@ -4034,34 +4034,34 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF184
 	.byte	0x1
 	.2byte	0x2cf
-	.4byte	0x154
+	.4byte	0x1b8
 	.4byte	.LLST17
 	.uleb128 0x2c
 	.4byte	.LASF194
 	.byte	0x1
 	.2byte	0x2cf
-	.4byte	0xaa
+	.4byte	0x115
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x2e
 	.string	"psm"
 	.byte	0x1
 	.2byte	0x2cf
-	.4byte	0xaa
+	.4byte	0x115
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x2c
 	.4byte	.LASF201
 	.byte	0x1
 	.2byte	0x2cf
-	.4byte	0x9f
+	.4byte	0x10a
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x21
 	.string	"xx"
 	.byte	0x1
 	.2byte	0x2d1
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST18
 	.uleb128 0x22
 	.4byte	.LASF183
@@ -4275,8 +4275,8 @@ GAP_ConnGetL2CAPCid:
 	.byte	0
 	.uleb128 0x2f
 	.4byte	0xa97
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x10de
@@ -4305,8 +4305,8 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF202
 	.byte	0x1
 	.2byte	0x393
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1173
@@ -4314,7 +4314,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF194
 	.byte	0x1
 	.2byte	0x393
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST21
 	.uleb128 0x23
 	.4byte	.LASF203
@@ -4382,8 +4382,8 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF204
 	.byte	0x1
 	.2byte	0x362
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1206
@@ -4391,7 +4391,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF194
 	.byte	0x1
 	.2byte	0x362
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST23
 	.uleb128 0x23
 	.4byte	.LASF203
@@ -4410,7 +4410,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF205
 	.byte	0x1
 	.2byte	0x365
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST25
 	.uleb128 0x26
 	.4byte	.LVL99
@@ -4453,8 +4453,8 @@ GAP_ConnGetL2CAPCid:
 	.byte	0
 	.uleb128 0x2f
 	.4byte	0xab7
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1297
@@ -4519,8 +4519,8 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF264
 	.byte	0x1
 	.byte	0x3a
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x38
@@ -4534,7 +4534,7 @@ GAP_ConnGetL2CAPCid:
 	.string	"xx"
 	.byte	0x1
 	.2byte	0x45c
-	.4byte	0xaa
+	.4byte	0x115
 	.uleb128 0x1e
 	.4byte	.LASF183
 	.byte	0x1
@@ -4545,9 +4545,9 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF211
 	.byte	0x1
 	.byte	0x7e
-	.4byte	0xaa
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	0x115
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x15ab
@@ -4555,33 +4555,33 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF206
 	.byte	0x1
 	.byte	0x7e
-	.4byte	0x1d7
+	.4byte	0xc3
 	.4byte	.LLST30
 	.uleb128 0x3b
 	.4byte	.LASF147
 	.byte	0x1
 	.byte	0x7e
-	.4byte	0x9f
+	.4byte	0x10a
 	.4byte	.LLST31
 	.uleb128 0x3c
 	.4byte	.LASF207
 	.byte	0x1
 	.byte	0x7e
-	.4byte	0xc0
+	.4byte	0x12b
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x3c
 	.4byte	.LASF208
 	.byte	0x1
 	.byte	0x7f
-	.4byte	0x154
+	.4byte	0x1b8
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x3d
 	.string	"psm"
 	.byte	0x1
 	.byte	0x7f
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST32
 	.uleb128 0x3b
 	.4byte	.LASF203
@@ -4601,7 +4601,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF209
 	.byte	0x1
 	.byte	0x80
-	.4byte	0xaa
+	.4byte	0x115
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 4
@@ -4609,7 +4609,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF151
 	.byte	0x1
 	.byte	0x80
-	.4byte	0x9f
+	.4byte	0x10a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -4630,7 +4630,7 @@ GAP_ConnGetL2CAPCid:
 	.string	"cid"
 	.byte	0x1
 	.byte	0x84
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST34
 	.uleb128 0x40
 	.4byte	0x12a8
@@ -4966,16 +4966,16 @@ GAP_ConnGetL2CAPCid:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x6cc
 	.uleb128 0x43
 	.4byte	.LASF212
 	.byte	0x1
 	.2byte	0x104
-	.4byte	0xaa
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	0x115
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x161b
@@ -4983,7 +4983,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF148
 	.byte	0x1
 	.2byte	0x104
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST37
 	.uleb128 0x25
 	.4byte	.LASF183
@@ -5024,9 +5024,9 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF213
 	.byte	0x1
 	.2byte	0x12b
-	.4byte	0xaa
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	0x115
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1718
@@ -5034,19 +5034,19 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF148
 	.byte	0x1
 	.2byte	0x12b
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST38
 	.uleb128 0x23
 	.4byte	.LASF139
 	.byte	0x1
 	.2byte	0x12b
-	.4byte	0x154
+	.4byte	0x1b8
 	.4byte	.LLST39
 	.uleb128 0x23
 	.4byte	.LASF214
 	.byte	0x1
 	.2byte	0x12b
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST40
 	.uleb128 0x2c
 	.4byte	.LASF215
@@ -5066,7 +5066,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF216
 	.byte	0x1
 	.2byte	0x12e
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST41
 	.uleb128 0x35
 	.4byte	.LBB18
@@ -5134,8 +5134,8 @@ GAP_ConnGetL2CAPCid:
 	.byte	0x1
 	.2byte	0x167
 	.4byte	0x57
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x176c
@@ -5143,7 +5143,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF164
 	.byte	0x1
 	.2byte	0x167
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST43
 	.uleb128 0x2c
 	.4byte	.LASF218
@@ -5168,9 +5168,9 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF219
 	.byte	0x1
 	.2byte	0x18e
-	.4byte	0xaa
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	0x115
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x17e6
@@ -5178,7 +5178,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF148
 	.byte	0x1
 	.2byte	0x18e
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST45
 	.uleb128 0x23
 	.4byte	.LASF220
@@ -5217,16 +5217,16 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LVL181
 	.4byte	0x1c07
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x23b
 	.uleb128 0x43
 	.4byte	.LASF221
 	.byte	0x1
 	.2byte	0x1b3
-	.4byte	0xaa
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	0x115
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x18cb
@@ -5234,7 +5234,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF148
 	.byte	0x1
 	.2byte	0x1b3
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST48
 	.uleb128 0x23
 	.4byte	.LASF190
@@ -5255,7 +5255,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF191
 	.byte	0x1
 	.2byte	0x1d1
-	.4byte	0x9f
+	.4byte	0x10a
 	.4byte	.LLST51
 	.uleb128 0x29
 	.4byte	.LVL199
@@ -5327,9 +5327,9 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF222
 	.byte	0x1
 	.2byte	0x1f1
-	.4byte	0xaa
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	0x115
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x19c4
@@ -5337,19 +5337,19 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF148
 	.byte	0x1
 	.2byte	0x1f1
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST52
 	.uleb128 0x23
 	.4byte	.LASF139
 	.byte	0x1
 	.2byte	0x1f1
-	.4byte	0x154
+	.4byte	0x1b8
 	.4byte	.LLST53
 	.uleb128 0x23
 	.4byte	.LASF214
 	.byte	0x1
 	.2byte	0x1f1
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST54
 	.uleb128 0x2c
 	.4byte	.LASF215
@@ -5378,7 +5378,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF191
 	.byte	0x1
 	.2byte	0x224
-	.4byte	0x9f
+	.4byte	0x10a
 	.4byte	.LLST56
 	.uleb128 0x29
 	.4byte	.LVL224
@@ -5444,9 +5444,9 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF223
 	.byte	0x1
 	.2byte	0x23e
-	.4byte	0xaa
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	0x115
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1a53
@@ -5454,7 +5454,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF148
 	.byte	0x1
 	.2byte	0x23e
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST57
 	.uleb128 0x2c
 	.4byte	.LASF203
@@ -5522,9 +5522,9 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF224
 	.byte	0x1
 	.2byte	0x266
-	.4byte	0xaa
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	0x115
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1ac9
@@ -5532,13 +5532,13 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF148
 	.byte	0x1
 	.2byte	0x266
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST58
 	.uleb128 0x2c
 	.4byte	.LASF225
 	.byte	0x1
 	.2byte	0x266
-	.4byte	0xaa
+	.4byte	0x115
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x22
@@ -5581,9 +5581,9 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF226
 	.byte	0x1
 	.2byte	0x284
-	.4byte	0x154
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	0x1b8
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1b16
@@ -5591,7 +5591,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF148
 	.byte	0x1
 	.2byte	0x284
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST60
 	.uleb128 0x25
 	.4byte	.LASF183
@@ -5618,9 +5618,9 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF227
 	.byte	0x1
 	.2byte	0x2a1
-	.4byte	0xaa
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	0x115
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1b63
@@ -5628,7 +5628,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF148
 	.byte	0x1
 	.2byte	0x2a1
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST61
 	.uleb128 0x25
 	.4byte	.LASF183
@@ -5655,9 +5655,9 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF228
 	.byte	0x1
 	.2byte	0x2b8
-	.4byte	0xaa
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	0x115
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1bb0
@@ -5665,7 +5665,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF148
 	.byte	0x1
 	.2byte	0x2b8
-	.4byte	0xaa
+	.4byte	0x115
 	.4byte	.LLST62
 	.uleb128 0x25
 	.4byte	.LASF183
@@ -5691,7 +5691,7 @@ GAP_ConnGetL2CAPCid:
 	.uleb128 0x45
 	.4byte	.LASF229
 	.byte	0x4
-	.2byte	0x2cc
+	.2byte	0x2b8
 	.4byte	0x1bc3
 	.byte	0x6
 	.byte	0xff
@@ -5700,12 +5700,12 @@ GAP_ConnGetL2CAPCid:
 	.byte	0xff
 	.byte	0xff
 	.byte	0xff
-	.uleb128 0xf
-	.4byte	0x144
+	.uleb128 0x7
+	.4byte	0x1a8
 	.uleb128 0x45
 	.4byte	.LASF230
 	.byte	0x4
-	.2byte	0x2cd
+	.2byte	0x2b9
 	.4byte	0x1bdb
 	.byte	0x6
 	.byte	0
@@ -5714,15 +5714,15 @@ GAP_ConnGetL2CAPCid:
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0xf
-	.4byte	0x144
+	.uleb128 0x7
+	.4byte	0x1a8
 	.uleb128 0x46
 	.4byte	.LASF231
 	.byte	0xd
 	.byte	0xe6
 	.4byte	0x1beb
-	.uleb128 0xf
-	.4byte	0x144
+	.uleb128 0x7
+	.4byte	0x1a8
 	.uleb128 0x46
 	.4byte	.LASF232
 	.byte	0xc
@@ -5777,7 +5777,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LASF242
 	.4byte	.LASF242
 	.byte	0xf
-	.2byte	0x439
+	.2byte	0x43b
 	.uleb128 0x47
 	.4byte	.LASF243
 	.4byte	.LASF243
@@ -5922,138 +5922,29 @@ GAP_ConnGetL2CAPCid:
 	.byte	0
 	.byte	0
 	.uleb128 0x5
-	.uleb128 0x13
-	.byte	0x1
+	.uleb128 0xf
+	.byte	0
 	.uleb128 0xb
 	.uleb128 0xb
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x1
-	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x6
-	.uleb128 0xd
+	.uleb128 0xf
 	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
 	.uleb128 0xb
-	.uleb128 0x3b
 	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
-	.uleb128 0x38
-	.uleb128 0xb
 	.byte	0
 	.byte	0
 	.uleb128 0x7
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x38
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x8
-	.uleb128 0x1
-	.byte	0x1
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x9
-	.uleb128 0x21
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xa
-	.uleb128 0x16
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xb
-	.uleb128 0x21
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2f
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0xc
-	.uleb128 0xf
-	.byte	0
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xd
-	.uleb128 0x13
-	.byte	0x1
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xe
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x38
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0xf
 	.uleb128 0x26
 	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x10
-	.uleb128 0xf
-	.byte	0
-	.uleb128 0xb
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x11
+	.uleb128 0x8
 	.uleb128 0x15
 	.byte	0x1
 	.uleb128 0x27
@@ -6062,14 +5953,14 @@ GAP_ConnGetL2CAPCid:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x12
+	.uleb128 0x9
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0xa
 	.uleb128 0x4
 	.byte	0x1
 	.uleb128 0xb
@@ -6084,12 +5975,121 @@ GAP_ConnGetL2CAPCid:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0xb
 	.uleb128 0x28
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
 	.uleb128 0x1c
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0xc
+	.uleb128 0x13
+	.byte	0x1
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xd
+	.uleb128 0xd
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x38
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0xe
+	.uleb128 0xd
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x38
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0xf
+	.uleb128 0x1
+	.byte	0x1
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x10
+	.uleb128 0x21
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x11
+	.uleb128 0x16
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x12
+	.uleb128 0x21
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2f
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x13
+	.uleb128 0x13
+	.byte	0x1
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x14
+	.uleb128 0xd
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x38
 	.uleb128 0xb
 	.byte	0
 	.byte	0
@@ -6848,7 +6848,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL7
-	.4byte	.LFE52
+	.4byte	.LFE61
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6866,7 +6866,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	0
 .LLST2:
 	.4byte	.LVL2
-	.4byte	.LFE52
+	.4byte	.LFE61
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -6877,7 +6877,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL9
-	.4byte	.LFE53
+	.4byte	.LFE62
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6898,7 +6898,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL14
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6912,7 +6912,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL20
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7003,7 +7003,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL27
-	.4byte	.LFE50
+	.4byte	.LFE59
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7017,7 +7017,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL30
-	.4byte	.LFE50
+	.4byte	.LFE59
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7065,7 +7065,7 @@ GAP_ConnGetL2CAPCid:
 	.byte	0x72
 	.sleb128 16
 	.4byte	.LVL35
-	.4byte	.LFE55
+	.4byte	.LFE64
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -7077,7 +7077,7 @@ GAP_ConnGetL2CAPCid:
 	.byte	0x72
 	.sleb128 2
 	.4byte	.LVL35
-	.4byte	.LFE55
+	.4byte	.LFE64
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -7088,7 +7088,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL54
-	.4byte	.LFE49
+	.4byte	.LFE58
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7113,7 +7113,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL83
-	.4byte	.LFE43
+	.4byte	.LFE52
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7153,7 +7153,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL89
-	.4byte	.LFE48
+	.4byte	.LFE57
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7189,7 +7189,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL95
-	.4byte	.LFE48
+	.4byte	.LFE57
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7203,7 +7203,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL104
-	.4byte	.LFE47
+	.4byte	.LFE56
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7217,7 +7217,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL105
-	.4byte	.LFE47
+	.4byte	.LFE56
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7270,7 +7270,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL117
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -48
@@ -7282,7 +7282,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL140
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7296,7 +7296,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL115
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -64
@@ -7308,7 +7308,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL116
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -60
@@ -7349,7 +7349,7 @@ GAP_ConnGetL2CAPCid:
 	.4byte	0
 .LLST36:
 	.4byte	.LVL116
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x1
 	.byte	0x57
 	.4byte	0
@@ -7360,7 +7360,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL148
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7374,7 +7374,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL154
-	.4byte	.LFE33
+	.4byte	.LFE42
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7436,7 +7436,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x59
 	.4byte	.LVL175
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7451,7 +7451,7 @@ GAP_ConnGetL2CAPCid:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL176
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -7462,7 +7462,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL180
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7483,7 +7483,7 @@ GAP_ConnGetL2CAPCid:
 	.byte	0x53
 	.byte	0x9f
 	.4byte	.LVL183
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -7501,7 +7501,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL187
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7575,7 +7575,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL209-1
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7589,7 +7589,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL220
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -7604,7 +7604,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL219
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -7653,7 +7653,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL233
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7667,7 +7667,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL240
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7688,7 +7688,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL243
-	.4byte	.LFE40
+	.4byte	.LFE49
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7702,7 +7702,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL246
-	.4byte	.LFE41
+	.4byte	.LFE50
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7716,7 +7716,7 @@ GAP_ConnGetL2CAPCid:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL249
-	.4byte	.LFE42
+	.4byte	.LFE51
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7732,48 +7732,30 @@ GAP_ConnGetL2CAPCid:
 	.byte	0
 	.2byte	0
 	.2byte	0
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.4byte	.LFB52
 	.4byte	.LFE52-.LFB52
 	.4byte	.LFB53
 	.4byte	.LFE53-.LFB53
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
-	.4byte	.LFB50
-	.4byte	.LFE50-.LFB50
-	.4byte	.LFB55
-	.4byte	.LFE55-.LFB55
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.4byte	.LFB39
 	.4byte	.LFE39-.LFB39
 	.4byte	.LFB40
@@ -7782,6 +7764,24 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LFE41-.LFB41
 	.4byte	.LFB42
 	.4byte	.LFE42-.LFB42
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -7808,48 +7808,30 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LBE23
 	.4byte	0
 	.4byte	0
+	.4byte	.LFB61
+	.4byte	.LFE61
+	.4byte	.LFB62
+	.4byte	.LFE62
+	.4byte	.LFB60
+	.4byte	.LFE60
+	.4byte	.LFB59
+	.4byte	.LFE59
+	.4byte	.LFB64
+	.4byte	.LFE64
+	.4byte	.LFB58
+	.4byte	.LFE58
+	.4byte	.LFB55
+	.4byte	.LFE55
 	.4byte	.LFB52
 	.4byte	.LFE52
 	.4byte	.LFB53
 	.4byte	.LFE53
-	.4byte	.LFB51
-	.4byte	.LFE51
-	.4byte	.LFB50
-	.4byte	.LFE50
-	.4byte	.LFB55
-	.4byte	.LFE55
-	.4byte	.LFB49
-	.4byte	.LFE49
-	.4byte	.LFB46
-	.4byte	.LFE46
-	.4byte	.LFB43
-	.4byte	.LFE43
-	.4byte	.LFB44
-	.4byte	.LFE44
-	.4byte	.LFB48
-	.4byte	.LFE48
-	.4byte	.LFB47
-	.4byte	.LFE47
-	.4byte	.LFB45
-	.4byte	.LFE45
-	.4byte	.LFB30
-	.4byte	.LFE30
-	.4byte	.LFB31
-	.4byte	.LFE31
-	.4byte	.LFB32
-	.4byte	.LFE32
-	.4byte	.LFB33
-	.4byte	.LFE33
-	.4byte	.LFB34
-	.4byte	.LFE34
-	.4byte	.LFB35
-	.4byte	.LFE35
-	.4byte	.LFB36
-	.4byte	.LFE36
-	.4byte	.LFB37
-	.4byte	.LFE37
-	.4byte	.LFB38
-	.4byte	.LFE38
+	.4byte	.LFB57
+	.4byte	.LFE57
+	.4byte	.LFB56
+	.4byte	.LFE56
+	.4byte	.LFB54
+	.4byte	.LFE54
 	.4byte	.LFB39
 	.4byte	.LFE39
 	.4byte	.LFB40
@@ -7858,6 +7840,24 @@ GAP_ConnGetL2CAPCid:
 	.4byte	.LFE41
 	.4byte	.LFB42
 	.4byte	.LFE42
+	.4byte	.LFB43
+	.4byte	.LFE43
+	.4byte	.LFB44
+	.4byte	.LFE44
+	.4byte	.LFB45
+	.4byte	.LFE45
+	.4byte	.LFB46
+	.4byte	.LFE46
+	.4byte	.LFB47
+	.4byte	.LFE47
+	.4byte	.LFB48
+	.4byte	.LFE48
+	.4byte	.LFB49
+	.4byte	.LFE49
+	.4byte	.LFB50
+	.4byte	.LFE50
+	.4byte	.LFB51
+	.4byte	.LFE51
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -7881,11 +7881,11 @@ GAP_ConnGetL2CAPCid:
 	.string	"qos_present"
 .LASF75:
 	.string	"BTM_SET_STATIC_RAND_ADDR_FAIL"
-.LASF29:
+.LASF38:
 	.string	"peak_bandwidth"
 .LASF254:
 	.string	"BTM_SetSecurityLevel"
-.LASF23:
+.LASF32:
 	.string	"BT_HDR"
 .LASF252:
 	.string	"fixed_queue_new"
@@ -7893,7 +7893,7 @@ GAP_ConnGetL2CAPCid:
 	.string	"flags"
 .LASF67:
 	.string	"BTM_SUCCESS_NO_SECURITY"
-.LASF14:
+.LASF24:
 	.string	"UINT16"
 .LASF94:
 	.string	"tL2CAP_CFG_INFO"
@@ -7971,13 +7971,13 @@ GAP_ConnGetL2CAPCid:
 	.string	"p_dev_name"
 .LASF260:
 	.string	"L2CA_SetIdleTimeout"
-.LASF15:
+.LASF25:
 	.string	"UINT32"
 .LASF12:
 	.string	"uint32_t"
 .LASF112:
 	.string	"pL2CA_DisconnectCfm_Cb"
-.LASF33:
+.LASF42:
 	.string	"tBT_TRANSPORT"
 .LASF106:
 	.string	"pL2CA_ConnectInd_Cb"
@@ -7987,13 +7987,13 @@ GAP_ConnGetL2CAPCid:
 	.string	"tGAP_BLE_CMPL_CBACK"
 .LASF84:
 	.string	"result"
-.LASF18:
+.LASF28:
 	.string	"event"
 .LASF259:
 	.string	"malloc"
 .LASF142:
 	.string	"index"
-.LASF38:
+.LASF18:
 	.string	"ESP_LOG_ERROR"
 .LASF199:
 	.string	"gap_connect_cfm"
@@ -8015,7 +8015,7 @@ GAP_ConnGetL2CAPCid:
 	.string	"__uint16_t"
 .LASF265:
 	.string	"gap_allocate_ccb"
-.LASF39:
+.LASF19:
 	.string	"ESP_LOG_WARN"
 .LASF183:
 	.string	"p_ccb"
@@ -8031,7 +8031,7 @@ GAP_ConnGetL2CAPCid:
 	.string	"fcr_rx_buf_size"
 .LASF141:
 	.string	"gap_inq_rslt_cback"
-.LASF19:
+.LASF29:
 	.string	"offset"
 .LASF186:
 	.string	"p_ref_data"
@@ -8039,7 +8039,7 @@ GAP_ConnGetL2CAPCid:
 	.string	"connected"
 .LASF177:
 	.string	"gap_attr"
-.LASF17:
+.LASF27:
 	.string	"_Bool"
 .LASF125:
 	.string	"tGAP_CONN_CALLBACK"
@@ -8055,13 +8055,13 @@ GAP_ConnGetL2CAPCid:
 	.string	"free"
 .LASF219:
 	.string	"GAP_ConnBTRead"
-.LASF37:
+.LASF17:
 	.string	"ESP_LOG_NONE"
 .LASF98:
 	.string	"tL2CA_CONFIG_IND_CB"
 .LASF190:
 	.string	"p_buf"
-.LASF27:
+.LASF36:
 	.string	"token_rate"
 .LASF83:
 	.string	"tL2CAP_FCR_OPTS"
@@ -8075,13 +8075,13 @@ GAP_ConnGetL2CAPCid:
 	.string	"BTM_NOT_AUTHORIZED"
 .LASF262:
 	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/gap/gap_conn.c"
-.LASF34:
+.LASF16:
 	.string	"char"
 .LASF144:
 	.string	"tGAP_INFO"
 .LASF49:
 	.string	"tHCI_EXT_FLOW_SPEC"
-.LASF21:
+.LASF31:
 	.string	"data"
 .LASF248:
 	.string	"L2CA_ErtmConnectRsp"
@@ -8101,11 +8101,11 @@ GAP_ConnGetL2CAPCid:
 	.string	"p_rx_queue_count"
 .LASF108:
 	.string	"pL2CA_ConnectPnd_Cb"
-.LASF20:
+.LASF30:
 	.string	"layer_specific"
 .LASF170:
 	.string	"cl_op_uuid"
-.LASF25:
+.LASF34:
 	.string	"qos_flags"
 .LASF97:
 	.string	"tL2CA_CONNECT_PND_CB"
@@ -8131,11 +8131,11 @@ GAP_ConnGetL2CAPCid:
 	.string	"mtu_present"
 .LASF255:
 	.string	"L2CA_ErtmConnectReq"
-.LASF30:
+.LASF39:
 	.string	"latency"
 .LASF161:
 	.string	"reg_info"
-.LASF32:
+.LASF41:
 	.string	"FLOW_SPEC"
 .LASF168:
 	.string	"p_cback"
@@ -8161,11 +8161,11 @@ GAP_ConnGetL2CAPCid:
 	.string	"pL2CA_ConnectCfm_Cb"
 .LASF263:
 	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/bt"
-.LASF40:
+.LASF20:
 	.string	"ESP_LOG_INFO"
 .LASF143:
 	.string	"in_use"
-.LASF31:
+.LASF40:
 	.string	"delay_variation"
 .LASF246:
 	.string	"esp_log_write"
@@ -8181,11 +8181,11 @@ GAP_ConnGetL2CAPCid:
 	.string	"p_msg"
 .LASF60:
 	.string	"BTM_ERR_PROCESSING"
-.LASF26:
+.LASF35:
 	.string	"service_type"
 .LASF5:
 	.string	"short unsigned int"
-.LASF16:
+.LASF26:
 	.string	"BOOLEAN"
 .LASF212:
 	.string	"GAP_ConnClose"
@@ -8229,7 +8229,7 @@ GAP_ConnGetL2CAPCid:
 	.string	"conn_id"
 .LASF187:
 	.string	"gap_find_ccb_by_cid"
-.LASF35:
+.LASF13:
 	.string	"long int"
 .LASF208:
 	.string	"p_rem_bda"
@@ -8267,7 +8267,7 @@ GAP_ConnGetL2CAPCid:
 	.string	"GAP_ConnWriteData"
 .LASF231:
 	.string	"BT_BD_ANY"
-.LASF24:
+.LASF33:
 	.string	"BD_ADDR"
 .LASF239:
 	.string	"BTM_SecClrService"
@@ -8281,17 +8281,17 @@ GAP_ConnGetL2CAPCid:
 	.string	"fixed_queue_enqueue"
 .LASF209:
 	.string	"security"
-.LASF22:
+.LASF14:
 	.string	"sizetype"
 .LASF179:
 	.string	"gatt_if"
 .LASF203:
 	.string	"p_cfg"
-.LASF36:
+.LASF15:
 	.string	"long unsigned int"
 .LASF224:
 	.string	"GAP_ConnSetIdleTimeout"
-.LASF42:
+.LASF22:
 	.string	"ESP_LOG_VERBOSE"
 .LASF197:
 	.string	"gap_disconnect_ind"
@@ -8327,11 +8327,11 @@ GAP_ConnGetL2CAPCid:
 	.string	"is_congested"
 .LASF88:
 	.string	"flush_to"
-.LASF41:
+.LASF21:
 	.string	"ESP_LOG_DEBUG"
 .LASF237:
 	.string	"fixed_queue_is_empty"
-.LASF28:
+.LASF37:
 	.string	"token_bucket_size"
 .LASF151:
 	.string	"chan_mode_mask"
@@ -8377,7 +8377,7 @@ GAP_ConnGetL2CAPCid:
 	.string	"BTM_CMD_STARTED"
 .LASF247:
 	.string	"L2CA_DisconnectReq"
-.LASF13:
+.LASF23:
 	.string	"UINT8"
 .LASF50:
 	.string	"BTM_SUCCESS"

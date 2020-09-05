@@ -624,193 +624,31 @@ typedef __uintptr_t uintptr_t;
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdbool.h" 1 3 4
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h" 2
-# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef uint8_t UINT8;
-typedef uint16_t UINT16;
-typedef uint32_t UINT32;
-typedef uint64_t UINT64;
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/include/bt_common.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/include/bt_common.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
 
-typedef int8_t INT8;
-typedef int16_t INT16;
-typedef int32_t INT32;
-typedef 
-# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h" 3 4
-       _Bool 
-# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-            BOOLEAN;
-# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef struct {
-    uint16_t event;
-    uint16_t len;
-    uint16_t offset;
-    uint16_t layer_specific;
-    uint8_t data[];
-} BT_HDR;
-# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef UINT8 BD_ADDR[6];
-typedef UINT8 *BD_ADDR_PTR;
-
-
-
-
-typedef UINT8 tAMP_KEY_TYPE;
-
-
-typedef UINT8 BT_OCTET8[8];
-
-
-typedef UINT8 LINK_KEY[16];
-
-
-typedef UINT8 AMP_LINK_KEY[32];
-
-
-typedef UINT8 BT_OCTET16[16];
-
-
-typedef UINT8 PIN_CODE[16];
-typedef UINT8 *PIN_CODE_PTR;
-
-
-typedef UINT8 BT_OCTET32[32];
-
-
-typedef UINT8 DEV_CLASS[3];
-typedef UINT8 *DEV_CLASS_PTR;
-
-
-typedef UINT8 EXT_INQ_RESP[3];
-typedef UINT8 *EXT_INQ_RESP_PTR;
-
-
-typedef UINT8 BD_NAME[248 + 1];
-typedef UINT8 *BD_NAME_PTR;
-
-
-typedef UINT8 BD_FEATURES[8];
-
-
-typedef UINT8 BT_EVENT_MASK[8];
-
-
-typedef UINT8 LAP[3];
-typedef UINT8 INQ_LAP[3];
-
-
-typedef UINT8 RAND_NUM[16];
-
-
-typedef UINT8 ACO[12];
-
-
-typedef UINT8 COF[12];
-
-typedef struct {
-    UINT8 qos_flags;
-    UINT8 service_type;
-    UINT32 token_rate;
-    UINT32 token_bucket_size;
-    UINT32 peak_bandwidth;
-    UINT32 latency;
-    UINT32 delay_variation;
-} FLOW_SPEC;
-# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef UINT8 ACCESS_CODE[9];
-# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef struct {
-
-
-
-
-    UINT16 len;
-
-    union {
-        UINT16 uuid16;
-        UINT32 uuid32;
-        UINT8 uuid128[16];
-    } uu;
-
-} tBT_UUID;
-# 482 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef struct {
-    UINT32 is_connected;
-    INT32 rssi;
-    UINT32 bytes_sent;
-    UINT32 bytes_rcvd;
-    UINT32 duration;
-} tBT_CONN_STATS;
-# 504 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef UINT8 tBLE_ADDR_TYPE;
-
-
-
-
-
-typedef UINT8 tBT_TRANSPORT;
-
-
-
-typedef struct {
-    tBLE_ADDR_TYPE type;
-    BD_ADDR bda;
-} tBLE_BD_ADDR;
-
-
-
-
-
-
-typedef UINT8 tBT_DEVICE_TYPE;
-# 701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef void (BT_LOG_FUNC) (int trace_type, const char *fmt_str, ...);
-# 716 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-static const BD_ADDR bd_addr_any = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
-static const BD_ADDR bd_addr_null = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-# 733 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-static inline void bdcpy(BD_ADDR a, const BD_ADDR b)
-{
-    int i;
-
-    for (i = 6; i != 0; i--) {
-        *a++ = *b++;
-    }
-}
-# 752 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-static inline int bdcmp(const BD_ADDR a, const BD_ADDR b)
-{
-    int i;
-
-    for (i = 6; i != 0; i--) {
-        if (*a++ != *b++) {
-            return -1;
-        }
-    }
-    return 0;
-}
-# 774 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-static inline int bdcmpany(const BD_ADDR a)
-{
-    return bdcmp(a, bd_addr_any);
-}
-# 789 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-static inline void bdsetany(BD_ADDR a)
-{
-    bdcpy(a, bd_addr_any);
-}
-# 804 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-static inline void bt_rcopy(UINT8 *dst, UINT8 const *src, UINT16 len)
-{
-    src += len;
-    while (len --) {
-        *dst++ = *--src;
-    }
-}
-# 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 2
-
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h" 1
-# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_defs.h" 1
-# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_defs.h"
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
+typedef __builtin_va_list __gnuc_va_list;
+# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
+typedef __gnuc_va_list va_list;
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h"
+       
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 1
 # 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
@@ -838,6 +676,8 @@ static inline void bt_rcopy(UINT8 *dst, UINT8 const *src, UINT16 len)
 
 
 
+
+# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 typedef struct
 {
   int quot;
@@ -1065,8 +905,408 @@ extern long double strtold (const char *restrict, char **restrict);
 
 
 
-# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_defs.h" 2
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
 
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h" 1
+# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
+void __assert (const char *, int, const char *) __attribute__ ((__noreturn__))
+                                 ;
+void __assert_func (const char *, int, const char *, const char *) __attribute__ ((__noreturn__))
+                                 ;
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h" 2
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h" 2
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 2
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+typedef enum {
+    ETS_OK = 0,
+    ETS_FAILED = 1
+} ETS_STATUS;
+
+typedef uint32_t ETSSignal;
+typedef uint32_t ETSParam;
+
+typedef struct ETSEventTag ETSEvent;
+
+struct ETSEventTag {
+    ETSSignal sig;
+    ETSParam par;
+};
+
+typedef void (*ETSTask)(ETSEvent *e);
+typedef void (* ets_idle_cb_t)(void *arg);
+# 79 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_run(void);
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_set_idle_cb(ets_idle_cb_t func, void *arg);
+# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_task(ETSTask task, uint8_t prio, ETSEvent *queue, uint8_t qlen);
+# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+ETS_STATUS ets_post(uint8_t prio, ETSSignal sig, ETSParam par);
+# 133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+extern const char *const exc_cause_table[40];
+# 143 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_set_user_start(uint32_t start);
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_set_startup_callback(uint32_t callback);
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_set_appcpu_boot_addr(uint32_t start);
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+ETS_STATUS ets_unpack_flash_code_legacy(uint32_t pos, uint32_t *entry_addr, 
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
+                                                                           _Bool 
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+                                                                                jump, 
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
+                                                                                      _Bool 
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+                                                                                           config);
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+ETS_STATUS ets_unpack_flash_code(uint32_t pos, uint32_t *entry_addr, 
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
+                                                                    _Bool 
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+                                                                         jump, 
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
+                                                                               _Bool 
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+                                                                                    sb_need_check, 
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
+                                                                                                   _Bool 
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+                                                                                                        config);
+# 222 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+int ets_printf(const char *fmt, ...);
+# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_write_char_uart(char c);
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_install_putc1(void (*p)(char c));
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_install_putc2(void (*p)(char c));
+# 262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_install_uart_printf(void);
+# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+typedef void ETSTimerFunc(void *timer_arg);
+
+typedef struct _ETSTIMER_ {
+    struct _ETSTIMER_ *timer_next;
+    uint32_t timer_expire;
+    uint32_t timer_period;
+    ETSTimerFunc *timer_func;
+    void *timer_arg;
+} ETSTimer;
+# 302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_timer_init(void);
+# 311 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_timer_deinit(void);
+# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_timer_arm(ETSTimer *timer, uint32_t tmout, 
+# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
+                                                   _Bool 
+# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+                                                        repeat);
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_timer_arm_us(ETSTimer *ptimer, uint32_t us, 
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
+                                                    _Bool 
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+                                                         repeat);
+# 349 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_timer_disarm(ETSTimer *timer);
+# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_timer_setfn(ETSTimer *ptimer, ETSTimerFunc *pfunction, void *parg);
+# 373 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_timer_done(ETSTimer *ptimer);
+# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_delay_us(uint32_t us);
+# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_update_cpu_frequency(uint32_t ticks_per_us);
+# 405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_update_cpu_frequency_rom(uint32_t ticks_per_us);
+# 415 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+uint32_t ets_get_cpu_frequency(void);
+# 424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+uint32_t ets_get_xtal_scale(void);
+# 437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+uint32_t ets_get_detected_xtal_freq(void);
+# 451 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+typedef void (* ets_isr_t)(void *);
+# 466 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_isr_attach(int i, ets_isr_t func, void *arg);
+# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_isr_mask(uint32_t mask);
+# 488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_isr_unmask(uint32_t unmask);
+# 499 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_intr_lock(void);
+# 510 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_intr_unlock(void);
+# 521 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void ets_waiti0(void);
+# 539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+void intr_matrix_set(int cpu_no, uint32_t model_num, uint32_t intr_num);
+# 629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+typedef enum {
+    OK = 0,
+    FAIL,
+    PENDING,
+    BUSY,
+    CANCEL,
+} STATUS;
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+typedef enum {
+    ESP_LOG_NONE,
+    ESP_LOG_ERROR,
+    ESP_LOG_WARN,
+    ESP_LOG_INFO,
+    ESP_LOG_DEBUG,
+    ESP_LOG_VERBOSE
+} esp_log_level_t;
+
+typedef int (*vprintf_like_t)(const char *, va_list);
+# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_level_set(const char* tag, esp_log_level_t level);
+# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+vprintf_like_t esp_log_set_vprintf(vprintf_like_t func);
+# 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+uint32_t esp_log_timestamp(void);
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+uint32_t esp_log_early_timestamp(void);
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
+void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
+void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
+void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/include/bt_common.h" 2
+# 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/include/bt_common.h"
+typedef enum {
+    BT_STATUS_SUCCESS = 0,
+    BT_STATUS_FAIL,
+    BT_STATUS_NOT_READY,
+    BT_STATUS_NOMEM,
+    BT_STATUS_BUSY,
+    BT_STATUS_DONE,
+    BT_STATUS_UNSUPPORTED,
+    BT_STATUS_PARM_INVALID,
+    BT_STATUS_UNHANDLED,
+    BT_STATUS_AUTH_FAILURE,
+    BT_STATUS_RMT_DEV_DOWN,
+    BT_STATUS_AUTH_REJECTED,
+    BT_STATUS_INVALID_STATIC_RAND_ADDR,
+    BT_STATUS_PENDING,
+    BT_STATUS_UNACCEPT_CONN_INTERVAL,
+    BT_STATUS_PARAM_OUT_OF_RANGE,
+    BT_STATUS_TIMEOUT,
+    BT_STATUS_MEMORY_FULL,
+    BT_STATUS_EIR_TOO_LARGE,
+} bt_status_t;
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h" 2
+
+typedef uint8_t UINT8;
+typedef uint16_t UINT16;
+typedef uint32_t UINT32;
+typedef uint64_t UINT64;
+
+typedef int8_t INT8;
+typedef int16_t INT16;
+typedef int32_t INT32;
+typedef 
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h" 3 4
+       _Bool 
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+            BOOLEAN;
+# 191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef struct {
+    uint16_t event;
+    uint16_t len;
+    uint16_t offset;
+    uint16_t layer_specific;
+    uint8_t data[];
+} BT_HDR;
+# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef UINT8 BD_ADDR[6];
+typedef UINT8 *BD_ADDR_PTR;
+
+
+
+
+typedef UINT8 tAMP_KEY_TYPE;
+
+
+typedef UINT8 BT_OCTET8[8];
+
+
+typedef UINT8 LINK_KEY[16];
+
+
+typedef UINT8 AMP_LINK_KEY[32];
+
+
+typedef UINT8 BT_OCTET16[16];
+
+
+typedef UINT8 PIN_CODE[16];
+typedef UINT8 *PIN_CODE_PTR;
+
+
+typedef UINT8 BT_OCTET32[32];
+
+
+typedef UINT8 DEV_CLASS[3];
+typedef UINT8 *DEV_CLASS_PTR;
+
+
+typedef UINT8 EXT_INQ_RESP[3];
+typedef UINT8 *EXT_INQ_RESP_PTR;
+
+
+typedef UINT8 BD_NAME[248 + 1];
+typedef UINT8 *BD_NAME_PTR;
+
+
+typedef UINT8 BD_FEATURES[8];
+
+
+typedef UINT8 BT_EVENT_MASK[8];
+
+
+typedef UINT8 LAP[3];
+typedef UINT8 INQ_LAP[3];
+
+
+typedef UINT8 RAND_NUM[16];
+
+
+typedef UINT8 ACO[12];
+
+
+typedef UINT8 COF[12];
+
+typedef struct {
+    UINT8 qos_flags;
+    UINT8 service_type;
+    UINT32 token_rate;
+    UINT32 token_bucket_size;
+    UINT32 peak_bandwidth;
+    UINT32 latency;
+    UINT32 delay_variation;
+} FLOW_SPEC;
+# 389 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef UINT8 ACCESS_CODE[9];
+# 413 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef struct {
+
+
+
+
+    UINT16 len;
+
+    union {
+        UINT16 uuid16;
+        UINT32 uuid32;
+        UINT8 uuid128[16];
+    } uu;
+
+} tBT_UUID;
+# 475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef struct {
+    UINT32 is_connected;
+    INT32 rssi;
+    UINT32 bytes_sent;
+    UINT32 bytes_rcvd;
+    UINT32 duration;
+} tBT_CONN_STATS;
+# 497 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef UINT8 tBLE_ADDR_TYPE;
+
+
+
+
+
+typedef UINT8 tBT_TRANSPORT;
+
+
+
+typedef struct {
+    tBLE_ADDR_TYPE type;
+    BD_ADDR bda;
+} tBLE_BD_ADDR;
+
+
+
+
+
+
+typedef UINT8 tBT_DEVICE_TYPE;
+# 681 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef void (BT_LOG_FUNC) (int trace_type, const char *fmt_str, ...);
+# 696 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+static const BD_ADDR bd_addr_any = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+static const BD_ADDR bd_addr_null = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+# 713 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+static inline void bdcpy(BD_ADDR a, const BD_ADDR b)
+{
+    int i;
+
+    for (i = 6; i != 0; i--) {
+        *a++ = *b++;
+    }
+}
+# 732 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+static inline int bdcmp(const BD_ADDR a, const BD_ADDR b)
+{
+    int i;
+
+    for (i = 6; i != 0; i--) {
+        if (*a++ != *b++) {
+            return -1;
+        }
+    }
+    return 0;
+}
+# 754 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+static inline int bdcmpany(const BD_ADDR a)
+{
+    return bdcmp(a, bd_addr_any);
+}
+# 769 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+static inline void bdsetany(BD_ADDR a)
+{
+    bdcpy(a, bd_addr_any);
+}
+# 784 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+static inline void bt_rcopy(UINT8 *dst, UINT8 const *src, UINT16 len)
+{
+    src += len;
+    while (len --) {
+        *dst++ = *--src;
+    }
+}
+# 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h" 1
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_defs.h" 1
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_defs.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h" 1
+# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h" 2
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/dyn_mem.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/dyn_mem.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/dyn_mem.h" 2
+# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h" 2
+# 2028 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h" 1
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h"
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
@@ -1076,22 +1316,12 @@ extern long double strtold (const char *restrict, char **restrict);
 # 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
 # 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
-
-
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
-# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
-
-# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
-typedef __builtin_va_list __gnuc_va_list;
-# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
 # 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 1
 # 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
 # 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h" 1
-# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h"
-
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h"
 typedef long int __off_t;
 typedef int __pid_t;
@@ -1650,214 +1880,12 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h" 2
-# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 1
-# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
-# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
-
-# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
-typedef __gnuc_va_list va_list;
-# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
-# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h" 1
-# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h"
-       
-# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
-
-
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h" 1
-# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
-
-# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
-void __assert (const char *, int, const char *) __attribute__ ((__noreturn__))
-                                 ;
-void __assert_func (const char *, int, const char *, const char *) __attribute__ ((__noreturn__))
-                                 ;
-# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
-# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h" 2
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 2
-# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-typedef enum {
-    ETS_OK = 0,
-    ETS_FAILED = 1
-} ETS_STATUS;
-
-typedef uint32_t ETSSignal;
-typedef uint32_t ETSParam;
-
-typedef struct ETSEventTag ETSEvent;
-
-struct ETSEventTag {
-    ETSSignal sig;
-    ETSParam par;
-};
-
-typedef void (*ETSTask)(ETSEvent *e);
-typedef void (* ets_idle_cb_t)(void *arg);
-# 79 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_run(void);
-# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_set_idle_cb(ets_idle_cb_t func, void *arg);
-# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_task(ETSTask task, uint8_t prio, ETSEvent *queue, uint8_t qlen);
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-ETS_STATUS ets_post(uint8_t prio, ETSSignal sig, ETSParam par);
-# 133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-extern const char *const exc_cause_table[40];
-# 143 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_set_user_start(uint32_t start);
-# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_set_startup_callback(uint32_t callback);
-# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_set_appcpu_boot_addr(uint32_t start);
-# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-ETS_STATUS ets_unpack_flash_code_legacy(uint32_t pos, uint32_t *entry_addr, 
-# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
-                                                                           _Bool 
-# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-                                                                                jump, 
-# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
-                                                                                      _Bool 
-# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-                                                                                           config);
-# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-ETS_STATUS ets_unpack_flash_code(uint32_t pos, uint32_t *entry_addr, 
-# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
-                                                                    _Bool 
-# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-                                                                         jump, 
-# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
-                                                                               _Bool 
-# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-                                                                                    sb_need_check, 
-# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
-                                                                                                   _Bool 
-# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-                                                                                                        config);
-# 222 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-int ets_printf(const char *fmt, ...);
-# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_write_char_uart(char c);
-# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_install_putc1(void (*p)(char c));
-# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_install_putc2(void (*p)(char c));
-# 262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_install_uart_printf(void);
-# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-typedef void ETSTimerFunc(void *timer_arg);
-
-typedef struct _ETSTIMER_ {
-    struct _ETSTIMER_ *timer_next;
-    uint32_t timer_expire;
-    uint32_t timer_period;
-    ETSTimerFunc *timer_func;
-    void *timer_arg;
-} ETSTimer;
-# 302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_timer_init(void);
-# 311 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_timer_deinit(void);
-# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_timer_arm(ETSTimer *timer, uint32_t tmout, 
-# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
-                                                   _Bool 
-# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-                                                        repeat);
-# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_timer_arm_us(ETSTimer *ptimer, uint32_t us, 
-# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
-                                                    _Bool 
-# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-                                                         repeat);
-# 349 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_timer_disarm(ETSTimer *timer);
-# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_timer_setfn(ETSTimer *ptimer, ETSTimerFunc *pfunction, void *parg);
-# 373 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_timer_done(ETSTimer *ptimer);
-# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_delay_us(uint32_t us);
-# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_update_cpu_frequency(uint32_t ticks_per_us);
-# 405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_update_cpu_frequency_rom(uint32_t ticks_per_us);
-# 415 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-uint32_t ets_get_cpu_frequency(void);
-# 424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-uint32_t ets_get_xtal_scale(void);
-# 437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-uint32_t ets_get_detected_xtal_freq(void);
-# 451 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-typedef void (* ets_isr_t)(void *);
-# 466 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_isr_attach(int i, ets_isr_t func, void *arg);
-# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_isr_mask(uint32_t mask);
-# 488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_isr_unmask(uint32_t unmask);
-# 499 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_intr_lock(void);
-# 510 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_intr_unlock(void);
-# 521 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void ets_waiti0(void);
-# 539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-void intr_matrix_set(int cpu_no, uint32_t model_num, uint32_t intr_num);
-# 629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-typedef enum {
-    OK = 0,
-    FAIL,
-    PENDING,
-    BUSY,
-    CANCEL,
-} STATUS;
-# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
-# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
-typedef enum {
-    ESP_LOG_NONE,
-    ESP_LOG_ERROR,
-    ESP_LOG_WARN,
-    ESP_LOG_INFO,
-    ESP_LOG_DEBUG,
-    ESP_LOG_VERBOSE
-} esp_log_level_t;
-
-typedef int (*vprintf_like_t)(const char *, va_list);
-# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
-void esp_log_level_set(const char* tag, esp_log_level_t level);
-# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
-vprintf_like_t esp_log_set_vprintf(vprintf_like_t func);
-# 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
-uint32_t esp_log_timestamp(void);
-# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
-uint32_t esp_log_early_timestamp(void);
-# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
-void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
 
 
 
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
-# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
-void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
-void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
-void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
-# 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h" 2
-# 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h"
 inline void trc_dump_buffer(const char *prefix, uint8_t *data, uint16_t len)
 {
     uint16_t i;
@@ -1877,9 +1905,9 @@ inline void trc_dump_buffer(const char *prefix, uint8_t *data, uint16_t len)
     }
     printf("\r\n");
 }
-# 472 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h"
+# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h"
 extern UINT8 btif_trace_level;
-# 726 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h"
+# 651 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h"
 typedef UINT8 tBTTRC_PARAM_TYPE;
 typedef UINT8 tBTTRC_LAYER_ID;
 typedef UINT8 tBTTRC_TYPE;
@@ -1901,18 +1929,7 @@ typedef struct {
 
 
 extern UINT8 appl_trace_level;
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_defs.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h" 1
-# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h"
-# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
-# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h" 2
-
-
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/dyn_mem.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/dyn_mem.h"
-# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
-# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/dyn_mem.h" 2
-# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h" 2
+# 2029 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h" 2
 # 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_defs.h" 2
 
 
@@ -1941,31 +1958,6 @@ typedef struct {
 typedef struct {
     uint8_t uu[16];
 } bt_uuid_t;
-
-
-
-
-
-typedef enum {
-    BT_STATUS_SUCCESS = 0,
-    BT_STATUS_FAIL,
-    BT_STATUS_NOT_READY,
-    BT_STATUS_NOMEM,
-    BT_STATUS_BUSY,
-    BT_STATUS_DONE,
-    BT_STATUS_UNSUPPORTED,
-    BT_STATUS_PARM_INVALID,
-    BT_STATUS_UNHANDLED,
-    BT_STATUS_AUTH_FAILURE,
-    BT_STATUS_RMT_DEV_DOWN,
-    BT_STATUS_AUTH_REJECTED,
-    BT_STATUS_INVALID_STATIC_RAND_ADDR,
-    BT_STATUS_PENDING,
-    BT_STATUS_UNACCEPT_CONN_INTERVAL,
-    BT_STATUS_PARAM_OUT_OF_RANGE,
-    BT_STATUS_TIMEOUT,
-    BT_STATUS_MEMORY_FULL,
-} bt_status_t;
 
 
 
@@ -3093,7 +3085,7 @@ typedef void (tBTM_MKEY_CALLBACK) (BD_ADDR bd_addr, UINT8 status, UINT8 key_flag
 
 
 
-typedef void (tBTM_SEC_CBACK) (BD_ADDR bd_addr, tBT_TRANSPORT trasnport,
+typedef void (tBTM_SEC_CBACK) (BD_ADDR bd_addr, tBT_TRANSPORT transport,
                                void *p_ref_data, tBTM_STATUS result);
 
 
@@ -3692,15 +3684,15 @@ tBTM_CONTRL_STATE BTM_PM_ReadControllerState(void);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_ble_int.h" 1
 # 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_ble_int.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/fixed_queue.h" 1
-# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/fixed_queue.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h" 1
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h" 1
 
 
 
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h" 2
+# 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h" 2
 struct list_node_t;
 typedef struct list_node_t list_node_t;
 
@@ -3709,9 +3701,9 @@ typedef struct list_t list_t;
 
 typedef void (*list_free_cb)(void *data);
 typedef 
-# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h" 3 4
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
        _Bool 
-# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h"
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h"
             (*list_iter_cb)(void *data, void *context);
 
 
@@ -3731,17 +3723,17 @@ void list_free(list_t *list);
 
 
 
-# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h" 3 4
+# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
 _Bool 
-# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h"
+# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h"
     list_is_empty(const list_t *list);
 
 
 
 
-# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h" 3 4
+# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
 _Bool 
-# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h"
+# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h"
     list_contains(const list_t *list, const void *data);
 
 
@@ -3762,9 +3754,9 @@ list_node_t *list_back_node(const list_t *list);
 
 
 
-# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h" 3 4
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
 _Bool 
-# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h"
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h"
     list_insert_after(list_t *list, list_node_t *prev_node, void *data);
 
 
@@ -3772,9 +3764,9 @@ _Bool
 
 
 
-# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h" 3 4
+# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
 _Bool 
-# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h"
+# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h"
     list_prepend(list_t *list, void *data);
 
 
@@ -3782,15 +3774,15 @@ _Bool
 
 
 
-# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h" 3 4
+# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
 _Bool 
-# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h"
+# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h"
     list_append(list_t *list, void *data);
-# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h"
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h"
 
-# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h" 3 4
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
 _Bool 
-# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h"
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h"
     list_remove(list_t *list, void *data);
 
 
@@ -3824,7 +3816,7 @@ list_node_t *list_next(const list_node_t *node);
 
 
 void *list_node(const list_node_t *node);
-# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/fixed_queue.h" 2
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h" 2
 
 
 
@@ -3851,9 +3843,9 @@ void fixed_queue_free(fixed_queue_t *queue, fixed_queue_free_cb free_cb);
 
 
 
-# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/fixed_queue.h" 3 4
+# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h" 3 4
 _Bool 
-# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/fixed_queue.h"
+# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h"
     fixed_queue_is_empty(fixed_queue_t *queue);
 
 
@@ -3879,9 +3871,9 @@ void *fixed_queue_dequeue(fixed_queue_t *queue);
 
 
 
-# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/fixed_queue.h" 3 4
+# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h" 3 4
 _Bool 
-# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/fixed_queue.h"
+# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h"
     fixed_queue_try_enqueue(fixed_queue_t *queue, void *data);
 
 
@@ -3906,9 +3898,9 @@ void *fixed_queue_try_peek_last(fixed_queue_t *queue);
 
 
 void *fixed_queue_try_remove_from_queue(fixed_queue_t *queue, void *data);
-# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/fixed_queue.h"
+# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h"
 list_t *fixed_queue_get_list(fixed_queue_t *queue);
-# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/fixed_queue.h"
+# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h"
 void fixed_queue_register_dequeue(fixed_queue_t *queue, fixed_queue_cb ready_cb);
 
 
@@ -3924,8 +3916,8 @@ list_t *fixed_queue_get_list(fixed_queue_t *queue);
 # 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_common_types.h" 1
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_common_types.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/thread.h" 1
-# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/thread.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/thread.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/thread.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_api.h" 1
 # 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_api.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/hal.h" 1
@@ -4573,7 +4565,7 @@ static inline void xt_set_intclear(unsigned int arg)
 }
 # 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_api.h"
 extern void * xt_get_interrupt_handler_arg(int n);
-# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/thread.h" 2
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/thread.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h" 1
 # 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h"
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
@@ -4589,7 +4581,7 @@ int xt_clock_freq(void) __attribute__((deprecated));
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_config.h" 1
 # 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h" 2
-# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/thread.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/thread.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 1
 # 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
@@ -4609,6 +4601,77 @@ typedef void (*TaskFunction_t)( void * );
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/deprecated_definitions.h" 1
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 2
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void *get_sp()
+{
+    void *sp;
+    asm volatile ("mov %0, sp;" : "=r" (sp));
+    return sp;
+}
+
+
+
+
+
+static inline void cpu_write_dtlb(uint32_t vpn, unsigned attr)
+{
+    asm volatile ("wdtlb  %1, %0; dsync\n" :: "r" (vpn), "r" (attr));
+}
+
+
+static inline void cpu_write_itlb(unsigned vpn, unsigned attr)
+{
+    asm volatile ("witlb  %1, %0; isync\n" :: "r" (vpn), "r" (attr));
+}
+
+static inline void cpu_init_memctl()
+{
+
+    uint32_t memctl = 0x00000000;
+    asm volatile ("wsr %0, " "MEMCTL" : : "r" (memctl));;
+
+}
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void cpu_configure_region_protection()
+{
+    const uint32_t pages_to_protect[] = {0x00000000, 0x80000000, 0xa0000000, 0xc0000000, 0xe0000000};
+    for (int i = 0; i < sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
+        cpu_write_dtlb(pages_to_protect[i], 0xf);
+        cpu_write_itlb(pages_to_protect[i], 0xf);
+    }
+    cpu_write_dtlb(0x20000000, 0);
+    cpu_write_itlb(0x20000000, 0);
+}
+
+
+
+
+
+void esp_cpu_stall(int cpu_id);
+
+
+
+
+
+void esp_cpu_unstall(int cpu_id);
+
+
+
+
+
+void esp_cpu_reset(int cpu_id);
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 3 4
+_Bool 
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+    esp_cpu_in_ocd_debug_mode();
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 
 
 
@@ -5000,6 +5063,9 @@ void heap_caps_dump_all();
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
 # 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
 typedef struct {
@@ -5055,7 +5121,7 @@ inline static
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_dma_capable(const void *p)
+                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
 {
     return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
 }
@@ -5064,24 +5130,37 @@ inline static
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_executable(const void *p)
+                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
+{
+    return ((intptr_t)p) % 4 == 0;
+}
+
+inline static 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
 {
     intptr_t ip = (intptr_t) p;
     return (ip >= 0x400D0000 && ip < 0x40400000)
         || (ip >= 0x40080000 && ip < 0x400A0000)
+        || (ip >= 0x40000000 && ip < 0x40070000)
+
+        || (ip >= 0x40078000 && ip < 0x40080000)
+
         || (ip >= 0x400C0000 && ip < 0x400C2000);
 }
 
 inline static 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_byte_accessible(const void *p)
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
 {
     
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x40000000);
 
@@ -5091,14 +5170,14 @@ inline static
 }
 
 inline static 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_internal(const void *p) {
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
     
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
     r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
@@ -5107,18 +5186,18 @@ inline static
 
 
 inline static 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_external_ram(const void *p) {
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
     return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
 }
 
 inline static 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_iram(const void *p) {
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
 
 
 
@@ -5127,19 +5206,35 @@ inline static
 }
 
 inline static 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_drom(const void *p) {
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
     return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
 }
 
 inline static 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_dram(const void *p) {
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
     return ((intptr_t)p >= 0x3FAE0000 && (intptr_t)p < 0x40000000);
+}
+
+inline static 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
+    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x3FFFFFFC);
+}
+
+inline static 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
+    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400BFFFC);
 }
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
@@ -5188,24 +5283,24 @@ typedef struct {
 void vPortAssertIfInISR();
 # 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortCPUInitializeMutex(portMUX_TYPE *mux);
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vTaskExitCritical( portMUX_TYPE *mux );
 void vTaskEnterCritical( portMUX_TYPE *mux );
 void vPortCPUAcquireMutex(portMUX_TYPE *mux);
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
 _Bool 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
     vPortCPUAcquireMutexTimeout(portMUX_TYPE *mux, int timeout_cycles);
 void vPortCPUReleaseMutex(portMUX_TYPE *mux);
-# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline unsigned portENTER_CRITICAL_NESTED() {
  unsigned state = ({ unsigned __tmp; __asm__ __volatile__( "rsil	%0, " "3" "\n" : "=a" (__tmp) : : "memory" ); __tmp;});
  ;
  return state;
 }
-# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, uint32_t *set) {
     __asm__ __volatile__ (
         "WSR 	    %2,SCOMPARE1 \n"
@@ -5214,20 +5309,20 @@ static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, u
         :"r"(addr), "r"(compare), "0"(*set)
         );
 }
-# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortYield( void );
 void _frxt_setup_switch( void );
 
 
 
 static inline uint32_t xPortGetCoreID();
-# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef struct {
 
  volatile StackType_t* coproc_area;
-# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 } xMPU_SETTINGS;
-# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 extern void esp_vApplicationIdleHook( void );
 extern void esp_vApplicationTickHook( void );
 
@@ -5238,10 +5333,10 @@ extern void esp_vApplicationTickHook( void );
 
 void _xt_coproc_release(volatile void * coproc_sa_base);
 void vApplicationSleep( TickType_t xExpectedIdleTime );
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/mpu_wrappers.h" 1
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h" 1
@@ -5263,7 +5358,7 @@ void vApplicationSleep( TickType_t xExpectedIdleTime );
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
 typedef volatile struct {
     uint32_t bt_select;
     uint32_t out;
@@ -5600,7 +5695,7 @@ void esp_intr_noniram_disable();
 void esp_intr_noniram_enable();
 # 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
 extern const uint32_t GPIO_PIN_MUX_REG[40];
 # 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
@@ -6042,25 +6137,25 @@ typedef enum {
 typedef esp_sleep_source_t esp_sleep_wakeup_cause_t;
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_disable_wakeup_source(esp_sleep_source_t source);
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ulp_wakeup();
-# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_timer_wakeup(uint64_t time_in_us);
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_touchpad_wakeup();
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 touch_pad_t esp_sleep_get_touchpad_wakeup_status();
-# 161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext0_wakeup(gpio_num_t gpio_num, int level);
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext1_wakeup(uint64_t mask, esp_sleep_ext1_wakeup_mode_t mode);
-# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_gpio_wakeup();
-# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_uart_wakeup(int uart_num);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 uint64_t esp_sleep_get_ext1_wakeup_status();
-# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
                                    esp_sleep_pd_option_t option);
 
@@ -6070,11 +6165,11 @@ esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
 
 
 void esp_deep_sleep_start() __attribute__((noreturn));
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_light_sleep_start();
-# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_deep_sleep(uint64_t time_in_us) __attribute__((noreturn));
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated));
 
 
@@ -6084,7 +6179,7 @@ void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated)
 
 
 esp_sleep_wakeup_cause_t esp_sleep_get_wakeup_cause();
-# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_wake_deep_sleep(void);
 
 
@@ -6092,7 +6187,7 @@ void esp_wake_deep_sleep(void);
 
 
 typedef void (*esp_deep_sleep_wake_stub_fn_t)(void);
-# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_set_deep_sleep_wake_stub(esp_deep_sleep_wake_stub_fn_t new_stub);
 
 
@@ -6116,6 +6211,12 @@ void esp_default_wake_deep_sleep(void);
 
 void esp_deep_sleep_disable_rom_logging(void);
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+       
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+const char* esp_get_idf_version(void);
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
 
 
 
@@ -6127,7 +6228,7 @@ typedef enum {
     ESP_MAC_BT,
     ESP_MAC_ETH,
 } esp_mac_type_t;
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef enum {
     ESP_RST_UNKNOWN,
     ESP_RST_POWERON,
@@ -6170,9 +6271,9 @@ typedef void (*shutdown_handler_t)(void);
 
 
 esp_err_t esp_register_shutdown_handler(shutdown_handler_t handle);
-# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_restart(void) __attribute__ ((noreturn));
-# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
@@ -6181,11 +6282,11 @@ void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
 esp_reset_reason_t esp_reset_reason(void);
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_time(void) __attribute__ ((deprecated));
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_get_free_heap_size(void);
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
@@ -6195,36 +6296,28 @@ uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
 uint32_t esp_get_minimum_free_heap_size( void );
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_random(void);
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_fill_random(void *buf, size_t len);
-# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_set(uint8_t *mac);
-# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_get(uint8_t *mac);
-# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_custom(uint8_t *mac);
-# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_default(uint8_t *mac);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t system_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_read_mac(uint8_t* mac, esp_mac_type_t type);
-# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_derive_local_mac(uint8_t* local_mac, const uint8_t* universal_mac);
-# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 const char* system_get_sdk_version(void) __attribute__ ((deprecated));
-
-
-
-
-
-
-
-const char* esp_get_idf_version(void);
 
 
 
@@ -6233,7 +6326,7 @@ const char* esp_get_idf_version(void);
 typedef enum {
     CHIP_ESP32 = 1,
 } esp_chip_model_t;
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef struct {
     esp_chip_model_t model;
     uint32_t features;
@@ -6246,10 +6339,10 @@ typedef struct {
 
 
 void esp_chip_info(esp_chip_info_t* out_info);
-# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters, BaseType_t xRunPrivileged ) ;
-# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 BaseType_t xPortStartScheduler( void ) ;
 
 
@@ -6285,14 +6378,14 @@ BaseType_t xPortInIsrContext();
 
 
 BaseType_t xPortInterruptedFromISRContext();
-# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  struct xMEMORY_REGION;
  void vPortStoreTaskMPUSettings( xMPU_SETTINGS *xMPUSettings, const struct xMEMORY_REGION * const xRegions, StackType_t *pxBottomOfStack, uint32_t usStackDepth ) ;
  void vPortReleaseTaskMPUSettings( xMPU_SETTINGS *xMPUSettings );
 
 
 
-static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
+static inline uint32_t __attribute__((section(".iram1" "." "11"))) xPortGetCoreID() {
     int id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -6303,6 +6396,21 @@ static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
 
 
 uint32_t xPortGetTickRateHz(void);
+
+
+static inline 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 3 4
+             _Bool 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+                  __attribute__((section(".iram1" "." "12"))) xPortCanYield(void)
+{
+    uint32_t ps_reg = 0;
+
+
+    asm volatile ("rsr %0, " "PS" : "=r" (ps_reg));;
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+    return ((ps_reg & 0x0000000F) == 0);
+}
 
 
 
@@ -6433,7 +6541,7 @@ typedef struct xSTATIC_TIMER
  void *pvDummy5[ 2 ];
 # 1046 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
 } StaticTimer_t;
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/thread.h" 2
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/thread.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h" 1
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 typedef void * QueueHandle_t;
@@ -6526,7 +6634,7 @@ BaseType_t xQueueGenericReset( QueueHandle_t xQueue, BaseType_t xNewQueue ) ;
 void vQueueSetQueueNumber( QueueHandle_t xQueue, UBaseType_t uxQueueNumber ) ;
 UBaseType_t uxQueueGetQueueNumber( QueueHandle_t xQueue ) ;
 uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) ;
-# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/thread.h" 2
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/thread.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h" 1
 # 78 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 1
@@ -6705,7 +6813,7 @@ typedef enum
           TaskHandle_t * const pvCreatedTask,
           const BaseType_t xCoreID);
 # 432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
- static inline __attribute__((section(".iram1"))) BaseType_t xTaskCreate(
+ static inline __attribute__((section(".iram1" "." "13"))) BaseType_t xTaskCreate(
    TaskFunction_t pvTaskCode,
    const char * const pcName,
    const uint32_t usStackDepth,
@@ -6884,12 +6992,12 @@ eSleepModeStatus eTaskConfirmSleepModeStatus( void ) ;
 void *pvTaskIncrementMutexHeldCount( void );
 # 2307 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 UBaseType_t uxTaskGetSnapshotAll( TaskSnapshot_t * const pxTaskSnapshotArray, const UBaseType_t uxArraySize, UBaseType_t * const pxTcbSz );
-# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/thread.h" 2
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/thread.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_task.h" 1
 # 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_task.h"
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_task.h" 2
-# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/thread.h" 2
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/thread.h" 2
 
 
 
@@ -6925,7 +7033,7 @@ typedef enum {
     SIG_BTU_L2CAP_ALARM,
     SIG_BTU_NUM,
 } SIG_BTU_t;
-# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/thread.h"
+# 96 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/thread.h"
 typedef uint32_t task_post_t;
 
 typedef enum {
@@ -7004,7 +7112,7 @@ typedef void (tBTM_RAND_ENC_CB) (tBTM_RAND_ENC *p1);
 typedef UINT32 tBTM_BLE_AD_MASK;
 # 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 typedef UINT8 tBTM_BLE_AD_TYPE;
-# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 381 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 typedef UINT8 tBTM_BLE_ADV_TX_POWER;
 
 
@@ -7088,7 +7196,7 @@ typedef struct {
     UINT8 flag;
     UINT8 tx_power;
 } tBTM_BLE_ADV_DATA;
-# 474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 476 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 typedef UINT8 tBTM_BLE_MULTI_ADV_EVT;
 
 
@@ -7141,7 +7249,7 @@ typedef void (tBTM_BLE_SCAN_REP_CBACK)(tBTM_BLE_REF_VALUE ref_value, UINT8 repor
                                        UINT8 num_records, UINT16 total_len,
                                        UINT8 *p_rep_data, UINT8 status);
 typedef void (tBTM_BLE_SCAN_SETUP_CBACK)(UINT8 evt, tBTM_BLE_REF_VALUE ref_value, UINT8 status);
-# 535 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 537 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 typedef enum {
     BTM_BLE_SCAN_INVALID_STATE = 0,
     BTM_BLE_SCAN_ENABLE_CALLED = 1,
@@ -7195,7 +7303,7 @@ enum {
     BTM_BLE_SCAN_DUPLICATE_ENABLE = 0x1,
     BTM_BLE_SCAN_DUPLICATE_MAX = 0x2,
 };
-# 613 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 615 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 typedef UINT8 tBTM_BLE_PF_COND_TYPE;
 
 
@@ -7209,7 +7317,7 @@ typedef UINT8 tBTM_BLE_PF_ACTION;
 typedef UINT8 tBTM_BLE_PF_FILT_INDEX;
 
 typedef UINT8 tBTM_BLE_PF_AVBL_SPACE;
-# 634 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 636 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 typedef UINT16 tBTM_BLE_PF_FEAT_SEL;
 
 
@@ -7346,7 +7454,7 @@ typedef struct {
     tBTM_BLE_PF_STATUS_CBACK *p_filt_stat_cback;
     tBTM_BLE_ADV_FILTER_ADV_OPQ op_q;
 } tBTM_BLE_ADV_FILTER_CB;
-# 782 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 784 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 typedef UINT8 BTM_BLE_ADV_STATE;
 typedef UINT8 BTM_BLE_ADV_INFO_PRESENT;
 typedef UINT8 BTM_BLE_RSSI_VALUE;
@@ -7392,7 +7500,7 @@ enum {
 };
 
 typedef UINT8 tBTM_BLE_TRACK_ADV_ACTION;
-# 837 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 typedef UINT8 tBTM_BLE_BATCH_SCAN_EVT;
 
 typedef UINT32 tBTM_BLE_TX_TIME_MS;
@@ -7427,47 +7535,51 @@ typedef void (tBTM_START_ADV_CMPL_CBACK) (UINT8 status);
 typedef void (tBTM_START_STOP_ADV_CMPL_CBACK) (UINT8 status);
 
 typedef void (tBTM_UPDATE_DUPLICATE_EXCEPTIONAL_LIST_CMPL_CBACK) (tBTM_STATUS status, uint8_t subcode, uint32_t length, uint8_t *device_info);
-# 893 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_BleRegiseterConnParamCallback(tBTM_UPDATE_CONN_PARAM_CBACK *update_conn_param_cb);
-# 913 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 915 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 BOOLEAN BTM_SecAddBleDevice (BD_ADDR bd_addr, BD_NAME bd_name,
                              tBT_DEVICE_TYPE dev_type, tBLE_ADDR_TYPE addr_type, UINT32 auth_mode);
-# 932 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 934 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 BOOLEAN BTM_SecAddBleKey (BD_ADDR bd_addr, tBTM_LE_KEY_VALUE *p_le_key,
                           tBTM_LE_KEY_TYPE key_type);
-# 947 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 949 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleSetAdvParams(UINT16 adv_int_min, UINT16 adv_int_max,
                                 tBLE_BD_ADDR *p_dir_bda, tBTM_BLE_ADV_CHNL_MAP chnl_map);
-# 963 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleSetAdvParamsStartAdv(UINT16 adv_int_min, UINT16 adv_int_max, UINT8 adv_type,
+# 965 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+tBTM_STATUS BTM_BleSetAdvParamsAll(UINT16 adv_int_min, UINT16 adv_int_max, UINT8 adv_type,
                                         tBLE_ADDR_TYPE own_bda_type, tBLE_BD_ADDR *p_dir_bda,
                                         tBTM_BLE_ADV_CHNL_MAP chnl_map, tBTM_BLE_AFP afp, tBTM_START_ADV_CMPL_CBACK *adv_cb);
 # 980 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+tBTM_STATUS BTM_BleStartAdv(void);
+# 995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleWriteAdvData(tBTM_BLE_AD_MASK data_mask,
                                 tBTM_BLE_ADV_DATA *p_data);
-# 996 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+tBTM_STATUS BTM_BleWriteLongAdvData(uint8_t *adv_data, uint8_t adv_data_len);
+# 1025 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleWriteAdvDataRaw(UINT8 *p_raw_adv, UINT32 raw_adv_len);
 
 
 tBTM_STATUS BTM_BleSetRandAddress(BD_ADDR rand_addr);
 
 void BTM_BleClearRandAddress(void);
-# 1019 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1048 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_BleReadAdvParams (UINT16 *adv_int_min, UINT16 *adv_int_max,
                            tBLE_BD_ADDR *p_dir_bda, tBTM_BLE_ADV_CHNL_MAP *p_chnl_map);
-# 1034 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1063 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_BleObtainVendorCapabilities(tBTM_BLE_VSC_CB *p_cmn_vsc_cb);
-# 1052 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1081 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_BleSetScanParams(tGATT_IF client_if, UINT32 scan_interval,
                           UINT32 scan_window, tBLE_SCAN_MODE scan_type,
                           tBLE_SCAN_PARAM_SETUP_CBACK scan_setup_status_cback);
-# 1076 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleSetScanFilterParams(tGATT_IF client_if, UINT32 scan_interval, UINT32 scan_window,
-                                tBLE_SCAN_MODE scan_mode, UINT8 addr_type_own, UINT8 scan_duplicate_filter, tBTM_BLE_SFP scan_filter_policy,
-                                tBLE_SCAN_PARAM_SETUP_CBACK scan_setup_status_cback);
-# 1093 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+tBTM_STATUS BTM_BleSetScanFilterParams(tGATT_IF client_if, UINT32 scan_interval, UINT32 scan_window,
+                                    tBLE_SCAN_MODE scan_mode, UINT8 addr_type_own, UINT8 scan_duplicate_filter, tBTM_BLE_SFP scan_filter_policy,
+                                    tBLE_SCAN_PARAM_SETUP_CBACK scan_setup_status_cback);
+# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_BleGetVendorCapabilities(tBTM_BLE_VSC_CB *p_cmn_vsc_cb);
-# 1111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1140 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleSetStorageConfig(UINT8 batch_scan_full_max,
                                     UINT8 batch_scan_trunc_max,
                                     UINT8 batch_scan_notify_threshold,
@@ -7475,168 +7587,168 @@ tBTM_STATUS BTM_BleSetStorageConfig(UINT8 batch_scan_full_max,
                                     tBTM_BLE_SCAN_THRESHOLD_CBACK *p_thres_cback,
                                     tBTM_BLE_SCAN_REP_CBACK *p_cback,
                                     tBTM_BLE_REF_VALUE ref_value);
-# 1135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleEnableBatchScan(tBTM_BLE_BATCH_SCAN_MODE scan_mode,
                                    UINT32 scan_interval, UINT32 scan_window,
                                    tBTM_BLE_DISCARD_RULE discard_rule,
                                    tBLE_ADDR_TYPE addr_type,
                                    tBTM_BLE_REF_VALUE ref_value);
-# 1153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleDisableBatchScan(tBTM_BLE_REF_VALUE ref_value);
-# 1168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleReadScanReports(tBLE_SCAN_MODE scan_mode,
                                    tBTM_BLE_REF_VALUE ref_value);
-# 1184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleTrackAdvertiser(tBTM_BLE_TRACK_ADV_CBACK *p_track_cback,
                                    tBTM_BLE_REF_VALUE ref_value);
-# 1199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleWriteScanRsp(tBTM_BLE_AD_MASK data_mask,
                                 tBTM_BLE_ADV_DATA *p_data);
-# 1214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleWriteScanRspRaw(UINT8 *p_raw_scan_rsp, UINT32 raw_scan_rsp_len);
-# 1229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleObserve(BOOLEAN start, UINT32 duration,
                            tBTM_INQ_RESULTS_CB *p_results_cb, tBTM_CMPL_CB *p_cmpl_cb);
-# 1245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1274 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleScan(BOOLEAN start, UINT32 duration,
                            tBTM_INQ_RESULTS_CB *p_results_cb, tBTM_CMPL_CB *p_cmpl_cb, tBTM_INQ_DIS_CB *p_discard_cb);
-# 1261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_GetDeviceIDRoot (BT_OCTET16 ir);
-# 1275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_GetDeviceEncRoot (BT_OCTET16 er);
-# 1288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_GetDeviceDHK (BT_OCTET16 dhk);
 # 1304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+void BTM_GetDeviceEncRoot (BT_OCTET16 er);
+# 1317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+void BTM_GetDeviceDHK (BT_OCTET16 dhk);
+# 1333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_SecurityGrant(BD_ADDR bd_addr, UINT8 res);
-# 1320 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1349 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_BlePasskeyReply (BD_ADDR bd_addr, UINT8 res, UINT32 passkey);
-# 1335 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1364 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_BleSetStaticPasskey(BOOLEAN add, UINT32 passkey);
-# 1350 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_BleConfirmReply (BD_ADDR bd_addr, UINT8 res);
-# 1365 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_BleOobDataReply(BD_ADDR bd_addr, UINT8 res, UINT8 len, UINT8 *p_data);
-# 1385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1414 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 BOOLEAN BTM_BleDataSignature (BD_ADDR bd_addr, UINT8 *p_text, UINT16 len,
                               BLE_SIGNATURE signature);
-# 1404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1433 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 BOOLEAN BTM_BleVerifySignature (BD_ADDR bd_addr, UINT8 *p_orig,
                                 UINT16 len, UINT32 counter,
                                 UINT8 *p_comp);
-# 1419 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1448 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_ReadConnectionAddr (BD_ADDR remote_bda, BD_ADDR local_conn_addr,
                              tBLE_ADDR_TYPE *p_addr_type);
-# 1435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1464 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 BOOLEAN BTM_ReadRemoteConnectionAddr(BD_ADDR pseudo_addr,
                                      BD_ADDR conn_addr,
                                      tBLE_ADDR_TYPE *p_addr_type);
-# 1453 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1482 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_BleLoadLocalKeys(UINT8 key_type, tBTM_BLE_LOCAL_KEYS *p_key);
-# 1471 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1500 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 BOOLEAN BTM_BleSetBgConnType(tBTM_BLE_CONN_TYPE conn_type,
                              tBTM_BLE_SEL_CBACK *p_select_cback);
-# 1490 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1519 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 BOOLEAN BTM_BleUpdateBgConnDev(BOOLEAN add_remove, BD_ADDR remote_bda);
-# 1506 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1535 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_BleClearBgConnDev(void);
-# 1527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_BleSetPrefConnParams (BD_ADDR bd_addr,
                                UINT16 min_conn_int, UINT16 max_conn_int,
                                UINT16 slave_latency, UINT16 supervision_tout);
-# 1544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1573 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_BleSetConnScanParams (UINT32 scan_interval, UINT32 scan_window);
-# 1558 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
-void BTM_BleReadControllerFeatures(tBTM_BLE_CTRL_FEATURES_CBACK *p_vsc_cback);
-# 1574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
-UINT8 *BTM_CheckAdvData( UINT8 *p_adv, UINT8 type, UINT8 *p_length);
 # 1587 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+void BTM_BleReadControllerFeatures(tBTM_BLE_CTRL_FEATURES_CBACK *p_vsc_cback);
+# 1603 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+UINT8 *BTM_CheckAdvData( UINT8 *p_adv, UINT8 type, UINT8 *p_length);
+# 1616 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 BOOLEAN BTM_BleGetCurrentAddress(BD_ADDR addr, uint8_t *addr_type);
-# 1600 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 UINT16 BTM_BleReadDiscoverability();
-# 1613 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1642 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 UINT16 BTM_BleReadConnectability ();
 
 void BTM_Recovery_Pre_State(void);
-# 1630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_ReadDevInfo (BD_ADDR remote_bda, tBT_DEVICE_TYPE *p_dev_type,
                       tBLE_ADDR_TYPE *p_addr_type);
-# 1648 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1677 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 BOOLEAN BTM_ReadConnectedTransportAddress(BD_ADDR remote_bda,
         tBT_TRANSPORT transport);
-# 1663 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1692 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleBroadcast(BOOLEAN start, tBTM_START_STOP_ADV_CMPL_CBACK *p_stop_adv_cback);
-# 1678 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1707 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 BOOLEAN BTM_BleConfigPrivacy(BOOLEAN enable, tBTM_SET_LOCAL_PRIVACY_CBACK *set_local_privacy_cabck);
-# 1690 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1719 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_BleConfigLocalIcon(uint16_t icon);
-# 1702 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1731 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 BOOLEAN BTM_BleLocalPrivacyEnabled(void);
-# 1717 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1746 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_BleEnableMixedPrivacyMode(BOOLEAN mixed_on);
-# 1729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1758 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 UINT8 BTM_BleMaxMultiAdvInstanceCount();
-# 1747 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1776 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleSetConnectableMode(tBTM_BLE_CONN_MODE connectable_mode);
-# 1763 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1792 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_BleTurnOnPrivacyOnRemote(BD_ADDR bd_addr,
                                   BOOLEAN privacy_on);
-# 1776 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1805 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 BOOLEAN BTM_BleUpdateAdvWhitelist(BOOLEAN add_remove, BD_ADDR emote_bda, tBTM_ADD_WHITELIST_CBACK *add_wl_cb);
-# 1789 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1818 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_BleUpdateAdvFilterPolicy(tBTM_BLE_AFP adv_policy);
-# 1801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1830 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_BleReceiverTest(UINT8 rx_freq, tBTM_CMPL_CB *p_cmd_cmpl_cback);
-# 1816 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1845 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_BleTransmitterTest(UINT8 tx_freq, UINT8 test_data_len,
                             UINT8 packet_payload, tBTM_CMPL_CB *p_cmd_cmpl_cback);
-# 1828 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1857 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 void BTM_BleTestEnd(tBTM_CMPL_CB *p_cmd_cmpl_cback);
-# 1840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1869 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 BOOLEAN BTM_UseLeLink (BD_ADDR bd_addr);
-# 1855 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1884 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleStackEnable (BOOLEAN enable);
-# 1868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1897 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 BOOLEAN BTM_GetLeSecurityState (BD_ADDR bd_addr,
                                 UINT8 *p_le_dev_sec_flags,
                                 UINT8 *p_le_key_size);
-# 1883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1912 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 BOOLEAN BTM_BleSecurityProcedureIsRunning (BD_ADDR bd_addr);
-# 1897 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1926 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 UINT8 BTM_BleGetSupportedKeySize (BD_ADDR bd_addr);
-# 1917 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1946 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleEnableAdvInstance (tBTM_BLE_ADV_PARAMS *p_params,
                                       tBTM_BLE_MULTI_ADV_CBACK *p_cback,
                                       void *p_ref);
-# 1935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1964 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleUpdateAdvInstParam (UINT8 inst_id, tBTM_BLE_ADV_PARAMS *p_params);
-# 1953 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1982 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleCfgAdvInstData (UINT8 inst_id, BOOLEAN is_scan_rsp,
                                    tBTM_BLE_AD_MASK data_mask,
                                    tBTM_BLE_ADV_DATA *p_data);
-# 1969 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 1998 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleDisableAdvInstance (UINT8 inst_id);
-# 1986 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 2015 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleAdvFilterParamSetup(int action,
                                        tBTM_BLE_PF_FILT_INDEX filt_index,
                                        tBTM_BLE_PF_FILT_PARAMS *p_filt_params,
                                        tBLE_BD_ADDR *p_target, tBTM_BLE_PF_PARAM_CBACK *p_cmpl_cback,
                                        tBTM_BLE_REF_VALUE ref_value);
-# 2007 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 2036 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleCfgFilterCondition(tBTM_BLE_SCAN_COND_OP action,
                                       tBTM_BLE_PF_COND_TYPE cond_type,
                                       tBTM_BLE_PF_FILT_INDEX filt_index,
                                       tBTM_BLE_PF_COND_PARAM *p_cond,
                                       tBTM_BLE_PF_CFG_CBACK *p_cmpl_cback,
                                       tBTM_BLE_REF_VALUE ref_value);
-# 2027 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+# 2056 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_BleEnableDisableFilterFeature(UINT8 enable,
         tBTM_BLE_PF_STATUS_CBACK *p_stat_cback,
         tBTM_BLE_REF_VALUE ref_value);
-# 2043 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_BleGetEnergyInfo(tBTM_BLE_ENERGY_INFO_CBACK *p_ener_cback);
-# 2055 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
-tBTM_STATUS BTM_SetBleDataLength(BD_ADDR bd_addr, UINT16 tx_pdu_length);
 # 2072 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+tBTM_STATUS BTM_BleGetEnergyInfo(tBTM_BLE_ENERGY_INFO_CBACK *p_ener_cback);
+# 2084 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
+tBTM_STATUS BTM_SetBleDataLength(BD_ADDR bd_addr, UINT16 tx_pdu_length);
+# 2101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 tBTM_STATUS BTM_UpdateBleDuplicateExceptionalList(uint8_t subcode, uint32_t type, BD_ADDR device_info, tBTM_UPDATE_DUPLICATE_EXCEPTIONAL_LIST_CMPL_CBACK update_exceptional_list_cmp_cb);
 # 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_ble_int.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h" 1
@@ -7685,7 +7797,6 @@ typedef struct {
     tBTM_START_ADV_CMPL_CBACK *p_adv_cb;
     tBTM_START_STOP_ADV_CMPL_CBACK *p_stop_adv_cb;
     tBLE_ADDR_TYPE adv_addr_type;
-    BOOLEAN adv_callback_twice;
     UINT8 evt_type;
     UINT8 adv_mode;
     tBLE_BD_ADDR direct_bda;
@@ -7776,11 +7887,11 @@ typedef UINT8 tBTM_BLE_CONN_ST;
 typedef struct {
     void *p_param;
 } tBTM_BLE_CONN_REQ;
-# 260 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_ble_int.h"
+# 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_ble_int.h"
 typedef UINT8 tBTM_BLE_STATE;
-# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_ble_int.h"
+# 271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_ble_int.h"
 typedef UINT16 tBTM_BLE_STATE_MASK;
-# 286 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_ble_int.h"
+# 288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_ble_int.h"
 typedef struct {
     BD_ADDR *resolve_q_random_pseudo;
     UINT8 *resolve_q_action;
@@ -7944,7 +8055,7 @@ BOOLEAN btm_ble_start_auto_conn(BOOLEAN start);
 BOOLEAN btm_ble_start_select_conn(BOOLEAN start, tBTM_BLE_SEL_CBACK *p_select_cback);
 BOOLEAN btm_ble_renew_bg_conn_params(BOOLEAN add, BD_ADDR bd_addr);
 void btm_write_dir_conn_wl(BD_ADDR target_addr);
-void btm_ble_update_mode_operation(UINT8 link_role, BD_ADDR bda, UINT8 status);
+BOOLEAN btm_ble_update_mode_operation(UINT8 link_role, BD_ADDR bda, UINT8 status);
 BOOLEAN btm_execute_wl_dev_operation(void);
 void btm_ble_update_link_topology_mask(UINT8 role, BOOLEAN increase);
 
@@ -8308,20 +8419,18 @@ typedef struct {
 
     tBTM_LE_KEY_TYPE key_type;
     tBTM_SEC_BLE_KEYS keys;
-    
-# 491 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h" 3 4
-   _Bool 
-# 491 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
-        skip_update_conn_param;
+
+
+
     UINT16 auth_mode;
 
 
     tBLE_ADDR_TYPE current_addr_type;
     BD_ADDR current_addr;
     
-# 497 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h" 3 4
+# 499 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h" 3 4
    _Bool 
-# 497 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
+# 499 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
                        current_addr_valid;
 
 } tBTM_SEC_BLE;
@@ -8353,13 +8462,13 @@ typedef struct {
     DEV_CLASS dev_class;
     LINK_KEY link_key;
     UINT8 pin_code_length;
-# 545 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
+# 547 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
     UINT16 sec_flags;
 
     tBTM_BD_NAME sec_bd_name;
     BD_FEATURES features[2 + 1];
     UINT8 num_read_pages;
-# 563 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
+# 565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
     UINT8 sec_state;
     BOOLEAN is_originator;
 
@@ -8371,7 +8480,7 @@ typedef struct {
     BOOLEAN link_key_not_sent;
     UINT8 link_key_type;
     BOOLEAN link_key_changed;
-# 585 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
+# 587 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
     UINT8 sm4;
     tBTM_IO_CAP rmt_io_caps;
     tBTM_AUTH_REQ rmt_auth_req;
@@ -8411,7 +8520,7 @@ typedef struct {
     UINT8 last_author_service_id;
     BOOLEAN enc_init_by_we;
 } tBTM_SEC_DEV_REC;
-# 634 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
+# 636 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
 typedef struct {
 
     tBTM_LOC_BD_NAME bd_name;
@@ -8506,7 +8615,7 @@ enum {
     BTM_PAIR_STATE_WAIT_DISCONNECT
 };
 typedef UINT8 tBTM_PAIRING_STATE;
-# 739 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
+# 741 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
 typedef struct {
     BOOLEAN is_mux;
     BD_ADDR bd_addr;
@@ -8518,9 +8627,9 @@ typedef struct {
     UINT32 mx_chan_id;
     tBT_TRANSPORT transport;
 } tBTM_SEC_QUEUE_ENTRY;
-# 765 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
+# 767 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
 typedef BOOLEAN CONNECTION_TYPE;
-# 774 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
+# 776 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
 typedef struct {
     tBTM_CFG cfg;
 
@@ -8572,7 +8681,7 @@ typedef struct {
 
 
     tBTM_INQUIRY_VAR_ST btm_inq_vars;
-# 836 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
+# 838 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
     tBTM_APPL_INFO api;
 
 
@@ -8645,7 +8754,7 @@ extern tBTM_CallbackFunc conn_param_update_cb;
 
 
 typedef UINT8 tBTM_SEC_ACTION;
-# 919 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
+# 921 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
 extern tBTM_CB *btm_cb_ptr;
 
 
@@ -8728,7 +8837,7 @@ void btm_pm_proc_cmd_status(UINT8 status);
 void btm_pm_proc_mode_change (UINT8 hci_status, UINT16 hci_handle, UINT8 mode,
                               UINT16 interval);
 void btm_pm_proc_ssr_evt (UINT8 *p, UINT16 evt_len);
-# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
+# 1012 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_int.h"
 void btm_qos_setup_complete (UINT8 status, UINT16 handle, FLOW_SPEC *p_flow);
 
 
@@ -8826,7 +8935,7 @@ void btm_sec_link_key_notification (UINT8 *p_bda, UINT8 *p_link_key, UINT8 key_t
 void btm_sec_link_key_request (UINT8 *p_bda);
 void btm_sec_pin_code_request (UINT8 *p_bda);
 void btm_sec_update_clock_offset (UINT16 handle, UINT16 clock_offset);
-void btm_sec_dev_rec_cback_event (tBTM_SEC_DEV_REC *p_dev_rec, UINT8 res, BOOLEAN is_le_trasnport);
+void btm_sec_dev_rec_cback_event (tBTM_SEC_DEV_REC *p_dev_rec, UINT8 res, BOOLEAN is_le_transport);
 void btm_sec_set_peer_sec_caps (tACL_CONN *p_acl_cb, tBTM_SEC_DEV_REC *p_dev_rec);
 
 
@@ -8857,6 +8966,14 @@ void btm_acl_reset_paging (void);
 void btm_acl_paging (BT_HDR *p, BD_ADDR dest);
 UINT8 btm_sec_clr_service_by_psm (UINT16 psm);
 void btm_sec_clr_temp_auth_service (BD_ADDR bda);
+
+void btm_lock_init(void);
+
+void btm_sem_init(void);
+
+void btm_sem_free(void);
+
+void btm_lock_free(void);
 # 32 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btu.h" 1
@@ -8964,8 +9081,8 @@ UINT16 BTU_BleAclPktSize(void);
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/device/include/device/bdaddr.h" 2
 
 
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h" 1
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
 struct hash_map_t;
 typedef struct hash_map_t hash_map_t;
 
@@ -8980,20 +9097,20 @@ typedef size_t hash_index_t;
 
 typedef hash_index_t (*hash_index_fn)(const void *key);
 typedef 
-# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h" 3 4
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h" 3 4
        _Bool 
-# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h"
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
             (*hash_map_iter_cb)(hash_map_entry_t *hash_entry, void *context);
 
 typedef 
-# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h" 3 4
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h" 3 4
        _Bool 
-# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h"
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
             (*key_equality_fn)(const void *x, const void *y);
 
 typedef void (*key_free_fn)(void *data);
 typedef void (*data_free_fn)(void *data);
-# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h"
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
 hash_map_t *hash_map_new(
     size_t size,
     hash_index_fn hash_fn,
@@ -9004,11 +9121,11 @@ hash_map_t *hash_map_new(
 
 
 void hash_map_free(hash_map_t *hash_map);
-# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h"
+# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
 
-# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h" 3 4
+# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h" 3 4
 _Bool 
-# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h"
+# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
     hash_map_has_key(const hash_map_t *hash_map, const void *key);
 
 
@@ -9021,9 +9138,9 @@ void *hash_map_get(const hash_map_t *hash_map, const void *key);
 
 
 
-# 91 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h" 3 4
+# 91 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h" 3 4
 _Bool 
-# 91 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h"
+# 91 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
     hash_map_set(hash_map_t *hash_map, const void *key, void *data);
 
 
@@ -9031,9 +9148,9 @@ _Bool
 
 
 
-# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h" 3 4
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h" 3 4
 _Bool 
-# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
     hash_map_erase(hash_map_t *hash_map, const void *key);
 
 
@@ -9099,14 +9216,14 @@ typedef struct {
 # 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/device/include/device/controller.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/hci/include/hci/hci_layer.h" 1
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/hci/include/hci/hci_layer.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/allocator.h" 1
-# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/allocator.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/allocator.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/allocator.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/allocator.h" 2
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/allocator.h" 2
 
 
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
-# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/allocator.h" 2
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/allocator.h" 2
 
 char *osi_strdup(const char *str);
 
@@ -9114,22 +9231,22 @@ void *osi_malloc_func(size_t size);
 void *osi_calloc_func(size_t size);
 void osi_free_func(void *ptr);
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/hci/include/hci/hci_layer.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/osi.h" 1
-# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/osi.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/osi.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/osi.h"
 int osi_init(void);
 void osi_deinit(void);
 # 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/hci/include/hci/hci_layer.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/future.h" 1
-# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/future.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/semaphore.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/semaphore.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/future.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/future.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/semaphore.h" 1
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/semaphore.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/semphr.h" 1
 # 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/semphr.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h" 1
 # 78 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/semphr.h" 2
 
 typedef QueueHandle_t SemaphoreHandle_t;
-# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/semaphore.h" 2
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/semaphore.h" 2
 
 
 
@@ -9145,13 +9262,13 @@ void osi_sem_free(osi_sem_t *sem);
 int osi_sem_take(osi_sem_t *sem, uint32_t timeout);
 
 void osi_sem_give(osi_sem_t *sem);
-# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/future.h" 2
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/future.h" 2
 
 struct future {
     
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/future.h" 3 4
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/future.h" 3 4
    _Bool 
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/future.h"
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/future.h"
         ready_can_be_called;
     osi_sem_t semaphore;
     void *result;
@@ -9742,7 +9859,7 @@ BOOLEAN btsnd_hcic_write_inquiry_mode(UINT8 type);
 void btsnd_hcic_vendor_spec_cmd (void *buffer, UINT16 opcode,
                                  UINT8 len, UINT8 *p_data,
                                  void *p_cmd_cplt_cback);
-# 693 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/hcimsgs.h"
+# 694 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/hcimsgs.h"
 BOOLEAN btsnd_hcic_ble_set_evt_mask (BT_EVENT_MASK event_mask);
 
 BOOLEAN btsnd_hcic_ble_read_buffer_size (void);
@@ -10393,7 +10510,7 @@ typedef struct {
     tL2CAP_APPL_INFO api;
 } tL2C_RCB;
 
-typedef void (tL2CAP_SEC_CBACK) (BD_ADDR bd_addr, tBT_TRANSPORT trasnport,
+typedef void (tL2CAP_SEC_CBACK) (BD_ADDR bd_addr, tBT_TRANSPORT transport,
                                 void *p_ref_data, tBTM_STATUS result);
 
 typedef struct
@@ -10804,7 +10921,7 @@ extern void l2c_link_process_num_completed_blocks (UINT8 controller_id, UINT8 *p
 extern void l2c_link_processs_num_bufs (UINT16 num_lm_acl_bufs);
 extern UINT8 l2c_link_pkts_rcvd (UINT16 *num_pkts, UINT16 *handles);
 extern void l2c_link_role_changed (BD_ADDR bd_addr, UINT8 new_role, UINT8 hci_status);
-extern void l2c_link_sec_comp (BD_ADDR p_bda, tBT_TRANSPORT trasnport, void *p_ref_data, UINT8 status);
+extern void l2c_link_sec_comp (BD_ADDR p_bda, tBT_TRANSPORT transport, void *p_ref_data, UINT8 status);
 extern void l2c_link_segments_xmitted (BT_HDR *p_msg);
 extern void l2c_pin_code_request (BD_ADDR bd_addr);
 extern void l2c_link_adjust_chnl_allocation (void);
@@ -11853,7 +11970,7 @@ extern tGATT_STATUS attp_send_msg_to_l2cap(tGATT_TCB *p_tcb, BT_HDR *p_toL2CAP);
 
 extern UINT8 *gatt_dbg_op_name(UINT8 op_code);
 
-extern UINT32 gatt_add_sdp_record (tBT_UUID *p_uuid, UINT16 start_hdl, UINT16 end_hdl);
+
 
 extern BOOLEAN gatt_parse_uuid_from_cmd(tBT_UUID *p_uuid, UINT16 len, UINT8 **p_data);
 extern UINT8 gatt_build_uuid_to_stream(UINT8 **p_dst, tBT_UUID uuid);
@@ -12008,7 +12125,31 @@ extern void gatt_set_local_mtu(uint16_t mtu);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/include/btm_ble_int.h" 1
 # 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 2
-# 58 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/mutex.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/mutex.h"
+typedef SemaphoreHandle_t osi_mutex_t;
+
+int osi_mutex_new(osi_mutex_t *mutex);
+
+int osi_mutex_lock(osi_mutex_t *mutex, uint32_t timeout);
+
+void osi_mutex_unlock(osi_mutex_t *mutex);
+
+void osi_mutex_free(osi_mutex_t *mutex);
+
+
+int osi_mutex_global_init(void);
+
+void osi_mutex_global_deinit(void);
+
+void osi_mutex_global_lock(void);
+
+void osi_mutex_global_unlock(void);
+# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 2
+# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 static tBTM_BLE_VSC_CB cmn_ble_vsc_cb;
 
 
@@ -12174,17 +12315,71 @@ const UINT8 btm_le_state_combo_tbl[11][11][2] = {
     }
 
 };
-# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+
+
+
+static osi_mutex_t adv_enable_lock;
+static osi_mutex_t adv_data_lock;
+static osi_mutex_t adv_param_lock;
+static osi_mutex_t scan_enable_lock;
+static osi_mutex_t scan_param_lock;
+osi_sem_t adv_enable_sem;
+osi_sem_t adv_data_sem;
+osi_sem_t adv_param_sem;
+osi_sem_t scan_enable_sem;
+osi_sem_t scan_param_sem;
+uint8_t adv_enable_status = 0;
+uint8_t adv_data_status = 0;
+uint8_t adv_param_status = 0;
+uint8_t scan_enable_status = 0;
+uint8_t scan_param_status = 0;
+
+void btm_lock_init(void)
+{
+    osi_mutex_new(&adv_enable_lock);
+    osi_mutex_new(&adv_data_lock);
+    osi_mutex_new(&adv_param_lock);
+    osi_mutex_new(&scan_enable_lock);
+    osi_mutex_new(&scan_param_lock);
+}
+
+void btm_lock_free(void)
+{
+    osi_mutex_free(&adv_enable_lock);
+    osi_mutex_free(&adv_data_lock);
+    osi_mutex_free(&adv_param_lock);
+    osi_mutex_free(&scan_enable_lock);
+    osi_mutex_free(&scan_param_lock);
+}
+
+void btm_sem_init(void)
+{
+    osi_sem_new(&adv_enable_sem, 1, 0);
+    osi_sem_new(&adv_data_sem, 1, 0);
+    osi_sem_new(&adv_param_sem, 1, 0);
+    osi_sem_new(&scan_enable_sem, 1, 0);
+    osi_sem_new(&scan_param_sem, 1, 0);
+}
+
+void btm_sem_free(void)
+{
+    osi_sem_free(&adv_enable_sem);
+    osi_sem_free(&adv_data_sem);
+    osi_sem_free(&adv_param_sem);
+    osi_sem_free(&scan_enable_sem);
+    osi_sem_free(&scan_param_sem);
+}
+# 289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void BTM_BleRegiseterConnParamCallback(tBTM_UPDATE_CONN_PARAM_CBACK *update_conn_param_cb)
 {
     conn_param_update_cb.update_conn_param_cb = update_conn_param_cb;
 }
-# 249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 303 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 BOOLEAN BTM_BleUpdateAdvWhitelist(BOOLEAN add_remove, BD_ADDR remote_bda, tBTM_ADD_WHITELIST_CBACK *add_wl_cb)
 {
     return btm_update_dev_to_white_list(add_remove, remote_bda, add_wl_cb);
 }
-# 264 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 318 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void BTM_BleUpdateAdvFilterPolicy(tBTM_BLE_AFP adv_policy)
 {
     tBTM_BLE_INQ_CB *p_cb = &(*btm_cb_ptr).ble_ctr_cb.inq_var;
@@ -12204,9 +12399,10 @@ void BTM_BleUpdateAdvFilterPolicy(tBTM_BLE_AFP adv_policy)
 
         btm_ble_stop_adv ();
 
-        if (p_cb->connectable_mode & 0x0100)
+        if (p_cb->connectable_mode & 0x0100) {
             p_cb->evt_type = btm_set_conn_mode_adv_init_addr(p_cb, p_addr_ptr, &init_addr_type,
                              &p_cb->adv_addr_type);
+        }
 
         btsnd_hcic_ble_write_adv_params ((UINT16)(p_cb->adv_interval_min ? p_cb->adv_interval_min :
                                          2048),
@@ -12225,7 +12421,7 @@ void BTM_BleUpdateAdvFilterPolicy(tBTM_BLE_AFP adv_policy)
 
     }
 }
-# 320 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 BOOLEAN btm_ble_send_extended_scan_params(UINT8 scan_type, UINT32 scan_int,
         UINT32 scan_win, UINT8 addr_type_own,
         UINT8 scan_filter_policy)
@@ -12244,24 +12440,24 @@ BOOLEAN btm_ble_send_extended_scan_params(UINT8 scan_type, UINT32 scan_int,
     {if ((*btm_cb_ptr).trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_BTM", "D" " (%d) %s: " "%s, %d, %d" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM", __func__, scan_int, scan_win); };};
     if ((BTM_VendorSpecificCommand(((0x3F << 10) | (0x02 <<7) | (0x06 << 0)),
                                    11, scan_param, 
-# 337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                                                                              ((void *)0)
-# 337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                                                                  )) != BTM_SUCCESS) {
         {if ((*btm_cb_ptr).trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_BTM", "\033[0;" "31" "m" "E" " (%d) %s: " "%s error sending extended scan parameters" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM", __func__); };};
         return 
-# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
               0
-# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                    ;
     }
     return 
-# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
           1
-# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
               ;
 }
-# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 412 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 tBTM_STATUS BTM_BleObserve(BOOLEAN start, UINT32 duration,
                            tBTM_INQ_RESULTS_CB *p_results_cb, tBTM_CMPL_CB *p_cmpl_cb)
 {
@@ -12332,7 +12528,7 @@ tBTM_STATUS BTM_BleObserve(BOOLEAN start, UINT32 duration,
     return status;
 
 }
-# 441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 tBTM_STATUS BTM_BleScan(BOOLEAN start, UINT32 duration,
                            tBTM_INQ_RESULTS_CB *p_results_cb, tBTM_CMPL_CB *p_cmpl_cb, tBTM_INQ_DIS_CB *p_discard_cb)
 {
@@ -12370,9 +12566,9 @@ tBTM_STATUS BTM_BleScan(BOOLEAN start, UINT32 duration,
                 p_inq->scan_window = 18;
                 p_inq->sfp = 0x00;
                 p_inq->scan_params_set = 
-# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 532 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                         1
-# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 532 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                             ;
                 p_inq->scan_duplicate_filter = 0;
                 btsnd_hcic_ble_set_scan_params(p_inq->scan_type, p_inq->scan_interval,
@@ -12401,7 +12597,7 @@ tBTM_STATUS BTM_BleScan(BOOLEAN start, UINT32 duration,
     return status;
 
 }
-# 517 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 572 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 tBTM_STATUS BTM_BleBroadcast(BOOLEAN start, tBTM_START_STOP_ADV_CMPL_CBACK *p_stop_adv_cback)
 {
     tBTM_STATUS status = BTM_NO_RESOURCES;
@@ -12419,13 +12615,7 @@ tBTM_STATUS BTM_BleBroadcast(BOOLEAN start, tBTM_START_STOP_ADV_CMPL_CBACK *p_st
 
 
 
-    if (p_cb->state == BTM_BLE_ADV_PENDING) {
-        if (p_stop_adv_cback) {
-            (*p_stop_adv_cback)(0x01);
-        }
-        return BTM_BUSY;
-    }
-    if (start && p_cb->adv_mode == 0x00) {
+    if (start) {
 
         if (!btsnd_hcic_ble_write_adv_params ((UINT16)(p_cb->adv_interval_min ? p_cb->adv_interval_min :
                                               512),
@@ -12445,53 +12635,44 @@ tBTM_STATUS BTM_BleBroadcast(BOOLEAN start, tBTM_START_STOP_ADV_CMPL_CBACK *p_st
         }
 
         status = btm_ble_start_adv ();
-    } else if (!start && p_cb->adv_mode == 0x01) {
+    } else {
 
         p_cb->p_stop_adv_cb = p_stop_adv_cback;
         status = btm_ble_stop_adv();
 
         btm_ble_disable_resolving_list(4, 
-# 565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                                       1
-# 565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                           );
 
-    } else {
-
-
-
-
-        status = BTM_SUCCESS;
-        if (p_stop_adv_cback) {
-            (*p_stop_adv_cback)(status);
-        }
     }
     return status;
 }
-# 669 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 709 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 extern void BTM_BleGetVendorCapabilities(tBTM_BLE_VSC_CB *p_cmn_vsc_cb)
 {
     {if ((*btm_cb_ptr).trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_BTM", "D" " (%d) %s: " "BTM_BleGetVendorCapabilities" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM"); };};
 
     if (
-# 673 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 713 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
        ((void *)0) 
-# 673 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 713 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
             != p_cmn_vsc_cb) {
         *p_cmn_vsc_cb = (*btm_cb_ptr).cmn_ble_vsc_cb;
     }
 }
-# 689 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 extern void BTM_BleReadControllerFeatures(tBTM_BLE_CTRL_FEATURES_CBACK *p_vsc_cback)
 {
     if (
-# 691 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 731 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
        1 
-# 691 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 731 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
             == (*btm_cb_ptr).cmn_ble_vsc_cb.values_read) {
         return;
     }
-# 707 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 747 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
     (void)(p_vsc_cback);
 
     return ;
@@ -12499,6 +12680,7 @@ extern void BTM_BleReadControllerFeatures(tBTM_BLE_CTRL_FEATURES_CBACK *p_vsc_cb
 
 void BTM_VendorHciEchoCmdCallback(tBTM_VSC_CMPL *p1)
 {
+
     if (!p1) {
         return;
     }
@@ -12506,9 +12688,10 @@ void BTM_VendorHciEchoCmdCallback(tBTM_VSC_CMPL *p1)
     uint8_t status, echo;
     {status = (UINT8)(*(p)); (p) += 1;};
     {echo = (UINT8)(*(p)); (p) += 1;};
+
     {if ((*btm_cb_ptr).trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_BTM", "D" " (%d) %s: " "%s status 0x%x echo 0x%x" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM", __func__, status, echo); };};
 }
-# 735 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 777 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void BTM_VendorHciEchoCmdTest(uint8_t echo)
 {
     BTM_VendorSpecificCommand (((0x3F << 10) | (0x01 <<7) | (0x01 << 0)),
@@ -12516,7 +12699,7 @@ void BTM_VendorHciEchoCmdTest(uint8_t echo)
                                 &echo,
                                 BTM_VendorHciEchoCmdCallback);
 }
-# 755 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 797 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void BTM_BleEnableMixedPrivacyMode(BOOLEAN mixed_on)
 {
 
@@ -12526,7 +12709,7 @@ void BTM_BleEnableMixedPrivacyMode(BOOLEAN mixed_on)
 
 
 }
-# 777 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 819 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 BOOLEAN BTM_BleConfigPrivacy(BOOLEAN privacy_mode, tBTM_SET_LOCAL_PRIVACY_CBACK *set_local_privacy_cback)
 {
 
@@ -12543,9 +12726,9 @@ BOOLEAN BTM_BleConfigPrivacy(BOOLEAN privacy_mode, tBTM_SET_LOCAL_PRIVACY_CBACK 
 
     if (!controller_get_interface()->supports_ble()) {
         return 
-# 792 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 834 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
               0
-# 792 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 834 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                    ;
     }
 
@@ -12554,15 +12737,15 @@ BOOLEAN BTM_BleConfigPrivacy(BOOLEAN privacy_mode, tBTM_SET_LOCAL_PRIVACY_CBACK 
         if (random_cb && random_cb->set_local_privacy_cback){
             (*random_cb->set_local_privacy_cback)(BTM_SET_PRIVACY_FAIL);
             random_cb->set_local_privacy_cback = 
-# 799 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 841 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                                 ((void *)0)
-# 799 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 841 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                     ;
         }
         return 
-# 801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 843 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
               0
-# 801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 843 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                    ;
     }
 
@@ -12577,9 +12760,9 @@ BOOLEAN BTM_BleConfigPrivacy(BOOLEAN privacy_mode, tBTM_SET_LOCAL_PRIVACY_CBACK 
         if (random_cb && random_cb->set_local_privacy_cback){
             (*random_cb->set_local_privacy_cback)(BTM_SET_PRIVACY_SUCCESS);
             random_cb->set_local_privacy_cback = 
-# 814 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 856 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                                 ((void *)0)
-# 814 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 856 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                     ;
         }
     } else {
@@ -12607,15 +12790,15 @@ BOOLEAN BTM_BleConfigPrivacy(BOOLEAN privacy_mode, tBTM_SET_LOCAL_PRIVACY_CBACK 
 
 
     return 
-# 840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 882 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
           1
-# 840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 882 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
               ;
 
 
 
 }
-# 856 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 898 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void BTM_BleConfigLocalIcon(uint16_t icon)
 {
 
@@ -12626,13 +12809,13 @@ void BTM_BleConfigLocalIcon(uint16_t icon)
 
 
 }
-# 875 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 917 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 extern UINT8 BTM_BleMaxMultiAdvInstanceCount(void)
 {
     return (*btm_cb_ptr).cmn_ble_vsc_cb.adv_inst_max < 16 ?
            (*btm_cb_ptr).cmn_ble_vsc_cb.adv_inst_max : 16;
 }
-# 891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 933 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 static void btm_ble_resolve_random_addr_on_adv(void *p_rec, void *p)
 {
     tBTM_SEC_DEV_REC *match_rec = (tBTM_SEC_DEV_REC *) p_rec;
@@ -12664,7 +12847,7 @@ static void btm_ble_resolve_random_addr_on_adv(void *p_rec, void *p)
 
     return;
 }
-# 933 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 975 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 BOOLEAN BTM_BleLocalPrivacyEnabled(void)
 {
 
@@ -12673,22 +12856,22 @@ BOOLEAN BTM_BleLocalPrivacyEnabled(void)
 
 
 }
-# 956 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 998 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 BOOLEAN BTM_BleSetBgConnType(tBTM_BLE_CONN_TYPE bg_conn_type,
                              tBTM_BLE_SEL_CBACK *p_select_cback)
 {
     BOOLEAN started = 
-# 959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1001 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                      1
-# 959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1001 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                          ;
 
     {if ((*btm_cb_ptr).trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_BTM", "D" " (%d) %s: " "BTM_BleSetBgConnType " "\033[0m" "\n", esp_log_timestamp(), "BT_BTM"); };};
     if (!controller_get_interface()->supports_ble()) {
         return 
-# 963 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1005 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
               0
-# 963 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1005 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                    ;
     }
 
@@ -12696,58 +12879,58 @@ BOOLEAN BTM_BleSetBgConnType(tBTM_BLE_CONN_TYPE bg_conn_type,
         switch (bg_conn_type) {
         case BTM_BLE_CONN_AUTO:
             btm_ble_start_auto_conn(
-# 969 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1011 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                    1
-# 969 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1011 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                        );
             break;
 
         case BTM_BLE_CONN_SELECTIVE:
             if ((*btm_cb_ptr).ble_ctr_cb.bg_conn_type == BTM_BLE_CONN_AUTO) {
                 btm_ble_start_auto_conn(
-# 974 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1016 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                        0
-# 974 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1016 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                             );
             }
             btm_ble_start_select_conn(
-# 976 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1018 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                      1
-# 976 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1018 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                          , p_select_cback);
             break;
 
         case BTM_BLE_CONN_NONE:
             if ((*btm_cb_ptr).ble_ctr_cb.bg_conn_type == BTM_BLE_CONN_AUTO) {
                 btm_ble_start_auto_conn(
-# 981 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1023 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                        0
-# 981 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1023 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                             );
             } else if ((*btm_cb_ptr).ble_ctr_cb.bg_conn_type == BTM_BLE_CONN_SELECTIVE) {
                 btm_ble_start_select_conn(
-# 983 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1025 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                          0
-# 983 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1025 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                               , 
-# 983 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1025 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                                 ((void *)0)
-# 983 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1025 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                     );
             }
             started = 
-# 985 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1027 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                      1
-# 985 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1027 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                          ;
             break;
 
         default:
             {if ((*btm_cb_ptr).trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_BTM", "\033[0;" "31" "m" "E" " (%d) %s: " "invalid bg connection type : %d " "\033[0m" "\n", esp_log_timestamp(), "BT_BTM", bg_conn_type); };};
             started = 
-# 990 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1032 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                      0
-# 990 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1032 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                           ;
             break;
         }
@@ -12758,28 +12941,28 @@ BOOLEAN BTM_BleSetBgConnType(tBTM_BLE_CONN_TYPE bg_conn_type,
     }
     return started;
 }
-# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1056 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void BTM_BleClearBgConnDev(void)
 {
     btm_ble_start_auto_conn(
-# 1016 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1058 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                            0
-# 1016 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1058 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                 );
     btm_ble_clear_white_list();
     gatt_reset_bgdev_list();
 }
-# 1036 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1078 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 BOOLEAN BTM_BleUpdateBgConnDev(BOOLEAN add_remove, BD_ADDR remote_bda)
 {
     {if ((*btm_cb_ptr).trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_BTM", "D" " (%d) %s: " "%s() add=%d" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM", __func__, add_remove); };};
     return btm_update_dev_to_white_list(add_remove, remote_bda, 
-# 1039 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1081 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                                                ((void *)0)
-# 1039 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1081 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                                    );
 }
-# 1057 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1099 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 tBTM_STATUS BTM_BleSetConnectableMode(tBTM_BLE_CONN_MODE connectable_mode)
 {
     tBTM_BLE_INQ_CB *p_cb = &(*btm_cb_ptr).ble_ctr_cb.inq_var;
@@ -12792,7 +12975,7 @@ tBTM_STATUS BTM_BleSetConnectableMode(tBTM_BLE_CONN_MODE connectable_mode)
     p_cb->directed_conn = connectable_mode;
     return btm_ble_set_connectability( p_cb->connectable_mode);
 }
-# 1079 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 static UINT8 btm_set_conn_mode_adv_init_addr(tBTM_BLE_INQ_CB *p_cb,
         BD_ADDR_PTR p_peer_addr_ptr,
         tBLE_ADDR_TYPE *p_peer_addr_type,
@@ -12819,9 +13002,9 @@ static UINT8 btm_set_conn_mode_adv_init_addr(tBTM_BLE_INQ_CB *p_cb,
                     (*btm_cb_ptr).ble_ctr_cb.privacy_mode == 3) {
 
                 if ((p_dev_rec = btm_find_or_alloc_dev (p_cb->direct_bda.bda)) != 
-# 1104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                                                                  ((void *)0) 
-# 1104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                                                       &&
                         p_dev_rec->ble.in_controller_list & 0x02) {
                     btm_ble_enable_resolving_list(4);
@@ -12833,9 +13016,9 @@ static UINT8 btm_set_conn_mode_adv_init_addr(tBTM_BLE_INQ_CB *p_cb,
 
                 else {
                     btm_ble_disable_resolving_list(4, 
-# 1114 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                                                   1
-# 1114 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                                       );
                 }
             }
@@ -12881,7 +13064,7 @@ static UINT8 btm_set_conn_mode_adv_init_addr(tBTM_BLE_INQ_CB *p_cb,
 
     return evt_type;
 }
-# 1174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 tBTM_STATUS BTM_BleSetAdvParams(UINT16 adv_int_min, UINT16 adv_int_max,
                                 tBLE_BD_ADDR *p_dir_bda,
                                 tBTM_BLE_ADV_CHNL_MAP chnl_map)
@@ -12900,8 +13083,8 @@ tBTM_STATUS BTM_BleSetAdvParams(UINT16 adv_int_min, UINT16 adv_int_max,
         return BTM_ILLEGAL_VALUE;
     }
 
-    if (!(((adv_int_min) >= (0x0020) && (adv_int_min) <= (0x4000)) || ((adv_int_min) == 0xffff)) ||
-            !(((adv_int_max) >= (0x0020) && (adv_int_max) <= (0x4000)) || ((adv_int_max) == 0xffff))) {
+    if (!(((adv_int_min) >= (0x0010) && (adv_int_min) <= (0x4000)) || ((adv_int_min) == 0xffff)) ||
+            !(((adv_int_max) >= (0x0010) && (adv_int_max) <= (0x4000)) || ((adv_int_max) == 0xffff))) {
         return BTM_ILLEGAL_VALUE;
     }
 
@@ -12936,15 +13119,15 @@ tBTM_STATUS BTM_BleSetAdvParams(UINT16 adv_int_min, UINT16 adv_int_max,
 
     return status;
 }
-# 1241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
-tBTM_STATUS BTM_BleSetAdvParamsStartAdv(UINT16 adv_int_min, UINT16 adv_int_max, UINT8 adv_type,
+# 1283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+tBTM_STATUS BTM_BleSetAdvParamsAll(UINT16 adv_int_min, UINT16 adv_int_max, UINT8 adv_type,
                                         tBLE_ADDR_TYPE own_bda_type, tBLE_BD_ADDR *p_dir_bda,
                                         tBTM_BLE_ADV_CHNL_MAP chnl_map, tBTM_BLE_AFP afp, tBTM_START_ADV_CMPL_CBACK *adv_cb)
 {
     tBTM_LE_RANDOM_CB *p_addr_cb = &(*btm_cb_ptr).ble_ctr_cb.addr_mgnt_cb;
     tBTM_BLE_INQ_CB *p_cb = &(*btm_cb_ptr).ble_ctr_cb.inq_var;
 
-    {if ((*btm_cb_ptr).trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_BTM", "D" " (%d) %s: " "BTM_BleSetAdvParamsStartAdv\n" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM"); };};
+    {if ((*btm_cb_ptr).trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_BTM", "D" " (%d) %s: " "BTM_BleSetAdvParamsAll\n" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM"); };};
 
     if (!controller_get_interface()->supports_ble()) {
         return BTM_ILLEGAL_VALUE;
@@ -12956,13 +13139,13 @@ tBTM_STATUS BTM_BleSetAdvParamsStartAdv(UINT16 adv_int_min, UINT16 adv_int_max, 
 
             if ((*btm_cb_ptr).ble_ctr_cb.privacy_mode != 0) {
                 BTM_BleConfigPrivacy(
-# 1259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                     0
-# 1259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                          , 
-# 1259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                            ((void *)0)
-# 1259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                );
             }
 
@@ -13020,8 +13203,8 @@ tBTM_STATUS BTM_BleSetAdvParamsStartAdv(UINT16 adv_int_min, UINT16 adv_int_max, 
         (*btm_cb_ptr).ble_ctr_cb.addr_mgnt_cb.own_addr_type = 0x00;
     }
 
-    if (!(((adv_int_min) >= (0x0020) && (adv_int_min) <= (0x4000)) || ((adv_int_min) == 0xffff)) ||
-            !(((adv_int_max) >= (0x0020) && (adv_int_max) <= (0x4000)) || ((adv_int_max) == 0xffff))) {
+    if (!(((adv_int_min) >= (0x0010) && (adv_int_min) <= (0x4000)) || ((adv_int_min) == 0xffff)) ||
+            !(((adv_int_max) >= (0x0010) && (adv_int_max) <= (0x4000)) || ((adv_int_max) == 0xffff))) {
          {if ((*btm_cb_ptr).trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_BTM", "\033[0;" "31" "m" "E" " (%d) %s: " "adv_int_min or adv_int_max is invalid\n" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM"); };};
         if(adv_cb) {
             (* adv_cb)(0xE0);
@@ -13029,6 +13212,9 @@ tBTM_STATUS BTM_BleSetAdvParamsStartAdv(UINT16 adv_int_min, UINT16 adv_int_max, 
         return BTM_ILLEGAL_VALUE;
     }
 
+    btm_ble_stop_adv();
+
+    osi_mutex_lock(&adv_param_lock, 0xffffffffUL);
     if(adv_type == 0x01){
         btm_ble_set_topology_mask(0x0020);
     }else if(adv_type == 0x04){
@@ -13051,44 +13237,39 @@ tBTM_STATUS BTM_BleSetAdvParamsStartAdv(UINT16 adv_int_min, UINT16 adv_int_max, 
 
     {if ((*btm_cb_ptr).trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_BTM", "D" " (%d) %s: " "update params for an active adv\n" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM"); };};
 
-    if (p_cb->state == BTM_BLE_ADV_PENDING) {
-        if (p_cb->p_adv_cb) {
-            (*p_cb->p_adv_cb)(0x01);
-        }
-        return BTM_BUSY;
+    tBTM_STATUS status = BTM_SUCCESS;
+
+    if (btsnd_hcic_ble_write_adv_params (adv_int_min,
+                                        adv_int_max,
+                                        adv_type,
+                                        own_bda_type,
+                                        p_dir_bda->type,
+                                        p_dir_bda->bda,
+                                        chnl_map,
+                                        p_cb->afp)) {
+        osi_sem_take(&adv_param_sem, 0xffffffffUL);
+        status = adv_param_status;
+    } else {
+        status = BTM_NO_RESOURCES;
     }
-
-
-
-    if (p_cb->adv_mode == 0x01) {
-        p_cb->adv_callback_twice = 
-# 1357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
-                                  1
-# 1357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
-                                      ;
-    }
-    tBTM_STATUS status = btm_ble_stop_adv();
-    if (status != BTM_SUCCESS) {
-        p_cb->adv_callback_twice = 
-# 1361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
-                                  0
-# 1361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
-                                       ;
-    }
-
-
-    btsnd_hcic_ble_write_adv_params (adv_int_min,
-                                     adv_int_max,
-                                     adv_type,
-                                     own_bda_type,
-                                     p_dir_bda->type,
-                                     p_dir_bda->bda,
-                                     chnl_map,
-                                     p_cb->afp);
-
-    return btm_ble_start_adv();
+    osi_mutex_unlock(&adv_param_lock);
+    return status;
 }
-# 1394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+
+tBTM_STATUS BTM_BleStartAdv(void)
+{
+    tBTM_STATUS status = BTM_SUCCESS;
+    if (!controller_get_interface()->supports_ble()) {
+        return BTM_ILLEGAL_VALUE;
+    }
+
+    btm_ble_stop_adv();
+
+    status = btm_ble_start_adv();
+
+    return status;
+}
+# 1438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void BTM_BleReadAdvParams (UINT16 *adv_int_min, UINT16 *adv_int_max,
                            tBLE_BD_ADDR *p_dir_bda, tBTM_BLE_ADV_CHNL_MAP *p_chnl_map)
 {
@@ -13104,14 +13285,14 @@ void BTM_BleReadAdvParams (UINT16 *adv_int_min, UINT16 *adv_int_max,
     *p_chnl_map = p_cb->adv_chnl_map;
 
     if (p_dir_bda != 
-# 1408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                     ((void *)0)
-# 1408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                         ) {
         memcpy(p_dir_bda, &p_cb->direct_bda, sizeof(tBLE_BD_ADDR));
     }
 }
-# 1428 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1472 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void BTM_BleSetScanParams(tGATT_IF client_if, UINT32 scan_interval, UINT32 scan_window,
                           tBLE_SCAN_MODE scan_mode,
                           tBLE_SCAN_PARAM_SETUP_CBACK scan_setup_status_cback)
@@ -13143,17 +13324,17 @@ void BTM_BleSetScanParams(tGATT_IF client_if, UINT32 scan_interval, UINT32 scan_
         p_cb->scan_window = scan_window;
 
         if (scan_setup_status_cback != 
-# 1458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1502 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                       ((void *)0)
-# 1458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1502 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                           ) {
             scan_setup_status_cback(client_if, BTM_SUCCESS);
         }
     } else {
         if (scan_setup_status_cback != 
-# 1462 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1506 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                       ((void *)0)
-# 1462 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1506 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                           ) {
             scan_setup_status_cback(client_if, BTM_ILLEGAL_VALUE);
         }
@@ -13164,17 +13345,18 @@ void BTM_BleSetScanParams(tGATT_IF client_if, UINT32 scan_interval, UINT32 scan_
 
 }
 
-void BTM_BleSetScanFilterParams(tGATT_IF client_if, UINT32 scan_interval, UINT32 scan_window,
+tBTM_STATUS BTM_BleSetScanFilterParams(tGATT_IF client_if, UINT32 scan_interval, UINT32 scan_window,
                                 tBLE_SCAN_MODE scan_mode, UINT8 addr_type_own, UINT8 scan_duplicate_filter, tBTM_BLE_SFP scan_filter_policy,
                                 tBLE_SCAN_PARAM_SETUP_CBACK scan_setup_status_cback)
 {
     tBTM_BLE_INQ_CB *p_cb = &(*btm_cb_ptr).ble_ctr_cb.inq_var;
     UINT32 max_scan_interval;
     UINT32 max_scan_window;
+    tBTM_STATUS ret = BTM_SUCCESS;
 
     {if ((*btm_cb_ptr).trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_BTM", "D" " (%d) %s: " "%s\n" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM", __func__); };};
     if (!controller_get_interface()->supports_ble()) {
-        return;
+        return BTM_ILLEGAL_VALUE;
     }
 
     if(addr_type_own == 0x01) {
@@ -13183,13 +13365,13 @@ void BTM_BleSetScanFilterParams(tGATT_IF client_if, UINT32 scan_interval, UINT32
 
             if ((*btm_cb_ptr).ble_ctr_cb.privacy_mode != 0) {
                 BTM_BleConfigPrivacy(
-# 1490 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1535 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                     0
-# 1490 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1535 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                          , 
-# 1490 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1535 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                            ((void *)0)
-# 1490 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1535 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                );
             }
 
@@ -13203,15 +13385,8 @@ void BTM_BleSetScanFilterParams(tGATT_IF client_if, UINT32 scan_interval, UINT32
             memcpy((*btm_cb_ptr).ble_ctr_cb.addr_mgnt_cb.private_addr, (*btm_cb_ptr).ble_ctr_cb.addr_mgnt_cb.resolvale_addr, 6);
             btsnd_hcic_ble_set_random_addr((*btm_cb_ptr).ble_ctr_cb.addr_mgnt_cb.resolvale_addr);
         }else {
-            if (scan_setup_status_cback != 
-# 1503 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
-                                          ((void *)0)
-# 1503 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
-                                              ) {
-                scan_setup_status_cback(client_if, BTM_ILLEGAL_VALUE);
-            }
             {if ((*btm_cb_ptr).trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_BTM", "\033[0;" "31" "m" "E" " (%d) %s: " "No random address yet, please set random address and try\n" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM"); };};
-            return;
+            return BTM_ILLEGAL_VALUE;
         }
     } else if(addr_type_own == 0x02 || addr_type_own == 0x03) {
         if(((*btm_cb_ptr).ble_ctr_cb.addr_mgnt_cb.exist_addr_bit & (1<<1)) == (1<<1)) {
@@ -13223,14 +13398,7 @@ void BTM_BleSetScanFilterParams(tGATT_IF client_if, UINT32 scan_interval, UINT32
 
             if((*btm_cb_ptr).ble_ctr_cb.privacy_mode != 0) {
                 {if ((*btm_cb_ptr).trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_BTM", "\033[0;" "31" "m" "E" " (%d) %s: " "Error state\n" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM"); };};
-                if (scan_setup_status_cback != 
-# 1519 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
-                                              ((void *)0)
-# 1519 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
-                                                  ) {
-                    scan_setup_status_cback(client_if, BTM_ILLEGAL_VALUE);
-                }
-                return;
+                return BTM_ILLEGAL_VALUE;
             }
 
             if(addr_type_own == 0x02) {
@@ -13245,14 +13413,7 @@ void BTM_BleSetScanFilterParams(tGATT_IF client_if, UINT32 scan_interval, UINT32
                     btsnd_hcic_ble_set_random_addr((*btm_cb_ptr).ble_ctr_cb.addr_mgnt_cb.static_rand_addr);
                 } else {
                     {if ((*btm_cb_ptr).trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_BTM", "\033[0;" "31" "m" "E" " (%d) %s: " "No RPA and no random address yet, please set RPA or random address and try\n" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM"); };};
-                    if (scan_setup_status_cback != 
-# 1537 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
-                                                  ((void *)0)
-# 1537 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
-                                                      ) {
-                        scan_setup_status_cback(client_if, BTM_ILLEGAL_VALUE);
-                    }
-                    return;
+                    return BTM_ILLEGAL_VALUE;
                 }
             }
         }
@@ -13270,51 +13431,43 @@ void BTM_BleSetScanFilterParams(tGATT_IF client_if, UINT32 scan_interval, UINT32
         max_scan_window = 0xFFFF;
     }
 
+    osi_mutex_lock(&scan_param_lock, 0xffffffffUL);
+
     if ((((scan_interval) >= (0x0004) && (scan_interval) <= (max_scan_interval)) || ((scan_interval) == 0xffff)) &&
             (((scan_window) >= (0x0004) && (scan_window) <= (max_scan_window)) || ((scan_window) == 0xffff)) &&
             (scan_mode == 1 || scan_mode == 0) &&
-            (scan_duplicate_filter < BTM_BLE_SCAN_DUPLICATE_MAX)) {
+            (scan_duplicate_filter < BTM_BLE_SCAN_DUPLICATE_MAX) && (scan_window <= scan_interval)) {
         p_cb->scan_type = scan_mode;
         p_cb->scan_interval = scan_interval;
         p_cb->scan_window = scan_window;
         p_cb->sfp = scan_filter_policy;
         p_cb->scan_params_set = 
-# 1566 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                1
-# 1566 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                    ;
         p_cb->scan_duplicate_filter = scan_duplicate_filter;
 
 
-        btsnd_hcic_ble_set_scan_params(p_cb->scan_type, (UINT16)scan_interval,
+        if (btsnd_hcic_ble_set_scan_params(p_cb->scan_type, (UINT16)scan_interval,
                                        (UINT16)scan_window,
                                        addr_type_own,
-                                       scan_filter_policy);
-
-        if (scan_setup_status_cback != 
-# 1575 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
-                                      ((void *)0)
-# 1575 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
-                                          ) {
-            scan_setup_status_cback(client_if, BTM_SUCCESS);
+                                       scan_filter_policy)) {
+            osi_sem_take(&scan_param_sem, 0xffffffffUL);
+            ret = scan_param_status;
         }
     } else {
-        if (scan_setup_status_cback != 
-# 1579 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
-                                      ((void *)0)
-# 1579 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
-                                          ) {
-            scan_setup_status_cback(client_if, BTM_ILLEGAL_VALUE);
-        }
-
+        ret = BTM_ILLEGAL_VALUE;
         {if ((*btm_cb_ptr).trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_BTM", "\033[0;" "31" "m" "E" " (%d) %s: " "Illegal params: scan_interval = %d scan_window = %d\n" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM", scan_interval, scan_window); };}
                                                    ;
     }
+    osi_mutex_unlock(&scan_param_lock);
+    return ret;
 }
-# 1600 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1636 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 tBTM_STATUS BTM_BleWriteScanRsp(tBTM_BLE_AD_MASK data_mask, tBTM_BLE_ADV_DATA *p_data)
 {
-    tBTM_STATUS status = BTM_NO_RESOURCES;
+    tBTM_STATUS ret;
     UINT8 rsp_data[31],
             *p = rsp_data;
 
@@ -13324,41 +13477,51 @@ tBTM_STATUS BTM_BleWriteScanRsp(tBTM_BLE_AD_MASK data_mask, tBTM_BLE_ADV_DATA *p
         return BTM_ILLEGAL_VALUE;
     }
 
+    osi_mutex_lock(&adv_data_lock, 0xffffffffUL);
     memset(rsp_data, 0, 31);
     btm_ble_build_adv_data(&data_mask, &p, p_data);
 
     if (btsnd_hcic_ble_set_scan_rsp_data((UINT8)(p - rsp_data), rsp_data)) {
-        status = BTM_SUCCESS;
+        osi_sem_take(&adv_data_sem, 0xffffffffUL);
+        ret = adv_data_status;
 
-        if (data_mask != 0) {
+        if (adv_data_status == BTM_SUCCESS && data_mask != 0) {
             (*btm_cb_ptr).ble_ctr_cb.inq_var.scan_rsp = 
-# 1619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1657 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                                 1
-# 1619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1657 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                     ;
         } else {
             (*btm_cb_ptr).ble_ctr_cb.inq_var.scan_rsp = 
-# 1621 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                                 0
-# 1621 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                      ;
         }
     } else {
-        status = BTM_ILLEGAL_VALUE;
+        ret = BTM_ILLEGAL_VALUE;
     }
 
-    return status;
+    osi_mutex_unlock(&adv_data_lock);
+    return ret;
 }
-# 1641 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1680 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 tBTM_STATUS BTM_BleWriteScanRspRaw(UINT8 *p_raw_scan_rsp, UINT32 raw_scan_rsp_len)
 {
+    tBTM_STATUS ret;
+
+    osi_mutex_lock(&adv_data_lock, 0xffffffffUL);
     if (btsnd_hcic_ble_set_scan_rsp_data((UINT8)raw_scan_rsp_len, p_raw_scan_rsp)) {
-        return BTM_SUCCESS;
+        osi_sem_take(&adv_data_sem, 0xffffffffUL);
+        ret = adv_data_status;
     } else {
-        return BTM_NO_RESOURCES;
+        ret = BTM_NO_RESOURCES;
     }
+    osi_mutex_unlock(&adv_data_lock);
+
+    return ret;
 }
-# 1664 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1710 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 tBTM_STATUS BTM_UpdateBleDuplicateExceptionalList(uint8_t subcode, uint32_t type, BD_ADDR device_info,
                                                 tBTM_UPDATE_DUPLICATE_EXCEPTIONAL_LIST_CMPL_CBACK update_exceptional_list_cmp_cb)
 {
@@ -13378,15 +13541,35 @@ tBTM_STATUS BTM_UpdateBleDuplicateExceptionalList(uint8_t subcode, uint32_t type
     device_info_array[2] = (type >> 8) & 0xff;
     device_info_array[3] = (type >> 16) & 0xff;
     device_info_array[4] = (type >> 24) & 0xff;
-    if(type == 0) {
-        bt_rcopy(&device_info_array[5], device_info, 6);
-    } else {
-        memcpy(&device_info_array[5], device_info, 4);
+    switch (type)
+    {
+        case 0:
+            bt_rcopy(&device_info_array[5], device_info, 6);
+            break;
+        case 1:
+            memcpy(&device_info_array[5], device_info, 4);
+            break;
+        case 2:
+
+            break;
+        case 3:
+
+            break;
+        case 4:
+
+            break;
+        default:
+
+            break;
     }
+    if(status == BTM_ILLEGAL_VALUE) {
+        return status;
+    }
+
     status = BTM_VendorSpecificCommand(((0x3F << 10) | (0x02 <<7) | (0x08 << 0)), 1 + 4 + 6, device_info_array, 
-# 1688 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1754 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                                                                                                                 ((void *)0)
-# 1688 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1754 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                                                                                                     );
     if(status == BTM_CMD_STARTED) {
         status = BTM_SUCCESS;
@@ -13394,19 +13577,20 @@ tBTM_STATUS BTM_UpdateBleDuplicateExceptionalList(uint8_t subcode, uint32_t type
 
     return status;
 }
-# 1707 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1773 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 tBTM_STATUS BTM_BleWriteAdvData(tBTM_BLE_AD_MASK data_mask, tBTM_BLE_ADV_DATA *p_data)
 {
     tBTM_BLE_LOCAL_ADV_DATA *p_cb_data = &(*btm_cb_ptr).ble_ctr_cb.inq_var.adv_data;
     UINT8 *p;
     tBTM_BLE_AD_MASK mask = data_mask;
+    tBTM_STATUS ret;
 
     {if ((*btm_cb_ptr).trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_BTM", "D" " (%d) %s: " "BTM_BleWriteAdvData " "\033[0m" "\n", esp_log_timestamp(), "BT_BTM"); };};
 
     if (!controller_get_interface()->supports_ble()) {
         return BTM_ILLEGAL_VALUE;
     }
-
+    osi_mutex_lock(&adv_data_lock, 0xffffffffUL);
     memset(p_cb_data, 0, sizeof(tBTM_BLE_LOCAL_ADV_DATA));
     p = p_cb_data->ad_data;
     p_cb_data->data_mask = data_mask;
@@ -13423,30 +13607,63 @@ tBTM_STATUS BTM_BleWriteAdvData(tBTM_BLE_AD_MASK data_mask, tBTM_BLE_ADV_DATA *p
 
     if (btsnd_hcic_ble_set_adv_data((UINT8)(p_cb_data->p_pad - p_cb_data->ad_data),
                                     p_cb_data->ad_data)) {
-        return BTM_SUCCESS;
+        osi_sem_take(&adv_data_sem, 0xffffffffUL);
+        ret = adv_data_status;
     } else {
-        return BTM_NO_RESOURCES;
+        ret = BTM_NO_RESOURCES;
+    }
+    osi_mutex_unlock(&adv_data_lock);
+    return ret;
+}
+# 1823 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+tBTM_STATUS BTM_BleWriteLongAdvData(uint8_t *adv_data, uint8_t adv_data_len)
+{
+    tBTM_STATUS status = BTM_NO_RESOURCES;
+    if (!controller_get_interface()->supports_ble()) {
+        return BTM_ILLEGAL_VALUE;
+    }
+    if(!adv_data || adv_data_len <= 0 || adv_data_len > 249) {
+        return BTM_ILLEGAL_VALUE;
+    }
+    uint8_t long_adv[249 + 1] = {0};
+    long_adv[0] = adv_data_len;
+    memcpy(&long_adv[1], adv_data, adv_data_len);
+    status = BTM_VendorSpecificCommand(((0x3F << 10) | (0x02 <<7) | (0x07 << 0)), 249 + 1, long_adv, 
+# 1835 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+                                                                                                            ((void *)0)
+# 1835 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+                                                                                                                );
+    if(status == BTM_CMD_STARTED) {
+        status = BTM_SUCCESS;
     }
 
+    return status;
 }
-# 1754 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1854 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 tBTM_STATUS BTM_BleWriteAdvDataRaw(UINT8 *p_raw_adv, UINT32 raw_adv_len)
 {
+    tBTM_STATUS ret;
+    osi_mutex_lock(&adv_data_lock, 0xffffffffUL);
     if (btsnd_hcic_ble_set_adv_data((UINT8)raw_adv_len, p_raw_adv)) {
-        return BTM_SUCCESS;
+        osi_sem_take(&adv_data_sem, 0xffffffffUL);
+        ret = adv_data_status;
     } else {
-        return BTM_NO_RESOURCES;
+        ret = BTM_NO_RESOURCES;
     }
+    osi_mutex_unlock(&adv_data_lock);
+
+    return ret;
 }
-# 1775 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1881 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 tBTM_STATUS BTM_BleSetRandAddress(BD_ADDR rand_addr)
 {
  if (rand_addr == 
-# 1777 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                  ((void *)0)
-# 1777 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
-                     )
+# 1883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+                     ) {
   return BTM_SET_STATIC_RAND_ADDR_FAIL;
+    }
 
     if (!((*btm_cb_ptr).ble_ctr_cb.inq_var.state == BTM_BLE_STOP_SCAN || (*btm_cb_ptr).ble_ctr_cb.inq_var.state == BTM_BLE_STOP_ADV || (*btm_cb_ptr).ble_ctr_cb.inq_var.state == BTM_BLE_IDLE)) {
         {if ((*btm_cb_ptr).trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_BTM", "\033[0;" "31" "m" "E" " (%d) %s: " "Advertising or scaning now, can't set randaddress %d" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM", (*btm_cb_ptr).ble_ctr_cb.inq_var.state); };};
@@ -13462,7 +13679,7 @@ tBTM_STATUS BTM_BleSetRandAddress(BD_ADDR rand_addr)
         return BTM_SET_STATIC_RAND_ADDR_FAIL;
     }
 }
-# 1806 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1913 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void BTM_BleClearRandAddress(void)
 {
     tBTM_BLE_CB *p_cb = &(*btm_cb_ptr).ble_ctr_cb;
@@ -13474,23 +13691,23 @@ void BTM_BleClearRandAddress(void)
     (*btm_cb_ptr).ble_ctr_cb.addr_mgnt_cb.exist_addr_bit &= (~(1<<0));
     (*btm_cb_ptr).ble_ctr_cb.addr_mgnt_cb.own_addr_type = 0x00;
 }
-# 1828 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 BOOLEAN BTM_BleGetCurrentAddress(BD_ADDR addr, uint8_t *addr_type)
 {
     if(addr == 
-# 1830 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
               ((void *)0) 
-# 1830 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                    || addr_type == 
-# 1830 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                    ((void *)0)
-# 1830 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                        ) {
         {if ((*btm_cb_ptr).trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_BTM", "\033[0;" "31" "m" "E" " (%d) %s: " "%s addr or addr_type is NULL\n" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM", __func__); };};
         return 
-# 1832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
               0
-# 1832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                    ;
     }
     if((*btm_cb_ptr).ble_ctr_cb.addr_mgnt_cb.own_addr_type == 0x01) {
@@ -13503,18 +13720,18 @@ BOOLEAN BTM_BleGetCurrentAddress(BD_ADDR addr, uint8_t *addr_type)
         {if ((*btm_cb_ptr).trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_BTM", "\033[0;" "31" "m" "E" " (%d) %s: " "%s\n" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM", __func__); };};
         memset(addr, 0, 6);
         return 
-# 1843 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1950 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
               0
-# 1843 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1950 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                    ;
     }
     return 
-# 1845 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1952 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
           1
-# 1845 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1952 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
               ;
 }
-# 1861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1968 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 UINT8 *BTM_CheckAdvData( UINT8 *p_adv, UINT8 type, UINT8 *p_length)
 {
     UINT8 *p = p_adv;
@@ -13538,19 +13755,19 @@ UINT8 *BTM_CheckAdvData( UINT8 *p_adv, UINT8 type, UINT8 *p_length)
 
     *p_length = 0;
     return 
-# 1883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 1990 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
           ((void *)0)
-# 1883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 1990 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
               ;
 }
-# 1897 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2004 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 UINT16 BTM_BleReadDiscoverability()
 {
     {if ((*btm_cb_ptr).trace_level >= 3 && (((2) > (3) ? (2) : (3)) >= 3)) {esp_log_write(ESP_LOG_INFO, "BT_BTM", "\033[0;" "32" "m" "I" " (%d) %s: " "%s\n" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM", __FUNCTION__); };};
 
     return ((*btm_cb_ptr).ble_ctr_cb.inq_var.discoverable_mode);
 }
-# 1914 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2021 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 UINT16 BTM_BleReadConnectability()
 {
     {if ((*btm_cb_ptr).trace_level >= 3 && (((2) > (3) ? (2) : (3)) >= 3)) {esp_log_write(ESP_LOG_INFO, "BT_BTM", "\033[0;" "32" "m" "I" " (%d) %s: " "%s\n" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM", __FUNCTION__); };};
@@ -13584,9 +13801,9 @@ UINT8 *btm_ble_build_adv_data(tBTM_BLE_AD_MASK *p_data_mask, UINT8 **p_dst,
     UINT32 data_mask = *p_data_mask;
     UINT8 *p = *p_dst,
              *p_flag = 
-# 1946 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 2053 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                       ((void *)0)
-# 1946 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2053 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                           ;
     UINT16 len = 31, cp_len = 0;
     UINT8 i = 0;
@@ -13822,7 +14039,7 @@ UINT8 *btm_ble_build_adv_data(tBTM_BLE_AD_MASK *p_data_mask, UINT8 **p_dst,
 
     return p_flag;
 }
-# 2190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void btm_ble_select_adv_interval(tBTM_BLE_INQ_CB *p_cb, UINT8 evt_type, UINT16 *p_adv_int_min, UINT16 *p_adv_int_max)
 {
     if (p_cb->adv_interval_min && p_cb->adv_interval_max) {
@@ -13853,7 +14070,7 @@ void btm_ble_select_adv_interval(tBTM_BLE_INQ_CB *p_cb, UINT8 evt_type, UINT16 *
     }
     return;
 }
-# 2236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void btm_ble_update_dmt_flag_bits(UINT8 *adv_flag_value, const UINT16 connect_mode,
                                   const UINT16 disc_mode)
 {
@@ -13872,16 +14089,16 @@ void btm_ble_update_dmt_flag_bits(UINT8 *adv_flag_value, const UINT16 connect_mo
         *adv_flag_value &= ~((0x01 << 3) | (0x01 << 4));
     }
 }
-# 2267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2374 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void btm_ble_set_adv_flag(UINT16 connect_mode, UINT16 disc_mode)
 {
     UINT8 flag = 0, old_flag = 0;
     tBTM_BLE_LOCAL_ADV_DATA *p_adv_data = &(*btm_cb_ptr).ble_ctr_cb.inq_var.adv_data;
 
     if (p_adv_data->p_flags != 
-# 2272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 2379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                               ((void *)0)
-# 2272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                   ) {
         flag = old_flag = *(p_adv_data->p_flags);
     }
@@ -13905,7 +14122,7 @@ void btm_ble_set_adv_flag(UINT16 connect_mode, UINT16 disc_mode)
         btm_ble_update_adv_flag(flag);
     }
 }
-# 2306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2413 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 tBTM_STATUS btm_ble_set_discoverability(UINT16 combined_mode)
 {
     tBTM_LE_RANDOM_CB *p_addr_cb = &(*btm_cb_ptr).ble_ctr_cb.addr_mgnt_cb;
@@ -13975,9 +14192,9 @@ tBTM_STATUS btm_ble_set_discoverability(UINT16 combined_mode)
 
     if (p_cb->adv_mode == 0x01) {
         p_cb->fast_adv_on = 
-# 2374 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 2481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                            1
-# 2374 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                ;
 
         btu_start_timer (&p_cb->fast_adv_timer, 106,
@@ -13985,9 +14202,9 @@ tBTM_STATUS btm_ble_set_discoverability(UINT16 combined_mode)
     } else {
 
         btm_ble_disable_resolving_list(4, 
-# 2380 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 2487 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                                       1
-# 2380 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2487 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                           );
 
     }
@@ -14001,7 +14218,7 @@ tBTM_STATUS btm_ble_set_discoverability(UINT16 combined_mode)
     }
     return status;
 }
-# 2405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2512 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 tBTM_STATUS btm_ble_set_connectability(UINT16 combined_mode)
 {
     tBTM_LE_RANDOM_CB *p_addr_cb = &(*btm_cb_ptr).ble_ctr_cb.addr_mgnt_cb;
@@ -14067,9 +14284,9 @@ tBTM_STATUS btm_ble_set_connectability(UINT16 combined_mode)
 
     if (p_cb->adv_mode == 0x01) {
         p_cb->fast_adv_on = 
-# 2469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 2576 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                            1
-# 2469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2576 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                ;
 
         btu_start_timer (&p_cb->fast_adv_timer, 106,
@@ -14077,15 +14294,15 @@ tBTM_STATUS btm_ble_set_connectability(UINT16 combined_mode)
     } else {
 
         btm_ble_disable_resolving_list(4, 
-# 2475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 2582 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                                       1
-# 2475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2582 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                           );
 
     }
     return status;
 }
-# 2501 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2608 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 tBTM_STATUS btm_ble_start_inquiry (UINT8 mode, UINT8 duration)
 {
     tBTM_STATUS status = BTM_CMD_STARTED;
@@ -14139,7 +14356,7 @@ tBTM_STATUS btm_ble_start_inquiry (UINT8 mode, UINT8 duration)
     return status;
 
 }
-# 2564 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2671 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void btm_ble_read_remote_name_cmpl(BOOLEAN status, BD_ADDR bda, UINT16 length, char *p_name)
 {
     UINT8 hci_status = 0x00;
@@ -14160,7 +14377,7 @@ void btm_ble_read_remote_name_cmpl(BOOLEAN status, BD_ADDR bda, UINT16 length, c
     btm_sec_rmt_name_request_complete (bda, (UINT8 *)p_name, hci_status);
 
 }
-# 2597 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2704 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 tBTM_STATUS btm_ble_read_remote_name(BD_ADDR remote_bda, tBTM_INQ_INFO *p_cur, tBTM_CMPL_CB *p_cb)
 {
     tBTM_INQUIRY_VAR_ST *p_inq = &(*btm_cb_ptr).btm_inq_vars;
@@ -14189,9 +14406,9 @@ tBTM_STATUS btm_ble_read_remote_name(BD_ADDR remote_bda, tBTM_INQ_INFO *p_cur, t
 
     p_inq->p_remname_cmpl_cb = p_cb;
     p_inq->remname_active = 
-# 2624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 2731 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                            1
-# 2624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2731 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                ;
 
     memcpy(p_inq->remname_bda, remote_bda, 6);
@@ -14202,14 +14419,14 @@ tBTM_STATUS btm_ble_read_remote_name(BD_ADDR remote_bda, tBTM_INQ_INFO *p_cur, t
 
     return BTM_CMD_STARTED;
 }
-# 2646 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2753 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 BOOLEAN btm_ble_cancel_remote_name(BD_ADDR remote_bda)
 {
     tBTM_INQUIRY_VAR_ST *p_inq = &(*btm_cb_ptr).btm_inq_vars;
     BOOLEAN status = 
-# 2649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 2756 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                         1
-# 2649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2756 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                             ;
 
 
@@ -14217,16 +14434,16 @@ BOOLEAN btm_ble_cancel_remote_name(BD_ADDR remote_bda)
 
 
     p_inq->remname_active = 
-# 2655 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 2762 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                            0
-# 2655 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2762 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                 ;
     memset(p_inq->remname_bda, 0, 6);
     btu_stop_timer(&p_inq->rmt_name_timer_ent);
 
     return status;
 }
-# 2674 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2781 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 static void btm_ble_update_adv_flag(UINT8 flag)
 {
     tBTM_BLE_LOCAL_ADV_DATA *p_adv_data = &(*btm_cb_ptr).ble_ctr_cb.inq_var.adv_data;
@@ -14235,17 +14452,17 @@ static void btm_ble_update_adv_flag(UINT8 flag)
     {if ((*btm_cb_ptr).trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_BTM", "D" " (%d) %s: " "btm_ble_update_adv_flag new=0x%x" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM", flag); };};
 
     if (p_adv_data->p_flags != 
-# 2681 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 2788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                               ((void *)0)
-# 2681 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                   ) {
         {if ((*btm_cb_ptr).trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_BTM", "D" " (%d) %s: " "btm_ble_update_adv_flag old=0x%x" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM", *p_adv_data->p_flags); };};
         *p_adv_data->p_flags = flag;
     } else {
         p = (p_adv_data->p_pad == 
-# 2685 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 2792 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                  ((void *)0)
-# 2685 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2792 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                      ) ? p_adv_data->ad_data : p_adv_data->p_pad;
 
 
@@ -14267,7 +14484,7 @@ static void btm_ble_update_adv_flag(UINT8 flag)
     }
 
 }
-# 2816 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2923 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void btm_ble_cache_adv_data(BD_ADDR bda, tBTM_INQ_RESULTS *p_cur, UINT8 data_len, UINT8 *p, UINT8 evt_type)
 {
     tBTM_BLE_INQ_CB *p_le_inq_cb = &(*btm_cb_ptr).ble_ctr_cb.inq_var;
@@ -14317,7 +14534,7 @@ void btm_ble_cache_adv_data(BD_ADDR bda, tBTM_INQ_RESULTS *p_cur, UINT8 data_len
 
 
 }
-# 2878 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 2985 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 UINT8 btm_ble_is_discoverable(BD_ADDR bda, UINT8 evt_type, UINT8 *p)
 {
     UINT8 *p_flag, flag = 0, rt = 0;
@@ -14351,9 +14568,9 @@ UINT8 btm_ble_is_discoverable(BD_ADDR bda, UINT8 evt_type, UINT8 *p)
     if (p_le_inq_cb->adv_len != 0) {
         if ((p_flag = BTM_CheckAdvData(p_le_inq_cb->adv_data_cache,
                                        0x01, &data_len)) != 
-# 2910 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3017 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                                                            ((void *)0)
-# 2910 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3017 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                                                ) {
             flag = * p_flag;
 
@@ -14498,13 +14715,13 @@ static void btm_ble_appearance_to_cod(UINT16 appearance, UINT8 *dev_class)
         dev_class[2] = 0x00;
     };
 }
-# 3066 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 BOOLEAN btm_ble_update_inq_result(BD_ADDR bda, tINQ_DB_ENT *p_i, UINT8 addr_type, UINT8 evt_type, UINT8 *p)
 {
     BOOLEAN to_report = 
-# 3068 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                    1
-# 3068 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                        ;
     tBTM_INQ_RESULTS *p_cur = &p_i->inq_info.results;
     UINT8 len;
@@ -14520,9 +14737,9 @@ BOOLEAN btm_ble_update_inq_result(BD_ADDR bda, tINQ_DB_ENT *p_i, UINT8 addr_type
     if (data_len > 31) {
         {if ((*btm_cb_ptr).trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_BTM", "\033[0;" "33" "m" "W" " (%d) %s: " "EIR data too long %d. discard" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM", data_len); };};
         return 
-# 3082 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
               0
-# 3082 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                    ;
     }
     btm_ble_cache_adv_data(bda, p_cur, data_len, p, evt_type);
@@ -14541,22 +14758,22 @@ BOOLEAN btm_ble_update_inq_result(BD_ADDR bda, tINQ_DB_ENT *p_i, UINT8 addr_type
         {if ((*btm_cb_ptr).trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_BTM", "D" " (%d) %s: " "btm_ble_update_inq_result scan_rsp=false, to_report=false,                              scan_type_active=%d" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM", (*btm_cb_ptr).ble_ctr_cb.inq_var.scan_type); };}
                                                                                         ;
         p_i->scan_rsp = 
-# 3099 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                        0
-# 3099 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                             ;
 
         to_report = 
-# 3101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                    0
-# 3101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                         ;
 
     } else {
         p_i->scan_rsp = 
-# 3104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                        1
-# 3104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                            ;
     }
 
@@ -14574,9 +14791,9 @@ BOOLEAN btm_ble_update_inq_result(BD_ADDR bda, tINQ_DB_ENT *p_i, UINT8 addr_type
 
     if (p_le_inq_cb->adv_len != 0) {
         if ((p_flag = BTM_CheckAdvData(p_le_inq_cb->adv_data_cache, 0x01, &len)) != 
-# 3120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                                                                                    ((void *)0)
-# 3120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                                                                        ) {
             p_cur->flag = * p_flag;
         }
@@ -14593,13 +14810,13 @@ BOOLEAN btm_ble_update_inq_result(BD_ADDR bda, tINQ_DB_ENT *p_i, UINT8 addr_type
         } else {
             if ((p_uuid16 = BTM_CheckAdvData(p_le_inq_cb->adv_data_cache,
                                              0x03, &len)) != 
-# 3135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                                                                   ((void *)0)
-# 3135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                                                       ) {
                 UINT8 i;
                 for (i = 0; i + 2 <= len; i = i + 2) {
-# 3147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                 }
             }
         }
@@ -14621,7 +14838,7 @@ BOOLEAN btm_ble_update_inq_result(BD_ADDR bda, tINQ_DB_ENT *p_i, UINT8 addr_type
     return to_report;
 
 }
-# 3179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3286 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void btm_clear_all_pending_le_entry(void)
 {
     UINT16 xx;
@@ -14633,14 +14850,14 @@ void btm_clear_all_pending_le_entry(void)
                 (p_ent->inq_info.results.device_type == 0x02) &&
                 !p_ent->scan_rsp) {
             p_ent->in_use = 
-# 3189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                            0
-# 3189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                 ;
         }
     }
 }
-# 3205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void btm_send_sel_conn_callback(BD_ADDR remote_bda, UINT8 evt_type, UINT8 *p_data, UINT8 addr_type)
 {
     UINT8 data_len, len;
@@ -14648,9 +14865,9 @@ void btm_send_sel_conn_callback(BD_ADDR remote_bda, UINT8 evt_type, UINT8 *p_dat
     (void)(addr_type);
 
     if ((*btm_cb_ptr).ble_ctr_cb.p_select_cback == 
-# 3211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3318 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                            ((void *)0) 
-# 3211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3318 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                 ||
 
             (evt_type != 0x00 && evt_type != 0x01)) {
@@ -14664,9 +14881,9 @@ void btm_send_sel_conn_callback(BD_ADDR remote_bda, UINT8 evt_type, UINT8 *p_dat
         p_dev_name = BTM_CheckAdvData(p_data, 0x09, &len);
 
         if (p_dev_name == 
-# 3223 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                          ((void *)0)
-# 3223 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                              ) {
             p_dev_name = BTM_CheckAdvData(p_data, 0x08, &len);
         }
@@ -14681,7 +14898,7 @@ void btm_send_sel_conn_callback(BD_ADDR remote_bda, UINT8 evt_type, UINT8 *p_dat
         btm_ble_initiate_select_conn(remote_bda);
     }
 }
-# 3251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void btm_ble_process_adv_pkt (UINT8 *p_data)
 {
     BD_ADDR bda;
@@ -14691,9 +14908,9 @@ void btm_ble_process_adv_pkt (UINT8 *p_data)
     UINT8 data_len;
 
     BOOLEAN match = 
-# 3259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3366 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                0
-# 3259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3366 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                     ;
     BD_ADDR temp_bda;
     UINT8 temp_addr_type = 0;
@@ -14720,9 +14937,9 @@ void btm_ble_process_adv_pkt (UINT8 *p_data)
 
 
         match = btm_identity_addr_to_random_pseudo(bda, &addr_type, 
-# 3284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                                                    0
-# 3284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                                         );
 
 
@@ -14740,9 +14957,9 @@ void btm_ble_process_adv_pkt (UINT8 *p_data)
             p_dev_rec->ble.current_addr_type = temp_addr_type;
             memcpy(p_dev_rec->ble.current_addr, temp_bda, 6);
             p_dev_rec->ble.current_addr_valid = 
-# 3300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3407 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                                1
-# 3300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3407 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                    ;
         }
 
@@ -14752,7 +14969,7 @@ void btm_ble_process_adv_pkt (UINT8 *p_data)
         p += data_len + 1;
     }
 }
-# 3322 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 static void btm_ble_process_last_adv_pkt(void)
 {
     UINT8 result = 0;
@@ -14769,18 +14986,18 @@ static void btm_ble_process_last_adv_pkt(void)
     }
 
     if(p_i == 
-# 3337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3444 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
              ((void *)0)
-# 3337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3444 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                  ) {
         {if ((*btm_cb_ptr).trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_BTM", "D" " (%d) %s: " "no last adv" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM"); };};
         return;
     }
 
     if ((result = btm_ble_is_discoverable(p_le_inq_cb->adv_addr, p_i->inq_info.results.ble_evt_type, 
-# 3342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3449 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                                                                                     ((void *)0)
-# 3342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3449 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                                                                         )) == 0) {
         {if ((*btm_cb_ptr).trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_BTM", "\033[0;" "33" "m" "W" " (%d) %s: " "%s device is no longer discoverable so discarding advertising packet pkt" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM", __func__); };}
                           ;
@@ -14813,7 +15030,7 @@ static void btm_ble_process_last_adv_pkt(void)
         }
     }
 }
-# 3387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3494 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 static void btm_ble_process_adv_pkt_cont(BD_ADDR bda, UINT8 addr_type, UINT8 evt_type, UINT8 *p)
 {
 
@@ -14824,14 +15041,14 @@ static void btm_ble_process_adv_pkt_cont(BD_ADDR bda, UINT8 addr_type, UINT8 evt
     tBTM_INQ_RESULTS_CB *p_scan_results_cb = (*btm_cb_ptr).ble_ctr_cb.p_scan_results_cb;
     tBTM_BLE_INQ_CB *p_le_inq_cb = &(*btm_cb_ptr).ble_ctr_cb.inq_var;
     BOOLEAN update = 
-# 3396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3503 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                         1
-# 3396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3503 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                             ;
     UINT8 result = 0;
-# 3408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3515 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
    if(p_le_inq_cb->scan_duplicate_filter == BTM_BLE_SCAN_DUPLICATE_ENABLE) {
-# 3417 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3524 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
        int same_addr = memcmp(bda, p_le_inq_cb->adv_addr, 6);
        if (same_addr != 0 || (same_addr == 0 && evt_type != 0x04)) {
             btm_ble_process_last_adv_pkt();
@@ -14848,15 +15065,15 @@ static void btm_ble_process_adv_pkt_cont(BD_ADDR bda, UINT8 addr_type, UINT8 evt
 
                  (!p_i->scan_rsp))) {
             update = 
-# 3432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                     1
-# 3432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                         ;
         } else if ((((*btm_cb_ptr).ble_ctr_cb.scan_activity) & 0x0100)) {
             update = 
-# 3434 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3541 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                     0
-# 3434 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3541 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                          ;
         } else {
 
@@ -14865,14 +15082,14 @@ static void btm_ble_process_adv_pkt_cont(BD_ADDR bda, UINT8 addr_type, UINT8 evt
     }
 
     if (p_i == 
-# 3441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
               ((void *)0)
-# 3441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                   ) {
         if ((p_i = btm_inq_db_new (bda)) != 
-# 3442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3549 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                            ((void *)0)
-# 3442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3549 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                ) {
             p_inq->inq_cmpl_info.num_resp++;
         } else {
@@ -14899,9 +15116,9 @@ static void btm_ble_process_adv_pkt_cont(BD_ADDR bda, UINT8 addr_type, UINT8 evt
             p_inq->inq_cmpl_info.num_resp == p_inq->inqparms.max_resps) {
 
         if (p_i == 
-# 3467 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                   ((void *)0) 
-# 3467 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                        ||
 
                 (p_i &&
@@ -14963,11 +15180,13 @@ void btm_ble_process_adv_discard_evt(UINT8 *p)
     }
 
 }
-# 3537 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3644 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 tBTM_STATUS btm_ble_start_scan(void)
 {
     tBTM_BLE_INQ_CB *p_inq = &(*btm_cb_ptr).ble_ctr_cb.inq_var;
     tBTM_STATUS status = BTM_CMD_STARTED;
+
+    osi_mutex_lock(&scan_enable_lock, 0xffffffffUL);
 
     if(p_inq->scan_duplicate_filter > 1) {
         p_inq->scan_duplicate_filter = 0;
@@ -14976,6 +15195,10 @@ tBTM_STATUS btm_ble_start_scan(void)
     if (!btsnd_hcic_ble_set_scan_enable (0x01, p_inq->scan_duplicate_filter)) {
         status = BTM_NO_RESOURCES;
     } else {
+        osi_sem_take(&scan_enable_sem, 0xffffffffUL);
+        if(scan_enable_status != BTM_SUCCESS) {
+            status = BTM_NO_RESOURCES;
+        }
         (*btm_cb_ptr).ble_ctr_cb.inq_var.state = BTM_BLE_SCANNING;
         if (p_inq->scan_type == 1) {
             btm_ble_set_topology_mask(0x0100);
@@ -14983,10 +15206,10 @@ tBTM_STATUS btm_ble_start_scan(void)
             btm_ble_set_topology_mask(0x0080);
         }
     }
-
+    osi_mutex_unlock(&scan_enable_lock);
     return status;
 }
-# 3569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3682 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void btm_ble_stop_scan(void)
 {
     {if ((*btm_cb_ptr).trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_BTM", "D" " (%d) %s: " "btm_ble_stop_scan " "\033[0m" "\n", esp_log_timestamp(), "BT_BTM"); };};
@@ -15001,7 +15224,7 @@ void btm_ble_stop_scan(void)
 
     (*btm_cb_ptr).ble_ctr_cb.wl_state &= ~2;
 }
-# 3593 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void btm_ble_stop_inquiry(void)
 {
     tBTM_INQUIRY_VAR_ST *p_inq = &(*btm_cb_ptr).btm_inq_vars;
@@ -15027,7 +15250,7 @@ void btm_ble_stop_inquiry(void)
 
     btm_process_inq_complete(0x00, (UINT8)(p_inq->inqparms.mode & (0x10|0x20)));
 }
-# 3628 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3741 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 static void btm_ble_stop_observe(void)
 {
     tBTM_BLE_CB *p_ble_cb = & (*btm_cb_ptr).ble_ctr_cb;
@@ -15038,14 +15261,14 @@ static void btm_ble_stop_observe(void)
     p_ble_cb->scan_activity &= ~0x0080;
 
     p_ble_cb->p_obs_results_cb = 
-# 3637 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3750 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                 ((void *)0)
-# 3637 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3750 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                     ;
     p_ble_cb->p_obs_cmpl_cb = 
-# 3638 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3751 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                              ((void *)0)
-# 3638 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3751 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                  ;
 
     if (!((p_ble_cb->scan_activity) & 0x01F0)) {
@@ -15056,24 +15279,25 @@ static void btm_ble_stop_observe(void)
         (p_obs_cb)((tBTM_INQUIRY_CMPL *) &(*btm_cb_ptr).btm_inq_vars.inq_cmpl_info);
     }
 }
-# 3658 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 static void btm_ble_stop_discover(void)
 {
     tBTM_BLE_CB *p_ble_cb = & (*btm_cb_ptr).ble_ctr_cb;
     tBTM_CMPL_CB *p_scan_cb = p_ble_cb->p_scan_cmpl_cb;
     btu_stop_timer (&p_ble_cb->scan_timer_ent);
 
+    osi_mutex_lock(&scan_enable_lock, 0xffffffffUL);
     p_ble_cb->scan_activity &= ~0x0100;
 
     p_ble_cb->p_scan_results_cb = 
-# 3666 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3780 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                  ((void *)0)
-# 3666 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3780 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                      ;
     p_ble_cb->p_scan_cmpl_cb = 
-# 3667 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3781 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                               ((void *)0)
-# 3667 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3781 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                   ;
 
     if (!((p_ble_cb->scan_activity) & 0x01F0)) {
@@ -15081,21 +15305,24 @@ static void btm_ble_stop_discover(void)
         (*btm_cb_ptr).ble_ctr_cb.inq_var.scan_type = 0xff;
         (*btm_cb_ptr).ble_ctr_cb.inq_var.state = BTM_BLE_STOP_SCAN;
 
-        btsnd_hcic_ble_set_scan_enable (0x00, 1);
+        if(btsnd_hcic_ble_set_scan_enable (0x00, 1)) {
+            osi_sem_take(&scan_enable_sem, 0xffffffffUL);
+        }
     }
 
     if (p_scan_cb) {
         (p_scan_cb)((tBTM_INQUIRY_CMPL *) &(*btm_cb_ptr).btm_inq_vars.inq_cmpl_info);
     }
+    osi_mutex_unlock(&scan_enable_lock);
 }
-# 3691 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 typedef BOOLEAN (BTM_TOPOLOGY_FUNC_PTR)(tBTM_BLE_STATE_MASK);
 static BOOLEAN btm_ble_adv_states_operation(BTM_TOPOLOGY_FUNC_PTR *p_handler, UINT8 adv_evt)
 {
     BOOLEAN rt = 
-# 3694 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3811 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                 0
-# 3694 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3811 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                      ;
 
     switch (adv_evt) {
@@ -15125,7 +15352,7 @@ static BOOLEAN btm_ble_adv_states_operation(BTM_TOPOLOGY_FUNC_PTR *p_handler, UI
 
     return rt;
 }
-# 3734 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3851 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 tBTM_STATUS btm_ble_start_adv(void)
 {
     tBTM_BLE_INQ_CB *p_cb = &(*btm_cb_ptr).ble_ctr_cb.inq_var;
@@ -15136,6 +15363,8 @@ tBTM_STATUS btm_ble_start_adv(void)
     if (!btm_ble_adv_states_operation (btm_ble_topology_check, p_cb->evt_type)) {
         return BTM_WRONG_MODE;
     }
+
+    osi_mutex_lock(&adv_enable_lock, 0xffffffffUL);
 
 
 
@@ -15156,10 +15385,11 @@ tBTM_STATUS btm_ble_start_adv(void)
     tBTM_BLE_GAP_STATE temp_state = p_cb->state;
     UINT8 adv_mode = p_cb->adv_mode;
     p_cb->adv_mode = 0x01;
-    p_cb->state = BTM_BLE_ADV_PENDING;
+    p_cb->state = BTM_BLE_ADVERTISING;
     btm_ble_adv_states_operation(btm_ble_set_topology_mask, p_cb->evt_type);
     if (btsnd_hcic_ble_set_adv_enable (0x01)) {
-        rt = BTM_SUCCESS;
+        osi_sem_take(&adv_enable_sem, 0xffffffffUL);
+        rt = adv_enable_status;
         {if ((*btm_cb_ptr).trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_BTM", "D" " (%d) %s: " "BTM_SUCCESS\n" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM"); };};
     } else {
         p_cb->adv_mode = 0x00;
@@ -15168,15 +15398,20 @@ tBTM_STATUS btm_ble_start_adv(void)
         btm_ble_adv_states_operation(btm_ble_clear_topology_mask, p_cb->evt_type);
         (*btm_cb_ptr).ble_ctr_cb.wl_state &= ~4;
     }
+
+    if(adv_enable_status != 0x00) {
+        p_cb->adv_mode = adv_mode;
+    }
+    osi_mutex_unlock(&adv_enable_lock);
     return rt;
 }
-# 3788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3913 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 tBTM_STATUS btm_ble_stop_adv(void)
 {
     tBTM_BLE_INQ_CB *p_cb = &(*btm_cb_ptr).ble_ctr_cb.inq_var;
     tBTM_STATUS rt = BTM_SUCCESS;
-
-    if (p_cb->adv_mode == 0x01) {
+    if (p_cb) {
+        osi_mutex_lock(&adv_enable_lock, 0xffffffffUL);
         UINT8 temp_adv_mode = p_cb->adv_mode;
         BOOLEAN temp_fast_adv_on = p_cb->fast_adv_on;
         tBTM_BLE_GAP_STATE temp_state = p_cb->state;
@@ -15184,19 +15419,20 @@ tBTM_STATUS btm_ble_stop_adv(void)
         tBTM_BLE_STATE_MASK temp_mask = btm_ble_get_topology_mask ();
 
         p_cb->fast_adv_on = 
-# 3800 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 3925 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                            0
-# 3800 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3925 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                 ;
         p_cb->adv_mode = 0x00;
-        p_cb->state = BTM_BLE_ADV_PENDING;
+        p_cb->state = BTM_BLE_STOP_ADV;
         (*btm_cb_ptr).ble_ctr_cb.wl_state &= ~4;
 
 
         btm_ble_clear_topology_mask ((0x0001|0x0010|0x0020|0x0200));
 
         if (btsnd_hcic_ble_set_adv_enable (0x00)) {
-
+            osi_sem_take(&adv_enable_sem, 0xffffffffUL);
+            rt = adv_enable_status;
         } else {
 
             p_cb->fast_adv_on = temp_fast_adv_on;
@@ -15207,10 +15443,14 @@ tBTM_STATUS btm_ble_stop_adv(void)
 
             rt = BTM_NO_RESOURCES;
         }
+        if(adv_enable_status != 0x00) {
+            p_cb->adv_mode = temp_adv_mode;
+        }
+        osi_mutex_unlock(&adv_enable_lock);
     }
     return rt;
 }
-# 3834 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3964 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 static void btm_ble_start_slow_adv (void)
 {
     tBTM_BLE_INQ_CB *p_cb = &(*btm_cb_ptr).ble_ctr_cb.inq_var;
@@ -15235,7 +15475,7 @@ static void btm_ble_start_slow_adv (void)
         btm_ble_start_adv();
     }
 }
-# 3867 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 3997 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void btm_ble_timeout(TIMER_LIST_ENT *p_tle)
 {
     {if ((*btm_cb_ptr).trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_BTM", "D" " (%d) %s: " "btm_ble_timeout" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM"); };};
@@ -15260,9 +15500,9 @@ void btm_ble_timeout(TIMER_LIST_ENT *p_tle)
     case 103:
         if ((*btm_cb_ptr).ble_ctr_cb.addr_mgnt_cb.own_addr_type == 0x01) {
             if (
-# 3890 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 4020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                ((void *)0) 
-# 3890 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 4020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                     == (void *)(p_tle->param)) {
 
                 btm_gen_resolvable_private_addr((void *)btm_gen_resolve_paddr_low);
@@ -15284,7 +15524,7 @@ void btm_ble_timeout(TIMER_LIST_ENT *p_tle)
 
     }
 }
-# 3924 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 4054 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void btm_ble_read_remote_features_complete(UINT8 *p)
 {
     tACL_CONN *p_acl_cb = &(*btm_cb_ptr).acl_db[0];
@@ -15330,96 +15570,54 @@ void btm_ble_read_remote_features_complete(UINT8 *p)
     }
 
 }
-# 3979 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 4109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void btm_ble_write_adv_enable_complete(UINT8 *p)
 {
-    tBTM_BLE_INQ_CB *p_cb = &(*btm_cb_ptr).ble_ctr_cb.inq_var;
-    UINT8 status = *p;
-
-
-    if (p_cb->p_adv_cb && p_cb->adv_mode == 0x01) {
-        if (p_cb->adv_callback_twice) {
-            p_cb->adv_callback_twice = 
-# 3987 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
-                                      0
-# 3987 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
-                                           ;
-        }else {
-            p_cb->state = BTM_BLE_ADVERTISING;
-            (*p_cb->p_adv_cb)(status);
-            p_cb->p_adv_cb = 
-# 3991 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
-                            ((void *)0)
-# 3991 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
-                                ;
-        }
-    } else if (p_cb->p_stop_adv_cb && p_cb->adv_mode == 0x00) {
-        p_cb->state = BTM_BLE_STOP_ADV;
-        (*p_cb->p_stop_adv_cb)(status);
-        p_cb->p_stop_adv_cb = 
-# 3996 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
-                             ((void *)0)
-# 3996 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
-                                 ;
-    }else {
-
-        if (p_cb->adv_mode == 0x01) {
-            p_cb->state = BTM_BLE_ADVERTISING;
-        }else {
-            p_cb->state = BTM_BLE_STOP_ADV;
-        }
-        p_cb->adv_callback_twice = 
-# 4004 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
-                                  0
-# 4004 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
-                                       ;
-    }
 
     if (*p != 0x00) {
-
-        p_cb->adv_mode = !p_cb->adv_mode;
+        {if ((*btm_cb_ptr).trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_BTM", "\033[0;" "31" "m" "E" " (%d) %s: " "%s failed" "\033[0m" "\n", esp_log_timestamp(), "BT_BTM", __func__); };};
     }
 }
-# 4022 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 4126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void btm_ble_dir_adv_tout(void)
 {
     (*btm_cb_ptr).ble_ctr_cb.inq_var.adv_mode = 0x00;
 
 
     (*btm_cb_ptr).ble_ctr_cb.inq_var.directed_conn = 
-# 4027 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 4131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                              0
-# 4027 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 4131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                                   ;
 }
-# 4039 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 4143 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 BOOLEAN btm_ble_set_topology_mask(tBTM_BLE_STATE_MASK request_state_mask)
 {
     request_state_mask &= 0x03ff;
     (*btm_cb_ptr).ble_ctr_cb.cur_states |= (request_state_mask & 0x03ff);
     return 
-# 4043 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 4147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
           1
-# 4043 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 4147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
               ;
 }
-# 4055 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 4159 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 BOOLEAN btm_ble_clear_topology_mask (tBTM_BLE_STATE_MASK request_state_mask)
 {
     request_state_mask &= 0x03ff;
     (*btm_cb_ptr).ble_ctr_cb.cur_states &= ~request_state_mask;
     return 
-# 4059 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 4163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
           1
-# 4059 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 4163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
               ;
 }
-# 4071 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 4175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 tBTM_BLE_STATE_MASK btm_ble_get_topology_mask (void)
 {
     return (*btm_cb_ptr).ble_ctr_cb.cur_states;
 }
-# 4085 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 4189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void btm_ble_update_link_topology_mask(UINT8 link_role, BOOLEAN increase)
 {
     btm_ble_clear_topology_mask ((0x0004|0x0008));
@@ -15446,9 +15644,14 @@ void btm_ble_update_link_topology_mask(UINT8 link_role, BOOLEAN increase)
         btm_ble_clear_topology_mask((0x0001|0x0010|0x0020|0x0200));
     }
 }
-# 4122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
-void btm_ble_update_mode_operation(UINT8 link_role, BD_ADDR bd_addr, UINT8 status)
+# 4226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+BOOLEAN btm_ble_update_mode_operation(UINT8 link_role, BD_ADDR bd_addr, UINT8 status)
 {
+    BOOLEAN bg_con = 
+# 4228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+                    0
+# 4228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+                         ;
     if (status == 0x3C) {
         (*btm_cb_ptr).ble_ctr_cb.inq_var.adv_mode = 0x00;
 
@@ -15467,10 +15670,12 @@ void btm_ble_update_mode_operation(UINT8 link_role, BD_ADDR bd_addr, UINT8 statu
 
     if (btm_ble_get_conn_st() == 0 && status != 0x0D &&
             !btm_send_pending_direct_conn()) {
-        btm_ble_resume_bg_conn();
+        bg_con = btm_ble_resume_bg_conn();
     }
+
+    return bg_con;
 }
-# 4155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 4262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void btm_ble_init (void)
 {
     tBTM_BLE_CB *p_cb = &(*btm_cb_ptr).ble_ctr_cb;
@@ -15483,9 +15688,9 @@ void btm_ble_init (void)
     memset(p_cb, 0, sizeof(tBTM_BLE_CB));
     memset(&((*btm_cb_ptr).cmn_ble_vsc_cb), 0 , sizeof(tBTM_BLE_VSC_CB));
     (*btm_cb_ptr).cmn_ble_vsc_cb.values_read = 
-# 4166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 4273 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                                        0
-# 4166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 4273 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                                             ;
     p_cb->cur_states = 0;
 
@@ -15508,7 +15713,7 @@ void btm_ble_init (void)
     btm_ble_adv_filter_init();
 
 }
-# 4198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 4305 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 void btm_ble_free (void)
 {
     tBTM_BLE_CB *p_cb = &(*btm_cb_ptr).ble_ctr_cb;
@@ -15517,13 +15722,13 @@ void btm_ble_free (void)
 
     fixed_queue_free(p_cb->conn_pending_q, osi_free_func);
 }
-# 4217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 4324 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
 BOOLEAN btm_ble_topology_check(tBTM_BLE_STATE_MASK request_state_mask)
 {
     BOOLEAN rt = 
-# 4219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 4326 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                 0
-# 4219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 4326 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                      ;
 
     UINT8 state_offset = 0;
@@ -15556,9 +15761,9 @@ BOOLEAN btm_ble_topology_check(tBTM_BLE_STATE_MASK request_state_mask)
     }
 
     rt = 
-# 4250 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 4357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
         1
-# 4250 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 4357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
             ;
 
 
@@ -15570,9 +15775,9 @@ BOOLEAN btm_ble_topology_check(tBTM_BLE_STATE_MASK request_state_mask)
             if (mask != 0 && offset != 0) {
                 if (!((ble_supported_states)[(offset)] & (mask))) {
                     rt = 
-# 4260 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
+# 4367 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c" 3 4
                         0
-# 4260 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
+# 4367 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_ble_gap.c"
                              ;
                     break;
                 }

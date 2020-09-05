@@ -1004,6 +1004,9 @@ void software_reset_cpu(int cpu_no);
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h" 2
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/uart.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/uart.h" 2
 
 
@@ -1129,7 +1132,7 @@ STATUS uart_tx_one_char2(uint8_t TxChar);
 # 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/uart.h"
 void uart_tx_flush(uint8_t uart_no);
 # 269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/uart.h"
-static inline void __attribute__((section(".iram1"))) uart_tx_wait_idle(uint8_t uart_no) {
+static inline void __attribute__((section(".iram1" "." "0"))) uart_tx_wait_idle(uint8_t uart_no) {
     uint32_t status;
     do {
         status = ({ ; (*((volatile uint32_t *)(((0x3ff40000 + (uart_no) * 0x10000 + ( (uart_no) > 1 ? 0xe000 : 0 ) ) + 0x1C)))); });
@@ -2298,7 +2301,7 @@ extern void _xtos_timer_1_delta( int cycles );
 extern void _xtos_timer_2_delta( int cycles );
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h" 2
 # 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "1"))) DPORT_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -2307,7 +2310,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_
 
 }
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "2"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -2316,7 +2319,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_REA
 
 }
 # 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_READ_PERI_REG(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "3"))) DPORT_READ_PERI_REG(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -2387,15 +2390,15 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/soc_log.h" 2
 # 32 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 2
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
@@ -2466,15 +2469,15 @@ static inline uint32_t clk_val_to_reg_val(uint32_t val) {
     return (val & 0xffff) | ((val & 0xffff) << 16);
 }
 # 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 2
-# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
 static void rtc_clk_cpu_freq_to_8m();
 static void rtc_clk_bbpll_disable();
 static void rtc_clk_bbpll_enable();
 static void rtc_clk_cpu_freq_to_pll_mhz(int cpu_freq_mhz);
 static 
-# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
+# 108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
       _Bool 
-# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
+# 108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
            rtc_clk_cpu_freq_from_mhz_internal(int mhz, rtc_cpu_freq_t* out_val);
 
 
@@ -2484,26 +2487,39 @@ static const char* TAG = "rtc_clk";
 
 static void rtc_clk_32k_enable_common(int dac, int dres, int dbias)
 {
-    ({ ; ({ ; (*((volatile uint32_t *)(((0x3ff48400 + 0x8c))))) = (uint32_t)((({ ; (*((volatile uint32_t *)((0x3ff48400 + 0x8c)))); })|(((1UL << (18))) | ((1UL << (17)))))); }); });
-    ({ ; ({ ; (*((volatile uint32_t *)(((0x3ff48400 + 0x8c))))) = (uint32_t)((({ ; (*((volatile uint32_t *)((0x3ff48400 + 0x8c)))); })&(~(((1UL << (23))) | ((1UL << (22))) | ((1UL << (27))) | ((1UL << (28))) | ((1UL << (18))) | ((1UL << (17))))))); }); })
+    ({ ; ({ ; (*((volatile uint32_t *)(((0x3ff48400 + 0x8c))))) = (uint32_t)((({ ; (*((volatile uint32_t *)((0x3ff48400 + 0x8c)))); })&(~(((1UL << (23))) | ((1UL << (22))) | ((1UL << (27))) | ((1UL << (28))) | ((1UL << (11))) | ((1UL << (5))))))); }); })
 
-                                                                        ;
+                                                                                  ;
+    ({ ; ({ ; (*((volatile uint32_t *)(((0x3ff48400 + 0x8c))))) = (uint32_t)((({ ; (*((volatile uint32_t *)((0x3ff48400 + 0x8c)))); })|(((1UL << (18))) | ((1UL << (17)))))); }); });
+
+
+
+
+
     ({ ; (({ ; (*(volatile uint32_t *)(((0x3ff48400 + 0x8c)))) = (((({ ; (*(volatile uint32_t *)((0x3ff48400 + 0x8c))); }) & ~((0x3) << (20)))|(((dac) & (0x3))<<(20)))); })); });
     ({ ; (({ ; (*(volatile uint32_t *)(((0x3ff48400 + 0x8c)))) = (((({ ; (*(volatile uint32_t *)((0x3ff48400 + 0x8c))); }) & ~((0x3) << (3)))|(((dres) & (0x3))<<(3)))); })); });
     ({ ; (({ ; (*(volatile uint32_t *)(((0x3ff48400 + 0x8c)))) = (((({ ; (*(volatile uint32_t *)((0x3ff48400 + 0x8c))); }) & ~((0x3) << (1)))|(((dbias) & (0x3))<<(1)))); })); });
+# 146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
     ({ ; ({ ; (*((volatile uint32_t *)(((0x3ff48400 + 0x8c))))) = (uint32_t)((({ ; (*((volatile uint32_t *)((0x3ff48400 + 0x8c)))); })|(((1UL << (19)))))); }); });
 }
 
 void rtc_clk_32k_enable(
-# 124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
                        _Bool 
-# 124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
                             enable)
 {
     if (enable) {
-        rtc_clk_32k_enable_common(1, 3, 0);
+        rtc_clk_32k_enable_common(3, 3, 0);
     } else {
+
         ({ ; ({ ; (*((volatile uint32_t *)(((0x3ff48400 + 0x8c))))) = (uint32_t)((({ ; (*((volatile uint32_t *)((0x3ff48400 + 0x8c)))); })&(~(((1UL << (19))))))); }); });
+        ({ ; ({ ; (*((volatile uint32_t *)(((0x3ff48400 + 0x8c))))) = (uint32_t)((({ ; (*((volatile uint32_t *)((0x3ff48400 + 0x8c)))); })&(~(((1UL << (18))) | ((1UL << (17))))))); }); });
+
+
+
+
+
     }
 }
 
@@ -2548,22 +2564,22 @@ void rtc_clk_32k_bootstrap(uint32_t cycle)
 }
 
 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
+# 205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
 _Bool 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
+# 205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
     rtc_clk_32k_enabled()
 {
     return ({ ; (({ ; (*((volatile uint32_t *)((0x3ff48400 + 0x8c)))); }) & (((1UL << (19))))); }) != 0;
 }
 
 void rtc_clk_8m_enable(
-# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
                       _Bool 
-# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
                            clk_8m_en, 
-# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
                                       _Bool 
-# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
                                            d256_en)
 {
     if (clk_8m_en) {
@@ -2583,27 +2599,27 @@ void rtc_clk_8m_enable(
 }
 
 
-# 196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
+# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
 _Bool 
-# 196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
+# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
     rtc_clk_8m_enabled()
 {
     return ({ ; (({ ; (*((volatile uint32_t *)((0x3ff48000 + 0x70)))); }) & (((1UL << (6))))); }) == 0;
 }
 
 
-# 201 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
 _Bool 
-# 201 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
     rtc_clk_8md256_enabled()
 {
     return ({ ; (({ ; (*((volatile uint32_t *)((0x3ff48000 + 0x70)))); }) & (((1UL << (7))))); }) == 0;
 }
 
 void rtc_clk_apll_enable(
-# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
+# 238 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
                         _Bool 
-# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
+# 238 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
                              enable, uint32_t sdm0, uint32_t sdm1, uint32_t sdm2, uint32_t o_div)
 {
     ({ ; (({ ; (*(volatile uint32_t *)(((0x3ff48000 + 0x30)))) = (((({ ; (*(volatile uint32_t *)((0x3ff48000 + 0x30))); }) & ~((0x1) << (23)))|(((enable ? 0 : 1) & (0x1))<<(23)))); })); });
@@ -2731,7 +2747,7 @@ void rtc_clk_bbpll_configure(rtc_xtal_freq_t xtal_freq, int pll_freq)
         rom_i2c_writeReg(0x66, 4, 9, 0x84);
     } else {
 
-        ({ ; (({ ; (*(volatile uint32_t *)(((0x3ff48000 + 0x7c)))) = (((({ ; (*(volatile uint32_t *)((0x3ff48000 + 0x7c))); }) & ~((0x7) << (11)))|(((7) & (0x7))<<(11)))); })); });
+        ({ ; (({ ; (*(volatile uint32_t *)(((0x3ff48000 + 0x7c)))) = (((({ ; (*(volatile uint32_t *)((0x3ff48000 + 0x7c))); }) & ~((0x7) << (11)))|((((7 - (({ ; ((({ ; (*(volatile uint32_t *)((0x3ff5A000 + 0x014))); }) >> (22)) & (0x03)); })))) & (0x7))<<(11)))); })); });
         ets_delay_us(3);
 
         switch (xtal_freq) {
@@ -2857,7 +2873,7 @@ static void rtc_clk_cpu_freq_to_pll_mhz(int cpu_freq_mhz)
     } else if (cpu_freq_mhz == 160) {
         per_conf = 1;
     } else if (cpu_freq_mhz == 240) {
-        dbias = 7;
+        dbias = (7 - (({ ; ((({ ; (*(volatile uint32_t *)((0x3ff5A000 + 0x014))); }) >> (22)) & (0x03)); })));
         per_conf = 2;
     } else {
         do { if (3 >= ESP_LOG_ERROR) { ets_printf("\033[0;" "31" "m" "E" " (%d) %s: " "invalid frequency" "\033[0m" "\n", esp_log_timestamp(), TAG); }} while(0);
@@ -2899,7 +2915,7 @@ rtc_cpu_freq_t rtc_clk_cpu_freq_get()
 {
     rtc_cpu_freq_config_t config;
     rtc_clk_cpu_freq_get_config(&config);
-    rtc_cpu_freq_t freq;
+    rtc_cpu_freq_t freq = RTC_CPU_FREQ_XTAL;
     rtc_clk_cpu_freq_from_mhz_internal(config.freq_mhz, &freq);
     return freq;
 }
@@ -2924,9 +2940,9 @@ uint32_t rtc_clk_cpu_freq_value(rtc_cpu_freq_t cpu_freq)
 }
 
 static 
-# 525 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
+# 557 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
       _Bool 
-# 525 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
+# 557 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
            rtc_clk_cpu_freq_from_mhz_internal(int mhz, rtc_cpu_freq_t* out_val)
 {
     if (mhz == 240) {
@@ -2941,22 +2957,22 @@ static
         *out_val = RTC_CPU_FREQ_2M;
     } else {
         return 
-# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
+# 570 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
               0
-# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
+# 570 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
                    ;
     }
     return 
-# 540 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
+# 572 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
           1
-# 540 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
+# 572 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
               ;
 }
 
 
-# 543 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
+# 575 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
 _Bool 
-# 543 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
+# 575 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
     rtc_clk_cpu_freq_from_mhz(int mhz, rtc_cpu_freq_t* out_val)
 {
     return rtc_clk_cpu_freq_from_mhz_internal(mhz, out_val);
@@ -2976,7 +2992,7 @@ void rtc_clk_cpu_freq_to_config(rtc_cpu_freq_t cpu_freq, rtc_cpu_freq_config_t* 
             source = RTC_CPU_FREQ_SRC_XTAL;
             if (cpu_freq == RTC_CPU_FREQ_2M) {
                 freq_mhz = 2;
-                divider = out_config->source_freq_mhz / 2;
+                divider = source_freq_mhz / 2;
             } else {
                 freq_mhz = source_freq_mhz;
                 divider = 1;
@@ -3014,9 +3030,9 @@ void rtc_clk_cpu_freq_to_config(rtc_cpu_freq_t cpu_freq, rtc_cpu_freq_config_t* 
 }
 
 
-# 599 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
+# 631 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
 _Bool 
-# 599 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
+# 631 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
     rtc_clk_cpu_freq_mhz_to_config(uint32_t freq_mhz, rtc_cpu_freq_config_t* out_config)
 {
     uint32_t source_freq_mhz;
@@ -3031,9 +3047,9 @@ _Bool
         if (real_freq_mhz != freq_mhz) {
 
             return 
-# 612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
+# 644 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
                   0
-# 612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
+# 644 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
                        ;
         }
 
@@ -3057,9 +3073,9 @@ _Bool
     } else {
 
         return 
-# 634 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
+# 666 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
               0
-# 634 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
+# 666 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
                    ;
     }
     *out_config = (rtc_cpu_freq_config_t) {
@@ -3069,9 +3085,9 @@ _Bool
         .freq_mhz = real_freq_mhz
     };
     return 
-# 642 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
+# 674 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c" 3 4
           1
-# 642 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
+# 674 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/rtc_clk.c"
               ;
 }
 

@@ -128,17 +128,17 @@ typedef __intptr_t intptr_t;
 typedef __uintptr_t uintptr_t;
 # 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdspi_crc.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h" 1
-# 51 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
 uint32_t crc32_le(uint32_t crc, uint8_t const *buf, uint32_t len);
-# 64 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
 uint32_t crc32_be(uint32_t crc, uint8_t const *buf, uint32_t len);
-# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
 uint16_t crc16_le(uint16_t crc, uint8_t const *buf, uint32_t len);
-# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
+# 123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
 uint16_t crc16_be(uint16_t crc, uint8_t const *buf, uint32_t len);
-# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
+# 136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
 uint8_t crc8_le(uint8_t crc, uint8_t const *buf, uint32_t len);
-# 116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
 uint8_t crc8_be(uint8_t crc, uint8_t const *buf, uint32_t len);
 # 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdspi_crc.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdspi_crc.h" 1

@@ -935,15 +935,15 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr_alloc.h" 1
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr_alloc.h"
@@ -1520,7 +1520,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 2
 
@@ -2284,6 +2284,77 @@ typedef void (*TaskFunction_t)( void * );
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/deprecated_definitions.h" 1
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 2
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void *get_sp()
+{
+    void *sp;
+    asm volatile ("mov %0, sp;" : "=r" (sp));
+    return sp;
+}
+
+
+
+
+
+static inline void cpu_write_dtlb(uint32_t vpn, unsigned attr)
+{
+    asm volatile ("wdtlb  %1, %0; dsync\n" :: "r" (vpn), "r" (attr));
+}
+
+
+static inline void cpu_write_itlb(unsigned vpn, unsigned attr)
+{
+    asm volatile ("witlb  %1, %0; isync\n" :: "r" (vpn), "r" (attr));
+}
+
+static inline void cpu_init_memctl()
+{
+
+    uint32_t memctl = 0x00000000;
+    asm volatile ("wsr %0, " "MEMCTL" : : "r" (memctl));;
+
+}
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void cpu_configure_region_protection()
+{
+    const uint32_t pages_to_protect[] = {0x00000000, 0x80000000, 0xa0000000, 0xc0000000, 0xe0000000};
+    for (int i = 0; i < sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
+        cpu_write_dtlb(pages_to_protect[i], 0xf);
+        cpu_write_itlb(pages_to_protect[i], 0xf);
+    }
+    cpu_write_dtlb(0x20000000, 0);
+    cpu_write_itlb(0x20000000, 0);
+}
+
+
+
+
+
+void esp_cpu_stall(int cpu_id);
+
+
+
+
+
+void esp_cpu_unstall(int cpu_id);
+
+
+
+
+
+void esp_cpu_reset(int cpu_id);
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 3 4
+_Bool 
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+    esp_cpu_in_ocd_debug_mode();
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+
 
 
 
@@ -2657,6 +2728,9 @@ void heap_caps_dump_all();
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
 # 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
 typedef struct {
@@ -2712,7 +2786,7 @@ inline static
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_dma_capable(const void *p)
+                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
 {
     return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
 }
@@ -2721,24 +2795,37 @@ inline static
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_executable(const void *p)
+                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
+{
+    return ((intptr_t)p) % 4 == 0;
+}
+
+inline static 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
 {
     intptr_t ip = (intptr_t) p;
     return (ip >= 0x400D0000 && ip < 0x40400000)
         || (ip >= 0x40080000 && ip < 0x400A0000)
+        || (ip >= 0x40000000 && ip < 0x40070000)
+
+        || (ip >= 0x40078000 && ip < 0x40080000)
+
         || (ip >= 0x400C0000 && ip < 0x400C2000);
 }
 
 inline static 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_byte_accessible(const void *p)
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
 {
     
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x40000000);
 
@@ -2748,14 +2835,14 @@ inline static
 }
 
 inline static 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_internal(const void *p) {
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
     
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
     r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
@@ -2764,18 +2851,18 @@ inline static
 
 
 inline static 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_external_ram(const void *p) {
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
     return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
 }
 
 inline static 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_iram(const void *p) {
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
 
 
 
@@ -2784,19 +2871,35 @@ inline static
 }
 
 inline static 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_drom(const void *p) {
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
     return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
 }
 
 inline static 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_dram(const void *p) {
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
     return ((intptr_t)p >= 0x3FAE0000 && (intptr_t)p < 0x40000000);
+}
+
+inline static 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
+    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x3FFFFFFC);
+}
+
+inline static 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
+    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400BFFFC);
 }
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
@@ -2845,24 +2948,24 @@ typedef struct {
 void vPortAssertIfInISR();
 # 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortCPUInitializeMutex(portMUX_TYPE *mux);
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vTaskExitCritical( portMUX_TYPE *mux );
 void vTaskEnterCritical( portMUX_TYPE *mux );
 void vPortCPUAcquireMutex(portMUX_TYPE *mux);
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
 _Bool 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
     vPortCPUAcquireMutexTimeout(portMUX_TYPE *mux, int timeout_cycles);
 void vPortCPUReleaseMutex(portMUX_TYPE *mux);
-# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline unsigned portENTER_CRITICAL_NESTED() {
  unsigned state = ({ unsigned __tmp; __asm__ __volatile__( "rsil	%0, " "3" "\n" : "=a" (__tmp) : : "memory" ); __tmp;});
  ;
  return state;
 }
-# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, uint32_t *set) {
     __asm__ __volatile__ (
         "WSR 	    %2,SCOMPARE1 \n"
@@ -2871,20 +2974,20 @@ static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, u
         :"r"(addr), "r"(compare), "0"(*set)
         );
 }
-# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortYield( void );
 void _frxt_setup_switch( void );
 
 
 
 static inline uint32_t xPortGetCoreID();
-# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef struct {
 
  volatile StackType_t* coproc_area;
-# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 } xMPU_SETTINGS;
-# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 extern void esp_vApplicationIdleHook( void );
 extern void esp_vApplicationTickHook( void );
 
@@ -2895,10 +2998,10 @@ extern void esp_vApplicationTickHook( void );
 
 void _xt_coproc_release(volatile void * coproc_sa_base);
 void vApplicationSleep( TickType_t xExpectedIdleTime );
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/mpu_wrappers.h" 1
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h" 1
@@ -2915,7 +3018,7 @@ void vApplicationSleep( TickType_t xExpectedIdleTime );
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
 typedef volatile struct {
     uint32_t bt_select;
     uint32_t out;
@@ -3206,7 +3309,7 @@ void gpio_pad_hold(uint8_t gpio_num);
 
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
 extern const uint32_t GPIO_PIN_MUX_REG[40];
 # 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
@@ -3641,25 +3744,25 @@ typedef enum {
 typedef esp_sleep_source_t esp_sleep_wakeup_cause_t;
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_disable_wakeup_source(esp_sleep_source_t source);
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ulp_wakeup();
-# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_timer_wakeup(uint64_t time_in_us);
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_touchpad_wakeup();
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 touch_pad_t esp_sleep_get_touchpad_wakeup_status();
-# 161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext0_wakeup(gpio_num_t gpio_num, int level);
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext1_wakeup(uint64_t mask, esp_sleep_ext1_wakeup_mode_t mode);
-# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_gpio_wakeup();
-# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_uart_wakeup(int uart_num);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 uint64_t esp_sleep_get_ext1_wakeup_status();
-# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
                                    esp_sleep_pd_option_t option);
 
@@ -3669,11 +3772,11 @@ esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
 
 
 void esp_deep_sleep_start() __attribute__((noreturn));
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_light_sleep_start();
-# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_deep_sleep(uint64_t time_in_us) __attribute__((noreturn));
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated));
 
 
@@ -3683,7 +3786,7 @@ void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated)
 
 
 esp_sleep_wakeup_cause_t esp_sleep_get_wakeup_cause();
-# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_wake_deep_sleep(void);
 
 
@@ -3691,7 +3794,7 @@ void esp_wake_deep_sleep(void);
 
 
 typedef void (*esp_deep_sleep_wake_stub_fn_t)(void);
-# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_set_deep_sleep_wake_stub(esp_deep_sleep_wake_stub_fn_t new_stub);
 
 
@@ -3715,6 +3818,12 @@ void esp_default_wake_deep_sleep(void);
 
 void esp_deep_sleep_disable_rom_logging(void);
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+       
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+const char* esp_get_idf_version(void);
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
 
 
 
@@ -3726,7 +3835,7 @@ typedef enum {
     ESP_MAC_BT,
     ESP_MAC_ETH,
 } esp_mac_type_t;
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef enum {
     ESP_RST_UNKNOWN,
     ESP_RST_POWERON,
@@ -3769,9 +3878,9 @@ typedef void (*shutdown_handler_t)(void);
 
 
 esp_err_t esp_register_shutdown_handler(shutdown_handler_t handle);
-# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_restart(void) __attribute__ ((noreturn));
-# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
@@ -3780,11 +3889,11 @@ void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
 esp_reset_reason_t esp_reset_reason(void);
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_time(void) __attribute__ ((deprecated));
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_get_free_heap_size(void);
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
@@ -3794,36 +3903,28 @@ uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
 uint32_t esp_get_minimum_free_heap_size( void );
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_random(void);
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_fill_random(void *buf, size_t len);
-# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_set(uint8_t *mac);
-# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_get(uint8_t *mac);
-# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_custom(uint8_t *mac);
-# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_default(uint8_t *mac);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t system_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_read_mac(uint8_t* mac, esp_mac_type_t type);
-# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_derive_local_mac(uint8_t* local_mac, const uint8_t* universal_mac);
-# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 const char* system_get_sdk_version(void) __attribute__ ((deprecated));
-
-
-
-
-
-
-
-const char* esp_get_idf_version(void);
 
 
 
@@ -3832,7 +3933,7 @@ const char* esp_get_idf_version(void);
 typedef enum {
     CHIP_ESP32 = 1,
 } esp_chip_model_t;
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef struct {
     esp_chip_model_t model;
     uint32_t features;
@@ -3845,10 +3946,10 @@ typedef struct {
 
 
 void esp_chip_info(esp_chip_info_t* out_info);
-# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters, BaseType_t xRunPrivileged ) ;
-# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 BaseType_t xPortStartScheduler( void ) ;
 
 
@@ -3884,14 +3985,14 @@ BaseType_t xPortInIsrContext();
 
 
 BaseType_t xPortInterruptedFromISRContext();
-# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  struct xMEMORY_REGION;
  void vPortStoreTaskMPUSettings( xMPU_SETTINGS *xMPUSettings, const struct xMEMORY_REGION * const xRegions, StackType_t *pxBottomOfStack, uint32_t usStackDepth ) ;
  void vPortReleaseTaskMPUSettings( xMPU_SETTINGS *xMPUSettings );
 
 
 
-static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
+static inline uint32_t __attribute__((section(".iram1" "." "11"))) xPortGetCoreID() {
     int id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -3902,6 +4003,21 @@ static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
 
 
 uint32_t xPortGetTickRateHz(void);
+
+
+static inline 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 3 4
+             _Bool 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+                  __attribute__((section(".iram1" "." "12"))) xPortCanYield(void)
+{
+    uint32_t ps_reg = 0;
+
+
+    asm volatile ("rsr %0, " "PS" : "=r" (ps_reg));;
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+    return ((ps_reg & 0x0000000F) == 0);
+}
 
 
 
@@ -4136,7 +4252,7 @@ typedef QueueHandle_t SemaphoreHandle_t;
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/pcnt_reg.h" 1
 # 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/pcnt.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/pcnt_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/pcnt_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/pcnt_struct.h"
 typedef volatile struct {
     struct{
         union {
@@ -4443,7 +4559,7 @@ void esp_dport_access_int_abort(void);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/uart_reg.h" 1
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h" 2
 # 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "13"))) DPORT_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -4452,7 +4568,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_
 
 }
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "14"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -4461,7 +4577,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_REA
 
 }
 # 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_READ_PERI_REG(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "15"))) DPORT_READ_PERI_REG(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -4551,6 +4667,27 @@ esp_err_t pcnt_unit_config(const pcnt_config_t *pcnt_config)
     if (!((pcnt_config->pos_mode < PCNT_COUNT_MAX) && (pcnt_config->neg_mode < PCNT_COUNT_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 59, "PCNT COUNTER MODE ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 59, "PCNT COUNTER MODE ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 59, "PCNT COUNTER MODE ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 59, "PCNT COUNTER MODE ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 59, "PCNT COUNTER MODE ERROR"); } } while(0); } while(0); return (0x102); };
     if (!((pcnt_config->hctrl_mode < PCNT_MODE_MAX) && (pcnt_config->lctrl_mode < PCNT_MODE_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 60, "PCNT CTRL MODE ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 60, "PCNT CTRL MODE ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 60, "PCNT CTRL MODE ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 60, "PCNT CTRL MODE ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 60, "PCNT CTRL MODE ERROR"); } } while(0); } while(0); return (0x102); };
 
+    static 
+# 62 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
+          _Bool 
+# 62 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
+               pcnt_enable = 
+# 62 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
+                             0
+# 62 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
+                                  ;
+    if (pcnt_enable == 
+# 63 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
+                      0
+# 63 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
+                           ) {
+        periph_module_reset(PERIPH_PCNT_MODULE);
+        pcnt_enable = 
+# 65 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
+                     1
+# 65 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
+                         ;
+    }
     periph_module_enable(PERIPH_PCNT_MODULE);
 
     pcnt_set_event_value(unit, PCNT_EVT_H_LIM, pcnt_config->counter_h_lim);
@@ -4569,10 +4706,10 @@ esp_err_t pcnt_unit_config(const pcnt_config_t *pcnt_config)
 
 esp_err_t pcnt_set_mode(pcnt_unit_t unit, pcnt_channel_t channel, pcnt_count_mode_t pos_mode, pcnt_count_mode_t neg_mode, pcnt_ctrl_mode_t hctrl_mode, pcnt_ctrl_mode_t lctrl_mode)
 {
-    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 80, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 80, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 80, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 80, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 80, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
-    if (!(channel < PCNT_CHANNEL_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 81, "PCNT CHANNEL ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 81, "PCNT CHANNEL ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 81, "PCNT CHANNEL ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 81, "PCNT CHANNEL ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 81, "PCNT CHANNEL ERROR"); } } while(0); } while(0); return (0x102); };
-    if (!((pos_mode < PCNT_COUNT_MAX) && (neg_mode < PCNT_COUNT_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 82, "PCNT COUNTER MODE ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 82, "PCNT COUNTER MODE ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 82, "PCNT COUNTER MODE ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 82, "PCNT COUNTER MODE ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 82, "PCNT COUNTER MODE ERROR"); } } while(0); } while(0); return (0x102); };
-    if (!((hctrl_mode < PCNT_MODE_MAX) && (lctrl_mode < PCNT_MODE_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 83, "PCNT CTRL MODE ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 83, "PCNT CTRL MODE ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 83, "PCNT CTRL MODE ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 83, "PCNT CTRL MODE ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 83, "PCNT CTRL MODE ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 85, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 85, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 85, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 85, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 85, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(channel < PCNT_CHANNEL_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 86, "PCNT CHANNEL ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 86, "PCNT CHANNEL ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 86, "PCNT CHANNEL ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 86, "PCNT CHANNEL ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 86, "PCNT CHANNEL ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!((pos_mode < PCNT_COUNT_MAX) && (neg_mode < PCNT_COUNT_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 87, "PCNT COUNTER MODE ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 87, "PCNT COUNTER MODE ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 87, "PCNT COUNTER MODE ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 87, "PCNT COUNTER MODE ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 87, "PCNT COUNTER MODE ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!((hctrl_mode < PCNT_MODE_MAX) && (lctrl_mode < PCNT_MODE_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 88, "PCNT CTRL MODE ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 88, "PCNT CTRL MODE ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 88, "PCNT CTRL MODE ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 88, "PCNT CTRL MODE ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 88, "PCNT CTRL MODE ERROR"); } } while(0); } while(0); return (0x102); };
 
     if(channel == 0) {
         PCNT.conf_unit[unit].conf0.ch0_pos_mode = pos_mode;
@@ -4590,10 +4727,10 @@ esp_err_t pcnt_set_mode(pcnt_unit_t unit, pcnt_channel_t channel, pcnt_count_mod
 
 esp_err_t pcnt_set_pin(pcnt_unit_t unit, pcnt_channel_t channel, int pulse_io, int ctrl_io)
 {
-    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 101, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 101, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 101, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 101, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 101, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
-    if (!(channel < PCNT_CHANNEL_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 102, "PCNT CHANNEL ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 102, "PCNT CHANNEL ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 102, "PCNT CHANNEL ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 102, "PCNT CHANNEL ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 102, "PCNT CHANNEL ERROR"); } } while(0); } while(0); return (0x102); };
-    if (!(((pulse_io < 40 && GPIO_PIN_MUX_REG[pulse_io] != 0)) || pulse_io < 0)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 103, "PCNT GPIO NUM ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 103, "PCNT GPIO NUM ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 103, "PCNT GPIO NUM ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 103, "PCNT GPIO NUM ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 103, "PCNT GPIO NUM ERROR"); } } while(0); } while(0); return (0x102); };
-    if (!(((ctrl_io < 40 && GPIO_PIN_MUX_REG[ctrl_io] != 0)) || ctrl_io < 0)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 104, "PCNT GPIO NUM ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 104, "PCNT GPIO NUM ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 104, "PCNT GPIO NUM ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 104, "PCNT GPIO NUM ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 104, "PCNT GPIO NUM ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 106, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 106, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 106, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 106, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 106, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(channel < PCNT_CHANNEL_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 107, "PCNT CHANNEL ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 107, "PCNT CHANNEL ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 107, "PCNT CHANNEL ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 107, "PCNT CHANNEL ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 107, "PCNT CHANNEL ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(((pulse_io < 40 && GPIO_PIN_MUX_REG[pulse_io] != 0)) || pulse_io < 0)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 108, "PCNT GPIO NUM ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 108, "PCNT GPIO NUM ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 108, "PCNT GPIO NUM ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 108, "PCNT GPIO NUM ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 108, "PCNT GPIO NUM ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(((ctrl_io < 40 && GPIO_PIN_MUX_REG[ctrl_io] != 0)) || ctrl_io < 0)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 109, "PCNT GPIO NUM ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 109, "PCNT GPIO NUM ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 109, "PCNT GPIO NUM ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 109, "PCNT GPIO NUM ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 109, "PCNT GPIO NUM ERROR"); } } while(0); } while(0); return (0x102); };
 
     int sig_base = (channel == 0) ? 39 : 40;
     int ctrl_base = (channel == 0) ? 41 : 42;
@@ -4621,19 +4758,19 @@ esp_err_t pcnt_set_pin(pcnt_unit_t unit, pcnt_channel_t channel, int pulse_io, i
 
 esp_err_t pcnt_get_counter_value(pcnt_unit_t pcnt_unit, int16_t* count)
 {
-    if (!(pcnt_unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 132, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 132, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 132, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 132, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 132, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(pcnt_unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 137, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 137, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 137, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 137, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 137, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
     if (!(count != 
-# 133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
+# 138 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
    ((void *)0)
-# 133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 133, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 133, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 133, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 133, "PCNT ADDRESS ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 133, "PCNT ADDRESS ERROR"); } } while(0); } while(0); return (0x102); };
+# 138 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 138, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 138, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 138, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 138, "PCNT ADDRESS ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 138, "PCNT ADDRESS ERROR"); } } while(0); } while(0); return (0x102); };
     *count = (int16_t) PCNT.cnt_unit[pcnt_unit].cnt_val;
     return 0;
 }
 
 esp_err_t pcnt_counter_pause(pcnt_unit_t pcnt_unit)
 {
-    if (!(pcnt_unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 140, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 140, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 140, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 140, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 140, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(pcnt_unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 145, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 145, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 145, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 145, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 145, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&pcnt_spinlock);
     PCNT.ctrl.val |= (1UL << (1 + (pcnt_unit * 2)));
     vTaskExitCritical(&pcnt_spinlock);
@@ -4642,7 +4779,7 @@ esp_err_t pcnt_counter_pause(pcnt_unit_t pcnt_unit)
 
 esp_err_t pcnt_counter_resume(pcnt_unit_t pcnt_unit)
 {
-    if (!(pcnt_unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 149, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 149, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 149, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 149, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 149, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(pcnt_unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 154, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 154, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 154, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 154, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 154, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&pcnt_spinlock);
     PCNT.ctrl.val &= (~((1UL << (1 + (pcnt_unit * 2)))));
     vTaskExitCritical(&pcnt_spinlock);
@@ -4651,7 +4788,7 @@ esp_err_t pcnt_counter_resume(pcnt_unit_t pcnt_unit)
 
 esp_err_t pcnt_counter_clear(pcnt_unit_t pcnt_unit)
 {
-    if (!(pcnt_unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 158, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 158, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 158, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 158, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 158, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(pcnt_unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 163, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 163, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 163, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 163, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 163, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&pcnt_spinlock);
     uint32_t reset_bit = (1UL << (0 + (pcnt_unit * 2)));
     PCNT.ctrl.val |= reset_bit;
@@ -4662,7 +4799,7 @@ esp_err_t pcnt_counter_clear(pcnt_unit_t pcnt_unit)
 
 esp_err_t pcnt_intr_enable(pcnt_unit_t pcnt_unit)
 {
-    if (!(pcnt_unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 169, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 169, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 169, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 169, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 169, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(pcnt_unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 174, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 174, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 174, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 174, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 174, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&pcnt_spinlock);
     PCNT.int_ena.val |= (1UL << (0 + pcnt_unit));
     vTaskExitCritical(&pcnt_spinlock);
@@ -4671,7 +4808,7 @@ esp_err_t pcnt_intr_enable(pcnt_unit_t pcnt_unit)
 
 esp_err_t pcnt_intr_disable(pcnt_unit_t pcnt_unit)
 {
-    if (!(pcnt_unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 178, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 178, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 178, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 178, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 178, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(pcnt_unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 183, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 183, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 183, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 183, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 183, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&pcnt_spinlock);
     PCNT.int_ena.val &= (~((1UL << (0 + pcnt_unit))));
     vTaskExitCritical(&pcnt_spinlock);
@@ -4680,8 +4817,8 @@ esp_err_t pcnt_intr_disable(pcnt_unit_t pcnt_unit)
 
 esp_err_t pcnt_event_enable(pcnt_unit_t unit, pcnt_evt_type_t evt_type)
 {
-    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 187, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 187, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 187, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 187, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 187, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
-    if (!(evt_type < PCNT_EVT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 188, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 188, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 188, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 188, "PCNT value type error"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 188, "PCNT value type error"); } } while(0); } while(0); return (0x102); };
+    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 192, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 192, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 192, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 192, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 192, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(evt_type < PCNT_EVT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 193, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 193, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 193, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 193, "PCNT value type error"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 193, "PCNT value type error"); } } while(0); } while(0); return (0x102); };
     if(evt_type == PCNT_EVT_L_LIM) {
         PCNT.conf_unit[unit].conf0.thr_l_lim_en = 1;
     } else if(evt_type == PCNT_EVT_H_LIM) {
@@ -4698,8 +4835,8 @@ esp_err_t pcnt_event_enable(pcnt_unit_t unit, pcnt_evt_type_t evt_type)
 
 esp_err_t pcnt_event_disable(pcnt_unit_t unit, pcnt_evt_type_t evt_type)
 {
-    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 205, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 205, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 205, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 205, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 205, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
-    if (!(evt_type < PCNT_EVT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 206, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 206, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 206, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 206, "PCNT value type error"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 206, "PCNT value type error"); } } while(0); } while(0); return (0x102); };
+    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 210, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 210, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 210, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 210, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 210, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(evt_type < PCNT_EVT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 211, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 211, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 211, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 211, "PCNT value type error"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 211, "PCNT value type error"); } } while(0); } while(0); return (0x102); };
     if(evt_type == PCNT_EVT_L_LIM) {
         PCNT.conf_unit[unit].conf0.thr_l_lim_en = 0;
     } else if(evt_type == PCNT_EVT_H_LIM) {
@@ -4716,10 +4853,10 @@ esp_err_t pcnt_event_disable(pcnt_unit_t unit, pcnt_evt_type_t evt_type)
 
 esp_err_t pcnt_set_event_value(pcnt_unit_t unit, pcnt_evt_type_t evt_type, int16_t value)
 {
-    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 223, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 223, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 223, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 223, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 223, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
-    if (!(evt_type < PCNT_EVT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 224, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 224, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 224, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 224, "PCNT value type error"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 224, "PCNT value type error"); } } while(0); } while(0); return (0x102); };
-    if (!(!(evt_type == PCNT_EVT_L_LIM && value > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 225, "PCNT limit value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 225, "PCNT limit value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 225, "PCNT limit value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 225, "PCNT limit value error"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 225, "PCNT limit value error"); } } while(0); } while(0); return (0x102); };
-    if (!(!(evt_type == PCNT_EVT_H_LIM && value < 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 226, "PCNT limit value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 226, "PCNT limit value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 226, "PCNT limit value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 226, "PCNT limit value error"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 226, "PCNT limit value error"); } } while(0); } while(0); return (0x102); };
+    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 228, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 228, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 228, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 228, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 228, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(evt_type < PCNT_EVT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 229, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 229, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 229, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 229, "PCNT value type error"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 229, "PCNT value type error"); } } while(0); } while(0); return (0x102); };
+    if (!(!(evt_type == PCNT_EVT_L_LIM && value > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 230, "PCNT limit value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 230, "PCNT limit value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 230, "PCNT limit value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 230, "PCNT limit value error"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 230, "PCNT limit value error"); } } while(0); } while(0); return (0x102); };
+    if (!(!(evt_type == PCNT_EVT_H_LIM && value < 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 231, "PCNT limit value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 231, "PCNT limit value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 231, "PCNT limit value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 231, "PCNT limit value error"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 231, "PCNT limit value error"); } } while(0); } while(0); return (0x102); };
     if(evt_type == PCNT_EVT_L_LIM) {
         PCNT.conf_unit[unit].conf2.cnt_l_lim = value;
     } else if(evt_type == PCNT_EVT_H_LIM) {
@@ -4734,13 +4871,13 @@ esp_err_t pcnt_set_event_value(pcnt_unit_t unit, pcnt_evt_type_t evt_type, int16
 
 esp_err_t pcnt_get_event_value(pcnt_unit_t unit, pcnt_evt_type_t evt_type, int16_t *value)
 {
-    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 241, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 241, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 241, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 241, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 241, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
-    if (!(evt_type < PCNT_EVT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 242, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 242, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 242, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 242, "PCNT value type error"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 242, "PCNT value type error"); } } while(0); } while(0); return (0x102); };
+    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 246, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 246, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 246, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 246, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 246, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(evt_type < PCNT_EVT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 247, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 247, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 247, "PCNT value type error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 247, "PCNT value type error"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 247, "PCNT value type error"); } } while(0); } while(0); return (0x102); };
     if (!(value != 
-# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
+# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
    ((void *)0)
-# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 243, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 243, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 243, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 243, "PCNT ADDRESS ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 243, "PCNT ADDRESS ERROR"); } } while(0); } while(0); return (0x102); };
+# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 248, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 248, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 248, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 248, "PCNT ADDRESS ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 248, "PCNT ADDRESS ERROR"); } } while(0); } while(0); return (0x102); };
 
     if(evt_type == PCNT_EVT_L_LIM) {
         *value = (int16_t) PCNT.conf_unit[unit].conf2.cnt_l_lim;
@@ -4758,20 +4895,20 @@ esp_err_t pcnt_get_event_value(pcnt_unit_t unit, pcnt_evt_type_t evt_type, int16
 
 esp_err_t pcnt_set_filter_value(pcnt_unit_t unit, uint16_t filter_val)
 {
-    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 261, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 261, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 261, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 261, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 261, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
-    if (!(filter_val < 1024)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 262, "PCNT PARAM ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 262, "PCNT PARAM ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 262, "PCNT PARAM ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 262, "PCNT PARAM ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 262, "PCNT PARAM ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 266, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 266, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 266, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 266, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 266, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(filter_val < 1024)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 267, "PCNT PARAM ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 267, "PCNT PARAM ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 267, "PCNT PARAM ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 267, "PCNT PARAM ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 267, "PCNT PARAM ERROR"); } } while(0); } while(0); return (0x102); };
     PCNT.conf_unit[unit].conf0.filter_thres = filter_val;
     return 0;
 }
 
 esp_err_t pcnt_get_filter_value(pcnt_unit_t unit, uint16_t *filter_val)
 {
-    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 269, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 269, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 269, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 269, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 269, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 274, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 274, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 274, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 274, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 274, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
     if (!(filter_val != 
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
+# 275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
    ((void *)0)
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 270, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 270, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 270, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 270, "PCNT ADDRESS ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 270, "PCNT ADDRESS ERROR"); } } while(0); } while(0); return (0x102); };
+# 275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 275, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 275, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 275, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 275, "PCNT ADDRESS ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 275, "PCNT ADDRESS ERROR"); } } while(0); } while(0); return (0x102); };
 
     *filter_val = PCNT.conf_unit[unit].conf0.filter_thres;
     return 0;
@@ -4779,14 +4916,14 @@ esp_err_t pcnt_get_filter_value(pcnt_unit_t unit, uint16_t *filter_val)
 
 esp_err_t pcnt_filter_enable(pcnt_unit_t unit)
 {
-    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 278, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 278, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 278, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 278, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 278, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 283, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 283, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 283, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 283, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 283, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
     PCNT.conf_unit[unit].conf0.filter_en = 1;
     return 0;
 }
 
 esp_err_t pcnt_filter_disable(pcnt_unit_t unit)
 {
-    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 285, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 285, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 285, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 285, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 285, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
+    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 290, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 290, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 290, "PCNT UNIT ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 290, "PCNT UNIT ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 290, "PCNT UNIT ERROR"); } } while(0); } while(0); return (0x102); };
     PCNT.conf_unit[unit].conf0.filter_en = 0;
     return 0;
 }
@@ -4794,23 +4931,23 @@ esp_err_t pcnt_filter_disable(pcnt_unit_t unit)
 esp_err_t pcnt_isr_register(void (*fun)(void*), void * arg, int intr_alloc_flags, pcnt_isr_handle_t *handle)
 {
     if (!(fun != 
-# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
+# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
    ((void *)0)
-# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 292, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 292, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 292, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 292, "PCNT ADDRESS ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 292, "PCNT ADDRESS ERROR"); } } while(0); } while(0); return (0x102); };
+# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 297, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 297, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 297, "PCNT ADDRESS ERROR"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 297, "PCNT ADDRESS ERROR"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 297, "PCNT ADDRESS ERROR"); } } while(0); } while(0); return (0x102); };
     return esp_intr_alloc(48, intr_alloc_flags, fun, arg, handle);
 }
 
 
-static void __attribute__((section(".iram1"))) pcnt_intr_service(void* arg)
+static void __attribute__((section(".iram1" "." "16"))) pcnt_intr_service(void* arg)
 {
     uint32_t intr_status = PCNT.int_st.val;
     for (int unit = 0; unit < PCNT_UNIT_MAX; unit++) {
         if (intr_status & ((1UL << (unit)))) {
             if (pcnt_isr_func[unit].fn != 
-# 302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
+# 307 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
                                          ((void *)0)
-# 302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
+# 307 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
                                              ) {
                 (pcnt_isr_func[unit].fn)(pcnt_isr_func[unit].args);
             }
@@ -4822,11 +4959,11 @@ static void __attribute__((section(".iram1"))) pcnt_intr_service(void* arg)
 esp_err_t pcnt_isr_handler_add(pcnt_unit_t unit, void(*isr_handler)(void *), void *args)
 {
     if (!(pcnt_isr_func != 
-# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
+# 317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
    ((void *)0)
-# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 312, "ISR service is not installed, call pcnt_install_isr_service() first"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 312, "ISR service is not installed, call pcnt_install_isr_service() first"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 312, "ISR service is not installed, call pcnt_install_isr_service() first"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 312, "ISR service is not installed, call pcnt_install_isr_service() first"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 312, "ISR service is not installed, call pcnt_install_isr_service() first"); } } while(0); } while(0); return (0x103); };
-    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 313, "PCNT unit error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 313, "PCNT unit error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 313, "PCNT unit error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 313, "PCNT unit error"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 313, "PCNT unit error"); } } while(0); } while(0); return (0x102); };
+# 317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 317, "ISR service is not installed, call pcnt_install_isr_service() first"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 317, "ISR service is not installed, call pcnt_install_isr_service() first"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 317, "ISR service is not installed, call pcnt_install_isr_service() first"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 317, "ISR service is not installed, call pcnt_install_isr_service() first"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 317, "ISR service is not installed, call pcnt_install_isr_service() first"); } } while(0); } while(0); return (0x103); };
+    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 318, "PCNT unit error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 318, "PCNT unit error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 318, "PCNT unit error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 318, "PCNT unit error"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 318, "PCNT unit error"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&pcnt_spinlock);
     pcnt_intr_disable(unit);
     if (pcnt_isr_func) {
@@ -4841,23 +4978,23 @@ esp_err_t pcnt_isr_handler_add(pcnt_unit_t unit, void(*isr_handler)(void *), voi
 esp_err_t pcnt_isr_handler_remove(pcnt_unit_t unit)
 {
     if (!(pcnt_isr_func != 
-# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
+# 332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
    ((void *)0)
-# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 327, "ISR service is not installed"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 327, "ISR service is not installed"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 327, "ISR service is not installed"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 327, "ISR service is not installed"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 327, "ISR service is not installed"); } } while(0); } while(0); return (0x103); };
-    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 328, "PCNT unit error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 328, "PCNT unit error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 328, "PCNT unit error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 328, "PCNT unit error"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 328, "PCNT unit error"); } } while(0); } while(0); return (0x102); };
+# 332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 332, "ISR service is not installed"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 332, "ISR service is not installed"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 332, "ISR service is not installed"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 332, "ISR service is not installed"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 332, "ISR service is not installed"); } } while(0); } while(0); return (0x103); };
+    if (!(unit < PCNT_UNIT_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 333, "PCNT unit error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 333, "PCNT unit error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 333, "PCNT unit error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 333, "PCNT unit error"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 333, "PCNT unit error"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&pcnt_spinlock);
     pcnt_intr_disable(unit);
     if (pcnt_isr_func) {
         pcnt_isr_func[unit].fn = 
-# 332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
+# 337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
                                 ((void *)0)
-# 332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
+# 337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
                                     ;
         pcnt_isr_func[unit].args = 
-# 333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
+# 338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
                                   ((void *)0)
-# 333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
+# 338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
                                       ;
     }
     vTaskExitCritical(&pcnt_spinlock);
@@ -4867,24 +5004,24 @@ esp_err_t pcnt_isr_handler_remove(pcnt_unit_t unit)
 esp_err_t pcnt_isr_service_install(int intr_alloc_flags)
 {
     if (!(pcnt_isr_func == 
-# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
+# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
    ((void *)0)
-# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 341, "ISR service already installed"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 341, "ISR service already installed"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 341, "ISR service already installed"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 341, "ISR service already installed"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 341, "ISR service already installed"); } } while(0); } while(0); return (0x103); };
+# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, PCNT_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 346, "ISR service already installed"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, PCNT_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 346, "ISR service already installed"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, PCNT_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 346, "ISR service already installed"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, PCNT_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 346, "ISR service already installed"); } else { esp_log_write(ESP_LOG_INFO, PCNT_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), PCNT_TAG, __FUNCTION__, 346, "ISR service already installed"); } } while(0); } while(0); return (0x103); };
     vTaskEnterCritical(&pcnt_spinlock);
     esp_err_t ret = -1;
     pcnt_isr_func = (pcnt_isr_func_t*) calloc(PCNT_UNIT_MAX, sizeof(pcnt_isr_func_t));
     if (pcnt_isr_func == 
-# 345 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
+# 350 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
                         ((void *)0)
-# 345 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
+# 350 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
                             ) {
         ret = 0x101;
     } else {
         ret = pcnt_isr_register(pcnt_intr_service, 
-# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
+# 353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
                                                   ((void *)0)
-# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
+# 353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
                                                       , intr_alloc_flags, &pcnt_isr_service);
     }
     vTaskExitCritical(&pcnt_spinlock);
@@ -4894,9 +5031,9 @@ esp_err_t pcnt_isr_service_install(int intr_alloc_flags)
 void pcnt_isr_service_uninstall(void)
 {
     if (pcnt_isr_func == 
-# 356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
+# 361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
                         ((void *)0)
-# 356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
+# 361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
                             ) {
         return;
     }
@@ -4904,14 +5041,14 @@ void pcnt_isr_service_uninstall(void)
     esp_intr_free(pcnt_isr_service);
     free(pcnt_isr_func);
     pcnt_isr_func = 
-# 362 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
+# 367 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
                    ((void *)0)
-# 362 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
+# 367 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
                        ;
     pcnt_isr_service = 
-# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
+# 368 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c" 3 4
                       ((void *)0)
-# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
+# 368 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/pcnt.c"
                           ;
     vTaskExitCritical(&pcnt_spinlock);
 }

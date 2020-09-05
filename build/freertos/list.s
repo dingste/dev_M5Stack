@@ -6,7 +6,7 @@
 	.global	vListInitialise
 	.type	vListInitialise, @function
 vListInitialise:
-.LFB17:
+.LFB26:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/list.c"
 	.loc 1 80 0
 .LVL0:
@@ -28,14 +28,14 @@ vListInitialise:
 	.loc 1 95 0
 	s32i.n	a8, a2, 0
 	retw.n
-.LFE17:
+.LFE26:
 	.size	vListInitialise, .-vListInitialise
 	.section	.text.vListInitialiseItem,"ax",@progbits
 	.align	4
 	.global	vListInitialiseItem
 	.type	vListInitialiseItem, @function
 vListInitialiseItem:
-.LFB18:
+.LFB27:
 	.loc 1 105 0
 .LVL1:
 	entry	sp, 32
@@ -44,14 +44,14 @@ vListInitialiseItem:
 	movi.n	a8, 0
 	s32i.n	a8, a2, 16
 	retw.n
-.LFE18:
+.LFE27:
 	.size	vListInitialiseItem, .-vListInitialiseItem
 	.section	.text.vListInsertEnd,"ax",@progbits
 	.align	4
 	.global	vListInsertEnd
 	.type	vListInsertEnd, @function
 vListInsertEnd:
-.LFB19:
+.LFB28:
 	.loc 1 117 0
 .LVL2:
 	entry	sp, 32
@@ -78,14 +78,14 @@ vListInsertEnd:
 	addi.n	a3, a3, 1
 	s32i.n	a3, a2, 0
 	retw.n
-.LFE19:
+.LFE28:
 	.size	vListInsertEnd, .-vListInsertEnd
 	.section	.text.vListInsert,"ax",@progbits
 	.align	4
 	.global	vListInsert
 	.type	vListInsert, @function
 vListInsert:
-.LFB20:
+.LFB29:
 	.loc 1 142 0
 .LVL5:
 	entry	sp, 32
@@ -128,14 +128,14 @@ vListInsert:
 	addi.n	a3, a3, 1
 	s32i.n	a3, a2, 0
 	retw.n
-.LFE20:
+.LFE29:
 	.size	vListInsert, .-vListInsert
 	.section	.text.uxListRemove,"ax",@progbits
 	.align	4
 	.global	uxListRemove
 	.type	uxListRemove, @function
 uxListRemove:
-.LFB21:
+.LFB30:
 	.loc 1 209 0
 .LVL11:
 	entry	sp, 32
@@ -167,7 +167,7 @@ uxListRemove:
 	s32i.n	a2, a8, 0
 	.loc 1 231 0
 	retw.n
-.LFE21:
+.LFE30:
 	.size	uxListRemove, .-uxListRemove
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -188,10 +188,10 @@ uxListRemove:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.byte	0x4
-	.4byte	.LCFI0-.LFB17
+	.4byte	.LCFI0-.LFB26
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -200,10 +200,10 @@ uxListRemove:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI1-.LFB18
+	.4byte	.LCFI1-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -212,10 +212,10 @@ uxListRemove:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI2-.LFB19
+	.4byte	.LCFI2-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -224,10 +224,10 @@ uxListRemove:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI3-.LFB20
+	.4byte	.LCFI3-.LFB29
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -236,10 +236,10 @@ uxListRemove:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI4-.LFB21
+	.4byte	.LCFI4-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -450,8 +450,8 @@ uxListRemove:
 	.4byte	.LASF30
 	.byte	0x1
 	.byte	0x4f
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1a9
@@ -472,8 +472,8 @@ uxListRemove:
 	.4byte	.LASF31
 	.byte	0x1
 	.byte	0x68
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1d7
@@ -491,8 +491,8 @@ uxListRemove:
 	.4byte	.LASF34
 	.byte	0x1
 	.byte	0x74
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x21b
@@ -521,8 +521,8 @@ uxListRemove:
 	.4byte	.LASF36
 	.byte	0x1
 	.byte	0x8d
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x269
@@ -560,8 +560,8 @@ uxListRemove:
 	.byte	0x1
 	.byte	0xd0
 	.4byte	0x98
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0xc
@@ -807,7 +807,7 @@ uxListRemove:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL4
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x2
 	.byte	0x78
 	.sleb128 8
@@ -819,7 +819,7 @@ uxListRemove:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL10
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x2
 	.byte	0x78
 	.sleb128 4
@@ -836,7 +836,7 @@ uxListRemove:
 	.byte	0x73
 	.sleb128 0
 	.4byte	.LVL10
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x3
 	.byte	0x78
 	.sleb128 4
@@ -849,7 +849,7 @@ uxListRemove:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL13
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -865,30 +865,30 @@ uxListRemove:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB17
-	.4byte	.LFE17
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB21
-	.4byte	.LFE21
+	.4byte	.LFB26
+	.4byte	.LFE26
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB28
+	.4byte	.LFE28
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB30
+	.4byte	.LFE30
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

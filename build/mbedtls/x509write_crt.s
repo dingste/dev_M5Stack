@@ -5,18 +5,18 @@
 	.align	4
 	.type	x509_write_time$constprop$0, @function
 x509_write_time$constprop$0:
-.LFB29:
+.LFB30:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/x509write_crt.c"
-	.loc 1 268 0
+	.loc 1 309 0
 .LVL0:
 	entry	sp, 32
 .LCFI0:
 .LVL1:
-	.loc 1 277 0
+	.loc 1 318 0
 	l8ui	a8, a4, 0
-	.loc 1 268 0
+	.loc 1 309 0
 	mov.n	a12, a4
-	.loc 1 277 0
+	.loc 1 318 0
 	movi.n	a4, 0x32
 .LVL2:
 	bne	a8, a4, .L2
@@ -26,7 +26,7 @@ x509_write_time$constprop$0:
 	l8ui	a4, a12, 2
 	movi.n	a8, 0x34
 	bltu	a8, a4, .L2
-	.loc 1 279 0
+	.loc 1 320 0
 	movi.n	a13, 0xd
 	addi.n	a12, a12, 2
 .LVL3:
@@ -37,7 +37,7 @@ x509_write_time$constprop$0:
 	mov.n	a4, a10
 	bltz	a10, .L3
 .LVL5:
-	.loc 1 282 0
+	.loc 1 323 0
 	mov.n	a12, a10
 	mov.n	a11, a3
 	mov.n	a10, a2
@@ -46,12 +46,12 @@ x509_write_time$constprop$0:
 	bltz	a10, .L3
 	add.n	a4, a10, a4
 .LVL7:
-	.loc 1 283 0
+	.loc 1 324 0
 	movi.n	a12, 0x17
 	j	.L12
 .LVL8:
 .L2:
-	.loc 1 287 0
+	.loc 1 328 0
 	movi.n	a13, 0xf
 	mov.n	a11, a3
 	mov.n	a10, a2
@@ -60,7 +60,7 @@ x509_write_time$constprop$0:
 	mov.n	a4, a10
 	bltz	a10, .L3
 .LVL10:
-	.loc 1 290 0
+	.loc 1 331 0
 	mov.n	a12, a10
 	mov.n	a11, a3
 	mov.n	a10, a2
@@ -69,7 +69,7 @@ x509_write_time$constprop$0:
 	bltz	a10, .L3
 	add.n	a4, a10, a4
 .LVL12:
-	.loc 1 291 0
+	.loc 1 332 0
 	movi.n	a12, 0x18
 .LVL13:
 .L12:
@@ -81,11 +81,11 @@ x509_write_time$constprop$0:
 	add.n	a10, a10, a4
 .LVL15:
 .L3:
-	.loc 1 295 0
+	.loc 1 336 0
 	mov.n	a2, a10
 .LVL16:
 	retw.n
-.LFE29:
+.LFE30:
 	.size	x509_write_time$constprop$0, .-x509_write_time$constprop$0
 	.section	.text.mbedtls_x509write_crt_init,"ax",@progbits
 	.align	4
@@ -93,21 +93,21 @@ x509_write_time$constprop$0:
 	.type	mbedtls_x509write_crt_init, @function
 mbedtls_x509write_crt_init:
 .LFB10:
-	.loc 1 49 0
+	.loc 1 59 0
 .LVL17:
 	entry	sp, 32
 .LCFI1:
-	.loc 1 50 0
+	.loc 1 60 0
 	movi.n	a12, 0x48
 	movi.n	a11, 0
 	mov.n	a10, a2
 	call8	memset
 .LVL18:
-	.loc 1 52 0
+	.loc 1 62 0
 	addi.n	a10, a2, 4
 	call8	mbedtls_mpi_init
 .LVL19:
-	.loc 1 53 0
+	.loc 1 63 0
 	movi.n	a8, 2
 	s32i.n	a8, a2, 0
 	retw.n
@@ -119,27 +119,27 @@ mbedtls_x509write_crt_init:
 	.type	mbedtls_x509write_crt_free, @function
 mbedtls_x509write_crt_free:
 .LFB11:
-	.loc 1 57 0
+	.loc 1 67 0
 .LVL20:
 	entry	sp, 32
 .LCFI2:
-	.loc 1 58 0
+	.loc 1 68 0
 	addi.n	a10, a2, 4
 	call8	mbedtls_mpi_free
 .LVL21:
-	.loc 1 60 0
+	.loc 1 70 0
 	addi	a10, a2, 24
 	call8	mbedtls_asn1_free_named_data_list
 .LVL22:
-	.loc 1 61 0
+	.loc 1 71 0
 	addi	a10, a2, 28
 	call8	mbedtls_asn1_free_named_data_list
 .LVL23:
-	.loc 1 62 0
+	.loc 1 72 0
 	addi	a10, a2, 68
 	call8	mbedtls_asn1_free_named_data_list
 .LVL24:
-	.loc 1 64 0
+	.loc 1 74 0
 	movi.n	a11, 0x48
 	mov.n	a10, a2
 	call8	mbedtls_platform_zeroize
@@ -153,11 +153,11 @@ mbedtls_x509write_crt_free:
 	.type	mbedtls_x509write_crt_set_version, @function
 mbedtls_x509write_crt_set_version:
 .LFB12:
-	.loc 1 68 0
+	.loc 1 78 0
 .LVL26:
 	entry	sp, 32
 .LCFI3:
-	.loc 1 69 0
+	.loc 1 79 0
 	s32i.n	a3, a2, 0
 	retw.n
 .LFE12:
@@ -168,11 +168,11 @@ mbedtls_x509write_crt_set_version:
 	.type	mbedtls_x509write_crt_set_md_alg, @function
 mbedtls_x509write_crt_set_md_alg:
 .LFB13:
-	.loc 1 73 0
+	.loc 1 83 0
 .LVL27:
 	entry	sp, 32
 .LCFI4:
-	.loc 1 74 0
+	.loc 1 84 0
 	s32i.n	a3, a2, 32
 	retw.n
 .LFE13:
@@ -183,11 +183,11 @@ mbedtls_x509write_crt_set_md_alg:
 	.type	mbedtls_x509write_crt_set_subject_key, @function
 mbedtls_x509write_crt_set_subject_key:
 .LFB14:
-	.loc 1 78 0
+	.loc 1 88 0
 .LVL28:
 	entry	sp, 32
 .LCFI5:
-	.loc 1 79 0
+	.loc 1 89 0
 	s32i.n	a3, a2, 16
 	retw.n
 .LFE14:
@@ -198,11 +198,11 @@ mbedtls_x509write_crt_set_subject_key:
 	.type	mbedtls_x509write_crt_set_issuer_key, @function
 mbedtls_x509write_crt_set_issuer_key:
 .LFB15:
-	.loc 1 83 0
+	.loc 1 93 0
 .LVL29:
 	entry	sp, 32
 .LCFI6:
-	.loc 1 84 0
+	.loc 1 94 0
 	s32i.n	a3, a2, 20
 	retw.n
 .LFE15:
@@ -213,16 +213,16 @@ mbedtls_x509write_crt_set_issuer_key:
 	.type	mbedtls_x509write_crt_set_subject_name, @function
 mbedtls_x509write_crt_set_subject_name:
 .LFB16:
-	.loc 1 89 0
+	.loc 1 99 0
 .LVL30:
 	entry	sp, 32
 .LCFI7:
-	.loc 1 90 0
+	.loc 1 100 0
 	mov.n	a11, a3
 	addi	a10, a2, 24
 	call8	mbedtls_x509_string_to_names
 .LVL31:
-	.loc 1 91 0
+	.loc 1 101 0
 	mov.n	a2, a10
 .LVL32:
 	retw.n
@@ -234,16 +234,16 @@ mbedtls_x509write_crt_set_subject_name:
 	.type	mbedtls_x509write_crt_set_issuer_name, @function
 mbedtls_x509write_crt_set_issuer_name:
 .LFB17:
-	.loc 1 95 0
+	.loc 1 105 0
 .LVL33:
 	entry	sp, 32
 .LCFI8:
-	.loc 1 96 0
+	.loc 1 106 0
 	mov.n	a11, a3
 	addi	a10, a2, 28
 	call8	mbedtls_x509_string_to_names
 .LVL34:
-	.loc 1 97 0
+	.loc 1 107 0
 	mov.n	a2, a10
 .LVL35:
 	retw.n
@@ -255,16 +255,16 @@ mbedtls_x509write_crt_set_issuer_name:
 	.type	mbedtls_x509write_crt_set_serial, @function
 mbedtls_x509write_crt_set_serial:
 .LFB18:
-	.loc 1 100 0
+	.loc 1 110 0
 .LVL36:
 	entry	sp, 32
 .LCFI9:
-	.loc 1 103 0
+	.loc 1 113 0
 	mov.n	a11, a3
 	addi.n	a10, a2, 4
 	call8	mbedtls_mpi_copy
 .LVL37:
-	.loc 1 107 0
+	.loc 1 117 0
 	mov.n	a2, a10
 .LVL38:
 	retw.n
@@ -278,49 +278,49 @@ mbedtls_x509write_crt_set_serial:
 	.type	mbedtls_x509write_crt_set_validity, @function
 mbedtls_x509write_crt_set_validity:
 .LFB19:
-	.loc 1 111 0
+	.loc 1 121 0
 .LVL39:
 	entry	sp, 32
 .LCFI10:
-	.loc 1 112 0
+	.loc 1 122 0
 	mov.n	a10, a3
 	call8	strlen
 .LVL40:
 	movi.n	a9, 0xe
 	mov.n	a5, a10
-	.loc 1 115 0
+	.loc 1 125 0
 	l32r	a8, .LC0
-	.loc 1 112 0
+	.loc 1 122 0
 	bne	a10, a9, .L23
-	.loc 1 113 0 discriminator 1
+	.loc 1 123 0 discriminator 1
 	mov.n	a10, a4
 	call8	strlen
 .LVL41:
-	.loc 1 115 0 discriminator 1
+	.loc 1 125 0 discriminator 1
 	l32r	a8, .LC0
-	.loc 1 112 0 discriminator 1
+	.loc 1 122 0 discriminator 1
 	bne	a10, a5, .L23
-	.loc 1 117 0
+	.loc 1 127 0
 	movi.n	a12, 0xf
 	mov.n	a11, a3
 	addi	a10, a2, 36
 	call8	strncpy
 .LVL42:
-	.loc 1 118 0
+	.loc 1 128 0
 	movi.n	a12, 0xf
 	mov.n	a11, a4
 	addi	a10, a2, 52
 	call8	strncpy
 .LVL43:
-	.loc 1 119 0
+	.loc 1 129 0
 	movi.n	a8, 0x5a
 	s8i	a8, a2, 50
-	.loc 1 120 0
+	.loc 1 130 0
 	s8i	a8, a2, 66
-	.loc 1 122 0
+	.loc 1 132 0
 	movi.n	a8, 0
 .L23:
-	.loc 1 123 0
+	.loc 1 133 0
 	mov.n	a2, a8
 .LVL44:
 	retw.n
@@ -332,13 +332,13 @@ mbedtls_x509write_crt_set_validity:
 	.type	mbedtls_x509write_crt_set_extension, @function
 mbedtls_x509write_crt_set_extension:
 .LFB20:
-	.loc 1 129 0
+	.loc 1 139 0
 .LVL45:
 	entry	sp, 32
 .LCFI11:
-	.loc 1 129 0
+	.loc 1 139 0
 	mov.n	a15, a7
-	.loc 1 130 0
+	.loc 1 140 0
 	mov.n	a14, a6
 	mov.n	a13, a5
 	mov.n	a12, a4
@@ -346,11 +346,11 @@ mbedtls_x509write_crt_set_extension:
 	addi	a10, a2, 68
 	call8	mbedtls_x509_set_extension
 .LVL46:
-	.loc 1 132 0
+	.loc 1 142 0
 	mov.n	a2, a10
 .LVL47:
-	.loc 1 129 0
-	.loc 1 132 0
+	.loc 1 139 0
+	.loc 1 142 0
 	retw.n
 .LFE20:
 	.size	mbedtls_x509write_crt_set_extension, .-mbedtls_x509write_crt_set_extension
@@ -366,35 +366,35 @@ mbedtls_x509write_crt_set_extension:
 	.type	mbedtls_x509write_crt_set_basic_constraints, @function
 mbedtls_x509write_crt_set_basic_constraints:
 .LFB21:
-	.loc 1 136 0
+	.loc 1 146 0
 .LVL48:
 	entry	sp, 48
 .LCFI12:
-	.loc 1 139 0
+	.loc 1 149 0
 	addi.n	a8, sp, 9
-	.loc 1 142 0
+	.loc 1 152 0
 	movi.n	a12, 9
 	movi.n	a11, 0
 	mov.n	a10, sp
-	.loc 1 139 0
+	.loc 1 149 0
 	s32i.n	a8, sp, 12
 .LVL49:
-	.loc 1 142 0
+	.loc 1 152 0
 	call8	memset
 .LVL50:
-	.loc 1 144 0
+	.loc 1 154 0
 	beqz.n	a3, .L40
 	movi	a8, 0x7f
-	.loc 1 145 0
+	.loc 1 155 0
 	l32r	a10, .LC1
-	.loc 1 144 0
+	.loc 1 154 0
 	blt	a8, a4, .L28
 .L40:
-	.loc 1 147 0
+	.loc 1 157 0
 	beqz.n	a3, .L31
-	.loc 1 149 0
+	.loc 1 159 0
 	bltz	a4, .L35
-	.loc 1 151 0
+	.loc 1 161 0
 	mov.n	a12, a4
 	mov.n	a11, sp
 	addi.n	a10, sp, 12
@@ -407,22 +407,22 @@ mbedtls_x509write_crt_set_basic_constraints:
 	j	.L32
 .LVL54:
 .L35:
-	.loc 1 140 0
+	.loc 1 150 0
 	movi.n	a3, 0
 .LVL55:
 .L32:
-	.loc 1 153 0
+	.loc 1 163 0
 	movi.n	a12, 1
 	mov.n	a11, sp
 	addi.n	a10, sp, 12
 	call8	mbedtls_asn1_write_bool
 .LVL56:
 	bltz	a10, .L28
-	.loc 1 153 0 is_stmt 0 discriminator 2
+	.loc 1 163 0 is_stmt 0 discriminator 2
 	add.n	a3, a10, a3
 .LVL57:
 .L31:
-	.loc 1 156 0 is_stmt 1
+	.loc 1 166 0 is_stmt 1
 	mov.n	a12, a3
 	mov.n	a11, sp
 	addi.n	a10, sp, 12
@@ -432,21 +432,21 @@ mbedtls_x509write_crt_set_basic_constraints:
 .LVL59:
 	bltz	a10, .L28
 .LVL60:
-	.loc 1 157 0 discriminator 2
+	.loc 1 167 0 discriminator 2
 	movi.n	a12, 0x30
 	mov.n	a11, sp
 	addi.n	a10, sp, 12
 	call8	mbedtls_asn1_write_tag
 .LVL61:
 	bltz	a10, .L28
-	.loc 1 156 0 discriminator 2
+	.loc 1 166 0 discriminator 2
 	add.n	a3, a4, a3
-	.loc 1 157 0 discriminator 2
+	.loc 1 167 0 discriminator 2
 	add.n	a15, a10, a3
 .LVL62:
 .LBB12:
 .LBB13:
-	.loc 1 130 0 discriminator 2
+	.loc 1 140 0 discriminator 2
 	sub	a14, sp, a15
 	l32r	a11, .LC3
 	addi.n	a14, a14, 9
@@ -459,7 +459,7 @@ mbedtls_x509write_crt_set_basic_constraints:
 .L28:
 .LBE13:
 .LBE12:
-	.loc 1 163 0
+	.loc 1 173 0
 	mov.n	a2, a10
 .LVL65:
 	retw.n
@@ -477,29 +477,29 @@ mbedtls_x509write_crt_set_basic_constraints:
 	.type	mbedtls_x509write_crt_set_subject_key_identifier, @function
 mbedtls_x509write_crt_set_subject_key_identifier:
 .LFB22:
-	.loc 1 167 0
+	.loc 1 177 0
 .LVL66:
 	entry	sp, 2112
 .LCFI13:
-	.loc 1 170 0
+	.loc 1 180 0
 	l32r	a3, .LC4
-	.loc 1 173 0
+	.loc 1 183 0
 	movi.n	a11, 0
-	.loc 1 170 0
+	.loc 1 180 0
 	add.n	a6, sp, a3
-	.loc 1 173 0
+	.loc 1 183 0
 	mov.n	a12, a3
-	.loc 1 170 0
+	.loc 1 180 0
 	addmi	a5, sp, 0x800
-	.loc 1 173 0
+	.loc 1 183 0
 	mov.n	a10, sp
-	.loc 1 170 0
+	.loc 1 180 0
 	s32i.n	a6, a5, 20
 .LVL67:
-	.loc 1 173 0
+	.loc 1 183 0
 	call8	memset
 .LVL68:
-	.loc 1 174 0
+	.loc 1 184 0
 	l32i.n	a12, a2, 16
 	mov.n	a11, sp
 	mov.n	a10, a6
@@ -507,7 +507,7 @@ mbedtls_x509write_crt_set_subject_key_identifier:
 .LVL69:
 	bltz	a10, .L46
 .LVL70:
-	.loc 1 176 0 discriminator 2
+	.loc 1 186 0 discriminator 2
 	sub	a4, a3, a10
 	mov.n	a11, a10
 	mov.n	a12, a5
@@ -516,36 +516,36 @@ mbedtls_x509write_crt_set_subject_key_identifier:
 	call8	mbedtls_sha1_ret
 .LVL72:
 	mov.n	a4, a10
-	.loc 1 178 0 discriminator 2
+	.loc 1 188 0 discriminator 2
 	bnez.n	a10, .L46
-	.loc 1 183 0
+	.loc 1 193 0
 	movi.n	a12, 0x14
 	mov.n	a11, sp
 	mov.n	a10, a6
-	.loc 1 180 0
+	.loc 1 190 0
 	s32i.n	a5, a5, 20
 .LVL73:
-	.loc 1 183 0
+	.loc 1 193 0
 	call8	mbedtls_asn1_write_len
 .LVL74:
 	mov.n	a5, a10
 	bltz	a10, .L46
 .LVL75:
-	.loc 1 184 0 discriminator 2
+	.loc 1 194 0 discriminator 2
 	movi.n	a12, 4
 	mov.n	a11, sp
 	mov.n	a10, a6
 	call8	mbedtls_asn1_write_tag
 .LVL76:
 	bltz	a10, .L46
-	.loc 1 183 0 discriminator 2
+	.loc 1 193 0 discriminator 2
 	addi	a15, a5, 20
-	.loc 1 184 0 discriminator 2
+	.loc 1 194 0 discriminator 2
 	add.n	a15, a10, a15
 .LVL77:
 .LBB14:
 .LBB15:
-	.loc 1 130 0 discriminator 2
+	.loc 1 140 0 discriminator 2
 	sub	a14, a3, a15
 	l32r	a11, .LC6
 	add.n	a14, sp, a14
@@ -558,7 +558,7 @@ mbedtls_x509write_crt_set_subject_key_identifier:
 .L46:
 .LBE15:
 .LBE14:
-	.loc 1 189 0
+	.loc 1 199 0
 	mov.n	a2, a10
 .LVL80:
 	retw.n
@@ -576,29 +576,29 @@ mbedtls_x509write_crt_set_subject_key_identifier:
 	.type	mbedtls_x509write_crt_set_authority_key_identifier, @function
 mbedtls_x509write_crt_set_authority_key_identifier:
 .LFB23:
-	.loc 1 192 0
+	.loc 1 202 0
 .LVL81:
 	entry	sp, 2112
 .LCFI14:
-	.loc 1 195 0
+	.loc 1 205 0
 	l32r	a4, .LC7
-	.loc 1 198 0
+	.loc 1 208 0
 	movi.n	a11, 0
-	.loc 1 195 0
+	.loc 1 205 0
 	add.n	a6, sp, a4
-	.loc 1 198 0
+	.loc 1 208 0
 	mov.n	a12, a4
-	.loc 1 195 0
+	.loc 1 205 0
 	addmi	a3, sp, 0x800
-	.loc 1 198 0
+	.loc 1 208 0
 	mov.n	a10, sp
-	.loc 1 195 0
+	.loc 1 205 0
 	s32i.n	a6, a3, 20
 .LVL82:
-	.loc 1 198 0
+	.loc 1 208 0
 	call8	memset
 .LVL83:
-	.loc 1 199 0
+	.loc 1 209 0
 	l32i.n	a12, a2, 20
 	mov.n	a11, sp
 	mov.n	a10, a6
@@ -606,7 +606,7 @@ mbedtls_x509write_crt_set_authority_key_identifier:
 .LVL84:
 	bltz	a10, .L52
 .LVL85:
-	.loc 1 201 0 discriminator 2
+	.loc 1 211 0 discriminator 2
 	sub	a5, a4, a10
 	mov.n	a11, a10
 	mov.n	a12, a3
@@ -615,34 +615,34 @@ mbedtls_x509write_crt_set_authority_key_identifier:
 	call8	mbedtls_sha1_ret
 .LVL87:
 	mov.n	a5, a10
-	.loc 1 203 0 discriminator 2
+	.loc 1 213 0 discriminator 2
 	bnez.n	a10, .L52
-	.loc 1 208 0
+	.loc 1 218 0
 	movi.n	a12, 0x14
 	mov.n	a11, sp
 	mov.n	a10, a6
-	.loc 1 205 0
+	.loc 1 215 0
 	s32i.n	a3, a3, 20
 .LVL88:
-	.loc 1 208 0
+	.loc 1 218 0
 	call8	mbedtls_asn1_write_len
 .LVL89:
 	mov.n	a3, a10
 	bltz	a10, .L52
 .LVL90:
-	.loc 1 209 0 discriminator 2
+	.loc 1 219 0 discriminator 2
 	movi	a12, 0x80
 	mov.n	a11, sp
 	mov.n	a10, a6
 	call8	mbedtls_asn1_write_tag
 .LVL91:
 	bltz	a10, .L52
-	.loc 1 208 0 discriminator 2
+	.loc 1 218 0 discriminator 2
 	addi	a3, a3, 20
-	.loc 1 209 0 discriminator 2
+	.loc 1 219 0 discriminator 2
 	add.n	a3, a10, a3
 .LVL92:
-	.loc 1 211 0 discriminator 2
+	.loc 1 221 0 discriminator 2
 	mov.n	a12, a3
 	mov.n	a11, sp
 	mov.n	a10, a6
@@ -652,21 +652,21 @@ mbedtls_x509write_crt_set_authority_key_identifier:
 	mov.n	a7, a10
 	bltz	a10, .L52
 .LVL95:
-	.loc 1 212 0 discriminator 2
+	.loc 1 222 0 discriminator 2
 	movi.n	a12, 0x30
 	mov.n	a11, sp
 	mov.n	a10, a6
 	call8	mbedtls_asn1_write_tag
 .LVL96:
 	bltz	a10, .L52
-	.loc 1 211 0 discriminator 2
+	.loc 1 221 0 discriminator 2
 	add.n	a15, a7, a3
-	.loc 1 212 0 discriminator 2
+	.loc 1 222 0 discriminator 2
 	add.n	a15, a10, a15
 .LVL97:
 .LBB16:
 .LBB17:
-	.loc 1 130 0 discriminator 2
+	.loc 1 140 0 discriminator 2
 	sub	a14, a4, a15
 	l32r	a11, .LC9
 	add.n	a14, sp, a14
@@ -679,590 +679,641 @@ mbedtls_x509write_crt_set_authority_key_identifier:
 .L52:
 .LBE17:
 .LBE16:
-	.loc 1 218 0
+	.loc 1 228 0
 	mov.n	a2, a10
 .LVL100:
 	retw.n
 .LFE23:
 	.size	mbedtls_x509write_crt_set_authority_key_identifier, .-mbedtls_x509write_crt_set_authority_key_identifier
 	.section	.rodata.str1.1
-.LC11:
+.LC12:
 	.string	"U\035\017"
 	.section	.text.mbedtls_x509write_crt_set_key_usage,"ax",@progbits
 	.literal_position
 	.literal .LC10, -8320
-	.literal .LC12, .LC11
+	.literal .LC11, -8576
+	.literal .LC13, .LC12
 	.align	4
 	.global	mbedtls_x509write_crt_set_key_usage
 	.type	mbedtls_x509write_crt_set_key_usage, @function
 mbedtls_x509write_crt_set_key_usage:
-.LFB24:
-	.loc 1 223 0
+.LFB25:
+	.loc 1 246 0
 .LVL101:
 	entry	sp, 48
 .LCFI15:
-	.loc 1 229 0
-	movi	a8, -0xff
-	.loc 1 230 0
-	l32r	a10, .LC10
-	.loc 1 229 0
-	bany	a3, a8, .L60
-	.loc 1 232 0
+.LVL102:
+	.loc 1 260 0
+	movi	a9, -0xff
+	.loc 1 261 0
+	l32r	a8, .LC10
+	.loc 1 260 0
+	bany	a3, a9, .L60
+	.loc 1 263 0
 	addi.n	a10, sp, 4
-	.loc 1 235 0
-	movi.n	a13, 7
+	s32i.n	a10, sp, 4
+	.loc 1 264 0
+	s8i	a3, sp, 8
+.LVL103:
+.LBB22:
+.LBB23:
+	.loc 1 237 0
+	movi.n	a8, 1
+	movi.n	a9, 7
+	loop	a9, .L62_LEND
+.LVL104:
+.L62:
+	.loc 1 238 0
+	bbs	a3, a8, .L61
+	.loc 1 237 0
+	addi.n	a8, a8, 1
+.LVL105:
+	.L62_LEND:
+.L61:
+.LBE23:
+.LBE22:
+	.loc 1 266 0
+	movi.n	a13, 8
+	sub	a13, a13, a8
 	addi.n	a12, sp, 8
 	mov.n	a11, sp
-	.loc 1 232 0
-	s32i.n	a10, sp, 4
-	.loc 1 233 0
-	s8i	a3, sp, 8
-	.loc 1 235 0
 	call8	mbedtls_asn1_write_bitstring
-.LVL102:
-	bnei	a10, 4, .L60
-.LVL103:
-.LBB18:
-.LBB19:
-	.loc 1 130 0
-	l32r	a11, .LC12
+.LVL106:
+	mov.n	a8, a10
+	.loc 1 268 0
+	bltz	a10, .L60
+	.loc 1 270 0
+	addi	a9, a10, -3
+	.loc 1 271 0
+	l32r	a8, .LC11
+	.loc 1 270 0
+	bgeui	a9, 2, .L60
+.LVL107:
+.LBB24:
+.LBB25:
+	.loc 1 140 0
+	l32i.n	a14, sp, 4
+	l32r	a11, .LC13
 	mov.n	a15, a10
-	mov.n	a14, sp
-.LVL104:
 	movi.n	a13, 1
 	movi.n	a12, 3
 	addi	a10, a2, 68
-.LVL105:
+.LVL108:
 	call8	mbedtls_x509_set_extension
-.LVL106:
+.LVL109:
+	mov.n	a8, a10
+.LVL110:
 .L60:
-.LBE19:
-.LBE18:
-	.loc 1 245 0
-	mov.n	a2, a10
-.LVL107:
+.LBE25:
+.LBE24:
+	.loc 1 280 0
+	mov.n	a2, a8
+.LVL111:
 	retw.n
-.LFE24:
+.LFE25:
 	.size	mbedtls_x509write_crt_set_key_usage, .-mbedtls_x509write_crt_set_key_usage
 	.section	.rodata.str1.1
-.LC13:
+.LC14:
 	.string	"`\206H\001\206\370B\001\001"
 	.section	.text.mbedtls_x509write_crt_set_ns_cert_type,"ax",@progbits
 	.literal_position
-	.literal .LC14, .LC13
+	.literal .LC15, .LC14
 	.align	4
 	.global	mbedtls_x509write_crt_set_ns_cert_type
 	.type	mbedtls_x509write_crt_set_ns_cert_type, @function
 mbedtls_x509write_crt_set_ns_cert_type:
-.LFB25:
-	.loc 1 249 0
-.LVL108:
+.LFB26:
+	.loc 1 284 0
+.LVL112:
 	entry	sp, 64
 .LCFI16:
-	.loc 1 254 0
+	.loc 1 290 0
 	addi.n	a10, sp, 4
-	.loc 1 256 0
-	movi.n	a13, 8
-	addi	a12, sp, 16
-	mov.n	a11, sp
-	.loc 1 249 0
+	.loc 1 284 0
 	s8i	a3, sp, 16
-	.loc 1 254 0
+	.loc 1 290 0
 	s32i.n	a10, sp, 4
-	.loc 1 256 0
+	.loc 1 292 0
+	extui	a3, a3, 0, 8
+.LVL113:
+.LBB30:
+.LBB31:
+	.loc 1 237 0
+	movi.n	a8, 0
+	movi.n	a9, 8
+	loop	a9, .L69_LEND
+.LVL114:
+.L69:
+	.loc 1 238 0
+	bbs	a3, a8, .L68
+	.loc 1 237 0
+	addi.n	a8, a8, 1
+.LVL115:
+	.L69_LEND:
+.L68:
+.LBE31:
+.LBE30:
+	.loc 1 293 0
+	movi.n	a13, 8
+	sub	a13, a13, a8
+	addi	a12, sp, 16
+.LVL116:
+	mov.n	a11, sp
 	call8	mbedtls_asn1_write_bitstring
-.LVL109:
-	bnei	a10, 4, .L64
-.LVL110:
-.LBB20:
-.LBB21:
-	.loc 1 130 0
-	l32r	a11, .LC14
+.LVL117:
+	.loc 1 297 0
+	addi	a3, a10, -3
+.LVL118:
+	bgeui	a3, 2, .L70
+.LVL119:
+.LBB32:
+.LBB33:
+	.loc 1 140 0
+	l32i.n	a14, sp, 4
+	l32r	a11, .LC15
 	mov.n	a15, a10
-	mov.n	a14, sp
-.LVL111:
 	movi.n	a13, 0
 	movi.n	a12, 9
 	addi	a10, a2, 68
-.LVL112:
+.LVL120:
 	call8	mbedtls_x509_set_extension
-.LVL113:
-.L64:
-.LBE21:
-.LBE20:
-	.loc 1 266 0
+.LVL121:
+.L70:
+.LBE33:
+.LBE32:
+	.loc 1 307 0
 	mov.n	a2, a10
-.LVL114:
+.LVL122:
 	retw.n
-.LFE25:
+.LFE26:
 	.size	mbedtls_x509write_crt_set_ns_cert_type, .-mbedtls_x509write_crt_set_ns_cert_type
 	.section	.text.mbedtls_x509write_crt_der,"ax",@progbits
 	.literal_position
-	.literal .LC15, -8960
-	.literal .LC16, 3148
-	.literal .LC17, 3152
-	.literal .LC18, 3144
-	.literal .LC19, 3136
-	.literal .LC20, 3140
-	.literal .LC21, 3204
-	.literal .LC22, 3208
-	.literal .LC23, 3212
-	.literal .LC24, 3184
-	.literal .LC25, 3188
-	.literal .LC26, 3192
-	.literal .LC27, 3196
-	.literal .LC28, 3200
-	.literal .LC29, 3216
+	.literal .LC16, -8960
+	.literal .LC17, 3148
+	.literal .LC18, 3152
+	.literal .LC19, 3144
+	.literal .LC20, 3136
+	.literal .LC21, 3140
+	.literal .LC22, 3204
+	.literal .LC23, 3208
+	.literal .LC24, 3212
+	.literal .LC25, 3184
+	.literal .LC26, 3188
+	.literal .LC27, 3192
+	.literal .LC28, 3196
+	.literal .LC29, 3200
+	.literal .LC30, 3216
 	.align	4
 	.global	mbedtls_x509write_crt_der
 	.type	mbedtls_x509write_crt_der, @function
 mbedtls_x509write_crt_der:
-.LFB27:
-	.loc 1 300 0
-.LVL115:
+.LFB28:
+	.loc 1 341 0
+.LVL123:
 	entry	sp, 3264
 .LCFI17:
-	.loc 1 300 0
+	.loc 1 341 0
 	mov.n	a7, a2
-	l32r	a2, .LC21
-.LVL116:
-	.loc 1 321 0
+	l32r	a2, .LC22
+.LVL124:
+	.loc 1 362 0
 	l32i.n	a10, a7, 20
-	.loc 1 300 0
+	.loc 1 341 0
 	add.n	a2, a2, sp
 	s32i.n	a4, a2, 0
-	l32r	a4, .LC22
-.LVL117:
-	.loc 1 321 0
+	l32r	a4, .LC23
+.LVL125:
+	.loc 1 362 0
 	movi.n	a11, 1
-	.loc 1 300 0
+	.loc 1 341 0
 	add.n	a4, a4, sp
 	s32i.n	a5, a4, 0
-	l32r	a5, .LC23
-.LVL118:
-	.loc 1 303 0
+	l32r	a5, .LC24
+.LVL126:
+	.loc 1 344 0
 	movi.n	a4, 0
-.LVL119:
-	.loc 1 300 0
+.LVL127:
+	.loc 1 341 0
 	add.n	a5, a5, sp
 	s32i.n	a6, a5, 0
-	.loc 1 303 0
+	.loc 1 344 0
 	addi	a5, sp, 16
 	addmi	a2, a5, 0xc00
-.LVL120:
+.LVL128:
 	s32i	a4, a2, 76
-.LVL121:
-	.loc 1 315 0
+.LVL129:
+	.loc 1 356 0
 	addmi	a4, a5, 0x800
 	s32i	a4, a2, 72
-	.loc 1 321 0
+	.loc 1 362 0
 	call8	mbedtls_pk_can_do
-.LVL122:
-	bnez.n	a10, .L71
-	.loc 1 323 0
+.LVL130:
+	bnez.n	a10, .L78
+	.loc 1 364 0
 	l32i.n	a10, a7, 20
 	movi.n	a11, 4
 	call8	mbedtls_pk_can_do
-.LVL123:
-	.loc 1 326 0
-	l32r	a13, .LC15
-	.loc 1 323 0
-	beqz.n	a10, .L68
-	.loc 1 324 0
-	movi.n	a10, 4
-	j	.L67
-.L71:
-	.loc 1 322 0
-	movi.n	a10, 1
-.L67:
-.LVL124:
-	.loc 1 328 0
+.LVL131:
+	.loc 1 367 0
 	l32r	a13, .LC16
-	l32r	a12, .LC17
+	.loc 1 364 0
+	beqz.n	a10, .L75
+	.loc 1 365 0
+	movi.n	a10, 4
+	j	.L74
+.L78:
+	.loc 1 363 0
+	movi.n	a10, 1
+.L74:
+.LVL132:
+	.loc 1 369 0
+	l32r	a13, .LC17
+	l32r	a12, .LC18
 	l32i.n	a11, a7, 32
 	add.n	a13, a5, a13
 	add.n	a12, a5, a12
 	call8	mbedtls_oid_get_oid_by_sig_alg
-.LVL125:
+.LVL133:
 	mov.n	a13, a10
-.LVL126:
-	bnez.n	a10, .L68
-	.loc 1 309 0
-	l32r	a6, .LC24
-.LVL127:
-	.loc 1 339 0
+.LVL134:
+	bnez.n	a10, .L75
+	.loc 1 350 0
+	l32r	a6, .LC25
+.LVL135:
+	.loc 1 380 0
 	l32i.n	a2, a7, 0
-	.loc 1 309 0
+	.loc 1 350 0
 	add.n	a6, a6, sp
 	s32i.n	a10, a6, 0
-	.loc 1 339 0
-	bnei	a2, 2, .L69
-	.loc 1 341 0
-	l32r	a6, .LC18
+	.loc 1 380 0
+	bnei	a2, 2, .L76
+	.loc 1 382 0
+	l32r	a6, .LC19
 	l32i	a12, a7, 68
 	add.n	a6, a5, a6
 	mov.n	a11, a5
 	mov.n	a10, a6
-.LVL128:
+.LVL136:
 	call8	mbedtls_x509_write_extensions
-.LVL129:
+.LVL137:
 	mov.n	a13, a10
-.LVL130:
+.LVL138:
 	mov.n	a4, a10
-	bltz	a10, .L68
-.LVL131:
-	.loc 1 342 0 discriminator 2
+	bltz	a10, .L75
+.LVL139:
+	.loc 1 383 0 discriminator 2
 	mov.n	a12, a10
 	mov.n	a11, a5
 	mov.n	a10, a6
 	call8	mbedtls_asn1_write_len
-.LVL132:
+.LVL140:
 	mov.n	a13, a10
 	mov.n	a2, a10
-	bltz	a10, .L68
-.LVL133:
-	.loc 1 343 0 discriminator 2
+	bltz	a10, .L75
+.LVL141:
+	.loc 1 384 0 discriminator 2
 	movi.n	a12, 0x30
 	mov.n	a11, a5
 	mov.n	a10, a6
 	call8	mbedtls_asn1_write_tag
-.LVL134:
+.LVL142:
 	mov.n	a13, a10
-.LVL135:
-	bltz	a10, .L68
-	.loc 1 342 0 discriminator 2
+.LVL143:
+	bltz	a10, .L75
+	.loc 1 383 0 discriminator 2
 	add.n	a4, a2, a4
-	.loc 1 343 0 discriminator 2
+	.loc 1 384 0 discriminator 2
 	add.n	a4, a10, a4
-.LVL136:
-	.loc 1 345 0 discriminator 2
+.LVL144:
+	.loc 1 386 0 discriminator 2
 	mov.n	a12, a4
 	mov.n	a11, a5
 	mov.n	a10, a6
-.LVL137:
+.LVL145:
 	call8	mbedtls_asn1_write_len
-.LVL138:
+.LVL146:
 	mov.n	a13, a10
-.LVL139:
-	bltz	a10, .L68
+.LVL147:
+	bltz	a10, .L75
 	add.n	a4, a10, a4
-.LVL140:
-	.loc 1 346 0 discriminator 2
+.LVL148:
+	.loc 1 387 0 discriminator 2
 	movi	a12, 0xa3
 	mov.n	a11, a5
 	mov.n	a10, a6
-.LVL141:
+.LVL149:
 	call8	mbedtls_asn1_write_tag
-.LVL142:
+.LVL150:
 	mov.n	a13, a10
-	bltz	a10, .L68
-	l32r	a8, .LC24
+	bltz	a10, .L75
+	l32r	a8, .LC25
 	add.n	a9, a10, a4
 	add.n	a8, a8, sp
 	s32i.n	a9, a8, 0
-.LVL143:
-.L69:
-	.loc 1 353 0
+.LVL151:
+.L76:
+	.loc 1 394 0
 	addmi	a2, a5, 0xc00
 	l32i	a12, a2, 72
 	l32i.n	a10, a7, 16
 	sub	a12, a12, a5
 	mov.n	a11, a5
 	call8	mbedtls_pk_write_pubkey_der
-.LVL144:
-	l32r	a4, .LC25
+.LVL152:
+	l32r	a4, .LC26
 	mov.n	a13, a10
 	add.n	a4, a4, sp
 	s32i.n	a10, a4, 0
-	bltz	a10, .L68
-.LVL145:
-	.loc 1 361 0 discriminator 2
-	l32r	a6, .LC18
-	.loc 1 355 0 discriminator 2
+	bltz	a10, .L75
+.LVL153:
+	.loc 1 402 0 discriminator 2
+	l32r	a6, .LC19
+	.loc 1 396 0 discriminator 2
 	l32i	a4, a2, 72
-	.loc 1 361 0 discriminator 2
+	.loc 1 402 0 discriminator 2
 	add.n	a6, a5, a6
 	l32i.n	a12, a7, 24
-	.loc 1 355 0 discriminator 2
+	.loc 1 396 0 discriminator 2
 	sub	a13, a4, a10
-	.loc 1 361 0 discriminator 2
+	.loc 1 402 0 discriminator 2
 	mov.n	a11, a5
 	mov.n	a10, a6
-.LVL146:
-	.loc 1 355 0 discriminator 2
+.LVL154:
+	.loc 1 396 0 discriminator 2
 	s32i	a13, a2, 72
-.LVL147:
-	.loc 1 361 0 discriminator 2
+.LVL155:
+	.loc 1 402 0 discriminator 2
 	call8	mbedtls_x509_write_names
-.LVL148:
-	l32r	a8, .LC26
+.LVL156:
+	l32r	a8, .LC27
 	mov.n	a13, a10
 	add.n	a8, a8, sp
 	s32i.n	a10, a8, 0
-	bltz	a10, .L68
-.LVL149:
-	.loc 1 370 0 discriminator 2
+	bltz	a10, .L75
+.LVL157:
+	.loc 1 411 0 discriminator 2
 	addi	a12, a7, 52
 	mov.n	a11, a5
 	mov.n	a10, a6
 	call8	x509_write_time$constprop$0
-.LVL150:
+.LVL158:
 	mov.n	a13, a10
 	mov.n	a4, a10
-	bltz	a10, .L68
-.LVL151:
-	.loc 1 373 0 discriminator 2
+	bltz	a10, .L75
+.LVL159:
+	.loc 1 414 0 discriminator 2
 	addi	a12, a7, 36
 	mov.n	a11, a5
 	mov.n	a10, a6
 	call8	x509_write_time$constprop$0
-.LVL152:
+.LVL160:
 	mov.n	a13, a10
-.LVL153:
-	bltz	a10, .L68
+.LVL161:
+	bltz	a10, .L75
 	add.n	a4, a4, a10
-.LVL154:
-	.loc 1 377 0 discriminator 2
+.LVL162:
+	.loc 1 418 0 discriminator 2
 	mov.n	a12, a4
 	mov.n	a11, a5
 	mov.n	a10, a6
-.LVL155:
+.LVL163:
 	call8	mbedtls_asn1_write_len
-.LVL156:
-	l32r	a9, .LC27
+.LVL164:
+	l32r	a9, .LC28
 	mov.n	a13, a10
 	add.n	a9, a9, sp
 	s32i.n	a10, a9, 0
-	bltz	a10, .L68
-	.loc 1 378 0 discriminator 2
+	bltz	a10, .L75
+	.loc 1 419 0 discriminator 2
 	movi.n	a12, 0x30
 	mov.n	a11, a5
 	mov.n	a10, a6
 	call8	mbedtls_asn1_write_tag
-.LVL157:
-	l32r	a8, .LC28
+.LVL165:
+	l32r	a8, .LC29
 	mov.n	a13, a10
 	add.n	a8, a8, sp
 	s32i.n	a10, a8, 0
-	bltz	a10, .L68
-	.loc 1 384 0 discriminator 2
+	bltz	a10, .L75
+	.loc 1 425 0 discriminator 2
 	l32i.n	a12, a7, 28
 	mov.n	a11, a5
 	mov.n	a10, a6
 	call8	mbedtls_x509_write_names
-.LVL158:
+.LVL166:
 	mov.n	a13, a10
-	bltz	a10, .L68
-	.loc 1 389 0 discriminator 2
-	l32r	a9, .LC29
+	bltz	a10, .L75
+	.loc 1 430 0 discriminator 2
+	l32r	a9, .LC30
 	l32i	a2, a2, 80
 	add.n	a9, a9, sp
 	s32i.n	a13, a9, 0
 	mov.n	a10, a2
 	call8	strlen
-.LVL159:
+.LVL167:
 	mov.n	a13, a10
 	mov.n	a12, a2
 	movi.n	a14, 0
 	mov.n	a11, a5
 	mov.n	a10, a6
 	call8	mbedtls_asn1_write_algorithm_identifier
-.LVL160:
-	l32r	a2, .LC29
+.LVL168:
+	l32r	a2, .LC30
 	mov.n	a13, a10
-.LVL161:
+.LVL169:
 	add.n	a2, a2, sp
 	l32i.n	a8, a2, 0
-	bltz	a10, .L68
-	.loc 1 356 0 discriminator 2
-	l32r	a9, .LC24
-	.loc 1 395 0 discriminator 2
+	bltz	a10, .L75
+	.loc 1 397 0 discriminator 2
+	l32r	a9, .LC25
+	.loc 1 436 0 discriminator 2
 	addi.n	a12, a7, 4
-	.loc 1 356 0 discriminator 2
+	.loc 1 397 0 discriminator 2
 	add.n	a9, a9, sp
 	l32i.n	a2, a9, 0
-	l32r	a9, .LC25
-.LVL162:
-	.loc 1 395 0 discriminator 2
-	mov.n	a11, a5
-	.loc 1 356 0 discriminator 2
-	add.n	a9, a9, sp
-.LVL163:
-	l32i.n	a9, a9, 0
-.LVL164:
-	add.n	a10, a2, a9
-.LVL165:
-	.loc 1 361 0 discriminator 2
-	l32r	a2, .LC26
-	.loc 1 377 0 discriminator 2
-	l32r	a9, .LC27
-	.loc 1 361 0 discriminator 2
-	add.n	a2, a2, sp
-	l32i.n	a2, a2, 0
-	.loc 1 377 0 discriminator 2
-	add.n	a9, a9, sp
-	.loc 1 361 0 discriminator 2
-	add.n	a10, a2, a10
-	.loc 1 378 0 discriminator 2
-	l32r	a2, .LC28
-	.loc 1 377 0 discriminator 2
-	l32i.n	a9, a9, 0
-	.loc 1 378 0 discriminator 2
-	add.n	a2, a2, sp
-	.loc 1 376 0 discriminator 2
-	add.n	a4, a10, a4
-.LVL166:
-	.loc 1 378 0 discriminator 2
-	l32i.n	a2, a2, 0
-	.loc 1 377 0 discriminator 2
-	add.n	a4, a9, a4
-	.loc 1 378 0 discriminator 2
-	add.n	a4, a2, a4
-	.loc 1 384 0 discriminator 2
-	add.n	a4, a8, a4
-	.loc 1 395 0 discriminator 2
-	mov.n	a10, a6
-	.loc 1 389 0 discriminator 2
-	add.n	a4, a13, a4
-.LVL167:
-	.loc 1 395 0 discriminator 2
-	call8	mbedtls_asn1_write_mpi
-.LVL168:
-	mov.n	a13, a10
-	bltz	a10, .L68
-	.loc 1 402 0 discriminator 2
-	l32i.n	a12, a7, 0
-	.loc 1 395 0 discriminator 2
-	add.n	a4, a10, a4
-.LVL169:
-	.loc 1 402 0 discriminator 2
-	beqz.n	a12, .L70
+	l32r	a9, .LC26
 .LVL170:
-	.loc 1 405 0
-	l32r	a2, .LC18
+	.loc 1 436 0 discriminator 2
+	mov.n	a11, a5
+	.loc 1 397 0 discriminator 2
+	add.n	a9, a9, sp
+.LVL171:
+	l32i.n	a9, a9, 0
+.LVL172:
+	add.n	a10, a2, a9
+.LVL173:
+	.loc 1 402 0 discriminator 2
+	l32r	a2, .LC27
+	.loc 1 418 0 discriminator 2
+	l32r	a9, .LC28
+	.loc 1 402 0 discriminator 2
+	add.n	a2, a2, sp
+	l32i.n	a2, a2, 0
+	.loc 1 418 0 discriminator 2
+	add.n	a9, a9, sp
+	.loc 1 402 0 discriminator 2
+	add.n	a10, a2, a10
+	.loc 1 419 0 discriminator 2
+	l32r	a2, .LC29
+	.loc 1 418 0 discriminator 2
+	l32i.n	a9, a9, 0
+	.loc 1 419 0 discriminator 2
+	add.n	a2, a2, sp
+	.loc 1 417 0 discriminator 2
+	add.n	a4, a10, a4
+.LVL174:
+	.loc 1 419 0 discriminator 2
+	l32i.n	a2, a2, 0
+	.loc 1 418 0 discriminator 2
+	add.n	a4, a9, a4
+	.loc 1 419 0 discriminator 2
+	add.n	a4, a2, a4
+	.loc 1 425 0 discriminator 2
+	add.n	a4, a8, a4
+	.loc 1 436 0 discriminator 2
+	mov.n	a10, a6
+	.loc 1 430 0 discriminator 2
+	add.n	a4, a13, a4
+.LVL175:
+	.loc 1 436 0 discriminator 2
+	call8	mbedtls_asn1_write_mpi
+.LVL176:
+	mov.n	a13, a10
+	bltz	a10, .L75
+	.loc 1 443 0 discriminator 2
+	l32i.n	a12, a7, 0
+	.loc 1 436 0 discriminator 2
+	add.n	a4, a10, a4
+.LVL177:
+	.loc 1 443 0 discriminator 2
+	beqz.n	a12, .L77
+.LVL178:
+	.loc 1 446 0
+	l32r	a2, .LC19
 	addi	a5, sp, 16
 	add.n	a2, a5, a2
 	mov.n	a11, a5
 	mov.n	a10, a2
-.LVL171:
+.LVL179:
 	call8	mbedtls_asn1_write_int
-.LVL172:
+.LVL180:
 	mov.n	a13, a10
 	mov.n	a5, a10
-	bltz	a10, .L68
-.LVL173:
-	.loc 1 407 0 discriminator 2
+	bltz	a10, .L75
+.LVL181:
+	.loc 1 448 0 discriminator 2
 	mov.n	a12, a10
 	addi	a11, sp, 16
 	mov.n	a10, a2
 	call8	mbedtls_asn1_write_len
-.LVL174:
+.LVL182:
 	mov.n	a13, a10
-.LVL175:
-	bltz	a10, .L68
-	.loc 1 406 0 discriminator 2
+.LVL183:
+	bltz	a10, .L75
+	.loc 1 447 0 discriminator 2
 	add.n	a4, a4, a5
-.LVL176:
-	.loc 1 407 0 discriminator 2
+.LVL184:
+	.loc 1 448 0 discriminator 2
 	add.n	a4, a10, a4
-.LVL177:
-	.loc 1 408 0 discriminator 2
+.LVL185:
+	.loc 1 449 0 discriminator 2
 	movi	a12, 0xa0
 	addi	a11, sp, 16
 	mov.n	a10, a2
-.LVL178:
+.LVL186:
 	call8	mbedtls_asn1_write_tag
-.LVL179:
+.LVL187:
 	mov.n	a13, a10
-	bltz	a10, .L68
+	bltz	a10, .L75
 	add.n	a4, a10, a4
-.LVL180:
-.L70:
-	.loc 1 412 0
-	l32r	a2, .LC18
+.LVL188:
+.L77:
+	.loc 1 453 0
+	l32r	a2, .LC19
 	addi	a6, sp, 16
 	add.n	a2, a6, a2
 	mov.n	a12, a4
 	mov.n	a11, a6
 	mov.n	a10, a2
-.LVL181:
+.LVL189:
 	call8	mbedtls_asn1_write_len
-.LVL182:
+.LVL190:
 	mov.n	a13, a10
 	mov.n	a5, a10
-	bltz	a10, .L68
-.LVL183:
-	.loc 1 413 0 discriminator 2
+	bltz	a10, .L75
+.LVL191:
+	.loc 1 454 0 discriminator 2
 	movi.n	a12, 0x30
 	addi	a11, sp, 16
 	mov.n	a10, a2
 	call8	mbedtls_asn1_write_tag
-.LVL184:
+.LVL192:
 	mov.n	a13, a10
-.LVL185:
-	bltz	a10, .L68
-	.loc 1 412 0 discriminator 2
+.LVL193:
+	bltz	a10, .L75
+	.loc 1 453 0 discriminator 2
 	add.n	a5, a5, a4
-	.loc 1 413 0 discriminator 2
+	.loc 1 454 0 discriminator 2
 	add.n	a5, a10, a5
-.LVL186:
-	.loc 1 419 0 discriminator 2
+.LVL194:
+	.loc 1 460 0 discriminator 2
 	l32i.n	a10, a7, 32
-.LVL187:
+.LVL195:
 	call8	mbedtls_md_info_from_type
-.LVL188:
+.LVL196:
 	addi	a8, sp, 16
 	addmi	a6, a8, 0xc00
 	l32i	a11, a6, 72
 	mov.n	a13, a6
 	mov.n	a12, a5
 	call8	mbedtls_md
-.LVL189:
+.LVL197:
 	mov.n	a13, a10
-.LVL190:
-	bnez.n	a10, .L68
-	.loc 1 425 0
-	l32r	a2, .LC23
-.LVL191:
-	l32r	a8, .LC22
-.LVL192:
+.LVL198:
+	bnez.n	a10, .L75
+	.loc 1 466 0
+	l32r	a2, .LC24
+.LVL199:
+	l32r	a8, .LC23
+.LVL200:
 	add.n	a2, a2, sp
-.LVL193:
+.LVL201:
 	l32i.n	a2, a2, 0
 	add.n	a8, a8, sp
-.LVL194:
+.LVL202:
 	s32i.n	a2, sp, 4
-.LVL195:
+.LVL203:
 	l32i.n	a8, a8, 0
 	addi	a9, sp, 16
 	s32i.n	a8, sp, 0
-	l32r	a15, .LC19
+	l32r	a15, .LC20
 	addmi	a4, a9, 0x800
 	l32i.n	a11, a7, 32
 	l32i.n	a10, a7, 20
-.LVL196:
+.LVL204:
 	add.n	a15, a9, a15
 	mov.n	a14, a4
 	mov.n	a12, a6
 	call8	mbedtls_pk_sign
-.LVL197:
+.LVL205:
 	mov.n	a13, a10
-.LVL198:
-	bnez.n	a10, .L68
-	.loc 1 434 0
-	l32r	a9, .LC21
-	.loc 1 435 0
-	l32r	a7, .LC20
-.LVL199:
-	.loc 1 434 0
+.LVL206:
+	bnez.n	a10, .L75
+	.loc 1 475 0
+	l32r	a9, .LC22
+	.loc 1 476 0
+	l32r	a7, .LC21
+.LVL207:
+	.loc 1 475 0
 	add.n	a9, a9, sp
 	l32i.n	a9, a9, 0
-	.loc 1 435 0
+	.loc 1 476 0
 	l32i	a13, a6, 76
-	.loc 1 434 0
+	.loc 1 475 0
 	add.n	a2, a3, a9
 	s32i	a2, a6, 68
-	.loc 1 435 0
+	.loc 1 476 0
 	addi	a2, sp, 16
 	add.n	a7, a2, a7
 	l32i	a15, a6, 64
@@ -1270,111 +1321,111 @@ mbedtls_x509write_crt_der:
 	mov.n	a14, a4
 	mov.n	a11, a3
 	mov.n	a10, a7
-.LVL200:
+.LVL208:
 	call8	mbedtls_x509_write_sig
-.LVL201:
+.LVL209:
 	mov.n	a2, a10
-.LVL202:
+.LVL210:
 	mov.n	a13, a10
-	bltz	a10, .L68
-.LVL203:
-	.loc 1 438 0 discriminator 2
+	bltz	a10, .L75
+.LVL211:
+	.loc 1 479 0 discriminator 2
 	l32i	a10, a6, 68
-	.loc 1 439 0 discriminator 2
+	.loc 1 480 0 discriminator 2
 	movi	a13, -0x6c
-	.loc 1 438 0 discriminator 2
+	.loc 1 479 0 discriminator 2
 	sub	a4, a10, a3
-	bltu	a4, a5, .L68
-	.loc 1 442 0
+	bltu	a4, a5, .L75
+	.loc 1 483 0
 	l32i	a11, a6, 72
-	.loc 1 441 0
+	.loc 1 482 0
 	sub	a10, a10, a5
-	.loc 1 442 0
+	.loc 1 483 0
 	mov.n	a12, a5
-	.loc 1 441 0
+	.loc 1 482 0
 	s32i	a10, a6, 68
-	.loc 1 444 0
+	.loc 1 485 0
 	add.n	a5, a5, a2
-.LVL204:
-	.loc 1 442 0
+.LVL212:
+	.loc 1 483 0
 	call8	memcpy
-.LVL205:
-	.loc 1 445 0
+.LVL213:
+	.loc 1 486 0
 	mov.n	a12, a5
 	mov.n	a11, a3
 	mov.n	a10, a7
 	call8	mbedtls_asn1_write_len
-.LVL206:
+.LVL214:
 	mov.n	a13, a10
-.LVL207:
-	bltz	a10, .L68
-.LVL208:
-	.loc 1 446 0 discriminator 2
-	l32r	a4, .LC29
+.LVL215:
+	bltz	a10, .L75
+.LVL216:
+	.loc 1 487 0 discriminator 2
+	l32r	a4, .LC30
 	movi.n	a12, 0x30
 	add.n	a4, a4, sp
 	s32i.n	a13, a4, 0
 	mov.n	a11, a3
 	mov.n	a10, a7
-.LVL209:
+.LVL217:
 	call8	mbedtls_asn1_write_tag
-.LVL210:
-	l32r	a6, .LC29
+.LVL218:
+	l32r	a6, .LC30
 	add.n	a6, a6, sp
 	l32i.n	a13, a6, 0
-	.loc 1 445 0 discriminator 2
+	.loc 1 486 0 discriminator 2
 	add.n	a13, a13, a5
-.LVL211:
-	.loc 1 449 0 discriminator 2
+.LVL219:
+	.loc 1 490 0 discriminator 2
 	add.n	a13, a10, a13
-.LVL212:
-	.loc 1 446 0 discriminator 2
-	bgez	a10, .L68
-.L99:
+.LVL220:
+	.loc 1 487 0 discriminator 2
+	bgez	a10, .L75
+.L106:
 	mov.n	a13, a10
-.LVL213:
-.L68:
-	.loc 1 450 0
+.LVL221:
+.L75:
+	.loc 1 491 0
 	mov.n	a2, a13
 	retw.n
-.LFE27:
+.LFE28:
 	.size	mbedtls_x509write_crt_der, .-mbedtls_x509write_crt_der
 	.section	.rodata.str1.1
-.LC31:
+.LC32:
 	.string	"-----END CERTIFICATE-----\n"
-.LC33:
+.LC34:
 	.string	"-----BEGIN CERTIFICATE-----\n"
 	.section	.text.mbedtls_x509write_crt_pem,"ax",@progbits
 	.literal_position
-	.literal .LC30, 4096
-	.literal .LC32, .LC31
-	.literal .LC34, .LC33
-	.literal .LC35, 4128
+	.literal .LC31, 4096
+	.literal .LC33, .LC32
+	.literal .LC35, .LC34
+	.literal .LC36, 4128
 	.align	4
 	.global	mbedtls_x509write_crt_pem
 	.type	mbedtls_x509write_crt_pem, @function
 mbedtls_x509write_crt_pem:
-.LFB28:
-	.loc 1 459 0
-.LVL214:
+.LFB29:
+	.loc 1 500 0
+.LVL222:
 	entry	sp, 4176
 .LCFI18:
-	.loc 1 462 0
+	.loc 1 503 0
 	addi	a8, sp, 16
-	.loc 1 459 0
+	.loc 1 500 0
 	mov.n	a15, a4
-	.loc 1 462 0
+	.loc 1 503 0
 	movi.n	a7, 0
 	addmi	a4, a8, 0x1000
-.LVL215:
-	.loc 1 464 0
+.LVL223:
+	.loc 1 505 0
 	mov.n	a10, a2
-	l32r	a2, .LC35
-.LVL216:
-	.loc 1 462 0
+	l32r	a2, .LC36
+.LVL224:
+	.loc 1 503 0
 	s32i.n	a7, a4, 0
-	.loc 1 464 0
-	l32r	a7, .LC30
+	.loc 1 505 0
+	l32r	a7, .LC31
 	add.n	a2, a2, sp
 	mov.n	a11, a8
 	s32i.n	a15, a2, 0
@@ -1382,28 +1433,28 @@ mbedtls_x509write_crt_pem:
 	mov.n	a13, a5
 	mov.n	a12, a7
 	call8	mbedtls_x509write_crt_der
-.LVL217:
-	l32r	a8, .LC35
+.LVL225:
+	l32r	a8, .LC36
 	add.n	a8, a8, sp
 	l32i.n	a15, a8, 0
-	bltz	a10, .L104
-	.loc 1 470 0
+	bltz	a10, .L111
+	.loc 1 511 0
 	sub	a12, a7, a10
 	mov.n	a13, a10
 	addi	a2, sp, 16
-	l32r	a11, .LC32
-	l32r	a10, .LC34
-.LVL218:
+	l32r	a11, .LC33
+	l32r	a10, .LC35
+.LVL226:
 	s32i.n	a4, sp, 0
 	mov.n	a14, a3
 	add.n	a12, a2, a12
 	call8	mbedtls_pem_write_buffer
-.LVL219:
-.L104:
-	.loc 1 478 0
+.LVL227:
+.L111:
+	.loc 1 519 0
 	mov.n	a2, a10
 	retw.n
-.LFE28:
+.LFE29:
 	.size	mbedtls_x509write_crt_pem, .-mbedtls_x509write_crt_pem
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -1424,10 +1475,10 @@ mbedtls_x509write_crt_pem:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI0-.LFB29
+	.4byte	.LCFI0-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1604,10 +1655,10 @@ mbedtls_x509write_crt_pem:
 	.4byte	.LEFDE30-.LASFDE30
 .LASFDE30:
 	.4byte	.Lframe0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB25
+	.4byte	.LFE25-.LFB25
 	.byte	0x4
-	.4byte	.LCFI15-.LFB24
+	.4byte	.LCFI15-.LFB25
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1616,10 +1667,10 @@ mbedtls_x509write_crt_pem:
 	.4byte	.LEFDE32-.LASFDE32
 .LASFDE32:
 	.4byte	.Lframe0
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.byte	0x4
-	.4byte	.LCFI16-.LFB25
+	.4byte	.LCFI16-.LFB26
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -1628,10 +1679,10 @@ mbedtls_x509write_crt_pem:
 	.4byte	.LEFDE34-.LASFDE34
 .LASFDE34:
 	.4byte	.Lframe0
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI17-.LFB27
+	.4byte	.LCFI17-.LFB28
 	.byte	0xe
 	.uleb128 0xcc0
 	.align	4
@@ -1640,10 +1691,10 @@ mbedtls_x509write_crt_pem:
 	.4byte	.LEFDE36-.LASFDE36
 .LASFDE36:
 	.4byte	.Lframe0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI18-.LFB28
+	.4byte	.LCFI18-.LFB29
 	.byte	0xe
 	.uleb128 0x1050
 	.align	4
@@ -1667,15 +1718,15 @@ mbedtls_x509write_crt_pem:
 	.file 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pem.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x1650
+	.4byte	0x170e
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF126
+	.4byte	.LASF132
 	.byte	0xc
-	.4byte	.LASF127
-	.4byte	.LASF128
+	.4byte	.LASF133
+	.4byte	.LASF134
 	.4byte	.Ldebug_ranges0+0
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -1762,30 +1813,30 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x2
 	.4byte	.LASF14
 	.byte	0x5
-	.byte	0xa8
+	.byte	0xad
 	.4byte	0xb2
 	.uleb128 0xa
 	.4byte	.LASF15
 	.byte	0xc
 	.byte	0x5
-	.byte	0xb6
+	.byte	0xbb
 	.4byte	0xf3
 	.uleb128 0xb
 	.string	"s"
 	.byte	0x5
-	.byte	0xb8
+	.byte	0xbd
 	.4byte	0x3e
 	.byte	0
 	.uleb128 0xb
 	.string	"n"
 	.byte	0x5
-	.byte	0xb9
+	.byte	0xbe
 	.4byte	0x25
 	.byte	0x4
 	.uleb128 0xb
 	.string	"p"
 	.byte	0x5
-	.byte	0xba
+	.byte	0xbf
 	.4byte	0xf3
 	.byte	0x8
 	.byte	0
@@ -1795,7 +1846,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x2
 	.4byte	.LASF15
 	.byte	0x5
-	.byte	0xbc
+	.byte	0xc1
 	.4byte	0xc8
 	.uleb128 0xa
 	.4byte	.LASF16
@@ -1870,7 +1921,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0x4
 	.4byte	0x30
 	.byte	0x7
-	.byte	0x38
+	.byte	0x3a
 	.4byte	0x1d5
 	.uleb128 0xe
 	.4byte	.LASF20
@@ -1906,13 +1957,13 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x2
 	.4byte	.LASF30
 	.byte	0x7
-	.byte	0x43
+	.byte	0x45
 	.4byte	0x18c
 	.uleb128 0xd
 	.byte	0x4
 	.4byte	0x30
 	.byte	0x8
-	.byte	0x4c
+	.byte	0x4e
 	.4byte	0x217
 	.uleb128 0xe
 	.4byte	.LASF31
@@ -1939,12 +1990,12 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x2
 	.4byte	.LASF38
 	.byte	0x8
-	.byte	0x54
+	.byte	0x56
 	.4byte	0x1e0
 	.uleb128 0x2
 	.4byte	.LASF39
 	.byte	0x8
-	.byte	0x7b
+	.byte	0x7d
 	.4byte	0x22d
 	.uleb128 0xf
 	.4byte	.LASF39
@@ -1952,18 +2003,18 @@ mbedtls_x509write_crt_pem:
 	.4byte	.LASF40
 	.byte	0x8
 	.byte	0x8
-	.byte	0x80
+	.byte	0x82
 	.4byte	0x257
 	.uleb128 0xc
 	.4byte	.LASF41
 	.byte	0x8
-	.byte	0x82
+	.byte	0x84
 	.4byte	0x257
 	.byte	0
 	.uleb128 0xc
 	.4byte	.LASF42
 	.byte	0x8
-	.byte	0x83
+	.byte	0x85
 	.4byte	0x91
 	.byte	0x4
 	.byte	0
@@ -1975,7 +2026,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x2
 	.4byte	.LASF40
 	.byte	0x8
-	.byte	0x84
+	.byte	0x86
 	.4byte	0x232
 	.uleb128 0x8
 	.byte	0x4
@@ -2088,82 +2139,82 @@ mbedtls_x509write_crt_pem:
 	.byte	0x3f
 	.byte	0
 	.uleb128 0x12
-	.4byte	.LASF129
+	.4byte	.LASF135
 	.byte	0x1
-	.byte	0x7d
+	.byte	0x87
 	.4byte	0x3e
 	.byte	0x1
 	.4byte	0x3a6
 	.uleb128 0x13
 	.string	"ctx"
 	.byte	0x1
-	.byte	0x7d
+	.byte	0x87
 	.4byte	0x3a6
 	.uleb128 0x13
 	.string	"oid"
 	.byte	0x1
-	.byte	0x7e
+	.byte	0x88
 	.4byte	0xa7
 	.uleb128 0x14
 	.4byte	.LASF54
 	.byte	0x1
-	.byte	0x7e
+	.byte	0x88
 	.4byte	0x25
 	.uleb128 0x14
 	.4byte	.LASF55
 	.byte	0x1
-	.byte	0x7f
+	.byte	0x89
 	.4byte	0x3e
 	.uleb128 0x13
 	.string	"val"
 	.byte	0x1
-	.byte	0x80
+	.byte	0x8a
 	.4byte	0x26d
 	.uleb128 0x14
 	.4byte	.LASF56
 	.byte	0x1
-	.byte	0x80
+	.byte	0x8a
 	.4byte	0x25
 	.byte	0
 	.uleb128 0x8
 	.byte	0x4
 	.4byte	0x338
 	.uleb128 0x15
-	.4byte	.LASF130
+	.4byte	.LASF76
 	.byte	0x1
-	.2byte	0x10c
+	.2byte	0x135
 	.4byte	0x3e
 	.byte	0x1
 	.4byte	0x402
 	.uleb128 0x16
 	.string	"p"
 	.byte	0x1
-	.2byte	0x10c
+	.2byte	0x135
 	.4byte	0x402
 	.uleb128 0x17
 	.4byte	.LASF57
 	.byte	0x1
-	.2byte	0x10c
+	.2byte	0x135
 	.4byte	0x9a
 	.uleb128 0x16
 	.string	"t"
 	.byte	0x1
-	.2byte	0x10d
+	.2byte	0x136
 	.4byte	0xa7
 	.uleb128 0x17
 	.4byte	.LASF58
 	.byte	0x1
-	.2byte	0x10d
+	.2byte	0x136
 	.4byte	0x25
 	.uleb128 0x18
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x10f
+	.2byte	0x138
 	.4byte	0x3e
 	.uleb128 0x18
 	.string	"len"
 	.byte	0x1
-	.2byte	0x110
+	.2byte	0x139
 	.4byte	0x25
 	.byte	0
 	.uleb128 0x8
@@ -2171,8 +2222,8 @@ mbedtls_x509write_crt_pem:
 	.4byte	0x9a
 	.uleb128 0x19
 	.4byte	0x3ac
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x4ea
@@ -2197,7 +2248,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0xf
 	.uleb128 0x1e
 	.4byte	.LVL4
-	.4byte	0x14f5
+	.4byte	0x15b1
 	.4byte	0x474
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -2228,7 +2279,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL6
-	.4byte	0x1500
+	.4byte	0x15bc
 	.4byte	0x494
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -2251,7 +2302,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL9
-	.4byte	0x14f5
+	.4byte	0x15b1
 	.4byte	0x4b3
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -2273,7 +2324,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL11
-	.4byte	0x1500
+	.4byte	0x15bc
 	.4byte	0x4d3
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -2296,7 +2347,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL14
-	.4byte	0x150b
+	.4byte	0x15c7
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2314,7 +2365,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x21
 	.4byte	.LASF59
 	.byte	0x1
-	.byte	0x30
+	.byte	0x3a
 	.4byte	.LFB10
 	.4byte	.LFE10-.LFB10
 	.uleb128 0x1
@@ -2323,13 +2374,13 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x22
 	.string	"ctx"
 	.byte	0x1
-	.byte	0x30
+	.byte	0x3a
 	.4byte	0x3a6
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x1e
 	.4byte	.LVL18
-	.4byte	0x1516
+	.4byte	0x15d2
 	.4byte	0x52b
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -2351,7 +2402,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL19
-	.4byte	0x151f
+	.4byte	0x15db
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2363,7 +2414,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x21
 	.4byte	.LASF60
 	.byte	0x1
-	.byte	0x38
+	.byte	0x42
 	.4byte	.LFB11
 	.4byte	.LFE11-.LFB11
 	.uleb128 0x1
@@ -2372,13 +2423,13 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x22
 	.string	"ctx"
 	.byte	0x1
-	.byte	0x38
+	.byte	0x42
 	.4byte	0x3a6
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x1e
 	.4byte	.LVL21
-	.4byte	0x152a
+	.4byte	0x15e6
 	.4byte	0x572
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -2389,7 +2440,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL22
-	.4byte	0x1535
+	.4byte	0x15f1
 	.4byte	0x586
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -2400,7 +2451,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL23
-	.4byte	0x1535
+	.4byte	0x15f1
 	.4byte	0x59a
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -2411,7 +2462,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL24
-	.4byte	0x1535
+	.4byte	0x15f1
 	.4byte	0x5af
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -2422,7 +2473,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL25
-	.4byte	0x1541
+	.4byte	0x15fd
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2440,7 +2491,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x21
 	.4byte	.LASF61
 	.byte	0x1
-	.byte	0x43
+	.byte	0x4d
 	.4byte	.LFB12
 	.4byte	.LFE12-.LFB12
 	.uleb128 0x1
@@ -2449,14 +2500,14 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x22
 	.string	"ctx"
 	.byte	0x1
-	.byte	0x43
+	.byte	0x4d
 	.4byte	0x3a6
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x23
 	.4byte	.LASF44
 	.byte	0x1
-	.byte	0x43
+	.byte	0x4d
 	.4byte	0x3e
 	.uleb128 0x1
 	.byte	0x53
@@ -2464,7 +2515,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x21
 	.4byte	.LASF62
 	.byte	0x1
-	.byte	0x48
+	.byte	0x52
 	.4byte	.LFB13
 	.4byte	.LFE13-.LFB13
 	.uleb128 0x1
@@ -2473,14 +2524,14 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x22
 	.string	"ctx"
 	.byte	0x1
-	.byte	0x48
+	.byte	0x52
 	.4byte	0x3a6
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x23
 	.4byte	.LASF50
 	.byte	0x1
-	.byte	0x48
+	.byte	0x52
 	.4byte	0x1d5
 	.uleb128 0x1
 	.byte	0x53
@@ -2488,7 +2539,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x21
 	.4byte	.LASF63
 	.byte	0x1
-	.byte	0x4d
+	.byte	0x57
 	.4byte	.LFB14
 	.4byte	.LFE14-.LFB14
 	.uleb128 0x1
@@ -2497,14 +2548,14 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x22
 	.string	"ctx"
 	.byte	0x1
-	.byte	0x4d
+	.byte	0x57
 	.4byte	0x3a6
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x22
 	.string	"key"
 	.byte	0x1
-	.byte	0x4d
+	.byte	0x57
 	.4byte	0x31c
 	.uleb128 0x1
 	.byte	0x53
@@ -2512,7 +2563,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x21
 	.4byte	.LASF64
 	.byte	0x1
-	.byte	0x52
+	.byte	0x5c
 	.4byte	.LFB15
 	.4byte	.LFE15-.LFB15
 	.uleb128 0x1
@@ -2521,14 +2572,14 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x22
 	.string	"ctx"
 	.byte	0x1
-	.byte	0x52
+	.byte	0x5c
 	.4byte	0x3a6
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x22
 	.string	"key"
 	.byte	0x1
-	.byte	0x52
+	.byte	0x5c
 	.4byte	0x31c
 	.uleb128 0x1
 	.byte	0x53
@@ -2536,7 +2587,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x24
 	.4byte	.LASF66
 	.byte	0x1
-	.byte	0x57
+	.byte	0x61
 	.4byte	0x3e
 	.4byte	.LFB16
 	.4byte	.LFE16-.LFB16
@@ -2546,19 +2597,19 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x25
 	.string	"ctx"
 	.byte	0x1
-	.byte	0x57
+	.byte	0x61
 	.4byte	0x3a6
 	.4byte	.LLST4
 	.uleb128 0x23
 	.4byte	.LASF65
 	.byte	0x1
-	.byte	0x58
+	.byte	0x62
 	.4byte	0xa7
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x20
 	.4byte	.LVL31
-	.4byte	0x154c
+	.4byte	0x1608
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2576,7 +2627,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x24
 	.4byte	.LASF67
 	.byte	0x1
-	.byte	0x5d
+	.byte	0x67
 	.4byte	0x3e
 	.4byte	.LFB17
 	.4byte	.LFE17-.LFB17
@@ -2586,19 +2637,19 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x25
 	.string	"ctx"
 	.byte	0x1
-	.byte	0x5d
+	.byte	0x67
 	.4byte	0x3a6
 	.4byte	.LLST5
 	.uleb128 0x23
 	.4byte	.LASF68
 	.byte	0x1
-	.byte	0x5e
+	.byte	0x68
 	.4byte	0xa7
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x20
 	.4byte	.LVL34
-	.4byte	0x154c
+	.4byte	0x1608
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2616,7 +2667,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x24
 	.4byte	.LASF69
 	.byte	0x1
-	.byte	0x63
+	.byte	0x6d
 	.4byte	0x3e
 	.4byte	.LFB18
 	.4byte	.LFE18-.LFB18
@@ -2626,26 +2677,26 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x25
 	.string	"ctx"
 	.byte	0x1
-	.byte	0x63
+	.byte	0x6d
 	.4byte	0x3a6
 	.4byte	.LLST6
 	.uleb128 0x23
 	.4byte	.LASF45
 	.byte	0x1
-	.byte	0x63
+	.byte	0x6d
 	.4byte	0x777
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x26
 	.string	"ret"
 	.byte	0x1
-	.byte	0x65
+	.byte	0x6f
 	.4byte	0x3e
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x20
 	.4byte	.LVL37
-	.4byte	0x1558
+	.4byte	0x1614
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2668,7 +2719,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x24
 	.4byte	.LASF70
 	.byte	0x1
-	.byte	0x6d
+	.byte	0x77
 	.4byte	0x3e
 	.4byte	.LFB19
 	.4byte	.LFE19-.LFB19
@@ -2678,26 +2729,26 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x25
 	.string	"ctx"
 	.byte	0x1
-	.byte	0x6d
+	.byte	0x77
 	.4byte	0x3a6
 	.4byte	.LLST7
 	.uleb128 0x23
 	.4byte	.LASF51
 	.byte	0x1
-	.byte	0x6d
+	.byte	0x77
 	.4byte	0xa7
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x23
 	.4byte	.LASF52
 	.byte	0x1
-	.byte	0x6e
+	.byte	0x78
 	.4byte	0xa7
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x1e
 	.4byte	.LVL40
-	.4byte	0x1563
+	.4byte	0x1620
 	.4byte	0x7d8
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -2708,7 +2759,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL41
-	.4byte	0x1563
+	.4byte	0x1620
 	.4byte	0x7ec
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -2719,7 +2770,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL42
-	.4byte	0x156e
+	.4byte	0x162b
 	.4byte	0x80b
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -2741,7 +2792,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL43
-	.4byte	0x156e
+	.4byte	0x162b
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2793,7 +2844,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0x57
 	.uleb128 0x20
 	.4byte	.LVL46
-	.4byte	0x1579
+	.4byte	0x1636
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2835,7 +2886,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x24
 	.4byte	.LASF71
 	.byte	0x1
-	.byte	0x86
+	.byte	0x90
 	.4byte	0x3e
 	.4byte	.LFB21
 	.4byte	.LFE21-.LFB21
@@ -2845,31 +2896,31 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x25
 	.string	"ctx"
 	.byte	0x1
-	.byte	0x86
+	.byte	0x90
 	.4byte	0x3a6
 	.4byte	.LLST9
 	.uleb128 0x27
 	.4byte	.LASF72
 	.byte	0x1
-	.byte	0x87
+	.byte	0x91
 	.4byte	0x3e
 	.4byte	.LLST10
 	.uleb128 0x27
 	.4byte	.LASF73
 	.byte	0x1
-	.byte	0x87
+	.byte	0x91
 	.4byte	0x3e
 	.4byte	.LLST11
 	.uleb128 0x28
 	.string	"ret"
 	.byte	0x1
-	.byte	0x89
+	.byte	0x93
 	.4byte	0x3e
 	.4byte	.LLST12
 	.uleb128 0x26
 	.string	"buf"
 	.byte	0x1
-	.byte	0x8a
+	.byte	0x94
 	.4byte	0xa1c
 	.uleb128 0x2
 	.byte	0x91
@@ -2877,7 +2928,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x26
 	.string	"c"
 	.byte	0x1
-	.byte	0x8b
+	.byte	0x95
 	.4byte	0x9a
 	.uleb128 0x2
 	.byte	0x91
@@ -2885,7 +2936,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x28
 	.string	"len"
 	.byte	0x1
-	.byte	0x8c
+	.byte	0x96
 	.4byte	0x25
 	.4byte	.LLST13
 	.uleb128 0x29
@@ -2893,7 +2944,7 @@ mbedtls_x509write_crt_pem:
 	.4byte	.LBB12
 	.4byte	.LBE12-.LBB12
 	.byte	0x1
-	.byte	0xa0
+	.byte	0xaa
 	.4byte	0x982
 	.uleb128 0x1a
 	.4byte	0x39a
@@ -2915,7 +2966,7 @@ mbedtls_x509write_crt_pem:
 	.4byte	.LLST19
 	.uleb128 0x20
 	.4byte	.LVL64
-	.4byte	0x1579
+	.4byte	0x1636
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2942,7 +2993,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL50
-	.4byte	0x1516
+	.4byte	0x15d2
 	.4byte	0x9a0
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -2963,7 +3014,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL51
-	.4byte	0x1585
+	.4byte	0x1642
 	.4byte	0x9c0
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -2986,7 +3037,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL56
-	.4byte	0x1590
+	.4byte	0x164d
 	.4byte	0x9df
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -3008,7 +3059,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL58
-	.4byte	0x1500
+	.4byte	0x15bc
 	.4byte	0x9ff
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -3031,7 +3082,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL61
-	.4byte	0x150b
+	.4byte	0x15c7
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -3062,7 +3113,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x24
 	.4byte	.LASF74
 	.byte	0x1
-	.byte	0xa6
+	.byte	0xb0
 	.4byte	0x3e
 	.4byte	.LFB22
 	.4byte	.LFE22-.LFB22
@@ -3072,19 +3123,19 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x25
 	.string	"ctx"
 	.byte	0x1
-	.byte	0xa6
+	.byte	0xb0
 	.4byte	0x3a6
 	.4byte	.LLST20
 	.uleb128 0x28
 	.string	"ret"
 	.byte	0x1
-	.byte	0xa8
+	.byte	0xb2
 	.4byte	0x3e
 	.4byte	.LLST21
 	.uleb128 0x26
 	.string	"buf"
 	.byte	0x1
-	.byte	0xa9
+	.byte	0xb3
 	.4byte	0xb95
 	.uleb128 0x3
 	.byte	0x91
@@ -3092,7 +3143,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x26
 	.string	"c"
 	.byte	0x1
-	.byte	0xaa
+	.byte	0xb4
 	.4byte	0x9a
 	.uleb128 0x2
 	.byte	0x91
@@ -3100,7 +3151,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x28
 	.string	"len"
 	.byte	0x1
-	.byte	0xab
+	.byte	0xb5
 	.4byte	0x25
 	.4byte	.LLST22
 	.uleb128 0x29
@@ -3108,7 +3159,7 @@ mbedtls_x509write_crt_pem:
 	.4byte	.LBB14
 	.4byte	.LBE14-.LBB14
 	.byte	0x1
-	.byte	0xba
+	.byte	0xc4
 	.4byte	0xafc
 	.uleb128 0x1a
 	.4byte	0x39a
@@ -3130,7 +3181,7 @@ mbedtls_x509write_crt_pem:
 	.4byte	.LLST28
 	.uleb128 0x20
 	.4byte	.LVL79
-	.4byte	0x1579
+	.4byte	0x1636
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -3158,7 +3209,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL68
-	.4byte	0x1516
+	.4byte	0x15d2
 	.4byte	0xb1c
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -3180,7 +3231,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL69
-	.4byte	0x159b
+	.4byte	0x1658
 	.4byte	0xb37
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -3197,7 +3248,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL72
-	.4byte	0x15a7
+	.4byte	0x1664
 	.4byte	0xb58
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -3220,7 +3271,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL74
-	.4byte	0x1500
+	.4byte	0x15bc
 	.4byte	0xb78
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -3242,7 +3293,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL76
-	.4byte	0x150b
+	.4byte	0x15c7
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -3272,7 +3323,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x24
 	.4byte	.LASF75
 	.byte	0x1
-	.byte	0xbf
+	.byte	0xc9
 	.4byte	0x3e
 	.4byte	.LFB23
 	.4byte	.LFE23-.LFB23
@@ -3282,19 +3333,19 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x25
 	.string	"ctx"
 	.byte	0x1
-	.byte	0xbf
+	.byte	0xc9
 	.4byte	0x3a6
 	.4byte	.LLST29
 	.uleb128 0x28
 	.string	"ret"
 	.byte	0x1
-	.byte	0xc1
+	.byte	0xcb
 	.4byte	0x3e
 	.4byte	.LLST30
 	.uleb128 0x26
 	.string	"buf"
 	.byte	0x1
-	.byte	0xc2
+	.byte	0xcc
 	.4byte	0xb95
 	.uleb128 0x3
 	.byte	0x91
@@ -3302,7 +3353,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x26
 	.string	"c"
 	.byte	0x1
-	.byte	0xc3
+	.byte	0xcd
 	.4byte	0x9a
 	.uleb128 0x2
 	.byte	0x91
@@ -3310,7 +3361,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x28
 	.string	"len"
 	.byte	0x1
-	.byte	0xc4
+	.byte	0xce
 	.4byte	0x25
 	.4byte	.LLST31
 	.uleb128 0x29
@@ -3318,7 +3369,7 @@ mbedtls_x509write_crt_pem:
 	.4byte	.LBB16
 	.4byte	.LBE16-.LBB16
 	.byte	0x1
-	.byte	0xd7
+	.byte	0xe1
 	.4byte	0xc76
 	.uleb128 0x1a
 	.4byte	0x39a
@@ -3340,7 +3391,7 @@ mbedtls_x509write_crt_pem:
 	.4byte	.LLST37
 	.uleb128 0x20
 	.4byte	.LVL99
-	.4byte	0x1579
+	.4byte	0x1636
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -3368,7 +3419,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL83
-	.4byte	0x1516
+	.4byte	0x15d2
 	.4byte	0xc96
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -3390,7 +3441,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL84
-	.4byte	0x159b
+	.4byte	0x1658
 	.4byte	0xcb1
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -3407,7 +3458,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL87
-	.4byte	0x15a7
+	.4byte	0x1664
 	.4byte	0xcd2
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -3430,7 +3481,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL89
-	.4byte	0x1500
+	.4byte	0x15bc
 	.4byte	0xcf2
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -3452,7 +3503,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL91
-	.4byte	0x150b
+	.4byte	0x15c7
 	.4byte	0xd13
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -3475,7 +3526,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL94
-	.4byte	0x1500
+	.4byte	0x15bc
 	.4byte	0xd34
 	.uleb128 0x1f
 	.uleb128 0x1
@@ -3498,7 +3549,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL96
-	.4byte	0x150b
+	.4byte	0x15c7
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -3519,33 +3570,56 @@ mbedtls_x509write_crt_pem:
 	.byte	0x30
 	.byte	0
 	.byte	0
-	.uleb128 0x24
-	.4byte	.LASF76
+	.uleb128 0x2b
+	.4byte	.LASF77
 	.byte	0x1
-	.byte	0xdd
+	.byte	0xe7
+	.4byte	0x25
+	.byte	0x1
+	.4byte	0xd84
+	.uleb128 0x14
+	.4byte	.LASF78
+	.byte	0x1
+	.byte	0xe7
+	.4byte	0x4c
+	.uleb128 0x14
+	.4byte	.LASF79
+	.byte	0x1
+	.byte	0xe8
+	.4byte	0x25
+	.uleb128 0x2c
+	.4byte	.LASF80
+	.byte	0x1
+	.byte	0xea
+	.4byte	0x25
+	.byte	0
+	.uleb128 0x24
+	.4byte	.LASF81
+	.byte	0x1
+	.byte	0xf4
 	.4byte	0x3e
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB25
+	.4byte	.LFE25-.LFB25
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xe53
+	.4byte	0xec8
 	.uleb128 0x25
 	.string	"ctx"
 	.byte	0x1
-	.byte	0xdd
+	.byte	0xf4
 	.4byte	0x3a6
 	.4byte	.LLST38
 	.uleb128 0x23
-	.4byte	.LASF77
+	.4byte	.LASF82
 	.byte	0x1
-	.byte	0xde
+	.byte	0xf5
 	.4byte	0x30
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x26
 	.string	"buf"
 	.byte	0x1
-	.byte	0xe0
+	.byte	0xf7
 	.4byte	0x7a
 	.uleb128 0x2
 	.byte	0x91
@@ -3553,7 +3627,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x26
 	.string	"ku"
 	.byte	0x1
-	.byte	0xe0
+	.byte	0xf7
 	.4byte	0x4c
 	.uleb128 0x2
 	.byte	0x91
@@ -3561,7 +3635,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x26
 	.string	"c"
 	.byte	0x1
-	.byte	0xe1
+	.byte	0xf8
 	.4byte	0x9a
 	.uleb128 0x2
 	.byte	0x91
@@ -3569,37 +3643,71 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x28
 	.string	"ret"
 	.byte	0x1
-	.byte	0xe2
+	.byte	0xf9
 	.4byte	0x3e
 	.4byte	.LLST39
-	.uleb128 0x29
-	.4byte	0x353
-	.4byte	.LBB18
-	.4byte	.LBE18-.LBB18
+	.uleb128 0x2d
+	.4byte	.LASF80
 	.byte	0x1
-	.byte	0xee
-	.4byte	0xe31
+	.byte	0xfa
+	.4byte	0x25
+	.uleb128 0x1
+	.byte	0x58
+	.uleb128 0x2e
+	.4byte	.LASF83
+	.byte	0x1
+	.byte	0xfb
+	.4byte	0xec8
+	.byte	0xfe
+	.uleb128 0x2f
+	.4byte	0xd52
+	.4byte	.LBB22
+	.4byte	.LBE22-.LBB22
+	.byte	0x1
+	.2byte	0x109
+	.4byte	0xe42
 	.uleb128 0x1a
-	.4byte	0x39a
+	.4byte	0xd6d
 	.4byte	.LLST40
 	.uleb128 0x1a
-	.4byte	0x38f
+	.4byte	0xd62
 	.4byte	.LLST41
-	.uleb128 0x1a
-	.4byte	0x384
+	.uleb128 0x30
+	.4byte	.LBB23
+	.4byte	.LBE23-.LBB23
+	.uleb128 0x1c
+	.4byte	0xd78
 	.4byte	.LLST42
+	.byte	0
+	.byte	0
+	.uleb128 0x2f
+	.4byte	0x353
+	.4byte	.LBB24
+	.4byte	.LBE24-.LBB24
+	.byte	0x1
+	.2byte	0x111
+	.4byte	0xeb1
 	.uleb128 0x1a
-	.4byte	0x379
+	.4byte	0x39a
 	.4byte	.LLST43
 	.uleb128 0x1a
-	.4byte	0x36e
+	.4byte	0x38f
 	.4byte	.LLST44
 	.uleb128 0x1a
-	.4byte	0x363
+	.4byte	0x384
 	.4byte	.LLST45
+	.uleb128 0x1a
+	.4byte	0x379
+	.4byte	.LLST46
+	.uleb128 0x1a
+	.4byte	0x36e
+	.4byte	.LLST47
+	.uleb128 0x1a
+	.4byte	0x363
+	.4byte	.LLST48
 	.uleb128 0x20
-	.4byte	.LVL106
-	.4byte	0x1579
+	.4byte	.LVL109
+	.4byte	0x1636
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -3611,7 +3719,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0x5b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC11
+	.4byte	.LC12
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5c
@@ -3622,23 +3730,11 @@ mbedtls_x509write_crt_pem:
 	.byte	0x5d
 	.uleb128 0x1
 	.byte	0x31
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5e
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 -48
 	.byte	0
 	.byte	0
 	.uleb128 0x20
-	.4byte	.LVL102
-	.4byte	0x15b3
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 -44
+	.4byte	.LVL106
+	.4byte	0x1670
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5b
@@ -3651,86 +3747,110 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -40
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5d
-	.uleb128 0x1
-	.byte	0x37
 	.byte	0
 	.byte	0
-	.uleb128 0x24
-	.4byte	.LASF78
+	.uleb128 0x9
+	.4byte	0x30
+	.uleb128 0x31
+	.4byte	.LASF84
 	.byte	0x1
-	.byte	0xf7
+	.2byte	0x11a
 	.4byte	0x3e
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xf48
-	.uleb128 0x25
+	.4byte	0x1004
+	.uleb128 0x32
 	.string	"ctx"
 	.byte	0x1
-	.byte	0xf7
+	.2byte	0x11a
 	.4byte	0x3a6
-	.4byte	.LLST46
-	.uleb128 0x23
-	.4byte	.LASF79
+	.4byte	.LLST49
+	.uleb128 0x33
+	.4byte	.LASF85
 	.byte	0x1
-	.byte	0xf8
+	.2byte	0x11b
 	.4byte	0x4c
-	.uleb128 0x1
-	.byte	0x53
-	.uleb128 0x26
+	.4byte	.LLST50
+	.uleb128 0x34
 	.string	"buf"
 	.byte	0x1
-	.byte	0xfa
+	.2byte	0x11d
 	.4byte	0x7a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
-	.uleb128 0x26
+	.uleb128 0x34
 	.string	"c"
 	.byte	0x1
-	.byte	0xfb
+	.2byte	0x11e
 	.4byte	0x9a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -60
-	.uleb128 0x28
+	.uleb128 0x35
+	.4byte	.LASF80
+	.byte	0x1
+	.2byte	0x11f
+	.4byte	0x25
+	.uleb128 0x1
+	.byte	0x58
+	.uleb128 0x36
 	.string	"ret"
 	.byte	0x1
-	.byte	0xfc
+	.2byte	0x120
 	.4byte	0x3e
-	.4byte	.LLST47
-	.uleb128 0x2b
-	.4byte	0x353
-	.4byte	.LBB20
-	.4byte	.LBE20-.LBB20
+	.4byte	.LLST51
+	.uleb128 0x2f
+	.4byte	0xd52
+	.4byte	.LBB30
+	.4byte	.LBE30-.LBB30
 	.byte	0x1
-	.2byte	0x103
-	.4byte	0xf26
+	.2byte	0x124
+	.4byte	0xf78
+	.uleb128 0x1d
+	.4byte	0xd6d
+	.byte	0
+	.uleb128 0x1a
+	.4byte	0xd62
+	.4byte	.LLST52
+	.uleb128 0x30
+	.4byte	.LBB31
+	.4byte	.LBE31-.LBB31
+	.uleb128 0x1c
+	.4byte	0xd78
+	.4byte	.LLST53
+	.byte	0
+	.byte	0
+	.uleb128 0x2f
+	.4byte	0x353
+	.4byte	.LBB32
+	.4byte	.LBE32-.LBB32
+	.byte	0x1
+	.2byte	0x12c
+	.4byte	0xfed
 	.uleb128 0x1a
 	.4byte	0x39a
-	.4byte	.LLST48
+	.4byte	.LLST54
 	.uleb128 0x1a
 	.4byte	0x38f
-	.4byte	.LLST49
+	.4byte	.LLST55
 	.uleb128 0x1a
 	.4byte	0x384
-	.4byte	.LLST50
+	.4byte	.LLST56
 	.uleb128 0x1a
 	.4byte	0x379
-	.4byte	.LLST51
+	.4byte	.LLST57
 	.uleb128 0x1a
 	.4byte	0x36e
-	.4byte	.LLST52
+	.4byte	.LLST58
 	.uleb128 0x1a
 	.4byte	0x363
-	.4byte	.LLST53
+	.4byte	.LLST59
 	.uleb128 0x20
-	.4byte	.LVL113
-	.4byte	0x1579
+	.4byte	.LVL121
+	.4byte	0x1636
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -3742,7 +3862,7 @@ mbedtls_x509write_crt_pem:
 	.byte	0x5b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC13
+	.4byte	.LC14
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5c
@@ -3755,21 +3875,15 @@ mbedtls_x509write_crt_pem:
 	.byte	0x30
 	.uleb128 0x1f
 	.uleb128 0x1
-	.byte	0x5e
+	.byte	0x5f
 	.uleb128 0x2
-	.byte	0x91
-	.sleb128 -64
+	.byte	0x73
+	.sleb128 3
 	.byte	0
 	.byte	0
 	.uleb128 0x20
-	.4byte	.LVL109
-	.4byte	0x15b3
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 -60
+	.4byte	.LVL117
+	.4byte	0x1670
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5b
@@ -3782,158 +3896,153 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5d
-	.uleb128 0x1
-	.byte	0x38
 	.byte	0
 	.byte	0
-	.uleb128 0x2c
-	.4byte	.LASF80
+	.uleb128 0x31
+	.4byte	.LASF86
 	.byte	0x1
-	.2byte	0x129
+	.2byte	0x152
 	.4byte	0x3e
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x13d7
-	.uleb128 0x2d
+	.4byte	0x1493
+	.uleb128 0x32
 	.string	"ctx"
 	.byte	0x1
-	.2byte	0x129
+	.2byte	0x152
 	.4byte	0x3a6
-	.4byte	.LLST54
-	.uleb128 0x2e
+	.4byte	.LLST60
+	.uleb128 0x37
 	.string	"buf"
 	.byte	0x1
-	.2byte	0x129
+	.2byte	0x152
 	.4byte	0x9a
 	.uleb128 0x1
 	.byte	0x53
-	.uleb128 0x2f
+	.uleb128 0x33
 	.4byte	.LASF58
 	.byte	0x1
-	.2byte	0x129
+	.2byte	0x152
 	.4byte	0x25
-	.4byte	.LLST55
-	.uleb128 0x2f
-	.4byte	.LASF81
+	.4byte	.LLST61
+	.uleb128 0x33
+	.4byte	.LASF87
 	.byte	0x1
-	.2byte	0x12a
+	.2byte	0x153
 	.4byte	0x278
-	.4byte	.LLST56
-	.uleb128 0x2f
-	.4byte	.LASF82
+	.4byte	.LLST62
+	.uleb128 0x33
+	.4byte	.LASF88
 	.byte	0x1
-	.2byte	0x12b
+	.2byte	0x154
 	.4byte	0x91
-	.4byte	.LLST57
-	.uleb128 0x30
+	.4byte	.LLST63
+	.uleb128 0x36
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x12d
+	.2byte	0x156
 	.4byte	0x3e
-	.4byte	.LLST58
-	.uleb128 0x31
-	.4byte	.LASF83
+	.4byte	.LLST64
+	.uleb128 0x35
+	.4byte	.LASF89
 	.byte	0x1
-	.2byte	0x12e
+	.2byte	0x157
 	.4byte	0xa7
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -96
-	.uleb128 0x31
-	.4byte	.LASF84
+	.uleb128 0x35
+	.4byte	.LASF90
 	.byte	0x1
-	.2byte	0x12f
+	.2byte	0x158
 	.4byte	0x25
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -100
-	.uleb128 0x32
+	.uleb128 0x34
 	.string	"c"
 	.byte	0x1
-	.2byte	0x130
+	.2byte	0x159
 	.4byte	0x9a
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -104
-	.uleb128 0x32
+	.uleb128 0x34
 	.string	"c2"
 	.byte	0x1
-	.2byte	0x130
+	.2byte	0x159
 	.4byte	0x9a
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -108
-	.uleb128 0x31
-	.4byte	.LASF85
+	.uleb128 0x35
+	.4byte	.LASF91
 	.byte	0x1
-	.2byte	0x131
+	.2byte	0x15a
 	.4byte	0x343
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -176
-	.uleb128 0x32
+	.uleb128 0x34
 	.string	"sig"
 	.byte	0x1
-	.2byte	0x132
-	.4byte	0x13d7
+	.2byte	0x15b
+	.4byte	0x1493
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -1200
-	.uleb128 0x31
-	.4byte	.LASF86
+	.uleb128 0x35
+	.4byte	.LASF92
 	.byte	0x1
-	.2byte	0x133
-	.4byte	0x13e8
+	.2byte	0x15c
+	.4byte	0x14a4
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -3248
-	.uleb128 0x33
-	.4byte	.LASF87
+	.uleb128 0x38
+	.4byte	.LASF93
 	.byte	0x1
-	.2byte	0x134
+	.2byte	0x15d
 	.4byte	0x25
-	.4byte	.LLST59
-	.uleb128 0x33
-	.4byte	.LASF88
+	.4byte	.LLST65
+	.uleb128 0x38
+	.4byte	.LASF94
 	.byte	0x1
-	.2byte	0x134
+	.2byte	0x15d
 	.4byte	0x25
-	.4byte	.LLST60
-	.uleb128 0x33
-	.4byte	.LASF89
+	.4byte	.LLST66
+	.uleb128 0x38
+	.4byte	.LASF95
 	.byte	0x1
-	.2byte	0x134
+	.2byte	0x15d
 	.4byte	0x25
-	.4byte	.LLST61
-	.uleb128 0x31
-	.4byte	.LASF90
+	.4byte	.LLST67
+	.uleb128 0x35
+	.4byte	.LASF96
 	.byte	0x1
-	.2byte	0x134
+	.2byte	0x15d
 	.4byte	0x25
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -112
-	.uleb128 0x30
+	.uleb128 0x36
 	.string	"len"
 	.byte	0x1
-	.2byte	0x135
+	.2byte	0x15e
 	.4byte	0x25
-	.4byte	.LLST62
-	.uleb128 0x33
-	.4byte	.LASF91
+	.4byte	.LLST68
+	.uleb128 0x38
+	.4byte	.LASF97
 	.byte	0x1
-	.2byte	0x136
+	.2byte	0x15f
 	.4byte	0x217
-	.4byte	.LLST63
+	.4byte	.LLST69
 	.uleb128 0x1e
-	.4byte	.LVL122
-	.4byte	0x15be
-	.4byte	0x10a0
+	.4byte	.LVL130
+	.4byte	0x167c
+	.4byte	0x115c
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5b
@@ -3941,9 +4050,9 @@ mbedtls_x509write_crt_pem:
 	.byte	0x31
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL123
-	.4byte	0x15be
-	.4byte	0x10b3
+	.4byte	.LVL131
+	.4byte	0x167c
+	.4byte	0x116f
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5b
@@ -3951,9 +4060,9 @@ mbedtls_x509write_crt_pem:
 	.byte	0x34
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL125
-	.4byte	0x15ca
-	.4byte	0x10cf
+	.4byte	.LVL133
+	.4byte	0x1688
+	.4byte	0x118b
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5c
@@ -3968,9 +4077,9 @@ mbedtls_x509write_crt_pem:
 	.sleb128 3148
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL129
-	.4byte	0x15d6
-	.4byte	0x10e9
+	.4byte	.LVL137
+	.4byte	0x1694
+	.4byte	0x11a5
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -3985,55 +4094,9 @@ mbedtls_x509write_crt_pem:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL132
-	.4byte	0x1500
-	.4byte	0x1109
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x76
-	.sleb128 0
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x75
-	.sleb128 0
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5c
-	.uleb128 0x2
-	.byte	0x74
-	.sleb128 0
-	.byte	0
-	.uleb128 0x1e
-	.4byte	.LVL134
-	.4byte	0x150b
-	.4byte	0x1129
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x76
-	.sleb128 0
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x75
-	.sleb128 0
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5c
-	.uleb128 0x2
-	.byte	0x8
-	.byte	0x30
-	.byte	0
-	.uleb128 0x1e
-	.4byte	.LVL138
-	.4byte	0x1500
-	.4byte	0x1149
+	.4byte	.LVL140
+	.4byte	0x15bc
+	.4byte	0x11c5
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -4055,128 +4118,8 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL142
-	.4byte	0x150b
-	.4byte	0x1169
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x76
-	.sleb128 0
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x75
-	.sleb128 0
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5c
-	.uleb128 0x2
-	.byte	0x8
-	.byte	0xa3
-	.byte	0
-	.uleb128 0x1e
-	.4byte	.LVL144
-	.4byte	0x15e2
-	.4byte	0x117d
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x75
-	.sleb128 0
-	.byte	0
-	.uleb128 0x1e
-	.4byte	.LVL148
-	.4byte	0x15ee
-	.4byte	0x1197
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x76
-	.sleb128 0
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x75
-	.sleb128 0
-	.byte	0
-	.uleb128 0x1e
-	.4byte	.LVL150
-	.4byte	0x408
-	.4byte	0x11b7
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x76
-	.sleb128 0
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x75
-	.sleb128 0
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5c
-	.uleb128 0x2
-	.byte	0x77
-	.sleb128 52
-	.byte	0
-	.uleb128 0x1e
-	.4byte	.LVL152
-	.4byte	0x408
-	.4byte	0x11d7
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x76
-	.sleb128 0
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x75
-	.sleb128 0
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5c
-	.uleb128 0x2
-	.byte	0x77
-	.sleb128 36
-	.byte	0
-	.uleb128 0x1e
-	.4byte	.LVL156
-	.4byte	0x1500
-	.4byte	0x11f7
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x76
-	.sleb128 0
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x75
-	.sleb128 0
-	.uleb128 0x1f
-	.uleb128 0x1
-	.byte	0x5c
-	.uleb128 0x2
-	.byte	0x74
-	.sleb128 0
-	.byte	0
-	.uleb128 0x1e
-	.4byte	.LVL157
-	.4byte	0x150b
-	.4byte	0x1217
+	.4byte	0x15c7
+	.4byte	0x11e5
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -4197,9 +4140,66 @@ mbedtls_x509write_crt_pem:
 	.byte	0x30
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL158
-	.4byte	0x15ee
-	.4byte	0x1231
+	.4byte	.LVL146
+	.4byte	0x15bc
+	.4byte	0x1205
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x76
+	.sleb128 0
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x75
+	.sleb128 0
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.byte	0
+	.uleb128 0x1e
+	.4byte	.LVL150
+	.4byte	0x15c7
+	.4byte	0x1225
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x76
+	.sleb128 0
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x75
+	.sleb128 0
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x2
+	.byte	0x8
+	.byte	0xa3
+	.byte	0
+	.uleb128 0x1e
+	.4byte	.LVL152
+	.4byte	0x16a0
+	.4byte	0x1239
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x75
+	.sleb128 0
+	.byte	0
+	.uleb128 0x1e
+	.4byte	.LVL156
+	.4byte	0x16ac
+	.4byte	0x1253
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -4214,9 +4214,118 @@ mbedtls_x509write_crt_pem:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL159
-	.4byte	0x1563
-	.4byte	0x1245
+	.4byte	.LVL158
+	.4byte	0x408
+	.4byte	0x1273
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x76
+	.sleb128 0
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x75
+	.sleb128 0
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x2
+	.byte	0x77
+	.sleb128 52
+	.byte	0
+	.uleb128 0x1e
+	.4byte	.LVL160
+	.4byte	0x408
+	.4byte	0x1293
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x76
+	.sleb128 0
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x75
+	.sleb128 0
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x2
+	.byte	0x77
+	.sleb128 36
+	.byte	0
+	.uleb128 0x1e
+	.4byte	.LVL164
+	.4byte	0x15bc
+	.4byte	0x12b3
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x76
+	.sleb128 0
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x75
+	.sleb128 0
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.byte	0
+	.uleb128 0x1e
+	.4byte	.LVL165
+	.4byte	0x15c7
+	.4byte	0x12d3
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x76
+	.sleb128 0
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x75
+	.sleb128 0
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x2
+	.byte	0x8
+	.byte	0x30
+	.byte	0
+	.uleb128 0x1e
+	.4byte	.LVL166
+	.4byte	0x16ac
+	.4byte	0x12ed
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x76
+	.sleb128 0
+	.uleb128 0x1f
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x75
+	.sleb128 0
+	.byte	0
+	.uleb128 0x1e
+	.4byte	.LVL167
+	.4byte	0x1620
+	.4byte	0x1301
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -4225,9 +4334,9 @@ mbedtls_x509write_crt_pem:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL160
-	.4byte	0x15fa
-	.4byte	0x126a
+	.4byte	.LVL168
+	.4byte	0x16b8
+	.4byte	0x1326
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -4253,9 +4362,9 @@ mbedtls_x509write_crt_pem:
 	.byte	0x30
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL168
-	.4byte	0x1605
-	.4byte	0x128a
+	.4byte	.LVL176
+	.4byte	0x16c3
+	.4byte	0x1346
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -4276,9 +4385,9 @@ mbedtls_x509write_crt_pem:
 	.sleb128 4
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL172
-	.4byte	0x1585
-	.4byte	0x12a4
+	.4byte	.LVL180
+	.4byte	0x1642
+	.4byte	0x1360
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -4293,9 +4402,9 @@ mbedtls_x509write_crt_pem:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL174
-	.4byte	0x1500
-	.4byte	0x12c5
+	.4byte	.LVL182
+	.4byte	0x15bc
+	.4byte	0x1381
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -4316,9 +4425,9 @@ mbedtls_x509write_crt_pem:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL179
-	.4byte	0x150b
-	.4byte	0x12e6
+	.4byte	.LVL187
+	.4byte	0x15c7
+	.4byte	0x13a2
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -4339,9 +4448,9 @@ mbedtls_x509write_crt_pem:
 	.byte	0xa0
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL182
-	.4byte	0x1500
-	.4byte	0x1306
+	.4byte	.LVL190
+	.4byte	0x15bc
+	.4byte	0x13c2
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -4362,9 +4471,9 @@ mbedtls_x509write_crt_pem:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL184
-	.4byte	0x150b
-	.4byte	0x1326
+	.4byte	.LVL192
+	.4byte	0x15c7
+	.4byte	0x13e2
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -4384,13 +4493,13 @@ mbedtls_x509write_crt_pem:
 	.byte	0x8
 	.byte	0x30
 	.byte	0
-	.uleb128 0x34
-	.4byte	.LVL188
-	.4byte	0x1610
+	.uleb128 0x39
+	.4byte	.LVL196
+	.4byte	0x16ce
 	.uleb128 0x1e
-	.4byte	.LVL189
-	.4byte	0x161b
-	.4byte	0x1349
+	.4byte	.LVL197
+	.4byte	0x16d9
+	.4byte	0x1405
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5c
@@ -4405,9 +4514,9 @@ mbedtls_x509write_crt_pem:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL197
-	.4byte	0x1627
-	.4byte	0x1371
+	.4byte	.LVL205
+	.4byte	0x16e5
+	.4byte	0x142d
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5c
@@ -4435,9 +4544,9 @@ mbedtls_x509write_crt_pem:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL201
-	.4byte	0x1633
-	.4byte	0x1391
+	.4byte	.LVL209
+	.4byte	0x16f1
+	.4byte	0x144d
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -4457,13 +4566,13 @@ mbedtls_x509write_crt_pem:
 	.byte	0x74
 	.sleb128 0
 	.byte	0
-	.uleb128 0x34
-	.4byte	.LVL205
-	.4byte	0x163f
+	.uleb128 0x39
+	.4byte	.LVL213
+	.4byte	0x16fd
 	.uleb128 0x1e
-	.4byte	.LVL206
-	.4byte	0x1500
-	.4byte	0x13ba
+	.4byte	.LVL214
+	.4byte	0x15bc
+	.4byte	0x1476
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -4484,8 +4593,8 @@ mbedtls_x509write_crt_pem:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x20
-	.4byte	.LVL210
-	.4byte	0x150b
+	.4byte	.LVL218
+	.4byte	0x15c7
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -4508,87 +4617,87 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x5
 	.4byte	0x4c
-	.4byte	0x13e8
+	.4byte	0x14a4
 	.uleb128 0x2a
 	.4byte	0x8a
 	.2byte	0x3ff
 	.byte	0
 	.uleb128 0x5
 	.4byte	0x4c
-	.4byte	0x13f9
+	.4byte	0x14b5
 	.uleb128 0x2a
 	.4byte	0x8a
 	.2byte	0x7ff
 	.byte	0
-	.uleb128 0x2c
-	.4byte	.LASF92
+	.uleb128 0x31
+	.4byte	.LASF98
 	.byte	0x1
-	.2byte	0x1c8
+	.2byte	0x1f1
 	.4byte	0x3e
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x14e4
-	.uleb128 0x2d
+	.4byte	0x15a0
+	.uleb128 0x32
 	.string	"crt"
 	.byte	0x1
-	.2byte	0x1c8
+	.2byte	0x1f1
 	.4byte	0x3a6
-	.4byte	.LLST64
-	.uleb128 0x2e
+	.4byte	.LLST70
+	.uleb128 0x37
 	.string	"buf"
 	.byte	0x1
-	.2byte	0x1c8
+	.2byte	0x1f1
 	.4byte	0x9a
 	.uleb128 0x1
 	.byte	0x53
-	.uleb128 0x2f
+	.uleb128 0x33
 	.4byte	.LASF58
 	.byte	0x1
-	.2byte	0x1c8
+	.2byte	0x1f1
 	.4byte	0x25
-	.4byte	.LLST65
-	.uleb128 0x35
-	.4byte	.LASF81
+	.4byte	.LLST71
+	.uleb128 0x3a
+	.4byte	.LASF87
 	.byte	0x1
-	.2byte	0x1c9
+	.2byte	0x1f2
 	.4byte	0x278
 	.uleb128 0x1
 	.byte	0x55
-	.uleb128 0x35
-	.4byte	.LASF82
+	.uleb128 0x3a
+	.4byte	.LASF88
 	.byte	0x1
-	.2byte	0x1ca
+	.2byte	0x1f3
 	.4byte	0x91
 	.uleb128 0x1
 	.byte	0x56
-	.uleb128 0x30
+	.uleb128 0x36
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x1cc
+	.2byte	0x1f5
 	.4byte	0x3e
-	.4byte	.LLST66
-	.uleb128 0x31
-	.4byte	.LASF93
+	.4byte	.LLST72
+	.uleb128 0x35
+	.4byte	.LASF99
 	.byte	0x1
-	.2byte	0x1cd
-	.4byte	0x14e4
+	.2byte	0x1f6
+	.4byte	0x15a0
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -4160
-	.uleb128 0x31
-	.4byte	.LASF94
+	.uleb128 0x35
+	.4byte	.LASF100
 	.byte	0x1
-	.2byte	0x1ce
+	.2byte	0x1f7
 	.4byte	0x25
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
 	.uleb128 0x1e
-	.4byte	.LVL217
-	.4byte	0xf48
-	.4byte	0x14ba
+	.4byte	.LVL225
+	.4byte	0x1004
+	.4byte	0x1576
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
@@ -4622,20 +4731,20 @@ mbedtls_x509write_crt_pem:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x20
-	.4byte	.LVL219
-	.4byte	0x1648
+	.4byte	.LVL227
+	.4byte	0x1706
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC33
+	.4byte	.LC34
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC31
+	.4byte	.LC32
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5e
@@ -4653,162 +4762,162 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.uleb128 0x5
 	.4byte	0x4c
-	.4byte	0x14f5
+	.4byte	0x15b1
 	.uleb128 0x2a
 	.4byte	0x8a
 	.2byte	0xfff
 	.byte	0
-	.uleb128 0x36
-	.4byte	.LASF95
-	.4byte	.LASF95
+	.uleb128 0x3b
+	.4byte	.LASF101
+	.4byte	.LASF101
 	.byte	0xa
-	.byte	0x48
-	.uleb128 0x36
-	.4byte	.LASF96
-	.4byte	.LASF96
+	.byte	0x5a
+	.uleb128 0x3b
+	.4byte	.LASF102
+	.4byte	.LASF102
 	.byte	0xa
-	.byte	0x2e
-	.uleb128 0x36
-	.4byte	.LASF97
-	.4byte	.LASF97
+	.byte	0x3c
+	.uleb128 0x3b
+	.4byte	.LASF103
+	.4byte	.LASF103
 	.byte	0xa
-	.byte	0x3a
-	.uleb128 0x37
-	.4byte	.LASF123
-	.4byte	.LASF123
-	.uleb128 0x36
-	.4byte	.LASF98
-	.4byte	.LASF98
+	.byte	0x4a
+	.uleb128 0x3c
+	.4byte	.LASF129
+	.4byte	.LASF129
+	.uleb128 0x3b
+	.4byte	.LASF104
+	.4byte	.LASF104
 	.byte	0x5
-	.byte	0xc5
-	.uleb128 0x36
-	.4byte	.LASF99
-	.4byte	.LASF99
+	.byte	0xcb
+	.uleb128 0x3b
+	.4byte	.LASF105
+	.4byte	.LASF105
 	.byte	0x5
-	.byte	0xcc
-	.uleb128 0x38
-	.4byte	.LASF100
-	.4byte	.LASF100
+	.byte	0xd4
+	.uleb128 0x3d
+	.4byte	.LASF106
+	.4byte	.LASF106
 	.byte	0x6
 	.2byte	0x160
-	.uleb128 0x36
-	.4byte	.LASF101
-	.4byte	.LASF101
+	.uleb128 0x3b
+	.4byte	.LASF107
+	.4byte	.LASF107
 	.byte	0xb
-	.byte	0x42
-	.uleb128 0x38
-	.4byte	.LASF102
-	.4byte	.LASF102
-	.byte	0xc
-	.2byte	0x134
-	.uleb128 0x36
-	.4byte	.LASF103
-	.4byte	.LASF103
-	.byte	0x5
-	.byte	0xf3
-	.uleb128 0x36
-	.4byte	.LASF104
-	.4byte	.LASF104
-	.byte	0xd
-	.byte	0x21
-	.uleb128 0x36
-	.4byte	.LASF105
-	.4byte	.LASF105
-	.byte	0xd
-	.byte	0x24
-	.uleb128 0x38
-	.4byte	.LASF106
-	.4byte	.LASF106
-	.byte	0xc
-	.2byte	0x135
-	.uleb128 0x36
-	.4byte	.LASF107
-	.4byte	.LASF107
-	.byte	0xa
-	.byte	0x99
-	.uleb128 0x36
+	.byte	0x9f
+	.uleb128 0x3d
 	.4byte	.LASF108
 	.4byte	.LASF108
-	.byte	0xa
-	.byte	0x8d
-	.uleb128 0x38
-	.4byte	.LASF109
-	.4byte	.LASF109
-	.byte	0x8
-	.2byte	0x25a
-	.uleb128 0x38
-	.4byte	.LASF110
-	.4byte	.LASF110
-	.byte	0xe
-	.2byte	0x10e
-	.uleb128 0x36
-	.4byte	.LASF111
-	.4byte	.LASF111
-	.byte	0xa
-	.byte	0xc5
-	.uleb128 0x38
-	.4byte	.LASF112
-	.4byte	.LASF112
-	.byte	0x8
-	.2byte	0x103
-	.uleb128 0x38
-	.4byte	.LASF113
-	.4byte	.LASF113
-	.byte	0xf
-	.2byte	0x211
-	.uleb128 0x38
-	.4byte	.LASF114
-	.4byte	.LASF114
 	.byte	0xc
 	.2byte	0x138
-	.uleb128 0x38
-	.4byte	.LASF115
-	.4byte	.LASF115
-	.byte	0x8
-	.2byte	0x221
-	.uleb128 0x38
-	.4byte	.LASF116
-	.4byte	.LASF116
+	.uleb128 0x3d
+	.4byte	.LASF109
+	.4byte	.LASF109
+	.byte	0x5
+	.2byte	0x103
+	.uleb128 0x3b
+	.4byte	.LASF110
+	.4byte	.LASF110
+	.byte	0xd
+	.byte	0x21
+	.uleb128 0x3b
+	.4byte	.LASF111
+	.4byte	.LASF111
+	.byte	0xd
+	.byte	0x24
+	.uleb128 0x3d
+	.4byte	.LASF112
+	.4byte	.LASF112
 	.byte	0xc
-	.2byte	0x13a
-	.uleb128 0x36
-	.4byte	.LASF117
-	.4byte	.LASF117
+	.2byte	0x139
+	.uleb128 0x3b
+	.4byte	.LASF113
+	.4byte	.LASF113
 	.byte	0xa
-	.byte	0x7f
-	.uleb128 0x36
-	.4byte	.LASF118
-	.4byte	.LASF118
+	.byte	0xbf
+	.uleb128 0x3b
+	.4byte	.LASF114
+	.4byte	.LASF114
 	.byte	0xa
-	.byte	0x56
-	.uleb128 0x36
-	.4byte	.LASF119
-	.4byte	.LASF119
-	.byte	0x7
-	.byte	0x7e
-	.uleb128 0x38
-	.4byte	.LASF120
-	.4byte	.LASF120
-	.byte	0x7
-	.2byte	0x148
-	.uleb128 0x38
-	.4byte	.LASF121
-	.4byte	.LASF121
+	.byte	0xaf
+	.uleb128 0x3d
+	.4byte	.LASF115
+	.4byte	.LASF115
 	.byte	0x8
-	.2byte	0x15b
-	.uleb128 0x38
-	.4byte	.LASF122
-	.4byte	.LASF122
+	.2byte	0x2e3
+	.uleb128 0x3d
+	.4byte	.LASF116
+	.4byte	.LASF116
+	.byte	0xe
+	.2byte	0x124
+	.uleb128 0x3d
+	.4byte	.LASF117
+	.4byte	.LASF117
+	.byte	0xa
+	.2byte	0x11b
+	.uleb128 0x3d
+	.4byte	.LASF118
+	.4byte	.LASF118
+	.byte	0x8
+	.2byte	0x131
+	.uleb128 0x3d
+	.4byte	.LASF119
+	.4byte	.LASF119
+	.byte	0xf
+	.2byte	0x211
+	.uleb128 0x3d
+	.4byte	.LASF120
+	.4byte	.LASF120
 	.byte	0xc
 	.2byte	0x13c
-	.uleb128 0x37
+	.uleb128 0x3d
+	.4byte	.LASF121
+	.4byte	.LASF121
+	.byte	0x8
+	.2byte	0x2a7
+	.uleb128 0x3d
+	.4byte	.LASF122
+	.4byte	.LASF122
+	.byte	0xc
+	.2byte	0x13e
+	.uleb128 0x3b
+	.4byte	.LASF123
+	.4byte	.LASF123
+	.byte	0xa
+	.byte	0x9d
+	.uleb128 0x3b
 	.4byte	.LASF124
 	.4byte	.LASF124
-	.uleb128 0x36
+	.byte	0xa
+	.byte	0x6b
+	.uleb128 0x3b
 	.4byte	.LASF125
 	.4byte	.LASF125
+	.byte	0x7
+	.byte	0x80
+	.uleb128 0x3d
+	.4byte	.LASF126
+	.4byte	.LASF126
+	.byte	0x7
+	.2byte	0x14a
+	.uleb128 0x3d
+	.4byte	.LASF127
+	.4byte	.LASF127
+	.byte	0x8
+	.2byte	0x1a8
+	.uleb128 0x3d
+	.4byte	.LASF128
+	.4byte	.LASF128
+	.byte	0xc
+	.2byte	0x140
+	.uleb128 0x3c
+	.4byte	.LASF130
+	.4byte	.LASF130
+	.uleb128 0x3b
+	.4byte	.LASF131
+	.4byte	.LASF131
 	.byte	0x10
-	.byte	0x79
+	.byte	0x7f
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -5359,6 +5468,68 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.byte	0
 	.uleb128 0x2b
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x27
+	.uleb128 0x19
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x20
+	.uleb128 0xb
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x2c
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x2d
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x2e
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1c
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x2f
 	.uleb128 0x1d
 	.byte	0x1
 	.uleb128 0x31
@@ -5375,7 +5546,16 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x2c
+	.uleb128 0x30
+	.uleb128 0xb
+	.byte	0x1
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x6
+	.byte	0
+	.byte	0
+	.uleb128 0x31
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -5402,83 +5582,8 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x2d
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x17
-	.byte	0
-	.byte	0
-	.uleb128 0x2e
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x2f
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x17
-	.byte	0
-	.byte	0
-	.uleb128 0x30
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x17
-	.byte	0
-	.byte	0
-	.uleb128 0x31
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
 	.uleb128 0x32
-	.uleb128 0x34
+	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0x8
@@ -5489,11 +5594,11 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x2
-	.uleb128 0x18
+	.uleb128 0x17
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.uleb128 0x34
+	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
@@ -5508,16 +5613,22 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.byte	0
 	.uleb128 0x34
-	.uleb128 0x4109
+	.uleb128 0x34
 	.byte	0
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x31
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
 	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x35
-	.uleb128 0x5
+	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
@@ -5532,6 +5643,75 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.byte	0
 	.uleb128 0x36
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x17
+	.byte	0
+	.byte	0
+	.uleb128 0x37
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x38
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x17
+	.byte	0
+	.byte	0
+	.uleb128 0x39
+	.uleb128 0x4109
+	.byte	0
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x31
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x3a
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x3b
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -5548,7 +5728,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x37
+	.uleb128 0x3c
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -5561,7 +5741,7 @@ mbedtls_x509write_crt_pem:
 	.uleb128 0xe
 	.byte	0
 	.byte	0
-	.uleb128 0x38
+	.uleb128 0x3d
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -5587,7 +5767,7 @@ mbedtls_x509write_crt_pem:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL16
-	.4byte	.LFE29
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5622,7 +5802,7 @@ mbedtls_x509write_crt_pem:
 	.2byte	0x1
 	.byte	0x5c
 	.4byte	.LVL9-1
-	.4byte	.LFE29
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6109,94 +6289,10 @@ mbedtls_x509write_crt_pem:
 	.4byte	0
 .LLST38:
 	.4byte	.LVL101
-	.4byte	.LVL107
+	.4byte	.LVL111
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL107
-	.4byte	.LFE24
-	.2byte	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x52
-	.byte	0x9f
-	.4byte	0
-	.4byte	0
-.LLST39:
-	.4byte	.LVL102
-	.4byte	.LVL105
-	.2byte	0x1
-	.byte	0x5a
-	.4byte	.LVL105
-	.4byte	.LVL106-1
-	.2byte	0x1
-	.byte	0x5f
-	.4byte	0
-	.4byte	0
-.LLST40:
-	.4byte	.LVL103
-	.4byte	.LVL106
-	.2byte	0x2
-	.byte	0x34
-	.byte	0x9f
-	.4byte	0
-	.4byte	0
-.LLST41:
-	.4byte	.LVL103
-	.4byte	.LVL104
-	.2byte	0x3
-	.byte	0x91
-	.sleb128 -48
-	.byte	0x9f
-	.4byte	.LVL104
-	.4byte	.LVL106-1
-	.2byte	0x1
-	.byte	0x5e
-	.4byte	.LVL106-1
-	.4byte	.LVL106
-	.2byte	0x3
-	.byte	0x91
-	.sleb128 -48
-	.byte	0x9f
-	.4byte	0
-	.4byte	0
-.LLST42:
-	.4byte	.LVL103
-	.4byte	.LVL106
-	.2byte	0x2
-	.byte	0x31
-	.byte	0x9f
-	.4byte	0
-	.4byte	0
-.LLST43:
-	.4byte	.LVL103
-	.4byte	.LVL106
-	.2byte	0x2
-	.byte	0x33
-	.byte	0x9f
-	.4byte	0
-	.4byte	0
-.LLST44:
-	.4byte	.LVL103
-	.4byte	.LVL106
-	.2byte	0x6
-	.byte	0x3
-	.4byte	.LC11
-	.byte	0x9f
-	.4byte	0
-	.4byte	0
-.LLST45:
-	.4byte	.LVL103
-	.4byte	.LVL106
-	.2byte	0x1
-	.byte	0x52
-	.4byte	0
-	.4byte	0
-.LLST46:
-	.4byte	.LVL108
-	.4byte	.LVL114
-	.2byte	0x1
-	.byte	0x52
-	.4byte	.LVL114
+	.4byte	.LVL111
 	.4byte	.LFE25
 	.2byte	0x4
 	.byte	0xf3
@@ -6205,87 +6301,252 @@ mbedtls_x509write_crt_pem:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST47:
-	.4byte	.LVL109
-	.4byte	.LVL112
+.LLST39:
+	.4byte	.LVL106
+	.4byte	.LVL108
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL112
-	.4byte	.LVL113-1
+	.4byte	.LVL108
+	.4byte	.LVL109-1
 	.2byte	0x1
 	.byte	0x5f
 	.4byte	0
 	.4byte	0
-.LLST48:
+.LLST40:
+	.4byte	.LVL103
 	.4byte	.LVL110
-	.4byte	.LVL113
 	.2byte	0x2
-	.byte	0x34
+	.byte	0x31
 	.byte	0x9f
+	.4byte	0
+	.4byte	0
+.LLST41:
+	.4byte	.LVL103
+	.4byte	.LVL110
+	.2byte	0x1
+	.byte	0x53
+	.4byte	0
+	.4byte	0
+.LLST42:
+	.4byte	.LVL103
+	.4byte	.LVL104
+	.2byte	0x2
+	.byte	0x31
+	.byte	0x9f
+	.4byte	.LVL104
+	.4byte	.LVL106-1
+	.2byte	0x1
+	.byte	0x58
+	.4byte	0
+	.4byte	0
+.LLST43:
+	.4byte	.LVL107
+	.4byte	.LVL108
+	.2byte	0x1
+	.byte	0x5a
+	.4byte	.LVL108
+	.4byte	.LVL109-1
+	.2byte	0x1
+	.byte	0x5f
+	.4byte	0
+	.4byte	0
+.LLST44:
+	.4byte	.LVL107
+	.4byte	.LVL109-1
+	.2byte	0x2
+	.byte	0x91
+	.sleb128 -44
+	.4byte	0
+	.4byte	0
+.LLST45:
+	.4byte	.LVL107
+	.4byte	.LVL110
+	.2byte	0x2
+	.byte	0x31
+	.byte	0x9f
+	.4byte	0
+	.4byte	0
+.LLST46:
+	.4byte	.LVL107
+	.4byte	.LVL110
+	.2byte	0x2
+	.byte	0x33
+	.byte	0x9f
+	.4byte	0
+	.4byte	0
+.LLST47:
+	.4byte	.LVL107
+	.4byte	.LVL110
+	.2byte	0x6
+	.byte	0x3
+	.4byte	.LC12
+	.byte	0x9f
+	.4byte	0
+	.4byte	0
+.LLST48:
+	.4byte	.LVL107
+	.4byte	.LVL110
+	.2byte	0x1
+	.byte	0x52
 	.4byte	0
 	.4byte	0
 .LLST49:
-	.4byte	.LVL110
-	.4byte	.LVL111
-	.2byte	0x3
-	.byte	0x91
-	.sleb128 -64
-	.byte	0x9f
-	.4byte	.LVL111
-	.4byte	.LVL113-1
+	.4byte	.LVL112
+	.4byte	.LVL122
 	.2byte	0x1
-	.byte	0x5e
-	.4byte	.LVL113-1
-	.4byte	.LVL113
-	.2byte	0x3
-	.byte	0x91
-	.sleb128 -64
+	.byte	0x52
+	.4byte	.LVL122
+	.4byte	.LFE26
+	.2byte	0x4
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x52
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
 .LLST50:
-	.4byte	.LVL110
+	.4byte	.LVL112
 	.4byte	.LVL113
+	.2byte	0x1
+	.byte	0x53
+	.4byte	.LVL113
+	.4byte	.LVL116
+	.2byte	0x2
+	.byte	0x91
+	.sleb128 -48
+	.4byte	.LVL116
+	.4byte	.LVL117-1
+	.2byte	0x2
+	.byte	0x7c
+	.sleb128 0
+	.4byte	.LVL117-1
+	.4byte	.LFE26
+	.2byte	0x2
+	.byte	0x91
+	.sleb128 -48
+	.4byte	0
+	.4byte	0
+.LLST51:
+	.4byte	.LVL117
+	.4byte	.LVL120
+	.2byte	0x1
+	.byte	0x5a
+	.4byte	.LVL120
+	.4byte	.LVL121-1
+	.2byte	0x1
+	.byte	0x5f
+	.4byte	.LVL121-1
+	.4byte	.LVL121
+	.2byte	0x3
+	.byte	0x73
+	.sleb128 3
+	.byte	0x9f
+	.4byte	0
+	.4byte	0
+.LLST52:
+	.4byte	.LVL113
+	.4byte	.LVL116
+	.2byte	0x2
+	.byte	0x91
+	.sleb128 -48
+	.4byte	.LVL116
+	.4byte	.LVL117-1
+	.2byte	0x2
+	.byte	0x7c
+	.sleb128 0
+	.4byte	.LVL117-1
+	.4byte	.LVL118
+	.2byte	0x1
+	.byte	0x53
+	.4byte	.LVL118
+	.4byte	.LFE26
+	.2byte	0x4
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x53
+	.byte	0x9f
+	.4byte	0
+	.4byte	0
+.LLST53:
+	.4byte	.LVL113
+	.4byte	.LVL114
+	.2byte	0x2
+	.byte	0x30
+	.byte	0x9f
+	.4byte	.LVL114
+	.4byte	.LVL117-1
+	.2byte	0x1
+	.byte	0x58
+	.4byte	0
+	.4byte	0
+.LLST54:
+	.4byte	.LVL119
+	.4byte	.LVL120
+	.2byte	0x1
+	.byte	0x5a
+	.4byte	.LVL120
+	.4byte	.LVL121-1
+	.2byte	0x1
+	.byte	0x5f
+	.4byte	.LVL121-1
+	.4byte	.LVL121
+	.2byte	0x3
+	.byte	0x73
+	.sleb128 3
+	.byte	0x9f
+	.4byte	0
+	.4byte	0
+.LLST55:
+	.4byte	.LVL119
+	.4byte	.LVL121-1
+	.2byte	0x2
+	.byte	0x91
+	.sleb128 -60
+	.4byte	0
+	.4byte	0
+.LLST56:
+	.4byte	.LVL119
+	.4byte	.LVL121
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST51:
-	.4byte	.LVL110
-	.4byte	.LVL113
+.LLST57:
+	.4byte	.LVL119
+	.4byte	.LVL121
 	.2byte	0x2
 	.byte	0x39
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST52:
-	.4byte	.LVL110
-	.4byte	.LVL113
+.LLST58:
+	.4byte	.LVL119
+	.4byte	.LVL121
 	.2byte	0x6
 	.byte	0x3
-	.4byte	.LC13
+	.4byte	.LC14
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST53:
-	.4byte	.LVL110
-	.4byte	.LVL113
+.LLST59:
+	.4byte	.LVL119
+	.4byte	.LVL121
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
 	.4byte	0
-.LLST54:
-	.4byte	.LVL115
-	.4byte	.LVL116
+.LLST60:
+	.4byte	.LVL123
+	.4byte	.LVL124
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL116
-	.4byte	.LVL199
+	.4byte	.LVL124
+	.4byte	.LVL207
 	.2byte	0x1
 	.byte	0x57
-	.4byte	.LVL199
-	.4byte	.LFE27
+	.4byte	.LVL207
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6293,23 +6554,23 @@ mbedtls_x509write_crt_pem:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST55:
-	.4byte	.LVL115
-	.4byte	.LVL117
+.LLST61:
+	.4byte	.LVL123
+	.4byte	.LVL125
 	.2byte	0x1
 	.byte	0x54
-	.4byte	.LVL117
-	.4byte	.LVL120
+	.4byte	.LVL125
+	.4byte	.LVL128
 	.2byte	0x2
 	.byte	0x72
 	.sleb128 0
-	.4byte	.LVL120
-	.4byte	.LVL195
+	.4byte	.LVL128
+	.4byte	.LVL203
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -60
-	.4byte	.LVL195
-	.4byte	.LFE27
+	.4byte	.LVL203
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6317,23 +6578,23 @@ mbedtls_x509write_crt_pem:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST56:
-	.4byte	.LVL115
-	.4byte	.LVL118
+.LLST62:
+	.4byte	.LVL123
+	.4byte	.LVL126
 	.2byte	0x1
 	.byte	0x55
-	.4byte	.LVL118
-	.4byte	.LVL119
+	.4byte	.LVL126
+	.4byte	.LVL127
 	.2byte	0x2
 	.byte	0x74
 	.sleb128 0
-	.4byte	.LVL119
-	.4byte	.LVL192
+	.4byte	.LVL127
+	.4byte	.LVL200
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -56
-	.4byte	.LVL192
-	.4byte	.LVL194
+	.4byte	.LVL200
+	.4byte	.LVL202
 	.2byte	0x9
 	.byte	0x91
 	.sleb128 0
@@ -6343,13 +6604,13 @@ mbedtls_x509write_crt_pem:
 	.byte	0xa
 	.2byte	0xcc0
 	.byte	0x1c
-	.4byte	.LVL194
-	.4byte	.LVL195
+	.4byte	.LVL202
+	.4byte	.LVL203
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -56
-	.4byte	.LVL195
-	.4byte	.LFE27
+	.4byte	.LVL203
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6357,18 +6618,18 @@ mbedtls_x509write_crt_pem:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST57:
-	.4byte	.LVL115
-	.4byte	.LVL127
+.LLST63:
+	.4byte	.LVL123
+	.4byte	.LVL135
 	.2byte	0x1
 	.byte	0x56
-	.4byte	.LVL127
-	.4byte	.LVL191
+	.4byte	.LVL135
+	.4byte	.LVL199
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -52
-	.4byte	.LVL191
-	.4byte	.LVL193
+	.4byte	.LVL199
+	.4byte	.LVL201
 	.2byte	0x9
 	.byte	0x91
 	.sleb128 0
@@ -6378,13 +6639,13 @@ mbedtls_x509write_crt_pem:
 	.byte	0xa
 	.2byte	0xcc0
 	.byte	0x1c
-	.4byte	.LVL193
-	.4byte	.LVL195
+	.4byte	.LVL201
+	.4byte	.LVL203
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -52
-	.4byte	.LVL195
-	.4byte	.LFE27
+	.4byte	.LVL203
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6392,156 +6653,156 @@ mbedtls_x509write_crt_pem:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST58:
-	.4byte	.LVL126
-	.4byte	.LVL128
+.LLST64:
+	.4byte	.LVL134
+	.4byte	.LVL136
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL128
-	.4byte	.LVL129-1
+	.4byte	.LVL136
+	.4byte	.LVL137-1
 	.2byte	0x1
 	.byte	0x5d
-	.4byte	.LVL129-1
-	.4byte	.LVL130
+	.4byte	.LVL137-1
+	.4byte	.LVL138
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -80
-	.4byte	.LVL135
-	.4byte	.LVL137
-	.2byte	0x1
-	.byte	0x5a
-	.4byte	.LVL137
-	.4byte	.LVL138-1
-	.2byte	0x1
-	.byte	0x5d
-	.4byte	.LVL139
-	.4byte	.LVL141
-	.2byte	0x1
-	.byte	0x5a
-	.4byte	.LVL141
-	.4byte	.LVL142-1
-	.2byte	0x1
-	.byte	0x5d
-	.4byte	.LVL142
 	.4byte	.LVL143
+	.4byte	.LVL145
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL153
-	.4byte	.LVL155
-	.2byte	0x1
-	.byte	0x5a
-	.4byte	.LVL155
-	.4byte	.LVL156-1
+	.4byte	.LVL145
+	.4byte	.LVL146-1
 	.2byte	0x1
 	.byte	0x5d
+	.4byte	.LVL147
+	.4byte	.LVL149
+	.2byte	0x1
+	.byte	0x5a
+	.4byte	.LVL149
+	.4byte	.LVL150-1
+	.2byte	0x1
+	.byte	0x5d
+	.4byte	.LVL150
+	.4byte	.LVL151
+	.2byte	0x1
+	.byte	0x5a
 	.4byte	.LVL161
-	.4byte	.LVL165
+	.4byte	.LVL163
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL165
-	.4byte	.LVL168-1
+	.4byte	.LVL163
+	.4byte	.LVL164-1
 	.2byte	0x1
 	.byte	0x5d
-	.4byte	.LVL168
-	.4byte	.LVL171
+	.4byte	.LVL169
+	.4byte	.LVL173
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL171
-	.4byte	.LVL172-1
+	.4byte	.LVL173
+	.4byte	.LVL176-1
 	.2byte	0x1
 	.byte	0x5d
-	.4byte	.LVL175
-	.4byte	.LVL178
-	.2byte	0x1
-	.byte	0x5a
-	.4byte	.LVL178
-	.4byte	.LVL179-1
-	.2byte	0x1
-	.byte	0x5d
+	.4byte	.LVL176
 	.4byte	.LVL179
-	.4byte	.LVL181
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL181
-	.4byte	.LVL182-1
+	.4byte	.LVL179
+	.4byte	.LVL180-1
 	.2byte	0x1
 	.byte	0x5d
-	.4byte	.LVL185
-	.4byte	.LVL187
+	.4byte	.LVL183
+	.4byte	.LVL186
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL187
-	.4byte	.LVL188-1
+	.4byte	.LVL186
+	.4byte	.LVL187-1
 	.2byte	0x1
 	.byte	0x5d
-	.4byte	.LVL190
-	.4byte	.LVL196
+	.4byte	.LVL187
+	.4byte	.LVL189
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL196
-	.4byte	.LVL197-1
+	.4byte	.LVL189
+	.4byte	.LVL190-1
+	.2byte	0x1
+	.byte	0x5d
+	.4byte	.LVL193
+	.4byte	.LVL195
+	.2byte	0x1
+	.byte	0x5a
+	.4byte	.LVL195
+	.4byte	.LVL196-1
 	.2byte	0x1
 	.byte	0x5d
 	.4byte	.LVL198
-	.4byte	.LVL200
+	.4byte	.LVL204
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL202
-	.4byte	.LVL207
-	.2byte	0x1
-	.byte	0x52
-	.4byte	.LVL207
-	.4byte	.LVL209
-	.2byte	0x1
-	.byte	0x5a
-	.4byte	.LVL209
-	.4byte	.LVL210-1
+	.4byte	.LVL204
+	.4byte	.LVL205-1
 	.2byte	0x1
 	.byte	0x5d
+	.4byte	.LVL206
+	.4byte	.LVL208
+	.2byte	0x1
+	.byte	0x5a
 	.4byte	.LVL210
-	.4byte	.LVL213
+	.4byte	.LVL215
+	.2byte	0x1
+	.byte	0x52
+	.4byte	.LVL215
+	.4byte	.LVL217
+	.2byte	0x1
+	.byte	0x5a
+	.4byte	.LVL217
+	.4byte	.LVL218-1
+	.2byte	0x1
+	.byte	0x5d
+	.4byte	.LVL218
+	.4byte	.LVL221
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
 	.4byte	0
-.LLST59:
-	.4byte	.LVL121
-	.4byte	.LVL151
+.LLST65:
+	.4byte	.LVL129
+	.4byte	.LVL159
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
-	.4byte	.LVL154
-	.4byte	.LVL166
+	.4byte	.LVL162
+	.4byte	.LVL174
 	.2byte	0x1
 	.byte	0x54
-	.4byte	.LVL170
-	.4byte	.LVL173
+	.4byte	.LVL178
+	.4byte	.LVL181
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
-	.4byte	.LVL173
-	.4byte	.LVL180
+	.4byte	.LVL181
+	.4byte	.LVL188
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
 	.4byte	0
-.LLST60:
-	.4byte	.LVL121
-	.4byte	.LVL145
+.LLST66:
+	.4byte	.LVL129
+	.4byte	.LVL153
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
-	.4byte	.LVL145
-	.4byte	.LVL146
+	.4byte	.LVL153
+	.4byte	.LVL154
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL146
-	.4byte	.LVL162
+	.4byte	.LVL154
+	.4byte	.LVL170
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -76
-	.4byte	.LVL162
-	.4byte	.LVL163
+	.4byte	.LVL170
+	.4byte	.LVL171
 	.2byte	0x9
 	.byte	0x91
 	.sleb128 0
@@ -6551,51 +6812,51 @@ mbedtls_x509write_crt_pem:
 	.byte	0xa
 	.2byte	0xcc0
 	.byte	0x1c
-	.4byte	.LVL163
-	.4byte	.LVL164
+	.4byte	.LVL171
+	.4byte	.LVL172
 	.2byte	0x2
 	.byte	0x79
 	.sleb128 0
-	.4byte	.LVL164
-	.4byte	.LVL195
+	.4byte	.LVL172
+	.4byte	.LVL203
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -76
 	.4byte	0
 	.4byte	0
-.LLST61:
-	.4byte	.LVL121
-	.4byte	.LVL203
+.LLST67:
+	.4byte	.LVL129
+	.4byte	.LVL211
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
-	.4byte	.LVL203
-	.4byte	.LVL213
+	.4byte	.LVL211
+	.4byte	.LVL221
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
 	.4byte	0
-.LLST62:
-	.4byte	.LVL121
-	.4byte	.LVL131
+.LLST68:
+	.4byte	.LVL129
+	.4byte	.LVL139
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
-	.4byte	.LVL131
-	.4byte	.LVL133
+	.4byte	.LVL139
+	.4byte	.LVL141
 	.2byte	0x1
 	.byte	0x54
-	.4byte	.LVL136
-	.4byte	.LVL143
+	.4byte	.LVL144
+	.4byte	.LVL151
 	.2byte	0x1
 	.byte	0x54
-	.4byte	.LVL143
-	.4byte	.LVL147
+	.4byte	.LVL151
+	.4byte	.LVL155
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -80
-	.4byte	.LVL147
-	.4byte	.LVL149
+	.4byte	.LVL155
+	.4byte	.LVL157
 	.2byte	0xa
 	.byte	0x91
 	.sleb128 -80
@@ -6605,12 +6866,12 @@ mbedtls_x509write_crt_pem:
 	.byte	0x6
 	.byte	0x22
 	.byte	0x9f
-	.4byte	.LVL167
-	.4byte	.LVL173
+	.4byte	.LVL175
+	.4byte	.LVL181
 	.2byte	0x1
 	.byte	0x54
-	.4byte	.LVL173
-	.4byte	.LVL176
+	.4byte	.LVL181
+	.4byte	.LVL184
 	.2byte	0x6
 	.byte	0x74
 	.sleb128 0
@@ -6618,24 +6879,24 @@ mbedtls_x509write_crt_pem:
 	.sleb128 0
 	.byte	0x22
 	.byte	0x9f
-	.4byte	.LVL176
-	.4byte	.LVL183
+	.4byte	.LVL184
+	.4byte	.LVL191
 	.2byte	0x1
 	.byte	0x54
-	.4byte	.LVL186
-	.4byte	.LVL204
+	.4byte	.LVL194
+	.4byte	.LVL212
 	.2byte	0x1
 	.byte	0x55
-	.4byte	.LVL204
-	.4byte	.LVL205-1
+	.4byte	.LVL212
+	.4byte	.LVL213-1
 	.2byte	0x1
 	.byte	0x5c
-	.4byte	.LVL205
-	.4byte	.LVL208
+	.4byte	.LVL213
+	.4byte	.LVL216
 	.2byte	0x1
 	.byte	0x55
-	.4byte	.LVL208
-	.4byte	.LVL209
+	.4byte	.LVL216
+	.4byte	.LVL217
 	.2byte	0x6
 	.byte	0x75
 	.sleb128 0
@@ -6643,8 +6904,8 @@ mbedtls_x509write_crt_pem:
 	.sleb128 0
 	.byte	0x22
 	.byte	0x9f
-	.4byte	.LVL209
-	.4byte	.LVL210-1
+	.4byte	.LVL217
+	.4byte	.LVL218-1
 	.2byte	0x6
 	.byte	0x75
 	.sleb128 0
@@ -6652,8 +6913,8 @@ mbedtls_x509write_crt_pem:
 	.sleb128 0
 	.byte	0x22
 	.byte	0x9f
-	.4byte	.LVL211
-	.4byte	.LVL212
+	.4byte	.LVL219
+	.4byte	.LVL220
 	.2byte	0x6
 	.byte	0x7a
 	.sleb128 0
@@ -6661,30 +6922,30 @@ mbedtls_x509write_crt_pem:
 	.sleb128 0
 	.byte	0x22
 	.byte	0x9f
-	.4byte	.LVL212
-	.4byte	.LVL213
+	.4byte	.LVL220
+	.4byte	.LVL221
 	.2byte	0x1
 	.byte	0x5d
 	.4byte	0
 	.4byte	0
-.LLST63:
-	.4byte	.LVL124
-	.4byte	.LVL125-1
+.LLST69:
+	.4byte	.LVL132
+	.4byte	.LVL133-1
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
 	.4byte	0
-.LLST64:
-	.4byte	.LVL214
-	.4byte	.LVL216
+.LLST70:
+	.4byte	.LVL222
+	.4byte	.LVL224
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL216
-	.4byte	.LVL217-1
+	.4byte	.LVL224
+	.4byte	.LVL225-1
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL217-1
-	.4byte	.LFE28
+	.4byte	.LVL225-1
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6692,17 +6953,17 @@ mbedtls_x509write_crt_pem:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST65:
-	.4byte	.LVL214
-	.4byte	.LVL215
+.LLST71:
+	.4byte	.LVL222
+	.4byte	.LVL223
 	.2byte	0x1
 	.byte	0x54
-	.4byte	.LVL215
-	.4byte	.LVL217-1
+	.4byte	.LVL223
+	.4byte	.LVL225-1
 	.2byte	0x1
 	.byte	0x5f
-	.4byte	.LVL217-1
-	.4byte	.LFE28
+	.4byte	.LVL225-1
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6710,13 +6971,13 @@ mbedtls_x509write_crt_pem:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST66:
-	.4byte	.LVL217
-	.4byte	.LVL218
+.LLST72:
+	.4byte	.LVL225
+	.4byte	.LVL226
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL218
-	.4byte	.LVL219-1
+	.4byte	.LVL226
+	.4byte	.LVL227-1
 	.2byte	0x1
 	.byte	0x5d
 	.4byte	0
@@ -6729,8 +6990,8 @@ mbedtls_x509write_crt_pem:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.4byte	.LFB10
 	.4byte	.LFE10-.LFB10
 	.4byte	.LFB11
@@ -6759,20 +7020,20 @@ mbedtls_x509write_crt_pem:
 	.4byte	.LFE22-.LFB22
 	.4byte	.LFB23
 	.4byte	.LFE23-.LFB23
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
 	.4byte	.LFB25
 	.4byte	.LFE25-.LFB25
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.4byte	.LFB28
 	.4byte	.LFE28-.LFB28
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB29
-	.4byte	.LFE29
+	.4byte	.LFB30
+	.4byte	.LFE30
 	.4byte	.LFB10
 	.4byte	.LFE10
 	.4byte	.LFB11
@@ -6801,24 +7062,24 @@ mbedtls_x509write_crt_pem:
 	.4byte	.LFE22
 	.4byte	.LFB23
 	.4byte	.LFE23
-	.4byte	.LFB24
-	.4byte	.LFE24
 	.4byte	.LFB25
 	.4byte	.LFE25
-	.4byte	.LFB27
-	.4byte	.LFE27
+	.4byte	.LFB26
+	.4byte	.LFE26
 	.4byte	.LFB28
 	.4byte	.LFE28
+	.4byte	.LFB29
+	.4byte	.LFE29
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
-.LASF89:
+.LASF95:
 	.string	"sig_and_oid_len"
 .LASF46:
 	.string	"subject_key"
-.LASF104:
+.LASF110:
 	.string	"strlen"
 .LASF34:
 	.string	"MBEDTLS_PK_ECKEY_DH"
@@ -6836,9 +7097,9 @@ mbedtls_x509write_crt_pem:
 	.string	"subject"
 .LASF69:
 	.string	"mbedtls_x509write_crt_set_serial"
-.LASF83:
+.LASF89:
 	.string	"sig_oid"
-.LASF97:
+.LASF103:
 	.string	"mbedtls_asn1_write_tag"
 .LASF65:
 	.string	"subject_name"
@@ -6850,13 +7111,13 @@ mbedtls_x509write_crt_pem:
 	.string	"MBEDTLS_MD_SHA224"
 .LASF59:
 	.string	"mbedtls_x509write_crt_init"
-.LASF122:
+.LASF128:
 	.string	"mbedtls_x509_write_sig"
-.LASF94:
+.LASF100:
 	.string	"olen"
 .LASF13:
 	.string	"uint32_t"
-.LASF96:
+.LASF102:
 	.string	"mbedtls_asn1_write_len"
 .LASF40:
 	.string	"mbedtls_pk_context"
@@ -6864,37 +7125,37 @@ mbedtls_x509write_crt_pem:
 	.string	"max_pathlen"
 .LASF8:
 	.string	"long long unsigned int"
-.LASF105:
+.LASF111:
 	.string	"strncpy"
 .LASF28:
 	.string	"MBEDTLS_MD_SHA512"
 .LASF33:
 	.string	"MBEDTLS_PK_ECKEY"
-.LASF82:
+.LASF88:
 	.string	"p_rng"
-.LASF76:
+.LASF81:
 	.string	"mbedtls_x509write_crt_set_key_usage"
-.LASF78:
+.LASF84:
 	.string	"mbedtls_x509write_crt_set_ns_cert_type"
-.LASF77:
+.LASF82:
 	.string	"key_usage"
-.LASF112:
+.LASF118:
 	.string	"mbedtls_pk_can_do"
 .LASF36:
 	.string	"MBEDTLS_PK_RSA_ALT"
-.LASF126:
+.LASF132:
 	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
 .LASF14:
 	.string	"mbedtls_mpi_uint"
 .LASF5:
 	.string	"size_t"
-.LASF118:
+.LASF124:
 	.string	"mbedtls_asn1_write_mpi"
 .LASF19:
 	.string	"next_merged"
 .LASF26:
 	.string	"MBEDTLS_MD_SHA256"
-.LASF102:
+.LASF108:
 	.string	"mbedtls_x509_string_to_names"
 .LASF67:
 	.string	"mbedtls_x509write_crt_set_issuer_name"
@@ -6904,39 +7165,39 @@ mbedtls_x509write_crt_pem:
 	.string	"MBEDTLS_PK_NONE"
 .LASF12:
 	.string	"char"
-.LASF129:
+.LASF135:
 	.string	"mbedtls_x509write_crt_set_extension"
 .LASF64:
 	.string	"mbedtls_x509write_crt_set_issuer_key"
 .LASF62:
 	.string	"mbedtls_x509write_crt_set_md_alg"
-.LASF103:
+.LASF109:
 	.string	"mbedtls_mpi_copy"
-.LASF99:
+.LASF105:
 	.string	"mbedtls_mpi_free"
 .LASF38:
 	.string	"mbedtls_pk_type_t"
-.LASF120:
+.LASF126:
 	.string	"mbedtls_md"
 .LASF54:
 	.string	"oid_len"
-.LASF111:
+.LASF117:
 	.string	"mbedtls_asn1_write_bitstring"
 .LASF55:
 	.string	"critical"
 .LASF49:
 	.string	"issuer"
-.LASF116:
+.LASF122:
 	.string	"mbedtls_x509_write_names"
-.LASF107:
+.LASF113:
 	.string	"mbedtls_asn1_write_int"
-.LASF108:
+.LASF114:
 	.string	"mbedtls_asn1_write_bool"
-.LASF109:
+.LASF115:
 	.string	"mbedtls_pk_write_pubkey"
-.LASF91:
+.LASF97:
 	.string	"pk_alg"
-.LASF79:
+.LASF85:
 	.string	"ns_cert_type"
 .LASF7:
 	.string	"long long int"
@@ -6948,45 +7209,49 @@ mbedtls_x509write_crt_pem:
 	.string	"extensions"
 .LASF20:
 	.string	"MBEDTLS_MD_NONE"
-.LASF95:
+.LASF101:
 	.string	"mbedtls_asn1_write_raw_buffer"
-.LASF123:
+.LASF129:
 	.string	"memset"
 .LASF37:
 	.string	"MBEDTLS_PK_RSASSA_PSS"
-.LASF124:
+.LASF130:
 	.string	"memcpy"
 .LASF58:
 	.string	"size"
-.LASF114:
+.LASF120:
 	.string	"mbedtls_x509_write_extensions"
-.LASF106:
+.LASF112:
 	.string	"mbedtls_x509_set_extension"
-.LASF127:
+.LASF133:
 	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/x509write_crt.c"
-.LASF93:
+.LASF99:
 	.string	"output_buf"
-.LASF110:
+.LASF116:
 	.string	"mbedtls_sha1_ret"
 .LASF39:
 	.string	"mbedtls_pk_info_t"
+.LASF79:
+	.string	"bit_offset"
 .LASF63:
 	.string	"mbedtls_x509write_crt_set_subject_key"
-.LASF92:
+.LASF98:
 	.string	"mbedtls_x509write_crt_pem"
-.LASF86:
+.LASF92:
 	.string	"tmp_buf"
 .LASF43:
 	.string	"mbedtls_x509write_cert"
 .LASF71:
 	.string	"mbedtls_x509write_crt_set_basic_constraints"
-.LASF125:
+.LASF131:
 	.string	"mbedtls_pem_write_buffer"
-.LASF87:
+.LASF93:
 	.string	"sub_len"
-.LASF90:
+.LASF80:
+	.string	"unused_bits"
+.LASF96:
 	.string	"sig_len"
-.LASF117:
+.LASF123:
 	.string	"mbedtls_asn1_write_algorithm_identifier"
 .LASF41:
 	.string	"pk_info"
@@ -6994,7 +7259,7 @@ mbedtls_x509write_crt_pem:
 	.string	"short int"
 .LASF9:
 	.string	"long int"
-.LASF85:
+.LASF91:
 	.string	"hash"
 .LASF16:
 	.string	"mbedtls_asn1_buf"
@@ -7002,7 +7267,7 @@ mbedtls_x509write_crt_pem:
 	.string	"val_len"
 .LASF60:
 	.string	"mbedtls_x509write_crt_free"
-.LASF81:
+.LASF87:
 	.string	"f_rng"
 .LASF75:
 	.string	"mbedtls_x509write_crt_set_authority_key_identifier"
@@ -7012,7 +7277,7 @@ mbedtls_x509write_crt_pem:
 	.string	"MBEDTLS_MD_SHA1"
 .LASF68:
 	.string	"issuer_name"
-.LASF128:
+.LASF134:
 	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/mbedtls"
 .LASF21:
 	.string	"MBEDTLS_MD_MD2"
@@ -7036,23 +7301,27 @@ mbedtls_x509write_crt_pem:
 	.string	"unsigned char"
 .LASF6:
 	.string	"__uint32_t"
-.LASF119:
+.LASF125:
 	.string	"mbedtls_md_info_from_type"
-.LASF84:
+.LASF90:
 	.string	"sig_oid_len"
-.LASF100:
+.LASF77:
+	.string	"crt_get_unused_bits_for_named_bitstring"
+.LASF106:
 	.string	"mbedtls_asn1_free_named_data_list"
 .LASF52:
 	.string	"not_after"
-.LASF80:
+.LASF86:
 	.string	"mbedtls_x509write_crt_der"
 .LASF51:
 	.string	"not_before"
-.LASF115:
+.LASF121:
 	.string	"mbedtls_pk_write_pubkey_der"
+.LASF83:
+	.string	"allowed_bits"
 .LASF17:
 	.string	"mbedtls_asn1_named_data"
-.LASF130:
+.LASF76:
 	.string	"x509_write_time"
 .LASF2:
 	.string	"signed char"
@@ -7062,18 +7331,20 @@ mbedtls_x509write_crt_pem:
 	.string	"MBEDTLS_MD_RIPEMD160"
 .LASF1:
 	.string	"short unsigned int"
+.LASF78:
+	.string	"bitstring"
 .LASF27:
 	.string	"MBEDTLS_MD_SHA384"
-.LASF121:
+.LASF127:
 	.string	"mbedtls_pk_sign"
-.LASF88:
+.LASF94:
 	.string	"pub_len"
-.LASF113:
+.LASF119:
 	.string	"mbedtls_oid_get_oid_by_sig_alg"
 .LASF72:
 	.string	"is_ca"
-.LASF101:
+.LASF107:
 	.string	"mbedtls_platform_zeroize"
-.LASF98:
+.LASF104:
 	.string	"mbedtls_mpi_init"
 	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

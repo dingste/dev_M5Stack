@@ -25,24 +25,30 @@ typedef short unsigned int wchar_t;
 
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat_external.h" 1
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat_external.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat_external.h"
 
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat_external.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat_external.h"
 typedef char XML_Char;
 typedef char XML_LChar;
-# 154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat_external.h"
+
+
+
+
+
+
 typedef long XML_Index;
 typedef unsigned long XML_Size;
 # 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/internal.h" 1
-# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/internal.h"
+# 117 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/internal.h"
 void
-_INTERNAL_trim_to_complete_utf8_characters(const char * from, const char ** fromLimRef);
+_INTERNAL_trim_to_complete_utf8_characters(const char *from,
+                                           const char **fromLimRef);
 # 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.h" 1
 # 42 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.h" 1
-# 140 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.h"
 typedef struct position {
 
   XML_Size lineNumber;
@@ -59,72 +65,56 @@ typedef struct {
 struct encoding;
 typedef struct encoding ENCODING;
 
-typedef int ( *SCANNER)(const ENCODING *,
-                               const char *,
-                               const char *,
-                               const char **);
+typedef int( *SCANNER)(const ENCODING *, const char *, const char *,
+                              const char **);
 
 enum XML_Convert_Result {
   XML_CONVERT_COMPLETED = 0,
   XML_CONVERT_INPUT_INCOMPLETE = 1,
-  XML_CONVERT_OUTPUT_EXHAUSTED = 2
+  XML_CONVERT_OUTPUT_EXHAUSTED
+  = 2
 };
 
 struct encoding {
   SCANNER scanners[4];
   SCANNER literalScanners[2];
-  int ( *nameMatchesAscii)(const ENCODING *,
-                                  const char *,
-                                  const char *,
-                                  const char *);
-  int ( *nameLength)(const ENCODING *, const char *);
+  int( *nameMatchesAscii)(const ENCODING *, const char *, const char *,
+                                 const char *);
+  int( *nameLength)(const ENCODING *, const char *);
   const char *( *skipS)(const ENCODING *, const char *);
-  int ( *getAtts)(const ENCODING *enc,
-                         const char *ptr,
-                         int attsMax,
-                         ATTRIBUTE *atts);
-  int ( *charRefNumber)(const ENCODING *enc, const char *ptr);
-  int ( *predefinedEntityName)(const ENCODING *,
-                                      const char *,
-                                      const char *);
-  void ( *updatePosition)(const ENCODING *,
-                                 const char *ptr,
-                                 const char *end,
-                                 POSITION *);
-  int ( *isPublicId)(const ENCODING *enc,
-                            const char *ptr,
-                            const char *end,
-                            const char **badPtr);
-  enum XML_Convert_Result ( *utf8Convert)(const ENCODING *enc,
-                              const char **fromP,
-                              const char *fromLim,
-                              char **toP,
-                              const char *toLim);
-  enum XML_Convert_Result ( *utf16Convert)(const ENCODING *enc,
-                               const char **fromP,
-                               const char *fromLim,
-                               unsigned short **toP,
-                               const unsigned short *toLim);
+  int( *getAtts)(const ENCODING *enc, const char *ptr, int attsMax,
+                        ATTRIBUTE *atts);
+  int( *charRefNumber)(const ENCODING *enc, const char *ptr);
+  int( *predefinedEntityName)(const ENCODING *, const char *,
+                                     const char *);
+  void( *updatePosition)(const ENCODING *, const char *ptr,
+                                const char *end, POSITION *);
+  int( *isPublicId)(const ENCODING *enc, const char *ptr,
+                           const char *end, const char **badPtr);
+  enum XML_Convert_Result( *utf8Convert)(const ENCODING *enc,
+                                                const char **fromP,
+                                                const char *fromLim, char **toP,
+                                                const char *toLim);
+  enum XML_Convert_Result( *utf16Convert)(const ENCODING *enc,
+                                                 const char **fromP,
+                                                 const char *fromLim,
+                                                 unsigned short **toP,
+                                                 const unsigned short *toLim);
   int minBytesPerChar;
   char isUtf8;
   char isUtf16;
 };
-# 290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.h"
+# 277 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.h"
 typedef struct {
   ENCODING initEnc;
   const ENCODING **encPtr;
 } INIT_ENCODING;
 
-int XmlParseXmlDecl(int isGeneralTextEntity,
-                    const ENCODING *enc,
-                    const char *ptr,
-                    const char *end,
-                    const char **badPtr,
-                    const char **versionPtr,
-                    const char **versionEndPtr,
+int XmlParseXmlDecl(int isGeneralTextEntity, const ENCODING *enc,
+                    const char *ptr, const char *end, const char **badPtr,
+                    const char **versionPtr, const char **versionEndPtr,
                     const char **encodingNamePtr,
-                    const ENCODING **namedEncodingPtr,
-                    int *standalonePtr);
+                    const ENCODING **namedEncodingPtr, int *standalonePtr);
 
 int XmlInitEncoding(INIT_ENCODING *, const ENCODING **, const char *name);
 const ENCODING *XmlGetUtf8InternalEncoding(void);
@@ -133,34 +123,22 @@ int XmlUtf8Encode(int charNumber, char *buf);
 int XmlUtf16Encode(int charNumber, unsigned short *buf);
 int XmlSizeOfUnknownEncoding(void);
 
+typedef int( *CONVERTER)(void *userData, const char *p);
 
-typedef int ( *CONVERTER) (void *userData, const char *p);
+ENCODING *XmlInitUnknownEncoding(void *mem, int *table, CONVERTER convert,
+                                 void *userData);
 
-ENCODING *
-XmlInitUnknownEncoding(void *mem,
-                       int *table,
-                       CONVERTER convert,
-                       void *userData);
-
-int XmlParseXmlDeclNS(int isGeneralTextEntity,
-                      const ENCODING *enc,
-                      const char *ptr,
-                      const char *end,
-                      const char **badPtr,
-                      const char **versionPtr,
-                      const char **versionEndPtr,
+int XmlParseXmlDeclNS(int isGeneralTextEntity, const ENCODING *enc,
+                      const char *ptr, const char *end, const char **badPtr,
+                      const char **versionPtr, const char **versionEndPtr,
                       const char **encodingNamePtr,
-                      const ENCODING **namedEncodingPtr,
-                      int *standalonePtr);
+                      const ENCODING **namedEncodingPtr, int *standalonePtr);
 
 int XmlInitEncodingNS(INIT_ENCODING *, const ENCODING **, const char *name);
 const ENCODING *XmlGetUtf8InternalEncodingNS(void);
 const ENCODING *XmlGetUtf16InternalEncodingNS(void);
-ENCODING *
-XmlInitUnknownEncodingNS(void *mem,
-                         int *table,
-                         CONVERTER convert,
-                         void *userData);
+ENCODING *XmlInitUnknownEncodingNS(void *mem, int *table, CONVERTER convert,
+                                   void *userData);
 # 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.h" 2
 
 
@@ -235,11 +213,8 @@ enum {
 };
 
 typedef struct prolog_state {
-  int ( *handler) (struct prolog_state *state,
-                          int tok,
-                          const char *ptr,
-                          const char *end,
-                          const ENCODING *enc);
+  int( *handler)(struct prolog_state *state, int tok, const char *ptr,
+                        const char *end, const ENCODING *enc);
   unsigned level;
   int role_none;
 
@@ -256,94 +231,76 @@ void XmlPrologStateInitExternalEntity(PROLOG_STATE *);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/ascii.h" 1
 # 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.c" 2
 # 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.c"
-static const char KW_ANY[] = {
-    0x41, 0x4E, 0x59, '\0' };
-static const char KW_ATTLIST[] = {
-    0x41, 0x54, 0x54, 0x4C, 0x49, 0x53, 0x54, '\0' };
-static const char KW_CDATA[] = {
-    0x43, 0x44, 0x41, 0x54, 0x41, '\0' };
-static const char KW_DOCTYPE[] = {
-    0x44, 0x4F, 0x43, 0x54, 0x59, 0x50, 0x45, '\0' };
-static const char KW_ELEMENT[] = {
-    0x45, 0x4C, 0x45, 0x4D, 0x45, 0x4E, 0x54, '\0' };
-static const char KW_EMPTY[] = {
-    0x45, 0x4D, 0x50, 0x54, 0x59, '\0' };
-static const char KW_ENTITIES[] = {
-    0x45, 0x4E, 0x54, 0x49, 0x54, 0x49, 0x45, 0x53,
-    '\0' };
-static const char KW_ENTITY[] = {
-    0x45, 0x4E, 0x54, 0x49, 0x54, 0x59, '\0' };
-static const char KW_FIXED[] = {
-    0x46, 0x49, 0x58, 0x45, 0x44, '\0' };
-static const char KW_ID[] = {
-    0x49, 0x44, '\0' };
-static const char KW_IDREF[] = {
-    0x49, 0x44, 0x52, 0x45, 0x46, '\0' };
-static const char KW_IDREFS[] = {
-    0x49, 0x44, 0x52, 0x45, 0x46, 0x53, '\0' };
+static const char KW_ANY[] = {0x41, 0x4E, 0x59, '\0'};
+static const char KW_ATTLIST[]
+    = {0x41, 0x54, 0x54, 0x4C, 0x49, 0x53, 0x54, '\0'};
+static const char KW_CDATA[]
+    = {0x43, 0x44, 0x41, 0x54, 0x41, '\0'};
+static const char KW_DOCTYPE[]
+    = {0x44, 0x4F, 0x43, 0x54, 0x59, 0x50, 0x45, '\0'};
+static const char KW_ELEMENT[]
+    = {0x45, 0x4C, 0x45, 0x4D, 0x45, 0x4E, 0x54, '\0'};
+static const char KW_EMPTY[]
+    = {0x45, 0x4D, 0x50, 0x54, 0x59, '\0'};
+static const char KW_ENTITIES[] = {0x45, 0x4E, 0x54, 0x49, 0x54,
+                                   0x49, 0x45, 0x53, '\0'};
+static const char KW_ENTITY[]
+    = {0x45, 0x4E, 0x54, 0x49, 0x54, 0x59, '\0'};
+static const char KW_FIXED[]
+    = {0x46, 0x49, 0x58, 0x45, 0x44, '\0'};
+static const char KW_ID[] = {0x49, 0x44, '\0'};
+static const char KW_IDREF[]
+    = {0x49, 0x44, 0x52, 0x45, 0x46, '\0'};
+static const char KW_IDREFS[]
+    = {0x49, 0x44, 0x52, 0x45, 0x46, 0x53, '\0'};
 
-static const char KW_IGNORE[] = {
-    0x49, 0x47, 0x4E, 0x4F, 0x52, 0x45, '\0' };
+static const char KW_IGNORE[]
+    = {0x49, 0x47, 0x4E, 0x4F, 0x52, 0x45, '\0'};
 
-static const char KW_IMPLIED[] = {
-    0x49, 0x4D, 0x50, 0x4C, 0x49, 0x45, 0x44, '\0' };
+static const char KW_IMPLIED[]
+    = {0x49, 0x4D, 0x50, 0x4C, 0x49, 0x45, 0x44, '\0'};
 
-static const char KW_INCLUDE[] = {
-    0x49, 0x4E, 0x43, 0x4C, 0x55, 0x44, 0x45, '\0' };
+static const char KW_INCLUDE[]
+    = {0x49, 0x4E, 0x43, 0x4C, 0x55, 0x44, 0x45, '\0'};
 
-static const char KW_NDATA[] = {
-    0x4E, 0x44, 0x41, 0x54, 0x41, '\0' };
-static const char KW_NMTOKEN[] = {
-    0x4E, 0x4D, 0x54, 0x4F, 0x4B, 0x45, 0x4E, '\0' };
-static const char KW_NMTOKENS[] = {
-    0x4E, 0x4D, 0x54, 0x4F, 0x4B, 0x45, 0x4E, 0x53,
-    '\0' };
-static const char KW_NOTATION[] =
-    { 0x4E, 0x4F, 0x54, 0x41, 0x54, 0x49, 0x4F, 0x4E,
-      '\0' };
-static const char KW_PCDATA[] = {
-    0x50, 0x43, 0x44, 0x41, 0x54, 0x41, '\0' };
-static const char KW_PUBLIC[] = {
-    0x50, 0x55, 0x42, 0x4C, 0x49, 0x43, '\0' };
-static const char KW_REQUIRED[] = {
-    0x52, 0x45, 0x51, 0x55, 0x49, 0x52, 0x45, 0x44,
-    '\0' };
-static const char KW_SYSTEM[] = {
-    0x53, 0x59, 0x53, 0x54, 0x45, 0x4D, '\0' };
-# 123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.c"
-typedef int PROLOG_HANDLER(PROLOG_STATE *state,
-                                   int tok,
-                                   const char *ptr,
-                                   const char *end,
+static const char KW_NDATA[]
+    = {0x4E, 0x44, 0x41, 0x54, 0x41, '\0'};
+static const char KW_NMTOKEN[]
+    = {0x4E, 0x4D, 0x54, 0x4F, 0x4B, 0x45, 0x4E, '\0'};
+static const char KW_NMTOKENS[] = {0x4E, 0x4D, 0x54, 0x4F, 0x4B,
+                                   0x45, 0x4E, 0x53, '\0'};
+static const char KW_NOTATION[] = {0x4E, 0x4F, 0x54, 0x41, 0x54,
+                                   0x49, 0x4F, 0x4E, '\0'};
+static const char KW_PCDATA[]
+    = {0x50, 0x43, 0x44, 0x41, 0x54, 0x41, '\0'};
+static const char KW_PUBLIC[]
+    = {0x50, 0x55, 0x42, 0x4C, 0x49, 0x43, '\0'};
+static const char KW_REQUIRED[] = {0x52, 0x45, 0x51, 0x55, 0x49,
+                                   0x52, 0x45, 0x44, '\0'};
+static const char KW_SYSTEM[]
+    = {0x53, 0x59, 0x53, 0x54, 0x45, 0x4D, '\0'};
+# 116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.c"
+typedef int PROLOG_HANDLER(PROLOG_STATE *state, int tok,
+                                   const char *ptr, const char *end,
                                    const ENCODING *enc);
 
-static PROLOG_HANDLER
-  prolog0, prolog1, prolog2,
-  doctype0, doctype1, doctype2, doctype3, doctype4, doctype5,
-  internalSubset,
-  entity0, entity1, entity2, entity3, entity4, entity5, entity6,
-  entity7, entity8, entity9, entity10,
-  notation0, notation1, notation2, notation3, notation4,
-  attlist0, attlist1, attlist2, attlist3, attlist4, attlist5, attlist6,
-  attlist7, attlist8, attlist9,
-  element0, element1, element2, element3, element4, element5, element6,
-  element7,
+static PROLOG_HANDLER prolog0, prolog1, prolog2, doctype0, doctype1, doctype2,
+    doctype3, doctype4, doctype5, internalSubset, entity0, entity1, entity2,
+    entity3, entity4, entity5, entity6, entity7, entity8, entity9, entity10,
+    notation0, notation1, notation2, notation3, notation4, attlist0, attlist1,
+    attlist2, attlist3, attlist4, attlist5, attlist6, attlist7, attlist8,
+    attlist9, element0, element1, element2, element3, element4, element5,
+    element6, element7,
 
-  externalSubset0, externalSubset1,
-  condSect0, condSect1, condSect2,
+    externalSubset0, externalSubset1, condSect0, condSect1, condSect2,
 
-  declClose,
-  error;
+    declClose, error;
 
 static int common(PROLOG_STATE *state, int tok);
 
 static int
-prolog0(PROLOG_STATE *state,
-        int tok,
-        const char *ptr,
-        const char *end,
-        const ENCODING *enc)
-{
+prolog0(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+        const ENCODING *enc) {
   switch (tok) {
   case 15:
     state->handler = prolog1;
@@ -360,10 +317,8 @@ prolog0(PROLOG_STATE *state,
   case 14:
     return XML_ROLE_NONE;
   case 16:
-    if (!(((enc)->nameMatchesAscii)(enc, ptr + 2 * ((enc)->minBytesPerChar), end, KW_DOCTYPE))
-
-
-                                        )
+    if (! (((enc)->nameMatchesAscii)(enc, ptr + 2 * ((enc)->minBytesPerChar), end, KW_DOCTYPE))
+                                         )
       break;
     state->handler = doctype0;
     return XML_ROLE_DOCTYPE_NONE;
@@ -375,12 +330,8 @@ prolog0(PROLOG_STATE *state,
 }
 
 static int
-prolog1(PROLOG_STATE *state,
-        int tok,
-        const char *ptr,
-        const char *end,
-        const ENCODING *enc)
-{
+prolog1(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+        const ENCODING *enc) {
   switch (tok) {
   case 15:
     return XML_ROLE_NONE;
@@ -398,10 +349,8 @@ prolog1(PROLOG_STATE *state,
 
     return XML_ROLE_NONE;
   case 16:
-    if (!(((enc)->nameMatchesAscii)(enc, ptr + 2 * ((enc)->minBytesPerChar), end, KW_DOCTYPE))
-
-
-                                        )
+    if (! (((enc)->nameMatchesAscii)(enc, ptr + 2 * ((enc)->minBytesPerChar), end, KW_DOCTYPE))
+                                         )
       break;
     state->handler = doctype0;
     return XML_ROLE_DOCTYPE_NONE;
@@ -413,12 +362,11 @@ prolog1(PROLOG_STATE *state,
 }
 
 static int
-prolog2(PROLOG_STATE *state,
-        int tok,
-        const char *UNUSED_ptr __attribute__((__unused__)),
-        const char *UNUSED_end __attribute__((__unused__)),
-        const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+prolog2(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+        const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_NONE;
@@ -434,12 +382,11 @@ prolog2(PROLOG_STATE *state,
 }
 
 static int
-doctype0(PROLOG_STATE *state,
-         int tok,
-         const char *UNUSED_ptr __attribute__((__unused__)),
-         const char *UNUSED_end __attribute__((__unused__)),
-         const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+doctype0(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_DOCTYPE_NONE;
@@ -452,12 +399,8 @@ doctype0(PROLOG_STATE *state,
 }
 
 static int
-doctype1(PROLOG_STATE *state,
-         int tok,
-         const char *ptr,
-         const char *end,
-         const ENCODING *enc)
-{
+doctype1(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
   switch (tok) {
   case 15:
     return XML_ROLE_DOCTYPE_NONE;
@@ -482,12 +425,11 @@ doctype1(PROLOG_STATE *state,
 }
 
 static int
-doctype2(PROLOG_STATE *state,
-         int tok,
-         const char *UNUSED_ptr __attribute__((__unused__)),
-         const char *UNUSED_end __attribute__((__unused__)),
-         const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+doctype2(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_DOCTYPE_NONE;
@@ -499,12 +441,11 @@ doctype2(PROLOG_STATE *state,
 }
 
 static int
-doctype3(PROLOG_STATE *state,
-         int tok,
-         const char *UNUSED_ptr __attribute__((__unused__)),
-         const char *UNUSED_end __attribute__((__unused__)),
-         const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+doctype3(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_DOCTYPE_NONE;
@@ -516,12 +457,11 @@ doctype3(PROLOG_STATE *state,
 }
 
 static int
-doctype4(PROLOG_STATE *state,
-         int tok,
-         const char *UNUSED_ptr __attribute__((__unused__)),
-         const char *UNUSED_end __attribute__((__unused__)),
-         const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+doctype4(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_DOCTYPE_NONE;
@@ -536,12 +476,11 @@ doctype4(PROLOG_STATE *state,
 }
 
 static int
-doctype5(PROLOG_STATE *state,
-         int tok,
-         const char *UNUSED_ptr __attribute__((__unused__)),
-         const char *UNUSED_end __attribute__((__unused__)),
-         const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+doctype5(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_DOCTYPE_NONE;
@@ -553,40 +492,28 @@ doctype5(PROLOG_STATE *state,
 }
 
 static int
-internalSubset(PROLOG_STATE *state,
-               int tok,
-               const char *ptr,
-               const char *end,
-               const ENCODING *enc)
-{
+internalSubset(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+               const ENCODING *enc) {
   switch (tok) {
   case 15:
     return XML_ROLE_NONE;
   case 16:
     if ((((enc)->nameMatchesAscii)(enc, ptr + 2 * ((enc)->minBytesPerChar), end, KW_ENTITY))
-
-
                                       ) {
       state->handler = entity0;
       return XML_ROLE_ENTITY_NONE;
     }
     if ((((enc)->nameMatchesAscii)(enc, ptr + 2 * ((enc)->minBytesPerChar), end, KW_ATTLIST))
-
-
                                        ) {
       state->handler = attlist0;
       return XML_ROLE_ATTLIST_NONE;
     }
     if ((((enc)->nameMatchesAscii)(enc, ptr + 2 * ((enc)->minBytesPerChar), end, KW_ELEMENT))
-
-
                                        ) {
       state->handler = element0;
       return XML_ROLE_ELEMENT_NONE;
     }
     if ((((enc)->nameMatchesAscii)(enc, ptr + 2 * ((enc)->minBytesPerChar), end, KW_NOTATION))
-
-
                                         ) {
       state->handler = notation0;
       return XML_ROLE_NOTATION_NONE;
@@ -610,12 +537,8 @@ internalSubset(PROLOG_STATE *state,
 
 
 static int
-externalSubset0(PROLOG_STATE *state,
-                int tok,
-                const char *ptr,
-                const char *end,
-                const ENCODING *enc)
-{
+externalSubset0(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+                const ENCODING *enc) {
   state->handler = externalSubset1;
   if (tok == 12)
     return XML_ROLE_TEXT_DECL;
@@ -623,12 +546,8 @@ externalSubset0(PROLOG_STATE *state,
 }
 
 static int
-externalSubset1(PROLOG_STATE *state,
-                int tok,
-                const char *ptr,
-                const char *end,
-                const ENCODING *enc)
-{
+externalSubset1(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+                const ENCODING *enc) {
   switch (tok) {
   case 33:
     state->handler = condSect0;
@@ -655,12 +574,11 @@ externalSubset1(PROLOG_STATE *state,
 
 
 static int
-entity0(PROLOG_STATE *state,
-        int tok,
-        const char *UNUSED_ptr __attribute__((__unused__)),
-        const char *UNUSED_end __attribute__((__unused__)),
-        const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+entity0(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+        const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ENTITY_NONE;
@@ -675,12 +593,11 @@ entity0(PROLOG_STATE *state,
 }
 
 static int
-entity1(PROLOG_STATE *state,
-        int tok,
-        const char *UNUSED_ptr __attribute__((__unused__)),
-        const char *UNUSED_end __attribute__((__unused__)),
-        const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+entity1(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+        const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ENTITY_NONE;
@@ -692,12 +609,8 @@ entity1(PROLOG_STATE *state,
 }
 
 static int
-entity2(PROLOG_STATE *state,
-        int tok,
-        const char *ptr,
-        const char *end,
-        const ENCODING *enc)
-{
+entity2(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+        const ENCODING *enc) {
   switch (tok) {
   case 15:
     return XML_ROLE_ENTITY_NONE;
@@ -720,12 +633,11 @@ entity2(PROLOG_STATE *state,
 }
 
 static int
-entity3(PROLOG_STATE *state,
-        int tok,
-        const char *UNUSED_ptr __attribute__((__unused__)),
-        const char *UNUSED_end __attribute__((__unused__)),
-        const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+entity3(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+        const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ENTITY_NONE;
@@ -737,12 +649,11 @@ entity3(PROLOG_STATE *state,
 }
 
 static int
-entity4(PROLOG_STATE *state,
-        int tok,
-        const char *UNUSED_ptr __attribute__((__unused__)),
-        const char *UNUSED_end __attribute__((__unused__)),
-        const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+entity4(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+        const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ENTITY_NONE;
@@ -754,12 +665,8 @@ entity4(PROLOG_STATE *state,
 }
 
 static int
-entity5(PROLOG_STATE *state,
-        int tok,
-        const char *ptr,
-        const char *end,
-        const ENCODING *enc)
-{
+entity5(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+        const ENCODING *enc) {
   switch (tok) {
   case 15:
     return XML_ROLE_ENTITY_NONE;
@@ -777,12 +684,11 @@ entity5(PROLOG_STATE *state,
 }
 
 static int
-entity6(PROLOG_STATE *state,
-        int tok,
-        const char *UNUSED_ptr __attribute__((__unused__)),
-        const char *UNUSED_end __attribute__((__unused__)),
-        const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+entity6(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+        const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ENTITY_NONE;
@@ -795,12 +701,8 @@ entity6(PROLOG_STATE *state,
 }
 
 static int
-entity7(PROLOG_STATE *state,
-        int tok,
-        const char *ptr,
-        const char *end,
-        const ENCODING *enc)
-{
+entity7(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+        const ENCODING *enc) {
   switch (tok) {
   case 15:
     return XML_ROLE_ENTITY_NONE;
@@ -823,12 +725,11 @@ entity7(PROLOG_STATE *state,
 }
 
 static int
-entity8(PROLOG_STATE *state,
-        int tok,
-        const char *UNUSED_ptr __attribute__((__unused__)),
-        const char *UNUSED_end __attribute__((__unused__)),
-        const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+entity8(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+        const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ENTITY_NONE;
@@ -840,12 +741,11 @@ entity8(PROLOG_STATE *state,
 }
 
 static int
-entity9(PROLOG_STATE *state,
-        int tok,
-        const char *UNUSED_ptr __attribute__((__unused__)),
-        const char *UNUSED_end __attribute__((__unused__)),
-        const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+entity9(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+        const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ENTITY_NONE;
@@ -857,12 +757,11 @@ entity9(PROLOG_STATE *state,
 }
 
 static int
-entity10(PROLOG_STATE *state,
-         int tok,
-         const char *UNUSED_ptr __attribute__((__unused__)),
-         const char *UNUSED_end __attribute__((__unused__)),
-         const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+entity10(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ENTITY_NONE;
@@ -874,12 +773,11 @@ entity10(PROLOG_STATE *state,
 }
 
 static int
-notation0(PROLOG_STATE *state,
-          int tok,
-          const char *UNUSED_ptr __attribute__((__unused__)),
-          const char *UNUSED_end __attribute__((__unused__)),
-          const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+notation0(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+          const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_NOTATION_NONE;
@@ -891,12 +789,8 @@ notation0(PROLOG_STATE *state,
 }
 
 static int
-notation1(PROLOG_STATE *state,
-          int tok,
-          const char *ptr,
-          const char *end,
-          const ENCODING *enc)
-{
+notation1(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+          const ENCODING *enc) {
   switch (tok) {
   case 15:
     return XML_ROLE_NOTATION_NONE;
@@ -915,12 +809,11 @@ notation1(PROLOG_STATE *state,
 }
 
 static int
-notation2(PROLOG_STATE *state,
-          int tok,
-          const char *UNUSED_ptr __attribute__((__unused__)),
-          const char *UNUSED_end __attribute__((__unused__)),
-          const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+notation2(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+          const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_NOTATION_NONE;
@@ -932,12 +825,11 @@ notation2(PROLOG_STATE *state,
 }
 
 static int
-notation3(PROLOG_STATE *state,
-          int tok,
-          const char *UNUSED_ptr __attribute__((__unused__)),
-          const char *UNUSED_end __attribute__((__unused__)),
-          const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+notation3(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+          const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_NOTATION_NONE;
@@ -950,12 +842,11 @@ notation3(PROLOG_STATE *state,
 }
 
 static int
-notation4(PROLOG_STATE *state,
-          int tok,
-          const char *UNUSED_ptr __attribute__((__unused__)),
-          const char *UNUSED_end __attribute__((__unused__)),
-          const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+notation4(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+          const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_NOTATION_NONE;
@@ -971,12 +862,11 @@ notation4(PROLOG_STATE *state,
 }
 
 static int
-attlist0(PROLOG_STATE *state,
-         int tok,
-         const char *UNUSED_ptr __attribute__((__unused__)),
-         const char *UNUSED_end __attribute__((__unused__)),
-         const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+attlist0(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ATTLIST_NONE;
@@ -989,12 +879,11 @@ attlist0(PROLOG_STATE *state,
 }
 
 static int
-attlist1(PROLOG_STATE *state,
-         int tok,
-         const char *UNUSED_ptr __attribute__((__unused__)),
-         const char *UNUSED_end __attribute__((__unused__)),
-         const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+attlist1(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ATTLIST_NONE;
@@ -1010,34 +899,23 @@ attlist1(PROLOG_STATE *state,
 }
 
 static int
-attlist2(PROLOG_STATE *state,
-         int tok,
-         const char *ptr,
-         const char *end,
-         const ENCODING *enc)
-{
+attlist2(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
   switch (tok) {
   case 15:
     return XML_ROLE_ATTLIST_NONE;
-  case 18:
-    {
-      static const char * const types[] = {
-        KW_CDATA,
-        KW_ID,
-        KW_IDREF,
-        KW_IDREFS,
-        KW_ENTITY,
-        KW_ENTITIES,
-        KW_NMTOKEN,
-        KW_NMTOKENS,
-      };
-      int i;
-      for (i = 0; i < (int)(sizeof(types)/sizeof(types[0])); i++)
-        if ((((enc)->nameMatchesAscii)(enc, ptr, end, types[i]))) {
-          state->handler = attlist8;
-          return XML_ROLE_ATTRIBUTE_TYPE_CDATA + i;
-        }
-    }
+  case 18: {
+    static const char *const types[] = {
+        KW_CDATA, KW_ID, KW_IDREF, KW_IDREFS,
+        KW_ENTITY, KW_ENTITIES, KW_NMTOKEN, KW_NMTOKENS,
+    };
+    int i;
+    for (i = 0; i < (int)(sizeof(types) / sizeof(types[0])); i++)
+      if ((((enc)->nameMatchesAscii)(enc, ptr, end, types[i]))) {
+        state->handler = attlist8;
+        return XML_ROLE_ATTRIBUTE_TYPE_CDATA + i;
+      }
+  }
     if ((((enc)->nameMatchesAscii)(enc, ptr, end, KW_NOTATION))) {
       state->handler = attlist5;
       return XML_ROLE_ATTLIST_NONE;
@@ -1051,12 +929,11 @@ attlist2(PROLOG_STATE *state,
 }
 
 static int
-attlist3(PROLOG_STATE *state,
-         int tok,
-         const char *UNUSED_ptr __attribute__((__unused__)),
-         const char *UNUSED_end __attribute__((__unused__)),
-         const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+attlist3(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ATTLIST_NONE;
@@ -1070,12 +947,11 @@ attlist3(PROLOG_STATE *state,
 }
 
 static int
-attlist4(PROLOG_STATE *state,
-         int tok,
-         const char *UNUSED_ptr __attribute__((__unused__)),
-         const char *UNUSED_end __attribute__((__unused__)),
-         const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+attlist4(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ATTLIST_NONE;
@@ -1090,12 +966,11 @@ attlist4(PROLOG_STATE *state,
 }
 
 static int
-attlist5(PROLOG_STATE *state,
-         int tok,
-         const char *UNUSED_ptr __attribute__((__unused__)),
-         const char *UNUSED_end __attribute__((__unused__)),
-         const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+attlist5(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ATTLIST_NONE;
@@ -1107,12 +982,11 @@ attlist5(PROLOG_STATE *state,
 }
 
 static int
-attlist6(PROLOG_STATE *state,
-         int tok,
-         const char *UNUSED_ptr __attribute__((__unused__)),
-         const char *UNUSED_end __attribute__((__unused__)),
-         const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+attlist6(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ATTLIST_NONE;
@@ -1124,12 +998,11 @@ attlist6(PROLOG_STATE *state,
 }
 
 static int
-attlist7(PROLOG_STATE *state,
-         int tok,
-         const char *UNUSED_ptr __attribute__((__unused__)),
-         const char *UNUSED_end __attribute__((__unused__)),
-         const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+attlist7(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ATTLIST_NONE;
@@ -1145,33 +1018,23 @@ attlist7(PROLOG_STATE *state,
 
 
 static int
-attlist8(PROLOG_STATE *state,
-         int tok,
-         const char *ptr,
-         const char *end,
-         const ENCODING *enc)
-{
+attlist8(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
   switch (tok) {
   case 15:
     return XML_ROLE_ATTLIST_NONE;
   case 20:
     if ((((enc)->nameMatchesAscii)(enc, ptr + ((enc)->minBytesPerChar), end, KW_IMPLIED))
-
-
                                        ) {
       state->handler = attlist1;
       return XML_ROLE_IMPLIED_ATTRIBUTE_VALUE;
     }
     if ((((enc)->nameMatchesAscii)(enc, ptr + ((enc)->minBytesPerChar), end, KW_REQUIRED))
-
-
                                         ) {
       state->handler = attlist1;
       return XML_ROLE_REQUIRED_ATTRIBUTE_VALUE;
     }
     if ((((enc)->nameMatchesAscii)(enc, ptr + ((enc)->minBytesPerChar), end, KW_FIXED))
-
-
                                      ) {
       state->handler = attlist9;
       return XML_ROLE_ATTLIST_NONE;
@@ -1185,12 +1048,11 @@ attlist8(PROLOG_STATE *state,
 }
 
 static int
-attlist9(PROLOG_STATE *state,
-         int tok,
-         const char *UNUSED_ptr __attribute__((__unused__)),
-         const char *UNUSED_end __attribute__((__unused__)),
-         const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+attlist9(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ATTLIST_NONE;
@@ -1202,12 +1064,11 @@ attlist9(PROLOG_STATE *state,
 }
 
 static int
-element0(PROLOG_STATE *state,
-         int tok,
-         const char *UNUSED_ptr __attribute__((__unused__)),
-         const char *UNUSED_end __attribute__((__unused__)),
-         const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+element0(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ELEMENT_NONE;
@@ -1220,12 +1081,8 @@ element0(PROLOG_STATE *state,
 }
 
 static int
-element1(PROLOG_STATE *state,
-         int tok,
-         const char *ptr,
-         const char *end,
-         const ENCODING *enc)
-{
+element1(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
   switch (tok) {
   case 15:
     return XML_ROLE_ELEMENT_NONE;
@@ -1250,19 +1107,13 @@ element1(PROLOG_STATE *state,
 }
 
 static int
-element2(PROLOG_STATE *state,
-         int tok,
-         const char *ptr,
-         const char *end,
-         const ENCODING *enc)
-{
+element2(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
   switch (tok) {
   case 15:
     return XML_ROLE_ELEMENT_NONE;
   case 20:
     if ((((enc)->nameMatchesAscii)(enc, ptr + ((enc)->minBytesPerChar), end, KW_PCDATA))
-
-
                                       ) {
       state->handler = element3;
       return XML_ROLE_CONTENT_PCDATA;
@@ -1290,12 +1141,11 @@ element2(PROLOG_STATE *state,
 }
 
 static int
-element3(PROLOG_STATE *state,
-         int tok,
-         const char *UNUSED_ptr __attribute__((__unused__)),
-         const char *UNUSED_end __attribute__((__unused__)),
-         const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+element3(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ELEMENT_NONE;
@@ -1315,12 +1165,11 @@ element3(PROLOG_STATE *state,
 }
 
 static int
-element4(PROLOG_STATE *state,
-         int tok,
-         const char *UNUSED_ptr __attribute__((__unused__)),
-         const char *UNUSED_end __attribute__((__unused__)),
-         const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+element4(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ELEMENT_NONE;
@@ -1333,12 +1182,11 @@ element4(PROLOG_STATE *state,
 }
 
 static int
-element5(PROLOG_STATE *state,
-         int tok,
-         const char *UNUSED_ptr __attribute__((__unused__)),
-         const char *UNUSED_end __attribute__((__unused__)),
-         const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+element5(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ELEMENT_NONE;
@@ -1354,12 +1202,11 @@ element5(PROLOG_STATE *state,
 }
 
 static int
-element6(PROLOG_STATE *state,
-         int tok,
-         const char *UNUSED_ptr __attribute__((__unused__)),
-         const char *UNUSED_end __attribute__((__unused__)),
-         const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+element6(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ELEMENT_NONE;
@@ -1384,12 +1231,11 @@ element6(PROLOG_STATE *state,
 }
 
 static int
-element7(PROLOG_STATE *state,
-         int tok,
-         const char *UNUSED_ptr __attribute__((__unused__)),
-         const char *UNUSED_end __attribute__((__unused__)),
-         const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+element7(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+         const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_ELEMENT_NONE;
@@ -1434,12 +1280,8 @@ element7(PROLOG_STATE *state,
 
 
 static int
-condSect0(PROLOG_STATE *state,
-          int tok,
-          const char *ptr,
-          const char *end,
-          const ENCODING *enc)
-{
+condSect0(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+          const ENCODING *enc) {
   switch (tok) {
   case 15:
     return XML_ROLE_NONE;
@@ -1458,12 +1300,11 @@ condSect0(PROLOG_STATE *state,
 }
 
 static int
-condSect1(PROLOG_STATE *state,
-          int tok,
-          const char *UNUSED_ptr __attribute__((__unused__)),
-          const char *UNUSED_end __attribute__((__unused__)),
-          const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+condSect1(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+          const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_NONE;
@@ -1476,12 +1317,11 @@ condSect1(PROLOG_STATE *state,
 }
 
 static int
-condSect2(PROLOG_STATE *state,
-          int tok,
-          const char *UNUSED_ptr __attribute__((__unused__)),
-          const char *UNUSED_end __attribute__((__unused__)),
-          const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+condSect2(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+          const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return XML_ROLE_NONE;
@@ -1495,12 +1335,11 @@ condSect2(PROLOG_STATE *state,
 
 
 static int
-declClose(PROLOG_STATE *state,
-          int tok,
-          const char *UNUSED_ptr __attribute__((__unused__)),
-          const char *UNUSED_end __attribute__((__unused__)),
-          const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+declClose(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+          const ENCODING *enc) {
+  (void)ptr;
+  (void)end;
+  (void)enc;
   switch (tok) {
   case 15:
     return state->role_none;
@@ -1510,23 +1349,23 @@ declClose(PROLOG_STATE *state,
   }
   return common(state, tok);
 }
-# 1343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.c"
+# 1206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.c"
 static int
-error(PROLOG_STATE *UNUSED_state __attribute__((__unused__)),
-      int UNUSED_tok __attribute__((__unused__)),
-      const char *UNUSED_ptr __attribute__((__unused__)),
-      const char *UNUSED_end __attribute__((__unused__)),
-      const ENCODING *UNUSED_enc __attribute__((__unused__)))
-{
+error(PROLOG_STATE *state, int tok, const char *ptr, const char *end,
+      const ENCODING *enc) {
+  (void)state;
+  (void)tok;
+  (void)ptr;
+  (void)end;
+  (void)enc;
   return XML_ROLE_NONE;
 }
 
 
 static int
-common(PROLOG_STATE *state, int tok)
-{
+common(PROLOG_STATE *state, int tok) {
 
-  if (!state->documentEntity && tok == 28)
+  if (! state->documentEntity && tok == 28)
     return XML_ROLE_INNER_PARAM_ENTITY_REF;
 
   state->handler = error;
@@ -1534,8 +1373,7 @@ common(PROLOG_STATE *state, int tok)
 }
 
 void
-XmlPrologStateInit(PROLOG_STATE *state)
-{
+XmlPrologStateInit(PROLOG_STATE *state) {
   state->handler = prolog0;
 
   state->documentEntity = 1;
@@ -1547,8 +1385,7 @@ XmlPrologStateInit(PROLOG_STATE *state)
 
 
 void
-XmlPrologStateInitExternalEntity(PROLOG_STATE *state)
-{
+XmlPrologStateInitExternalEntity(PROLOG_STATE *state) {
   state->handler = externalSubset0;
   state->documentEntity = 0;
   state->includeLevel = 0;

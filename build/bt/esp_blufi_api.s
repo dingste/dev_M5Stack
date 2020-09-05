@@ -6,7 +6,7 @@
 	.global	esp_blufi_register_callbacks
 	.type	esp_blufi_register_callbacks, @function
 esp_blufi_register_callbacks:
-.LFB30:
+.LFB39:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/esp_blufi_api.c"
 	.loc 1 28 0
 .LVL0:
@@ -41,7 +41,7 @@ esp_blufi_register_callbacks:
 	.loc 1 39 0
 	mov.n	a2, a8
 	retw.n
-.LFE30:
+.LFE39:
 	.size	esp_blufi_register_callbacks, .-esp_blufi_register_callbacks
 	.section	.text.esp_blufi_send_wifi_conn_report,"ax",@progbits
 	.literal_position
@@ -50,7 +50,7 @@ esp_blufi_register_callbacks:
 	.global	esp_blufi_send_wifi_conn_report
 	.type	esp_blufi_send_wifi_conn_report, @function
 esp_blufi_send_wifi_conn_report:
-.LFB31:
+.LFB40:
 	.loc 1 42 0
 .LVL5:
 	entry	sp, 64
@@ -100,7 +100,7 @@ esp_blufi_send_wifi_conn_report:
 	.loc 1 59 0
 	mov.n	a2, a8
 	retw.n
-.LFE31:
+.LFE40:
 	.size	esp_blufi_send_wifi_conn_report, .-esp_blufi_send_wifi_conn_report
 	.section	.text.esp_blufi_send_wifi_list,"ax",@progbits
 	.literal_position
@@ -109,7 +109,7 @@ esp_blufi_send_wifi_conn_report:
 	.global	esp_blufi_send_wifi_list
 	.type	esp_blufi_send_wifi_list, @function
 esp_blufi_send_wifi_list:
-.LFB32:
+.LFB41:
 	.loc 1 62 0
 .LVL9:
 	entry	sp, 64
@@ -157,14 +157,14 @@ esp_blufi_send_wifi_list:
 .L10:
 	.loc 1 77 0
 	retw.n
-.LFE32:
+.LFE41:
 	.size	esp_blufi_send_wifi_list, .-esp_blufi_send_wifi_list
 	.section	.text.esp_blufi_profile_init,"ax",@progbits
 	.align	4
 	.global	esp_blufi_profile_init
 	.type	esp_blufi_profile_init, @function
 esp_blufi_profile_init:
-.LFB33:
+.LFB42:
 	.loc 1 80 0
 	entry	sp, 48
 .LCFI3:
@@ -202,14 +202,14 @@ esp_blufi_profile_init:
 .L13:
 	.loc 1 92 0
 	retw.n
-.LFE33:
+.LFE42:
 	.size	esp_blufi_profile_init, .-esp_blufi_profile_init
 	.section	.text.esp_blufi_profile_deinit,"ax",@progbits
 	.align	4
 	.global	esp_blufi_profile_deinit
 	.type	esp_blufi_profile_deinit, @function
 esp_blufi_profile_deinit:
-.LFB34:
+.LFB43:
 	.loc 1 95 0
 	entry	sp, 48
 .LCFI4:
@@ -249,14 +249,14 @@ esp_blufi_profile_deinit:
 .L16:
 	.loc 1 107 0
 	retw.n
-.LFE34:
+.LFE43:
 	.size	esp_blufi_profile_deinit, .-esp_blufi_profile_deinit
 	.section	.text.esp_blufi_get_version,"ax",@progbits
 	.align	4
 	.global	esp_blufi_get_version
 	.type	esp_blufi_get_version, @function
 esp_blufi_get_version:
-.LFB35:
+.LFB44:
 	.loc 1 110 0
 	entry	sp, 32
 .LCFI5:
@@ -266,14 +266,14 @@ esp_blufi_get_version:
 	.loc 1 112 0
 	mov.n	a2, a10
 	retw.n
-.LFE35:
+.LFE44:
 	.size	esp_blufi_get_version, .-esp_blufi_get_version
 	.section	.text.esp_blufi_close,"ax",@progbits
 	.align	4
 	.global	esp_blufi_close
 	.type	esp_blufi_close, @function
 esp_blufi_close:
-.LFB36:
+.LFB45:
 	.loc 1 115 0
 .LVL18:
 	entry	sp, 80
@@ -326,14 +326,14 @@ esp_blufi_close:
 .L20:
 	.loc 1 127 0
 	retw.n
-.LFE36:
+.LFE45:
 	.size	esp_blufi_close, .-esp_blufi_close
 	.section	.text.esp_blufi_send_error_info,"ax",@progbits
 	.align	4
 	.global	esp_blufi_send_error_info
 	.type	esp_blufi_send_error_info, @function
 esp_blufi_send_error_info:
-.LFB37:
+.LFB46:
 	.loc 1 130 0
 .LVL23:
 	entry	sp, 64
@@ -377,7 +377,7 @@ esp_blufi_send_error_info:
 	.loc 1 144 0
 	mov.n	a2, a8
 	retw.n
-.LFE37:
+.LFE46:
 	.size	esp_blufi_send_error_info, .-esp_blufi_send_error_info
 	.section	.text.esp_blufi_send_custom_data,"ax",@progbits
 	.literal_position
@@ -386,7 +386,7 @@ esp_blufi_send_error_info:
 	.global	esp_blufi_send_custom_data
 	.type	esp_blufi_send_custom_data, @function
 esp_blufi_send_custom_data:
-.LFB38:
+.LFB47:
 	.loc 1 147 0
 .LVL27:
 	entry	sp, 64
@@ -446,7 +446,7 @@ esp_blufi_send_custom_data:
 .L26:
 	.loc 1 164 0
 	retw.n
-.LFE38:
+.LFE47:
 	.size	esp_blufi_send_custom_data, .-esp_blufi_send_custom_data
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -467,10 +467,10 @@ esp_blufi_send_custom_data:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI0-.LFB30
+	.4byte	.LCFI0-.LFB39
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -479,10 +479,10 @@ esp_blufi_send_custom_data:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI1-.LFB31
+	.4byte	.LCFI1-.LFB40
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -491,10 +491,10 @@ esp_blufi_send_custom_data:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.byte	0x4
-	.4byte	.LCFI2-.LFB32
+	.4byte	.LCFI2-.LFB41
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -503,10 +503,10 @@ esp_blufi_send_custom_data:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.byte	0x4
-	.4byte	.LCFI3-.LFB33
+	.4byte	.LCFI3-.LFB42
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -515,10 +515,10 @@ esp_blufi_send_custom_data:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.byte	0x4
-	.4byte	.LCFI4-.LFB34
+	.4byte	.LCFI4-.LFB43
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -527,10 +527,10 @@ esp_blufi_send_custom_data:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.byte	0x4
-	.4byte	.LCFI5-.LFB35
+	.4byte	.LCFI5-.LFB44
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -539,10 +539,10 @@ esp_blufi_send_custom_data:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.byte	0x4
-	.4byte	.LCFI6-.LFB36
+	.4byte	.LCFI6-.LFB45
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -551,10 +551,10 @@ esp_blufi_send_custom_data:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.byte	0x4
-	.4byte	.LCFI7-.LFB37
+	.4byte	.LCFI7-.LFB46
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -563,10 +563,10 @@ esp_blufi_send_custom_data:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI8-.LFB38
+	.4byte	.LCFI8-.LFB47
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -581,23 +581,23 @@ esp_blufi_send_custom_data:
 	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
 	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_blufi_api.h"
 	.file 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_bt_main.h"
-	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-	.file 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_defs.h"
-	.file 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/btc/include/btc/btc_task.h"
+	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/include/bt_common.h"
+	.file 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+	.file 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/btc/include/btc/btc_task.h"
 	.file 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/btc/profile/esp/include/btc_blufi_prf.h"
 	.file 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/btc/profile/std/include/btc_gatts.h"
-	.file 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/btc/include/btc/btc_manage.h"
+	.file 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/btc/include/btc/btc_manage.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x1740
+	.4byte	0x174d
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF400
-	.byte	0xc
-	.4byte	.LASF401
 	.4byte	.LASF402
+	.byte	0xc
+	.4byte	.LASF403
+	.4byte	.LASF404
 	.4byte	.Ldebug_ranges0+0
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -754,7 +754,7 @@ esp_blufi_send_custom_data:
 	.byte	0x4
 	.4byte	0x7f
 	.byte	0x5
-	.byte	0xa8
+	.byte	0xae
 	.4byte	0x268
 	.uleb128 0xd
 	.4byte	.LASF24
@@ -892,46 +892,46 @@ esp_blufi_send_custom_data:
 	.uleb128 0x2
 	.4byte	.LASF68
 	.byte	0x5
-	.byte	0xd8
+	.byte	0xde
 	.4byte	0x153
 	.uleb128 0x9
 	.byte	0x13
 	.byte	0x5
-	.byte	0xed
+	.byte	0xf3
 	.4byte	0x294
 	.uleb128 0xb
 	.4byte	.LASF21
 	.byte	0x5
-	.byte	0xee
+	.byte	0xf4
 	.4byte	0x12d
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LASF69
 	.byte	0x5
-	.byte	0xef
+	.byte	0xf5
 	.4byte	0x9f
 	.byte	0x12
 	.byte	0
 	.uleb128 0x2
 	.4byte	.LASF70
 	.byte	0x5
-	.byte	0xf0
+	.byte	0xf6
 	.4byte	0x273
 	.uleb128 0x9
 	.byte	0x14
 	.byte	0x5
-	.byte	0xf6
+	.byte	0xfc
 	.4byte	0x2bf
 	.uleb128 0xa
 	.string	"id"
 	.byte	0x5
-	.byte	0xf7
+	.byte	0xfd
 	.4byte	0x294
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LASF71
 	.byte	0x5
-	.byte	0xf8
+	.byte	0xfe
 	.4byte	0x2bf
 	.byte	0x13
 	.byte	0
@@ -942,57 +942,57 @@ esp_blufi_send_custom_data:
 	.uleb128 0x2
 	.4byte	.LASF73
 	.byte	0x5
-	.byte	0xf9
+	.byte	0xff
 	.4byte	0x29f
 	.uleb128 0xe
 	.4byte	.LASF74
 	.byte	0x5
-	.2byte	0x113
+	.2byte	0x119
 	.4byte	0xaa
 	.uleb128 0xe
 	.4byte	.LASF75
 	.byte	0x5
-	.2byte	0x11f
+	.2byte	0x125
 	.4byte	0x9f
 	.uleb128 0xf
 	.byte	0x14
 	.byte	0x5
-	.2byte	0x12d
+	.2byte	0x133
 	.4byte	0x341
 	.uleb128 0x10
 	.4byte	.LASF76
 	.byte	0x5
-	.2byte	0x12f
+	.2byte	0x135
 	.4byte	0xaa
 	.byte	0
 	.uleb128 0x10
 	.4byte	.LASF77
 	.byte	0x5
-	.2byte	0x130
+	.2byte	0x136
 	.4byte	0x341
 	.byte	0x4
 	.uleb128 0x10
 	.4byte	.LASF78
 	.byte	0x5
-	.2byte	0x131
+	.2byte	0x137
 	.4byte	0xaa
 	.byte	0x8
 	.uleb128 0x10
 	.4byte	.LASF79
 	.byte	0x5
-	.2byte	0x132
+	.2byte	0x138
 	.4byte	0xaa
 	.byte	0xa
 	.uleb128 0x10
 	.4byte	.LASF80
 	.byte	0x5
-	.2byte	0x133
+	.2byte	0x139
 	.4byte	0xaa
 	.byte	0xc
 	.uleb128 0x10
 	.4byte	.LASF81
 	.byte	0x5
-	.2byte	0x134
+	.2byte	0x13a
 	.4byte	0x341
 	.byte	0x10
 	.byte	0
@@ -1002,110 +1002,110 @@ esp_blufi_send_custom_data:
 	.uleb128 0xe
 	.4byte	.LASF82
 	.byte	0x5
-	.2byte	0x135
+	.2byte	0x13b
 	.4byte	0x2e9
 	.uleb128 0xf
 	.byte	0x1
 	.byte	0x5
-	.2byte	0x13b
+	.2byte	0x141
 	.4byte	0x36a
 	.uleb128 0x10
 	.4byte	.LASF83
 	.byte	0x5
-	.2byte	0x143
+	.2byte	0x149
 	.4byte	0x9f
 	.byte	0
 	.byte	0
 	.uleb128 0xe
 	.4byte	.LASF84
 	.byte	0x5
-	.2byte	0x144
+	.2byte	0x14a
 	.4byte	0x353
 	.uleb128 0xf
 	.byte	0x18
 	.byte	0x5
-	.2byte	0x14a
+	.2byte	0x150
 	.4byte	0x39a
 	.uleb128 0x10
 	.4byte	.LASF85
 	.byte	0x5
-	.2byte	0x14c
+	.2byte	0x152
 	.4byte	0x36a
 	.byte	0
 	.uleb128 0x10
 	.4byte	.LASF86
 	.byte	0x5
-	.2byte	0x14d
+	.2byte	0x153
 	.4byte	0x347
 	.byte	0x4
 	.byte	0
 	.uleb128 0xe
 	.4byte	.LASF87
 	.byte	0x5
-	.2byte	0x14e
+	.2byte	0x154
 	.4byte	0x376
 	.uleb128 0xf
 	.byte	0x8
 	.byte	0x5
-	.2byte	0x154
+	.2byte	0x15a
 	.4byte	0x3d7
 	.uleb128 0x10
 	.4byte	.LASF88
 	.byte	0x5
-	.2byte	0x156
+	.2byte	0x15c
 	.4byte	0xaa
 	.byte	0
 	.uleb128 0x10
 	.4byte	.LASF89
 	.byte	0x5
-	.2byte	0x157
+	.2byte	0x15d
 	.4byte	0xaa
 	.byte	0x2
 	.uleb128 0x10
 	.4byte	.LASF90
 	.byte	0x5
-	.2byte	0x158
+	.2byte	0x15e
 	.4byte	0x341
 	.byte	0x4
 	.byte	0
 	.uleb128 0xe
 	.4byte	.LASF91
 	.byte	0x5
-	.2byte	0x159
+	.2byte	0x15f
 	.4byte	0x3a6
 	.uleb128 0x12
 	.2byte	0x260
 	.byte	0x5
-	.2byte	0x170
+	.2byte	0x176
 	.4byte	0x433
 	.uleb128 0x10
 	.4byte	.LASF81
 	.byte	0x5
-	.2byte	0x171
+	.2byte	0x177
 	.4byte	0x433
 	.byte	0
 	.uleb128 0x13
 	.4byte	.LASF92
 	.byte	0x5
-	.2byte	0x172
+	.2byte	0x178
 	.4byte	0xaa
 	.2byte	0x258
 	.uleb128 0x13
 	.4byte	.LASF93
 	.byte	0x5
-	.2byte	0x173
+	.2byte	0x179
 	.4byte	0xaa
 	.2byte	0x25a
 	.uleb128 0x14
 	.string	"len"
 	.byte	0x5
-	.2byte	0x174
+	.2byte	0x17a
 	.4byte	0xaa
 	.2byte	0x25c
 	.uleb128 0x13
 	.4byte	.LASF94
 	.byte	0x5
-	.2byte	0x175
+	.2byte	0x17b
 	.4byte	0x9f
 	.2byte	0x25e
 	.byte	0
@@ -1119,33 +1119,33 @@ esp_blufi_send_custom_data:
 	.uleb128 0xe
 	.4byte	.LASF95
 	.byte	0x5
-	.2byte	0x176
+	.2byte	0x17c
 	.4byte	0x3e3
 	.uleb128 0x16
 	.2byte	0x260
 	.byte	0x5
-	.2byte	0x179
+	.2byte	0x17f
 	.4byte	0x473
 	.uleb128 0x17
 	.4byte	.LASF90
 	.byte	0x5
-	.2byte	0x17a
+	.2byte	0x180
 	.4byte	0x444
 	.uleb128 0x17
 	.4byte	.LASF92
 	.byte	0x5
-	.2byte	0x17b
+	.2byte	0x181
 	.4byte	0xaa
 	.byte	0
 	.uleb128 0xe
 	.4byte	.LASF96
 	.byte	0x5
-	.2byte	0x17c
+	.2byte	0x182
 	.4byte	0x450
 	.uleb128 0xe
 	.4byte	.LASF97
 	.byte	0x5
-	.2byte	0x188
+	.2byte	0x18e
 	.4byte	0x9f
 	.uleb128 0x18
 	.byte	0x4
@@ -1170,7 +1170,7 @@ esp_blufi_send_custom_data:
 	.byte	0x4
 	.4byte	0x7f
 	.byte	0x7
-	.byte	0x1d
+	.byte	0x1c
 	.4byte	0x4d8
 	.uleb128 0xd
 	.4byte	.LASF102
@@ -1191,13 +1191,13 @@ esp_blufi_send_custom_data:
 	.uleb128 0x2
 	.4byte	.LASF107
 	.byte	0x7
-	.byte	0x23
+	.byte	0x22
 	.4byte	0x4ad
 	.uleb128 0xc
 	.byte	0x4
 	.4byte	0x7f
 	.byte	0x7
-	.byte	0x38
+	.byte	0x37
 	.4byte	0x51a
 	.uleb128 0xd
 	.4byte	.LASF108
@@ -1224,7 +1224,7 @@ esp_blufi_send_custom_data:
 	.uleb128 0x2
 	.4byte	.LASF115
 	.byte	0x7
-	.byte	0x40
+	.byte	0x3f
 	.4byte	0x4e3
 	.uleb128 0x5
 	.4byte	0x9f
@@ -1385,7 +1385,7 @@ esp_blufi_send_custom_data:
 	.4byte	0x7f
 	.byte	0x8
 	.byte	0x4c
-	.4byte	0x69e
+	.4byte	0x6a4
 	.uleb128 0xd
 	.4byte	.LASF153
 	.byte	0
@@ -1413,286 +1413,270 @@ esp_blufi_send_custom_data:
 	.uleb128 0xd
 	.4byte	.LASF161
 	.byte	0x8
+	.uleb128 0xd
+	.4byte	.LASF162
+	.byte	0x9
 	.byte	0
 	.uleb128 0x2
-	.4byte	.LASF162
+	.4byte	.LASF163
 	.byte	0x8
-	.byte	0x56
+	.byte	0x57
 	.4byte	0x65b
 	.uleb128 0x9
 	.byte	0x30
 	.byte	0x8
-	.byte	0x5b
-	.4byte	0x772
-	.uleb128 0xb
-	.4byte	.LASF163
-	.byte	0x8
-	.byte	0x5d
-	.4byte	0x143
-	.byte	0
+	.byte	0x5c
+	.4byte	0x778
 	.uleb128 0xb
 	.4byte	.LASF164
 	.byte	0x8
 	.byte	0x5e
-	.4byte	0x2bf
-	.byte	0x6
+	.4byte	0x143
+	.byte	0
 	.uleb128 0xb
 	.4byte	.LASF165
 	.byte	0x8
 	.byte	0x5f
-	.4byte	0x341
-	.byte	0x8
+	.4byte	0x2bf
+	.byte	0x6
 	.uleb128 0xb
 	.4byte	.LASF166
 	.byte	0x8
 	.byte	0x60
-	.4byte	0x6d
-	.byte	0xc
+	.4byte	0x341
+	.byte	0x8
 	.uleb128 0xb
 	.4byte	.LASF167
 	.byte	0x8
 	.byte	0x61
-	.4byte	0x341
-	.byte	0x10
+	.4byte	0x6d
+	.byte	0xc
 	.uleb128 0xb
 	.4byte	.LASF168
 	.byte	0x8
 	.byte	0x62
-	.4byte	0x6d
-	.byte	0x14
+	.4byte	0x341
+	.byte	0x10
 	.uleb128 0xb
 	.4byte	.LASF169
 	.byte	0x8
 	.byte	0x63
-	.4byte	0x341
-	.byte	0x18
+	.4byte	0x6d
+	.byte	0x14
 	.uleb128 0xb
 	.4byte	.LASF170
 	.byte	0x8
 	.byte	0x64
-	.4byte	0x6d
-	.byte	0x1c
+	.4byte	0x341
+	.byte	0x18
 	.uleb128 0xb
 	.4byte	.LASF171
 	.byte	0x8
 	.byte	0x65
-	.4byte	0x341
-	.byte	0x20
+	.4byte	0x6d
+	.byte	0x1c
 	.uleb128 0xb
 	.4byte	.LASF172
 	.byte	0x8
 	.byte	0x66
-	.4byte	0x6d
-	.byte	0x24
+	.4byte	0x341
+	.byte	0x20
 	.uleb128 0xb
 	.4byte	.LASF173
 	.byte	0x8
 	.byte	0x67
-	.4byte	0x9f
-	.byte	0x28
+	.4byte	0x6d
+	.byte	0x24
 	.uleb128 0xb
 	.4byte	.LASF174
 	.byte	0x8
 	.byte	0x68
-	.4byte	0x2bf
-	.byte	0x29
+	.4byte	0x9f
+	.byte	0x28
 	.uleb128 0xb
 	.4byte	.LASF175
 	.byte	0x8
 	.byte	0x69
-	.4byte	0x9f
-	.byte	0x2a
+	.4byte	0x2bf
+	.byte	0x29
 	.uleb128 0xb
 	.4byte	.LASF176
 	.byte	0x8
 	.byte	0x6a
-	.4byte	0x2bf
-	.byte	0x2b
+	.4byte	0x9f
+	.byte	0x2a
 	.uleb128 0xb
 	.4byte	.LASF177
 	.byte	0x8
 	.byte	0x6b
-	.4byte	0x9f
-	.byte	0x2c
+	.4byte	0x2bf
+	.byte	0x2b
 	.uleb128 0xb
 	.4byte	.LASF178
 	.byte	0x8
 	.byte	0x6c
+	.4byte	0x9f
+	.byte	0x2c
+	.uleb128 0xb
+	.4byte	.LASF179
+	.byte	0x8
+	.byte	0x6d
 	.4byte	0x2bf
 	.byte	0x2d
 	.byte	0
 	.uleb128 0x2
-	.4byte	.LASF179
+	.4byte	.LASF180
 	.byte	0x8
-	.byte	0x6d
-	.4byte	0x6a9
+	.byte	0x6e
+	.4byte	0x6af
 	.uleb128 0x9
 	.byte	0x22
 	.byte	0x8
-	.byte	0x70
-	.4byte	0x79e
-	.uleb128 0xb
-	.4byte	.LASF180
-	.byte	0x8
 	.byte	0x71
-	.4byte	0x525
-	.byte	0
+	.4byte	0x7a4
 	.uleb128 0xb
 	.4byte	.LASF181
 	.byte	0x8
 	.byte	0x72
+	.4byte	0x525
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LASF182
+	.byte	0x8
+	.byte	0x73
 	.4byte	0x94
 	.byte	0x21
 	.byte	0
 	.uleb128 0x2
-	.4byte	.LASF182
-	.byte	0x8
-	.byte	0x73
-	.4byte	0x77d
-	.uleb128 0x19
-	.4byte	.LASF184
-	.byte	0x4
-	.byte	0x8
-	.byte	0x7c
-	.4byte	0x7c2
-	.uleb128 0xb
 	.4byte	.LASF183
 	.byte	0x8
-	.byte	0x7d
-	.4byte	0x62c
-	.byte	0
-	.byte	0
+	.byte	0x74
+	.4byte	0x783
 	.uleb128 0x19
 	.4byte	.LASF185
 	.byte	0x4
 	.byte	0x8
-	.byte	0x83
-	.4byte	0x7db
+	.byte	0x7d
+	.4byte	0x7c8
 	.uleb128 0xb
-	.4byte	.LASF183
+	.4byte	.LASF184
 	.byte	0x8
-	.byte	0x84
-	.4byte	0x650
+	.byte	0x7e
+	.4byte	0x62c
 	.byte	0
 	.byte	0
 	.uleb128 0x19
 	.4byte	.LASF186
 	.byte	0x4
 	.byte	0x8
-	.byte	0x8a
-	.4byte	0x7f4
+	.byte	0x84
+	.4byte	0x7e1
 	.uleb128 0xb
+	.4byte	.LASF184
+	.byte	0x8
+	.byte	0x85
+	.4byte	0x650
+	.byte	0
+	.byte	0
+	.uleb128 0x19
 	.4byte	.LASF187
+	.byte	0x4
 	.byte	0x8
 	.byte	0x8b
+	.4byte	0x7fa
+	.uleb128 0xb
+	.4byte	.LASF188
+	.byte	0x8
+	.byte	0x8c
 	.4byte	0x4d8
 	.byte	0
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF188
+	.4byte	.LASF189
 	.byte	0xa
 	.byte	0x8
-	.byte	0x91
-	.4byte	0x825
-	.uleb128 0xb
-	.4byte	.LASF189
-	.byte	0x8
 	.byte	0x92
-	.4byte	0x138
-	.byte	0
+	.4byte	0x82b
 	.uleb128 0xb
 	.4byte	.LASF190
 	.byte	0x8
 	.byte	0x93
-	.4byte	0x9f
-	.byte	0x6
+	.4byte	0x138
+	.byte	0
 	.uleb128 0xb
 	.4byte	.LASF191
 	.byte	0x8
 	.byte	0x94
+	.4byte	0x9f
+	.byte	0x6
+	.uleb128 0xb
+	.4byte	.LASF192
+	.byte	0x8
+	.byte	0x95
 	.4byte	0xaa
 	.byte	0x8
-	.byte	0
-	.uleb128 0x19
-	.4byte	.LASF192
-	.byte	0x6
-	.byte	0x8
-	.byte	0x9a
-	.4byte	0x83e
-	.uleb128 0xb
-	.4byte	.LASF189
-	.byte	0x8
-	.byte	0x9b
-	.4byte	0x138
-	.byte	0
 	.byte	0
 	.uleb128 0x19
 	.4byte	.LASF193
 	.byte	0x6
 	.byte	0x8
-	.byte	0xa4
-	.4byte	0x857
+	.byte	0x9b
+	.4byte	0x844
 	.uleb128 0xb
+	.4byte	.LASF190
+	.byte	0x8
+	.byte	0x9c
+	.4byte	0x138
+	.byte	0
+	.byte	0
+	.uleb128 0x19
 	.4byte	.LASF194
+	.byte	0x6
 	.byte	0x8
 	.byte	0xa5
+	.4byte	0x85d
+	.uleb128 0xb
+	.4byte	.LASF195
+	.byte	0x8
+	.byte	0xa6
 	.4byte	0x143
 	.byte	0
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF195
+	.4byte	.LASF196
 	.byte	0x8
-	.byte	0x8
-	.byte	0xab
-	.4byte	0x87c
-	.uleb128 0xb
-	.4byte	.LASF180
 	.byte	0x8
 	.byte	0xac
+	.4byte	0x882
+	.uleb128 0xb
+	.4byte	.LASF181
+	.byte	0x8
+	.byte	0xad
 	.4byte	0x341
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LASF196
+	.4byte	.LASF197
 	.byte	0x8
-	.byte	0xad
+	.byte	0xae
 	.4byte	0x6d
 	.byte	0x4
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF197
-	.byte	0x8
-	.byte	0x8
-	.byte	0xb4
-	.4byte	0x8a1
-	.uleb128 0xb
 	.4byte	.LASF198
 	.byte	0x8
+	.byte	0x8
 	.byte	0xb5
-	.4byte	0x341
-	.byte	0
+	.4byte	0x8a7
 	.uleb128 0xb
 	.4byte	.LASF199
 	.byte	0x8
 	.byte	0xb6
-	.4byte	0x6d
-	.byte	0x4
-	.byte	0
-	.uleb128 0x19
-	.4byte	.LASF200
-	.byte	0x8
-	.byte	0x8
-	.byte	0xbc
-	.4byte	0x8c6
-	.uleb128 0xb
-	.4byte	.LASF180
-	.byte	0x8
-	.byte	0xbd
 	.4byte	0x341
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LASF196
+	.4byte	.LASF200
 	.byte	0x8
-	.byte	0xbe
+	.byte	0xb7
 	.4byte	0x6d
 	.byte	0x4
 	.byte	0
@@ -1700,114 +1684,114 @@ esp_blufi_send_custom_data:
 	.4byte	.LASF201
 	.byte	0x8
 	.byte	0x8
-	.byte	0xc5
-	.4byte	0x8eb
+	.byte	0xbd
+	.4byte	0x8cc
 	.uleb128 0xb
-	.4byte	.LASF198
+	.4byte	.LASF181
 	.byte	0x8
-	.byte	0xc6
+	.byte	0xbe
 	.4byte	0x341
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LASF199
+	.4byte	.LASF197
 	.byte	0x8
-	.byte	0xc7
+	.byte	0xbf
 	.4byte	0x6d
 	.byte	0x4
 	.byte	0
 	.uleb128 0x19
 	.4byte	.LASF202
+	.byte	0x8
+	.byte	0x8
+	.byte	0xc6
+	.4byte	0x8f1
+	.uleb128 0xb
+	.4byte	.LASF199
+	.byte	0x8
+	.byte	0xc7
+	.4byte	0x341
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LASF200
+	.byte	0x8
+	.byte	0xc8
+	.4byte	0x6d
+	.byte	0x4
+	.byte	0
+	.uleb128 0x19
+	.4byte	.LASF203
 	.byte	0x4
 	.byte	0x8
-	.byte	0xcd
-	.4byte	0x904
-	.uleb128 0xb
-	.4byte	.LASF203
-	.byte	0x8
 	.byte	0xce
+	.4byte	0x90a
+	.uleb128 0xb
+	.4byte	.LASF204
+	.byte	0x8
+	.byte	0xcf
 	.4byte	0x6d
 	.byte	0
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF204
+	.4byte	.LASF205
 	.byte	0x4
 	.byte	0x8
-	.byte	0xd5
-	.4byte	0x91d
-	.uleb128 0xb
-	.4byte	.LASF205
-	.byte	0x8
 	.byte	0xd6
+	.4byte	0x923
+	.uleb128 0xb
+	.4byte	.LASF206
+	.byte	0x8
+	.byte	0xd7
 	.4byte	0x51a
 	.byte	0
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF206
+	.4byte	.LASF207
 	.byte	0x1
 	.byte	0x8
-	.byte	0xdd
-	.4byte	0x936
-	.uleb128 0xb
-	.4byte	.LASF207
-	.byte	0x8
 	.byte	0xde
+	.4byte	0x93c
+	.uleb128 0xb
+	.4byte	.LASF208
+	.byte	0x8
+	.byte	0xdf
 	.4byte	0x9f
 	.byte	0
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF208
-	.byte	0x8
-	.byte	0x8
-	.byte	0xe4
-	.4byte	0x95b
-	.uleb128 0xb
 	.4byte	.LASF209
 	.byte	0x8
+	.byte	0x8
 	.byte	0xe5
-	.4byte	0x341
-	.byte	0
+	.4byte	0x961
 	.uleb128 0xb
 	.4byte	.LASF210
 	.byte	0x8
 	.byte	0xe6
+	.4byte	0x341
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LASF211
+	.byte	0x8
+	.byte	0xe7
 	.4byte	0x6d
 	.byte	0x4
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF211
-	.byte	0x8
-	.byte	0x8
-	.byte	0xec
-	.4byte	0x980
-	.uleb128 0xb
 	.4byte	.LASF212
 	.byte	0x8
+	.byte	0x8
 	.byte	0xed
-	.4byte	0x341
-	.byte	0
+	.4byte	0x986
 	.uleb128 0xb
 	.4byte	.LASF213
 	.byte	0x8
 	.byte	0xee
-	.4byte	0x6d
-	.byte	0x4
-	.byte	0
-	.uleb128 0x19
-	.4byte	.LASF214
-	.byte	0x8
-	.byte	0x8
-	.byte	0xf4
-	.4byte	0x9a5
-	.uleb128 0xb
-	.4byte	.LASF212
-	.byte	0x8
-	.byte	0xf5
 	.4byte	0x341
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LASF213
+	.4byte	.LASF214
 	.byte	0x8
-	.byte	0xf6
+	.byte	0xef
 	.4byte	0x6d
 	.byte	0x4
 	.byte	0
@@ -1815,245 +1799,264 @@ esp_blufi_send_custom_data:
 	.4byte	.LASF215
 	.byte	0x8
 	.byte	0x8
-	.byte	0xfc
-	.4byte	0x9ca
+	.byte	0xf5
+	.4byte	0x9ab
 	.uleb128 0xb
-	.4byte	.LASF212
+	.4byte	.LASF213
 	.byte	0x8
-	.byte	0xfd
+	.byte	0xf6
 	.4byte	0x341
 	.byte	0
+	.uleb128 0xb
+	.4byte	.LASF214
+	.byte	0x8
+	.byte	0xf7
+	.4byte	0x6d
+	.byte	0x4
+	.byte	0
+	.uleb128 0x19
+	.4byte	.LASF216
+	.byte	0x8
+	.byte	0x8
+	.byte	0xfd
+	.4byte	0x9d0
 	.uleb128 0xb
 	.4byte	.LASF213
 	.byte	0x8
 	.byte	0xfe
+	.4byte	0x341
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LASF214
+	.byte	0x8
+	.byte	0xff
 	.4byte	0x6d
 	.byte	0x4
 	.byte	0
 	.uleb128 0x1a
-	.4byte	.LASF216
-	.byte	0x8
-	.byte	0x8
-	.2byte	0x104
-	.4byte	0x9f2
-	.uleb128 0x10
 	.4byte	.LASF217
 	.byte	0x8
+	.byte	0x8
 	.2byte	0x105
-	.4byte	0x341
-	.byte	0
+	.4byte	0x9f8
 	.uleb128 0x10
 	.4byte	.LASF218
 	.byte	0x8
 	.2byte	0x106
-	.4byte	0x6d
-	.byte	0x4
-	.byte	0
-	.uleb128 0x1a
-	.4byte	.LASF219
-	.byte	0x8
-	.byte	0x8
-	.2byte	0x10b
-	.4byte	0xa1a
-	.uleb128 0x10
-	.4byte	.LASF217
-	.byte	0x8
-	.2byte	0x10c
 	.4byte	0x341
 	.byte	0
 	.uleb128 0x10
-	.4byte	.LASF218
+	.4byte	.LASF219
 	.byte	0x8
-	.2byte	0x10d
+	.2byte	0x107
 	.4byte	0x6d
 	.byte	0x4
 	.byte	0
 	.uleb128 0x1a
 	.4byte	.LASF220
-	.byte	0x4
 	.byte	0x8
-	.2byte	0x113
-	.4byte	0xa35
+	.byte	0x8
+	.2byte	0x10c
+	.4byte	0xa20
 	.uleb128 0x10
-	.4byte	.LASF183
+	.4byte	.LASF218
 	.byte	0x8
-	.2byte	0x114
-	.4byte	0x69e
+	.2byte	0x10d
+	.4byte	0x341
 	.byte	0
+	.uleb128 0x10
+	.4byte	.LASF219
+	.byte	0x8
+	.2byte	0x10e
+	.4byte	0x6d
+	.byte	0x4
 	.byte	0
 	.uleb128 0x1a
 	.4byte	.LASF221
+	.byte	0x4
 	.byte	0x8
-	.byte	0x8
-	.2byte	0x11a
-	.4byte	0xa5d
+	.2byte	0x114
+	.4byte	0xa3b
 	.uleb128 0x10
+	.4byte	.LASF184
+	.byte	0x8
+	.2byte	0x115
+	.4byte	0x6a4
+	.byte	0
+	.byte	0
+	.uleb128 0x1a
 	.4byte	.LASF222
 	.byte	0x8
+	.byte	0x8
 	.2byte	0x11b
-	.4byte	0x341
-	.byte	0
+	.4byte	0xa63
 	.uleb128 0x10
 	.4byte	.LASF223
 	.byte	0x8
 	.2byte	0x11c
+	.4byte	0x341
+	.byte	0
+	.uleb128 0x10
+	.4byte	.LASF224
+	.byte	0x8
+	.2byte	0x11d
 	.4byte	0xc0
 	.byte	0x4
 	.byte	0
 	.uleb128 0x7
 	.byte	0xc
 	.byte	0x8
-	.byte	0x78
-	.4byte	0xb50
-	.uleb128 0x8
-	.4byte	.LASF224
-	.byte	0x8
-	.byte	0x7e
-	.4byte	0x7a9
+	.byte	0x79
+	.4byte	0xb57
 	.uleb128 0x8
 	.4byte	.LASF225
 	.byte	0x8
-	.byte	0x85
-	.4byte	0x7c2
+	.byte	0x7f
+	.4byte	0x7af
 	.uleb128 0x8
 	.4byte	.LASF226
 	.byte	0x8
-	.byte	0x8c
-	.4byte	0x7db
+	.byte	0x86
+	.4byte	0x7c8
 	.uleb128 0x8
 	.4byte	.LASF227
 	.byte	0x8
-	.byte	0x95
-	.4byte	0x7f4
+	.byte	0x8d
+	.4byte	0x7e1
 	.uleb128 0x8
 	.4byte	.LASF228
 	.byte	0x8
-	.byte	0x9c
-	.4byte	0x825
-	.uleb128 0x8
-	.4byte	.LASF163
-	.byte	0x8
-	.byte	0xa6
-	.4byte	0x83e
-	.uleb128 0x8
-	.4byte	.LASF165
-	.byte	0x8
-	.byte	0xae
-	.4byte	0x857
-	.uleb128 0x8
-	.4byte	.LASF167
-	.byte	0x8
-	.byte	0xb7
-	.4byte	0x87c
-	.uleb128 0x8
-	.4byte	.LASF169
-	.byte	0x8
-	.byte	0xbf
-	.4byte	0x8a1
-	.uleb128 0x8
-	.4byte	.LASF171
-	.byte	0x8
-	.byte	0xc8
-	.4byte	0x8c6
-	.uleb128 0x8
-	.4byte	.LASF175
-	.byte	0x8
-	.byte	0xcf
-	.4byte	0x8eb
+	.byte	0x96
+	.4byte	0x7fa
 	.uleb128 0x8
 	.4byte	.LASF229
 	.byte	0x8
-	.byte	0xd7
-	.4byte	0x904
+	.byte	0x9d
+	.4byte	0x82b
 	.uleb128 0x8
-	.4byte	.LASF177
+	.4byte	.LASF164
 	.byte	0x8
-	.byte	0xdf
-	.4byte	0x91d
+	.byte	0xa7
+	.4byte	0x844
+	.uleb128 0x8
+	.4byte	.LASF166
+	.byte	0x8
+	.byte	0xaf
+	.4byte	0x85d
+	.uleb128 0x8
+	.4byte	.LASF168
+	.byte	0x8
+	.byte	0xb8
+	.4byte	0x882
+	.uleb128 0x8
+	.4byte	.LASF170
+	.byte	0x8
+	.byte	0xc0
+	.4byte	0x8a7
+	.uleb128 0x8
+	.4byte	.LASF172
+	.byte	0x8
+	.byte	0xc9
+	.4byte	0x8cc
+	.uleb128 0x8
+	.4byte	.LASF176
+	.byte	0x8
+	.byte	0xd0
+	.4byte	0x8f1
 	.uleb128 0x8
 	.4byte	.LASF230
 	.byte	0x8
-	.byte	0xe7
-	.4byte	0x936
-	.uleb128 0x1b
-	.string	"ca"
+	.byte	0xd8
+	.4byte	0x90a
+	.uleb128 0x8
+	.4byte	.LASF178
 	.byte	0x8
-	.byte	0xef
-	.4byte	0x95b
+	.byte	0xe0
+	.4byte	0x923
 	.uleb128 0x8
 	.4byte	.LASF231
 	.byte	0x8
-	.byte	0xf7
-	.4byte	0x980
+	.byte	0xe8
+	.4byte	0x93c
+	.uleb128 0x1b
+	.string	"ca"
+	.byte	0x8
+	.byte	0xf0
+	.4byte	0x961
 	.uleb128 0x8
 	.4byte	.LASF232
 	.byte	0x8
-	.byte	0xff
-	.4byte	0x9a5
+	.byte	0xf8
+	.4byte	0x986
 	.uleb128 0x17
 	.4byte	.LASF233
 	.byte	0x8
-	.2byte	0x107
-	.4byte	0x9ca
+	.2byte	0x100
+	.4byte	0x9ab
 	.uleb128 0x17
 	.4byte	.LASF234
 	.byte	0x8
-	.2byte	0x10e
-	.4byte	0x9f2
+	.2byte	0x108
+	.4byte	0x9d0
 	.uleb128 0x17
 	.4byte	.LASF235
 	.byte	0x8
-	.2byte	0x115
-	.4byte	0xa1a
+	.2byte	0x10f
+	.4byte	0x9f8
 	.uleb128 0x17
 	.4byte	.LASF236
 	.byte	0x8
-	.2byte	0x11d
-	.4byte	0xa35
-	.byte	0
-	.uleb128 0xe
+	.2byte	0x116
+	.4byte	0xa20
+	.uleb128 0x17
 	.4byte	.LASF237
 	.byte	0x8
 	.2byte	0x11e
-	.4byte	0xa5d
+	.4byte	0xa3b
+	.byte	0
 	.uleb128 0xe
 	.4byte	.LASF238
 	.byte	0x8
-	.2byte	0x125
-	.4byte	0xb68
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0xb6e
-	.uleb128 0x1c
-	.4byte	0xb7e
-	.uleb128 0x1d
-	.4byte	0x5e4
-	.uleb128 0x1d
-	.4byte	0xb7e
-	.byte	0
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0xb50
+	.2byte	0x11f
+	.4byte	0xa63
 	.uleb128 0xe
 	.4byte	.LASF239
 	.byte	0x8
-	.2byte	0x130
-	.4byte	0xb90
+	.2byte	0x126
+	.4byte	0xb6f
 	.uleb128 0x11
 	.byte	0x4
-	.4byte	0xb96
+	.4byte	0xb75
 	.uleb128 0x1c
-	.4byte	0xbb5
+	.4byte	0xb85
+	.uleb128 0x1d
+	.4byte	0x5e4
+	.uleb128 0x1d
+	.4byte	0xb85
+	.byte	0
+	.uleb128 0x11
+	.byte	0x4
+	.4byte	0xb57
+	.uleb128 0xe
+	.4byte	.LASF240
+	.byte	0x8
+	.2byte	0x131
+	.4byte	0xb97
+	.uleb128 0x11
+	.byte	0x4
+	.4byte	0xb9d
+	.uleb128 0x1c
+	.4byte	0xbbc
 	.uleb128 0x1d
 	.4byte	0x341
 	.uleb128 0x1d
 	.4byte	0x6d
 	.uleb128 0x1d
-	.4byte	0xbb5
+	.4byte	0xbbc
 	.uleb128 0x1d
-	.4byte	0xbbb
+	.4byte	0xbc2
 	.uleb128 0x1d
-	.4byte	0xbc1
+	.4byte	0xbc8
 	.byte	0
 	.uleb128 0x11
 	.byte	0x4
@@ -2065,16 +2068,16 @@ esp_blufi_send_custom_data:
 	.byte	0x4
 	.4byte	0x2bf
 	.uleb128 0xe
-	.4byte	.LASF240
+	.4byte	.LASF241
 	.byte	0x8
-	.2byte	0x139
-	.4byte	0xbd3
+	.2byte	0x13a
+	.4byte	0xbda
 	.uleb128 0x11
 	.byte	0x4
-	.4byte	0xbd9
+	.4byte	0xbe0
 	.uleb128 0x1e
 	.4byte	0x6d
-	.4byte	0xbf2
+	.4byte	0xbf9
 	.uleb128 0x1d
 	.4byte	0x9f
 	.uleb128 0x1d
@@ -2083,21 +2086,21 @@ esp_blufi_send_custom_data:
 	.4byte	0x6d
 	.byte	0
 	.uleb128 0xe
-	.4byte	.LASF241
-	.byte	0x8
-	.2byte	0x142
-	.4byte	0xbd3
-	.uleb128 0xe
 	.4byte	.LASF242
 	.byte	0x8
-	.2byte	0x14a
-	.4byte	0xc0a
+	.2byte	0x143
+	.4byte	0xbda
+	.uleb128 0xe
+	.4byte	.LASF243
+	.byte	0x8
+	.2byte	0x14b
+	.4byte	0xc11
 	.uleb128 0x11
 	.byte	0x4
-	.4byte	0xc10
+	.4byte	0xc17
 	.uleb128 0x1e
 	.4byte	0xaa
-	.4byte	0xc29
+	.4byte	0xc30
 	.uleb128 0x1d
 	.4byte	0x9f
 	.uleb128 0x1d
@@ -2108,78 +2111,66 @@ esp_blufi_send_custom_data:
 	.uleb128 0xf
 	.byte	0x14
 	.byte	0x8
-	.2byte	0x14f
-	.4byte	0xc74
-	.uleb128 0x10
-	.4byte	.LASF243
-	.byte	0x8
 	.2byte	0x150
-	.4byte	0xb5c
-	.byte	0
+	.4byte	0xc7b
 	.uleb128 0x10
 	.4byte	.LASF244
 	.byte	0x8
 	.2byte	0x151
-	.4byte	0xb84
-	.byte	0x4
+	.4byte	0xb63
+	.byte	0
 	.uleb128 0x10
 	.4byte	.LASF245
 	.byte	0x8
 	.2byte	0x152
-	.4byte	0xbc7
-	.byte	0x8
+	.4byte	0xb8b
+	.byte	0x4
 	.uleb128 0x10
 	.4byte	.LASF246
 	.byte	0x8
 	.2byte	0x153
-	.4byte	0xbf2
-	.byte	0xc
+	.4byte	0xbce
+	.byte	0x8
 	.uleb128 0x10
 	.4byte	.LASF247
 	.byte	0x8
 	.2byte	0x154
-	.4byte	0xbfe
-	.byte	0x10
-	.byte	0
-	.uleb128 0xe
+	.4byte	0xbf9
+	.byte	0xc
+	.uleb128 0x10
 	.4byte	.LASF248
 	.byte	0x8
 	.2byte	0x155
-	.4byte	0xc29
+	.4byte	0xc05
+	.byte	0x10
+	.byte	0
+	.uleb128 0xe
+	.4byte	.LASF249
+	.byte	0x8
+	.2byte	0x156
+	.4byte	0xc30
 	.uleb128 0xc
 	.byte	0x4
 	.4byte	0x7f
 	.byte	0x9
 	.byte	0x1b
-	.4byte	0xc9f
-	.uleb128 0xd
-	.4byte	.LASF249
-	.byte	0
+	.4byte	0xca6
 	.uleb128 0xd
 	.4byte	.LASF250
-	.byte	0x1
+	.byte	0
 	.uleb128 0xd
 	.4byte	.LASF251
-	.byte	0x2
-	.byte	0
-	.uleb128 0x2
+	.byte	0x1
+	.uleb128 0xd
 	.4byte	.LASF252
-	.byte	0xa
-	.byte	0x21
-	.4byte	0x9f
-	.uleb128 0x5
-	.4byte	0xc9f
-	.4byte	0xcba
-	.uleb128 0x6
-	.4byte	0xdb
-	.byte	0x5
+	.byte	0x2
 	.byte	0
 	.uleb128 0xc
 	.byte	0x4
 	.4byte	0x7f
-	.byte	0xb
-	.byte	0x48
-	.4byte	0xd33
+	.byte	0xa
+	.byte	0x93
+	.4byte	0xd25
 	.uleb128 0xd
 	.4byte	.LASF253
 	.byte	0
@@ -2234,121 +2225,136 @@ esp_blufi_send_custom_data:
 	.uleb128 0xd
 	.4byte	.LASF270
 	.byte	0x11
+	.uleb128 0xd
+	.4byte	.LASF271
+	.byte	0x12
+	.byte	0
+	.uleb128 0x2
+	.4byte	.LASF272
+	.byte	0xb
+	.byte	0x1a
+	.4byte	0x9f
+	.uleb128 0x5
+	.4byte	0xd25
+	.4byte	0xd40
+	.uleb128 0x6
+	.4byte	0xdb
+	.byte	0x5
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF271
+	.4byte	.LASF273
 	.byte	0x8
 	.byte	0xc
-	.byte	0x17
-	.4byte	0xd7c
+	.byte	0x1a
+	.4byte	0xd89
 	.uleb128 0xa
 	.string	"sig"
 	.byte	0xc
-	.byte	0x18
+	.byte	0x1b
 	.4byte	0x9f
 	.byte	0
 	.uleb128 0xa
 	.string	"aid"
 	.byte	0xc
-	.byte	0x19
+	.byte	0x1c
 	.4byte	0x9f
 	.byte	0x1
 	.uleb128 0xa
 	.string	"pid"
 	.byte	0xc
-	.byte	0x1a
+	.byte	0x1d
 	.4byte	0x9f
 	.byte	0x2
 	.uleb128 0xa
 	.string	"act"
 	.byte	0xc
-	.byte	0x1b
+	.byte	0x1e
 	.4byte	0x9f
 	.byte	0x3
 	.uleb128 0xa
 	.string	"arg"
 	.byte	0xc
-	.byte	0x1c
+	.byte	0x1f
 	.4byte	0x48b
 	.byte	0x4
 	.byte	0
 	.uleb128 0x2
-	.4byte	.LASF272
+	.4byte	.LASF274
 	.byte	0xc
-	.byte	0x1d
-	.4byte	0xd33
+	.byte	0x20
+	.4byte	0xd40
 	.uleb128 0xc
 	.byte	0x4
 	.4byte	0x7f
 	.byte	0xc
-	.byte	0x24
-	.4byte	0xda6
-	.uleb128 0xd
-	.4byte	.LASF273
-	.byte	0
-	.uleb128 0xd
-	.4byte	.LASF274
-	.byte	0x1
+	.byte	0x27
+	.4byte	0xdb3
 	.uleb128 0xd
 	.4byte	.LASF275
+	.byte	0
+	.uleb128 0xd
+	.4byte	.LASF276
+	.byte	0x1
+	.uleb128 0xd
+	.4byte	.LASF277
 	.byte	0x2
 	.byte	0
 	.uleb128 0xc
 	.byte	0x4
 	.4byte	0x7f
 	.byte	0xc
-	.byte	0x2a
-	.4byte	0xe19
-	.uleb128 0xd
-	.4byte	.LASF276
-	.byte	0
-	.uleb128 0xd
-	.4byte	.LASF277
-	.byte	0x1
+	.byte	0x2d
+	.4byte	0xe26
 	.uleb128 0xd
 	.4byte	.LASF278
-	.byte	0x2
+	.byte	0
 	.uleb128 0xd
 	.4byte	.LASF279
-	.byte	0x3
+	.byte	0x1
 	.uleb128 0xd
 	.4byte	.LASF280
-	.byte	0x4
+	.byte	0x2
 	.uleb128 0xd
 	.4byte	.LASF281
-	.byte	0x5
+	.byte	0x3
 	.uleb128 0xd
 	.4byte	.LASF282
-	.byte	0x6
+	.byte	0x4
 	.uleb128 0xd
 	.4byte	.LASF283
-	.byte	0x7
+	.byte	0x5
 	.uleb128 0xd
 	.4byte	.LASF284
-	.byte	0x8
+	.byte	0x6
 	.uleb128 0xd
 	.4byte	.LASF285
-	.byte	0x9
+	.byte	0x7
 	.uleb128 0xd
 	.4byte	.LASF286
-	.byte	0xa
+	.byte	0x8
 	.uleb128 0xd
 	.4byte	.LASF287
-	.byte	0xb
+	.byte	0x9
 	.uleb128 0xd
 	.4byte	.LASF288
-	.byte	0xc
+	.byte	0xa
 	.uleb128 0xd
 	.4byte	.LASF289
-	.byte	0xd
+	.byte	0xb
 	.uleb128 0xd
 	.4byte	.LASF290
-	.byte	0xe
+	.byte	0xc
 	.uleb128 0xd
 	.4byte	.LASF291
-	.byte	0xf
+	.byte	0xd
 	.uleb128 0xd
 	.4byte	.LASF292
+	.byte	0xe
+	.uleb128 0xd
+	.4byte	.LASF293
+	.byte	0xf
+	.uleb128 0xd
+	.4byte	.LASF294
 	.byte	0x10
 	.byte	0
 	.uleb128 0xc
@@ -2356,58 +2362,58 @@ esp_blufi_send_custom_data:
 	.4byte	0x7f
 	.byte	0xd
 	.byte	0x16
-	.4byte	0xe4a
-	.uleb128 0xd
-	.4byte	.LASF293
-	.byte	0
-	.uleb128 0xd
-	.4byte	.LASF294
-	.byte	0x1
+	.4byte	0xe57
 	.uleb128 0xd
 	.4byte	.LASF295
-	.byte	0x2
+	.byte	0
 	.uleb128 0xd
 	.4byte	.LASF296
-	.byte	0x3
+	.byte	0x1
 	.uleb128 0xd
 	.4byte	.LASF297
-	.byte	0x4
+	.byte	0x2
 	.uleb128 0xd
 	.4byte	.LASF298
+	.byte	0x3
+	.uleb128 0xd
+	.4byte	.LASF299
+	.byte	0x4
+	.uleb128 0xd
+	.4byte	.LASF300
 	.byte	0x5
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF299
+	.4byte	.LASF301
 	.byte	0x14
 	.byte	0xd
 	.byte	0x20
-	.4byte	0xe93
+	.4byte	0xea0
 	.uleb128 0xb
-	.4byte	.LASF300
+	.4byte	.LASF302
 	.byte	0xd
 	.byte	0x21
 	.4byte	0x4d8
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LASF301
+	.4byte	.LASF303
 	.byte	0xd
 	.byte	0x22
 	.4byte	0x608
 	.byte	0x4
 	.uleb128 0xb
-	.4byte	.LASF302
+	.4byte	.LASF304
 	.byte	0xd
 	.byte	0x23
 	.4byte	0x9f
 	.byte	0x8
 	.uleb128 0xb
-	.4byte	.LASF303
+	.4byte	.LASF305
 	.byte	0xd
 	.byte	0x24
-	.4byte	0xe93
+	.4byte	0xea0
 	.byte	0xc
 	.uleb128 0xb
-	.4byte	.LASF304
+	.4byte	.LASF306
 	.byte	0xd
 	.byte	0x25
 	.4byte	0x6d
@@ -2415,56 +2421,56 @@ esp_blufi_send_custom_data:
 	.byte	0
 	.uleb128 0x11
 	.byte	0x4
-	.4byte	0x772
+	.4byte	0x778
 	.uleb128 0x19
-	.4byte	.LASF305
+	.4byte	.LASF307
 	.byte	0x8
 	.byte	0xd
 	.byte	0x2a
-	.4byte	0xebe
+	.4byte	0xecb
 	.uleb128 0xb
-	.4byte	.LASF306
+	.4byte	.LASF308
 	.byte	0xd
 	.byte	0x2b
 	.4byte	0xaa
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LASF307
+	.4byte	.LASF309
 	.byte	0xd
 	.byte	0x2c
-	.4byte	0xebe
+	.4byte	0xecb
 	.byte	0x4
 	.byte	0
 	.uleb128 0x11
 	.byte	0x4
-	.4byte	0x79e
+	.4byte	0x7a4
 	.uleb128 0x19
-	.4byte	.LASF308
+	.4byte	.LASF310
 	.byte	0x4
 	.byte	0xd
 	.byte	0x31
-	.4byte	0xedd
+	.4byte	0xeea
 	.uleb128 0xb
-	.4byte	.LASF183
+	.4byte	.LASF184
 	.byte	0xd
 	.byte	0x32
-	.4byte	0x69e
+	.4byte	0x6a4
 	.byte	0
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF309
+	.4byte	.LASF311
 	.byte	0x8
 	.byte	0xd
 	.byte	0x37
-	.4byte	0xf02
+	.4byte	0xf0f
 	.uleb128 0xb
-	.4byte	.LASF222
+	.4byte	.LASF223
 	.byte	0xd
 	.byte	0x38
 	.4byte	0x341
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LASF223
+	.4byte	.LASF224
 	.byte	0xd
 	.byte	0x39
 	.4byte	0xc0
@@ -2474,245 +2480,245 @@ esp_blufi_send_custom_data:
 	.byte	0x14
 	.byte	0xd
 	.byte	0x1f
-	.4byte	0xf37
-	.uleb128 0x8
-	.4byte	.LASF310
-	.byte	0xd
-	.byte	0x26
-	.4byte	0xe4a
-	.uleb128 0x8
-	.4byte	.LASF311
-	.byte	0xd
-	.byte	0x2d
-	.4byte	0xe99
+	.4byte	0xf44
 	.uleb128 0x8
 	.4byte	.LASF312
 	.byte	0xd
-	.byte	0x33
-	.4byte	0xec4
+	.byte	0x26
+	.4byte	0xe57
 	.uleb128 0x8
-	.4byte	.LASF236
-	.byte	0xd
-	.byte	0x3a
-	.4byte	0xedd
-	.byte	0
-	.uleb128 0x2
 	.4byte	.LASF313
 	.byte	0xd
+	.byte	0x2d
+	.4byte	0xea6
+	.uleb128 0x8
+	.4byte	.LASF314
+	.byte	0xd
+	.byte	0x33
+	.4byte	0xed1
+	.uleb128 0x8
+	.4byte	.LASF237
+	.byte	0xd
+	.byte	0x3a
+	.4byte	0xeea
+	.byte	0
+	.uleb128 0x2
+	.4byte	.LASF315
+	.byte	0xd
 	.byte	0x3b
-	.4byte	0xf02
+	.4byte	0xf0f
 	.uleb128 0xc
 	.byte	0x4
 	.4byte	0x7f
 	.byte	0xe
 	.byte	0x17
-	.4byte	0xfaf
-	.uleb128 0xd
-	.4byte	.LASF314
-	.byte	0
-	.uleb128 0xd
-	.4byte	.LASF315
-	.byte	0x1
+	.4byte	0xfbc
 	.uleb128 0xd
 	.4byte	.LASF316
-	.byte	0x2
+	.byte	0
 	.uleb128 0xd
 	.4byte	.LASF317
-	.byte	0x3
+	.byte	0x1
 	.uleb128 0xd
 	.4byte	.LASF318
-	.byte	0x4
+	.byte	0x2
 	.uleb128 0xd
 	.4byte	.LASF319
-	.byte	0x5
+	.byte	0x3
 	.uleb128 0xd
 	.4byte	.LASF320
-	.byte	0x6
+	.byte	0x4
 	.uleb128 0xd
 	.4byte	.LASF321
-	.byte	0x7
+	.byte	0x5
 	.uleb128 0xd
 	.4byte	.LASF322
-	.byte	0x8
+	.byte	0x6
 	.uleb128 0xd
 	.4byte	.LASF323
-	.byte	0x9
+	.byte	0x7
 	.uleb128 0xd
 	.4byte	.LASF324
-	.byte	0xa
+	.byte	0x8
 	.uleb128 0xd
 	.4byte	.LASF325
-	.byte	0xb
+	.byte	0x9
 	.uleb128 0xd
 	.4byte	.LASF326
-	.byte	0xc
+	.byte	0xa
 	.uleb128 0xd
 	.4byte	.LASF327
-	.byte	0xd
+	.byte	0xb
 	.uleb128 0xd
 	.4byte	.LASF328
-	.byte	0xe
+	.byte	0xc
 	.uleb128 0xd
 	.4byte	.LASF329
+	.byte	0xd
+	.uleb128 0xd
+	.4byte	.LASF330
+	.byte	0xe
+	.uleb128 0xd
+	.4byte	.LASF331
 	.byte	0xf
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF330
+	.4byte	.LASF332
 	.byte	0x2
 	.byte	0xe
 	.byte	0x2d
-	.4byte	0xfc8
+	.4byte	0xfd5
 	.uleb128 0xb
-	.4byte	.LASF331
+	.4byte	.LASF333
 	.byte	0xe
 	.byte	0x2e
 	.4byte	0xaa
 	.byte	0
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF332
+	.4byte	.LASF334
 	.byte	0x1
 	.byte	0xe
 	.byte	0x32
-	.4byte	0xfe1
+	.4byte	0xfee
 	.uleb128 0xb
-	.4byte	.LASF333
+	.4byte	.LASF335
 	.byte	0xe
 	.byte	0x33
 	.4byte	0x47f
 	.byte	0
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF334
+	.4byte	.LASF336
 	.byte	0x18
 	.byte	0xe
 	.byte	0x37
-	.4byte	0x1012
+	.4byte	0x101f
 	.uleb128 0xb
-	.4byte	.LASF333
+	.4byte	.LASF335
 	.byte	0xe
 	.byte	0x38
 	.4byte	0x47f
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LASF335
+	.4byte	.LASF337
 	.byte	0xe
 	.byte	0x39
 	.4byte	0x2c6
 	.byte	0x1
 	.uleb128 0xb
-	.4byte	.LASF336
+	.4byte	.LASF338
 	.byte	0xe
 	.byte	0x3a
 	.4byte	0xaa
 	.byte	0x16
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF337
+	.4byte	.LASF339
 	.byte	0x8
 	.byte	0xe
 	.byte	0x3e
-	.4byte	0x104f
+	.4byte	0x105c
 	.uleb128 0xb
-	.4byte	.LASF333
+	.4byte	.LASF335
 	.byte	0xe
 	.byte	0x3f
 	.4byte	0x47f
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LASF338
+	.4byte	.LASF340
 	.byte	0xe
 	.byte	0x40
 	.4byte	0x9f
 	.byte	0x1
 	.uleb128 0xb
-	.4byte	.LASF339
+	.4byte	.LASF341
 	.byte	0xe
 	.byte	0x41
 	.4byte	0x9f
 	.byte	0x2
 	.uleb128 0xb
-	.4byte	.LASF340
+	.4byte	.LASF342
 	.byte	0xe
 	.byte	0x42
-	.4byte	0x104f
+	.4byte	0x105c
 	.byte	0x4
 	.byte	0
 	.uleb128 0x11
 	.byte	0x4
 	.4byte	0x39a
 	.uleb128 0x19
-	.4byte	.LASF341
+	.4byte	.LASF343
 	.byte	0x2
 	.byte	0xe
 	.byte	0x46
-	.4byte	0x106e
+	.4byte	0x107b
 	.uleb128 0xb
-	.4byte	.LASF342
+	.4byte	.LASF344
 	.byte	0xe
 	.byte	0x47
 	.4byte	0xaa
 	.byte	0
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF343
+	.4byte	.LASF345
 	.byte	0x2
 	.byte	0xe
 	.byte	0x4b
-	.4byte	0x1087
+	.4byte	0x1094
 	.uleb128 0xb
-	.4byte	.LASF342
+	.4byte	.LASF344
 	.byte	0xe
 	.byte	0x4c
 	.4byte	0xaa
 	.byte	0
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF344
+	.4byte	.LASF346
 	.byte	0x2
 	.byte	0xe
 	.byte	0x50
-	.4byte	0x10a0
+	.4byte	0x10ad
 	.uleb128 0xb
-	.4byte	.LASF342
+	.4byte	.LASF344
 	.byte	0xe
 	.byte	0x51
 	.4byte	0xaa
 	.byte	0
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF345
+	.4byte	.LASF347
 	.byte	0x4
 	.byte	0xe
 	.byte	0x55
-	.4byte	0x10c5
+	.4byte	0x10d2
 	.uleb128 0xb
-	.4byte	.LASF342
+	.4byte	.LASF344
 	.byte	0xe
 	.byte	0x56
 	.4byte	0xaa
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LASF346
+	.4byte	.LASF348
 	.byte	0xe
 	.byte	0x57
 	.4byte	0xaa
 	.byte	0x2
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF347
+	.4byte	.LASF349
 	.byte	0x20
 	.byte	0xe
 	.byte	0x5b
-	.4byte	0x111a
+	.4byte	0x1127
 	.uleb128 0xb
-	.4byte	.LASF342
+	.4byte	.LASF344
 	.byte	0xe
 	.byte	0x5c
 	.4byte	0xaa
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LASF348
+	.4byte	.LASF350
 	.byte	0xe
 	.byte	0x5d
 	.4byte	0x12d
@@ -2724,7 +2730,7 @@ esp_blufi_send_custom_data:
 	.4byte	0x2d1
 	.byte	0x14
 	.uleb128 0xb
-	.4byte	.LASF349
+	.4byte	.LASF351
 	.byte	0xe
 	.byte	0x5f
 	.4byte	0x2dd
@@ -2736,26 +2742,26 @@ esp_blufi_send_custom_data:
 	.4byte	0x36a
 	.byte	0x17
 	.uleb128 0xb
-	.4byte	.LASF350
+	.4byte	.LASF352
 	.byte	0xe
 	.byte	0x61
 	.4byte	0x3d7
 	.byte	0x18
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF351
+	.4byte	.LASF353
 	.byte	0x20
 	.byte	0xe
 	.byte	0x65
-	.4byte	0x1163
+	.4byte	0x1170
 	.uleb128 0xb
-	.4byte	.LASF342
+	.4byte	.LASF344
 	.byte	0xe
 	.byte	0x66
 	.4byte	0xaa
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LASF352
+	.4byte	.LASF354
 	.byte	0xe
 	.byte	0x67
 	.4byte	0x12d
@@ -2773,38 +2779,38 @@ esp_blufi_send_custom_data:
 	.4byte	0x36a
 	.byte	0x16
 	.uleb128 0xb
-	.4byte	.LASF353
+	.4byte	.LASF355
 	.byte	0xe
 	.byte	0x6a
 	.4byte	0x3d7
 	.byte	0x18
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF354
+	.4byte	.LASF356
 	.byte	0xc
 	.byte	0xe
 	.byte	0x6e
-	.4byte	0x11ac
+	.4byte	0x11b9
 	.uleb128 0xb
-	.4byte	.LASF191
+	.4byte	.LASF192
 	.byte	0xe
 	.byte	0x6f
 	.4byte	0xaa
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LASF355
+	.4byte	.LASF357
 	.byte	0xe
 	.byte	0x70
 	.4byte	0xaa
 	.byte	0x2
 	.uleb128 0xb
-	.4byte	.LASF356
+	.4byte	.LASF358
 	.byte	0xe
 	.byte	0x71
 	.4byte	0x2bf
 	.byte	0x4
 	.uleb128 0xb
-	.4byte	.LASF357
+	.4byte	.LASF359
 	.byte	0xe
 	.byte	0x72
 	.4byte	0xaa
@@ -2817,25 +2823,25 @@ esp_blufi_send_custom_data:
 	.byte	0x8
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF358
+	.4byte	.LASF360
 	.byte	0x10
 	.byte	0xe
 	.byte	0x77
-	.4byte	0x11e9
+	.4byte	0x11f6
 	.uleb128 0xb
-	.4byte	.LASF191
+	.4byte	.LASF192
 	.byte	0xe
 	.byte	0x78
 	.4byte	0xaa
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LASF359
+	.4byte	.LASF361
 	.byte	0xe
 	.byte	0x79
 	.4byte	0xc0
 	.byte	0x4
 	.uleb128 0xb
-	.4byte	.LASF360
+	.4byte	.LASF362
 	.byte	0xe
 	.byte	0x7a
 	.4byte	0x268
@@ -2844,18 +2850,18 @@ esp_blufi_send_custom_data:
 	.string	"rsp"
 	.byte	0xe
 	.byte	0x7b
-	.4byte	0x11e9
+	.4byte	0x11f6
 	.byte	0xc
 	.byte	0
 	.uleb128 0x11
 	.byte	0x4
 	.4byte	0x473
 	.uleb128 0x19
-	.4byte	.LASF361
+	.4byte	.LASF363
 	.byte	0x8
 	.byte	0xe
 	.byte	0x7f
-	.4byte	0x1220
+	.4byte	0x122d
 	.uleb128 0xb
 	.4byte	.LASF92
 	.byte	0xe
@@ -2876,57 +2882,57 @@ esp_blufi_send_custom_data:
 	.byte	0x4
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF362
+	.4byte	.LASF364
 	.byte	0x8
 	.byte	0xe
 	.byte	0x86
-	.4byte	0x1251
+	.4byte	0x125e
 	.uleb128 0xb
-	.4byte	.LASF333
+	.4byte	.LASF335
 	.byte	0xe
 	.byte	0x87
 	.4byte	0x47f
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LASF189
+	.4byte	.LASF190
 	.byte	0xe
 	.byte	0x88
 	.4byte	0x138
 	.byte	0x1
 	.uleb128 0xb
-	.4byte	.LASF363
+	.4byte	.LASF365
 	.byte	0xe
 	.byte	0x89
 	.4byte	0x2bf
 	.byte	0x7
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF364
+	.4byte	.LASF366
 	.byte	0x2
 	.byte	0xe
 	.byte	0x8d
-	.4byte	0x126a
+	.4byte	0x1277
 	.uleb128 0xb
-	.4byte	.LASF191
+	.4byte	.LASF192
 	.byte	0xe
 	.byte	0x8e
 	.4byte	0xaa
 	.byte	0
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LASF365
+	.4byte	.LASF367
 	.byte	0x7
 	.byte	0xe
 	.byte	0x92
-	.4byte	0x128f
+	.4byte	0x129c
 	.uleb128 0xb
-	.4byte	.LASF333
+	.4byte	.LASF335
 	.byte	0xe
 	.byte	0x93
 	.4byte	0x47f
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LASF189
+	.4byte	.LASF190
 	.byte	0xe
 	.byte	0x94
 	.4byte	0x138
@@ -2936,116 +2942,116 @@ esp_blufi_send_custom_data:
 	.byte	0x20
 	.byte	0xe
 	.byte	0x2b
-	.4byte	0x1348
-	.uleb128 0x8
-	.4byte	.LASF366
-	.byte	0xe
-	.byte	0x2f
-	.4byte	0xfaf
-	.uleb128 0x8
-	.4byte	.LASF367
-	.byte	0xe
-	.byte	0x34
-	.4byte	0xfc8
+	.4byte	0x1355
 	.uleb128 0x8
 	.4byte	.LASF368
 	.byte	0xe
-	.byte	0x3b
-	.4byte	0xfe1
+	.byte	0x2f
+	.4byte	0xfbc
 	.uleb128 0x8
 	.4byte	.LASF369
 	.byte	0xe
-	.byte	0x43
-	.4byte	0x1012
+	.byte	0x34
+	.4byte	0xfd5
 	.uleb128 0x8
 	.4byte	.LASF370
 	.byte	0xe
-	.byte	0x48
-	.4byte	0x1055
+	.byte	0x3b
+	.4byte	0xfee
 	.uleb128 0x8
 	.4byte	.LASF371
 	.byte	0xe
-	.byte	0x4d
-	.4byte	0x106e
+	.byte	0x43
+	.4byte	0x101f
 	.uleb128 0x8
 	.4byte	.LASF372
 	.byte	0xe
-	.byte	0x52
-	.4byte	0x1087
+	.byte	0x48
+	.4byte	0x1062
 	.uleb128 0x8
 	.4byte	.LASF373
 	.byte	0xe
-	.byte	0x58
-	.4byte	0x10a0
+	.byte	0x4d
+	.4byte	0x107b
 	.uleb128 0x8
 	.4byte	.LASF374
 	.byte	0xe
-	.byte	0x62
-	.4byte	0x10c5
+	.byte	0x52
+	.4byte	0x1094
 	.uleb128 0x8
 	.4byte	.LASF375
 	.byte	0xe
-	.byte	0x6b
-	.4byte	0x111a
+	.byte	0x58
+	.4byte	0x10ad
 	.uleb128 0x8
 	.4byte	.LASF376
 	.byte	0xe
-	.byte	0x74
-	.4byte	0x1163
+	.byte	0x62
+	.4byte	0x10d2
 	.uleb128 0x8
 	.4byte	.LASF377
 	.byte	0xe
-	.byte	0x7c
-	.4byte	0x11ac
+	.byte	0x6b
+	.4byte	0x1127
 	.uleb128 0x8
 	.4byte	.LASF378
 	.byte	0xe
-	.byte	0x83
-	.4byte	0x11ef
+	.byte	0x74
+	.4byte	0x1170
 	.uleb128 0x8
 	.4byte	.LASF379
 	.byte	0xe
-	.byte	0x8a
-	.4byte	0x1220
+	.byte	0x7c
+	.4byte	0x11b9
 	.uleb128 0x8
 	.4byte	.LASF380
 	.byte	0xe
-	.byte	0x8f
-	.4byte	0x1251
+	.byte	0x83
+	.4byte	0x11fc
 	.uleb128 0x8
 	.4byte	.LASF381
 	.byte	0xe
-	.byte	0x95
-	.4byte	0x126a
-	.byte	0
-	.uleb128 0x2
+	.byte	0x8a
+	.4byte	0x122d
+	.uleb128 0x8
 	.4byte	.LASF382
 	.byte	0xe
-	.byte	0x97
-	.4byte	0x128f
-	.uleb128 0x1f
+	.byte	0x8f
+	.4byte	0x125e
+	.uleb128 0x8
 	.4byte	.LASF383
-	.byte	0x1
-	.byte	0x1b
-	.4byte	0x4a2
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
-	.uleb128 0x1
-	.byte	0x9c
-	.4byte	0x13a8
-	.uleb128 0x20
+	.byte	0xe
+	.byte	0x95
+	.4byte	0x1277
+	.byte	0
+	.uleb128 0x2
+	.4byte	.LASF384
+	.byte	0xe
+	.byte	0x97
+	.4byte	0x129c
+	.uleb128 0x1f
 	.4byte	.LASF385
 	.byte	0x1
 	.byte	0x1b
-	.4byte	0x13a8
+	.4byte	0x4a2
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
+	.uleb128 0x1
+	.byte	0x9c
+	.4byte	0x13b5
+	.uleb128 0x20
+	.4byte	.LASF387
+	.byte	0x1
+	.byte	0x1b
+	.4byte	0x13b5
 	.4byte	.LLST0
 	.uleb128 0x21
 	.4byte	.LVL1
-	.4byte	0x170c
+	.4byte	0x1719
 	.uleb128 0x22
 	.4byte	.LVL2
-	.4byte	0x1717
-	.4byte	0x1398
+	.4byte	0x1724
+	.4byte	0x13a5
 	.uleb128 0x23
 	.uleb128 0x1
 	.byte	0x5a
@@ -3055,7 +3061,7 @@ esp_blufi_send_custom_data:
 	.byte	0
 	.uleb128 0x24
 	.4byte	.LVL3
-	.4byte	0x1722
+	.4byte	0x172f
 	.uleb128 0x23
 	.uleb128 0x1
 	.byte	0x5a
@@ -3065,49 +3071,49 @@ esp_blufi_send_custom_data:
 	.byte	0
 	.uleb128 0x11
 	.byte	0x4
-	.4byte	0xc74
+	.4byte	0xc7b
 	.uleb128 0x1f
-	.4byte	.LASF384
+	.4byte	.LASF386
 	.byte	0x1
 	.byte	0x29
 	.4byte	0x4a2
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x143e
+	.4byte	0x144b
 	.uleb128 0x20
-	.4byte	.LASF300
+	.4byte	.LASF302
 	.byte	0x1
 	.byte	0x29
 	.4byte	0x4d8
 	.4byte	.LLST1
 	.uleb128 0x25
-	.4byte	.LASF301
+	.4byte	.LASF303
 	.byte	0x1
 	.byte	0x29
 	.4byte	0x608
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x25
-	.4byte	.LASF302
+	.4byte	.LASF304
 	.byte	0x1
 	.byte	0x29
 	.4byte	0x9f
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x25
-	.4byte	.LASF303
+	.4byte	.LASF305
 	.byte	0x1
 	.byte	0x29
-	.4byte	0xe93
+	.4byte	0xea0
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x26
 	.string	"msg"
 	.byte	0x1
 	.byte	0x2b
-	.4byte	0xd7c
+	.4byte	0xd89
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -44
@@ -3115,16 +3121,16 @@ esp_blufi_send_custom_data:
 	.string	"arg"
 	.byte	0x1
 	.byte	0x2c
-	.4byte	0xf37
+	.4byte	0xf44
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
 	.uleb128 0x21
 	.4byte	.LVL6
-	.4byte	0x170c
+	.4byte	0x1719
 	.uleb128 0x24
 	.4byte	.LVL7
-	.4byte	0x172d
+	.4byte	0x173a
 	.uleb128 0x23
 	.uleb128 0x1
 	.byte	0x5a
@@ -3145,33 +3151,33 @@ esp_blufi_send_custom_data:
 	.byte	0
 	.byte	0
 	.uleb128 0x1f
-	.4byte	.LASF386
+	.4byte	.LASF388
 	.byte	0x1
 	.byte	0x3d
 	.4byte	0x4a2
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x14b4
+	.4byte	0x14c1
 	.uleb128 0x20
-	.4byte	.LASF306
+	.4byte	.LASF308
 	.byte	0x1
 	.byte	0x3d
 	.4byte	0xaa
 	.4byte	.LLST2
 	.uleb128 0x25
-	.4byte	.LASF307
+	.4byte	.LASF309
 	.byte	0x1
 	.byte	0x3d
-	.4byte	0xebe
+	.4byte	0xecb
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x26
 	.string	"msg"
 	.byte	0x1
 	.byte	0x3f
-	.4byte	0xd7c
+	.4byte	0xd89
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -44
@@ -3179,16 +3185,16 @@ esp_blufi_send_custom_data:
 	.string	"arg"
 	.byte	0x1
 	.byte	0x40
-	.4byte	0xf37
+	.4byte	0xf44
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
 	.uleb128 0x21
 	.4byte	.LVL10
-	.4byte	0x170c
+	.4byte	0x1719
 	.uleb128 0x24
 	.4byte	.LVL12
-	.4byte	0x172d
+	.4byte	0x173a
 	.uleb128 0x23
 	.uleb128 0x1
 	.byte	0x5a
@@ -3209,29 +3215,29 @@ esp_blufi_send_custom_data:
 	.byte	0
 	.byte	0
 	.uleb128 0x1f
-	.4byte	.LASF387
+	.4byte	.LASF389
 	.byte	0x1
 	.byte	0x4f
 	.4byte	0x4a2
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1504
+	.4byte	0x1511
 	.uleb128 0x26
 	.string	"msg"
 	.byte	0x1
 	.byte	0x51
-	.4byte	0xd7c
+	.4byte	0xd89
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
 	.uleb128 0x21
 	.4byte	.LVL13
-	.4byte	0x170c
+	.4byte	0x1719
 	.uleb128 0x24
 	.4byte	.LVL14
-	.4byte	0x172d
+	.4byte	0x173a
 	.uleb128 0x23
 	.uleb128 0x1
 	.byte	0x5a
@@ -3256,29 +3262,29 @@ esp_blufi_send_custom_data:
 	.byte	0
 	.byte	0
 	.uleb128 0x1f
-	.4byte	.LASF388
+	.4byte	.LASF390
 	.byte	0x1
 	.byte	0x5e
 	.4byte	0x4a2
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1554
+	.4byte	0x1561
 	.uleb128 0x26
 	.string	"msg"
 	.byte	0x1
 	.byte	0x60
-	.4byte	0xd7c
+	.4byte	0xd89
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
 	.uleb128 0x21
 	.4byte	.LVL15
-	.4byte	0x170c
+	.4byte	0x1719
 	.uleb128 0x24
 	.4byte	.LVL16
-	.4byte	0x172d
+	.4byte	0x173a
 	.uleb128 0x23
 	.uleb128 0x1
 	.byte	0x5a
@@ -3303,37 +3309,37 @@ esp_blufi_send_custom_data:
 	.byte	0
 	.byte	0
 	.uleb128 0x1f
-	.4byte	.LASF389
+	.4byte	.LASF391
 	.byte	0x1
 	.byte	0x6d
 	.4byte	0xaa
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1577
+	.4byte	0x1584
 	.uleb128 0x21
 	.4byte	.LVL17
-	.4byte	0x1738
+	.4byte	0x1745
 	.byte	0
 	.uleb128 0x1f
-	.4byte	.LASF390
+	.4byte	.LASF392
 	.byte	0x1
 	.byte	0x72
 	.4byte	0x4a2
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x15f8
+	.4byte	0x1605
 	.uleb128 0x20
-	.4byte	.LASF333
+	.4byte	.LASF335
 	.byte	0x1
 	.byte	0x72
 	.4byte	0x47f
 	.4byte	.LLST3
 	.uleb128 0x20
-	.4byte	.LASF191
+	.4byte	.LASF192
 	.byte	0x1
 	.byte	0x72
 	.4byte	0xaa
@@ -3342,7 +3348,7 @@ esp_blufi_send_custom_data:
 	.string	"msg"
 	.byte	0x1
 	.byte	0x74
-	.4byte	0xd7c
+	.4byte	0xd89
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
@@ -3350,16 +3356,16 @@ esp_blufi_send_custom_data:
 	.string	"arg"
 	.byte	0x1
 	.byte	0x75
-	.4byte	0x1348
+	.4byte	0x1355
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -80
 	.uleb128 0x21
 	.4byte	.LVL19
-	.4byte	0x170c
+	.4byte	0x1719
 	.uleb128 0x24
 	.4byte	.LVL22
-	.4byte	0x172d
+	.4byte	0x173a
 	.uleb128 0x23
 	.uleb128 0x1
 	.byte	0x5a
@@ -3387,26 +3393,26 @@ esp_blufi_send_custom_data:
 	.byte	0
 	.byte	0
 	.uleb128 0x1f
-	.4byte	.LASF391
+	.4byte	.LASF393
 	.byte	0x1
 	.byte	0x81
 	.4byte	0x4a2
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1666
+	.4byte	0x1673
 	.uleb128 0x20
-	.4byte	.LASF183
+	.4byte	.LASF184
 	.byte	0x1
 	.byte	0x81
-	.4byte	0x69e
+	.4byte	0x6a4
 	.4byte	.LLST5
 	.uleb128 0x26
 	.string	"msg"
 	.byte	0x1
 	.byte	0x83
-	.4byte	0xd7c
+	.4byte	0xd89
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -44
@@ -3414,16 +3420,16 @@ esp_blufi_send_custom_data:
 	.string	"arg"
 	.byte	0x1
 	.byte	0x84
-	.4byte	0xf37
+	.4byte	0xf44
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
 	.uleb128 0x21
 	.4byte	.LVL24
-	.4byte	0x170c
+	.4byte	0x1719
 	.uleb128 0x24
 	.4byte	.LVL25
-	.4byte	0x172d
+	.4byte	0x173a
 	.uleb128 0x23
 	.uleb128 0x1
 	.byte	0x5a
@@ -3449,23 +3455,23 @@ esp_blufi_send_custom_data:
 	.byte	0
 	.byte	0
 	.uleb128 0x1f
-	.4byte	.LASF392
+	.4byte	.LASF394
 	.byte	0x1
 	.byte	0x92
 	.4byte	0x4a2
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x16dc
+	.4byte	0x16e9
 	.uleb128 0x20
-	.4byte	.LASF222
+	.4byte	.LASF223
 	.byte	0x1
 	.byte	0x92
 	.4byte	0x341
 	.4byte	.LLST6
 	.uleb128 0x25
-	.4byte	.LASF223
+	.4byte	.LASF224
 	.byte	0x1
 	.byte	0x92
 	.4byte	0xc0
@@ -3475,7 +3481,7 @@ esp_blufi_send_custom_data:
 	.string	"msg"
 	.byte	0x1
 	.byte	0x94
-	.4byte	0xd7c
+	.4byte	0xd89
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -44
@@ -3483,16 +3489,16 @@ esp_blufi_send_custom_data:
 	.string	"arg"
 	.byte	0x1
 	.byte	0x95
-	.4byte	0xf37
+	.4byte	0xf44
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
 	.uleb128 0x21
 	.4byte	.LVL28
-	.4byte	0x170c
+	.4byte	0x1719
 	.uleb128 0x24
 	.4byte	.LVL30
-	.4byte	0x172d
+	.4byte	0x173a
 	.uleb128 0x23
 	.uleb128 0x1
 	.byte	0x5a
@@ -3513,10 +3519,10 @@ esp_blufi_send_custom_data:
 	.byte	0
 	.byte	0
 	.uleb128 0x27
-	.4byte	.LASF393
-	.byte	0xa
-	.2byte	0x2cc
-	.4byte	0x16ef
+	.4byte	.LASF395
+	.byte	0xb
+	.2byte	0x2b8
+	.4byte	0x16fc
 	.byte	0x6
 	.byte	0xff
 	.byte	0xff
@@ -3525,12 +3531,12 @@ esp_blufi_send_custom_data:
 	.byte	0xff
 	.byte	0xff
 	.uleb128 0x28
-	.4byte	0xcaa
+	.4byte	0xd30
 	.uleb128 0x27
-	.4byte	.LASF394
-	.byte	0xa
-	.2byte	0x2cd
-	.4byte	0x1707
+	.4byte	.LASF396
+	.byte	0xb
+	.2byte	0x2b9
+	.4byte	0x1714
 	.byte	0x6
 	.byte	0
 	.byte	0
@@ -3539,30 +3545,30 @@ esp_blufi_send_custom_data:
 	.byte	0
 	.byte	0
 	.uleb128 0x28
-	.4byte	0xcaa
+	.4byte	0xd30
 	.uleb128 0x29
-	.4byte	.LASF395
-	.4byte	.LASF395
+	.4byte	.LASF397
+	.4byte	.LASF397
 	.byte	0x9
 	.byte	0x27
 	.uleb128 0x29
-	.4byte	.LASF396
-	.4byte	.LASF396
+	.4byte	.LASF398
+	.4byte	.LASF398
 	.byte	0xd
 	.byte	0x3f
 	.uleb128 0x29
-	.4byte	.LASF397
-	.4byte	.LASF397
+	.4byte	.LASF399
+	.4byte	.LASF399
 	.byte	0xf
-	.byte	0x19
+	.byte	0x17
 	.uleb128 0x29
-	.4byte	.LASF398
-	.4byte	.LASF398
+	.4byte	.LASF400
+	.4byte	.LASF400
 	.byte	0xc
-	.byte	0x4c
+	.byte	0x5f
 	.uleb128 0x29
-	.4byte	.LASF399
-	.4byte	.LASF399
+	.4byte	.LASF401
+	.4byte	.LASF401
 	.byte	0xd
 	.byte	0x44
 	.byte	0
@@ -4096,7 +4102,7 @@ esp_blufi_send_custom_data:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL4
-	.4byte	.LFE30
+	.4byte	.LFE39
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4110,7 +4116,7 @@ esp_blufi_send_custom_data:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL8
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4124,7 +4130,7 @@ esp_blufi_send_custom_data:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL11
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -4135,7 +4141,7 @@ esp_blufi_send_custom_data:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL20
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -4146,7 +4152,7 @@ esp_blufi_send_custom_data:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL21
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4160,7 +4166,7 @@ esp_blufi_send_custom_data:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL26
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4182,7 +4188,7 @@ esp_blufi_send_custom_data:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL32
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -4195,46 +4201,46 @@ esp_blufi_send_custom_data:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB30
-	.4byte	.LFE30
-	.4byte	.LFB31
-	.4byte	.LFE31
-	.4byte	.LFB32
-	.4byte	.LFE32
-	.4byte	.LFB33
-	.4byte	.LFE33
-	.4byte	.LFB34
-	.4byte	.LFE34
-	.4byte	.LFB35
-	.4byte	.LFE35
-	.4byte	.LFB36
-	.4byte	.LFE36
-	.4byte	.LFB37
-	.4byte	.LFE37
-	.4byte	.LFB38
-	.4byte	.LFE38
+	.4byte	.LFB39
+	.4byte	.LFE39
+	.4byte	.LFB40
+	.4byte	.LFE40
+	.4byte	.LFB41
+	.4byte	.LFE41
+	.4byte	.LFB42
+	.4byte	.LFE42
+	.4byte	.LFB43
+	.4byte	.LFE43
+	.4byte	.LFB44
+	.4byte	.LFE44
+	.4byte	.LFB45
+	.4byte	.LFE45
+	.4byte	.LFB46
+	.4byte	.LFE46
+	.4byte	.LFB47
+	.4byte	.LFE47
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -4242,39 +4248,39 @@ esp_blufi_send_custom_data:
 	.section	.debug_str,"MS",@progbits,1
 .LASF127:
 	.string	"ESP_BLUFI_EVENT_RECV_STA_PASSWD"
-.LASF179:
+.LASF180:
 	.string	"esp_blufi_extra_info_t"
 .LASF98:
 	.string	"long int"
-.LASF279:
+.LASF281:
 	.string	"BTC_PID_GATTC"
-.LASF322:
+.LASF324:
 	.string	"BTC_GATTS_ACT_ADD_CHAR"
-.LASF233:
+.LASF234:
 	.string	"client_pkey"
-.LASF216:
+.LASF217:
 	.string	"blufi_recv_client_pkey_evt_param"
 .LASF18:
 	.string	"uuid16"
-.LASF278:
+.LASF280:
 	.string	"BTC_PID_GATTS"
 .LASF161:
 	.string	"ESP_BLUFI_MAKE_PUBLIC_ERROR"
 .LASF115:
 	.string	"wifi_auth_mode_t"
-.LASF387:
+.LASF389:
 	.string	"esp_blufi_profile_init"
 .LASF139:
 	.string	"ESP_BLUFI_EVENT_RECV_SLAVE_DISCONNECT_BLE"
-.LASF376:
+.LASF378:
 	.string	"send_ind"
-.LASF349:
+.LASF351:
 	.string	"property"
 .LASF53:
 	.string	"ESP_GATT_INVALID_CFG"
-.LASF189:
+.LASF190:
 	.string	"remote_bda"
-.LASF168:
+.LASF169:
 	.string	"sta_passwd_len"
 .LASF87:
 	.string	"esp_gatts_attr_db_t"
@@ -4282,89 +4288,91 @@ esp_blufi_send_custom_data:
 	.string	"WIFI_MODE_AP"
 .LASF142:
 	.string	"ESP_BLUFI_EVENT_RECV_CUSTOM_DATA"
-.LASF348:
+.LASF350:
 	.string	"char_uuid"
-.LASF317:
+.LASF319:
 	.string	"BTC_GATTS_ACT_CREATE_ATTR_TAB"
 .LASF8:
 	.string	"__uint32_t"
-.LASF220:
+.LASF221:
 	.string	"blufi_get_error_evt_param"
-.LASF228:
+.LASF229:
 	.string	"disconnect"
-.LASF332:
+.LASF334:
 	.string	"app_unreg_args"
-.LASF246:
+.LASF247:
 	.string	"decrypt_func"
-.LASF244:
+.LASF245:
 	.string	"negotiate_data_handler"
-.LASF318:
+.LASF320:
 	.string	"BTC_GATTS_ACT_DELETE_SERVICE"
-.LASF381:
+.LASF383:
 	.string	"send_service_change"
-.LASF208:
+.LASF209:
 	.string	"blufi_recv_username_evt_param"
-.LASF367:
+.LASF369:
 	.string	"app_unreg"
-.LASF200:
+.LASF201:
 	.string	"blufi_recv_softap_ssid_evt_param"
-.LASF356:
+.LASF358:
 	.string	"need_confirm"
 .LASF28:
 	.string	"ESP_GATT_INVALID_PDU"
+.LASF271:
+	.string	"BT_STATUS_EIR_TOO_LARGE"
 .LASF7:
 	.string	"__int32_t"
-.LASF319:
+.LASF321:
 	.string	"BTC_GATTS_ACT_START_SERVICE"
 .LASF77:
 	.string	"uuid_p"
-.LASF325:
+.LASF327:
 	.string	"BTC_GATTS_ACT_SEND_RESPONSE"
-.LASF391:
+.LASF393:
 	.string	"esp_blufi_send_error_info"
-.LASF186:
+.LASF187:
 	.string	"blufi_set_wifi_mode_evt_param"
-.LASF366:
+.LASF368:
 	.string	"app_reg"
 .LASF61:
 	.string	"ESP_GATT_CANCEL"
 .LASF109:
 	.string	"WIFI_AUTH_WEP"
-.LASF283:
+.LASF285:
 	.string	"BTC_PID_SPPLIKE"
 .LASF74:
 	.string	"esp_gatt_perm_t"
-.LASF329:
+.LASF331:
 	.string	"BTC_GATTS_ACT_SEND_SERVICE_CHANGE"
-.LASF321:
+.LASF323:
 	.string	"BTC_GATTS_ACT_ADD_INCLUDE_SERVICE"
 .LASF150:
 	.string	"ESP_BLUFI_DEINIT_OK"
 .LASF66:
 	.string	"ESP_GATT_PRC_IN_PROGRESS"
-.LASF204:
+.LASF205:
 	.string	"blufi_recv_softap_auth_mode_evt_param"
 .LASF123:
 	.string	"ESP_BLUFI_EVENT_GET_WIFI_STATUS"
 .LASF90:
 	.string	"attr_value"
-.LASF172:
+.LASF173:
 	.string	"softap_passwd_len"
-.LASF211:
+.LASF212:
 	.string	"blufi_recv_ca_evt_param"
-.LASF340:
+.LASF342:
 	.string	"gatts_attr_db"
-.LASF375:
+.LASF377:
 	.string	"add_descr"
 .LASF31:
 	.string	"ESP_GATT_INVALID_OFFSET"
-.LASF236:
+.LASF237:
 	.string	"custom_data"
-.LASF388:
+.LASF390:
 	.string	"esp_blufi_profile_deinit"
-.LASF238:
+.LASF239:
 	.string	"esp_blufi_event_cb_t"
-.LASF218:
+.LASF219:
 	.string	"pkey_len"
 .LASF128:
 	.string	"ESP_BLUFI_EVENT_RECV_SOFTAP_SSID"
@@ -4374,23 +4382,23 @@ esp_blufi_send_custom_data:
 	.string	"WIFI_AUTH_OPEN"
 .LASF24:
 	.string	"ESP_GATT_OK"
-.LASF372:
+.LASF374:
 	.string	"stop_srvc"
-.LASF324:
+.LASF326:
 	.string	"BTC_GATTS_ACT_SEND_INDICATE"
-.LASF307:
+.LASF309:
 	.string	"list"
 .LASF270:
 	.string	"BT_STATUS_MEMORY_FULL"
-.LASF295:
+.LASF297:
 	.string	"BTC_BLUFI_ACT_SEND_CFG_REPORT"
-.LASF361:
+.LASF363:
 	.string	"set_attr_val_args"
-.LASF275:
+.LASF277:
 	.string	"BTC_SIG_NUM"
-.LASF195:
+.LASF196:
 	.string	"blufi_recv_sta_ssid_evt_param"
-.LASF339:
+.LASF341:
 	.string	"max_nb_attr"
 .LASF117:
 	.string	"ESP_BLUFI_EVENT_DEINIT_FINISH"
@@ -4404,19 +4412,19 @@ esp_blufi_send_custom_data:
 	.string	"BT_STATUS_RMT_DEV_DOWN"
 .LASF42:
 	.string	"ESP_GATT_NO_RESOURCES"
-.LASF364:
+.LASF366:
 	.string	"close_args"
 .LASF89:
 	.string	"attr_len"
-.LASF351:
+.LASF353:
 	.string	"add_descr_args"
-.LASF300:
+.LASF302:
 	.string	"opmode"
 .LASF32:
 	.string	"ESP_GATT_INSUF_AUTHORIZATION"
-.LASF363:
+.LASF365:
 	.string	"is_direct"
-.LASF225:
+.LASF226:
 	.string	"deinit_finish"
 .LASF47:
 	.string	"ESP_GATT_ERROR"
@@ -4426,17 +4434,17 @@ esp_blufi_send_custom_data:
 	.string	"ESP_BLUFI_EVENT_RECV_SERVER_CERT"
 .LASF268:
 	.string	"BT_STATUS_PARAM_OUT_OF_RANGE"
-.LASF371:
+.LASF373:
 	.string	"start_srvc"
 .LASF46:
 	.string	"ESP_GATT_BUSY"
 .LASF11:
 	.string	"long long unsigned int"
-.LASF226:
+.LASF227:
 	.string	"wifi_mode"
 .LASF93:
 	.string	"offset"
-.LASF393:
+.LASF395:
 	.string	"bd_addr_any"
 .LASF35:
 	.string	"ESP_GATT_NOT_LONG"
@@ -4444,7 +4452,7 @@ esp_blufi_send_custom_data:
 	.string	"ESP_BLUFI_DEINIT_FAILED"
 .LASF253:
 	.string	"BT_STATUS_SUCCESS"
-.LASF314:
+.LASF316:
 	.string	"BTC_GATTS_ACT_APP_REGISTER"
 .LASF134:
 	.string	"ESP_BLUFI_EVENT_RECV_CA_CERT"
@@ -4452,33 +4460,33 @@ esp_blufi_send_custom_data:
 	.string	"__uint16_t"
 .LASF254:
 	.string	"BT_STATUS_FAIL"
-.LASF323:
+.LASF325:
 	.string	"BTC_GATTS_ACT_ADD_CHAR_DESCR"
 .LASF135:
 	.string	"ESP_BLUFI_EVENT_RECV_CLIENT_CERT"
-.LASF311:
+.LASF313:
 	.string	"wifi_list"
-.LASF370:
+.LASF372:
 	.string	"delete_srvc"
 .LASF81:
 	.string	"value"
 .LASF137:
 	.string	"ESP_BLUFI_EVENT_RECV_CLIENT_PRIV_KEY"
-.LASF400:
+.LASF402:
 	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
-.LASF231:
+.LASF232:
 	.string	"client_cert"
-.LASF378:
+.LASF380:
 	.string	"set_attr_val"
 .LASF34:
 	.string	"ESP_GATT_NOT_FOUND"
-.LASF291:
+.LASF293:
 	.string	"BTC_PID_SPP"
-.LASF171:
+.LASF172:
 	.string	"softap_passwd"
-.LASF310:
+.LASF312:
 	.string	"wifi_conn_report"
-.LASF384:
+.LASF386:
 	.string	"esp_blufi_send_wifi_conn_report"
 .LASF267:
 	.string	"BT_STATUS_UNACCEPT_CONN_INTERVAL"
@@ -4492,17 +4500,17 @@ esp_blufi_send_custom_data:
 	.string	"esp_gatt_rsp_t"
 .LASF6:
 	.string	"short unsigned int"
-.LASF312:
+.LASF314:
 	.string	"blufi_err_infor"
 .LASF264:
 	.string	"BT_STATUS_AUTH_REJECTED"
-.LASF301:
+.LASF303:
 	.string	"sta_conn_state"
 .LASF106:
 	.string	"WIFI_MODE_MAX"
 .LASF126:
 	.string	"ESP_BLUFI_EVENT_RECV_STA_SSID"
-.LASF212:
+.LASF213:
 	.string	"cert"
 .LASF72:
 	.string	"_Bool"
@@ -4512,23 +4520,23 @@ esp_blufi_send_custom_data:
 	.string	"ESP_BLUFI_EVENT_RECV_SOFTAP_PASSWD"
 .LASF21:
 	.string	"uuid"
-.LASF169:
+.LASF170:
 	.string	"softap_ssid"
 .LASF78:
 	.string	"perm"
-.LASF362:
+.LASF364:
 	.string	"open_args"
-.LASF173:
+.LASF174:
 	.string	"softap_authmode"
-.LASF217:
+.LASF218:
 	.string	"pkey"
-.LASF198:
+.LASF199:
 	.string	"passwd"
 .LASF146:
 	.string	"esp_blufi_sta_conn_state_t"
-.LASF170:
+.LASF171:
 	.string	"softap_ssid_len"
-.LASF396:
+.LASF398:
 	.string	"btc_blufi_set_callbacks"
 .LASF37:
 	.string	"ESP_GATT_INVALID_ATTR_LEN"
@@ -4540,169 +4548,171 @@ esp_blufi_send_custom_data:
 	.string	"BT_STATUS_PARM_INVALID"
 .LASF148:
 	.string	"ESP_BLUFI_INIT_FAILED"
-.LASF235:
+.LASF236:
 	.string	"report_error"
-.LASF345:
+.LASF347:
 	.string	"add_incl_srvc_args"
-.LASF357:
+.LASF359:
 	.string	"value_len"
 .LASF160:
 	.string	"ESP_BLUFI_READ_PARAM_ERROR"
-.LASF342:
+.LASF344:
 	.string	"service_handle"
-.LASF180:
+.LASF181:
 	.string	"ssid"
 .LASF100:
 	.string	"char"
 .LASF143:
 	.string	"esp_blufi_cb_event_t"
-.LASF305:
+.LASF307:
 	.string	"blufi_wifi_list"
 .LASF20:
 	.string	"uuid128"
 .LASF48:
 	.string	"ESP_GATT_CMD_STARTED"
-.LASF390:
+.LASF392:
 	.string	"esp_blufi_close"
-.LASF197:
+.LASF198:
 	.string	"blufi_recv_sta_passwd_evt_param"
-.LASF232:
+.LASF233:
 	.string	"server_cert"
 .LASF67:
 	.string	"ESP_GATT_OUT_OF_RANGE"
-.LASF380:
+.LASF382:
 	.string	"close"
-.LASF165:
+.LASF166:
 	.string	"sta_ssid"
-.LASF222:
+.LASF223:
 	.string	"data"
 .LASF10:
 	.string	"long long int"
-.LASF386:
+.LASF388:
 	.string	"esp_blufi_send_wifi_list"
-.LASF237:
+.LASF238:
 	.string	"esp_blufi_cb_param_t"
-.LASF282:
+.LASF284:
 	.string	"BTC_PID_BLE_HID"
 .LASF13:
 	.string	"uint8_t"
-.LASF280:
+.LASF282:
 	.string	"BTC_PID_GATT_COMMON"
-.LASF360:
+.LASF362:
 	.string	"status"
-.LASF234:
+.LASF235:
 	.string	"server_pkey"
 .LASF125:
 	.string	"ESP_BLUFI_EVENT_RECV_STA_BSSID"
-.LASF196:
+.LASF197:
 	.string	"ssid_len"
-.LASF385:
+.LASF387:
 	.string	"callbacks"
-.LASF251:
+.LASF252:
 	.string	"ESP_BLUEDROID_STATUS_ENABLED"
-.LASF162:
+.LASF163:
 	.string	"esp_blufi_error_state_t"
-.LASF164:
+.LASF165:
 	.string	"sta_bssid_set"
 .LASF82:
 	.string	"esp_attr_desc_t"
-.LASF331:
+.LASF333:
 	.string	"app_id"
-.LASF239:
+.LASF240:
 	.string	"esp_blufi_negotiate_data_handler_t"
-.LASF205:
+.LASF206:
 	.string	"auth_mode"
 .LASF56:
 	.string	"ESP_GATT_ENCRYPED_NO_MITM"
-.LASF293:
+.LASF295:
 	.string	"BTC_BLUFI_ACT_INIT"
 .LASF60:
 	.string	"ESP_GATT_ALREADY_OPEN"
-.LASF181:
-	.string	"rssi"
-.LASF350:
+.LASF162:
+	.string	"ESP_BLUFI_DATA_FORMAT_ERROR"
+.LASF352:
 	.string	"char_val"
 .LASF71:
 	.string	"is_primary"
 .LASF102:
 	.string	"WIFI_MODE_NULL"
-.LASF316:
+.LASF318:
 	.string	"BTC_GATTS_ACT_CREATE_SERVICE"
-.LASF215:
+.LASF216:
 	.string	"blufi_recv_server_cert_evt_param"
-.LASF193:
+.LASF194:
 	.string	"blufi_recv_sta_bssid_evt_param"
 .LASF54:
 	.string	"ESP_GATT_SERVICE_STARTED"
-.LASF241:
+.LASF242:
 	.string	"esp_blufi_decrypt_func_t"
-.LASF250:
+.LASF251:
 	.string	"ESP_BLUEDROID_STATUS_INITIALIZED"
-.LASF359:
+.LASF361:
 	.string	"trans_id"
 .LASF84:
 	.string	"esp_attr_control_t"
 .LASF158:
 	.string	"ESP_BLUFI_DH_MALLOC_ERROR"
-.LASF327:
+.LASF329:
 	.string	"BTC_GATTS_ACT_OPEN"
 .LASF52:
 	.string	"ESP_GATT_MORE"
 .LASF22:
 	.string	"esp_bt_uuid_t"
-.LASF281:
+.LASF283:
 	.string	"BTC_PID_GAP_BLE"
-.LASF297:
+.LASF299:
 	.string	"BTC_BLUFI_ACT_SEND_ERR_INFO"
-.LASF401:
+.LASF403:
 	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/esp_blufi_api.c"
-.LASF163:
+.LASF164:
 	.string	"sta_bssid"
-.LASF185:
+.LASF186:
 	.string	"blufi_deinit_finish_evt_param"
-.LASF184:
+.LASF185:
 	.string	"blufi_init_finish_evt_param"
 .LASF257:
 	.string	"BT_STATUS_BUSY"
 .LASF83:
 	.string	"auto_rsp"
-.LASF402:
+.LASF404:
 	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/bt"
-.LASF272:
+.LASF274:
 	.string	"btc_msg_t"
-.LASF365:
+.LASF367:
 	.string	"send_service_change_args"
 .LASF29:
 	.string	"ESP_GATT_INSUF_AUTHENTICATION"
-.LASF284:
+.LASF286:
 	.string	"BTC_PID_BLUFI"
-.LASF229:
+.LASF182:
+	.string	"rssi"
+.LASF230:
 	.string	"softap_auth_mode"
-.LASF174:
+.LASF175:
 	.string	"softap_authmode_set"
-.LASF337:
+.LASF339:
 	.string	"create_attr_tab_args"
 .LASF133:
 	.string	"ESP_BLUFI_EVENT_RECV_USERNAME"
-.LASF271:
+.LASF273:
 	.string	"btc_msg"
-.LASF330:
+.LASF332:
 	.string	"app_reg_args"
-.LASF383:
+.LASF385:
 	.string	"esp_blufi_register_callbacks"
 .LASF33:
 	.string	"ESP_GATT_PREPARE_Q_FULL"
-.LASF346:
+.LASF348:
 	.string	"included_service_handle"
-.LASF315:
+.LASF317:
 	.string	"BTC_GATTS_ACT_APP_UNREGISTER"
 .LASF0:
 	.string	"__int8_t"
-.LASF294:
-	.string	"BTC_BLUFI_ACT_DEINIT"
 .LASF296:
+	.string	"BTC_BLUFI_ACT_DEINIT"
+.LASF298:
 	.string	"BTC_BLUFI_ACT_SEND_WIFI_LIST"
-.LASF341:
+.LASF343:
 	.string	"delete_srvc_args"
 .LASF14:
 	.string	"uint16_t"
@@ -4710,77 +4720,77 @@ esp_blufi_send_custom_data:
 	.string	"ESP_BLUFI_EVENT_BLE_CONNECT"
 .LASF64:
 	.string	"ESP_GATT_UNKNOWN_ERROR"
-.LASF210:
+.LASF211:
 	.string	"name_len"
 .LASF94:
 	.string	"auth_req"
-.LASF277:
+.LASF279:
 	.string	"BTC_PID_DEV"
 .LASF65:
 	.string	"ESP_GATT_CCC_CFG_ERR"
 .LASF116:
 	.string	"ESP_BLUFI_EVENT_INIT_FINISH"
-.LASF223:
+.LASF224:
 	.string	"data_len"
-.LASF203:
+.LASF204:
 	.string	"max_conn_num"
-.LASF187:
+.LASF188:
 	.string	"op_mode"
 .LASF113:
 	.string	"WIFI_AUTH_WPA2_ENTERPRISE"
-.LASF202:
+.LASF203:
 	.string	"blufi_recv_softap_max_conn_num_evt_param"
-.LASF394:
+.LASF396:
 	.string	"bd_addr_null"
-.LASF242:
+.LASF243:
 	.string	"esp_blufi_checksum_func_t"
 .LASF79:
 	.string	"max_length"
-.LASF343:
+.LASF345:
 	.string	"start_srvc_args"
-.LASF389:
+.LASF391:
 	.string	"esp_blufi_get_version"
-.LASF302:
+.LASF304:
 	.string	"softap_conn_num"
 .LASF4:
 	.string	"short int"
-.LASF191:
+.LASF192:
 	.string	"conn_id"
-.LASF227:
+.LASF228:
 	.string	"connect"
 .LASF95:
 	.string	"esp_gatt_value_t"
-.LASF213:
+.LASF214:
 	.string	"cert_len"
-.LASF355:
+.LASF357:
 	.string	"attr_handle"
-.LASF206:
+.LASF207:
 	.string	"blufi_recv_softap_channel_evt_param"
-.LASF374:
+.LASF376:
 	.string	"add_char"
-.LASF166:
+.LASF167:
 	.string	"sta_ssid_len"
-.LASF177:
+.LASF178:
 	.string	"softap_channel"
-.LASF230:
+.LASF231:
 	.string	"username"
-.LASF392:
+.LASF394:
 	.string	"esp_blufi_send_custom_data"
 .LASF159:
 	.string	"ESP_BLUFI_DH_PARAM_ERROR"
 .LASF80:
 	.string	"length"
-.LASF335:
+.LASF337:
 	.string	"service_id"
 .LASF50:
 	.string	"ESP_GATT_PENDING"
-.LASF199:
+.LASF200:
 	.string	"passwd_len"
 .LASF91:
 	.string	"esp_attr_value_t"
 .LASF157:
 	.string	"ESP_BLUFI_INIT_SECURITY_ERROR"
-.LASF273:
+.LASF275:
 	.string	"BTC_SIG_API_CALL"
 .LASF51:
 	.string	"ESP_GATT_AUTH_FAIL"
@@ -4788,51 +4798,51 @@ esp_blufi_send_custom_data:
 	.string	"uuid32"
 .LASF155:
 	.string	"ESP_BLUFI_DECRYPT_ERROR"
-.LASF352:
+.LASF354:
 	.string	"descr_uuid"
 .LASF144:
 	.string	"ESP_BLUFI_STA_CONN_SUCCESS"
 .LASF63:
 	.string	"ESP_GATT_APP_RSP"
-.LASF175:
+.LASF176:
 	.string	"softap_max_conn_num"
-.LASF289:
+.LASF291:
 	.string	"BTC_PID_A2DP"
 .LASF97:
 	.string	"esp_gatt_if_t"
 .LASF38:
 	.string	"ESP_GATT_ERR_UNLIKELY"
-.LASF344:
+.LASF346:
 	.string	"stop_srvc_args"
 .LASF112:
 	.string	"WIFI_AUTH_WPA_WPA2_PSK"
-.LASF249:
+.LASF250:
 	.string	"ESP_BLUEDROID_STATUS_UNINITIALIZED"
-.LASF194:
+.LASF195:
 	.string	"bssid"
-.LASF326:
+.LASF328:
 	.string	"BTC_GATTS_ACT_SET_ATTR_VALUE"
 .LASF1:
 	.string	"__uint8_t"
-.LASF221:
+.LASF222:
 	.string	"blufi_recv_custom_data_evt_param"
-.LASF358:
+.LASF360:
 	.string	"send_rsp_args"
 .LASF154:
 	.string	"ESP_BLUFI_CHECKSUM_ERROR"
-.LASF209:
+.LASF210:
 	.string	"name"
-.LASF397:
+.LASF399:
 	.string	"btc_profile_cb_set"
 .LASF110:
 	.string	"WIFI_AUTH_WPA_PSK"
-.LASF201:
+.LASF202:
 	.string	"blufi_recv_softap_passwd_evt_param"
 .LASF9:
 	.string	"unsigned int"
-.LASF182:
+.LASF183:
 	.string	"esp_blufi_ap_record_t"
-.LASF379:
+.LASF381:
 	.string	"open"
 .LASF256:
 	.string	"BT_STATUS_NOMEM"
@@ -4840,21 +4850,21 @@ esp_blufi_send_custom_data:
 	.string	"ESP_BLUFI_INIT_OK"
 .LASF75:
 	.string	"esp_gatt_char_prop_t"
-.LASF373:
+.LASF375:
 	.string	"add_incl_srvc"
 .LASF255:
 	.string	"BT_STATUS_NOT_READY"
-.LASF304:
+.LASF306:
 	.string	"extra_info_len"
-.LASF333:
+.LASF335:
 	.string	"gatts_if"
 .LASF17:
 	.string	"sizetype"
-.LASF353:
+.LASF355:
 	.string	"descr_val"
 .LASF99:
 	.string	"long unsigned int"
-.LASF286:
+.LASF288:
 	.string	"BTC_PID_ALARM"
 .LASF73:
 	.string	"esp_gatt_srvc_id_t"
@@ -4862,17 +4872,17 @@ esp_blufi_send_custom_data:
 	.string	"ESP_GATT_UNSUPPORT_GRP_TYPE"
 .LASF15:
 	.string	"int32_t"
-.LASF276:
+.LASF278:
 	.string	"BTC_PID_MAIN_INIT"
-.LASF248:
+.LASF249:
 	.string	"esp_blufi_callbacks_t"
-.LASF245:
+.LASF246:
 	.string	"encrypt_func"
-.LASF306:
+.LASF308:
 	.string	"apCount"
 .LASF55:
 	.string	"ESP_GATT_ENCRYPED_MITM"
-.LASF176:
+.LASF177:
 	.string	"softap_max_conn_num_set"
 .LASF3:
 	.string	"unsigned char"
@@ -4882,37 +4892,37 @@ esp_blufi_send_custom_data:
 	.string	"ESP_GATT_ILLEGAL_PARAMETER"
 .LASF107:
 	.string	"wifi_mode_t"
-.LASF369:
+.LASF371:
 	.string	"create_attr_tab"
 .LASF259:
 	.string	"BT_STATUS_UNSUPPORTED"
-.LASF192:
+.LASF193:
 	.string	"blufi_disconnect_evt_param"
-.LASF347:
+.LASF349:
 	.string	"add_char_args"
 .LASF120:
 	.string	"ESP_BLUFI_EVENT_BLE_DISCONNECT"
 .LASF25:
 	.string	"ESP_GATT_INVALID_HANDLE"
-.LASF274:
+.LASF276:
 	.string	"BTC_SIG_API_CB"
-.LASF224:
+.LASF225:
 	.string	"init_finish"
 .LASF86:
 	.string	"att_desc"
-.LASF178:
+.LASF179:
 	.string	"softap_channel_set"
-.LASF167:
+.LASF168:
 	.string	"sta_passwd"
 .LASF124:
 	.string	"ESP_BLUFI_EVENT_DEAUTHENTICATE_STA"
 .LASF36:
 	.string	"ESP_GATT_INSUF_KEY_SIZE"
-.LASF354:
+.LASF356:
 	.string	"send_indicate_args"
 .LASF145:
 	.string	"ESP_BLUFI_STA_CONN_FAIL"
-.LASF207:
+.LASF208:
 	.string	"channel"
 .LASF69:
 	.string	"inst_id"
@@ -4920,43 +4930,43 @@ esp_blufi_send_custom_data:
 	.string	"esp_err_t"
 .LASF266:
 	.string	"BT_STATUS_PENDING"
-.LASF183:
+.LASF184:
 	.string	"state"
-.LASF288:
+.LASF290:
 	.string	"BTC_PID_PRF_QUE"
 .LASF88:
 	.string	"attr_max_len"
 .LASF140:
 	.string	"ESP_BLUFI_EVENT_GET_WIFI_LIST"
-.LASF399:
+.LASF401:
 	.string	"btc_blufi_get_version"
-.LASF309:
+.LASF311:
 	.string	"blufi_custom_data"
-.LASF308:
+.LASF310:
 	.string	"blufi_error_infor"
-.LASF395:
+.LASF397:
 	.string	"esp_bluedroid_get_status"
-.LASF243:
+.LASF244:
 	.string	"event_cb"
-.LASF334:
+.LASF336:
 	.string	"create_srvc_args"
-.LASF320:
+.LASF322:
 	.string	"BTC_GATTS_ACT_STOP_SERVICE"
 .LASF149:
 	.string	"esp_blufi_init_state_t"
 .LASF265:
 	.string	"BT_STATUS_INVALID_STATIC_RAND_ADDR"
-.LASF382:
+.LASF384:
 	.string	"btc_ble_gatts_args_t"
-.LASF219:
+.LASF220:
 	.string	"blufi_recv_server_pkey_evt_param"
-.LASF188:
+.LASF189:
 	.string	"blufi_connect_evt_param"
 .LASF130:
 	.string	"ESP_BLUFI_EVENT_RECV_SOFTAP_MAX_CONN_NUM"
-.LASF338:
+.LASF340:
 	.string	"srvc_inst_id"
-.LASF247:
+.LASF248:
 	.string	"checksum_func"
 .LASF2:
 	.string	"signed char"
@@ -4964,15 +4974,15 @@ esp_blufi_send_custom_data:
 	.string	"WIFI_AUTH_WPA2_PSK"
 .LASF141:
 	.string	"ESP_BLUFI_EVENT_REPORT_ERROR"
-.LASF190:
+.LASF191:
 	.string	"server_if"
-.LASF299:
+.LASF301:
 	.string	"blufi_cfg_report"
-.LASF298:
+.LASF300:
 	.string	"BTC_BLUFI_ACT_SEND_CUSTOM_DATA"
-.LASF290:
+.LASF292:
 	.string	"BTC_PID_AVRC"
-.LASF313:
+.LASF315:
 	.string	"btc_blufi_args_t"
 .LASF132:
 	.string	"ESP_BLUFI_EVENT_RECV_SOFTAP_CHANNEL"
@@ -4980,13 +4990,13 @@ esp_blufi_send_custom_data:
 	.string	"handle"
 .LASF76:
 	.string	"uuid_length"
-.LASF303:
+.LASF305:
 	.string	"extra_info"
-.LASF292:
+.LASF294:
 	.string	"BTC_PID_NUM"
 .LASF152:
 	.string	"esp_blufi_deinit_state_t"
-.LASF240:
+.LASF241:
 	.string	"esp_blufi_encrypt_func_t"
 .LASF261:
 	.string	"BT_STATUS_UNHANDLED"
@@ -4994,11 +5004,11 @@ esp_blufi_send_custom_data:
 	.string	"ESP_GATT_WRONG_STATE"
 .LASF103:
 	.string	"WIFI_MODE_STA"
-.LASF214:
+.LASF215:
 	.string	"blufi_recv_client_cert_evt_param"
 .LASF70:
 	.string	"esp_gatt_id_t"
-.LASF336:
+.LASF338:
 	.string	"num_handle"
 .LASF68:
 	.string	"esp_gatt_status_t"
@@ -5008,13 +5018,13 @@ esp_blufi_send_custom_data:
 	.string	"ESP_GATT_READ_NOT_PERMIT"
 .LASF62:
 	.string	"ESP_GATT_STACK_RSP"
-.LASF252:
+.LASF272:
 	.string	"UINT8"
-.LASF377:
+.LASF379:
 	.string	"send_rsp"
 .LASF58:
 	.string	"ESP_GATT_CONGESTED"
-.LASF285:
+.LASF287:
 	.string	"BTC_PID_DM_SEC"
 .LASF27:
 	.string	"ESP_GATT_WRITE_NOT_PERMIT"
@@ -5026,11 +5036,11 @@ esp_blufi_send_custom_data:
 	.string	"ESP_BLUFI_EVENT_RECV_SERVER_PRIV_KEY"
 .LASF114:
 	.string	"WIFI_AUTH_MAX"
-.LASF328:
+.LASF330:
 	.string	"BTC_GATTS_ACT_CLOSE"
 .LASF59:
 	.string	"ESP_GATT_DUP_REG"
-.LASF398:
+.LASF400:
 	.string	"btc_transfer_context"
 .LASF45:
 	.string	"ESP_GATT_DB_FULL"
@@ -5038,9 +5048,9 @@ esp_blufi_send_custom_data:
 	.string	"WIFI_MODE_APSTA"
 .LASF30:
 	.string	"ESP_GATT_REQ_NOT_SUPPORTED"
-.LASF287:
+.LASF289:
 	.string	"BTC_PID_GAP_BT"
-.LASF368:
+.LASF370:
 	.string	"create_srvc"
 .LASF121:
 	.string	"ESP_BLUFI_EVENT_REQ_CONNECT_TO_AP"

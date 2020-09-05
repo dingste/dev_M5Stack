@@ -1115,7 +1115,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h" 1
@@ -1207,189 +1207,8 @@ typedef __uintptr_t uintptr_t;
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdbool.h" 1 3 4
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h" 2
-# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef uint8_t UINT8;
-typedef uint16_t UINT16;
-typedef uint32_t UINT32;
-typedef uint64_t UINT64;
-
-typedef int8_t INT8;
-typedef int16_t INT16;
-typedef int32_t INT32;
-typedef 
-# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h" 3 4
-       _Bool 
-# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-            BOOLEAN;
-# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef struct {
-    uint16_t event;
-    uint16_t len;
-    uint16_t offset;
-    uint16_t layer_specific;
-    uint8_t data[];
-} BT_HDR;
-# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef UINT8 BD_ADDR[6];
-typedef UINT8 *BD_ADDR_PTR;
-
-
-
-
-typedef UINT8 tAMP_KEY_TYPE;
-
-
-typedef UINT8 BT_OCTET8[8];
-
-
-typedef UINT8 LINK_KEY[16];
-
-
-typedef UINT8 AMP_LINK_KEY[32];
-
-
-typedef UINT8 BT_OCTET16[16];
-
-
-typedef UINT8 PIN_CODE[16];
-typedef UINT8 *PIN_CODE_PTR;
-
-
-typedef UINT8 BT_OCTET32[32];
-
-
-typedef UINT8 DEV_CLASS[3];
-typedef UINT8 *DEV_CLASS_PTR;
-
-
-typedef UINT8 EXT_INQ_RESP[3];
-typedef UINT8 *EXT_INQ_RESP_PTR;
-
-
-typedef UINT8 BD_NAME[248 + 1];
-typedef UINT8 *BD_NAME_PTR;
-
-
-typedef UINT8 BD_FEATURES[8];
-
-
-typedef UINT8 BT_EVENT_MASK[8];
-
-
-typedef UINT8 LAP[3];
-typedef UINT8 INQ_LAP[3];
-
-
-typedef UINT8 RAND_NUM[16];
-
-
-typedef UINT8 ACO[12];
-
-
-typedef UINT8 COF[12];
-
-typedef struct {
-    UINT8 qos_flags;
-    UINT8 service_type;
-    UINT32 token_rate;
-    UINT32 token_bucket_size;
-    UINT32 peak_bandwidth;
-    UINT32 latency;
-    UINT32 delay_variation;
-} FLOW_SPEC;
-# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef UINT8 ACCESS_CODE[9];
-# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef struct {
-
-
-
-
-    UINT16 len;
-
-    union {
-        UINT16 uuid16;
-        UINT32 uuid32;
-        UINT8 uuid128[16];
-    } uu;
-
-} tBT_UUID;
-# 482 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef struct {
-    UINT32 is_connected;
-    INT32 rssi;
-    UINT32 bytes_sent;
-    UINT32 bytes_rcvd;
-    UINT32 duration;
-} tBT_CONN_STATS;
-# 504 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef UINT8 tBLE_ADDR_TYPE;
-
-
-
-
-
-typedef UINT8 tBT_TRANSPORT;
-
-
-
-typedef struct {
-    tBLE_ADDR_TYPE type;
-    BD_ADDR bda;
-} tBLE_BD_ADDR;
-
-
-
-
-
-
-typedef UINT8 tBT_DEVICE_TYPE;
-# 701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef void (BT_LOG_FUNC) (int trace_type, const char *fmt_str, ...);
-# 716 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-static const BD_ADDR bd_addr_any = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
-static const BD_ADDR bd_addr_null = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-# 733 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-static inline void bdcpy(BD_ADDR a, const BD_ADDR b)
-{
-    int i;
-
-    for (i = 6; i != 0; i--) {
-        *a++ = *b++;
-    }
-}
-# 752 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-static inline int bdcmp(const BD_ADDR a, const BD_ADDR b)
-{
-    int i;
-
-    for (i = 6; i != 0; i--) {
-        if (*a++ != *b++) {
-            return -1;
-        }
-    }
-    return 0;
-}
-# 774 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-static inline int bdcmpany(const BD_ADDR a)
-{
-    return bdcmp(a, bd_addr_any);
-}
-# 789 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-static inline void bdsetany(BD_ADDR a)
-{
-    bdcpy(a, bd_addr_any);
-}
-# 804 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-static inline void bt_rcopy(UINT8 *dst, UINT8 const *src, UINT16 len)
-{
-    src += len;
-    while (len --) {
-        *dst++ = *--src;
-    }
-}
-# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h" 2
-# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/include/bt_common.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/include/bt_common.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
@@ -1837,17 +1656,223 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
-# 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h" 2
-# 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h"
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/include/bt_common.h" 2
+# 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/include/bt_common.h"
+typedef enum {
+    BT_STATUS_SUCCESS = 0,
+    BT_STATUS_FAIL,
+    BT_STATUS_NOT_READY,
+    BT_STATUS_NOMEM,
+    BT_STATUS_BUSY,
+    BT_STATUS_DONE,
+    BT_STATUS_UNSUPPORTED,
+    BT_STATUS_PARM_INVALID,
+    BT_STATUS_UNHANDLED,
+    BT_STATUS_AUTH_FAILURE,
+    BT_STATUS_RMT_DEV_DOWN,
+    BT_STATUS_AUTH_REJECTED,
+    BT_STATUS_INVALID_STATIC_RAND_ADDR,
+    BT_STATUS_PENDING,
+    BT_STATUS_UNACCEPT_CONN_INTERVAL,
+    BT_STATUS_PARAM_OUT_OF_RANGE,
+    BT_STATUS_TIMEOUT,
+    BT_STATUS_MEMORY_FULL,
+    BT_STATUS_EIR_TOO_LARGE,
+} bt_status_t;
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h" 2
+
+typedef uint8_t UINT8;
+typedef uint16_t UINT16;
+typedef uint32_t UINT32;
+typedef uint64_t UINT64;
+
+typedef int8_t INT8;
+typedef int16_t INT16;
+typedef int32_t INT32;
+typedef 
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h" 3 4
+       _Bool 
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+            BOOLEAN;
+# 191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef struct {
+    uint16_t event;
+    uint16_t len;
+    uint16_t offset;
+    uint16_t layer_specific;
+    uint8_t data[];
+} BT_HDR;
+# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef UINT8 BD_ADDR[6];
+typedef UINT8 *BD_ADDR_PTR;
+
+
+
+
+typedef UINT8 tAMP_KEY_TYPE;
+
+
+typedef UINT8 BT_OCTET8[8];
+
+
+typedef UINT8 LINK_KEY[16];
+
+
+typedef UINT8 AMP_LINK_KEY[32];
+
+
+typedef UINT8 BT_OCTET16[16];
+
+
+typedef UINT8 PIN_CODE[16];
+typedef UINT8 *PIN_CODE_PTR;
+
+
+typedef UINT8 BT_OCTET32[32];
+
+
+typedef UINT8 DEV_CLASS[3];
+typedef UINT8 *DEV_CLASS_PTR;
+
+
+typedef UINT8 EXT_INQ_RESP[3];
+typedef UINT8 *EXT_INQ_RESP_PTR;
+
+
+typedef UINT8 BD_NAME[248 + 1];
+typedef UINT8 *BD_NAME_PTR;
+
+
+typedef UINT8 BD_FEATURES[8];
+
+
+typedef UINT8 BT_EVENT_MASK[8];
+
+
+typedef UINT8 LAP[3];
+typedef UINT8 INQ_LAP[3];
+
+
+typedef UINT8 RAND_NUM[16];
+
+
+typedef UINT8 ACO[12];
+
+
+typedef UINT8 COF[12];
+
+typedef struct {
+    UINT8 qos_flags;
+    UINT8 service_type;
+    UINT32 token_rate;
+    UINT32 token_bucket_size;
+    UINT32 peak_bandwidth;
+    UINT32 latency;
+    UINT32 delay_variation;
+} FLOW_SPEC;
+# 389 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef UINT8 ACCESS_CODE[9];
+# 413 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef struct {
+
+
+
+
+    UINT16 len;
+
+    union {
+        UINT16 uuid16;
+        UINT32 uuid32;
+        UINT8 uuid128[16];
+    } uu;
+
+} tBT_UUID;
+# 475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef struct {
+    UINT32 is_connected;
+    INT32 rssi;
+    UINT32 bytes_sent;
+    UINT32 bytes_rcvd;
+    UINT32 duration;
+} tBT_CONN_STATS;
+# 497 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef UINT8 tBLE_ADDR_TYPE;
+
+
+
+
+
+typedef UINT8 tBT_TRANSPORT;
+
+
+
+typedef struct {
+    tBLE_ADDR_TYPE type;
+    BD_ADDR bda;
+} tBLE_BD_ADDR;
+
+
+
+
+
+
+typedef UINT8 tBT_DEVICE_TYPE;
+# 681 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef void (BT_LOG_FUNC) (int trace_type, const char *fmt_str, ...);
+# 696 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+static const BD_ADDR bd_addr_any = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+static const BD_ADDR bd_addr_null = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+# 713 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+static inline void bdcpy(BD_ADDR a, const BD_ADDR b)
+{
+    int i;
+
+    for (i = 6; i != 0; i--) {
+        *a++ = *b++;
+    }
+}
+# 732 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+static inline int bdcmp(const BD_ADDR a, const BD_ADDR b)
+{
+    int i;
+
+    for (i = 6; i != 0; i--) {
+        if (*a++ != *b++) {
+            return -1;
+        }
+    }
+    return 0;
+}
+# 754 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+static inline int bdcmpany(const BD_ADDR a)
+{
+    return bdcmp(a, bd_addr_any);
+}
+# 769 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+static inline void bdsetany(BD_ADDR a)
+{
+    bdcpy(a, bd_addr_any);
+}
+# 784 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+static inline void bt_rcopy(UINT8 *dst, UINT8 const *src, UINT16 len)
+{
+    src += len;
+    while (len --) {
+        *dst++ = *--src;
+    }
+}
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h" 2
+
+
 inline void trc_dump_buffer(const char *prefix, uint8_t *data, uint16_t len)
 {
     uint16_t i;
@@ -1867,9 +1892,9 @@ inline void trc_dump_buffer(const char *prefix, uint8_t *data, uint16_t len)
     }
     printf("\r\n");
 }
-# 472 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h"
+# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h"
 extern UINT8 btif_trace_level;
-# 726 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h"
+# 651 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h"
 typedef UINT8 tBTTRC_PARAM_TYPE;
 typedef UINT8 tBTTRC_LAYER_ID;
 typedef UINT8 tBTTRC_TYPE;
@@ -1896,16 +1921,16 @@ extern UINT8 appl_trace_level;
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/hcidefs.h" 1
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/hcidefs.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h" 1
-# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h"
+# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h"
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
-# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h" 2
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h" 2
 
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/dyn_mem.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/dyn_mem.h"
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/dyn_mem.h" 2
-# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h" 2
+# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h" 2
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/hcidefs.h" 2
 # 1388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/hcidefs.h"
 typedef struct {
@@ -2204,7 +2229,7 @@ BOOLEAN btsnd_hcic_write_inquiry_mode(UINT8 type);
 void btsnd_hcic_vendor_spec_cmd (void *buffer, UINT16 opcode,
                                  UINT8 len, UINT8 *p_data,
                                  void *p_cmd_cplt_cback);
-# 693 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/hcimsgs.h"
+# 694 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/hcimsgs.h"
 BOOLEAN btsnd_hcic_ble_set_evt_mask (BT_EVENT_MASK event_mask);
 
 BOOLEAN btsnd_hcic_ble_read_buffer_size (void);
@@ -2356,31 +2381,6 @@ typedef struct {
 typedef struct {
     uint8_t uu[16];
 } bt_uuid_t;
-
-
-
-
-
-typedef enum {
-    BT_STATUS_SUCCESS = 0,
-    BT_STATUS_FAIL,
-    BT_STATUS_NOT_READY,
-    BT_STATUS_NOMEM,
-    BT_STATUS_BUSY,
-    BT_STATUS_DONE,
-    BT_STATUS_UNSUPPORTED,
-    BT_STATUS_PARM_INVALID,
-    BT_STATUS_UNHANDLED,
-    BT_STATUS_AUTH_FAILURE,
-    BT_STATUS_RMT_DEV_DOWN,
-    BT_STATUS_AUTH_REJECTED,
-    BT_STATUS_INVALID_STATIC_RAND_ADDR,
-    BT_STATUS_PENDING,
-    BT_STATUS_UNACCEPT_CONN_INTERVAL,
-    BT_STATUS_PARAM_OUT_OF_RANGE,
-    BT_STATUS_TIMEOUT,
-    BT_STATUS_MEMORY_FULL,
-} bt_status_t;
 
 
 
@@ -3494,7 +3494,7 @@ typedef void (tBTM_MKEY_CALLBACK) (BD_ADDR bd_addr, UINT8 status, UINT8 key_flag
 
 
 
-typedef void (tBTM_SEC_CBACK) (BD_ADDR bd_addr, tBT_TRANSPORT trasnport,
+typedef void (tBTM_SEC_CBACK) (BD_ADDR bd_addr, tBT_TRANSPORT transport,
                                void *p_ref_data, tBTM_STATUS result);
 
 
@@ -4456,13 +4456,13 @@ extern UINT16 L2CA_GetDisconnectReason (BD_ADDR remote_bda, tBT_TRANSPORT transp
 extern BOOLEAN L2CA_CheckIsCongest(UINT16 fixed_cid, UINT16 handle);
 # 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/include/l2c_int.h" 2
 
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h" 1
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h" 1
 
 
 
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h" 2
+# 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h" 2
 struct list_node_t;
 typedef struct list_node_t list_node_t;
 
@@ -4471,9 +4471,9 @@ typedef struct list_t list_t;
 
 typedef void (*list_free_cb)(void *data);
 typedef 
-# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h" 3 4
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
        _Bool 
-# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h"
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h"
             (*list_iter_cb)(void *data, void *context);
 
 
@@ -4493,17 +4493,17 @@ void list_free(list_t *list);
 
 
 
-# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h" 3 4
+# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
 _Bool 
-# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h"
+# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h"
     list_is_empty(const list_t *list);
 
 
 
 
-# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h" 3 4
+# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
 _Bool 
-# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h"
+# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h"
     list_contains(const list_t *list, const void *data);
 
 
@@ -4524,9 +4524,9 @@ list_node_t *list_back_node(const list_t *list);
 
 
 
-# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h" 3 4
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
 _Bool 
-# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h"
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h"
     list_insert_after(list_t *list, list_node_t *prev_node, void *data);
 
 
@@ -4534,9 +4534,9 @@ _Bool
 
 
 
-# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h" 3 4
+# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
 _Bool 
-# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h"
+# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h"
     list_prepend(list_t *list, void *data);
 
 
@@ -4544,15 +4544,15 @@ _Bool
 
 
 
-# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h" 3 4
+# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
 _Bool 
-# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h"
+# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h"
     list_append(list_t *list, void *data);
-# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h"
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h"
 
-# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h" 3 4
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h" 3 4
 _Bool 
-# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h"
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h"
     list_remove(list_t *list, void *data);
 
 
@@ -4587,8 +4587,8 @@ list_node_t *list_next(const list_node_t *node);
 
 void *list_node(const list_node_t *node);
 # 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/include/l2c_int.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/fixed_queue.h" 1
-# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/fixed_queue.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h" 1
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h"
 struct fixed_queue_t;
 
 typedef struct fixed_queue_t fixed_queue_t;
@@ -4610,9 +4610,9 @@ void fixed_queue_free(fixed_queue_t *queue, fixed_queue_free_cb free_cb);
 
 
 
-# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/fixed_queue.h" 3 4
+# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h" 3 4
 _Bool 
-# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/fixed_queue.h"
+# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h"
     fixed_queue_is_empty(fixed_queue_t *queue);
 
 
@@ -4638,9 +4638,9 @@ void *fixed_queue_dequeue(fixed_queue_t *queue);
 
 
 
-# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/fixed_queue.h" 3 4
+# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h" 3 4
 _Bool 
-# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/fixed_queue.h"
+# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h"
     fixed_queue_try_enqueue(fixed_queue_t *queue, void *data);
 
 
@@ -4665,9 +4665,9 @@ void *fixed_queue_try_peek_last(fixed_queue_t *queue);
 
 
 void *fixed_queue_try_remove_from_queue(fixed_queue_t *queue, void *data);
-# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/fixed_queue.h"
+# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h"
 list_t *fixed_queue_get_list(fixed_queue_t *queue);
-# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/fixed_queue.h"
+# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h"
 void fixed_queue_register_dequeue(fixed_queue_t *queue, fixed_queue_cb ready_cb);
 
 
@@ -4745,7 +4745,7 @@ typedef struct {
     tL2CAP_APPL_INFO api;
 } tL2C_RCB;
 
-typedef void (tL2CAP_SEC_CBACK) (BD_ADDR bd_addr, tBT_TRANSPORT trasnport,
+typedef void (tL2CAP_SEC_CBACK) (BD_ADDR bd_addr, tBT_TRANSPORT transport,
                                 void *p_ref_data, tBTM_STATUS result);
 
 typedef struct
@@ -5156,7 +5156,7 @@ extern void l2c_link_process_num_completed_blocks (UINT8 controller_id, UINT8 *p
 extern void l2c_link_processs_num_bufs (UINT16 num_lm_acl_bufs);
 extern UINT8 l2c_link_pkts_rcvd (UINT16 *num_pkts, UINT16 *handles);
 extern void l2c_link_role_changed (BD_ADDR bd_addr, UINT8 new_role, UINT8 hci_status);
-extern void l2c_link_sec_comp (BD_ADDR p_bda, tBT_TRANSPORT trasnport, void *p_ref_data, UINT8 status);
+extern void l2c_link_sec_comp (BD_ADDR p_bda, tBT_TRANSPORT transport, void *p_ref_data, UINT8 status);
 extern void l2c_link_segments_xmitted (BT_HDR *p_msg);
 extern void l2c_pin_code_request (BD_ADDR bd_addr);
 extern void l2c_link_adjust_chnl_allocation (void);
@@ -5331,10 +5331,10 @@ void btu_task_shut_down(void);
 UINT16 BTU_BleAclPktSize(void);
 # 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 2
 
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/allocator.h" 1
-# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/allocator.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/allocator.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/allocator.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/allocator.h" 2
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/allocator.h" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h" 1
 # 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
@@ -5455,9 +5455,9 @@ void *heap_caps_calloc_prefer( size_t n, size_t size, size_t num, ... );
 void heap_caps_dump(uint32_t caps);
 # 311 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
 void heap_caps_dump_all();
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/allocator.h" 2
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/allocator.h" 2
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
-# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/allocator.h" 2
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/allocator.h" 2
 
 char *osi_strdup(const char *str);
 
@@ -5702,17 +5702,21 @@ UINT16 L2CA_ErtmConnectReq (UINT16 psm, BD_ADDR p_bd_addr, tL2CAP_ERTM_INFO *p_e
         p_ccb->ertm_info = *p_ertm_info;
 
 
-        if (p_ccb->ertm_info.fcr_rx_buf_size == 0)
+        if (p_ccb->ertm_info.fcr_rx_buf_size == 0) {
             p_ccb->ertm_info.fcr_rx_buf_size = (4096 + 16);
+        }
 
-        if (p_ccb->ertm_info.fcr_tx_buf_size == 0)
+        if (p_ccb->ertm_info.fcr_tx_buf_size == 0) {
             p_ccb->ertm_info.fcr_tx_buf_size = (4096 + 16);
+        }
 
-        if (p_ccb->ertm_info.user_rx_buf_size == 0)
+        if (p_ccb->ertm_info.user_rx_buf_size == 0) {
             p_ccb->ertm_info.user_rx_buf_size = (4096 + 16);
+        }
 
-        if (p_ccb->ertm_info.user_tx_buf_size == 0)
+        if (p_ccb->ertm_info.user_tx_buf_size == 0) {
             p_ccb->ertm_info.user_tx_buf_size = (4096 + 16);
+        }
 
         p_ccb->max_rx_mtu = p_ertm_info->user_rx_buf_size -
             (13 + 2 + 2);
@@ -5723,9 +5727,9 @@ UINT16 L2CA_ErtmConnectReq (UINT16 psm, BD_ADDR p_bd_addr, tL2CAP_ERTM_INFO *p_e
 
     if (p_lcb->link_state == LST_CONNECTED) {
         l2c_csm_execute (p_ccb, 21, 
-# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                         ((void *)0)
-# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                             );
     }
 
@@ -5749,73 +5753,73 @@ UINT16 L2CA_ErtmConnectReq (UINT16 psm, BD_ADDR p_bd_addr, tL2CAP_ERTM_INFO *p_e
 }
 
 
-# 315 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
 _Bool 
-# 315 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
     L2CA_SetConnectionCallbacks(uint16_t local_cid, const tL2CAP_APPL_INFO *callbacks)
 {
     ((callbacks != 
-# 317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
-   ((void *)0)
-# 317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
-   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c", 317, __func__, "callbacks != NULL"));
-    ((callbacks->pL2CA_ConnectInd_Cb == 
-# 318 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
-   ((void *)0)
-# 318 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
-   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c", 318, __func__, "callbacks->pL2CA_ConnectInd_Cb == NULL"));
-    ((callbacks->pL2CA_ConnectCfm_Cb != 
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
-   ((void *)0)
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
-   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c", 319, __func__, "callbacks->pL2CA_ConnectCfm_Cb != NULL"));
-    ((callbacks->pL2CA_ConfigInd_Cb != 
-# 320 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
-   ((void *)0)
-# 320 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
-   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c", 320, __func__, "callbacks->pL2CA_ConfigInd_Cb != NULL"));
-    ((callbacks->pL2CA_ConfigCfm_Cb != 
 # 321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
    ((void *)0)
 # 321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
-   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c", 321, __func__, "callbacks->pL2CA_ConfigCfm_Cb != NULL"));
-    ((callbacks->pL2CA_DisconnectInd_Cb != 
+   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c", 321, __func__, "callbacks != NULL"));
+    ((callbacks->pL2CA_ConnectInd_Cb == 
 # 322 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
    ((void *)0)
 # 322 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
-   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c", 322, __func__, "callbacks->pL2CA_DisconnectInd_Cb != NULL"));
-    ((callbacks->pL2CA_DisconnectCfm_Cb != 
+   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c", 322, __func__, "callbacks->pL2CA_ConnectInd_Cb == NULL"));
+    ((callbacks->pL2CA_ConnectCfm_Cb != 
 # 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
    ((void *)0)
 # 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
-   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c", 323, __func__, "callbacks->pL2CA_DisconnectCfm_Cb != NULL"));
-    ((callbacks->pL2CA_CongestionStatus_Cb != 
+   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c", 323, __func__, "callbacks->pL2CA_ConnectCfm_Cb != NULL"));
+    ((callbacks->pL2CA_ConfigInd_Cb != 
 # 324 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
    ((void *)0)
 # 324 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
-   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c", 324, __func__, "callbacks->pL2CA_CongestionStatus_Cb != NULL"));
-    ((callbacks->pL2CA_DataInd_Cb != 
+   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c", 324, __func__, "callbacks->pL2CA_ConfigInd_Cb != NULL"));
+    ((callbacks->pL2CA_ConfigCfm_Cb != 
 # 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
    ((void *)0)
 # 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
-   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c", 325, __func__, "callbacks->pL2CA_DataInd_Cb != NULL"));
-    ((callbacks->pL2CA_TxComplete_Cb != 
+   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c", 325, __func__, "callbacks->pL2CA_ConfigCfm_Cb != NULL"));
+    ((callbacks->pL2CA_DisconnectInd_Cb != 
 # 326 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
    ((void *)0)
 # 326 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
-   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c", 326, __func__, "callbacks->pL2CA_TxComplete_Cb != NULL"));
+   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c", 326, __func__, "callbacks->pL2CA_DisconnectInd_Cb != NULL"));
+    ((callbacks->pL2CA_DisconnectCfm_Cb != 
+# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+   ((void *)0)
+# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c", 327, __func__, "callbacks->pL2CA_DisconnectCfm_Cb != NULL"));
+    ((callbacks->pL2CA_CongestionStatus_Cb != 
+# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+   ((void *)0)
+# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c", 328, __func__, "callbacks->pL2CA_CongestionStatus_Cb != NULL"));
+    ((callbacks->pL2CA_DataInd_Cb != 
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+   ((void *)0)
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c", 329, __func__, "callbacks->pL2CA_DataInd_Cb != NULL"));
+    ((callbacks->pL2CA_TxComplete_Cb != 
+# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+   ((void *)0)
+# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c", 330, __func__, "callbacks->pL2CA_TxComplete_Cb != NULL"));
 
     tL2C_CCB *channel_control_block = l2cu_find_ccb_by_cid(
-# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                           ((void *)0)
-# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                               , local_cid);
     if (!channel_control_block) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_L2CAP", "\033[0;" "31" "m" "E" " (%d) %s: " "%s no channel control block found for L2CAP LCID=0x%04x." "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__, local_cid); };};
         return 
-# 331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 335 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
               0
-# 331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 335 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                    ;
     }
 
@@ -5829,39 +5833,39 @@ _Bool
         if (!registration_control_block) {
             {if ((*l2c_cb_ptr).l2cap_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_L2CAP", "\033[0;" "31" "m" "E" " (%d) %s: " "%s unable to allocate registration control block." "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__); };};
             return 
-# 343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                   0
-# 343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                        ;
         }
 
         *registration_control_block = *channel_control_block->p_rcb;
         channel_control_block->p_rcb = registration_control_block;
         channel_control_block->should_free_rcb = 
-# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                 1
-# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                     ;
     }
 
     registration_control_block->api = *callbacks;
     return 
-# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
           1
-# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
               ;
 }
-# 366 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_ConnectRsp (BD_ADDR p_bd_addr, UINT8 id, UINT16 lcid,
                          UINT16 result, UINT16 status)
 {
     return L2CA_ErtmConnectRsp (p_bd_addr, id, lcid, result, status, 
-# 369 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 373 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                                     ((void *)0)
-# 369 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 373 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                                         );
 }
-# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_ErtmConnectRsp (BD_ADDR p_bd_addr, UINT8 id, UINT16 lcid, UINT16 result,
                              UINT16 status, tL2CAP_ERTM_INFO *p_ertm_info)
 {
@@ -5876,30 +5880,30 @@ BOOLEAN L2CA_ErtmConnectRsp (BD_ADDR p_bd_addr, UINT8 id, UINT16 lcid, UINT16 re
 
 
     if ((p_lcb = l2cu_find_lcb_by_bd_addr (p_bd_addr, 1)) == 
-# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 401 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                                               ((void *)0)
-# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 401 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                                                   ) {
 
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CAP - no LCB for L2CA_conn_rsp" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP"); };};
         return (
-# 400 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 400 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
 
     if ((p_ccb = l2cu_find_ccb_by_cid (p_lcb, lcid)) == 
-# 404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                        ((void *)0)
-# 404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                            ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CAP - no CCB for L2CA_conn_rsp" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP"); };};
         return (
-# 406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
@@ -5907,9 +5911,9 @@ BOOLEAN L2CA_ErtmConnectRsp (BD_ADDR p_bd_addr, UINT8 id, UINT16 lcid, UINT16 re
     if (p_ccb->remote_id != id) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CAP - bad id in L2CA_conn_rsp. Exp: %d  Got: %d" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", p_ccb->remote_id, id); };};
         return (
-# 412 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 416 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 412 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 416 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
@@ -5917,17 +5921,21 @@ BOOLEAN L2CA_ErtmConnectRsp (BD_ADDR p_bd_addr, UINT8 id, UINT16 lcid, UINT16 re
         p_ccb->ertm_info = *p_ertm_info;
 
 
-        if (p_ccb->ertm_info.fcr_rx_buf_size == 0)
+        if (p_ccb->ertm_info.fcr_rx_buf_size == 0) {
             p_ccb->ertm_info.fcr_rx_buf_size = (4096 + 16);
+        }
 
-        if (p_ccb->ertm_info.fcr_tx_buf_size == 0)
+        if (p_ccb->ertm_info.fcr_tx_buf_size == 0) {
             p_ccb->ertm_info.fcr_tx_buf_size = (4096 + 16);
+        }
 
-        if (p_ccb->ertm_info.user_rx_buf_size == 0)
+        if (p_ccb->ertm_info.user_rx_buf_size == 0) {
             p_ccb->ertm_info.user_rx_buf_size = (4096 + 16);
+        }
 
-        if (p_ccb->ertm_info.user_tx_buf_size == 0)
+        if (p_ccb->ertm_info.user_tx_buf_size == 0) {
             p_ccb->ertm_info.user_tx_buf_size = (4096 + 16);
+        }
 
         p_ccb->max_rx_mtu = p_ertm_info->user_rx_buf_size -
             (13 + 2 + 2);
@@ -5935,9 +5943,9 @@ BOOLEAN L2CA_ErtmConnectRsp (BD_ADDR p_bd_addr, UINT8 id, UINT16 lcid, UINT16 re
 
     if (result == 0) {
         l2c_csm_execute (p_ccb, 22, 
-# 436 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 444 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                         ((void *)0)
-# 436 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 444 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                             );
     } else {
         tL2C_CONN_INFO conn_info;
@@ -5953,12 +5961,12 @@ BOOLEAN L2CA_ErtmConnectRsp (BD_ADDR p_bd_addr, UINT8 id, UINT16 lcid, UINT16 re
     }
 
     return (
-# 450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
            1
-# 450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                );
 }
-# 465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 473 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_ConfigReq (UINT16 cid, tL2CAP_CFG_INFO *p_cfg)
 {
     tL2C_CCB *p_ccb;
@@ -5969,28 +5977,28 @@ BOOLEAN L2CA_ConfigReq (UINT16 cid, tL2CAP_CFG_INFO *p_cfg)
 
 
     if ((p_ccb = l2cu_find_ccb_by_cid (
-# 474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 482 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                       ((void *)0)
-# 474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 482 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                           , cid)) == 
-# 474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 482 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                      ((void *)0)
-# 474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 482 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                          ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CAP - no CCB for L2CA_cfg_req, CID: %d" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", cid); };};
         return (
-# 476 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 476 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
 
     if (!l2c_fcr_adj_our_req_options(p_ccb, p_cfg)) {
         return (
-# 481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 489 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 489 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
@@ -5998,14 +6006,14 @@ BOOLEAN L2CA_ConfigReq (UINT16 cid, tL2CAP_CFG_INFO *p_cfg)
     if ((!p_cfg->fcr_present) || (p_cfg->fcr.mode == 0x00)) {
 
         p_cfg->fcs_present = 
-# 487 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 495 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                             0
-# 487 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 495 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                  ;
         p_cfg->ext_flow_spec_present = 
-# 488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                       0
-# 488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                            ;
 
         if ( (p_cfg->mtu_present) && (p_cfg->mtu > 1691) ) {
@@ -6020,12 +6028,12 @@ BOOLEAN L2CA_ConfigReq (UINT16 cid, tL2CAP_CFG_INFO *p_cfg)
     l2c_csm_execute (p_ccb, 24, p_cfg);
 
     return (
-# 501 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 509 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
            1
-# 501 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 509 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                );
 }
-# 515 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 523 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_ConfigRsp (UINT16 cid, tL2CAP_CFG_INFO *p_cfg)
 {
     tL2C_CCB *p_ccb;
@@ -6036,19 +6044,19 @@ BOOLEAN L2CA_ConfigRsp (UINT16 cid, tL2CAP_CFG_INFO *p_cfg)
 
 
     if ((p_ccb = l2cu_find_ccb_by_cid (
-# 524 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 532 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                       ((void *)0)
-# 524 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 532 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                           , cid)) == 
-# 524 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 532 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                      ((void *)0)
-# 524 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 532 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                          ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CAP - no CCB for L2CA_cfg_rsp, CID: %d" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", cid); };};
         return (
-# 526 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 526 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
@@ -6056,31 +6064,31 @@ BOOLEAN L2CA_ConfigRsp (UINT16 cid, tL2CAP_CFG_INFO *p_cfg)
         l2c_csm_execute (p_ccb, 25, p_cfg);
     } else {
         p_cfg->fcr_present = 
-# 532 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 540 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                             0
-# 532 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 540 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                  ;
 
 
         if (p_cfg->mtu_present) {
             p_ccb->peer_cfg.mtu_present = 
-# 536 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                          0
-# 536 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                               ;
         }
         if (p_cfg->flush_to_present) {
             p_ccb->peer_cfg.flush_to_present = 
-# 539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 547 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                               0
-# 539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 547 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                    ;
         }
         if (p_cfg->qos_present) {
             p_ccb->peer_cfg.qos_present = 
-# 542 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                          0
-# 542 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                               ;
         }
 
@@ -6088,12 +6096,12 @@ BOOLEAN L2CA_ConfigRsp (UINT16 cid, tL2CAP_CFG_INFO *p_cfg)
     }
 
     return (
-# 548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
            1
-# 548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                );
 }
-# 561 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_DisconnectReq (UINT16 cid)
 {
     tL2C_CCB *p_ccb;
@@ -6103,35 +6111,35 @@ BOOLEAN L2CA_DisconnectReq (UINT16 cid)
 
 
     if ((p_ccb = l2cu_find_ccb_by_cid (
-# 569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 577 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                       ((void *)0)
-# 569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 577 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                           , cid)) == 
-# 569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 577 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                      ((void *)0)
-# 569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 577 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                          ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CAP - no CCB for L2CA_disc_req, CID: %d" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", cid); };};
         return (
-# 571 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 579 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 571 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 579 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
     l2c_csm_execute (p_ccb, 27, 
-# 574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 582 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                        ((void *)0)
-# 574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 582 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                            );
 
     return (
-# 576 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 584 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
            1
-# 576 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 584 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                );
 }
-# 589 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 597 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_DisconnectRsp (UINT16 cid)
 {
     tL2C_CCB *p_ccb;
@@ -6141,35 +6149,35 @@ BOOLEAN L2CA_DisconnectRsp (UINT16 cid)
 
 
     if ((p_ccb = l2cu_find_ccb_by_cid (
-# 597 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                       ((void *)0)
-# 597 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                           , cid)) == 
-# 597 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                      ((void *)0)
-# 597 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                          ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CAP - no CCB for L2CA_disc_rsp, CID: %d" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", cid); };};
         return (
-# 599 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 599 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
     l2c_csm_execute (p_ccb, 28, 
-# 602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 610 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                        ((void *)0)
-# 602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 610 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                            );
 
     return (
-# 604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
            1
-# 604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                );
 }
-# 616 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_Ping (BD_ADDR p_bd_addr, tL2CA_ECHO_RSP_CB *p_callback)
 {
     tL2C_LCB *p_lcb;
@@ -6180,67 +6188,67 @@ BOOLEAN L2CA_Ping (BD_ADDR p_bd_addr, tL2CA_ECHO_RSP_CB *p_callback)
 
     if (!BTM_IsDeviceUp()) {
         return (
-# 625 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 633 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 625 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 633 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
 
     if ((p_lcb = l2cu_find_lcb_by_bd_addr (p_bd_addr, 1)) == 
-# 629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 637 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                                               ((void *)0)
-# 629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 637 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                                                   ) {
 
         if ((p_lcb = l2cu_allocate_lcb (p_bd_addr, 
-# 631 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 639 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                   0
-# 631 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 639 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                        , 1)) == 
-# 631 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 639 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                                                   ((void *)0)
-# 631 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 639 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                                                       ) {
             {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CAP - no LCB for L2CA_ping" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP"); };};
             return (
-# 633 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 641 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                    0
-# 633 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 641 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                         );
         }
         if (l2cu_create_conn(p_lcb, 1) == 
-# 635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                            0
-# 635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                                 ) {
             return (
-# 636 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 644 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                    0
-# 636 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 644 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                         );
         }
 
         p_lcb->p_echo_rsp_cb = p_callback;
 
         return (
-# 641 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                1
-# 641 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                    );
     }
 
 
     if (p_lcb->p_echo_rsp_cb != 
-# 645 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 653 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                ((void *)0)
-# 645 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 653 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                    ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CAP - rejected second L2CA_ping" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP"); };};
         return (
-# 647 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 655 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 647 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 655 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
@@ -6248,9 +6256,9 @@ BOOLEAN L2CA_Ping (BD_ADDR p_bd_addr, tL2CA_ECHO_RSP_CB *p_callback)
     if (p_lcb->link_state == LST_DISCONNECTING) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CAP - L2CA_ping rejected - link disconnecting" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP"); };};
         return (
-# 653 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 661 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 653 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 661 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
@@ -6260,20 +6268,20 @@ BOOLEAN L2CA_Ping (BD_ADDR p_bd_addr, tL2CA_ECHO_RSP_CB *p_callback)
     if (p_lcb->link_state == LST_CONNECTED) {
         l2cu_adj_id(p_lcb, 0x1);
         l2cu_send_peer_echo_req (p_lcb, 
-# 661 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 669 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                        ((void *)0)
-# 661 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 669 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                            , 0);
         btu_start_timer (&p_lcb->timer_entry, 2, 30);
     }
 
     return (
-# 665 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 673 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
            1
-# 665 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 673 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                );
 }
-# 678 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 686 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_Echo (BD_ADDR p_bd_addr, BT_HDR *p_data, tL2CA_ECHO_DATA_CB *p_callback)
 {
     tL2C_LCB *p_lcb;
@@ -6286,46 +6294,46 @@ BOOLEAN L2CA_Echo (BD_ADDR p_bd_addr, BT_HDR *p_data, tL2CA_ECHO_DATA_CB *p_call
 
     if (!BTM_IsDeviceUp()) {
         return (
-# 689 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 697 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 689 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 697 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
     if ((memcmp(BT_BD_ANY, p_bd_addr, 6) == 0) && (p_data == 
-# 692 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                                       ((void *)0)
-# 692 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                                           )) {
 
         (*l2c_cb_ptr).p_echo_data_cb = p_callback;
         return 
-# 695 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 703 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
               1
-# 695 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 703 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                   ;
     }
 
 
     if ((p_lcb = l2cu_find_lcb_by_bd_addr (p_bd_addr, 1)) == 
-# 699 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 707 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                                               ((void *)0)
-# 699 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 707 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                                                   ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_L2CAP", "\033[0;" "31" "m" "E" " (%d) %s: " "L2CA_Echo ERROR : link not established" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP"); };};
         return 
-# 701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 709 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
               0
-# 701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 709 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                    ;
     }
 
     if (p_lcb->link_state != LST_CONNECTED) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_L2CAP", "\033[0;" "31" "m" "E" " (%d) %s: " "L2CA_Echo ERROR : link is not connected" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP"); };};
         return 
-# 706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 714 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
               0
-# 706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 714 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                    ;
     }
 
@@ -6338,9 +6346,9 @@ BOOLEAN L2CA_Echo (BD_ADDR p_bd_addr, BT_HDR *p_data, tL2CA_ECHO_DATA_CB *p_call
     l2cu_send_peer_echo_req (p_lcb, pp, p_data->len);
 
     return (
-# 717 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
            1
-# 717 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                );
 
 }
@@ -6349,21 +6357,21 @@ BOOLEAN L2CA_Echo (BD_ADDR p_bd_addr, BT_HDR *p_data, tL2CA_ECHO_DATA_CB *p_call
 
 
 
-# 724 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 732 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
 _Bool 
-# 724 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 732 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
     L2CA_GetIdentifiers(uint16_t lcid, uint16_t *rcid, uint16_t *handle)
 {
     tL2C_CCB *control_block = l2cu_find_ccb_by_cid(
-# 726 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 734 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                   ((void *)0)
-# 726 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 734 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                       , lcid);
     if (!control_block) {
         return 
-# 728 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 736 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
               0
-# 728 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 736 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                    ;
     }
 
@@ -6375,12 +6383,12 @@ _Bool
     }
 
     return 
-# 738 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 746 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
           1
-# 738 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 746 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
               ;
 }
-# 760 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 768 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_SetIdleTimeout (UINT16 cid, UINT16 timeout, BOOLEAN is_global)
 {
     tL2C_CCB *p_ccb;
@@ -6391,19 +6399,19 @@ BOOLEAN L2CA_SetIdleTimeout (UINT16 cid, UINT16 timeout, BOOLEAN is_global)
     } else {
 
         if ((p_ccb = l2cu_find_ccb_by_cid (
-# 769 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 777 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                           ((void *)0)
-# 769 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 777 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                               , cid)) == 
-# 769 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 777 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                          ((void *)0)
-# 769 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 777 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                              ) {
             {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CAP - no CCB for L2CA_SetIdleTimeout, CID: %d" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", cid); };};
             return (
-# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 779 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                    0
-# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 779 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                         );
         }
 
@@ -6413,20 +6421,20 @@ BOOLEAN L2CA_SetIdleTimeout (UINT16 cid, UINT16 timeout, BOOLEAN is_global)
             p_lcb->idle_timeout = timeout;
         } else {
             return (
-# 779 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 787 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                    0
-# 779 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 787 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                         );
         }
     }
 
     return (
-# 783 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 791 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
            1
-# 783 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 791 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                );
 }
-# 807 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 815 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_SetIdleTimeoutByBdAddr(BD_ADDR bd_addr, UINT16 timeout, tBT_TRANSPORT transport)
 {
     tL2C_LCB *p_lcb;
@@ -6441,9 +6449,9 @@ BOOLEAN L2CA_SetIdleTimeoutByBdAddr(BD_ADDR bd_addr, UINT16 timeout, tBT_TRANSPO
             }
         } else {
             return 
-# 820 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 828 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                   0
-# 820 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 828 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                        ;
         }
     } else {
@@ -6462,12 +6470,12 @@ BOOLEAN L2CA_SetIdleTimeoutByBdAddr(BD_ADDR bd_addr, UINT16 timeout, tBT_TRANSPO
     }
 
     return 
-# 837 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 845 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
           1
-# 837 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 845 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
               ;
 }
-# 852 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 UINT8 L2CA_SetTraceLevel (UINT8 new_level)
 {
     if (new_level != 0xFF) {
@@ -6476,7 +6484,7 @@ UINT8 L2CA_SetTraceLevel (UINT8 new_level)
 
     return ((*l2c_cb_ptr).l2cap_trace_level);
 }
-# 878 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 886 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 UINT8 L2CA_SetDesireRole (UINT8 new_role)
 {
     {if ((*l2c_cb_ptr).l2cap_trace_level >= 3 && (((2) > (3) ? (2) : (3)) >= 3)) {esp_log_write(ESP_LOG_INFO, "BT_L2CAP", "\033[0;" "32" "m" "I" " (%d) %s: " "L2CA_SetDesireRole() new:x%x, disallow_switch:%d" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", new_role, (*l2c_cb_ptr).disallow_switch); };}
@@ -6486,16 +6494,16 @@ UINT8 L2CA_SetDesireRole (UINT8 new_role)
 
         if (new_role & 0x80) {
             (*l2c_cb_ptr).disallow_switch = 
-# 886 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 894 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                   0
-# 886 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 894 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                        ;
         }
         if (new_role & 0x40) {
             (*l2c_cb_ptr).disallow_switch = 
-# 889 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 897 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                   1
-# 889 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 897 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                       ;
         }
     }
@@ -6506,7 +6514,7 @@ UINT8 L2CA_SetDesireRole (UINT8 new_role)
 
     return ((*l2c_cb_ptr).desire_role);
 }
-# 911 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 919 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 UINT16 L2CA_LocalLoopbackReq (UINT16 psm, UINT16 handle, BD_ADDR p_bd_addr)
 {
     tL2C_LCB *p_lcb;
@@ -6523,22 +6531,22 @@ UINT16 L2CA_LocalLoopbackReq (UINT16 psm, UINT16 handle, BD_ADDR p_bd_addr)
 
 
     if ((p_rcb = l2cu_find_rcb_by_psm (psm)) == 
-# 926 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 934 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                ((void *)0)
-# 926 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 934 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                    ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CAP - no RCB for L2CA_conn_req, PSM: %d" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", psm); };};
         return (0);
     }
 
     if ((p_lcb = l2cu_allocate_lcb (p_bd_addr, 
-# 931 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                               0
-# 931 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                    , 1)) == 
-# 931 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                                               ((void *)0)
-# 931 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                                                   ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CAP - no LCB for L2CA_conn_req" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP"); };};
         return (0);
@@ -6549,9 +6557,9 @@ UINT16 L2CA_LocalLoopbackReq (UINT16 psm, UINT16 handle, BD_ADDR p_bd_addr)
 
 
     if ((p_ccb = l2cu_allocate_ccb (p_lcb, 0)) == 
-# 940 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 948 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                  ((void *)0)
-# 940 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 948 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                      ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CAP - no CCB for L2CA_conn_req" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP"); };};
         return (0);
@@ -6566,7 +6574,7 @@ UINT16 L2CA_LocalLoopbackReq (UINT16 psm, UINT16 handle, BD_ADDR p_bd_addr)
 
     return (p_ccb->local_cid);
 }
-# 966 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 974 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_SetAclPriority (BD_ADDR bd_addr, UINT8 priority)
 {
     {if ((*l2c_cb_ptr).l2cap_trace_level >= 3 && (((2) > (3) ? (2) : (3)) >= 3)) {esp_log_write(ESP_LOG_INFO, "BT_L2CAP", "\033[0;" "32" "m" "I" " (%d) %s: " "L2CA_SetAclPriority()  bdaddr: %02x%02x%02x%02x%04x, priority:%d" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", bd_addr[0], bd_addr[1], bd_addr[2], bd_addr[3], (bd_addr[4] << 8) + bd_addr[5], priority); };}
@@ -6574,12 +6582,12 @@ BOOLEAN L2CA_SetAclPriority (BD_ADDR bd_addr, UINT8 priority)
                                                                           ;
 
     return (l2cu_set_acl_priority(bd_addr, priority, 
-# 972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 980 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                     0
-# 972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 980 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                          ));
 }
-# 986 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 994 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_FlowControl (UINT16 cid, BOOLEAN data_enabled)
 {
     tL2C_CCB *p_ccb;
@@ -6589,28 +6597,28 @@ BOOLEAN L2CA_FlowControl (UINT16 cid, BOOLEAN data_enabled)
 
 
     if ((p_ccb = l2cu_find_ccb_by_cid (
-# 994 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1002 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                       ((void *)0)
-# 994 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1002 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                           , cid)) == 
-# 994 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1002 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                      ((void *)0)
-# 994 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1002 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                          ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CAP - no CCB for L2CA_FlowControl, CID: 0x%04x  data_enabled: %d" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", cid, data_enabled); };};
         return (
-# 996 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1004 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 996 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1004 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
     if (p_ccb->peer_cfg.fcr.mode != 0x03) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 4 && (((2) > (3) ? (2) : (3)) >= 4)) {esp_log_write(ESP_LOG_DEBUG, "BT_L2CAP", "D" " (%d) %s: " "L2CA_FlowControl()  invalid mode:%d" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", p_ccb->peer_cfg.fcr.mode); };};
         return (
-# 1001 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1009 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 1001 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1009 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
     if (p_ccb->fcrb.local_busy != on_off) {
@@ -6626,12 +6634,12 @@ BOOLEAN L2CA_FlowControl (UINT16 cid, BOOLEAN data_enabled)
     }
 
     return (
-# 1015 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1023 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
            1
-# 1015 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1023 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                );
 }
-# 1027 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1035 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_SendTestSFrame (UINT16 cid, UINT8 sup_type, UINT8 back_track)
 {
     tL2C_CCB *p_ccb;
@@ -6640,27 +6648,27 @@ BOOLEAN L2CA_SendTestSFrame (UINT16 cid, UINT8 sup_type, UINT8 back_track)
 
 
     if ((p_ccb = l2cu_find_ccb_by_cid (
-# 1034 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1042 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                       ((void *)0)
-# 1034 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1042 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                           , cid)) == 
-# 1034 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1042 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                      ((void *)0)
-# 1034 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1042 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                          ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CAP - no CCB for L2CA_SendTestSFrame, CID: %d" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", cid); };};
         return (
-# 1036 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1044 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 1036 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1044 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
     if ( (p_ccb->chnl_state != CST_OPEN) || (p_ccb->peer_cfg.fcr.mode != 0x03) ) {
         return (
-# 1040 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1048 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 1040 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1048 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
@@ -6669,12 +6677,12 @@ BOOLEAN L2CA_SendTestSFrame (UINT16 cid, UINT8 sup_type, UINT8 back_track)
     l2c_fcr_send_S_frame (p_ccb, (UINT16)(sup_type & 3), (UINT16)(sup_type & (0x0010 | 0x0080)));
 
     return (
-# 1047 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1055 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
            1
-# 1047 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1055 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                );
 }
-# 1060 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1068 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_SetTxPriority (UINT16 cid, tL2CAP_CHNL_PRIORITY priority)
 {
     tL2C_CCB *p_ccb;
@@ -6683,19 +6691,19 @@ BOOLEAN L2CA_SetTxPriority (UINT16 cid, tL2CAP_CHNL_PRIORITY priority)
 
 
     if ((p_ccb = l2cu_find_ccb_by_cid (
-# 1067 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1075 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                       ((void *)0)
-# 1067 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1075 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                           , cid)) == 
-# 1067 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1075 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                      ((void *)0)
-# 1067 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1075 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                          ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CAP - no CCB for L2CA_SetTxPriority, CID: %d" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", cid); };};
         return (
-# 1069 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 1069 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
@@ -6703,12 +6711,12 @@ BOOLEAN L2CA_SetTxPriority (UINT16 cid, tL2CAP_CHNL_PRIORITY priority)
     l2cu_change_pri_ccb (p_ccb, priority);
 
     return (
-# 1075 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1083 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
            1
-# 1075 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1083 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                );
 }
-# 1087 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1095 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_SetChnlDataRate (UINT16 cid, tL2CAP_CHNL_DATA_RATE tx, tL2CAP_CHNL_DATA_RATE rx)
 {
     tL2C_CCB *p_ccb;
@@ -6717,19 +6725,19 @@ BOOLEAN L2CA_SetChnlDataRate (UINT16 cid, tL2CAP_CHNL_DATA_RATE tx, tL2CAP_CHNL_
 
 
     if ((p_ccb = l2cu_find_ccb_by_cid (
-# 1094 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                       ((void *)0)
-# 1094 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                           , cid)) == 
-# 1094 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                      ((void *)0)
-# 1094 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                          ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CAP - no CCB for L2CA_SetChnlDataRate, CID: %d" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", cid); };};
         return (
-# 1096 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 1096 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
@@ -6740,12 +6748,12 @@ BOOLEAN L2CA_SetChnlDataRate (UINT16 cid, tL2CAP_CHNL_DATA_RATE tx, tL2CAP_CHNL_
     l2c_link_adjust_chnl_allocation ();
 
     return (
-# 1105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1113 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
            1
-# 1105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1113 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                );
 }
-# 1129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_SetFlushTimeout (BD_ADDR bd_addr, UINT16 flush_tout)
 {
     tL2C_LCB *p_lcb;
@@ -6775,9 +6783,9 @@ BOOLEAN L2CA_SetFlushTimeout (BD_ADDR bd_addr, UINT16 flush_tout)
         if (temp > 0x07FF) {
             {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "WARNING L2CA_SetFlushTimeout timeout(0x%x) is out of range" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", flush_tout); };};
             return 
-# 1157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                   0
-# 1157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                        ;
         } else {
             hci_flush_to = (UINT16)temp;
@@ -6796,9 +6804,9 @@ BOOLEAN L2CA_SetFlushTimeout (BD_ADDR bd_addr, UINT16 flush_tout)
 
                 if (!btsnd_hcic_write_auto_flush_tout (p_lcb->handle, hci_flush_to)) {
                     return (
-# 1174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                            0
-# 1174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                 );
                 }
             }
@@ -6806,9 +6814,9 @@ BOOLEAN L2CA_SetFlushTimeout (BD_ADDR bd_addr, UINT16 flush_tout)
             {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "WARNING L2CA_SetFlushTimeout No lcb for bd_addr [...;%02x%02x%02x]" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", bd_addr[3], bd_addr[4], bd_addr[5]); };}
                                                                     ;
             return (
-# 1180 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1188 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                    0
-# 1180 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1188 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                         );
         }
     } else {
@@ -6826,9 +6834,9 @@ BOOLEAN L2CA_SetFlushTimeout (BD_ADDR bd_addr, UINT16 flush_tout)
 
                     if (!btsnd_hcic_write_auto_flush_tout(p_lcb->handle, hci_flush_to)) {
                         return (
-# 1196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                0
-# 1196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                     );
                     }
                 }
@@ -6837,29 +6845,29 @@ BOOLEAN L2CA_SetFlushTimeout (BD_ADDR bd_addr, UINT16 flush_tout)
     }
 
     return (
-# 1203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
            1
-# 1203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                );
 }
-# 1220 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_GetPeerFeatures (BD_ADDR bd_addr, UINT32 *p_ext_feat, UINT8 *p_chnl_mask)
 {
     tL2C_LCB *p_lcb;
 
 
     if ((p_lcb = l2cu_find_lcb_by_bd_addr (bd_addr, 1)) == 
-# 1225 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                                             ((void *)0)
-# 1225 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                                                 ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CA_GetPeerFeatures() No BDA: %08x%04x" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", (bd_addr[0] << 24) + (bd_addr[1] << 16) + (bd_addr[2] << 8) + bd_addr[3], (bd_addr[4] << 8) + bd_addr[5]); };}
 
                                                             ;
         return (
-# 1229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 1229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
@@ -6872,44 +6880,44 @@ BOOLEAN L2CA_GetPeerFeatures (BD_ADDR bd_addr, UINT32 *p_ext_feat, UINT8 *p_chnl
     memcpy (p_chnl_mask, p_lcb->peer_chnl_mask, 8);
 
     return (
-# 1240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
            1
-# 1240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                );
 }
-# 1255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1263 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_GetBDAddrbyHandle (UINT16 handle, BD_ADDR bd_addr)
 {
     tL2C_LCB *p_lcb = 
-# 1257 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                      ((void *)0)
-# 1257 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                          ;
     BOOLEAN found_dev = 
-# 1258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                        0
-# 1258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                             ;
 
     p_lcb = l2cu_find_lcb_by_handle (handle);
     if (p_lcb) {
         found_dev = 
-# 1262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                    1
-# 1262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                        ;
         memcpy (bd_addr, p_lcb->remote_bd_addr, 6);
     }
 
     return found_dev;
 }
-# 1281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 UINT8 L2CA_GetChnlFcrMode (UINT16 lcid)
 {
     tL2C_CCB *p_ccb = l2cu_find_ccb_by_cid (
-# 1283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                               ((void *)0)
-# 1283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                   , lcid);
 
     if (p_ccb) {
@@ -6920,7 +6928,7 @@ UINT8 L2CA_GetChnlFcrMode (UINT16 lcid)
     {if ((*l2c_cb_ptr).l2cap_trace_level >= 3 && (((2) > (3) ? (2) : (3)) >= 3)) {esp_log_write(ESP_LOG_INFO, "BT_L2CAP", "\033[0;" "32" "m" "I" " (%d) %s: " "L2CA_GetChnlFcrMode() returns mode L2CAP_FCR_BASIC_MODE" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP"); };};
     return (0x00);
 }
-# 1310 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1318 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 UINT16 L2CA_RegisterLECoc(UINT16 psm, tL2CAP_APPL_INFO *p_cb_info)
 {
     {if ((*l2c_cb_ptr).l2cap_trace_level >= 3 && (((2) > (3) ? (2) : (3)) >= 3)) {esp_log_write(ESP_LOG_INFO, "BT_L2CAP", "\033[0;" "32" "m" "I" " (%d) %s: " "%s called for LE PSM: 0x%04x" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__, psm); };};
@@ -6950,20 +6958,21 @@ UINT16 L2CA_RegisterLECoc(UINT16 psm, tL2CAP_APPL_INFO *p_cb_info)
 
 
     if ((psm >= 0x0080) && (p_cb_info->pL2CA_ConnectInd_Cb == 
-# 1338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                              ((void *)0)
-# 1338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                                  ))
     {
         for (vpsm = 0x0080; vpsm < 0x0100; vpsm++)
         {
             p_rcb = l2cu_find_ble_rcb_by_psm(vpsm);
             if (p_rcb == 
-# 1343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1351 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                         ((void *)0)
-# 1343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
-                            )
+# 1351 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+                            ) {
                 break;
+            }
         }
 
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 3 && (((2) > (3) ? (2) : (3)) >= 3)) {esp_log_write(ESP_LOG_INFO, "BT_L2CAP", "\033[0;" "32" "m" "I" " (%d) %s: " "%s Real PSM: 0x%04x  Virtual PSM: 0x%04x" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__, psm, vpsm); };};
@@ -6972,16 +6981,16 @@ UINT16 L2CA_RegisterLECoc(UINT16 psm, tL2CAP_APPL_INFO *p_cb_info)
 
     p_rcb = l2cu_find_ble_rcb_by_psm(vpsm);
     if (p_rcb == 
-# 1352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                 ((void *)0)
-# 1352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     )
     {
         p_rcb = l2cu_allocate_ble_rcb(vpsm);
         if (p_rcb == 
-# 1355 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1364 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                     ((void *)0)
-# 1355 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1364 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                         )
         {
             {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "%s No BLE RCB available, PSM: 0x%04x  vPSM: 0x%04x" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__, psm, vpsm); };}
@@ -6995,16 +7004,16 @@ UINT16 L2CA_RegisterLECoc(UINT16 psm, tL2CAP_APPL_INFO *p_cb_info)
 
     return vpsm;
 }
-# 1379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 void L2CA_DeregisterLECoc(UINT16 psm)
 {
     {if ((*l2c_cb_ptr).l2cap_trace_level >= 3 && (((2) > (3) ? (2) : (3)) >= 3)) {esp_log_write(ESP_LOG_INFO, "BT_L2CAP", "\033[0;" "32" "m" "I" " (%d) %s: " "%s called for PSM: 0x%04x" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__, psm); };};
 
     tL2C_RCB *p_rcb = l2cu_find_ble_rcb_by_psm(psm);
     if (p_rcb == 
-# 1384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                 ((void *)0)
-# 1384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     )
     {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "%s PSM: 0x%04x not found for deregistration" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__, psm); };};
@@ -7014,33 +7023,37 @@ void L2CA_DeregisterLECoc(UINT16 psm)
     tL2C_LCB *p_lcb = &(*l2c_cb_ptr).lcb_pool[0];
     for (int i = 0; i < 4; i++, p_lcb++)
     {
-        if (!p_lcb->in_use || p_lcb->transport != 2)
+        if (!p_lcb->in_use || p_lcb->transport != 2) {
             continue;
+        }
 
         tL2C_CCB *p_ccb = p_lcb->ccb_queue.p_first_ccb;
         if ((p_ccb == 
-# 1397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1407 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                      ((void *)0)
-# 1397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
-                         ) || (p_lcb->link_state == LST_DISCONNECTING))
+# 1407 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+                         ) || (p_lcb->link_state == LST_DISCONNECTING)) {
             continue;
+        }
 
         if (p_ccb->in_use &&
            (p_ccb->chnl_state == CST_W4_L2CAP_DISCONNECT_RSP ||
-            p_ccb->chnl_state == CST_W4_L2CA_DISCONNECT_RSP))
+            p_ccb->chnl_state == CST_W4_L2CA_DISCONNECT_RSP)) {
             continue;
+        }
 
-        if (p_ccb->p_rcb == p_rcb)
+        if (p_ccb->p_rcb == p_rcb) {
             l2c_csm_execute(p_ccb, 27, 
-# 1406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1418 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                               ((void *)0)
-# 1406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1418 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                                   );
+        }
     }
 
     l2cu_release_rcb (p_rcb);
 }
-# 1428 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 UINT16 L2CA_ConnectLECocReq(UINT16 psm, BD_ADDR p_bd_addr, tL2CAP_LE_CFG_INFO *p_cfg)
 {
     {if ((*l2c_cb_ptr).l2cap_trace_level >= 3 && (((2) > (3) ? (2) : (3)) >= 3)) {esp_log_write(ESP_LOG_INFO, "BT_L2CAP", "\033[0;" "32" "m" "I" " (%d) %s: " "%s PSM: 0x%04x BDA: %02x:%02x:%02x:%02x:%02x:%02x" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__, psm, p_bd_addr[0], p_bd_addr[1], p_bd_addr[2], p_bd_addr[3], p_bd_addr[4], p_bd_addr[5]); };}
@@ -7056,9 +7069,9 @@ UINT16 L2CA_ConnectLECocReq(UINT16 psm, BD_ADDR p_bd_addr, tL2CAP_LE_CFG_INFO *p
 
     tL2C_RCB *p_rcb = l2cu_find_ble_rcb_by_psm(psm);
     if (p_rcb == 
-# 1442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1455 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                 ((void *)0)
-# 1442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1455 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     )
     {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "%s No BLE RCB, PSM: 0x%04x" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__, psm); };};
@@ -7068,27 +7081,27 @@ UINT16 L2CA_ConnectLECocReq(UINT16 psm, BD_ADDR p_bd_addr, tL2CAP_LE_CFG_INFO *p
 
     tL2C_LCB *p_lcb = l2cu_find_lcb_by_bd_addr(p_bd_addr, 2);
     if (p_lcb == 
-# 1450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                 ((void *)0)
-# 1450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     )
     {
 
         p_lcb = l2cu_allocate_lcb(p_bd_addr, 
-# 1453 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1466 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                             0
-# 1453 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1466 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                  , 2);
         if ((p_lcb == 
-# 1454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1467 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                      ((void *)0)
-# 1454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1467 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                          )
 
          || (l2cu_create_conn(p_lcb, 2) == 
-# 1456 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                         0
-# 1456 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                              ) )
         {
             {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "%s conn not started for PSM: 0x%04x  p_lcb: 0x%p" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__, psm, p_lcb); };}
@@ -7100,9 +7113,9 @@ UINT16 L2CA_ConnectLECocReq(UINT16 psm, BD_ADDR p_bd_addr, tL2CAP_LE_CFG_INFO *p
 
     tL2C_CCB *p_ccb = l2cu_allocate_ccb(p_lcb, 0);
     if (p_ccb == 
-# 1466 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1479 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                 ((void *)0)
-# 1466 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1479 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     )
     {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "%s no CCB, PSM: 0x%04x" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__, psm); };};
@@ -7113,8 +7126,9 @@ UINT16 L2CA_ConnectLECocReq(UINT16 psm, BD_ADDR p_bd_addr, tL2CAP_LE_CFG_INFO *p
     p_ccb->p_rcb = p_rcb;
 
 
-    if (p_cfg)
+    if (p_cfg) {
         memcpy(&p_ccb->local_conn_cfg, p_cfg, sizeof(tL2CAP_LE_CFG_INFO));
+    }
 
 
     if (p_lcb->link_state == LST_CONNECTED)
@@ -7123,9 +7137,9 @@ UINT16 L2CA_ConnectLECocReq(UINT16 psm, BD_ADDR p_bd_addr, tL2CAP_LE_CFG_INFO *p
         {
             {if ((*l2c_cb_ptr).l2cap_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_L2CAP", "D" " (%d) %s: " "%s LE Link is up" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__); };};
             l2c_csm_execute(p_ccb, 21, 
-# 1485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1499 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                            ((void *)0)
-# 1485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1499 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                                );
         }
     }
@@ -7149,7 +7163,7 @@ UINT16 L2CA_ConnectLECocReq(UINT16 psm, BD_ADDR p_bd_addr, tL2CAP_LE_CFG_INFO *p
 
     return p_ccb->local_cid;
 }
-# 1520 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_ConnectLECocRsp (BD_ADDR p_bd_addr, UINT8 id, UINT16 lcid, UINT16 result,
                              UINT16 status, tL2CAP_LE_CFG_INFO *p_cfg)
 {
@@ -7161,33 +7175,33 @@ BOOLEAN L2CA_ConnectLECocRsp (BD_ADDR p_bd_addr, UINT8 id, UINT16 lcid, UINT16 r
 
     tL2C_LCB *p_lcb = l2cu_find_lcb_by_bd_addr(p_bd_addr, 2);
     if (p_lcb == 
-# 1530 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                 ((void *)0)
-# 1530 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     )
     {
 
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "%s no LCB" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__); };};
         return 
-# 1534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
               0
-# 1534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                    ;
     }
 
 
     tL2C_CCB *p_ccb = l2cu_find_ccb_by_cid(p_lcb, lcid);
     if (p_ccb == 
-# 1539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                 ((void *)0)
-# 1539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     )
     {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "%s no CCB" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__); };};
         return 
-# 1542 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
               0
-# 1542 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                    ;
     }
 
@@ -7196,20 +7210,21 @@ BOOLEAN L2CA_ConnectLECocRsp (BD_ADDR p_bd_addr, UINT8 id, UINT16 lcid, UINT16 r
     {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "%s bad id. Expected: %d  Got: %d" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__, p_ccb->remote_id, id); };};
         return 
-# 1549 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1563 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
               0
-# 1549 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1563 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                    ;
     }
 
-    if (p_cfg)
+    if (p_cfg) {
         memcpy(&p_ccb->local_conn_cfg, p_cfg, sizeof(tL2CAP_LE_CFG_INFO));
+    }
 
     if (result == 0)
         l2c_csm_execute (p_ccb, 22, 
-# 1556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1571 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                         ((void *)0)
-# 1556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1571 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                             );
     else
     {
@@ -7221,49 +7236,50 @@ BOOLEAN L2CA_ConnectLECocRsp (BD_ADDR p_bd_addr, UINT8 id, UINT16 lcid, UINT16 r
     }
 
     return 
-# 1566 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1581 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
           1
-# 1566 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1581 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
               ;
 }
-# 1581 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1596 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_GetPeerLECocConfig (UINT16 lcid, tL2CAP_LE_CFG_INFO* peer_cfg)
 {
     {if ((*l2c_cb_ptr).l2cap_trace_level >= 3 && (((2) > (3) ? (2) : (3)) >= 3)) {esp_log_write(ESP_LOG_INFO, "BT_L2CAP", "\033[0;" "32" "m" "I" " (%d) %s: " "%s CID: 0x%04x" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__, lcid); };};
 
     tL2C_CCB *p_ccb = l2cu_find_ccb_by_cid(
-# 1585 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1600 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                           ((void *)0)
-# 1585 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1600 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                               , lcid);
     if (p_ccb == 
-# 1586 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1601 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                 ((void *)0)
-# 1586 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1601 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     )
     {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_L2CAP", "\033[0;" "31" "m" "E" " (%d) %s: " "%s No CCB for CID:0x%04x" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__, lcid); };};
         return 
-# 1589 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
               0
-# 1589 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                    ;
     }
 
     if (peer_cfg != 
-# 1592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                    ((void *)0)
-# 1592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
-                       )
+# 1607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+                       ) {
         memcpy(peer_cfg, &p_ccb->peer_conn_cfg, sizeof(tL2CAP_LE_CFG_INFO));
+    }
 
     return 
-# 1595 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
           1
-# 1595 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
               ;
 }
-# 1613 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_RegisterFixedChannel (UINT16 fixed_cid, tL2CAP_FIXED_CHNL_REG *p_freg)
 {
     {if ((*l2c_cb_ptr).l2cap_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_L2CAP", "D" " (%d) %s: " "L2CA_RegisterFixedChannel()  CID: 0x%04x, %p" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", fixed_cid,p_freg); };};
@@ -7271,20 +7287,20 @@ BOOLEAN L2CA_RegisterFixedChannel (UINT16 fixed_cid, tL2CAP_FIXED_CHNL_REG *p_fr
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_L2CAP", "\033[0;" "31" "m" "E" " (%d) %s: " "L2CA_RegisterFixedChannel()  Invalid CID: 0x%04x" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", fixed_cid); };};
 
         return (
-# 1619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 1619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
     (*l2c_cb_ptr).fixed_reg[fixed_cid - 4] = *p_freg;
     return (
-# 1623 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1639 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
            1
-# 1623 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1639 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                );
 }
-# 1639 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1655 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_ConnectFixedChnl (UINT16 fixed_cid, BD_ADDR rem_bda, tBLE_ADDR_TYPE bd_addr_type)
 {
     tL2C_LCB *p_lcb;
@@ -7296,15 +7312,15 @@ BOOLEAN L2CA_ConnectFixedChnl (UINT16 fixed_cid, BD_ADDR rem_bda, tBLE_ADDR_TYPE
 
     if ( (fixed_cid < 4) || (fixed_cid > (4 + 32 - 1))
             || ((*l2c_cb_ptr).fixed_reg[fixed_cid - 4].pL2CA_FixedData_Cb == 
-# 1649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1665 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                                                          ((void *)0)
-# 1649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1665 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                                                              ) ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_L2CAP", "\033[0;" "31" "m" "E" " (%d) %s: " "%s() Invalid CID: 0x%04x" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__, fixed_cid); };};
         return (
-# 1651 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1667 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 1651 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1667 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
@@ -7312,9 +7328,9 @@ BOOLEAN L2CA_ConnectFixedChnl (UINT16 fixed_cid, BD_ADDR rem_bda, tBLE_ADDR_TYPE
     if (!BTM_IsDeviceUp()) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "%s(0x%04x) - BTU not ready" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__, fixed_cid); };};
         return (
-# 1657 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1673 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 1657 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1673 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
@@ -7328,9 +7344,9 @@ BOOLEAN L2CA_ConnectFixedChnl (UINT16 fixed_cid, BD_ADDR rem_bda, tBLE_ADDR_TYPE
 
 
     if ((p_lcb = l2cu_find_lcb_by_bd_addr (rem_bda, transport)) != 
-# 1669 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1685 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                                   ((void *)0)
-# 1669 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1685 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                                       ) {
 
 
@@ -7340,7 +7356,9 @@ BOOLEAN L2CA_ConnectFixedChnl (UINT16 fixed_cid, BD_ADDR rem_bda, tBLE_ADDR_TYPE
             peer_channel_mask = (*l2c_cb_ptr).l2c_ble_fixed_chnls_mask;
         } else
 
+        {
             peer_channel_mask = p_lcb->peer_chnl_mask[0];
+        }
 
 
         if (!(peer_channel_mask & (1 << fixed_cid))) {
@@ -7348,9 +7366,9 @@ BOOLEAN L2CA_ConnectFixedChnl (UINT16 fixed_cid, BD_ADDR rem_bda, tBLE_ADDR_TYPE
 
                                                                ;
             return 
-# 1685 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1703 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                   0
-# 1685 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1703 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                        ;
         }
 
@@ -7359,9 +7377,9 @@ BOOLEAN L2CA_ConnectFixedChnl (UINT16 fixed_cid, BD_ADDR rem_bda, tBLE_ADDR_TYPE
                                         &(*l2c_cb_ptr).fixed_reg[fixed_cid - 4].fixed_chnl_opts)) {
             {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "%s(0x%04x) - LCB but no CCB" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__, fixed_cid); };};
             return 
-# 1692 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1710 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                   0
-# 1692 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1710 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                        ;
         }
 
@@ -7371,45 +7389,45 @@ BOOLEAN L2CA_ConnectFixedChnl (UINT16 fixed_cid, BD_ADDR rem_bda, tBLE_ADDR_TYPE
 
             p_lcb->p_pending_ccb = p_lcb->p_fixed_ccbs[fixed_cid - 4];
             return 
-# 1700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1718 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                   1
-# 1700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1718 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                       ;
         }
 
 
         (*(*l2c_cb_ptr).fixed_reg[fixed_cid - 4].pL2CA_FixedConn_Cb)
         (fixed_cid, p_lcb->remote_bd_addr, 
-# 1705 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                           1
-# 1705 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                               , 0, p_lcb->transport);
 
 
 
 
         return 
-# 1710 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1728 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
               1
-# 1710 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1728 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                   ;
     }
 
 
     if ((p_lcb = l2cu_allocate_lcb (rem_bda, 
-# 1714 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1732 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                             0
-# 1714 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1732 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                  , transport)) == 
-# 1714 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1732 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                                   ((void *)0)
-# 1714 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1732 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                                       ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "%s(0x%04x) - no LCB" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__, fixed_cid); };};
         return 
-# 1716 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1734 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
               0
-# 1716 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1734 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                    ;
     }
 
@@ -7420,9 +7438,9 @@ BOOLEAN L2CA_ConnectFixedChnl (UINT16 fixed_cid, BD_ADDR rem_bda, tBLE_ADDR_TYPE
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "%s(0x%04x) - no CCB" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__, fixed_cid); };};
         l2cu_release_lcb (p_lcb);
         return 
-# 1725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1743 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
               0
-# 1725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1743 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                    ;
     }
 
@@ -7432,18 +7450,18 @@ BOOLEAN L2CA_ConnectFixedChnl (UINT16 fixed_cid, BD_ADDR rem_bda, tBLE_ADDR_TYPE
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "%s() - create_conn failed" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", __func__); };};
         l2cu_release_lcb (p_lcb);
         return 
-# 1733 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1751 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
               0
-# 1733 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1751 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                    ;
     }
     return 
-# 1735 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1753 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
           1
-# 1735 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1753 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
               ;
 }
-# 1752 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1770 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 UINT16 L2CA_SendFixedChnlData (UINT16 fixed_cid, BD_ADDR rem_bda, BT_HDR *p_buf)
 {
     tL2C_LCB *p_lcb;
@@ -7461,16 +7479,16 @@ UINT16 L2CA_SendFixedChnlData (UINT16 fixed_cid, BD_ADDR rem_bda, BT_HDR *p_buf)
 
     if ( (fixed_cid < 4) || (fixed_cid > (4 + 32 - 1))
             || ((*l2c_cb_ptr).fixed_reg[fixed_cid - 4].pL2CA_FixedData_Cb == 
-# 1768 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1786 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                                                          ((void *)0)
-# 1768 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1786 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                                                              ) ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_L2CAP", "\033[0;" "31" "m" "E" " (%d) %s: " "L2CA_SendFixedChnlData()  Invalid CID: 0x%04x" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", fixed_cid); };};
         free((p_buf));
         return (
-# 1771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1789 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 1771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1789 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                               );
     }
 
@@ -7479,26 +7497,26 @@ UINT16 L2CA_SendFixedChnlData (UINT16 fixed_cid, BD_ADDR rem_bda, BT_HDR *p_buf)
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CA_SendFixedChnlData(0x%04x) - BTU not ready" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", fixed_cid); };};
         free((p_buf));
         return (
-# 1778 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1796 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 1778 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1796 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                               );
     }
 
 
     if ((p_lcb = l2cu_find_lcb_by_bd_addr (rem_bda, transport)) == 
-# 1782 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1800 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                                   ((void *)0) 
-# 1782 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1800 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                                        ||
 
             p_lcb->link_state == LST_DISCONNECTING) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CA_SendFixedChnlData(0x%04x) - no LCB" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", fixed_cid); };};
         free((p_buf));
         return (
-# 1787 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1805 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 1787 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1805 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                               );
     }
 
@@ -7510,15 +7528,17 @@ UINT16 L2CA_SendFixedChnlData (UINT16 fixed_cid, BD_ADDR rem_bda, BT_HDR *p_buf)
         peer_channel_mask = (*l2c_cb_ptr).l2c_ble_fixed_chnls_mask;
     } else
 
+    {
         peer_channel_mask = p_lcb->peer_chnl_mask[0];
+    }
 
     if ((peer_channel_mask & (1 << fixed_cid)) == 0) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CA_SendFixedChnlData() - peer does not support fixed chnl: 0x%04x" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", fixed_cid); };};
         free((p_buf));
         return (
-# 1803 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1823 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 1803 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1823 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                               );
     }
 
@@ -7530,37 +7550,37 @@ UINT16 L2CA_SendFixedChnlData (UINT16 fixed_cid, BD_ADDR rem_bda, BT_HDR *p_buf)
             {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CA_SendFixedChnlData() - no CCB for chnl: 0x%4x" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", fixed_cid); };};
             free((p_buf));
             return (
-# 1813 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1833 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                    0
-# 1813 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1833 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                   );
         }
     }
 
 
     if (p_lcb->p_fixed_ccbs[fixed_cid - 4]->cong_sent) {
-        {if ((*l2c_cb_ptr).l2cap_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_L2CAP", "D" " (%d) %s: " "L2CAP - CID: 0x%04x cannot send, already congested            xmit_hold_q.count: %u buff_quota: %u" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", fixed_cid, fixed_queue_length(p_lcb->p_fixed_ccbs[fixed_cid - 4]->xmit_hold_q), p_lcb->p_fixed_ccbs[fixed_cid - 4]->buff_quota); };}
+        {if ((*l2c_cb_ptr).l2cap_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_L2CAP", "\033[0;" "31" "m" "E" " (%d) %s: " "L2CAP - CID: 0x%04x cannot send, already congested            xmit_hold_q.count: %u buff_quota: %u" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", fixed_cid, fixed_queue_length(p_lcb->p_fixed_ccbs[fixed_cid - 4]->xmit_hold_q), p_lcb->p_fixed_ccbs[fixed_cid - 4]->buff_quota); };}
 
 
                                                                                 ;
         free((p_buf));
         return (
-# 1824 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1844 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 1824 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1844 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                               );
     }
 
     l2c_enqueue_peer_data (p_lcb->p_fixed_ccbs[fixed_cid - 4], p_buf);
 
     l2c_link_check_send_pkts (p_lcb, 
-# 1829 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1849 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                     ((void *)0)
-# 1829 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1849 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                         , 
-# 1829 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1849 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                           ((void *)0)
-# 1829 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1849 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                               );
 
 
@@ -7573,9 +7593,9 @@ UINT16 L2CA_SendFixedChnlData (UINT16 fixed_cid, BD_ADDR rem_bda, BT_HDR *p_buf)
     }
 
     return (
-# 1840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
            1
-# 1840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                            );
 }
 
@@ -7585,24 +7605,30 @@ BOOLEAN L2CA_CheckIsCongest(UINT16 fixed_cid, UINT16 handle)
     p_lcb = l2cu_find_lcb_by_handle(handle);
 
     if (p_lcb != 
-# 1848 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                 ((void *)0) 
-# 1848 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                      && p_lcb->p_fixed_ccbs[fixed_cid - 4] != 
-# 1848 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                                                    ((void *)0)
-# 1848 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                                                        ) {
         return p_lcb->p_fixed_ccbs[fixed_cid - 4]->cong_sent;
     }
 
     return 
-# 1852 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1872 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
           1
-# 1852 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1872 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
               ;
 }
-# 1867 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+
+
+UINT16 L2CA_GetFreePktBufferNum_LE(void)
+{
+    return (*l2c_cb_ptr).controller_le_xmit_window;
+}
+# 1895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_RemoveFixedChnl (UINT16 fixed_cid, BD_ADDR rem_bda)
 {
     tL2C_LCB *p_lcb;
@@ -7612,15 +7638,15 @@ BOOLEAN L2CA_RemoveFixedChnl (UINT16 fixed_cid, BD_ADDR rem_bda)
 
     if ( (fixed_cid < 4) || (fixed_cid > (4 + 32 - 1))
             || ((*l2c_cb_ptr).fixed_reg[fixed_cid - 4].pL2CA_FixedData_Cb == 
-# 1875 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                                                          ((void *)0)
-# 1875 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                                                              ) ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_L2CAP", "\033[0;" "31" "m" "E" " (%d) %s: " "L2CA_RemoveFixedChnl()  Invalid CID: 0x%04x" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", fixed_cid); };};
         return (
-# 1877 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 1877 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
@@ -7634,16 +7660,16 @@ BOOLEAN L2CA_RemoveFixedChnl (UINT16 fixed_cid, BD_ADDR rem_bda)
     p_lcb = l2cu_find_lcb_by_bd_addr (rem_bda, transport);
 
     if ( ((p_lcb) == 
-# 1889 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1917 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                     ((void *)0)
-# 1889 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1917 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                         ) || (!p_lcb->p_fixed_ccbs[fixed_cid - 4]) ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 5 && (((2) > (3) ? (2) : (3)) >= 5)) {esp_log_write(ESP_LOG_DEBUG, "BT_L2CAP", "D" " (%d) %s: " "L2CA_RemoveFixedChnl()  CID: 0x%04x  BDA: %08x%04x not connected" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", fixed_cid, (rem_bda[0] << 24) + (rem_bda[1] << 16) + (rem_bda[2] << 8) + rem_bda[3], (rem_bda[4] << 8) + rem_bda[5]); };}
                                                                                                                                       ;
         return (
-# 1892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1920 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 1892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1920 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
@@ -7654,12 +7680,12 @@ BOOLEAN L2CA_RemoveFixedChnl (UINT16 fixed_cid, BD_ADDR rem_bda)
     p_ccb = p_lcb->p_fixed_ccbs[fixed_cid - 4];
 
     p_lcb->p_fixed_ccbs[fixed_cid - 4] = 
-# 1901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1929 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                              ((void *)0)
-# 1901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1929 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                                  ;
     p_lcb->disc_reason = 0x16;
-# 1911 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
     if ((fixed_cid == 4 ) && !p_lcb->ccb_queue.p_first_ccb) {
         p_lcb->idle_timeout = 0;
     }
@@ -7668,12 +7694,12 @@ BOOLEAN L2CA_RemoveFixedChnl (UINT16 fixed_cid, BD_ADDR rem_bda)
     l2cu_release_ccb (p_ccb);
 
     return (
-# 1918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1946 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
            1
-# 1918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1946 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                );
 }
-# 1938 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1966 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_SetFixedChannelTout (BD_ADDR rem_bda, UINT16 fixed_cid, UINT16 idle_tout)
 {
     tL2C_LCB *p_lcb;
@@ -7688,16 +7714,16 @@ BOOLEAN L2CA_SetFixedChannelTout (BD_ADDR rem_bda, UINT16 fixed_cid, UINT16 idle
 
     p_lcb = l2cu_find_lcb_by_bd_addr (rem_bda, transport);
     if ( ((p_lcb) == 
-# 1951 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1979 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                     ((void *)0)
-# 1951 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1979 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                         ) || (!p_lcb->p_fixed_ccbs[fixed_cid - 4]) ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CA_SetFixedChannelTout()  CID: 0x%04x  BDA: %08x%04x not connected" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", fixed_cid, (rem_bda[0] << 24) + (rem_bda[1] << 16) + (rem_bda[2] << 8) + rem_bda[3], (rem_bda[4] << 8) + rem_bda[5]); };}
                                                                                                                                       ;
         return (
-# 1954 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1982 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 1954 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1982 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
@@ -7709,12 +7735,12 @@ BOOLEAN L2CA_SetFixedChannelTout (BD_ADDR rem_bda, UINT16 fixed_cid, UINT16 idle
     }
 
     return 
-# 1964 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 1992 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
           1
-# 1964 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 1992 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
               ;
 }
-# 1983 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 2011 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_GetCurrentConfig (UINT16 lcid,
                                tL2CAP_CFG_INFO **pp_our_cfg, tL2CAP_CH_CFG_BITS *p_our_cfg_bits,
                                tL2CAP_CFG_INFO **pp_peer_cfg, tL2CAP_CH_CFG_BITS *p_peer_cfg_bits)
@@ -7724,9 +7750,9 @@ BOOLEAN L2CA_GetCurrentConfig (UINT16 lcid,
     {if ((*l2c_cb_ptr).l2cap_trace_level >= 3 && (((2) > (3) ? (2) : (3)) >= 3)) {esp_log_write(ESP_LOG_INFO, "BT_L2CAP", "\033[0;" "32" "m" "I" " (%d) %s: " "L2CA_GetCurrentConfig()  CID: 0x%04x" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", lcid); };};
 
     p_ccb = l2cu_find_ccb_by_cid(
-# 1991 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 2019 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                 ((void *)0)
-# 1991 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 2019 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                     , lcid);
 
     if (p_ccb) {
@@ -7757,20 +7783,20 @@ BOOLEAN L2CA_GetCurrentConfig (UINT16 lcid,
         *p_peer_cfg_bits = p_ccb->peer_cfg_bits;
 
         return 
-# 2020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 2048 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
               1
-# 2020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 2048 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                   ;
     } else {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 1 && (((2) > (3) ? (2) : (3)) >= 1)) {esp_log_write(ESP_LOG_ERROR, "BT_L2CAP", "\033[0;" "31" "m" "E" " (%d) %s: " "No CCB for CID:0x%04x" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", lcid); };};
         return 
-# 2023 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 2051 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
               0
-# 2023 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 2051 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                    ;
     }
 }
-# 2039 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 2067 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_RegForNoCPEvt(tL2CA_NOCP_CB *p_cb, BD_ADDR p_bda)
 {
     tL2C_LCB *p_lcb;
@@ -7781,27 +7807,27 @@ BOOLEAN L2CA_RegForNoCPEvt(tL2CA_NOCP_CB *p_cb, BD_ADDR p_bda)
 
     if (!p_lcb) {
         return 
-# 2048 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 2076 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
               0
-# 2048 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 2076 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                    ;
     }
 
     p_lcb->p_nocp_cb = p_cb;
 
     return 
-# 2053 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 2081 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
           1
-# 2053 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 2081 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
               ;
 }
-# 2069 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 2097 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 UINT8 L2CA_DataWrite (UINT16 cid, BT_HDR *p_data)
 {
     {if ((*l2c_cb_ptr).l2cap_trace_level >= 3 && (((2) > (3) ? (2) : (3)) >= 3)) {esp_log_write(ESP_LOG_INFO, "BT_L2CAP", "\033[0;" "32" "m" "I" " (%d) %s: " "L2CA_DataWrite()  CID: 0x%04x  Len: %d" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", cid, p_data->len); };};
     return l2c_data_write (cid, p_data, 0x0000);
 }
-# 2086 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 2114 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 BOOLEAN L2CA_SetChnlFlushability (UINT16 cid, BOOLEAN is_flushable)
 {
 
@@ -7810,19 +7836,19 @@ BOOLEAN L2CA_SetChnlFlushability (UINT16 cid, BOOLEAN is_flushable)
 
 
     if ((p_ccb = l2cu_find_ccb_by_cid (
-# 2093 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 2121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                       ((void *)0)
-# 2093 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 2121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                           , cid)) == 
-# 2093 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 2121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                                      ((void *)0)
-# 2093 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 2121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                          ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CAP - no CCB for L2CA_SetChnlFlushability, CID: %d" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", cid); };};
         return (
-# 2095 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 2123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                0
-# 2095 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 2123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                     );
     }
 
@@ -7833,19 +7859,19 @@ BOOLEAN L2CA_SetChnlFlushability (UINT16 cid, BOOLEAN is_flushable)
 
 
     return (
-# 2104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 2132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
            1
-# 2104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 2132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                );
 }
-# 2123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 2151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 UINT8 L2CA_DataWriteEx (UINT16 cid, BT_HDR *p_data, UINT16 flags)
 {
     {if ((*l2c_cb_ptr).l2cap_trace_level >= 3 && (((2) > (3) ? (2) : (3)) >= 3)) {esp_log_write(ESP_LOG_INFO, "BT_L2CAP", "\033[0;" "32" "m" "I" " (%d) %s: " "L2CA_DataWriteEx()  CID: 0x%04x  Len: %d Flags:0x%04X" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", cid, p_data->len, flags); };}
                                              ;
     return l2c_data_write (cid, p_data, flags);
 }
-# 2145 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 2173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
 UINT16 L2CA_FlushChannel (UINT16 lcid, UINT16 num_to_flush)
 {
     tL2C_CCB *p_ccb;
@@ -7855,15 +7881,15 @@ UINT16 L2CA_FlushChannel (UINT16 lcid, UINT16 num_to_flush)
                     num_flushed2 = 0;
 
     p_ccb = l2cu_find_ccb_by_cid(
-# 2153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 2181 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                 ((void *)0)
-# 2153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 2181 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                     , lcid);
 
     if ( !p_ccb || ((p_lcb = p_ccb->p_lcb) == 
-# 2155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 2183 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                              ((void *)0)
-# 2155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 2183 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                  ) ) {
         {if ((*l2c_cb_ptr).l2cap_trace_level >= 2 && (((2) > (3) ? (2) : (3)) >= 2)) {esp_log_write(ESP_LOG_WARN, "BT_L2CAP", "\033[0;" "33" "m" "W" " (%d) %s: " "L2CA_FlushChannel()  abnormally returning 0  CID: 0x%04x" "\033[0m" "\n", esp_log_timestamp(), "BT_L2CAP", lcid); };};
         return (0);
@@ -7886,14 +7912,14 @@ UINT16 L2CA_FlushChannel (UINT16 lcid, UINT16 num_to_flush)
             if ( ((0))
                     && (BTM_GetNumScoLinks() == 0) ) {
                 if ( (*l2c_cb_ptr).is_flush_active == 
-# 2176 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 2204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                             0 
-# 2176 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 2204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                                   ) {
                     (*l2c_cb_ptr).is_flush_active = 
-# 2177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
+# 2205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c" 3 4
                                           1
-# 2177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
+# 2205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/l2cap/l2c_api.c"
                                               ;
 
 

@@ -1693,6 +1693,77 @@ typedef void (*TaskFunction_t)( void * );
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/deprecated_definitions.h" 1
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 2
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void *get_sp()
+{
+    void *sp;
+    asm volatile ("mov %0, sp;" : "=r" (sp));
+    return sp;
+}
+
+
+
+
+
+static inline void cpu_write_dtlb(uint32_t vpn, unsigned attr)
+{
+    asm volatile ("wdtlb  %1, %0; dsync\n" :: "r" (vpn), "r" (attr));
+}
+
+
+static inline void cpu_write_itlb(unsigned vpn, unsigned attr)
+{
+    asm volatile ("witlb  %1, %0; isync\n" :: "r" (vpn), "r" (attr));
+}
+
+static inline void cpu_init_memctl()
+{
+
+    uint32_t memctl = 0x00000000;
+    asm volatile ("wsr %0, " "MEMCTL" : : "r" (memctl));;
+
+}
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void cpu_configure_region_protection()
+{
+    const uint32_t pages_to_protect[] = {0x00000000, 0x80000000, 0xa0000000, 0xc0000000, 0xe0000000};
+    for (int i = 0; i < sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
+        cpu_write_dtlb(pages_to_protect[i], 0xf);
+        cpu_write_itlb(pages_to_protect[i], 0xf);
+    }
+    cpu_write_dtlb(0x20000000, 0);
+    cpu_write_itlb(0x20000000, 0);
+}
+
+
+
+
+
+void esp_cpu_stall(int cpu_id);
+
+
+
+
+
+void esp_cpu_unstall(int cpu_id);
+
+
+
+
+
+void esp_cpu_reset(int cpu_id);
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 3 4
+_Bool 
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+    esp_cpu_in_ocd_debug_mode();
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+
 
 
 
@@ -2447,7 +2518,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 1
@@ -2664,6 +2735,9 @@ void heap_caps_dump_all();
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
 # 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
 typedef struct {
@@ -2719,7 +2793,7 @@ inline static
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_dma_capable(const void *p)
+                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
 {
     return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
 }
@@ -2728,24 +2802,37 @@ inline static
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_executable(const void *p)
+                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
+{
+    return ((intptr_t)p) % 4 == 0;
+}
+
+inline static 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
 {
     intptr_t ip = (intptr_t) p;
     return (ip >= 0x400D0000 && ip < 0x40400000)
         || (ip >= 0x40080000 && ip < 0x400A0000)
+        || (ip >= 0x40000000 && ip < 0x40070000)
+
+        || (ip >= 0x40078000 && ip < 0x40080000)
+
         || (ip >= 0x400C0000 && ip < 0x400C2000);
 }
 
 inline static 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_byte_accessible(const void *p)
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
 {
     
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x40000000);
 
@@ -2755,14 +2842,14 @@ inline static
 }
 
 inline static 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_internal(const void *p) {
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
     
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
     r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
@@ -2771,18 +2858,18 @@ inline static
 
 
 inline static 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_external_ram(const void *p) {
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
     return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
 }
 
 inline static 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_iram(const void *p) {
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
 
 
 
@@ -2791,19 +2878,35 @@ inline static
 }
 
 inline static 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_drom(const void *p) {
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
     return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
 }
 
 inline static 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_dram(const void *p) {
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
     return ((intptr_t)p >= 0x3FAE0000 && (intptr_t)p < 0x40000000);
+}
+
+inline static 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
+    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x3FFFFFFC);
+}
+
+inline static 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
+    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400BFFFC);
 }
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
@@ -2852,24 +2955,24 @@ typedef struct {
 void vPortAssertIfInISR();
 # 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortCPUInitializeMutex(portMUX_TYPE *mux);
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vTaskExitCritical( portMUX_TYPE *mux );
 void vTaskEnterCritical( portMUX_TYPE *mux );
 void vPortCPUAcquireMutex(portMUX_TYPE *mux);
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
 _Bool 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
     vPortCPUAcquireMutexTimeout(portMUX_TYPE *mux, int timeout_cycles);
 void vPortCPUReleaseMutex(portMUX_TYPE *mux);
-# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline unsigned portENTER_CRITICAL_NESTED() {
  unsigned state = ({ unsigned __tmp; __asm__ __volatile__( "rsil	%0, " "3" "\n" : "=a" (__tmp) : : "memory" ); __tmp;});
  ;
  return state;
 }
-# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, uint32_t *set) {
     __asm__ __volatile__ (
         "WSR 	    %2,SCOMPARE1 \n"
@@ -2878,20 +2981,20 @@ static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, u
         :"r"(addr), "r"(compare), "0"(*set)
         );
 }
-# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortYield( void );
 void _frxt_setup_switch( void );
 
 
 
 static inline uint32_t xPortGetCoreID();
-# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef struct {
 
  volatile StackType_t* coproc_area;
-# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 } xMPU_SETTINGS;
-# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 extern void esp_vApplicationIdleHook( void );
 extern void esp_vApplicationTickHook( void );
 
@@ -2902,10 +3005,10 @@ extern void esp_vApplicationTickHook( void );
 
 void _xt_coproc_release(volatile void * coproc_sa_base);
 void vApplicationSleep( TickType_t xExpectedIdleTime );
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/mpu_wrappers.h" 1
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h" 1
@@ -2927,7 +3030,7 @@ void vApplicationSleep( TickType_t xExpectedIdleTime );
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
 typedef volatile struct {
     uint32_t bt_select;
     uint32_t out;
@@ -3264,7 +3367,7 @@ void esp_intr_noniram_disable();
 void esp_intr_noniram_enable();
 # 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
 extern const uint32_t GPIO_PIN_MUX_REG[40];
 # 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
@@ -3739,25 +3842,25 @@ typedef enum {
 typedef esp_sleep_source_t esp_sleep_wakeup_cause_t;
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_disable_wakeup_source(esp_sleep_source_t source);
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ulp_wakeup();
-# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_timer_wakeup(uint64_t time_in_us);
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_touchpad_wakeup();
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 touch_pad_t esp_sleep_get_touchpad_wakeup_status();
-# 161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext0_wakeup(gpio_num_t gpio_num, int level);
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext1_wakeup(uint64_t mask, esp_sleep_ext1_wakeup_mode_t mode);
-# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_gpio_wakeup();
-# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_uart_wakeup(int uart_num);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 uint64_t esp_sleep_get_ext1_wakeup_status();
-# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
                                    esp_sleep_pd_option_t option);
 
@@ -3767,11 +3870,11 @@ esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
 
 
 void esp_deep_sleep_start() __attribute__((noreturn));
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_light_sleep_start();
-# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_deep_sleep(uint64_t time_in_us) __attribute__((noreturn));
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated));
 
 
@@ -3781,7 +3884,7 @@ void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated)
 
 
 esp_sleep_wakeup_cause_t esp_sleep_get_wakeup_cause();
-# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_wake_deep_sleep(void);
 
 
@@ -3789,7 +3892,7 @@ void esp_wake_deep_sleep(void);
 
 
 typedef void (*esp_deep_sleep_wake_stub_fn_t)(void);
-# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_set_deep_sleep_wake_stub(esp_deep_sleep_wake_stub_fn_t new_stub);
 
 
@@ -3813,6 +3916,12 @@ void esp_default_wake_deep_sleep(void);
 
 void esp_deep_sleep_disable_rom_logging(void);
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+       
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+const char* esp_get_idf_version(void);
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
 
 
 
@@ -3824,7 +3933,7 @@ typedef enum {
     ESP_MAC_BT,
     ESP_MAC_ETH,
 } esp_mac_type_t;
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef enum {
     ESP_RST_UNKNOWN,
     ESP_RST_POWERON,
@@ -3867,9 +3976,9 @@ typedef void (*shutdown_handler_t)(void);
 
 
 esp_err_t esp_register_shutdown_handler(shutdown_handler_t handle);
-# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_restart(void) __attribute__ ((noreturn));
-# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
@@ -3878,11 +3987,11 @@ void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
 esp_reset_reason_t esp_reset_reason(void);
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_time(void) __attribute__ ((deprecated));
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_get_free_heap_size(void);
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
@@ -3892,36 +4001,28 @@ uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
 uint32_t esp_get_minimum_free_heap_size( void );
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_random(void);
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_fill_random(void *buf, size_t len);
-# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_set(uint8_t *mac);
-# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_get(uint8_t *mac);
-# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_custom(uint8_t *mac);
-# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_default(uint8_t *mac);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t system_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_read_mac(uint8_t* mac, esp_mac_type_t type);
-# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_derive_local_mac(uint8_t* local_mac, const uint8_t* universal_mac);
-# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 const char* system_get_sdk_version(void) __attribute__ ((deprecated));
-
-
-
-
-
-
-
-const char* esp_get_idf_version(void);
 
 
 
@@ -3930,7 +4031,7 @@ const char* esp_get_idf_version(void);
 typedef enum {
     CHIP_ESP32 = 1,
 } esp_chip_model_t;
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef struct {
     esp_chip_model_t model;
     uint32_t features;
@@ -3943,10 +4044,10 @@ typedef struct {
 
 
 void esp_chip_info(esp_chip_info_t* out_info);
-# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters, BaseType_t xRunPrivileged ) ;
-# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 BaseType_t xPortStartScheduler( void ) ;
 
 
@@ -3982,14 +4083,14 @@ BaseType_t xPortInIsrContext();
 
 
 BaseType_t xPortInterruptedFromISRContext();
-# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  struct xMEMORY_REGION;
  void vPortStoreTaskMPUSettings( xMPU_SETTINGS *xMPUSettings, const struct xMEMORY_REGION * const xRegions, StackType_t *pxBottomOfStack, uint32_t usStackDepth ) ;
  void vPortReleaseTaskMPUSettings( xMPU_SETTINGS *xMPUSettings );
 
 
 
-static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
+static inline uint32_t __attribute__((section(".iram1" "." "11"))) xPortGetCoreID() {
     int id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -4000,6 +4101,21 @@ static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
 
 
 uint32_t xPortGetTickRateHz(void);
+
+
+static inline 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 3 4
+             _Bool 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+                  __attribute__((section(".iram1" "." "12"))) xPortCanYield(void)
+{
+    uint32_t ps_reg = 0;
+
+
+    asm volatile ("rsr %0, " "PS" : "=r" (ps_reg));;
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+    return ((ps_reg & 0x0000000F) == 0);
+}
 
 
 
@@ -4144,7 +4260,7 @@ typedef struct xSTATIC_TIMER
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/slc_reg.h" 1
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/sdio_slave_periph.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/slc_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/slc_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/slc_struct.h"
 typedef volatile struct {
     union {
         struct {
@@ -4981,7 +5097,7 @@ extern slc_dev_t SLC;
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/host_reg.h" 1
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/sdio_slave_periph.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/host_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/host_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/host_struct.h"
 typedef volatile struct {
     uint32_t reserved_0;
     uint32_t reserved_4;
@@ -5851,7 +5967,7 @@ extern host_dev_t HOST;
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/hinf_reg.h" 1
 # 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/sdio_slave_periph.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/hinf_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/hinf_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/hinf_struct.h"
 typedef volatile struct {
     union {
         struct {
@@ -6214,15 +6330,15 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 92 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 2
 
 
@@ -6249,7 +6365,7 @@ void esp_dport_access_int_abort(void);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/uart_reg.h" 1
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h" 2
 # 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "13"))) DPORT_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -6258,7 +6374,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_
 
 }
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "14"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -6267,7 +6383,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_REA
 
 }
 # 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_READ_PERI_REG(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "15"))) DPORT_READ_PERI_REG(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -6810,23 +6926,47 @@ static inline
 }
 
 
-static inline void show_ll(buf_desc_t *item)
+static inline void show_queue_item(buf_desc_t *item)
 {
-   do { if (3 >= ESP_LOG_DEBUG) { ets_printf( "D" " (%d) %s: " "=> %p: size: %d(%d), eof: %d, owner: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, item, item->size, item->length, item->eof, item->owner); }} while(0);
-    do { if (3 >= ESP_LOG_DEBUG) { ets_printf( "D" " (%d) %s: " "   buf: %p, stqe_next: %p, tqe-prev: %p" "\033[0m" "\n", esp_log_timestamp(), TAG, item->buf, item->qe.stqe_next, item->te.tqe_prev); }} while(0);
+    do { if (3 >= ESP_LOG_INFO) { ets_printf("\033[0;" "32" "m" "I" " (%d) %s: " "=> %p: size: %d(%d), eof: %d, owner: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, item, item->size, item->length, item->eof, item->owner); }} while(0);
+    do { if (3 >= ESP_LOG_INFO) { ets_printf("\033[0;" "32" "m" "I" " (%d) %s: " "   buf: %p, stqe_next: %p, tqe-prev: %p" "\033[0m" "\n", esp_log_timestamp(), TAG, item->buf, item->qe.stqe_next, item->te.tqe_prev); }} while(0);
 }
 
-static void __attribute((unused)) dump_ll(buf_stailq_t *queue)
+static void __attribute((unused)) dump_queue(buf_stailq_t *queue)
 {
+    int cnt = 0;
     buf_desc_t *item = 
-# 371 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 372 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                       ((void *)0)
-# 371 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 372 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                           ;
-    do { if (3 >= ESP_LOG_DEBUG) { ets_printf( "D" " (%d) %s: " ">>>>> first: %p, last: %p <<<<<" "\033[0m" "\n", esp_log_timestamp(), TAG, queue->stqh_first, queue->stqh_last); }} while(0);
+    do { if (3 >= ESP_LOG_INFO) { ets_printf("\033[0;" "32" "m" "I" " (%d) %s: " ">>>>> first: %p, last: %p <<<<<" "\033[0m" "\n", esp_log_timestamp(), TAG, queue->stqh_first, queue->stqh_last); }} while(0);
     for((item) = (((queue))->stqh_first); (item); (item) = (((item))->qe.stqe_next)) {
-        show_ll(item);
+        cnt++;
+        show_queue_item(item);
     }
+    do { if (3 >= ESP_LOG_INFO) { ets_printf("\033[0;" "32" "m" "I" " (%d) %s: " "total: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, cnt); }} while(0);
+}
+
+static inline void show_ll(lldesc_t *item)
+{
+    do { if (3 >= ESP_LOG_INFO) { ets_printf("\033[0;" "32" "m" "I" " (%d) %s: " "=> %p: size: %d(%d), eof: %d, owner: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, item, item->size, item->length, item->eof, item->owner); }} while(0);
+    do { if (3 >= ESP_LOG_INFO) { ets_printf("\033[0;" "32" "m" "I" " (%d) %s: " "   buf: %p, stqe_next: %p" "\033[0m" "\n", esp_log_timestamp(), TAG, item->buf, item->qe.stqe_next); }} while(0);
+}
+static void __attribute((unused)) dump_ll(lldesc_t *queue)
+{
+    int cnt = 0;
+    lldesc_t *item = queue;
+    while (item != 
+# 390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+                  ((void *)0)
+# 390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+                      ) {
+        cnt++;
+        show_ll(item);
+        item = ((item)->qe.stqe_next);
+    }
+    do { if (3 >= ESP_LOG_INFO) { ets_printf("\033[0;" "32" "m" "I" " (%d) %s: " "total: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, cnt); }} while(0);
 }
 
 static inline void deinit_context()
@@ -6834,28 +6974,28 @@ static inline void deinit_context()
     context.config = (sdio_slave_config_t){};
     for(int i = 0; i < 9; i++) {
         if (context.events[i] != 
-# 382 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                                 ((void *)0)
-# 382 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                     ) {
             vQueueDelete( ( QueueHandle_t ) ( context.events[i] ) );
             context.events[i] = 
-# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                                ((void *)0)
-# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                    ;
         }
     }
     if (context.ret_queue != 
-# 387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 407 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                             ((void *)0)
-# 387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 407 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                 ) {
         vQueueDelete(context.ret_queue);
         context.ret_queue = 
-# 389 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                            ((void *)0)
-# 389 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                ;
     }
     sdio_ringbuf_deinit(&context.sendbuf);
@@ -6874,60 +7014,60 @@ static esp_err_t init_ringbuf()
 
     esp_err_t rcv_res;
     buf_desc_t *first=
-# 406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                      ((void *)0)
-# 406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                          , *last=
-# 406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                                  ((void *)0)
-# 406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                      ;
 
 
     ret = sdio_ringbuf_send(&context.sendbuf, 
-# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                                              ((void *)0)
-# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                                  , 
-# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                                                    ((void *)0)
-# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                                        , ( TickType_t ) 0xffffffffUL);
     if (ret != 0) return ret;
 
 
     for (int i = 0; i < context.config.send_queue_size+1; i++) {
         rcv_res = sdio_ringbuf_recv(&context.sendbuf, (uint8_t**)&last, 
-# 414 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 434 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                                                                        ((void *)0)
-# 414 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 434 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                                                            , RINGBUF_GET_ONE, 0);
-        ((rcv_res == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 415, __func__, "rcv_res == ESP_OK"));
+        ((rcv_res == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 435, __func__, "rcv_res == ESP_OK"));
         ret = sdio_ringbuf_send(&context.sendbuf, link_desc_to_last, last, ( TickType_t ) 0xffffffffUL);
         if (ret != 0) return ret;
         sdio_ringbuf_return(&context.sendbuf, (uint8_t*)last);
     }
     first = 
-# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 440 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
            ((void *)0)
-# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 440 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                ;
     last = 
-# 421 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
           ((void *)0)
-# 421 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
               ;
 
     rcv_res = sdio_ringbuf_recv(&context.sendbuf, (uint8_t**)&first, (uint8_t**)&last, RINGBUF_GET_ALL, 0);
-    ((rcv_res == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 424, __func__, "rcv_res == ESP_OK"));
-    ((first == last) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 425, __func__, "first == last"));
+    ((rcv_res == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 444, __func__, "rcv_res == ESP_OK"));
+    ((first == last) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 445, __func__, "first == last"));
     sdio_ringbuf_return(&context.sendbuf, (uint8_t*)first);
     return 0;
 }
 
 static esp_err_t init_context(sdio_slave_config_t *config)
 {
-    do { if(!(*(uint32_t*)&context.config == 0)){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",432,__FUNCTION__, "sdio slave already initialized"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",432,__FUNCTION__, "sdio slave already initialized"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",432,__FUNCTION__, "sdio slave already initialized"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",432,__FUNCTION__, "sdio slave already initialized"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",432,__FUNCTION__, "sdio slave already initialized"); } } while(0); } while(0); return 0x103;} }while (0);
+    do { if(!(*(uint32_t*)&context.config == 0)){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",452,__FUNCTION__, "sdio slave already initialized"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",452,__FUNCTION__, "sdio slave already initialized"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",452,__FUNCTION__, "sdio slave already initialized"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",452,__FUNCTION__, "sdio slave already initialized"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",452,__FUNCTION__, "sdio slave already initialized"); } } while(0); } while(0); return 0x103;} }while (0);
 
     context.config = *config;
 
@@ -6939,11 +7079,11 @@ static esp_err_t init_context(sdio_slave_config_t *config)
             context.events[i] = xQueueGenericCreate( ( UBaseType_t ) 1, ( ( uint8_t ) 0U ), ( ( uint8_t ) 3U ) );
         }
         if (context.events[i] == 
-# 443 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                                 ((void *)0)
-# 443 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                     ) {
-            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""event initialize failed" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",444,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""event initialize failed" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",444,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""event initialize failed" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",444,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""event initialize failed" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",444,__FUNCTION__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""event initialize failed" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",444,__FUNCTION__); } } while(0); } while(0);
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""event initialize failed" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",464,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""event initialize failed" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",464,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""event initialize failed" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",464,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""event initialize failed" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",464,__FUNCTION__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""event initialize failed" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",464,__FUNCTION__); } } while(0); } while(0);
             goto no_mem;
         }
     }
@@ -6953,20 +7093,20 @@ static esp_err_t init_context(sdio_slave_config_t *config)
 
     context.ret_queue = xQueueGenericCreate( ( config->send_queue_size ), ( sizeof(void*) ), ( ( ( uint8_t ) 0U ) ) );
     if (context.ret_queue == 
-# 453 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 473 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                             ((void *)0)
-# 453 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 473 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                 ) goto no_mem;
 
     context.recv_link_list = (buf_stailq_t){ 
-# 455 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                                           ((void *)0)
-# 455 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                           , &(context.recv_link_list).stqh_first };
     context.recv_reg_list = (buf_tailq_t){ 
-# 456 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 476 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                                          ((void *)0)
-# 456 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 476 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                          , &(context.recv_reg_list).tqh_first };
     return 0;
 
@@ -6976,16 +7116,16 @@ no_mem:
 }
 
 static void configure_pin(int pin, uint32_t func, 
-# 464 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                                                  _Bool 
-# 464 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                                       pullup)
 {
     const int sdmmc_func = func;
     const int drive_strength = 3;
-    ((pin!=-1) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 468, __func__, "pin!=-1"));
+    ((pin!=-1) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 488, __func__, "pin!=-1"));
     uint32_t reg = GPIO_PIN_MUX_REG[pin];
-    ((reg!=0xffffffffUL) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 470, __func__, "reg!=UINT32_MAX"));
+    ((reg!=0xffffffffUL) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 490, __func__, "reg!=UINT32_MAX"));
 
     ({ ; ({ ; (*((volatile uint32_t *)((reg)))) = (uint32_t)((({ ; (*((volatile uint32_t *)(reg))); })|(((1UL << (9)))))); }); });
     ({ ; (({ ; (*(volatile uint32_t *)((reg))) = (((({ ; (*(volatile uint32_t *)(reg)); }) & ~((0x7) << (12)))|(((sdmmc_func) & (0x7))<<(12)))); })); });
@@ -7005,14 +7145,14 @@ static inline esp_err_t sdio_slave_hw_init(sdio_slave_config_t *config)
     const sdio_slave_slot_info_t *slot = &sdio_slave_slot_info[1];
 
     
-# 489 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 509 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
    _Bool 
-# 489 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 509 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
         pullup = config->flags & (1UL << (2));
     configure_pin(slot->clk_gpio, slot->func, 
-# 490 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 510 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                                              0
-# 490 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 510 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                                   );
     configure_pin(slot->cmd_gpio, slot->func, pullup);
     configure_pin(slot->d0_gpio, slot->func, pullup);
@@ -7083,15 +7223,15 @@ esp_err_t sdio_slave_initialize(sdio_slave_config_t *config)
 {
     esp_err_t r;
     intr_handle_t intr_handle = 
-# 559 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 579 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                                ((void *)0)
-# 559 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 579 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                    ;
     const int flags = 0;
     r = esp_intr_alloc(10, flags, sdio_intr, 
-# 561 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 581 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                                                               ((void *)0)
-# 561 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 581 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                                                   , &intr_handle);
     if (r != 0) return r;
 
@@ -7108,11 +7248,11 @@ esp_err_t sdio_slave_initialize(sdio_slave_config_t *config)
 void sdio_slave_deinit()
 {
     esp_err_t ret = esp_intr_free(context.intr_handle);
-    ((ret==0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 577, __func__, "ret==ESP_OK"));
+    ((ret==0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 597, __func__, "ret==ESP_OK"));
     context.intr_handle = 
-# 578 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 598 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                          ((void *)0)
-# 578 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 598 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                              ;
     deinit_context();
 }
@@ -7173,9 +7313,9 @@ static void sdio_intr_host(void* arg)
     for(int i = 0; i < 8; i++) {
         if ((1UL << (i)) & int_val) {
             if (context.config.event_cb != 
-# 637 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 657 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                                           ((void *)0)
-# 637 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 657 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                               ) (*context.config.event_cb)(i);
             xQueueGiveFromISR( ( QueueHandle_t ) ( context.events[i] ), ( &yield ) );
         }
@@ -7185,11 +7325,11 @@ static void sdio_intr_host(void* arg)
 
 esp_err_t sdio_slave_wait_int(int pos, TickType_t wait)
 {
-    do { if(!(pos >= 0 && pos < 8)){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",646,__FUNCTION__, "interrupt num invalid"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",646,__FUNCTION__, "interrupt num invalid"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",646,__FUNCTION__, "interrupt num invalid"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",646,__FUNCTION__, "interrupt num invalid"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",646,__FUNCTION__, "interrupt num invalid"); } } while(0); } while(0); return 0x102;} }while (0);
+    do { if(!(pos >= 0 && pos < 8)){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",666,__FUNCTION__, "interrupt num invalid"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",666,__FUNCTION__, "interrupt num invalid"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",666,__FUNCTION__, "interrupt num invalid"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",666,__FUNCTION__, "interrupt num invalid"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",666,__FUNCTION__, "interrupt num invalid"); } } while(0); } while(0); return 0x102;} }while (0);
     return xQueueGenericReceive( ( QueueHandle_t ) ( context.events[pos] ), 
-# 647 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 667 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
           ((void *)0)
-# 647 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 667 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
           , ( wait ), ( ( BaseType_t ) 0 ) );
 }
 
@@ -7197,7 +7337,7 @@ esp_err_t sdio_slave_wait_int(int pos, TickType_t wait)
 uint8_t sdio_slave_read_reg(int pos)
 {
     if (pos >= 28 && pos <= 31) do { if ( 3 >= ESP_LOG_WARN ) do { if (ESP_LOG_WARN==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: ""%s: interrupt reg, for reference" "\033[0m" "\n", esp_log_timestamp(), TAG, __FUNCTION__, __FUNCTION__); } else if (ESP_LOG_WARN==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: ""%s: interrupt reg, for reference" "\033[0m" "\n", esp_log_timestamp(), TAG, __FUNCTION__, __FUNCTION__); } else if (ESP_LOG_WARN==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: ""%s: interrupt reg, for reference" "\033[0m" "\n", esp_log_timestamp(), TAG, __FUNCTION__, __FUNCTION__); } else if (ESP_LOG_WARN==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: ""%s: interrupt reg, for reference" "\033[0m" "\n", esp_log_timestamp(), TAG, __FUNCTION__, __FUNCTION__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: ""%s: interrupt reg, for reference" "\033[0m" "\n", esp_log_timestamp(), TAG, __FUNCTION__, __FUNCTION__); } } while(0); } while(0);
-    if (pos < 0 || pos >= 64) do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""read register address wrong" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",654,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""read register address wrong" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",654,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""read register address wrong" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",654,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""read register address wrong" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",654,__FUNCTION__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""read register address wrong" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",654,__FUNCTION__); } } while(0); } while(0);
+    if (pos < 0 || pos >= 64) do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""read register address wrong" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",674,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""read register address wrong" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",674,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""read register address wrong" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",674,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""read register address wrong" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",674,__FUNCTION__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""read register address wrong" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",674,__FUNCTION__); } } while(0); } while(0);
 
     return *(uint8_t*)(((0x3ff55000 + 0x6C)+pos+(pos>23?4:0)+(pos>31?12:0)));
 }
@@ -7205,11 +7345,11 @@ uint8_t sdio_slave_read_reg(int pos)
 esp_err_t sdio_slave_write_reg(int pos, uint8_t reg)
 {
     if (pos >= 28 && pos <= 31) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""interrupt reg, please use sdio_slave_clear_int" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",662,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""interrupt reg, please use sdio_slave_clear_int" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",662,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""interrupt reg, please use sdio_slave_clear_int" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",662,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""interrupt reg, please use sdio_slave_clear_int" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",662,__FUNCTION__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""interrupt reg, please use sdio_slave_clear_int" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",662,__FUNCTION__); } } while(0); } while(0);
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""interrupt reg, please use sdio_slave_clear_int" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",682,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""interrupt reg, please use sdio_slave_clear_int" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",682,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""interrupt reg, please use sdio_slave_clear_int" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",682,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""interrupt reg, please use sdio_slave_clear_int" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",682,__FUNCTION__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""interrupt reg, please use sdio_slave_clear_int" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",682,__FUNCTION__); } } while(0); } while(0);
         return 0x102;
     }
     if (pos < 0 || pos >= 64) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""write register address wrong" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",666,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""write register address wrong" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",666,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""write register address wrong" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",666,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""write register address wrong" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",666,__FUNCTION__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""write register address wrong" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",666,__FUNCTION__); } } while(0); } while(0);
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""write register address wrong" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",686,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""write register address wrong" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",686,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""write register address wrong" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",686,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""write register address wrong" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",686,__FUNCTION__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""write register address wrong" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",686,__FUNCTION__); } } while(0); } while(0);
         return 0x102;
     }
     uint32_t addr = ((0x3ff55000 + 0x6C)+pos+(pos>23?4:0)+(pos>31?12:0)) & (~3);
@@ -7239,11 +7379,11 @@ void sdio_slave_clear_host_int(uint8_t mask)
 
 esp_err_t sdio_slave_send_host_int(uint8_t pos)
 {
-    do { if(!(pos < 8)){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",696,__FUNCTION__, "interrupt num invalid"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",696,__FUNCTION__, "interrupt num invalid"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",696,__FUNCTION__, "interrupt num invalid"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",696,__FUNCTION__, "interrupt num invalid"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",696,__FUNCTION__, "interrupt num invalid"); } } while(0); } while(0); return 0x102;} }while (0);
+    do { if(!(pos < 8)){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",716,__FUNCTION__, "interrupt num invalid"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",716,__FUNCTION__, "interrupt num invalid"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",716,__FUNCTION__, "interrupt num invalid"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",716,__FUNCTION__, "interrupt num invalid"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",716,__FUNCTION__, "interrupt num invalid"); } } while(0); } while(0); return 0x102;} }while (0);
     SLC.intvec_tohost.slc0_intvec = (1UL << (pos));
     return 0;
 }
-# 710 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 730 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
 static inline void send_length_write(uint32_t len)
 {
     SLC.slc0_len_conf.val = (((len)<<0) & (0x000FFFFF)) | (((1)<<20) & (((1UL << (20)))));
@@ -7269,7 +7409,7 @@ static inline uint32_t send_length_read()
     return HOST.pkt_len.reg_slc0_len;
 }
 
-__attribute__((aligned(4))) __attribute__((section(".dram1"))) static const buf_desc_t start_desc = {
+__attribute__((aligned(4))) __attribute__((section(".dram1" "." "16"))) static const buf_desc_t start_desc = {
     .owner = 1,
     .buf = (void*)0x3ffbbbbb,
     .size = 1,
@@ -7324,34 +7464,34 @@ static esp_err_t send_start()
 {
     do { if(!(send_get_state() == STATE_IDLE)){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 789
-# 788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 809
+# 808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "already started"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 789
-# 788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 809
+# 808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "already started"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 789
-# 788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 809
+# 808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "already started"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 789
-# 788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 809
+# 808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "already started"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 789
-# 788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 809
+# 808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "already started"); } } while(0); } while(0); return 0x103;} }while (0)
                                                  ;
     SLC.slc0_int_clr.rx_eof = 1;
@@ -7375,33 +7515,33 @@ static inline esp_err_t send_isr_eof(int *yield)
     int ret = ( ( BaseType_t ) 1 );
     buf_desc_t *desc = context.in_flight;
     ((desc != 
-# 810 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 830 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
    ((void *)0)
-# 810 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 810, __func__, "desc != NULL"));
+# 830 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 830, __func__, "desc != NULL"));
 
     do {
         do { if (3 >= ESP_LOG_VERBOSE) { ets_printf( "V" " (%d) %s: " "end: %x" "\033[0m" "\n", esp_log_timestamp(), TAG, desc->arg); }} while(0);
         ret = xQueueGenericSendFromISR( ( context.ret_queue ), ( &desc->arg ), ( yield ), ( ( BaseType_t ) 0 ) );
-        ((ret == ( ( BaseType_t ) 1 )) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 815, __func__, "ret == pdTRUE"));
+        ((ret == ( ( BaseType_t ) 1 )) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 835, __func__, "ret == pdTRUE"));
         buf_desc_t* next = ((desc)->qe.stqe_next);
         desc = next;
     } while(desc!=
-# 818 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 838 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                  ((void *)0)
-# 818 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 838 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                      );
     ((context.in_flight_end)->qe.stqe_next) = context.in_flight_next;
     sdio_ringbuf_return_from_isr(&context.sendbuf, (uint8_t*)context.in_flight, yield);
     context.in_flight = 
-# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 841 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                        ((void *)0)
-# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 841 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                            ;
     context.in_flight_end = 
-# 822 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 842 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                            ((void *)0)
-# 822 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 842 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                ;
 
     send_set_state(STATE_WAIT_FOR_START);
@@ -7412,14 +7552,14 @@ static inline esp_err_t send_isr_check_new_pkt(int *yield)
 {
     esp_err_t ret;
     buf_desc_t *start = 
-# 831 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 851 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                        ((void *)0)
-# 831 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 851 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                            ;
     buf_desc_t *end = 
-# 832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 852 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                      ((void *)0)
-# 832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 852 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                          ;
     if (context.config.sending_mode == SDIO_SLAVE_SEND_PACKET) {
         ret = sdio_ringbuf_recv(&context.sendbuf, (uint8_t**)&start, (uint8_t**)&end, RINGBUF_GET_ONE, 0);
@@ -7433,9 +7573,9 @@ static inline esp_err_t send_isr_check_new_pkt(int *yield)
 
         context.in_flight_next = ((end)->qe.stqe_next);
         ((end)->qe.stqe_next) = 
-# 844 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 864 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                               ((void *)0)
-# 844 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 864 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                   ;
     }
     return 0;
@@ -7448,14 +7588,14 @@ static inline esp_err_t send_isr_new_packet()
     buf_desc_t *const start_desc = context.in_flight;
     buf_desc_t *const end_desc = context.in_flight_end;
     ((start_desc != 
-# 855 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 875 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
    ((void *)0) 
-# 855 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 875 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
    && end_desc != 
-# 855 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 875 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
    ((void *)0)
-# 855 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 855, __func__, "start_desc != NULL && end_desc != NULL"));
+# 875 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 875, __func__, "start_desc != NULL && end_desc != NULL"));
 
     send_stop_ll_operation();
     send_start_transmission(start_desc);
@@ -7482,7 +7622,7 @@ static void sdio_intr_send(void* arg)
     if (SLC.slc0_int_st.rx_eof) {
         SLC.slc0_int_clr.rx_eof = 1;
 
-        ((send_get_state() == STATE_SENDING) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 882, __func__, "send_get_state() == STATE_SENDING"));
+        ((send_get_state() == STATE_SENDING) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 902, __func__, "send_get_state() == STATE_SENDING"));
         send_isr_eof(&yield);
     }
 
@@ -7490,9 +7630,9 @@ static void sdio_intr_send(void* arg)
 
     if (send_get_state() == STATE_WAIT_FOR_START) {
         if (context.in_flight == 
-# 889 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                                 ((void *)0)
-# 889 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                     ) send_isr_check_new_pkt(&yield);
 
         if (context.in_flight) send_isr_new_packet();
@@ -7515,37 +7655,37 @@ esp_err_t send_write_desc(uint8_t* desc, void* arg)
 
 esp_err_t sdio_slave_send_queue(uint8_t* addr, size_t len, void* arg, TickType_t wait)
 {
-    do { if(!(len > 0)){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",911,__FUNCTION__, "len <= 0"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",911,__FUNCTION__, "len <= 0"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",911,__FUNCTION__, "len <= 0"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",911,__FUNCTION__, "len <= 0"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",911,__FUNCTION__, "len <= 0"); } } while(0); } while(0); return 0x102;} }while (0);
+    do { if(!(len > 0)){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",931,__FUNCTION__, "len <= 0"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",931,__FUNCTION__, "len <= 0"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",931,__FUNCTION__, "len <= 0"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",931,__FUNCTION__, "len <= 0"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",931,__FUNCTION__, "len <= 0"); } } while(0); } while(0); return 0x102;} }while (0);
     do { if(!(esp_ptr_dma_capable(addr) && (uint32_t)addr%4==0)){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 912 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 932 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 913
-# 912 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 933
+# 932 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "buffer to send should be DMA capable and 32-bit aligned"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 912 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 932 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 913
-# 912 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 933
+# 932 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "buffer to send should be DMA capable and 32-bit aligned"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 912 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 932 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 913
-# 912 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 933
+# 932 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "buffer to send should be DMA capable and 32-bit aligned"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 912 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 932 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 913
-# 912 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 933
+# 932 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "buffer to send should be DMA capable and 32-bit aligned"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 912 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 932 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 913
-# 912 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 933
+# 932 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "buffer to send should be DMA capable and 32-bit aligned"); } } while(0); } while(0); return 0x102;} }while (0)
                             ;
 
@@ -7569,9 +7709,9 @@ esp_err_t sdio_slave_send_queue(uint8_t* addr, size_t len, void* arg, TickType_t
 esp_err_t sdio_slave_send_get_finished(void** out_arg, TickType_t wait)
 {
     void* arg = 
-# 934 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 954 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                ((void *)0)
-# 934 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 954 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                    ;
     int err = xQueueGenericReceive( ( context.ret_queue ), ( &arg ), ( wait ), ( ( BaseType_t ) 0 ) );
     if (out_arg) *out_arg = arg;
@@ -7588,7 +7728,7 @@ esp_err_t sdio_slave_transmit(uint8_t* addr, size_t len)
     if (err != 0) return err;
     err = sdio_slave_send_get_finished((void**)&ret_stamp, ( TickType_t ) 0xffffffffUL);
     if (err != 0) return err;
-    do { if(!(ret_stamp == timestamp)){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",950,__FUNCTION__, "already sent without return before"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",950,__FUNCTION__, "already sent without return before"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",950,__FUNCTION__, "already sent without return before"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",950,__FUNCTION__, "already sent without return before"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",950,__FUNCTION__, "already sent without return before"); } } while(0); } while(0); return 0x103;} }while (0);
+    do { if(!(ret_stamp == timestamp)){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",970,__FUNCTION__, "already sent without return before"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",970,__FUNCTION__, "already sent without return before"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",970,__FUNCTION__, "already sent without return before"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",970,__FUNCTION__, "already sent without return before"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",970,__FUNCTION__, "already sent without return before"); } } while(0); } while(0); return 0x103;} }while (0);
 
     return 0;
 }
@@ -7599,51 +7739,51 @@ static esp_err_t send_flush_data()
 
     do { if(!(send_get_state() == STATE_IDLE)){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 979 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 960
-# 959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 980
+# 979 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "flush data when transmission started"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 979 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 960
-# 959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 980
+# 979 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "flush data when transmission started"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 979 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 960
-# 959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 980
+# 979 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "flush data when transmission started"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 979 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 960
-# 959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 980
+# 979 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "flush data when transmission started"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 979 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 960
-# 959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 980
+# 979 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "flush data when transmission started"); } } while(0); } while(0); return 0x103;} }while (0)
                                                                       ;
 
     HOST.slc0_int_clr.rx_new_packet = 1;
 
     buf_desc_t *last = 
-# 964 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 984 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                       ((void *)0)
-# 964 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 984 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                           ;
     if (context.in_flight) {
         buf_desc_t *desc = context.in_flight;
-        while(desc != 
-# 967 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
-                     ((void *)0)
-# 967 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-                         ) {
+        while (desc != 
+# 987 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+                      ((void *)0)
+# 987 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+                          ) {
             xQueueGenericSend( ( context.ret_queue ), ( &desc->arg ), ( ( TickType_t ) 0xffffffffUL ), ( ( BaseType_t ) 0 ) );
             last = desc;
             desc = ((desc)->qe.stqe_next);
@@ -7651,32 +7791,25 @@ static esp_err_t send_flush_data()
         ((context.in_flight_end)->qe.stqe_next) = context.in_flight_next;
         sdio_ringbuf_return(&context.sendbuf, (uint8_t*)context.in_flight);
         context.in_flight = 
-# 974 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 994 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                            ((void *)0)
-# 974 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 994 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                ;
         context.in_flight_end = 
-# 975 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                                ((void *)0)
-# 975 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                    ;
     }
 
-    buf_desc_t *head;
-    esp_err_t ret = sdio_ringbuf_recv(&context.sendbuf, (uint8_t**)&head, 
-# 979 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
-                                                                         ((void *)0)
-# 979 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-                                                                             , RINGBUF_GET_ALL, 0);
+    buf_desc_t *head, *tail;
+    esp_err_t ret = sdio_ringbuf_recv(&context.sendbuf, (uint8_t**)&head, (uint8_t**)&tail, RINGBUF_GET_ALL, 0);
     if (ret == 0) {
         buf_desc_t *desc = head;
-        while(desc != 
-# 982 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
-                     ((void *)0)
-# 982 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-                         ) {
+        while (1) {
             xQueueGenericSend( ( context.ret_queue ), ( &desc->arg ), ( ( TickType_t ) 0xffffffffUL ), ( ( BaseType_t ) 0 ) );
             last = desc;
+            if (desc == tail) break;
             desc = ((desc)->qe.stqe_next);
         }
         sdio_ringbuf_return(&context.sendbuf, (uint8_t*)head);
@@ -7688,9 +7821,9 @@ static esp_err_t send_flush_data()
     send_set_state(STATE_IDLE);
 
     if (last == 
-# 995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1016 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                ((void *)0)
-# 995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1016 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                    ) last = (buf_desc_t*)sdio_ringbuf_peek_rear(&context.sendbuf);
     last->pkt_len = send_length_read();
     return 0;
@@ -7701,34 +7834,34 @@ static esp_err_t send_reset_counter()
 {
     do { if(!(send_get_state() == STATE_IDLE)){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 1003 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1024 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 1004
-# 1003 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 1025
+# 1024 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "reset counter when transmission started"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 1003 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1024 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 1004
-# 1003 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 1025
+# 1024 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "reset counter when transmission started"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 1003 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1024 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 1004
-# 1003 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 1025
+# 1024 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "reset counter when transmission started"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 1003 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1024 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 1004
-# 1003 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 1025
+# 1024 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "reset counter when transmission started"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 1003 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1024 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 1004
-# 1003 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 1025
+# 1024 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "reset counter when transmission started"); } } while(0); } while(0); return 0x103;} }while (0)
                                                                          ;
 
@@ -7737,14 +7870,14 @@ static esp_err_t send_reset_counter()
     uint32_t last_cnt=0;
     buf_desc_t *desc = context.in_flight;
     buf_desc_t *last = 
-# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1031 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                       ((void *)0)
-# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1031 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                           ;
     while(desc != 
-# 1011 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1032 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                  ((void *)0)
-# 1011 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1032 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                      ) {
         last_cnt += desc->length;
         desc->pkt_len = last_cnt;
@@ -7755,9 +7888,9 @@ static esp_err_t send_reset_counter()
 
     desc = (buf_desc_t*)sdio_ringbuf_peek_front(&context.sendbuf);
     while(desc != 
-# 1020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1041 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                  ((void *)0)
-# 1020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1041 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                      ) {
         last_cnt += desc->length;
         desc->pkt_len = last_cnt;
@@ -7765,9 +7898,9 @@ static esp_err_t send_reset_counter()
         desc = ((desc)->qe.stqe_next);
     }
     if (last == 
-# 1026 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1047 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                ((void *)0)
-# 1026 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1047 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                    ) {
         last = (buf_desc_t*)sdio_ringbuf_peek_rear(&context.sendbuf);
         last->pkt_len = 0;
@@ -7775,7 +7908,7 @@ static esp_err_t send_reset_counter()
 
     return 0;
 }
-# 1043 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1064 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
 static inline void critical_enter_recv()
 {
     vTaskEnterCritical(&context.recv_spinlock);
@@ -7842,11 +7975,11 @@ static void recv_reset_counter()
     critical_enter_recv();
     buf_desc_t *desc = recv_get_first_empty_buf();
     while (desc != 
-# 1108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                   ((void *)0)
-# 1108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                       ) {
-        ((desc->owner == 1) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 1109, __func__, "desc->owner == 1"));
+        ((desc->owner == 1) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 1130, __func__, "desc->owner == 1"));
         recv_size_inc();
         desc = ((desc)->qe.stqe_next);
     }
@@ -7861,28 +7994,28 @@ static void recv_flush_data()
     critical_enter_recv();
     while(1) {
         int ret = xQueueGenericReceive( ( QueueHandle_t ) ( context.recv_event ), 
-# 1123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1144 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                            ((void *)0)
-# 1123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1144 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                            , ( 0 ), ( ( BaseType_t ) 0 ) );
         if (ret == ( ( BaseType_t ) 0 )) break;
 
         buf_desc_t *desc = ((queue)->stqh_first);
         ((desc != 
-# 1127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
        ((void *)0) 
-# 1127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-       && desc->owner == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 1127, __func__, "desc != NULL && desc->owner == 0"));
+# 1148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+       && desc->owner == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 1148, __func__, "desc != NULL && desc->owner == 0"));
         do { if (((((queue))->stqh_first) = (((((queue))->stqh_first))->qe.stqe_next)) == 
-# 1128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
        ((void *)0)
-# 1128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
        ) (queue)->stqh_last = &(((queue))->stqh_first); } while (0);
         desc->owner = 1;
         do { (((desc))->qe.stqe_next) = 
-# 1130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
        ((void *)0)
-# 1130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
        ; *(queue)->stqh_last = (desc); (queue)->stqh_last = &(((desc))->qe.stqe_next); } while (0);
         recv_size_inc();
 
@@ -7914,61 +8047,62 @@ esp_err_t sdio_slave_recv_load_buf(sdio_slave_buf_handle_t handle)
 {
     buf_desc_t *desc = (buf_desc_t*)handle;
     do { if (desc == 
-# 1160 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1181 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
    ((void *)0) 
-# 1160 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1181 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
    || !desc->not_receiving) { return 0x102; } } while(0);
 
     buf_stailq_t *const queue = &context.recv_link_list;
 
     critical_enter_recv();
+    ((desc->not_receiving) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 1186, __func__, "desc->not_receiving"));
     do { ; ; ; ; if (((((desc))->te.tqe_next)) != 
-# 1165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1187 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
    ((void *)0)
-# 1165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1187 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
    ) (((desc))->te.tqe_next)->te.tqe_prev = (desc)->te.tqe_prev; else { (&context.recv_reg_list)->tqh_last = (desc)->te.tqe_prev; ; } *(desc)->te.tqe_prev = (((desc))->te.tqe_next); ; ; ; } while (0);
     desc->owner = 1;
     desc->not_receiving = 0;
 
     buf_desc_t *const tail = ((((queue))->stqh_first == 
-# 1169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                             ((void *)0)
-# 1169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                             ) ? 
-# 1169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                             ((void *)0) 
-# 1169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                             : ((struct buf_desc_s *)(void *) ((char *)((queue)->stqh_last) - 
-# 1169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                             __builtin_offsetof (
-# 1169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                             struct buf_desc_s
-# 1169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                             , 
-# 1169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                             qe
-# 1169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                             )
-# 1169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                             )));
 
     do { (((desc))->qe.stqe_next) = 
-# 1171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
    ((void *)0)
-# 1171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
    ; *(queue)->stqh_last = (desc); (queue)->stqh_last = &(((desc))->qe.stqe_next); } while (0);
     if (context.recv_cur_ret == 
-# 1172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                                ((void *)0)
-# 1172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                    ) {
         context.recv_cur_ret = desc;
     }
 
     if (tail == 
-# 1176 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                ((void *)0)
-# 1176 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                    ) {
 
         SLC.slc0_tx_link.addr = (uint32_t)desc;
@@ -7989,51 +8123,51 @@ sdio_slave_buf_handle_t sdio_slave_recv_register_buf(uint8_t *start)
 {
     do { if(!(esp_ptr_dma_capable(start) && (uint32_t)start%4==0)){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 1194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 1195
-# 1194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 1217
+# 1216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "buffer to register should be DMA capable and 32-bit aligned"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 1194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 1195
-# 1194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 1217
+# 1216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "buffer to register should be DMA capable and 32-bit aligned"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 1194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 1195
-# 1194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 1217
+# 1216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "buffer to register should be DMA capable and 32-bit aligned"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 1194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 1195
-# 1194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 1217
+# 1216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "buffer to register should be DMA capable and 32-bit aligned"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-# 1194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,
- 1195
-# 1194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+ 1217
+# 1216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
     ,__FUNCTION__, "buffer to register should be DMA capable and 32-bit aligned"); } } while(0); } while(0); return 
-# 1194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
    ((void *)0)
-# 1194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
    ;} }while (0)
                                                                             ;
     buf_desc_t *desc = (buf_desc_t*)malloc(sizeof(buf_desc_t));
     if (desc == 
-# 1197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                ((void *)0)
-# 1197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                    ) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""cannot allocate lldesc for new buffer" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",1198,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""cannot allocate lldesc for new buffer" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",1198,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""cannot allocate lldesc for new buffer" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",1198,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""cannot allocate lldesc for new buffer" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",1198,__FUNCTION__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""cannot allocate lldesc for new buffer" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",1198,__FUNCTION__); } } while(0); } while(0);
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""cannot allocate lldesc for new buffer" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",1220,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""cannot allocate lldesc for new buffer" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",1220,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""cannot allocate lldesc for new buffer" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",1220,__FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""cannot allocate lldesc for new buffer" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",1220,__FUNCTION__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""cannot allocate lldesc for new buffer" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",1220,__FUNCTION__); } } while(0); } while(0);
         return 
-# 1199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
               ((void *)0)
-# 1199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                   ;
     }
 
@@ -8045,9 +8179,9 @@ sdio_slave_buf_handle_t sdio_slave_recv_register_buf(uint8_t *start)
     };
     critical_enter_recv();
     do { ; (((desc))->te.tqe_next) = 
-# 1209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
    ((void *)0)
-# 1209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
    ; (desc)->te.tqe_prev = (&context.recv_reg_list)->tqh_last; *(&context.recv_reg_list)->tqh_last = (desc); (&context.recv_reg_list)->tqh_last = &(((desc))->te.tqe_next); ; ; } while (0);
     critical_exit_recv();
     return desc;
@@ -8056,14 +8190,14 @@ sdio_slave_buf_handle_t sdio_slave_recv_register_buf(uint8_t *start)
 esp_err_t sdio_slave_recv(sdio_slave_buf_handle_t* handle_ret, uint8_t **out_addr, size_t *out_len, TickType_t wait)
 {
     do { if(!(handle_ret != 
-# 1216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1238 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
    ((void *)0)
-# 1216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-   )){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",1216,__FUNCTION__, "handle address cannot be 0"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",1216,__FUNCTION__, "handle address cannot be 0"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",1216,__FUNCTION__, "handle address cannot be 0"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",1216,__FUNCTION__, "handle address cannot be 0"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",1216,__FUNCTION__, "handle address cannot be 0"); } } while(0); } while(0); return 0x102;} }while (0);
+# 1238 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+   )){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",1238,__FUNCTION__, "handle address cannot be 0"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",1238,__FUNCTION__, "handle address cannot be 0"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",1238,__FUNCTION__, "handle address cannot be 0"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",1238,__FUNCTION__, "handle address cannot be 0"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):""%s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c",1238,__FUNCTION__, "handle address cannot be 0"); } } while(0); } while(0); return 0x102;} }while (0);
     int ret = xQueueGenericReceive( ( QueueHandle_t ) ( context.recv_event ), 
-# 1217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1239 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                        ((void *)0)
-# 1217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1239 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                        , ( wait ), ( ( BaseType_t ) 0 ) );
     if (ret == ( ( BaseType_t ) 0 )) return 0x107;
 
@@ -8073,22 +8207,22 @@ esp_err_t sdio_slave_recv(sdio_slave_buf_handle_t* handle_ret, uint8_t **out_add
 
     buf_desc_t *desc = ((queue)->stqh_first);
     do { if (((((queue))->stqh_first) = (((((queue))->stqh_first))->qe.stqe_next)) == 
-# 1225 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1247 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
    ((void *)0)
-# 1225 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1247 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
    ) (queue)->stqh_last = &(((queue))->stqh_first); } while (0);
     do { ; (((desc))->te.tqe_next) = 
-# 1226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
    ((void *)0)
-# 1226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
    ; (desc)->te.tqe_prev = (&context.recv_reg_list)->tqh_last; *(&context.recv_reg_list)->tqh_last = (desc); (&context.recv_reg_list)->tqh_last = &(((desc))->te.tqe_next); ; ; } while (0);
     critical_exit_recv();
 
     ((desc != 
-# 1229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
    ((void *)0) 
-# 1229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
-   && desc->owner == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 1229, __func__, "desc != NULL && desc->owner == 0"));
+# 1251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+   && desc->owner == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c", 1251, __func__, "desc != NULL && desc->owner == 0"));
     *handle_ret = (sdio_slave_buf_handle_t)desc;
     if (out_addr) *out_addr = desc->buf;
     if (out_len) *out_len = desc->length;
@@ -8099,16 +8233,16 @@ esp_err_t sdio_slave_recv_unregister_buf(sdio_slave_buf_handle_t handle)
 {
     buf_desc_t *desc = (buf_desc_t*)handle;
     do { if (desc == 
-# 1239 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
    ((void *)0) 
-# 1239 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
    || !desc->not_receiving) { return 0x102; } } while(0);
 
     critical_enter_recv();
     do { ; ; ; ; if (((((desc))->te.tqe_next)) != 
-# 1242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1264 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
    ((void *)0)
-# 1242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1264 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
    ) (((desc))->te.tqe_next)->te.tqe_prev = (desc)->te.tqe_prev; else { (&context.recv_reg_list)->tqh_last = (desc)->te.tqe_prev; ; } *(desc)->te.tqe_prev = (((desc))->te.tqe_next); ; ; ; } while (0);
     critical_exit_recv();
     free(desc);
@@ -8119,19 +8253,25 @@ uint8_t* sdio_slave_recv_get_buf(sdio_slave_buf_handle_t handle, size_t *len_o)
 {
     buf_desc_t *desc = (buf_desc_t*)handle;
     if (handle == 
-# 1251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1273 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                  ((void *)0)
-# 1251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1273 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                      ) return 
-# 1251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1273 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                               ((void *)0)
-# 1251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1273 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                                   ;
 
     if (len_o!= 
-# 1253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
+# 1275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c" 3 4
                ((void *)0)
-# 1253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
+# 1275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdio_slave.c"
                    ) *len_o= desc->length;
     return desc->buf;
+}
+
+static void __attribute((unused)) sdio_slave_recv_get_loaded_buffer_num()
+{
+    buf_stailq_t *const queue = &context.recv_link_list;
+    dump_queue(queue);
 }

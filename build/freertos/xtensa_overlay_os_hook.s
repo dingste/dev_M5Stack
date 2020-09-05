@@ -8,7 +8,7 @@
 	.global	xt_overlay_init_os
 	.type	xt_overlay_init_os, @function
 xt_overlay_init_os:
-.LFB17:
+.LFB26:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/xtensa_overlay_os_hook.c"
 	.loc 1 42 0
 	entry	sp, 32
@@ -20,7 +20,7 @@ xt_overlay_init_os:
 	l32r	a8, .LC0
 	s32i.n	a10, a8, 0
 	retw.n
-.LFE17:
+.LFE26:
 	.size	xt_overlay_init_os, .-xt_overlay_init_os
 	.section	.text.xt_overlay_lock,"ax",@progbits
 	.literal_position
@@ -29,7 +29,7 @@ xt_overlay_init_os:
 	.global	xt_overlay_lock
 	.type	xt_overlay_lock, @function
 xt_overlay_lock:
-.LFB18:
+.LFB27:
 	.loc 1 54 0
 	entry	sp, 32
 .LCFI1:
@@ -42,7 +42,7 @@ xt_overlay_lock:
 	call8	xQueueGenericReceive
 .LVL1:
 	retw.n
-.LFE18:
+.LFE27:
 	.size	xt_overlay_lock, .-xt_overlay_lock
 	.section	.text.xt_overlay_unlock,"ax",@progbits
 	.literal_position
@@ -51,7 +51,7 @@ xt_overlay_lock:
 	.global	xt_overlay_unlock
 	.type	xt_overlay_unlock, @function
 xt_overlay_unlock:
-.LFB19:
+.LFB28:
 	.loc 1 63 0
 	entry	sp, 32
 .LCFI2:
@@ -64,7 +64,7 @@ xt_overlay_unlock:
 	call8	xQueueGenericSend
 .LVL2:
 	retw.n
-.LFE19:
+.LFE28:
 	.size	xt_overlay_unlock, .-xt_overlay_unlock
 	.section	.bss.xt_overlay_mutex,"aw",@nobits
 	.align	4
@@ -91,10 +91,10 @@ xt_overlay_mutex:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.byte	0x4
-	.4byte	.LCFI0-.LFB17
+	.4byte	.LCFI0-.LFB26
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -103,10 +103,10 @@ xt_overlay_mutex:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI1-.LFB18
+	.4byte	.LCFI1-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -115,10 +115,10 @@ xt_overlay_mutex:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI2-.LFB19
+	.4byte	.LCFI2-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -242,8 +242,8 @@ xt_overlay_mutex:
 	.4byte	.LASF20
 	.byte	0x1
 	.byte	0x29
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xff
@@ -261,8 +261,8 @@ xt_overlay_mutex:
 	.4byte	.LASF21
 	.byte	0x1
 	.byte	0x35
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x12e
@@ -290,8 +290,8 @@ xt_overlay_mutex:
 	.4byte	.LASF22
 	.byte	0x1
 	.byte	0x3e
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x15d
@@ -486,22 +486,22 @@ xt_overlay_mutex:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB17
-	.4byte	.LFE17
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB19
-	.4byte	.LFE19
+	.4byte	.LFB26
+	.4byte	.LFE26
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB28
+	.4byte	.LFE28
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

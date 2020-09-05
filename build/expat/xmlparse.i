@@ -3,7 +3,7 @@
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
 # 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
@@ -13,7 +13,7 @@ typedef int ptrdiff_t;
 typedef unsigned int size_t;
 # 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef short unsigned int wchar_t;
-# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 1
 # 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
@@ -542,7 +542,7 @@ char *strsignal (int __signo);
 # 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
 
 
-# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h"
        
@@ -819,12 +819,12 @@ void __assert (const char *, int, const char *) __attribute__ ((__noreturn__))
 void __assert_func (const char *, int, const char *, const char *) __attribute__ ((__noreturn__))
                                  ;
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
-# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
+# 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 1
 # 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed/limits.h" 1 3 4
 # 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 2
-# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
+# 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 1
 # 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
@@ -1408,9 +1408,9 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
-# 42 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
+# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
 
 
 
@@ -1447,7 +1447,7 @@ int utimes (const char *__path, const struct timeval *__tvp);
 int getitimer (int __which, struct itimerval *__value);
 int setitimer (int __which, const struct itimerval *restrict __value, struct itimerval *restrict __ovalue)
                                             ;
-# 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/unistd.h" 1
 
@@ -1665,7 +1665,7 @@ int unlinkat (int, const char *, int);
 int truncate (const char *, off_t __length);
 int gethostname (char *__name, size_t __len);
 # 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/unistd.h" 2
-# 50 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
+# 57 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/fcntl.h" 1
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/fcntl.h" 1
 
@@ -1863,7 +1863,7 @@ extern int fcntl (int, int, ...);
 extern int flock (int, int);
 # 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/fcntl.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/fcntl.h" 2
-# 51 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
+# 58 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/errno.h" 1
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/errno.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/errno.h" 1
@@ -1886,7 +1886,7 @@ extern const char * const _sys_errlist[];
 extern int _sys_nerr;
 # 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/errno.h" 2
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/errno.h" 2
-# 52 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
+# 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
 
 
 
@@ -1895,21 +1895,26 @@ extern int _sys_nerr;
 
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/port/include/expat_config.h" 1
-# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
 
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/ascii.h" 1
-# 63 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
+# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h" 1
-# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat_external.h" 1
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat_external.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat_external.h"
 typedef char XML_Char;
 typedef char XML_LChar;
-# 154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat_external.h"
+
+
+
+
+
+
 typedef long XML_Index;
 typedef unsigned long XML_Size;
-# 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h" 2
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h" 2
 
 
 
@@ -1919,7 +1924,7 @@ struct XML_ParserStruct;
 typedef struct XML_ParserStruct *XML_Parser;
 
 typedef unsigned char XML_Bool;
-# 72 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+# 63 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
 enum XML_Status {
   XML_STATUS_ERROR = 0,
 
@@ -1993,51 +1998,42 @@ enum XML_Content_Quant {
   XML_CQUANT_REP,
   XML_CQUANT_PLUS
 };
-# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
 typedef struct XML_cp XML_Content;
 
 struct XML_cp {
   enum XML_Content_Type type;
   enum XML_Content_Quant quant;
-  XML_Char * name;
+  XML_Char *name;
   unsigned int numchildren;
-  XML_Content * children;
+  XML_Content *children;
 };
 
 
 
 
 
+typedef void( *XML_ElementDeclHandler)(void *userData,
+                                              const XML_Char *name,
+                                              XML_Content *model);
 
-typedef void ( *XML_ElementDeclHandler) (void *userData,
-                                                const XML_Char *name,
-                                                XML_Content *model);
+ void
+XML_SetElementDeclHandler(XML_Parser parser, XML_ElementDeclHandler eldecl);
+# 184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+typedef void( *XML_AttlistDeclHandler)(
+    void *userData, const XML_Char *elname, const XML_Char *attname,
+    const XML_Char *att_type, const XML_Char *dflt, int isrequired);
 
-__attribute__ ((visibility ("default"))) void
-XML_SetElementDeclHandler(XML_Parser parser,
-                          XML_ElementDeclHandler eldecl);
-# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-typedef void ( *XML_AttlistDeclHandler) (
-                                    void *userData,
-                                    const XML_Char *elname,
-                                    const XML_Char *attname,
-                                    const XML_Char *att_type,
-                                    const XML_Char *dflt,
-                                    int isrequired);
+ void
+XML_SetAttlistDeclHandler(XML_Parser parser, XML_AttlistDeclHandler attdecl);
+# 199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+typedef void( *XML_XmlDeclHandler)(void *userData,
+                                          const XML_Char *version,
+                                          const XML_Char *encoding,
+                                          int standalone);
 
-__attribute__ ((visibility ("default"))) void
-XML_SetAttlistDeclHandler(XML_Parser parser,
-                          XML_AttlistDeclHandler attdecl);
-# 215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-typedef void ( *XML_XmlDeclHandler) (void *userData,
-                                            const XML_Char *version,
-                                            const XML_Char *encoding,
-                                            int standalone);
-
-__attribute__ ((visibility ("default"))) void
-XML_SetXmlDeclHandler(XML_Parser parser,
-                      XML_XmlDeclHandler xmldecl);
-
+ void
+XML_SetXmlDeclHandler(XML_Parser parser, XML_XmlDeclHandler xmldecl);
 
 typedef struct {
   void *(*malloc_fcn)(size_t size);
@@ -2048,102 +2044,86 @@ typedef struct {
 
 
 
-__attribute__ ((visibility ("default"))) XML_Parser
+ XML_Parser
 XML_ParserCreate(const XML_Char *encoding);
-# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-__attribute__ ((visibility ("default"))) XML_Parser
+# 230 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+ XML_Parser
 XML_ParserCreateNS(const XML_Char *encoding, XML_Char namespaceSeparator);
-# 261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-__attribute__ ((visibility ("default"))) XML_Parser
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+ XML_Parser
 XML_ParserCreate_MM(const XML_Char *encoding,
                     const XML_Memory_Handling_Suite *memsuite,
                     const XML_Char *namespaceSeparator);
-# 275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-__attribute__ ((visibility ("default"))) XML_Bool
+# 256 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+ XML_Bool
 XML_ParserReset(XML_Parser parser, const XML_Char *encoding);
 
 
 
 
-typedef void ( *XML_StartElementHandler) (void *userData,
-                                                 const XML_Char *name,
-                                                 const XML_Char **atts);
+typedef void( *XML_StartElementHandler)(void *userData,
+                                               const XML_Char *name,
+                                               const XML_Char **atts);
 
-typedef void ( *XML_EndElementHandler) (void *userData,
-                                               const XML_Char *name);
-
-
-
-typedef void ( *XML_CharacterDataHandler) (void *userData,
-                                                  const XML_Char *s,
-                                                  int len);
+typedef void( *XML_EndElementHandler)(void *userData,
+                                             const XML_Char *name);
 
 
-typedef void ( *XML_ProcessingInstructionHandler) (
-                                                void *userData,
-                                                const XML_Char *target,
-                                                const XML_Char *data);
+typedef void( *XML_CharacterDataHandler)(void *userData,
+                                                const XML_Char *s, int len);
 
 
-typedef void ( *XML_CommentHandler) (void *userData,
-                                            const XML_Char *data);
+typedef void( *XML_ProcessingInstructionHandler)(void *userData,
+                                                        const XML_Char *target,
+                                                        const XML_Char *data);
 
-typedef void ( *XML_StartCdataSectionHandler) (void *userData);
-typedef void ( *XML_EndCdataSectionHandler) (void *userData);
-# 320 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-typedef void ( *XML_DefaultHandler) (void *userData,
-                                            const XML_Char *s,
-                                            int len);
+
+typedef void( *XML_CommentHandler)(void *userData, const XML_Char *data);
+
+typedef void( *XML_StartCdataSectionHandler)(void *userData);
+typedef void( *XML_EndCdataSectionHandler)(void *userData);
+# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+typedef void( *XML_DefaultHandler)(void *userData, const XML_Char *s,
+                                          int len);
 
 
 
 
-typedef void ( *XML_StartDoctypeDeclHandler) (
-                                            void *userData,
-                                            const XML_Char *doctypeName,
-                                            const XML_Char *sysid,
-                                            const XML_Char *pubid,
-                                            int has_internal_subset);
+typedef void( *XML_StartDoctypeDeclHandler)(void *userData,
+                                                   const XML_Char *doctypeName,
+                                                   const XML_Char *sysid,
+                                                   const XML_Char *pubid,
+                                                   int has_internal_subset);
 
 
 
 
 
-typedef void ( *XML_EndDoctypeDeclHandler)(void *userData);
-# 358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-typedef void ( *XML_EntityDeclHandler) (
-                              void *userData,
-                              const XML_Char *entityName,
-                              int is_parameter_entity,
-                              const XML_Char *value,
-                              int value_length,
-                              const XML_Char *base,
-                              const XML_Char *systemId,
-                              const XML_Char *publicId,
-                              const XML_Char *notationName);
+typedef void( *XML_EndDoctypeDeclHandler)(void *userData);
+# 333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+typedef void( *XML_EntityDeclHandler)(
+    void *userData, const XML_Char *entityName, int is_parameter_entity,
+    const XML_Char *value, int value_length, const XML_Char *base,
+    const XML_Char *systemId, const XML_Char *publicId,
+    const XML_Char *notationName);
 
-__attribute__ ((visibility ("default"))) void
-XML_SetEntityDeclHandler(XML_Parser parser,
-                         XML_EntityDeclHandler handler);
-# 382 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-typedef void ( *XML_UnparsedEntityDeclHandler) (
-                                    void *userData,
-                                    const XML_Char *entityName,
-                                    const XML_Char *base,
-                                    const XML_Char *systemId,
-                                    const XML_Char *publicId,
-                                    const XML_Char *notationName);
+ void
+XML_SetEntityDeclHandler(XML_Parser parser, XML_EntityDeclHandler handler);
+# 351 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+typedef void( *XML_UnparsedEntityDeclHandler)(
+    void *userData, const XML_Char *entityName, const XML_Char *base,
+    const XML_Char *systemId, const XML_Char *publicId,
+    const XML_Char *notationName);
 
 
 
 
 
-typedef void ( *XML_NotationDeclHandler) (
-                                    void *userData,
-                                    const XML_Char *notationName,
-                                    const XML_Char *base,
-                                    const XML_Char *systemId,
-                                    const XML_Char *publicId);
+typedef void( *XML_NotationDeclHandler)(void *userData,
+                                               const XML_Char *notationName,
+                                               const XML_Char *base,
+                                               const XML_Char *systemId,
+                                               const XML_Char *publicId);
 
 
 
@@ -2151,75 +2131,66 @@ typedef void ( *XML_NotationDeclHandler) (
 
 
 
-typedef void ( *XML_StartNamespaceDeclHandler) (
-                                    void *userData,
-                                    const XML_Char *prefix,
-                                    const XML_Char *uri);
+typedef void( *XML_StartNamespaceDeclHandler)(void *userData,
+                                                     const XML_Char *prefix,
+                                                     const XML_Char *uri);
 
-typedef void ( *XML_EndNamespaceDeclHandler) (
-                                    void *userData,
-                                    const XML_Char *prefix);
-# 425 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-typedef int ( *XML_NotStandaloneHandler) (void *userData);
-# 461 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-typedef int ( *XML_ExternalEntityRefHandler) (
-                                    XML_Parser parser,
-                                    const XML_Char *context,
-                                    const XML_Char *base,
-                                    const XML_Char *systemId,
-                                    const XML_Char *publicId);
-# 478 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-typedef void ( *XML_SkippedEntityHandler) (
-                                    void *userData,
-                                    const XML_Char *entityName,
-                                    int is_parameter_entity);
-# 535 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+typedef void( *XML_EndNamespaceDeclHandler)(void *userData,
+                                                   const XML_Char *prefix);
+# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+typedef int( *XML_NotStandaloneHandler)(void *userData);
+# 424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+typedef int( *XML_ExternalEntityRefHandler)(XML_Parser parser,
+                                                   const XML_Char *context,
+                                                   const XML_Char *base,
+                                                   const XML_Char *systemId,
+                                                   const XML_Char *publicId);
+# 440 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+typedef void( *XML_SkippedEntityHandler)(void *userData,
+                                                const XML_Char *entityName,
+                                                int is_parameter_entity);
+# 496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
 typedef struct {
   int map[256];
   void *data;
-  int ( *convert)(void *data, const char *s);
-  void ( *release)(void *data);
+  int( *convert)(void *data, const char *s);
+  void( *release)(void *data);
 } XML_Encoding;
-# 557 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-typedef int ( *XML_UnknownEncodingHandler) (
-                                    void *encodingHandlerData,
-                                    const XML_Char *name,
-                                    XML_Encoding *info);
+# 518 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+typedef int( *XML_UnknownEncodingHandler)(void *encodingHandlerData,
+                                                 const XML_Char *name,
+                                                 XML_Encoding *info);
 
-__attribute__ ((visibility ("default"))) void
-XML_SetElementHandler(XML_Parser parser,
-                      XML_StartElementHandler start,
+ void
+XML_SetElementHandler(XML_Parser parser, XML_StartElementHandler start,
                       XML_EndElementHandler end);
 
-__attribute__ ((visibility ("default"))) void
-XML_SetStartElementHandler(XML_Parser parser,
-                           XML_StartElementHandler handler);
+ void
+XML_SetStartElementHandler(XML_Parser parser, XML_StartElementHandler handler);
 
-__attribute__ ((visibility ("default"))) void
-XML_SetEndElementHandler(XML_Parser parser,
-                         XML_EndElementHandler handler);
+ void
+XML_SetEndElementHandler(XML_Parser parser, XML_EndElementHandler handler);
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_SetCharacterDataHandler(XML_Parser parser,
                             XML_CharacterDataHandler handler);
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_SetProcessingInstructionHandler(XML_Parser parser,
                                     XML_ProcessingInstructionHandler handler);
-__attribute__ ((visibility ("default"))) void
-XML_SetCommentHandler(XML_Parser parser,
-                      XML_CommentHandler handler);
+ void
+XML_SetCommentHandler(XML_Parser parser, XML_CommentHandler handler);
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_SetCdataSectionHandler(XML_Parser parser,
                            XML_StartCdataSectionHandler start,
                            XML_EndCdataSectionHandler end);
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_SetStartCdataSectionHandler(XML_Parser parser,
                                 XML_StartCdataSectionHandler start);
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_SetEndCdataSectionHandler(XML_Parser parser,
                               XML_EndCdataSectionHandler end);
 
@@ -2227,57 +2198,52 @@ XML_SetEndCdataSectionHandler(XML_Parser parser,
 
 
 
-__attribute__ ((visibility ("default"))) void
-XML_SetDefaultHandler(XML_Parser parser,
-                      XML_DefaultHandler handler);
+ void
+XML_SetDefaultHandler(XML_Parser parser, XML_DefaultHandler handler);
 
 
 
 
 
-__attribute__ ((visibility ("default"))) void
-XML_SetDefaultHandlerExpand(XML_Parser parser,
-                            XML_DefaultHandler handler);
+ void
+XML_SetDefaultHandlerExpand(XML_Parser parser, XML_DefaultHandler handler);
 
-__attribute__ ((visibility ("default"))) void
-XML_SetDoctypeDeclHandler(XML_Parser parser,
-                          XML_StartDoctypeDeclHandler start,
+ void
+XML_SetDoctypeDeclHandler(XML_Parser parser, XML_StartDoctypeDeclHandler start,
                           XML_EndDoctypeDeclHandler end);
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_SetStartDoctypeDeclHandler(XML_Parser parser,
                                XML_StartDoctypeDeclHandler start);
 
-__attribute__ ((visibility ("default"))) void
-XML_SetEndDoctypeDeclHandler(XML_Parser parser,
-                             XML_EndDoctypeDeclHandler end);
+ void
+XML_SetEndDoctypeDeclHandler(XML_Parser parser, XML_EndDoctypeDeclHandler end);
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_SetUnparsedEntityDeclHandler(XML_Parser parser,
                                  XML_UnparsedEntityDeclHandler handler);
 
-__attribute__ ((visibility ("default"))) void
-XML_SetNotationDeclHandler(XML_Parser parser,
-                           XML_NotationDeclHandler handler);
+ void
+XML_SetNotationDeclHandler(XML_Parser parser, XML_NotationDeclHandler handler);
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_SetNamespaceDeclHandler(XML_Parser parser,
                             XML_StartNamespaceDeclHandler start,
                             XML_EndNamespaceDeclHandler end);
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_SetStartNamespaceDeclHandler(XML_Parser parser,
                                  XML_StartNamespaceDeclHandler start);
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_SetEndNamespaceDeclHandler(XML_Parser parser,
                                XML_EndNamespaceDeclHandler end);
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_SetNotStandaloneHandler(XML_Parser parser,
                             XML_NotStandaloneHandler handler);
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_SetExternalEntityRefHandler(XML_Parser parser,
                                 XML_ExternalEntityRefHandler handler);
 
@@ -2285,15 +2251,14 @@ XML_SetExternalEntityRefHandler(XML_Parser parser,
 
 
 
-__attribute__ ((visibility ("default"))) void
-XML_SetExternalEntityRefHandlerArg(XML_Parser parser,
-                                   void *arg);
+ void
+XML_SetExternalEntityRefHandlerArg(XML_Parser parser, void *arg);
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_SetSkippedEntityHandler(XML_Parser parser,
                             XML_SkippedEntityHandler handler);
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_SetUnknownEncodingHandler(XML_Parser parser,
                               XML_UnknownEncodingHandler handler,
                               void *encodingHandlerData);
@@ -2302,33 +2267,33 @@ XML_SetUnknownEncodingHandler(XML_Parser parser,
 
 
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_DefaultCurrent(XML_Parser parser);
-# 695 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-__attribute__ ((visibility ("default"))) void
+# 645 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+ void
 XML_SetReturnNSTriplet(XML_Parser parser, int do_nst);
 
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_SetUserData(XML_Parser parser, void *userData);
-# 711 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-__attribute__ ((visibility ("default"))) enum XML_Status
+# 661 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+ enum XML_Status
 XML_SetEncoding(XML_Parser parser, const XML_Char *encoding);
 
 
 
 
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_UseParserAsHandlerArg(XML_Parser parser);
-# 740 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-__attribute__ ((visibility ("default"))) enum XML_Error
+# 690 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+ enum XML_Error
 XML_UseForeignDTD(XML_Parser parser, XML_Bool useDTD);
-# 752 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-__attribute__ ((visibility ("default"))) enum XML_Status
+# 701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+ enum XML_Status
 XML_SetBase(XML_Parser parser, const XML_Char *base);
 
-__attribute__ ((visibility ("default"))) const XML_Char *
+ const XML_Char *
 XML_GetBase(XML_Parser parser);
 
 
@@ -2337,7 +2302,7 @@ XML_GetBase(XML_Parser parser);
 
 
 
-__attribute__ ((visibility ("default"))) int
+ int
 XML_GetSpecifiedAttributeCount(XML_Parser parser);
 
 
@@ -2346,30 +2311,25 @@ XML_GetSpecifiedAttributeCount(XML_Parser parser);
 
 
 
-__attribute__ ((visibility ("default"))) int
+ int
 XML_GetIdAttributeIndex(XML_Parser parser);
-# 808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-__attribute__ ((visibility ("default"))) enum XML_Status
+# 757 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+ enum XML_Status
 XML_Parse(XML_Parser parser, const char *s, int len, int isFinal);
 
-__attribute__ ((visibility ("default"))) void *
+ void *
 XML_GetBuffer(XML_Parser parser, int len);
 
-__attribute__ ((visibility ("default"))) enum XML_Status
+ enum XML_Status
 XML_ParseBuffer(XML_Parser parser, int len, int isFinal);
-# 848 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-__attribute__ ((visibility ("default"))) enum XML_Status
+# 797 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+ enum XML_Status
 XML_StopParser(XML_Parser parser, XML_Bool resumable);
-# 863 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-__attribute__ ((visibility ("default"))) enum XML_Status
+# 812 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+ enum XML_Status
 XML_ResumeParser(XML_Parser parser);
 
-enum XML_Parsing {
-  XML_INITIALIZED,
-  XML_PARSING,
-  XML_FINISHED,
-  XML_SUSPENDED
-};
+enum XML_Parsing { XML_INITIALIZED, XML_PARSING, XML_FINISHED, XML_SUSPENDED };
 
 typedef struct {
   enum XML_Parsing parsing;
@@ -2381,12 +2341,11 @@ typedef struct {
 
 
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_GetParsingStatus(XML_Parser parser, XML_ParsingStatus *status);
-# 902 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-__attribute__ ((visibility ("default"))) XML_Parser
-XML_ExternalEntityParserCreate(XML_Parser parser,
-                               const XML_Char *context,
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+ XML_Parser
+XML_ExternalEntityParserCreate(XML_Parser parser, const XML_Char *context,
                                const XML_Char *encoding);
 
 enum XML_ParamEntityParsing {
@@ -2394,8 +2353,8 @@ enum XML_ParamEntityParsing {
   XML_PARAM_ENTITY_PARSING_UNLESS_STANDALONE,
   XML_PARAM_ENTITY_PARSING_ALWAYS
 };
-# 937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-__attribute__ ((visibility ("default"))) int
+# 880 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+ int
 XML_SetParamEntityParsing(XML_Parser parser,
                           enum XML_ParamEntityParsing parsing);
 
@@ -2405,30 +2364,27 @@ XML_SetParamEntityParsing(XML_Parser parser,
 
 
 
-__attribute__ ((visibility ("default"))) int
-XML_SetHashSalt(XML_Parser parser,
-                unsigned long hash_salt);
+ int
+XML_SetHashSalt(XML_Parser parser, unsigned long hash_salt);
 
 
 
 
-__attribute__ ((visibility ("default"))) enum XML_Error
+ enum XML_Error
 XML_GetErrorCode(XML_Parser parser);
-# 977 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-__attribute__ ((visibility ("default"))) XML_Size XML_GetCurrentLineNumber(XML_Parser parser);
-__attribute__ ((visibility ("default"))) XML_Size XML_GetCurrentColumnNumber(XML_Parser parser);
-__attribute__ ((visibility ("default"))) XML_Index XML_GetCurrentByteIndex(XML_Parser parser);
+# 919 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+ XML_Size XML_GetCurrentLineNumber(XML_Parser parser);
+ XML_Size XML_GetCurrentColumnNumber(XML_Parser parser);
+ XML_Index XML_GetCurrentByteIndex(XML_Parser parser);
 
 
 
 
-__attribute__ ((visibility ("default"))) int
+ int
 XML_GetCurrentByteCount(XML_Parser parser);
-# 997 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
-__attribute__ ((visibility ("default"))) const char *
-XML_GetInputContext(XML_Parser parser,
-                    int *offset,
-                    int *size);
+# 939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat.h"
+ const char *
+XML_GetInputContext(XML_Parser parser, int *offset, int *size);
 
 
 
@@ -2436,32 +2392,32 @@ XML_GetInputContext(XML_Parser parser,
 
 
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_FreeContentModel(XML_Parser parser, XML_Content *model);
 
 
-__attribute__ ((visibility ("default"))) void *
+ void *
 __attribute__((__malloc__))
 __attribute__((__alloc_size__(2)))
 XML_MemMalloc(XML_Parser parser, size_t size);
 
-__attribute__ ((visibility ("default"))) void *
+ void *
 __attribute__((__alloc_size__(3)))
 XML_MemRealloc(XML_Parser parser, void *ptr, size_t size);
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_MemFree(XML_Parser parser, void *ptr);
 
 
-__attribute__ ((visibility ("default"))) void
+ void
 XML_ParserFree(XML_Parser parser);
 
 
-__attribute__ ((visibility ("default"))) const XML_LChar *
+ const XML_LChar *
 XML_ErrorString(enum XML_Error code);
 
 
-__attribute__ ((visibility ("default"))) const XML_LChar *
+ const XML_LChar *
 XML_ExpatVersion(void);
 
 typedef struct {
@@ -2473,7 +2429,7 @@ typedef struct {
 
 
 
-__attribute__ ((visibility ("default"))) XML_Expat_Version
+ XML_Expat_Version
 XML_ExpatVersionInfo(void);
 
 
@@ -2498,13 +2454,13 @@ typedef struct {
   long int value;
 } XML_Feature;
 
-__attribute__ ((visibility ("default"))) const XML_Feature *
+ const XML_Feature *
 XML_GetFeatureList(void);
-# 64 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/siphash.h" 1
-# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/siphash.h"
+# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/siphash.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/siphash.h" 2
+# 99 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/siphash.h" 2
 
 
 
@@ -2590,237 +2546,246 @@ typedef __uint_least64_t uint_least64_t;
 
 typedef __intptr_t intptr_t;
 typedef __uintptr_t uintptr_t;
-# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/siphash.h" 2
-# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/siphash.h"
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/siphash.h" 2
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/siphash.h"
 struct siphash {
- uint64_t v0, v1, v2, v3;
+  uint64_t v0, v1, v2, v3;
 
- unsigned char buf[8], *p;
- uint64_t c;
+  unsigned char buf[8], *p;
+  uint64_t c;
 };
-
 
 
 
 struct sipkey {
- uint64_t k[2];
+  uint64_t k[2];
 };
 
 
 
-static struct sipkey *sip_tokey(struct sipkey *key, const void *src) {
- key->k[0] = (((uint64_t)(((const unsigned char *)src)[0]) << 0) | ((uint64_t)(((const unsigned char *)src)[1]) << 8) | ((uint64_t)(((const unsigned char *)src)[2]) << 16) | ((uint64_t)(((const unsigned char *)src)[3]) << 24) | ((uint64_t)(((const unsigned char *)src)[4]) << 32) | ((uint64_t)(((const unsigned char *)src)[5]) << 40) | ((uint64_t)(((const unsigned char *)src)[6]) << 48) | ((uint64_t)(((const unsigned char *)src)[7]) << 56));
- key->k[1] = (((uint64_t)(((const unsigned char *)src + 8)[0]) << 0) | ((uint64_t)(((const unsigned char *)src + 8)[1]) << 8) | ((uint64_t)(((const unsigned char *)src + 8)[2]) << 16) | ((uint64_t)(((const unsigned char *)src + 8)[3]) << 24) | ((uint64_t)(((const unsigned char *)src + 8)[4]) << 32) | ((uint64_t)(((const unsigned char *)src + 8)[5]) << 40) | ((uint64_t)(((const unsigned char *)src + 8)[6]) << 48) | ((uint64_t)(((const unsigned char *)src + 8)[7]) << 56));
- return key;
+static struct sipkey *
+sip_tokey(struct sipkey *key, const void *src) {
+  key->k[0] = (((uint64_t)(((const unsigned char *)src)[0]) << 0) | ((uint64_t)(((const unsigned char *)src)[1]) << 8) | ((uint64_t)(((const unsigned char *)src)[2]) << 16) | ((uint64_t)(((const unsigned char *)src)[3]) << 24) | ((uint64_t)(((const unsigned char *)src)[4]) << 32) | ((uint64_t)(((const unsigned char *)src)[5]) << 40) | ((uint64_t)(((const unsigned char *)src)[6]) << 48) | ((uint64_t)(((const unsigned char *)src)[7]) << 56));
+  key->k[1] = (((uint64_t)(((const unsigned char *)src + 8)[0]) << 0) | ((uint64_t)(((const unsigned char *)src + 8)[1]) << 8) | ((uint64_t)(((const unsigned char *)src + 8)[2]) << 16) | ((uint64_t)(((const unsigned char *)src + 8)[3]) << 24) | ((uint64_t)(((const unsigned char *)src + 8)[4]) << 32) | ((uint64_t)(((const unsigned char *)src + 8)[5]) << 40) | ((uint64_t)(((const unsigned char *)src + 8)[6]) << 48) | ((uint64_t)(((const unsigned char *)src + 8)[7]) << 56));
+  return key;
+}
+# 171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/siphash.h"
+static void
+sip_round(struct siphash *H, const int rounds) {
+  int i;
+
+  for (i = 0; i < rounds; i++) {
+    H->v0 += H->v1;
+    H->v1 = (uint64_t)(((H->v1) << (13)) | ((H->v1) >> (64 - (13))));
+    H->v1 ^= H->v0;
+    H->v0 = (uint64_t)(((H->v0) << (32)) | ((H->v0) >> (64 - (32))));
+
+    H->v2 += H->v3;
+    H->v3 = (uint64_t)(((H->v3) << (16)) | ((H->v3) >> (64 - (16))));
+    H->v3 ^= H->v2;
+
+    H->v0 += H->v3;
+    H->v3 = (uint64_t)(((H->v3) << (21)) | ((H->v3) >> (64 - (21))));
+    H->v3 ^= H->v0;
+
+    H->v2 += H->v1;
+    H->v1 = (uint64_t)(((H->v1) << (17)) | ((H->v1) >> (64 - (17))));
+    H->v1 ^= H->v2;
+    H->v2 = (uint64_t)(((H->v2) << (32)) | ((H->v2) >> (64 - (32))));
+  }
 }
 
-
-
-
-static void *sip_tobin(void *dst, uint64_t u64) {
- (((unsigned char *)dst) + 0)[0] = (uint8_t)(((uint32_t)((u64) >> 0)) >> 0); (((unsigned char *)dst) + 0)[1] = (uint8_t)(((uint32_t)((u64) >> 0)) >> 8); (((unsigned char *)dst) + 0)[2] = (uint8_t)(((uint32_t)((u64) >> 0)) >> 16); (((unsigned char *)dst) + 0)[3] = (uint8_t)(((uint32_t)((u64) >> 0)) >> 24);; (((unsigned char *)dst) + 4)[0] = (uint8_t)(((uint32_t)((u64) >> 32)) >> 0); (((unsigned char *)dst) + 4)[1] = (uint8_t)(((uint32_t)((u64) >> 32)) >> 8); (((unsigned char *)dst) + 4)[2] = (uint8_t)(((uint32_t)((u64) >> 32)) >> 16); (((unsigned char *)dst) + 4)[3] = (uint8_t)(((uint32_t)((u64) >> 32)) >> 24);;;
- return dst;
-}
-
-
-static void sip_round(struct siphash *H, const int rounds) {
- int i;
-
- for (i = 0; i < rounds; i++) {
-  H->v0 += H->v1;
-  H->v1 = (uint64_t)(((H->v1) << (13)) | ( (H->v1) >> (64 - (13))));
-  H->v1 ^= H->v0;
-  H->v0 = (uint64_t)(((H->v0) << (32)) | ( (H->v0) >> (64 - (32))));
-
-  H->v2 += H->v3;
-  H->v3 = (uint64_t)(((H->v3) << (16)) | ( (H->v3) >> (64 - (16))));
-  H->v3 ^= H->v2;
-
-  H->v0 += H->v3;
-  H->v3 = (uint64_t)(((H->v3) << (21)) | ( (H->v3) >> (64 - (21))));
-  H->v3 ^= H->v0;
-
-  H->v2 += H->v1;
-  H->v1 = (uint64_t)(((H->v1) << (17)) | ( (H->v1) >> (64 - (17))));
-  H->v1 ^= H->v2;
-  H->v2 = (uint64_t)(((H->v2) << (32)) | ( (H->v2) >> (64 - (32))));
- }
-}
-
-
-static struct siphash *sip24_init(struct siphash *H,
-  const struct sipkey *key) {
- H->v0 = (((uint64_t)0x736f6d65U << 32) | 0x70736575U) ^ key->k[0];
- H->v1 = (((uint64_t)0x646f7261U << 32) | 0x6e646f6dU) ^ key->k[1];
- H->v2 = (((uint64_t)0x6c796765U << 32) | 0x6e657261U) ^ key->k[0];
- H->v3 = (((uint64_t)0x74656462U << 32) | 0x79746573U) ^ key->k[1];
-
- H->p = H->buf;
- H->c = 0;
-
- return H;
-}
-
-
-
-
-static struct siphash *sip24_update(struct siphash *H, const void *src,
-  size_t len) {
- const unsigned char *p = (const unsigned char *)src, *pe = p + len;
- uint64_t m;
-
- do {
-  while (p < pe && H->p < (&(H->buf)[sizeof (H->buf) / sizeof *(H->buf)]))
-   *H->p++ = *p++;
-
-  if (H->p < (&(H->buf)[sizeof (H->buf) / sizeof *(H->buf)]))
-   break;
-
-  m = (((uint64_t)((H->buf)[0]) << 0) | ((uint64_t)((H->buf)[1]) << 8) | ((uint64_t)((H->buf)[2]) << 16) | ((uint64_t)((H->buf)[3]) << 24) | ((uint64_t)((H->buf)[4]) << 32) | ((uint64_t)((H->buf)[5]) << 40) | ((uint64_t)((H->buf)[6]) << 48) | ((uint64_t)((H->buf)[7]) << 56));
-  H->v3 ^= m;
-  sip_round(H, 2);
-  H->v0 ^= m;
+static struct siphash *
+sip24_init(struct siphash *H, const struct sipkey *key) {
+  H->v0 = (((uint64_t)0x736f6d65U << 32) | 0x70736575U) ^ key->k[0];
+  H->v1 = (((uint64_t)0x646f7261U << 32) | 0x6e646f6dU) ^ key->k[1];
+  H->v2 = (((uint64_t)0x6c796765U << 32) | 0x6e657261U) ^ key->k[0];
+  H->v3 = (((uint64_t)0x74656462U << 32) | 0x79746573U) ^ key->k[1];
 
   H->p = H->buf;
-  H->c += 8;
- } while (p < pe);
+  H->c = 0;
 
- return H;
+  return H;
 }
 
 
-static uint64_t sip24_final(struct siphash *H) {
- const char left = (char)(H->p - H->buf);
- uint64_t b = (H->c + left) << 56;
 
- switch (left) {
- case 7: b |= (uint64_t)H->buf[6] << 48;
- case 6: b |= (uint64_t)H->buf[5] << 40;
- case 5: b |= (uint64_t)H->buf[4] << 32;
- case 4: b |= (uint64_t)H->buf[3] << 24;
- case 3: b |= (uint64_t)H->buf[2] << 16;
- case 2: b |= (uint64_t)H->buf[1] << 8;
- case 1: b |= (uint64_t)H->buf[0] << 0;
- case 0: break;
- }
+static struct siphash *
+sip24_update(struct siphash *H, const void *src, size_t len) {
+  const unsigned char *p = (const unsigned char *)src, *pe = p + len;
+  uint64_t m;
 
- H->v3 ^= b;
- sip_round(H, 2);
- H->v0 ^= b;
- H->v2 ^= 0xff;
- sip_round(H, 4);
+  do {
+    while (p < pe && H->p < (&(H->buf)[sizeof(H->buf) / sizeof *(H->buf)]))
+      *H->p++ = *p++;
 
- return H->v0 ^ H->v1 ^ H->v2 ^ H->v3;
+    if (H->p < (&(H->buf)[sizeof(H->buf) / sizeof *(H->buf)]))
+      break;
+
+    m = (((uint64_t)((H->buf)[0]) << 0) | ((uint64_t)((H->buf)[1]) << 8) | ((uint64_t)((H->buf)[2]) << 16) | ((uint64_t)((H->buf)[3]) << 24) | ((uint64_t)((H->buf)[4]) << 32) | ((uint64_t)((H->buf)[5]) << 40) | ((uint64_t)((H->buf)[6]) << 48) | ((uint64_t)((H->buf)[7]) << 56));
+    H->v3 ^= m;
+    sip_round(H, 2);
+    H->v0 ^= m;
+
+    H->p = H->buf;
+    H->c += 8;
+  } while (p < pe);
+
+  return H;
 }
 
+static uint64_t
+sip24_final(struct siphash *H) {
+  const char left = (char)(H->p - H->buf);
+  uint64_t b = (H->c + left) << 56;
 
-static uint64_t siphash24(const void *src, size_t len,
-  const struct sipkey *key) {
- struct siphash state = { 0, 0, 0, 0, { 0 }, 0, 0 };
- return sip24_final(sip24_update(sip24_init(&state, key), src, len));
+  switch (left) {
+  case 7:
+    b |= (uint64_t)H->buf[6] << 48;
+
+  case 6:
+    b |= (uint64_t)H->buf[5] << 40;
+
+  case 5:
+    b |= (uint64_t)H->buf[4] << 32;
+
+  case 4:
+    b |= (uint64_t)H->buf[3] << 24;
+
+  case 3:
+    b |= (uint64_t)H->buf[2] << 16;
+
+  case 2:
+    b |= (uint64_t)H->buf[1] << 8;
+
+  case 1:
+    b |= (uint64_t)H->buf[0] << 0;
+
+  case 0:
+    break;
+  }
+
+  H->v3 ^= b;
+  sip_round(H, 2);
+  H->v0 ^= b;
+  H->v2 ^= 0xff;
+  sip_round(H, 4);
+
+  return H->v0 ^ H->v1 ^ H->v2 ^ H->v3;
 }
-# 271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/siphash.h"
-static int sip24_valid(void) {
- static const unsigned char vectors[64][8] = {
-  { 0x31, 0x0e, 0x0e, 0xdd, 0x47, 0xdb, 0x6f, 0x72, },
-  { 0xfd, 0x67, 0xdc, 0x93, 0xc5, 0x39, 0xf8, 0x74, },
-  { 0x5a, 0x4f, 0xa9, 0xd9, 0x09, 0x80, 0x6c, 0x0d, },
-  { 0x2d, 0x7e, 0xfb, 0xd7, 0x96, 0x66, 0x67, 0x85, },
-  { 0xb7, 0x87, 0x71, 0x27, 0xe0, 0x94, 0x27, 0xcf, },
-  { 0x8d, 0xa6, 0x99, 0xcd, 0x64, 0x55, 0x76, 0x18, },
-  { 0xce, 0xe3, 0xfe, 0x58, 0x6e, 0x46, 0xc9, 0xcb, },
-  { 0x37, 0xd1, 0x01, 0x8b, 0xf5, 0x00, 0x02, 0xab, },
-  { 0x62, 0x24, 0x93, 0x9a, 0x79, 0xf5, 0xf5, 0x93, },
-  { 0xb0, 0xe4, 0xa9, 0x0b, 0xdf, 0x82, 0x00, 0x9e, },
-  { 0xf3, 0xb9, 0xdd, 0x94, 0xc5, 0xbb, 0x5d, 0x7a, },
-  { 0xa7, 0xad, 0x6b, 0x22, 0x46, 0x2f, 0xb3, 0xf4, },
-  { 0xfb, 0xe5, 0x0e, 0x86, 0xbc, 0x8f, 0x1e, 0x75, },
-  { 0x90, 0x3d, 0x84, 0xc0, 0x27, 0x56, 0xea, 0x14, },
-  { 0xee, 0xf2, 0x7a, 0x8e, 0x90, 0xca, 0x23, 0xf7, },
-  { 0xe5, 0x45, 0xbe, 0x49, 0x61, 0xca, 0x29, 0xa1, },
-  { 0xdb, 0x9b, 0xc2, 0x57, 0x7f, 0xcc, 0x2a, 0x3f, },
-  { 0x94, 0x47, 0xbe, 0x2c, 0xf5, 0xe9, 0x9a, 0x69, },
-  { 0x9c, 0xd3, 0x8d, 0x96, 0xf0, 0xb3, 0xc1, 0x4b, },
-  { 0xbd, 0x61, 0x79, 0xa7, 0x1d, 0xc9, 0x6d, 0xbb, },
-  { 0x98, 0xee, 0xa2, 0x1a, 0xf2, 0x5c, 0xd6, 0xbe, },
-  { 0xc7, 0x67, 0x3b, 0x2e, 0xb0, 0xcb, 0xf2, 0xd0, },
-  { 0x88, 0x3e, 0xa3, 0xe3, 0x95, 0x67, 0x53, 0x93, },
-  { 0xc8, 0xce, 0x5c, 0xcd, 0x8c, 0x03, 0x0c, 0xa8, },
-  { 0x94, 0xaf, 0x49, 0xf6, 0xc6, 0x50, 0xad, 0xb8, },
-  { 0xea, 0xb8, 0x85, 0x8a, 0xde, 0x92, 0xe1, 0xbc, },
-  { 0xf3, 0x15, 0xbb, 0x5b, 0xb8, 0x35, 0xd8, 0x17, },
-  { 0xad, 0xcf, 0x6b, 0x07, 0x63, 0x61, 0x2e, 0x2f, },
-  { 0xa5, 0xc9, 0x1d, 0xa7, 0xac, 0xaa, 0x4d, 0xde, },
-  { 0x71, 0x65, 0x95, 0x87, 0x66, 0x50, 0xa2, 0xa6, },
-  { 0x28, 0xef, 0x49, 0x5c, 0x53, 0xa3, 0x87, 0xad, },
-  { 0x42, 0xc3, 0x41, 0xd8, 0xfa, 0x92, 0xd8, 0x32, },
-  { 0xce, 0x7c, 0xf2, 0x72, 0x2f, 0x51, 0x27, 0x71, },
-  { 0xe3, 0x78, 0x59, 0xf9, 0x46, 0x23, 0xf3, 0xa7, },
-  { 0x38, 0x12, 0x05, 0xbb, 0x1a, 0xb0, 0xe0, 0x12, },
-  { 0xae, 0x97, 0xa1, 0x0f, 0xd4, 0x34, 0xe0, 0x15, },
-  { 0xb4, 0xa3, 0x15, 0x08, 0xbe, 0xff, 0x4d, 0x31, },
-  { 0x81, 0x39, 0x62, 0x29, 0xf0, 0x90, 0x79, 0x02, },
-  { 0x4d, 0x0c, 0xf4, 0x9e, 0xe5, 0xd4, 0xdc, 0xca, },
-  { 0x5c, 0x73, 0x33, 0x6a, 0x76, 0xd8, 0xbf, 0x9a, },
-  { 0xd0, 0xa7, 0x04, 0x53, 0x6b, 0xa9, 0x3e, 0x0e, },
-  { 0x92, 0x59, 0x58, 0xfc, 0xd6, 0x42, 0x0c, 0xad, },
-  { 0xa9, 0x15, 0xc2, 0x9b, 0xc8, 0x06, 0x73, 0x18, },
-  { 0x95, 0x2b, 0x79, 0xf3, 0xbc, 0x0a, 0xa6, 0xd4, },
-  { 0xf2, 0x1d, 0xf2, 0xe4, 0x1d, 0x45, 0x35, 0xf9, },
-  { 0x87, 0x57, 0x75, 0x19, 0x04, 0x8f, 0x53, 0xa9, },
-  { 0x10, 0xa5, 0x6c, 0xf5, 0xdf, 0xcd, 0x9a, 0xdb, },
-  { 0xeb, 0x75, 0x09, 0x5c, 0xcd, 0x98, 0x6c, 0xd0, },
-  { 0x51, 0xa9, 0xcb, 0x9e, 0xcb, 0xa3, 0x12, 0xe6, },
-  { 0x96, 0xaf, 0xad, 0xfc, 0x2c, 0xe6, 0x66, 0xc7, },
-  { 0x72, 0xfe, 0x52, 0x97, 0x5a, 0x43, 0x64, 0xee, },
-  { 0x5a, 0x16, 0x45, 0xb2, 0x76, 0xd5, 0x92, 0xa1, },
-  { 0xb2, 0x74, 0xcb, 0x8e, 0xbf, 0x87, 0x87, 0x0a, },
-  { 0x6f, 0x9b, 0xb4, 0x20, 0x3d, 0xe7, 0xb3, 0x81, },
-  { 0xea, 0xec, 0xb2, 0xa3, 0x0b, 0x22, 0xa8, 0x7f, },
-  { 0x99, 0x24, 0xa4, 0x3c, 0xc1, 0x31, 0x57, 0x24, },
-  { 0xbd, 0x83, 0x8d, 0x3a, 0xaf, 0xbf, 0x8d, 0xb7, },
-  { 0x0b, 0x1a, 0x2a, 0x32, 0x65, 0xd5, 0x1a, 0xea, },
-  { 0x13, 0x50, 0x79, 0xa3, 0x23, 0x1c, 0xe6, 0x60, },
-  { 0x93, 0x2b, 0x28, 0x46, 0xe4, 0xd7, 0x06, 0x66, },
-  { 0xe1, 0x91, 0x5f, 0x5c, 0xb1, 0xec, 0xa4, 0x6c, },
-  { 0xf3, 0x25, 0x96, 0x5c, 0xa1, 0x6d, 0x62, 0x9f, },
-  { 0x57, 0x5f, 0xf2, 0x8e, 0x60, 0x38, 0x1b, 0xe5, },
-  { 0x72, 0x45, 0x06, 0xeb, 0x4c, 0x32, 0x8a, 0x95, }
- };
- unsigned char in[64];
- struct sipkey k;
- size_t i;
 
- sip_tokey(&k, "\000\001\002\003\004\005\006\007\010\011"
-   "\012\013\014\015\016\017");
-
- for (i = 0; i < sizeof in; ++i) {
-  in[i] = (unsigned char)i;
-
-  if (siphash24(in, i, &k) != (((uint64_t)((vectors[i])[0]) << 0) | ((uint64_t)((vectors[i])[1]) << 8) | ((uint64_t)((vectors[i])[2]) << 16) | ((uint64_t)((vectors[i])[3]) << 24) | ((uint64_t)((vectors[i])[4]) << 32) | ((uint64_t)((vectors[i])[5]) << 40) | ((uint64_t)((vectors[i])[6]) << 48) | ((uint64_t)((vectors[i])[7]) << 56)))
-   return 0;
- }
-
- return 1;
+static uint64_t
+siphash24(const void *src, size_t len, const struct sipkey *key) {
+  struct siphash state = { 0, 0, 0, 0, {0}, 0, 0 };
+  return sip24_final(sip24_update(sip24_init(&state, key), src, len));
 }
-# 65 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
+# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/siphash.h"
+static int
+sip24_valid(void) {
+
+  static const unsigned char vectors[64][8] = {
+    { 0x31, 0x0e, 0x0e, 0xdd, 0x47, 0xdb, 0x6f, 0x72, },
+    { 0xfd, 0x67, 0xdc, 0x93, 0xc5, 0x39, 0xf8, 0x74, },
+    { 0x5a, 0x4f, 0xa9, 0xd9, 0x09, 0x80, 0x6c, 0x0d, },
+    { 0x2d, 0x7e, 0xfb, 0xd7, 0x96, 0x66, 0x67, 0x85, },
+    { 0xb7, 0x87, 0x71, 0x27, 0xe0, 0x94, 0x27, 0xcf, },
+    { 0x8d, 0xa6, 0x99, 0xcd, 0x64, 0x55, 0x76, 0x18, },
+    { 0xce, 0xe3, 0xfe, 0x58, 0x6e, 0x46, 0xc9, 0xcb, },
+    { 0x37, 0xd1, 0x01, 0x8b, 0xf5, 0x00, 0x02, 0xab, },
+    { 0x62, 0x24, 0x93, 0x9a, 0x79, 0xf5, 0xf5, 0x93, },
+    { 0xb0, 0xe4, 0xa9, 0x0b, 0xdf, 0x82, 0x00, 0x9e, },
+    { 0xf3, 0xb9, 0xdd, 0x94, 0xc5, 0xbb, 0x5d, 0x7a, },
+    { 0xa7, 0xad, 0x6b, 0x22, 0x46, 0x2f, 0xb3, 0xf4, },
+    { 0xfb, 0xe5, 0x0e, 0x86, 0xbc, 0x8f, 0x1e, 0x75, },
+    { 0x90, 0x3d, 0x84, 0xc0, 0x27, 0x56, 0xea, 0x14, },
+    { 0xee, 0xf2, 0x7a, 0x8e, 0x90, 0xca, 0x23, 0xf7, },
+    { 0xe5, 0x45, 0xbe, 0x49, 0x61, 0xca, 0x29, 0xa1, },
+    { 0xdb, 0x9b, 0xc2, 0x57, 0x7f, 0xcc, 0x2a, 0x3f, },
+    { 0x94, 0x47, 0xbe, 0x2c, 0xf5, 0xe9, 0x9a, 0x69, },
+    { 0x9c, 0xd3, 0x8d, 0x96, 0xf0, 0xb3, 0xc1, 0x4b, },
+    { 0xbd, 0x61, 0x79, 0xa7, 0x1d, 0xc9, 0x6d, 0xbb, },
+    { 0x98, 0xee, 0xa2, 0x1a, 0xf2, 0x5c, 0xd6, 0xbe, },
+    { 0xc7, 0x67, 0x3b, 0x2e, 0xb0, 0xcb, 0xf2, 0xd0, },
+    { 0x88, 0x3e, 0xa3, 0xe3, 0x95, 0x67, 0x53, 0x93, },
+    { 0xc8, 0xce, 0x5c, 0xcd, 0x8c, 0x03, 0x0c, 0xa8, },
+    { 0x94, 0xaf, 0x49, 0xf6, 0xc6, 0x50, 0xad, 0xb8, },
+    { 0xea, 0xb8, 0x85, 0x8a, 0xde, 0x92, 0xe1, 0xbc, },
+    { 0xf3, 0x15, 0xbb, 0x5b, 0xb8, 0x35, 0xd8, 0x17, },
+    { 0xad, 0xcf, 0x6b, 0x07, 0x63, 0x61, 0x2e, 0x2f, },
+    { 0xa5, 0xc9, 0x1d, 0xa7, 0xac, 0xaa, 0x4d, 0xde, },
+    { 0x71, 0x65, 0x95, 0x87, 0x66, 0x50, 0xa2, 0xa6, },
+    { 0x28, 0xef, 0x49, 0x5c, 0x53, 0xa3, 0x87, 0xad, },
+    { 0x42, 0xc3, 0x41, 0xd8, 0xfa, 0x92, 0xd8, 0x32, },
+    { 0xce, 0x7c, 0xf2, 0x72, 0x2f, 0x51, 0x27, 0x71, },
+    { 0xe3, 0x78, 0x59, 0xf9, 0x46, 0x23, 0xf3, 0xa7, },
+    { 0x38, 0x12, 0x05, 0xbb, 0x1a, 0xb0, 0xe0, 0x12, },
+    { 0xae, 0x97, 0xa1, 0x0f, 0xd4, 0x34, 0xe0, 0x15, },
+    { 0xb4, 0xa3, 0x15, 0x08, 0xbe, 0xff, 0x4d, 0x31, },
+    { 0x81, 0x39, 0x62, 0x29, 0xf0, 0x90, 0x79, 0x02, },
+    { 0x4d, 0x0c, 0xf4, 0x9e, 0xe5, 0xd4, 0xdc, 0xca, },
+    { 0x5c, 0x73, 0x33, 0x6a, 0x76, 0xd8, 0xbf, 0x9a, },
+    { 0xd0, 0xa7, 0x04, 0x53, 0x6b, 0xa9, 0x3e, 0x0e, },
+    { 0x92, 0x59, 0x58, 0xfc, 0xd6, 0x42, 0x0c, 0xad, },
+    { 0xa9, 0x15, 0xc2, 0x9b, 0xc8, 0x06, 0x73, 0x18, },
+    { 0x95, 0x2b, 0x79, 0xf3, 0xbc, 0x0a, 0xa6, 0xd4, },
+    { 0xf2, 0x1d, 0xf2, 0xe4, 0x1d, 0x45, 0x35, 0xf9, },
+    { 0x87, 0x57, 0x75, 0x19, 0x04, 0x8f, 0x53, 0xa9, },
+    { 0x10, 0xa5, 0x6c, 0xf5, 0xdf, 0xcd, 0x9a, 0xdb, },
+    { 0xeb, 0x75, 0x09, 0x5c, 0xcd, 0x98, 0x6c, 0xd0, },
+    { 0x51, 0xa9, 0xcb, 0x9e, 0xcb, 0xa3, 0x12, 0xe6, },
+    { 0x96, 0xaf, 0xad, 0xfc, 0x2c, 0xe6, 0x66, 0xc7, },
+    { 0x72, 0xfe, 0x52, 0x97, 0x5a, 0x43, 0x64, 0xee, },
+    { 0x5a, 0x16, 0x45, 0xb2, 0x76, 0xd5, 0x92, 0xa1, },
+    { 0xb2, 0x74, 0xcb, 0x8e, 0xbf, 0x87, 0x87, 0x0a, },
+    { 0x6f, 0x9b, 0xb4, 0x20, 0x3d, 0xe7, 0xb3, 0x81, },
+    { 0xea, 0xec, 0xb2, 0xa3, 0x0b, 0x22, 0xa8, 0x7f, },
+    { 0x99, 0x24, 0xa4, 0x3c, 0xc1, 0x31, 0x57, 0x24, },
+    { 0xbd, 0x83, 0x8d, 0x3a, 0xaf, 0xbf, 0x8d, 0xb7, },
+    { 0x0b, 0x1a, 0x2a, 0x32, 0x65, 0xd5, 0x1a, 0xea, },
+    { 0x13, 0x50, 0x79, 0xa3, 0x23, 0x1c, 0xe6, 0x60, },
+    { 0x93, 0x2b, 0x28, 0x46, 0xe4, 0xd7, 0x06, 0x66, },
+    { 0xe1, 0x91, 0x5f, 0x5c, 0xb1, 0xec, 0xa4, 0x6c, },
+    { 0xf3, 0x25, 0x96, 0x5c, 0xa1, 0x6d, 0x62, 0x9f, },
+    { 0x57, 0x5f, 0xf2, 0x8e, 0x60, 0x38, 0x1b, 0xe5, },
+    { 0x72, 0x45, 0x06, 0xeb, 0x4c, 0x32, 0x8a, 0x95, }
+  };
+
+
+  unsigned char in[64];
+  struct sipkey k;
+  size_t i;
+
+  sip_tokey(&k, "\000\001\002\003\004\005\006\007\010\011"
+                "\012\013\014\015\016\017");
+
+  for (i = 0; i < sizeof in; ++i) {
+    in[i] = (unsigned char)i;
+
+    if (siphash24(in, i, &k) != (((uint64_t)((vectors[i])[0]) << 0) | ((uint64_t)((vectors[i])[1]) << 8) | ((uint64_t)((vectors[i])[2]) << 16) | ((uint64_t)((vectors[i])[3]) << 24) | ((uint64_t)((vectors[i])[4]) << 32) | ((uint64_t)((vectors[i])[5]) << 40) | ((uint64_t)((vectors[i])[6]) << 48) | ((uint64_t)((vectors[i])[7]) << 56)))
+      return 0;
+  }
+
+  return 1;
+}
+# 72 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
 
 
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/sys/random.h" 1
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/sys/random.h"
 ssize_t getrandom(void *buf, size_t buflen, unsigned int flags);
-# 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
+# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
 typedef char ICHAR;
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/internal.h" 1
-# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/internal.h"
+# 117 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/internal.h"
 void
-_INTERNAL_trim_to_complete_utf8_characters(const char * from, const char ** fromLimRef);
-# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
+_INTERNAL_trim_to_complete_utf8_characters(const char *from,
+                                           const char **fromLimRef);
+# 172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.h" 1
-# 140 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.h"
 typedef struct position {
 
   XML_Size lineNumber;
@@ -2837,72 +2802,56 @@ typedef struct {
 struct encoding;
 typedef struct encoding ENCODING;
 
-typedef int ( *SCANNER)(const ENCODING *,
-                               const char *,
-                               const char *,
-                               const char **);
+typedef int( *SCANNER)(const ENCODING *, const char *, const char *,
+                              const char **);
 
 enum XML_Convert_Result {
   XML_CONVERT_COMPLETED = 0,
   XML_CONVERT_INPUT_INCOMPLETE = 1,
-  XML_CONVERT_OUTPUT_EXHAUSTED = 2
+  XML_CONVERT_OUTPUT_EXHAUSTED
+  = 2
 };
 
 struct encoding {
   SCANNER scanners[4];
   SCANNER literalScanners[2];
-  int ( *nameMatchesAscii)(const ENCODING *,
-                                  const char *,
-                                  const char *,
-                                  const char *);
-  int ( *nameLength)(const ENCODING *, const char *);
+  int( *nameMatchesAscii)(const ENCODING *, const char *, const char *,
+                                 const char *);
+  int( *nameLength)(const ENCODING *, const char *);
   const char *( *skipS)(const ENCODING *, const char *);
-  int ( *getAtts)(const ENCODING *enc,
-                         const char *ptr,
-                         int attsMax,
-                         ATTRIBUTE *atts);
-  int ( *charRefNumber)(const ENCODING *enc, const char *ptr);
-  int ( *predefinedEntityName)(const ENCODING *,
-                                      const char *,
-                                      const char *);
-  void ( *updatePosition)(const ENCODING *,
-                                 const char *ptr,
-                                 const char *end,
-                                 POSITION *);
-  int ( *isPublicId)(const ENCODING *enc,
-                            const char *ptr,
-                            const char *end,
-                            const char **badPtr);
-  enum XML_Convert_Result ( *utf8Convert)(const ENCODING *enc,
-                              const char **fromP,
-                              const char *fromLim,
-                              char **toP,
-                              const char *toLim);
-  enum XML_Convert_Result ( *utf16Convert)(const ENCODING *enc,
-                               const char **fromP,
-                               const char *fromLim,
-                               unsigned short **toP,
-                               const unsigned short *toLim);
+  int( *getAtts)(const ENCODING *enc, const char *ptr, int attsMax,
+                        ATTRIBUTE *atts);
+  int( *charRefNumber)(const ENCODING *enc, const char *ptr);
+  int( *predefinedEntityName)(const ENCODING *, const char *,
+                                     const char *);
+  void( *updatePosition)(const ENCODING *, const char *ptr,
+                                const char *end, POSITION *);
+  int( *isPublicId)(const ENCODING *enc, const char *ptr,
+                           const char *end, const char **badPtr);
+  enum XML_Convert_Result( *utf8Convert)(const ENCODING *enc,
+                                                const char **fromP,
+                                                const char *fromLim, char **toP,
+                                                const char *toLim);
+  enum XML_Convert_Result( *utf16Convert)(const ENCODING *enc,
+                                                 const char **fromP,
+                                                 const char *fromLim,
+                                                 unsigned short **toP,
+                                                 const unsigned short *toLim);
   int minBytesPerChar;
   char isUtf8;
   char isUtf16;
 };
-# 290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.h"
+# 277 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.h"
 typedef struct {
   ENCODING initEnc;
   const ENCODING **encPtr;
 } INIT_ENCODING;
 
-int XmlParseXmlDecl(int isGeneralTextEntity,
-                    const ENCODING *enc,
-                    const char *ptr,
-                    const char *end,
-                    const char **badPtr,
-                    const char **versionPtr,
-                    const char **versionEndPtr,
+int XmlParseXmlDecl(int isGeneralTextEntity, const ENCODING *enc,
+                    const char *ptr, const char *end, const char **badPtr,
+                    const char **versionPtr, const char **versionEndPtr,
                     const char **encodingNamePtr,
-                    const ENCODING **namedEncodingPtr,
-                    int *standalonePtr);
+                    const ENCODING **namedEncodingPtr, int *standalonePtr);
 
 int XmlInitEncoding(INIT_ENCODING *, const ENCODING **, const char *name);
 const ENCODING *XmlGetUtf8InternalEncoding(void);
@@ -2911,35 +2860,23 @@ int XmlUtf8Encode(int charNumber, char *buf);
 int XmlUtf16Encode(int charNumber, unsigned short *buf);
 int XmlSizeOfUnknownEncoding(void);
 
+typedef int( *CONVERTER)(void *userData, const char *p);
 
-typedef int ( *CONVERTER) (void *userData, const char *p);
+ENCODING *XmlInitUnknownEncoding(void *mem, int *table, CONVERTER convert,
+                                 void *userData);
 
-ENCODING *
-XmlInitUnknownEncoding(void *mem,
-                       int *table,
-                       CONVERTER convert,
-                       void *userData);
-
-int XmlParseXmlDeclNS(int isGeneralTextEntity,
-                      const ENCODING *enc,
-                      const char *ptr,
-                      const char *end,
-                      const char **badPtr,
-                      const char **versionPtr,
-                      const char **versionEndPtr,
+int XmlParseXmlDeclNS(int isGeneralTextEntity, const ENCODING *enc,
+                      const char *ptr, const char *end, const char **badPtr,
+                      const char **versionPtr, const char **versionEndPtr,
                       const char **encodingNamePtr,
-                      const ENCODING **namedEncodingPtr,
-                      int *standalonePtr);
+                      const ENCODING **namedEncodingPtr, int *standalonePtr);
 
 int XmlInitEncodingNS(INIT_ENCODING *, const ENCODING **, const char *name);
 const ENCODING *XmlGetUtf8InternalEncodingNS(void);
 const ENCODING *XmlGetUtf16InternalEncodingNS(void);
-ENCODING *
-XmlInitUnknownEncodingNS(void *mem,
-                         int *table,
-                         CONVERTER convert,
-                         void *userData);
-# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
+ENCODING *XmlInitUnknownEncodingNS(void *mem, int *table, CONVERTER convert,
+                                   void *userData);
+# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.h" 1
 # 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.h"
 enum {
@@ -3010,11 +2947,8 @@ enum {
 };
 
 typedef struct prolog_state {
-  int ( *handler) (struct prolog_state *state,
-                          int tok,
-                          const char *ptr,
-                          const char *end,
-                          const ENCODING *enc);
+  int( *handler)(struct prolog_state *state, int tok, const char *ptr,
+                        const char *end, const ENCODING *enc);
   unsigned level;
   int role_none;
 
@@ -3027,7 +2961,7 @@ typedef struct prolog_state {
 void XmlPrologStateInit(PROLOG_STATE *);
 
 void XmlPrologStateInitExternalEntity(PROLOG_STATE *);
-# 176 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 2
 
 typedef const XML_Char *KEY;
 
@@ -3043,17 +2977,15 @@ typedef struct {
   const XML_Memory_Handling_Suite *mem;
 } HASH_TABLE;
 
-static size_t
-keylen(KEY s);
+static size_t keylen(KEY s);
 
-static void
-copy_salt_to_sipkey(XML_Parser parser, struct sipkey * key);
-# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+static void copy_salt_to_sipkey(XML_Parser parser, struct sipkey *key);
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
 typedef struct {
   NAMED **p;
   NAMED **end;
 } HASH_TABLE_ITER;
-# 224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 220 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
 typedef struct binding {
   struct prefix *prefix;
   struct binding *nextTagBinding;
@@ -3077,7 +3009,7 @@ typedef struct {
   int uriLen;
   int prefixLen;
 } TAG_NAME;
-# 261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 257 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
 typedef struct tag {
   struct tag *parent;
   const char *rawName;
@@ -3105,7 +3037,7 @@ typedef struct {
 typedef struct {
   enum XML_Content_Type type;
   enum XML_Content_Quant quant;
-  const XML_Char * name;
+  const XML_Char *name;
   int firstchild;
   int lastchild;
   int childcnt;
@@ -3197,10 +3129,8 @@ typedef struct open_internal_entity {
   XML_Bool betweenDecl;
 } OPEN_INTERNAL_ENTITY;
 
-typedef enum XML_Error Processor(XML_Parser parser,
-                                         const char *start,
-                                         const char *end,
-                                         const char **endPtr);
+typedef enum XML_Error Processor(XML_Parser parser, const char *start,
+                                         const char *end, const char **endPtr);
 
 static Processor prologProcessor;
 static Processor prologInitProcessor;
@@ -3221,118 +3151,101 @@ static Processor externalEntityInitProcessor3;
 static Processor externalEntityContentProcessor;
 static Processor internalEntityProcessor;
 
-static enum XML_Error
-handleUnknownEncoding(XML_Parser parser, const XML_Char *encodingName);
-static enum XML_Error
-processXmlDecl(XML_Parser parser, int isGeneralTextEntity,
-               const char *s, const char *next);
-static enum XML_Error
-initializeEncoding(XML_Parser parser);
-static enum XML_Error
-doProlog(XML_Parser parser, const ENCODING *enc, const char *s,
-         const char *end, int tok, const char *next, const char **nextPtr,
-         XML_Bool haveMore);
-static enum XML_Error
-processInternalEntity(XML_Parser parser, ENTITY *entity,
-                      XML_Bool betweenDecl);
-static enum XML_Error
-doContent(XML_Parser parser, int startTagLevel, const ENCODING *enc,
-          const char *start, const char *end, const char **endPtr,
-          XML_Bool haveMore);
-static enum XML_Error
-doCdataSection(XML_Parser parser, const ENCODING *, const char **startPtr,
-               const char *end, const char **nextPtr, XML_Bool haveMore);
+static enum XML_Error handleUnknownEncoding(XML_Parser parser,
+                                            const XML_Char *encodingName);
+static enum XML_Error processXmlDecl(XML_Parser parser, int isGeneralTextEntity,
+                                     const char *s, const char *next);
+static enum XML_Error initializeEncoding(XML_Parser parser);
+static enum XML_Error doProlog(XML_Parser parser, const ENCODING *enc,
+                               const char *s, const char *end, int tok,
+                               const char *next, const char **nextPtr,
+                               XML_Bool haveMore, XML_Bool allowClosingDoctype);
+static enum XML_Error processInternalEntity(XML_Parser parser, ENTITY *entity,
+                                            XML_Bool betweenDecl);
+static enum XML_Error doContent(XML_Parser parser, int startTagLevel,
+                                const ENCODING *enc, const char *start,
+                                const char *end, const char **endPtr,
+                                XML_Bool haveMore);
+static enum XML_Error doCdataSection(XML_Parser parser, const ENCODING *,
+                                     const char **startPtr, const char *end,
+                                     const char **nextPtr, XML_Bool haveMore);
 
-static enum XML_Error
-doIgnoreSection(XML_Parser parser, const ENCODING *, const char **startPtr,
-                const char *end, const char **nextPtr, XML_Bool haveMore);
+static enum XML_Error doIgnoreSection(XML_Parser parser, const ENCODING *,
+                                      const char **startPtr, const char *end,
+                                      const char **nextPtr, XML_Bool haveMore);
 
 
-static void
-freeBindings(XML_Parser parser, BINDING *bindings);
-static enum XML_Error
-storeAtts(XML_Parser parser, const ENCODING *, const char *s,
-          TAG_NAME *tagNamePtr, BINDING **bindingsPtr);
-static enum XML_Error
-addBinding(XML_Parser parser, PREFIX *prefix, const ATTRIBUTE_ID *attId,
-           const XML_Char *uri, BINDING **bindingsPtr);
-static int
-defineAttribute(ELEMENT_TYPE *type, ATTRIBUTE_ID *, XML_Bool isCdata,
-                XML_Bool isId, const XML_Char *dfltValue, XML_Parser parser);
-static enum XML_Error
-storeAttributeValue(XML_Parser parser, const ENCODING *, XML_Bool isCdata,
-                    const char *, const char *, STRING_POOL *);
-static enum XML_Error
-appendAttributeValue(XML_Parser parser, const ENCODING *, XML_Bool isCdata,
-                     const char *, const char *, STRING_POOL *);
-static ATTRIBUTE_ID *
-getAttributeId(XML_Parser parser, const ENCODING *enc, const char *start,
-               const char *end);
-static int
-setElementTypePrefix(XML_Parser parser, ELEMENT_TYPE *);
-static enum XML_Error
-storeEntityValue(XML_Parser parser, const ENCODING *enc, const char *start,
-                 const char *end);
-static int
-reportProcessingInstruction(XML_Parser parser, const ENCODING *enc,
-                            const char *start, const char *end);
-static int
-reportComment(XML_Parser parser, const ENCODING *enc, const char *start,
-              const char *end);
-static void
-reportDefault(XML_Parser parser, const ENCODING *enc, const char *start,
-              const char *end);
+static void freeBindings(XML_Parser parser, BINDING *bindings);
+static enum XML_Error storeAtts(XML_Parser parser, const ENCODING *,
+                                const char *s, TAG_NAME *tagNamePtr,
+                                BINDING **bindingsPtr);
+static enum XML_Error addBinding(XML_Parser parser, PREFIX *prefix,
+                                 const ATTRIBUTE_ID *attId, const XML_Char *uri,
+                                 BINDING **bindingsPtr);
+static int defineAttribute(ELEMENT_TYPE *type, ATTRIBUTE_ID *, XML_Bool isCdata,
+                           XML_Bool isId, const XML_Char *dfltValue,
+                           XML_Parser parser);
+static enum XML_Error storeAttributeValue(XML_Parser parser, const ENCODING *,
+                                          XML_Bool isCdata, const char *,
+                                          const char *, STRING_POOL *);
+static enum XML_Error appendAttributeValue(XML_Parser parser, const ENCODING *,
+                                           XML_Bool isCdata, const char *,
+                                           const char *, STRING_POOL *);
+static ATTRIBUTE_ID *getAttributeId(XML_Parser parser, const ENCODING *enc,
+                                    const char *start, const char *end);
+static int setElementTypePrefix(XML_Parser parser, ELEMENT_TYPE *);
+static enum XML_Error storeEntityValue(XML_Parser parser, const ENCODING *enc,
+                                       const char *start, const char *end);
+static int reportProcessingInstruction(XML_Parser parser, const ENCODING *enc,
+                                       const char *start, const char *end);
+static int reportComment(XML_Parser parser, const ENCODING *enc,
+                         const char *start, const char *end);
+static void reportDefault(XML_Parser parser, const ENCODING *enc,
+                          const char *start, const char *end);
 
-static const XML_Char * getContext(XML_Parser parser);
-static XML_Bool
-setContext(XML_Parser parser, const XML_Char *context);
+static const XML_Char *getContext(XML_Parser parser);
+static XML_Bool setContext(XML_Parser parser, const XML_Char *context);
 
 static void normalizePublicId(XML_Char *s);
 
-static DTD * dtdCreate(const XML_Memory_Handling_Suite *ms);
+static DTD *dtdCreate(const XML_Memory_Handling_Suite *ms);
 
 static void dtdReset(DTD *p, const XML_Memory_Handling_Suite *ms);
-static void
-dtdDestroy(DTD *p, XML_Bool isDocEntity, const XML_Memory_Handling_Suite *ms);
-static int
-dtdCopy(XML_Parser oldParser,
-        DTD *newDtd, const DTD *oldDtd, const XML_Memory_Handling_Suite *ms);
-static int
-copyEntityTable(XML_Parser oldParser,
-                HASH_TABLE *, STRING_POOL *, const HASH_TABLE *);
-static NAMED *
-lookup(XML_Parser parser, HASH_TABLE *table, KEY name, size_t createSize);
-static void
-hashTableInit(HASH_TABLE *, const XML_Memory_Handling_Suite *ms);
+static void dtdDestroy(DTD *p, XML_Bool isDocEntity,
+                       const XML_Memory_Handling_Suite *ms);
+static int dtdCopy(XML_Parser oldParser, DTD *newDtd, const DTD *oldDtd,
+                   const XML_Memory_Handling_Suite *ms);
+static int copyEntityTable(XML_Parser oldParser, HASH_TABLE *, STRING_POOL *,
+                           const HASH_TABLE *);
+static NAMED *lookup(XML_Parser parser, HASH_TABLE *table, KEY name,
+                     size_t createSize);
+static void hashTableInit(HASH_TABLE *,
+                                   const XML_Memory_Handling_Suite *ms);
 static void hashTableClear(HASH_TABLE *);
 static void hashTableDestroy(HASH_TABLE *);
-static void
-hashTableIterInit(HASH_TABLE_ITER *, const HASH_TABLE *);
+static void hashTableIterInit(HASH_TABLE_ITER *, const HASH_TABLE *);
 static NAMED * hashTableIterNext(HASH_TABLE_ITER *);
 
-static void
-poolInit(STRING_POOL *, const XML_Memory_Handling_Suite *ms);
+static void poolInit(STRING_POOL *,
+                              const XML_Memory_Handling_Suite *ms);
 static void poolClear(STRING_POOL *);
 static void poolDestroy(STRING_POOL *);
-static XML_Char *
-poolAppend(STRING_POOL *pool, const ENCODING *enc,
-           const char *ptr, const char *end);
-static XML_Char *
-poolStoreString(STRING_POOL *pool, const ENCODING *enc,
-                const char *ptr, const char *end);
+static XML_Char *poolAppend(STRING_POOL *pool, const ENCODING *enc,
+                            const char *ptr, const char *end);
+static XML_Char *poolStoreString(STRING_POOL *pool, const ENCODING *enc,
+                                 const char *ptr, const char *end);
 static XML_Bool poolGrow(STRING_POOL *pool);
-static const XML_Char *
-poolCopyString(STRING_POOL *pool, const XML_Char *s);
-static const XML_Char *
-poolCopyStringN(STRING_POOL *pool, const XML_Char *s, int n);
-static const XML_Char *
-poolAppendString(STRING_POOL *pool, const XML_Char *s);
+static const XML_Char * poolCopyString(STRING_POOL *pool,
+                                               const XML_Char *s);
+static const XML_Char *poolCopyStringN(STRING_POOL *pool, const XML_Char *s,
+                                       int n);
+static const XML_Char * poolAppendString(STRING_POOL *pool,
+                                                 const XML_Char *s);
 
 static int nextScaffoldPart(XML_Parser parser);
-static XML_Content * build_model(XML_Parser parser);
-static ELEMENT_TYPE *
-getElementType(XML_Parser parser, const ENCODING *enc,
-               const char *ptr, const char *end);
+static XML_Content *build_model(XML_Parser parser);
+static ELEMENT_TYPE *getElementType(XML_Parser parser, const ENCODING *enc,
+                                    const char *ptr, const char *end);
 
 static XML_Char *copyString(const XML_Char *s,
                             const XML_Memory_Handling_Suite *memsuite);
@@ -3340,15 +3253,12 @@ static XML_Char *copyString(const XML_Char *s,
 static unsigned long generate_hash_secret_salt(XML_Parser parser);
 static XML_Bool startParsing(XML_Parser parser);
 
-static XML_Parser
-parserCreate(const XML_Char *encodingName,
-             const XML_Memory_Handling_Suite *memsuite,
-             const XML_Char *nameSep,
-             DTD *dtd);
+static XML_Parser parserCreate(const XML_Char *encodingName,
+                               const XML_Memory_Handling_Suite *memsuite,
+                               const XML_Char *nameSep, DTD *dtd);
 
-static void
-parserInit(XML_Parser parser, const XML_Char *encodingName);
-# 544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+static void parserInit(XML_Parser parser, const XML_Char *encodingName);
+# 518 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
 struct XML_ParserStruct {
 
 
@@ -3398,7 +3308,7 @@ struct XML_ParserStruct {
   void *m_unknownEncodingMem;
   void *m_unknownEncodingData;
   void *m_unknownEncodingHandlerData;
-  void ( *m_unknownEncodingRelease)(void *);
+  void( *m_unknownEncodingRelease)(void *);
   PROLOG_STATE m_prologState;
   Processor *m_processor;
   enum XML_Error m_errorCode;
@@ -3456,50 +3366,55 @@ struct XML_ParserStruct {
 
 
 
-
 XML_Parser
-XML_ParserCreate(const XML_Char *encodingName)
-{
+XML_ParserCreate(const XML_Char *encodingName) {
   return XML_ParserCreate_MM(encodingName, 
-# 655 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 627 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                           ((void *)0)
-# 655 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 627 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                               , 
-# 655 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 627 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                                 ((void *)0)
-# 655 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 627 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                                     );
 }
 
 XML_Parser
-XML_ParserCreateNS(const XML_Char *encodingName, XML_Char nsSep)
-{
+XML_ParserCreateNS(const XML_Char *encodingName, XML_Char nsSep) {
   XML_Char tmp[2];
   *tmp = nsSep;
   return XML_ParserCreate_MM(encodingName, 
-# 663 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 634 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                           ((void *)0)
-# 663 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 634 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                               , tmp);
 }
 
-static const XML_Char implicitContext[] = {
-  0x78, 0x6D, 0x6C, 0x3D, 0x68, 0x74, 0x74, 0x70,
-  0x3A, 0x2F, 0x2F, 0x77, 0x77, 0x77,
-  0x2E, 0x77, 0x33, 0x2E, 0x6F, 0x72, 0x67,
-  0x2F, 0x58, 0x4D, 0x4C, 0x2F, 0x31, 0x39,
-  0x39, 0x38, 0x2F, 0x6E, 0x61, 0x6D, 0x65,
-  0x73, 0x70, 0x61, 0x63, 0x65, '\0'
-};
-# 682 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+static const XML_Char implicitContext[]
+    = {0x78, 0x6D, 0x6C, 0x3D, 0x68,
+       0x74, 0x74, 0x70, 0x3A, 0x2F,
+       0x2F, 0x77, 0x77, 0x77, 0x2E,
+       0x77, 0x33, 0x2E, 0x6F, 0x72,
+       0x67, 0x2F, 0x58, 0x4D, 0x4C,
+       0x2F, 0x31, 0x39, 0x39, 0x38,
+       0x2F, 0x6E, 0x61, 0x6D, 0x65,
+       0x73, 0x70, 0x61, 0x63, 0x65,
+       '\0'};
+
+
+
+
+
+
+
 static int
-writeRandomBytes_getrandom_nonblock(void * target, size_t count) {
+writeRandomBytes_getrandom_nonblock(void *target, size_t count) {
   int success = 0;
   size_t bytesWrittenTotal = 0;
   const unsigned int getrandomFlags = 0x0001;
 
   do {
-    void * const currentTarget = (void*)((char*)target + bytesWrittenTotal);
+    void *const currentTarget = (void *)((char *)target + bytesWrittenTotal);
     const size_t bytesToWrite = count - bytesWrittenTotal;
 
     const int bytesWrittenMore =
@@ -3518,10 +3433,9 @@ writeRandomBytes_getrandom_nonblock(void * target, size_t count) {
 
   return success;
 }
-# 803 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 767 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
 static unsigned long
-gather_time_entropy(void)
-{
+gather_time_entropy(void) {
 
 
 
@@ -3531,15 +3445,15 @@ gather_time_entropy(void)
   int gettimeofday_res;
 
   gettimeofday_res = gettimeofday(&tv, 
-# 814 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 777 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                       ((void *)0)
-# 814 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 777 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                           );
 
 
 
 
-  ((gettimeofday_res == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c", 819, __func__, "gettimeofday_res == 0"));
+  ((gettimeofday_res == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c", 782, __func__, "gettimeofday_res == 0"));
 
 
 
@@ -3549,29 +3463,25 @@ gather_time_entropy(void)
 
 
 
-
 static unsigned long
-ENTROPY_DEBUG(const char * label, unsigned long entropy) {
-  const char * const EXPAT_ENTROPY_DEBUG = getenv("EXPAT_ENTROPY_DEBUG");
+ENTROPY_DEBUG(const char *label, unsigned long entropy) {
+  const char *const EXPAT_ENTROPY_DEBUG = getenv("EXPAT_ENTROPY_DEBUG");
   if (EXPAT_ENTROPY_DEBUG && ! strcmp(EXPAT_ENTROPY_DEBUG, "1")) {
-    fprintf(((__getreent())->_stderr), "Entropy: %s --> 0x%0*lx (%lu bytes)\n",
-        label,
-        (int)sizeof(entropy) * 2, entropy,
-        (unsigned long)sizeof(entropy));
+    fprintf(((__getreent())->_stderr), "Entropy: %s --> 0x%0*lx (%lu bytes)\n", label,
+            (int)sizeof(entropy) * 2, entropy, (unsigned long)sizeof(entropy));
   }
   return entropy;
 }
 
 static unsigned long
-generate_hash_secret_salt(XML_Parser parser)
-{
+generate_hash_secret_salt(XML_Parser parser) {
   unsigned long entropy;
   (void)parser;
-# 862 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
   if (writeRandomBytes_getrandom_nonblock((void *)&entropy, sizeof(entropy))) {
     return ENTROPY_DEBUG("getrandom", entropy);
   }
-# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 833 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
   entropy = gather_time_entropy() ^ getpid();
 
 
@@ -3579,7 +3489,7 @@ generate_hash_secret_salt(XML_Parser parser)
     return ENTROPY_DEBUG("fallback(4)", entropy * 2147483647);
   } else {
     return ENTROPY_DEBUG("fallback(8)",
-        entropy * (unsigned long)2305843009213693951ULL);
+                         entropy * (unsigned long)2305843009213693951ULL);
   }
 
 }
@@ -3587,71 +3497,65 @@ generate_hash_secret_salt(XML_Parser parser)
 static unsigned long
 get_hash_secret_salt(XML_Parser parser) {
   if (parser->m_parentParser != 
-# 888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 847 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                ((void *)0)
-# 888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 847 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                    )
     return get_hash_secret_salt(parser->m_parentParser);
   return parser->m_hash_secret_salt;
 }
 
 static XML_Bool
-startParsing(XML_Parser parser)
-{
+startParsing(XML_Parser parser) {
 
-    if (parser->m_hash_secret_salt == 0)
-      parser->m_hash_secret_salt = generate_hash_secret_salt(parser);
-    if (parser->m_ns) {
-
+  if (parser->m_hash_secret_salt == 0)
+    parser->m_hash_secret_salt = generate_hash_secret_salt(parser);
+  if (parser->m_ns) {
 
 
-      return setContext(parser, implicitContext);
-    }
-    return ((XML_Bool) 1);
+
+    return setContext(parser, implicitContext);
+  }
+  return ((XML_Bool)1);
 }
 
 XML_Parser
 XML_ParserCreate_MM(const XML_Char *encodingName,
                     const XML_Memory_Handling_Suite *memsuite,
-                    const XML_Char *nameSep)
-{
+                    const XML_Char *nameSep) {
   return parserCreate(encodingName, memsuite, nameSep, 
-# 913 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 870 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                                       ((void *)0)
-# 913 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 870 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                                           );
 }
 
 static XML_Parser
 parserCreate(const XML_Char *encodingName,
-             const XML_Memory_Handling_Suite *memsuite,
-             const XML_Char *nameSep,
-             DTD *dtd)
-{
+             const XML_Memory_Handling_Suite *memsuite, const XML_Char *nameSep,
+             DTD *dtd) {
   XML_Parser parser;
 
   if (memsuite) {
     XML_Memory_Handling_Suite *mtemp;
-    parser = (XML_Parser)
-      memsuite->malloc_fcn(sizeof(struct XML_ParserStruct));
+    parser = (XML_Parser)memsuite->malloc_fcn(sizeof(struct XML_ParserStruct));
     if (parser != 
-# 928 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 882 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                  ((void *)0)
-# 928 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 882 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                      ) {
       mtemp = (XML_Memory_Handling_Suite *)&(parser->m_mem);
       mtemp->malloc_fcn = memsuite->malloc_fcn;
       mtemp->realloc_fcn = memsuite->realloc_fcn;
       mtemp->free_fcn = memsuite->free_fcn;
     }
-  }
-  else {
+  } else {
     XML_Memory_Handling_Suite *mtemp;
     parser = (XML_Parser)malloc(sizeof(struct XML_ParserStruct));
     if (parser != 
-# 938 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                  ((void *)0)
-# 938 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                      ) {
       mtemp = (XML_Memory_Handling_Suite *)&(parser->m_mem);
       mtemp->malloc_fcn = malloc;
@@ -3660,40 +3564,42 @@ parserCreate(const XML_Char *encodingName,
     }
   }
 
-  if (!parser)
+  if (! parser)
     return parser;
 
   parser->m_buffer = 
-# 949 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 902 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                     ((void *)0)
-# 949 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 902 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                         ;
   parser->m_bufferLim = 
-# 950 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                        ((void *)0)
-# 950 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                            ;
 
   parser->m_attsSize = 16;
-  parser->m_atts = (ATTRIBUTE *)(parser->m_mem.malloc_fcn((parser->m_attsSize * sizeof(ATTRIBUTE))));
+  parser->m_atts
+      = (ATTRIBUTE *)(parser->m_mem.malloc_fcn((parser->m_attsSize * sizeof(ATTRIBUTE))));
   if (parser->m_atts == 
-# 954 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 908 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                        ((void *)0)
-# 954 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 908 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                            ) {
     (parser->m_mem.free_fcn((parser)));
     return 
-# 956 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 910 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 956 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 910 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
   }
-# 966 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-  parser->m_dataBuf = (XML_Char *)(parser->m_mem.malloc_fcn((1024 * sizeof(XML_Char))));
+# 921 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+  parser->m_dataBuf
+      = (XML_Char *)(parser->m_mem.malloc_fcn((1024 * sizeof(XML_Char))));
   if (parser->m_dataBuf == 
-# 967 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 923 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                           ((void *)0)
-# 967 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 923 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                               ) {
     (parser->m_mem.free_fcn((parser->m_atts)));
 
@@ -3701,9 +3607,9 @@ parserCreate(const XML_Char *encodingName,
 
     (parser->m_mem.free_fcn((parser)));
     return 
-# 973 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 929 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 973 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 929 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
   }
   parser->m_dataBufEnd = parser->m_dataBuf + 1024;
@@ -3713,9 +3619,9 @@ parserCreate(const XML_Char *encodingName,
   else {
     parser->m_dtd = dtdCreate(&parser->m_mem);
     if (parser->m_dtd == 
-# 981 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                         ((void *)0)
-# 981 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                             ) {
       (parser->m_mem.free_fcn((parser->m_dataBuf)));
       (parser->m_mem.free_fcn((parser->m_atts)));
@@ -3724,84 +3630,83 @@ parserCreate(const XML_Char *encodingName,
 
       (parser->m_mem.free_fcn((parser)));
       return 
-# 988 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 944 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
             ((void *)0)
-# 988 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 944 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                 ;
     }
   }
 
   parser->m_freeBindingList = 
-# 992 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 948 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                              ((void *)0)
-# 992 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 948 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                  ;
   parser->m_freeTagList = 
-# 993 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 949 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                          ((void *)0)
-# 993 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 949 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                              ;
   parser->m_freeInternalEntities = 
-# 994 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 950 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                   ((void *)0)
-# 994 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 950 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                       ;
 
   parser->m_groupSize = 0;
   parser->m_groupConnector = 
-# 997 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 953 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                             ((void *)0)
-# 997 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 953 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                 ;
 
   parser->m_unknownEncodingHandler = 
-# 999 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 955 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                     ((void *)0)
-# 999 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 955 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                         ;
   parser->m_unknownEncodingHandlerData = 
-# 1000 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 956 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                         ((void *)0)
-# 1000 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 956 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                             ;
 
   parser->m_namespaceSeparator = 0x21;
-  parser->m_ns = ((XML_Bool) 0);
-  parser->m_ns_triplets = ((XML_Bool) 0);
+  parser->m_ns = ((XML_Bool)0);
+  parser->m_ns_triplets = ((XML_Bool)0);
 
   parser->m_nsAtts = 
-# 1006 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 962 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                     ((void *)0)
-# 1006 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 962 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                         ;
   parser->m_nsAttsVersion = 0;
   parser->m_nsAttsPower = 0;
 
   parser->m_protocolEncodingName = 
-# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 966 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                   ((void *)0)
-# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 966 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                       ;
 
   poolInit(&parser->m_tempPool, &(parser->m_mem));
   poolInit(&parser->m_temp2Pool, &(parser->m_mem));
   parserInit(parser, encodingName);
 
-  if (encodingName && !parser->m_protocolEncodingName) {
+  if (encodingName && ! parser->m_protocolEncodingName) {
     XML_ParserFree(parser);
     return 
-# 1018 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 974 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 1018 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 974 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
   }
 
   if (nameSep) {
-    parser->m_ns = ((XML_Bool) 1);
+    parser->m_ns = ((XML_Bool)1);
     parser->m_internalEncoding = XmlGetUtf8InternalEncodingNS();
     parser->m_namespaceSeparator = *nameSep;
-  }
-  else {
+  } else {
     parser->m_internalEncoding = XmlGetUtf8InternalEncoding();
   }
 
@@ -3809,253 +3714,252 @@ parserCreate(const XML_Char *encodingName,
 }
 
 static void
-parserInit(XML_Parser parser, const XML_Char *encodingName)
-{
+parserInit(XML_Parser parser, const XML_Char *encodingName) {
   parser->m_processor = prologInitProcessor;
   XmlPrologStateInit(&parser->m_prologState);
   if (encodingName != 
-# 1038 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 992 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                      ((void *)0)
-# 1038 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 992 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                          ) {
     parser->m_protocolEncodingName = copyString(encodingName, &(parser->m_mem));
   }
   parser->m_curBase = 
-# 1041 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                      ((void *)0)
-# 1041 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                          ;
   XmlInitEncoding(&parser->m_initEncoding, &parser->m_encoding, 0);
   parser->m_userData = 
-# 1043 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 997 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                       ((void *)0)
-# 1043 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 997 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                           ;
   parser->m_handlerArg = 
-# 1044 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 998 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                         ((void *)0)
-# 1044 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 998 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                             ;
   parser->m_startElementHandler = 
-# 1045 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 999 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                  ((void *)0)
-# 1045 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 999 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                      ;
   parser->m_endElementHandler = 
-# 1046 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1000 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                ((void *)0)
-# 1046 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1000 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                    ;
   parser->m_characterDataHandler = 
-# 1047 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1001 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                   ((void *)0)
-# 1047 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1001 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                       ;
   parser->m_processingInstructionHandler = 
-# 1048 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1002 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                           ((void *)0)
-# 1048 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1002 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                               ;
   parser->m_commentHandler = 
-# 1049 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1003 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                             ((void *)0)
-# 1049 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1003 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                 ;
   parser->m_startCdataSectionHandler = 
-# 1050 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1004 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                       ((void *)0)
-# 1050 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1004 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                           ;
   parser->m_endCdataSectionHandler = 
-# 1051 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1005 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                     ((void *)0)
-# 1051 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1005 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                         ;
   parser->m_defaultHandler = 
-# 1052 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1006 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                             ((void *)0)
-# 1052 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1006 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                 ;
   parser->m_startDoctypeDeclHandler = 
-# 1053 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1007 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                      ((void *)0)
-# 1053 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1007 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                          ;
   parser->m_endDoctypeDeclHandler = 
-# 1054 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1008 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                    ((void *)0)
-# 1054 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1008 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                        ;
   parser->m_unparsedEntityDeclHandler = 
-# 1055 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1009 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                        ((void *)0)
-# 1055 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1009 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                            ;
   parser->m_notationDeclHandler = 
-# 1056 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                  ((void *)0)
-# 1056 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                      ;
   parser->m_startNamespaceDeclHandler = 
-# 1057 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1011 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                        ((void *)0)
-# 1057 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1011 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                            ;
   parser->m_endNamespaceDeclHandler = 
-# 1058 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1012 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                      ((void *)0)
-# 1058 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1012 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                          ;
   parser->m_notStandaloneHandler = 
-# 1059 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1013 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                   ((void *)0)
-# 1059 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1013 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                       ;
   parser->m_externalEntityRefHandler = 
-# 1060 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                       ((void *)0)
-# 1060 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                           ;
   parser->m_externalEntityRefHandlerArg = parser;
   parser->m_skippedEntityHandler = 
-# 1062 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1016 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                   ((void *)0)
-# 1062 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1016 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                       ;
   parser->m_elementDeclHandler = 
-# 1063 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1017 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                 ((void *)0)
-# 1063 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1017 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                     ;
   parser->m_attlistDeclHandler = 
-# 1064 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1018 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                 ((void *)0)
-# 1064 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1018 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                     ;
   parser->m_entityDeclHandler = 
-# 1065 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1019 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                ((void *)0)
-# 1065 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1019 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                    ;
   parser->m_xmlDeclHandler = 
-# 1066 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                             ((void *)0)
-# 1066 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                 ;
   parser->m_bufferPtr = parser->m_buffer;
   parser->m_bufferEnd = parser->m_buffer;
   parser->m_parseEndByteIndex = 0;
   parser->m_parseEndPtr = 
-# 1070 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1024 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                          ((void *)0)
-# 1070 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1024 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                              ;
   parser->m_declElementType = 
-# 1071 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1025 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                              ((void *)0)
-# 1071 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1025 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                  ;
   parser->m_declAttributeId = 
-# 1072 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1026 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                              ((void *)0)
-# 1072 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1026 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                  ;
   parser->m_declEntity = 
-# 1073 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1027 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                         ((void *)0)
-# 1073 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1027 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                             ;
   parser->m_doctypeName = 
-# 1074 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1028 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                          ((void *)0)
-# 1074 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1028 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                              ;
   parser->m_doctypeSysid = 
-# 1075 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1029 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                           ((void *)0)
-# 1075 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1029 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                               ;
   parser->m_doctypePubid = 
-# 1076 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1030 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                           ((void *)0)
-# 1076 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1030 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                               ;
   parser->m_declAttributeType = 
-# 1077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1031 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                ((void *)0)
-# 1077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1031 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                    ;
   parser->m_declNotationName = 
-# 1078 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1032 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                               ((void *)0)
-# 1078 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1032 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                   ;
   parser->m_declNotationPublicId = 
-# 1079 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                   ((void *)0)
-# 1079 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                       ;
-  parser->m_declAttributeIsCdata = ((XML_Bool) 0);
-  parser->m_declAttributeIsId = ((XML_Bool) 0);
+  parser->m_declAttributeIsCdata = ((XML_Bool)0);
+  parser->m_declAttributeIsId = ((XML_Bool)0);
   memset(&parser->m_position, 0, sizeof(POSITION));
   parser->m_errorCode = XML_ERROR_NONE;
   parser->m_eventPtr = 
-# 1084 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1038 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                       ((void *)0)
-# 1084 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1038 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                           ;
   parser->m_eventEndPtr = 
-# 1085 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1039 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                          ((void *)0)
-# 1085 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1039 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                              ;
   parser->m_positionPtr = 
-# 1086 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1040 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                          ((void *)0)
-# 1086 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1040 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                              ;
   parser->m_openInternalEntities = 
-# 1087 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1041 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                   ((void *)0)
-# 1087 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1041 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                       ;
-  parser->m_defaultExpandInternalEntities = ((XML_Bool) 1);
+  parser->m_defaultExpandInternalEntities = ((XML_Bool)1);
   parser->m_tagLevel = 0;
   parser->m_tagStack = 
-# 1090 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1044 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                       ((void *)0)
-# 1090 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1044 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                           ;
   parser->m_inheritedBindings = 
-# 1091 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1045 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                ((void *)0)
-# 1091 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1045 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                    ;
   parser->m_nSpecifiedAtts = 0;
   parser->m_unknownEncodingMem = 
-# 1093 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1047 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                 ((void *)0)
-# 1093 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1047 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                     ;
   parser->m_unknownEncodingRelease = 
-# 1094 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1048 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                     ((void *)0)
-# 1094 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1048 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                         ;
   parser->m_unknownEncodingData = 
-# 1095 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1049 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                  ((void *)0)
-# 1095 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1049 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                      ;
   parser->m_parentParser = 
-# 1096 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1050 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                           ((void *)0)
-# 1096 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1050 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                               ;
   parser->m_parsingStatus.parsing = XML_INITIALIZED;
 
-  parser->m_isParamEntity = ((XML_Bool) 0);
-  parser->m_useForeignDTD = ((XML_Bool) 0);
+  parser->m_isParamEntity = ((XML_Bool)0);
+  parser->m_useForeignDTD = ((XML_Bool)0);
   parser->m_paramEntityParsing = XML_PARAM_ENTITY_PARSING_NEVER;
 
   parser->m_hash_secret_salt = 0;
@@ -4063,8 +3967,7 @@ parserInit(XML_Parser parser, const XML_Char *encodingName)
 
 
 static void
-moveToFreeBindingList(XML_Parser parser, BINDING *bindings)
-{
+moveToFreeBindingList(XML_Parser parser, BINDING *bindings) {
   while (bindings) {
     BINDING *b = bindings;
     bindings = bindings->nextTagBinding;
@@ -4074,20 +3977,19 @@ moveToFreeBindingList(XML_Parser parser, BINDING *bindings)
 }
 
 XML_Bool
-XML_ParserReset(XML_Parser parser, const XML_Char *encodingName)
-{
+XML_ParserReset(XML_Parser parser, const XML_Char *encodingName) {
   TAG *tStk;
   OPEN_INTERNAL_ENTITY *openEntityList;
 
   if (parser == 
-# 1124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1076 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1076 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
-      return ((XML_Bool) 0);
+    return ((XML_Bool)0);
 
   if (parser->m_parentParser)
-    return ((XML_Bool) 0);
+    return ((XML_Bool)0);
 
   tStk = parser->m_tagStack;
   while (tStk) {
@@ -4096,9 +3998,9 @@ XML_ParserReset(XML_Parser parser, const XML_Char *encodingName)
     tag->parent = parser->m_freeTagList;
     moveToFreeBindingList(parser, tag->bindings);
     tag->bindings = 
-# 1136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1088 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                    ((void *)0)
-# 1136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1088 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                        ;
     parser->m_freeTagList = tag;
   }
@@ -4118,64 +4020,62 @@ XML_ParserReset(XML_Parser parser, const XML_Char *encodingName)
   poolClear(&parser->m_temp2Pool);
   (parser->m_mem.free_fcn(((void *)parser->m_protocolEncodingName)));
   parser->m_protocolEncodingName = 
-# 1154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                   ((void *)0)
-# 1154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                       ;
   parserInit(parser, encodingName);
   dtdReset(parser->m_dtd, &parser->m_mem);
-  return ((XML_Bool) 1);
+  return ((XML_Bool)1);
 }
 
 enum XML_Status
-XML_SetEncoding(XML_Parser parser, const XML_Char *encodingName)
-{
+XML_SetEncoding(XML_Parser parser, const XML_Char *encodingName) {
   if (parser == 
-# 1163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1114 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1114 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
-      return XML_STATUS_ERROR;
+    return XML_STATUS_ERROR;
 
 
 
 
-  if (parser->m_parsingStatus.parsing == XML_PARSING || parser->m_parsingStatus.parsing == XML_SUSPENDED)
+  if (parser->m_parsingStatus.parsing == XML_PARSING
+      || parser->m_parsingStatus.parsing == XML_SUSPENDED)
     return XML_STATUS_ERROR;
 
 
   (parser->m_mem.free_fcn(((void *)parser->m_protocolEncodingName)));
 
   if (encodingName == 
-# 1175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                      ((void *)0)
-# 1175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                          )
 
     parser->m_protocolEncodingName = 
-# 1177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                     ((void *)0)
-# 1177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                         ;
   else {
 
     parser->m_protocolEncodingName = copyString(encodingName, &(parser->m_mem));
-    if (!parser->m_protocolEncodingName)
+    if (! parser->m_protocolEncodingName)
       return XML_STATUS_ERROR;
   }
   return XML_STATUS_OK;
 }
 
 XML_Parser
-XML_ExternalEntityParserCreate(XML_Parser oldParser,
-                               const XML_Char *context,
-                               const XML_Char *encodingName)
-{
+XML_ExternalEntityParserCreate(XML_Parser oldParser, const XML_Char *context,
+                               const XML_Char *encodingName) {
   XML_Parser parser = oldParser;
   DTD *newDtd = 
-# 1193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1143 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1143 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    ;
   DTD *oldDtd;
   XML_StartElementHandler oldStartElementHandler;
@@ -4198,7 +4098,7 @@ XML_ExternalEntityParserCreate(XML_Parser oldParser,
   XML_AttlistDeclHandler oldAttlistDeclHandler;
   XML_EntityDeclHandler oldEntityDeclHandler;
   XML_XmlDeclHandler oldXmlDeclHandler;
-  ELEMENT_TYPE * oldDeclElementType;
+  ELEMENT_TYPE *oldDeclElementType;
 
   void *oldUserData;
   void *oldHandlerArg;
@@ -4218,14 +4118,14 @@ XML_ExternalEntityParserCreate(XML_Parser oldParser,
 
 
   if (oldParser == 
-# 1234 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                   ((void *)0)
-# 1234 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                       )
     return 
-# 1235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 1235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
 
 
@@ -4269,7 +4169,7 @@ XML_ExternalEntityParserCreate(XML_Parser oldParser,
   oldhash_secret_salt = parser->m_hash_secret_salt;
 
 
-  if (!context)
+  if (! context)
     newDtd = oldDtd;
 
 
@@ -4282,20 +4182,19 @@ XML_ExternalEntityParserCreate(XML_Parser oldParser,
     XML_Char tmp[2];
     *tmp = parser->m_namespaceSeparator;
     parser = parserCreate(encodingName, &parser->m_mem, tmp, newDtd);
-  }
-  else {
+  } else {
     parser = parserCreate(encodingName, &parser->m_mem, 
-# 1293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                                        ((void *)0)
-# 1293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                                            , newDtd);
   }
 
-  if (!parser)
+  if (! parser)
     return 
-# 1297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1246 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 1297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1246 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
 
   parser->m_startElementHandler = oldStartElementHandler;
@@ -4335,19 +4234,18 @@ XML_ExternalEntityParserCreate(XML_Parser oldParser,
   parser->m_prologState.inEntityValue = oldInEntityValue;
   if (context) {
 
-    if (!dtdCopy(oldParser, parser->m_dtd, oldDtd, &parser->m_mem)
-      || !setContext(parser, context)) {
+    if (! dtdCopy(oldParser, parser->m_dtd, oldDtd, &parser->m_mem)
+        || ! setContext(parser, context)) {
       XML_ParserFree(parser);
       return 
-# 1339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
             ((void *)0)
-# 1339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                 ;
     }
     parser->m_processor = externalEntityInitProcessor;
 
-  }
-  else {
+  } else {
 
 
 
@@ -4355,7 +4253,7 @@ XML_ExternalEntityParserCreate(XML_Parser oldParser,
 
 
 
-    parser->m_isParamEntity = ((XML_Bool) 1);
+    parser->m_isParamEntity = ((XML_Bool)1);
     XmlPrologStateInitExternalEntity(&parser->m_prologState);
     parser->m_processor = externalParEntInitProcessor;
   }
@@ -4364,11 +4262,10 @@ XML_ExternalEntityParserCreate(XML_Parser oldParser,
 }
 
 static void
-destroyBindings(BINDING *bindings, XML_Parser parser)
-{
+destroyBindings(BINDING *bindings, XML_Parser parser) {
   for (;;) {
     BINDING *b = bindings;
-    if (!b)
+    if (! b)
       break;
     bindings = b->nextTagBinding;
     (parser->m_mem.free_fcn((b->uri)));
@@ -4377,14 +4274,13 @@ destroyBindings(BINDING *bindings, XML_Parser parser)
 }
 
 void
-XML_ParserFree(XML_Parser parser)
-{
+XML_ParserFree(XML_Parser parser) {
   TAG *tagList;
   OPEN_INTERNAL_ENTITY *entityList;
   if (parser == 
-# 1378 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1324 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1378 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1324 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return;
 
@@ -4392,21 +4288,21 @@ XML_ParserFree(XML_Parser parser)
   for (;;) {
     TAG *p;
     if (tagList == 
-# 1384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                   ((void *)0)
-# 1384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                       ) {
       if (parser->m_freeTagList == 
-# 1385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                   ((void *)0)
-# 1385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                       )
         break;
       tagList = parser->m_freeTagList;
       parser->m_freeTagList = 
-# 1388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                              ((void *)0)
-# 1388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                  ;
     }
     p = tagList;
@@ -4420,21 +4316,21 @@ XML_ParserFree(XML_Parser parser)
   for (;;) {
     OPEN_INTERNAL_ENTITY *openEntity;
     if (entityList == 
-# 1400 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                      ((void *)0)
-# 1400 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                          ) {
       if (parser->m_freeInternalEntities == 
-# 1401 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                            ((void *)0)
-# 1401 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                                )
         break;
       entityList = parser->m_freeInternalEntities;
       parser->m_freeInternalEntities = 
-# 1404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1350 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                       ((void *)0)
-# 1404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1350 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                           ;
     }
     openEntity = entityList;
@@ -4451,11 +4347,12 @@ XML_ParserFree(XML_Parser parser)
 
 
 
-  if (!parser->m_isParamEntity && parser->m_dtd)
+  if (! parser->m_isParamEntity && parser->m_dtd)
 
 
 
-    dtdDestroy(parser->m_dtd, (XML_Bool)!parser->m_parentParser, &parser->m_mem);
+    dtdDestroy(parser->m_dtd, (XML_Bool)! parser->m_parentParser,
+               &parser->m_mem);
   (parser->m_mem.free_fcn(((void *)parser->m_atts)));
 
 
@@ -4471,28 +4368,27 @@ XML_ParserFree(XML_Parser parser)
 }
 
 void
-XML_UseParserAsHandlerArg(XML_Parser parser)
-{
+XML_UseParserAsHandlerArg(XML_Parser parser) {
   if (parser != 
-# 1442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_handlerArg = parser;
 }
 
 enum XML_Error
-XML_UseForeignDTD(XML_Parser parser, XML_Bool useDTD)
-{
+XML_UseForeignDTD(XML_Parser parser, XML_Bool useDTD) {
   if (parser == 
-# 1449 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1449 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return XML_ERROR_INVALID_ARGUMENT;
 
 
-  if (parser->m_parsingStatus.parsing == XML_PARSING || parser->m_parsingStatus.parsing == XML_SUSPENDED)
+  if (parser->m_parsingStatus.parsing == XML_PARSING
+      || parser->m_parsingStatus.parsing == XML_SUSPENDED)
     return XML_ERROR_CANT_CHANGE_FEATURE_ONCE_PARSING;
   parser->m_useForeignDTD = useDTD;
   return XML_ERROR_NONE;
@@ -4502,27 +4398,26 @@ XML_UseForeignDTD(XML_Parser parser, XML_Bool useDTD)
 }
 
 void
-XML_SetReturnNSTriplet(XML_Parser parser, int do_nst)
-{
+XML_SetReturnNSTriplet(XML_Parser parser, int do_nst) {
   if (parser == 
-# 1465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return;
 
-  if (parser->m_parsingStatus.parsing == XML_PARSING || parser->m_parsingStatus.parsing == XML_SUSPENDED)
+  if (parser->m_parsingStatus.parsing == XML_PARSING
+      || parser->m_parsingStatus.parsing == XML_SUSPENDED)
     return;
-  parser->m_ns_triplets = do_nst ? ((XML_Bool) 1) : ((XML_Bool) 0);
+  parser->m_ns_triplets = do_nst ? ((XML_Bool)1) : ((XML_Bool)0);
 }
 
 void
-XML_SetUserData(XML_Parser parser, void *p)
-{
+XML_SetUserData(XML_Parser parser, void *p) {
   if (parser == 
-# 1476 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1421 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1476 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1421 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return;
   if (parser->m_handlerArg == parser->m_userData)
@@ -4532,78 +4427,71 @@ XML_SetUserData(XML_Parser parser, void *p)
 }
 
 enum XML_Status
-XML_SetBase(XML_Parser parser, const XML_Char *p)
-{
+XML_SetBase(XML_Parser parser, const XML_Char *p) {
   if (parser == 
-# 1487 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1487 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return XML_STATUS_ERROR;
   if (p) {
     p = poolCopyString(&parser->m_dtd->pool, p);
-    if (!p)
+    if (! p)
       return XML_STATUS_ERROR;
     parser->m_curBase = p;
-  }
-  else
+  } else
     parser->m_curBase = 
-# 1496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1439 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                        ((void *)0)
-# 1496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1439 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                            ;
   return XML_STATUS_OK;
 }
 
 const XML_Char *
-XML_GetBase(XML_Parser parser)
-{
+XML_GetBase(XML_Parser parser) {
   if (parser == 
-# 1503 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1445 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1503 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1445 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return 
-# 1504 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 1504 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
   return parser->m_curBase;
 }
 
 int
-XML_GetSpecifiedAttributeCount(XML_Parser parser)
-{
+XML_GetSpecifiedAttributeCount(XML_Parser parser) {
   if (parser == 
-# 1511 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1511 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return -1;
   return parser->m_nSpecifiedAtts;
 }
 
 int
-XML_GetIdAttributeIndex(XML_Parser parser)
-{
+XML_GetIdAttributeIndex(XML_Parser parser) {
   if (parser == 
-# 1519 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1459 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1519 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1459 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return -1;
   return parser->m_idAttIndex;
 }
-# 1534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1473 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
 void
-XML_SetElementHandler(XML_Parser parser,
-                      XML_StartElementHandler start,
-                      XML_EndElementHandler end)
-{
+XML_SetElementHandler(XML_Parser parser, XML_StartElementHandler start,
+                      XML_EndElementHandler end) {
   if (parser == 
-# 1539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1476 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1476 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return;
   parser->m_startElementHandler = start;
@@ -4611,59 +4499,53 @@ XML_SetElementHandler(XML_Parser parser,
 }
 
 void
-XML_SetStartElementHandler(XML_Parser parser,
-                           XML_StartElementHandler start) {
+XML_SetStartElementHandler(XML_Parser parser, XML_StartElementHandler start) {
   if (parser != 
-# 1548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_startElementHandler = start;
 }
 
 void
-XML_SetEndElementHandler(XML_Parser parser,
-                         XML_EndElementHandler end) {
+XML_SetEndElementHandler(XML_Parser parser, XML_EndElementHandler end) {
   if (parser != 
-# 1555 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1490 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1555 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1490 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_endElementHandler = end;
 }
 
 void
 XML_SetCharacterDataHandler(XML_Parser parser,
-                            XML_CharacterDataHandler handler)
-{
+                            XML_CharacterDataHandler handler) {
   if (parser != 
-# 1563 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1497 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1563 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1497 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_characterDataHandler = handler;
 }
 
 void
 XML_SetProcessingInstructionHandler(XML_Parser parser,
-                                    XML_ProcessingInstructionHandler handler)
-{
+                                    XML_ProcessingInstructionHandler handler) {
   if (parser != 
-# 1571 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1504 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1571 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1504 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_processingInstructionHandler = handler;
 }
 
 void
-XML_SetCommentHandler(XML_Parser parser,
-                      XML_CommentHandler handler)
-{
+XML_SetCommentHandler(XML_Parser parser, XML_CommentHandler handler) {
   if (parser != 
-# 1579 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1510 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1579 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1510 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_commentHandler = handler;
 }
@@ -4671,12 +4553,11 @@ XML_SetCommentHandler(XML_Parser parser,
 void
 XML_SetCdataSectionHandler(XML_Parser parser,
                            XML_StartCdataSectionHandler start,
-                           XML_EndCdataSectionHandler end)
-{
+                           XML_EndCdataSectionHandler end) {
   if (parser == 
-# 1588 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1518 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1588 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1518 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return;
   parser->m_startCdataSectionHandler = start;
@@ -4687,9 +4568,9 @@ void
 XML_SetStartCdataSectionHandler(XML_Parser parser,
                                 XML_StartCdataSectionHandler start) {
   if (parser != 
-# 1597 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1597 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_startCdataSectionHandler = start;
 }
@@ -4698,50 +4579,44 @@ void
 XML_SetEndCdataSectionHandler(XML_Parser parser,
                               XML_EndCdataSectionHandler end) {
   if (parser != 
-# 1604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_endCdataSectionHandler = end;
 }
 
 void
-XML_SetDefaultHandler(XML_Parser parser,
-                      XML_DefaultHandler handler)
-{
+XML_SetDefaultHandler(XML_Parser parser, XML_DefaultHandler handler) {
   if (parser == 
-# 1612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1540 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1540 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return;
   parser->m_defaultHandler = handler;
-  parser->m_defaultExpandInternalEntities = ((XML_Bool) 0);
+  parser->m_defaultExpandInternalEntities = ((XML_Bool)0);
 }
 
 void
-XML_SetDefaultHandlerExpand(XML_Parser parser,
-                            XML_DefaultHandler handler)
-{
+XML_SetDefaultHandlerExpand(XML_Parser parser, XML_DefaultHandler handler) {
   if (parser == 
-# 1622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return;
   parser->m_defaultHandler = handler;
-  parser->m_defaultExpandInternalEntities = ((XML_Bool) 1);
+  parser->m_defaultExpandInternalEntities = ((XML_Bool)1);
 }
 
 void
-XML_SetDoctypeDeclHandler(XML_Parser parser,
-                          XML_StartDoctypeDeclHandler start,
-                          XML_EndDoctypeDeclHandler end)
-{
+XML_SetDoctypeDeclHandler(XML_Parser parser, XML_StartDoctypeDeclHandler start,
+                          XML_EndDoctypeDeclHandler end) {
   if (parser == 
-# 1633 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1557 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1633 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1557 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return;
   parser->m_startDoctypeDeclHandler = start;
@@ -4752,44 +4627,40 @@ void
 XML_SetStartDoctypeDeclHandler(XML_Parser parser,
                                XML_StartDoctypeDeclHandler start) {
   if (parser != 
-# 1642 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1566 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1642 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1566 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_startDoctypeDeclHandler = start;
 }
 
 void
-XML_SetEndDoctypeDeclHandler(XML_Parser parser,
-                             XML_EndDoctypeDeclHandler end) {
+XML_SetEndDoctypeDeclHandler(XML_Parser parser, XML_EndDoctypeDeclHandler end) {
   if (parser != 
-# 1649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1572 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1572 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_endDoctypeDeclHandler = end;
 }
 
 void
 XML_SetUnparsedEntityDeclHandler(XML_Parser parser,
-                                 XML_UnparsedEntityDeclHandler handler)
-{
+                                 XML_UnparsedEntityDeclHandler handler) {
   if (parser != 
-# 1657 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1579 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1657 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1579 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_unparsedEntityDeclHandler = handler;
 }
 
 void
-XML_SetNotationDeclHandler(XML_Parser parser,
-                           XML_NotationDeclHandler handler)
-{
+XML_SetNotationDeclHandler(XML_Parser parser, XML_NotationDeclHandler handler) {
   if (parser != 
-# 1665 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1585 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1665 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1585 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_notationDeclHandler = handler;
 }
@@ -4797,12 +4668,11 @@ XML_SetNotationDeclHandler(XML_Parser parser,
 void
 XML_SetNamespaceDeclHandler(XML_Parser parser,
                             XML_StartNamespaceDeclHandler start,
-                            XML_EndNamespaceDeclHandler end)
-{
+                            XML_EndNamespaceDeclHandler end) {
   if (parser == 
-# 1674 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1593 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1674 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1593 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return;
   parser->m_startNamespaceDeclHandler = start;
@@ -4813,9 +4683,9 @@ void
 XML_SetStartNamespaceDeclHandler(XML_Parser parser,
                                  XML_StartNamespaceDeclHandler start) {
   if (parser != 
-# 1683 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1683 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_startNamespaceDeclHandler = start;
 }
@@ -4824,44 +4694,41 @@ void
 XML_SetEndNamespaceDeclHandler(XML_Parser parser,
                                XML_EndNamespaceDeclHandler end) {
   if (parser != 
-# 1690 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1609 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1690 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1609 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_endNamespaceDeclHandler = end;
 }
 
 void
 XML_SetNotStandaloneHandler(XML_Parser parser,
-                            XML_NotStandaloneHandler handler)
-{
+                            XML_NotStandaloneHandler handler) {
   if (parser != 
-# 1698 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1616 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1698 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1616 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_notStandaloneHandler = handler;
 }
 
 void
 XML_SetExternalEntityRefHandler(XML_Parser parser,
-                                XML_ExternalEntityRefHandler handler)
-{
+                                XML_ExternalEntityRefHandler handler) {
   if (parser != 
-# 1706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1623 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1623 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_externalEntityRefHandler = handler;
 }
 
 void
-XML_SetExternalEntityRefHandlerArg(XML_Parser parser, void *arg)
-{
+XML_SetExternalEntityRefHandlerArg(XML_Parser parser, void *arg) {
   if (parser == 
-# 1713 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1713 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return;
   if (arg)
@@ -4872,25 +4739,22 @@ XML_SetExternalEntityRefHandlerArg(XML_Parser parser, void *arg)
 
 void
 XML_SetSkippedEntityHandler(XML_Parser parser,
-                            XML_SkippedEntityHandler handler)
-{
+                            XML_SkippedEntityHandler handler) {
   if (parser != 
-# 1725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1640 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1640 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_skippedEntityHandler = handler;
 }
 
 void
 XML_SetUnknownEncodingHandler(XML_Parser parser,
-                              XML_UnknownEncodingHandler handler,
-                              void *data)
-{
+                              XML_UnknownEncodingHandler handler, void *data) {
   if (parser == 
-# 1734 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1647 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1734 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1647 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return;
   parser->m_unknownEncodingHandler = handler;
@@ -4898,64 +4762,57 @@ XML_SetUnknownEncodingHandler(XML_Parser parser,
 }
 
 void
-XML_SetElementDeclHandler(XML_Parser parser,
-                          XML_ElementDeclHandler eldecl)
-{
+XML_SetElementDeclHandler(XML_Parser parser, XML_ElementDeclHandler eldecl) {
   if (parser != 
-# 1744 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1655 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1744 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1655 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_elementDeclHandler = eldecl;
 }
 
 void
-XML_SetAttlistDeclHandler(XML_Parser parser,
-                          XML_AttlistDeclHandler attdecl)
-{
+XML_SetAttlistDeclHandler(XML_Parser parser, XML_AttlistDeclHandler attdecl) {
   if (parser != 
-# 1752 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1661 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1752 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1661 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_attlistDeclHandler = attdecl;
 }
 
 void
-XML_SetEntityDeclHandler(XML_Parser parser,
-                         XML_EntityDeclHandler handler)
-{
+XML_SetEntityDeclHandler(XML_Parser parser, XML_EntityDeclHandler handler) {
   if (parser != 
-# 1760 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1667 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1760 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1667 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_entityDeclHandler = handler;
 }
 
 void
-XML_SetXmlDeclHandler(XML_Parser parser,
-                      XML_XmlDeclHandler handler) {
+XML_SetXmlDeclHandler(XML_Parser parser, XML_XmlDeclHandler handler) {
   if (parser != 
-# 1767 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1673 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1767 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1673 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     parser->m_xmlDeclHandler = handler;
 }
 
 int
 XML_SetParamEntityParsing(XML_Parser parser,
-                          enum XML_ParamEntityParsing peParsing)
-{
+                          enum XML_ParamEntityParsing peParsing) {
   if (parser == 
-# 1775 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1680 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1775 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1680 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return 0;
 
-  if (parser->m_parsingStatus.parsing == XML_PARSING || parser->m_parsingStatus.parsing == XML_SUSPENDED)
+  if (parser->m_parsingStatus.parsing == XML_PARSING
+      || parser->m_parsingStatus.parsing == XML_SUSPENDED)
     return 0;
 
   parser->m_paramEntityParsing = peParsing;
@@ -4966,40 +4823,38 @@ XML_SetParamEntityParsing(XML_Parser parser,
 }
 
 int
-XML_SetHashSalt(XML_Parser parser,
-                unsigned long hash_salt)
-{
+XML_SetHashSalt(XML_Parser parser, unsigned long hash_salt) {
   if (parser == 
-# 1792 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1696 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1792 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1696 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return 0;
   if (parser->m_parentParser)
     return XML_SetHashSalt(parser->m_parentParser, hash_salt);
 
-  if (parser->m_parsingStatus.parsing == XML_PARSING || parser->m_parsingStatus.parsing == XML_SUSPENDED)
+  if (parser->m_parsingStatus.parsing == XML_PARSING
+      || parser->m_parsingStatus.parsing == XML_SUSPENDED)
     return 0;
   parser->m_hash_secret_salt = hash_salt;
   return 1;
 }
 
 enum XML_Status
-XML_Parse(XML_Parser parser, const char *s, int len, int isFinal)
-{
+XML_Parse(XML_Parser parser, const char *s, int len, int isFinal) {
   if ((parser == 
-# 1806 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1710 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                 ((void *)0)
-# 1806 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1710 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                     ) || (len < 0) || ((s == 
-# 1806 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1710 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                              ((void *)0)
-# 1806 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1710 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                                  ) && (len != 0))) {
     if (parser != 
-# 1807 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1711 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                  ((void *)0)
-# 1807 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1711 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                      )
       parser->m_errorCode = XML_ERROR_INVALID_ARGUMENT;
     return XML_STATUS_ERROR;
@@ -5013,20 +4868,21 @@ XML_Parse(XML_Parser parser, const char *s, int len, int isFinal)
     return XML_STATUS_ERROR;
   case XML_INITIALIZED:
     if (parser->m_parentParser == 
-# 1819 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                  ((void *)0) 
-# 1819 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-                                      && !startParsing(parser)) {
+# 1723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+                                      && ! startParsing(parser)) {
       parser->m_errorCode = XML_ERROR_NO_MEMORY;
       return XML_STATUS_ERROR;
     }
+
   default:
     parser->m_parsingStatus.parsing = XML_PARSING;
   }
 
   if (len == 0) {
     parser->m_parsingStatus.finalBuffer = (XML_Bool)isFinal;
-    if (!isFinal)
+    if (! isFinal)
       return XML_STATUS_OK;
     parser->m_positionPtr = parser->m_bufferPtr;
     parser->m_parseEndPtr = parser->m_bufferEnd;
@@ -5035,13 +4891,16 @@ XML_Parse(XML_Parser parser, const char *s, int len, int isFinal)
 
 
 
-    parser->m_errorCode = parser->m_processor(parser, parser->m_bufferPtr, parser->m_parseEndPtr, &parser->m_bufferPtr);
+    parser->m_errorCode
+        = parser->m_processor(parser, parser->m_bufferPtr,
+                              parser->m_parseEndPtr, &parser->m_bufferPtr);
 
     if (parser->m_errorCode == XML_ERROR_NONE) {
       switch (parser->m_parsingStatus.parsing) {
       case XML_SUSPENDED:
-# 1855 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-        (((parser->m_encoding)->updatePosition)(parser->m_encoding, parser->m_positionPtr, parser->m_bufferPtr, &parser->m_position));
+# 1762 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+        (((parser->m_encoding)->updatePosition)(parser->m_encoding, parser->m_positionPtr, parser->m_bufferPtr, &parser->m_position))
+                                                                   ;
         parser->m_positionPtr = parser->m_bufferPtr;
         return XML_STATUS_SUSPENDED;
 
@@ -5057,13 +4916,13 @@ XML_Parse(XML_Parser parser, const char *s, int len, int isFinal)
     parser->m_processor = errorProcessor;
     return XML_STATUS_ERROR;
   }
-# 1941 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1851 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
   else {
     void *buff = XML_GetBuffer(parser, len);
     if (buff == 
-# 1943 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1853 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1943 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1853 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
       return XML_STATUS_ERROR;
     else {
@@ -5074,15 +4933,14 @@ XML_Parse(XML_Parser parser, const char *s, int len, int isFinal)
 }
 
 enum XML_Status
-XML_ParseBuffer(XML_Parser parser, int len, int isFinal)
-{
+XML_ParseBuffer(XML_Parser parser, int len, int isFinal) {
   const char *start;
   enum XML_Status result = XML_STATUS_OK;
 
   if (parser == 
-# 1958 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1867 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 1958 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1867 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return XML_STATUS_ERROR;
   switch (parser->m_parsingStatus.parsing) {
@@ -5094,13 +4952,14 @@ XML_ParseBuffer(XML_Parser parser, int len, int isFinal)
     return XML_STATUS_ERROR;
   case XML_INITIALIZED:
     if (parser->m_parentParser == 
-# 1968 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1877 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                  ((void *)0) 
-# 1968 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-                                      && !startParsing(parser)) {
+# 1877 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+                                      && ! startParsing(parser)) {
       parser->m_errorCode = XML_ERROR_NO_MEMORY;
       return XML_STATUS_ERROR;
     }
+
   default:
     parser->m_parsingStatus.parsing = XML_PARSING;
   }
@@ -5112,14 +4971,14 @@ XML_ParseBuffer(XML_Parser parser, int len, int isFinal)
   parser->m_parseEndByteIndex += len;
   parser->m_parsingStatus.finalBuffer = (XML_Bool)isFinal;
 
-  parser->m_errorCode = parser->m_processor(parser, start, parser->m_parseEndPtr, &parser->m_bufferPtr);
+  parser->m_errorCode = parser->m_processor(
+      parser, start, parser->m_parseEndPtr, &parser->m_bufferPtr);
 
   if (parser->m_errorCode != XML_ERROR_NONE) {
     parser->m_eventEndPtr = parser->m_eventPtr;
     parser->m_processor = errorProcessor;
     return XML_STATUS_ERROR;
-  }
-  else {
+  } else {
     switch (parser->m_parsingStatus.parsing) {
     case XML_SUSPENDED:
       result = XML_STATUS_SUSPENDED;
@@ -5130,153 +4989,158 @@ XML_ParseBuffer(XML_Parser parser, int len, int isFinal)
         parser->m_parsingStatus.parsing = XML_FINISHED;
         return result;
       }
-    default: ;
+    default:;
     }
   }
 
-  (((parser->m_encoding)->updatePosition)(parser->m_encoding, parser->m_positionPtr, parser->m_bufferPtr, &parser->m_position));
+  (((parser->m_encoding)->updatePosition)(parser->m_encoding, parser->m_positionPtr, parser->m_bufferPtr, &parser->m_position))
+                                                             ;
   parser->m_positionPtr = parser->m_bufferPtr;
   return result;
 }
 
 void *
-XML_GetBuffer(XML_Parser parser, int len)
-{
+XML_GetBuffer(XML_Parser parser, int len) {
   if (parser == 
-# 2013 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1923 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 2013 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1923 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return 
-# 2014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1924 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 2014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1924 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
   if (len < 0) {
     parser->m_errorCode = XML_ERROR_NO_MEMORY;
     return 
-# 2017 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1927 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 2017 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1927 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
   }
   switch (parser->m_parsingStatus.parsing) {
   case XML_SUSPENDED:
     parser->m_errorCode = XML_ERROR_SUSPENDED;
     return 
-# 2022 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1932 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 2022 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1932 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
   case XML_FINISHED:
     parser->m_errorCode = XML_ERROR_FINISHED;
     return 
-# 2025 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 2025 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
-  default: ;
+  default:;
   }
 
-  if (len > parser->m_bufferLim - parser->m_bufferEnd) {
+  if (len > (((parser->m_bufferLim) && (parser->m_bufferEnd)) ? ((parser->m_bufferLim) - (parser->m_bufferEnd)) : 0)) {
 
     int keep;
 
 
-    int neededSize = (int) ((unsigned)len + (unsigned)(parser->m_bufferEnd - parser->m_bufferPtr));
+    int neededSize = (int)((unsigned)len
+                           + (unsigned)(((parser->m_bufferEnd) && (parser->m_bufferPtr)) ? ((parser->m_bufferEnd) - (parser->m_bufferPtr)) : 0)
+                                                                        );
     if (neededSize < 0) {
       parser->m_errorCode = XML_ERROR_NO_MEMORY;
       return 
-# 2037 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1949 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
             ((void *)0)
-# 2037 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1949 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                 ;
     }
 
-    keep = (int)(parser->m_bufferPtr - parser->m_buffer);
+    keep = (int)(((parser->m_bufferPtr) && (parser->m_buffer)) ? ((parser->m_bufferPtr) - (parser->m_buffer)) : 0);
     if (keep > 1024)
       keep = 1024;
     neededSize += keep;
 
-    if (neededSize <= parser->m_bufferLim - parser->m_buffer) {
+    if (neededSize
+        <= (((parser->m_bufferLim) && (parser->m_buffer)) ? ((parser->m_bufferLim) - (parser->m_buffer)) : 0)) {
 
-      if (keep < parser->m_bufferPtr - parser->m_buffer) {
-        int offset = (int)(parser->m_bufferPtr - parser->m_buffer) - keep;
-        memmove(parser->m_buffer, &parser->m_buffer[offset], parser->m_bufferEnd - parser->m_bufferPtr + keep);
+      if (keep < (((parser->m_bufferPtr) && (parser->m_buffer)) ? ((parser->m_bufferPtr) - (parser->m_buffer)) : 0)) {
+        int offset
+            = (int)(((parser->m_bufferPtr) && (parser->m_buffer)) ? ((parser->m_bufferPtr) - (parser->m_buffer)) : 0)
+              - keep;
+
+
+        memmove(parser->m_buffer, &parser->m_buffer[offset],
+                parser->m_bufferEnd - parser->m_bufferPtr + keep);
         parser->m_bufferEnd -= offset;
         parser->m_bufferPtr -= offset;
       }
-
-
-
-
-
-    }
-    else {
+# 1981 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+    } else {
       char *newBuf;
-      int bufferSize = (int)(parser->m_bufferLim - parser->m_bufferPtr);
+      int bufferSize
+          = (int)(((parser->m_bufferLim) && (parser->m_bufferPtr)) ? ((parser->m_bufferLim) - (parser->m_bufferPtr)) : 0);
       if (bufferSize == 0)
         bufferSize = 1024;
       do {
 
-        bufferSize = (int) (2U * (unsigned) bufferSize);
+        bufferSize = (int)(2U * (unsigned)bufferSize);
       } while (bufferSize < neededSize && bufferSize > 0);
       if (bufferSize <= 0) {
         parser->m_errorCode = XML_ERROR_NO_MEMORY;
         return 
-# 2070 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1993 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
               ((void *)0)
-# 2070 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1993 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                   ;
       }
       newBuf = (char *)(parser->m_mem.malloc_fcn((bufferSize)));
       if (newBuf == 0) {
         parser->m_errorCode = XML_ERROR_NO_MEMORY;
         return 
-# 2075 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 1998 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
               ((void *)0)
-# 2075 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 1998 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                   ;
       }
       parser->m_bufferLim = newBuf + bufferSize;
 
       if (parser->m_bufferPtr) {
-        int keep = (int)(parser->m_bufferPtr - parser->m_buffer);
-        if (keep > 1024)
-          keep = 1024;
-        memcpy(newBuf, &parser->m_bufferPtr[-keep], parser->m_bufferEnd - parser->m_bufferPtr + keep);
+        memcpy(newBuf, &parser->m_bufferPtr[-keep],
+               (((parser->m_bufferEnd) && (parser->m_bufferPtr)) ? ((parser->m_bufferEnd) - (parser->m_bufferPtr)) : 0)
+                   + keep);
         (parser->m_mem.free_fcn((parser->m_buffer)));
         parser->m_buffer = newBuf;
-        parser->m_bufferEnd = parser->m_buffer + (parser->m_bufferEnd - parser->m_bufferPtr) + keep;
+        parser->m_bufferEnd
+            = parser->m_buffer
+              + (((parser->m_bufferEnd) && (parser->m_bufferPtr)) ? ((parser->m_bufferEnd) - (parser->m_bufferPtr)) : 0)
+              + keep;
         parser->m_bufferPtr = parser->m_buffer + keep;
-      }
-      else {
-        parser->m_bufferEnd = newBuf + (parser->m_bufferEnd - parser->m_bufferPtr);
+      } else {
+
+        parser->m_bufferEnd = newBuf;
         parser->m_bufferPtr = parser->m_buffer = newBuf;
       }
-# 2101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2032 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
     }
     parser->m_eventPtr = parser->m_eventEndPtr = 
-# 2102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                                 ((void *)0)
-# 2102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                                     ;
     parser->m_positionPtr = 
-# 2103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2034 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                            ((void *)0)
-# 2103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2034 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                ;
   }
   return parser->m_bufferEnd;
 }
 
 enum XML_Status
-XML_StopParser(XML_Parser parser, XML_Bool resumable)
-{
+XML_StopParser(XML_Parser parser, XML_Bool resumable) {
   if (parser == 
-# 2111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2041 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 2111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2041 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return XML_STATUS_ERROR;
   switch (parser->m_parsingStatus.parsing) {
@@ -5299,22 +5163,20 @@ XML_StopParser(XML_Parser parser, XML_Bool resumable)
       }
 
       parser->m_parsingStatus.parsing = XML_SUSPENDED;
-    }
-    else
+    } else
       parser->m_parsingStatus.parsing = XML_FINISHED;
   }
   return XML_STATUS_OK;
 }
 
 enum XML_Status
-XML_ResumeParser(XML_Parser parser)
-{
+XML_ResumeParser(XML_Parser parser) {
   enum XML_Status result = XML_STATUS_OK;
 
   if (parser == 
-# 2145 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2073 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 2145 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2073 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return XML_STATUS_ERROR;
   if (parser->m_parsingStatus.parsing != XML_SUSPENDED) {
@@ -5323,14 +5185,14 @@ XML_ResumeParser(XML_Parser parser)
   }
   parser->m_parsingStatus.parsing = XML_PARSING;
 
-  parser->m_errorCode = parser->m_processor(parser, parser->m_bufferPtr, parser->m_parseEndPtr, &parser->m_bufferPtr);
+  parser->m_errorCode = parser->m_processor(
+      parser, parser->m_bufferPtr, parser->m_parseEndPtr, &parser->m_bufferPtr);
 
   if (parser->m_errorCode != XML_ERROR_NONE) {
     parser->m_eventEndPtr = parser->m_eventPtr;
     parser->m_processor = errorProcessor;
     return XML_STATUS_ERROR;
-  }
-  else {
+  } else {
     switch (parser->m_parsingStatus.parsing) {
     case XML_SUSPENDED:
       result = XML_STATUS_SUSPENDED;
@@ -5341,65 +5203,63 @@ XML_ResumeParser(XML_Parser parser)
         parser->m_parsingStatus.parsing = XML_FINISHED;
         return result;
       }
-    default: ;
+    default:;
     }
   }
 
-  (((parser->m_encoding)->updatePosition)(parser->m_encoding, parser->m_positionPtr, parser->m_bufferPtr, &parser->m_position));
+  (((parser->m_encoding)->updatePosition)(parser->m_encoding, parser->m_positionPtr, parser->m_bufferPtr, &parser->m_position))
+                                                             ;
   parser->m_positionPtr = parser->m_bufferPtr;
   return result;
 }
 
 void
-XML_GetParsingStatus(XML_Parser parser, XML_ParsingStatus *status)
-{
+XML_GetParsingStatus(XML_Parser parser, XML_ParsingStatus *status) {
   if (parser == 
-# 2183 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 2183 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return;
   ((status != 
-# 2185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2113 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
  ((void *)0)
-# 2185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
- ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c", 2185, __func__, "status != NULL"));
+# 2113 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+ ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c", 2113, __func__, "status != NULL"));
   *status = parser->m_parsingStatus;
 }
 
 enum XML_Error
-XML_GetErrorCode(XML_Parser parser)
-{
+XML_GetErrorCode(XML_Parser parser) {
   if (parser == 
-# 2192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 2192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return XML_ERROR_INVALID_ARGUMENT;
   return parser->m_errorCode;
 }
 
 XML_Index
-XML_GetCurrentByteIndex(XML_Parser parser)
-{
+XML_GetCurrentByteIndex(XML_Parser parser) {
   if (parser == 
-# 2200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 2200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return -1;
   if (parser->m_eventPtr)
-    return (XML_Index)(parser->m_parseEndByteIndex - (parser->m_parseEndPtr - parser->m_eventPtr));
+    return (XML_Index)(parser->m_parseEndByteIndex
+                       - (parser->m_parseEndPtr - parser->m_eventPtr));
   return -1;
 }
 
 int
-XML_GetCurrentByteCount(XML_Parser parser)
-{
+XML_GetCurrentByteCount(XML_Parser parser) {
   if (parser == 
-# 2210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 2210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return 0;
   if (parser->m_eventEndPtr && parser->m_eventPtr)
@@ -5408,30 +5268,29 @@ XML_GetCurrentByteCount(XML_Parser parser)
 }
 
 const char *
-XML_GetInputContext(XML_Parser parser, int *offset, int *size)
-{
+XML_GetInputContext(XML_Parser parser, int *offset, int *size) {
 
   if (parser == 
-# 2221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 2221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return 
-# 2222 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 2222 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
   if (parser->m_eventPtr && parser->m_buffer) {
     if (offset != 
-# 2224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                  ((void *)0)
-# 2224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                      )
       *offset = (int)(parser->m_eventPtr - parser->m_buffer);
     if (size != 
-# 2226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 2226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
       *size = (int)(parser->m_bufferEnd - parser->m_buffer);
     return parser->m_buffer;
@@ -5441,124 +5300,118 @@ XML_GetInputContext(XML_Parser parser, int *offset, int *size)
 
 
 
-  return (char *) 0;
+  return (char *)0;
 }
 
 XML_Size
-XML_GetCurrentLineNumber(XML_Parser parser)
-{
+XML_GetCurrentLineNumber(XML_Parser parser) {
   if (parser == 
-# 2241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 2241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return 0;
   if (parser->m_eventPtr && parser->m_eventPtr >= parser->m_positionPtr) {
-    (((parser->m_encoding)->updatePosition)(parser->m_encoding, parser->m_positionPtr, parser->m_eventPtr, &parser->m_position));
+    (((parser->m_encoding)->updatePosition)(parser->m_encoding, parser->m_positionPtr, parser->m_eventPtr, &parser->m_position))
+                                                              ;
     parser->m_positionPtr = parser->m_eventPtr;
   }
   return parser->m_position.lineNumber + 1;
 }
 
 XML_Size
-XML_GetCurrentColumnNumber(XML_Parser parser)
-{
+XML_GetCurrentColumnNumber(XML_Parser parser) {
   if (parser == 
-# 2253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 2253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return 0;
   if (parser->m_eventPtr && parser->m_eventPtr >= parser->m_positionPtr) {
-    (((parser->m_encoding)->updatePosition)(parser->m_encoding, parser->m_positionPtr, parser->m_eventPtr, &parser->m_position));
+    (((parser->m_encoding)->updatePosition)(parser->m_encoding, parser->m_positionPtr, parser->m_eventPtr, &parser->m_position))
+                                                              ;
     parser->m_positionPtr = parser->m_eventPtr;
   }
   return parser->m_position.columnNumber;
 }
 
 void
-XML_FreeContentModel(XML_Parser parser, XML_Content *model)
-{
+XML_FreeContentModel(XML_Parser parser, XML_Content *model) {
   if (parser != 
-# 2265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 2265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     (parser->m_mem.free_fcn((model)));
 }
 
 void *
-XML_MemMalloc(XML_Parser parser, size_t size)
-{
+XML_MemMalloc(XML_Parser parser, size_t size) {
   if (parser == 
-# 2272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 2272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return 
-# 2273 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 2273 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
   return (parser->m_mem.malloc_fcn((size)));
 }
 
 void *
-XML_MemRealloc(XML_Parser parser, void *ptr, size_t size)
-{
+XML_MemRealloc(XML_Parser parser, void *ptr, size_t size) {
   if (parser == 
-# 2280 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 2280 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return 
-# 2281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 2281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
-  return (parser->m_mem.realloc_fcn((ptr),(size)));
+  return (parser->m_mem.realloc_fcn((ptr), (size)));
 }
 
 void
-XML_MemFree(XML_Parser parser, void *ptr)
-{
+XML_MemFree(XML_Parser parser, void *ptr) {
   if (parser != 
-# 2288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 2288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     (parser->m_mem.free_fcn((ptr)));
 }
 
 void
-XML_DefaultCurrent(XML_Parser parser)
-{
+XML_DefaultCurrent(XML_Parser parser) {
   if (parser == 
-# 2295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 2295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
     return;
   if (parser->m_defaultHandler) {
     if (parser->m_openInternalEntities)
-      reportDefault(parser,
-                    parser->m_internalEncoding,
+      reportDefault(parser, parser->m_internalEncoding,
                     parser->m_openInternalEntities->internalEventPtr,
                     parser->m_openInternalEntities->internalEventEndPtr);
     else
-      reportDefault(parser, parser->m_encoding, parser->m_eventPtr, parser->m_eventEndPtr);
+      reportDefault(parser, parser->m_encoding, parser->m_eventPtr,
+                    parser->m_eventEndPtr);
   }
 }
 
 const XML_LChar *
-XML_ErrorString(enum XML_Error code)
-{
+XML_ErrorString(enum XML_Error code) {
   switch (code) {
   case XML_ERROR_NONE:
     return 
-# 2313 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 2313 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
   case XML_ERROR_NO_MEMORY:
     return "out of memory";
@@ -5638,51 +5491,51 @@ XML_ErrorString(enum XML_Error code)
     return "cannot suspend in external parameter entity";
 
   case XML_ERROR_RESERVED_PREFIX_XML:
-    return "reserved prefix (xml) must not be undeclared or bound to another namespace name";
+    return "reserved prefix (xml) must not be undeclared or bound to another namespace name"
+                                                                                          ;
   case XML_ERROR_RESERVED_PREFIX_XMLNS:
     return "reserved prefix (xmlns) must not be declared or undeclared";
   case XML_ERROR_RESERVED_NAMESPACE_URI:
-    return "prefix must not be bound to one of the reserved namespace names";
+    return "prefix must not be bound to one of the reserved namespace names"
+                                                                          ;
 
   case XML_ERROR_INVALID_ARGUMENT:
     return "invalid argument";
   }
   return 
-# 2401 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2322 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
         ((void *)0)
-# 2401 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2322 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
             ;
 }
 
 const XML_LChar *
 XML_ExpatVersion(void) {
-# 2418 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-  return "expat_""2"".""2"".""5";
+# 2338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+  return "expat_" "2" "." "2" "." "9";
 
 
 
 }
 
 XML_Expat_Version
-XML_ExpatVersionInfo(void)
-{
+XML_ExpatVersionInfo(void) {
   XML_Expat_Version version;
 
   version.major = 2;
   version.minor = 2;
-  version.micro = 5;
+  version.micro = 9;
 
   return version;
 }
 
 const XML_Feature *
-XML_GetFeatureList(void)
-{
-  static const XML_Feature features[] = {
-    {XML_FEATURE_SIZEOF_XML_CHAR, "sizeof(XML_Char)",
-     sizeof(XML_Char)},
-    {XML_FEATURE_SIZEOF_XML_LCHAR, "sizeof(XML_LChar)",
-     sizeof(XML_LChar)},
+XML_GetFeatureList(void) {
+  static const XML_Feature features[]
+      = {{XML_FEATURE_SIZEOF_XML_CHAR, "sizeof(XML_Char)",
+          sizeof(XML_Char)},
+         {XML_FEATURE_SIZEOF_XML_LCHAR, "sizeof(XML_LChar)",
+          sizeof(XML_LChar)},
 
 
 
@@ -5690,30 +5543,29 @@ XML_GetFeatureList(void)
 
 
 
-    {XML_FEATURE_DTD, "XML_DTD", 0},
+         {XML_FEATURE_DTD, "XML_DTD", 0},
 
 
-    {XML_FEATURE_CONTEXT_BYTES, "XML_CONTEXT_BYTES",
-     1024},
-
-
-
-
-
-    {XML_FEATURE_NS, "XML_NS", 0},
+         {XML_FEATURE_CONTEXT_BYTES, "XML_CONTEXT_BYTES",
+          1024},
 
 
 
 
 
+         {XML_FEATURE_NS, "XML_NS", 0},
 
 
-    {XML_FEATURE_END, 
-# 2469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
-                                  ((void *)0)
-# 2469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-                                      , 0}
-  };
+
+
+
+
+
+         {XML_FEATURE_END, 
+# 2387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+                          ((void *)0)
+# 2387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+                              , 0}};
 
   return features;
 }
@@ -5724,8 +5576,7 @@ XML_GetFeatureList(void)
 
 
 static XML_Bool
-storeRawNames(XML_Parser parser)
-{
+storeRawNames(XML_Parser parser) {
   TAG *tag = parser->m_tagStack;
   while (tag) {
     int bufSize;
@@ -5741,15 +5592,15 @@ storeRawNames(XML_Parser parser)
 
 
 
-    bufSize = nameLen + (((tag->rawNameLength) + ((sizeof(XML_Char)) - 1)) & ~((sizeof(XML_Char)) - 1));
+    bufSize = nameLen + (((tag->rawNameLength) + ((sizeof(XML_Char))-1)) & ~((sizeof(XML_Char))-1));
     if (bufSize > tag->bufEnd - tag->buf) {
-      char *temp = (char *)(parser->m_mem.realloc_fcn((tag->buf),(bufSize)));
+      char *temp = (char *)(parser->m_mem.realloc_fcn((tag->buf), (bufSize)));
       if (temp == 
-# 2501 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 2417 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                  ((void *)0)
-# 2501 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 2417 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                      )
-        return ((XML_Bool) 0);
+        return ((XML_Bool)0);
 
 
 
@@ -5759,8 +5610,8 @@ storeRawNames(XML_Parser parser)
 
 
       if (tag->name.localPart)
-        tag->name.localPart = (XML_Char *)temp + (tag->name.localPart -
-                                                  (XML_Char *)tag->buf);
+        tag->name.localPart
+            = (XML_Char *)temp + (tag->name.localPart - (XML_Char *)tag->buf);
       tag->buf = temp;
       tag->bufEnd = temp + bufSize;
       rawNameBuf = temp + nameLen;
@@ -5769,30 +5620,25 @@ storeRawNames(XML_Parser parser)
     tag->rawName = rawNameBuf;
     tag = tag->parent;
   }
-  return ((XML_Bool) 1);
+  return ((XML_Bool)1);
 }
 
 static enum XML_Error
-contentProcessor(XML_Parser parser,
-                 const char *start,
-                 const char *end,
-                 const char **endPtr)
-{
-  enum XML_Error result = doContent(parser, 0, parser->m_encoding, start, end,
-                                    endPtr, (XML_Bool)!parser->m_parsingStatus.finalBuffer);
+contentProcessor(XML_Parser parser, const char *start, const char *end,
+                 const char **endPtr) {
+  enum XML_Error result
+      = doContent(parser, 0, parser->m_encoding, start, end, endPtr,
+                  (XML_Bool)! parser->m_parsingStatus.finalBuffer);
   if (result == XML_ERROR_NONE) {
-    if (!storeRawNames(parser))
+    if (! storeRawNames(parser))
       return XML_ERROR_NO_MEMORY;
   }
   return result;
 }
 
 static enum XML_Error
-externalEntityInitProcessor(XML_Parser parser,
-                            const char *start,
-                            const char *end,
-                            const char **endPtr)
-{
+externalEntityInitProcessor(XML_Parser parser, const char *start,
+                            const char *end, const char **endPtr) {
   enum XML_Error result = initializeEncoding(parser);
   if (result != XML_ERROR_NONE)
     return result;
@@ -5801,11 +5647,8 @@ externalEntityInitProcessor(XML_Parser parser,
 }
 
 static enum XML_Error
-externalEntityInitProcessor2(XML_Parser parser,
-                             const char *start,
-                             const char *end,
-                             const char **endPtr)
-{
+externalEntityInitProcessor2(XML_Parser parser, const char *start,
+                             const char *end, const char **endPtr) {
   const char *next = start;
   int tok = (((parser->m_encoding)->scanners[1])(parser->m_encoding, start, end, &next));
   switch (tok) {
@@ -5815,21 +5658,21 @@ externalEntityInitProcessor2(XML_Parser parser,
 
 
 
-    if (next == end && !parser->m_parsingStatus.finalBuffer) {
+    if (next == end && ! parser->m_parsingStatus.finalBuffer) {
       *endPtr = next;
       return XML_ERROR_NONE;
     }
     start = next;
     break;
   case -1:
-    if (!parser->m_parsingStatus.finalBuffer) {
+    if (! parser->m_parsingStatus.finalBuffer) {
       *endPtr = start;
       return XML_ERROR_NONE;
     }
     parser->m_eventPtr = start;
     return XML_ERROR_UNCLOSED_TOKEN;
   case -2:
-    if (!parser->m_parsingStatus.finalBuffer) {
+    if (! parser->m_parsingStatus.finalBuffer) {
       *endPtr = start;
       return XML_ERROR_NONE;
     }
@@ -5841,11 +5684,8 @@ externalEntityInitProcessor2(XML_Parser parser,
 }
 
 static enum XML_Error
-externalEntityInitProcessor3(XML_Parser parser,
-                             const char *start,
-                             const char *end,
-                             const char **endPtr)
-{
+externalEntityInitProcessor3(XML_Parser parser, const char *start,
+                             const char *end, const char **endPtr) {
   int tok;
   const char *next = start;
   parser->m_eventPtr = start;
@@ -5853,31 +5693,29 @@ externalEntityInitProcessor3(XML_Parser parser,
   parser->m_eventEndPtr = next;
 
   switch (tok) {
-  case 12:
-    {
-      enum XML_Error result;
-      result = processXmlDecl(parser, 1, start, next);
-      if (result != XML_ERROR_NONE)
-        return result;
-      switch (parser->m_parsingStatus.parsing) {
-      case XML_SUSPENDED:
-        *endPtr = next;
-        return XML_ERROR_NONE;
-      case XML_FINISHED:
-        return XML_ERROR_ABORTED;
-      default:
-        start = next;
-      }
+  case 12: {
+    enum XML_Error result;
+    result = processXmlDecl(parser, 1, start, next);
+    if (result != XML_ERROR_NONE)
+      return result;
+    switch (parser->m_parsingStatus.parsing) {
+    case XML_SUSPENDED:
+      *endPtr = next;
+      return XML_ERROR_NONE;
+    case XML_FINISHED:
+      return XML_ERROR_ABORTED;
+    default:
+      start = next;
     }
-    break;
+  } break;
   case -1:
-    if (!parser->m_parsingStatus.finalBuffer) {
+    if (! parser->m_parsingStatus.finalBuffer) {
       *endPtr = start;
       return XML_ERROR_NONE;
     }
     return XML_ERROR_UNCLOSED_TOKEN;
   case -2:
-    if (!parser->m_parsingStatus.finalBuffer) {
+    if (! parser->m_parsingStatus.finalBuffer) {
       *endPtr = start;
       return XML_ERROR_NONE;
     }
@@ -5889,39 +5727,31 @@ externalEntityInitProcessor3(XML_Parser parser,
 }
 
 static enum XML_Error
-externalEntityContentProcessor(XML_Parser parser,
-                               const char *start,
-                               const char *end,
-                               const char **endPtr)
-{
-  enum XML_Error result = doContent(parser, 1, parser->m_encoding, start, end,
-                                    endPtr, (XML_Bool)!parser->m_parsingStatus.finalBuffer);
+externalEntityContentProcessor(XML_Parser parser, const char *start,
+                               const char *end, const char **endPtr) {
+  enum XML_Error result
+      = doContent(parser, 1, parser->m_encoding, start, end, endPtr,
+                  (XML_Bool)! parser->m_parsingStatus.finalBuffer);
   if (result == XML_ERROR_NONE) {
-    if (!storeRawNames(parser))
+    if (! storeRawNames(parser))
       return XML_ERROR_NO_MEMORY;
   }
   return result;
 }
 
 static enum XML_Error
-doContent(XML_Parser parser,
-          int startTagLevel,
-          const ENCODING *enc,
-          const char *s,
-          const char *end,
-          const char **nextPtr,
-          XML_Bool haveMore)
-{
+doContent(XML_Parser parser, int startTagLevel, const ENCODING *enc,
+          const char *s, const char *end, const char **nextPtr,
+          XML_Bool haveMore) {
 
-  DTD * const dtd = parser->m_dtd;
+  DTD *const dtd = parser->m_dtd;
 
   const char **eventPP;
   const char **eventEndPP;
   if (enc == parser->m_encoding) {
     eventPP = &parser->m_eventPtr;
     eventEndPP = &parser->m_eventEndPtr;
-  }
-  else {
+  } else {
     eventPP = &(parser->m_openInternalEntities->internalEventPtr);
     eventEndPP = &(parser->m_openInternalEntities->internalEventEndPtr);
   }
@@ -5941,8 +5771,7 @@ doContent(XML_Parser parser,
       if (parser->m_characterDataHandler) {
         XML_Char c = 0xA;
         parser->m_characterDataHandler(parser->m_handlerArg, &c, 1);
-      }
-      else if (parser->m_defaultHandler)
+      } else if (parser->m_defaultHandler)
         reportDefault(parser, enc, s, end);
 
 
@@ -5980,207 +5809,202 @@ doContent(XML_Parser parser,
         return XML_ERROR_NONE;
       }
       return XML_ERROR_PARTIAL_CHAR;
-    case 9:
-      {
-        const XML_Char *name;
-        ENTITY *entity;
-        XML_Char ch = (XML_Char) (((enc)->predefinedEntityName)(enc, s + enc->minBytesPerChar, next - enc->minBytesPerChar))
-
-                                                                          ;
-        if (ch) {
-          if (parser->m_characterDataHandler)
-            parser->m_characterDataHandler(parser->m_handlerArg, &ch, 1);
-          else if (parser->m_defaultHandler)
-            reportDefault(parser, enc, s, next);
-          break;
-        }
-        name = poolStoreString(&dtd->pool, enc,
-                                s + enc->minBytesPerChar,
-                                next - enc->minBytesPerChar);
-        if (!name)
-          return XML_ERROR_NO_MEMORY;
-        entity = (ENTITY *)lookup(parser, &dtd->generalEntities, name, 0);
-        ((&dtd->pool)->ptr = (&dtd->pool)->start);
-
-
-
-
-        if (!dtd->hasParamEntityRefs || dtd->standalone) {
-          if (!entity)
-            return XML_ERROR_UNDEFINED_ENTITY;
-          else if (!entity->is_internal)
-            return XML_ERROR_ENTITY_DECLARED_IN_PE;
-        }
-        else if (!entity) {
-          if (parser->m_skippedEntityHandler)
-            parser->m_skippedEntityHandler(parser->m_handlerArg, name, 0);
-          else if (parser->m_defaultHandler)
-            reportDefault(parser, enc, s, next);
-          break;
-        }
-        if (entity->open)
-          return XML_ERROR_RECURSIVE_ENTITY_REF;
-        if (entity->notation)
-          return XML_ERROR_BINARY_ENTITY_REF;
-        if (entity->textPtr) {
-          enum XML_Error result;
-          if (!parser->m_defaultExpandInternalEntities) {
-            if (parser->m_skippedEntityHandler)
-              parser->m_skippedEntityHandler(parser->m_handlerArg, entity->name, 0);
-            else if (parser->m_defaultHandler)
-              reportDefault(parser, enc, s, next);
-            break;
-          }
-          result = processInternalEntity(parser, entity, ((XML_Bool) 0));
-          if (result != XML_ERROR_NONE)
-            return result;
-        }
-        else if (parser->m_externalEntityRefHandler) {
-          const XML_Char *context;
-          entity->open = ((XML_Bool) 1);
-          context = getContext(parser);
-          entity->open = ((XML_Bool) 0);
-          if (!context)
-            return XML_ERROR_NO_MEMORY;
-          if (!parser->m_externalEntityRefHandler(parser->m_externalEntityRefHandlerArg,
-                                        context,
-                                        entity->base,
-                                        entity->systemId,
-                                        entity->publicId))
-            return XML_ERROR_EXTERNAL_ENTITY_HANDLING;
-          ((&parser->m_tempPool)->ptr = (&parser->m_tempPool)->start);
-        }
+    case 9: {
+      const XML_Char *name;
+      ENTITY *entity;
+      XML_Char ch = (XML_Char)(((enc)->predefinedEntityName)(enc, s + enc->minBytesPerChar, next - enc->minBytesPerChar))
+                                                                     ;
+      if (ch) {
+        if (parser->m_characterDataHandler)
+          parser->m_characterDataHandler(parser->m_handlerArg, &ch, 1);
         else if (parser->m_defaultHandler)
           reportDefault(parser, enc, s, next);
         break;
       }
+      name = poolStoreString(&dtd->pool, enc, s + enc->minBytesPerChar,
+                             next - enc->minBytesPerChar);
+      if (! name)
+        return XML_ERROR_NO_MEMORY;
+      entity = (ENTITY *)lookup(parser, &dtd->generalEntities, name, 0);
+      ((&dtd->pool)->ptr = (&dtd->pool)->start);
+
+
+
+
+      if (! dtd->hasParamEntityRefs || dtd->standalone) {
+        if (! entity)
+          return XML_ERROR_UNDEFINED_ENTITY;
+        else if (! entity->is_internal)
+          return XML_ERROR_ENTITY_DECLARED_IN_PE;
+      } else if (! entity) {
+        if (parser->m_skippedEntityHandler)
+          parser->m_skippedEntityHandler(parser->m_handlerArg, name, 0);
+        else if (parser->m_defaultHandler)
+          reportDefault(parser, enc, s, next);
+        break;
+      }
+      if (entity->open)
+        return XML_ERROR_RECURSIVE_ENTITY_REF;
+      if (entity->notation)
+        return XML_ERROR_BINARY_ENTITY_REF;
+      if (entity->textPtr) {
+        enum XML_Error result;
+        if (! parser->m_defaultExpandInternalEntities) {
+          if (parser->m_skippedEntityHandler)
+            parser->m_skippedEntityHandler(parser->m_handlerArg, entity->name,
+                                           0);
+          else if (parser->m_defaultHandler)
+            reportDefault(parser, enc, s, next);
+          break;
+        }
+        result = processInternalEntity(parser, entity, ((XML_Bool)0));
+        if (result != XML_ERROR_NONE)
+          return result;
+      } else if (parser->m_externalEntityRefHandler) {
+        const XML_Char *context;
+        entity->open = ((XML_Bool)1);
+        context = getContext(parser);
+        entity->open = ((XML_Bool)0);
+        if (! context)
+          return XML_ERROR_NO_MEMORY;
+        if (! parser->m_externalEntityRefHandler(
+                parser->m_externalEntityRefHandlerArg, context, entity->base,
+                entity->systemId, entity->publicId))
+          return XML_ERROR_EXTERNAL_ENTITY_HANDLING;
+        ((&parser->m_tempPool)->ptr = (&parser->m_tempPool)->start);
+      } else if (parser->m_defaultHandler)
+        reportDefault(parser, enc, s, next);
+      break;
+    }
     case 2:
 
-    case 1:
-      {
-        TAG *tag;
-        enum XML_Error result;
-        XML_Char *toPtr;
-        if (parser->m_freeTagList) {
-          tag = parser->m_freeTagList;
-          parser->m_freeTagList = parser->m_freeTagList->parent;
+    case 1: {
+      TAG *tag;
+      enum XML_Error result;
+      XML_Char *toPtr;
+      if (parser->m_freeTagList) {
+        tag = parser->m_freeTagList;
+        parser->m_freeTagList = parser->m_freeTagList->parent;
+      } else {
+        tag = (TAG *)(parser->m_mem.malloc_fcn((sizeof(TAG))));
+        if (! tag)
+          return XML_ERROR_NO_MEMORY;
+        tag->buf = (char *)(parser->m_mem.malloc_fcn((32)));
+        if (! tag->buf) {
+          (parser->m_mem.free_fcn((tag)));
+          return XML_ERROR_NO_MEMORY;
         }
-        else {
-          tag = (TAG *)(parser->m_mem.malloc_fcn((sizeof(TAG))));
-          if (!tag)
-            return XML_ERROR_NO_MEMORY;
-          tag->buf = (char *)(parser->m_mem.malloc_fcn((32)));
-          if (!tag->buf) {
-            (parser->m_mem.free_fcn((tag)));
-            return XML_ERROR_NO_MEMORY;
-          }
-          tag->bufEnd = tag->buf + 32;
-        }
-        tag->bindings = 
-# 2829 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
-                       ((void *)0)
-# 2829 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-                           ;
-        tag->parent = parser->m_tagStack;
-        parser->m_tagStack = tag;
-        tag->name.localPart = 
-# 2832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
-                             ((void *)0)
-# 2832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-                                 ;
-        tag->name.prefix = 
-# 2833 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
-                          ((void *)0)
-# 2833 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-                              ;
-        tag->rawName = s + enc->minBytesPerChar;
-        tag->rawNameLength = (((enc)->nameLength)(enc, tag->rawName));
-        ++parser->m_tagLevel;
-        {
-          const char *rawNameEnd = tag->rawName + tag->rawNameLength;
-          const char *fromPtr = tag->rawName;
-          toPtr = (XML_Char *)tag->buf;
-          for (;;) {
-            int bufSize;
-            int convLen;
-            const enum XML_Convert_Result convert_res = (((enc)->utf8Convert)(enc, &fromPtr, rawNameEnd, (ICHAR **)&toPtr, (ICHAR *)tag->bufEnd - 1))
-
-                                                                  ;
-            convLen = (int)(toPtr - (XML_Char *)tag->buf);
-            if ((fromPtr >= rawNameEnd) || (convert_res == XML_CONVERT_INPUT_INCOMPLETE)) {
-              tag->name.strLen = convLen;
-              break;
-            }
-            bufSize = (int)(tag->bufEnd - tag->buf) << 1;
-            {
-              char *temp = (char *)(parser->m_mem.realloc_fcn((tag->buf),(bufSize)));
-              if (temp == 
-# 2855 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
-                         ((void *)0)
-# 2855 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-                             )
-                return XML_ERROR_NO_MEMORY;
-              tag->buf = temp;
-              tag->bufEnd = temp + bufSize;
-              toPtr = (XML_Char *)temp + convLen;
-            }
-          }
-        }
-        tag->name.str = (XML_Char *)tag->buf;
-        *toPtr = '\0';
-        result = storeAtts(parser, enc, s, &(tag->name), &(tag->bindings));
-        if (result)
-          return result;
-        if (parser->m_startElementHandler)
-          parser->m_startElementHandler(parser->m_handlerArg, tag->name.str,
-                              (const XML_Char **)parser->m_atts);
-        else if (parser->m_defaultHandler)
-          reportDefault(parser, enc, s, next);
-        poolClear(&parser->m_tempPool);
-        break;
+        tag->bufEnd = tag->buf + 32;
       }
+      tag->bindings = 
+# 2714 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+                     ((void *)0)
+# 2714 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+                         ;
+      tag->parent = parser->m_tagStack;
+      parser->m_tagStack = tag;
+      tag->name.localPart = 
+# 2717 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+                           ((void *)0)
+# 2717 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+                               ;
+      tag->name.prefix = 
+# 2718 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+                        ((void *)0)
+# 2718 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+                            ;
+      tag->rawName = s + enc->minBytesPerChar;
+      tag->rawNameLength = (((enc)->nameLength)(enc, tag->rawName));
+      ++parser->m_tagLevel;
+      {
+        const char *rawNameEnd = tag->rawName + tag->rawNameLength;
+        const char *fromPtr = tag->rawName;
+        toPtr = (XML_Char *)tag->buf;
+        for (;;) {
+          int bufSize;
+          int convLen;
+          const enum XML_Convert_Result convert_res
+              = (((enc)->utf8Convert)(enc, &fromPtr, rawNameEnd, (ICHAR **)&toPtr, (ICHAR *)tag->bufEnd - 1))
+                                                    ;
+          convLen = (int)(toPtr - (XML_Char *)tag->buf);
+          if ((fromPtr >= rawNameEnd)
+              || (convert_res == XML_CONVERT_INPUT_INCOMPLETE)) {
+            tag->name.strLen = convLen;
+            break;
+          }
+          bufSize = (int)(tag->bufEnd - tag->buf) << 1;
+          {
+            char *temp = (char *)(parser->m_mem.realloc_fcn((tag->buf), (bufSize)));
+            if (temp == 
+# 2741 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+                       ((void *)0)
+# 2741 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+                           )
+              return XML_ERROR_NO_MEMORY;
+            tag->buf = temp;
+            tag->bufEnd = temp + bufSize;
+            toPtr = (XML_Char *)temp + convLen;
+          }
+        }
+      }
+      tag->name.str = (XML_Char *)tag->buf;
+      *toPtr = '\0';
+      result = storeAtts(parser, enc, s, &(tag->name), &(tag->bindings));
+      if (result)
+        return result;
+      if (parser->m_startElementHandler)
+        parser->m_startElementHandler(parser->m_handlerArg, tag->name.str,
+                                      (const XML_Char **)parser->m_atts);
+      else if (parser->m_defaultHandler)
+        reportDefault(parser, enc, s, next);
+      poolClear(&parser->m_tempPool);
+      break;
+    }
     case 4:
 
-    case 3:
-      {
-        const char *rawName = s + enc->minBytesPerChar;
-        enum XML_Error result;
-        BINDING *bindings = 
-# 2882 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
-                           ((void *)0)
-# 2882 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-                               ;
-        XML_Bool noElmHandlers = ((XML_Bool) 1);
-        TAG_NAME name;
-        name.str = poolStoreString(&parser->m_tempPool, enc, rawName,
-                                   rawName + (((enc)->nameLength)(enc, rawName)));
-        if (!name.str)
-          return XML_ERROR_NO_MEMORY;
-        ((&parser->m_tempPool)->start = (&parser->m_tempPool)->ptr);
-        result = storeAtts(parser, enc, s, &name, &bindings);
-        if (result != XML_ERROR_NONE) {
-          freeBindings(parser, bindings);
-          return result;
-        }
-        ((&parser->m_tempPool)->start = (&parser->m_tempPool)->ptr);
-        if (parser->m_startElementHandler) {
-          parser->m_startElementHandler(parser->m_handlerArg, name.str, (const XML_Char **)parser->m_atts);
-          noElmHandlers = ((XML_Bool) 0);
-        }
-        if (parser->m_endElementHandler) {
-          if (parser->m_startElementHandler)
-            *eventPP = *eventEndPP;
-          parser->m_endElementHandler(parser->m_handlerArg, name.str);
-          noElmHandlers = ((XML_Bool) 0);
-        }
-        if (noElmHandlers && parser->m_defaultHandler)
-          reportDefault(parser, enc, s, next);
-        poolClear(&parser->m_tempPool);
+    case 3: {
+      const char *rawName = s + enc->minBytesPerChar;
+      enum XML_Error result;
+      BINDING *bindings = 
+# 2767 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+                         ((void *)0)
+# 2767 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+                             ;
+      XML_Bool noElmHandlers = ((XML_Bool)1);
+      TAG_NAME name;
+      name.str = poolStoreString(&parser->m_tempPool, enc, rawName,
+                                 rawName + (((enc)->nameLength)(enc, rawName)));
+      if (! name.str)
+        return XML_ERROR_NO_MEMORY;
+      ((&parser->m_tempPool)->start = (&parser->m_tempPool)->ptr);
+      result = storeAtts(parser, enc, s, &name, &bindings);
+      if (result != XML_ERROR_NONE) {
         freeBindings(parser, bindings);
+        return result;
       }
-      if ((parser->m_tagLevel == 0) &&
-          !((parser->m_parsingStatus.parsing == XML_FINISHED) || (parser->m_parsingStatus.parsing == XML_SUSPENDED))) {
-        return epilogProcessor(parser, next, end, nextPtr);
+      ((&parser->m_tempPool)->start = (&parser->m_tempPool)->ptr);
+      if (parser->m_startElementHandler) {
+        parser->m_startElementHandler(parser->m_handlerArg, name.str,
+                                      (const XML_Char **)parser->m_atts);
+        noElmHandlers = ((XML_Bool)0);
+      }
+      if (parser->m_endElementHandler) {
+        if (parser->m_startElementHandler)
+          *eventPP = *eventEndPP;
+        parser->m_endElementHandler(parser->m_handlerArg, name.str);
+        noElmHandlers = ((XML_Bool)0);
+      }
+      if (noElmHandlers && parser->m_defaultHandler)
+        reportDefault(parser, enc, s, next);
+      poolClear(&parser->m_tempPool);
+      freeBindings(parser, bindings);
+    }
+      if ((parser->m_tagLevel == 0)
+          && (parser->m_parsingStatus.parsing != XML_FINISHED)) {
+        if (parser->m_parsingStatus.parsing == XML_SUSPENDED)
+          parser->m_processor = epilogProcessor;
+        else
+          return epilogProcessor(parser, next, end, nextPtr);
       }
       break;
     case 5:
@@ -6193,7 +6017,7 @@ doContent(XML_Parser parser,
         parser->m_tagStack = tag->parent;
         tag->parent = parser->m_freeTagList;
         parser->m_freeTagList = tag;
-        rawName = s + enc->minBytesPerChar*2;
+        rawName = s + enc->minBytesPerChar * 2;
         len = (((enc)->nameLength)(enc, rawName));
         if (len != tag->rawNameLength
             || memcmp(tag->rawName, rawName, len) != 0) {
@@ -6213,89 +6037,94 @@ doContent(XML_Parser parser,
 
             uri = (XML_Char *)tag->name.str + tag->name.uriLen;
 
-            while (*localPart) *uri++ = *localPart++;
+            while (*localPart)
+              *uri++ = *localPart++;
             prefix = (XML_Char *)tag->name.prefix;
             if (parser->m_ns_triplets && prefix) {
               *uri++ = parser->m_namespaceSeparator;
-              while (*prefix) *uri++ = *prefix++;
-             }
+              while (*prefix)
+                *uri++ = *prefix++;
+            }
             *uri = '\0';
           }
           parser->m_endElementHandler(parser->m_handlerArg, tag->name.str);
-        }
-        else if (parser->m_defaultHandler)
+        } else if (parser->m_defaultHandler)
           reportDefault(parser, enc, s, next);
         while (tag->bindings) {
           BINDING *b = tag->bindings;
           if (parser->m_endNamespaceDeclHandler)
-            parser->m_endNamespaceDeclHandler(parser->m_handlerArg, b->prefix->name);
+            parser->m_endNamespaceDeclHandler(parser->m_handlerArg,
+                                              b->prefix->name);
           tag->bindings = tag->bindings->nextTagBinding;
           b->nextTagBinding = parser->m_freeBindingList;
           parser->m_freeBindingList = b;
           b->prefix->binding = b->prevPrefixBinding;
         }
-        if (parser->m_tagLevel == 0)
-          return epilogProcessor(parser, next, end, nextPtr);
-      }
-      break;
-    case 10:
-      {
-        int n = (((enc)->charRefNumber)(enc, s));
-        if (n < 0)
-          return XML_ERROR_BAD_CHAR_REF;
-        if (parser->m_characterDataHandler) {
-          XML_Char buf[4];
-          parser->m_characterDataHandler(parser->m_handlerArg, buf, XmlUtf8Encode(n, (ICHAR *)buf));
+        if ((parser->m_tagLevel == 0)
+            && (parser->m_parsingStatus.parsing != XML_FINISHED)) {
+          if (parser->m_parsingStatus.parsing == XML_SUSPENDED)
+            parser->m_processor = epilogProcessor;
+          else
+            return epilogProcessor(parser, next, end, nextPtr);
         }
-        else if (parser->m_defaultHandler)
-          reportDefault(parser, enc, s, next);
       }
       break;
+    case 10: {
+      int n = (((enc)->charRefNumber)(enc, s));
+      if (n < 0)
+        return XML_ERROR_BAD_CHAR_REF;
+      if (parser->m_characterDataHandler) {
+        XML_Char buf[4];
+        parser->m_characterDataHandler(parser->m_handlerArg, buf,
+                                       XmlUtf8Encode(n, (ICHAR *)buf));
+      } else if (parser->m_defaultHandler)
+        reportDefault(parser, enc, s, next);
+    } break;
     case 12:
       return XML_ERROR_MISPLACED_XML_PI;
     case 7:
       if (parser->m_characterDataHandler) {
         XML_Char c = 0xA;
         parser->m_characterDataHandler(parser->m_handlerArg, &c, 1);
-      }
-      else if (parser->m_defaultHandler)
+      } else if (parser->m_defaultHandler)
         reportDefault(parser, enc, s, next);
       break;
-    case 8:
-      {
-        enum XML_Error result;
-        if (parser->m_startCdataSectionHandler)
-          parser->m_startCdataSectionHandler(parser->m_handlerArg);
-# 3015 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-        else if (parser->m_defaultHandler)
-          reportDefault(parser, enc, s, next);
-        result = doCdataSection(parser, enc, &next, end, nextPtr, haveMore);
-        if (result != XML_ERROR_NONE)
-          return result;
-        else if (!next) {
-          parser->m_processor = cdataSectionProcessor;
-          return result;
-        }
+    case 8: {
+      enum XML_Error result;
+      if (parser->m_startCdataSectionHandler)
+        parser->m_startCdataSectionHandler(parser->m_handlerArg);
+# 2904 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+      else if (0 && parser->m_characterDataHandler)
+        parser->m_characterDataHandler(parser->m_handlerArg, parser->m_dataBuf,
+                                       0);
+
+      else if (parser->m_defaultHandler)
+        reportDefault(parser, enc, s, next);
+      result = doCdataSection(parser, enc, &next, end, nextPtr, haveMore);
+      if (result != XML_ERROR_NONE)
+        return result;
+      else if (! next) {
+        parser->m_processor = cdataSectionProcessor;
+        return result;
       }
-      break;
+    } break;
     case -5:
       if (haveMore) {
         *nextPtr = s;
         return XML_ERROR_NONE;
       }
       if (parser->m_characterDataHandler) {
-        if ((!(enc)->isUtf8)) {
+        if ((! (enc)->isUtf8)) {
           ICHAR *dataPtr = (ICHAR *)parser->m_dataBuf;
           (((enc)->utf8Convert)(enc, &s, end, &dataPtr, (ICHAR *)parser->m_dataBufEnd));
-          parser->m_characterDataHandler(parser->m_handlerArg, parser->m_dataBuf,
-                               (int)(dataPtr - (ICHAR *)parser->m_dataBuf));
-        }
-        else
-          parser->m_characterDataHandler(parser->m_handlerArg,
-                               (XML_Char *)s,
-                               (int)((XML_Char *)end - (XML_Char *)s));
-      }
-      else if (parser->m_defaultHandler)
+          parser->m_characterDataHandler(
+              parser->m_handlerArg, parser->m_dataBuf,
+              (int)(dataPtr - (ICHAR *)parser->m_dataBuf));
+        } else
+          parser->m_characterDataHandler(
+              parser->m_handlerArg, (XML_Char *)s,
+              (int)((XML_Char *)end - (XML_Char *)s));
+      } else if (parser->m_defaultHandler)
         reportDefault(parser, enc, s, end);
 
 
@@ -6310,37 +6139,34 @@ doContent(XML_Parser parser,
       }
       *nextPtr = end;
       return XML_ERROR_NONE;
-    case 6:
-      {
-        XML_CharacterDataHandler charDataHandler = parser->m_characterDataHandler;
-        if (charDataHandler) {
-          if ((!(enc)->isUtf8)) {
-            for (;;) {
-              ICHAR *dataPtr = (ICHAR *)parser->m_dataBuf;
-              const enum XML_Convert_Result convert_res = (((enc)->utf8Convert)(enc, &s, next, &dataPtr, (ICHAR *)parser->m_dataBufEnd));
-              *eventEndPP = s;
-              charDataHandler(parser->m_handlerArg, parser->m_dataBuf,
-                              (int)(dataPtr - (ICHAR *)parser->m_dataBuf));
-              if ((convert_res == XML_CONVERT_COMPLETED) || (convert_res == XML_CONVERT_INPUT_INCOMPLETE))
-                break;
-              *eventPP = s;
-            }
+    case 6: {
+      XML_CharacterDataHandler charDataHandler = parser->m_characterDataHandler;
+      if (charDataHandler) {
+        if ((! (enc)->isUtf8)) {
+          for (;;) {
+            ICHAR *dataPtr = (ICHAR *)parser->m_dataBuf;
+            const enum XML_Convert_Result convert_res = (((enc)->utf8Convert)(enc, &s, next, &dataPtr, (ICHAR *)parser->m_dataBufEnd))
+                                                                       ;
+            *eventEndPP = s;
+            charDataHandler(parser->m_handlerArg, parser->m_dataBuf,
+                            (int)(dataPtr - (ICHAR *)parser->m_dataBuf));
+            if ((convert_res == XML_CONVERT_COMPLETED)
+                || (convert_res == XML_CONVERT_INPUT_INCOMPLETE))
+              break;
+            *eventPP = s;
           }
-          else
-            charDataHandler(parser->m_handlerArg,
-                            (XML_Char *)s,
-                            (int)((XML_Char *)next - (XML_Char *)s));
-        }
-        else if (parser->m_defaultHandler)
-          reportDefault(parser, enc, s, next);
-      }
-      break;
+        } else
+          charDataHandler(parser->m_handlerArg, (XML_Char *)s,
+                          (int)((XML_Char *)next - (XML_Char *)s));
+      } else if (parser->m_defaultHandler)
+        reportDefault(parser, enc, s, next);
+    } break;
     case 11:
-      if (!reportProcessingInstruction(parser, enc, s, next))
+      if (! reportProcessingInstruction(parser, enc, s, next))
         return XML_ERROR_NO_MEMORY;
       break;
     case 13:
-      if (!reportComment(parser, enc, s, next))
+      if (! reportComment(parser, enc, s, next))
         return XML_ERROR_NO_MEMORY;
       break;
     default:
@@ -6363,7 +6189,7 @@ doContent(XML_Parser parser,
       return XML_ERROR_NONE;
     case XML_FINISHED:
       return XML_ERROR_ABORTED;
-    default: ;
+    default:;
     }
   }
 
@@ -6374,8 +6200,7 @@ doContent(XML_Parser parser,
 
 
 static void
-freeBindings(XML_Parser parser, BINDING *bindings)
-{
+freeBindings(XML_Parser parser, BINDING *bindings) {
   while (bindings) {
     BINDING *b = bindings;
 
@@ -6383,7 +6208,7 @@ freeBindings(XML_Parser parser, BINDING *bindings)
 
 
     if (parser->m_endNamespaceDeclHandler)
-        parser->m_endNamespaceDeclHandler(parser->m_handlerArg, b->prefix->name);
+      parser->m_endNamespaceDeclHandler(parser->m_handlerArg, b->prefix->name);
 
     bindings = bindings->nextTagBinding;
     b->nextTagBinding = parser->m_freeBindingList;
@@ -6391,13 +6216,11 @@ freeBindings(XML_Parser parser, BINDING *bindings)
     b->prefix->binding = b->prevPrefixBinding;
   }
 }
-# 3150 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 3037 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
 static enum XML_Error
-storeAtts(XML_Parser parser, const ENCODING *enc,
-          const char *attStr, TAG_NAME *tagNamePtr,
-          BINDING **bindingsPtr)
-{
-  DTD * const dtd = parser->m_dtd;
+storeAtts(XML_Parser parser, const ENCODING *enc, const char *attStr,
+          TAG_NAME *tagNamePtr, BINDING **bindingsPtr) {
+  DTD *const dtd = parser->m_dtd;
   ELEMENT_TYPE *elementType;
   int nDefaultAtts;
   const XML_Char **appAtts;
@@ -6411,16 +6234,17 @@ storeAtts(XML_Parser parser, const ENCODING *enc,
   const XML_Char *localPart;
 
 
-  elementType = (ELEMENT_TYPE *)lookup(parser, &dtd->elementTypes, tagNamePtr->str,0);
-  if (!elementType) {
+  elementType
+      = (ELEMENT_TYPE *)lookup(parser, &dtd->elementTypes, tagNamePtr->str, 0);
+  if (! elementType) {
     const XML_Char *name = poolCopyString(&dtd->pool, tagNamePtr->str);
-    if (!name)
+    if (! name)
       return XML_ERROR_NO_MEMORY;
     elementType = (ELEMENT_TYPE *)lookup(parser, &dtd->elementTypes, name,
                                          sizeof(ELEMENT_TYPE));
-    if (!elementType)
+    if (! elementType)
       return XML_ERROR_NO_MEMORY;
-    if (parser->m_ns && !setElementTypePrefix(parser, elementType))
+    if (parser->m_ns && ! setElementTypePrefix(parser, elementType))
       return XML_ERROR_NO_MEMORY;
   }
   nDefaultAtts = elementType->nDefaultAtts;
@@ -6434,17 +6258,18 @@ storeAtts(XML_Parser parser, const ENCODING *enc,
 
 
     parser->m_attsSize = n + nDefaultAtts + 16;
-    temp = (ATTRIBUTE *)(parser->m_mem.realloc_fcn(((void *)parser->m_atts),(parser->m_attsSize * sizeof(ATTRIBUTE))));
+    temp = (ATTRIBUTE *)(parser->m_mem.realloc_fcn(((void *)parser->m_atts), (parser->m_attsSize * sizeof(ATTRIBUTE))))
+                                                                       ;
     if (temp == 
-# 3193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 3080 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 3193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 3080 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    ) {
       parser->m_attsSize = oldAttsSize;
       return XML_ERROR_NO_MEMORY;
     }
     parser->m_atts = temp;
-# 3206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 3094 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
     if (n > oldAttsSize)
       (((enc)->getAtts)(enc, attStr, n, parser->m_atts));
   }
@@ -6456,12 +6281,12 @@ storeAtts(XML_Parser parser, const ENCODING *enc,
 
 
 
-    ATTRIBUTE_ID *attId = getAttributeId(parser, enc, currAtt->name,
-                                         currAtt->name
-                                         + (((enc)->nameLength)(enc, currAtt->name)));
-    if (!attId)
+    ATTRIBUTE_ID *attId
+        = getAttributeId(parser, enc, currAtt->name,
+                         currAtt->name + (((enc)->nameLength)(enc, currAtt->name)));
+    if (! attId)
       return XML_ERROR_NO_MEMORY;
-# 3234 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 3124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
     if ((attId->name)[-1]) {
       if (enc == parser->m_encoding)
         parser->m_eventPtr = parser->m_atts[i].name;
@@ -6469,9 +6294,9 @@ storeAtts(XML_Parser parser, const ENCODING *enc,
     }
     (attId->name)[-1] = 1;
     appAtts[attIndex++] = attId->name;
-    if (!parser->m_atts[i].normalized) {
+    if (! parser->m_atts[i].normalized) {
       enum XML_Error result;
-      XML_Bool isCdata = ((XML_Bool) 1);
+      XML_Bool isCdata = ((XML_Bool)1);
 
 
       if (attId->maybeTokenized) {
@@ -6485,17 +6310,17 @@ storeAtts(XML_Parser parser, const ENCODING *enc,
       }
 
 
-      result = storeAttributeValue(parser, enc, isCdata,
-                                   parser->m_atts[i].valuePtr, parser->m_atts[i].valueEnd,
-                                   &parser->m_tempPool);
+      result = storeAttributeValue(
+          parser, enc, isCdata, parser->m_atts[i].valuePtr,
+          parser->m_atts[i].valueEnd, &parser->m_tempPool);
       if (result)
         return result;
       appAtts[attIndex] = ((&parser->m_tempPool)->start);
       ((&parser->m_tempPool)->start = (&parser->m_tempPool)->ptr);
-    }
-    else {
+    } else {
 
-      appAtts[attIndex] = poolStoreString(&parser->m_tempPool, enc, parser->m_atts[i].valuePtr,
+      appAtts[attIndex] = poolStoreString(&parser->m_tempPool, enc,
+                                          parser->m_atts[i].valuePtr,
                                           parser->m_atts[i].valueEnd);
       if (appAtts[attIndex] == 0)
         return XML_ERROR_NO_MEMORY;
@@ -6510,15 +6335,13 @@ storeAtts(XML_Parser parser, const ENCODING *enc,
         if (result)
           return result;
         --attIndex;
-      }
-      else {
+      } else {
 
         attIndex++;
         nPrefixes++;
         (attId->name)[-1] = 2;
       }
-    }
-    else
+    } else
       attIndex++;
   }
 
@@ -6530,29 +6353,26 @@ storeAtts(XML_Parser parser, const ENCODING *enc,
         parser->m_idAttIndex = i;
         break;
       }
-  }
-  else
+  } else
     parser->m_idAttIndex = -1;
 
 
   for (i = 0; i < nDefaultAtts; i++) {
     const DEFAULT_ATTRIBUTE *da = elementType->defaultAtts + i;
-    if (!(da->id->name)[-1] && da->value) {
+    if (! (da->id->name)[-1] && da->value) {
       if (da->id->prefix) {
         if (da->id->xmlns) {
           enum XML_Error result = addBinding(parser, da->id->prefix, da->id,
                                              da->value, bindingsPtr);
           if (result)
             return result;
-        }
-        else {
+        } else {
           (da->id->name)[-1] = 2;
           nPrefixes++;
           appAtts[attIndex++] = da->id->name;
           appAtts[attIndex++] = da->value;
         }
-      }
-      else {
+      } else {
         (da->id->name)[-1] = 1;
         appAtts[attIndex++] = da->id->name;
         appAtts[attIndex++] = da->value;
@@ -6570,15 +6390,18 @@ storeAtts(XML_Parser parser, const ENCODING *enc,
     int nsAttsSize = (int)1 << parser->m_nsAttsPower;
     unsigned char oldNsAttsPower = parser->m_nsAttsPower;
 
-    if ((nPrefixes << 1) >> parser->m_nsAttsPower) {
+    if ((nPrefixes << 1)
+        >> parser->m_nsAttsPower) {
       NS_ATT *temp;
 
-      while (nPrefixes >> parser->m_nsAttsPower++);
+      while (nPrefixes >> parser->m_nsAttsPower++)
+        ;
       if (parser->m_nsAttsPower < 3)
         parser->m_nsAttsPower = 3;
       nsAttsSize = (int)1 << parser->m_nsAttsPower;
-      temp = (NS_ATT *)(parser->m_mem.realloc_fcn((parser->m_nsAtts),(nsAttsSize * sizeof(NS_ATT))));
-      if (!temp) {
+      temp = (NS_ATT *)(parser->m_mem.realloc_fcn((parser->m_nsAtts), (nsAttsSize * sizeof(NS_ATT))))
+                                                           ;
+      if (! temp) {
 
         parser->m_nsAttsPower = oldNsAttsPower;
         return XML_ERROR_NO_MEMORY;
@@ -6587,9 +6410,9 @@ storeAtts(XML_Parser parser, const ENCODING *enc,
       version = 0;
     }
 
-    if (!version) {
+    if (! version) {
       version = 0xFFFFFFFF;
-      for (j = nsAttsSize; j != 0; )
+      for (j = nsAttsSize; j != 0;)
         parser->m_nsAtts[--j].version = version;
     }
     parser->m_nsAttsVersion = --version;
@@ -6609,17 +6432,17 @@ storeAtts(XML_Parser parser, const ENCODING *enc,
 
         ((XML_Char *)s)[-1] = 0;
         id = (ATTRIBUTE_ID *)lookup(parser, &dtd->attributeIds, s, 0);
-        if (!id || !id->prefix) {
-# 3396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+        if (! id || ! id->prefix) {
+# 3284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
           return XML_ERROR_NO_MEMORY;
         }
         b = id->prefix->binding;
-        if (!b)
+        if (! b)
           return XML_ERROR_UNBOUND_PREFIX;
 
         for (j = 0; j < b->uriLen; j++) {
           const XML_Char c = b->uri[j];
-          if (!(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = c), 1)))
+          if (! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = c), 1)))
             return XML_ERROR_NO_MEMORY;
         }
 
@@ -6631,7 +6454,7 @@ storeAtts(XML_Parser parser, const ENCODING *enc,
         sip24_update(&sip_state, s, keylen(s) * sizeof(XML_Char));
 
         do {
-          if (!(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = *s), 1)))
+          if (! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = *s), 1)))
             return XML_ERROR_NO_MEMORY;
         } while (*s++);
 
@@ -6649,12 +6472,13 @@ storeAtts(XML_Parser parser, const ENCODING *enc,
               const XML_Char *s1 = ((&parser->m_tempPool)->start);
               const XML_Char *s2 = parser->m_nsAtts[j].uriName;
 
-              for (; *s1 == *s2 && *s1 != 0; s1++, s2++);
+              for (; *s1 == *s2 && *s1 != 0; s1++, s2++)
+                ;
               if (*s1 == 0)
                 return XML_ERROR_DUPLICATE_ATTRIBUTE;
             }
-            if (!step)
-              step = ((unsigned char)((((((uriHash) & ~(mask)) >> ((parser->m_nsAttsPower) - 1)) & ((mask) >> 2))) | 1));
+            if (! step)
+              step = ((unsigned char)((((((uriHash) & ~(mask)) >> ((parser->m_nsAttsPower)-1)) & ((mask) >> 2))) | 1));
             j < step ? (j += nsAttsSize - step) : (j -= step);
           }
         }
@@ -6663,7 +6487,7 @@ storeAtts(XML_Parser parser, const ENCODING *enc,
           parser->m_tempPool.ptr[-1] = parser->m_namespaceSeparator;
           s = b->prefix->name;
           do {
-            if (!(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = *s), 1)))
+            if (! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = *s), 1)))
               return XML_ERROR_NO_MEMORY;
           } while (*s++);
         }
@@ -6678,12 +6502,11 @@ storeAtts(XML_Parser parser, const ENCODING *enc,
         parser->m_nsAtts[j].hash = uriHash;
         parser->m_nsAtts[j].uriName = s;
 
-        if (!--nPrefixes) {
+        if (! --nPrefixes) {
           i += 2;
           break;
         }
-      }
-      else
+      } else
         ((XML_Char *)s)[-1] = 0;
     }
   }
@@ -6693,23 +6516,21 @@ storeAtts(XML_Parser parser, const ENCODING *enc,
   for (binding = *bindingsPtr; binding; binding = binding->nextTagBinding)
     binding->attId->name[-1] = 0;
 
-  if (!parser->m_ns)
+  if (! parser->m_ns)
     return XML_ERROR_NONE;
 
 
   if (elementType->prefix) {
     binding = elementType->prefix->binding;
-    if (!binding)
+    if (! binding)
       return XML_ERROR_UNBOUND_PREFIX;
     localPart = tagNamePtr->str;
     while (*localPart++ != 0x3A)
       ;
-  }
-  else if (dtd->defaultPrefix.binding) {
+  } else if (dtd->defaultPrefix.binding) {
     binding = dtd->defaultPrefix.binding;
     localPart = tagNamePtr->str;
-  }
-  else
+  } else
     return XML_ERROR_NONE;
   prefixLen = 0;
   if (parser->m_ns_triplets && binding->prefix->name) {
@@ -6726,7 +6547,7 @@ storeAtts(XML_Parser parser, const ENCODING *enc,
   if (n > binding->uriAlloc) {
     TAG *p;
     uri = (XML_Char *)(parser->m_mem.malloc_fcn(((n + 24) * sizeof(XML_Char))));
-    if (!uri)
+    if (! uri)
       return XML_ERROR_NO_MEMORY;
     binding->uriAlloc = n + 24;
     memcpy(uri, binding->uri, binding->uriLen * sizeof(XML_Char));
@@ -6754,31 +6575,29 @@ storeAtts(XML_Parser parser, const ENCODING *enc,
 
 static enum XML_Error
 addBinding(XML_Parser parser, PREFIX *prefix, const ATTRIBUTE_ID *attId,
-           const XML_Char *uri, BINDING **bindingsPtr)
-{
-  static const XML_Char xmlNamespace[] = {
-    0x68, 0x74, 0x74, 0x70, 0x3A, 0x2F, 0x2F,
-    0x77, 0x77, 0x77, 0x2E, 0x77, 0x33, 0x2E,
-    0x6F, 0x72, 0x67, 0x2F, 0x58, 0x4D, 0x4C,
-    0x2F, 0x31, 0x39, 0x39, 0x38, 0x2F,
-    0x6E, 0x61, 0x6D, 0x65, 0x73, 0x70, 0x61, 0x63,
-    0x65, '\0'
-  };
-  static const int xmlLen =
-    (int)sizeof(xmlNamespace)/sizeof(XML_Char) - 1;
-  static const XML_Char xmlnsNamespace[] = {
-    0x68, 0x74, 0x74, 0x70, 0x3A, 0x2F, 0x2F,
-    0x77, 0x77, 0x77, 0x2E, 0x77, 0x33, 0x2E,
-    0x6F, 0x72, 0x67, 0x2F, 0x32, 0x30, 0x30,
-    0x30, 0x2F, 0x78, 0x6D, 0x6C, 0x6E, 0x73,
-    0x2F, '\0'
-  };
-  static const int xmlnsLen =
-    (int)sizeof(xmlnsNamespace)/sizeof(XML_Char) - 1;
+           const XML_Char *uri, BINDING **bindingsPtr) {
+  static const XML_Char xmlNamespace[]
+      = {0x68, 0x74, 0x74, 0x70, 0x3A,
+         0x2F, 0x2F, 0x77, 0x77, 0x77,
+         0x2E, 0x77, 0x33, 0x2E, 0x6F,
+         0x72, 0x67, 0x2F, 0x58, 0x4D,
+         0x4C, 0x2F, 0x31, 0x39, 0x39,
+         0x38, 0x2F, 0x6E, 0x61, 0x6D,
+         0x65, 0x73, 0x70, 0x61, 0x63,
+         0x65, '\0'};
+  static const int xmlLen = (int)sizeof(xmlNamespace) / sizeof(XML_Char) - 1;
+  static const XML_Char xmlnsNamespace[]
+      = {0x68, 0x74, 0x74, 0x70, 0x3A, 0x2F,
+         0x2F, 0x77, 0x77, 0x77, 0x2E, 0x77,
+         0x33, 0x2E, 0x6F, 0x72, 0x67, 0x2F,
+         0x32, 0x30, 0x30, 0x30, 0x2F, 0x78,
+         0x6D, 0x6C, 0x6E, 0x73, 0x2F, '\0'};
+  static const int xmlnsLen
+      = (int)sizeof(xmlnsNamespace) / sizeof(XML_Char) - 1;
 
-  XML_Bool mustBeXML = ((XML_Bool) 0);
-  XML_Bool isXML = ((XML_Bool) 1);
-  XML_Bool isXMLNS = ((XML_Bool) 1);
+  XML_Bool mustBeXML = ((XML_Bool)0);
+  XML_Bool isXML = ((XML_Bool)1);
+  XML_Bool isXMLNS = ((XML_Bool)1);
 
   BINDING *b;
   int len;
@@ -6787,28 +6606,25 @@ addBinding(XML_Parser parser, PREFIX *prefix, const ATTRIBUTE_ID *attId,
   if (*uri == '\0' && prefix->name)
     return XML_ERROR_UNDECLARING_PREFIX;
 
-  if (prefix->name
-      && prefix->name[0] == 0x78
+  if (prefix->name && prefix->name[0] == 0x78
       && prefix->name[1] == 0x6D
       && prefix->name[2] == 0x6C) {
 
-
-    if (prefix->name[3] == 0x6E
-        && prefix->name[4] == 0x73
+    if (prefix->name[3] == 0x6E && prefix->name[4] == 0x73
         && prefix->name[5] == '\0')
       return XML_ERROR_RESERVED_PREFIX_XMLNS;
 
     if (prefix->name[3] == '\0')
-      mustBeXML = ((XML_Bool) 1);
+      mustBeXML = ((XML_Bool)1);
   }
 
   for (len = 0; uri[len]; len++) {
     if (isXML && (len > xmlLen || uri[len] != xmlNamespace[len]))
-      isXML = ((XML_Bool) 0);
+      isXML = ((XML_Bool)0);
 
-    if (!mustBeXML && isXMLNS
+    if (! mustBeXML && isXMLNS
         && (len > xmlnsLen || uri[len] != xmlnsNamespace[len]))
-      isXMLNS = ((XML_Bool) 0);
+      isXMLNS = ((XML_Bool)0);
   }
   isXML = isXML && len == xmlLen;
   isXMLNS = isXMLNS && len == xmlnsLen;
@@ -6825,25 +6641,25 @@ addBinding(XML_Parser parser, PREFIX *prefix, const ATTRIBUTE_ID *attId,
   if (parser->m_freeBindingList) {
     b = parser->m_freeBindingList;
     if (len > b->uriAlloc) {
-      XML_Char *temp = (XML_Char *)(parser->m_mem.realloc_fcn((b->uri),(sizeof(XML_Char) * (len + 24))))
+      XML_Char *temp = (XML_Char *)(parser->m_mem.realloc_fcn((b->uri), (sizeof(XML_Char) * (len + 24))))
                                                                   ;
       if (temp == 
-# 3612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 3493 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                  ((void *)0)
-# 3612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 3493 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                      )
         return XML_ERROR_NO_MEMORY;
       b->uri = temp;
       b->uriAlloc = len + 24;
     }
     parser->m_freeBindingList = b->nextTagBinding;
-  }
-  else {
+  } else {
     b = (BINDING *)(parser->m_mem.malloc_fcn((sizeof(BINDING))));
-    if (!b)
+    if (! b)
       return XML_ERROR_NO_MEMORY;
-    b->uri = (XML_Char *)(parser->m_mem.malloc_fcn((sizeof(XML_Char) * (len + 24))));
-    if (!b->uri) {
+    b->uri
+        = (XML_Char *)(parser->m_mem.malloc_fcn((sizeof(XML_Char) * (len + 24))));
+    if (! b->uri) {
       (parser->m_mem.free_fcn((b)));
       return XML_ERROR_NO_MEMORY;
     }
@@ -6859,9 +6675,9 @@ addBinding(XML_Parser parser, PREFIX *prefix, const ATTRIBUTE_ID *attId,
 
   if (*uri == '\0' && prefix == &parser->m_dtd->defaultPrefix)
     prefix->binding = 
-# 3639 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 3520 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                      ((void *)0)
-# 3639 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 3520 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                          ;
   else
     prefix->binding = b;
@@ -6870,7 +6686,7 @@ addBinding(XML_Parser parser, PREFIX *prefix, const ATTRIBUTE_ID *attId,
 
   if (attId && parser->m_startNamespaceDeclHandler)
     parser->m_startNamespaceDeclHandler(parser->m_handlerArg, prefix->name,
-                              prefix->binding ? uri : 0);
+                                        prefix->binding ? uri : 0);
   return XML_ERROR_NONE;
 }
 
@@ -6878,21 +6694,18 @@ addBinding(XML_Parser parser, PREFIX *prefix, const ATTRIBUTE_ID *attId,
 
 
 static enum XML_Error
-cdataSectionProcessor(XML_Parser parser,
-                      const char *start,
-                      const char *end,
-                      const char **endPtr)
-{
-  enum XML_Error result = doCdataSection(parser, parser->m_encoding, &start, end,
-                                         endPtr, (XML_Bool)!parser->m_parsingStatus.finalBuffer);
+cdataSectionProcessor(XML_Parser parser, const char *start, const char *end,
+                      const char **endPtr) {
+  enum XML_Error result
+      = doCdataSection(parser, parser->m_encoding, &start, end, endPtr,
+                       (XML_Bool)! parser->m_parsingStatus.finalBuffer);
   if (result != XML_ERROR_NONE)
     return result;
   if (start) {
     if (parser->m_parentParser) {
       parser->m_processor = externalEntityContentProcessor;
       return externalEntityContentProcessor(parser, start, end, endPtr);
-    }
-    else {
+    } else {
       parser->m_processor = contentProcessor;
       return contentProcessor(parser, start, end, endPtr);
     }
@@ -6904,13 +6717,8 @@ cdataSectionProcessor(XML_Parser parser,
 
 
 static enum XML_Error
-doCdataSection(XML_Parser parser,
-               const ENCODING *enc,
-               const char **startPtr,
-               const char *end,
-               const char **nextPtr,
-               XML_Bool haveMore)
-{
+doCdataSection(XML_Parser parser, const ENCODING *enc, const char **startPtr,
+               const char *end, const char **nextPtr, XML_Bool haveMore) {
   const char *s = *startPtr;
   const char **eventPP;
   const char **eventEndPP;
@@ -6918,16 +6726,15 @@ doCdataSection(XML_Parser parser,
     eventPP = &parser->m_eventPtr;
     *eventPP = s;
     eventEndPP = &parser->m_eventEndPtr;
-  }
-  else {
+  } else {
     eventPP = &(parser->m_openInternalEntities->internalEventPtr);
     eventEndPP = &(parser->m_openInternalEntities->internalEventEndPtr);
   }
   *eventPP = s;
   *startPtr = 
-# 3701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 3573 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
              ((void *)0)
-# 3701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 3573 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                  ;
 
   for (;;) {
@@ -6940,8 +6747,9 @@ doCdataSection(XML_Parser parser,
         parser->m_endCdataSectionHandler(parser->m_handlerArg);
 
 
-
-
+      else if (0 && parser->m_characterDataHandler)
+        parser->m_characterDataHandler(parser->m_handlerArg, parser->m_dataBuf,
+                                       0);
 
       else if (parser->m_defaultHandler)
         reportDefault(parser, enc, s, next);
@@ -6955,35 +6763,31 @@ doCdataSection(XML_Parser parser,
       if (parser->m_characterDataHandler) {
         XML_Char c = 0xA;
         parser->m_characterDataHandler(parser->m_handlerArg, &c, 1);
-      }
-      else if (parser->m_defaultHandler)
+      } else if (parser->m_defaultHandler)
         reportDefault(parser, enc, s, next);
       break;
-    case 6:
-      {
-        XML_CharacterDataHandler charDataHandler = parser->m_characterDataHandler;
-        if (charDataHandler) {
-          if ((!(enc)->isUtf8)) {
-            for (;;) {
-              ICHAR *dataPtr = (ICHAR *)parser->m_dataBuf;
-              const enum XML_Convert_Result convert_res = (((enc)->utf8Convert)(enc, &s, next, &dataPtr, (ICHAR *)parser->m_dataBufEnd));
-              *eventEndPP = next;
-              charDataHandler(parser->m_handlerArg, parser->m_dataBuf,
-                              (int)(dataPtr - (ICHAR *)parser->m_dataBuf));
-              if ((convert_res == XML_CONVERT_COMPLETED) || (convert_res == XML_CONVERT_INPUT_INCOMPLETE))
-                break;
-              *eventPP = s;
-            }
+    case 6: {
+      XML_CharacterDataHandler charDataHandler = parser->m_characterDataHandler;
+      if (charDataHandler) {
+        if ((! (enc)->isUtf8)) {
+          for (;;) {
+            ICHAR *dataPtr = (ICHAR *)parser->m_dataBuf;
+            const enum XML_Convert_Result convert_res = (((enc)->utf8Convert)(enc, &s, next, &dataPtr, (ICHAR *)parser->m_dataBufEnd))
+                                                                       ;
+            *eventEndPP = next;
+            charDataHandler(parser->m_handlerArg, parser->m_dataBuf,
+                            (int)(dataPtr - (ICHAR *)parser->m_dataBuf));
+            if ((convert_res == XML_CONVERT_COMPLETED)
+                || (convert_res == XML_CONVERT_INPUT_INCOMPLETE))
+              break;
+            *eventPP = s;
           }
-          else
-            charDataHandler(parser->m_handlerArg,
-                            (XML_Char *)s,
-                            (int)((XML_Char *)next - (XML_Char *)s));
-        }
-        else if (parser->m_defaultHandler)
-          reportDefault(parser, enc, s, next);
-      }
-      break;
+        } else
+          charDataHandler(parser->m_handlerArg, (XML_Char *)s,
+                          (int)((XML_Char *)next - (XML_Char *)s));
+      } else if (parser->m_defaultHandler)
+        reportDefault(parser, enc, s, next);
+    } break;
     case 0:
       *eventPP = next;
       return XML_ERROR_INVALID_TOKEN;
@@ -7020,7 +6824,7 @@ doCdataSection(XML_Parser parser,
       return XML_ERROR_NONE;
     case XML_FINISHED:
       return XML_ERROR_ABORTED;
-    default: ;
+    default:;
     }
   }
 
@@ -7032,13 +6836,11 @@ doCdataSection(XML_Parser parser,
 
 
 static enum XML_Error
-ignoreSectionProcessor(XML_Parser parser,
-                       const char *start,
-                       const char *end,
-                       const char **endPtr)
-{
-  enum XML_Error result = doIgnoreSection(parser, parser->m_encoding, &start, end,
-                                          endPtr, (XML_Bool)!parser->m_parsingStatus.finalBuffer);
+ignoreSectionProcessor(XML_Parser parser, const char *start, const char *end,
+                       const char **endPtr) {
+  enum XML_Error result
+      = doIgnoreSection(parser, parser->m_encoding, &start, end, endPtr,
+                        (XML_Bool)! parser->m_parsingStatus.finalBuffer);
   if (result != XML_ERROR_NONE)
     return result;
   if (start) {
@@ -7052,13 +6854,8 @@ ignoreSectionProcessor(XML_Parser parser,
 
 
 static enum XML_Error
-doIgnoreSection(XML_Parser parser,
-                const ENCODING *enc,
-                const char **startPtr,
-                const char *end,
-                const char **nextPtr,
-                XML_Bool haveMore)
-{
+doIgnoreSection(XML_Parser parser, const ENCODING *enc, const char **startPtr,
+                const char *end, const char **nextPtr, XML_Bool haveMore) {
   const char *next;
   int tok;
   const char *s = *startPtr;
@@ -7068,18 +6865,17 @@ doIgnoreSection(XML_Parser parser,
     eventPP = &parser->m_eventPtr;
     *eventPP = s;
     eventEndPP = &parser->m_eventEndPtr;
-  }
-  else {
-# 3854 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+  } else {
+# 3715 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
     eventPP = &(parser->m_openInternalEntities->internalEventPtr);
     eventEndPP = &(parser->m_openInternalEntities->internalEventEndPtr);
 
   }
   *eventPP = s;
   *startPtr = 
-# 3859 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 3720 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
              ((void *)0)
-# 3859 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 3720 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                  ;
   tok = (((enc)->scanners[3])(enc, s, end, &next));
   *eventEndPP = next;
@@ -7127,103 +6923,91 @@ doIgnoreSection(XML_Parser parser,
 
 
 static enum XML_Error
-initializeEncoding(XML_Parser parser)
-{
+initializeEncoding(XML_Parser parser) {
   const char *s;
-# 3928 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 3788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
   s = parser->m_protocolEncodingName;
 
-  if ((parser->m_ns ? XmlInitEncodingNS : XmlInitEncoding)(&parser->m_initEncoding, &parser->m_encoding, s))
+  if ((parser->m_ns ? XmlInitEncodingNS : XmlInitEncoding)(
+          &parser->m_initEncoding, &parser->m_encoding, s))
     return XML_ERROR_NONE;
   return handleUnknownEncoding(parser, parser->m_protocolEncodingName);
 }
 
 static enum XML_Error
-processXmlDecl(XML_Parser parser, int isGeneralTextEntity,
-               const char *s, const char *next)
-{
+processXmlDecl(XML_Parser parser, int isGeneralTextEntity, const char *s,
+               const char *next) {
   const char *encodingName = 
-# 3939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 3799 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                             ((void *)0)
-# 3939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 3799 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                 ;
   const XML_Char *storedEncName = 
-# 3940 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 3800 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                  ((void *)0)
-# 3940 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 3800 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                      ;
   const ENCODING *newEncoding = 
-# 3941 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 3801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                ((void *)0)
-# 3941 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 3801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                    ;
   const char *version = 
-# 3942 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 3802 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                        ((void *)0)
-# 3942 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 3802 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                            ;
   const char *versionend;
   const XML_Char *storedversion = 
-# 3944 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 3804 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                  ((void *)0)
-# 3944 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 3804 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                      ;
   int standalone = -1;
-  if (!(parser->m_ns
-        ? XmlParseXmlDeclNS
-        : XmlParseXmlDecl)(isGeneralTextEntity,
-                           parser->m_encoding,
-                           s,
-                           next,
-                           &parser->m_eventPtr,
-                           &version,
-                           &versionend,
-                           &encodingName,
-                           &newEncoding,
-                           &standalone)) {
+  if (! (parser->m_ns ? XmlParseXmlDeclNS : XmlParseXmlDecl)(
+          isGeneralTextEntity, parser->m_encoding, s, next, &parser->m_eventPtr,
+          &version, &versionend, &encodingName, &newEncoding, &standalone)) {
     if (isGeneralTextEntity)
       return XML_ERROR_TEXT_DECL;
     else
       return XML_ERROR_XML_DECL;
   }
-  if (!isGeneralTextEntity && standalone == 1) {
-    parser->m_dtd->standalone = ((XML_Bool) 1);
+  if (! isGeneralTextEntity && standalone == 1) {
+    parser->m_dtd->standalone = ((XML_Bool)1);
 
-    if (parser->m_paramEntityParsing == XML_PARAM_ENTITY_PARSING_UNLESS_STANDALONE)
+    if (parser->m_paramEntityParsing
+        == XML_PARAM_ENTITY_PARSING_UNLESS_STANDALONE)
       parser->m_paramEntityParsing = XML_PARAM_ENTITY_PARSING_NEVER;
 
   }
   if (parser->m_xmlDeclHandler) {
     if (encodingName != 
-# 3971 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 3823 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                        ((void *)0)
-# 3971 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 3823 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                            ) {
-      storedEncName = poolStoreString(&parser->m_temp2Pool,
-                                      parser->m_encoding,
-                                      encodingName,
-                                      encodingName
-                                      + (((parser->m_encoding)->nameLength)(parser->m_encoding, encodingName)));
-      if (!storedEncName)
-              return XML_ERROR_NO_MEMORY;
+      storedEncName = poolStoreString(
+          &parser->m_temp2Pool, parser->m_encoding, encodingName,
+          encodingName + (((parser->m_encoding)->nameLength)(parser->m_encoding, encodingName)));
+      if (! storedEncName)
+        return XML_ERROR_NO_MEMORY;
       ((&parser->m_temp2Pool)->start = (&parser->m_temp2Pool)->ptr);
     }
     if (version) {
-      storedversion = poolStoreString(&parser->m_temp2Pool,
-                                      parser->m_encoding,
-                                      version,
-                                      versionend - parser->m_encoding->minBytesPerChar);
-      if (!storedversion)
+      storedversion
+          = poolStoreString(&parser->m_temp2Pool, parser->m_encoding, version,
+                            versionend - parser->m_encoding->minBytesPerChar);
+      if (! storedversion)
         return XML_ERROR_NO_MEMORY;
     }
-    parser->m_xmlDeclHandler(parser->m_handlerArg, storedversion, storedEncName, standalone);
-  }
-  else if (parser->m_defaultHandler)
+    parser->m_xmlDeclHandler(parser->m_handlerArg, storedversion, storedEncName,
+                             standalone);
+  } else if (parser->m_defaultHandler)
     reportDefault(parser, parser->m_encoding, s, next);
   if (parser->m_protocolEncodingName == 
-# 3993 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 3842 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                        ((void *)0)
-# 3993 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 3842 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                            ) {
     if (newEncoding) {
 
@@ -7232,20 +7016,19 @@ processXmlDecl(XML_Parser parser, int isGeneralTextEntity,
 
 
       if (newEncoding->minBytesPerChar != parser->m_encoding->minBytesPerChar
-          || (newEncoding->minBytesPerChar == 2 &&
-              newEncoding != parser->m_encoding)) {
+          || (newEncoding->minBytesPerChar == 2
+              && newEncoding != parser->m_encoding)) {
         parser->m_eventPtr = encodingName;
         return XML_ERROR_INCORRECT_ENCODING;
       }
       parser->m_encoding = newEncoding;
-    }
-    else if (encodingName) {
+    } else if (encodingName) {
       enum XML_Error result;
-      if (!storedEncName) {
+      if (! storedEncName) {
         storedEncName = poolStoreString(
-          &parser->m_temp2Pool, parser->m_encoding, encodingName,
-          encodingName + (((parser->m_encoding)->nameLength)(parser->m_encoding, encodingName)));
-        if (!storedEncName)
+            &parser->m_temp2Pool, parser->m_encoding, encodingName,
+            encodingName + (((parser->m_encoding)->nameLength)(parser->m_encoding, encodingName)));
+        if (! storedEncName)
           return XML_ERROR_NO_MEMORY;
       }
       result = handleUnknownEncoding(parser, storedEncName);
@@ -7263,43 +7046,38 @@ processXmlDecl(XML_Parser parser, int isGeneralTextEntity,
 }
 
 static enum XML_Error
-handleUnknownEncoding(XML_Parser parser, const XML_Char *encodingName)
-{
+handleUnknownEncoding(XML_Parser parser, const XML_Char *encodingName) {
   if (parser->m_unknownEncodingHandler) {
     XML_Encoding info;
     int i;
     for (i = 0; i < 256; i++)
       info.map[i] = -1;
     info.convert = 
-# 4039 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 3886 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                   ((void *)0)
-# 4039 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 3886 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                       ;
     info.data = 
-# 4040 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 3887 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 4040 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 3887 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    ;
     info.release = 
-# 4041 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 3888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                   ((void *)0)
-# 4041 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 3888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                       ;
-    if (parser->m_unknownEncodingHandler(parser->m_unknownEncodingHandlerData, encodingName,
-                               &info)) {
+    if (parser->m_unknownEncodingHandler(parser->m_unknownEncodingHandlerData,
+                                         encodingName, &info)) {
       ENCODING *enc;
       parser->m_unknownEncodingMem = (parser->m_mem.malloc_fcn((XmlSizeOfUnknownEncoding())));
-      if (!parser->m_unknownEncodingMem) {
+      if (! parser->m_unknownEncodingMem) {
         if (info.release)
           info.release(info.data);
         return XML_ERROR_NO_MEMORY;
       }
-      enc = (parser->m_ns
-             ? XmlInitUnknownEncodingNS
-             : XmlInitUnknownEncoding)(parser->m_unknownEncodingMem,
-                                       info.map,
-                                       info.convert,
-                                       info.data);
+      enc = (parser->m_ns ? XmlInitUnknownEncodingNS : XmlInitUnknownEncoding)(
+          parser->m_unknownEncodingMem, info.map, info.convert, info.data);
       if (enc) {
         parser->m_unknownEncodingData = info.data;
         parser->m_unknownEncodingRelease = info.release;
@@ -7308,9 +7086,9 @@ handleUnknownEncoding(XML_Parser parser, const XML_Char *encodingName)
       }
     }
     if (info.release != 
-# 4064 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 3907 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                        ((void *)0)
-# 4064 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 3907 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                            )
       info.release(info.data);
   }
@@ -7318,11 +7096,8 @@ handleUnknownEncoding(XML_Parser parser, const XML_Char *encodingName)
 }
 
 static enum XML_Error
-prologInitProcessor(XML_Parser parser,
-                    const char *s,
-                    const char *end,
-                    const char **nextPtr)
-{
+prologInitProcessor(XML_Parser parser, const char *s, const char *end,
+                    const char **nextPtr) {
   enum XML_Error result = initializeEncoding(parser);
   if (result != XML_ERROR_NONE)
     return result;
@@ -7333,35 +7108,28 @@ prologInitProcessor(XML_Parser parser,
 
 
 static enum XML_Error
-externalParEntInitProcessor(XML_Parser parser,
-                            const char *s,
-                            const char *end,
-                            const char **nextPtr)
-{
+externalParEntInitProcessor(XML_Parser parser, const char *s, const char *end,
+                            const char **nextPtr) {
   enum XML_Error result = initializeEncoding(parser);
   if (result != XML_ERROR_NONE)
     return result;
 
 
 
-  parser->m_dtd->paramEntityRead = ((XML_Bool) 1);
+  parser->m_dtd->paramEntityRead = ((XML_Bool)1);
 
   if (parser->m_prologState.inEntityValue) {
     parser->m_processor = entityValueInitProcessor;
     return entityValueInitProcessor(parser, s, end, nextPtr);
-  }
-  else {
+  } else {
     parser->m_processor = externalParEntProcessor;
     return externalParEntProcessor(parser, s, end, nextPtr);
   }
 }
 
 static enum XML_Error
-entityValueInitProcessor(XML_Parser parser,
-                         const char *s,
-                         const char *end,
-                         const char **nextPtr)
-{
+entityValueInitProcessor(XML_Parser parser, const char *s, const char *end,
+                         const char **nextPtr) {
   int tok;
   const char *start = s;
   const char *next = start;
@@ -7371,7 +7139,7 @@ entityValueInitProcessor(XML_Parser parser,
     tok = (((parser->m_encoding)->scanners[0])(parser->m_encoding, start, end, &next));
     parser->m_eventEndPtr = next;
     if (tok <= 0) {
-      if (!parser->m_parsingStatus.finalBuffer && tok != 0) {
+      if (! parser->m_parsingStatus.finalBuffer && tok != 0) {
         *nextPtr = s;
         return XML_ERROR_NONE;
       }
@@ -7388,8 +7156,7 @@ entityValueInitProcessor(XML_Parser parser,
       }
 
       return storeEntityValue(parser, parser->m_encoding, s, end);
-    }
-    else if (tok == 12) {
+    } else if (tok == 12) {
       enum XML_Error result;
       result = processXmlDecl(parser, 0, start, next);
       if (result != XML_ERROR_NONE)
@@ -7413,7 +7180,8 @@ entityValueInitProcessor(XML_Parser parser,
 
 
 
-    else if (tok == 14 && next == end && !parser->m_parsingStatus.finalBuffer) {
+    else if (tok == 14 && next == end
+             && ! parser->m_parsingStatus.finalBuffer) {
       *nextPtr = next;
       return XML_ERROR_NONE;
     }
@@ -7431,17 +7199,14 @@ entityValueInitProcessor(XML_Parser parser,
 }
 
 static enum XML_Error
-externalParEntProcessor(XML_Parser parser,
-                        const char *s,
-                        const char *end,
-                        const char **nextPtr)
-{
+externalParEntProcessor(XML_Parser parser, const char *s, const char *end,
+                        const char **nextPtr) {
   const char *next = s;
   int tok;
 
   tok = (((parser->m_encoding)->scanners[0])(parser->m_encoding, s, end, &next));
   if (tok <= 0) {
-    if (!parser->m_parsingStatus.finalBuffer && tok != 0) {
+    if (! parser->m_parsingStatus.finalBuffer && tok != 0) {
       *nextPtr = s;
       return XML_ERROR_NONE;
     }
@@ -7467,16 +7232,13 @@ externalParEntProcessor(XML_Parser parser,
   }
 
   parser->m_processor = prologProcessor;
-  return doProlog(parser, parser->m_encoding, s, end, tok, next,
-                  nextPtr, (XML_Bool)!parser->m_parsingStatus.finalBuffer);
+  return doProlog(parser, parser->m_encoding, s, end, tok, next, nextPtr,
+                  (XML_Bool)! parser->m_parsingStatus.finalBuffer, ((XML_Bool)1));
 }
 
 static enum XML_Error
-entityValueProcessor(XML_Parser parser,
-                     const char *s,
-                     const char *end,
-                     const char **nextPtr)
-{
+entityValueProcessor(XML_Parser parser, const char *s, const char *end,
+                     const char **nextPtr) {
   const char *start = s;
   const char *next = s;
   const ENCODING *enc = parser->m_encoding;
@@ -7485,7 +7247,7 @@ entityValueProcessor(XML_Parser parser,
   for (;;) {
     tok = (((enc)->scanners[0])(enc, start, end, &next));
     if (tok <= 0) {
-      if (!parser->m_parsingStatus.finalBuffer && tok != 0) {
+      if (! parser->m_parsingStatus.finalBuffer && tok != 0) {
         *nextPtr = s;
         return XML_ERROR_NONE;
       }
@@ -7510,52 +7272,46 @@ entityValueProcessor(XML_Parser parser,
 
 
 static enum XML_Error
-prologProcessor(XML_Parser parser,
-                const char *s,
-                const char *end,
-                const char **nextPtr)
-{
+prologProcessor(XML_Parser parser, const char *s, const char *end,
+                const char **nextPtr) {
   const char *next = s;
   int tok = (((parser->m_encoding)->scanners[0])(parser->m_encoding, s, end, &next));
-  return doProlog(parser, parser->m_encoding, s, end, tok, next,
-                  nextPtr, (XML_Bool)!parser->m_parsingStatus.finalBuffer);
+  return doProlog(parser, parser->m_encoding, s, end, tok, next, nextPtr,
+                  (XML_Bool)! parser->m_parsingStatus.finalBuffer, ((XML_Bool)1));
 }
 
 static enum XML_Error
-doProlog(XML_Parser parser,
-         const ENCODING *enc,
-         const char *s,
-         const char *end,
-         int tok,
-         const char *next,
-         const char **nextPtr,
-         XML_Bool haveMore)
-{
+doProlog(XML_Parser parser, const ENCODING *enc, const char *s, const char *end,
+         int tok, const char *next, const char **nextPtr, XML_Bool haveMore,
+         XML_Bool allowClosingDoctype) {
 
-  static const XML_Char externalSubsetName[] = { 0x23 , '\0' };
+  static const XML_Char externalSubsetName[] = {0x23, '\0'};
 
-  static const XML_Char atypeCDATA[] =
-      { 0x43, 0x44, 0x41, 0x54, 0x41, '\0' };
-  static const XML_Char atypeID[] = { 0x49, 0x44, '\0' };
-  static const XML_Char atypeIDREF[] =
-      { 0x49, 0x44, 0x52, 0x45, 0x46, '\0' };
-  static const XML_Char atypeIDREFS[] =
-      { 0x49, 0x44, 0x52, 0x45, 0x46, 0x53, '\0' };
-  static const XML_Char atypeENTITY[] =
-      { 0x45, 0x4E, 0x54, 0x49, 0x54, 0x59, '\0' };
-  static const XML_Char atypeENTITIES[] = { 0x45, 0x4E,
-      0x54, 0x49, 0x54, 0x49, 0x45, 0x53, '\0' };
-  static const XML_Char atypeNMTOKEN[] = {
-      0x4E, 0x4D, 0x54, 0x4F, 0x4B, 0x45, 0x4E, '\0' };
-  static const XML_Char atypeNMTOKENS[] = { 0x4E, 0x4D, 0x54,
-      0x4F, 0x4B, 0x45, 0x4E, 0x53, '\0' };
-  static const XML_Char notationPrefix[] = { 0x4E, 0x4F, 0x54,
-      0x41, 0x54, 0x49, 0x4F, 0x4E, 0x28, '\0' };
-  static const XML_Char enumValueSep[] = { 0x7C, '\0' };
-  static const XML_Char enumValueStart[] = { 0x28, '\0' };
+  static const XML_Char atypeCDATA[]
+      = {0x43, 0x44, 0x41, 0x54, 0x41, '\0'};
+  static const XML_Char atypeID[] = {0x49, 0x44, '\0'};
+  static const XML_Char atypeIDREF[]
+      = {0x49, 0x44, 0x52, 0x45, 0x46, '\0'};
+  static const XML_Char atypeIDREFS[]
+      = {0x49, 0x44, 0x52, 0x45, 0x46, 0x53, '\0'};
+  static const XML_Char atypeENTITY[]
+      = {0x45, 0x4E, 0x54, 0x49, 0x54, 0x59, '\0'};
+  static const XML_Char atypeENTITIES[]
+      = {0x45, 0x4E, 0x54, 0x49, 0x54,
+         0x49, 0x45, 0x53, '\0'};
+  static const XML_Char atypeNMTOKEN[]
+      = {0x4E, 0x4D, 0x54, 0x4F, 0x4B, 0x45, 0x4E, '\0'};
+  static const XML_Char atypeNMTOKENS[]
+      = {0x4E, 0x4D, 0x54, 0x4F, 0x4B,
+         0x45, 0x4E, 0x53, '\0'};
+  static const XML_Char notationPrefix[]
+      = {0x4E, 0x4F, 0x54, 0x41, 0x54,
+         0x49, 0x4F, 0x4E, 0x28, '\0'};
+  static const XML_Char enumValueSep[] = {0x7C, '\0'};
+  static const XML_Char enumValueStart[] = {0x28, '\0'};
 
 
-  DTD * const dtd = parser->m_dtd;
+  DTD *const dtd = parser->m_dtd;
 
   const char **eventPP;
   const char **eventEndPP;
@@ -7564,15 +7320,14 @@ doProlog(XML_Parser parser,
   if (enc == parser->m_encoding) {
     eventPP = &parser->m_eventPtr;
     eventEndPP = &parser->m_eventEndPtr;
-  }
-  else {
+  } else {
     eventPP = &(parser->m_openInternalEntities->internalEventPtr);
     eventEndPP = &(parser->m_openInternalEntities->internalEventEndPtr);
   }
 
   for (;;) {
     int role;
-    XML_Bool handleDefault = ((XML_Bool) 1);
+    XML_Bool handleDefault = ((XML_Bool)1);
     *eventPP = s;
     *eventEndPP = next;
     if (tok <= 0) {
@@ -7594,7 +7349,8 @@ doProlog(XML_Parser parser,
       case -4:
 
 
-        if (enc != parser->m_encoding && !parser->m_openInternalEntities->betweenDecl) {
+        if (enc != parser->m_encoding
+            && ! parser->m_openInternalEntities->betweenDecl) {
           *nextPtr = s;
           return XML_ERROR_NONE;
         }
@@ -7619,95 +7375,90 @@ doProlog(XML_Parser parser,
     }
     role = (((&parser->m_prologState)->handler)(&parser->m_prologState, tok, s, next, enc));
     switch (role) {
-    case XML_ROLE_XML_DECL:
-      {
-        enum XML_Error result = processXmlDecl(parser, 0, s, next);
-        if (result != XML_ERROR_NONE)
-          return result;
-        enc = parser->m_encoding;
-        handleDefault = ((XML_Bool) 0);
-      }
-      break;
+    case XML_ROLE_XML_DECL: {
+      enum XML_Error result = processXmlDecl(parser, 0, s, next);
+      if (result != XML_ERROR_NONE)
+        return result;
+      enc = parser->m_encoding;
+      handleDefault = ((XML_Bool)0);
+    } break;
     case XML_ROLE_DOCTYPE_NAME:
       if (parser->m_startDoctypeDeclHandler) {
-        parser->m_doctypeName = poolStoreString(&parser->m_tempPool, enc, s, next);
-        if (!parser->m_doctypeName)
+        parser->m_doctypeName
+            = poolStoreString(&parser->m_tempPool, enc, s, next);
+        if (! parser->m_doctypeName)
           return XML_ERROR_NO_MEMORY;
         ((&parser->m_tempPool)->start = (&parser->m_tempPool)->ptr);
         parser->m_doctypePubid = 
-# 4387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 4207 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                 ((void *)0)
-# 4387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 4207 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                     ;
-        handleDefault = ((XML_Bool) 0);
+        handleDefault = ((XML_Bool)0);
       }
       parser->m_doctypeSysid = 
-# 4390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 4210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                               ((void *)0)
-# 4390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 4210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                   ;
       break;
     case XML_ROLE_DOCTYPE_INTERNAL_SUBSET:
       if (parser->m_startDoctypeDeclHandler) {
-        parser->m_startDoctypeDeclHandler(parser->m_handlerArg, parser->m_doctypeName, parser->m_doctypeSysid,
-                                parser->m_doctypePubid, 1);
+        parser->m_startDoctypeDeclHandler(
+            parser->m_handlerArg, parser->m_doctypeName, parser->m_doctypeSysid,
+            parser->m_doctypePubid, 1);
         parser->m_doctypeName = 
-# 4396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 4217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                ((void *)0)
-# 4396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 4217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                    ;
         poolClear(&parser->m_tempPool);
-        handleDefault = ((XML_Bool) 0);
+        handleDefault = ((XML_Bool)0);
       }
       break;
 
-    case XML_ROLE_TEXT_DECL:
-      {
-        enum XML_Error result = processXmlDecl(parser, 1, s, next);
-        if (result != XML_ERROR_NONE)
-          return result;
-        enc = parser->m_encoding;
-        handleDefault = ((XML_Bool) 0);
-      }
-      break;
+    case XML_ROLE_TEXT_DECL: {
+      enum XML_Error result = processXmlDecl(parser, 1, s, next);
+      if (result != XML_ERROR_NONE)
+        return result;
+      enc = parser->m_encoding;
+      handleDefault = ((XML_Bool)0);
+    } break;
 
     case XML_ROLE_DOCTYPE_PUBLIC_ID:
 
-      parser->m_useForeignDTD = ((XML_Bool) 0);
-      parser->m_declEntity = (ENTITY *)lookup(parser,
-                                    &dtd->paramEntities,
-                                    externalSubsetName,
-                                    sizeof(ENTITY));
-      if (!parser->m_declEntity)
+      parser->m_useForeignDTD = ((XML_Bool)0);
+      parser->m_declEntity = (ENTITY *)lookup(
+          parser, &dtd->paramEntities, externalSubsetName, sizeof(ENTITY));
+      if (! parser->m_declEntity)
         return XML_ERROR_NO_MEMORY;
 
-      dtd->hasParamEntityRefs = ((XML_Bool) 1);
+      dtd->hasParamEntityRefs = ((XML_Bool)1);
       if (parser->m_startDoctypeDeclHandler) {
         XML_Char *pubId;
-        if (!(((enc)->isPublicId)(enc, s, next, eventPP)))
+        if (! (((enc)->isPublicId)(enc, s, next, eventPP)))
           return XML_ERROR_PUBLICID;
         pubId = poolStoreString(&parser->m_tempPool, enc,
                                 s + enc->minBytesPerChar,
                                 next - enc->minBytesPerChar);
-        if (!pubId)
+        if (! pubId)
           return XML_ERROR_NO_MEMORY;
         normalizePublicId(pubId);
         ((&parser->m_tempPool)->start = (&parser->m_tempPool)->ptr);
         parser->m_doctypePubid = pubId;
-        handleDefault = ((XML_Bool) 0);
+        handleDefault = ((XML_Bool)0);
         goto alreadyChecked;
       }
 
     case XML_ROLE_ENTITY_PUBLIC_ID:
-      if (!(((enc)->isPublicId)(enc, s, next, eventPP)))
+      if (! (((enc)->isPublicId)(enc, s, next, eventPP)))
         return XML_ERROR_PUBLICID;
     alreadyChecked:
       if (dtd->keepProcessing && parser->m_declEntity) {
-        XML_Char *tem = poolStoreString(&dtd->pool,
-                                        enc,
-                                        s + enc->minBytesPerChar,
-                                        next - enc->minBytesPerChar);
-        if (!tem)
+        XML_Char *tem
+            = poolStoreString(&dtd->pool, enc, s + enc->minBytesPerChar,
+                              next - enc->minBytesPerChar);
+        if (! tem)
           return XML_ERROR_NO_MEMORY;
         normalizePublicId(tem);
         parser->m_declEntity->publicId = tem;
@@ -7716,15 +7467,21 @@ doProlog(XML_Parser parser,
 
 
         if (parser->m_entityDeclHandler && role == XML_ROLE_ENTITY_PUBLIC_ID)
-          handleDefault = ((XML_Bool) 0);
+          handleDefault = ((XML_Bool)0);
       }
       break;
     case XML_ROLE_DOCTYPE_CLOSE:
+      if (allowClosingDoctype != ((XML_Bool)1)) {
+
+        return XML_ERROR_INVALID_TOKEN;
+      }
+
       if (parser->m_doctypeName) {
-        parser->m_startDoctypeDeclHandler(parser->m_handlerArg, parser->m_doctypeName,
-                                parser->m_doctypeSysid, parser->m_doctypePubid, 0);
+        parser->m_startDoctypeDeclHandler(
+            parser->m_handlerArg, parser->m_doctypeName, parser->m_doctypeSysid,
+            parser->m_doctypePubid, 0);
         poolClear(&parser->m_tempPool);
-        handleDefault = ((XML_Bool) 0);
+        handleDefault = ((XML_Bool)0);
       }
 
 
@@ -7733,13 +7490,12 @@ doProlog(XML_Parser parser,
 
       if (parser->m_doctypeSysid || parser->m_useForeignDTD) {
         XML_Bool hadParamEntityRefs = dtd->hasParamEntityRefs;
-        dtd->hasParamEntityRefs = ((XML_Bool) 1);
-        if (parser->m_paramEntityParsing && parser->m_externalEntityRefHandler) {
-          ENTITY *entity = (ENTITY *)lookup(parser,
-                                            &dtd->paramEntities,
-                                            externalSubsetName,
-                                            sizeof(ENTITY));
-          if (!entity) {
+        dtd->hasParamEntityRefs = ((XML_Bool)1);
+        if (parser->m_paramEntityParsing
+            && parser->m_externalEntityRefHandler) {
+          ENTITY *entity = (ENTITY *)lookup(parser, &dtd->paramEntities,
+                                            externalSubsetName, sizeof(ENTITY));
+          if (! entity) {
 
 
 
@@ -7749,32 +7505,29 @@ doProlog(XML_Parser parser,
           }
           if (parser->m_useForeignDTD)
             entity->base = parser->m_curBase;
-          dtd->paramEntityRead = ((XML_Bool) 0);
-          if (!parser->m_externalEntityRefHandler(parser->m_externalEntityRefHandlerArg,
-                                        0,
-                                        entity->base,
-                                        entity->systemId,
-                                        entity->publicId))
+          dtd->paramEntityRead = ((XML_Bool)0);
+          if (! parser->m_externalEntityRefHandler(
+                  parser->m_externalEntityRefHandlerArg, 0, entity->base,
+                  entity->systemId, entity->publicId))
             return XML_ERROR_EXTERNAL_ENTITY_HANDLING;
           if (dtd->paramEntityRead) {
-            if (!dtd->standalone &&
-                parser->m_notStandaloneHandler &&
-                !parser->m_notStandaloneHandler(parser->m_handlerArg))
+            if (! dtd->standalone && parser->m_notStandaloneHandler
+                && ! parser->m_notStandaloneHandler(parser->m_handlerArg))
               return XML_ERROR_NOT_STANDALONE;
           }
 
 
 
-          else if (!parser->m_doctypeSysid)
+          else if (! parser->m_doctypeSysid)
             dtd->hasParamEntityRefs = hadParamEntityRefs;
 
         }
-        parser->m_useForeignDTD = ((XML_Bool) 0);
+        parser->m_useForeignDTD = ((XML_Bool)0);
       }
 
       if (parser->m_endDoctypeDeclHandler) {
         parser->m_endDoctypeDeclHandler(parser->m_handlerArg);
-        handleDefault = ((XML_Bool) 0);
+        handleDefault = ((XML_Bool)0);
       }
       break;
     case XML_ROLE_INSTANCE_START:
@@ -7784,25 +7537,22 @@ doProlog(XML_Parser parser,
 
       if (parser->m_useForeignDTD) {
         XML_Bool hadParamEntityRefs = dtd->hasParamEntityRefs;
-        dtd->hasParamEntityRefs = ((XML_Bool) 1);
-        if (parser->m_paramEntityParsing && parser->m_externalEntityRefHandler) {
+        dtd->hasParamEntityRefs = ((XML_Bool)1);
+        if (parser->m_paramEntityParsing
+            && parser->m_externalEntityRefHandler) {
           ENTITY *entity = (ENTITY *)lookup(parser, &dtd->paramEntities,
-                                            externalSubsetName,
-                                            sizeof(ENTITY));
-          if (!entity)
+                                            externalSubsetName, sizeof(ENTITY));
+          if (! entity)
             return XML_ERROR_NO_MEMORY;
           entity->base = parser->m_curBase;
-          dtd->paramEntityRead = ((XML_Bool) 0);
-          if (!parser->m_externalEntityRefHandler(parser->m_externalEntityRefHandlerArg,
-                                        0,
-                                        entity->base,
-                                        entity->systemId,
-                                        entity->publicId))
+          dtd->paramEntityRead = ((XML_Bool)0);
+          if (! parser->m_externalEntityRefHandler(
+                  parser->m_externalEntityRefHandlerArg, 0, entity->base,
+                  entity->systemId, entity->publicId))
             return XML_ERROR_EXTERNAL_ENTITY_HANDLING;
           if (dtd->paramEntityRead) {
-            if (!dtd->standalone &&
-                parser->m_notStandaloneHandler &&
-                !parser->m_notStandaloneHandler(parser->m_handlerArg))
+            if (! dtd->standalone && parser->m_notStandaloneHandler
+                && ! parser->m_notStandaloneHandler(parser->m_handlerArg))
               return XML_ERROR_NOT_STANDALONE;
           }
 
@@ -7818,27 +7568,27 @@ doProlog(XML_Parser parser,
       return contentProcessor(parser, s, end, nextPtr);
     case XML_ROLE_ATTLIST_ELEMENT_NAME:
       parser->m_declElementType = getElementType(parser, enc, s, next);
-      if (!parser->m_declElementType)
+      if (! parser->m_declElementType)
         return XML_ERROR_NO_MEMORY;
       goto checkAttListDeclHandler;
     case XML_ROLE_ATTRIBUTE_NAME:
       parser->m_declAttributeId = getAttributeId(parser, enc, s, next);
-      if (!parser->m_declAttributeId)
+      if (! parser->m_declAttributeId)
         return XML_ERROR_NO_MEMORY;
-      parser->m_declAttributeIsCdata = ((XML_Bool) 0);
+      parser->m_declAttributeIsCdata = ((XML_Bool)0);
       parser->m_declAttributeType = 
-# 4567 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 4382 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                    ((void *)0)
-# 4567 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 4382 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                        ;
-      parser->m_declAttributeIsId = ((XML_Bool) 0);
+      parser->m_declAttributeIsId = ((XML_Bool)0);
       goto checkAttListDeclHandler;
     case XML_ROLE_ATTRIBUTE_TYPE_CDATA:
-      parser->m_declAttributeIsCdata = ((XML_Bool) 1);
+      parser->m_declAttributeIsCdata = ((XML_Bool)1);
       parser->m_declAttributeType = atypeCDATA;
       goto checkAttListDeclHandler;
     case XML_ROLE_ATTRIBUTE_TYPE_ID:
-      parser->m_declAttributeIsId = ((XML_Bool) 1);
+      parser->m_declAttributeIsId = ((XML_Bool)1);
       parser->m_declAttributeType = atypeID;
       goto checkAttListDeclHandler;
     case XML_ROLE_ATTRIBUTE_TYPE_IDREF:
@@ -7860,7 +7610,7 @@ doProlog(XML_Parser parser,
       parser->m_declAttributeType = atypeNMTOKENS;
     checkAttListDeclHandler:
       if (dtd->keepProcessing && parser->m_attlistDeclHandler)
-        handleDefault = ((XML_Bool) 0);
+        handleDefault = ((XML_Bool)0);
       break;
     case XML_ROLE_ATTRIBUTE_ENUM_VALUE:
     case XML_ROLE_ATTRIBUTE_NOTATION_VALUE:
@@ -7868,44 +7618,44 @@ doProlog(XML_Parser parser,
         const XML_Char *prefix;
         if (parser->m_declAttributeType) {
           prefix = enumValueSep;
+        } else {
+          prefix = (role == XML_ROLE_ATTRIBUTE_NOTATION_VALUE ? notationPrefix
+                                                              : enumValueStart);
         }
-        else {
-          prefix = (role == XML_ROLE_ATTRIBUTE_NOTATION_VALUE
-                    ? notationPrefix
-                    : enumValueStart);
-        }
-        if (!poolAppendString(&parser->m_tempPool, prefix))
+        if (! poolAppendString(&parser->m_tempPool, prefix))
           return XML_ERROR_NO_MEMORY;
-        if (!poolAppend(&parser->m_tempPool, enc, s, next))
+        if (! poolAppend(&parser->m_tempPool, enc, s, next))
           return XML_ERROR_NO_MEMORY;
         parser->m_declAttributeType = parser->m_tempPool.start;
-        handleDefault = ((XML_Bool) 0);
+        handleDefault = ((XML_Bool)0);
       }
       break;
     case XML_ROLE_IMPLIED_ATTRIBUTE_VALUE:
     case XML_ROLE_REQUIRED_ATTRIBUTE_VALUE:
       if (dtd->keepProcessing) {
-        if (!defineAttribute(parser->m_declElementType, parser->m_declAttributeId,
-                             parser->m_declAttributeIsCdata, parser->m_declAttributeIsId,
-                             0, parser))
+        if (! defineAttribute(parser->m_declElementType,
+                              parser->m_declAttributeId,
+                              parser->m_declAttributeIsCdata,
+                              parser->m_declAttributeIsId, 0, parser))
           return XML_ERROR_NO_MEMORY;
         if (parser->m_attlistDeclHandler && parser->m_declAttributeType) {
           if (*parser->m_declAttributeType == 0x28
               || (*parser->m_declAttributeType == 0x4E
                   && parser->m_declAttributeType[1] == 0x4F)) {
 
-            if (!(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = 0x29), 1))
-                || !(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = '\0'), 1)))
+            if (! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = 0x29), 1))
+                || ! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = '\0'), 1)))
               return XML_ERROR_NO_MEMORY;
             parser->m_declAttributeType = parser->m_tempPool.start;
             ((&parser->m_tempPool)->start = (&parser->m_tempPool)->ptr);
           }
           *eventEndPP = s;
-          parser->m_attlistDeclHandler(parser->m_handlerArg, parser->m_declElementType->name,
-                             parser->m_declAttributeId->name, parser->m_declAttributeType,
-                             0, role == XML_ROLE_REQUIRED_ATTRIBUTE_VALUE);
+          parser->m_attlistDeclHandler(
+              parser->m_handlerArg, parser->m_declElementType->name,
+              parser->m_declAttributeId->name, parser->m_declAttributeType, 0,
+              role == XML_ROLE_REQUIRED_ATTRIBUTE_VALUE);
           poolClear(&parser->m_tempPool);
-          handleDefault = ((XML_Bool) 0);
+          handleDefault = ((XML_Bool)0);
         }
       }
       break;
@@ -7913,61 +7663,57 @@ doProlog(XML_Parser parser,
     case XML_ROLE_FIXED_ATTRIBUTE_VALUE:
       if (dtd->keepProcessing) {
         const XML_Char *attVal;
-        enum XML_Error result =
-          storeAttributeValue(parser, enc, parser->m_declAttributeIsCdata,
-                              s + enc->minBytesPerChar,
-                              next - enc->minBytesPerChar,
-                              &dtd->pool);
+        enum XML_Error result = storeAttributeValue(
+            parser, enc, parser->m_declAttributeIsCdata,
+            s + enc->minBytesPerChar, next - enc->minBytesPerChar, &dtd->pool);
         if (result)
           return result;
         attVal = ((&dtd->pool)->start);
         ((&dtd->pool)->start = (&dtd->pool)->ptr);
 
-        if (!defineAttribute(parser->m_declElementType, parser->m_declAttributeId,
-                             parser->m_declAttributeIsCdata, ((XML_Bool) 0), attVal, parser))
+        if (! defineAttribute(
+                parser->m_declElementType, parser->m_declAttributeId,
+                parser->m_declAttributeIsCdata, ((XML_Bool)0), attVal, parser))
           return XML_ERROR_NO_MEMORY;
         if (parser->m_attlistDeclHandler && parser->m_declAttributeType) {
           if (*parser->m_declAttributeType == 0x28
               || (*parser->m_declAttributeType == 0x4E
                   && parser->m_declAttributeType[1] == 0x4F)) {
 
-            if (!(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = 0x29), 1))
-                || !(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = '\0'), 1)))
+            if (! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = 0x29), 1))
+                || ! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = '\0'), 1)))
               return XML_ERROR_NO_MEMORY;
             parser->m_declAttributeType = parser->m_tempPool.start;
             ((&parser->m_tempPool)->start = (&parser->m_tempPool)->ptr);
           }
           *eventEndPP = s;
-          parser->m_attlistDeclHandler(parser->m_handlerArg, parser->m_declElementType->name,
-                             parser->m_declAttributeId->name, parser->m_declAttributeType,
-                             attVal,
-                             role == XML_ROLE_FIXED_ATTRIBUTE_VALUE);
+          parser->m_attlistDeclHandler(
+              parser->m_handlerArg, parser->m_declElementType->name,
+              parser->m_declAttributeId->name, parser->m_declAttributeType,
+              attVal, role == XML_ROLE_FIXED_ATTRIBUTE_VALUE);
           poolClear(&parser->m_tempPool);
-          handleDefault = ((XML_Bool) 0);
+          handleDefault = ((XML_Bool)0);
         }
       }
       break;
     case XML_ROLE_ENTITY_VALUE:
       if (dtd->keepProcessing) {
-        enum XML_Error result = storeEntityValue(parser, enc,
-                                            s + enc->minBytesPerChar,
-                                            next - enc->minBytesPerChar);
+        enum XML_Error result = storeEntityValue(
+            parser, enc, s + enc->minBytesPerChar, next - enc->minBytesPerChar);
         if (parser->m_declEntity) {
           parser->m_declEntity->textPtr = ((&dtd->entityValuePool)->start);
-          parser->m_declEntity->textLen = (int)(((&dtd->entityValuePool)->ptr - (&dtd->entityValuePool)->start));
+          parser->m_declEntity->textLen
+              = (int)(((&dtd->entityValuePool)->ptr - (&dtd->entityValuePool)->start));
           ((&dtd->entityValuePool)->start = (&dtd->entityValuePool)->ptr);
           if (parser->m_entityDeclHandler) {
             *eventEndPP = s;
-            parser->m_entityDeclHandler(parser->m_handlerArg,
-                              parser->m_declEntity->name,
-                              parser->m_declEntity->is_param,
-                              parser->m_declEntity->textPtr,
-                              parser->m_declEntity->textLen,
-                              parser->m_curBase, 0, 0, 0);
-            handleDefault = ((XML_Bool) 0);
+            parser->m_entityDeclHandler(
+                parser->m_handlerArg, parser->m_declEntity->name,
+                parser->m_declEntity->is_param, parser->m_declEntity->textPtr,
+                parser->m_declEntity->textLen, parser->m_curBase, 0, 0, 0);
+            handleDefault = ((XML_Bool)0);
           }
-        }
-        else
+        } else
           ((&dtd->entityValuePool)->ptr = (&dtd->entityValuePool)->start);
         if (result != XML_ERROR_NONE)
           return result;
@@ -7975,21 +7721,21 @@ doProlog(XML_Parser parser,
       break;
     case XML_ROLE_DOCTYPE_SYSTEM_ID:
 
-      parser->m_useForeignDTD = ((XML_Bool) 0);
+      parser->m_useForeignDTD = ((XML_Bool)0);
 
-      dtd->hasParamEntityRefs = ((XML_Bool) 1);
+      dtd->hasParamEntityRefs = ((XML_Bool)1);
       if (parser->m_startDoctypeDeclHandler) {
         parser->m_doctypeSysid = poolStoreString(&parser->m_tempPool, enc,
-                                       s + enc->minBytesPerChar,
-                                       next - enc->minBytesPerChar);
+                                                 s + enc->minBytesPerChar,
+                                                 next - enc->minBytesPerChar);
         if (parser->m_doctypeSysid == 
-# 4719 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 4530 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                      ((void *)0)
-# 4719 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 4530 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                          )
           return XML_ERROR_NO_MEMORY;
         ((&parser->m_tempPool)->start = (&parser->m_tempPool)->ptr);
-        handleDefault = ((XML_Bool) 0);
+        handleDefault = ((XML_Bool)0);
       }
 
       else
@@ -7997,37 +7743,35 @@ doProlog(XML_Parser parser,
 
         parser->m_doctypeSysid = externalSubsetName;
 
-      if (!dtd->standalone
+      if (! dtd->standalone
 
-          && !parser->m_paramEntityParsing
+          && ! parser->m_paramEntityParsing
 
           && parser->m_notStandaloneHandler
-          && !parser->m_notStandaloneHandler(parser->m_handlerArg))
+          && ! parser->m_notStandaloneHandler(parser->m_handlerArg))
         return XML_ERROR_NOT_STANDALONE;
 
 
 
-      if (!parser->m_declEntity) {
-        parser->m_declEntity = (ENTITY *)lookup(parser,
-                                      &dtd->paramEntities,
-                                      externalSubsetName,
-                                      sizeof(ENTITY));
-        if (!parser->m_declEntity)
+      if (! parser->m_declEntity) {
+        parser->m_declEntity = (ENTITY *)lookup(
+            parser, &dtd->paramEntities, externalSubsetName, sizeof(ENTITY));
+        if (! parser->m_declEntity)
           return XML_ERROR_NO_MEMORY;
         parser->m_declEntity->publicId = 
-# 4747 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 4556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                         ((void *)0)
-# 4747 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 4556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                             ;
       }
 
 
     case XML_ROLE_ENTITY_SYSTEM_ID:
       if (dtd->keepProcessing && parser->m_declEntity) {
-        parser->m_declEntity->systemId = poolStoreString(&dtd->pool, enc,
-                                               s + enc->minBytesPerChar,
-                                               next - enc->minBytesPerChar);
-        if (!parser->m_declEntity->systemId)
+        parser->m_declEntity->systemId
+            = poolStoreString(&dtd->pool, enc, s + enc->minBytesPerChar,
+                              next - enc->minBytesPerChar);
+        if (! parser->m_declEntity->systemId)
           return XML_ERROR_NO_MEMORY;
         parser->m_declEntity->base = parser->m_curBase;
         ((&dtd->pool)->start = (&dtd->pool)->ptr);
@@ -8035,144 +7779,132 @@ doProlog(XML_Parser parser,
 
 
         if (parser->m_entityDeclHandler && role == XML_ROLE_ENTITY_SYSTEM_ID)
-          handleDefault = ((XML_Bool) 0);
+          handleDefault = ((XML_Bool)0);
       }
       break;
     case XML_ROLE_ENTITY_COMPLETE:
-      if (dtd->keepProcessing && parser->m_declEntity && parser->m_entityDeclHandler) {
+      if (dtd->keepProcessing && parser->m_declEntity
+          && parser->m_entityDeclHandler) {
         *eventEndPP = s;
-        parser->m_entityDeclHandler(parser->m_handlerArg,
-                          parser->m_declEntity->name,
-                          parser->m_declEntity->is_param,
-                          0,0,
-                          parser->m_declEntity->base,
-                          parser->m_declEntity->systemId,
-                          parser->m_declEntity->publicId,
-                          0);
-        handleDefault = ((XML_Bool) 0);
+        parser->m_entityDeclHandler(
+            parser->m_handlerArg, parser->m_declEntity->name,
+            parser->m_declEntity->is_param, 0, 0, parser->m_declEntity->base,
+            parser->m_declEntity->systemId, parser->m_declEntity->publicId, 0);
+        handleDefault = ((XML_Bool)0);
       }
       break;
     case XML_ROLE_ENTITY_NOTATION_NAME:
       if (dtd->keepProcessing && parser->m_declEntity) {
-        parser->m_declEntity->notation = poolStoreString(&dtd->pool, enc, s, next);
-        if (!parser->m_declEntity->notation)
+        parser->m_declEntity->notation
+            = poolStoreString(&dtd->pool, enc, s, next);
+        if (! parser->m_declEntity->notation)
           return XML_ERROR_NO_MEMORY;
         ((&dtd->pool)->start = (&dtd->pool)->ptr);
         if (parser->m_unparsedEntityDeclHandler) {
           *eventEndPP = s;
-          parser->m_unparsedEntityDeclHandler(parser->m_handlerArg,
-                                    parser->m_declEntity->name,
-                                    parser->m_declEntity->base,
-                                    parser->m_declEntity->systemId,
-                                    parser->m_declEntity->publicId,
-                                    parser->m_declEntity->notation);
-          handleDefault = ((XML_Bool) 0);
-        }
-        else if (parser->m_entityDeclHandler) {
+          parser->m_unparsedEntityDeclHandler(
+              parser->m_handlerArg, parser->m_declEntity->name,
+              parser->m_declEntity->base, parser->m_declEntity->systemId,
+              parser->m_declEntity->publicId, parser->m_declEntity->notation);
+          handleDefault = ((XML_Bool)0);
+        } else if (parser->m_entityDeclHandler) {
           *eventEndPP = s;
-          parser->m_entityDeclHandler(parser->m_handlerArg,
-                            parser->m_declEntity->name,
-                            0,0,0,
-                            parser->m_declEntity->base,
-                            parser->m_declEntity->systemId,
-                            parser->m_declEntity->publicId,
-                            parser->m_declEntity->notation);
-          handleDefault = ((XML_Bool) 0);
+          parser->m_entityDeclHandler(
+              parser->m_handlerArg, parser->m_declEntity->name, 0, 0, 0,
+              parser->m_declEntity->base, parser->m_declEntity->systemId,
+              parser->m_declEntity->publicId, parser->m_declEntity->notation);
+          handleDefault = ((XML_Bool)0);
         }
       }
       break;
-    case XML_ROLE_GENERAL_ENTITY_NAME:
-      {
-        if ((((enc)->predefinedEntityName)(enc, s, next))) {
-          parser->m_declEntity = 
-# 4813 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
-                                ((void *)0)
-# 4813 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-                                    ;
-          break;
-        }
-        if (dtd->keepProcessing) {
-          const XML_Char *name = poolStoreString(&dtd->pool, enc, s, next);
-          if (!name)
-            return XML_ERROR_NO_MEMORY;
-          parser->m_declEntity = (ENTITY *)lookup(parser, &dtd->generalEntities, name,
-                                        sizeof(ENTITY));
-          if (!parser->m_declEntity)
-            return XML_ERROR_NO_MEMORY;
-          if (parser->m_declEntity->name != name) {
-            ((&dtd->pool)->ptr = (&dtd->pool)->start);
-            parser->m_declEntity = 
-# 4826 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
-                                  ((void *)0)
-# 4826 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-                                      ;
-          }
-          else {
-            ((&dtd->pool)->start = (&dtd->pool)->ptr);
-            parser->m_declEntity->publicId = 
-# 4830 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
-                                            ((void *)0)
-# 4830 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-                                                ;
-            parser->m_declEntity->is_param = ((XML_Bool) 0);
-
-
-
-            parser->m_declEntity->is_internal = !(parser->m_parentParser || parser->m_openInternalEntities);
-            if (parser->m_entityDeclHandler)
-              handleDefault = ((XML_Bool) 0);
-          }
-        }
-        else {
-          ((&dtd->pool)->ptr = (&dtd->pool)->start);
-          parser->m_declEntity = 
-# 4842 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
-                                ((void *)0)
-# 4842 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-                                    ;
-        }
+    case XML_ROLE_GENERAL_ENTITY_NAME: {
+      if ((((enc)->predefinedEntityName)(enc, s, next))) {
+        parser->m_declEntity = 
+# 4613 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+                              ((void *)0)
+# 4613 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+                                  ;
+        break;
       }
-      break;
-    case XML_ROLE_PARAM_ENTITY_NAME:
-
       if (dtd->keepProcessing) {
         const XML_Char *name = poolStoreString(&dtd->pool, enc, s, next);
-        if (!name)
+        if (! name)
           return XML_ERROR_NO_MEMORY;
-        parser->m_declEntity = (ENTITY *)lookup(parser, &dtd->paramEntities,
-                                           name, sizeof(ENTITY));
-        if (!parser->m_declEntity)
+        parser->m_declEntity = (ENTITY *)lookup(parser, &dtd->generalEntities,
+                                                name, sizeof(ENTITY));
+        if (! parser->m_declEntity)
           return XML_ERROR_NO_MEMORY;
         if (parser->m_declEntity->name != name) {
           ((&dtd->pool)->ptr = (&dtd->pool)->start);
           parser->m_declEntity = 
-# 4858 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 4626 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                 ((void *)0)
-# 4858 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 4626 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                     ;
-        }
-        else {
+        } else {
           ((&dtd->pool)->start = (&dtd->pool)->ptr);
           parser->m_declEntity->publicId = 
-# 4862 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 4629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                           ((void *)0)
-# 4862 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 4629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                               ;
-          parser->m_declEntity->is_param = ((XML_Bool) 1);
+          parser->m_declEntity->is_param = ((XML_Bool)0);
 
 
 
-          parser->m_declEntity->is_internal = !(parser->m_parentParser || parser->m_openInternalEntities);
+          parser->m_declEntity->is_internal
+              = ! (parser->m_parentParser || parser->m_openInternalEntities);
           if (parser->m_entityDeclHandler)
-            handleDefault = ((XML_Bool) 0);
+            handleDefault = ((XML_Bool)0);
         }
-      }
-      else {
+      } else {
         ((&dtd->pool)->ptr = (&dtd->pool)->start);
         parser->m_declEntity = 
-# 4874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 4641 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                               ((void *)0)
-# 4874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 4641 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+                                  ;
+      }
+    } break;
+    case XML_ROLE_PARAM_ENTITY_NAME:
+
+      if (dtd->keepProcessing) {
+        const XML_Char *name = poolStoreString(&dtd->pool, enc, s, next);
+        if (! name)
+          return XML_ERROR_NO_MEMORY;
+        parser->m_declEntity = (ENTITY *)lookup(parser, &dtd->paramEntities,
+                                                name, sizeof(ENTITY));
+        if (! parser->m_declEntity)
+          return XML_ERROR_NO_MEMORY;
+        if (parser->m_declEntity->name != name) {
+          ((&dtd->pool)->ptr = (&dtd->pool)->start);
+          parser->m_declEntity = 
+# 4656 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+                                ((void *)0)
+# 4656 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+                                    ;
+        } else {
+          ((&dtd->pool)->start = (&dtd->pool)->ptr);
+          parser->m_declEntity->publicId = 
+# 4659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+                                          ((void *)0)
+# 4659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+                                              ;
+          parser->m_declEntity->is_param = ((XML_Bool)1);
+
+
+
+          parser->m_declEntity->is_internal
+              = ! (parser->m_parentParser || parser->m_openInternalEntities);
+          if (parser->m_entityDeclHandler)
+            handleDefault = ((XML_Bool)0);
+        }
+      } else {
+        ((&dtd->pool)->ptr = (&dtd->pool)->start);
+        parser->m_declEntity = 
+# 4671 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+                              ((void *)0)
+# 4671 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                   ;
       }
 
@@ -8181,66 +7913,62 @@ doProlog(XML_Parser parser,
       break;
     case XML_ROLE_NOTATION_NAME:
       parser->m_declNotationPublicId = 
-# 4881 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 4678 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                       ((void *)0)
-# 4881 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 4678 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                           ;
       parser->m_declNotationName = 
-# 4882 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 4679 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                   ((void *)0)
-# 4882 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 4679 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                       ;
       if (parser->m_notationDeclHandler) {
-        parser->m_declNotationName = poolStoreString(&parser->m_tempPool, enc, s, next);
-        if (!parser->m_declNotationName)
+        parser->m_declNotationName
+            = poolStoreString(&parser->m_tempPool, enc, s, next);
+        if (! parser->m_declNotationName)
           return XML_ERROR_NO_MEMORY;
         ((&parser->m_tempPool)->start = (&parser->m_tempPool)->ptr);
-        handleDefault = ((XML_Bool) 0);
+        handleDefault = ((XML_Bool)0);
       }
       break;
     case XML_ROLE_NOTATION_PUBLIC_ID:
-      if (!(((enc)->isPublicId)(enc, s, next, eventPP)))
+      if (! (((enc)->isPublicId)(enc, s, next, eventPP)))
         return XML_ERROR_PUBLICID;
-      if (parser->m_declNotationName) {
-        XML_Char *tem = poolStoreString(&parser->m_tempPool,
-                                        enc,
+      if (parser
+              ->m_declNotationName) {
+        XML_Char *tem = poolStoreString(&parser->m_tempPool, enc,
                                         s + enc->minBytesPerChar,
                                         next - enc->minBytesPerChar);
-        if (!tem)
+        if (! tem)
           return XML_ERROR_NO_MEMORY;
         normalizePublicId(tem);
         parser->m_declNotationPublicId = tem;
         ((&parser->m_tempPool)->start = (&parser->m_tempPool)->ptr);
-        handleDefault = ((XML_Bool) 0);
+        handleDefault = ((XML_Bool)0);
       }
       break;
     case XML_ROLE_NOTATION_SYSTEM_ID:
       if (parser->m_declNotationName && parser->m_notationDeclHandler) {
-        const XML_Char *systemId
-          = poolStoreString(&parser->m_tempPool, enc,
-                            s + enc->minBytesPerChar,
-                            next - enc->minBytesPerChar);
-        if (!systemId)
+        const XML_Char *systemId = poolStoreString(&parser->m_tempPool, enc,
+                                                   s + enc->minBytesPerChar,
+                                                   next - enc->minBytesPerChar);
+        if (! systemId)
           return XML_ERROR_NO_MEMORY;
         *eventEndPP = s;
-        parser->m_notationDeclHandler(parser->m_handlerArg,
-                            parser->m_declNotationName,
-                            parser->m_curBase,
-                            systemId,
-                            parser->m_declNotationPublicId);
-        handleDefault = ((XML_Bool) 0);
+        parser->m_notationDeclHandler(
+            parser->m_handlerArg, parser->m_declNotationName, parser->m_curBase,
+            systemId, parser->m_declNotationPublicId);
+        handleDefault = ((XML_Bool)0);
       }
       poolClear(&parser->m_tempPool);
       break;
     case XML_ROLE_NOTATION_NO_SYSTEM_ID:
       if (parser->m_declNotationPublicId && parser->m_notationDeclHandler) {
         *eventEndPP = s;
-        parser->m_notationDeclHandler(parser->m_handlerArg,
-                            parser->m_declNotationName,
-                            parser->m_curBase,
-                            0,
-                            parser->m_declNotationPublicId);
-        handleDefault = ((XML_Bool) 0);
+        parser->m_notationDeclHandler(
+            parser->m_handlerArg, parser->m_declNotationName, parser->m_curBase,
+            0, parser->m_declNotationPublicId);
+        handleDefault = ((XML_Bool)0);
       }
       poolClear(&parser->m_tempPool);
       break;
@@ -8256,50 +7984,52 @@ doProlog(XML_Parser parser,
         return XML_ERROR_SYNTAX;
       }
 
-    case XML_ROLE_IGNORE_SECT:
-      {
-        enum XML_Error result;
-        if (parser->m_defaultHandler)
-          reportDefault(parser, enc, s, next);
-        handleDefault = ((XML_Bool) 0);
-        result = doIgnoreSection(parser, enc, &next, end, nextPtr, haveMore);
-        if (result != XML_ERROR_NONE)
-          return result;
-        else if (!next) {
-          parser->m_processor = ignoreSectionProcessor;
-          return result;
-        }
+    case XML_ROLE_IGNORE_SECT: {
+      enum XML_Error result;
+      if (parser->m_defaultHandler)
+        reportDefault(parser, enc, s, next);
+      handleDefault = ((XML_Bool)0);
+      result = doIgnoreSection(parser, enc, &next, end, nextPtr, haveMore);
+      if (result != XML_ERROR_NONE)
+        return result;
+      else if (! next) {
+        parser->m_processor = ignoreSectionProcessor;
+        return result;
       }
-      break;
+    } break;
 
     case XML_ROLE_GROUP_OPEN:
       if (parser->m_prologState.level >= parser->m_groupSize) {
         if (parser->m_groupSize) {
-          char *temp = (char *)(parser->m_mem.realloc_fcn((parser->m_groupConnector),(parser->m_groupSize *= 2)));
-          if (temp == 
-# 4969 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
-                     ((void *)0)
-# 4969 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-                         ) {
-            parser->m_groupSize /= 2;
-            return XML_ERROR_NO_MEMORY;
-          }
-          parser->m_groupConnector = temp;
-          if (dtd->scaffIndex) {
-            int *temp = (int *)(parser->m_mem.realloc_fcn((dtd->scaffIndex),(parser->m_groupSize * sizeof(int))))
-                                                            ;
-            if (temp == 
-# 4977 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
-                       ((void *)0)
-# 4977 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-                           )
+          {
+            char *const new_connector = (char *)(parser->m_mem.realloc_fcn((parser->m_groupConnector), (parser->m_groupSize *= 2)))
+                                                                           ;
+            if (new_connector == 
+# 4762 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+                                ((void *)0)
+# 4762 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+                                    ) {
+              parser->m_groupSize /= 2;
               return XML_ERROR_NO_MEMORY;
-            dtd->scaffIndex = temp;
+            }
+            parser->m_groupConnector = new_connector;
           }
-        }
-        else {
-          parser->m_groupConnector = (char *)(parser->m_mem.malloc_fcn((parser->m_groupSize = 32)));
-          if (!parser->m_groupConnector) {
+
+          if (dtd->scaffIndex) {
+            int *const new_scaff_index = (int *)(parser->m_mem.realloc_fcn((dtd->scaffIndex), (parser->m_groupSize * sizeof(int))))
+                                                                           ;
+            if (new_scaff_index == 
+# 4772 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+                                  ((void *)0)
+# 4772 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+                                      )
+              return XML_ERROR_NO_MEMORY;
+            dtd->scaffIndex = new_scaff_index;
+          }
+        } else {
+          parser->m_groupConnector
+              = (char *)(parser->m_mem.malloc_fcn((parser->m_groupSize = 32)));
+          if (! parser->m_groupConnector) {
             parser->m_groupSize = 0;
             return XML_ERROR_NO_MEMORY;
           }
@@ -8310,11 +8040,16 @@ doProlog(XML_Parser parser,
         int myindex = nextScaffoldPart(parser);
         if (myindex < 0)
           return XML_ERROR_NO_MEMORY;
+        ((dtd->scaffIndex != 
+# 4790 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+       ((void *)0)
+# 4790 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+       ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c", 4790, __func__, "dtd->scaffIndex != NULL"));
         dtd->scaffIndex[dtd->scaffLevel] = myindex;
         dtd->scaffLevel++;
         dtd->scaffold[myindex].type = XML_CTYPE_SEQ;
         if (parser->m_elementDeclHandler)
-          handleDefault = ((XML_Bool) 0);
+          handleDefault = ((XML_Bool)0);
       }
       break;
     case XML_ROLE_GROUP_SEQUENCE:
@@ -8322,36 +8057,34 @@ doProlog(XML_Parser parser,
         return XML_ERROR_SYNTAX;
       parser->m_groupConnector[parser->m_prologState.level] = 0x2C;
       if (dtd->in_eldecl && parser->m_elementDeclHandler)
-        handleDefault = ((XML_Bool) 0);
+        handleDefault = ((XML_Bool)0);
       break;
     case XML_ROLE_GROUP_CHOICE:
       if (parser->m_groupConnector[parser->m_prologState.level] == 0x2C)
         return XML_ERROR_SYNTAX;
       if (dtd->in_eldecl
-          && !parser->m_groupConnector[parser->m_prologState.level]
+          && ! parser->m_groupConnector[parser->m_prologState.level]
           && (dtd->scaffold[dtd->scaffIndex[dtd->scaffLevel - 1]].type
-              != XML_CTYPE_MIXED)
-          ) {
+              != XML_CTYPE_MIXED)) {
         dtd->scaffold[dtd->scaffIndex[dtd->scaffLevel - 1]].type
             = XML_CTYPE_CHOICE;
         if (parser->m_elementDeclHandler)
-          handleDefault = ((XML_Bool) 0);
+          handleDefault = ((XML_Bool)0);
       }
       parser->m_groupConnector[parser->m_prologState.level] = 0x7C;
       break;
     case XML_ROLE_PARAM_ENTITY_REF:
 
     case XML_ROLE_INNER_PARAM_ENTITY_REF:
-      dtd->hasParamEntityRefs = ((XML_Bool) 1);
-      if (!parser->m_paramEntityParsing)
+      dtd->hasParamEntityRefs = ((XML_Bool)1);
+      if (! parser->m_paramEntityParsing)
         dtd->keepProcessing = dtd->standalone;
       else {
         const XML_Char *name;
         ENTITY *entity;
-        name = poolStoreString(&dtd->pool, enc,
-                                s + enc->minBytesPerChar,
-                                next - enc->minBytesPerChar);
-        if (!name)
+        name = poolStoreString(&dtd->pool, enc, s + enc->minBytesPerChar,
+                               next - enc->minBytesPerChar);
+        if (! name)
           return XML_ERROR_NO_MEMORY;
         entity = (ENTITY *)lookup(parser, &dtd->paramEntities, name, 0);
         ((&dtd->pool)->ptr = (&dtd->pool)->start);
@@ -8359,23 +8092,22 @@ doProlog(XML_Parser parser,
 
 
 
-        if (parser->m_prologState.documentEntity &&
-            (dtd->standalone
-             ? !parser->m_openInternalEntities
-             : !dtd->hasParamEntityRefs)) {
-          if (!entity)
+        if (parser->m_prologState.documentEntity
+            && (dtd->standalone ? ! parser->m_openInternalEntities
+                                : ! dtd->hasParamEntityRefs)) {
+          if (! entity)
             return XML_ERROR_UNDEFINED_ENTITY;
-          else if (!entity->is_internal) {
-# 5071 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+          else if (! entity->is_internal) {
+# 4864 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
             return XML_ERROR_ENTITY_DECLARED_IN_PE;
           }
-        }
-        else if (!entity) {
+        } else if (! entity) {
           dtd->keepProcessing = dtd->standalone;
 
-          if ((role == XML_ROLE_PARAM_ENTITY_REF) && parser->m_skippedEntityHandler) {
+          if ((role == XML_ROLE_PARAM_ENTITY_REF)
+              && parser->m_skippedEntityHandler) {
             parser->m_skippedEntityHandler(parser->m_handlerArg, name, 1);
-            handleDefault = ((XML_Bool) 0);
+            handleDefault = ((XML_Bool)0);
           }
           break;
         }
@@ -8383,41 +8115,37 @@ doProlog(XML_Parser parser,
           return XML_ERROR_RECURSIVE_ENTITY_REF;
         if (entity->textPtr) {
           enum XML_Error result;
-          XML_Bool betweenDecl =
-            (role == XML_ROLE_PARAM_ENTITY_REF ? ((XML_Bool) 1) : ((XML_Bool) 0));
+          XML_Bool betweenDecl
+              = (role == XML_ROLE_PARAM_ENTITY_REF ? ((XML_Bool)1) : ((XML_Bool)0));
           result = processInternalEntity(parser, entity, betweenDecl);
           if (result != XML_ERROR_NONE)
             return result;
-          handleDefault = ((XML_Bool) 0);
+          handleDefault = ((XML_Bool)0);
           break;
         }
         if (parser->m_externalEntityRefHandler) {
-          dtd->paramEntityRead = ((XML_Bool) 0);
-          entity->open = ((XML_Bool) 1);
-          if (!parser->m_externalEntityRefHandler(parser->m_externalEntityRefHandlerArg,
-                                        0,
-                                        entity->base,
-                                        entity->systemId,
-                                        entity->publicId)) {
-            entity->open = ((XML_Bool) 0);
+          dtd->paramEntityRead = ((XML_Bool)0);
+          entity->open = ((XML_Bool)1);
+          if (! parser->m_externalEntityRefHandler(
+                  parser->m_externalEntityRefHandlerArg, 0, entity->base,
+                  entity->systemId, entity->publicId)) {
+            entity->open = ((XML_Bool)0);
             return XML_ERROR_EXTERNAL_ENTITY_HANDLING;
           }
-          entity->open = ((XML_Bool) 0);
-          handleDefault = ((XML_Bool) 0);
-          if (!dtd->paramEntityRead) {
+          entity->open = ((XML_Bool)0);
+          handleDefault = ((XML_Bool)0);
+          if (! dtd->paramEntityRead) {
             dtd->keepProcessing = dtd->standalone;
             break;
           }
-        }
-        else {
+        } else {
           dtd->keepProcessing = dtd->standalone;
           break;
         }
       }
 
-      if (!dtd->standalone &&
-          parser->m_notStandaloneHandler &&
-          !parser->m_notStandaloneHandler(parser->m_handlerArg))
+      if (! dtd->standalone && parser->m_notStandaloneHandler
+          && ! parser->m_notStandaloneHandler(parser->m_handlerArg))
         return XML_ERROR_NOT_STANDALONE;
       break;
 
@@ -8426,12 +8154,12 @@ doProlog(XML_Parser parser,
     case XML_ROLE_ELEMENT_NAME:
       if (parser->m_elementDeclHandler) {
         parser->m_declElementType = getElementType(parser, enc, s, next);
-        if (!parser->m_declElementType)
+        if (! parser->m_declElementType)
           return XML_ERROR_NO_MEMORY;
         dtd->scaffLevel = 0;
         dtd->scaffCount = 0;
-        dtd->in_eldecl = ((XML_Bool) 1);
-        handleDefault = ((XML_Bool) 0);
+        dtd->in_eldecl = ((XML_Bool)1);
+        handleDefault = ((XML_Bool)0);
       }
       break;
 
@@ -8439,29 +8167,30 @@ doProlog(XML_Parser parser,
     case XML_ROLE_CONTENT_EMPTY:
       if (dtd->in_eldecl) {
         if (parser->m_elementDeclHandler) {
-          XML_Content * content = (XML_Content *) (parser->m_mem.malloc_fcn((sizeof(XML_Content))));
-          if (!content)
+          XML_Content *content
+              = (XML_Content *)(parser->m_mem.malloc_fcn((sizeof(XML_Content))));
+          if (! content)
             return XML_ERROR_NO_MEMORY;
           content->quant = XML_CQUANT_NONE;
           content->name = 
-# 5147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 4937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                          ((void *)0)
-# 5147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 4937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                              ;
           content->numchildren = 0;
           content->children = 
-# 5149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 4939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                              ((void *)0)
-# 5149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 4939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                  ;
-          content->type = ((role == XML_ROLE_CONTENT_ANY) ?
-                           XML_CTYPE_ANY :
-                           XML_CTYPE_EMPTY);
+          content->type = ((role == XML_ROLE_CONTENT_ANY) ? XML_CTYPE_ANY
+                                                          : XML_CTYPE_EMPTY);
           *eventEndPP = s;
-          parser->m_elementDeclHandler(parser->m_handlerArg, parser->m_declElementType->name, content);
-          handleDefault = ((XML_Bool) 0);
+          parser->m_elementDeclHandler(
+              parser->m_handlerArg, parser->m_declElementType->name, content);
+          handleDefault = ((XML_Bool)0);
         }
-        dtd->in_eldecl = ((XML_Bool) 0);
+        dtd->in_eldecl = ((XML_Bool)0);
       }
       break;
 
@@ -8470,7 +8199,7 @@ doProlog(XML_Parser parser,
         dtd->scaffold[dtd->scaffIndex[dtd->scaffLevel - 1]].type
             = XML_CTYPE_MIXED;
         if (parser->m_elementDeclHandler)
-          handleDefault = ((XML_Bool) 0);
+          handleDefault = ((XML_Bool)0);
       }
       break;
 
@@ -8490,24 +8219,24 @@ doProlog(XML_Parser parser,
         ELEMENT_TYPE *el;
         const XML_Char *name;
         int nameLen;
-        const char *nxt = (quant == XML_CQUANT_NONE
-                           ? next
-                           : next - enc->minBytesPerChar);
+        const char *nxt
+            = (quant == XML_CQUANT_NONE ? next : next - enc->minBytesPerChar);
         int myindex = nextScaffoldPart(parser);
         if (myindex < 0)
           return XML_ERROR_NO_MEMORY;
         dtd->scaffold[myindex].type = XML_CTYPE_NAME;
         dtd->scaffold[myindex].quant = quant;
         el = getElementType(parser, enc, s, nxt);
-        if (!el)
+        if (! el)
           return XML_ERROR_NO_MEMORY;
         name = el->name;
         dtd->scaffold[myindex].name = name;
         nameLen = 0;
-        for (; name[nameLen++]; );
+        for (; name[nameLen++];)
+          ;
         dtd->contentStringLen += nameLen;
         if (parser->m_elementDeclHandler)
-          handleDefault = ((XML_Bool) 0);
+          handleDefault = ((XML_Bool)0);
       }
       break;
 
@@ -8525,18 +8254,19 @@ doProlog(XML_Parser parser,
     closeGroup:
       if (dtd->in_eldecl) {
         if (parser->m_elementDeclHandler)
-          handleDefault = ((XML_Bool) 0);
+          handleDefault = ((XML_Bool)0);
         dtd->scaffLevel--;
         dtd->scaffold[dtd->scaffIndex[dtd->scaffLevel]].quant = quant;
         if (dtd->scaffLevel == 0) {
-          if (!handleDefault) {
+          if (! handleDefault) {
             XML_Content *model = build_model(parser);
-            if (!model)
+            if (! model)
               return XML_ERROR_NO_MEMORY;
             *eventEndPP = s;
-            parser->m_elementDeclHandler(parser->m_handlerArg, parser->m_declElementType->name, model);
+            parser->m_elementDeclHandler(
+                parser->m_handlerArg, parser->m_declElementType->name, model);
           }
-          dtd->in_eldecl = ((XML_Bool) 0);
+          dtd->in_eldecl = ((XML_Bool)0);
           dtd->contentStringLen = 0;
         }
       }
@@ -8544,41 +8274,41 @@ doProlog(XML_Parser parser,
 
 
     case XML_ROLE_PI:
-      if (!reportProcessingInstruction(parser, enc, s, next))
+      if (! reportProcessingInstruction(parser, enc, s, next))
         return XML_ERROR_NO_MEMORY;
-      handleDefault = ((XML_Bool) 0);
+      handleDefault = ((XML_Bool)0);
       break;
     case XML_ROLE_COMMENT:
-      if (!reportComment(parser, enc, s, next))
+      if (! reportComment(parser, enc, s, next))
         return XML_ERROR_NO_MEMORY;
-      handleDefault = ((XML_Bool) 0);
+      handleDefault = ((XML_Bool)0);
       break;
     case XML_ROLE_NONE:
       switch (tok) {
       case 14:
-        handleDefault = ((XML_Bool) 0);
+        handleDefault = ((XML_Bool)0);
         break;
       }
       break;
     case XML_ROLE_DOCTYPE_NONE:
       if (parser->m_startDoctypeDeclHandler)
-        handleDefault = ((XML_Bool) 0);
+        handleDefault = ((XML_Bool)0);
       break;
     case XML_ROLE_ENTITY_NONE:
       if (dtd->keepProcessing && parser->m_entityDeclHandler)
-        handleDefault = ((XML_Bool) 0);
+        handleDefault = ((XML_Bool)0);
       break;
     case XML_ROLE_NOTATION_NONE:
       if (parser->m_notationDeclHandler)
-        handleDefault = ((XML_Bool) 0);
+        handleDefault = ((XML_Bool)0);
       break;
     case XML_ROLE_ATTLIST_NONE:
       if (dtd->keepProcessing && parser->m_attlistDeclHandler)
-        handleDefault = ((XML_Bool) 0);
+        handleDefault = ((XML_Bool)0);
       break;
     case XML_ROLE_ELEMENT_NONE:
       if (parser->m_elementDeclHandler)
-        handleDefault = ((XML_Bool) 0);
+        handleDefault = ((XML_Bool)0);
       break;
     }
 
@@ -8600,18 +8330,15 @@ doProlog(XML_Parser parser,
 }
 
 static enum XML_Error
-epilogProcessor(XML_Parser parser,
-                const char *s,
-                const char *end,
-                const char **nextPtr)
-{
+epilogProcessor(XML_Parser parser, const char *s, const char *end,
+                const char **nextPtr) {
   parser->m_processor = epilogProcessor;
   parser->m_eventPtr = s;
   for (;;) {
     const char *next = 
-# 5304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 5092 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                       ((void *)0)
-# 5304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 5092 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                           ;
     int tok = (((parser->m_encoding)->scanners[0])(parser->m_encoding, s, end, &next));
     parser->m_eventEndPtr = next;
@@ -8633,24 +8360,24 @@ epilogProcessor(XML_Parser parser,
         reportDefault(parser, parser->m_encoding, s, next);
       break;
     case 11:
-      if (!reportProcessingInstruction(parser, parser->m_encoding, s, next))
+      if (! reportProcessingInstruction(parser, parser->m_encoding, s, next))
         return XML_ERROR_NO_MEMORY;
       break;
     case 13:
-      if (!reportComment(parser, parser->m_encoding, s, next))
+      if (! reportComment(parser, parser->m_encoding, s, next))
         return XML_ERROR_NO_MEMORY;
       break;
     case 0:
       parser->m_eventPtr = next;
       return XML_ERROR_INVALID_TOKEN;
     case -1:
-      if (!parser->m_parsingStatus.finalBuffer) {
+      if (! parser->m_parsingStatus.finalBuffer) {
         *nextPtr = s;
         return XML_ERROR_NONE;
       }
       return XML_ERROR_UNCLOSED_TOKEN;
     case -2:
-      if (!parser->m_parsingStatus.finalBuffer) {
+      if (! parser->m_parsingStatus.finalBuffer) {
         *nextPtr = s;
         return XML_ERROR_NONE;
       }
@@ -8665,15 +8392,13 @@ epilogProcessor(XML_Parser parser,
       return XML_ERROR_NONE;
     case XML_FINISHED:
       return XML_ERROR_ABORTED;
-    default: ;
+    default:;
     }
   }
 }
 
 static enum XML_Error
-processInternalEntity(XML_Parser parser, ENTITY *entity,
-                      XML_Bool betweenDecl)
-{
+processInternalEntity(XML_Parser parser, ENTITY *entity, XML_Bool betweenDecl) {
   const char *textStart, *textEnd;
   const char *next;
   enum XML_Error result;
@@ -8682,13 +8407,13 @@ processInternalEntity(XML_Parser parser, ENTITY *entity,
   if (parser->m_freeInternalEntities) {
     openEntity = parser->m_freeInternalEntities;
     parser->m_freeInternalEntities = openEntity->next;
-  }
-  else {
-    openEntity = (OPEN_INTERNAL_ENTITY *)(parser->m_mem.malloc_fcn((sizeof(OPEN_INTERNAL_ENTITY))));
-    if (!openEntity)
+  } else {
+    openEntity
+        = (OPEN_INTERNAL_ENTITY *)(parser->m_mem.malloc_fcn((sizeof(OPEN_INTERNAL_ENTITY))));
+    if (! openEntity)
       return XML_ERROR_NO_MEMORY;
   }
-  entity->open = ((XML_Bool) 1);
+  entity->open = ((XML_Bool)1);
   entity->processed = 0;
   openEntity->next = parser->m_openInternalEntities;
   parser->m_openInternalEntities = openEntity;
@@ -8696,14 +8421,14 @@ processInternalEntity(XML_Parser parser, ENTITY *entity,
   openEntity->startTagLevel = parser->m_tagLevel;
   openEntity->betweenDecl = betweenDecl;
   openEntity->internalEventPtr = 
-# 5387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 5173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                 ((void *)0)
-# 5387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 5173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                     ;
   openEntity->internalEventEndPtr = 
-# 5388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 5174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                    ((void *)0)
-# 5388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 5174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                        ;
   textStart = (char *)entity->textPtr;
   textEnd = (char *)(entity->textPtr + entity->textLen);
@@ -8712,22 +8437,21 @@ processInternalEntity(XML_Parser parser, ENTITY *entity,
 
 
   if (entity->is_param) {
-    int tok = (((parser->m_internalEncoding)->scanners[0])(parser->m_internalEncoding, textStart, textEnd, &next));
-    result = doProlog(parser, parser->m_internalEncoding, textStart, textEnd, tok,
-                      next, &next, ((XML_Bool) 0));
-  }
-  else
+    int tok
+        = (((parser->m_internalEncoding)->scanners[0])(parser->m_internalEncoding, textStart, textEnd, &next));
+    result = doProlog(parser, parser->m_internalEncoding, textStart, textEnd,
+                      tok, next, &next, ((XML_Bool)0), ((XML_Bool)0));
+  } else
 
-    result = doContent(parser, parser->m_tagLevel, parser->m_internalEncoding, textStart,
-                       textEnd, &next, ((XML_Bool) 0));
+    result = doContent(parser, parser->m_tagLevel, parser->m_internalEncoding,
+                       textStart, textEnd, &next, ((XML_Bool)0));
 
   if (result == XML_ERROR_NONE) {
     if (textEnd != next && parser->m_parsingStatus.parsing == XML_SUSPENDED) {
       entity->processed = (int)(next - textStart);
       parser->m_processor = internalEntityProcessor;
-    }
-    else {
-      entity->open = ((XML_Bool) 0);
+    } else {
+      entity->open = ((XML_Bool)0);
       parser->m_openInternalEntities = openEntity->next;
 
       openEntity->next = parser->m_freeInternalEntities;
@@ -8738,17 +8462,14 @@ processInternalEntity(XML_Parser parser, ENTITY *entity,
 }
 
 static enum XML_Error
-internalEntityProcessor(XML_Parser parser,
-                        const char *s,
-                        const char *end,
-                        const char **nextPtr)
-{
+internalEntityProcessor(XML_Parser parser, const char *s, const char *end,
+                        const char **nextPtr) {
   ENTITY *entity;
   const char *textStart, *textEnd;
   const char *next;
   enum XML_Error result;
   OPEN_INTERNAL_ENTITY *openEntity = parser->m_openInternalEntities;
-  if (!openEntity)
+  if (! openEntity)
     return XML_ERROR_UNEXPECTED_STATE;
 
   entity = openEntity->entity;
@@ -8759,23 +8480,24 @@ internalEntityProcessor(XML_Parser parser,
 
 
   if (entity->is_param) {
-    int tok = (((parser->m_internalEncoding)->scanners[0])(parser->m_internalEncoding, textStart, textEnd, &next));
-    result = doProlog(parser, parser->m_internalEncoding, textStart, textEnd, tok,
-                      next, &next, ((XML_Bool) 0));
-  }
-  else
+    int tok
+        = (((parser->m_internalEncoding)->scanners[0])(parser->m_internalEncoding, textStart, textEnd, &next));
+    result = doProlog(parser, parser->m_internalEncoding, textStart, textEnd,
+                      tok, next, &next, ((XML_Bool)0), ((XML_Bool)1));
+  } else
 
-    result = doContent(parser, openEntity->startTagLevel, parser->m_internalEncoding,
-                       textStart, textEnd, &next, ((XML_Bool) 0));
+    result = doContent(parser, openEntity->startTagLevel,
+                       parser->m_internalEncoding, textStart, textEnd, &next,
+                       ((XML_Bool)0));
 
   if (result != XML_ERROR_NONE)
     return result;
-  else if (textEnd != next && parser->m_parsingStatus.parsing == XML_SUSPENDED) {
+  else if (textEnd != next
+           && parser->m_parsingStatus.parsing == XML_SUSPENDED) {
     entity->processed = (int)(next - (char *)entity->textPtr);
     return result;
-  }
-  else {
-    entity->open = ((XML_Bool) 0);
+  } else {
+    entity->open = ((XML_Bool)0);
     parser->m_openInternalEntities = openEntity->next;
 
     openEntity->next = parser->m_freeInternalEntities;
@@ -8788,49 +8510,45 @@ internalEntityProcessor(XML_Parser parser,
     parser->m_processor = prologProcessor;
     tok = (((parser->m_encoding)->scanners[0])(parser->m_encoding, s, end, &next));
     return doProlog(parser, parser->m_encoding, s, end, tok, next, nextPtr,
-                    (XML_Bool)!parser->m_parsingStatus.finalBuffer);
-  }
-  else
+                    (XML_Bool)! parser->m_parsingStatus.finalBuffer, ((XML_Bool)1));
+  } else
 
   {
     parser->m_processor = contentProcessor;
 
-    return doContent(parser, parser->m_parentParser ? 1 : 0, parser->m_encoding, s, end,
-                     nextPtr, (XML_Bool)!parser->m_parsingStatus.finalBuffer);
+    return doContent(parser, parser->m_parentParser ? 1 : 0, parser->m_encoding,
+                     s, end, nextPtr,
+                     (XML_Bool)! parser->m_parsingStatus.finalBuffer);
   }
 }
 
 static enum XML_Error
-errorProcessor(XML_Parser parser,
-               const char *UNUSED_s __attribute__((__unused__)),
-               const char *UNUSED_end __attribute__((__unused__)),
-               const char **UNUSED_nextPtr __attribute__((__unused__)))
-{
+errorProcessor(XML_Parser parser, const char *s, const char *end,
+               const char **nextPtr) {
+  (void)s;
+  (void)end;
+  (void)nextPtr;
   return parser->m_errorCode;
 }
 
 static enum XML_Error
 storeAttributeValue(XML_Parser parser, const ENCODING *enc, XML_Bool isCdata,
-                    const char *ptr, const char *end,
-                    STRING_POOL *pool)
-{
-  enum XML_Error result = appendAttributeValue(parser, enc, isCdata, ptr,
-                                               end, pool);
+                    const char *ptr, const char *end, STRING_POOL *pool) {
+  enum XML_Error result
+      = appendAttributeValue(parser, enc, isCdata, ptr, end, pool);
   if (result)
     return result;
-  if (!isCdata && ((pool)->ptr - (pool)->start) && (((pool)->ptr)[-1]) == 0x20)
+  if (! isCdata && ((pool)->ptr - (pool)->start) && (((pool)->ptr)[-1]) == 0x20)
     ((void)--(pool->ptr));
-  if (!(((pool)->ptr == (pool)->end && !poolGrow(pool)) ? 0 : ((*((pool)->ptr)++ = '\0'), 1)))
+  if (! (((pool)->ptr == (pool)->end && ! poolGrow(pool)) ? 0 : ((*((pool)->ptr)++ = '\0'), 1)))
     return XML_ERROR_NO_MEMORY;
   return XML_ERROR_NONE;
 }
 
 static enum XML_Error
 appendAttributeValue(XML_Parser parser, const ENCODING *enc, XML_Bool isCdata,
-                     const char *ptr, const char *end,
-                     STRING_POOL *pool)
-{
-  DTD * const dtd = parser->m_dtd;
+                     const char *ptr, const char *end, STRING_POOL *pool) {
+  DTD *const dtd = parser->m_dtd;
   for (;;) {
     const char *next;
     int tok = (((enc)->literalScanners[0])(enc, ptr, end, &next));
@@ -8845,30 +8563,27 @@ appendAttributeValue(XML_Parser parser, const ENCODING *enc, XML_Bool isCdata,
       if (enc == parser->m_encoding)
         parser->m_eventPtr = ptr;
       return XML_ERROR_INVALID_TOKEN;
-    case 10:
-      {
-        XML_Char buf[4];
-        int i;
-        int n = (((enc)->charRefNumber)(enc, ptr));
-        if (n < 0) {
-          if (enc == parser->m_encoding)
-            parser->m_eventPtr = ptr;
-          return XML_ERROR_BAD_CHAR_REF;
-        }
-        if (!isCdata
-            && n == 0x20
-            && (((pool)->ptr - (pool)->start) == 0 || (((pool)->ptr)[-1]) == 0x20))
-          break;
-        n = XmlUtf8Encode(n, (ICHAR *)buf);
-# 5553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-        for (i = 0; i < n; i++) {
-          if (!(((pool)->ptr == (pool)->end && !poolGrow(pool)) ? 0 : ((*((pool)->ptr)++ = buf[i]), 1)))
-            return XML_ERROR_NO_MEMORY;
-        }
+    case 10: {
+      XML_Char buf[4];
+      int i;
+      int n = (((enc)->charRefNumber)(enc, ptr));
+      if (n < 0) {
+        if (enc == parser->m_encoding)
+          parser->m_eventPtr = ptr;
+        return XML_ERROR_BAD_CHAR_REF;
       }
-      break;
+      if (! isCdata && n == 0x20
+          && (((pool)->ptr - (pool)->start) == 0 || (((pool)->ptr)[-1]) == 0x20))
+        break;
+      n = XmlUtf8Encode(n, (ICHAR *)buf);
+# 5330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+      for (i = 0; i < n; i++) {
+        if (! (((pool)->ptr == (pool)->end && ! poolGrow(pool)) ? 0 : ((*((pool)->ptr)++ = buf[i]), 1)))
+          return XML_ERROR_NO_MEMORY;
+      }
+    } break;
     case 6:
-      if (!poolAppend(pool, enc, ptr, next))
+      if (! poolAppend(pool, enc, ptr, next))
         return XML_ERROR_NO_MEMORY;
       break;
     case -3:
@@ -8876,86 +8591,80 @@ appendAttributeValue(XML_Parser parser, const ENCODING *enc, XML_Bool isCdata,
 
     case 39:
     case 7:
-      if (!isCdata && (((pool)->ptr - (pool)->start) == 0 || (((pool)->ptr)[-1]) == 0x20))
+      if (! isCdata && (((pool)->ptr - (pool)->start) == 0 || (((pool)->ptr)[-1]) == 0x20))
         break;
-      if (!(((pool)->ptr == (pool)->end && !poolGrow(pool)) ? 0 : ((*((pool)->ptr)++ = 0x20), 1)))
+      if (! (((pool)->ptr == (pool)->end && ! poolGrow(pool)) ? 0 : ((*((pool)->ptr)++ = 0x20), 1)))
         return XML_ERROR_NO_MEMORY;
       break;
-    case 9:
-      {
-        const XML_Char *name;
-        ENTITY *entity;
-        char checkEntityDecl;
-        XML_Char ch = (XML_Char) (((enc)->predefinedEntityName)(enc, ptr + enc->minBytesPerChar, next - enc->minBytesPerChar))
-
-                                                                          ;
-        if (ch) {
-          if (!(((pool)->ptr == (pool)->end && !poolGrow(pool)) ? 0 : ((*((pool)->ptr)++ = ch), 1)))
-                return XML_ERROR_NO_MEMORY;
-          break;
-        }
-        name = poolStoreString(&parser->m_temp2Pool, enc,
-                               ptr + enc->minBytesPerChar,
-                               next - enc->minBytesPerChar);
-        if (!name)
+    case 9: {
+      const XML_Char *name;
+      ENTITY *entity;
+      char checkEntityDecl;
+      XML_Char ch = (XML_Char)(((enc)->predefinedEntityName)(enc, ptr + enc->minBytesPerChar, next - enc->minBytesPerChar))
+                                                                       ;
+      if (ch) {
+        if (! (((pool)->ptr == (pool)->end && ! poolGrow(pool)) ? 0 : ((*((pool)->ptr)++ = ch), 1)))
           return XML_ERROR_NO_MEMORY;
-        entity = (ENTITY *)lookup(parser, &dtd->generalEntities, name, 0);
-        ((&parser->m_temp2Pool)->ptr = (&parser->m_temp2Pool)->start);
-
-
-
-        if (pool == &dtd->pool)
-          checkEntityDecl =
-
-              parser->m_prologState.documentEntity &&
-
-              (dtd->standalone
-               ? !parser->m_openInternalEntities
-               : !dtd->hasParamEntityRefs);
-        else
-          checkEntityDecl = !dtd->hasParamEntityRefs || dtd->standalone;
-        if (checkEntityDecl) {
-          if (!entity)
-            return XML_ERROR_UNDEFINED_ENTITY;
-          else if (!entity->is_internal)
-            return XML_ERROR_ENTITY_DECLARED_IN_PE;
-        }
-        else if (!entity) {
-# 5623 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-          break;
-        }
-        if (entity->open) {
-          if (enc == parser->m_encoding) {
-# 5644 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-            parser->m_eventPtr = ptr;
-          }
-          return XML_ERROR_RECURSIVE_ENTITY_REF;
-        }
-        if (entity->notation) {
-          if (enc == parser->m_encoding)
-            parser->m_eventPtr = ptr;
-          return XML_ERROR_BINARY_ENTITY_REF;
-        }
-        if (!entity->textPtr) {
-          if (enc == parser->m_encoding)
-            parser->m_eventPtr = ptr;
-          return XML_ERROR_ATTRIBUTE_EXTERNAL_ENTITY_REF;
-        }
-        else {
-          enum XML_Error result;
-          const XML_Char *textEnd = entity->textPtr + entity->textLen;
-          entity->open = ((XML_Bool) 1);
-          result = appendAttributeValue(parser, parser->m_internalEncoding, isCdata,
-                                        (char *)entity->textPtr,
-                                        (char *)textEnd, pool);
-          entity->open = ((XML_Bool) 0);
-          if (result)
-            return result;
-        }
+        break;
       }
-      break;
+      name = poolStoreString(&parser->m_temp2Pool, enc,
+                             ptr + enc->minBytesPerChar,
+                             next - enc->minBytesPerChar);
+      if (! name)
+        return XML_ERROR_NO_MEMORY;
+      entity = (ENTITY *)lookup(parser, &dtd->generalEntities, name, 0);
+      ((&parser->m_temp2Pool)->ptr = (&parser->m_temp2Pool)->start);
+
+
+
+      if (pool == &dtd->pool)
+        checkEntityDecl =
+
+            parser->m_prologState.documentEntity &&
+
+            (dtd->standalone ? ! parser->m_openInternalEntities
+                             : ! dtd->hasParamEntityRefs);
+      else
+        checkEntityDecl = ! dtd->hasParamEntityRefs || dtd->standalone;
+      if (checkEntityDecl) {
+        if (! entity)
+          return XML_ERROR_UNDEFINED_ENTITY;
+        else if (! entity->is_internal)
+          return XML_ERROR_ENTITY_DECLARED_IN_PE;
+      } else if (! entity) {
+# 5395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+        break;
+      }
+      if (entity->open) {
+        if (enc == parser->m_encoding) {
+# 5416 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+          parser->m_eventPtr = ptr;
+        }
+        return XML_ERROR_RECURSIVE_ENTITY_REF;
+      }
+      if (entity->notation) {
+        if (enc == parser->m_encoding)
+          parser->m_eventPtr = ptr;
+        return XML_ERROR_BINARY_ENTITY_REF;
+      }
+      if (! entity->textPtr) {
+        if (enc == parser->m_encoding)
+          parser->m_eventPtr = ptr;
+        return XML_ERROR_ATTRIBUTE_EXTERNAL_ENTITY_REF;
+      } else {
+        enum XML_Error result;
+        const XML_Char *textEnd = entity->textPtr + entity->textLen;
+        entity->open = ((XML_Bool)1);
+        result = appendAttributeValue(parser, parser->m_internalEncoding,
+                                      isCdata, (char *)entity->textPtr,
+                                      (char *)textEnd, pool);
+        entity->open = ((XML_Bool)0);
+        if (result)
+          return result;
+      }
+    } break;
     default:
-# 5683 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 5453 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
       if (enc == parser->m_encoding)
         parser->m_eventPtr = ptr;
       return XML_ERROR_UNEXPECTED_STATE;
@@ -8967,12 +8676,9 @@ appendAttributeValue(XML_Parser parser, const ENCODING *enc, XML_Bool isCdata,
 }
 
 static enum XML_Error
-storeEntityValue(XML_Parser parser,
-                 const ENCODING *enc,
-                 const char *entityTextPtr,
-                 const char *entityTextEnd)
-{
-  DTD * const dtd = parser->m_dtd;
+storeEntityValue(XML_Parser parser, const ENCODING *enc,
+                 const char *entityTextPtr, const char *entityTextEnd) {
+  DTD *const dtd = parser->m_dtd;
   STRING_POOL *pool = &(dtd->entityValuePool);
   enum XML_Error result = XML_ERROR_NONE;
 
@@ -8982,8 +8688,8 @@ storeEntityValue(XML_Parser parser,
 
 
 
-  if (!pool->blocks) {
-    if (!poolGrow(pool))
+  if (! pool->blocks) {
+    if (! poolGrow(pool))
       return XML_ERROR_NO_MEMORY;
   }
 
@@ -8999,13 +8705,13 @@ storeEntityValue(XML_Parser parser,
         name = poolStoreString(&parser->m_tempPool, enc,
                                entityTextPtr + enc->minBytesPerChar,
                                next - enc->minBytesPerChar);
-        if (!name) {
+        if (! name) {
           result = XML_ERROR_NO_MEMORY;
           goto endEntityValue;
         }
         entity = (ENTITY *)lookup(parser, &dtd->paramEntities, name, 0);
         ((&parser->m_tempPool)->ptr = (&parser->m_tempPool)->start);
-        if (!entity) {
+        if (! entity) {
 
 
 
@@ -9023,32 +8729,26 @@ storeEntityValue(XML_Parser parser,
         }
         if (entity->systemId) {
           if (parser->m_externalEntityRefHandler) {
-            dtd->paramEntityRead = ((XML_Bool) 0);
-            entity->open = ((XML_Bool) 1);
-            if (!parser->m_externalEntityRefHandler(parser->m_externalEntityRefHandlerArg,
-                                          0,
-                                          entity->base,
-                                          entity->systemId,
-                                          entity->publicId)) {
-              entity->open = ((XML_Bool) 0);
+            dtd->paramEntityRead = ((XML_Bool)0);
+            entity->open = ((XML_Bool)1);
+            if (! parser->m_externalEntityRefHandler(
+                    parser->m_externalEntityRefHandlerArg, 0, entity->base,
+                    entity->systemId, entity->publicId)) {
+              entity->open = ((XML_Bool)0);
               result = XML_ERROR_EXTERNAL_ENTITY_HANDLING;
               goto endEntityValue;
             }
-            entity->open = ((XML_Bool) 0);
-            if (!dtd->paramEntityRead)
+            entity->open = ((XML_Bool)0);
+            if (! dtd->paramEntityRead)
               dtd->keepProcessing = dtd->standalone;
-          }
-          else
+          } else
             dtd->keepProcessing = dtd->standalone;
-        }
-        else {
-          entity->open = ((XML_Bool) 1);
-          result = storeEntityValue(parser,
-                                    parser->m_internalEncoding,
-                                    (char *)entity->textPtr,
-                                    (char *)(entity->textPtr
-                                             + entity->textLen));
-          entity->open = ((XML_Bool) 0);
+        } else {
+          entity->open = ((XML_Bool)1);
+          result = storeEntityValue(
+              parser, parser->m_internalEncoding, (char *)entity->textPtr,
+              (char *)(entity->textPtr + entity->textLen));
+          entity->open = ((XML_Bool)0);
           if (result)
             goto endEntityValue;
         }
@@ -9065,7 +8765,7 @@ storeEntityValue(XML_Parser parser,
       goto endEntityValue;
     case 9:
     case 6:
-      if (!poolAppend(pool, enc, entityTextPtr, next)) {
+      if (! poolAppend(pool, enc, entityTextPtr, next)) {
         result = XML_ERROR_NO_MEMORY;
         goto endEntityValue;
       }
@@ -9074,34 +8774,32 @@ storeEntityValue(XML_Parser parser,
       next = entityTextPtr + enc->minBytesPerChar;
 
     case 7:
-      if (pool->end == pool->ptr && !poolGrow(pool)) {
-              result = XML_ERROR_NO_MEMORY;
+      if (pool->end == pool->ptr && ! poolGrow(pool)) {
+        result = XML_ERROR_NO_MEMORY;
         goto endEntityValue;
       }
       *(pool->ptr)++ = 0xA;
       break;
-    case 10:
-      {
-        XML_Char buf[4];
-        int i;
-        int n = (((enc)->charRefNumber)(enc, entityTextPtr));
-        if (n < 0) {
-          if (enc == parser->m_encoding)
-            parser->m_eventPtr = entityTextPtr;
-          result = XML_ERROR_BAD_CHAR_REF;
+    case 10: {
+      XML_Char buf[4];
+      int i;
+      int n = (((enc)->charRefNumber)(enc, entityTextPtr));
+      if (n < 0) {
+        if (enc == parser->m_encoding)
+          parser->m_eventPtr = entityTextPtr;
+        result = XML_ERROR_BAD_CHAR_REF;
+        goto endEntityValue;
+      }
+      n = XmlUtf8Encode(n, (ICHAR *)buf);
+# 5588 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+      for (i = 0; i < n; i++) {
+        if (pool->end == pool->ptr && ! poolGrow(pool)) {
+          result = XML_ERROR_NO_MEMORY;
           goto endEntityValue;
         }
-        n = XmlUtf8Encode(n, (ICHAR *)buf);
-# 5828 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-        for (i = 0; i < n; i++) {
-          if (pool->end == pool->ptr && !poolGrow(pool)) {
-            result = XML_ERROR_NO_MEMORY;
-            goto endEntityValue;
-          }
-          *(pool->ptr)++ = buf[i];
-        }
+        *(pool->ptr)++ = buf[i];
       }
-      break;
+    } break;
     case -1:
       if (enc == parser->m_encoding)
         parser->m_eventPtr = entityTextPtr;
@@ -9136,8 +8834,7 @@ endEntityValue:
 }
 
 static void
-normalizeLines(XML_Char *s)
-{
+normalizeLines(XML_Char *s) {
   XML_Char *p;
   for (;; s++) {
     if (*s == '\0')
@@ -9151,8 +8848,7 @@ normalizeLines(XML_Char *s)
       *p++ = 0xA;
       if (*++s == 0xA)
         s++;
-    }
-    else
+    } else
       *p++ = *s++;
   } while (*s);
   *p = '\0';
@@ -9160,12 +8856,11 @@ normalizeLines(XML_Char *s)
 
 static int
 reportProcessingInstruction(XML_Parser parser, const ENCODING *enc,
-                            const char *start, const char *end)
-{
+                            const char *start, const char *end) {
   const XML_Char *target;
   XML_Char *data;
   const char *tem;
-  if (!parser->m_processingInstructionHandler) {
+  if (! parser->m_processingInstructionHandler) {
     if (parser->m_defaultHandler)
       reportDefault(parser, enc, start, end);
     return 1;
@@ -9173,13 +8868,12 @@ reportProcessingInstruction(XML_Parser parser, const ENCODING *enc,
   start += enc->minBytesPerChar * 2;
   tem = start + (((enc)->nameLength)(enc, start));
   target = poolStoreString(&parser->m_tempPool, enc, start, tem);
-  if (!target)
+  if (! target)
     return 0;
   ((&parser->m_tempPool)->start = (&parser->m_tempPool)->ptr);
-  data = poolStoreString(&parser->m_tempPool, enc,
-                        (((enc)->skipS)(enc, tem)),
-                        end - enc->minBytesPerChar*2);
-  if (!data)
+  data = poolStoreString(&parser->m_tempPool, enc, (((enc)->skipS)(enc, tem)),
+                         end - enc->minBytesPerChar * 2);
+  if (! data)
     return 0;
   normalizeLines(data);
   parser->m_processingInstructionHandler(parser->m_handlerArg, target, data);
@@ -9188,20 +8882,18 @@ reportProcessingInstruction(XML_Parser parser, const ENCODING *enc,
 }
 
 static int
-reportComment(XML_Parser parser, const ENCODING *enc,
-              const char *start, const char *end)
-{
+reportComment(XML_Parser parser, const ENCODING *enc, const char *start,
+              const char *end) {
   XML_Char *data;
-  if (!parser->m_commentHandler) {
+  if (! parser->m_commentHandler) {
     if (parser->m_defaultHandler)
       reportDefault(parser, enc, start, end);
     return 1;
   }
-  data = poolStoreString(&parser->m_tempPool,
-                         enc,
+  data = poolStoreString(&parser->m_tempPool, enc,
                          start + enc->minBytesPerChar * 4,
                          end - enc->minBytesPerChar * 3);
-  if (!data)
+  if (! data)
     return 0;
   normalizeLines(data);
   parser->m_commentHandler(parser->m_handlerArg, data);
@@ -9210,40 +8902,39 @@ reportComment(XML_Parser parser, const ENCODING *enc,
 }
 
 static void
-reportDefault(XML_Parser parser, const ENCODING *enc,
-              const char *s, const char *end)
-{
-  if ((!(enc)->isUtf8)) {
+reportDefault(XML_Parser parser, const ENCODING *enc, const char *s,
+              const char *end) {
+  if ((! (enc)->isUtf8)) {
     enum XML_Convert_Result convert_res;
     const char **eventPP;
     const char **eventEndPP;
     if (enc == parser->m_encoding) {
       eventPP = &parser->m_eventPtr;
       eventEndPP = &parser->m_eventEndPtr;
-    }
-    else {
-# 5973 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+    } else {
+# 5724 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
       eventPP = &(parser->m_openInternalEntities->internalEventPtr);
       eventEndPP = &(parser->m_openInternalEntities->internalEventEndPtr);
 
     }
     do {
       ICHAR *dataPtr = (ICHAR *)parser->m_dataBuf;
-      convert_res = (((enc)->utf8Convert)(enc, &s, end, &dataPtr, (ICHAR *)parser->m_dataBufEnd));
+      convert_res
+          = (((enc)->utf8Convert)(enc, &s, end, &dataPtr, (ICHAR *)parser->m_dataBufEnd));
       *eventEndPP = s;
-      parser->m_defaultHandler(parser->m_handlerArg, parser->m_dataBuf, (int)(dataPtr - (ICHAR *)parser->m_dataBuf));
+      parser->m_defaultHandler(parser->m_handlerArg, parser->m_dataBuf,
+                               (int)(dataPtr - (ICHAR *)parser->m_dataBuf));
       *eventPP = s;
-    } while ((convert_res != XML_CONVERT_COMPLETED) && (convert_res != XML_CONVERT_INPUT_INCOMPLETE));
-  }
-  else
-    parser->m_defaultHandler(parser->m_handlerArg, (XML_Char *)s, (int)((XML_Char *)end - (XML_Char *)s));
+    } while ((convert_res != XML_CONVERT_COMPLETED)
+             && (convert_res != XML_CONVERT_INPUT_INCOMPLETE));
+  } else
+    parser->m_defaultHandler(parser->m_handlerArg, (XML_Char *)s,
+                             (int)((XML_Char *)end - (XML_Char *)s));
 }
-
 
 static int
 defineAttribute(ELEMENT_TYPE *type, ATTRIBUTE_ID *attId, XML_Bool isCdata,
-                XML_Bool isId, const XML_Char *value, XML_Parser parser)
-{
+                XML_Bool isId, const XML_Char *value, XML_Parser parser) {
   DEFAULT_ATTRIBUTE *att;
   if (value || isId) {
 
@@ -9252,28 +8943,27 @@ defineAttribute(ELEMENT_TYPE *type, ATTRIBUTE_ID *attId, XML_Bool isCdata,
     for (i = 0; i < type->nDefaultAtts; i++)
       if (attId == type->defaultAtts[i].id)
         return 1;
-    if (isId && !type->idAtt && !attId->xmlns)
+    if (isId && ! type->idAtt && ! attId->xmlns)
       type->idAtt = attId;
   }
   if (type->nDefaultAtts == type->allocDefaultAtts) {
     if (type->allocDefaultAtts == 0) {
       type->allocDefaultAtts = 8;
       type->defaultAtts = (DEFAULT_ATTRIBUTE *)(parser->m_mem.malloc_fcn((type->allocDefaultAtts * sizeof(DEFAULT_ATTRIBUTE))))
-                                                        ;
-      if (!type->defaultAtts) {
+                                                                     ;
+      if (! type->defaultAtts) {
         type->allocDefaultAtts = 0;
         return 0;
       }
-    }
-    else {
+    } else {
       DEFAULT_ATTRIBUTE *temp;
       int count = type->allocDefaultAtts * 2;
-      temp = (DEFAULT_ATTRIBUTE *)
-        (parser->m_mem.realloc_fcn((type->defaultAtts),((count * sizeof(DEFAULT_ATTRIBUTE)))));
+      temp = (DEFAULT_ATTRIBUTE *)(parser->m_mem.realloc_fcn((type->defaultAtts), ((count * sizeof(DEFAULT_ATTRIBUTE)))))
+                                                                              ;
       if (temp == 
-# 6020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 5771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                  ((void *)0)
-# 6020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 5771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                      )
         return 0;
       type->allocDefaultAtts = count;
@@ -9284,116 +8974,113 @@ defineAttribute(ELEMENT_TYPE *type, ATTRIBUTE_ID *attId, XML_Bool isCdata,
   att->id = attId;
   att->value = value;
   att->isCdata = isCdata;
-  if (!isCdata)
-    attId->maybeTokenized = ((XML_Bool) 1);
+  if (! isCdata)
+    attId->maybeTokenized = ((XML_Bool)1);
   type->nDefaultAtts += 1;
   return 1;
 }
 
 static int
-setElementTypePrefix(XML_Parser parser, ELEMENT_TYPE *elementType)
-{
-  DTD * const dtd = parser->m_dtd;
+setElementTypePrefix(XML_Parser parser, ELEMENT_TYPE *elementType) {
+  DTD *const dtd = parser->m_dtd;
   const XML_Char *name;
   for (name = elementType->name; *name; name++) {
     if (*name == 0x3A) {
       PREFIX *prefix;
       const XML_Char *s;
       for (s = elementType->name; s != name; s++) {
-        if (!(((&dtd->pool)->ptr == (&dtd->pool)->end && !poolGrow(&dtd->pool)) ? 0 : ((*((&dtd->pool)->ptr)++ = *s), 1)))
+        if (! (((&dtd->pool)->ptr == (&dtd->pool)->end && ! poolGrow(&dtd->pool)) ? 0 : ((*((&dtd->pool)->ptr)++ = *s), 1)))
           return 0;
       }
-      if (!(((&dtd->pool)->ptr == (&dtd->pool)->end && !poolGrow(&dtd->pool)) ? 0 : ((*((&dtd->pool)->ptr)++ = '\0'), 1)))
+      if (! (((&dtd->pool)->ptr == (&dtd->pool)->end && ! poolGrow(&dtd->pool)) ? 0 : ((*((&dtd->pool)->ptr)++ = '\0'), 1)))
         return 0;
       prefix = (PREFIX *)lookup(parser, &dtd->prefixes, ((&dtd->pool)->start),
                                 sizeof(PREFIX));
-      if (!prefix)
+      if (! prefix)
         return 0;
       if (prefix->name == ((&dtd->pool)->start))
         ((&dtd->pool)->start = (&dtd->pool)->ptr);
       else
         ((&dtd->pool)->ptr = (&dtd->pool)->start);
       elementType->prefix = prefix;
-
+      break;
     }
   }
   return 1;
 }
 
 static ATTRIBUTE_ID *
-getAttributeId(XML_Parser parser, const ENCODING *enc,
-               const char *start, const char *end)
-{
-  DTD * const dtd = parser->m_dtd;
+getAttributeId(XML_Parser parser, const ENCODING *enc, const char *start,
+               const char *end) {
+  DTD *const dtd = parser->m_dtd;
   ATTRIBUTE_ID *id;
   const XML_Char *name;
-  if (!(((&dtd->pool)->ptr == (&dtd->pool)->end && !poolGrow(&dtd->pool)) ? 0 : ((*((&dtd->pool)->ptr)++ = '\0'), 1)))
+  if (! (((&dtd->pool)->ptr == (&dtd->pool)->end && ! poolGrow(&dtd->pool)) ? 0 : ((*((&dtd->pool)->ptr)++ = '\0'), 1)))
     return 
-# 6074 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 5823 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 6074 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 5823 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
   name = poolStoreString(&dtd->pool, enc, start, end);
-  if (!name)
+  if (! name)
     return 
-# 6077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 5826 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 6077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 5826 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
 
   ++name;
-  id = (ATTRIBUTE_ID *)lookup(parser, &dtd->attributeIds, name, sizeof(ATTRIBUTE_ID));
-  if (!id)
+  id = (ATTRIBUTE_ID *)lookup(parser, &dtd->attributeIds, name,
+                              sizeof(ATTRIBUTE_ID));
+  if (! id)
     return 
-# 6082 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 5832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 6082 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 5832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
   if (id->name != name)
     ((&dtd->pool)->ptr = (&dtd->pool)->start);
   else {
     ((&dtd->pool)->start = (&dtd->pool)->ptr);
-    if (!parser->m_ns)
+    if (! parser->m_ns)
       ;
-    else if (name[0] == 0x78
-        && name[1] == 0x6D
-        && name[2] == 0x6C
-        && name[3] == 0x6E
-        && name[4] == 0x73
-        && (name[5] == '\0' || name[5] == 0x3A)) {
+    else if (name[0] == 0x78 && name[1] == 0x6D
+             && name[2] == 0x6C && name[3] == 0x6E
+             && name[4] == 0x73
+             && (name[5] == '\0' || name[5] == 0x3A)) {
       if (name[5] == '\0')
         id->prefix = &dtd->defaultPrefix;
       else
-        id->prefix = (PREFIX *)lookup(parser, &dtd->prefixes, name + 6, sizeof(PREFIX));
-      id->xmlns = ((XML_Bool) 1);
-    }
-    else {
+        id->prefix = (PREFIX *)lookup(parser, &dtd->prefixes, name + 6,
+                                      sizeof(PREFIX));
+      id->xmlns = ((XML_Bool)1);
+    } else {
       int i;
       for (i = 0; name[i]; i++) {
 
         if (name[i] == 0x3A) {
           int j;
           for (j = 0; j < i; j++) {
-            if (!(((&dtd->pool)->ptr == (&dtd->pool)->end && !poolGrow(&dtd->pool)) ? 0 : ((*((&dtd->pool)->ptr)++ = name[j]), 1)))
+            if (! (((&dtd->pool)->ptr == (&dtd->pool)->end && ! poolGrow(&dtd->pool)) ? 0 : ((*((&dtd->pool)->ptr)++ = name[j]), 1)))
               return 
-# 6109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 5857 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                     ((void *)0)
-# 6109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 5857 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                         ;
           }
-          if (!(((&dtd->pool)->ptr == (&dtd->pool)->end && !poolGrow(&dtd->pool)) ? 0 : ((*((&dtd->pool)->ptr)++ = '\0'), 1)))
+          if (! (((&dtd->pool)->ptr == (&dtd->pool)->end && ! poolGrow(&dtd->pool)) ? 0 : ((*((&dtd->pool)->ptr)++ = '\0'), 1)))
             return 
-# 6112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 5860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                   ((void *)0)
-# 6112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 5860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                       ;
-          id->prefix = (PREFIX *)lookup(parser, &dtd->prefixes, ((&dtd->pool)->start),
-                                        sizeof(PREFIX));
-          if (!id->prefix)
+          id->prefix = (PREFIX *)lookup(parser, &dtd->prefixes,
+                                        ((&dtd->pool)->start), sizeof(PREFIX));
+          if (! id->prefix)
             return 
-# 6116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 5864 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                   ((void *)0)
-# 6116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 5864 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                       ;
           if (id->prefix->name == ((&dtd->pool)->start))
             ((&dtd->pool)->start = (&dtd->pool)->ptr);
@@ -9410,35 +9097,35 @@ getAttributeId(XML_Parser parser, const ENCODING *enc,
 
 
 static const XML_Char *
-getContext(XML_Parser parser)
-{
-  DTD * const dtd = parser->m_dtd;
+getContext(XML_Parser parser) {
+  DTD *const dtd = parser->m_dtd;
   HASH_TABLE_ITER iter;
-  XML_Bool needSep = ((XML_Bool) 0);
+  XML_Bool needSep = ((XML_Bool)0);
 
   if (dtd->defaultPrefix.binding) {
     int i;
     int len;
-    if (!(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = 0x3D), 1)))
+    if (! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = 0x3D), 1)))
       return 
-# 6142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 5889 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
             ((void *)0)
-# 6142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 5889 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                 ;
     len = dtd->defaultPrefix.binding->uriLen;
     if (parser->m_namespaceSeparator)
       len--;
     for (i = 0; i < len; i++) {
-      if (!(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = dtd->defaultPrefix.binding->uri[i]), 1))) {
-# 6167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+      if (! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = dtd->defaultPrefix.binding->uri[i]), 1))
+                                                              ) {
+# 5915 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
         return 
-# 6167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 5915 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
               ((void *)0)
-# 6167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 5915 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                   ;
       }
     }
-    needSep = ((XML_Bool) 1);
+    needSep = ((XML_Bool)1);
   }
 
   hashTableIterInit(&iter, &(dtd->prefixes));
@@ -9447,9 +9134,9 @@ getContext(XML_Parser parser)
     int len;
     const XML_Char *s;
     PREFIX *prefix = (PREFIX *)hashTableIterNext(&iter);
-    if (!prefix)
+    if (! prefix)
       break;
-    if (!prefix->binding) {
+    if (! prefix->binding) {
 
 
 
@@ -9458,136 +9145,133 @@ getContext(XML_Parser parser)
 
       continue;
     }
-    if (needSep && !(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = 0x0C), 1)))
+    if (needSep && ! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = 0x0C), 1)))
       return 
-# 6191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 5939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
             ((void *)0)
-# 6191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 5939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                 ;
     for (s = prefix->name; *s; s++)
-      if (!(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = *s), 1)))
+      if (! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = *s), 1)))
         return 
-# 6194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 5942 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
               ((void *)0)
-# 6194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 5942 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                   ;
-    if (!(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = 0x3D), 1)))
+    if (! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = 0x3D), 1)))
       return 
-# 6196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 5944 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
             ((void *)0)
-# 6196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 5944 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                 ;
     len = prefix->binding->uriLen;
     if (parser->m_namespaceSeparator)
       len--;
     for (i = 0; i < len; i++)
-      if (!(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = prefix->binding->uri[i]), 1)))
+      if (! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = prefix->binding->uri[i]), 1)))
         return 
-# 6202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 5950 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
               ((void *)0)
-# 6202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 5950 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                   ;
-    needSep = ((XML_Bool) 1);
+    needSep = ((XML_Bool)1);
   }
-
 
   hashTableIterInit(&iter, &(dtd->generalEntities));
   for (;;) {
     const XML_Char *s;
     ENTITY *e = (ENTITY *)hashTableIterNext(&iter);
-    if (!e)
+    if (! e)
       break;
-    if (!e->open)
+    if (! e->open)
       continue;
-    if (needSep && !(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = 0x0C), 1)))
+    if (needSep && ! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = 0x0C), 1)))
       return 
-# 6216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 5963 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
             ((void *)0)
-# 6216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 5963 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                 ;
     for (s = e->name; *s; s++)
-      if (!(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = *s), 1)))
+      if (! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = *s), 1)))
         return 0;
-    needSep = ((XML_Bool) 1);
+    needSep = ((XML_Bool)1);
   }
 
-  if (!(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = '\0'), 1)))
+  if (! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = '\0'), 1)))
     return 
-# 6224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 5971 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 6224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 5971 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
   return parser->m_tempPool.start;
 }
 
 static XML_Bool
-setContext(XML_Parser parser, const XML_Char *context)
-{
-  DTD * const dtd = parser->m_dtd;
+setContext(XML_Parser parser, const XML_Char *context) {
+  DTD *const dtd = parser->m_dtd;
   const XML_Char *s = context;
 
   while (*context != '\0') {
     if (*s == 0x0C || *s == '\0') {
       ENTITY *e;
-      if (!(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = '\0'), 1)))
-        return ((XML_Bool) 0);
-      e = (ENTITY *)lookup(parser, &dtd->generalEntities, ((&parser->m_tempPool)->start), 0);
+      if (! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = '\0'), 1)))
+        return ((XML_Bool)0);
+      e = (ENTITY *)lookup(parser, &dtd->generalEntities,
+                           ((&parser->m_tempPool)->start), 0);
       if (e)
-        e->open = ((XML_Bool) 1);
+        e->open = ((XML_Bool)1);
       if (*s != '\0')
         s++;
       context = s;
       ((&parser->m_tempPool)->ptr = (&parser->m_tempPool)->start);
-    }
-    else if (*s == 0x3D) {
+    } else if (*s == 0x3D) {
       PREFIX *prefix;
       if (((&parser->m_tempPool)->ptr - (&parser->m_tempPool)->start) == 0)
         prefix = &dtd->defaultPrefix;
       else {
-        if (!(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = '\0'), 1)))
-          return ((XML_Bool) 0);
-        prefix = (PREFIX *)lookup(parser, &dtd->prefixes, ((&parser->m_tempPool)->start),
-                                  sizeof(PREFIX));
-        if (!prefix)
-          return ((XML_Bool) 0);
+        if (! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = '\0'), 1)))
+          return ((XML_Bool)0);
+        prefix
+            = (PREFIX *)lookup(parser, &dtd->prefixes,
+                               ((&parser->m_tempPool)->start), sizeof(PREFIX));
+        if (! prefix)
+          return ((XML_Bool)0);
         if (prefix->name == ((&parser->m_tempPool)->start)) {
           prefix->name = poolCopyString(&dtd->pool, prefix->name);
-          if (!prefix->name)
-            return ((XML_Bool) 0);
+          if (! prefix->name)
+            return ((XML_Bool)0);
         }
         ((&parser->m_tempPool)->ptr = (&parser->m_tempPool)->start);
       }
-      for (context = s + 1;
-           *context != 0x0C && *context != '\0';
+      for (context = s + 1; *context != 0x0C && *context != '\0';
            context++)
-        if (!(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = *context), 1)))
-          return ((XML_Bool) 0);
-      if (!(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = '\0'), 1)))
-        return ((XML_Bool) 0);
+        if (! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = *context), 1)))
+          return ((XML_Bool)0);
+      if (! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = '\0'), 1)))
+        return ((XML_Bool)0);
       if (addBinding(parser, prefix, 
-# 6272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6018 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                     ((void *)0)
-# 6272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6018 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                         , ((&parser->m_tempPool)->start),
-                     &parser->m_inheritedBindings) != XML_ERROR_NONE)
-        return ((XML_Bool) 0);
+                     &parser->m_inheritedBindings)
+          != XML_ERROR_NONE)
+        return ((XML_Bool)0);
       ((&parser->m_tempPool)->ptr = (&parser->m_tempPool)->start);
       if (*context != '\0')
         ++context;
       s = context;
-    }
-    else {
-      if (!(((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && !poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = *s), 1)))
-        return ((XML_Bool) 0);
+    } else {
+      if (! (((&parser->m_tempPool)->ptr == (&parser->m_tempPool)->end && ! poolGrow(&parser->m_tempPool)) ? 0 : ((*((&parser->m_tempPool)->ptr)++ = *s), 1)))
+        return ((XML_Bool)0);
       s++;
     }
   }
-  return ((XML_Bool) 1);
+  return ((XML_Bool)1);
 }
 
 static void
-normalizePublicId(XML_Char *publicId)
-{
+normalizePublicId(XML_Char *publicId) {
   XML_Char *p = publicId;
   XML_Char *s;
   for (s = publicId; *s; s++) {
@@ -9608,13 +9292,12 @@ normalizePublicId(XML_Char *publicId)
 }
 
 static DTD *
-dtdCreate(const XML_Memory_Handling_Suite *ms)
-{
+dtdCreate(const XML_Memory_Handling_Suite *ms) {
   DTD *p = (DTD *)ms->malloc_fcn(sizeof(DTD));
   if (p == 
-# 6315 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6059 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 6315 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6059 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               )
     return p;
   poolInit(&(p->pool), ms);
@@ -9624,57 +9307,56 @@ dtdCreate(const XML_Memory_Handling_Suite *ms)
   hashTableInit(&(p->attributeIds), ms);
   hashTableInit(&(p->prefixes), ms);
 
-  p->paramEntityRead = ((XML_Bool) 0);
+  p->paramEntityRead = ((XML_Bool)0);
   hashTableInit(&(p->paramEntities), ms);
 
   p->defaultPrefix.name = 
-# 6327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6071 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                          ((void *)0)
-# 6327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6071 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                              ;
   p->defaultPrefix.binding = 
-# 6328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6072 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                             ((void *)0)
-# 6328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6072 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                 ;
 
-  p->in_eldecl = ((XML_Bool) 0);
+  p->in_eldecl = ((XML_Bool)0);
   p->scaffIndex = 
-# 6331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6075 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                  ((void *)0)
-# 6331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6075 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                      ;
   p->scaffold = 
-# 6332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6076 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 6332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6076 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    ;
   p->scaffLevel = 0;
   p->scaffSize = 0;
   p->scaffCount = 0;
   p->contentStringLen = 0;
 
-  p->keepProcessing = ((XML_Bool) 1);
-  p->hasParamEntityRefs = ((XML_Bool) 0);
-  p->standalone = ((XML_Bool) 0);
+  p->keepProcessing = ((XML_Bool)1);
+  p->hasParamEntityRefs = ((XML_Bool)0);
+  p->standalone = ((XML_Bool)0);
   return p;
 }
 
 static void
-dtdReset(DTD *p, const XML_Memory_Handling_Suite *ms)
-{
+dtdReset(DTD *p, const XML_Memory_Handling_Suite *ms) {
   HASH_TABLE_ITER iter;
   hashTableIterInit(&iter, &(p->elementTypes));
   for (;;) {
     ELEMENT_TYPE *e = (ELEMENT_TYPE *)hashTableIterNext(&iter);
-    if (!e)
+    if (! e)
       break;
     if (e->allocDefaultAtts != 0)
       ms->free_fcn(e->defaultAtts);
   }
   hashTableClear(&(p->generalEntities));
 
-  p->paramEntityRead = ((XML_Bool) 0);
+  p->paramEntityRead = ((XML_Bool)0);
   hashTableClear(&(p->paramEntities));
 
   hashTableClear(&(p->elementTypes));
@@ -9683,29 +9365,29 @@ dtdReset(DTD *p, const XML_Memory_Handling_Suite *ms)
   poolClear(&(p->pool));
   poolClear(&(p->entityValuePool));
   p->defaultPrefix.name = 
-# 6366 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                          ((void *)0)
-# 6366 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                              ;
   p->defaultPrefix.binding = 
-# 6367 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                             ((void *)0)
-# 6367 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                 ;
 
-  p->in_eldecl = ((XML_Bool) 0);
+  p->in_eldecl = ((XML_Bool)0);
 
   ms->free_fcn(p->scaffIndex);
   p->scaffIndex = 
-# 6372 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                  ((void *)0)
-# 6372 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                      ;
   ms->free_fcn(p->scaffold);
   p->scaffold = 
-# 6374 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6117 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 6374 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6117 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    ;
 
   p->scaffLevel = 0;
@@ -9713,19 +9395,18 @@ dtdReset(DTD *p, const XML_Memory_Handling_Suite *ms)
   p->scaffCount = 0;
   p->contentStringLen = 0;
 
-  p->keepProcessing = ((XML_Bool) 1);
-  p->hasParamEntityRefs = ((XML_Bool) 0);
-  p->standalone = ((XML_Bool) 0);
+  p->keepProcessing = ((XML_Bool)1);
+  p->hasParamEntityRefs = ((XML_Bool)0);
+  p->standalone = ((XML_Bool)0);
 }
 
 static void
-dtdDestroy(DTD *p, XML_Bool isDocEntity, const XML_Memory_Handling_Suite *ms)
-{
+dtdDestroy(DTD *p, XML_Bool isDocEntity, const XML_Memory_Handling_Suite *ms) {
   HASH_TABLE_ITER iter;
   hashTableIterInit(&iter, &(p->elementTypes));
   for (;;) {
     ELEMENT_TYPE *e = (ELEMENT_TYPE *)hashTableIterNext(&iter);
-    if (!e)
+    if (! e)
       break;
     if (e->allocDefaultAtts != 0)
       ms->free_fcn(e->defaultAtts);
@@ -9750,8 +9431,8 @@ dtdDestroy(DTD *p, XML_Bool isDocEntity, const XML_Memory_Handling_Suite *ms)
 
 
 static int
-dtdCopy(XML_Parser oldParser, DTD *newDtd, const DTD *oldDtd, const XML_Memory_Handling_Suite *ms)
-{
+dtdCopy(XML_Parser oldParser, DTD *newDtd, const DTD *oldDtd,
+        const XML_Memory_Handling_Suite *ms) {
   HASH_TABLE_ITER iter;
 
 
@@ -9760,12 +9441,12 @@ dtdCopy(XML_Parser oldParser, DTD *newDtd, const DTD *oldDtd, const XML_Memory_H
   for (;;) {
     const XML_Char *name;
     const PREFIX *oldP = (PREFIX *)hashTableIterNext(&iter);
-    if (!oldP)
+    if (! oldP)
       break;
     name = poolCopyString(&(newDtd->pool), oldP->name);
-    if (!name)
+    if (! name)
       return 0;
-    if (!lookup(oldParser, &(newDtd->prefixes), name, sizeof(PREFIX)))
+    if (! lookup(oldParser, &(newDtd->prefixes), name, sizeof(PREFIX)))
       return 0;
   }
 
@@ -9778,18 +9459,18 @@ dtdCopy(XML_Parser oldParser, DTD *newDtd, const DTD *oldDtd, const XML_Memory_H
     const XML_Char *name;
     const ATTRIBUTE_ID *oldA = (ATTRIBUTE_ID *)hashTableIterNext(&iter);
 
-    if (!oldA)
+    if (! oldA)
       break;
 
-    if (!(((&(newDtd->pool))->ptr == (&(newDtd->pool))->end && !poolGrow(&(newDtd->pool))) ? 0 : ((*((&(newDtd->pool))->ptr)++ = '\0'), 1)))
+    if (! (((&(newDtd->pool))->ptr == (&(newDtd->pool))->end && ! poolGrow(&(newDtd->pool))) ? 0 : ((*((&(newDtd->pool))->ptr)++ = '\0'), 1)))
       return 0;
     name = poolCopyString(&(newDtd->pool), oldA->name);
-    if (!name)
+    if (! name)
       return 0;
     ++name;
     newA = (ATTRIBUTE_ID *)lookup(oldParser, &(newDtd->attributeIds), name,
                                   sizeof(ATTRIBUTE_ID));
-    if (!newA)
+    if (! newA)
       return 0;
     newA->maybeTokenized = oldA->maybeTokenized;
     if (oldA->prefix) {
@@ -9811,61 +9492,56 @@ dtdCopy(XML_Parser oldParser, DTD *newDtd, const DTD *oldDtd, const XML_Memory_H
     ELEMENT_TYPE *newE;
     const XML_Char *name;
     const ELEMENT_TYPE *oldE = (ELEMENT_TYPE *)hashTableIterNext(&iter);
-    if (!oldE)
+    if (! oldE)
       break;
     name = poolCopyString(&(newDtd->pool), oldE->name);
-    if (!name)
+    if (! name)
       return 0;
     newE = (ELEMENT_TYPE *)lookup(oldParser, &(newDtd->elementTypes), name,
                                   sizeof(ELEMENT_TYPE));
-    if (!newE)
+    if (! newE)
       return 0;
     if (oldE->nDefaultAtts) {
-      newE->defaultAtts = (DEFAULT_ATTRIBUTE *)
-          ms->malloc_fcn(oldE->nDefaultAtts * sizeof(DEFAULT_ATTRIBUTE));
-      if (!newE->defaultAtts) {
+      newE->defaultAtts = (DEFAULT_ATTRIBUTE *)ms->malloc_fcn(
+          oldE->nDefaultAtts * sizeof(DEFAULT_ATTRIBUTE));
+      if (! newE->defaultAtts) {
         return 0;
       }
     }
     if (oldE->idAtt)
-      newE->idAtt = (ATTRIBUTE_ID *)
-          lookup(oldParser, &(newDtd->attributeIds), oldE->idAtt->name, 0);
+      newE->idAtt = (ATTRIBUTE_ID *)lookup(oldParser, &(newDtd->attributeIds),
+                                           oldE->idAtt->name, 0);
     newE->allocDefaultAtts = newE->nDefaultAtts = oldE->nDefaultAtts;
     if (oldE->prefix)
       newE->prefix = (PREFIX *)lookup(oldParser, &(newDtd->prefixes),
                                       oldE->prefix->name, 0);
     for (i = 0; i < newE->nDefaultAtts; i++) {
-      newE->defaultAtts[i].id = (ATTRIBUTE_ID *)
-          lookup(oldParser, &(newDtd->attributeIds), oldE->defaultAtts[i].id->name, 0);
+      newE->defaultAtts[i].id = (ATTRIBUTE_ID *)lookup(
+          oldParser, &(newDtd->attributeIds), oldE->defaultAtts[i].id->name, 0);
       newE->defaultAtts[i].isCdata = oldE->defaultAtts[i].isCdata;
       if (oldE->defaultAtts[i].value) {
         newE->defaultAtts[i].value
             = poolCopyString(&(newDtd->pool), oldE->defaultAtts[i].value);
-        if (!newE->defaultAtts[i].value)
+        if (! newE->defaultAtts[i].value)
           return 0;
-      }
-      else
+      } else
         newE->defaultAtts[i].value = 
-# 6513 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                     ((void *)0)
-# 6513 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                         ;
     }
   }
 
 
-  if (!copyEntityTable(oldParser,
-                       &(newDtd->generalEntities),
-                       &(newDtd->pool),
-                       &(oldDtd->generalEntities)))
-      return 0;
+  if (! copyEntityTable(oldParser, &(newDtd->generalEntities), &(newDtd->pool),
+                        &(oldDtd->generalEntities)))
+    return 0;
 
 
-  if (!copyEntityTable(oldParser,
-                       &(newDtd->paramEntities),
-                       &(newDtd->pool),
-                       &(oldDtd->paramEntities)))
-      return 0;
+  if (! copyEntityTable(oldParser, &(newDtd->paramEntities), &(newDtd->pool),
+                        &(oldDtd->paramEntities)))
+    return 0;
   newDtd->paramEntityRead = oldDtd->paramEntityRead;
 
 
@@ -9885,21 +9561,18 @@ dtdCopy(XML_Parser oldParser, DTD *newDtd, const DTD *oldDtd, const XML_Memory_H
 }
 
 static int
-copyEntityTable(XML_Parser oldParser,
-                HASH_TABLE *newTable,
-                STRING_POOL *newPool,
-                const HASH_TABLE *oldTable)
-{
+copyEntityTable(XML_Parser oldParser, HASH_TABLE *newTable,
+                STRING_POOL *newPool, const HASH_TABLE *oldTable) {
   HASH_TABLE_ITER iter;
   const XML_Char *cachedOldBase = 
-# 6555 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                  ((void *)0)
-# 6555 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                      ;
   const XML_Char *cachedNewBase = 
-# 6556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                                  ((void *)0)
-# 6556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                                      ;
 
   hashTableIterInit(&iter, oldTable);
@@ -9908,17 +9581,17 @@ copyEntityTable(XML_Parser oldParser,
     ENTITY *newE;
     const XML_Char *name;
     const ENTITY *oldE = (ENTITY *)hashTableIterNext(&iter);
-    if (!oldE)
+    if (! oldE)
       break;
     name = poolCopyString(newPool, oldE->name);
-    if (!name)
+    if (! name)
       return 0;
     newE = (ENTITY *)lookup(oldParser, newTable, name, sizeof(ENTITY));
-    if (!newE)
+    if (! newE)
       return 0;
     if (oldE->systemId) {
       const XML_Char *tem = poolCopyString(newPool, oldE->systemId);
-      if (!tem)
+      if (! tem)
         return 0;
       newE->systemId = tem;
       if (oldE->base) {
@@ -9927,29 +9600,28 @@ copyEntityTable(XML_Parser oldParser,
         else {
           cachedOldBase = oldE->base;
           tem = poolCopyString(newPool, cachedOldBase);
-          if (!tem)
+          if (! tem)
             return 0;
           cachedNewBase = newE->base = tem;
         }
       }
       if (oldE->publicId) {
         tem = poolCopyString(newPool, oldE->publicId);
-        if (!tem)
+        if (! tem)
           return 0;
         newE->publicId = tem;
       }
-    }
-    else {
-      const XML_Char *tem = poolCopyStringN(newPool, oldE->textPtr,
-                                            oldE->textLen);
-      if (!tem)
+    } else {
+      const XML_Char *tem
+          = poolCopyStringN(newPool, oldE->textPtr, oldE->textLen);
+      if (! tem)
         return 0;
       newE->textPtr = tem;
       newE->textLen = oldE->textLen;
     }
     if (oldE->notation) {
       const XML_Char *tem = poolCopyString(newPool, oldE->notation);
-      if (!tem)
+      if (! tem)
         return 0;
       newE->notation = tem;
     }
@@ -9962,35 +9634,31 @@ copyEntityTable(XML_Parser oldParser,
 
 
 static XML_Bool
-keyeq(KEY s1, KEY s2)
-{
+keyeq(KEY s1, KEY s2) {
   for (; *s1 == *s2; s1++, s2++)
     if (*s1 == 0)
-      return ((XML_Bool) 1);
-  return ((XML_Bool) 0);
+      return ((XML_Bool)1);
+  return ((XML_Bool)0);
 }
 
 static size_t
-keylen(KEY s)
-{
+keylen(KEY s) {
   size_t len = 0;
-  for (; *s; s++, len++);
+  for (; *s; s++, len++)
+    ;
   return len;
 }
 
 static void
-copy_salt_to_sipkey(XML_Parser parser, struct sipkey * key)
-{
+copy_salt_to_sipkey(XML_Parser parser, struct sipkey *key) {
   key->k[0] = 0;
   key->k[1] = get_hash_secret_salt(parser);
 }
 
 static unsigned long
-hash(XML_Parser parser, KEY s)
-{
+hash(XML_Parser parser, KEY s) {
   struct siphash state;
   struct sipkey key;
-  (void)sip_tobin;
   (void)sip24_valid;
   copy_salt_to_sipkey(parser, &key);
   sip24_init(&state, &key);
@@ -9999,34 +9667,32 @@ hash(XML_Parser parser, KEY s)
 }
 
 static NAMED *
-lookup(XML_Parser parser, HASH_TABLE *table, KEY name, size_t createSize)
-{
+lookup(XML_Parser parser, HASH_TABLE *table, KEY name, size_t createSize) {
   size_t i;
   if (table->size == 0) {
     size_t tsize;
-    if (!createSize)
+    if (! createSize)
       return 
-# 6661 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6389 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
             ((void *)0)
-# 6661 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6389 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                 ;
     table->power = 6;
 
     table->size = (size_t)1 << 6;
     tsize = table->size * sizeof(NAMED *);
     table->v = (NAMED **)table->mem->malloc_fcn(tsize);
-    if (!table->v) {
+    if (! table->v) {
       table->size = 0;
       return 
-# 6669 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
             ((void *)0)
-# 6669 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                 ;
     }
     memset(table->v, 0, tsize);
     i = hash(parser, name) & ((unsigned long)table->size - 1);
-  }
-  else {
+  } else {
     unsigned long h = hash(parser, name);
     unsigned long mask = (unsigned long)table->size - 1;
     unsigned char step = 0;
@@ -10034,15 +9700,15 @@ lookup(XML_Parser parser, HASH_TABLE *table, KEY name, size_t createSize)
     while (table->v[i]) {
       if (keyeq(name, table->v[i]->name))
         return table->v[i];
-      if (!step)
-        step = ((unsigned char)((((((h) & ~(mask)) >> ((table->power) - 1)) & ((mask) >> 2))) | 1));
+      if (! step)
+        step = ((unsigned char)((((((h) & ~(mask)) >> ((table->power)-1)) & ((mask) >> 2))) | 1));
       i < step ? (i += table->size - step) : (i -= step);
     }
-    if (!createSize)
+    if (! createSize)
       return 
-# 6687 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6414 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
             ((void *)0)
-# 6687 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6414 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                 ;
 
 
@@ -10052,11 +9718,11 @@ lookup(XML_Parser parser, HASH_TABLE *table, KEY name, size_t createSize)
       unsigned long newMask = (unsigned long)newSize - 1;
       size_t tsize = newSize * sizeof(NAMED *);
       NAMED **newV = (NAMED **)table->mem->malloc_fcn(tsize);
-      if (!newV)
+      if (! newV)
         return 
-# 6697 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
               ((void *)0)
-# 6697 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                   ;
       memset(newV, 0, tsize);
       for (i = 0; i < table->size; i++)
@@ -10065,8 +9731,8 @@ lookup(XML_Parser parser, HASH_TABLE *table, KEY name, size_t createSize)
           size_t j = newHash & newMask;
           step = 0;
           while (newV[j]) {
-            if (!step)
-              step = ((unsigned char)((((((newHash) & ~(newMask)) >> ((newPower) - 1)) & ((newMask) >> 2))) | 1));
+            if (! step)
+              step = ((unsigned char)((((((newHash) & ~(newMask)) >> ((newPower)-1)) & ((newMask) >> 2))) | 1));
             j < step ? (j += newSize - step) : (j -= step);
           }
           newV[j] = table->v[i];
@@ -10078,18 +9744,18 @@ lookup(XML_Parser parser, HASH_TABLE *table, KEY name, size_t createSize)
       i = h & newMask;
       step = 0;
       while (table->v[i]) {
-        if (!step)
-          step = ((unsigned char)((((((h) & ~(newMask)) >> ((newPower) - 1)) & ((newMask) >> 2))) | 1));
+        if (! step)
+          step = ((unsigned char)((((((h) & ~(newMask)) >> ((newPower)-1)) & ((newMask) >> 2))) | 1));
         i < step ? (i += newSize - step) : (i -= step);
       }
     }
   }
   table->v[i] = (NAMED *)table->mem->malloc_fcn(createSize);
-  if (!table->v[i])
+  if (! table->v[i])
     return 
-# 6726 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6453 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 6726 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6453 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
   memset(table->v[i], 0, createSize);
   table->v[i]->name = name;
@@ -10098,23 +9764,21 @@ lookup(XML_Parser parser, HASH_TABLE *table, KEY name, size_t createSize)
 }
 
 static void
-hashTableClear(HASH_TABLE *table)
-{
+hashTableClear(HASH_TABLE *table) {
   size_t i;
   for (i = 0; i < table->size; i++) {
     table->mem->free_fcn(table->v[i]);
     table->v[i] = 
-# 6739 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                  ((void *)0)
-# 6739 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                      ;
   }
   table->used = 0;
 }
 
 static void
-hashTableDestroy(HASH_TABLE *table)
-{
+hashTableDestroy(HASH_TABLE *table) {
   size_t i;
   for (i = 0; i < table->size; i++)
     table->mem->free_fcn(table->v[i]);
@@ -10122,76 +9786,71 @@ hashTableDestroy(HASH_TABLE *table)
 }
 
 static void
-hashTableInit(HASH_TABLE *p, const XML_Memory_Handling_Suite *ms)
-{
+hashTableInit(HASH_TABLE *p, const XML_Memory_Handling_Suite *ms) {
   p->power = 0;
   p->size = 0;
   p->used = 0;
   p->v = 
-# 6759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6483 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
         ((void *)0)
-# 6759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6483 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
             ;
   p->mem = ms;
 }
 
 static void
-hashTableIterInit(HASH_TABLE_ITER *iter, const HASH_TABLE *table)
-{
+hashTableIterInit(HASH_TABLE_ITER *iter, const HASH_TABLE *table) {
   iter->p = table->v;
   iter->end = iter->p + table->size;
 }
 
 static NAMED *
-hashTableIterNext(HASH_TABLE_ITER *iter)
-{
+hashTableIterNext(HASH_TABLE_ITER *iter) {
   while (iter->p != iter->end) {
     NAMED *tem = *(iter->p)++;
     if (tem)
       return tem;
   }
   return 
-# 6778 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6500 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
         ((void *)0)
-# 6778 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6500 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
             ;
 }
 
 static void
-poolInit(STRING_POOL *pool, const XML_Memory_Handling_Suite *ms)
-{
+poolInit(STRING_POOL *pool, const XML_Memory_Handling_Suite *ms) {
   pool->blocks = 
-# 6784 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6505 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                 ((void *)0)
-# 6784 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6505 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                     ;
   pool->freeBlocks = 
-# 6785 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6506 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                     ((void *)0)
-# 6785 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6506 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                         ;
   pool->start = 
-# 6786 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6507 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 6786 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6507 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    ;
   pool->ptr = 
-# 6787 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6508 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
              ((void *)0)
-# 6787 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6508 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                  ;
   pool->end = 
-# 6788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6509 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
              ((void *)0)
-# 6788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6509 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                  ;
   pool->mem = ms;
 }
 
 static void
-poolClear(STRING_POOL *pool)
-{
-  if (!pool->freeBlocks)
+poolClear(STRING_POOL *pool) {
+  if (! pool->freeBlocks)
     pool->freeBlocks = pool->blocks;
   else {
     BLOCK *p = pool->blocks;
@@ -10203,30 +9862,29 @@ poolClear(STRING_POOL *pool)
     }
   }
   pool->blocks = 
-# 6806 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6526 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                 ((void *)0)
-# 6806 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6526 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                     ;
   pool->start = 
-# 6807 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 6807 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    ;
   pool->ptr = 
-# 6808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6528 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
              ((void *)0)
-# 6808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6528 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                  ;
   pool->end = 
-# 6809 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6529 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
              ((void *)0)
-# 6809 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6529 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                  ;
 }
 
 static void
-poolDestroy(STRING_POOL *pool)
-{
+poolDestroy(STRING_POOL *pool) {
   BLOCK *p = pool->blocks;
   while (p) {
     BLOCK *tem = p->next;
@@ -10242,38 +9900,38 @@ poolDestroy(STRING_POOL *pool)
 }
 
 static XML_Char *
-poolAppend(STRING_POOL *pool, const ENCODING *enc,
-           const char *ptr, const char *end)
-{
-  if (!pool->ptr && !poolGrow(pool))
+poolAppend(STRING_POOL *pool, const ENCODING *enc, const char *ptr,
+           const char *end) {
+  if (! pool->ptr && ! poolGrow(pool))
     return 
-# 6834 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6552 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 6834 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6552 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
   for (;;) {
-    const enum XML_Convert_Result convert_res = (((enc)->utf8Convert)(enc, &ptr, end, (ICHAR **)&(pool->ptr), (ICHAR *)pool->end));
-    if ((convert_res == XML_CONVERT_COMPLETED) || (convert_res == XML_CONVERT_INPUT_INCOMPLETE))
+    const enum XML_Convert_Result convert_res = (((enc)->utf8Convert)(enc, &ptr, end, (ICHAR **)&(pool->ptr), (ICHAR *)pool->end))
+                                                                   ;
+    if ((convert_res == XML_CONVERT_COMPLETED)
+        || (convert_res == XML_CONVERT_INPUT_INCOMPLETE))
       break;
-    if (!poolGrow(pool))
+    if (! poolGrow(pool))
       return 
-# 6840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6560 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
             ((void *)0)
-# 6840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6560 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                 ;
   }
   return pool->start;
 }
 
 static const XML_Char *
-poolCopyString(STRING_POOL *pool, const XML_Char *s)
-{
+poolCopyString(STRING_POOL *pool, const XML_Char *s) {
   do {
-    if (!(((pool)->ptr == (pool)->end && !poolGrow(pool)) ? 0 : ((*((pool)->ptr)++ = *s), 1)))
+    if (! (((pool)->ptr == (pool)->end && ! poolGrow(pool)) ? 0 : ((*((pool)->ptr)++ = *s), 1)))
       return 
-# 6850 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
             ((void *)0)
-# 6850 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                 ;
   } while (*s++);
   s = pool->start;
@@ -10282,22 +9940,21 @@ poolCopyString(STRING_POOL *pool, const XML_Char *s)
 }
 
 static const XML_Char *
-poolCopyStringN(STRING_POOL *pool, const XML_Char *s, int n)
-{
-  if (!pool->ptr && !poolGrow(pool)) {
-# 6872 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+poolCopyStringN(STRING_POOL *pool, const XML_Char *s, int n) {
+  if (! pool->ptr && ! poolGrow(pool)) {
+# 6590 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
     return 
-# 6872 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6590 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 6872 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6590 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
   }
   for (; n > 0; --n, s++) {
-    if (!(((pool)->ptr == (pool)->end && !poolGrow(pool)) ? 0 : ((*((pool)->ptr)++ = *s), 1)))
+    if (! (((pool)->ptr == (pool)->end && ! poolGrow(pool)) ? 0 : ((*((pool)->ptr)++ = *s), 1)))
       return 
-# 6876 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6594 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
             ((void *)0)
-# 6876 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6594 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                 ;
   }
   s = pool->start;
@@ -10306,14 +9963,13 @@ poolCopyStringN(STRING_POOL *pool, const XML_Char *s, int n)
 }
 
 static const XML_Char *
-poolAppendString(STRING_POOL *pool, const XML_Char *s)
-{
+poolAppendString(STRING_POOL *pool, const XML_Char *s) {
   while (*s) {
-    if (!(((pool)->ptr == (pool)->end && !poolGrow(pool)) ? 0 : ((*((pool)->ptr)++ = *s), 1)))
+    if (! (((pool)->ptr == (pool)->end && ! poolGrow(pool)) ? 0 : ((*((pool)->ptr)++ = *s), 1)))
       return 
-# 6888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
             ((void *)0)
-# 6888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                 ;
     s++;
   }
@@ -10321,28 +9977,26 @@ poolAppendString(STRING_POOL *pool, const XML_Char *s)
 }
 
 static XML_Char *
-poolStoreString(STRING_POOL *pool, const ENCODING *enc,
-                const char *ptr, const char *end)
-{
-  if (!poolAppend(pool, enc, ptr, end))
+poolStoreString(STRING_POOL *pool, const ENCODING *enc, const char *ptr,
+                const char *end) {
+  if (! poolAppend(pool, enc, ptr, end))
     return 
-# 6899 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6615 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 6899 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6615 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
-  if (pool->ptr == pool->end && !poolGrow(pool))
+  if (pool->ptr == pool->end && ! poolGrow(pool))
     return 
-# 6901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6617 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 6901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6617 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
   *(pool->ptr)++ = 0;
   return pool->start;
 }
 
 static size_t
-poolBytesToAllocateFor(int blockSize)
-{
+poolBytesToAllocateFor(int blockSize) {
 
 
 
@@ -10360,20 +10014,20 @@ poolBytesToAllocateFor(int blockSize)
 
   {
     const int stretchedBlockSize = blockSize * (int)stretch;
-    const int bytesToAllocate = (int)(
-        
-# 6927 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
-       __builtin_offsetof (
-# 6927 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-       BLOCK
-# 6927 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
-       , 
-# 6927 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-       s
-# 6927 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
-       ) 
-# 6927 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-                          + (unsigned)stretchedBlockSize);
+    const int bytesToAllocate
+        = (int)(
+# 6642 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+               __builtin_offsetof (
+# 6642 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+               BLOCK
+# 6642 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+               , 
+# 6642 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+               s
+# 6642 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+               ) 
+# 6642 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+                                  + (unsigned)stretchedBlockSize);
     if (bytesToAllocate < 0)
       return 0;
 
@@ -10382,21 +10036,20 @@ poolBytesToAllocateFor(int blockSize)
 }
 
 static XML_Bool
-poolGrow(STRING_POOL *pool)
-{
+poolGrow(STRING_POOL *pool) {
   if (pool->freeBlocks) {
     if (pool->start == 0) {
       pool->blocks = pool->freeBlocks;
       pool->freeBlocks = pool->freeBlocks->next;
       pool->blocks->next = 
-# 6942 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6656 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                           ((void *)0)
-# 6942 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6656 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                               ;
       pool->start = pool->blocks->s;
       pool->end = pool->start + pool->blocks->size;
       pool->ptr = pool->start;
-      return ((XML_Bool) 1);
+      return ((XML_Bool)1);
     }
     if (pool->end - pool->start < pool->freeBlocks->size) {
       BLOCK *tem = pool->freeBlocks->next;
@@ -10408,12 +10061,12 @@ poolGrow(STRING_POOL *pool)
       pool->ptr = pool->blocks->s + (pool->ptr - pool->start);
       pool->start = pool->blocks->s;
       pool->end = pool->start + pool->blocks->size;
-      return ((XML_Bool) 1);
+      return ((XML_Bool)1);
     }
   }
   if (pool->blocks && pool->start == pool->blocks->s) {
     BLOCK *temp;
-    int blockSize = (int)((unsigned)(pool->end - pool->start)*2U);
+    int blockSize = (int)((unsigned)(pool->end - pool->start) * 2U);
     size_t bytesToAllocate;
 
 
@@ -10427,35 +10080,34 @@ poolGrow(STRING_POOL *pool)
 
 
 
-      return ((XML_Bool) 0);
+      return ((XML_Bool)0);
     }
 
     bytesToAllocate = poolBytesToAllocateFor(blockSize);
     if (bytesToAllocate == 0)
-      return ((XML_Bool) 0);
+      return ((XML_Bool)0);
 
-    temp = (BLOCK *)
-      pool->mem->realloc_fcn(pool->blocks, (unsigned)bytesToAllocate);
+    temp = (BLOCK *)pool->mem->realloc_fcn(pool->blocks,
+                                           (unsigned)bytesToAllocate);
     if (temp == 
-# 6986 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                ((void *)0)
-# 6986 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                    )
-      return ((XML_Bool) 0);
+      return ((XML_Bool)0);
     pool->blocks = temp;
     pool->blocks->size = blockSize;
     pool->ptr = pool->blocks->s + offsetInsideBlock;
     pool->start = pool->blocks->s;
     pool->end = pool->start + blockSize;
-  }
-  else {
+  } else {
     BLOCK *tem;
     int blockSize = (int)(pool->end - pool->start);
     size_t bytesToAllocate;
 
     if (blockSize < 0) {
-# 7009 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-      return ((XML_Bool) 0);
+# 6722 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+      return ((XML_Bool)0);
     }
 
     if (blockSize < 1024)
@@ -10463,41 +10115,39 @@ poolGrow(STRING_POOL *pool)
     else {
 
       if ((int)((unsigned)blockSize * 2U) < 0) {
-        return ((XML_Bool) 0);
+        return ((XML_Bool)0);
       }
       blockSize *= 2;
     }
 
     bytesToAllocate = poolBytesToAllocateFor(blockSize);
     if (bytesToAllocate == 0)
-      return ((XML_Bool) 0);
+      return ((XML_Bool)0);
 
     tem = (BLOCK *)pool->mem->malloc_fcn(bytesToAllocate);
-    if (!tem)
-      return ((XML_Bool) 0);
+    if (! tem)
+      return ((XML_Bool)0);
     tem->size = blockSize;
     tem->next = pool->blocks;
     pool->blocks = tem;
     if (pool->ptr != pool->start)
-      memcpy(tem->s, pool->start,
-             (pool->ptr - pool->start) * sizeof(XML_Char));
+      memcpy(tem->s, pool->start, (pool->ptr - pool->start) * sizeof(XML_Char));
     pool->ptr = tem->s + (pool->ptr - pool->start);
     pool->start = tem->s;
     pool->end = tem->s + blockSize;
   }
-  return ((XML_Bool) 1);
+  return ((XML_Bool)1);
 }
 
 static int
-nextScaffoldPart(XML_Parser parser)
-{
-  DTD * const dtd = parser->m_dtd;
-  CONTENT_SCAFFOLD * me;
+nextScaffoldPart(XML_Parser parser) {
+  DTD *const dtd = parser->m_dtd;
+  CONTENT_SCAFFOLD *me;
   int next;
 
-  if (!dtd->scaffIndex) {
+  if (! dtd->scaffIndex) {
     dtd->scaffIndex = (int *)(parser->m_mem.malloc_fcn((parser->m_groupSize * sizeof(int))));
-    if (!dtd->scaffIndex)
+    if (! dtd->scaffIndex)
       return -1;
     dtd->scaffIndex[0] = 0;
   }
@@ -10505,23 +10155,22 @@ nextScaffoldPart(XML_Parser parser)
   if (dtd->scaffCount >= dtd->scaffSize) {
     CONTENT_SCAFFOLD *temp;
     if (dtd->scaffold) {
-      temp = (CONTENT_SCAFFOLD *)
-        (parser->m_mem.realloc_fcn((dtd->scaffold),(dtd->scaffSize * 2 * sizeof(CONTENT_SCAFFOLD))));
+      temp = (CONTENT_SCAFFOLD *)(parser->m_mem.realloc_fcn((dtd->scaffold), (dtd->scaffSize * 2 * sizeof(CONTENT_SCAFFOLD))))
+                                                                               ;
       if (temp == 
-# 7061 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6772 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                  ((void *)0)
-# 7061 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6772 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                      )
         return -1;
       dtd->scaffSize *= 2;
-    }
-    else {
+    } else {
       temp = (CONTENT_SCAFFOLD *)(parser->m_mem.malloc_fcn((32 * sizeof(CONTENT_SCAFFOLD))))
-                                                                   ;
+                                                                               ;
       if (temp == 
-# 7068 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6778 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                  ((void *)0)
-# 7068 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6778 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                      )
         return -1;
       dtd->scaffSize = 32;
@@ -10531,11 +10180,12 @@ nextScaffoldPart(XML_Parser parser)
   next = dtd->scaffCount++;
   me = &dtd->scaffold[next];
   if (dtd->scaffLevel) {
-    CONTENT_SCAFFOLD *parent = &dtd->scaffold[dtd->scaffIndex[dtd->scaffLevel-1]];
+    CONTENT_SCAFFOLD *parent
+        = &dtd->scaffold[dtd->scaffIndex[dtd->scaffLevel - 1]];
     if (parent->lastchild) {
       dtd->scaffold[parent->lastchild].nextsib = next;
     }
-    if (!parent->childcnt)
+    if (! parent->childcnt)
       parent->firstchild = next;
     parent->lastchild = next;
     parent->childcnt++;
@@ -10545,13 +10195,9 @@ nextScaffoldPart(XML_Parser parser)
 }
 
 static void
-build_node(XML_Parser parser,
-           int src_node,
-           XML_Content *dest,
-           XML_Content **contpos,
-           XML_Char **strpos)
-{
-  DTD * const dtd = parser->m_dtd;
+build_node(XML_Parser parser, int src_node, XML_Content *dest,
+           XML_Content **contpos, XML_Char **strpos) {
+  DTD *const dtd = parser->m_dtd;
   dest->type = dtd->scaffold[src_node].type;
   dest->quant = dtd->scaffold[src_node].quant;
   if (dest->type == XML_CTYPE_NAME) {
@@ -10560,55 +10206,52 @@ build_node(XML_Parser parser,
     src = dtd->scaffold[src_node].name;
     for (;;) {
       *(*strpos)++ = *src;
-      if (!*src)
+      if (! *src)
         break;
       src++;
     }
     dest->numchildren = 0;
     dest->children = 
-# 7111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6818 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                     ((void *)0)
-# 7111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6818 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                         ;
-  }
-  else {
+  } else {
     unsigned int i;
     int cn;
     dest->numchildren = dtd->scaffold[src_node].childcnt;
     dest->children = *contpos;
     *contpos += dest->numchildren;
-    for (i = 0, cn = dtd->scaffold[src_node].firstchild;
-         i < dest->numchildren;
+    for (i = 0, cn = dtd->scaffold[src_node].firstchild; i < dest->numchildren;
          i++, cn = dtd->scaffold[cn].nextsib) {
       build_node(parser, cn, &(dest->children[i]), contpos, strpos);
     }
     dest->name = 
-# 7124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6829 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
                 ((void *)0)
-# 7124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6829 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                     ;
   }
 }
 
 static XML_Content *
-build_model (XML_Parser parser)
-{
-  DTD * const dtd = parser->m_dtd;
+build_model(XML_Parser parser) {
+  DTD *const dtd = parser->m_dtd;
   XML_Content *ret;
   XML_Content *cpos;
-  XML_Char * str;
+  XML_Char *str;
   int allocsize = (dtd->scaffCount * sizeof(XML_Content)
                    + (dtd->contentStringLen * sizeof(XML_Char)));
 
   ret = (XML_Content *)(parser->m_mem.malloc_fcn((allocsize)));
-  if (!ret)
+  if (! ret)
     return 
-# 7140 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6844 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 7140 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6844 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
 
-  str = (XML_Char *) (&ret[dtd->scaffCount]);
+  str = (XML_Char *)(&ret[dtd->scaffCount]);
   cpos = &ret[1];
 
   build_node(parser, 0, ret, &cpos, &str);
@@ -10616,69 +10259,65 @@ build_model (XML_Parser parser)
 }
 
 static ELEMENT_TYPE *
-getElementType(XML_Parser parser,
-               const ENCODING *enc,
-               const char *ptr,
-               const char *end)
-{
-  DTD * const dtd = parser->m_dtd;
+getElementType(XML_Parser parser, const ENCODING *enc, const char *ptr,
+               const char *end) {
+  DTD *const dtd = parser->m_dtd;
   const XML_Char *name = poolStoreString(&dtd->pool, enc, ptr, end);
   ELEMENT_TYPE *ret;
 
-  if (!name)
+  if (! name)
     return 
-# 7160 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 7160 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
-  ret = (ELEMENT_TYPE *) lookup(parser, &dtd->elementTypes, name, sizeof(ELEMENT_TYPE));
-  if (!ret)
+  ret = (ELEMENT_TYPE *)lookup(parser, &dtd->elementTypes, name,
+                               sizeof(ELEMENT_TYPE));
+  if (! ret)
     return 
-# 7163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6865 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
           ((void *)0)
-# 7163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6865 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
               ;
   if (ret->name != name)
     ((&dtd->pool)->ptr = (&dtd->pool)->start);
   else {
     ((&dtd->pool)->start = (&dtd->pool)->ptr);
-    if (!setElementTypePrefix(parser, ret))
+    if (! setElementTypePrefix(parser, ret))
       return 
-# 7169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+# 6871 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
             ((void *)0)
-# 7169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+# 6871 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
                 ;
   }
   return ret;
 }
 
 static XML_Char *
-copyString(const XML_Char *s,
-           const XML_Memory_Handling_Suite *memsuite)
-{
-    int charsRequired = 0;
-    XML_Char *result;
+copyString(const XML_Char *s, const XML_Memory_Handling_Suite *memsuite) {
+  int charsRequired = 0;
+  XML_Char *result;
 
 
-    while (s[charsRequired] != 0) {
-      charsRequired++;
-    }
-
+  while (s[charsRequired] != 0) {
     charsRequired++;
+  }
+
+  charsRequired++;
 
 
-    result = memsuite->malloc_fcn(charsRequired * sizeof(XML_Char));
-    if (result == 
-# 7190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
-                 ((void *)0)
-# 7190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-                     )
-        return 
-# 7191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
-              ((void *)0)
-# 7191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
-                  ;
+  result = memsuite->malloc_fcn(charsRequired * sizeof(XML_Char));
+  if (result == 
+# 6890 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+               ((void *)0)
+# 6890 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+                   )
+    return 
+# 6891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c" 3 4
+          ((void *)0)
+# 6891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlparse.c"
+              ;
 
-    memcpy(result, s, charsRequired * sizeof(XML_Char));
-    return result;
+  memcpy(result, s, charsRequired * sizeof(XML_Char));
+  return result;
 }

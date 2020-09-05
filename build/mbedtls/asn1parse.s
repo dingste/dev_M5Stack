@@ -1041,30 +1041,30 @@ mbedtls_asn1_find_named_data:
 	.uleb128 0x2
 	.4byte	.LASF14
 	.byte	0x5
-	.byte	0xa8
+	.byte	0xad
 	.4byte	0xa0
 	.uleb128 0x7
 	.4byte	.LASF15
 	.byte	0xc
 	.byte	0x5
-	.byte	0xb6
+	.byte	0xbb
 	.4byte	0xe1
 	.uleb128 0x8
 	.string	"s"
 	.byte	0x5
-	.byte	0xb8
+	.byte	0xbd
 	.4byte	0x3e
 	.byte	0
 	.uleb128 0x8
 	.string	"n"
 	.byte	0x5
-	.byte	0xb9
+	.byte	0xbe
 	.4byte	0x25
 	.byte	0x4
 	.uleb128 0x8
 	.string	"p"
 	.byte	0x5
-	.byte	0xba
+	.byte	0xbf
 	.4byte	0xe1
 	.byte	0x8
 	.byte	0
@@ -1074,7 +1074,7 @@ mbedtls_asn1_find_named_data:
 	.uleb128 0x2
 	.4byte	.LASF15
 	.byte	0x5
-	.byte	0xbc
+	.byte	0xc1
 	.4byte	0xb6
 	.uleb128 0x7
 	.4byte	.LASF16
@@ -2178,17 +2178,17 @@ mbedtls_asn1_find_named_data:
 	.4byte	.LASF39
 	.4byte	.LASF39
 	.byte	0x5
-	.2byte	0x1b1
+	.2byte	0x1f0
 	.uleb128 0x1d
 	.4byte	.LASF40
 	.4byte	.LASF40
 	.byte	0x7
-	.byte	0x7c
+	.byte	0x7f
 	.uleb128 0x1d
 	.4byte	.LASF41
 	.4byte	.LASF41
 	.byte	0x8
-	.byte	0x42
+	.byte	0x9f
 	.uleb128 0x1e
 	.4byte	.LASF47
 	.4byte	.LASF47
@@ -2196,7 +2196,7 @@ mbedtls_asn1_find_named_data:
 	.4byte	.LASF42
 	.4byte	.LASF42
 	.byte	0x7
-	.byte	0x7d
+	.byte	0x80
 	.uleb128 0x1d
 	.4byte	.LASF43
 	.4byte	.LASF43

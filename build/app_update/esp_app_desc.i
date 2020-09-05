@@ -1,35 +1,35 @@
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/esp_app_desc.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/esp_app_desc.c"
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/app_update//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/esp_app_desc.c"
-# 15 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/esp_app_desc.c"
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/assert.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/esp_app_desc.c"
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/esp_app_desc.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h"
        
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
-# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/assert.h" 2
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 1
-# 10 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h"
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/ieeefp.h" 1
-# 11 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/_ansi.h" 1
-# 15 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/_ansi.h"
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/newlib.h" 1
-# 16 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/_ansi.h" 2
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/config.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/newlib.h" 1
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 1
 
 
 
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/ieeefp.h" 1
-# 5 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/config.h" 2
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/features.h" 1
-# 6 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/config.h" 2
-# 189 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/config.h"
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/xtensa/config/core-isa.h" 1
-# 190 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/config.h" 2
-# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/_ansi.h" 2
-# 12 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/features.h" 1
+# 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core-isa.h" 1
+# 190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
@@ -41,29 +41,29 @@
 typedef unsigned int size_t;
 # 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef short unsigned int wchar_t;
-# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h" 1
-# 13 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/_ansi.h" 1
-# 14 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
 # 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef int ptrdiff_t;
-# 15 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h" 2
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h" 1
-# 12 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h"
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_types.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 1
 
 
 
 
 
 
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_default_types.h" 1
-# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_default_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
 
-# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_default_types.h"
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
 typedef signed char __int8_t ;
 typedef unsigned char __uint8_t ;
 
@@ -98,14 +98,14 @@ typedef __uint64_t __uint_least64_t;
 
 typedef int __intptr_t;
 typedef unsigned int __uintptr_t;
-# 8 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_types.h" 2
-# 13 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h" 2
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/lock.h" 1
-# 11 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/lock.h"
+# 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 2
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 typedef int _lock_t;
 typedef _lock_t _LOCK_RECURSIVE_T;
 typedef _lock_t _LOCK_T;
-# 28 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/lock.h"
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 void _lock_init(_lock_t *lock);
 void _lock_init_recursive(_lock_t *lock);
 void _lock_close(_lock_t *lock);
@@ -116,7 +116,7 @@ int _lock_try_acquire(_lock_t *lock);
 int _lock_try_acquire_recursive(_lock_t *lock);
 void _lock_release(_lock_t *lock);
 void _lock_release_recursive(_lock_t *lock);
-# 14 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h" 2
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 typedef long _off_t;
@@ -143,20 +143,20 @@ __extension__ typedef long long _off64_t;
 
 
 typedef long _fpos_t;
-# 55 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h"
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef signed int _ssize_t;
-# 67 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h"
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
 # 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
 # 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int wint_t;
-# 68 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h" 2
+# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 
 
-# 71 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h"
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef struct
 {
   int __count;
@@ -175,7 +175,7 @@ typedef _LOCK_RECURSIVE_T _flock_t;
 
 
 typedef void *_iconv_t;
-# 16 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h" 2
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
 
 
 
@@ -183,7 +183,7 @@ typedef void *_iconv_t;
 
 
 typedef unsigned long __ULong;
-# 38 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _reent;
 
 
@@ -235,12 +235,12 @@ struct _atexit {
  void (*_fns[32])(void);
         struct _on_exit_args * _on_exit_args_ptr;
 };
-# 115 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sbuf {
  unsigned char *_base;
  int _size;
 };
-# 151 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
+# 151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE_fake {
   unsigned char *_p;
   int _r;
@@ -257,7 +257,7 @@ struct __sFILE_fake {
 
 
 extern void __sinit (struct _reent *);
-# 179 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE {
   unsigned char *_p;
   int _r;
@@ -308,7 +308,7 @@ struct __sFILE {
   _mbstate_t _mbstate;
   int _flags2;
 };
-# 285 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
+# 285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 typedef struct __sFILE __FILE;
 
 
@@ -319,7 +319,7 @@ struct _glue
   int _niobs;
   __FILE *_iobs;
 };
-# 317 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
+# 317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _rand48 {
   unsigned short _seed[3];
   unsigned short _mult[3];
@@ -329,7 +329,7 @@ struct _rand48 {
   __extension__ unsigned long long _rand_next;
 
 };
-# 342 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _mprec
 {
 
@@ -410,9 +410,9 @@ struct _reent
 extern const struct __sFILE_fake __sf_fake_stdin;
 extern const struct __sFILE_fake __sf_fake_stdout;
 extern const struct __sFILE_fake __sf_fake_stderr;
-# 458 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
+# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 extern void esp_reent_init(struct _reent* reent);
-# 771 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
+# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 extern struct _reent *_global_impure_ptr ;
 
 void _reclaim_reent (struct _reent *);
@@ -422,17 +422,17 @@ void _reclaim_reent (struct _reent *);
 
 
   struct _reent * __getreent (void);
-# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/cdefs.h" 1
-# 45 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/cdefs.h"
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 1
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 46 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/cdefs.h" 2
-# 20 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/stdlib.h" 1
-# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/stdlib.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/alloca.h" 1
-# 23 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/alloca.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
@@ -466,7 +466,7 @@ typedef struct
 
 
 typedef int (*__compar_fn_t) (const void *, const void *);
-# 67 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h"
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 int __locale_mb_cur_max (void);
 
 
@@ -650,7 +650,7 @@ unsigned long long _strtoull_r (struct _reent *, const char *restrict __n, char 
 void cfree (void *);
 int unsetenv (const char *__string);
 int _unsetenv_r (struct _reent *, const char *__string);
-# 258 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h"
+# 258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 char * _dtoa_r (struct _reent *, double, int, int, int *, int*, char**);
 
 void * _malloc_r (struct _reent *, size_t) ;
@@ -662,37 +662,37 @@ void _mstats_r (struct _reent *, char *);
 int _system_r (struct _reent *, const char *);
 
 void __eprintf (const char *, const char *, unsigned int, const char *);
-# 291 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h"
+# 291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 extern long double strtold (const char *restrict, char **restrict);
 
 
 
 
-# 22 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/assert.h" 2
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
 
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/assert.h" 1
-# 39 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/assert.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h" 1
+# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
 void __assert (const char *, int, const char *) __attribute__ ((__noreturn__))
                                  ;
 void __assert_func (const char *, int, const char *, const char *) __attribute__ ((__noreturn__))
                                  ;
-# 24 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/assert.h" 2
-# 16 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/esp_app_desc.c" 2
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/param.h" 1
-# 9 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/param.h"
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/syslimits.h" 1
-# 10 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/param.h" 2
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/endian.h" 1
-# 11 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/param.h" 2
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/param.h" 1
-# 12 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/param.h" 2
-# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/esp_app_desc.c" 2
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h" 1
-# 18 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h" 1
-# 13 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_intsup.h" 1
-# 14 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h" 2
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/esp_app_desc.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/param.h" 1
+# 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/param.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/syslimits.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/param.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/endian.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/param.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/param.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/param.h" 2
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/esp_app_desc.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_intsup.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 2
 
 
 
@@ -743,21 +743,21 @@ typedef __uint64_t uint64_t ;
 
 typedef __int_least64_t int_least64_t;
 typedef __uint_least64_t uint_least64_t;
-# 74 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast8_t;
   typedef unsigned int uint_fast8_t;
-# 84 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast16_t;
   typedef unsigned int uint_fast16_t;
-# 94 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
+# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast32_t;
   typedef unsigned int uint_fast32_t;
-# 104 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef long long int int_fast64_t;
   typedef long long unsigned int uint_fast64_t;
-# 153 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef long long int intmax_t;
-# 162 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
+# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef long long unsigned int uintmax_t;
 
 
@@ -767,20 +767,20 @@ typedef __uint_least64_t uint_least64_t;
 
 typedef __intptr_t intptr_t;
 typedef __uintptr_t uintptr_t;
-# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h" 2
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdbool.h" 1 3 4
-# 20 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h" 2
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h" 1
-# 14 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h"
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
        
 
 
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h" 1
-# 36 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 1
+# 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 37 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h" 2
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
 
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
@@ -788,22 +788,22 @@ typedef __uintptr_t uintptr_t;
 
 # 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
 typedef __builtin_va_list __gnuc_va_list;
-# 40 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h" 2
-# 48 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h" 1
-# 69 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
+# 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 1
+# 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 70 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h" 2
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/types.h" 1
-# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/types.h"
+# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h"
 
-# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/types.h"
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h"
 typedef long int __off_t;
 typedef int __pid_t;
 
 __extension__ typedef long long int __loff_t;
-# 71 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h" 2
-# 93 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef unsigned char u_char;
 
 
@@ -858,9 +858,9 @@ typedef long daddr_t;
 
 
 typedef char * caddr_t;
-# 155 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef unsigned short ino_t;
-# 184 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+# 184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef _off_t off_t;
 typedef __dev_t dev_t;
 typedef __uid_t uid_t;
@@ -881,14 +881,14 @@ typedef int pid_t;
 typedef long key_t;
 
 typedef _ssize_t ssize_t;
-# 217 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef unsigned int mode_t __attribute__ ((__mode__ (__SI__)));
 
 
 
 
 typedef unsigned short nlink_t;
-# 244 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef long fd_mask;
 
 
@@ -900,7 +900,7 @@ typedef long fd_mask;
 typedef struct _types_fd_set {
  fd_mask fds_bits[(((64)+(((sizeof (fd_mask) * 8))-1))/((sizeof (fd_mask) * 8)))];
 } _types_fd_set;
-# 275 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+# 275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef unsigned long clockid_t;
 
 
@@ -912,19 +912,19 @@ typedef unsigned long timer_t;
 
 typedef unsigned long useconds_t;
 typedef long suseconds_t;
-# 299 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/sched.h" 1
-# 46 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/sched.h"
+# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h" 1
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h"
 struct sched_param {
   int sched_priority;
-# 59 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/sched.h"
+# 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h"
 };
 
 int sched_yield( void );
-# 300 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h" 2
-# 308 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef __uint32_t pthread_t;
-# 341 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef struct {
   int is_initialized;
   void *stackaddr;
@@ -933,7 +933,7 @@ typedef struct {
   int inheritsched;
   int schedpolicy;
   struct sched_param schedparam;
-# 357 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
   int detachstate;
 
 
@@ -941,12 +941,12 @@ typedef struct {
 
 
 } pthread_attr_t;
-# 442 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+# 442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef __uint32_t pthread_mutex_t;
 
 typedef struct {
   int is_initialized;
-# 454 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+# 454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
   int type;
 
   int recursive;
@@ -972,7 +972,7 @@ typedef struct {
   int is_initialized;
   int init_executed;
 } pthread_once_t;
-# 49 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h" 2
+# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
 
 
 
@@ -987,9 +987,9 @@ typedef _fpos_t fpos_t;
 
 
 
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/stdio.h" 1
-# 64 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h" 2
-# 164 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/stdio.h" 1
+# 64 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 FILE * tmpfile (void);
 char * tmpnam (char *);
 
@@ -1052,7 +1052,7 @@ int sprintf (char *restrict, const char *restrict, ...) __attribute__ ((__format
                                                             ;
 int remove (const char *);
 int rename (const char *, const char *);
-# 235 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 int fseeko (FILE *, off_t, int);
 off_t ftello ( FILE *);
 
@@ -1122,7 +1122,7 @@ int vsnprintf (char *restrict, size_t, const char *restrict, __gnuc_va_list) __a
                                                             ;
 int vsscanf (const char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
                                                            ;
-# 313 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
+# 313 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 FILE * fdopen (int, const char *);
 
 int fileno (FILE *);
@@ -1139,7 +1139,7 @@ int ftrylockfile (FILE *);
 void funlockfile (FILE *);
 int putc_unlocked (int, FILE *);
 int putchar_unlocked (int);
-# 338 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
+# 338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 int dprintf (int, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
                                                             ;
 
@@ -1307,10 +1307,10 @@ int fgetc_unlocked (FILE *);
 int fputc_unlocked (int, FILE *);
 size_t fread_unlocked (void * restrict, size_t _size, size_t _n, FILE *restrict);
 size_t fwrite_unlocked (const void * restrict , size_t _size, size_t _n, FILE *);
-# 538 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
+# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 int __srget_r (struct _reent *, FILE *);
 int __swbuf_r (struct _reent *, int, FILE *);
-# 562 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
+# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 FILE *funopen (const void * __cookie, int (*__readfn)(void * __cookie, char *__buf, int __n), int (*__writefn)(void * __cookie, const char *__buf, int __n), fpos_t (*__seekfn)(void * __cookie, fpos_t __off, int __whence), int (*__closefn)(void * __cookie))
 
 
@@ -1355,9 +1355,9 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
-# 18 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h" 2
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 2
 
 
 
@@ -1365,9 +1365,9 @@ FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cooki
 
 
 typedef int32_t esp_err_t;
-# 58 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h"
+# 58 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
 const char *esp_err_to_name(esp_err_t code);
-# 76 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h"
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
 const char *esp_err_to_name_r(esp_err_t code, char *buf, size_t buflen);
 
 
@@ -1375,34 +1375,34 @@ void _esp_error_check_failed(esp_err_t rc, const char *file, int line, const cha
 
 
 void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int line, const char *function, const char *expression);
-# 22 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h" 2
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h" 1
-# 20 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h" 2
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h" 2
 
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h" 1
-# 20 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h" 2
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h" 2
 
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
-# 23 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h" 2
-# 45 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h" 2
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 void spi_flash_init();
-# 54 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 size_t spi_flash_get_chip_size();
-# 63 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 63 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 esp_err_t spi_flash_erase_sector(size_t sector);
-# 74 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 esp_err_t spi_flash_erase_range(size_t start_address, size_t size);
-# 93 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 esp_err_t spi_flash_write(size_t dest_addr, const void *src, size_t size);
-# 116 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 esp_err_t spi_flash_write_encrypted(size_t dest_addr, const void *src, size_t size);
-# 139 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 esp_err_t spi_flash_read(size_t src_addr, void *dest, size_t size);
-# 156 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 esp_err_t spi_flash_read_encrypted(size_t src, void *dest, size_t size);
 
 
@@ -1417,21 +1417,21 @@ typedef enum {
 
 
 typedef uint32_t spi_flash_mmap_handle_t;
-# 193 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 esp_err_t spi_flash_mmap(size_t src_addr, size_t size, spi_flash_mmap_memory_t memory,
                          const void** out_ptr, spi_flash_mmap_handle_t* out_handle);
-# 219 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 esp_err_t spi_flash_mmap_pages(const int *pages, size_t page_count, spi_flash_mmap_memory_t memory,
                          const void** out_ptr, spi_flash_mmap_handle_t* out_handle);
-# 233 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 void spi_flash_munmap(spi_flash_mmap_handle_t handle);
-# 242 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 void spi_flash_mmap_dump();
-# 255 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 uint32_t spi_flash_mmap_get_free_pages(spi_flash_mmap_memory_t memory);
-# 271 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 size_t spi_flash_cache2phys(const void *cached);
-# 291 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 const void *spi_flash_phys2cache(size_t phys_offs, spi_flash_mmap_memory_t memory);
 
 
@@ -1439,9 +1439,9 @@ const void *spi_flash_phys2cache(size_t phys_offs, spi_flash_mmap_memory_t memor
 
 
 
-# 297 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h" 3 4
+# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h" 3 4
 _Bool 
-# 297 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
     spi_flash_cache_enabled();
 
 
@@ -1465,11 +1465,11 @@ typedef void (*spi_flash_op_unlock_func_t)(void);
 
 
 typedef 
-# 319 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h" 3 4
+# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h" 3 4
        _Bool 
-# 319 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
             (*spi_flash_is_safe_write_address_t)(size_t addr, size_t size);
-# 352 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 typedef struct {
     spi_flash_guard_start_func_t start;
     spi_flash_guard_end_func_t end;
@@ -1479,7 +1479,7 @@ typedef struct {
     spi_flash_is_safe_write_address_t is_safe_write_address;
 
 } spi_flash_guard_funcs_t;
-# 370 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 void spi_flash_guard_set(const spi_flash_guard_funcs_t* funcs);
 
 
@@ -1502,8 +1502,8 @@ extern const spi_flash_guard_funcs_t g_flash_guard_default_ops;
 
 
 extern const spi_flash_guard_funcs_t g_flash_guard_no_os_ops;
-# 23 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h" 2
-# 38 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h" 2
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h"
 typedef enum {
     ESP_PARTITION_TYPE_APP = 0x00,
     ESP_PARTITION_TYPE_DATA = 0x01,
@@ -1548,9 +1548,9 @@ typedef enum {
 
     ESP_PARTITION_SUBTYPE_ANY = 0xff,
 } esp_partition_subtype_t;
-# 91 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
+# 91 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h"
 typedef struct esp_partition_iterator_opaque_* esp_partition_iterator_t;
-# 100 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
+# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h"
 typedef struct {
     esp_partition_type_t type;
     esp_partition_subtype_t subtype;
@@ -1558,18 +1558,18 @@ typedef struct {
     uint32_t size;
     char label[17];
     
-# 106 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h" 3 4
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h" 3 4
    _Bool 
-# 106 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h"
         encrypted;
 } esp_partition_t;
-# 124 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
+# 124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h"
 esp_partition_iterator_t esp_partition_find(esp_partition_type_t type, esp_partition_subtype_t subtype, const char* label);
-# 139 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
+# 139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h"
 const esp_partition_t* esp_partition_find_first(esp_partition_type_t type, esp_partition_subtype_t subtype, const char* label);
-# 149 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h"
 const esp_partition_t* esp_partition_get(esp_partition_iterator_t iterator);
-# 160 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
+# 160 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h"
 esp_partition_iterator_t esp_partition_next(esp_partition_iterator_t iterator);
 
 
@@ -1579,40 +1579,40 @@ esp_partition_iterator_t esp_partition_next(esp_partition_iterator_t iterator);
 
 
 void esp_partition_iterator_release(esp_partition_iterator_t iterator);
-# 188 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
+# 188 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h"
 const esp_partition_t *esp_partition_verify(const esp_partition_t *partition);
-# 207 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
+# 207 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h"
 esp_err_t esp_partition_read(const esp_partition_t* partition,
                              size_t src_offset, void* dst, size_t size);
-# 240 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
+# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h"
 esp_err_t esp_partition_write(const esp_partition_t* partition,
                              size_t dst_offset, const void* src, size_t size);
-# 259 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
+# 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h"
 esp_err_t esp_partition_erase_range(const esp_partition_t* partition,
                                     uint32_t start_addr, uint32_t size);
-# 287 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
+# 287 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h"
 esp_err_t esp_partition_mmap(const esp_partition_t* partition, uint32_t offset, uint32_t size,
                              spi_flash_mmap_memory_t memory,
                              const void** out_ptr, spi_flash_mmap_handle_t* out_handle);
-# 309 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
+# 309 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h"
 esp_err_t esp_partition_get_sha256(const esp_partition_t *partition, uint8_t *sha_256);
-# 321 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
+# 321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h"
 
-# 321 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h" 3 4
+# 321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h" 3 4
 _Bool 
-# 321 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
+# 321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h"
     esp_partition_check_identity(const esp_partition_t *partition_1, const esp_partition_t *partition_2);
-# 23 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h" 2
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h" 1
-# 14 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
        
 
 
 
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 1
-# 18 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_flash_data_types.h" 1
-# 28 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_flash_data_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_flash_data_types.h" 1
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_flash_data_types.h"
 typedef enum {
     ESP_OTA_IMG_NEW = 0x0U,
     ESP_OTA_IMG_PENDING_VERIFY = 0x1U,
@@ -1648,29 +1648,29 @@ typedef struct {
  uint8_t label[16];
     uint32_t flags;
 } esp_partition_info_t;
-# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 2
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 2
 
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
-# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 2
-# 38 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 2
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
 esp_err_t esp_partition_table_verify(const esp_partition_info_t *partition_table, 
-# 38 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 3 4
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 3 4
                                                                                  _Bool 
-# 38 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
                                                                                       log_errors, int *num_partitions);
 
 
 
 inline static __attribute__((deprecated)) esp_err_t esp_partition_table_basic_verify(const esp_partition_info_t *partition_table, 
-# 42 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 3 4
+# 42 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 3 4
                                                                                                                                  _Bool 
-# 42 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
+# 42 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
                                                                                                                                       log_errors, int *num_partitions)
 {
     return esp_partition_table_verify(partition_table, log_errors, num_partitions);
 }
-# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h" 2
-# 29 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h" 2
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
 typedef enum {
     ESP_IMAGE_SPI_MODE_QIO,
     ESP_IMAGE_SPI_MODE_QOUT,
@@ -1787,15 +1787,15 @@ typedef enum {
 
 
 } esp_image_load_mode_t;
-# 174 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t esp_image_load(esp_image_load_mode_t mode, const esp_partition_pos_t *part, esp_image_metadata_t *data) __attribute__((deprecated));
-# 201 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 201 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t esp_image_verify(esp_image_load_mode_t mode, const esp_partition_pos_t *part, esp_image_metadata_t *data);
-# 227 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t bootloader_load_image(const esp_partition_pos_t *part, esp_image_metadata_t *data);
-# 237 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t esp_image_verify_bootloader(uint32_t *length);
-# 246 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 246 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t esp_image_verify_bootloader_data(esp_image_metadata_t *data);
 
 
@@ -1807,8 +1807,8 @@ typedef struct {
     uint32_t irom_load_addr;
     uint32_t irom_size;
 } esp_image_flash_mapping_t;
-# 24 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h" 2
-# 48 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h" 2
+# 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h"
 typedef uint32_t esp_ota_handle_t;
 
 
@@ -1818,23 +1818,23 @@ typedef uint32_t esp_ota_handle_t;
 
 
 const esp_app_desc_t *esp_ota_get_app_description(void);
-# 66 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h"
 int esp_ota_get_app_elf_sha256(char* dst, size_t size);
-# 98 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h"
 esp_err_t esp_ota_begin(const esp_partition_t* partition, size_t image_size, esp_ota_handle_t* out_handle);
-# 118 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h"
 esp_err_t esp_ota_write(esp_ota_handle_t handle, const void* data, size_t size);
-# 134 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 134 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h"
 esp_err_t esp_ota_end(esp_ota_handle_t handle);
-# 150 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 150 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h"
 esp_err_t esp_ota_set_boot_partition(const esp_partition_t* partition);
-# 169 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h"
 const esp_partition_t* esp_ota_get_boot_partition(void);
-# 185 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h"
 const esp_partition_t* esp_ota_get_running_partition(void);
-# 200 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h"
 const esp_partition_t* esp_ota_get_next_update_partition(const esp_partition_t *start_from);
-# 216 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h"
 esp_err_t esp_ota_get_partition_description(const esp_partition_t *partition, esp_app_desc_t *app_desc);
 
 
@@ -1844,7 +1844,7 @@ esp_err_t esp_ota_get_partition_description(const esp_partition_t *partition, es
 
 
 esp_err_t esp_ota_mark_app_valid_cancel_rollback();
-# 236 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h"
 esp_err_t esp_ota_mark_app_invalid_rollback_and_reboot();
 
 
@@ -1853,24 +1853,24 @@ esp_err_t esp_ota_mark_app_invalid_rollback_and_reboot();
 
 
 const esp_partition_t* esp_ota_get_last_invalid_partition();
-# 256 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 256 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h"
 esp_err_t esp_ota_get_state_partition(const esp_partition_t *partition, esp_ota_img_states_t *ota_state);
-# 265 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h"
 esp_err_t esp_ota_erase_last_boot_app_partition(void);
-# 277 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 277 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h"
 
-# 277 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h" 3 4
+# 277 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h" 3 4
 _Bool 
-# 277 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 277 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/include/esp_ota_ops.h"
     esp_ota_check_rollback_is_possible(void);
-# 18 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/esp_app_desc.c" 2
-# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_attr.h" 1
-# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_attr.h"
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/esp_app_desc.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
-# 18 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_attr.h" 2
-# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/esp_app_desc.c" 2
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/esp_app_desc.c" 2
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
-# 20 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/esp_app_desc.c" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/esp_app_desc.c" 2
 
 
 const __attribute__((section(".rodata_desc"))) esp_app_desc_t esp_app_desc = {
@@ -1878,7 +1878,7 @@ const __attribute__((section(".rodata_desc"))) esp_app_desc_t esp_app_desc = {
 
 
 
-    .version = "c435ef2-dirty",
+    .version = "383c25b-dirty",
 
 
 
@@ -1886,7 +1886,7 @@ const __attribute__((section(".rodata_desc"))) esp_app_desc_t esp_app_desc = {
 
     .project_name = "dev_M5Stack",
 
-    .idf_ver = "v3.3.2-dirty",
+    .idf_ver = "v3.3.2-270-gf4333c8e3",
 
 
 
@@ -1895,8 +1895,8 @@ const __attribute__((section(".rodata_desc"))) esp_app_desc_t esp_app_desc = {
 
 
 
-    .time = "18:59:37",
-    .date = "Jun  9 2020",
+    .time = "17:29:04",
+    .date = "Sep  5 2020",
 
 
 
@@ -1905,9 +1905,9 @@ const __attribute__((section(".rodata_desc"))) esp_app_desc_t esp_app_desc = {
 
 
 
-_Static_assert(sizeof("c435ef2-dirty") <= sizeof(esp_app_desc.version), "PROJECT_VER is longer than version field in structure");
+_Static_assert(sizeof("383c25b-dirty") <= sizeof(esp_app_desc.version), "PROJECT_VER is longer than version field in structure");
 
-_Static_assert(sizeof("v3.3.2-dirty") <= sizeof(esp_app_desc.idf_ver), "IDF_VER is longer than idf_ver field in structure");
+_Static_assert(sizeof("v3.3.2-270-gf4333c8e3") <= sizeof(esp_app_desc.idf_ver), "IDF_VER is longer than idf_ver field in structure");
 
 _Static_assert(sizeof("dev_M5Stack") <= sizeof(esp_app_desc.project_name), "PROJECT_NAME is longer than project_name field in structure");
 
@@ -1926,13 +1926,55 @@ static inline char __attribute__((section(".iram1" "." "0"))) to_hex_digit(unsig
     return (val < 10) ? ('0' + val) : ('a' + val - 10);
 }
 
+__attribute__((constructor)) void esp_ota_init_app_elf_sha256(void)
+{
+    esp_ota_get_app_elf_sha256(
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/esp_app_desc.c" 3 4
+                              ((void *)0)
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/esp_app_desc.c"
+                                  , 0);
+}
+
+
+
+
+
+
+
 int __attribute__((section(".iram1" "." "1"))) esp_ota_get_app_elf_sha256(char* dst, size_t size)
 {
-    size_t n = (((size - 1) / 2) < (sizeof(esp_app_desc.app_elf_sha256)) ? ((size - 1) / 2) : (sizeof(esp_app_desc.app_elf_sha256)));
-    const uint8_t* src = esp_app_desc.app_elf_sha256;
+    static char s_app_elf_sha256[16 / 2];
+    static 
+# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/esp_app_desc.c" 3 4
+          _Bool 
+# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/esp_app_desc.c"
+               first_call = 
+# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/esp_app_desc.c" 3 4
+                            1
+# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/esp_app_desc.c"
+                                ;
+    if (first_call) {
+        first_call = 
+# 91 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/esp_app_desc.c" 3 4
+                    0
+# 91 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/esp_app_desc.c"
+                         ;
+        const uint8_t* src = esp_app_desc.app_elf_sha256;
+        for (size_t i = 0; i < sizeof(s_app_elf_sha256); ++i) {
+            s_app_elf_sha256[i] = src[i];
+        }
+    }
+    if (dst == 
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/esp_app_desc.c" 3 4
+              ((void *)0) 
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_update/esp_app_desc.c"
+                   || size == 0) {
+        return 0;
+    }
+    size_t n = (((size - 1) / 2) < (sizeof(s_app_elf_sha256)) ? ((size - 1) / 2) : (sizeof(s_app_elf_sha256)));
     for (size_t i = 0; i < n; ++i) {
-        dst[2*i] = to_hex_digit(src[i] >> 4);
-        dst[2*i + 1] = to_hex_digit(src[i] & 0xf);
+        dst[2*i] = to_hex_digit(s_app_elf_sha256[i] >> 4);
+        dst[2*i + 1] = to_hex_digit(s_app_elf_sha256[i] & 0xf);
     }
     dst[2*n] = 0;
     return 2*n + 1;

@@ -8,7 +8,7 @@
 	.global	bta_sdp_sm_execute
 	.type	bta_sdp_sm_execute, @function
 bta_sdp_sm_execute:
-.LFB30:
+.LFB39:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/bta/sdp/bta_sdp.c"
 	.loc 1 66 0
 .LVL0:
@@ -40,7 +40,7 @@ bta_sdp_sm_execute:
 .L2:
 	.loc 1 81 0
 	retw.n
-.LFE30:
+.LFE39:
 	.size	bta_sdp_sm_execute, .-bta_sdp_sm_execute
 	.global	bta_sdp_action
 	.section	.rodata.bta_sdp_action,"a",@progbits
@@ -72,10 +72,10 @@ bta_sdp_action:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI0-.LFB30
+	.4byte	.LCFI0-.LFB39
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -200,22 +200,22 @@ bta_sdp_action:
 	.uleb128 0x4
 	.4byte	.LASF19
 	.byte	0x4
-	.byte	0x21
+	.byte	0x1a
 	.4byte	0xad
 	.uleb128 0x4
 	.4byte	.LASF20
 	.byte	0x4
-	.byte	0x22
+	.byte	0x1b
 	.4byte	0xb8
 	.uleb128 0x4
 	.4byte	.LASF21
 	.byte	0x4
-	.byte	0x23
+	.byte	0x1c
 	.4byte	0xce
 	.uleb128 0x4
 	.4byte	.LASF22
 	.byte	0x4
-	.byte	0x29
+	.byte	0x22
 	.4byte	0x105
 	.uleb128 0x2
 	.byte	0x1
@@ -224,36 +224,36 @@ bta_sdp_action:
 	.uleb128 0x7
 	.byte	0x8
 	.byte	0x4
-	.byte	0xc6
+	.byte	0xbf
 	.4byte	0x151
 	.uleb128 0x8
 	.4byte	.LASF24
 	.byte	0x4
-	.byte	0xc7
+	.byte	0xc0
 	.4byte	0xb8
 	.byte	0
 	.uleb128 0x9
 	.string	"len"
 	.byte	0x4
-	.byte	0xc8
+	.byte	0xc1
 	.4byte	0xb8
 	.byte	0x2
 	.uleb128 0x8
 	.4byte	.LASF25
 	.byte	0x4
-	.byte	0xc9
+	.byte	0xc2
 	.4byte	0xb8
 	.byte	0x4
 	.uleb128 0x8
 	.4byte	.LASF26
 	.byte	0x4
-	.byte	0xca
+	.byte	0xc3
 	.4byte	0xb8
 	.byte	0x6
 	.uleb128 0x8
 	.4byte	.LASF27
 	.byte	0x4
-	.byte	0xcb
+	.byte	0xc4
 	.4byte	0x151
 	.byte	0x8
 	.byte	0
@@ -266,12 +266,12 @@ bta_sdp_action:
 	.uleb128 0x4
 	.4byte	.LASF28
 	.byte	0x4
-	.byte	0xcc
+	.byte	0xc5
 	.4byte	0x10c
 	.uleb128 0xc
 	.4byte	.LASF29
 	.byte	0x4
-	.2byte	0x132
+	.2byte	0x12b
 	.4byte	0x177
 	.uleb128 0xa
 	.4byte	0xd9
@@ -290,46 +290,46 @@ bta_sdp_action:
 	.uleb128 0xe
 	.byte	0x10
 	.byte	0x4
-	.2byte	0x1ab
+	.2byte	0x1a4
 	.4byte	0x1c5
 	.uleb128 0xf
 	.4byte	.LASF30
 	.byte	0x4
-	.2byte	0x1ac
+	.2byte	0x1a5
 	.4byte	0xe4
 	.uleb128 0xf
 	.4byte	.LASF31
 	.byte	0x4
-	.2byte	0x1ad
+	.2byte	0x1a6
 	.4byte	0xef
 	.uleb128 0xf
 	.4byte	.LASF32
 	.byte	0x4
-	.2byte	0x1ae
+	.2byte	0x1a7
 	.4byte	0x187
 	.byte	0
 	.uleb128 0x10
 	.byte	0x14
 	.byte	0x4
-	.2byte	0x1a4
+	.2byte	0x19d
 	.4byte	0x1e8
 	.uleb128 0x11
 	.string	"len"
 	.byte	0x4
-	.2byte	0x1a9
+	.2byte	0x1a2
 	.4byte	0xe4
 	.byte	0
 	.uleb128 0x11
 	.string	"uu"
 	.byte	0x4
-	.2byte	0x1af
+	.2byte	0x1a8
 	.4byte	0x197
 	.byte	0x4
 	.byte	0
 	.uleb128 0xc
 	.4byte	.LASF33
 	.byte	0x4
-	.2byte	0x1b1
+	.2byte	0x1aa
 	.4byte	0x1c5
 	.uleb128 0x7
 	.byte	0x10
@@ -1134,8 +1134,8 @@ bta_sdp_action:
 	.byte	0x1
 	.byte	0x41
 	.4byte	0xfa
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x895
@@ -1174,7 +1174,7 @@ bta_sdp_action:
 	.uleb128 0x24
 	.4byte	.LASF159
 	.byte	0x4
-	.2byte	0x2cc
+	.2byte	0x2b8
 	.4byte	0x8a8
 	.byte	0x6
 	.byte	0xff
@@ -1188,7 +1188,7 @@ bta_sdp_action:
 	.uleb128 0x24
 	.4byte	.LASF160
 	.byte	0x4
-	.2byte	0x2cd
+	.2byte	0x2b9
 	.4byte	0x8c0
 	.byte	0x6
 	.byte	0
@@ -1721,7 +1721,7 @@ bta_sdp_action:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL5-1
-	.4byte	.LFE30
+	.4byte	.LFE39
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1768,14 +1768,14 @@ bta_sdp_action:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB30
-	.4byte	.LFE30
+	.4byte	.LFB39
+	.4byte	.LFE39
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

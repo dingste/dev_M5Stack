@@ -38,15 +38,16 @@ src/transports/protocomm_ble.o: \
  /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h \
  /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/stdio.h \
  /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_bt_defs.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h \
  /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h \
  /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/security/protocomm_security.h \
  /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/transports/protocomm_ble.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h \
  /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/common/protocomm_priv.h \
  /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/queue.h \
  /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h \
  /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h \
  /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/string.h \
- /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h \
  /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h \
  /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h
 
@@ -126,11 +127,15 @@ src/transports/protocomm_ble.o: \
 
 /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_bt_defs.h:
 
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h:
+
 /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h:
 
 /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/security/protocomm_security.h:
 
 /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/transports/protocomm_ble.h:
+
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h:
 
 /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/common/protocomm_priv.h:
 
@@ -141,8 +146,6 @@ src/transports/protocomm_ble.o: \
 /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h:
 
 /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/string.h:
-
-/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h:
 
 /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h:
 

@@ -8,7 +8,7 @@
 	.type	esp_efuse_apply_34_encoding$part$0, @function
 esp_efuse_apply_34_encoding$part$0:
 .LFB10:
-	.file 1 "/home/dieter/SoftwareDevelop/esp-idf/components/efuse/src/esp_efuse_fields.c"
+	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/src/esp_efuse_fields.c"
 	.loc 1 89 0
 .LVL0:
 	entry	sp, 64
@@ -25,8 +25,8 @@ esp_efuse_apply_34_encoding$part$0:
 	mov.n	a6, a5
 .L3:
 .LVL2:
-.LBB12:
-.LBB13:
+.LBB10:
+.LBB11:
 	.loc 1 100 0
 	add.n	a9, a11, a6
 	l8ui	a10, a9, 0
@@ -50,7 +50,7 @@ esp_efuse_apply_34_encoding$part$0:
 .LVL7:
 	.loc 1 99 0
 	bnei	a6, 6, .L3
-.LBE13:
+.LBE11:
 	.loc 1 104 0
 	mov.n	a12, a6
 	mov.n	a10, sp
@@ -78,7 +78,7 @@ esp_efuse_apply_34_encoding$part$0:
 	sub	a11, a4, a7
 	add.n	a11, a2, a11
 .LVL12:
-.LBE12:
+.LBE10:
 	.loc 1 95 0
 	bnez.n	a7, .L4
 	.loc 1 116 0
@@ -112,7 +112,6 @@ esp_efuse_get_chip_ver:
 	mov.n	a11, sp
 	call8	esp_efuse_read_field_blob
 .LVL14:
-.LBB14:
 	.loc 1 38 0
 	l32r	a2, .LC4
 	l8ui	a8, sp, 0
@@ -127,7 +126,6 @@ esp_efuse_get_chip_ver:
 	slli	a9, a9, 2
 	or	a8, a8, a9
 	addi.n	a8, a8, -1
-.LBE14:
 	.loc 1 41 0
 	movi.n	a2, 0
 	bgeui	a8, 7, .L7
@@ -289,18 +287,13 @@ esp_efuse_apply_34_encoding:
 .LC16:
 	.string	"r == ESP_OK"
 .LC19:
-	.string	"/home/dieter/SoftwareDevelop/esp-idf/components/efuse/src/esp_efuse_fields.c"
-.LC23:
-	.string	"\"(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)\" && (!((((blk_wdata0_reg + 4 * i)) >= 0x3ff00000) && ((blk_wdata0_reg + 4 * i)) <= 0x3ff13FFC))"
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/src/esp_efuse_fields.c"
 	.section	.text.esp_efuse_write_random_key,"ax",@progbits
 	.literal_position
 	.literal .LC15, 1073061912
 	.literal .LC17, .LC16
-	.literal .LC18, __func__$3519
+	.literal .LC18, __func__$3518
 	.literal .LC20, .LC19
-	.literal .LC21, -1072693248
-	.literal .LC22, 81916
-	.literal .LC24, .LC23
 	.align	4
 	.global	esp_efuse_write_random_key
 	.type	esp_efuse_write_random_key, @function
@@ -310,13 +303,11 @@ esp_efuse_write_random_key:
 .LVL28:
 	entry	sp, 96
 .LCFI7:
-.LBB15:
 	.loc 1 122 0
 	l32r	a8, .LC15
 	memw
 	l32i.n	a8, a8, 0
 .LVL29:
-.LBE15:
 	.loc 1 124 0
 	extui	a8, a8, 0, 2
 .LVL30:
@@ -327,27 +318,20 @@ esp_efuse_write_random_key:
 	call8	bootloader_fill_random
 .LVL31:
 .L21:
-	.loc 1 119 0 discriminator 2
-	mov.n	a8, a2
-.LBB16:
-.LBB17:
-	.loc 1 136 0 discriminator 2
-	l32r	a11, .LC21
-	l32r	a12, .LC22
+	.loc 1 119 0 discriminator 1
+	movi.n	a8, 0
 	movi.n	a9, 8
 	j	.L20
 .LVL32:
 .L19:
-.LBE17:
-.LBE16:
-.LBB19:
+.LBB12:
 	.loc 1 127 0
 	movi.n	a11, 0x18
 	addi	a10, sp, 32
 	call8	bootloader_fill_random
 .LVL33:
-.LBB20:
-.LBB21:
+.LBB13:
+.LBB14:
 	movi.n	a12, 0x18
 	mov.n	a11, sp
 .LVL34:
@@ -355,55 +339,42 @@ esp_efuse_write_random_key:
 .LVL35:
 	call8	esp_efuse_apply_34_encoding$part$0
 .LVL36:
-.LBE21:
-.LBE20:
+.LBE14:
+.LBE13:
 	.loc 1 130 0
 	beqz.n	a10, .L21
 	.loc 1 130 0 is_stmt 0 discriminator 1
 	l32r	a13, .LC17
 	l32r	a12, .LC18
+	l32r	a10, .LC20
 	movi	a11, 0x82
-	j	.L27
+	call8	__assert_func
 .LVL37:
 .L20:
-.LBE19:
-.LBB22:
-.LBB18:
-	.loc 1 136 0 is_stmt 1
-	add.n	a10, a8, a11
-	bltu	a12, a10, .L22
-	.loc 1 136 0 is_stmt 0 discriminator 1
-	l32r	a13, .LC24
-	l32r	a12, .LC18
-	movi	a11, 0x88
-.L27:
-	l32r	a10, .LC20
-	call8	__assert_func
-.LVL38:
-.L22:
-	.loc 1 136 0 discriminator 2
-	sub	a10, a8, a2
-	add.n	a10, sp, a10
-	l32i.n	a10, a10, 0
+.LBE12:
+.LBB15:
+	.loc 1 136 0 is_stmt 1 discriminator 2
+	add.n	a11, sp, a8
+	l32i.n	a11, a11, 0
+	add.n	a10, a8, a2
 	memw
-	s32i.n	a10, a8, 0
+	s32i.n	a11, a10, 0
 	addi.n	a8, a8, 4
 	addi.n	a9, a9, -1
 	bnez.n	a9, .L20
-.LBE18:
-.LBE22:
-	.loc 1 138 0 is_stmt 1
+.LBE15:
+	.loc 1 138 0
 	movi.n	a12, 0x20
 	movi.n	a11, 0
 	mov.n	a10, sp
 	call8	memset
-.LVL39:
+.LVL38:
 	.loc 1 139 0
 	movi.n	a12, 0x18
 	movi.n	a11, 0
 	addi	a10, sp, 32
 	call8	memset
-.LVL40:
+.LVL39:
 	retw.n
 .LFE6:
 	.size	esp_efuse_write_random_key, .-esp_efuse_write_random_key
@@ -428,12 +399,12 @@ esp_efuse_read_secure_version:
 esp_efuse_check_secure_version:
 .LFB8:
 	.loc 1 226 0
-.LVL41:
+.LVL40:
 	entry	sp, 32
 .LCFI9:
 	.loc 1 229 0
 	movi.n	a2, 1
-.LVL42:
+.LVL41:
 	retw.n
 .LFE8:
 	.size	esp_efuse_check_secure_version, .-esp_efuse_check_secure_version
@@ -444,12 +415,12 @@ esp_efuse_check_secure_version:
 esp_efuse_update_secure_version:
 .LFB9:
 	.loc 1 232 0
-.LVL43:
+.LVL42:
 	entry	sp, 32
 .LCFI10:
 	.loc 1 260 0
 	movi.n	a2, 0
-.LVL44:
+.LVL43:
 	retw.n
 .LFE9:
 	.size	esp_efuse_update_secure_version, .-esp_efuse_update_secure_version
@@ -464,10 +435,10 @@ CSWTCH$6:
 	.byte	0
 	.byte	0
 	.byte	3
-	.section	.rodata.__func__$3519,"a",@progbits
-	.type	__func__$3519, @object
-	.size	__func__$3519, 27
-__func__$3519:
+	.section	.rodata.__func__$3518,"a",@progbits
+	.type	__func__$3518, @object
+	.size	__func__$3518, 27
+__func__$3518:
 	.string	"esp_efuse_write_random_key"
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -618,20 +589,20 @@ __func__$3519:
 .LEFDE20:
 	.text
 .Letext0:
-	.file 2 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_default_types.h"
-	.file 3 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
+	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
 	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h"
-	.file 5 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h"
-	.file 6 "/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log.h"
-	.file 7 "/home/dieter/SoftwareDevelop/esp-idf/components/efuse/include/esp_efuse.h"
-	.file 8 "/home/dieter/SoftwareDevelop/esp-idf/components/efuse/esp32/include/esp_efuse_table.h"
-	.file 9 "/home/dieter/SoftwareDevelop/esp-idf/components/efuse/src/esp_efuse_utility.h"
-	.file 10 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
-	.file 11 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/assert.h"
-	.file 12 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/bootloader_random.h"
+	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
+	.file 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/esp32/include/esp_efuse_table.h"
+	.file 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/src/esp_efuse_utility.h"
+	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+	.file 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_random.h"
+	.file 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x743
+	.4byte	0x745
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -640,7 +611,7 @@ __func__$3519:
 	.byte	0xc
 	.4byte	.LASF73
 	.4byte	.LASF74
-	.4byte	.Ldebug_ranges0+0x18
+	.4byte	.Ldebug_ranges0+0
 	.4byte	0
 	.4byte	.Ldebug_line0
 	.uleb128 0x2
@@ -912,8 +883,8 @@ __func__$3519:
 	.4byte	0x1b4
 	.4byte	.LLST2
 	.uleb128 0x15
-	.4byte	.LBB12
-	.4byte	.LBE12-.LBB12
+	.4byte	.LBB10
+	.4byte	.LBE10-.LBB10
 	.uleb128 0x16
 	.4byte	0x1c0
 	.uleb128 0x2
@@ -926,8 +897,8 @@ __func__$3519:
 	.4byte	0x1d6
 	.4byte	.LLST4
 	.uleb128 0x18
-	.4byte	.LBB13
-	.4byte	.LBE13-.LBB13
+	.4byte	.LBB11
+	.4byte	.LBE11-.LBB11
 	.4byte	0x283
 	.uleb128 0x17
 	.4byte	0x1e2
@@ -935,7 +906,7 @@ __func__$3519:
 	.byte	0
 	.uleb128 0x19
 	.4byte	.LVL8
-	.4byte	0x6dc
+	.4byte	0x6de
 	.4byte	0x2aa
 	.uleb128 0x1a
 	.uleb128 0x1
@@ -965,7 +936,7 @@ __func__$3519:
 	.byte	0
 	.uleb128 0x1b
 	.4byte	.LVL10
-	.4byte	0x6dc
+	.4byte	0x6de
 	.uleb128 0x1a
 	.uleb128 0x1
 	.byte	0x5a
@@ -995,7 +966,7 @@ __func__$3519:
 	.4byte	.LFE0-.LFB0
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x361
+	.4byte	0x358
 	.uleb128 0x1d
 	.4byte	.LASF38
 	.byte	0x1
@@ -1018,9 +989,6 @@ __func__$3519:
 	.byte	0x23
 	.4byte	0x89
 	.4byte	.LLST6
-	.uleb128 0x1f
-	.4byte	.LASF51
-	.4byte	0x371
 	.uleb128 0x1e
 	.4byte	.LASF41
 	.byte	0x1
@@ -1035,8 +1003,8 @@ __func__$3519:
 	.4byte	.LLST8
 	.uleb128 0x19
 	.4byte	.LVL13
-	.4byte	0x6e5
-	.4byte	0x34b
+	.4byte	0x6e7
+	.4byte	0x342
 	.uleb128 0x1a
 	.uleb128 0x1
 	.byte	0x5b
@@ -1051,7 +1019,7 @@ __func__$3519:
 	.byte	0
 	.uleb128 0x1b
 	.4byte	.LVL14
-	.4byte	0x6e5
+	.4byte	0x6e7
 	.uleb128 0x1a
 	.uleb128 0x1
 	.byte	0x5b
@@ -1065,15 +1033,6 @@ __func__$3519:
 	.byte	0x31
 	.byte	0
 	.byte	0
-	.uleb128 0x10
-	.4byte	0xd5
-	.4byte	0x371
-	.uleb128 0x11
-	.4byte	0xc7
-	.byte	0x16
-	.byte	0
-	.uleb128 0x6
-	.4byte	0x361
 	.uleb128 0x1c
 	.4byte	.LASF44
 	.byte	0x1
@@ -1083,7 +1042,7 @@ __func__$3519:
 	.4byte	.LFE1-.LFB1
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x3b3
+	.4byte	0x395
 	.uleb128 0x1d
 	.4byte	.LASF45
 	.byte	0x1
@@ -1094,7 +1053,7 @@ __func__$3519:
 	.sleb128 -48
 	.uleb128 0x1b
 	.4byte	.LVL18
-	.4byte	0x6e5
+	.4byte	0x6e7
 	.uleb128 0x1a
 	.uleb128 0x1
 	.byte	0x5b
@@ -1108,7 +1067,7 @@ __func__$3519:
 	.byte	0x33
 	.byte	0
 	.byte	0
-	.uleb128 0x20
+	.uleb128 0x1f
 	.4byte	.LASF46
 	.byte	0x1
 	.byte	0x46
@@ -1116,12 +1075,12 @@ __func__$3519:
 	.4byte	.LFE2-.LFB2
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x3d2
-	.uleb128 0x21
-	.4byte	.LVL19
-	.4byte	0x6f0
-	.byte	0
+	.4byte	0x3b4
 	.uleb128 0x20
+	.4byte	.LVL19
+	.4byte	0x6f2
+	.byte	0
+	.uleb128 0x1f
 	.4byte	.LASF47
 	.byte	0x1
 	.byte	0x4c
@@ -1129,12 +1088,12 @@ __func__$3519:
 	.4byte	.LFE3-.LFB3
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x3f1
-	.uleb128 0x21
-	.4byte	.LVL20
-	.4byte	0x6fb
-	.byte	0
+	.4byte	0x3d3
 	.uleb128 0x20
+	.4byte	.LVL20
+	.4byte	0x6fd
+	.byte	0
+	.uleb128 0x1f
 	.4byte	.LASF48
 	.byte	0x1
 	.byte	0x52
@@ -1142,23 +1101,23 @@ __func__$3519:
 	.4byte	.LFE4-.LFB4
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x43f
+	.4byte	0x421
 	.uleb128 0x19
 	.4byte	.LVL21
-	.4byte	0x706
-	.4byte	0x419
+	.4byte	0x708
+	.4byte	0x3fb
 	.uleb128 0x1a
 	.uleb128 0x1
 	.byte	0x5b
 	.uleb128 0x1
 	.byte	0x31
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.4byte	.LVL22
-	.4byte	0x711
+	.4byte	0x713
 	.uleb128 0x1b
 	.4byte	.LVL23
-	.4byte	0x71c
+	.4byte	0x71e
 	.uleb128 0x1a
 	.uleb128 0x1
 	.byte	0x5a
@@ -1173,21 +1132,21 @@ __func__$3519:
 	.4byte	.LC8
 	.byte	0
 	.byte	0
-	.uleb128 0x22
+	.uleb128 0x21
 	.4byte	0x18e
 	.4byte	.LFB5
 	.4byte	.LFE5-.LFB5
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x487
+	.4byte	0x469
 	.uleb128 0x14
 	.4byte	0x19e
 	.4byte	.LLST9
-	.uleb128 0x23
+	.uleb128 0x22
 	.4byte	0x1a9
 	.uleb128 0x1
 	.byte	0x53
-	.uleb128 0x23
+	.uleb128 0x22
 	.4byte	0x1b4
 	.uleb128 0x1
 	.byte	0x54
@@ -1215,7 +1174,7 @@ __func__$3519:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0x20
+	.uleb128 0x1f
 	.4byte	.LASF49
 	.byte	0x1
 	.byte	0x76
@@ -1223,27 +1182,27 @@ __func__$3519:
 	.4byte	.LFE6-.LFB6
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x5db
-	.uleb128 0x24
+	.4byte	0x5dd
+	.uleb128 0x23
 	.4byte	.LASF53
 	.byte	0x1
 	.byte	0x76
 	.4byte	0xaa
 	.uleb128 0x1
 	.byte	0x52
-	.uleb128 0x25
+	.uleb128 0x24
 	.string	"buf"
 	.byte	0x1
 	.byte	0x78
-	.4byte	0x5db
+	.4byte	0x5dd
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -96
-	.uleb128 0x25
+	.uleb128 0x24
 	.string	"raw"
 	.byte	0x1
 	.byte	0x79
-	.4byte	0x5eb
+	.4byte	0x5ed
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
@@ -1253,57 +1212,37 @@ __func__$3519:
 	.byte	0x7a
 	.4byte	0xaa
 	.4byte	.LLST10
-	.uleb128 0x26
+	.uleb128 0x25
 	.4byte	.LASF51
-	.4byte	0x60b
+	.4byte	0x60d
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$3519
-	.uleb128 0x27
-	.4byte	.Ldebug_ranges0+0
-	.4byte	0x50e
-	.uleb128 0x28
-	.string	"i"
-	.byte	0x1
-	.byte	0x86
-	.4byte	0x62
-	.4byte	.LLST11
-	.uleb128 0x1b
-	.4byte	.LVL38
-	.4byte	0x727
-	.uleb128 0x1a
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	.LC19
-	.byte	0
-	.byte	0
+	.4byte	__func__$3518
 	.uleb128 0x18
-	.4byte	.LBB19
-	.4byte	.LBE19-.LBB19
-	.4byte	0x585
+	.4byte	.LBB12
+	.4byte	.LBE12-.LBB12
+	.4byte	0x56c
 	.uleb128 0xf
 	.string	"r"
 	.byte	0x1
 	.byte	0x80
 	.4byte	0xe7
-	.uleb128 0x29
+	.uleb128 0x26
 	.4byte	0x18e
-	.4byte	.LBB20
-	.4byte	.LBE20-.LBB20
+	.4byte	.LBB13
+	.4byte	.LBE13-.LBB13
 	.byte	0x1
 	.byte	0x80
-	.4byte	0x56f
+	.4byte	0x527
 	.uleb128 0x14
 	.4byte	0x1b4
-	.4byte	.LLST12
+	.4byte	.LLST11
 	.uleb128 0x14
 	.4byte	0x1a9
-	.4byte	.LLST13
+	.4byte	.LLST12
 	.uleb128 0x14
 	.4byte	0x19e
-	.4byte	.LLST14
+	.4byte	.LLST13
 	.uleb128 0x1b
 	.4byte	.LVL36
 	.4byte	0x21b
@@ -1326,9 +1265,10 @@ __func__$3519:
 	.byte	0x48
 	.byte	0
 	.byte	0
-	.uleb128 0x1b
+	.uleb128 0x19
 	.4byte	.LVL33
-	.4byte	0x732
+	.4byte	0x729
+	.4byte	0x540
 	.uleb128 0x1a
 	.uleb128 0x1
 	.byte	0x5a
@@ -1341,11 +1281,50 @@ __func__$3519:
 	.uleb128 0x1
 	.byte	0x48
 	.byte	0
+	.uleb128 0x1b
+	.4byte	.LVL37
+	.4byte	0x734
+	.uleb128 0x1a
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	.LC19
+	.uleb128 0x1a
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x8
+	.byte	0x82
+	.uleb128 0x1a
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	__func__$3518
+	.uleb128 0x1a
+	.uleb128 0x1
+	.byte	0x5d
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	.LC16
+	.byte	0
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LBB15
+	.4byte	.LBE15-.LBB15
+	.4byte	0x587
+	.uleb128 0x27
+	.string	"i"
+	.byte	0x1
+	.byte	0x86
+	.4byte	0x62
+	.4byte	.LLST14
 	.byte	0
 	.uleb128 0x19
 	.4byte	.LVL31
-	.4byte	0x732
-	.4byte	0x5a0
+	.4byte	0x729
+	.4byte	0x5a2
 	.uleb128 0x1a
 	.uleb128 0x1
 	.byte	0x5a
@@ -1360,9 +1339,9 @@ __func__$3519:
 	.byte	0x20
 	.byte	0
 	.uleb128 0x19
-	.4byte	.LVL39
-	.4byte	0x73d
-	.4byte	0x5c0
+	.4byte	.LVL38
+	.4byte	0x73f
+	.4byte	0x5c2
 	.uleb128 0x1a
 	.uleb128 0x1
 	.byte	0x5a
@@ -1382,8 +1361,8 @@ __func__$3519:
 	.byte	0x20
 	.byte	0
 	.uleb128 0x1b
-	.4byte	.LVL40
-	.4byte	0x73d
+	.4byte	.LVL39
+	.4byte	0x73f
 	.uleb128 0x1a
 	.uleb128 0x1
 	.byte	0x5a
@@ -1404,28 +1383,28 @@ __func__$3519:
 	.byte	0
 	.uleb128 0x10
 	.4byte	0xaa
-	.4byte	0x5eb
+	.4byte	0x5ed
 	.uleb128 0x11
 	.4byte	0xc7
 	.byte	0x7
 	.byte	0
 	.uleb128 0x10
 	.4byte	0x89
-	.4byte	0x5fb
+	.4byte	0x5fd
 	.uleb128 0x11
 	.4byte	0xc7
 	.byte	0x17
 	.byte	0
 	.uleb128 0x10
 	.4byte	0xd5
-	.4byte	0x60b
+	.4byte	0x60d
 	.uleb128 0x11
 	.4byte	0xc7
 	.byte	0x1a
 	.byte	0
 	.uleb128 0x6
-	.4byte	0x5fb
-	.uleb128 0x2a
+	.4byte	0x5fd
+	.uleb128 0x28
 	.4byte	0x20f
 	.4byte	.LFB7
 	.4byte	.LFE7-.LFB7
@@ -1435,19 +1414,19 @@ __func__$3519:
 	.4byte	.LASF52
 	.byte	0x1
 	.byte	0xe1
-	.4byte	0x653
+	.4byte	0x655
 	.4byte	.LFB8
 	.4byte	.LFE8-.LFB8
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x653
-	.uleb128 0x2b
+	.4byte	0x655
+	.uleb128 0x29
 	.4byte	.LASF54
 	.byte	0x1
 	.byte	0xe1
 	.4byte	0xaa
 	.4byte	.LLST15
-	.uleb128 0x2c
+	.uleb128 0x2a
 	.4byte	.LASF55
 	.byte	0x1
 	.byte	0xe3
@@ -1466,19 +1445,19 @@ __func__$3519:
 	.4byte	.LFE9-.LFB9
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x683
-	.uleb128 0x2b
+	.4byte	0x685
+	.uleb128 0x29
 	.4byte	.LASF54
 	.byte	0x1
 	.byte	0xe7
 	.4byte	0xaa
 	.4byte	.LLST16
 	.byte	0
-	.uleb128 0x25
+	.uleb128 0x24
 	.string	"TAG"
 	.byte	0x1
 	.byte	0x1c
-	.4byte	0x695
+	.4byte	0x697
 	.uleb128 0x6
 	.byte	0x3
 	.4byte	.LC8
@@ -1486,79 +1465,79 @@ __func__$3519:
 	.uleb128 0x6
 	.4byte	0xdc
 	.uleb128 0x10
-	.4byte	0x6a5
-	.4byte	0x6a5
-	.uleb128 0x2d
+	.4byte	0x6a7
+	.4byte	0x6a7
+	.uleb128 0x2b
 	.byte	0
 	.uleb128 0x5
 	.byte	0x4
-	.4byte	0x6ab
+	.4byte	0x6ad
 	.uleb128 0x6
 	.4byte	0x183
-	.uleb128 0x2e
+	.uleb128 0x2c
 	.4byte	.LASF58
 	.byte	0x8
 	.byte	0x28
-	.4byte	0x69a
-	.uleb128 0x2e
+	.4byte	0x69c
+	.uleb128 0x2c
 	.4byte	.LASF59
 	.byte	0x8
 	.byte	0x33
-	.4byte	0x69a
-	.uleb128 0x2e
+	.4byte	0x69c
+	.uleb128 0x2c
 	.4byte	.LASF60
 	.byte	0x8
 	.byte	0x36
-	.4byte	0x69a
-	.uleb128 0x2e
+	.4byte	0x69c
+	.uleb128 0x2c
 	.4byte	.LASF61
 	.byte	0x8
 	.byte	0x37
-	.4byte	0x69a
-	.uleb128 0x2f
+	.4byte	0x69c
+	.uleb128 0x2d
 	.4byte	.LASF70
 	.4byte	.LASF70
-	.uleb128 0x30
+	.uleb128 0x2e
 	.4byte	.LASF62
 	.4byte	.LASF62
 	.byte	0x7
 	.byte	0x4c
-	.uleb128 0x30
+	.uleb128 0x2e
 	.4byte	.LASF63
 	.4byte	.LASF63
 	.byte	0x9
 	.byte	0x58
-	.uleb128 0x30
+	.uleb128 0x2e
 	.4byte	.LASF64
 	.4byte	.LASF64
 	.byte	0x9
 	.byte	0x6e
-	.uleb128 0x30
+	.uleb128 0x2e
 	.4byte	.LASF65
 	.4byte	.LASF65
 	.byte	0x7
 	.byte	0x7c
-	.uleb128 0x30
+	.uleb128 0x2e
 	.4byte	.LASF66
 	.4byte	.LASF66
 	.byte	0x6
 	.byte	0x57
-	.uleb128 0x30
+	.uleb128 0x2e
 	.4byte	.LASF67
 	.4byte	.LASF67
 	.byte	0xa
 	.byte	0xde
-	.uleb128 0x30
+	.uleb128 0x2e
 	.4byte	.LASF68
 	.4byte	.LASF68
 	.byte	0xb
-	.byte	0x29
-	.uleb128 0x30
+	.byte	0x31
+	.uleb128 0x2e
 	.4byte	.LASF69
 	.4byte	.LASF69
 	.byte	0xc
-	.byte	0x31
-	.uleb128 0x2f
+	.byte	0x29
+	.uleb128 0x2d
 	.4byte	.LASF71
 	.4byte	.LASF71
 	.byte	0
@@ -1945,17 +1924,6 @@ __func__$3519:
 	.byte	0
 	.byte	0
 	.uleb128 0x1f
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x34
-	.uleb128 0x19
-	.byte	0
-	.byte	0
-	.uleb128 0x20
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -1980,7 +1948,7 @@ __func__$3519:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.uleb128 0x4109
 	.byte	0
 	.uleb128 0x11
@@ -1989,7 +1957,7 @@ __func__$3519:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x22
+	.uleb128 0x21
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x31
@@ -2006,7 +1974,7 @@ __func__$3519:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x23
+	.uleb128 0x22
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x31
@@ -2015,11 +1983,26 @@ __func__$3519:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x24
+	.uleb128 0x23
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x24
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
@@ -2034,21 +2017,6 @@ __func__$3519:
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x26
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
 	.uleb128 0xe
 	.uleb128 0x49
 	.uleb128 0x13
@@ -2058,31 +2026,7 @@ __func__$3519:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x27
-	.uleb128 0xb
-	.byte	0x1
-	.uleb128 0x55
-	.uleb128 0x17
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x28
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x17
-	.byte	0
-	.byte	0
-	.uleb128 0x29
+	.uleb128 0x26
 	.uleb128 0x1d
 	.byte	0x1
 	.uleb128 0x31
@@ -2099,7 +2043,22 @@ __func__$3519:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x27
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x17
+	.byte	0
+	.byte	0
+	.uleb128 0x28
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x31
@@ -2114,7 +2073,7 @@ __func__$3519:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x29
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -2129,7 +2088,7 @@ __func__$3519:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x2c
+	.uleb128 0x2a
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -2142,12 +2101,12 @@ __func__$3519:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x2d
+	.uleb128 0x2b
 	.uleb128 0x21
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2c
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -2164,7 +2123,7 @@ __func__$3519:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x2f
+	.uleb128 0x2d
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -2177,7 +2136,7 @@ __func__$3519:
 	.uleb128 0xe
 	.byte	0
 	.byte	0
-	.uleb128 0x30
+	.uleb128 0x2e
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -2403,14 +2362,6 @@ __func__$3519:
 	.4byte	0
 	.4byte	0
 .LLST11:
-	.4byte	.LVL31
-	.4byte	.LVL32
-	.2byte	0x2
-	.byte	0x30
-	.byte	0x9f
-	.4byte	0
-	.4byte	0
-.LLST12:
 	.4byte	.LVL33
 	.4byte	.LVL37
 	.2byte	0x2
@@ -2418,7 +2369,7 @@ __func__$3519:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST13:
+.LLST12:
 	.4byte	.LVL33
 	.4byte	.LVL34
 	.2byte	0x4
@@ -2437,7 +2388,7 @@ __func__$3519:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST14:
+.LLST13:
 	.4byte	.LVL33
 	.4byte	.LVL35
 	.2byte	0x3
@@ -2456,12 +2407,20 @@ __func__$3519:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
+.LLST14:
+	.4byte	.LVL31
+	.4byte	.LVL32
+	.2byte	0x2
+	.byte	0x30
+	.byte	0x9f
+	.4byte	0
+	.4byte	0
 .LLST15:
+	.4byte	.LVL40
 	.4byte	.LVL41
-	.4byte	.LVL42
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL42
+	.4byte	.LVL41
 	.4byte	.LFE8
 	.2byte	0x4
 	.byte	0xf3
@@ -2471,11 +2430,11 @@ __func__$3519:
 	.4byte	0
 	.4byte	0
 .LLST16:
+	.4byte	.LVL42
 	.4byte	.LVL43
-	.4byte	.LVL44
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL44
+	.4byte	.LVL43
 	.4byte	.LFE9
 	.2byte	0x4
 	.byte	0xf3
@@ -2518,12 +2477,6 @@ __func__$3519:
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LBB16
-	.4byte	.LBE16
-	.4byte	.LBB22
-	.4byte	.LBE22
-	.4byte	0
-	.4byte	0
 	.4byte	.LFB10
 	.4byte	.LFE10
 	.4byte	.LFB0
@@ -2675,8 +2628,6 @@ __func__$3519:
 	.string	"__uint16_t"
 .LASF57:
 	.string	"esp_efuse_update_secure_version"
-.LASF73:
-	.string	"/home/dieter/SoftwareDevelop/esp-idf/components/efuse/src/esp_efuse_fields.c"
 .LASF21:
 	.string	"ESP_LOG_NONE"
 .LASF47:
@@ -2691,17 +2642,19 @@ __func__$3519:
 	.string	"esp_efuse_get_chip_ver"
 .LASF23:
 	.string	"ESP_LOG_WARN"
+.LASF73:
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/src/esp_efuse_fields.c"
 .LASF20:
 	.string	"esp_err_t"
 .LASF11:
 	.string	"uint8_t"
 .LASF48:
 	.string	"esp_efuse_disable_basic_rom_console"
-.LASF68:
+.LASF69:
 	.string	"__assert_func"
 .LASF44:
 	.string	"esp_efuse_get_pkg_ver"
-.LASF69:
+.LASF68:
 	.string	"bootloader_fill_random"
 .LASF41:
 	.string	"combine_value"

@@ -4,7 +4,7 @@
 	.section	.text.rtc_init,"ax",@progbits
 	.literal_position
 	.literal .LC0, 1072988208
-	.literal .LC1, -67108865
+	.literal .LC1, 603979775
 	.literal .LC2, 1072988188
 	.literal .LC3, 16777215
 	.literal .LC4, -16760833
@@ -25,30 +25,31 @@
 	.literal .LC19, 1072693412
 	.literal .LC20, 1072693420
 	.literal .LC22, 1072988272
-	.literal .LC23, 1072988160
-	.literal .LC24, -8193
-	.literal .LC25, -4194305
-	.literal .LC26, -524289
-	.literal .LC27, -65537
-	.literal .LC28, 1048576
-	.literal .LC29, 131072
-	.literal .LC30, 16384
-	.literal .LC31, -16777217
-	.literal .LC32, 8388608
-	.literal .LC33, 2147483647
-	.literal .LC34, -536870913
-	.literal .LC36, 268435456
-	.literal .LC37, -268435457
-	.literal .LC38, 1072988292
-	.literal .LC39, -1048577
-	.literal .LC40, -262145
-	.literal .LC41, -87361
-	.literal .LC42, 1072988288
-	.literal .LC43, -73729
-	.literal .LC44, 1072988296
-	.literal .LC45, -178913281
-	.literal .LC46, -16385
-	.literal .LC47, -4097
+	.literal .LC23, -67108865
+	.literal .LC24, 1072988160
+	.literal .LC25, -8193
+	.literal .LC26, -4194305
+	.literal .LC27, -524289
+	.literal .LC28, -65537
+	.literal .LC29, 1048576
+	.literal .LC30, 131072
+	.literal .LC31, 16384
+	.literal .LC32, -16777217
+	.literal .LC33, 8388608
+	.literal .LC34, 2147483647
+	.literal .LC35, -536870913
+	.literal .LC37, 268435456
+	.literal .LC38, -268435457
+	.literal .LC39, 1072988292
+	.literal .LC40, -1048577
+	.literal .LC41, -262145
+	.literal .LC42, -87361
+	.literal .LC43, 1072988288
+	.literal .LC44, -73729
+	.literal .LC45, 1072988296
+	.literal .LC46, -178913281
+	.literal .LC47, -16385
+	.literal .LC48, -4097
 	.align	4
 	.global	rtc_init
 	.type	rtc_init, @function
@@ -64,13 +65,13 @@ rtc_init:
 	l32r	a8, .LC1
 	memw
 	l32i.n	a10, a9, 0
-	.loc 1 29 0
+	.loc 1 30 0
 	extui	a11, a2, 16, 8
 	.loc 1 27 0
 	and	a8, a10, a8
 	memw
 	s32i.n	a8, a9, 0
-	.loc 1 29 0
+	.loc 1 30 0
 	l32r	a8, .LC2
 	l32r	a10, .LC3
 	memw
@@ -80,7 +81,7 @@ rtc_init:
 	or	a9, a11, a9
 	memw
 	s32i.n	a9, a8, 0
-	.loc 1 30 0
+	.loc 1 31 0
 	memw
 	l32i.n	a9, a8, 0
 	l32r	a10, .LC4
@@ -90,7 +91,7 @@ rtc_init:
 	or	a9, a11, a9
 	memw
 	s32i.n	a9, a8, 0
-	.loc 1 31 0
+	.loc 1 32 0
 	memw
 	l32i.n	a9, a8, 0
 	l32r	a10, .LC5
@@ -100,7 +101,7 @@ rtc_init:
 	or	a9, a11, a9
 	memw
 	s32i.n	a9, a8, 0
-	.loc 1 33 0
+	.loc 1 34 0
 	l32r	a8, .LC6
 	l32r	a9, .LC7
 	memw
@@ -108,14 +109,14 @@ rtc_init:
 	or	a9, a10, a9
 	memw
 	s32i.n	a9, a8, 0
-	.loc 1 34 0
+	.loc 1 35 0
 	memw
 	l32i.n	a10, a8, 0
 	l32r	a9, .LC8
 	or	a9, a10, a9
 	memw
 	s32i.n	a9, a8, 0
-	.loc 1 38 0
+	.loc 1 39 0
 	l32r	a9, .LC9
 	l32r	a8, .LC10
 	memw
@@ -125,7 +126,7 @@ rtc_init:
 	or	a8, a10, a8
 	memw
 	s32i.n	a8, a9, 0
-	.loc 1 39 0
+	.loc 1 40 0
 	memw
 	l32i.n	a10, a9, 0
 	l32r	a8, .LC12
@@ -134,7 +135,7 @@ rtc_init:
 	or	a8, a8, a10
 	memw
 	s32i.n	a8, a9, 0
-	.loc 1 41 0
+	.loc 1 42 0
 	bnone	a2, a10, .L2
 .LVL1:
 .LBB20:
@@ -144,7 +145,7 @@ rtc_init:
 	l32r	a10, .LC14
 .LBE21:
 .LBE20:
-	.loc 1 43 0
+	.loc 1 44 0
 	l32r	a8, .LC15
 .LBB23:
 .LBB22:
@@ -153,7 +154,7 @@ rtc_init:
 	l32i.n	a9, a10, 0
 .LBE22:
 .LBE23:
-	.loc 1 43 0
+	.loc 1 44 0
 	and	a9, a9, a8
 	memw
 	s32i.n	a9, a10, 0
@@ -166,7 +167,7 @@ rtc_init:
 	l32i.n	a10, a9, 0
 .LBE25:
 .LBE24:
-	.loc 1 44 0
+	.loc 1 45 0
 	and	a8, a10, a8
 	memw
 	s32i.n	a8, a9, 0
@@ -177,7 +178,7 @@ rtc_init:
 	l32r	a8, .LC17
 .LBE27:
 .LBE26:
-	.loc 1 46 0
+	.loc 1 47 0
 	movi	a9, -0xfd
 .LBB29:
 .LBB28:
@@ -186,7 +187,7 @@ rtc_init:
 	l32i.n	a10, a8, 0
 .LBE28:
 .LBE29:
-	.loc 1 46 0
+	.loc 1 47 0
 	and	a9, a10, a9
 	memw
 	s32i.n	a9, a8, 0
@@ -198,7 +199,7 @@ rtc_init:
 	l32i.n	a10, a8, 0
 .LBE31:
 .LBE30:
-	.loc 1 47 0
+	.loc 1 48 0
 	movi.n	a9, -3
 	and	a9, a10, a9
 	memw
@@ -211,7 +212,7 @@ rtc_init:
 	l32i.n	a10, a8, 0
 .LBE33:
 .LBE32:
-	.loc 1 48 0
+	.loc 1 49 0
 	movi.n	a9, -2
 	and	a10, a10, a9
 	memw
@@ -225,7 +226,7 @@ rtc_init:
 	l32i.n	a10, a8, 0
 .LBE35:
 .LBE34:
-	.loc 1 50 0
+	.loc 1 51 0
 	movi.n	a10, 0
 	memw
 	s32i.n	a10, a8, 0
@@ -238,7 +239,7 @@ rtc_init:
 	l32i.n	a8, a10, 0
 .LBE37:
 .LBE36:
-	.loc 1 51 0
+	.loc 1 52 0
 	and	a8, a8, a9
 	memw
 	s32i.n	a8, a10, 0
@@ -249,7 +250,7 @@ rtc_init:
 	l32r	a8, .LC20
 .LBE39:
 .LBE38:
-	.loc 1 53 0
+	.loc 1 54 0
 	movi	a10, -0x101
 .LBB41:
 .LBB40:
@@ -258,7 +259,7 @@ rtc_init:
 	l32i.n	a11, a8, 0
 .LBE40:
 .LBE41:
-	.loc 1 53 0
+	.loc 1 54 0
 	and	a10, a11, a10
 	memw
 	s32i.n	a10, a8, 0
@@ -270,34 +271,27 @@ rtc_init:
 	l32i.n	a10, a8, 0
 .LBE43:
 .LBE42:
-	.loc 1 54 0
+	.loc 1 55 0
 	and	a9, a10, a9
 	memw
 	s32i.n	a9, a8, 0
 .LVL10:
 .L2:
-	.loc 1 57 0
-	bbci	a2, 25, .L1
 	.loc 1 58 0
+	bbci	a2, 25, .L1
+	.loc 1 59 0
 	l32r	a9, .LC22
-	l32r	a8, .LC1
+	l32r	a8, .LC23
 	memw
 	l32i.n	a10, a9, 0
 	and	a8, a10, a8
 	memw
 	s32i.n	a8, a9, 0
-	.loc 1 60 0
-	l32r	a8, .LC23
-	l32r	a9, .LC24
-	memw
-	l32i.n	a10, a8, 0
-	and	a9, a10, a9
-	memw
-	s32i.n	a9, a8, 0
-	.loc 1 62 0
-	memw
-	l32i.n	a10, a8, 0
+	.loc 1 61 0
+	l32r	a8, .LC24
 	l32r	a9, .LC25
+	memw
+	l32i.n	a10, a8, 0
 	and	a9, a10, a9
 	memw
 	s32i.n	a9, a8, 0
@@ -315,11 +309,11 @@ rtc_init:
 	and	a9, a10, a9
 	memw
 	s32i.n	a9, a8, 0
-	.loc 1 66 0
+	.loc 1 65 0
 	memw
 	l32i.n	a10, a8, 0
 	l32r	a9, .LC28
-	or	a9, a10, a9
+	and	a9, a10, a9
 	memw
 	s32i.n	a9, a8, 0
 	.loc 1 67 0
@@ -336,81 +330,81 @@ rtc_init:
 	or	a9, a10, a9
 	memw
 	s32i.n	a9, a8, 0
-	.loc 1 70 0
+	.loc 1 69 0
+	memw
+	l32i.n	a10, a8, 0
+	l32r	a9, .LC31
+	or	a9, a10, a9
+	memw
+	s32i.n	a9, a8, 0
+	.loc 1 71 0
 	l32r	a9, .LC0
-	l32r	a10, .LC31
+	l32r	a10, .LC32
 	memw
 	l32i.n	a11, a9, 0
 	and	a10, a11, a10
 	memw
 	s32i.n	a10, a9, 0
-	.loc 1 71 0
+	.loc 1 72 0
 	memw
 	l32i.n	a11, a9, 0
-	l32r	a10, .LC32
+	l32r	a10, .LC33
 	or	a10, a11, a10
 	memw
 	s32i.n	a10, a9, 0
-	.loc 1 72 0
+	.loc 1 73 0
 	memw
 	l32i.n	a10, a8, 0
 	l32r	a9, .LC15
 	and	a9, a10, a9
 	memw
 	s32i.n	a9, a8, 0
-	.loc 1 73 0
+	.loc 1 74 0
 	memw
 	l32i.n	a10, a8, 0
 	movi	a9, -0x201
 	and	a9, a10, a9
 	memw
 	s32i.n	a9, a8, 0
-	.loc 1 75 0
-	l32r	a8, .LC9
-	l32r	a9, .LC33
-	memw
-	l32i.n	a10, a8, 0
-	and	a9, a10, a9
-	memw
-	s32i.n	a9, a8, 0
 	.loc 1 76 0
+	l32r	a8, .LC9
+	l32r	a9, .LC34
 	memw
 	l32i.n	a10, a8, 0
-	l32r	a9, .LC34
 	and	a9, a10, a9
 	memw
 	s32i.n	a9, a8, 0
-	.loc 1 78 0
+	.loc 1 77 0
+	memw
+	l32i.n	a10, a8, 0
+	l32r	a9, .LC35
+	and	a9, a10, a9
+	memw
+	s32i.n	a9, a8, 0
+	.loc 1 79 0
 	memw
 	l32i.n	a9, a8, 0
-	.loc 1 77 0
-	bbci	a2, 26, .L4
 	.loc 1 78 0
-	l32r	a2, .LC36
+	bbci	a2, 26, .L4
+	.loc 1 79 0
+	l32r	a2, .LC37
 .LVL11:
 	or	a2, a9, a2
 	j	.L12
 .LVL12:
 .L4:
-	.loc 1 80 0
-	l32r	a2, .LC37
+	.loc 1 81 0
+	l32r	a2, .LC38
 .LVL13:
 	and	a2, a9, a2
 .L12:
 	memw
 	s32i.n	a2, a8, 0
-	.loc 1 83 0
-	l32r	a8, .LC38
+	.loc 1 84 0
+	l32r	a8, .LC39
 	movi.n	a2, -0x11
 	memw
 	l32i.n	a9, a8, 0
-	and	a2, a9, a2
-	memw
-	s32i.n	a2, a8, 0
-	.loc 1 84 0
-	memw
-	l32i.n	a9, a8, 0
-	l32r	a2, .LC39
 	and	a2, a9, a2
 	memw
 	s32i.n	a2, a8, 0
@@ -426,35 +420,35 @@ rtc_init:
 	l32i.n	a9, a8, 0
 	l32r	a2, .LC41
 	and	a2, a9, a2
-	.loc 1 87 0
-	l32r	a9, .LC42
-	.loc 1 86 0
 	memw
 	s32i.n	a2, a8, 0
 	.loc 1 87 0
 	memw
-	l32i.n	a8, a9, 0
-	l32r	a2, .LC43
-	and	a2, a8, a2
-	memw
-	s32i.n	a2, a9, 0
+	l32i.n	a9, a8, 0
+	l32r	a2, .LC42
+	and	a2, a9, a2
 	.loc 1 88 0
-	memw
-	l32i.n	a8, a9, 0
-	l32r	a2, .LC26
-	and	a2, a8, a2
-	.loc 1 89 0
-	l32r	a8, .LC44
-	.loc 1 88 0
-	memw
-	s32i.n	a2, a9, 0
-	.loc 1 89 0
-	memw
-	l32i.n	a10, a8, 0
-	l32r	a2, .LC33
-	and	a2, a10, a2
+	l32r	a9, .LC43
+	.loc 1 87 0
 	memw
 	s32i.n	a2, a8, 0
+	.loc 1 88 0
+	memw
+	l32i.n	a8, a9, 0
+	l32r	a2, .LC44
+	and	a2, a8, a2
+	memw
+	s32i.n	a2, a9, 0
+	.loc 1 89 0
+	memw
+	l32i.n	a8, a9, 0
+	l32r	a2, .LC27
+	and	a2, a8, a2
+	.loc 1 90 0
+	l32r	a8, .LC45
+	.loc 1 89 0
+	memw
+	s32i.n	a2, a9, 0
 	.loc 1 90 0
 	memw
 	l32i.n	a10, a8, 0
@@ -465,35 +459,42 @@ rtc_init:
 	.loc 1 91 0
 	memw
 	l32i.n	a10, a8, 0
-	l32r	a2, .LC45
+	l32r	a2, .LC35
 	and	a2, a10, a2
 	memw
 	s32i.n	a2, a8, 0
 	.loc 1 92 0
+	memw
+	l32i.n	a10, a8, 0
+	l32r	a2, .LC46
+	and	a2, a10, a2
+	memw
+	s32i.n	a2, a8, 0
+	.loc 1 93 0
 	memw
 	l32i.n	a10, a9, 0
 	movi.n	a2, -6
 	and	a2, a10, a2
 	memw
 	s32i.n	a2, a9, 0
-	.loc 1 93 0
+	.loc 1 94 0
 	memw
 	l32i.n	a10, a9, 0
 	movi	a2, -0x21
 	and	a2, a10, a2
 	memw
 	s32i.n	a2, a9, 0
-	.loc 1 95 0
-	memw
-	l32i.n	a9, a8, 0
-	l32r	a2, .LC46
-	and	a2, a9, a2
-	memw
-	s32i.n	a2, a8, 0
 	.loc 1 96 0
 	memw
 	l32i.n	a9, a8, 0
 	l32r	a2, .LC47
+	and	a2, a9, a2
+	memw
+	s32i.n	a2, a8, 0
+	.loc 1 97 0
+	memw
+	l32i.n	a9, a8, 0
+	l32r	a2, .LC48
 	and	a2, a9, a2
 	memw
 	s32i.n	a2, a8, 0
@@ -504,36 +505,36 @@ rtc_init:
 	.size	rtc_init, .-rtc_init
 	.section	.text.rtc_vddsdio_get_config,"ax",@progbits
 	.literal_position
-	.literal .LC48, 1072988276
-	.literal .LC54, 1073061904
-	.literal .LC58, 1073061900
-	.literal .LC61, 1072971832
+	.literal .LC49, 1072988276
+	.literal .LC55, 1073061904
+	.literal .LC59, 1073061900
+	.literal .LC62, 1072971832
 	.align	4
 	.global	rtc_vddsdio_get_config
 	.type	rtc_vddsdio_get_config, @function
 rtc_vddsdio_get_config:
 .LFB4:
-	.loc 1 101 0
+	.loc 1 102 0
 	entry	sp, 32
 .LCFI1:
-	.loc 1 103 0
-	l32r	a2, .LC48
+	.loc 1 104 0
+	l32r	a2, .LC49
 	memw
 	l32i.n	a11, a2, 0
 .LVL15:
-	.loc 1 104 0
+	.loc 1 105 0
 	extui	a9, a11, 29, 2
 .LVL16:
-	.loc 1 105 0
+	.loc 1 106 0
 	extui	a8, a11, 27, 2
 .LVL17:
-	.loc 1 106 0
+	.loc 1 107 0
 	extui	a10, a11, 25, 2
 .LVL18:
-	.loc 1 107 0
+	.loc 1 108 0
 	bbci	a11, 22, .L14
 .LVL19:
-	.loc 1 112 0
+	.loc 1 113 0
 	extui	a2, a11, 31, 1
 	extui	a11, a11, 23, 1
 .LVL20:
@@ -544,38 +545,38 @@ rtc_vddsdio_get_config:
 	j	.L19
 .LVL21:
 .L14:
-	.loc 1 114 0
-	l32r	a2, .LC54
+	.loc 1 115 0
+	l32r	a2, .LC55
 	memw
 	l32i.n	a2, a2, 0
 .LVL22:
-	.loc 1 115 0
+	.loc 1 116 0
 	bbci	a2, 16, .L16
 .LVL23:
-	.loc 1 122 0
-	l32r	a13, .LC58
-	.loc 1 118 0
+	.loc 1 123 0
+	l32r	a13, .LC59
+	.loc 1 119 0
 	extui	a11, a2, 14, 1
 .LVL24:
-	.loc 1 122 0
+	.loc 1 123 0
 	memw
 	l32i.n	a13, a13, 0
-	.loc 1 119 0
+	.loc 1 120 0
 	extui	a12, a2, 15, 1
 .LVL25:
-	.loc 1 122 0
+	.loc 1 123 0
 	bbsi	a13, 14, .L17
-	.loc 1 125 0
+	.loc 1 126 0
 	extui	a9, a2, 8, 2
 .LVL26:
-	.loc 1 126 0
+	.loc 1 127 0
 	extui	a8, a2, 10, 2
 .LVL27:
-	.loc 1 127 0
+	.loc 1 128 0
 	extui	a10, a2, 12, 2
 .LVL28:
 .L17:
-	.loc 1 129 0
+	.loc 1 130 0
 	slli	a12, a12, 2
 .LVL29:
 	slli	a11, a11, 1
@@ -590,17 +591,17 @@ rtc_vddsdio_get_config:
 	j	.L18
 .LVL31:
 .L16:
-	.loc 1 133 0
-	l32r	a2, .LC61
+	.loc 1 134 0
+	l32r	a2, .LC62
 .LVL32:
-	.loc 1 137 0
+	.loc 1 138 0
 	movi.n	a11, 1
 .LVL33:
-	.loc 1 133 0
+	.loc 1 134 0
 	memw
 	l32i.n	a2, a2, 0
 .LVL34:
-	.loc 1 137 0
+	.loc 1 138 0
 	slli	a9, a9, 3
 .LVL35:
 	extui	a2, a2, 5, 1
@@ -618,20 +619,20 @@ rtc_vddsdio_get_config:
 .LVL39:
 .L18:
 	or	a2, a2, a10
-	.loc 1 138 0
+	.loc 1 139 0
 	retw.n
 .LFE4:
 	.size	rtc_vddsdio_get_config, .-rtc_vddsdio_get_config
 	.section	.text.rtc_vddsdio_set_config,"ax",@progbits
 	.literal_position
-	.literal .LC62, 2097152
-	.literal .LC63, 1072988276
+	.literal .LC63, 2097152
+	.literal .LC64, 1072988276
 	.align	4
 	.global	rtc_vddsdio_set_config
 	.type	rtc_vddsdio_set_config, @function
 rtc_vddsdio_set_config:
 .LFB5:
-	.loc 1 141 0
+	.loc 1 142 0
 .LVL40:
 	entry	sp, 32
 .LCFI2:
@@ -641,7 +642,7 @@ rtc_vddsdio_set_config:
 	extui	a8, a2, 1, 1
 	slli	a8, a8, 31
 	or	a8, a9, a8
-	l32r	a9, .LC62
+	l32r	a9, .LC63
 	extui	a10, a2, 3, 2
 	or	a8, a8, a9
 	slli	a10, a10, 29
@@ -651,15 +652,15 @@ rtc_vddsdio_set_config:
 	or	a9, a8, a9
 	extui	a8, a2, 7, 2
 	slli	a8, a8, 25
-	.loc 1 149 0
+	.loc 1 150 0
 	extui	a2, a2, 2, 1
 .LVL42:
 	or	a8, a9, a8
 	slli	a2, a2, 23
 	or	a2, a2, a8
 .LVL43:
-	.loc 1 150 0
-	l32r	a8, .LC63
+	.loc 1 151 0
+	l32r	a8, .LC64
 	memw
 	s32i.n	a2, a8, 0
 	retw.n
@@ -955,7 +956,7 @@ rtc_vddsdio_set_config:
 	.4byte	.LBB20
 	.4byte	.Ldebug_ranges0+0
 	.byte	0x1
-	.byte	0x2b
+	.byte	0x2c
 	.4byte	0x1d4
 	.uleb128 0xd
 	.4byte	0x187
@@ -966,7 +967,7 @@ rtc_vddsdio_set_config:
 	.4byte	.LBB24
 	.4byte	.LBE24-.LBB24
 	.byte	0x1
-	.byte	0x2c
+	.byte	0x2d
 	.4byte	0x1f1
 	.uleb128 0xd
 	.4byte	0x187
@@ -977,7 +978,7 @@ rtc_vddsdio_set_config:
 	.4byte	.LBB26
 	.4byte	.Ldebug_ranges0+0x18
 	.byte	0x1
-	.byte	0x2e
+	.byte	0x2f
 	.4byte	0x20e
 	.uleb128 0xd
 	.4byte	0x187
@@ -988,7 +989,7 @@ rtc_vddsdio_set_config:
 	.4byte	.LBB30
 	.4byte	.LBE30-.LBB30
 	.byte	0x1
-	.byte	0x2f
+	.byte	0x30
 	.4byte	0x22b
 	.uleb128 0xd
 	.4byte	0x187
@@ -999,7 +1000,7 @@ rtc_vddsdio_set_config:
 	.4byte	.LBB32
 	.4byte	.LBE32-.LBB32
 	.byte	0x1
-	.byte	0x30
+	.byte	0x31
 	.4byte	0x248
 	.uleb128 0xd
 	.4byte	0x187
@@ -1010,7 +1011,7 @@ rtc_vddsdio_set_config:
 	.4byte	.LBB34
 	.4byte	.LBE34-.LBB34
 	.byte	0x1
-	.byte	0x32
+	.byte	0x33
 	.4byte	0x265
 	.uleb128 0xd
 	.4byte	0x187
@@ -1021,7 +1022,7 @@ rtc_vddsdio_set_config:
 	.4byte	.LBB36
 	.4byte	.LBE36-.LBB36
 	.byte	0x1
-	.byte	0x33
+	.byte	0x34
 	.4byte	0x282
 	.uleb128 0xd
 	.4byte	0x187
@@ -1032,7 +1033,7 @@ rtc_vddsdio_set_config:
 	.4byte	.LBB38
 	.4byte	.Ldebug_ranges0+0x30
 	.byte	0x1
-	.byte	0x35
+	.byte	0x36
 	.4byte	0x29f
 	.uleb128 0xd
 	.4byte	0x187
@@ -1043,7 +1044,7 @@ rtc_vddsdio_set_config:
 	.4byte	.LBB42
 	.4byte	.LBE42-.LBB42
 	.byte	0x1
-	.byte	0x36
+	.byte	0x37
 	.uleb128 0xd
 	.4byte	0x187
 	.4byte	.LLST9
@@ -1052,7 +1053,7 @@ rtc_vddsdio_set_config:
 	.uleb128 0x10
 	.4byte	.LASF28
 	.byte	0x1
-	.byte	0x64
+	.byte	0x65
 	.4byte	0x16b
 	.4byte	.LFB4
 	.4byte	.LFE4-.LFB4
@@ -1062,32 +1063,32 @@ rtc_vddsdio_set_config:
 	.uleb128 0x11
 	.4byte	.LASF29
 	.byte	0x1
-	.byte	0x66
+	.byte	0x67
 	.4byte	0x16b
 	.4byte	.LLST10
 	.uleb128 0x11
 	.4byte	.LASF30
 	.byte	0x1
-	.byte	0x67
+	.byte	0x68
 	.4byte	0x64
 	.4byte	.LLST11
 	.uleb128 0x11
 	.4byte	.LASF31
 	.byte	0x1
-	.byte	0x72
+	.byte	0x73
 	.4byte	0x64
 	.4byte	.LLST12
 	.uleb128 0x11
 	.4byte	.LASF32
 	.byte	0x1
-	.byte	0x85
+	.byte	0x86
 	.4byte	0x64
 	.4byte	.LLST13
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LASF37
 	.byte	0x1
-	.byte	0x8c
+	.byte	0x8d
 	.4byte	.LFB5
 	.4byte	.LFE5-.LFB5
 	.uleb128 0x1
@@ -1095,13 +1096,13 @@ rtc_vddsdio_set_config:
 	.uleb128 0x13
 	.4byte	.LASF33
 	.byte	0x1
-	.byte	0x8c
+	.byte	0x8d
 	.4byte	0x16b
 	.4byte	.LLST14
 	.uleb128 0x14
 	.string	"val"
 	.byte	0x1
-	.byte	0x8e
+	.byte	0x8f
 	.4byte	0x64
 	.4byte	.LLST15
 	.byte	0

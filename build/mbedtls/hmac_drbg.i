@@ -677,7 +677,7 @@ extern long double strtold (const char *restrict, char **restrict);
 void *esp_mbedtls_mem_calloc(size_t n, size_t size);
 void esp_mbedtls_mem_free(void *ptr);
 # 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
-# 2717 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h"
+# 2758 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h" 1
 # 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 1
@@ -685,21 +685,21 @@ void esp_mbedtls_mem_free(void *ptr);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed/limits.h" 1 3 4
 # 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 2
 # 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h" 2
-# 681 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
+# 706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
 typedef int mbedtls_iso_c_forbids_empty_translation_units;
-# 2718 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
+# 2759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
 # 32 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 2
 
 
 
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h" 1
-# 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h" 1
 # 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
 # 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h" 2
-# 56 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 58 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 typedef enum {
     MBEDTLS_MD_NONE=0,
     MBEDTLS_MD_MD2,
@@ -712,7 +712,7 @@ typedef enum {
     MBEDTLS_MD_SHA512,
     MBEDTLS_MD_RIPEMD160,
 } mbedtls_md_type_t;
-# 78 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 typedef struct mbedtls_md_info_t mbedtls_md_info_t;
 
 
@@ -729,60 +729,60 @@ typedef struct mbedtls_md_context_t
 
     void *hmac_ctx;
 } mbedtls_md_context_t;
-# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 const int *mbedtls_md_list( void );
-# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 117 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 const mbedtls_md_info_t *mbedtls_md_info_from_string( const char *md_name );
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 const mbedtls_md_info_t *mbedtls_md_info_from_type( mbedtls_md_type_t md_type );
-# 136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 138 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 void mbedtls_md_init( mbedtls_md_context_t *ctx );
-# 151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 void mbedtls_md_free( mbedtls_md_context_t *ctx );
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 int mbedtls_md_init_ctx( mbedtls_md_context_t *ctx, const mbedtls_md_info_t *md_info ) ;
-# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 int mbedtls_md_setup( mbedtls_md_context_t *ctx, const mbedtls_md_info_t *md_info, int hmac );
-# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 223 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 int mbedtls_md_clone( mbedtls_md_context_t *dst,
                       const mbedtls_md_context_t *src );
-# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 unsigned char mbedtls_md_get_size( const mbedtls_md_info_t *md_info );
-# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 246 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 mbedtls_md_type_t mbedtls_md_get_type( const mbedtls_md_info_t *md_info );
-# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 257 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 const char *mbedtls_md_get_name( const mbedtls_md_info_t *md_info );
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 int mbedtls_md_starts( mbedtls_md_context_t *ctx );
-# 288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 int mbedtls_md_update( mbedtls_md_context_t *ctx, const unsigned char *input, size_t ilen );
-# 308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 310 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 int mbedtls_md_finish( mbedtls_md_context_t *ctx, unsigned char *output );
-# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 int mbedtls_md( const mbedtls_md_info_t *md_info, const unsigned char *input, size_t ilen,
         unsigned char *output );
-# 349 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 351 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 int mbedtls_md_file( const mbedtls_md_info_t *md_info, const char *path,
                      unsigned char *output );
-# 371 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 373 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 int mbedtls_md_hmac_starts( mbedtls_md_context_t *ctx, const unsigned char *key,
                     size_t keylen );
-# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 int mbedtls_md_hmac_update( mbedtls_md_context_t *ctx, const unsigned char *input,
                     size_t ilen );
-# 414 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 416 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 int mbedtls_md_hmac_finish( mbedtls_md_context_t *ctx, unsigned char *output);
-# 431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 433 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 int mbedtls_md_hmac_reset( mbedtls_md_context_t *ctx );
-# 455 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
+# 457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md.h"
 int mbedtls_md_hmac( const mbedtls_md_info_t *md_info, const unsigned char *key, size_t keylen,
                 const unsigned char *input, size_t ilen,
                 unsigned char *output );
 
 
 int mbedtls_md_process( mbedtls_md_context_t *ctx, const unsigned char *data );
-# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h" 2
-# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h" 2
+# 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
 typedef struct mbedtls_hmac_drbg_context
 {
 
@@ -805,40 +805,40 @@ typedef struct mbedtls_hmac_drbg_context
 
 
 } mbedtls_hmac_drbg_context;
-# 108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
 void mbedtls_hmac_drbg_init( mbedtls_hmac_drbg_context *ctx );
-# 134 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
 int mbedtls_hmac_drbg_seed( mbedtls_hmac_drbg_context *ctx,
                     const mbedtls_md_info_t * md_info,
                     int (*f_entropy)(void *, unsigned char *, size_t),
                     void *p_entropy,
                     const unsigned char *custom,
                     size_t len );
-# 154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
 int mbedtls_hmac_drbg_seed_buf( mbedtls_hmac_drbg_context *ctx,
                         const mbedtls_md_info_t * md_info,
                         const unsigned char *data, size_t data_len );
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
+# 220 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
 void mbedtls_hmac_drbg_set_prediction_resistance( mbedtls_hmac_drbg_context *ctx,
                                           int resistance );
-# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
+# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
 void mbedtls_hmac_drbg_set_entropy_len( mbedtls_hmac_drbg_context *ctx,
                                 size_t len );
-# 188 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
+# 247 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
 void mbedtls_hmac_drbg_set_reseed_interval( mbedtls_hmac_drbg_context *ctx,
                                     int interval );
-# 201 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
-void mbedtls_hmac_drbg_update( mbedtls_hmac_drbg_context *ctx,
+# 262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
+int mbedtls_hmac_drbg_update_ret( mbedtls_hmac_drbg_context *ctx,
                        const unsigned char *additional, size_t add_len );
-# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
+# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
 int mbedtls_hmac_drbg_reseed( mbedtls_hmac_drbg_context *ctx,
                       const unsigned char *additional, size_t len );
-# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
+# 313 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
 int mbedtls_hmac_drbg_random_with_add( void *p_rng,
                                unsigned char *output, size_t output_len,
                                const unsigned char *additional,
                                size_t add_len );
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
+# 336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
 int mbedtls_hmac_drbg_random( void *p_rng, unsigned char *output, size_t out_len );
 
 
@@ -847,18 +847,22 @@ int mbedtls_hmac_drbg_random( void *p_rng, unsigned char *output, size_t out_len
 
 
 void mbedtls_hmac_drbg_free( mbedtls_hmac_drbg_context *ctx );
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
+# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
+ void mbedtls_hmac_drbg_update(
+    mbedtls_hmac_drbg_context *ctx,
+    const unsigned char *additional, size_t add_len );
+# 381 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
 int mbedtls_hmac_drbg_write_seed_file( mbedtls_hmac_drbg_context *ctx, const char *path );
-# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
+# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
 int mbedtls_hmac_drbg_update_seed_file( mbedtls_hmac_drbg_context *ctx, const char *path );
-# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
+# 408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/hmac_drbg.h"
 int mbedtls_hmac_drbg_self_test( int verbose );
 # 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h" 1
 # 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
 # 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h" 2
-# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h"
+# 159 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h"
 void mbedtls_platform_zeroize( void *buf, size_t len );
 # 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 2
 
@@ -1563,7 +1567,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 2
 
@@ -1676,23 +1680,23 @@ int clock_getres (clockid_t clock_id, struct timespec *res);
 # 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h" 2
 typedef time_t mbedtls_time_t;
 # 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h" 2
-# 123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h" 2
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h" 2
 extern void *mbedtls_calloc( size_t n, size_t size );
 extern void mbedtls_free( void *ptr );
-# 136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 int mbedtls_platform_set_calloc_free( void * (*calloc_func)( size_t, size_t ),
                               void (*free_func)( void * ) );
-# 318 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 typedef struct mbedtls_platform_context
 {
     char dummy;
 }
 mbedtls_platform_context;
-# 343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 int mbedtls_platform_setup( mbedtls_platform_context *ctx );
-# 358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 void mbedtls_platform_teardown( mbedtls_platform_context *ctx );
 # 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 2
 # 57 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
@@ -1708,34 +1712,63 @@ void mbedtls_hmac_drbg_init( mbedtls_hmac_drbg_context *ctx )
 
 
 
-void mbedtls_hmac_drbg_update( mbedtls_hmac_drbg_context *ctx,
-                       const unsigned char *additional, size_t add_len )
+int mbedtls_hmac_drbg_update_ret( mbedtls_hmac_drbg_context *ctx,
+                                  const unsigned char *additional,
+                                  size_t add_len )
 {
     size_t md_len = mbedtls_md_get_size( ctx->md_ctx.md_info );
     unsigned char rounds = ( additional != 
-# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
                                           ((void *)0) 
-# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
                                                && add_len != 0 ) ? 2 : 1;
     unsigned char sep[1];
     unsigned char K[64];
+    int ret = 0;
 
     for( sep[0] = 0; sep[0] < rounds; sep[0]++ )
     {
 
-        mbedtls_md_hmac_reset( &ctx->md_ctx );
-        mbedtls_md_hmac_update( &ctx->md_ctx, ctx->V, md_len );
-        mbedtls_md_hmac_update( &ctx->md_ctx, sep, 1 );
+        if( ( ret = mbedtls_md_hmac_reset( &ctx->md_ctx ) ) != 0 )
+            goto exit;
+        if( ( ret = mbedtls_md_hmac_update( &ctx->md_ctx,
+                                            ctx->V, md_len ) ) != 0 )
+            goto exit;
+        if( ( ret = mbedtls_md_hmac_update( &ctx->md_ctx,
+                                            sep, 1 ) ) != 0 )
+            goto exit;
         if( rounds == 2 )
-            mbedtls_md_hmac_update( &ctx->md_ctx, additional, add_len );
-        mbedtls_md_hmac_finish( &ctx->md_ctx, K );
+        {
+            if( ( ret = mbedtls_md_hmac_update( &ctx->md_ctx,
+                                                additional, add_len ) ) != 0 )
+            goto exit;
+        }
+        if( ( ret = mbedtls_md_hmac_finish( &ctx->md_ctx, K ) ) != 0 )
+            goto exit;
 
 
-        mbedtls_md_hmac_starts( &ctx->md_ctx, K, md_len );
-        mbedtls_md_hmac_update( &ctx->md_ctx, ctx->V, md_len );
-        mbedtls_md_hmac_finish( &ctx->md_ctx, ctx->V );
+        if( ( ret = mbedtls_md_hmac_starts( &ctx->md_ctx, K, md_len ) ) != 0 )
+            goto exit;
+        if( ( ret = mbedtls_md_hmac_update( &ctx->md_ctx,
+                                            ctx->V, md_len ) ) != 0 )
+            goto exit;
+        if( ( ret = mbedtls_md_hmac_finish( &ctx->md_ctx, ctx->V ) ) != 0 )
+            goto exit;
     }
+
+exit:
+    mbedtls_platform_zeroize( K, sizeof( K ) );
+    return( ret );
 }
+
+
+void mbedtls_hmac_drbg_update( mbedtls_hmac_drbg_context *ctx,
+                               const unsigned char *additional,
+                               size_t add_len )
+{
+    (void) mbedtls_hmac_drbg_update_ret( ctx, additional, add_len );
+}
+
 
 
 
@@ -1754,12 +1787,100 @@ int mbedtls_hmac_drbg_seed_buf( mbedtls_hmac_drbg_context *ctx,
 
 
 
-    mbedtls_md_hmac_starts( &ctx->md_ctx, ctx->V, mbedtls_md_get_size( md_info ) );
+    if( ( ret = mbedtls_md_hmac_starts( &ctx->md_ctx, ctx->V,
+                                        mbedtls_md_get_size( md_info ) ) ) != 0 )
+        return( ret );
     memset( ctx->V, 0x01, mbedtls_md_get_size( md_info ) );
 
-    mbedtls_hmac_drbg_update( ctx, data, data_len );
+    if( ( ret = mbedtls_hmac_drbg_update_ret( ctx, data, data_len ) ) != 0 )
+        return( ret );
 
     return( 0 );
+}
+
+
+
+
+
+
+static int hmac_drbg_reseed_core( mbedtls_hmac_drbg_context *ctx,
+                                  const unsigned char *additional, size_t len,
+                                  int use_nonce )
+{
+    unsigned char seed[384];
+    size_t seedlen = 0;
+    int ret;
+
+    {
+        size_t total_entropy_len;
+
+        if( use_nonce == 0 )
+            total_entropy_len = ctx->entropy_len;
+        else
+            total_entropy_len = ctx->entropy_len * 3 / 2;
+
+
+        if( len > 256 ||
+            total_entropy_len + len > 384 )
+        {
+            return( -0x0005 );
+        }
+    }
+
+    memset( seed, 0, 384 );
+
+
+    if( ( ret = ctx->f_entropy( ctx->p_entropy,
+                                seed, ctx->entropy_len ) ) != 0 )
+    {
+        return( -0x0009 );
+    }
+    seedlen += ctx->entropy_len;
+
+
+
+    if( use_nonce )
+    {
+
+
+
+
+
+
+
+        if( ( ret = ctx->f_entropy( ctx->p_entropy,
+                                    seed + seedlen,
+                                    ctx->entropy_len / 2 ) ) != 0 )
+        {
+            return( -0x0009 );
+        }
+
+        seedlen += ctx->entropy_len / 2;
+    }
+
+
+
+    if( additional != 
+# 213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
+                     ((void *)0) 
+# 213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
+                          && len != 0 )
+    {
+        memcpy( seed + seedlen, additional, len );
+        seedlen += len;
+    }
+
+
+    if( ( ret = mbedtls_hmac_drbg_update_ret( ctx, seed, seedlen ) ) != 0 )
+        goto exit;
+
+
+    ctx->reseed_counter = 1;
+
+exit:
+
+    mbedtls_platform_zeroize( seed, seedlen );
+    return( ret );
 }
 
 
@@ -1768,44 +1889,11 @@ int mbedtls_hmac_drbg_seed_buf( mbedtls_hmac_drbg_context *ctx,
 int mbedtls_hmac_drbg_reseed( mbedtls_hmac_drbg_context *ctx,
                       const unsigned char *additional, size_t len )
 {
-    unsigned char seed[384];
-    size_t seedlen;
-
-
-    if( len > 256 ||
-        ctx->entropy_len + len > 384 )
-    {
-        return( -0x0005 );
-    }
-
-    memset( seed, 0, 384 );
-
-
-    if( ctx->f_entropy( ctx->p_entropy, seed, ctx->entropy_len ) != 0 )
-        return( -0x0009 );
-
-    seedlen = ctx->entropy_len;
-
-
-    if( additional != 
-# 144 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
-                     ((void *)0) 
-# 144 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
-                          && len != 0 )
-    {
-        memcpy( seed + seedlen, additional, len );
-        seedlen += len;
-    }
-
-
-    mbedtls_hmac_drbg_update( ctx, seed, seedlen );
-
-
-    ctx->reseed_counter = 1;
-
-
-    return( 0 );
+    return( hmac_drbg_reseed_core( ctx, additional, len, 0 ) );
 }
+
+
+
 
 
 
@@ -1818,7 +1906,7 @@ int mbedtls_hmac_drbg_seed( mbedtls_hmac_drbg_context *ctx,
                     size_t len )
 {
     int ret;
-    size_t entropy_len, md_size;
+    size_t md_size;
 
     if( ( ret = mbedtls_md_setup( &ctx->md_ctx, md_info, 1 ) ) != 0 )
         return( ret );
@@ -1830,28 +1918,34 @@ int mbedtls_hmac_drbg_seed( mbedtls_hmac_drbg_context *ctx,
 
 
 
-    mbedtls_md_hmac_starts( &ctx->md_ctx, ctx->V, md_size );
+    if( ( ret = mbedtls_md_hmac_starts( &ctx->md_ctx, ctx->V, md_size ) ) != 0 )
+        return( ret );
     memset( ctx->V, 0x01, md_size );
 
     ctx->f_entropy = f_entropy;
     ctx->p_entropy = p_entropy;
 
     ctx->reseed_interval = 10000;
-# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
-    entropy_len = md_size <= 20 ? 16 :
-                  md_size <= 28 ? 24 :
-                                  32;
+
+    if( ctx->entropy_len == 0 )
+    {
 
 
 
 
 
-    ctx->entropy_len = entropy_len * 3 / 2;
 
-    if( ( ret = mbedtls_hmac_drbg_reseed( ctx, custom, len ) ) != 0 )
+
+        ctx->entropy_len = md_size <= 20 ? 16 :
+                           md_size <= 28 ? 24 :
+                           32;
+    }
+
+    if( ( ret = hmac_drbg_reseed_core( ctx, custom, len,
+                                       1 ) ) != 0 )
+    {
         return( ret );
-
-    ctx->entropy_len = entropy_len;
+    }
 
     return( 0 );
 }
@@ -1905,9 +1999,9 @@ int mbedtls_hmac_drbg_random_with_add( void *p_rng,
 
 
     if( ctx->f_entropy != 
-# 264 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
+# 347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
                          ((void *)0) 
-# 264 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
+# 347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
                               &&
         ( ctx->prediction_resistance == 1 ||
           ctx->reseed_counter > ctx->reseed_interval ) )
@@ -1920,20 +2014,28 @@ int mbedtls_hmac_drbg_random_with_add( void *p_rng,
 
 
     if( additional != 
-# 275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
+# 358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
                      ((void *)0) 
-# 275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
+# 358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
                           && add_len != 0 )
-        mbedtls_hmac_drbg_update( ctx, additional, add_len );
+    {
+        if( ( ret = mbedtls_hmac_drbg_update_ret( ctx,
+                                                  additional, add_len ) ) != 0 )
+            goto exit;
+    }
 
 
     while( left != 0 )
     {
         size_t use_len = left > md_len ? md_len : left;
 
-        mbedtls_md_hmac_reset( &ctx->md_ctx );
-        mbedtls_md_hmac_update( &ctx->md_ctx, ctx->V, md_len );
-        mbedtls_md_hmac_finish( &ctx->md_ctx, ctx->V );
+        if( ( ret = mbedtls_md_hmac_reset( &ctx->md_ctx ) ) != 0 )
+            goto exit;
+        if( ( ret = mbedtls_md_hmac_update( &ctx->md_ctx,
+                                            ctx->V, md_len ) ) != 0 )
+            goto exit;
+        if( ( ret = mbedtls_md_hmac_finish( &ctx->md_ctx, ctx->V ) ) != 0 )
+            goto exit;
 
         memcpy( out, ctx->V, use_len );
         out += use_len;
@@ -1941,13 +2043,16 @@ int mbedtls_hmac_drbg_random_with_add( void *p_rng,
     }
 
 
-    mbedtls_hmac_drbg_update( ctx, additional, add_len );
+    if( ( ret = mbedtls_hmac_drbg_update_ret( ctx,
+                                              additional, add_len ) ) != 0 )
+        goto exit;
 
 
     ctx->reseed_counter++;
 
+exit:
 
-    return( 0 );
+    return( ret );
 }
 
 
@@ -1964,9 +2069,9 @@ int mbedtls_hmac_drbg_random( void *p_rng, unsigned char *output, size_t out_len
 
 
     ret = mbedtls_hmac_drbg_random_with_add( ctx, output, out_len, 
-# 315 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
+# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
                                                                   ((void *)0)
-# 315 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
+# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
                                                                       , 0 );
 
 
@@ -1983,9 +2088,9 @@ int mbedtls_hmac_drbg_random( void *p_rng, unsigned char *output, size_t out_len
 void mbedtls_hmac_drbg_free( mbedtls_hmac_drbg_context *ctx )
 {
     if( ctx == 
-# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
+# 424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
               ((void *)0) 
-# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
+# 424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
                    )
         return;
 
@@ -2004,9 +2109,9 @@ int mbedtls_hmac_drbg_write_seed_file( mbedtls_hmac_drbg_context *ctx, const cha
     unsigned char buf[ 256 ];
 
     if( ( f = fopen( path, "wb" ) ) == 
-# 347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
+# 441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
                                       ((void *)0) 
-# 347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
+# 441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
                                            )
         return( -0x0007 );
 
@@ -2031,42 +2136,55 @@ exit:
 int mbedtls_hmac_drbg_update_seed_file( mbedtls_hmac_drbg_context *ctx, const char *path )
 {
     int ret = 0;
-    FILE *f;
+    FILE *f = 
+# 465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
+             ((void *)0)
+# 465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
+                 ;
     size_t n;
     unsigned char buf[ 256 ];
+    unsigned char c;
 
     if( ( f = fopen( path, "rb" ) ) == 
-# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
+# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
                                       ((void *)0) 
-# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
+# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
                                            )
         return( -0x0007 );
 
-    fseek( f, 0, 2 );
-    n = (size_t) ftell( f );
-    fseek( f, 0, 0 );
-
-    if( n > 256 )
+    n = fread( buf, 1, sizeof( buf ), f );
+    if( fread( &c, 1, 1, f ) != 0 )
     {
-        fclose( f );
-        return( -0x0005 );
+        ret = -0x0005;
+        goto exit;
     }
-
-    if( fread( buf, 1, n, f ) != n )
+    if( n == 0 || ferror( f ) )
+    {
         ret = -0x0007;
-    else
-        mbedtls_hmac_drbg_update( ctx, buf, n );
-
+        goto exit;
+    }
     fclose( f );
+    f = 
+# 485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
+       ((void *)0)
+# 485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
+           ;
 
+    ret = mbedtls_hmac_drbg_update_ret( ctx, buf, n );
+
+exit:
     mbedtls_platform_zeroize( buf, sizeof( buf ) );
-
+    if( f != 
+# 491 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
+            ((void *)0) 
+# 491 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
+                 )
+        fclose( f );
     if( ret != 0 )
         return( ret );
-
     return( mbedtls_hmac_drbg_write_seed_file( ctx, path ) );
 }
-# 419 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
+# 514 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
 static const unsigned char entropy_pr[] = {
     0xa0, 0xc9, 0xab, 0x58, 0xf1, 0xe2, 0xe5, 0xa4, 0xde, 0x3e, 0xbd, 0x4f,
     0xf7, 0x3e, 0x9c, 0x5b, 0x64, 0xef, 0xd8, 0xca, 0x02, 0x8c, 0xf8, 0x11,
@@ -2107,7 +2225,7 @@ static int hmac_drbg_self_test_entropy( void *data,
     test_offset += len;
     return( 0 );
 }
-# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
+# 565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
 int mbedtls_hmac_drbg_self_test( int verbose )
 {
     mbedtls_hmac_drbg_context ctx;
@@ -2124,9 +2242,9 @@ int mbedtls_hmac_drbg_self_test( int verbose )
 
     test_offset = 0;
     if( (mbedtls_hmac_drbg_seed( &ctx, md_info, hmac_drbg_self_test_entropy, (void *) entropy_pr, 
-# 485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
+# 580 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
    ((void *)0)
-# 485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
+# 580 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
    , 0 )) != 0 ) { if( verbose != 0 ) printf( "failed\n" ); return( 1 ); }
 
                                     ;
@@ -2151,16 +2269,16 @@ int mbedtls_hmac_drbg_self_test( int verbose )
 
     test_offset = 0;
     if( (mbedtls_hmac_drbg_seed( &ctx, md_info, hmac_drbg_self_test_entropy, (void *) entropy_nopr, 
-# 508 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
+# 603 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
    ((void *)0)
-# 508 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
+# 603 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
    , 0 )) != 0 ) { if( verbose != 0 ) printf( "failed\n" ); return( 1 ); }
 
                                     ;
     if( (mbedtls_hmac_drbg_reseed( &ctx, 
-# 511 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
+# 606 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c" 3 4
    ((void *)0)
-# 511 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
+# 606 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/hmac_drbg.c"
    , 0 )) != 0 ) { if( verbose != 0 ) printf( "failed\n" ); return( 1 ); };
     if( (mbedtls_hmac_drbg_random( &ctx, buf, 80 )) != 0 ) { if( verbose != 0 ) printf( "failed\n" ); return( 1 ); };
     if( (mbedtls_hmac_drbg_random( &ctx, buf, 80 )) != 0 ) { if( verbose != 0 ) printf( "failed\n" ); return( 1 ); };

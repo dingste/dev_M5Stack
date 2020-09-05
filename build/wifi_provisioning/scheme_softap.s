@@ -6,7 +6,7 @@
 	.type	set_config_endpoint, @function
 set_config_endpoint:
 .LFB35:
-	.file 1 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/src/scheme_softap.c"
+	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/src/scheme_softap.c"
 	.loc 1 190 0
 .LVL0:
 	entry	sp, 32
@@ -714,20 +714,20 @@ scheme_softap_prov_httpd_handle:
 	.text
 .Letext0:
 	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h"
-	.file 3 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_default_types.h"
-	.file 4 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
-	.file 5 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h"
-	.file 6 "/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log.h"
-	.file 7 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_interface.h"
-	.file 8 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_wifi_types.h"
-	.file 9 "/home/dieter/SoftwareDevelop/esp-idf/components/freertos/include/freertos/portmacro.h"
-	.file 10 "/home/dieter/SoftwareDevelop/esp-idf/components/protocomm/include/common/protocomm.h"
-	.file 11 "/home/dieter/SoftwareDevelop/esp-idf/components/protocomm/include/transports/protocomm_httpd.h"
-	.file 12 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/include/wifi_provisioning/manager.h"
-	.file 13 "/home/dieter/SoftwareDevelop/esp-idf/components/mdns/include/mdns.h"
-	.file 14 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/string.h"
-	.file 15 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_wifi.h"
-	.file 16 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h"
+	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
+	.file 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_interface.h"
+	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+	.file 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h"
+	.file 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/transports/protocomm_httpd.h"
+	.file 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/include/wifi_provisioning/manager.h"
+	.file 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/include/mdns.h"
+	.file 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+	.file 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+	.file 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
 	.4byte	0xd6c
@@ -974,7 +974,7 @@ scheme_softap_prov_httpd_handle:
 	.byte	0x4
 	.4byte	0x37
 	.byte	0x8
-	.byte	0xad
+	.byte	0xae
 	.4byte	0x203
 	.uleb128 0xb
 	.4byte	.LASF46
@@ -986,13 +986,13 @@ scheme_softap_prov_httpd_handle:
 	.uleb128 0x3
 	.4byte	.LASF48
 	.byte	0x8
-	.byte	0xb0
+	.byte	0xb1
 	.4byte	0x1ea
 	.uleb128 0xa
 	.byte	0x4
 	.4byte	0x37
 	.byte	0x8
-	.byte	0xb2
+	.byte	0xb3
 	.4byte	0x227
 	.uleb128 0xb
 	.4byte	.LASF49
@@ -1004,87 +1004,87 @@ scheme_softap_prov_httpd_handle:
 	.uleb128 0x3
 	.4byte	.LASF51
 	.byte	0x8
-	.byte	0xb5
+	.byte	0xb6
 	.4byte	0x20e
 	.uleb128 0xe
 	.byte	0x8
 	.byte	0x8
-	.byte	0xb8
+	.byte	0xb9
 	.4byte	0x253
 	.uleb128 0xf
 	.4byte	.LASF52
 	.byte	0x8
-	.byte	0xb9
+	.byte	0xba
 	.4byte	0xbd
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LASF53
 	.byte	0x8
-	.byte	0xba
+	.byte	0xbb
 	.4byte	0x1c8
 	.byte	0x4
 	.byte	0
 	.uleb128 0x3
 	.4byte	.LASF54
 	.byte	0x8
-	.byte	0xbb
+	.byte	0xbc
 	.4byte	0x232
 	.uleb128 0x3
 	.4byte	.LASF55
 	.byte	0x8
-	.byte	0xbd
+	.byte	0xbe
 	.4byte	0x253
 	.uleb128 0xe
 	.byte	0x6c
 	.byte	0x8
-	.byte	0xd2
+	.byte	0xd3
 	.4byte	0x2d2
 	.uleb128 0xf
 	.4byte	.LASF56
 	.byte	0x8
-	.byte	0xd3
+	.byte	0xd4
 	.4byte	0x2d2
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LASF57
 	.byte	0x8
-	.byte	0xd4
+	.byte	0xd5
 	.4byte	0x2e2
 	.byte	0x20
 	.uleb128 0xf
 	.4byte	.LASF58
 	.byte	0x8
-	.byte	0xd5
+	.byte	0xd6
 	.4byte	0xc8
 	.byte	0x60
 	.uleb128 0xf
 	.4byte	.LASF59
 	.byte	0x8
-	.byte	0xd6
+	.byte	0xd7
 	.4byte	0xc8
 	.byte	0x61
 	.uleb128 0xf
 	.4byte	.LASF53
 	.byte	0x8
-	.byte	0xd7
+	.byte	0xd8
 	.4byte	0x1c8
 	.byte	0x64
 	.uleb128 0xf
 	.4byte	.LASF60
 	.byte	0x8
-	.byte	0xd8
+	.byte	0xd9
 	.4byte	0xc8
 	.byte	0x68
 	.uleb128 0xf
 	.4byte	.LASF61
 	.byte	0x8
-	.byte	0xd9
+	.byte	0xda
 	.4byte	0xc8
 	.byte	0x69
 	.uleb128 0xf
 	.4byte	.LASF62
 	.byte	0x8
-	.byte	0xda
+	.byte	0xdb
 	.4byte	0xd3
 	.byte	0x6a
 	.byte	0
@@ -1105,93 +1105,93 @@ scheme_softap_prov_httpd_handle:
 	.uleb128 0x3
 	.4byte	.LASF63
 	.byte	0x8
-	.byte	0xdb
+	.byte	0xdc
 	.4byte	0x269
 	.uleb128 0xe
 	.byte	0x7c
 	.byte	0x8
-	.byte	0xde
+	.byte	0xdf
 	.4byte	0x372
 	.uleb128 0xf
 	.4byte	.LASF56
 	.byte	0x8
-	.byte	0xdf
+	.byte	0xe0
 	.4byte	0x2d2
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LASF57
 	.byte	0x8
-	.byte	0xe0
+	.byte	0xe1
 	.4byte	0x2e2
 	.byte	0x20
 	.uleb128 0xf
 	.4byte	.LASF64
 	.byte	0x8
-	.byte	0xe1
+	.byte	0xe2
 	.4byte	0x203
 	.byte	0x60
 	.uleb128 0xf
 	.4byte	.LASF65
 	.byte	0x8
-	.byte	0xe2
+	.byte	0xe3
 	.4byte	0x1d3
 	.byte	0x64
 	.uleb128 0xf
 	.4byte	.LASF66
 	.byte	0x8
-	.byte	0xe3
+	.byte	0xe4
 	.4byte	0x1da
 	.byte	0x65
 	.uleb128 0xf
 	.4byte	.LASF59
 	.byte	0x8
-	.byte	0xe4
+	.byte	0xe5
 	.4byte	0xc8
 	.byte	0x6b
 	.uleb128 0xf
 	.4byte	.LASF67
 	.byte	0x8
-	.byte	0xe5
+	.byte	0xe6
 	.4byte	0xd3
 	.byte	0x6c
 	.uleb128 0xf
 	.4byte	.LASF68
 	.byte	0x8
-	.byte	0xe6
+	.byte	0xe7
 	.4byte	0x227
 	.byte	0x70
 	.uleb128 0xf
 	.4byte	.LASF69
 	.byte	0x8
-	.byte	0xe7
+	.byte	0xe8
 	.4byte	0x25e
 	.byte	0x74
 	.byte	0
 	.uleb128 0x3
 	.4byte	.LASF70
 	.byte	0x8
-	.byte	0xe8
+	.byte	0xe9
 	.4byte	0x2fd
 	.uleb128 0x10
 	.byte	0x7c
 	.byte	0x8
-	.byte	0xf0
+	.byte	0xf1
 	.4byte	0x39b
 	.uleb128 0x11
 	.string	"ap"
 	.byte	0x8
-	.byte	0xf1
+	.byte	0xf2
 	.4byte	0x2f2
 	.uleb128 0x11
 	.string	"sta"
 	.byte	0x8
-	.byte	0xf2
+	.byte	0xf3
 	.4byte	0x372
 	.byte	0
 	.uleb128 0x3
 	.4byte	.LASF71
 	.byte	0x8
-	.byte	0xf3
+	.byte	0xf4
 	.4byte	0x37d
 	.uleb128 0x3
 	.4byte	.LASF72
@@ -3546,8 +3546,6 @@ scheme_softap_prov_httpd_handle:
 	.string	"prov_start"
 .LASF111:
 	.string	"strlcpy"
-.LASF120:
-	.string	"/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/src/scheme_softap.c"
 .LASF74:
 	.string	"port"
 .LASF67:
@@ -3638,6 +3636,8 @@ scheme_softap_prov_httpd_handle:
 	.string	"scheme_softap_prov_httpd_handle"
 .LASF59:
 	.string	"channel"
+.LASF120:
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/src/scheme_softap.c"
 .LASF55:
 	.string	"wifi_scan_threshold_t"
 .LASF31:

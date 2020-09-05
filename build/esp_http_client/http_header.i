@@ -1401,7 +1401,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_http_client/lib/http_header.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
@@ -1680,15 +1680,15 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_http_client/lib/http_header.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_http_client/lib/include/http_header.h" 1
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_http_client/lib/include/http_header.h"
@@ -2024,6 +2024,8 @@ int http_header_generate_string(http_header_handle_t header, int index, char *bu
                  0
 # 180 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_http_client/lib/http_header.c"
                       ;
+
+
     for((item) = (((header))->stqh_first); (item); (item) = (((item))->next.stqe_next)) {
         if (item->value && idx >= index) {
             siz += strlen(item->key);
@@ -2033,7 +2035,9 @@ int http_header_generate_string(http_header_handle_t header, int index, char *bu
         idx ++;
 
         if (siz + 1 > *buffer_len - 2) {
+
             ret_idx = idx - 1;
+            break;
         }
     }
 
@@ -2041,13 +2045,15 @@ int http_header_generate_string(http_header_handle_t header, int index, char *bu
         return 0;
     }
     if (ret_idx < 0) {
+
         ret_idx = idx;
         is_end = 
-# 199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_http_client/lib/http_header.c" 3 4
+# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_http_client/lib/http_header.c" 3 4
                 1
-# 199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_http_client/lib/http_header.c"
+# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_http_client/lib/http_header.c"
                     ;
     }
+
 
     int str_len = 0;
     idx = 0;
@@ -2058,6 +2064,7 @@ int http_header_generate_string(http_header_handle_t header, int index, char *bu
         idx ++;
     }
     if (is_end) {
+
         str_len += snprintf(buffer + str_len, *buffer_len - str_len, "\r\n");
     }
     *buffer_len = str_len;
@@ -2068,9 +2075,9 @@ esp_err_t http_header_clean(http_header_handle_t header)
 {
     http_header_item_handle_t item = ((header)->stqh_first), tmp;
     while (item != 
-# 220 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_http_client/lib/http_header.c" 3 4
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_http_client/lib/http_header.c" 3 4
                   ((void *)0)
-# 220 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_http_client/lib/http_header.c"
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_http_client/lib/http_header.c"
                       ) {
         tmp = ((item)->next.stqe_next);
         free(item->key);
@@ -2079,9 +2086,9 @@ esp_err_t http_header_clean(http_header_handle_t header)
         item = tmp;
     }
     do { (((header))->stqh_first) = 
-# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_http_client/lib/http_header.c" 3 4
+# 234 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_http_client/lib/http_header.c" 3 4
    ((void *)0)
-# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_http_client/lib/http_header.c"
+# 234 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_http_client/lib/http_header.c"
    ; (header)->stqh_last = &(((header))->stqh_first); } while (0);
     return 0;
 }

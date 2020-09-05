@@ -5,7 +5,7 @@
 	.align	4
 	.type	spiffs_cache_page_get, @function
 spiffs_cache_page_get:
-.LFB17:
+.LFB26:
 	.file 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/spiffs/spiffs_cache.c"
 	.loc 1 14 0
 .LVL0:
@@ -64,13 +64,13 @@ spiffs_cache_page_get:
 	.loc 1 30 0
 	mov.n	a2, a8
 	retw.n
-.LFE17:
+.LFE26:
 	.size	spiffs_cache_page_get, .-spiffs_cache_page_get
 	.section	.text.spiffs_cache_page_free,"ax",@progbits
 	.align	4
 	.type	spiffs_cache_page_free, @function
 spiffs_cache_page_free:
-.LFB18:
+.LFB27:
 	.loc 1 33 0
 .LVL7:
 	entry	sp, 32
@@ -134,13 +134,13 @@ spiffs_cache_page_free:
 	mov.n	a2, a10
 .LVL15:
 	retw.n
-.LFE18:
+.LFE27:
 	.size	spiffs_cache_page_free, .-spiffs_cache_page_free
 	.section	.text.spiffs_cache_page_allocate,"ax",@progbits
 	.align	4
 	.type	spiffs_cache_page_allocate, @function
 spiffs_cache_page_allocate:
-.LFB20:
+.LFB29:
 	.loc 1 89 0
 .LVL16:
 	entry	sp, 32
@@ -200,13 +200,13 @@ spiffs_cache_page_allocate:
 	.loc 1 107 0
 	mov.n	a2, a8
 	retw.n
-.LFE20:
+.LFE29:
 	.size	spiffs_cache_page_allocate, .-spiffs_cache_page_allocate
 	.section	.text.spiffs_cache_page_remove_oldest$constprop$0,"ax",@progbits
 	.align	4
 	.type	spiffs_cache_page_remove_oldest$constprop$0, @function
 spiffs_cache_page_remove_oldest$constprop$0:
-.LFB28:
+.LFB37:
 	.loc 1 59 0
 .LVL25:
 	entry	sp, 32
@@ -274,14 +274,14 @@ spiffs_cache_page_remove_oldest$constprop$0:
 	mov.n	a2, a10
 .LVL36:
 	retw.n
-.LFE28:
+.LFE37:
 	.size	spiffs_cache_page_remove_oldest$constprop$0, .-spiffs_cache_page_remove_oldest$constprop$0
 	.section	.text.spiffs_cache_drop_page,"ax",@progbits
 	.align	4
 	.global	spiffs_cache_drop_page
 	.type	spiffs_cache_drop_page, @function
 spiffs_cache_drop_page:
-.LFB21:
+.LFB30:
 	.loc 1 110 0
 .LVL37:
 	entry	sp, 32
@@ -302,14 +302,14 @@ spiffs_cache_drop_page:
 .LVL40:
 .L34:
 	retw.n
-.LFE21:
+.LFE30:
 	.size	spiffs_cache_drop_page, .-spiffs_cache_drop_page
 	.section	.text.spiffs_phys_rd,"ax",@progbits
 	.align	4
 	.global	spiffs_phys_rd
 	.type	spiffs_phys_rd, @function
 spiffs_phys_rd:
-.LFB22:
+.LFB31:
 	.loc 1 126 0
 .LVL41:
 	entry	sp, 48
@@ -474,14 +474,14 @@ spiffs_phys_rd:
 	.loc 1 177 0
 	mov.n	a2, a10
 	retw.n
-.LFE22:
+.LFE31:
 	.size	spiffs_phys_rd, .-spiffs_phys_rd
 	.section	.text.spiffs_phys_wr,"ax",@progbits
 	.align	4
 	.global	spiffs_phys_wr
 	.type	spiffs_phys_wr, @function
 spiffs_phys_wr:
-.LFB23:
+.LFB32:
 	.loc 1 186 0
 .LVL72:
 	entry	sp, 48
@@ -577,14 +577,14 @@ spiffs_phys_wr:
 	.loc 1 219 0
 	mov.n	a2, a10
 	retw.n
-.LFE23:
+.LFE32:
 	.size	spiffs_phys_wr, .-spiffs_phys_wr
 	.section	.text.spiffs_cache_page_get_by_fd,"ax",@progbits
 	.align	4
 	.global	spiffs_cache_page_get_by_fd
 	.type	spiffs_cache_page_get_by_fd, @function
 spiffs_cache_page_get_by_fd:
-.LFB24:
+.LFB33:
 	.loc 1 223 0
 .LVL86:
 	entry	sp, 32
@@ -646,14 +646,14 @@ spiffs_cache_page_get_by_fd:
 .LBE12:
 	.loc 1 242 0
 	retw.n
-.LFE24:
+.LFE33:
 	.size	spiffs_cache_page_get_by_fd, .-spiffs_cache_page_get_by_fd
 	.section	.text.spiffs_cache_page_allocate_by_fd,"ax",@progbits
 	.align	4
 	.global	spiffs_cache_page_allocate_by_fd
 	.type	spiffs_cache_page_allocate_by_fd, @function
 spiffs_cache_page_allocate_by_fd:
-.LFB25:
+.LFB34:
 	.loc 1 246 0
 .LVL92:
 	entry	sp, 32
@@ -681,7 +681,7 @@ spiffs_cache_page_allocate_by_fd:
 	.loc 1 260 0
 	mov.n	a2, a10
 	retw.n
-.LFE25:
+.LFE34:
 	.size	spiffs_cache_page_allocate_by_fd, .-spiffs_cache_page_allocate_by_fd
 	.section	.text.spiffs_cache_fd_release,"ax",@progbits
 	.literal_position
@@ -689,7 +689,7 @@ spiffs_cache_page_allocate_by_fd:
 	.global	spiffs_cache_fd_release
 	.type	spiffs_cache_fd_release, @function
 spiffs_cache_fd_release:
-.LFB26:
+.LFB35:
 	.loc 1 263 0
 .LVL96:
 	entry	sp, 32
@@ -741,14 +741,14 @@ spiffs_cache_fd_release:
 	s16i	a8, a3, 8
 .L75:
 	retw.n
-.LFE26:
+.LFE35:
 	.size	spiffs_cache_fd_release, .-spiffs_cache_fd_release
 	.section	.text.spiffs_cache_init,"ax",@progbits
 	.align	4
 	.global	spiffs_cache_init
 	.type	spiffs_cache_init, @function
 spiffs_cache_init:
-.LFB27:
+.LFB36:
 	.loc 1 281 0
 .LVL102:
 	entry	sp, 64
@@ -848,7 +848,7 @@ spiffs_cache_init:
 .LVL116:
 .L86:
 	retw.n
-.LFE27:
+.LFE36:
 	.size	spiffs_cache_init, .-spiffs_cache_init
 	.comm	spiffs_mutex,4,4
 	.section	.debug_frame,"",@progbits
@@ -870,10 +870,10 @@ spiffs_cache_init:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.byte	0x4
-	.4byte	.LCFI0-.LFB17
+	.4byte	.LCFI0-.LFB26
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -882,10 +882,10 @@ spiffs_cache_init:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI1-.LFB18
+	.4byte	.LCFI1-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -894,10 +894,10 @@ spiffs_cache_init:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI2-.LFB20
+	.4byte	.LCFI2-.LFB29
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -906,10 +906,10 @@ spiffs_cache_init:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.byte	0x4
-	.4byte	.LCFI3-.LFB28
+	.4byte	.LCFI3-.LFB37
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -918,10 +918,10 @@ spiffs_cache_init:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI4-.LFB21
+	.4byte	.LCFI4-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -930,10 +930,10 @@ spiffs_cache_init:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI5-.LFB22
+	.4byte	.LCFI5-.LFB31
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -942,10 +942,10 @@ spiffs_cache_init:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI6-.LFB23
+	.4byte	.LCFI6-.LFB32
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -954,10 +954,10 @@ spiffs_cache_init:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI7-.LFB24
+	.4byte	.LCFI7-.LFB33
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -966,10 +966,10 @@ spiffs_cache_init:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.byte	0x4
-	.4byte	.LCFI8-.LFB25
+	.4byte	.LCFI8-.LFB34
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -978,10 +978,10 @@ spiffs_cache_init:
 	.4byte	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.4byte	.Lframe0
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.byte	0x4
-	.4byte	.LCFI9-.LFB26
+	.4byte	.LCFI9-.LFB35
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -990,10 +990,10 @@ spiffs_cache_init:
 	.4byte	.LEFDE20-.LASFDE20
 .LASFDE20:
 	.4byte	.Lframe0
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.byte	0x4
-	.4byte	.LCFI10-.LFB27
+	.4byte	.LCFI10-.LFB36
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -1823,8 +1823,8 @@ spiffs_cache_init:
 	.byte	0x1
 	.byte	0xe
 	.4byte	0x613
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x706
@@ -1869,8 +1869,8 @@ spiffs_cache_init:
 	.byte	0x1
 	.byte	0x21
 	.4byte	0x8d
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x78c
@@ -1928,8 +1928,8 @@ spiffs_cache_init:
 	.byte	0x1
 	.byte	0x59
 	.4byte	0x613
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x7e6
@@ -1965,8 +1965,8 @@ spiffs_cache_init:
 	.byte	0
 	.uleb128 0x25
 	.4byte	0x62b
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x869
@@ -2022,8 +2022,8 @@ spiffs_cache_init:
 	.4byte	.LASF115
 	.byte	0x1
 	.byte	0x6e
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x8d9
@@ -2088,8 +2088,8 @@ spiffs_cache_init:
 	.byte	0x1
 	.byte	0x78
 	.4byte	0x8d
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xa70
@@ -2307,8 +2307,8 @@ spiffs_cache_init:
 	.byte	0x1
 	.byte	0xb4
 	.4byte	0x8d
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xb7b
@@ -2449,8 +2449,8 @@ spiffs_cache_init:
 	.byte	0x1
 	.byte	0xdf
 	.4byte	0x613
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xbd9
@@ -2497,8 +2497,8 @@ spiffs_cache_init:
 	.byte	0x1
 	.byte	0xf6
 	.4byte	0x613
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xc43
@@ -2548,8 +2548,8 @@ spiffs_cache_init:
 	.4byte	.LASF116
 	.byte	0x1
 	.2byte	0x107
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xcbb
@@ -2603,8 +2603,8 @@ spiffs_cache_init:
 	.4byte	.LASF118
 	.byte	0x1
 	.2byte	0x119
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xd85
@@ -3585,7 +3585,7 @@ spiffs_cache_init:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL6
-	.4byte	.LFE17
+	.4byte	.LFE26
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3606,7 +3606,7 @@ spiffs_cache_init:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL15
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3620,7 +3620,7 @@ spiffs_cache_init:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL10
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3635,7 +3635,7 @@ spiffs_cache_init:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL13
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -3718,7 +3718,7 @@ spiffs_cache_init:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL24
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3750,7 +3750,7 @@ spiffs_cache_init:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL36
-	.4byte	.LFE28
+	.4byte	.LFE37
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3867,7 +3867,7 @@ spiffs_cache_init:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL69
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3881,7 +3881,7 @@ spiffs_cache_init:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL47
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3895,7 +3895,7 @@ spiffs_cache_init:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL43
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3931,7 +3931,7 @@ spiffs_cache_init:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL71
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4017,7 +4017,7 @@ spiffs_cache_init:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL84
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4035,7 +4035,7 @@ spiffs_cache_init:
 	.2byte	0x1
 	.byte	0x59
 	.4byte	.LVL77-1
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4049,7 +4049,7 @@ spiffs_cache_init:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL74
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4139,7 +4139,7 @@ spiffs_cache_init:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL88
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x1
 	.byte	0x5d
 	.4byte	0
@@ -4157,7 +4157,7 @@ spiffs_cache_init:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL95
-	.4byte	.LFE25
+	.4byte	.LFE34
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4248,28 +4248,28 @@ spiffs_cache_init:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
 	.4byte	.LFB26
 	.4byte	.LFE26-.LFB26
 	.4byte	.LFB27
 	.4byte	.LFE27-.LFB27
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -4286,28 +4286,28 @@ spiffs_cache_init:
 	.4byte	.LBE14
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB17
-	.4byte	.LFE17
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB28
-	.4byte	.LFE28
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB24
-	.4byte	.LFE24
-	.4byte	.LFB25
-	.4byte	.LFE25
 	.4byte	.LFB26
 	.4byte	.LFE26
 	.4byte	.LFB27
 	.4byte	.LFE27
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB37
+	.4byte	.LFE37
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB31
+	.4byte	.LFE31
+	.4byte	.LFB32
+	.4byte	.LFE32
+	.4byte	.LFB33
+	.4byte	.LFE33
+	.4byte	.LFB34
+	.4byte	.LFE34
+	.4byte	.LFB35
+	.4byte	.LFE35
+	.4byte	.LFB36
+	.4byte	.LFE36
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

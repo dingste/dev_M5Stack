@@ -10,18 +10,18 @@
 mbedtls_calloc:
 .LFB0:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/platform.c"
-	.loc 1 58 0
+	.loc 1 65 0
 .LVL0:
 	entry	sp, 32
 .LCFI0:
-	.loc 1 59 0
+	.loc 1 66 0
 	l32r	a8, .LC0
 	mov.n	a11, a3
 	l32i.n	a8, a8, 0
 	mov.n	a10, a2
 	callx8	a8
 .LVL1:
-	.loc 1 60 0
+	.loc 1 67 0
 	mov.n	a2, a10
 .LVL2:
 	retw.n
@@ -35,11 +35,11 @@ mbedtls_calloc:
 	.type	mbedtls_free, @function
 mbedtls_free:
 .LFB1:
-	.loc 1 63 0
+	.loc 1 70 0
 .LVL3:
 	entry	sp, 32
 .LCFI1:
-	.loc 1 64 0
+	.loc 1 71 0
 	l32r	a8, .LC1
 	mov.n	a10, a2
 	l32i.n	a8, a8, 0
@@ -57,21 +57,21 @@ mbedtls_free:
 	.type	mbedtls_platform_set_calloc_free, @function
 mbedtls_platform_set_calloc_free:
 .LFB2:
-	.loc 1 69 0
+	.loc 1 76 0
 .LVL5:
 	entry	sp, 32
 .LCFI2:
-	.loc 1 70 0
+	.loc 1 77 0
 	l32r	a8, .LC2
 	s32i.n	a2, a8, 0
-	.loc 1 71 0
+	.loc 1 78 0
 	l32r	a8, .LC3
-	.loc 1 73 0
+	.loc 1 80 0
 	movi.n	a2, 0
 .LVL6:
-	.loc 1 71 0
+	.loc 1 78 0
 	s32i.n	a3, a8, 0
-	.loc 1 73 0
+	.loc 1 80 0
 	retw.n
 .LFE2:
 	.size	mbedtls_platform_set_calloc_free, .-mbedtls_platform_set_calloc_free
@@ -81,11 +81,11 @@ mbedtls_platform_set_calloc_free:
 	.type	mbedtls_platform_setup, @function
 mbedtls_platform_setup:
 .LFB3:
-	.loc 1 324 0
+	.loc 1 333 0
 .LVL7:
 	entry	sp, 32
 .LCFI3:
-	.loc 1 328 0
+	.loc 1 337 0
 	movi.n	a2, 0
 .LVL8:
 	retw.n
@@ -97,7 +97,7 @@ mbedtls_platform_setup:
 	.type	mbedtls_platform_teardown, @function
 mbedtls_platform_teardown:
 .LFB4:
-	.loc 1 334 0
+	.loc 1 343 0
 .LVL9:
 	entry	sp, 32
 .LCFI4:
@@ -268,24 +268,24 @@ mbedtls_calloc_func:
 	.4byte	.LASF12
 	.byte	0x1
 	.byte	0x3
-	.2byte	0x13e
+	.2byte	0x141
 	.4byte	0xa1
 	.uleb128 0x7
 	.4byte	.LASF27
 	.byte	0x3
-	.2byte	0x140
+	.2byte	0x143
 	.4byte	0x7f
 	.byte	0
 	.byte	0
 	.uleb128 0x8
 	.4byte	.LASF12
 	.byte	0x3
-	.2byte	0x142
+	.2byte	0x145
 	.4byte	0x86
 	.uleb128 0x9
 	.4byte	.LASF15
 	.byte	0x1
-	.byte	0x39
+	.byte	0x40
 	.4byte	0x76
 	.4byte	.LFB0
 	.4byte	.LFE0-.LFB0
@@ -295,13 +295,13 @@ mbedtls_calloc_func:
 	.uleb128 0xa
 	.4byte	.LASF13
 	.byte	0x1
-	.byte	0x39
+	.byte	0x40
 	.4byte	0x25
 	.4byte	.LLST0
 	.uleb128 0xb
 	.4byte	.LASF14
 	.byte	0x1
-	.byte	0x39
+	.byte	0x40
 	.4byte	0x25
 	.uleb128 0x1
 	.byte	0x53
@@ -324,7 +324,7 @@ mbedtls_calloc_func:
 	.uleb128 0xe
 	.4byte	.LASF20
 	.byte	0x1
-	.byte	0x3e
+	.byte	0x45
 	.4byte	.LFB1
 	.4byte	.LFE1-.LFB1
 	.uleb128 0x1
@@ -333,7 +333,7 @@ mbedtls_calloc_func:
 	.uleb128 0xf
 	.string	"ptr"
 	.byte	0x1
-	.byte	0x3e
+	.byte	0x45
 	.4byte	0x76
 	.uleb128 0x1
 	.byte	0x52
@@ -350,7 +350,7 @@ mbedtls_calloc_func:
 	.uleb128 0x9
 	.4byte	.LASF16
 	.byte	0x1
-	.byte	0x43
+	.byte	0x4a
 	.4byte	0x3e
 	.4byte	.LFB2
 	.4byte	.LFE2-.LFB2
@@ -360,13 +360,13 @@ mbedtls_calloc_func:
 	.uleb128 0xa
 	.4byte	.LASF17
 	.byte	0x1
-	.byte	0x43
+	.byte	0x4a
 	.4byte	0x16e
 	.4byte	.LLST1
 	.uleb128 0xb
 	.4byte	.LASF18
 	.byte	0x1
-	.byte	0x44
+	.byte	0x4b
 	.4byte	0x17f
 	.uleb128 0x1
 	.byte	0x53
@@ -393,7 +393,7 @@ mbedtls_calloc_func:
 	.uleb128 0x14
 	.4byte	.LASF19
 	.byte	0x1
-	.2byte	0x143
+	.2byte	0x14c
 	.4byte	0x3e
 	.4byte	.LFB3
 	.4byte	.LFE3-.LFB3
@@ -403,7 +403,7 @@ mbedtls_calloc_func:
 	.uleb128 0x15
 	.string	"ctx"
 	.byte	0x1
-	.2byte	0x143
+	.2byte	0x14c
 	.4byte	0x1b0
 	.4byte	.LLST2
 	.byte	0
@@ -413,7 +413,7 @@ mbedtls_calloc_func:
 	.uleb128 0x16
 	.4byte	.LASF21
 	.byte	0x1
-	.2byte	0x14d
+	.2byte	0x156
 	.4byte	.LFB4
 	.4byte	.LFE4-.LFB4
 	.uleb128 0x1
@@ -422,7 +422,7 @@ mbedtls_calloc_func:
 	.uleb128 0x17
 	.string	"ctx"
 	.byte	0x1
-	.2byte	0x14d
+	.2byte	0x156
 	.4byte	0x1b0
 	.uleb128 0x1
 	.byte	0x52
@@ -430,7 +430,7 @@ mbedtls_calloc_func:
 	.uleb128 0x18
 	.4byte	.LASF22
 	.byte	0x1
-	.byte	0x36
+	.byte	0x3d
 	.4byte	0x16e
 	.uleb128 0x5
 	.byte	0x3
@@ -438,7 +438,7 @@ mbedtls_calloc_func:
 	.uleb128 0x18
 	.4byte	.LASF23
 	.byte	0x1
-	.byte	0x37
+	.byte	0x3e
 	.4byte	0x17f
 	.uleb128 0x5
 	.byte	0x3

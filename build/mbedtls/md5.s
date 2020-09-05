@@ -438,7 +438,7 @@ mbedtls_internal_md5_process:
 	s32i.n	a3, sp, 36
 .LVL20:
 	l32i.n	a3, a2, 16
-	.loc 1 147 0
+	.loc 1 150 0
 	l32i.n	a12, a2, 12
 .LVL21:
 	l32i.n	a9, a2, 8
@@ -453,21 +453,21 @@ mbedtls_internal_md5_process:
 .LVL23:
 	add.n	a3, a7, a3
 .LVL24:
-	.loc 1 153 0
+	.loc 1 156 0
 	add.n	a3, a6, a3
 .LVL25:
 	add.n	a8, a11, a8
-	.loc 1 154 0
+	.loc 1 157 0
 	l32i.n	a11, a2, 16
 .LVL26:
-	.loc 1 153 0
+	.loc 1 156 0
 	ssai	25
 	src	a3, a3, a3
 .LVL27:
 	add.n	a3, a12, a3
 .LVL28:
 	l32i.n	a9, sp, 0
-	.loc 1 154 0
+	.loc 1 157 0
 	xor	a7, a12, a11
 	and	a7, a7, a3
 	add.n	a8, a8, a9
@@ -485,7 +485,7 @@ mbedtls_internal_md5_process:
 .LVL32:
 	add.n	a8, a8, a9
 .LVL33:
-	.loc 1 155 0
+	.loc 1 158 0
 	xor	a9, a12, a3
 	and	a9, a9, a7
 	xor	a9, a9, a12
@@ -497,7 +497,7 @@ mbedtls_internal_md5_process:
 .LVL35:
 	add.n	a9, a7, a9
 .LVL36:
-	.loc 1 156 0
+	.loc 1 159 0
 	xor	a8, a3, a7
 	add.n	a10, a12, a10
 	and	a8, a8, a9
@@ -516,7 +516,7 @@ mbedtls_internal_md5_process:
 .LVL40:
 	add.n	a3, a10, a3
 .LVL41:
-	.loc 1 157 0
+	.loc 1 160 0
 	xor	a10, a7, a9
 	and	a10, a10, a8
 	xor	a10, a10, a7
@@ -531,7 +531,7 @@ mbedtls_internal_md5_process:
 .LVL44:
 	add.n	a7, a10, a7
 .LVL45:
-	.loc 1 158 0
+	.loc 1 161 0
 	xor	a10, a9, a8
 	and	a10, a10, a3
 	xor	a10, a10, a9
@@ -547,7 +547,7 @@ mbedtls_internal_md5_process:
 .LVL48:
 	add.n	a9, a10, a9
 .LVL49:
-	.loc 1 159 0
+	.loc 1 162 0
 	xor	a10, a8, a3
 	and	a10, a10, a7
 	xor	a10, a10, a8
@@ -562,7 +562,7 @@ mbedtls_internal_md5_process:
 .LVL52:
 	add.n	a8, a9, a8
 .LVL53:
-	.loc 1 160 0
+	.loc 1 163 0
 	xor	a9, a3, a7
 	and	a9, a9, a10
 	xor	a9, a9, a3
@@ -578,7 +578,7 @@ mbedtls_internal_md5_process:
 .LVL56:
 	add.n	a3, a9, a3
 .LVL57:
-	.loc 1 161 0
+	.loc 1 164 0
 	xor	a9, a7, a10
 	and	a9, a9, a8
 	xor	a9, a9, a7
@@ -594,7 +594,7 @@ mbedtls_internal_md5_process:
 .LVL60:
 	add.n	a7, a9, a7
 .LVL61:
-	.loc 1 162 0
+	.loc 1 165 0
 	xor	a9, a10, a8
 	and	a9, a9, a3
 	xor	a9, a9, a10
@@ -610,7 +610,7 @@ mbedtls_internal_md5_process:
 .LVL64:
 	add.n	a10, a9, a10
 .LVL65:
-	.loc 1 163 0
+	.loc 1 166 0
 	xor	a9, a8, a3
 	and	a9, a9, a7
 	xor	a9, a9, a8
@@ -626,7 +626,7 @@ mbedtls_internal_md5_process:
 .LVL68:
 	add.n	a8, a9, a8
 .LVL69:
-	.loc 1 164 0
+	.loc 1 167 0
 	xor	a9, a3, a7
 	and	a9, a9, a10
 	xor	a9, a9, a3
@@ -641,7 +641,7 @@ mbedtls_internal_md5_process:
 .LVL72:
 	add.n	a3, a9, a3
 .LVL73:
-	.loc 1 165 0
+	.loc 1 168 0
 	xor	a9, a7, a10
 	and	a9, a9, a8
 	xor	a9, a9, a7
@@ -657,7 +657,7 @@ mbedtls_internal_md5_process:
 .LVL76:
 	add.n	a7, a3, a7
 .LVL77:
-	.loc 1 166 0
+	.loc 1 169 0
 	xor	a3, a10, a8
 	and	a3, a3, a9
 	xor	a3, a3, a10
@@ -672,7 +672,7 @@ mbedtls_internal_md5_process:
 .LVL80:
 	add.n	a10, a3, a10
 .LVL81:
-	.loc 1 167 0
+	.loc 1 170 0
 	xor	a3, a8, a9
 	and	a3, a3, a7
 	xor	a3, a3, a8
@@ -688,7 +688,7 @@ mbedtls_internal_md5_process:
 .LVL84:
 	add.n	a8, a10, a8
 .LVL85:
-	.loc 1 168 0
+	.loc 1 171 0
 	xor	a10, a9, a7
 	and	a10, a10, a3
 	xor	a10, a10, a9
@@ -704,7 +704,7 @@ mbedtls_internal_md5_process:
 	add.n	a10, a11, a10
 	add.n	a9, a10, a9
 .LVL89:
-	.loc 1 174 0
+	.loc 1 177 0
 	xor	a10, a3, a8
 	and	a10, a10, a7
 	xor	a10, a10, a3
@@ -720,7 +720,7 @@ mbedtls_internal_md5_process:
 	add.n	a10, a11, a10
 	add.n	a7, a10, a7
 .LVL93:
-	.loc 1 175 0
+	.loc 1 178 0
 	xor	a10, a8, a9
 	and	a10, a10, a3
 	xor	a10, a10, a8
@@ -736,7 +736,7 @@ mbedtls_internal_md5_process:
 	add.n	a10, a11, a10
 	add.n	a3, a10, a3
 .LVL97:
-	.loc 1 176 0
+	.loc 1 179 0
 	xor	a10, a9, a7
 	and	a10, a10, a8
 	xor	a10, a10, a9
@@ -751,7 +751,7 @@ mbedtls_internal_md5_process:
 	add.n	a10, a6, a10
 	add.n	a8, a10, a8
 .LVL101:
-	.loc 1 177 0
+	.loc 1 180 0
 	xor	a10, a7, a3
 	and	a10, a10, a9
 	xor	a10, a10, a7
@@ -766,7 +766,7 @@ mbedtls_internal_md5_process:
 	add.n	a10, a15, a10
 	add.n	a9, a10, a9
 .LVL105:
-	.loc 1 178 0
+	.loc 1 181 0
 	xor	a10, a3, a8
 	and	a10, a10, a7
 	xor	a10, a10, a3
@@ -782,7 +782,7 @@ mbedtls_internal_md5_process:
 	add.n	a10, a11, a10
 	add.n	a7, a10, a7
 .LVL109:
-	.loc 1 179 0
+	.loc 1 182 0
 	xor	a10, a8, a9
 	and	a10, a10, a3
 	xor	a10, a10, a8
@@ -798,7 +798,7 @@ mbedtls_internal_md5_process:
 	add.n	a10, a11, a10
 	add.n	a3, a10, a3
 .LVL113:
-	.loc 1 180 0
+	.loc 1 183 0
 	xor	a10, a9, a7
 	and	a10, a10, a8
 	xor	a10, a10, a9
@@ -814,7 +814,7 @@ mbedtls_internal_md5_process:
 	add.n	a10, a11, a10
 	add.n	a8, a10, a8
 .LVL117:
-	.loc 1 181 0
+	.loc 1 184 0
 	xor	a10, a7, a3
 	and	a10, a10, a9
 	xor	a10, a10, a7
@@ -830,7 +830,7 @@ mbedtls_internal_md5_process:
 	add.n	a10, a11, a10
 	add.n	a9, a10, a9
 .LVL121:
-	.loc 1 182 0
+	.loc 1 185 0
 	xor	a10, a3, a8
 	and	a10, a10, a7
 	xor	a10, a10, a3
@@ -845,7 +845,7 @@ mbedtls_internal_md5_process:
 	add.n	a10, a4, a10
 	add.n	a7, a10, a7
 .LVL125:
-	.loc 1 183 0
+	.loc 1 186 0
 	xor	a10, a8, a9
 	and	a10, a10, a3
 	xor	a10, a10, a8
@@ -860,7 +860,7 @@ mbedtls_internal_md5_process:
 	add.n	a10, a13, a10
 	add.n	a3, a10, a3
 .LVL129:
-	.loc 1 184 0
+	.loc 1 187 0
 	xor	a10, a9, a7
 	and	a10, a10, a8
 	xor	a10, a10, a9
@@ -876,7 +876,7 @@ mbedtls_internal_md5_process:
 	add.n	a10, a11, a10
 	add.n	a8, a10, a8
 .LVL133:
-	.loc 1 185 0
+	.loc 1 188 0
 	xor	a10, a7, a3
 	and	a10, a10, a9
 	xor	a10, a10, a7
@@ -892,7 +892,7 @@ mbedtls_internal_md5_process:
 	add.n	a10, a11, a10
 	add.n	a9, a10, a9
 .LVL137:
-	.loc 1 186 0
+	.loc 1 189 0
 	xor	a10, a3, a8
 	and	a10, a10, a7
 	xor	a10, a10, a3
@@ -908,7 +908,7 @@ mbedtls_internal_md5_process:
 	add.n	a10, a11, a10
 	add.n	a7, a10, a7
 .LVL141:
-	.loc 1 187 0
+	.loc 1 190 0
 	xor	a10, a8, a9
 	and	a10, a10, a3
 	xor	a10, a10, a8
@@ -923,7 +923,7 @@ mbedtls_internal_md5_process:
 	add.n	a11, a5, a11
 	add.n	a3, a11, a3
 .LVL145:
-	.loc 1 188 0
+	.loc 1 191 0
 	xor	a11, a9, a10
 	and	a11, a11, a8
 	xor	a11, a11, a9
@@ -935,7 +935,7 @@ mbedtls_internal_md5_process:
 .LVL147:
 	add.n	a11, a10, a11
 .LVL148:
-	.loc 1 189 0
+	.loc 1 192 0
 	xor	a3, a10, a11
 	add.n	a7, a14, a7
 	add.n	a8, a7, a8
@@ -953,7 +953,7 @@ mbedtls_internal_md5_process:
 	add.n	a7, a15, a7
 	add.n	a9, a7, a9
 .LVL153:
-	.loc 1 195 0
+	.loc 1 198 0
 	xor	a3, a3, a8
 .LVL154:
 	add.n	a3, a3, a9
@@ -968,7 +968,7 @@ mbedtls_internal_md5_process:
 .LVL157:
 	add.n	a10, a7, a10
 .LVL158:
-	.loc 1 196 0
+	.loc 1 199 0
 	xor	a7, a11, a8
 	xor	a7, a7, a3
 	l32i.n	a9, sp, 28
@@ -983,7 +983,7 @@ mbedtls_internal_md5_process:
 .LVL161:
 	add.n	a11, a7, a11
 .LVL162:
-	.loc 1 197 0
+	.loc 1 200 0
 	xor	a7, a8, a3
 	xor	a7, a7, a10
 	add.n	a11, a7, a11
@@ -997,7 +997,7 @@ mbedtls_internal_md5_process:
 .LVL165:
 	add.n	a8, a7, a8
 .LVL166:
-	.loc 1 198 0
+	.loc 1 201 0
 	xor	a7, a3, a10
 	xor	a7, a7, a11
 	l32i.n	a9, sp, 0
@@ -1012,7 +1012,7 @@ mbedtls_internal_md5_process:
 .LVL169:
 	add.n	a3, a7, a3
 .LVL170:
-	.loc 1 199 0
+	.loc 1 202 0
 	xor	a7, a10, a11
 	xor	a7, a7, a8
 	l32i.n	a9, sp, 8
@@ -1027,7 +1027,7 @@ mbedtls_internal_md5_process:
 .LVL173:
 	add.n	a10, a3, a10
 .LVL174:
-	.loc 1 200 0
+	.loc 1 203 0
 	xor	a3, a11, a8
 	xor	a3, a3, a7
 	add.n	a10, a3, a10
@@ -1041,7 +1041,7 @@ mbedtls_internal_md5_process:
 .LVL177:
 	add.n	a11, a3, a11
 .LVL178:
-	.loc 1 201 0
+	.loc 1 204 0
 	xor	a3, a8, a7
 	xor	a3, a3, a10
 	l32i.n	a9, sp, 24
@@ -1056,7 +1056,7 @@ mbedtls_internal_md5_process:
 .LVL181:
 	add.n	a8, a3, a8
 .LVL182:
-	.loc 1 202 0
+	.loc 1 205 0
 	xor	a3, a7, a10
 	xor	a3, a3, a11
 	l32i.n	a9, sp, 32
@@ -1071,7 +1071,7 @@ mbedtls_internal_md5_process:
 .LVL185:
 	add.n	a7, a3, a7
 .LVL186:
-	.loc 1 203 0
+	.loc 1 206 0
 	xor	a3, a10, a11
 	xor	a3, a3, a8
 	add.n	a7, a3, a7
@@ -1085,7 +1085,7 @@ mbedtls_internal_md5_process:
 .LVL189:
 	add.n	a10, a3, a10
 .LVL190:
-	.loc 1 204 0
+	.loc 1 207 0
 	xor	a3, a11, a8
 	xor	a3, a3, a7
 	add.n	a10, a3, a10
@@ -1099,7 +1099,7 @@ mbedtls_internal_md5_process:
 .LVL193:
 	add.n	a11, a3, a11
 .LVL194:
-	.loc 1 205 0
+	.loc 1 208 0
 	xor	a3, a8, a7
 	xor	a3, a3, a10
 	add.n	a3, a3, a11
@@ -1114,7 +1114,7 @@ mbedtls_internal_md5_process:
 .LVL197:
 	add.n	a8, a9, a8
 .LVL198:
-	.loc 1 206 0
+	.loc 1 209 0
 	xor	a9, a7, a10
 	xor	a9, a9, a3
 	l32i.n	a11, sp, 20
@@ -1129,7 +1129,7 @@ mbedtls_internal_md5_process:
 .LVL201:
 	add.n	a7, a9, a7
 .LVL202:
-	.loc 1 207 0
+	.loc 1 210 0
 	xor	a9, a10, a3
 	xor	a9, a9, a8
 	add.n	a9, a9, a7
@@ -1143,7 +1143,7 @@ mbedtls_internal_md5_process:
 .LVL205:
 	add.n	a10, a7, a10
 .LVL206:
-	.loc 1 208 0
+	.loc 1 211 0
 	xor	a7, a3, a8
 	xor	a7, a7, a9
 	l32i.n	a11, sp, 36
@@ -1158,7 +1158,7 @@ mbedtls_internal_md5_process:
 .LVL209:
 	add.n	a3, a10, a3
 .LVL210:
-	.loc 1 209 0
+	.loc 1 212 0
 	xor	a10, a8, a9
 	xor	a10, a10, a7
 	l32i.n	a11, sp, 4
@@ -1173,7 +1173,7 @@ mbedtls_internal_md5_process:
 .LVL213:
 	add.n	a8, a3, a8
 .LVL214:
-	.loc 1 210 0
+	.loc 1 213 0
 	xor	a3, a9, a7
 	xor	a3, a3, a10
 	add.n	a8, a3, a8
@@ -1183,14 +1183,14 @@ mbedtls_internal_md5_process:
 	src	a8, a8, a8
 .LVL216:
 	add.n	a6, a6, a3
-	.loc 1 216 0
+	.loc 1 219 0
 	movi.n	a3, -1
-	.loc 1 210 0
+	.loc 1 213 0
 	add.n	a8, a10, a8
 .LVL217:
 	add.n	a9, a6, a9
 .LVL218:
-	.loc 1 216 0
+	.loc 1 219 0
 	xor	a6, a3, a7
 	or	a6, a6, a8
 	xor	a6, a6, a10
@@ -1204,7 +1204,7 @@ mbedtls_internal_md5_process:
 .LVL220:
 	add.n	a7, a5, a7
 .LVL221:
-	.loc 1 217 0
+	.loc 1 220 0
 	xor	a5, a3, a10
 	or	a5, a5, a9
 	xor	a5, a5, a8
@@ -1218,7 +1218,7 @@ mbedtls_internal_md5_process:
 .LVL223:
 	add.n	a10, a4, a10
 .LVL224:
-	.loc 1 218 0
+	.loc 1 221 0
 	xor	a4, a3, a8
 	or	a4, a4, a7
 	xor	a4, a4, a9
@@ -1230,7 +1230,7 @@ mbedtls_internal_md5_process:
 	add.n	a10, a7, a10
 .LVL226:
 	add.n	a15, a15, a4
-	.loc 1 219 0
+	.loc 1 222 0
 	xor	a4, a3, a9
 	or	a4, a4, a10
 	xor	a4, a4, a7
@@ -1244,7 +1244,7 @@ mbedtls_internal_md5_process:
 	add.n	a8, a10, a8
 .LVL229:
 	add.n	a14, a14, a4
-	.loc 1 220 0
+	.loc 1 223 0
 	xor	a4, a3, a7
 	or	a4, a4, a8
 	xor	a4, a4, a10
@@ -1258,7 +1258,7 @@ mbedtls_internal_md5_process:
 	add.n	a9, a8, a9
 .LVL232:
 	add.n	a13, a13, a4
-	.loc 1 221 0
+	.loc 1 224 0
 	xor	a4, a3, a10
 	or	a4, a4, a9
 	xor	a4, a4, a8
@@ -1275,7 +1275,7 @@ mbedtls_internal_md5_process:
 .LVL235:
 	add.n	a10, a4, a10
 .LVL236:
-	.loc 1 222 0
+	.loc 1 225 0
 	xor	a4, a3, a8
 	or	a4, a4, a7
 	xor	a4, a4, a9
@@ -1290,7 +1290,7 @@ mbedtls_internal_md5_process:
 .LVL238:
 	add.n	a8, a4, a8
 .LVL239:
-	.loc 1 223 0
+	.loc 1 226 0
 	xor	a4, a3, a9
 	or	a4, a4, a10
 	xor	a4, a4, a7
@@ -1305,7 +1305,7 @@ mbedtls_internal_md5_process:
 .LVL241:
 	add.n	a9, a4, a9
 .LVL242:
-	.loc 1 224 0
+	.loc 1 227 0
 	xor	a4, a3, a7
 	or	a4, a4, a8
 	xor	a4, a4, a10
@@ -1320,7 +1320,7 @@ mbedtls_internal_md5_process:
 .LVL244:
 	add.n	a7, a4, a7
 .LVL245:
-	.loc 1 225 0
+	.loc 1 228 0
 	xor	a4, a3, a10
 	or	a4, a4, a9
 	xor	a4, a4, a8
@@ -1335,7 +1335,7 @@ mbedtls_internal_md5_process:
 .LVL247:
 	add.n	a10, a4, a10
 .LVL248:
-	.loc 1 226 0
+	.loc 1 229 0
 	xor	a4, a3, a8
 	or	a4, a4, a7
 	xor	a4, a4, a9
@@ -1350,7 +1350,7 @@ mbedtls_internal_md5_process:
 .LVL250:
 	add.n	a8, a4, a8
 .LVL251:
-	.loc 1 227 0
+	.loc 1 230 0
 	xor	a4, a3, a9
 	or	a4, a4, a10
 	xor	a4, a4, a7
@@ -1365,7 +1365,7 @@ mbedtls_internal_md5_process:
 .LVL253:
 	add.n	a4, a4, a9
 .LVL254:
-	.loc 1 228 0
+	.loc 1 231 0
 	xor	a9, a3, a7
 	or	a9, a9, a8
 	xor	a9, a9, a10
@@ -1380,7 +1380,7 @@ mbedtls_internal_md5_process:
 .LVL256:
 	add.n	a7, a4, a7
 .LVL257:
-	.loc 1 229 0
+	.loc 1 232 0
 	xor	a4, a3, a10
 	or	a4, a4, a9
 	xor	a4, a4, a8
@@ -1395,7 +1395,7 @@ mbedtls_internal_md5_process:
 .LVL259:
 	add.n	a10, a4, a10
 .LVL260:
-	.loc 1 230 0
+	.loc 1 233 0
 	xor	a4, a3, a8
 	or	a4, a4, a7
 	xor	a4, a4, a9
@@ -1407,46 +1407,46 @@ mbedtls_internal_md5_process:
 	src	a10, a10, a10
 	add.n	a10, a7, a10
 .LVL262:
-	.loc 1 236 0
+	.loc 1 239 0
 	xor	a3, a3, a9
 	add.n	a4, a11, a4
 	or	a3, a3, a10
 	xor	a3, a3, a7
 	add.n	a8, a4, a8
 .LVL263:
-	.loc 1 235 0
+	.loc 1 238 0
 	l32i.n	a5, a2, 8
-	.loc 1 236 0
+	.loc 1 239 0
 	add.n	a8, a3, a8
 .LVL264:
 	ssai	11
 	src	a8, a8, a8
 	add.n	a12, a12, a10
-	.loc 1 235 0
-	add.n	a4, a5, a9
-	.loc 1 236 0
-	add.n	a12, a8, a12
 	.loc 1 238 0
+	add.n	a4, a5, a9
+	.loc 1 239 0
+	add.n	a12, a8, a12
+	.loc 1 241 0
 	l32i.n	a9, a2, 20
 .LVL265:
-	.loc 1 237 0
+	.loc 1 240 0
 	l32i.n	a8, a2, 16
-	.loc 1 238 0
+	.loc 1 241 0
 	add.n	a7, a9, a7
 .LVL266:
-	.loc 1 237 0
+	.loc 1 240 0
 	add.n	a10, a8, a10
 .LVL267:
-	.loc 1 235 0
+	.loc 1 238 0
 	s32i.n	a4, a2, 8
 .LVL268:
-	.loc 1 236 0
+	.loc 1 239 0
 	s32i.n	a12, a2, 12
-	.loc 1 237 0
+	.loc 1 240 0
 	s32i.n	a10, a2, 16
-	.loc 1 238 0
-	s32i.n	a7, a2, 20
 	.loc 1 241 0
+	s32i.n	a7, a2, 20
+	.loc 1 244 0
 	movi.n	a2, 0
 .LVL269:
 	retw.n
@@ -1458,11 +1458,11 @@ mbedtls_internal_md5_process:
 	.type	mbedtls_md5_process, @function
 mbedtls_md5_process:
 .LFB6:
-	.loc 1 246 0
+	.loc 1 249 0
 .LVL270:
 	entry	sp, 32
 .LCFI6:
-	.loc 1 247 0
+	.loc 1 250 0
 	mov.n	a11, a3
 	mov.n	a10, a2
 	call8	mbedtls_internal_md5_process
@@ -1476,110 +1476,110 @@ mbedtls_md5_process:
 	.type	mbedtls_md5_update_ret, @function
 mbedtls_md5_update_ret:
 .LFB7:
-	.loc 1 258 0
+	.loc 1 261 0
 .LVL272:
 	entry	sp, 32
 .LCFI7:
-	.loc 1 258 0
+	.loc 1 261 0
 	mov.n	a5, a2
-	.loc 1 263 0
+	.loc 1 266 0
 	bnez.n	a4, .L13
 	j	.L32
 .L13:
 .LVL273:
 .LBB6:
 .LBB7:
-	.loc 1 266 0
+	.loc 1 269 0
 	l32i.n	a2, a2, 0
 .LVL274:
-	.loc 1 267 0
+	.loc 1 270 0
 	movi.n	a7, 0x40
-	.loc 1 266 0
+	.loc 1 269 0
 	extui	a6, a2, 0, 6
 .LVL275:
-	.loc 1 269 0
+	.loc 1 272 0
 	add.n	a2, a4, a2
 	s32i.n	a2, a5, 0
-	.loc 1 267 0
+	.loc 1 270 0
 	sub	a7, a7, a6
 .LVL276:
-	.loc 1 272 0
+	.loc 1 275 0
 	bgeu	a2, a4, .L15
-	.loc 1 273 0
+	.loc 1 276 0
 	l32i.n	a2, a5, 4
 	addi.n	a2, a2, 1
 	s32i.n	a2, a5, 4
 .L15:
-	.loc 1 275 0
+	.loc 1 278 0
 	beqz.n	a6, .L16
 	bltu	a4, a7, .L16
-	.loc 1 277 0
+	.loc 1 280 0
 	addi	a2, a5, 24
 	mov.n	a12, a7
 	mov.n	a11, a3
 	add.n	a10, a2, a6
 	call8	memcpy
 .LVL277:
-	.loc 1 278 0
+	.loc 1 281 0
 	mov.n	a11, a2
 	mov.n	a10, a5
 	call8	mbedtls_internal_md5_process
 .LVL278:
 	mov.n	a2, a10
 	bnez.n	a10, .L14
-	.loc 1 281 0
+	.loc 1 284 0
 	add.n	a3, a3, a7
 .LVL279:
-	.loc 1 282 0
+	.loc 1 285 0
 	sub	a4, a4, a7
 .LVL280:
-	.loc 1 283 0
+	.loc 1 286 0
 	mov.n	a6, a10
 .LVL281:
 .L16:
 	mov.n	a2, a4
-	.loc 1 286 0
+	.loc 1 289 0
 	movi.n	a7, 0x3f
 .LVL282:
 	j	.L18
 .LVL283:
 .L19:
-	.loc 1 288 0
+	.loc 1 291 0
 	mov.n	a10, a5
 	call8	mbedtls_internal_md5_process
 .LVL284:
 	bnez.n	a10, .L22
 .LVL285:
-	.loc 1 292 0
+	.loc 1 295 0
 	addi	a2, a2, -64
 .LVL286:
 .L18:
 	sub	a11, a4, a2
 	add.n	a11, a3, a11
 .LVL287:
-	.loc 1 286 0
+	.loc 1 289 0
 	bltu	a7, a2, .L19
-	.loc 1 295 0
+	.loc 1 298 0
 	beqz.n	a2, .L32
-	.loc 1 297 0
+	.loc 1 300 0
 	addi	a10, a5, 24
 	mov.n	a12, a2
 	add.n	a10, a10, a6
 	call8	memcpy
 .LVL288:
 .L32:
-	.loc 1 300 0
+	.loc 1 303 0
 	movi.n	a2, 0
 	retw.n
 .LVL289:
 .L22:
-	.loc 1 288 0
+	.loc 1 291 0
 	mov.n	a2, a10
 .LVL290:
 .L14:
 .LBE7:
 .LBE6:
-	.loc 1 301 0
+	.loc 1 304 0
 	retw.n
 .LFE7:
 	.size	mbedtls_md5_update_ret, .-mbedtls_md5_update_ret
@@ -1589,11 +1589,11 @@ mbedtls_md5_update_ret:
 	.type	mbedtls_md5_update, @function
 mbedtls_md5_update:
 .LFB8:
-	.loc 1 307 0
+	.loc 1 310 0
 .LVL291:
 	entry	sp, 32
 .LCFI8:
-	.loc 1 308 0
+	.loc 1 311 0
 	mov.n	a12, a4
 	mov.n	a11, a3
 	mov.n	a10, a2
@@ -1608,27 +1608,27 @@ mbedtls_md5_update:
 	.type	mbedtls_md5_finish_ret, @function
 mbedtls_md5_finish_ret:
 .LFB9:
-	.loc 1 317 0
+	.loc 1 320 0
 .LVL293:
 	entry	sp, 32
 .LCFI9:
-	.loc 1 325 0
+	.loc 1 328 0
 	l32i.n	a4, a2, 0
-	.loc 1 327 0
+	.loc 1 330 0
 	movi	a5, -0x80
-	.loc 1 325 0
+	.loc 1 328 0
 	extui	a4, a4, 0, 6
 .LVL294:
-	.loc 1 327 0
+	.loc 1 330 0
 	addi.n	a10, a4, 1
 .LVL295:
 	add.n	a4, a2, a4
 	s8i	a5, a4, 24
-	.loc 1 329 0
+	.loc 1 332 0
 	movi.n	a5, 0x38
 	addi	a4, a2, 24
 	bltu	a5, a10, .L35
-	.loc 1 332 0
+	.loc 1 335 0
 	sub	a12, a5, a10
 	movi.n	a11, 0
 	add.n	a10, a4, a10
@@ -1636,7 +1636,7 @@ mbedtls_md5_finish_ret:
 	j	.L40
 .LVL297:
 .L35:
-	.loc 1 337 0
+	.loc 1 340 0
 	movi.n	a12, 0x40
 	sub	a12, a12, a10
 	movi.n	a11, 0
@@ -1644,14 +1644,14 @@ mbedtls_md5_finish_ret:
 .LVL298:
 	call8	memset
 .LVL299:
-	.loc 1 339 0
+	.loc 1 342 0
 	mov.n	a11, a4
 	mov.n	a10, a2
 	call8	mbedtls_internal_md5_process
 .LVL300:
 	mov.n	a8, a10
 	bnez.n	a10, .L37
-	.loc 1 342 0
+	.loc 1 345 0
 	mov.n	a11, a10
 	mov.n	a12, a5
 	mov.n	a10, a4
@@ -1661,45 +1661,45 @@ mbedtls_md5_finish_ret:
 .LVL302:
 .LBB10:
 .LBB11:
-	.loc 1 348 0
+	.loc 1 351 0
 	l32i.n	a8, a2, 0
 	l32i.n	a9, a2, 4
-	.loc 1 355 0
+	.loc 1 358 0
 	mov.n	a11, a4
-	.loc 1 348 0
+	.loc 1 351 0
 	slli	a10, a9, 3
 	extui	a9, a8, 29, 3
-	.loc 1 350 0
+	.loc 1 353 0
 	slli	a8, a8, 3
-	.loc 1 352 0
+	.loc 1 355 0
 	srli	a5, a8, 8
-	.loc 1 348 0
+	.loc 1 351 0
 	or	a9, a10, a9
 .LVL303:
-	.loc 1 352 0
+	.loc 1 355 0
 	s8i	a5, a2, 81
 	extui	a5, a8, 16, 16
 	s8i	a5, a2, 82
-	.loc 1 353 0
+	.loc 1 356 0
 	srli	a5, a9, 8
-	.loc 1 352 0
+	.loc 1 355 0
 	s8i	a8, a2, 80
-	.loc 1 353 0
+	.loc 1 356 0
 	s8i	a9, a2, 84
-	.loc 1 352 0
+	.loc 1 355 0
 	extui	a8, a8, 24, 8
 .LVL304:
-	.loc 1 353 0
+	.loc 1 356 0
 	s8i	a5, a2, 85
 	extui	a5, a9, 16, 16
 	extui	a9, a9, 24, 8
 .LVL305:
-	.loc 1 352 0
+	.loc 1 355 0
 	s8i	a8, a2, 83
-	.loc 1 353 0
+	.loc 1 356 0
 	s8i	a5, a2, 86
 	s8i	a9, a2, 87
-	.loc 1 355 0
+	.loc 1 358 0
 	mov.n	a10, a2
 .LVL306:
 	call8	mbedtls_internal_md5_process
@@ -1707,7 +1707,7 @@ mbedtls_md5_finish_ret:
 	mov.n	a8, a10
 .LVL308:
 	bnez.n	a10, .L37
-	.loc 1 361 0
+	.loc 1 364 0
 	l32i.n	a4, a2, 8
 	s8i	a4, a3, 0
 	l32i.n	a4, a2, 8
@@ -1717,7 +1717,7 @@ mbedtls_md5_finish_ret:
 	s8i	a4, a3, 2
 	l8ui	a4, a2, 11
 	s8i	a4, a3, 3
-	.loc 1 362 0
+	.loc 1 365 0
 	l32i.n	a4, a2, 12
 	s8i	a4, a3, 4
 	l32i.n	a4, a2, 12
@@ -1727,7 +1727,7 @@ mbedtls_md5_finish_ret:
 	s8i	a4, a3, 6
 	l8ui	a4, a2, 15
 	s8i	a4, a3, 7
-	.loc 1 363 0
+	.loc 1 366 0
 	l32i.n	a4, a2, 16
 	s8i	a4, a3, 8
 	l32i.n	a4, a2, 16
@@ -1737,7 +1737,7 @@ mbedtls_md5_finish_ret:
 	s8i	a4, a3, 10
 	l8ui	a4, a2, 19
 	s8i	a4, a3, 11
-	.loc 1 364 0
+	.loc 1 367 0
 	l32i.n	a4, a2, 20
 	s8i	a4, a3, 12
 	l32i.n	a4, a2, 20
@@ -1752,7 +1752,7 @@ mbedtls_md5_finish_ret:
 .L37:
 .LBE11:
 .LBE10:
-	.loc 1 367 0
+	.loc 1 370 0
 	mov.n	a2, a8
 	retw.n
 .LFE9:
@@ -1763,11 +1763,11 @@ mbedtls_md5_finish_ret:
 	.type	mbedtls_md5_finish, @function
 mbedtls_md5_finish:
 .LFB10:
-	.loc 1 372 0
+	.loc 1 375 0
 .LVL311:
 	entry	sp, 32
 .LCFI10:
-	.loc 1 373 0
+	.loc 1 376 0
 	mov.n	a11, a3
 	mov.n	a10, a2
 	call8	mbedtls_md5_finish_ret
@@ -1786,11 +1786,11 @@ mbedtls_md5_finish:
 	.type	mbedtls_md5_ret, @function
 mbedtls_md5_ret:
 .LFB11:
-	.loc 1 385 0
+	.loc 1 388 0
 .LVL313:
 	entry	sp, 128
 .LCFI11:
-	.loc 1 389 0
+	.loc 1 392 0
 	mov.n	a10, sp
 	call8	mbedtls_md5_init
 .LVL314:
@@ -1805,7 +1805,7 @@ mbedtls_md5_ret:
 	l32r	a8, .LC68
 .LBE13:
 .LBE12:
-	.loc 1 394 0
+	.loc 1 397 0
 	mov.n	a11, a2
 .LBB17:
 .LBB14:
@@ -1815,7 +1815,7 @@ mbedtls_md5_ret:
 	l32r	a8, .LC69
 .LBE14:
 .LBE17:
-	.loc 1 394 0
+	.loc 1 397 0
 	mov.n	a12, a3
 .LBB18:
 .LBB15:
@@ -1825,7 +1825,7 @@ mbedtls_md5_ret:
 	l32r	a8, .LC70
 .LBE15:
 .LBE18:
-	.loc 1 394 0
+	.loc 1 397 0
 	mov.n	a10, sp
 .LVL315:
 .LBB19:
@@ -1837,13 +1837,13 @@ mbedtls_md5_ret:
 	s32i.n	a8, sp, 20
 .LBE16:
 .LBE19:
-	.loc 1 394 0
+	.loc 1 397 0
 	call8	mbedtls_md5_update_ret
 .LVL316:
 	mov.n	a2, a10
 .LVL317:
 	bnez.n	a10, .L43
-	.loc 1 397 0
+	.loc 1 400 0
 	mov.n	a11, a4
 	mov.n	a10, sp
 .LVL318:
@@ -1852,12 +1852,12 @@ mbedtls_md5_ret:
 	mov.n	a2, a10
 .LVL320:
 .L43:
-	.loc 1 401 0
+	.loc 1 404 0
 	mov.n	a10, sp
 .LVL321:
 	call8	mbedtls_md5_free
 .LVL322:
-	.loc 1 404 0
+	.loc 1 407 0
 	retw.n
 .LFE11:
 	.size	mbedtls_md5_ret, .-mbedtls_md5_ret
@@ -1867,11 +1867,11 @@ mbedtls_md5_ret:
 	.type	mbedtls_md5, @function
 mbedtls_md5:
 .LFB12:
-	.loc 1 410 0
+	.loc 1 413 0
 .LVL323:
 	entry	sp, 32
 .LCFI12:
-	.loc 1 411 0
+	.loc 1 414 0
 	mov.n	a12, a4
 	mov.n	a11, a3
 	mov.n	a10, a2
@@ -1901,27 +1901,27 @@ mbedtls_md5:
 	.type	mbedtls_md5_self_test, @function
 mbedtls_md5_self_test:
 .LFB13:
-	.loc 1 458 0
+	.loc 1 461 0
 .LVL325:
 	entry	sp, 48
 .LCFI13:
 .LVL326:
 	l32r	a5, .LC74
-	.loc 1 458 0
+	.loc 1 461 0
 	mov.n	a4, a2
 	movi.n	a3, 1
 .LVL327:
 .L49:
-	.loc 1 464 0
+	.loc 1 467 0
 	beqz.n	a4, .L46
-	.loc 1 465 0
+	.loc 1 468 0
 	l32r	a10, .LC76
 	mov.n	a11, a3
 	call8	printf
 .LVL328:
 .L46:
 	slli	a2, a3, 2
-	.loc 1 467 0
+	.loc 1 470 0
 	addi	a8, a2, -4
 	l32r	a2, .LC77
 	mov.n	a12, sp
@@ -1930,9 +1930,9 @@ mbedtls_md5_self_test:
 	mov.n	a10, a5
 	call8	mbedtls_md5_ret
 .LVL329:
-	.loc 1 468 0
-	bnez.n	a10, .L47
 	.loc 1 471 0
+	bnez.n	a10, .L47
+	.loc 1 474 0
 	l32r	a2, .LC78
 	l32r	a11, .LC79
 	add.n	a2, a3, a2
@@ -1945,9 +1945,9 @@ mbedtls_md5_self_test:
 .LVL331:
 	mov.n	a2, a10
 	bnez.n	a10, .L51
-	.loc 1 477 0
+	.loc 1 480 0
 	beqz.n	a4, .L48
-	.loc 1 478 0
+	.loc 1 481 0
 	l32r	a10, .LC81
 	call8	puts
 .LVL332:
@@ -1955,31 +1955,31 @@ mbedtls_md5_self_test:
 	addi.n	a3, a3, 1
 .LVL333:
 	addi	a5, a5, 81
-	.loc 1 462 0 discriminator 2
+	.loc 1 465 0 discriminator 2
 	bnei	a3, 8, .L49
-	.loc 1 481 0
+	.loc 1 484 0
 	beqz.n	a4, .L50
-	.loc 1 482 0
+	.loc 1 485 0
 	movi.n	a10, 0xa
 	call8	putchar
 .LVL334:
 	retw.n
 .L51:
-	.loc 1 473 0
+	.loc 1 476 0
 	movi.n	a10, 1
 .L47:
 .LVL335:
-	.loc 1 490 0
+	.loc 1 493 0
 	mov.n	a2, a10
-	.loc 1 487 0
+	.loc 1 490 0
 	beqz.n	a4, .L50
-	.loc 1 488 0
+	.loc 1 491 0
 	l32r	a10, .LC83
 .LVL336:
 	call8	puts
 .LVL337:
 .L50:
-	.loc 1 491 0
+	.loc 1 494 0
 	retw.n
 .LFE13:
 	.size	mbedtls_md5_self_test, .-mbedtls_md5_self_test
@@ -2323,7 +2323,7 @@ md5_test_buf:
 	.file 9 "<built-in>"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x97e
+	.4byte	0x980
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -2405,24 +2405,24 @@ md5_test_buf:
 	.4byte	.LASF17
 	.byte	0x58
 	.byte	0x5
-	.byte	0x3a
+	.byte	0x3b
 	.4byte	0xd1
 	.uleb128 0x7
 	.4byte	.LASF14
 	.byte	0x5
-	.byte	0x3c
+	.byte	0x3d
 	.4byte	0xd1
 	.byte	0
 	.uleb128 0x7
 	.4byte	.LASF15
 	.byte	0x5
-	.byte	0x3d
+	.byte	0x3e
 	.4byte	0xe1
 	.byte	0x8
 	.uleb128 0x7
 	.4byte	.LASF16
 	.byte	0x5
-	.byte	0x3e
+	.byte	0x3f
 	.4byte	0xf1
 	.byte	0x18
 	.byte	0
@@ -2450,44 +2450,44 @@ md5_test_buf:
 	.uleb128 0x2
 	.4byte	.LASF17
 	.byte	0x5
-	.byte	0x40
+	.byte	0x41
 	.4byte	0xa0
 	.uleb128 0xa
 	.4byte	.LASF22
 	.byte	0x1
-	.byte	0xff
+	.2byte	0x102
 	.4byte	0x3e
 	.byte	0x1
-	.4byte	0x164
+	.4byte	0x166
 	.uleb128 0xb
 	.string	"ctx"
 	.byte	0x1
-	.byte	0xff
-	.4byte	0x164
+	.2byte	0x102
+	.4byte	0x166
 	.uleb128 0xc
 	.4byte	.LASF18
 	.byte	0x1
-	.2byte	0x100
-	.4byte	0x16a
+	.2byte	0x103
+	.4byte	0x16c
 	.uleb128 0xc
 	.4byte	.LASF19
 	.byte	0x1
-	.2byte	0x101
+	.2byte	0x104
 	.4byte	0x25
 	.uleb128 0xd
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x103
+	.2byte	0x106
 	.4byte	0x3e
 	.uleb128 0xe
 	.4byte	.LASF20
 	.byte	0x1
-	.2byte	0x104
+	.2byte	0x107
 	.4byte	0x25
 	.uleb128 0xe
 	.4byte	.LASF21
 	.byte	0x1
-	.2byte	0x105
+	.2byte	0x108
 	.4byte	0x95
 	.byte	0
 	.uleb128 0x5
@@ -2495,59 +2495,59 @@ md5_test_buf:
 	.4byte	0x101
 	.uleb128 0x5
 	.byte	0x4
-	.4byte	0x170
+	.4byte	0x172
 	.uleb128 0xf
 	.4byte	0x4c
-	.uleb128 0x10
+	.uleb128 0xa
 	.4byte	.LASF23
 	.byte	0x1
-	.2byte	0x13b
+	.2byte	0x13e
 	.4byte	0x3e
 	.byte	0x1
-	.4byte	0x1cf
-	.uleb128 0x11
+	.4byte	0x1d1
+	.uleb128 0xb
 	.string	"ctx"
 	.byte	0x1
-	.2byte	0x13b
-	.4byte	0x164
+	.2byte	0x13e
+	.4byte	0x166
 	.uleb128 0xc
 	.4byte	.LASF24
 	.byte	0x1
-	.2byte	0x13c
+	.2byte	0x13f
 	.4byte	0x88
 	.uleb128 0xd
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x13e
+	.2byte	0x141
 	.4byte	0x3e
 	.uleb128 0xe
 	.4byte	.LASF25
 	.byte	0x1
-	.2byte	0x13f
+	.2byte	0x142
 	.4byte	0x95
 	.uleb128 0xe
 	.4byte	.LASF26
 	.byte	0x1
-	.2byte	0x140
+	.2byte	0x143
 	.4byte	0x95
 	.uleb128 0xd
 	.string	"low"
 	.byte	0x1
-	.2byte	0x140
+	.2byte	0x143
 	.4byte	0x95
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0x10
 	.4byte	.LASF27
 	.byte	0x1
 	.byte	0x60
 	.4byte	0x3e
 	.byte	0x1
-	.4byte	0x1eb
-	.uleb128 0xb
+	.4byte	0x1ed
+	.uleb128 0x11
 	.string	"ctx"
 	.byte	0x1
 	.byte	0x60
-	.4byte	0x164
+	.4byte	0x166
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LASF28
@@ -2557,17 +2557,17 @@ md5_test_buf:
 	.4byte	.LFE0-.LFB0
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x229
+	.4byte	0x22b
 	.uleb128 0x13
 	.string	"ctx"
 	.byte	0x1
 	.byte	0x4a
-	.4byte	0x164
+	.4byte	0x166
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x14
 	.4byte	.LVL1
-	.4byte	0x930
+	.4byte	0x932
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -2595,17 +2595,17 @@ md5_test_buf:
 	.4byte	.LFE1-.LFB1
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x262
+	.4byte	0x264
 	.uleb128 0x13
 	.string	"ctx"
 	.byte	0x1
 	.byte	0x4f
-	.4byte	0x164
+	.4byte	0x166
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x14
 	.4byte	.LVL3
-	.4byte	0x939
+	.4byte	0x93b
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -2628,24 +2628,24 @@ md5_test_buf:
 	.4byte	.LFE2-.LFB2
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2ae
+	.4byte	0x2b0
 	.uleb128 0x13
 	.string	"dst"
 	.byte	0x1
 	.byte	0x57
-	.4byte	0x164
+	.4byte	0x166
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x13
 	.string	"src"
 	.byte	0x1
 	.byte	0x58
-	.4byte	0x2ae
+	.4byte	0x2b0
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x14
 	.4byte	.LVL5
-	.4byte	0x944
+	.4byte	0x946
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -2668,18 +2668,18 @@ md5_test_buf:
 	.byte	0
 	.uleb128 0x5
 	.byte	0x4
-	.4byte	0x2b4
+	.4byte	0x2b6
 	.uleb128 0xf
 	.4byte	0x101
 	.uleb128 0x16
-	.4byte	0x1cf
+	.4byte	0x1d1
 	.4byte	.LFB3
 	.4byte	.LFE3-.LFB3
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2d6
+	.4byte	0x2d8
 	.uleb128 0x17
-	.4byte	0x1df
+	.4byte	0x1e1
 	.4byte	.LLST0
 	.byte	0
 	.uleb128 0x12
@@ -2690,17 +2690,17 @@ md5_test_buf:
 	.4byte	.LFE4-.LFB4
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x309
+	.4byte	0x30b
 	.uleb128 0x13
 	.string	"ctx"
 	.byte	0x1
 	.byte	0x6e
-	.4byte	0x164
+	.4byte	0x166
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x14
 	.4byte	.LVL9
-	.4byte	0x1cf
+	.4byte	0x1d1
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -2718,24 +2718,24 @@ md5_test_buf:
 	.4byte	.LFE5-.LFB5
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x382
+	.4byte	0x384
 	.uleb128 0x19
 	.string	"ctx"
 	.byte	0x1
 	.byte	0x75
-	.4byte	0x164
+	.4byte	0x166
 	.4byte	.LLST1
 	.uleb128 0x1a
 	.4byte	.LASF32
 	.byte	0x1
 	.byte	0x76
-	.4byte	0x16a
+	.4byte	0x16c
 	.4byte	.LLST2
 	.uleb128 0x1b
 	.string	"X"
 	.byte	0x1
 	.byte	0x78
-	.4byte	0x382
+	.4byte	0x384
 	.4byte	.LLST3
 	.uleb128 0x1b
 	.string	"A"
@@ -2764,7 +2764,7 @@ md5_test_buf:
 	.byte	0
 	.uleb128 0x8
 	.4byte	0x95
-	.4byte	0x392
+	.4byte	0x394
 	.uleb128 0x9
 	.4byte	0x7a
 	.byte	0xf
@@ -2772,29 +2772,29 @@ md5_test_buf:
 	.uleb128 0x12
 	.4byte	.LASF33
 	.byte	0x1
-	.byte	0xf4
+	.byte	0xf7
 	.4byte	.LFB6
 	.4byte	.LFE6-.LFB6
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x3d8
+	.4byte	0x3da
 	.uleb128 0x13
 	.string	"ctx"
 	.byte	0x1
-	.byte	0xf4
-	.4byte	0x164
+	.byte	0xf7
+	.4byte	0x166
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x1c
 	.4byte	.LASF32
 	.byte	0x1
-	.byte	0xf5
-	.4byte	0x16a
+	.byte	0xf8
+	.4byte	0x16c
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x14
 	.4byte	.LVL271
-	.4byte	0x309
+	.4byte	0x30b
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -2815,50 +2815,50 @@ md5_test_buf:
 	.4byte	.LFE7-.LFB7
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x4d8
+	.4byte	0x4da
 	.uleb128 0x17
-	.4byte	0x11c
+	.4byte	0x11d
 	.4byte	.LLST8
 	.uleb128 0x17
-	.4byte	0x127
+	.4byte	0x129
 	.4byte	.LLST9
 	.uleb128 0x17
-	.4byte	0x133
+	.4byte	0x135
 	.4byte	.LLST10
 	.uleb128 0x1d
-	.4byte	0x13f
+	.4byte	0x141
 	.uleb128 0x1d
-	.4byte	0x14b
+	.4byte	0x14d
 	.uleb128 0x1d
-	.4byte	0x157
+	.4byte	0x159
 	.uleb128 0x1e
 	.4byte	.LBB6
 	.4byte	.LBE6-.LBB6
 	.uleb128 0x17
-	.4byte	0x133
+	.4byte	0x135
 	.4byte	.LLST11
 	.uleb128 0x17
-	.4byte	0x127
+	.4byte	0x129
 	.4byte	.LLST12
 	.uleb128 0x17
-	.4byte	0x11c
+	.4byte	0x11d
 	.4byte	.LLST13
 	.uleb128 0x1e
 	.4byte	.LBB7
 	.4byte	.LBE7-.LBB7
 	.uleb128 0x1f
-	.4byte	0x13f
+	.4byte	0x141
 	.4byte	.LLST14
 	.uleb128 0x1f
-	.4byte	0x14b
+	.4byte	0x14d
 	.4byte	.LLST15
 	.uleb128 0x1f
-	.4byte	0x157
+	.4byte	0x159
 	.4byte	.LLST16
 	.uleb128 0x20
 	.4byte	.LVL277
-	.4byte	0x944
-	.4byte	0x480
+	.4byte	0x946
+	.4byte	0x482
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -2883,8 +2883,8 @@ md5_test_buf:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL278
-	.4byte	0x309
-	.4byte	0x49a
+	.4byte	0x30b
+	.4byte	0x49c
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -2900,8 +2900,8 @@ md5_test_buf:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL284
-	.4byte	0x309
-	.4byte	0x4ae
+	.4byte	0x30b
+	.4byte	0x4b0
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -2911,7 +2911,7 @@ md5_test_buf:
 	.byte	0
 	.uleb128 0x14
 	.4byte	.LVL288
-	.4byte	0x944
+	.4byte	0x946
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -2948,30 +2948,30 @@ md5_test_buf:
 	.uleb128 0x21
 	.4byte	.LASF34
 	.byte	0x1
-	.2byte	0x130
+	.2byte	0x133
 	.4byte	.LFB8
 	.4byte	.LFE8-.LFB8
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x535
+	.4byte	0x537
 	.uleb128 0x22
 	.string	"ctx"
 	.byte	0x1
-	.2byte	0x130
-	.4byte	0x164
+	.2byte	0x133
+	.4byte	0x166
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x23
 	.4byte	.LASF18
 	.byte	0x1
-	.2byte	0x131
-	.4byte	0x16a
+	.2byte	0x134
+	.4byte	0x16c
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x23
 	.4byte	.LASF19
 	.byte	0x1
-	.2byte	0x132
+	.2byte	0x135
 	.4byte	0x25
 	.uleb128 0x1
 	.byte	0x54
@@ -2999,56 +2999,56 @@ md5_test_buf:
 	.byte	0
 	.byte	0
 	.uleb128 0x16
-	.4byte	0x175
+	.4byte	0x177
 	.4byte	.LFB9
 	.4byte	.LFE9-.LFB9
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x60b
+	.4byte	0x60d
 	.uleb128 0x17
-	.4byte	0x186
+	.4byte	0x188
 	.4byte	.LLST17
 	.uleb128 0x24
-	.4byte	0x192
+	.4byte	0x194
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x1f
-	.4byte	0x19e
+	.4byte	0x1a0
 	.4byte	.LLST18
 	.uleb128 0x1f
-	.4byte	0x1aa
+	.4byte	0x1ac
 	.4byte	.LLST19
 	.uleb128 0x1d
-	.4byte	0x1b6
+	.4byte	0x1b8
 	.uleb128 0x1d
-	.4byte	0x1c2
+	.4byte	0x1c4
 	.uleb128 0x25
 	.4byte	.LBB10
 	.4byte	.LBE10-.LBB10
-	.4byte	0x5d4
+	.4byte	0x5d6
 	.uleb128 0x17
-	.4byte	0x192
+	.4byte	0x194
 	.4byte	.LLST20
 	.uleb128 0x17
-	.4byte	0x186
+	.4byte	0x188
 	.4byte	.LLST21
 	.uleb128 0x1e
 	.4byte	.LBB11
 	.4byte	.LBE11-.LBB11
 	.uleb128 0x1f
-	.4byte	0x19e
+	.4byte	0x1a0
 	.4byte	.LLST22
 	.uleb128 0x1d
-	.4byte	0x1aa
+	.4byte	0x1ac
 	.uleb128 0x1f
-	.4byte	0x1b6
+	.4byte	0x1b8
 	.4byte	.LLST23
 	.uleb128 0x1f
-	.4byte	0x1c2
+	.4byte	0x1c4
 	.4byte	.LLST24
 	.uleb128 0x14
 	.4byte	.LVL307
-	.4byte	0x309
+	.4byte	0x30b
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -3066,8 +3066,8 @@ md5_test_buf:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL299
-	.4byte	0x930
-	.4byte	0x5e7
+	.4byte	0x932
+	.4byte	0x5e9
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5b
@@ -3076,8 +3076,8 @@ md5_test_buf:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL300
-	.4byte	0x309
-	.4byte	0x601
+	.4byte	0x30b
+	.4byte	0x603
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -3093,34 +3093,34 @@ md5_test_buf:
 	.byte	0
 	.uleb128 0x26
 	.4byte	.LVL302
-	.4byte	0x930
+	.4byte	0x932
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LASF35
 	.byte	0x1
-	.2byte	0x172
+	.2byte	0x175
 	.4byte	.LFB10
 	.4byte	.LFE10-.LFB10
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x654
+	.4byte	0x656
 	.uleb128 0x22
 	.string	"ctx"
 	.byte	0x1
-	.2byte	0x172
-	.4byte	0x164
+	.2byte	0x175
+	.4byte	0x166
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x23
 	.4byte	.LASF24
 	.byte	0x1
-	.2byte	0x173
+	.2byte	0x176
 	.4byte	0x88
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x14
 	.4byte	.LVL312
-	.4byte	0x175
+	.4byte	0x177
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -3138,44 +3138,44 @@ md5_test_buf:
 	.uleb128 0x27
 	.4byte	.LASF37
 	.byte	0x1
-	.2byte	0x17e
+	.2byte	0x181
 	.4byte	0x3e
 	.4byte	.LFB11
 	.4byte	.LFE11-.LFB11
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x745
+	.4byte	0x747
 	.uleb128 0x28
 	.4byte	.LASF18
 	.byte	0x1
-	.2byte	0x17e
-	.4byte	0x16a
+	.2byte	0x181
+	.4byte	0x16c
 	.4byte	.LLST25
 	.uleb128 0x23
 	.4byte	.LASF19
 	.byte	0x1
-	.2byte	0x17f
+	.2byte	0x182
 	.4byte	0x25
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x23
 	.4byte	.LASF24
 	.byte	0x1
-	.2byte	0x180
+	.2byte	0x183
 	.4byte	0x88
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x29
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x182
+	.2byte	0x185
 	.4byte	0x3e
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x29
 	.string	"ctx"
 	.byte	0x1
-	.2byte	0x183
+	.2byte	0x186
 	.4byte	0x101
 	.uleb128 0x3
 	.byte	0x91
@@ -3183,23 +3183,23 @@ md5_test_buf:
 	.uleb128 0x2a
 	.4byte	.LASF42
 	.byte	0x1
-	.2byte	0x190
+	.2byte	0x193
 	.4byte	.L43
 	.uleb128 0x2b
-	.4byte	0x1cf
+	.4byte	0x1d1
 	.4byte	.LBB12
 	.4byte	.Ldebug_ranges0+0
 	.byte	0x1
-	.2byte	0x187
-	.4byte	0x6e2
+	.2byte	0x18a
+	.4byte	0x6e4
 	.uleb128 0x17
-	.4byte	0x1df
+	.4byte	0x1e1
 	.4byte	.LLST26
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL314
-	.4byte	0x1eb
-	.4byte	0x6f7
+	.4byte	0x1ed
+	.4byte	0x6f9
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -3210,7 +3210,7 @@ md5_test_buf:
 	.uleb128 0x20
 	.4byte	.LVL316
 	.4byte	0x10c
-	.4byte	0x718
+	.4byte	0x71a
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -3232,8 +3232,8 @@ md5_test_buf:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL319
-	.4byte	0x175
-	.4byte	0x733
+	.4byte	0x177
+	.4byte	0x735
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -3249,7 +3249,7 @@ md5_test_buf:
 	.byte	0
 	.uleb128 0x14
 	.4byte	.LVL322
-	.4byte	0x229
+	.4byte	0x22b
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -3261,36 +3261,36 @@ md5_test_buf:
 	.uleb128 0x21
 	.4byte	.LASF38
 	.byte	0x1
-	.2byte	0x197
+	.2byte	0x19a
 	.4byte	.LFB12
 	.4byte	.LFE12-.LFB12
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x7a2
+	.4byte	0x7a4
 	.uleb128 0x23
 	.4byte	.LASF18
 	.byte	0x1
-	.2byte	0x197
-	.4byte	0x16a
+	.2byte	0x19a
+	.4byte	0x16c
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x23
 	.4byte	.LASF19
 	.byte	0x1
-	.2byte	0x198
+	.2byte	0x19b
 	.4byte	0x25
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x23
 	.4byte	.LASF24
 	.byte	0x1
-	.2byte	0x199
+	.2byte	0x19c
 	.4byte	0x88
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x14
 	.4byte	.LVL324
-	.4byte	0x654
+	.4byte	0x656
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -3314,48 +3314,48 @@ md5_test_buf:
 	.uleb128 0x27
 	.4byte	.LASF39
 	.byte	0x1
-	.2byte	0x1c9
+	.2byte	0x1cc
 	.4byte	0x3e
 	.4byte	.LFB13
 	.4byte	.LFE13-.LFB13
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x89f
+	.4byte	0x8a1
 	.uleb128 0x28
 	.4byte	.LASF40
 	.byte	0x1
-	.2byte	0x1c9
+	.2byte	0x1cc
 	.4byte	0x3e
 	.4byte	.LLST27
 	.uleb128 0x2c
 	.string	"i"
 	.byte	0x1
-	.2byte	0x1cb
+	.2byte	0x1ce
 	.4byte	0x3e
 	.4byte	.LLST28
 	.uleb128 0x2c
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x1cb
+	.2byte	0x1ce
 	.4byte	0x3e
 	.4byte	.LLST29
 	.uleb128 0x2d
 	.4byte	.LASF41
 	.byte	0x1
-	.2byte	0x1cc
-	.4byte	0x89f
+	.2byte	0x1cf
+	.4byte	0x8a1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
 	.uleb128 0x2a
 	.4byte	.LASF43
 	.byte	0x1
-	.2byte	0x1e6
+	.2byte	0x1e9
 	.4byte	.L47
 	.uleb128 0x20
 	.4byte	.LVL328
-	.4byte	0x94d
-	.4byte	0x822
+	.4byte	0x94f
+	.4byte	0x824
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -3371,8 +3371,8 @@ md5_test_buf:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL329
-	.4byte	0x654
-	.4byte	0x83c
+	.4byte	0x656
+	.4byte	0x83e
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -3388,8 +3388,8 @@ md5_test_buf:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL331
-	.4byte	0x958
-	.4byte	0x861
+	.4byte	0x95a
+	.4byte	0x863
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -3413,8 +3413,8 @@ md5_test_buf:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL332
-	.4byte	0x963
-	.4byte	0x878
+	.4byte	0x965
+	.4byte	0x87a
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -3424,8 +3424,8 @@ md5_test_buf:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL334
-	.4byte	0x972
-	.4byte	0x88b
+	.4byte	0x974
+	.4byte	0x88d
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -3434,7 +3434,7 @@ md5_test_buf:
 	.byte	0
 	.uleb128 0x14
 	.4byte	.LVL337
-	.4byte	0x963
+	.4byte	0x965
 	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x5a
@@ -3445,14 +3445,14 @@ md5_test_buf:
 	.byte	0
 	.uleb128 0x8
 	.4byte	0x4c
-	.4byte	0x8af
+	.4byte	0x8b1
 	.uleb128 0x9
 	.4byte	0x7a
 	.byte	0xf
 	.byte	0
 	.uleb128 0x8
 	.4byte	0x4c
-	.4byte	0x8c5
+	.4byte	0x8c7
 	.uleb128 0x9
 	.4byte	0x7a
 	.byte	0x6
@@ -3463,16 +3463,16 @@ md5_test_buf:
 	.uleb128 0x2d
 	.4byte	.LASF44
 	.byte	0x1
-	.2byte	0x1a3
-	.4byte	0x8d7
+	.2byte	0x1a6
+	.4byte	0x8d9
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	md5_test_buf
 	.uleb128 0xf
-	.4byte	0x8af
+	.4byte	0x8b1
 	.uleb128 0x8
 	.4byte	0x25
-	.4byte	0x8ec
+	.4byte	0x8ee
 	.uleb128 0x9
 	.4byte	0x7a
 	.byte	0x6
@@ -3480,16 +3480,16 @@ md5_test_buf:
 	.uleb128 0x2d
 	.4byte	.LASF45
 	.byte	0x1
-	.2byte	0x1af
-	.4byte	0x8fe
+	.2byte	0x1b2
+	.4byte	0x900
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	md5_test_buflen
 	.uleb128 0xf
-	.4byte	0x8dc
+	.4byte	0x8de
 	.uleb128 0x8
 	.4byte	0x4c
-	.4byte	0x919
+	.4byte	0x91b
 	.uleb128 0x9
 	.4byte	0x7a
 	.byte	0x6
@@ -3500,13 +3500,13 @@ md5_test_buf:
 	.uleb128 0x2d
 	.4byte	.LASF46
 	.byte	0x1
-	.2byte	0x1b4
-	.4byte	0x92b
+	.2byte	0x1b7
+	.4byte	0x92d
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	md5_test_sum
 	.uleb128 0xf
-	.4byte	0x903
+	.4byte	0x905
 	.uleb128 0x2e
 	.4byte	.LASF47
 	.4byte	.LASF47
@@ -3514,7 +3514,7 @@ md5_test_buf:
 	.4byte	.LASF49
 	.4byte	.LASF49
 	.byte	0x6
-	.byte	0x42
+	.byte	0x9f
 	.uleb128 0x2e
 	.4byte	.LASF48
 	.4byte	.LASF48
@@ -3664,7 +3664,7 @@ md5_test_buf:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
+	.uleb128 0x5
 	.uleb128 0x27
 	.uleb128 0x19
 	.uleb128 0x49
@@ -3683,7 +3683,7 @@ md5_test_buf:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
+	.uleb128 0x5
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
@@ -3744,7 +3744,7 @@ md5_test_buf:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0x5
+	.uleb128 0xb
 	.uleb128 0x27
 	.uleb128 0x19
 	.uleb128 0x49
@@ -3763,7 +3763,7 @@ md5_test_buf:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0x5
+	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0

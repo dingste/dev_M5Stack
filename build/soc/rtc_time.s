@@ -18,7 +18,7 @@
 	.literal .LC2, 150000
 	.literal .LC3, 32766
 	.literal .LC5, .LC4
-	.literal .LC6, __func__$2454
+	.literal .LC6, __func__$2459
 	.literal .LC8, .LC7
 	.literal .LC9, 1072988272
 	.literal .LC10, 1073082472
@@ -522,10 +522,10 @@ rtc_clk_wait_for_slow_cycle:
 	retw.n
 .LFE6:
 	.size	rtc_clk_wait_for_slow_cycle, .-rtc_clk_wait_for_slow_cycle
-	.section	.rodata.__func__$2454,"a",@progbits
-	.type	__func__$2454, @object
-	.size	__func__$2454, 21
-__func__$2454:
+	.section	.rodata.__func__$2459,"a",@progbits
+	.type	__func__$2459, @object
+	.size	__func__$2459, 21
+__func__$2459:
 	.string	"rtc_clk_cal_internal"
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -839,7 +839,7 @@ __func__$2454:
 	.4byte	0x28b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$2454
+	.4byte	__func__$2459
 	.uleb128 0xc
 	.4byte	.LASF36
 	.byte	0x1
@@ -902,7 +902,7 @@ __func__$2454:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$2454
+	.4byte	__func__$2459
 	.uleb128 0xf
 	.uleb128 0x1
 	.byte	0x5d

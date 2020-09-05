@@ -6,7 +6,7 @@
 	.global	BTM_CreateSco
 	.type	BTM_CreateSco, @function
 BTM_CreateSco:
-.LFB30:
+.LFB39:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/btm/btm_sco.c"
 	.loc 1 1776 0
 .LVL0:
@@ -18,14 +18,14 @@ BTM_CreateSco:
 	.loc 1 1776 0
 	.loc 1 1778 0
 	retw.n
-.LFE30:
+.LFE39:
 	.size	BTM_CreateSco, .-BTM_CreateSco
 	.section	.text.BTM_RemoveSco,"ax",@progbits
 	.align	4
 	.global	BTM_RemoveSco
 	.type	BTM_RemoveSco, @function
 BTM_RemoveSco:
-.LFB31:
+.LFB40:
 	.loc 1 1780 0
 .LVL2:
 	entry	sp, 32
@@ -34,14 +34,14 @@ BTM_RemoveSco:
 	movi.n	a2, 3
 .LVL3:
 	retw.n
-.LFE31:
+.LFE40:
 	.size	BTM_RemoveSco, .-BTM_RemoveSco
 	.section	.text.BTM_SetScoPacketTypes,"ax",@progbits
 	.align	4
 	.global	BTM_SetScoPacketTypes
 	.type	BTM_SetScoPacketTypes, @function
 BTM_SetScoPacketTypes:
-.LFB32:
+.LFB41:
 	.loc 1 1784 0
 .LVL4:
 	entry	sp, 32
@@ -50,14 +50,14 @@ BTM_SetScoPacketTypes:
 	movi.n	a2, 3
 .LVL5:
 	retw.n
-.LFE32:
+.LFE41:
 	.size	BTM_SetScoPacketTypes, .-BTM_SetScoPacketTypes
 	.section	.text.BTM_ReadScoPacketTypes,"ax",@progbits
 	.align	4
 	.global	BTM_ReadScoPacketTypes
 	.type	BTM_ReadScoPacketTypes, @function
 BTM_ReadScoPacketTypes:
-.LFB33:
+.LFB42:
 	.loc 1 1788 0
 .LVL6:
 	entry	sp, 32
@@ -66,21 +66,21 @@ BTM_ReadScoPacketTypes:
 	movi.n	a2, 0
 .LVL7:
 	retw.n
-.LFE33:
+.LFE42:
 	.size	BTM_ReadScoPacketTypes, .-BTM_ReadScoPacketTypes
 	.section	.text.BTM_ReadDeviceScoPacketTypes,"ax",@progbits
 	.align	4
 	.global	BTM_ReadDeviceScoPacketTypes
 	.type	BTM_ReadDeviceScoPacketTypes, @function
 BTM_ReadDeviceScoPacketTypes:
-.LFB34:
+.LFB43:
 	.loc 1 1792 0
 	entry	sp, 32
 .LCFI4:
 	.loc 1 1794 0
 	movi.n	a2, 0
 	retw.n
-.LFE34:
+.LFE43:
 	.size	BTM_ReadDeviceScoPacketTypes, .-BTM_ReadDeviceScoPacketTypes
 	.section	.text.BTM_ReadScoHandle,"ax",@progbits
 	.literal_position
@@ -89,7 +89,7 @@ BTM_ReadDeviceScoPacketTypes:
 	.global	BTM_ReadScoHandle
 	.type	BTM_ReadScoHandle, @function
 BTM_ReadScoHandle:
-.LFB35:
+.LFB44:
 	.loc 1 1796 0
 .LVL8:
 	entry	sp, 32
@@ -98,14 +98,14 @@ BTM_ReadScoHandle:
 	l32r	a2, .LC0
 .LVL9:
 	retw.n
-.LFE35:
+.LFE44:
 	.size	BTM_ReadScoHandle, .-BTM_ReadScoHandle
 	.section	.text.BTM_ReadScoBdAddr,"ax",@progbits
 	.align	4
 	.global	BTM_ReadScoBdAddr
 	.type	BTM_ReadScoBdAddr, @function
 BTM_ReadScoBdAddr:
-.LFB36:
+.LFB45:
 	.loc 1 1800 0
 .LVL10:
 	entry	sp, 32
@@ -114,7 +114,7 @@ BTM_ReadScoBdAddr:
 	movi.n	a2, 0
 .LVL11:
 	retw.n
-.LFE36:
+.LFE45:
 	.size	BTM_ReadScoBdAddr, .-BTM_ReadScoBdAddr
 	.section	.text.BTM_ReadScoDiscReason,"ax",@progbits
 	.literal_position
@@ -123,21 +123,21 @@ BTM_ReadScoBdAddr:
 	.global	BTM_ReadScoDiscReason
 	.type	BTM_ReadScoDiscReason, @function
 BTM_ReadScoDiscReason:
-.LFB37:
+.LFB46:
 	.loc 1 1804 0
 	entry	sp, 32
 .LCFI7:
 	.loc 1 1806 0
 	l32r	a2, .LC1
 	retw.n
-.LFE37:
+.LFE46:
 	.size	BTM_ReadScoDiscReason, .-BTM_ReadScoDiscReason
 	.section	.text.BTM_SetEScoMode,"ax",@progbits
 	.align	4
 	.global	BTM_SetEScoMode
 	.type	BTM_SetEScoMode, @function
 BTM_SetEScoMode:
-.LFB38:
+.LFB47:
 	.loc 1 1808 0
 .LVL12:
 	entry	sp, 32
@@ -146,14 +146,14 @@ BTM_SetEScoMode:
 	movi.n	a2, 4
 .LVL13:
 	retw.n
-.LFE38:
+.LFE47:
 	.size	BTM_SetEScoMode, .-BTM_SetEScoMode
 	.section	.text.BTM_RegForEScoEvts,"ax",@progbits
 	.align	4
 	.global	BTM_RegForEScoEvts
 	.type	BTM_RegForEScoEvts, @function
 BTM_RegForEScoEvts:
-.LFB39:
+.LFB48:
 	.loc 1 1812 0
 .LVL14:
 	entry	sp, 32
@@ -162,26 +162,26 @@ BTM_RegForEScoEvts:
 	movi.n	a2, 5
 .LVL15:
 	retw.n
-.LFE39:
+.LFE48:
 	.size	BTM_RegForEScoEvts, .-BTM_RegForEScoEvts
 	.section	.text.BTM_ReadEScoLinkParms,"ax",@progbits
 	.align	4
 	.global	BTM_ReadEScoLinkParms
 	.type	BTM_ReadEScoLinkParms, @function
 BTM_ReadEScoLinkParms:
-.LFB45:
+.LFB54:
 	entry	sp, 32
 .LCFI10:
 	movi.n	a2, 4
 	retw.n
-.LFE45:
+.LFE54:
 	.size	BTM_ReadEScoLinkParms, .-BTM_ReadEScoLinkParms
 	.section	.text.BTM_ChangeEScoLinkParms,"ax",@progbits
 	.align	4
 	.global	BTM_ChangeEScoLinkParms
 	.type	BTM_ChangeEScoLinkParms, @function
 BTM_ChangeEScoLinkParms:
-.LFB41:
+.LFB50:
 	.loc 1 1820 0
 .LVL16:
 	.loc 1 1820 0
@@ -191,27 +191,27 @@ BTM_ChangeEScoLinkParms:
 	movi.n	a2, 4
 .LVL17:
 	retw.n
-.LFE41:
+.LFE50:
 	.size	BTM_ChangeEScoLinkParms, .-BTM_ChangeEScoLinkParms
 	.section	.text.BTM_EScoConnRsp,"ax",@progbits
 	.align	4
 	.global	BTM_EScoConnRsp
 	.type	BTM_EScoConnRsp, @function
 BTM_EScoConnRsp:
-.LFB42:
+.LFB51:
 	.loc 1 1823 0
 .LVL18:
 	entry	sp, 32
 .LCFI12:
 	retw.n
-.LFE42:
+.LFE51:
 	.size	BTM_EScoConnRsp, .-BTM_EScoConnRsp
 	.section	.text.BTM_GetNumScoLinks,"ax",@progbits
 	.align	4
 	.global	BTM_GetNumScoLinks
 	.type	BTM_GetNumScoLinks, @function
 BTM_GetNumScoLinks:
-.LFB43:
+.LFB52:
 	.loc 1 1825 0
 	.loc 1 1825 0
 	entry	sp, 32
@@ -219,7 +219,7 @@ BTM_GetNumScoLinks:
 	.loc 1 1827 0
 	movi.n	a2, 0
 	retw.n
-.LFE43:
+.LFE52:
 	.size	BTM_GetNumScoLinks, .-BTM_GetNumScoLinks
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -240,10 +240,10 @@ BTM_GetNumScoLinks:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI0-.LFB30
+	.4byte	.LCFI0-.LFB39
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -252,10 +252,10 @@ BTM_GetNumScoLinks:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI1-.LFB31
+	.4byte	.LCFI1-.LFB40
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -264,10 +264,10 @@ BTM_GetNumScoLinks:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.byte	0x4
-	.4byte	.LCFI2-.LFB32
+	.4byte	.LCFI2-.LFB41
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -276,10 +276,10 @@ BTM_GetNumScoLinks:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.byte	0x4
-	.4byte	.LCFI3-.LFB33
+	.4byte	.LCFI3-.LFB42
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -288,10 +288,10 @@ BTM_GetNumScoLinks:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.byte	0x4
-	.4byte	.LCFI4-.LFB34
+	.4byte	.LCFI4-.LFB43
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -300,10 +300,10 @@ BTM_GetNumScoLinks:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.byte	0x4
-	.4byte	.LCFI5-.LFB35
+	.4byte	.LCFI5-.LFB44
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -312,10 +312,10 @@ BTM_GetNumScoLinks:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.byte	0x4
-	.4byte	.LCFI6-.LFB36
+	.4byte	.LCFI6-.LFB45
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -324,10 +324,10 @@ BTM_GetNumScoLinks:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.byte	0x4
-	.4byte	.LCFI7-.LFB37
+	.4byte	.LCFI7-.LFB46
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -336,10 +336,10 @@ BTM_GetNumScoLinks:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI8-.LFB38
+	.4byte	.LCFI8-.LFB47
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -348,10 +348,10 @@ BTM_GetNumScoLinks:
 	.4byte	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI9-.LFB39
+	.4byte	.LCFI9-.LFB48
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -360,10 +360,10 @@ BTM_GetNumScoLinks:
 	.4byte	.LEFDE20-.LASFDE20
 .LASFDE20:
 	.4byte	.Lframe0
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.byte	0x4
-	.4byte	.LCFI10-.LFB45
+	.4byte	.LCFI10-.LFB54
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -372,10 +372,10 @@ BTM_GetNumScoLinks:
 	.4byte	.LEFDE22-.LASFDE22
 .LASFDE22:
 	.4byte	.Lframe0
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.byte	0x4
-	.4byte	.LCFI11-.LFB41
+	.4byte	.LCFI11-.LFB50
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -384,10 +384,10 @@ BTM_GetNumScoLinks:
 	.4byte	.LEFDE24-.LASFDE24
 .LASFDE24:
 	.4byte	.Lframe0
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.byte	0x4
-	.4byte	.LCFI12-.LFB42
+	.4byte	.LCFI12-.LFB51
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -396,10 +396,10 @@ BTM_GetNumScoLinks:
 	.4byte	.LEFDE26-.LASFDE26
 .LASFDE26:
 	.4byte	.Lframe0
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.byte	0x4
-	.4byte	.LCFI13-.LFB43
+	.4byte	.LCFI13-.LFB52
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -505,22 +505,22 @@ BTM_GetNumScoLinks:
 	.uleb128 0x4
 	.4byte	.LASF17
 	.byte	0x4
-	.byte	0x21
+	.byte	0x1a
 	.4byte	0x9a
 	.uleb128 0x4
 	.4byte	.LASF18
 	.byte	0x4
-	.byte	0x22
+	.byte	0x1b
 	.4byte	0xa5
 	.uleb128 0x4
 	.4byte	.LASF19
 	.byte	0x4
-	.byte	0x23
+	.byte	0x1c
 	.4byte	0xb0
 	.uleb128 0x4
 	.4byte	.LASF20
 	.byte	0x4
-	.byte	0x29
+	.byte	0x22
 	.4byte	0xe7
 	.uleb128 0x3
 	.byte	0x1
@@ -529,7 +529,7 @@ BTM_GetNumScoLinks:
 	.uleb128 0x5
 	.4byte	.LASF22
 	.byte	0x4
-	.2byte	0x132
+	.2byte	0x12b
 	.4byte	0xfa
 	.uleb128 0x6
 	.4byte	0xbb
@@ -544,7 +544,7 @@ BTM_GetNumScoLinks:
 	.uleb128 0x5
 	.4byte	.LASF23
 	.byte	0x4
-	.2byte	0x14e
+	.2byte	0x147
 	.4byte	0x11c
 	.uleb128 0x6
 	.4byte	0xbb
@@ -880,8 +880,8 @@ BTM_GetNumScoLinks:
 	.byte	0x1
 	.2byte	0x6ec
 	.4byte	0x1e6
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x444
@@ -932,8 +932,8 @@ BTM_GetNumScoLinks:
 	.byte	0x1
 	.2byte	0x6f3
 	.4byte	0x1e6
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x46f
@@ -949,8 +949,8 @@ BTM_GetNumScoLinks:
 	.byte	0x1
 	.2byte	0x6f7
 	.4byte	0x1e6
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x4a8
@@ -973,8 +973,8 @@ BTM_GetNumScoLinks:
 	.byte	0x1
 	.2byte	0x6fb
 	.4byte	0xc6
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x4d3
@@ -990,8 +990,8 @@ BTM_GetNumScoLinks:
 	.byte	0x1
 	.2byte	0x6ff
 	.4byte	0xc6
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x11
@@ -999,8 +999,8 @@ BTM_GetNumScoLinks:
 	.byte	0x1
 	.2byte	0x703
 	.4byte	0xc6
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x514
@@ -1016,8 +1016,8 @@ BTM_GetNumScoLinks:
 	.byte	0x1
 	.2byte	0x707
 	.4byte	0x10a
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x53f
@@ -1033,8 +1033,8 @@ BTM_GetNumScoLinks:
 	.byte	0x1
 	.2byte	0x70b
 	.4byte	0xc6
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x11
@@ -1042,8 +1042,8 @@ BTM_GetNumScoLinks:
 	.byte	0x1
 	.2byte	0x70f
 	.4byte	0x1e6
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x58e
@@ -1069,8 +1069,8 @@ BTM_GetNumScoLinks:
 	.byte	0x1
 	.2byte	0x713
 	.4byte	0x1e6
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x5cd
@@ -1111,8 +1111,8 @@ BTM_GetNumScoLinks:
 	.4byte	0x2aa
 	.uleb128 0x17
 	.4byte	0x5cd
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x621
@@ -1128,8 +1128,8 @@ BTM_GetNumScoLinks:
 	.4byte	.LASF104
 	.byte	0x1
 	.2byte	0x71f
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x662
@@ -1160,14 +1160,14 @@ BTM_GetNumScoLinks:
 	.byte	0x1
 	.2byte	0x720
 	.4byte	0xbb
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x1b
 	.4byte	.LASF98
 	.byte	0x4
-	.2byte	0x2cc
+	.2byte	0x2b8
 	.4byte	0x68b
 	.byte	0x6
 	.byte	0xff
@@ -1181,7 +1181,7 @@ BTM_GetNumScoLinks:
 	.uleb128 0x1b
 	.4byte	.LASF99
 	.byte	0x4
-	.2byte	0x2cd
+	.2byte	0x2b9
 	.4byte	0x6a3
 	.byte	0x6
 	.byte	0
@@ -1590,7 +1590,7 @@ BTM_GetNumScoLinks:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL1
-	.4byte	.LFE30
+	.4byte	.LFE39
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1604,7 +1604,7 @@ BTM_GetNumScoLinks:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL3
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1618,7 +1618,7 @@ BTM_GetNumScoLinks:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL5
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1632,7 +1632,7 @@ BTM_GetNumScoLinks:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL7
-	.4byte	.LFE33
+	.4byte	.LFE42
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1646,7 +1646,7 @@ BTM_GetNumScoLinks:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL9
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1660,7 +1660,7 @@ BTM_GetNumScoLinks:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL11
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1674,7 +1674,7 @@ BTM_GetNumScoLinks:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL13
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1688,7 +1688,7 @@ BTM_GetNumScoLinks:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL15
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1702,7 +1702,7 @@ BTM_GetNumScoLinks:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL17
-	.4byte	.LFE41
+	.4byte	.LFE50
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1718,62 +1718,62 @@ BTM_GetNumScoLinks:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
 	.4byte	.LFB39
 	.4byte	.LFE39-.LFB39
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.4byte	.LFB41
 	.4byte	.LFE41-.LFB41
 	.4byte	.LFB42
 	.4byte	.LFE42-.LFB42
 	.4byte	.LFB43
 	.4byte	.LFE43-.LFB43
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB30
-	.4byte	.LFE30
-	.4byte	.LFB31
-	.4byte	.LFE31
-	.4byte	.LFB32
-	.4byte	.LFE32
-	.4byte	.LFB33
-	.4byte	.LFE33
-	.4byte	.LFB34
-	.4byte	.LFE34
-	.4byte	.LFB35
-	.4byte	.LFE35
-	.4byte	.LFB36
-	.4byte	.LFE36
-	.4byte	.LFB37
-	.4byte	.LFE37
-	.4byte	.LFB38
-	.4byte	.LFE38
 	.4byte	.LFB39
 	.4byte	.LFE39
+	.4byte	.LFB40
+	.4byte	.LFE40
 	.4byte	.LFB41
 	.4byte	.LFE41
 	.4byte	.LFB42
 	.4byte	.LFE42
 	.4byte	.LFB43
 	.4byte	.LFE43
+	.4byte	.LFB44
+	.4byte	.LFE44
+	.4byte	.LFB45
+	.4byte	.LFE45
+	.4byte	.LFB46
+	.4byte	.LFE46
+	.4byte	.LFB47
+	.4byte	.LFE47
+	.4byte	.LFB48
+	.4byte	.LFE48
+	.4byte	.LFB50
+	.4byte	.LFE50
+	.4byte	.LFB51
+	.4byte	.LFE51
+	.4byte	.LFB52
+	.4byte	.LFE52
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

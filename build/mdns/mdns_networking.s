@@ -17,7 +17,7 @@
 	.align	4
 	.type	_udp_join_group, @function
 _udp_join_group:
-.LFB22:
+.LFB31:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns_networking.c"
 	.loc 1 64 0
 .LVL0:
@@ -113,7 +113,7 @@ _udp_join_group:
 	.loc 1 106 0
 	mov.n	a2, a8
 	retw.n
-.LFE22:
+.LFE31:
 	.size	_udp_join_group, .-_udp_join_group
 	.section	.text._mdns_pcb_init_api,"ax",@progbits
 	.literal_position
@@ -125,7 +125,7 @@ _udp_join_group:
 	.align	4
 	.type	_mdns_pcb_init_api, @function
 _mdns_pcb_init_api:
-.LFB27:
+.LFB36:
 	.loc 1 255 0
 .LVL14:
 	entry	sp, 48
@@ -273,7 +273,7 @@ _mdns_pcb_init_api:
 	j	.L24
 .LBE14:
 .LBE16:
-.LFE27:
+.LFE36:
 	.size	_mdns_pcb_init_api, .-_mdns_pcb_init_api
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC8:
@@ -289,7 +289,7 @@ _mdns_pcb_init_api:
 	.align	4
 	.type	_udp_recv, @function
 _udp_recv:
-.LFB23:
+.LFB32:
 	.loc 1 113 0
 .LVL27:
 	entry	sp, 80
@@ -523,7 +523,7 @@ _udp_recv:
 	bnez.n	a4, .L50
 	.loc 1 175 0
 	retw.n
-.LFE23:
+.LFE32:
 	.size	_udp_recv, .-_udp_recv
 	.section	.text._mdns_pcb_deinit_api,"ax",@progbits
 	.literal_position
@@ -532,7 +532,7 @@ _udp_recv:
 	.align	4
 	.type	_mdns_pcb_deinit_api, @function
 _mdns_pcb_deinit_api:
-.LFB28:
+.LFB37:
 	.loc 1 265 0
 .LVL62:
 	entry	sp, 32
@@ -654,7 +654,7 @@ _mdns_pcb_deinit_api:
 	mov.n	a2, a3
 .LVL77:
 	retw.n
-.LFE28:
+.LFE37:
 	.size	_mdns_pcb_deinit_api, .-_mdns_pcb_deinit_api
 	.section	.text._mdns_udp_pcb_write_api,"ax",@progbits
 	.literal_position
@@ -662,7 +662,7 @@ _mdns_pcb_deinit_api:
 	.align	4
 	.type	_mdns_udp_pcb_write_api, @function
 _mdns_udp_pcb_write_api:
-.LFB31:
+.LFB40:
 	.loc 1 298 0
 .LVL78:
 	entry	sp, 48
@@ -731,7 +731,7 @@ _mdns_udp_pcb_write_api:
 	s32i.n	a4, a3, 24
 	.loc 1 312 0
 	retw.n
-.LFE31:
+.LFE40:
 	.size	_mdns_udp_pcb_write_api, .-_mdns_udp_pcb_write_api
 	.section	.text._mdns_pcb_init,"ax",@progbits
 	.literal_position
@@ -740,7 +740,7 @@ _mdns_udp_pcb_write_api:
 	.global	_mdns_pcb_init
 	.type	_mdns_pcb_init, @function
 _mdns_pcb_init:
-.LFB29:
+.LFB38:
 	.loc 1 278 0
 .LVL91:
 	entry	sp, 64
@@ -764,7 +764,7 @@ _mdns_pcb_init:
 	l32i.n	a2, sp, 24
 .LVL94:
 	retw.n
-.LFE29:
+.LFE38:
 	.size	_mdns_pcb_init, .-_mdns_pcb_init
 	.section	.text._mdns_pcb_deinit,"ax",@progbits
 	.literal_position
@@ -773,7 +773,7 @@ _mdns_pcb_init:
 	.global	_mdns_pcb_deinit
 	.type	_mdns_pcb_deinit, @function
 _mdns_pcb_deinit:
-.LFB30:
+.LFB39:
 	.loc 1 288 0
 .LVL95:
 	entry	sp, 64
@@ -797,7 +797,7 @@ _mdns_pcb_deinit:
 	l32i.n	a2, sp, 24
 .LVL98:
 	retw.n
-.LFE30:
+.LFE39:
 	.size	_mdns_pcb_deinit, .-_mdns_pcb_deinit
 	.section	.text._mdns_udp_pcb_write,"ax",@progbits
 	.literal_position
@@ -806,7 +806,7 @@ _mdns_pcb_deinit:
 	.global	_mdns_udp_pcb_write
 	.type	_mdns_udp_pcb_write, @function
 _mdns_udp_pcb_write:
-.LFB32:
+.LFB41:
 	.loc 1 315 0
 .LVL99:
 	entry	sp, 80
@@ -871,7 +871,7 @@ _mdns_udp_pcb_write:
 	mov.n	a2, a7
 	.loc 1 335 0
 	retw.n
-.LFE32:
+.LFE41:
 	.size	_mdns_udp_pcb_write, .-_mdns_udp_pcb_write
 	.section	.bss._pcb_main,"aw",@nobits
 	.align	4
@@ -898,10 +898,10 @@ _pcb_main:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI0-.LFB22
+	.4byte	.LCFI0-.LFB31
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -910,10 +910,10 @@ _pcb_main:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.byte	0x4
-	.4byte	.LCFI1-.LFB27
+	.4byte	.LCFI1-.LFB36
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -922,10 +922,10 @@ _pcb_main:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI2-.LFB23
+	.4byte	.LCFI2-.LFB32
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -934,10 +934,10 @@ _pcb_main:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.byte	0x4
-	.4byte	.LCFI3-.LFB28
+	.4byte	.LCFI3-.LFB37
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -946,10 +946,10 @@ _pcb_main:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI4-.LFB31
+	.4byte	.LCFI4-.LFB40
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -958,10 +958,10 @@ _pcb_main:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.byte	0x4
-	.4byte	.LCFI5-.LFB29
+	.4byte	.LCFI5-.LFB38
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -970,10 +970,10 @@ _pcb_main:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI6-.LFB30
+	.4byte	.LCFI6-.LFB39
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -982,10 +982,10 @@ _pcb_main:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.byte	0x4
-	.4byte	.LCFI7-.LFB32
+	.4byte	.LCFI7-.LFB41
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -1317,7 +1317,7 @@ _pcb_main:
 	.byte	0x4
 	.4byte	0x37
 	.byte	0xc
-	.byte	0x67
+	.byte	0x5f
 	.4byte	0x285
 	.uleb128 0x11
 	.4byte	.LASF39
@@ -1335,7 +1335,7 @@ _pcb_main:
 	.uleb128 0x3
 	.4byte	.LASF43
 	.byte	0xc
-	.byte	0x6c
+	.byte	0x64
 	.4byte	0x260
 	.uleb128 0x14
 	.byte	0x4
@@ -3073,8 +3073,8 @@ _pcb_main:
 	.byte	0x1
 	.byte	0x3f
 	.4byte	0x10c
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x11cb
@@ -3267,8 +3267,8 @@ _pcb_main:
 	.byte	0x1
 	.byte	0xfe
 	.4byte	0xab6
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x12dd
@@ -3367,8 +3367,8 @@ _pcb_main:
 	.4byte	.LASF286
 	.byte	0x1
 	.byte	0x70
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x14ca
@@ -3669,8 +3669,8 @@ _pcb_main:
 	.byte	0x1
 	.2byte	0x108
 	.4byte	0xab6
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1626
@@ -3786,8 +3786,8 @@ _pcb_main:
 	.byte	0x1
 	.2byte	0x129
 	.4byte	0xab6
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x16c3
@@ -3856,8 +3856,8 @@ _pcb_main:
 	.byte	0x1
 	.2byte	0x115
 	.4byte	0x10c
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1742
@@ -3925,8 +3925,8 @@ _pcb_main:
 	.byte	0x1
 	.2byte	0x11f
 	.4byte	0x10c
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x17c1
@@ -3994,8 +3994,8 @@ _pcb_main:
 	.byte	0x1
 	.2byte	0x13a
 	.4byte	0x2c
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x18c6
@@ -4195,12 +4195,12 @@ _pcb_main:
 	.4byte	.LASF261
 	.4byte	.LASF261
 	.byte	0xc
-	.2byte	0x275
+	.2byte	0x2a5
 	.uleb128 0x47
 	.4byte	.LASF262
 	.4byte	.LASF262
 	.byte	0xc
-	.2byte	0x26b
+	.2byte	0x29a
 	.uleb128 0x45
 	.4byte	.LASF263
 	.4byte	.LASF263
@@ -4235,7 +4235,7 @@ _pcb_main:
 	.4byte	.LASF269
 	.4byte	.LASF269
 	.byte	0x1b
-	.byte	0x82
+	.byte	0x83
 	.uleb128 0x45
 	.4byte	.LASF270
 	.4byte	.LASF270
@@ -5252,7 +5252,7 @@ _pcb_main:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL4
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5296,7 +5296,7 @@ _pcb_main:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL24
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -5314,7 +5314,7 @@ _pcb_main:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL24
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -5364,7 +5364,7 @@ _pcb_main:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL29
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5378,7 +5378,7 @@ _pcb_main:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL28
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5396,7 +5396,7 @@ _pcb_main:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL61
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -5526,7 +5526,7 @@ _pcb_main:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL77
-	.4byte	.LFE28
+	.4byte	.LFE37
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5540,7 +5540,7 @@ _pcb_main:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL77
-	.4byte	.LFE28
+	.4byte	.LFE37
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5623,7 +5623,7 @@ _pcb_main:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL79
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -5663,7 +5663,7 @@ _pcb_main:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL89
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x7
 	.byte	0x72
 	.sleb128 0
@@ -5680,7 +5680,7 @@ _pcb_main:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL94
-	.4byte	.LFE29
+	.4byte	.LFE38
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5694,7 +5694,7 @@ _pcb_main:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL98
-	.4byte	.LFE30
+	.4byte	.LFE39
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5724,7 +5724,7 @@ _pcb_main:
 	.byte	0x91
 	.sleb128 -76
 	.4byte	.LVL107-1
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5738,7 +5738,7 @@ _pcb_main:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL101
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -48
@@ -5752,22 +5752,22 @@ _pcb_main:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
 	.4byte	.LFB31
 	.4byte	.LFE31-.LFB31
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.4byte	.LFB32
 	.4byte	.LFE32-.LFB32
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -5800,22 +5800,22 @@ _pcb_main:
 	.4byte	.LBE36
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB27
-	.4byte	.LFE27
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB28
-	.4byte	.LFE28
 	.4byte	.LFB31
 	.4byte	.LFE31
-	.4byte	.LFB29
-	.4byte	.LFE29
-	.4byte	.LFB30
-	.4byte	.LFE30
+	.4byte	.LFB36
+	.4byte	.LFE36
 	.4byte	.LFB32
 	.4byte	.LFE32
+	.4byte	.LFB37
+	.4byte	.LFE37
+	.4byte	.LFB40
+	.4byte	.LFE40
+	.4byte	.LFB38
+	.4byte	.LFE38
+	.4byte	.LFB39
+	.4byte	.LFE39
+	.4byte	.LFB41
+	.4byte	.LFE41
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

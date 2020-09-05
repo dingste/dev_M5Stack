@@ -48,7 +48,7 @@ esp_pm_trace_init:
 	retw.n
 .LFE4:
 	.size	esp_pm_trace_init, .-esp_pm_trace_init
-	.section	.iram1,"ax",@progbits
+	.section	.iram1.1,"ax",@progbits
 	.literal_position
 	.literal .LC3, s_trace_io
 	.literal .LC4, 1072971784
@@ -74,6 +74,7 @@ esp_pm_trace_enter:
 	retw.n
 .LFE5:
 	.size	esp_pm_trace_enter, .-esp_pm_trace_enter
+	.section	.iram1.2,"ax",@progbits
 	.literal_position
 	.literal .LC5, s_trace_io
 	.literal .LC6, 1072971788
@@ -99,7 +100,7 @@ esp_pm_trace_exit:
 	retw.n
 .LFE6:
 	.size	esp_pm_trace_exit, .-esp_pm_trace_exit
-	.section	.dram1,"a",@progbits
+	.section	.dram1.0,"a",@progbits
 	.align	4
 	.type	s_trace_io, @object
 	.size	s_trace_io, 48

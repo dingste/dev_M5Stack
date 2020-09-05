@@ -9,7 +9,7 @@
 
 
 Uart::Uart(int rx, int tx,uart_port_t num) {
-    nump = num;
+    uart_num = num;
     //    data = (uint8_t*) malloc(BUF_SIZE);
 
     uart_config_t uart_config = {
@@ -22,8 +22,8 @@ Uart::Uart(int rx, int tx,uart_port_t num) {
 	.use_ref_tick = false
     };
     // Configure UART parameters
-    uart_param_config(nump /*UART_NUM_1*/, &uart_config);
-    uart_set_pin(nump /*UART_NUM_1*/, tx, rx, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
+    uart_param_config(uart_num /*UART_NUM_1*/, &uart_config);
+    uart_set_pin(uart_num /*UART_NUM_1*/, tx, rx, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
    // uart_set_pin(UART_NUM_1, GPIO_NUM_12, GPIO_NUM_13, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
     //uart_driver_install(UART_NUM_2, uart_buffer_size, uart_buffer_size, 10, &uart_queue, 0);
  //  DEBUG << "UART init " << (int) uart_driver_install(nump /*UART_NUM_1*/, BUF_SIZE * 2, 0, 0, NULL, 0) << "\n";
@@ -34,18 +34,19 @@ Uart::~Uart() {
 
 uint32_t Uart::read(uint8_t* buf, const uint16_t length) {
 
-    uint32_t sendlength = uart_read_bytes(nump, buf, length, 20 / portTICK_RATE_MS);
+    uint32_t sendlength = uart_read_bytes(uart_num, buf, length, 20 / portTICK_RATE_MS);
    // if( sendlength>0) std::cout << "read: " << buf << (int) length <<"\n";
     return sendlength;
 }
 
 bool Uart::write(const uint8_t* toWrite, int length) {
   //   DEBUG << "\tUART write \t" << (const char*) toWrite << "\t" << (int) length << "\n";
-    if (uart_write_bytes(nump,(const char*) toWrite, length) != 0) {
+    if (uart_write_bytes(uart_num,(const char*) toWrite, length) != 0) {
 	return true;
     } else {
 	return false;
     }
+    return false;
 }
 
 

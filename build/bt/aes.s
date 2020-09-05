@@ -4718,12 +4718,12 @@ sbox:
 	.uleb128 0x4
 	.4byte	.LASF15
 	.byte	0x4
-	.byte	0x21
+	.byte	0x1a
 	.4byte	0x9e
 	.uleb128 0x4
 	.4byte	.LASF16
 	.byte	0x4
-	.byte	0x23
+	.byte	0x1c
 	.4byte	0xa9
 	.uleb128 0x3
 	.byte	0x1
@@ -6629,7 +6629,7 @@ sbox:
 	.uleb128 0x2b
 	.4byte	.LASF46
 	.byte	0x4
-	.2byte	0x2cc
+	.2byte	0x2b8
 	.4byte	0xef7
 	.byte	0x6
 	.byte	0xff
@@ -6643,7 +6643,7 @@ sbox:
 	.uleb128 0x2b
 	.4byte	.LASF47
 	.byte	0x4
-	.2byte	0x2cd
+	.2byte	0x2b9
 	.4byte	0xf0f
 	.byte	0x6
 	.byte	0

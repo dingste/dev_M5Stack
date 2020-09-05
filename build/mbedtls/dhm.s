@@ -9,58 +9,58 @@
 dhm_read_bignum:
 .LFB0:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/dhm.c"
-	.loc 1 69 0
+	.loc 1 74 0
 .LVL0:
 	entry	sp, 32
 .LCFI0:
-	.loc 1 72 0
+	.loc 1 77 0
 	l32i.n	a11, a3, 0
 	sub	a5, a4, a11
 	bgei	a5, 2, .L2
 .LVL1:
 .L4:
-	.loc 1 73 0
+	.loc 1 78 0
 	l32r	a2, .LC0
 .LVL2:
 	retw.n
 .LVL3:
 .L2:
-	.loc 1 75 0
+	.loc 1 80 0
 	l8ui	a5, a11, 0
 	slli	a8, a5, 8
 	l8ui	a5, a11, 1
-	.loc 1 76 0
+	.loc 1 81 0
 	addi.n	a11, a11, 2
-	.loc 1 75 0
+	.loc 1 80 0
 	or	a5, a8, a5
 .LVL4:
-	.loc 1 76 0
+	.loc 1 81 0
 	s32i.n	a11, a3, 0
-	.loc 1 78 0
+	.loc 1 83 0
 	sub	a4, a4, a11
 .LVL5:
 	blt	a4, a5, .L4
-	.loc 1 81 0
+	.loc 1 86 0
 	mov.n	a12, a5
 	mov.n	a10, a2
 	call8	mbedtls_mpi_read_binary
 .LVL6:
 	beqz.n	a10, .L5
-	.loc 1 82 0
+	.loc 1 87 0
 	addmi	a2, a10, -0x3100
 .LVL7:
 	retw.n
 .LVL8:
 .L5:
-	.loc 1 84 0
+	.loc 1 89 0
 	l32i.n	a2, a3, 0
 .LVL9:
 	add.n	a5, a2, a5
 .LVL10:
 	s32i.n	a5, a3, 0
-	.loc 1 86 0
+	.loc 1 91 0
 	mov.n	a2, a10
-	.loc 1 87 0
+	.loc 1 92 0
 	retw.n
 .LFE0:
 	.size	dhm_read_bignum, .-dhm_read_bignum
@@ -71,30 +71,30 @@ dhm_read_bignum:
 	.type	dhm_check_range, @function
 dhm_check_range:
 .LFB1:
-	.loc 1 102 0
+	.loc 1 107 0
 .LVL11:
 	entry	sp, 64
 .LCFI1:
 .LVL12:
-	.loc 1 106 0
+	.loc 1 111 0
 	addi.n	a10, sp, 12
 	call8	mbedtls_mpi_init
 .LVL13:
 	mov.n	a10, sp
 	call8	mbedtls_mpi_init
 .LVL14:
-	.loc 1 108 0
+	.loc 1 113 0
 	movi.n	a11, 2
 	addi.n	a10, sp, 12
 	call8	mbedtls_mpi_lset
 .LVL15:
-	.loc 1 102 0
+	.loc 1 107 0
 	mov.n	a4, a2
-	.loc 1 108 0
+	.loc 1 113 0
 	mov.n	a2, a10
 .LVL16:
 	bnez.n	a10, .L7
-	.loc 1 109 0
+	.loc 1 114 0
 	movi.n	a12, 2
 	mov.n	a11, a3
 	mov.n	a10, sp
@@ -103,32 +103,32 @@ dhm_check_range:
 	mov.n	a2, a10
 .LVL18:
 	bnez.n	a10, .L7
-	.loc 1 111 0
+	.loc 1 116 0
 	addi.n	a11, sp, 12
 	mov.n	a10, a4
 	call8	mbedtls_mpi_cmp_mpi
 .LVL19:
 	bltz	a10, .L8
-	.loc 1 112 0 discriminator 1
+	.loc 1 117 0 discriminator 1
 	mov.n	a11, sp
 	mov.n	a10, a4
 	call8	mbedtls_mpi_cmp_mpi
 .LVL20:
-	.loc 1 111 0 discriminator 1
+	.loc 1 116 0 discriminator 1
 	blti	a10, 1, .L7
 .L8:
-	.loc 1 114 0
+	.loc 1 119 0
 	l32r	a2, .LC1
 .LVL21:
 .L7:
-	.loc 1 118 0
+	.loc 1 123 0
 	addi.n	a10, sp, 12
 	call8	mbedtls_mpi_free
 .LVL22:
 	mov.n	a10, sp
 	call8	mbedtls_mpi_free
 .LVL23:
-	.loc 1 120 0
+	.loc 1 125 0
 	retw.n
 .LFE1:
 	.size	dhm_check_range, .-dhm_check_range
@@ -138,11 +138,11 @@ dhm_check_range:
 	.type	mbedtls_dhm_init, @function
 mbedtls_dhm_init:
 .LFB2:
-	.loc 1 123 0
+	.loc 1 128 0
 .LVL24:
 	entry	sp, 32
 .LCFI2:
-	.loc 1 124 0
+	.loc 1 130 0
 	movi	a12, 0x7c
 	movi.n	a11, 0
 	mov.n	a10, a2
@@ -157,24 +157,24 @@ mbedtls_dhm_init:
 	.type	mbedtls_dhm_read_params, @function
 mbedtls_dhm_read_params:
 .LFB3:
-	.loc 1 133 0
+	.loc 1 139 0
 .LVL26:
 	entry	sp, 32
 .LCFI3:
-	.loc 1 136 0
+	.loc 1 145 0
 	addi.n	a6, a2, 4
 	mov.n	a12, a4
 	mov.n	a11, a3
 	mov.n	a10, a6
 	call8	dhm_read_bignum
 .LVL27:
-	.loc 1 133 0
+	.loc 1 139 0
 	mov.n	a5, a2
-	.loc 1 136 0
+	.loc 1 145 0
 	mov.n	a2, a10
 .LVL28:
 	bnez.n	a10, .L11
-	.loc 1 136 0 is_stmt 0 discriminator 1
+	.loc 1 145 0 is_stmt 0 discriminator 1
 	mov.n	a12, a4
 	mov.n	a11, a3
 	addi	a10, a5, 16
@@ -183,9 +183,9 @@ mbedtls_dhm_read_params:
 	mov.n	a2, a10
 .LVL30:
 	bnez.n	a10, .L11
-	.loc 1 138 0 is_stmt 1
+	.loc 1 147 0 is_stmt 1
 	addi	a7, a5, 52
-	.loc 1 137 0
+	.loc 1 146 0
 	mov.n	a12, a4
 	mov.n	a11, a3
 	mov.n	a10, a7
@@ -194,7 +194,7 @@ mbedtls_dhm_read_params:
 	mov.n	a2, a10
 .LVL32:
 	bnez.n	a10, .L11
-	.loc 1 141 0
+	.loc 1 150 0
 	mov.n	a11, a6
 	mov.n	a10, a7
 	call8	dhm_check_range
@@ -202,14 +202,14 @@ mbedtls_dhm_read_params:
 	mov.n	a2, a10
 .LVL34:
 	bnez.n	a10, .L11
-	.loc 1 144 0
+	.loc 1 153 0
 	mov.n	a10, a6
 	call8	mbedtls_mpi_size
 .LVL35:
 	s32i.n	a10, a5, 0
 .LVL36:
 .L11:
-	.loc 1 147 0
+	.loc 1 156 0
 	retw.n
 .LFE3:
 	.size	mbedtls_dhm_read_params, .-mbedtls_dhm_read_params
@@ -222,36 +222,36 @@ mbedtls_dhm_read_params:
 	.type	mbedtls_dhm_make_params, @function
 mbedtls_dhm_make_params:
 .LFB4:
-	.loc 1 156 0
+	.loc 1 165 0
 .LVL37:
 	entry	sp, 64
 .LCFI4:
 .LVL38:
-	.loc 1 156 0
+	.loc 1 165 0
 	s32i.n	a4, sp, 4
-	.loc 1 161 0
+	.loc 1 174 0
 	addi.n	a4, a2, 4
 .LVL39:
 	movi.n	a11, 0
 	mov.n	a10, a4
-	.loc 1 156 0
+	.loc 1 165 0
 	s32i.n	a7, sp, 12
 	s32i.n	a3, sp, 0
 	s32i.n	a5, sp, 8
-	.loc 1 161 0
+	.loc 1 174 0
 	call8	mbedtls_mpi_cmp_int
 .LVL40:
-	.loc 1 156 0
+	.loc 1 165 0
 	mov.n	a7, a2
 .LVL41:
-	.loc 1 162 0
+	.loc 1 175 0
 	l32r	a2, .LC2
 .LVL42:
-	.loc 1 161 0
+	.loc 1 174 0
 	beqz.n	a10, .L26
 	movi.n	a5, 0xc
 .LVL43:
-	.loc 1 169 0
+	.loc 1 182 0
 	addi	a3, a7, 28
 .LVL44:
 .L21:
@@ -264,14 +264,14 @@ mbedtls_dhm_make_params:
 	j	.L27
 .LVL46:
 .L20:
-	.loc 1 172 0
+	.loc 1 185 0
 	movi.n	a11, 1
 	mov.n	a10, a3
 	call8	mbedtls_mpi_shift_r
 .LVL47:
 .L27:
 	bnez.n	a10, .L18
-	.loc 1 171 0
+	.loc 1 184 0
 	mov.n	a11, a4
 	mov.n	a10, a3
 .LVL48:
@@ -281,16 +281,16 @@ mbedtls_dhm_make_params:
 .LVL50:
 	addi.n	a5, a5, -1
 .LVL51:
-	.loc 1 174 0
+	.loc 1 187 0
 	beqz.n	a5, .L23
-	.loc 1 177 0
+	.loc 1 190 0
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	dhm_check_range
 .LVL52:
 	mov.n	a2, a10
 	bnez.n	a10, .L21
-	.loc 1 182 0
+	.loc 1 195 0
 	addi	a5, a7, 16
 .LVL53:
 	addi	a6, a7, 40
@@ -305,34 +305,34 @@ mbedtls_dhm_make_params:
 	call8	mbedtls_mpi_exp_mod
 .LVL56:
 	bnez.n	a10, .L18
-	.loc 1 185 0
+	.loc 1 198 0
 	mov.n	a11, a4
 	mov.n	a10, a6
 .LVL57:
 	call8	dhm_check_range
 .LVL58:
 	bnez.n	a10, .L24
-	.loc 1 201 0
+	.loc 1 214 0
 	mov.n	a10, a4
 .LVL59:
 	call8	mbedtls_mpi_size
 .LVL60:
 	mov.n	a5, a10
 .LVL61:
-	.loc 1 202 0
+	.loc 1 215 0
 	l32i.n	a10, sp, 0
 	call8	mbedtls_mpi_size
 .LVL62:
 	mov.n	a8, a10
 .LVL63:
-	.loc 1 203 0
+	.loc 1 216 0
 	mov.n	a10, a6
 	s32i.n	a8, sp, 20
 	call8	mbedtls_mpi_size
 .LVL64:
 	mov.n	a3, a10
 .LVL65:
-	.loc 1 206 0
+	.loc 1 219 0
 	l32i.n	a10, sp, 4
 	mov.n	a12, a5
 	addi.n	a9, a10, 2
@@ -345,7 +345,7 @@ mbedtls_dhm_make_params:
 	l32i.n	a9, sp, 16
 	bnez.n	a10, .L18
 .LVL67:
-	.loc 1 206 0 is_stmt 0 discriminator 1
+	.loc 1 219 0 is_stmt 0 discriminator 1
 	l32i.n	a10, sp, 4
 .LVL68:
 	srli	a4, a5, 8
@@ -354,7 +354,7 @@ mbedtls_dhm_make_params:
 	add.n	a4, a9, a5
 .LVL70:
 	s8i	a5, a10, 1
-	.loc 1 207 0 is_stmt 1 discriminator 1
+	.loc 1 220 0 is_stmt 1 discriminator 1
 	addi.n	a9, a4, 2
 	l32i.n	a10, sp, 0
 	mov.n	a12, a8
@@ -374,7 +374,7 @@ mbedtls_dhm_make_params:
 	s8i	a8, a4, 1
 	add.n	a4, a9, a8
 .LVL75:
-	.loc 1 208 0 discriminator 1
+	.loc 1 221 0 discriminator 1
 	addi.n	a8, a4, 2
 	mov.n	a11, a8
 	mov.n	a12, a3
@@ -389,7 +389,7 @@ mbedtls_dhm_make_params:
 	s8i	a3, a4, 1
 	s8i	a6, a4, 0
 .LVL78:
-	.loc 1 210 0 discriminator 1
+	.loc 1 223 0 discriminator 1
 	l32i.n	a4, sp, 4
 	add.n	a3, a8, a3
 .LVL79:
@@ -397,13 +397,13 @@ mbedtls_dhm_make_params:
 .LVL80:
 	l32i.n	a4, sp, 8
 	s32i.n	a3, a4, 0
-	.loc 1 212 0 discriminator 1
+	.loc 1 225 0 discriminator 1
 	s32i.n	a5, a7, 0
 .LVL81:
 	retw.n
 .LVL82:
 .L23:
-	.loc 1 175 0
+	.loc 1 188 0
 	l32r	a2, .LC3
 	retw.n
 .LVL83:
@@ -411,39 +411,28 @@ mbedtls_dhm_make_params:
 	mov.n	a2, a10
 	retw.n
 .L18:
-	.loc 1 217 0
+	.loc 1 230 0
 	l32r	a2, .LC3
 	add.n	a2, a10, a2
 .LVL84:
 .L26:
-	.loc 1 220 0
+	.loc 1 233 0
 	retw.n
 .LFE4:
 	.size	mbedtls_dhm_make_params, .-mbedtls_dhm_make_params
 	.section	.text.mbedtls_dhm_set_group,"ax",@progbits
 	.literal_position
-	.literal .LC4, -12416
-	.literal .LC5, -13696
+	.literal .LC4, -13696
 	.align	4
 	.global	mbedtls_dhm_set_group
 	.type	mbedtls_dhm_set_group, @function
 mbedtls_dhm_set_group:
 .LFB5:
-	.loc 1 228 0
+	.loc 1 241 0
 .LVL85:
 	entry	sp, 32
 .LCFI5:
-	.loc 1 231 0
-	movi.n	a9, 0
-	movi.n	a10, 1
-	mov.n	a8, a9
-	moveqz	a8, a10, a3
-	moveqz	a9, a10, a4
-	or	a8, a8, a9
-	bnez.n	a8, .L32
-	moveqz	a8, a10, a2
-	bnez.n	a8, .L32
-	.loc 1 234 0
+	.loc 1 247 0
 	addi.n	a5, a2, 4
 	mov.n	a11, a3
 	mov.n	a10, a5
@@ -451,440 +440,413 @@ mbedtls_dhm_set_group:
 .LVL86:
 	mov.n	a3, a10
 .LVL87:
-	bnez.n	a10, .L30
-	.loc 1 234 0 is_stmt 0 discriminator 1
+	bnez.n	a10, .L29
+	.loc 1 247 0 is_stmt 0 discriminator 1
 	mov.n	a11, a4
 	addi	a10, a2, 16
 	call8	mbedtls_mpi_copy
 .LVL88:
 	mov.n	a3, a10
 .LVL89:
-	beqz.n	a10, .L31
-.L30:
-	.loc 1 237 0 is_stmt 1
-	l32r	a2, .LC5
+	beqz.n	a10, .L30
+.L29:
+	.loc 1 250 0 is_stmt 1
+	l32r	a2, .LC4
 .LVL90:
 	add.n	a2, a3, a2
 	retw.n
 .LVL91:
-.L31:
-	.loc 1 240 0
+.L30:
+	.loc 1 253 0
 	mov.n	a10, a5
 	call8	mbedtls_mpi_size
 .LVL92:
 	s32i.n	a10, a2, 0
-	.loc 1 241 0
+	.loc 1 254 0
 	mov.n	a2, a3
 .LVL93:
-	retw.n
-.LVL94:
-.L32:
-	.loc 1 232 0
-	l32r	a2, .LC4
-.LVL95:
-	.loc 1 242 0
+	.loc 1 255 0
 	retw.n
 .LFE5:
 	.size	mbedtls_dhm_set_group, .-mbedtls_dhm_set_group
 	.section	.text.mbedtls_dhm_read_public,"ax",@progbits
 	.literal_position
-	.literal .LC6, -12416
+	.literal .LC5, -12416
 	.align	4
 	.global	mbedtls_dhm_read_public
 	.type	mbedtls_dhm_read_public, @function
 mbedtls_dhm_read_public:
 .LFB6:
-	.loc 1 249 0
-.LVL96:
+	.loc 1 262 0
+.LVL94:
 	entry	sp, 32
 .LCFI6:
-	.loc 1 252 0
-	movi.n	a8, 1
-	movi.n	a5, 0
-	moveqz	a5, a8, a2
-	extui	a5, a5, 0, 8
-	.loc 1 249 0
+	.loc 1 262 0
 	mov.n	a11, a3
 	mov.n	a12, a4
-	.loc 1 252 0
-	bnez.n	a5, .L35
-	moveqz	a5, a8, a4
-	bnez.n	a5, .L35
-	.loc 1 252 0 discriminator 1
+	.loc 1 268 0
+	l32r	a8, .LC5
+	.loc 1 267 0
+	beqz.n	a4, .L33
+	.loc 1 267 0 is_stmt 0 discriminator 1
 	l32i.n	a9, a2, 0
-	.loc 1 253 0 discriminator 1
-	l32r	a10, .LC6
-	.loc 1 252 0 discriminator 1
-	bltu	a9, a4, .L34
-	.loc 1 255 0
+	bltu	a9, a4, .L33
+	.loc 1 270 0 is_stmt 1
 	addi	a10, a2, 52
 	call8	mbedtls_mpi_read_binary
-.LVL97:
-	.loc 1 256 0
+.LVL95:
+	.loc 1 271 0
 	addmi	a8, a10, -0x3200
-	movnez	a5, a8, a10
-	mov.n	a10, a5
-.LVL98:
-	j	.L34
-.LVL99:
-.L35:
-	.loc 1 253 0
-	l32r	a10, .LC6
-.L34:
-	.loc 1 259 0
-	mov.n	a2, a10
-.LVL100:
+	movi.n	a2, 0
+.LVL96:
+	moveqz	a8, a2, a10
+.LVL97:
+.L33:
+	.loc 1 274 0
+	mov.n	a2, a8
 	retw.n
 .LFE6:
 	.size	mbedtls_dhm_read_public, .-mbedtls_dhm_read_public
 	.section	.text.mbedtls_dhm_make_public,"ax",@progbits
 	.literal_position
-	.literal .LC7, -12416
-	.literal .LC8, -12928
+	.literal .LC6, -12416
+	.literal .LC7, -12928
 	.align	4
 	.global	mbedtls_dhm_make_public
 	.type	mbedtls_dhm_make_public, @function
 mbedtls_dhm_make_public:
 .LFB7:
-	.loc 1 268 0
-.LVL101:
+	.loc 1 283 0
+.LVL98:
 	entry	sp, 48
 .LCFI7:
-.LVL102:
-	.loc 1 268 0
-	s32i.n	a3, sp, 0
-	.loc 1 271 0
-	movi.n	a11, 0
-	movi.n	a3, 1
-.LVL103:
-	moveqz	a11, a3, a2
-	.loc 1 268 0
+.LVL99:
+	.loc 1 283 0
 	s32i.n	a7, sp, 12
+	s32i.n	a3, sp, 0
 	s32i.n	a4, sp, 4
 	s32i.n	a6, sp, 8
-	.loc 1 271 0
-	extui	a11, a11, 0, 8
-	.loc 1 268 0
-	.loc 1 271 0
-	bnez.n	a11, .L42
-	moveqz	a11, a3, a5
-	beqz.n	a11, .L39
-.L42:
-	.loc 1 272 0
-	l32r	a7, .LC7
-.LVL104:
-	j	.L41
-.LVL105:
-.L39:
-	.loc 1 271 0 discriminator 1
+	.loc 1 289 0
+	bnez.n	a5, .L38
+.LVL100:
+.L40:
+	.loc 1 290 0
+	l32r	a7, .LC6
+.LVL101:
+	j	.L39
+.LVL102:
+.L38:
+	.loc 1 289 0 discriminator 1
 	l32i.n	a3, a2, 0
-	bltu	a3, a5, .L42
-	.loc 1 274 0
+.LVL103:
+	bltu	a3, a5, .L40
+	.loc 1 292 0
 	addi.n	a3, a2, 4
+	movi.n	a11, 0
 	mov.n	a10, a3
 	call8	mbedtls_mpi_cmp_int
-.LVL106:
-	beqz.n	a10, .L42
+.LVL104:
+	beqz.n	a10, .L40
 	movi.n	a6, 0xc
-.LVL107:
-	.loc 1 282 0
+.LVL105:
+	.loc 1 300 0
 	addi	a4, a2, 28
-.LVL108:
-.L46:
+.LVL106:
+.L44:
 	l32i.n	a13, sp, 12
 	l32i.n	a12, sp, 8
 	l32i.n	a11, sp, 0
 	mov.n	a10, a4
 	call8	mbedtls_mpi_fill_random
-.LVL109:
-	j	.L57
-.LVL110:
-.L45:
-	.loc 1 285 0
+.LVL107:
+	j	.L55
+.LVL108:
+.L43:
+	.loc 1 303 0
 	movi.n	a11, 1
 	mov.n	a10, a4
 	call8	mbedtls_mpi_shift_r
-.LVL111:
-.L57:
-	bnez.n	a10, .L47
-	.loc 1 284 0
+.LVL109:
+.L55:
+	bnez.n	a10, .L45
+	.loc 1 302 0
 	mov.n	a11, a3
 	mov.n	a10, a4
-.LVL112:
+.LVL110:
 	call8	mbedtls_mpi_cmp_mpi
-.LVL113:
-	bgez	a10, .L45
-.LVL114:
+.LVL111:
+	bgez	a10, .L43
+.LVL112:
 	addi.n	a6, a6, -1
-.LVL115:
-	.loc 1 287 0
-	beqz.n	a6, .L48
-	.loc 1 290 0
+.LVL113:
+	.loc 1 305 0
+	beqz.n	a6, .L46
+	.loc 1 308 0
 	mov.n	a11, a3
 	mov.n	a10, a4
 	call8	dhm_check_range
-.LVL116:
+.LVL114:
 	mov.n	a7, a10
-	bnez.n	a10, .L46
-	.loc 1 292 0
+	bnez.n	a10, .L44
+	.loc 1 310 0
 	addi	a6, a2, 40
-.LVL117:
+.LVL115:
 	addi	a14, a2, 76
 	mov.n	a13, a3
 	mov.n	a12, a4
 	addi	a11, a2, 16
 	mov.n	a10, a6
 	call8	mbedtls_mpi_exp_mod
-.LVL118:
-	bnez.n	a10, .L47
-	.loc 1 295 0
+.LVL116:
+	bnez.n	a10, .L45
+	.loc 1 313 0
 	mov.n	a11, a3
 	mov.n	a10, a6
-.LVL119:
+.LVL117:
 	call8	dhm_check_range
-.LVL120:
-	bnez.n	a10, .L49
-	.loc 1 298 0
+.LVL118:
+	bnez.n	a10, .L47
+	.loc 1 316 0
 	l32i.n	a11, sp, 4
 	mov.n	a12, a5
 	mov.n	a10, a6
-.LVL121:
+.LVL119:
 	call8	mbedtls_mpi_write_binary
-.LVL122:
+.LVL120:
 .LDL1:
-	.loc 1 302 0
-	beqz.n	a10, .L41
-.L47:
-	.loc 1 303 0
-	l32r	a8, .LC8
+	.loc 1 320 0
+	beqz.n	a10, .L39
+.L45:
+	.loc 1 321 0
+	l32r	a8, .LC7
 	add.n	a7, a10, a8
-	j	.L41
-.LVL123:
-.L48:
-	.loc 1 288 0
-	l32r	a7, .LC8
-	j	.L41
-.LVL124:
-.L49:
-	mov.n	a7, a10
-.LVL125:
-.L41:
+	j	.L39
+.LVL121:
+.L46:
 	.loc 1 306 0
+	l32r	a7, .LC7
+	j	.L39
+.LVL122:
+.L47:
+	mov.n	a7, a10
+.LVL123:
+.L39:
+	.loc 1 324 0
 	mov.n	a2, a7
-.LVL126:
+.LVL124:
 	retw.n
 .LFE7:
 	.size	mbedtls_dhm_make_public, .-mbedtls_dhm_make_public
 	.section	.text.mbedtls_dhm_calc_secret,"ax",@progbits
 	.literal_position
-	.literal .LC9, -12416
+	.literal .LC8, -12416
 	.align	4
 	.global	mbedtls_dhm_calc_secret
 	.type	mbedtls_dhm_calc_secret, @function
 mbedtls_dhm_calc_secret:
 .LFB9:
-	.loc 1 380 0
-.LVL127:
+	.loc 1 398 0
+.LVL125:
 	entry	sp, 80
 .LCFI8:
-	.loc 1 380 0
-	s32i.n	a7, sp, 28
+	.loc 1 398 0
 	s32i.n	a3, sp, 20
-	mov.n	a7, a2
-.LVL128:
+	.loc 1 405 0
+	l32i.n	a3, a2, 0
+.LVL126:
+	.loc 1 398 0
+	s32i.n	a7, sp, 28
 	s32i.n	a5, sp, 24
-	.loc 1 385 0
-	l32r	a2, .LC9
-.LVL129:
-	.loc 1 384 0
-	beqz.n	a7, .L83
-	.loc 1 384 0 discriminator 1
-	l32i.n	a3, a7, 0
-.LVL130:
-	bltu	a4, a3, .L83
-	.loc 1 387 0
+	mov.n	a7, a2
+.LVL127:
+	.loc 1 406 0
+	l32r	a2, .LC8
+.LVL128:
+	.loc 1 405 0
+	bltu	a4, a3, .L80
+	.loc 1 408 0
 	addi	a4, a7, 52
-.LVL131:
+.LVL129:
 	addi.n	a3, a7, 4
 	mov.n	a11, a3
 	mov.n	a10, a4
 	call8	dhm_check_range
-.LVL132:
+.LVL130:
 	mov.n	a2, a10
-	bnez.n	a10, .L83
-	.loc 1 390 0
+	bnez.n	a10, .L80
+	.loc 1 411 0
 	mov.n	a10, sp
-.LVL133:
+.LVL131:
 	call8	mbedtls_mpi_init
-.LVL134:
-	.loc 1 393 0
-	beqz.n	a6, .L60
-.LVL135:
+.LVL132:
+	.loc 1 414 0
+	beqz.n	a6, .L58
+.LVL133:
 .LBB4:
 .LBB5:
-	.loc 1 323 0
+	.loc 1 341 0
 	addi	a5, a7, 28
-.LVL136:
+.LVL134:
 	addi	a2, a7, 112
-.LVL137:
+.LVL135:
 	mov.n	a11, a2
 	mov.n	a10, a5
 	call8	mbedtls_mpi_cmp_mpi
-.LVL138:
-	beqz.n	a10, .L61
-	.loc 1 325 0
+.LVL136:
+	beqz.n	a10, .L59
+	.loc 1 343 0
 	mov.n	a11, a5
 	mov.n	a10, a2
 	call8	mbedtls_mpi_copy
-.LVL139:
+.LVL137:
 	mov.n	a8, a10
-.LVL140:
-	bnez.n	a10, .L62
-	.loc 1 326 0
+.LVL138:
+	bnez.n	a10, .L60
+	.loc 1 344 0
 	movi.n	a11, 1
 	addi	a10, a7, 88
 	call8	mbedtls_mpi_lset
-.LVL141:
+.LVL139:
 	mov.n	a8, a10
-.LVL142:
-	bnez.n	a10, .L62
-	.loc 1 327 0
+.LVL140:
+	bnez.n	a10, .L60
+	.loc 1 345 0
 	movi.n	a11, 1
 	addi	a10, a7, 100
 	call8	mbedtls_mpi_lset
-.LVL143:
-	j	.L94
-.L61:
-	.loc 1 336 0
+.LVL141:
+	j	.L91
+.L59:
+	.loc 1 354 0
 	addi	a2, a7, 88
 	movi.n	a11, 1
 	mov.n	a10, a2
 	call8	mbedtls_mpi_cmp_int
-.LVL144:
+.LVL142:
 	movi.n	a8, 0xc
 	s32i.n	a8, sp, 16
-	beqz.n	a10, .L84
-	.loc 1 338 0
+	beqz.n	a10, .L81
+	.loc 1 356 0
 	mov.n	a12, a2
 	mov.n	a11, a2
 	mov.n	a10, a2
 	call8	mbedtls_mpi_mul_mpi
-.LVL145:
+.LVL143:
 	mov.n	a8, a10
-.LVL146:
-	bnez.n	a10, .L62
-	.loc 1 339 0
+.LVL144:
+	bnez.n	a10, .L60
+	.loc 1 357 0
 	mov.n	a12, a3
 	mov.n	a11, a2
 	mov.n	a10, a2
 	call8	mbedtls_mpi_mod_mpi
-.LVL147:
+.LVL145:
 	mov.n	a8, a10
-.LVL148:
-	bnez.n	a10, .L62
-	.loc 1 341 0
+.LVL146:
+	bnez.n	a10, .L60
+	.loc 1 359 0
 	addi	a2, a7, 100
 	mov.n	a12, a2
 	mov.n	a11, a2
 	mov.n	a10, a2
 	call8	mbedtls_mpi_mul_mpi
-.LVL149:
+.LVL147:
 	mov.n	a8, a10
-.LVL150:
-	bnez.n	a10, .L62
-	.loc 1 342 0
+.LVL148:
+	bnez.n	a10, .L60
+	.loc 1 360 0
 	mov.n	a12, a3
 	mov.n	a11, a2
 	mov.n	a10, a2
 	call8	mbedtls_mpi_mod_mpi
-.LVL151:
-.L94:
+.LVL149:
+.L91:
 	mov.n	a8, a10
-.LVL152:
-	bnez.n	a10, .L62
-	j	.L69
-.LVL153:
-.L84:
-	.loc 1 355 0
+.LVL150:
+	bnez.n	a10, .L60
+	j	.L67
+.LVL151:
+.L81:
+	.loc 1 373 0
 	mov.n	a10, a3
 	call8	mbedtls_mpi_size
-.LVL154:
+.LVL152:
 	l32i.n	a13, sp, 28
 	mov.n	a11, a10
 	mov.n	a12, a6
 	mov.n	a10, a2
 	call8	mbedtls_mpi_fill_random
-.LVL155:
-	j	.L90
-.L66:
-	.loc 1 358 0
+.LVL153:
+	j	.L87
+.L64:
+	.loc 1 376 0
 	movi.n	a11, 1
 	mov.n	a10, a2
 	call8	mbedtls_mpi_shift_r
-.LVL156:
-.L90:
+.LVL154:
+.L87:
 	mov.n	a8, a10
-.LVL157:
-	bnez.n	a10, .L62
-	.loc 1 357 0
+.LVL155:
+	bnez.n	a10, .L60
+	.loc 1 375 0
 	mov.n	a11, a3
 	mov.n	a10, a2
 	call8	mbedtls_mpi_cmp_mpi
-.LVL158:
-	bgez	a10, .L66
-.LVL159:
+.LVL156:
+	bgez	a10, .L64
+.LVL157:
 	l32i.n	a8, sp, 16
 	addi.n	a8, a8, -1
 	s32i.n	a8, sp, 16
-.LVL160:
-	.loc 1 360 0
-	beqz.n	a8, .L79
-	.loc 1 363 0
+.LVL158:
+	.loc 1 378 0
+	beqz.n	a8, .L76
+	.loc 1 381 0
 	movi.n	a11, 1
 	mov.n	a10, a2
 	call8	mbedtls_mpi_cmp_int
-.LVL161:
-	blti	a10, 1, .L84
-	.loc 1 366 0
+.LVL159:
+	blti	a10, 1, .L81
+	.loc 1 384 0
 	addi	a9, a7, 100
 	mov.n	a10, a9
 	mov.n	a12, a3
 	mov.n	a11, a2
 	s32i.n	a9, sp, 32
 	call8	mbedtls_mpi_inv_mod
-.LVL162:
+.LVL160:
 	mov.n	a8, a10
-.LVL163:
+.LVL161:
 	l32i.n	a9, sp, 32
-	bnez.n	a10, .L62
-	.loc 1 367 0
+	bnez.n	a10, .L60
+	.loc 1 385 0
 	addi	a14, a7, 76
 	mov.n	a13, a3
 	mov.n	a12, a5
 	mov.n	a11, a9
 	mov.n	a10, a9
 	call8	mbedtls_mpi_exp_mod
-.LVL164:
+.LVL162:
 	mov.n	a8, a10
-.LVL165:
+.LVL163:
 .LBE5:
 .LBE4:
-	.loc 1 395 0
-	beqz.n	a10, .L69
-	j	.L68
-.LVL166:
-.L89:
-	.loc 1 397 0
+	.loc 1 416 0
+	beqz.n	a10, .L67
+	j	.L66
+.LVL164:
+.L86:
+	.loc 1 418 0
 	mov.n	a12, a3
 	mov.n	a11, sp
 	mov.n	a10, sp
 	call8	mbedtls_mpi_mod_mpi
-.LVL167:
-.L92:
+.LVL165:
+.L89:
 	mov.n	a8, a10
-.LVL168:
-	bnez.n	a10, .L68
-	.loc 1 403 0
+.LVL166:
+	bnez.n	a10, .L66
+	.loc 1 424 0
 	addi	a2, a7, 64
 	addi	a14, a7, 76
 	mov.n	a13, a3
@@ -892,110 +854,110 @@ mbedtls_dhm_calc_secret:
 	mov.n	a11, sp
 	mov.n	a10, a2
 	call8	mbedtls_mpi_exp_mod
-.LVL169:
+.LVL167:
 	mov.n	a8, a10
-.LVL170:
-	bnez.n	a10, .L68
-	j	.L88
-.LVL171:
-.L60:
-	.loc 1 400 0
+.LVL168:
+	bnez.n	a10, .L66
+	j	.L85
+.LVL169:
+.L58:
+	.loc 1 421 0
 	mov.n	a11, a4
 	mov.n	a10, sp
 	call8	mbedtls_mpi_copy
-.LVL172:
-	j	.L92
-.LVL173:
-.L88:
-	.loc 1 407 0
-	bnez.n	a6, .L72
-.L73:
-	.loc 1 413 0
+.LVL170:
+	j	.L89
+.LVL171:
+.L85:
+	.loc 1 428 0
+	bnez.n	a6, .L70
+.L71:
+	.loc 1 434 0
 	mov.n	a10, a2
 	call8	mbedtls_mpi_size
-.LVL174:
+.LVL172:
 	l32i.n	a3, sp, 24
-	.loc 1 415 0
+	.loc 1 436 0
 	l32i.n	a11, sp, 20
-	.loc 1 413 0
+	.loc 1 434 0
 	s32i.n	a10, a3, 0
-	.loc 1 415 0
+	.loc 1 436 0
 	mov.n	a12, a10
 	mov.n	a10, a2
 	call8	mbedtls_mpi_write_binary
-.LVL175:
+.LVL173:
 	mov.n	a8, a10
-.LVL176:
-	j	.L68
-.L72:
-	.loc 1 409 0
+.LVL174:
+	j	.L66
+.L70:
+	.loc 1 430 0
 	addi	a12, a7, 100
 	mov.n	a11, a2
 	mov.n	a10, a2
 	call8	mbedtls_mpi_mul_mpi
-.LVL177:
+.LVL175:
 	mov.n	a8, a10
-.LVL178:
-	bnez.n	a10, .L68
-	.loc 1 410 0
+.LVL176:
+	bnez.n	a10, .L66
+	.loc 1 431 0
 	mov.n	a12, a3
 	mov.n	a11, a2
 	mov.n	a10, a2
 	call8	mbedtls_mpi_mod_mpi
-.LVL179:
+.LVL177:
 	mov.n	a8, a10
-.LVL180:
-	beqz.n	a10, .L73
-.LVL181:
-.L68:
-	.loc 1 418 0
+.LVL178:
+	beqz.n	a10, .L71
+.LVL179:
+.L66:
+	.loc 1 439 0
 	mov.n	a10, sp
 	s32i.n	a8, sp, 32
 	call8	mbedtls_mpi_free
-.LVL182:
-	.loc 1 420 0
+.LVL180:
+	.loc 1 441 0
 	l32i.n	a8, sp, 32
-	.loc 1 423 0
+	.loc 1 444 0
 	movi.n	a2, 0
-	.loc 1 420 0
-	beq	a8, a2, .L83
-.L75:
-.LVL183:
-	.loc 1 421 0
+	.loc 1 441 0
+	beq	a8, a2, .L80
+.L73:
+.LVL181:
+	.loc 1 442 0
 	addmi	a2, a8, -0x3300
 	retw.n
-.LVL184:
-.L69:
-	.loc 1 396 0
+.LVL182:
+.L67:
+	.loc 1 417 0
 	addi	a12, a7, 88
 	mov.n	a11, a4
 	mov.n	a10, sp
 	call8	mbedtls_mpi_mul_mpi
-.LVL185:
+.LVL183:
 	mov.n	a8, a10
-.LVL186:
-	bnez.n	a10, .L68
-	j	.L89
-.LVL187:
-.L79:
+.LVL184:
+	bnez.n	a10, .L66
+	j	.L86
+.LVL185:
+.L76:
 .LBB7:
 .LBB6:
-	.loc 1 361 0
+	.loc 1 379 0
 	movi.n	a8, -0xe
-.LVL188:
-.L62:
+.LVL186:
+.L60:
 .LBE6:
 .LBE7:
-	.loc 1 418 0
+	.loc 1 439 0
 	mov.n	a10, sp
 	s32i.n	a8, sp, 32
 	call8	mbedtls_mpi_free
-.LVL189:
+.LVL187:
 	l32i.n	a8, sp, 32
-	j	.L75
-.LVL190:
-.L83:
-	.loc 1 424 0
+	j	.L73
+.LVL188:
+.L80:
+	.loc 1 445 0
 	retw.n
 .LFE9:
 	.size	mbedtls_dhm_calc_secret, .-mbedtls_dhm_calc_secret
@@ -1005,474 +967,482 @@ mbedtls_dhm_calc_secret:
 	.type	mbedtls_dhm_free, @function
 mbedtls_dhm_free:
 .LFB10:
-	.loc 1 430 0
-.LVL191:
+	.loc 1 451 0
+.LVL189:
 	entry	sp, 32
 .LCFI9:
-	.loc 1 431 0
+	.loc 1 452 0
+	beqz.n	a2, .L92
+	.loc 1 455 0
 	addi	a10, a2, 112
 	call8	mbedtls_mpi_free
-.LVL192:
+.LVL190:
+	.loc 1 456 0
 	addi	a10, a2, 100
 	call8	mbedtls_mpi_free
-.LVL193:
-	.loc 1 432 0
+.LVL191:
+	.loc 1 457 0
 	addi	a10, a2, 88
 	call8	mbedtls_mpi_free
-.LVL194:
+.LVL192:
+	.loc 1 458 0
 	addi	a10, a2, 76
 	call8	mbedtls_mpi_free
-.LVL195:
-	.loc 1 433 0
+.LVL193:
+	.loc 1 459 0
 	addi	a10, a2, 64
 	call8	mbedtls_mpi_free
-.LVL196:
+.LVL194:
+	.loc 1 460 0
 	addi	a10, a2, 52
 	call8	mbedtls_mpi_free
-.LVL197:
-	.loc 1 434 0
+.LVL195:
+	.loc 1 461 0
 	addi	a10, a2, 40
 	call8	mbedtls_mpi_free
-.LVL198:
+.LVL196:
+	.loc 1 462 0
 	addi	a10, a2, 28
 	call8	mbedtls_mpi_free
-.LVL199:
-	.loc 1 435 0
+.LVL197:
+	.loc 1 463 0
 	addi	a10, a2, 16
 	call8	mbedtls_mpi_free
-.LVL200:
+.LVL198:
+	.loc 1 464 0
 	addi.n	a10, a2, 4
 	call8	mbedtls_mpi_free
-.LVL201:
-	.loc 1 437 0
+.LVL199:
+	.loc 1 466 0
 	movi	a11, 0x7c
 	mov.n	a10, a2
 	call8	mbedtls_platform_zeroize
-.LVL202:
+.LVL200:
+.L92:
 	retw.n
 .LFE10:
 	.size	mbedtls_dhm_free, .-mbedtls_dhm_free
 	.section	.rodata.str1.1,"aMS",@progbits,1
-.LC11:
+.LC10:
 	.string	"-----END DH PARAMETERS-----"
-.LC13:
+.LC12:
 	.string	"-----BEGIN DH PARAMETERS-----"
 	.section	.text.mbedtls_dhm_parse_dhm,"ax",@progbits
 	.literal_position
-	.literal .LC10, -13286
-	.literal .LC12, .LC11
-	.literal .LC14, .LC13
-	.literal .LC15, -13184
-	.literal .LC16, -4224
+	.literal .LC9, -13286
+	.literal .LC11, .LC10
+	.literal .LC13, .LC12
+	.literal .LC14, -13184
+	.literal .LC15, -4224
 	.align	4
 	.global	mbedtls_dhm_parse_dhm
 	.type	mbedtls_dhm_parse_dhm, @function
 mbedtls_dhm_parse_dhm:
 .LFB11:
-	.loc 1 446 0
-.LVL203:
+	.loc 1 475 0
+.LVL201:
 	entry	sp, 96
 .LCFI10:
-	.loc 1 453 0
+	.loc 1 487 0
 	addi	a10, sp, 28
-	.loc 1 446 0
+	.loc 1 475 0
 	mov.n	a5, a2
 	s32i.n	a4, sp, 48
-	.loc 1 453 0
+	.loc 1 487 0
 	call8	mbedtls_pem_init
-.LVL204:
-	.loc 1 456 0
+.LVL202:
+	.loc 1 490 0
 	l32i.n	a2, sp, 48
-.LVL205:
-	beqz.n	a2, .L98
-	.loc 1 456 0 is_stmt 0 discriminator 1
+.LVL203:
+	beqz.n	a2, .L99
+	.loc 1 490 0 is_stmt 0 discriminator 1
 	add.n	a2, a3, a2
 	addi.n	a2, a2, -1
 	l8ui	a14, a2, 0
-	bnez.n	a14, .L98
-	.loc 1 459 0 is_stmt 1
+	bnez.n	a14, .L99
+	.loc 1 493 0 is_stmt 1
 	addi	a2, sp, 48
-	l32r	a12, .LC12
-	l32r	a11, .LC14
+	l32r	a12, .LC11
+	l32r	a11, .LC13
 	s32i.n	a2, sp, 0
 	mov.n	a15, a14
 	mov.n	a13, a3
 	addi	a10, sp, 28
 	call8	mbedtls_pem_read_buffer
-.LVL206:
+.LVL204:
 	mov.n	a2, a10
-.LVL207:
-	.loc 1 464 0
-	bnez.n	a10, .L100
-	.loc 1 469 0
+.LVL205:
+	.loc 1 498 0
+	bnez.n	a10, .L101
+	.loc 1 503 0
 	l32i.n	a2, sp, 32
-.LVL208:
-	.loc 1 474 0
+.LVL206:
+	.loc 1 508 0
 	l32i.n	a3, sp, 28
-.LVL209:
-	.loc 1 469 0
+.LVL207:
+	.loc 1 503 0
 	s32i.n	a2, sp, 48
-.LVL210:
-.L98:
-	.loc 1 487 0 discriminator 4
+.LVL208:
+.L99:
+	.loc 1 521 0 discriminator 4
 	l32i.n	a11, sp, 48
 	movi.n	a13, 0x30
 	addi	a12, sp, 44
 	add.n	a11, a3, a11
 	addi	a10, sp, 40
-	.loc 1 474 0 discriminator 4
+	.loc 1 508 0 discriminator 4
 	s32i.n	a3, sp, 40
-.LVL211:
-	.loc 1 487 0 discriminator 4
+.LVL209:
+	.loc 1 521 0 discriminator 4
 	call8	mbedtls_asn1_get_tag
-.LVL212:
-	.loc 1 490 0 discriminator 4
-	l32r	a8, .LC15
+.LVL210:
+	.loc 1 524 0 discriminator 4
+	l32r	a8, .LC14
 	add.n	a2, a10, a8
-	.loc 1 487 0 discriminator 4
-	bnez.n	a10, .L102
-.L101:
-	.loc 1 494 0
+	.loc 1 521 0 discriminator 4
+	bnez.n	a10, .L103
+.L102:
+	.loc 1 528 0
 	l32i.n	a2, sp, 44
 	l32i.n	a3, sp, 40
-	.loc 1 496 0
+	.loc 1 530 0
 	addi.n	a4, a5, 4
-	.loc 1 494 0
+	.loc 1 528 0
 	add.n	a3, a3, a2
-.LVL213:
-	.loc 1 496 0
+.LVL211:
+	.loc 1 530 0
 	mov.n	a12, a4
 	mov.n	a11, a3
 	addi	a10, sp, 40
-.LVL214:
+.LVL212:
 	call8	mbedtls_asn1_get_mpi
-.LVL215:
+.LVL213:
 	mov.n	a2, a10
-.LVL216:
-	bnez.n	a10, .L103
-	.loc 1 496 0 is_stmt 0 discriminator 1
+.LVL214:
+	bnez.n	a10, .L104
+	.loc 1 530 0 is_stmt 0 discriminator 1
 	addi	a12, a5, 16
 	mov.n	a11, a3
 	addi	a10, sp, 40
 	call8	mbedtls_asn1_get_mpi
-.LVL217:
+.LVL215:
 	mov.n	a2, a10
-.LVL218:
-	beqz.n	a10, .L104
-.L103:
-	.loc 1 499 0 is_stmt 1
-	l32r	a3, .LC15
-.LVL219:
-	add.n	a2, a2, a3
-.LVL220:
-	.loc 1 500 0
-	j	.L102
-.LVL221:
+.LVL216:
+	beqz.n	a10, .L105
 .L104:
-	.loc 1 503 0
+	.loc 1 533 0 is_stmt 1
+	l32r	a3, .LC14
+.LVL217:
+	add.n	a2, a2, a3
+.LVL218:
+	.loc 1 534 0
+	j	.L103
+.LVL219:
+.L105:
+	.loc 1 537 0
 	l32i.n	a6, sp, 40
-	beq	a3, a6, .L105
+	beq	a3, a6, .L106
 .LBB8:
-	.loc 1 508 0
+	.loc 1 542 0
 	addi	a10, sp, 16
 	call8	mbedtls_mpi_init
-.LVL222:
-	.loc 1 509 0
+.LVL220:
+	.loc 1 543 0
 	addi	a12, sp, 16
 	mov.n	a11, a3
 	addi	a10, sp, 40
 	call8	mbedtls_asn1_get_mpi
-.LVL223:
+.LVL221:
 	mov.n	a6, a10
-.LVL224:
-	.loc 1 510 0
+.LVL222:
+	.loc 1 544 0
 	addi	a10, sp, 16
 	call8	mbedtls_mpi_free
-.LVL225:
-	.loc 1 511 0
-	beqz.n	a6, .L106
-	.loc 1 513 0
-	l32r	a10, .LC15
+.LVL223:
+	.loc 1 545 0
+	beqz.n	a6, .L107
+	.loc 1 547 0
+	l32r	a10, .LC14
 	add.n	a2, a6, a10
-.LVL226:
-	.loc 1 514 0
-	j	.L102
-.LVL227:
-.L106:
-	.loc 1 516 0
+.LVL224:
+	.loc 1 548 0
+	j	.L103
+.LVL225:
+.L107:
+	.loc 1 550 0
 	l32i.n	a6, sp, 40
+.LVL226:
+	beq	a3, a6, .L106
+	.loc 1 552 0
+	l32r	a2, .LC9
+.LVL227:
+	j	.L103
 .LVL228:
-	beq	a3, a6, .L105
-	.loc 1 518 0
-	l32r	a2, .LC10
-.LVL229:
-	j	.L102
-.LVL230:
-.L105:
+.L106:
 .LBE8:
-	.loc 1 526 0
+	.loc 1 560 0
 	mov.n	a10, a4
 	call8	mbedtls_mpi_size
-.LVL231:
+.LVL229:
 	s32i.n	a10, a5, 0
-.LVL232:
-.L102:
-	.loc 1 530 0
+.LVL230:
+.L103:
+	.loc 1 564 0
 	addi	a10, sp, 28
 	call8	mbedtls_pem_free
-.LVL233:
-	.loc 1 532 0
-	beqz.n	a2, .L113
-.L109:
-	.loc 1 533 0
+.LVL231:
+	.loc 1 566 0
+	beqz.n	a2, .L114
+.L110:
+	.loc 1 567 0
 	mov.n	a10, a5
 	call8	mbedtls_dhm_free
-.LVL234:
-	.loc 1 535 0
+.LVL232:
+	.loc 1 569 0
 	retw.n
-.LVL235:
-.L110:
-	.loc 1 530 0
+.LVL233:
+.L111:
+	.loc 1 564 0
 	addi	a10, sp, 28
 	call8	mbedtls_pem_free
-.LVL236:
-	j	.L109
-.L100:
-	.loc 1 471 0
-	l32r	a4, .LC16
-	bne	a10, a4, .L110
-	j	.L98
-.LVL237:
-.L113:
-	.loc 1 536 0
+.LVL234:
+	j	.L110
+.L101:
+	.loc 1 505 0
+	l32r	a4, .LC15
+	bne	a10, a4, .L111
+	j	.L99
+.LVL235:
+.L114:
+	.loc 1 570 0
 	retw.n
 .LFE11:
 	.size	mbedtls_dhm_parse_dhm, .-mbedtls_dhm_parse_dhm
 	.section	.rodata.str1.1
-.LC19:
+.LC18:
 	.string	"rb"
-.LC21:
+.LC20:
 	.string	"-----BEGIN "
 	.section	.text.mbedtls_dhm_parse_dhmfile,"ax",@progbits
 	.literal_position
-	.literal .LC17, -13440
-	.literal .LC18, -13312
-	.literal .LC20, .LC19
-	.literal .LC22, .LC21
+	.literal .LC16, -13440
+	.literal .LC17, -13312
+	.literal .LC19, .LC18
+	.literal .LC21, .LC20
 	.align	4
 	.global	mbedtls_dhm_parse_dhmfile
 	.type	mbedtls_dhm_parse_dhmfile, @function
 mbedtls_dhm_parse_dhmfile:
 .LFB13:
-	.loc 1 595 0
-.LVL238:
+	.loc 1 629 0
+.LVL236:
 	entry	sp, 32
 .LCFI11:
-.LVL239:
+.LVL237:
 .LBB11:
 .LBB12:
-	.loc 1 551 0
-	l32r	a11, .LC20
+	.loc 1 585 0
+	l32r	a11, .LC19
 	mov.n	a10, a3
 	call8	fopen
-.LVL240:
+.LVL238:
 .LBE12:
 .LBE11:
-	.loc 1 595 0
+	.loc 1 629 0
 	mov.n	a6, a2
 .LBB14:
 .LBB13:
-	.loc 1 551 0
+	.loc 1 585 0
 	mov.n	a5, a10
-.LVL241:
-	.loc 1 552 0
-	l32r	a2, .LC17
-.LVL242:
-	.loc 1 551 0
-	beqz.n	a10, .L126
-	.loc 1 554 0
+.LVL239:
+	.loc 1 586 0
+	l32r	a2, .LC16
+.LVL240:
+	.loc 1 585 0
+	beqz.n	a10, .L127
+	.loc 1 588 0
 	movi.n	a12, 2
 	movi.n	a11, 0
 	call8	fseek
-.LVL243:
-	.loc 1 555 0
+.LVL241:
+	.loc 1 589 0
 	mov.n	a10, a5
 	call8	ftell
-.LVL244:
+.LVL242:
 	mov.n	a4, a10
-.LVL245:
-	bnei	a10, -1, .L118
-	.loc 1 557 0
+.LVL243:
+	bnei	a10, -1, .L119
+	.loc 1 591 0
 	mov.n	a10, a5
 	call8	fclose
-.LVL246:
-	j	.L127
-.L118:
-	.loc 1 560 0
+.LVL244:
+	j	.L128
+.L119:
+	.loc 1 594 0
 	movi.n	a12, 0
 	mov.n	a11, a12
 	mov.n	a10, a5
 	call8	fseek
-.LVL247:
-	.loc 1 565 0
+.LVL245:
+	.loc 1 599 0
 	addi.n	a2, a4, 1
 	mov.n	a11, a2
 	movi.n	a10, 1
 	call8	mbedtls_calloc
-.LVL248:
+.LVL246:
 	mov.n	a3, a10
-.LVL249:
-	.loc 1 564 0
-	bnez.n	a10, .L119
-.LVL250:
-	.loc 1 567 0
+.LVL247:
+	.loc 1 598 0
+	bnez.n	a10, .L120
+.LVL248:
+	.loc 1 601 0
 	mov.n	a10, a5
 	call8	fclose
-.LVL251:
-	.loc 1 568 0
-	l32r	a2, .LC18
+.LVL249:
+	.loc 1 602 0
+	l32r	a2, .LC17
 	retw.n
-.LVL252:
-.L119:
-	.loc 1 571 0
+.LVL250:
+.L120:
+	.loc 1 605 0
 	mov.n	a13, a5
 	mov.n	a12, a4
 	movi.n	a11, 1
 	call8	fread
-.LVL253:
-	beq	a4, a10, .L120
-	.loc 1 573 0
+.LVL251:
+	beq	a4, a10, .L121
+	.loc 1 607 0
 	mov.n	a10, a5
 	call8	fclose
-.LVL254:
-	.loc 1 575 0
+.LVL252:
+	.loc 1 609 0
 	mov.n	a10, a3
 	mov.n	a11, a2
 	call8	mbedtls_platform_zeroize
-.LVL255:
-	.loc 1 576 0
+.LVL253:
+	.loc 1 610 0
 	mov.n	a10, a3
 	call8	mbedtls_free
-.LVL256:
-.L127:
-	.loc 1 578 0
-	l32r	a2, .LC17
+.LVL254:
+.L128:
+	.loc 1 612 0
+	l32r	a2, .LC16
 	retw.n
-.LVL257:
-.L120:
-	.loc 1 581 0
+.LVL255:
+.L121:
+	.loc 1 615 0
 	mov.n	a10, a5
 	call8	fclose
-.LVL258:
-	.loc 1 583 0
+.LVL256:
+	.loc 1 617 0
 	movi.n	a8, 0
-	.loc 1 585 0
-	l32r	a11, .LC22
-	.loc 1 583 0
+	.loc 1 619 0
+	l32r	a11, .LC21
+	.loc 1 617 0
 	add.n	a5, a3, a4
-.LVL259:
+.LVL257:
 	s8i	a8, a5, 0
-	.loc 1 585 0
+	.loc 1 619 0
 	mov.n	a10, a3
 	call8	strstr
-.LVL260:
-	.loc 1 586 0
+.LVL258:
+	.loc 1 620 0
 	movnez	a4, a2, a10
-.LVL261:
+.LVL259:
 .LBE13:
 .LBE14:
-	.loc 1 603 0
+	.loc 1 639 0
 	mov.n	a12, a4
 	mov.n	a11, a3
 	mov.n	a10, a6
 	call8	mbedtls_dhm_parse_dhm
-.LVL262:
+.LVL260:
 	mov.n	a2, a10
-.LVL263:
-	.loc 1 605 0
+.LVL261:
+	.loc 1 641 0
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	mbedtls_platform_zeroize
-.LVL264:
-	.loc 1 606 0
+.LVL262:
+	.loc 1 642 0
 	mov.n	a10, a3
 	call8	mbedtls_free
-.LVL265:
-.L126:
-	.loc 1 609 0
+.LVL263:
+.L127:
+	.loc 1 645 0
 	retw.n
 .LFE13:
 	.size	mbedtls_dhm_parse_dhmfile, .-mbedtls_dhm_parse_dhmfile
 	.section	.rodata.str1.1
-.LC23:
+.LC22:
 	.string	"  DHM parameter load: "
-.LC26:
+.LC25:
 	.string	"failed"
-.LC28:
+.LC27:
 	.string	"passed\n"
 	.section	.text.mbedtls_dhm_self_test,"ax",@progbits
 	.literal_position
-	.literal .LC24, .LC23
-	.literal .LC25, mbedtls_test_dhm_params
-	.literal .LC27, .LC26
-	.literal .LC29, .LC28
+	.literal .LC23, .LC22
+	.literal .LC24, mbedtls_test_dhm_params
+	.literal .LC26, .LC25
+	.literal .LC28, .LC27
 	.align	4
 	.global	mbedtls_dhm_self_test
 	.type	mbedtls_dhm_self_test, @function
 mbedtls_dhm_self_test:
 .LFB14:
-	.loc 1 629 0
-.LVL266:
+	.loc 1 681 0
+.LVL264:
 	entry	sp, 160
 .LCFI12:
-	.loc 1 633 0
+	.loc 1 685 0
 	mov.n	a10, sp
-	.loc 1 629 0
+	.loc 1 681 0
 	mov.n	a3, a2
-	.loc 1 633 0
+	.loc 1 685 0
 	call8	mbedtls_dhm_init
-.LVL267:
-	.loc 1 635 0
-	beqz.n	a2, .L129
-	.loc 1 636 0
-	l32r	a10, .LC24
+.LVL265:
+	.loc 1 687 0
+	beqz.n	a2, .L130
+	.loc 1 688 0
+	l32r	a10, .LC23
 	call8	printf
-.LVL268:
-.L129:
-	.loc 1 638 0
-	l32r	a11, .LC25
+.LVL266:
+.L130:
+	.loc 1 690 0
+	l32r	a11, .LC24
 	movi	a12, 0xfb
 	mov.n	a10, sp
 	call8	mbedtls_dhm_parse_dhm
-.LVL269:
+.LVL267:
 	mov.n	a2, a10
-.LVL270:
-	beqz.n	a10, .L130
-	.loc 1 645 0
+.LVL268:
+	beqz.n	a10, .L131
+	.loc 1 697 0
 	movi.n	a2, 1
+.LVL269:
+	.loc 1 695 0
+	l32r	a10, .LC26
+.LVL270:
+	.loc 1 694 0
+	bnez.n	a3, .L141
+	j	.L132
 .LVL271:
-	.loc 1 643 0
-	l32r	a10, .LC27
-.LVL272:
-	.loc 1 642 0
-	bnez.n	a3, .L140
-	j	.L131
-.LVL273:
-.L130:
-	.loc 1 649 0
-	beqz.n	a3, .L131
-	.loc 1 650 0
-	l32r	a10, .LC29
-.LVL274:
-.L140:
-	call8	puts
-.LVL275:
 .L131:
-	.loc 1 653 0
+	.loc 1 701 0
+	beqz.n	a3, .L132
+	.loc 1 702 0
+	l32r	a10, .LC28
+.LVL272:
+.L141:
+	call8	puts
+.LVL273:
+.L132:
+	.loc 1 705 0
 	mov.n	a10, sp
 	call8	mbedtls_dhm_free
-.LVL276:
-	.loc 1 656 0
+.LVL274:
+	.loc 1 708 0
 	retw.n
 .LFE14:
 	.size	mbedtls_dhm_self_test, .-mbedtls_dhm_self_test
@@ -1671,7 +1641,7 @@ mbedtls_test_dhm_params:
 	.file 16 "<built-in>"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x1d40
+	.4byte	0x1d49
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -2661,30 +2631,30 @@ mbedtls_test_dhm_params:
 	.uleb128 0x2
 	.4byte	.LASF120
 	.byte	0x9
-	.byte	0xa8
+	.byte	0xad
 	.4byte	0x7f8
 	.uleb128 0xd
 	.4byte	.LASF121
 	.byte	0xc
 	.byte	0x9
-	.byte	0xb6
+	.byte	0xbb
 	.4byte	0x844
 	.uleb128 0xe
 	.string	"s"
 	.byte	0x9
-	.byte	0xb8
+	.byte	0xbd
 	.4byte	0x3e
 	.byte	0
 	.uleb128 0xe
 	.string	"n"
 	.byte	0x9
-	.byte	0xb9
+	.byte	0xbe
 	.4byte	0x25
 	.byte	0x4
 	.uleb128 0xe
 	.string	"p"
 	.byte	0x9
-	.byte	0xba
+	.byte	0xbf
 	.4byte	0x844
 	.byte	0x8
 	.byte	0
@@ -2694,120 +2664,120 @@ mbedtls_test_dhm_params:
 	.uleb128 0x2
 	.4byte	.LASF121
 	.byte	0x9
-	.byte	0xbc
+	.byte	0xc1
 	.4byte	0x819
 	.uleb128 0xd
 	.4byte	.LASF122
 	.byte	0x7c
 	.byte	0xa
-	.byte	0x63
+	.byte	0x66
 	.4byte	0x8d8
 	.uleb128 0xe
 	.string	"len"
 	.byte	0xa
-	.byte	0x65
+	.byte	0x68
 	.4byte	0x25
 	.byte	0
 	.uleb128 0xe
 	.string	"P"
 	.byte	0xa
-	.byte	0x66
+	.byte	0x69
 	.4byte	0x84a
 	.byte	0x4
 	.uleb128 0xe
 	.string	"G"
 	.byte	0xa
-	.byte	0x67
+	.byte	0x6a
 	.4byte	0x84a
 	.byte	0x10
 	.uleb128 0xe
 	.string	"X"
 	.byte	0xa
-	.byte	0x68
+	.byte	0x6b
 	.4byte	0x84a
 	.byte	0x1c
 	.uleb128 0xe
 	.string	"GX"
 	.byte	0xa
-	.byte	0x69
+	.byte	0x6c
 	.4byte	0x84a
 	.byte	0x28
 	.uleb128 0xe
 	.string	"GY"
 	.byte	0xa
-	.byte	0x6a
+	.byte	0x6d
 	.4byte	0x84a
 	.byte	0x34
 	.uleb128 0xe
 	.string	"K"
 	.byte	0xa
-	.byte	0x6b
+	.byte	0x6e
 	.4byte	0x84a
 	.byte	0x40
 	.uleb128 0xe
 	.string	"RP"
 	.byte	0xa
-	.byte	0x6c
+	.byte	0x6f
 	.4byte	0x84a
 	.byte	0x4c
 	.uleb128 0xe
 	.string	"Vi"
 	.byte	0xa
-	.byte	0x6d
+	.byte	0x70
 	.4byte	0x84a
 	.byte	0x58
 	.uleb128 0xe
 	.string	"Vf"
 	.byte	0xa
-	.byte	0x6e
+	.byte	0x71
 	.4byte	0x84a
 	.byte	0x64
 	.uleb128 0xe
 	.string	"pX"
 	.byte	0xa
-	.byte	0x6f
+	.byte	0x72
 	.4byte	0x84a
 	.byte	0x70
 	.byte	0
 	.uleb128 0x2
 	.4byte	.LASF122
 	.byte	0xa
-	.byte	0x71
+	.byte	0x74
 	.4byte	0x855
 	.uleb128 0xd
 	.4byte	.LASF123
 	.byte	0xc
 	.byte	0xb
-	.byte	0x36
+	.byte	0x3c
 	.4byte	0x914
 	.uleb128 0xe
 	.string	"buf"
 	.byte	0xb
-	.byte	0x38
+	.byte	0x3e
 	.4byte	0x2ea
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LASF124
 	.byte	0xb
-	.byte	0x39
+	.byte	0x3f
 	.4byte	0x25
 	.byte	0x4
 	.uleb128 0xb
 	.4byte	.LASF125
 	.byte	0xb
-	.byte	0x3a
+	.byte	0x40
 	.4byte	0x2ea
 	.byte	0x8
 	.byte	0
 	.uleb128 0x2
 	.4byte	.LASF123
 	.byte	0xb
-	.byte	0x3c
+	.byte	0x42
 	.4byte	0x8e3
 	.uleb128 0x1a
 	.4byte	.LASF126
 	.byte	0x1
-	.byte	0x42
+	.byte	0x47
 	.4byte	0x3e
 	.4byte	.LFB0
 	.4byte	.LFE0-.LFB0
@@ -2817,38 +2787,38 @@ mbedtls_test_dhm_params:
 	.uleb128 0x1b
 	.string	"X"
 	.byte	0x1
-	.byte	0x42
+	.byte	0x47
 	.4byte	0x990
 	.4byte	.LLST0
 	.uleb128 0x1c
 	.string	"p"
 	.byte	0x1
-	.byte	0x43
+	.byte	0x48
 	.4byte	0x996
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x1b
 	.string	"end"
 	.byte	0x1
-	.byte	0x44
+	.byte	0x49
 	.4byte	0x99c
 	.4byte	.LLST1
 	.uleb128 0x1d
 	.string	"ret"
 	.byte	0x1
-	.byte	0x46
+	.byte	0x4b
 	.4byte	0x3e
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x1e
 	.string	"n"
 	.byte	0x1
-	.byte	0x46
+	.byte	0x4b
 	.4byte	0x3e
 	.4byte	.LLST2
 	.uleb128 0x1f
 	.4byte	.LVL6
-	.4byte	0x1bc8
+	.4byte	0x1bd0
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -2877,7 +2847,7 @@ mbedtls_test_dhm_params:
 	.uleb128 0x1a
 	.4byte	.LASF127
 	.byte	0x1
-	.byte	0x65
+	.byte	0x6a
 	.4byte	0x3e
 	.4byte	.LFB1
 	.4byte	.LFE1-.LFB1
@@ -2887,20 +2857,20 @@ mbedtls_test_dhm_params:
 	.uleb128 0x21
 	.4byte	.LASF128
 	.byte	0x1
-	.byte	0x65
+	.byte	0x6a
 	.4byte	0xac5
 	.4byte	.LLST3
 	.uleb128 0x1c
 	.string	"P"
 	.byte	0x1
-	.byte	0x65
+	.byte	0x6a
 	.4byte	0xac5
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x1d
 	.string	"L"
 	.byte	0x1
-	.byte	0x67
+	.byte	0x6c
 	.4byte	0x84a
 	.uleb128 0x2
 	.byte	0x91
@@ -2908,7 +2878,7 @@ mbedtls_test_dhm_params:
 	.uleb128 0x1d
 	.string	"U"
 	.byte	0x1
-	.byte	0x67
+	.byte	0x6c
 	.4byte	0x84a
 	.uleb128 0x2
 	.byte	0x91
@@ -2916,17 +2886,17 @@ mbedtls_test_dhm_params:
 	.uleb128 0x1e
 	.string	"ret"
 	.byte	0x1
-	.byte	0x68
+	.byte	0x6d
 	.4byte	0x3e
 	.4byte	.LLST4
 	.uleb128 0x22
 	.4byte	.LASF142
 	.byte	0x1
-	.byte	0x75
+	.byte	0x7a
 	.4byte	.L7
 	.uleb128 0x23
 	.4byte	.LVL13
-	.4byte	0x1bd4
+	.4byte	0x1bdc
 	.4byte	0xa20
 	.uleb128 0x20
 	.uleb128 0x1
@@ -2937,7 +2907,7 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL14
-	.4byte	0x1bd4
+	.4byte	0x1bdc
 	.4byte	0xa34
 	.uleb128 0x20
 	.uleb128 0x1
@@ -2948,7 +2918,7 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL15
-	.4byte	0x1bdf
+	.4byte	0x1be7
 	.4byte	0xa4d
 	.uleb128 0x20
 	.uleb128 0x1
@@ -2964,7 +2934,7 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL17
-	.4byte	0x1beb
+	.4byte	0x1bf3
 	.4byte	0xa6c
 	.uleb128 0x20
 	.uleb128 0x1
@@ -2986,7 +2956,7 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL19
-	.4byte	0x1bf7
+	.4byte	0x1bff
 	.4byte	0xa86
 	.uleb128 0x20
 	.uleb128 0x1
@@ -3003,7 +2973,7 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL20
-	.4byte	0x1bf7
+	.4byte	0x1bff
 	.4byte	0xaa0
 	.uleb128 0x20
 	.uleb128 0x1
@@ -3020,7 +2990,7 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL22
-	.4byte	0x1c03
+	.4byte	0x1c0b
 	.4byte	0xab4
 	.uleb128 0x20
 	.uleb128 0x1
@@ -3031,7 +3001,7 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x1f
 	.4byte	.LVL23
-	.4byte	0x1c03
+	.4byte	0x1c0b
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -3048,7 +3018,7 @@ mbedtls_test_dhm_params:
 	.uleb128 0x24
 	.4byte	.LASF145
 	.byte	0x1
-	.byte	0x7a
+	.byte	0x7f
 	.4byte	.LFB2
 	.4byte	.LFE2-.LFB2
 	.uleb128 0x1
@@ -3057,13 +3027,13 @@ mbedtls_test_dhm_params:
 	.uleb128 0x1c
 	.string	"ctx"
 	.byte	0x1
-	.byte	0x7a
+	.byte	0x7f
 	.4byte	0xb0e
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x1f
 	.4byte	.LVL25
-	.4byte	0x1c0e
+	.4byte	0x1c16
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -3089,7 +3059,7 @@ mbedtls_test_dhm_params:
 	.uleb128 0x25
 	.4byte	.LASF129
 	.byte	0x1
-	.byte	0x82
+	.byte	0x88
 	.4byte	0x3e
 	.4byte	.LFB3
 	.4byte	.LFE3-.LFB3
@@ -3099,27 +3069,27 @@ mbedtls_test_dhm_params:
 	.uleb128 0x1b
 	.string	"ctx"
 	.byte	0x1
-	.byte	0x82
+	.byte	0x88
 	.4byte	0xb0e
 	.4byte	.LLST5
 	.uleb128 0x1c
 	.string	"p"
 	.byte	0x1
-	.byte	0x83
+	.byte	0x89
 	.4byte	0x996
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x1c
 	.string	"end"
 	.byte	0x1
-	.byte	0x84
+	.byte	0x8a
 	.4byte	0x99c
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x1e
 	.string	"ret"
 	.byte	0x1
-	.byte	0x86
+	.byte	0x8c
 	.4byte	0x3e
 	.4byte	.LLST6
 	.uleb128 0x23
@@ -3210,7 +3180,7 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x1f
 	.4byte	.LVL35
-	.4byte	0x1c17
+	.4byte	0x1c1f
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -3222,7 +3192,7 @@ mbedtls_test_dhm_params:
 	.uleb128 0x25
 	.4byte	.LASF130
 	.byte	0x1
-	.byte	0x98
+	.byte	0xa1
 	.4byte	0x3e
 	.4byte	.LFB4
 	.4byte	.LFE4-.LFB4
@@ -3232,82 +3202,82 @@ mbedtls_test_dhm_params:
 	.uleb128 0x1b
 	.string	"ctx"
 	.byte	0x1
-	.byte	0x98
+	.byte	0xa1
 	.4byte	0xb0e
 	.4byte	.LLST7
 	.uleb128 0x21
 	.4byte	.LASF131
 	.byte	0x1
-	.byte	0x98
+	.byte	0xa1
 	.4byte	0x3e
 	.4byte	.LLST8
 	.uleb128 0x21
 	.4byte	.LASF132
 	.byte	0x1
-	.byte	0x99
+	.byte	0xa2
 	.4byte	0x2ea
 	.4byte	.LLST9
 	.uleb128 0x21
 	.4byte	.LASF133
 	.byte	0x1
-	.byte	0x99
+	.byte	0xa2
 	.4byte	0xe2a
 	.4byte	.LLST10
 	.uleb128 0x21
 	.4byte	.LASF134
 	.byte	0x1
-	.byte	0x9a
+	.byte	0xa3
 	.4byte	0xe49
 	.4byte	.LLST11
 	.uleb128 0x21
 	.4byte	.LASF135
 	.byte	0x1
-	.byte	0x9b
+	.byte	0xa4
 	.4byte	0x11f
 	.4byte	.LLST12
 	.uleb128 0x1e
 	.string	"ret"
 	.byte	0x1
-	.byte	0x9d
+	.byte	0xa6
 	.4byte	0x3e
 	.4byte	.LLST13
 	.uleb128 0x26
 	.4byte	.LASF136
 	.byte	0x1
-	.byte	0x9d
+	.byte	0xa6
 	.4byte	0x3e
 	.4byte	.LLST14
 	.uleb128 0x1e
 	.string	"n1"
 	.byte	0x1
-	.byte	0x9e
+	.byte	0xa7
 	.4byte	0x25
 	.4byte	.LLST15
 	.uleb128 0x1e
 	.string	"n2"
 	.byte	0x1
-	.byte	0x9e
+	.byte	0xa7
 	.4byte	0x25
 	.4byte	.LLST16
 	.uleb128 0x1e
 	.string	"n3"
 	.byte	0x1
-	.byte	0x9e
+	.byte	0xa7
 	.4byte	0x25
 	.4byte	.LLST17
 	.uleb128 0x1e
 	.string	"p"
 	.byte	0x1
-	.byte	0x9f
+	.byte	0xa8
 	.4byte	0x2ea
 	.4byte	.LLST18
 	.uleb128 0x27
 	.4byte	.LASF142
 	.byte	0x1
-	.byte	0xd6
+	.byte	0xe3
 	.uleb128 0x23
 	.4byte	.LVL40
-	.4byte	0x1c23
+	.4byte	0x1c2b
 	.4byte	0xcd6
 	.uleb128 0x20
 	.uleb128 0x1
@@ -3323,7 +3293,7 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL45
-	.4byte	0x1c2f
+	.4byte	0x1c37
 	.4byte	0xcfe
 	.uleb128 0x20
 	.uleb128 0x1
@@ -3354,7 +3324,7 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL47
-	.4byte	0x1c3b
+	.4byte	0x1c43
 	.4byte	0xd17
 	.uleb128 0x20
 	.uleb128 0x1
@@ -3370,7 +3340,7 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL49
-	.4byte	0x1bf7
+	.4byte	0x1bff
 	.4byte	0xd31
 	.uleb128 0x20
 	.uleb128 0x1
@@ -3404,7 +3374,7 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL56
-	.4byte	0x1c47
+	.4byte	0x1c4f
 	.4byte	0xd78
 	.uleb128 0x20
 	.uleb128 0x1
@@ -3456,7 +3426,7 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL60
-	.4byte	0x1c17
+	.4byte	0x1c1f
 	.4byte	0xda6
 	.uleb128 0x20
 	.uleb128 0x1
@@ -3467,7 +3437,7 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL62
-	.4byte	0x1c17
+	.4byte	0x1c1f
 	.4byte	0xdbb
 	.uleb128 0x20
 	.uleb128 0x1
@@ -3479,7 +3449,7 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL64
-	.4byte	0x1c17
+	.4byte	0x1c1f
 	.4byte	0xdcf
 	.uleb128 0x20
 	.uleb128 0x1
@@ -3490,7 +3460,7 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL66
-	.4byte	0x1c53
+	.4byte	0x1c5b
 	.4byte	0xdf2
 	.uleb128 0x20
 	.uleb128 0x1
@@ -3516,7 +3486,7 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL71
-	.4byte	0x1c53
+	.4byte	0x1c5b
 	.4byte	0xe0d
 	.uleb128 0x20
 	.uleb128 0x1
@@ -3534,7 +3504,7 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x1f
 	.4byte	.LVL76
-	.4byte	0x1c53
+	.4byte	0x1c5b
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -3574,42 +3544,43 @@ mbedtls_test_dhm_params:
 	.uleb128 0x25
 	.4byte	.LASF137
 	.byte	0x1
-	.byte	0xe1
+	.byte	0xee
 	.4byte	0x3e
 	.4byte	.LFB5
 	.4byte	.LFE5-.LFB5
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xee3
+	.4byte	0xee1
 	.uleb128 0x1b
 	.string	"ctx"
 	.byte	0x1
-	.byte	0xe1
+	.byte	0xee
 	.4byte	0xb0e
 	.4byte	.LLST19
 	.uleb128 0x1b
 	.string	"P"
 	.byte	0x1
-	.byte	0xe2
+	.byte	0xef
 	.4byte	0xac5
 	.4byte	.LLST20
 	.uleb128 0x1c
 	.string	"G"
 	.byte	0x1
-	.byte	0xe3
+	.byte	0xf0
 	.4byte	0xac5
 	.uleb128 0x1
 	.byte	0x54
-	.uleb128 0x1e
+	.uleb128 0x1d
 	.string	"ret"
 	.byte	0x1
-	.byte	0xe5
+	.byte	0xf2
 	.4byte	0x3e
-	.4byte	.LLST21
+	.uleb128 0x1
+	.byte	0x53
 	.uleb128 0x23
 	.4byte	.LVL86
-	.4byte	0x1c5f
-	.4byte	0xeb8
+	.4byte	0x1c67
+	.4byte	0xeb6
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -3625,8 +3596,8 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL88
-	.4byte	0x1c5f
-	.4byte	0xed2
+	.4byte	0x1c67
+	.4byte	0xed0
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -3642,7 +3613,7 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x1f
 	.4byte	.LVL92
-	.4byte	0x1c17
+	.4byte	0x1c1f
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -3651,45 +3622,45 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0x25
+	.uleb128 0x28
 	.4byte	.LASF138
 	.byte	0x1
-	.byte	0xf7
+	.2byte	0x104
 	.4byte	0x3e
 	.4byte	.LFB6
 	.4byte	.LFE6-.LFB6
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xf51
-	.uleb128 0x1b
+	.4byte	0xf54
+	.uleb128 0x29
 	.string	"ctx"
 	.byte	0x1
-	.byte	0xf7
+	.2byte	0x104
 	.4byte	0xb0e
-	.4byte	.LLST22
-	.uleb128 0x28
+	.4byte	.LLST21
+	.uleb128 0x2a
 	.4byte	.LASF139
 	.byte	0x1
-	.byte	0xf8
+	.2byte	0x105
 	.4byte	0x99c
 	.uleb128 0x1
 	.byte	0x53
-	.uleb128 0x28
+	.uleb128 0x2a
 	.4byte	.LASF140
 	.byte	0x1
-	.byte	0xf8
+	.2byte	0x105
 	.4byte	0x25
 	.uleb128 0x1
 	.byte	0x54
-	.uleb128 0x1e
+	.uleb128 0x2b
 	.string	"ret"
 	.byte	0x1
-	.byte	0xfa
+	.2byte	0x107
 	.4byte	0x3e
-	.4byte	.LLST23
+	.4byte	.LLST22
 	.uleb128 0x1f
-	.4byte	.LVL97
-	.4byte	0x1bc8
+	.4byte	.LVL95
+	.4byte	0x1bd0
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -3710,85 +3681,90 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x28
 	.4byte	.LASF141
 	.byte	0x1
-	.2byte	0x108
+	.2byte	0x117
 	.4byte	0x3e
 	.4byte	.LFB7
 	.4byte	.LFE7-.LFB7
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x10e4
-	.uleb128 0x2a
+	.4byte	0x10ec
+	.uleb128 0x29
 	.string	"ctx"
 	.byte	0x1
-	.2byte	0x108
+	.2byte	0x117
 	.4byte	0xb0e
-	.4byte	.LLST24
-	.uleb128 0x2b
+	.4byte	.LLST23
+	.uleb128 0x2c
 	.4byte	.LASF131
 	.byte	0x1
-	.2byte	0x108
+	.2byte	0x117
 	.4byte	0x3e
-	.4byte	.LLST25
-	.uleb128 0x2b
+	.4byte	.LLST24
+	.uleb128 0x2c
 	.4byte	.LASF132
 	.byte	0x1
-	.2byte	0x109
+	.2byte	0x118
 	.4byte	0x2ea
-	.4byte	.LLST26
-	.uleb128 0x2c
+	.4byte	.LLST25
+	.uleb128 0x2a
 	.4byte	.LASF133
 	.byte	0x1
-	.2byte	0x109
+	.2byte	0x118
 	.4byte	0x25
 	.uleb128 0x1
 	.byte	0x55
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.4byte	.LASF134
 	.byte	0x1
-	.2byte	0x10a
+	.2byte	0x119
 	.4byte	0xe49
-	.4byte	.LLST27
-	.uleb128 0x2b
+	.4byte	.LLST26
+	.uleb128 0x2c
 	.4byte	.LASF135
 	.byte	0x1
-	.2byte	0x10b
+	.2byte	0x11a
 	.4byte	0x11f
-	.4byte	.LLST28
-	.uleb128 0x2d
+	.4byte	.LLST27
+	.uleb128 0x2b
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x10d
+	.2byte	0x11c
+	.4byte	0x3e
+	.4byte	.LLST28
+	.uleb128 0x2d
+	.4byte	.LASF136
+	.byte	0x1
+	.2byte	0x11c
 	.4byte	0x3e
 	.4byte	.LLST29
 	.uleb128 0x2e
-	.4byte	.LASF136
-	.byte	0x1
-	.2byte	0x10d
-	.4byte	0x3e
-	.4byte	.LLST30
-	.uleb128 0x2f
 	.4byte	.LASF142
 	.byte	0x1
-	.2byte	0x12c
+	.2byte	0x13e
 	.4byte	.LDL1
 	.uleb128 0x23
-	.4byte	.LVL106
-	.4byte	0x1c23
-	.4byte	0x1009
+	.4byte	.LVL104
+	.4byte	0x1c2b
+	.4byte	0x1011
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
+	.uleb128 0x20
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x1
+	.byte	0x30
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL109
-	.4byte	0x1c2f
-	.4byte	0x1032
+	.4byte	.LVL107
+	.4byte	0x1c37
+	.4byte	0x103a
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -3818,9 +3794,9 @@ mbedtls_test_dhm_params:
 	.byte	0x6
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL111
-	.4byte	0x1c3b
-	.4byte	0x104b
+	.4byte	.LVL109
+	.4byte	0x1c43
+	.4byte	0x1053
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -3834,9 +3810,26 @@ mbedtls_test_dhm_params:
 	.byte	0x31
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL113
-	.4byte	0x1bf7
-	.4byte	0x1065
+	.4byte	.LVL111
+	.4byte	0x1bff
+	.4byte	0x106d
+	.uleb128 0x20
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.uleb128 0x20
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.byte	0
+	.uleb128 0x23
+	.4byte	.LVL114
+	.4byte	0x9a7
+	.4byte	0x1087
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -3852,25 +3845,8 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL116
-	.4byte	0x9a7
-	.4byte	0x107f
-	.uleb128 0x20
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x74
-	.sleb128 0
-	.uleb128 0x20
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x73
-	.sleb128 0
-	.byte	0
-	.uleb128 0x23
-	.4byte	.LVL118
-	.4byte	0x1c47
-	.4byte	0x10ac
+	.4byte	0x1c4f
+	.4byte	0x10b4
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -3903,9 +3879,9 @@ mbedtls_test_dhm_params:
 	.sleb128 76
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL120
+	.4byte	.LVL118
 	.4byte	0x9a7
-	.4byte	0x10c6
+	.4byte	0x10ce
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -3920,8 +3896,8 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1f
-	.4byte	.LVL122
-	.4byte	0x1c53
+	.4byte	.LVL120
+	.4byte	0x1c5b
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -3943,138 +3919,138 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0x30
+	.uleb128 0x2f
 	.4byte	.LASF151
 	.byte	0x1
-	.2byte	0x13a
+	.2byte	0x14c
 	.4byte	0x3e
 	.byte	0x1
-	.4byte	0x113a
-	.uleb128 0x31
+	.4byte	0x1142
+	.uleb128 0x30
 	.string	"ctx"
 	.byte	0x1
-	.2byte	0x13a
+	.2byte	0x14c
 	.4byte	0xb0e
-	.uleb128 0x32
+	.uleb128 0x31
 	.4byte	.LASF134
 	.byte	0x1
-	.2byte	0x13b
+	.2byte	0x14d
 	.4byte	0xe49
-	.uleb128 0x32
+	.uleb128 0x31
 	.4byte	.LASF135
 	.byte	0x1
-	.2byte	0x13b
+	.2byte	0x14d
 	.4byte	0x11f
-	.uleb128 0x33
+	.uleb128 0x32
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x13d
+	.2byte	0x14f
 	.4byte	0x3e
-	.uleb128 0x34
+	.uleb128 0x33
 	.4byte	.LASF136
 	.byte	0x1
-	.2byte	0x13d
+	.2byte	0x14f
 	.4byte	0x3e
-	.uleb128 0x35
+	.uleb128 0x34
 	.4byte	.LASF142
 	.byte	0x1
-	.2byte	0x171
+	.2byte	0x183
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x28
 	.4byte	.LASF143
 	.byte	0x1
-	.2byte	0x178
+	.2byte	0x18a
 	.4byte	0x3e
 	.4byte	.LFB9
 	.4byte	.LFE9-.LFB9
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x153a
-	.uleb128 0x2a
+	.4byte	0x1542
+	.uleb128 0x29
 	.string	"ctx"
 	.byte	0x1
-	.2byte	0x178
+	.2byte	0x18a
 	.4byte	0xb0e
-	.4byte	.LLST31
-	.uleb128 0x2b
+	.4byte	.LLST30
+	.uleb128 0x2c
 	.4byte	.LASF132
 	.byte	0x1
-	.2byte	0x179
+	.2byte	0x18b
 	.4byte	0x2ea
-	.4byte	.LLST32
-	.uleb128 0x2b
+	.4byte	.LLST31
+	.uleb128 0x2c
 	.4byte	.LASF144
 	.byte	0x1
-	.2byte	0x179
+	.2byte	0x18b
 	.4byte	0x25
-	.4byte	.LLST33
-	.uleb128 0x2b
+	.4byte	.LLST32
+	.uleb128 0x2c
 	.4byte	.LASF133
 	.byte	0x1
-	.2byte	0x179
+	.2byte	0x18b
 	.4byte	0xe2a
-	.4byte	.LLST34
-	.uleb128 0x2c
+	.4byte	.LLST33
+	.uleb128 0x2a
 	.4byte	.LASF134
 	.byte	0x1
-	.2byte	0x17a
+	.2byte	0x18c
 	.4byte	0xe49
 	.uleb128 0x1
 	.byte	0x56
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.4byte	.LASF135
 	.byte	0x1
-	.2byte	0x17b
+	.2byte	0x18d
 	.4byte	0x11f
-	.4byte	.LLST35
-	.uleb128 0x2d
+	.4byte	.LLST34
+	.uleb128 0x2b
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x17d
+	.2byte	0x18f
 	.4byte	0x3e
-	.4byte	.LLST36
-	.uleb128 0x36
+	.4byte	.LLST35
+	.uleb128 0x35
 	.string	"GYb"
 	.byte	0x1
-	.2byte	0x17e
+	.2byte	0x190
 	.4byte	0x84a
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -80
-	.uleb128 0x2f
+	.uleb128 0x2e
 	.4byte	.LASF142
 	.byte	0x1
-	.2byte	0x1a1
-	.4byte	.L68
-	.uleb128 0x37
-	.4byte	0x10e4
+	.2byte	0x1b6
+	.4byte	.L66
+	.uleb128 0x36
+	.4byte	0x10ec
 	.4byte	.LBB4
 	.4byte	.Ldebug_ranges0+0
 	.byte	0x1
-	.2byte	0x18b
-	.4byte	0x13e7
+	.2byte	0x1a0
+	.4byte	0x13ef
+	.uleb128 0x37
+	.4byte	0x1115
 	.uleb128 0x38
-	.4byte	0x110d
-	.uleb128 0x39
-	.4byte	0x1101
+	.4byte	0x1109
+	.4byte	.LLST36
+	.uleb128 0x38
+	.4byte	0x10fd
 	.4byte	.LLST37
 	.uleb128 0x39
-	.4byte	0x10f5
+	.4byte	.Ldebug_ranges0+0
+	.uleb128 0x3a
+	.4byte	0x1121
 	.4byte	.LLST38
 	.uleb128 0x3a
-	.4byte	.Ldebug_ranges0+0
-	.uleb128 0x3b
-	.4byte	0x1119
+	.4byte	0x112d
 	.4byte	.LLST39
 	.uleb128 0x3b
-	.4byte	0x1125
-	.4byte	.LLST40
-	.uleb128 0x3c
-	.4byte	0x1131
+	.4byte	0x1139
 	.uleb128 0x23
-	.4byte	.LVL138
-	.4byte	0x1bf7
-	.4byte	0x123f
+	.4byte	.LVL136
+	.4byte	0x1bff
+	.4byte	0x1247
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4086,29 +4062,29 @@ mbedtls_test_dhm_params:
 	.byte	0x5b
 	.uleb128 0x2
 	.byte	0x72
+	.sleb128 0
+	.byte	0
+	.uleb128 0x23
+	.4byte	.LVL137
+	.4byte	0x1c67
+	.4byte	0x1261
+	.uleb128 0x20
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x72
+	.sleb128 0
+	.uleb128 0x20
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x75
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL139
-	.4byte	0x1c5f
-	.4byte	0x1259
-	.uleb128 0x20
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x72
-	.sleb128 0
-	.uleb128 0x20
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x75
-	.sleb128 0
-	.byte	0
-	.uleb128 0x23
-	.4byte	.LVL141
-	.4byte	0x1bdf
-	.4byte	0x1273
+	.4byte	0x1be7
+	.4byte	0x127b
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4122,9 +4098,9 @@ mbedtls_test_dhm_params:
 	.byte	0x31
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL143
-	.4byte	0x1bdf
-	.4byte	0x128d
+	.4byte	.LVL141
+	.4byte	0x1be7
+	.4byte	0x1295
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4138,9 +4114,9 @@ mbedtls_test_dhm_params:
 	.byte	0x31
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL144
-	.4byte	0x1c23
-	.4byte	0x12a6
+	.4byte	.LVL142
+	.4byte	0x1c2b
+	.4byte	0x12ae
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4154,9 +4130,9 @@ mbedtls_test_dhm_params:
 	.byte	0x31
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL145
-	.4byte	0x1c6a
-	.4byte	0x12c6
+	.4byte	.LVL143
+	.4byte	0x1c73
+	.4byte	0x12ce
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4174,12 +4150,35 @@ mbedtls_test_dhm_params:
 	.byte	0x5c
 	.uleb128 0x2
 	.byte	0x72
+	.sleb128 0
+	.byte	0
+	.uleb128 0x23
+	.4byte	.LVL145
+	.4byte	0x1c7f
+	.4byte	0x12ee
+	.uleb128 0x20
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x72
+	.sleb128 0
+	.uleb128 0x20
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x72
+	.sleb128 0
+	.uleb128 0x20
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x2
+	.byte	0x73
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL147
-	.4byte	0x1c76
-	.4byte	0x12e6
+	.4byte	0x1c73
+	.4byte	0x130e
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4196,36 +4195,13 @@ mbedtls_test_dhm_params:
 	.uleb128 0x1
 	.byte	0x5c
 	.uleb128 0x2
-	.byte	0x73
+	.byte	0x72
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL149
-	.4byte	0x1c6a
-	.4byte	0x1306
-	.uleb128 0x20
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x72
-	.sleb128 0
-	.uleb128 0x20
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x72
-	.sleb128 0
-	.uleb128 0x20
-	.uleb128 0x1
-	.byte	0x5c
-	.uleb128 0x2
-	.byte	0x72
-	.sleb128 0
-	.byte	0
-	.uleb128 0x23
-	.4byte	.LVL151
-	.4byte	0x1c76
-	.4byte	0x1326
+	.4byte	0x1c7f
+	.4byte	0x132e
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4246,9 +4222,9 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL154
-	.4byte	0x1c17
-	.4byte	0x133a
+	.4byte	.LVL152
+	.4byte	0x1c1f
+	.4byte	0x1342
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4257,9 +4233,9 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL155
-	.4byte	0x1c2f
-	.4byte	0x135b
+	.4byte	.LVL153
+	.4byte	0x1c37
+	.4byte	0x1363
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4281,9 +4257,9 @@ mbedtls_test_dhm_params:
 	.byte	0x6
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL156
-	.4byte	0x1c3b
-	.4byte	0x1374
+	.4byte	.LVL154
+	.4byte	0x1c43
+	.4byte	0x137c
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4297,9 +4273,9 @@ mbedtls_test_dhm_params:
 	.byte	0x31
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL158
-	.4byte	0x1bf7
-	.4byte	0x138e
+	.4byte	.LVL156
+	.4byte	0x1bff
+	.4byte	0x1396
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4314,9 +4290,9 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL161
-	.4byte	0x1c23
-	.4byte	0x13a7
+	.4byte	.LVL159
+	.4byte	0x1c2b
+	.4byte	0x13af
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4330,9 +4306,9 @@ mbedtls_test_dhm_params:
 	.byte	0x31
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL162
-	.4byte	0x1c82
-	.4byte	0x13c8
+	.4byte	.LVL160
+	.4byte	0x1c8b
+	.4byte	0x13d0
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4353,8 +4329,8 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1f
-	.4byte	.LVL164
-	.4byte	0x1c47
+	.4byte	.LVL162
+	.4byte	0x1c4f
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5c
@@ -4377,9 +4353,9 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL132
+	.4byte	.LVL130
 	.4byte	0x9a7
-	.4byte	0x1401
+	.4byte	0x1409
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4394,9 +4370,9 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL134
-	.4byte	0x1bd4
-	.4byte	0x1416
+	.4byte	.LVL132
+	.4byte	0x1bdc
+	.4byte	0x141e
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4405,9 +4381,9 @@ mbedtls_test_dhm_params:
 	.sleb128 -80
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL167
-	.4byte	0x1c76
-	.4byte	0x1438
+	.4byte	.LVL165
+	.4byte	0x1c7f
+	.4byte	0x1440
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4428,9 +4404,9 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL169
-	.4byte	0x1c47
-	.4byte	0x1466
+	.4byte	.LVL167
+	.4byte	0x1c4f
+	.4byte	0x146e
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4463,9 +4439,9 @@ mbedtls_test_dhm_params:
 	.sleb128 76
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL172
-	.4byte	0x1c5f
-	.4byte	0x1481
+	.4byte	.LVL170
+	.4byte	0x1c67
+	.4byte	0x1489
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4480,9 +4456,9 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL174
-	.4byte	0x1c17
-	.4byte	0x1495
+	.4byte	.LVL172
+	.4byte	0x1c1f
+	.4byte	0x149d
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4491,9 +4467,9 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL175
-	.4byte	0x1c53
-	.4byte	0x14b0
+	.4byte	.LVL173
+	.4byte	0x1c5b
+	.4byte	0x14b8
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4509,9 +4485,9 @@ mbedtls_test_dhm_params:
 	.byte	0x6
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL177
-	.4byte	0x1c6a
-	.4byte	0x14d1
+	.4byte	.LVL175
+	.4byte	0x1c73
+	.4byte	0x14d9
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4532,9 +4508,9 @@ mbedtls_test_dhm_params:
 	.sleb128 100
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL179
-	.4byte	0x1c76
-	.4byte	0x14f1
+	.4byte	.LVL177
+	.4byte	0x1c7f
+	.4byte	0x14f9
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4555,9 +4531,9 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL182
-	.4byte	0x1c03
-	.4byte	0x1506
+	.4byte	.LVL180
+	.4byte	0x1c0b
+	.4byte	0x150e
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4566,9 +4542,9 @@ mbedtls_test_dhm_params:
 	.sleb128 -80
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL185
-	.4byte	0x1c6a
-	.4byte	0x1528
+	.4byte	.LVL183
+	.4byte	0x1c73
+	.4byte	0x1530
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4589,8 +4565,8 @@ mbedtls_test_dhm_params:
 	.sleb128 88
 	.byte	0
 	.uleb128 0x1f
-	.4byte	.LVL189
-	.4byte	0x1c03
+	.4byte	.LVL187
+	.4byte	0x1c0b
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4599,26 +4575,26 @@ mbedtls_test_dhm_params:
 	.sleb128 -80
 	.byte	0
 	.byte	0
-	.uleb128 0x3d
+	.uleb128 0x3c
 	.4byte	.LASF146
 	.byte	0x1
-	.2byte	0x1ad
+	.2byte	0x1c2
 	.4byte	.LFB10
 	.4byte	.LFE10-.LFB10
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1642
-	.uleb128 0x3e
+	.4byte	0x164a
+	.uleb128 0x3d
 	.string	"ctx"
 	.byte	0x1
-	.2byte	0x1ad
+	.2byte	0x1c2
 	.4byte	0xb0e
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x23
-	.4byte	.LVL192
-	.4byte	0x1c03
-	.4byte	0x1573
+	.4byte	.LVL190
+	.4byte	0x1c0b
+	.4byte	0x157b
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4627,9 +4603,9 @@ mbedtls_test_dhm_params:
 	.sleb128 112
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL193
-	.4byte	0x1c03
-	.4byte	0x1588
+	.4byte	.LVL191
+	.4byte	0x1c0b
+	.4byte	0x1590
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4638,9 +4614,9 @@ mbedtls_test_dhm_params:
 	.sleb128 100
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL194
-	.4byte	0x1c03
-	.4byte	0x159d
+	.4byte	.LVL192
+	.4byte	0x1c0b
+	.4byte	0x15a5
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4649,9 +4625,9 @@ mbedtls_test_dhm_params:
 	.sleb128 88
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL195
-	.4byte	0x1c03
-	.4byte	0x15b2
+	.4byte	.LVL193
+	.4byte	0x1c0b
+	.4byte	0x15ba
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4660,9 +4636,9 @@ mbedtls_test_dhm_params:
 	.sleb128 76
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL196
-	.4byte	0x1c03
-	.4byte	0x15c7
+	.4byte	.LVL194
+	.4byte	0x1c0b
+	.4byte	0x15cf
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4671,9 +4647,9 @@ mbedtls_test_dhm_params:
 	.sleb128 64
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL197
-	.4byte	0x1c03
-	.4byte	0x15db
+	.4byte	.LVL195
+	.4byte	0x1c0b
+	.4byte	0x15e3
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4682,9 +4658,9 @@ mbedtls_test_dhm_params:
 	.sleb128 52
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL198
-	.4byte	0x1c03
-	.4byte	0x15ef
+	.4byte	.LVL196
+	.4byte	0x1c0b
+	.4byte	0x15f7
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4693,9 +4669,9 @@ mbedtls_test_dhm_params:
 	.sleb128 40
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL199
-	.4byte	0x1c03
-	.4byte	0x1603
+	.4byte	.LVL197
+	.4byte	0x1c0b
+	.4byte	0x160b
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4704,9 +4680,9 @@ mbedtls_test_dhm_params:
 	.sleb128 28
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL200
-	.4byte	0x1c03
-	.4byte	0x1617
+	.4byte	.LVL198
+	.4byte	0x1c0b
+	.4byte	0x161f
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4715,9 +4691,9 @@ mbedtls_test_dhm_params:
 	.sleb128 16
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL201
-	.4byte	0x1c03
-	.4byte	0x162b
+	.4byte	.LVL199
+	.4byte	0x1c0b
+	.4byte	0x1633
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4726,8 +4702,8 @@ mbedtls_test_dhm_params:
 	.sleb128 4
 	.byte	0
 	.uleb128 0x1f
-	.4byte	.LVL202
-	.4byte	0x1c8e
+	.4byte	.LVL200
+	.4byte	0x1c97
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4742,91 +4718,91 @@ mbedtls_test_dhm_params:
 	.byte	0x7c
 	.byte	0
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x28
 	.4byte	.LASF147
 	.byte	0x1
-	.2byte	0x1bc
+	.2byte	0x1d9
 	.4byte	0x3e
 	.4byte	.LFB11
 	.4byte	.LFE11-.LFB11
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1841
-	.uleb128 0x2a
+	.4byte	0x1849
+	.uleb128 0x29
 	.string	"dhm"
 	.byte	0x1
-	.2byte	0x1bc
+	.2byte	0x1d9
 	.4byte	0xb0e
-	.4byte	.LLST41
-	.uleb128 0x2b
+	.4byte	.LLST40
+	.uleb128 0x2c
 	.4byte	.LASF148
 	.byte	0x1
-	.2byte	0x1bc
+	.2byte	0x1d9
 	.4byte	0x99c
-	.4byte	.LLST42
-	.uleb128 0x2b
+	.4byte	.LLST41
+	.uleb128 0x2c
 	.4byte	.LASF149
 	.byte	0x1
-	.2byte	0x1bd
+	.2byte	0x1da
 	.4byte	0x25
-	.4byte	.LLST43
-	.uleb128 0x2d
+	.4byte	.LLST42
+	.uleb128 0x2b
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x1bf
+	.2byte	0x1dc
 	.4byte	0x3e
-	.4byte	.LLST44
-	.uleb128 0x36
+	.4byte	.LLST43
+	.uleb128 0x35
 	.string	"len"
 	.byte	0x1
-	.2byte	0x1c0
+	.2byte	0x1dd
 	.4byte	0x25
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -52
-	.uleb128 0x36
+	.uleb128 0x35
 	.string	"p"
 	.byte	0x1
-	.2byte	0x1c1
+	.2byte	0x1de
 	.4byte	0x2ea
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -56
-	.uleb128 0x2d
+	.uleb128 0x2b
 	.string	"end"
 	.byte	0x1
-	.2byte	0x1c1
+	.2byte	0x1de
 	.4byte	0x2ea
-	.4byte	.LLST45
-	.uleb128 0x36
+	.4byte	.LLST44
+	.uleb128 0x35
 	.string	"pem"
 	.byte	0x1
-	.2byte	0x1c3
+	.2byte	0x1e0
 	.4byte	0x914
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -68
-	.uleb128 0x2f
+	.uleb128 0x2e
 	.4byte	.LASF150
 	.byte	0x1
-	.2byte	0x210
-	.4byte	.L102
-	.uleb128 0x3f
+	.2byte	0x232
+	.4byte	.L103
+	.uleb128 0x3e
 	.4byte	.LBB8
 	.4byte	.LBE8-.LBB8
-	.4byte	0x1749
-	.uleb128 0x36
+	.4byte	0x1751
+	.uleb128 0x35
 	.string	"rec"
 	.byte	0x1
-	.2byte	0x1fb
+	.2byte	0x21d
 	.4byte	0x84a
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -80
 	.uleb128 0x23
-	.4byte	.LVL222
-	.4byte	0x1bd4
-	.4byte	0x1716
+	.4byte	.LVL220
+	.4byte	0x1bdc
+	.4byte	0x171e
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4835,9 +4811,9 @@ mbedtls_test_dhm_params:
 	.sleb128 -80
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL223
-	.4byte	0x1c99
-	.4byte	0x1737
+	.4byte	.LVL221
+	.4byte	0x1ca2
+	.4byte	0x173f
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4858,8 +4834,8 @@ mbedtls_test_dhm_params:
 	.sleb128 -80
 	.byte	0
 	.uleb128 0x1f
-	.4byte	.LVL225
-	.4byte	0x1c03
+	.4byte	.LVL223
+	.4byte	0x1c0b
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4869,9 +4845,9 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL204
-	.4byte	0x1ca5
-	.4byte	0x175e
+	.4byte	.LVL202
+	.4byte	0x1cae
+	.4byte	0x1766
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4880,9 +4856,9 @@ mbedtls_test_dhm_params:
 	.sleb128 -68
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL206
-	.4byte	0x1cb0
-	.4byte	0x1792
+	.4byte	.LVL204
+	.4byte	0x1cb9
+	.4byte	0x179a
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4894,13 +4870,13 @@ mbedtls_test_dhm_params:
 	.byte	0x5b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC13
+	.4byte	.LC12
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC11
+	.4byte	.LC10
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5d
@@ -4916,9 +4892,9 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL212
-	.4byte	0x1cbb
-	.4byte	0x17b2
+	.4byte	.LVL210
+	.4byte	0x1cc4
+	.4byte	0x17ba
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4939,9 +4915,9 @@ mbedtls_test_dhm_params:
 	.byte	0x30
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL215
-	.4byte	0x1c99
-	.4byte	0x17d2
+	.4byte	.LVL213
+	.4byte	0x1ca2
+	.4byte	0x17da
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4962,9 +4938,9 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL217
-	.4byte	0x1c99
-	.4byte	0x17f2
+	.4byte	.LVL215
+	.4byte	0x1ca2
+	.4byte	0x17fa
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4985,9 +4961,9 @@ mbedtls_test_dhm_params:
 	.sleb128 16
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL231
-	.4byte	0x1c17
-	.4byte	0x1806
+	.4byte	.LVL229
+	.4byte	0x1c1f
+	.4byte	0x180e
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -4996,9 +4972,9 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL233
-	.4byte	0x1cc6
-	.4byte	0x181b
+	.4byte	.LVL231
+	.4byte	0x1ccf
+	.4byte	0x1823
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -5007,9 +4983,9 @@ mbedtls_test_dhm_params:
 	.sleb128 -68
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL234
-	.4byte	0x153a
-	.4byte	0x182f
+	.4byte	.LVL232
+	.4byte	0x1542
+	.4byte	0x1837
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -5018,8 +4994,8 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1f
-	.4byte	.LVL236
-	.4byte	0x1cc6
+	.4byte	.LVL234
+	.4byte	0x1ccf
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -5028,116 +5004,116 @@ mbedtls_test_dhm_params:
 	.sleb128 -68
 	.byte	0
 	.byte	0
-	.uleb128 0x30
+	.uleb128 0x2f
 	.4byte	.LASF152
 	.byte	0x1
-	.2byte	0x222
+	.2byte	0x244
 	.4byte	0x3e
 	.byte	0x1
-	.4byte	0x188b
-	.uleb128 0x32
+	.4byte	0x1893
+	.uleb128 0x31
 	.4byte	.LASF153
 	.byte	0x1
-	.2byte	0x222
+	.2byte	0x244
 	.4byte	0x5b5
-	.uleb128 0x31
+	.uleb128 0x30
 	.string	"buf"
 	.byte	0x1
-	.2byte	0x222
+	.2byte	0x244
 	.4byte	0x996
-	.uleb128 0x31
+	.uleb128 0x30
 	.string	"n"
 	.byte	0x1
-	.2byte	0x222
+	.2byte	0x244
 	.4byte	0xe2a
-	.uleb128 0x33
+	.uleb128 0x32
 	.string	"f"
 	.byte	0x1
-	.2byte	0x224
-	.4byte	0x188b
-	.uleb128 0x34
+	.2byte	0x246
+	.4byte	0x1893
+	.uleb128 0x33
 	.4byte	.LASF154
 	.byte	0x1
-	.2byte	0x225
+	.2byte	0x247
 	.4byte	0x94
 	.byte	0
 	.uleb128 0xf
 	.byte	0x4
 	.4byte	0x803
-	.uleb128 0x29
+	.uleb128 0x28
 	.4byte	.LASF155
 	.byte	0x1
-	.2byte	0x252
+	.2byte	0x274
 	.4byte	0x3e
 	.4byte	.LFB13
 	.4byte	.LFE13-.LFB13
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1ace
-	.uleb128 0x2a
+	.4byte	0x1ad6
+	.uleb128 0x29
 	.string	"dhm"
 	.byte	0x1
-	.2byte	0x252
+	.2byte	0x274
 	.4byte	0xb0e
-	.4byte	.LLST46
-	.uleb128 0x2b
+	.4byte	.LLST45
+	.uleb128 0x2c
 	.4byte	.LASF153
 	.byte	0x1
-	.2byte	0x252
+	.2byte	0x274
 	.4byte	0x5b5
-	.4byte	.LLST47
-	.uleb128 0x2d
+	.4byte	.LLST46
+	.uleb128 0x2b
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x254
+	.2byte	0x276
 	.4byte	0x3e
-	.4byte	.LLST48
-	.uleb128 0x2d
+	.4byte	.LLST47
+	.uleb128 0x2b
 	.string	"n"
 	.byte	0x1
-	.2byte	0x255
+	.2byte	0x277
 	.4byte	0x25
-	.4byte	.LLST49
-	.uleb128 0x2d
+	.4byte	.LLST48
+	.uleb128 0x2b
 	.string	"buf"
 	.byte	0x1
-	.2byte	0x256
+	.2byte	0x278
 	.4byte	0x2ea
-	.4byte	.LLST50
-	.uleb128 0x37
-	.4byte	0x1841
+	.4byte	.LLST49
+	.uleb128 0x36
+	.4byte	0x1849
 	.4byte	.LBB11
 	.4byte	.Ldebug_ranges0+0x18
 	.byte	0x1
-	.2byte	0x258
-	.4byte	0x1a83
-	.uleb128 0x40
-	.4byte	0x186a
+	.2byte	0x27c
+	.4byte	0x1a8b
+	.uleb128 0x3f
+	.4byte	0x1872
 	.uleb128 0x6
 	.byte	0xf2
-	.4byte	.Ldebug_info0+6363
+	.4byte	.Ldebug_info0+6371
 	.sleb128 0
-	.uleb128 0x40
-	.4byte	0x185e
+	.uleb128 0x3f
+	.4byte	0x1866
 	.uleb128 0x6
 	.byte	0xf2
-	.4byte	.Ldebug_info0+6377
+	.4byte	.Ldebug_info0+6385
 	.sleb128 0
+	.uleb128 0x38
+	.4byte	0x185a
+	.4byte	.LLST50
 	.uleb128 0x39
-	.4byte	0x1852
+	.4byte	.Ldebug_ranges0+0x18
+	.uleb128 0x3a
+	.4byte	0x187c
 	.4byte	.LLST51
 	.uleb128 0x3a
-	.4byte	.Ldebug_ranges0+0x18
-	.uleb128 0x3b
-	.4byte	0x1874
+	.4byte	0x1886
 	.4byte	.LLST52
-	.uleb128 0x3b
-	.4byte	0x187e
-	.4byte	.LLST53
 	.uleb128 0x23
-	.4byte	.LVL240
-	.4byte	0x1cd1
-	.4byte	0x1962
+	.4byte	.LVL238
+	.4byte	0x1cda
+	.4byte	0x196a
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -5149,12 +5125,12 @@ mbedtls_test_dhm_params:
 	.byte	0x5b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC19
+	.4byte	.LC18
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL243
-	.4byte	0x1cdc
-	.4byte	0x1980
+	.4byte	.LVL241
+	.4byte	0x1ce5
+	.4byte	0x1988
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -5173,9 +5149,20 @@ mbedtls_test_dhm_params:
 	.byte	0x32
 	.byte	0
 	.uleb128 0x23
+	.4byte	.LVL242
+	.4byte	0x1cf0
+	.4byte	0x199c
+	.uleb128 0x20
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x75
+	.sleb128 0
+	.byte	0
+	.uleb128 0x23
 	.4byte	.LVL244
-	.4byte	0x1ce7
-	.4byte	0x1994
+	.4byte	0x1cfb
+	.4byte	0x19b0
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -5184,20 +5171,9 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL246
-	.4byte	0x1cf2
-	.4byte	0x19a8
-	.uleb128 0x20
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x75
-	.sleb128 0
-	.byte	0
-	.uleb128 0x23
-	.4byte	.LVL247
-	.4byte	0x1cdc
-	.4byte	0x19c6
+	.4byte	.LVL245
+	.4byte	0x1ce5
+	.4byte	0x19ce
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -5216,9 +5192,9 @@ mbedtls_test_dhm_params:
 	.byte	0x30
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL248
-	.4byte	0x1cfd
-	.4byte	0x19df
+	.4byte	.LVL246
+	.4byte	0x1d06
+	.4byte	0x19e7
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -5232,9 +5208,9 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL251
-	.4byte	0x1cf2
-	.4byte	0x19f3
+	.4byte	.LVL249
+	.4byte	0x1cfb
+	.4byte	0x19fb
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -5243,9 +5219,9 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL253
-	.4byte	0x1d08
-	.4byte	0x1a12
+	.4byte	.LVL251
+	.4byte	0x1d11
+	.4byte	0x1a1a
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5b
@@ -5265,9 +5241,9 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL254
-	.4byte	0x1cf2
-	.4byte	0x1a26
+	.4byte	.LVL252
+	.4byte	0x1cfb
+	.4byte	0x1a2e
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -5276,9 +5252,9 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL255
-	.4byte	0x1c8e
-	.4byte	0x1a40
+	.4byte	.LVL253
+	.4byte	0x1c97
+	.4byte	0x1a48
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -5293,9 +5269,9 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL256
-	.4byte	0x1d13
-	.4byte	0x1a54
+	.4byte	.LVL254
+	.4byte	0x1d1c
+	.4byte	0x1a5c
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -5304,9 +5280,9 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL258
-	.4byte	0x1cf2
-	.4byte	0x1a68
+	.4byte	.LVL256
+	.4byte	0x1cfb
+	.4byte	0x1a70
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -5315,8 +5291,8 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1f
-	.4byte	.LVL260
-	.4byte	0x1d1e
+	.4byte	.LVL258
+	.4byte	0x1d27
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -5328,14 +5304,14 @@ mbedtls_test_dhm_params:
 	.byte	0x5b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC21
+	.4byte	.LC20
 	.byte	0
 	.byte	0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL262
-	.4byte	0x1642
-	.4byte	0x1aa3
+	.4byte	.LVL260
+	.4byte	0x164a
+	.4byte	0x1aab
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -5356,9 +5332,9 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL264
-	.4byte	0x1c8e
-	.4byte	0x1abd
+	.4byte	.LVL262
+	.4byte	0x1c97
+	.4byte	0x1ac5
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -5373,8 +5349,8 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1f
-	.4byte	.LVL265
-	.4byte	0x1d13
+	.4byte	.LVL263
+	.4byte	0x1d1c
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -5383,45 +5359,45 @@ mbedtls_test_dhm_params:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x28
 	.4byte	.LASF156
 	.byte	0x1
-	.2byte	0x274
+	.2byte	0x2a8
 	.4byte	0x3e
 	.4byte	.LFB14
 	.4byte	.LFE14-.LFB14
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1b8f
-	.uleb128 0x2b
+	.4byte	0x1b97
+	.uleb128 0x2c
 	.4byte	.LASF157
 	.byte	0x1
-	.2byte	0x274
+	.2byte	0x2a8
 	.4byte	0x3e
-	.4byte	.LLST54
-	.uleb128 0x2d
+	.4byte	.LLST53
+	.uleb128 0x2b
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x276
+	.2byte	0x2aa
 	.4byte	0x3e
-	.4byte	.LLST55
-	.uleb128 0x36
+	.4byte	.LLST54
+	.uleb128 0x35
 	.string	"dhm"
 	.byte	0x1
-	.2byte	0x277
+	.2byte	0x2ab
 	.4byte	0x8d8
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -160
-	.uleb128 0x2f
+	.uleb128 0x2e
 	.4byte	.LASF150
 	.byte	0x1
-	.2byte	0x28c
-	.4byte	.L131
+	.2byte	0x2c0
+	.4byte	.L132
 	.uleb128 0x23
-	.4byte	.LVL267
+	.4byte	.LVL265
 	.4byte	0xad0
-	.4byte	0x1b39
+	.4byte	0x1b41
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -5430,20 +5406,20 @@ mbedtls_test_dhm_params:
 	.sleb128 -160
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL268
-	.4byte	0x1d29
-	.4byte	0x1b50
+	.4byte	.LVL266
+	.4byte	0x1d32
+	.4byte	0x1b58
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC23
+	.4byte	.LC22
 	.byte	0
 	.uleb128 0x23
-	.4byte	.LVL269
-	.4byte	0x1642
-	.4byte	0x1b74
+	.4byte	.LVL267
+	.4byte	0x164a
+	.4byte	0x1b7c
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -5463,12 +5439,12 @@ mbedtls_test_dhm_params:
 	.byte	0x8
 	.byte	0xfb
 	.byte	0
-	.uleb128 0x41
-	.4byte	.LVL275
-	.4byte	0x1d34
+	.uleb128 0x40
+	.4byte	.LVL273
+	.4byte	0x1d3d
 	.uleb128 0x1f
-	.4byte	.LVL276
-	.4byte	0x153a
+	.4byte	.LVL274
+	.4byte	0x1542
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
@@ -5479,188 +5455,188 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.uleb128 0x8
 	.4byte	0x58a
-	.4byte	0x1b9f
+	.4byte	0x1ba7
 	.uleb128 0x9
 	.4byte	0xe1
 	.byte	0xfa
 	.byte	0
-	.uleb128 0x42
+	.uleb128 0x41
 	.4byte	.LASF158
 	.byte	0x1
-	.2byte	0x268
-	.4byte	0x1bb1
+	.2byte	0x28d
+	.4byte	0x1bb9
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	mbedtls_test_dhm_params
 	.uleb128 0x18
-	.4byte	0x1b8f
-	.uleb128 0x43
+	.4byte	0x1b97
+	.uleb128 0x42
 	.4byte	.LASF159
 	.byte	0x1
-	.2byte	0x26f
-	.4byte	0x1bc3
+	.2byte	0x2a3
+	.4byte	0x1bcb
 	.byte	0xfb
 	.uleb128 0x18
 	.4byte	0x25
-	.uleb128 0x44
+	.uleb128 0x43
 	.4byte	.LASF160
 	.4byte	.LASF160
 	.byte	0x9
-	.2byte	0x1b1
-	.uleb128 0x45
+	.2byte	0x1f0
+	.uleb128 0x44
 	.4byte	.LASF161
 	.4byte	.LASF161
 	.byte	0x9
-	.byte	0xc5
-	.uleb128 0x44
+	.byte	0xcb
+	.uleb128 0x43
 	.4byte	.LASF162
 	.4byte	.LASF162
 	.byte	0x9
-	.2byte	0x12c
-	.uleb128 0x44
+	.2byte	0x14a
+	.uleb128 0x43
 	.4byte	.LASF163
 	.4byte	.LASF163
 	.byte	0x9
-	.2byte	0x241
-	.uleb128 0x44
+	.2byte	0x2a5
+	.uleb128 0x43
 	.4byte	.LASF164
 	.4byte	.LASF164
 	.byte	0x9
-	.2byte	0x1ed
-	.uleb128 0x45
+	.2byte	0x232
+	.uleb128 0x44
 	.4byte	.LASF165
 	.4byte	.LASF165
 	.byte	0x9
-	.byte	0xcc
-	.uleb128 0x46
+	.byte	0xd4
+	.uleb128 0x45
 	.4byte	.LASF194
 	.4byte	.LASF194
-	.uleb128 0x44
+	.uleb128 0x43
 	.4byte	.LASF166
 	.4byte	.LASF166
 	.byte	0x9
-	.2byte	0x161
-	.uleb128 0x44
+	.2byte	0x192
+	.uleb128 0x43
 	.4byte	.LASF167
 	.4byte	.LASF167
 	.byte	0x9
-	.2byte	0x1f9
-	.uleb128 0x44
+	.2byte	0x250
+	.uleb128 0x43
 	.4byte	.LASF168
 	.4byte	.LASF168
 	.byte	0x9
-	.2byte	0x2bc
-	.uleb128 0x44
+	.2byte	0x347
+	.uleb128 0x43
 	.4byte	.LASF169
 	.4byte	.LASF169
 	.byte	0x9
-	.2byte	0x1d5
-	.uleb128 0x44
+	.2byte	0x21a
+	.uleb128 0x43
 	.4byte	.LASF170
 	.4byte	.LASF170
 	.byte	0x9
-	.2byte	0x2ab
-	.uleb128 0x44
+	.2byte	0x332
+	.uleb128 0x43
 	.4byte	.LASF171
 	.4byte	.LASF171
 	.byte	0x9
-	.2byte	0x1bf
-	.uleb128 0x45
+	.2byte	0x201
+	.uleb128 0x43
 	.4byte	.LASF172
 	.4byte	.LASF172
 	.byte	0x9
-	.byte	0xf3
-	.uleb128 0x44
+	.2byte	0x103
+	.uleb128 0x43
 	.4byte	.LASF173
 	.4byte	.LASF173
 	.byte	0x9
-	.2byte	0x24d
-	.uleb128 0x44
+	.2byte	0x2b4
+	.uleb128 0x43
 	.4byte	.LASF174
 	.4byte	.LASF174
 	.byte	0x9
-	.2byte	0x289
-	.uleb128 0x44
+	.2byte	0x302
+	.uleb128 0x43
 	.4byte	.LASF175
 	.4byte	.LASF175
 	.byte	0x9
-	.2byte	0x2d8
-	.uleb128 0x45
+	.2byte	0x369
+	.uleb128 0x44
 	.4byte	.LASF176
 	.4byte	.LASF176
 	.byte	0xc
-	.byte	0x42
-	.uleb128 0x44
+	.byte	0x9f
+	.uleb128 0x43
 	.4byte	.LASF177
 	.4byte	.LASF177
 	.byte	0xd
 	.2byte	0x121
-	.uleb128 0x45
+	.uleb128 0x44
 	.4byte	.LASF178
 	.4byte	.LASF178
 	.byte	0xb
-	.byte	0x43
-	.uleb128 0x45
+	.byte	0x49
+	.uleb128 0x44
 	.4byte	.LASF179
 	.4byte	.LASF179
 	.byte	0xb
-	.byte	0x5b
-	.uleb128 0x45
+	.byte	0x61
+	.uleb128 0x44
 	.4byte	.LASF180
 	.4byte	.LASF180
 	.byte	0xd
 	.byte	0xcb
-	.uleb128 0x45
+	.uleb128 0x44
 	.4byte	.LASF181
 	.4byte	.LASF181
 	.byte	0xb
-	.byte	0x65
-	.uleb128 0x45
+	.byte	0x6b
+	.uleb128 0x44
 	.4byte	.LASF182
 	.4byte	.LASF182
 	.byte	0x8
 	.byte	0xdd
-	.uleb128 0x45
+	.uleb128 0x44
 	.4byte	.LASF183
 	.4byte	.LASF183
 	.byte	0x8
 	.byte	0xd0
-	.uleb128 0x45
+	.uleb128 0x44
 	.4byte	.LASF184
 	.4byte	.LASF184
 	.byte	0x8
 	.byte	0xd6
-	.uleb128 0x45
+	.uleb128 0x44
 	.4byte	.LASF185
 	.4byte	.LASF185
 	.byte	0x8
 	.byte	0xa9
-	.uleb128 0x45
+	.uleb128 0x44
 	.4byte	.LASF186
 	.4byte	.LASF186
 	.byte	0xe
-	.byte	0x7c
-	.uleb128 0x45
+	.byte	0x7f
+	.uleb128 0x44
 	.4byte	.LASF187
 	.4byte	.LASF187
 	.byte	0x8
 	.byte	0xc9
-	.uleb128 0x45
+	.uleb128 0x44
 	.4byte	.LASF188
 	.4byte	.LASF188
 	.byte	0xe
-	.byte	0x7d
-	.uleb128 0x45
+	.byte	0x80
+	.uleb128 0x44
 	.4byte	.LASF189
 	.4byte	.LASF189
 	.byte	0xf
 	.byte	0x28
-	.uleb128 0x45
+	.uleb128 0x44
 	.4byte	.LASF190
 	.4byte	.LASF190
 	.byte	0x8
 	.byte	0xb2
-	.uleb128 0x47
+	.uleb128 0x46
 	.4byte	.LASF195
 	.4byte	.LASF196
 	.byte	0x10
@@ -6191,21 +6167,6 @@ mbedtls_test_dhm_params:
 	.byte	0
 	.byte	0
 	.uleb128 0x28
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x29
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -6232,7 +6193,7 @@ mbedtls_test_dhm_params:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -6247,11 +6208,26 @@ mbedtls_test_dhm_params:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2a
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x2b
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
@@ -6274,25 +6250,10 @@ mbedtls_test_dhm_params:
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x2d
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2d
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -6307,7 +6268,7 @@ mbedtls_test_dhm_params:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x2f
+	.uleb128 0x2e
 	.uleb128 0xa
 	.byte	0
 	.uleb128 0x3
@@ -6320,7 +6281,7 @@ mbedtls_test_dhm_params:
 	.uleb128 0x1
 	.byte	0
 	.byte	0
-	.uleb128 0x30
+	.uleb128 0x2f
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3
@@ -6339,7 +6300,7 @@ mbedtls_test_dhm_params:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x31
+	.uleb128 0x30
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -6352,11 +6313,24 @@ mbedtls_test_dhm_params:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x32
+	.uleb128 0x31
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x32
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
@@ -6369,19 +6343,6 @@ mbedtls_test_dhm_params:
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x34
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
 	.uleb128 0xe
 	.uleb128 0x3a
 	.uleb128 0xb
@@ -6391,7 +6352,7 @@ mbedtls_test_dhm_params:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x34
 	.uleb128 0xa
 	.byte	0
 	.uleb128 0x3
@@ -6402,7 +6363,7 @@ mbedtls_test_dhm_params:
 	.uleb128 0x5
 	.byte	0
 	.byte	0
-	.uleb128 0x36
+	.uleb128 0x35
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -6417,7 +6378,7 @@ mbedtls_test_dhm_params:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x37
+	.uleb128 0x36
 	.uleb128 0x1d
 	.byte	0x1
 	.uleb128 0x31
@@ -6434,14 +6395,14 @@ mbedtls_test_dhm_params:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x38
+	.uleb128 0x37
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x31
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x39
+	.uleb128 0x38
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x31
@@ -6450,14 +6411,14 @@ mbedtls_test_dhm_params:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x3a
+	.uleb128 0x39
 	.uleb128 0xb
 	.byte	0x1
 	.uleb128 0x55
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x3b
+	.uleb128 0x3a
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x31
@@ -6466,14 +6427,14 @@ mbedtls_test_dhm_params:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.uleb128 0xa
 	.byte	0
 	.uleb128 0x31
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x3d
+	.uleb128 0x3c
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -6498,7 +6459,7 @@ mbedtls_test_dhm_params:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x3e
+	.uleb128 0x3d
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -6513,7 +6474,7 @@ mbedtls_test_dhm_params:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x3f
+	.uleb128 0x3e
 	.uleb128 0xb
 	.byte	0x1
 	.uleb128 0x11
@@ -6524,7 +6485,7 @@ mbedtls_test_dhm_params:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x40
+	.uleb128 0x3f
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x31
@@ -6533,13 +6494,28 @@ mbedtls_test_dhm_params:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x41
+	.uleb128 0x40
 	.uleb128 0x4109
 	.byte	0
 	.uleb128 0x11
 	.uleb128 0x1
 	.uleb128 0x31
 	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x41
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x42
@@ -6553,23 +6529,25 @@ mbedtls_test_dhm_params:
 	.uleb128 0x5
 	.uleb128 0x49
 	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
+	.uleb128 0x1c
+	.uleb128 0xb
 	.byte	0
 	.byte	0
 	.uleb128 0x43
-	.uleb128 0x34
+	.uleb128 0x2e
 	.byte	0
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3c
+	.uleb128 0x19
+	.uleb128 0x6e
+	.uleb128 0xe
 	.uleb128 0x3
 	.uleb128 0xe
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0x5
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x1c
-	.uleb128 0xb
 	.byte	0
 	.byte	0
 	.uleb128 0x44
@@ -6586,7 +6564,7 @@ mbedtls_test_dhm_params:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0x5
+	.uleb128 0xb
 	.byte	0
 	.byte	0
 	.uleb128 0x45
@@ -6600,26 +6578,9 @@ mbedtls_test_dhm_params:
 	.uleb128 0xe
 	.uleb128 0x3
 	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
 	.byte	0
 	.byte	0
 	.uleb128 0x46
-	.uleb128 0x2e
-	.byte	0
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3c
-	.uleb128 0x19
-	.uleb128 0x6e
-	.uleb128 0xe
-	.uleb128 0x3
-	.uleb128 0xe
-	.byte	0
-	.byte	0
-	.uleb128 0x47
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -7028,21 +6989,10 @@ mbedtls_test_dhm_params:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL93
-	.4byte	.LVL94
+	.4byte	.LFE5
 	.2byte	0x3
 	.byte	0x75
 	.sleb128 -4
-	.byte	0x9f
-	.4byte	.LVL94
-	.4byte	.LVL95
-	.2byte	0x1
-	.byte	0x52
-	.4byte	.LVL95
-	.4byte	.LFE5
-	.2byte	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x52
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
@@ -7052,31 +7002,20 @@ mbedtls_test_dhm_params:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL87
-	.4byte	.LVL94
+	.4byte	.LFE5
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
 	.byte	0x53
 	.byte	0x9f
-	.4byte	.LVL94
-	.4byte	.LFE5
-	.2byte	0x1
-	.byte	0x53
 	.4byte	0
 	.4byte	0
 .LLST21:
-	.4byte	.LVL87
 	.4byte	.LVL94
-	.2byte	0x1
-	.byte	0x53
-	.4byte	0
-	.4byte	0
-.LLST22:
 	.4byte	.LVL96
-	.4byte	.LVL100
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL100
+	.4byte	.LVL96
 	.4byte	.LFE6
 	.2byte	0x4
 	.byte	0xf3
@@ -7085,25 +7024,19 @@ mbedtls_test_dhm_params:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST23:
+.LLST22:
+	.4byte	.LVL95
 	.4byte	.LVL97
-	.4byte	.LVL98
 	.2byte	0x1
 	.byte	0x5a
+	.4byte	0
+	.4byte	0
+.LLST23:
 	.4byte	.LVL98
-	.4byte	.LVL99
-	.2byte	0x5
-	.byte	0x78
-	.sleb128 12800
-	.byte	0x9f
-	.4byte	0
-	.4byte	0
-.LLST24:
-	.4byte	.LVL101
-	.4byte	.LVL126
+	.4byte	.LVL124
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL126
+	.4byte	.LVL124
 	.4byte	.LFE7
 	.2byte	0x4
 	.byte	0xf3
@@ -7112,8 +7045,17 @@ mbedtls_test_dhm_params:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST25:
-	.4byte	.LVL101
+.LLST24:
+	.4byte	.LVL98
+	.4byte	.LVL100
+	.2byte	0x1
+	.byte	0x53
+	.4byte	.LVL100
+	.4byte	.LVL102
+	.2byte	0x2
+	.byte	0x91
+	.sleb128 -48
+	.4byte	.LVL102
 	.4byte	.LVL103
 	.2byte	0x1
 	.byte	0x53
@@ -7124,58 +7066,62 @@ mbedtls_test_dhm_params:
 	.sleb128 -48
 	.4byte	0
 	.4byte	0
-.LLST26:
-	.4byte	.LVL101
-	.4byte	.LVL108
+.LLST25:
+	.4byte	.LVL98
+	.4byte	.LVL106
 	.2byte	0x1
 	.byte	0x54
-	.4byte	.LVL108
+	.4byte	.LVL106
 	.4byte	.LFE7
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -44
 	.4byte	0
 	.4byte	0
-.LLST27:
-	.4byte	.LVL101
-	.4byte	.LVL107
+.LLST26:
+	.4byte	.LVL98
+	.4byte	.LVL105
 	.2byte	0x1
 	.byte	0x56
-	.4byte	.LVL107
+	.4byte	.LVL105
 	.4byte	.LFE7
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -40
 	.4byte	0
 	.4byte	0
-.LLST28:
+.LLST27:
+	.4byte	.LVL98
 	.4byte	.LVL101
-	.4byte	.LVL104
 	.2byte	0x1
 	.byte	0x57
-	.4byte	.LVL104
-	.4byte	.LVL105
+	.4byte	.LVL101
+	.4byte	.LVL102
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -36
-	.4byte	.LVL105
-	.4byte	.LVL108
+	.4byte	.LVL102
+	.4byte	.LVL106
 	.2byte	0x1
 	.byte	0x57
-	.4byte	.LVL108
+	.4byte	.LVL106
 	.4byte	.LFE7
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -36
 	.4byte	0
 	.4byte	0
-.LLST29:
+.LLST28:
+	.4byte	.LVL107
+	.4byte	.LVL108
+	.2byte	0x1
+	.byte	0x5a
 	.4byte	.LVL109
 	.4byte	.LVL110
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL111
-	.4byte	.LVL112
+	.4byte	.LVL116
+	.4byte	.LVL117
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL118
@@ -7190,44 +7136,40 @@ mbedtls_test_dhm_params:
 	.4byte	.LVL123
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL124
-	.4byte	.LVL125
-	.2byte	0x1
-	.byte	0x5a
 	.4byte	0
 	.4byte	0
-.LLST30:
-	.4byte	.LVL102
-	.4byte	.LVL108
+.LLST29:
+	.4byte	.LVL99
+	.4byte	.LVL106
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
-	.4byte	.LVL108
-	.4byte	.LVL114
+	.4byte	.LVL106
+	.4byte	.LVL112
 	.2byte	0x5
 	.byte	0x3c
 	.byte	0x76
 	.sleb128 0
 	.byte	0x1c
 	.byte	0x9f
-	.4byte	.LVL114
-	.4byte	.LVL115
+	.4byte	.LVL112
+	.4byte	.LVL113
 	.2byte	0x5
 	.byte	0x3d
 	.byte	0x76
 	.sleb128 0
 	.byte	0x1c
 	.byte	0x9f
+	.4byte	.LVL113
 	.4byte	.LVL115
-	.4byte	.LVL117
 	.2byte	0x5
 	.byte	0x3c
 	.byte	0x76
 	.sleb128 0
 	.byte	0x1c
 	.byte	0x9f
-	.4byte	.LVL123
-	.4byte	.LVL124
+	.4byte	.LVL121
+	.4byte	.LVL122
 	.2byte	0x5
 	.byte	0x3c
 	.byte	0x76
@@ -7236,35 +7178,35 @@ mbedtls_test_dhm_params:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST31:
-	.4byte	.LVL127
-	.4byte	.LVL129
+.LLST30:
+	.4byte	.LVL125
+	.4byte	.LVL128
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL129
+	.4byte	.LVL128
 	.4byte	.LFE9
 	.2byte	0x1
 	.byte	0x57
 	.4byte	0
 	.4byte	0
-.LLST32:
-	.4byte	.LVL127
-	.4byte	.LVL130
+.LLST31:
+	.4byte	.LVL125
+	.4byte	.LVL126
 	.2byte	0x1
 	.byte	0x53
-	.4byte	.LVL130
+	.4byte	.LVL126
 	.4byte	.LFE9
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -60
 	.4byte	0
 	.4byte	0
-.LLST33:
-	.4byte	.LVL127
-	.4byte	.LVL131
+.LLST32:
+	.4byte	.LVL125
+	.4byte	.LVL129
 	.2byte	0x1
 	.byte	0x54
-	.4byte	.LVL131
+	.4byte	.LVL129
 	.4byte	.LFE9
 	.2byte	0x4
 	.byte	0xf3
@@ -7273,66 +7215,70 @@ mbedtls_test_dhm_params:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST34:
-	.4byte	.LVL127
-	.4byte	.LVL136
+.LLST33:
+	.4byte	.LVL125
+	.4byte	.LVL134
 	.2byte	0x1
 	.byte	0x55
-	.4byte	.LVL136
-	.4byte	.LVL171
+	.4byte	.LVL134
+	.4byte	.LVL169
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -56
+	.4byte	.LVL169
 	.4byte	.LVL171
-	.4byte	.LVL173
 	.2byte	0x1
 	.byte	0x55
-	.4byte	.LVL173
+	.4byte	.LVL171
 	.4byte	.LFE9
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -56
 	.4byte	0
 	.4byte	0
-.LLST35:
+.LLST34:
+	.4byte	.LVL125
 	.4byte	.LVL127
-	.4byte	.LVL128
 	.2byte	0x1
 	.byte	0x57
-	.4byte	.LVL128
+	.4byte	.LVL127
 	.4byte	.LFE9
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -52
 	.4byte	0
 	.4byte	0
-.LLST36:
-	.4byte	.LVL132
-	.4byte	.LVL133
+.LLST35:
+	.4byte	.LVL130
+	.4byte	.LVL131
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL133
-	.4byte	.LVL137
+	.4byte	.LVL131
+	.4byte	.LVL135
 	.2byte	0x1
 	.byte	0x52
+	.4byte	.LVL164
+	.4byte	.LVL165-1
+	.2byte	0x1
+	.byte	0x58
 	.4byte	.LVL166
 	.4byte	.LVL167-1
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL168
-	.4byte	.LVL169-1
+	.4byte	.LVL169
 	.2byte	0x1
 	.byte	0x58
-	.4byte	.LVL170
+	.4byte	.LVL169
 	.4byte	.LVL171
-	.2byte	0x1
-	.byte	0x58
-	.4byte	.LVL171
-	.4byte	.LVL173
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL173
-	.4byte	.LVL174-1
+	.4byte	.LVL171
+	.4byte	.LVL172-1
+	.2byte	0x1
+	.byte	0x58
+	.4byte	.LVL174
+	.4byte	.LVL175-1
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL176
@@ -7340,56 +7286,56 @@ mbedtls_test_dhm_params:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL178
-	.4byte	.LVL179-1
+	.4byte	.LVL180-1
 	.2byte	0x1
 	.byte	0x58
-	.4byte	.LVL180
-	.4byte	.LVL182-1
+	.4byte	.LVL181
+	.4byte	.LVL182
 	.2byte	0x1
 	.byte	0x58
-	.4byte	.LVL183
 	.4byte	.LVL184
+	.4byte	.LVL185
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL186
-	.4byte	.LVL187
+	.4byte	.LVL187-1
 	.2byte	0x1
 	.byte	0x58
+	.4byte	0
+	.4byte	0
+.LLST36:
+	.4byte	.LVL133
+	.4byte	.LVL165
+	.2byte	0x1
+	.byte	0x56
+	.4byte	.LVL182
 	.4byte	.LVL188
-	.4byte	.LVL189-1
 	.2byte	0x1
-	.byte	0x58
+	.byte	0x56
 	.4byte	0
 	.4byte	0
 .LLST37:
-	.4byte	.LVL135
-	.4byte	.LVL167
+	.4byte	.LVL133
+	.4byte	.LVL165
 	.2byte	0x1
-	.byte	0x56
-	.4byte	.LVL184
-	.4byte	.LVL190
+	.byte	0x57
+	.4byte	.LVL182
+	.4byte	.LVL188
 	.2byte	0x1
-	.byte	0x56
+	.byte	0x57
 	.4byte	0
 	.4byte	0
 .LLST38:
-	.4byte	.LVL135
-	.4byte	.LVL167
+	.4byte	.LVL138
+	.4byte	.LVL139-1
 	.2byte	0x1
-	.byte	0x57
-	.4byte	.LVL184
-	.4byte	.LVL190
-	.2byte	0x1
-	.byte	0x57
-	.4byte	0
-	.4byte	0
-.LLST39:
+	.byte	0x58
 	.4byte	.LVL140
 	.4byte	.LVL141-1
 	.2byte	0x1
 	.byte	0x58
-	.4byte	.LVL142
-	.4byte	.LVL143-1
+	.4byte	.LVL144
+	.4byte	.LVL145-1
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL146
@@ -7401,34 +7347,30 @@ mbedtls_test_dhm_params:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL150
-	.4byte	.LVL151-1
+	.4byte	.LVL151
 	.2byte	0x1
 	.byte	0x58
-	.4byte	.LVL152
-	.4byte	.LVL153
+	.4byte	.LVL155
+	.4byte	.LVL156-1
 	.2byte	0x1
 	.byte	0x58
-	.4byte	.LVL157
-	.4byte	.LVL158-1
+	.4byte	.LVL161
+	.4byte	.LVL162-1
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL163
-	.4byte	.LVL164-1
+	.4byte	.LVL164
 	.2byte	0x1
 	.byte	0x58
-	.4byte	.LVL165
-	.4byte	.LVL166
-	.2byte	0x1
-	.byte	0x58
-	.4byte	.LVL184
-	.4byte	.LVL185-1
+	.4byte	.LVL182
+	.4byte	.LVL183-1
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
 	.4byte	0
-.LLST40:
-	.4byte	.LVL153
-	.4byte	.LVL159
+.LLST39:
+	.4byte	.LVL151
+	.4byte	.LVL157
 	.2byte	0x6
 	.byte	0x3c
 	.byte	0x91
@@ -7436,8 +7378,8 @@ mbedtls_test_dhm_params:
 	.byte	0x6
 	.byte	0x1c
 	.byte	0x9f
-	.4byte	.LVL159
-	.4byte	.LVL160
+	.4byte	.LVL157
+	.4byte	.LVL158
 	.2byte	0x6
 	.byte	0x3d
 	.byte	0x91
@@ -7445,16 +7387,16 @@ mbedtls_test_dhm_params:
 	.byte	0x6
 	.byte	0x1c
 	.byte	0x9f
-	.4byte	.LVL160
-	.4byte	.LVL161-1
+	.4byte	.LVL158
+	.4byte	.LVL159-1
 	.2byte	0x5
 	.byte	0x3c
 	.byte	0x78
 	.sleb128 0
 	.byte	0x1c
 	.byte	0x9f
-	.4byte	.LVL161-1
-	.4byte	.LVL166
+	.4byte	.LVL159-1
+	.4byte	.LVL164
 	.2byte	0x6
 	.byte	0x3c
 	.byte	0x91
@@ -7462,8 +7404,8 @@ mbedtls_test_dhm_params:
 	.byte	0x6
 	.byte	0x1c
 	.byte	0x9f
-	.4byte	.LVL187
-	.4byte	.LVL188
+	.4byte	.LVL185
+	.4byte	.LVL186
 	.2byte	0x5
 	.byte	0x3c
 	.byte	0x78
@@ -7472,34 +7414,34 @@ mbedtls_test_dhm_params:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST41:
+.LLST40:
+	.4byte	.LVL201
 	.4byte	.LVL203
-	.4byte	.LVL205
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL205
+	.4byte	.LVL203
 	.4byte	.LFE11
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
 	.4byte	0
-.LLST42:
-	.4byte	.LVL203
-	.4byte	.LVL209
+.LLST41:
+	.4byte	.LVL201
+	.4byte	.LVL207
 	.2byte	0x1
 	.byte	0x53
-	.4byte	.LVL209
-	.4byte	.LVL235
+	.4byte	.LVL207
+	.4byte	.LVL233
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
 	.byte	0x53
 	.byte	0x9f
+	.4byte	.LVL233
 	.4byte	.LVL235
-	.4byte	.LVL237
 	.2byte	0x1
 	.byte	0x53
-	.4byte	.LVL237
+	.4byte	.LVL235
 	.4byte	.LFE11
 	.2byte	0x4
 	.byte	0xf3
@@ -7508,94 +7450,94 @@ mbedtls_test_dhm_params:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST43:
-	.4byte	.LVL203
-	.4byte	.LVL210
+.LLST42:
+	.4byte	.LVL201
+	.4byte	.LVL208
 	.2byte	0x1
 	.byte	0x54
-	.4byte	.LVL210
+	.4byte	.LVL208
 	.4byte	.LFE11
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -48
 	.4byte	0
 	.4byte	0
-.LLST44:
-	.4byte	.LVL207
-	.4byte	.LVL208
+.LLST43:
+	.4byte	.LVL205
+	.4byte	.LVL206
 	.2byte	0x1
 	.byte	0x52
+	.4byte	.LVL206
 	.4byte	.LVL208
+	.2byte	0x1
+	.byte	0x5a
 	.4byte	.LVL210
-	.2byte	0x1
-	.byte	0x5a
 	.4byte	.LVL212
-	.4byte	.LVL214
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL216
-	.4byte	.LVL224
+	.4byte	.LVL214
+	.4byte	.LVL222
 	.2byte	0x1
 	.byte	0x52
+	.4byte	.LVL222
 	.4byte	.LVL224
+	.2byte	0x1
+	.byte	0x56
+	.4byte	.LVL224
+	.4byte	.LVL225
+	.2byte	0x1
+	.byte	0x52
+	.4byte	.LVL225
 	.4byte	.LVL226
 	.2byte	0x1
 	.byte	0x56
-	.4byte	.LVL226
-	.4byte	.LVL227
-	.2byte	0x1
-	.byte	0x52
 	.4byte	.LVL227
 	.4byte	.LVL228
 	.2byte	0x1
-	.byte	0x56
-	.4byte	.LVL229
-	.4byte	.LVL230
-	.2byte	0x1
 	.byte	0x52
+	.4byte	.LVL228
 	.4byte	.LVL230
-	.4byte	.LVL232
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
-	.4byte	.LVL232
+	.4byte	.LVL230
 	.4byte	.LFE11
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
 	.4byte	0
-.LLST45:
-	.4byte	.LVL211
-	.4byte	.LVL212-1
+.LLST44:
+	.4byte	.LVL209
+	.4byte	.LVL210-1
 	.2byte	0x1
 	.byte	0x5b
-	.4byte	.LVL213
+	.4byte	.LVL211
+	.4byte	.LVL217
+	.2byte	0x1
+	.byte	0x53
 	.4byte	.LVL219
-	.2byte	0x1
-	.byte	0x53
-	.4byte	.LVL221
-	.4byte	.LVL232
+	.4byte	.LVL230
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
 	.4byte	0
-.LLST46:
-	.4byte	.LVL238
-	.4byte	.LVL242
+.LLST45:
+	.4byte	.LVL236
+	.4byte	.LVL240
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL242
+	.4byte	.LVL240
 	.4byte	.LFE13
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
 	.4byte	0
-.LLST47:
-	.4byte	.LVL238
-	.4byte	.LVL249
+.LLST46:
+	.4byte	.LVL236
+	.4byte	.LVL247
 	.2byte	0x1
 	.byte	0x53
-	.4byte	.LVL249
+	.4byte	.LVL247
 	.4byte	.LFE13
 	.2byte	0x4
 	.byte	0xf3
@@ -7604,50 +7546,50 @@ mbedtls_test_dhm_params:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST48:
+.LLST47:
+	.4byte	.LVL261
 	.4byte	.LVL263
-	.4byte	.LVL265
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
 	.4byte	0
+.LLST48:
+	.4byte	.LVL245
+	.4byte	.LVL254
+	.2byte	0x1
+	.byte	0x54
+	.4byte	.LVL255
+	.4byte	.LVL263
+	.2byte	0x1
+	.byte	0x54
+	.4byte	0
+	.4byte	0
 .LLST49:
 	.4byte	.LVL247
-	.4byte	.LVL256
-	.2byte	0x1
-	.byte	0x54
-	.4byte	.LVL257
-	.4byte	.LVL265
-	.2byte	0x1
-	.byte	0x54
-	.4byte	0
-	.4byte	0
-.LLST50:
-	.4byte	.LVL249
-	.4byte	.LVL250
+	.4byte	.LVL248
 	.2byte	0x1
 	.byte	0x53
+	.4byte	.LVL248
 	.4byte	.LVL250
-	.4byte	.LVL252
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
-	.4byte	.LVL252
-	.4byte	.LVL256
+	.4byte	.LVL250
+	.4byte	.LVL254
 	.2byte	0x1
 	.byte	0x53
-	.4byte	.LVL257
-	.4byte	.LVL265
+	.4byte	.LVL255
+	.4byte	.LVL263
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
 	.4byte	0
-.LLST51:
-	.4byte	.LVL239
-	.4byte	.LVL249
+.LLST50:
+	.4byte	.LVL237
+	.4byte	.LVL247
 	.2byte	0x1
 	.byte	0x53
-	.4byte	.LVL249
+	.4byte	.LVL247
 	.4byte	.LFE13
 	.2byte	0x4
 	.byte	0xf3
@@ -7656,51 +7598,51 @@ mbedtls_test_dhm_params:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST52:
-	.4byte	.LVL241
-	.4byte	.LVL259
+.LLST51:
+	.4byte	.LVL239
+	.4byte	.LVL257
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
 	.4byte	0
-.LLST53:
-	.4byte	.LVL245
-	.4byte	.LVL261
+.LLST52:
+	.4byte	.LVL243
+	.4byte	.LVL259
 	.2byte	0x1
 	.byte	0x54
+	.4byte	.LVL259
 	.4byte	.LVL261
-	.4byte	.LVL263
 	.2byte	0x3
 	.byte	0x72
 	.sleb128 -1
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST54:
-	.4byte	.LVL266
-	.4byte	.LVL270
+.LLST53:
+	.4byte	.LVL264
+	.4byte	.LVL268
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL270
+	.4byte	.LVL268
 	.4byte	.LFE14
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
 	.4byte	0
-.LLST55:
-	.4byte	.LVL270
-	.4byte	.LVL271
+.LLST54:
+	.4byte	.LVL268
+	.4byte	.LVL269
 	.2byte	0x1
 	.byte	0x52
+	.4byte	.LVL269
+	.4byte	.LVL270
+	.2byte	0x1
+	.byte	0x5a
 	.4byte	.LVL271
 	.4byte	.LVL272
 	.2byte	0x1
-	.byte	0x5a
-	.4byte	.LVL273
-	.4byte	.LVL274
-	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL275
+	.4byte	.LVL273
 	.4byte	.LFE14
 	.2byte	0x1
 	.byte	0x52

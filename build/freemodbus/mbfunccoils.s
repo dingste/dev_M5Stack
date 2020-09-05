@@ -6,7 +6,7 @@
 	.global	eMBFuncReadCoils
 	.type	eMBFuncReadCoils, @function
 eMBFuncReadCoils:
-.LFB21:
+.LFB30:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freemodbus/modbus/functions/mbfunccoils.c"
 	.loc 1 70 0
 .LVL0:
@@ -104,14 +104,14 @@ eMBFuncReadCoils:
 	.loc 1 144 0
 	mov.n	a2, a10
 	retw.n
-.LFE21:
+.LFE30:
 	.size	eMBFuncReadCoils, .-eMBFuncReadCoils
 	.section	.text.eMBFuncWriteCoil,"ax",@progbits
 	.align	4
 	.global	eMBFuncWriteCoil
 	.type	eMBFuncWriteCoil, @function
 eMBFuncWriteCoil:
-.LFB22:
+.LFB31:
 	.loc 1 149 0
 .LVL15:
 	entry	sp, 48
@@ -181,14 +181,14 @@ eMBFuncWriteCoil:
 .L10:
 	.loc 1 196 0
 	retw.n
-.LFE22:
+.LFE31:
 	.size	eMBFuncWriteCoil, .-eMBFuncWriteCoil
 	.section	.text.eMBFuncWriteMultipleCoils,"ax",@progbits
 	.align	4
 	.global	eMBFuncWriteMultipleCoils
 	.type	eMBFuncWriteMultipleCoils, @function
 eMBFuncWriteMultipleCoils:
-.LFB23:
+.LFB32:
 	.loc 1 203 0
 .LVL24:
 	entry	sp, 32
@@ -271,7 +271,7 @@ eMBFuncWriteMultipleCoils:
 	.loc 1 266 0
 	mov.n	a2, a10
 	retw.n
-.LFE23:
+.LFE32:
 	.size	eMBFuncWriteMultipleCoils, .-eMBFuncWriteMultipleCoils
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -292,10 +292,10 @@ eMBFuncWriteMultipleCoils:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI0-.LFB21
+	.4byte	.LCFI0-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -304,10 +304,10 @@ eMBFuncWriteMultipleCoils:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI1-.LFB22
+	.4byte	.LCFI1-.LFB31
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -316,10 +316,10 @@ eMBFuncWriteMultipleCoils:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI2-.LFB23
+	.4byte	.LCFI2-.LFB32
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -398,12 +398,12 @@ eMBFuncWriteMultipleCoils:
 	.uleb128 0x4
 	.4byte	.LASF12
 	.byte	0x2
-	.byte	0x44
+	.byte	0x47
 	.4byte	0x41
 	.uleb128 0x4
 	.4byte	.LASF13
 	.byte	0x2
-	.byte	0x47
+	.byte	0x4a
 	.4byte	0x2c
 	.uleb128 0x5
 	.byte	0x4
@@ -507,8 +507,8 @@ eMBFuncWriteMultipleCoils:
 	.byte	0x1
 	.byte	0x45
 	.4byte	0xdf
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x209
@@ -586,8 +586,8 @@ eMBFuncWriteMultipleCoils:
 	.byte	0x1
 	.byte	0x94
 	.4byte	0xdf
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2a1
@@ -667,8 +667,8 @@ eMBFuncWriteMultipleCoils:
 	.byte	0x1
 	.byte	0xca
 	.4byte	0xdf
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x363
@@ -1018,7 +1018,7 @@ eMBFuncWriteMultipleCoils:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL13
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1139,7 +1139,7 @@ eMBFuncWriteMultipleCoils:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL14
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -1165,7 +1165,7 @@ eMBFuncWriteMultipleCoils:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL19
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1249,7 +1249,7 @@ eMBFuncWriteMultipleCoils:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL23
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -1278,7 +1278,7 @@ eMBFuncWriteMultipleCoils:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL37
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1386,7 +1386,7 @@ eMBFuncWriteMultipleCoils:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL37
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -1410,22 +1410,22 @@ eMBFuncWriteMultipleCoils:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB23
-	.4byte	.LFE23
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB31
+	.4byte	.LFE31
+	.4byte	.LFB32
+	.4byte	.LFE32
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

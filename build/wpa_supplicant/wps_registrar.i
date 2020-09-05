@@ -1277,7 +1277,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 1
@@ -2132,15 +2132,15 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h" 2
 # 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h"
 int wpa_debug_open_file(const char *path);
@@ -3076,10 +3076,11 @@ enum wps_response_type {
 };
 # 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/queue.h" 1
-# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 2
-
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_interface.h" 1
 # 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_interface.h"
 typedef enum {
@@ -3088,7 +3089,8 @@ typedef enum {
     ESP_IF_ETH,
     ESP_IF_MAX
 } esp_interface_t;
-# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h" 2
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 2
 
 
 
@@ -3161,6 +3163,8 @@ typedef enum {
     WIFI_REASON_AUTH_FAIL = 202,
     WIFI_REASON_ASSOC_FAIL = 203,
     WIFI_REASON_HANDSHAKE_TIMEOUT = 204,
+    WIFI_REASON_CONNECTION_FAIL = 205,
+    WIFI_REASON_AUTH_CHANGED = 206,
 } wifi_err_reason_t;
 
 typedef enum {
@@ -3182,7 +3186,7 @@ typedef struct {
 } wifi_active_scan_time_t;
 
 
-typedef union {
+typedef struct {
     wifi_active_scan_time_t active;
     uint32_t passive;
 
@@ -3194,9 +3198,9 @@ typedef struct {
     uint8_t *bssid;
     uint8_t channel;
     
-# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
-# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         show_hidden;
     wifi_scan_type_t scan_type;
     wifi_scan_time_t scan_time;
@@ -3265,7 +3269,7 @@ typedef enum {
     WIFI_PS_MIN_MODEM,
     WIFI_PS_MAX_MODEM,
 } wifi_ps_type_t;
-# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
 typedef enum {
     WIFI_BW_HT20 = 1,
     WIFI_BW_HT40,
@@ -3289,9 +3293,9 @@ typedef struct {
     uint8_t password[64];
     wifi_scan_method_t scan_method;
     
-# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
-# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         bssid_set;
     uint8_t bssid[6];
     uint8_t channel;
@@ -3357,7 +3361,7 @@ typedef enum {
     WIFI_VND_IE_ID_0,
     WIFI_VND_IE_ID_1,
 } wifi_vendor_ie_id_t;
-# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
 typedef struct {
     uint8_t element_id;
     uint8_t length;
@@ -3416,41 +3420,41 @@ typedef enum {
     WIFI_PKT_DATA,
     WIFI_PKT_MISC,
 } wifi_promiscuous_pkt_type_t;
-# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 380 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
 typedef struct {
     uint32_t filter_mask;
 } wifi_promiscuous_filter_t;
-# 391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-typedef struct {
-    
-# 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
-   _Bool 
 # 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        lltf_en;
+typedef struct {
     
 # 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
 # 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        htltf_en;
+        lltf_en;
     
 # 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
 # 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        stbc_htltf2_en;
+        htltf_en;
     
 # 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
 # 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        ltf_merge_en;
+        stbc_htltf2_en;
     
 # 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
 # 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        channel_filter_en;
+        ltf_merge_en;
     
 # 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
 # 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        channel_filter_en;
+    
+# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         manu_scale;
     uint8_t shift;
 } wifi_csi_config_t;
@@ -3463,9 +3467,9 @@ typedef struct {
     wifi_pkt_rx_ctrl_t rx_ctrl;
     uint8_t mac[6];
     
-# 408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
-# 408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         first_word_invalid;
     int8_t *buf;
     uint16_t len;
@@ -3551,6 +3555,34 @@ typedef enum {
     WIFI_PHY_RATE_LORA_500K = 0x2A,
     WIFI_PHY_RATE_MAX,
 } wifi_phy_rate_t;
+
+
+
+
+
+typedef enum {
+    WIFI_IOCTL_SET_STA_HT2040_COEX = 1,
+    WIFI_IOCTL_GET_STA_HT2040_COEX,
+    WIFI_IOCTL_MAX,
+} wifi_ioctl_cmd_t;
+
+
+
+
+
+typedef struct {
+    int enable;
+} wifi_ht2040_coex_t;
+
+
+
+
+
+typedef struct {
+    union {
+        wifi_ht2040_coex_t ht2040_coex;
+    } data;
+} wifi_ioctl_config_t;
 # 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h" 2
 
 
@@ -4229,7 +4261,7 @@ struct wps_sm {
     u8 channel;
     u8 scan_cnt;
 
-    u8 wps_sig_cnt[2];
+    u8 wps_sig_cnt[9];
 
     u8 discover_ssid_cnt;
     
@@ -6816,11 +6848,16 @@ int wps_build_cred(struct wps_data *wps, struct wpabuf *msg)
   if (os_get_random((r), (sizeof(r))) < 0)
    return -1;
   free((wps->new_psk));
+  wps->new_psk = 
+# 1692 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+                ((void *)0)
+# 1692 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+                    ;
 
   if (wps->new_psk == 
-# 1693 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1694 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                      ((void *)0)
-# 1693 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1694 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                          )
    return -1;
   wps->new_psk_len--;
@@ -6848,17 +6885,17 @@ int wps_build_cred(struct wps_data *wps, struct wpabuf *msg)
   wps->new_psk_len = 32;
   wps->new_psk = (u8 *)malloc((wps->new_psk_len));
   if (wps->new_psk == 
-# 1719 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1720 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                      ((void *)0)
-# 1719 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1720 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                          )
    return -1;
   if (os_get_random((wps->new_psk), (wps->new_psk_len)) < 0) {
    free((wps->new_psk));
    wps->new_psk = 
-# 1723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1724 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                  ((void *)0)
-# 1723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1724 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                      ;
    return -1;
   }
@@ -6871,12 +6908,12 @@ int wps_build_cred(struct wps_data *wps, struct wpabuf *msg)
  }
 
 use_provided:
-# 1762 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1763 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  cred = wpabuf_alloc(200);
  if (cred == 
-# 1763 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1764 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
             ((void *)0)
-# 1763 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1764 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                 )
   return -1;
 
@@ -6917,27 +6954,27 @@ static struct wpabuf * wps_build_ap_cred(struct wps_data *wps)
 
  msg = wpabuf_alloc(1000);
  if (msg == 
-# 1802 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1803 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
            ((void *)0)
-# 1802 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1803 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                )
   return 
-# 1803 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1804 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1803 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1804 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
 
  plain = wpabuf_alloc(200);
  if (plain == 
-# 1806 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1807 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
              ((void *)0)
-# 1806 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1807 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                  ) {
   wpabuf_free(msg);
   return 
-# 1808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1809 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1809 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
 
@@ -6945,9 +6982,9 @@ static struct wpabuf * wps_build_ap_cred(struct wps_data *wps)
   wpabuf_free(plain);
   wpabuf_free(msg);
   return 
-# 1814 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1815 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1814 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1815 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
 
@@ -6966,9 +7003,9 @@ static struct wpabuf * wps_build_m2(struct wps_data *wps)
 
  if (os_get_random((wps->nonce_r), (16)) < 0)
   return 
-# 1831 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1831 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  wpa_hexdump(ESP_LOG_DEBUG, "WPS: Registrar Nonce",
       wps->nonce_r, 16);
@@ -6977,14 +7014,14 @@ static struct wpabuf * wps_build_m2(struct wps_data *wps)
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Building Message M2" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Building Message M2" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Building Message M2" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Building Message M2" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Building Message M2" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
  msg = wpabuf_alloc(1000);
  if (msg == 
-# 1838 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
            ((void *)0)
-# 1838 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                )
   return 
-# 1839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
 
  if (wps_build_version(msg) ||
@@ -7005,16 +7042,16 @@ static struct wpabuf * wps_build_m2(struct wps_data *wps)
      wps_build_dev_password_id(msg, wps->dev_pw_id) ||
      wps_build_os_version(&wps->wps->dev, msg) ||
      wps_build_wfa_ext(msg, 0, 
-# 1858 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1859 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                               ((void *)0)
-# 1858 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1859 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                   , 0) ||
      wps_build_authenticator(wps, msg)) {
   wpabuf_free(msg);
   return 
-# 1861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1862 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1862 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
 
@@ -7032,14 +7069,14 @@ static struct wpabuf * wps_build_m2d(struct wps_data *wps)
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Building Message M2D" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Building Message M2D" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Building Message M2D" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Building Message M2D" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Building Message M2D" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
  msg = wpabuf_alloc(1000);
  if (msg == 
-# 1877 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1878 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
            ((void *)0)
-# 1877 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1878 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                )
   return 
-# 1878 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1879 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1878 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1879 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
 
  if (wps->wps->ap && wps->wps->ap_setup_locked &&
@@ -7061,15 +7098,15 @@ static struct wpabuf * wps_build_m2d(struct wps_data *wps)
      wps_build_config_error(msg, err) ||
      wps_build_os_version(&wps->wps->dev, msg) ||
      wps_build_wfa_ext(msg, 0, 
-# 1898 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1899 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                               ((void *)0)
-# 1898 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1899 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                   , 0)) {
   wpabuf_free(msg);
   return 
-# 1900 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1900 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
 
@@ -7088,27 +7125,27 @@ static struct wpabuf * wps_build_m4(struct wps_data *wps)
 
  plain = wpabuf_alloc(200);
  if (plain == 
-# 1917 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
              ((void *)0)
-# 1917 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                  )
   return 
-# 1918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1919 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1919 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
 
  msg = wpabuf_alloc(1000);
  if (msg == 
-# 1921 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1922 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
            ((void *)0)
-# 1921 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1922 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                ) {
   wpabuf_free(plain);
   return 
-# 1923 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1924 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1923 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1924 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
 
@@ -7120,17 +7157,17 @@ static struct wpabuf * wps_build_m4(struct wps_data *wps)
      wps_build_key_wrap_auth(wps, plain) ||
      wps_build_encr_settings(wps, msg, plain) ||
      wps_build_wfa_ext(msg, 0, 
-# 1933 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1934 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                               ((void *)0)
-# 1933 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1934 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                   , 0) ||
      wps_build_authenticator(wps, msg)) {
   wpabuf_free(plain);
   wpabuf_free(msg);
   return 
-# 1937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1938 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1938 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
  wpabuf_free(plain);
@@ -7148,27 +7185,27 @@ static struct wpabuf * wps_build_m6(struct wps_data *wps)
 
  plain = wpabuf_alloc(200);
  if (plain == 
-# 1953 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1954 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
              ((void *)0)
-# 1953 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1954 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                  )
   return 
-# 1954 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1955 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1954 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1955 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
 
  msg = wpabuf_alloc(1000);
  if (msg == 
-# 1957 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1958 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
            ((void *)0)
-# 1957 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1958 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                ) {
   wpabuf_free(plain);
   return 
-# 1959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1960 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1960 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
 
@@ -7179,17 +7216,17 @@ static struct wpabuf * wps_build_m6(struct wps_data *wps)
      wps_build_key_wrap_auth(wps, plain) ||
      wps_build_encr_settings(wps, msg, plain) ||
      wps_build_wfa_ext(msg, 0, 
-# 1968 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1969 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                               ((void *)0)
-# 1968 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1969 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                   , 0) ||
      wps_build_authenticator(wps, msg)) {
   wpabuf_free(plain);
   wpabuf_free(msg);
   return 
-# 1972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1973 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1973 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
  wpabuf_free(plain);
@@ -7208,27 +7245,27 @@ static struct wpabuf * wps_build_m8(struct wps_data *wps)
 
  plain = wpabuf_alloc(500);
  if (plain == 
-# 1989 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1990 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
              ((void *)0)
-# 1989 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1990 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                  )
   return 
-# 1990 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1991 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1990 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1991 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
 
  msg = wpabuf_alloc(1000);
  if (msg == 
-# 1993 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1994 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
            ((void *)0)
-# 1993 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1994 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                ) {
   wpabuf_free(plain);
   return 
-# 1995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1996 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1996 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
 
@@ -7240,17 +7277,17 @@ static struct wpabuf * wps_build_m8(struct wps_data *wps)
      wps_build_key_wrap_auth(wps, plain) ||
      wps_build_encr_settings(wps, msg, plain) ||
      wps_build_wfa_ext(msg, 0, 
-# 2005 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2006 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                               ((void *)0)
-# 2005 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2006 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                   , 0) ||
      wps_build_authenticator(wps, msg)) {
   wpabuf_free(plain);
   wpabuf_free(msg);
   return 
-# 2009 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 2009 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
  wpabuf_free(plain);
@@ -7264,7 +7301,7 @@ struct wpabuf * wps_registrar_get_msg(struct wps_data *wps,
           enum wsc_op_code *op_code)
 {
  struct wpabuf *msg;
-# 2066 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2067 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  switch (wps->state) {
  case SEND_M2:
   if (wps_get_dev_password(wps) < 0)
@@ -7301,9 +7338,9 @@ struct wpabuf * wps_registrar_get_msg(struct wps_data *wps,
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Unsupported state %d for building " "a message" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->state); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Unsupported state %d for building " "a message" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->state); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Unsupported state %d for building " "a message" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->state); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Unsupported state %d for building " "a message" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->state); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Unsupported state %d for building " "a message" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->state); } } while(0); } while(0)
                               ;
   msg = 
-# 2101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
        ((void *)0)
-# 2101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
            ;
   break;
  }
@@ -7322,9 +7359,9 @@ struct wpabuf * wps_registrar_get_msg(struct wps_data *wps,
 static int wps_process_enrollee_nonce(struct wps_data *wps, const u8 *e_nonce)
 {
  if (e_nonce == 
-# 2118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                ((void *)0)
-# 2118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                    ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Enrollee Nonce received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Enrollee Nonce received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Enrollee Nonce received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Enrollee Nonce received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Enrollee Nonce received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7341,9 +7378,9 @@ static int wps_process_enrollee_nonce(struct wps_data *wps, const u8 *e_nonce)
 static int wps_process_registrar_nonce(struct wps_data *wps, const u8 *r_nonce)
 {
  if (r_nonce == 
-# 2133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2134 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                ((void *)0)
-# 2133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2134 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                    ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Registrar Nonce received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Registrar Nonce received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Registrar Nonce received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Registrar Nonce received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Registrar Nonce received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7361,9 +7398,9 @@ static int wps_process_registrar_nonce(struct wps_data *wps, const u8 *r_nonce)
 static int wps_process_uuid_e(struct wps_data *wps, const u8 *uuid_e)
 {
  if (uuid_e == 
-# 2149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2150 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
               ((void *)0)
-# 2149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2150 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                   ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No UUID-E received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No UUID-E received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No UUID-E received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No UUID-E received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No UUID-E received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7379,9 +7416,9 @@ static int wps_process_uuid_e(struct wps_data *wps, const u8 *uuid_e)
 static int wps_process_dev_password_id(struct wps_data *wps, const u8 *pw_id)
 {
  if (pw_id == 
-# 2163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
              ((void *)0)
-# 2163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                  ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Device Password ID received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Device Password ID received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Device Password ID received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Device Password ID received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Device Password ID received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7397,9 +7434,9 @@ static int wps_process_dev_password_id(struct wps_data *wps, const u8 *pw_id)
 static int wps_process_e_hash1(struct wps_data *wps, const u8 *e_hash1)
 {
  if (e_hash1 == 
-# 2177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                ((void *)0)
-# 2177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                    ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No E-Hash1 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No E-Hash1 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No E-Hash1 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No E-Hash1 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No E-Hash1 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7415,9 +7452,9 @@ static int wps_process_e_hash1(struct wps_data *wps, const u8 *e_hash1)
 static int wps_process_e_hash2(struct wps_data *wps, const u8 *e_hash2)
 {
  if (e_hash2 == 
-# 2191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                ((void *)0)
-# 2191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                    ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No E-Hash2 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No E-Hash2 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No E-Hash2 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No E-Hash2 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No E-Hash2 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7437,9 +7474,9 @@ static int wps_process_e_snonce1(struct wps_data *wps, const u8 *e_snonce1)
  size_t len[4];
 
  if (e_snonce1 == 
-# 2209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                  ((void *)0)
-# 2209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                      ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No E-SNonce1 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No E-SNonce1 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No E-SNonce1 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No E-SNonce1 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No E-SNonce1 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7485,9 +7522,9 @@ static int wps_process_e_snonce2(struct wps_data *wps, const u8 *e_snonce2)
  size_t len[4];
 
  if (e_snonce2 == 
-# 2253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                  ((void *)0)
-# 2253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                      ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No E-SNonce2 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No E-SNonce2 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No E-SNonce2 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No E-SNonce2 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No E-SNonce2 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7543,9 +7580,9 @@ static int wps_process_e_snonce2(struct wps_data *wps, const u8 *e_snonce2)
 static int wps_process_mac_addr(struct wps_data *wps, const u8 *mac_addr)
 {
  if (mac_addr == 
-# 2307 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                 ((void *)0)
-# 2307 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                     ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No MAC Address received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No MAC Address received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No MAC Address received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No MAC Address received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No MAC Address received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7564,9 +7601,9 @@ static int wps_process_pubkey(struct wps_data *wps, const u8 *pk,
          size_t pk_len)
 {
  if (pk == 
-# 2324 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
           ((void *)0) 
-# 2324 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                || pk_len == 0) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Public Key received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Public Key received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Public Key received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Public Key received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Public Key received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7575,9 +7612,9 @@ static int wps_process_pubkey(struct wps_data *wps, const u8 *pk,
  wpabuf_free(wps->dh_pubkey_e);
  wps->dh_pubkey_e = wpabuf_alloc_copy(pk, pk_len);
  if (wps->dh_pubkey_e == 
-# 2331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                         ((void *)0)
-# 2331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                             )
   return -1;
 
@@ -7590,9 +7627,9 @@ static int wps_process_auth_type_flags(struct wps_data *wps, const u8 *auth)
  u16 auth_types;
 
  if (auth == 
-# 2342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
             ((void *)0)
-# 2342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                 ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Authentication Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Authentication Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Authentication Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Authentication Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Authentication Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                  ;
@@ -7608,7 +7645,7 @@ static int wps_process_auth_type_flags(struct wps_data *wps, const u8 *auth)
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No match in supported " "authentication types (own 0x%x Enrollee 0x%x)" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->wps->auth_types, auth_types); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No match in supported " "authentication types (own 0x%x Enrollee 0x%x)" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->wps->auth_types, auth_types); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No match in supported " "authentication types (own 0x%x Enrollee 0x%x)" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->wps->auth_types, auth_types); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No match in supported " "authentication types (own 0x%x Enrollee 0x%x)" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->wps->auth_types, auth_types); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No match in supported " "authentication types (own 0x%x Enrollee 0x%x)" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->wps->auth_types, auth_types); } } while(0); } while(0)
 
                                        ;
-# 2370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2371 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
   return -1;
 
  }
@@ -7622,9 +7659,9 @@ static int wps_process_encr_type_flags(struct wps_data *wps, const u8 *encr)
  u16 encr_types;
 
  if (encr == 
-# 2382 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
             ((void *)0)
-# 2382 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                 ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Encryption Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Encryption Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Encryption Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Encryption Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Encryption Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                  ;
@@ -7640,7 +7677,7 @@ static int wps_process_encr_type_flags(struct wps_data *wps, const u8 *encr)
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No match in supported " "encryption types (own 0x%x Enrollee 0x%x)" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->wps->encr_types, encr_types); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No match in supported " "encryption types (own 0x%x Enrollee 0x%x)" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->wps->encr_types, encr_types); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No match in supported " "encryption types (own 0x%x Enrollee 0x%x)" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->wps->encr_types, encr_types); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No match in supported " "encryption types (own 0x%x Enrollee 0x%x)" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->wps->encr_types, encr_types); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No match in supported " "encryption types (own 0x%x Enrollee 0x%x)" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->wps->encr_types, encr_types); } } while(0); } while(0)
 
                                        ;
-# 2410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2411 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
   return -1;
 
  }
@@ -7652,9 +7689,9 @@ static int wps_process_encr_type_flags(struct wps_data *wps, const u8 *encr)
 static int wps_process_conn_type_flags(struct wps_data *wps, const u8 *conn)
 {
  if (conn == 
-# 2420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2421 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
             ((void *)0)
-# 2420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2421 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                 ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Connection Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Connection Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Connection Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Connection Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Connection Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                  ;
@@ -7673,9 +7710,9 @@ static int wps_process_config_methods(struct wps_data *wps, const u8 *methods)
  u16 m;
 
  if (methods == 
-# 2437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                ((void *)0)
-# 2437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                    ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Config Methods received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Config Methods received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Config Methods received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Config Methods received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Config Methods received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7684,7 +7721,7 @@ static int wps_process_config_methods(struct wps_data *wps, const u8 *methods)
  m = ((u16) (((methods)[0] << 8) | (methods)[1]));
 
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Enrollee Config Methods 0x%x" "%s%s%s%s%s%s%s%s%s" "\033[0m" "\n", esp_log_timestamp(), "wpa", m, m & 0x0001 ? " [USBA]" : "", m & 0x0002 ? " [Ethernet]" : "", m & 0x0004 ? " [Label]" : "", m & 0x0008 ? " [Display]" : "", m & 0x0010 ? " [Ext NFC Token]" : "", m & 0x0020 ? " [Int NFC Token]" : "", m & 0x0040 ? " [NFC]" : "", m & 0x0080 ? " [PBC]" : "", m & 0x0100 ? " [Keypad]" : ""); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Enrollee Config Methods 0x%x" "%s%s%s%s%s%s%s%s%s" "\033[0m" "\n", esp_log_timestamp(), "wpa", m, m & 0x0001 ? " [USBA]" : "", m & 0x0002 ? " [Ethernet]" : "", m & 0x0004 ? " [Label]" : "", m & 0x0008 ? " [Display]" : "", m & 0x0010 ? " [Ext NFC Token]" : "", m & 0x0020 ? " [Int NFC Token]" : "", m & 0x0040 ? " [NFC]" : "", m & 0x0080 ? " [PBC]" : "", m & 0x0100 ? " [Keypad]" : ""); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Enrollee Config Methods 0x%x" "%s%s%s%s%s%s%s%s%s" "\033[0m" "\n", esp_log_timestamp(), "wpa", m, m & 0x0001 ? " [USBA]" : "", m & 0x0002 ? " [Ethernet]" : "", m & 0x0004 ? " [Label]" : "", m & 0x0008 ? " [Display]" : "", m & 0x0010 ? " [Ext NFC Token]" : "", m & 0x0020 ? " [Int NFC Token]" : "", m & 0x0040 ? " [NFC]" : "", m & 0x0080 ? " [PBC]" : "", m & 0x0100 ? " [Keypad]" : ""); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Enrollee Config Methods 0x%x" "%s%s%s%s%s%s%s%s%s" "\033[0m" "\n", esp_log_timestamp(), "wpa", m, m & 0x0001 ? " [USBA]" : "", m & 0x0002 ? " [Ethernet]" : "", m & 0x0004 ? " [Label]" : "", m & 0x0008 ? " [Display]" : "", m & 0x0010 ? " [Ext NFC Token]" : "", m & 0x0020 ? " [Int NFC Token]" : "", m & 0x0040 ? " [NFC]" : "", m & 0x0080 ? " [PBC]" : "", m & 0x0100 ? " [Keypad]" : ""); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Enrollee Config Methods 0x%x" "%s%s%s%s%s%s%s%s%s" "\033[0m" "\n", esp_log_timestamp(), "wpa", m, m & 0x0001 ? " [USBA]" : "", m & 0x0002 ? " [Ethernet]" : "", m & 0x0004 ? " [Label]" : "", m & 0x0008 ? " [Display]" : "", m & 0x0010 ? " [Ext NFC Token]" : "", m & 0x0020 ? " [Int NFC Token]" : "", m & 0x0040 ? " [NFC]" : "", m & 0x0080 ? " [PBC]" : "", m & 0x0100 ? " [Keypad]" : ""); } } while(0); } while(0)
-# 2454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2455 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                               ;
 
  if (!(m & 0x0008) && !wps->use_psk_key) {
@@ -7705,9 +7742,9 @@ static int wps_process_config_methods(struct wps_data *wps, const u8 *methods)
 static int wps_process_wps_state(struct wps_data *wps, const u8 *state)
 {
  if (state == 
-# 2473 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
              ((void *)0)
-# 2473 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                  ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Wi-Fi Protected Setup State " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Wi-Fi Protected Setup State " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Wi-Fi Protected Setup State " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Wi-Fi Protected Setup State " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Wi-Fi Protected Setup State " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                  ;
@@ -7726,9 +7763,9 @@ static int wps_process_assoc_state(struct wps_data *wps, const u8 *assoc)
  u16 a;
 
  if (assoc == 
-# 2490 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2491 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
              ((void *)0)
-# 2490 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2491 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                  ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Association State received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Association State received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Association State received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Association State received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Association State received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7746,9 +7783,9 @@ static int wps_process_config_error(struct wps_data *wps, const u8 *err)
  u16 e;
 
  if (err == 
-# 2506 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2507 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
            ((void *)0)
-# 2506 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2507 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Configuration Error received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Configuration Error received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Configuration Error received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Configuration Error received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Configuration Error received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7763,14 +7800,14 @@ static int wps_process_config_error(struct wps_data *wps, const u8 *err)
 
 static int wps_registrar_p2p_dev_addr_match(struct wps_data *wps)
 {
-# 2535 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2536 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  return 1;
 }
 
 
 static int wps_registrar_skip_overlap(struct wps_data *wps)
 {
-# 2553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2554 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  return 0;
 }
 
@@ -7815,7 +7852,7 @@ static enum wps_process_res wps_process_m1(struct wps_data *wps,
   wps->state = SEND_M2D;
   return WPS_CONTINUE;
  }
-# 2629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  if (wps->dev_pw_id == DEV_PW_PUSHBUTTON) {
   if ((wps->wps->registrar->force_pbc_overlap ||
        wps_registrar_pbc_overlap(wps->wps->registrar,
@@ -7837,7 +7874,7 @@ static enum wps_process_res wps_process_m1(struct wps_data *wps,
            wps->mac_addr_e, wps->uuid_e);
   wps->pbc = 1;
  }
-# 2668 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2669 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  wps->state = SEND_M2;
  return WPS_CONTINUE;
 }
@@ -7912,9 +7949,9 @@ static enum wps_process_res wps_process_m5(struct wps_data *wps,
  decrypted = wps_decrypt_encr_settings(wps, attr->encr_settings,
            attr->encr_settings_len);
  if (decrypted == 
-# 2741 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2742 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                  ((void *)0)
-# 2741 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2742 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                      ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Failed to decrypted Encrypted " "Settings attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Failed to decrypted Encrypted " "Settings attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Failed to decrypted Encrypted " "Settings attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Failed to decrypted Encrypted " "Settings attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Failed to decrypted Encrypted " "Settings attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                            ;
@@ -7923,9 +7960,9 @@ static enum wps_process_res wps_process_m5(struct wps_data *wps,
  }
 
  if (wps_validate_m5_encr(decrypted, attr->version2 != 
-# 2748 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2749 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                                                       ((void *)0)
-# 2748 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2749 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                                           ) < 0) {
   wpabuf_free(decrypted);
   wps->state = SEND_WSC_NACK;
@@ -8003,14 +8040,14 @@ static int wps_process_ap_settings_r(struct wps_data *wps,
   wps_cred_update(&wps->cred, wps->new_ap_settings);
   return 0;
  } else {
-# 2835 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2836 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
   wps_registrar_pin_completed(wps->wps->registrar);
 
   msg = wps_build_ap_cred(wps);
   if (msg == 
-# 2838 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
             ((void *)0)
-# 2838 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                 )
    return -1;
   wps->cred.cred_attr = wpabuf_head(msg);
@@ -8025,9 +8062,9 @@ static int wps_process_ap_settings_r(struct wps_data *wps,
   wps_sta_cred_cb(wps);
 
   wps->cred.cred_attr = 
-# 2851 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2852 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                        ((void *)0)
-# 2851 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2852 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                            ;
   wps->cred.cred_attr_len = 0;
   wpabuf_free(msg);
@@ -8071,9 +8108,9 @@ static enum wps_process_res wps_process_m7(struct wps_data *wps,
  decrypted = wps_decrypt_encr_settings(wps, attr->encr_settings,
            attr->encr_settings_len);
  if (decrypted == 
-# 2893 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2894 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                  ((void *)0)
-# 2893 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2894 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                      ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Failed to decrypt Encrypted " "Settings attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Failed to decrypt Encrypted " "Settings attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Failed to decrypt Encrypted " "Settings attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Failed to decrypt Encrypted " "Settings attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Failed to decrypt Encrypted " "Settings attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                            ;
@@ -8083,9 +8120,9 @@ static enum wps_process_res wps_process_m7(struct wps_data *wps,
 
  if (wps_validate_m7_encr(decrypted, wps->wps->ap || wps->er,
      attr->version2 != 
-# 2901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2902 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                       ((void *)0)
-# 2901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2902 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                           ) < 0) {
   wpabuf_free(decrypted);
   wps->state = SEND_WSC_NACK;
@@ -8122,9 +8159,9 @@ static enum wps_process_res wps_process_wsc_msg(struct wps_data *wps,
   return WPS_FAILURE;
 
  if (attr.msg_type == 
-# 2936 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                      ((void *)0)
-# 2936 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                          ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   wps->state = SEND_WSC_NACK;
@@ -8133,9 +8170,9 @@ static enum wps_process_res wps_process_wsc_msg(struct wps_data *wps,
 
  if (*attr.msg_type != WPS_M1 &&
      (attr.registrar_nonce == 
-# 2943 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2944 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                              ((void *)0) 
-# 2943 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2944 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                   ||
       memcmp((wps->nonce_r), (attr.registrar_nonce), (16))
                         != 0)) {
@@ -8147,7 +8184,7 @@ static enum wps_process_res wps_process_wsc_msg(struct wps_data *wps,
  case WPS_M1:
   if (wps_validate_m1(msg) < 0)
    return WPS_FAILURE;
-# 2965 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2966 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
   ret = wps_process_m1(wps, &attr);
   break;
  case WPS_M3:
@@ -8202,9 +8239,9 @@ static enum wps_process_res wps_process_wsc_ack(struct wps_data *wps,
   return WPS_FAILURE;
 
  if (attr.msg_type == 
-# 3018 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3019 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                      ((void *)0)
-# 3018 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3019 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                          ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return WPS_FAILURE;
@@ -8215,11 +8252,11 @@ static enum wps_process_res wps_process_wsc_ack(struct wps_data *wps,
                      ;
   return WPS_FAILURE;
  }
-# 3040 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3041 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  if (attr.registrar_nonce == 
-# 3040 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3041 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                             ((void *)0) 
-# 3040 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3041 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                  ||
      memcmp((wps->nonce_r), (attr.registrar_nonce), (16)) != 0)
  {
@@ -8228,9 +8265,9 @@ static enum wps_process_res wps_process_wsc_ack(struct wps_data *wps,
  }
 
  if (attr.enrollee_nonce == 
-# 3047 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3048 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                            ((void *)0) 
-# 3047 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3048 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                 ||
      memcmp((wps->nonce_e), (attr.enrollee_nonce), (16)) != 0) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
@@ -8238,7 +8275,7 @@ static enum wps_process_res wps_process_wsc_ack(struct wps_data *wps,
  }
 
  if (wps->state == RECV_M2D_ACK) {
-# 3067 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3068 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No more registrars available - " "terminate negotiation" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No more registrars available - " "terminate negotiation" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No more registrars available - " "terminate negotiation" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No more registrars available - " "terminate negotiation" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No more registrars available - " "terminate negotiation" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                               ;
  }
@@ -8263,9 +8300,9 @@ static enum wps_process_res wps_process_wsc_nack(struct wps_data *wps,
   return WPS_FAILURE;
 
  if (attr.msg_type == 
-# 3090 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3091 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                      ((void *)0)
-# 3090 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3091 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                          ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return WPS_FAILURE;
@@ -8276,11 +8313,11 @@ static enum wps_process_res wps_process_wsc_nack(struct wps_data *wps,
                      ;
   return WPS_FAILURE;
  }
-# 3109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  if (attr.registrar_nonce == 
-# 3109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                             ((void *)0) 
-# 3109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                  ||
      memcmp((wps->nonce_r), (attr.registrar_nonce), (16)) != 0)
  {
@@ -8289,9 +8326,9 @@ static enum wps_process_res wps_process_wsc_nack(struct wps_data *wps,
  }
 
  if (attr.enrollee_nonce == 
-# 3116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3117 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                            ((void *)0) 
-# 3116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3117 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                 ||
      memcmp((wps->nonce_e), (attr.enrollee_nonce), (16)) != 0) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
@@ -8299,9 +8336,9 @@ static enum wps_process_res wps_process_wsc_nack(struct wps_data *wps,
  }
 
  if (attr.config_error == 
-# 3122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                          ((void *)0)
-# 3122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                              ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Configuration Error attribute " "in WSC_NACK" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Configuration Error attribute " "in WSC_NACK" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Configuration Error attribute " "in WSC_NACK" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Configuration Error attribute " "in WSC_NACK" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Configuration Error attribute " "in WSC_NACK" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                     ;
@@ -8356,9 +8393,9 @@ static enum wps_process_res wps_process_wsc_done(struct wps_data *wps,
   return WPS_FAILURE;
 
  if (attr.msg_type == 
-# 3175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3176 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                      ((void *)0)
-# 3175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3176 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                          ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return WPS_FAILURE;
@@ -8369,11 +8406,11 @@ static enum wps_process_res wps_process_wsc_done(struct wps_data *wps,
                      ;
   return WPS_FAILURE;
  }
-# 3196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  if (attr.registrar_nonce == 
-# 3196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                             ((void *)0) 
-# 3196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                  ||
      memcmp((wps->nonce_r), (attr.registrar_nonce), (16)) != 0)
  {
@@ -8382,9 +8419,9 @@ static enum wps_process_res wps_process_wsc_done(struct wps_data *wps,
  }
 
  if (attr.enrollee_nonce == 
-# 3203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                            ((void *)0) 
-# 3203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                 ||
      memcmp((wps->nonce_e), (attr.enrollee_nonce), (16)) != 0) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
@@ -8419,9 +8456,9 @@ static enum wps_process_res wps_process_wsc_done(struct wps_data *wps,
 
   free((wps->new_psk));
   wps->new_psk = 
-# 3236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                 ((void *)0)
-# 3236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                     ;
  }
 
@@ -8436,9 +8473,9 @@ static enum wps_process_res wps_process_wsc_done(struct wps_data *wps,
   }
   free((wps->new_psk));
   wps->new_psk = 
-# 3249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3250 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                 ((void *)0)
-# 3249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3250 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                     ;
  }
 
@@ -8476,7 +8513,7 @@ enum wps_process_res wps_registrar_process_msg(struct wps_data *wps,
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Processing received message (len=%lu " "op_code=%d)" "\033[0m" "\n", esp_log_timestamp(), "wpa", (unsigned long) wpabuf_len(msg), op_code); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Processing received message (len=%lu " "op_code=%d)" "\033[0m" "\n", esp_log_timestamp(), "wpa", (unsigned long) wpabuf_len(msg), op_code); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Processing received message (len=%lu " "op_code=%d)" "\033[0m" "\n", esp_log_timestamp(), "wpa", (unsigned long) wpabuf_len(msg), op_code); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Processing received message (len=%lu " "op_code=%d)" "\033[0m" "\n", esp_log_timestamp(), "wpa", (unsigned long) wpabuf_len(msg), op_code); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Processing received message (len=%lu " "op_code=%d)" "\033[0m" "\n", esp_log_timestamp(), "wpa", (unsigned long) wpabuf_len(msg), op_code); } } while(0); } while(0)
 
                                               ;
-# 3321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3322 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  switch (op_code) {
  case WSC_MSG:
   return wps_process_wsc_msg(wps, msg);
@@ -8510,12 +8547,12 @@ int wps_registrar_update_ie(struct wps_registrar *reg)
 {
  return wps_set_ie(reg);
 }
-# 3405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 static void wps_registrar_sel_reg_union(struct wps_registrar *reg)
 {
-# 3429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3430 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 }
-# 3439 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3440 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 void wps_registrar_selected_registrar_changed(struct wps_registrar *reg)
 {
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Selected registrar information changed" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Selected registrar information changed" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Selected registrar information changed" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Selected registrar information changed" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Selected registrar information changed" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
@@ -8566,9 +8603,9 @@ int wps_registrar_get_info(struct wps_registrar *reg, const u8 *addr,
 
  d = wps_device_get(reg, addr);
  if (d == 
-# 3488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3489 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
          ((void *)0)
-# 3488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3489 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
              )
   return 0;
  if (uuid_bin2str(d->uuid, uuid, sizeof(uuid)))

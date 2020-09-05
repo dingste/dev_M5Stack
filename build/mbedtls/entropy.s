@@ -4499,22 +4499,22 @@ mbedtls_entropy_self_test:
 	.4byte	.LASF177
 	.4byte	.LASF177
 	.byte	0xc
-	.byte	0xde
+	.byte	0xf5
 	.uleb128 0x51
 	.4byte	.LASF178
 	.4byte	.LASF178
 	.byte	0xc
-	.byte	0x72
+	.byte	0x7c
 	.uleb128 0x51
 	.4byte	.LASF179
 	.4byte	.LASF179
 	.byte	0xc
-	.byte	0x66
+	.byte	0x6d
 	.uleb128 0x51
 	.4byte	.LASF180
 	.4byte	.LASF180
 	.byte	0xd
-	.byte	0x42
+	.byte	0x9f
 	.uleb128 0x51
 	.4byte	.LASF181
 	.4byte	.LASF181
@@ -4527,17 +4527,17 @@ mbedtls_entropy_self_test:
 	.4byte	.LASF182
 	.4byte	.LASF182
 	.byte	0xc
-	.byte	0x4a
+	.byte	0x4d
 	.uleb128 0x51
 	.4byte	.LASF183
 	.4byte	.LASF183
 	.byte	0xc
-	.byte	0x51
+	.byte	0x57
 	.uleb128 0x51
 	.4byte	.LASF184
 	.4byte	.LASF184
 	.byte	0xc
-	.byte	0x80
+	.byte	0x8d
 	.uleb128 0x52
 	.4byte	.LASF185
 	.4byte	.LASF185

@@ -5,7 +5,7 @@
 	.align	4
 	.type	spiffs_gc_erase_block, @function
 spiffs_gc_erase_block:
-.LFB17:
+.LFB26:
 	.file 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/spiffs/spiffs_gc.c"
 	.loc 1 11 0
 .LVL0:
@@ -48,7 +48,7 @@ spiffs_gc_erase_block:
 	mov.n	a2, a5
 .LVL7:
 	retw.n
-.LFE17:
+.LFE26:
 	.size	spiffs_gc_erase_block, .-spiffs_gc_erase_block
 	.section	.text.spiffs_gc_quick,"ax",@progbits
 	.literal_position
@@ -58,7 +58,7 @@ spiffs_gc_erase_block:
 	.global	spiffs_gc_quick
 	.type	spiffs_gc_quick, @function
 spiffs_gc_quick:
-.LFB18:
+.LFB27:
 	.loc 1 33 0
 .LVL8:
 	entry	sp, 64
@@ -274,7 +274,7 @@ spiffs_gc_quick:
 	mov.n	a2, a10
 .LVL42:
 	retw.n
-.LFE18:
+.LFE27:
 	.size	spiffs_gc_quick, .-spiffs_gc_quick
 	.section	.text.spiffs_gc_erase_page_stats,"ax",@progbits
 	.literal_position
@@ -283,7 +283,7 @@ spiffs_gc_quick:
 	.global	spiffs_gc_erase_page_stats
 	.type	spiffs_gc_erase_page_stats, @function
 spiffs_gc_erase_page_stats:
-.LFB20:
+.LFB29:
 	.loc 1 201 0
 .LVL43:
 	entry	sp, 48
@@ -417,7 +417,7 @@ spiffs_gc_erase_page_stats:
 	mov.n	a2, a10
 .LVL60:
 	retw.n
-.LFE20:
+.LFE29:
 	.size	spiffs_gc_erase_page_stats, .-spiffs_gc_erase_page_stats
 	.section	.text.spiffs_gc_find_candidate,"ax",@progbits
 	.literal_position
@@ -427,7 +427,7 @@ spiffs_gc_erase_page_stats:
 	.global	spiffs_gc_find_candidate
 	.type	spiffs_gc_find_candidate, @function
 spiffs_gc_find_candidate:
-.LFB21:
+.LFB30:
 	.loc 1 240 0
 .LVL61:
 	entry	sp, 112
@@ -802,7 +802,7 @@ spiffs_gc_find_candidate:
 	mov.n	a2, a10
 .LVL111:
 	retw.n
-.LFE21:
+.LFE30:
 	.size	spiffs_gc_find_candidate, .-spiffs_gc_find_candidate
 	.section	.text.spiffs_gc_clean,"ax",@progbits
 	.literal_position
@@ -818,7 +818,7 @@ spiffs_gc_find_candidate:
 	.global	spiffs_gc_clean
 	.type	spiffs_gc_clean, @function
 spiffs_gc_clean:
-.LFB22:
+.LFB31:
 	.loc 1 377 0
 .LVL112:
 	entry	sp, 112
@@ -1557,7 +1557,7 @@ spiffs_gc_clean:
 .L106:
 	.loc 1 604 0
 	retw.n
-.LFE22:
+.LFE31:
 	.size	spiffs_gc_clean, .-spiffs_gc_clean
 	.section	.text.spiffs_gc_check,"ax",@progbits
 	.literal_position
@@ -1566,7 +1566,7 @@ spiffs_gc_clean:
 	.global	spiffs_gc_check
 	.type	spiffs_gc_check, @function
 spiffs_gc_check:
-.LFB19:
+.LFB28:
 	.loc 1 111 0
 .LVL212:
 	entry	sp, 64
@@ -1748,7 +1748,7 @@ spiffs_gc_check:
 	.loc 1 196 0
 	mov.n	a2, a10
 	retw.n
-.LFE19:
+.LFE28:
 	.size	spiffs_gc_check, .-spiffs_gc_check
 	.comm	spiffs_mutex,4,4
 	.section	.debug_frame,"",@progbits
@@ -1770,10 +1770,10 @@ spiffs_gc_check:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.byte	0x4
-	.4byte	.LCFI0-.LFB17
+	.4byte	.LCFI0-.LFB26
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1782,10 +1782,10 @@ spiffs_gc_check:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI1-.LFB18
+	.4byte	.LCFI1-.LFB27
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -1794,10 +1794,10 @@ spiffs_gc_check:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI2-.LFB20
+	.4byte	.LCFI2-.LFB29
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1806,10 +1806,10 @@ spiffs_gc_check:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI3-.LFB21
+	.4byte	.LCFI3-.LFB30
 	.byte	0xe
 	.uleb128 0x70
 	.align	4
@@ -1818,10 +1818,10 @@ spiffs_gc_check:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI4-.LFB22
+	.4byte	.LCFI4-.LFB31
 	.byte	0xe
 	.uleb128 0x70
 	.align	4
@@ -1830,10 +1830,10 @@ spiffs_gc_check:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI5-.LFB19
+	.4byte	.LCFI5-.LFB28
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -2540,8 +2540,8 @@ spiffs_gc_check:
 	.byte	0x1
 	.byte	0x9
 	.4byte	0xa3
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x626
@@ -2608,8 +2608,8 @@ spiffs_gc_check:
 	.byte	0x1
 	.byte	0x20
 	.4byte	0xa3
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x762
@@ -2757,8 +2757,8 @@ spiffs_gc_check:
 	.byte	0x1
 	.byte	0xc7
 	.4byte	0xa3
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x852
@@ -2863,8 +2863,8 @@ spiffs_gc_check:
 	.byte	0x1
 	.byte	0xec
 	.4byte	0xa3
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xa66
@@ -3118,8 +3118,8 @@ spiffs_gc_check:
 	.byte	0x1
 	.2byte	0x179
 	.4byte	0xa3
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xedf
@@ -3819,8 +3819,8 @@ spiffs_gc_check:
 	.byte	0x1
 	.byte	0x6d
 	.4byte	0xa3
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1015
@@ -4730,7 +4730,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL7
-	.4byte	.LFE17
+	.4byte	.LFE26
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4751,7 +4751,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL42
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4765,7 +4765,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL10
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -56
@@ -4923,7 +4923,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL15
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -52
@@ -4935,7 +4935,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL15
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -60
@@ -5022,7 +5022,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL60
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5036,7 +5036,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL45
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -44
@@ -5066,7 +5066,7 @@ spiffs_gc_check:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL47
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -5078,7 +5078,7 @@ spiffs_gc_check:
 	.byte	0x72
 	.sleb128 52
 	.4byte	.LVL47
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -48
@@ -5091,7 +5091,7 @@ spiffs_gc_check:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL47
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -5143,7 +5143,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL111
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5157,7 +5157,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL71
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5171,7 +5171,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL76
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5280,7 +5280,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL109
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -76
@@ -5292,7 +5292,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL68-1
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -56
@@ -5327,7 +5327,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL69
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -96
@@ -5343,7 +5343,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x59
 	.4byte	.LVL76
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -84
@@ -5390,7 +5390,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL75
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -80
@@ -5524,7 +5524,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL114
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -5535,7 +5535,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL116
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -60
@@ -5713,7 +5713,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL117
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -56
@@ -5769,7 +5769,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL121
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -44
@@ -5805,7 +5805,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL122
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -64
@@ -5906,7 +5906,7 @@ spiffs_gc_check:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL234
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6094,18 +6094,18 @@ spiffs_gc_check:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -6134,18 +6134,18 @@ spiffs_gc_check:
 	.4byte	.LBE22
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB17
-	.4byte	.LFE17
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB19
-	.4byte	.LFE19
+	.4byte	.LFB26
+	.4byte	.LFE26
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB31
+	.4byte	.LFE31
+	.4byte	.LFB28
+	.4byte	.LFE28
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

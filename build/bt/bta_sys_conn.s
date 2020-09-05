@@ -8,7 +8,7 @@
 	.global	bta_sys_rm_register
 	.type	bta_sys_rm_register, @function
 bta_sys_rm_register:
-.LFB30:
+.LFB39:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/bta/sys/bta_sys_conn.c"
 	.loc 1 42 0
 .LVL0:
@@ -19,7 +19,7 @@ bta_sys_rm_register:
 	l32i.n	a8, a8, 0
 	s32i	a2, a8, 248
 	retw.n
-.LFE30:
+.LFE39:
 	.size	bta_sys_rm_register, .-bta_sys_rm_register
 	.section	.text.bta_sys_policy_register,"ax",@progbits
 	.literal_position
@@ -28,7 +28,7 @@ bta_sys_rm_register:
 	.global	bta_sys_policy_register
 	.type	bta_sys_policy_register, @function
 bta_sys_policy_register:
-.LFB31:
+.LFB40:
 	.loc 1 58 0
 .LVL1:
 	entry	sp, 32
@@ -38,7 +38,7 @@ bta_sys_policy_register:
 	l32i.n	a8, a8, 0
 	s32i	a2, a8, 256
 	retw.n
-.LFE31:
+.LFE40:
 	.size	bta_sys_policy_register, .-bta_sys_policy_register
 	.section	.text.bta_sys_role_chg_register,"ax",@progbits
 	.literal_position
@@ -47,7 +47,7 @@ bta_sys_policy_register:
 	.global	bta_sys_role_chg_register
 	.type	bta_sys_role_chg_register, @function
 bta_sys_role_chg_register:
-.LFB32:
+.LFB41:
 	.loc 1 73 0
 .LVL2:
 	entry	sp, 32
@@ -57,7 +57,7 @@ bta_sys_role_chg_register:
 	l32i.n	a8, a8, 0
 	s32i	a2, a8, 264
 	retw.n
-.LFE32:
+.LFE41:
 	.size	bta_sys_role_chg_register, .-bta_sys_role_chg_register
 	.section	.text.bta_sys_notify_role_chg,"ax",@progbits
 	.literal_position
@@ -66,7 +66,7 @@ bta_sys_role_chg_register:
 	.global	bta_sys_notify_role_chg
 	.type	bta_sys_notify_role_chg, @function
 bta_sys_notify_role_chg:
-.LFB33:
+.LFB42:
 	.loc 1 103 0
 .LVL3:
 	entry	sp, 32
@@ -91,7 +91,7 @@ bta_sys_notify_role_chg:
 .LVL4:
 .L4:
 	retw.n
-.LFE33:
+.LFE42:
 	.size	bta_sys_notify_role_chg, .-bta_sys_notify_role_chg
 	.section	.text.bta_sys_collision_register,"ax",@progbits
 	.literal_position
@@ -100,7 +100,7 @@ bta_sys_notify_role_chg:
 	.global	bta_sys_collision_register
 	.type	bta_sys_collision_register, @function
 bta_sys_collision_register:
-.LFB34:
+.LFB43:
 	.loc 1 120 0
 .LVL5:
 	entry	sp, 32
@@ -148,7 +148,7 @@ bta_sys_collision_register:
 	addi.n	a10, a10, 1
 	.L13_LEND:
 	retw.n
-.LFE34:
+.LFE43:
 	.size	bta_sys_collision_register, .-bta_sys_collision_register
 	.section	.text.bta_sys_notify_collision,"ax",@progbits
 	.literal_position
@@ -157,7 +157,7 @@ bta_sys_collision_register:
 	.global	bta_sys_notify_collision
 	.type	bta_sys_notify_collision, @function
 bta_sys_notify_collision:
-.LFB35:
+.LFB44:
 	.loc 1 144 0
 .LVL11:
 	entry	sp, 32
@@ -194,7 +194,7 @@ bta_sys_notify_collision:
 	bnei	a3, 5, .L18
 	.loc 1 153 0
 	retw.n
-.LFE35:
+.LFE44:
 	.size	bta_sys_notify_collision, .-bta_sys_notify_collision
 	.section	.text.bta_sys_sco_register,"ax",@progbits
 	.literal_position
@@ -203,7 +203,7 @@ bta_sys_notify_collision:
 	.global	bta_sys_sco_register
 	.type	bta_sys_sco_register, @function
 bta_sys_sco_register:
-.LFB36:
+.LFB45:
 	.loc 1 166 0
 .LVL16:
 	entry	sp, 32
@@ -213,7 +213,7 @@ bta_sys_sco_register:
 	l32i.n	a8, a8, 0
 	s32i	a2, a8, 260
 	retw.n
-.LFE36:
+.LFE45:
 	.size	bta_sys_sco_register, .-bta_sys_sco_register
 	.section	.text.bta_sys_pm_register,"ax",@progbits
 	.literal_position
@@ -222,7 +222,7 @@ bta_sys_sco_register:
 	.global	bta_sys_pm_register
 	.type	bta_sys_pm_register, @function
 bta_sys_pm_register:
-.LFB37:
+.LFB46:
 	.loc 1 181 0
 .LVL17:
 	entry	sp, 32
@@ -232,7 +232,7 @@ bta_sys_pm_register:
 	l32i.n	a8, a8, 0
 	s32i	a2, a8, 252
 	retw.n
-.LFE37:
+.LFE46:
 	.size	bta_sys_pm_register, .-bta_sys_pm_register
 	.section	.text.bta_sys_conn_open,"ax",@progbits
 	.literal_position
@@ -241,7 +241,7 @@ bta_sys_pm_register:
 	.global	bta_sys_conn_open
 	.type	bta_sys_conn_open, @function
 bta_sys_conn_open:
-.LFB38:
+.LFB47:
 	.loc 1 197 0
 .LVL18:
 	entry	sp, 32
@@ -279,7 +279,7 @@ bta_sys_conn_open:
 .LVL20:
 .L28:
 	retw.n
-.LFE38:
+.LFE47:
 	.size	bta_sys_conn_open, .-bta_sys_conn_open
 	.section	.text.bta_sys_conn_close,"ax",@progbits
 	.literal_position
@@ -288,7 +288,7 @@ bta_sys_conn_open:
 	.global	bta_sys_conn_close
 	.type	bta_sys_conn_close, @function
 bta_sys_conn_close:
-.LFB39:
+.LFB48:
 	.loc 1 225 0
 .LVL21:
 	entry	sp, 32
@@ -326,7 +326,7 @@ bta_sys_conn_close:
 .LVL23:
 .L37:
 	retw.n
-.LFE39:
+.LFE48:
 	.size	bta_sys_conn_close, .-bta_sys_conn_close
 	.section	.text.bta_sys_app_open,"ax",@progbits
 	.literal_position
@@ -335,7 +335,7 @@ bta_sys_conn_close:
 	.global	bta_sys_app_open
 	.type	bta_sys_app_open, @function
 bta_sys_app_open:
-.LFB40:
+.LFB49:
 	.loc 1 252 0
 .LVL24:
 	entry	sp, 32
@@ -360,7 +360,7 @@ bta_sys_app_open:
 .LVL25:
 .L46:
 	retw.n
-.LFE40:
+.LFE49:
 	.size	bta_sys_app_open, .-bta_sys_app_open
 	.section	.text.bta_sys_app_close,"ax",@progbits
 	.literal_position
@@ -369,7 +369,7 @@ bta_sys_app_open:
 	.global	bta_sys_app_close
 	.type	bta_sys_app_close, @function
 bta_sys_app_close:
-.LFB41:
+.LFB50:
 	.loc 1 271 0
 .LVL26:
 	entry	sp, 32
@@ -394,7 +394,7 @@ bta_sys_app_close:
 .LVL27:
 .L51:
 	retw.n
-.LFE41:
+.LFE50:
 	.size	bta_sys_app_close, .-bta_sys_app_close
 	.section	.text.bta_sys_sco_open,"ax",@progbits
 	.literal_position
@@ -403,7 +403,7 @@ bta_sys_app_close:
 	.global	bta_sys_sco_open
 	.type	bta_sys_sco_open, @function
 bta_sys_sco_open:
-.LFB42:
+.LFB51:
 	.loc 1 289 0
 .LVL28:
 	entry	sp, 32
@@ -439,7 +439,7 @@ bta_sys_sco_open:
 .LVL30:
 .L56:
 	retw.n
-.LFE42:
+.LFE51:
 	.size	bta_sys_sco_open, .-bta_sys_sco_open
 	.section	.text.bta_sys_sco_close,"ax",@progbits
 	.literal_position
@@ -448,7 +448,7 @@ bta_sys_sco_open:
 	.global	bta_sys_sco_close
 	.type	bta_sys_sco_close, @function
 bta_sys_sco_close:
-.LFB43:
+.LFB52:
 	.loc 1 312 0
 .LVL31:
 	entry	sp, 32
@@ -490,7 +490,7 @@ bta_sys_sco_close:
 .LVL35:
 .L68:
 	retw.n
-.LFE43:
+.LFE52:
 	.size	bta_sys_sco_close, .-bta_sys_sco_close
 	.section	.text.bta_sys_sco_use,"ax",@progbits
 	.literal_position
@@ -499,7 +499,7 @@ bta_sys_sco_close:
 	.global	bta_sys_sco_use
 	.type	bta_sys_sco_use, @function
 bta_sys_sco_use:
-.LFB44:
+.LFB53:
 	.loc 1 336 0
 .LVL36:
 	entry	sp, 32
@@ -522,7 +522,7 @@ bta_sys_sco_use:
 .LVL37:
 .L80:
 	retw.n
-.LFE44:
+.LFE53:
 	.size	bta_sys_sco_use, .-bta_sys_sco_use
 	.section	.text.bta_sys_sco_unuse,"ax",@progbits
 	.literal_position
@@ -531,7 +531,7 @@ bta_sys_sco_use:
 	.global	bta_sys_sco_unuse
 	.type	bta_sys_sco_unuse, @function
 bta_sys_sco_unuse:
-.LFB45:
+.LFB54:
 	.loc 1 357 0
 .LVL38:
 	entry	sp, 32
@@ -560,7 +560,7 @@ bta_sys_sco_unuse:
 .LVL42:
 .L85:
 	retw.n
-.LFE45:
+.LFE54:
 	.size	bta_sys_sco_unuse, .-bta_sys_sco_unuse
 	.section	.text.bta_sys_set_policy,"ax",@progbits
 	.literal_position
@@ -569,7 +569,7 @@ bta_sys_sco_unuse:
 	.global	bta_sys_set_policy
 	.type	bta_sys_set_policy, @function
 bta_sys_set_policy:
-.LFB46:
+.LFB55:
 	.loc 1 395 0
 .LVL43:
 	entry	sp, 32
@@ -594,7 +594,7 @@ bta_sys_set_policy:
 .LVL44:
 .L90:
 	retw.n
-.LFE46:
+.LFE55:
 	.size	bta_sys_set_policy, .-bta_sys_set_policy
 	.section	.text.bta_sys_clear_policy,"ax",@progbits
 	.literal_position
@@ -603,7 +603,7 @@ bta_sys_set_policy:
 	.global	bta_sys_clear_policy
 	.type	bta_sys_clear_policy, @function
 bta_sys_clear_policy:
-.LFB47:
+.LFB56:
 	.loc 1 412 0
 .LVL45:
 	entry	sp, 32
@@ -628,7 +628,7 @@ bta_sys_clear_policy:
 .LVL46:
 .L95:
 	retw.n
-.LFE47:
+.LFE56:
 	.size	bta_sys_clear_policy, .-bta_sys_clear_policy
 	.section	.text.bta_sys_set_default_policy,"ax",@progbits
 	.literal_position
@@ -637,7 +637,7 @@ bta_sys_clear_policy:
 	.global	bta_sys_set_default_policy
 	.type	bta_sys_set_default_policy, @function
 bta_sys_set_default_policy:
-.LFB48:
+.LFB57:
 	.loc 1 429 0
 .LVL47:
 	entry	sp, 32
@@ -660,7 +660,7 @@ bta_sys_set_default_policy:
 .LVL48:
 .L100:
 	retw.n
-.LFE48:
+.LFE57:
 	.size	bta_sys_set_default_policy, .-bta_sys_set_default_policy
 	.section	.text.bta_sys_clear_default_policy,"ax",@progbits
 	.literal_position
@@ -669,7 +669,7 @@ bta_sys_set_default_policy:
 	.global	bta_sys_clear_default_policy
 	.type	bta_sys_clear_default_policy, @function
 bta_sys_clear_default_policy:
-.LFB49:
+.LFB58:
 	.loc 1 446 0
 .LVL49:
 	entry	sp, 32
@@ -692,7 +692,7 @@ bta_sys_clear_default_policy:
 .LVL50:
 .L105:
 	retw.n
-.LFE49:
+.LFE58:
 	.size	bta_sys_clear_default_policy, .-bta_sys_clear_default_policy
 	.section	.text.bta_sys_idle,"ax",@progbits
 	.literal_position
@@ -701,7 +701,7 @@ bta_sys_clear_default_policy:
 	.global	bta_sys_idle
 	.type	bta_sys_idle, @function
 bta_sys_idle:
-.LFB50:
+.LFB59:
 	.loc 1 463 0
 .LVL51:
 	entry	sp, 32
@@ -739,7 +739,7 @@ bta_sys_idle:
 .LVL53:
 .L110:
 	retw.n
-.LFE50:
+.LFE59:
 	.size	bta_sys_idle, .-bta_sys_idle
 	.section	.text.bta_sys_busy,"ax",@progbits
 	.literal_position
@@ -748,7 +748,7 @@ bta_sys_idle:
 	.global	bta_sys_busy
 	.type	bta_sys_busy, @function
 bta_sys_busy:
-.LFB51:
+.LFB60:
 	.loc 1 488 0
 .LVL54:
 	entry	sp, 32
@@ -786,7 +786,7 @@ bta_sys_busy:
 .LVL56:
 .L119:
 	retw.n
-.LFE51:
+.LFE60:
 	.size	bta_sys_busy, .-bta_sys_busy
 	.section	.text.bta_sys_eir_register,"ax",@progbits
 	.literal_position
@@ -795,7 +795,7 @@ bta_sys_busy:
 	.global	bta_sys_eir_register
 	.type	bta_sys_eir_register, @function
 bta_sys_eir_register:
-.LFB52:
+.LFB61:
 	.loc 1 514 0
 .LVL57:
 	entry	sp, 32
@@ -805,7 +805,7 @@ bta_sys_eir_register:
 	l32i.n	a8, a8, 0
 	s32i	a2, a8, 296
 	retw.n
-.LFE52:
+.LFE61:
 	.size	bta_sys_eir_register, .-bta_sys_eir_register
 	.section	.text.bta_sys_add_uuid,"ax",@progbits
 	.literal_position
@@ -814,7 +814,7 @@ bta_sys_eir_register:
 	.global	bta_sys_add_uuid
 	.type	bta_sys_add_uuid, @function
 bta_sys_add_uuid:
-.LFB53:
+.LFB62:
 	.loc 1 529 0
 .LVL58:
 	entry	sp, 32
@@ -833,7 +833,7 @@ bta_sys_add_uuid:
 .LVL59:
 .L129:
 	retw.n
-.LFE53:
+.LFE62:
 	.size	bta_sys_add_uuid, .-bta_sys_add_uuid
 	.section	.text.bta_sys_remove_uuid,"ax",@progbits
 	.literal_position
@@ -842,7 +842,7 @@ bta_sys_add_uuid:
 	.global	bta_sys_remove_uuid
 	.type	bta_sys_remove_uuid, @function
 bta_sys_remove_uuid:
-.LFB54:
+.LFB63:
 	.loc 1 546 0
 .LVL60:
 	entry	sp, 32
@@ -861,7 +861,7 @@ bta_sys_remove_uuid:
 .LVL61:
 .L134:
 	retw.n
-.LFE54:
+.LFE63:
 	.size	bta_sys_remove_uuid, .-bta_sys_remove_uuid
 	.section	.text.bta_sys_vs_hdl,"ax",@progbits
 	.literal_position
@@ -870,7 +870,7 @@ bta_sys_remove_uuid:
 	.global	bta_sys_vs_hdl
 	.type	bta_sys_vs_hdl, @function
 bta_sys_vs_hdl:
-.LFB55:
+.LFB64:
 	.loc 1 563 0
 .LVL62:
 	entry	sp, 32
@@ -896,7 +896,7 @@ bta_sys_vs_hdl:
 .L140:
 	.loc 1 569 0
 	retw.n
-.LFE55:
+.LFE64:
 	.size	bta_sys_vs_hdl, .-bta_sys_vs_hdl
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -917,10 +917,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI0-.LFB30
+	.4byte	.LCFI0-.LFB39
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -929,10 +929,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI1-.LFB31
+	.4byte	.LCFI1-.LFB40
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -941,10 +941,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.byte	0x4
-	.4byte	.LCFI2-.LFB32
+	.4byte	.LCFI2-.LFB41
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -953,10 +953,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.byte	0x4
-	.4byte	.LCFI3-.LFB33
+	.4byte	.LCFI3-.LFB42
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -965,10 +965,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.byte	0x4
-	.4byte	.LCFI4-.LFB34
+	.4byte	.LCFI4-.LFB43
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -977,10 +977,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.byte	0x4
-	.4byte	.LCFI5-.LFB35
+	.4byte	.LCFI5-.LFB44
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -989,10 +989,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.byte	0x4
-	.4byte	.LCFI6-.LFB36
+	.4byte	.LCFI6-.LFB45
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1001,10 +1001,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.byte	0x4
-	.4byte	.LCFI7-.LFB37
+	.4byte	.LCFI7-.LFB46
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1013,10 +1013,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI8-.LFB38
+	.4byte	.LCFI8-.LFB47
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1025,10 +1025,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI9-.LFB39
+	.4byte	.LCFI9-.LFB48
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1037,10 +1037,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE20-.LASFDE20
 .LASFDE20:
 	.4byte	.Lframe0
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.byte	0x4
-	.4byte	.LCFI10-.LFB40
+	.4byte	.LCFI10-.LFB49
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1049,10 +1049,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE22-.LASFDE22
 .LASFDE22:
 	.4byte	.Lframe0
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.byte	0x4
-	.4byte	.LCFI11-.LFB41
+	.4byte	.LCFI11-.LFB50
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1061,10 +1061,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE24-.LASFDE24
 .LASFDE24:
 	.4byte	.Lframe0
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.byte	0x4
-	.4byte	.LCFI12-.LFB42
+	.4byte	.LCFI12-.LFB51
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1073,10 +1073,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE26-.LASFDE26
 .LASFDE26:
 	.4byte	.Lframe0
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.byte	0x4
-	.4byte	.LCFI13-.LFB43
+	.4byte	.LCFI13-.LFB52
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1085,10 +1085,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE28-.LASFDE28
 .LASFDE28:
 	.4byte	.Lframe0
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.byte	0x4
-	.4byte	.LCFI14-.LFB44
+	.4byte	.LCFI14-.LFB53
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1097,10 +1097,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE30-.LASFDE30
 .LASFDE30:
 	.4byte	.Lframe0
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.byte	0x4
-	.4byte	.LCFI15-.LFB45
+	.4byte	.LCFI15-.LFB54
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1109,10 +1109,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE32-.LASFDE32
 .LASFDE32:
 	.4byte	.Lframe0
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.byte	0x4
-	.4byte	.LCFI16-.LFB46
+	.4byte	.LCFI16-.LFB55
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1121,10 +1121,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE34-.LASFDE34
 .LASFDE34:
 	.4byte	.Lframe0
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.byte	0x4
-	.4byte	.LCFI17-.LFB47
+	.4byte	.LCFI17-.LFB56
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1133,10 +1133,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE36-.LASFDE36
 .LASFDE36:
 	.4byte	.Lframe0
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
 	.byte	0x4
-	.4byte	.LCFI18-.LFB48
+	.4byte	.LCFI18-.LFB57
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1145,10 +1145,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE38-.LASFDE38
 .LASFDE38:
 	.4byte	.Lframe0
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
 	.byte	0x4
-	.4byte	.LCFI19-.LFB49
+	.4byte	.LCFI19-.LFB58
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1157,10 +1157,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE40-.LASFDE40
 .LASFDE40:
 	.4byte	.Lframe0
-	.4byte	.LFB50
-	.4byte	.LFE50-.LFB50
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
 	.byte	0x4
-	.4byte	.LCFI20-.LFB50
+	.4byte	.LCFI20-.LFB59
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1169,10 +1169,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE42-.LASFDE42
 .LASFDE42:
 	.4byte	.Lframe0
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.byte	0x4
-	.4byte	.LCFI21-.LFB51
+	.4byte	.LCFI21-.LFB60
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1181,10 +1181,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE44-.LASFDE44
 .LASFDE44:
 	.4byte	.Lframe0
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
 	.byte	0x4
-	.4byte	.LCFI22-.LFB52
+	.4byte	.LCFI22-.LFB61
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1193,10 +1193,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE46-.LASFDE46
 .LASFDE46:
 	.4byte	.Lframe0
-	.4byte	.LFB53
-	.4byte	.LFE53-.LFB53
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
 	.byte	0x4
-	.4byte	.LCFI23-.LFB53
+	.4byte	.LCFI23-.LFB62
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1205,10 +1205,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE48-.LASFDE48
 .LASFDE48:
 	.4byte	.Lframe0
-	.4byte	.LFB54
-	.4byte	.LFE54-.LFB54
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
 	.byte	0x4
-	.4byte	.LCFI24-.LFB54
+	.4byte	.LCFI24-.LFB63
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1217,10 +1217,10 @@ bta_sys_vs_hdl:
 	.4byte	.LEFDE50-.LASFDE50
 .LASFDE50:
 	.4byte	.Lframe0
-	.4byte	.LFB55
-	.4byte	.LFE55-.LFB55
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
 	.byte	0x4
-	.4byte	.LCFI25-.LFB55
+	.4byte	.LCFI25-.LFB64
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1309,119 +1309,119 @@ bta_sys_vs_hdl:
 	.byte	0x3
 	.byte	0x2d
 	.4byte	0x65
-	.uleb128 0x4
+	.uleb128 0x5
+	.byte	0x4
+	.uleb128 0x3
+	.byte	0x4
+	.byte	0x5
 	.4byte	.LASF13
+	.uleb128 0x3
 	.byte	0x4
-	.byte	0x21
-	.4byte	0x7e
-	.uleb128 0x4
+	.byte	0x7
 	.4byte	.LASF14
+	.uleb128 0x3
 	.byte	0x4
-	.byte	0x22
-	.4byte	0x89
-	.uleb128 0x4
+	.byte	0x7
 	.4byte	.LASF15
-	.byte	0x4
-	.byte	0x23
-	.4byte	0x94
-	.uleb128 0x4
-	.4byte	.LASF16
-	.byte	0x4
-	.byte	0x29
-	.4byte	0xcb
+	.uleb128 0x6
 	.uleb128 0x3
 	.byte	0x1
-	.byte	0x2
-	.4byte	.LASF17
-	.uleb128 0x5
 	.byte	0x8
+	.4byte	.LASF16
+	.uleb128 0x4
+	.4byte	.LASF17
 	.byte	0x4
-	.byte	0xc6
-	.4byte	0x117
-	.uleb128 0x6
+	.byte	0x1a
+	.4byte	0x7e
+	.uleb128 0x4
 	.4byte	.LASF18
 	.byte	0x4
-	.byte	0xc7
+	.byte	0x1b
 	.4byte	0x89
-	.byte	0
-	.uleb128 0x7
-	.string	"len"
-	.byte	0x4
-	.byte	0xc8
-	.4byte	0x89
-	.byte	0x2
-	.uleb128 0x6
+	.uleb128 0x4
 	.4byte	.LASF19
 	.byte	0x4
-	.byte	0xc9
-	.4byte	0x89
-	.byte	0x4
-	.uleb128 0x6
+	.byte	0x1c
+	.4byte	0x94
+	.uleb128 0x4
 	.4byte	.LASF20
 	.byte	0x4
-	.byte	0xca
-	.4byte	0x89
-	.byte	0x6
-	.uleb128 0x6
-	.4byte	.LASF21
-	.byte	0x4
-	.byte	0xcb
-	.4byte	0x117
-	.byte	0x8
-	.byte	0
-	.uleb128 0x8
-	.4byte	0x7e
-	.4byte	0x126
-	.uleb128 0x9
-	.4byte	0x126
-	.byte	0
-	.uleb128 0x3
-	.byte	0x4
-	.byte	0x7
-	.4byte	.LASF22
-	.uleb128 0x4
-	.4byte	.LASF23
-	.byte	0x4
-	.byte	0xcc
-	.4byte	0xd2
-	.uleb128 0x8
-	.4byte	0x9f
-	.4byte	0x148
-	.uleb128 0xa
-	.4byte	0x126
-	.byte	0x5
-	.byte	0
-	.uleb128 0xb
-	.4byte	.LASF24
-	.byte	0x4
-	.2byte	0x133
-	.4byte	0x154
-	.uleb128 0xc
-	.byte	0x4
-	.4byte	0x9f
+	.byte	0x22
+	.4byte	0xea
 	.uleb128 0x3
 	.byte	0x1
+	.byte	0x2
+	.4byte	.LASF21
+	.uleb128 0x7
 	.byte	0x8
-	.4byte	.LASF25
-	.uleb128 0xd
 	.byte	0x4
-	.uleb128 0x3
-	.byte	0x4
-	.byte	0x5
-	.4byte	.LASF26
-	.uleb128 0x3
-	.byte	0x4
-	.byte	0x7
-	.4byte	.LASF27
-	.uleb128 0xe
-	.uleb128 0xc
-	.byte	0x4
-	.4byte	0x12d
+	.byte	0xbf
+	.4byte	0x136
 	.uleb128 0x8
-	.4byte	0x9f
-	.4byte	0x188
+	.4byte	.LASF22
+	.byte	0x4
+	.byte	0xc0
+	.4byte	0x89
+	.byte	0
+	.uleb128 0x9
+	.string	"len"
+	.byte	0x4
+	.byte	0xc1
+	.4byte	0x89
+	.byte	0x2
+	.uleb128 0x8
+	.4byte	.LASF23
+	.byte	0x4
+	.byte	0xc2
+	.4byte	0x89
+	.byte	0x4
+	.uleb128 0x8
+	.4byte	.LASF24
+	.byte	0x4
+	.byte	0xc3
+	.4byte	0x89
+	.byte	0x6
+	.uleb128 0x8
+	.4byte	.LASF25
+	.byte	0x4
+	.byte	0xc4
+	.4byte	0x136
+	.byte	0x8
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x126
+	.4byte	0x7e
+	.4byte	0x145
+	.uleb128 0xb
+	.4byte	0xa8
+	.byte	0
+	.uleb128 0x4
+	.4byte	.LASF26
+	.byte	0x4
+	.byte	0xc5
+	.4byte	0xf1
+	.uleb128 0xa
+	.4byte	0xbe
+	.4byte	0x160
+	.uleb128 0xc
+	.4byte	0xa8
+	.byte	0x5
+	.byte	0
+	.uleb128 0xd
+	.4byte	.LASF27
+	.byte	0x4
+	.2byte	0x12c
+	.4byte	0x16c
+	.uleb128 0xe
+	.byte	0x4
+	.4byte	0xbe
+	.uleb128 0xe
+	.byte	0x4
+	.4byte	0x145
+	.uleb128 0xa
+	.4byte	0xbe
+	.4byte	0x188
+	.uleb128 0xc
+	.4byte	0xa8
 	.byte	0x4
 	.byte	0
 	.uleb128 0x4
@@ -1430,12 +1430,12 @@ bta_sys_vs_hdl:
 	.byte	0x23
 	.4byte	0x193
 	.uleb128 0xf
-	.4byte	0xc0
+	.4byte	0xdf
 	.4byte	0x1a7
 	.uleb128 0x10
-	.4byte	0xaa
+	.4byte	0xc9
 	.uleb128 0x10
-	.4byte	0x161
+	.4byte	0x9f
 	.byte	0
 	.uleb128 0x4
 	.4byte	.LASF29
@@ -1443,7 +1443,7 @@ bta_sys_vs_hdl:
 	.byte	0x26
 	.4byte	0x1b2
 	.uleb128 0xf
-	.4byte	0xc0
+	.4byte	0xdf
 	.4byte	0x1c1
 	.uleb128 0x10
 	.4byte	0x172
@@ -1452,12 +1452,12 @@ bta_sys_vs_hdl:
 	.4byte	.LASF30
 	.byte	0x5
 	.byte	0x29
-	.4byte	0x171
+	.4byte	0xb6
 	.uleb128 0x4
 	.4byte	.LASF31
 	.byte	0x5
 	.byte	0x81
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x4
 	.4byte	.LASF32
 	.byte	0x5
@@ -1468,11 +1468,11 @@ bta_sys_vs_hdl:
 	.uleb128 0x10
 	.4byte	0x1cc
 	.uleb128 0x10
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x10
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x10
-	.4byte	0x154
+	.4byte	0x16c
 	.byte	0
 	.uleb128 0x4
 	.4byte	.LASF33
@@ -1482,32 +1482,32 @@ bta_sys_vs_hdl:
 	.uleb128 0x11
 	.4byte	0x217
 	.uleb128 0x10
-	.4byte	0xaa
+	.4byte	0xc9
 	.uleb128 0x10
-	.4byte	0xc0
+	.4byte	0xdf
 	.byte	0
-	.uleb128 0x5
+	.uleb128 0x7
 	.byte	0x8
 	.byte	0x5
 	.byte	0x96
 	.4byte	0x238
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF34
 	.byte	0x5
 	.byte	0x97
 	.4byte	0x238
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF35
 	.byte	0x5
 	.byte	0x98
 	.4byte	0x23e
 	.byte	0x4
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0x1a7
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0x1c1
 	.uleb128 0x4
@@ -1519,7 +1519,7 @@ bta_sys_vs_hdl:
 	.4byte	.LASF37
 	.byte	0x5
 	.byte	0xcb
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x4
 	.4byte	.LASF38
 	.byte	0x5
@@ -1534,33 +1534,33 @@ bta_sys_vs_hdl:
 	.4byte	.LASF39
 	.byte	0x6
 	.byte	0x2a
-	.4byte	0x9f
-	.uleb128 0x5
+	.4byte	0xbe
+	.uleb128 0x7
 	.byte	0x1c
 	.byte	0x6
 	.byte	0x2f
 	.4byte	0x29b
-	.uleb128 0x7
+	.uleb128 0x9
 	.string	"id"
 	.byte	0x6
 	.byte	0x30
 	.4byte	0x178
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF40
 	.byte	0x6
 	.byte	0x31
 	.4byte	0x29b
 	.byte	0x8
 	.byte	0
-	.uleb128 0x8
-	.4byte	0x2ab
-	.4byte	0x2ab
 	.uleb128 0xa
-	.4byte	0x126
+	.4byte	0x2ab
+	.4byte	0x2ab
+	.uleb128 0xc
+	.4byte	0xa8
 	.byte	0x4
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0x1d7
 	.uleb128 0x4
@@ -1573,49 +1573,49 @@ bta_sys_vs_hdl:
 	.byte	0x6
 	.byte	0x35
 	.4byte	0x374
-	.uleb128 0x7
+	.uleb128 0x9
 	.string	"reg"
 	.byte	0x6
 	.byte	0x36
 	.4byte	0x374
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF42
 	.byte	0x6
 	.byte	0x37
 	.4byte	0x38a
 	.byte	0xb8
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF43
 	.byte	0x6
 	.byte	0x38
 	.4byte	0x270
 	.byte	0xe6
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF44
 	.byte	0x6
 	.byte	0x39
 	.4byte	0x39a
 	.byte	0xe8
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF45
 	.byte	0x6
 	.byte	0x3a
-	.4byte	0xb5
+	.4byte	0xd4
 	.byte	0xf0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF46
 	.byte	0x6
 	.byte	0x3b
-	.4byte	0xaa
+	.4byte	0xc9
 	.byte	0xf4
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF47
 	.byte	0x6
 	.byte	0x3d
 	.4byte	0x2ab
 	.byte	0xf8
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF48
 	.byte	0x6
 	.byte	0x3e
@@ -1658,37 +1658,37 @@ bta_sys_vs_hdl:
 	.4byte	0x3b6
 	.2byte	0x12c
 	.byte	0
-	.uleb128 0x8
-	.4byte	0x384
-	.4byte	0x384
 	.uleb128 0xa
-	.4byte	0x126
+	.4byte	0x384
+	.4byte	0x384
+	.uleb128 0xc
+	.4byte	0xa8
 	.byte	0x2d
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0x244
-	.uleb128 0x8
-	.4byte	0xc0
-	.4byte	0x39a
 	.uleb128 0xa
-	.4byte	0x126
+	.4byte	0xdf
+	.4byte	0x39a
+	.uleb128 0xc
+	.4byte	0xa8
 	.byte	0x2d
 	.byte	0
-	.uleb128 0x8
-	.4byte	0x3aa
-	.4byte	0x3aa
 	.uleb128 0xa
-	.4byte	0x126
+	.4byte	0x3aa
+	.4byte	0x3aa
+	.uleb128 0xc
+	.4byte	0xa8
 	.byte	0x1
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0x25a
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0x1fc
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0x188
 	.uleb128 0x4
@@ -1700,8 +1700,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF56
 	.byte	0x1
 	.byte	0x29
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x3ea
@@ -1717,8 +1717,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF57
 	.byte	0x1
 	.byte	0x39
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x40d
@@ -1734,8 +1734,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF59
 	.byte	0x1
 	.byte	0x48
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x430
@@ -1751,8 +1751,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF60
 	.byte	0x1
 	.byte	0x66
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x490
@@ -1760,21 +1760,21 @@ bta_sys_vs_hdl:
 	.4byte	.LASF61
 	.byte	0x1
 	.byte	0x66
-	.4byte	0x148
+	.4byte	0x160
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x15
 	.4byte	.LASF62
 	.byte	0x1
 	.byte	0x66
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x15
 	.4byte	.LASF63
 	.byte	0x1
 	.byte	0x66
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x16
@@ -1814,8 +1814,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF64
 	.byte	0x1
 	.byte	0x77
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x4cf
@@ -1823,7 +1823,7 @@ bta_sys_vs_hdl:
 	.4byte	.LASF65
 	.byte	0x1
 	.byte	0x77
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x15
@@ -1837,15 +1837,15 @@ bta_sys_vs_hdl:
 	.4byte	.LASF67
 	.byte	0x1
 	.byte	0x79
-	.4byte	0x9f
+	.4byte	0xbe
 	.4byte	.LLST0
 	.byte	0
 	.uleb128 0x14
 	.4byte	.LASF66
 	.byte	0x1
 	.byte	0x8f
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x51c
@@ -1853,14 +1853,14 @@ bta_sys_vs_hdl:
 	.4byte	.LASF61
 	.byte	0x1
 	.byte	0x8f
-	.4byte	0x148
+	.4byte	0x160
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x18
 	.4byte	.LASF67
 	.byte	0x1
 	.byte	0x91
-	.4byte	0x9f
+	.4byte	0xbe
 	.4byte	.LLST1
 	.uleb128 0x16
 	.4byte	.LVL14
@@ -1891,8 +1891,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF68
 	.byte	0x1
 	.byte	0xa5
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x53f
@@ -1908,8 +1908,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF69
 	.byte	0x1
 	.byte	0xb4
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x562
@@ -1925,8 +1925,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF70
 	.byte	0x1
 	.byte	0xc4
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x5df
@@ -1934,21 +1934,21 @@ bta_sys_vs_hdl:
 	.string	"id"
 	.byte	0x1
 	.byte	0xc4
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x15
 	.4byte	.LASF71
 	.byte	0x1
 	.byte	0xc4
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x15
 	.4byte	.LASF72
 	.byte	0x1
 	.byte	0xc4
-	.4byte	0x154
+	.4byte	0x16c
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x1a
@@ -2012,8 +2012,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF73
 	.byte	0x1
 	.byte	0xe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x65c
@@ -2021,21 +2021,21 @@ bta_sys_vs_hdl:
 	.string	"id"
 	.byte	0x1
 	.byte	0xe0
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x15
 	.4byte	.LASF71
 	.byte	0x1
 	.byte	0xe0
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x15
 	.4byte	.LASF72
 	.byte	0x1
 	.byte	0xe0
-	.4byte	0x154
+	.4byte	0x16c
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x1a
@@ -2099,8 +2099,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF74
 	.byte	0x1
 	.byte	0xfb
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x6bb
@@ -2108,21 +2108,21 @@ bta_sys_vs_hdl:
 	.string	"id"
 	.byte	0x1
 	.byte	0xfb
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x15
 	.4byte	.LASF71
 	.byte	0x1
 	.byte	0xfb
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x15
 	.4byte	.LASF72
 	.byte	0x1
 	.byte	0xfb
-	.4byte	0x154
+	.4byte	0x16c
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x16
@@ -2162,8 +2162,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF75
 	.byte	0x1
 	.2byte	0x10e
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x71e
@@ -2171,21 +2171,21 @@ bta_sys_vs_hdl:
 	.string	"id"
 	.byte	0x1
 	.2byte	0x10e
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x1e
 	.4byte	.LASF71
 	.byte	0x1
 	.2byte	0x10e
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x1e
 	.4byte	.LASF72
 	.byte	0x1
 	.2byte	0x10e
-	.4byte	0x154
+	.4byte	0x16c
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x16
@@ -2225,8 +2225,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF76
 	.byte	0x1
 	.2byte	0x120
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x79b
@@ -2234,21 +2234,21 @@ bta_sys_vs_hdl:
 	.string	"id"
 	.byte	0x1
 	.2byte	0x120
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x1e
 	.4byte	.LASF71
 	.byte	0x1
 	.2byte	0x120
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x1e
 	.4byte	.LASF72
 	.byte	0x1
 	.2byte	0x120
-	.4byte	0x154
+	.4byte	0x16c
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x1a
@@ -2308,8 +2308,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF77
 	.byte	0x1
 	.2byte	0x137
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x82f
@@ -2317,28 +2317,28 @@ bta_sys_vs_hdl:
 	.string	"id"
 	.byte	0x1
 	.2byte	0x137
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x1e
 	.4byte	.LASF71
 	.byte	0x1
 	.2byte	0x137
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x1e
 	.4byte	.LASF72
 	.byte	0x1
 	.2byte	0x137
-	.4byte	0x154
+	.4byte	0x16c
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x1f
 	.4byte	.LASF78
 	.byte	0x1
 	.2byte	0x139
-	.4byte	0x9f
+	.4byte	0xbe
 	.4byte	.LLST2
 	.uleb128 0x20
 	.4byte	.LVL32
@@ -2398,8 +2398,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF79
 	.byte	0x1
 	.2byte	0x14f
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x88e
@@ -2407,21 +2407,21 @@ bta_sys_vs_hdl:
 	.string	"id"
 	.byte	0x1
 	.2byte	0x14f
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x1e
 	.4byte	.LASF71
 	.byte	0x1
 	.2byte	0x14f
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x1e
 	.4byte	.LASF72
 	.byte	0x1
 	.2byte	0x14f
-	.4byte	0x154
+	.4byte	0x16c
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x16
@@ -2457,8 +2457,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF80
 	.byte	0x1
 	.2byte	0x164
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x903
@@ -2466,27 +2466,27 @@ bta_sys_vs_hdl:
 	.string	"id"
 	.byte	0x1
 	.2byte	0x164
-	.4byte	0x9f
+	.4byte	0xbe
 	.4byte	.LLST3
 	.uleb128 0x1e
 	.4byte	.LASF71
 	.byte	0x1
 	.2byte	0x164
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x1e
 	.4byte	.LASF72
 	.byte	0x1
 	.2byte	0x164
-	.4byte	0x154
+	.4byte	0x16c
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x1f
 	.4byte	.LASF78
 	.byte	0x1
 	.2byte	0x166
-	.4byte	0x9f
+	.4byte	0xbe
 	.4byte	.LLST4
 	.uleb128 0x20
 	.4byte	.LVL40
@@ -2519,8 +2519,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF81
 	.byte	0x1
 	.2byte	0x18a
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x966
@@ -2528,21 +2528,21 @@ bta_sys_vs_hdl:
 	.string	"id"
 	.byte	0x1
 	.2byte	0x18a
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x1e
 	.4byte	.LASF82
 	.byte	0x1
 	.2byte	0x18a
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x1e
 	.4byte	.LASF72
 	.byte	0x1
 	.2byte	0x18a
-	.4byte	0x154
+	.4byte	0x16c
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x16
@@ -2582,8 +2582,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF83
 	.byte	0x1
 	.2byte	0x19b
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x9c9
@@ -2591,21 +2591,21 @@ bta_sys_vs_hdl:
 	.string	"id"
 	.byte	0x1
 	.2byte	0x19b
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x1e
 	.4byte	.LASF82
 	.byte	0x1
 	.2byte	0x19b
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x1e
 	.4byte	.LASF72
 	.byte	0x1
 	.2byte	0x19b
-	.4byte	0x154
+	.4byte	0x16c
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x16
@@ -2645,8 +2645,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF84
 	.byte	0x1
 	.2byte	0x1ac
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xa1d
@@ -2654,14 +2654,14 @@ bta_sys_vs_hdl:
 	.string	"id"
 	.byte	0x1
 	.2byte	0x1ac
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x1e
 	.4byte	.LASF82
 	.byte	0x1
 	.2byte	0x1ac
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x16
@@ -2700,8 +2700,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF85
 	.byte	0x1
 	.2byte	0x1bd
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xa71
@@ -2709,14 +2709,14 @@ bta_sys_vs_hdl:
 	.string	"id"
 	.byte	0x1
 	.2byte	0x1bd
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x1e
 	.4byte	.LASF82
 	.byte	0x1
 	.2byte	0x1bd
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x16
@@ -2755,8 +2755,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF86
 	.byte	0x1
 	.2byte	0x1ce
-	.4byte	.LFB50
-	.4byte	.LFE50-.LFB50
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xaf2
@@ -2764,21 +2764,21 @@ bta_sys_vs_hdl:
 	.string	"id"
 	.byte	0x1
 	.2byte	0x1ce
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x1e
 	.4byte	.LASF71
 	.byte	0x1
 	.2byte	0x1ce
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x1e
 	.4byte	.LASF72
 	.byte	0x1
 	.2byte	0x1ce
-	.4byte	0x154
+	.4byte	0x16c
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x1a
@@ -2842,8 +2842,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF87
 	.byte	0x1
 	.2byte	0x1e7
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xb73
@@ -2851,21 +2851,21 @@ bta_sys_vs_hdl:
 	.string	"id"
 	.byte	0x1
 	.2byte	0x1e7
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x1e
 	.4byte	.LASF71
 	.byte	0x1
 	.2byte	0x1e7
-	.4byte	0x9f
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x1e
 	.4byte	.LASF72
 	.byte	0x1
 	.2byte	0x1e7
-	.4byte	0x154
+	.4byte	0x16c
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x1a
@@ -2929,8 +2929,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF88
 	.byte	0x1
 	.2byte	0x201
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xb98
@@ -2946,8 +2946,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF89
 	.byte	0x1
 	.2byte	0x210
-	.4byte	.LFB53
-	.4byte	.LFE53-.LFB53
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xbd2
@@ -2955,7 +2955,7 @@ bta_sys_vs_hdl:
 	.4byte	.LASF90
 	.byte	0x1
 	.2byte	0x210
-	.4byte	0xaa
+	.4byte	0xc9
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x16
@@ -2980,8 +2980,8 @@ bta_sys_vs_hdl:
 	.4byte	.LASF91
 	.byte	0x1
 	.2byte	0x221
-	.4byte	.LFB54
-	.4byte	.LFE54-.LFB54
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xc0c
@@ -2989,7 +2989,7 @@ bta_sys_vs_hdl:
 	.4byte	.LASF90
 	.byte	0x1
 	.2byte	0x221
-	.4byte	0xaa
+	.4byte	0xc9
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x16
@@ -3014,9 +3014,9 @@ bta_sys_vs_hdl:
 	.4byte	.LASF97
 	.byte	0x1
 	.2byte	0x232
-	.4byte	0xc0
-	.4byte	.LFB55
-	.4byte	.LFE55-.LFB55
+	.4byte	0xdf
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xc5a
@@ -3024,13 +3024,13 @@ bta_sys_vs_hdl:
 	.string	"evt"
 	.byte	0x1
 	.2byte	0x232
-	.4byte	0xaa
+	.4byte	0xc9
 	.4byte	.LLST5
 	.uleb128 0x1d
 	.string	"p"
 	.byte	0x1
 	.2byte	0x232
-	.4byte	0x161
+	.4byte	0x9f
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x16
@@ -3056,7 +3056,7 @@ bta_sys_vs_hdl:
 	.uleb128 0x23
 	.4byte	.LASF92
 	.byte	0x4
-	.2byte	0x2cc
+	.2byte	0x2b8
 	.4byte	0xc6d
 	.byte	0x6
 	.byte	0xff
@@ -3066,11 +3066,11 @@ bta_sys_vs_hdl:
 	.byte	0xff
 	.byte	0xff
 	.uleb128 0x24
-	.4byte	0x138
+	.4byte	0x150
 	.uleb128 0x23
 	.4byte	.LASF93
 	.byte	0x4
-	.2byte	0x2cd
+	.2byte	0x2b9
 	.4byte	0xc85
 	.byte	0x6
 	.byte	0
@@ -3080,13 +3080,13 @@ bta_sys_vs_hdl:
 	.byte	0
 	.byte	0
 	.uleb128 0x24
-	.4byte	0x138
+	.4byte	0x150
 	.uleb128 0x25
 	.4byte	.LASF98
 	.byte	0x6
 	.byte	0x56
 	.4byte	0xc95
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0x3bc
 	.uleb128 0x26
@@ -3152,6 +3152,20 @@ bta_sys_vs_hdl:
 	.byte	0
 	.byte	0
 	.uleb128 0x5
+	.uleb128 0xf
+	.byte	0
+	.uleb128 0xb
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x6
+	.uleb128 0x15
+	.byte	0
+	.uleb128 0x27
+	.uleb128 0x19
+	.byte	0
+	.byte	0
+	.uleb128 0x7
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0xb
@@ -3164,7 +3178,7 @@ bta_sys_vs_hdl:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -3179,7 +3193,7 @@ bta_sys_vs_hdl:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x9
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -3194,7 +3208,7 @@ bta_sys_vs_hdl:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0xa
 	.uleb128 0x1
 	.byte	0x1
 	.uleb128 0x49
@@ -3203,14 +3217,14 @@ bta_sys_vs_hdl:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x9
+	.uleb128 0xb
 	.uleb128 0x21
 	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.uleb128 0x21
 	.byte	0
 	.uleb128 0x49
@@ -3219,7 +3233,7 @@ bta_sys_vs_hdl:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0xb
+	.uleb128 0xd
 	.uleb128 0x16
 	.byte	0
 	.uleb128 0x3
@@ -3232,27 +3246,13 @@ bta_sys_vs_hdl:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0xe
 	.uleb128 0xf
 	.byte	0
 	.uleb128 0xb
 	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xd
-	.uleb128 0xf
-	.byte	0
-	.uleb128 0xb
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0xe
-	.uleb128 0x15
-	.byte	0
-	.uleb128 0x27
-	.uleb128 0x19
 	.byte	0
 	.byte	0
 	.uleb128 0xf
@@ -3611,7 +3611,7 @@ bta_sys_vs_hdl:
 	.sleb128 1
 	.byte	0x9f
 	.4byte	.LVL10
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x3
 	.byte	0x78
 	.sleb128 0
@@ -3635,7 +3635,7 @@ bta_sys_vs_hdl:
 	.sleb128 1
 	.byte	0x9f
 	.4byte	.LVL15
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x3
 	.byte	0x73
 	.sleb128 0
@@ -3655,7 +3655,7 @@ bta_sys_vs_hdl:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL39
-	.4byte	.LFE45
+	.4byte	.LFE54
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3680,7 +3680,7 @@ bta_sys_vs_hdl:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL64-1
-	.4byte	.LFE55
+	.4byte	.LFE64
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3696,24 +3696,6 @@ bta_sys_vs_hdl:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
 	.4byte	.LFB39
 	.4byte	.LFE39-.LFB39
 	.4byte	.LFB40
@@ -3748,28 +3730,28 @@ bta_sys_vs_hdl:
 	.4byte	.LFE54-.LFB54
 	.4byte	.LFB55
 	.4byte	.LFE55-.LFB55
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB30
-	.4byte	.LFE30
-	.4byte	.LFB31
-	.4byte	.LFE31
-	.4byte	.LFB32
-	.4byte	.LFE32
-	.4byte	.LFB33
-	.4byte	.LFE33
-	.4byte	.LFB34
-	.4byte	.LFE34
-	.4byte	.LFB35
-	.4byte	.LFE35
-	.4byte	.LFB36
-	.4byte	.LFE36
-	.4byte	.LFB37
-	.4byte	.LFE37
-	.4byte	.LFB38
-	.4byte	.LFE38
 	.4byte	.LFB39
 	.4byte	.LFE39
 	.4byte	.LFB40
@@ -3804,6 +3786,24 @@ bta_sys_vs_hdl:
 	.4byte	.LFE54
 	.4byte	.LFB55
 	.4byte	.LFE55
+	.4byte	.LFB56
+	.4byte	.LFE56
+	.4byte	.LFB57
+	.4byte	.LFE57
+	.4byte	.LFB58
+	.4byte	.LFE58
+	.4byte	.LFB59
+	.4byte	.LFE59
+	.4byte	.LFB60
+	.4byte	.LFE60
+	.4byte	.LFB61
+	.4byte	.LFE61
+	.4byte	.LFB62
+	.4byte	.LFE62
+	.4byte	.LFB63
+	.4byte	.LFE63
+	.4byte	.LFB64
+	.4byte	.LFE64
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -3821,7 +3821,7 @@ bta_sys_vs_hdl:
 	.string	"bta_sys_pm_register"
 .LASF87:
 	.string	"bta_sys_busy"
-.LASF21:
+.LASF25:
 	.string	"data"
 .LASF43:
 	.string	"state"
@@ -3829,25 +3829,25 @@ bta_sys_vs_hdl:
 	.string	"bta_sys_role_chg_register"
 .LASF34:
 	.string	"evt_hdlr"
-.LASF23:
+.LASF26:
 	.string	"BT_HDR"
 .LASF4:
 	.string	"short int"
-.LASF22:
+.LASF14:
 	.string	"sizetype"
 .LASF31:
 	.string	"tBTA_SYS_CONN_STATUS"
-.LASF24:
+.LASF27:
 	.string	"BD_ADDR_PTR"
 .LASF46:
 	.string	"sys_features"
-.LASF15:
+.LASF19:
 	.string	"UINT32"
 .LASF8:
 	.string	"long long int"
 .LASF55:
 	.string	"tBTA_SYS_CB"
-.LASF18:
+.LASF22:
 	.string	"event"
 .LASF6:
 	.string	"__uint16_t"
@@ -3881,7 +3881,7 @@ bta_sys_vs_hdl:
 	.string	"colli_reg"
 .LASF77:
 	.string	"bta_sys_sco_close"
-.LASF16:
+.LASF20:
 	.string	"BOOLEAN"
 .LASF81:
 	.string	"bta_sys_set_policy"
@@ -3889,9 +3889,9 @@ bta_sys_vs_hdl:
 	.string	"peer_addr"
 .LASF30:
 	.string	"tBTA_SYS_DISABLE"
-.LASF19:
+.LASF23:
 	.string	"offset"
-.LASF13:
+.LASF17:
 	.string	"UINT8"
 .LASF5:
 	.string	"__uint8_t"
@@ -3939,15 +3939,15 @@ bta_sys_vs_hdl:
 	.string	"bta_sys_clear_default_policy"
 .LASF42:
 	.string	"is_reg"
-.LASF14:
+.LASF18:
 	.string	"UINT16"
-.LASF25:
+.LASF16:
 	.string	"char"
 .LASF68:
 	.string	"bta_sys_sco_register"
 .LASF61:
 	.string	"p_bda"
-.LASF17:
+.LASF21:
 	.string	"_Bool"
 .LASF33:
 	.string	"tBTA_SYS_EIR_CBACK"
@@ -3957,7 +3957,7 @@ bta_sys_vs_hdl:
 	.string	"num_sco_links"
 .LASF91:
 	.string	"bta_sys_remove_uuid"
-.LASF27:
+.LASF15:
 	.string	"long unsigned int"
 .LASF7:
 	.string	"__uint32_t"
@@ -3991,7 +3991,7 @@ bta_sys_vs_hdl:
 	.string	"policy"
 .LASF66:
 	.string	"bta_sys_notify_collision"
-.LASF26:
+.LASF13:
 	.string	"long int"
 .LASF84:
 	.string	"bta_sys_set_default_policy"
@@ -4005,7 +4005,7 @@ bta_sys_vs_hdl:
 	.string	"tBTA_SYS_REG"
 .LASF54:
 	.string	"p_vs_evt_hdlr"
-.LASF20:
+.LASF24:
 	.string	"layer_specific"
 .LASF90:
 	.string	"uuid16"

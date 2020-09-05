@@ -1,7 +1,7 @@
 	.file	"crosscore_int.c"
 	.text
 .Ltext0:
-	.section	.iram1,"ax",@progbits
+	.section	.iram1.19,"ax",@progbits
 	.literal_position
 	.literal .LC0, 1072693468
 	.literal .LC1, 1072693472
@@ -9,7 +9,7 @@
 	.align	4
 	.type	esp_crosscore_isr, @function
 esp_crosscore_isr:
-.LFB28:
+.LFB32:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/crosscore_int.c"
 	.loc 1 52 0
 .LVL0:
@@ -19,9 +19,9 @@ esp_crosscore_isr:
 .LBB10:
 .LBB11:
 	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
-	.loc 2 208 0
+	.loc 2 210 0
 #APP
-# 208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 1
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 1
 	rsr.prid a3
  extui a3,a3,13,1
 # 0 "" 2
@@ -74,17 +74,17 @@ esp_crosscore_isr:
 	retw.n
 .LBE13:
 .LBE12:
-.LFE28:
+.LFE32:
 	.size	esp_crosscore_isr, .-esp_crosscore_isr
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC3:
 	.string	"core_id<portNUM_PROCESSORS"
 .LC6:
 	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/crosscore_int.c"
-	.section	.iram1
+	.section	.iram1.20,"ax",@progbits
 	.literal_position
 	.literal .LC4, .LC3
-	.literal .LC5, __func__$5539
+	.literal .LC5, __func__$5552
 	.literal .LC7, .LC6
 	.literal .LC8, reason_spinlock
 	.literal .LC9, reason
@@ -93,7 +93,7 @@ esp_crosscore_isr:
 	.align	4
 	.type	esp_crosscore_int_send, @function
 esp_crosscore_int_send:
-.LFB30:
+.LFB34:
 	.loc 1 96 0
 .LVL8:
 	entry	sp, 32
@@ -148,7 +148,7 @@ esp_crosscore_int_send:
 	memw
 	s32i.n	a3, a2, 0
 	retw.n
-.LFE30:
+.LFE34:
 	.size	esp_crosscore_int_send, .-esp_crosscore_int_send
 	.section	.rodata.str1.1
 .LC16:
@@ -160,13 +160,13 @@ esp_crosscore_int_send:
 	.literal .LC14, esp_crosscore_isr
 	.literal .LC15, reason+4
 	.literal .LC17, .LC16
-	.literal .LC18, __func__$5534
+	.literal .LC18, __func__$5547
 	.literal .LC19, .LC6
 	.align	4
 	.global	esp_crosscore_int_init
 	.type	esp_crosscore_int_init, @function
 esp_crosscore_int_init:
-.LFB29:
+.LFB33:
 	.loc 1 83 0
 	entry	sp, 32
 .LCFI2:
@@ -177,9 +177,9 @@ esp_crosscore_int_init:
 .LVL17:
 .LBB18:
 .LBB19:
-	.loc 2 208 0
+	.loc 2 210 0
 #APP
-# 208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 1
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 1
 	rsr.prid a8
  extui a8,a8,13,1
 # 0 "" 2
@@ -200,9 +200,9 @@ esp_crosscore_int_init:
 .LVL18:
 .LBB20:
 .LBB21:
-	.loc 2 208 0
+	.loc 2 210 0
 #APP
-# 208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 1
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 1
 	rsr.prid a14
  extui a14,a14,13,1
 # 0 "" 2
@@ -240,14 +240,14 @@ esp_crosscore_int_init:
 .LVL23:
 .L13:
 	retw.n
-.LFE29:
+.LFE33:
 	.size	esp_crosscore_int_init, .-esp_crosscore_int_init
-	.section	.iram1
+	.section	.iram1.21,"ax",@progbits
 	.align	4
 	.global	esp_crosscore_int_send_yield
 	.type	esp_crosscore_int_send_yield, @function
 esp_crosscore_int_send_yield:
-.LFB31:
+.LFB35:
 	.loc 1 111 0 is_stmt 1
 .LVL24:
 	entry	sp, 32
@@ -258,13 +258,14 @@ esp_crosscore_int_send_yield:
 	call8	esp_crosscore_int_send
 .LVL25:
 	retw.n
-.LFE31:
+.LFE35:
 	.size	esp_crosscore_int_send_yield, .-esp_crosscore_int_send_yield
+	.section	.iram1.22,"ax",@progbits
 	.align	4
 	.global	esp_crosscore_int_send_freq_switch
 	.type	esp_crosscore_int_send_freq_switch, @function
 esp_crosscore_int_send_freq_switch:
-.LFB32:
+.LFB36:
 	.loc 1 116 0
 .LVL26:
 	entry	sp, 32
@@ -275,17 +276,17 @@ esp_crosscore_int_send_freq_switch:
 	call8	esp_crosscore_int_send
 .LVL27:
 	retw.n
-.LFE32:
+.LFE36:
 	.size	esp_crosscore_int_send_freq_switch, .-esp_crosscore_int_send_freq_switch
-	.section	.rodata.__func__$5539,"a",@progbits
-	.type	__func__$5539, @object
-	.size	__func__$5539, 23
-__func__$5539:
+	.section	.rodata.__func__$5552,"a",@progbits
+	.type	__func__$5552, @object
+	.size	__func__$5552, 23
+__func__$5552:
 	.string	"esp_crosscore_int_send"
-	.section	.rodata.__func__$5534,"a",@progbits
-	.type	__func__$5534, @object
-	.size	__func__$5534, 23
-__func__$5534:
+	.section	.rodata.__func__$5547,"a",@progbits
+	.type	__func__$5547, @object
+	.size	__func__$5547, 23
+__func__$5547:
 	.string	"esp_crosscore_int_init"
 	.section	.bss.reason,"aw",@nobits
 	.align	4
@@ -319,10 +320,10 @@ reason_spinlock:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI0-.LFB28
+	.4byte	.LCFI0-.LFB32
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -331,10 +332,10 @@ reason_spinlock:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.byte	0x4
-	.4byte	.LCFI1-.LFB30
+	.4byte	.LCFI1-.LFB34
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -343,10 +344,10 @@ reason_spinlock:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI2-.LFB29
+	.4byte	.LCFI2-.LFB33
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -355,10 +356,10 @@ reason_spinlock:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.byte	0x4
-	.4byte	.LCFI3-.LFB31
+	.4byte	.LCFI3-.LFB35
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -367,10 +368,10 @@ reason_spinlock:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.byte	0x4
-	.4byte	.LCFI4-.LFB32
+	.4byte	.LCFI4-.LFB36
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -532,14 +533,14 @@ reason_spinlock:
 	.uleb128 0xe
 	.4byte	.LASF23
 	.byte	0x2
-	.byte	0xce
+	.byte	0xd0
 	.4byte	0x7e
 	.byte	0x3
 	.4byte	0x145
 	.uleb128 0xf
 	.string	"id"
 	.byte	0x2
-	.byte	0xcf
+	.byte	0xd1
 	.4byte	0x4c
 	.byte	0
 	.uleb128 0x10
@@ -551,8 +552,8 @@ reason_spinlock:
 	.4byte	.LASF40
 	.byte	0x1
 	.byte	0x34
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1f2
@@ -632,8 +633,8 @@ reason_spinlock:
 	.4byte	0x7e
 	.uleb128 0x1d
 	.4byte	0xe5
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2b2
@@ -647,7 +648,7 @@ reason_spinlock:
 	.4byte	0x107
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5539
+	.4byte	__func__$5552
 	.uleb128 0x20
 	.4byte	.LBB16
 	.4byte	.LBE16-.LBB16
@@ -665,7 +666,7 @@ reason_spinlock:
 	.4byte	0x107
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5539
+	.4byte	__func__$5552
 	.uleb128 0x1a
 	.4byte	.LVL10
 	.4byte	0x45a
@@ -686,7 +687,7 @@ reason_spinlock:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5539
+	.4byte	__func__$5552
 	.uleb128 0x19
 	.uleb128 0x1
 	.byte	0x5d
@@ -722,8 +723,8 @@ reason_spinlock:
 	.4byte	.LASF41
 	.byte	0x1
 	.byte	0x53
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x38c
@@ -738,7 +739,7 @@ reason_spinlock:
 	.4byte	0x38c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5534
+	.4byte	__func__$5547
 	.uleb128 0x14
 	.4byte	0x12a
 	.4byte	.LBB18
@@ -813,7 +814,7 @@ reason_spinlock:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5534
+	.4byte	__func__$5547
 	.uleb128 0x19
 	.uleb128 0x1
 	.byte	0x5d
@@ -828,8 +829,8 @@ reason_spinlock:
 	.4byte	.LASF27
 	.byte	0x1
 	.byte	0x6e
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x3c9
@@ -860,8 +861,8 @@ reason_spinlock:
 	.4byte	.LASF28
 	.byte	0x1
 	.byte	0x73
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x401
@@ -917,17 +918,17 @@ reason_spinlock:
 	.4byte	.LASF31
 	.4byte	.LASF31
 	.byte	0x6
-	.2byte	0x13d
+	.2byte	0x181
 	.uleb128 0x28
 	.4byte	.LASF32
 	.4byte	.LASF32
 	.byte	0x6
-	.byte	0xda
+	.byte	0xf4
 	.uleb128 0x28
 	.4byte	.LASF33
 	.4byte	.LASF33
 	.byte	0x6
-	.byte	0xd9
+	.byte	0xf3
 	.uleb128 0x28
 	.4byte	.LASF34
 	.4byte	.LASF34
@@ -1488,7 +1489,7 @@ reason_spinlock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL16
-	.4byte	.LFE30
+	.4byte	.LFE34
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1502,7 +1503,7 @@ reason_spinlock:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL12
-	.4byte	.LFE30
+	.4byte	.LFE34
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1530,7 +1531,7 @@ reason_spinlock:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL23
-	.4byte	.LFE29
+	.4byte	.LFE33
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -1550,30 +1551,30 @@ reason_spinlock:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
 	.4byte	.LFB32
 	.4byte	.LFE32-.LFB32
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB28
-	.4byte	.LFE28
-	.4byte	.LFB30
-	.4byte	.LFE30
-	.4byte	.LFB29
-	.4byte	.LFE29
-	.4byte	.LFB31
-	.4byte	.LFE31
 	.4byte	.LFB32
 	.4byte	.LFE32
+	.4byte	.LFB34
+	.4byte	.LFE34
+	.4byte	.LFB33
+	.4byte	.LFE33
+	.4byte	.LFB35
+	.4byte	.LFE35
+	.4byte	.LFB36
+	.4byte	.LFE36
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

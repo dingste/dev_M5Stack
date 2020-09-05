@@ -5,7 +5,7 @@
 	.align	4
 	.type	raise_r_stub, @function
 raise_r_stub:
-.LFB17:
+.LFB26:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/syscall_table.c"
 	.loc 1 45 0
 .LVL0:
@@ -17,7 +17,7 @@ raise_r_stub:
 	call8	_raise_r
 .LVL1:
 	retw.n
-.LFE17:
+.LFE26:
 	.size	raise_r_stub, .-raise_r_stub
 	.section	.text.esp_setup_syscall_table,"ax",@progbits
 	.literal_position
@@ -31,7 +31,7 @@ raise_r_stub:
 	.global	esp_setup_syscall_table
 	.type	esp_setup_syscall_table, @function
 esp_setup_syscall_table:
-.LFB18:
+.LFB27:
 	.loc 1 94 0
 	entry	sp, 32
 .LCFI1:
@@ -58,7 +58,7 @@ esp_setup_syscall_table:
 	movi.n	a8, 0
 	s32i.n	a8, a10, 0
 	retw.n
-.LFE18:
+.LFE27:
 	.size	esp_setup_syscall_table, .-esp_setup_syscall_table
 	.section	.data.s_stub_table,"aw",@progbits
 	.align	4
@@ -126,10 +126,10 @@ s_reent:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.byte	0x4
-	.4byte	.LCFI0-.LFB17
+	.4byte	.LCFI0-.LFB26
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -138,10 +138,10 @@ s_reent:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI1-.LFB18
+	.4byte	.LCFI1-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1940,8 +1940,8 @@ s_reent:
 	.4byte	.LASF207
 	.byte	0x1
 	.byte	0x2c
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xee2
@@ -1972,8 +1972,8 @@ s_reent:
 	.4byte	.LASF209
 	.byte	0x1
 	.byte	0x5d
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xf07
@@ -2520,18 +2520,18 @@ s_reent:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB17
-	.4byte	.LFE17
-	.4byte	.LFB18
-	.4byte	.LFE18
+	.4byte	.LFB26
+	.4byte	.LFE26
+	.4byte	.LFB27
+	.4byte	.LFE27
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

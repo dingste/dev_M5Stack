@@ -991,7 +991,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform.h" 1
@@ -2152,6 +2152,77 @@ typedef void (*TaskFunction_t)( void * );
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/deprecated_definitions.h" 1
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 2
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void *get_sp()
+{
+    void *sp;
+    asm volatile ("mov %0, sp;" : "=r" (sp));
+    return sp;
+}
+
+
+
+
+
+static inline void cpu_write_dtlb(uint32_t vpn, unsigned attr)
+{
+    asm volatile ("wdtlb  %1, %0; dsync\n" :: "r" (vpn), "r" (attr));
+}
+
+
+static inline void cpu_write_itlb(unsigned vpn, unsigned attr)
+{
+    asm volatile ("witlb  %1, %0; isync\n" :: "r" (vpn), "r" (attr));
+}
+
+static inline void cpu_init_memctl()
+{
+
+    uint32_t memctl = 0x00000000;
+    asm volatile ("wsr %0, " "MEMCTL" : : "r" (memctl));;
+
+}
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void cpu_configure_region_protection()
+{
+    const uint32_t pages_to_protect[] = {0x00000000, 0x80000000, 0xa0000000, 0xc0000000, 0xe0000000};
+    for (int i = 0; i < sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
+        cpu_write_dtlb(pages_to_protect[i], 0xf);
+        cpu_write_itlb(pages_to_protect[i], 0xf);
+    }
+    cpu_write_dtlb(0x20000000, 0);
+    cpu_write_itlb(0x20000000, 0);
+}
+
+
+
+
+
+void esp_cpu_stall(int cpu_id);
+
+
+
+
+
+void esp_cpu_unstall(int cpu_id);
+
+
+
+
+
+void esp_cpu_reset(int cpu_id);
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 3 4
+_Bool 
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+    esp_cpu_in_ocd_debug_mode();
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+
 
 
 
@@ -2542,6 +2613,9 @@ void heap_caps_dump_all();
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
 # 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
 typedef struct {
@@ -2597,7 +2671,7 @@ inline static
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_dma_capable(const void *p)
+                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
 {
     return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
 }
@@ -2606,24 +2680,37 @@ inline static
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_executable(const void *p)
+                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
+{
+    return ((intptr_t)p) % 4 == 0;
+}
+
+inline static 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
 {
     intptr_t ip = (intptr_t) p;
     return (ip >= 0x400D0000 && ip < 0x40400000)
         || (ip >= 0x40080000 && ip < 0x400A0000)
+        || (ip >= 0x40000000 && ip < 0x40070000)
+
+        || (ip >= 0x40078000 && ip < 0x40080000)
+
         || (ip >= 0x400C0000 && ip < 0x400C2000);
 }
 
 inline static 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_byte_accessible(const void *p)
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
 {
     
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x40000000);
 
@@ -2633,14 +2720,14 @@ inline static
 }
 
 inline static 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_internal(const void *p) {
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
     
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
     r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
@@ -2649,18 +2736,18 @@ inline static
 
 
 inline static 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_external_ram(const void *p) {
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
     return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
 }
 
 inline static 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_iram(const void *p) {
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
 
 
 
@@ -2669,19 +2756,35 @@ inline static
 }
 
 inline static 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_drom(const void *p) {
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
     return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
 }
 
 inline static 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_dram(const void *p) {
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
     return ((intptr_t)p >= 0x3FAE0000 && (intptr_t)p < 0x40000000);
+}
+
+inline static 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
+    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x3FFFFFFC);
+}
+
+inline static 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
+    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400BFFFC);
 }
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
@@ -2730,24 +2833,24 @@ typedef struct {
 void vPortAssertIfInISR();
 # 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortCPUInitializeMutex(portMUX_TYPE *mux);
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vTaskExitCritical( portMUX_TYPE *mux );
 void vTaskEnterCritical( portMUX_TYPE *mux );
 void vPortCPUAcquireMutex(portMUX_TYPE *mux);
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
 _Bool 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
     vPortCPUAcquireMutexTimeout(portMUX_TYPE *mux, int timeout_cycles);
 void vPortCPUReleaseMutex(portMUX_TYPE *mux);
-# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline unsigned portENTER_CRITICAL_NESTED() {
  unsigned state = ({ unsigned __tmp; __asm__ __volatile__( "rsil	%0, " "3" "\n" : "=a" (__tmp) : : "memory" ); __tmp;});
  ;
  return state;
 }
-# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, uint32_t *set) {
     __asm__ __volatile__ (
         "WSR 	    %2,SCOMPARE1 \n"
@@ -2756,20 +2859,20 @@ static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, u
         :"r"(addr), "r"(compare), "0"(*set)
         );
 }
-# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortYield( void );
 void _frxt_setup_switch( void );
 
 
 
 static inline uint32_t xPortGetCoreID();
-# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef struct {
 
  volatile StackType_t* coproc_area;
-# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 } xMPU_SETTINGS;
-# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 extern void esp_vApplicationIdleHook( void );
 extern void esp_vApplicationTickHook( void );
 
@@ -2780,10 +2883,10 @@ extern void esp_vApplicationTickHook( void );
 
 void _xt_coproc_release(volatile void * coproc_sa_base);
 void vApplicationSleep( TickType_t xExpectedIdleTime );
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/mpu_wrappers.h" 1
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h" 1
@@ -2805,7 +2908,7 @@ void vApplicationSleep( TickType_t xExpectedIdleTime );
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
 typedef volatile struct {
     uint32_t bt_select;
     uint32_t out;
@@ -3142,7 +3245,7 @@ void esp_intr_noniram_disable();
 void esp_intr_noniram_enable();
 # 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
 extern const uint32_t GPIO_PIN_MUX_REG[40];
 # 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
@@ -3617,25 +3720,25 @@ typedef enum {
 typedef esp_sleep_source_t esp_sleep_wakeup_cause_t;
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_disable_wakeup_source(esp_sleep_source_t source);
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ulp_wakeup();
-# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_timer_wakeup(uint64_t time_in_us);
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_touchpad_wakeup();
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 touch_pad_t esp_sleep_get_touchpad_wakeup_status();
-# 161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext0_wakeup(gpio_num_t gpio_num, int level);
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext1_wakeup(uint64_t mask, esp_sleep_ext1_wakeup_mode_t mode);
-# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_gpio_wakeup();
-# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_uart_wakeup(int uart_num);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 uint64_t esp_sleep_get_ext1_wakeup_status();
-# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
                                    esp_sleep_pd_option_t option);
 
@@ -3645,11 +3748,11 @@ esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
 
 
 void esp_deep_sleep_start() __attribute__((noreturn));
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_light_sleep_start();
-# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_deep_sleep(uint64_t time_in_us) __attribute__((noreturn));
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated));
 
 
@@ -3659,7 +3762,7 @@ void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated)
 
 
 esp_sleep_wakeup_cause_t esp_sleep_get_wakeup_cause();
-# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_wake_deep_sleep(void);
 
 
@@ -3667,7 +3770,7 @@ void esp_wake_deep_sleep(void);
 
 
 typedef void (*esp_deep_sleep_wake_stub_fn_t)(void);
-# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_set_deep_sleep_wake_stub(esp_deep_sleep_wake_stub_fn_t new_stub);
 
 
@@ -3691,6 +3794,12 @@ void esp_default_wake_deep_sleep(void);
 
 void esp_deep_sleep_disable_rom_logging(void);
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+       
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+const char* esp_get_idf_version(void);
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
 
 
 
@@ -3702,7 +3811,7 @@ typedef enum {
     ESP_MAC_BT,
     ESP_MAC_ETH,
 } esp_mac_type_t;
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef enum {
     ESP_RST_UNKNOWN,
     ESP_RST_POWERON,
@@ -3745,9 +3854,9 @@ typedef void (*shutdown_handler_t)(void);
 
 
 esp_err_t esp_register_shutdown_handler(shutdown_handler_t handle);
-# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_restart(void) __attribute__ ((noreturn));
-# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
@@ -3756,11 +3865,11 @@ void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
 esp_reset_reason_t esp_reset_reason(void);
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_time(void) __attribute__ ((deprecated));
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_get_free_heap_size(void);
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
@@ -3770,36 +3879,28 @@ uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
 uint32_t esp_get_minimum_free_heap_size( void );
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_random(void);
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_fill_random(void *buf, size_t len);
-# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_set(uint8_t *mac);
-# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_get(uint8_t *mac);
-# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_custom(uint8_t *mac);
-# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_default(uint8_t *mac);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t system_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_read_mac(uint8_t* mac, esp_mac_type_t type);
-# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_derive_local_mac(uint8_t* local_mac, const uint8_t* universal_mac);
-# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 const char* system_get_sdk_version(void) __attribute__ ((deprecated));
-
-
-
-
-
-
-
-const char* esp_get_idf_version(void);
 
 
 
@@ -3808,7 +3909,7 @@ const char* esp_get_idf_version(void);
 typedef enum {
     CHIP_ESP32 = 1,
 } esp_chip_model_t;
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef struct {
     esp_chip_model_t model;
     uint32_t features;
@@ -3821,10 +3922,10 @@ typedef struct {
 
 
 void esp_chip_info(esp_chip_info_t* out_info);
-# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters, BaseType_t xRunPrivileged ) ;
-# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 BaseType_t xPortStartScheduler( void ) ;
 
 
@@ -3860,14 +3961,14 @@ BaseType_t xPortInIsrContext();
 
 
 BaseType_t xPortInterruptedFromISRContext();
-# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  struct xMEMORY_REGION;
  void vPortStoreTaskMPUSettings( xMPU_SETTINGS *xMPUSettings, const struct xMEMORY_REGION * const xRegions, StackType_t *pxBottomOfStack, uint32_t usStackDepth ) ;
  void vPortReleaseTaskMPUSettings( xMPU_SETTINGS *xMPUSettings );
 
 
 
-static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
+static inline uint32_t __attribute__((section(".iram1" "." "11"))) xPortGetCoreID() {
     int id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -3878,6 +3979,21 @@ static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
 
 
 uint32_t xPortGetTickRateHz(void);
+
+
+static inline 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 3 4
+             _Bool 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+                  __attribute__((section(".iram1" "." "12"))) xPortCanYield(void)
+{
+    uint32_t ps_reg = 0;
+
+
+    asm volatile ("rsr %0, " "PS" : "=r" (ps_reg));;
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+    return ((ps_reg & 0x0000000F) == 0);
+}
 
 
 
@@ -4187,7 +4303,7 @@ typedef enum
           TaskHandle_t * const pvCreatedTask,
           const BaseType_t xCoreID);
 # 432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
- static inline __attribute__((section(".iram1"))) BaseType_t xTaskCreate(
+ static inline __attribute__((section(".iram1" "." "13"))) BaseType_t xTaskCreate(
    TaskFunction_t pvTaskCode,
    const char * const pcName,
    const uint32_t usStackDepth,
@@ -5020,7 +5136,61 @@ int select(int nfds, _types_fd_set *readfds, _types_fd_set *writefds, _types_fd_
 
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/sntp.h" 1
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/sntp.h"
+typedef enum {
+    SNTP_SYNC_MODE_IMMED,
+    SNTP_SYNC_MODE_SMOOTH,
+} sntp_sync_mode_t;
 
+
+typedef enum {
+    SNTP_SYNC_STATUS_RESET,
+    SNTP_SYNC_STATUS_COMPLETED,
+    SNTP_SYNC_STATUS_IN_PROGRESS,
+} sntp_sync_status_t;
+
+
+
+
+
+
+typedef void (*sntp_sync_time_cb_t) (struct timeval *tv);
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/sntp.h"
+void sntp_sync_time(struct timeval *tv);
+
+
+
+
+
+
+
+void sntp_set_sync_mode(sntp_sync_mode_t sync_mode);
+
+
+
+
+
+
+
+sntp_sync_mode_t sntp_get_sync_mode(void);
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/sntp.h"
+sntp_sync_status_t sntp_get_sync_status(void);
+
+
+
+
+
+
+void sntp_set_sync_status(sntp_sync_status_t sync_status);
+
+
+
+
+
+
+void sntp_set_time_sync_notification_cb(sntp_sync_time_cb_t callback);
+# 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h" 1
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h"
 
@@ -5092,6 +5262,10 @@ sys_sem_t* sys_thread_sem_init(void);
 void sys_thread_sem_deinit(void);
 sys_sem_t* sys_thread_sem_get(void);
 # 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/arch/cc.h" 2
+
+
+
+
 
 
 
@@ -5702,11 +5876,7 @@ typedef void (*dns_found_callback)(const char *name, const ip_addr_t *ipaddr, vo
 void dns_init(void);
 void dns_tmr(void);
 void dns_setserver(u8_t numdns, const ip_addr_t *dnsserver);
-
-ip_addr_t dns_getserver(u8_t numdns);
-
-
-
+const ip_addr_t* dns_getserver(u8_t numdns);
 err_t dns_gethostbyname(const char *hostname, ip_addr_t *addr,
                                    dns_found_callback found, void *callback_arg);
 err_t dns_gethostbyname_addrtype(const char *hostname, ip_addr_t *addr,
@@ -5714,13 +5884,13 @@ err_t dns_gethostbyname_addrtype(const char *hostname, ip_addr_t *addr,
                                    u8_t dns_addrtype);
 
 void dns_clear_servers(
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/dns.h" 3 4
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/dns.h" 3 4
                                   _Bool 
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/dns.h"
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/dns.h"
                                        keep_fallback);
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform_esp32_idf.h" 2
 
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/queue.h" 1
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/queue.h" 1
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform_esp32_idf.h" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 1
@@ -5756,21 +5926,21 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform_esp32_idf.h" 2
 
 
-char *platform_create_id_string();
+char *platform_create_id_string(void);
 int platform_random(int max);
-long long platform_tick_get_ms();
+long long platform_tick_get_ms(void);
 void ms_to_timeval(int timeout_ms, struct timeval *tv);
 # 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform.h" 2
 # 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 2
@@ -5905,14 +6075,1003 @@ char *strsignal (int __signo);
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_config.h" 2
 # 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h" 2
-
-
-
-
-
-typedef struct esp_mqtt_client* esp_mqtt_client_handle_t;
-# 32 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h" 1
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event_base.h" 1
+# 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event_base.h"
+typedef const char* esp_event_base_t;
+typedef void* esp_event_loop_handle_t;
+typedef void (*esp_event_handler_t)(void* event_handler_arg,
+                                        esp_event_base_t event_base,
+                                        int32_t event_id,
+                                        void* event_data);
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/queue.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_interface.h" 1
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_interface.h"
 typedef enum {
+    ESP_IF_WIFI_STA = 0,
+    ESP_IF_WIFI_AP,
+    ESP_IF_ETH,
+    ESP_IF_MAX
+} esp_interface_t;
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h" 2
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 2
+
+
+
+
+
+typedef enum {
+    WIFI_MODE_NULL = 0,
+    WIFI_MODE_STA,
+    WIFI_MODE_AP,
+    WIFI_MODE_APSTA,
+    WIFI_MODE_MAX
+} wifi_mode_t;
+
+typedef esp_interface_t wifi_interface_t;
+
+
+
+
+typedef enum {
+    WIFI_COUNTRY_POLICY_AUTO,
+    WIFI_COUNTRY_POLICY_MANUAL,
+} wifi_country_policy_t;
+
+
+typedef struct {
+    char cc[3];
+    uint8_t schan;
+    uint8_t nchan;
+    int8_t max_tx_power;
+    wifi_country_policy_t policy;
+} wifi_country_t;
+
+typedef enum {
+    WIFI_AUTH_OPEN = 0,
+    WIFI_AUTH_WEP,
+    WIFI_AUTH_WPA_PSK,
+    WIFI_AUTH_WPA2_PSK,
+    WIFI_AUTH_WPA_WPA2_PSK,
+    WIFI_AUTH_WPA2_ENTERPRISE,
+    WIFI_AUTH_MAX
+} wifi_auth_mode_t;
+
+typedef enum {
+    WIFI_REASON_UNSPECIFIED = 1,
+    WIFI_REASON_AUTH_EXPIRE = 2,
+    WIFI_REASON_AUTH_LEAVE = 3,
+    WIFI_REASON_ASSOC_EXPIRE = 4,
+    WIFI_REASON_ASSOC_TOOMANY = 5,
+    WIFI_REASON_NOT_AUTHED = 6,
+    WIFI_REASON_NOT_ASSOCED = 7,
+    WIFI_REASON_ASSOC_LEAVE = 8,
+    WIFI_REASON_ASSOC_NOT_AUTHED = 9,
+    WIFI_REASON_DISASSOC_PWRCAP_BAD = 10,
+    WIFI_REASON_DISASSOC_SUPCHAN_BAD = 11,
+    WIFI_REASON_IE_INVALID = 13,
+    WIFI_REASON_MIC_FAILURE = 14,
+    WIFI_REASON_4WAY_HANDSHAKE_TIMEOUT = 15,
+    WIFI_REASON_GROUP_KEY_UPDATE_TIMEOUT = 16,
+    WIFI_REASON_IE_IN_4WAY_DIFFERS = 17,
+    WIFI_REASON_GROUP_CIPHER_INVALID = 18,
+    WIFI_REASON_PAIRWISE_CIPHER_INVALID = 19,
+    WIFI_REASON_AKMP_INVALID = 20,
+    WIFI_REASON_UNSUPP_RSN_IE_VERSION = 21,
+    WIFI_REASON_INVALID_RSN_IE_CAP = 22,
+    WIFI_REASON_802_1X_AUTH_FAILED = 23,
+    WIFI_REASON_CIPHER_SUITE_REJECTED = 24,
+
+    WIFI_REASON_BEACON_TIMEOUT = 200,
+    WIFI_REASON_NO_AP_FOUND = 201,
+    WIFI_REASON_AUTH_FAIL = 202,
+    WIFI_REASON_ASSOC_FAIL = 203,
+    WIFI_REASON_HANDSHAKE_TIMEOUT = 204,
+    WIFI_REASON_CONNECTION_FAIL = 205,
+    WIFI_REASON_AUTH_CHANGED = 206,
+} wifi_err_reason_t;
+
+typedef enum {
+    WIFI_SECOND_CHAN_NONE = 0,
+    WIFI_SECOND_CHAN_ABOVE,
+    WIFI_SECOND_CHAN_BELOW,
+} wifi_second_chan_t;
+
+typedef enum {
+    WIFI_SCAN_TYPE_ACTIVE = 0,
+    WIFI_SCAN_TYPE_PASSIVE,
+} wifi_scan_type_t;
+
+
+typedef struct {
+    uint32_t min;
+    uint32_t max;
+
+} wifi_active_scan_time_t;
+
+
+typedef struct {
+    wifi_active_scan_time_t active;
+    uint32_t passive;
+
+} wifi_scan_time_t;
+
+
+typedef struct {
+    uint8_t *ssid;
+    uint8_t *bssid;
+    uint8_t channel;
+    
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        show_hidden;
+    wifi_scan_type_t scan_type;
+    wifi_scan_time_t scan_time;
+} wifi_scan_config_t;
+
+typedef enum {
+    WIFI_CIPHER_TYPE_NONE = 0,
+    WIFI_CIPHER_TYPE_WEP40,
+    WIFI_CIPHER_TYPE_WEP104,
+    WIFI_CIPHER_TYPE_TKIP,
+    WIFI_CIPHER_TYPE_CCMP,
+    WIFI_CIPHER_TYPE_TKIP_CCMP,
+    WIFI_CIPHER_TYPE_UNKNOWN,
+} wifi_cipher_type_t;
+
+
+
+
+
+typedef enum {
+    WIFI_ANT_ANT0,
+    WIFI_ANT_ANT1,
+    WIFI_ANT_MAX,
+} wifi_ant_t;
+
+
+typedef struct {
+    uint8_t bssid[6];
+    uint8_t ssid[33];
+    uint8_t primary;
+    wifi_second_chan_t second;
+    int8_t rssi;
+    wifi_auth_mode_t authmode;
+    wifi_cipher_type_t pairwise_cipher;
+    wifi_cipher_type_t group_cipher;
+    wifi_ant_t ant;
+    uint32_t phy_11b:1;
+    uint32_t phy_11g:1;
+    uint32_t phy_11n:1;
+    uint32_t phy_lr:1;
+    uint32_t wps:1;
+    uint32_t reserved:27;
+    wifi_country_t country;
+} wifi_ap_record_t;
+
+typedef enum {
+    WIFI_FAST_SCAN = 0,
+    WIFI_ALL_CHANNEL_SCAN,
+}wifi_scan_method_t;
+
+typedef enum {
+    WIFI_CONNECT_AP_BY_SIGNAL = 0,
+    WIFI_CONNECT_AP_BY_SECURITY,
+}wifi_sort_method_t;
+
+
+typedef struct {
+    int8_t rssi;
+    wifi_auth_mode_t authmode;
+}wifi_fast_scan_threshold_t;
+
+typedef wifi_fast_scan_threshold_t wifi_scan_threshold_t;
+
+typedef enum {
+    WIFI_PS_NONE,
+    WIFI_PS_MIN_MODEM,
+    WIFI_PS_MAX_MODEM,
+} wifi_ps_type_t;
+# 205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+typedef enum {
+    WIFI_BW_HT20 = 1,
+    WIFI_BW_HT40,
+} wifi_bandwidth_t;
+
+
+typedef struct {
+    uint8_t ssid[32];
+    uint8_t password[64];
+    uint8_t ssid_len;
+    uint8_t channel;
+    wifi_auth_mode_t authmode;
+    uint8_t ssid_hidden;
+    uint8_t max_connection;
+    uint16_t beacon_interval;
+} wifi_ap_config_t;
+
+
+typedef struct {
+    uint8_t ssid[32];
+    uint8_t password[64];
+    wifi_scan_method_t scan_method;
+    
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        bssid_set;
+    uint8_t bssid[6];
+    uint8_t channel;
+    uint16_t listen_interval;
+    wifi_sort_method_t sort_method;
+    wifi_scan_threshold_t threshold;
+} wifi_sta_config_t;
+
+
+
+
+
+
+
+typedef union {
+    wifi_ap_config_t ap;
+    wifi_sta_config_t sta;
+} wifi_config_t;
+
+
+typedef struct {
+    uint8_t mac[6];
+    int8_t rssi;
+    uint32_t phy_11b:1;
+    uint32_t phy_11g:1;
+    uint32_t phy_11n:1;
+    uint32_t phy_lr:1;
+    uint32_t reserved:28;
+} wifi_sta_info_t;
+
+
+
+
+typedef struct {
+    wifi_sta_info_t sta[(10)];
+    int num;
+} wifi_sta_list_t;
+
+typedef enum {
+    WIFI_STORAGE_FLASH,
+    WIFI_STORAGE_RAM,
+} wifi_storage_t;
+
+
+
+
+
+
+typedef enum {
+    WIFI_VND_IE_TYPE_BEACON,
+    WIFI_VND_IE_TYPE_PROBE_REQ,
+    WIFI_VND_IE_TYPE_PROBE_RESP,
+    WIFI_VND_IE_TYPE_ASSOC_REQ,
+    WIFI_VND_IE_TYPE_ASSOC_RESP,
+} wifi_vendor_ie_type_t;
+
+
+
+
+
+
+typedef enum {
+    WIFI_VND_IE_ID_0,
+    WIFI_VND_IE_ID_1,
+} wifi_vendor_ie_id_t;
+# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+typedef struct {
+    uint8_t element_id;
+    uint8_t length;
+    uint8_t vendor_oui[3];
+    uint8_t vendor_oui_type;
+    uint8_t payload[0];
+} vendor_ie_data_t;
+
+
+typedef struct {
+    signed rssi:8;
+    unsigned rate:5;
+    unsigned :1;
+    unsigned sig_mode:2;
+    unsigned :16;
+    unsigned mcs:7;
+    unsigned cwb:1;
+    unsigned :16;
+    unsigned smoothing:1;
+    unsigned not_sounding:1;
+    unsigned :1;
+    unsigned aggregation:1;
+    unsigned stbc:2;
+    unsigned fec_coding:1;
+    unsigned sgi:1;
+    signed noise_floor:8;
+    unsigned ampdu_cnt:8;
+    unsigned channel:4;
+    unsigned secondary_channel:4;
+    unsigned :8;
+    unsigned timestamp:32;
+    unsigned :32;
+    unsigned :31;
+    unsigned ant:1;
+    unsigned sig_len:12;
+    unsigned :12;
+    unsigned rx_state:8;
+} wifi_pkt_rx_ctrl_t;
+
+
+
+typedef struct {
+    wifi_pkt_rx_ctrl_t rx_ctrl;
+    uint8_t payload[0];
+} wifi_promiscuous_pkt_t;
+
+
+
+
+
+
+
+typedef enum {
+    WIFI_PKT_MGMT,
+    WIFI_PKT_CTRL,
+    WIFI_PKT_DATA,
+    WIFI_PKT_MISC,
+} wifi_promiscuous_pkt_type_t;
+# 380 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+typedef struct {
+    uint32_t filter_mask;
+} wifi_promiscuous_filter_t;
+# 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+typedef struct {
+    
+# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        lltf_en;
+    
+# 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        htltf_en;
+    
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        stbc_htltf2_en;
+    
+# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        ltf_merge_en;
+    
+# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        channel_filter_en;
+    
+# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        manu_scale;
+    uint8_t shift;
+} wifi_csi_config_t;
+
+
+
+
+
+typedef struct {
+    wifi_pkt_rx_ctrl_t rx_ctrl;
+    uint8_t mac[6];
+    
+# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        first_word_invalid;
+    int8_t *buf;
+    uint16_t len;
+} wifi_csi_info_t;
+
+
+
+
+
+typedef struct {
+    uint8_t gpio_select: 1,
+            gpio_num: 7;
+} wifi_ant_gpio_t;
+
+
+
+
+
+typedef struct {
+    wifi_ant_gpio_t gpio_cfg[4];
+} wifi_ant_gpio_config_t;
+
+
+
+
+
+typedef enum {
+    WIFI_ANT_MODE_ANT0,
+    WIFI_ANT_MODE_ANT1,
+    WIFI_ANT_MODE_AUTO,
+    WIFI_ANT_MODE_MAX,
+} wifi_ant_mode_t;
+
+
+
+
+
+typedef struct {
+    wifi_ant_mode_t rx_ant_mode;
+    wifi_ant_t rx_ant_default;
+    wifi_ant_mode_t tx_ant_mode;
+    uint8_t enabled_ant0: 4,
+                    enabled_ant1: 4;
+} wifi_ant_config_t;
+
+
+
+
+
+typedef enum {
+    WIFI_PHY_RATE_1M_L = 0x00,
+    WIFI_PHY_RATE_2M_L = 0x01,
+    WIFI_PHY_RATE_5M_L = 0x02,
+    WIFI_PHY_RATE_11M_L = 0x03,
+    WIFI_PHY_RATE_2M_S = 0x05,
+    WIFI_PHY_RATE_5M_S = 0x06,
+    WIFI_PHY_RATE_11M_S = 0x07,
+    WIFI_PHY_RATE_48M = 0x08,
+    WIFI_PHY_RATE_24M = 0x09,
+    WIFI_PHY_RATE_12M = 0x0A,
+    WIFI_PHY_RATE_6M = 0x0B,
+    WIFI_PHY_RATE_54M = 0x0C,
+    WIFI_PHY_RATE_36M = 0x0D,
+    WIFI_PHY_RATE_18M = 0x0E,
+    WIFI_PHY_RATE_9M = 0x0F,
+    WIFI_PHY_RATE_MCS0_LGI = 0x10,
+    WIFI_PHY_RATE_MCS1_LGI = 0x11,
+    WIFI_PHY_RATE_MCS2_LGI = 0x12,
+    WIFI_PHY_RATE_MCS3_LGI = 0x13,
+    WIFI_PHY_RATE_MCS4_LGI = 0x14,
+    WIFI_PHY_RATE_MCS5_LGI = 0x15,
+    WIFI_PHY_RATE_MCS6_LGI = 0x16,
+    WIFI_PHY_RATE_MCS7_LGI = 0x17,
+    WIFI_PHY_RATE_MCS0_SGI = 0x18,
+    WIFI_PHY_RATE_MCS1_SGI = 0x19,
+    WIFI_PHY_RATE_MCS2_SGI = 0x1A,
+    WIFI_PHY_RATE_MCS3_SGI = 0x1B,
+    WIFI_PHY_RATE_MCS4_SGI = 0x1C,
+    WIFI_PHY_RATE_MCS5_SGI = 0x1D,
+    WIFI_PHY_RATE_MCS6_SGI = 0x1E,
+    WIFI_PHY_RATE_MCS7_SGI = 0x1F,
+    WIFI_PHY_RATE_LORA_250K = 0x29,
+    WIFI_PHY_RATE_LORA_500K = 0x2A,
+    WIFI_PHY_RATE_MAX,
+} wifi_phy_rate_t;
+
+
+
+
+
+typedef enum {
+    WIFI_IOCTL_SET_STA_HT2040_COEX = 1,
+    WIFI_IOCTL_GET_STA_HT2040_COEX,
+    WIFI_IOCTL_MAX,
+} wifi_ioctl_cmd_t;
+
+
+
+
+
+typedef struct {
+    int enable;
+} wifi_ht2040_coex_t;
+
+
+
+
+
+typedef struct {
+    union {
+        wifi_ht2040_coex_t ht2040_coex;
+    } data;
+} wifi_ioctl_config_t;
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h" 2
+
+
+typedef struct dhcps_state{
+        s16_t state;
+} dhcps_state;
+
+typedef struct dhcps_msg {
+        u8_t op, htype, hlen, hops;
+        u8_t xid[4];
+        u16_t secs, flags;
+        u8_t ciaddr[4];
+        u8_t yiaddr[4];
+        u8_t siaddr[4];
+        u8_t giaddr[4];
+        u8_t chaddr[16];
+        u8_t sname[64];
+        u8_t file[128];
+        u8_t options[312];
+}dhcps_msg;
+
+
+typedef struct {
+ 
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h" 3 4
+_Bool 
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h"
+     enable;
+ ip4_addr_t start_ip;
+ ip4_addr_t end_ip;
+} dhcps_lease_t;
+
+enum dhcps_offer_option{
+ OFFER_START = 0x00,
+ OFFER_ROUTER = 0x01,
+ OFFER_DNS = 0x02,
+ OFFER_END
+};
+
+
+
+
+
+
+struct dhcps_pool{
+ ip4_addr_t ip;
+ u8_t mac[6];
+ u32_t lease_timer;
+};
+
+typedef u32_t dhcps_time_t;
+typedef u8_t dhcps_offer_t;
+
+typedef struct {
+        dhcps_offer_t dhcps_offer;
+        dhcps_offer_t dhcps_dns;
+        dhcps_time_t dhcps_time;
+        dhcps_lease_t dhcps_poll;
+} dhcps_options_t;
+
+typedef void (*dhcps_cb_t)(u8_t client_ip[4]);
+
+static inline 
+# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h" 3 4
+             _Bool 
+# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h"
+                  dhcps_router_enabled (dhcps_offer_t offer)
+{
+    return (offer & OFFER_ROUTER) != 0;
+}
+
+static inline 
+# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h" 3 4
+             _Bool 
+# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h"
+                  dhcps_dns_enabled (dhcps_offer_t offer)
+{
+    return (offer & OFFER_DNS) != 0;
+}
+
+void dhcps_start(struct netif *netif, ip4_addr_t ip);
+void dhcps_stop(struct netif *netif);
+void *dhcps_option_info(u8_t op_id, u32_t opt_len);
+void dhcps_set_option_info(u8_t op_id, void *opt_info, u32_t opt_len);
+
+# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h" 3 4
+_Bool 
+# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h"
+    dhcp_search_ip_on_mac(u8_t *mac, ip4_addr_t *ip);
+void dhcps_dns_setserver(const ip_addr_t *dnsserver);
+ip4_addr_t dhcps_dns_getserver();
+void dhcps_set_new_lease_cb(dhcps_cb_t cb);
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
+
+typedef dhcps_lease_t tcpip_adapter_dhcps_lease_t;
+# 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+typedef struct {
+    ip4_addr_t ip;
+    ip4_addr_t netmask;
+    ip4_addr_t gw;
+} tcpip_adapter_ip_info_t;
+
+
+
+typedef struct {
+    ip6_addr_t ip;
+} tcpip_adapter_ip6_info_t;
+
+
+
+
+
+typedef struct {
+    uint8_t mac[6];
+    ip4_addr_t ip;
+} tcpip_adapter_sta_info_t;
+
+
+
+
+
+typedef struct {
+    tcpip_adapter_sta_info_t sta[(10)];
+    int num;
+} tcpip_adapter_sta_list_t;
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+typedef enum {
+    TCPIP_ADAPTER_IF_STA = 0,
+    TCPIP_ADAPTER_IF_AP,
+    TCPIP_ADAPTER_IF_ETH,
+    TCPIP_ADAPTER_IF_MAX
+} tcpip_adapter_if_t;
+
+
+typedef enum {
+    TCPIP_ADAPTER_DNS_MAIN= 0,
+    TCPIP_ADAPTER_DNS_BACKUP,
+    TCPIP_ADAPTER_DNS_FALLBACK,
+    TCPIP_ADAPTER_DNS_MAX
+} tcpip_adapter_dns_type_t;
+
+
+typedef struct {
+    ip_addr_t ip;
+} tcpip_adapter_dns_info_t;
+
+
+typedef enum {
+    TCPIP_ADAPTER_DHCP_INIT = 0,
+    TCPIP_ADAPTER_DHCP_STARTED,
+    TCPIP_ADAPTER_DHCP_STOPPED,
+    TCPIP_ADAPTER_DHCP_STATUS_MAX
+} tcpip_adapter_dhcp_status_t;
+
+
+typedef enum{
+    TCPIP_ADAPTER_OP_START = 0,
+    TCPIP_ADAPTER_OP_SET,
+    TCPIP_ADAPTER_OP_GET,
+    TCPIP_ADAPTER_OP_MAX
+} tcpip_adapter_dhcp_option_mode_t;
+
+
+typedef tcpip_adapter_dhcp_option_mode_t tcpip_adapter_option_mode_t;
+
+
+typedef enum{
+    TCPIP_ADAPTER_DOMAIN_NAME_SERVER = 6,
+    TCPIP_ADAPTER_ROUTER_SOLICITATION_ADDRESS = 32,
+    TCPIP_ADAPTER_REQUESTED_IP_ADDRESS = 50,
+    TCPIP_ADAPTER_IP_ADDRESS_LEASE_TIME = 51,
+    TCPIP_ADAPTER_IP_REQUEST_RETRY_TIME = 52,
+} tcpip_adapter_dhcp_option_id_t;
+
+
+typedef tcpip_adapter_dhcp_option_id_t tcpip_adapter_option_id_t;
+
+
+
+
+
+
+void tcpip_adapter_init(void);
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_eth_start(uint8_t *mac, tcpip_adapter_ip_info_t *ip_info);
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_sta_start(uint8_t *mac, tcpip_adapter_ip_info_t *ip_info);
+# 199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_ap_start(uint8_t *mac, tcpip_adapter_ip_info_t *ip_info);
+# 220 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_stop(tcpip_adapter_if_t tcpip_if);
+# 236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_up(tcpip_adapter_if_t tcpip_if);
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_down(tcpip_adapter_if_t tcpip_if);
+# 269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_get_ip_info(tcpip_adapter_if_t tcpip_if, tcpip_adapter_ip_info_t *ip_info);
+# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_set_ip_info(tcpip_adapter_if_t tcpip_if, const tcpip_adapter_ip_info_t *ip_info);
+# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_set_dns_info(tcpip_adapter_if_t tcpip_if, tcpip_adapter_dns_type_t type, tcpip_adapter_dns_info_t *dns);
+# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_get_dns_info(tcpip_adapter_if_t tcpip_if, tcpip_adapter_dns_type_t type, tcpip_adapter_dns_info_t *dns);
+# 358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_get_old_ip_info(tcpip_adapter_if_t tcpip_if, tcpip_adapter_ip_info_t *ip_info);
+# 376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_set_old_ip_info(tcpip_adapter_if_t tcpip_if, const tcpip_adapter_ip_info_t *ip_info);
+# 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_create_ip6_linklocal(tcpip_adapter_if_t tcpip_if);
+# 407 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_get_ip6_linklocal(tcpip_adapter_if_t tcpip_if, ip6_addr_t *if_ip6);
+# 422 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_get_ip6_global(tcpip_adapter_if_t tcpip_if, ip6_addr_t *if_ip6);
+# 439 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_dhcps_get_status(tcpip_adapter_if_t tcpip_if, tcpip_adapter_dhcp_status_t *status);
+# 455 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_dhcps_option(tcpip_adapter_dhcp_option_mode_t opt_op, tcpip_adapter_dhcp_option_id_t opt_id, void *opt_val, uint32_t opt_len);
+# 469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_dhcps_start(tcpip_adapter_if_t tcpip_if);
+# 484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_dhcps_stop(tcpip_adapter_if_t tcpip_if);
+# 495 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_dhcpc_get_status(tcpip_adapter_if_t tcpip_if, tcpip_adapter_dhcp_status_t *status);
+# 510 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_dhcpc_option(tcpip_adapter_dhcp_option_mode_t opt_op, tcpip_adapter_dhcp_option_id_t opt_id, void *opt_val, uint32_t opt_len);
+# 527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_dhcpc_start(tcpip_adapter_if_t tcpip_if);
+# 544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_dhcpc_stop(tcpip_adapter_if_t tcpip_if);
+# 560 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_eth_input(void *buffer, uint16_t len, void *eb);
+# 578 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_sta_input(void *buffer, uint16_t len, void *eb);
+# 596 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_ap_input(void *buffer, uint16_t len, void *eb);
+# 611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_interface_t tcpip_adapter_get_esp_if(void *dev);
+# 624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_get_sta_list(const wifi_sta_list_t *wifi_sta_list, tcpip_adapter_sta_list_t *tcpip_sta_list);
+# 638 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_set_hostname(tcpip_adapter_if_t tcpip_if, const char *hostname);
+# 651 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_get_hostname(tcpip_adapter_if_t tcpip_if, const char **hostname);
+# 666 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_get_netif(tcpip_adapter_if_t tcpip_if, void ** netif);
+# 677 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+
+# 677 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 3 4
+_Bool 
+# 677 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+    tcpip_adapter_is_netif_up(tcpip_adapter_if_t tcpip_if);
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h" 2
+
+
+
+
+
+typedef enum {
+    SYSTEM_EVENT_WIFI_READY = 0,
+    SYSTEM_EVENT_SCAN_DONE,
+    SYSTEM_EVENT_STA_START,
+    SYSTEM_EVENT_STA_STOP,
+    SYSTEM_EVENT_STA_CONNECTED,
+    SYSTEM_EVENT_STA_DISCONNECTED,
+    SYSTEM_EVENT_STA_AUTHMODE_CHANGE,
+    SYSTEM_EVENT_STA_GOT_IP,
+    SYSTEM_EVENT_STA_LOST_IP,
+    SYSTEM_EVENT_STA_WPS_ER_SUCCESS,
+    SYSTEM_EVENT_STA_WPS_ER_FAILED,
+    SYSTEM_EVENT_STA_WPS_ER_TIMEOUT,
+    SYSTEM_EVENT_STA_WPS_ER_PIN,
+    SYSTEM_EVENT_STA_WPS_ER_PBC_OVERLAP,
+    SYSTEM_EVENT_AP_START,
+    SYSTEM_EVENT_AP_STOP,
+    SYSTEM_EVENT_AP_STACONNECTED,
+    SYSTEM_EVENT_AP_STADISCONNECTED,
+    SYSTEM_EVENT_AP_STAIPASSIGNED,
+    SYSTEM_EVENT_AP_PROBEREQRECVED,
+    SYSTEM_EVENT_GOT_IP6,
+    SYSTEM_EVENT_ETH_START,
+    SYSTEM_EVENT_ETH_STOP,
+    SYSTEM_EVENT_ETH_CONNECTED,
+    SYSTEM_EVENT_ETH_DISCONNECTED,
+    SYSTEM_EVENT_ETH_GOT_IP,
+    SYSTEM_EVENT_MAX
+} system_event_id_t;
+
+
+
+
+
+
+typedef enum {
+    WPS_FAIL_REASON_NORMAL = 0,
+    WPS_FAIL_REASON_RECV_M2D,
+    WPS_FAIL_REASON_MAX
+}system_event_sta_wps_fail_reason_t;
+typedef struct {
+    uint32_t status;
+    uint8_t number;
+    uint8_t scan_id;
+} system_event_sta_scan_done_t;
+
+typedef struct {
+    uint8_t ssid[32];
+    uint8_t ssid_len;
+    uint8_t bssid[6];
+    uint8_t channel;
+    wifi_auth_mode_t authmode;
+} system_event_sta_connected_t;
+
+typedef struct {
+    uint8_t ssid[32];
+    uint8_t ssid_len;
+    uint8_t bssid[6];
+    uint8_t reason;
+} system_event_sta_disconnected_t;
+
+typedef struct {
+    wifi_auth_mode_t old_mode;
+    wifi_auth_mode_t new_mode;
+} system_event_sta_authmode_change_t;
+
+typedef struct {
+    tcpip_adapter_ip_info_t ip_info;
+    
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h" 3 4
+   _Bool 
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
+        ip_changed;
+} system_event_sta_got_ip_t;
+
+typedef struct {
+    uint8_t pin_code[8];
+} system_event_sta_wps_er_pin_t;
+
+typedef struct {
+    tcpip_adapter_if_t if_index;
+    tcpip_adapter_ip6_info_t ip6_info;
+} system_event_got_ip6_t;
+
+typedef struct {
+    uint8_t mac[6];
+    uint8_t aid;
+} system_event_ap_staconnected_t;
+
+typedef struct {
+    uint8_t mac[6];
+    uint8_t aid;
+} system_event_ap_stadisconnected_t;
+
+typedef struct {
+    int rssi;
+    uint8_t mac[6];
+} system_event_ap_probe_req_rx_t;
+
+typedef struct {
+    ip4_addr_t ip;
+} system_event_ap_staipassigned_t;
+
+typedef union {
+    system_event_sta_connected_t connected;
+    system_event_sta_disconnected_t disconnected;
+    system_event_sta_scan_done_t scan_done;
+    system_event_sta_authmode_change_t auth_change;
+    system_event_sta_got_ip_t got_ip;
+    system_event_sta_wps_er_pin_t sta_er_pin;
+    system_event_sta_wps_fail_reason_t sta_er_fail_reason;
+    system_event_ap_staconnected_t sta_connected;
+    system_event_ap_stadisconnected_t sta_disconnected;
+    system_event_ap_probe_req_rx_t ap_probereqrecved;
+    system_event_ap_staipassigned_t ap_staipassigned;
+    system_event_got_ip6_t got_ip6;
+} system_event_info_t;
+
+typedef struct {
+    system_event_id_t event_id;
+    system_event_info_t event_info;
+} system_event_t;
+
+typedef esp_err_t (*system_event_handler_t)(system_event_t *event);
+# 160 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
+esp_err_t esp_event_send(system_event_t *event);
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
+esp_err_t esp_event_process_default(system_event_t *event);
+
+
+
+
+
+void esp_event_set_default_eth_handlers();
+
+
+
+
+
+void esp_event_set_default_wifi_handlers();
+# 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h" 2
+
+
+
+
+
+
+
+typedef struct {
+    int32_t queue_size;
+    const char* task_name;
+
+    UBaseType_t task_priority;
+    uint32_t task_stack_size;
+    BaseType_t task_core_id;
+
+} esp_event_loop_args_t;
+# 56 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_loop_create(const esp_event_loop_args_t* event_loop_args, esp_event_loop_handle_t* event_loop);
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_loop_delete(esp_event_loop_handle_t event_loop);
+# 78 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_loop_create_default();
+# 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_loop_delete_default();
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_loop_run(esp_event_loop_handle_t event_loop, TickType_t ticks_to_run);
+# 145 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_handler_register(esp_event_base_t event_base,
+                                        int32_t event_id,
+                                        esp_event_handler_t event_handler,
+                                        void* event_handler_arg);
+# 171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_handler_register_with(esp_event_loop_handle_t event_loop,
+                                            esp_event_base_t event_base,
+                                            int32_t event_id,
+                                            esp_event_handler_t event_handler,
+                                            void* event_handler_arg);
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_handler_unregister(esp_event_base_t event_base, int32_t event_id, esp_event_handler_t event_handler);
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_handler_unregister_with(esp_event_loop_handle_t event_loop,
+                                            esp_event_base_t event_base,
+                                            int32_t event_id,
+                                            esp_event_handler_t event_handler);
+# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_post(esp_event_base_t event_base,
+                            int32_t event_id,
+                            void* event_data,
+                            size_t event_data_size,
+                            TickType_t ticks_to_wait);
+# 269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_post_to(esp_event_loop_handle_t event_loop,
+                            esp_event_base_t event_base,
+                            int32_t event_id,
+                            void* event_data,
+                            size_t event_data_size,
+                            TickType_t ticks_to_wait);
+# 320 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_dump(FILE* file);
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h" 2
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+typedef struct esp_mqtt_client *esp_mqtt_client_handle_t;
+# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+typedef enum {
+    MQTT_EVENT_ANY = -1,
     MQTT_EVENT_ERROR = 0,
     MQTT_EVENT_CONNECTED,
     MQTT_EVENT_DISCONNECTED,
@@ -5920,9 +7079,30 @@ typedef enum {
     MQTT_EVENT_UNSUBSCRIBED,
     MQTT_EVENT_PUBLISHED,
     MQTT_EVENT_DATA,
-# 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
     MQTT_EVENT_BEFORE_CONNECT,
 } esp_mqtt_event_id_t;
+
+
+
+
+typedef enum {
+    MQTT_CONNECTION_ACCEPTED = 0,
+    MQTT_CONNECTION_REFUSE_PROTOCOL,
+    MQTT_CONNECTION_REFUSE_ID_REJECTED,
+    MQTT_CONNECTION_REFUSE_SERVER_UNAVAILABLE,
+    MQTT_CONNECTION_REFUSE_BAD_USERNAME,
+    MQTT_CONNECTION_REFUSE_NOT_AUTHORIZED
+} esp_mqtt_connect_return_code_t;
+
+
+
+
+typedef enum {
+    MQTT_ERROR_TYPE_NONE = 0,
+    MQTT_ERROR_TYPE_ESP_TLS,
+    MQTT_ERROR_TYPE_CONNECTION_REFUSED,
+} esp_mqtt_error_type_t;
 
 typedef enum {
     MQTT_TRANSPORT_UNKNOWN = 0x0,
@@ -5931,6 +7111,25 @@ typedef enum {
     MQTT_TRANSPORT_OVER_WS,
     MQTT_TRANSPORT_OVER_WSS
 } esp_mqtt_transport_t;
+
+
+
+
+typedef enum {
+    MQTT_PROTOCOL_UNDEFINED = 0,
+    MQTT_PROTOCOL_V_3_1,
+    MQTT_PROTOCOL_V_3_1_1
+} esp_mqtt_protocol_ver_t;
+# 113 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+typedef struct esp_mqtt_error_codes {
+
+    esp_err_t esp_tls_last_esp_err;
+    int esp_tls_stack_err;
+    int esp_tls_cert_verify_flags;
+
+    esp_mqtt_error_type_t error_type;
+    esp_mqtt_connect_return_code_t connect_return_code;
+} esp_mqtt_error_codes_t;
 
 
 
@@ -5947,9 +7146,10 @@ typedef struct {
     int topic_len;
     int msg_id;
     int session_present;
+    esp_mqtt_error_codes_t *error_handle;
 } esp_mqtt_event_t;
 
-typedef esp_mqtt_event_t* esp_mqtt_event_handle_t;
+typedef esp_mqtt_event_t *esp_mqtt_event_handle_t;
 
 typedef esp_err_t (* mqtt_event_callback_t)(esp_mqtt_event_handle_t event);
 
@@ -5958,6 +7158,7 @@ typedef esp_err_t (* mqtt_event_callback_t)(esp_mqtt_event_handle_t event);
 
 typedef struct {
     mqtt_event_callback_t event_handle;
+    esp_event_loop_handle_t event_loop_handle;
     const char *host;
     const char *uri;
     uint32_t port;
@@ -5972,39 +7173,70 @@ typedef struct {
     int disable_clean_session;
     int keepalive;
     
-# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h" 3 4
    _Bool 
-# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
         disable_auto_reconnect;
     void *user_context;
     int task_prio;
     int task_stack;
     int buffer_size;
     const char *cert_pem;
+    size_t cert_len;
     const char *client_cert_pem;
+    size_t client_cert_len;
     const char *client_key_pem;
+    size_t client_key_len;
     esp_mqtt_transport_t transport;
     int refresh_connection_after_ms;
+    const struct psk_key_hint* psk_hint_key;
+    
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h" 3 4
+   _Bool 
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+                 use_global_ca_store;
+    int reconnect_timeout_ms;
+    const char **alpn_protos;
+    const char *clientkey_password;
+    int clientkey_password_len;
+    esp_mqtt_protocol_ver_t protocol_ver;
+    int out_buffer_size;
 } esp_mqtt_client_config_t;
-
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
 esp_mqtt_client_handle_t esp_mqtt_client_init(const esp_mqtt_client_config_t *config);
+# 205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
 esp_err_t esp_mqtt_client_set_uri(esp_mqtt_client_handle_t client, const char *uri);
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
 esp_err_t esp_mqtt_client_start(esp_mqtt_client_handle_t client);
+# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+esp_err_t esp_mqtt_client_reconnect(esp_mqtt_client_handle_t client);
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+esp_err_t esp_mqtt_client_disconnect(esp_mqtt_client_handle_t client);
+# 245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
 esp_err_t esp_mqtt_client_stop(esp_mqtt_client_handle_t client);
-esp_err_t esp_mqtt_client_subscribe(esp_mqtt_client_handle_t client, const char *topic, int qos);
-esp_err_t esp_mqtt_client_unsubscribe(esp_mqtt_client_handle_t client, const char *topic);
+# 264 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+int esp_mqtt_client_subscribe(esp_mqtt_client_handle_t client, const char *topic, int qos);
+# 279 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+int esp_mqtt_client_unsubscribe(esp_mqtt_client_handle_t client, const char *topic);
+# 302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
 int esp_mqtt_client_publish(esp_mqtt_client_handle_t client, const char *topic, const char *data, int len, int qos, int retain);
+# 311 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
 esp_err_t esp_mqtt_client_destroy(esp_mqtt_client_handle_t client);
+# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
 esp_err_t esp_mqtt_set_config(esp_mqtt_client_handle_t client, const esp_mqtt_client_config_t *config);
+# 336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+esp_err_t esp_mqtt_client_register_event(esp_mqtt_client_handle_t client, esp_mqtt_event_id_t event, esp_event_handler_t event_handler, void* event_handler_arg);
 # 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/mqtt_msg.h" 1
 
 
+
+
+
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_config.h" 1
-# 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/mqtt_msg.h" 2
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/mqtt_msg.h"
-enum mqtt_message_type
-{
+# 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/mqtt_msg.h" 2
+# 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/mqtt_msg.h"
+enum mqtt_message_type {
     MQTT_MSG_TYPE_CONNECT = 1,
     MQTT_MSG_TYPE_CONNACK = 2,
     MQTT_MSG_TYPE_PUBLISH = 3,
@@ -6021,74 +7253,90 @@ enum mqtt_message_type
     MQTT_MSG_TYPE_DISCONNECT = 14
 };
 
-enum mqtt_connect_return_code
-{
-    CONNECTION_ACCEPTED = 0,
-    CONNECTION_REFUSE_PROTOCOL,
-    CONNECTION_REFUSE_ID_REJECTED,
-    CONNECTION_REFUSE_SERVER_UNAVAILABLE,
-    CONNECTION_REFUSE_BAD_USERNAME,
-    CONNECTION_REFUSE_NOT_AUTHORIZED
-};
-
-typedef struct mqtt_message
-{
-    uint8_t* data;
+typedef struct mqtt_message {
+    uint8_t *data;
     uint32_t length;
     uint32_t fragmented_msg_total_length;
     uint32_t fragmented_msg_data_offset;
 } mqtt_message_t;
 
-typedef struct mqtt_connection
-{
+typedef struct mqtt_connection {
     mqtt_message_t message;
 
     uint16_t message_id;
-    uint8_t* buffer;
-    uint16_t buffer_length;
+    uint8_t *buffer;
+    uint32_t buffer_length;
 
 } mqtt_connection_t;
 
-typedef struct mqtt_connect_info
-{
-    char* client_id;
-    char* username;
-    char* password;
-    char* will_topic;
-    char* will_message;
+typedef struct mqtt_connect_info {
+    char *client_id;
+    char *username;
+    char *password;
+    char *will_topic;
+    char *will_message;
     int keepalive;
     int will_length;
     int will_qos;
     int will_retain;
     int clean_session;
+    esp_mqtt_protocol_ver_t protocol_ver;
 
 } mqtt_connect_info_t;
 
 
-static inline int mqtt_get_type(uint8_t* buffer) { return (buffer[0] & 0xf0) >> 4; }
-static inline int mqtt_get_connect_session_present(uint8_t* buffer) { return buffer[2] & 0x01; }
-static inline int mqtt_get_connect_return_code(uint8_t* buffer) { return buffer[3]; }
-static inline int mqtt_get_dup(uint8_t* buffer) { return (buffer[0] & 0x08) >> 3; }
-static inline int mqtt_get_qos(uint8_t* buffer) { return (buffer[0] & 0x06) >> 1; }
-static inline int mqtt_get_retain(uint8_t* buffer) { return (buffer[0] & 0x01); }
+static inline int mqtt_get_type(const uint8_t *buffer)
+{
+    return (buffer[0] & 0xf0) >> 4;
+}
+static inline int mqtt_get_connect_session_present(const uint8_t *buffer)
+{
+    return buffer[2] & 0x01;
+}
+static inline int mqtt_get_connect_return_code(const uint8_t *buffer)
+{
+    return buffer[3];
+}
+static inline int mqtt_get_dup(const uint8_t *buffer)
+{
+    return (buffer[0] & 0x08) >> 3;
+}
+static inline void mqtt_set_dup(uint8_t *buffer)
+{
+    buffer[0] |= 0x08;
+}
+static inline int mqtt_get_qos(const uint8_t *buffer)
+{
+    return (buffer[0] & 0x06) >> 1;
+}
+static inline int mqtt_get_retain(const uint8_t *buffer)
+{
+    return (buffer[0] & 0x01);
+}
 
-void mqtt_msg_init(mqtt_connection_t* connection, uint8_t* buffer, uint16_t buffer_length);
-uint32_t mqtt_get_total_length(uint8_t* buffer, uint16_t length);
-const char* mqtt_get_publish_topic(uint8_t* buffer, uint32_t* length);
-const char* mqtt_get_publish_data(uint8_t* buffer, uint32_t* length);
-uint16_t mqtt_get_id(uint8_t* buffer, uint16_t length);
+void mqtt_msg_init(mqtt_connection_t *connection, uint8_t *buffer, uint32_t buffer_length);
 
-mqtt_message_t* mqtt_msg_connect(mqtt_connection_t* connection, mqtt_connect_info_t* info);
-mqtt_message_t* mqtt_msg_publish(mqtt_connection_t* connection, const char* topic, const char* data, int data_length, int qos, int retain, uint16_t* message_id);
-mqtt_message_t* mqtt_msg_puback(mqtt_connection_t* connection, uint16_t message_id);
-mqtt_message_t* mqtt_msg_pubrec(mqtt_connection_t* connection, uint16_t message_id);
-mqtt_message_t* mqtt_msg_pubrel(mqtt_connection_t* connection, uint16_t message_id);
-mqtt_message_t* mqtt_msg_pubcomp(mqtt_connection_t* connection, uint16_t message_id);
-mqtt_message_t* mqtt_msg_subscribe(mqtt_connection_t* connection, const char* topic, int qos, uint16_t* message_id);
-mqtt_message_t* mqtt_msg_unsubscribe(mqtt_connection_t* connection, const char* topic, uint16_t* message_id);
-mqtt_message_t* mqtt_msg_pingreq(mqtt_connection_t* connection);
-mqtt_message_t* mqtt_msg_pingresp(mqtt_connection_t* connection);
-mqtt_message_t* mqtt_msg_disconnect(mqtt_connection_t* connection);
+# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/mqtt_msg.h" 3 4
+_Bool 
+# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/mqtt_msg.h"
+    mqtt_header_complete(uint8_t *buffer, uint32_t buffer_length);
+uint32_t mqtt_get_total_length(const uint8_t *buffer, uint32_t length, int *fixed_size_len);
+char *mqtt_get_publish_topic(uint8_t *buffer, uint32_t *length);
+char *mqtt_get_publish_data(uint8_t *buffer, uint32_t *length);
+uint16_t mqtt_get_id(uint8_t *buffer, uint32_t length);
+int mqtt_has_valid_msg_hdr(uint8_t *buffer, uint32_t length);
+
+mqtt_message_t *mqtt_msg_connect(mqtt_connection_t *connection, mqtt_connect_info_t *info);
+mqtt_message_t *mqtt_msg_publish(mqtt_connection_t *connection, const char *topic, const char *data, int data_length, int qos, int retain, uint16_t *message_id);
+mqtt_message_t *mqtt_msg_puback(mqtt_connection_t *connection, uint16_t message_id);
+mqtt_message_t *mqtt_msg_pubrec(mqtt_connection_t *connection, uint16_t message_id);
+mqtt_message_t *mqtt_msg_pubrel(mqtt_connection_t *connection, uint16_t message_id);
+mqtt_message_t *mqtt_msg_pubcomp(mqtt_connection_t *connection, uint16_t message_id);
+mqtt_message_t *mqtt_msg_subscribe(mqtt_connection_t *connection, const char *topic, int qos, uint16_t *message_id);
+mqtt_message_t *mqtt_msg_unsubscribe(mqtt_connection_t *connection, const char *topic, uint16_t *message_id);
+mqtt_message_t *mqtt_msg_pingreq(mqtt_connection_t *connection);
+mqtt_message_t *mqtt_msg_pingresp(mqtt_connection_t *connection);
+mqtt_message_t *mqtt_msg_disconnect(mqtt_connection_t *connection);
 # 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport.h" 1
 # 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport.h"
@@ -6176,18 +7424,54 @@ esp_transport_handle_t esp_transport_tcp_init();
 esp_transport_handle_t esp_transport_ssl_init();
 # 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ssl.h"
 void esp_transport_ssl_set_cert_data(esp_transport_handle_t t, const char *data, int len);
-# 52 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ssl.h"
+
+
+
+
+
+
+void esp_transport_ssl_enable_global_ca_store(esp_transport_handle_t t);
+# 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ssl.h"
 void esp_transport_ssl_set_client_cert_data(esp_transport_handle_t t, const char *data, int len);
-# 63 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ssl.h"
+# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ssl.h"
 void esp_transport_ssl_set_client_key_data(esp_transport_handle_t t, const char *data, int len);
+# 79 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ssl.h"
+void esp_transport_ssl_skip_common_name_check(esp_transport_handle_t t);
 # 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ws.h" 1
-# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ws.h"
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ws.h"
+typedef enum ws_transport_opcodes {
+    WS_TRANSPORT_OPCODES_CONT = 0x00,
+    WS_TRANSPORT_OPCODES_TEXT = 0x01,
+    WS_TRANSPORT_OPCODES_BINARY = 0x02,
+    WS_TRANSPORT_OPCODES_CLOSE = 0x08,
+    WS_TRANSPORT_OPCODES_PING = 0x09,
+    WS_TRANSPORT_OPCODES_PONG = 0x0a,
+    WS_TRANSPORT_OPCODES_FIN = 0x80,
+} ws_transport_opcodes_t;
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ws.h"
 esp_transport_handle_t esp_transport_ws_init(esp_transport_handle_t parent_handle);
 
-void esp_transport_ws_set_path(esp_transport_handle_t t, const char *path);
-# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 2
 
+
+
+
+
+
+void esp_transport_ws_set_path(esp_transport_handle_t t, const char *path);
+# 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ws.h"
+esp_err_t esp_transport_ws_set_subprotocol(esp_transport_handle_t t, const char *sub_protocol);
+# 65 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ws.h"
+esp_err_t esp_transport_ws_set_user_agent(esp_transport_handle_t t, const char *user_agent);
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ws.h"
+esp_err_t esp_transport_ws_set_headers(esp_transport_handle_t t, const char *headers);
+# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ws.h"
+int esp_transport_ws_send_raw(esp_transport_handle_t t, ws_transport_opcodes_t opcode, const char *b, int len, int timeout_ms);
+# 108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ws.h"
+ws_transport_opcodes_t esp_transport_ws_get_read_opcode(esp_transport_handle_t t);
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ws.h"
+int esp_transport_ws_get_read_payload_len(esp_transport_handle_t t);
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/mqtt_outbox.h" 1
 
 
@@ -6205,32 +7489,45 @@ void esp_transport_ws_set_path(esp_transport_handle_t t, const char *path);
 
 struct outbox_item;
 
-typedef struct outbox_list_t * outbox_handle_t;
-typedef struct outbox_item * outbox_item_handle_t;
-typedef struct outbox_message * outbox_message_handle_t;
+typedef struct outbox_list_t *outbox_handle_t;
+typedef struct outbox_item *outbox_item_handle_t;
+typedef struct outbox_message *outbox_message_handle_t;
+typedef long long outbox_tick_t;
 
 typedef struct outbox_message {
-  uint8_t *data;
-  int len;
-  int msg_id;
-  int msg_type;
-  uint8_t *remaining_data;
-  int remaining_len;
+    uint8_t *data;
+    int len;
+    int msg_id;
+    int msg_qos;
+    int msg_type;
+    uint8_t *remaining_data;
+    int remaining_len;
 } outbox_message_t;
 
-outbox_handle_t outbox_init();
-outbox_item_handle_t outbox_enqueue(outbox_handle_t outbox, outbox_message_handle_t message, int tick);
-outbox_item_handle_t outbox_dequeue(outbox_handle_t outbox);
+typedef enum pending_state {
+    QUEUED,
+    TRANSMITTED,
+    ACKNOWLEDGED,
+    CONFIRMED
+} pending_state_t;
+
+outbox_handle_t outbox_init(void);
+outbox_item_handle_t outbox_enqueue(outbox_handle_t outbox, outbox_message_handle_t message, outbox_tick_t tick);
+outbox_item_handle_t outbox_dequeue(outbox_handle_t outbox, pending_state_t pending, outbox_tick_t *tick);
 outbox_item_handle_t outbox_get(outbox_handle_t outbox, int msg_id);
+uint8_t *outbox_item_get_data(outbox_item_handle_t item, size_t *len, uint16_t *msg_id, int *msg_type, int *qos);
 esp_err_t outbox_delete(outbox_handle_t outbox, int msg_id, int msg_type);
 esp_err_t outbox_delete_msgid(outbox_handle_t outbox, int msg_id);
 esp_err_t outbox_delete_msgtype(outbox_handle_t outbox, int msg_type);
-esp_err_t outbox_delete_expired(outbox_handle_t outbox, int current_tick, int timeout);
+int outbox_delete_expired(outbox_handle_t outbox, outbox_tick_t current_tick, outbox_tick_t timeout);
 
-esp_err_t outbox_set_pending(outbox_handle_t outbox, int msg_id);
+esp_err_t outbox_set_pending(outbox_handle_t outbox, int msg_id, pending_state_t pending);
+esp_err_t outbox_set_tick(outbox_handle_t outbox, int msg_id, outbox_tick_t tick);
 int outbox_get_size(outbox_handle_t outbox);
 esp_err_t outbox_cleanup(outbox_handle_t outbox, int max_size);
 void outbox_destroy(outbox_handle_t outbox);
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_supported_features.h" 1
 # 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 2
 
 
@@ -6386,8 +7683,21 @@ void http_parser_pause(http_parser *parser, int paused);
 
 int http_body_is_final(const http_parser *parser);
 # 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 2
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+_Static_assert(sizeof(uint64_t) == sizeof(outbox_tick_t), "mqtt-client tick type size different from outbox tick type");
+
+_Static_assert(MQTT_EVENT_ANY == -1, "mqtt-client event enum does not match the global EVENT_ANY_ID");
+
 
 static const char *TAG = "MQTT_CLIENT";
+
+
+
+
+
+
+esp_event_base_t MQTT_EVENTS = "MQTT_EVENTS";;
+
 
 typedef struct mqtt_state
 {
@@ -6397,7 +7707,7 @@ typedef struct mqtt_state
     int in_buffer_length;
     int out_buffer_length;
     uint32_t message_length;
-    uint32_t message_length_read;
+    uint32_t in_buffer_read_len;
     mqtt_message_t *outbound_message;
     mqtt_connection_t mqtt_connection;
     uint16_t pending_msg_id;
@@ -6408,6 +7718,7 @@ typedef struct mqtt_state
 
 typedef struct {
     mqtt_event_callback_t event_handle;
+    esp_event_loop_handle_t event_loop_handle;
     int task_stack;
     int task_prio;
     char *uri;
@@ -6416,13 +7727,30 @@ typedef struct {
     char *scheme;
     int port;
     
-# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
    _Bool 
-# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
         auto_reconnect;
     void *user_context;
     int network_timeout_ms;
     int refresh_connection_after_ms;
+    int reconnect_timeout_ms;
+    char **alpn_protos;
+    int num_alpn_protos;
+    char *clientkey_password;
+    int clientkey_password_len;
+    
+# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+   _Bool 
+# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        use_global_ca_store;
+    const char *cacert_buf;
+    size_t cacert_bytes;
+    const char *clientcert_buf;
+    size_t clientcert_bytes;
+    const char *clientkey_buf;
+    size_t clientkey_bytes;
+    const struct psk_key_hint *psk_hint_key;
 } mqtt_config_storage_t;
 
 typedef enum {
@@ -6432,6 +7760,12 @@ typedef enum {
     MQTT_STATE_CONNECTED,
     MQTT_STATE_WAIT_TIMEOUT,
 } mqtt_client_state_t;
+
+
+typedef enum {
+    MQTT_HEADER_STATE_INCOMPLETE = -1,
+    MQTT_HEADER_STATE_COMPLETE = 0,
+} mqtt_header_state_t;
 
 struct esp_mqtt_client {
     esp_transport_list_handle_t transport_list;
@@ -6447,20 +7781,24 @@ struct esp_mqtt_client {
     int auto_reconnect;
     esp_mqtt_event_t event;
     
-# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
    _Bool 
-# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
         run;
     
-# 72 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 113 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
    _Bool 
-# 72 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 113 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
         wait_for_ping_resp;
     outbox_handle_t outbox;
     EventGroupHandle_t status_bits;
+    SemaphoreHandle_t api_lock;
+    TaskHandle_t task_handle;
 };
 
 const static int STOPPED_BIT = 0x00000001;
+const static int RECONNECT_BIT = 0x00000002;
+const static int DISCONNECT_BIT = 0x00000004;
 
 static esp_err_t esp_mqtt_dispatch_event(esp_mqtt_client_handle_t client);
 static esp_err_t esp_mqtt_dispatch_event_with_msgid(esp_mqtt_client_handle_t client);
@@ -6469,9 +7807,215 @@ static esp_err_t esp_mqtt_connect(esp_mqtt_client_handle_t client, int timeout_m
 static esp_err_t esp_mqtt_abort_connection(esp_mqtt_client_handle_t client);
 static esp_err_t esp_mqtt_client_ping(esp_mqtt_client_handle_t client);
 static char *create_string(const char *ptr, int len);
+static int mqtt_message_receive(esp_mqtt_client_handle_t client, int read_poll_timeout_ms);
+
+
+enum esp_mqtt_ssl_cert_key_api {
+    MQTT_SSL_DATA_API_CA_CERT,
+    MQTT_SSL_DATA_API_CLIENT_CERT,
+    MQTT_SSL_DATA_API_CLIENT_KEY,
+    MQTT_SSL_DATA_API_MAX,
+};
+
+static esp_err_t esp_mqtt_set_cert_key_data(esp_transport_handle_t ssl, enum esp_mqtt_ssl_cert_key_api what, const char *cert_key_data, int cert_key_len)
+{
+    char *data = (char *)cert_key_data;
+    int ssl_transport_api_id = what;
+    int len = cert_key_len;
+
+    if (!data) {
+        return 0;
+    }
+
+    if (len == 0) {
+
+
+        ssl_transport_api_id += MQTT_SSL_DATA_API_MAX;
+        len = strlen(data);
+    }
+
+    else {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Explicit cert-/key-len is not available in IDF version %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "v3.3.2-270-gf4333c8e3"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Explicit cert-/key-len is not available in IDF version %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "v3.3.2-270-gf4333c8e3"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Explicit cert-/key-len is not available in IDF version %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "v3.3.2-270-gf4333c8e3"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Explicit cert-/key-len is not available in IDF version %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "v3.3.2-270-gf4333c8e3"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Explicit cert-/key-len is not available in IDF version %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "v3.3.2-270-gf4333c8e3"); } } while(0); } while(0);
+        return 0x106;
+    }
+
+
+
+    if (0 == strcmp(data, "NULL")) {
+        data = 
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+              ((void *)0)
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                  ;
+        len = 0;
+    }
+
+    switch (ssl_transport_api_id) {
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        case MQTT_SSL_DATA_API_CA_CERT + MQTT_SSL_DATA_API_MAX:
+            esp_transport_ssl_set_cert_data(ssl, data, len);
+            break;
+        case MQTT_SSL_DATA_API_CLIENT_CERT + MQTT_SSL_DATA_API_MAX:
+            esp_transport_ssl_set_client_cert_data(ssl, data, len);
+            break;
+        case MQTT_SSL_DATA_API_CLIENT_KEY + MQTT_SSL_DATA_API_MAX:
+            esp_transport_ssl_set_client_key_data(ssl, data, len);
+            break;
+        default:
+            return 0x102;
+    }
+    return 0;
+}
+
+static esp_err_t esp_mqtt_set_ssl_transport_properties(esp_transport_list_handle_t transport_list, mqtt_config_storage_t *cfg)
+{
+    esp_transport_handle_t ssl = esp_transport_list_get_transport(transport_list, "mqtts");
+
+    if (cfg->use_global_ca_store == 
+# 201 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                                   1
+# 201 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                                       ) {
+        esp_transport_ssl_enable_global_ca_store(ssl);
+    } else {
+        if ((esp_mqtt_set_cert_key_data(ssl, MQTT_SSL_DATA_API_CA_CERT, cfg->cacert_buf, cfg->cacert_bytes)) != 0) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        ,
+ 205
+# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        , __FUNCTION__, "Failed with non ESP_OK err code"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        ,
+ 205
+# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        , __FUNCTION__, "Failed with non ESP_OK err code"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        ,
+ 205
+# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        , __FUNCTION__, "Failed with non ESP_OK err code"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        ,
+ 205
+# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        , __FUNCTION__, "Failed with non ESP_OK err code"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        ,
+ 205
+# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        , __FUNCTION__, "Failed with non ESP_OK err code"); } } while(0); } while(0); goto esp_mqtt_set_transport_failed; }
+                                                        ;
+    }
+
+    if ((esp_mqtt_set_cert_key_data(ssl, MQTT_SSL_DATA_API_CLIENT_CERT, cfg->clientcert_buf, cfg->clientcert_bytes)) != 0) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+    ,
+ 209
+# 208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+    , __FUNCTION__, "Failed with non ESP_OK err code"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+    ,
+ 209
+# 208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+    , __FUNCTION__, "Failed with non ESP_OK err code"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+    ,
+ 209
+# 208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+    , __FUNCTION__, "Failed with non ESP_OK err code"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+    ,
+ 209
+# 208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+    , __FUNCTION__, "Failed with non ESP_OK err code"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+    ,
+ 209
+# 208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+    , __FUNCTION__, "Failed with non ESP_OK err code"); } } while(0); } while(0); goto esp_mqtt_set_transport_failed; }
+                                                    ;
+    if ((esp_mqtt_set_cert_key_data(ssl, MQTT_SSL_DATA_API_CLIENT_KEY, cfg->clientkey_buf, cfg->clientkey_bytes)) != 0) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+    ,
+ 211
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+    , __FUNCTION__, "Failed with non ESP_OK err code"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+    ,
+ 211
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+    , __FUNCTION__, "Failed with non ESP_OK err code"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+    ,
+ 211
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+    , __FUNCTION__, "Failed with non ESP_OK err code"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+    ,
+ 211
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+    , __FUNCTION__, "Failed with non ESP_OK err code"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+    ,
+ 211
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+    , __FUNCTION__, "Failed with non ESP_OK err code"); } } while(0); } while(0); goto esp_mqtt_set_transport_failed; }
+                                                    ;
+
+    if (cfg->clientkey_password && cfg->clientkey_password_len) {
+
+
+
+
+
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Password protected keys are not available in IDF version %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "v3.3.2-270-gf4333c8e3"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Password protected keys are not available in IDF version %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "v3.3.2-270-gf4333c8e3"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Password protected keys are not available in IDF version %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "v3.3.2-270-gf4333c8e3"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Password protected keys are not available in IDF version %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "v3.3.2-270-gf4333c8e3"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Password protected keys are not available in IDF version %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "v3.3.2-270-gf4333c8e3"); } } while(0); } while(0);
+        goto esp_mqtt_set_transport_failed;
+
+    }
+
+    if (cfg->psk_hint_key) {
+
+
+
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "PSK authentication is not available in IDF version %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "v3.3.2-270-gf4333c8e3"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "PSK authentication is not available in IDF version %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "v3.3.2-270-gf4333c8e3"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "PSK authentication is not available in IDF version %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "v3.3.2-270-gf4333c8e3"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "PSK authentication is not available in IDF version %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "v3.3.2-270-gf4333c8e3"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "PSK authentication is not available in IDF version %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "v3.3.2-270-gf4333c8e3"); } } while(0); } while(0);
+        goto esp_mqtt_set_transport_failed;
+
+    }
+
+    if (cfg->alpn_protos) {
+
+
+
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "APLN is not available in IDF version %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "v3.3.2-270-gf4333c8e3"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "APLN is not available in IDF version %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "v3.3.2-270-gf4333c8e3"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "APLN is not available in IDF version %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "v3.3.2-270-gf4333c8e3"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "APLN is not available in IDF version %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "v3.3.2-270-gf4333c8e3"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "APLN is not available in IDF version %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "v3.3.2-270-gf4333c8e3"); } } while(0); } while(0);
+        goto esp_mqtt_set_transport_failed;
+
+    }
+
+    return 0;
+
+    esp_mqtt_set_transport_failed:
+    return -1;
+}
+
 
 esp_err_t esp_mqtt_set_config(esp_mqtt_client_handle_t client, const esp_mqtt_client_config_t *config)
 {
+    xQueueTakeMutexRecursive( ( client->api_lock ), ( ( TickType_t ) 0xffffffffUL ) );
 
     esp_err_t err = 0;
     mqtt_config_storage_t *cfg;
@@ -6479,7 +8023,60 @@ esp_err_t esp_mqtt_set_config(esp_mqtt_client_handle_t client, const esp_mqtt_cl
         cfg = client->config;
     } else {
         cfg = calloc(1, sizeof(mqtt_config_storage_t));
-        if (!(cfg)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 96, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 96, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 96, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 96, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 96, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); return 0x101; };
+        if (!(cfg)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+
+
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        ,
+
+
+ 262
+# 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        , __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+
+
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        ,
+
+
+ 262
+# 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        , __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+
+
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        ,
+
+
+ 262
+# 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        , __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+
+
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        ,
+
+
+ 262
+# 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        , __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+
+
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        ,
+
+
+ 262
+# 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+        , __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); { xQueueGiveMutexRecursive( ( client->api_lock ) ); return 0x101; }; }
+
+
+          ;
         client->config = cfg;
     }
     if (config->task_prio) {
@@ -6503,57 +8100,58 @@ esp_err_t esp_mqtt_set_config(esp_mqtt_client_handle_t client, const esp_mqtt_cl
     if (config->host) {
         free(cfg->host);
         cfg->host = strdup(config->host);
-        if (!(cfg->host)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 120, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 120, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 120, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 120, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 120, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
+        if (!(cfg->host)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 286, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 286, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 286, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 286, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 286, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
     }
 
     if (config->username) {
         free(client->connect_info.username);
         client->connect_info.username = strdup(config->username);
-        if (!(client->connect_info.username)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 126, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 126, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 126, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 126, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 126, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
+        if (!(client->connect_info.username)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 292, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 292, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 292, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 292, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 292, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
     }
 
     if (config->password) {
         free(client->connect_info.password);
         client->connect_info.password = strdup(config->password);
-        if (!(client->connect_info.password)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 132, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 132, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 132, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 132, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 132, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
+        if (!(client->connect_info.password)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 298, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 298, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 298, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 298, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 298, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
     }
 
     if (config->client_id) {
         free(client->connect_info.client_id);
         client->connect_info.client_id = strdup(config->client_id);
-        if (!(client->connect_info.client_id)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 138, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 138, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 138, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 138, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 138, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
+        if (!(client->connect_info.client_id)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 304, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 304, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 304, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 304, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 304, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
     } else if (client->connect_info.client_id == 
-# 139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 305 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
                                                 ((void *)0)
-# 139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 305 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
                                                     ) {
         client->connect_info.client_id = platform_create_id_string();
     }
-    if (!(client->connect_info.client_id)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 142, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 142, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 142, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 142, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 142, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
+
+    if (!(client->connect_info.client_id)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 309, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 309, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 309, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 309, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 309, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "MQTT client_id=%s" "\033[0m" "\n", esp_log_timestamp(), TAG, client->connect_info.client_id); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "MQTT client_id=%s" "\033[0m" "\n", esp_log_timestamp(), TAG, client->connect_info.client_id); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "MQTT client_id=%s" "\033[0m" "\n", esp_log_timestamp(), TAG, client->connect_info.client_id); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "MQTT client_id=%s" "\033[0m" "\n", esp_log_timestamp(), TAG, client->connect_info.client_id); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "MQTT client_id=%s" "\033[0m" "\n", esp_log_timestamp(), TAG, client->connect_info.client_id); } } while(0); } while(0);
 
     if (config->uri) {
         free(cfg->uri);
         cfg->uri = strdup(config->uri);
-        if (!(cfg->uri)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 148, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 148, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 148, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 148, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 148, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
+        if (!(cfg->uri)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 315, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 315, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 315, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 315, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 315, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
     }
 
     if (config->lwt_topic) {
         free(client->connect_info.will_topic);
         client->connect_info.will_topic = strdup(config->lwt_topic);
-        if (!(client->connect_info.will_topic)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 154, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 154, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 154, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 154, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 154, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
+        if (!(client->connect_info.will_topic)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 321, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 321, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 321, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 321, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 321, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
     }
 
     if (config->lwt_msg_len && config->lwt_msg) {
         free(client->connect_info.will_message);
         client->connect_info.will_message = malloc(config->lwt_msg_len);
-        if (!(client->connect_info.will_message)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 160, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 160, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 160, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 160, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 160, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
+        if (!(client->connect_info.will_message)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 327, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 327, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 327, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 327, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 327, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
         memcpy(client->connect_info.will_message, config->lwt_msg, config->lwt_msg_len);
         client->connect_info.will_length = config->lwt_msg_len;
     } else if (config->lwt_msg) {
         free(client->connect_info.will_message);
         client->connect_info.will_message = strdup(config->lwt_msg);
-        if (!(client->connect_info.will_message)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 166, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 166, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 166, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 166, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 166, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
+        if (!(client->connect_info.will_message)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 333, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 333, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 333, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 333, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 333, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
         client->connect_info.will_length = strlen(config->lwt_msg);
     }
     if (config->lwt_qos) {
@@ -6572,6 +8170,18 @@ esp_err_t esp_mqtt_set_config(esp_mqtt_client_handle_t client, const esp_mqtt_cl
     if (client->connect_info.keepalive == 0) {
         client->connect_info.keepalive = (120);
     }
+
+    if (config->protocol_ver) {
+        client->connect_info.protocol_ver = config->protocol_ver;
+    }
+    if (client->connect_info.protocol_ver== MQTT_PROTOCOL_UNDEFINED) {
+
+        client->connect_info.protocol_ver = MQTT_PROTOCOL_V_3_1_1;
+
+
+
+    }
+
     cfg->network_timeout_ms = (10000);
     if (config->user_context) {
         cfg->user_context = config->user_context;
@@ -6586,35 +8196,133 @@ esp_err_t esp_mqtt_set_config(esp_mqtt_client_handle_t client, const esp_mqtt_cl
     }
 
     cfg->auto_reconnect = 
-# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 377 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
                          1
-# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 377 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
                              ;
     if (config->disable_auto_reconnect == cfg->auto_reconnect) {
         cfg->auto_reconnect = !config->disable_auto_reconnect;
     }
 
+    if (config->reconnect_timeout_ms) {
+        cfg->reconnect_timeout_ms = config->reconnect_timeout_ms;
+    } else {
+        cfg->reconnect_timeout_ms = (10*1000);
+    }
+
+    if (config->alpn_protos) {
+        for (int i = 0; i < cfg->num_alpn_protos; i++) {
+            free(cfg->alpn_protos[i]);
+        }
+        free(cfg->alpn_protos);
+        cfg->num_alpn_protos = 0;
+
+        const char **p;
+
+        for (p = config->alpn_protos; *p != 
+# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                                           ((void *)0)
+# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                                               ; p++ ) {
+            cfg->num_alpn_protos++;
+        }
+
+        cfg->alpn_protos = calloc(cfg->num_alpn_protos + 1, sizeof(config->alpn_protos));
+        if (!(cfg->alpn_protos)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 402, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 402, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 402, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 402, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 402, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
+
+        for (int i = 0; i < cfg->num_alpn_protos; i++) {
+            cfg->alpn_protos[i] = strdup(config->alpn_protos[i]);
+            if (!(cfg->alpn_protos[i])) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 406, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 406, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 406, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 406, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 406, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
+        }
+    }
+
+
+    cfg->use_global_ca_store = config->use_global_ca_store;
+    cfg->cacert_buf = config->cert_pem;
+    cfg->cacert_bytes = config->cert_len;
+    cfg->clientcert_buf = config->client_cert_pem;
+    cfg->clientcert_bytes = config->client_cert_len;
+    cfg->clientkey_buf = config->client_key_pem;
+    cfg->clientkey_bytes = config->client_key_len;
+    cfg->psk_hint_key = config->psk_hint_key;
+
+    if (config->clientkey_password && config->clientkey_password_len) {
+        cfg->clientkey_password_len = config->clientkey_password_len;
+        cfg->clientkey_password = malloc(cfg->clientkey_password_len);
+        memcpy(cfg->clientkey_password, config->clientkey_password, cfg->clientkey_password_len);
+    }
+
+    if (config->transport) {
+        free(client->config->scheme);
+        if (config->transport == MQTT_TRANSPORT_OVER_WS) {
+            cfg->scheme = create_string("ws", 2);
+            if (!(cfg->scheme)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 430, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 430, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 430, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 430, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 430, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
+        } else if (config->transport == MQTT_TRANSPORT_OVER_TCP) {
+            cfg->scheme = create_string("mqtt", 4);
+            if (!(cfg->scheme)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 433, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 433, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 433, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 433, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 433, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
+        } else if (config->transport == MQTT_TRANSPORT_OVER_SSL) {
+            cfg->scheme = create_string("mqtts", 5);
+            if (!(cfg->scheme)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 436, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 436, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 436, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 436, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 436, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
+        } else if (config->transport == MQTT_TRANSPORT_OVER_WSS) {
+            cfg->scheme = create_string("wss", 3);
+            if (!(cfg->scheme)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 439, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 439, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 439, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 439, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 439, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_set_config_failed; };
+        }
+    }
+
+
+    if (config->uri) {
+        if (esp_mqtt_client_set_uri(client, cfg->uri) != 0) {
+            err = -1;
+            goto _mqtt_set_config_failed;
+        }
+    }
+
+    xQueueGiveMutexRecursive( ( client->api_lock ) );
+
     return 0;
 _mqtt_set_config_failed:
     esp_mqtt_destroy_config(client);
+    xQueueGiveMutexRecursive( ( client->api_lock ) );
     return err;
 }
 
 static esp_err_t esp_mqtt_destroy_config(esp_mqtt_client_handle_t client)
 {
     mqtt_config_storage_t *cfg = client->config;
+    if (cfg == 
+# 463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+              ((void *)0)
+# 463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                  ) {
+        return 0x103;
+    }
     free(cfg->host);
     free(cfg->uri);
     free(cfg->path);
     free(cfg->scheme);
-    memset(cfg, 0, sizeof(mqtt_config_storage_t));
+    for (int i = 0; i < cfg->num_alpn_protos; i++) {
+            free(cfg->alpn_protos[i]);
+    }
+    free(cfg->alpn_protos);
+    free(cfg->clientkey_password);
     free(client->connect_info.will_topic);
     free(client->connect_info.will_message);
     free(client->connect_info.client_id);
     free(client->connect_info.username);
     free(client->connect_info.password);
     memset(&client->connect_info, 0, sizeof(mqtt_connect_info_t));
+
+    if (client->config->event_loop_handle) {
+        esp_event_loop_delete(client->config->event_loop_handle);
+    }
+
+    memset(cfg, 0, sizeof(mqtt_config_storage_t));
     free(client->config);
+    client->config = 
+# 488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                    ((void *)0)
+# 488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                        ;
     return 0;
 }
 
@@ -6622,36 +8330,44 @@ static esp_err_t esp_mqtt_connect(esp_mqtt_client_handle_t client, int timeout_m
 {
     int write_len, read_len, connect_rsp_code;
     client->wait_for_ping_resp = 
-# 230 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 495 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
                                 0
-# 230 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 495 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
                                      ;
-    mqtt_msg_init(&client->mqtt_state.mqtt_connection,
-                  client->mqtt_state.out_buffer,
-                  client->mqtt_state.out_buffer_length);
     client->mqtt_state.outbound_message = mqtt_msg_connect(&client->mqtt_state.mqtt_connection,
                                           client->mqtt_state.connect_info);
+    if (client->mqtt_state.outbound_message->length == 0) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Connect message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Connect message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Connect message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Connect message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Connect message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        return -1;
+    }
+
     client->mqtt_state.pending_msg_type = mqtt_get_type(client->mqtt_state.outbound_message->data);
     client->mqtt_state.pending_msg_id = mqtt_get_id(client->mqtt_state.outbound_message->data,
                                         client->mqtt_state.outbound_message->length);
-    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Sending MQTT CONNECT message, type: %d, id: %04X" "\033[0m" "\n", esp_log_timestamp(), TAG, client->mqtt_state.pending_msg_type, client->mqtt_state.pending_msg_id); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Sending MQTT CONNECT message, type: %d, id: %04X" "\033[0m" "\n", esp_log_timestamp(), TAG, client->mqtt_state.pending_msg_type, client->mqtt_state.pending_msg_id); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Sending MQTT CONNECT message, type: %d, id: %04X" "\033[0m" "\n", esp_log_timestamp(), TAG, client->mqtt_state.pending_msg_type, client->mqtt_state.pending_msg_id); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Sending MQTT CONNECT message, type: %d, id: %04X" "\033[0m" "\n", esp_log_timestamp(), TAG, client->mqtt_state.pending_msg_type, client->mqtt_state.pending_msg_id); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Sending MQTT CONNECT message, type: %d, id: %04X" "\033[0m" "\n", esp_log_timestamp(), TAG, client->mqtt_state.pending_msg_type, client->mqtt_state.pending_msg_id); } } while(0); } while(0)
+    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Sending MQTT CONNECT message, type: %d, id: %04X" "\033[0m" "\n", esp_log_timestamp(), TAG, client->mqtt_state.pending_msg_type, client->mqtt_state.pending_msg_id); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Sending MQTT CONNECT message, type: %d, id: %04X" "\033[0m" "\n", esp_log_timestamp(), TAG, client->mqtt_state.pending_msg_type, client->mqtt_state.pending_msg_id); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Sending MQTT CONNECT message, type: %d, id: %04X" "\033[0m" "\n", esp_log_timestamp(), TAG, client->mqtt_state.pending_msg_type, client->mqtt_state.pending_msg_id); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Sending MQTT CONNECT message, type: %d, id: %04X" "\033[0m" "\n", esp_log_timestamp(), TAG, client->mqtt_state.pending_msg_type, client->mqtt_state.pending_msg_id); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Sending MQTT CONNECT message, type: %d, id: %04X" "\033[0m" "\n", esp_log_timestamp(), TAG, client->mqtt_state.pending_msg_type, client->mqtt_state.pending_msg_id); } } while(0); } while(0)
 
                                                ;
 
     write_len = esp_transport_write(client->transport,
-                                (char *)client->mqtt_state.outbound_message->data,
-                                client->mqtt_state.outbound_message->length,
-                                client->config->network_timeout_ms);
+                                    (char *)client->mqtt_state.outbound_message->data,
+                                    client->mqtt_state.outbound_message->length,
+                                    client->config->network_timeout_ms);
     if (write_len < 0) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Writing failed, errno= %d" "\033[0m" "\n", esp_log_timestamp(), TAG, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Writing failed, errno= %d" "\033[0m" "\n", esp_log_timestamp(), TAG, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Writing failed, errno= %d" "\033[0m" "\n", esp_log_timestamp(), TAG, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Writing failed, errno= %d" "\033[0m" "\n", esp_log_timestamp(), TAG, (*__errno())); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Writing failed, errno= %d" "\033[0m" "\n", esp_log_timestamp(), TAG, (*__errno())); } } while(0); } while(0);
         return -1;
     }
-    read_len = esp_transport_read(client->transport,
-                              (char *)client->mqtt_state.in_buffer,
-                              client->mqtt_state.in_buffer_length,
-                              client->config->network_timeout_ms);
-    if (read_len < 0) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error network response" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error network response" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error network response" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error network response" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error network response" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+
+    client->mqtt_state.in_buffer_read_len = 0;
+    client->mqtt_state.message_length = 0;
+
+
+    uint64_t connack_recv_started = platform_tick_get_ms();
+    do {
+        read_len = mqtt_message_receive(client, client->config->network_timeout_ms);
+    } while (read_len == 0 && platform_tick_get_ms() - connack_recv_started < client->config->network_timeout_ms);
+
+    if (read_len <= 0) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: mqtt_message_receive() returned %d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, read_len); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: mqtt_message_receive() returned %d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, read_len); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: mqtt_message_receive() returned %d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, read_len); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: mqtt_message_receive() returned %d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, read_len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: mqtt_message_receive() returned %d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, read_len); } } while(0); } while(0);
         return -1;
     }
 
@@ -6659,170 +8375,205 @@ static esp_err_t esp_mqtt_connect(esp_mqtt_client_handle_t client, int timeout_m
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Invalid MSG_TYPE response: %d, read_len: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, mqtt_get_type(client->mqtt_state.in_buffer), read_len); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Invalid MSG_TYPE response: %d, read_len: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, mqtt_get_type(client->mqtt_state.in_buffer), read_len); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Invalid MSG_TYPE response: %d, read_len: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, mqtt_get_type(client->mqtt_state.in_buffer), read_len); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Invalid MSG_TYPE response: %d, read_len: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, mqtt_get_type(client->mqtt_state.in_buffer), read_len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Invalid MSG_TYPE response: %d, read_len: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, mqtt_get_type(client->mqtt_state.in_buffer), read_len); } } while(0); } while(0);
         return -1;
     }
+    client->mqtt_state.in_buffer_read_len = 0;
     connect_rsp_code = mqtt_get_connect_return_code(client->mqtt_state.in_buffer);
-    switch (connect_rsp_code) {
-        case CONNECTION_ACCEPTED:
-            do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-            return 0;
-        case CONNECTION_REFUSE_PROTOCOL:
-            do { if ( 3 >= ESP_LOG_WARN ) do { if (ESP_LOG_WARN==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Connection refused, bad protocol" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Connection refused, bad protocol" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Connection refused, bad protocol" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Connection refused, bad protocol" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Connection refused, bad protocol" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-            return -1;
-        case CONNECTION_REFUSE_SERVER_UNAVAILABLE:
-            do { if ( 3 >= ESP_LOG_WARN ) do { if (ESP_LOG_WARN==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Connection refused, server unavailable" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Connection refused, server unavailable" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Connection refused, server unavailable" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Connection refused, server unavailable" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Connection refused, server unavailable" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-            return -1;
-        case CONNECTION_REFUSE_BAD_USERNAME:
-            do { if ( 3 >= ESP_LOG_WARN ) do { if (ESP_LOG_WARN==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Connection refused, bad username or password" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Connection refused, bad username or password" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Connection refused, bad username or password" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Connection refused, bad username or password" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Connection refused, bad username or password" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-            return -1;
-        case CONNECTION_REFUSE_NOT_AUTHORIZED:
-            do { if ( 3 >= ESP_LOG_WARN ) do { if (ESP_LOG_WARN==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Connection refused, not authorized" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Connection refused, not authorized" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Connection refused, not authorized" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Connection refused, not authorized" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Connection refused, not authorized" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-            return -1;
-        default:
-            do { if ( 3 >= ESP_LOG_WARN ) do { if (ESP_LOG_WARN==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Connection refused, Unknow reason" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Connection refused, Unknow reason" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Connection refused, Unknow reason" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Connection refused, Unknow reason" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Connection refused, Unknow reason" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-            return -1;
+    if (connect_rsp_code == MQTT_CONNECTION_ACCEPTED) {
+        do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        return 0;
     }
-    return 0;
+    switch (connect_rsp_code) {
+    case MQTT_CONNECTION_REFUSE_PROTOCOL:
+        do { if ( 3 >= ESP_LOG_WARN ) do { if (ESP_LOG_WARN==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Connection refused, bad protocol" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Connection refused, bad protocol" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Connection refused, bad protocol" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Connection refused, bad protocol" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Connection refused, bad protocol" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        break;
+    case MQTT_CONNECTION_REFUSE_SERVER_UNAVAILABLE:
+        do { if ( 3 >= ESP_LOG_WARN ) do { if (ESP_LOG_WARN==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Connection refused, server unavailable" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Connection refused, server unavailable" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Connection refused, server unavailable" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Connection refused, server unavailable" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Connection refused, server unavailable" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        break;
+    case MQTT_CONNECTION_REFUSE_BAD_USERNAME:
+        do { if ( 3 >= ESP_LOG_WARN ) do { if (ESP_LOG_WARN==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Connection refused, bad username or password" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Connection refused, bad username or password" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Connection refused, bad username or password" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Connection refused, bad username or password" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Connection refused, bad username or password" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        break;
+    case MQTT_CONNECTION_REFUSE_NOT_AUTHORIZED:
+        do { if ( 3 >= ESP_LOG_WARN ) do { if (ESP_LOG_WARN==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Connection refused, not authorized" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Connection refused, not authorized" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Connection refused, not authorized" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Connection refused, not authorized" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Connection refused, not authorized" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        break;
+    default:
+        do { if ( 3 >= ESP_LOG_WARN ) do { if (ESP_LOG_WARN==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Connection refused, Unknow reason" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Connection refused, Unknow reason" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Connection refused, Unknow reason" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Connection refused, Unknow reason" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Connection refused, Unknow reason" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        break;
+    }
+
+    client->event.event_id = MQTT_EVENT_ERROR;
+    client->event.error_handle->error_type = MQTT_ERROR_TYPE_CONNECTION_REFUSED;
+    client->event.error_handle->connect_return_code = connect_rsp_code;
+    client->event.error_handle->esp_tls_stack_err = 0;
+    client->event.error_handle->esp_tls_last_esp_err = 0;
+    client->event.error_handle->esp_tls_cert_verify_flags = 0;
+    esp_mqtt_dispatch_event_with_msgid(client);
+
+    return -1;
 }
 
 static esp_err_t esp_mqtt_abort_connection(esp_mqtt_client_handle_t client)
 {
+    xQueueTakeMutexRecursive( ( client->api_lock ), ( ( TickType_t ) 0xffffffffUL ) );
     esp_transport_close(client->transport);
-    client->wait_timeout_ms = (10*1000);
+    client->wait_timeout_ms = client->config->reconnect_timeout_ms;
     client->reconnect_tick = platform_tick_get_ms();
     client->state = MQTT_STATE_WAIT_TIMEOUT;
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Reconnect after %d ms" "\033[0m" "\n", esp_log_timestamp(), TAG, client->wait_timeout_ms); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Reconnect after %d ms" "\033[0m" "\n", esp_log_timestamp(), TAG, client->wait_timeout_ms); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Reconnect after %d ms" "\033[0m" "\n", esp_log_timestamp(), TAG, client->wait_timeout_ms); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Reconnect after %d ms" "\033[0m" "\n", esp_log_timestamp(), TAG, client->wait_timeout_ms); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Reconnect after %d ms" "\033[0m" "\n", esp_log_timestamp(), TAG, client->wait_timeout_ms); } } while(0); } while(0);
     client->event.event_id = MQTT_EVENT_DISCONNECTED;
     client->wait_for_ping_resp = 
-# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 581 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
                                 0
-# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 581 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
                                      ;
     esp_mqtt_dispatch_event_with_msgid(client);
+    xQueueGiveMutexRecursive( ( client->api_lock ) );
     return 0;
 }
 
 esp_mqtt_client_handle_t esp_mqtt_client_init(const esp_mqtt_client_config_t *config)
 {
     esp_mqtt_client_handle_t client = calloc(1, sizeof(struct esp_mqtt_client));
-    if (!(client)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 304, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 304, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 304, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 304, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 304, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); return 
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+    if (!(client)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 590, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 590, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 590, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 590, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 590, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); return 
+# 590 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
    ((void *)0)
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 590 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
    ; };
-
-    esp_mqtt_set_config(client, config);
+    client->event.error_handle = calloc(1, sizeof(esp_mqtt_error_codes_t));
+    if (!client->event.error_handle) {
+        free(client);
+        return 
+# 594 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+              ((void *)0)
+# 594 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                  ;
+    }
+    client->api_lock = xQueueCreateMutex( ( ( uint8_t ) 4U ) );
+    if (!client->api_lock) {
+        free(client->event.error_handle);
+        free(client);
+        return 
+# 600 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+              ((void *)0)
+# 600 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                  ;
+    }
 
     client->transport_list = esp_transport_list_init();
-    if (!(client->transport_list)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 309, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 309, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 309, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 309, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 309, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
+    if (!(client->transport_list)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 604, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 604, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 604, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 604, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 604, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
 
     esp_transport_handle_t tcp = esp_transport_tcp_init();
-    if (!(tcp)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 312, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 312, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 312, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 312, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 312, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
+    if (!(tcp)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 607, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 607, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 607, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 607, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 607, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
     esp_transport_set_default_port(tcp, 1883);
     esp_transport_list_add(client->transport_list, tcp, "mqtt");
-    if (config->transport == MQTT_TRANSPORT_OVER_TCP) {
-        client->config->scheme = create_string("mqtt", 4);
-        if (!(client->config->scheme)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 317, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 317, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 317, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 317, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 317, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
-    }
 
 
     esp_transport_handle_t ws = esp_transport_ws_init(tcp);
-    if (!(ws)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 322, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 322, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 322, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 322, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 322, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
+    if (!(ws)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 613, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 613, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 613, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 613, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 613, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
     esp_transport_set_default_port(ws, 80);
+
+
+
     esp_transport_list_add(client->transport_list, ws, "ws");
-    if (config->transport == MQTT_TRANSPORT_OVER_WS) {
-        client->config->scheme = create_string("ws", 2);
-        if (!(client->config->scheme)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 327, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 327, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 327, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 327, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 327, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
-    }
 
 
 
     esp_transport_handle_t ssl = esp_transport_ssl_init();
-    if (!(ssl)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 333, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 333, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 333, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 333, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 333, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
+    if (!(ssl)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 623, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 623, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 623, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 623, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 623, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
     esp_transport_set_default_port(ssl, 8883);
-    if (config->cert_pem) {
-        esp_transport_ssl_set_cert_data(ssl, config->cert_pem, strlen(config->cert_pem));
-    }
-    if (config->client_cert_pem) {
-        esp_transport_ssl_set_client_cert_data(ssl, config->client_cert_pem, strlen(config->client_cert_pem));
-    }
-    if (config->client_key_pem) {
-        esp_transport_ssl_set_client_key_data(ssl, config->client_key_pem, strlen(config->client_key_pem));
-    }
+
     esp_transport_list_add(client->transport_list, ssl, "mqtts");
-    if (config->transport == MQTT_TRANSPORT_OVER_SSL) {
-        client->config->scheme = create_string("mqtts", 5);
-        if (!(client->config->scheme)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 347, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 347, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 347, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 347, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 347, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
-    }
 
 
 
     esp_transport_handle_t wss = esp_transport_ws_init(ssl);
-    if (!(wss)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 353, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 353, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 353, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 353, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 353, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
+    if (!(wss)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 631, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 631, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 631, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 631, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 631, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
+
+
+
     esp_transport_set_default_port(wss, 443);
     esp_transport_list_add(client->transport_list, wss, "wss");
-    if (config->transport == MQTT_TRANSPORT_OVER_WSS) {
-        client->config->scheme = create_string("wss", 3);
-        if (!(client->config->scheme)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 358, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 358, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 358, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 358, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 358, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
+
+    if (!(client->transport_list)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 638, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 638, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 638, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 638, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 638, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
+
+    if (esp_mqtt_set_config(client, config) != 0) {
+        goto _mqtt_init_failed;
     }
 
-    if (client->config->uri) {
-        if (esp_mqtt_client_set_uri(client, client->config->uri) != 0) {
-            goto _mqtt_init_failed;
-        }
-    }
+    esp_event_loop_args_t no_task_loop = {
+            .queue_size = 1,
+            .task_name = 
+# 646 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                        ((void *)0)
+# 646 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                            ,
+    };
+    esp_event_loop_create(&no_task_loop, &client->config->event_loop_handle);
 
-    if (client->config->scheme == 
-# 367 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
-                                 ((void *)0)
-# 367 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
-                                     ) {
-        client->config->scheme = create_string("mqtt", 4);
-        if (!(client->config->scheme)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 369, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 369, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 369, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 369, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 369, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
-    }
 
     client->keepalive_tick = platform_tick_get_ms();
     client->reconnect_tick = platform_tick_get_ms();
     client->refresh_connection_tick = platform_tick_get_ms();
     client->wait_for_ping_resp = 
-# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 654 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
                                 0
-# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 654 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
                                      ;
     int buffer_size = config->buffer_size;
     if (buffer_size <= 0) {
         buffer_size = 1024;
     }
 
-    client->mqtt_state.in_buffer = (uint8_t *)malloc(buffer_size);
-    if (!(client->mqtt_state.in_buffer)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 382, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 382, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 382, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 382, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 382, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
-    client->mqtt_state.in_buffer_length = buffer_size;
-    client->mqtt_state.out_buffer = (uint8_t *)malloc(buffer_size);
-    if (!(client->mqtt_state.out_buffer)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 385, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 385, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 385, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 385, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 385, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
+    int out_buffer_size = config->out_buffer_size > 0 ? config->out_buffer_size : buffer_size;
 
-    client->mqtt_state.out_buffer_length = buffer_size;
+    client->mqtt_state.in_buffer = (uint8_t *)malloc(buffer_size);
+    if (!(client->mqtt_state.in_buffer)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 663, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 663, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 663, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 663, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 663, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
+    client->mqtt_state.in_buffer_length = buffer_size;
+    client->mqtt_state.out_buffer = (uint8_t *)malloc(out_buffer_size);
+    if (!(client->mqtt_state.out_buffer)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 666, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 666, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 666, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 666, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 666, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
+
+    client->mqtt_state.out_buffer_length = out_buffer_size;
     client->mqtt_state.connect_info = &client->connect_info;
     client->outbox = outbox_init();
-    if (!(client->outbox)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 390, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 390, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 390, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 390, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 390, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
+    if (!(client->outbox)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 671, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 671, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 671, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 671, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 671, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
     client->status_bits = xEventGroupCreate();
-    if (!(client->status_bits)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 392, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 392, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 392, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 392, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 392, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
+    if (!(client->status_bits)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 673, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 673, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 673, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 673, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 673, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); goto _mqtt_init_failed; };
+
+    mqtt_msg_init(&client->mqtt_state.mqtt_connection, client->mqtt_state.out_buffer,
+                            client->mqtt_state.out_buffer_length);
+
     return client;
 _mqtt_init_failed:
     esp_mqtt_client_destroy(client);
     return 
-# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 681 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
           ((void *)0)
-# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 681 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
               ;
 }
 
 esp_err_t esp_mqtt_client_destroy(esp_mqtt_client_handle_t client)
 {
+    if (client == 
+# 686 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                 ((void *)0)
+# 686 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                     ) {
+        return 0x102;
+    }
     esp_mqtt_client_stop(client);
     esp_mqtt_destroy_config(client);
-    esp_transport_list_destroy(client->transport_list);
-    outbox_destroy(client->outbox);
-    vEventGroupDelete(client->status_bits);
+    if (client->transport_list) {
+        esp_transport_list_destroy(client->transport_list);
+    }
+    if (client->outbox) {
+        outbox_destroy(client->outbox);
+    }
+    if (client->status_bits) {
+        vEventGroupDelete(client->status_bits);
+    }
     free(client->mqtt_state.in_buffer);
     free(client->mqtt_state.out_buffer);
+    vQueueDelete( ( QueueHandle_t ) ( client->api_lock ) );
+    free(client->event.error_handle);
     free(client);
     return 0;
 }
@@ -6832,16 +8583,16 @@ static char *create_string(const char *ptr, int len)
     char *ret;
     if (len <= 0) {
         return 
-# 416 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 712 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
               ((void *)0)
-# 416 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 712 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
                   ;
     }
     ret = calloc(1, len + 1);
-    if (!(ret)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 419, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 419, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 419, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 419, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 419, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); return 
-# 419 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+    if (!(ret)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 715, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 715, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 715, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 715, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", 715, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); return 
+# 715 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
    ((void *)0)
-# 419 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 715 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
    ; };
     memcpy(ret, ptr, len);
     return ret;
@@ -6857,29 +8608,17 @@ esp_err_t esp_mqtt_client_set_uri(esp_mqtt_client_handle_t client, const char *u
         return -1;
     }
 
-    if (client->config->scheme == 
-# 434 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
-                                 ((void *)0)
-# 434 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
-                                     ) {
-        client->config->scheme = create_string(uri + puri.field_data[UF_SCHEMA].off, puri.field_data[UF_SCHEMA].len);
-    }
 
-    if (client->config->host == 
-# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
-                               ((void *)0)
-# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
-                                   ) {
-        client->config->host = create_string(uri + puri.field_data[UF_HOST].off, puri.field_data[UF_HOST].len);
-    }
+    xQueueTakeMutexRecursive( ( client->api_lock ), ( ( TickType_t ) 0xffffffffUL ) );
 
-    if (client->config->path == 
-# 442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
-                               ((void *)0)
-# 442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
-                                   ) {
-        client->config->path = create_string(uri + puri.field_data[UF_PATH].off, puri.field_data[UF_PATH].len);
-    }
+    free(client->config->scheme);
+    free(client->config->host);
+    free(client->config->path);
+
+    client->config->scheme = create_string(uri + puri.field_data[UF_SCHEMA].off, puri.field_data[UF_SCHEMA].len);
+    client->config->host = create_string(uri + puri.field_data[UF_HOST].off, puri.field_data[UF_HOST].len);
+    client->config->path = create_string(uri + puri.field_data[UF_PATH].off, puri.field_data[UF_PATH].len);
+
     if (client->config->path) {
         esp_transport_handle_t trans = esp_transport_list_get_transport(client->transport_list, "ws");
         if (trans) {
@@ -6892,11 +8631,11 @@ esp_err_t esp_mqtt_client_set_uri(esp_mqtt_client_handle_t client, const char *u
     }
 
     if (puri.field_data[UF_PORT].len) {
-        client->config->port = strtol((const char*)(uri + puri.field_data[UF_PORT].off), 
-# 457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
-                                                                                        ((void *)0)
-# 457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
-                                                                                            , 10);
+        client->config->port = strtol((const char *)(uri + puri.field_data[UF_PORT].off), 
+# 753 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                                                                                         ((void *)0)
+# 753 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                                                                                             , 10);
     }
 
     char *user_info = create_string(uri + puri.field_data[UF_USERINFO].off, puri.field_data[UF_USERINFO].len);
@@ -6912,18 +8651,28 @@ esp_err_t esp_mqtt_client_set_uri(esp_mqtt_client_handle_t client, const char *u
         free(user_info);
     }
 
+    xQueueGiveMutexRecursive( ( client->api_lock ) );
     return 0;
 }
 
 static esp_err_t mqtt_write_data(esp_mqtt_client_handle_t client)
 {
     int write_len = esp_transport_write(client->transport,
-                                    (char *)client->mqtt_state.outbound_message->data,
-                                    client->mqtt_state.outbound_message->length,
-                                    client->config->network_timeout_ms);
+                                        (char *)client->mqtt_state.outbound_message->data,
+                                        client->mqtt_state.outbound_message->length,
+                                        client->config->network_timeout_ms);
 
     if (write_len <= 0) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error write data or timeout, written len = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, write_len); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error write data or timeout, written len = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, write_len); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error write data or timeout, written len = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, write_len); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error write data or timeout, written len = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, write_len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error write data or timeout, written len = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, write_len); } } while(0); } while(0);
+        client->event.event_id = MQTT_EVENT_ERROR;
+        client->event.error_handle->error_type = MQTT_ERROR_TYPE_ESP_TLS;
+        client->event.error_handle->connect_return_code = 0;
+
+
+
+
+
+        esp_mqtt_dispatch_event_with_msgid(client);
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error write data or timeout, written len = %d, errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, write_len, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error write data or timeout, written len = %d, errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, write_len, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error write data or timeout, written len = %d, errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, write_len, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error write data or timeout, written len = %d, errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, write_len, (*__errno())); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error write data or timeout, written len = %d, errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, write_len, (*__errno())); } } while(0); } while(0);
         return -1;
     }
 
@@ -6946,140 +8695,126 @@ static esp_err_t esp_mqtt_dispatch_event(esp_mqtt_client_handle_t client)
 
     if (client->config->event_handle) {
         return client->config->event_handle(&client->event);
+    } else {
+
+        esp_event_post_to(client->config->event_loop_handle, MQTT_EVENTS, client->event.event_id, &client->event, sizeof(client->event), ( TickType_t ) 0xffffffffUL);
+        return esp_event_loop_run(client->config->event_loop_handle, 0);
+
+
+
     }
-    return -1;
 }
 
-static void deliver_publish(esp_mqtt_client_handle_t client, uint8_t *message, int length)
+static esp_err_t deliver_publish(esp_mqtt_client_handle_t client)
 {
-    const char *mqtt_topic = 
-# 513 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
-                            ((void *)0)
-# 513 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
-                                , *mqtt_data = 
-# 513 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
-                                               ((void *)0)
-# 513 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
-                                                   ;
-    uint32_t mqtt_topic_length, mqtt_data_length;
-    uint32_t mqtt_len = 0, mqtt_offset = 0, total_mqtt_len = 0;
-    int len_read= length;
-    int max_to_read = client->mqtt_state.in_buffer_length;
-    int buffer_offset = 0;
-    esp_transport_handle_t transport = client->transport;
+    uint8_t *msg_buf = client->mqtt_state.in_buffer;
+    size_t msg_read_len = client->mqtt_state.in_buffer_read_len;
+    size_t msg_total_len = client->mqtt_state.message_length;
+    size_t msg_topic_len = msg_read_len, msg_data_len = msg_read_len;
+    size_t msg_data_offset = 0;
+    char *msg_topic = 
+# 830 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                     ((void *)0)
+# 830 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                         , *msg_data = 
+# 830 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                                       ((void *)0)
+# 830 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                                           ;
 
-    do
-    {
-        if (total_mqtt_len == 0) {
 
-            transport = esp_transport_get_payload_transport_handle(transport);
-            mqtt_data_length = mqtt_topic_length = length;
-            if (
-# 527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
-               ((void *)0) 
-# 527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
-                    == (mqtt_topic = mqtt_get_publish_topic(message, &mqtt_topic_length)) ||
-                
-# 528 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
-               ((void *)0) 
-# 528 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
-                    == (mqtt_data = mqtt_get_publish_data(message, &mqtt_data_length)) ) {
+    msg_topic = mqtt_get_publish_topic(msg_buf, &msg_topic_len);
+    if (msg_topic == 
+# 834 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                    ((void *)0)
+# 834 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                        ) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: mqtt_get_publish_topic() failed" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: mqtt_get_publish_topic() failed" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: mqtt_get_publish_topic() failed" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: mqtt_get_publish_topic() failed" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: mqtt_get_publish_topic() failed" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } } while(0); } while(0);
+        return -1;
+    }
+    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: msg_topic_len=%u" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, msg_topic_len); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: msg_topic_len=%u" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, msg_topic_len); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: msg_topic_len=%u" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, msg_topic_len); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: msg_topic_len=%u" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, msg_topic_len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: msg_topic_len=%u" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, msg_topic_len); } } while(0); } while(0);
 
-                memmove(client->mqtt_state.in_buffer, message, length);
-                buffer_offset = length;
-                message = client->mqtt_state.in_buffer;
-                max_to_read = client->mqtt_state.in_buffer_length - length;
-                mqtt_len = 0;
-            } else {
-                total_mqtt_len = client->mqtt_state.message_length - client->mqtt_state.message_length_read + mqtt_data_length;
-                mqtt_len = mqtt_data_length;
-                if (client->mqtt_state.message_length_read < client->mqtt_state.message_length) {
 
-                    mqtt_data_length = client->mqtt_state.message_length_read - ((uint8_t*)mqtt_data- message);
-                }
+    msg_data = mqtt_get_publish_data(msg_buf, &msg_data_len);
+    if (msg_data_len > 0 && msg_data == 
+# 842 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                                       ((void *)0)
+# 842 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                                           ) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: mqtt_get_publish_data() failed" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: mqtt_get_publish_data() failed" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: mqtt_get_publish_data() failed" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: mqtt_get_publish_data() failed" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: mqtt_get_publish_data() failed" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } } while(0); } while(0);
+        return -1;
+    }
 
-                client->event.msg_id = mqtt_get_id(client->mqtt_state.in_buffer, client->mqtt_state.in_buffer_length);
-            }
-        } else {
-            mqtt_len = len_read;
-            mqtt_data = (const char*)client->mqtt_state.in_buffer;
-            mqtt_topic = 
-# 548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
-                        ((void *)0)
-# 548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
-                            ;
-            mqtt_topic_length = 0;
+
+    client->event.msg_id = mqtt_get_id(msg_buf, msg_data_len);
+    client->event.total_data_len = msg_data_len + msg_total_len - msg_read_len;
+
+post_data_event:
+    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Get data len= %d, topic len=%d, total_data: %d offset: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_data_len, msg_topic_len, client->event.total_data_len, msg_data_offset); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Get data len= %d, topic len=%d, total_data: %d offset: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_data_len, msg_topic_len, client->event.total_data_len, msg_data_offset); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Get data len= %d, topic len=%d, total_data: %d offset: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_data_len, msg_topic_len, client->event.total_data_len, msg_data_offset); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Get data len= %d, topic len=%d, total_data: %d offset: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_data_len, msg_topic_len, client->event.total_data_len, msg_data_offset); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Get data len= %d, topic len=%d, total_data: %d offset: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_data_len, msg_topic_len, client->event.total_data_len, msg_data_offset); } } while(0); } while(0)
+                                                           ;
+    client->event.event_id = MQTT_EVENT_DATA;
+    client->event.data = msg_data_len > 0 ? msg_data : 
+# 855 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                                                      ((void *)0)
+# 855 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                                                          ;
+    client->event.data_len = msg_data_len;
+    client->event.current_data_offset = msg_data_offset;
+    client->event.topic = msg_topic;
+    client->event.topic_len = msg_topic_len;
+    esp_mqtt_dispatch_event(client);
+
+    if (msg_read_len < msg_total_len) {
+        size_t buf_len = client->mqtt_state.in_buffer_length;
+
+        msg_data = (char *)client->mqtt_state.in_buffer;
+        msg_topic = 
+# 866 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                   ((void *)0)
+# 866 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                       ;
+        msg_topic_len = 0;
+        msg_data_offset += msg_data_len;
+        msg_data_len = esp_transport_read(client-> transport, (char *)client->mqtt_state.in_buffer,
+                                          msg_total_len - msg_read_len > buf_len ? buf_len : msg_total_len - msg_read_len,
+                                          client->config->network_timeout_ms);
+        if (msg_data_len <= 0) {
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Read error or timeout: len_read=%d, errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_data_len, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Read error or timeout: len_read=%d, errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_data_len, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Read error or timeout: len_read=%d, errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_data_len, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Read error or timeout: len_read=%d, errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_data_len, (*__errno())); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Read error or timeout: len_read=%d, errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_data_len, (*__errno())); } } while(0); } while(0);
+            return -1;
         }
-
-        if (total_mqtt_len != 0) {
-            do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Get data len= %d, topic len=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, mqtt_len, mqtt_topic_length); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Get data len= %d, topic len=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, mqtt_len, mqtt_topic_length); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Get data len= %d, topic len=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, mqtt_len, mqtt_topic_length); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Get data len= %d, topic len=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, mqtt_len, mqtt_topic_length); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Get data len= %d, topic len=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, mqtt_len, mqtt_topic_length); } } while(0); } while(0);
-            client->event.event_id = MQTT_EVENT_DATA;
-            client->event.data = (char *)mqtt_data;
-            client->event.data_len = mqtt_len;
-            client->event.total_data_len = total_mqtt_len;
-            client->event.current_data_offset = mqtt_offset;
-            client->event.topic = (char *)mqtt_topic;
-            client->event.topic_len = mqtt_topic_length;
-            esp_mqtt_dispatch_event(client);
-        }
-
-        mqtt_offset += mqtt_len;
-        if (client->mqtt_state.message_length_read >= client->mqtt_state.message_length) {
-            break;
-        }
-
-        len_read = esp_transport_read(transport,
-                                  (char *)client->mqtt_state.in_buffer + buffer_offset,
-                                  client->mqtt_state.message_length - client->mqtt_state.message_length_read > max_to_read ?
-                                  max_to_read : client->mqtt_state.message_length - client->mqtt_state.message_length_read,
-                                  client->config->network_timeout_ms);
-        length = len_read + buffer_offset;
-        buffer_offset = 0;
-        max_to_read = client->mqtt_state.in_buffer_length;
-        if (len_read <= 0) {
-            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Read error or timeout: len_read=%d, errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, len_read, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Read error or timeout: len_read=%d, errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, len_read, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Read error or timeout: len_read=%d, errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, len_read, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Read error or timeout: len_read=%d, errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, len_read, (*__errno())); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Read error or timeout: len_read=%d, errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, len_read, (*__errno())); } } while(0); } while(0);
-            break;
-        }
-        client->mqtt_state.message_length_read += len_read;
-    } while (1);
-
+        msg_read_len += msg_data_len;
+        goto post_data_event;
+    }
+    return 0;
 }
 
 static 
-# 586 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 882 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
       _Bool 
-# 586 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 882 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
            is_valid_mqtt_msg(esp_mqtt_client_handle_t client, int msg_type, int msg_id)
 {
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "pending_id=%d, pending_msg_count = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, client->mqtt_state.pending_msg_id, client->mqtt_state.pending_msg_count); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "pending_id=%d, pending_msg_count = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, client->mqtt_state.pending_msg_id, client->mqtt_state.pending_msg_count); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "pending_id=%d, pending_msg_count = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, client->mqtt_state.pending_msg_id, client->mqtt_state.pending_msg_count); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "pending_id=%d, pending_msg_count = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, client->mqtt_state.pending_msg_id, client->mqtt_state.pending_msg_count); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "pending_id=%d, pending_msg_count = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, client->mqtt_state.pending_msg_id, client->mqtt_state.pending_msg_count); } } while(0); } while(0);
     if (client->mqtt_state.pending_msg_count == 0) {
         return 
-# 590 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 886 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
               0
-# 590 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 886 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
                    ;
     }
     if (outbox_delete(client->outbox, msg_id, msg_type) == 0) {
         client->mqtt_state.pending_msg_count --;
         return 
-# 594 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 890 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
               1
-# 594 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
-                  ;
-    }
-    if (client->mqtt_state.pending_msg_type == msg_type && client->mqtt_state.pending_msg_id == msg_id) {
-        client->mqtt_state.pending_msg_count --;
-        return 
-# 598 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
-              1
-# 598 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 890 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
                   ;
     }
 
     return 
-# 601 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 893 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
           0
-# 601 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 893 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
                ;
 }
 
@@ -7089,13 +8824,11 @@ static void mqtt_enqueue_oversized(esp_mqtt_client_handle_t client, uint8_t *rem
                                                                                     ;
 
     outbox_message_t msg = { 0 };
-    if (client->mqtt_state.pending_msg_count > 0) {
-        client->mqtt_state.pending_msg_count --;
-    }
     msg.data = client->mqtt_state.outbound_message->data;
     msg.len = client->mqtt_state.outbound_message->length;
     msg.msg_id = client->mqtt_state.pending_msg_id;
     msg.msg_type = client->mqtt_state.pending_msg_type;
+    msg.msg_qos = client->mqtt_state.pending_publish_qos;
     msg.remaining_data = remaining_data;
     msg.remaining_len = remaining_len;
 
@@ -7115,145 +8848,298 @@ static void mqtt_enqueue(esp_mqtt_client_handle_t client)
         msg.len = client->mqtt_state.outbound_message->length;
         msg.msg_id = client->mqtt_state.pending_msg_id;
         msg.msg_type = client->mqtt_state.pending_msg_type;
+        msg.msg_qos = client->mqtt_state.pending_publish_qos;
 
         outbox_enqueue(client->outbox, &msg, platform_tick_get_ms());
     }
 
 }
+# 942 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+static int mqtt_message_receive(esp_mqtt_client_handle_t client, int read_poll_timeout_ms)
+{
+    int read_len, total_len, fixed_header_len;
+    uint8_t *buf = client->mqtt_state.in_buffer + client->mqtt_state.in_buffer_read_len;
+    esp_transport_handle_t t = client->transport;
+
+    client->mqtt_state.message_length = 0;
+    if (client->mqtt_state.in_buffer_read_len == 0) {
+
+
+
+
+        read_len = esp_transport_read(t, (char *)buf, 1, read_poll_timeout_ms);
+        if (read_len < 0) {
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: transport_read() error: errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: transport_read() error: errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: transport_read() error: errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: transport_read() error: errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, (*__errno())); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: transport_read() error: errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, (*__errno())); } } while(0); } while(0);
+            goto err;
+        }
+        if (read_len == 0) {
+            do { if ( 3 >= ESP_LOG_VERBOSE ) do { if (ESP_LOG_VERBOSE==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: transport_read(): no data or EOF" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_VERBOSE==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: transport_read(): no data or EOF" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_VERBOSE==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: transport_read(): no data or EOF" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_VERBOSE==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: transport_read(): no data or EOF" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: transport_read(): no data or EOF" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } } while(0); } while(0);
+            return 0;
+        }
+        do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: first byte: 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, *buf); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: first byte: 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, *buf); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: first byte: 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, *buf); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: first byte: 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, *buf); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: first byte: 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, *buf); } } while(0); } while(0);
+
+
+
+
+        if (!mqtt_has_valid_msg_hdr(buf, read_len)) {
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: received a message with an invalid header=0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, *buf); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: received a message with an invalid header=0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, *buf); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: received a message with an invalid header=0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, *buf); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: received a message with an invalid header=0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, *buf); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: received a message with an invalid header=0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, *buf); } } while(0); } while(0);
+            goto err;
+        }
+        buf++;
+        client->mqtt_state.in_buffer_read_len++;
+    }
+    if ((client->mqtt_state.in_buffer_read_len == 1) ||
+            ((client->mqtt_state.in_buffer_read_len < 6) && (*(buf - 1) & 0x80))) {
+        do {
+
+
+
+
+
+
+
+            read_len = esp_transport_read(t, (char *)buf, 1, read_poll_timeout_ms);
+            if (read_len < 0) {
+                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: transport_read() error: errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: transport_read() error: errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: transport_read() error: errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: transport_read() error: errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, (*__errno())); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: transport_read() error: errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, (*__errno())); } } while(0); } while(0);
+                goto err;
+            }
+            if (read_len == 0) {
+                do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: transport_read(): no data or EOF" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: transport_read(): no data or EOF" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: transport_read(): no data or EOF" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: transport_read(): no data or EOF" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: transport_read(): no data or EOF" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } } while(0); } while(0);
+                return 0;
+            }
+            do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: read \"remaining length\" byte: 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, *buf); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: read \"remaining length\" byte: 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, *buf); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: read \"remaining length\" byte: 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, *buf); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: read \"remaining length\" byte: 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, *buf); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: read \"remaining length\" byte: 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, *buf); } } while(0); } while(0);
+            buf++;
+            client->mqtt_state.in_buffer_read_len++;
+        } while ((client->mqtt_state.in_buffer_read_len < 6) && (*(buf - 1) & 0x80));
+    }
+    total_len = mqtt_get_total_length(client->mqtt_state.in_buffer, client->mqtt_state.in_buffer_read_len, &fixed_header_len);
+    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: total message length: %d (already read: %u)" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, total_len, client->mqtt_state.in_buffer_read_len); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: total message length: %d (already read: %u)" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, total_len, client->mqtt_state.in_buffer_read_len); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: total message length: %d (already read: %u)" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, total_len, client->mqtt_state.in_buffer_read_len); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: total message length: %d (already read: %u)" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, total_len, client->mqtt_state.in_buffer_read_len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: total message length: %d (already read: %u)" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, total_len, client->mqtt_state.in_buffer_read_len); } } while(0); } while(0);
+    client->mqtt_state.message_length = total_len;
+    if (client->mqtt_state.in_buffer_length < total_len) {
+        if (mqtt_get_type(client->mqtt_state.in_buffer) == MQTT_MSG_TYPE_PUBLISH) {
+
+
+
+
+            if (client->mqtt_state.in_buffer_read_len < fixed_header_len + 2) {
+
+                read_len = esp_transport_read(t, (char *)buf, client->mqtt_state.in_buffer_read_len - fixed_header_len + 2, read_poll_timeout_ms);
+                do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: read_len=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, read_len); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: read_len=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, read_len); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: read_len=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, read_len); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: read_len=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, read_len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: read_len=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, read_len); } } while(0); } while(0);
+                if (read_len < 0) {
+                    do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: transport_read() error: errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: transport_read() error: errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: transport_read() error: errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: transport_read() error: errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, (*__errno())); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: transport_read() error: errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, (*__errno())); } } while(0); } while(0);
+                    goto err;
+                } else if (read_len == 0) {
+                    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: transport_read(): no data or EOF" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: transport_read(): no data or EOF" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: transport_read(): no data or EOF" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: transport_read(): no data or EOF" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: transport_read(): no data or EOF" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } } while(0); } while(0);
+                    return 0;
+                }
+                client->mqtt_state.in_buffer_read_len += read_len;
+                buf += read_len;
+                if (client->mqtt_state.in_buffer_read_len < fixed_header_len + 2) {
+                    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: transport_read(): message reading left in progress :: total message length: %d (already read: %u)" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, total_len, client->mqtt_state.in_buffer_read_len); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: transport_read(): message reading left in progress :: total message length: %d (already read: %u)" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, total_len, client->mqtt_state.in_buffer_read_len); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: transport_read(): message reading left in progress :: total message length: %d (already read: %u)" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, total_len, client->mqtt_state.in_buffer_read_len); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: transport_read(): message reading left in progress :: total message length: %d (already read: %u)" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, total_len, client->mqtt_state.in_buffer_read_len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: transport_read(): message reading left in progress :: total message length: %d (already read: %u)" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, total_len, client->mqtt_state.in_buffer_read_len); } } while(0); } while(0)
+                                                                                        ;
+                    return 0;
+                }
+            }
+            int topic_len = client->mqtt_state.in_buffer[fixed_header_len] << 8;
+            topic_len |= client->mqtt_state.in_buffer[fixed_header_len + 1];
+            total_len = fixed_header_len + topic_len + (mqtt_get_qos(client->mqtt_state.in_buffer) > 0 ? 2 : 0);
+            do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: total len modified to %d as message longer than input buffer" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, total_len); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: total len modified to %d as message longer than input buffer" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, total_len); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: total len modified to %d as message longer than input buffer" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, total_len); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: total len modified to %d as message longer than input buffer" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, total_len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: total len modified to %d as message longer than input buffer" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, total_len); } } while(0); } while(0);
+            if (client->mqtt_state.in_buffer_length < total_len) {
+                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: message is too big, insufficient buffer size" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: message is too big, insufficient buffer size" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: message is too big, insufficient buffer size" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: message is too big, insufficient buffer size" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: message is too big, insufficient buffer size" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } } while(0); } while(0);
+                goto err;
+            } else {
+                total_len = client->mqtt_state.in_buffer_length;
+            }
+
+        } else {
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: message is too big, insufficient buffer size" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: message is too big, insufficient buffer size" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: message is too big, insufficient buffer size" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: message is too big, insufficient buffer size" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: message is too big, insufficient buffer size" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } } while(0); } while(0);
+            goto err;
+        }
+    }
+    if (client->mqtt_state.in_buffer_read_len < total_len) {
+
+        read_len = esp_transport_read(t, (char *)buf, total_len - client->mqtt_state.in_buffer_read_len, read_poll_timeout_ms);
+        do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: read_len=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, read_len); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: read_len=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, read_len); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: read_len=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, read_len); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: read_len=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, read_len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: read_len=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, read_len); } } while(0); } while(0);
+        if (read_len < 0) {
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: transport_read() error: errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: transport_read() error: errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: transport_read() error: errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: transport_read() error: errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, (*__errno())); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: transport_read() error: errno=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, (*__errno())); } } while(0); } while(0);
+            goto err;
+        }
+        if (read_len == 0) {
+            do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: transport_read(): no data or EOF" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: transport_read(): no data or EOF" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: transport_read(): no data or EOF" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: transport_read(): no data or EOF" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: transport_read(): no data or EOF" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } } while(0); } while(0);
+            return 0;
+        }
+        client->mqtt_state.in_buffer_read_len += read_len;
+        if (client->mqtt_state.in_buffer_read_len < total_len) {
+            do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: transport_read(): message reading left in progress :: total message length: %d (already read: %u)" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, total_len, client->mqtt_state.in_buffer_read_len); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: transport_read(): message reading left in progress :: total message length: %d (already read: %u)" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, total_len, client->mqtt_state.in_buffer_read_len); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: transport_read(): message reading left in progress :: total message length: %d (already read: %u)" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, total_len, client->mqtt_state.in_buffer_read_len); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: transport_read(): message reading left in progress :: total message length: %d (already read: %u)" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, total_len, client->mqtt_state.in_buffer_read_len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: transport_read(): message reading left in progress :: total message length: %d (already read: %u)" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, total_len, client->mqtt_state.in_buffer_read_len); } } while(0); } while(0)
+                                                                                ;
+            return 0;
+        }
+    }
+    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: transport_read():%d %d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, client->mqtt_state.in_buffer_read_len, client->mqtt_state.message_length); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: transport_read():%d %d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, client->mqtt_state.in_buffer_read_len, client->mqtt_state.message_length); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: transport_read():%d %d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, client->mqtt_state.in_buffer_read_len, client->mqtt_state.message_length); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: transport_read():%d %d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, client->mqtt_state.in_buffer_read_len, client->mqtt_state.message_length); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: transport_read():%d %d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, client->mqtt_state.in_buffer_read_len, client->mqtt_state.message_length); } } while(0); } while(0);
+    return 1;
+err:
+    return -1;
+}
 
 static esp_err_t mqtt_process_receive(esp_mqtt_client_handle_t client)
 {
-    int read_len;
     uint8_t msg_type;
     uint8_t msg_qos;
     uint16_t msg_id;
-    uint32_t transport_message_offset = 0 ;
 
-    read_len = esp_transport_read(client->transport, (char *)client->mqtt_state.in_buffer, client->mqtt_state.in_buffer_length, 1000);
 
-    if (read_len < 0) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Read error or end of stream" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Read error or end of stream" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Read error or end of stream" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Read error or end of stream" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Read error or end of stream" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+    int recv = mqtt_message_receive(client, 0);
+    if (recv < 0) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s: mqtt_message_receive() returned %d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, recv); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s: mqtt_message_receive() returned %d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, recv); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s: mqtt_message_receive() returned %d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, recv); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s: mqtt_message_receive() returned %d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, recv); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s: mqtt_message_receive() returned %d" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__, recv); } } while(0); } while(0);
         return -1;
     }
-
-    if (read_len == 0) {
+    if (recv == 0) {
         return 0;
     }
+    int read_len = client->mqtt_state.message_length;
 
 
-    while ( transport_message_offset < read_len ){
-
-    msg_type = mqtt_get_type(&client->mqtt_state.in_buffer[transport_message_offset]);
-    msg_qos = mqtt_get_qos(&client->mqtt_state.in_buffer[transport_message_offset]);
-    msg_id = mqtt_get_id(&client->mqtt_state.in_buffer[transport_message_offset], read_len - transport_message_offset);
-    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "msg_type=%d, msg_id=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_type, msg_id); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "msg_type=%d, msg_id=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_type, msg_id); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "msg_type=%d, msg_id=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_type, msg_id); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "msg_type=%d, msg_id=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_type, msg_id); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "msg_type=%d, msg_id=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_type, msg_id); } } while(0); } while(0);
+    msg_type = mqtt_get_type(client->mqtt_state.in_buffer);
+    msg_qos = mqtt_get_qos(client->mqtt_state.in_buffer);
+    msg_id = mqtt_get_id(client->mqtt_state.in_buffer, read_len);
 
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "msg_type=%d, msg_id=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_type, msg_id); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "msg_type=%d, msg_id=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_type, msg_id); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "msg_type=%d, msg_id=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_type, msg_id); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "msg_type=%d, msg_id=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_type, msg_id); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "msg_type=%d, msg_id=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_type, msg_id); } } while(0); } while(0);
-    switch (msg_type)
-    {
-        case MQTT_MSG_TYPE_SUBACK:
-            if (is_valid_mqtt_msg(client, MQTT_MSG_TYPE_SUBSCRIBE, msg_id)) {
-                do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Subscribe successful" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Subscribe successful" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Subscribe successful" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Subscribe successful" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Subscribe successful" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-                client->event.event_id = MQTT_EVENT_SUBSCRIBED;
-                esp_mqtt_dispatch_event_with_msgid(client);
+
+    switch (msg_type) {
+    case MQTT_MSG_TYPE_SUBACK:
+        if (is_valid_mqtt_msg(client, MQTT_MSG_TYPE_SUBSCRIBE, msg_id)) {
+            do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Subscribe successful" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Subscribe successful" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Subscribe successful" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Subscribe successful" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Subscribe successful" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+            client->event.event_id = MQTT_EVENT_SUBSCRIBED;
+            esp_mqtt_dispatch_event_with_msgid(client);
+        }
+        break;
+    case MQTT_MSG_TYPE_UNSUBACK:
+        if (is_valid_mqtt_msg(client, MQTT_MSG_TYPE_UNSUBSCRIBE, msg_id)) {
+            do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "UnSubscribe successful" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "UnSubscribe successful" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "UnSubscribe successful" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "UnSubscribe successful" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "UnSubscribe successful" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+            client->event.event_id = MQTT_EVENT_UNSUBSCRIBED;
+            esp_mqtt_dispatch_event_with_msgid(client);
+        }
+        break;
+    case MQTT_MSG_TYPE_PUBLISH:
+        do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "deliver_publish, message_length_read=%d, message_length=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, client->mqtt_state.in_buffer_read_len, client->mqtt_state.message_length); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "deliver_publish, message_length_read=%d, message_length=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, client->mqtt_state.in_buffer_read_len, client->mqtt_state.message_length); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "deliver_publish, message_length_read=%d, message_length=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, client->mqtt_state.in_buffer_read_len, client->mqtt_state.message_length); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "deliver_publish, message_length_read=%d, message_length=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, client->mqtt_state.in_buffer_read_len, client->mqtt_state.message_length); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "deliver_publish, message_length_read=%d, message_length=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, client->mqtt_state.in_buffer_read_len, client->mqtt_state.message_length); } } while(0); } while(0);
+        if (deliver_publish(client) != 0) {
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Failed to deliver publish message id=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_id); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Failed to deliver publish message id=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_id); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Failed to deliver publish message id=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_id); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Failed to deliver publish message id=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_id); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Failed to deliver publish message id=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_id); } } while(0); } while(0);
+            return -1;
+        }
+        if (msg_qos == 1) {
+            client->mqtt_state.outbound_message = mqtt_msg_puback(&client->mqtt_state.mqtt_connection, msg_id);
+        } else if (msg_qos == 2) {
+            client->mqtt_state.outbound_message = mqtt_msg_pubrec(&client->mqtt_state.mqtt_connection, msg_id);
+        }
+        if (client->mqtt_state.outbound_message->length == 0) {
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Publish response message PUBACK or PUBREC cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Publish response message PUBACK or PUBREC cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Publish response message PUBACK or PUBREC cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Publish response message PUBACK or PUBREC cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Publish response message PUBACK or PUBREC cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+            return -1;
+        }
+
+        if (msg_qos == 1 || msg_qos == 2) {
+            do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Queue response QoS: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_qos); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Queue response QoS: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_qos); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Queue response QoS: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_qos); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Queue response QoS: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_qos); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Queue response QoS: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_qos); } } while(0); } while(0);
+
+            if (mqtt_write_data(client) != 0) {
+                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error write qos msg repsonse, qos = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_qos); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error write qos msg repsonse, qos = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_qos); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error write qos msg repsonse, qos = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_qos); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error write qos msg repsonse, qos = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_qos); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error write qos msg repsonse, qos = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_qos); } } while(0); } while(0);
+                return -1;
             }
-            break;
-        case MQTT_MSG_TYPE_UNSUBACK:
-            if (is_valid_mqtt_msg(client, MQTT_MSG_TYPE_UNSUBSCRIBE, msg_id)) {
-                do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "UnSubscribe successful" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "UnSubscribe successful" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "UnSubscribe successful" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "UnSubscribe successful" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "UnSubscribe successful" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-                client->event.event_id = MQTT_EVENT_UNSUBSCRIBED;
-                esp_mqtt_dispatch_event_with_msgid(client);
-            }
-            break;
-        case MQTT_MSG_TYPE_PUBLISH:
-            if (msg_qos == 1) {
-                client->mqtt_state.outbound_message = mqtt_msg_puback(&client->mqtt_state.mqtt_connection, msg_id);
-            }
-            else if (msg_qos == 2) {
-                client->mqtt_state.outbound_message = mqtt_msg_pubrec(&client->mqtt_state.mqtt_connection, msg_id);
-            }
+        }
+        break;
+    case MQTT_MSG_TYPE_PUBACK:
+        if (is_valid_mqtt_msg(client, MQTT_MSG_TYPE_PUBLISH, msg_id)) {
+            do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "received MQTT_MSG_TYPE_PUBACK, finish QoS1 publish" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "received MQTT_MSG_TYPE_PUBACK, finish QoS1 publish" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "received MQTT_MSG_TYPE_PUBACK, finish QoS1 publish" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "received MQTT_MSG_TYPE_PUBACK, finish QoS1 publish" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "received MQTT_MSG_TYPE_PUBACK, finish QoS1 publish" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+            outbox_set_pending(client->outbox, msg_id, CONFIRMED);
+            client->event.event_id = MQTT_EVENT_PUBLISHED;
+            esp_mqtt_dispatch_event_with_msgid(client);
+        }
+        break;
+    case MQTT_MSG_TYPE_PUBREC:
+        do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "received MQTT_MSG_TYPE_PUBREC" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "received MQTT_MSG_TYPE_PUBREC" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "received MQTT_MSG_TYPE_PUBREC" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "received MQTT_MSG_TYPE_PUBREC" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "received MQTT_MSG_TYPE_PUBREC" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        client->mqtt_state.outbound_message = mqtt_msg_pubrel(&client->mqtt_state.mqtt_connection, msg_id);
+        if (client->mqtt_state.outbound_message->length == 0) {
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Publish response message PUBREL cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Publish response message PUBREL cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Publish response message PUBREL cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Publish response message PUBREL cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Publish response message PUBREL cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+            return -1;
+        }
 
-            if (msg_qos == 1 || msg_qos == 2) {
-                do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Queue response QoS: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_qos); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Queue response QoS: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_qos); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Queue response QoS: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_qos); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Queue response QoS: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_qos); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Queue response QoS: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_qos); } } while(0); } while(0);
+        outbox_set_pending(client->outbox, msg_id, ACKNOWLEDGED);
+        mqtt_write_data(client);
+        break;
+    case MQTT_MSG_TYPE_PUBREL:
+        do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "received MQTT_MSG_TYPE_PUBREL" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "received MQTT_MSG_TYPE_PUBREL" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "received MQTT_MSG_TYPE_PUBREL" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "received MQTT_MSG_TYPE_PUBREL" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "received MQTT_MSG_TYPE_PUBREL" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        client->mqtt_state.outbound_message = mqtt_msg_pubcomp(&client->mqtt_state.mqtt_connection, msg_id);
+        if (client->mqtt_state.outbound_message->length == 0) {
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Publish response message PUBCOMP cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Publish response message PUBCOMP cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Publish response message PUBCOMP cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Publish response message PUBCOMP cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Publish response message PUBCOMP cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+            return -1;
+        }
 
-                if (mqtt_write_data(client) != 0) {
-                    do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error write qos msg repsonse, qos = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_qos); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error write qos msg repsonse, qos = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_qos); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error write qos msg repsonse, qos = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_qos); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error write qos msg repsonse, qos = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_qos); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error write qos msg repsonse, qos = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, msg_qos); } } while(0); } while(0);
-
-
-                }
-            }
-
-
-            client->mqtt_state.message_length_read = read_len - transport_message_offset;
-            client->mqtt_state.message_length = mqtt_get_total_length(&client->mqtt_state.in_buffer[transport_message_offset], client->mqtt_state.message_length_read);
-            do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "deliver_publish, message_length_read=%d, message_length=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, read_len, client->mqtt_state.message_length); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "deliver_publish, message_length_read=%d, message_length=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, read_len, client->mqtt_state.message_length); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "deliver_publish, message_length_read=%d, message_length=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, read_len, client->mqtt_state.message_length); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "deliver_publish, message_length_read=%d, message_length=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, read_len, client->mqtt_state.message_length); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "deliver_publish, message_length_read=%d, message_length=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, read_len, client->mqtt_state.message_length); } } while(0); } while(0);
-            deliver_publish(client, &client->mqtt_state.in_buffer[transport_message_offset], client->mqtt_state.message_length_read);
-            break;
-        case MQTT_MSG_TYPE_PUBACK:
-            if (is_valid_mqtt_msg(client, MQTT_MSG_TYPE_PUBLISH, msg_id)) {
-                do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "received MQTT_MSG_TYPE_PUBACK, finish QoS1 publish" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "received MQTT_MSG_TYPE_PUBACK, finish QoS1 publish" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "received MQTT_MSG_TYPE_PUBACK, finish QoS1 publish" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "received MQTT_MSG_TYPE_PUBACK, finish QoS1 publish" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "received MQTT_MSG_TYPE_PUBACK, finish QoS1 publish" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-                client->event.event_id = MQTT_EVENT_PUBLISHED;
-                esp_mqtt_dispatch_event_with_msgid(client);
-            }
-
-            break;
-        case MQTT_MSG_TYPE_PUBREC:
-            do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "received MQTT_MSG_TYPE_PUBREC" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "received MQTT_MSG_TYPE_PUBREC" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "received MQTT_MSG_TYPE_PUBREC" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "received MQTT_MSG_TYPE_PUBREC" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "received MQTT_MSG_TYPE_PUBREC" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-            client->mqtt_state.outbound_message = mqtt_msg_pubrel(&client->mqtt_state.mqtt_connection, msg_id);
-            mqtt_write_data(client);
-            break;
-        case MQTT_MSG_TYPE_PUBREL:
-            do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "received MQTT_MSG_TYPE_PUBREL" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "received MQTT_MSG_TYPE_PUBREL" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "received MQTT_MSG_TYPE_PUBREL" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "received MQTT_MSG_TYPE_PUBREL" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "received MQTT_MSG_TYPE_PUBREL" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-            client->mqtt_state.outbound_message = mqtt_msg_pubcomp(&client->mqtt_state.mqtt_connection, msg_id);
-            mqtt_write_data(client);
-
-            break;
-        case MQTT_MSG_TYPE_PUBCOMP:
-            do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "received MQTT_MSG_TYPE_PUBCOMP" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "received MQTT_MSG_TYPE_PUBCOMP" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "received MQTT_MSG_TYPE_PUBCOMP" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "received MQTT_MSG_TYPE_PUBCOMP" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "received MQTT_MSG_TYPE_PUBCOMP" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-            if (is_valid_mqtt_msg(client, MQTT_MSG_TYPE_PUBLISH, msg_id)) {
-                do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Receive MQTT_MSG_TYPE_PUBCOMP, finish QoS2 publish" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Receive MQTT_MSG_TYPE_PUBCOMP, finish QoS2 publish" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Receive MQTT_MSG_TYPE_PUBCOMP, finish QoS2 publish" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Receive MQTT_MSG_TYPE_PUBCOMP, finish QoS2 publish" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Receive MQTT_MSG_TYPE_PUBCOMP, finish QoS2 publish" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-                client->event.event_id = MQTT_EVENT_PUBLISHED;
-                esp_mqtt_dispatch_event_with_msgid(client);
-            }
-            break;
-        case MQTT_MSG_TYPE_PINGRESP:
-            do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "MQTT_MSG_TYPE_PINGRESP" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "MQTT_MSG_TYPE_PINGRESP" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "MQTT_MSG_TYPE_PINGRESP" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "MQTT_MSG_TYPE_PINGRESP" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "MQTT_MSG_TYPE_PINGRESP" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-            client->wait_for_ping_resp = 
-# 739 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
-                                        0
-# 739 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
-                                             ;
-            break;
+        mqtt_write_data(client);
+        break;
+    case MQTT_MSG_TYPE_PUBCOMP:
+        do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "received MQTT_MSG_TYPE_PUBCOMP" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "received MQTT_MSG_TYPE_PUBCOMP" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "received MQTT_MSG_TYPE_PUBCOMP" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "received MQTT_MSG_TYPE_PUBCOMP" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "received MQTT_MSG_TYPE_PUBCOMP" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        if (is_valid_mqtt_msg(client, MQTT_MSG_TYPE_PUBLISH, msg_id)) {
+            do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Receive MQTT_MSG_TYPE_PUBCOMP, finish QoS2 publish" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Receive MQTT_MSG_TYPE_PUBCOMP, finish QoS2 publish" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Receive MQTT_MSG_TYPE_PUBCOMP, finish QoS2 publish" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Receive MQTT_MSG_TYPE_PUBCOMP, finish QoS2 publish" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Receive MQTT_MSG_TYPE_PUBCOMP, finish QoS2 publish" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+            outbox_set_pending(client->outbox, msg_id, CONFIRMED);
+            client->event.event_id = MQTT_EVENT_PUBLISHED;
+            esp_mqtt_dispatch_event_with_msgid(client);
+        }
+        break;
+    case MQTT_MSG_TYPE_PINGRESP:
+        do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "MQTT_MSG_TYPE_PINGRESP" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "MQTT_MSG_TYPE_PINGRESP" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "MQTT_MSG_TYPE_PINGRESP" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "MQTT_MSG_TYPE_PINGRESP" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "MQTT_MSG_TYPE_PINGRESP" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        client->wait_for_ping_resp = 
+# 1172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                                    0
+# 1172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                                         ;
+        break;
     }
 
-    transport_message_offset += mqtt_get_total_length(&client->mqtt_state.in_buffer[transport_message_offset], read_len - transport_message_offset) ;
+    client->mqtt_state.in_buffer_read_len = 0;
+    return 0;
+}
+
+static esp_err_t mqtt_resend_queued(esp_mqtt_client_handle_t client, outbox_item_handle_t item)
+{
+
+    client->mqtt_state.outbound_message->data = outbox_item_get_data(item, &client->mqtt_state.outbound_message->length, &client->mqtt_state.pending_msg_id,
+            &client->mqtt_state.pending_msg_type, &client->mqtt_state.pending_publish_qos);
+
+    if (client->mqtt_state.pending_msg_type == MQTT_MSG_TYPE_PUBLISH && client->mqtt_state.pending_publish_qos > 0) {
+        mqtt_set_dup(client->mqtt_state.outbound_message->data);
     }
 
+
+    if (mqtt_write_data(client) != 0) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error to resend data " "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error to resend data " "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error to resend data " "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error to resend data " "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error to resend data " "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        esp_mqtt_abort_connection(client);
+        return -1;
+    }
     return 0;
 }
 
 static void esp_mqtt_task(void *pv)
 {
     esp_mqtt_client_handle_t client = (esp_mqtt_client_handle_t) pv;
+    uint64_t last_retransmit = 0;
+    outbox_tick_t msg_tick = 0;
     client->run = 
-# 752 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 1204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
                  1
-# 752 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 1204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
                      ;
 
 
     client->transport = esp_transport_list_get_transport(client->transport_list, client->config->scheme);
 
     if (client->transport == 
-# 757 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 1209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
                             ((void *)0)
-# 757 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 1209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
                                 ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "There are no transports valid, stop mqtt client, config scheme = %s" "\033[0m" "\n", esp_log_timestamp(), TAG, client->config->scheme); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "There are no transports valid, stop mqtt client, config scheme = %s" "\033[0m" "\n", esp_log_timestamp(), TAG, client->config->scheme); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "There are no transports valid, stop mqtt client, config scheme = %s" "\033[0m" "\n", esp_log_timestamp(), TAG, client->config->scheme); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "There are no transports valid, stop mqtt client, config scheme = %s" "\033[0m" "\n", esp_log_timestamp(), TAG, client->config->scheme); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "There are no transports valid, stop mqtt client, config scheme = %s" "\033[0m" "\n", esp_log_timestamp(), TAG, client->config->scheme); } } while(0); } while(0);
         client->run = 
-# 759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 1211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
                      0
-# 759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 1211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
                           ;
     }
 
@@ -7264,126 +9150,203 @@ static void esp_mqtt_task(void *pv)
     client->state = MQTT_STATE_INIT;
     xEventGroupClearBits(client->status_bits, STOPPED_BIT);
     while (client->run) {
-
+        xQueueTakeMutexRecursive( ( client->api_lock ), ( ( TickType_t ) 0xffffffffUL ) );
         switch ((int)client->state) {
-            case MQTT_STATE_INIT:
-                client->event.event_id = MQTT_EVENT_BEFORE_CONNECT;
-                esp_mqtt_dispatch_event_with_msgid(client);
+        case MQTT_STATE_INIT:
+            xEventGroupClearBits(client->status_bits, RECONNECT_BIT | DISCONNECT_BIT);
+            client->event.event_id = MQTT_EVENT_BEFORE_CONNECT;
+            esp_mqtt_dispatch_event_with_msgid(client);
 
-                if (client->transport == 
-# 775 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
-                                        ((void *)0)
-# 775 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
-                                            ) {
-                    do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "There are no transport" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "There are no transport" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "There are no transport" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "There are no transport" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "There are no transport" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-                    client->run = 
-# 777 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
-                                 0
-# 777 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
-                                      ;
-                }
+            if (client->transport == 
+# 1228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                                    ((void *)0)
+# 1228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                                        ) {
+                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "There is no transport" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "There is no transport" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "There is no transport" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "There is no transport" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "There is no transport" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+                client->run = 
+# 1230 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                             0
+# 1230 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                                  ;
+            }
 
-                if (esp_transport_connect(client->transport,
+            esp_mqtt_set_ssl_transport_properties(client->transport_list, client->config);
+
+
+            if (esp_transport_connect(client->transport,
                                       client->config->host,
                                       client->config->port,
                                       client->config->network_timeout_ms) < 0) {
-                    do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error transport connect" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error transport connect" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error transport connect" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error transport connect" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error transport connect" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-                    esp_mqtt_abort_connection(client);
-                    break;
-                }
-                do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Transport connected to %s://%s:%d" "\033[0m" "\n", esp_log_timestamp(), TAG, client->config->scheme, client->config->host, client->config->port); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Transport connected to %s://%s:%d" "\033[0m" "\n", esp_log_timestamp(), TAG, client->config->scheme, client->config->host, client->config->port); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Transport connected to %s://%s:%d" "\033[0m" "\n", esp_log_timestamp(), TAG, client->config->scheme, client->config->host, client->config->port); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Transport connected to %s://%s:%d" "\033[0m" "\n", esp_log_timestamp(), TAG, client->config->scheme, client->config->host, client->config->port); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Transport connected to %s://%s:%d" "\033[0m" "\n", esp_log_timestamp(), TAG, client->config->scheme, client->config->host, client->config->port); } } while(0); } while(0);
-                if (esp_mqtt_connect(client, client->config->network_timeout_ms) != 0) {
-                    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error MQTT Connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error MQTT Connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error MQTT Connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error MQTT Connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error MQTT Connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-                    esp_mqtt_abort_connection(client);
-                    break;
-                }
-                client->event.event_id = MQTT_EVENT_CONNECTED;
-                client->event.session_present = mqtt_get_connect_session_present(client->mqtt_state.in_buffer);
-                client->state = MQTT_STATE_CONNECTED;
+                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error transport connect" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error transport connect" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error transport connect" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error transport connect" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error transport connect" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+                client->event.event_id = MQTT_EVENT_ERROR;
+                client->event.error_handle->error_type = MQTT_ERROR_TYPE_ESP_TLS;
+                client->event.error_handle->connect_return_code = 0;
+
+
+
+
+
                 esp_mqtt_dispatch_event_with_msgid(client);
-                client->refresh_connection_tick = platform_tick_get_ms();
-
+                esp_mqtt_abort_connection(client);
                 break;
-            case MQTT_STATE_CONNECTED:
+            }
+            do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Transport connected to %s://%s:%d" "\033[0m" "\n", esp_log_timestamp(), TAG, client->config->scheme, client->config->host, client->config->port); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Transport connected to %s://%s:%d" "\033[0m" "\n", esp_log_timestamp(), TAG, client->config->scheme, client->config->host, client->config->port); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Transport connected to %s://%s:%d" "\033[0m" "\n", esp_log_timestamp(), TAG, client->config->scheme, client->config->host, client->config->port); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Transport connected to %s://%s:%d" "\033[0m" "\n", esp_log_timestamp(), TAG, client->config->scheme, client->config->host, client->config->port); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Transport connected to %s://%s:%d" "\033[0m" "\n", esp_log_timestamp(), TAG, client->config->scheme, client->config->host, client->config->port); } } while(0); } while(0);
+            if (esp_mqtt_connect(client, client->config->network_timeout_ms) != 0) {
+                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "MQTT connect failed" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "MQTT connect failed" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "MQTT connect failed" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "MQTT connect failed" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "MQTT connect failed" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+                esp_mqtt_abort_connection(client);
+                break;
+            }
+            client->event.event_id = MQTT_EVENT_CONNECTED;
+            client->event.session_present = mqtt_get_connect_session_present(client->mqtt_state.in_buffer);
+            client->state = MQTT_STATE_CONNECTED;
+            esp_mqtt_dispatch_event_with_msgid(client);
+            client->refresh_connection_tick = platform_tick_get_ms();
 
-                if (mqtt_process_receive(client) == -1) {
-                    esp_mqtt_abort_connection(client);
-                    break;
+            break;
+        case MQTT_STATE_CONNECTED:
+
+            if (xEventGroupWaitBits(client->status_bits, DISCONNECT_BIT, 
+# 1268 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                                                                        1
+# 1268 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                                                                            , 
+# 1268 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                                                                              1
+# 1268 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                                                                                  , 0) & DISCONNECT_BIT) {
+                esp_mqtt_abort_connection(client);
+                break;
+            }
+
+            if (mqtt_process_receive(client) == -1) {
+                esp_mqtt_abort_connection(client);
+                break;
+            }
+
+
+            outbox_item_handle_t item = outbox_dequeue(client->outbox, QUEUED, 
+# 1279 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                                                                              ((void *)0)
+# 1279 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                                                                                  );
+            if (item) {
+                if (mqtt_resend_queued(client, item) == 0) {
+                    outbox_set_pending(client->outbox, client->mqtt_state.pending_msg_id, TRANSMITTED);
                 }
 
-                if (platform_tick_get_ms() - client->keepalive_tick > client->connect_info.keepalive * 1000 / 2) {
+            } else if (platform_tick_get_ms() - last_retransmit > 1000) {
+                last_retransmit = platform_tick_get_ms();
+                item = outbox_dequeue(client->outbox, TRANSMITTED, &msg_tick);
+                if (item && (last_retransmit - msg_tick > 1000)) {
+                    mqtt_resend_queued(client, item);
+                }
+            }
 
-                 if(client->wait_for_ping_resp){
-                     do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "No PING_RESP, disconnected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "No PING_RESP, disconnected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "No PING_RESP, disconnected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "No PING_RESP, disconnected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "No PING_RESP, disconnected" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-                     esp_mqtt_abort_connection(client);
-                     client->wait_for_ping_resp = 
-# 813 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
-                                                 0
-# 813 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
-                                                      ;
-                     break;
-                    }
-                 if (esp_mqtt_client_ping(client) == -1) {
-                        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Can't send ping, disconnected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Can't send ping, disconnected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Can't send ping, disconnected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Can't send ping, disconnected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Can't send ping, disconnected" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-                        esp_mqtt_abort_connection(client);
-                        break;
-                    } else {
-                     client->wait_for_ping_resp = 
-# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
-                                                 1
-# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+            if (platform_tick_get_ms() - client->keepalive_tick > client->connect_info.keepalive * 1000 / 2) {
+
+                if (client->wait_for_ping_resp) {
+                    do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "No PING_RESP, disconnected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "No PING_RESP, disconnected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "No PING_RESP, disconnected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "No PING_RESP, disconnected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "No PING_RESP, disconnected" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+                    esp_mqtt_abort_connection(client);
+                    client->wait_for_ping_resp = 
+# 1298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                                                0
+# 1298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
                                                      ;
-                    }
-                 do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "PING sent" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "PING sent" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "PING sent" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "PING sent" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "PING sent" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-                }
-
-                if (client->config->refresh_connection_after_ms &&
-                    platform_tick_get_ms() - client->refresh_connection_tick > client->config->refresh_connection_after_ms) {
-                    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Refreshing the connection..." "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Refreshing the connection..." "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Refreshing the connection..." "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Refreshing the connection..." "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Refreshing the connection..." "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-                    esp_mqtt_abort_connection(client);
-                    client->state = MQTT_STATE_INIT;
-                }
-
-
-                outbox_delete_expired(client->outbox, platform_tick_get_ms(), (30*1000));
-
-                outbox_cleanup(client->outbox, (4*1024));
-                break;
-            case MQTT_STATE_WAIT_TIMEOUT:
-
-                if (!client->config->auto_reconnect) {
-                    client->run = 
-# 841 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
-                                 0
-# 841 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
-                                      ;
                     break;
                 }
-                if (platform_tick_get_ms() - client->reconnect_tick > client->wait_timeout_ms) {
-                    client->state = MQTT_STATE_INIT;
-                    client->reconnect_tick = platform_tick_get_ms();
-                    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Reconnecting..." "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Reconnecting..." "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Reconnecting..." "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Reconnecting..." "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Reconnecting..." "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+                if (esp_mqtt_client_ping(client) == -1) {
+                    do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Can't send ping, disconnected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Can't send ping, disconnected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Can't send ping, disconnected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Can't send ping, disconnected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Can't send ping, disconnected" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+                    esp_mqtt_abort_connection(client);
+                    break;
+                } else {
+                    client->wait_for_ping_resp = 
+# 1306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                                                1
+# 1306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                                                    ;
                 }
-                vTaskDelay(client->wait_timeout_ms / 2 / ( ( TickType_t ) 1000 / ( 100 ) ));
+                do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "PING sent" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "PING sent" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "PING sent" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "PING sent" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "PING sent" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+            }
+
+            if (client->config->refresh_connection_after_ms &&
+                    platform_tick_get_ms() - client->refresh_connection_tick > client->config->refresh_connection_after_ms) {
+                do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Refreshing the connection..." "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Refreshing the connection..." "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Refreshing the connection..." "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Refreshing the connection..." "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Refreshing the connection..." "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+                esp_mqtt_abort_connection(client);
+                client->state = MQTT_STATE_INIT;
+            }
+
+
+            int deleted = outbox_delete_expired(client->outbox, platform_tick_get_ms(), (30*1000));
+            client->mqtt_state.pending_msg_count -= deleted;
+            if (client->mqtt_state.pending_msg_count < 0) {
+                client->mqtt_state.pending_msg_count = 0;
+            }
+
+            outbox_cleanup(client->outbox, (4*1024));
+            break;
+        case MQTT_STATE_WAIT_TIMEOUT:
+
+            if (!client->config->auto_reconnect) {
+                client->run = 
+# 1330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                             0
+# 1330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                                  ;
+                client->state = MQTT_STATE_UNKNOWN;
                 break;
+            }
+            if (platform_tick_get_ms() - client->reconnect_tick > client->wait_timeout_ms) {
+                client->state = MQTT_STATE_INIT;
+                client->reconnect_tick = platform_tick_get_ms();
+                do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Reconnecting..." "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Reconnecting..." "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Reconnecting..." "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Reconnecting..." "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Reconnecting..." "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+                break;
+            }
+            xQueueGiveMutexRecursive( ( client->api_lock ) );
+            xEventGroupWaitBits(client->status_bits, RECONNECT_BIT, 
+# 1341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                                                                   0
+# 1341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                                                                        , 
+# 1341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                                                                          1
+# 1341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                                                                              ,
+                                client->wait_timeout_ms / 2 / ( ( TickType_t ) 1000 / ( 100 ) ));
+
+            continue;
         }
+        xQueueGiveMutexRecursive( ( client->api_lock ) );
+        if (MQTT_STATE_CONNECTED == client->state) {
+            if (esp_transport_poll_read(client->transport, (1000)) < 0) {
+                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Poll read error: %d, aborting connection" "\033[0m" "\n", esp_log_timestamp(), TAG, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Poll read error: %d, aborting connection" "\033[0m" "\n", esp_log_timestamp(), TAG, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Poll read error: %d, aborting connection" "\033[0m" "\n", esp_log_timestamp(), TAG, (*__errno())); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Poll read error: %d, aborting connection" "\033[0m" "\n", esp_log_timestamp(), TAG, (*__errno())); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Poll read error: %d, aborting connection" "\033[0m" "\n", esp_log_timestamp(), TAG, (*__errno())); } } while(0); } while(0);
+                esp_mqtt_abort_connection(client);
+            }
+        }
+
     }
     esp_transport_close(client->transport);
     xEventGroupSetBits(client->status_bits, STOPPED_BIT);
 
     vTaskDelete(
-# 856 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 1358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
                ((void *)0)
-# 856 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 1358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
                    );
 }
 
 esp_err_t esp_mqtt_client_start(esp_mqtt_client_handle_t client)
 {
+    if (!client) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Client was not initialized" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Client was not initialized" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Client was not initialized" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Client was not initialized" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Client was not initialized" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        return 0x102;
+    }
+    xQueueTakeMutexRecursive( ( client->api_lock ), ( ( TickType_t ) 0xffffffffUL ) );
     if (client->state >= MQTT_STATE_INIT) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Client has started" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Client has started" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Client has started" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Client has started" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Client has started" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        xQueueGiveMutexRecursive( ( client->api_lock ) );
         return -1;
     }
+    esp_err_t err = 0;
 
 
 
@@ -7391,40 +9354,74 @@ esp_err_t esp_mqtt_client_start(esp_mqtt_client_handle_t client)
 
 
 
-        do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Core selection disabled" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Core selection disabled" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Core selection disabled" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Core selection disabled" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Core selection disabled" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-        if (xTaskCreate(esp_mqtt_task, "mqtt_task", client->config->task_stack, client, client->config->task_prio, 
-# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
-                                                                                                                  ((void *)0)
-# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
-                                                                                                                      ) != ( ( BaseType_t ) 1 )) {
-            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error create mqtt task" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error create mqtt task" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error create mqtt task" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error create mqtt task" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error create mqtt task" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-            return -1;
-        }
+    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Core selection disabled" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Core selection disabled" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Core selection disabled" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Core selection disabled" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Core selection disabled" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+    if (xTaskCreate(esp_mqtt_task, "mqtt_task", client->config->task_stack, client, client->config->task_prio, &client->task_handle) != ( ( BaseType_t ) 1 )) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error create mqtt task" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error create mqtt task" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error create mqtt task" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error create mqtt task" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error create mqtt task" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        err = -1;
+    }
 
+    xQueueGiveMutexRecursive( ( client->api_lock ) );
+    return err;
+}
+
+esp_err_t esp_mqtt_client_disconnect(esp_mqtt_client_handle_t client)
+{
+    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Client asked to disconnect" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Client asked to disconnect" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Client asked to disconnect" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Client asked to disconnect" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Client asked to disconnect" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+    xEventGroupSetBits(client->status_bits, DISCONNECT_BIT);
+    return 0;
+}
+
+esp_err_t esp_mqtt_client_reconnect(esp_mqtt_client_handle_t client)
+{
+    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Client force reconnect requested" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Client force reconnect requested" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Client force reconnect requested" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Client force reconnect requested" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Client force reconnect requested" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+
+    if (client->state != MQTT_STATE_WAIT_TIMEOUT) {
+        do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "The client is not waiting for reconnection. Ignore the request" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "The client is not waiting for reconnection. Ignore the request" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "The client is not waiting for reconnection. Ignore the request" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "The client is not waiting for reconnection. Ignore the request" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "The client is not waiting for reconnection. Ignore the request" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        return -1;
+    }
+    client->wait_timeout_ms = 0;
+    xEventGroupSetBits(client->status_bits, RECONNECT_BIT);
     return 0;
 }
 
 esp_err_t esp_mqtt_client_stop(esp_mqtt_client_handle_t client)
 {
+    xQueueTakeMutexRecursive( ( client->api_lock ), ( ( TickType_t ) 0xffffffffUL ) );
     if (client->run) {
+
+        if(client->state == MQTT_STATE_CONNECTED) {
+
+            client->mqtt_state.outbound_message = mqtt_msg_disconnect(&client->mqtt_state.mqtt_connection);
+            if (client->mqtt_state.outbound_message->length == 0) {
+                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Disconnect message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Disconnect message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Disconnect message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Disconnect message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Disconnect message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+                xQueueGiveMutexRecursive( ( client->api_lock ) );
+                return -1;
+            }
+            if (mqtt_write_data(client) != 0) {
+                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error sending disconnect message" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error sending disconnect message" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error sending disconnect message" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error sending disconnect message" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error sending disconnect message" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+            }
+        }
+
         client->run = 
-# 884 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 1429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
                      0
-# 884 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 1429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
                           ;
-        xEventGroupWaitBits(client->status_bits, STOPPED_BIT, 
-# 885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
-                                                             0
-# 885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
-                                                                  , 
-# 885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
-                                                                    1
-# 885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
-                                                                        , ( TickType_t ) 0xffffffffUL);
         client->state = MQTT_STATE_UNKNOWN;
+        xQueueGiveMutexRecursive( ( client->api_lock ) );
+        xEventGroupWaitBits(client->status_bits, STOPPED_BIT, 
+# 1432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                                                             0
+# 1432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                                                                  , 
+# 1432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                                                                    1
+# 1432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                                                                        , ( TickType_t ) 0xffffffffUL);
         return 0;
     } else {
         do { if ( 3 >= ESP_LOG_WARN ) do { if (ESP_LOG_WARN==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Client asked to stop, but was not started" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Client asked to stop, but was not started" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Client asked to stop, but was not started" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Client asked to stop, but was not started" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Client asked to stop, but was not started" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        xQueueGiveMutexRecursive( ( client->api_lock ) );
         return -1;
     }
 }
@@ -7432,6 +9429,10 @@ esp_err_t esp_mqtt_client_stop(esp_mqtt_client_handle_t client)
 static esp_err_t esp_mqtt_client_ping(esp_mqtt_client_handle_t client)
 {
     client->mqtt_state.outbound_message = mqtt_msg_pingreq(&client->mqtt_state.mqtt_connection);
+    if (client->mqtt_state.outbound_message->length == 0) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Ping message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Ping message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Ping message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Ping message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Ping message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        return -1;
+    }
 
     if (mqtt_write_data(client) != 0) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error sending ping" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error sending ping" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error sending ping" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error sending ping" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error sending ping" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
@@ -7443,131 +9444,168 @@ static esp_err_t esp_mqtt_client_ping(esp_mqtt_client_handle_t client)
 
 int esp_mqtt_client_subscribe(esp_mqtt_client_handle_t client, const char *topic, int qos)
 {
+    xQueueTakeMutexRecursive( ( client->api_lock ), ( ( TickType_t ) 0xffffffffUL ) );
     if (client->state != MQTT_STATE_CONNECTED) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Client has not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Client has not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Client has not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Client has not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Client has not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        xQueueGiveMutexRecursive( ( client->api_lock ) );
         return -1;
     }
-    mqtt_enqueue(client);
     client->mqtt_state.outbound_message = mqtt_msg_subscribe(&client->mqtt_state.mqtt_connection,
                                           topic, qos,
                                           &client->mqtt_state.pending_msg_id);
+    if (client->mqtt_state.outbound_message->length == 0) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Subscribe message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Subscribe message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Subscribe message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Subscribe message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Subscribe message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        xQueueGiveMutexRecursive( ( client->api_lock ) );
+        return -1;
+    }
 
     client->mqtt_state.pending_msg_type = mqtt_get_type(client->mqtt_state.outbound_message->data);
     client->mqtt_state.pending_msg_count ++;
+    mqtt_enqueue(client);
+    outbox_set_pending(client->outbox, client->mqtt_state.pending_msg_id, TRANSMITTED);
 
     if (mqtt_write_data(client) != 0) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error to subscribe topic=%s, qos=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, qos); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error to subscribe topic=%s, qos=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, qos); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error to subscribe topic=%s, qos=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, qos); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error to subscribe topic=%s, qos=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, qos); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error to subscribe topic=%s, qos=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, qos); } } while(0); } while(0);
+        xQueueGiveMutexRecursive( ( client->api_lock ) );
         return -1;
     }
 
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Sent subscribe topic=%s, id: %d, type=%d successful" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, client->mqtt_state.pending_msg_id, client->mqtt_state.pending_msg_type); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Sent subscribe topic=%s, id: %d, type=%d successful" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, client->mqtt_state.pending_msg_id, client->mqtt_state.pending_msg_type); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Sent subscribe topic=%s, id: %d, type=%d successful" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, client->mqtt_state.pending_msg_id, client->mqtt_state.pending_msg_type); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Sent subscribe topic=%s, id: %d, type=%d successful" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, client->mqtt_state.pending_msg_id, client->mqtt_state.pending_msg_type); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Sent subscribe topic=%s, id: %d, type=%d successful" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, client->mqtt_state.pending_msg_id, client->mqtt_state.pending_msg_type); } } while(0); } while(0);
+    xQueueGiveMutexRecursive( ( client->api_lock ) );
     return client->mqtt_state.pending_msg_id;
 }
 
 int esp_mqtt_client_unsubscribe(esp_mqtt_client_handle_t client, const char *topic)
 {
+    xQueueTakeMutexRecursive( ( client->api_lock ), ( ( TickType_t ) 0xffffffffUL ) );
     if (client->state != MQTT_STATE_CONNECTED) {
+        xQueueGiveMutexRecursive( ( client->api_lock ) );
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Client has not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Client has not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Client has not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Client has not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Client has not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         return -1;
     }
-    mqtt_enqueue(client);
     client->mqtt_state.outbound_message = mqtt_msg_unsubscribe(&client->mqtt_state.mqtt_connection,
                                           topic,
                                           &client->mqtt_state.pending_msg_id);
+    if (client->mqtt_state.outbound_message->length == 0) {
+        xQueueGiveMutexRecursive( ( client->api_lock ) );
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Unubscribe message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Unubscribe message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Unubscribe message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Unubscribe message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Unubscribe message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        return -1;
+    }
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "unsubscribe, topic\"%s\", id: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, client->mqtt_state.pending_msg_id); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "unsubscribe, topic\"%s\", id: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, client->mqtt_state.pending_msg_id); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "unsubscribe, topic\"%s\", id: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, client->mqtt_state.pending_msg_id); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "unsubscribe, topic\"%s\", id: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, client->mqtt_state.pending_msg_id); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "unsubscribe, topic\"%s\", id: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, client->mqtt_state.pending_msg_id); } } while(0); } while(0);
 
     client->mqtt_state.pending_msg_type = mqtt_get_type(client->mqtt_state.outbound_message->data);
     client->mqtt_state.pending_msg_count ++;
+    mqtt_enqueue(client);
+    outbox_set_pending(client->outbox, client->mqtt_state.pending_msg_id, TRANSMITTED);
 
     if (mqtt_write_data(client) != 0) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error to unsubscribe topic=%s" "\033[0m" "\n", esp_log_timestamp(), TAG, topic); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error to unsubscribe topic=%s" "\033[0m" "\n", esp_log_timestamp(), TAG, topic); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error to unsubscribe topic=%s" "\033[0m" "\n", esp_log_timestamp(), TAG, topic); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error to unsubscribe topic=%s" "\033[0m" "\n", esp_log_timestamp(), TAG, topic); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error to unsubscribe topic=%s" "\033[0m" "\n", esp_log_timestamp(), TAG, topic); } } while(0); } while(0);
+        xQueueGiveMutexRecursive( ( client->api_lock ) );
         return -1;
     }
 
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Sent Unsubscribe topic=%s, id: %d, successful" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, client->mqtt_state.pending_msg_id); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Sent Unsubscribe topic=%s, id: %d, successful" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, client->mqtt_state.pending_msg_id); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Sent Unsubscribe topic=%s, id: %d, successful" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, client->mqtt_state.pending_msg_id); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Sent Unsubscribe topic=%s, id: %d, successful" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, client->mqtt_state.pending_msg_id); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Sent Unsubscribe topic=%s, id: %d, successful" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, client->mqtt_state.pending_msg_id); } } while(0); } while(0);
+    xQueueGiveMutexRecursive( ( client->api_lock ) );
     return client->mqtt_state.pending_msg_id;
 }
 
 int esp_mqtt_client_publish(esp_mqtt_client_handle_t client, const char *topic, const char *data, int len, int qos, int retain)
 {
     uint16_t pending_msg_id = 0;
-    if (client->state != MQTT_STATE_CONNECTED) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Client has not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Client has not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Client has not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Client has not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Client has not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-        return -1;
-    }
-    if (len <= 0) {
+    int ret = 0;
+
+
+
+
+
+
+    if (len <= 0 && data != 
+# 1534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                           ((void *)0)
+# 1534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                               ) {
         len = strlen(data);
     }
 
+    xQueueTakeMutexRecursive( ( client->api_lock ), ( ( TickType_t ) 0xffffffffUL ) );
     mqtt_message_t *publish_msg = mqtt_msg_publish(&client->mqtt_state.mqtt_connection,
                                   topic, data, len,
                                   qos, retain,
                                   &pending_msg_id);
 
+    if (publish_msg->length == 0) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Publish message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Publish message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Publish message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Publish message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Publish message cannot be created" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        xQueueGiveMutexRecursive( ( client->api_lock ) );
+        return -1;
+    }
 
+    client->mqtt_state.outbound_message = publish_msg;
     if (qos > 0) {
-        mqtt_enqueue(client);
-        client->mqtt_state.outbound_message = publish_msg;
         client->mqtt_state.pending_msg_type = mqtt_get_type(client->mqtt_state.outbound_message->data);
         client->mqtt_state.pending_msg_id = pending_msg_id;
+        client->mqtt_state.pending_publish_qos = qos;
         client->mqtt_state.pending_msg_count ++;
-    } else {
-        client->mqtt_state.outbound_message = publish_msg;
+
+        if (client->mqtt_state.mqtt_connection.message.fragmented_msg_total_length == 0) {
+            mqtt_enqueue(client);
+        } else {
+            int first_fragment = client->mqtt_state.outbound_message->length - client->mqtt_state.outbound_message->fragmented_msg_data_offset;
+            mqtt_enqueue_oversized(client, ((uint8_t *)data) + first_fragment, len - first_fragment);
+        }
+    }
+
+
+    if (client->state != MQTT_STATE_CONNECTED) {
+        do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Publish: client is not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Publish: client is not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Publish: client is not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Publish: client is not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Publish: client is not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        goto cannot_publish;
     }
 
 
     int remaining_len = len;
     const char *current_data = data;
     
-# 983 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 1574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
    _Bool 
-# 983 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 1574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
         sending = 
-# 983 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 1574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
                   1
-# 983 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 1574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
                       ;
 
     while (sending) {
 
         if (mqtt_write_data(client) != 0) {
-            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error to public data to topic=%s, qos=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, qos); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error to public data to topic=%s, qos=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, qos); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error to public data to topic=%s, qos=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, qos); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error to public data to topic=%s, qos=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, qos); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error to public data to topic=%s, qos=%d" "\033[0m" "\n", esp_log_timestamp(), TAG, topic, qos); } } while(0); } while(0);
-            return -1;
+            esp_mqtt_abort_connection(client);
+            ret = -1;
+            goto cannot_publish;
         }
 
         int data_sent = client->mqtt_state.outbound_message->length - client->mqtt_state.outbound_message->fragmented_msg_data_offset;
+        client->mqtt_state.outbound_message->fragmented_msg_data_offset = 0;
+        client->mqtt_state.outbound_message->fragmented_msg_total_length = 0;
         remaining_len -= data_sent;
         current_data += data_sent;
 
         if (remaining_len > 0) {
-            mqtt_connection_t* connection = &client->mqtt_state.mqtt_connection;
+            mqtt_connection_t *connection = &client->mqtt_state.mqtt_connection;
             do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Sending fragmented message, remains to send %d bytes of %d" "\033[0m" "\n", esp_log_timestamp(), TAG, remaining_len, len); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Sending fragmented message, remains to send %d bytes of %d" "\033[0m" "\n", esp_log_timestamp(), TAG, remaining_len, len); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Sending fragmented message, remains to send %d bytes of %d" "\033[0m" "\n", esp_log_timestamp(), TAG, remaining_len, len); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Sending fragmented message, remains to send %d bytes of %d" "\033[0m" "\n", esp_log_timestamp(), TAG, remaining_len, len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Sending fragmented message, remains to send %d bytes of %d" "\033[0m" "\n", esp_log_timestamp(), TAG, remaining_len, len); } } while(0); } while(0);
-            if (connection->message.fragmented_msg_data_offset) {
-
-                connection->message.fragmented_msg_data_offset = 0;
-                connection->message.fragmented_msg_total_length = 0;
-                if (qos > 0) {
-
-                    mqtt_enqueue_oversized(client, (uint8_t*)current_data, remaining_len);
-                }
-            }
-
             if (remaining_len > connection->buffer_length) {
 
                 memcpy(connection->buffer, current_data, connection->buffer_length);
                 connection->message.length = connection->buffer_length;
                 sending = 
-# 1013 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 1597 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
                          1
-# 1013 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 1597 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
                              ;
             } else {
                 memcpy(connection->buffer, current_data, remaining_len);
                 connection->message.length = remaining_len;
                 sending = 
-# 1017 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 1601 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
                          1
-# 1017 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 1601 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
                              ;
             }
             connection->message.data = connection->buffer;
@@ -7575,11 +9613,55 @@ int esp_mqtt_client_publish(esp_mqtt_client_handle_t client, const char *topic, 
         } else {
 
             sending = 
-# 1023 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+# 1607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
                      0
-# 1023 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+# 1607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
                           ;
         }
     }
+
+    if (qos > 0) {
+
+        outbox_set_tick(client->outbox, pending_msg_id, platform_tick_get_ms());
+        outbox_set_pending(client->outbox, pending_msg_id, TRANSMITTED);
+    }
+    xQueueGiveMutexRecursive( ( client->api_lock ) );
     return pending_msg_id;
+
+cannot_publish:
+
+    client->mqtt_state.outbound_message->fragmented_msg_total_length = 0;
+    if (qos == 0) {
+        do { if ( 3 >= ESP_LOG_WARN ) do { if (ESP_LOG_WARN==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Publish: Losing qos0 data when client not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Publish: Losing qos0 data when client not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Publish: Losing qos0 data when client not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Publish: Losing qos0 data when client not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Publish: Losing qos0 data when client not connected" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+    }
+    xQueueGiveMutexRecursive( ( client->api_lock ) );
+
+    return ret;
+}
+
+
+esp_err_t esp_mqtt_client_register_event(esp_mqtt_client_handle_t client, esp_mqtt_event_id_t event, esp_event_handler_t event_handler, void* event_handler_arg)
+{
+    if (client == 
+# 1633 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                 ((void *)0)
+# 1633 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                     ) {
+        return 0x102;
+    }
+
+    if (client->config->event_handle) {
+        do { if ( 3 >= ESP_LOG_WARN ) do { if (ESP_LOG_WARN==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Registering event loop while event callback is not null, clearing callback" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Registering event loop while event callback is not null, clearing callback" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Registering event loop while event callback is not null, clearing callback" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_WARN==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Registering event loop while event callback is not null, clearing callback" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Registering event loop while event callback is not null, clearing callback" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        client->config->event_handle = 
+# 1639 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c" 3 4
+                                      ((void *)0)
+# 1639 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c"
+                                          ;
+    }
+
+    return esp_event_handler_register_with(client->config->event_loop_handle, MQTT_EVENTS, event, event_handler, event_handler_arg);
+
+
+
+
 }

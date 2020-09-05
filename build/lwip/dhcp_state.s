@@ -13,7 +13,7 @@
 	.global	dhcp_ip_addr_restore
 	.type	dhcp_ip_addr_restore, @function
 dhcp_ip_addr_restore:
-.LFB20:
+.LFB29:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/netif/dhcp_state.c"
 	.loc 1 35 0
 .LVL0:
@@ -57,7 +57,7 @@ dhcp_ip_addr_restore:
 	add.n	a8, a8, a3
 	l32i.n	a11, a8, 0
 	l32i.n	a10, sp, 0
-	addi	a12, a4, 56
+	addi	a12, a4, 68
 .LVL10:
 	call8	nvs_get_u32
 .LVL11:
@@ -65,7 +65,7 @@ dhcp_ip_addr_restore:
 	.loc 1 46 0
 	l32r	a2, .LC3
 	add.n	a3, a2, a3
-	l32i.n	a2, a4, 56
+	l32i	a2, a4, 68
 	s32i.n	a2, a3, 0
 .LVL12:
 	.loc 1 47 0
@@ -79,7 +79,7 @@ dhcp_ip_addr_restore:
 .LBE2:
 	.loc 1 53 0
 	retw.n
-.LFE20:
+.LFE29:
 	.size	dhcp_ip_addr_restore, .-dhcp_ip_addr_restore
 	.section	.text.dhcp_ip_addr_store,"ax",@progbits
 	.literal_position
@@ -90,7 +90,7 @@ dhcp_ip_addr_restore:
 	.global	dhcp_ip_addr_store
 	.type	dhcp_ip_addr_store, @function
 dhcp_ip_addr_store:
-.LFB21:
+.LFB30:
 	.loc 1 56 0
 .LVL15:
 	entry	sp, 48
@@ -101,7 +101,7 @@ dhcp_ip_addr_store:
 	.loc 1 61 0
 	mov.n	a10, a2
 	.loc 1 60 0
-	l32i.n	a3, a3, 56
+	l32i	a3, a3, 68
 .LVL17:
 	.loc 1 61 0
 	call8	tcpip_adapter_get_esp_if
@@ -142,7 +142,7 @@ dhcp_ip_addr_store:
 .LVL24:
 .L12:
 	retw.n
-.LFE21:
+.LFE30:
 	.size	dhcp_ip_addr_store, .-dhcp_ip_addr_store
 	.section	.text.dhcp_ip_addr_erase,"ax",@progbits
 	.literal_position
@@ -152,7 +152,7 @@ dhcp_ip_addr_store:
 	.global	dhcp_ip_addr_erase
 	.type	dhcp_ip_addr_erase, @function
 dhcp_ip_addr_erase:
-.LFB22:
+.LFB31:
 	.loc 1 75 0
 .LVL25:
 	entry	sp, 48
@@ -192,7 +192,7 @@ dhcp_ip_addr_erase:
 .LVL33:
 .L21:
 	retw.n
-.LFE22:
+.LFE31:
 	.size	dhcp_ip_addr_erase, .-dhcp_ip_addr_erase
 	.section	.rodata.str1.1
 .LC9:
@@ -234,10 +234,10 @@ restored_ip_addr:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI0-.LFB20
+	.4byte	.LCFI0-.LFB29
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -246,10 +246,10 @@ restored_ip_addr:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI1-.LFB21
+	.4byte	.LCFI1-.LFB30
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -258,10 +258,10 @@ restored_ip_addr:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI2-.LFB22
+	.4byte	.LCFI2-.LFB31
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -284,7 +284,7 @@ restored_ip_addr:
 	.file 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0xbc4
+	.4byte	0xbc5
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -1166,7 +1166,7 @@ restored_ip_addr:
 	.4byte	0x1e8
 	.uleb128 0xf
 	.4byte	.LASF110
-	.byte	0x54
+	.byte	0x60
 	.byte	0xd
 	.byte	0x47
 	.4byte	0x865
@@ -1233,87 +1233,87 @@ restored_ip_addr:
 	.uleb128 0x10
 	.4byte	.LASF119
 	.byte	0xd
-	.byte	0x5c
-	.4byte	0xcf
+	.byte	0x5d
+	.4byte	0xda
 	.byte	0x18
 	.uleb128 0x10
 	.4byte	.LASF120
 	.byte	0xd
-	.byte	0x5d
-	.4byte	0xcf
-	.byte	0x1a
+	.byte	0x5e
+	.4byte	0xda
+	.byte	0x1c
 	.uleb128 0x10
 	.4byte	.LASF121
 	.byte	0xd
-	.byte	0x5e
-	.4byte	0xcf
-	.byte	0x1c
+	.byte	0x5f
+	.4byte	0xda
+	.byte	0x20
 	.uleb128 0x10
 	.4byte	.LASF122
 	.byte	0xd
-	.byte	0x5f
-	.4byte	0xcf
-	.byte	0x1e
+	.byte	0x60
+	.4byte	0xda
+	.byte	0x24
 	.uleb128 0x10
 	.4byte	.LASF123
 	.byte	0xd
-	.byte	0x60
-	.4byte	0xcf
-	.byte	0x20
+	.byte	0x61
+	.4byte	0xda
+	.byte	0x28
 	.uleb128 0x10
 	.4byte	.LASF124
 	.byte	0xd
-	.byte	0x61
-	.4byte	0xcf
-	.byte	0x22
+	.byte	0x62
+	.4byte	0xda
+	.byte	0x2c
 	.uleb128 0x10
 	.4byte	.LASF125
 	.byte	0xd
-	.byte	0x62
+	.byte	0x6b
 	.4byte	0x1e8
-	.byte	0x24
+	.byte	0x30
 	.uleb128 0x10
 	.4byte	.LASF126
 	.byte	0xd
-	.byte	0x63
+	.byte	0x6c
 	.4byte	0x165
-	.byte	0x38
+	.byte	0x44
 	.uleb128 0x10
 	.4byte	.LASF127
 	.byte	0xd
-	.byte	0x64
+	.byte	0x6d
 	.4byte	0x165
-	.byte	0x3c
+	.byte	0x48
 	.uleb128 0x10
 	.4byte	.LASF128
 	.byte	0xd
-	.byte	0x65
+	.byte	0x6e
 	.4byte	0x165
-	.byte	0x40
+	.byte	0x4c
 	.uleb128 0x10
 	.4byte	.LASF129
 	.byte	0xd
-	.byte	0x67
+	.byte	0x70
 	.4byte	0xda
-	.byte	0x44
+	.byte	0x50
 	.uleb128 0x10
 	.4byte	.LASF130
 	.byte	0xd
-	.byte	0x68
+	.byte	0x71
 	.4byte	0xda
-	.byte	0x48
+	.byte	0x54
 	.uleb128 0x10
 	.4byte	.LASF131
 	.byte	0xd
-	.byte	0x69
+	.byte	0x72
 	.4byte	0xda
-	.byte	0x4c
+	.byte	0x58
 	.uleb128 0x13
 	.string	"cb"
 	.byte	0xd
-	.byte	0x71
+	.byte	0x7a
 	.4byte	0x589
-	.byte	0x50
+	.byte	0x5c
 	.byte	0
 	.uleb128 0x18
 	.4byte	.LASF156
@@ -1348,7 +1348,7 @@ restored_ip_addr:
 	.byte	0x4
 	.4byte	0x74
 	.byte	0xf
-	.byte	0x67
+	.byte	0x5f
 	.4byte	0x8c5
 	.uleb128 0xa
 	.4byte	.LASF137
@@ -1368,11 +1368,11 @@ restored_ip_addr:
 	.byte	0x1
 	.byte	0x22
 	.4byte	0x11a
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x9af
+	.4byte	0x9b0
 	.uleb128 0x1a
 	.4byte	.LASF40
 	.byte	0x1
@@ -1403,7 +1403,7 @@ restored_ip_addr:
 	.4byte	.LASF110
 	.byte	0x1
 	.byte	0x27
-	.4byte	0x9af
+	.4byte	0x9b0
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x1e
@@ -1415,16 +1415,16 @@ restored_ip_addr:
 	.uleb128 0x1f
 	.4byte	.LBB2
 	.4byte	.LBE2-.LBB2
-	.4byte	0x99e
+	.4byte	0x99f
 	.uleb128 0x1e
 	.4byte	.LASF29
 	.byte	0x1
 	.byte	0x2b
-	.4byte	0x9b5
+	.4byte	0x9b6
 	.4byte	.LLST4
 	.uleb128 0x20
 	.4byte	.LVL7
-	.4byte	0xb76
+	.4byte	0xb77
 	.4byte	0x973
 	.uleb128 0x21
 	.uleb128 0x1
@@ -1446,8 +1446,8 @@ restored_ip_addr:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL11
-	.4byte	0xb81
-	.4byte	0x994
+	.4byte	0xb82
+	.4byte	0x995
 	.uleb128 0x21
 	.uleb128 0x1
 	.byte	0x5b
@@ -1461,17 +1461,17 @@ restored_ip_addr:
 	.uleb128 0x21
 	.uleb128 0x1
 	.byte	0x5c
-	.uleb128 0x2
+	.uleb128 0x3
 	.byte	0x74
-	.sleb128 56
+	.sleb128 68
 	.byte	0
 	.uleb128 0x22
 	.4byte	.LVL14
-	.4byte	0xb8c
+	.4byte	0xb8d
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL3
-	.4byte	0xb98
+	.4byte	0xb99
 	.uleb128 0x21
 	.uleb128 0x1
 	.byte	0x5a
@@ -1490,11 +1490,11 @@ restored_ip_addr:
 	.4byte	.LASF142
 	.byte	0x1
 	.byte	0x37
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xa91
+	.4byte	0xa92
 	.uleb128 0x1a
 	.4byte	.LASF40
 	.byte	0x1
@@ -1519,7 +1519,7 @@ restored_ip_addr:
 	.4byte	.LASF110
 	.byte	0x1
 	.byte	0x3b
-	.4byte	0x9af
+	.4byte	0x9b0
 	.4byte	.LLST7
 	.uleb128 0x1d
 	.4byte	.LASF29
@@ -1536,8 +1536,8 @@ restored_ip_addr:
 	.4byte	.LLST8
 	.uleb128 0x20
 	.4byte	.LVL18
-	.4byte	0xb98
-	.4byte	0xa3b
+	.4byte	0xb99
+	.4byte	0xa3c
 	.uleb128 0x21
 	.uleb128 0x1
 	.byte	0x5a
@@ -1547,8 +1547,8 @@ restored_ip_addr:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL21
-	.4byte	0xb76
-	.4byte	0xa5d
+	.4byte	0xb77
+	.4byte	0xa5e
 	.uleb128 0x21
 	.uleb128 0x1
 	.byte	0x5a
@@ -1569,8 +1569,8 @@ restored_ip_addr:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL22
-	.4byte	0xba4
-	.4byte	0xa7e
+	.4byte	0xba5
+	.4byte	0xa7f
 	.uleb128 0x21
 	.uleb128 0x1
 	.byte	0x5b
@@ -1590,20 +1590,20 @@ restored_ip_addr:
 	.byte	0
 	.uleb128 0x22
 	.4byte	.LVL23
-	.4byte	0xbaf
+	.4byte	0xbb0
 	.uleb128 0x22
 	.4byte	.LVL24
-	.4byte	0xb8c
+	.4byte	0xb8d
 	.byte	0
 	.uleb128 0x24
 	.4byte	.LASF143
 	.byte	0x1
 	.byte	0x4a
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xb3f
+	.4byte	0xb40
 	.uleb128 0x1a
 	.4byte	.LASF40
 	.byte	0x1
@@ -1632,8 +1632,8 @@ restored_ip_addr:
 	.4byte	.LLST11
 	.uleb128 0x20
 	.4byte	.LVL27
-	.4byte	0xb98
-	.4byte	0xaf5
+	.4byte	0xb99
+	.4byte	0xaf6
 	.uleb128 0x21
 	.uleb128 0x1
 	.byte	0x5a
@@ -1643,8 +1643,8 @@ restored_ip_addr:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL29
-	.4byte	0xb76
-	.4byte	0xb17
+	.4byte	0xb77
+	.4byte	0xb18
 	.uleb128 0x21
 	.uleb128 0x1
 	.byte	0x5a
@@ -1665,8 +1665,8 @@ restored_ip_addr:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL31
-	.4byte	0xbbb
-	.4byte	0xb2c
+	.4byte	0xbbc
+	.4byte	0xb2d
 	.uleb128 0x21
 	.uleb128 0x1
 	.byte	0x5b
@@ -1677,10 +1677,10 @@ restored_ip_addr:
 	.byte	0
 	.uleb128 0x22
 	.4byte	.LVL32
-	.4byte	0xbaf
+	.4byte	0xbb0
 	.uleb128 0x22
 	.4byte	.LVL33
-	.4byte	0xb8c
+	.4byte	0xb8d
 	.byte	0
 	.uleb128 0x1d
 	.4byte	.LASF144
@@ -1692,7 +1692,7 @@ restored_ip_addr:
 	.4byte	restored_ip_addr
 	.uleb128 0xd
 	.4byte	0xae
-	.4byte	0xb60
+	.4byte	0xb61
 	.uleb128 0xe
 	.4byte	0x92
 	.byte	0x2
@@ -1701,47 +1701,47 @@ restored_ip_addr:
 	.4byte	.LASF145
 	.byte	0x1
 	.byte	0x1d
-	.4byte	0xb71
+	.4byte	0xb72
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	interface_key
 	.uleb128 0x8
-	.4byte	0xb50
+	.4byte	0xb51
 	.uleb128 0x25
 	.4byte	.LASF146
 	.4byte	.LASF146
 	.byte	0x4
-	.byte	0x5f
+	.byte	0x6d
 	.uleb128 0x25
 	.4byte	.LASF147
 	.4byte	.LASF147
 	.byte	0x4
-	.byte	0xed
+	.byte	0xfb
 	.uleb128 0x26
 	.4byte	.LASF148
 	.4byte	.LASF148
 	.byte	0x4
-	.2byte	0x170
+	.2byte	0x17e
 	.uleb128 0x26
 	.4byte	.LASF149
 	.4byte	.LASF149
 	.byte	0xf
-	.2byte	0x23a
+	.2byte	0x263
 	.uleb128 0x25
 	.4byte	.LASF150
 	.4byte	.LASF150
 	.byte	0x4
-	.byte	0x9f
+	.byte	0xad
 	.uleb128 0x26
 	.4byte	.LASF151
 	.4byte	.LASF151
 	.byte	0x4
-	.2byte	0x163
+	.2byte	0x171
 	.uleb128 0x26
 	.4byte	.LASF152
 	.4byte	.LASF152
 	.byte	0x4
-	.2byte	0x142
+	.2byte	0x150
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -2255,7 +2255,7 @@ restored_ip_addr:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL8
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2275,7 +2275,7 @@ restored_ip_addr:
 	.byte	0x31
 	.byte	0x9f
 	.4byte	.LVL13
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -2297,7 +2297,7 @@ restored_ip_addr:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL8
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2315,19 +2315,19 @@ restored_ip_addr:
 .LLST4:
 	.4byte	.LVL6
 	.4byte	.LVL10
-	.2byte	0x3
+	.2byte	0x4
 	.byte	0x74
-	.sleb128 56
+	.sleb128 68
 	.byte	0x9f
 	.4byte	.LVL10
 	.4byte	.LVL11-1
 	.2byte	0x1
 	.byte	0x5c
 	.4byte	.LVL11-1
-	.4byte	.LFE20
-	.2byte	0x3
+	.4byte	.LFE29
+	.2byte	0x4
 	.byte	0x74
-	.sleb128 56
+	.sleb128 68
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
@@ -2337,7 +2337,7 @@ restored_ip_addr:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL19
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2351,7 +2351,7 @@ restored_ip_addr:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL19
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2380,7 +2380,7 @@ restored_ip_addr:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL28
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2394,7 +2394,7 @@ restored_ip_addr:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL28
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2417,22 +2417,22 @@ restored_ip_addr:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB22
-	.4byte	.LFE22
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB31
+	.4byte	.LFE31
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

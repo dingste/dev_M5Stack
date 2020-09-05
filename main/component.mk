@@ -6,10 +6,6 @@
 COMPONENT_SRCDIRS := . \
 	HardwareLife/Uart \
 	HardwareLife/OLED \
-	HardwareLife/Lcd/Content/Screens \
-	HardwareLife/Lcd/Content/Widgets \
-	HardwareLife/Lcd/Content \
-	HardwareLife/Lcd \
 	HardwareLife/Gpio/Pwm \
 	HardwareLife/Gpio \
 	HardwareLife/WiFi \
@@ -24,7 +20,15 @@ COMPONENT_SRCDIRS := . \
 	Physics/Motor \
 	Physics/Pen \
 	Physics/Screen \
-	Physics
+	Physics \
+	Use/ProjektEi \
+	Use
+	#	HardwareLife/Lcd/Content/Screens \
+#	HardwareLife/Lcd/Content/Widgets \
+#	HardwareLife/Lcd/Content \
+#	HardwareLife/Lcd \
+	#HardwareLife/JsonFileSystem \
+	#HardwareLife/LibraryJson \
 
 #COMPONENT_SRCDIRS := . \
 #		

@@ -7,37 +7,37 @@
 rotate_bits:
 .LFB38:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/tls/asn1.c"
-	.loc 1 168 0
+	.loc 1 167 0
 .LVL0:
 	entry	sp, 32
 .LCFI0:
 .LVL1:
-	.loc 1 172 0
+	.loc 1 171 0
 	movi.n	a8, 0
-	.loc 1 176 0
+	.loc 1 175 0
 	movi.n	a10, 1
 	movi.n	a9, 8
 	loop	a9, .L3_LEND
 .LVL2:
 .L3:
-	.loc 1 174 0
+	.loc 1 173 0
 	slli	a8, a8, 1
 .LVL3:
 	extui	a8, a8, 0, 8
 .LVL4:
-	.loc 1 175 0
+	.loc 1 174 0
 	bbci	a2, 0, .L2
-	.loc 1 176 0
+	.loc 1 175 0
 	or	a8, a8, a10
 .LVL5:
 	extui	a8, a8, 0, 8
 .LVL6:
 .L2:
-	.loc 1 177 0 discriminator 2
+	.loc 1 176 0 discriminator 2
 	srli	a2, a2, 1
 .LVL7:
 	.L3_LEND:
-	.loc 1 181 0
+	.loc 1 180 0
 	mov.n	a2, a8
 .LVL8:
 	retw.n
@@ -370,28 +370,32 @@ asn1_oid_to_str:
 	movi.n	a5, 0
 	s8i	a5, a3, 0
 .LVL58:
+	.loc 1 154 0
+	movi.n	a6, 0
 	add.n	a4, a3, a4
 .LVL59:
-	.loc 1 154 0
-	movi.n	a5, 0
 	j	.L42
 .LVL60:
-.L46:
-	.loc 1 156 0
-	addx4	a8, a5, a2
-	l32i.n	a13, a8, 0
-	l32r	a12, .LC8
+.L47:
+	.loc 1 155 0
+	addx4	a8, a6, a2
+	l32i.n	a14, a8, 0
+	l32r	a13, .LC8
 	l32r	a8, .LC6
-	l32r	a11, .LC10
-	moveqz	a12, a8, a5
+	sub	a5, a4, a3
+	l32r	a12, .LC10
+	moveqz	a13, a8, a6
+	mov.n	a11, a5
 	mov.n	a10, a3
-	call8	sprintf
+	call8	snprintf
 .LVL61:
-	.loc 1 159 0
+	.loc 1 158 0
+	bge	a10, a5, .L48
+	.loc 1 158 0 is_stmt 0 discriminator 4
 	bgez	a10, .L44
 .LVL62:
-.L45:
-	.loc 1 163 0
+.L48:
+	.loc 1 162 0 is_stmt 1
 	addi.n	a4, a4, -1
 	movi.n	a2, 0
 .LVL63:
@@ -399,20 +403,17 @@ asn1_oid_to_str:
 	retw.n
 .LVL64:
 .L44:
-	.loc 1 159 0 discriminator 1
-	sub	a8, a4, a3
-	bge	a10, a8, .L45
-	.loc 1 161 0 discriminator 2
+	.loc 1 160 0 discriminator 2
 	add.n	a3, a3, a10
 .LVL65:
 	.loc 1 154 0 discriminator 2
-	addi.n	a5, a5, 1
+	addi.n	a6, a6, 1
 .LVL66:
 .L42:
 	.loc 1 154 0 is_stmt 0 discriminator 1
-	l32i	a8, a2, 80
-	bltu	a5, a8, .L46
-	j	.L45
+	l32i	a5, a2, 80
+	bltu	a6, a5, .L47
+	j	.L48
 .LVL67:
 .L40:
 	retw.n
@@ -424,58 +425,58 @@ asn1_oid_to_str:
 	.type	asn1_bit_string_to_long, @function
 asn1_bit_string_to_long:
 .LFB39:
-	.loc 1 185 0 is_stmt 1
+	.loc 1 184 0 is_stmt 1
 .LVL68:
 	entry	sp, 32
 .LCFI5:
 .LVL69:
-	.loc 1 185 0
+	.loc 1 184 0
 	mov.n	a4, a2
 .LVL70:
-	.loc 1 186 0
+	.loc 1 185 0
 	movi.n	a2, 0
 .LVL71:
-	.loc 1 193 0
-	bltui	a3, 2, .L59
+	.loc 1 192 0
+	bltui	a3, 2, .L62
 .LVL72:
-	.loc 1 194 0
+	.loc 1 193 0
 	l8ui	a10, a4, 1
 	call8	rotate_bits
 .LVL73:
 	mov.n	a2, a10
 .LVL74:
-	.loc 1 195 0
-	beqi	a3, 2, .L59
+	.loc 1 194 0
+	beqi	a3, 2, .L62
 .LVL75:
-	.loc 1 196 0
+	.loc 1 195 0
 	l8ui	a10, a4, 2
 	call8	rotate_bits
 .LVL76:
 	slli	a10, a10, 8
 	or	a2, a2, a10
 .LVL77:
-	.loc 1 197 0
-	beqi	a3, 3, .L59
+	.loc 1 196 0
+	beqi	a3, 3, .L62
 .LVL78:
-	.loc 1 198 0
+	.loc 1 197 0
 	l8ui	a10, a4, 3
 	call8	rotate_bits
 .LVL79:
 	slli	a10, a10, 16
 	or	a2, a2, a10
 .LVL80:
-	.loc 1 199 0
-	beqi	a3, 4, .L59
+	.loc 1 198 0
+	beqi	a3, 4, .L62
 .LVL81:
-	.loc 1 200 0
+	.loc 1 199 0
 	l8ui	a10, a4, 4
 	call8	rotate_bits
 .LVL82:
 	slli	a10, a10, 24
 	or	a2, a2, a10
 .LVL83:
-.L59:
-	.loc 1 207 0
+.L62:
+	.loc 1 206 0
 	retw.n
 .LFE39:
 	.size	asn1_bit_string_to_long, .-asn1_bit_string_to_long
@@ -577,7 +578,7 @@ asn1_bit_string_to_long:
 	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x4be
+	.4byte	0x4c5
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -762,7 +763,7 @@ asn1_bit_string_to_long:
 	.uleb128 0xf
 	.4byte	.LASF36
 	.byte	0x1
-	.byte	0xa7
+	.byte	0xa6
 	.4byte	0xa0
 	.4byte	.LFB38
 	.4byte	.LFE38-.LFB38
@@ -772,19 +773,19 @@ asn1_bit_string_to_long:
 	.uleb128 0x10
 	.4byte	.LASF27
 	.byte	0x1
-	.byte	0xa7
+	.byte	0xa6
 	.4byte	0xa0
 	.4byte	.LLST0
 	.uleb128 0x11
 	.string	"i"
 	.byte	0x1
-	.byte	0xa9
+	.byte	0xa8
 	.4byte	0x4c
 	.4byte	.LLST1
 	.uleb128 0x11
 	.string	"res"
 	.byte	0x1
-	.byte	0xaa
+	.byte	0xa9
 	.4byte	0xa0
 	.4byte	.LLST2
 	.byte	0
@@ -837,7 +838,7 @@ asn1_bit_string_to_long:
 	.4byte	.LLST7
 	.uleb128 0x15
 	.4byte	.LVL10
-	.4byte	0x4ad
+	.4byte	0x4b3
 	.uleb128 0x16
 	.uleb128 0x1
 	.byte	0x5a
@@ -915,7 +916,7 @@ asn1_bit_string_to_long:
 	.4byte	.LLST12
 	.uleb128 0x15
 	.4byte	.LVL33
-	.4byte	0x4ad
+	.4byte	0x4b3
 	.uleb128 0x16
 	.uleb128 0x1
 	.byte	0x5a
@@ -1028,7 +1029,7 @@ asn1_bit_string_to_long:
 	.4byte	.LFE37-.LFB37
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x417
+	.4byte	0x41d
 	.uleb128 0x13
 	.string	"oid"
 	.byte	0x1
@@ -1068,7 +1069,7 @@ asn1_bit_string_to_long:
 	.4byte	.LLST18
 	.uleb128 0x15
 	.4byte	.LVL61
-	.4byte	0x4b6
+	.4byte	0x4bc
 	.uleb128 0x16
 	.uleb128 0x1
 	.byte	0x5a
@@ -1078,18 +1079,24 @@ asn1_bit_string_to_long:
 	.uleb128 0x16
 	.uleb128 0x1
 	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x75
+	.sleb128 0
+	.uleb128 0x16
+	.uleb128 0x1
+	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	.LC9
 	.uleb128 0x16
 	.uleb128 0x1
-	.byte	0x5c
+	.byte	0x5d
 	.uleb128 0x13
 	.byte	0x3
 	.4byte	.LC7
 	.byte	0x3
 	.4byte	.LC5
-	.byte	0x75
+	.byte	0x76
 	.sleb128 0
 	.byte	0x30
 	.byte	0x2e
@@ -1102,41 +1109,41 @@ asn1_bit_string_to_long:
 	.uleb128 0x12
 	.4byte	.LASF32
 	.byte	0x1
-	.byte	0xb8
+	.byte	0xb7
 	.4byte	0x8c
 	.4byte	.LFB39
 	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x498
+	.4byte	0x49e
 	.uleb128 0x13
 	.string	"buf"
 	.byte	0x1
-	.byte	0xb8
+	.byte	0xb7
 	.4byte	0x130
 	.4byte	.LLST19
 	.uleb128 0x14
 	.string	"len"
 	.byte	0x1
-	.byte	0xb8
+	.byte	0xb7
 	.4byte	0x68
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x11
 	.string	"val"
 	.byte	0x1
-	.byte	0xba
+	.byte	0xb9
 	.4byte	0x8c
 	.4byte	.LLST20
 	.uleb128 0x11
 	.string	"pos"
 	.byte	0x1
-	.byte	0xbb
+	.byte	0xba
 	.4byte	0x130
 	.4byte	.LLST21
 	.uleb128 0x1b
 	.4byte	.LASF38
-	.4byte	0x4a8
+	.4byte	0x4ae
 	.uleb128 0x1c
 	.4byte	.LVL73
 	.4byte	0x170
@@ -1152,13 +1159,13 @@ asn1_bit_string_to_long:
 	.byte	0
 	.uleb128 0xd
 	.4byte	0x99
-	.4byte	0x4a8
+	.4byte	0x4ae
 	.uleb128 0xe
 	.4byte	0x85
 	.byte	0x17
 	.byte	0
 	.uleb128 0xc
-	.4byte	0x498
+	.4byte	0x49e
 	.uleb128 0x1d
 	.4byte	.LASF39
 	.4byte	.LASF39
@@ -1166,7 +1173,7 @@ asn1_bit_string_to_long:
 	.4byte	.LASF40
 	.4byte	.LASF40
 	.byte	0x8
-	.byte	0xde
+	.2byte	0x10c
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -1583,7 +1590,7 @@ asn1_bit_string_to_long:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
+	.uleb128 0x5
 	.byte	0
 	.byte	0
 	.byte	0
@@ -1938,7 +1945,7 @@ asn1_bit_string_to_long:
 	.4byte	.LVL60
 	.4byte	.LVL67
 	.2byte	0x1
-	.byte	0x55
+	.byte	0x56
 	.4byte	0
 	.4byte	0
 .LLST18:
@@ -2063,6 +2070,8 @@ asn1_bit_string_to_long:
 	.string	"ESP_LOG_ERROR"
 .LASF38:
 	.string	"__func__"
+.LASF40:
+	.string	"snprintf"
 .LASF22:
 	.string	"class"
 .LASF28:
@@ -2123,14 +2132,12 @@ asn1_bit_string_to_long:
 	.string	"long int"
 .LASF13:
 	.string	"char"
-.LASF24:
-	.string	"length"
 .LASF0:
 	.string	"signed char"
 .LASF26:
 	.string	"asn1_oid"
-.LASF40:
-	.string	"sprintf"
+.LASF24:
+	.string	"length"
 .LASF19:
 	.string	"ESP_LOG_VERBOSE"
 .LASF25:

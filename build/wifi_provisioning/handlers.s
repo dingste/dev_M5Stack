@@ -6,7 +6,7 @@
 	.type	scan_result, @function
 scan_result:
 .LFB38:
-	.file 1 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/src/handlers.c"
+	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/src/handlers.c"
 	.loc 1 171 0
 .LVL0:
 	entry	sp, 32
@@ -584,20 +584,20 @@ get_wifi_scan_handlers:
 .LEFDE14:
 	.text
 .Letext0:
-	.file 2 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_default_types.h"
-	.file 3 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
-	.file 4 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h"
-	.file 5 "/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log.h"
-	.file 6 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_wifi_types.h"
-	.file 7 "/home/dieter/SoftwareDevelop/esp-idf/components/lwip/lwip/src/include/lwip/ip4_addr.h"
-	.file 8 "/home/dieter/SoftwareDevelop/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
-	.file 9 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/include/wifi_provisioning/wifi_config.h"
-	.file 10 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/include/wifi_provisioning/wifi_scan.h"
-	.file 11 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/src/wifi_provisioning_priv.h"
-	.file 12 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h"
-	.file 13 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/string.h"
-	.file 14 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_wifi.h"
-	.file 15 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/include/wifi_provisioning/manager.h"
+	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
+	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+	.file 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/ip4_addr.h"
+	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+	.file 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/include/wifi_provisioning/wifi_config.h"
+	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/include/wifi_provisioning/wifi_scan.h"
+	.file 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/src/wifi_provisioning_priv.h"
+	.file 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
+	.file 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+	.file 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+	.file 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/include/wifi_provisioning/manager.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
 	.4byte	0x1102
@@ -851,7 +851,7 @@ get_wifi_scan_handlers:
 	.byte	0x4
 	.4byte	0x7f
 	.byte	0x6
-	.byte	0x62
+	.byte	0x63
 	.4byte	0x218
 	.uleb128 0x8
 	.4byte	.LASF44
@@ -866,7 +866,7 @@ get_wifi_scan_handlers:
 	.uleb128 0x2
 	.4byte	.LASF47
 	.byte	0x6
-	.byte	0x66
+	.byte	0x67
 	.4byte	0x1f9
 	.uleb128 0x3
 	.byte	0x1
@@ -876,7 +876,7 @@ get_wifi_scan_handlers:
 	.byte	0x4
 	.4byte	0x7f
 	.byte	0x6
-	.byte	0x85
+	.byte	0x86
 	.4byte	0x261
 	.uleb128 0x8
 	.4byte	.LASF49
@@ -903,13 +903,13 @@ get_wifi_scan_handlers:
 	.uleb128 0x2
 	.4byte	.LASF56
 	.byte	0x6
-	.byte	0x8d
+	.byte	0x8e
 	.4byte	0x22a
 	.uleb128 0x7
 	.byte	0x4
 	.4byte	0x7f
 	.byte	0x6
-	.byte	0x93
+	.byte	0x94
 	.4byte	0x28b
 	.uleb128 0x8
 	.4byte	.LASF57
@@ -924,71 +924,71 @@ get_wifi_scan_handlers:
 	.uleb128 0x2
 	.4byte	.LASF60
 	.byte	0x6
-	.byte	0x97
+	.byte	0x98
 	.4byte	0x26c
 	.uleb128 0x9
 	.byte	0x50
 	.byte	0x6
-	.byte	0x9a
+	.byte	0x9b
 	.4byte	0x371
 	.uleb128 0xb
 	.4byte	.LASF61
 	.byte	0x6
-	.byte	0x9b
+	.byte	0x9c
 	.4byte	0x371
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LASF62
 	.byte	0x6
-	.byte	0x9c
+	.byte	0x9d
 	.4byte	0x381
 	.byte	0x6
 	.uleb128 0xb
 	.4byte	.LASF63
 	.byte	0x6
-	.byte	0x9d
+	.byte	0x9e
 	.4byte	0xcc
 	.byte	0x27
 	.uleb128 0xb
 	.4byte	.LASF64
 	.byte	0x6
-	.byte	0x9e
+	.byte	0x9f
 	.4byte	0x218
 	.byte	0x28
 	.uleb128 0xb
 	.4byte	.LASF65
 	.byte	0x6
-	.byte	0x9f
+	.byte	0xa0
 	.4byte	0xc1
 	.byte	0x2c
 	.uleb128 0xb
 	.4byte	.LASF66
 	.byte	0x6
-	.byte	0xa0
+	.byte	0xa1
 	.4byte	0x1ee
 	.byte	0x30
 	.uleb128 0xb
 	.4byte	.LASF67
 	.byte	0x6
-	.byte	0xa1
+	.byte	0xa2
 	.4byte	0x261
 	.byte	0x34
 	.uleb128 0xb
 	.4byte	.LASF68
 	.byte	0x6
-	.byte	0xa2
+	.byte	0xa3
 	.4byte	0x261
 	.byte	0x38
 	.uleb128 0xa
 	.string	"ant"
 	.byte	0x6
-	.byte	0xa3
+	.byte	0xa4
 	.4byte	0x28b
 	.byte	0x3c
 	.uleb128 0xe
 	.4byte	.LASF69
 	.byte	0x6
-	.byte	0xa4
+	.byte	0xa5
 	.4byte	0xed
 	.byte	0x4
 	.byte	0x1
@@ -997,7 +997,7 @@ get_wifi_scan_handlers:
 	.uleb128 0xe
 	.4byte	.LASF70
 	.byte	0x6
-	.byte	0xa5
+	.byte	0xa6
 	.4byte	0xed
 	.byte	0x4
 	.byte	0x1
@@ -1006,7 +1006,7 @@ get_wifi_scan_handlers:
 	.uleb128 0xe
 	.4byte	.LASF71
 	.byte	0x6
-	.byte	0xa6
+	.byte	0xa7
 	.4byte	0xed
 	.byte	0x4
 	.byte	0x1
@@ -1015,7 +1015,7 @@ get_wifi_scan_handlers:
 	.uleb128 0xe
 	.4byte	.LASF72
 	.byte	0x6
-	.byte	0xa7
+	.byte	0xa8
 	.4byte	0xed
 	.byte	0x4
 	.byte	0x1
@@ -1024,7 +1024,7 @@ get_wifi_scan_handlers:
 	.uleb128 0xf
 	.string	"wps"
 	.byte	0x6
-	.byte	0xa8
+	.byte	0xa9
 	.4byte	0xed
 	.byte	0x4
 	.byte	0x1
@@ -1033,7 +1033,7 @@ get_wifi_scan_handlers:
 	.uleb128 0xe
 	.4byte	.LASF73
 	.byte	0x6
-	.byte	0xa9
+	.byte	0xaa
 	.4byte	0xed
 	.byte	0x4
 	.byte	0x1b
@@ -1042,7 +1042,7 @@ get_wifi_scan_handlers:
 	.uleb128 0xb
 	.4byte	.LASF74
 	.byte	0x6
-	.byte	0xaa
+	.byte	0xab
 	.4byte	0x1ac
 	.byte	0x44
 	.byte	0
@@ -1063,13 +1063,13 @@ get_wifi_scan_handlers:
 	.uleb128 0x2
 	.4byte	.LASF75
 	.byte	0x6
-	.byte	0xab
+	.byte	0xac
 	.4byte	0x296
 	.uleb128 0x7
 	.byte	0x4
 	.4byte	0x7f
 	.byte	0x6
-	.byte	0xad
+	.byte	0xae
 	.4byte	0x3b5
 	.uleb128 0x8
 	.4byte	.LASF76
@@ -1081,13 +1081,13 @@ get_wifi_scan_handlers:
 	.uleb128 0x2
 	.4byte	.LASF78
 	.byte	0x6
-	.byte	0xb0
+	.byte	0xb1
 	.4byte	0x39c
 	.uleb128 0x7
 	.byte	0x4
 	.4byte	0x7f
 	.byte	0x6
-	.byte	0xb2
+	.byte	0xb3
 	.4byte	0x3d9
 	.uleb128 0x8
 	.4byte	.LASF79
@@ -1099,87 +1099,87 @@ get_wifi_scan_handlers:
 	.uleb128 0x2
 	.4byte	.LASF81
 	.byte	0x6
-	.byte	0xb5
+	.byte	0xb6
 	.4byte	0x3c0
 	.uleb128 0x9
 	.byte	0x8
 	.byte	0x6
-	.byte	0xb8
+	.byte	0xb9
 	.4byte	0x405
 	.uleb128 0xb
 	.4byte	.LASF65
 	.byte	0x6
-	.byte	0xb9
+	.byte	0xba
 	.4byte	0xc1
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LASF66
 	.byte	0x6
-	.byte	0xba
+	.byte	0xbb
 	.4byte	0x1ee
 	.byte	0x4
 	.byte	0
 	.uleb128 0x2
 	.4byte	.LASF82
 	.byte	0x6
-	.byte	0xbb
+	.byte	0xbc
 	.4byte	0x3e4
 	.uleb128 0x2
 	.4byte	.LASF83
 	.byte	0x6
-	.byte	0xbd
+	.byte	0xbe
 	.4byte	0x405
 	.uleb128 0x9
 	.byte	0x6c
 	.byte	0x6
-	.byte	0xd2
+	.byte	0xd3
 	.4byte	0x484
 	.uleb128 0xb
 	.4byte	.LASF62
 	.byte	0x6
-	.byte	0xd3
+	.byte	0xd4
 	.4byte	0x484
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LASF84
 	.byte	0x6
-	.byte	0xd4
+	.byte	0xd5
 	.4byte	0x494
 	.byte	0x20
 	.uleb128 0xb
 	.4byte	.LASF85
 	.byte	0x6
-	.byte	0xd5
+	.byte	0xd6
 	.4byte	0xcc
 	.byte	0x60
 	.uleb128 0xb
 	.4byte	.LASF86
 	.byte	0x6
-	.byte	0xd6
+	.byte	0xd7
 	.4byte	0xcc
 	.byte	0x61
 	.uleb128 0xb
 	.4byte	.LASF66
 	.byte	0x6
-	.byte	0xd7
+	.byte	0xd8
 	.4byte	0x1ee
 	.byte	0x64
 	.uleb128 0xb
 	.4byte	.LASF87
 	.byte	0x6
-	.byte	0xd8
+	.byte	0xd9
 	.4byte	0xcc
 	.byte	0x68
 	.uleb128 0xb
 	.4byte	.LASF88
 	.byte	0x6
-	.byte	0xd9
+	.byte	0xda
 	.4byte	0xcc
 	.byte	0x69
 	.uleb128 0xb
 	.4byte	.LASF89
 	.byte	0x6
-	.byte	0xda
+	.byte	0xdb
 	.4byte	0xd7
 	.byte	0x6a
 	.byte	0
@@ -1200,93 +1200,93 @@ get_wifi_scan_handlers:
 	.uleb128 0x2
 	.4byte	.LASF90
 	.byte	0x6
-	.byte	0xdb
+	.byte	0xdc
 	.4byte	0x41b
 	.uleb128 0x9
 	.byte	0x7c
 	.byte	0x6
-	.byte	0xde
+	.byte	0xdf
 	.4byte	0x524
 	.uleb128 0xb
 	.4byte	.LASF62
 	.byte	0x6
-	.byte	0xdf
+	.byte	0xe0
 	.4byte	0x484
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LASF84
 	.byte	0x6
-	.byte	0xe0
+	.byte	0xe1
 	.4byte	0x494
 	.byte	0x20
 	.uleb128 0xb
 	.4byte	.LASF91
 	.byte	0x6
-	.byte	0xe1
+	.byte	0xe2
 	.4byte	0x3b5
 	.byte	0x60
 	.uleb128 0xb
 	.4byte	.LASF92
 	.byte	0x6
-	.byte	0xe2
+	.byte	0xe3
 	.4byte	0x223
 	.byte	0x64
 	.uleb128 0xb
 	.4byte	.LASF61
 	.byte	0x6
-	.byte	0xe3
+	.byte	0xe4
 	.4byte	0x371
 	.byte	0x65
 	.uleb128 0xb
 	.4byte	.LASF86
 	.byte	0x6
-	.byte	0xe4
+	.byte	0xe5
 	.4byte	0xcc
 	.byte	0x6b
 	.uleb128 0xb
 	.4byte	.LASF93
 	.byte	0x6
-	.byte	0xe5
+	.byte	0xe6
 	.4byte	0xd7
 	.byte	0x6c
 	.uleb128 0xb
 	.4byte	.LASF94
 	.byte	0x6
-	.byte	0xe6
+	.byte	0xe7
 	.4byte	0x3d9
 	.byte	0x70
 	.uleb128 0xb
 	.4byte	.LASF95
 	.byte	0x6
-	.byte	0xe7
+	.byte	0xe8
 	.4byte	0x410
 	.byte	0x74
 	.byte	0
 	.uleb128 0x2
 	.4byte	.LASF96
 	.byte	0x6
-	.byte	0xe8
+	.byte	0xe9
 	.4byte	0x4af
 	.uleb128 0x10
 	.byte	0x7c
 	.byte	0x6
-	.byte	0xf0
+	.byte	0xf1
 	.4byte	0x54d
 	.uleb128 0x11
 	.string	"ap"
 	.byte	0x6
-	.byte	0xf1
+	.byte	0xf2
 	.4byte	0x4a4
 	.uleb128 0x11
 	.string	"sta"
 	.byte	0x6
-	.byte	0xf2
+	.byte	0xf3
 	.4byte	0x524
 	.byte	0
 	.uleb128 0x2
 	.4byte	.LASF97
 	.byte	0x6
-	.byte	0xf3
+	.byte	0xf4
 	.4byte	0x52f
 	.uleb128 0x5
 	.byte	0x4
@@ -3854,8 +3854,8 @@ get_wifi_scan_handlers:
 	.string	"addr"
 .LASF152:
 	.string	"get_wifi_prov_handlers"
-.LASF47:
-	.string	"wifi_second_chan_t"
+.LASF43:
+	.string	"wifi_auth_mode_t"
 .LASF165:
 	.string	"tcpip_adapter_get_ip_info"
 .LASF0:
@@ -3882,8 +3882,8 @@ get_wifi_scan_handlers:
 	.string	"wifi_prov_sta_conn_info_t"
 .LASF119:
 	.string	"wifi_prov_config_get_data_t"
-.LASF43:
-	.string	"wifi_auth_mode_t"
+.LASF39:
+	.string	"WIFI_AUTH_WPA2_PSK"
 .LASF104:
 	.string	"TCPIP_ADAPTER_IF_ETH"
 .LASF92:
@@ -3906,8 +3906,6 @@ get_wifi_scan_handlers:
 	.string	"WIFI_AUTH_OPEN"
 .LASF170:
 	.string	"memcpy"
-.LASF158:
-	.string	"wifi_prov_mgr_wifi_scan_start"
 .LASF10:
 	.string	"long long int"
 .LASF144:
@@ -3936,14 +3934,14 @@ get_wifi_scan_handlers:
 	.string	"__uint32_t"
 .LASF164:
 	.string	"strlcpy"
-.LASF176:
-	.string	"/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/src/handlers.c"
+.LASF47:
+	.string	"wifi_second_chan_t"
 .LASF52:
 	.string	"WIFI_CIPHER_TYPE_TKIP"
 .LASF73:
 	.string	"reserved"
-.LASF39:
-	.string	"WIFI_AUTH_WPA2_PSK"
+.LASF158:
+	.string	"wifi_prov_mgr_wifi_scan_start"
 .LASF93:
 	.string	"listen_interval"
 .LASF9:
@@ -3960,6 +3958,8 @@ get_wifi_scan_handlers:
 	.string	"wifi_prov_scan_handlers"
 .LASF173:
 	.string	"wifi_prov_mgr_get_wifi_disconnect_reason"
+.LASF176:
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/src/handlers.c"
 .LASF57:
 	.string	"WIFI_ANT_ANT0"
 .LASF6:

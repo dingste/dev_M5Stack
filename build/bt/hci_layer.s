@@ -11,14 +11,14 @@
 	.literal .LC0, 8448
 	.literal .LC1, 8704
 	.literal .LC2, 8192
-	.literal .LC3, __func__$6599
+	.literal .LC3, __func__$6648
 	.literal .LC5, .LC4
 	.literal .LC7, .LC6
 	.literal .LC8, hal
 	.align	4
 	.type	transmit_fragment, @function
 transmit_fragment:
-.LFB41:
+.LFB50:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/hci/hci_layer.c"
 	.loc 1 352 0
 .LVL0:
@@ -97,7 +97,7 @@ transmit_fragment:
 .LVL6:
 .L1:
 	retw.n
-.LFE41:
+.LFE50:
 	.size	transmit_fragment, .-transmit_fragment
 	.section	.text.get_waiting_command,"ax",@progbits
 	.literal_position
@@ -106,7 +106,7 @@ transmit_fragment:
 	.align	4
 	.type	get_waiting_command, @function
 get_waiting_command:
-.LFB49:
+.LFB58:
 	.loc 1 534 0
 .LVL7:
 	entry	sp, 32
@@ -186,13 +186,13 @@ get_waiting_command:
 .LVL23:
 	.loc 1 554 0
 	retw.n
-.LFE49:
+.LFE58:
 	.size	get_waiting_command, .-get_waiting_command
 	.section	.text.dispatch_reassembled,"ax",@progbits
 	.align	4
 	.type	dispatch_reassembled, @function
 dispatch_reassembled:
-.LFB47:
+.LFB56:
 	.loc 1 507 0
 .LVL24:
 	entry	sp, 32
@@ -210,13 +210,13 @@ dispatch_reassembled:
 .LVL26:
 .L23:
 	retw.n
-.LFE47:
+.LFE56:
 	.size	dispatch_reassembled, .-dispatch_reassembled
 	.section	.text.fragmenter_transmit_finished,"ax",@progbits
 	.align	4
 	.type	fragmenter_transmit_finished, @function
 fragmenter_transmit_finished:
-.LFB42:
+.LFB51:
 	.loc 1 364 0
 .LVL27:
 	entry	sp, 32
@@ -235,7 +235,7 @@ fragmenter_transmit_finished:
 	call8	dispatch_reassembled
 .LVL29:
 	retw.n
-.LFE42:
+.LFE51:
 	.size	fragmenter_transmit_finished, .-fragmenter_transmit_finished
 	.section	.text.hci_host_thread_handler,"ax",@progbits
 	.literal_position
@@ -245,7 +245,7 @@ fragmenter_transmit_finished:
 	.align	4
 	.type	hci_host_thread_handler, @function
 hci_host_thread_handler:
-.LFB35:
+.LFB44:
 	.loc 1 212 0
 .LVL30:
 	entry	sp, 48
@@ -311,7 +311,7 @@ hci_host_thread_handler:
 .LVL40:
 	j	.L32
 .LBE11:
-.LFE35:
+.LFE44:
 	.size	hci_host_thread_handler, .-hci_host_thread_handler
 	.section	.text.event_packet_ready,"ax",@progbits
 	.literal_position
@@ -319,7 +319,7 @@ hci_host_thread_handler:
 	.align	4
 	.type	event_packet_ready, @function
 event_packet_ready:
-.LFB40:
+.LFB49:
 	.loc 1 343 0
 .LVL41:
 	entry	sp, 32
@@ -335,7 +335,7 @@ event_packet_ready:
 	callx8	a8
 .LVL43:
 	retw.n
-.LFE40:
+.LFE49:
 	.size	event_packet_ready, .-event_packet_ready
 	.section	.rodata.str1.1
 .LC17:
@@ -344,14 +344,14 @@ event_packet_ready:
 	.string	"\033[0;31mE (%d) %s: %s hci layer timeout waiting for response to a command. opcode: 0x%x\033[0m\n"
 	.section	.text.command_timed_out,"ax",@progbits
 	.literal_position
-	.literal .LC15, __func__$6579
+	.literal .LC15, __func__$6628
 	.literal .LC16, .LC4
 	.literal .LC18, .LC17
 	.literal .LC20, .LC19
 	.align	4
 	.type	command_timed_out, @function
 command_timed_out:
-.LFB44:
+.LFB53:
 	.loc 1 400 0
 .LVL44:
 	entry	sp, 48
@@ -422,7 +422,7 @@ command_timed_out:
 	call8	esp_log_write
 .LVL58:
 	retw.n
-.LFE44:
+.LFE53:
 	.size	command_timed_out, .-command_timed_out
 	.section	.text.restart_command_waiting_response_timer$constprop$5,"ax",@progbits
 	.literal_position
@@ -432,7 +432,7 @@ command_timed_out:
 	.align	4
 	.type	restart_command_waiting_response_timer$constprop$5, @function
 restart_command_waiting_response_timer$constprop$5:
-.LFB57:
+.LFB66:
 	.loc 1 385 0
 	entry	sp, 32
 .LCFI7:
@@ -475,7 +475,7 @@ restart_command_waiting_response_timer$constprop$5:
 	call8	osi_mutex_unlock
 .LVL64:
 	retw.n
-.LFE57:
+.LFE66:
 	.size	restart_command_waiting_response_timer$constprop$5, .-restart_command_waiting_response_timer$constprop$5
 	.section	.text.event_command_ready,"ax",@progbits
 	.literal_position
@@ -487,7 +487,7 @@ restart_command_waiting_response_timer$constprop$5:
 	.align	4
 	.type	event_command_ready, @function
 event_command_ready:
-.LFB39:
+.LFB48:
 	.loc 1 314 0
 .LVL65:
 	entry	sp, 32
@@ -569,7 +569,7 @@ event_command_ready:
 	call8	restart_command_waiting_response_timer$constprop$5
 .LVL76:
 	retw.n
-.LFE39:
+.LFE48:
 	.size	event_command_ready, .-event_command_ready
 	.section	.text.hci_shut_down,"ax",@progbits
 	.literal_position
@@ -585,7 +585,7 @@ event_command_ready:
 	.global	hci_shut_down
 	.type	hci_shut_down, @function
 hci_shut_down:
-.LFB31:
+.LFB40:
 	.loc 1 119 0
 	entry	sp, 32
 .LCFI9:
@@ -652,7 +652,7 @@ hci_shut_down:
 	call8	vQueueDelete
 .LVL85:
 	retw.n
-.LFE31:
+.LFE40:
 	.size	hci_shut_down, .-hci_shut_down
 	.section	.rodata.str1.1
 .LC41:
@@ -671,7 +671,7 @@ hci_shut_down:
 	.literal_position
 	.literal .LC37, hci_host_env
 	.literal .LC38, event_command_ready
-	.literal .LC39, __func__$6520
+	.literal .LC39, __func__$6569
 	.literal .LC40, .LC4
 	.literal .LC42, .LC41
 	.literal .LC43, event_packet_ready
@@ -697,7 +697,7 @@ hci_shut_down:
 	.global	hci_start_up
 	.type	hci_start_up, @function
 hci_start_up:
-.LFB30:
+.LFB39:
 	.loc 1 100 0
 	entry	sp, 48
 .LCFI10:
@@ -861,7 +861,7 @@ hci_start_up:
 	movi.n	a2, -1
 	.loc 1 116 0
 	retw.n
-.LFE30:
+.LFE39:
 	.size	hci_start_up, .-hci_start_up
 	.section	.rodata.str1.1
 .LC70:
@@ -876,7 +876,7 @@ hci_start_up:
 	.global	hci_host_task_post
 	.type	hci_host_task_post, @function
 hci_host_task_post:
-.LFB32:
+.LFB41:
 	.loc 1 133 0
 .LVL109:
 	entry	sp, 48
@@ -931,7 +931,7 @@ hci_host_task_post:
 .LBE26:
 	.loc 1 149 0
 	retw.n
-.LFE32:
+.LFE41:
 	.size	hci_host_task_post, .-hci_host_task_post
 	.section	.rodata.str1.1
 .LC77:
@@ -943,14 +943,14 @@ hci_host_task_post:
 	.literal .LC72, 4096
 	.literal .LC73, packet_fragmenter
 	.literal .LC74, hci_host_env
-	.literal .LC75, __func__$6590
+	.literal .LC75, __func__$6639
 	.literal .LC76, .LC4
 	.literal .LC78, .LC77
 	.literal .LC80, .LC79
 	.align	4
 	.type	hal_says_packet_ready, @function
 hal_says_packet_ready:
-.LFB45:
+.LFB54:
 	.loc 1 421 0
 .LVL116:
 	entry	sp, 48
@@ -1156,7 +1156,7 @@ hal_says_packet_ready:
 	retw.n
 .LBE34:
 .LBE33:
-.LFE45:
+.LFE54:
 	.size	hal_says_packet_ready, .-hal_says_packet_ready
 	.section	.rodata.str1.1
 .LC81:
@@ -1166,14 +1166,14 @@ hal_says_packet_ready:
 	.section	.text.transmit_command_futured,"ax",@progbits
 	.literal_position
 	.literal .LC82, .LC81
-	.literal .LC83, __func__$6544
+	.literal .LC83, __func__$6593
 	.literal .LC85, .LC84
 	.literal .LC86, 8192
 	.literal .LC87, hci_host_env
 	.align	4
 	.type	transmit_command_futured, @function
 transmit_command_futured:
-.LFB37:
+.LFB46:
 	.loc 1 279 0
 .LVL148:
 	entry	sp, 32
@@ -1244,14 +1244,14 @@ transmit_command_futured:
 	.loc 1 297 0
 	mov.n	a2, a4
 	retw.n
-.LFE37:
+.LFE46:
 	.size	transmit_command_futured, .-transmit_command_futured
 	.section	.rodata.str1.1
 .LC90:
 	.string	"\033[0;31mE (%d) %s: %s couldn't allocate space for wait entry.\033[0m\n"
 	.section	.text.transmit_command,"ax",@progbits
 	.literal_position
-	.literal .LC88, __func__$6539
+	.literal .LC88, __func__$6588
 	.literal .LC89, .LC4
 	.literal .LC91, .LC90
 	.literal .LC92, 8192
@@ -1259,7 +1259,7 @@ transmit_command_futured:
 	.align	4
 	.type	transmit_command, @function
 transmit_command:
-.LFB36:
+.LFB45:
 	.loc 1 252 0
 .LVL159:
 	entry	sp, 32
@@ -1333,7 +1333,7 @@ transmit_command:
 	call8	hci_host_task_post
 .LVL172:
 	retw.n
-.LFE36:
+.LFE45:
 	.size	transmit_command, .-transmit_command
 	.section	.rodata.str1.1
 .LC97:
@@ -1341,14 +1341,14 @@ transmit_command:
 	.section	.text.transmit_downward,"ax",@progbits
 	.literal_position
 	.literal .LC94, 8192
-	.literal .LC95, __func__$6551
+	.literal .LC95, __func__$6600
 	.literal .LC96, .LC4
 	.literal .LC98, .LC97
 	.literal .LC99, hci_host_env
 	.align	4
 	.type	transmit_downward, @function
 transmit_downward:
-.LFB38:
+.LFB47:
 	.loc 1 300 0
 .LVL173:
 	entry	sp, 32
@@ -1391,7 +1391,7 @@ transmit_downward:
 	call8	hci_host_task_post
 .LVL178:
 	retw.n
-.LFE38:
+.LFE47:
 	.size	transmit_downward, .-transmit_downward
 	.section	.text.hci_layer_get_interface,"ax",@progbits
 	.literal_position
@@ -1406,7 +1406,7 @@ transmit_downward:
 	.global	hci_layer_get_interface
 	.type	hci_layer_get_interface, @function
 hci_layer_get_interface:
-.LFB51:
+.LFB60:
 	.loc 1 577 0
 	entry	sp, 32
 .LCFI16:
@@ -1456,42 +1456,42 @@ hci_layer_get_interface:
 .LBE53:
 	.loc 1 583 0
 	retw.n
-.LFE51:
+.LFE60:
 	.size	hci_layer_get_interface, .-hci_layer_get_interface
-	.section	.rodata.__func__$6539,"a",@progbits
-	.type	__func__$6539, @object
-	.size	__func__$6539, 17
-__func__$6539:
+	.section	.rodata.__func__$6588,"a",@progbits
+	.type	__func__$6588, @object
+	.size	__func__$6588, 17
+__func__$6588:
 	.string	"transmit_command"
-	.section	.rodata.__func__$6544,"a",@progbits
-	.type	__func__$6544, @object
-	.size	__func__$6544, 25
-__func__$6544:
+	.section	.rodata.__func__$6593,"a",@progbits
+	.type	__func__$6593, @object
+	.size	__func__$6593, 25
+__func__$6593:
 	.string	"transmit_command_futured"
-	.section	.rodata.__func__$6551,"a",@progbits
-	.type	__func__$6551, @object
-	.size	__func__$6551, 18
-__func__$6551:
+	.section	.rodata.__func__$6600,"a",@progbits
+	.type	__func__$6600, @object
+	.size	__func__$6600, 18
+__func__$6600:
 	.string	"transmit_downward"
-	.section	.rodata.__func__$6579,"a",@progbits
-	.type	__func__$6579, @object
-	.size	__func__$6579, 18
-__func__$6579:
+	.section	.rodata.__func__$6628,"a",@progbits
+	.type	__func__$6628, @object
+	.size	__func__$6628, 18
+__func__$6628:
 	.string	"command_timed_out"
-	.section	.rodata.__func__$6520,"a",@progbits
-	.type	__func__$6520, @object
-	.size	__func__$6520, 19
-__func__$6520:
+	.section	.rodata.__func__$6569,"a",@progbits
+	.type	__func__$6569, @object
+	.size	__func__$6569, 19
+__func__$6569:
 	.string	"hci_layer_init_env"
-	.section	.rodata.__func__$6599,"a",@progbits
-	.type	__func__$6599, @object
-	.size	__func__$6599, 19
-__func__$6599:
+	.section	.rodata.__func__$6648,"a",@progbits
+	.type	__func__$6648, @object
+	.size	__func__$6648, 19
+__func__$6648:
 	.string	"event_to_data_type"
-	.section	.rodata.__func__$6590,"a",@progbits
-	.type	__func__$6590, @object
-	.size	__func__$6590, 22
-__func__$6590:
+	.section	.rodata.__func__$6639,"a",@progbits
+	.type	__func__$6639, @object
+	.size	__func__$6639, 22
+__func__$6639:
 	.string	"filter_incoming_event"
 	.section	.rodata.packet_fragmenter_callbacks,"a",@progbits
 	.align	4
@@ -1572,10 +1572,10 @@ interface_created:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.byte	0x4
-	.4byte	.LCFI0-.LFB41
+	.4byte	.LCFI0-.LFB50
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1584,10 +1584,10 @@ interface_created:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
 	.byte	0x4
-	.4byte	.LCFI1-.LFB49
+	.4byte	.LCFI1-.LFB58
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1596,10 +1596,10 @@ interface_created:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.byte	0x4
-	.4byte	.LCFI2-.LFB47
+	.4byte	.LCFI2-.LFB56
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1608,10 +1608,10 @@ interface_created:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.byte	0x4
-	.4byte	.LCFI3-.LFB42
+	.4byte	.LCFI3-.LFB51
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1620,10 +1620,10 @@ interface_created:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.byte	0x4
-	.4byte	.LCFI4-.LFB35
+	.4byte	.LCFI4-.LFB44
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1632,10 +1632,10 @@ interface_created:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.byte	0x4
-	.4byte	.LCFI5-.LFB40
+	.4byte	.LCFI5-.LFB49
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1644,10 +1644,10 @@ interface_created:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.byte	0x4
-	.4byte	.LCFI6-.LFB44
+	.4byte	.LCFI6-.LFB53
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1656,10 +1656,10 @@ interface_created:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB57
-	.4byte	.LFE57-.LFB57
+	.4byte	.LFB66
+	.4byte	.LFE66-.LFB66
 	.byte	0x4
-	.4byte	.LCFI7-.LFB57
+	.4byte	.LCFI7-.LFB66
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1668,10 +1668,10 @@ interface_created:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI8-.LFB39
+	.4byte	.LCFI8-.LFB48
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1680,10 +1680,10 @@ interface_created:
 	.4byte	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI9-.LFB31
+	.4byte	.LCFI9-.LFB40
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1692,10 +1692,10 @@ interface_created:
 	.4byte	.LEFDE20-.LASFDE20
 .LASFDE20:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI10-.LFB30
+	.4byte	.LCFI10-.LFB39
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1704,10 +1704,10 @@ interface_created:
 	.4byte	.LEFDE22-.LASFDE22
 .LASFDE22:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.byte	0x4
-	.4byte	.LCFI11-.LFB32
+	.4byte	.LCFI11-.LFB41
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1716,10 +1716,10 @@ interface_created:
 	.4byte	.LEFDE24-.LASFDE24
 .LASFDE24:
 	.4byte	.Lframe0
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.byte	0x4
-	.4byte	.LCFI12-.LFB45
+	.4byte	.LCFI12-.LFB54
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1728,10 +1728,10 @@ interface_created:
 	.4byte	.LEFDE26-.LASFDE26
 .LASFDE26:
 	.4byte	.Lframe0
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.byte	0x4
-	.4byte	.LCFI13-.LFB37
+	.4byte	.LCFI13-.LFB46
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1740,10 +1740,10 @@ interface_created:
 	.4byte	.LEFDE28-.LASFDE28
 .LASFDE28:
 	.4byte	.Lframe0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.byte	0x4
-	.4byte	.LCFI14-.LFB36
+	.4byte	.LCFI14-.LFB45
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1752,10 +1752,10 @@ interface_created:
 	.4byte	.LEFDE30-.LASFDE30
 .LASFDE30:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI15-.LFB38
+	.4byte	.LCFI15-.LFB47
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1764,10 +1764,10 @@ interface_created:
 	.4byte	.LEFDE32-.LASFDE32
 .LASFDE32:
 	.4byte	.Lframe0
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.byte	0x4
-	.4byte	.LCFI16-.LFB51
+	.4byte	.LCFI16-.LFB60
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1783,15 +1783,15 @@ interface_created:
 	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 	.file 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/semphr.h"
-	.file 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/semaphore.h"
-	.file 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/future.h"
+	.file 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/semaphore.h"
+	.file 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/future.h"
 	.file 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/hci/include/hci/packet_fragmenter.h"
 	.file 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/hci/include/hci/hci_layer.h"
-	.file 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h"
-	.file 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/alarm.h"
-	.file 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/thread.h"
-	.file 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/mutex.h"
-	.file 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/fixed_queue.h"
+	.file 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h"
+	.file 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/alarm.h"
+	.file 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/thread.h"
+	.file 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/mutex.h"
+	.file 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h"
 	.file 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 	.file 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/include/esp_bt.h"
 	.file 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
@@ -1893,118 +1893,118 @@ interface_created:
 	.byte	0x3
 	.byte	0x2d
 	.4byte	0x65
-	.uleb128 0x6
-	.byte	0x4
-	.4byte	0xa3
-	.uleb128 0x4
-	.4byte	.LASF17
-	.byte	0x4
-	.byte	0x21
-	.4byte	0xa3
-	.uleb128 0x4
-	.4byte	.LASF18
-	.byte	0x4
-	.byte	0x22
-	.4byte	0xae
 	.uleb128 0x3
 	.byte	0x1
 	.byte	0x2
-	.4byte	.LASF19
-	.uleb128 0x8
-	.byte	0x8
+	.4byte	.LASF17
+	.uleb128 0x6
 	.byte	0x4
-	.byte	0xc6
-	.4byte	0x12c
-	.uleb128 0x9
-	.4byte	.LASF20
-	.byte	0x4
-	.byte	0xc7
-	.4byte	0xae
-	.byte	0
-	.uleb128 0xa
-	.string	"len"
-	.byte	0x4
-	.byte	0xc8
-	.4byte	0xae
-	.byte	0x2
-	.uleb128 0x9
-	.4byte	.LASF21
-	.byte	0x4
-	.byte	0xc9
-	.4byte	0xae
-	.byte	0x4
-	.uleb128 0x9
-	.4byte	.LASF22
-	.byte	0x4
-	.byte	0xca
-	.4byte	0xae
-	.byte	0x6
-	.uleb128 0x9
-	.4byte	.LASF23
-	.byte	0x4
-	.byte	0xcb
-	.4byte	0x12c
-	.byte	0x8
-	.byte	0
-	.uleb128 0xb
 	.4byte	0xa3
-	.4byte	0x13b
-	.uleb128 0xc
-	.4byte	0x85
-	.byte	0
-	.uleb128 0x4
-	.4byte	.LASF24
-	.byte	0x4
-	.byte	0xcc
-	.4byte	0xe7
-	.uleb128 0xb
-	.4byte	0xca
-	.4byte	0x156
-	.uleb128 0xd
-	.4byte	0x85
-	.byte	0x5
-	.byte	0
-	.uleb128 0xe
+	.uleb128 0x8
 	.byte	0x4
 	.4byte	0x2c
 	.byte	0x5
 	.byte	0x1f
-	.4byte	0x187
-	.uleb128 0xf
-	.4byte	.LASF25
+	.4byte	0x102
+	.uleb128 0x9
+	.4byte	.LASF18
 	.byte	0
-	.uleb128 0xf
-	.4byte	.LASF26
+	.uleb128 0x9
+	.4byte	.LASF19
 	.byte	0x1
-	.uleb128 0xf
-	.4byte	.LASF27
+	.uleb128 0x9
+	.4byte	.LASF20
 	.byte	0x2
-	.uleb128 0xf
-	.4byte	.LASF28
+	.uleb128 0x9
+	.4byte	.LASF21
 	.byte	0x3
-	.uleb128 0xf
-	.4byte	.LASF29
+	.uleb128 0x9
+	.4byte	.LASF22
 	.byte	0x4
-	.uleb128 0xf
-	.4byte	.LASF30
+	.uleb128 0x9
+	.4byte	.LASF23
 	.byte	0x5
 	.byte	0
+	.uleb128 0x4
+	.4byte	.LASF24
+	.byte	0x4
+	.byte	0x1a
+	.4byte	0xa3
+	.uleb128 0x4
+	.4byte	.LASF25
+	.byte	0x4
+	.byte	0x1b
+	.4byte	0xae
+	.uleb128 0xa
+	.byte	0x8
+	.byte	0x4
+	.byte	0xbf
+	.4byte	0x15d
+	.uleb128 0xb
+	.4byte	.LASF26
+	.byte	0x4
+	.byte	0xc0
+	.4byte	0xae
+	.byte	0
+	.uleb128 0xc
+	.string	"len"
+	.byte	0x4
+	.byte	0xc1
+	.4byte	0xae
+	.byte	0x2
+	.uleb128 0xb
+	.4byte	.LASF27
+	.byte	0x4
+	.byte	0xc2
+	.4byte	0xae
+	.byte	0x4
+	.uleb128 0xb
+	.4byte	.LASF28
+	.byte	0x4
+	.byte	0xc3
+	.4byte	0xae
+	.byte	0x6
+	.uleb128 0xb
+	.4byte	.LASF29
+	.byte	0x4
+	.byte	0xc4
+	.4byte	0x15d
+	.byte	0x8
+	.byte	0
+	.uleb128 0xd
+	.4byte	0xa3
+	.4byte	0x16c
 	.uleb128 0xe
+	.4byte	0x85
+	.byte	0
+	.uleb128 0x4
+	.4byte	.LASF30
+	.byte	0x4
+	.byte	0xc5
+	.4byte	0x118
+	.uleb128 0xd
+	.4byte	0x102
+	.4byte	0x187
+	.uleb128 0xf
+	.4byte	0x85
+	.byte	0x5
+	.byte	0
+	.uleb128 0x8
 	.byte	0x4
 	.4byte	0x2c
 	.byte	0x6
 	.byte	0x1b
 	.4byte	0x1ac
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF31
 	.byte	0x1
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF32
 	.byte	0x2
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF33
 	.byte	0x3
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF34
 	.byte	0x4
 	.byte	0
@@ -2028,13 +2028,13 @@ interface_created:
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x13b
-	.uleb128 0x8
+	.4byte	0x16c
+	.uleb128 0xa
 	.byte	0x4
 	.byte	0x6
 	.byte	0x24
 	.4byte	0x1ee
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF37
 	.byte	0x6
 	.byte	0x28
@@ -2052,19 +2052,19 @@ interface_created:
 	.byte	0x6
 	.byte	0x31
 	.4byte	0x22a
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF39
 	.byte	0x6
 	.byte	0x36
 	.4byte	0x244
 	.byte	0
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF40
 	.byte	0x6
 	.byte	0x39
 	.4byte	0x95
 	.byte	0x4
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF41
 	.byte	0x6
 	.byte	0x4e
@@ -2072,7 +2072,7 @@ interface_created:
 	.byte	0x8
 	.byte	0
 	.uleb128 0x13
-	.4byte	0xe0
+	.4byte	0xc4
 	.4byte	0x239
 	.uleb128 0x11
 	.4byte	0x239
@@ -2091,7 +2091,7 @@ interface_created:
 	.uleb128 0x11
 	.4byte	0x1ac
 	.uleb128 0x11
-	.4byte	0xc4
+	.4byte	0xcb
 	.uleb128 0x11
 	.4byte	0xae
 	.byte	0
@@ -2134,19 +2134,19 @@ interface_created:
 	.byte	0xc
 	.byte	0x18
 	.4byte	0x2dc
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF50
 	.byte	0xc
 	.byte	0x19
-	.4byte	0xe0
+	.4byte	0xc4
 	.byte	0
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF51
 	.byte	0xc
 	.byte	0x1a
 	.4byte	0x2a0
 	.byte	0x4
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF52
 	.byte	0xc
 	.byte	0x1b
@@ -2164,31 +2164,31 @@ interface_created:
 	.byte	0xd
 	.byte	0x2a
 	.4byte	0x330
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF55
 	.byte	0xd
 	.byte	0x2c
 	.4byte	0x4a0
 	.byte	0
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF56
 	.byte	0xd
 	.byte	0x2f
 	.4byte	0x95
 	.byte	0x4
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF57
 	.byte	0xd
 	.byte	0x32
 	.4byte	0x4ab
 	.byte	0x8
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF58
 	.byte	0xd
 	.byte	0x35
 	.4byte	0x1c2
 	.byte	0xc
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF59
 	.byte	0xd
 	.byte	0x39
@@ -2238,25 +2238,25 @@ interface_created:
 	.byte	0xe
 	.byte	0x48
 	.4byte	0x3bf
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF64
 	.byte	0xe
 	.byte	0x4d
 	.4byte	0x95
 	.byte	0
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF65
 	.byte	0xe
 	.byte	0x50
 	.4byte	0x3d9
 	.byte	0x4
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF66
 	.byte	0xe
 	.byte	0x57
 	.4byte	0x3f4
 	.byte	0x8
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF67
 	.byte	0xe
 	.byte	0x5a
@@ -2317,7 +2317,7 @@ interface_created:
 	.uleb128 0x11
 	.4byte	0x1d3
 	.uleb128 0x11
-	.4byte	0xe0
+	.4byte	0xc4
 	.byte	0
 	.uleb128 0x4
 	.4byte	.LASF69
@@ -2329,24 +2329,24 @@ interface_created:
 	.byte	0xd
 	.byte	0x1c
 	.4byte	0x426
-	.uleb128 0x8
+	.uleb128 0xa
 	.byte	0xc
 	.byte	0xd
 	.byte	0x1e
 	.4byte	0x47f
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF71
 	.byte	0xd
 	.byte	0x20
 	.4byte	0x447
 	.byte	0
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF72
 	.byte	0xd
 	.byte	0x23
 	.4byte	0x43c
 	.byte	0x4
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF73
 	.byte	0xd
 	.byte	0x27
@@ -2403,25 +2403,25 @@ interface_created:
 	.byte	0x11
 	.byte	0x1c
 	.4byte	0x51d
-	.uleb128 0xa
+	.uleb128 0xc
 	.string	"sig"
 	.byte	0x11
 	.byte	0x1d
 	.4byte	0xb9
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.string	"par"
 	.byte	0x11
 	.byte	0x1e
 	.4byte	0x8c
 	.byte	0x4
-	.uleb128 0xa
+	.uleb128 0xc
 	.string	"cb"
 	.byte	0x11
 	.byte	0x1f
 	.4byte	0x8c
 	.byte	0x8
-	.uleb128 0xa
+	.uleb128 0xc
 	.string	"arg"
 	.byte	0x11
 	.byte	0x20
@@ -2433,72 +2433,72 @@ interface_created:
 	.byte	0x11
 	.byte	0x22
 	.4byte	0x4e1
-	.uleb128 0xe
+	.uleb128 0x8
 	.byte	0x4
 	.4byte	0x2c
 	.byte	0x11
 	.byte	0x2c
 	.4byte	0x541
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF81
 	.byte	0
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF82
 	.byte	0x1
 	.byte	0
-	.uleb128 0xe
+	.uleb128 0x8
 	.byte	0x4
 	.4byte	0x2c
 	.byte	0x11
 	.byte	0x31
 	.4byte	0x57e
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF83
 	.byte	0
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF84
 	.byte	0x1
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF85
 	.byte	0x2
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF86
 	.byte	0x3
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF87
 	.byte	0x4
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF88
 	.byte	0x5
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF89
 	.byte	0x6
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF90
 	.byte	0x7
 	.byte	0
 	.uleb128 0x4
 	.4byte	.LASF91
 	.byte	0x11
-	.byte	0x68
+	.byte	0x60
 	.4byte	0xb9
-	.uleb128 0xe
+	.uleb128 0x8
 	.byte	0x4
 	.4byte	0x2c
 	.byte	0x11
-	.byte	0x6a
+	.byte	0x62
 	.4byte	0x5a2
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF92
 	.byte	0
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF93
 	.byte	0x1
 	.byte	0
 	.uleb128 0x4
 	.4byte	.LASF94
 	.byte	0x11
-	.byte	0x6d
+	.byte	0x65
 	.4byte	0x589
 	.uleb128 0x4
 	.4byte	.LASF95
@@ -2515,42 +2515,42 @@ interface_created:
 	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x5b8
-	.uleb128 0x8
+	.uleb128 0xa
 	.byte	0x18
 	.byte	0x1
 	.byte	0x24
 	.4byte	0x61f
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF97
 	.byte	0x1
 	.byte	0x25
 	.4byte	0xae
 	.byte	0
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF98
 	.byte	0x1
 	.byte	0x26
 	.4byte	0x3ee
 	.byte	0x4
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF99
 	.byte	0x1
 	.byte	0x27
 	.4byte	0x33b
 	.byte	0x8
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF100
 	.byte	0x1
 	.byte	0x28
 	.4byte	0x35c
 	.byte	0xc
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF101
 	.byte	0x1
 	.byte	0x29
 	.4byte	0x8c
 	.byte	0x10
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF102
 	.byte	0x1
 	.byte	0x2a
@@ -2562,30 +2562,30 @@ interface_created:
 	.byte	0x1
 	.byte	0x2b
 	.4byte	0x5ce
-	.uleb128 0x8
+	.uleb128 0xa
 	.byte	0x10
 	.byte	0x1
 	.byte	0x2d
 	.4byte	0x663
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF104
 	.byte	0x1
 	.byte	0x2e
-	.4byte	0xe0
+	.4byte	0xc4
 	.byte	0
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF105
 	.byte	0x1
 	.byte	0x2f
 	.4byte	0x663
 	.byte	0x4
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF106
 	.byte	0x1
 	.byte	0x30
 	.4byte	0x669
 	.byte	0x8
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF107
 	.byte	0x1
 	.byte	0x31
@@ -2603,30 +2603,30 @@ interface_created:
 	.byte	0x1
 	.byte	0x32
 	.4byte	0x62a
-	.uleb128 0x8
+	.uleb128 0xa
 	.byte	0x1c
 	.byte	0x1
 	.byte	0x34
 	.4byte	0x6b3
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF109
 	.byte	0x1
 	.byte	0x35
 	.4byte	0x25
 	.byte	0
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF110
 	.byte	0x1
 	.byte	0x36
 	.4byte	0x5c8
 	.byte	0x4
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF111
 	.byte	0x1
 	.byte	0x37
 	.4byte	0x5c8
 	.byte	0x8
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF112
 	.byte	0x1
 	.byte	0x39
@@ -2670,10 +2670,10 @@ interface_created:
 	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x61f
-	.uleb128 0xb
+	.uleb128 0xd
 	.4byte	0x9c
 	.4byte	0x719
-	.uleb128 0xd
+	.uleb128 0xf
 	.4byte	0x85
 	.byte	0x11
 	.byte	0
@@ -2739,12 +2739,12 @@ interface_created:
 	.4byte	.LASF121
 	.byte	0x1
 	.2byte	0x11d
-	.4byte	0xc4
+	.4byte	0xcb
 	.byte	0
-	.uleb128 0xb
+	.uleb128 0xd
 	.4byte	0x9c
 	.4byte	0x7be
-	.uleb128 0xd
+	.uleb128 0xf
 	.4byte	0x85
 	.byte	0x18
 	.byte	0
@@ -2780,7 +2780,7 @@ interface_created:
 	.4byte	.LASF121
 	.byte	0x1
 	.byte	0xfd
-	.4byte	0xc4
+	.4byte	0xcb
 	.uleb128 0x20
 	.4byte	.LASF115
 	.byte	0x1
@@ -2791,10 +2791,10 @@ interface_created:
 	.4byte	0x82f
 	.4byte	.LASF65
 	.byte	0
-	.uleb128 0xb
+	.uleb128 0xd
 	.4byte	0x9c
 	.4byte	0x82f
-	.uleb128 0xd
+	.uleb128 0xf
 	.4byte	0x85
 	.byte	0x10
 	.byte	0
@@ -2820,7 +2820,7 @@ interface_created:
 	.byte	0x1
 	.4byte	0x879
 	.uleb128 0x18
-	.4byte	.LASF20
+	.4byte	.LASF26
 	.byte	0x1
 	.2byte	0x206
 	.4byte	0xae
@@ -2829,10 +2829,10 @@ interface_created:
 	.4byte	0x889
 	.4byte	.LASF123
 	.byte	0
-	.uleb128 0xb
+	.uleb128 0xd
 	.4byte	0x9c
 	.4byte	0x889
-	.uleb128 0xd
+	.uleb128 0xf
 	.4byte	0x85
 	.byte	0x12
 	.byte	0
@@ -2842,8 +2842,8 @@ interface_created:
 	.4byte	.LASF127
 	.byte	0x1
 	.2byte	0x15f
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x970
@@ -2858,11 +2858,11 @@ interface_created:
 	.4byte	.LASF124
 	.byte	0x1
 	.2byte	0x15f
-	.4byte	0xe0
+	.4byte	0xc4
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x23
-	.4byte	.LASF20
+	.4byte	.LASF26
 	.byte	0x1
 	.2byte	0x161
 	.4byte	0xae
@@ -2888,7 +2888,7 @@ interface_created:
 	.4byte	0x86b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6599
+	.4byte	__func__$6648
 	.uleb128 0x28
 	.4byte	.LVL2
 	.4byte	0x17cc
@@ -2924,7 +2924,7 @@ interface_created:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6599
+	.4byte	__func__$6648
 	.uleb128 0x2a
 	.uleb128 0x2
 	.byte	0x71
@@ -2961,8 +2961,8 @@ interface_created:
 	.byte	0x1
 	.2byte	0x215
 	.4byte	0x703
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xa6e
@@ -3088,8 +3088,8 @@ interface_created:
 	.4byte	.LASF128
 	.byte	0x1
 	.2byte	0x1fa
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xacd
@@ -3137,8 +3137,8 @@ interface_created:
 	.4byte	.LASF129
 	.byte	0x1
 	.2byte	0x16b
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xb1d
@@ -3153,7 +3153,7 @@ interface_created:
 	.4byte	.LASF130
 	.byte	0x1
 	.2byte	0x16b
-	.4byte	0xe0
+	.4byte	0xc4
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x31
@@ -3175,8 +3175,8 @@ interface_created:
 	.4byte	.LASF132
 	.byte	0x1
 	.byte	0xd3
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xbb6
@@ -3249,8 +3249,8 @@ interface_created:
 	.4byte	.LASF133
 	.byte	0x1
 	.2byte	0x156
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xbfb
@@ -3280,8 +3280,8 @@ interface_created:
 	.byte	0
 	.uleb128 0x38
 	.4byte	0x6be
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xd18
@@ -3298,7 +3298,7 @@ interface_created:
 	.4byte	0x6ef
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6579
+	.4byte	__func__$6628
 	.uleb128 0x2f
 	.4byte	.LBB14
 	.4byte	.LBE14-.LBB14
@@ -3317,7 +3317,7 @@ interface_created:
 	.4byte	0x6ef
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6579
+	.4byte	__func__$6628
 	.uleb128 0x28
 	.4byte	.LVL53
 	.4byte	0x17cc
@@ -3436,8 +3436,8 @@ interface_created:
 	.byte	0
 	.uleb128 0x38
 	.4byte	0x834
-	.4byte	.LFB57
-	.4byte	.LFE57-.LFB57
+	.4byte	.LFB66
+	.4byte	.LFE66-.LFB66
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xd7d
@@ -3488,8 +3488,8 @@ interface_created:
 	.4byte	.LASF135
 	.byte	0x1
 	.2byte	0x139
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xe53
@@ -3608,8 +3608,8 @@ interface_created:
 	.4byte	.LASF141
 	.byte	0x1
 	.byte	0x76
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xf08
@@ -3695,8 +3695,8 @@ interface_created:
 	.byte	0x1
 	.byte	0x63
 	.4byte	0x25
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x10f9
@@ -3722,7 +3722,7 @@ interface_created:
 	.4byte	0xf23
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6520
+	.4byte	__func__$6569
 	.uleb128 0x31
 	.4byte	.LVL86
 	.4byte	0x18f9
@@ -3929,8 +3929,8 @@ interface_created:
 	.byte	0
 	.uleb128 0x38
 	.4byte	0x71e
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1194
@@ -4014,7 +4014,7 @@ interface_created:
 	.4byte	.LASF138
 	.byte	0x1
 	.2byte	0x1b0
-	.4byte	0xe0
+	.4byte	0xc4
 	.byte	0x1
 	.4byte	0x1205
 	.uleb128 0x18
@@ -4031,7 +4031,7 @@ interface_created:
 	.4byte	.LASF121
 	.byte	0x1
 	.2byte	0x1b3
-	.4byte	0xc4
+	.4byte	0xcb
 	.uleb128 0x19
 	.4byte	.LASF139
 	.byte	0x1
@@ -4058,10 +4058,10 @@ interface_created:
 	.4byte	0xa3
 	.byte	0
 	.byte	0
-	.uleb128 0xb
+	.uleb128 0xd
 	.4byte	0x9c
 	.4byte	0x1215
-	.uleb128 0xd
+	.uleb128 0xf
 	.4byte	0x85
 	.byte	0x15
 	.byte	0
@@ -4069,8 +4069,8 @@ interface_created:
 	.4byte	0x1205
 	.uleb128 0x38
 	.4byte	0x745
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x13b3
@@ -4116,7 +4116,7 @@ interface_created:
 	.4byte	0x11e1
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6590
+	.4byte	__func__$6639
 	.uleb128 0x2f
 	.4byte	.LBB37
 	.4byte	.LBE37-.LBB37
@@ -4261,8 +4261,8 @@ interface_created:
 	.byte	0
 	.uleb128 0x38
 	.4byte	0x75f
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x149a
@@ -4277,7 +4277,7 @@ interface_created:
 	.4byte	0x788
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6544
+	.4byte	__func__$6593
 	.uleb128 0x27
 	.4byte	0x795
 	.uleb128 0x1
@@ -4304,7 +4304,7 @@ interface_created:
 	.4byte	0x788
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6544
+	.4byte	__func__$6593
 	.uleb128 0x29
 	.4byte	.LVL152
 	.4byte	0x195f
@@ -4325,7 +4325,7 @@ interface_created:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6544
+	.4byte	__func__$6593
 	.uleb128 0x2a
 	.uleb128 0x1
 	.byte	0x5d
@@ -4377,8 +4377,8 @@ interface_created:
 	.byte	0
 	.uleb128 0x38
 	.4byte	0x7c3
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x15a9
@@ -4406,7 +4406,7 @@ interface_created:
 	.4byte	0x811
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6539
+	.4byte	__func__$6588
 	.uleb128 0x2f
 	.4byte	.LBB44
 	.4byte	.LBE44-.LBB44
@@ -4434,7 +4434,7 @@ interface_created:
 	.4byte	0x811
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6539
+	.4byte	__func__$6588
 	.uleb128 0x28
 	.4byte	.LVL162
 	.4byte	0x17cc
@@ -4469,7 +4469,7 @@ interface_created:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6539
+	.4byte	__func__$6588
 	.byte	0
 	.byte	0
 	.byte	0
@@ -4506,8 +4506,8 @@ interface_created:
 	.4byte	.LASF67
 	.byte	0x1
 	.2byte	0x12b
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1672
@@ -4519,7 +4519,7 @@ interface_created:
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x22
-	.4byte	.LASF23
+	.4byte	.LASF29
 	.byte	0x1
 	.2byte	0x12b
 	.4byte	0x8c
@@ -4530,7 +4530,7 @@ interface_created:
 	.4byte	0x1672
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6551
+	.4byte	__func__$6600
 	.uleb128 0x31
 	.4byte	.LVL174
 	.4byte	0x7c3
@@ -4592,7 +4592,7 @@ interface_created:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6551
+	.4byte	__func__$6600
 	.byte	0
 	.uleb128 0x31
 	.4byte	.LVL177
@@ -4628,8 +4628,8 @@ interface_created:
 	.byte	0x1
 	.2byte	0x240
 	.4byte	0x16bd
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x16bd
@@ -4654,7 +4654,7 @@ interface_created:
 	.uleb128 0x4c
 	.4byte	.LASF143
 	.byte	0x4
-	.2byte	0x2cc
+	.2byte	0x2b8
 	.4byte	0x16db
 	.byte	0x6
 	.byte	0xff
@@ -4664,11 +4664,11 @@ interface_created:
 	.byte	0xff
 	.byte	0xff
 	.uleb128 0x14
-	.4byte	0x146
+	.4byte	0x177
 	.uleb128 0x4c
 	.4byte	.LASF144
 	.byte	0x4
-	.2byte	0x2cd
+	.2byte	0x2b9
 	.4byte	0x16f3
 	.byte	0x6
 	.byte	0
@@ -4678,7 +4678,7 @@ interface_created:
 	.byte	0
 	.byte	0
 	.uleb128 0x14
-	.4byte	0x146
+	.4byte	0x177
 	.uleb128 0x4d
 	.4byte	.LASF145
 	.byte	0x1
@@ -4691,7 +4691,7 @@ interface_created:
 	.4byte	.LASF146
 	.byte	0x1
 	.byte	0x46
-	.4byte	0xe0
+	.4byte	0xc4
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	interface_created
@@ -4731,7 +4731,7 @@ interface_created:
 	.4byte	.LASF151
 	.byte	0x1
 	.byte	0x4d
-	.4byte	0xe0
+	.4byte	0xc4
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	hci_host_startup_flag
@@ -4831,7 +4831,7 @@ interface_created:
 	.4byte	.LASF165
 	.4byte	.LASF165
 	.byte	0x11
-	.byte	0x6f
+	.byte	0x67
 	.uleb128 0x4f
 	.4byte	.LASF166
 	.4byte	.LASF166
@@ -4851,7 +4851,7 @@ interface_created:
 	.4byte	.LASF169
 	.4byte	.LASF169
 	.byte	0x15
-	.2byte	0x145
+	.2byte	0x152
 	.uleb128 0x4f
 	.4byte	.LASF170
 	.4byte	.LASF170
@@ -5068,74 +5068,6 @@ interface_created:
 	.byte	0
 	.byte	0
 	.uleb128 0x8
-	.uleb128 0x13
-	.byte	0x1
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x9
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x38
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0xa
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x38
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0xb
-	.uleb128 0x1
-	.byte	0x1
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xc
-	.uleb128 0x21
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xd
-	.uleb128 0x21
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2f
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0xe
 	.uleb128 0x4
 	.byte	0x1
 	.uleb128 0xb
@@ -5150,12 +5082,80 @@ interface_created:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xf
+	.uleb128 0x9
 	.uleb128 0x28
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
 	.uleb128 0x1c
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0xa
+	.uleb128 0x13
+	.byte	0x1
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xb
+	.uleb128 0xd
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x38
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0xc
+	.uleb128 0xd
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x38
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0xd
+	.uleb128 0x1
+	.byte	0x1
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xe
+	.uleb128 0x21
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xf
+	.uleb128 0x21
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2f
 	.uleb128 0xb
 	.byte	0
 	.byte	0
@@ -6065,7 +6065,7 @@ interface_created:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL4
-	.4byte	.LFE41
+	.4byte	.LFE50
 	.2byte	0x5
 	.byte	0x74
 	.sleb128 8192
@@ -6089,7 +6089,7 @@ interface_created:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL23
-	.4byte	.LFE49
+	.4byte	.LFE58
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6103,7 +6103,7 @@ interface_created:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL15
-	.4byte	.LFE49
+	.4byte	.LFE58
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -6125,7 +6125,7 @@ interface_created:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL31
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6157,7 +6157,7 @@ interface_created:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL51
-	.4byte	.LFE44
+	.4byte	.LFE53
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6171,7 +6171,7 @@ interface_created:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL51
-	.4byte	.LFE44
+	.4byte	.LFE53
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6211,7 +6211,7 @@ interface_created:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL68
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6226,7 +6226,7 @@ interface_created:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL68
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -6272,7 +6272,7 @@ interface_created:
 	.2byte	0x1
 	.byte	0x5c
 	.4byte	.LVL111-1
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6303,7 +6303,7 @@ interface_created:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL146
-	.4byte	.LFE45
+	.4byte	.LFE54
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -6321,7 +6321,7 @@ interface_created:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL146
-	.4byte	.LFE45
+	.4byte	.LFE54
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -6339,7 +6339,7 @@ interface_created:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL146
-	.4byte	.LFE45
+	.4byte	.LFE54
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -6364,7 +6364,7 @@ interface_created:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL146
-	.4byte	.LFE45
+	.4byte	.LFE54
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
@@ -6433,7 +6433,7 @@ interface_created:
 	.uleb128 0xe
 	.byte	0x9f
 	.4byte	.LVL146
-	.4byte	.LFE45
+	.4byte	.LFE54
 	.2byte	0x3
 	.byte	0x73
 	.sleb128 2
@@ -6465,7 +6465,7 @@ interface_created:
 	.byte	0x73
 	.sleb128 0
 	.4byte	.LVL147-1
-	.4byte	.LFE45
+	.4byte	.LFE54
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -6614,7 +6614,7 @@ interface_created:
 	.byte	0x73
 	.sleb128 20
 	.4byte	.LVL157-1
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6645,7 +6645,7 @@ interface_created:
 	.byte	0x7b
 	.sleb128 20
 	.4byte	.LVL171-1
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6669,7 +6669,7 @@ interface_created:
 	.byte	0x7b
 	.sleb128 8
 	.4byte	.LVL171-1
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6811,40 +6811,40 @@ interface_created:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
-	.4byte	.LFB57
-	.4byte	.LFE57-.LFB57
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.4byte	.LFB51
 	.4byte	.LFE51-.LFB51
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
+	.4byte	.LFB66
+	.4byte	.LFE66-.LFB66
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -6869,40 +6869,40 @@ interface_created:
 	.4byte	.LBE53
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB41
-	.4byte	.LFE41
-	.4byte	.LFB49
-	.4byte	.LFE49
-	.4byte	.LFB47
-	.4byte	.LFE47
-	.4byte	.LFB42
-	.4byte	.LFE42
-	.4byte	.LFB35
-	.4byte	.LFE35
-	.4byte	.LFB40
-	.4byte	.LFE40
-	.4byte	.LFB44
-	.4byte	.LFE44
-	.4byte	.LFB57
-	.4byte	.LFE57
-	.4byte	.LFB39
-	.4byte	.LFE39
-	.4byte	.LFB31
-	.4byte	.LFE31
-	.4byte	.LFB30
-	.4byte	.LFE30
-	.4byte	.LFB32
-	.4byte	.LFE32
-	.4byte	.LFB45
-	.4byte	.LFE45
-	.4byte	.LFB37
-	.4byte	.LFE37
-	.4byte	.LFB36
-	.4byte	.LFE36
-	.4byte	.LFB38
-	.4byte	.LFE38
+	.4byte	.LFB50
+	.4byte	.LFE50
+	.4byte	.LFB58
+	.4byte	.LFE58
+	.4byte	.LFB56
+	.4byte	.LFE56
 	.4byte	.LFB51
 	.4byte	.LFE51
+	.4byte	.LFB44
+	.4byte	.LFE44
+	.4byte	.LFB49
+	.4byte	.LFE49
+	.4byte	.LFB53
+	.4byte	.LFE53
+	.4byte	.LFB66
+	.4byte	.LFE66
+	.4byte	.LFB48
+	.4byte	.LFE48
+	.4byte	.LFB40
+	.4byte	.LFE40
+	.4byte	.LFB39
+	.4byte	.LFE39
+	.4byte	.LFB41
+	.4byte	.LFE41
+	.4byte	.LFB54
+	.4byte	.LFE54
+	.4byte	.LFB46
+	.4byte	.LFE46
+	.4byte	.LFB45
+	.4byte	.LFE45
+	.4byte	.LFB47
+	.4byte	.LFE47
+	.4byte	.LFB60
+	.4byte	.LFE60
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -6930,7 +6930,7 @@ interface_created:
 	.string	"event_to_data_type"
 .LASF57:
 	.string	"fragment_current_packet"
-.LASF26:
+.LASF19:
 	.string	"ESP_LOG_ERROR"
 .LASF65:
 	.string	"transmit_command"
@@ -6946,7 +6946,7 @@ interface_created:
 	.string	"esp_log_write"
 .LASF146:
 	.string	"interface_created"
-.LASF23:
+.LASF29:
 	.string	"data"
 .LASF141:
 	.string	"hci_shut_down"
@@ -6964,7 +6964,7 @@ interface_created:
 	.string	"command_status_cb"
 .LASF94:
 	.string	"task_post_status_t"
-.LASF29:
+.LASF22:
 	.string	"ESP_LOG_DEBUG"
 .LASF8:
 	.string	"long long int"
@@ -6994,7 +6994,7 @@ interface_created:
 	.string	"TaskHandle_t"
 .LASF136:
 	.string	"hci_layer_deinit_env"
-.LASF24:
+.LASF30:
 	.string	"BT_HDR"
 .LASF43:
 	.string	"TickType_t"
@@ -7018,7 +7018,7 @@ interface_created:
 	.string	"packet_fragmenter_t"
 .LASF108:
 	.string	"command_waiting_response_t"
-.LASF18:
+.LASF25:
 	.string	"UINT16"
 .LASF89:
 	.string	"SIG_BTU_L2CAP_ALARM"
@@ -7062,7 +7062,7 @@ interface_created:
 	.string	"queue"
 .LASF189:
 	.string	"xQueueGenericSend"
-.LASF20:
+.LASF26:
 	.string	"event"
 .LASF101:
 	.string	"context"
@@ -7098,7 +7098,7 @@ interface_created:
 	.string	"interface"
 .LASF128:
 	.string	"dispatch_reassembled"
-.LASF28:
+.LASF21:
 	.string	"ESP_LOG_INFO"
 .LASF74:
 	.string	"packet_fragmenter_callbacks_t"
@@ -7154,7 +7154,7 @@ interface_created:
 	.string	"semaphore"
 .LASF34:
 	.string	"DATA_TYPE_EVENT"
-.LASF19:
+.LASF17:
 	.string	"_Bool"
 .LASF191:
 	.string	"__assert_func"
@@ -7212,7 +7212,7 @@ interface_created:
 	.string	"SemaphoreHandle_t"
 .LASF13:
 	.string	"char"
-.LASF30:
+.LASF23:
 	.string	"ESP_LOG_VERBOSE"
 .LASF95:
 	.string	"osi_mutex_t"
@@ -7226,7 +7226,7 @@ interface_created:
 	.string	"vTaskDelete"
 .LASF87:
 	.string	"SIG_BTU_GENERAL_ALARM"
-.LASF25:
+.LASF18:
 	.string	"ESP_LOG_NONE"
 .LASF143:
 	.string	"bd_addr_any"
@@ -7238,7 +7238,7 @@ interface_created:
 	.string	"hci_hal_t"
 .LASF38:
 	.string	"hci_hal_callbacks_t"
-.LASF21:
+.LASF27:
 	.string	"offset"
 .LASF142:
 	.string	"hci_layer_get_interface"
@@ -7250,7 +7250,7 @@ interface_created:
 	.string	"packet_fragmenter_get_interface"
 .LASF200:
 	.string	"hci_host_task_post"
-.LASF22:
+.LASF28:
 	.string	"layer_specific"
 .LASF41:
 	.string	"transmit_data"
@@ -7260,7 +7260,7 @@ interface_created:
 	.string	"osi_alarm_cancel"
 .LASF99:
 	.string	"complete_callback"
-.LASF27:
+.LASF20:
 	.string	"ESP_LOG_WARN"
 .LASF66:
 	.string	"transmit_command_futured"
@@ -7270,7 +7270,7 @@ interface_created:
 	.string	"fragmenter_transmit_finished"
 .LASF192:
 	.string	"calloc"
-.LASF17:
+.LASF24:
 	.string	"UINT8"
 .LASF77:
 	.string	"osi_alarm_t"

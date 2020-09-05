@@ -1,14 +1,14 @@
 	.file	"esp_spiffs.c"
 	.text
 .Ltext0:
-	.section	.iram1,"ax",@progbits
+	.section	.iram1.13,"ax",@progbits
 	.literal_position
 	.literal .LC0, -10050
 	.align	4
 	.global	esp32_spi_flash_read
 	.type	esp32_spi_flash_read, @function
 esp32_spi_flash_read:
-.LFB17:
+.LFB26:
 	.file 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/spiffs/esp_spiffs.c"
 	.loc 1 39 0
 .LVL0:
@@ -117,15 +117,16 @@ esp32_spi_flash_read:
 	mov.n	a2, a6
 .LVL17:
 	retw.n
-.LFE17:
+.LFE26:
 	.size	esp32_spi_flash_read, .-esp32_spi_flash_read
+	.section	.iram1.14,"ax",@progbits
 	.literal_position
 	.literal .LC1, -10050
 	.align	4
 	.global	esp32_spi_flash_write
 	.type	esp32_spi_flash_write, @function
 esp32_spi_flash_write:
-.LFB18:
+.LFB27:
 	.loc 1 83 0
 .LVL18:
 	entry	sp, 48
@@ -243,15 +244,16 @@ esp32_spi_flash_write:
 	bnez.n	a10, .L23
 	.loc 1 130 0
 	retw.n
-.LFE18:
+.LFE27:
 	.size	esp32_spi_flash_write, .-esp32_spi_flash_write
+	.section	.iram1.15,"ax",@progbits
 	.literal_position
 	.literal .LC2, -10050
 	.align	4
 	.global	esp32_spi_flash_erase
 	.type	esp32_spi_flash_erase, @function
 esp32_spi_flash_erase:
-.LFB19:
+.LFB28:
 	.loc 1 132 0
 .LVL39:
 	entry	sp, 32
@@ -267,7 +269,7 @@ esp32_spi_flash_erase:
 	mov.n	a2, a10
 .LVL41:
 	retw.n
-.LFE19:
+.LFE28:
 	.size	esp32_spi_flash_erase, .-esp32_spi_flash_erase
 	.comm	spiffs_mutex,4,4
 	.section	.debug_frame,"",@progbits
@@ -289,10 +291,10 @@ esp32_spi_flash_erase:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.byte	0x4
-	.4byte	.LCFI0-.LFB17
+	.4byte	.LCFI0-.LFB26
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -301,10 +303,10 @@ esp32_spi_flash_erase:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI1-.LFB18
+	.4byte	.LCFI1-.LFB27
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -313,10 +315,10 @@ esp32_spi_flash_erase:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI2-.LFB19
+	.4byte	.LCFI2-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -441,8 +443,8 @@ esp32_spi_flash_erase:
 	.byte	0x1
 	.byte	0x27
 	.4byte	0xae
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1c8
@@ -570,8 +572,8 @@ esp32_spi_flash_erase:
 	.byte	0x1
 	.byte	0x53
 	.4byte	0xae
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2de
@@ -730,8 +732,8 @@ esp32_spi_flash_erase:
 	.byte	0x1
 	.byte	0x84
 	.4byte	0xae
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x331
@@ -1073,7 +1075,7 @@ esp32_spi_flash_erase:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL17
-	.4byte	.LFE17
+	.4byte	.LFE26
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1131,7 +1133,7 @@ esp32_spi_flash_erase:
 	.sleb128 -3
 	.byte	0x9f
 	.4byte	.LVL6
-	.4byte	.LFE17
+	.4byte	.LFE26
 	.2byte	0x1
 	.byte	0x57
 	.4byte	0
@@ -1164,7 +1166,7 @@ esp32_spi_flash_erase:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL38
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1187,7 +1189,7 @@ esp32_spi_flash_erase:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL36
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
@@ -1222,7 +1224,7 @@ esp32_spi_flash_erase:
 	.byte	0x1a
 	.byte	0x9f
 	.4byte	.LVL36
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
@@ -1244,7 +1246,7 @@ esp32_spi_flash_erase:
 	.sleb128 -3
 	.byte	0x9f
 	.4byte	.LVL24
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -1255,7 +1257,7 @@ esp32_spi_flash_erase:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL41
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1271,22 +1273,22 @@ esp32_spi_flash_erase:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB17
-	.4byte	.LFE17
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB19
-	.4byte	.LFE19
+	.4byte	.LFB26
+	.4byte	.LFE26
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB28
+	.4byte	.LFE28
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

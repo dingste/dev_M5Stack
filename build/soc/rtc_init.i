@@ -1091,6 +1091,9 @@ void rtc_vddsdio_set_config(rtc_vddsdio_config_t config);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_dport_access.h" 1
 # 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_dport_access.h"
@@ -1828,7 +1831,7 @@ extern void _xtos_timer_1_delta( int cycles );
 extern void _xtos_timer_2_delta( int cycles );
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h" 2
 # 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "0"))) DPORT_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -1837,7 +1840,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_
 
 }
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "1"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -1846,7 +1849,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_REA
 
 }
 # 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_READ_PERI_REG(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "2"))) DPORT_READ_PERI_REG(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -1864,7 +1867,8 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_READ_PERI_REG(ui
 
 void rtc_init(rtc_config_t cfg)
 {
-    ({ ; ({ ; (*((volatile uint32_t *)(((0x3ff48000 + 0x30))))) = (uint32_t)((({ ; (*((volatile uint32_t *)((0x3ff48000 + 0x30)))); })&(~(((1UL << (26))))))); }); });
+    ({ ; ({ ; (*((volatile uint32_t *)(((0x3ff48000 + 0x30))))) = (uint32_t)((({ ; (*((volatile uint32_t *)((0x3ff48000 + 0x30)))); })&(~(((1UL << (26))) | ((1UL << (27))) | ((1UL << (28))) | ((1UL << (30))) | ((1UL << (31))))))); }); })
+                                                                                ;
 
     ({ ; (({ ; (*(volatile uint32_t *)(((0x3ff48000 + 0x1c)))) = (((({ ; (*(volatile uint32_t *)((0x3ff48000 + 0x1c))); }) & ~((0xFF) << (24)))|(((cfg.pll_wait) & (0xFF))<<(24)))); })); });
     ({ ; (({ ; (*(volatile uint32_t *)(((0x3ff48000 + 0x1c)))) = (((({ ; (*(volatile uint32_t *)((0x3ff48000 + 0x1c))); }) & ~((0x3FF) << (14)))|(((cfg.xtal_wait) & (0x3FF))<<(14)))); })); });

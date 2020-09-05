@@ -831,17 +831,17 @@ __func__$3188:
 	.4byte	.LASF43
 	.4byte	.LASF43
 	.byte	0x9
-	.byte	0x4b
+	.byte	0x4d
 	.uleb128 0x20
 	.4byte	.LASF44
 	.4byte	.LASF44
 	.byte	0x9
-	.byte	0x67
+	.byte	0x6c
 	.uleb128 0x20
 	.4byte	.LASF45
 	.4byte	.LASF45
 	.byte	0x9
-	.byte	0x73
+	.byte	0x7b
 	.uleb128 0x20
 	.4byte	.LASF46
 	.4byte	.LASF46
@@ -851,12 +851,12 @@ __func__$3188:
 	.4byte	.LASF47
 	.4byte	.LASF47
 	.byte	0x9
-	.byte	0x80
+	.byte	0x8b
 	.uleb128 0x20
 	.4byte	.LASF48
 	.4byte	.LASF48
 	.byte	0x9
-	.byte	0x52
+	.byte	0x56
 	.uleb128 0x20
 	.4byte	.LASF49
 	.4byte	.LASF49

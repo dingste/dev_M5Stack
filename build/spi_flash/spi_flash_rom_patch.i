@@ -907,6 +907,9 @@ typedef enum {
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 1
 # 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h"
@@ -987,7 +990,7 @@ void gpio_pad_hold(uint8_t gpio_num);
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/spi_reg.h" 1
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h" 2
-# 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 typedef enum {
     ESP_ROM_SPIFLASH_QIO_MODE = 0,
     ESP_ROM_SPIFLASH_QOUT_MODE,
@@ -1020,64 +1023,64 @@ typedef struct {
     uint16_t data_mask;
     uint16_t data;
 } esp_rom_spiflash_common_cmd_t;
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_fix_dummylen(uint8_t spi, uint8_t freqdiv);
-# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_select_qiomode(uint8_t wp_gpio_num, uint32_t ishspi);
-# 196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_set_drvs(uint8_t wp_gpio_num, uint32_t ishspi, uint8_t *drvs);
-# 207 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_select_padsfunc(uint32_t ishspi);
-# 220 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_attach(uint32_t ishspi, 
-# 220 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h" 3 4
+# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h" 3 4
                                              _Bool 
-# 220 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
                                                   legacy);
-# 234 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_read_status(esp_rom_spiflash_chip_t *spi, uint32_t *status);
-# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_read_statushigh(esp_rom_spiflash_chip_t *spi, uint32_t *status);
-# 262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 268 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_write_status(esp_rom_spiflash_chip_t *spi, uint32_t status_value);
-# 276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_read_user_cmd(uint32_t *status, uint8_t cmd);
-# 290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_config_readmode(esp_rom_spiflash_read_mode_t mode);
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 310 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_config_clk(uint8_t freqdiv, uint8_t spi);
-# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 322 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 uint16_t esp_rom_spiflash_common_cmd(esp_rom_spiflash_common_cmd_t *cmd);
-# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_unlock(void);
-# 340 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_lock(void);
-# 362 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 368 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_config_param(uint32_t deviceId, uint32_t chip_size, uint32_t block_size,
                                                         uint32_t sector_size, uint32_t page_size, uint32_t status_mask);
-# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 381 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_erase_chip(void);
-# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_erase_block(uint32_t block_num);
-# 401 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 407 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_erase_sector(uint32_t sector_num);
-# 415 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 421 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_erase_area(uint32_t start_addr, uint32_t area_len);
-# 431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_write(uint32_t dest_addr, const uint32_t *src, int32_t len);
-# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 453 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_read(uint32_t src_addr, uint32_t *dest, int32_t len);
-# 457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_write_encrypted_enable(void);
-# 471 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_prepare_encrypted_data(uint32_t flash_addr, uint32_t *data);
-# 481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 487 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_write_encrypted_disable(void);
-# 501 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 507 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_write_encrypted(uint32_t flash_addr, uint32_t *data, uint32_t len);
-# 514 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 520 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_wait_idle(esp_rom_spiflash_chip_t *spi);
-# 533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_select_qio_pins(uint8_t wp_gpio_num, uint32_t spiconfig);
 
 
@@ -1380,7 +1383,8 @@ static void spi_cache_mode_switch(uint32_t modebit)
             ({ ; (({ ; (*(volatile uint32_t *)((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x24)))) = (((({ ; (*(volatile uint32_t *)(((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x24))); }) & ~((0xFFFF) << (0)))|(((0x6B) & (0xFFFF))<<(0)))); })); });
             ({ ; (({ ; (*(volatile uint32_t *)((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) = (((({ ; (*(volatile uint32_t *)(((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))); }) & ~((0xFF) << (0)))|(((7 + g_rom_spiflash_dummy_len_plus[0]) & (0xFF))<<(0)))); })); });
         } else if ((modebit & ((1UL << (23))))) {
-            ({ ; (({ ; (*(volatile uint32_t *)((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) = (((({ ; (*(volatile uint32_t *)(((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))); }) & ~((0xFF) << (0)))|(((3 + g_rom_spiflash_dummy_len_plus[0]) & (0xFF))<<(0)))); })); });
+            ({ ; (({ ; (*(volatile uint32_t *)((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) = (((({ ; (*(volatile uint32_t *)(((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))); }) & ~((0x3F) << (26)))|(((27) & (0x3F))<<(26)))); })); });
+            ({ ; (({ ; (*(volatile uint32_t *)((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) = (((({ ; (*(volatile uint32_t *)(((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))); }) & ~((0xFF) << (0)))|(((1 + g_rom_spiflash_dummy_len_plus[0]) & (0xFF))<<(0)))); })); });
             ({ ; (({ ; (*(volatile uint32_t *)((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x24)))) = (((({ ; (*(volatile uint32_t *)(((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x24))); }) & ~((0xFFFF) << (0)))|(((0xBB) & (0xFFFF))<<(0)))); })); });
         } else if ((modebit & ((1UL << (14))))) {
             ({ ; (({ ; (*(volatile uint32_t *)((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) = (((({ ; (*(volatile uint32_t *)(((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))); }) & ~((0xFF) << (0)))|(((7 + g_rom_spiflash_dummy_len_plus[0]) & (0xFF))<<(0)))); })); });

@@ -12,8 +12,6 @@
 #include "I2C.h"
 #include "sdkconfig.h"
 #include <esp_log.h>
-//#include "GeneralUtils.h"
-#include "../../../components/cpp_utils/GeneralUtils.h"
 
 
 static bool driverInstalled = false;

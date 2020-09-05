@@ -624,6 +624,9 @@ typedef __uintptr_t uintptr_t;
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h" 2
 # 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr.h" 1
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr.h"
@@ -2275,7 +2278,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 2
 
@@ -2377,31 +2380,31 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h" 1
 # 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
        
-# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
+# 32 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
 uint32_t esp_clk_slowclk_cal_get();
-# 42 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
+# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
 void esp_clk_slowclk_cal_set(uint32_t value);
-# 52 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
+# 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
 int esp_clk_cpu_freq(void);
-# 63 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
+# 64 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
 int esp_clk_apb_freq(void);
-# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
+# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
 int esp_clk_xtal_freq(void);
-# 86 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
+# 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
 uint64_t esp_clk_rtc_time();
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/malloc.h" 1
@@ -2571,6 +2574,77 @@ typedef void (*TaskFunction_t)( void * );
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/deprecated_definitions.h" 1
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 2
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void *get_sp()
+{
+    void *sp;
+    asm volatile ("mov %0, sp;" : "=r" (sp));
+    return sp;
+}
+
+
+
+
+
+static inline void cpu_write_dtlb(uint32_t vpn, unsigned attr)
+{
+    asm volatile ("wdtlb  %1, %0; dsync\n" :: "r" (vpn), "r" (attr));
+}
+
+
+static inline void cpu_write_itlb(unsigned vpn, unsigned attr)
+{
+    asm volatile ("witlb  %1, %0; isync\n" :: "r" (vpn), "r" (attr));
+}
+
+static inline void cpu_init_memctl()
+{
+
+    uint32_t memctl = 0x00000000;
+    asm volatile ("wsr %0, " "MEMCTL" : : "r" (memctl));;
+
+}
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void cpu_configure_region_protection()
+{
+    const uint32_t pages_to_protect[] = {0x00000000, 0x80000000, 0xa0000000, 0xc0000000, 0xe0000000};
+    for (int i = 0; i < sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
+        cpu_write_dtlb(pages_to_protect[i], 0xf);
+        cpu_write_itlb(pages_to_protect[i], 0xf);
+    }
+    cpu_write_dtlb(0x20000000, 0);
+    cpu_write_itlb(0x20000000, 0);
+}
+
+
+
+
+
+void esp_cpu_stall(int cpu_id);
+
+
+
+
+
+void esp_cpu_unstall(int cpu_id);
+
+
+
+
+
+void esp_cpu_reset(int cpu_id);
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 3 4
+_Bool 
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+    esp_cpu_in_ocd_debug_mode();
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 
 
 
@@ -2998,7 +3072,7 @@ inline static
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_dma_capable(const void *p)
+                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
 {
     return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
 }
@@ -3007,24 +3081,37 @@ inline static
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_executable(const void *p)
+                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
+{
+    return ((intptr_t)p) % 4 == 0;
+}
+
+inline static 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
 {
     intptr_t ip = (intptr_t) p;
     return (ip >= 0x400D0000 && ip < 0x40400000)
         || (ip >= 0x40080000 && ip < 0x400A0000)
+        || (ip >= 0x40000000 && ip < 0x40070000)
+
+        || (ip >= 0x40078000 && ip < 0x40080000)
+
         || (ip >= 0x400C0000 && ip < 0x400C2000);
 }
 
 inline static 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_byte_accessible(const void *p)
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
 {
     
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x40000000);
 
@@ -3034,14 +3121,14 @@ inline static
 }
 
 inline static 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_internal(const void *p) {
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
     
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
     r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
@@ -3050,18 +3137,18 @@ inline static
 
 
 inline static 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_external_ram(const void *p) {
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
     return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
 }
 
 inline static 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_iram(const void *p) {
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
 
 
 
@@ -3070,19 +3157,35 @@ inline static
 }
 
 inline static 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_drom(const void *p) {
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
     return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
 }
 
 inline static 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_dram(const void *p) {
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
     return ((intptr_t)p >= 0x3FAE0000 && (intptr_t)p < 0x40000000);
+}
+
+inline static 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
+    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x3FFFFFFC);
+}
+
+inline static 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
+    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400BFFFC);
 }
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
@@ -3131,24 +3234,24 @@ typedef struct {
 void vPortAssertIfInISR();
 # 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortCPUInitializeMutex(portMUX_TYPE *mux);
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vTaskExitCritical( portMUX_TYPE *mux );
 void vTaskEnterCritical( portMUX_TYPE *mux );
 void vPortCPUAcquireMutex(portMUX_TYPE *mux);
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
 _Bool 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
     vPortCPUAcquireMutexTimeout(portMUX_TYPE *mux, int timeout_cycles);
 void vPortCPUReleaseMutex(portMUX_TYPE *mux);
-# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline unsigned portENTER_CRITICAL_NESTED() {
  unsigned state = ({ unsigned __tmp; __asm__ __volatile__( "rsil	%0, " "3" "\n" : "=a" (__tmp) : : "memory" ); __tmp;});
  ;
  return state;
 }
-# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, uint32_t *set) {
     __asm__ __volatile__ (
         "WSR 	    %2,SCOMPARE1 \n"
@@ -3157,20 +3260,20 @@ static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, u
         :"r"(addr), "r"(compare), "0"(*set)
         );
 }
-# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortYield( void );
 void _frxt_setup_switch( void );
 
 
 
 static inline uint32_t xPortGetCoreID();
-# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef struct {
 
  volatile StackType_t* coproc_area;
-# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 } xMPU_SETTINGS;
-# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 extern void esp_vApplicationIdleHook( void );
 extern void esp_vApplicationTickHook( void );
 
@@ -3181,10 +3284,10 @@ extern void esp_vApplicationTickHook( void );
 
 void _xt_coproc_release(volatile void * coproc_sa_base);
 void vApplicationSleep( TickType_t xExpectedIdleTime );
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/mpu_wrappers.h" 1
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h" 1
@@ -3201,7 +3304,7 @@ void vApplicationSleep( TickType_t xExpectedIdleTime );
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
 typedef volatile struct {
     uint32_t bt_select;
     uint32_t out;
@@ -3492,7 +3595,7 @@ void gpio_pad_hold(uint8_t gpio_num);
 
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
 extern const uint32_t GPIO_PIN_MUX_REG[40];
 # 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
@@ -3927,25 +4030,25 @@ typedef enum {
 typedef esp_sleep_source_t esp_sleep_wakeup_cause_t;
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_disable_wakeup_source(esp_sleep_source_t source);
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ulp_wakeup();
-# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_timer_wakeup(uint64_t time_in_us);
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_touchpad_wakeup();
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 touch_pad_t esp_sleep_get_touchpad_wakeup_status();
-# 161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext0_wakeup(gpio_num_t gpio_num, int level);
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext1_wakeup(uint64_t mask, esp_sleep_ext1_wakeup_mode_t mode);
-# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_gpio_wakeup();
-# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_uart_wakeup(int uart_num);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 uint64_t esp_sleep_get_ext1_wakeup_status();
-# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
                                    esp_sleep_pd_option_t option);
 
@@ -3955,11 +4058,11 @@ esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
 
 
 void esp_deep_sleep_start() __attribute__((noreturn));
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_light_sleep_start();
-# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_deep_sleep(uint64_t time_in_us) __attribute__((noreturn));
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated));
 
 
@@ -3969,7 +4072,7 @@ void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated)
 
 
 esp_sleep_wakeup_cause_t esp_sleep_get_wakeup_cause();
-# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_wake_deep_sleep(void);
 
 
@@ -3977,7 +4080,7 @@ void esp_wake_deep_sleep(void);
 
 
 typedef void (*esp_deep_sleep_wake_stub_fn_t)(void);
-# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_set_deep_sleep_wake_stub(esp_deep_sleep_wake_stub_fn_t new_stub);
 
 
@@ -4001,6 +4104,12 @@ void esp_default_wake_deep_sleep(void);
 
 void esp_deep_sleep_disable_rom_logging(void);
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+       
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+const char* esp_get_idf_version(void);
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
 
 
 
@@ -4012,7 +4121,7 @@ typedef enum {
     ESP_MAC_BT,
     ESP_MAC_ETH,
 } esp_mac_type_t;
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef enum {
     ESP_RST_UNKNOWN,
     ESP_RST_POWERON,
@@ -4055,9 +4164,9 @@ typedef void (*shutdown_handler_t)(void);
 
 
 esp_err_t esp_register_shutdown_handler(shutdown_handler_t handle);
-# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_restart(void) __attribute__ ((noreturn));
-# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
@@ -4066,11 +4175,11 @@ void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
 esp_reset_reason_t esp_reset_reason(void);
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_time(void) __attribute__ ((deprecated));
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_get_free_heap_size(void);
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
@@ -4080,36 +4189,28 @@ uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
 uint32_t esp_get_minimum_free_heap_size( void );
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_random(void);
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_fill_random(void *buf, size_t len);
-# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_set(uint8_t *mac);
-# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_get(uint8_t *mac);
-# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_custom(uint8_t *mac);
-# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_default(uint8_t *mac);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t system_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_read_mac(uint8_t* mac, esp_mac_type_t type);
-# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_derive_local_mac(uint8_t* local_mac, const uint8_t* universal_mac);
-# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 const char* system_get_sdk_version(void) __attribute__ ((deprecated));
-
-
-
-
-
-
-
-const char* esp_get_idf_version(void);
 
 
 
@@ -4118,7 +4219,7 @@ const char* esp_get_idf_version(void);
 typedef enum {
     CHIP_ESP32 = 1,
 } esp_chip_model_t;
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef struct {
     esp_chip_model_t model;
     uint32_t features;
@@ -4131,10 +4232,10 @@ typedef struct {
 
 
 void esp_chip_info(esp_chip_info_t* out_info);
-# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters, BaseType_t xRunPrivileged ) ;
-# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 BaseType_t xPortStartScheduler( void ) ;
 
 
@@ -4170,14 +4271,14 @@ BaseType_t xPortInIsrContext();
 
 
 BaseType_t xPortInterruptedFromISRContext();
-# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  struct xMEMORY_REGION;
  void vPortStoreTaskMPUSettings( xMPU_SETTINGS *xMPUSettings, const struct xMEMORY_REGION * const xRegions, StackType_t *pxBottomOfStack, uint32_t usStackDepth ) ;
  void vPortReleaseTaskMPUSettings( xMPU_SETTINGS *xMPUSettings );
 
 
 
-static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
+static inline uint32_t __attribute__((section(".iram1" "." "11"))) xPortGetCoreID() {
     int id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -4188,6 +4289,21 @@ static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
 
 
 uint32_t xPortGetTickRateHz(void);
+
+
+static inline 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 3 4
+             _Bool 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+                  __attribute__((section(".iram1" "." "12"))) xPortCanYield(void)
+{
+    uint32_t ps_reg = 0;
+
+
+    asm volatile ("rsr %0, " "PS" : "=r" (ps_reg));;
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+    return ((ps_reg & 0x0000000F) == 0);
+}
 
 
 
@@ -4596,7 +4712,7 @@ typedef enum
           TaskHandle_t * const pvCreatedTask,
           const BaseType_t xCoreID);
 # 432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
- static inline __attribute__((section(".iram1"))) BaseType_t xTaskCreate(
+ static inline __attribute__((section(".iram1" "." "13"))) BaseType_t xTaskCreate(
    TaskFunction_t pvTaskCode,
    const char * const pcName,
    const uint32_t usStackDepth,
@@ -4906,7 +5022,7 @@ void esp_dport_access_int_abort(void);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/uart_reg.h" 1
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h" 2
 # 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "14"))) DPORT_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -4915,7 +5031,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_
 
 }
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "15"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -4924,7 +5040,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_REA
 
 }
 # 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_READ_PERI_REG(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "16"))) DPORT_READ_PERI_REG(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -4935,7 +5051,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_READ_PERI_REG(ui
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_reg.h" 2
 # 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/uart_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/uart_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/uart_struct.h"
 typedef volatile struct {
     union {
         struct {
@@ -5566,9 +5682,9 @@ esp_err_t uart_get_collision_flag(uart_port_t uart_num,
                                                        _Bool
 # 793 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
                                                            * collision_flag);
-# 825 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
+# 828 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_set_wakeup_threshold(uart_port_t uart_num, int wakeup_threshold);
-# 840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
+# 843 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_get_wakeup_threshold(uart_port_t uart_num, int* out_wakeup_threshold);
 # 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 2
 
@@ -5669,7 +5785,7 @@ typedef struct {
 
 static uart_obj_t *p_uart_obj[UART_NUM_MAX] = {0};
 
-static __attribute__((section(".dram1"))) uart_dev_t* const UART[UART_NUM_MAX] = {&UART0, &UART1, &UART2};
+static __attribute__((section(".dram1" "." "17"))) uart_dev_t* const UART[UART_NUM_MAX] = {&UART0, &UART1, &UART2};
 static portMUX_TYPE uart_spinlock[UART_NUM_MAX] = {{ .owner = 0xB33FFFFF, .count = 0, }, { .owner = 0xB33FFFFF, .count = 0, }, { .owner = 0xB33FFFFF, .count = 0, }};
 static portMUX_TYPE uart_selectlock = { .owner = 0xB33FFFFF, .count = 0, };
 
@@ -5891,20 +6007,35 @@ esp_err_t uart_disable_intr_mask(uart_port_t uart_num, uint32_t disable_mask)
     return 0;
 }
 
+static void uart_disable_intr_mask_from_isr(uart_port_t uart_num, uint32_t disable_mask)
+{
+    vTaskEnterCritical(&uart_spinlock[uart_num]);
+    ({ ; ({ ; (*((volatile uint32_t *)((((0x3ff40000 + (uart_num) * 0x10000 + ( (uart_num) > 1 ? 0xe000 : 0 ) ) + 0xC))))) = (uint32_t)((({ ; (*((volatile uint32_t *)(((0x3ff40000 + (uart_num) * 0x10000 + ( (uart_num) > 1 ? 0xe000 : 0 ) ) + 0xC)))); })&(~(disable_mask)))); }); });
+    vTaskExitCritical(&uart_spinlock[uart_num]);
+}
+
+static void uart_enable_intr_mask_from_isr(uart_port_t uart_num, uint32_t enable_mask)
+{
+    vTaskEnterCritical(&uart_spinlock[uart_num]);
+    ({ ; ({ ; (*((volatile uint32_t *)((((0x3ff40000 + (uart_num) * 0x10000 + ( (uart_num) > 1 ? 0xe000 : 0 ) ) + 0x10))))) = (uint32_t)((({ ; (*((volatile uint32_t *)(((0x3ff40000 + (uart_num) * 0x10000 + ( (uart_num) > 1 ? 0xe000 : 0 ) ) + 0x10)))); })|(enable_mask))); }); });
+    ({ ; ({ ; (*((volatile uint32_t *)((((0x3ff40000 + (uart_num) * 0x10000 + ( (uart_num) > 1 ? 0xe000 : 0 ) ) + 0xC))))) = (uint32_t)((({ ; (*((volatile uint32_t *)(((0x3ff40000 + (uart_num) * 0x10000 + ( (uart_num) > 1 ? 0xe000 : 0 ) ) + 0xC)))); })|(enable_mask))); }); });
+    vTaskExitCritical(&uart_spinlock[uart_num]);
+}
+
 static esp_err_t uart_pattern_link_free(uart_port_t uart_num)
 {
-    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 338, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 338, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 338, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 338, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 338, "uart driver error"); } } while(0); } while(0); return (-1); };
+    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 353, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 353, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 353, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 353, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 353, "uart driver error"); } } while(0); } while(0); return (-1); };
     if (p_uart_obj[uart_num]->rx_pattern_pos.data != 
-# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 354 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                                     ((void *)0)
-# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 354 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                         ) {
         int* pdata = p_uart_obj[uart_num]->rx_pattern_pos.data;
         vTaskEnterCritical(&uart_spinlock[uart_num]);
         p_uart_obj[uart_num]->rx_pattern_pos.data = 
-# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                                    ((void *)0)
-# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                        ;
         p_uart_obj[uart_num]->rx_pattern_pos.wr = 0;
         p_uart_obj[uart_num]->rx_pattern_pos.rd = 0;
@@ -5916,7 +6047,7 @@ static esp_err_t uart_pattern_link_free(uart_port_t uart_num)
 
 static esp_err_t uart_pattern_enqueue(uart_port_t uart_num, int pos)
 {
-    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 353, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 353, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 353, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 353, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 353, "uart driver error"); } } while(0); } while(0); return (-1); };
+    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 368, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 368, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 368, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 368, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 368, "uart driver error"); } } while(0); } while(0); return (-1); };
     esp_err_t ret = 0;
     vTaskEnterCritical(&uart_spinlock[uart_num]);
     uart_pat_rb_t* p_pos = &p_uart_obj[uart_num]->rx_pattern_pos;
@@ -5938,11 +6069,11 @@ static esp_err_t uart_pattern_enqueue(uart_port_t uart_num, int pos)
 
 static esp_err_t uart_pattern_dequeue(uart_port_t uart_num)
 {
-    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 375, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 375, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 375, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 375, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 375, "uart driver error"); } } while(0); } while(0); return (-1); };
+    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 390, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 390, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 390, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 390, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 390, "uart driver error"); } } while(0); } while(0); return (-1); };
     if(p_uart_obj[uart_num]->rx_pattern_pos.data == 
-# 376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                                    ((void *)0)
-# 376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                        ) {
         return 0x103;
     } else {
@@ -5964,7 +6095,7 @@ static esp_err_t uart_pattern_dequeue(uart_port_t uart_num)
 
 static esp_err_t uart_pattern_queue_update(uart_port_t uart_num, int diff_len)
 {
-    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 397, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 397, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 397, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 397, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 397, "uart driver error"); } } while(0); } while(0); return (-1); };
+    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 412, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 412, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 412, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 412, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 412, "uart driver error"); } } while(0); } while(0); return (-1); };
     vTaskEnterCritical(&uart_spinlock[uart_num]);
     uart_pat_rb_t* p_pos = &p_uart_obj[uart_num]->rx_pattern_pos;
     int rd = p_pos->rd;
@@ -5985,14 +6116,14 @@ static esp_err_t uart_pattern_queue_update(uart_port_t uart_num, int diff_len)
 
 int uart_pattern_pop_pos(uart_port_t uart_num)
 {
-    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 418, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 418, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 418, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 418, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 418, "uart driver error"); } } while(0); } while(0); return ((-1)); };
+    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 433, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 433, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 433, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 433, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 433, "uart driver error"); } } while(0); } while(0); return ((-1)); };
     vTaskEnterCritical(&uart_spinlock[uart_num]);
     uart_pat_rb_t* pat_pos = &p_uart_obj[uart_num]->rx_pattern_pos;
     int pos = -1;
     if (pat_pos != 
-# 422 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                   ((void *)0) 
-# 422 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                        && pat_pos->rd != pat_pos->wr) {
         pos = pat_pos->data[pat_pos->rd];
         uart_pattern_dequeue(uart_num);
@@ -6003,14 +6134,14 @@ int uart_pattern_pop_pos(uart_port_t uart_num)
 
 int uart_pattern_get_pos(uart_port_t uart_num)
 {
-    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 432, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 432, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 432, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 432, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 432, "uart driver error"); } } while(0); } while(0); return ((-1)); };
+    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 447, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 447, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 447, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 447, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 447, "uart driver error"); } } while(0); } while(0); return ((-1)); };
     vTaskEnterCritical(&uart_spinlock[uart_num]);
     uart_pat_rb_t* pat_pos = &p_uart_obj[uart_num]->rx_pattern_pos;
     int pos = -1;
     if (pat_pos != 
-# 436 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 451 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                   ((void *)0) 
-# 436 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 451 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                        && pat_pos->rd != pat_pos->wr) {
         pos = pat_pos->data[pat_pos->rd];
     }
@@ -6020,14 +6151,14 @@ int uart_pattern_get_pos(uart_port_t uart_num)
 
 esp_err_t uart_pattern_queue_reset(uart_port_t uart_num, int queue_length)
 {
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 445, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 445, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 445, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 445, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 445, "uart_num error"); } } while(0); } while(0); return (-1); };
-    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 446, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 446, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 446, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 446, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 446, "uart driver error"); } } while(0); } while(0); return (0x103); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 460, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 460, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 460, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 460, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 460, "uart_num error"); } } while(0); } while(0); return (-1); };
+    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 461, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 461, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 461, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 461, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 461, "uart driver error"); } } while(0); } while(0); return (0x103); };
 
     int* pdata = (int*) malloc(queue_length * sizeof(int));
     if(pdata == 
-# 449 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 464 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                ((void *)0)
-# 449 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 464 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                    ) {
         return 0x101;
     }
@@ -6044,10 +6175,10 @@ esp_err_t uart_pattern_queue_reset(uart_port_t uart_num, int queue_length)
 
 esp_err_t uart_enable_pattern_det_intr(uart_port_t uart_num, char pattern_chr, uint8_t chr_num, int chr_tout, int post_idle, int pre_idle)
 {
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 465, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 465, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 465, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 465, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 465, "uart_num error"); } } while(0); } while(0); return (-1); };
-    if (!(chr_tout >= 0 && chr_tout <= 0xFFFFFF)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 466, "uart pattern set error\n"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 466, "uart pattern set error\n"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 466, "uart pattern set error\n"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 466, "uart pattern set error\n"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 466, "uart pattern set error\n"); } } while(0); } while(0); return (-1); };
-    if (!(post_idle >= 0 && post_idle <= 0xFFFFFF)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 467, "uart pattern set error\n"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 467, "uart pattern set error\n"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 467, "uart pattern set error\n"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 467, "uart pattern set error\n"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 467, "uart pattern set error\n"); } } while(0); } while(0); return (-1); };
-    if (!(pre_idle >= 0 && pre_idle <= 0xFFFFFF)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 468, "uart pattern set error\n"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 468, "uart pattern set error\n"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 468, "uart pattern set error\n"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 468, "uart pattern set error\n"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 468, "uart pattern set error\n"); } } while(0); } while(0); return (-1); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 480, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 480, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 480, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 480, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 480, "uart_num error"); } } while(0); } while(0); return (-1); };
+    if (!(chr_tout >= 0 && chr_tout <= 0xFFFFFF)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 481, "uart pattern set error\n"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 481, "uart pattern set error\n"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 481, "uart pattern set error\n"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 481, "uart pattern set error\n"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 481, "uart pattern set error\n"); } } while(0); } while(0); return (-1); };
+    if (!(post_idle >= 0 && post_idle <= 0xFFFFFF)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 482, "uart pattern set error\n"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 482, "uart pattern set error\n"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 482, "uart pattern set error\n"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 482, "uart pattern set error\n"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 482, "uart pattern set error\n"); } } while(0); } while(0); return (-1); };
+    if (!(pre_idle >= 0 && pre_idle <= 0xFFFFFF)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 483, "uart pattern set error\n"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 483, "uart pattern set error\n"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 483, "uart pattern set error\n"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 483, "uart pattern set error\n"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 483, "uart pattern set error\n"); } } while(0); } while(0); return (-1); };
     UART[uart_num]->at_cmd_char.data = pattern_chr;
     UART[uart_num]->at_cmd_char.char_num = chr_num;
     UART[uart_num]->at_cmd_gaptout.rx_gap_tout = chr_tout;
@@ -6078,8 +6209,8 @@ esp_err_t uart_disable_tx_intr(uart_port_t uart_num)
 
 esp_err_t uart_enable_tx_intr(uart_port_t uart_num, int enable, int thresh)
 {
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 499, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 499, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 499, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 499, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 499, "uart_num error"); } } while(0); } while(0); return (-1); };
-    if (!((thresh < (128)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 500, "empty intr threshold error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 500, "empty intr threshold error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 500, "empty intr threshold error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 500, "empty intr threshold error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 500, "empty intr threshold error"); } } while(0); } while(0); return (-1); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 514, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 514, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 514, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 514, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 514, "uart_num error"); } } while(0); } while(0); return (-1); };
+    if (!((thresh < (128)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 515, "empty intr threshold error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 515, "empty intr threshold error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 515, "empty intr threshold error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 515, "empty intr threshold error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 515, "empty intr threshold error"); } } while(0); } while(0); return (-1); };
     vTaskEnterCritical(&uart_spinlock[uart_num]);
     UART[uart_num]->int_clr.txfifo_empty = 1;
     UART[uart_num]->conf1.txfifo_empty_thrhd = thresh & 0x7F;
@@ -6091,7 +6222,7 @@ esp_err_t uart_enable_tx_intr(uart_port_t uart_num, int enable, int thresh)
 esp_err_t uart_isr_register(uart_port_t uart_num, void (*fn)(void*), void * arg, int intr_alloc_flags, uart_isr_handle_t *handle)
 {
     int ret;
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 512, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 512, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 512, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 512, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 512, "uart_num error"); } } while(0); } while(0); return (-1); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 527, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 527, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 527, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 527, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 527, "uart_num error"); } } while(0); } while(0); return (-1); };
     vTaskEnterCritical(&uart_spinlock[uart_num]);
     switch(uart_num) {
         case UART_NUM_1:
@@ -6113,18 +6244,18 @@ esp_err_t uart_isr_register(uart_port_t uart_num, void (*fn)(void*), void * arg,
 esp_err_t uart_isr_free(uart_port_t uart_num)
 {
     esp_err_t ret;
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 534, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 534, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 534, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 534, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 534, "uart_num error"); } } while(0); } while(0); return (-1); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 549, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 549, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 549, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 549, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 549, "uart_num error"); } } while(0); } while(0); return (-1); };
     if (p_uart_obj[uart_num]->intr_handle==
-# 535 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                           ((void *)0)
-# 535 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                               ) return 0x102;
     vTaskEnterCritical(&uart_spinlock[uart_num]);
     ret=esp_intr_free(p_uart_obj[uart_num]->intr_handle);
     p_uart_obj[uart_num]->intr_handle=
-# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                      ((void *)0)
-# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                          ;
     vTaskExitCritical(&uart_spinlock[uart_num]);
     return ret;
@@ -6134,11 +6265,11 @@ esp_err_t uart_isr_free(uart_port_t uart_num)
 
 esp_err_t uart_set_pin(uart_port_t uart_num, int tx_io_num, int rx_io_num, int rts_io_num, int cts_io_num)
 {
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 547, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 547, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 547, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 547, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 547, "uart_num error"); } } while(0); } while(0); return (-1); };
-    if (!((tx_io_num < 0 || (((((tx_io_num < 40 && GPIO_PIN_MUX_REG[tx_io_num] != 0))) && (tx_io_num < 34)))))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 548, "tx_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 548, "tx_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 548, "tx_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 548, "tx_io_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 548, "tx_io_num error"); } } while(0); } while(0); return (-1); };
-    if (!((rx_io_num < 0 || (((rx_io_num < 40 && GPIO_PIN_MUX_REG[rx_io_num] != 0)))))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 549, "rx_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 549, "rx_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 549, "rx_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 549, "rx_io_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 549, "rx_io_num error"); } } while(0); } while(0); return (-1); };
-    if (!((rts_io_num < 0 || (((((rts_io_num < 40 && GPIO_PIN_MUX_REG[rts_io_num] != 0))) && (rts_io_num < 34)))))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 550, "rts_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 550, "rts_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 550, "rts_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 550, "rts_io_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 550, "rts_io_num error"); } } while(0); } while(0); return (-1); };
-    if (!((cts_io_num < 0 || (((cts_io_num < 40 && GPIO_PIN_MUX_REG[cts_io_num] != 0)))))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 551, "cts_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 551, "cts_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 551, "cts_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 551, "cts_io_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 551, "cts_io_num error"); } } while(0); } while(0); return (-1); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 562, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 562, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 562, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 562, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 562, "uart_num error"); } } while(0); } while(0); return (-1); };
+    if (!((tx_io_num < 0 || (((((tx_io_num < 40 && GPIO_PIN_MUX_REG[tx_io_num] != 0))) && (tx_io_num < 34)))))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 563, "tx_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 563, "tx_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 563, "tx_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 563, "tx_io_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 563, "tx_io_num error"); } } while(0); } while(0); return (-1); };
+    if (!((rx_io_num < 0 || (((rx_io_num < 40 && GPIO_PIN_MUX_REG[rx_io_num] != 0)))))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 564, "rx_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 564, "rx_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 564, "rx_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 564, "rx_io_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 564, "rx_io_num error"); } } while(0); } while(0); return (-1); };
+    if (!((rts_io_num < 0 || (((((rts_io_num < 40 && GPIO_PIN_MUX_REG[rts_io_num] != 0))) && (rts_io_num < 34)))))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 565, "rts_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 565, "rts_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 565, "rts_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 565, "rts_io_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 565, "rts_io_num error"); } } while(0); } while(0); return (-1); };
+    if (!((cts_io_num < 0 || (((cts_io_num < 40 && GPIO_PIN_MUX_REG[cts_io_num] != 0)))))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 566, "cts_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 566, "cts_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 566, "cts_io_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 566, "cts_io_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 566, "cts_io_num error"); } } while(0); } while(0); return (-1); };
 
     int tx_sig, rx_sig, rts_sig, cts_sig;
     switch(uart_num) {
@@ -6196,8 +6327,8 @@ esp_err_t uart_set_pin(uart_port_t uart_num, int tx_io_num, int rx_io_num, int r
 
 esp_err_t uart_set_rts(uart_port_t uart_num, int level)
 {
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 609, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 609, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 609, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 609, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 609, "uart_num error"); } } while(0); } while(0); return (-1); };
-    if (!((UART[uart_num]->conf1.rx_flow_en != 1))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 610, "disable hw flowctrl before using sw control"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 610, "disable hw flowctrl before using sw control"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 610, "disable hw flowctrl before using sw control"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 610, "disable hw flowctrl before using sw control"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 610, "disable hw flowctrl before using sw control"); } } while(0); } while(0); return (-1); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 624, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 624, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 624, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 624, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 624, "uart_num error"); } } while(0); } while(0); return (-1); };
+    if (!((UART[uart_num]->conf1.rx_flow_en != 1))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 625, "disable hw flowctrl before using sw control"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 625, "disable hw flowctrl before using sw control"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 625, "disable hw flowctrl before using sw control"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 625, "disable hw flowctrl before using sw control"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 625, "disable hw flowctrl before using sw control"); } } while(0); } while(0); return (-1); };
     vTaskEnterCritical(&uart_spinlock[uart_num]);
     UART[uart_num]->conf0.sw_rts = level & 0x1;
     vTaskExitCritical(&uart_spinlock[uart_num]);
@@ -6206,7 +6337,7 @@ esp_err_t uart_set_rts(uart_port_t uart_num, int level)
 
 esp_err_t uart_set_dtr(uart_port_t uart_num, int level)
 {
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 619, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 619, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 619, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 619, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 619, "uart_num error"); } } while(0); } while(0); return (-1); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 634, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 634, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 634, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 634, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 634, "uart_num error"); } } while(0); } while(0); return (-1); };
     vTaskEnterCritical(&uart_spinlock[uart_num]);
     UART[uart_num]->conf0.sw_dtr = level & 0x1;
     vTaskExitCritical(&uart_spinlock[uart_num]);
@@ -6215,8 +6346,8 @@ esp_err_t uart_set_dtr(uart_port_t uart_num, int level)
 
 esp_err_t uart_set_tx_idle_num(uart_port_t uart_num, uint16_t idle_num)
 {
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 628, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 628, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 628, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 628, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 628, "uart_num error"); } } while(0); } while(0); return (-1); };
-    if (!((idle_num <= 0x3FF))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 629, "uart idle num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 629, "uart idle num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 629, "uart idle num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 629, "uart idle num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 629, "uart idle num error"); } } while(0); } while(0); return (-1); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 643, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 643, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 643, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 643, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 643, "uart_num error"); } } while(0); } while(0); return (-1); };
+    if (!((idle_num <= 0x3FF))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 644, "uart idle num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 644, "uart idle num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 644, "uart idle num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 644, "uart idle num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 644, "uart idle num error"); } } while(0); } while(0); return (-1); };
 
     vTaskEnterCritical(&uart_spinlock[uart_num]);
     UART[uart_num]->idle_conf.tx_idle_num = idle_num;
@@ -6224,18 +6355,31 @@ esp_err_t uart_set_tx_idle_num(uart_port_t uart_num, uint16_t idle_num)
     return 0;
 }
 
+static periph_module_t get_periph_module(uart_port_t uart_num)
+{
+    periph_module_t periph_module = PERIPH_UART0_MODULE;
+    if (uart_num == UART_NUM_0) {
+        periph_module = PERIPH_UART0_MODULE;
+    } else if (uart_num == UART_NUM_1) {
+        periph_module = PERIPH_UART1_MODULE;
+    } else if (uart_num == UART_NUM_2) {
+        periph_module = PERIPH_UART2_MODULE;
+    } else {
+        ((0 && "uart_num error") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c", 662, __func__, "0 && \"uart_num error\""));
+    }
+    return periph_module;
+}
+
 esp_err_t uart_param_config(uart_port_t uart_num, const uart_config_t *uart_config)
 {
     esp_err_t r;
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 640, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 640, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 640, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 640, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 640, "uart_num error"); } } while(0); } while(0); return (-1); };
-    if (!((uart_config))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 641, "param null"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 641, "param null"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 641, "param null"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 641, "param null"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 641, "param null"); } } while(0); } while(0); return (-1); };
-    if(uart_num == UART_NUM_0) {
-        periph_module_enable(PERIPH_UART0_MODULE);
-    } else if(uart_num == UART_NUM_1) {
-        periph_module_enable(PERIPH_UART1_MODULE);
-    } else if(uart_num == UART_NUM_2) {
-        periph_module_enable(PERIPH_UART2_MODULE);
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 670, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 670, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 670, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 670, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 670, "uart_num error"); } } while(0); } while(0); return (-1); };
+    if (!((uart_config))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 671, "param null"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 671, "param null"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 671, "param null"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 671, "param null"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 671, "param null"); } } while(0); } while(0); return (-1); };
+    periph_module_t periph_module = get_periph_module(uart_num);
+    if (uart_num != 0) {
+        periph_module_reset(periph_module);
     }
+    periph_module_enable(periph_module);
     r = uart_set_hw_flow_ctrl(uart_num, uart_config->flow_ctrl, uart_config->rx_flow_ctrl_thresh);
     if (r != 0) return r;
 
@@ -6258,17 +6402,17 @@ esp_err_t uart_param_config(uart_port_t uart_num, const uart_config_t *uart_conf
 
 esp_err_t uart_intr_config(uart_port_t uart_num, const uart_intr_config_t *intr_conf)
 {
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 671, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 671, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 671, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 671, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 671, "uart_num error"); } } while(0); } while(0); return (-1); };
-    if (!((intr_conf))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 672, "param null"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 672, "param null"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 672, "param null"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 672, "param null"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 672, "param null"); } } while(0); } while(0); return (-1); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 699, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 699, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 699, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 699, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 699, "uart_num error"); } } while(0); } while(0); return (-1); };
+    if (!((intr_conf))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 700, "param null"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 700, "param null"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 700, "param null"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 700, "param null"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 700, "param null"); } } while(0); } while(0); return (-1); };
     vTaskEnterCritical(&uart_spinlock[uart_num]);
     UART[uart_num]->int_clr.val = 0x1ff;
     if(intr_conf->intr_enable_mask & ((1UL << (8)))) {
 
 
         if(UART[uart_num]->conf0.tick_ref_always_on == 0) {
-            UART[uart_num]->conf1.rx_tout_thrhd = ((intr_conf->rx_timeout_thresh * (( 80*1000000 )/(( 1000000 )<<(3)))) & 0x7F);
+            UART[uart_num]->conf1.rx_tout_thrhd = (intr_conf->rx_timeout_thresh * (( 80*1000000 )/(( 1000000 )<<(3))));
         } else {
-            UART[uart_num]->conf1.rx_tout_thrhd = ((intr_conf->rx_timeout_thresh) & 0x7F);
+            UART[uart_num]->conf1.rx_tout_thrhd = intr_conf->rx_timeout_thresh;
         }
         UART[uart_num]->conf1.rx_tout_en = 1;
     } else {
@@ -6309,59 +6453,61 @@ static void uart_rx_intr_handler_default(void *param)
     uart_obj_t *p_uart = (uart_obj_t*) param;
     uint8_t uart_num = p_uart->uart_num;
     uart_dev_t* uart_reg = UART[uart_num];
-    int rx_fifo_len = uart_reg->status.rxfifo_cnt;
+    int rx_fifo_len = 0;
     uint8_t buf_idx = 0;
-    uint32_t uart_intr_status = UART[uart_num]->int_st.val;
+    uint32_t uart_intr_status = 0;
     uart_event_t uart_event;
     int HPTaskAwoken = 0;
     static uint8_t pat_flg = 0;
-    while(uart_intr_status != 0x0) {
-        buf_idx = 0;
+    while(1) {
+        uart_intr_status = uart_reg->int_st.val;
+
+
+        if(uart_intr_status == 0) {
+            break;
+        }
         uart_event.type = UART_EVENT_MAX;
         if(uart_intr_status & ((1UL << (1)))) {
             uart_clear_intr_status(uart_num, ((1UL << (1))));
-            uart_disable_intr_mask(uart_num, ((1UL << (1))));
+            uart_disable_intr_mask_from_isr(uart_num, ((1UL << (1))));
             if(p_uart->tx_waiting_brk) {
                 continue;
             }
 
             if(p_uart->tx_waiting_fifo == 
-# 738 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                          1 
-# 738 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                               && p_uart->tx_buf_size == 0) {
                 p_uart->tx_waiting_fifo = 
-# 739 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 772 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                          0
-# 739 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 772 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                               ;
                 xQueueGiveFromISR( ( QueueHandle_t ) ( p_uart->tx_fifo_sem ), ( &HPTaskAwoken ) );
-                if(HPTaskAwoken == ( ( BaseType_t ) 1 )) {
-                    {; _frxt_setup_switch();};
-                }
             } else {
 
                 if(p_uart->tx_buf_size == 0) {
                     continue;
                 }
-                int tx_fifo_rem = (128) - UART[uart_num]->status.txfifo_cnt;
+                int tx_fifo_rem = (128) - uart_reg->status.txfifo_cnt;
                 
-# 750 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 780 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                _Bool 
-# 750 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 780 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                     en_tx_flg = 
-# 750 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 780 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                 0
-# 750 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 780 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                      ;
 
 
 
                 while(tx_fifo_rem) {
                     if(p_uart->tx_len_tot == 0 || p_uart->tx_ptr == 
-# 755 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 785 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                                                    ((void *)0) 
-# 755 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 785 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                                         || p_uart->tx_len_cur == 0) {
                         size_t size;
                         p_uart->tx_head = (uart_tx_data_t*) xRingbufferReceiveFromISR(p_uart->tx_ring_buf, &size);
@@ -6370,9 +6516,9 @@ static void uart_rx_intr_handler_default(void *param)
 
                             if(p_uart->tx_len_tot == 0) {
                                 p_uart->tx_ptr = 
-# 762 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 792 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                                 ((void *)0)
-# 762 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 792 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                     ;
                                 p_uart->tx_len_tot = p_uart->tx_head->tx_data.size;
                                 if(p_uart->tx_head->type == UART_DATA_BREAK) {
@@ -6381,20 +6527,17 @@ static void uart_rx_intr_handler_default(void *param)
                                 }
 
                                 vRingbufferReturnItemFromISR(p_uart->tx_ring_buf, p_uart->tx_head, &HPTaskAwoken);
-                                if(HPTaskAwoken == ( ( BaseType_t ) 1 )) {
-                                    {; _frxt_setup_switch();};
-                                }
                             }else if(p_uart->tx_ptr == 
-# 773 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 800 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                                       ((void *)0)
-# 773 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 800 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                           ) {
 
                                 p_uart->tx_ptr = (uint8_t*) p_uart->tx_head;
                                 en_tx_flg = 
-# 776 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 803 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                            1
-# 776 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 803 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                ;
                                 p_uart->tx_len_cur = size;
                             }
@@ -6424,18 +6567,15 @@ static void uart_rx_intr_handler_default(void *param)
                         if (p_uart->tx_len_cur == 0) {
 
                             vRingbufferReturnItemFromISR(p_uart->tx_ring_buf, p_uart->tx_head, &HPTaskAwoken);
-                            if(HPTaskAwoken == ( ( BaseType_t ) 1 )) {
-                                {; _frxt_setup_switch();};
-                            }
                             p_uart->tx_head = 
-# 808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                              ((void *)0)
-# 808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                  ;
                             p_uart->tx_ptr = 
-# 809 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 833 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                             ((void *)0)
-# 809 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 833 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                 ;
 
 
@@ -6450,31 +6590,31 @@ static void uart_rx_intr_handler_default(void *param)
                                 p_uart->tx_waiting_brk = 1;
 
                                 en_tx_flg = 
-# 822 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                            0
-# 822 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                 ;
                             } else {
 
                                 en_tx_flg = 
-# 825 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 849 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                            1
-# 825 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 849 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                ;
                             }
                         } else {
 
                             en_tx_flg = 
-# 829 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 853 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                        1
-# 829 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 853 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                            ;
                         }
                     }
                 }
                 if (en_tx_flg) {
                     uart_clear_intr_status(uart_num, ((1UL << (1))));
-                    uart_enable_intr_mask(uart_num, ((1UL << (1))));
+                    uart_enable_intr_mask_from_isr(uart_num, ((1UL << (1))));
                 }
             }
         }
@@ -6483,18 +6623,29 @@ static void uart_rx_intr_handler_default(void *param)
                 || (uart_intr_status & ((1UL << (18))))
                 ) {
             rx_fifo_len = uart_reg->status.rxfifo_cnt;
+            typeof(uart_reg->mem_rx_status) rx_status = uart_reg->mem_rx_status;
+
+
+
+            if (rx_status.wr_addr > rx_status.rd_addr) {
+                rx_fifo_len = rx_status.wr_addr - rx_status.rd_addr;
+            } else if (rx_status.wr_addr < rx_status.rd_addr) {
+                rx_fifo_len = (rx_status.wr_addr + 128) - rx_status.rd_addr;
+            } else {
+                rx_fifo_len = rx_fifo_len > 0 ? 128 : 0;
+            }
             if(pat_flg == 1) {
                 uart_intr_status |= ((1UL << (18)));
                 pat_flg = 0;
             }
             if (p_uart->rx_buffer_full_flg == 
-# 848 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                              0
-# 848 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                   ) {
 
-                while (buf_idx < rx_fifo_len) {
-                    p_uart->rx_data_buf[buf_idx++] = uart_reg->fifo.rw_byte;
+                for(buf_idx = 0; buf_idx < rx_fifo_len; buf_idx++) {
+                    p_uart->rx_data_buf[buf_idx] = uart_reg->fifo.rw_byte;
                 }
                 uint8_t pat_chr = uart_reg->at_cmd_char.data;
                 int pat_num = uart_reg->at_cmd_char.char_num;
@@ -6522,11 +6673,11 @@ static void uart_rx_intr_handler_default(void *param)
 
                 if(( ( BaseType_t ) 0 ) == xRingbufferSendFromISR(p_uart->rx_ring_buf, p_uart->rx_data_buf, p_uart->rx_stash_len, &HPTaskAwoken)) {
                     p_uart->rx_buffer_full_flg = 
-# 878 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 913 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                                 1
-# 878 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 913 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                     ;
-                    uart_disable_intr_mask(uart_num, ((1UL << (8))) | ((1UL << (0))));
+                    uart_disable_intr_mask_from_isr(uart_num, ((1UL << (8))) | ((1UL << (0))));
                     if (uart_event.type == UART_PATTERN_DET) {
                         if (rx_fifo_len < pat_num) {
 
@@ -6540,9 +6691,9 @@ static void uart_rx_intr_handler_default(void *param)
                                             p_uart->rx_buffered_len + pat_idx);
                         }
                         if ((p_uart->xQueueUart != 
-# 892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 927 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                                   ((void *)0)
-# 892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 927 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                       ) && (( ( BaseType_t ) 0 ) == xQueueGenericSendFromISR( ( p_uart->xQueueUart ), ( (void * )&uart_event ), ( &HPTaskAwoken ), ( ( BaseType_t ) 0 ) ))) {
                             do { if (3 >= ESP_LOG_VERBOSE) { ets_printf( "V" " (%d) %s: " "UART event queue full" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); }} while(0);
                         }
@@ -6562,11 +6713,8 @@ static void uart_rx_intr_handler_default(void *param)
                     p_uart->rx_buffered_len += p_uart->rx_stash_len;
                     vTaskExitCritical(&uart_spinlock[uart_num]);
                 }
-                if(HPTaskAwoken == ( ( BaseType_t ) 1 )) {
-                    {; _frxt_setup_switch();};
-                }
             } else {
-                uart_disable_intr_mask(uart_num, ((1UL << (0))) | ((1UL << (8))));
+                uart_disable_intr_mask_from_isr(uart_num, ((1UL << (0))) | ((1UL << (8))));
                 uart_clear_intr_status(uart_num, ((1UL << (0))) | ((1UL << (8))));
                 if(uart_intr_status & ((1UL << (18)))) {
                     uart_reg->int_clr.at_cmd_char_det = 1;
@@ -6620,12 +6768,9 @@ static void uart_rx_intr_handler_default(void *param)
                 p_uart->tx_waiting_brk = 0;
             } else {
                 xQueueGiveFromISR( ( QueueHandle_t ) ( p_uart->tx_brk_sem ), ( &HPTaskAwoken ) );
-                if(HPTaskAwoken == ( ( BaseType_t ) 1 )) {
-                    {; _frxt_setup_switch();};
-                }
             }
         } else if(uart_intr_status & ((1UL << (13)))) {
-            uart_disable_intr_mask(uart_num, ((1UL << (13))));
+            uart_disable_intr_mask_from_isr(uart_num, ((1UL << (13))));
             uart_clear_intr_status(uart_num, ((1UL << (13))));
         } else if(uart_intr_status & ((1UL << (18)))) {
             uart_reg->int_clr.at_cmd_char_det = 1;
@@ -6639,14 +6784,14 @@ static void uart_rx_intr_handler_default(void *param)
             uart_reset_rx_fifo(uart_num);
 
             p_uart_obj[uart_num]->coll_det_flg = 
-# 987 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1016 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                                 1
-# 987 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1016 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                     ;
             vTaskExitCritical(&uart_spinlock[uart_num]);
             uart_event.type = UART_EVENT_MAX;
         } else if(uart_intr_status & ((1UL << (14)))) {
-            uart_disable_intr_mask(uart_num, ((1UL << (14))));
+            uart_disable_intr_mask_from_isr(uart_num, ((1UL << (14))));
             uart_clear_intr_status(uart_num, ((1UL << (14))));
 
 
@@ -6657,9 +6802,6 @@ static void uart_rx_intr_handler_default(void *param)
                 vTaskExitCritical(&uart_spinlock[uart_num]);
             }
             xQueueGiveFromISR( ( QueueHandle_t ) ( p_uart_obj[uart_num]->tx_done_sem ), ( &HPTaskAwoken ) );
-            if (HPTaskAwoken == ( ( BaseType_t ) 1 )) {
-                {; _frxt_setup_switch();};
-            }
         } else {
             uart_reg->int_clr.val = uart_intr_status;
             uart_event.type = UART_EVENT_MAX;
@@ -6669,65 +6811,71 @@ static void uart_rx_intr_handler_default(void *param)
             if (( ( BaseType_t ) 0 ) == xQueueGenericSendFromISR( ( p_uart->xQueueUart ), ( (void * )&uart_event ), ( &HPTaskAwoken ), ( ( BaseType_t ) 0 ) )) {
                 do { if (3 >= ESP_LOG_VERBOSE) { ets_printf( "V" " (%d) %s: " "UART event queue full" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); }} while(0);
             }
-            if(HPTaskAwoken == ( ( BaseType_t ) 1 )) {
-                {; _frxt_setup_switch();};
-            }
         }
-        uart_intr_status = uart_reg->int_st.val;
+    }
+    if(HPTaskAwoken == ( ( BaseType_t ) 1 )) {
+        {; _frxt_setup_switch();};
     }
 }
 
 
 esp_err_t uart_wait_tx_done(uart_port_t uart_num, TickType_t ticks_to_wait)
 {
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1025, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1025, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1025, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1025, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1025, "uart_num error"); } } while(0); } while(0); return (-1); };
-    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1026, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1026, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1026, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1026, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1026, "uart driver error"); } } while(0); } while(0); return (-1); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1050, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1050, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1050, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1050, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1050, "uart_num error"); } } while(0); } while(0); return (-1); };
+    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1051, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1051, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1051, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1051, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1051, "uart driver error"); } } while(0); } while(0); return (-1); };
     BaseType_t res;
-    TickType_t ticks_end = xTaskGetTickCount() + ticks_to_wait;
+    TickType_t ticks_start = xTaskGetTickCount();
 
     res = xQueueGenericReceive( ( QueueHandle_t ) ( p_uart_obj[uart_num]->tx_mux ), 
-# 1030 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1055 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
          ((void *)0)
-# 1030 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1055 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
          , ( (TickType_t)ticks_to_wait ), ( ( BaseType_t ) 0 ) );
     if(res == ( ( BaseType_t ) 0 )) {
         return 0x107;
     }
-    ticks_to_wait = ticks_end - xTaskGetTickCount();
     xQueueGenericReceive( ( QueueHandle_t ) ( p_uart_obj[uart_num]->tx_done_sem ), 
-# 1035 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1059 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
    ((void *)0)
-# 1035 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1059 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
    , ( 0 ), ( ( BaseType_t ) 0 ) );
-    ticks_to_wait = ticks_end - xTaskGetTickCount();
-    if(UART[uart_num]->status.txfifo_cnt == 0) {
+    typeof(UART0.status) status = UART[uart_num]->status;
+
+    if(status.txfifo_cnt == 0 && status.st_utx_out == 0) {
         xQueueGenericSend( ( QueueHandle_t ) ( p_uart_obj[uart_num]->tx_mux ), 
-# 1038 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1063 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
        ((void *)0)
-# 1038 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1063 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
        , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
         return 0;
     }
     uart_enable_intr_mask(uart_num, ((1UL << (14))));
 
+    TickType_t ticks_end = xTaskGetTickCount();
+    if (ticks_end - ticks_start > ticks_to_wait) {
+        ticks_to_wait = 0;
+    } else {
+        ticks_to_wait = ticks_to_wait - (ticks_end - ticks_start);
+    }
+
     res = xQueueGenericReceive( ( QueueHandle_t ) ( p_uart_obj[uart_num]->tx_done_sem ), 
-# 1043 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1075 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
          ((void *)0)
-# 1043 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1075 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
          , ( (TickType_t)ticks_to_wait ), ( ( BaseType_t ) 0 ) );
     if(res == ( ( BaseType_t ) 0 )) {
         uart_disable_intr_mask(uart_num, ((1UL << (14))));
         xQueueGenericSend( ( QueueHandle_t ) ( p_uart_obj[uart_num]->tx_mux ), 
-# 1046 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1078 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
        ((void *)0)
-# 1046 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1078 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
        , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
         return 0x107;
     }
     xQueueGenericSend( ( QueueHandle_t ) ( p_uart_obj[uart_num]->tx_mux ), 
-# 1049 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1081 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
    ((void *)0)
-# 1049 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1081 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     return 0;
 }
@@ -6764,30 +6912,30 @@ static int uart_fill_fifo(uart_port_t uart_num, const char* buffer, uint32_t len
 
 int uart_tx_chars(uart_port_t uart_num, const char* buffer, uint32_t len)
 {
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1085, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1085, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1085, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1085, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1085, "uart_num error"); } } while(0); } while(0); return ((-1)); };
-    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1086, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1086, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1086, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1086, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1086, "uart driver error"); } } while(0); } while(0); return ((-1)); };
-    if (!(buffer)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1087, "buffer null"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1087, "buffer null"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1087, "buffer null"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1087, "buffer null"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1087, "buffer null"); } } while(0); } while(0); return ((-1)); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1117, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1117, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1117, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1117, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1117, "uart_num error"); } } while(0); } while(0); return ((-1)); };
+    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1118, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1118, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1118, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1118, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1118, "uart driver error"); } } while(0); } while(0); return ((-1)); };
+    if (!(buffer)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1119, "buffer null"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1119, "buffer null"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1119, "buffer null"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1119, "buffer null"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1119, "buffer null"); } } while(0); } while(0); return ((-1)); };
     if(len == 0) {
         return 0;
     }
     xQueueGenericReceive( ( QueueHandle_t ) ( p_uart_obj[uart_num]->tx_mux ), 
-# 1091 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
    ((void *)0)
-# 1091 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
    , ( (TickType_t)( TickType_t ) 0xffffffffUL ), ( ( BaseType_t ) 0 ) );
     int tx_len = uart_fill_fifo(uart_num, (const char*) buffer, len);
     xQueueGenericSend( ( QueueHandle_t ) ( p_uart_obj[uart_num]->tx_mux ), 
-# 1093 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
    ((void *)0)
-# 1093 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     return tx_len;
 }
 
 static int uart_tx_all(uart_port_t uart_num, const char* src, size_t size, 
-# 1097 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                                                           _Bool 
-# 1097 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                                                brk_en, int brk_len)
 {
     if(size == 0) {
@@ -6797,14 +6945,14 @@ static int uart_tx_all(uart_port_t uart_num, const char* src, size_t size,
 
 
     xQueueGenericReceive( ( QueueHandle_t ) ( p_uart_obj[uart_num]->tx_mux ), 
-# 1105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
    ((void *)0)
-# 1105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
    , ( (TickType_t)( TickType_t ) 0xffffffffUL ), ( ( BaseType_t ) 0 ) );
     p_uart_obj[uart_num]->coll_det_flg = 
-# 1106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1138 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                         0
-# 1106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1138 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                              ;
     if(p_uart_obj[uart_num]->tx_buf_size > 0) {
         int max_size = xRingbufferGetMaxItemSize(p_uart_obj[uart_num]->tx_ring_buf);
@@ -6829,16 +6977,16 @@ static int uart_tx_all(uart_port_t uart_num, const char* src, size_t size,
         while(size) {
 
             if(( ( BaseType_t ) 1 ) == xQueueGenericReceive( ( QueueHandle_t ) ( p_uart_obj[uart_num]->tx_fifo_sem ), 
-# 1129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                         ((void *)0)
-# 1129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                         , ( (TickType_t)( TickType_t ) 0xffffffffUL ), ( ( BaseType_t ) 0 ) )) {
                 size_t sent = uart_fill_fifo(uart_num, (char*) src, size);
                 if(sent < size) {
                     p_uart_obj[uart_num]->tx_waiting_fifo = 
-# 1132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                                            1
-# 1132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                                ;
                     uart_enable_tx_intr(uart_num, 1, (10));
                 }
@@ -6849,51 +6997,51 @@ static int uart_tx_all(uart_port_t uart_num, const char* src, size_t size,
         if(brk_en) {
             uart_set_break(uart_num, brk_len);
             xQueueGenericReceive( ( QueueHandle_t ) ( p_uart_obj[uart_num]->tx_brk_sem ), 
-# 1141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
            ((void *)0)
-# 1141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
            , ( (TickType_t)( TickType_t ) 0xffffffffUL ), ( ( BaseType_t ) 0 ) );
         }
         xQueueGenericSend( ( QueueHandle_t ) ( p_uart_obj[uart_num]->tx_fifo_sem ), 
-# 1143 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
        ((void *)0)
-# 1143 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
        , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     }
     xQueueGenericSend( ( QueueHandle_t ) ( p_uart_obj[uart_num]->tx_mux ), 
-# 1145 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
    ((void *)0)
-# 1145 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     return original_size;
 }
 
 int uart_write_bytes(uart_port_t uart_num, const char* src, size_t size)
 {
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1151, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1151, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1151, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1151, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1151, "uart_num error"); } } while(0); } while(0); return ((-1)); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1183, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1183, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1183, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1183, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1183, "uart_num error"); } } while(0); } while(0); return ((-1)); };
     if (!((p_uart_obj[uart_num] != 
-# 1152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
    ((void *)0)
-# 1152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
-   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1152, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1152, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1152, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1152, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1152, "uart driver error"); } } while(0); } while(0); return ((-1)); };
-    if (!(src)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1153, "buffer null"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1153, "buffer null"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1153, "buffer null"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1153, "buffer null"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1153, "buffer null"); } } while(0); } while(0); return ((-1)); };
+# 1184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1184, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1184, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1184, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1184, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1184, "uart driver error"); } } while(0); } while(0); return ((-1)); };
+    if (!(src)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1185, "buffer null"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1185, "buffer null"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1185, "buffer null"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1185, "buffer null"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1185, "buffer null"); } } while(0); } while(0); return ((-1)); };
     return uart_tx_all(uart_num, src, size, 0, 0);
 }
 
 int uart_write_bytes_with_break(uart_port_t uart_num, const char* src, size_t size, int brk_len)
 {
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1159, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1159, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1159, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1159, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1159, "uart_num error"); } } while(0); } while(0); return ((-1)); };
-    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1160, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1160, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1160, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1160, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1160, "uart driver error"); } } while(0); } while(0); return ((-1)); };
-    if (!((size > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1161, "uart size error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1161, "uart size error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1161, "uart size error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1161, "uart size error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1161, "uart size error"); } } while(0); } while(0); return ((-1)); };
-    if (!((src))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1162, "uart data null"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1162, "uart data null"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1162, "uart data null"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1162, "uart data null"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1162, "uart data null"); } } while(0); } while(0); return ((-1)); };
-    if (!((brk_len > 0 && brk_len < 256))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1163, "break_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1163, "break_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1163, "break_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1163, "break_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1163, "break_num error"); } } while(0); } while(0); return ((-1)); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1191, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1191, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1191, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1191, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1191, "uart_num error"); } } while(0); } while(0); return ((-1)); };
+    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1192, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1192, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1192, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1192, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1192, "uart driver error"); } } while(0); } while(0); return ((-1)); };
+    if (!((size > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1193, "uart size error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1193, "uart size error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1193, "uart size error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1193, "uart size error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1193, "uart size error"); } } while(0); } while(0); return ((-1)); };
+    if (!((src))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1194, "uart data null"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1194, "uart data null"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1194, "uart data null"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1194, "uart data null"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1194, "uart data null"); } } while(0); } while(0); return ((-1)); };
+    if (!((brk_len > 0 && brk_len < 256))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1195, "break_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1195, "break_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1195, "break_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1195, "break_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1195, "break_num error"); } } while(0); } while(0); return ((-1)); };
     return uart_tx_all(uart_num, src, size, 1, brk_len);
 }
 
 static 
-# 1167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
       _Bool 
-# 1167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
            uart_check_buf_full(uart_port_t uart_num)
 {
     if(p_uart_obj[uart_num]->rx_buffer_full_flg) {
@@ -6902,43 +7050,43 @@ static
             vTaskEnterCritical(&uart_spinlock[uart_num]);
             p_uart_obj[uart_num]->rx_buffered_len += p_uart_obj[uart_num]->rx_stash_len;
             p_uart_obj[uart_num]->rx_buffer_full_flg = 
-# 1174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                                       0
-# 1174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                            ;
             vTaskExitCritical(&uart_spinlock[uart_num]);
             uart_enable_rx_intr(p_uart_obj[uart_num]->uart_num);
             return 
-# 1177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                   1
-# 1177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                       ;
         }
     }
     return 
-# 1180 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1212 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
           0
-# 1180 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1212 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                ;
 }
 
 int uart_read_bytes(uart_port_t uart_num, uint8_t* buf, uint32_t length, TickType_t ticks_to_wait)
 {
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1185, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1185, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1185, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1185, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1185, "uart_num error"); } } while(0); } while(0); return ((-1)); };
-    if (!((buf))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1186, "uart data null"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1186, "uart data null"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1186, "uart data null"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1186, "uart data null"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1186, "uart data null"); } } while(0); } while(0); return ((-1)); };
-    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1187, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1187, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1187, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1187, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1187, "uart driver error"); } } while(0); } while(0); return ((-1)); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1217, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1217, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1217, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1217, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1217, "uart_num error"); } } while(0); } while(0); return ((-1)); };
+    if (!((buf))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1218, "uart data null"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1218, "uart data null"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1218, "uart data null"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1218, "uart data null"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1218, "uart data null"); } } while(0); } while(0); return ((-1)); };
+    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1219, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1219, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1219, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1219, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1219, "uart driver error"); } } while(0); } while(0); return ((-1)); };
     uint8_t* data = 
-# 1188 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1220 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                    ((void *)0)
-# 1188 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1220 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                        ;
     size_t size;
     size_t copy_len = 0;
     int len_tmp;
     if(xQueueGenericReceive( ( QueueHandle_t ) ( p_uart_obj[uart_num]->rx_mux ), 
-# 1192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
       ((void *)0)
-# 1192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
       , ( (TickType_t)ticks_to_wait ), ( ( BaseType_t ) 0 ) ) != ( ( BaseType_t ) 1 )) {
         return -1;
     }
@@ -6959,9 +7107,9 @@ int uart_read_bytes(uart_port_t uart_num, uint8_t* buf, uint32_t length, TickTyp
                     continue;
                 } else {
                     xQueueGenericSend( ( QueueHandle_t ) ( p_uart_obj[uart_num]->rx_mux ), 
-# 1211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                    ((void *)0)
-# 1211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
                     return copy_len;
                 }
@@ -6984,31 +7132,31 @@ int uart_read_bytes(uart_port_t uart_num, uint8_t* buf, uint32_t length, TickTyp
         if(p_uart_obj[uart_num]->rx_cur_remain == 0) {
             vRingbufferReturnItem(p_uart_obj[uart_num]->rx_ring_buf, p_uart_obj[uart_num]->rx_head_ptr);
             p_uart_obj[uart_num]->rx_head_ptr = 
-# 1232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1264 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                                ((void *)0)
-# 1232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1264 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                    ;
             p_uart_obj[uart_num]->rx_ptr = 
-# 1233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                           ((void *)0)
-# 1233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                               ;
             uart_check_buf_full(uart_num);
         }
     }
 
     xQueueGenericSend( ( QueueHandle_t ) ( p_uart_obj[uart_num]->rx_mux ), 
-# 1238 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
    ((void *)0)
-# 1238 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     return copy_len;
 }
 
 esp_err_t uart_get_buffered_data_len(uart_port_t uart_num, size_t* size)
 {
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1244, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1244, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1244, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1244, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1244, "uart_num error"); } } while(0); } while(0); return (-1); };
-    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1245, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1245, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1245, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1245, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1245, "uart driver error"); } } while(0); } while(0); return (-1); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1276, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1276, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1276, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1276, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1276, "uart_num error"); } } while(0); } while(0); return (-1); };
+    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1277, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1277, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1277, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1277, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1277, "uart driver error"); } } while(0); } while(0); return (-1); };
     *size = p_uart_obj[uart_num]->rx_buffered_len;
     return 0;
 }
@@ -7017,23 +7165,23 @@ esp_err_t uart_flush(uart_port_t uart_num) __attribute__((alias("uart_flush_inpu
 
 esp_err_t uart_flush_input(uart_port_t uart_num)
 {
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1254, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1254, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1254, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1254, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1254, "uart_num error"); } } while(0); } while(0); return (-1); };
-    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1255, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1255, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1255, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1255, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1255, "uart driver error"); } } while(0); } while(0); return (-1); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1286, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1286, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1286, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1286, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1286, "uart_num error"); } } while(0); } while(0); return (-1); };
+    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1287, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1287, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1287, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1287, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1287, "uart driver error"); } } while(0); } while(0); return (-1); };
     uart_obj_t* p_uart = p_uart_obj[uart_num];
     uint8_t* data;
     size_t size;
 
 
     xQueueGenericReceive( ( QueueHandle_t ) ( p_uart->rx_mux ), 
-# 1261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
    ((void *)0)
-# 1261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
    , ( (TickType_t)( TickType_t ) 0xffffffffUL ), ( ( BaseType_t ) 0 ) );
     uart_disable_rx_intr(p_uart_obj[uart_num]->uart_num);
     while(
-# 1263 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
          1
-# 1263 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
              ) {
         if(p_uart->rx_head_ptr) {
             vRingbufferReturnItem(p_uart->rx_ring_buf, p_uart->rx_head_ptr);
@@ -7042,22 +7190,22 @@ esp_err_t uart_flush_input(uart_port_t uart_num)
             uart_pattern_queue_update(uart_num, p_uart->rx_cur_remain);
             vTaskExitCritical(&uart_spinlock[uart_num]);
             p_uart->rx_ptr = 
-# 1270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                             ((void *)0)
-# 1270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                 ;
             p_uart->rx_cur_remain = 0;
             p_uart->rx_head_ptr = 
-# 1272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                  ((void *)0)
-# 1272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                      ;
         }
         data = (uint8_t*) xRingbufferReceive(p_uart->rx_ring_buf, &size, (TickType_t) 0);
         if(data == 
-# 1275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1307 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                   ((void *)0)
-# 1275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1307 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                       ) {
             if( p_uart_obj[uart_num]->rx_buffered_len != 0 ) {
                 do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "rx_buffered_len error" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "rx_buffered_len error" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "rx_buffered_len error" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "rx_buffered_len error" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "rx_buffered_len error" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); } } while(0); } while(0);
@@ -7066,9 +7214,9 @@ esp_err_t uart_flush_input(uart_port_t uart_num)
 
             vTaskEnterCritical(&uart_spinlock[uart_num]);
             p_uart_obj[uart_num]->rx_buffer_full_flg = 
-# 1282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1314 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                                       0
-# 1282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1314 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                            ;
             vTaskExitCritical(&uart_spinlock[uart_num]);
             break;
@@ -7084,31 +7232,31 @@ esp_err_t uart_flush_input(uart_port_t uart_num)
                 vTaskEnterCritical(&uart_spinlock[uart_num]);
                 p_uart_obj[uart_num]->rx_buffered_len += p_uart_obj[uart_num]->rx_stash_len;
                 p_uart_obj[uart_num]->rx_buffer_full_flg = 
-# 1296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                                           0
-# 1296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                                ;
                 vTaskExitCritical(&uart_spinlock[uart_num]);
             }
         }
     }
     p_uart->rx_ptr = 
-# 1301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                     ((void *)0)
-# 1301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                         ;
     p_uart->rx_cur_remain = 0;
     p_uart->rx_head_ptr = 
-# 1303 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1335 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                          ((void *)0)
-# 1303 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1335 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                              ;
     uart_reset_rx_fifo(uart_num);
     uart_enable_rx_intr(p_uart_obj[uart_num]->uart_num);
     xQueueGenericSend( ( QueueHandle_t ) ( p_uart->rx_mux ), 
-# 1306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
    ((void *)0)
-# 1306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     return 0;
 }
@@ -7116,21 +7264,21 @@ esp_err_t uart_flush_input(uart_port_t uart_num)
 esp_err_t uart_driver_install(uart_port_t uart_num, int rx_buffer_size, int tx_buffer_size, int queue_size, QueueHandle_t *uart_queue, int intr_alloc_flags)
 {
     esp_err_t r;
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1313, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1313, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1313, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1313, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1313, "uart_num error"); } } while(0); } while(0); return (-1); };
-    if (!((rx_buffer_size > (128)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1314, "uart rx buffer length error(>128)"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1314, "uart rx buffer length error(>128)"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1314, "uart rx buffer length error(>128)"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1314, "uart rx buffer length error(>128)"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1314, "uart rx buffer length error(>128)"); } } while(0); } while(0); return (-1); };
-    if (!((tx_buffer_size > (128)) || (tx_buffer_size == 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1315, "uart tx buffer length error(>128 or 0)"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1315, "uart tx buffer length error(>128 or 0)"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1315, "uart tx buffer length error(>128 or 0)"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1315, "uart tx buffer length error(>128 or 0)"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1315, "uart tx buffer length error(>128 or 0)"); } } while(0); } while(0); return (-1); };
-    if (!((intr_alloc_flags & (1<<10)) == 0)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1316, "ESP_INTR_FLAG_IRAM set in intr_alloc_flags"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1316, "ESP_INTR_FLAG_IRAM set in intr_alloc_flags"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1316, "ESP_INTR_FLAG_IRAM set in intr_alloc_flags"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1316, "ESP_INTR_FLAG_IRAM set in intr_alloc_flags"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1316, "ESP_INTR_FLAG_IRAM set in intr_alloc_flags"); } } while(0); } while(0); return (-1); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1345, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1345, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1345, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1345, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1345, "uart_num error"); } } while(0); } while(0); return (-1); };
+    if (!((rx_buffer_size > (128)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1346, "uart rx buffer length error(>128)"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1346, "uart rx buffer length error(>128)"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1346, "uart rx buffer length error(>128)"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1346, "uart rx buffer length error(>128)"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1346, "uart rx buffer length error(>128)"); } } while(0); } while(0); return (-1); };
+    if (!((tx_buffer_size > (128)) || (tx_buffer_size == 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1347, "uart tx buffer length error(>128 or 0)"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1347, "uart tx buffer length error(>128 or 0)"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1347, "uart tx buffer length error(>128 or 0)"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1347, "uart tx buffer length error(>128 or 0)"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1347, "uart tx buffer length error(>128 or 0)"); } } while(0); } while(0); return (-1); };
+    if (!((intr_alloc_flags & (1<<10)) == 0)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1348, "ESP_INTR_FLAG_IRAM set in intr_alloc_flags"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1348, "ESP_INTR_FLAG_IRAM set in intr_alloc_flags"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1348, "ESP_INTR_FLAG_IRAM set in intr_alloc_flags"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1348, "ESP_INTR_FLAG_IRAM set in intr_alloc_flags"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1348, "ESP_INTR_FLAG_IRAM set in intr_alloc_flags"); } } while(0); } while(0); return (-1); };
 
     if(p_uart_obj[uart_num] == 
-# 1318 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1350 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                               ((void *)0)
-# 1318 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1350 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                   ) {
         p_uart_obj[uart_num] = (uart_obj_t*) calloc(1, sizeof(uart_obj_t));
         if(p_uart_obj[uart_num] == 
-# 1320 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                   ((void *)0)
-# 1320 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                       ) {
             do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "UART driver malloc error" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "UART driver malloc error" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "UART driver malloc error" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "UART driver malloc error" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "UART driver malloc error" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); } } while(0); } while(0);
             return -1;
@@ -7138,15 +7286,15 @@ esp_err_t uart_driver_install(uart_port_t uart_num, int rx_buffer_size, int tx_b
         p_uart_obj[uart_num]->uart_num = uart_num;
         p_uart_obj[uart_num]->uart_mode = UART_MODE_UART;
         p_uart_obj[uart_num]->coll_det_flg = 
-# 1326 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                             0
-# 1326 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                  ;
         p_uart_obj[uart_num]->tx_fifo_sem = xQueueGenericCreate( ( UBaseType_t ) 1, ( ( uint8_t ) 0U ), ( ( uint8_t ) 3U ) );
         xQueueGenericSend( ( QueueHandle_t ) ( p_uart_obj[uart_num]->tx_fifo_sem ), 
-# 1328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1360 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
        ((void *)0)
-# 1328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1360 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
        , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
         p_uart_obj[uart_num]->tx_done_sem = xQueueGenericCreate( ( UBaseType_t ) 1, ( ( uint8_t ) 0U ), ( ( uint8_t ) 3U ) );
         p_uart_obj[uart_num]->tx_brk_sem = xQueueGenericCreate( ( UBaseType_t ) 1, ( ( uint8_t ) 0U ), ( ( uint8_t ) 3U ) );
@@ -7154,14 +7302,14 @@ esp_err_t uart_driver_install(uart_port_t uart_num, int rx_buffer_size, int tx_b
         p_uart_obj[uart_num]->rx_mux = xQueueCreateMutex( ( ( uint8_t ) 1U ) );
         p_uart_obj[uart_num]->queue_size = queue_size;
         p_uart_obj[uart_num]->tx_ptr = 
-# 1334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1366 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                       ((void *)0)
-# 1334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1366 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                           ;
         p_uart_obj[uart_num]->tx_head = 
-# 1335 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1367 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                        ((void *)0)
-# 1335 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1367 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                            ;
         p_uart_obj[uart_num]->tx_len_tot = 0;
         p_uart_obj[uart_num]->tx_brk_flg = 0;
@@ -7176,31 +7324,31 @@ esp_err_t uart_driver_install(uart_port_t uart_num, int rx_buffer_size, int tx_b
             do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "queue free spaces: %d" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, uxQueueSpacesAvailable(p_uart_obj[uart_num]->xQueueUart)); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "queue free spaces: %d" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, uxQueueSpacesAvailable(p_uart_obj[uart_num]->xQueueUart)); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "queue free spaces: %d" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, uxQueueSpacesAvailable(p_uart_obj[uart_num]->xQueueUart)); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "queue free spaces: %d" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, uxQueueSpacesAvailable(p_uart_obj[uart_num]->xQueueUart)); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "queue free spaces: %d" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, uxQueueSpacesAvailable(p_uart_obj[uart_num]->xQueueUart)); } } while(0); } while(0);
         } else {
             p_uart_obj[uart_num]->xQueueUart = 
-# 1348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1380 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                               ((void *)0)
-# 1348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1380 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                   ;
         }
         p_uart_obj[uart_num]->rx_buffer_full_flg = 
-# 1350 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1382 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                                   0
-# 1350 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1382 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                        ;
         p_uart_obj[uart_num]->tx_waiting_fifo = 
-# 1351 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                                0
-# 1351 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                     ;
         p_uart_obj[uart_num]->rx_ptr = 
-# 1352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                       ((void *)0)
-# 1352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                           ;
         p_uart_obj[uart_num]->rx_cur_remain = 0;
         p_uart_obj[uart_num]->rx_head_ptr = 
-# 1354 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                            ((void *)0)
-# 1354 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                ;
         p_uart_obj[uart_num]->rx_ring_buf = xRingbufferCreate(rx_buffer_size, RINGBUF_TYPE_BYTEBUF);
         if(tx_buffer_size > 0) {
@@ -7208,16 +7356,16 @@ esp_err_t uart_driver_install(uart_port_t uart_num, int rx_buffer_size, int tx_b
             p_uart_obj[uart_num]->tx_buf_size = tx_buffer_size;
         } else {
             p_uart_obj[uart_num]->tx_ring_buf = 
-# 1360 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                                ((void *)0)
-# 1360 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                    ;
             p_uart_obj[uart_num]->tx_buf_size = 0;
         }
         p_uart_obj[uart_num]->uart_select_notif_callback = 
-# 1363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                                           ((void *)0)
-# 1363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                               ;
     } else {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "UART driver already installed" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "UART driver already installed" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "UART driver already installed" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "UART driver already installed" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "UART driver already installed" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); } } while(0); } while(0);
@@ -7249,11 +7397,11 @@ err:
 
 esp_err_t uart_driver_delete(uart_port_t uart_num)
 {
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1394, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1394, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1394, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1394, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1394, "uart_num error"); } } while(0); } while(0); return (-1); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1426, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1426, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1426, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1426, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1426, "uart_num error"); } } while(0); } while(0); return (-1); };
     if(p_uart_obj[uart_num] == 
-# 1395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                               ((void *)0)
-# 1395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                   ) {
         do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "ALREADY NULL" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "ALREADY NULL" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "ALREADY NULL" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "ALREADY NULL" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "ALREADY NULL" "\033[0m" "\n", esp_log_timestamp(), UART_TAG); } } while(0); } while(0);
         return 0;
@@ -7266,83 +7414,78 @@ esp_err_t uart_driver_delete(uart_port_t uart_num)
     if(p_uart_obj[uart_num]->tx_fifo_sem) {
         vQueueDelete( ( QueueHandle_t ) ( p_uart_obj[uart_num]->tx_fifo_sem ) );
         p_uart_obj[uart_num]->tx_fifo_sem = 
-# 1406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                            ((void *)0)
-# 1406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                ;
     }
     if(p_uart_obj[uart_num]->tx_done_sem) {
         vQueueDelete( ( QueueHandle_t ) ( p_uart_obj[uart_num]->tx_done_sem ) );
         p_uart_obj[uart_num]->tx_done_sem = 
-# 1410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                            ((void *)0)
-# 1410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                ;
     }
     if(p_uart_obj[uart_num]->tx_brk_sem) {
         vQueueDelete( ( QueueHandle_t ) ( p_uart_obj[uart_num]->tx_brk_sem ) );
         p_uart_obj[uart_num]->tx_brk_sem = 
-# 1414 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                           ((void *)0)
-# 1414 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                               ;
     }
     if(p_uart_obj[uart_num]->tx_mux) {
         vQueueDelete( ( QueueHandle_t ) ( p_uart_obj[uart_num]->tx_mux ) );
         p_uart_obj[uart_num]->tx_mux = 
-# 1418 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                       ((void *)0)
-# 1418 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                           ;
     }
     if(p_uart_obj[uart_num]->rx_mux) {
         vQueueDelete( ( QueueHandle_t ) ( p_uart_obj[uart_num]->rx_mux ) );
         p_uart_obj[uart_num]->rx_mux = 
-# 1422 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                       ((void *)0)
-# 1422 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                           ;
     }
     if(p_uart_obj[uart_num]->xQueueUart) {
         vQueueDelete(p_uart_obj[uart_num]->xQueueUart);
         p_uart_obj[uart_num]->xQueueUart = 
-# 1426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                           ((void *)0)
-# 1426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                               ;
     }
     if(p_uart_obj[uart_num]->rx_ring_buf) {
         vRingbufferDelete(p_uart_obj[uart_num]->rx_ring_buf);
         p_uart_obj[uart_num]->rx_ring_buf = 
-# 1430 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1462 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                            ((void *)0)
-# 1430 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1462 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                ;
     }
     if(p_uart_obj[uart_num]->tx_ring_buf) {
         vRingbufferDelete(p_uart_obj[uart_num]->tx_ring_buf);
         p_uart_obj[uart_num]->tx_ring_buf = 
-# 1434 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1466 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                            ((void *)0)
-# 1434 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1466 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                ;
     }
 
     free(p_uart_obj[uart_num]);
     p_uart_obj[uart_num] = 
-# 1438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                           ((void *)0)
-# 1438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                               ;
 
-    if (uart_num != 0 ) {
-       if(uart_num == UART_NUM_0) {
-           periph_module_disable(PERIPH_UART0_MODULE);
-       } else if(uart_num == UART_NUM_1) {
-           periph_module_disable(PERIPH_UART1_MODULE);
-       } else if(uart_num == UART_NUM_2) {
-           periph_module_disable(PERIPH_UART2_MODULE);
-       }
+    if (uart_num != 0) {
+       periph_module_t periph_module = get_periph_module(uart_num);
+       periph_module_disable(periph_module);
     }
     return 0;
 }
@@ -7361,25 +7504,25 @@ portMUX_TYPE *uart_get_selectlock()
 
 esp_err_t uart_set_mode(uart_port_t uart_num, uart_mode_t mode)
 {
-    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1466, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1466, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1466, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1466, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1466, "uart driver error"); } } while(0); } while(0); return (0x103); };
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1467, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1467, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1467, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1467, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1467, "uart_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((p_uart_obj[uart_num]))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1493, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1493, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1493, "uart driver error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1493, "uart driver error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1493, "uart driver error"); } } while(0); } while(0); return (0x103); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1494, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1494, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1494, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1494, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1494, "uart_num error"); } } while(0); } while(0); return (0x102); };
     if ((mode == UART_MODE_RS485_COLLISION_DETECT) || (mode == UART_MODE_RS485_APP_CTRL)
             || (mode == UART_MODE_RS485_HALF_DUPLEX)) {
         if (!((UART[uart_num]->conf1.rx_flow_en != 1))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__,
- 1471
-# 1470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+ 1498
+# 1497 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
         , "disable hw flowctrl before using RS485 mode"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__,
- 1471
-# 1470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+ 1498
+# 1497 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
         , "disable hw flowctrl before using RS485 mode"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__,
- 1471
-# 1470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+ 1498
+# 1497 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
         , "disable hw flowctrl before using RS485 mode"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__,
- 1471
-# 1470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+ 1498
+# 1497 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
         , "disable hw flowctrl before using RS485 mode"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__,
- 1471
-# 1470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+ 1498
+# 1497 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
         , "disable hw flowctrl before using RS485 mode"); } } while(0); } while(0); return (0x102); }
                                                                                    ;
     }
@@ -7395,9 +7538,9 @@ esp_err_t uart_set_mode(uart_port_t uart_num, uart_mode_t mode)
     case UART_MODE_RS485_COLLISION_DETECT:
 
         p_uart_obj[uart_num]->coll_det_flg = 
-# 1484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1511 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                             0
-# 1484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1511 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                  ;
 
         UART[uart_num]->rs485_conf.tx_rx_en = 0 ;
@@ -7429,7 +7572,7 @@ esp_err_t uart_set_mode(uart_port_t uart_num, uart_mode_t mode)
         UART[uart_num]->conf0.irda_en = 1;
         break;
     default:
-        if (!(1)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1515, "unsupported uart mode"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1515, "unsupported uart mode"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1515, "unsupported uart mode"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1515, "unsupported uart mode"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1515, "unsupported uart mode"); } } while(0); } while(0); return (0x102); };
+        if (!(1)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1542, "unsupported uart mode"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1542, "unsupported uart mode"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1542, "unsupported uart mode"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1542, "unsupported uart mode"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1542, "unsupported uart mode"); } } while(0); } while(0); return (0x102); };
         break;
     }
     p_uart_obj[uart_num]->uart_mode = mode;
@@ -7439,13 +7582,19 @@ esp_err_t uart_set_mode(uart_port_t uart_num, uart_mode_t mode)
 
 esp_err_t uart_set_rx_timeout(uart_port_t uart_num, const uint8_t tout_thresh)
 {
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1525, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1525, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1525, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1525, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1525, "uart_num error"); } } while(0); } while(0); return (0x102); };
-    if (!((tout_thresh < 127))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1526, "tout_thresh max value is 126"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1526, "tout_thresh max value is 126"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1526, "tout_thresh max value is 126"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1526, "tout_thresh max value is 126"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1526, "tout_thresh max value is 126"); } } while(0); } while(0); return (0x102); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1552, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1552, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1552, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1552, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1552, "uart_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((tout_thresh < 127))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1553, "tout_thresh max value is 126"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1553, "tout_thresh max value is 126"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1553, "tout_thresh max value is 126"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1553, "tout_thresh max value is 126"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1553, "tout_thresh max value is 126"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&uart_spinlock[uart_num]);
 
 
     if (tout_thresh > 0) {
-        UART[uart_num]->conf1.rx_tout_thrhd = (tout_thresh & 0x7F);
+
+
+        if(UART[uart_num]->conf0.tick_ref_always_on == 0) {
+            UART[uart_num]->conf1.rx_tout_thrhd = tout_thresh * (( 80*1000000 )/(( 1000000 )<<(3)));
+        } else {
+            UART[uart_num]->conf1.rx_tout_thrhd = tout_thresh;
+        }
         UART[uart_num]->conf1.rx_tout_en = 1;
     } else {
         UART[uart_num]->conf1.rx_tout_en = 0;
@@ -7455,37 +7604,37 @@ esp_err_t uart_set_rx_timeout(uart_port_t uart_num, const uint8_t tout_thresh)
 }
 
 esp_err_t uart_get_collision_flag(uart_port_t uart_num, 
-# 1540 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1573 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
                                                        _Bool
-# 1540 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+# 1573 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
                                                            * collision_flag)
 {
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1542, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1542, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1542, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1542, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1542, "uart_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1575, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1575, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1575, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1575, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1575, "uart_num error"); } } while(0); } while(0); return (0x102); };
     if (!((collision_flag != 
-# 1543 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1576 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
    ((void *)0)
-# 1543 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
-   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1543, "wrong parameter pointer"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1543, "wrong parameter pointer"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1543, "wrong parameter pointer"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1543, "wrong parameter pointer"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1543, "wrong parameter pointer"); } } while(0); } while(0); return (0x102); };
+# 1576 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1576, "wrong parameter pointer"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1576, "wrong parameter pointer"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1576, "wrong parameter pointer"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1576, "wrong parameter pointer"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1576, "wrong parameter pointer"); } } while(0); } while(0); return (0x102); };
     if (!((((p_uart_obj[uart_num]->uart_mode == UART_MODE_RS485_HALF_DUPLEX)) || ((p_uart_obj[uart_num]->uart_mode == UART_MODE_RS485_COLLISION_DETECT))))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__,
 
- 1546
-# 1544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+ 1579
+# 1577 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
     , "wrong mode"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__,
 
- 1546
-# 1544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+ 1579
+# 1577 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
     , "wrong mode"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__,
 
- 1546
-# 1544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+ 1579
+# 1577 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
     , "wrong mode"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__,
 
- 1546
-# 1544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+ 1579
+# 1577 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
     , "wrong mode"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__,
 
- 1546
-# 1544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+ 1579
+# 1577 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
     , "wrong mode"); } } while(0); } while(0); return (0x102); }
 
                                                       ;
@@ -7495,27 +7644,27 @@ esp_err_t uart_get_collision_flag(uart_port_t uart_num,
 
 esp_err_t uart_set_wakeup_threshold(uart_port_t uart_num, int wakeup_threshold)
 {
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1553, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1553, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1553, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1553, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1553, "uart_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1586, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1586, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1586, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1586, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1586, "uart_num error"); } } while(0); } while(0); return (0x102); };
     if (!((wakeup_threshold <= 0x3FF && wakeup_threshold > (2)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__,
 
- 1556
-# 1554 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+ 1589
+# 1587 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
     , "wakeup_threshold out of bounds"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__,
 
- 1556
-# 1554 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+ 1589
+# 1587 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
     , "wakeup_threshold out of bounds"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__,
 
- 1556
-# 1554 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+ 1589
+# 1587 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
     , "wakeup_threshold out of bounds"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__,
 
- 1556
-# 1554 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+ 1589
+# 1587 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
     , "wakeup_threshold out of bounds"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__,
 
- 1556
-# 1554 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+ 1589
+# 1587 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
     , "wakeup_threshold out of bounds"); } } while(0); } while(0); return (0x102); }
 
                                                                       ;
@@ -7526,12 +7675,12 @@ esp_err_t uart_set_wakeup_threshold(uart_port_t uart_num, int wakeup_threshold)
 
 esp_err_t uart_get_wakeup_threshold(uart_port_t uart_num, int* out_wakeup_threshold)
 {
-    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1564, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1564, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1564, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1564, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1564, "uart_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((uart_num < UART_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1597, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1597, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1597, "uart_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1597, "uart_num error"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1597, "uart_num error"); } } while(0); } while(0); return (0x102); };
     if (!((out_wakeup_threshold != 
-# 1565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
+# 1598 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c" 3 4
    ((void *)0)
-# 1565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
-   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1565, "argument is NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1565, "argument is NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1565, "argument is NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1565, "argument is NULL"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1565, "argument is NULL"); } } while(0); } while(0); return (0x102); };
+# 1598 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/uart.c"
+   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, UART_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1598, "argument is NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, UART_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1598, "argument is NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, UART_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1598, "argument is NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, UART_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1598, "argument is NULL"); } else { esp_log_write(ESP_LOG_INFO, UART_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), UART_TAG, __FUNCTION__, 1598, "argument is NULL"); } } while(0); } while(0); return (0x102); };
 
     *out_wakeup_threshold = UART[uart_num]->sleep_conf.active_threshold + (2);
     return 0;

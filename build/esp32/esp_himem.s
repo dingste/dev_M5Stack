@@ -8,7 +8,7 @@
 	.global	esp_himem_get_phys_size
 	.type	esp_himem_get_phys_size, @function
 esp_himem_get_phys_size:
-.LFB29:
+.LFB38:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/esp_himem.c"
 	.loc 1 121 0
 	entry	sp, 32
@@ -21,14 +21,14 @@ esp_himem_get_phys_size:
 	l32r	a2, .LC0
 	add.n	a2, a10, a2
 	retw.n
-.LFE29:
+.LFE38:
 	.size	esp_himem_get_phys_size, .-esp_himem_get_phys_size
 	.section	.text.esp_himem_get_free_size,"ax",@progbits
 	.align	4
 	.global	esp_himem_get_free_size
 	.type	esp_himem_get_free_size, @function
 esp_himem_get_free_size:
-.LFB30:
+.LFB39:
 	.loc 1 127 0
 	entry	sp, 32
 .LCFI1:
@@ -36,33 +36,33 @@ esp_himem_get_free_size:
 	.loc 1 133 0
 	movi.n	a2, 0
 	retw.n
-.LFE30:
+.LFE39:
 	.size	esp_himem_get_free_size, .-esp_himem_get_free_size
 	.section	.text.esp_himem_reserved_area_size,"ax",@progbits
 	.align	4
 	.global	esp_himem_reserved_area_size
 	.type	esp_himem_reserved_area_size, @function
 esp_himem_reserved_area_size:
-.LFB31:
+.LFB40:
 	.loc 1 135 0
 	entry	sp, 32
 .LCFI2:
 	.loc 1 137 0
 	movi.n	a2, 0
 	retw.n
-.LFE31:
+.LFE40:
 	.size	esp_himem_reserved_area_size, .-esp_himem_reserved_area_size
 	.section	.text.startup.esp_himem_init,"ax",@progbits
 	.align	4
 	.global	esp_himem_init
 	.type	esp_himem_init, @function
 esp_himem_init:
-.LFB32:
+.LFB41:
 	.loc 1 141 0
 	entry	sp, 32
 .LCFI3:
 	retw.n
-.LFE32:
+.LFE41:
 	.size	esp_himem_init, .-esp_himem_init
 	.section	.text.esp_himem_alloc,"ax",@progbits
 	.literal_position
@@ -71,7 +71,7 @@ esp_himem_init:
 	.global	esp_himem_alloc
 	.type	esp_himem_alloc, @function
 esp_himem_alloc:
-.LFB34:
+.LFB43:
 	.loc 1 195 0
 .LVL3:
 	.loc 1 195 0
@@ -145,7 +145,7 @@ esp_himem_alloc:
 .L14:
 	.loc 1 223 0
 	retw.n
-.LFE34:
+.LFE43:
 	.size	esp_himem_alloc, .-esp_himem_alloc
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC2:
@@ -155,14 +155,14 @@ esp_himem_alloc:
 	.section	.text.esp_himem_free,"ax",@progbits
 	.literal_position
 	.literal .LC3, .LC2
-	.literal .LC4, __func__$5292
+	.literal .LC4, __func__$5338
 	.literal .LC6, .LC5
 	.literal .LC7, spinlock
 	.align	4
 	.global	esp_himem_free
 	.type	esp_himem_free, @function
 esp_himem_free:
-.LFB35:
+.LFB44:
 	.loc 1 226 0
 .LVL18:
 	entry	sp, 32
@@ -230,7 +230,7 @@ esp_himem_free:
 	movi.n	a2, 0
 .LVL29:
 	retw.n
-.LFE35:
+.LFE44:
 	.size	esp_himem_free, .-esp_himem_free
 	.section	.rodata.str1.1
 .LC9:
@@ -241,7 +241,7 @@ esp_himem_free:
 	.string	"Himem not available!"
 	.section	.text.esp_himem_alloc_map_range,"ax",@progbits
 	.literal_position
-	.literal .LC8, __FUNCTION__$5305
+	.literal .LC8, __FUNCTION__$5351
 	.literal .LC10, .LC9
 	.literal .LC12, .LC11
 	.literal .LC14, .LC13
@@ -249,7 +249,7 @@ esp_himem_free:
 	.global	esp_himem_alloc_map_range
 	.type	esp_himem_alloc_map_range, @function
 esp_himem_alloc_map_range:
-.LFB36:
+.LFB45:
 	.loc 1 247 0
 .LVL30:
 	entry	sp, 48
@@ -271,7 +271,7 @@ esp_himem_alloc_map_range:
 	movi	a2, 0x103
 .LVL33:
 	retw.n
-.LFE36:
+.LFE45:
 	.size	esp_himem_alloc_map_range, .-esp_himem_alloc_map_range
 	.section	.rodata.str1.1
 .LC15:
@@ -279,14 +279,14 @@ esp_himem_alloc_map_range:
 	.section	.text.esp_himem_free_map_range,"ax",@progbits
 	.literal_position
 	.literal .LC16, .LC15
-	.literal .LC17, __func__$5321
+	.literal .LC17, __func__$5367
 	.literal .LC18, .LC5
 	.literal .LC19, spinlock
 	.align	4
 	.global	esp_himem_free_map_range
 	.type	esp_himem_free_map_range, @function
 esp_himem_free_map_range:
-.LFB37:
+.LFB46:
 	.loc 1 286 0
 .LVL34:
 	entry	sp, 32
@@ -349,11 +349,11 @@ esp_himem_free_map_range:
 	movi.n	a2, 0
 .LVL44:
 	retw.n
-.LFE37:
+.LFE46:
 	.size	esp_himem_free_map_range, .-esp_himem_free_map_range
 	.section	.text.esp_himem_map,"ax",@progbits
 	.literal_position
-	.literal .LC20, __FUNCTION__$5342
+	.literal .LC20, __FUNCTION__$5388
 	.literal .LC21, .LC9
 	.literal .LC22, .LC11
 	.literal .LC23, .LC13
@@ -361,7 +361,7 @@ esp_himem_free_map_range:
 	.global	esp_himem_map
 	.type	esp_himem_map, @function
 esp_himem_map:
-.LFB38:
+.LFB47:
 	.loc 1 305 0
 .LVL45:
 	entry	sp, 48
@@ -386,7 +386,7 @@ esp_himem_map:
 	.loc 1 305 0
 	.loc 1 340 0
 	retw.n
-.LFE38:
+.LFE47:
 	.size	esp_himem_map, .-esp_himem_map
 	.section	.rodata.str1.1
 .LC28:
@@ -400,7 +400,7 @@ esp_himem_map:
 	.section	.text.esp_himem_unmap,"ax",@progbits
 	.literal_position
 	.literal .LC24, -1069547520
-	.literal .LC25, __FUNCTION__$5364
+	.literal .LC25, __FUNCTION__$5410
 	.literal .LC26, .LC9
 	.literal .LC27, .LC11
 	.literal .LC29, .LC28
@@ -409,13 +409,13 @@ esp_himem_map:
 	.literal .LC34, .LC33
 	.literal .LC35, spinlock
 	.literal .LC37, .LC36
-	.literal .LC38, __func__$5367
+	.literal .LC38, __func__$5413
 	.literal .LC39, .LC5
 	.align	4
 	.global	esp_himem_unmap
 	.type	esp_himem_unmap, @function
 esp_himem_unmap:
-.LFB39:
+.LFB48:
 	.loc 1 343 0
 .LVL50:
 	entry	sp, 48
@@ -514,37 +514,37 @@ esp_himem_unmap:
 	mov.n	a2, a4
 	.loc 1 364 0
 	retw.n
-.LFE39:
+.LFE48:
 	.size	esp_himem_unmap, .-esp_himem_unmap
+	.section	.rodata.__func__$5413,"a",@progbits
+	.type	__func__$5413, @object
+	.size	__func__$5413, 16
+__func__$5413:
+	.string	"esp_himem_unmap"
+	.section	.rodata.__FUNCTION__$5410,"a",@progbits
+	.type	__FUNCTION__$5410, @object
+	.size	__FUNCTION__$5410, 16
+__FUNCTION__$5410:
+	.string	"esp_himem_unmap"
+	.section	.rodata.__FUNCTION__$5388,"a",@progbits
+	.type	__FUNCTION__$5388, @object
+	.size	__FUNCTION__$5388, 14
+__FUNCTION__$5388:
+	.string	"esp_himem_map"
 	.section	.rodata.__func__$5367,"a",@progbits
 	.type	__func__$5367, @object
-	.size	__func__$5367, 16
+	.size	__func__$5367, 25
 __func__$5367:
-	.string	"esp_himem_unmap"
-	.section	.rodata.__FUNCTION__$5364,"a",@progbits
-	.type	__FUNCTION__$5364, @object
-	.size	__FUNCTION__$5364, 16
-__FUNCTION__$5364:
-	.string	"esp_himem_unmap"
-	.section	.rodata.__FUNCTION__$5342,"a",@progbits
-	.type	__FUNCTION__$5342, @object
-	.size	__FUNCTION__$5342, 14
-__FUNCTION__$5342:
-	.string	"esp_himem_map"
-	.section	.rodata.__func__$5321,"a",@progbits
-	.type	__func__$5321, @object
-	.size	__func__$5321, 25
-__func__$5321:
 	.string	"esp_himem_free_map_range"
-	.section	.rodata.__FUNCTION__$5305,"a",@progbits
-	.type	__FUNCTION__$5305, @object
-	.size	__FUNCTION__$5305, 26
-__FUNCTION__$5305:
+	.section	.rodata.__FUNCTION__$5351,"a",@progbits
+	.type	__FUNCTION__$5351, @object
+	.size	__FUNCTION__$5351, 26
+__FUNCTION__$5351:
 	.string	"esp_himem_alloc_map_range"
-	.section	.rodata.__func__$5292,"a",@progbits
-	.type	__func__$5292, @object
-	.size	__func__$5292, 15
-__func__$5292:
+	.section	.rodata.__func__$5338,"a",@progbits
+	.type	__func__$5338, @object
+	.size	__func__$5338, 15
+__func__$5338:
 	.string	"esp_himem_free"
 	.section	.data.spinlock,"aw",@progbits
 	.align	4
@@ -572,10 +572,10 @@ spinlock:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.byte	0x4
-	.4byte	.LCFI0-.LFB29
+	.4byte	.LCFI0-.LFB38
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -584,10 +584,10 @@ spinlock:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI1-.LFB30
+	.4byte	.LCFI1-.LFB39
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -596,10 +596,10 @@ spinlock:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI2-.LFB31
+	.4byte	.LCFI2-.LFB40
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -608,10 +608,10 @@ spinlock:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.byte	0x4
-	.4byte	.LCFI3-.LFB32
+	.4byte	.LCFI3-.LFB41
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -620,10 +620,10 @@ spinlock:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.byte	0x4
-	.4byte	.LCFI4-.LFB34
+	.4byte	.LCFI4-.LFB43
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -632,10 +632,10 @@ spinlock:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.byte	0x4
-	.4byte	.LCFI5-.LFB35
+	.4byte	.LCFI5-.LFB44
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -644,10 +644,10 @@ spinlock:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.byte	0x4
-	.4byte	.LCFI6-.LFB36
+	.4byte	.LCFI6-.LFB45
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -656,10 +656,10 @@ spinlock:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.byte	0x4
-	.4byte	.LCFI7-.LFB37
+	.4byte	.LCFI7-.LFB46
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -668,10 +668,10 @@ spinlock:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI8-.LFB38
+	.4byte	.LCFI8-.LFB47
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -680,10 +680,10 @@ spinlock:
 	.4byte	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI9-.LFB39
+	.4byte	.LCFI9-.LFB48
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1048,8 +1048,8 @@ spinlock:
 	.byte	0x1
 	.byte	0x78
 	.4byte	0x2c
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2d8
@@ -1068,8 +1068,8 @@ spinlock:
 	.byte	0x1
 	.byte	0x7e
 	.4byte	0x2c
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2fe
@@ -1085,16 +1085,16 @@ spinlock:
 	.byte	0x1
 	.byte	0x87
 	.4byte	0x2c
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x1b
 	.4byte	.LASF94
 	.byte	0x1
 	.byte	0x8c
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x353
@@ -1182,8 +1182,8 @@ spinlock:
 	.byte	0x1
 	.byte	0xc2
 	.4byte	0xc8
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x4ad
@@ -1313,8 +1313,8 @@ spinlock:
 	.byte	0x1
 	.byte	0xe1
 	.4byte	0xc8
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x5aa
@@ -1329,7 +1329,7 @@ spinlock:
 	.4byte	0x5aa
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5292
+	.4byte	__func__$5338
 	.uleb128 0x1d
 	.4byte	.LASF62
 	.4byte	0x5af
@@ -1363,7 +1363,7 @@ spinlock:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5292
+	.4byte	__func__$5338
 	.uleb128 0x27
 	.uleb128 0x1
 	.byte	0x5d
@@ -1420,8 +1420,8 @@ spinlock:
 	.byte	0x1
 	.byte	0xf6
 	.4byte	0xc8
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x65f
@@ -1443,7 +1443,7 @@ spinlock:
 	.4byte	0x675
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$5305
+	.4byte	__FUNCTION__$5351
 	.uleb128 0x1c
 	.4byte	.LASF56
 	.byte	0x1
@@ -1493,7 +1493,7 @@ spinlock:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$5305
+	.4byte	__FUNCTION__$5351
 	.uleb128 0x27
 	.uleb128 0x2
 	.byte	0x71
@@ -1523,8 +1523,8 @@ spinlock:
 	.byte	0x1
 	.2byte	0x11d
 	.4byte	0xc8
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x751
@@ -1539,7 +1539,7 @@ spinlock:
 	.4byte	0x761
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5321
+	.4byte	__func__$5367
 	.uleb128 0x1d
 	.4byte	.LASF62
 	.4byte	0x766
@@ -1573,7 +1573,7 @@ spinlock:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5321
+	.4byte	__func__$5367
 	.uleb128 0x27
 	.uleb128 0x1
 	.byte	0x5d
@@ -1634,8 +1634,8 @@ spinlock:
 	.byte	0x1
 	.2byte	0x130
 	.4byte	0xc8
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x87f
@@ -1726,7 +1726,7 @@ spinlock:
 	.4byte	0x895
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$5342
+	.4byte	__FUNCTION__$5388
 	.uleb128 0x1d
 	.4byte	.LASF44
 	.4byte	0x89a
@@ -1764,7 +1764,7 @@ spinlock:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$5342
+	.4byte	__FUNCTION__$5388
 	.uleb128 0x27
 	.uleb128 0x2
 	.byte	0x71
@@ -1793,8 +1793,8 @@ spinlock:
 	.byte	0x1
 	.2byte	0x156
 	.4byte	0xc8
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xa19
@@ -1839,13 +1839,13 @@ spinlock:
 	.4byte	0xa19
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$5364
+	.4byte	__FUNCTION__$5410
 	.uleb128 0x28
 	.4byte	.LASF44
 	.4byte	0xa1e
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5367
+	.4byte	__func__$5413
 	.uleb128 0x29
 	.4byte	.LBB29
 	.4byte	.LBE29-.LBB29
@@ -1884,7 +1884,7 @@ spinlock:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5367
+	.4byte	__func__$5413
 	.uleb128 0x27
 	.uleb128 0x1
 	.byte	0x5d
@@ -1932,7 +1932,7 @@ spinlock:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$5364
+	.4byte	__FUNCTION__$5410
 	.uleb128 0x27
 	.uleb128 0x2
 	.byte	0x71
@@ -2030,12 +2030,12 @@ spinlock:
 	.4byte	.LASF83
 	.4byte	.LASF83
 	.byte	0x6
-	.byte	0xda
+	.byte	0xf4
 	.uleb128 0x38
 	.4byte	.LASF84
 	.4byte	.LASF84
 	.byte	0x6
-	.byte	0xd9
+	.byte	0xf3
 	.uleb128 0x38
 	.4byte	.LASF85
 	.4byte	.LASF85
@@ -2868,7 +2868,7 @@ spinlock:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL17
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -2914,7 +2914,7 @@ spinlock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL29
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2940,7 +2940,7 @@ spinlock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL33
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2954,7 +2954,7 @@ spinlock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL44
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2980,7 +2980,7 @@ spinlock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL49
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3016,7 +3016,7 @@ spinlock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL62
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3036,7 +3036,7 @@ spinlock:
 	.sleb128 1069547520
 	.byte	0x9f
 	.4byte	.LVL56
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3061,7 +3061,7 @@ spinlock:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL59
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3097,7 +3097,7 @@ spinlock:
 	.sleb128 -32767
 	.byte	0x9f
 	.4byte	.LVL61
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x9
 	.byte	0xf3
 	.uleb128 0x1
@@ -3255,7 +3255,7 @@ spinlock:
 	.byte	0x25
 	.byte	0x9f
 	.4byte	.LVL59
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x6
 	.byte	0xf3
 	.uleb128 0x1
@@ -3273,50 +3273,50 @@ spinlock:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
 	.4byte	.LFB38
 	.4byte	.LFE38-.LFB38
 	.4byte	.LFB39
 	.4byte	.LFE39-.LFB39
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB29
-	.4byte	.LFE29
-	.4byte	.LFB30
-	.4byte	.LFE30
-	.4byte	.LFB31
-	.4byte	.LFE31
-	.4byte	.LFB32
-	.4byte	.LFE32
-	.4byte	.LFB34
-	.4byte	.LFE34
-	.4byte	.LFB35
-	.4byte	.LFE35
-	.4byte	.LFB36
-	.4byte	.LFE36
-	.4byte	.LFB37
-	.4byte	.LFE37
 	.4byte	.LFB38
 	.4byte	.LFE38
 	.4byte	.LFB39
 	.4byte	.LFE39
+	.4byte	.LFB40
+	.4byte	.LFE40
+	.4byte	.LFB41
+	.4byte	.LFE41
+	.4byte	.LFB43
+	.4byte	.LFE43
+	.4byte	.LFB44
+	.4byte	.LFE44
+	.4byte	.LFB45
+	.4byte	.LFE45
+	.4byte	.LFB46
+	.4byte	.LFE46
+	.4byte	.LFB47
+	.4byte	.LFE47
+	.4byte	.LFB48
+	.4byte	.LFE48
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

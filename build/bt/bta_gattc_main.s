@@ -9,7 +9,7 @@
 	.global	bta_gattc_sm_execute
 	.type	bta_gattc_sm_execute, @function
 bta_gattc_sm_execute:
-.LFB30:
+.LFB39:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/bta/gatt/bta_gattc_main.c"
 	.loc 1 262 0
 .LVL0:
@@ -63,7 +63,7 @@ bta_gattc_sm_execute:
 	.loc 1 309 0
 	mov.n	a2, a8
 	retw.n
-.LFE30:
+.LFE39:
 	.size	bta_gattc_sm_execute, .-bta_gattc_sm_execute
 	.section	.text.bta_gattc_hdl_event,"ax",@progbits
 	.literal_position
@@ -75,7 +75,7 @@ bta_gattc_sm_execute:
 	.global	bta_gattc_hdl_event
 	.type	bta_gattc_hdl_event, @function
 bta_gattc_hdl_event:
-.LFB31:
+.LFB40:
 	.loc 1 322 0
 .LVL12:
 	entry	sp, 32
@@ -289,7 +289,7 @@ bta_gattc_hdl_event:
 	mov.n	a2, a10
 .LVL41:
 	retw.n
-.LFE31:
+.LFE40:
 	.size	bta_gattc_hdl_event, .-bta_gattc_hdl_event
 	.section	.text.bta_gattc_deinit,"ax",@progbits
 	.literal_position
@@ -298,7 +298,7 @@ bta_gattc_hdl_event:
 	.global	bta_gattc_deinit
 	.type	bta_gattc_deinit, @function
 bta_gattc_deinit:
-.LFB32:
+.LFB41:
 	.loc 1 506 0
 	entry	sp, 32
 .LCFI2:
@@ -319,7 +319,7 @@ bta_gattc_deinit:
 	s32i.n	a8, a2, 0
 .L34:
 	retw.n
-.LFE32:
+.LFE41:
 	.size	bta_gattc_deinit, .-bta_gattc_deinit
 	.comm	bta_gattc_cb_ptr,4,4
 	.global	bta_gattc_st_tbl
@@ -541,10 +541,10 @@ bta_gattc_action:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI0-.LFB30
+	.4byte	.LCFI0-.LFB39
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -553,10 +553,10 @@ bta_gattc_action:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI1-.LFB31
+	.4byte	.LCFI1-.LFB40
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -565,10 +565,10 @@ bta_gattc_action:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.byte	0x4
-	.4byte	.LCFI2-.LFB32
+	.4byte	.LCFI2-.LFB41
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -583,7 +583,7 @@ bta_gattc_action:
 	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_ble_api.h"
 	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/bta/include/bta/bta_api.h"
 	.file 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/gatt_api.h"
-	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/list.h"
+	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/list.h"
 	.file 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/bta/include/bta/bta_gatt_api.h"
 	.file 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/bta/gatt/include/bta_gattc_int.h"
 	.file 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/bta/include/bta/bta_sys.h"
@@ -664,342 +664,342 @@ bta_gattc_action:
 	.byte	0x3
 	.byte	0x2d
 	.4byte	0x5e
-	.uleb128 0x3
+	.uleb128 0x2
+	.byte	0x4
+	.byte	0x5
 	.4byte	.LASF13
+	.uleb128 0x2
 	.byte	0x4
-	.byte	0x21
-	.4byte	0x7e
-	.uleb128 0x3
+	.byte	0x7
 	.4byte	.LASF14
+	.uleb128 0x2
 	.byte	0x4
-	.byte	0x22
-	.4byte	0x89
-	.uleb128 0x3
+	.byte	0x7
 	.4byte	.LASF15
-	.byte	0x4
-	.byte	0x23
-	.4byte	0x94
-	.uleb128 0x3
+	.uleb128 0x2
+	.byte	0x1
+	.byte	0x8
 	.4byte	.LASF16
-	.byte	0x4
-	.byte	0x29
-	.4byte	0xcb
-	.uleb128 0x2
-	.byte	0x1
-	.byte	0x2
-	.4byte	.LASF17
 	.uleb128 0x5
-	.byte	0x8
-	.byte	0x4
-	.byte	0xc6
-	.4byte	0x117
-	.uleb128 0x6
-	.4byte	.LASF18
-	.byte	0x4
-	.byte	0xc7
-	.4byte	0x89
-	.byte	0
-	.uleb128 0x7
-	.string	"len"
-	.byte	0x4
-	.byte	0xc8
-	.4byte	0x89
-	.byte	0x2
-	.uleb128 0x6
-	.4byte	.LASF19
-	.byte	0x4
-	.byte	0xc9
-	.4byte	0x89
-	.byte	0x4
-	.uleb128 0x6
-	.4byte	.LASF20
-	.byte	0x4
-	.byte	0xca
-	.4byte	0x89
-	.byte	0x6
-	.uleb128 0x6
-	.4byte	.LASF21
-	.byte	0x4
-	.byte	0xcb
-	.4byte	0x117
-	.byte	0x8
-	.byte	0
-	.uleb128 0x8
-	.4byte	0x7e
-	.4byte	0x126
-	.uleb128 0x9
-	.4byte	0x126
-	.byte	0
-	.uleb128 0x2
-	.byte	0x4
-	.byte	0x7
-	.4byte	.LASF22
-	.uleb128 0x3
-	.4byte	.LASF23
-	.byte	0x4
-	.byte	0xcc
-	.4byte	0xd2
-	.uleb128 0xa
-	.4byte	.LASF24
-	.byte	0x4
-	.2byte	0x132
-	.4byte	0x144
-	.uleb128 0x8
-	.4byte	0x9f
-	.4byte	0x154
-	.uleb128 0xb
-	.4byte	0x126
-	.byte	0x5
-	.byte	0
-	.uleb128 0xa
-	.4byte	.LASF25
-	.byte	0x4
-	.2byte	0x133
-	.4byte	0x160
-	.uleb128 0xc
-	.byte	0x4
-	.4byte	0x9f
-	.uleb128 0x8
-	.4byte	0x9f
-	.4byte	0x176
-	.uleb128 0xb
-	.4byte	0x126
-	.byte	0xf
-	.byte	0
-	.uleb128 0xd
-	.byte	0x10
-	.byte	0x4
-	.2byte	0x1ab
-	.4byte	0x1a4
-	.uleb128 0xe
-	.4byte	.LASF26
-	.byte	0x4
-	.2byte	0x1ac
-	.4byte	0xaa
-	.uleb128 0xe
-	.4byte	.LASF27
-	.byte	0x4
-	.2byte	0x1ad
-	.4byte	0xb5
-	.uleb128 0xe
-	.4byte	.LASF28
-	.byte	0x4
-	.2byte	0x1ae
-	.4byte	0x166
-	.byte	0
-	.uleb128 0xf
-	.byte	0x14
-	.byte	0x4
-	.2byte	0x1a4
-	.4byte	0x1c7
-	.uleb128 0x10
-	.string	"len"
-	.byte	0x4
-	.2byte	0x1a9
-	.4byte	0xaa
-	.byte	0
-	.uleb128 0x10
-	.string	"uu"
-	.byte	0x4
-	.2byte	0x1af
-	.4byte	0x176
-	.byte	0x4
-	.byte	0
-	.uleb128 0xa
-	.4byte	.LASF29
-	.byte	0x4
-	.2byte	0x1b1
-	.4byte	0x1a4
-	.uleb128 0xa
-	.4byte	.LASF30
-	.byte	0x4
-	.2byte	0x1fe
-	.4byte	0x9f
-	.uleb128 0x2
-	.byte	0x1
-	.byte	0x8
-	.4byte	.LASF31
-	.uleb128 0x2
-	.byte	0x4
-	.byte	0x5
-	.4byte	.LASF32
-	.uleb128 0x2
-	.byte	0x4
-	.byte	0x7
-	.4byte	.LASF33
-	.uleb128 0x11
 	.byte	0x4
 	.4byte	0x69
 	.byte	0x5
 	.byte	0x1f
-	.4byte	0x225
-	.uleb128 0x12
-	.4byte	.LASF34
+	.4byte	0xec
+	.uleb128 0x6
+	.4byte	.LASF17
 	.byte	0
-	.uleb128 0x12
-	.4byte	.LASF35
+	.uleb128 0x6
+	.4byte	.LASF18
 	.byte	0x1
-	.uleb128 0x12
-	.4byte	.LASF36
+	.uleb128 0x6
+	.4byte	.LASF19
 	.byte	0x2
-	.uleb128 0x12
-	.4byte	.LASF37
+	.uleb128 0x6
+	.4byte	.LASF20
 	.byte	0x3
-	.uleb128 0x12
-	.4byte	.LASF38
+	.uleb128 0x6
+	.4byte	.LASF21
 	.byte	0x4
-	.uleb128 0x12
-	.4byte	.LASF39
+	.uleb128 0x6
+	.4byte	.LASF22
+	.byte	0x5
+	.byte	0
+	.uleb128 0x3
+	.4byte	.LASF23
+	.byte	0x4
+	.byte	0x1a
+	.4byte	0x7e
+	.uleb128 0x3
+	.4byte	.LASF24
+	.byte	0x4
+	.byte	0x1b
+	.4byte	0x89
+	.uleb128 0x3
+	.4byte	.LASF25
+	.byte	0x4
+	.byte	0x1c
+	.4byte	0x94
+	.uleb128 0x3
+	.4byte	.LASF26
+	.byte	0x4
+	.byte	0x22
+	.4byte	0x118
+	.uleb128 0x2
+	.byte	0x1
+	.byte	0x2
+	.4byte	.LASF27
+	.uleb128 0x7
+	.byte	0x8
+	.byte	0x4
+	.byte	0xbf
+	.4byte	0x164
+	.uleb128 0x8
+	.4byte	.LASF28
+	.byte	0x4
+	.byte	0xc0
+	.4byte	0x89
+	.byte	0
+	.uleb128 0x9
+	.string	"len"
+	.byte	0x4
+	.byte	0xc1
+	.4byte	0x89
+	.byte	0x2
+	.uleb128 0x8
+	.4byte	.LASF29
+	.byte	0x4
+	.byte	0xc2
+	.4byte	0x89
+	.byte	0x4
+	.uleb128 0x8
+	.4byte	.LASF30
+	.byte	0x4
+	.byte	0xc3
+	.4byte	0x89
+	.byte	0x6
+	.uleb128 0x8
+	.4byte	.LASF31
+	.byte	0x4
+	.byte	0xc4
+	.4byte	0x164
+	.byte	0x8
+	.byte	0
+	.uleb128 0xa
+	.4byte	0x7e
+	.4byte	0x173
+	.uleb128 0xb
+	.4byte	0xa6
+	.byte	0
+	.uleb128 0x3
+	.4byte	.LASF32
+	.byte	0x4
+	.byte	0xc5
+	.4byte	0x11f
+	.uleb128 0xc
+	.4byte	.LASF33
+	.byte	0x4
+	.2byte	0x12b
+	.4byte	0x18a
+	.uleb128 0xa
+	.4byte	0xec
+	.4byte	0x19a
+	.uleb128 0xd
+	.4byte	0xa6
 	.byte	0x5
 	.byte	0
 	.uleb128 0xc
+	.4byte	.LASF34
 	.byte	0x4
-	.4byte	0x12d
+	.2byte	0x12c
+	.4byte	0x1a6
+	.uleb128 0xe
+	.byte	0x4
+	.4byte	0xec
+	.uleb128 0xa
+	.4byte	0xec
+	.4byte	0x1bc
+	.uleb128 0xd
+	.4byte	0xa6
+	.byte	0xf
+	.byte	0
+	.uleb128 0xf
+	.byte	0x10
+	.byte	0x4
+	.2byte	0x1a4
+	.4byte	0x1ea
+	.uleb128 0x10
+	.4byte	.LASF35
+	.byte	0x4
+	.2byte	0x1a5
+	.4byte	0xf7
+	.uleb128 0x10
+	.4byte	.LASF36
+	.byte	0x4
+	.2byte	0x1a6
+	.4byte	0x102
+	.uleb128 0x10
+	.4byte	.LASF37
+	.byte	0x4
+	.2byte	0x1a7
+	.4byte	0x1ac
+	.byte	0
+	.uleb128 0x11
+	.byte	0x14
+	.byte	0x4
+	.2byte	0x19d
+	.4byte	0x20d
+	.uleb128 0x12
+	.string	"len"
+	.byte	0x4
+	.2byte	0x1a2
+	.4byte	0xf7
+	.byte	0
+	.uleb128 0x12
+	.string	"uu"
+	.byte	0x4
+	.2byte	0x1a8
+	.4byte	0x1bc
+	.byte	0x4
+	.byte	0
+	.uleb128 0xc
+	.4byte	.LASF38
+	.byte	0x4
+	.2byte	0x1aa
+	.4byte	0x1ea
+	.uleb128 0xc
+	.4byte	.LASF39
+	.byte	0x4
+	.2byte	0x1f7
+	.4byte	0xec
+	.uleb128 0xe
+	.byte	0x4
+	.4byte	0x173
 	.uleb128 0x13
 	.byte	0x4
 	.4byte	0x69
 	.byte	0x6
 	.2byte	0x1c2
 	.4byte	0x353
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF40
 	.byte	0
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF41
 	.byte	0x1
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF42
 	.byte	0x2
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF43
 	.byte	0x3
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF44
 	.byte	0x4
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF45
 	.byte	0x5
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF46
 	.byte	0x6
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF47
 	.byte	0x7
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF48
 	.byte	0x8
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF49
 	.byte	0x9
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF50
 	.byte	0xa
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF51
 	.byte	0xb
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF52
 	.byte	0xc
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF53
 	.byte	0xd
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF54
 	.byte	0xe
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF55
 	.byte	0xf
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF56
 	.byte	0x10
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF57
 	.byte	0x11
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF58
 	.byte	0x12
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF59
 	.byte	0x13
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF60
 	.byte	0x14
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF61
 	.byte	0x15
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF62
 	.byte	0x16
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF63
 	.byte	0x17
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF64
 	.byte	0x18
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF65
 	.byte	0x19
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF66
 	.byte	0x1a
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF67
 	.byte	0x1b
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF68
 	.byte	0x1c
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF69
 	.byte	0x1d
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF70
 	.byte	0x1e
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF71
 	.byte	0x1f
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF72
 	.byte	0x20
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF73
 	.byte	0x21
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF74
 	.byte	0x22
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF75
 	.byte	0x23
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF76
 	.byte	0x24
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF77
 	.byte	0x25
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF78
 	.byte	0x26
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF79
 	.byte	0x27
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF80
 	.byte	0x28
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF81
 	.byte	0x29
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF82
 	.byte	0x2a
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF83
 	.byte	0x2b
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF84
 	.byte	0x2c
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF85
 	.byte	0x2d
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF86
 	.byte	0x2e
 	.byte	0
@@ -1009,70 +1009,70 @@ bta_gattc_action:
 	.byte	0x6
 	.2byte	0x6ec
 	.4byte	0x38b
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF87
 	.byte	0
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF88
 	.byte	0x1
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF89
 	.byte	0x2
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF90
 	.byte	0x3
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF91
 	.byte	0x4
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF92
 	.byte	0x5
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF93
 	.byte	0x6
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF94
 	.byte	0x7
-	.2byte	0x207
-	.4byte	0x9f
-	.uleb128 0x8
-	.4byte	0x9f
+	.2byte	0x209
+	.4byte	0xec
+	.uleb128 0xa
+	.4byte	0xec
 	.4byte	0x3a7
-	.uleb128 0xb
-	.4byte	0x126
+	.uleb128 0xd
+	.4byte	0xa6
 	.byte	0x1
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
-	.4byte	0x1c7
+	.4byte	0x20d
 	.uleb128 0x3
 	.4byte	.LASF95
 	.byte	0x8
 	.byte	0xd5
-	.4byte	0x1d3
+	.4byte	0x219
 	.uleb128 0x3
 	.4byte	.LASF96
 	.byte	0x9
 	.byte	0x51
-	.4byte	0x9f
+	.4byte	0xec
 	.uleb128 0x3
 	.4byte	.LASF97
 	.byte	0x9
 	.byte	0x7e
-	.4byte	0xaa
-	.uleb128 0x8
-	.4byte	0xaa
+	.4byte	0xf7
+	.uleb128 0xa
+	.4byte	0xf7
 	.4byte	0x3de
-	.uleb128 0xb
-	.4byte	0x126
+	.uleb128 0xd
+	.4byte	0xa6
 	.byte	0x9
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF98
 	.byte	0x9
 	.2byte	0x139
-	.4byte	0x9f
+	.4byte	0xec
 	.uleb128 0x14
 	.2byte	0x262
 	.byte	0x9
@@ -1082,25 +1082,25 @@ bta_gattc_action:
 	.4byte	.LASF99
 	.byte	0x9
 	.2byte	0x13e
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LASF100
 	.byte	0x9
 	.2byte	0x13f
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x2
 	.uleb128 0x15
-	.4byte	.LASF19
+	.4byte	.LASF29
 	.byte	0x9
 	.2byte	0x140
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x4
-	.uleb128 0x10
+	.uleb128 0x12
 	.string	"len"
 	.byte	0x9
 	.2byte	0x141
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x6
 	.uleb128 0x15
 	.4byte	.LASF101
@@ -1115,14 +1115,14 @@ bta_gattc_action:
 	.4byte	0x443
 	.byte	0x9
 	.byte	0
-	.uleb128 0x8
-	.4byte	0x9f
+	.uleb128 0xa
+	.4byte	0xec
 	.4byte	0x454
 	.uleb128 0x16
-	.4byte	0x126
+	.4byte	0xa6
 	.2byte	0x257
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF103
 	.byte	0x9
 	.2byte	0x144
@@ -1132,7 +1132,7 @@ bta_gattc_action:
 	.byte	0x9
 	.2byte	0x1e7
 	.4byte	0x48f
-	.uleb128 0xe
+	.uleb128 0x10
 	.4byte	.LASF104
 	.byte	0x9
 	.2byte	0x1e8
@@ -1141,14 +1141,14 @@ bta_gattc_action:
 	.string	"mtu"
 	.byte	0x9
 	.2byte	0x1e9
-	.4byte	0xaa
-	.uleb128 0xe
+	.4byte	0xf7
+	.uleb128 0x10
 	.4byte	.LASF100
 	.byte	0x9
 	.2byte	0x1ea
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF105
 	.byte	0x9
 	.2byte	0x1eb
@@ -1160,22 +1160,22 @@ bta_gattc_action:
 	.4byte	0x4a6
 	.uleb128 0x19
 	.4byte	.LASF106
-	.uleb128 0x5
+	.uleb128 0x7
 	.byte	0x15
 	.byte	0xb
 	.byte	0x52
 	.4byte	0x4cc
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF107
 	.byte	0xb
 	.byte	0x53
-	.4byte	0x1c7
+	.4byte	0x20d
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF108
 	.byte	0xb
 	.byte	0x54
-	.4byte	0x9f
+	.4byte	0xec
 	.byte	0x14
 	.byte	0
 	.uleb128 0x3
@@ -1187,12 +1187,12 @@ bta_gattc_action:
 	.4byte	.LASF110
 	.byte	0xb
 	.byte	0x8d
-	.4byte	0x9f
+	.4byte	0xec
 	.uleb128 0x3
 	.4byte	.LASF111
 	.byte	0xb
 	.byte	0xbd
-	.4byte	0x9f
+	.4byte	0xec
 	.uleb128 0x3
 	.4byte	.LASF112
 	.byte	0xb
@@ -1202,23 +1202,23 @@ bta_gattc_action:
 	.4byte	.LASF113
 	.byte	0xb
 	.byte	0xc1
-	.4byte	0x9f
-	.uleb128 0x5
+	.4byte	0xec
+	.uleb128 0x7
 	.byte	0x8
 	.byte	0xb
 	.byte	0xdf
 	.4byte	0x524
-	.uleb128 0x7
+	.uleb128 0x9
 	.string	"len"
 	.byte	0xb
 	.byte	0xe0
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF114
 	.byte	0xb
 	.byte	0xe1
-	.4byte	0x160
+	.4byte	0x1a6
 	.byte	0x4
 	.byte	0
 	.uleb128 0x3
@@ -1230,18 +1230,18 @@ bta_gattc_action:
 	.4byte	.LASF116
 	.byte	0xb
 	.byte	0xe8
-	.4byte	0x9f
+	.4byte	0xec
 	.uleb128 0x3
 	.4byte	.LASF117
 	.byte	0xb
 	.byte	0xf4
-	.4byte	0xaa
-	.uleb128 0xa
+	.4byte	0xf7
+	.uleb128 0xc
 	.4byte	.LASF118
 	.byte	0xb
 	.2byte	0x10a
 	.4byte	0x3de
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0x18
 	.byte	0xb
 	.2byte	0x122
@@ -1262,15 +1262,15 @@ bta_gattc_action:
 	.4byte	.LASF121
 	.byte	0xb
 	.2byte	0x125
-	.4byte	0x1c7
+	.4byte	0x20d
 	.byte	0x4
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF122
 	.byte	0xb
 	.2byte	0x126
 	.4byte	0x551
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0xc
 	.byte	0xb
 	.2byte	0x128
@@ -1279,7 +1279,7 @@ bta_gattc_action:
 	.4byte	.LASF99
 	.byte	0xb
 	.2byte	0x129
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LASF119
@@ -1291,7 +1291,7 @@ bta_gattc_action:
 	.4byte	.LASF100
 	.byte	0xb
 	.2byte	0x12b
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x4
 	.uleb128 0x15
 	.4byte	.LASF114
@@ -1300,15 +1300,15 @@ bta_gattc_action:
 	.4byte	0x5cc
 	.byte	0x8
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0x524
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF123
 	.byte	0xb
 	.2byte	0x12d
 	.4byte	0x58e
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0x8
 	.byte	0xb
 	.2byte	0x12f
@@ -1317,7 +1317,7 @@ bta_gattc_action:
 	.4byte	.LASF99
 	.byte	0xb
 	.2byte	0x130
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LASF119
@@ -1329,21 +1329,21 @@ bta_gattc_action:
 	.4byte	.LASF100
 	.byte	0xb
 	.2byte	0x132
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x4
 	.uleb128 0x15
-	.4byte	.LASF19
+	.4byte	.LASF29
 	.byte	0xb
 	.2byte	0x133
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x6
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF124
 	.byte	0xb
 	.2byte	0x134
 	.4byte	0x5de
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0x4
 	.byte	0xb
 	.2byte	0x136
@@ -1352,7 +1352,7 @@ bta_gattc_action:
 	.4byte	.LASF99
 	.byte	0xb
 	.2byte	0x137
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LASF119
@@ -1361,12 +1361,12 @@ bta_gattc_action:
 	.4byte	0x4d7
 	.byte	0x2
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF125
 	.byte	0xb
 	.2byte	0x139
 	.4byte	0x628
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0x4
 	.byte	0xb
 	.2byte	0x13b
@@ -1375,7 +1375,7 @@ bta_gattc_action:
 	.4byte	.LASF99
 	.byte	0xb
 	.2byte	0x13c
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LASF119
@@ -1387,15 +1387,15 @@ bta_gattc_action:
 	.4byte	.LASF126
 	.byte	0xb
 	.2byte	0x13e
-	.4byte	0x9f
+	.4byte	0xec
 	.byte	0x3
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF127
 	.byte	0xb
 	.2byte	0x13f
 	.4byte	0x658
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0x1c
 	.byte	0xb
 	.2byte	0x141
@@ -1404,19 +1404,19 @@ bta_gattc_action:
 	.4byte	.LASF99
 	.byte	0xb
 	.2byte	0x142
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LASF128
 	.byte	0xb
 	.2byte	0x143
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x2
 	.uleb128 0x15
 	.4byte	.LASF129
 	.byte	0xb
 	.2byte	0x144
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x4
 	.uleb128 0x15
 	.4byte	.LASF130
@@ -1428,15 +1428,15 @@ bta_gattc_action:
 	.4byte	.LASF131
 	.byte	0xb
 	.2byte	0x146
-	.4byte	0xcb
+	.4byte	0x118
 	.byte	0x1b
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF132
 	.byte	0xb
 	.2byte	0x147
 	.4byte	0x695
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0x6
 	.byte	0xb
 	.2byte	0x149
@@ -1445,7 +1445,7 @@ bta_gattc_action:
 	.4byte	.LASF99
 	.byte	0xb
 	.2byte	0x14a
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LASF119
@@ -1453,19 +1453,19 @@ bta_gattc_action:
 	.2byte	0x14b
 	.4byte	0x4d7
 	.byte	0x2
-	.uleb128 0x10
+	.uleb128 0x12
 	.string	"mtu"
 	.byte	0xb
 	.2byte	0x14c
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x4
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF133
 	.byte	0xb
 	.2byte	0x14d
 	.4byte	0x6ec
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0xe
 	.byte	0xb
 	.2byte	0x14f
@@ -1480,7 +1480,7 @@ bta_gattc_action:
 	.4byte	.LASF99
 	.byte	0xb
 	.2byte	0x151
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x2
 	.uleb128 0x15
 	.4byte	.LASF120
@@ -1492,7 +1492,7 @@ bta_gattc_action:
 	.4byte	.LASF134
 	.byte	0xb
 	.2byte	0x153
-	.4byte	0x138
+	.4byte	0x17e
 	.byte	0x5
 	.uleb128 0x15
 	.4byte	.LASF135
@@ -1500,19 +1500,19 @@ bta_gattc_action:
 	.2byte	0x154
 	.4byte	0x3ad
 	.byte	0xb
-	.uleb128 0x10
+	.uleb128 0x12
 	.string	"mtu"
 	.byte	0xb
 	.2byte	0x155
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0xc
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF136
 	.byte	0xb
 	.2byte	0x156
 	.4byte	0x729
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0xe
 	.byte	0xb
 	.2byte	0x158
@@ -1527,7 +1527,7 @@ bta_gattc_action:
 	.4byte	.LASF99
 	.byte	0xb
 	.2byte	0x15a
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x2
 	.uleb128 0x15
 	.4byte	.LASF120
@@ -1539,7 +1539,7 @@ bta_gattc_action:
 	.4byte	.LASF134
 	.byte	0xb
 	.2byte	0x15c
-	.4byte	0x138
+	.4byte	0x17e
 	.byte	0x5
 	.uleb128 0x15
 	.4byte	.LASF137
@@ -1548,7 +1548,7 @@ bta_gattc_action:
 	.4byte	0x53a
 	.byte	0xc
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF138
 	.byte	0xb
 	.2byte	0x15e
@@ -1562,25 +1562,25 @@ bta_gattc_action:
 	.4byte	.LASF99
 	.byte	0xb
 	.2byte	0x161
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0
-	.uleb128 0x10
+	.uleb128 0x12
 	.string	"bda"
 	.byte	0xb
 	.2byte	0x162
-	.4byte	0x138
+	.4byte	0x17e
 	.byte	0x2
 	.uleb128 0x15
 	.4byte	.LASF100
 	.byte	0xb
 	.2byte	0x163
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x8
-	.uleb128 0x10
+	.uleb128 0x12
 	.string	"len"
 	.byte	0xb
 	.2byte	0x164
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0xa
 	.uleb128 0x15
 	.4byte	.LASF102
@@ -1592,15 +1592,15 @@ bta_gattc_action:
 	.4byte	.LASF139
 	.byte	0xb
 	.2byte	0x166
-	.4byte	0xc0
+	.4byte	0x10d
 	.2byte	0x264
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF140
 	.byte	0xb
 	.2byte	0x167
 	.4byte	0x7e4
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0x4
 	.byte	0xb
 	.2byte	0x169
@@ -1609,21 +1609,21 @@ bta_gattc_action:
 	.4byte	.LASF99
 	.byte	0xb
 	.2byte	0x16a
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LASF141
 	.byte	0xb
 	.2byte	0x16b
-	.4byte	0xc0
+	.4byte	0x10d
 	.byte	0x2
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF142
 	.byte	0xb
 	.2byte	0x16c
 	.4byte	0x84a
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0x6
 	.byte	0xb
 	.2byte	0x16e
@@ -1638,21 +1638,21 @@ bta_gattc_action:
 	.4byte	.LASF99
 	.byte	0xb
 	.2byte	0x170
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x2
 	.uleb128 0x15
 	.4byte	.LASF143
 	.byte	0xb
 	.2byte	0x171
-	.4byte	0xc0
+	.4byte	0x10d
 	.byte	0x4
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF144
 	.byte	0xb
 	.2byte	0x172
 	.4byte	0x87a
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0x2
 	.byte	0xb
 	.2byte	0x174
@@ -1670,12 +1670,12 @@ bta_gattc_action:
 	.4byte	0x4ed
 	.byte	0x1
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF145
 	.byte	0xb
 	.2byte	0x177
 	.4byte	0x8b7
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0x8
 	.byte	0xb
 	.2byte	0x179
@@ -1696,7 +1696,7 @@ bta_gattc_action:
 	.4byte	.LASF146
 	.byte	0xb
 	.2byte	0x17c
-	.4byte	0x9f
+	.4byte	0xec
 	.byte	0x2
 	.uleb128 0x15
 	.4byte	.LASF147
@@ -1705,15 +1705,15 @@ bta_gattc_action:
 	.4byte	0x925
 	.byte	0x4
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
-	.4byte	0x138
-	.uleb128 0xa
+	.4byte	0x17e
+	.uleb128 0xc
 	.4byte	.LASF148
 	.byte	0xb
 	.2byte	0x17e
 	.4byte	0x8e7
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0x7
 	.byte	0xb
 	.2byte	0x187
@@ -1728,15 +1728,15 @@ bta_gattc_action:
 	.4byte	.LASF134
 	.byte	0xb
 	.2byte	0x189
-	.4byte	0x138
+	.4byte	0x17e
 	.byte	0x1
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF149
 	.byte	0xb
 	.2byte	0x18a
 	.4byte	0x937
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0xa
 	.byte	0xb
 	.2byte	0x18c
@@ -1745,7 +1745,7 @@ bta_gattc_action:
 	.4byte	.LASF99
 	.byte	0xb
 	.2byte	0x18d
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LASF120
@@ -1757,15 +1757,15 @@ bta_gattc_action:
 	.4byte	.LASF134
 	.byte	0xb
 	.2byte	0x18f
-	.4byte	0x138
+	.4byte	0x17e
 	.byte	0x3
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF150
 	.byte	0xb
 	.2byte	0x190
 	.4byte	0x967
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0xc
 	.byte	0xb
 	.2byte	0x192
@@ -1780,7 +1780,7 @@ bta_gattc_action:
 	.4byte	.LASF99
 	.byte	0xb
 	.2byte	0x194
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x2
 	.uleb128 0x15
 	.4byte	.LASF120
@@ -1792,15 +1792,15 @@ bta_gattc_action:
 	.4byte	.LASF134
 	.byte	0xb
 	.2byte	0x196
-	.4byte	0x138
+	.4byte	0x17e
 	.byte	0x5
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF151
 	.byte	0xb
 	.2byte	0x197
 	.4byte	0x9a4
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0x8
 	.byte	0xb
 	.2byte	0x199
@@ -1809,16 +1809,16 @@ bta_gattc_action:
 	.4byte	.LASF99
 	.byte	0xb
 	.2byte	0x19a
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LASF134
 	.byte	0xb
 	.2byte	0x19b
-	.4byte	0x138
+	.4byte	0x17e
 	.byte	0x2
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF152
 	.byte	0xb
 	.2byte	0x19c
@@ -1828,108 +1828,108 @@ bta_gattc_action:
 	.byte	0xb
 	.2byte	0x19e
 	.4byte	0xb0d
-	.uleb128 0xe
+	.uleb128 0x10
 	.4byte	.LASF119
 	.byte	0xb
 	.2byte	0x19f
 	.4byte	0x4d7
-	.uleb128 0xe
+	.uleb128 0x10
 	.4byte	.LASF153
 	.byte	0xb
 	.2byte	0x1a1
 	.4byte	0x689
-	.uleb128 0xe
+	.uleb128 0x10
 	.4byte	.LASF154
 	.byte	0xb
 	.2byte	0x1a2
 	.4byte	0x6e0
-	.uleb128 0xe
+	.uleb128 0x10
 	.4byte	.LASF155
 	.byte	0xb
 	.2byte	0x1a3
 	.4byte	0x582
-	.uleb128 0xe
+	.uleb128 0x10
 	.4byte	.LASF156
 	.byte	0xb
 	.2byte	0x1a4
 	.4byte	0x781
-	.uleb128 0xe
+	.uleb128 0x10
 	.4byte	.LASF157
 	.byte	0xb
 	.2byte	0x1a5
 	.4byte	0x998
-	.uleb128 0xe
+	.uleb128 0x10
 	.4byte	.LASF158
 	.byte	0xb
 	.2byte	0x1a6
 	.4byte	0x7d8
-	.uleb128 0xe
+	.uleb128 0x10
 	.4byte	.LASF159
 	.byte	0xb
 	.2byte	0x1a7
 	.4byte	0x9e2
-	.uleb128 0xe
+	.uleb128 0x10
 	.4byte	.LASF160
 	.byte	0xb
 	.2byte	0x1a8
 	.4byte	0x5d2
-	.uleb128 0xe
+	.uleb128 0x10
 	.4byte	.LASF161
 	.byte	0xb
 	.2byte	0x1a9
 	.4byte	0x61c
-	.uleb128 0xe
+	.uleb128 0x10
 	.4byte	.LASF162
 	.byte	0xb
 	.2byte	0x1aa
 	.4byte	0x64c
-	.uleb128 0xe
+	.uleb128 0x10
 	.4byte	.LASF163
 	.byte	0xb
 	.2byte	0x1ab
 	.4byte	0x83e
-	.uleb128 0xe
+	.uleb128 0x10
 	.4byte	.LASF164
 	.byte	0xb
 	.2byte	0x1ac
 	.4byte	0x95b
-	.uleb128 0xe
+	.uleb128 0x10
 	.4byte	.LASF165
 	.byte	0xb
 	.2byte	0x1ad
 	.4byte	0x71d
-	.uleb128 0xe
+	.uleb128 0x10
 	.4byte	.LASF166
 	.byte	0xb
 	.2byte	0x1ae
 	.4byte	0x86e
-	.uleb128 0xe
+	.uleb128 0x10
 	.4byte	.LASF167
 	.byte	0xb
 	.2byte	0x1af
 	.4byte	0x8ab
-	.uleb128 0xe
+	.uleb128 0x10
 	.4byte	.LASF168
 	.byte	0xb
 	.2byte	0x1b0
 	.4byte	0xa12
-	.uleb128 0xe
+	.uleb128 0x10
 	.4byte	.LASF169
 	.byte	0xb
 	.2byte	0x1b1
 	.4byte	0x8db
-	.uleb128 0xe
+	.uleb128 0x10
 	.4byte	.LASF170
 	.byte	0xb
 	.2byte	0x1b2
 	.4byte	0x92b
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF171
 	.byte	0xb
 	.2byte	0x1b3
 	.4byte	0xa1e
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF172
 	.byte	0xb
 	.2byte	0x1b9
@@ -1941,18 +1941,18 @@ bta_gattc_action:
 	.uleb128 0x1c
 	.4byte	0xb35
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0xb0d
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF173
 	.byte	0xb
 	.2byte	0x1f3
-	.4byte	0x9f
-	.uleb128 0xc
+	.4byte	0xec
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0x49b
-	.uleb128 0x11
+	.uleb128 0x5
 	.byte	0x4
 	.4byte	0x69
 	.byte	0xc
@@ -2040,31 +2040,31 @@ bta_gattc_action:
 	.4byte	.LASF200
 	.2byte	0x1f1a
 	.byte	0
-	.uleb128 0x5
+	.uleb128 0x7
 	.byte	0x20
 	.byte	0xc
 	.byte	0x6e
 	.4byte	0xc44
-	.uleb128 0x7
+	.uleb128 0x9
 	.string	"hdr"
 	.byte	0xc
 	.byte	0x6f
-	.4byte	0x12d
+	.4byte	0x173
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF121
 	.byte	0xc
 	.byte	0x70
-	.4byte	0x1c7
+	.4byte	0x20d
 	.byte	0x8
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF201
 	.byte	0xc
 	.byte	0x71
 	.4byte	0xc44
 	.byte	0x1c
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0xb19
 	.uleb128 0x3
@@ -2072,18 +2072,18 @@ bta_gattc_action:
 	.byte	0xc
 	.byte	0x72
 	.4byte	0xc17
-	.uleb128 0x5
+	.uleb128 0x7
 	.byte	0xa
 	.byte	0xc
 	.byte	0x74
 	.4byte	0xc76
-	.uleb128 0x7
+	.uleb128 0x9
 	.string	"hdr"
 	.byte	0xc
 	.byte	0x75
-	.4byte	0x12d
+	.4byte	0x173
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF120
 	.byte	0xc
 	.byte	0x76
@@ -2105,42 +2105,42 @@ bta_gattc_action:
 	.byte	0xc
 	.byte	0x7a
 	.4byte	0xc76
-	.uleb128 0x5
+	.uleb128 0x7
 	.byte	0x12
 	.byte	0xc
 	.byte	0x7c
 	.4byte	0xce8
-	.uleb128 0x7
+	.uleb128 0x9
 	.string	"hdr"
 	.byte	0xc
 	.byte	0x7d
-	.4byte	0x12d
+	.4byte	0x173
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF134
 	.byte	0xc
 	.byte	0x7e
-	.4byte	0x138
+	.4byte	0x17e
 	.byte	0x8
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF206
 	.byte	0xc
 	.byte	0x7f
 	.4byte	0x4f8
 	.byte	0xe
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF120
 	.byte	0xc
 	.byte	0x80
 	.4byte	0x4ed
 	.byte	0xf
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF207
 	.byte	0xc
 	.byte	0x81
-	.4byte	0xc0
+	.4byte	0x10d
 	.byte	0x10
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF135
 	.byte	0xc
 	.byte	0x82
@@ -2157,30 +2157,30 @@ bta_gattc_action:
 	.byte	0xc
 	.byte	0x85
 	.4byte	0xce8
-	.uleb128 0x5
+	.uleb128 0x7
 	.byte	0xe
 	.byte	0xc
 	.byte	0x87
 	.4byte	0xd37
-	.uleb128 0x7
+	.uleb128 0x9
 	.string	"hdr"
 	.byte	0xc
 	.byte	0x88
-	.4byte	0x12d
+	.4byte	0x173
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF101
 	.byte	0xc
 	.byte	0x89
 	.4byte	0x545
 	.byte	0x8
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF100
 	.byte	0xc
 	.byte	0x8a
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0xa
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF210
 	.byte	0xc
 	.byte	0x8b
@@ -2192,58 +2192,58 @@ bta_gattc_action:
 	.byte	0xc
 	.byte	0x8c
 	.4byte	0xcfe
-	.uleb128 0x5
+	.uleb128 0x7
 	.byte	0x18
 	.byte	0xc
 	.byte	0x8e
 	.4byte	0xdab
-	.uleb128 0x7
+	.uleb128 0x9
 	.string	"hdr"
 	.byte	0xc
 	.byte	0x8f
-	.4byte	0x12d
+	.4byte	0x173
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF101
 	.byte	0xc
 	.byte	0x90
 	.4byte	0x545
 	.byte	0x8
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF100
 	.byte	0xc
 	.byte	0x91
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0xa
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF210
 	.byte	0xc
 	.byte	0x92
 	.4byte	0x4e2
 	.byte	0xc
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF212
 	.byte	0xc
 	.byte	0x93
 	.4byte	0x52f
 	.byte	0xd
-	.uleb128 0x6
-	.4byte	.LASF19
+	.uleb128 0x8
+	.4byte	.LASF29
 	.byte	0xc
 	.byte	0x94
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0xe
-	.uleb128 0x7
+	.uleb128 0x9
 	.string	"len"
 	.byte	0xc
 	.byte	0x95
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x10
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF114
 	.byte	0xc
 	.byte	0x96
-	.4byte	0x160
+	.4byte	0x1a6
 	.byte	0x14
 	.byte	0
 	.uleb128 0x3
@@ -2251,22 +2251,22 @@ bta_gattc_action:
 	.byte	0xc
 	.byte	0x97
 	.4byte	0xd42
-	.uleb128 0x5
+	.uleb128 0x7
 	.byte	0xa
 	.byte	0xc
 	.byte	0x99
 	.4byte	0xdd7
-	.uleb128 0x7
+	.uleb128 0x9
 	.string	"hdr"
 	.byte	0xc
 	.byte	0x9a
-	.4byte	0x12d
+	.4byte	0x173
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF214
 	.byte	0xc
 	.byte	0x9b
-	.4byte	0xc0
+	.4byte	0x10d
 	.byte	0x8
 	.byte	0
 	.uleb128 0x3
@@ -2274,22 +2274,22 @@ bta_gattc_action:
 	.byte	0xc
 	.byte	0x9c
 	.4byte	0xdb6
-	.uleb128 0x5
+	.uleb128 0x7
 	.byte	0xa
 	.byte	0xc
 	.byte	0x9e
 	.4byte	0xe03
-	.uleb128 0x7
+	.uleb128 0x9
 	.string	"hdr"
 	.byte	0xc
 	.byte	0x9f
-	.4byte	0x12d
+	.4byte	0x173
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF100
 	.byte	0xc
 	.byte	0xa0
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x8
 	.byte	0
 	.uleb128 0x3
@@ -2302,37 +2302,37 @@ bta_gattc_action:
 	.byte	0xc
 	.byte	0xa3
 	.4byte	0x48f
-	.uleb128 0x5
+	.uleb128 0x7
 	.byte	0x10
 	.byte	0xc
 	.byte	0xa5
 	.4byte	0xe52
-	.uleb128 0x7
+	.uleb128 0x9
 	.string	"hdr"
 	.byte	0xc
 	.byte	0xa6
-	.4byte	0x12d
+	.4byte	0x173
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF218
 	.byte	0xc
 	.byte	0xa7
-	.4byte	0x9f
+	.4byte	0xec
 	.byte	0x8
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF119
 	.byte	0xc
 	.byte	0xa8
 	.4byte	0x3b8
 	.byte	0x9
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF219
 	.byte	0xc
 	.byte	0xa9
 	.4byte	0xe52
 	.byte	0xc
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0xe0e
 	.uleb128 0x3
@@ -2340,18 +2340,18 @@ bta_gattc_action:
 	.byte	0xc
 	.byte	0xaa
 	.4byte	0xe19
-	.uleb128 0x5
+	.uleb128 0x7
 	.byte	0xc
 	.byte	0xc
 	.byte	0xac
 	.4byte	0xe84
-	.uleb128 0x7
+	.uleb128 0x9
 	.string	"hdr"
 	.byte	0xc
 	.byte	0xad
-	.4byte	0x12d
+	.4byte	0x173
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF221
 	.byte	0xc
 	.byte	0xae
@@ -2363,36 +2363,36 @@ bta_gattc_action:
 	.byte	0xc
 	.byte	0xaf
 	.4byte	0xe63
-	.uleb128 0x5
+	.uleb128 0x7
 	.byte	0x20
 	.byte	0xc
 	.byte	0xb1
 	.4byte	0xed4
-	.uleb128 0x7
+	.uleb128 0x9
 	.string	"hdr"
 	.byte	0xc
 	.byte	0xb2
-	.4byte	0x12d
+	.4byte	0x173
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF101
 	.byte	0xc
 	.byte	0xb3
 	.4byte	0x545
 	.byte	0x8
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF223
 	.byte	0xc
 	.byte	0xb4
-	.4byte	0x9f
+	.4byte	0xec
 	.byte	0x9
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF224
 	.byte	0xc
 	.byte	0xb5
 	.4byte	0x3ce
 	.byte	0xa
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF210
 	.byte	0xc
 	.byte	0xb6
@@ -2404,34 +2404,34 @@ bta_gattc_action:
 	.byte	0xc
 	.byte	0xb7
 	.4byte	0xe8f
-	.uleb128 0x5
+	.uleb128 0x7
 	.byte	0x10
 	.byte	0xc
 	.byte	0xb9
 	.4byte	0xf18
-	.uleb128 0x7
+	.uleb128 0x9
 	.string	"hdr"
 	.byte	0xc
 	.byte	0xba
-	.4byte	0x12d
+	.4byte	0x173
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF134
 	.byte	0xc
 	.byte	0xbb
-	.4byte	0x154
+	.4byte	0x19a
 	.byte	0x8
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF120
 	.byte	0xc
 	.byte	0xbc
 	.4byte	0x4ed
 	.byte	0xc
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF226
 	.byte	0xc
 	.byte	0xbd
-	.4byte	0xc0
+	.4byte	0x10d
 	.byte	0xd
 	.byte	0
 	.uleb128 0x3
@@ -2439,16 +2439,16 @@ bta_gattc_action:
 	.byte	0xc
 	.byte	0xbe
 	.4byte	0xedf
-	.uleb128 0x5
+	.uleb128 0x7
 	.byte	0x8
 	.byte	0xc
 	.byte	0xc1
 	.4byte	0xf38
-	.uleb128 0x7
+	.uleb128 0x9
 	.string	"hdr"
 	.byte	0xc
 	.byte	0xc2
-	.4byte	0x12d
+	.4byte	0x173
 	.byte	0
 	.byte	0
 	.uleb128 0x3
@@ -2456,40 +2456,40 @@ bta_gattc_action:
 	.byte	0xc
 	.byte	0xc3
 	.4byte	0xf23
-	.uleb128 0x5
+	.uleb128 0x7
 	.byte	0x16
 	.byte	0xc
 	.byte	0xc5
 	.4byte	0xf88
-	.uleb128 0x7
+	.uleb128 0x9
 	.string	"hdr"
 	.byte	0xc
 	.byte	0xc6
-	.4byte	0x12d
+	.4byte	0x173
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF120
 	.byte	0xc
 	.byte	0xc7
 	.4byte	0x4ed
 	.byte	0x8
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF229
 	.byte	0xc
 	.byte	0xc8
-	.4byte	0x138
+	.4byte	0x17e
 	.byte	0x9
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF230
 	.byte	0xc
 	.byte	0xc9
-	.4byte	0x138
+	.4byte	0x17e
 	.byte	0xf
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF231
 	.byte	0xc
 	.byte	0xca
-	.4byte	0xc0
+	.4byte	0x10d
 	.byte	0x15
 	.byte	0
 	.uleb128 0x3
@@ -2497,18 +2497,18 @@ bta_gattc_action:
 	.byte	0xc
 	.byte	0xcb
 	.4byte	0xf43
-	.uleb128 0x5
+	.uleb128 0x7
 	.byte	0xa
 	.byte	0xc
 	.byte	0xcd
 	.4byte	0xfb4
-	.uleb128 0x7
+	.uleb128 0x9
 	.string	"hdr"
 	.byte	0xc
 	.byte	0xce
-	.4byte	0x12d
+	.4byte	0x173
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF120
 	.byte	0xc
 	.byte	0xcf
@@ -2520,52 +2520,52 @@ bta_gattc_action:
 	.byte	0xc
 	.byte	0xd0
 	.4byte	0xf93
-	.uleb128 0x5
+	.uleb128 0x7
 	.byte	0x16
 	.byte	0xc
 	.byte	0xd2
 	.4byte	0x101c
-	.uleb128 0x7
+	.uleb128 0x9
 	.string	"hdr"
 	.byte	0xc
 	.byte	0xd3
-	.4byte	0x12d
+	.4byte	0x173
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF134
 	.byte	0xc
 	.byte	0xd4
-	.4byte	0x138
+	.4byte	0x17e
 	.byte	0x8
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF120
 	.byte	0xc
 	.byte	0xd5
 	.4byte	0x4ed
 	.byte	0xe
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF234
 	.byte	0xc
 	.byte	0xd6
-	.4byte	0x9f
+	.4byte	0xec
 	.byte	0xf
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF135
 	.byte	0xc
 	.byte	0xd7
-	.4byte	0x1d3
+	.4byte	0x219
 	.byte	0x10
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF137
 	.byte	0xc
 	.byte	0xd8
 	.4byte	0x3c3
 	.byte	0x12
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF235
 	.byte	0xc
 	.byte	0xd9
-	.4byte	0xc0
+	.4byte	0x10d
 	.byte	0x14
 	.byte	0
 	.uleb128 0x3
@@ -2573,24 +2573,24 @@ bta_gattc_action:
 	.byte	0xc
 	.byte	0xda
 	.4byte	0xfbf
-	.uleb128 0x5
+	.uleb128 0x7
 	.byte	0x10
 	.byte	0xc
 	.byte	0xdc
 	.4byte	0x1054
-	.uleb128 0x7
+	.uleb128 0x9
 	.string	"hdr"
 	.byte	0xc
 	.byte	0xdd
-	.4byte	0x12d
+	.4byte	0x173
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF134
 	.byte	0xc
 	.byte	0xde
-	.4byte	0x138
+	.4byte	0x17e
 	.byte	0x8
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF120
 	.byte	0xc
 	.byte	0xdf
@@ -2611,7 +2611,7 @@ bta_gattc_action:
 	.string	"hdr"
 	.byte	0xc
 	.byte	0xe3
-	.4byte	0x12d
+	.4byte	0x173
 	.uleb128 0x20
 	.4byte	.LASF238
 	.byte	0xc
@@ -2713,40 +2713,40 @@ bta_gattc_action:
 	.byte	0xc
 	.byte	0xfa
 	.4byte	0x105f
-	.uleb128 0x5
+	.uleb128 0x7
 	.byte	0x1c
 	.byte	0xc
 	.byte	0xfe
 	.4byte	0x11a5
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	.LASF107
 	.byte	0xc
 	.byte	0xff
-	.4byte	0x1c7
+	.4byte	0x20d
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LASF257
 	.byte	0xc
 	.2byte	0x100
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x14
 	.uleb128 0x15
 	.4byte	.LASF258
 	.byte	0xc
 	.2byte	0x101
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x16
 	.uleb128 0x15
 	.4byte	.LASF259
 	.byte	0xc
 	.2byte	0x103
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x18
 	.uleb128 0x15
 	.4byte	.LASF131
 	.byte	0xc
 	.2byte	0x104
-	.4byte	0xc0
+	.4byte	0x10d
 	.byte	0x1a
 	.uleb128 0x15
 	.4byte	.LASF260
@@ -2755,7 +2755,7 @@ bta_gattc_action:
 	.4byte	0xb3b
 	.byte	0x1b
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF261
 	.byte	0xc
 	.2byte	0x106
@@ -2766,25 +2766,25 @@ bta_gattc_action:
 	.byte	0xc
 	.2byte	0x110
 	.4byte	0x11d7
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF262
 	.byte	0
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF263
 	.byte	0x1
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF264
 	.byte	0x2
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF265
 	.byte	0x3
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF266
 	.byte	0xc
 	.2byte	0x116
-	.4byte	0x9f
-	.uleb128 0xf
+	.4byte	0xec
+	.uleb128 0x11
 	.byte	0x28
 	.byte	0xc
 	.2byte	0x118
@@ -2793,25 +2793,25 @@ bta_gattc_action:
 	.4byte	.LASF267
 	.byte	0xc
 	.2byte	0x119
-	.4byte	0xc0
+	.4byte	0x10d
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LASF268
 	.byte	0xc
 	.2byte	0x11a
-	.4byte	0x138
+	.4byte	0x17e
 	.byte	0x1
 	.uleb128 0x15
 	.4byte	.LASF269
 	.byte	0xc
 	.2byte	0x11b
-	.4byte	0xc0
+	.4byte	0x10d
 	.byte	0x7
 	.uleb128 0x15
 	.4byte	.LASF270
 	.byte	0xc
 	.2byte	0x123
-	.4byte	0x9f
+	.4byte	0xec
 	.byte	0x8
 	.uleb128 0x15
 	.4byte	.LASF271
@@ -2823,13 +2823,13 @@ bta_gattc_action:
 	.4byte	.LASF272
 	.byte	0xc
 	.2byte	0x126
-	.4byte	0x9f
+	.4byte	0xec
 	.byte	0x10
 	.uleb128 0x15
 	.4byte	.LASF273
 	.byte	0xc
 	.2byte	0x127
-	.4byte	0x9f
+	.4byte	0xec
 	.byte	0x11
 	.uleb128 0x15
 	.4byte	.LASF274
@@ -2841,72 +2841,72 @@ bta_gattc_action:
 	.4byte	.LASF275
 	.byte	0xc
 	.2byte	0x12b
-	.4byte	0x9f
+	.4byte	0xec
 	.byte	0x18
 	.uleb128 0x15
 	.4byte	.LASF276
 	.byte	0xc
 	.2byte	0x12c
-	.4byte	0x9f
+	.4byte	0xec
 	.byte	0x19
 	.uleb128 0x15
 	.4byte	.LASF277
 	.byte	0xc
 	.2byte	0x12d
-	.4byte	0x9f
+	.4byte	0xec
 	.byte	0x1a
 	.uleb128 0x15
 	.4byte	.LASF278
 	.byte	0xc
 	.2byte	0x12e
-	.4byte	0x9f
+	.4byte	0xec
 	.byte	0x1b
 	.uleb128 0x15
 	.4byte	.LASF279
 	.byte	0xc
 	.2byte	0x12f
-	.4byte	0x9f
+	.4byte	0xec
 	.byte	0x1c
 	.uleb128 0x15
 	.4byte	.LASF280
 	.byte	0xc
 	.2byte	0x130
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x1e
 	.uleb128 0x15
 	.4byte	.LASF281
 	.byte	0xc
 	.2byte	0x131
-	.4byte	0x9f
+	.4byte	0xec
 	.byte	0x20
 	.uleb128 0x15
 	.4byte	.LASF282
 	.byte	0xc
 	.2byte	0x132
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x22
-	.uleb128 0x10
+	.uleb128 0x12
 	.string	"mtu"
 	.byte	0xc
 	.2byte	0x134
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x24
 	.uleb128 0x15
 	.4byte	.LASF283
 	.byte	0xc
 	.2byte	0x135
-	.4byte	0xcb
+	.4byte	0x118
 	.byte	0x26
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0x11a5
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF284
 	.byte	0xc
 	.2byte	0x136
 	.4byte	0x11e3
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0xa
 	.byte	0xc
 	.2byte	0x13c
@@ -2915,27 +2915,27 @@ bta_gattc_action:
 	.4byte	.LASF267
 	.byte	0xc
 	.2byte	0x13d
-	.4byte	0xc0
+	.4byte	0x10d
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LASF134
 	.byte	0xc
 	.2byte	0x13e
-	.4byte	0x138
+	.4byte	0x17e
 	.byte	0x1
 	.uleb128 0x15
 	.4byte	.LASF100
 	.byte	0xc
 	.2byte	0x13f
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x8
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF285
 	.byte	0xc
 	.2byte	0x140
 	.4byte	0x12e9
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0x64
 	.byte	0xc
 	.2byte	0x142
@@ -2950,7 +2950,7 @@ bta_gattc_action:
 	.4byte	.LASF267
 	.byte	0xc
 	.2byte	0x144
-	.4byte	0xc0
+	.4byte	0x10d
 	.byte	0x4
 	.uleb128 0x15
 	.4byte	.LASF120
@@ -2962,19 +2962,19 @@ bta_gattc_action:
 	.4byte	.LASF273
 	.byte	0xc
 	.2byte	0x146
-	.4byte	0x9f
+	.4byte	0xec
 	.byte	0x6
 	.uleb128 0x15
 	.4byte	.LASF286
 	.byte	0xc
 	.2byte	0x147
-	.4byte	0xc0
+	.4byte	0x10d
 	.byte	0x7
 	.uleb128 0x15
 	.4byte	.LASF121
 	.byte	0xc
 	.2byte	0x148
-	.4byte	0x1c7
+	.4byte	0x20d
 	.byte	0x8
 	.uleb128 0x15
 	.4byte	.LASF287
@@ -2983,19 +2983,19 @@ bta_gattc_action:
 	.4byte	0x138b
 	.byte	0x1c
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0xa
 	.4byte	0x131a
 	.4byte	0x139b
-	.uleb128 0xb
-	.4byte	0x126
+	.uleb128 0xd
+	.4byte	0xa6
 	.byte	0x6
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF288
 	.byte	0xc
 	.2byte	0x14a
 	.4byte	0x1326
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0x28
 	.byte	0xc
 	.2byte	0x14d
@@ -3004,13 +3004,13 @@ bta_gattc_action:
 	.4byte	.LASF289
 	.byte	0xc
 	.2byte	0x14e
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0
-	.uleb128 0x10
+	.uleb128 0x12
 	.string	"bda"
 	.byte	0xc
 	.2byte	0x14f
-	.4byte	0x138
+	.4byte	0x17e
 	.byte	0x2
 	.uleb128 0x15
 	.4byte	.LASF135
@@ -3046,25 +3046,25 @@ bta_gattc_action:
 	.4byte	.LASF143
 	.byte	0xc
 	.2byte	0x155
-	.4byte	0xc0
+	.4byte	0x10d
 	.byte	0x1c
 	.uleb128 0x15
 	.4byte	.LASF294
 	.byte	0xc
 	.2byte	0x15a
-	.4byte	0x9f
+	.4byte	0xec
 	.byte	0x1d
 	.uleb128 0x15
 	.4byte	.LASF295
 	.byte	0xc
 	.2byte	0x15b
-	.4byte	0xc0
+	.4byte	0x10d
 	.byte	0x1e
 	.uleb128 0x15
 	.4byte	.LASF267
 	.byte	0xc
 	.2byte	0x15c
-	.4byte	0xc0
+	.4byte	0x10d
 	.byte	0x1f
 	.uleb128 0x15
 	.4byte	.LASF270
@@ -3082,35 +3082,35 @@ bta_gattc_action:
 	.4byte	.LASF137
 	.byte	0xc
 	.2byte	0x15f
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x22
 	.uleb128 0x15
 	.4byte	.LASF126
 	.byte	0xc
 	.2byte	0x160
-	.4byte	0x9f
+	.4byte	0xec
 	.byte	0x24
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0x139b
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0x12dd
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0x1144
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF296
 	.byte	0xc
 	.2byte	0x161
 	.4byte	0x13a7
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF297
 	.byte	0xc
 	.2byte	0x165
-	.4byte	0x9f
-	.uleb128 0xf
+	.4byte	0xec
+	.uleb128 0x11
 	.byte	0x9
 	.byte	0xc
 	.2byte	0x16c
@@ -3119,13 +3119,13 @@ bta_gattc_action:
 	.4byte	.LASF267
 	.byte	0xc
 	.2byte	0x16d
-	.4byte	0xc0
+	.4byte	0x10d
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LASF134
 	.byte	0xc
 	.2byte	0x16e
-	.4byte	0x138
+	.4byte	0x17e
 	.byte	0x1
 	.uleb128 0x15
 	.4byte	.LASF298
@@ -3140,12 +3140,12 @@ bta_gattc_action:
 	.4byte	0x1492
 	.byte	0x8
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF300
 	.byte	0xc
 	.2byte	0x172
 	.4byte	0x149e
-	.uleb128 0xf
+	.uleb128 0x11
 	.byte	0xc
 	.byte	0xc
 	.2byte	0x174
@@ -3154,28 +3154,28 @@ bta_gattc_action:
 	.4byte	.LASF267
 	.byte	0xc
 	.2byte	0x175
-	.4byte	0xc0
+	.4byte	0x10d
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LASF134
 	.byte	0xc
 	.2byte	0x176
-	.4byte	0x138
+	.4byte	0x17e
 	.byte	0x1
 	.uleb128 0x15
 	.4byte	.LASF301
 	.byte	0xc
 	.2byte	0x177
-	.4byte	0xaa
+	.4byte	0xf7
 	.byte	0x8
 	.uleb128 0x15
 	.4byte	.LASF302
 	.byte	0xc
 	.2byte	0x178
-	.4byte	0xc0
+	.4byte	0x10d
 	.byte	0xa
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.4byte	.LASF303
 	.byte	0xc
 	.2byte	0x179
@@ -3189,7 +3189,7 @@ bta_gattc_action:
 	.4byte	.LASF270
 	.byte	0xc
 	.2byte	0x183
-	.4byte	0x9f
+	.4byte	0xec
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LASF304
@@ -3222,125 +3222,125 @@ bta_gattc_action:
 	.4byte	0x15cd
 	.2byte	0x3c8
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0xa
 	.4byte	0x1526
 	.4byte	0x159d
-	.uleb128 0xb
-	.4byte	0x126
-	.byte	0x3
-	.byte	0
-	.uleb128 0x8
-	.4byte	0x14dc
-	.4byte	0x15ad
-	.uleb128 0xb
-	.4byte	0x126
-	.byte	0x3
-	.byte	0
-	.uleb128 0x8
-	.4byte	0x139b
-	.4byte	0x15bd
-	.uleb128 0xb
-	.4byte	0x126
-	.byte	0x3
-	.byte	0
-	.uleb128 0x8
-	.4byte	0x1486
-	.4byte	0x15cd
-	.uleb128 0xb
-	.4byte	0x126
-	.byte	0xb
-	.byte	0
-	.uleb128 0x8
-	.4byte	0x12dd
-	.4byte	0x15dd
-	.uleb128 0xb
-	.4byte	0x126
+	.uleb128 0xd
+	.4byte	0xa6
 	.byte	0x3
 	.byte	0
 	.uleb128 0xa
+	.4byte	0x14dc
+	.4byte	0x15ad
+	.uleb128 0xd
+	.4byte	0xa6
+	.byte	0x3
+	.byte	0
+	.uleb128 0xa
+	.4byte	0x139b
+	.4byte	0x15bd
+	.uleb128 0xd
+	.4byte	0xa6
+	.byte	0x3
+	.byte	0
+	.uleb128 0xa
+	.4byte	0x1486
+	.4byte	0x15cd
+	.uleb128 0xd
+	.4byte	0xa6
+	.byte	0xb
+	.byte	0
+	.uleb128 0xa
+	.4byte	0x12dd
+	.4byte	0x15dd
+	.uleb128 0xd
+	.4byte	0xa6
+	.byte	0x3
+	.byte	0
+	.uleb128 0xc
 	.4byte	.LASF309
 	.byte	0xc
 	.2byte	0x18a
 	.4byte	0x1532
-	.uleb128 0x11
+	.uleb128 0x5
 	.byte	0x4
 	.4byte	0x69
 	.byte	0x1
 	.byte	0x29
 	.4byte	0x168c
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF310
 	.byte	0
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF311
 	.byte	0x1
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF312
 	.byte	0x2
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF313
 	.byte	0x3
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF314
 	.byte	0x4
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF315
 	.byte	0x5
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF316
 	.byte	0x6
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF317
 	.byte	0x7
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF318
 	.byte	0x8
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF319
 	.byte	0x9
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF320
 	.byte	0xa
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF321
 	.byte	0xb
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF322
 	.byte	0xc
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF323
 	.byte	0xd
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF324
 	.byte	0xe
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF325
 	.byte	0xf
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF326
 	.byte	0x10
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF327
 	.byte	0x11
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF328
 	.byte	0x12
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF329
 	.byte	0x13
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF330
 	.byte	0x14
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF331
 	.byte	0x15
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF332
 	.byte	0x16
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF333
 	.byte	0x17
-	.uleb128 0x12
+	.uleb128 0x6
 	.4byte	.LASF334
 	.byte	0x18
 	.byte	0
@@ -3349,7 +3349,7 @@ bta_gattc_action:
 	.byte	0x1
 	.byte	0x48
 	.4byte	0x1697
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0x169d
 	.uleb128 0x1b
@@ -3359,7 +3359,7 @@ bta_gattc_action:
 	.uleb128 0x1c
 	.4byte	0x1480
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0x1486
 	.uleb128 0x3
@@ -3367,16 +3367,16 @@ bta_gattc_action:
 	.byte	0x1
 	.byte	0xe0
 	.4byte	0x16be
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0x397
 	.uleb128 0x21
 	.4byte	.LASF341
 	.byte	0x1
 	.2byte	0x105
-	.4byte	0xc0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	0x10d
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1761
@@ -3387,10 +3387,10 @@ bta_gattc_action:
 	.4byte	0x16ad
 	.4byte	.LLST0
 	.uleb128 0x22
-	.4byte	.LASF18
+	.4byte	.LASF28
 	.byte	0x1
 	.2byte	0x105
-	.4byte	0xaa
+	.4byte	0xf7
 	.4byte	.LLST1
 	.uleb128 0x22
 	.4byte	.LASF338
@@ -3408,7 +3408,7 @@ bta_gattc_action:
 	.4byte	.LASF340
 	.byte	0x1
 	.2byte	0x108
-	.4byte	0x9f
+	.4byte	0xec
 	.4byte	.LLST4
 	.uleb128 0x24
 	.string	"i"
@@ -3420,7 +3420,7 @@ bta_gattc_action:
 	.string	"rt"
 	.byte	0x1
 	.2byte	0x10a
-	.4byte	0xc0
+	.4byte	0x10d
 	.4byte	.LLST6
 	.uleb128 0x25
 	.4byte	.LVL8
@@ -3445,9 +3445,9 @@ bta_gattc_action:
 	.4byte	.LASF342
 	.byte	0x1
 	.2byte	0x141
-	.4byte	0xc0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	0x10d
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1981
@@ -3479,7 +3479,7 @@ bta_gattc_action:
 	.string	"rt"
 	.byte	0x1
 	.2byte	0x146
-	.4byte	0xc0
+	.4byte	0x10d
 	.4byte	.LLST11
 	.uleb128 0x27
 	.4byte	.LVL14
@@ -3746,15 +3746,15 @@ bta_gattc_action:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x4
 	.4byte	0x15dd
 	.uleb128 0x2a
 	.4byte	.LASF378
 	.byte	0x1
 	.2byte	0x1f9
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x19c1
@@ -3781,7 +3781,7 @@ bta_gattc_action:
 	.uleb128 0x2b
 	.4byte	.LASF346
 	.byte	0x4
-	.2byte	0x2cc
+	.2byte	0x2b8
 	.4byte	0x19d4
 	.byte	0x6
 	.byte	0xff
@@ -3791,11 +3791,11 @@ bta_gattc_action:
 	.byte	0xff
 	.byte	0xff
 	.uleb128 0x2c
-	.4byte	0x144
+	.4byte	0x18a
 	.uleb128 0x2b
 	.4byte	.LASF347
 	.byte	0x4
-	.2byte	0x2cd
+	.2byte	0x2b9
 	.4byte	0x19ec
 	.byte	0x6
 	.byte	0
@@ -3805,15 +3805,15 @@ bta_gattc_action:
 	.byte	0
 	.byte	0
 	.uleb128 0x2c
-	.4byte	0x144
-	.uleb128 0x8
-	.4byte	0x9f
+	.4byte	0x18a
+	.uleb128 0xa
+	.4byte	0xec
 	.4byte	0x1a07
-	.uleb128 0xb
-	.4byte	0x126
+	.uleb128 0xd
+	.4byte	0xa6
 	.byte	0x11
-	.uleb128 0xb
-	.4byte	0x126
+	.uleb128 0xd
+	.4byte	0xa6
 	.byte	0x1
 	.byte	0
 	.uleb128 0x2d
@@ -3860,7 +3860,7 @@ bta_gattc_action:
 	.4byte	.LASF352
 	.byte	0xd
 	.byte	0xa6
-	.4byte	0x9f
+	.4byte	0xec
 	.uleb128 0x2f
 	.4byte	.LASF353
 	.byte	0x1
@@ -3869,11 +3869,11 @@ bta_gattc_action:
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	bta_gattc_cb_ptr
-	.uleb128 0x8
+	.uleb128 0xa
 	.4byte	0x168c
 	.4byte	0x1a8b
-	.uleb128 0xb
-	.4byte	0x126
+	.uleb128 0xd
+	.4byte	0xa6
 	.byte	0x17
 	.byte	0
 	.uleb128 0x2f
@@ -3886,11 +3886,11 @@ bta_gattc_action:
 	.4byte	bta_gattc_action
 	.uleb128 0x2c
 	.4byte	0x1a7b
-	.uleb128 0x8
+	.uleb128 0xa
 	.4byte	0x16b3
 	.4byte	0x1ab1
-	.uleb128 0xb
-	.4byte	0x126
+	.uleb128 0xd
+	.4byte	0xa6
 	.byte	0x3
 	.byte	0
 	.uleb128 0x2f
@@ -4059,6 +4059,30 @@ bta_gattc_action:
 	.byte	0
 	.byte	0
 	.uleb128 0x5
+	.uleb128 0x4
+	.byte	0x1
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x6
+	.uleb128 0x28
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x1c
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x7
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0xb
@@ -4071,7 +4095,7 @@ bta_gattc_action:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -4086,7 +4110,7 @@ bta_gattc_action:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x9
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -4101,7 +4125,7 @@ bta_gattc_action:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0xa
 	.uleb128 0x1
 	.byte	0x1
 	.uleb128 0x49
@@ -4110,14 +4134,14 @@ bta_gattc_action:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x9
+	.uleb128 0xb
 	.uleb128 0x21
 	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xc
 	.uleb128 0x16
 	.byte	0
 	.uleb128 0x3
@@ -4130,7 +4154,7 @@ bta_gattc_action:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xb
+	.uleb128 0xd
 	.uleb128 0x21
 	.byte	0
 	.uleb128 0x49
@@ -4139,7 +4163,7 @@ bta_gattc_action:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0xe
 	.uleb128 0xf
 	.byte	0
 	.uleb128 0xb
@@ -4148,34 +4172,8 @@ bta_gattc_action:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xd
+	.uleb128 0xf
 	.uleb128 0x17
-	.byte	0x1
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xe
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xf
-	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0xb
 	.uleb128 0xb
@@ -4191,6 +4189,32 @@ bta_gattc_action:
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x11
+	.uleb128 0x13
+	.byte	0x1
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x12
+	.uleb128 0xd
+	.byte	0
+	.uleb128 0x3
 	.uleb128 0x8
 	.uleb128 0x3a
 	.uleb128 0xb
@@ -4199,30 +4223,6 @@ bta_gattc_action:
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x38
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x11
-	.uleb128 0x4
-	.byte	0x1
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x12
-	.uleb128 0x28
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x1c
 	.uleb128 0xb
 	.byte	0
 	.byte	0
@@ -4663,7 +4663,7 @@ bta_gattc_action:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL9
-	.4byte	.LFE30
+	.4byte	.LFE39
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4681,7 +4681,7 @@ bta_gattc_action:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL3
-	.4byte	.LFE30
+	.4byte	.LFE39
 	.2byte	0x7
 	.byte	0xf3
 	.uleb128 0x1
@@ -4698,7 +4698,7 @@ bta_gattc_action:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL10
-	.4byte	.LFE30
+	.4byte	.LFE39
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4758,7 +4758,7 @@ bta_gattc_action:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL41
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4835,7 +4835,7 @@ bta_gattc_action:
 	.byte	0x31
 	.byte	0x9f
 	.4byte	.LVL40
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -4848,28 +4848,28 @@ bta_gattc_action:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB30
-	.4byte	.LFE30
-	.4byte	.LFB31
-	.4byte	.LFE31
-	.4byte	.LFB32
-	.4byte	.LFE32
+	.4byte	.LFB39
+	.4byte	.LFE39
+	.4byte	.LFB40
+	.4byte	.LFE40
+	.4byte	.LFB41
+	.4byte	.LFE41
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
-.LASF32:
+.LASF13:
 	.string	"long int"
 .LASF90:
 	.string	"BTM_PM_STS_PARK"
@@ -4885,7 +4885,7 @@ bta_gattc_action:
 	.string	"BTA_GATTC_API_READ_EVT"
 .LASF147:
 	.string	"bda_list"
-.LASF26:
+.LASF35:
 	.string	"uuid16"
 .LASF87:
 	.string	"BTM_PM_STS_ACTIVE"
@@ -4903,7 +4903,7 @@ bta_gattc_action:
 	.string	"remote_bda"
 .LASF47:
 	.string	"BTM_EIR_UUID_SERVCLASS_IRMC_SYNC_COMMAND"
-.LASF23:
+.LASF32:
 	.string	"BT_HDR"
 .LASF122:
 	.string	"tBTA_GATTC_REG"
@@ -4915,7 +4915,7 @@ bta_gattc_action:
 	.string	"api_conn"
 .LASF46:
 	.string	"BTM_EIR_UUID_SERVCLASS_OBEX_FILE_TRANSFER"
-.LASF14:
+.LASF24:
 	.string	"UINT16"
 .LASF159:
 	.string	"disconnect"
@@ -4943,7 +4943,7 @@ bta_gattc_action:
 	.string	"BTM_EIR_UUID_SERVCLASS_PRINTING_STATUS"
 .LASF325:
 	.string	"BTA_GATTC_SEARCH"
-.LASF25:
+.LASF34:
 	.string	"BD_ADDR_PTR"
 .LASF307:
 	.string	"clcb"
@@ -4953,11 +4953,11 @@ bta_gattc_action:
 	.string	"handles"
 .LASF206:
 	.string	"remote_addr_type"
-.LASF38:
+.LASF21:
 	.string	"ESP_LOG_DEBUG"
 .LASF2:
 	.string	"short int"
-.LASF16:
+.LASF26:
 	.string	"BOOLEAN"
 .LASF236:
 	.string	"tBTA_GATTC_INT_CONN"
@@ -4983,7 +4983,7 @@ bta_gattc_action:
 	.string	"tBTA_GATT_ID"
 .LASF164:
 	.string	"enc_cmpl"
-.LASF27:
+.LASF36:
 	.string	"uuid32"
 .LASF181:
 	.string	"BTA_GATTC_API_CFG_MTU_EVT"
@@ -5007,7 +5007,7 @@ bta_gattc_action:
 	.string	"BTA_GATTC_INT_START_IF_EVT"
 .LASF199:
 	.string	"BTA_GATTC_API_CACHE_ASSOC_EVT"
-.LASF15:
+.LASF25:
 	.string	"UINT32"
 .LASF12:
 	.string	"uint32_t"
@@ -5015,7 +5015,7 @@ bta_gattc_action:
 	.string	"p_srvc_cache"
 .LASF314:
 	.string	"BTA_GATTC_CANCEL_OPEN_OK"
-.LASF30:
+.LASF39:
 	.string	"tBT_TRANSPORT"
 .LASF285:
 	.string	"tBTA_GATTC_NOTIF_REG"
@@ -5027,7 +5027,7 @@ bta_gattc_action:
 	.string	"is_direct"
 .LASF183:
 	.string	"BTA_GATTC_API_SEARCH_EVT"
-.LASF18:
+.LASF28:
 	.string	"event"
 .LASF223:
 	.string	"num_attr"
@@ -5099,7 +5099,7 @@ bta_gattc_action:
 	.string	"tBTA_GATTC_ENC_CMPL_CB"
 .LASF378:
 	.string	"bta_gattc_deinit"
-.LASF19:
+.LASF29:
 	.string	"offset"
 .LASF144:
 	.string	"tBTA_GATTC_QUEUE_FULL"
@@ -5107,7 +5107,7 @@ bta_gattc_action:
 	.string	"connected"
 .LASF326:
 	.string	"BTA_GATTC_FAIL"
-.LASF17:
+.LASF27:
 	.string	"_Bool"
 .LASF287:
 	.string	"notif_reg"
@@ -5157,13 +5157,13 @@ bta_gattc_action:
 	.string	"p_clcb"
 .LASF348:
 	.string	"bta_gattc_st_idle"
-.LASF24:
+.LASF33:
 	.string	"BD_ADDR"
 .LASF364:
 	.string	"bta_gattc_process_api_cache_assoc"
 .LASF126:
 	.string	"searched_service_source"
-.LASF31:
+.LASF16:
 	.string	"char"
 .LASF306:
 	.string	"cl_rcb"
@@ -5173,7 +5173,7 @@ bta_gattc_action:
 	.string	"server_bda"
 .LASF212:
 	.string	"write_type"
-.LASF28:
+.LASF37:
 	.string	"uuid128"
 .LASF296:
 	.string	"tBTA_GATTC_CLCB"
@@ -5185,7 +5185,7 @@ bta_gattc_action:
 	.string	"close"
 .LASF103:
 	.string	"tGATT_VALUE"
-.LASF21:
+.LASF31:
 	.string	"data"
 .LASF250:
 	.string	"api_get_addr"
@@ -5207,7 +5207,7 @@ bta_gattc_action:
 	.string	"cif_adv_mask"
 .LASF204:
 	.string	"tBTA_GATTC_API_DEREG"
-.LASF20:
+.LASF30:
 	.string	"layer_specific"
 .LASF349:
 	.string	"bta_gattc_st_w4_conn"
@@ -5285,7 +5285,7 @@ bta_gattc_action:
 	.string	"api_mtu"
 .LASF377:
 	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/bt"
-.LASF37:
+.LASF20:
 	.string	"ESP_LOG_INFO"
 .LASF94:
 	.string	"tGATT_IF"
@@ -5407,7 +5407,7 @@ bta_gattc_action:
 	.string	"assoc_addr"
 .LASF366:
 	.string	"bta_gattc_listen"
-.LASF29:
+.LASF38:
 	.string	"tBT_UUID"
 .LASF329:
 	.string	"BTA_GATTC_READ_MULTI"
@@ -5461,11 +5461,11 @@ bta_gattc_action:
 	.string	"known_server"
 .LASF264:
 	.string	"BTA_GATTC_CONN_ST"
-.LASF22:
+.LASF14:
 	.string	"sizetype"
 .LASF293:
 	.string	"p_cmd_list"
-.LASF33:
+.LASF15:
 	.string	"long unsigned int"
 .LASF57:
 	.string	"BTM_EIR_UUID_SERVCLASS_PANU"
@@ -5473,7 +5473,7 @@ bta_gattc_action:
 	.string	"tBTA_GATTC_EXEC_CMPL"
 .LASF221:
 	.string	"p_srvc_uuid"
-.LASF39:
+.LASF22:
 	.string	"ESP_LOG_VERBOSE"
 .LASF121:
 	.string	"app_uuid"
@@ -5503,7 +5503,7 @@ bta_gattc_action:
 	.string	"BTM_EIR_UUID_SERVCLASS_SAP"
 .LASF1:
 	.string	"unsigned char"
-.LASF36:
+.LASF19:
 	.string	"ESP_LOG_WARN"
 .LASF6:
 	.string	"__uint32_t"
@@ -5581,7 +5581,7 @@ bta_gattc_action:
 	.string	"BTM_EIR_UUID_SERVCLASS_SERIAL_PORT"
 .LASF241:
 	.string	"api_cancel_conn"
-.LASF34:
+.LASF17:
 	.string	"ESP_LOG_NONE"
 .LASF110:
 	.string	"tBTA_GATT_STATUS"
@@ -5597,7 +5597,7 @@ bta_gattc_action:
 	.string	"BTM_EIR_UUID_SERVCLASS_HDP_SINK"
 .LASF216:
 	.string	"tBTA_GATTC_API_CONFIRM"
-.LASF13:
+.LASF23:
 	.string	"UINT8"
 .LASF174:
 	.string	"BTA_GATTC_API_OPEN_EVT"
@@ -5623,7 +5623,7 @@ bta_gattc_action:
 	.string	"BTM_PM_STS_PENDING"
 .LASF295:
 	.string	"disc_active"
-.LASF35:
+.LASF18:
 	.string	"ESP_LOG_ERROR"
 .LASF86:
 	.string	"BTM_EIR_MAX_SERVICES"

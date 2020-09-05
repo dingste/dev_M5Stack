@@ -5,6 +5,9 @@
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/cpu_util.c"
 # 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/cpu_util.c"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/cpu_util.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 1
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
@@ -1357,7 +1360,7 @@ void __assert_func (const char *, int, const char *, const char *) __attribute__
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/cpu_util.c" 2
 
-void __attribute__((section(".iram1"))) esp_cpu_stall(int cpu_id)
+void __attribute__((section(".iram1" "." "0"))) esp_cpu_stall(int cpu_id)
 {
     if (cpu_id == 1) {
         ({ ; ({ ; (*((volatile uint32_t *)(((0x3ff48000 + 0xac))))) = (uint32_t)((({ ; (*((volatile uint32_t *)((0x3ff48000 + 0xac)))); })&(~(((0x3F)<<(20)))))); }); });
@@ -1372,7 +1375,7 @@ void __attribute__((section(".iram1"))) esp_cpu_stall(int cpu_id)
     }
 }
 
-void __attribute__((section(".iram1"))) esp_cpu_unstall(int cpu_id)
+void __attribute__((section(".iram1" "." "1"))) esp_cpu_unstall(int cpu_id)
 {
     if (cpu_id == 1) {
         ({ ; ({ ; (*((volatile uint32_t *)(((0x3ff48000 + 0xac))))) = (uint32_t)((({ ; (*((volatile uint32_t *)((0x3ff48000 + 0xac)))); })&(~(((0x3F)<<(20)))))); }); });
@@ -1383,7 +1386,7 @@ void __attribute__((section(".iram1"))) esp_cpu_unstall(int cpu_id)
     }
 }
 
-void __attribute__((section(".iram1"))) esp_cpu_reset(int cpu_id)
+void __attribute__((section(".iram1" "." "2"))) esp_cpu_reset(int cpu_id)
 {
     ({ ; ({ ; (*((volatile uint32_t *)(((0x3ff48000 + 0x0))))) = (uint32_t)((({ ; (*((volatile uint32_t *)((0x3ff48000 + 0x0)))); })|(cpu_id == 0 ? ((1UL << (5))) : ((1UL << (4)))))); }); })
                                                                               ;
@@ -1393,7 +1396,7 @@ void __attribute__((section(".iram1"))) esp_cpu_reset(int cpu_id)
 # 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/cpu_util.c" 3 4
 _Bool 
 # 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/cpu_util.c"
-    __attribute__((section(".iram1"))) esp_cpu_in_ocd_debug_mode()
+    __attribute__((section(".iram1" "." "3"))) esp_cpu_in_ocd_debug_mode()
 {
 
 

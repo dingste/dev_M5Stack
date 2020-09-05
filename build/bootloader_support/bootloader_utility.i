@@ -632,6 +632,9 @@ typedef __uintptr_t uintptr_t;
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
@@ -1085,15 +1088,15 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/cache.h" 1
@@ -1837,7 +1840,7 @@ extern void _xtos_timer_1_delta( int cycles );
 extern void _xtos_timer_2_delta( int cycles );
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h" 2
 # 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "0"))) DPORT_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -1846,7 +1849,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_
 
 }
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "1"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -1855,7 +1858,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_REA
 
 }
 # 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_READ_PERI_REG(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "2"))) DPORT_READ_PERI_REG(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -1867,7 +1870,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_READ_PERI_REG(ui
 # 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/cache.h"
 void mmu_init(int cpu_no);
 # 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/cache.h"
-static inline unsigned int __attribute__((section(".iram1"))) cache_flash_mmu_set(int cpu_no, int pid, unsigned int vaddr, unsigned int paddr, int psize, int num)
+static inline unsigned int __attribute__((section(".iram1" "." "3"))) cache_flash_mmu_set(int cpu_no, int pid, unsigned int vaddr, unsigned int paddr, int psize, int num)
 {
     extern unsigned int cache_flash_mmu_set_rom(int cpu_no, int pid, unsigned int vaddr, unsigned int paddr, int psize, int num);
 
@@ -1880,9 +1883,9 @@ static inline unsigned int __attribute__((section(".iram1"))) cache_flash_mmu_se
     return ret;
 }
 # 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/cache.h"
-unsigned int __attribute__((section(".iram1"))) cache_sram_mmu_set(int cpu_no, int pid, unsigned int vaddr, unsigned int paddr, int psize, int num);
+unsigned int __attribute__((section(".iram1" "." "4"))) cache_sram_mmu_set(int cpu_no, int pid, unsigned int vaddr, unsigned int paddr, int psize, int num);
 # 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/cache.h"
-static inline void __attribute__((section(".iram1"))) Cache_Read_Init(int cpu_no)
+static inline void __attribute__((section(".iram1" "." "5"))) Cache_Read_Init(int cpu_no)
 {
     extern void Cache_Read_Init_rom(int cpu_no);
     ;
@@ -1890,7 +1893,7 @@ static inline void __attribute__((section(".iram1"))) Cache_Read_Init(int cpu_no
     ;
 }
 # 138 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/cache.h"
-static inline void __attribute__((section(".iram1"))) Cache_Flush(int cpu_no)
+static inline void __attribute__((section(".iram1" "." "6"))) Cache_Flush(int cpu_no)
 {
     extern void Cache_Flush_rom(int cpu_no);
     ;
@@ -1898,7 +1901,7 @@ static inline void __attribute__((section(".iram1"))) Cache_Flush(int cpu_no)
     ;
 }
 # 154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/cache.h"
-static inline void __attribute__((section(".iram1"))) Cache_Read_Disable(int cpu_no)
+static inline void __attribute__((section(".iram1" "." "7"))) Cache_Read_Disable(int cpu_no)
 {
     extern void Cache_Read_Disable_rom(int cpu_no);
     ;
@@ -1906,7 +1909,7 @@ static inline void __attribute__((section(".iram1"))) Cache_Read_Disable(int cpu
     ;
 }
 # 170 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/cache.h"
-static inline void __attribute__((section(".iram1"))) Cache_Read_Enable(int cpu_no)
+static inline void __attribute__((section(".iram1" "." "8"))) Cache_Read_Enable(int cpu_no)
 {
     extern void Cache_Read_Enable_rom(int cpu_no);
     ;
@@ -1931,7 +1934,7 @@ unsigned char esp_crc8(unsigned char const *p, unsigned int len);
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/spi_reg.h" 1
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h" 2
-# 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 typedef enum {
     ESP_ROM_SPIFLASH_QIO_MODE = 0,
     ESP_ROM_SPIFLASH_QOUT_MODE,
@@ -1964,64 +1967,64 @@ typedef struct {
     uint16_t data_mask;
     uint16_t data;
 } esp_rom_spiflash_common_cmd_t;
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_fix_dummylen(uint8_t spi, uint8_t freqdiv);
-# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_select_qiomode(uint8_t wp_gpio_num, uint32_t ishspi);
-# 196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_set_drvs(uint8_t wp_gpio_num, uint32_t ishspi, uint8_t *drvs);
-# 207 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_select_padsfunc(uint32_t ishspi);
-# 220 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_attach(uint32_t ishspi, 
-# 220 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h" 3 4
+# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h" 3 4
                                              _Bool 
-# 220 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
                                                   legacy);
-# 234 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_read_status(esp_rom_spiflash_chip_t *spi, uint32_t *status);
-# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_read_statushigh(esp_rom_spiflash_chip_t *spi, uint32_t *status);
-# 262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 268 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_write_status(esp_rom_spiflash_chip_t *spi, uint32_t status_value);
-# 276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_read_user_cmd(uint32_t *status, uint8_t cmd);
-# 290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_config_readmode(esp_rom_spiflash_read_mode_t mode);
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 310 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_config_clk(uint8_t freqdiv, uint8_t spi);
-# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 322 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 uint16_t esp_rom_spiflash_common_cmd(esp_rom_spiflash_common_cmd_t *cmd);
-# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_unlock(void);
-# 340 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_lock(void);
-# 362 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 368 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_config_param(uint32_t deviceId, uint32_t chip_size, uint32_t block_size,
                                                         uint32_t sector_size, uint32_t page_size, uint32_t status_mask);
-# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 381 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_erase_chip(void);
-# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_erase_block(uint32_t block_num);
-# 401 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 407 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_erase_sector(uint32_t sector_num);
-# 415 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 421 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_erase_area(uint32_t start_addr, uint32_t area_len);
-# 431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_write(uint32_t dest_addr, const uint32_t *src, int32_t len);
-# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 453 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_read(uint32_t src_addr, uint32_t *dest, int32_t len);
-# 457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_write_encrypted_enable(void);
-# 471 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_prepare_encrypted_data(uint32_t flash_addr, uint32_t *data);
-# 481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 487 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_write_encrypted_disable(void);
-# 501 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 507 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_write_encrypted(uint32_t flash_addr, uint32_t *data, uint32_t len);
-# 514 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 520 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_wait_idle(esp_rom_spiflash_chip_t *spi);
-# 533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_select_qio_pins(uint8_t wp_gpio_num, uint32_t spiconfig);
 
 
@@ -2030,17 +2033,17 @@ void esp_rom_spiflash_select_qio_pins(uint8_t wp_gpio_num, uint32_t spiconfig);
 extern esp_rom_spiflash_chip_t g_rom_flashchip;
 # 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h" 1
-# 51 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
 uint32_t crc32_le(uint32_t crc, uint8_t const *buf, uint32_t len);
-# 64 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
 uint32_t crc32_be(uint32_t crc, uint8_t const *buf, uint32_t len);
-# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
 uint16_t crc16_le(uint16_t crc, uint8_t const *buf, uint32_t len);
-# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
+# 123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
 uint16_t crc16_be(uint16_t crc, uint8_t const *buf, uint32_t len);
-# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
+# 136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
 uint8_t crc8_le(uint8_t crc, uint8_t const *buf, uint32_t len);
-# 116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
 uint8_t crc8_be(uint8_t crc, uint8_t const *buf, uint32_t len);
 # 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/rtc.h" 1
@@ -2262,7 +2265,7 @@ STATUS uart_tx_one_char2(uint8_t TxChar);
 # 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/uart.h"
 void uart_tx_flush(uint8_t uart_no);
 # 269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/uart.h"
-static inline void __attribute__((section(".iram1"))) uart_tx_wait_idle(uint8_t uart_no) {
+static inline void __attribute__((section(".iram1" "." "9"))) uart_tx_wait_idle(uint8_t uart_no) {
     uint32_t status;
     do {
         status = ({ ; (*((volatile uint32_t *)(((0x3ff40000 + (uart_no) * 0x10000 + ( (uart_no) > 1 ? 0xe000 : 0 ) ) + 0x1C)))); });
@@ -3398,7 +3401,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 2
 
@@ -3422,10 +3425,22 @@ void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int l
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 1
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_flash_data_types.h" 1
-# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_flash_data_types.h"
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_flash_data_types.h"
+typedef enum {
+    ESP_OTA_IMG_NEW = 0x0U,
+    ESP_OTA_IMG_PENDING_VERIFY = 0x1U,
+    ESP_OTA_IMG_VALID = 0x2U,
+    ESP_OTA_IMG_INVALID = 0x3U,
+    ESP_OTA_IMG_ABORTED = 0x4U,
+    ESP_OTA_IMG_UNDEFINED = 0xFFFFFFFFU,
+} esp_ota_img_states_t;
+
+
+
 typedef struct {
     uint32_t ota_seq;
-    uint8_t seq_label[24];
+    uint8_t seq_label[20];
+    uint32_t ota_state;
     uint32_t crc;
 } esp_ota_select_entry_t;
 
@@ -3499,6 +3514,19 @@ typedef enum {
 
 
 
+
+
+
+typedef enum {
+    ESP_CHIP_ID_ESP32 = 0x0000,
+    ESP_CHIP_ID_INVALID = 0xFFFF
+} __attribute__((packed)) esp_chip_id_t;
+
+
+_Static_assert(sizeof(esp_chip_id_t) == 2, "esp_chip_id_t should be 16 bit");
+
+
+
 typedef struct {
     uint8_t magic;
     uint8_t segment_count;
@@ -3514,8 +3542,9 @@ typedef struct {
     uint8_t wp_pin;
 
     uint8_t spi_pin_drv[3];
-
-    uint8_t reserved[11];
+    esp_chip_id_t chip_id;
+    uint8_t min_chip_rev;
+    uint8_t reserved[8];
 
 
 
@@ -3531,6 +3560,25 @@ typedef struct {
     uint32_t load_addr;
     uint32_t data_len;
 } esp_image_segment_header_t;
+
+
+
+
+
+
+typedef struct {
+    uint32_t magic_word;
+    uint32_t secure_version;
+    uint32_t reserv1[2];
+    char version[32];
+    char project_name[32];
+    char time[16];
+    char date[16];
+    char idf_ver[32];
+    uint8_t app_elf_sha256[32];
+    uint32_t reserv2[20];
+} esp_app_desc_t;
+_Static_assert(sizeof(esp_app_desc_t) == 256, "esp_app_desc_t should be 256 bytes");
 
 
 
@@ -3552,15 +3600,15 @@ typedef enum {
 
 
 } esp_image_load_mode_t;
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t esp_image_load(esp_image_load_mode_t mode, const esp_partition_pos_t *part, esp_image_metadata_t *data) __attribute__((deprecated));
-# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 201 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t esp_image_verify(esp_image_load_mode_t mode, const esp_partition_pos_t *part, esp_image_metadata_t *data);
-# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t bootloader_load_image(const esp_partition_pos_t *part, esp_image_metadata_t *data);
-# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t esp_image_verify_bootloader(uint32_t *length);
-# 213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 246 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t esp_image_verify_bootloader_data(esp_image_metadata_t *data);
 
 
@@ -3591,11 +3639,13 @@ static inline
                   esp_secure_boot_enabled(void) {
     return ({ ; (*(volatile uint32_t *)((0x3ff5A000 + 0x018))); }) & ((1UL << (4)));
 }
-# 72 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_secure_boot.h"
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_secure_boot.h"
+esp_err_t esp_secure_boot_generate_digest(void);
+# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_secure_boot.h"
 esp_err_t esp_secure_boot_permanently_enable(void);
-# 86 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_secure_boot.h"
+# 108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_secure_boot.h"
 esp_err_t esp_secure_boot_verify_signature(uint32_t src_addr, uint32_t length);
-# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_secure_boot.h"
+# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_secure_boot.h"
 typedef struct {
     uint32_t version;
     uint8_t signature[64];
@@ -3693,16 +3743,33 @@ typedef void (*spi_flash_op_lock_func_t)(void);
 
 
 typedef void (*spi_flash_op_unlock_func_t)(void);
-# 345 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+
+
+
+typedef 
+# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h" 3 4
+       _Bool 
+# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+            (*spi_flash_is_safe_write_address_t)(size_t addr, size_t size);
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 typedef struct {
     spi_flash_guard_start_func_t start;
     spi_flash_guard_end_func_t end;
     spi_flash_op_lock_func_t op_lock;
     spi_flash_op_unlock_func_t op_unlock;
+
+    spi_flash_is_safe_write_address_t is_safe_write_address;
+
 } spi_flash_guard_funcs_t;
-# 360 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 void spi_flash_guard_set(const spi_flash_guard_funcs_t* funcs);
-# 369 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+
+
+
+
+
+
+
 const spi_flash_guard_funcs_t *spi_flash_guard_get();
 
 
@@ -3719,12 +3786,12 @@ extern const spi_flash_guard_funcs_t g_flash_guard_default_ops;
 extern const spi_flash_guard_funcs_t g_flash_guard_no_os_ops;
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h" 2
 # 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h"
-static inline __attribute__((section(".iram1"))) 
+static inline __attribute__((section(".iram1" "." "10"))) 
 # 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h" 3 4
                                                     _Bool 
 # 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h"
                                                          esp_flash_encryption_enabled(void) {
-    uint32_t flash_crypt_cnt = ({ ; ((({ ; (*(volatile uint32_t *)((0x3ff5A000 + 0x000))); }) >> (20)) & (0xFF)); });
+    uint32_t flash_crypt_cnt = ({ ; ((({ ; (*(volatile uint32_t *)((0x3ff5A000 + 0x000))); }) >> (20)) & (0x7F)); });
 
     
 # 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h" 3 4
@@ -3756,7 +3823,9 @@ void esp_flash_write_protect_crypt_cnt();
 # 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h" 2
-# 50 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
+uint32_t bootloader_mmap_get_free_pages();
+# 57 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
 const void *bootloader_mmap(uint32_t src_addr, uint32_t size);
 
 
@@ -3766,23 +3835,23 @@ const void *bootloader_mmap(uint32_t src_addr, uint32_t size);
 
 
 void bootloader_munmap(const void *mapping);
-# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
+# 82 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
 esp_err_t bootloader_flash_read(size_t src_addr, void *dest, size_t size, 
-# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h" 3 4
+# 82 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h" 3 4
                                                                          _Bool 
-# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
+# 82 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
                                                                               allow_decrypt);
-# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
+# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
 esp_err_t bootloader_flash_write(size_t dest_addr, void *src, size_t size, 
-# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h" 3 4
+# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h" 3 4
                                                                           _Bool 
-# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
+# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
                                                                                write_encrypted);
-# 102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
+# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
 esp_err_t bootloader_flash_erase_sector(size_t sector);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
+# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
 esp_err_t bootloader_flash_erase_range(uint32_t start_addr, uint32_t size);
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
+# 133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
 static inline uint32_t bootloader_cache_pages_to_map(uint32_t size, uint32_t vaddr)
 {
     return (size + (vaddr - (vaddr & (~(0x00010000 - 1)))) + 0x00010000 - 1) / 0x00010000;
@@ -3836,11 +3905,18 @@ _Bool
 
 
 
+
+
 typedef enum {
     GPIO_LONG_HOLD = 1,
     GPIO_SHORT_HOLD = -1,
     GPIO_NOT_HOLD = 0
 } esp_comm_gpio_hold_t;
+
+typedef enum {
+    ESP_IMAGE_BOOTLOADER,
+    ESP_IMAGE_APPLICATION
+} esp_image_type;
 
 
 
@@ -3857,30 +3933,70 @@ uint32_t bootloader_common_ota_select_crc(const esp_ota_select_entry_t *s);
 
 
 
-# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h" 3 4
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h" 3 4
 _Bool 
-# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
     bootloader_common_ota_select_valid(const esp_ota_select_entry_t *s);
-# 52 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
+
+
+
+
+
+
+
+
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h" 3 4
+_Bool 
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
+    bootloader_common_ota_select_invalid(const esp_ota_select_entry_t *s);
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
 esp_comm_gpio_hold_t bootloader_common_check_long_hold_gpio(uint32_t num_pin, uint32_t delay_sec);
-# 61 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
 
-# 61 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h" 3 4
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h" 3 4
 _Bool 
-# 61 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
     bootloader_common_erase_part_type_data(const char *list_erase, 
-# 61 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h" 3 4
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h" 3 4
                                                                    _Bool 
-# 61 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
                                                                         ota_data_erase);
-# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
+# 85 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
 
-# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h" 3 4
+# 85 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h" 3 4
 _Bool 
-# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
+# 85 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
     bootloader_common_label_search(const char *list, char *label);
-# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
+# 108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
 esp_err_t bootloader_common_get_sha256_of_partition(uint32_t address, uint32_t size, int type, uint8_t *out_sha_256);
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
+int bootloader_common_get_active_otadata(esp_ota_select_entry_t *two_otadata);
+# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
+int bootloader_common_select_otadata(const esp_ota_select_entry_t *two_otadata, 
+# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h" 3 4
+                                                                               _Bool 
+# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
+                                                                                    *valid_two_otadata, 
+# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h" 3 4
+                                                                                                        _Bool 
+# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
+                                                                                                             max);
+# 144 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
+esp_err_t bootloader_common_get_partition_description(const esp_partition_pos_t *partition, esp_app_desc_t *app_desc);
+
+
+
+
+
+
+uint8_t bootloader_common_get_chip_revision(void);
+# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/bootloader_common.h"
+esp_err_t bootloader_common_check_chip_validity(const esp_image_header_t* img_hdr, esp_image_type type);
+
+
+
+
+void bootloader_common_vddsdio_configure();
 # 52 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_utility.h" 1
 # 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_utility.h"
@@ -3912,11 +4028,113 @@ void bootloader_sha256_finish(bootloader_sha256_handle_t handle, uint8_t *digest
 # 56 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_sha.h"
 esp_err_t bootloader_sha256_hex_to_str(char *out_str, const uint8_t *in_array_hex, size_t len);
 # 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h" 1
+# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+typedef enum {
+    EFUSE_BLK0 = 0,
+    EFUSE_BLK1 = 1,
+    EFUSE_BLK2 = 2,
+    EFUSE_BLK3 = 3
+} esp_efuse_block_t;
+
+
+
+
+typedef enum {
+    EFUSE_CODING_SCHEME_NONE = 0,
+    EFUSE_CODING_SCHEME_3_4 = 1,
+    EFUSE_CODING_SCHEME_REPEAT = 2,
+} esp_efuse_coding_scheme_t;
+
+
+
+
+typedef struct {
+    esp_efuse_block_t efuse_block: 8;
+    uint8_t bit_start;
+    uint16_t bit_count;
+} esp_efuse_desc_t;
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_read_field_blob(const esp_efuse_desc_t* field[], void* dst, size_t dst_size_bits);
+# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_read_field_cnt(const esp_efuse_desc_t* field[], size_t* out_cnt);
+# 108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_write_field_blob(const esp_efuse_desc_t* field[], const void* src, size_t src_size_bits);
+# 124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_write_field_cnt(const esp_efuse_desc_t* field[], size_t cnt);
+# 139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_set_write_protect(esp_efuse_block_t blk);
+# 154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_set_read_protect(esp_efuse_block_t blk);
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+int esp_efuse_get_field_size(const esp_efuse_desc_t* field[]);
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+uint32_t esp_efuse_read_reg(esp_efuse_block_t blk, unsigned int num_reg);
+# 191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_write_reg(esp_efuse_block_t blk, unsigned int num_reg, uint32_t val);
+# 201 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_efuse_coding_scheme_t esp_efuse_get_coding_scheme(esp_efuse_block_t blk);
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_read_block(esp_efuse_block_t blk, void* dst_key, size_t offset_in_bits, size_t size_bits);
+# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_write_block(esp_efuse_block_t blk, const void* src_key, size_t offset_in_bits, size_t size_bits);
+
+
+
+
+
+
+uint8_t esp_efuse_get_chip_ver(void);
+
+
+
+
+
+
+uint32_t esp_efuse_get_pkg_ver(void);
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+void esp_efuse_burn_new_values(void);
+# 278 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+void esp_efuse_reset(void);
+# 288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+void esp_efuse_disable_basic_rom_console(void);
+# 302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_apply_34_encoding(const uint8_t *in_bytes, uint32_t *out_words, size_t in_bytes_len);
+# 320 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+void esp_efuse_write_random_key(uint32_t blk_wdata0_reg);
+
+
+
+
+uint32_t esp_efuse_read_secure_version();
+
+
+
+
+
+
+
+
+# 333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h" 3 4
+_Bool 
+# 333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+    esp_efuse_check_secure_version(uint32_t secure_version);
+# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_update_secure_version(uint32_t secure_version);
+# 356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+void esp_efuse_init(uint32_t offset, uint32_t size);
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 2
 
 static const char* TAG = "boot";
 
 
 
+
+static 
+# 61 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
+      _Bool 
+# 61 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+           ota_has_initial_contents;
 
 static void load_image(const esp_image_metadata_t* image_data);
 static void unpack_load_app(const esp_image_metadata_t *data);
@@ -3929,9 +4147,37 @@ static void set_cache_and_start_app(uint32_t drom_addr,
     uint32_t entry_addr);
 
 
-# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
+static esp_err_t read_otadata(const esp_partition_pos_t *ota_info, esp_ota_select_entry_t *two_otadata)
+{
+    const esp_ota_select_entry_t *ota_select_map;
+    if (ota_info->offset == 0) {
+        return 0x105;
+    }
+
+
+    if (ota_info->size < 2 * 0x1000) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "ota_info partition size %d is too small (minimum %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_info->size, sizeof(esp_ota_select_entry_t)); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "ota_info partition size %d is too small (minimum %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_info->size, sizeof(esp_ota_select_entry_t)); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "ota_info partition size %d is too small (minimum %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_info->size, sizeof(esp_ota_select_entry_t)); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "ota_info partition size %d is too small (minimum %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_info->size, sizeof(esp_ota_select_entry_t)); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "ota_info partition size %d is too small (minimum %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_info->size, sizeof(esp_ota_select_entry_t)); } } while(0); } while(0);
+        return -1;
+    }
+
+    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "OTA data offset 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_info->offset); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "OTA data offset 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_info->offset); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "OTA data offset 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_info->offset); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "OTA data offset 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_info->offset); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "OTA data offset 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_info->offset); } } while(0); } while(0);
+    ota_select_map = bootloader_mmap(ota_info->offset, ota_info->size);
+    if (!ota_select_map) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_info->offset, ota_info->size); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_info->offset, ota_info->size); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_info->offset, ota_info->size); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_info->offset, ota_info->size); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_info->offset, ota_info->size); } } while(0); } while(0);
+        return -1;
+    }
+
+    memcpy(&two_otadata[0], ota_select_map, sizeof(esp_ota_select_entry_t));
+    memcpy(&two_otadata[1], (uint8_t *)ota_select_map + 0x1000, sizeof(esp_ota_select_entry_t));
+    bootloader_munmap(ota_select_map);
+
+    return 0;
+}
+
+
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
 _Bool 
-# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
     bootloader_utility_load_partition_table(bootloader_state_t* bs)
 {
     const esp_partition_info_t *partitions;
@@ -3943,24 +4189,24 @@ _Bool
     if (!partitions) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, 0x8000, 0xC00); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, 0x8000, 0xC00); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, 0x8000, 0xC00); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, 0x8000, 0xC00); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, 0x8000, 0xC00); } } while(0); } while(0);
         return 
-# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
               0
-# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
                    ;
     }
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "mapped partition table 0x%x at 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, 0x8000, (intptr_t)partitions); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "mapped partition table 0x%x at 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, 0x8000, (intptr_t)partitions); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "mapped partition table 0x%x at 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, 0x8000, (intptr_t)partitions); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "mapped partition table 0x%x at 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, 0x8000, (intptr_t)partitions); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "mapped partition table 0x%x at 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, 0x8000, (intptr_t)partitions); } } while(0); } while(0);
 
     err = esp_partition_table_verify(partitions, 
-# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
                                                 1
-# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
                                                     , &num_partitions);
     if (err != 0) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Failed to verify partition table" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Failed to verify partition table" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Failed to verify partition table" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Failed to verify partition table" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Failed to verify partition table" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         return 
-# 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
               0
-# 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
                    ;
     }
 
@@ -4013,6 +4259,12 @@ _Bool
             case 0x04:
                 partition_usage = "NVS keys";
                 break;
+            case 0x05:
+                partition_usage = "efuse";
+
+
+
+                break;
             default:
                 partition_usage = "Unknown data";
                 break;
@@ -4032,9 +4284,9 @@ _Bool
 
     do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "End of partition table" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "End of partition table" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "End of partition table" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "End of partition table" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "End of partition table" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
     return 
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
           1
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
               ;
 }
 
@@ -4073,116 +4325,154 @@ static void log_invalid_app_partition(int index)
     }
 }
 
+static esp_err_t write_otadata(esp_ota_select_entry_t *otadata, uint32_t offset, 
+# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
+                                                                                _Bool 
+# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+                                                                                     write_encrypted)
+{
+    esp_err_t err = bootloader_flash_erase_sector(offset / 0x1000);
+    if (err == 0) {
+        err = bootloader_flash_write(offset, otadata, sizeof(esp_ota_select_entry_t), write_encrypted);
+    }
+    if (err != 0) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error in write_otadata operation. err = 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, err); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error in write_otadata operation. err = 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, err); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error in write_otadata operation. err = 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, err); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error in write_otadata operation. err = 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, err); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error in write_otadata operation. err = 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, err); } } while(0); } while(0);
+    }
+    return err;
+}
+
+static 
+# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
+      _Bool 
+# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+           check_anti_rollback(const esp_partition_pos_t *partition)
+{
+
+
+
+
+
+    return 
+# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
+          1
+# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+              ;
+
+}
+# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
 int bootloader_utility_get_selected_boot_partition(const bootloader_state_t *bs)
 {
-    esp_ota_select_entry_t sa,sb;
-    const esp_ota_select_entry_t *ota_select_map;
+    esp_ota_select_entry_t otadata[2];
+    int boot_index = (-1);
 
-    if (bs->ota_info.offset != 0) {
+    if (bs->ota_info.offset == 0) {
+        return (-1);
+    }
 
-        if (bs->ota_info.size < 2 * 0x1000) {
-            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "ota_info partition size %d is too small (minimum %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->ota_info.size, sizeof(esp_ota_select_entry_t)); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "ota_info partition size %d is too small (minimum %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->ota_info.size, sizeof(esp_ota_select_entry_t)); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "ota_info partition size %d is too small (minimum %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->ota_info.size, sizeof(esp_ota_select_entry_t)); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "ota_info partition size %d is too small (minimum %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->ota_info.size, sizeof(esp_ota_select_entry_t)); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "ota_info partition size %d is too small (minimum %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->ota_info.size, sizeof(esp_ota_select_entry_t)); } } while(0); } while(0);
-            return (-99);
-        }
+    if (read_otadata(&bs->ota_info, otadata) != 0) {
+        return (-99);
+    }
+    ota_has_initial_contents = 
+# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
+                              0
+# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+                                   ;
 
-        do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "OTA data offset 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->ota_info.offset); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "OTA data offset 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->ota_info.offset); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "OTA data offset 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->ota_info.offset); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "OTA data offset 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->ota_info.offset); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "OTA data offset 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->ota_info.offset); } } while(0); } while(0);
-        ota_select_map = bootloader_mmap(bs->ota_info.offset, bs->ota_info.size);
-        if (!ota_select_map) {
-            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->ota_info.offset, bs->ota_info.size); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->ota_info.offset, bs->ota_info.size); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->ota_info.offset, bs->ota_info.size); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->ota_info.offset, bs->ota_info.size); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->ota_info.offset, bs->ota_info.size); } } while(0); } while(0);
-            return (-99);
-        }
-        memcpy(&sa, ota_select_map, sizeof(esp_ota_select_entry_t));
-        memcpy(&sb, (uint8_t *)ota_select_map + 0x1000, sizeof(esp_ota_select_entry_t));
-        bootloader_munmap(ota_select_map);
-
-        do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "OTA sequence values A 0x%08x B 0x%08x" "\033[0m" "\n", esp_log_timestamp(), TAG, sa.ota_seq, sb.ota_seq); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "OTA sequence values A 0x%08x B 0x%08x" "\033[0m" "\n", esp_log_timestamp(), TAG, sa.ota_seq, sb.ota_seq); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "OTA sequence values A 0x%08x B 0x%08x" "\033[0m" "\n", esp_log_timestamp(), TAG, sa.ota_seq, sb.ota_seq); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "OTA sequence values A 0x%08x B 0x%08x" "\033[0m" "\n", esp_log_timestamp(), TAG, sa.ota_seq, sb.ota_seq); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "OTA sequence values A 0x%08x B 0x%08x" "\033[0m" "\n", esp_log_timestamp(), TAG, sa.ota_seq, sb.ota_seq); } } while(0); } while(0);
-        if ((sa.ota_seq == 0xffffffffUL && sb.ota_seq == 0xffffffffUL) || (bs->app_count == 0)) {
-            do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "OTA sequence numbers both empty (all-0xFF) or partition table does not have bootable ota_apps (app_count=%d)" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->app_count); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "OTA sequence numbers both empty (all-0xFF) or partition table does not have bootable ota_apps (app_count=%d)" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->app_count); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "OTA sequence numbers both empty (all-0xFF) or partition table does not have bootable ota_apps (app_count=%d)" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->app_count); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "OTA sequence numbers both empty (all-0xFF) or partition table does not have bootable ota_apps (app_count=%d)" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->app_count); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "OTA sequence numbers both empty (all-0xFF) or partition table does not have bootable ota_apps (app_count=%d)" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->app_count); } } while(0); } while(0);
-            if (bs->factory.offset != 0) {
-                do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Defaulting to factory image" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Defaulting to factory image" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Defaulting to factory image" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Defaulting to factory image" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Defaulting to factory image" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-                return (-1);
-            } else {
-                do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "No factory image, trying OTA 0" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "No factory image, trying OTA 0" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "No factory image, trying OTA 0" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "No factory image, trying OTA 0" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "No factory image, trying OTA 0" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-                return 0;
-            }
+    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "otadata[0]: sequence values 0x%08x" "\033[0m" "\n", esp_log_timestamp(), TAG, otadata[0].ota_seq); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "otadata[0]: sequence values 0x%08x" "\033[0m" "\n", esp_log_timestamp(), TAG, otadata[0].ota_seq); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "otadata[0]: sequence values 0x%08x" "\033[0m" "\n", esp_log_timestamp(), TAG, otadata[0].ota_seq); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "otadata[0]: sequence values 0x%08x" "\033[0m" "\n", esp_log_timestamp(), TAG, otadata[0].ota_seq); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "otadata[0]: sequence values 0x%08x" "\033[0m" "\n", esp_log_timestamp(), TAG, otadata[0].ota_seq); } } while(0); } while(0);
+    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "otadata[1]: sequence values 0x%08x" "\033[0m" "\n", esp_log_timestamp(), TAG, otadata[1].ota_seq); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "otadata[1]: sequence values 0x%08x" "\033[0m" "\n", esp_log_timestamp(), TAG, otadata[1].ota_seq); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "otadata[1]: sequence values 0x%08x" "\033[0m" "\n", esp_log_timestamp(), TAG, otadata[1].ota_seq); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "otadata[1]: sequence values 0x%08x" "\033[0m" "\n", esp_log_timestamp(), TAG, otadata[1].ota_seq); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "otadata[1]: sequence values 0x%08x" "\033[0m" "\n", esp_log_timestamp(), TAG, otadata[1].ota_seq); } } while(0); } while(0);
+# 321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+    if ((bootloader_common_ota_select_invalid(&otadata[0]) &&
+         bootloader_common_ota_select_invalid(&otadata[1])) ||
+         bs->app_count == 0) {
+        do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "OTA sequence numbers both empty (all-0xFF) or partition table does not have bootable ota_apps (app_count=%d)" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->app_count); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "OTA sequence numbers both empty (all-0xFF) or partition table does not have bootable ota_apps (app_count=%d)" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->app_count); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "OTA sequence numbers both empty (all-0xFF) or partition table does not have bootable ota_apps (app_count=%d)" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->app_count); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "OTA sequence numbers both empty (all-0xFF) or partition table does not have bootable ota_apps (app_count=%d)" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->app_count); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "OTA sequence numbers both empty (all-0xFF) or partition table does not have bootable ota_apps (app_count=%d)" "\033[0m" "\n", esp_log_timestamp(), TAG, bs->app_count); } } while(0); } while(0);
+        if (bs->factory.offset != 0) {
+            do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Defaulting to factory image" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Defaulting to factory image" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Defaulting to factory image" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Defaulting to factory image" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Defaulting to factory image" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+            boot_index = (-1);
         } else {
-            
-# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
-           _Bool 
-# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
-                ota_valid = 
-# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
-                            0
-# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
-                                 ;
-            const char *ota_msg;
-            int ota_seq;
-            if(bootloader_common_ota_select_valid(&sa) && bootloader_common_ota_select_valid(&sb)) {
-                ota_valid = 
-# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
-                           1
-# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
-                               ;
-                ota_msg = "Both OTA values";
-                ota_seq = ((sa.ota_seq) > (sb.ota_seq) ? (sa.ota_seq) : (sb.ota_seq)) - 1;
-            } else if(bootloader_common_ota_select_valid(&sa)) {
-                ota_valid = 
-# 236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
-                           1
-# 236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
-                               ;
-                ota_msg = "Only OTA sequence A is";
-                ota_seq = sa.ota_seq - 1;
-            } else if(bootloader_common_ota_select_valid(&sb)) {
-                ota_valid = 
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
-                           1
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
-                               ;
-                ota_msg = "Only OTA sequence B is";
-                ota_seq = sb.ota_seq - 1;
-            }
+            do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "No factory image, trying OTA 0" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "No factory image, trying OTA 0" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "No factory image, trying OTA 0" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "No factory image, trying OTA 0" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "No factory image, trying OTA 0" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+            boot_index = 0;
 
-            if (ota_valid) {
-                int ota_slot = ota_seq % bs->app_count;
-                do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s valid. Mapping seq %d -> OTA slot %d" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_msg, ota_seq, ota_slot); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s valid. Mapping seq %d -> OTA slot %d" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_msg, ota_seq, ota_slot); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s valid. Mapping seq %d -> OTA slot %d" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_msg, ota_seq, ota_slot); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s valid. Mapping seq %d -> OTA slot %d" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_msg, ota_seq, ota_slot); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s valid. Mapping seq %d -> OTA slot %d" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_msg, ota_seq, ota_slot); } } while(0); } while(0);
-                return ota_slot;
-            } else if (bs->factory.offset != 0) {
-                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "ota data partition invalid, falling back to factory" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "ota data partition invalid, falling back to factory" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "ota data partition invalid, falling back to factory" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "ota data partition invalid, falling back to factory" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "ota data partition invalid, falling back to factory" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-                return (-1);
-            } else {
-                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "ota data partition invalid and no factory, will try all partitions" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "ota data partition invalid and no factory, will try all partitions" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "ota data partition invalid and no factory, will try all partitions" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "ota data partition invalid and no factory, will try all partitions" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "ota data partition invalid and no factory, will try all partitions" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-                return (-1);
+            if ((otadata[0].ota_seq == 0xffffffffUL || otadata[0].crc != bootloader_common_ota_select_crc(&otadata[0])) &&
+                (otadata[1].ota_seq == 0xffffffffUL || otadata[1].crc != bootloader_common_ota_select_crc(&otadata[1]))) {
+
+
+                ota_has_initial_contents = 
+# 336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
+                                          1
+# 336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+                                              ;
             }
+        }
+    } else {
+        int active_otadata = bootloader_common_get_active_otadata(otadata);
+# 354 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+        if (active_otadata != -1) {
+            do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Active otadata[%d]" "\033[0m" "\n", esp_log_timestamp(), TAG, active_otadata); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Active otadata[%d]" "\033[0m" "\n", esp_log_timestamp(), TAG, active_otadata); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Active otadata[%d]" "\033[0m" "\n", esp_log_timestamp(), TAG, active_otadata); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Active otadata[%d]" "\033[0m" "\n", esp_log_timestamp(), TAG, active_otadata); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Active otadata[%d]" "\033[0m" "\n", esp_log_timestamp(), TAG, active_otadata); } } while(0); } while(0);
+            uint32_t ota_seq = otadata[active_otadata].ota_seq - 1;
+            boot_index = ota_seq % bs->app_count;
+            do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Mapping seq %d -> OTA slot %d" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_seq, boot_index); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Mapping seq %d -> OTA slot %d" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_seq, boot_index); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Mapping seq %d -> OTA slot %d" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_seq, boot_index); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Mapping seq %d -> OTA slot %d" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_seq, boot_index); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Mapping seq %d -> OTA slot %d" "\033[0m" "\n", esp_log_timestamp(), TAG, ota_seq, boot_index); } } while(0); } while(0);
+# 373 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+        } else if (bs->factory.offset != 0) {
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "ota data partition invalid, falling back to factory" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "ota data partition invalid, falling back to factory" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "ota data partition invalid, falling back to factory" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "ota data partition invalid, falling back to factory" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "ota data partition invalid, falling back to factory" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+            boot_index = (-1);
+        } else {
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "ota data partition invalid and no factory, will try all partitions" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "ota data partition invalid and no factory, will try all partitions" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "ota data partition invalid and no factory, will try all partitions" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "ota data partition invalid and no factory, will try all partitions" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "ota data partition invalid and no factory, will try all partitions" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+            boot_index = (-1);
         }
     }
 
-
-
-    return (-1);
+    return boot_index;
 }
 
 
 static 
-# 265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
+# 386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
       _Bool 
-# 265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+# 386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
            try_load_partition(const esp_partition_pos_t *partition, esp_image_metadata_t *data)
 {
     if (partition->size == 0) {
         do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Can't boot from zero-length partition" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Can't boot from zero-length partition" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Can't boot from zero-length partition" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Can't boot from zero-length partition" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Can't boot from zero-length partition" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         return 
-# 269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
+# 390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
               0
-# 269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+# 390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
                    ;
     }
-# 279 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+# 400 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
     return 
-# 279 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
+# 400 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
           0
-# 279 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+# 400 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
                ;
+}
+
+
+
+static void set_actual_ota_seq(const bootloader_state_t *bs, int index)
+{
+    if (index > (-1) && ota_has_initial_contents == 
+# 407 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
+                                                            1
+# 407 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+                                                                ) {
+        esp_ota_select_entry_t otadata;
+        memset(&otadata, 0xFF, sizeof(otadata));
+        otadata.ota_seq = index + 1;
+        otadata.ota_state = ESP_OTA_IMG_VALID;
+        otadata.crc = bootloader_common_ota_select_crc(&otadata);
+
+        
+# 414 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c" 3 4
+       _Bool 
+# 414 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+            write_encrypted = esp_flash_encryption_enabled();
+        write_otadata(&otadata, bs->ota_info.offset + 0x1000 * 0, write_encrypted);
+        do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Set actual ota_seq=%d in otadata[0]" "\033[0m" "\n", esp_log_timestamp(), TAG, otadata.ota_seq); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Set actual ota_seq=%d in otadata[0]" "\033[0m" "\n", esp_log_timestamp(), TAG, otadata.ota_seq); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Set actual ota_seq=%d in otadata[0]" "\033[0m" "\n", esp_log_timestamp(), TAG, otadata.ota_seq); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Set actual ota_seq=%d in otadata[0]" "\033[0m" "\n", esp_log_timestamp(), TAG, otadata.ota_seq); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Set actual ota_seq=%d in otadata[0]" "\033[0m" "\n", esp_log_timestamp(), TAG, otadata.ota_seq); } } while(0); } while(0);
+
+
+
+    }
 }
 
 
@@ -4209,7 +4499,8 @@ void bootloader_utility_load_boot_image(const bootloader_state_t *bs, int start_
             continue;
         }
         do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Trying partition index %d offs 0x%x size 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, index, part.offset, part.size); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Trying partition index %d offs 0x%x size 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, index, part.offset, part.size); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Trying partition index %d offs 0x%x size 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, index, part.offset, part.size); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Trying partition index %d offs 0x%x size 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, index, part.offset, part.size); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Trying partition index %d offs 0x%x size 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, index, part.offset, part.size); } } while(0); } while(0);
-        if (try_load_partition(&part, &image_data)) {
+        if (check_anti_rollback(&part) && try_load_partition(&part, &image_data)) {
+            set_actual_ota_seq(bs, index);
             load_image(&image_data);
         }
         log_invalid_app_partition(index);
@@ -4222,7 +4513,8 @@ void bootloader_utility_load_boot_image(const bootloader_state_t *bs, int start_
             continue;
         }
         do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Trying partition index %d offs 0x%x size 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, index, part.offset, part.size); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Trying partition index %d offs 0x%x size 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, index, part.offset, part.size); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Trying partition index %d offs 0x%x size 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, index, part.offset, part.size); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Trying partition index %d offs 0x%x size 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, index, part.offset, part.size); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Trying partition index %d offs 0x%x size 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, index, part.offset, part.size); } } while(0); } while(0);
-        if (try_load_partition(&part, &image_data)) {
+        if (check_anti_rollback(&part) && try_load_partition(&part, &image_data)) {
+            set_actual_ota_seq(bs, index);
             load_image(&image_data);
         }
         log_invalid_app_partition(index);
@@ -4241,7 +4533,7 @@ void bootloader_utility_load_boot_image(const bootloader_state_t *bs, int start_
 
 static void load_image(const esp_image_metadata_t* image_data)
 {
-# 373 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
+# 580 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/bootloader_utility.c"
     do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Disabling RNG early entropy source..." "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Disabling RNG early entropy source..." "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Disabling RNG early entropy source..." "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Disabling RNG early entropy source..." "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Disabling RNG early entropy source..." "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
     bootloader_random_disable();
 

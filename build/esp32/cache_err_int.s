@@ -10,7 +10,7 @@
 	.global	esp_cache_err_int_init
 	.type	esp_cache_err_int_init, @function
 esp_cache_err_int_init:
-.LFB20:
+.LFB29:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/cache_err_int.c"
 	.loc 1 35 0
 	entry	sp, 32
@@ -18,9 +18,9 @@ esp_cache_err_int_init:
 .LBB12:
 .LBB13:
 	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
-	.loc 2 208 0
+	.loc 2 210 0
 #APP
-# 208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 1
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 1
 	rsr.prid a3
  extui a3,a3,13,1
 # 0 "" 2
@@ -67,9 +67,9 @@ esp_cache_err_int_init:
 	call8	xt_ints_on
 .LVL5:
 	retw.n
-.LFE20:
+.LFE29:
 	.size	esp_cache_err_int_init, .-esp_cache_err_int_init
-	.section	.iram1,"ax",@progbits
+	.section	.iram1.16,"ax",@progbits
 	.literal_position
 	.literal .LC3, 1072694268
 	.literal .LC4, 32256
@@ -78,12 +78,10 @@ esp_cache_err_int_init:
 	.global	esp_cache_err_get_cpuid
 	.type	esp_cache_err_get_cpuid, @function
 esp_cache_err_get_cpuid:
-.LFB21:
+.LFB30:
 	.loc 1 75 0
 	entry	sp, 32
 .LCFI1:
-	.loc 1 76 0
-	call8	esp_dport_access_int_pause
 .LVL6:
 .LBB16:
 .LBB17:
@@ -91,7 +89,7 @@ esp_cache_err_get_cpuid:
 	l32r	a2, .LC3
 .LBE17:
 .LBE16:
-	.loc 1 85 0
+	.loc 1 84 0
 	l32r	a8, .LC4
 .LBB19:
 .LBB18:
@@ -100,9 +98,9 @@ esp_cache_err_get_cpuid:
 	l32i.n	a9, a2, 0
 .LBE18:
 .LBE19:
-	.loc 1 86 0
-	movi.n	a2, 0
 	.loc 1 85 0
+	movi.n	a2, 0
+	.loc 1 84 0
 	bany	a9, a8, .L6
 .LVL7:
 .LBB20:
@@ -111,7 +109,7 @@ esp_cache_err_get_cpuid:
 	l32r	a2, .LC5
 .LBE21:
 .LBE20:
-	.loc 1 100 0
+	.loc 1 99 0
 	movi.n	a9, -1
 .LBB23:
 .LBB22:
@@ -120,17 +118,17 @@ esp_cache_err_get_cpuid:
 	l32i.n	a2, a2, 0
 .LBE22:
 .LBE23:
-	.loc 1 97 0
+	.loc 1 96 0
 	and	a2, a2, a8
-	.loc 1 100 0
+	.loc 1 99 0
 	movi.n	a8, 1
 	movnez	a9, a8, a2
 	mov.n	a2, a9
 .LVL8:
 .L6:
-	.loc 1 101 0
+	.loc 1 100 0
 	retw.n
-.LFE21:
+.LFE30:
 	.size	esp_cache_err_get_cpuid, .-esp_cache_err_get_cpuid
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -151,10 +149,10 @@ esp_cache_err_get_cpuid:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI0-.LFB20
+	.4byte	.LCFI0-.LFB29
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -163,10 +161,10 @@ esp_cache_err_get_cpuid:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI1-.LFB21
+	.4byte	.LCFI1-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -177,18 +175,17 @@ esp_cache_err_get_cpuid:
 	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
 	.file 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_api.h"
 	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_dport_access.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x212
+	.4byte	0x1fa
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF21
+	.4byte	.LASF20
 	.byte	0xc
+	.4byte	.LASF21
 	.4byte	.LASF22
-	.4byte	.LASF23
 	.4byte	.Ldebug_ranges0+0x30
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -255,20 +252,20 @@ esp_cache_err_get_cpuid:
 	.byte	0x2
 	.4byte	.LASF13
 	.uleb128 0x5
-	.4byte	.LASF24
+	.4byte	.LASF23
 	.byte	0x2
-	.byte	0xce
+	.byte	0xd0
 	.4byte	0x68
 	.byte	0x3
 	.4byte	0xb1
 	.uleb128 0x6
 	.string	"id"
 	.byte	0x2
-	.byte	0xcf
+	.byte	0xd1
 	.4byte	0x41
 	.byte	0
 	.uleb128 0x7
-	.4byte	.LASF25
+	.4byte	.LASF24
 	.byte	0x3
 	.byte	0xa7
 	.4byte	0x68
@@ -281,11 +278,11 @@ esp_cache_err_get_cpuid:
 	.4byte	0x68
 	.byte	0
 	.uleb128 0x9
-	.4byte	.LASF26
+	.4byte	.LASF25
 	.byte	0x1
 	.byte	0x22
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x16a
@@ -321,7 +318,7 @@ esp_cache_err_get_cpuid:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL0
-	.4byte	0x1e8
+	.4byte	0x1db
 	.4byte	0x141
 	.uleb128 0x10
 	.uleb128 0x1
@@ -332,7 +329,7 @@ esp_cache_err_get_cpuid:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL1
-	.4byte	0x1f3
+	.4byte	0x1e6
 	.4byte	0x160
 	.uleb128 0x10
 	.uleb128 0x1
@@ -354,78 +351,69 @@ esp_cache_err_get_cpuid:
 	.byte	0
 	.uleb128 0x11
 	.4byte	.LVL5
-	.4byte	0x1ff
+	.4byte	0x1f2
 	.byte	0
 	.uleb128 0x12
-	.4byte	.LASF27
+	.4byte	.LASF26
 	.byte	0x1
 	.byte	0x4a
 	.4byte	0x41
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1e3
+	.4byte	0x1d6
 	.uleb128 0x13
 	.4byte	.LASF15
 	.byte	0x1
-	.byte	0x4d
-	.4byte	0x1e3
+	.byte	0x4c
+	.4byte	0x1d6
 	.2byte	0x7e00
 	.uleb128 0x14
 	.4byte	.LASF16
 	.byte	0x1
-	.byte	0x59
-	.4byte	0x1e3
+	.byte	0x58
+	.4byte	0x1d6
 	.4byte	.LLST1
 	.uleb128 0x15
 	.4byte	0xb1
 	.4byte	.LBB16
 	.4byte	.Ldebug_ranges0+0
 	.byte	0x1
-	.byte	0x55
+	.byte	0x54
 	.4byte	0x1bc
 	.uleb128 0x16
 	.4byte	0xc1
 	.4byte	0x3ff003fc
 	.byte	0
-	.uleb128 0x15
+	.uleb128 0x17
 	.4byte	0xb1
 	.4byte	.LBB20
 	.4byte	.Ldebug_ranges0+0x18
 	.byte	0x1
-	.byte	0x61
-	.4byte	0x1d9
+	.byte	0x60
 	.uleb128 0xe
 	.4byte	0xc1
 	.4byte	.LLST2
 	.byte	0
-	.uleb128 0x11
-	.4byte	.LVL6
-	.4byte	0x20a
 	.byte	0
-	.uleb128 0x17
-	.4byte	0x68
 	.uleb128 0x18
+	.4byte	0x68
+	.uleb128 0x19
 	.4byte	.LASF17
 	.4byte	.LASF17
 	.byte	0x6
 	.byte	0x5f
-	.uleb128 0x19
+	.uleb128 0x1a
 	.4byte	.LASF18
 	.4byte	.LASF18
 	.byte	0x7
 	.2byte	0x21b
-	.uleb128 0x18
+	.uleb128 0x19
 	.4byte	.LASF19
 	.4byte	.LASF19
 	.byte	0x6
 	.byte	0x54
-	.uleb128 0x18
-	.4byte	.LASF20
-	.4byte	.LASF20
-	.byte	0x8
-	.byte	0x1b
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -734,13 +722,28 @@ esp_cache_err_get_cpuid:
 	.byte	0
 	.byte	0
 	.uleb128 0x17
+	.uleb128 0x1d
+	.byte	0x1
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x52
+	.uleb128 0x1
+	.uleb128 0x55
+	.uleb128 0x17
+	.uleb128 0x58
+	.uleb128 0xb
+	.uleb128 0x59
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x18
 	.uleb128 0x26
 	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x18
+	.uleb128 0x19
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -757,7 +760,7 @@ esp_cache_err_get_cpuid:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x19
+	.uleb128 0x1a
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -812,10 +815,10 @@ esp_cache_err_get_cpuid:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -832,69 +835,67 @@ esp_cache_err_get_cpuid:
 	.4byte	.LBE23
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB21
-	.4byte	.LFE21
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB30
+	.4byte	.LFE30
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
-.LASF25:
-	.string	"DPORT_READ_PERI_REG"
-.LASF27:
-	.string	"esp_cache_err_get_cpuid"
-.LASF21:
-	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
-.LASF1:
-	.string	"unsigned char"
-.LASF7:
-	.string	"__uint32_t"
-.LASF14:
-	.string	"core_id"
-.LASF3:
-	.string	"short unsigned int"
-.LASF18:
-	.string	"intr_matrix_set"
-.LASF20:
-	.string	"esp_dport_access_int_pause"
-.LASF11:
-	.string	"long unsigned int"
-.LASF2:
-	.string	"short int"
-.LASF4:
-	.string	"unsigned int"
-.LASF6:
-	.string	"long long unsigned int"
-.LASF23:
-	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/esp32"
-.LASF10:
-	.string	"sizetype"
 .LASF5:
 	.string	"long long int"
-.LASF22:
-	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/cache_err_int.c"
-.LASF26:
-	.string	"esp_cache_err_int_init"
-.LASF12:
-	.string	"char"
-.LASF24:
-	.string	"xPortGetCoreID"
+.LASF3:
+	.string	"short unsigned int"
+.LASF4:
+	.string	"unsigned int"
+.LASF19:
+	.string	"xt_ints_on"
 .LASF17:
 	.string	"xt_ints_off"
+.LASF7:
+	.string	"__uint32_t"
+.LASF11:
+	.string	"long unsigned int"
+.LASF6:
+	.string	"long long unsigned int"
+.LASF20:
+	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
+.LASF21:
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/cache_err_int.c"
+.LASF25:
+	.string	"esp_cache_err_int_init"
+.LASF1:
+	.string	"unsigned char"
+.LASF12:
+	.string	"char"
 .LASF8:
 	.string	"uint32_t"
 .LASF9:
 	.string	"long int"
-.LASF19:
-	.string	"xt_ints_on"
-.LASF15:
-	.string	"pro_mask"
-.LASF0:
-	.string	"signed char"
-.LASF16:
-	.string	"app_mask"
+.LASF22:
+	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/esp32"
 .LASF13:
 	.string	"_Bool"
+.LASF15:
+	.string	"pro_mask"
+.LASF16:
+	.string	"app_mask"
+.LASF26:
+	.string	"esp_cache_err_get_cpuid"
+.LASF0:
+	.string	"signed char"
+.LASF24:
+	.string	"DPORT_READ_PERI_REG"
+.LASF14:
+	.string	"core_id"
+.LASF18:
+	.string	"intr_matrix_set"
+.LASF2:
+	.string	"short int"
+.LASF23:
+	.string	"xPortGetCoreID"
+.LASF10:
+	.string	"sizetype"
 	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

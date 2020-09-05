@@ -1290,15 +1290,15 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport.h" 1
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport.h"
@@ -1693,7 +1693,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 2
 
@@ -1800,10 +1800,38 @@ esp_err_t esp_transport_set_parent_transport_func(esp_transport_handle_t t, payl
 esp_transport_handle_t esp_transport_tcp_init();
 # 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ws.h" 1
-# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ws.h"
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ws.h"
+typedef enum ws_transport_opcodes {
+    WS_TRANSPORT_OPCODES_CONT = 0x00,
+    WS_TRANSPORT_OPCODES_TEXT = 0x01,
+    WS_TRANSPORT_OPCODES_BINARY = 0x02,
+    WS_TRANSPORT_OPCODES_CLOSE = 0x08,
+    WS_TRANSPORT_OPCODES_PING = 0x09,
+    WS_TRANSPORT_OPCODES_PONG = 0x0a,
+    WS_TRANSPORT_OPCODES_FIN = 0x80,
+} ws_transport_opcodes_t;
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ws.h"
 esp_transport_handle_t esp_transport_ws_init(esp_transport_handle_t parent_handle);
 
+
+
+
+
+
+
 void esp_transport_ws_set_path(esp_transport_handle_t t, const char *path);
+# 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ws.h"
+esp_err_t esp_transport_ws_set_subprotocol(esp_transport_handle_t t, const char *sub_protocol);
+# 65 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ws.h"
+esp_err_t esp_transport_ws_set_user_agent(esp_transport_handle_t t, const char *user_agent);
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ws.h"
+esp_err_t esp_transport_ws_set_headers(esp_transport_handle_t t, const char *headers);
+# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ws.h"
+int esp_transport_ws_send_raw(esp_transport_handle_t t, ws_transport_opcodes_t opcode, const char *b, int len, int timeout_ms);
+# 108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ws.h"
+ws_transport_opcodes_t esp_transport_ws_get_read_opcode(esp_transport_handle_t t);
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_ws.h"
+int esp_transport_ws_get_read_payload_len(esp_transport_handle_t t);
 # 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_utils.h" 1
 # 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_utils.h"
@@ -1842,26 +1870,12 @@ int setitimer (int __which, const struct itimerval *restrict __value, struct iti
 # 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/include/esp_transport_utils.h"
 void esp_transport_utils_ms_to_timeval(int timeout_ms, struct timeval *tv);
 # 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/base64.h" 1
-# 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/base64.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/base64.h" 2
-# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/base64.h"
-int mbedtls_base64_encode( unsigned char *dst, size_t dlen, size_t *olen,
-                   const unsigned char *src, size_t slen );
-# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/base64.h"
-int mbedtls_base64_decode( unsigned char *dst, size_t dlen, size_t *olen,
-                   const unsigned char *src, size_t slen );
-
-
-
-
-
-
-int mbedtls_base64_self_test( int verbose );
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_strcasestr.h" 1
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_strcasestr.h"
+char *transport_strcasestr(const char *buffer, const char *key);
 # 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h" 1
-# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/base64.h" 1
+# 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/base64.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 1
 # 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h"
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
@@ -1876,7 +1890,7 @@ int mbedtls_base64_self_test( int verbose );
 void *esp_mbedtls_mem_calloc(size_t n, size_t size);
 void esp_mbedtls_mem_free(void *ptr);
 # 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
-# 2717 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h"
+# 2758 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h" 1
 # 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 1
@@ -1884,15 +1898,34 @@ void esp_mbedtls_mem_free(void *ptr);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed/limits.h" 1 3 4
 # 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 2
 # 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h" 2
-# 681 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
+# 706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
 typedef int mbedtls_iso_c_forbids_empty_translation_units;
-# 2718 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
-# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h" 2
+# 2759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
+# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/base64.h" 2
 
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/base64.h" 2
+# 61 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/base64.h"
+int mbedtls_base64_encode( unsigned char *dst, size_t dlen, size_t *olen,
+                   const unsigned char *src, size_t slen );
+# 81 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/base64.h"
+int mbedtls_base64_decode( unsigned char *dst, size_t dlen, size_t *olen,
+                   const unsigned char *src, size_t slen );
+
+
+
+
+
+
+
+int mbedtls_base64_self_test( int verbose );
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h" 1
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
 # 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h" 2
-# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
+# 72 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/sha1_alt.h" 1
 # 32 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/sha1_alt.h"
 typedef enum {
@@ -1912,61 +1945,82 @@ typedef struct
     esp_mbedtls_sha1_mode mode;
 }
 mbedtls_sha1_context;
-# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h" 2
-# 83 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
+# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h" 2
+# 86 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
 void mbedtls_sha1_init( mbedtls_sha1_context *ctx );
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
 void mbedtls_sha1_free( mbedtls_sha1_context *ctx );
-# 108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
+# 114 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
 void mbedtls_sha1_clone( mbedtls_sha1_context *dst,
                          const mbedtls_sha1_context *src );
-# 123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
+# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
 int mbedtls_sha1_starts_ret( mbedtls_sha1_context *ctx );
-# 139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
 int mbedtls_sha1_update_ret( mbedtls_sha1_context *ctx,
                              const unsigned char *input,
                              size_t ilen );
-# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
+# 169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
 int mbedtls_sha1_finish_ret( mbedtls_sha1_context *ctx,
                              unsigned char output[20] );
-# 172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
+# 187 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
 int mbedtls_internal_sha1_process( mbedtls_sha1_context *ctx,
                                    const unsigned char data[64] );
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
+# 208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
  void mbedtls_sha1_starts( mbedtls_sha1_context *ctx );
-# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
  void mbedtls_sha1_update( mbedtls_sha1_context *ctx,
                                              const unsigned char *input,
                                              size_t ilen );
-# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
+# 246 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
  void mbedtls_sha1_finish( mbedtls_sha1_context *ctx,
                                              unsigned char output[20] );
-# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
+# 263 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
  void mbedtls_sha1_process( mbedtls_sha1_context *ctx,
                                               const unsigned char data[64] );
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
+# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
 int mbedtls_sha1_ret( const unsigned char *input,
                       size_t ilen,
                       unsigned char output[20] );
-# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
+# 324 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
  void mbedtls_sha1( const unsigned char *input,
                                       size_t ilen,
                                       unsigned char output[20] );
-# 318 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
+# 344 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha1.h"
 int mbedtls_sha1_self_test( int verbose );
-# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 2
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 2
 
 static const char *TAG = "TRANSPORT_WS";
-# 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+# 32 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+typedef struct {
+    uint8_t opcode;
+    char mask_key[4];
+    int payload_len;
+    int bytes_remaining;
+} ws_transport_frame_state_t;
+
 typedef struct {
     char *path;
     char *buffer;
+    char *sub_protocol;
+    char *user_agent;
+    char *headers;
+    ws_transport_frame_state_t frame_state;
     esp_transport_handle_t parent;
 } transport_ws_t;
+
+static inline uint8_t ws_get_bin_opcode(ws_transport_opcodes_t opcode)
+{
+    return (uint8_t)opcode;
+}
 
 static esp_transport_handle_t ws_get_payload_transport_handle(esp_transport_handle_t t)
 {
     transport_ws_t *ws = esp_transport_get_context_data(t);
+
+
+
+    ws->frame_state.bytes_remaining = 0;
+
     return ws->parent;
 }
 
@@ -1991,10 +2045,9 @@ static char *trimwhitespace(const char *str)
     return (char *)str;
 }
 
-
 static char *get_http_header(const char *buffer, const char *key)
 {
-    char *found = strstr(buffer, key);
+    char *found = transport_strcasestr(buffer, key);
     if (found) {
         found += strlen(key);
         char *found_end = strstr(found, "\r\n");
@@ -2005,9 +2058,9 @@ static char *get_http_header(const char *buffer, const char *key)
         }
     }
     return 
-# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
+# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
           ((void *)0)
-# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
               ;
 }
 
@@ -2015,7 +2068,8 @@ static int ws_connect(esp_transport_handle_t t, const char *host, int port, int 
 {
     transport_ws_t *ws = esp_transport_get_context_data(t);
     if (esp_transport_connect(ws->parent, host, port, timeout_ms) < 0) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error connect to ther server" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error connect to ther server" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error connect to ther server" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error connect to ther server" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error connect to ther server" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error connecting to host %s:%d" "\033[0m" "\n", esp_log_timestamp(), TAG, host, port); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error connecting to host %s:%d" "\033[0m" "\n", esp_log_timestamp(), TAG, host, port); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error connecting to host %s:%d" "\033[0m" "\n", esp_log_timestamp(), TAG, host, port); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error connecting to host %s:%d" "\033[0m" "\n", esp_log_timestamp(), TAG, host, port); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error connecting to host %s:%d" "\033[0m" "\n", esp_log_timestamp(), TAG, host, port); } } while(0); } while(0);
+        return -1;
     }
 
     unsigned char random_key[16];
@@ -2023,6 +2077,10 @@ static int ws_connect(esp_transport_handle_t t, const char *host, int port, int 
 
 
     unsigned char client_key[28] = {0};
+
+
+    const char *user_agent_ptr = (ws->user_agent)?(ws->user_agent):"ESP32 Websocket Client";
+    const char *sub_protocol_ptr = (ws->sub_protocol)?(ws->sub_protocol):"mqtt";
 
     size_t outlen = 0;
     mbedtls_base64_encode(client_key, sizeof(client_key), &outlen, random_key, sizeof(random_key));
@@ -2032,14 +2090,31 @@ static int ws_connect(esp_transport_handle_t t, const char *host, int port, int 
                          "Host: %s:%d\r\n"
                          "Upgrade: websocket\r\n"
                          "Sec-WebSocket-Version: 13\r\n"
-                         "Sec-WebSocket-Protocol: mqtt\r\n"
+                         "Sec-WebSocket-Protocol: %s\r\n"
                          "Sec-WebSocket-Key: %s\r\n"
-                         "User-Agent: ESP32 Websocket Client\r\n\r\n",
+                         "User-Agent: %s\r\n",
                          ws->path,
-                         host, port,
-                         client_key);
+                         host, port, sub_protocol_ptr,
+                         client_key, user_agent_ptr);
     if (len <= 0 || len >= (1024)) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error in request generation, %d" "\033[0m" "\n", esp_log_timestamp(), TAG, len); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error in request generation, %d" "\033[0m" "\n", esp_log_timestamp(), TAG, len); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error in request generation, %d" "\033[0m" "\n", esp_log_timestamp(), TAG, len); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error in request generation, %d" "\033[0m" "\n", esp_log_timestamp(), TAG, len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error in request generation, %d" "\033[0m" "\n", esp_log_timestamp(), TAG, len); } } while(0); } while(0);
+        return -1;
+    }
+    if (ws->headers) {
+        do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "headers: %s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->headers); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "headers: %s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->headers); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "headers: %s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->headers); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "headers: %s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->headers); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "headers: %s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->headers); } } while(0); } while(0);
+        int r = snprintf(ws->buffer + len, (1024) - len, "%s", ws->headers);
+        len += r;
+        if (r <= 0 || len >= (1024)) {
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error in request generation" "(strncpy of headers returned %d, desired request len: %d, buffer size: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, r, len, (1024)); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error in request generation" "(strncpy of headers returned %d, desired request len: %d, buffer size: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, r, len, (1024)); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error in request generation" "(strncpy of headers returned %d, desired request len: %d, buffer size: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, r, len, (1024)); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error in request generation" "(strncpy of headers returned %d, desired request len: %d, buffer size: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, r, len, (1024)); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error in request generation" "(strncpy of headers returned %d, desired request len: %d, buffer size: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, r, len, (1024)); } } while(0); } while(0)
+                                                                                                                                 ;
+            return -1;
+        }
+    }
+    int r = snprintf(ws->buffer + len, (1024) - len, "\r\n");
+    len += r;
+    if (r <= 0 || len >= (1024)) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error in request generation" "(snprintf of header terminal returned %d, desired request len: %d, buffer size: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, r, len, (1024)); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error in request generation" "(snprintf of header terminal returned %d, desired request len: %d, buffer size: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, r, len, (1024)); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error in request generation" "(snprintf of header terminal returned %d, desired request len: %d, buffer size: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, r, len, (1024)); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error in request generation" "(snprintf of header terminal returned %d, desired request len: %d, buffer size: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, r, len, (1024)); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error in request generation" "(snprintf of header terminal returned %d, desired request len: %d, buffer size: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, r, len, (1024)); } } while(0); } while(0)
+                                                                                                                                       ;
         return -1;
     }
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Write upgrate request\r\n%s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->buffer); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Write upgrate request\r\n%s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->buffer); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Write upgrate request\r\n%s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->buffer); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Write upgrate request\r\n%s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->buffer); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Write upgrate request\r\n%s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->buffer); } } while(0); } while(0);
@@ -2047,15 +2122,26 @@ static int ws_connect(esp_transport_handle_t t, const char *host, int port, int 
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error write Upgrade header %s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->buffer); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error write Upgrade header %s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->buffer); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error write Upgrade header %s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->buffer); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error write Upgrade header %s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->buffer); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error write Upgrade header %s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->buffer); } } while(0); } while(0);
         return -1;
     }
-    if ((len = esp_transport_read(ws->parent, ws->buffer, (1024), timeout_ms)) <= 0) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error read response for Upgrade header %s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->buffer); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error read response for Upgrade header %s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->buffer); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error read response for Upgrade header %s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->buffer); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error read response for Upgrade header %s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->buffer); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error read response for Upgrade header %s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->buffer); } } while(0); } while(0);
-        return -1;
-    }
+    int header_len = 0;
+    do {
+        if ((len = esp_transport_read(ws->parent, ws->buffer + header_len, (1024) - header_len, timeout_ms)) <= 0) {
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error read response for Upgrade header %s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->buffer); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error read response for Upgrade header %s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->buffer); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error read response for Upgrade header %s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->buffer); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error read response for Upgrade header %s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->buffer); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error read response for Upgrade header %s" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->buffer); } } while(0); } while(0);
+            return -1;
+        }
+        header_len += len;
+        ws->buffer[header_len] = '\0';
+        do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Read header chunk %d, current header size: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, len, header_len); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Read header chunk %d, current header size: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, len, header_len); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Read header chunk %d, current header size: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, len, header_len); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Read header chunk %d, current header size: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, len, header_len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Read header chunk %d, current header size: %d" "\033[0m" "\n", esp_log_timestamp(), TAG, len, header_len); } } while(0); } while(0);
+    } while (
+# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
+            ((void *)0) 
+# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+                 == strstr(ws->buffer, "\r\n\r\n") && header_len < (1024));
+
     char *server_key = get_http_header(ws->buffer, "Sec-WebSocket-Accept:");
     if (server_key == 
-# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
+# 171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
                      ((void *)0)
-# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+# 171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
                          ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Sec-WebSocket-Accept not found" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Sec-WebSocket-Accept not found" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Sec-WebSocket-Accept not found" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Sec-WebSocket-Accept not found" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Sec-WebSocket-Accept not found" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         return -1;
@@ -2083,52 +2169,131 @@ static int ws_connect(esp_transport_handle_t t, const char *host, int port, int 
     return 0;
 }
 
-static int ws_write(esp_transport_handle_t t, const char *buff, int len, int timeout_ms)
+static int _ws_write(esp_transport_handle_t t, int opcode, int mask_flag, const char *b, int len, int timeout_ms)
 {
     transport_ws_t *ws = esp_transport_get_context_data(t);
-    char ws_header[10];
+    char *buffer = (char *)b;
+    char ws_header[16];
     char *mask;
     int header_len = 0, i;
-    char *buffer = (char *)buff;
+
     int poll_write;
     if ((poll_write = esp_transport_poll_write(ws->parent, timeout_ms)) <= 0) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error transport_poll_write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error transport_poll_write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error transport_poll_write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error transport_poll_write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error transport_poll_write" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         return poll_write;
     }
+    ws_header[header_len++] = opcode;
 
-    ws_header[header_len++] = 0x02 | 0x80;
-
-
-    if (len > 125) {
-        ws_header[header_len++] = 126 | 0x80;
+    if (len <= 125) {
+        ws_header[header_len++] = (uint8_t)(len | mask_flag);
+    } else if (len < 65536) {
+        ws_header[header_len++] = 126 | mask_flag;
         ws_header[header_len++] = (uint8_t)(len >> 8);
         ws_header[header_len++] = (uint8_t)(len & 0xFF);
     } else {
-        ws_header[header_len++] = (uint8_t)(len | 0x80);
-    }
-    mask = &ws_header[header_len];
-    getrandom(ws_header + header_len, 4, 0);
-    header_len += 4;
+        ws_header[header_len++] = 127 | mask_flag;
 
-    for (i = 0; i < len; ++i) {
-        buffer[i] = (buffer[i] ^ mask[i % 4]);
+        ws_header[header_len++] = 0;
+        ws_header[header_len++] = 0;
+        ws_header[header_len++] = 0;
+        ws_header[header_len++] = 0;
+        ws_header[header_len++] = (uint8_t)((len >> 24) & 0xFF);
+        ws_header[header_len++] = (uint8_t)((len >> 16) & 0xFF);
+        ws_header[header_len++] = (uint8_t)((len >> 8) & 0xFF);
+        ws_header[header_len++] = (uint8_t)((len >> 0) & 0xFF);
     }
+
+    if (mask_flag) {
+        mask = &ws_header[header_len];
+        getrandom(ws_header + header_len, 4, 0);
+        header_len += 4;
+
+        for (i = 0; i < len; ++i) {
+            buffer[i] = (buffer[i] ^ mask[i % 4]);
+        }
+    }
+
     if (esp_transport_write(ws->parent, ws_header, header_len, timeout_ms) != header_len) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error write header" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error write header" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error write header" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error write header" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error write header" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         return -1;
     }
-    return esp_transport_write(ws->parent, buffer, len, timeout_ms);
+
+    if (len == 0) {
+        return 0;
+    }
+
+    int ret = esp_transport_write(ws->parent, buffer, len, timeout_ms);
+
+
+    if (mask_flag) {
+        mask = &ws_header[header_len-4];
+        for (i = 0; i < len; ++i) {
+            buffer[i] = (buffer[i] ^ mask[i % 4]);
+        }
+    }
+    return ret;
 }
 
-static int ws_read(esp_transport_handle_t t, char *buffer, int len, int timeout_ms)
+int esp_transport_ws_send_raw(esp_transport_handle_t t, ws_transport_opcodes_t opcode, const char *b, int len, int timeout_ms)
+{
+    uint8_t op_code = ws_get_bin_opcode(opcode);
+    if (t == 
+# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
+            ((void *)0)
+# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+                ) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Transport must be a valid ws handle" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Transport must be a valid ws handle" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Transport must be a valid ws handle" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Transport must be a valid ws handle" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Transport must be a valid ws handle" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        return 0x102;
+    }
+    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Sending raw ws message with opcode %d" "\033[0m" "\n", esp_log_timestamp(), TAG, op_code); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Sending raw ws message with opcode %d" "\033[0m" "\n", esp_log_timestamp(), TAG, op_code); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Sending raw ws message with opcode %d" "\033[0m" "\n", esp_log_timestamp(), TAG, op_code); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Sending raw ws message with opcode %d" "\033[0m" "\n", esp_log_timestamp(), TAG, op_code); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Sending raw ws message with opcode %d" "\033[0m" "\n", esp_log_timestamp(), TAG, op_code); } } while(0); } while(0);
+    return _ws_write(t, op_code, 0x80, b, len, timeout_ms);
+}
+
+static int ws_write(esp_transport_handle_t t, const char *b, int len, int timeout_ms)
+{
+    return _ws_write(t, 0x02 | 0x80, 0x80, b, len, timeout_ms);
+}
+
+
+static int ws_read_payload(esp_transport_handle_t t, char *buffer, int len, int timeout_ms)
+{
+    transport_ws_t *ws = esp_transport_get_context_data(t);
+
+    int bytes_to_read;
+    int rlen = 0;
+
+    if (ws->frame_state.bytes_remaining > len) {
+        do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Actual data to receive (%d) are longer than ws buffer (%d)" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->frame_state.bytes_remaining, len); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Actual data to receive (%d) are longer than ws buffer (%d)" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->frame_state.bytes_remaining, len); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Actual data to receive (%d) are longer than ws buffer (%d)" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->frame_state.bytes_remaining, len); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Actual data to receive (%d) are longer than ws buffer (%d)" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->frame_state.bytes_remaining, len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Actual data to receive (%d) are longer than ws buffer (%d)" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->frame_state.bytes_remaining, len); } } while(0); } while(0);
+        bytes_to_read = len;
+
+    } else {
+        bytes_to_read = ws->frame_state.bytes_remaining;
+    }
+
+
+    if (bytes_to_read != 0 && (rlen = esp_transport_read(ws->parent, buffer, bytes_to_read, timeout_ms)) <= 0) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error read data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error read data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error read data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error read data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error read data" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        return rlen;
+    }
+    ws->frame_state.bytes_remaining -= rlen;
+
+    if (ws->frame_state.mask_key) {
+        for (int i = 0; i < bytes_to_read; i++) {
+            buffer[i] = (buffer[i] ^ ws->frame_state.mask_key[i % 4]);
+        }
+    }
+    return rlen;
+}
+
+
+
+static int ws_read_header(esp_transport_handle_t t, char *buffer, int len, int timeout_ms)
 {
     transport_ws_t *ws = esp_transport_get_context_data(t);
     int payload_len;
-    int payload_len_buff = len;
-    char *data_ptr = buffer, opcode, mask, *mask_key = 
-# 188 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
-                                                      ((void *)0)
-# 188 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
-                                                          ;
+
+    char ws_header[16];
+    char *data_ptr = ws_header, mask;
     int rlen;
     int poll_read;
     if ((poll_read = esp_transport_poll_read(ws->parent, timeout_ms)) <= 0) {
@@ -2137,16 +2302,17 @@ static int ws_read(esp_transport_handle_t t, char *buffer, int len, int timeout_
 
 
     int header = 2;
-    if ((rlen = esp_transport_read(ws->parent, buffer, header, timeout_ms)) <= 0) {
+    int mask_len = 4;
+    if ((rlen = esp_transport_read(ws->parent, data_ptr, header, timeout_ms)) <= 0) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error read data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error read data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error read data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error read data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error read data" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         return rlen;
     }
-    opcode = (*data_ptr & 0x0F);
+    ws->frame_state.opcode = (*data_ptr & 0x0F);
     data_ptr ++;
     mask = ((*data_ptr >> 7) & 0x01);
     payload_len = (*data_ptr & 0x7F);
     data_ptr++;
-    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Opcode: %d, mask: %d, len: %d\r\n" "\033[0m" "\n", esp_log_timestamp(), TAG, opcode, mask, payload_len); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Opcode: %d, mask: %d, len: %d\r\n" "\033[0m" "\n", esp_log_timestamp(), TAG, opcode, mask, payload_len); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Opcode: %d, mask: %d, len: %d\r\n" "\033[0m" "\n", esp_log_timestamp(), TAG, opcode, mask, payload_len); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Opcode: %d, mask: %d, len: %d\r\n" "\033[0m" "\n", esp_log_timestamp(), TAG, opcode, mask, payload_len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Opcode: %d, mask: %d, len: %d\r\n" "\033[0m" "\n", esp_log_timestamp(), TAG, opcode, mask, payload_len); } } while(0); } while(0);
+    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Opcode: %d, mask: %d, len: %d\r\n" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->frame_state.opcode, mask, payload_len); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Opcode: %d, mask: %d, len: %d\r\n" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->frame_state.opcode, mask, payload_len); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Opcode: %d, mask: %d, len: %d\r\n" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->frame_state.opcode, mask, payload_len); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Opcode: %d, mask: %d, len: %d\r\n" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->frame_state.opcode, mask, payload_len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Opcode: %d, mask: %d, len: %d\r\n" "\033[0m" "\n", esp_log_timestamp(), TAG, ws->frame_state.opcode, mask, payload_len); } } while(0); } while(0);
     if (payload_len == 126) {
 
         if ((rlen = esp_transport_read(ws->parent, data_ptr, header, timeout_ms)) <= 0) {
@@ -2154,8 +2320,6 @@ static int ws_read(esp_transport_handle_t t, char *buffer, int len, int timeout_
             return rlen;
         }
         payload_len = data_ptr[0] << 8 | data_ptr[1];
-        payload_len_buff = len - 4;
-        data_ptr += 2;
     } else if (payload_len == 127) {
 
         header = 8;
@@ -2170,30 +2334,49 @@ static int ws_read(esp_transport_handle_t t, char *buffer, int len, int timeout_
         } else {
             payload_len = data_ptr[4] << 24 | data_ptr[5] << 16 | data_ptr[6] << 8 | data_ptr[7];
         }
-        data_ptr += 8;
-        payload_len_buff = len - 10;
-    }
-
-    if ((rlen = esp_transport_read(ws->parent, data_ptr, payload_len, timeout_ms)) <= 0) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error read data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error read data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error read data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error read data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error read data" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-        return rlen;
-    }
-    if (payload_len > payload_len_buff) {
-        do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Actual data received (%d) are longer than mqtt buffer (%d)" "\033[0m" "\n", esp_log_timestamp(), TAG, payload_len, payload_len_buff); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Actual data received (%d) are longer than mqtt buffer (%d)" "\033[0m" "\n", esp_log_timestamp(), TAG, payload_len, payload_len_buff); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Actual data received (%d) are longer than mqtt buffer (%d)" "\033[0m" "\n", esp_log_timestamp(), TAG, payload_len, payload_len_buff); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Actual data received (%d) are longer than mqtt buffer (%d)" "\033[0m" "\n", esp_log_timestamp(), TAG, payload_len, payload_len_buff); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Actual data received (%d) are longer than mqtt buffer (%d)" "\033[0m" "\n", esp_log_timestamp(), TAG, payload_len, payload_len_buff); } } while(0); } while(0);
-        payload_len = payload_len_buff;
     }
 
     if (mask) {
-        mask_key = data_ptr;
-        data_ptr += 4;
-        for (int i = 0; i < payload_len; i++) {
-            buffer[i] = (data_ptr[i] ^ mask_key[i % 4]);
+
+        if (payload_len != 0 && (rlen = esp_transport_read(ws->parent, buffer, mask_len, timeout_ms)) <= 0) {
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error read data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error read data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error read data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error read data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error read data" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+            return rlen;
         }
+        memcpy(ws->frame_state.mask_key, buffer, mask_len);
     } else {
-        memmove(buffer, data_ptr, payload_len);
+        memset(ws->frame_state.mask_key, 0, mask_len);
     }
+
+    ws->frame_state.payload_len = payload_len;
+    ws->frame_state.bytes_remaining = payload_len;
+
     return payload_len;
 }
+
+static int ws_read(esp_transport_handle_t t, char *buffer, int len, int timeout_ms)
+{
+    int rlen = 0;
+    transport_ws_t *ws = esp_transport_get_context_data(t);
+
+
+    if (ws->frame_state.bytes_remaining <= 0) {
+        if ( (rlen = ws_read_header(t, buffer, len, timeout_ms)) <= 0) {
+
+            ws->frame_state.bytes_remaining = 0;
+            return rlen;
+        }
+    }
+    if (ws->frame_state.payload_len) {
+        if ( (rlen = ws_read_payload(t, buffer, len, timeout_ms)) <= 0) {
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error reading payload data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error reading payload data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error reading payload data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error reading payload data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error reading payload data" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+            ws->frame_state.bytes_remaining = 0;
+            return rlen;
+        }
+    }
+
+    return rlen;
+}
+
 
 static int ws_poll_read(esp_transport_handle_t t, int timeout_ms)
 {
@@ -2218,6 +2401,9 @@ static esp_err_t ws_destroy(esp_transport_handle_t t)
     transport_ws_t *ws = esp_transport_get_context_data(t);
     free(ws->buffer);
     free(ws->path);
+    free(ws->sub_protocol);
+    free(ws->user_agent);
+    free(ws->headers);
     free(ws);
     return 0;
 }
@@ -2227,88 +2413,142 @@ void esp_transport_ws_set_path(esp_transport_handle_t t, const char *path)
     ws->path = realloc(ws->path, strlen(path) + 1);
     strcpy(ws->path, path);
 }
+
 esp_transport_handle_t esp_transport_ws_init(esp_transport_handle_t parent_handle)
 {
     esp_transport_handle_t t = esp_transport_init();
     transport_ws_t *ws = calloc(1, sizeof(transport_ws_t));
-    if (!(ws)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c", 291, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c", 291, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c", 291, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c", 291, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c", 291, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); return 
-# 291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
+    if (!(ws)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c", 443, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c", 443, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c", 443, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c", 443, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c", 443, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); return 
+# 443 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
    ((void *)0)
-# 291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+# 443 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
    ; };
     ws->parent = parent_handle;
 
     ws->path = strdup("/");
-    if (!(ws->path)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c", 295, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c", 295, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c", 295, __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c", 295, __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c", 295, __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); return 
-# 295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
+    if (!(ws->path)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+
+
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+    ,
+
+
+ 450
+# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+    , __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+
+
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+    ,
+
+
+ 450
+# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+    , __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+
+
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+    ,
+
+
+ 450
+# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+    , __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+
+
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+    ,
+
+
+ 450
+# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+    , __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
+
+
+ "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+    ,
+
+
+ 450
+# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+    , __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); { free(ws); return 
+# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
    ((void *)0)
-# 295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
-   ; };
+# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+   ; }; }
+
+
+      ;
     ws->buffer = malloc((1024));
     if (!(ws->buffer)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
 
 
 
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
-# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+# 452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
     ,
 
 
 
- 301
-# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+ 456
+# 452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
     , __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
 
 
 
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
-# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+# 452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
     ,
 
 
 
- 301
-# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+ 456
+# 452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
     , __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
 
 
 
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
-# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+# 452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
     ,
 
 
 
- 301
-# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+ 456
+# 452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
     , __FUNCTION__, "Memory exhausted"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
 
 
 
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
-# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+# 452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
     ,
 
 
 
- 301
-# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+ 456
+# 452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
     , __FUNCTION__, "Memory exhausted"); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s): %s" "\033[0m" "\n", esp_log_timestamp(), TAG,
 
 
 
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
-# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+# 452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
     ,
 
 
 
- 301
-# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+ 456
+# 452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
     , __FUNCTION__, "Memory exhausted"); } } while(0); } while(0); { free(ws->path); free(ws); return 
-# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
+# 452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
    ((void *)0)
-# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+# 452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
    ; }; }
 
 
@@ -2321,4 +2561,124 @@ esp_transport_handle_t esp_transport_ws_init(esp_transport_handle_t parent_handl
 
     esp_transport_set_context_data(t, ws);
     return t;
+}
+
+esp_err_t esp_transport_ws_set_subprotocol(esp_transport_handle_t t, const char *sub_protocol)
+{
+    if (t == 
+# 468 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
+            ((void *)0)
+# 468 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+                ) {
+        return 0x102;
+    }
+    transport_ws_t *ws = esp_transport_get_context_data(t);
+    if (ws->sub_protocol) {
+        free(ws->sub_protocol);
+    }
+    if (sub_protocol == 
+# 475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
+                       ((void *)0)
+# 475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+                           ) {
+        ws->sub_protocol = 
+# 476 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
+                          ((void *)0)
+# 476 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+                              ;
+        return 0;
+    }
+    ws->sub_protocol = strdup(sub_protocol);
+    if (ws->sub_protocol == 
+# 480 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
+                           ((void *)0)
+# 480 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+                               ) {
+        return 0x101;
+    }
+    return 0;
+}
+
+esp_err_t esp_transport_ws_set_user_agent(esp_transport_handle_t t, const char *user_agent)
+{
+    if (t == 
+# 488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
+            ((void *)0)
+# 488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+                ) {
+        return 0x102;
+    }
+    transport_ws_t *ws = esp_transport_get_context_data(t);
+    if (ws->user_agent) {
+        free(ws->user_agent);
+    }
+    if (user_agent == 
+# 495 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
+                     ((void *)0)
+# 495 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+                         ) {
+        ws->user_agent = 
+# 496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
+                        ((void *)0)
+# 496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+                            ;
+        return 0;
+    }
+    ws->user_agent = strdup(user_agent);
+    if (ws->user_agent == 
+# 500 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
+                         ((void *)0)
+# 500 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+                             ) {
+        return 0x101;
+    }
+    return 0;
+}
+
+esp_err_t esp_transport_ws_set_headers(esp_transport_handle_t t, const char *headers)
+{
+    if (t == 
+# 508 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
+            ((void *)0)
+# 508 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+                ) {
+        return 0x102;
+    }
+    transport_ws_t *ws = esp_transport_get_context_data(t);
+    if (ws->headers) {
+        free(ws->headers);
+    }
+    if (headers == 
+# 515 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
+                  ((void *)0)
+# 515 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+                      ) {
+        ws->headers = 
+# 516 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
+                     ((void *)0)
+# 516 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+                         ;
+        return 0;
+    }
+    ws->headers = strdup(headers);
+    if (ws->headers == 
+# 520 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c" 3 4
+                      ((void *)0)
+# 520 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcp_transport/transport_ws.c"
+                          ) {
+        return 0x101;
+    }
+    return 0;
+}
+
+ws_transport_opcodes_t esp_transport_ws_get_read_opcode(esp_transport_handle_t t)
+{
+    transport_ws_t *ws = esp_transport_get_context_data(t);
+    return ws->frame_state.opcode;
+}
+
+int esp_transport_ws_get_read_payload_len(esp_transport_handle_t t)
+{
+    transport_ws_t *ws = esp_transport_get_context_data(t);
+    return ws->frame_state.payload_len;
 }

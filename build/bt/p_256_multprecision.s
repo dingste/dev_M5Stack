@@ -2550,17 +2550,17 @@ multiprecision_inv_mod:
 	.uleb128 0x4
 	.4byte	.LASF17
 	.byte	0x4
-	.byte	0x21
+	.byte	0x1a
 	.4byte	0x9a
 	.uleb128 0x4
 	.4byte	.LASF18
 	.byte	0x4
-	.byte	0x23
+	.byte	0x1c
 	.4byte	0xa5
 	.uleb128 0x4
 	.4byte	.LASF19
 	.byte	0x4
-	.byte	0x24
+	.byte	0x1d
 	.4byte	0xb0
 	.uleb128 0x2
 	.byte	0x1
@@ -4616,7 +4616,7 @@ multiprecision_inv_mod:
 	.uleb128 0x26
 	.4byte	.LASF53
 	.byte	0x4
-	.2byte	0x2cc
+	.2byte	0x2b8
 	.4byte	0xfb2
 	.byte	0x6
 	.byte	0xff
@@ -4630,7 +4630,7 @@ multiprecision_inv_mod:
 	.uleb128 0x26
 	.4byte	.LASF54
 	.byte	0x4
-	.2byte	0x2cd
+	.2byte	0x2b9
 	.4byte	0xfca
 	.byte	0x6
 	.byte	0

@@ -16,7 +16,7 @@
 	.literal .LC3, .LC2
 	.literal .LC5, .LC4
 	.literal .LC7, .LC6
-	.literal .LC8, __FUNCTION__$4284
+	.literal .LC8, __FUNCTION__$4289
 	.literal .LC9, SIGMADELTA
 	.align	4
 	.global	sigmadelta_set_duty
@@ -82,7 +82,7 @@ sigmadelta_set_duty:
 	.literal .LC11, .LC2
 	.literal .LC12, .LC4
 	.literal .LC13, .LC6
-	.literal .LC14, __FUNCTION__$4289
+	.literal .LC14, __FUNCTION__$4294
 	.literal .LC15, SIGMADELTA
 	.literal .LC16, -65281
 	.align	4
@@ -152,7 +152,7 @@ sigmadelta_set_prescale:
 	.literal .LC18, .LC2
 	.literal .LC19, .LC4
 	.literal .LC20, .LC6
-	.literal .LC21, __FUNCTION__$4294
+	.literal .LC21, __FUNCTION__$4299
 	.literal .LC22, GPIO_PIN_MUX_REG
 	.literal .LC24, .LC23
 	.literal .LC25, -28673
@@ -258,7 +258,7 @@ sigmadelta_set_pin:
 	.literal .LC28, .LC2
 	.literal .LC29, .LC4
 	.literal .LC30, .LC6
-	.literal .LC31, __FUNCTION__$4279
+	.literal .LC31, __FUNCTION__$4284
 	.literal .LC32, GPIO_PIN_MUX_REG
 	.literal .LC33, .LC23
 	.align	4
@@ -348,25 +348,25 @@ sigmadelta_config:
 	retw.n
 .LFE7:
 	.size	sigmadelta_config, .-sigmadelta_config
+	.section	.rodata.__FUNCTION__$4299,"a",@progbits
+	.type	__FUNCTION__$4299, @object
+	.size	__FUNCTION__$4299, 19
+__FUNCTION__$4299:
+	.string	"sigmadelta_set_pin"
 	.section	.rodata.__FUNCTION__$4294,"a",@progbits
 	.type	__FUNCTION__$4294, @object
-	.size	__FUNCTION__$4294, 19
+	.size	__FUNCTION__$4294, 24
 __FUNCTION__$4294:
-	.string	"sigmadelta_set_pin"
+	.string	"sigmadelta_set_prescale"
 	.section	.rodata.__FUNCTION__$4289,"a",@progbits
 	.type	__FUNCTION__$4289, @object
-	.size	__FUNCTION__$4289, 24
+	.size	__FUNCTION__$4289, 20
 __FUNCTION__$4289:
-	.string	"sigmadelta_set_prescale"
+	.string	"sigmadelta_set_duty"
 	.section	.rodata.__FUNCTION__$4284,"a",@progbits
 	.type	__FUNCTION__$4284, @object
-	.size	__FUNCTION__$4284, 20
+	.size	__FUNCTION__$4284, 18
 __FUNCTION__$4284:
-	.string	"sigmadelta_set_duty"
-	.section	.rodata.__FUNCTION__$4279,"a",@progbits
-	.type	__FUNCTION__$4279, @object
-	.size	__FUNCTION__$4279, 18
-__FUNCTION__$4279:
 	.string	"sigmadelta_config"
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -582,12 +582,12 @@ __FUNCTION__$4279:
 	.uleb128 0x9
 	.byte	0x4
 	.byte	0x5
-	.byte	0x17
+	.byte	0x19
 	.4byte	0x14e
 	.uleb128 0xa
 	.4byte	.LASF26
 	.byte	0x5
-	.byte	0x18
+	.byte	0x1a
 	.4byte	0xaa
 	.byte	0x4
 	.byte	0x8
@@ -596,7 +596,7 @@ __FUNCTION__$4279:
 	.uleb128 0xa
 	.4byte	.LASF27
 	.byte	0x5
-	.byte	0x19
+	.byte	0x1b
 	.4byte	0xaa
 	.byte	0x4
 	.byte	0x8
@@ -605,7 +605,7 @@ __FUNCTION__$4279:
 	.uleb128 0xa
 	.4byte	.LASF28
 	.byte	0x5
-	.byte	0x1a
+	.byte	0x1c
 	.4byte	0xaa
 	.byte	0x4
 	.byte	0x10
@@ -615,25 +615,25 @@ __FUNCTION__$4279:
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0x5
-	.byte	0x16
+	.byte	0x18
 	.4byte	0x167
 	.uleb128 0xc
 	.4byte	0x118
 	.uleb128 0xd
 	.string	"val"
 	.byte	0x5
-	.byte	0x1c
+	.byte	0x1e
 	.4byte	0xaa
 	.byte	0
 	.uleb128 0x9
 	.byte	0x4
 	.byte	0x5
-	.byte	0x1f
+	.byte	0x21
 	.4byte	0x18e
 	.uleb128 0xa
 	.4byte	.LASF29
 	.byte	0x5
-	.byte	0x20
+	.byte	0x22
 	.4byte	0xaa
 	.byte	0x4
 	.byte	0x1f
@@ -642,7 +642,7 @@ __FUNCTION__$4279:
 	.uleb128 0xa
 	.4byte	.LASF30
 	.byte	0x5
-	.byte	0x21
+	.byte	0x23
 	.4byte	0xaa
 	.byte	0x4
 	.byte	0x1
@@ -652,25 +652,25 @@ __FUNCTION__$4279:
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0x5
-	.byte	0x1e
+	.byte	0x20
 	.4byte	0x1a7
 	.uleb128 0xc
 	.4byte	0x167
 	.uleb128 0xd
 	.string	"val"
 	.byte	0x5
-	.byte	0x23
+	.byte	0x25
 	.4byte	0xaa
 	.byte	0
 	.uleb128 0x9
 	.byte	0x4
 	.byte	0x5
-	.byte	0x26
+	.byte	0x28
 	.4byte	0x1ce
 	.uleb128 0xa
 	.4byte	.LASF29
 	.byte	0x5
-	.byte	0x27
+	.byte	0x29
 	.4byte	0xaa
 	.byte	0x4
 	.byte	0x1f
@@ -679,7 +679,7 @@ __FUNCTION__$4279:
 	.uleb128 0xa
 	.4byte	.LASF31
 	.byte	0x5
-	.byte	0x28
+	.byte	0x2a
 	.4byte	0xaa
 	.byte	0x4
 	.byte	0x1
@@ -689,25 +689,25 @@ __FUNCTION__$4279:
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0x5
-	.byte	0x25
+	.byte	0x27
 	.4byte	0x1e7
 	.uleb128 0xc
 	.4byte	0x1a7
 	.uleb128 0xd
 	.string	"val"
 	.byte	0x5
-	.byte	0x2a
+	.byte	0x2c
 	.4byte	0xaa
 	.byte	0
 	.uleb128 0x9
 	.byte	0x4
 	.byte	0x5
-	.byte	0x2d
+	.byte	0x2f
 	.4byte	0x20e
 	.uleb128 0xa
 	.4byte	.LASF32
 	.byte	0x5
-	.byte	0x2e
+	.byte	0x30
 	.4byte	0xaa
 	.byte	0x4
 	.byte	0x1c
@@ -716,7 +716,7 @@ __FUNCTION__$4279:
 	.uleb128 0xa
 	.4byte	.LASF33
 	.byte	0x5
-	.byte	0x2f
+	.byte	0x31
 	.4byte	0xaa
 	.byte	0x4
 	.byte	0x4
@@ -726,43 +726,43 @@ __FUNCTION__$4279:
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0x5
-	.byte	0x2c
+	.byte	0x2e
 	.4byte	0x227
 	.uleb128 0xc
 	.4byte	0x1e7
 	.uleb128 0xd
 	.string	"val"
 	.byte	0x5
-	.byte	0x31
+	.byte	0x33
 	.4byte	0xaa
 	.byte	0
 	.uleb128 0x9
 	.byte	0x2c
 	.byte	0x5
-	.byte	0x15
+	.byte	0x17
 	.4byte	0x25f
 	.uleb128 0xe
 	.4byte	.LASF34
 	.byte	0x5
-	.byte	0x1d
+	.byte	0x1f
 	.4byte	0x25f
 	.byte	0
 	.uleb128 0xf
 	.string	"cg"
 	.byte	0x5
-	.byte	0x24
+	.byte	0x26
 	.4byte	0x18e
 	.byte	0x20
 	.uleb128 0xe
 	.4byte	.LASF35
 	.byte	0x5
-	.byte	0x2b
+	.byte	0x2d
 	.4byte	0x1ce
 	.byte	0x24
 	.uleb128 0xe
 	.4byte	.LASF36
 	.byte	0x5
-	.byte	0x32
+	.byte	0x34
 	.4byte	0x20e
 	.byte	0x28
 	.byte	0
@@ -776,7 +776,7 @@ __FUNCTION__$4279:
 	.uleb128 0x2
 	.4byte	.LASF37
 	.byte	0x5
-	.byte	0x33
+	.byte	0x35
 	.4byte	0x27a
 	.uleb128 0x12
 	.4byte	0x227
@@ -1110,7 +1110,7 @@ __FUNCTION__$4279:
 	.4byte	0x459
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$4284
+	.4byte	__FUNCTION__$4289
 	.uleb128 0x19
 	.4byte	.LBB4
 	.4byte	.LBE4-.LBB4
@@ -1127,7 +1127,7 @@ __FUNCTION__$4279:
 	.4byte	0x459
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$4284
+	.4byte	__FUNCTION__$4289
 	.uleb128 0x1a
 	.4byte	.LVL2
 	.4byte	0x871
@@ -1176,7 +1176,7 @@ __FUNCTION__$4279:
 	.sleb128 4
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$4284
+	.4byte	__FUNCTION__$4289
 	.uleb128 0x1c
 	.uleb128 0x2
 	.byte	0x71
@@ -1205,7 +1205,7 @@ __FUNCTION__$4279:
 	.4byte	0x4a2
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$4289
+	.4byte	__FUNCTION__$4294
 	.uleb128 0x19
 	.4byte	.LBB8
 	.4byte	.LBE8-.LBB8
@@ -1222,7 +1222,7 @@ __FUNCTION__$4279:
 	.4byte	0x4a2
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$4289
+	.4byte	__FUNCTION__$4294
 	.uleb128 0x1a
 	.4byte	.LVL10
 	.4byte	0x871
@@ -1271,7 +1271,7 @@ __FUNCTION__$4279:
 	.sleb128 4
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$4289
+	.4byte	__FUNCTION__$4294
 	.uleb128 0x1c
 	.uleb128 0x2
 	.byte	0x71
@@ -1301,7 +1301,7 @@ __FUNCTION__$4279:
 	.4byte	0x4eb
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$4294
+	.4byte	__FUNCTION__$4299
 	.uleb128 0x1e
 	.4byte	.LBB12
 	.4byte	.LBE12-.LBB12
@@ -1319,7 +1319,7 @@ __FUNCTION__$4279:
 	.4byte	0x4eb
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$4294
+	.4byte	__FUNCTION__$4299
 	.uleb128 0x1a
 	.4byte	.LVL18
 	.4byte	0x871
@@ -1435,7 +1435,7 @@ __FUNCTION__$4279:
 	.4byte	0x82a
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$4279
+	.4byte	__FUNCTION__$4284
 	.uleb128 0x1a
 	.4byte	.LVL29
 	.4byte	0x871
@@ -1520,7 +1520,7 @@ __FUNCTION__$4279:
 	.uleb128 0x24
 	.4byte	.LASF100
 	.byte	0x5
-	.byte	0x34
+	.byte	0x36
 	.4byte	0x26f
 	.uleb128 0x10
 	.4byte	0xaa
@@ -1532,7 +1532,7 @@ __FUNCTION__$4279:
 	.uleb128 0x24
 	.4byte	.LASF101
 	.byte	0x9
-	.byte	0x19
+	.byte	0x1d
 	.4byte	0x86c
 	.uleb128 0x6
 	.4byte	0x851

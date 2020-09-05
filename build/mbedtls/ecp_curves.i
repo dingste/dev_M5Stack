@@ -677,7 +677,7 @@ extern long double strtold (const char *restrict, char **restrict);
 void *esp_mbedtls_mem_calloc(size_t n, size_t size);
 void esp_mbedtls_mem_free(void *ptr);
 # 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
-# 2717 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h"
+# 2758 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h" 1
 # 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 1
@@ -685,16 +685,16 @@ void esp_mbedtls_mem_free(void *ptr);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed/limits.h" 1 3 4
 # 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 2
 # 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h" 2
-# 681 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
+# 706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
 typedef int mbedtls_iso_c_forbids_empty_translation_units;
-# 2718 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
+# 2759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
 # 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c" 2
 
 
 
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h" 1
-# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h" 1
 # 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
@@ -1358,15 +1358,15 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h" 2
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
     typedef int32_t mbedtls_mpi_sint;
     typedef uint32_t mbedtls_mpi_uint;
 
         typedef uint64_t mbedtls_t_udbl;
-# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 187 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 typedef struct mbedtls_mpi
 {
     int s;
@@ -1374,20 +1374,15 @@ typedef struct mbedtls_mpi
     mbedtls_mpi_uint *p;
 }
 mbedtls_mpi;
-# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 void mbedtls_mpi_init( mbedtls_mpi *X );
-
-
-
-
-
-
+# 212 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 void mbedtls_mpi_free( mbedtls_mpi *X );
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_grow( mbedtls_mpi *X, size_t nblimbs );
-# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_shrink( mbedtls_mpi *X, size_t nblimbs );
-# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_copy( mbedtls_mpi *X, const mbedtls_mpi *Y );
 
 
@@ -1397,96 +1392,127 @@ int mbedtls_mpi_copy( mbedtls_mpi *X, const mbedtls_mpi *Y );
 
 
 void mbedtls_mpi_swap( mbedtls_mpi *X, mbedtls_mpi *Y );
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_safe_cond_assign( mbedtls_mpi *X, const mbedtls_mpi *Y, unsigned char assign );
-# 289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 318 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_safe_cond_swap( mbedtls_mpi *X, mbedtls_mpi *Y, unsigned char assign );
-# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_lset( mbedtls_mpi *X, mbedtls_mpi_sint z );
-# 310 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_get_bit( const mbedtls_mpi *X, size_t pos );
-# 326 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_set_bit( mbedtls_mpi *X, size_t pos, unsigned char val );
-# 336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 373 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 size_t mbedtls_mpi_lsb( const mbedtls_mpi *X );
-# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 size_t mbedtls_mpi_bitlen( const mbedtls_mpi *X );
-
-
-
-
-
-
+# 402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 size_t mbedtls_mpi_size( const mbedtls_mpi *X );
-# 364 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 414 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_read_string( mbedtls_mpi *X, int radix, const char *s );
-# 382 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_write_string( const mbedtls_mpi *X, int radix,
                               char *buf, size_t buflen, size_t *olen );
-# 406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_read_file( mbedtls_mpi *X, int radix, FILE *fin );
-# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_write_file( const char *p, const mbedtls_mpi *X, int radix, FILE *fout );
-# 433 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_read_binary( mbedtls_mpi *X, const unsigned char *buf, size_t buflen );
-# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_write_binary( const mbedtls_mpi *X, unsigned char *buf, size_t buflen );
-# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 480 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_write_file( const char *p, const mbedtls_mpi *X,
+                            int radix, FILE *fout );
+# 496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_read_binary( mbedtls_mpi *X, const unsigned char *buf,
+                             size_t buflen );
+# 513 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_write_binary( const mbedtls_mpi *X, unsigned char *buf,
+                              size_t buflen );
+# 526 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_shift_l( mbedtls_mpi *X, size_t count );
-# 469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_shift_r( mbedtls_mpi *X, size_t count );
-# 481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_cmp_abs( const mbedtls_mpi *X, const mbedtls_mpi *Y );
-# 493 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_cmp_mpi( const mbedtls_mpi *X, const mbedtls_mpi *Y );
-# 505 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 579 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_lt_mpi_ct( const mbedtls_mpi *X, const mbedtls_mpi *Y,
+        unsigned *ret );
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_cmp_int( const mbedtls_mpi *X, mbedtls_mpi_sint z );
-# 517 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_add_abs( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 529 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_sub_abs( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 541 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_add_mpi( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_sub_mpi( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_add_int( mbedtls_mpi *X, const mbedtls_mpi *A, mbedtls_mpi_sint b );
-# 577 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_sub_int( mbedtls_mpi *X, const mbedtls_mpi *A, mbedtls_mpi_sint b );
-# 589 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_mul_mpi( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 603 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_mul_int( mbedtls_mpi *X, const mbedtls_mpi *A, mbedtls_mpi_uint b );
-# 619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_div_mpi( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_div_int( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A, mbedtls_mpi_sint b );
-# 649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_mod_mpi( mbedtls_mpi *R, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 663 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_mod_int( mbedtls_mpi_uint *r, const mbedtls_mpi *A, mbedtls_mpi_sint b );
-# 683 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_exp_mod( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *E, const mbedtls_mpi *N, mbedtls_mpi *_RR );
-# 700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_add_abs( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 620 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_sub_abs( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 634 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_add_mpi( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 648 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_sub_mpi( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 662 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_add_int( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b );
+# 677 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_sub_int( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b );
+# 692 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_mul_mpi( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 708 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_mul_int( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         mbedtls_mpi_uint b );
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_div_mpi( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 750 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_div_int( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b );
+# 770 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_mod_mpi( mbedtls_mpi *R, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 789 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_mod_int( mbedtls_mpi_uint *r, const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b );
+# 818 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_exp_mod( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *E, const mbedtls_mpi *N,
+                         mbedtls_mpi *_RR );
+# 839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_fill_random( mbedtls_mpi *X, size_t size,
                      int (*f_rng)(void *, unsigned char *, size_t),
                      void *p_rng );
-# 714 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_gcd( mbedtls_mpi *G, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 728 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_inv_mod( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *N );
-# 741 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_is_prime( const mbedtls_mpi *X,
-                  int (*f_rng)(void *, unsigned char *, size_t),
-                  void *p_rng );
-# 759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_gen_prime( mbedtls_mpi *X, size_t nbits, int dh_flag,
+# 854 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_gcd( mbedtls_mpi *G, const mbedtls_mpi *A,
+                     const mbedtls_mpi *B );
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_inv_mod( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *N );
+# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+ int mbedtls_mpi_is_prime( const mbedtls_mpi *X,
+                          int (*f_rng)(void *, unsigned char *, size_t),
+                          void *p_rng );
+# 934 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_is_prime_ext( const mbedtls_mpi *X, int rounds,
+                              int (*f_rng)(void *, unsigned char *, size_t),
+                              void *p_rng );
+
+
+
+
+
+
+typedef enum {
+    MBEDTLS_MPI_GEN_PRIME_FLAG_DH = 0x0001,
+    MBEDTLS_MPI_GEN_PRIME_FLAG_LOW_ERR = 0x0002,
+} mbedtls_mpi_gen_prime_flag_t;
+# 967 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_gen_prime( mbedtls_mpi *X, size_t nbits, int flags,
                    int (*f_rng)(void *, unsigned char *, size_t),
                    void *p_rng );
-# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 981 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_self_test( int verbose );
-# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h" 2
-# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h" 2
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 typedef enum
 {
     MBEDTLS_ECP_DP_NONE = 0,
@@ -1504,7 +1530,7 @@ typedef enum
     MBEDTLS_ECP_DP_SECP256K1,
     MBEDTLS_ECP_DP_CURVE448,
 } mbedtls_ecp_group_id;
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 typedef struct mbedtls_ecp_curve_info
 {
     mbedtls_ecp_group_id grp_id;
@@ -1512,7 +1538,7 @@ typedef struct mbedtls_ecp_curve_info
     uint16_t bit_size;
     const char *name;
 } mbedtls_ecp_curve_info;
-# 114 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 typedef struct mbedtls_ecp_point
 {
     mbedtls_mpi X;
@@ -1520,7 +1546,7 @@ typedef struct mbedtls_ecp_point
     mbedtls_mpi Z;
 }
 mbedtls_ecp_point;
-# 159 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 typedef struct mbedtls_ecp_group
 {
     mbedtls_ecp_group_id id;
@@ -1545,7 +1571,9 @@ typedef struct mbedtls_ecp_group
     size_t T_size;
 }
 mbedtls_ecp_group;
-# 254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 320 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+typedef void mbedtls_ecp_restart_ctx;
+# 332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 typedef struct mbedtls_ecp_keypair
 {
     mbedtls_ecp_group grp;
@@ -1553,15 +1581,15 @@ typedef struct mbedtls_ecp_keypair
     mbedtls_ecp_point Q;
 }
 mbedtls_ecp_keypair;
-# 280 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 const mbedtls_ecp_curve_info *mbedtls_ecp_curve_list( void );
-# 290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 const mbedtls_ecp_group_id *mbedtls_ecp_grp_id_list( void );
-# 301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 448 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 const mbedtls_ecp_curve_info *mbedtls_ecp_curve_info_from_grp_id( mbedtls_ecp_group_id grp_id );
-# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 459 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 const mbedtls_ecp_curve_info *mbedtls_ecp_curve_info_from_tls_id( uint16_t tls_id );
-# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 const mbedtls_ecp_curve_info *mbedtls_ecp_curve_info_from_name( const char *name );
 
 
@@ -1570,7 +1598,7 @@ const mbedtls_ecp_curve_info *mbedtls_ecp_curve_info_from_name( const char *name
 
 
 void mbedtls_ecp_point_init( mbedtls_ecp_point *pt );
-# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 void mbedtls_ecp_group_init( mbedtls_ecp_group *grp );
 
 
@@ -1586,83 +1614,113 @@ void mbedtls_ecp_keypair_init( mbedtls_ecp_keypair *key );
 
 
 void mbedtls_ecp_point_free( mbedtls_ecp_point *pt );
-
-
-
-
-
+# 511 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 void mbedtls_ecp_group_free( mbedtls_ecp_group *grp );
-
-
-
-
-
+# 520 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 void mbedtls_ecp_keypair_free( mbedtls_ecp_keypair *key );
-# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 552 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_copy( mbedtls_ecp_point *P, const mbedtls_ecp_point *Q );
-# 391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_group_copy( mbedtls_ecp_group *dst, const mbedtls_ecp_group *src );
-# 401 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_group_copy( mbedtls_ecp_group *dst,
+                            const mbedtls_ecp_group *src );
+# 577 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_set_zero( mbedtls_ecp_point *pt );
-# 411 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 588 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_is_zero( mbedtls_ecp_point *pt );
-# 425 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_point_cmp( const mbedtls_ecp_point *P,
                            const mbedtls_ecp_point *Q );
-# 440 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 617 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_point_read_string( mbedtls_ecp_point *P, int radix,
                            const char *x, const char *y );
-# 457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 640 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_point_write_binary( const mbedtls_ecp_group *grp, const mbedtls_ecp_point *P,
                             int format, size_t *olen,
                             unsigned char *buf, size_t buflen );
-# 480 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_point_read_binary( const mbedtls_ecp_group *grp, mbedtls_ecp_point *P,
-                           const unsigned char *buf, size_t ilen );
-# 498 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_tls_read_point( const mbedtls_ecp_group *grp, mbedtls_ecp_point *pt,
-                        const unsigned char **buf, size_t len );
-# 516 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_tls_write_point( const mbedtls_ecp_group *grp, const mbedtls_ecp_point *pt,
-                         int format, size_t *olen,
-                         unsigned char *buf, size_t blen );
-# 536 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 666 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_point_read_binary( const mbedtls_ecp_group *grp,
+                                   mbedtls_ecp_point *P,
+                                   const unsigned char *buf, size_t ilen );
+# 688 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_tls_read_point( const mbedtls_ecp_group *grp,
+                                mbedtls_ecp_point *pt,
+                                const unsigned char **buf, size_t len );
+# 714 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_tls_write_point( const mbedtls_ecp_group *grp,
+                                 const mbedtls_ecp_point *pt,
+                                 int format, size_t *olen,
+                                 unsigned char *buf, size_t blen );
+# 736 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_group_load( mbedtls_ecp_group *grp, mbedtls_ecp_group_id id );
-# 552 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_tls_read_group( mbedtls_ecp_group *grp, const unsigned char **buf, size_t len );
-# 565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_tls_write_group( const mbedtls_ecp_group *grp, size_t *olen,
-                         unsigned char *buf, size_t blen );
-# 596 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 755 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_tls_read_group( mbedtls_ecp_group *grp,
+                                const unsigned char **buf, size_t len );
+# 776 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_tls_read_group_id( mbedtls_ecp_group_id *grp,
+                                   const unsigned char **buf,
+                                   size_t len );
+# 797 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_tls_write_group( const mbedtls_ecp_group *grp,
+                                 size_t *olen,
+                                 unsigned char *buf, size_t blen );
+# 834 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_mul( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
              const mbedtls_mpi *m, const mbedtls_ecp_point *P,
              int (*f_rng)(void *, unsigned char *, size_t), void *p_rng );
-# 622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_mul_restartable( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
+             const mbedtls_mpi *m, const mbedtls_ecp_point *P,
+             int (*f_rng)(void *, unsigned char *, size_t), void *p_rng,
+             mbedtls_ecp_restart_ctx *rs_ctx );
+# 902 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_muladd( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
              const mbedtls_mpi *m, const mbedtls_ecp_point *P,
              const mbedtls_mpi *n, const mbedtls_ecp_point *Q );
-# 649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_check_pubkey( const mbedtls_ecp_group *grp, const mbedtls_ecp_point *pt );
-# 666 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_check_privkey( const mbedtls_ecp_group *grp, const mbedtls_mpi *d );
-# 688 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 940 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_muladd_restartable(
+             mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
+             const mbedtls_mpi *m, const mbedtls_ecp_point *P,
+             const mbedtls_mpi *n, const mbedtls_ecp_point *Q,
+             mbedtls_ecp_restart_ctx *rs_ctx );
+# 973 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_check_pubkey( const mbedtls_ecp_group *grp,
+                              const mbedtls_ecp_point *pt );
+# 995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_check_privkey( const mbedtls_ecp_group *grp,
+                               const mbedtls_mpi *d );
+# 1013 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_gen_privkey( const mbedtls_ecp_group *grp,
+                     mbedtls_mpi *d,
+                     int (*f_rng)(void *, unsigned char *, size_t),
+                     void *p_rng );
+# 1045 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_gen_keypair_base( mbedtls_ecp_group *grp,
-                     const mbedtls_ecp_point *G,
-                     mbedtls_mpi *d, mbedtls_ecp_point *Q,
-                     int (*f_rng)(void *, unsigned char *, size_t),
-                     void *p_rng );
-# 712 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_gen_keypair( mbedtls_ecp_group *grp, mbedtls_mpi *d, mbedtls_ecp_point *Q,
-                     int (*f_rng)(void *, unsigned char *, size_t),
-                     void *p_rng );
-# 728 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+                                  const mbedtls_ecp_point *G,
+                                  mbedtls_mpi *d, mbedtls_ecp_point *Q,
+                                  int (*f_rng)(void *, unsigned char *, size_t),
+                                  void *p_rng );
+# 1074 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_gen_keypair( mbedtls_ecp_group *grp, mbedtls_mpi *d,
+                             mbedtls_ecp_point *Q,
+                             int (*f_rng)(void *, unsigned char *, size_t),
+                             void *p_rng );
+# 1092 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_gen_key( mbedtls_ecp_group_id grp_id, mbedtls_ecp_keypair *key,
-                int (*f_rng)(void *, unsigned char *, size_t), void *p_rng );
-# 746 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_check_pub_priv( const mbedtls_ecp_keypair *pub, const mbedtls_ecp_keypair *prv );
-# 756 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+                         int (*f_rng)(void *, unsigned char *, size_t),
+                         void *p_rng );
+# 1113 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_check_pub_priv( const mbedtls_ecp_keypair *pub,
+                                const mbedtls_ecp_keypair *prv );
+# 1124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_self_test( int verbose );
 # 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h" 1
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h" 2
+# 159 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h"
+void mbedtls_platform_zeroize( void *buf, size_t len );
+# 32 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 1
 # 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
@@ -1784,32 +1842,32 @@ char *strsignal (int __signo);
 # 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
 
 
-# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c" 2
-# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c" 2
+# 96 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
 static const mbedtls_mpi_uint secp192r1_p[] = {
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFE << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFE) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
 };
 static const mbedtls_mpi_uint secp192r1_b[] = {
-    ( (mbedtls_mpi_uint) 0xB1 << 0 ) | ( (mbedtls_mpi_uint) 0xB9 << 8 ) | ( (mbedtls_mpi_uint) 0x46 << 16 ) | ( (mbedtls_mpi_uint) 0xC1 << 24 ), ( (mbedtls_mpi_uint) 0xEC << 0 ) | ( (mbedtls_mpi_uint) 0xDE << 8 ) | ( (mbedtls_mpi_uint) 0xB8 << 16 ) | ( (mbedtls_mpi_uint) 0xFE << 24 ),
-    ( (mbedtls_mpi_uint) 0x49 << 0 ) | ( (mbedtls_mpi_uint) 0x30 << 8 ) | ( (mbedtls_mpi_uint) 0x24 << 16 ) | ( (mbedtls_mpi_uint) 0x72 << 24 ), ( (mbedtls_mpi_uint) 0xAB << 0 ) | ( (mbedtls_mpi_uint) 0xE9 << 8 ) | ( (mbedtls_mpi_uint) 0xA7 << 16 ) | ( (mbedtls_mpi_uint) 0x0F << 24 ),
-    ( (mbedtls_mpi_uint) 0xE7 << 0 ) | ( (mbedtls_mpi_uint) 0x80 << 8 ) | ( (mbedtls_mpi_uint) 0x9C << 16 ) | ( (mbedtls_mpi_uint) 0xE5 << 24 ), ( (mbedtls_mpi_uint) 0x19 << 0 ) | ( (mbedtls_mpi_uint) 0x05 << 8 ) | ( (mbedtls_mpi_uint) 0x21 << 16 ) | ( (mbedtls_mpi_uint) 0x64 << 24 ),
+    ( (mbedtls_mpi_uint) (0xB1) << 0 ) | ( (mbedtls_mpi_uint) (0xB9) << 8 ) | ( (mbedtls_mpi_uint) (0x46) << 16 ) | ( (mbedtls_mpi_uint) (0xC1) << 24 ), ( (mbedtls_mpi_uint) (0xEC) << 0 ) | ( (mbedtls_mpi_uint) (0xDE) << 8 ) | ( (mbedtls_mpi_uint) (0xB8) << 16 ) | ( (mbedtls_mpi_uint) (0xFE) << 24 ),
+    ( (mbedtls_mpi_uint) (0x49) << 0 ) | ( (mbedtls_mpi_uint) (0x30) << 8 ) | ( (mbedtls_mpi_uint) (0x24) << 16 ) | ( (mbedtls_mpi_uint) (0x72) << 24 ), ( (mbedtls_mpi_uint) (0xAB) << 0 ) | ( (mbedtls_mpi_uint) (0xE9) << 8 ) | ( (mbedtls_mpi_uint) (0xA7) << 16 ) | ( (mbedtls_mpi_uint) (0x0F) << 24 ),
+    ( (mbedtls_mpi_uint) (0xE7) << 0 ) | ( (mbedtls_mpi_uint) (0x80) << 8 ) | ( (mbedtls_mpi_uint) (0x9C) << 16 ) | ( (mbedtls_mpi_uint) (0xE5) << 24 ), ( (mbedtls_mpi_uint) (0x19) << 0 ) | ( (mbedtls_mpi_uint) (0x05) << 8 ) | ( (mbedtls_mpi_uint) (0x21) << 16 ) | ( (mbedtls_mpi_uint) (0x64) << 24 ),
 };
 static const mbedtls_mpi_uint secp192r1_gx[] = {
-    ( (mbedtls_mpi_uint) 0x12 << 0 ) | ( (mbedtls_mpi_uint) 0x10 << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0x82 << 24 ), ( (mbedtls_mpi_uint) 0xFD << 0 ) | ( (mbedtls_mpi_uint) 0x0A << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xF4 << 24 ),
-    ( (mbedtls_mpi_uint) 0x00 << 0 ) | ( (mbedtls_mpi_uint) 0x88 << 8 ) | ( (mbedtls_mpi_uint) 0xA1 << 16 ) | ( (mbedtls_mpi_uint) 0x43 << 24 ), ( (mbedtls_mpi_uint) 0xEB << 0 ) | ( (mbedtls_mpi_uint) 0x20 << 8 ) | ( (mbedtls_mpi_uint) 0xBF << 16 ) | ( (mbedtls_mpi_uint) 0x7C << 24 ),
-    ( (mbedtls_mpi_uint) 0xF6 << 0 ) | ( (mbedtls_mpi_uint) 0x90 << 8 ) | ( (mbedtls_mpi_uint) 0x30 << 16 ) | ( (mbedtls_mpi_uint) 0xB0 << 24 ), ( (mbedtls_mpi_uint) 0x0E << 0 ) | ( (mbedtls_mpi_uint) 0xA8 << 8 ) | ( (mbedtls_mpi_uint) 0x8D << 16 ) | ( (mbedtls_mpi_uint) 0x18 << 24 ),
+    ( (mbedtls_mpi_uint) (0x12) << 0 ) | ( (mbedtls_mpi_uint) (0x10) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0x82) << 24 ), ( (mbedtls_mpi_uint) (0xFD) << 0 ) | ( (mbedtls_mpi_uint) (0x0A) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xF4) << 24 ),
+    ( (mbedtls_mpi_uint) (0x00) << 0 ) | ( (mbedtls_mpi_uint) (0x88) << 8 ) | ( (mbedtls_mpi_uint) (0xA1) << 16 ) | ( (mbedtls_mpi_uint) (0x43) << 24 ), ( (mbedtls_mpi_uint) (0xEB) << 0 ) | ( (mbedtls_mpi_uint) (0x20) << 8 ) | ( (mbedtls_mpi_uint) (0xBF) << 16 ) | ( (mbedtls_mpi_uint) (0x7C) << 24 ),
+    ( (mbedtls_mpi_uint) (0xF6) << 0 ) | ( (mbedtls_mpi_uint) (0x90) << 8 ) | ( (mbedtls_mpi_uint) (0x30) << 16 ) | ( (mbedtls_mpi_uint) (0xB0) << 24 ), ( (mbedtls_mpi_uint) (0x0E) << 0 ) | ( (mbedtls_mpi_uint) (0xA8) << 8 ) | ( (mbedtls_mpi_uint) (0x8D) << 16 ) | ( (mbedtls_mpi_uint) (0x18) << 24 ),
 };
 static const mbedtls_mpi_uint secp192r1_gy[] = {
-    ( (mbedtls_mpi_uint) 0x11 << 0 ) | ( (mbedtls_mpi_uint) 0x48 << 8 ) | ( (mbedtls_mpi_uint) 0x79 << 16 ) | ( (mbedtls_mpi_uint) 0x1E << 24 ), ( (mbedtls_mpi_uint) 0xA1 << 0 ) | ( (mbedtls_mpi_uint) 0x77 << 8 ) | ( (mbedtls_mpi_uint) 0xF9 << 16 ) | ( (mbedtls_mpi_uint) 0x73 << 24 ),
-    ( (mbedtls_mpi_uint) 0xD5 << 0 ) | ( (mbedtls_mpi_uint) 0xCD << 8 ) | ( (mbedtls_mpi_uint) 0x24 << 16 ) | ( (mbedtls_mpi_uint) 0x6B << 24 ), ( (mbedtls_mpi_uint) 0xED << 0 ) | ( (mbedtls_mpi_uint) 0x11 << 8 ) | ( (mbedtls_mpi_uint) 0x10 << 16 ) | ( (mbedtls_mpi_uint) 0x63 << 24 ),
-    ( (mbedtls_mpi_uint) 0x78 << 0 ) | ( (mbedtls_mpi_uint) 0xDA << 8 ) | ( (mbedtls_mpi_uint) 0xC8 << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0x95 << 0 ) | ( (mbedtls_mpi_uint) 0x2B << 8 ) | ( (mbedtls_mpi_uint) 0x19 << 16 ) | ( (mbedtls_mpi_uint) 0x07 << 24 ),
+    ( (mbedtls_mpi_uint) (0x11) << 0 ) | ( (mbedtls_mpi_uint) (0x48) << 8 ) | ( (mbedtls_mpi_uint) (0x79) << 16 ) | ( (mbedtls_mpi_uint) (0x1E) << 24 ), ( (mbedtls_mpi_uint) (0xA1) << 0 ) | ( (mbedtls_mpi_uint) (0x77) << 8 ) | ( (mbedtls_mpi_uint) (0xF9) << 16 ) | ( (mbedtls_mpi_uint) (0x73) << 24 ),
+    ( (mbedtls_mpi_uint) (0xD5) << 0 ) | ( (mbedtls_mpi_uint) (0xCD) << 8 ) | ( (mbedtls_mpi_uint) (0x24) << 16 ) | ( (mbedtls_mpi_uint) (0x6B) << 24 ), ( (mbedtls_mpi_uint) (0xED) << 0 ) | ( (mbedtls_mpi_uint) (0x11) << 8 ) | ( (mbedtls_mpi_uint) (0x10) << 16 ) | ( (mbedtls_mpi_uint) (0x63) << 24 ),
+    ( (mbedtls_mpi_uint) (0x78) << 0 ) | ( (mbedtls_mpi_uint) (0xDA) << 8 ) | ( (mbedtls_mpi_uint) (0xC8) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0x95) << 0 ) | ( (mbedtls_mpi_uint) (0x2B) << 8 ) | ( (mbedtls_mpi_uint) (0x19) << 16 ) | ( (mbedtls_mpi_uint) (0x07) << 24 ),
 };
 static const mbedtls_mpi_uint secp192r1_n[] = {
-    ( (mbedtls_mpi_uint) 0x31 << 0 ) | ( (mbedtls_mpi_uint) 0x28 << 8 ) | ( (mbedtls_mpi_uint) 0xD2 << 16 ) | ( (mbedtls_mpi_uint) 0xB4 << 24 ), ( (mbedtls_mpi_uint) 0xB1 << 0 ) | ( (mbedtls_mpi_uint) 0xC9 << 8 ) | ( (mbedtls_mpi_uint) 0x6B << 16 ) | ( (mbedtls_mpi_uint) 0x14 << 24 ),
-    ( (mbedtls_mpi_uint) 0x36 << 0 ) | ( (mbedtls_mpi_uint) 0xF8 << 8 ) | ( (mbedtls_mpi_uint) 0xDE << 16 ) | ( (mbedtls_mpi_uint) 0x99 << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
+    ( (mbedtls_mpi_uint) (0x31) << 0 ) | ( (mbedtls_mpi_uint) (0x28) << 8 ) | ( (mbedtls_mpi_uint) (0xD2) << 16 ) | ( (mbedtls_mpi_uint) (0xB4) << 24 ), ( (mbedtls_mpi_uint) (0xB1) << 0 ) | ( (mbedtls_mpi_uint) (0xC9) << 8 ) | ( (mbedtls_mpi_uint) (0x6B) << 16 ) | ( (mbedtls_mpi_uint) (0x14) << 24 ),
+    ( (mbedtls_mpi_uint) (0x36) << 0 ) | ( (mbedtls_mpi_uint) (0xF8) << 8 ) | ( (mbedtls_mpi_uint) (0xDE) << 16 ) | ( (mbedtls_mpi_uint) (0x99) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
 };
 
 
@@ -1818,34 +1876,34 @@ static const mbedtls_mpi_uint secp192r1_n[] = {
 
 
 static const mbedtls_mpi_uint secp224r1_p[] = {
-    ( (mbedtls_mpi_uint) 0x01 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ), ( (mbedtls_mpi_uint) 0x00 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ),
-    ( (mbedtls_mpi_uint) 0x00 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0x00 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ),
+    ( (mbedtls_mpi_uint) (0x01) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ), ( (mbedtls_mpi_uint) (0x00) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ),
+    ( (mbedtls_mpi_uint) (0x00) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0x00) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ),
 };
 static const mbedtls_mpi_uint secp224r1_b[] = {
-    ( (mbedtls_mpi_uint) 0xB4 << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0x55 << 16 ) | ( (mbedtls_mpi_uint) 0x23 << 24 ), ( (mbedtls_mpi_uint) 0x43 << 0 ) | ( (mbedtls_mpi_uint) 0x39 << 8 ) | ( (mbedtls_mpi_uint) 0x0B << 16 ) | ( (mbedtls_mpi_uint) 0x27 << 24 ),
-    ( (mbedtls_mpi_uint) 0xBA << 0 ) | ( (mbedtls_mpi_uint) 0xD8 << 8 ) | ( (mbedtls_mpi_uint) 0xBF << 16 ) | ( (mbedtls_mpi_uint) 0xD7 << 24 ), ( (mbedtls_mpi_uint) 0xB7 << 0 ) | ( (mbedtls_mpi_uint) 0xB0 << 8 ) | ( (mbedtls_mpi_uint) 0x44 << 16 ) | ( (mbedtls_mpi_uint) 0x50 << 24 ),
-    ( (mbedtls_mpi_uint) 0x56 << 0 ) | ( (mbedtls_mpi_uint) 0x32 << 8 ) | ( (mbedtls_mpi_uint) 0x41 << 16 ) | ( (mbedtls_mpi_uint) 0xF5 << 24 ), ( (mbedtls_mpi_uint) 0xAB << 0 ) | ( (mbedtls_mpi_uint) 0xB3 << 8 ) | ( (mbedtls_mpi_uint) 0x04 << 16 ) | ( (mbedtls_mpi_uint) 0x0C << 24 ),
-    ( (mbedtls_mpi_uint) 0x85 << 0 ) | ( (mbedtls_mpi_uint) 0x0A << 8 ) | ( (mbedtls_mpi_uint) 0x05 << 16 ) | ( (mbedtls_mpi_uint) 0xB4 << 24 ),
+    ( (mbedtls_mpi_uint) (0xB4) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0x55) << 16 ) | ( (mbedtls_mpi_uint) (0x23) << 24 ), ( (mbedtls_mpi_uint) (0x43) << 0 ) | ( (mbedtls_mpi_uint) (0x39) << 8 ) | ( (mbedtls_mpi_uint) (0x0B) << 16 ) | ( (mbedtls_mpi_uint) (0x27) << 24 ),
+    ( (mbedtls_mpi_uint) (0xBA) << 0 ) | ( (mbedtls_mpi_uint) (0xD8) << 8 ) | ( (mbedtls_mpi_uint) (0xBF) << 16 ) | ( (mbedtls_mpi_uint) (0xD7) << 24 ), ( (mbedtls_mpi_uint) (0xB7) << 0 ) | ( (mbedtls_mpi_uint) (0xB0) << 8 ) | ( (mbedtls_mpi_uint) (0x44) << 16 ) | ( (mbedtls_mpi_uint) (0x50) << 24 ),
+    ( (mbedtls_mpi_uint) (0x56) << 0 ) | ( (mbedtls_mpi_uint) (0x32) << 8 ) | ( (mbedtls_mpi_uint) (0x41) << 16 ) | ( (mbedtls_mpi_uint) (0xF5) << 24 ), ( (mbedtls_mpi_uint) (0xAB) << 0 ) | ( (mbedtls_mpi_uint) (0xB3) << 8 ) | ( (mbedtls_mpi_uint) (0x04) << 16 ) | ( (mbedtls_mpi_uint) (0x0C) << 24 ),
+    ( (mbedtls_mpi_uint) (0x85) << 0 ) | ( (mbedtls_mpi_uint) (0x0A) << 8 ) | ( (mbedtls_mpi_uint) (0x05) << 16 ) | ( (mbedtls_mpi_uint) (0xB4) << 24 ),
 };
 static const mbedtls_mpi_uint secp224r1_gx[] = {
-    ( (mbedtls_mpi_uint) 0x21 << 0 ) | ( (mbedtls_mpi_uint) 0x1D << 8 ) | ( (mbedtls_mpi_uint) 0x5C << 16 ) | ( (mbedtls_mpi_uint) 0x11 << 24 ), ( (mbedtls_mpi_uint) 0xD6 << 0 ) | ( (mbedtls_mpi_uint) 0x80 << 8 ) | ( (mbedtls_mpi_uint) 0x32 << 16 ) | ( (mbedtls_mpi_uint) 0x34 << 24 ),
-    ( (mbedtls_mpi_uint) 0x22 << 0 ) | ( (mbedtls_mpi_uint) 0x11 << 8 ) | ( (mbedtls_mpi_uint) 0xC2 << 16 ) | ( (mbedtls_mpi_uint) 0x56 << 24 ), ( (mbedtls_mpi_uint) 0xD3 << 0 ) | ( (mbedtls_mpi_uint) 0xC1 << 8 ) | ( (mbedtls_mpi_uint) 0x03 << 16 ) | ( (mbedtls_mpi_uint) 0x4A << 24 ),
-    ( (mbedtls_mpi_uint) 0xB9 << 0 ) | ( (mbedtls_mpi_uint) 0x90 << 8 ) | ( (mbedtls_mpi_uint) 0x13 << 16 ) | ( (mbedtls_mpi_uint) 0x32 << 24 ), ( (mbedtls_mpi_uint) 0x7F << 0 ) | ( (mbedtls_mpi_uint) 0xBF << 8 ) | ( (mbedtls_mpi_uint) 0xB4 << 16 ) | ( (mbedtls_mpi_uint) 0x6B << 24 ),
-    ( (mbedtls_mpi_uint) 0xBD << 0 ) | ( (mbedtls_mpi_uint) 0x0C << 8 ) | ( (mbedtls_mpi_uint) 0x0E << 16 ) | ( (mbedtls_mpi_uint) 0xB7 << 24 ),
+    ( (mbedtls_mpi_uint) (0x21) << 0 ) | ( (mbedtls_mpi_uint) (0x1D) << 8 ) | ( (mbedtls_mpi_uint) (0x5C) << 16 ) | ( (mbedtls_mpi_uint) (0x11) << 24 ), ( (mbedtls_mpi_uint) (0xD6) << 0 ) | ( (mbedtls_mpi_uint) (0x80) << 8 ) | ( (mbedtls_mpi_uint) (0x32) << 16 ) | ( (mbedtls_mpi_uint) (0x34) << 24 ),
+    ( (mbedtls_mpi_uint) (0x22) << 0 ) | ( (mbedtls_mpi_uint) (0x11) << 8 ) | ( (mbedtls_mpi_uint) (0xC2) << 16 ) | ( (mbedtls_mpi_uint) (0x56) << 24 ), ( (mbedtls_mpi_uint) (0xD3) << 0 ) | ( (mbedtls_mpi_uint) (0xC1) << 8 ) | ( (mbedtls_mpi_uint) (0x03) << 16 ) | ( (mbedtls_mpi_uint) (0x4A) << 24 ),
+    ( (mbedtls_mpi_uint) (0xB9) << 0 ) | ( (mbedtls_mpi_uint) (0x90) << 8 ) | ( (mbedtls_mpi_uint) (0x13) << 16 ) | ( (mbedtls_mpi_uint) (0x32) << 24 ), ( (mbedtls_mpi_uint) (0x7F) << 0 ) | ( (mbedtls_mpi_uint) (0xBF) << 8 ) | ( (mbedtls_mpi_uint) (0xB4) << 16 ) | ( (mbedtls_mpi_uint) (0x6B) << 24 ),
+    ( (mbedtls_mpi_uint) (0xBD) << 0 ) | ( (mbedtls_mpi_uint) (0x0C) << 8 ) | ( (mbedtls_mpi_uint) (0x0E) << 16 ) | ( (mbedtls_mpi_uint) (0xB7) << 24 ),
 };
 static const mbedtls_mpi_uint secp224r1_gy[] = {
-    ( (mbedtls_mpi_uint) 0x34 << 0 ) | ( (mbedtls_mpi_uint) 0x7E << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x85 << 24 ), ( (mbedtls_mpi_uint) 0x99 << 0 ) | ( (mbedtls_mpi_uint) 0x81 << 8 ) | ( (mbedtls_mpi_uint) 0xD5 << 16 ) | ( (mbedtls_mpi_uint) 0x44 << 24 ),
-    ( (mbedtls_mpi_uint) 0x64 << 0 ) | ( (mbedtls_mpi_uint) 0x47 << 8 ) | ( (mbedtls_mpi_uint) 0x07 << 16 ) | ( (mbedtls_mpi_uint) 0x5A << 24 ), ( (mbedtls_mpi_uint) 0xA0 << 0 ) | ( (mbedtls_mpi_uint) 0x75 << 8 ) | ( (mbedtls_mpi_uint) 0x43 << 16 ) | ( (mbedtls_mpi_uint) 0xCD << 24 ),
-    ( (mbedtls_mpi_uint) 0xE6 << 0 ) | ( (mbedtls_mpi_uint) 0xDF << 8 ) | ( (mbedtls_mpi_uint) 0x22 << 16 ) | ( (mbedtls_mpi_uint) 0x4C << 24 ), ( (mbedtls_mpi_uint) 0xFB << 0 ) | ( (mbedtls_mpi_uint) 0x23 << 8 ) | ( (mbedtls_mpi_uint) 0xF7 << 16 ) | ( (mbedtls_mpi_uint) 0xB5 << 24 ),
-    ( (mbedtls_mpi_uint) 0x88 << 0 ) | ( (mbedtls_mpi_uint) 0x63 << 8 ) | ( (mbedtls_mpi_uint) 0x37 << 16 ) | ( (mbedtls_mpi_uint) 0xBD << 24 ),
+    ( (mbedtls_mpi_uint) (0x34) << 0 ) | ( (mbedtls_mpi_uint) (0x7E) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x85) << 24 ), ( (mbedtls_mpi_uint) (0x99) << 0 ) | ( (mbedtls_mpi_uint) (0x81) << 8 ) | ( (mbedtls_mpi_uint) (0xD5) << 16 ) | ( (mbedtls_mpi_uint) (0x44) << 24 ),
+    ( (mbedtls_mpi_uint) (0x64) << 0 ) | ( (mbedtls_mpi_uint) (0x47) << 8 ) | ( (mbedtls_mpi_uint) (0x07) << 16 ) | ( (mbedtls_mpi_uint) (0x5A) << 24 ), ( (mbedtls_mpi_uint) (0xA0) << 0 ) | ( (mbedtls_mpi_uint) (0x75) << 8 ) | ( (mbedtls_mpi_uint) (0x43) << 16 ) | ( (mbedtls_mpi_uint) (0xCD) << 24 ),
+    ( (mbedtls_mpi_uint) (0xE6) << 0 ) | ( (mbedtls_mpi_uint) (0xDF) << 8 ) | ( (mbedtls_mpi_uint) (0x22) << 16 ) | ( (mbedtls_mpi_uint) (0x4C) << 24 ), ( (mbedtls_mpi_uint) (0xFB) << 0 ) | ( (mbedtls_mpi_uint) (0x23) << 8 ) | ( (mbedtls_mpi_uint) (0xF7) << 16 ) | ( (mbedtls_mpi_uint) (0xB5) << 24 ),
+    ( (mbedtls_mpi_uint) (0x88) << 0 ) | ( (mbedtls_mpi_uint) (0x63) << 8 ) | ( (mbedtls_mpi_uint) (0x37) << 16 ) | ( (mbedtls_mpi_uint) (0xBD) << 24 ),
 };
 static const mbedtls_mpi_uint secp224r1_n[] = {
-    ( (mbedtls_mpi_uint) 0x3D << 0 ) | ( (mbedtls_mpi_uint) 0x2A << 8 ) | ( (mbedtls_mpi_uint) 0x5C << 16 ) | ( (mbedtls_mpi_uint) 0x5C << 24 ), ( (mbedtls_mpi_uint) 0x45 << 0 ) | ( (mbedtls_mpi_uint) 0x29 << 8 ) | ( (mbedtls_mpi_uint) 0xDD << 16 ) | ( (mbedtls_mpi_uint) 0x13 << 24 ),
-    ( (mbedtls_mpi_uint) 0x3E << 0 ) | ( (mbedtls_mpi_uint) 0xF0 << 8 ) | ( (mbedtls_mpi_uint) 0xB8 << 16 ) | ( (mbedtls_mpi_uint) 0xE0 << 24 ), ( (mbedtls_mpi_uint) 0xA2 << 0 ) | ( (mbedtls_mpi_uint) 0x16 << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
+    ( (mbedtls_mpi_uint) (0x3D) << 0 ) | ( (mbedtls_mpi_uint) (0x2A) << 8 ) | ( (mbedtls_mpi_uint) (0x5C) << 16 ) | ( (mbedtls_mpi_uint) (0x5C) << 24 ), ( (mbedtls_mpi_uint) (0x45) << 0 ) | ( (mbedtls_mpi_uint) (0x29) << 8 ) | ( (mbedtls_mpi_uint) (0xDD) << 16 ) | ( (mbedtls_mpi_uint) (0x13) << 24 ),
+    ( (mbedtls_mpi_uint) (0x3E) << 0 ) | ( (mbedtls_mpi_uint) (0xF0) << 8 ) | ( (mbedtls_mpi_uint) (0xB8) << 16 ) | ( (mbedtls_mpi_uint) (0xE0) << 24 ), ( (mbedtls_mpi_uint) (0xA2) << 0 ) | ( (mbedtls_mpi_uint) (0x16) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
 };
 
 
@@ -1854,34 +1912,34 @@ static const mbedtls_mpi_uint secp224r1_n[] = {
 
 
 static const mbedtls_mpi_uint secp256r1_p[] = {
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0x00 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ),
-    ( (mbedtls_mpi_uint) 0x00 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ), ( (mbedtls_mpi_uint) 0x00 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ),
-    ( (mbedtls_mpi_uint) 0x01 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0x00) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ),
+    ( (mbedtls_mpi_uint) (0x00) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ), ( (mbedtls_mpi_uint) (0x00) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ),
+    ( (mbedtls_mpi_uint) (0x01) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
 };
 static const mbedtls_mpi_uint secp256r1_b[] = {
-    ( (mbedtls_mpi_uint) 0x4B << 0 ) | ( (mbedtls_mpi_uint) 0x60 << 8 ) | ( (mbedtls_mpi_uint) 0xD2 << 16 ) | ( (mbedtls_mpi_uint) 0x27 << 24 ), ( (mbedtls_mpi_uint) 0x3E << 0 ) | ( (mbedtls_mpi_uint) 0x3C << 8 ) | ( (mbedtls_mpi_uint) 0xCE << 16 ) | ( (mbedtls_mpi_uint) 0x3B << 24 ),
-    ( (mbedtls_mpi_uint) 0xF6 << 0 ) | ( (mbedtls_mpi_uint) 0xB0 << 8 ) | ( (mbedtls_mpi_uint) 0x53 << 16 ) | ( (mbedtls_mpi_uint) 0xCC << 24 ), ( (mbedtls_mpi_uint) 0xB0 << 0 ) | ( (mbedtls_mpi_uint) 0x06 << 8 ) | ( (mbedtls_mpi_uint) 0x1D << 16 ) | ( (mbedtls_mpi_uint) 0x65 << 24 ),
-    ( (mbedtls_mpi_uint) 0xBC << 0 ) | ( (mbedtls_mpi_uint) 0x86 << 8 ) | ( (mbedtls_mpi_uint) 0x98 << 16 ) | ( (mbedtls_mpi_uint) 0x76 << 24 ), ( (mbedtls_mpi_uint) 0x55 << 0 ) | ( (mbedtls_mpi_uint) 0xBD << 8 ) | ( (mbedtls_mpi_uint) 0xEB << 16 ) | ( (mbedtls_mpi_uint) 0xB3 << 24 ),
-    ( (mbedtls_mpi_uint) 0xE7 << 0 ) | ( (mbedtls_mpi_uint) 0x93 << 8 ) | ( (mbedtls_mpi_uint) 0x3A << 16 ) | ( (mbedtls_mpi_uint) 0xAA << 24 ), ( (mbedtls_mpi_uint) 0xD8 << 0 ) | ( (mbedtls_mpi_uint) 0x35 << 8 ) | ( (mbedtls_mpi_uint) 0xC6 << 16 ) | ( (mbedtls_mpi_uint) 0x5A << 24 ),
+    ( (mbedtls_mpi_uint) (0x4B) << 0 ) | ( (mbedtls_mpi_uint) (0x60) << 8 ) | ( (mbedtls_mpi_uint) (0xD2) << 16 ) | ( (mbedtls_mpi_uint) (0x27) << 24 ), ( (mbedtls_mpi_uint) (0x3E) << 0 ) | ( (mbedtls_mpi_uint) (0x3C) << 8 ) | ( (mbedtls_mpi_uint) (0xCE) << 16 ) | ( (mbedtls_mpi_uint) (0x3B) << 24 ),
+    ( (mbedtls_mpi_uint) (0xF6) << 0 ) | ( (mbedtls_mpi_uint) (0xB0) << 8 ) | ( (mbedtls_mpi_uint) (0x53) << 16 ) | ( (mbedtls_mpi_uint) (0xCC) << 24 ), ( (mbedtls_mpi_uint) (0xB0) << 0 ) | ( (mbedtls_mpi_uint) (0x06) << 8 ) | ( (mbedtls_mpi_uint) (0x1D) << 16 ) | ( (mbedtls_mpi_uint) (0x65) << 24 ),
+    ( (mbedtls_mpi_uint) (0xBC) << 0 ) | ( (mbedtls_mpi_uint) (0x86) << 8 ) | ( (mbedtls_mpi_uint) (0x98) << 16 ) | ( (mbedtls_mpi_uint) (0x76) << 24 ), ( (mbedtls_mpi_uint) (0x55) << 0 ) | ( (mbedtls_mpi_uint) (0xBD) << 8 ) | ( (mbedtls_mpi_uint) (0xEB) << 16 ) | ( (mbedtls_mpi_uint) (0xB3) << 24 ),
+    ( (mbedtls_mpi_uint) (0xE7) << 0 ) | ( (mbedtls_mpi_uint) (0x93) << 8 ) | ( (mbedtls_mpi_uint) (0x3A) << 16 ) | ( (mbedtls_mpi_uint) (0xAA) << 24 ), ( (mbedtls_mpi_uint) (0xD8) << 0 ) | ( (mbedtls_mpi_uint) (0x35) << 8 ) | ( (mbedtls_mpi_uint) (0xC6) << 16 ) | ( (mbedtls_mpi_uint) (0x5A) << 24 ),
 };
 static const mbedtls_mpi_uint secp256r1_gx[] = {
-    ( (mbedtls_mpi_uint) 0x96 << 0 ) | ( (mbedtls_mpi_uint) 0xC2 << 8 ) | ( (mbedtls_mpi_uint) 0x98 << 16 ) | ( (mbedtls_mpi_uint) 0xD8 << 24 ), ( (mbedtls_mpi_uint) 0x45 << 0 ) | ( (mbedtls_mpi_uint) 0x39 << 8 ) | ( (mbedtls_mpi_uint) 0xA1 << 16 ) | ( (mbedtls_mpi_uint) 0xF4 << 24 ),
-    ( (mbedtls_mpi_uint) 0xA0 << 0 ) | ( (mbedtls_mpi_uint) 0x33 << 8 ) | ( (mbedtls_mpi_uint) 0xEB << 16 ) | ( (mbedtls_mpi_uint) 0x2D << 24 ), ( (mbedtls_mpi_uint) 0x81 << 0 ) | ( (mbedtls_mpi_uint) 0x7D << 8 ) | ( (mbedtls_mpi_uint) 0x03 << 16 ) | ( (mbedtls_mpi_uint) 0x77 << 24 ),
-    ( (mbedtls_mpi_uint) 0xF2 << 0 ) | ( (mbedtls_mpi_uint) 0x40 << 8 ) | ( (mbedtls_mpi_uint) 0xA4 << 16 ) | ( (mbedtls_mpi_uint) 0x63 << 24 ), ( (mbedtls_mpi_uint) 0xE5 << 0 ) | ( (mbedtls_mpi_uint) 0xE6 << 8 ) | ( (mbedtls_mpi_uint) 0xBC << 16 ) | ( (mbedtls_mpi_uint) 0xF8 << 24 ),
-    ( (mbedtls_mpi_uint) 0x47 << 0 ) | ( (mbedtls_mpi_uint) 0x42 << 8 ) | ( (mbedtls_mpi_uint) 0x2C << 16 ) | ( (mbedtls_mpi_uint) 0xE1 << 24 ), ( (mbedtls_mpi_uint) 0xF2 << 0 ) | ( (mbedtls_mpi_uint) 0xD1 << 8 ) | ( (mbedtls_mpi_uint) 0x17 << 16 ) | ( (mbedtls_mpi_uint) 0x6B << 24 ),
+    ( (mbedtls_mpi_uint) (0x96) << 0 ) | ( (mbedtls_mpi_uint) (0xC2) << 8 ) | ( (mbedtls_mpi_uint) (0x98) << 16 ) | ( (mbedtls_mpi_uint) (0xD8) << 24 ), ( (mbedtls_mpi_uint) (0x45) << 0 ) | ( (mbedtls_mpi_uint) (0x39) << 8 ) | ( (mbedtls_mpi_uint) (0xA1) << 16 ) | ( (mbedtls_mpi_uint) (0xF4) << 24 ),
+    ( (mbedtls_mpi_uint) (0xA0) << 0 ) | ( (mbedtls_mpi_uint) (0x33) << 8 ) | ( (mbedtls_mpi_uint) (0xEB) << 16 ) | ( (mbedtls_mpi_uint) (0x2D) << 24 ), ( (mbedtls_mpi_uint) (0x81) << 0 ) | ( (mbedtls_mpi_uint) (0x7D) << 8 ) | ( (mbedtls_mpi_uint) (0x03) << 16 ) | ( (mbedtls_mpi_uint) (0x77) << 24 ),
+    ( (mbedtls_mpi_uint) (0xF2) << 0 ) | ( (mbedtls_mpi_uint) (0x40) << 8 ) | ( (mbedtls_mpi_uint) (0xA4) << 16 ) | ( (mbedtls_mpi_uint) (0x63) << 24 ), ( (mbedtls_mpi_uint) (0xE5) << 0 ) | ( (mbedtls_mpi_uint) (0xE6) << 8 ) | ( (mbedtls_mpi_uint) (0xBC) << 16 ) | ( (mbedtls_mpi_uint) (0xF8) << 24 ),
+    ( (mbedtls_mpi_uint) (0x47) << 0 ) | ( (mbedtls_mpi_uint) (0x42) << 8 ) | ( (mbedtls_mpi_uint) (0x2C) << 16 ) | ( (mbedtls_mpi_uint) (0xE1) << 24 ), ( (mbedtls_mpi_uint) (0xF2) << 0 ) | ( (mbedtls_mpi_uint) (0xD1) << 8 ) | ( (mbedtls_mpi_uint) (0x17) << 16 ) | ( (mbedtls_mpi_uint) (0x6B) << 24 ),
 };
 static const mbedtls_mpi_uint secp256r1_gy[] = {
-    ( (mbedtls_mpi_uint) 0xF5 << 0 ) | ( (mbedtls_mpi_uint) 0x51 << 8 ) | ( (mbedtls_mpi_uint) 0xBF << 16 ) | ( (mbedtls_mpi_uint) 0x37 << 24 ), ( (mbedtls_mpi_uint) 0x68 << 0 ) | ( (mbedtls_mpi_uint) 0x40 << 8 ) | ( (mbedtls_mpi_uint) 0xB6 << 16 ) | ( (mbedtls_mpi_uint) 0xCB << 24 ),
-    ( (mbedtls_mpi_uint) 0xCE << 0 ) | ( (mbedtls_mpi_uint) 0x5E << 8 ) | ( (mbedtls_mpi_uint) 0x31 << 16 ) | ( (mbedtls_mpi_uint) 0x6B << 24 ), ( (mbedtls_mpi_uint) 0x57 << 0 ) | ( (mbedtls_mpi_uint) 0x33 << 8 ) | ( (mbedtls_mpi_uint) 0xCE << 16 ) | ( (mbedtls_mpi_uint) 0x2B << 24 ),
-    ( (mbedtls_mpi_uint) 0x16 << 0 ) | ( (mbedtls_mpi_uint) 0x9E << 8 ) | ( (mbedtls_mpi_uint) 0x0F << 16 ) | ( (mbedtls_mpi_uint) 0x7C << 24 ), ( (mbedtls_mpi_uint) 0x4A << 0 ) | ( (mbedtls_mpi_uint) 0xEB << 8 ) | ( (mbedtls_mpi_uint) 0xE7 << 16 ) | ( (mbedtls_mpi_uint) 0x8E << 24 ),
-    ( (mbedtls_mpi_uint) 0x9B << 0 ) | ( (mbedtls_mpi_uint) 0x7F << 8 ) | ( (mbedtls_mpi_uint) 0x1A << 16 ) | ( (mbedtls_mpi_uint) 0xFE << 24 ), ( (mbedtls_mpi_uint) 0xE2 << 0 ) | ( (mbedtls_mpi_uint) 0x42 << 8 ) | ( (mbedtls_mpi_uint) 0xE3 << 16 ) | ( (mbedtls_mpi_uint) 0x4F << 24 ),
+    ( (mbedtls_mpi_uint) (0xF5) << 0 ) | ( (mbedtls_mpi_uint) (0x51) << 8 ) | ( (mbedtls_mpi_uint) (0xBF) << 16 ) | ( (mbedtls_mpi_uint) (0x37) << 24 ), ( (mbedtls_mpi_uint) (0x68) << 0 ) | ( (mbedtls_mpi_uint) (0x40) << 8 ) | ( (mbedtls_mpi_uint) (0xB6) << 16 ) | ( (mbedtls_mpi_uint) (0xCB) << 24 ),
+    ( (mbedtls_mpi_uint) (0xCE) << 0 ) | ( (mbedtls_mpi_uint) (0x5E) << 8 ) | ( (mbedtls_mpi_uint) (0x31) << 16 ) | ( (mbedtls_mpi_uint) (0x6B) << 24 ), ( (mbedtls_mpi_uint) (0x57) << 0 ) | ( (mbedtls_mpi_uint) (0x33) << 8 ) | ( (mbedtls_mpi_uint) (0xCE) << 16 ) | ( (mbedtls_mpi_uint) (0x2B) << 24 ),
+    ( (mbedtls_mpi_uint) (0x16) << 0 ) | ( (mbedtls_mpi_uint) (0x9E) << 8 ) | ( (mbedtls_mpi_uint) (0x0F) << 16 ) | ( (mbedtls_mpi_uint) (0x7C) << 24 ), ( (mbedtls_mpi_uint) (0x4A) << 0 ) | ( (mbedtls_mpi_uint) (0xEB) << 8 ) | ( (mbedtls_mpi_uint) (0xE7) << 16 ) | ( (mbedtls_mpi_uint) (0x8E) << 24 ),
+    ( (mbedtls_mpi_uint) (0x9B) << 0 ) | ( (mbedtls_mpi_uint) (0x7F) << 8 ) | ( (mbedtls_mpi_uint) (0x1A) << 16 ) | ( (mbedtls_mpi_uint) (0xFE) << 24 ), ( (mbedtls_mpi_uint) (0xE2) << 0 ) | ( (mbedtls_mpi_uint) (0x42) << 8 ) | ( (mbedtls_mpi_uint) (0xE3) << 16 ) | ( (mbedtls_mpi_uint) (0x4F) << 24 ),
 };
 static const mbedtls_mpi_uint secp256r1_n[] = {
-    ( (mbedtls_mpi_uint) 0x51 << 0 ) | ( (mbedtls_mpi_uint) 0x25 << 8 ) | ( (mbedtls_mpi_uint) 0x63 << 16 ) | ( (mbedtls_mpi_uint) 0xFC << 24 ), ( (mbedtls_mpi_uint) 0xC2 << 0 ) | ( (mbedtls_mpi_uint) 0xCA << 8 ) | ( (mbedtls_mpi_uint) 0xB9 << 16 ) | ( (mbedtls_mpi_uint) 0xF3 << 24 ),
-    ( (mbedtls_mpi_uint) 0x84 << 0 ) | ( (mbedtls_mpi_uint) 0x9E << 8 ) | ( (mbedtls_mpi_uint) 0x17 << 16 ) | ( (mbedtls_mpi_uint) 0xA7 << 24 ), ( (mbedtls_mpi_uint) 0xAD << 0 ) | ( (mbedtls_mpi_uint) 0xFA << 8 ) | ( (mbedtls_mpi_uint) 0xE6 << 16 ) | ( (mbedtls_mpi_uint) 0xBC << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0x00 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
+    ( (mbedtls_mpi_uint) (0x51) << 0 ) | ( (mbedtls_mpi_uint) (0x25) << 8 ) | ( (mbedtls_mpi_uint) (0x63) << 16 ) | ( (mbedtls_mpi_uint) (0xFC) << 24 ), ( (mbedtls_mpi_uint) (0xC2) << 0 ) | ( (mbedtls_mpi_uint) (0xCA) << 8 ) | ( (mbedtls_mpi_uint) (0xB9) << 16 ) | ( (mbedtls_mpi_uint) (0xF3) << 24 ),
+    ( (mbedtls_mpi_uint) (0x84) << 0 ) | ( (mbedtls_mpi_uint) (0x9E) << 8 ) | ( (mbedtls_mpi_uint) (0x17) << 16 ) | ( (mbedtls_mpi_uint) (0xA7) << 24 ), ( (mbedtls_mpi_uint) (0xAD) << 0 ) | ( (mbedtls_mpi_uint) (0xFA) << 8 ) | ( (mbedtls_mpi_uint) (0xE6) << 16 ) | ( (mbedtls_mpi_uint) (0xBC) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0x00) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
 };
 
 
@@ -1890,44 +1948,44 @@ static const mbedtls_mpi_uint secp256r1_n[] = {
 
 
 static const mbedtls_mpi_uint secp384r1_p[] = {
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0x00 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ),
-    ( (mbedtls_mpi_uint) 0x00 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFE << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0x00) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ),
+    ( (mbedtls_mpi_uint) (0x00) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFE) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
 };
 static const mbedtls_mpi_uint secp384r1_b[] = {
-    ( (mbedtls_mpi_uint) 0xEF << 0 ) | ( (mbedtls_mpi_uint) 0x2A << 8 ) | ( (mbedtls_mpi_uint) 0xEC << 16 ) | ( (mbedtls_mpi_uint) 0xD3 << 24 ), ( (mbedtls_mpi_uint) 0xED << 0 ) | ( (mbedtls_mpi_uint) 0xC8 << 8 ) | ( (mbedtls_mpi_uint) 0x85 << 16 ) | ( (mbedtls_mpi_uint) 0x2A << 24 ),
-    ( (mbedtls_mpi_uint) 0x9D << 0 ) | ( (mbedtls_mpi_uint) 0xD1 << 8 ) | ( (mbedtls_mpi_uint) 0x2E << 16 ) | ( (mbedtls_mpi_uint) 0x8A << 24 ), ( (mbedtls_mpi_uint) 0x8D << 0 ) | ( (mbedtls_mpi_uint) 0x39 << 8 ) | ( (mbedtls_mpi_uint) 0x56 << 16 ) | ( (mbedtls_mpi_uint) 0xC6 << 24 ),
-    ( (mbedtls_mpi_uint) 0x5A << 0 ) | ( (mbedtls_mpi_uint) 0x87 << 8 ) | ( (mbedtls_mpi_uint) 0x13 << 16 ) | ( (mbedtls_mpi_uint) 0x50 << 24 ), ( (mbedtls_mpi_uint) 0x8F << 0 ) | ( (mbedtls_mpi_uint) 0x08 << 8 ) | ( (mbedtls_mpi_uint) 0x14 << 16 ) | ( (mbedtls_mpi_uint) 0x03 << 24 ),
-    ( (mbedtls_mpi_uint) 0x12 << 0 ) | ( (mbedtls_mpi_uint) 0x41 << 8 ) | ( (mbedtls_mpi_uint) 0x81 << 16 ) | ( (mbedtls_mpi_uint) 0xFE << 24 ), ( (mbedtls_mpi_uint) 0x6E << 0 ) | ( (mbedtls_mpi_uint) 0x9C << 8 ) | ( (mbedtls_mpi_uint) 0x1D << 16 ) | ( (mbedtls_mpi_uint) 0x18 << 24 ),
-    ( (mbedtls_mpi_uint) 0x19 << 0 ) | ( (mbedtls_mpi_uint) 0x2D << 8 ) | ( (mbedtls_mpi_uint) 0xF8 << 16 ) | ( (mbedtls_mpi_uint) 0xE3 << 24 ), ( (mbedtls_mpi_uint) 0x6B << 0 ) | ( (mbedtls_mpi_uint) 0x05 << 8 ) | ( (mbedtls_mpi_uint) 0x8E << 16 ) | ( (mbedtls_mpi_uint) 0x98 << 24 ),
-    ( (mbedtls_mpi_uint) 0xE4 << 0 ) | ( (mbedtls_mpi_uint) 0xE7 << 8 ) | ( (mbedtls_mpi_uint) 0x3E << 16 ) | ( (mbedtls_mpi_uint) 0xE2 << 24 ), ( (mbedtls_mpi_uint) 0xA7 << 0 ) | ( (mbedtls_mpi_uint) 0x2F << 8 ) | ( (mbedtls_mpi_uint) 0x31 << 16 ) | ( (mbedtls_mpi_uint) 0xB3 << 24 ),
+    ( (mbedtls_mpi_uint) (0xEF) << 0 ) | ( (mbedtls_mpi_uint) (0x2A) << 8 ) | ( (mbedtls_mpi_uint) (0xEC) << 16 ) | ( (mbedtls_mpi_uint) (0xD3) << 24 ), ( (mbedtls_mpi_uint) (0xED) << 0 ) | ( (mbedtls_mpi_uint) (0xC8) << 8 ) | ( (mbedtls_mpi_uint) (0x85) << 16 ) | ( (mbedtls_mpi_uint) (0x2A) << 24 ),
+    ( (mbedtls_mpi_uint) (0x9D) << 0 ) | ( (mbedtls_mpi_uint) (0xD1) << 8 ) | ( (mbedtls_mpi_uint) (0x2E) << 16 ) | ( (mbedtls_mpi_uint) (0x8A) << 24 ), ( (mbedtls_mpi_uint) (0x8D) << 0 ) | ( (mbedtls_mpi_uint) (0x39) << 8 ) | ( (mbedtls_mpi_uint) (0x56) << 16 ) | ( (mbedtls_mpi_uint) (0xC6) << 24 ),
+    ( (mbedtls_mpi_uint) (0x5A) << 0 ) | ( (mbedtls_mpi_uint) (0x87) << 8 ) | ( (mbedtls_mpi_uint) (0x13) << 16 ) | ( (mbedtls_mpi_uint) (0x50) << 24 ), ( (mbedtls_mpi_uint) (0x8F) << 0 ) | ( (mbedtls_mpi_uint) (0x08) << 8 ) | ( (mbedtls_mpi_uint) (0x14) << 16 ) | ( (mbedtls_mpi_uint) (0x03) << 24 ),
+    ( (mbedtls_mpi_uint) (0x12) << 0 ) | ( (mbedtls_mpi_uint) (0x41) << 8 ) | ( (mbedtls_mpi_uint) (0x81) << 16 ) | ( (mbedtls_mpi_uint) (0xFE) << 24 ), ( (mbedtls_mpi_uint) (0x6E) << 0 ) | ( (mbedtls_mpi_uint) (0x9C) << 8 ) | ( (mbedtls_mpi_uint) (0x1D) << 16 ) | ( (mbedtls_mpi_uint) (0x18) << 24 ),
+    ( (mbedtls_mpi_uint) (0x19) << 0 ) | ( (mbedtls_mpi_uint) (0x2D) << 8 ) | ( (mbedtls_mpi_uint) (0xF8) << 16 ) | ( (mbedtls_mpi_uint) (0xE3) << 24 ), ( (mbedtls_mpi_uint) (0x6B) << 0 ) | ( (mbedtls_mpi_uint) (0x05) << 8 ) | ( (mbedtls_mpi_uint) (0x8E) << 16 ) | ( (mbedtls_mpi_uint) (0x98) << 24 ),
+    ( (mbedtls_mpi_uint) (0xE4) << 0 ) | ( (mbedtls_mpi_uint) (0xE7) << 8 ) | ( (mbedtls_mpi_uint) (0x3E) << 16 ) | ( (mbedtls_mpi_uint) (0xE2) << 24 ), ( (mbedtls_mpi_uint) (0xA7) << 0 ) | ( (mbedtls_mpi_uint) (0x2F) << 8 ) | ( (mbedtls_mpi_uint) (0x31) << 16 ) | ( (mbedtls_mpi_uint) (0xB3) << 24 ),
 };
 static const mbedtls_mpi_uint secp384r1_gx[] = {
-    ( (mbedtls_mpi_uint) 0xB7 << 0 ) | ( (mbedtls_mpi_uint) 0x0A << 8 ) | ( (mbedtls_mpi_uint) 0x76 << 16 ) | ( (mbedtls_mpi_uint) 0x72 << 24 ), ( (mbedtls_mpi_uint) 0x38 << 0 ) | ( (mbedtls_mpi_uint) 0x5E << 8 ) | ( (mbedtls_mpi_uint) 0x54 << 16 ) | ( (mbedtls_mpi_uint) 0x3A << 24 ),
-    ( (mbedtls_mpi_uint) 0x6C << 0 ) | ( (mbedtls_mpi_uint) 0x29 << 8 ) | ( (mbedtls_mpi_uint) 0x55 << 16 ) | ( (mbedtls_mpi_uint) 0xBF << 24 ), ( (mbedtls_mpi_uint) 0x5D << 0 ) | ( (mbedtls_mpi_uint) 0xF2 << 8 ) | ( (mbedtls_mpi_uint) 0x02 << 16 ) | ( (mbedtls_mpi_uint) 0x55 << 24 ),
-    ( (mbedtls_mpi_uint) 0x38 << 0 ) | ( (mbedtls_mpi_uint) 0x2A << 8 ) | ( (mbedtls_mpi_uint) 0x54 << 16 ) | ( (mbedtls_mpi_uint) 0x82 << 24 ), ( (mbedtls_mpi_uint) 0xE0 << 0 ) | ( (mbedtls_mpi_uint) 0x41 << 8 ) | ( (mbedtls_mpi_uint) 0xF7 << 16 ) | ( (mbedtls_mpi_uint) 0x59 << 24 ),
-    ( (mbedtls_mpi_uint) 0x98 << 0 ) | ( (mbedtls_mpi_uint) 0x9B << 8 ) | ( (mbedtls_mpi_uint) 0xA7 << 16 ) | ( (mbedtls_mpi_uint) 0x8B << 24 ), ( (mbedtls_mpi_uint) 0x62 << 0 ) | ( (mbedtls_mpi_uint) 0x3B << 8 ) | ( (mbedtls_mpi_uint) 0x1D << 16 ) | ( (mbedtls_mpi_uint) 0x6E << 24 ),
-    ( (mbedtls_mpi_uint) 0x74 << 0 ) | ( (mbedtls_mpi_uint) 0xAD << 8 ) | ( (mbedtls_mpi_uint) 0x20 << 16 ) | ( (mbedtls_mpi_uint) 0xF3 << 24 ), ( (mbedtls_mpi_uint) 0x1E << 0 ) | ( (mbedtls_mpi_uint) 0xC7 << 8 ) | ( (mbedtls_mpi_uint) 0xB1 << 16 ) | ( (mbedtls_mpi_uint) 0x8E << 24 ),
-    ( (mbedtls_mpi_uint) 0x37 << 0 ) | ( (mbedtls_mpi_uint) 0x05 << 8 ) | ( (mbedtls_mpi_uint) 0x8B << 16 ) | ( (mbedtls_mpi_uint) 0xBE << 24 ), ( (mbedtls_mpi_uint) 0x22 << 0 ) | ( (mbedtls_mpi_uint) 0xCA << 8 ) | ( (mbedtls_mpi_uint) 0x87 << 16 ) | ( (mbedtls_mpi_uint) 0xAA << 24 ),
+    ( (mbedtls_mpi_uint) (0xB7) << 0 ) | ( (mbedtls_mpi_uint) (0x0A) << 8 ) | ( (mbedtls_mpi_uint) (0x76) << 16 ) | ( (mbedtls_mpi_uint) (0x72) << 24 ), ( (mbedtls_mpi_uint) (0x38) << 0 ) | ( (mbedtls_mpi_uint) (0x5E) << 8 ) | ( (mbedtls_mpi_uint) (0x54) << 16 ) | ( (mbedtls_mpi_uint) (0x3A) << 24 ),
+    ( (mbedtls_mpi_uint) (0x6C) << 0 ) | ( (mbedtls_mpi_uint) (0x29) << 8 ) | ( (mbedtls_mpi_uint) (0x55) << 16 ) | ( (mbedtls_mpi_uint) (0xBF) << 24 ), ( (mbedtls_mpi_uint) (0x5D) << 0 ) | ( (mbedtls_mpi_uint) (0xF2) << 8 ) | ( (mbedtls_mpi_uint) (0x02) << 16 ) | ( (mbedtls_mpi_uint) (0x55) << 24 ),
+    ( (mbedtls_mpi_uint) (0x38) << 0 ) | ( (mbedtls_mpi_uint) (0x2A) << 8 ) | ( (mbedtls_mpi_uint) (0x54) << 16 ) | ( (mbedtls_mpi_uint) (0x82) << 24 ), ( (mbedtls_mpi_uint) (0xE0) << 0 ) | ( (mbedtls_mpi_uint) (0x41) << 8 ) | ( (mbedtls_mpi_uint) (0xF7) << 16 ) | ( (mbedtls_mpi_uint) (0x59) << 24 ),
+    ( (mbedtls_mpi_uint) (0x98) << 0 ) | ( (mbedtls_mpi_uint) (0x9B) << 8 ) | ( (mbedtls_mpi_uint) (0xA7) << 16 ) | ( (mbedtls_mpi_uint) (0x8B) << 24 ), ( (mbedtls_mpi_uint) (0x62) << 0 ) | ( (mbedtls_mpi_uint) (0x3B) << 8 ) | ( (mbedtls_mpi_uint) (0x1D) << 16 ) | ( (mbedtls_mpi_uint) (0x6E) << 24 ),
+    ( (mbedtls_mpi_uint) (0x74) << 0 ) | ( (mbedtls_mpi_uint) (0xAD) << 8 ) | ( (mbedtls_mpi_uint) (0x20) << 16 ) | ( (mbedtls_mpi_uint) (0xF3) << 24 ), ( (mbedtls_mpi_uint) (0x1E) << 0 ) | ( (mbedtls_mpi_uint) (0xC7) << 8 ) | ( (mbedtls_mpi_uint) (0xB1) << 16 ) | ( (mbedtls_mpi_uint) (0x8E) << 24 ),
+    ( (mbedtls_mpi_uint) (0x37) << 0 ) | ( (mbedtls_mpi_uint) (0x05) << 8 ) | ( (mbedtls_mpi_uint) (0x8B) << 16 ) | ( (mbedtls_mpi_uint) (0xBE) << 24 ), ( (mbedtls_mpi_uint) (0x22) << 0 ) | ( (mbedtls_mpi_uint) (0xCA) << 8 ) | ( (mbedtls_mpi_uint) (0x87) << 16 ) | ( (mbedtls_mpi_uint) (0xAA) << 24 ),
 };
 static const mbedtls_mpi_uint secp384r1_gy[] = {
-    ( (mbedtls_mpi_uint) 0x5F << 0 ) | ( (mbedtls_mpi_uint) 0x0E << 8 ) | ( (mbedtls_mpi_uint) 0xEA << 16 ) | ( (mbedtls_mpi_uint) 0x90 << 24 ), ( (mbedtls_mpi_uint) 0x7C << 0 ) | ( (mbedtls_mpi_uint) 0x1D << 8 ) | ( (mbedtls_mpi_uint) 0x43 << 16 ) | ( (mbedtls_mpi_uint) 0x7A << 24 ),
-    ( (mbedtls_mpi_uint) 0x9D << 0 ) | ( (mbedtls_mpi_uint) 0x81 << 8 ) | ( (mbedtls_mpi_uint) 0x7E << 16 ) | ( (mbedtls_mpi_uint) 0x1D << 24 ), ( (mbedtls_mpi_uint) 0xCE << 0 ) | ( (mbedtls_mpi_uint) 0xB1 << 8 ) | ( (mbedtls_mpi_uint) 0x60 << 16 ) | ( (mbedtls_mpi_uint) 0x0A << 24 ),
-    ( (mbedtls_mpi_uint) 0xC0 << 0 ) | ( (mbedtls_mpi_uint) 0xB8 << 8 ) | ( (mbedtls_mpi_uint) 0xF0 << 16 ) | ( (mbedtls_mpi_uint) 0xB5 << 24 ), ( (mbedtls_mpi_uint) 0x13 << 0 ) | ( (mbedtls_mpi_uint) 0x31 << 8 ) | ( (mbedtls_mpi_uint) 0xDA << 16 ) | ( (mbedtls_mpi_uint) 0xE9 << 24 ),
-    ( (mbedtls_mpi_uint) 0x7C << 0 ) | ( (mbedtls_mpi_uint) 0x14 << 8 ) | ( (mbedtls_mpi_uint) 0x9A << 16 ) | ( (mbedtls_mpi_uint) 0x28 << 24 ), ( (mbedtls_mpi_uint) 0xBD << 0 ) | ( (mbedtls_mpi_uint) 0x1D << 8 ) | ( (mbedtls_mpi_uint) 0xF4 << 16 ) | ( (mbedtls_mpi_uint) 0xF8 << 24 ),
-    ( (mbedtls_mpi_uint) 0x29 << 0 ) | ( (mbedtls_mpi_uint) 0xDC << 8 ) | ( (mbedtls_mpi_uint) 0x92 << 16 ) | ( (mbedtls_mpi_uint) 0x92 << 24 ), ( (mbedtls_mpi_uint) 0xBF << 0 ) | ( (mbedtls_mpi_uint) 0x98 << 8 ) | ( (mbedtls_mpi_uint) 0x9E << 16 ) | ( (mbedtls_mpi_uint) 0x5D << 24 ),
-    ( (mbedtls_mpi_uint) 0x6F << 0 ) | ( (mbedtls_mpi_uint) 0x2C << 8 ) | ( (mbedtls_mpi_uint) 0x26 << 16 ) | ( (mbedtls_mpi_uint) 0x96 << 24 ), ( (mbedtls_mpi_uint) 0x4A << 0 ) | ( (mbedtls_mpi_uint) 0xDE << 8 ) | ( (mbedtls_mpi_uint) 0x17 << 16 ) | ( (mbedtls_mpi_uint) 0x36 << 24 ),
+    ( (mbedtls_mpi_uint) (0x5F) << 0 ) | ( (mbedtls_mpi_uint) (0x0E) << 8 ) | ( (mbedtls_mpi_uint) (0xEA) << 16 ) | ( (mbedtls_mpi_uint) (0x90) << 24 ), ( (mbedtls_mpi_uint) (0x7C) << 0 ) | ( (mbedtls_mpi_uint) (0x1D) << 8 ) | ( (mbedtls_mpi_uint) (0x43) << 16 ) | ( (mbedtls_mpi_uint) (0x7A) << 24 ),
+    ( (mbedtls_mpi_uint) (0x9D) << 0 ) | ( (mbedtls_mpi_uint) (0x81) << 8 ) | ( (mbedtls_mpi_uint) (0x7E) << 16 ) | ( (mbedtls_mpi_uint) (0x1D) << 24 ), ( (mbedtls_mpi_uint) (0xCE) << 0 ) | ( (mbedtls_mpi_uint) (0xB1) << 8 ) | ( (mbedtls_mpi_uint) (0x60) << 16 ) | ( (mbedtls_mpi_uint) (0x0A) << 24 ),
+    ( (mbedtls_mpi_uint) (0xC0) << 0 ) | ( (mbedtls_mpi_uint) (0xB8) << 8 ) | ( (mbedtls_mpi_uint) (0xF0) << 16 ) | ( (mbedtls_mpi_uint) (0xB5) << 24 ), ( (mbedtls_mpi_uint) (0x13) << 0 ) | ( (mbedtls_mpi_uint) (0x31) << 8 ) | ( (mbedtls_mpi_uint) (0xDA) << 16 ) | ( (mbedtls_mpi_uint) (0xE9) << 24 ),
+    ( (mbedtls_mpi_uint) (0x7C) << 0 ) | ( (mbedtls_mpi_uint) (0x14) << 8 ) | ( (mbedtls_mpi_uint) (0x9A) << 16 ) | ( (mbedtls_mpi_uint) (0x28) << 24 ), ( (mbedtls_mpi_uint) (0xBD) << 0 ) | ( (mbedtls_mpi_uint) (0x1D) << 8 ) | ( (mbedtls_mpi_uint) (0xF4) << 16 ) | ( (mbedtls_mpi_uint) (0xF8) << 24 ),
+    ( (mbedtls_mpi_uint) (0x29) << 0 ) | ( (mbedtls_mpi_uint) (0xDC) << 8 ) | ( (mbedtls_mpi_uint) (0x92) << 16 ) | ( (mbedtls_mpi_uint) (0x92) << 24 ), ( (mbedtls_mpi_uint) (0xBF) << 0 ) | ( (mbedtls_mpi_uint) (0x98) << 8 ) | ( (mbedtls_mpi_uint) (0x9E) << 16 ) | ( (mbedtls_mpi_uint) (0x5D) << 24 ),
+    ( (mbedtls_mpi_uint) (0x6F) << 0 ) | ( (mbedtls_mpi_uint) (0x2C) << 8 ) | ( (mbedtls_mpi_uint) (0x26) << 16 ) | ( (mbedtls_mpi_uint) (0x96) << 24 ), ( (mbedtls_mpi_uint) (0x4A) << 0 ) | ( (mbedtls_mpi_uint) (0xDE) << 8 ) | ( (mbedtls_mpi_uint) (0x17) << 16 ) | ( (mbedtls_mpi_uint) (0x36) << 24 ),
 };
 static const mbedtls_mpi_uint secp384r1_n[] = {
-    ( (mbedtls_mpi_uint) 0x73 << 0 ) | ( (mbedtls_mpi_uint) 0x29 << 8 ) | ( (mbedtls_mpi_uint) 0xC5 << 16 ) | ( (mbedtls_mpi_uint) 0xCC << 24 ), ( (mbedtls_mpi_uint) 0x6A << 0 ) | ( (mbedtls_mpi_uint) 0x19 << 8 ) | ( (mbedtls_mpi_uint) 0xEC << 16 ) | ( (mbedtls_mpi_uint) 0xEC << 24 ),
-    ( (mbedtls_mpi_uint) 0x7A << 0 ) | ( (mbedtls_mpi_uint) 0xA7 << 8 ) | ( (mbedtls_mpi_uint) 0xB0 << 16 ) | ( (mbedtls_mpi_uint) 0x48 << 24 ), ( (mbedtls_mpi_uint) 0xB2 << 0 ) | ( (mbedtls_mpi_uint) 0x0D << 8 ) | ( (mbedtls_mpi_uint) 0x1A << 16 ) | ( (mbedtls_mpi_uint) 0x58 << 24 ),
-    ( (mbedtls_mpi_uint) 0xDF << 0 ) | ( (mbedtls_mpi_uint) 0x2D << 8 ) | ( (mbedtls_mpi_uint) 0x37 << 16 ) | ( (mbedtls_mpi_uint) 0xF4 << 24 ), ( (mbedtls_mpi_uint) 0x81 << 0 ) | ( (mbedtls_mpi_uint) 0x4D << 8 ) | ( (mbedtls_mpi_uint) 0x63 << 16 ) | ( (mbedtls_mpi_uint) 0xC7 << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
+    ( (mbedtls_mpi_uint) (0x73) << 0 ) | ( (mbedtls_mpi_uint) (0x29) << 8 ) | ( (mbedtls_mpi_uint) (0xC5) << 16 ) | ( (mbedtls_mpi_uint) (0xCC) << 24 ), ( (mbedtls_mpi_uint) (0x6A) << 0 ) | ( (mbedtls_mpi_uint) (0x19) << 8 ) | ( (mbedtls_mpi_uint) (0xEC) << 16 ) | ( (mbedtls_mpi_uint) (0xEC) << 24 ),
+    ( (mbedtls_mpi_uint) (0x7A) << 0 ) | ( (mbedtls_mpi_uint) (0xA7) << 8 ) | ( (mbedtls_mpi_uint) (0xB0) << 16 ) | ( (mbedtls_mpi_uint) (0x48) << 24 ), ( (mbedtls_mpi_uint) (0xB2) << 0 ) | ( (mbedtls_mpi_uint) (0x0D) << 8 ) | ( (mbedtls_mpi_uint) (0x1A) << 16 ) | ( (mbedtls_mpi_uint) (0x58) << 24 ),
+    ( (mbedtls_mpi_uint) (0xDF) << 0 ) | ( (mbedtls_mpi_uint) (0x2D) << 8 ) | ( (mbedtls_mpi_uint) (0x37) << 16 ) | ( (mbedtls_mpi_uint) (0xF4) << 24 ), ( (mbedtls_mpi_uint) (0x81) << 0 ) | ( (mbedtls_mpi_uint) (0x4D) << 8 ) | ( (mbedtls_mpi_uint) (0x63) << 16 ) | ( (mbedtls_mpi_uint) (0xC7) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
 };
 
 
@@ -1936,154 +1994,154 @@ static const mbedtls_mpi_uint secp384r1_n[] = {
 
 
 static const mbedtls_mpi_uint secp521r1_p[] = {
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0x01 << 8 ) | ( (mbedtls_mpi_uint) 0 << 16 ) | ( (mbedtls_mpi_uint) 0 << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0x01) << 8 ) | ( (mbedtls_mpi_uint) (0) << 16 ) | ( (mbedtls_mpi_uint) (0) << 24 ),
 };
 static const mbedtls_mpi_uint secp521r1_b[] = {
-    ( (mbedtls_mpi_uint) 0x00 << 0 ) | ( (mbedtls_mpi_uint) 0x3F << 8 ) | ( (mbedtls_mpi_uint) 0x50 << 16 ) | ( (mbedtls_mpi_uint) 0x6B << 24 ), ( (mbedtls_mpi_uint) 0xD4 << 0 ) | ( (mbedtls_mpi_uint) 0x1F << 8 ) | ( (mbedtls_mpi_uint) 0x45 << 16 ) | ( (mbedtls_mpi_uint) 0xEF << 24 ),
-    ( (mbedtls_mpi_uint) 0xF1 << 0 ) | ( (mbedtls_mpi_uint) 0x34 << 8 ) | ( (mbedtls_mpi_uint) 0x2C << 16 ) | ( (mbedtls_mpi_uint) 0x3D << 24 ), ( (mbedtls_mpi_uint) 0x88 << 0 ) | ( (mbedtls_mpi_uint) 0xDF << 8 ) | ( (mbedtls_mpi_uint) 0x73 << 16 ) | ( (mbedtls_mpi_uint) 0x35 << 24 ),
-    ( (mbedtls_mpi_uint) 0x07 << 0 ) | ( (mbedtls_mpi_uint) 0xBF << 8 ) | ( (mbedtls_mpi_uint) 0xB1 << 16 ) | ( (mbedtls_mpi_uint) 0x3B << 24 ), ( (mbedtls_mpi_uint) 0xBD << 0 ) | ( (mbedtls_mpi_uint) 0xC0 << 8 ) | ( (mbedtls_mpi_uint) 0x52 << 16 ) | ( (mbedtls_mpi_uint) 0x16 << 24 ),
-    ( (mbedtls_mpi_uint) 0x7B << 0 ) | ( (mbedtls_mpi_uint) 0x93 << 8 ) | ( (mbedtls_mpi_uint) 0x7E << 16 ) | ( (mbedtls_mpi_uint) 0xEC << 24 ), ( (mbedtls_mpi_uint) 0x51 << 0 ) | ( (mbedtls_mpi_uint) 0x39 << 8 ) | ( (mbedtls_mpi_uint) 0x19 << 16 ) | ( (mbedtls_mpi_uint) 0x56 << 24 ),
-    ( (mbedtls_mpi_uint) 0xE1 << 0 ) | ( (mbedtls_mpi_uint) 0x09 << 8 ) | ( (mbedtls_mpi_uint) 0xF1 << 16 ) | ( (mbedtls_mpi_uint) 0x8E << 24 ), ( (mbedtls_mpi_uint) 0x91 << 0 ) | ( (mbedtls_mpi_uint) 0x89 << 8 ) | ( (mbedtls_mpi_uint) 0xB4 << 16 ) | ( (mbedtls_mpi_uint) 0xB8 << 24 ),
-    ( (mbedtls_mpi_uint) 0xF3 << 0 ) | ( (mbedtls_mpi_uint) 0x15 << 8 ) | ( (mbedtls_mpi_uint) 0xB3 << 16 ) | ( (mbedtls_mpi_uint) 0x99 << 24 ), ( (mbedtls_mpi_uint) 0x5B << 0 ) | ( (mbedtls_mpi_uint) 0x72 << 8 ) | ( (mbedtls_mpi_uint) 0xDA << 16 ) | ( (mbedtls_mpi_uint) 0xA2 << 24 ),
-    ( (mbedtls_mpi_uint) 0xEE << 0 ) | ( (mbedtls_mpi_uint) 0x40 << 8 ) | ( (mbedtls_mpi_uint) 0x85 << 16 ) | ( (mbedtls_mpi_uint) 0xB6 << 24 ), ( (mbedtls_mpi_uint) 0xA0 << 0 ) | ( (mbedtls_mpi_uint) 0x21 << 8 ) | ( (mbedtls_mpi_uint) 0x9A << 16 ) | ( (mbedtls_mpi_uint) 0x92 << 24 ),
-    ( (mbedtls_mpi_uint) 0x1F << 0 ) | ( (mbedtls_mpi_uint) 0x9A << 8 ) | ( (mbedtls_mpi_uint) 0x1C << 16 ) | ( (mbedtls_mpi_uint) 0x8E << 24 ), ( (mbedtls_mpi_uint) 0x61 << 0 ) | ( (mbedtls_mpi_uint) 0xB9 << 8 ) | ( (mbedtls_mpi_uint) 0x3E << 16 ) | ( (mbedtls_mpi_uint) 0x95 << 24 ),
-    ( (mbedtls_mpi_uint) 0x51 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0 << 16 ) | ( (mbedtls_mpi_uint) 0 << 24 ),
+    ( (mbedtls_mpi_uint) (0x00) << 0 ) | ( (mbedtls_mpi_uint) (0x3F) << 8 ) | ( (mbedtls_mpi_uint) (0x50) << 16 ) | ( (mbedtls_mpi_uint) (0x6B) << 24 ), ( (mbedtls_mpi_uint) (0xD4) << 0 ) | ( (mbedtls_mpi_uint) (0x1F) << 8 ) | ( (mbedtls_mpi_uint) (0x45) << 16 ) | ( (mbedtls_mpi_uint) (0xEF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xF1) << 0 ) | ( (mbedtls_mpi_uint) (0x34) << 8 ) | ( (mbedtls_mpi_uint) (0x2C) << 16 ) | ( (mbedtls_mpi_uint) (0x3D) << 24 ), ( (mbedtls_mpi_uint) (0x88) << 0 ) | ( (mbedtls_mpi_uint) (0xDF) << 8 ) | ( (mbedtls_mpi_uint) (0x73) << 16 ) | ( (mbedtls_mpi_uint) (0x35) << 24 ),
+    ( (mbedtls_mpi_uint) (0x07) << 0 ) | ( (mbedtls_mpi_uint) (0xBF) << 8 ) | ( (mbedtls_mpi_uint) (0xB1) << 16 ) | ( (mbedtls_mpi_uint) (0x3B) << 24 ), ( (mbedtls_mpi_uint) (0xBD) << 0 ) | ( (mbedtls_mpi_uint) (0xC0) << 8 ) | ( (mbedtls_mpi_uint) (0x52) << 16 ) | ( (mbedtls_mpi_uint) (0x16) << 24 ),
+    ( (mbedtls_mpi_uint) (0x7B) << 0 ) | ( (mbedtls_mpi_uint) (0x93) << 8 ) | ( (mbedtls_mpi_uint) (0x7E) << 16 ) | ( (mbedtls_mpi_uint) (0xEC) << 24 ), ( (mbedtls_mpi_uint) (0x51) << 0 ) | ( (mbedtls_mpi_uint) (0x39) << 8 ) | ( (mbedtls_mpi_uint) (0x19) << 16 ) | ( (mbedtls_mpi_uint) (0x56) << 24 ),
+    ( (mbedtls_mpi_uint) (0xE1) << 0 ) | ( (mbedtls_mpi_uint) (0x09) << 8 ) | ( (mbedtls_mpi_uint) (0xF1) << 16 ) | ( (mbedtls_mpi_uint) (0x8E) << 24 ), ( (mbedtls_mpi_uint) (0x91) << 0 ) | ( (mbedtls_mpi_uint) (0x89) << 8 ) | ( (mbedtls_mpi_uint) (0xB4) << 16 ) | ( (mbedtls_mpi_uint) (0xB8) << 24 ),
+    ( (mbedtls_mpi_uint) (0xF3) << 0 ) | ( (mbedtls_mpi_uint) (0x15) << 8 ) | ( (mbedtls_mpi_uint) (0xB3) << 16 ) | ( (mbedtls_mpi_uint) (0x99) << 24 ), ( (mbedtls_mpi_uint) (0x5B) << 0 ) | ( (mbedtls_mpi_uint) (0x72) << 8 ) | ( (mbedtls_mpi_uint) (0xDA) << 16 ) | ( (mbedtls_mpi_uint) (0xA2) << 24 ),
+    ( (mbedtls_mpi_uint) (0xEE) << 0 ) | ( (mbedtls_mpi_uint) (0x40) << 8 ) | ( (mbedtls_mpi_uint) (0x85) << 16 ) | ( (mbedtls_mpi_uint) (0xB6) << 24 ), ( (mbedtls_mpi_uint) (0xA0) << 0 ) | ( (mbedtls_mpi_uint) (0x21) << 8 ) | ( (mbedtls_mpi_uint) (0x9A) << 16 ) | ( (mbedtls_mpi_uint) (0x92) << 24 ),
+    ( (mbedtls_mpi_uint) (0x1F) << 0 ) | ( (mbedtls_mpi_uint) (0x9A) << 8 ) | ( (mbedtls_mpi_uint) (0x1C) << 16 ) | ( (mbedtls_mpi_uint) (0x8E) << 24 ), ( (mbedtls_mpi_uint) (0x61) << 0 ) | ( (mbedtls_mpi_uint) (0xB9) << 8 ) | ( (mbedtls_mpi_uint) (0x3E) << 16 ) | ( (mbedtls_mpi_uint) (0x95) << 24 ),
+    ( (mbedtls_mpi_uint) (0x51) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0) << 16 ) | ( (mbedtls_mpi_uint) (0) << 24 ),
 };
 static const mbedtls_mpi_uint secp521r1_gx[] = {
-    ( (mbedtls_mpi_uint) 0x66 << 0 ) | ( (mbedtls_mpi_uint) 0xBD << 8 ) | ( (mbedtls_mpi_uint) 0xE5 << 16 ) | ( (mbedtls_mpi_uint) 0xC2 << 24 ), ( (mbedtls_mpi_uint) 0x31 << 0 ) | ( (mbedtls_mpi_uint) 0x7E << 8 ) | ( (mbedtls_mpi_uint) 0x7E << 16 ) | ( (mbedtls_mpi_uint) 0xF9 << 24 ),
-    ( (mbedtls_mpi_uint) 0x9B << 0 ) | ( (mbedtls_mpi_uint) 0x42 << 8 ) | ( (mbedtls_mpi_uint) 0x6A << 16 ) | ( (mbedtls_mpi_uint) 0x85 << 24 ), ( (mbedtls_mpi_uint) 0xC1 << 0 ) | ( (mbedtls_mpi_uint) 0xB3 << 8 ) | ( (mbedtls_mpi_uint) 0x48 << 16 ) | ( (mbedtls_mpi_uint) 0x33 << 24 ),
-    ( (mbedtls_mpi_uint) 0xDE << 0 ) | ( (mbedtls_mpi_uint) 0xA8 << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xA2 << 24 ), ( (mbedtls_mpi_uint) 0x27 << 0 ) | ( (mbedtls_mpi_uint) 0xC1 << 8 ) | ( (mbedtls_mpi_uint) 0x1D << 16 ) | ( (mbedtls_mpi_uint) 0xFE << 24 ),
-    ( (mbedtls_mpi_uint) 0x28 << 0 ) | ( (mbedtls_mpi_uint) 0x59 << 8 ) | ( (mbedtls_mpi_uint) 0xE7 << 16 ) | ( (mbedtls_mpi_uint) 0xEF << 24 ), ( (mbedtls_mpi_uint) 0x77 << 0 ) | ( (mbedtls_mpi_uint) 0x5E << 8 ) | ( (mbedtls_mpi_uint) 0x4B << 16 ) | ( (mbedtls_mpi_uint) 0xA1 << 24 ),
-    ( (mbedtls_mpi_uint) 0xBA << 0 ) | ( (mbedtls_mpi_uint) 0x3D << 8 ) | ( (mbedtls_mpi_uint) 0x4D << 16 ) | ( (mbedtls_mpi_uint) 0x6B << 24 ), ( (mbedtls_mpi_uint) 0x60 << 0 ) | ( (mbedtls_mpi_uint) 0xAF << 8 ) | ( (mbedtls_mpi_uint) 0x28 << 16 ) | ( (mbedtls_mpi_uint) 0xF8 << 24 ),
-    ( (mbedtls_mpi_uint) 0x21 << 0 ) | ( (mbedtls_mpi_uint) 0xB5 << 8 ) | ( (mbedtls_mpi_uint) 0x3F << 16 ) | ( (mbedtls_mpi_uint) 0x05 << 24 ), ( (mbedtls_mpi_uint) 0x39 << 0 ) | ( (mbedtls_mpi_uint) 0x81 << 8 ) | ( (mbedtls_mpi_uint) 0x64 << 16 ) | ( (mbedtls_mpi_uint) 0x9C << 24 ),
-    ( (mbedtls_mpi_uint) 0x42 << 0 ) | ( (mbedtls_mpi_uint) 0xB4 << 8 ) | ( (mbedtls_mpi_uint) 0x95 << 16 ) | ( (mbedtls_mpi_uint) 0x23 << 24 ), ( (mbedtls_mpi_uint) 0x66 << 0 ) | ( (mbedtls_mpi_uint) 0xCB << 8 ) | ( (mbedtls_mpi_uint) 0x3E << 16 ) | ( (mbedtls_mpi_uint) 0x9E << 24 ),
-    ( (mbedtls_mpi_uint) 0xCD << 0 ) | ( (mbedtls_mpi_uint) 0xE9 << 8 ) | ( (mbedtls_mpi_uint) 0x04 << 16 ) | ( (mbedtls_mpi_uint) 0x04 << 24 ), ( (mbedtls_mpi_uint) 0xB7 << 0 ) | ( (mbedtls_mpi_uint) 0x06 << 8 ) | ( (mbedtls_mpi_uint) 0x8E << 16 ) | ( (mbedtls_mpi_uint) 0x85 << 24 ),
-    ( (mbedtls_mpi_uint) 0xC6 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0 << 16 ) | ( (mbedtls_mpi_uint) 0 << 24 ),
+    ( (mbedtls_mpi_uint) (0x66) << 0 ) | ( (mbedtls_mpi_uint) (0xBD) << 8 ) | ( (mbedtls_mpi_uint) (0xE5) << 16 ) | ( (mbedtls_mpi_uint) (0xC2) << 24 ), ( (mbedtls_mpi_uint) (0x31) << 0 ) | ( (mbedtls_mpi_uint) (0x7E) << 8 ) | ( (mbedtls_mpi_uint) (0x7E) << 16 ) | ( (mbedtls_mpi_uint) (0xF9) << 24 ),
+    ( (mbedtls_mpi_uint) (0x9B) << 0 ) | ( (mbedtls_mpi_uint) (0x42) << 8 ) | ( (mbedtls_mpi_uint) (0x6A) << 16 ) | ( (mbedtls_mpi_uint) (0x85) << 24 ), ( (mbedtls_mpi_uint) (0xC1) << 0 ) | ( (mbedtls_mpi_uint) (0xB3) << 8 ) | ( (mbedtls_mpi_uint) (0x48) << 16 ) | ( (mbedtls_mpi_uint) (0x33) << 24 ),
+    ( (mbedtls_mpi_uint) (0xDE) << 0 ) | ( (mbedtls_mpi_uint) (0xA8) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xA2) << 24 ), ( (mbedtls_mpi_uint) (0x27) << 0 ) | ( (mbedtls_mpi_uint) (0xC1) << 8 ) | ( (mbedtls_mpi_uint) (0x1D) << 16 ) | ( (mbedtls_mpi_uint) (0xFE) << 24 ),
+    ( (mbedtls_mpi_uint) (0x28) << 0 ) | ( (mbedtls_mpi_uint) (0x59) << 8 ) | ( (mbedtls_mpi_uint) (0xE7) << 16 ) | ( (mbedtls_mpi_uint) (0xEF) << 24 ), ( (mbedtls_mpi_uint) (0x77) << 0 ) | ( (mbedtls_mpi_uint) (0x5E) << 8 ) | ( (mbedtls_mpi_uint) (0x4B) << 16 ) | ( (mbedtls_mpi_uint) (0xA1) << 24 ),
+    ( (mbedtls_mpi_uint) (0xBA) << 0 ) | ( (mbedtls_mpi_uint) (0x3D) << 8 ) | ( (mbedtls_mpi_uint) (0x4D) << 16 ) | ( (mbedtls_mpi_uint) (0x6B) << 24 ), ( (mbedtls_mpi_uint) (0x60) << 0 ) | ( (mbedtls_mpi_uint) (0xAF) << 8 ) | ( (mbedtls_mpi_uint) (0x28) << 16 ) | ( (mbedtls_mpi_uint) (0xF8) << 24 ),
+    ( (mbedtls_mpi_uint) (0x21) << 0 ) | ( (mbedtls_mpi_uint) (0xB5) << 8 ) | ( (mbedtls_mpi_uint) (0x3F) << 16 ) | ( (mbedtls_mpi_uint) (0x05) << 24 ), ( (mbedtls_mpi_uint) (0x39) << 0 ) | ( (mbedtls_mpi_uint) (0x81) << 8 ) | ( (mbedtls_mpi_uint) (0x64) << 16 ) | ( (mbedtls_mpi_uint) (0x9C) << 24 ),
+    ( (mbedtls_mpi_uint) (0x42) << 0 ) | ( (mbedtls_mpi_uint) (0xB4) << 8 ) | ( (mbedtls_mpi_uint) (0x95) << 16 ) | ( (mbedtls_mpi_uint) (0x23) << 24 ), ( (mbedtls_mpi_uint) (0x66) << 0 ) | ( (mbedtls_mpi_uint) (0xCB) << 8 ) | ( (mbedtls_mpi_uint) (0x3E) << 16 ) | ( (mbedtls_mpi_uint) (0x9E) << 24 ),
+    ( (mbedtls_mpi_uint) (0xCD) << 0 ) | ( (mbedtls_mpi_uint) (0xE9) << 8 ) | ( (mbedtls_mpi_uint) (0x04) << 16 ) | ( (mbedtls_mpi_uint) (0x04) << 24 ), ( (mbedtls_mpi_uint) (0xB7) << 0 ) | ( (mbedtls_mpi_uint) (0x06) << 8 ) | ( (mbedtls_mpi_uint) (0x8E) << 16 ) | ( (mbedtls_mpi_uint) (0x85) << 24 ),
+    ( (mbedtls_mpi_uint) (0xC6) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0) << 16 ) | ( (mbedtls_mpi_uint) (0) << 24 ),
 };
 static const mbedtls_mpi_uint secp521r1_gy[] = {
-    ( (mbedtls_mpi_uint) 0x50 << 0 ) | ( (mbedtls_mpi_uint) 0x66 << 8 ) | ( (mbedtls_mpi_uint) 0xD1 << 16 ) | ( (mbedtls_mpi_uint) 0x9F << 24 ), ( (mbedtls_mpi_uint) 0x76 << 0 ) | ( (mbedtls_mpi_uint) 0x94 << 8 ) | ( (mbedtls_mpi_uint) 0xBE << 16 ) | ( (mbedtls_mpi_uint) 0x88 << 24 ),
-    ( (mbedtls_mpi_uint) 0x40 << 0 ) | ( (mbedtls_mpi_uint) 0xC2 << 8 ) | ( (mbedtls_mpi_uint) 0x72 << 16 ) | ( (mbedtls_mpi_uint) 0xA2 << 24 ), ( (mbedtls_mpi_uint) 0x86 << 0 ) | ( (mbedtls_mpi_uint) 0x70 << 8 ) | ( (mbedtls_mpi_uint) 0x3C << 16 ) | ( (mbedtls_mpi_uint) 0x35 << 24 ),
-    ( (mbedtls_mpi_uint) 0x61 << 0 ) | ( (mbedtls_mpi_uint) 0x07 << 8 ) | ( (mbedtls_mpi_uint) 0xAD << 16 ) | ( (mbedtls_mpi_uint) 0x3F << 24 ), ( (mbedtls_mpi_uint) 0x01 << 0 ) | ( (mbedtls_mpi_uint) 0xB9 << 8 ) | ( (mbedtls_mpi_uint) 0x50 << 16 ) | ( (mbedtls_mpi_uint) 0xC5 << 24 ),
-    ( (mbedtls_mpi_uint) 0x40 << 0 ) | ( (mbedtls_mpi_uint) 0x26 << 8 ) | ( (mbedtls_mpi_uint) 0xF4 << 16 ) | ( (mbedtls_mpi_uint) 0x5E << 24 ), ( (mbedtls_mpi_uint) 0x99 << 0 ) | ( (mbedtls_mpi_uint) 0x72 << 8 ) | ( (mbedtls_mpi_uint) 0xEE << 16 ) | ( (mbedtls_mpi_uint) 0x97 << 24 ),
-    ( (mbedtls_mpi_uint) 0x2C << 0 ) | ( (mbedtls_mpi_uint) 0x66 << 8 ) | ( (mbedtls_mpi_uint) 0x3E << 16 ) | ( (mbedtls_mpi_uint) 0x27 << 24 ), ( (mbedtls_mpi_uint) 0x17 << 0 ) | ( (mbedtls_mpi_uint) 0xBD << 8 ) | ( (mbedtls_mpi_uint) 0xAF << 16 ) | ( (mbedtls_mpi_uint) 0x17 << 24 ),
-    ( (mbedtls_mpi_uint) 0x68 << 0 ) | ( (mbedtls_mpi_uint) 0x44 << 8 ) | ( (mbedtls_mpi_uint) 0x9B << 16 ) | ( (mbedtls_mpi_uint) 0x57 << 24 ), ( (mbedtls_mpi_uint) 0x49 << 0 ) | ( (mbedtls_mpi_uint) 0x44 << 8 ) | ( (mbedtls_mpi_uint) 0xF5 << 16 ) | ( (mbedtls_mpi_uint) 0x98 << 24 ),
-    ( (mbedtls_mpi_uint) 0xD9 << 0 ) | ( (mbedtls_mpi_uint) 0x1B << 8 ) | ( (mbedtls_mpi_uint) 0x7D << 16 ) | ( (mbedtls_mpi_uint) 0x2C << 24 ), ( (mbedtls_mpi_uint) 0xB4 << 0 ) | ( (mbedtls_mpi_uint) 0x5F << 8 ) | ( (mbedtls_mpi_uint) 0x8A << 16 ) | ( (mbedtls_mpi_uint) 0x5C << 24 ),
-    ( (mbedtls_mpi_uint) 0x04 << 0 ) | ( (mbedtls_mpi_uint) 0xC0 << 8 ) | ( (mbedtls_mpi_uint) 0x3B << 16 ) | ( (mbedtls_mpi_uint) 0x9A << 24 ), ( (mbedtls_mpi_uint) 0x78 << 0 ) | ( (mbedtls_mpi_uint) 0x6A << 8 ) | ( (mbedtls_mpi_uint) 0x29 << 16 ) | ( (mbedtls_mpi_uint) 0x39 << 24 ),
-    ( (mbedtls_mpi_uint) 0x18 << 0 ) | ( (mbedtls_mpi_uint) 0x01 << 8 ) | ( (mbedtls_mpi_uint) 0 << 16 ) | ( (mbedtls_mpi_uint) 0 << 24 ),
+    ( (mbedtls_mpi_uint) (0x50) << 0 ) | ( (mbedtls_mpi_uint) (0x66) << 8 ) | ( (mbedtls_mpi_uint) (0xD1) << 16 ) | ( (mbedtls_mpi_uint) (0x9F) << 24 ), ( (mbedtls_mpi_uint) (0x76) << 0 ) | ( (mbedtls_mpi_uint) (0x94) << 8 ) | ( (mbedtls_mpi_uint) (0xBE) << 16 ) | ( (mbedtls_mpi_uint) (0x88) << 24 ),
+    ( (mbedtls_mpi_uint) (0x40) << 0 ) | ( (mbedtls_mpi_uint) (0xC2) << 8 ) | ( (mbedtls_mpi_uint) (0x72) << 16 ) | ( (mbedtls_mpi_uint) (0xA2) << 24 ), ( (mbedtls_mpi_uint) (0x86) << 0 ) | ( (mbedtls_mpi_uint) (0x70) << 8 ) | ( (mbedtls_mpi_uint) (0x3C) << 16 ) | ( (mbedtls_mpi_uint) (0x35) << 24 ),
+    ( (mbedtls_mpi_uint) (0x61) << 0 ) | ( (mbedtls_mpi_uint) (0x07) << 8 ) | ( (mbedtls_mpi_uint) (0xAD) << 16 ) | ( (mbedtls_mpi_uint) (0x3F) << 24 ), ( (mbedtls_mpi_uint) (0x01) << 0 ) | ( (mbedtls_mpi_uint) (0xB9) << 8 ) | ( (mbedtls_mpi_uint) (0x50) << 16 ) | ( (mbedtls_mpi_uint) (0xC5) << 24 ),
+    ( (mbedtls_mpi_uint) (0x40) << 0 ) | ( (mbedtls_mpi_uint) (0x26) << 8 ) | ( (mbedtls_mpi_uint) (0xF4) << 16 ) | ( (mbedtls_mpi_uint) (0x5E) << 24 ), ( (mbedtls_mpi_uint) (0x99) << 0 ) | ( (mbedtls_mpi_uint) (0x72) << 8 ) | ( (mbedtls_mpi_uint) (0xEE) << 16 ) | ( (mbedtls_mpi_uint) (0x97) << 24 ),
+    ( (mbedtls_mpi_uint) (0x2C) << 0 ) | ( (mbedtls_mpi_uint) (0x66) << 8 ) | ( (mbedtls_mpi_uint) (0x3E) << 16 ) | ( (mbedtls_mpi_uint) (0x27) << 24 ), ( (mbedtls_mpi_uint) (0x17) << 0 ) | ( (mbedtls_mpi_uint) (0xBD) << 8 ) | ( (mbedtls_mpi_uint) (0xAF) << 16 ) | ( (mbedtls_mpi_uint) (0x17) << 24 ),
+    ( (mbedtls_mpi_uint) (0x68) << 0 ) | ( (mbedtls_mpi_uint) (0x44) << 8 ) | ( (mbedtls_mpi_uint) (0x9B) << 16 ) | ( (mbedtls_mpi_uint) (0x57) << 24 ), ( (mbedtls_mpi_uint) (0x49) << 0 ) | ( (mbedtls_mpi_uint) (0x44) << 8 ) | ( (mbedtls_mpi_uint) (0xF5) << 16 ) | ( (mbedtls_mpi_uint) (0x98) << 24 ),
+    ( (mbedtls_mpi_uint) (0xD9) << 0 ) | ( (mbedtls_mpi_uint) (0x1B) << 8 ) | ( (mbedtls_mpi_uint) (0x7D) << 16 ) | ( (mbedtls_mpi_uint) (0x2C) << 24 ), ( (mbedtls_mpi_uint) (0xB4) << 0 ) | ( (mbedtls_mpi_uint) (0x5F) << 8 ) | ( (mbedtls_mpi_uint) (0x8A) << 16 ) | ( (mbedtls_mpi_uint) (0x5C) << 24 ),
+    ( (mbedtls_mpi_uint) (0x04) << 0 ) | ( (mbedtls_mpi_uint) (0xC0) << 8 ) | ( (mbedtls_mpi_uint) (0x3B) << 16 ) | ( (mbedtls_mpi_uint) (0x9A) << 24 ), ( (mbedtls_mpi_uint) (0x78) << 0 ) | ( (mbedtls_mpi_uint) (0x6A) << 8 ) | ( (mbedtls_mpi_uint) (0x29) << 16 ) | ( (mbedtls_mpi_uint) (0x39) << 24 ),
+    ( (mbedtls_mpi_uint) (0x18) << 0 ) | ( (mbedtls_mpi_uint) (0x01) << 8 ) | ( (mbedtls_mpi_uint) (0) << 16 ) | ( (mbedtls_mpi_uint) (0) << 24 ),
 };
 static const mbedtls_mpi_uint secp521r1_n[] = {
-    ( (mbedtls_mpi_uint) 0x09 << 0 ) | ( (mbedtls_mpi_uint) 0x64 << 8 ) | ( (mbedtls_mpi_uint) 0x38 << 16 ) | ( (mbedtls_mpi_uint) 0x91 << 24 ), ( (mbedtls_mpi_uint) 0x1E << 0 ) | ( (mbedtls_mpi_uint) 0xB7 << 8 ) | ( (mbedtls_mpi_uint) 0x6F << 16 ) | ( (mbedtls_mpi_uint) 0xBB << 24 ),
-    ( (mbedtls_mpi_uint) 0xAE << 0 ) | ( (mbedtls_mpi_uint) 0x47 << 8 ) | ( (mbedtls_mpi_uint) 0x9C << 16 ) | ( (mbedtls_mpi_uint) 0x89 << 24 ), ( (mbedtls_mpi_uint) 0xB8 << 0 ) | ( (mbedtls_mpi_uint) 0xC9 << 8 ) | ( (mbedtls_mpi_uint) 0xB5 << 16 ) | ( (mbedtls_mpi_uint) 0x3B << 24 ),
-    ( (mbedtls_mpi_uint) 0xD0 << 0 ) | ( (mbedtls_mpi_uint) 0xA5 << 8 ) | ( (mbedtls_mpi_uint) 0x09 << 16 ) | ( (mbedtls_mpi_uint) 0xF7 << 24 ), ( (mbedtls_mpi_uint) 0x48 << 0 ) | ( (mbedtls_mpi_uint) 0x01 << 8 ) | ( (mbedtls_mpi_uint) 0xCC << 16 ) | ( (mbedtls_mpi_uint) 0x7F << 24 ),
-    ( (mbedtls_mpi_uint) 0x6B << 0 ) | ( (mbedtls_mpi_uint) 0x96 << 8 ) | ( (mbedtls_mpi_uint) 0x2F << 16 ) | ( (mbedtls_mpi_uint) 0xBF << 24 ), ( (mbedtls_mpi_uint) 0x83 << 0 ) | ( (mbedtls_mpi_uint) 0x87 << 8 ) | ( (mbedtls_mpi_uint) 0x86 << 16 ) | ( (mbedtls_mpi_uint) 0x51 << 24 ),
-    ( (mbedtls_mpi_uint) 0xFA << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0x01 << 8 ) | ( (mbedtls_mpi_uint) 0 << 16 ) | ( (mbedtls_mpi_uint) 0 << 24 ),
+    ( (mbedtls_mpi_uint) (0x09) << 0 ) | ( (mbedtls_mpi_uint) (0x64) << 8 ) | ( (mbedtls_mpi_uint) (0x38) << 16 ) | ( (mbedtls_mpi_uint) (0x91) << 24 ), ( (mbedtls_mpi_uint) (0x1E) << 0 ) | ( (mbedtls_mpi_uint) (0xB7) << 8 ) | ( (mbedtls_mpi_uint) (0x6F) << 16 ) | ( (mbedtls_mpi_uint) (0xBB) << 24 ),
+    ( (mbedtls_mpi_uint) (0xAE) << 0 ) | ( (mbedtls_mpi_uint) (0x47) << 8 ) | ( (mbedtls_mpi_uint) (0x9C) << 16 ) | ( (mbedtls_mpi_uint) (0x89) << 24 ), ( (mbedtls_mpi_uint) (0xB8) << 0 ) | ( (mbedtls_mpi_uint) (0xC9) << 8 ) | ( (mbedtls_mpi_uint) (0xB5) << 16 ) | ( (mbedtls_mpi_uint) (0x3B) << 24 ),
+    ( (mbedtls_mpi_uint) (0xD0) << 0 ) | ( (mbedtls_mpi_uint) (0xA5) << 8 ) | ( (mbedtls_mpi_uint) (0x09) << 16 ) | ( (mbedtls_mpi_uint) (0xF7) << 24 ), ( (mbedtls_mpi_uint) (0x48) << 0 ) | ( (mbedtls_mpi_uint) (0x01) << 8 ) | ( (mbedtls_mpi_uint) (0xCC) << 16 ) | ( (mbedtls_mpi_uint) (0x7F) << 24 ),
+    ( (mbedtls_mpi_uint) (0x6B) << 0 ) | ( (mbedtls_mpi_uint) (0x96) << 8 ) | ( (mbedtls_mpi_uint) (0x2F) << 16 ) | ( (mbedtls_mpi_uint) (0xBF) << 24 ), ( (mbedtls_mpi_uint) (0x83) << 0 ) | ( (mbedtls_mpi_uint) (0x87) << 8 ) | ( (mbedtls_mpi_uint) (0x86) << 16 ) | ( (mbedtls_mpi_uint) (0x51) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFA) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0x01) << 8 ) | ( (mbedtls_mpi_uint) (0) << 16 ) | ( (mbedtls_mpi_uint) (0) << 24 ),
 };
 
 
 
 static const mbedtls_mpi_uint secp192k1_p[] = {
-    ( (mbedtls_mpi_uint) 0x37 << 0 ) | ( (mbedtls_mpi_uint) 0xEE << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFE << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
+    ( (mbedtls_mpi_uint) (0x37) << 0 ) | ( (mbedtls_mpi_uint) (0xEE) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFE) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
 };
 static const mbedtls_mpi_uint secp192k1_a[] = {
-    ( (mbedtls_mpi_uint) 0x00 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0 << 16 ) | ( (mbedtls_mpi_uint) 0 << 24 ),
+    ( (mbedtls_mpi_uint) (0x00) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0) << 16 ) | ( (mbedtls_mpi_uint) (0) << 24 ),
 };
 static const mbedtls_mpi_uint secp192k1_b[] = {
-    ( (mbedtls_mpi_uint) 0x03 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0 << 16 ) | ( (mbedtls_mpi_uint) 0 << 24 ),
+    ( (mbedtls_mpi_uint) (0x03) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0) << 16 ) | ( (mbedtls_mpi_uint) (0) << 24 ),
 };
 static const mbedtls_mpi_uint secp192k1_gx[] = {
-    ( (mbedtls_mpi_uint) 0x7D << 0 ) | ( (mbedtls_mpi_uint) 0x6C << 8 ) | ( (mbedtls_mpi_uint) 0xE0 << 16 ) | ( (mbedtls_mpi_uint) 0xEA << 24 ), ( (mbedtls_mpi_uint) 0xB1 << 0 ) | ( (mbedtls_mpi_uint) 0xD1 << 8 ) | ( (mbedtls_mpi_uint) 0xA5 << 16 ) | ( (mbedtls_mpi_uint) 0x1D << 24 ),
-    ( (mbedtls_mpi_uint) 0x34 << 0 ) | ( (mbedtls_mpi_uint) 0xF4 << 8 ) | ( (mbedtls_mpi_uint) 0xB7 << 16 ) | ( (mbedtls_mpi_uint) 0x80 << 24 ), ( (mbedtls_mpi_uint) 0x02 << 0 ) | ( (mbedtls_mpi_uint) 0x7D << 8 ) | ( (mbedtls_mpi_uint) 0xB0 << 16 ) | ( (mbedtls_mpi_uint) 0x26 << 24 ),
-    ( (mbedtls_mpi_uint) 0xAE << 0 ) | ( (mbedtls_mpi_uint) 0xE9 << 8 ) | ( (mbedtls_mpi_uint) 0x57 << 16 ) | ( (mbedtls_mpi_uint) 0xC0 << 24 ), ( (mbedtls_mpi_uint) 0x0E << 0 ) | ( (mbedtls_mpi_uint) 0xF1 << 8 ) | ( (mbedtls_mpi_uint) 0x4F << 16 ) | ( (mbedtls_mpi_uint) 0xDB << 24 ),
+    ( (mbedtls_mpi_uint) (0x7D) << 0 ) | ( (mbedtls_mpi_uint) (0x6C) << 8 ) | ( (mbedtls_mpi_uint) (0xE0) << 16 ) | ( (mbedtls_mpi_uint) (0xEA) << 24 ), ( (mbedtls_mpi_uint) (0xB1) << 0 ) | ( (mbedtls_mpi_uint) (0xD1) << 8 ) | ( (mbedtls_mpi_uint) (0xA5) << 16 ) | ( (mbedtls_mpi_uint) (0x1D) << 24 ),
+    ( (mbedtls_mpi_uint) (0x34) << 0 ) | ( (mbedtls_mpi_uint) (0xF4) << 8 ) | ( (mbedtls_mpi_uint) (0xB7) << 16 ) | ( (mbedtls_mpi_uint) (0x80) << 24 ), ( (mbedtls_mpi_uint) (0x02) << 0 ) | ( (mbedtls_mpi_uint) (0x7D) << 8 ) | ( (mbedtls_mpi_uint) (0xB0) << 16 ) | ( (mbedtls_mpi_uint) (0x26) << 24 ),
+    ( (mbedtls_mpi_uint) (0xAE) << 0 ) | ( (mbedtls_mpi_uint) (0xE9) << 8 ) | ( (mbedtls_mpi_uint) (0x57) << 16 ) | ( (mbedtls_mpi_uint) (0xC0) << 24 ), ( (mbedtls_mpi_uint) (0x0E) << 0 ) | ( (mbedtls_mpi_uint) (0xF1) << 8 ) | ( (mbedtls_mpi_uint) (0x4F) << 16 ) | ( (mbedtls_mpi_uint) (0xDB) << 24 ),
 };
 static const mbedtls_mpi_uint secp192k1_gy[] = {
-    ( (mbedtls_mpi_uint) 0x9D << 0 ) | ( (mbedtls_mpi_uint) 0x2F << 8 ) | ( (mbedtls_mpi_uint) 0x5E << 16 ) | ( (mbedtls_mpi_uint) 0xD9 << 24 ), ( (mbedtls_mpi_uint) 0x88 << 0 ) | ( (mbedtls_mpi_uint) 0xAA << 8 ) | ( (mbedtls_mpi_uint) 0x82 << 16 ) | ( (mbedtls_mpi_uint) 0x40 << 24 ),
-    ( (mbedtls_mpi_uint) 0x34 << 0 ) | ( (mbedtls_mpi_uint) 0x86 << 8 ) | ( (mbedtls_mpi_uint) 0xBE << 16 ) | ( (mbedtls_mpi_uint) 0x15 << 24 ), ( (mbedtls_mpi_uint) 0xD0 << 0 ) | ( (mbedtls_mpi_uint) 0x63 << 8 ) | ( (mbedtls_mpi_uint) 0x41 << 16 ) | ( (mbedtls_mpi_uint) 0x84 << 24 ),
-    ( (mbedtls_mpi_uint) 0xA7 << 0 ) | ( (mbedtls_mpi_uint) 0x28 << 8 ) | ( (mbedtls_mpi_uint) 0x56 << 16 ) | ( (mbedtls_mpi_uint) 0x9C << 24 ), ( (mbedtls_mpi_uint) 0x6D << 0 ) | ( (mbedtls_mpi_uint) 0x2F << 8 ) | ( (mbedtls_mpi_uint) 0x2F << 16 ) | ( (mbedtls_mpi_uint) 0x9B << 24 ),
+    ( (mbedtls_mpi_uint) (0x9D) << 0 ) | ( (mbedtls_mpi_uint) (0x2F) << 8 ) | ( (mbedtls_mpi_uint) (0x5E) << 16 ) | ( (mbedtls_mpi_uint) (0xD9) << 24 ), ( (mbedtls_mpi_uint) (0x88) << 0 ) | ( (mbedtls_mpi_uint) (0xAA) << 8 ) | ( (mbedtls_mpi_uint) (0x82) << 16 ) | ( (mbedtls_mpi_uint) (0x40) << 24 ),
+    ( (mbedtls_mpi_uint) (0x34) << 0 ) | ( (mbedtls_mpi_uint) (0x86) << 8 ) | ( (mbedtls_mpi_uint) (0xBE) << 16 ) | ( (mbedtls_mpi_uint) (0x15) << 24 ), ( (mbedtls_mpi_uint) (0xD0) << 0 ) | ( (mbedtls_mpi_uint) (0x63) << 8 ) | ( (mbedtls_mpi_uint) (0x41) << 16 ) | ( (mbedtls_mpi_uint) (0x84) << 24 ),
+    ( (mbedtls_mpi_uint) (0xA7) << 0 ) | ( (mbedtls_mpi_uint) (0x28) << 8 ) | ( (mbedtls_mpi_uint) (0x56) << 16 ) | ( (mbedtls_mpi_uint) (0x9C) << 24 ), ( (mbedtls_mpi_uint) (0x6D) << 0 ) | ( (mbedtls_mpi_uint) (0x2F) << 8 ) | ( (mbedtls_mpi_uint) (0x2F) << 16 ) | ( (mbedtls_mpi_uint) (0x9B) << 24 ),
 };
 static const mbedtls_mpi_uint secp192k1_n[] = {
-    ( (mbedtls_mpi_uint) 0x8D << 0 ) | ( (mbedtls_mpi_uint) 0xFD << 8 ) | ( (mbedtls_mpi_uint) 0xDE << 16 ) | ( (mbedtls_mpi_uint) 0x74 << 24 ), ( (mbedtls_mpi_uint) 0x6A << 0 ) | ( (mbedtls_mpi_uint) 0x46 << 8 ) | ( (mbedtls_mpi_uint) 0x69 << 16 ) | ( (mbedtls_mpi_uint) 0x0F << 24 ),
-    ( (mbedtls_mpi_uint) 0x17 << 0 ) | ( (mbedtls_mpi_uint) 0xFC << 8 ) | ( (mbedtls_mpi_uint) 0xF2 << 16 ) | ( (mbedtls_mpi_uint) 0x26 << 24 ), ( (mbedtls_mpi_uint) 0xFE << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
+    ( (mbedtls_mpi_uint) (0x8D) << 0 ) | ( (mbedtls_mpi_uint) (0xFD) << 8 ) | ( (mbedtls_mpi_uint) (0xDE) << 16 ) | ( (mbedtls_mpi_uint) (0x74) << 24 ), ( (mbedtls_mpi_uint) (0x6A) << 0 ) | ( (mbedtls_mpi_uint) (0x46) << 8 ) | ( (mbedtls_mpi_uint) (0x69) << 16 ) | ( (mbedtls_mpi_uint) (0x0F) << 24 ),
+    ( (mbedtls_mpi_uint) (0x17) << 0 ) | ( (mbedtls_mpi_uint) (0xFC) << 8 ) | ( (mbedtls_mpi_uint) (0xF2) << 16 ) | ( (mbedtls_mpi_uint) (0x26) << 24 ), ( (mbedtls_mpi_uint) (0xFE) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
 };
 
 
 
 static const mbedtls_mpi_uint secp224k1_p[] = {
-    ( (mbedtls_mpi_uint) 0x6D << 0 ) | ( (mbedtls_mpi_uint) 0xE5 << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFE << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
+    ( (mbedtls_mpi_uint) (0x6D) << 0 ) | ( (mbedtls_mpi_uint) (0xE5) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFE) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
 };
 static const mbedtls_mpi_uint secp224k1_a[] = {
-    ( (mbedtls_mpi_uint) 0x00 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0 << 16 ) | ( (mbedtls_mpi_uint) 0 << 24 ),
+    ( (mbedtls_mpi_uint) (0x00) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0) << 16 ) | ( (mbedtls_mpi_uint) (0) << 24 ),
 };
 static const mbedtls_mpi_uint secp224k1_b[] = {
-    ( (mbedtls_mpi_uint) 0x05 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0 << 16 ) | ( (mbedtls_mpi_uint) 0 << 24 ),
+    ( (mbedtls_mpi_uint) (0x05) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0) << 16 ) | ( (mbedtls_mpi_uint) (0) << 24 ),
 };
 static const mbedtls_mpi_uint secp224k1_gx[] = {
-    ( (mbedtls_mpi_uint) 0x5C << 0 ) | ( (mbedtls_mpi_uint) 0xA4 << 8 ) | ( (mbedtls_mpi_uint) 0xB7 << 16 ) | ( (mbedtls_mpi_uint) 0xB6 << 24 ), ( (mbedtls_mpi_uint) 0x0E << 0 ) | ( (mbedtls_mpi_uint) 0x65 << 8 ) | ( (mbedtls_mpi_uint) 0x7E << 16 ) | ( (mbedtls_mpi_uint) 0x0F << 24 ),
-    ( (mbedtls_mpi_uint) 0xA9 << 0 ) | ( (mbedtls_mpi_uint) 0x75 << 8 ) | ( (mbedtls_mpi_uint) 0x70 << 16 ) | ( (mbedtls_mpi_uint) 0xE4 << 24 ), ( (mbedtls_mpi_uint) 0xE9 << 0 ) | ( (mbedtls_mpi_uint) 0x67 << 8 ) | ( (mbedtls_mpi_uint) 0xA4 << 16 ) | ( (mbedtls_mpi_uint) 0x69 << 24 ),
-    ( (mbedtls_mpi_uint) 0xA1 << 0 ) | ( (mbedtls_mpi_uint) 0x28 << 8 ) | ( (mbedtls_mpi_uint) 0xFC << 16 ) | ( (mbedtls_mpi_uint) 0x30 << 24 ), ( (mbedtls_mpi_uint) 0xDF << 0 ) | ( (mbedtls_mpi_uint) 0x99 << 8 ) | ( (mbedtls_mpi_uint) 0xF0 << 16 ) | ( (mbedtls_mpi_uint) 0x4D << 24 ),
-    ( (mbedtls_mpi_uint) 0x33 << 0 ) | ( (mbedtls_mpi_uint) 0x5B << 8 ) | ( (mbedtls_mpi_uint) 0x45 << 16 ) | ( (mbedtls_mpi_uint) 0xA1 << 24 ),
+    ( (mbedtls_mpi_uint) (0x5C) << 0 ) | ( (mbedtls_mpi_uint) (0xA4) << 8 ) | ( (mbedtls_mpi_uint) (0xB7) << 16 ) | ( (mbedtls_mpi_uint) (0xB6) << 24 ), ( (mbedtls_mpi_uint) (0x0E) << 0 ) | ( (mbedtls_mpi_uint) (0x65) << 8 ) | ( (mbedtls_mpi_uint) (0x7E) << 16 ) | ( (mbedtls_mpi_uint) (0x0F) << 24 ),
+    ( (mbedtls_mpi_uint) (0xA9) << 0 ) | ( (mbedtls_mpi_uint) (0x75) << 8 ) | ( (mbedtls_mpi_uint) (0x70) << 16 ) | ( (mbedtls_mpi_uint) (0xE4) << 24 ), ( (mbedtls_mpi_uint) (0xE9) << 0 ) | ( (mbedtls_mpi_uint) (0x67) << 8 ) | ( (mbedtls_mpi_uint) (0xA4) << 16 ) | ( (mbedtls_mpi_uint) (0x69) << 24 ),
+    ( (mbedtls_mpi_uint) (0xA1) << 0 ) | ( (mbedtls_mpi_uint) (0x28) << 8 ) | ( (mbedtls_mpi_uint) (0xFC) << 16 ) | ( (mbedtls_mpi_uint) (0x30) << 24 ), ( (mbedtls_mpi_uint) (0xDF) << 0 ) | ( (mbedtls_mpi_uint) (0x99) << 8 ) | ( (mbedtls_mpi_uint) (0xF0) << 16 ) | ( (mbedtls_mpi_uint) (0x4D) << 24 ),
+    ( (mbedtls_mpi_uint) (0x33) << 0 ) | ( (mbedtls_mpi_uint) (0x5B) << 8 ) | ( (mbedtls_mpi_uint) (0x45) << 16 ) | ( (mbedtls_mpi_uint) (0xA1) << 24 ),
 };
 static const mbedtls_mpi_uint secp224k1_gy[] = {
-    ( (mbedtls_mpi_uint) 0xA5 << 0 ) | ( (mbedtls_mpi_uint) 0x61 << 8 ) | ( (mbedtls_mpi_uint) 0x6D << 16 ) | ( (mbedtls_mpi_uint) 0x55 << 24 ), ( (mbedtls_mpi_uint) 0xDB << 0 ) | ( (mbedtls_mpi_uint) 0x4B << 8 ) | ( (mbedtls_mpi_uint) 0xCA << 16 ) | ( (mbedtls_mpi_uint) 0xE2 << 24 ),
-    ( (mbedtls_mpi_uint) 0x59 << 0 ) | ( (mbedtls_mpi_uint) 0xBD << 8 ) | ( (mbedtls_mpi_uint) 0xB0 << 16 ) | ( (mbedtls_mpi_uint) 0xC0 << 24 ), ( (mbedtls_mpi_uint) 0xF7 << 0 ) | ( (mbedtls_mpi_uint) 0x19 << 8 ) | ( (mbedtls_mpi_uint) 0xE3 << 16 ) | ( (mbedtls_mpi_uint) 0xF7 << 24 ),
-    ( (mbedtls_mpi_uint) 0xD6 << 0 ) | ( (mbedtls_mpi_uint) 0xFB << 8 ) | ( (mbedtls_mpi_uint) 0xCA << 16 ) | ( (mbedtls_mpi_uint) 0x82 << 24 ), ( (mbedtls_mpi_uint) 0x42 << 0 ) | ( (mbedtls_mpi_uint) 0x34 << 8 ) | ( (mbedtls_mpi_uint) 0xBA << 16 ) | ( (mbedtls_mpi_uint) 0x7F << 24 ),
-    ( (mbedtls_mpi_uint) 0xED << 0 ) | ( (mbedtls_mpi_uint) 0x9F << 8 ) | ( (mbedtls_mpi_uint) 0x08 << 16 ) | ( (mbedtls_mpi_uint) 0x7E << 24 ),
+    ( (mbedtls_mpi_uint) (0xA5) << 0 ) | ( (mbedtls_mpi_uint) (0x61) << 8 ) | ( (mbedtls_mpi_uint) (0x6D) << 16 ) | ( (mbedtls_mpi_uint) (0x55) << 24 ), ( (mbedtls_mpi_uint) (0xDB) << 0 ) | ( (mbedtls_mpi_uint) (0x4B) << 8 ) | ( (mbedtls_mpi_uint) (0xCA) << 16 ) | ( (mbedtls_mpi_uint) (0xE2) << 24 ),
+    ( (mbedtls_mpi_uint) (0x59) << 0 ) | ( (mbedtls_mpi_uint) (0xBD) << 8 ) | ( (mbedtls_mpi_uint) (0xB0) << 16 ) | ( (mbedtls_mpi_uint) (0xC0) << 24 ), ( (mbedtls_mpi_uint) (0xF7) << 0 ) | ( (mbedtls_mpi_uint) (0x19) << 8 ) | ( (mbedtls_mpi_uint) (0xE3) << 16 ) | ( (mbedtls_mpi_uint) (0xF7) << 24 ),
+    ( (mbedtls_mpi_uint) (0xD6) << 0 ) | ( (mbedtls_mpi_uint) (0xFB) << 8 ) | ( (mbedtls_mpi_uint) (0xCA) << 16 ) | ( (mbedtls_mpi_uint) (0x82) << 24 ), ( (mbedtls_mpi_uint) (0x42) << 0 ) | ( (mbedtls_mpi_uint) (0x34) << 8 ) | ( (mbedtls_mpi_uint) (0xBA) << 16 ) | ( (mbedtls_mpi_uint) (0x7F) << 24 ),
+    ( (mbedtls_mpi_uint) (0xED) << 0 ) | ( (mbedtls_mpi_uint) (0x9F) << 8 ) | ( (mbedtls_mpi_uint) (0x08) << 16 ) | ( (mbedtls_mpi_uint) (0x7E) << 24 ),
 };
 static const mbedtls_mpi_uint secp224k1_n[] = {
-    ( (mbedtls_mpi_uint) 0xF7 << 0 ) | ( (mbedtls_mpi_uint) 0xB1 << 8 ) | ( (mbedtls_mpi_uint) 0x9F << 16 ) | ( (mbedtls_mpi_uint) 0x76 << 24 ), ( (mbedtls_mpi_uint) 0x71 << 0 ) | ( (mbedtls_mpi_uint) 0xA9 << 8 ) | ( (mbedtls_mpi_uint) 0xF0 << 16 ) | ( (mbedtls_mpi_uint) 0xCA << 24 ),
-    ( (mbedtls_mpi_uint) 0x84 << 0 ) | ( (mbedtls_mpi_uint) 0x61 << 8 ) | ( (mbedtls_mpi_uint) 0xEC << 16 ) | ( (mbedtls_mpi_uint) 0xD2 << 24 ), ( (mbedtls_mpi_uint) 0xE8 << 0 ) | ( (mbedtls_mpi_uint) 0xDC << 8 ) | ( (mbedtls_mpi_uint) 0x01 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ),
-    ( (mbedtls_mpi_uint) 0x00 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ), ( (mbedtls_mpi_uint) 0x00 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ),
-    ( (mbedtls_mpi_uint) 0x00 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ), ( (mbedtls_mpi_uint) 0x01 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ),
+    ( (mbedtls_mpi_uint) (0xF7) << 0 ) | ( (mbedtls_mpi_uint) (0xB1) << 8 ) | ( (mbedtls_mpi_uint) (0x9F) << 16 ) | ( (mbedtls_mpi_uint) (0x76) << 24 ), ( (mbedtls_mpi_uint) (0x71) << 0 ) | ( (mbedtls_mpi_uint) (0xA9) << 8 ) | ( (mbedtls_mpi_uint) (0xF0) << 16 ) | ( (mbedtls_mpi_uint) (0xCA) << 24 ),
+    ( (mbedtls_mpi_uint) (0x84) << 0 ) | ( (mbedtls_mpi_uint) (0x61) << 8 ) | ( (mbedtls_mpi_uint) (0xEC) << 16 ) | ( (mbedtls_mpi_uint) (0xD2) << 24 ), ( (mbedtls_mpi_uint) (0xE8) << 0 ) | ( (mbedtls_mpi_uint) (0xDC) << 8 ) | ( (mbedtls_mpi_uint) (0x01) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ),
+    ( (mbedtls_mpi_uint) (0x00) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ), ( (mbedtls_mpi_uint) (0x00) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ),
+    ( (mbedtls_mpi_uint) (0x00) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ), ( (mbedtls_mpi_uint) (0x01) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ),
 };
 
 
 
 static const mbedtls_mpi_uint secp256k1_p[] = {
-    ( (mbedtls_mpi_uint) 0x2F << 0 ) | ( (mbedtls_mpi_uint) 0xFC << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFE << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
+    ( (mbedtls_mpi_uint) (0x2F) << 0 ) | ( (mbedtls_mpi_uint) (0xFC) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFE) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
 };
 static const mbedtls_mpi_uint secp256k1_a[] = {
-    ( (mbedtls_mpi_uint) 0x00 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0 << 16 ) | ( (mbedtls_mpi_uint) 0 << 24 ),
+    ( (mbedtls_mpi_uint) (0x00) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0) << 16 ) | ( (mbedtls_mpi_uint) (0) << 24 ),
 };
 static const mbedtls_mpi_uint secp256k1_b[] = {
-    ( (mbedtls_mpi_uint) 0x07 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0 << 16 ) | ( (mbedtls_mpi_uint) 0 << 24 ),
+    ( (mbedtls_mpi_uint) (0x07) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0) << 16 ) | ( (mbedtls_mpi_uint) (0) << 24 ),
 };
 static const mbedtls_mpi_uint secp256k1_gx[] = {
-    ( (mbedtls_mpi_uint) 0x98 << 0 ) | ( (mbedtls_mpi_uint) 0x17 << 8 ) | ( (mbedtls_mpi_uint) 0xF8 << 16 ) | ( (mbedtls_mpi_uint) 0x16 << 24 ), ( (mbedtls_mpi_uint) 0x5B << 0 ) | ( (mbedtls_mpi_uint) 0x81 << 8 ) | ( (mbedtls_mpi_uint) 0xF2 << 16 ) | ( (mbedtls_mpi_uint) 0x59 << 24 ),
-    ( (mbedtls_mpi_uint) 0xD9 << 0 ) | ( (mbedtls_mpi_uint) 0x28 << 8 ) | ( (mbedtls_mpi_uint) 0xCE << 16 ) | ( (mbedtls_mpi_uint) 0x2D << 24 ), ( (mbedtls_mpi_uint) 0xDB << 0 ) | ( (mbedtls_mpi_uint) 0xFC << 8 ) | ( (mbedtls_mpi_uint) 0x9B << 16 ) | ( (mbedtls_mpi_uint) 0x02 << 24 ),
-    ( (mbedtls_mpi_uint) 0x07 << 0 ) | ( (mbedtls_mpi_uint) 0x0B << 8 ) | ( (mbedtls_mpi_uint) 0x87 << 16 ) | ( (mbedtls_mpi_uint) 0xCE << 24 ), ( (mbedtls_mpi_uint) 0x95 << 0 ) | ( (mbedtls_mpi_uint) 0x62 << 8 ) | ( (mbedtls_mpi_uint) 0xA0 << 16 ) | ( (mbedtls_mpi_uint) 0x55 << 24 ),
-    ( (mbedtls_mpi_uint) 0xAC << 0 ) | ( (mbedtls_mpi_uint) 0xBB << 8 ) | ( (mbedtls_mpi_uint) 0xDC << 16 ) | ( (mbedtls_mpi_uint) 0xF9 << 24 ), ( (mbedtls_mpi_uint) 0x7E << 0 ) | ( (mbedtls_mpi_uint) 0x66 << 8 ) | ( (mbedtls_mpi_uint) 0xBE << 16 ) | ( (mbedtls_mpi_uint) 0x79 << 24 ),
+    ( (mbedtls_mpi_uint) (0x98) << 0 ) | ( (mbedtls_mpi_uint) (0x17) << 8 ) | ( (mbedtls_mpi_uint) (0xF8) << 16 ) | ( (mbedtls_mpi_uint) (0x16) << 24 ), ( (mbedtls_mpi_uint) (0x5B) << 0 ) | ( (mbedtls_mpi_uint) (0x81) << 8 ) | ( (mbedtls_mpi_uint) (0xF2) << 16 ) | ( (mbedtls_mpi_uint) (0x59) << 24 ),
+    ( (mbedtls_mpi_uint) (0xD9) << 0 ) | ( (mbedtls_mpi_uint) (0x28) << 8 ) | ( (mbedtls_mpi_uint) (0xCE) << 16 ) | ( (mbedtls_mpi_uint) (0x2D) << 24 ), ( (mbedtls_mpi_uint) (0xDB) << 0 ) | ( (mbedtls_mpi_uint) (0xFC) << 8 ) | ( (mbedtls_mpi_uint) (0x9B) << 16 ) | ( (mbedtls_mpi_uint) (0x02) << 24 ),
+    ( (mbedtls_mpi_uint) (0x07) << 0 ) | ( (mbedtls_mpi_uint) (0x0B) << 8 ) | ( (mbedtls_mpi_uint) (0x87) << 16 ) | ( (mbedtls_mpi_uint) (0xCE) << 24 ), ( (mbedtls_mpi_uint) (0x95) << 0 ) | ( (mbedtls_mpi_uint) (0x62) << 8 ) | ( (mbedtls_mpi_uint) (0xA0) << 16 ) | ( (mbedtls_mpi_uint) (0x55) << 24 ),
+    ( (mbedtls_mpi_uint) (0xAC) << 0 ) | ( (mbedtls_mpi_uint) (0xBB) << 8 ) | ( (mbedtls_mpi_uint) (0xDC) << 16 ) | ( (mbedtls_mpi_uint) (0xF9) << 24 ), ( (mbedtls_mpi_uint) (0x7E) << 0 ) | ( (mbedtls_mpi_uint) (0x66) << 8 ) | ( (mbedtls_mpi_uint) (0xBE) << 16 ) | ( (mbedtls_mpi_uint) (0x79) << 24 ),
 };
 static const mbedtls_mpi_uint secp256k1_gy[] = {
-    ( (mbedtls_mpi_uint) 0xB8 << 0 ) | ( (mbedtls_mpi_uint) 0xD4 << 8 ) | ( (mbedtls_mpi_uint) 0x10 << 16 ) | ( (mbedtls_mpi_uint) 0xFB << 24 ), ( (mbedtls_mpi_uint) 0x8F << 0 ) | ( (mbedtls_mpi_uint) 0xD0 << 8 ) | ( (mbedtls_mpi_uint) 0x47 << 16 ) | ( (mbedtls_mpi_uint) 0x9C << 24 ),
-    ( (mbedtls_mpi_uint) 0x19 << 0 ) | ( (mbedtls_mpi_uint) 0x54 << 8 ) | ( (mbedtls_mpi_uint) 0x85 << 16 ) | ( (mbedtls_mpi_uint) 0xA6 << 24 ), ( (mbedtls_mpi_uint) 0x48 << 0 ) | ( (mbedtls_mpi_uint) 0xB4 << 8 ) | ( (mbedtls_mpi_uint) 0x17 << 16 ) | ( (mbedtls_mpi_uint) 0xFD << 24 ),
-    ( (mbedtls_mpi_uint) 0xA8 << 0 ) | ( (mbedtls_mpi_uint) 0x08 << 8 ) | ( (mbedtls_mpi_uint) 0x11 << 16 ) | ( (mbedtls_mpi_uint) 0x0E << 24 ), ( (mbedtls_mpi_uint) 0xFC << 0 ) | ( (mbedtls_mpi_uint) 0xFB << 8 ) | ( (mbedtls_mpi_uint) 0xA4 << 16 ) | ( (mbedtls_mpi_uint) 0x5D << 24 ),
-    ( (mbedtls_mpi_uint) 0x65 << 0 ) | ( (mbedtls_mpi_uint) 0xC4 << 8 ) | ( (mbedtls_mpi_uint) 0xA3 << 16 ) | ( (mbedtls_mpi_uint) 0x26 << 24 ), ( (mbedtls_mpi_uint) 0x77 << 0 ) | ( (mbedtls_mpi_uint) 0xDA << 8 ) | ( (mbedtls_mpi_uint) 0x3A << 16 ) | ( (mbedtls_mpi_uint) 0x48 << 24 ),
+    ( (mbedtls_mpi_uint) (0xB8) << 0 ) | ( (mbedtls_mpi_uint) (0xD4) << 8 ) | ( (mbedtls_mpi_uint) (0x10) << 16 ) | ( (mbedtls_mpi_uint) (0xFB) << 24 ), ( (mbedtls_mpi_uint) (0x8F) << 0 ) | ( (mbedtls_mpi_uint) (0xD0) << 8 ) | ( (mbedtls_mpi_uint) (0x47) << 16 ) | ( (mbedtls_mpi_uint) (0x9C) << 24 ),
+    ( (mbedtls_mpi_uint) (0x19) << 0 ) | ( (mbedtls_mpi_uint) (0x54) << 8 ) | ( (mbedtls_mpi_uint) (0x85) << 16 ) | ( (mbedtls_mpi_uint) (0xA6) << 24 ), ( (mbedtls_mpi_uint) (0x48) << 0 ) | ( (mbedtls_mpi_uint) (0xB4) << 8 ) | ( (mbedtls_mpi_uint) (0x17) << 16 ) | ( (mbedtls_mpi_uint) (0xFD) << 24 ),
+    ( (mbedtls_mpi_uint) (0xA8) << 0 ) | ( (mbedtls_mpi_uint) (0x08) << 8 ) | ( (mbedtls_mpi_uint) (0x11) << 16 ) | ( (mbedtls_mpi_uint) (0x0E) << 24 ), ( (mbedtls_mpi_uint) (0xFC) << 0 ) | ( (mbedtls_mpi_uint) (0xFB) << 8 ) | ( (mbedtls_mpi_uint) (0xA4) << 16 ) | ( (mbedtls_mpi_uint) (0x5D) << 24 ),
+    ( (mbedtls_mpi_uint) (0x65) << 0 ) | ( (mbedtls_mpi_uint) (0xC4) << 8 ) | ( (mbedtls_mpi_uint) (0xA3) << 16 ) | ( (mbedtls_mpi_uint) (0x26) << 24 ), ( (mbedtls_mpi_uint) (0x77) << 0 ) | ( (mbedtls_mpi_uint) (0xDA) << 8 ) | ( (mbedtls_mpi_uint) (0x3A) << 16 ) | ( (mbedtls_mpi_uint) (0x48) << 24 ),
 };
 static const mbedtls_mpi_uint secp256k1_n[] = {
-    ( (mbedtls_mpi_uint) 0x41 << 0 ) | ( (mbedtls_mpi_uint) 0x41 << 8 ) | ( (mbedtls_mpi_uint) 0x36 << 16 ) | ( (mbedtls_mpi_uint) 0xD0 << 24 ), ( (mbedtls_mpi_uint) 0x8C << 0 ) | ( (mbedtls_mpi_uint) 0x5E << 8 ) | ( (mbedtls_mpi_uint) 0xD2 << 16 ) | ( (mbedtls_mpi_uint) 0xBF << 24 ),
-    ( (mbedtls_mpi_uint) 0x3B << 0 ) | ( (mbedtls_mpi_uint) 0xA0 << 8 ) | ( (mbedtls_mpi_uint) 0x48 << 16 ) | ( (mbedtls_mpi_uint) 0xAF << 24 ), ( (mbedtls_mpi_uint) 0xE6 << 0 ) | ( (mbedtls_mpi_uint) 0xDC << 8 ) | ( (mbedtls_mpi_uint) 0xAE << 16 ) | ( (mbedtls_mpi_uint) 0xBA << 24 ),
-    ( (mbedtls_mpi_uint) 0xFE << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0xFF << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
+    ( (mbedtls_mpi_uint) (0x41) << 0 ) | ( (mbedtls_mpi_uint) (0x41) << 8 ) | ( (mbedtls_mpi_uint) (0x36) << 16 ) | ( (mbedtls_mpi_uint) (0xD0) << 24 ), ( (mbedtls_mpi_uint) (0x8C) << 0 ) | ( (mbedtls_mpi_uint) (0x5E) << 8 ) | ( (mbedtls_mpi_uint) (0xD2) << 16 ) | ( (mbedtls_mpi_uint) (0xBF) << 24 ),
+    ( (mbedtls_mpi_uint) (0x3B) << 0 ) | ( (mbedtls_mpi_uint) (0xA0) << 8 ) | ( (mbedtls_mpi_uint) (0x48) << 16 ) | ( (mbedtls_mpi_uint) (0xAF) << 24 ), ( (mbedtls_mpi_uint) (0xE6) << 0 ) | ( (mbedtls_mpi_uint) (0xDC) << 8 ) | ( (mbedtls_mpi_uint) (0xAE) << 16 ) | ( (mbedtls_mpi_uint) (0xBA) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFE) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0xFF) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
 };
 
 
@@ -2092,40 +2150,40 @@ static const mbedtls_mpi_uint secp256k1_n[] = {
 
 
 static const mbedtls_mpi_uint brainpoolP256r1_p[] = {
-    ( (mbedtls_mpi_uint) 0x77 << 0 ) | ( (mbedtls_mpi_uint) 0x53 << 8 ) | ( (mbedtls_mpi_uint) 0x6E << 16 ) | ( (mbedtls_mpi_uint) 0x1F << 24 ), ( (mbedtls_mpi_uint) 0x1D << 0 ) | ( (mbedtls_mpi_uint) 0x48 << 8 ) | ( (mbedtls_mpi_uint) 0x13 << 16 ) | ( (mbedtls_mpi_uint) 0x20 << 24 ),
-    ( (mbedtls_mpi_uint) 0x28 << 0 ) | ( (mbedtls_mpi_uint) 0x20 << 8 ) | ( (mbedtls_mpi_uint) 0x26 << 16 ) | ( (mbedtls_mpi_uint) 0xD5 << 24 ), ( (mbedtls_mpi_uint) 0x23 << 0 ) | ( (mbedtls_mpi_uint) 0xF6 << 8 ) | ( (mbedtls_mpi_uint) 0x3B << 16 ) | ( (mbedtls_mpi_uint) 0x6E << 24 ),
-    ( (mbedtls_mpi_uint) 0x72 << 0 ) | ( (mbedtls_mpi_uint) 0x8D << 8 ) | ( (mbedtls_mpi_uint) 0x83 << 16 ) | ( (mbedtls_mpi_uint) 0x9D << 24 ), ( (mbedtls_mpi_uint) 0x90 << 0 ) | ( (mbedtls_mpi_uint) 0x0A << 8 ) | ( (mbedtls_mpi_uint) 0x66 << 16 ) | ( (mbedtls_mpi_uint) 0x3E << 24 ),
-    ( (mbedtls_mpi_uint) 0xBC << 0 ) | ( (mbedtls_mpi_uint) 0xA9 << 8 ) | ( (mbedtls_mpi_uint) 0xEE << 16 ) | ( (mbedtls_mpi_uint) 0xA1 << 24 ), ( (mbedtls_mpi_uint) 0xDB << 0 ) | ( (mbedtls_mpi_uint) 0x57 << 8 ) | ( (mbedtls_mpi_uint) 0xFB << 16 ) | ( (mbedtls_mpi_uint) 0xA9 << 24 ),
+    ( (mbedtls_mpi_uint) (0x77) << 0 ) | ( (mbedtls_mpi_uint) (0x53) << 8 ) | ( (mbedtls_mpi_uint) (0x6E) << 16 ) | ( (mbedtls_mpi_uint) (0x1F) << 24 ), ( (mbedtls_mpi_uint) (0x1D) << 0 ) | ( (mbedtls_mpi_uint) (0x48) << 8 ) | ( (mbedtls_mpi_uint) (0x13) << 16 ) | ( (mbedtls_mpi_uint) (0x20) << 24 ),
+    ( (mbedtls_mpi_uint) (0x28) << 0 ) | ( (mbedtls_mpi_uint) (0x20) << 8 ) | ( (mbedtls_mpi_uint) (0x26) << 16 ) | ( (mbedtls_mpi_uint) (0xD5) << 24 ), ( (mbedtls_mpi_uint) (0x23) << 0 ) | ( (mbedtls_mpi_uint) (0xF6) << 8 ) | ( (mbedtls_mpi_uint) (0x3B) << 16 ) | ( (mbedtls_mpi_uint) (0x6E) << 24 ),
+    ( (mbedtls_mpi_uint) (0x72) << 0 ) | ( (mbedtls_mpi_uint) (0x8D) << 8 ) | ( (mbedtls_mpi_uint) (0x83) << 16 ) | ( (mbedtls_mpi_uint) (0x9D) << 24 ), ( (mbedtls_mpi_uint) (0x90) << 0 ) | ( (mbedtls_mpi_uint) (0x0A) << 8 ) | ( (mbedtls_mpi_uint) (0x66) << 16 ) | ( (mbedtls_mpi_uint) (0x3E) << 24 ),
+    ( (mbedtls_mpi_uint) (0xBC) << 0 ) | ( (mbedtls_mpi_uint) (0xA9) << 8 ) | ( (mbedtls_mpi_uint) (0xEE) << 16 ) | ( (mbedtls_mpi_uint) (0xA1) << 24 ), ( (mbedtls_mpi_uint) (0xDB) << 0 ) | ( (mbedtls_mpi_uint) (0x57) << 8 ) | ( (mbedtls_mpi_uint) (0xFB) << 16 ) | ( (mbedtls_mpi_uint) (0xA9) << 24 ),
 };
 static const mbedtls_mpi_uint brainpoolP256r1_a[] = {
-    ( (mbedtls_mpi_uint) 0xD9 << 0 ) | ( (mbedtls_mpi_uint) 0xB5 << 8 ) | ( (mbedtls_mpi_uint) 0x30 << 16 ) | ( (mbedtls_mpi_uint) 0xF3 << 24 ), ( (mbedtls_mpi_uint) 0x44 << 0 ) | ( (mbedtls_mpi_uint) 0x4B << 8 ) | ( (mbedtls_mpi_uint) 0x4A << 16 ) | ( (mbedtls_mpi_uint) 0xE9 << 24 ),
-    ( (mbedtls_mpi_uint) 0x6C << 0 ) | ( (mbedtls_mpi_uint) 0x5C << 8 ) | ( (mbedtls_mpi_uint) 0xDC << 16 ) | ( (mbedtls_mpi_uint) 0x26 << 24 ), ( (mbedtls_mpi_uint) 0xC1 << 0 ) | ( (mbedtls_mpi_uint) 0x55 << 8 ) | ( (mbedtls_mpi_uint) 0x80 << 16 ) | ( (mbedtls_mpi_uint) 0xFB << 24 ),
-    ( (mbedtls_mpi_uint) 0xE7 << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0x7A << 16 ) | ( (mbedtls_mpi_uint) 0x41 << 24 ), ( (mbedtls_mpi_uint) 0x30 << 0 ) | ( (mbedtls_mpi_uint) 0x75 << 8 ) | ( (mbedtls_mpi_uint) 0xF6 << 16 ) | ( (mbedtls_mpi_uint) 0xEE << 24 ),
-    ( (mbedtls_mpi_uint) 0x57 << 0 ) | ( (mbedtls_mpi_uint) 0x30 << 8 ) | ( (mbedtls_mpi_uint) 0x2C << 16 ) | ( (mbedtls_mpi_uint) 0xFC << 24 ), ( (mbedtls_mpi_uint) 0x75 << 0 ) | ( (mbedtls_mpi_uint) 0x09 << 8 ) | ( (mbedtls_mpi_uint) 0x5A << 16 ) | ( (mbedtls_mpi_uint) 0x7D << 24 ),
+    ( (mbedtls_mpi_uint) (0xD9) << 0 ) | ( (mbedtls_mpi_uint) (0xB5) << 8 ) | ( (mbedtls_mpi_uint) (0x30) << 16 ) | ( (mbedtls_mpi_uint) (0xF3) << 24 ), ( (mbedtls_mpi_uint) (0x44) << 0 ) | ( (mbedtls_mpi_uint) (0x4B) << 8 ) | ( (mbedtls_mpi_uint) (0x4A) << 16 ) | ( (mbedtls_mpi_uint) (0xE9) << 24 ),
+    ( (mbedtls_mpi_uint) (0x6C) << 0 ) | ( (mbedtls_mpi_uint) (0x5C) << 8 ) | ( (mbedtls_mpi_uint) (0xDC) << 16 ) | ( (mbedtls_mpi_uint) (0x26) << 24 ), ( (mbedtls_mpi_uint) (0xC1) << 0 ) | ( (mbedtls_mpi_uint) (0x55) << 8 ) | ( (mbedtls_mpi_uint) (0x80) << 16 ) | ( (mbedtls_mpi_uint) (0xFB) << 24 ),
+    ( (mbedtls_mpi_uint) (0xE7) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0x7A) << 16 ) | ( (mbedtls_mpi_uint) (0x41) << 24 ), ( (mbedtls_mpi_uint) (0x30) << 0 ) | ( (mbedtls_mpi_uint) (0x75) << 8 ) | ( (mbedtls_mpi_uint) (0xF6) << 16 ) | ( (mbedtls_mpi_uint) (0xEE) << 24 ),
+    ( (mbedtls_mpi_uint) (0x57) << 0 ) | ( (mbedtls_mpi_uint) (0x30) << 8 ) | ( (mbedtls_mpi_uint) (0x2C) << 16 ) | ( (mbedtls_mpi_uint) (0xFC) << 24 ), ( (mbedtls_mpi_uint) (0x75) << 0 ) | ( (mbedtls_mpi_uint) (0x09) << 8 ) | ( (mbedtls_mpi_uint) (0x5A) << 16 ) | ( (mbedtls_mpi_uint) (0x7D) << 24 ),
 };
 static const mbedtls_mpi_uint brainpoolP256r1_b[] = {
-    ( (mbedtls_mpi_uint) 0xB6 << 0 ) | ( (mbedtls_mpi_uint) 0x07 << 8 ) | ( (mbedtls_mpi_uint) 0x8C << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ), ( (mbedtls_mpi_uint) 0x18 << 0 ) | ( (mbedtls_mpi_uint) 0xDC << 8 ) | ( (mbedtls_mpi_uint) 0xCC << 16 ) | ( (mbedtls_mpi_uint) 0x6B << 24 ),
-    ( (mbedtls_mpi_uint) 0xCE << 0 ) | ( (mbedtls_mpi_uint) 0xE1 << 8 ) | ( (mbedtls_mpi_uint) 0xF7 << 16 ) | ( (mbedtls_mpi_uint) 0x5C << 24 ), ( (mbedtls_mpi_uint) 0x29 << 0 ) | ( (mbedtls_mpi_uint) 0x16 << 8 ) | ( (mbedtls_mpi_uint) 0x84 << 16 ) | ( (mbedtls_mpi_uint) 0x95 << 24 ),
-    ( (mbedtls_mpi_uint) 0xBF << 0 ) | ( (mbedtls_mpi_uint) 0x7C << 8 ) | ( (mbedtls_mpi_uint) 0xD7 << 16 ) | ( (mbedtls_mpi_uint) 0xBB << 24 ), ( (mbedtls_mpi_uint) 0xD9 << 0 ) | ( (mbedtls_mpi_uint) 0xB5 << 8 ) | ( (mbedtls_mpi_uint) 0x30 << 16 ) | ( (mbedtls_mpi_uint) 0xF3 << 24 ),
-    ( (mbedtls_mpi_uint) 0x44 << 0 ) | ( (mbedtls_mpi_uint) 0x4B << 8 ) | ( (mbedtls_mpi_uint) 0x4A << 16 ) | ( (mbedtls_mpi_uint) 0xE9 << 24 ), ( (mbedtls_mpi_uint) 0x6C << 0 ) | ( (mbedtls_mpi_uint) 0x5C << 8 ) | ( (mbedtls_mpi_uint) 0xDC << 16 ) | ( (mbedtls_mpi_uint) 0x26 << 24 ),
+    ( (mbedtls_mpi_uint) (0xB6) << 0 ) | ( (mbedtls_mpi_uint) (0x07) << 8 ) | ( (mbedtls_mpi_uint) (0x8C) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ), ( (mbedtls_mpi_uint) (0x18) << 0 ) | ( (mbedtls_mpi_uint) (0xDC) << 8 ) | ( (mbedtls_mpi_uint) (0xCC) << 16 ) | ( (mbedtls_mpi_uint) (0x6B) << 24 ),
+    ( (mbedtls_mpi_uint) (0xCE) << 0 ) | ( (mbedtls_mpi_uint) (0xE1) << 8 ) | ( (mbedtls_mpi_uint) (0xF7) << 16 ) | ( (mbedtls_mpi_uint) (0x5C) << 24 ), ( (mbedtls_mpi_uint) (0x29) << 0 ) | ( (mbedtls_mpi_uint) (0x16) << 8 ) | ( (mbedtls_mpi_uint) (0x84) << 16 ) | ( (mbedtls_mpi_uint) (0x95) << 24 ),
+    ( (mbedtls_mpi_uint) (0xBF) << 0 ) | ( (mbedtls_mpi_uint) (0x7C) << 8 ) | ( (mbedtls_mpi_uint) (0xD7) << 16 ) | ( (mbedtls_mpi_uint) (0xBB) << 24 ), ( (mbedtls_mpi_uint) (0xD9) << 0 ) | ( (mbedtls_mpi_uint) (0xB5) << 8 ) | ( (mbedtls_mpi_uint) (0x30) << 16 ) | ( (mbedtls_mpi_uint) (0xF3) << 24 ),
+    ( (mbedtls_mpi_uint) (0x44) << 0 ) | ( (mbedtls_mpi_uint) (0x4B) << 8 ) | ( (mbedtls_mpi_uint) (0x4A) << 16 ) | ( (mbedtls_mpi_uint) (0xE9) << 24 ), ( (mbedtls_mpi_uint) (0x6C) << 0 ) | ( (mbedtls_mpi_uint) (0x5C) << 8 ) | ( (mbedtls_mpi_uint) (0xDC) << 16 ) | ( (mbedtls_mpi_uint) (0x26) << 24 ),
 };
 static const mbedtls_mpi_uint brainpoolP256r1_gx[] = {
-    ( (mbedtls_mpi_uint) 0x62 << 0 ) | ( (mbedtls_mpi_uint) 0x32 << 8 ) | ( (mbedtls_mpi_uint) 0xCE << 16 ) | ( (mbedtls_mpi_uint) 0x9A << 24 ), ( (mbedtls_mpi_uint) 0xBD << 0 ) | ( (mbedtls_mpi_uint) 0x53 << 8 ) | ( (mbedtls_mpi_uint) 0x44 << 16 ) | ( (mbedtls_mpi_uint) 0x3A << 24 ),
-    ( (mbedtls_mpi_uint) 0xC2 << 0 ) | ( (mbedtls_mpi_uint) 0x23 << 8 ) | ( (mbedtls_mpi_uint) 0xBD << 16 ) | ( (mbedtls_mpi_uint) 0xE3 << 24 ), ( (mbedtls_mpi_uint) 0xE1 << 0 ) | ( (mbedtls_mpi_uint) 0x27 << 8 ) | ( (mbedtls_mpi_uint) 0xDE << 16 ) | ( (mbedtls_mpi_uint) 0xB9 << 24 ),
-    ( (mbedtls_mpi_uint) 0xAF << 0 ) | ( (mbedtls_mpi_uint) 0xB7 << 8 ) | ( (mbedtls_mpi_uint) 0x81 << 16 ) | ( (mbedtls_mpi_uint) 0xFC << 24 ), ( (mbedtls_mpi_uint) 0x2F << 0 ) | ( (mbedtls_mpi_uint) 0x48 << 8 ) | ( (mbedtls_mpi_uint) 0x4B << 16 ) | ( (mbedtls_mpi_uint) 0x2C << 24 ),
-    ( (mbedtls_mpi_uint) 0xCB << 0 ) | ( (mbedtls_mpi_uint) 0x57 << 8 ) | ( (mbedtls_mpi_uint) 0x7E << 16 ) | ( (mbedtls_mpi_uint) 0xCB << 24 ), ( (mbedtls_mpi_uint) 0xB9 << 0 ) | ( (mbedtls_mpi_uint) 0xAE << 8 ) | ( (mbedtls_mpi_uint) 0xD2 << 16 ) | ( (mbedtls_mpi_uint) 0x8B << 24 ),
+    ( (mbedtls_mpi_uint) (0x62) << 0 ) | ( (mbedtls_mpi_uint) (0x32) << 8 ) | ( (mbedtls_mpi_uint) (0xCE) << 16 ) | ( (mbedtls_mpi_uint) (0x9A) << 24 ), ( (mbedtls_mpi_uint) (0xBD) << 0 ) | ( (mbedtls_mpi_uint) (0x53) << 8 ) | ( (mbedtls_mpi_uint) (0x44) << 16 ) | ( (mbedtls_mpi_uint) (0x3A) << 24 ),
+    ( (mbedtls_mpi_uint) (0xC2) << 0 ) | ( (mbedtls_mpi_uint) (0x23) << 8 ) | ( (mbedtls_mpi_uint) (0xBD) << 16 ) | ( (mbedtls_mpi_uint) (0xE3) << 24 ), ( (mbedtls_mpi_uint) (0xE1) << 0 ) | ( (mbedtls_mpi_uint) (0x27) << 8 ) | ( (mbedtls_mpi_uint) (0xDE) << 16 ) | ( (mbedtls_mpi_uint) (0xB9) << 24 ),
+    ( (mbedtls_mpi_uint) (0xAF) << 0 ) | ( (mbedtls_mpi_uint) (0xB7) << 8 ) | ( (mbedtls_mpi_uint) (0x81) << 16 ) | ( (mbedtls_mpi_uint) (0xFC) << 24 ), ( (mbedtls_mpi_uint) (0x2F) << 0 ) | ( (mbedtls_mpi_uint) (0x48) << 8 ) | ( (mbedtls_mpi_uint) (0x4B) << 16 ) | ( (mbedtls_mpi_uint) (0x2C) << 24 ),
+    ( (mbedtls_mpi_uint) (0xCB) << 0 ) | ( (mbedtls_mpi_uint) (0x57) << 8 ) | ( (mbedtls_mpi_uint) (0x7E) << 16 ) | ( (mbedtls_mpi_uint) (0xCB) << 24 ), ( (mbedtls_mpi_uint) (0xB9) << 0 ) | ( (mbedtls_mpi_uint) (0xAE) << 8 ) | ( (mbedtls_mpi_uint) (0xD2) << 16 ) | ( (mbedtls_mpi_uint) (0x8B) << 24 ),
 };
 static const mbedtls_mpi_uint brainpoolP256r1_gy[] = {
-    ( (mbedtls_mpi_uint) 0x97 << 0 ) | ( (mbedtls_mpi_uint) 0x69 << 8 ) | ( (mbedtls_mpi_uint) 0x04 << 16 ) | ( (mbedtls_mpi_uint) 0x2F << 24 ), ( (mbedtls_mpi_uint) 0xC7 << 0 ) | ( (mbedtls_mpi_uint) 0x54 << 8 ) | ( (mbedtls_mpi_uint) 0x1D << 16 ) | ( (mbedtls_mpi_uint) 0x5C << 24 ),
-    ( (mbedtls_mpi_uint) 0x54 << 0 ) | ( (mbedtls_mpi_uint) 0x8E << 8 ) | ( (mbedtls_mpi_uint) 0xED << 16 ) | ( (mbedtls_mpi_uint) 0x2D << 24 ), ( (mbedtls_mpi_uint) 0x13 << 0 ) | ( (mbedtls_mpi_uint) 0x45 << 8 ) | ( (mbedtls_mpi_uint) 0x77 << 16 ) | ( (mbedtls_mpi_uint) 0xC2 << 24 ),
-    ( (mbedtls_mpi_uint) 0xC9 << 0 ) | ( (mbedtls_mpi_uint) 0x1D << 8 ) | ( (mbedtls_mpi_uint) 0x61 << 16 ) | ( (mbedtls_mpi_uint) 0x14 << 24 ), ( (mbedtls_mpi_uint) 0x1A << 0 ) | ( (mbedtls_mpi_uint) 0x46 << 8 ) | ( (mbedtls_mpi_uint) 0xF8 << 16 ) | ( (mbedtls_mpi_uint) 0x97 << 24 ),
-    ( (mbedtls_mpi_uint) 0xFD << 0 ) | ( (mbedtls_mpi_uint) 0xC4 << 8 ) | ( (mbedtls_mpi_uint) 0xDA << 16 ) | ( (mbedtls_mpi_uint) 0xC3 << 24 ), ( (mbedtls_mpi_uint) 0x35 << 0 ) | ( (mbedtls_mpi_uint) 0xF8 << 8 ) | ( (mbedtls_mpi_uint) 0x7E << 16 ) | ( (mbedtls_mpi_uint) 0x54 << 24 ),
+    ( (mbedtls_mpi_uint) (0x97) << 0 ) | ( (mbedtls_mpi_uint) (0x69) << 8 ) | ( (mbedtls_mpi_uint) (0x04) << 16 ) | ( (mbedtls_mpi_uint) (0x2F) << 24 ), ( (mbedtls_mpi_uint) (0xC7) << 0 ) | ( (mbedtls_mpi_uint) (0x54) << 8 ) | ( (mbedtls_mpi_uint) (0x1D) << 16 ) | ( (mbedtls_mpi_uint) (0x5C) << 24 ),
+    ( (mbedtls_mpi_uint) (0x54) << 0 ) | ( (mbedtls_mpi_uint) (0x8E) << 8 ) | ( (mbedtls_mpi_uint) (0xED) << 16 ) | ( (mbedtls_mpi_uint) (0x2D) << 24 ), ( (mbedtls_mpi_uint) (0x13) << 0 ) | ( (mbedtls_mpi_uint) (0x45) << 8 ) | ( (mbedtls_mpi_uint) (0x77) << 16 ) | ( (mbedtls_mpi_uint) (0xC2) << 24 ),
+    ( (mbedtls_mpi_uint) (0xC9) << 0 ) | ( (mbedtls_mpi_uint) (0x1D) << 8 ) | ( (mbedtls_mpi_uint) (0x61) << 16 ) | ( (mbedtls_mpi_uint) (0x14) << 24 ), ( (mbedtls_mpi_uint) (0x1A) << 0 ) | ( (mbedtls_mpi_uint) (0x46) << 8 ) | ( (mbedtls_mpi_uint) (0xF8) << 16 ) | ( (mbedtls_mpi_uint) (0x97) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFD) << 0 ) | ( (mbedtls_mpi_uint) (0xC4) << 8 ) | ( (mbedtls_mpi_uint) (0xDA) << 16 ) | ( (mbedtls_mpi_uint) (0xC3) << 24 ), ( (mbedtls_mpi_uint) (0x35) << 0 ) | ( (mbedtls_mpi_uint) (0xF8) << 8 ) | ( (mbedtls_mpi_uint) (0x7E) << 16 ) | ( (mbedtls_mpi_uint) (0x54) << 24 ),
 };
 static const mbedtls_mpi_uint brainpoolP256r1_n[] = {
-    ( (mbedtls_mpi_uint) 0xA7 << 0 ) | ( (mbedtls_mpi_uint) 0x56 << 8 ) | ( (mbedtls_mpi_uint) 0x48 << 16 ) | ( (mbedtls_mpi_uint) 0x97 << 24 ), ( (mbedtls_mpi_uint) 0x82 << 0 ) | ( (mbedtls_mpi_uint) 0x0E << 8 ) | ( (mbedtls_mpi_uint) 0x1E << 16 ) | ( (mbedtls_mpi_uint) 0x90 << 24 ),
-    ( (mbedtls_mpi_uint) 0xF7 << 0 ) | ( (mbedtls_mpi_uint) 0xA6 << 8 ) | ( (mbedtls_mpi_uint) 0x61 << 16 ) | ( (mbedtls_mpi_uint) 0xB5 << 24 ), ( (mbedtls_mpi_uint) 0xA3 << 0 ) | ( (mbedtls_mpi_uint) 0x7A << 8 ) | ( (mbedtls_mpi_uint) 0x39 << 16 ) | ( (mbedtls_mpi_uint) 0x8C << 24 ),
-    ( (mbedtls_mpi_uint) 0x71 << 0 ) | ( (mbedtls_mpi_uint) 0x8D << 8 ) | ( (mbedtls_mpi_uint) 0x83 << 16 ) | ( (mbedtls_mpi_uint) 0x9D << 24 ), ( (mbedtls_mpi_uint) 0x90 << 0 ) | ( (mbedtls_mpi_uint) 0x0A << 8 ) | ( (mbedtls_mpi_uint) 0x66 << 16 ) | ( (mbedtls_mpi_uint) 0x3E << 24 ),
-    ( (mbedtls_mpi_uint) 0xBC << 0 ) | ( (mbedtls_mpi_uint) 0xA9 << 8 ) | ( (mbedtls_mpi_uint) 0xEE << 16 ) | ( (mbedtls_mpi_uint) 0xA1 << 24 ), ( (mbedtls_mpi_uint) 0xDB << 0 ) | ( (mbedtls_mpi_uint) 0x57 << 8 ) | ( (mbedtls_mpi_uint) 0xFB << 16 ) | ( (mbedtls_mpi_uint) 0xA9 << 24 ),
+    ( (mbedtls_mpi_uint) (0xA7) << 0 ) | ( (mbedtls_mpi_uint) (0x56) << 8 ) | ( (mbedtls_mpi_uint) (0x48) << 16 ) | ( (mbedtls_mpi_uint) (0x97) << 24 ), ( (mbedtls_mpi_uint) (0x82) << 0 ) | ( (mbedtls_mpi_uint) (0x0E) << 8 ) | ( (mbedtls_mpi_uint) (0x1E) << 16 ) | ( (mbedtls_mpi_uint) (0x90) << 24 ),
+    ( (mbedtls_mpi_uint) (0xF7) << 0 ) | ( (mbedtls_mpi_uint) (0xA6) << 8 ) | ( (mbedtls_mpi_uint) (0x61) << 16 ) | ( (mbedtls_mpi_uint) (0xB5) << 24 ), ( (mbedtls_mpi_uint) (0xA3) << 0 ) | ( (mbedtls_mpi_uint) (0x7A) << 8 ) | ( (mbedtls_mpi_uint) (0x39) << 16 ) | ( (mbedtls_mpi_uint) (0x8C) << 24 ),
+    ( (mbedtls_mpi_uint) (0x71) << 0 ) | ( (mbedtls_mpi_uint) (0x8D) << 8 ) | ( (mbedtls_mpi_uint) (0x83) << 16 ) | ( (mbedtls_mpi_uint) (0x9D) << 24 ), ( (mbedtls_mpi_uint) (0x90) << 0 ) | ( (mbedtls_mpi_uint) (0x0A) << 8 ) | ( (mbedtls_mpi_uint) (0x66) << 16 ) | ( (mbedtls_mpi_uint) (0x3E) << 24 ),
+    ( (mbedtls_mpi_uint) (0xBC) << 0 ) | ( (mbedtls_mpi_uint) (0xA9) << 8 ) | ( (mbedtls_mpi_uint) (0xEE) << 16 ) | ( (mbedtls_mpi_uint) (0xA1) << 24 ), ( (mbedtls_mpi_uint) (0xDB) << 0 ) | ( (mbedtls_mpi_uint) (0x57) << 8 ) | ( (mbedtls_mpi_uint) (0xFB) << 16 ) | ( (mbedtls_mpi_uint) (0xA9) << 24 ),
 };
 
 
@@ -2134,52 +2192,52 @@ static const mbedtls_mpi_uint brainpoolP256r1_n[] = {
 
 
 static const mbedtls_mpi_uint brainpoolP384r1_p[] = {
-    ( (mbedtls_mpi_uint) 0x53 << 0 ) | ( (mbedtls_mpi_uint) 0xEC << 8 ) | ( (mbedtls_mpi_uint) 0x07 << 16 ) | ( (mbedtls_mpi_uint) 0x31 << 24 ), ( (mbedtls_mpi_uint) 0x13 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0x47 << 16 ) | ( (mbedtls_mpi_uint) 0x87 << 24 ),
-    ( (mbedtls_mpi_uint) 0x71 << 0 ) | ( (mbedtls_mpi_uint) 0x1A << 8 ) | ( (mbedtls_mpi_uint) 0x1D << 16 ) | ( (mbedtls_mpi_uint) 0x90 << 24 ), ( (mbedtls_mpi_uint) 0x29 << 0 ) | ( (mbedtls_mpi_uint) 0xA7 << 8 ) | ( (mbedtls_mpi_uint) 0xD3 << 16 ) | ( (mbedtls_mpi_uint) 0xAC << 24 ),
-    ( (mbedtls_mpi_uint) 0x23 << 0 ) | ( (mbedtls_mpi_uint) 0x11 << 8 ) | ( (mbedtls_mpi_uint) 0xB7 << 16 ) | ( (mbedtls_mpi_uint) 0x7F << 24 ), ( (mbedtls_mpi_uint) 0x19 << 0 ) | ( (mbedtls_mpi_uint) 0xDA << 8 ) | ( (mbedtls_mpi_uint) 0xB1 << 16 ) | ( (mbedtls_mpi_uint) 0x12 << 24 ),
-    ( (mbedtls_mpi_uint) 0xB4 << 0 ) | ( (mbedtls_mpi_uint) 0x56 << 8 ) | ( (mbedtls_mpi_uint) 0x54 << 16 ) | ( (mbedtls_mpi_uint) 0xED << 24 ), ( (mbedtls_mpi_uint) 0x09 << 0 ) | ( (mbedtls_mpi_uint) 0x71 << 8 ) | ( (mbedtls_mpi_uint) 0x2F << 16 ) | ( (mbedtls_mpi_uint) 0x15 << 24 ),
-    ( (mbedtls_mpi_uint) 0xDF << 0 ) | ( (mbedtls_mpi_uint) 0x41 << 8 ) | ( (mbedtls_mpi_uint) 0xE6 << 16 ) | ( (mbedtls_mpi_uint) 0x50 << 24 ), ( (mbedtls_mpi_uint) 0x7E << 0 ) | ( (mbedtls_mpi_uint) 0x6F << 8 ) | ( (mbedtls_mpi_uint) 0x5D << 16 ) | ( (mbedtls_mpi_uint) 0x0F << 24 ),
-    ( (mbedtls_mpi_uint) 0x28 << 0 ) | ( (mbedtls_mpi_uint) 0x6D << 8 ) | ( (mbedtls_mpi_uint) 0x38 << 16 ) | ( (mbedtls_mpi_uint) 0xA3 << 24 ), ( (mbedtls_mpi_uint) 0x82 << 0 ) | ( (mbedtls_mpi_uint) 0x1E << 8 ) | ( (mbedtls_mpi_uint) 0xB9 << 16 ) | ( (mbedtls_mpi_uint) 0x8C << 24 ),
+    ( (mbedtls_mpi_uint) (0x53) << 0 ) | ( (mbedtls_mpi_uint) (0xEC) << 8 ) | ( (mbedtls_mpi_uint) (0x07) << 16 ) | ( (mbedtls_mpi_uint) (0x31) << 24 ), ( (mbedtls_mpi_uint) (0x13) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0x47) << 16 ) | ( (mbedtls_mpi_uint) (0x87) << 24 ),
+    ( (mbedtls_mpi_uint) (0x71) << 0 ) | ( (mbedtls_mpi_uint) (0x1A) << 8 ) | ( (mbedtls_mpi_uint) (0x1D) << 16 ) | ( (mbedtls_mpi_uint) (0x90) << 24 ), ( (mbedtls_mpi_uint) (0x29) << 0 ) | ( (mbedtls_mpi_uint) (0xA7) << 8 ) | ( (mbedtls_mpi_uint) (0xD3) << 16 ) | ( (mbedtls_mpi_uint) (0xAC) << 24 ),
+    ( (mbedtls_mpi_uint) (0x23) << 0 ) | ( (mbedtls_mpi_uint) (0x11) << 8 ) | ( (mbedtls_mpi_uint) (0xB7) << 16 ) | ( (mbedtls_mpi_uint) (0x7F) << 24 ), ( (mbedtls_mpi_uint) (0x19) << 0 ) | ( (mbedtls_mpi_uint) (0xDA) << 8 ) | ( (mbedtls_mpi_uint) (0xB1) << 16 ) | ( (mbedtls_mpi_uint) (0x12) << 24 ),
+    ( (mbedtls_mpi_uint) (0xB4) << 0 ) | ( (mbedtls_mpi_uint) (0x56) << 8 ) | ( (mbedtls_mpi_uint) (0x54) << 16 ) | ( (mbedtls_mpi_uint) (0xED) << 24 ), ( (mbedtls_mpi_uint) (0x09) << 0 ) | ( (mbedtls_mpi_uint) (0x71) << 8 ) | ( (mbedtls_mpi_uint) (0x2F) << 16 ) | ( (mbedtls_mpi_uint) (0x15) << 24 ),
+    ( (mbedtls_mpi_uint) (0xDF) << 0 ) | ( (mbedtls_mpi_uint) (0x41) << 8 ) | ( (mbedtls_mpi_uint) (0xE6) << 16 ) | ( (mbedtls_mpi_uint) (0x50) << 24 ), ( (mbedtls_mpi_uint) (0x7E) << 0 ) | ( (mbedtls_mpi_uint) (0x6F) << 8 ) | ( (mbedtls_mpi_uint) (0x5D) << 16 ) | ( (mbedtls_mpi_uint) (0x0F) << 24 ),
+    ( (mbedtls_mpi_uint) (0x28) << 0 ) | ( (mbedtls_mpi_uint) (0x6D) << 8 ) | ( (mbedtls_mpi_uint) (0x38) << 16 ) | ( (mbedtls_mpi_uint) (0xA3) << 24 ), ( (mbedtls_mpi_uint) (0x82) << 0 ) | ( (mbedtls_mpi_uint) (0x1E) << 8 ) | ( (mbedtls_mpi_uint) (0xB9) << 16 ) | ( (mbedtls_mpi_uint) (0x8C) << 24 ),
 };
 static const mbedtls_mpi_uint brainpoolP384r1_a[] = {
-    ( (mbedtls_mpi_uint) 0x26 << 0 ) | ( (mbedtls_mpi_uint) 0x28 << 8 ) | ( (mbedtls_mpi_uint) 0xCE << 16 ) | ( (mbedtls_mpi_uint) 0x22 << 24 ), ( (mbedtls_mpi_uint) 0xDD << 0 ) | ( (mbedtls_mpi_uint) 0xC7 << 8 ) | ( (mbedtls_mpi_uint) 0xA8 << 16 ) | ( (mbedtls_mpi_uint) 0x04 << 24 ),
-    ( (mbedtls_mpi_uint) 0xEB << 0 ) | ( (mbedtls_mpi_uint) 0xD4 << 8 ) | ( (mbedtls_mpi_uint) 0x3A << 16 ) | ( (mbedtls_mpi_uint) 0x50 << 24 ), ( (mbedtls_mpi_uint) 0x4A << 0 ) | ( (mbedtls_mpi_uint) 0x81 << 8 ) | ( (mbedtls_mpi_uint) 0xA5 << 16 ) | ( (mbedtls_mpi_uint) 0x8A << 24 ),
-    ( (mbedtls_mpi_uint) 0x0F << 0 ) | ( (mbedtls_mpi_uint) 0xF9 << 8 ) | ( (mbedtls_mpi_uint) 0x91 << 16 ) | ( (mbedtls_mpi_uint) 0xBA << 24 ), ( (mbedtls_mpi_uint) 0xEF << 0 ) | ( (mbedtls_mpi_uint) 0x65 << 8 ) | ( (mbedtls_mpi_uint) 0x91 << 16 ) | ( (mbedtls_mpi_uint) 0x13 << 24 ),
-    ( (mbedtls_mpi_uint) 0x87 << 0 ) | ( (mbedtls_mpi_uint) 0x27 << 8 ) | ( (mbedtls_mpi_uint) 0xB2 << 16 ) | ( (mbedtls_mpi_uint) 0x4F << 24 ), ( (mbedtls_mpi_uint) 0x8E << 0 ) | ( (mbedtls_mpi_uint) 0xA2 << 8 ) | ( (mbedtls_mpi_uint) 0xBE << 16 ) | ( (mbedtls_mpi_uint) 0xC2 << 24 ),
-    ( (mbedtls_mpi_uint) 0xA0 << 0 ) | ( (mbedtls_mpi_uint) 0xAF << 8 ) | ( (mbedtls_mpi_uint) 0x05 << 16 ) | ( (mbedtls_mpi_uint) 0xCE << 24 ), ( (mbedtls_mpi_uint) 0x0A << 0 ) | ( (mbedtls_mpi_uint) 0x08 << 8 ) | ( (mbedtls_mpi_uint) 0x72 << 16 ) | ( (mbedtls_mpi_uint) 0x3C << 24 ),
-    ( (mbedtls_mpi_uint) 0x0C << 0 ) | ( (mbedtls_mpi_uint) 0x15 << 8 ) | ( (mbedtls_mpi_uint) 0x8C << 16 ) | ( (mbedtls_mpi_uint) 0x3D << 24 ), ( (mbedtls_mpi_uint) 0xC6 << 0 ) | ( (mbedtls_mpi_uint) 0x82 << 8 ) | ( (mbedtls_mpi_uint) 0xC3 << 16 ) | ( (mbedtls_mpi_uint) 0x7B << 24 ),
+    ( (mbedtls_mpi_uint) (0x26) << 0 ) | ( (mbedtls_mpi_uint) (0x28) << 8 ) | ( (mbedtls_mpi_uint) (0xCE) << 16 ) | ( (mbedtls_mpi_uint) (0x22) << 24 ), ( (mbedtls_mpi_uint) (0xDD) << 0 ) | ( (mbedtls_mpi_uint) (0xC7) << 8 ) | ( (mbedtls_mpi_uint) (0xA8) << 16 ) | ( (mbedtls_mpi_uint) (0x04) << 24 ),
+    ( (mbedtls_mpi_uint) (0xEB) << 0 ) | ( (mbedtls_mpi_uint) (0xD4) << 8 ) | ( (mbedtls_mpi_uint) (0x3A) << 16 ) | ( (mbedtls_mpi_uint) (0x50) << 24 ), ( (mbedtls_mpi_uint) (0x4A) << 0 ) | ( (mbedtls_mpi_uint) (0x81) << 8 ) | ( (mbedtls_mpi_uint) (0xA5) << 16 ) | ( (mbedtls_mpi_uint) (0x8A) << 24 ),
+    ( (mbedtls_mpi_uint) (0x0F) << 0 ) | ( (mbedtls_mpi_uint) (0xF9) << 8 ) | ( (mbedtls_mpi_uint) (0x91) << 16 ) | ( (mbedtls_mpi_uint) (0xBA) << 24 ), ( (mbedtls_mpi_uint) (0xEF) << 0 ) | ( (mbedtls_mpi_uint) (0x65) << 8 ) | ( (mbedtls_mpi_uint) (0x91) << 16 ) | ( (mbedtls_mpi_uint) (0x13) << 24 ),
+    ( (mbedtls_mpi_uint) (0x87) << 0 ) | ( (mbedtls_mpi_uint) (0x27) << 8 ) | ( (mbedtls_mpi_uint) (0xB2) << 16 ) | ( (mbedtls_mpi_uint) (0x4F) << 24 ), ( (mbedtls_mpi_uint) (0x8E) << 0 ) | ( (mbedtls_mpi_uint) (0xA2) << 8 ) | ( (mbedtls_mpi_uint) (0xBE) << 16 ) | ( (mbedtls_mpi_uint) (0xC2) << 24 ),
+    ( (mbedtls_mpi_uint) (0xA0) << 0 ) | ( (mbedtls_mpi_uint) (0xAF) << 8 ) | ( (mbedtls_mpi_uint) (0x05) << 16 ) | ( (mbedtls_mpi_uint) (0xCE) << 24 ), ( (mbedtls_mpi_uint) (0x0A) << 0 ) | ( (mbedtls_mpi_uint) (0x08) << 8 ) | ( (mbedtls_mpi_uint) (0x72) << 16 ) | ( (mbedtls_mpi_uint) (0x3C) << 24 ),
+    ( (mbedtls_mpi_uint) (0x0C) << 0 ) | ( (mbedtls_mpi_uint) (0x15) << 8 ) | ( (mbedtls_mpi_uint) (0x8C) << 16 ) | ( (mbedtls_mpi_uint) (0x3D) << 24 ), ( (mbedtls_mpi_uint) (0xC6) << 0 ) | ( (mbedtls_mpi_uint) (0x82) << 8 ) | ( (mbedtls_mpi_uint) (0xC3) << 16 ) | ( (mbedtls_mpi_uint) (0x7B) << 24 ),
 };
 static const mbedtls_mpi_uint brainpoolP384r1_b[] = {
-    ( (mbedtls_mpi_uint) 0x11 << 0 ) | ( (mbedtls_mpi_uint) 0x4C << 8 ) | ( (mbedtls_mpi_uint) 0x50 << 16 ) | ( (mbedtls_mpi_uint) 0xFA << 24 ), ( (mbedtls_mpi_uint) 0x96 << 0 ) | ( (mbedtls_mpi_uint) 0x86 << 8 ) | ( (mbedtls_mpi_uint) 0xB7 << 16 ) | ( (mbedtls_mpi_uint) 0x3A << 24 ),
-    ( (mbedtls_mpi_uint) 0x94 << 0 ) | ( (mbedtls_mpi_uint) 0xC9 << 8 ) | ( (mbedtls_mpi_uint) 0xDB << 16 ) | ( (mbedtls_mpi_uint) 0x95 << 24 ), ( (mbedtls_mpi_uint) 0x02 << 0 ) | ( (mbedtls_mpi_uint) 0x39 << 8 ) | ( (mbedtls_mpi_uint) 0xB4 << 16 ) | ( (mbedtls_mpi_uint) 0x7C << 24 ),
-    ( (mbedtls_mpi_uint) 0xD5 << 0 ) | ( (mbedtls_mpi_uint) 0x62 << 8 ) | ( (mbedtls_mpi_uint) 0xEB << 16 ) | ( (mbedtls_mpi_uint) 0x3E << 24 ), ( (mbedtls_mpi_uint) 0xA5 << 0 ) | ( (mbedtls_mpi_uint) 0x0E << 8 ) | ( (mbedtls_mpi_uint) 0x88 << 16 ) | ( (mbedtls_mpi_uint) 0x2E << 24 ),
-    ( (mbedtls_mpi_uint) 0xA6 << 0 ) | ( (mbedtls_mpi_uint) 0xD2 << 8 ) | ( (mbedtls_mpi_uint) 0xDC << 16 ) | ( (mbedtls_mpi_uint) 0x07 << 24 ), ( (mbedtls_mpi_uint) 0xE1 << 0 ) | ( (mbedtls_mpi_uint) 0x7D << 8 ) | ( (mbedtls_mpi_uint) 0xB7 << 16 ) | ( (mbedtls_mpi_uint) 0x2F << 24 ),
-    ( (mbedtls_mpi_uint) 0x7C << 0 ) | ( (mbedtls_mpi_uint) 0x44 << 8 ) | ( (mbedtls_mpi_uint) 0xF0 << 16 ) | ( (mbedtls_mpi_uint) 0x16 << 24 ), ( (mbedtls_mpi_uint) 0x54 << 0 ) | ( (mbedtls_mpi_uint) 0xB5 << 8 ) | ( (mbedtls_mpi_uint) 0x39 << 16 ) | ( (mbedtls_mpi_uint) 0x8B << 24 ),
-    ( (mbedtls_mpi_uint) 0x26 << 0 ) | ( (mbedtls_mpi_uint) 0x28 << 8 ) | ( (mbedtls_mpi_uint) 0xCE << 16 ) | ( (mbedtls_mpi_uint) 0x22 << 24 ), ( (mbedtls_mpi_uint) 0xDD << 0 ) | ( (mbedtls_mpi_uint) 0xC7 << 8 ) | ( (mbedtls_mpi_uint) 0xA8 << 16 ) | ( (mbedtls_mpi_uint) 0x04 << 24 ),
+    ( (mbedtls_mpi_uint) (0x11) << 0 ) | ( (mbedtls_mpi_uint) (0x4C) << 8 ) | ( (mbedtls_mpi_uint) (0x50) << 16 ) | ( (mbedtls_mpi_uint) (0xFA) << 24 ), ( (mbedtls_mpi_uint) (0x96) << 0 ) | ( (mbedtls_mpi_uint) (0x86) << 8 ) | ( (mbedtls_mpi_uint) (0xB7) << 16 ) | ( (mbedtls_mpi_uint) (0x3A) << 24 ),
+    ( (mbedtls_mpi_uint) (0x94) << 0 ) | ( (mbedtls_mpi_uint) (0xC9) << 8 ) | ( (mbedtls_mpi_uint) (0xDB) << 16 ) | ( (mbedtls_mpi_uint) (0x95) << 24 ), ( (mbedtls_mpi_uint) (0x02) << 0 ) | ( (mbedtls_mpi_uint) (0x39) << 8 ) | ( (mbedtls_mpi_uint) (0xB4) << 16 ) | ( (mbedtls_mpi_uint) (0x7C) << 24 ),
+    ( (mbedtls_mpi_uint) (0xD5) << 0 ) | ( (mbedtls_mpi_uint) (0x62) << 8 ) | ( (mbedtls_mpi_uint) (0xEB) << 16 ) | ( (mbedtls_mpi_uint) (0x3E) << 24 ), ( (mbedtls_mpi_uint) (0xA5) << 0 ) | ( (mbedtls_mpi_uint) (0x0E) << 8 ) | ( (mbedtls_mpi_uint) (0x88) << 16 ) | ( (mbedtls_mpi_uint) (0x2E) << 24 ),
+    ( (mbedtls_mpi_uint) (0xA6) << 0 ) | ( (mbedtls_mpi_uint) (0xD2) << 8 ) | ( (mbedtls_mpi_uint) (0xDC) << 16 ) | ( (mbedtls_mpi_uint) (0x07) << 24 ), ( (mbedtls_mpi_uint) (0xE1) << 0 ) | ( (mbedtls_mpi_uint) (0x7D) << 8 ) | ( (mbedtls_mpi_uint) (0xB7) << 16 ) | ( (mbedtls_mpi_uint) (0x2F) << 24 ),
+    ( (mbedtls_mpi_uint) (0x7C) << 0 ) | ( (mbedtls_mpi_uint) (0x44) << 8 ) | ( (mbedtls_mpi_uint) (0xF0) << 16 ) | ( (mbedtls_mpi_uint) (0x16) << 24 ), ( (mbedtls_mpi_uint) (0x54) << 0 ) | ( (mbedtls_mpi_uint) (0xB5) << 8 ) | ( (mbedtls_mpi_uint) (0x39) << 16 ) | ( (mbedtls_mpi_uint) (0x8B) << 24 ),
+    ( (mbedtls_mpi_uint) (0x26) << 0 ) | ( (mbedtls_mpi_uint) (0x28) << 8 ) | ( (mbedtls_mpi_uint) (0xCE) << 16 ) | ( (mbedtls_mpi_uint) (0x22) << 24 ), ( (mbedtls_mpi_uint) (0xDD) << 0 ) | ( (mbedtls_mpi_uint) (0xC7) << 8 ) | ( (mbedtls_mpi_uint) (0xA8) << 16 ) | ( (mbedtls_mpi_uint) (0x04) << 24 ),
 };
 static const mbedtls_mpi_uint brainpoolP384r1_gx[] = {
-    ( (mbedtls_mpi_uint) 0x1E << 0 ) | ( (mbedtls_mpi_uint) 0xAF << 8 ) | ( (mbedtls_mpi_uint) 0xD4 << 16 ) | ( (mbedtls_mpi_uint) 0x47 << 24 ), ( (mbedtls_mpi_uint) 0xE2 << 0 ) | ( (mbedtls_mpi_uint) 0xB2 << 8 ) | ( (mbedtls_mpi_uint) 0x87 << 16 ) | ( (mbedtls_mpi_uint) 0xEF << 24 ),
-    ( (mbedtls_mpi_uint) 0xAA << 0 ) | ( (mbedtls_mpi_uint) 0x46 << 8 ) | ( (mbedtls_mpi_uint) 0xD6 << 16 ) | ( (mbedtls_mpi_uint) 0x36 << 24 ), ( (mbedtls_mpi_uint) 0x34 << 0 ) | ( (mbedtls_mpi_uint) 0xE0 << 8 ) | ( (mbedtls_mpi_uint) 0x26 << 16 ) | ( (mbedtls_mpi_uint) 0xE8 << 24 ),
-    ( (mbedtls_mpi_uint) 0xE8 << 0 ) | ( (mbedtls_mpi_uint) 0x10 << 8 ) | ( (mbedtls_mpi_uint) 0xBD << 16 ) | ( (mbedtls_mpi_uint) 0x0C << 24 ), ( (mbedtls_mpi_uint) 0xFE << 0 ) | ( (mbedtls_mpi_uint) 0xCA << 8 ) | ( (mbedtls_mpi_uint) 0x7F << 16 ) | ( (mbedtls_mpi_uint) 0xDB << 24 ),
-    ( (mbedtls_mpi_uint) 0xE3 << 0 ) | ( (mbedtls_mpi_uint) 0x4F << 8 ) | ( (mbedtls_mpi_uint) 0xF1 << 16 ) | ( (mbedtls_mpi_uint) 0x7E << 24 ), ( (mbedtls_mpi_uint) 0xE7 << 0 ) | ( (mbedtls_mpi_uint) 0xA3 << 8 ) | ( (mbedtls_mpi_uint) 0x47 << 16 ) | ( (mbedtls_mpi_uint) 0x88 << 24 ),
-    ( (mbedtls_mpi_uint) 0x6B << 0 ) | ( (mbedtls_mpi_uint) 0x3F << 8 ) | ( (mbedtls_mpi_uint) 0xC1 << 16 ) | ( (mbedtls_mpi_uint) 0xB7 << 24 ), ( (mbedtls_mpi_uint) 0x81 << 0 ) | ( (mbedtls_mpi_uint) 0x3A << 8 ) | ( (mbedtls_mpi_uint) 0xA6 << 16 ) | ( (mbedtls_mpi_uint) 0xA2 << 24 ),
-    ( (mbedtls_mpi_uint) 0xFF << 0 ) | ( (mbedtls_mpi_uint) 0x45 << 8 ) | ( (mbedtls_mpi_uint) 0xCF << 16 ) | ( (mbedtls_mpi_uint) 0x68 << 24 ), ( (mbedtls_mpi_uint) 0xF0 << 0 ) | ( (mbedtls_mpi_uint) 0x64 << 8 ) | ( (mbedtls_mpi_uint) 0x1C << 16 ) | ( (mbedtls_mpi_uint) 0x1D << 24 ),
+    ( (mbedtls_mpi_uint) (0x1E) << 0 ) | ( (mbedtls_mpi_uint) (0xAF) << 8 ) | ( (mbedtls_mpi_uint) (0xD4) << 16 ) | ( (mbedtls_mpi_uint) (0x47) << 24 ), ( (mbedtls_mpi_uint) (0xE2) << 0 ) | ( (mbedtls_mpi_uint) (0xB2) << 8 ) | ( (mbedtls_mpi_uint) (0x87) << 16 ) | ( (mbedtls_mpi_uint) (0xEF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xAA) << 0 ) | ( (mbedtls_mpi_uint) (0x46) << 8 ) | ( (mbedtls_mpi_uint) (0xD6) << 16 ) | ( (mbedtls_mpi_uint) (0x36) << 24 ), ( (mbedtls_mpi_uint) (0x34) << 0 ) | ( (mbedtls_mpi_uint) (0xE0) << 8 ) | ( (mbedtls_mpi_uint) (0x26) << 16 ) | ( (mbedtls_mpi_uint) (0xE8) << 24 ),
+    ( (mbedtls_mpi_uint) (0xE8) << 0 ) | ( (mbedtls_mpi_uint) (0x10) << 8 ) | ( (mbedtls_mpi_uint) (0xBD) << 16 ) | ( (mbedtls_mpi_uint) (0x0C) << 24 ), ( (mbedtls_mpi_uint) (0xFE) << 0 ) | ( (mbedtls_mpi_uint) (0xCA) << 8 ) | ( (mbedtls_mpi_uint) (0x7F) << 16 ) | ( (mbedtls_mpi_uint) (0xDB) << 24 ),
+    ( (mbedtls_mpi_uint) (0xE3) << 0 ) | ( (mbedtls_mpi_uint) (0x4F) << 8 ) | ( (mbedtls_mpi_uint) (0xF1) << 16 ) | ( (mbedtls_mpi_uint) (0x7E) << 24 ), ( (mbedtls_mpi_uint) (0xE7) << 0 ) | ( (mbedtls_mpi_uint) (0xA3) << 8 ) | ( (mbedtls_mpi_uint) (0x47) << 16 ) | ( (mbedtls_mpi_uint) (0x88) << 24 ),
+    ( (mbedtls_mpi_uint) (0x6B) << 0 ) | ( (mbedtls_mpi_uint) (0x3F) << 8 ) | ( (mbedtls_mpi_uint) (0xC1) << 16 ) | ( (mbedtls_mpi_uint) (0xB7) << 24 ), ( (mbedtls_mpi_uint) (0x81) << 0 ) | ( (mbedtls_mpi_uint) (0x3A) << 8 ) | ( (mbedtls_mpi_uint) (0xA6) << 16 ) | ( (mbedtls_mpi_uint) (0xA2) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFF) << 0 ) | ( (mbedtls_mpi_uint) (0x45) << 8 ) | ( (mbedtls_mpi_uint) (0xCF) << 16 ) | ( (mbedtls_mpi_uint) (0x68) << 24 ), ( (mbedtls_mpi_uint) (0xF0) << 0 ) | ( (mbedtls_mpi_uint) (0x64) << 8 ) | ( (mbedtls_mpi_uint) (0x1C) << 16 ) | ( (mbedtls_mpi_uint) (0x1D) << 24 ),
 };
 static const mbedtls_mpi_uint brainpoolP384r1_gy[] = {
-    ( (mbedtls_mpi_uint) 0x15 << 0 ) | ( (mbedtls_mpi_uint) 0x53 << 8 ) | ( (mbedtls_mpi_uint) 0x3C << 16 ) | ( (mbedtls_mpi_uint) 0x26 << 24 ), ( (mbedtls_mpi_uint) 0x41 << 0 ) | ( (mbedtls_mpi_uint) 0x03 << 8 ) | ( (mbedtls_mpi_uint) 0x82 << 16 ) | ( (mbedtls_mpi_uint) 0x42 << 24 ),
-    ( (mbedtls_mpi_uint) 0x11 << 0 ) | ( (mbedtls_mpi_uint) 0x81 << 8 ) | ( (mbedtls_mpi_uint) 0x91 << 16 ) | ( (mbedtls_mpi_uint) 0x77 << 24 ), ( (mbedtls_mpi_uint) 0x21 << 0 ) | ( (mbedtls_mpi_uint) 0x46 << 8 ) | ( (mbedtls_mpi_uint) 0x46 << 16 ) | ( (mbedtls_mpi_uint) 0x0E << 24 ),
-    ( (mbedtls_mpi_uint) 0x28 << 0 ) | ( (mbedtls_mpi_uint) 0x29 << 8 ) | ( (mbedtls_mpi_uint) 0x91 << 16 ) | ( (mbedtls_mpi_uint) 0xF9 << 24 ), ( (mbedtls_mpi_uint) 0x4F << 0 ) | ( (mbedtls_mpi_uint) 0x05 << 8 ) | ( (mbedtls_mpi_uint) 0x9C << 16 ) | ( (mbedtls_mpi_uint) 0xE1 << 24 ),
-    ( (mbedtls_mpi_uint) 0x64 << 0 ) | ( (mbedtls_mpi_uint) 0x58 << 8 ) | ( (mbedtls_mpi_uint) 0xEC << 16 ) | ( (mbedtls_mpi_uint) 0xFE << 24 ), ( (mbedtls_mpi_uint) 0x29 << 0 ) | ( (mbedtls_mpi_uint) 0x0B << 8 ) | ( (mbedtls_mpi_uint) 0xB7 << 16 ) | ( (mbedtls_mpi_uint) 0x62 << 24 ),
-    ( (mbedtls_mpi_uint) 0x52 << 0 ) | ( (mbedtls_mpi_uint) 0xD5 << 8 ) | ( (mbedtls_mpi_uint) 0xCF << 16 ) | ( (mbedtls_mpi_uint) 0x95 << 24 ), ( (mbedtls_mpi_uint) 0x8E << 0 ) | ( (mbedtls_mpi_uint) 0xEB << 8 ) | ( (mbedtls_mpi_uint) 0xB1 << 16 ) | ( (mbedtls_mpi_uint) 0x5C << 24 ),
-    ( (mbedtls_mpi_uint) 0xA4 << 0 ) | ( (mbedtls_mpi_uint) 0xC2 << 8 ) | ( (mbedtls_mpi_uint) 0xF9 << 16 ) | ( (mbedtls_mpi_uint) 0x20 << 24 ), ( (mbedtls_mpi_uint) 0x75 << 0 ) | ( (mbedtls_mpi_uint) 0x1D << 8 ) | ( (mbedtls_mpi_uint) 0xBE << 16 ) | ( (mbedtls_mpi_uint) 0x8A << 24 ),
+    ( (mbedtls_mpi_uint) (0x15) << 0 ) | ( (mbedtls_mpi_uint) (0x53) << 8 ) | ( (mbedtls_mpi_uint) (0x3C) << 16 ) | ( (mbedtls_mpi_uint) (0x26) << 24 ), ( (mbedtls_mpi_uint) (0x41) << 0 ) | ( (mbedtls_mpi_uint) (0x03) << 8 ) | ( (mbedtls_mpi_uint) (0x82) << 16 ) | ( (mbedtls_mpi_uint) (0x42) << 24 ),
+    ( (mbedtls_mpi_uint) (0x11) << 0 ) | ( (mbedtls_mpi_uint) (0x81) << 8 ) | ( (mbedtls_mpi_uint) (0x91) << 16 ) | ( (mbedtls_mpi_uint) (0x77) << 24 ), ( (mbedtls_mpi_uint) (0x21) << 0 ) | ( (mbedtls_mpi_uint) (0x46) << 8 ) | ( (mbedtls_mpi_uint) (0x46) << 16 ) | ( (mbedtls_mpi_uint) (0x0E) << 24 ),
+    ( (mbedtls_mpi_uint) (0x28) << 0 ) | ( (mbedtls_mpi_uint) (0x29) << 8 ) | ( (mbedtls_mpi_uint) (0x91) << 16 ) | ( (mbedtls_mpi_uint) (0xF9) << 24 ), ( (mbedtls_mpi_uint) (0x4F) << 0 ) | ( (mbedtls_mpi_uint) (0x05) << 8 ) | ( (mbedtls_mpi_uint) (0x9C) << 16 ) | ( (mbedtls_mpi_uint) (0xE1) << 24 ),
+    ( (mbedtls_mpi_uint) (0x64) << 0 ) | ( (mbedtls_mpi_uint) (0x58) << 8 ) | ( (mbedtls_mpi_uint) (0xEC) << 16 ) | ( (mbedtls_mpi_uint) (0xFE) << 24 ), ( (mbedtls_mpi_uint) (0x29) << 0 ) | ( (mbedtls_mpi_uint) (0x0B) << 8 ) | ( (mbedtls_mpi_uint) (0xB7) << 16 ) | ( (mbedtls_mpi_uint) (0x62) << 24 ),
+    ( (mbedtls_mpi_uint) (0x52) << 0 ) | ( (mbedtls_mpi_uint) (0xD5) << 8 ) | ( (mbedtls_mpi_uint) (0xCF) << 16 ) | ( (mbedtls_mpi_uint) (0x95) << 24 ), ( (mbedtls_mpi_uint) (0x8E) << 0 ) | ( (mbedtls_mpi_uint) (0xEB) << 8 ) | ( (mbedtls_mpi_uint) (0xB1) << 16 ) | ( (mbedtls_mpi_uint) (0x5C) << 24 ),
+    ( (mbedtls_mpi_uint) (0xA4) << 0 ) | ( (mbedtls_mpi_uint) (0xC2) << 8 ) | ( (mbedtls_mpi_uint) (0xF9) << 16 ) | ( (mbedtls_mpi_uint) (0x20) << 24 ), ( (mbedtls_mpi_uint) (0x75) << 0 ) | ( (mbedtls_mpi_uint) (0x1D) << 8 ) | ( (mbedtls_mpi_uint) (0xBE) << 16 ) | ( (mbedtls_mpi_uint) (0x8A) << 24 ),
 };
 static const mbedtls_mpi_uint brainpoolP384r1_n[] = {
-    ( (mbedtls_mpi_uint) 0x65 << 0 ) | ( (mbedtls_mpi_uint) 0x65 << 8 ) | ( (mbedtls_mpi_uint) 0x04 << 16 ) | ( (mbedtls_mpi_uint) 0xE9 << 24 ), ( (mbedtls_mpi_uint) 0x02 << 0 ) | ( (mbedtls_mpi_uint) 0x32 << 8 ) | ( (mbedtls_mpi_uint) 0x88 << 16 ) | ( (mbedtls_mpi_uint) 0x3B << 24 ),
-    ( (mbedtls_mpi_uint) 0x10 << 0 ) | ( (mbedtls_mpi_uint) 0xC3 << 8 ) | ( (mbedtls_mpi_uint) 0x7F << 16 ) | ( (mbedtls_mpi_uint) 0x6B << 24 ), ( (mbedtls_mpi_uint) 0xAF << 0 ) | ( (mbedtls_mpi_uint) 0xB6 << 8 ) | ( (mbedtls_mpi_uint) 0x3A << 16 ) | ( (mbedtls_mpi_uint) 0xCF << 24 ),
-    ( (mbedtls_mpi_uint) 0xA7 << 0 ) | ( (mbedtls_mpi_uint) 0x25 << 8 ) | ( (mbedtls_mpi_uint) 0x04 << 16 ) | ( (mbedtls_mpi_uint) 0xAC << 24 ), ( (mbedtls_mpi_uint) 0x6C << 0 ) | ( (mbedtls_mpi_uint) 0x6E << 8 ) | ( (mbedtls_mpi_uint) 0x16 << 16 ) | ( (mbedtls_mpi_uint) 0x1F << 24 ),
-    ( (mbedtls_mpi_uint) 0xB3 << 0 ) | ( (mbedtls_mpi_uint) 0x56 << 8 ) | ( (mbedtls_mpi_uint) 0x54 << 16 ) | ( (mbedtls_mpi_uint) 0xED << 24 ), ( (mbedtls_mpi_uint) 0x09 << 0 ) | ( (mbedtls_mpi_uint) 0x71 << 8 ) | ( (mbedtls_mpi_uint) 0x2F << 16 ) | ( (mbedtls_mpi_uint) 0x15 << 24 ),
-    ( (mbedtls_mpi_uint) 0xDF << 0 ) | ( (mbedtls_mpi_uint) 0x41 << 8 ) | ( (mbedtls_mpi_uint) 0xE6 << 16 ) | ( (mbedtls_mpi_uint) 0x50 << 24 ), ( (mbedtls_mpi_uint) 0x7E << 0 ) | ( (mbedtls_mpi_uint) 0x6F << 8 ) | ( (mbedtls_mpi_uint) 0x5D << 16 ) | ( (mbedtls_mpi_uint) 0x0F << 24 ),
-    ( (mbedtls_mpi_uint) 0x28 << 0 ) | ( (mbedtls_mpi_uint) 0x6D << 8 ) | ( (mbedtls_mpi_uint) 0x38 << 16 ) | ( (mbedtls_mpi_uint) 0xA3 << 24 ), ( (mbedtls_mpi_uint) 0x82 << 0 ) | ( (mbedtls_mpi_uint) 0x1E << 8 ) | ( (mbedtls_mpi_uint) 0xB9 << 16 ) | ( (mbedtls_mpi_uint) 0x8C << 24 ),
+    ( (mbedtls_mpi_uint) (0x65) << 0 ) | ( (mbedtls_mpi_uint) (0x65) << 8 ) | ( (mbedtls_mpi_uint) (0x04) << 16 ) | ( (mbedtls_mpi_uint) (0xE9) << 24 ), ( (mbedtls_mpi_uint) (0x02) << 0 ) | ( (mbedtls_mpi_uint) (0x32) << 8 ) | ( (mbedtls_mpi_uint) (0x88) << 16 ) | ( (mbedtls_mpi_uint) (0x3B) << 24 ),
+    ( (mbedtls_mpi_uint) (0x10) << 0 ) | ( (mbedtls_mpi_uint) (0xC3) << 8 ) | ( (mbedtls_mpi_uint) (0x7F) << 16 ) | ( (mbedtls_mpi_uint) (0x6B) << 24 ), ( (mbedtls_mpi_uint) (0xAF) << 0 ) | ( (mbedtls_mpi_uint) (0xB6) << 8 ) | ( (mbedtls_mpi_uint) (0x3A) << 16 ) | ( (mbedtls_mpi_uint) (0xCF) << 24 ),
+    ( (mbedtls_mpi_uint) (0xA7) << 0 ) | ( (mbedtls_mpi_uint) (0x25) << 8 ) | ( (mbedtls_mpi_uint) (0x04) << 16 ) | ( (mbedtls_mpi_uint) (0xAC) << 24 ), ( (mbedtls_mpi_uint) (0x6C) << 0 ) | ( (mbedtls_mpi_uint) (0x6E) << 8 ) | ( (mbedtls_mpi_uint) (0x16) << 16 ) | ( (mbedtls_mpi_uint) (0x1F) << 24 ),
+    ( (mbedtls_mpi_uint) (0xB3) << 0 ) | ( (mbedtls_mpi_uint) (0x56) << 8 ) | ( (mbedtls_mpi_uint) (0x54) << 16 ) | ( (mbedtls_mpi_uint) (0xED) << 24 ), ( (mbedtls_mpi_uint) (0x09) << 0 ) | ( (mbedtls_mpi_uint) (0x71) << 8 ) | ( (mbedtls_mpi_uint) (0x2F) << 16 ) | ( (mbedtls_mpi_uint) (0x15) << 24 ),
+    ( (mbedtls_mpi_uint) (0xDF) << 0 ) | ( (mbedtls_mpi_uint) (0x41) << 8 ) | ( (mbedtls_mpi_uint) (0xE6) << 16 ) | ( (mbedtls_mpi_uint) (0x50) << 24 ), ( (mbedtls_mpi_uint) (0x7E) << 0 ) | ( (mbedtls_mpi_uint) (0x6F) << 8 ) | ( (mbedtls_mpi_uint) (0x5D) << 16 ) | ( (mbedtls_mpi_uint) (0x0F) << 24 ),
+    ( (mbedtls_mpi_uint) (0x28) << 0 ) | ( (mbedtls_mpi_uint) (0x6D) << 8 ) | ( (mbedtls_mpi_uint) (0x38) << 16 ) | ( (mbedtls_mpi_uint) (0xA3) << 24 ), ( (mbedtls_mpi_uint) (0x82) << 0 ) | ( (mbedtls_mpi_uint) (0x1E) << 8 ) | ( (mbedtls_mpi_uint) (0xB9) << 16 ) | ( (mbedtls_mpi_uint) (0x8C) << 24 ),
 };
 
 
@@ -2188,64 +2246,64 @@ static const mbedtls_mpi_uint brainpoolP384r1_n[] = {
 
 
 static const mbedtls_mpi_uint brainpoolP512r1_p[] = {
-    ( (mbedtls_mpi_uint) 0xF3 << 0 ) | ( (mbedtls_mpi_uint) 0x48 << 8 ) | ( (mbedtls_mpi_uint) 0x3A << 16 ) | ( (mbedtls_mpi_uint) 0x58 << 24 ), ( (mbedtls_mpi_uint) 0x56 << 0 ) | ( (mbedtls_mpi_uint) 0x60 << 8 ) | ( (mbedtls_mpi_uint) 0xAA << 16 ) | ( (mbedtls_mpi_uint) 0x28 << 24 ),
-    ( (mbedtls_mpi_uint) 0x85 << 0 ) | ( (mbedtls_mpi_uint) 0xC6 << 8 ) | ( (mbedtls_mpi_uint) 0x82 << 16 ) | ( (mbedtls_mpi_uint) 0x2D << 24 ), ( (mbedtls_mpi_uint) 0x2F << 0 ) | ( (mbedtls_mpi_uint) 0xFF << 8 ) | ( (mbedtls_mpi_uint) 0x81 << 16 ) | ( (mbedtls_mpi_uint) 0x28 << 24 ),
-    ( (mbedtls_mpi_uint) 0xE6 << 0 ) | ( (mbedtls_mpi_uint) 0x80 << 8 ) | ( (mbedtls_mpi_uint) 0xA3 << 16 ) | ( (mbedtls_mpi_uint) 0xE6 << 24 ), ( (mbedtls_mpi_uint) 0x2A << 0 ) | ( (mbedtls_mpi_uint) 0xA1 << 8 ) | ( (mbedtls_mpi_uint) 0xCD << 16 ) | ( (mbedtls_mpi_uint) 0xAE << 24 ),
-    ( (mbedtls_mpi_uint) 0x42 << 0 ) | ( (mbedtls_mpi_uint) 0x68 << 8 ) | ( (mbedtls_mpi_uint) 0xC6 << 16 ) | ( (mbedtls_mpi_uint) 0x9B << 24 ), ( (mbedtls_mpi_uint) 0x00 << 0 ) | ( (mbedtls_mpi_uint) 0x9B << 8 ) | ( (mbedtls_mpi_uint) 0x4D << 16 ) | ( (mbedtls_mpi_uint) 0x7D << 24 ),
-    ( (mbedtls_mpi_uint) 0x71 << 0 ) | ( (mbedtls_mpi_uint) 0x08 << 8 ) | ( (mbedtls_mpi_uint) 0x33 << 16 ) | ( (mbedtls_mpi_uint) 0x70 << 24 ), ( (mbedtls_mpi_uint) 0xCA << 0 ) | ( (mbedtls_mpi_uint) 0x9C << 8 ) | ( (mbedtls_mpi_uint) 0x63 << 16 ) | ( (mbedtls_mpi_uint) 0xD6 << 24 ),
-    ( (mbedtls_mpi_uint) 0x0E << 0 ) | ( (mbedtls_mpi_uint) 0xD2 << 8 ) | ( (mbedtls_mpi_uint) 0xC9 << 16 ) | ( (mbedtls_mpi_uint) 0xB3 << 24 ), ( (mbedtls_mpi_uint) 0xB3 << 0 ) | ( (mbedtls_mpi_uint) 0x8D << 8 ) | ( (mbedtls_mpi_uint) 0x30 << 16 ) | ( (mbedtls_mpi_uint) 0xCB << 24 ),
-    ( (mbedtls_mpi_uint) 0x07 << 0 ) | ( (mbedtls_mpi_uint) 0xFC << 8 ) | ( (mbedtls_mpi_uint) 0xC9 << 16 ) | ( (mbedtls_mpi_uint) 0x33 << 24 ), ( (mbedtls_mpi_uint) 0xAE << 0 ) | ( (mbedtls_mpi_uint) 0xE6 << 8 ) | ( (mbedtls_mpi_uint) 0xD4 << 16 ) | ( (mbedtls_mpi_uint) 0x3F << 24 ),
-    ( (mbedtls_mpi_uint) 0x8B << 0 ) | ( (mbedtls_mpi_uint) 0xC4 << 8 ) | ( (mbedtls_mpi_uint) 0xE9 << 16 ) | ( (mbedtls_mpi_uint) 0xDB << 24 ), ( (mbedtls_mpi_uint) 0xB8 << 0 ) | ( (mbedtls_mpi_uint) 0x9D << 8 ) | ( (mbedtls_mpi_uint) 0xDD << 16 ) | ( (mbedtls_mpi_uint) 0xAA << 24 ),
+    ( (mbedtls_mpi_uint) (0xF3) << 0 ) | ( (mbedtls_mpi_uint) (0x48) << 8 ) | ( (mbedtls_mpi_uint) (0x3A) << 16 ) | ( (mbedtls_mpi_uint) (0x58) << 24 ), ( (mbedtls_mpi_uint) (0x56) << 0 ) | ( (mbedtls_mpi_uint) (0x60) << 8 ) | ( (mbedtls_mpi_uint) (0xAA) << 16 ) | ( (mbedtls_mpi_uint) (0x28) << 24 ),
+    ( (mbedtls_mpi_uint) (0x85) << 0 ) | ( (mbedtls_mpi_uint) (0xC6) << 8 ) | ( (mbedtls_mpi_uint) (0x82) << 16 ) | ( (mbedtls_mpi_uint) (0x2D) << 24 ), ( (mbedtls_mpi_uint) (0x2F) << 0 ) | ( (mbedtls_mpi_uint) (0xFF) << 8 ) | ( (mbedtls_mpi_uint) (0x81) << 16 ) | ( (mbedtls_mpi_uint) (0x28) << 24 ),
+    ( (mbedtls_mpi_uint) (0xE6) << 0 ) | ( (mbedtls_mpi_uint) (0x80) << 8 ) | ( (mbedtls_mpi_uint) (0xA3) << 16 ) | ( (mbedtls_mpi_uint) (0xE6) << 24 ), ( (mbedtls_mpi_uint) (0x2A) << 0 ) | ( (mbedtls_mpi_uint) (0xA1) << 8 ) | ( (mbedtls_mpi_uint) (0xCD) << 16 ) | ( (mbedtls_mpi_uint) (0xAE) << 24 ),
+    ( (mbedtls_mpi_uint) (0x42) << 0 ) | ( (mbedtls_mpi_uint) (0x68) << 8 ) | ( (mbedtls_mpi_uint) (0xC6) << 16 ) | ( (mbedtls_mpi_uint) (0x9B) << 24 ), ( (mbedtls_mpi_uint) (0x00) << 0 ) | ( (mbedtls_mpi_uint) (0x9B) << 8 ) | ( (mbedtls_mpi_uint) (0x4D) << 16 ) | ( (mbedtls_mpi_uint) (0x7D) << 24 ),
+    ( (mbedtls_mpi_uint) (0x71) << 0 ) | ( (mbedtls_mpi_uint) (0x08) << 8 ) | ( (mbedtls_mpi_uint) (0x33) << 16 ) | ( (mbedtls_mpi_uint) (0x70) << 24 ), ( (mbedtls_mpi_uint) (0xCA) << 0 ) | ( (mbedtls_mpi_uint) (0x9C) << 8 ) | ( (mbedtls_mpi_uint) (0x63) << 16 ) | ( (mbedtls_mpi_uint) (0xD6) << 24 ),
+    ( (mbedtls_mpi_uint) (0x0E) << 0 ) | ( (mbedtls_mpi_uint) (0xD2) << 8 ) | ( (mbedtls_mpi_uint) (0xC9) << 16 ) | ( (mbedtls_mpi_uint) (0xB3) << 24 ), ( (mbedtls_mpi_uint) (0xB3) << 0 ) | ( (mbedtls_mpi_uint) (0x8D) << 8 ) | ( (mbedtls_mpi_uint) (0x30) << 16 ) | ( (mbedtls_mpi_uint) (0xCB) << 24 ),
+    ( (mbedtls_mpi_uint) (0x07) << 0 ) | ( (mbedtls_mpi_uint) (0xFC) << 8 ) | ( (mbedtls_mpi_uint) (0xC9) << 16 ) | ( (mbedtls_mpi_uint) (0x33) << 24 ), ( (mbedtls_mpi_uint) (0xAE) << 0 ) | ( (mbedtls_mpi_uint) (0xE6) << 8 ) | ( (mbedtls_mpi_uint) (0xD4) << 16 ) | ( (mbedtls_mpi_uint) (0x3F) << 24 ),
+    ( (mbedtls_mpi_uint) (0x8B) << 0 ) | ( (mbedtls_mpi_uint) (0xC4) << 8 ) | ( (mbedtls_mpi_uint) (0xE9) << 16 ) | ( (mbedtls_mpi_uint) (0xDB) << 24 ), ( (mbedtls_mpi_uint) (0xB8) << 0 ) | ( (mbedtls_mpi_uint) (0x9D) << 8 ) | ( (mbedtls_mpi_uint) (0xDD) << 16 ) | ( (mbedtls_mpi_uint) (0xAA) << 24 ),
 };
 static const mbedtls_mpi_uint brainpoolP512r1_a[] = {
-    ( (mbedtls_mpi_uint) 0xCA << 0 ) | ( (mbedtls_mpi_uint) 0x94 << 8 ) | ( (mbedtls_mpi_uint) 0xFC << 16 ) | ( (mbedtls_mpi_uint) 0x77 << 24 ), ( (mbedtls_mpi_uint) 0x4D << 0 ) | ( (mbedtls_mpi_uint) 0xAC << 8 ) | ( (mbedtls_mpi_uint) 0xC1 << 16 ) | ( (mbedtls_mpi_uint) 0xE7 << 24 ),
-    ( (mbedtls_mpi_uint) 0xB9 << 0 ) | ( (mbedtls_mpi_uint) 0xC7 << 8 ) | ( (mbedtls_mpi_uint) 0xF2 << 16 ) | ( (mbedtls_mpi_uint) 0x2B << 24 ), ( (mbedtls_mpi_uint) 0xA7 << 0 ) | ( (mbedtls_mpi_uint) 0x17 << 8 ) | ( (mbedtls_mpi_uint) 0x11 << 16 ) | ( (mbedtls_mpi_uint) 0x7F << 24 ),
-    ( (mbedtls_mpi_uint) 0xB5 << 0 ) | ( (mbedtls_mpi_uint) 0xC8 << 8 ) | ( (mbedtls_mpi_uint) 0x9A << 16 ) | ( (mbedtls_mpi_uint) 0x8B << 24 ), ( (mbedtls_mpi_uint) 0xC9 << 0 ) | ( (mbedtls_mpi_uint) 0xF1 << 8 ) | ( (mbedtls_mpi_uint) 0x2E << 16 ) | ( (mbedtls_mpi_uint) 0x0A << 24 ),
-    ( (mbedtls_mpi_uint) 0xA1 << 0 ) | ( (mbedtls_mpi_uint) 0x3A << 8 ) | ( (mbedtls_mpi_uint) 0x25 << 16 ) | ( (mbedtls_mpi_uint) 0xA8 << 24 ), ( (mbedtls_mpi_uint) 0x5A << 0 ) | ( (mbedtls_mpi_uint) 0x5D << 8 ) | ( (mbedtls_mpi_uint) 0xED << 16 ) | ( (mbedtls_mpi_uint) 0x2D << 24 ),
-    ( (mbedtls_mpi_uint) 0xBC << 0 ) | ( (mbedtls_mpi_uint) 0x63 << 8 ) | ( (mbedtls_mpi_uint) 0x98 << 16 ) | ( (mbedtls_mpi_uint) 0xEA << 24 ), ( (mbedtls_mpi_uint) 0xCA << 0 ) | ( (mbedtls_mpi_uint) 0x41 << 8 ) | ( (mbedtls_mpi_uint) 0x34 << 16 ) | ( (mbedtls_mpi_uint) 0xA8 << 24 ),
-    ( (mbedtls_mpi_uint) 0x10 << 0 ) | ( (mbedtls_mpi_uint) 0x16 << 8 ) | ( (mbedtls_mpi_uint) 0xF9 << 16 ) | ( (mbedtls_mpi_uint) 0x3D << 24 ), ( (mbedtls_mpi_uint) 0x8D << 0 ) | ( (mbedtls_mpi_uint) 0xDD << 8 ) | ( (mbedtls_mpi_uint) 0xCB << 16 ) | ( (mbedtls_mpi_uint) 0x94 << 24 ),
-    ( (mbedtls_mpi_uint) 0xC5 << 0 ) | ( (mbedtls_mpi_uint) 0x4C << 8 ) | ( (mbedtls_mpi_uint) 0x23 << 16 ) | ( (mbedtls_mpi_uint) 0xAC << 24 ), ( (mbedtls_mpi_uint) 0x45 << 0 ) | ( (mbedtls_mpi_uint) 0x71 << 8 ) | ( (mbedtls_mpi_uint) 0x32 << 16 ) | ( (mbedtls_mpi_uint) 0xE2 << 24 ),
-    ( (mbedtls_mpi_uint) 0x89 << 0 ) | ( (mbedtls_mpi_uint) 0x3B << 8 ) | ( (mbedtls_mpi_uint) 0x60 << 16 ) | ( (mbedtls_mpi_uint) 0x8B << 24 ), ( (mbedtls_mpi_uint) 0x31 << 0 ) | ( (mbedtls_mpi_uint) 0xA3 << 8 ) | ( (mbedtls_mpi_uint) 0x30 << 16 ) | ( (mbedtls_mpi_uint) 0x78 << 24 ),
+    ( (mbedtls_mpi_uint) (0xCA) << 0 ) | ( (mbedtls_mpi_uint) (0x94) << 8 ) | ( (mbedtls_mpi_uint) (0xFC) << 16 ) | ( (mbedtls_mpi_uint) (0x77) << 24 ), ( (mbedtls_mpi_uint) (0x4D) << 0 ) | ( (mbedtls_mpi_uint) (0xAC) << 8 ) | ( (mbedtls_mpi_uint) (0xC1) << 16 ) | ( (mbedtls_mpi_uint) (0xE7) << 24 ),
+    ( (mbedtls_mpi_uint) (0xB9) << 0 ) | ( (mbedtls_mpi_uint) (0xC7) << 8 ) | ( (mbedtls_mpi_uint) (0xF2) << 16 ) | ( (mbedtls_mpi_uint) (0x2B) << 24 ), ( (mbedtls_mpi_uint) (0xA7) << 0 ) | ( (mbedtls_mpi_uint) (0x17) << 8 ) | ( (mbedtls_mpi_uint) (0x11) << 16 ) | ( (mbedtls_mpi_uint) (0x7F) << 24 ),
+    ( (mbedtls_mpi_uint) (0xB5) << 0 ) | ( (mbedtls_mpi_uint) (0xC8) << 8 ) | ( (mbedtls_mpi_uint) (0x9A) << 16 ) | ( (mbedtls_mpi_uint) (0x8B) << 24 ), ( (mbedtls_mpi_uint) (0xC9) << 0 ) | ( (mbedtls_mpi_uint) (0xF1) << 8 ) | ( (mbedtls_mpi_uint) (0x2E) << 16 ) | ( (mbedtls_mpi_uint) (0x0A) << 24 ),
+    ( (mbedtls_mpi_uint) (0xA1) << 0 ) | ( (mbedtls_mpi_uint) (0x3A) << 8 ) | ( (mbedtls_mpi_uint) (0x25) << 16 ) | ( (mbedtls_mpi_uint) (0xA8) << 24 ), ( (mbedtls_mpi_uint) (0x5A) << 0 ) | ( (mbedtls_mpi_uint) (0x5D) << 8 ) | ( (mbedtls_mpi_uint) (0xED) << 16 ) | ( (mbedtls_mpi_uint) (0x2D) << 24 ),
+    ( (mbedtls_mpi_uint) (0xBC) << 0 ) | ( (mbedtls_mpi_uint) (0x63) << 8 ) | ( (mbedtls_mpi_uint) (0x98) << 16 ) | ( (mbedtls_mpi_uint) (0xEA) << 24 ), ( (mbedtls_mpi_uint) (0xCA) << 0 ) | ( (mbedtls_mpi_uint) (0x41) << 8 ) | ( (mbedtls_mpi_uint) (0x34) << 16 ) | ( (mbedtls_mpi_uint) (0xA8) << 24 ),
+    ( (mbedtls_mpi_uint) (0x10) << 0 ) | ( (mbedtls_mpi_uint) (0x16) << 8 ) | ( (mbedtls_mpi_uint) (0xF9) << 16 ) | ( (mbedtls_mpi_uint) (0x3D) << 24 ), ( (mbedtls_mpi_uint) (0x8D) << 0 ) | ( (mbedtls_mpi_uint) (0xDD) << 8 ) | ( (mbedtls_mpi_uint) (0xCB) << 16 ) | ( (mbedtls_mpi_uint) (0x94) << 24 ),
+    ( (mbedtls_mpi_uint) (0xC5) << 0 ) | ( (mbedtls_mpi_uint) (0x4C) << 8 ) | ( (mbedtls_mpi_uint) (0x23) << 16 ) | ( (mbedtls_mpi_uint) (0xAC) << 24 ), ( (mbedtls_mpi_uint) (0x45) << 0 ) | ( (mbedtls_mpi_uint) (0x71) << 8 ) | ( (mbedtls_mpi_uint) (0x32) << 16 ) | ( (mbedtls_mpi_uint) (0xE2) << 24 ),
+    ( (mbedtls_mpi_uint) (0x89) << 0 ) | ( (mbedtls_mpi_uint) (0x3B) << 8 ) | ( (mbedtls_mpi_uint) (0x60) << 16 ) | ( (mbedtls_mpi_uint) (0x8B) << 24 ), ( (mbedtls_mpi_uint) (0x31) << 0 ) | ( (mbedtls_mpi_uint) (0xA3) << 8 ) | ( (mbedtls_mpi_uint) (0x30) << 16 ) | ( (mbedtls_mpi_uint) (0x78) << 24 ),
 };
 static const mbedtls_mpi_uint brainpoolP512r1_b[] = {
-    ( (mbedtls_mpi_uint) 0x23 << 0 ) | ( (mbedtls_mpi_uint) 0xF7 << 8 ) | ( (mbedtls_mpi_uint) 0x16 << 16 ) | ( (mbedtls_mpi_uint) 0x80 << 24 ), ( (mbedtls_mpi_uint) 0x63 << 0 ) | ( (mbedtls_mpi_uint) 0xBD << 8 ) | ( (mbedtls_mpi_uint) 0x09 << 16 ) | ( (mbedtls_mpi_uint) 0x28 << 24 ),
-    ( (mbedtls_mpi_uint) 0xDD << 0 ) | ( (mbedtls_mpi_uint) 0xE5 << 8 ) | ( (mbedtls_mpi_uint) 0xBA << 16 ) | ( (mbedtls_mpi_uint) 0x5E << 24 ), ( (mbedtls_mpi_uint) 0xB7 << 0 ) | ( (mbedtls_mpi_uint) 0x50 << 8 ) | ( (mbedtls_mpi_uint) 0x40 << 16 ) | ( (mbedtls_mpi_uint) 0x98 << 24 ),
-    ( (mbedtls_mpi_uint) 0x67 << 0 ) | ( (mbedtls_mpi_uint) 0x3E << 8 ) | ( (mbedtls_mpi_uint) 0x08 << 16 ) | ( (mbedtls_mpi_uint) 0xDC << 24 ), ( (mbedtls_mpi_uint) 0xCA << 0 ) | ( (mbedtls_mpi_uint) 0x94 << 8 ) | ( (mbedtls_mpi_uint) 0xFC << 16 ) | ( (mbedtls_mpi_uint) 0x77 << 24 ),
-    ( (mbedtls_mpi_uint) 0x4D << 0 ) | ( (mbedtls_mpi_uint) 0xAC << 8 ) | ( (mbedtls_mpi_uint) 0xC1 << 16 ) | ( (mbedtls_mpi_uint) 0xE7 << 24 ), ( (mbedtls_mpi_uint) 0xB9 << 0 ) | ( (mbedtls_mpi_uint) 0xC7 << 8 ) | ( (mbedtls_mpi_uint) 0xF2 << 16 ) | ( (mbedtls_mpi_uint) 0x2B << 24 ),
-    ( (mbedtls_mpi_uint) 0xA7 << 0 ) | ( (mbedtls_mpi_uint) 0x17 << 8 ) | ( (mbedtls_mpi_uint) 0x11 << 16 ) | ( (mbedtls_mpi_uint) 0x7F << 24 ), ( (mbedtls_mpi_uint) 0xB5 << 0 ) | ( (mbedtls_mpi_uint) 0xC8 << 8 ) | ( (mbedtls_mpi_uint) 0x9A << 16 ) | ( (mbedtls_mpi_uint) 0x8B << 24 ),
-    ( (mbedtls_mpi_uint) 0xC9 << 0 ) | ( (mbedtls_mpi_uint) 0xF1 << 8 ) | ( (mbedtls_mpi_uint) 0x2E << 16 ) | ( (mbedtls_mpi_uint) 0x0A << 24 ), ( (mbedtls_mpi_uint) 0xA1 << 0 ) | ( (mbedtls_mpi_uint) 0x3A << 8 ) | ( (mbedtls_mpi_uint) 0x25 << 16 ) | ( (mbedtls_mpi_uint) 0xA8 << 24 ),
-    ( (mbedtls_mpi_uint) 0x5A << 0 ) | ( (mbedtls_mpi_uint) 0x5D << 8 ) | ( (mbedtls_mpi_uint) 0xED << 16 ) | ( (mbedtls_mpi_uint) 0x2D << 24 ), ( (mbedtls_mpi_uint) 0xBC << 0 ) | ( (mbedtls_mpi_uint) 0x63 << 8 ) | ( (mbedtls_mpi_uint) 0x98 << 16 ) | ( (mbedtls_mpi_uint) 0xEA << 24 ),
-    ( (mbedtls_mpi_uint) 0xCA << 0 ) | ( (mbedtls_mpi_uint) 0x41 << 8 ) | ( (mbedtls_mpi_uint) 0x34 << 16 ) | ( (mbedtls_mpi_uint) 0xA8 << 24 ), ( (mbedtls_mpi_uint) 0x10 << 0 ) | ( (mbedtls_mpi_uint) 0x16 << 8 ) | ( (mbedtls_mpi_uint) 0xF9 << 16 ) | ( (mbedtls_mpi_uint) 0x3D << 24 ),
+    ( (mbedtls_mpi_uint) (0x23) << 0 ) | ( (mbedtls_mpi_uint) (0xF7) << 8 ) | ( (mbedtls_mpi_uint) (0x16) << 16 ) | ( (mbedtls_mpi_uint) (0x80) << 24 ), ( (mbedtls_mpi_uint) (0x63) << 0 ) | ( (mbedtls_mpi_uint) (0xBD) << 8 ) | ( (mbedtls_mpi_uint) (0x09) << 16 ) | ( (mbedtls_mpi_uint) (0x28) << 24 ),
+    ( (mbedtls_mpi_uint) (0xDD) << 0 ) | ( (mbedtls_mpi_uint) (0xE5) << 8 ) | ( (mbedtls_mpi_uint) (0xBA) << 16 ) | ( (mbedtls_mpi_uint) (0x5E) << 24 ), ( (mbedtls_mpi_uint) (0xB7) << 0 ) | ( (mbedtls_mpi_uint) (0x50) << 8 ) | ( (mbedtls_mpi_uint) (0x40) << 16 ) | ( (mbedtls_mpi_uint) (0x98) << 24 ),
+    ( (mbedtls_mpi_uint) (0x67) << 0 ) | ( (mbedtls_mpi_uint) (0x3E) << 8 ) | ( (mbedtls_mpi_uint) (0x08) << 16 ) | ( (mbedtls_mpi_uint) (0xDC) << 24 ), ( (mbedtls_mpi_uint) (0xCA) << 0 ) | ( (mbedtls_mpi_uint) (0x94) << 8 ) | ( (mbedtls_mpi_uint) (0xFC) << 16 ) | ( (mbedtls_mpi_uint) (0x77) << 24 ),
+    ( (mbedtls_mpi_uint) (0x4D) << 0 ) | ( (mbedtls_mpi_uint) (0xAC) << 8 ) | ( (mbedtls_mpi_uint) (0xC1) << 16 ) | ( (mbedtls_mpi_uint) (0xE7) << 24 ), ( (mbedtls_mpi_uint) (0xB9) << 0 ) | ( (mbedtls_mpi_uint) (0xC7) << 8 ) | ( (mbedtls_mpi_uint) (0xF2) << 16 ) | ( (mbedtls_mpi_uint) (0x2B) << 24 ),
+    ( (mbedtls_mpi_uint) (0xA7) << 0 ) | ( (mbedtls_mpi_uint) (0x17) << 8 ) | ( (mbedtls_mpi_uint) (0x11) << 16 ) | ( (mbedtls_mpi_uint) (0x7F) << 24 ), ( (mbedtls_mpi_uint) (0xB5) << 0 ) | ( (mbedtls_mpi_uint) (0xC8) << 8 ) | ( (mbedtls_mpi_uint) (0x9A) << 16 ) | ( (mbedtls_mpi_uint) (0x8B) << 24 ),
+    ( (mbedtls_mpi_uint) (0xC9) << 0 ) | ( (mbedtls_mpi_uint) (0xF1) << 8 ) | ( (mbedtls_mpi_uint) (0x2E) << 16 ) | ( (mbedtls_mpi_uint) (0x0A) << 24 ), ( (mbedtls_mpi_uint) (0xA1) << 0 ) | ( (mbedtls_mpi_uint) (0x3A) << 8 ) | ( (mbedtls_mpi_uint) (0x25) << 16 ) | ( (mbedtls_mpi_uint) (0xA8) << 24 ),
+    ( (mbedtls_mpi_uint) (0x5A) << 0 ) | ( (mbedtls_mpi_uint) (0x5D) << 8 ) | ( (mbedtls_mpi_uint) (0xED) << 16 ) | ( (mbedtls_mpi_uint) (0x2D) << 24 ), ( (mbedtls_mpi_uint) (0xBC) << 0 ) | ( (mbedtls_mpi_uint) (0x63) << 8 ) | ( (mbedtls_mpi_uint) (0x98) << 16 ) | ( (mbedtls_mpi_uint) (0xEA) << 24 ),
+    ( (mbedtls_mpi_uint) (0xCA) << 0 ) | ( (mbedtls_mpi_uint) (0x41) << 8 ) | ( (mbedtls_mpi_uint) (0x34) << 16 ) | ( (mbedtls_mpi_uint) (0xA8) << 24 ), ( (mbedtls_mpi_uint) (0x10) << 0 ) | ( (mbedtls_mpi_uint) (0x16) << 8 ) | ( (mbedtls_mpi_uint) (0xF9) << 16 ) | ( (mbedtls_mpi_uint) (0x3D) << 24 ),
 };
 static const mbedtls_mpi_uint brainpoolP512r1_gx[] = {
-    ( (mbedtls_mpi_uint) 0x22 << 0 ) | ( (mbedtls_mpi_uint) 0xF8 << 8 ) | ( (mbedtls_mpi_uint) 0xB9 << 16 ) | ( (mbedtls_mpi_uint) 0xBC << 24 ), ( (mbedtls_mpi_uint) 0x09 << 0 ) | ( (mbedtls_mpi_uint) 0x22 << 8 ) | ( (mbedtls_mpi_uint) 0x35 << 16 ) | ( (mbedtls_mpi_uint) 0x8B << 24 ),
-    ( (mbedtls_mpi_uint) 0x68 << 0 ) | ( (mbedtls_mpi_uint) 0x5E << 8 ) | ( (mbedtls_mpi_uint) 0x6A << 16 ) | ( (mbedtls_mpi_uint) 0x40 << 24 ), ( (mbedtls_mpi_uint) 0x47 << 0 ) | ( (mbedtls_mpi_uint) 0x50 << 8 ) | ( (mbedtls_mpi_uint) 0x6D << 16 ) | ( (mbedtls_mpi_uint) 0x7C << 24 ),
-    ( (mbedtls_mpi_uint) 0x5F << 0 ) | ( (mbedtls_mpi_uint) 0x7D << 8 ) | ( (mbedtls_mpi_uint) 0xB9 << 16 ) | ( (mbedtls_mpi_uint) 0x93 << 24 ), ( (mbedtls_mpi_uint) 0x7B << 0 ) | ( (mbedtls_mpi_uint) 0x68 << 8 ) | ( (mbedtls_mpi_uint) 0xD1 << 16 ) | ( (mbedtls_mpi_uint) 0x50 << 24 ),
-    ( (mbedtls_mpi_uint) 0x8D << 0 ) | ( (mbedtls_mpi_uint) 0xD4 << 8 ) | ( (mbedtls_mpi_uint) 0xD0 << 16 ) | ( (mbedtls_mpi_uint) 0xE2 << 24 ), ( (mbedtls_mpi_uint) 0x78 << 0 ) | ( (mbedtls_mpi_uint) 0x1F << 8 ) | ( (mbedtls_mpi_uint) 0x3B << 16 ) | ( (mbedtls_mpi_uint) 0xFF << 24 ),
-    ( (mbedtls_mpi_uint) 0x8E << 0 ) | ( (mbedtls_mpi_uint) 0x09 << 8 ) | ( (mbedtls_mpi_uint) 0xD0 << 16 ) | ( (mbedtls_mpi_uint) 0xF4 << 24 ), ( (mbedtls_mpi_uint) 0xEE << 0 ) | ( (mbedtls_mpi_uint) 0x62 << 8 ) | ( (mbedtls_mpi_uint) 0x3B << 16 ) | ( (mbedtls_mpi_uint) 0xB4 << 24 ),
-    ( (mbedtls_mpi_uint) 0xC1 << 0 ) | ( (mbedtls_mpi_uint) 0x16 << 8 ) | ( (mbedtls_mpi_uint) 0xD9 << 16 ) | ( (mbedtls_mpi_uint) 0xB5 << 24 ), ( (mbedtls_mpi_uint) 0x70 << 0 ) | ( (mbedtls_mpi_uint) 0x9F << 8 ) | ( (mbedtls_mpi_uint) 0xED << 16 ) | ( (mbedtls_mpi_uint) 0x85 << 24 ),
-    ( (mbedtls_mpi_uint) 0x93 << 0 ) | ( (mbedtls_mpi_uint) 0x6A << 8 ) | ( (mbedtls_mpi_uint) 0x4C << 16 ) | ( (mbedtls_mpi_uint) 0x9C << 24 ), ( (mbedtls_mpi_uint) 0x2E << 0 ) | ( (mbedtls_mpi_uint) 0x32 << 8 ) | ( (mbedtls_mpi_uint) 0x21 << 16 ) | ( (mbedtls_mpi_uint) 0x5A << 24 ),
-    ( (mbedtls_mpi_uint) 0x64 << 0 ) | ( (mbedtls_mpi_uint) 0xD9 << 8 ) | ( (mbedtls_mpi_uint) 0x2E << 16 ) | ( (mbedtls_mpi_uint) 0xD8 << 24 ), ( (mbedtls_mpi_uint) 0xBD << 0 ) | ( (mbedtls_mpi_uint) 0xE4 << 8 ) | ( (mbedtls_mpi_uint) 0xAE << 16 ) | ( (mbedtls_mpi_uint) 0x81 << 24 ),
+    ( (mbedtls_mpi_uint) (0x22) << 0 ) | ( (mbedtls_mpi_uint) (0xF8) << 8 ) | ( (mbedtls_mpi_uint) (0xB9) << 16 ) | ( (mbedtls_mpi_uint) (0xBC) << 24 ), ( (mbedtls_mpi_uint) (0x09) << 0 ) | ( (mbedtls_mpi_uint) (0x22) << 8 ) | ( (mbedtls_mpi_uint) (0x35) << 16 ) | ( (mbedtls_mpi_uint) (0x8B) << 24 ),
+    ( (mbedtls_mpi_uint) (0x68) << 0 ) | ( (mbedtls_mpi_uint) (0x5E) << 8 ) | ( (mbedtls_mpi_uint) (0x6A) << 16 ) | ( (mbedtls_mpi_uint) (0x40) << 24 ), ( (mbedtls_mpi_uint) (0x47) << 0 ) | ( (mbedtls_mpi_uint) (0x50) << 8 ) | ( (mbedtls_mpi_uint) (0x6D) << 16 ) | ( (mbedtls_mpi_uint) (0x7C) << 24 ),
+    ( (mbedtls_mpi_uint) (0x5F) << 0 ) | ( (mbedtls_mpi_uint) (0x7D) << 8 ) | ( (mbedtls_mpi_uint) (0xB9) << 16 ) | ( (mbedtls_mpi_uint) (0x93) << 24 ), ( (mbedtls_mpi_uint) (0x7B) << 0 ) | ( (mbedtls_mpi_uint) (0x68) << 8 ) | ( (mbedtls_mpi_uint) (0xD1) << 16 ) | ( (mbedtls_mpi_uint) (0x50) << 24 ),
+    ( (mbedtls_mpi_uint) (0x8D) << 0 ) | ( (mbedtls_mpi_uint) (0xD4) << 8 ) | ( (mbedtls_mpi_uint) (0xD0) << 16 ) | ( (mbedtls_mpi_uint) (0xE2) << 24 ), ( (mbedtls_mpi_uint) (0x78) << 0 ) | ( (mbedtls_mpi_uint) (0x1F) << 8 ) | ( (mbedtls_mpi_uint) (0x3B) << 16 ) | ( (mbedtls_mpi_uint) (0xFF) << 24 ),
+    ( (mbedtls_mpi_uint) (0x8E) << 0 ) | ( (mbedtls_mpi_uint) (0x09) << 8 ) | ( (mbedtls_mpi_uint) (0xD0) << 16 ) | ( (mbedtls_mpi_uint) (0xF4) << 24 ), ( (mbedtls_mpi_uint) (0xEE) << 0 ) | ( (mbedtls_mpi_uint) (0x62) << 8 ) | ( (mbedtls_mpi_uint) (0x3B) << 16 ) | ( (mbedtls_mpi_uint) (0xB4) << 24 ),
+    ( (mbedtls_mpi_uint) (0xC1) << 0 ) | ( (mbedtls_mpi_uint) (0x16) << 8 ) | ( (mbedtls_mpi_uint) (0xD9) << 16 ) | ( (mbedtls_mpi_uint) (0xB5) << 24 ), ( (mbedtls_mpi_uint) (0x70) << 0 ) | ( (mbedtls_mpi_uint) (0x9F) << 8 ) | ( (mbedtls_mpi_uint) (0xED) << 16 ) | ( (mbedtls_mpi_uint) (0x85) << 24 ),
+    ( (mbedtls_mpi_uint) (0x93) << 0 ) | ( (mbedtls_mpi_uint) (0x6A) << 8 ) | ( (mbedtls_mpi_uint) (0x4C) << 16 ) | ( (mbedtls_mpi_uint) (0x9C) << 24 ), ( (mbedtls_mpi_uint) (0x2E) << 0 ) | ( (mbedtls_mpi_uint) (0x32) << 8 ) | ( (mbedtls_mpi_uint) (0x21) << 16 ) | ( (mbedtls_mpi_uint) (0x5A) << 24 ),
+    ( (mbedtls_mpi_uint) (0x64) << 0 ) | ( (mbedtls_mpi_uint) (0xD9) << 8 ) | ( (mbedtls_mpi_uint) (0x2E) << 16 ) | ( (mbedtls_mpi_uint) (0xD8) << 24 ), ( (mbedtls_mpi_uint) (0xBD) << 0 ) | ( (mbedtls_mpi_uint) (0xE4) << 8 ) | ( (mbedtls_mpi_uint) (0xAE) << 16 ) | ( (mbedtls_mpi_uint) (0x81) << 24 ),
 };
 static const mbedtls_mpi_uint brainpoolP512r1_gy[] = {
-    ( (mbedtls_mpi_uint) 0x92 << 0 ) | ( (mbedtls_mpi_uint) 0x08 << 8 ) | ( (mbedtls_mpi_uint) 0xD8 << 16 ) | ( (mbedtls_mpi_uint) 0x3A << 24 ), ( (mbedtls_mpi_uint) 0x0F << 0 ) | ( (mbedtls_mpi_uint) 0x1E << 8 ) | ( (mbedtls_mpi_uint) 0xCD << 16 ) | ( (mbedtls_mpi_uint) 0x78 << 24 ),
-    ( (mbedtls_mpi_uint) 0x06 << 0 ) | ( (mbedtls_mpi_uint) 0x54 << 8 ) | ( (mbedtls_mpi_uint) 0xF0 << 16 ) | ( (mbedtls_mpi_uint) 0xA8 << 24 ), ( (mbedtls_mpi_uint) 0x2F << 0 ) | ( (mbedtls_mpi_uint) 0x2B << 8 ) | ( (mbedtls_mpi_uint) 0xCA << 16 ) | ( (mbedtls_mpi_uint) 0xD1 << 24 ),
-    ( (mbedtls_mpi_uint) 0xAE << 0 ) | ( (mbedtls_mpi_uint) 0x63 << 8 ) | ( (mbedtls_mpi_uint) 0x27 << 16 ) | ( (mbedtls_mpi_uint) 0x8A << 24 ), ( (mbedtls_mpi_uint) 0xD8 << 0 ) | ( (mbedtls_mpi_uint) 0x4B << 8 ) | ( (mbedtls_mpi_uint) 0xCA << 16 ) | ( (mbedtls_mpi_uint) 0x5B << 24 ),
-    ( (mbedtls_mpi_uint) 0x5E << 0 ) | ( (mbedtls_mpi_uint) 0x48 << 8 ) | ( (mbedtls_mpi_uint) 0x5F << 16 ) | ( (mbedtls_mpi_uint) 0x4A << 24 ), ( (mbedtls_mpi_uint) 0x49 << 0 ) | ( (mbedtls_mpi_uint) 0xDE << 8 ) | ( (mbedtls_mpi_uint) 0xDC << 16 ) | ( (mbedtls_mpi_uint) 0xB2 << 24 ),
-    ( (mbedtls_mpi_uint) 0x11 << 0 ) | ( (mbedtls_mpi_uint) 0x81 << 8 ) | ( (mbedtls_mpi_uint) 0x1F << 16 ) | ( (mbedtls_mpi_uint) 0x88 << 24 ), ( (mbedtls_mpi_uint) 0x5B << 0 ) | ( (mbedtls_mpi_uint) 0xC5 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0xA0 << 24 ),
-    ( (mbedtls_mpi_uint) 0x1A << 0 ) | ( (mbedtls_mpi_uint) 0x7B << 8 ) | ( (mbedtls_mpi_uint) 0xA5 << 16 ) | ( (mbedtls_mpi_uint) 0x24 << 24 ), ( (mbedtls_mpi_uint) 0x00 << 0 ) | ( (mbedtls_mpi_uint) 0xF7 << 8 ) | ( (mbedtls_mpi_uint) 0x09 << 16 ) | ( (mbedtls_mpi_uint) 0xF2 << 24 ),
-    ( (mbedtls_mpi_uint) 0xFD << 0 ) | ( (mbedtls_mpi_uint) 0x22 << 8 ) | ( (mbedtls_mpi_uint) 0x78 << 16 ) | ( (mbedtls_mpi_uint) 0xCF << 24 ), ( (mbedtls_mpi_uint) 0xA9 << 0 ) | ( (mbedtls_mpi_uint) 0xBF << 8 ) | ( (mbedtls_mpi_uint) 0xEA << 16 ) | ( (mbedtls_mpi_uint) 0xC0 << 24 ),
-    ( (mbedtls_mpi_uint) 0xEC << 0 ) | ( (mbedtls_mpi_uint) 0x32 << 8 ) | ( (mbedtls_mpi_uint) 0x63 << 16 ) | ( (mbedtls_mpi_uint) 0x56 << 24 ), ( (mbedtls_mpi_uint) 0x5D << 0 ) | ( (mbedtls_mpi_uint) 0x38 << 8 ) | ( (mbedtls_mpi_uint) 0xDE << 16 ) | ( (mbedtls_mpi_uint) 0x7D << 24 ),
+    ( (mbedtls_mpi_uint) (0x92) << 0 ) | ( (mbedtls_mpi_uint) (0x08) << 8 ) | ( (mbedtls_mpi_uint) (0xD8) << 16 ) | ( (mbedtls_mpi_uint) (0x3A) << 24 ), ( (mbedtls_mpi_uint) (0x0F) << 0 ) | ( (mbedtls_mpi_uint) (0x1E) << 8 ) | ( (mbedtls_mpi_uint) (0xCD) << 16 ) | ( (mbedtls_mpi_uint) (0x78) << 24 ),
+    ( (mbedtls_mpi_uint) (0x06) << 0 ) | ( (mbedtls_mpi_uint) (0x54) << 8 ) | ( (mbedtls_mpi_uint) (0xF0) << 16 ) | ( (mbedtls_mpi_uint) (0xA8) << 24 ), ( (mbedtls_mpi_uint) (0x2F) << 0 ) | ( (mbedtls_mpi_uint) (0x2B) << 8 ) | ( (mbedtls_mpi_uint) (0xCA) << 16 ) | ( (mbedtls_mpi_uint) (0xD1) << 24 ),
+    ( (mbedtls_mpi_uint) (0xAE) << 0 ) | ( (mbedtls_mpi_uint) (0x63) << 8 ) | ( (mbedtls_mpi_uint) (0x27) << 16 ) | ( (mbedtls_mpi_uint) (0x8A) << 24 ), ( (mbedtls_mpi_uint) (0xD8) << 0 ) | ( (mbedtls_mpi_uint) (0x4B) << 8 ) | ( (mbedtls_mpi_uint) (0xCA) << 16 ) | ( (mbedtls_mpi_uint) (0x5B) << 24 ),
+    ( (mbedtls_mpi_uint) (0x5E) << 0 ) | ( (mbedtls_mpi_uint) (0x48) << 8 ) | ( (mbedtls_mpi_uint) (0x5F) << 16 ) | ( (mbedtls_mpi_uint) (0x4A) << 24 ), ( (mbedtls_mpi_uint) (0x49) << 0 ) | ( (mbedtls_mpi_uint) (0xDE) << 8 ) | ( (mbedtls_mpi_uint) (0xDC) << 16 ) | ( (mbedtls_mpi_uint) (0xB2) << 24 ),
+    ( (mbedtls_mpi_uint) (0x11) << 0 ) | ( (mbedtls_mpi_uint) (0x81) << 8 ) | ( (mbedtls_mpi_uint) (0x1F) << 16 ) | ( (mbedtls_mpi_uint) (0x88) << 24 ), ( (mbedtls_mpi_uint) (0x5B) << 0 ) | ( (mbedtls_mpi_uint) (0xC5) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0xA0) << 24 ),
+    ( (mbedtls_mpi_uint) (0x1A) << 0 ) | ( (mbedtls_mpi_uint) (0x7B) << 8 ) | ( (mbedtls_mpi_uint) (0xA5) << 16 ) | ( (mbedtls_mpi_uint) (0x24) << 24 ), ( (mbedtls_mpi_uint) (0x00) << 0 ) | ( (mbedtls_mpi_uint) (0xF7) << 8 ) | ( (mbedtls_mpi_uint) (0x09) << 16 ) | ( (mbedtls_mpi_uint) (0xF2) << 24 ),
+    ( (mbedtls_mpi_uint) (0xFD) << 0 ) | ( (mbedtls_mpi_uint) (0x22) << 8 ) | ( (mbedtls_mpi_uint) (0x78) << 16 ) | ( (mbedtls_mpi_uint) (0xCF) << 24 ), ( (mbedtls_mpi_uint) (0xA9) << 0 ) | ( (mbedtls_mpi_uint) (0xBF) << 8 ) | ( (mbedtls_mpi_uint) (0xEA) << 16 ) | ( (mbedtls_mpi_uint) (0xC0) << 24 ),
+    ( (mbedtls_mpi_uint) (0xEC) << 0 ) | ( (mbedtls_mpi_uint) (0x32) << 8 ) | ( (mbedtls_mpi_uint) (0x63) << 16 ) | ( (mbedtls_mpi_uint) (0x56) << 24 ), ( (mbedtls_mpi_uint) (0x5D) << 0 ) | ( (mbedtls_mpi_uint) (0x38) << 8 ) | ( (mbedtls_mpi_uint) (0xDE) << 16 ) | ( (mbedtls_mpi_uint) (0x7D) << 24 ),
 };
 static const mbedtls_mpi_uint brainpoolP512r1_n[] = {
-    ( (mbedtls_mpi_uint) 0x69 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0xA9 << 16 ) | ( (mbedtls_mpi_uint) 0x9C << 24 ), ( (mbedtls_mpi_uint) 0x82 << 0 ) | ( (mbedtls_mpi_uint) 0x96 << 8 ) | ( (mbedtls_mpi_uint) 0x87 << 16 ) | ( (mbedtls_mpi_uint) 0xB5 << 24 ),
-    ( (mbedtls_mpi_uint) 0xDD << 0 ) | ( (mbedtls_mpi_uint) 0xDA << 8 ) | ( (mbedtls_mpi_uint) 0x5D << 16 ) | ( (mbedtls_mpi_uint) 0x08 << 24 ), ( (mbedtls_mpi_uint) 0x81 << 0 ) | ( (mbedtls_mpi_uint) 0xD3 << 8 ) | ( (mbedtls_mpi_uint) 0xB1 << 16 ) | ( (mbedtls_mpi_uint) 0x1D << 24 ),
-    ( (mbedtls_mpi_uint) 0x47 << 0 ) | ( (mbedtls_mpi_uint) 0x10 << 8 ) | ( (mbedtls_mpi_uint) 0xAC << 16 ) | ( (mbedtls_mpi_uint) 0x7F << 24 ), ( (mbedtls_mpi_uint) 0x19 << 0 ) | ( (mbedtls_mpi_uint) 0x61 << 8 ) | ( (mbedtls_mpi_uint) 0x86 << 16 ) | ( (mbedtls_mpi_uint) 0x41 << 24 ),
-    ( (mbedtls_mpi_uint) 0x19 << 0 ) | ( (mbedtls_mpi_uint) 0x26 << 8 ) | ( (mbedtls_mpi_uint) 0xA9 << 16 ) | ( (mbedtls_mpi_uint) 0x4C << 24 ), ( (mbedtls_mpi_uint) 0x41 << 0 ) | ( (mbedtls_mpi_uint) 0x5C << 8 ) | ( (mbedtls_mpi_uint) 0x3E << 16 ) | ( (mbedtls_mpi_uint) 0x55 << 24 ),
-    ( (mbedtls_mpi_uint) 0x70 << 0 ) | ( (mbedtls_mpi_uint) 0x08 << 8 ) | ( (mbedtls_mpi_uint) 0x33 << 16 ) | ( (mbedtls_mpi_uint) 0x70 << 24 ), ( (mbedtls_mpi_uint) 0xCA << 0 ) | ( (mbedtls_mpi_uint) 0x9C << 8 ) | ( (mbedtls_mpi_uint) 0x63 << 16 ) | ( (mbedtls_mpi_uint) 0xD6 << 24 ),
-    ( (mbedtls_mpi_uint) 0x0E << 0 ) | ( (mbedtls_mpi_uint) 0xD2 << 8 ) | ( (mbedtls_mpi_uint) 0xC9 << 16 ) | ( (mbedtls_mpi_uint) 0xB3 << 24 ), ( (mbedtls_mpi_uint) 0xB3 << 0 ) | ( (mbedtls_mpi_uint) 0x8D << 8 ) | ( (mbedtls_mpi_uint) 0x30 << 16 ) | ( (mbedtls_mpi_uint) 0xCB << 24 ),
-    ( (mbedtls_mpi_uint) 0x07 << 0 ) | ( (mbedtls_mpi_uint) 0xFC << 8 ) | ( (mbedtls_mpi_uint) 0xC9 << 16 ) | ( (mbedtls_mpi_uint) 0x33 << 24 ), ( (mbedtls_mpi_uint) 0xAE << 0 ) | ( (mbedtls_mpi_uint) 0xE6 << 8 ) | ( (mbedtls_mpi_uint) 0xD4 << 16 ) | ( (mbedtls_mpi_uint) 0x3F << 24 ),
-    ( (mbedtls_mpi_uint) 0x8B << 0 ) | ( (mbedtls_mpi_uint) 0xC4 << 8 ) | ( (mbedtls_mpi_uint) 0xE9 << 16 ) | ( (mbedtls_mpi_uint) 0xDB << 24 ), ( (mbedtls_mpi_uint) 0xB8 << 0 ) | ( (mbedtls_mpi_uint) 0x9D << 8 ) | ( (mbedtls_mpi_uint) 0xDD << 16 ) | ( (mbedtls_mpi_uint) 0xAA << 24 ),
+    ( (mbedtls_mpi_uint) (0x69) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0xA9) << 16 ) | ( (mbedtls_mpi_uint) (0x9C) << 24 ), ( (mbedtls_mpi_uint) (0x82) << 0 ) | ( (mbedtls_mpi_uint) (0x96) << 8 ) | ( (mbedtls_mpi_uint) (0x87) << 16 ) | ( (mbedtls_mpi_uint) (0xB5) << 24 ),
+    ( (mbedtls_mpi_uint) (0xDD) << 0 ) | ( (mbedtls_mpi_uint) (0xDA) << 8 ) | ( (mbedtls_mpi_uint) (0x5D) << 16 ) | ( (mbedtls_mpi_uint) (0x08) << 24 ), ( (mbedtls_mpi_uint) (0x81) << 0 ) | ( (mbedtls_mpi_uint) (0xD3) << 8 ) | ( (mbedtls_mpi_uint) (0xB1) << 16 ) | ( (mbedtls_mpi_uint) (0x1D) << 24 ),
+    ( (mbedtls_mpi_uint) (0x47) << 0 ) | ( (mbedtls_mpi_uint) (0x10) << 8 ) | ( (mbedtls_mpi_uint) (0xAC) << 16 ) | ( (mbedtls_mpi_uint) (0x7F) << 24 ), ( (mbedtls_mpi_uint) (0x19) << 0 ) | ( (mbedtls_mpi_uint) (0x61) << 8 ) | ( (mbedtls_mpi_uint) (0x86) << 16 ) | ( (mbedtls_mpi_uint) (0x41) << 24 ),
+    ( (mbedtls_mpi_uint) (0x19) << 0 ) | ( (mbedtls_mpi_uint) (0x26) << 8 ) | ( (mbedtls_mpi_uint) (0xA9) << 16 ) | ( (mbedtls_mpi_uint) (0x4C) << 24 ), ( (mbedtls_mpi_uint) (0x41) << 0 ) | ( (mbedtls_mpi_uint) (0x5C) << 8 ) | ( (mbedtls_mpi_uint) (0x3E) << 16 ) | ( (mbedtls_mpi_uint) (0x55) << 24 ),
+    ( (mbedtls_mpi_uint) (0x70) << 0 ) | ( (mbedtls_mpi_uint) (0x08) << 8 ) | ( (mbedtls_mpi_uint) (0x33) << 16 ) | ( (mbedtls_mpi_uint) (0x70) << 24 ), ( (mbedtls_mpi_uint) (0xCA) << 0 ) | ( (mbedtls_mpi_uint) (0x9C) << 8 ) | ( (mbedtls_mpi_uint) (0x63) << 16 ) | ( (mbedtls_mpi_uint) (0xD6) << 24 ),
+    ( (mbedtls_mpi_uint) (0x0E) << 0 ) | ( (mbedtls_mpi_uint) (0xD2) << 8 ) | ( (mbedtls_mpi_uint) (0xC9) << 16 ) | ( (mbedtls_mpi_uint) (0xB3) << 24 ), ( (mbedtls_mpi_uint) (0xB3) << 0 ) | ( (mbedtls_mpi_uint) (0x8D) << 8 ) | ( (mbedtls_mpi_uint) (0x30) << 16 ) | ( (mbedtls_mpi_uint) (0xCB) << 24 ),
+    ( (mbedtls_mpi_uint) (0x07) << 0 ) | ( (mbedtls_mpi_uint) (0xFC) << 8 ) | ( (mbedtls_mpi_uint) (0xC9) << 16 ) | ( (mbedtls_mpi_uint) (0x33) << 24 ), ( (mbedtls_mpi_uint) (0xAE) << 0 ) | ( (mbedtls_mpi_uint) (0xE6) << 8 ) | ( (mbedtls_mpi_uint) (0xD4) << 16 ) | ( (mbedtls_mpi_uint) (0x3F) << 24 ),
+    ( (mbedtls_mpi_uint) (0x8B) << 0 ) | ( (mbedtls_mpi_uint) (0xC4) << 8 ) | ( (mbedtls_mpi_uint) (0xE9) << 16 ) | ( (mbedtls_mpi_uint) (0xDB) << 24 ), ( (mbedtls_mpi_uint) (0xB8) << 0 ) | ( (mbedtls_mpi_uint) (0x9D) << 8 ) | ( (mbedtls_mpi_uint) (0xDD) << 16 ) | ( (mbedtls_mpi_uint) (0xAA) << 24 ),
 };
 
 
@@ -2284,9 +2342,9 @@ static int ecp_group_load( mbedtls_ecp_group *grp,
 {
     ecp_mpi_load( &grp->P, p, plen );
     if( a != 
-# 586 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c" 3 4
+# 593 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c" 3 4
             ((void *)0) 
-# 586 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
+# 593 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
                  )
         ecp_mpi_load( &grp->A, a, alen );
     ecp_mpi_load( &grp->B, b, blen );
@@ -2320,7 +2378,7 @@ static int ecp_mod_p384( mbedtls_mpi * );
 
 
 static int ecp_mod_p521( mbedtls_mpi * );
-# 628 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
+# 635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
 static int ecp_mod_p255( mbedtls_mpi * );
 
 
@@ -2334,29 +2392,29 @@ static int ecp_mod_p224k1( mbedtls_mpi * );
 
 
 static int ecp_mod_p256k1( mbedtls_mpi * );
-# 663 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
+# 670 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
 static int ecp_use_curve25519( mbedtls_ecp_group *grp )
 {
     int ret;
 
 
-    do { if( ( ret = mbedtls_mpi_read_string( &grp->A, 16, "01DB42" ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_read_string( &grp->A, 16, "01DB42" )) ) != 0 ) goto cleanup; } while( 0 );
 
 
-    do { if( ( ret = mbedtls_mpi_lset( &grp->P, 1 ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_shift_l( &grp->P, 255 ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_sub_int( &grp->P, &grp->P, 19 ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_lset( &grp->P, 1 )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_shift_l( &grp->P, 255 )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_sub_int( &grp->P, &grp->P, 19 )) ) != 0 ) goto cleanup; } while( 0 );
     grp->pbits = mbedtls_mpi_bitlen( &grp->P );
 
 
-    do { if( ( ret = mbedtls_mpi_read_string( &grp->N, 16, "14DEF9DEA2F79CD65812631A5CF5D3ED" ) ) != 0 ) goto cleanup; } while( 0 )
+    do { if( ( ret = (mbedtls_mpi_read_string( &grp->N, 16, "14DEF9DEA2F79CD65812631A5CF5D3ED" )) ) != 0 ) goto cleanup; } while( 0 )
                                                                                     ;
-    do { if( ( ret = mbedtls_mpi_set_bit( &grp->N, 252, 1 ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_set_bit( &grp->N, 252, 1 )) ) != 0 ) goto cleanup; } while( 0 );
 
 
 
-    do { if( ( ret = mbedtls_mpi_lset( &grp->G.X, 9 ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_lset( &grp->G.Z, 1 ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_lset( &grp->G.X, 9 )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_lset( &grp->G.Z, 1 )) ) != 0 ) goto cleanup; } while( 0 );
     mbedtls_mpi_free( &grp->G.Y );
 
 
@@ -2368,9 +2426,10 @@ cleanup:
 
     return( ret );
 }
-# 747 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
+# 754 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
 int mbedtls_ecp_group_load( mbedtls_ecp_group *grp, mbedtls_ecp_group_id id )
 {
+    do { } while( 0 );
     mbedtls_ecp_group_free( grp );
 
     grp->id = id;
@@ -2381,9 +2440,9 @@ int mbedtls_ecp_group_load( mbedtls_ecp_group *grp, mbedtls_ecp_group_id id )
         case MBEDTLS_ECP_DP_SECP192R1:
             grp->modp = ecp_mod_p192;;
             return( ecp_group_load( grp, secp192r1_p, sizeof( secp192r1_p ), 
-# 758 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c" 3 4
+# 766 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c" 3 4
                    ((void *)0)
-# 758 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
+# 766 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
                    , 0, secp192r1_b, sizeof( secp192r1_b ), secp192r1_gx, sizeof( secp192r1_gx ), secp192r1_gy, sizeof( secp192r1_gy ), secp192r1_n, sizeof( secp192r1_n ) ) );
 
 
@@ -2391,9 +2450,9 @@ int mbedtls_ecp_group_load( mbedtls_ecp_group *grp, mbedtls_ecp_group_id id )
         case MBEDTLS_ECP_DP_SECP224R1:
             grp->modp = ecp_mod_p224;;
             return( ecp_group_load( grp, secp224r1_p, sizeof( secp224r1_p ), 
-# 764 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c" 3 4
+# 772 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c" 3 4
                    ((void *)0)
-# 764 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
+# 772 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
                    , 0, secp224r1_b, sizeof( secp224r1_b ), secp224r1_gx, sizeof( secp224r1_gx ), secp224r1_gy, sizeof( secp224r1_gy ), secp224r1_n, sizeof( secp224r1_n ) ) );
 
 
@@ -2401,9 +2460,9 @@ int mbedtls_ecp_group_load( mbedtls_ecp_group *grp, mbedtls_ecp_group_id id )
         case MBEDTLS_ECP_DP_SECP256R1:
             grp->modp = ecp_mod_p256;;
             return( ecp_group_load( grp, secp256r1_p, sizeof( secp256r1_p ), 
-# 770 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c" 3 4
+# 778 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c" 3 4
                    ((void *)0)
-# 770 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
+# 778 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
                    , 0, secp256r1_b, sizeof( secp256r1_b ), secp256r1_gx, sizeof( secp256r1_gx ), secp256r1_gy, sizeof( secp256r1_gy ), secp256r1_n, sizeof( secp256r1_n ) ) );
 
 
@@ -2411,9 +2470,9 @@ int mbedtls_ecp_group_load( mbedtls_ecp_group *grp, mbedtls_ecp_group_id id )
         case MBEDTLS_ECP_DP_SECP384R1:
             grp->modp = ecp_mod_p384;;
             return( ecp_group_load( grp, secp384r1_p, sizeof( secp384r1_p ), 
-# 776 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c" 3 4
+# 784 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c" 3 4
                    ((void *)0)
-# 776 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
+# 784 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
                    , 0, secp384r1_b, sizeof( secp384r1_b ), secp384r1_gx, sizeof( secp384r1_gx ), secp384r1_gy, sizeof( secp384r1_gy ), secp384r1_n, sizeof( secp384r1_n ) ) );
 
 
@@ -2421,9 +2480,9 @@ int mbedtls_ecp_group_load( mbedtls_ecp_group *grp, mbedtls_ecp_group_id id )
         case MBEDTLS_ECP_DP_SECP521R1:
             grp->modp = ecp_mod_p521;;
             return( ecp_group_load( grp, secp521r1_p, sizeof( secp521r1_p ), 
-# 782 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c" 3 4
+# 790 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c" 3 4
                    ((void *)0)
-# 782 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
+# 790 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
                    , 0, secp521r1_b, sizeof( secp521r1_b ), secp521r1_gx, sizeof( secp521r1_gx ), secp521r1_gy, sizeof( secp521r1_gy ), secp521r1_n, sizeof( secp521r1_n ) ) );
 
 
@@ -2464,13 +2523,13 @@ int mbedtls_ecp_group_load( mbedtls_ecp_group *grp, mbedtls_ecp_group_id id )
         case MBEDTLS_ECP_DP_CURVE25519:
             grp->modp = ecp_mod_p255;
             return( ecp_use_curve25519( grp ) );
-# 830 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
+# 838 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
         default:
             mbedtls_ecp_group_free( grp );
             return( -0x4E80 );
     }
 }
-# 861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
+# 869 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
 static inline void add64( mbedtls_mpi_uint *dst, mbedtls_mpi_uint *src, mbedtls_mpi_uint *carry )
 {
     unsigned char i;
@@ -2493,7 +2552,7 @@ static inline void carry64( mbedtls_mpi_uint *dst, mbedtls_mpi_uint *carry )
         *carry = ( *dst < *carry );
     }
 }
-# 893 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
+# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
 static int ecp_mod_p192( mbedtls_mpi *N )
 {
     int ret;
@@ -2501,19 +2560,19 @@ static int ecp_mod_p192( mbedtls_mpi *N )
     mbedtls_mpi_uint *p, *end;
 
 
-    do { if( ( ret = mbedtls_mpi_grow( N, 6 * 8 / sizeof( mbedtls_mpi_uint ) ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_grow( N, 6 * 8 / sizeof( mbedtls_mpi_uint ) )) ) != 0 ) goto cleanup; } while( 0 );
 
     p = N->p;
     end = p + N->n;
 
-    add64( p, N->p + 3 * 8 / sizeof( mbedtls_mpi_uint ), &c ); add64( p, N->p + 5 * 8 / sizeof( mbedtls_mpi_uint ), &c ); p += 8 / sizeof( mbedtls_mpi_uint ); carry64( p, &c );
-    add64( p, N->p + 3 * 8 / sizeof( mbedtls_mpi_uint ), &c ); add64( p, N->p + 4 * 8 / sizeof( mbedtls_mpi_uint ), &c ); add64( p, N->p + 5 * 8 / sizeof( mbedtls_mpi_uint ), &c ); p += 8 / sizeof( mbedtls_mpi_uint ); carry64( p, &c );
-    add64( p, N->p + 4 * 8 / sizeof( mbedtls_mpi_uint ), &c ); add64( p, N->p + 5 * 8 / sizeof( mbedtls_mpi_uint ), &c ); p += 8 / sizeof( mbedtls_mpi_uint ); *p = c; while( ++p < end ) *p = 0;
+    add64( p, N->p + (3) * 8 / sizeof( mbedtls_mpi_uint ), &c ); add64( p, N->p + (5) * 8 / sizeof( mbedtls_mpi_uint ), &c ); p += 8 / sizeof( mbedtls_mpi_uint ); carry64( p, &c );
+    add64( p, N->p + (3) * 8 / sizeof( mbedtls_mpi_uint ), &c ); add64( p, N->p + (4) * 8 / sizeof( mbedtls_mpi_uint ), &c ); add64( p, N->p + (5) * 8 / sizeof( mbedtls_mpi_uint ), &c ); p += 8 / sizeof( mbedtls_mpi_uint ); carry64( p, &c );
+    add64( p, N->p + (4) * 8 / sizeof( mbedtls_mpi_uint ), &c ); add64( p, N->p + (5) * 8 / sizeof( mbedtls_mpi_uint ), &c ); p += 8 / sizeof( mbedtls_mpi_uint ); *p = c; while( ++p < end ) *p = 0;
 
 cleanup:
     return( ret );
 }
-# 965 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
+# 974 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
 static inline void add32( uint32_t *dst, uint32_t src, signed char *carry )
 {
     *dst += src;
@@ -2525,7 +2584,7 @@ static inline void sub32( uint32_t *dst, uint32_t src, signed char *carry )
     *carry -= ( *dst < src );
     *dst -= src;
 }
-# 1018 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
+# 1028 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
 static inline int fix_negative( mbedtls_mpi *N, signed char c, mbedtls_mpi *C, size_t bits )
 {
     int ret;
@@ -2541,7 +2600,7 @@ static inline int fix_negative( mbedtls_mpi *N, signed char c, mbedtls_mpi *C, s
         C->p[ C->n - 1 ] = (mbedtls_mpi_uint) -c;
 
 
-    do { if( ( ret = mbedtls_mpi_sub_abs( N, C, N ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_sub_abs( N, C, N )) ) != 0 ) goto cleanup; } while( 0 );
     N->s = -1;
 
 cleanup:
@@ -2555,7 +2614,7 @@ cleanup:
 
 static int ecp_mod_p224( mbedtls_mpi *N )
 {
-    int ret; signed char c = 0, cc; uint32_t cur; size_t i = 0, bits = 224; mbedtls_mpi C; mbedtls_mpi_uint Cp[ 224 / 8 / sizeof( mbedtls_mpi_uint) + 1 ]; C.s = 1; C.n = 224 / 8 / sizeof( mbedtls_mpi_uint) + 1; C.p = Cp; memset( Cp, 0, C.n * sizeof( mbedtls_mpi_uint ) ); do { if( ( ret = mbedtls_mpi_grow( N, 224 * 2 / 8 / sizeof( mbedtls_mpi_uint ) ) ) != 0 ) goto cleanup; } while( 0 ); cur = N->p[i];;;
+    int ret; signed char c = 0, cc; uint32_t cur; size_t i = 0, bits = (224); mbedtls_mpi C; mbedtls_mpi_uint Cp[ (224) / 8 / sizeof( mbedtls_mpi_uint) + 1 ]; C.s = 1; C.n = (224) / 8 / sizeof( mbedtls_mpi_uint) + 1; C.p = Cp; memset( Cp, 0, C.n * sizeof( mbedtls_mpi_uint ) ); do { if( ( ret = (mbedtls_mpi_grow( N, (224) * 2 / 8 / sizeof( mbedtls_mpi_uint ) )) ) != 0 ) goto cleanup; } while( 0 ); cur = N->p[i];;;
 
     sub32( &cur, N->p[7], &c );; sub32( &cur, N->p[11], &c );; N->p[i] = cur;; i++; cur = N->p[i];; cc = c; c = 0; if( cc < 0 ) sub32( &cur, -cc, &c ); else add32( &cur, cc, &c );;
     sub32( &cur, N->p[8], &c );; sub32( &cur, N->p[12], &c );; N->p[i] = cur;; i++; cur = N->p[i];; cc = c; c = 0; if( cc < 0 ) sub32( &cur, -cc, &c ); else add32( &cur, cc, &c );;
@@ -2576,7 +2635,7 @@ cleanup:
 
 static int ecp_mod_p256( mbedtls_mpi *N )
 {
-    int ret; signed char c = 0, cc; uint32_t cur; size_t i = 0, bits = 256; mbedtls_mpi C; mbedtls_mpi_uint Cp[ 256 / 8 / sizeof( mbedtls_mpi_uint) + 1 ]; C.s = 1; C.n = 256 / 8 / sizeof( mbedtls_mpi_uint) + 1; C.p = Cp; memset( Cp, 0, C.n * sizeof( mbedtls_mpi_uint ) ); do { if( ( ret = mbedtls_mpi_grow( N, 256 * 2 / 8 / sizeof( mbedtls_mpi_uint ) ) ) != 0 ) goto cleanup; } while( 0 ); cur = N->p[i];;;
+    int ret; signed char c = 0, cc; uint32_t cur; size_t i = 0, bits = (256); mbedtls_mpi C; mbedtls_mpi_uint Cp[ (256) / 8 / sizeof( mbedtls_mpi_uint) + 1 ]; C.s = 1; C.n = (256) / 8 / sizeof( mbedtls_mpi_uint) + 1; C.p = Cp; memset( Cp, 0, C.n * sizeof( mbedtls_mpi_uint ) ); do { if( ( ret = (mbedtls_mpi_grow( N, (256) * 2 / 8 / sizeof( mbedtls_mpi_uint ) )) ) != 0 ) goto cleanup; } while( 0 ); cur = N->p[i];;;
 
     add32( &cur, N->p[8], &c );; add32( &cur, N->p[9], &c );;
     sub32( &cur, N->p[11], &c );; sub32( &cur, N->p[12], &c );; sub32( &cur, N->p[13], &c );; sub32( &cur, N->p[14], &c );; N->p[i] = cur;; i++; cur = N->p[i];; cc = c; c = 0; if( cc < 0 ) sub32( &cur, -cc, &c ); else add32( &cur, cc, &c );;
@@ -2613,7 +2672,7 @@ cleanup:
 
 static int ecp_mod_p384( mbedtls_mpi *N )
 {
-    int ret; signed char c = 0, cc; uint32_t cur; size_t i = 0, bits = 384; mbedtls_mpi C; mbedtls_mpi_uint Cp[ 384 / 8 / sizeof( mbedtls_mpi_uint) + 1 ]; C.s = 1; C.n = 384 / 8 / sizeof( mbedtls_mpi_uint) + 1; C.p = Cp; memset( Cp, 0, C.n * sizeof( mbedtls_mpi_uint ) ); do { if( ( ret = mbedtls_mpi_grow( N, 384 * 2 / 8 / sizeof( mbedtls_mpi_uint ) ) ) != 0 ) goto cleanup; } while( 0 ); cur = N->p[i];;;
+    int ret; signed char c = 0, cc; uint32_t cur; size_t i = 0, bits = (384); mbedtls_mpi C; mbedtls_mpi_uint Cp[ (384) / 8 / sizeof( mbedtls_mpi_uint) + 1 ]; C.s = 1; C.n = (384) / 8 / sizeof( mbedtls_mpi_uint) + 1; C.p = Cp; memset( Cp, 0, C.n * sizeof( mbedtls_mpi_uint ) ); do { if( ( ret = (mbedtls_mpi_grow( N, (384) * 2 / 8 / sizeof( mbedtls_mpi_uint ) )) ) != 0 ) goto cleanup; } while( 0 ); cur = N->p[i];;;
 
     add32( &cur, N->p[12], &c );; add32( &cur, N->p[21], &c );; add32( &cur, N->p[20], &c );;
     sub32( &cur, N->p[23], &c );; N->p[i] = cur;; i++; cur = N->p[i];; cc = c; c = 0; if( cc < 0 ) sub32( &cur, -cc, &c ); else add32( &cur, cc, &c );;
@@ -2654,7 +2713,7 @@ static int ecp_mod_p384( mbedtls_mpi *N )
 cleanup:
     return( ret );
 }
-# 1176 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
+# 1186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
 static int ecp_mod_p521( mbedtls_mpi *N )
 {
     int ret;
@@ -2675,7 +2734,7 @@ static int ecp_mod_p521( mbedtls_mpi *N )
         M.n = ( 521 / 8 / sizeof( mbedtls_mpi_uint ) + 1 ) + 1;
     M.p = Mp;
     memcpy( Mp, N->p + ( 521 / 8 / sizeof( mbedtls_mpi_uint ) + 1 ) - 1, M.n * sizeof( mbedtls_mpi_uint ) );
-    do { if( ( ret = mbedtls_mpi_shift_r( &M, 521 % ( 8 * sizeof( mbedtls_mpi_uint ) ) ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_shift_r( &M, 521 % ( 8 * sizeof( mbedtls_mpi_uint ) ) )) ) != 0 ) goto cleanup; } while( 0 );
 
 
     N->p[( 521 / 8 / sizeof( mbedtls_mpi_uint ) + 1 ) - 1] &= 0x01FF;
@@ -2683,12 +2742,12 @@ static int ecp_mod_p521( mbedtls_mpi *N )
         N->p[i] = 0;
 
 
-    do { if( ( ret = mbedtls_mpi_add_abs( N, N, &M ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_add_abs( N, N, &M )) ) != 0 ) goto cleanup; } while( 0 );
 
 cleanup:
     return( ret );
 }
-# 1225 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
+# 1235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
 static int ecp_mod_p255( mbedtls_mpi *N )
 {
     int ret;
@@ -2707,22 +2766,22 @@ static int ecp_mod_p255( mbedtls_mpi *N )
     M.p = Mp;
     memset( Mp, 0, sizeof Mp );
     memcpy( Mp, N->p + ( 255 / 8 / sizeof( mbedtls_mpi_uint ) + 1 ) - 1, M.n * sizeof( mbedtls_mpi_uint ) );
-    do { if( ( ret = mbedtls_mpi_shift_r( &M, 255 % ( 8 * sizeof( mbedtls_mpi_uint ) ) ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_shift_r( &M, 255 % ( 8 * sizeof( mbedtls_mpi_uint ) ) )) ) != 0 ) goto cleanup; } while( 0 );
     M.n++;
 
 
-    do { if( ( ret = mbedtls_mpi_set_bit( N, 255, 0 ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_set_bit( N, 255, 0 )) ) != 0 ) goto cleanup; } while( 0 );
     for( i = ( 255 / 8 / sizeof( mbedtls_mpi_uint ) + 1 ); i < N->n; i++ )
         N->p[i] = 0;
 
 
-    do { if( ( ret = mbedtls_mpi_mul_int( &M, &M, 19 ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_add_abs( N, N, &M ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_int( &M, &M, 19 )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_add_abs( N, N, &M )) ) != 0 ) goto cleanup; } while( 0 );
 
 cleanup:
     return( ret );
 }
-# 1343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
+# 1353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
 static inline int ecp_mod_koblitz( mbedtls_mpi *N, mbedtls_mpi_uint *Rp, size_t p_limbs,
                                    size_t adjust, size_t shift, mbedtls_mpi_uint mask )
 {
@@ -2750,7 +2809,7 @@ static inline int ecp_mod_koblitz( mbedtls_mpi *N, mbedtls_mpi_uint *Rp, size_t 
     memset( Mp, 0, sizeof Mp );
     memcpy( Mp, N->p + p_limbs - adjust, M.n * sizeof( mbedtls_mpi_uint ) );
     if( shift != 0 )
-        do { if( ( ret = mbedtls_mpi_shift_r( &M, shift ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_shift_r( &M, shift )) ) != 0 ) goto cleanup; } while( 0 );
     M.n += R.n;
 
 
@@ -2760,8 +2819,8 @@ static inline int ecp_mod_koblitz( mbedtls_mpi *N, mbedtls_mpi_uint *Rp, size_t 
         N->p[i] = 0;
 
 
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &M, &M, &R ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_add_abs( N, N, &M ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &M, &M, &R )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_add_abs( N, N, &M )) ) != 0 ) goto cleanup; } while( 0 );
 
 
 
@@ -2772,7 +2831,7 @@ static inline int ecp_mod_koblitz( mbedtls_mpi *N, mbedtls_mpi_uint *Rp, size_t 
     memset( Mp, 0, sizeof Mp );
     memcpy( Mp, N->p + p_limbs - adjust, M.n * sizeof( mbedtls_mpi_uint ) );
     if( shift != 0 )
-        do { if( ( ret = mbedtls_mpi_shift_r( &M, shift ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_shift_r( &M, shift )) ) != 0 ) goto cleanup; } while( 0 );
     M.n += R.n;
 
 
@@ -2782,17 +2841,17 @@ static inline int ecp_mod_koblitz( mbedtls_mpi *N, mbedtls_mpi_uint *Rp, size_t 
         N->p[i] = 0;
 
 
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &M, &M, &R ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_add_abs( N, N, &M ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &M, &M, &R )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_add_abs( N, N, &M )) ) != 0 ) goto cleanup; } while( 0 );
 
 cleanup:
     return( ret );
 }
-# 1417 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
+# 1427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
 static int ecp_mod_p192k1( mbedtls_mpi *N )
 {
     static mbedtls_mpi_uint Rp[] = {
-        ( (mbedtls_mpi_uint) 0xC9 << 0 ) | ( (mbedtls_mpi_uint) 0x11 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ), ( (mbedtls_mpi_uint) 0x01 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ) };
+        ( (mbedtls_mpi_uint) (0xC9) << 0 ) | ( (mbedtls_mpi_uint) (0x11) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ), ( (mbedtls_mpi_uint) (0x01) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ) };
 
     return( ecp_mod_koblitz( N, Rp, 192 / 8 / sizeof( mbedtls_mpi_uint ), 0, 0, 0 ) );
 }
@@ -2806,7 +2865,7 @@ static int ecp_mod_p192k1( mbedtls_mpi *N )
 static int ecp_mod_p224k1( mbedtls_mpi *N )
 {
     static mbedtls_mpi_uint Rp[] = {
-        ( (mbedtls_mpi_uint) 0x93 << 0 ) | ( (mbedtls_mpi_uint) 0x1A << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ), ( (mbedtls_mpi_uint) 0x01 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ) };
+        ( (mbedtls_mpi_uint) (0x93) << 0 ) | ( (mbedtls_mpi_uint) (0x1A) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ), ( (mbedtls_mpi_uint) (0x01) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ) };
 
 
 
@@ -2814,10 +2873,10 @@ static int ecp_mod_p224k1( mbedtls_mpi *N )
     return( ecp_mod_koblitz( N, Rp, 224 / 8 / sizeof( mbedtls_mpi_uint ), 0, 0, 0 ) );
 
 }
-# 1450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
+# 1460 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp_curves.c"
 static int ecp_mod_p256k1( mbedtls_mpi *N )
 {
     static mbedtls_mpi_uint Rp[] = {
-        ( (mbedtls_mpi_uint) 0xD1 << 0 ) | ( (mbedtls_mpi_uint) 0x03 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ), ( (mbedtls_mpi_uint) 0x01 << 0 ) | ( (mbedtls_mpi_uint) 0x00 << 8 ) | ( (mbedtls_mpi_uint) 0x00 << 16 ) | ( (mbedtls_mpi_uint) 0x00 << 24 ) };
+        ( (mbedtls_mpi_uint) (0xD1) << 0 ) | ( (mbedtls_mpi_uint) (0x03) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ), ( (mbedtls_mpi_uint) (0x01) << 0 ) | ( (mbedtls_mpi_uint) (0x00) << 8 ) | ( (mbedtls_mpi_uint) (0x00) << 16 ) | ( (mbedtls_mpi_uint) (0x00) << 24 ) };
     return( ecp_mod_koblitz( N, Rp, 256 / 8 / sizeof( mbedtls_mpi_uint ), 0, 0, 0 ) );
 }

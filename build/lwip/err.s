@@ -8,7 +8,7 @@
 	.global	err_to_errno
 	.type	err_to_errno, @function
 err_to_errno:
-.LFB18:
+.LFB27:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/api/err.c"
 	.loc 1 70 0
 .LVL0:
@@ -35,7 +35,7 @@ err_to_errno:
 .L2:
 	.loc 1 75 0
 	retw.n
-.LFE18:
+.LFE27:
 	.size	err_to_errno, .-err_to_errno
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC1:
@@ -48,7 +48,7 @@ err_to_errno:
 	.global	lwip_strerr
 	.type	lwip_strerr, @function
 lwip_strerr:
-.LFB19:
+.LFB28:
 	.loc 1 108 0
 .LVL3:
 	entry	sp, 32
@@ -74,7 +74,7 @@ lwip_strerr:
 .L5:
 	.loc 1 113 0
 	retw.n
-.LFE19:
+.LFE28:
 	.size	lwip_strerr, .-lwip_strerr
 	.section	.rodata.str1.1
 .LC4:
@@ -174,10 +174,10 @@ err_to_errno_table:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI0-.LFB18
+	.4byte	.LCFI0-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -186,10 +186,10 @@ err_to_errno_table:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI1-.LFB19
+	.4byte	.LCFI1-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -290,8 +290,8 @@ err_to_errno_table:
 	.byte	0x1
 	.byte	0x45
 	.4byte	0x33
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xd5
@@ -307,8 +307,8 @@ err_to_errno_table:
 	.byte	0x1
 	.byte	0x6b
 	.4byte	0x84
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xfe
@@ -514,7 +514,7 @@ err_to_errno_table:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL2
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -532,7 +532,7 @@ err_to_errno_table:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL5
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -548,18 +548,18 @@ err_to_errno_table:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB19
-	.4byte	.LFE19
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB28
+	.4byte	.LFE28
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

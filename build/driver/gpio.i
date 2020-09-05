@@ -1094,7 +1094,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 1
@@ -2266,6 +2266,77 @@ typedef void (*TaskFunction_t)( void * );
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/deprecated_definitions.h" 1
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 2
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void *get_sp()
+{
+    void *sp;
+    asm volatile ("mov %0, sp;" : "=r" (sp));
+    return sp;
+}
+
+
+
+
+
+static inline void cpu_write_dtlb(uint32_t vpn, unsigned attr)
+{
+    asm volatile ("wdtlb  %1, %0; dsync\n" :: "r" (vpn), "r" (attr));
+}
+
+
+static inline void cpu_write_itlb(unsigned vpn, unsigned attr)
+{
+    asm volatile ("witlb  %1, %0; isync\n" :: "r" (vpn), "r" (attr));
+}
+
+static inline void cpu_init_memctl()
+{
+
+    uint32_t memctl = 0x00000000;
+    asm volatile ("wsr %0, " "MEMCTL" : : "r" (memctl));;
+
+}
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void cpu_configure_region_protection()
+{
+    const uint32_t pages_to_protect[] = {0x00000000, 0x80000000, 0xa0000000, 0xc0000000, 0xe0000000};
+    for (int i = 0; i < sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
+        cpu_write_dtlb(pages_to_protect[i], 0xf);
+        cpu_write_itlb(pages_to_protect[i], 0xf);
+    }
+    cpu_write_dtlb(0x20000000, 0);
+    cpu_write_itlb(0x20000000, 0);
+}
+
+
+
+
+
+void esp_cpu_stall(int cpu_id);
+
+
+
+
+
+void esp_cpu_unstall(int cpu_id);
+
+
+
+
+
+void esp_cpu_reset(int cpu_id);
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 3 4
+_Bool 
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+    esp_cpu_in_ocd_debug_mode();
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+
 
 
 
@@ -2639,6 +2710,9 @@ void heap_caps_dump_all();
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
 # 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
 typedef struct {
@@ -2694,7 +2768,7 @@ inline static
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_dma_capable(const void *p)
+                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
 {
     return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
 }
@@ -2703,24 +2777,37 @@ inline static
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_executable(const void *p)
+                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
+{
+    return ((intptr_t)p) % 4 == 0;
+}
+
+inline static 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
 {
     intptr_t ip = (intptr_t) p;
     return (ip >= 0x400D0000 && ip < 0x40400000)
         || (ip >= 0x40080000 && ip < 0x400A0000)
+        || (ip >= 0x40000000 && ip < 0x40070000)
+
+        || (ip >= 0x40078000 && ip < 0x40080000)
+
         || (ip >= 0x400C0000 && ip < 0x400C2000);
 }
 
 inline static 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_byte_accessible(const void *p)
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
 {
     
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x40000000);
 
@@ -2730,14 +2817,14 @@ inline static
 }
 
 inline static 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_internal(const void *p) {
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
     
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
     r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
@@ -2746,18 +2833,18 @@ inline static
 
 
 inline static 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_external_ram(const void *p) {
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
     return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
 }
 
 inline static 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_iram(const void *p) {
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
 
 
 
@@ -2766,19 +2853,35 @@ inline static
 }
 
 inline static 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_drom(const void *p) {
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
     return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
 }
 
 inline static 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_dram(const void *p) {
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
     return ((intptr_t)p >= 0x3FAE0000 && (intptr_t)p < 0x40000000);
+}
+
+inline static 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
+    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x3FFFFFFC);
+}
+
+inline static 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
+    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400BFFFC);
 }
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
@@ -2827,24 +2930,24 @@ typedef struct {
 void vPortAssertIfInISR();
 # 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortCPUInitializeMutex(portMUX_TYPE *mux);
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vTaskExitCritical( portMUX_TYPE *mux );
 void vTaskEnterCritical( portMUX_TYPE *mux );
 void vPortCPUAcquireMutex(portMUX_TYPE *mux);
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
 _Bool 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
     vPortCPUAcquireMutexTimeout(portMUX_TYPE *mux, int timeout_cycles);
 void vPortCPUReleaseMutex(portMUX_TYPE *mux);
-# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline unsigned portENTER_CRITICAL_NESTED() {
  unsigned state = ({ unsigned __tmp; __asm__ __volatile__( "rsil	%0, " "3" "\n" : "=a" (__tmp) : : "memory" ); __tmp;});
  ;
  return state;
 }
-# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, uint32_t *set) {
     __asm__ __volatile__ (
         "WSR 	    %2,SCOMPARE1 \n"
@@ -2853,20 +2956,20 @@ static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, u
         :"r"(addr), "r"(compare), "0"(*set)
         );
 }
-# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortYield( void );
 void _frxt_setup_switch( void );
 
 
 
 static inline uint32_t xPortGetCoreID();
-# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef struct {
 
  volatile StackType_t* coproc_area;
-# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 } xMPU_SETTINGS;
-# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 extern void esp_vApplicationIdleHook( void );
 extern void esp_vApplicationTickHook( void );
 
@@ -2877,10 +2980,10 @@ extern void esp_vApplicationTickHook( void );
 
 void _xt_coproc_release(volatile void * coproc_sa_base);
 void vApplicationSleep( TickType_t xExpectedIdleTime );
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/mpu_wrappers.h" 1
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h" 1
@@ -2897,7 +3000,7 @@ void vApplicationSleep( TickType_t xExpectedIdleTime );
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
 typedef volatile struct {
     uint32_t bt_select;
     uint32_t out;
@@ -3188,7 +3291,7 @@ void gpio_pad_hold(uint8_t gpio_num);
 
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
 extern const uint32_t GPIO_PIN_MUX_REG[40];
 # 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
@@ -3623,25 +3726,25 @@ typedef enum {
 typedef esp_sleep_source_t esp_sleep_wakeup_cause_t;
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_disable_wakeup_source(esp_sleep_source_t source);
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ulp_wakeup();
-# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_timer_wakeup(uint64_t time_in_us);
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_touchpad_wakeup();
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 touch_pad_t esp_sleep_get_touchpad_wakeup_status();
-# 161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext0_wakeup(gpio_num_t gpio_num, int level);
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext1_wakeup(uint64_t mask, esp_sleep_ext1_wakeup_mode_t mode);
-# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_gpio_wakeup();
-# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_uart_wakeup(int uart_num);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 uint64_t esp_sleep_get_ext1_wakeup_status();
-# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
                                    esp_sleep_pd_option_t option);
 
@@ -3651,11 +3754,11 @@ esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
 
 
 void esp_deep_sleep_start() __attribute__((noreturn));
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_light_sleep_start();
-# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_deep_sleep(uint64_t time_in_us) __attribute__((noreturn));
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated));
 
 
@@ -3665,7 +3768,7 @@ void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated)
 
 
 esp_sleep_wakeup_cause_t esp_sleep_get_wakeup_cause();
-# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_wake_deep_sleep(void);
 
 
@@ -3673,7 +3776,7 @@ void esp_wake_deep_sleep(void);
 
 
 typedef void (*esp_deep_sleep_wake_stub_fn_t)(void);
-# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_set_deep_sleep_wake_stub(esp_deep_sleep_wake_stub_fn_t new_stub);
 
 
@@ -3697,6 +3800,12 @@ void esp_default_wake_deep_sleep(void);
 
 void esp_deep_sleep_disable_rom_logging(void);
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+       
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+const char* esp_get_idf_version(void);
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
 
 
 
@@ -3708,7 +3817,7 @@ typedef enum {
     ESP_MAC_BT,
     ESP_MAC_ETH,
 } esp_mac_type_t;
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef enum {
     ESP_RST_UNKNOWN,
     ESP_RST_POWERON,
@@ -3751,9 +3860,9 @@ typedef void (*shutdown_handler_t)(void);
 
 
 esp_err_t esp_register_shutdown_handler(shutdown_handler_t handle);
-# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_restart(void) __attribute__ ((noreturn));
-# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
@@ -3762,11 +3871,11 @@ void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
 esp_reset_reason_t esp_reset_reason(void);
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_time(void) __attribute__ ((deprecated));
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_get_free_heap_size(void);
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
@@ -3776,36 +3885,28 @@ uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
 uint32_t esp_get_minimum_free_heap_size( void );
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_random(void);
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_fill_random(void *buf, size_t len);
-# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_set(uint8_t *mac);
-# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_get(uint8_t *mac);
-# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_custom(uint8_t *mac);
-# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_default(uint8_t *mac);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t system_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_read_mac(uint8_t* mac, esp_mac_type_t type);
-# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_derive_local_mac(uint8_t* local_mac, const uint8_t* universal_mac);
-# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 const char* system_get_sdk_version(void) __attribute__ ((deprecated));
-
-
-
-
-
-
-
-const char* esp_get_idf_version(void);
 
 
 
@@ -3814,7 +3915,7 @@ const char* esp_get_idf_version(void);
 typedef enum {
     CHIP_ESP32 = 1,
 } esp_chip_model_t;
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef struct {
     esp_chip_model_t model;
     uint32_t features;
@@ -3827,10 +3928,10 @@ typedef struct {
 
 
 void esp_chip_info(esp_chip_info_t* out_info);
-# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters, BaseType_t xRunPrivileged ) ;
-# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 BaseType_t xPortStartScheduler( void ) ;
 
 
@@ -3866,14 +3967,14 @@ BaseType_t xPortInIsrContext();
 
 
 BaseType_t xPortInterruptedFromISRContext();
-# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  struct xMEMORY_REGION;
  void vPortStoreTaskMPUSettings( xMPU_SETTINGS *xMPUSettings, const struct xMEMORY_REGION * const xRegions, StackType_t *pxBottomOfStack, uint32_t usStackDepth ) ;
  void vPortReleaseTaskMPUSettings( xMPU_SETTINGS *xMPUSettings );
 
 
 
-static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
+static inline uint32_t __attribute__((section(".iram1" "." "11"))) xPortGetCoreID() {
     int id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -3884,6 +3985,21 @@ static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
 
 
 uint32_t xPortGetTickRateHz(void);
+
+
+static inline 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 3 4
+             _Bool 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+                  __attribute__((section(".iram1" "." "12"))) xPortCanYield(void)
+{
+    uint32_t ps_reg = 0;
+
+
+    asm volatile ("rsr %0, " "PS" : "=r" (ps_reg));;
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+    return ((ps_reg & 0x0000000F) == 0);
+}
 
 
 
@@ -4139,41 +4255,45 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 2
-
-
-static const char* GPIO_TAG = "gpio";
-
-
-
-
-
-
+# 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
 typedef struct {
     gpio_isr_t fn;
     void* args;
 } gpio_isr_func_t;
 
+
+typedef struct {
+    int source;
+    int intr_alloc_flags;
+    void (*fn)(void*);
+    void *arg;
+    void *handle;
+    esp_err_t ret;
+} gpio_isr_alloc_t;
+
+static const char* GPIO_TAG = "gpio";
 static gpio_isr_func_t* gpio_isr_func = 
-# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
+# 52 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
                                        ((void *)0)
-# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
+# 52 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
                                            ;
 static gpio_isr_handle_t gpio_isr_handle;
+static uint32_t isr_core_id = (3);
 static portMUX_TYPE gpio_spinlock = { .owner = 0xB33FFFFF, .count = 0, };
 
 esp_err_t gpio_pullup_en(gpio_num_t gpio_num)
 {
-    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 44, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 44, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 44, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 44, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 44, "GPIO number error"); } } while(0); } while(0); return (0x102); };
+    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 59, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 59, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 59, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 59, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 59, "GPIO number error"); } } while(0); } while(0); return (0x102); };
     if (rtc_gpio_is_valid_gpio(gpio_num)) {
         rtc_gpio_pullup_en(gpio_num);
     } else {
@@ -4184,7 +4304,7 @@ esp_err_t gpio_pullup_en(gpio_num_t gpio_num)
 
 esp_err_t gpio_pullup_dis(gpio_num_t gpio_num)
 {
-    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 55, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 55, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 55, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 55, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 55, "GPIO number error"); } } while(0); } while(0); return (0x102); };
+    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 70, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 70, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 70, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 70, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 70, "GPIO number error"); } } while(0); } while(0); return (0x102); };
     if (rtc_gpio_is_valid_gpio(gpio_num)) {
         rtc_gpio_pullup_dis(gpio_num);
     } else {
@@ -4195,7 +4315,7 @@ esp_err_t gpio_pullup_dis(gpio_num_t gpio_num)
 
 esp_err_t gpio_pulldown_en(gpio_num_t gpio_num)
 {
-    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 66, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 66, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 66, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 66, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 66, "GPIO number error"); } } while(0); } while(0); return (0x102); };
+    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 81, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 81, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 81, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 81, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 81, "GPIO number error"); } } while(0); } while(0); return (0x102); };
     if (rtc_gpio_is_valid_gpio(gpio_num)) {
         rtc_gpio_pulldown_en(gpio_num);
     } else {
@@ -4206,7 +4326,7 @@ esp_err_t gpio_pulldown_en(gpio_num_t gpio_num)
 
 esp_err_t gpio_pulldown_dis(gpio_num_t gpio_num)
 {
-    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 77, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 77, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 77, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 77, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 77, "GPIO number error"); } } while(0); } while(0); return (0x102); };
+    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 92, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 92, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 92, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 92, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 92, "GPIO number error"); } } while(0); } while(0); return (0x102); };
     if (rtc_gpio_is_valid_gpio(gpio_num)) {
         rtc_gpio_pulldown_dis(gpio_num);
     } else {
@@ -4217,8 +4337,8 @@ esp_err_t gpio_pulldown_dis(gpio_num_t gpio_num)
 
 esp_err_t gpio_set_intr_type(gpio_num_t gpio_num, gpio_int_type_t intr_type)
 {
-    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 88, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 88, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 88, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 88, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 88, "GPIO number error"); } } while(0); } while(0); return (0x102); };
-    if (!(intr_type < GPIO_INTR_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 89, "GPIO interrupt type error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 89, "GPIO interrupt type error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 89, "GPIO interrupt type error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 89, "GPIO interrupt type error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 89, "GPIO interrupt type error"); } } while(0); } while(0); return (0x102); };
+    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 103, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 103, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 103, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 103, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 103, "GPIO number error"); } } while(0); } while(0); return (0x102); };
+    if (!(intr_type < GPIO_INTR_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 104, "GPIO interrupt type error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 104, "GPIO interrupt type error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 104, "GPIO interrupt type error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 104, "GPIO interrupt type error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 104, "GPIO interrupt type error"); } } while(0); } while(0); return (0x102); };
     GPIO.pin[gpio_num].int_type = intr_type;
     return 0;
 }
@@ -4234,7 +4354,6 @@ static void gpio_intr_status_clr(gpio_num_t gpio_num)
 
 static esp_err_t gpio_intr_enable_on_core (gpio_num_t gpio_num, uint32_t core_id)
 {
-    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 105, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 105, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 105, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 105, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 105, "GPIO number error"); } } while(0); } while(0); return (0x102); };
     gpio_intr_status_clr(gpio_num);
     if (core_id == 0) {
         GPIO.pin[gpio_num].int_ena = ((1UL << (2)));
@@ -4246,12 +4365,18 @@ static esp_err_t gpio_intr_enable_on_core (gpio_num_t gpio_num, uint32_t core_id
 
 esp_err_t gpio_intr_enable(gpio_num_t gpio_num)
 {
-    return gpio_intr_enable_on_core (gpio_num, xPortGetCoreID());
+    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 131, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 131, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 131, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 131, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 131, "GPIO number error"); } } while(0); } while(0); return (0x102); };
+    vTaskEnterCritical(&gpio_spinlock);
+    if(isr_core_id == (3)) {
+        isr_core_id = xPortGetCoreID();
+    }
+    vTaskExitCritical(&gpio_spinlock);
+    return gpio_intr_enable_on_core (gpio_num, isr_core_id);
 }
 
 esp_err_t gpio_intr_disable(gpio_num_t gpio_num)
 {
-    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 122, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 122, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 122, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 122, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 122, "GPIO number error"); } } while(0); } while(0); return (0x102); };
+    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 142, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 142, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 142, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 142, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 142, "GPIO number error"); } } while(0); } while(0); return (0x102); };
     GPIO.pin[gpio_num].int_ena = 0;
     gpio_intr_status_clr(gpio_num);
     return 0;
@@ -4259,7 +4384,7 @@ esp_err_t gpio_intr_disable(gpio_num_t gpio_num)
 
 static esp_err_t gpio_output_disable(gpio_num_t gpio_num)
 {
-    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 130, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 130, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 130, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 130, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 130, "GPIO number error"); } } while(0); } while(0); return (0x102); };
+    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 150, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 150, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 150, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 150, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 150, "GPIO number error"); } } while(0); } while(0); return (0x102); };
     if (gpio_num < 32) {
         GPIO.enable_w1tc = (0x1 << gpio_num);
     } else {
@@ -4275,27 +4400,27 @@ static esp_err_t gpio_output_disable(gpio_num_t gpio_num)
 
 static esp_err_t gpio_output_enable(gpio_num_t gpio_num)
 {
-    if (!(((((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0))) && (gpio_num < 34)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 146, "GPIO output gpio_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 146, "GPIO output gpio_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 146, "GPIO output gpio_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 146, "GPIO output gpio_num error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 146, "GPIO output gpio_num error"); } } while(0); } while(0); return (0x102); };
+    if (!(((((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0))) && (gpio_num < 34)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 166, "GPIO output gpio_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 166, "GPIO output gpio_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 166, "GPIO output gpio_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 166, "GPIO output gpio_num error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 166, "GPIO output gpio_num error"); } } while(0); } while(0); return (0x102); };
     if (gpio_num < 32) {
         GPIO.enable_w1ts = (0x1 << gpio_num);
     } else {
         GPIO.enable1_w1ts.data = (0x1 << (gpio_num - 32));
     }
     gpio_matrix_out(gpio_num, 256, 
-# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
+# 172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
                                                0
-# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
+# 172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
                                                     , 
-# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
+# 172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
                                                       0
-# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
+# 172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
                                                            );
     return 0;
 }
 
 esp_err_t gpio_set_level(gpio_num_t gpio_num, uint32_t level)
 {
-    if (!(((((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0))) && (gpio_num < 34)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 158, "GPIO output gpio_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 158, "GPIO output gpio_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 158, "GPIO output gpio_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 158, "GPIO output gpio_num error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 158, "GPIO output gpio_num error"); } } while(0); } while(0); return (0x102); };
+    if (!(((((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0))) && (gpio_num < 34)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 178, "GPIO output gpio_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 178, "GPIO output gpio_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 178, "GPIO output gpio_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 178, "GPIO output gpio_num error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 178, "GPIO output gpio_num error"); } } while(0); } while(0); return (0x102); };
     if (level) {
         if (gpio_num < 32) {
             GPIO.out_w1ts = (1 << gpio_num);
@@ -4323,8 +4448,8 @@ int gpio_get_level(gpio_num_t gpio_num)
 
 esp_err_t gpio_set_pull_mode(gpio_num_t gpio_num, gpio_pull_mode_t pull)
 {
-    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 186, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 186, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 186, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 186, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 186, "GPIO number error"); } } while(0); } while(0); return (0x102); };
-    if (!(pull <= GPIO_FLOATING)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 187, "GPIO pull mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 187, "GPIO pull mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 187, "GPIO pull mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 187, "GPIO pull mode error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 187, "GPIO pull mode error"); } } while(0); } while(0); return (0x102); };
+    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 206, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 206, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 206, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 206, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 206, "GPIO number error"); } } while(0); } while(0); return (0x102); };
+    if (!(pull <= GPIO_FLOATING)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 207, "GPIO pull mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 207, "GPIO pull mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 207, "GPIO pull mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 207, "GPIO pull mode error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 207, "GPIO pull mode error"); } } while(0); } while(0); return (0x102); };
     esp_err_t ret = 0;
     switch (pull) {
     case GPIO_PULLUP_ONLY:
@@ -4353,7 +4478,7 @@ esp_err_t gpio_set_pull_mode(gpio_num_t gpio_num, gpio_pull_mode_t pull)
 
 esp_err_t gpio_set_direction(gpio_num_t gpio_num, gpio_mode_t mode)
 {
-    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 216, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 216, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 216, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 216, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 216, "GPIO number error"); } } while(0); } while(0); return (0x102); };
+    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 236, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 236, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 236, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 236, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 236, "GPIO number error"); } } while(0); } while(0); return (0x102); };
     if (gpio_num >= 34 && (mode & (0x00000002))) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "io_num=%d can only be input" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, gpio_num); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "io_num=%d can only be input" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, gpio_num); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "io_num=%d can only be input" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, gpio_num); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "io_num=%d can only be input" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, gpio_num); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "io_num=%d can only be input" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, gpio_num); } } while(0); } while(0);
         return 0x102;
@@ -4454,20 +4579,20 @@ esp_err_t gpio_config(const gpio_config_t *pGPIOConfig)
 
 esp_err_t gpio_reset_pin(gpio_num_t gpio_num)
 {
-    ((gpio_num >= 0 && ((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c", 317, __func__, "gpio_num >= 0 && GPIO_IS_VALID_GPIO(gpio_num)"));
+    ((gpio_num >= 0 && ((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c", 337, __func__, "gpio_num >= 0 && GPIO_IS_VALID_GPIO(gpio_num)"));
     gpio_config_t cfg = {
         .pin_bit_mask = (1ULL << (gpio_num)),
         .mode = GPIO_MODE_DISABLE,
 
         .pull_up_en = 
-# 322 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
                      1
-# 322 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
                          ,
         .pull_down_en = 
-# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
+# 343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
                        0
-# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
+# 343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
                             ,
         .intr_type = GPIO_INTR_DISABLE,
     };
@@ -4475,21 +4600,19 @@ esp_err_t gpio_reset_pin(gpio_num_t gpio_num)
     return 0;
 }
 
-void __attribute__((section(".iram1"))) gpio_intr_service(void* arg)
+void __attribute__((section(".iram1" "." "13"))) gpio_intr_service(void* arg)
 {
 
     uint32_t gpio_num = 0;
 
-    uint32_t gpio_intr_status;
-    gpio_intr_status = GPIO.status;
+    const uint32_t gpio_intr_status = (isr_core_id == 0) ? GPIO.pcpu_int : GPIO.acpu_int;
 
-    uint32_t gpio_intr_status_h;
-    gpio_intr_status_h = GPIO.status1.intr_st;
+    const uint32_t gpio_intr_status_h = (isr_core_id == 0) ? GPIO.pcpu_int1.intr : GPIO.acpu_int1.intr;
 
     if (gpio_isr_func == 
-# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
+# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
                         ((void *)0)
-# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
+# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
                             ) {
         return;
     }
@@ -4497,9 +4620,9 @@ void __attribute__((section(".iram1"))) gpio_intr_service(void* arg)
         if (gpio_num < 32) {
             if (gpio_intr_status & (1UL << (gpio_num))) {
                 if (gpio_isr_func[gpio_num].fn != 
-# 347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
+# 365 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
                                                  ((void *)0)
-# 347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
+# 365 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
                                                      ) {
                     gpio_isr_func[gpio_num].fn(gpio_isr_func[gpio_num].args);
                 }
@@ -4508,9 +4631,9 @@ void __attribute__((section(".iram1"))) gpio_intr_service(void* arg)
         } else {
             if (gpio_intr_status_h & (1UL << (gpio_num - 32))) {
                 if (gpio_isr_func[gpio_num].fn != 
-# 354 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
+# 372 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
                                                  ((void *)0)
-# 354 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
+# 372 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
                                                      ) {
                     gpio_isr_func[gpio_num].fn(gpio_isr_func[gpio_num].args);
                 }
@@ -4523,11 +4646,11 @@ void __attribute__((section(".iram1"))) gpio_intr_service(void* arg)
 esp_err_t gpio_isr_handler_add(gpio_num_t gpio_num, gpio_isr_t isr_handler, void* args)
 {
     if (!(gpio_isr_func != 
-# 365 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
+# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
    ((void *)0)
-# 365 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 365, "GPIO isr service is not installed, call gpio_install_isr_service() first"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 365, "GPIO isr service is not installed, call gpio_install_isr_service() first"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 365, "GPIO isr service is not installed, call gpio_install_isr_service() first"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 365, "GPIO isr service is not installed, call gpio_install_isr_service() first"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 365, "GPIO isr service is not installed, call gpio_install_isr_service() first"); } } while(0); } while(0); return (0x103); };
-    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 366, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 366, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 366, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 366, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 366, "GPIO number error"); } } while(0); } while(0); return (0x102); };
+# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 383, "GPIO isr service is not installed, call gpio_install_isr_service() first"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 383, "GPIO isr service is not installed, call gpio_install_isr_service() first"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 383, "GPIO isr service is not installed, call gpio_install_isr_service() first"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 383, "GPIO isr service is not installed, call gpio_install_isr_service() first"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 383, "GPIO isr service is not installed, call gpio_install_isr_service() first"); } } while(0); } while(0); return (0x103); };
+    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 384, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 384, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 384, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 384, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 384, "GPIO number error"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&gpio_spinlock);
     gpio_intr_disable(gpio_num);
     if (gpio_isr_func) {
@@ -4542,23 +4665,23 @@ esp_err_t gpio_isr_handler_add(gpio_num_t gpio_num, gpio_isr_t isr_handler, void
 esp_err_t gpio_isr_handler_remove(gpio_num_t gpio_num)
 {
     if (!(gpio_isr_func != 
-# 380 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
+# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
    ((void *)0)
-# 380 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 380, "GPIO isr service is not installed, call gpio_install_isr_service() first"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 380, "GPIO isr service is not installed, call gpio_install_isr_service() first"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 380, "GPIO isr service is not installed, call gpio_install_isr_service() first"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 380, "GPIO isr service is not installed, call gpio_install_isr_service() first"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 380, "GPIO isr service is not installed, call gpio_install_isr_service() first"); } } while(0); } while(0); return (0x103); };
-    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 381, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 381, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 381, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 381, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 381, "GPIO number error"); } } while(0); } while(0); return (0x102); };
+# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 398, "GPIO isr service is not installed, call gpio_install_isr_service() first"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 398, "GPIO isr service is not installed, call gpio_install_isr_service() first"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 398, "GPIO isr service is not installed, call gpio_install_isr_service() first"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 398, "GPIO isr service is not installed, call gpio_install_isr_service() first"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 398, "GPIO isr service is not installed, call gpio_install_isr_service() first"); } } while(0); } while(0); return (0x103); };
+    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 399, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 399, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 399, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 399, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 399, "GPIO number error"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&gpio_spinlock);
     gpio_intr_disable(gpio_num);
     if (gpio_isr_func) {
         gpio_isr_func[gpio_num].fn = 
-# 385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
+# 403 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
                                     ((void *)0)
-# 385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
+# 403 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
                                         ;
         gpio_isr_func[gpio_num].args = 
-# 386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
+# 404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
                                       ((void *)0)
-# 386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
+# 404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
                                           ;
     }
     vTaskExitCritical(&gpio_spinlock);
@@ -4568,36 +4691,36 @@ esp_err_t gpio_isr_handler_remove(gpio_num_t gpio_num)
 esp_err_t gpio_install_isr_service(int intr_alloc_flags)
 {
     if (!(gpio_isr_func == 
-# 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
+# 412 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
    ((void *)0)
-# 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 394, "GPIO isr service already installed"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 394, "GPIO isr service already installed"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 394, "GPIO isr service already installed"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 394, "GPIO isr service already installed"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 394, "GPIO isr service already installed"); } } while(0); } while(0); return (0x103); };
+# 412 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 412, "GPIO isr service already installed"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 412, "GPIO isr service already installed"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 412, "GPIO isr service already installed"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 412, "GPIO isr service already installed"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 412, "GPIO isr service already installed"); } } while(0); } while(0); return (0x103); };
     esp_err_t ret;
     vTaskEnterCritical(&gpio_spinlock);
     gpio_isr_func = (gpio_isr_func_t*) calloc(GPIO_NUM_MAX, sizeof(gpio_isr_func_t));
+    vTaskExitCritical(&gpio_spinlock);
     if (gpio_isr_func == 
-# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
+# 417 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
                         ((void *)0)
-# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
+# 417 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
                             ) {
         ret = 0x101;
     } else {
         ret = gpio_isr_register(gpio_intr_service, 
-# 401 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
+# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
                                                   ((void *)0)
-# 401 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
+# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
                                                       , intr_alloc_flags, &gpio_isr_handle);
     }
-    vTaskExitCritical(&gpio_spinlock);
     return ret;
 }
 
 void gpio_uninstall_isr_service()
 {
     if (gpio_isr_func == 
-# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
                         ((void *)0)
-# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
                             ) {
         return;
     }
@@ -4605,23 +4728,52 @@ void gpio_uninstall_isr_service()
     esp_intr_free(gpio_isr_handle);
     free(gpio_isr_func);
     gpio_isr_func = 
-# 415 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
+# 433 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
                    ((void *)0)
-# 415 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
+# 433 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
                        ;
+    isr_core_id = (3);
     vTaskExitCritical(&gpio_spinlock);
     return;
 }
 
+static void gpio_isr_register_on_core_static(void *param)
+{
+    gpio_isr_alloc_t *p = (gpio_isr_alloc_t *)param;
+
+    p->ret = esp_intr_alloc(p->source, p->intr_alloc_flags, p->fn, p->arg, p->handle);
+}
+
 esp_err_t gpio_isr_register(void (*fn)(void*), void * arg, int intr_alloc_flags, gpio_isr_handle_t *handle)
 {
-    if (!(fn)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 422, "GPIO ISR null"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 422, "GPIO ISR null"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 422, "GPIO ISR null"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 422, "GPIO ISR null"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 422, "GPIO ISR null"); } } while(0); } while(0); return (0x102); };
-    return esp_intr_alloc(22, intr_alloc_flags, fn, arg, handle);
+    if (!(fn)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 448, "GPIO ISR null"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 448, "GPIO ISR null"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 448, "GPIO ISR null"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 448, "GPIO ISR null"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 448, "GPIO ISR null"); } } while(0); } while(0); return (0x102); };
+    gpio_isr_alloc_t p;
+    p.source = 22;
+    p.intr_alloc_flags = intr_alloc_flags;
+    p.fn = fn;
+    p.arg = arg;
+    p.handle = handle;
+    vTaskEnterCritical(&gpio_spinlock);
+    if(isr_core_id == (3)) {
+        isr_core_id = xPortGetCoreID();
+    }
+    vTaskExitCritical(&gpio_spinlock);
+    esp_err_t ret;
+
+    gpio_isr_register_on_core_static(&p);
+    ret = 0;
+
+
+
+    if(ret != 0 || p.ret != 0) {
+        return 0x105;
+    }
+    return 0;
 }
 
 esp_err_t gpio_wakeup_enable(gpio_num_t gpio_num, gpio_int_type_t intr_type)
 {
-    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 428, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 428, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 428, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 428, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 428, "GPIO number error"); } } while(0); } while(0); return (0x102); };
+    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 475, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 475, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 475, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 475, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 475, "GPIO number error"); } } while(0); } while(0); return (0x102); };
     esp_err_t ret = 0;
     if (( intr_type == GPIO_INTR_LOW_LEVEL ) || ( intr_type == GPIO_INTR_HIGH_LEVEL )) {
         if (rtc_gpio_is_valid_gpio(gpio_num)) {
@@ -4639,15 +4791,20 @@ esp_err_t gpio_wakeup_enable(gpio_num_t gpio_num, gpio_int_type_t intr_type)
 
 esp_err_t gpio_wakeup_disable(gpio_num_t gpio_num)
 {
-    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 446, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 446, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 446, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 446, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 446, "GPIO number error"); } } while(0); } while(0); return (0x102); };
-    GPIO.pin[gpio_num].wakeup_enable = 0;
-    return 0;
+    if (!(((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 493, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 493, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 493, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 493, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 493, "GPIO number error"); } } while(0); } while(0); return (0x102); };
+    esp_err_t ret = 0;
+    if (rtc_gpio_is_valid_gpio(gpio_num)) {
+        ret = rtc_gpio_wakeup_disable(gpio_num);
+    } else {
+        GPIO.pin[gpio_num].wakeup_enable = 0;
+    }
+    return ret;
 }
 
 esp_err_t gpio_set_drive_capability(gpio_num_t gpio_num, gpio_drive_cap_t strength)
 {
-    if (!(((((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0))) && (gpio_num < 34)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 453, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 453, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 453, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 453, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 453, "GPIO number error"); } } while(0); } while(0); return (0x102); };
-    if (!(strength < GPIO_DRIVE_CAP_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 454, "GPIO drive capability error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 454, "GPIO drive capability error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 454, "GPIO drive capability error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 454, "GPIO drive capability error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 454, "GPIO drive capability error"); } } while(0); } while(0); return (0x102); };
+    if (!(((((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0))) && (gpio_num < 34)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 505, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 505, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 505, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 505, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 505, "GPIO number error"); } } while(0); } while(0); return (0x102); };
+    if (!(strength < GPIO_DRIVE_CAP_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 506, "GPIO drive capability error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 506, "GPIO drive capability error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 506, "GPIO drive capability error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 506, "GPIO drive capability error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 506, "GPIO drive capability error"); } } while(0); } while(0); return (0x102); };
 
     if (rtc_gpio_is_valid_gpio(gpio_num)) {
         rtc_gpio_set_drive_capability(gpio_num, strength);
@@ -4659,12 +4816,12 @@ esp_err_t gpio_set_drive_capability(gpio_num_t gpio_num, gpio_drive_cap_t streng
 
 esp_err_t gpio_get_drive_capability(gpio_num_t gpio_num, gpio_drive_cap_t* strength)
 {
-    if (!(((((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0))) && (gpio_num < 34)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 466, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 466, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 466, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 466, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 466, "GPIO number error"); } } while(0); } while(0); return (0x102); };
+    if (!(((((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0))) && (gpio_num < 34)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 518, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 518, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 518, "GPIO number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 518, "GPIO number error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 518, "GPIO number error"); } } while(0); } while(0); return (0x102); };
     if (!(strength != 
-# 467 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
+# 519 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
    ((void *)0)
-# 467 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 467, "GPIO drive capability pointer error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 467, "GPIO drive capability pointer error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 467, "GPIO drive capability pointer error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 467, "GPIO drive capability pointer error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 467, "GPIO drive capability pointer error"); } } while(0); } while(0); return (0x102); };
+# 519 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 519, "GPIO drive capability pointer error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 519, "GPIO drive capability pointer error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 519, "GPIO drive capability pointer error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 519, "GPIO drive capability pointer error"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 519, "GPIO drive capability pointer error"); } } while(0); } while(0); return (0x102); };
 
     if (rtc_gpio_is_valid_gpio(gpio_num)) {
         return rtc_gpio_get_drive_capability(gpio_num, strength);
@@ -4713,7 +4870,7 @@ static const uint32_t GPIO_HOLD_MASK[34] = {
 
 esp_err_t gpio_hold_en(gpio_num_t gpio_num)
 {
-    if (!(((((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0))) && (gpio_num < 34)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 516, "Only output-capable GPIO support this function"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 516, "Only output-capable GPIO support this function"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 516, "Only output-capable GPIO support this function"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 516, "Only output-capable GPIO support this function"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 516, "Only output-capable GPIO support this function"); } } while(0); } while(0); return (0x106); };
+    if (!(((((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0))) && (gpio_num < 34)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 568, "Only output-capable GPIO support this function"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 568, "Only output-capable GPIO support this function"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 568, "Only output-capable GPIO support this function"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 568, "Only output-capable GPIO support this function"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 568, "Only output-capable GPIO support this function"); } } while(0); } while(0); return (0x106); };
     esp_err_t r = 0;
     if (rtc_gpio_is_valid_gpio(gpio_num)) {
         r = rtc_gpio_hold_en(gpio_num);
@@ -4727,7 +4884,7 @@ esp_err_t gpio_hold_en(gpio_num_t gpio_num)
 
 esp_err_t gpio_hold_dis(gpio_num_t gpio_num)
 {
-    if (!(((((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0))) && (gpio_num < 34)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 530, "Only output-capable GPIO support this function"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 530, "Only output-capable GPIO support this function"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 530, "Only output-capable GPIO support this function"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 530, "Only output-capable GPIO support this function"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 530, "Only output-capable GPIO support this function"); } } while(0); } while(0); return (0x106); };
+    if (!(((((gpio_num < 40 && GPIO_PIN_MUX_REG[gpio_num] != 0))) && (gpio_num < 34)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, GPIO_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 582, "Only output-capable GPIO support this function"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, GPIO_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 582, "Only output-capable GPIO support this function"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, GPIO_TAG, "D" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 582, "Only output-capable GPIO support this function"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, GPIO_TAG, "V" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 582, "Only output-capable GPIO support this function"); } else { esp_log_write(ESP_LOG_INFO, GPIO_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): %s" "\033[0m" "\n", esp_log_timestamp(), GPIO_TAG, __FUNCTION__, 582, "Only output-capable GPIO support this function"); } } while(0); } while(0); return (0x106); };
     esp_err_t r = 0;
     if (rtc_gpio_is_valid_gpio(gpio_num)) {
         r = rtc_gpio_hold_dis(gpio_num);
@@ -4760,9 +4917,9 @@ void gpio_iomux_in(uint32_t gpio, uint32_t signal_idx)
 }
 
 void gpio_iomux_out(uint8_t gpio_num, int func, 
-# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
+# 614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c" 3 4
                                                _Bool 
-# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
+# 614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/gpio.c"
                                                     oen_inv)
 {
     GPIO.func_out_sel_cfg[gpio_num].oen_sel = 0;

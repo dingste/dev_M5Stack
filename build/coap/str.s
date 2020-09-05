@@ -11,7 +11,7 @@
 	.global	coap_new_string
 	.type	coap_new_string, @function
 coap_new_string:
-.LFB38:
+.LFB47:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/coap/libcoap/src/str.c"
 	.loc 1 17 0
 .LVL0:
@@ -51,14 +51,14 @@ coap_new_string:
 	s32i.n	a8, a2, 4
 	.loc 1 29 0
 	retw.n
-.LFE38:
+.LFE47:
 	.size	coap_new_string, .-coap_new_string
 	.section	.text.coap_delete_string,"ax",@progbits
 	.align	4
 	.global	coap_delete_string
 	.type	coap_delete_string, @function
 coap_delete_string:
-.LFB39:
+.LFB48:
 	.loc 1 31 0
 .LVL7:
 	entry	sp, 32
@@ -74,7 +74,7 @@ coap_delete_string:
 	retw.n
 .LBE9:
 .LBE8:
-.LFE39:
+.LFE48:
 	.size	coap_delete_string, .-coap_delete_string
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -95,10 +95,10 @@ coap_delete_string:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI0-.LFB38
+	.4byte	.LCFI0-.LFB47
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -107,10 +107,10 @@ coap_delete_string:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI1-.LFB39
+	.4byte	.LCFI1-.LFB48
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -308,8 +308,8 @@ coap_delete_string:
 	.byte	0x1
 	.byte	0x11
 	.4byte	0x1f9
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1f9
@@ -400,8 +400,8 @@ coap_delete_string:
 	.4byte	.LASF44
 	.byte	0x1
 	.byte	0x1f
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x264
@@ -872,7 +872,7 @@ coap_delete_string:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL4
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -898,7 +898,7 @@ coap_delete_string:
 	.sleb128 9
 	.byte	0x9f
 	.4byte	.LVL4
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x6
 	.byte	0xf3
 	.uleb128 0x1
@@ -916,18 +916,18 @@ coap_delete_string:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB38
-	.4byte	.LFE38
-	.4byte	.LFB39
-	.4byte	.LFE39
+	.4byte	.LFB47
+	.4byte	.LFE47
+	.4byte	.LFB48
+	.4byte	.LFE48
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

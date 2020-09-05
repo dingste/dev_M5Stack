@@ -16,13 +16,13 @@
 	.literal .LC3, 4102
 	.literal .LC4, 4095
 	.literal .LC6, .LC5
-	.literal .LC7, __func__$6957
+	.literal .LC7, __func__$7021
 	.literal .LC9, .LC8
 	.literal .LC11, .LC10
 	.literal .LC12, ping_init_flag
 	.literal .LC13, 65535
 	.literal .LC15, .LC14
-	.literal .LC16, __func__$6922
+	.literal .LC16, __func__$6986
 	.literal .LC17, ping_seq_num
 	.literal .LC18, ping_time
 	.literal .LC19, -20561
@@ -30,7 +30,7 @@
 	.align	4
 	.type	ping_thread, @function
 ping_thread:
-.LFB39:
+.LFB48:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/apps/ping/ping.c"
 	.loc 1 239 0
 .LVL0:
@@ -562,7 +562,7 @@ ping_thread:
 	call8	vTaskDelete
 .LVL62:
 	retw.n
-.LFE39:
+.LFE48:
 	.size	ping_thread, .-ping_thread
 	.section	.rodata.str1.1
 .LC25:
@@ -578,7 +578,7 @@ ping_thread:
 	.global	ping_init
 	.type	ping_init, @function
 ping_init:
-.LFB40:
+.LFB49:
 	.loc 1 441 0
 	entry	sp, 32
 .LCFI1:
@@ -637,7 +637,7 @@ ping_init:
 .LVL72:
 	.loc 1 464 0
 	retw.n
-.LFE40:
+.LFE49:
 	.size	ping_init, .-ping_init
 	.section	.text.ping_deinit,"ax",@progbits
 	.literal_position
@@ -647,7 +647,7 @@ ping_init:
 	.global	ping_deinit
 	.type	ping_deinit, @function
 ping_deinit:
-.LFB41:
+.LFB50:
 	.loc 1 468 0
 	entry	sp, 32
 .LCFI2:
@@ -695,17 +695,17 @@ ping_deinit:
 .LVL80:
 .L43:
 	retw.n
-.LFE41:
+.LFE50:
 	.size	ping_deinit, .-ping_deinit
-	.section	.rodata.__func__$6922,"a",@progbits
-	.type	__func__$6922, @object
-	.size	__func__$6922, 10
-__func__$6922:
+	.section	.rodata.__func__$6986,"a",@progbits
+	.type	__func__$6986, @object
+	.size	__func__$6986, 10
+__func__$6986:
 	.string	"ping_send"
-	.section	.rodata.__func__$6957,"a",@progbits
-	.type	__func__$6957, @object
-	.size	__func__$6957, 12
-__func__$6957:
+	.section	.rodata.__func__$7021,"a",@progbits
+	.type	__func__$7021, @object
+	.size	__func__$7021, 12
+__func__$7021:
 	.string	"ping_thread"
 	.section	.bss.ping_init_flag,"aw",@nobits
 	.type	ping_init_flag, @object
@@ -749,10 +749,10 @@ ping_seq_num:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI0-.LFB39
+	.4byte	.LCFI0-.LFB48
 	.byte	0xe
 	.uleb128 0xb0
 	.align	4
@@ -761,10 +761,10 @@ ping_seq_num:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.byte	0x4
-	.4byte	.LCFI1-.LFB40
+	.4byte	.LCFI1-.LFB49
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -773,10 +773,10 @@ ping_seq_num:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.byte	0x4
-	.4byte	.LCFI2-.LFB41
+	.4byte	.LCFI2-.LFB50
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1812,8 +1812,8 @@ ping_seq_num:
 	.4byte	.LASF194
 	.byte	0x1
 	.byte	0xee
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xe28
@@ -1900,7 +1900,7 @@ ping_seq_num:
 	.4byte	0xe38
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6957
+	.4byte	__func__$7021
 	.uleb128 0x28
 	.string	"tos"
 	.byte	0x1
@@ -2043,7 +2043,7 @@ ping_seq_num:
 	.4byte	0x734
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6922
+	.4byte	__func__$6986
 	.uleb128 0x34
 	.4byte	0x763
 	.4byte	.LBB42
@@ -2642,8 +2642,8 @@ ping_seq_num:
 	.byte	0x1
 	.2byte	0x1b8
 	.4byte	0x3e
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xf00
@@ -2745,8 +2745,8 @@ ping_seq_num:
 	.4byte	.LASF196
 	.byte	0x1
 	.2byte	0x1d3
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xf78
@@ -2862,12 +2862,12 @@ ping_seq_num:
 	.4byte	.LASF175
 	.4byte	.LASF175
 	.byte	0xb
-	.byte	0x5a
+	.byte	0x4a
 	.uleb128 0x3e
 	.4byte	.LASF176
 	.4byte	.LASF176
 	.byte	0xb
-	.byte	0x5c
+	.byte	0x4c
 	.uleb128 0x3e
 	.4byte	.LASF177
 	.4byte	.LASF177
@@ -3758,7 +3758,7 @@ ping_seq_num:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL1
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4164,7 +4164,7 @@ ping_seq_num:
 	.byte	0x26
 	.byte	0x9f
 	.4byte	.LVL70
-	.4byte	.LFE40
+	.4byte	.LFE49
 	.2byte	0x7
 	.byte	0x72
 	.sleb128 0
@@ -4198,12 +4198,12 @@ ping_seq_num:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -4242,12 +4242,12 @@ ping_seq_num:
 	.4byte	.LBE60
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB39
-	.4byte	.LFE39
-	.4byte	.LFB40
-	.4byte	.LFE40
-	.4byte	.LFB41
-	.4byte	.LFE41
+	.4byte	.LFB48
+	.4byte	.LFE48
+	.4byte	.LFB49
+	.4byte	.LFE49
+	.4byte	.LFB50
+	.4byte	.LFE50
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

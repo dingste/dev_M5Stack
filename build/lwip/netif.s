@@ -8,7 +8,7 @@
 	.align	4
 	.type	netif_loopif_init, @function
 netif_loopif_init:
-.LFB18:
+.LFB27:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/netif.c"
 	.loc 1 141 0
 .LVL0:
@@ -30,13 +30,13 @@ netif_loopif_init:
 	movi.n	a2, 0
 .LVL1:
 	retw.n
-.LFE18:
+.LFE27:
 	.size	netif_loopif_init, .-netif_loopif_init
 	.section	.text.netif_null_output_ip6,"ax",@progbits
 	.align	4
 	.type	netif_null_output_ip6, @function
 netif_null_output_ip6:
-.LFB45:
+.LFB54:
 	.loc 1 1303 0
 .LVL2:
 	entry	sp, 32
@@ -45,13 +45,13 @@ netif_null_output_ip6:
 	movi	a2, 0xf4
 .LVL3:
 	retw.n
-.LFE45:
+.LFE54:
 	.size	netif_null_output_ip6, .-netif_null_output_ip6
 	.section	.text.netif_issue_reports,"ax",@progbits
 	.align	4
 	.type	netif_issue_reports, @function
 netif_issue_reports:
-.LFB31:
+.LFB40:
 	.loc 1 686 0
 .LVL4:
 	entry	sp, 32
@@ -92,7 +92,7 @@ netif_issue_reports:
 	s8i	a3, a2, 173
 .L3:
 	retw.n
-.LFE31:
+.LFE40:
 	.size	netif_issue_reports, .-netif_issue_reports
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC2:
@@ -106,7 +106,7 @@ netif_issue_reports:
 	.section	.text.netif_poll,"ax",@progbits
 	.literal_position
 	.literal .LC3, .LC2
-	.literal .LC4, __func__$7379
+	.literal .LC4, __func__$7443
 	.literal .LC6, .LC5
 	.literal .LC8, .LC7
 	.literal .LC10, .LC9
@@ -114,7 +114,7 @@ netif_issue_reports:
 	.global	netif_poll
 	.type	netif_poll, @function
 netif_poll:
-.LFB38:
+.LFB47:
 	.loc 1 951 0
 .LVL9:
 	entry	sp, 32
@@ -215,14 +215,14 @@ netif_poll:
 	call8	sys_arch_unprotect
 .LVL23:
 	retw.n
-.LFE38:
+.LFE47:
 	.size	netif_poll, .-netif_poll
 	.section	.text.netif_input,"ax",@progbits
 	.align	4
 	.global	netif_input
 	.type	netif_input, @function
 netif_input:
-.LFB20:
+.LFB29:
 	.loc 1 204 0
 .LVL24:
 	entry	sp, 32
@@ -250,14 +250,14 @@ netif_input:
 	extui	a2, a10, 0, 8
 	.loc 1 211 0
 	retw.n
-.LFE20:
+.LFE29:
 	.size	netif_input, .-netif_input
 	.section	.text.netif_set_garp_flag,"ax",@progbits
 	.align	4
 	.global	netif_set_garp_flag
 	.type	netif_set_garp_flag, @function
 netif_set_garp_flag:
-.LFB23:
+.LFB32:
 	.loc 1 379 0
 .LVL29:
 	entry	sp, 32
@@ -268,7 +268,7 @@ netif_set_garp_flag:
 	or	a8, a9, a8
 	s8i	a8, a2, 189
 	retw.n
-.LFE23:
+.LFE32:
 	.size	netif_set_garp_flag, .-netif_set_garp_flag
 	.section	.text.netif_find,"ax",@progbits
 	.literal_position
@@ -277,7 +277,7 @@ netif_set_garp_flag:
 	.global	netif_find
 	.type	netif_find, @function
 netif_find:
-.LFB25:
+.LFB34:
 	.loc 1 494 0
 .LVL30:
 	entry	sp, 32
@@ -321,7 +321,7 @@ netif_find:
 	mov.n	a2, a8
 .LVL36:
 	retw.n
-.LFE25:
+.LFE34:
 	.size	netif_find, .-netif_find
 	.section	.text.netif_set_ipaddr,"ax",@progbits
 	.literal_position
@@ -330,7 +330,7 @@ netif_find:
 	.global	netif_set_ipaddr
 	.type	netif_set_ipaddr, @function
 netif_set_ipaddr:
-.LFB26:
+.LFB35:
 	.loc 1 529 0
 .LVL37:
 	entry	sp, 64
@@ -401,14 +401,14 @@ netif_set_ipaddr:
 	s32i	a3, a2, 220
 .L47:
 	retw.n
-.LFE26:
+.LFE35:
 	.size	netif_set_ipaddr, .-netif_set_ipaddr
 	.section	.text.netif_set_gw,"ax",@progbits
 	.align	4
 	.global	netif_set_gw
 	.type	netif_set_gw, @function
 netif_set_gw:
-.LFB27:
+.LFB36:
 	.loc 1 601 0
 .LVL46:
 	entry	sp, 32
@@ -427,14 +427,14 @@ netif_set_gw:
 	.loc 1 603 0 discriminator 4
 	s8i	a3, a2, 60
 	retw.n
-.LFE27:
+.LFE36:
 	.size	netif_set_gw, .-netif_set_gw
 	.section	.text.netif_set_netmask,"ax",@progbits
 	.align	4
 	.global	netif_set_netmask
 	.type	netif_set_netmask, @function
 netif_set_netmask:
-.LFB28:
+.LFB37:
 	.loc 1 624 0
 .LVL48:
 	entry	sp, 32
@@ -453,14 +453,14 @@ netif_set_netmask:
 	.loc 1 628 0 discriminator 4
 	s8i	a3, a2, 40
 	retw.n
-.LFE28:
+.LFE37:
 	.size	netif_set_netmask, .-netif_set_netmask
 	.section	.text.netif_set_addr,"ax",@progbits
 	.align	4
 	.global	netif_set_addr
 	.type	netif_set_addr, @function
 netif_set_addr:
-.LFB22:
+.LFB31:
 	.loc 1 358 0
 .LVL50:
 	entry	sp, 32
@@ -509,7 +509,7 @@ netif_set_addr:
 	retw.n
 .LBE9:
 .LBE8:
-.LFE22:
+.LFE31:
 	.size	netif_set_addr, .-netif_set_addr
 	.section	.rodata.str1.1
 .LC16:
@@ -517,7 +517,7 @@ netif_set_addr:
 	.section	.text.netif_add,"ax",@progbits
 	.literal_position
 	.literal .LC17, .LC16
-	.literal .LC18, __func__$7268
+	.literal .LC18, __func__$7332
 	.literal .LC19, .LC5
 	.literal .LC20, netif_null_output_ip6
 	.literal .LC21, netif_num
@@ -526,7 +526,7 @@ netif_set_addr:
 	.global	netif_add
 	.type	netif_add, @function
 netif_add:
-.LFB21:
+.LFB30:
 	.loc 1 246 0
 .LVL58:
 	entry	sp, 48
@@ -605,9 +605,6 @@ netif_add:
 .LVL62:
 	.loc 1 301 0
 	l32r	a10, .LC21
-	.loc 1 273 0
-	movi.n	a8, 1
-	s8i	a8, a2, 172
 	.loc 1 280 0
 	movi.n	a8, 3
 	s8i	a8, a2, 173
@@ -628,6 +625,8 @@ netif_add:
 	mov.n	a12, a4
 	mov.n	a11, a3
 	mov.n	a10, a2
+	.loc 1 276 0
+	s8i	a7, a2, 172
 	.loc 1 289 0
 	s32i	a7, a2, 196
 	.loc 1 292 0
@@ -671,7 +670,7 @@ netif_add:
 	mov.n	a2, a7
 .LVL69:
 	retw.n
-.LFE21:
+.LFE30:
 	.size	netif_add, .-netif_add
 	.section	.text.netif_set_default,"ax",@progbits
 	.literal_position
@@ -680,7 +679,7 @@ netif_add:
 	.global	netif_set_default
 	.type	netif_set_default, @function
 netif_set_default:
-.LFB29:
+.LFB38:
 	.loc 1 648 0
 .LVL70:
 	entry	sp, 32
@@ -689,14 +688,14 @@ netif_set_default:
 	l32r	a8, .LC23
 	s32i.n	a2, a8, 0
 	retw.n
-.LFE29:
+.LFE38:
 	.size	netif_set_default, .-netif_set_default
 	.section	.text.netif_set_up,"ax",@progbits
 	.align	4
 	.global	netif_set_up
 	.type	netif_set_up, @function
 netif_set_up:
-.LFB30:
+.LFB39:
 	.loc 1 668 0
 .LVL71:
 	entry	sp, 32
@@ -719,14 +718,14 @@ netif_set_up:
 .LVL72:
 .L83:
 	retw.n
-.LFE30:
+.LFE39:
 	.size	netif_set_up, .-netif_set_up
 	.section	.text.netif_set_down,"ax",@progbits
 	.align	4
 	.global	netif_set_down
 	.type	netif_set_down, @function
 netif_set_down:
-.LFB32:
+.LFB41:
 	.loc 1 726 0
 .LVL73:
 	entry	sp, 32
@@ -751,7 +750,7 @@ netif_set_down:
 .LVL75:
 .L90:
 	retw.n
-.LFE32:
+.LFE41:
 	.size	netif_set_down, .-netif_set_down
 	.section	.text.netif_remove,"ax",@progbits
 	.literal_position
@@ -761,7 +760,7 @@ netif_set_down:
 	.global	netif_remove
 	.type	netif_remove, @function
 netif_remove:
-.LFB24:
+.LFB33:
 	.loc 1 392 0
 .LVL76:
 	entry	sp, 32
@@ -888,14 +887,14 @@ netif_remove:
 .L99:
 	retw.n
 .LBE12:
-.LFE24:
+.LFE33:
 	.size	netif_remove, .-netif_remove
 	.section	.text.netif_set_link_up,"ax",@progbits
 	.align	4
 	.global	netif_set_link_up
 	.type	netif_set_link_up, @function
 netif_set_link_up:
-.LFB33:
+.LFB42:
 	.loc 1 779 0
 .LVL96:
 	entry	sp, 32
@@ -921,7 +920,7 @@ netif_set_link_up:
 .LVL98:
 .L127:
 	retw.n
-.LFE33:
+.LFE42:
 	.size	netif_set_link_up, .-netif_set_link_up
 	.section	.text.netif_init,"ax",@progbits
 	.literal_position
@@ -934,7 +933,7 @@ netif_set_link_up:
 	.global	netif_init
 	.type	netif_init, @function
 netif_init:
-.LFB19:
+.LFB28:
 	.loc 1 164 0
 	entry	sp, 64
 .LCFI17:
@@ -983,14 +982,14 @@ netif_init:
 	call8	netif_set_up
 .LVL101:
 	retw.n
-.LFE19:
+.LFE28:
 	.size	netif_init, .-netif_init
 	.section	.text.netif_set_link_down,"ax",@progbits
 	.align	4
 	.global	netif_set_link_down
 	.type	netif_set_link_down, @function
 netif_set_link_down:
-.LFB34:
+.LFB43:
 	.loc 1 804 0
 .LVL102:
 	entry	sp, 32
@@ -1004,7 +1003,7 @@ netif_set_link_down:
 	s8i	a8, a2, 189
 .L135:
 	retw.n
-.LFE34:
+.LFE43:
 	.size	netif_set_link_down, .-netif_set_link_down
 	.section	.rodata.str1.1
 .LC31:
@@ -1012,14 +1011,14 @@ netif_set_link_down:
 	.section	.text.netif_loop_output,"ax",@progbits
 	.literal_position
 	.literal .LC32, .LC31
-	.literal .LC33, __func__$7361
+	.literal .LC33, __func__$7425
 	.literal .LC34, .LC5
 	.literal .LC35, netif_poll
 	.align	4
 	.global	netif_loop_output
 	.type	netif_loop_output, @function
 netif_loop_output:
-.LFB35:
+.LFB44:
 	.loc 1 842 0
 .LVL103:
 	entry	sp, 32
@@ -1130,13 +1129,13 @@ netif_loop_output:
 .LVL126:
 	.loc 1 920 0
 	retw.n
-.LFE35:
+.LFE44:
 	.size	netif_loop_output, .-netif_loop_output
 	.section	.text.netif_loop_output_ipv6,"ax",@progbits
 	.align	4
 	.type	netif_loop_output_ipv6, @function
 netif_loop_output_ipv6:
-.LFB37:
+.LFB46:
 	.loc 1 935 0
 .LVL127:
 	entry	sp, 32
@@ -1150,13 +1149,13 @@ netif_loop_output_ipv6:
 	extui	a2, a10, 0, 8
 .LVL129:
 	retw.n
-.LFE37:
+.LFE46:
 	.size	netif_loop_output_ipv6, .-netif_loop_output_ipv6
 	.section	.text.netif_loop_output_ipv4,"ax",@progbits
 	.align	4
 	.type	netif_loop_output_ipv4, @function
 netif_loop_output_ipv4:
-.LFB48:
+.LFB57:
 	entry	sp, 32
 .LCFI21:
 	mov.n	a11, a3
@@ -1164,7 +1163,7 @@ netif_loop_output_ipv4:
 	call8	netif_loop_output
 	extui	a2, a10, 0, 8
 	retw.n
-.LFE48:
+.LFE57:
 	.size	netif_loop_output_ipv4, .-netif_loop_output_ipv4
 	.section	.rodata.str1.1
 .LC36:
@@ -1174,14 +1173,14 @@ netif_loop_output_ipv4:
 	.section	.text.netif_ip6_addr_set_parts,"ax",@progbits
 	.literal_position
 	.literal .LC37, .LC36
-	.literal .LC38, __func__$7401
+	.literal .LC38, __func__$7465
 	.literal .LC39, .LC5
 	.literal .LC41, .LC40
 	.align	4
 	.global	netif_ip6_addr_set_parts
 	.type	netif_ip6_addr_set_parts, @function
 netif_ip6_addr_set_parts:
-.LFB40:
+.LFB49:
 	.loc 1 1078 0
 .LVL130:
 	.loc 1 1078 0
@@ -1296,7 +1295,7 @@ netif_ip6_addr_set_parts:
 .LVL140:
 .L162:
 	retw.n
-.LFE40:
+.LFE49:
 	.size	netif_ip6_addr_set_parts, .-netif_ip6_addr_set_parts
 	.section	.rodata.str1.1
 .LC42:
@@ -1304,13 +1303,13 @@ netif_ip6_addr_set_parts:
 	.section	.text.netif_ip6_addr_set,"ax",@progbits
 	.literal_position
 	.literal .LC43, .LC42
-	.literal .LC44, __func__$7391
+	.literal .LC44, __func__$7455
 	.literal .LC45, .LC5
 	.align	4
 	.global	netif_ip6_addr_set
 	.type	netif_ip6_addr_set, @function
 netif_ip6_addr_set:
-.LFB39:
+.LFB48:
 	.loc 1 1060 0
 .LVL141:
 	entry	sp, 32
@@ -1337,19 +1336,19 @@ netif_ip6_addr_set:
 	call8	netif_ip6_addr_set_parts
 .LVL143:
 	retw.n
-.LFE39:
+.LFE48:
 	.size	netif_ip6_addr_set, .-netif_ip6_addr_set
 	.section	.text.netif_ip6_addr_set_state,"ax",@progbits
 	.literal_position
 	.literal .LC46, .LC36
-	.literal .LC47, __func__$7411
+	.literal .LC47, __func__$7475
 	.literal .LC48, .LC5
 	.literal .LC49, .LC40
 	.align	4
 	.global	netif_ip6_addr_set_state
 	.type	netif_ip6_addr_set_state, @function
 netif_ip6_addr_set_state:
-.LFB41:
+.LFB50:
 	.loc 1 1132 0
 .LVL144:
 	entry	sp, 48
@@ -1442,14 +1441,14 @@ netif_ip6_addr_set_state:
 .L178:
 	retw.n
 .LBE14:
-.LFE41:
+.LFE50:
 	.size	netif_ip6_addr_set_state, .-netif_ip6_addr_set_state
 	.section	.text.netif_get_ip6_addr_match,"ax",@progbits
 	.align	4
 	.global	netif_get_ip6_addr_match
 	.type	netif_get_ip6_addr_match, @function
 netif_get_ip6_addr_match:
-.LFB42:
+.LFB51:
 	.loc 1 1194 0
 .LVL155:
 	entry	sp, 32
@@ -1496,7 +1495,7 @@ netif_get_ip6_addr_match:
 .L204:
 	.loc 1 1203 0
 	retw.n
-.LFE42:
+.LFE51:
 	.size	netif_get_ip6_addr_match, .-netif_get_ip6_addr_match
 	.section	.text.netif_create_ip6_linklocal_address,"ax",@progbits
 	.literal_position
@@ -1506,7 +1505,7 @@ netif_get_ip6_addr_match:
 	.global	netif_create_ip6_linklocal_address
 	.type	netif_create_ip6_linklocal_address, @function
 netif_create_ip6_linklocal_address:
-.LFB43:
+.LFB52:
 	.loc 1 1215 0
 .LVL161:
 	entry	sp, 32
@@ -1606,14 +1605,14 @@ netif_create_ip6_linklocal_address:
 	call8	netif_ip6_addr_set_state
 .LVL173:
 	retw.n
-.LFE43:
+.LFE52:
 	.size	netif_create_ip6_linklocal_address, .-netif_create_ip6_linklocal_address
 	.section	.text.netif_add_ip6_address,"ax",@progbits
 	.align	4
 	.global	netif_add_ip6_address
 	.type	netif_add_ip6_address, @function
 netif_add_ip6_address:
-.LFB44:
+.LFB53:
 	.loc 1 1269 0
 .LVL174:
 	entry	sp, 32
@@ -1698,37 +1697,37 @@ netif_add_ip6_address:
 	movi	a2, 0xfa
 	.loc 1 1297 0
 	retw.n
-.LFE44:
+.LFE53:
 	.size	netif_add_ip6_address, .-netif_add_ip6_address
-	.section	.rodata.__func__$7411,"a",@progbits
-	.type	__func__$7411, @object
-	.size	__func__$7411, 25
-__func__$7411:
+	.section	.rodata.__func__$7475,"a",@progbits
+	.type	__func__$7475, @object
+	.size	__func__$7475, 25
+__func__$7475:
 	.string	"netif_ip6_addr_set_state"
-	.section	.rodata.__func__$7401,"a",@progbits
-	.type	__func__$7401, @object
-	.size	__func__$7401, 25
-__func__$7401:
+	.section	.rodata.__func__$7465,"a",@progbits
+	.type	__func__$7465, @object
+	.size	__func__$7465, 25
+__func__$7465:
 	.string	"netif_ip6_addr_set_parts"
-	.section	.rodata.__func__$7391,"a",@progbits
-	.type	__func__$7391, @object
-	.size	__func__$7391, 19
-__func__$7391:
+	.section	.rodata.__func__$7455,"a",@progbits
+	.type	__func__$7455, @object
+	.size	__func__$7455, 19
+__func__$7455:
 	.string	"netif_ip6_addr_set"
-	.section	.rodata.__func__$7379,"a",@progbits
-	.type	__func__$7379, @object
-	.size	__func__$7379, 11
-__func__$7379:
+	.section	.rodata.__func__$7443,"a",@progbits
+	.type	__func__$7443, @object
+	.size	__func__$7443, 11
+__func__$7443:
 	.string	"netif_poll"
-	.section	.rodata.__func__$7361,"a",@progbits
-	.type	__func__$7361, @object
-	.size	__func__$7361, 18
-__func__$7361:
+	.section	.rodata.__func__$7425,"a",@progbits
+	.type	__func__$7425, @object
+	.size	__func__$7425, 18
+__func__$7425:
 	.string	"netif_loop_output"
-	.section	.rodata.__func__$7268,"a",@progbits
-	.type	__func__$7268, @object
-	.size	__func__$7268, 10
-__func__$7268:
+	.section	.rodata.__func__$7332,"a",@progbits
+	.type	__func__$7332, @object
+	.size	__func__$7332, 10
+__func__$7332:
 	.string	"netif_add"
 	.section	.bss.loop_netif,"aw",@nobits
 	.align	4
@@ -1762,10 +1761,10 @@ netif_num:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI0-.LFB18
+	.4byte	.LCFI0-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1774,10 +1773,10 @@ netif_num:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.byte	0x4
-	.4byte	.LCFI1-.LFB45
+	.4byte	.LCFI1-.LFB54
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1786,10 +1785,10 @@ netif_num:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI2-.LFB31
+	.4byte	.LCFI2-.LFB40
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1798,10 +1797,10 @@ netif_num:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI3-.LFB38
+	.4byte	.LCFI3-.LFB47
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1810,10 +1809,10 @@ netif_num:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI4-.LFB20
+	.4byte	.LCFI4-.LFB29
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1822,10 +1821,10 @@ netif_num:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI5-.LFB23
+	.4byte	.LCFI5-.LFB32
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1834,10 +1833,10 @@ netif_num:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.byte	0x4
-	.4byte	.LCFI6-.LFB25
+	.4byte	.LCFI6-.LFB34
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1846,10 +1845,10 @@ netif_num:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.byte	0x4
-	.4byte	.LCFI7-.LFB26
+	.4byte	.LCFI7-.LFB35
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -1858,10 +1857,10 @@ netif_num:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.byte	0x4
-	.4byte	.LCFI8-.LFB27
+	.4byte	.LCFI8-.LFB36
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1870,10 +1869,10 @@ netif_num:
 	.4byte	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.4byte	.Lframe0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.byte	0x4
-	.4byte	.LCFI9-.LFB28
+	.4byte	.LCFI9-.LFB37
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1882,10 +1881,10 @@ netif_num:
 	.4byte	.LEFDE20-.LASFDE20
 .LASFDE20:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI10-.LFB22
+	.4byte	.LCFI10-.LFB31
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1894,10 +1893,10 @@ netif_num:
 	.4byte	.LEFDE22-.LASFDE22
 .LASFDE22:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI11-.LFB21
+	.4byte	.LCFI11-.LFB30
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1906,10 +1905,10 @@ netif_num:
 	.4byte	.LEFDE24-.LASFDE24
 .LASFDE24:
 	.4byte	.Lframe0
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.byte	0x4
-	.4byte	.LCFI12-.LFB29
+	.4byte	.LCFI12-.LFB38
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1918,10 +1917,10 @@ netif_num:
 	.4byte	.LEFDE26-.LASFDE26
 .LASFDE26:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI13-.LFB30
+	.4byte	.LCFI13-.LFB39
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1930,10 +1929,10 @@ netif_num:
 	.4byte	.LEFDE28-.LASFDE28
 .LASFDE28:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.byte	0x4
-	.4byte	.LCFI14-.LFB32
+	.4byte	.LCFI14-.LFB41
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1942,10 +1941,10 @@ netif_num:
 	.4byte	.LEFDE30-.LASFDE30
 .LASFDE30:
 	.4byte	.Lframe0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI15-.LFB24
+	.4byte	.LCFI15-.LFB33
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1954,10 +1953,10 @@ netif_num:
 	.4byte	.LEFDE32-.LASFDE32
 .LASFDE32:
 	.4byte	.Lframe0
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.byte	0x4
-	.4byte	.LCFI16-.LFB33
+	.4byte	.LCFI16-.LFB42
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1966,10 +1965,10 @@ netif_num:
 	.4byte	.LEFDE34-.LASFDE34
 .LASFDE34:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI17-.LFB19
+	.4byte	.LCFI17-.LFB28
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -1978,10 +1977,10 @@ netif_num:
 	.4byte	.LEFDE36-.LASFDE36
 .LASFDE36:
 	.4byte	.Lframe0
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.byte	0x4
-	.4byte	.LCFI18-.LFB34
+	.4byte	.LCFI18-.LFB43
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1990,10 +1989,10 @@ netif_num:
 	.4byte	.LEFDE38-.LASFDE38
 .LASFDE38:
 	.4byte	.Lframe0
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.byte	0x4
-	.4byte	.LCFI19-.LFB35
+	.4byte	.LCFI19-.LFB44
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2002,10 +2001,10 @@ netif_num:
 	.4byte	.LEFDE40-.LASFDE40
 .LASFDE40:
 	.4byte	.Lframe0
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.byte	0x4
-	.4byte	.LCFI20-.LFB37
+	.4byte	.LCFI20-.LFB46
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2014,10 +2013,10 @@ netif_num:
 	.4byte	.LEFDE42-.LASFDE42
 .LASFDE42:
 	.4byte	.Lframe0
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
 	.byte	0x4
-	.4byte	.LCFI21-.LFB48
+	.4byte	.LCFI21-.LFB57
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2026,10 +2025,10 @@ netif_num:
 	.4byte	.LEFDE44-.LASFDE44
 .LASFDE44:
 	.4byte	.Lframe0
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.byte	0x4
-	.4byte	.LCFI22-.LFB40
+	.4byte	.LCFI22-.LFB49
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -2038,10 +2037,10 @@ netif_num:
 	.4byte	.LEFDE46-.LASFDE46
 .LASFDE46:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI23-.LFB39
+	.4byte	.LCFI23-.LFB48
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2050,10 +2049,10 @@ netif_num:
 	.4byte	.LEFDE48-.LASFDE48
 .LASFDE48:
 	.4byte	.Lframe0
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.byte	0x4
-	.4byte	.LCFI24-.LFB41
+	.4byte	.LCFI24-.LFB50
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -2062,10 +2061,10 @@ netif_num:
 	.4byte	.LEFDE50-.LASFDE50
 .LASFDE50:
 	.4byte	.Lframe0
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.byte	0x4
-	.4byte	.LCFI25-.LFB42
+	.4byte	.LCFI25-.LFB51
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2074,10 +2073,10 @@ netif_num:
 	.4byte	.LEFDE52-.LASFDE52
 .LASFDE52:
 	.4byte	.Lframe0
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.byte	0x4
-	.4byte	.LCFI26-.LFB43
+	.4byte	.LCFI26-.LFB52
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2086,10 +2085,10 @@ netif_num:
 	.4byte	.LEFDE54-.LASFDE54
 .LASFDE54:
 	.4byte	.Lframe0
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.byte	0x4
-	.4byte	.LCFI27-.LFB44
+	.4byte	.LCFI27-.LFB53
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2265,7 +2264,7 @@ netif_num:
 	.uleb128 0x4
 	.4byte	.LASF22
 	.byte	0x4
-	.byte	0x36
+	.byte	0x3a
 	.4byte	0x33
 	.uleb128 0xd
 	.4byte	.LASF24
@@ -3163,8 +3162,8 @@ netif_num:
 	.byte	0x1
 	.byte	0x8c
 	.4byte	0x1f8
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x8a6
@@ -3180,8 +3179,8 @@ netif_num:
 	.byte	0x1
 	.2byte	0x516
 	.4byte	0x1f8
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x8eb
@@ -3210,8 +3209,8 @@ netif_num:
 	.4byte	.LASF224
 	.byte	0x1
 	.2byte	0x2ad
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x95e
@@ -3271,8 +3270,8 @@ netif_num:
 	.4byte	.LASF151
 	.byte	0x1
 	.2byte	0x3b6
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xa3b
@@ -3294,7 +3293,7 @@ netif_num:
 	.4byte	0xa4b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$7379
+	.4byte	__func__$7443
 	.uleb128 0x29
 	.4byte	.LBB5
 	.4byte	.LBE5-.LBB5
@@ -3380,8 +3379,8 @@ netif_num:
 	.byte	0x1
 	.byte	0xcb
 	.4byte	0x1f8
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xaa8
@@ -3424,8 +3423,8 @@ netif_num:
 	.4byte	.LASF152
 	.byte	0x1
 	.2byte	0x17a
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xacd
@@ -3442,8 +3441,8 @@ netif_num:
 	.byte	0x1
 	.2byte	0x1ed
 	.4byte	0x4dd
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xb18
@@ -3470,8 +3469,8 @@ netif_num:
 	.4byte	.LASF155
 	.byte	0x1
 	.2byte	0x210
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xbcf
@@ -3576,8 +3575,8 @@ netif_num:
 	.4byte	.LASF158
 	.byte	0x1
 	.2byte	0x258
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xc09
@@ -3599,8 +3598,8 @@ netif_num:
 	.4byte	.LASF159
 	.byte	0x1
 	.2byte	0x26f
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xc3e
@@ -3620,8 +3619,8 @@ netif_num:
 	.byte	0
 	.uleb128 0x33
 	.4byte	0x826
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xd2c
@@ -3768,8 +3767,8 @@ netif_num:
 	.byte	0x1
 	.byte	0xf1
 	.4byte	0x4dd
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xe5c
@@ -3829,7 +3828,7 @@ netif_num:
 	.4byte	0xe6c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$7268
+	.4byte	__func__$7332
 	.uleb128 0x23
 	.4byte	.LVL59
 	.4byte	0x1823
@@ -3851,7 +3850,7 @@ netif_num:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$7268
+	.4byte	__func__$7332
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5d
@@ -3942,8 +3941,8 @@ netif_num:
 	.4byte	0xe5c
 	.uleb128 0x33
 	.4byte	0x863
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xe8c
@@ -3956,8 +3955,8 @@ netif_num:
 	.4byte	.LASF162
 	.byte	0x1
 	.2byte	0x29b
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xec6
@@ -3988,8 +3987,8 @@ netif_num:
 	.4byte	.LASF163
 	.byte	0x1
 	.2byte	0x2d5
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xf0f
@@ -4026,8 +4025,8 @@ netif_num:
 	.4byte	.LASF164
 	.byte	0x1
 	.2byte	0x187
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1062
@@ -4209,8 +4208,8 @@ netif_num:
 	.4byte	.LASF166
 	.byte	0x1
 	.2byte	0x30a
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x10b0
@@ -4252,8 +4251,8 @@ netif_num:
 	.4byte	.LASF167
 	.byte	0x1
 	.byte	0xa3
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1148
@@ -4347,8 +4346,8 @@ netif_num:
 	.4byte	.LASF171
 	.byte	0x1
 	.2byte	0x323
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x116d
@@ -4365,8 +4364,8 @@ netif_num:
 	.byte	0x1
 	.2byte	0x349
 	.4byte	0x1f8
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x12cf
@@ -4418,7 +4417,7 @@ netif_num:
 	.4byte	0x12df
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$7361
+	.4byte	__func__$7425
 	.uleb128 0x23
 	.4byte	.LVL105
 	.4byte	0x18e0
@@ -4508,7 +4507,7 @@ netif_num:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$7361
+	.4byte	__func__$7425
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5d
@@ -4575,8 +4574,8 @@ netif_num:
 	.byte	0
 	.uleb128 0x33
 	.4byte	0x12e4
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1359
@@ -4612,8 +4611,8 @@ netif_num:
 	.4byte	.LASF174
 	.byte	0x1
 	.2byte	0x435
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x147c
@@ -4667,7 +4666,7 @@ netif_num:
 	.4byte	0x148c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$7401
+	.4byte	__func__$7465
 	.uleb128 0x29
 	.4byte	.LBB13
 	.4byte	.LBE13-.LBB13
@@ -4771,8 +4770,8 @@ netif_num:
 	.4byte	.LASF178
 	.byte	0x1
 	.2byte	0x423
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x151a
@@ -4802,7 +4801,7 @@ netif_num:
 	.4byte	0x152a
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$7391
+	.4byte	__func__$7455
 	.uleb128 0x23
 	.4byte	.LVL142
 	.4byte	0x1823
@@ -4824,7 +4823,7 @@ netif_num:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$7391
+	.4byte	__func__$7455
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5d
@@ -4849,8 +4848,8 @@ netif_num:
 	.4byte	.LASF180
 	.byte	0x1
 	.2byte	0x46b
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1655
@@ -4885,7 +4884,7 @@ netif_num:
 	.4byte	0x1655
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$7411
+	.4byte	__func__$7475
 	.uleb128 0x29
 	.4byte	.LBB14
 	.4byte	.LBE14-.LBB14
@@ -5010,8 +5009,8 @@ netif_num:
 	.byte	0x1
 	.2byte	0x4a9
 	.4byte	0xc4
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x16a1
@@ -5039,8 +5038,8 @@ netif_num:
 	.4byte	.LASF186
 	.byte	0x1
 	.2byte	0x4be
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1720
@@ -5101,8 +5100,8 @@ netif_num:
 	.byte	0x1
 	.2byte	0x4f4
 	.4byte	0x1f8
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x17ac
@@ -5302,12 +5301,12 @@ netif_num:
 	.4byte	.LASF213
 	.4byte	.LASF213
 	.byte	0x18
-	.byte	0x7c
+	.byte	0x85
 	.uleb128 0x40
 	.4byte	.LASF214
 	.4byte	.LASF214
 	.byte	0x18
-	.byte	0x82
+	.byte	0x8b
 	.uleb128 0x40
 	.4byte	.LASF215
 	.4byte	.LASF215
@@ -6298,7 +6297,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL1
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6312,7 +6311,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL3
-	.4byte	.LFE45
+	.4byte	.LFE54
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6326,7 +6325,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL7
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6402,7 +6401,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL28-1
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6416,7 +6415,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL36
-	.4byte	.LFE25
+	.4byte	.LFE34
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6448,7 +6447,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL45
-	.4byte	.LFE26
+	.4byte	.LFE35
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6468,7 +6467,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL43
-	.4byte	.LFE26
+	.4byte	.LFE35
 	.2byte	0x3
 	.byte	0x72
 	.sleb128 4
@@ -6481,7 +6480,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL47
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6495,7 +6494,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL49
-	.4byte	.LFE28
+	.4byte	.LFE37
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6509,7 +6508,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL69
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6523,7 +6522,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL66
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6537,7 +6536,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL67
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6556,7 +6555,7 @@ netif_num:
 	.byte	0x72
 	.sleb128 148
 	.4byte	.LVL64-1
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6574,7 +6573,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x59
 	.4byte	.LVL62-1
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6612,7 +6611,7 @@ netif_num:
 	.sleb128 -127
 	.byte	0x9f
 	.4byte	.LVL93
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -6668,7 +6667,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL126
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6700,7 +6699,7 @@ netif_num:
 	.byte	0x53
 	.byte	0x9f
 	.4byte	.LVL125
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -6760,7 +6759,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL129
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6774,7 +6773,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL131
-	.4byte	.LFE40
+	.4byte	.LFE49
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6793,7 +6792,7 @@ netif_num:
 	.byte	0x73
 	.sleb128 64
 	.4byte	.LVL139
-	.4byte	.LFE40
+	.4byte	.LFE49
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6811,7 +6810,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x59
 	.4byte	.LVL134-1
-	.4byte	.LFE40
+	.4byte	.LFE49
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6841,7 +6840,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL145
-	.4byte	.LFE41
+	.4byte	.LFE50
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6878,7 +6877,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL157
-	.4byte	.LFE42
+	.4byte	.LFE51
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6914,7 +6913,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL162
-	.4byte	.LFE43
+	.4byte	.LFE52
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6983,7 +6982,7 @@ netif_num:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL187
-	.4byte	.LFE44
+	.4byte	.LFE53
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7015,7 +7014,7 @@ netif_num:
 	.byte	0x53
 	.byte	0x9f
 	.4byte	.LVL186
-	.4byte	.LFE44
+	.4byte	.LFE53
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -7051,7 +7050,7 @@ netif_num:
 	.byte	0x32
 	.byte	0x9f
 	.4byte	.LVL186
-	.4byte	.LFE44
+	.4byte	.LFE53
 	.2byte	0x2
 	.byte	0x33
 	.byte	0x9f
@@ -7065,118 +7064,118 @@ netif_num:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
 	.4byte	.LFB27
 	.4byte	.LFE27-.LFB27
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.4byte	.LFB29
 	.4byte	.LFE29-.LFB29
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
 	.4byte	.LFB32
 	.4byte	.LFE32-.LFB32
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
 	.4byte	.LFB34
 	.4byte	.LFE34-.LFB34
 	.4byte	.LFB35
 	.4byte	.LFE35-.LFB35
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.4byte	.LFB37
 	.4byte	.LFE37-.LFB37
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.4byte	.LFB39
 	.4byte	.LFE39-.LFB39
 	.4byte	.LFB41
 	.4byte	.LFE41-.LFB41
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.4byte	.LFB42
 	.4byte	.LFE42-.LFB42
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.4byte	.LFB43
 	.4byte	.LFE43-.LFB43
 	.4byte	.LFB44
 	.4byte	.LFE44-.LFB44
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB45
-	.4byte	.LFE45
-	.4byte	.LFB31
-	.4byte	.LFE31
-	.4byte	.LFB38
-	.4byte	.LFE38
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB25
-	.4byte	.LFE25
-	.4byte	.LFB26
-	.4byte	.LFE26
 	.4byte	.LFB27
 	.4byte	.LFE27
-	.4byte	.LFB28
-	.4byte	.LFE28
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB21
-	.4byte	.LFE21
+	.4byte	.LFB54
+	.4byte	.LFE54
+	.4byte	.LFB40
+	.4byte	.LFE40
+	.4byte	.LFB47
+	.4byte	.LFE47
 	.4byte	.LFB29
 	.4byte	.LFE29
-	.4byte	.LFB30
-	.4byte	.LFE30
 	.4byte	.LFB32
 	.4byte	.LFE32
-	.4byte	.LFB24
-	.4byte	.LFE24
-	.4byte	.LFB33
-	.4byte	.LFE33
-	.4byte	.LFB19
-	.4byte	.LFE19
 	.4byte	.LFB34
 	.4byte	.LFE34
 	.4byte	.LFB35
 	.4byte	.LFE35
+	.4byte	.LFB36
+	.4byte	.LFE36
 	.4byte	.LFB37
 	.4byte	.LFE37
-	.4byte	.LFB40
-	.4byte	.LFE40
+	.4byte	.LFB31
+	.4byte	.LFE31
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB38
+	.4byte	.LFE38
 	.4byte	.LFB39
 	.4byte	.LFE39
 	.4byte	.LFB41
 	.4byte	.LFE41
+	.4byte	.LFB33
+	.4byte	.LFE33
 	.4byte	.LFB42
 	.4byte	.LFE42
+	.4byte	.LFB28
+	.4byte	.LFE28
 	.4byte	.LFB43
 	.4byte	.LFE43
 	.4byte	.LFB44
 	.4byte	.LFE44
+	.4byte	.LFB46
+	.4byte	.LFE46
+	.4byte	.LFB49
+	.4byte	.LFE49
+	.4byte	.LFB48
+	.4byte	.LFE48
+	.4byte	.LFB50
+	.4byte	.LFE50
+	.4byte	.LFB51
+	.4byte	.LFE51
+	.4byte	.LFB52
+	.4byte	.LFE52
+	.4byte	.LFB53
+	.4byte	.LFE53
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

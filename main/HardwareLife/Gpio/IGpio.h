@@ -13,11 +13,11 @@
 
 #ifndef IGPIO_H
 #define IGPIO_H
+
+
 class IGpio{
 public:
-    virtual ~IGpio() {
-
-    };
+    virtual ~IGpio() {};
     virtual bool pending() =0;
     virtual bool connected()=0;
     virtual int duration()=0;

@@ -677,7 +677,7 @@ extern long double strtold (const char *restrict, char **restrict);
 void *esp_mbedtls_mem_calloc(size_t n, size_t size);
 void esp_mbedtls_mem_free(void *ptr);
 # 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
-# 2717 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h"
+# 2758 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h" 1
 # 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 1
@@ -685,9 +685,9 @@ void esp_mbedtls_mem_free(void *ptr);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed/limits.h" 1 3 4
 # 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 2
 # 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h" 2
-# 681 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
+# 706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
 typedef int mbedtls_iso_c_forbids_empty_translation_units;
-# 2718 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
+# 2759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
 # 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/md5.c" 2
 
 
@@ -776,7 +776,7 @@ typedef __uint_least64_t uint_least64_t;
 typedef __intptr_t intptr_t;
 typedef __uintptr_t uintptr_t;
 # 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h" 2
-# 58 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
+# 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
 typedef struct mbedtls_md5_context
 {
     uint32_t total[2];
@@ -784,53 +784,53 @@ typedef struct mbedtls_md5_context
     unsigned char buffer[64];
 }
 mbedtls_md5_context;
-# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
+# 81 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
 void mbedtls_md5_init( mbedtls_md5_context *ctx );
-# 92 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
+# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
 void mbedtls_md5_free( mbedtls_md5_context *ctx );
-# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
 void mbedtls_md5_clone( mbedtls_md5_context *dst,
                         const mbedtls_md5_context *src );
-# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
 int mbedtls_md5_starts_ret( mbedtls_md5_context *ctx );
-# 136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
 int mbedtls_md5_update_ret( mbedtls_md5_context *ctx,
                             const unsigned char *input,
                             size_t ilen );
-# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
+# 154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
 int mbedtls_md5_finish_ret( mbedtls_md5_context *ctx,
                             unsigned char output[16] );
-# 169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
+# 170 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
 int mbedtls_internal_md5_process( mbedtls_md5_context *ctx,
                                   const unsigned char data[64] );
-# 190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
+# 191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
  void mbedtls_md5_starts( mbedtls_md5_context *ctx );
-# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
+# 207 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
  void mbedtls_md5_update( mbedtls_md5_context *ctx,
                                             const unsigned char *input,
                                             size_t ilen );
-# 223 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
+# 224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
  void mbedtls_md5_finish( mbedtls_md5_context *ctx,
                                             unsigned char output[16] );
-# 239 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
+# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
  void mbedtls_md5_process( mbedtls_md5_context *ctx,
                                              const unsigned char data[64] );
-# 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
+# 260 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
 int mbedtls_md5_ret( const unsigned char *input,
                      size_t ilen,
                      unsigned char output[16] );
-# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
+# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
  void mbedtls_md5( const unsigned char *input,
                                      size_t ilen,
                                      unsigned char output[16] );
-# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
+# 303 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/md5.h"
 int mbedtls_md5_self_test( int verbose );
 # 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/md5.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h" 1
 # 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
 # 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h" 2
-# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h"
+# 159 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h"
 void mbedtls_platform_zeroize( void *buf, size_t len );
 # 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/md5.c" 2
 
@@ -1246,7 +1246,7 @@ int clock_getres (clockid_t clock_id, struct timespec *res);
 # 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h" 2
 typedef time_t mbedtls_time_t;
 # 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h" 2
-# 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 62 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 1
 # 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
@@ -1643,26 +1643,26 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
-# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h" 2
-# 123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 63 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h" 2
+# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h" 2
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h" 2
 extern void *mbedtls_calloc( size_t n, size_t size );
 extern void mbedtls_free( void *ptr );
-# 136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 int mbedtls_platform_set_calloc_free( void * (*calloc_func)( size_t, size_t ),
                               void (*free_func)( void * ) );
-# 318 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 typedef struct mbedtls_platform_context
 {
     char dummy;
 }
 mbedtls_platform_context;
-# 343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 int mbedtls_platform_setup( mbedtls_platform_context *ctx );
-# 358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 void mbedtls_platform_teardown( mbedtls_platform_context *ctx );
 # 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/md5.c" 2
 # 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/md5.c"
@@ -1734,7 +1734,7 @@ int mbedtls_internal_md5_process( mbedtls_md5_context *ctx,
     { (X[13]) = ( (uint32_t) (data)[(52) ] ) | ( (uint32_t) (data)[(52) + 1] << 8 ) | ( (uint32_t) (data)[(52) + 2] << 16 ) | ( (uint32_t) (data)[(52) + 3] << 24 ); };
     { (X[14]) = ( (uint32_t) (data)[(56) ] ) | ( (uint32_t) (data)[(56) + 1] << 8 ) | ( (uint32_t) (data)[(56) + 2] << 16 ) | ( (uint32_t) (data)[(56) + 3] << 24 ); };
     { (X[15]) = ( (uint32_t) (data)[(60) ] ) | ( (uint32_t) (data)[(60) + 1] << 8 ) | ( (uint32_t) (data)[(60) + 2] << 16 ) | ( (uint32_t) (data)[(60) + 3] << 24 ); };
-# 146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/md5.c"
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/md5.c"
     A = ctx->state[0];
     B = ctx->state[1];
     C = ctx->state[2];
@@ -1742,85 +1742,85 @@ int mbedtls_internal_md5_process( mbedtls_md5_context *ctx,
 
 
 
-    { A += (D ^ (B & (C ^ D))) + X[0] + 0xD76AA478; A = ((A << 7) | ((A & 0xFFFFFFFF) >> (32 - 7))) + B; };
-    { D += (C ^ (A & (B ^ C))) + X[1] + 0xE8C7B756; D = ((D << 12) | ((D & 0xFFFFFFFF) >> (32 - 12))) + A; };
-    { C += (B ^ (D & (A ^ B))) + X[2] + 0x242070DB; C = ((C << 17) | ((C & 0xFFFFFFFF) >> (32 - 17))) + D; };
-    { B += (A ^ (C & (D ^ A))) + X[3] + 0xC1BDCEEE; B = ((B << 22) | ((B & 0xFFFFFFFF) >> (32 - 22))) + C; };
-    { A += (D ^ (B & (C ^ D))) + X[4] + 0xF57C0FAF; A = ((A << 7) | ((A & 0xFFFFFFFF) >> (32 - 7))) + B; };
-    { D += (C ^ (A & (B ^ C))) + X[5] + 0x4787C62A; D = ((D << 12) | ((D & 0xFFFFFFFF) >> (32 - 12))) + A; };
-    { C += (B ^ (D & (A ^ B))) + X[6] + 0xA8304613; C = ((C << 17) | ((C & 0xFFFFFFFF) >> (32 - 17))) + D; };
-    { B += (A ^ (C & (D ^ A))) + X[7] + 0xFD469501; B = ((B << 22) | ((B & 0xFFFFFFFF) >> (32 - 22))) + C; };
-    { A += (D ^ (B & (C ^ D))) + X[8] + 0x698098D8; A = ((A << 7) | ((A & 0xFFFFFFFF) >> (32 - 7))) + B; };
-    { D += (C ^ (A & (B ^ C))) + X[9] + 0x8B44F7AF; D = ((D << 12) | ((D & 0xFFFFFFFF) >> (32 - 12))) + A; };
-    { C += (B ^ (D & (A ^ B))) + X[10] + 0xFFFF5BB1; C = ((C << 17) | ((C & 0xFFFFFFFF) >> (32 - 17))) + D; };
-    { B += (A ^ (C & (D ^ A))) + X[11] + 0x895CD7BE; B = ((B << 22) | ((B & 0xFFFFFFFF) >> (32 - 22))) + C; };
-    { A += (D ^ (B & (C ^ D))) + X[12] + 0x6B901122; A = ((A << 7) | ((A & 0xFFFFFFFF) >> (32 - 7))) + B; };
-    { D += (C ^ (A & (B ^ C))) + X[13] + 0xFD987193; D = ((D << 12) | ((D & 0xFFFFFFFF) >> (32 - 12))) + A; };
-    { C += (B ^ (D & (A ^ B))) + X[14] + 0xA679438E; C = ((C << 17) | ((C & 0xFFFFFFFF) >> (32 - 17))) + D; };
-    { B += (A ^ (C & (D ^ A))) + X[15] + 0x49B40821; B = ((B << 22) | ((B & 0xFFFFFFFF) >> (32 - 22))) + C; };
+    do { (A) += (((D)) ^ (((B)) & (((C)) ^ ((D))))) + X[(0)] + (0xD76AA478); (A) = ( ( ((A)) << ((7)) ) | ( ( ((A)) & 0xFFFFFFFF) >> ( 32 - ((7)) ) ) ) + (B); } while( 0 );
+    do { (D) += (((C)) ^ (((A)) & (((B)) ^ ((C))))) + X[(1)] + (0xE8C7B756); (D) = ( ( ((D)) << ((12)) ) | ( ( ((D)) & 0xFFFFFFFF) >> ( 32 - ((12)) ) ) ) + (A); } while( 0 );
+    do { (C) += (((B)) ^ (((D)) & (((A)) ^ ((B))))) + X[(2)] + (0x242070DB); (C) = ( ( ((C)) << ((17)) ) | ( ( ((C)) & 0xFFFFFFFF) >> ( 32 - ((17)) ) ) ) + (D); } while( 0 );
+    do { (B) += (((A)) ^ (((C)) & (((D)) ^ ((A))))) + X[(3)] + (0xC1BDCEEE); (B) = ( ( ((B)) << ((22)) ) | ( ( ((B)) & 0xFFFFFFFF) >> ( 32 - ((22)) ) ) ) + (C); } while( 0 );
+    do { (A) += (((D)) ^ (((B)) & (((C)) ^ ((D))))) + X[(4)] + (0xF57C0FAF); (A) = ( ( ((A)) << ((7)) ) | ( ( ((A)) & 0xFFFFFFFF) >> ( 32 - ((7)) ) ) ) + (B); } while( 0 );
+    do { (D) += (((C)) ^ (((A)) & (((B)) ^ ((C))))) + X[(5)] + (0x4787C62A); (D) = ( ( ((D)) << ((12)) ) | ( ( ((D)) & 0xFFFFFFFF) >> ( 32 - ((12)) ) ) ) + (A); } while( 0 );
+    do { (C) += (((B)) ^ (((D)) & (((A)) ^ ((B))))) + X[(6)] + (0xA8304613); (C) = ( ( ((C)) << ((17)) ) | ( ( ((C)) & 0xFFFFFFFF) >> ( 32 - ((17)) ) ) ) + (D); } while( 0 );
+    do { (B) += (((A)) ^ (((C)) & (((D)) ^ ((A))))) + X[(7)] + (0xFD469501); (B) = ( ( ((B)) << ((22)) ) | ( ( ((B)) & 0xFFFFFFFF) >> ( 32 - ((22)) ) ) ) + (C); } while( 0 );
+    do { (A) += (((D)) ^ (((B)) & (((C)) ^ ((D))))) + X[(8)] + (0x698098D8); (A) = ( ( ((A)) << ((7)) ) | ( ( ((A)) & 0xFFFFFFFF) >> ( 32 - ((7)) ) ) ) + (B); } while( 0 );
+    do { (D) += (((C)) ^ (((A)) & (((B)) ^ ((C))))) + X[(9)] + (0x8B44F7AF); (D) = ( ( ((D)) << ((12)) ) | ( ( ((D)) & 0xFFFFFFFF) >> ( 32 - ((12)) ) ) ) + (A); } while( 0 );
+    do { (C) += (((B)) ^ (((D)) & (((A)) ^ ((B))))) + X[(10)] + (0xFFFF5BB1); (C) = ( ( ((C)) << ((17)) ) | ( ( ((C)) & 0xFFFFFFFF) >> ( 32 - ((17)) ) ) ) + (D); } while( 0 );
+    do { (B) += (((A)) ^ (((C)) & (((D)) ^ ((A))))) + X[(11)] + (0x895CD7BE); (B) = ( ( ((B)) << ((22)) ) | ( ( ((B)) & 0xFFFFFFFF) >> ( 32 - ((22)) ) ) ) + (C); } while( 0 );
+    do { (A) += (((D)) ^ (((B)) & (((C)) ^ ((D))))) + X[(12)] + (0x6B901122); (A) = ( ( ((A)) << ((7)) ) | ( ( ((A)) & 0xFFFFFFFF) >> ( 32 - ((7)) ) ) ) + (B); } while( 0 );
+    do { (D) += (((C)) ^ (((A)) & (((B)) ^ ((C))))) + X[(13)] + (0xFD987193); (D) = ( ( ((D)) << ((12)) ) | ( ( ((D)) & 0xFFFFFFFF) >> ( 32 - ((12)) ) ) ) + (A); } while( 0 );
+    do { (C) += (((B)) ^ (((D)) & (((A)) ^ ((B))))) + X[(14)] + (0xA679438E); (C) = ( ( ((C)) << ((17)) ) | ( ( ((C)) & 0xFFFFFFFF) >> ( 32 - ((17)) ) ) ) + (D); } while( 0 );
+    do { (B) += (((A)) ^ (((C)) & (((D)) ^ ((A))))) + X[(15)] + (0x49B40821); (B) = ( ( ((B)) << ((22)) ) | ( ( ((B)) & 0xFFFFFFFF) >> ( 32 - ((22)) ) ) ) + (C); } while( 0 );
 
 
 
 
 
-    { A += (C ^ (D & (B ^ C))) + X[1] + 0xF61E2562; A = ((A << 5) | ((A & 0xFFFFFFFF) >> (32 - 5))) + B; };
-    { D += (B ^ (C & (A ^ B))) + X[6] + 0xC040B340; D = ((D << 9) | ((D & 0xFFFFFFFF) >> (32 - 9))) + A; };
-    { C += (A ^ (B & (D ^ A))) + X[11] + 0x265E5A51; C = ((C << 14) | ((C & 0xFFFFFFFF) >> (32 - 14))) + D; };
-    { B += (D ^ (A & (C ^ D))) + X[0] + 0xE9B6C7AA; B = ((B << 20) | ((B & 0xFFFFFFFF) >> (32 - 20))) + C; };
-    { A += (C ^ (D & (B ^ C))) + X[5] + 0xD62F105D; A = ((A << 5) | ((A & 0xFFFFFFFF) >> (32 - 5))) + B; };
-    { D += (B ^ (C & (A ^ B))) + X[10] + 0x02441453; D = ((D << 9) | ((D & 0xFFFFFFFF) >> (32 - 9))) + A; };
-    { C += (A ^ (B & (D ^ A))) + X[15] + 0xD8A1E681; C = ((C << 14) | ((C & 0xFFFFFFFF) >> (32 - 14))) + D; };
-    { B += (D ^ (A & (C ^ D))) + X[4] + 0xE7D3FBC8; B = ((B << 20) | ((B & 0xFFFFFFFF) >> (32 - 20))) + C; };
-    { A += (C ^ (D & (B ^ C))) + X[9] + 0x21E1CDE6; A = ((A << 5) | ((A & 0xFFFFFFFF) >> (32 - 5))) + B; };
-    { D += (B ^ (C & (A ^ B))) + X[14] + 0xC33707D6; D = ((D << 9) | ((D & 0xFFFFFFFF) >> (32 - 9))) + A; };
-    { C += (A ^ (B & (D ^ A))) + X[3] + 0xF4D50D87; C = ((C << 14) | ((C & 0xFFFFFFFF) >> (32 - 14))) + D; };
-    { B += (D ^ (A & (C ^ D))) + X[8] + 0x455A14ED; B = ((B << 20) | ((B & 0xFFFFFFFF) >> (32 - 20))) + C; };
-    { A += (C ^ (D & (B ^ C))) + X[13] + 0xA9E3E905; A = ((A << 5) | ((A & 0xFFFFFFFF) >> (32 - 5))) + B; };
-    { D += (B ^ (C & (A ^ B))) + X[2] + 0xFCEFA3F8; D = ((D << 9) | ((D & 0xFFFFFFFF) >> (32 - 9))) + A; };
-    { C += (A ^ (B & (D ^ A))) + X[7] + 0x676F02D9; C = ((C << 14) | ((C & 0xFFFFFFFF) >> (32 - 14))) + D; };
-    { B += (D ^ (A & (C ^ D))) + X[12] + 0x8D2A4C8A; B = ((B << 20) | ((B & 0xFFFFFFFF) >> (32 - 20))) + C; };
+    do { (A) += (((C)) ^ (((D)) & (((B)) ^ ((C))))) + X[(1)] + (0xF61E2562); (A) = ( ( ((A)) << ((5)) ) | ( ( ((A)) & 0xFFFFFFFF) >> ( 32 - ((5)) ) ) ) + (B); } while( 0 );
+    do { (D) += (((B)) ^ (((C)) & (((A)) ^ ((B))))) + X[(6)] + (0xC040B340); (D) = ( ( ((D)) << ((9)) ) | ( ( ((D)) & 0xFFFFFFFF) >> ( 32 - ((9)) ) ) ) + (A); } while( 0 );
+    do { (C) += (((A)) ^ (((B)) & (((D)) ^ ((A))))) + X[(11)] + (0x265E5A51); (C) = ( ( ((C)) << ((14)) ) | ( ( ((C)) & 0xFFFFFFFF) >> ( 32 - ((14)) ) ) ) + (D); } while( 0 );
+    do { (B) += (((D)) ^ (((A)) & (((C)) ^ ((D))))) + X[(0)] + (0xE9B6C7AA); (B) = ( ( ((B)) << ((20)) ) | ( ( ((B)) & 0xFFFFFFFF) >> ( 32 - ((20)) ) ) ) + (C); } while( 0 );
+    do { (A) += (((C)) ^ (((D)) & (((B)) ^ ((C))))) + X[(5)] + (0xD62F105D); (A) = ( ( ((A)) << ((5)) ) | ( ( ((A)) & 0xFFFFFFFF) >> ( 32 - ((5)) ) ) ) + (B); } while( 0 );
+    do { (D) += (((B)) ^ (((C)) & (((A)) ^ ((B))))) + X[(10)] + (0x02441453); (D) = ( ( ((D)) << ((9)) ) | ( ( ((D)) & 0xFFFFFFFF) >> ( 32 - ((9)) ) ) ) + (A); } while( 0 );
+    do { (C) += (((A)) ^ (((B)) & (((D)) ^ ((A))))) + X[(15)] + (0xD8A1E681); (C) = ( ( ((C)) << ((14)) ) | ( ( ((C)) & 0xFFFFFFFF) >> ( 32 - ((14)) ) ) ) + (D); } while( 0 );
+    do { (B) += (((D)) ^ (((A)) & (((C)) ^ ((D))))) + X[(4)] + (0xE7D3FBC8); (B) = ( ( ((B)) << ((20)) ) | ( ( ((B)) & 0xFFFFFFFF) >> ( 32 - ((20)) ) ) ) + (C); } while( 0 );
+    do { (A) += (((C)) ^ (((D)) & (((B)) ^ ((C))))) + X[(9)] + (0x21E1CDE6); (A) = ( ( ((A)) << ((5)) ) | ( ( ((A)) & 0xFFFFFFFF) >> ( 32 - ((5)) ) ) ) + (B); } while( 0 );
+    do { (D) += (((B)) ^ (((C)) & (((A)) ^ ((B))))) + X[(14)] + (0xC33707D6); (D) = ( ( ((D)) << ((9)) ) | ( ( ((D)) & 0xFFFFFFFF) >> ( 32 - ((9)) ) ) ) + (A); } while( 0 );
+    do { (C) += (((A)) ^ (((B)) & (((D)) ^ ((A))))) + X[(3)] + (0xF4D50D87); (C) = ( ( ((C)) << ((14)) ) | ( ( ((C)) & 0xFFFFFFFF) >> ( 32 - ((14)) ) ) ) + (D); } while( 0 );
+    do { (B) += (((D)) ^ (((A)) & (((C)) ^ ((D))))) + X[(8)] + (0x455A14ED); (B) = ( ( ((B)) << ((20)) ) | ( ( ((B)) & 0xFFFFFFFF) >> ( 32 - ((20)) ) ) ) + (C); } while( 0 );
+    do { (A) += (((C)) ^ (((D)) & (((B)) ^ ((C))))) + X[(13)] + (0xA9E3E905); (A) = ( ( ((A)) << ((5)) ) | ( ( ((A)) & 0xFFFFFFFF) >> ( 32 - ((5)) ) ) ) + (B); } while( 0 );
+    do { (D) += (((B)) ^ (((C)) & (((A)) ^ ((B))))) + X[(2)] + (0xFCEFA3F8); (D) = ( ( ((D)) << ((9)) ) | ( ( ((D)) & 0xFFFFFFFF) >> ( 32 - ((9)) ) ) ) + (A); } while( 0 );
+    do { (C) += (((A)) ^ (((B)) & (((D)) ^ ((A))))) + X[(7)] + (0x676F02D9); (C) = ( ( ((C)) << ((14)) ) | ( ( ((C)) & 0xFFFFFFFF) >> ( 32 - ((14)) ) ) ) + (D); } while( 0 );
+    do { (B) += (((D)) ^ (((A)) & (((C)) ^ ((D))))) + X[(12)] + (0x8D2A4C8A); (B) = ( ( ((B)) << ((20)) ) | ( ( ((B)) & 0xFFFFFFFF) >> ( 32 - ((20)) ) ) ) + (C); } while( 0 );
 
 
 
 
 
-    { A += (B ^ C ^ D) + X[5] + 0xFFFA3942; A = ((A << 4) | ((A & 0xFFFFFFFF) >> (32 - 4))) + B; };
-    { D += (A ^ B ^ C) + X[8] + 0x8771F681; D = ((D << 11) | ((D & 0xFFFFFFFF) >> (32 - 11))) + A; };
-    { C += (D ^ A ^ B) + X[11] + 0x6D9D6122; C = ((C << 16) | ((C & 0xFFFFFFFF) >> (32 - 16))) + D; };
-    { B += (C ^ D ^ A) + X[14] + 0xFDE5380C; B = ((B << 23) | ((B & 0xFFFFFFFF) >> (32 - 23))) + C; };
-    { A += (B ^ C ^ D) + X[1] + 0xA4BEEA44; A = ((A << 4) | ((A & 0xFFFFFFFF) >> (32 - 4))) + B; };
-    { D += (A ^ B ^ C) + X[4] + 0x4BDECFA9; D = ((D << 11) | ((D & 0xFFFFFFFF) >> (32 - 11))) + A; };
-    { C += (D ^ A ^ B) + X[7] + 0xF6BB4B60; C = ((C << 16) | ((C & 0xFFFFFFFF) >> (32 - 16))) + D; };
-    { B += (C ^ D ^ A) + X[10] + 0xBEBFBC70; B = ((B << 23) | ((B & 0xFFFFFFFF) >> (32 - 23))) + C; };
-    { A += (B ^ C ^ D) + X[13] + 0x289B7EC6; A = ((A << 4) | ((A & 0xFFFFFFFF) >> (32 - 4))) + B; };
-    { D += (A ^ B ^ C) + X[0] + 0xEAA127FA; D = ((D << 11) | ((D & 0xFFFFFFFF) >> (32 - 11))) + A; };
-    { C += (D ^ A ^ B) + X[3] + 0xD4EF3085; C = ((C << 16) | ((C & 0xFFFFFFFF) >> (32 - 16))) + D; };
-    { B += (C ^ D ^ A) + X[6] + 0x04881D05; B = ((B << 23) | ((B & 0xFFFFFFFF) >> (32 - 23))) + C; };
-    { A += (B ^ C ^ D) + X[9] + 0xD9D4D039; A = ((A << 4) | ((A & 0xFFFFFFFF) >> (32 - 4))) + B; };
-    { D += (A ^ B ^ C) + X[12] + 0xE6DB99E5; D = ((D << 11) | ((D & 0xFFFFFFFF) >> (32 - 11))) + A; };
-    { C += (D ^ A ^ B) + X[15] + 0x1FA27CF8; C = ((C << 16) | ((C & 0xFFFFFFFF) >> (32 - 16))) + D; };
-    { B += (C ^ D ^ A) + X[2] + 0xC4AC5665; B = ((B << 23) | ((B & 0xFFFFFFFF) >> (32 - 23))) + C; };
+    do { (A) += (((B)) ^ ((C)) ^ ((D))) + X[(5)] + (0xFFFA3942); (A) = ( ( ((A)) << ((4)) ) | ( ( ((A)) & 0xFFFFFFFF) >> ( 32 - ((4)) ) ) ) + (B); } while( 0 );
+    do { (D) += (((A)) ^ ((B)) ^ ((C))) + X[(8)] + (0x8771F681); (D) = ( ( ((D)) << ((11)) ) | ( ( ((D)) & 0xFFFFFFFF) >> ( 32 - ((11)) ) ) ) + (A); } while( 0 );
+    do { (C) += (((D)) ^ ((A)) ^ ((B))) + X[(11)] + (0x6D9D6122); (C) = ( ( ((C)) << ((16)) ) | ( ( ((C)) & 0xFFFFFFFF) >> ( 32 - ((16)) ) ) ) + (D); } while( 0 );
+    do { (B) += (((C)) ^ ((D)) ^ ((A))) + X[(14)] + (0xFDE5380C); (B) = ( ( ((B)) << ((23)) ) | ( ( ((B)) & 0xFFFFFFFF) >> ( 32 - ((23)) ) ) ) + (C); } while( 0 );
+    do { (A) += (((B)) ^ ((C)) ^ ((D))) + X[(1)] + (0xA4BEEA44); (A) = ( ( ((A)) << ((4)) ) | ( ( ((A)) & 0xFFFFFFFF) >> ( 32 - ((4)) ) ) ) + (B); } while( 0 );
+    do { (D) += (((A)) ^ ((B)) ^ ((C))) + X[(4)] + (0x4BDECFA9); (D) = ( ( ((D)) << ((11)) ) | ( ( ((D)) & 0xFFFFFFFF) >> ( 32 - ((11)) ) ) ) + (A); } while( 0 );
+    do { (C) += (((D)) ^ ((A)) ^ ((B))) + X[(7)] + (0xF6BB4B60); (C) = ( ( ((C)) << ((16)) ) | ( ( ((C)) & 0xFFFFFFFF) >> ( 32 - ((16)) ) ) ) + (D); } while( 0 );
+    do { (B) += (((C)) ^ ((D)) ^ ((A))) + X[(10)] + (0xBEBFBC70); (B) = ( ( ((B)) << ((23)) ) | ( ( ((B)) & 0xFFFFFFFF) >> ( 32 - ((23)) ) ) ) + (C); } while( 0 );
+    do { (A) += (((B)) ^ ((C)) ^ ((D))) + X[(13)] + (0x289B7EC6); (A) = ( ( ((A)) << ((4)) ) | ( ( ((A)) & 0xFFFFFFFF) >> ( 32 - ((4)) ) ) ) + (B); } while( 0 );
+    do { (D) += (((A)) ^ ((B)) ^ ((C))) + X[(0)] + (0xEAA127FA); (D) = ( ( ((D)) << ((11)) ) | ( ( ((D)) & 0xFFFFFFFF) >> ( 32 - ((11)) ) ) ) + (A); } while( 0 );
+    do { (C) += (((D)) ^ ((A)) ^ ((B))) + X[(3)] + (0xD4EF3085); (C) = ( ( ((C)) << ((16)) ) | ( ( ((C)) & 0xFFFFFFFF) >> ( 32 - ((16)) ) ) ) + (D); } while( 0 );
+    do { (B) += (((C)) ^ ((D)) ^ ((A))) + X[(6)] + (0x04881D05); (B) = ( ( ((B)) << ((23)) ) | ( ( ((B)) & 0xFFFFFFFF) >> ( 32 - ((23)) ) ) ) + (C); } while( 0 );
+    do { (A) += (((B)) ^ ((C)) ^ ((D))) + X[(9)] + (0xD9D4D039); (A) = ( ( ((A)) << ((4)) ) | ( ( ((A)) & 0xFFFFFFFF) >> ( 32 - ((4)) ) ) ) + (B); } while( 0 );
+    do { (D) += (((A)) ^ ((B)) ^ ((C))) + X[(12)] + (0xE6DB99E5); (D) = ( ( ((D)) << ((11)) ) | ( ( ((D)) & 0xFFFFFFFF) >> ( 32 - ((11)) ) ) ) + (A); } while( 0 );
+    do { (C) += (((D)) ^ ((A)) ^ ((B))) + X[(15)] + (0x1FA27CF8); (C) = ( ( ((C)) << ((16)) ) | ( ( ((C)) & 0xFFFFFFFF) >> ( 32 - ((16)) ) ) ) + (D); } while( 0 );
+    do { (B) += (((C)) ^ ((D)) ^ ((A))) + X[(2)] + (0xC4AC5665); (B) = ( ( ((B)) << ((23)) ) | ( ( ((B)) & 0xFFFFFFFF) >> ( 32 - ((23)) ) ) ) + (C); } while( 0 );
 
 
 
 
 
-    { A += (C ^ (B | ~D)) + X[0] + 0xF4292244; A = ((A << 6) | ((A & 0xFFFFFFFF) >> (32 - 6))) + B; };
-    { D += (B ^ (A | ~C)) + X[7] + 0x432AFF97; D = ((D << 10) | ((D & 0xFFFFFFFF) >> (32 - 10))) + A; };
-    { C += (A ^ (D | ~B)) + X[14] + 0xAB9423A7; C = ((C << 15) | ((C & 0xFFFFFFFF) >> (32 - 15))) + D; };
-    { B += (D ^ (C | ~A)) + X[5] + 0xFC93A039; B = ((B << 21) | ((B & 0xFFFFFFFF) >> (32 - 21))) + C; };
-    { A += (C ^ (B | ~D)) + X[12] + 0x655B59C3; A = ((A << 6) | ((A & 0xFFFFFFFF) >> (32 - 6))) + B; };
-    { D += (B ^ (A | ~C)) + X[3] + 0x8F0CCC92; D = ((D << 10) | ((D & 0xFFFFFFFF) >> (32 - 10))) + A; };
-    { C += (A ^ (D | ~B)) + X[10] + 0xFFEFF47D; C = ((C << 15) | ((C & 0xFFFFFFFF) >> (32 - 15))) + D; };
-    { B += (D ^ (C | ~A)) + X[1] + 0x85845DD1; B = ((B << 21) | ((B & 0xFFFFFFFF) >> (32 - 21))) + C; };
-    { A += (C ^ (B | ~D)) + X[8] + 0x6FA87E4F; A = ((A << 6) | ((A & 0xFFFFFFFF) >> (32 - 6))) + B; };
-    { D += (B ^ (A | ~C)) + X[15] + 0xFE2CE6E0; D = ((D << 10) | ((D & 0xFFFFFFFF) >> (32 - 10))) + A; };
-    { C += (A ^ (D | ~B)) + X[6] + 0xA3014314; C = ((C << 15) | ((C & 0xFFFFFFFF) >> (32 - 15))) + D; };
-    { B += (D ^ (C | ~A)) + X[13] + 0x4E0811A1; B = ((B << 21) | ((B & 0xFFFFFFFF) >> (32 - 21))) + C; };
-    { A += (C ^ (B | ~D)) + X[4] + 0xF7537E82; A = ((A << 6) | ((A & 0xFFFFFFFF) >> (32 - 6))) + B; };
-    { D += (B ^ (A | ~C)) + X[11] + 0xBD3AF235; D = ((D << 10) | ((D & 0xFFFFFFFF) >> (32 - 10))) + A; };
-    { C += (A ^ (D | ~B)) + X[2] + 0x2AD7D2BB; C = ((C << 15) | ((C & 0xFFFFFFFF) >> (32 - 15))) + D; };
-    { B += (D ^ (C | ~A)) + X[9] + 0xEB86D391; B = ((B << 21) | ((B & 0xFFFFFFFF) >> (32 - 21))) + C; };
+    do { (A) += (((C)) ^ (((B)) | ~((D)))) + X[(0)] + (0xF4292244); (A) = ( ( ((A)) << ((6)) ) | ( ( ((A)) & 0xFFFFFFFF) >> ( 32 - ((6)) ) ) ) + (B); } while( 0 );
+    do { (D) += (((B)) ^ (((A)) | ~((C)))) + X[(7)] + (0x432AFF97); (D) = ( ( ((D)) << ((10)) ) | ( ( ((D)) & 0xFFFFFFFF) >> ( 32 - ((10)) ) ) ) + (A); } while( 0 );
+    do { (C) += (((A)) ^ (((D)) | ~((B)))) + X[(14)] + (0xAB9423A7); (C) = ( ( ((C)) << ((15)) ) | ( ( ((C)) & 0xFFFFFFFF) >> ( 32 - ((15)) ) ) ) + (D); } while( 0 );
+    do { (B) += (((D)) ^ (((C)) | ~((A)))) + X[(5)] + (0xFC93A039); (B) = ( ( ((B)) << ((21)) ) | ( ( ((B)) & 0xFFFFFFFF) >> ( 32 - ((21)) ) ) ) + (C); } while( 0 );
+    do { (A) += (((C)) ^ (((B)) | ~((D)))) + X[(12)] + (0x655B59C3); (A) = ( ( ((A)) << ((6)) ) | ( ( ((A)) & 0xFFFFFFFF) >> ( 32 - ((6)) ) ) ) + (B); } while( 0 );
+    do { (D) += (((B)) ^ (((A)) | ~((C)))) + X[(3)] + (0x8F0CCC92); (D) = ( ( ((D)) << ((10)) ) | ( ( ((D)) & 0xFFFFFFFF) >> ( 32 - ((10)) ) ) ) + (A); } while( 0 );
+    do { (C) += (((A)) ^ (((D)) | ~((B)))) + X[(10)] + (0xFFEFF47D); (C) = ( ( ((C)) << ((15)) ) | ( ( ((C)) & 0xFFFFFFFF) >> ( 32 - ((15)) ) ) ) + (D); } while( 0 );
+    do { (B) += (((D)) ^ (((C)) | ~((A)))) + X[(1)] + (0x85845DD1); (B) = ( ( ((B)) << ((21)) ) | ( ( ((B)) & 0xFFFFFFFF) >> ( 32 - ((21)) ) ) ) + (C); } while( 0 );
+    do { (A) += (((C)) ^ (((B)) | ~((D)))) + X[(8)] + (0x6FA87E4F); (A) = ( ( ((A)) << ((6)) ) | ( ( ((A)) & 0xFFFFFFFF) >> ( 32 - ((6)) ) ) ) + (B); } while( 0 );
+    do { (D) += (((B)) ^ (((A)) | ~((C)))) + X[(15)] + (0xFE2CE6E0); (D) = ( ( ((D)) << ((10)) ) | ( ( ((D)) & 0xFFFFFFFF) >> ( 32 - ((10)) ) ) ) + (A); } while( 0 );
+    do { (C) += (((A)) ^ (((D)) | ~((B)))) + X[(6)] + (0xA3014314); (C) = ( ( ((C)) << ((15)) ) | ( ( ((C)) & 0xFFFFFFFF) >> ( 32 - ((15)) ) ) ) + (D); } while( 0 );
+    do { (B) += (((D)) ^ (((C)) | ~((A)))) + X[(13)] + (0x4E0811A1); (B) = ( ( ((B)) << ((21)) ) | ( ( ((B)) & 0xFFFFFFFF) >> ( 32 - ((21)) ) ) ) + (C); } while( 0 );
+    do { (A) += (((C)) ^ (((B)) | ~((D)))) + X[(4)] + (0xF7537E82); (A) = ( ( ((A)) << ((6)) ) | ( ( ((A)) & 0xFFFFFFFF) >> ( 32 - ((6)) ) ) ) + (B); } while( 0 );
+    do { (D) += (((B)) ^ (((A)) | ~((C)))) + X[(11)] + (0xBD3AF235); (D) = ( ( ((D)) << ((10)) ) | ( ( ((D)) & 0xFFFFFFFF) >> ( 32 - ((10)) ) ) ) + (A); } while( 0 );
+    do { (C) += (((A)) ^ (((D)) | ~((B)))) + X[(2)] + (0x2AD7D2BB); (C) = ( ( ((C)) << ((15)) ) | ( ( ((C)) & 0xFFFFFFFF) >> ( 32 - ((15)) ) ) ) + (D); } while( 0 );
+    do { (B) += (((D)) ^ (((C)) | ~((A)))) + X[(9)] + (0xEB86D391); (B) = ( ( ((B)) << ((21)) ) | ( ( ((B)) & 0xFFFFFFFF) >> ( 32 - ((21)) ) ) ) + (C); } while( 0 );
 
 
 

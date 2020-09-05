@@ -37,7 +37,7 @@
 	.global	esp_vfs_fat_spiflash_mount
 	.type	esp_vfs_fat_spiflash_mount, @function
 esp_vfs_fat_spiflash_mount:
-.LFB20:
+.LFB29:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/fatfs/src/vfs_fat_spiflash.c"
 	.loc 1 33 0
 .LVL0:
@@ -211,7 +211,7 @@ esp_vfs_fat_spiflash_mount:
 	.loc 1 83 0 is_stmt 1
 	l32r	a7, .LC10
 	mov.n	a10, a7
-	call8	malloc
+	call8	ff_memalloc
 .LVL28:
 	mov.n	a6, a10
 .LVL29:
@@ -341,14 +341,14 @@ esp_vfs_fat_spiflash_mount:
 .L4:
 	.loc 1 115 0
 	retw.n
-.LFE20:
+.LFE29:
 	.size	esp_vfs_fat_spiflash_mount, .-esp_vfs_fat_spiflash_mount
 	.section	.text.esp_vfs_fat_spiflash_unmount,"ax",@progbits
 	.align	4
 	.global	esp_vfs_fat_spiflash_unmount
 	.type	esp_vfs_fat_spiflash_unmount, @function
 esp_vfs_fat_spiflash_unmount:
-.LFB21:
+.LFB30:
 	.loc 1 118 0
 .LVL57:
 	entry	sp, 48
@@ -411,7 +411,7 @@ esp_vfs_fat_spiflash_unmount:
 	mov.n	a2, a10
 .LVL67:
 	retw.n
-.LFE21:
+.LFE30:
 	.size	esp_vfs_fat_spiflash_unmount, .-esp_vfs_fat_spiflash_unmount
 	.section	.rodata.str1.1
 .LC22:
@@ -426,7 +426,7 @@ esp_vfs_fat_spiflash_unmount:
 	.global	esp_vfs_fat_rawflash_mount
 	.type	esp_vfs_fat_rawflash_mount, @function
 esp_vfs_fat_rawflash_mount:
-.LFB22:
+.LFB31:
 	.loc 1 138 0
 .LVL68:
 	entry	sp, 64
@@ -576,7 +576,7 @@ esp_vfs_fat_rawflash_mount:
 .L32:
 	.loc 1 185 0
 	retw.n
-.LFE22:
+.LFE31:
 	.size	esp_vfs_fat_rawflash_mount, .-esp_vfs_fat_rawflash_mount
 	.section	.text.esp_vfs_fat_rawflash_unmount,"ax",@progbits
 	.literal_position
@@ -586,7 +586,7 @@ esp_vfs_fat_rawflash_mount:
 	.global	esp_vfs_fat_rawflash_unmount
 	.type	esp_vfs_fat_rawflash_unmount, @function
 esp_vfs_fat_rawflash_unmount:
-.LFB23:
+.LFB32:
 	.loc 1 189 0
 .LVL95:
 	entry	sp, 48
@@ -659,7 +659,7 @@ esp_vfs_fat_rawflash_unmount:
 	mov.n	a2, a10
 .LVL105:
 	retw.n
-.LFE23:
+.LFE32:
 	.size	esp_vfs_fat_rawflash_unmount, .-esp_vfs_fat_rawflash_unmount
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -680,10 +680,10 @@ esp_vfs_fat_rawflash_unmount:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI0-.LFB20
+	.4byte	.LCFI0-.LFB29
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -692,10 +692,10 @@ esp_vfs_fat_rawflash_unmount:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI1-.LFB21
+	.4byte	.LCFI1-.LFB30
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -704,10 +704,10 @@ esp_vfs_fat_rawflash_unmount:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI2-.LFB22
+	.4byte	.LCFI2-.LFB31
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -716,10 +716,10 @@ esp_vfs_fat_rawflash_unmount:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI3-.LFB23
+	.4byte	.LCFI3-.LFB32
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -738,21 +738,22 @@ esp_vfs_fat_rawflash_unmount:
 	.file 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_partition.h"
 	.file 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wear_levelling/include/wear_levelling.h"
 	.file 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/fatfs/src/esp_vfs_fat.h"
-	.file 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
-	.file 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/fatfs/src/diskio.h"
-	.file 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/fatfs/src/diskio_wl.h"
-	.file 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/fatfs/src/diskio_rawflash.h"
+	.file 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/fatfs/src/ffconf.h"
+	.file 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
+	.file 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/fatfs/src/diskio.h"
+	.file 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/fatfs/src/diskio_wl.h"
+	.file 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/fatfs/src/diskio_rawflash.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0xe26
+	.4byte	0xe2d
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF153
-	.byte	0xc
 	.4byte	.LASF154
+	.byte	0xc
 	.4byte	.LASF155
+	.4byte	.LASF156
 	.4byte	.Ldebug_ranges0+0x18
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -1135,7 +1136,7 @@ esp_vfs_fat_rawflash_unmount:
 	.4byte	0x30
 	.byte	0xc
 	.byte	0x2f
-	.4byte	0x3c8
+	.4byte	0x3ce
 	.uleb128 0x9
 	.4byte	.LASF73
 	.byte	0
@@ -1213,78 +1214,81 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0x4
 	.uleb128 0x9
 	.4byte	.LASF98
-	.byte	0x80
+	.byte	0x5
 	.uleb128 0x9
 	.4byte	.LASF99
-	.byte	0x81
+	.byte	0x80
 	.uleb128 0x9
 	.4byte	.LASF100
-	.byte	0x82
+	.byte	0x81
 	.uleb128 0x9
 	.4byte	.LASF101
+	.byte	0x82
+	.uleb128 0x9
+	.4byte	.LASF102
 	.byte	0xff
 	.byte	0
 	.uleb128 0x2
-	.4byte	.LASF102
+	.4byte	.LASF103
 	.byte	0xc
-	.byte	0x50
+	.byte	0x51
 	.4byte	0x30d
 	.uleb128 0xf
 	.byte	0x24
 	.byte	0xc
-	.byte	0x63
-	.4byte	0x424
-	.uleb128 0xb
-	.4byte	.LASF103
-	.byte	0xc
 	.byte	0x64
-	.4byte	0x302
-	.byte	0
+	.4byte	0x42a
 	.uleb128 0xb
 	.4byte	.LASF104
 	.byte	0xc
 	.byte	0x65
-	.4byte	0x3c8
-	.byte	0x4
+	.4byte	0x302
+	.byte	0
 	.uleb128 0xb
 	.4byte	.LASF105
 	.byte	0xc
 	.byte	0x66
-	.4byte	0xb2
-	.byte	0x8
+	.4byte	0x3ce
+	.byte	0x4
 	.uleb128 0xb
 	.4byte	.LASF106
 	.byte	0xc
 	.byte	0x67
 	.4byte	0xb2
-	.byte	0xc
+	.byte	0x8
 	.uleb128 0xb
 	.4byte	.LASF107
 	.byte	0xc
 	.byte	0x68
-	.4byte	0x424
-	.byte	0x10
+	.4byte	0xb2
+	.byte	0xc
 	.uleb128 0xb
 	.4byte	.LASF108
 	.byte	0xc
 	.byte	0x69
+	.4byte	0x42a
+	.byte	0x10
+	.uleb128 0xb
+	.4byte	.LASF109
+	.byte	0xc
+	.byte	0x6a
 	.4byte	0xf9
 	.byte	0x21
 	.byte	0
 	.uleb128 0xd
 	.4byte	0x95
-	.4byte	0x434
+	.4byte	0x43a
 	.uleb128 0x10
 	.4byte	0x85
 	.byte	0x10
 	.byte	0
 	.uleb128 0x2
-	.4byte	.LASF109
-	.byte	0xc
-	.byte	0x6a
-	.4byte	0x3d3
-	.uleb128 0x2
 	.4byte	.LASF110
+	.byte	0xc
+	.byte	0x6b
+	.4byte	0x3d9
+	.uleb128 0x2
+	.4byte	.LASF111
 	.byte	0xd
 	.byte	0x1c
 	.4byte	0xa7
@@ -1292,129 +1296,129 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0xc
 	.byte	0xe
 	.byte	0x5a
-	.4byte	0x477
+	.4byte	0x47d
 	.uleb128 0xb
-	.4byte	.LASF111
+	.4byte	.LASF112
 	.byte	0xe
 	.byte	0x5f
 	.4byte	0xf9
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LASF112
+	.4byte	.LASF113
 	.byte	0xe
 	.byte	0x60
 	.4byte	0x3e
 	.byte	0x4
 	.uleb128 0xb
-	.4byte	.LASF113
+	.4byte	.LASF114
 	.byte	0xe
 	.byte	0x6e
 	.4byte	0x25
 	.byte	0x8
 	.byte	0
 	.uleb128 0x2
-	.4byte	.LASF114
+	.4byte	.LASF115
 	.byte	0xe
 	.byte	0x6f
-	.4byte	0x44a
+	.4byte	0x450
 	.uleb128 0x11
-	.4byte	.LASF156
+	.4byte	.LASF157
 	.byte	0x2
 	.byte	0x15
 	.4byte	0x25
 	.byte	0x3
-	.4byte	0x4ca
-	.uleb128 0x12
-	.4byte	.LASF115
-	.byte	0x2
-	.byte	0x16
-	.4byte	0x25
+	.4byte	0x4d0
 	.uleb128 0x12
 	.4byte	.LASF116
 	.byte	0x2
 	.byte	0x16
 	.4byte	0x25
-	.uleb128 0x13
+	.uleb128 0x12
 	.4byte	.LASF117
 	.byte	0x2
-	.byte	0x18
+	.byte	0x16
 	.4byte	0x25
 	.uleb128 0x13
 	.4byte	.LASF118
 	.byte	0x2
-	.byte	0x19
-	.4byte	0x4ca
+	.byte	0x18
+	.4byte	0x25
 	.uleb128 0x13
 	.4byte	.LASF119
 	.byte	0x2
+	.byte	0x19
+	.4byte	0x4d0
+	.uleb128 0x13
+	.4byte	.LASF120
+	.byte	0x2
 	.byte	0x1a
-	.4byte	0x4ca
+	.4byte	0x4d0
 	.byte	0
 	.uleb128 0x7
 	.4byte	0x25
 	.uleb128 0x14
-	.4byte	.LASF129
+	.4byte	.LASF130
 	.byte	0x1
 	.byte	0x1d
 	.4byte	0xee
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x90e
+	.4byte	0x914
 	.uleb128 0x15
-	.4byte	.LASF120
+	.4byte	.LASF121
 	.byte	0x1
 	.byte	0x1d
 	.4byte	0x9c
 	.4byte	.LLST0
 	.uleb128 0x15
-	.4byte	.LASF121
+	.4byte	.LASF122
 	.byte	0x1
 	.byte	0x1e
 	.4byte	0x9c
 	.4byte	.LLST1
 	.uleb128 0x15
-	.4byte	.LASF122
-	.byte	0x1
-	.byte	0x1f
-	.4byte	0x90e
-	.4byte	.LLST2
-	.uleb128 0x15
 	.4byte	.LASF123
 	.byte	0x1
+	.byte	0x1f
+	.4byte	0x914
+	.4byte	.LLST2
+	.uleb128 0x15
+	.4byte	.LASF124
+	.byte	0x1
 	.byte	0x20
-	.4byte	0x919
+	.4byte	0x91f
 	.4byte	.LLST3
 	.uleb128 0x16
-	.4byte	.LASF124
+	.4byte	.LASF125
 	.byte	0x1
 	.byte	0x22
 	.4byte	0xee
 	.4byte	.LLST4
 	.uleb128 0x17
-	.4byte	.LASF125
+	.4byte	.LASF126
 	.byte	0x1
 	.byte	0x23
-	.4byte	0x4ca
+	.4byte	0x4d0
 	.2byte	0x1000
 	.uleb128 0x16
-	.4byte	.LASF126
+	.4byte	.LASF127
 	.byte	0x1
 	.byte	0x24
 	.4byte	0x8c
 	.4byte	.LLST5
 	.uleb128 0x16
-	.4byte	.LASF104
+	.4byte	.LASF105
 	.byte	0x1
 	.byte	0x26
-	.4byte	0x3c8
+	.4byte	0x3ce
 	.4byte	.LLST6
 	.uleb128 0x16
-	.4byte	.LASF127
+	.4byte	.LASF128
 	.byte	0x1
 	.byte	0x28
-	.4byte	0x91f
+	.4byte	0x925
 	.4byte	.LLST7
 	.uleb128 0x18
 	.4byte	.LASF31
@@ -1428,12 +1432,12 @@ esp_vfs_fat_rawflash_unmount:
 	.string	"drv"
 	.byte	0x1
 	.byte	0x3b
-	.4byte	0x92a
+	.4byte	0x930
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -60
 	.uleb128 0x1a
-	.4byte	.LASF133
+	.4byte	.LASF134
 	.byte	0x1
 	.byte	0x6e
 	.4byte	.L7
@@ -1446,55 +1450,55 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0x91
 	.sleb128 -64
 	.uleb128 0x16
-	.4byte	.LASF128
+	.4byte	.LASF129
 	.byte	0x1
 	.byte	0x4c
 	.4byte	0x2de
 	.4byte	.LLST8
 	.uleb128 0x1b
 	.4byte	.Ldebug_ranges0+0
-	.4byte	0x788
+	.4byte	0x78e
 	.uleb128 0x18
-	.4byte	.LASF117
+	.4byte	.LASF118
 	.byte	0x1
 	.byte	0x58
 	.4byte	0x25
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x1c
-	.4byte	0x482
+	.4byte	0x488
 	.4byte	.LBB6
 	.4byte	.LBE6-.LBB6
 	.byte	0x1
 	.byte	0x58
-	.4byte	0x611
+	.4byte	0x617
 	.uleb128 0x1d
-	.4byte	0x49d
+	.4byte	0x4a3
 	.4byte	.LLST9
 	.uleb128 0x1d
-	.4byte	0x492
+	.4byte	0x498
 	.4byte	.LLST10
 	.uleb128 0x1e
 	.4byte	.LBB7
 	.4byte	.LBE7-.LBB7
 	.uleb128 0x1f
-	.4byte	0x4a8
+	.4byte	0x4ae
 	.4byte	.LLST11
 	.uleb128 0x1f
-	.4byte	0x4b3
+	.4byte	0x4b9
 	.4byte	.LLST12
 	.uleb128 0x1f
-	.4byte	0x4be
+	.4byte	0x4c4
 	.4byte	.LLST13
 	.byte	0
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL24
-	.4byte	0xd61
+	.4byte	0xd67
 	.uleb128 0x21
 	.4byte	.LVL25
-	.4byte	0xd6c
-	.4byte	0x648
+	.4byte	0xd72
+	.4byte	0x64e
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -1527,8 +1531,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL28
-	.4byte	0xd77
-	.4byte	0x65c
+	.4byte	0xd7d
+	.4byte	0x662
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -1538,11 +1542,11 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL34
-	.4byte	0xd61
+	.4byte	0xd67
 	.uleb128 0x21
 	.4byte	.LVL35
-	.4byte	0xd6c
-	.4byte	0x693
+	.4byte	0xd72
+	.4byte	0x699
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -1575,8 +1579,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL36
-	.4byte	0xd82
-	.4byte	0x6be
+	.4byte	0xd89
+	.4byte	0x6c4
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -1609,11 +1613,11 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL39
-	.4byte	0xd61
+	.4byte	0xd67
 	.uleb128 0x21
 	.4byte	.LVL40
-	.4byte	0xd6c
-	.4byte	0x6f5
+	.4byte	0xd72
+	.4byte	0x6fb
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -1646,8 +1650,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL42
-	.4byte	0xd8e
-	.4byte	0x709
+	.4byte	0xd95
+	.4byte	0x70f
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -1657,11 +1661,11 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL43
-	.4byte	0xd61
+	.4byte	0xd67
 	.uleb128 0x21
 	.4byte	.LVL44
-	.4byte	0xd6c
-	.4byte	0x73a
+	.4byte	0xd72
+	.4byte	0x740
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -1688,8 +1692,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL45
-	.4byte	0xd99
-	.4byte	0x754
+	.4byte	0xda0
+	.4byte	0x75a
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5b
@@ -1705,10 +1709,10 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL48
-	.4byte	0xd61
+	.4byte	0xd67
 	.uleb128 0x23
 	.4byte	.LVL49
-	.4byte	0xd6c
+	.4byte	0xd72
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -1742,8 +1746,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL4
-	.4byte	0xda5
-	.4byte	0x7b2
+	.4byte	0xdac
+	.4byte	0x7b8
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -1774,11 +1778,11 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL5
-	.4byte	0xd61
+	.4byte	0xd67
 	.uleb128 0x21
 	.4byte	.LVL6
-	.4byte	0xd6c
-	.4byte	0x7ef
+	.4byte	0xd72
+	.4byte	0x7f5
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -1811,8 +1815,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL8
-	.4byte	0xdb0
-	.4byte	0x803
+	.4byte	0xdb7
+	.4byte	0x809
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5b
@@ -1822,11 +1826,11 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL10
-	.4byte	0xd61
+	.4byte	0xd67
 	.uleb128 0x21
 	.4byte	.LVL11
-	.4byte	0xd6c
-	.4byte	0x840
+	.4byte	0xd72
+	.4byte	0x846
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -1859,8 +1863,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL14
-	.4byte	0xdbb
-	.4byte	0x854
+	.4byte	0xdc2
+	.4byte	0x85a
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -1870,14 +1874,14 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL16
-	.4byte	0xdc6
+	.4byte	0xdcd
 	.uleb128 0x20
 	.4byte	.LVL18
-	.4byte	0xd61
+	.4byte	0xd67
 	.uleb128 0x21
 	.4byte	.LVL19
-	.4byte	0xd6c
-	.4byte	0x89b
+	.4byte	0xd72
+	.4byte	0x8a1
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -1911,8 +1915,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL20
-	.4byte	0xdd1
-	.4byte	0x8bc
+	.4byte	0xdd8
+	.4byte	0x8c2
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -1935,8 +1939,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL22
-	.4byte	0xd99
-	.4byte	0x8d5
+	.4byte	0xda0
+	.4byte	0x8db
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5b
@@ -1951,8 +1955,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL52
-	.4byte	0xd8e
-	.4byte	0x8e9
+	.4byte	0xd95
+	.4byte	0x8ef
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -1962,8 +1966,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL53
-	.4byte	0xddc
-	.4byte	0x8fe
+	.4byte	0xde3
+	.4byte	0x904
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -1974,7 +1978,7 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL54
-	.4byte	0xde7
+	.4byte	0xdee
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5b
@@ -1984,45 +1988,45 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x914
+	.4byte	0x91a
 	.uleb128 0x7
-	.4byte	0x477
+	.4byte	0x47d
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x43f
+	.4byte	0x445
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x925
+	.4byte	0x92b
 	.uleb128 0x7
-	.4byte	0x434
+	.4byte	0x43a
 	.uleb128 0xd
 	.4byte	0x95
-	.4byte	0x93a
+	.4byte	0x940
 	.uleb128 0x10
 	.4byte	0x85
 	.byte	0x2
 	.byte	0
 	.uleb128 0x14
-	.4byte	.LASF130
+	.4byte	.LASF131
 	.byte	0x1
 	.byte	0x75
 	.4byte	0xee
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xa2e
+	.4byte	0xa34
 	.uleb128 0x15
-	.4byte	.LASF120
+	.4byte	.LASF121
 	.byte	0x1
 	.byte	0x75
 	.4byte	0x9c
 	.4byte	.LLST14
 	.uleb128 0x15
-	.4byte	.LASF123
+	.4byte	.LASF124
 	.byte	0x1
 	.byte	0x75
-	.4byte	0x43f
+	.4byte	0x445
 	.4byte	.LLST15
 	.uleb128 0x18
 	.4byte	.LASF31
@@ -2035,12 +2039,12 @@ esp_vfs_fat_rawflash_unmount:
 	.string	"drv"
 	.byte	0x1
 	.byte	0x7b
-	.4byte	0x92a
+	.4byte	0x930
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
 	.uleb128 0x16
-	.4byte	.LASF131
+	.4byte	.LASF132
 	.byte	0x1
 	.byte	0x81
 	.4byte	0xee
@@ -2053,8 +2057,8 @@ esp_vfs_fat_rawflash_unmount:
 	.4byte	.LLST17
 	.uleb128 0x21
 	.4byte	.LVL58
-	.4byte	0xdf2
-	.4byte	0x9be
+	.4byte	0xdf9
+	.4byte	0x9c4
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -2064,8 +2068,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL60
-	.4byte	0xd99
-	.4byte	0x9dc
+	.4byte	0xda0
+	.4byte	0x9e2
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -2085,8 +2089,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL61
-	.4byte	0xde7
-	.4byte	0x9f5
+	.4byte	0xdee
+	.4byte	0x9fb
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -2101,8 +2105,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL62
-	.4byte	0xdfd
-	.4byte	0xa09
+	.4byte	0xe04
+	.4byte	0xa0f
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -2112,8 +2116,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL63
-	.4byte	0xe08
-	.4byte	0xa1d
+	.4byte	0xe0f
+	.4byte	0xa23
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -2123,7 +2127,7 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL65
-	.4byte	0xddc
+	.4byte	0xde3
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -2133,44 +2137,44 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.byte	0
 	.uleb128 0x14
-	.4byte	.LASF132
+	.4byte	.LASF133
 	.byte	0x1
 	.byte	0x87
 	.4byte	0xee
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xc2f
+	.4byte	0xc35
 	.uleb128 0x15
-	.4byte	.LASF120
+	.4byte	.LASF121
 	.byte	0x1
 	.byte	0x87
 	.4byte	0x9c
 	.4byte	.LLST18
 	.uleb128 0x15
-	.4byte	.LASF121
+	.4byte	.LASF122
 	.byte	0x1
 	.byte	0x88
 	.4byte	0x9c
 	.4byte	.LLST19
 	.uleb128 0x15
-	.4byte	.LASF122
+	.4byte	.LASF123
 	.byte	0x1
 	.byte	0x89
-	.4byte	0x90e
+	.4byte	0x914
 	.4byte	.LLST20
 	.uleb128 0x16
-	.4byte	.LASF124
+	.4byte	.LASF125
 	.byte	0x1
 	.byte	0x8b
 	.4byte	0xee
 	.4byte	.LLST21
 	.uleb128 0x18
-	.4byte	.LASF127
+	.4byte	.LASF128
 	.byte	0x1
 	.byte	0x8d
-	.4byte	0x91f
+	.4byte	0x925
 	.uleb128 0x1
 	.byte	0x56
 	.uleb128 0x18
@@ -2185,12 +2189,12 @@ esp_vfs_fat_rawflash_unmount:
 	.string	"drv"
 	.byte	0x1
 	.byte	0x9b
-	.4byte	0x92a
+	.4byte	0x930
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -44
 	.uleb128 0x1a
-	.4byte	.LASF133
+	.4byte	.LASF134
 	.byte	0x1
 	.byte	0xb5
 	.4byte	.L34
@@ -2203,15 +2207,15 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0x91
 	.sleb128 -48
 	.uleb128 0x16
-	.4byte	.LASF128
+	.4byte	.LASF129
 	.byte	0x1
 	.byte	0xad
 	.4byte	0x2de
 	.4byte	.LLST22
 	.uleb128 0x21
 	.4byte	.LVL70
-	.4byte	0xda5
-	.4byte	0xaf2
+	.4byte	0xdac
+	.4byte	0xaf8
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -2232,11 +2236,11 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL72
-	.4byte	0xd61
+	.4byte	0xd67
 	.uleb128 0x21
 	.4byte	.LVL73
-	.4byte	0xd6c
-	.4byte	0xb2f
+	.4byte	0xd72
+	.4byte	0xb35
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -2269,8 +2273,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL77
-	.4byte	0xdbb
-	.4byte	0xb43
+	.4byte	0xdc2
+	.4byte	0xb49
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -2280,8 +2284,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL79
-	.4byte	0xe13
-	.4byte	0xb57
+	.4byte	0xe1a
+	.4byte	0xb5d
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5b
@@ -2291,11 +2295,11 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL81
-	.4byte	0xd61
+	.4byte	0xd67
 	.uleb128 0x21
 	.4byte	.LVL82
-	.4byte	0xd6c
-	.4byte	0xb95
+	.4byte	0xd72
+	.4byte	0xb9b
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -2329,8 +2333,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL83
-	.4byte	0xdd1
-	.4byte	0xbb5
+	.4byte	0xdd8
+	.4byte	0xbbb
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -2352,8 +2356,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL86
-	.4byte	0xd99
-	.4byte	0xbce
+	.4byte	0xda0
+	.4byte	0xbd4
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5b
@@ -2368,11 +2372,11 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL88
-	.4byte	0xd61
+	.4byte	0xd67
 	.uleb128 0x21
 	.4byte	.LVL89
-	.4byte	0xd6c
-	.4byte	0xc0b
+	.4byte	0xd72
+	.4byte	0xc11
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -2405,8 +2409,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL91
-	.4byte	0xddc
-	.4byte	0xc1f
+	.4byte	0xde3
+	.4byte	0xc25
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -2416,7 +2420,7 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL92
-	.4byte	0xde7
+	.4byte	0xdee
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5b
@@ -2425,32 +2429,32 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.byte	0
 	.uleb128 0x14
-	.4byte	.LASF134
+	.4byte	.LASF135
 	.byte	0x1
 	.byte	0xbc
 	.4byte	0xee
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xd4a
-	.uleb128 0x15
-	.4byte	.LASF120
-	.byte	0x1
-	.byte	0xbc
-	.4byte	0x9c
-	.4byte	.LLST23
+	.4byte	0xd50
 	.uleb128 0x15
 	.4byte	.LASF121
 	.byte	0x1
 	.byte	0xbc
 	.4byte	0x9c
+	.4byte	.LLST23
+	.uleb128 0x15
+	.4byte	.LASF122
+	.byte	0x1
+	.byte	0xbc
+	.4byte	0x9c
 	.4byte	.LLST24
 	.uleb128 0x16
-	.4byte	.LASF127
+	.4byte	.LASF128
 	.byte	0x1
 	.byte	0xbe
-	.4byte	0x91f
+	.4byte	0x925
 	.4byte	.LLST25
 	.uleb128 0x16
 	.4byte	.LASF31
@@ -2462,7 +2466,7 @@ esp_vfs_fat_rawflash_unmount:
 	.string	"drv"
 	.byte	0x1
 	.byte	0xca
-	.4byte	0x92a
+	.4byte	0x930
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
@@ -2473,8 +2477,8 @@ esp_vfs_fat_rawflash_unmount:
 	.4byte	0xee
 	.uleb128 0x21
 	.4byte	.LVL96
-	.4byte	0xda5
-	.4byte	0xcbc
+	.4byte	0xdac
+	.4byte	0xcc2
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -2495,11 +2499,11 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL97
-	.4byte	0xd61
+	.4byte	0xd67
 	.uleb128 0x21
 	.4byte	.LVL98
-	.4byte	0xd6c
-	.4byte	0xcf9
+	.4byte	0xd72
+	.4byte	0xcff
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -2532,11 +2536,11 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LVL100
-	.4byte	0xe1e
+	.4byte	0xe25
 	.uleb128 0x21
 	.4byte	.LVL102
-	.4byte	0xd99
-	.4byte	0xd20
+	.4byte	0xda0
+	.4byte	0xd26
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -2556,8 +2560,8 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LVL103
-	.4byte	0xde7
-	.4byte	0xd39
+	.4byte	0xdee
+	.4byte	0xd3f
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -2572,7 +2576,7 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL104
-	.4byte	0xddc
+	.4byte	0xde3
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5a
@@ -2585,7 +2589,7 @@ esp_vfs_fat_rawflash_unmount:
 	.string	"TAG"
 	.byte	0x1
 	.byte	0x1c
-	.4byte	0xd5c
+	.4byte	0xd62
 	.uleb128 0x6
 	.byte	0x3
 	.4byte	.LC0
@@ -2593,94 +2597,94 @@ esp_vfs_fat_rawflash_unmount:
 	.uleb128 0x7
 	.4byte	0x9c
 	.uleb128 0x26
-	.4byte	.LASF135
-	.4byte	.LASF135
+	.4byte	.LASF136
+	.4byte	.LASF136
 	.byte	0xb
 	.byte	0x57
 	.uleb128 0x26
-	.4byte	.LASF136
-	.4byte	.LASF136
+	.4byte	.LASF137
+	.4byte	.LASF137
 	.byte	0xb
 	.byte	0x6b
-	.uleb128 0x26
-	.4byte	.LASF137
-	.4byte	.LASF137
-	.byte	0xf
-	.byte	0x65
 	.uleb128 0x27
 	.4byte	.LASF138
 	.4byte	.LASF138
+	.byte	0xf
+	.2byte	0x133
+	.uleb128 0x27
+	.4byte	.LASF139
+	.4byte	.LASF139
 	.byte	0xa
 	.2byte	0x112
 	.uleb128 0x26
-	.4byte	.LASF139
-	.4byte	.LASF139
-	.byte	0xf
+	.4byte	.LASF140
+	.4byte	.LASF140
+	.byte	0x10
 	.byte	0x5a
 	.uleb128 0x27
-	.4byte	.LASF140
-	.4byte	.LASF140
+	.4byte	.LASF141
+	.4byte	.LASF141
 	.byte	0xa
 	.2byte	0x111
 	.uleb128 0x26
-	.4byte	.LASF141
-	.4byte	.LASF141
+	.4byte	.LASF142
+	.4byte	.LASF142
 	.byte	0xc
-	.byte	0x8a
+	.byte	0x8b
 	.uleb128 0x26
-	.4byte	.LASF142
-	.4byte	.LASF142
+	.4byte	.LASF143
+	.4byte	.LASF143
 	.byte	0xd
 	.byte	0x2b
 	.uleb128 0x26
-	.4byte	.LASF143
-	.4byte	.LASF143
-	.byte	0x10
-	.byte	0x5a
-	.uleb128 0x26
 	.4byte	.LASF144
 	.4byte	.LASF144
 	.byte	0x11
-	.byte	0x20
+	.byte	0x5a
 	.uleb128 0x26
 	.4byte	.LASF145
 	.4byte	.LASF145
+	.byte	0x12
+	.byte	0x20
+	.uleb128 0x26
+	.4byte	.LASF146
+	.4byte	.LASF146
 	.byte	0xe
 	.byte	0x33
 	.uleb128 0x26
-	.4byte	.LASF146
-	.4byte	.LASF146
+	.4byte	.LASF147
+	.4byte	.LASF147
 	.byte	0xe
 	.byte	0x54
 	.uleb128 0x26
-	.4byte	.LASF147
-	.4byte	.LASF147
-	.byte	0x10
+	.4byte	.LASF148
+	.4byte	.LASF148
+	.byte	0x11
 	.byte	0x46
 	.uleb128 0x26
-	.4byte	.LASF148
-	.4byte	.LASF148
-	.byte	0x11
+	.4byte	.LASF149
+	.4byte	.LASF149
+	.byte	0x12
 	.byte	0x21
 	.uleb128 0x26
-	.4byte	.LASF149
-	.4byte	.LASF149
-	.byte	0x11
+	.4byte	.LASF150
+	.4byte	.LASF150
+	.byte	0x12
 	.byte	0x22
 	.uleb128 0x26
-	.4byte	.LASF150
-	.4byte	.LASF150
+	.4byte	.LASF151
+	.4byte	.LASF151
 	.byte	0xd
 	.byte	0x36
 	.uleb128 0x26
-	.4byte	.LASF151
-	.4byte	.LASF151
-	.byte	0x12
+	.4byte	.LASF152
+	.4byte	.LASF152
+	.byte	0x13
 	.byte	0x1f
 	.uleb128 0x26
-	.4byte	.LASF152
-	.4byte	.LASF152
-	.byte	0x12
+	.4byte	.LASF153
+	.4byte	.LASF153
+	.byte	0x13
 	.byte	0x20
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
@@ -3191,7 +3195,7 @@ esp_vfs_fat_rawflash_unmount:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL2
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -48
@@ -3214,7 +3218,7 @@ esp_vfs_fat_rawflash_unmount:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL56
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3250,7 +3254,7 @@ esp_vfs_fat_rawflash_unmount:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL56
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3275,7 +3279,7 @@ esp_vfs_fat_rawflash_unmount:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL56
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3339,7 +3343,7 @@ esp_vfs_fat_rawflash_unmount:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL55
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
@@ -3416,7 +3420,7 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0x13
 	.byte	0x9f
 	.4byte	.LVL56
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0xf
 	.byte	0x8
 	.byte	0xff
@@ -3570,7 +3574,7 @@ esp_vfs_fat_rawflash_unmount:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL67
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3584,7 +3588,7 @@ esp_vfs_fat_rawflash_unmount:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL64
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3620,7 +3624,7 @@ esp_vfs_fat_rawflash_unmount:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL76
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -3642,7 +3646,7 @@ esp_vfs_fat_rawflash_unmount:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL94
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3667,7 +3671,7 @@ esp_vfs_fat_rawflash_unmount:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL94
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3715,7 +3719,7 @@ esp_vfs_fat_rawflash_unmount:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL105
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3729,7 +3733,7 @@ esp_vfs_fat_rawflash_unmount:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL101
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3763,14 +3767,14 @@ esp_vfs_fat_rawflash_unmount:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -3781,14 +3785,14 @@ esp_vfs_fat_rawflash_unmount:
 	.4byte	.LBE8
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB23
-	.4byte	.LFE23
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB31
+	.4byte	.LFE31
+	.4byte	.LFB32
+	.4byte	.LFE32
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -3796,37 +3800,35 @@ esp_vfs_fat_rawflash_unmount:
 	.section	.debug_str,"MS",@progbits,1
 .LASF31:
 	.string	"pdrv"
-.LASF137:
-	.string	"malloc"
-.LASF128:
+.LASF129:
 	.string	"fresult"
-.LASF121:
+.LASF122:
 	.string	"partition_label"
 .LASF5:
 	.string	"size_t"
 .LASF30:
 	.string	"fs_type"
-.LASF126:
+.LASF127:
 	.string	"workbuf"
-.LASF103:
+.LASF104:
 	.string	"type"
 .LASF35:
 	.string	"n_rootdir"
-.LASF117:
+.LASF118:
 	.string	"alloc_unit_size"
 .LASF9:
 	.string	"long long unsigned int"
-.LASF136:
+.LASF137:
 	.string	"esp_log_write"
-.LASF146:
+.LASF147:
 	.string	"esp_vfs_fat_unregister_path"
 .LASF24:
 	.string	"QueueHandle_t"
-.LASF139:
+.LASF140:
 	.string	"free"
-.LASF115:
+.LASF116:
 	.string	"sector_size"
-.LASF151:
+.LASF152:
 	.string	"ff_diskio_register_raw_partition"
 .LASF67:
 	.string	"FR_TOO_MANY_OPEN_FILES"
@@ -3842,21 +3844,23 @@ esp_vfs_fat_rawflash_unmount:
 	.string	"FR_INVALID_PARAMETER"
 .LASF42:
 	.string	"fsize"
-.LASF156:
+.LASF138:
+	.string	"ff_memalloc"
+.LASF157:
 	.string	"esp_vfs_fat_get_allocation_unit_size"
 .LASF41:
 	.string	"n_fatent"
 .LASF58:
 	.string	"FR_INVALID_OBJECT"
-.LASF101:
+.LASF102:
 	.string	"ESP_PARTITION_SUBTYPE_ANY"
 .LASF10:
 	.string	"long int"
-.LASF142:
+.LASF143:
 	.string	"wl_mount"
-.LASF116:
+.LASF117:
 	.string	"requested_size"
-.LASF138:
+.LASF139:
 	.string	"f_mkfs"
 .LASF93:
 	.string	"ESP_PARTITION_SUBTYPE_DATA_OTA"
@@ -3864,7 +3868,7 @@ esp_vfs_fat_rawflash_unmount:
 	.string	"ESP_PARTITION_SUBTYPE_APP_OTA_MAX"
 .LASF62:
 	.string	"FR_NO_FILESYSTEM"
-.LASF154:
+.LASF155:
 	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/fatfs/src/vfs_fat_spiflash.c"
 .LASF66:
 	.string	"FR_NOT_ENOUGH_CORE"
@@ -3880,33 +3884,33 @@ esp_vfs_fat_rawflash_unmount:
 	.string	"__uint32_t"
 .LASF36:
 	.string	"csize"
-.LASF149:
+.LASF150:
 	.string	"ff_diskio_clear_pdrv_wl"
-.LASF129:
+.LASF130:
 	.string	"esp_vfs_fat_spiflash_mount"
 .LASF40:
 	.string	"free_clst"
 .LASF27:
 	.string	"BYTE"
-.LASF125:
+.LASF126:
 	.string	"workbuf_size"
 .LASF0:
 	.string	"unsigned int"
-.LASF112:
+.LASF113:
 	.string	"max_files"
 .LASF72:
 	.string	"esp_partition_type_t"
 .LASF12:
 	.string	"long unsigned int"
-.LASF147:
+.LASF148:
 	.string	"ff_diskio_register"
-.LASF153:
+.LASF154:
 	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
-.LASF107:
+.LASF108:
 	.string	"label"
-.LASF99:
+.LASF100:
 	.string	"ESP_PARTITION_SUBTYPE_DATA_FAT"
-.LASF106:
+.LASF107:
 	.string	"size"
 .LASF1:
 	.string	"short unsigned int"
@@ -3914,9 +3918,9 @@ esp_vfs_fat_rawflash_unmount:
 	.string	"database"
 .LASF37:
 	.string	"ssize"
-.LASF120:
+.LASF121:
 	.string	"base_path"
-.LASF144:
+.LASF145:
 	.string	"ff_diskio_register_wl_partition"
 .LASF51:
 	.string	"FR_INT_ERR"
@@ -3926,35 +3930,35 @@ esp_vfs_fat_rawflash_unmount:
 	.string	"ESP_PARTITION_SUBTYPE_DATA_PHY"
 .LASF47:
 	.string	"winsect"
-.LASF132:
+.LASF133:
 	.string	"esp_vfs_fat_rawflash_mount"
-.LASF118:
+.LASF119:
 	.string	"max_sectors_per_cylinder"
 .LASF4:
 	.string	"short int"
 .LASF28:
 	.string	"WORD"
-.LASF104:
+.LASF105:
 	.string	"subtype"
 .LASF59:
 	.string	"FR_WRITE_PROTECTED"
 .LASF48:
 	.string	"FATFS"
-.LASF141:
+.LASF142:
 	.string	"esp_partition_find_first"
-.LASF123:
+.LASF124:
 	.string	"wl_handle"
 .LASF19:
 	.string	"ESP_LOG_INFO"
-.LASF155:
+.LASF156:
 	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/fatfs"
 .LASF11:
 	.string	"sizetype"
-.LASF122:
+.LASF123:
 	.string	"mount_config"
 .LASF73:
 	.string	"ESP_PARTITION_SUBTYPE_APP_FACTORY"
-.LASF105:
+.LASF106:
 	.string	"address"
 .LASF18:
 	.string	"ESP_LOG_WARN"
@@ -3964,11 +3968,11 @@ esp_vfs_fat_rawflash_unmount:
 	.string	"dirbase"
 .LASF71:
 	.string	"ESP_PARTITION_TYPE_DATA"
-.LASF152:
+.LASF153:
 	.string	"ff_diskio_get_pdrv_raw"
 .LASF53:
 	.string	"FR_NO_FILE"
-.LASF127:
+.LASF128:
 	.string	"data_partition"
 .LASF70:
 	.string	"ESP_PARTITION_TYPE_APP"
@@ -3978,7 +3982,7 @@ esp_vfs_fat_rawflash_unmount:
 	.string	"last_clst"
 .LASF26:
 	.string	"float"
-.LASF140:
+.LASF141:
 	.string	"f_mount"
 .LASF32:
 	.string	"n_fats"
@@ -4008,7 +4012,7 @@ esp_vfs_fat_rawflash_unmount:
 	.string	"ESP_PARTITION_SUBTYPE_APP_OTA_8"
 .LASF84:
 	.string	"ESP_PARTITION_SUBTYPE_APP_OTA_9"
-.LASF135:
+.LASF136:
 	.string	"esp_log_timestamp"
 .LASF17:
 	.string	"ESP_LOG_ERROR"
@@ -4018,21 +4022,21 @@ esp_vfs_fat_rawflash_unmount:
 	.string	"ESP_PARTITION_SUBTYPE_DATA_NVS"
 .LASF63:
 	.string	"FR_MKFS_ABORTED"
-.LASF145:
+.LASF146:
 	.string	"esp_vfs_fat_register"
 .LASF65:
 	.string	"FR_LOCKED"
-.LASF108:
+.LASF109:
 	.string	"encrypted"
 .LASF33:
 	.string	"wflag"
 .LASF15:
 	.string	"uint32_t"
-.LASF133:
+.LASF134:
 	.string	"fail"
-.LASF148:
+.LASF149:
 	.string	"ff_diskio_get_pdrv_wl"
-.LASF131:
+.LASF132:
 	.string	"err_drv"
 .LASF13:
 	.string	"char"
@@ -4042,11 +4046,11 @@ esp_vfs_fat_rawflash_unmount:
 	.string	"FR_INVALID_NAME"
 .LASF21:
 	.string	"ESP_LOG_VERBOSE"
-.LASF130:
+.LASF131:
 	.string	"esp_vfs_fat_spiflash_unmount"
-.LASF98:
+.LASF99:
 	.string	"ESP_PARTITION_SUBTYPE_DATA_ESPHTTPD"
-.LASF102:
+.LASF103:
 	.string	"esp_partition_subtype_t"
 .LASF49:
 	.string	"FR_OK"
@@ -4054,8 +4058,10 @@ esp_vfs_fat_rawflash_unmount:
 	.string	"ESP_LOG_NONE"
 .LASF6:
 	.string	"__int32_t"
-.LASF150:
+.LASF151:
 	.string	"wl_unmount"
+.LASF98:
+	.string	"ESP_PARTITION_SUBTYPE_DATA_EFUSE_EM"
 .LASF43:
 	.string	"volbase"
 .LASF97:
@@ -4064,7 +4070,7 @@ esp_vfs_fat_rawflash_unmount:
 	.string	"ESP_PARTITION_SUBTYPE_APP_TEST"
 .LASF34:
 	.string	"fsi_flag"
-.LASF110:
+.LASF111:
 	.string	"wl_handle_t"
 .LASF85:
 	.string	"ESP_PARTITION_SUBTYPE_APP_OTA_10"
@@ -4082,29 +4088,29 @@ esp_vfs_fat_rawflash_unmount:
 	.string	"esp_err_t"
 .LASF96:
 	.string	"ESP_PARTITION_SUBTYPE_DATA_COREDUMP"
-.LASF119:
+.LASF120:
 	.string	"max_size"
-.LASF100:
+.LASF101:
 	.string	"ESP_PARTITION_SUBTYPE_DATA_SPIFFS"
 .LASF69:
 	.string	"FRESULT"
-.LASF113:
+.LASF114:
 	.string	"allocation_unit_size"
-.LASF109:
+.LASF110:
 	.string	"esp_partition_t"
 .LASF54:
 	.string	"FR_NO_PATH"
-.LASF111:
+.LASF112:
 	.string	"format_if_mount_failed"
 .LASF52:
 	.string	"FR_NOT_READY"
-.LASF114:
+.LASF115:
 	.string	"esp_vfs_fat_mount_config_t"
-.LASF134:
+.LASF135:
 	.string	"esp_vfs_fat_rawflash_unmount"
-.LASF143:
+.LASF144:
 	.string	"ff_diskio_get_drive"
-.LASF124:
+.LASF125:
 	.string	"result"
 .LASF56:
 	.string	"FR_DENIED"

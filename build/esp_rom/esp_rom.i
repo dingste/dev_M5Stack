@@ -1,5 +1,0 @@
-# 1 "/home/dieter/Development/esp-idf/components/esp_rom/esp_rom.c"
-# 1 "/home/dieter/Development/ProjektEi/build/esp_rom//"
-# 1 "<built-in>"
-# 1 "<command-line>"
-# 1 "/home/dieter/Development/esp-idf/components/esp_rom/esp_rom.c"

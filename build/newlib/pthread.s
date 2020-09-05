@@ -8,7 +8,7 @@
 	.string	"\033[0;33mW (%d) %s: %s: not yet supported!\033[0m\n"
 	.section	.text.pthread_condattr_setclock,"ax",@progbits
 	.literal_position
-	.literal .LC0, __FUNCTION__$2848
+	.literal .LC0, __FUNCTION__$2853
 	.literal .LC2, .LC1
 	.literal .LC4, .LC3
 	.align	4
@@ -38,10 +38,10 @@ pthread_condattr_setclock:
 	retw.n
 .LFE0:
 	.size	pthread_condattr_setclock, .-pthread_condattr_setclock
-	.section	.rodata.__FUNCTION__$2848,"a",@progbits
-	.type	__FUNCTION__$2848, @object
-	.size	__FUNCTION__$2848, 26
-__FUNCTION__$2848:
+	.section	.rodata.__FUNCTION__$2853,"a",@progbits
+	.type	__FUNCTION__$2853, @object
+	.size	__FUNCTION__$2853, 26
+__FUNCTION__$2853:
 	.string	"pthread_condattr_setclock"
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -216,7 +216,7 @@ __FUNCTION__$2848:
 	.4byte	0x17b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$2848
+	.4byte	__FUNCTION__$2853
 	.uleb128 0xf
 	.4byte	.LVL1
 	.4byte	0x197
@@ -251,7 +251,7 @@ __FUNCTION__$2848:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$2848
+	.4byte	__FUNCTION__$2853
 	.byte	0
 	.byte	0
 	.uleb128 0x7

@@ -6,8 +6,8 @@
 	.global	osi_mutex_new
 	.type	osi_mutex_new, @function
 osi_mutex_new:
-.LFB18:
-	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/mutex.c"
+.LFB27:
+	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/mutex.c"
 	.loc 1 30 0
 .LVL0:
 	entry	sp, 32
@@ -27,7 +27,7 @@ osi_mutex_new:
 	.loc 1 40 0
 	neg	a2, a2
 	retw.n
-.LFE18:
+.LFE27:
 	.size	osi_mutex_new, .-osi_mutex_new
 	.section	.text.osi_mutex_lock,"ax",@progbits
 	.literal_position
@@ -36,7 +36,7 @@ osi_mutex_new:
 	.global	osi_mutex_lock
 	.type	osi_mutex_lock, @function
 osi_mutex_lock:
-.LFB19:
+.LFB28:
 	.loc 1 45 0
 .LVL5:
 	entry	sp, 32
@@ -79,14 +79,14 @@ osi_mutex_lock:
 .LVL12:
 	.loc 1 59 0
 	retw.n
-.LFE19:
+.LFE28:
 	.size	osi_mutex_lock, .-osi_mutex_lock
 	.section	.text.osi_mutex_unlock,"ax",@progbits
 	.align	4
 	.global	osi_mutex_unlock
 	.type	osi_mutex_unlock, @function
 osi_mutex_unlock:
-.LFB20:
+.LFB29:
 	.loc 1 64 0
 .LVL13:
 	entry	sp, 32
@@ -99,14 +99,14 @@ osi_mutex_unlock:
 	call8	xQueueGenericSend
 .LVL14:
 	retw.n
-.LFE20:
+.LFE29:
 	.size	osi_mutex_unlock, .-osi_mutex_unlock
 	.section	.text.osi_mutex_free,"ax",@progbits
 	.align	4
 	.global	osi_mutex_free
 	.type	osi_mutex_free, @function
 osi_mutex_free:
-.LFB21:
+.LFB30:
 	.loc 1 71 0
 .LVL15:
 	entry	sp, 32
@@ -119,7 +119,7 @@ osi_mutex_free:
 	movi.n	a8, 0
 	s32i.n	a8, a2, 0
 	retw.n
-.LFE21:
+.LFE30:
 	.size	osi_mutex_free, .-osi_mutex_free
 	.section	.text.osi_mutex_global_init,"ax",@progbits
 	.literal_position
@@ -128,7 +128,7 @@ osi_mutex_free:
 	.global	osi_mutex_global_init
 	.type	osi_mutex_global_init, @function
 osi_mutex_global_init:
-.LFB22:
+.LFB31:
 	.loc 1 77 0
 	entry	sp, 32
 .LCFI4:
@@ -144,7 +144,7 @@ osi_mutex_global_init:
 	.loc 1 84 0
 	neg	a2, a2
 	retw.n
-.LFE22:
+.LFE31:
 	.size	osi_mutex_global_init, .-osi_mutex_global_init
 	.section	.text.osi_mutex_global_deinit,"ax",@progbits
 	.literal_position
@@ -153,7 +153,7 @@ osi_mutex_global_init:
 	.global	osi_mutex_global_deinit
 	.type	osi_mutex_global_deinit, @function
 osi_mutex_global_deinit:
-.LFB23:
+.LFB32:
 	.loc 1 87 0
 	entry	sp, 32
 .LCFI5:
@@ -163,7 +163,7 @@ osi_mutex_global_deinit:
 	call8	vQueueDelete
 .LVL18:
 	retw.n
-.LFE23:
+.LFE32:
 	.size	osi_mutex_global_deinit, .-osi_mutex_global_deinit
 	.section	.text.osi_mutex_global_lock,"ax",@progbits
 	.literal_position
@@ -172,7 +172,7 @@ osi_mutex_global_deinit:
 	.global	osi_mutex_global_lock
 	.type	osi_mutex_global_lock, @function
 osi_mutex_global_lock:
-.LFB24:
+.LFB33:
 	.loc 1 92 0
 	entry	sp, 32
 .LCFI6:
@@ -183,7 +183,7 @@ osi_mutex_global_lock:
 	call8	xQueueTakeMutexRecursive
 .LVL19:
 	retw.n
-.LFE24:
+.LFE33:
 	.size	osi_mutex_global_lock, .-osi_mutex_global_lock
 	.section	.text.osi_mutex_global_unlock,"ax",@progbits
 	.literal_position
@@ -192,7 +192,7 @@ osi_mutex_global_lock:
 	.global	osi_mutex_global_unlock
 	.type	osi_mutex_global_unlock, @function
 osi_mutex_global_unlock:
-.LFB25:
+.LFB34:
 	.loc 1 97 0
 	entry	sp, 32
 .LCFI7:
@@ -202,7 +202,7 @@ osi_mutex_global_unlock:
 	call8	xQueueGiveMutexRecursive
 .LVL20:
 	retw.n
-.LFE25:
+.LFE34:
 	.size	osi_mutex_global_unlock, .-osi_mutex_global_unlock
 	.section	.bss.gl_mutex,"aw",@nobits
 	.align	4
@@ -229,10 +229,10 @@ gl_mutex:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI0-.LFB18
+	.4byte	.LCFI0-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -241,10 +241,10 @@ gl_mutex:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI1-.LFB19
+	.4byte	.LCFI1-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -253,10 +253,10 @@ gl_mutex:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI2-.LFB20
+	.4byte	.LCFI2-.LFB29
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -265,10 +265,10 @@ gl_mutex:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI3-.LFB21
+	.4byte	.LCFI3-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -277,10 +277,10 @@ gl_mutex:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI4-.LFB22
+	.4byte	.LCFI4-.LFB31
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -289,10 +289,10 @@ gl_mutex:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI5-.LFB23
+	.4byte	.LCFI5-.LFB32
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -301,10 +301,10 @@ gl_mutex:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI6-.LFB24
+	.4byte	.LCFI6-.LFB33
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -313,10 +313,10 @@ gl_mutex:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.byte	0x4
-	.4byte	.LCFI7-.LFB25
+	.4byte	.LCFI7-.LFB34
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -328,7 +328,7 @@ gl_mutex:
 	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 	.file 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/semphr.h"
-	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/mutex.h"
+	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/mutex.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
 	.4byte	0x313
@@ -447,8 +447,8 @@ gl_mutex:
 	.byte	0x1
 	.byte	0x1d
 	.4byte	0x33
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x12c
@@ -482,8 +482,8 @@ gl_mutex:
 	.byte	0x1
 	.byte	0x2c
 	.4byte	0x33
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1c8
@@ -570,8 +570,8 @@ gl_mutex:
 	.4byte	.LASF26
 	.byte	0x1
 	.byte	0x3f
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x204
@@ -606,8 +606,8 @@ gl_mutex:
 	.4byte	.LASF27
 	.byte	0x1
 	.byte	0x46
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x230
@@ -627,8 +627,8 @@ gl_mutex:
 	.byte	0x1
 	.byte	0x4c
 	.4byte	0x33
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x259
@@ -646,8 +646,8 @@ gl_mutex:
 	.4byte	.LASF29
 	.byte	0x1
 	.byte	0x56
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x278
@@ -659,8 +659,8 @@ gl_mutex:
 	.4byte	.LASF30
 	.byte	0x1
 	.byte	0x5b
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x29e
@@ -679,8 +679,8 @@ gl_mutex:
 	.4byte	.LASF31
 	.byte	0x1
 	.byte	0x60
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2bd
@@ -990,7 +990,7 @@ gl_mutex:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL4
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1006,7 +1006,7 @@ gl_mutex:
 	.byte	0xff
 	.byte	0x9f
 	.4byte	.LVL3
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x9
 	.byte	0x7a
 	.sleb128 0
@@ -1036,7 +1036,7 @@ gl_mutex:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL11
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1051,7 +1051,7 @@ gl_mutex:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL12
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -1064,42 +1064,42 @@ gl_mutex:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB24
-	.4byte	.LFE24
-	.4byte	.LFB25
-	.4byte	.LFE25
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB28
+	.4byte	.LFE28
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB31
+	.4byte	.LFE31
+	.4byte	.LFB32
+	.4byte	.LFE32
+	.4byte	.LFB33
+	.4byte	.LFE33
+	.4byte	.LFB34
+	.4byte	.LFE34
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -1175,12 +1175,12 @@ gl_mutex:
 	.string	"osi_mutex_unlock"
 .LASF35:
 	.string	"xQueueGenericSend"
-.LASF40:
-	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/mutex.c"
 .LASF14:
 	.string	"uint32_t"
 .LASF9:
 	.string	"long int"
+.LASF40:
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/mutex.c"
 .LASF33:
 	.string	"xQueueCreateMutex"
 .LASF3:

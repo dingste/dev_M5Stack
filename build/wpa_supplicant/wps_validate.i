@@ -1216,7 +1216,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 1
@@ -2071,15 +2071,15 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h" 2
 # 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h"
 int wpa_debug_open_file(const char *path);
@@ -2384,10 +2384,11 @@ enum wps_response_type {
 };
 # 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/queue.h" 1
-# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 2
-
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_interface.h" 1
 # 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_interface.h"
 typedef enum {
@@ -2396,7 +2397,8 @@ typedef enum {
     ESP_IF_ETH,
     ESP_IF_MAX
 } esp_interface_t;
-# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h" 2
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 2
 
 
 
@@ -2469,6 +2471,8 @@ typedef enum {
     WIFI_REASON_AUTH_FAIL = 202,
     WIFI_REASON_ASSOC_FAIL = 203,
     WIFI_REASON_HANDSHAKE_TIMEOUT = 204,
+    WIFI_REASON_CONNECTION_FAIL = 205,
+    WIFI_REASON_AUTH_CHANGED = 206,
 } wifi_err_reason_t;
 
 typedef enum {
@@ -2490,7 +2494,7 @@ typedef struct {
 } wifi_active_scan_time_t;
 
 
-typedef union {
+typedef struct {
     wifi_active_scan_time_t active;
     uint32_t passive;
 
@@ -2502,9 +2506,9 @@ typedef struct {
     uint8_t *bssid;
     uint8_t channel;
     
-# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
-# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         show_hidden;
     wifi_scan_type_t scan_type;
     wifi_scan_time_t scan_time;
@@ -2573,7 +2577,7 @@ typedef enum {
     WIFI_PS_MIN_MODEM,
     WIFI_PS_MAX_MODEM,
 } wifi_ps_type_t;
-# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
 typedef enum {
     WIFI_BW_HT20 = 1,
     WIFI_BW_HT40,
@@ -2597,9 +2601,9 @@ typedef struct {
     uint8_t password[64];
     wifi_scan_method_t scan_method;
     
-# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
-# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         bssid_set;
     uint8_t bssid[6];
     uint8_t channel;
@@ -2665,7 +2669,7 @@ typedef enum {
     WIFI_VND_IE_ID_0,
     WIFI_VND_IE_ID_1,
 } wifi_vendor_ie_id_t;
-# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
 typedef struct {
     uint8_t element_id;
     uint8_t length;
@@ -2724,41 +2728,41 @@ typedef enum {
     WIFI_PKT_DATA,
     WIFI_PKT_MISC,
 } wifi_promiscuous_pkt_type_t;
-# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 380 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
 typedef struct {
     uint32_t filter_mask;
 } wifi_promiscuous_filter_t;
-# 391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-typedef struct {
-    
-# 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
-   _Bool 
 # 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        lltf_en;
+typedef struct {
     
 # 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
 # 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        htltf_en;
+        lltf_en;
     
 # 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
 # 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        stbc_htltf2_en;
+        htltf_en;
     
 # 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
 # 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        ltf_merge_en;
+        stbc_htltf2_en;
     
 # 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
 # 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        channel_filter_en;
+        ltf_merge_en;
     
 # 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
 # 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        channel_filter_en;
+    
+# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         manu_scale;
     uint8_t shift;
 } wifi_csi_config_t;
@@ -2771,9 +2775,9 @@ typedef struct {
     wifi_pkt_rx_ctrl_t rx_ctrl;
     uint8_t mac[6];
     
-# 408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
-# 408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         first_word_invalid;
     int8_t *buf;
     uint16_t len;
@@ -2859,6 +2863,34 @@ typedef enum {
     WIFI_PHY_RATE_LORA_500K = 0x2A,
     WIFI_PHY_RATE_MAX,
 } wifi_phy_rate_t;
+
+
+
+
+
+typedef enum {
+    WIFI_IOCTL_SET_STA_HT2040_COEX = 1,
+    WIFI_IOCTL_GET_STA_HT2040_COEX,
+    WIFI_IOCTL_MAX,
+} wifi_ioctl_cmd_t;
+
+
+
+
+
+typedef struct {
+    int enable;
+} wifi_ht2040_coex_t;
+
+
+
+
+
+typedef struct {
+    union {
+        wifi_ht2040_coex_t ht2040_coex;
+    } data;
+} wifi_ioctl_config_t;
 # 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h" 2
 
 
@@ -3537,7 +3569,7 @@ struct wps_sm {
     u8 channel;
     u8 scan_cnt;
 
-    u8 wps_sig_cnt[2];
+    u8 wps_sig_cnt[9];
 
     u8 discover_ssid_cnt;
     
@@ -4290,22 +4322,11 @@ static int wps_validate_response_type(const u8 *response_type, int mandatory)
 
 static int valid_config_methods(u16 val, int wps2)
 {
- if (wps2) {
-  if ((val & 0x6000) && !(val & 0x0008)) {
-   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Physical/Virtual " "Display flag without old Display flag " "set" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Physical/Virtual " "Display flag without old Display flag " "set" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Physical/Virtual " "Display flag without old Display flag " "set" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Physical/Virtual " "Display flag without old Display flag " "set" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Physical/Virtual " "Display flag without old Display flag " "set" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
 
-             ;
-   return 0;
-  }
+ if (wps2) {
   if (!(val & 0x6000) && (val & 0x0008)) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Display flag " "without Physical/Virtual Display flag" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Display flag " "without Physical/Virtual Display flag" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Display flag " "without Physical/Virtual Display flag" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Display flag " "without Physical/Virtual Display flag" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Display flag " "without Physical/Virtual Display flag" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                                                ;
-   return 0;
-  }
-  if ((val & 0x0600) && !(val & 0x0080)) {
-   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Physical/Virtual " "PushButton flag without old PushButton " "flag set" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Physical/Virtual " "PushButton flag without old PushButton " "flag set" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Physical/Virtual " "PushButton flag without old PushButton " "flag set" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Physical/Virtual " "PushButton flag without old PushButton " "flag set" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Physical/Virtual " "PushButton flag without old PushButton " "flag set" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
-
-                  ;
    return 0;
   }
   if (!(val & 0x0600) && (val & 0x0080)) {
@@ -4314,6 +4335,7 @@ static int valid_config_methods(u16 val, int wps2)
    return 0;
   }
  }
+
 
  return 1;
 }
@@ -4325,9 +4347,9 @@ static int wps_validate_config_methods(const u8 *config_methods, int wps2,
  u16 val;
 
  if (config_methods == 
-# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                       ((void *)0)
-# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                           ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Configuration " "Methods attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Configuration " "Methods attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Configuration " "Methods attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Configuration " "Methods attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Configuration " "Methods attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4355,9 +4377,9 @@ static int wps_validate_ap_config_methods(const u8 *config_methods, int wps2,
  if (wps_validate_config_methods(config_methods, wps2, mandatory) < 0)
   return -1;
  if (config_methods == 
-# 158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                       ((void *)0)
-# 158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                           )
   return 0;
  val = ((u16) (((config_methods)[0] << 8) | (config_methods)[1]));
@@ -4375,9 +4397,9 @@ static int wps_validate_ap_config_methods(const u8 *config_methods, int wps2,
 static int wps_validate_uuid_e(const u8 *uuid_e, int mandatory)
 {
  if (uuid_e == 
-# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
               ((void *)0)
-# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                   ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: UUID-E " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: UUID-E " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: UUID-E " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: UUID-E " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: UUID-E " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4393,9 +4415,9 @@ static int wps_validate_uuid_e(const u8 *uuid_e, int mandatory)
 static int wps_validate_uuid_r(const u8 *uuid_r, int mandatory)
 {
  if (uuid_r == 
-# 188 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
               ((void *)0)
-# 188 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                   ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: UUID-R " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: UUID-R " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: UUID-R " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: UUID-R " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: UUID-R " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4412,9 +4434,9 @@ static int wps_validate_primary_dev_type(const u8 *primary_dev_type,
       int mandatory)
 {
  if (primary_dev_type == 
-# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                         ((void *)0)
-# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                             ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Primary Device Type " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Primary Device Type " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Primary Device Type " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Primary Device Type " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Primary Device Type " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4430,9 +4452,9 @@ static int wps_validate_primary_dev_type(const u8 *primary_dev_type,
 static int wps_validate_rf_bands(const u8 *rf_bands, int mandatory)
 {
  if (rf_bands == 
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 207 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                 ((void *)0)
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 207 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                     ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: RF Bands " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: RF Bands " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: RF Bands " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: RF Bands " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: RF Bands " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4455,9 +4477,9 @@ static int wps_validate_assoc_state(const u8 *assoc_state, int mandatory)
 {
  u16 val;
  if (assoc_state == 
-# 238 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                    ((void *)0)
-# 238 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                        ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Association State " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Association State " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Association State " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Association State " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Association State " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4481,9 +4503,9 @@ static int wps_validate_config_error(const u8 *config_error, int mandatory)
  u16 val;
 
  if (config_error == 
-# 260 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 250 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                     ((void *)0)
-# 260 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 250 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                         ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Configuration Error " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Configuration Error " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Configuration Error " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Configuration Error " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Configuration Error " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4508,9 +4530,9 @@ static int wps_validate_dev_password_id(const u8 *dev_password_id,
  u16 val;
 
  if (dev_password_id == 
-# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 273 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                        ((void *)0)
-# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 273 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                            ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Device Password ID " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Device Password ID " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Device Password ID " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Device Password ID " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Device Password ID " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4533,9 +4555,9 @@ static int wps_validate_manufacturer(const u8 *manufacturer, size_t len,
          int mandatory)
 {
  if (manufacturer == 
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                     ((void *)0)
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                         ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Manufacturer " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Manufacturer " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Manufacturer " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Manufacturer " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Manufacturer " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4557,9 +4579,9 @@ static int wps_validate_model_name(const u8 *model_name, size_t len,
        int mandatory)
 {
  if (model_name == 
-# 324 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 314 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                   ((void *)0)
-# 324 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 314 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                       ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Model Name " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Model Name " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Model Name " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Model Name " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Model Name " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4581,9 +4603,9 @@ static int wps_validate_model_number(const u8 *model_number, size_t len,
          int mandatory)
 {
  if (model_number == 
-# 344 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                     ((void *)0)
-# 344 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                         ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Model Number " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Model Number " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Model Number " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Model Number " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Model Number " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4605,9 +4627,9 @@ static int wps_validate_serial_number(const u8 *serial_number, size_t len,
           int mandatory)
 {
  if (serial_number == 
-# 364 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 354 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                      ((void *)0)
-# 364 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 354 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                          ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Serial Number " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Serial Number " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Serial Number " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Serial Number " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Serial Number " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4630,9 +4652,9 @@ static int wps_validate_dev_name(const u8 *dev_name, size_t len,
      int mandatory)
 {
  if (dev_name == 
-# 385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                 ((void *)0)
-# 385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                     ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Device Name " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Device Name " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Device Name " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Device Name " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Device Name " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4654,9 +4676,9 @@ static int wps_validate_request_to_enroll(const u8 *request_to_enroll,
        int mandatory)
 {
  if (request_to_enroll == 
-# 405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                          ((void *)0)
-# 405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                              ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Request to Enroll " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Request to Enroll " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Request to Enroll " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Request to Enroll " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Request to Enroll " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4692,9 +4714,9 @@ static int wps_validate_req_dev_type(const u8 *req_dev_type[], size_t num,
 static int wps_validate_wps_state(const u8 *wps_state, int mandatory)
 {
  if (wps_state == 
-# 439 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                  ((void *)0)
-# 439 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                      ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Wi-Fi Protected " "Setup State attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Wi-Fi Protected " "Setup State attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Wi-Fi Protected " "Setup State attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Wi-Fi Protected " "Setup State attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Wi-Fi Protected " "Setup State attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4717,9 +4739,9 @@ static int wps_validate_ap_setup_locked(const u8 *ap_setup_locked,
      int mandatory)
 {
  if (ap_setup_locked == 
-# 460 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                        ((void *)0)
-# 460 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                            ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: AP Setup Locked " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: AP Setup Locked " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: AP Setup Locked " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: AP Setup Locked " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: AP Setup Locked " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4741,9 +4763,9 @@ static int wps_validate_selected_registrar(const u8 *selected_registrar,
         int mandatory)
 {
  if (selected_registrar == 
-# 480 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                           ((void *)0)
-# 480 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                               ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Selected Registrar " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Selected Registrar " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Selected Registrar " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Selected Registrar " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Selected Registrar " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4767,9 +4789,9 @@ static int wps_validate_sel_reg_config_methods(const u8 *config_methods,
  u16 val;
 
  if (config_methods == 
-# 502 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 492 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                       ((void *)0)
-# 502 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 492 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                           ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Selected Registrar " "Configuration Methods attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Selected Registrar " "Configuration Methods attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Selected Registrar " "Configuration Methods attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Selected Registrar " "Configuration Methods attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Selected Registrar " "Configuration Methods attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4794,9 +4816,9 @@ static int wps_validate_authorized_macs(const u8 *authorized_macs, size_t len,
      int mandatory)
 {
  if (authorized_macs == 
-# 525 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 515 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                        ((void *)0)
-# 525 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 515 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                            ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Authorized MACs " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Authorized MACs " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Authorized MACs " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Authorized MACs " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Authorized MACs " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4817,9 +4839,9 @@ static int wps_validate_authorized_macs(const u8 *authorized_macs, size_t len,
 static int wps_validate_msg_type(const u8 *msg_type, int mandatory)
 {
  if (msg_type == 
-# 544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                 ((void *)0)
-# 544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                     ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Message Type " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Message Type " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Message Type " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Message Type " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Message Type " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4840,9 +4862,9 @@ static int wps_validate_msg_type(const u8 *msg_type, int mandatory)
 static int wps_validate_mac_addr(const u8 *mac_addr, int mandatory)
 {
  if (mac_addr == 
-# 563 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                 ((void *)0)
-# 563 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                     ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: MAC Address " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: MAC Address " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: MAC Address " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: MAC Address " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: MAC Address " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4863,9 +4885,9 @@ static int wps_validate_mac_addr(const u8 *mac_addr, int mandatory)
 static int wps_validate_enrollee_nonce(const u8 *enrollee_nonce, int mandatory)
 {
  if (enrollee_nonce == 
-# 582 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 572 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                       ((void *)0)
-# 582 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 572 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                           ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Enrollee Nonce " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Enrollee Nonce " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Enrollee Nonce " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Enrollee Nonce " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Enrollee Nonce " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4882,9 +4904,9 @@ static int wps_validate_registrar_nonce(const u8 *registrar_nonce,
      int mandatory)
 {
  if (registrar_nonce == 
-# 597 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 587 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                        ((void *)0)
-# 597 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 587 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                            ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Registrar Nonce " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Registrar Nonce " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Registrar Nonce " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Registrar Nonce " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Registrar Nonce " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4901,9 +4923,9 @@ static int wps_validate_public_key(const u8 *public_key, size_t len,
        int mandatory)
 {
  if (public_key == 
-# 612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                   ((void *)0)
-# 612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                       ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Public Key " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Public Key " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Public Key " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Public Key " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Public Key " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4935,9 +4957,9 @@ static int wps_validate_auth_type_flags(const u8 *flags, int mandatory)
  u16 val;
 
  if (flags == 
-# 642 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 632 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
              ((void *)0)
-# 642 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 632 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                  ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Authentication Type " "Flags attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Authentication Type " "Flags attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Authentication Type " "Flags attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Authentication Type " "Flags attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Authentication Type " "Flags attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4961,9 +4983,9 @@ static int wps_validate_auth_type(const u8 *type, int mandatory)
  u16 val;
 
  if (type == 
-# 664 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 654 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 664 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 654 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Authentication Type " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Authentication Type " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Authentication Type " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Authentication Type " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Authentication Type " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -4989,9 +5011,9 @@ static int wps_validate_encr_type_flags(const u8 *flags, int mandatory)
  u16 val;
 
  if (flags == 
-# 688 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 678 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
              ((void *)0)
-# 688 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 678 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                  ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Encryption Type " "Flags attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Encryption Type " "Flags attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Encryption Type " "Flags attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Encryption Type " "Flags attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Encryption Type " "Flags attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5015,9 +5037,9 @@ static int wps_validate_encr_type(const u8 *type, int mandatory)
  u16 val;
 
  if (type == 
-# 710 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 710 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Encryption Type " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Encryption Type " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Encryption Type " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Encryption Type " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Encryption Type " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5040,9 +5062,9 @@ static int wps_validate_encr_type(const u8 *type, int mandatory)
 static int wps_validate_conn_type_flags(const u8 *flags, int mandatory)
 {
  if (flags == 
-# 731 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 721 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
              ((void *)0)
-# 731 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 721 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                  ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Connection Type " "Flags attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Connection Type " "Flags attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Connection Type " "Flags attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Connection Type " "Flags attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Connection Type " "Flags attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5064,9 +5086,9 @@ static int wps_validate_conn_type_flags(const u8 *flags, int mandatory)
 static int wps_validate_os_version(const u8 *os_version, int mandatory)
 {
  if (os_version == 
-# 751 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 741 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                   ((void *)0)
-# 751 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 741 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                       ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: OS Version " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: OS Version " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: OS Version " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: OS Version " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: OS Version " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5082,9 +5104,9 @@ static int wps_validate_os_version(const u8 *os_version, int mandatory)
 static int wps_validate_authenticator(const u8 *authenticator, int mandatory)
 {
  if (authenticator == 
-# 765 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 755 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                      ((void *)0)
-# 765 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 755 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                          ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Authenticator " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Authenticator " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Authenticator " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Authenticator " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Authenticator " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5100,9 +5122,9 @@ static int wps_validate_authenticator(const u8 *authenticator, int mandatory)
 static int wps_validate_e_hash1(const u8 *hash, int mandatory)
 {
  if (hash == 
-# 779 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 769 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 779 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 769 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: E-Hash1 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: E-Hash1 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: E-Hash1 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: E-Hash1 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: E-Hash1 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5118,9 +5140,9 @@ static int wps_validate_e_hash1(const u8 *hash, int mandatory)
 static int wps_validate_e_hash2(const u8 *hash, int mandatory)
 {
  if (hash == 
-# 793 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 783 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 793 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 783 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: E-Hash2 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: E-Hash2 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: E-Hash2 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: E-Hash2 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: E-Hash2 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5136,9 +5158,9 @@ static int wps_validate_e_hash2(const u8 *hash, int mandatory)
 static int wps_validate_r_hash1(const u8 *hash, int mandatory)
 {
  if (hash == 
-# 807 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 797 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 807 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 797 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: R-Hash1 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: R-Hash1 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: R-Hash1 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: R-Hash1 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: R-Hash1 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5154,9 +5176,9 @@ static int wps_validate_r_hash1(const u8 *hash, int mandatory)
 static int wps_validate_r_hash2(const u8 *hash, int mandatory)
 {
  if (hash == 
-# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 811 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 811 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: R-Hash2 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: R-Hash2 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: R-Hash2 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: R-Hash2 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: R-Hash2 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5173,9 +5195,9 @@ static int wps_validate_encr_settings(const u8 *encr_settings, size_t len,
        int mandatory)
 {
  if (encr_settings == 
-# 836 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 826 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                      ((void *)0)
-# 836 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 826 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                          ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Encrypted Settings " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Encrypted Settings " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Encrypted Settings " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Encrypted Settings " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Encrypted Settings " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5196,9 +5218,9 @@ static int wps_validate_encr_settings(const u8 *encr_settings, size_t len,
 static int wps_validate_settings_delay_time(const u8 *delay, int mandatory)
 {
  if (delay == 
-# 855 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 845 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
              ((void *)0)
-# 855 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 845 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                  ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Settings Delay Time " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Settings Delay Time " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Settings Delay Time " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Settings Delay Time " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Settings Delay Time " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5214,9 +5236,9 @@ static int wps_validate_settings_delay_time(const u8 *delay, int mandatory)
 static int wps_validate_r_snonce1(const u8 *nonce, int mandatory)
 {
  if (nonce == 
-# 869 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 859 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
              ((void *)0)
-# 869 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 859 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                  ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: R-SNonce1 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: R-SNonce1 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: R-SNonce1 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: R-SNonce1 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: R-SNonce1 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5232,9 +5254,9 @@ static int wps_validate_r_snonce1(const u8 *nonce, int mandatory)
 static int wps_validate_r_snonce2(const u8 *nonce, int mandatory)
 {
  if (nonce == 
-# 883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
              ((void *)0)
-# 883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                  ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: R-SNonce2 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: R-SNonce2 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: R-SNonce2 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: R-SNonce2 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: R-SNonce2 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5250,9 +5272,9 @@ static int wps_validate_r_snonce2(const u8 *nonce, int mandatory)
 static int wps_validate_e_snonce1(const u8 *nonce, int mandatory)
 {
  if (nonce == 
-# 897 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 887 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
              ((void *)0)
-# 897 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 887 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                  ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: E-SNonce1 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: E-SNonce1 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: E-SNonce1 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: E-SNonce1 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: E-SNonce1 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5268,9 +5290,9 @@ static int wps_validate_e_snonce1(const u8 *nonce, int mandatory)
 static int wps_validate_e_snonce2(const u8 *nonce, int mandatory)
 {
  if (nonce == 
-# 911 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
              ((void *)0)
-# 911 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                  ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: E-SNonce2 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: E-SNonce2 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: E-SNonce2 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: E-SNonce2 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: E-SNonce2 " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5286,9 +5308,9 @@ static int wps_validate_e_snonce2(const u8 *nonce, int mandatory)
 static int wps_validate_key_wrap_auth(const u8 *auth, int mandatory)
 {
  if (auth == 
-# 925 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 915 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 925 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 915 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Key Wrap " "Authenticator attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Key Wrap " "Authenticator attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Key Wrap " "Authenticator attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Key Wrap " "Authenticator attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Key Wrap " "Authenticator attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5304,9 +5326,9 @@ static int wps_validate_key_wrap_auth(const u8 *auth, int mandatory)
 static int wps_validate_ssid(const u8 *ssid, size_t ssid_len, int mandatory)
 {
  if (ssid == 
-# 939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 929 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 929 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: SSID " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: SSID " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: SSID " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: SSID " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: SSID " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5327,9 +5349,9 @@ static int wps_validate_ssid(const u8 *ssid, size_t ssid_len, int mandatory)
 static int wps_validate_network_key_index(const u8 *idx, int mandatory)
 {
  if (idx == 
-# 958 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 948 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
            ((void *)0)
-# 958 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 948 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Network Key Index " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Network Key Index " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Network Key Index " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Network Key Index " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Network Key Index " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5345,9 +5367,9 @@ static int wps_validate_network_key_index(const u8 *idx, int mandatory)
 static int wps_validate_network_idx(const u8 *idx, int mandatory)
 {
  if (idx == 
-# 972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 962 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
            ((void *)0)
-# 972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 962 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Network Index " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Network Index " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Network Index " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Network Index " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Network Index " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5364,9 +5386,9 @@ static int wps_validate_network_key(const u8 *key, size_t key_len,
         const u8 *encr_type, int mandatory)
 {
  if (key == 
-# 987 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 977 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
            ((void *)0)
-# 987 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 977 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Network Key " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Network Key " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Network Key " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Network Key " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Network Key " "attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5376,9 +5398,9 @@ static int wps_validate_network_key(const u8 *key, size_t key_len,
   return 0;
  }
  if (((encr_type == 
-# 995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 985 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                    ((void *)0) 
-# 995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 985 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                         || ((u16) (((encr_type)[0] << 8) | (encr_type)[1])) != 0x0002) &&
       key_len > 8 && key_len < 64 && key[key_len - 1] == 0) ||
      key_len > 64) {
@@ -5393,9 +5415,9 @@ static int wps_validate_network_key(const u8 *key, size_t key_len,
 static int wps_validate_network_key_shareable(const u8 *val, int mandatory)
 {
  if (val == 
-# 1008 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 998 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
            ((void *)0)
-# 1008 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 998 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                ) {
   if (mandatory) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: Network Key " "Shareable attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: Network Key " "Shareable attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: Network Key " "Shareable attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: Network Key " "Shareable attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: Network Key " "Shareable attribute missing" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -5421,18 +5443,18 @@ static int wps_validate_cred(const u8 *cred, size_t len)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 1032 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1022 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1032 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1022 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
  }
 
  if (cred == 
-# 1037 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1027 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1037 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1027 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -1;
   goto _out;
@@ -5499,18 +5521,18 @@ int wps_validate_beacon(const struct wpabuf *wps_ie)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 1102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1092 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1092 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
  }
 
  if (wps_ie == 
-# 1107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1097 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
               ((void *)0)
-# 1107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1097 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                   ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No WPS IE in Beacon frame" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No WPS IE in Beacon frame" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No WPS IE in Beacon frame" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No WPS IE in Beacon frame" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No WPS IE in Beacon frame" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   ret = -1;
@@ -5524,14 +5546,14 @@ int wps_validate_beacon(const struct wpabuf *wps_ie)
  }
 
  wps2 = attr->version2 != 
-# 1119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                          ((void *)0)
-# 1119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                              ;
  sel_reg = attr->selected_registrar != 
-# 1120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                                       ((void *)0) 
-# 1120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                                            &&
   *attr->selected_registrar != 0;
  if (wps_validate_version(attr->version, 1) ||
@@ -5569,18 +5591,18 @@ int wps_validate_beacon_probe_resp(const struct wpabuf *wps_ie, int probe,
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 1156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
  }
 
  if (wps_ie == 
-# 1161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
               ((void *)0)
-# 1161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                   ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No WPS IE in " "%sProbe Response frame" "\033[0m" "\n", esp_log_timestamp(), "wpa", probe ? "" : "Beacon/"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No WPS IE in " "%sProbe Response frame" "\033[0m" "\n", esp_log_timestamp(), "wpa", probe ? "" : "Beacon/"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No WPS IE in " "%sProbe Response frame" "\033[0m" "\n", esp_log_timestamp(), "wpa", probe ? "" : "Beacon/"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No WPS IE in " "%sProbe Response frame" "\033[0m" "\n", esp_log_timestamp(), "wpa", probe ? "" : "Beacon/"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No WPS IE in " "%sProbe Response frame" "\033[0m" "\n", esp_log_timestamp(), "wpa", probe ? "" : "Beacon/"); } } while(0); } while(0)
                                                        ;
@@ -5595,14 +5617,14 @@ int wps_validate_beacon_probe_resp(const struct wpabuf *wps_ie, int probe,
  }
 
  wps2 = attr->version2 != 
-# 1174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                          ((void *)0)
-# 1174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                              ;
  sel_reg = attr->selected_registrar != 
-# 1175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                                       ((void *)0) 
-# 1175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                                            &&
   *attr->selected_registrar != 0;
  if (wps_validate_version(attr->version, 1) ||
@@ -5660,18 +5682,18 @@ int wps_validate_probe_req(const struct wpabuf *wps_ie, const u8 *addr)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 1231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
  }
 
  if (wps_ie == 
-# 1236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
               ((void *)0)
-# 1236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                   ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No WPS IE in " "Probe Request frame" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No WPS IE in " "Probe Request frame" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No WPS IE in " "Probe Request frame" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No WPS IE in " "Probe Request frame" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No WPS IE in " "Probe Request frame" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                             ;
@@ -5686,22 +5708,22 @@ int wps_validate_probe_req(const struct wpabuf *wps_ie, const u8 *addr)
  }
 
  wps2 = attr->version2 != 
-# 1249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1239 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                          ((void *)0)
-# 1249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1239 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                              ;
  if (wps_validate_version(attr->version, 1) ||
      wps_validate_request_type(attr->request_type, 1) ||
      wps_validate_config_methods(attr->config_methods, wps2, 1) ||
      wps_validate_uuid_e(attr->uuid_e, attr->uuid_r == 
-# 1253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                                                       ((void *)0)
-# 1253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                                                           ) ||
      wps_validate_uuid_r(attr->uuid_r, attr->uuid_e == 
-# 1254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                                                       ((void *)0)
-# 1254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                                                           ) ||
      wps_validate_primary_dev_type(attr->primary_dev_type, 1) ||
      wps_validate_rf_bands(attr->rf_bands, 1) ||
@@ -5742,18 +5764,18 @@ int wps_validate_assoc_req(const struct wpabuf *wps_ie)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 1293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
  }
 
  if (wps_ie == 
-# 1298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
               ((void *)0)
-# 1298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                   ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No WPS IE in " "(Re)Association Request frame" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No WPS IE in " "(Re)Association Request frame" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No WPS IE in " "(Re)Association Request frame" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No WPS IE in " "(Re)Association Request frame" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No WPS IE in " "(Re)Association Request frame" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                                       ;
@@ -5768,9 +5790,9 @@ int wps_validate_assoc_req(const struct wpabuf *wps_ie)
  }
 
  wps2 = attr->version2 != 
-# 1311 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                          ((void *)0)
-# 1311 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                              ;
  if (wps_validate_version(attr->version, 1) ||
      wps_validate_request_type(attr->request_type, 1) ||
@@ -5798,9 +5820,9 @@ int wps_validate_assoc_resp(const struct wpabuf *wps_ie)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 1337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
@@ -5808,9 +5830,9 @@ int wps_validate_assoc_resp(const struct wpabuf *wps_ie)
 
 
  if (wps_ie == 
-# 1343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
               ((void *)0)
-# 1343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                   ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No WPS IE in " "(Re)Association Response frame" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No WPS IE in " "(Re)Association Response frame" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No WPS IE in " "(Re)Association Response frame" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No WPS IE in " "(Re)Association Response frame" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No WPS IE in " "(Re)Association Response frame" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                                        ;
@@ -5825,9 +5847,9 @@ int wps_validate_assoc_resp(const struct wpabuf *wps_ie)
  }
 
  wps2 = attr->version2 != 
-# 1356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                          ((void *)0)
-# 1356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                              ;
  if (wps_validate_version(attr->version, 1) ||
      wps_validate_response_type(attr->response_type, 1) ||
@@ -5855,9 +5877,9 @@ int wps_validate_m1(const struct wpabuf *tlvs)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 1382 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1372 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1382 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1372 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
@@ -5865,9 +5887,9 @@ int wps_validate_m1(const struct wpabuf *tlvs)
 
 
  if (tlvs == 
-# 1388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1378 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1378 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No TLVs in M1" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No TLVs in M1" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No TLVs in M1" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No TLVs in M1" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No TLVs in M1" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   ret = -1;
@@ -5881,9 +5903,9 @@ int wps_validate_m1(const struct wpabuf *tlvs)
  }
 
  wps2 = attr->version2 != 
-# 1400 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                          ((void *)0)
-# 1400 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                              ;
  if (wps_validate_version(attr->version, 1) ||
      wps_validate_msg_type(attr->msg_type, 1) ||
@@ -5941,9 +5963,9 @@ int wps_validate_m2(const struct wpabuf *tlvs)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 1456 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1456 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
@@ -5951,9 +5973,9 @@ int wps_validate_m2(const struct wpabuf *tlvs)
 
 
  if (tlvs == 
-# 1462 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1462 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No TLVs in M2" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No TLVs in M2" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No TLVs in M2" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No TLVs in M2" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No TLVs in M2" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   ret = -1;
@@ -5967,9 +5989,9 @@ int wps_validate_m2(const struct wpabuf *tlvs)
  }
 
  wps2 = attr->version2 != 
-# 1474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1464 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                          ((void *)0)
-# 1474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1464 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                              ;
  if (wps_validate_version(attr->version, 1) ||
      wps_validate_msg_type(attr->msg_type, 1) ||
@@ -6026,18 +6048,18 @@ int wps_validate_m2d(const struct wpabuf *tlvs)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 1529 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1519 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1529 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1519 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
  }
 
  if (tlvs == 
-# 1534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1524 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1524 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No TLVs in M2D" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No TLVs in M2D" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No TLVs in M2D" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No TLVs in M2D" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No TLVs in M2D" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   ret = -1;
@@ -6051,9 +6073,9 @@ int wps_validate_m2d(const struct wpabuf *tlvs)
  }
 
  wps2 = attr->version2 != 
-# 1546 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1536 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                          ((void *)0)
-# 1546 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1536 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                              ;
  if (wps_validate_version(attr->version, 1) ||
      wps_validate_msg_type(attr->msg_type, 1) ||
@@ -6107,18 +6129,18 @@ int wps_validate_m3(const struct wpabuf *tlvs)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 1598 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1588 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1598 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1588 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
  }
 
  if (tlvs == 
-# 1603 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1593 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1603 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1593 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No TLVs in M3" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No TLVs in M3" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No TLVs in M3" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No TLVs in M3" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No TLVs in M3" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   ret = -1;
@@ -6132,9 +6154,9 @@ int wps_validate_m3(const struct wpabuf *tlvs)
  }
 
  wps2 = attr->version2 != 
-# 1615 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                          ((void *)0)
-# 1615 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                              ;
  if (wps_validate_version(attr->version, 1) ||
      wps_validate_msg_type(attr->msg_type, 1) ||
@@ -6172,18 +6194,18 @@ int wps_validate_m4(const struct wpabuf *tlvs)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 1651 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1641 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1651 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1641 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
  }
 
  if (tlvs == 
-# 1656 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1646 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1656 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1646 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No TLVs in M4" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No TLVs in M4" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No TLVs in M4" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No TLVs in M4" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No TLVs in M4" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   ret = -1;
@@ -6197,9 +6219,9 @@ int wps_validate_m4(const struct wpabuf *tlvs)
  }
 
  wps2 = attr->version2 != 
-# 1668 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1658 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                          ((void *)0)
-# 1668 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1658 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                              ;
  if (wps_validate_version(attr->version, 1) ||
      wps_validate_msg_type(attr->msg_type, 1) ||
@@ -6238,9 +6260,9 @@ int wps_validate_m4_encr(const struct wpabuf *tlvs, int wps2)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 1705 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1695 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1705 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1695 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
@@ -6248,9 +6270,9 @@ int wps_validate_m4_encr(const struct wpabuf *tlvs, int wps2)
 
 
  if (tlvs == 
-# 1711 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1711 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No TLVs in M4 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No TLVs in M4 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No TLVs in M4 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No TLVs in M4 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No TLVs in M4 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                  ;
@@ -6296,18 +6318,18 @@ int wps_validate_m5(const struct wpabuf *tlvs)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 1755 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1745 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1755 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1745 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
  }
 
  if (tlvs == 
-# 1760 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1750 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1760 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1750 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No TLVs in M5" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No TLVs in M5" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No TLVs in M5" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No TLVs in M5" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No TLVs in M5" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   ret = -1;
@@ -6321,9 +6343,9 @@ int wps_validate_m5(const struct wpabuf *tlvs)
  }
 
  wps2 = attr->version2 != 
-# 1772 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1762 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                          ((void *)0)
-# 1772 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1762 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                              ;
  if (wps_validate_version(attr->version, 1) ||
      wps_validate_msg_type(attr->msg_type, 1) ||
@@ -6360,18 +6382,18 @@ int wps_validate_m5_encr(const struct wpabuf *tlvs, int wps2)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 1807 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1797 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1807 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1797 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
  }
 
  if (tlvs == 
-# 1812 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1802 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1812 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1802 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No TLVs in M5 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No TLVs in M5 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No TLVs in M5 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No TLVs in M5 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No TLVs in M5 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                  ;
@@ -6417,18 +6439,18 @@ int wps_validate_m6(const struct wpabuf *tlvs)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 1856 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1856 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
  }
 
  if (tlvs == 
-# 1861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1851 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1851 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No TLVs in M6" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No TLVs in M6" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No TLVs in M6" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No TLVs in M6" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No TLVs in M6" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   ret = -1;
@@ -6442,9 +6464,9 @@ int wps_validate_m6(const struct wpabuf *tlvs)
  }
 
  wps2 = attr->version2 != 
-# 1873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1863 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                          ((void *)0)
-# 1873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1863 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                              ;
  if (wps_validate_version(attr->version, 1) ||
      wps_validate_msg_type(attr->msg_type, 1) ||
@@ -6481,18 +6503,18 @@ int wps_validate_m6_encr(const struct wpabuf *tlvs, int wps2)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 1908 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1898 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1908 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1898 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
  }
 
  if (tlvs == 
-# 1913 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1913 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No TLVs in M6 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No TLVs in M6 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No TLVs in M6 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No TLVs in M6 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No TLVs in M6 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                  ;
@@ -6538,18 +6560,18 @@ int wps_validate_m7(const struct wpabuf *tlvs)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 1957 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1947 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1957 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1947 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
  }
 
  if (tlvs == 
-# 1962 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1952 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 1962 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1952 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No TLVs in M7" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No TLVs in M7" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No TLVs in M7" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No TLVs in M7" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No TLVs in M7" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   ret = -1;
@@ -6563,9 +6585,9 @@ int wps_validate_m7(const struct wpabuf *tlvs)
  }
 
  wps2 = attr->version2 != 
-# 1974 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 1964 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                          ((void *)0)
-# 1974 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 1964 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                              ;
  if (wps_validate_version(attr->version, 1) ||
      wps_validate_msg_type(attr->msg_type, 1) ||
@@ -6603,18 +6625,18 @@ int wps_validate_m7_encr(const struct wpabuf *tlvs, int ap, int wps2)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 2010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 2000 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 2010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 2000 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
  }
 
  if (tlvs == 
-# 2015 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 2005 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 2015 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 2005 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No TLVs in M7 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No TLVs in M7 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No TLVs in M7 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No TLVs in M7 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No TLVs in M7 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                  ;
@@ -6667,18 +6689,18 @@ int wps_validate_m8(const struct wpabuf *tlvs)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 2066 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 2056 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 2066 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 2056 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
  }
 
  if (tlvs == 
-# 2071 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 2061 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 2071 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 2061 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No TLVs in M8" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No TLVs in M8" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No TLVs in M8" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No TLVs in M8" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No TLVs in M8" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   ret = -1;
@@ -6692,9 +6714,9 @@ int wps_validate_m8(const struct wpabuf *tlvs)
  }
 
  wps2 = attr->version2 != 
-# 2083 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 2073 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                          ((void *)0)
-# 2083 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 2073 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                              ;
  if (wps_validate_version(attr->version, 1) ||
      wps_validate_msg_type(attr->msg_type, 1) ||
@@ -6731,18 +6753,18 @@ int wps_validate_m8_encr(const struct wpabuf *tlvs, int ap, int wps2)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 2118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 2108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 2118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 2108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
  }
 
  if (tlvs == 
-# 2123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 2113 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 2123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 2113 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No TLVs in M8 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No TLVs in M8 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No TLVs in M8 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No TLVs in M8 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No TLVs in M8 encrypted " "settings" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                  ;
@@ -6794,18 +6816,18 @@ int wps_validate_wsc_ack(const struct wpabuf *tlvs)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 2173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 2163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 2173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 2163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
  }
 
  if (tlvs == 
-# 2178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 2168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 2178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 2168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No TLVs in WSC_ACK" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No TLVs in WSC_ACK" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No TLVs in WSC_ACK" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No TLVs in WSC_ACK" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No TLVs in WSC_ACK" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   ret = -1;
@@ -6819,9 +6841,9 @@ int wps_validate_wsc_ack(const struct wpabuf *tlvs)
  }
 
  wps2 = attr->version2 != 
-# 2190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 2180 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                          ((void *)0)
-# 2190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 2180 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                              ;
  if (wps_validate_version(attr->version, 1) ||
      wps_validate_msg_type(attr->msg_type, 1) ||
@@ -6857,18 +6879,18 @@ int wps_validate_wsc_nack(const struct wpabuf *tlvs)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 2224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 2214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 2224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 2214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
  }
 
  if (tlvs == 
-# 2229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 2219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 2229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 2219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No TLVs in WSC_NACK" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No TLVs in WSC_NACK" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No TLVs in WSC_NACK" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No TLVs in WSC_NACK" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No TLVs in WSC_NACK" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   ret = -1;
@@ -6881,9 +6903,9 @@ int wps_validate_wsc_nack(const struct wpabuf *tlvs)
  }
 
  wps2 = attr->version2 != 
-# 2240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 2230 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                          ((void *)0)
-# 2240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 2230 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                              ;
  if (wps_validate_version(attr->version, 1) ||
      wps_validate_msg_type(attr->msg_type, 1) ||
@@ -6920,18 +6942,18 @@ int wps_validate_wsc_done(const struct wpabuf *tlvs)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 2275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 2265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 2275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 2265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
  }
 
  if (tlvs == 
-# 2280 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 2270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 2280 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 2270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No TLVs in WSC_Done" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No TLVs in WSC_Done" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No TLVs in WSC_Done" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No TLVs in WSC_Done" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No TLVs in WSC_Done" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   ret = -1;
@@ -6945,9 +6967,9 @@ int wps_validate_wsc_done(const struct wpabuf *tlvs)
  }
 
  wps2 = attr->version2 != 
-# 2292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 2282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                          ((void *)0)
-# 2292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 2282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                              ;
  if (wps_validate_version(attr->version, 1) ||
      wps_validate_msg_type(attr->msg_type, 1) ||
@@ -6984,18 +7006,18 @@ int wps_validate_upnp_set_selected_registrar(const struct wpabuf *tlvs)
 
  attr = (struct wps_parse_attr *)calloc(1, (sizeof(struct wps_parse_attr)));
  if (attr == 
-# 2327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 2317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 2327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 2317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   ret = -99;
   goto _out;
  }
 
  if (tlvs == 
-# 2332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 2322 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
             ((void *)0)
-# 2332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 2322 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                 ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS-STRICT: No TLVs in " "SetSelectedRegistrar" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS-STRICT: No TLVs in " "SetSelectedRegistrar" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS-STRICT: No TLVs in " "SetSelectedRegistrar" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS-STRICT: No TLVs in " "SetSelectedRegistrar" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS-STRICT: No TLVs in " "SetSelectedRegistrar" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                              ;
@@ -7010,14 +7032,14 @@ int wps_validate_upnp_set_selected_registrar(const struct wpabuf *tlvs)
  }
 
  wps2 = attr->version2 != 
-# 2345 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 2335 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                          ((void *)0)
-# 2345 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 2335 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                              ;
  sel_reg = attr->selected_registrar != 
-# 2346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
+# 2336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c" 3 4
                                       ((void *)0) 
-# 2346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
+# 2336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_validate.c"
                                            &&
   *attr->selected_registrar != 0;
  if (wps_validate_version(attr->version, 1) ||

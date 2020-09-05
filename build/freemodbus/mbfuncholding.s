@@ -6,7 +6,7 @@
 	.global	eMBFuncWriteHoldingRegister
 	.type	eMBFuncWriteHoldingRegister, @function
 eMBFuncWriteHoldingRegister:
-.LFB21:
+.LFB30:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freemodbus/modbus/functions/mbfuncholding.c"
 	.loc 1 78 0
 .LVL0:
@@ -53,14 +53,14 @@ eMBFuncWriteHoldingRegister:
 	mov.n	a2, a8
 .LVL9:
 	retw.n
-.LFE21:
+.LFE30:
 	.size	eMBFuncWriteHoldingRegister, .-eMBFuncWriteHoldingRegister
 	.section	.text.eMBFuncWriteMultipleHoldingRegister,"ax",@progbits
 	.align	4
 	.global	eMBFuncWriteMultipleHoldingRegister
 	.type	eMBFuncWriteMultipleHoldingRegister, @function
 eMBFuncWriteMultipleHoldingRegister:
-.LFB22:
+.LFB31:
 	.loc 1 111 0
 .LVL10:
 	entry	sp, 32
@@ -125,14 +125,14 @@ eMBFuncWriteMultipleHoldingRegister:
 	.loc 1 164 0
 	mov.n	a2, a10
 	retw.n
-.LFE22:
+.LFE31:
 	.size	eMBFuncWriteMultipleHoldingRegister, .-eMBFuncWriteMultipleHoldingRegister
 	.section	.text.eMBFuncReadHoldingRegister,"ax",@progbits
 	.align	4
 	.global	eMBFuncReadHoldingRegister
 	.type	eMBFuncReadHoldingRegister, @function
 eMBFuncReadHoldingRegister:
-.LFB23:
+.LFB32:
 	.loc 1 171 0
 .LVL20:
 	entry	sp, 32
@@ -216,14 +216,14 @@ eMBFuncReadHoldingRegister:
 	.loc 1 228 0
 	mov.n	a2, a10
 	retw.n
-.LFE23:
+.LFE32:
 	.size	eMBFuncReadHoldingRegister, .-eMBFuncReadHoldingRegister
 	.section	.text.eMBFuncReadWriteMultipleHoldingRegister,"ax",@progbits
 	.align	4
 	.global	eMBFuncReadWriteMultipleHoldingRegister
 	.type	eMBFuncReadWriteMultipleHoldingRegister, @function
 eMBFuncReadWriteMultipleHoldingRegister:
-.LFB24:
+.LFB33:
 	.loc 1 236 0
 .LVL35:
 	entry	sp, 32
@@ -351,7 +351,7 @@ eMBFuncReadWriteMultipleHoldingRegister:
 	.loc 1 306 0
 	mov.n	a2, a10
 	retw.n
-.LFE24:
+.LFE33:
 	.size	eMBFuncReadWriteMultipleHoldingRegister, .-eMBFuncReadWriteMultipleHoldingRegister
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -372,10 +372,10 @@ eMBFuncReadWriteMultipleHoldingRegister:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI0-.LFB21
+	.4byte	.LCFI0-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -384,10 +384,10 @@ eMBFuncReadWriteMultipleHoldingRegister:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI1-.LFB22
+	.4byte	.LCFI1-.LFB31
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -396,10 +396,10 @@ eMBFuncReadWriteMultipleHoldingRegister:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI2-.LFB23
+	.4byte	.LCFI2-.LFB32
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -408,10 +408,10 @@ eMBFuncReadWriteMultipleHoldingRegister:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI3-.LFB24
+	.4byte	.LCFI3-.LFB33
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -490,12 +490,12 @@ eMBFuncReadWriteMultipleHoldingRegister:
 	.uleb128 0x4
 	.4byte	.LASF12
 	.byte	0x2
-	.byte	0x44
+	.byte	0x47
 	.4byte	0x41
 	.uleb128 0x4
 	.4byte	.LASF13
 	.byte	0x2
-	.byte	0x47
+	.byte	0x4a
 	.4byte	0x2c
 	.uleb128 0x5
 	.byte	0x4
@@ -599,8 +599,8 @@ eMBFuncReadWriteMultipleHoldingRegister:
 	.byte	0x1
 	.byte	0x4d
 	.4byte	0xdf
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1e1
@@ -665,8 +665,8 @@ eMBFuncReadWriteMultipleHoldingRegister:
 	.byte	0x1
 	.byte	0x6e
 	.4byte	0xdf
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x284
@@ -738,8 +738,8 @@ eMBFuncReadWriteMultipleHoldingRegister:
 	.byte	0x1
 	.byte	0xaa
 	.4byte	0xdf
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x327
@@ -811,8 +811,8 @@ eMBFuncReadWriteMultipleHoldingRegister:
 	.byte	0x1
 	.byte	0xeb
 	.4byte	0xdf
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x422
@@ -1174,7 +1174,7 @@ eMBFuncReadWriteMultipleHoldingRegister:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL9
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1226,7 +1226,7 @@ eMBFuncReadWriteMultipleHoldingRegister:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL8
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -1244,7 +1244,7 @@ eMBFuncReadWriteMultipleHoldingRegister:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL18
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1309,7 +1309,7 @@ eMBFuncReadWriteMultipleHoldingRegister:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL19
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -1331,7 +1331,7 @@ eMBFuncReadWriteMultipleHoldingRegister:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL32
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1462,7 +1462,7 @@ eMBFuncReadWriteMultipleHoldingRegister:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL34
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -1484,7 +1484,7 @@ eMBFuncReadWriteMultipleHoldingRegister:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL37
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -1691,26 +1691,26 @@ eMBFuncReadWriteMultipleHoldingRegister:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB24
-	.4byte	.LFE24
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB31
+	.4byte	.LFE31
+	.4byte	.LFB32
+	.4byte	.LFE32
+	.4byte	.LFB33
+	.4byte	.LFE33
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

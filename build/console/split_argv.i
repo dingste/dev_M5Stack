@@ -992,7 +992,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/console/split_argv.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/ctype.h" 1
@@ -1169,7 +1169,7 @@ typedef enum {
 
     SS_QUOTED_ARG_ESCAPED = SS_QUOTED_ARG | 0x8,
 } split_state_t;
-
+# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/console/split_argv.c"
 size_t esp_console_split_argv(char *line, char **argv, size_t argv_size)
 {
     const int QUOTE = '"';
@@ -1185,13 +1185,6 @@ size_t esp_console_split_argv(char *line, char **argv, size_t argv_size)
             break;
         }
         int char_out = -1;
-
-
-        void end_arg() {
-            char_out = 0;
-            argv[argc++] = next_arg_start;
-            state = SS_SPACE;
-        }
 
         switch (state) {
         case SS_SPACE:
@@ -1212,7 +1205,7 @@ size_t esp_console_split_argv(char *line, char **argv, size_t argv_size)
 
         case SS_QUOTED_ARG:
             if (char_in == QUOTE) {
-                end_arg();
+                do { char_out = 0; argv[argc++] = next_arg_start; state = SS_SPACE; } while(0);
             } else if (char_in == ESCAPE) {
                 state = SS_QUOTED_ARG_ESCAPED;
             } else {
@@ -1232,7 +1225,7 @@ size_t esp_console_split_argv(char *line, char **argv, size_t argv_size)
 
         case SS_ARG:
             if (char_in == SPACE) {
-                end_arg();
+                do { char_out = 0; argv[argc++] = next_arg_start; state = SS_SPACE; } while(0);
             } else if (char_in == ESCAPE) {
                 state = SS_ARG_ESCAPED;
             } else {

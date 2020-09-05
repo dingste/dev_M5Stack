@@ -1210,7 +1210,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 1
@@ -2065,15 +2065,15 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h" 2
 # 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h"
 int wpa_debug_open_file(const char *path);
@@ -3232,7 +3232,17 @@ _Bool
  void * (*init_for_reauth)(struct eap_sm *sm, void *priv);
  u8 * (*getSessionId)(struct eap_sm *sm, void *priv, size_t *len);
 };
-# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa2/eap_peer/eap_i.h"
+# 102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa2/eap_peer/eap_i.h"
+enum SIG_WPA2 {
+     SIG_WPA2_START = 0,
+     SIG_WPA2_RX,
+     SIG_WPA2_TASK_DEL,
+     SIG_WPA2_MAX,
+ };
+
+
+
+
 struct eap_sm {
  void *eap_method_priv;
 
@@ -3246,16 +3256,15 @@ struct eap_sm {
  u8 current_identifier;
  u8 ownaddr[6];
 
-
-     u8 wpa2_sig_cnt[2];
+     u8 wpa2_sig_cnt[SIG_WPA2_MAX];
 
  u8 finish_state;
 
  int init_phase2;
  
-# 123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa2/eap_peer/eap_i.h" 3 4
+# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa2/eap_peer/eap_i.h" 3 4
 _Bool 
-# 123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa2/eap_peer/eap_i.h"
+# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa2/eap_peer/eap_i.h"
      peap_done;
 
  u8 *eapKeyData;
@@ -3273,9 +3282,9 @@ const u8 * eap_get_config_new_password(struct eap_sm *sm, size_t *len);
 struct eap_peer_config * eap_get_config(struct eap_sm *sm);
 const struct wpa_config_blob * eap_get_config_blob(struct eap_sm *sm, const char *name);
 
-# 139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa2/eap_peer/eap_i.h" 3 4
+# 146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa2/eap_peer/eap_i.h" 3 4
 _Bool 
-# 139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa2/eap_peer/eap_i.h"
+# 146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa2/eap_peer/eap_i.h"
     wifi_sta_get_enterprise_disable_time_check(void);
 
 struct wpabuf * eap_sm_build_identity_resp(struct eap_sm *sm, u8 id, int encrypted);
@@ -4133,8 +4142,7 @@ int eap_peer_tls_status(struct eap_sm *sm, struct eap_ssl_data *data,
 
  if (tls_get_cipher(data->ssl_ctx, data->conn, name, sizeof(name)) == 0)
  {
-
-  ret = sprintf(buf + len,
+  ret = snprintf(buf + len, buflen - len,
       "EAP TLS cipher=%s\n", name);
   if (ret < 0 || (size_t) ret >= buflen - len)
    return len;
@@ -4143,7 +4151,7 @@ int eap_peer_tls_status(struct eap_sm *sm, struct eap_ssl_data *data,
 
  return len;
 }
-# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 770 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
 const u8 * eap_peer_tls_process_init(struct eap_sm *sm,
          struct eap_ssl_data *data,
          EapType eap_type,
@@ -4159,9 +4167,9 @@ const u8 * eap_peer_tls_process_init(struct eap_sm *sm,
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "SSL: TLS errors detected" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "SSL: TLS errors detected" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "SSL: TLS errors detected" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "SSL: TLS errors detected" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "SSL: TLS errors detected" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   ret->ignore = TRUE;
   return 
-# 785 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 784 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
         ((void *)0)
-# 785 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 784 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
             ;
  }
 
@@ -4173,15 +4181,15 @@ const u8 * eap_peer_tls_process_init(struct eap_sm *sm,
   pos = eap_hdr_validate(EAP_VENDOR_IETF, eap_type, reqData,
            &left);
  if (pos == 
-# 795 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 794 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
            ((void *)0)
-# 795 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 794 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
                ) {
   ret->ignore = TRUE;
   return 
-# 797 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 796 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
         ((void *)0)
-# 797 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 796 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
             ;
  }
  if (left == 0) {
@@ -4190,9 +4198,9 @@ const u8 * eap_peer_tls_process_init(struct eap_sm *sm,
   if (!sm->workaround) {
    ret->ignore = TRUE;
    return 
-# 804 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 803 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
          ((void *)0)
-# 804 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 803 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
              ;
   }
 
@@ -4212,9 +4220,9 @@ const u8 * eap_peer_tls_process_init(struct eap_sm *sm,
                 ;
    ret->ignore = TRUE;
    return 
-# 822 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
          ((void *)0)
-# 822 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
              ;
   }
   tls_msg_len = ((((u32) (pos)[0]) << 24) | (((u32) (pos)[1]) << 16) | (((u32) (pos)[2]) << 8) | ((u32) (pos)[3]));
@@ -4225,9 +4233,9 @@ const u8 * eap_peer_tls_process_init(struct eap_sm *sm,
    data->tls_in_left = tls_msg_len;
    wpabuf_free(data->tls_in);
    data->tls_in = 
-# 831 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 830 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
                  ((void *)0)
-# 831 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 830 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
                      ;
   }
   pos += 4;
@@ -4239,9 +4247,9 @@ const u8 * eap_peer_tls_process_init(struct eap_sm *sm,
                                                ;
    ret->ignore = TRUE;
    return 
-# 841 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
          ((void *)0)
-# 841 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
              ;
   }
  }
@@ -4254,29 +4262,29 @@ const u8 * eap_peer_tls_process_init(struct eap_sm *sm,
  *len = left;
  return pos;
 }
-# 862 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
 void eap_peer_tls_reset_input(struct eap_ssl_data *data)
 {
  data->tls_in_left = data->tls_in_total = 0;
  wpabuf_free(data->tls_in);
  data->tls_in = 
-# 866 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 865 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
                ((void *)0)
-# 866 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 865 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
                    ;
 }
-# 877 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 876 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
 void eap_peer_tls_reset_output(struct eap_ssl_data *data)
 {
  data->tls_out_pos = 0;
  wpabuf_free(data->tls_out);
  data->tls_out = 
-# 881 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 880 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
                 ((void *)0)
-# 881 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 880 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
                     ;
 }
-# 893 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
 int eap_peer_tls_decrypt(struct eap_sm *sm, struct eap_ssl_data *data,
     const struct wpabuf *in_data,
     struct wpabuf **in_decrypted)
@@ -4286,25 +4294,25 @@ int eap_peer_tls_decrypt(struct eap_sm *sm, struct eap_ssl_data *data,
 
  msg = eap_peer_tls_data_reassemble(data, in_data, &need_more_input);
  if (msg == 
-# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 900 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
            ((void *)0)
-# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 900 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
                )
   return need_more_input ? 1 : -1;
 
  *in_decrypted = tls_connection_decrypt(data->ssl_ctx, data->conn, msg);
  eap_peer_tls_reset_input(data);
  if (*in_decrypted == 
-# 906 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
                      ((void *)0)
-# 906 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
                          ) {
   do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "SSL: Failed to decrypt Phase 2 data" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "SSL: Failed to decrypt Phase 2 data" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "SSL: Failed to decrypt Phase 2 data" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "SSL: Failed to decrypt Phase 2 data" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "SSL: Failed to decrypt Phase 2 data" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
  }
  return 0;
 }
-# 925 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 924 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
 int eap_peer_tls_encrypt(struct eap_sm *sm, struct eap_ssl_data *data,
     EapType eap_type, int peap_version, u8 id,
     const struct wpabuf *in_data,
@@ -4315,9 +4323,9 @@ int eap_peer_tls_encrypt(struct eap_sm *sm, struct eap_ssl_data *data,
   data->tls_out = tls_connection_encrypt(data->ssl_ctx,
              data->conn, in_data);
   if (data->tls_out == 
-# 934 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 933 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
                       ((void *)0)
-# 934 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 933 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
                           ) {
    do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "SSL: Failed to encrypt Phase 2 " "data (in_len=%lu)" "\033[0m" "\n", esp_log_timestamp(), "wpa", (unsigned long) wpabuf_len(in_data)); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "SSL: Failed to encrypt Phase 2 " "data (in_len=%lu)" "\033[0m" "\n", esp_log_timestamp(), "wpa", (unsigned long) wpabuf_len(in_data)); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "SSL: Failed to encrypt Phase 2 " "data (in_len=%lu)" "\033[0m" "\n", esp_log_timestamp(), "wpa", (unsigned long) wpabuf_len(in_data)); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "SSL: Failed to encrypt Phase 2 " "data (in_len=%lu)" "\033[0m" "\n", esp_log_timestamp(), "wpa", (unsigned long) wpabuf_len(in_data)); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "SSL: Failed to encrypt Phase 2 " "data (in_len=%lu)" "\033[0m" "\n", esp_log_timestamp(), "wpa", (unsigned long) wpabuf_len(in_data)); } } while(0); } while(0)
 
@@ -4330,7 +4338,7 @@ int eap_peer_tls_encrypt(struct eap_sm *sm, struct eap_ssl_data *data,
  return eap_tls_process_output(data, eap_type, peap_version, id, 0,
           out_data);
 }
-# 958 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 957 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
 int eap_peer_select_phase2_methods(struct eap_peer_config *config,
        const char *prefix,
        struct eap_method_type **types,
@@ -4338,29 +4346,29 @@ int eap_peer_select_phase2_methods(struct eap_peer_config *config,
 {
  char *start, *pos, *buf;
  struct eap_method_type *methods = 
-# 964 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 963 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
                                   ((void *)0)
-# 964 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 963 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
                                       , *_methods;
  u8 method;
  size_t num_methods = 0, prefix_len;
 
  if (config == 
-# 968 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 967 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
               ((void *)0) 
-# 968 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 967 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
                    || config->phase2 == 
-# 968 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 967 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
                                         ((void *)0)
-# 968 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 967 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
                                             )
   goto get_defaults;
 
  start = buf = strdup(config->phase2);
  if (buf == 
-# 972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 971 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
            ((void *)0)
-# 972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 971 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
                )
   return -1;
 
@@ -4370,9 +4378,9 @@ int eap_peer_select_phase2_methods(struct eap_peer_config *config,
   int vendor;
   pos = strstr((start), (prefix));
   if (pos == 
-# 980 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 979 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
             ((void *)0)
-# 980 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 979 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
                 )
    break;
   if (start != pos && *(pos - 1) != ' ') {
@@ -4393,9 +4401,9 @@ int eap_peer_select_phase2_methods(struct eap_peer_config *config,
    _methods = (struct eap_method_type *)realloc((methods), (num_methods * sizeof(*methods)))
                                      ;
    if (_methods == 
-# 999 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 998 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
                   ((void *)0)
-# 999 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 998 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
                       ) {
     free((methods));
     free((buf));
@@ -4413,15 +4421,15 @@ int eap_peer_select_phase2_methods(struct eap_peer_config *config,
 
 get_defaults:
  if (methods == 
-# 1015 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
                ((void *)0)
-# 1015 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
                    )
   methods = eap_get_phase2_types(config, &num_methods);
  if (methods == 
-# 1017 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 1016 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
                ((void *)0)
-# 1017 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 1016 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
                    ) {
   do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "TLS: No Phase EAP methods available\n" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "TLS: No Phase EAP methods available\n" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "TLS: No Phase EAP methods available\n" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "TLS: No Phase EAP methods available\n" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "TLS: No Phase EAP methods available\n" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -4435,7 +4443,7 @@ get_defaults:
 
  return 0;
 }
-# 1039 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 1038 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
 int eap_peer_tls_phase2_nak(struct eap_method_type *types, size_t num_types,
        struct eap_hdr *hdr, struct wpabuf **resp)
 {
@@ -4449,9 +4457,9 @@ int eap_peer_tls_phase2_nak(struct eap_method_type *types, size_t num_types,
  *resp = eap_msg_alloc(EAP_VENDOR_IETF, EAP_TYPE_NAK, num_types,
          EAP_CODE_RESPONSE, hdr->identifier);
  if (*resp == 
-# 1051 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
+# 1050 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c" 3 4
              ((void *)0)
-# 1051 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
+# 1050 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/eap_peer/eap_tls_common.c"
                  )
   return -1;
 

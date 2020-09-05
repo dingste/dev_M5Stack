@@ -7,7 +7,7 @@
 	.type	poll, @function
 poll:
 .LFB26:
-	.file 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/poll.c"
+	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/poll.c"
 	.loc 1 19 0
 .LVL0:
 	entry	sp, 32
@@ -53,8 +53,8 @@ poll:
 .LEFDE0:
 	.text
 .Letext0:
-	.file 2 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/sys/poll.h"
-	.file 3 "/home/dieter/SoftwareDevelop/esp-idf/components/vfs/include/esp_vfs.h"
+	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/sys/poll.h"
+	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
 	.4byte	0x129
@@ -460,7 +460,7 @@ poll:
 .LASF3:
 	.string	"unsigned int"
 .LASF17:
-	.string	"/home/dieter/SoftwareDevelop/esp-idf/components/newlib/poll.c"
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/poll.c"
 .LASF20:
 	.string	"nfds_t"
 .LASF11:

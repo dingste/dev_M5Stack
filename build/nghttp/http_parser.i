@@ -1366,8 +1366,11 @@ enum state
   { s_dead = 1
 
   , s_start_req_or_res
+  , s_res_or_resp_I
   , s_res_or_resp_H
   , s_start_res
+  , s_res_I
+  , s_res_IC
   , s_res_H
   , s_res_HT
   , s_res_HTT
@@ -1491,7 +1494,7 @@ enum http_host_state
   , s_http_host_port_start
   , s_http_host_port
 };
-# 465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 468 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
 static struct {
   const char *name;
   const char *description;
@@ -1501,7 +1504,7 @@ static struct {
 
 
 int http_message_needs_eof(const http_parser *parser);
-# 486 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 489 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
 static enum state
 parse_url_char(enum state s, const char ch)
 {
@@ -1677,7 +1680,7 @@ size_t http_parser_execute (http_parser *parser,
 
 
 
-        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 661, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } } while (0);
+        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 664, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } } while (0);
         return 0;
 
       case s_dead:
@@ -1743,15 +1746,19 @@ reexecute:
           break;
         parser->flags = 0;
         parser->content_length = 
-# 726 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                                 (0x7fffffffffffffffLL * 2ULL + 1ULL)
-# 726 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                                           ;
 
         if (ch == 'H') {
           p_state = (enum state) (s_res_or_resp_H);;
 
-          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 731, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_begin), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_begin(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_begin); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 734, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_begin), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_begin(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_begin); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+        } else if (ch == 'I') {
+          p_state = (enum state) (s_res_or_resp_I);;
+
+          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 738, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_begin), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_begin(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_begin); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
         } else {
           parser->type = HTTP_REQUEST;
           p_state = (enum state) (s_start_req);;
@@ -1760,6 +1767,13 @@ reexecute:
 
         break;
       }
+
+      case s_res_or_resp_I:
+        if (ch == 'C') {
+          parser->type = HTTP_RESPONSE;
+          p_state = (enum state) (s_res_IC);;
+        }
+        break;
 
       case s_res_or_resp_H:
         if (ch == 'T') {
@@ -1782,16 +1796,18 @@ reexecute:
       {
         parser->flags = 0;
         parser->content_length = 
-# 761 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 775 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                                 (0x7fffffffffffffffLL * 2ULL + 1ULL)
-# 761 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 775 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                                           ;
 
         switch (ch) {
           case 'H':
             p_state = (enum state) (s_res_H);;
             break;
-
+          case 'I':
+            p_state = (enum state) (s_res_I);;
+            break;
           case '\r':
           case '\n':
             break;
@@ -1801,9 +1817,18 @@ reexecute:
             goto error;
         }
 
-        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 777, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_begin), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_begin(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_begin); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 793, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_begin), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_begin(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_begin); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
         break;
       }
+      case s_res_I:
+        do { if (ch != 'C') { do { parser->http_errno = (HPE_STRICT); } while(0); goto error; } } while (0);
+        p_state = (enum state) (s_res_IC);;
+        break;
+
+      case s_res_IC:
+        do { if (ch != 'Y') { do { parser->http_errno = (HPE_STRICT); } while(0); goto error; } } while (0);
+        p_state = (enum state) (s_res_http_minor);;
+        break;
 
       case s_res_H:
         do { if (ch != 'T') { do { parser->http_errno = (HPE_STRICT); } while(0); goto error; } } while (0);
@@ -1961,20 +1986,20 @@ reexecute:
       case s_res_status:
         if (ch == '\r') {
           p_state = (enum state) (s_res_line_almost_done);;
-          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 937, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (status_mark) { if (__builtin_expect(!!(settings->on_status), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_status(parser, status_mark, (p - status_mark))), 0)) { do { parser->http_errno = (HPE_CB_status); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } status_mark = 
-# 937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 962, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (status_mark) { if (__builtin_expect(!!(settings->on_status), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_status(parser, status_mark, (p - status_mark))), 0)) { do { parser->http_errno = (HPE_CB_status); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } status_mark = 
+# 962 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
          ((void *)0)
-# 937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 962 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
          ; } } while (0);
           break;
         }
 
         if (ch == '\n') {
           p_state = (enum state) (s_header_field_start);;
-          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 943, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (status_mark) { if (__builtin_expect(!!(settings->on_status), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_status(parser, status_mark, (p - status_mark))), 0)) { do { parser->http_errno = (HPE_CB_status); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } status_mark = 
-# 943 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 968, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (status_mark) { if (__builtin_expect(!!(settings->on_status), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_status(parser, status_mark, (p - status_mark))), 0)) { do { parser->http_errno = (HPE_CB_status); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } status_mark = 
+# 968 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
          ((void *)0)
-# 943 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 968 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
          ; } } while (0);
           break;
         }
@@ -1992,9 +2017,9 @@ reexecute:
           break;
         parser->flags = 0;
         parser->content_length = 
-# 959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 984 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                                 (0x7fffffffffffffffLL * 2ULL + 1ULL)
-# 959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 984 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                                           ;
 
         if (__builtin_expect(!!(!((unsigned char)(ch | 0x20) >= 'a' && (unsigned char)(ch | 0x20) <= 'z')), 0)) {
@@ -2028,7 +2053,7 @@ reexecute:
         }
         p_state = (enum state) (s_req_method);;
 
-        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 992, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_begin), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_begin(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_begin); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1017, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_begin), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_begin(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_begin); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
 
         break;
       }
@@ -2141,10 +2166,10 @@ reexecute:
         switch (ch) {
           case ' ':
             p_state = (enum state) (s_req_http_start);;
-            do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1105, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (url_mark) { if (__builtin_expect(!!(settings->on_url), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_url(parser, url_mark, (p - url_mark))), 0)) { do { parser->http_errno = (HPE_CB_url); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } url_mark = 
-# 1105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+            do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1130, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (url_mark) { if (__builtin_expect(!!(settings->on_url), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_url(parser, url_mark, (p - url_mark))), 0)) { do { parser->http_errno = (HPE_CB_url); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } url_mark = 
+# 1130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
            ((void *)0)
-# 1105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 1130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
            ; } } while (0);
             break;
           case '\r':
@@ -2154,10 +2179,10 @@ reexecute:
             p_state = (enum state) ((ch == '\r') ? s_req_line_almost_done : s_header_field_start);
 
                                    ;
-            do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1114, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (url_mark) { if (__builtin_expect(!!(settings->on_url), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_url(parser, url_mark, (p - url_mark))), 0)) { do { parser->http_errno = (HPE_CB_url); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } url_mark = 
-# 1114 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+            do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1139, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (url_mark) { if (__builtin_expect(!!(settings->on_url), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_url(parser, url_mark, (p - url_mark))), 0)) { do { parser->http_errno = (HPE_CB_url); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } url_mark = 
+# 1139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
            ((void *)0)
-# 1114 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 1139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
            ; } } while (0);
             break;
           default:
@@ -2454,7 +2479,7 @@ reexecute:
               break;
 
             default:
-              ((0 && "Unknown header_state") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1410, __func__, "0 && \"Unknown header_state\""));
+              ((0 && "Unknown header_state") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1435, __func__, "0 && \"Unknown header_state\""));
               break;
           }
         }
@@ -2468,10 +2493,10 @@ reexecute:
 
         if (ch == ':') {
           p_state = (enum state) (s_header_value_discard_ws);;
-          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1424, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (header_field_mark) { if (__builtin_expect(!!(settings->on_header_field), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_field(parser, header_field_mark, (p - header_field_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_field); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } header_field_mark = 
-# 1424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1449, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (header_field_mark) { if (__builtin_expect(!!(settings->on_header_field), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_field(parser, header_field_mark, (p - header_field_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_field); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } header_field_mark = 
+# 1449 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
          ((void *)0)
-# 1424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 1449 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
          ; } } while (0);
           break;
         }
@@ -2562,10 +2587,10 @@ reexecute:
           if (ch == '\r') {
             p_state = (enum state) (s_header_almost_done);;
             parser->header_state = h_state;
-            do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1514, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (header_value_mark) { if (__builtin_expect(!!(settings->on_header_value), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_value(parser, header_value_mark, (p - header_value_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_value); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } header_value_mark = 
-# 1514 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+            do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1539, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (header_value_mark) { if (__builtin_expect(!!(settings->on_header_value), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_value(parser, header_value_mark, (p - header_value_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_value); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } header_value_mark = 
+# 1539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
            ((void *)0)
-# 1514 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 1539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
            ; } } while (0);
             break;
           }
@@ -2574,10 +2599,10 @@ reexecute:
             p_state = (enum state) (s_header_almost_done);;
             do { parser->nread += (p - start); if (__builtin_expect(!!(parser->nread > ((80*1024))), 0)) { do { parser->http_errno = (HPE_HEADER_OVERFLOW); } while(0); goto error; } } while (0);
             parser->header_state = h_state;
-            do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1522, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (header_value_mark) { if (__builtin_expect(!!(settings->on_header_value), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_value(parser, header_value_mark, (p - header_value_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_value); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } header_value_mark = 
-# 1522 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+            do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1547, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (header_value_mark) { if (__builtin_expect(!!(settings->on_header_value), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_value(parser, header_value_mark, (p - header_value_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_value); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } header_value_mark = 
+# 1547 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
            ((void *)0)
-# 1522 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 1547 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
            ; } } while (0);
             goto reexecute;;
           }
@@ -2601,22 +2626,22 @@ reexecute:
               p_cr = (const char*) memchr(p, '\r', limit);
               p_lf = (const char*) memchr(p, '\n', limit);
               if (p_cr != 
-# 1544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 1569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                          ((void *)0)
-# 1544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 1569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                              ) {
                 if (p_lf != 
-# 1545 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 1570 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                            ((void *)0) 
-# 1545 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 1570 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                                 && p_cr >= p_lf)
                   p = p_lf;
                 else
                   p = p_cr;
               } else if (__builtin_expect(!!(p_lf != 
-# 1549 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 1574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                         ((void *)0)
-# 1549 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 1574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                         ), 0)) {
                 p = p_lf;
               } else {
@@ -2629,7 +2654,7 @@ reexecute:
 
             case h_connection:
             case h_transfer_encoding:
-              ((0 && "Shouldn't get here.") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1561, __func__, "0 && \"Shouldn't get here.\""));
+              ((0 && "Shouldn't get here.") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1586, __func__, "0 && \"Shouldn't get here.\""));
               break;
 
             case h_content_length:
@@ -2650,9 +2675,9 @@ reexecute:
 
 
               if (__builtin_expect(!!((
-# 1581 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 1606 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                  (0x7fffffffffffffffLL * 2ULL + 1ULL) 
-# 1581 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 1606 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                  - 10) / 10 < parser->content_length), 0)) {
                 do { parser->http_errno = (HPE_INVALID_CONTENT_LENGTH); } while(0);
                 parser->header_state = h_state;
@@ -2841,10 +2866,10 @@ reexecute:
 
           do { if (!header_value_mark) { header_value_mark = p; } } while (0);
           p_state = (enum state) (s_header_field_start);;
-          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1769, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (header_value_mark) { if (__builtin_expect(!!(settings->on_header_value), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_value(parser, header_value_mark, (p - header_value_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_value); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } header_value_mark = 
-# 1769 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1794, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (header_value_mark) { if (__builtin_expect(!!(settings->on_header_value), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_value(parser, header_value_mark, (p - header_value_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_value); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } header_value_mark = 
+# 1794 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
          ((void *)0)
-# 1769 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 1794 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
          ; } } while (0);
           goto reexecute;;
         }
@@ -2857,7 +2882,7 @@ reexecute:
         if (parser->flags & F_TRAILING) {
 
           p_state = (enum state) (s_message_done);;
-          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1781, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_chunk_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_chunk_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_chunk_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } } while (0);
+          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1806, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_chunk_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_chunk_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_chunk_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } } while (0);
           goto reexecute;;
         }
 
@@ -2876,7 +2901,7 @@ reexecute:
           ((parser->flags & (F_UPGRADE | F_CONNECTION_UPGRADE)) ==
            (F_UPGRADE | F_CONNECTION_UPGRADE) ||
            parser->method == HTTP_CONNECT);
-# 1810 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 1835 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
         if (settings->on_headers_complete) {
           switch (settings->on_headers_complete(parser)) {
             case 0:
@@ -2911,21 +2936,21 @@ reexecute:
 
         hasBody = parser->flags & F_CHUNKED ||
           (parser->content_length > 0 && parser->content_length != 
-# 1843 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 1868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                                                                   (0x7fffffffffffffffLL * 2ULL + 1ULL)
-# 1843 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 1868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                                                                             );
         if (parser->upgrade && (parser->method == HTTP_CONNECT ||
                                 (parser->flags & F_SKIPBODY) || !hasBody)) {
 
           p_state = (enum state) ((http_should_keep_alive(parser) ? (parser->type == HTTP_REQUEST ? s_start_req : s_start_res) : s_dead));;
-          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1848, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1873, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
           do { parser->state = p_state; return ((p - data) + 1); } while (0);;
         }
 
         if (parser->flags & F_SKIPBODY) {
           p_state = (enum state) ((http_should_keep_alive(parser) ? (parser->type == HTTP_REQUEST ? s_start_req : s_start_res) : s_dead));;
-          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1854, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1879, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
         } else if (parser->flags & F_CHUNKED) {
 
           p_state = (enum state) (s_chunk_size_start);;
@@ -2933,11 +2958,11 @@ reexecute:
           if (parser->content_length == 0) {
 
             p_state = (enum state) ((http_should_keep_alive(parser) ? (parser->type == HTTP_REQUEST ? s_start_req : s_start_res) : s_dead));;
-            do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1862, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+            do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1887, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
           } else if (parser->content_length != 
-# 1863 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 1888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                                               (0x7fffffffffffffffLL * 2ULL + 1ULL)
-# 1863 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 1888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                                                         ) {
 
             p_state = (enum state) (s_body_identity);;
@@ -2945,7 +2970,7 @@ reexecute:
             if (!http_message_needs_eof(parser)) {
 
               p_state = (enum state) ((http_should_keep_alive(parser) ? (parser->type == HTTP_REQUEST ? s_start_req : s_start_res) : s_dead));;
-              do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1870, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+              do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1895, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
             } else {
 
               p_state = (enum state) (s_body_identity_eof);;
@@ -2962,15 +2987,15 @@ reexecute:
                                                              ;
 
         ((parser->content_length != 0 && parser->content_length != 
-# 1886 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 1911 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
        (0x7fffffffffffffffLL * 2ULL + 1ULL)
-# 1886 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 1911 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
        ) ? (void)0 : __assert_func (
                                                    "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
-# 1886 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 1911 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
         ,
-                                                   1887
-# 1886 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+                                                   1912
+# 1911 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
         , __func__, "parser->content_length != 0 && parser->content_length != ULLONG_MAX"))
                                                     ;
 
@@ -2985,11 +3010,11 @@ reexecute:
 
         if (parser->content_length == 0) {
           p_state = (enum state) (s_message_done);;
-# 1910 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
-          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1910, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (body_mark) { if (__builtin_expect(!!(settings->on_body), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_body(parser, body_mark, (p - body_mark + 1))), 0)) { do { parser->http_errno = (HPE_CB_body); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } body_mark = 
-# 1910 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 1935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1935, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (body_mark) { if (__builtin_expect(!!(settings->on_body), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_body(parser, body_mark, (p - body_mark + 1))), 0)) { do { parser->http_errno = (HPE_CB_body); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } body_mark = 
+# 1935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
          ((void *)0)
-# 1910 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 1935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
          ; } } while (0);
           goto reexecute;;
         }
@@ -3006,7 +3031,7 @@ reexecute:
 
       case s_message_done:
         p_state = (enum state) ((http_should_keep_alive(parser) ? (parser->type == HTTP_REQUEST ? s_start_req : s_start_res) : s_dead));;
-        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1926, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1951, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
         if (parser->upgrade) {
 
           do { parser->state = p_state; return ((p - data) + 1); } while (0);;
@@ -3015,8 +3040,8 @@ reexecute:
 
       case s_chunk_size_start:
       {
-        ((parser->nread == 1) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1935, __func__, "parser->nread == 1"));
-        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1936, __func__, "parser->flags & F_CHUNKED"));
+        ((parser->nread == 1) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1960, __func__, "parser->nread == 1"));
+        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1961, __func__, "parser->flags & F_CHUNKED"));
 
         unhex_val = unhex[(unsigned char)ch];
         if (__builtin_expect(!!(unhex_val == -1), 0)) {
@@ -3033,7 +3058,7 @@ reexecute:
       {
         uint64_t t;
 
-        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1953, __func__, "parser->flags & F_CHUNKED"));
+        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1978, __func__, "parser->flags & F_CHUNKED"));
 
         if (ch == '\r') {
           p_state = (enum state) (s_chunk_size_almost_done);;
@@ -3058,9 +3083,9 @@ reexecute:
 
 
         if (__builtin_expect(!!((
-# 1977 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 2002 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
            (0x7fffffffffffffffLL * 2ULL + 1ULL) 
-# 1977 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 2002 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
            - 16) / 16 < parser->content_length), 0)) {
           do { parser->http_errno = (HPE_INVALID_CONTENT_LENGTH); } while(0);
           goto error;
@@ -3072,7 +3097,7 @@ reexecute:
 
       case s_chunk_parameters:
       {
-        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1988, __func__, "parser->flags & F_CHUNKED"));
+        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2013, __func__, "parser->flags & F_CHUNKED"));
 
         if (ch == '\r') {
           p_state = (enum state) (s_chunk_size_almost_done);;
@@ -3083,7 +3108,7 @@ reexecute:
 
       case s_chunk_size_almost_done:
       {
-        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1999, __func__, "parser->flags & F_CHUNKED"));
+        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2024, __func__, "parser->flags & F_CHUNKED"));
         do { if (ch != '\n') { do { parser->http_errno = (HPE_STRICT); } while(0); goto error; } } while (0);
 
         parser->nread = 0;
@@ -3094,7 +3119,7 @@ reexecute:
         } else {
           p_state = (enum state) (s_chunk_data);;
         }
-        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2010, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_chunk_header), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_chunk_header(parser)), 0)) { do { parser->http_errno = (HPE_CB_chunk_header); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2035, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_chunk_header), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_chunk_header(parser)), 0)) { do { parser->http_errno = (HPE_CB_chunk_header); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
         break;
       }
 
@@ -3103,17 +3128,17 @@ reexecute:
         uint64_t to_read = ((parser->content_length) < ((uint64_t) ((data + len) - p)) ? (parser->content_length) : ((uint64_t) ((data + len) - p)))
                                                              ;
 
-        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2019, __func__, "parser->flags & F_CHUNKED"));
+        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2044, __func__, "parser->flags & F_CHUNKED"));
         ((parser->content_length != 0 && parser->content_length != 
-# 2020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 2045 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
        (0x7fffffffffffffffLL * 2ULL + 1ULL)
-# 2020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 2045 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
        ) ? (void)0 : __assert_func (
                                                    "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
-# 2020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 2045 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
         ,
-                                                   2021
-# 2020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+                                                   2046
+# 2045 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
         , __func__, "parser->content_length != 0 && parser->content_length != ULLONG_MAX"))
                                                     ;
 
@@ -3132,74 +3157,74 @@ reexecute:
       }
 
       case s_chunk_data_almost_done:
-        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2038, __func__, "parser->flags & F_CHUNKED"));
-        ((parser->content_length == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2039, __func__, "parser->content_length == 0"));
+        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2063, __func__, "parser->flags & F_CHUNKED"));
+        ((parser->content_length == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2064, __func__, "parser->content_length == 0"));
         do { if (ch != '\r') { do { parser->http_errno = (HPE_STRICT); } while(0); goto error; } } while (0);
         p_state = (enum state) (s_chunk_data_done);;
-        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2042, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (body_mark) { if (__builtin_expect(!!(settings->on_body), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_body(parser, body_mark, (p - body_mark))), 0)) { do { parser->http_errno = (HPE_CB_body); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } body_mark = 
-# 2042 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2067, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (body_mark) { if (__builtin_expect(!!(settings->on_body), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_body(parser, body_mark, (p - body_mark))), 0)) { do { parser->http_errno = (HPE_CB_body); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } body_mark = 
+# 2067 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
        ((void *)0)
-# 2042 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 2067 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
        ; } } while (0);
         break;
 
       case s_chunk_data_done:
-        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2046, __func__, "parser->flags & F_CHUNKED"));
+        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2071, __func__, "parser->flags & F_CHUNKED"));
         do { if (ch != '\n') { do { parser->http_errno = (HPE_STRICT); } while(0); goto error; } } while (0);
         parser->nread = 0;
         p_state = (enum state) (s_chunk_size_start);;
-        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2050, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_chunk_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_chunk_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_chunk_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2075, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_chunk_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_chunk_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_chunk_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
         break;
 
       default:
-        ((0 && "unhandled state") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2054, __func__, "0 && \"unhandled state\""));
+        ((0 && "unhandled state") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2079, __func__, "0 && \"unhandled state\""));
         do { parser->http_errno = (HPE_INVALID_INTERNAL_STATE); } while(0);
         goto error;
     }
   }
-# 2070 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 2095 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
   ((((header_field_mark ? 1 : 0) + (header_value_mark ? 1 : 0) + (url_mark ? 1 : 0) + (body_mark ? 1 : 0) + (status_mark ? 1 : 0)) <= 1) ? (void)0 : __assert_func (
 
 
 
                                      "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
-# 2070 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 2095 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
   ,
 
 
 
-                                     2074
-# 2070 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+                                     2099
+# 2095 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
   , __func__, "((header_field_mark ? 1 : 0) + (header_value_mark ? 1 : 0) + (url_mark ? 1 : 0) + (body_mark ? 1 : 0) + (status_mark ? 1 : 0)) <= 1"))
 
 
 
                                       ;
 
-  do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2076, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (header_field_mark) { if (__builtin_expect(!!(settings->on_header_field), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_field(parser, header_field_mark, (p - header_field_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_field); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } header_field_mark = 
-# 2076 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+  do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2101, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (header_field_mark) { if (__builtin_expect(!!(settings->on_header_field), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_field(parser, header_field_mark, (p - header_field_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_field); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } header_field_mark = 
+# 2101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
  ((void *)0)
-# 2076 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 2101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
  ; } } while (0);
-  do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2077, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (header_value_mark) { if (__builtin_expect(!!(settings->on_header_value), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_value(parser, header_value_mark, (p - header_value_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_value); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } header_value_mark = 
-# 2077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+  do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2102, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (header_value_mark) { if (__builtin_expect(!!(settings->on_header_value), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_value(parser, header_value_mark, (p - header_value_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_value); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } header_value_mark = 
+# 2102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
  ((void *)0)
-# 2077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 2102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
  ; } } while (0);
-  do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2078, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (url_mark) { if (__builtin_expect(!!(settings->on_url), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_url(parser, url_mark, (p - url_mark))), 0)) { do { parser->http_errno = (HPE_CB_url); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } url_mark = 
-# 2078 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+  do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2103, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (url_mark) { if (__builtin_expect(!!(settings->on_url), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_url(parser, url_mark, (p - url_mark))), 0)) { do { parser->http_errno = (HPE_CB_url); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } url_mark = 
+# 2103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
  ((void *)0)
-# 2078 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 2103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
  ; } } while (0);
-  do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2079, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (body_mark) { if (__builtin_expect(!!(settings->on_body), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_body(parser, body_mark, (p - body_mark))), 0)) { do { parser->http_errno = (HPE_CB_body); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } body_mark = 
-# 2079 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+  do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2104, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (body_mark) { if (__builtin_expect(!!(settings->on_body), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_body(parser, body_mark, (p - body_mark))), 0)) { do { parser->http_errno = (HPE_CB_body); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } body_mark = 
+# 2104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
  ((void *)0)
-# 2079 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 2104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
  ; } } while (0);
-  do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2080, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (status_mark) { if (__builtin_expect(!!(settings->on_status), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_status(parser, status_mark, (p - status_mark))), 0)) { do { parser->http_errno = (HPE_CB_status); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } status_mark = 
-# 2080 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+  do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2105, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (status_mark) { if (__builtin_expect(!!(settings->on_status), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_status(parser, status_mark, (p - status_mark))), 0)) { do { parser->http_errno = (HPE_CB_status); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } status_mark = 
+# 2105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
  ((void *)0)
-# 2080 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 2105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
  ; } } while (0);
 
   do { parser->state = p_state; return (len); } while (0);;
@@ -3230,9 +3255,9 @@ http_message_needs_eof (const http_parser *parser)
   }
 
   if ((parser->flags & F_CHUNKED) || parser->content_length != 
-# 2109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 2134 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                                                               (0x7fffffffffffffffLL * 2ULL + 1ULL)
-# 2109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 2134 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                                                                         ) {
     return 0;
   }
@@ -3286,13 +3311,13 @@ http_parser_settings_init(http_parser_settings *settings)
 
 const char *
 http_errno_name(enum http_errno err) {
-  ((((size_t) err) < (sizeof(http_strerror_tab) / sizeof((http_strerror_tab)[0]))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2162, __func__, "((size_t) err) < ARRAY_SIZE(http_strerror_tab)"));
+  ((((size_t) err) < (sizeof(http_strerror_tab) / sizeof((http_strerror_tab)[0]))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2187, __func__, "((size_t) err) < ARRAY_SIZE(http_strerror_tab)"));
   return http_strerror_tab[err].name;
 }
 
 const char *
 http_errno_description(enum http_errno err) {
-  ((((size_t) err) < (sizeof(http_strerror_tab) / sizeof((http_strerror_tab)[0]))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2168, __func__, "((size_t) err) < ARRAY_SIZE(http_strerror_tab)"));
+  ((((size_t) err) < (sizeof(http_strerror_tab) / sizeof((http_strerror_tab)[0]))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2193, __func__, "((size_t) err) < ARRAY_SIZE(http_strerror_tab)"));
   return http_strerror_tab[err].description;
 }
 
@@ -3385,7 +3410,7 @@ http_parse_host(const char * buf, struct http_parser_url *u, int found_at) {
   const char *p;
   size_t buflen = u->field_data[UF_HOST].off + u->field_data[UF_HOST].len;
 
-  ((u->field_set & (1 << UF_HOST)) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2261, __func__, "u->field_set & (1 << UF_HOST)"));
+  ((u->field_set & (1 << UF_HOST)) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2286, __func__, "u->field_set & (1 << UF_HOST)"));
 
   u->field_data[UF_HOST].len = 0;
 
@@ -3519,7 +3544,7 @@ http_parser_parse_url(const char *buf, size_t buflen, int is_connect,
         break;
 
       default:
-        ((!"Unexpected state") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2395, __func__, "!\"Unexpected state\""));
+        ((!"Unexpected state") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2420, __func__, "!\"Unexpected state\""));
         return 1;
     }
 
@@ -3557,9 +3582,9 @@ http_parser_parse_url(const char *buf, size_t buflen, int is_connect,
   if (u->field_set & (1 << UF_PORT)) {
 
     unsigned long v = strtoul(buf + u->field_data[UF_PORT].off, 
-# 2432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 2457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                                                                ((void *)0)
-# 2432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 2457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                                                                    , 10);
 
 
@@ -3583,7 +3608,7 @@ http_parser_pause(http_parser *parser, int paused) {
       ((enum http_errno) (parser)->http_errno) == HPE_PAUSED) {
     do { parser->http_errno = ((paused) ? HPE_PAUSED : HPE_OK); } while(0);
   } else {
-    ((0 && "Attempting to pause parser in error state") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2455, __func__, "0 && \"Attempting to pause parser in error state\""));
+    ((0 && "Attempting to pause parser in error state") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2480, __func__, "0 && \"Attempting to pause parser in error state\""));
   }
 }
 

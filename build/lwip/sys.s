@@ -6,7 +6,7 @@
 	.global	sys_msleep
 	.type	sys_msleep, @function
 sys_msleep:
-.LFB18:
+.LFB27:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/sys.c"
 	.loc 1 94 0
 .LVL0:
@@ -37,7 +37,7 @@ sys_msleep:
 .L1:
 	retw.n
 .LBE2:
-.LFE18:
+.LFE27:
 	.size	sys_msleep, .-sys_msleep
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -58,10 +58,10 @@ sys_msleep:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI0-.LFB18
+	.4byte	.LCFI0-.LFB27
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -245,8 +245,8 @@ sys_msleep:
 	.4byte	.LASF44
 	.byte	0x1
 	.byte	0x5d
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1d9
@@ -574,14 +574,14 @@ sys_msleep:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB18
-	.4byte	.LFE18
+	.4byte	.LFB27
+	.4byte	.LFE27
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

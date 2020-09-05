@@ -5,6 +5,9 @@
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/esp_mem.c"
 # 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/esp_mem.c"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/esp_mem.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h" 1
 # 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
@@ -868,10 +871,19 @@ void heap_caps_dump_all();
 # 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/esp_mem.c" 2
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/esp_mem.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/esp_mem.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/esp_mem.h"
+       
 
 
 
-__attribute__((section(".iram1"))) void *esp_mbedtls_mem_calloc(size_t n, size_t size)
+void *esp_mbedtls_mem_calloc(size_t n, size_t size);
+void esp_mbedtls_mem_free(void *ptr);
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/esp_mem.c" 2
+
+
+
+__attribute__((section(".iram1" "." "0"))) void *esp_mbedtls_mem_calloc(size_t n, size_t size)
 {
 
     return heap_caps_calloc(n, size, (1<<11)|(1<<2));
@@ -882,7 +894,7 @@ __attribute__((section(".iram1"))) void *esp_mbedtls_mem_calloc(size_t n, size_t
 
 }
 
-__attribute__((section(".iram1"))) void esp_mbedtls_mem_free(void *ptr)
+__attribute__((section(".iram1" "." "1"))) void esp_mbedtls_mem_free(void *ptr)
 {
     return heap_caps_free(ptr);
 }

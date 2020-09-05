@@ -8,35 +8,35 @@
 	.global	esp_event_handler_register
 	.type	esp_event_handler_register, @function
 esp_event_handler_register:
-.LFB20:
+.LFB29:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/default_event_loop.c"
-	.loc 1 26 0
+	.loc 1 27 0
 .LVL0:
 	entry	sp, 32
 .LCFI0:
-	.loc 1 27 0
+	.loc 1 28 0
 	l32r	a8, .LC2
-	.loc 1 26 0
-	mov.n	a11, a2
 	.loc 1 27 0
+	mov.n	a11, a2
+	.loc 1 28 0
 	l32i.n	a10, a8, 0
-	.loc 1 26 0
+	.loc 1 27 0
 	mov.n	a12, a3
 	mov.n	a13, a4
 	mov.n	a14, a5
-	.loc 1 28 0
+	.loc 1 29 0
 	movi	a2, 0x103
 .LVL1:
-	.loc 1 27 0
+	.loc 1 28 0
 	beqz.n	a10, .L2
-	.loc 1 31 0
+	.loc 1 32 0
 	call8	esp_event_handler_register_with
 .LVL2:
 	mov.n	a2, a10
 .L2:
-	.loc 1 33 0
+	.loc 1 34 0
 	retw.n
-.LFE20:
+.LFE29:
 	.size	esp_event_handler_register, .-esp_event_handler_register
 	.section	.text.esp_event_handler_unregister,"ax",@progbits
 	.literal_position
@@ -45,33 +45,33 @@ esp_event_handler_register:
 	.global	esp_event_handler_unregister
 	.type	esp_event_handler_unregister, @function
 esp_event_handler_unregister:
-.LFB21:
-	.loc 1 37 0
+.LFB30:
+	.loc 1 38 0
 .LVL3:
 	entry	sp, 32
 .LCFI1:
-	.loc 1 38 0
+	.loc 1 39 0
 	l32r	a8, .LC3
-	.loc 1 37 0
-	mov.n	a11, a2
 	.loc 1 38 0
+	mov.n	a11, a2
+	.loc 1 39 0
 	l32i.n	a10, a8, 0
-	.loc 1 37 0
+	.loc 1 38 0
 	mov.n	a12, a3
 	mov.n	a13, a4
-	.loc 1 39 0
+	.loc 1 40 0
 	movi	a2, 0x103
 .LVL4:
-	.loc 1 38 0
+	.loc 1 39 0
 	beqz.n	a10, .L6
-	.loc 1 42 0
+	.loc 1 43 0
 	call8	esp_event_handler_unregister_with
 .LVL5:
 	mov.n	a2, a10
 .L6:
-	.loc 1 44 0
+	.loc 1 45 0
 	retw.n
-.LFE21:
+.LFE30:
 	.size	esp_event_handler_unregister, .-esp_event_handler_unregister
 	.section	.text.esp_event_post,"ax",@progbits
 	.literal_position
@@ -80,35 +80,35 @@ esp_event_handler_unregister:
 	.global	esp_event_post
 	.type	esp_event_post, @function
 esp_event_post:
-.LFB22:
-	.loc 1 48 0
+.LFB31:
+	.loc 1 49 0
 .LVL6:
 	entry	sp, 32
 .LCFI2:
-	.loc 1 49 0
+	.loc 1 50 0
 	l32r	a8, .LC4
-	.loc 1 48 0
-	mov.n	a11, a2
 	.loc 1 49 0
+	mov.n	a11, a2
+	.loc 1 50 0
 	l32i.n	a10, a8, 0
-	.loc 1 48 0
+	.loc 1 49 0
 	mov.n	a12, a3
 	mov.n	a13, a4
 	mov.n	a14, a5
 	mov.n	a15, a6
-	.loc 1 50 0
+	.loc 1 51 0
 	movi	a2, 0x103
 .LVL7:
-	.loc 1 49 0
+	.loc 1 50 0
 	beqz.n	a10, .L10
-	.loc 1 53 0
+	.loc 1 54 0
 	call8	esp_event_post_to
 .LVL8:
 	mov.n	a2, a10
 .L10:
-	.loc 1 55 0
+	.loc 1 56 0
 	retw.n
-.LFE22:
+.LFE31:
 	.size	esp_event_post, .-esp_event_post
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC0:
@@ -129,33 +129,33 @@ esp_event_post:
 	.global	esp_event_loop_create_default
 	.type	esp_event_loop_create_default, @function
 esp_event_loop_create_default:
-.LFB23:
-	.loc 1 59 0
+.LFB32:
+	.loc 1 60 0
 	entry	sp, 64
 .LCFI3:
-	.loc 1 60 0
-	l32r	a2, .LC5
 	.loc 1 61 0
+	l32r	a2, .LC5
+	.loc 1 62 0
 	movi	a10, 0x103
-	.loc 1 60 0
+	.loc 1 61 0
 	l32i.n	a8, a2, 0
 	bnez.n	a8, .L14
-	.loc 1 64 0
+	.loc 1 65 0
 	l32r	a11, .LC7
 	movi.n	a12, 0x14
 	mov.n	a10, sp
 	call8	memcpy
 .LVL9:
-	.loc 1 74 0
+	.loc 1 75 0
 	mov.n	a11, a2
 	mov.n	a10, sp
 	call8	esp_event_loop_create
 .LVL10:
 .L14:
-	.loc 1 80 0
+	.loc 1 81 0
 	mov.n	a2, a10
 	retw.n
-.LFE23:
+.LFE32:
 	.size	esp_event_loop_create_default, .-esp_event_loop_create_default
 	.section	.text.esp_event_loop_delete_default,"ax",@progbits
 	.literal_position
@@ -164,31 +164,31 @@ esp_event_loop_create_default:
 	.global	esp_event_loop_delete_default
 	.type	esp_event_loop_delete_default, @function
 esp_event_loop_delete_default:
-.LFB24:
-	.loc 1 83 0
+.LFB33:
+	.loc 1 84 0
 	entry	sp, 32
 .LCFI4:
-	.loc 1 84 0
-	l32r	a3, .LC8
 	.loc 1 85 0
+	l32r	a3, .LC8
+	.loc 1 86 0
 	movi	a2, 0x103
-	.loc 1 84 0
+	.loc 1 85 0
 	l32i.n	a10, a3, 0
 	beqz.n	a10, .L17
-	.loc 1 90 0
+	.loc 1 91 0
 	call8	esp_event_loop_delete
 .LVL11:
 	mov.n	a2, a10
 .LVL12:
-	.loc 1 92 0
+	.loc 1 93 0
 	bnez.n	a10, .L17
-	.loc 1 96 0
+	.loc 1 97 0
 	s32i.n	a10, a3, 0
 .LVL13:
 .L17:
-	.loc 1 99 0
+	.loc 1 100 0
 	retw.n
-.LFE24:
+.LFE33:
 	.size	esp_event_loop_delete_default, .-esp_event_loop_delete_default
 	.section	.bss.s_default_loop,"aw",@nobits
 	.align	4
@@ -215,10 +215,10 @@ s_default_loop:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI0-.LFB20
+	.4byte	.LCFI0-.LFB29
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -227,10 +227,10 @@ s_default_loop:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI1-.LFB21
+	.4byte	.LCFI1-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -239,10 +239,10 @@ s_default_loop:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI2-.LFB22
+	.4byte	.LCFI2-.LFB31
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -251,10 +251,10 @@ s_default_loop:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI3-.LFB23
+	.4byte	.LCFI3-.LFB32
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -263,10 +263,10 @@ s_default_loop:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI4-.LFB24
+	.4byte	.LCFI4-.LFB33
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -471,37 +471,37 @@ s_default_loop:
 	.uleb128 0xc
 	.4byte	.LASF34
 	.byte	0x1
-	.byte	0x18
+	.byte	0x19
 	.4byte	0xbd
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1f4
 	.uleb128 0xd
 	.4byte	.LASF30
 	.byte	0x1
-	.byte	0x18
+	.byte	0x19
 	.4byte	0xf0
 	.4byte	.LLST0
 	.uleb128 0xe
 	.4byte	.LASF31
 	.byte	0x1
-	.byte	0x18
+	.byte	0x19
 	.4byte	0x73
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0xe
 	.4byte	.LASF32
 	.byte	0x1
-	.byte	0x19
+	.byte	0x1a
 	.4byte	0x106
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0xe
 	.4byte	.LASF33
 	.byte	0x1
-	.byte	0x19
+	.byte	0x1a
 	.4byte	0x94
 	.uleb128 0x1
 	.byte	0x55
@@ -538,30 +538,30 @@ s_default_loop:
 	.uleb128 0xc
 	.4byte	.LASF35
 	.byte	0x1
-	.byte	0x23
+	.byte	0x24
 	.4byte	0xbd
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x254
 	.uleb128 0xd
 	.4byte	.LASF30
 	.byte	0x1
-	.byte	0x23
+	.byte	0x24
 	.4byte	0xf0
 	.4byte	.LLST1
 	.uleb128 0xe
 	.4byte	.LASF31
 	.byte	0x1
-	.byte	0x23
+	.byte	0x24
 	.4byte	0x73
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0xe
 	.4byte	.LASF32
 	.byte	0x1
-	.byte	0x24
+	.byte	0x25
 	.4byte	0x106
 	.uleb128 0x1
 	.byte	0x54
@@ -592,44 +592,44 @@ s_default_loop:
 	.uleb128 0xc
 	.4byte	.LASF36
 	.byte	0x1
-	.byte	0x2e
+	.byte	0x2f
 	.4byte	0xbd
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2da
 	.uleb128 0xd
 	.4byte	.LASF30
 	.byte	0x1
-	.byte	0x2e
+	.byte	0x2f
 	.4byte	0xf0
 	.4byte	.LLST2
 	.uleb128 0xe
 	.4byte	.LASF31
 	.byte	0x1
-	.byte	0x2e
+	.byte	0x2f
 	.4byte	0x73
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0xe
 	.4byte	.LASF37
 	.byte	0x1
-	.byte	0x2f
+	.byte	0x30
 	.4byte	0x94
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0xe
 	.4byte	.LASF38
 	.byte	0x1
-	.byte	0x2f
+	.byte	0x30
 	.4byte	0x89
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0xe
 	.4byte	.LASF39
 	.byte	0x1
-	.byte	0x2f
+	.byte	0x30
 	.4byte	0xe5
 	.uleb128 0x1
 	.byte	0x56
@@ -672,17 +672,17 @@ s_default_loop:
 	.uleb128 0x11
 	.4byte	.LASF40
 	.byte	0x1
-	.byte	0x3a
+	.byte	0x3b
 	.4byte	0xbd
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x345
 	.uleb128 0x12
 	.4byte	.LASF42
 	.byte	0x1
-	.byte	0x40
+	.byte	0x41
 	.4byte	0x176
 	.uleb128 0x2
 	.byte	0x91
@@ -690,7 +690,7 @@ s_default_loop:
 	.uleb128 0x13
 	.string	"err"
 	.byte	0x1
-	.byte	0x48
+	.byte	0x49
 	.4byte	0xbd
 	.uleb128 0x14
 	.4byte	.LVL9
@@ -734,17 +734,17 @@ s_default_loop:
 	.uleb128 0x11
 	.4byte	.LASF41
 	.byte	0x1
-	.byte	0x52
+	.byte	0x53
 	.4byte	0xbd
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x377
 	.uleb128 0x15
 	.string	"err"
 	.byte	0x1
-	.byte	0x58
+	.byte	0x59
 	.4byte	0xbd
 	.4byte	.LLST3
 	.uleb128 0x16
@@ -754,7 +754,7 @@ s_default_loop:
 	.uleb128 0x12
 	.4byte	.LASF43
 	.byte	0x1
-	.byte	0x14
+	.byte	0x15
 	.4byte	0xfb
 	.uleb128 0x5
 	.byte	0x3
@@ -763,17 +763,17 @@ s_default_loop:
 	.4byte	.LASF44
 	.4byte	.LASF44
 	.byte	0x8
-	.byte	0xa8
+	.byte	0xab
 	.uleb128 0x17
 	.4byte	.LASF45
 	.4byte	.LASF45
 	.byte	0x8
-	.byte	0xd5
+	.byte	0xd8
 	.uleb128 0x18
 	.4byte	.LASF46
 	.4byte	.LASF46
 	.byte	0x8
-	.2byte	0x10a
+	.2byte	0x10d
 	.uleb128 0x19
 	.4byte	.LASF52
 	.4byte	.LASF52
@@ -1134,7 +1134,7 @@ s_default_loop:
 	.2byte	0x1
 	.byte	0x5b
 	.4byte	.LVL2-1
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1152,7 +1152,7 @@ s_default_loop:
 	.2byte	0x1
 	.byte	0x5b
 	.4byte	.LVL5-1
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1170,7 +1170,7 @@ s_default_loop:
 	.2byte	0x1
 	.byte	0x5b
 	.4byte	.LVL8-1
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1193,30 +1193,30 @@ s_default_loop:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB24
-	.4byte	.LFE24
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB31
+	.4byte	.LFE31
+	.4byte	.LFB32
+	.4byte	.LFE32
+	.4byte	.LFB33
+	.4byte	.LFE33
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

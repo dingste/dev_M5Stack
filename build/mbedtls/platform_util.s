@@ -10,19 +10,23 @@
 mbedtls_platform_zeroize:
 .LFB0:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/platform_util.c"
-	.loc 1 73 0
+	.loc 1 74 0
 .LVL0:
 	entry	sp, 32
 .LCFI0:
 	.loc 1 74 0
-	l32r	a8, .LC0
+	mov.n	a10, a2
 	mov.n	a12, a3
+	.loc 1 77 0
+	beqz.n	a3, .L1
+	.loc 1 78 0
+	l32r	a8, .LC0
+	movi.n	a11, 0
 	memw
 	l32i.n	a8, a8, 0
-	movi.n	a11, 0
-	mov.n	a10, a2
 	callx8	a8
 .LVL1:
+.L1:
 	retw.n
 .LFE0:
 	.size	mbedtls_platform_zeroize, .-mbedtls_platform_zeroize
@@ -64,7 +68,7 @@ memset_func:
 	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x100
+	.4byte	0x104
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -72,14 +76,15 @@ memset_func:
 	.4byte	.LASF11
 	.byte	0xc
 	.4byte	.LASF12
+	.4byte	.LASF13
 	.4byte	.Ldebug_ranges0+0
 	.4byte	0
 	.4byte	.Ldebug_line0
 	.uleb128 0x2
-	.4byte	.LASF13
+	.4byte	.LASF14
 	.byte	0x2
 	.byte	0xd8
-	.4byte	0x2c
+	.4byte	0x30
 	.uleb128 0x3
 	.byte	0x4
 	.byte	0x7
@@ -131,26 +136,26 @@ memset_func:
 	.byte	0x8
 	.4byte	.LASF10
 	.uleb128 0x6
-	.4byte	.LASF14
+	.4byte	.LASF15
 	.byte	0x1
-	.byte	0x48
+	.byte	0x49
 	.4byte	.LFB0
 	.4byte	.LFE0-.LFB0
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xc9
+	.4byte	0xcd
 	.uleb128 0x7
 	.string	"buf"
 	.byte	0x1
-	.byte	0x48
-	.4byte	0x72
+	.byte	0x49
+	.4byte	0x76
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x7
 	.string	"len"
 	.byte	0x1
-	.byte	0x48
-	.4byte	0x21
+	.byte	0x49
+	.4byte	0x25
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x8
@@ -175,30 +180,30 @@ memset_func:
 	.byte	0
 	.byte	0
 	.uleb128 0xa
-	.4byte	0x72
-	.4byte	0xe2
+	.4byte	0x76
+	.4byte	0xe6
 	.uleb128 0xb
-	.4byte	0x72
+	.4byte	0x76
 	.uleb128 0xb
-	.4byte	0x3a
+	.4byte	0x3e
 	.uleb128 0xb
-	.4byte	0x21
+	.4byte	0x25
 	.byte	0
 	.uleb128 0xc
-	.4byte	.LASF15
+	.4byte	.LASF16
 	.byte	0x1
-	.byte	0x46
-	.4byte	0xfe
+	.byte	0x47
+	.4byte	0x102
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	memset_func
 	.uleb128 0xd
 	.byte	0x4
-	.4byte	0xc9
+	.4byte	0xcd
 	.uleb128 0xe
-	.4byte	0xf3
+	.4byte	0xf7
 	.uleb128 0xf
-	.4byte	0xf9
+	.4byte	0xfd
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -210,6 +215,8 @@ memset_func:
 	.uleb128 0x13
 	.uleb128 0xb
 	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x1b
 	.uleb128 0xe
 	.uleb128 0x55
 	.uleb128 0x17
@@ -397,34 +404,36 @@ memset_func:
 	.section	.debug_str,"MS",@progbits,1
 .LASF5:
 	.string	"long long int"
-.LASF13:
+.LASF14:
 	.string	"size_t"
 .LASF9:
 	.string	"long unsigned int"
+.LASF6:
+	.string	"long long unsigned int"
 .LASF11:
 	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
 .LASF12:
 	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/platform_util.c"
-.LASF6:
-	.string	"long long unsigned int"
 .LASF3:
 	.string	"unsigned char"
 .LASF10:
 	.string	"char"
 .LASF7:
 	.string	"long int"
-.LASF15:
+.LASF16:
 	.string	"memset_func"
 .LASF1:
 	.string	"short unsigned int"
 .LASF2:
 	.string	"signed char"
+.LASF8:
+	.string	"sizetype"
 .LASF4:
 	.string	"short int"
 .LASF0:
 	.string	"unsigned int"
-.LASF14:
+.LASF15:
 	.string	"mbedtls_platform_zeroize"
-.LASF8:
-	.string	"sizetype"
+.LASF13:
+	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/mbedtls"
 	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

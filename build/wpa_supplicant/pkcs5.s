@@ -42,7 +42,7 @@
 	.literal .LC15, .LC14
 	.literal .LC17, .LC16
 	.literal .LC18, wpa2_crypto_funcs
-	.literal .LC19, __FUNCTION__$4688
+	.literal .LC19, __FUNCTION__$4698
 	.literal .LC21, .LC20
 	.literal .LC23, .LC22
 	.literal .LC25, .LC24
@@ -622,10 +622,10 @@ pkcs5_decrypt:
 	retw.n
 .LFE41:
 	.size	pkcs5_decrypt, .-pkcs5_decrypt
-	.section	.rodata.__FUNCTION__$4688,"a",@progbits
-	.type	__FUNCTION__$4688, @object
-	.size	__FUNCTION__$4688, 18
-__FUNCTION__$4688:
+	.section	.rodata.__FUNCTION__$4698,"a",@progbits
+	.type	__FUNCTION__$4698, @object
+	.size	__FUNCTION__$4698, 18
+__FUNCTION__$4698:
 	.string	"pkcs5_crypto_init"
 	.comm	wpa2_crypto_funcs,100,4
 	.comm	g_wpa_new_password_len,4,4
@@ -681,22 +681,22 @@ __FUNCTION__$4688:
 	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 	.file 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
-	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa2/eap_peer/eap.h"
-	.file 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa2/eap_peer/eap_i.h"
+	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa2/eap_peer/eap_i.h"
+	.file 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa2/eap_peer/eap.h"
 	.file 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h"
 	.file 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
 	.file 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x107b
+	.4byte	0x10a4
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF158
+	.4byte	.LASF163
 	.byte	0xc
-	.4byte	.LASF159
-	.4byte	.LASF160
+	.4byte	.LASF164
+	.4byte	.LASF165
 	.4byte	.Ldebug_ranges0+0x40
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -1548,42 +1548,62 @@ __FUNCTION__$4688:
 	.4byte	.LASF106
 	.byte	0x4
 	.4byte	0x69
-	.byte	0x1
-	.byte	0x14
-	.4byte	0x766
+	.byte	0xa
+	.byte	0x66
+	.4byte	0x772
 	.uleb128 0xf
 	.4byte	.LASF107
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LASF108
 	.byte	0x1
+	.uleb128 0xf
+	.4byte	.LASF109
+	.byte	0x2
+	.uleb128 0xf
+	.4byte	.LASF110
+	.byte	0x3
+	.byte	0
+	.uleb128 0x1b
+	.4byte	.LASF111
+	.byte	0x4
+	.4byte	0x69
+	.byte	0x1
+	.byte	0x14
+	.4byte	0x78f
+	.uleb128 0xf
+	.4byte	.LASF112
+	.byte	0
+	.uleb128 0xf
+	.4byte	.LASF113
+	.byte	0x1
 	.byte	0
 	.uleb128 0x11
-	.4byte	.LASF109
+	.4byte	.LASF114
 	.byte	0x14
 	.byte	0x1
 	.byte	0x13
-	.4byte	0x7a3
+	.4byte	0x7cc
 	.uleb128 0x13
 	.string	"alg"
 	.byte	0x1
 	.byte	0x17
-	.4byte	0x749
+	.4byte	0x772
 	.byte	0
 	.uleb128 0x12
-	.4byte	.LASF110
+	.4byte	.LASF115
 	.byte	0x1
 	.byte	0x18
-	.4byte	0x7a3
+	.4byte	0x7cc
 	.byte	0x4
 	.uleb128 0x12
-	.4byte	.LASF111
+	.4byte	.LASF116
 	.byte	0x1
 	.byte	0x19
 	.4byte	0x7e
 	.byte	0xc
 	.uleb128 0x12
-	.4byte	.LASF112
+	.4byte	.LASF117
 	.byte	0x1
 	.byte	0x1a
 	.4byte	0x69
@@ -1591,40 +1611,40 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x14
 	.4byte	0x11d
-	.4byte	0x7b3
+	.4byte	0x7dc
 	.uleb128 0x15
 	.4byte	0xb1
 	.byte	0x7
 	.byte	0
 	.uleb128 0x1c
-	.4byte	.LASF118
+	.4byte	.LASF123
 	.byte	0x1
 	.byte	0x2e
 	.4byte	0x57
 	.byte	0x1
-	.4byte	0x827
+	.4byte	0x850
 	.uleb128 0x1d
-	.4byte	.LASF113
+	.4byte	.LASF118
 	.byte	0x1
 	.byte	0x2e
 	.4byte	0x1e9
 	.uleb128 0x1d
-	.4byte	.LASF114
+	.4byte	.LASF119
 	.byte	0x1
 	.byte	0x2e
 	.4byte	0x7e
 	.uleb128 0x1d
-	.4byte	.LASF115
+	.4byte	.LASF120
 	.byte	0x1
 	.byte	0x2f
-	.4byte	0x827
+	.4byte	0x850
 	.uleb128 0x1e
 	.string	"hdr"
 	.byte	0x1
 	.byte	0x31
 	.4byte	0x194
 	.uleb128 0x1f
-	.4byte	.LASF116
+	.4byte	.LASF121
 	.byte	0x1
 	.byte	0x32
 	.4byte	0x1e9
@@ -1644,51 +1664,51 @@ __FUNCTION__$4688:
 	.byte	0x33
 	.4byte	0x1f4
 	.uleb128 0x1f
-	.4byte	.LASF117
+	.4byte	.LASF122
 	.byte	0x1
 	.byte	0x34
-	.4byte	0x82d
+	.4byte	0x856
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x766
+	.4byte	0x78f
 	.uleb128 0x14
 	.4byte	0xce
-	.4byte	0x83d
+	.4byte	0x866
 	.uleb128 0x15
 	.4byte	0xb1
 	.byte	0x4f
 	.byte	0
 	.uleb128 0x1c
-	.4byte	.LASF119
+	.4byte	.LASF124
 	.byte	0x1
 	.byte	0x1e
-	.4byte	0x749
+	.4byte	0x772
 	.byte	0x1
-	.4byte	0x859
+	.4byte	0x882
 	.uleb128 0x20
 	.string	"oid"
 	.byte	0x1
 	.byte	0x1e
-	.4byte	0x859
+	.4byte	0x882
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x1f4
 	.uleb128 0x1c
+	.4byte	.LASF125
+	.byte	0x1
+	.byte	0x8c
+	.4byte	0x8e6
+	.byte	0x1
+	.4byte	0x8e6
+	.uleb128 0x1d
 	.4byte	.LASF120
 	.byte	0x1
 	.byte	0x8c
-	.4byte	0x8bd
-	.byte	0x1
-	.4byte	0x8bd
+	.4byte	0x850
 	.uleb128 0x1d
-	.4byte	.LASF115
-	.byte	0x1
-	.byte	0x8c
-	.4byte	0x827
-	.uleb128 0x1d
-	.4byte	.LASF121
+	.4byte	.LASF126
 	.byte	0x1
 	.byte	0x8d
 	.4byte	0xd5
@@ -1698,60 +1718,60 @@ __FUNCTION__$4688:
 	.byte	0x8f
 	.4byte	0x69
 	.uleb128 0x1f
-	.4byte	.LASF122
+	.4byte	.LASF127
 	.byte	0x1
 	.byte	0x90
-	.4byte	0x8c3
+	.4byte	0x8ec
 	.uleb128 0x1f
-	.4byte	.LASF123
+	.4byte	.LASF128
 	.byte	0x1
 	.byte	0x91
-	.4byte	0x8d3
+	.4byte	0x8fc
 	.uleb128 0x1e
 	.string	"len"
 	.byte	0x1
 	.byte	0x92
-	.4byte	0x8e3
+	.4byte	0x90c
 	.uleb128 0x21
-	.4byte	.LASF124
-	.4byte	0x903
-	.4byte	.LASF120
+	.4byte	.LASF129
+	.4byte	0x92c
+	.4byte	.LASF125
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x2bc
 	.uleb128 0x14
 	.4byte	0x11d
-	.4byte	0x8d3
+	.4byte	0x8fc
 	.uleb128 0x15
 	.4byte	0xb1
 	.byte	0xf
 	.byte	0
 	.uleb128 0x14
 	.4byte	0x1e9
-	.4byte	0x8e3
+	.4byte	0x90c
 	.uleb128 0x15
 	.4byte	0xb1
 	.byte	0x1
 	.byte	0
 	.uleb128 0x14
 	.4byte	0x7e
-	.4byte	0x8f3
+	.4byte	0x91c
 	.uleb128 0x15
 	.4byte	0xb1
 	.byte	0x1
 	.byte	0
 	.uleb128 0x14
 	.4byte	0xce
-	.4byte	0x903
+	.4byte	0x92c
 	.uleb128 0x15
 	.4byte	0xb1
 	.byte	0x11
 	.byte	0
 	.uleb128 0x8
-	.4byte	0x8f3
+	.4byte	0x91c
 	.uleb128 0x22
-	.4byte	.LASF161
+	.4byte	.LASF166
 	.byte	0x1
 	.byte	0xb0
 	.4byte	0x127
@@ -1759,40 +1779,40 @@ __FUNCTION__$4688:
 	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xed2
+	.4byte	0xefb
 	.uleb128 0x23
-	.4byte	.LASF113
+	.4byte	.LASF118
 	.byte	0x1
 	.byte	0xb0
 	.4byte	0x1e9
 	.4byte	.LLST0
 	.uleb128 0x23
-	.4byte	.LASF114
+	.4byte	.LASF119
 	.byte	0x1
 	.byte	0xb0
 	.4byte	0x7e
 	.4byte	.LLST1
 	.uleb128 0x23
-	.4byte	.LASF125
+	.4byte	.LASF130
 	.byte	0x1
 	.byte	0xb1
 	.4byte	0x1e9
 	.4byte	.LLST2
 	.uleb128 0x24
-	.4byte	.LASF126
+	.4byte	.LASF131
 	.byte	0x1
 	.byte	0xb1
 	.4byte	0x7e
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x23
-	.4byte	.LASF121
+	.4byte	.LASF126
 	.byte	0x1
 	.byte	0xb2
 	.4byte	0xd5
 	.4byte	.LLST3
 	.uleb128 0x23
-	.4byte	.LASF127
+	.4byte	.LASF132
 	.byte	0x1
 	.byte	0xb2
 	.4byte	0x743
@@ -1801,7 +1821,7 @@ __FUNCTION__$4688:
 	.string	"ctx"
 	.byte	0x1
 	.byte	0xb4
-	.4byte	0x8bd
+	.4byte	0x8e6
 	.4byte	.LLST5
 	.uleb128 0x25
 	.string	"eb"
@@ -1816,10 +1836,10 @@ __FUNCTION__$4688:
 	.4byte	0x11d
 	.4byte	.LLST7
 	.uleb128 0x26
-	.4byte	.LASF115
+	.4byte	.LASF120
 	.byte	0x1
 	.byte	0xb6
-	.4byte	0x766
+	.4byte	0x78f
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -92
@@ -1830,67 +1850,67 @@ __FUNCTION__$4688:
 	.4byte	0x69
 	.4byte	.LLST8
 	.uleb128 0x27
-	.4byte	0x7b3
+	.4byte	0x7dc
 	.4byte	.LBB8
 	.4byte	.Ldebug_ranges0+0
 	.byte	0x1
 	.byte	0xb9
-	.4byte	0xb72
+	.4byte	0xb9b
 	.uleb128 0x28
-	.4byte	0x7d9
+	.4byte	0x802
 	.uleb128 0x4
 	.byte	0x91
 	.sleb128 -92
 	.byte	0x9f
 	.uleb128 0x29
-	.4byte	0x7ce
+	.4byte	0x7f7
 	.4byte	.LLST9
 	.uleb128 0x29
-	.4byte	0x7c3
+	.4byte	0x7ec
 	.4byte	.LLST10
 	.uleb128 0x2a
 	.4byte	.Ldebug_ranges0+0
 	.uleb128 0x2b
-	.4byte	0x7e4
+	.4byte	0x80d
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -72
 	.uleb128 0x2c
-	.4byte	0x7ef
+	.4byte	0x818
 	.4byte	.LLST11
 	.uleb128 0x2b
-	.4byte	0x7fa
+	.4byte	0x823
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -56
 	.uleb128 0x2c
-	.4byte	0x805
+	.4byte	0x82e
 	.4byte	.LLST12
 	.uleb128 0x2b
-	.4byte	0x810
+	.4byte	0x839
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -256
 	.uleb128 0x2b
-	.4byte	0x81b
+	.4byte	0x844
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -172
 	.uleb128 0x2d
-	.4byte	0x83d
+	.4byte	0x866
 	.4byte	.LBB10
 	.4byte	.LBE10-.LBB10
 	.byte	0x1
 	.byte	0x44
-	.4byte	0xa47
+	.4byte	0xa70
 	.uleb128 0x29
-	.4byte	0x84d
+	.4byte	0x876
 	.4byte	.LLST13
 	.byte	0
 	.uleb128 0x2e
 	.4byte	.LVL2
-	.4byte	0xff3
-	.4byte	0xa66
+	.4byte	0x101c
+	.4byte	0xa8f
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -1910,8 +1930,8 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x2e
 	.4byte	.LVL4
-	.4byte	0xffc
-	.4byte	0xa8d
+	.4byte	0x1025
+	.4byte	0xab6
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -1939,8 +1959,8 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x2e
 	.4byte	.LVL7
-	.4byte	0x1007
-	.4byte	0xaaf
+	.4byte	0x1030
+	.4byte	0xad8
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -1962,11 +1982,11 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL8
-	.4byte	0x1012
+	.4byte	0x103b
 	.uleb128 0x2e
 	.4byte	.LVL9
-	.4byte	0x101d
-	.4byte	0xacd
+	.4byte	0x1046
+	.4byte	0xaf6
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5c
@@ -1976,8 +1996,8 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x2e
 	.4byte	.LVL13
-	.4byte	0x101d
-	.4byte	0xaee
+	.4byte	0x1046
+	.4byte	0xb17
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -1999,8 +2019,8 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x2e
 	.4byte	.LVL14
-	.4byte	0x1028
-	.4byte	0xb09
+	.4byte	0x1051
+	.4byte	0xb32
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2016,8 +2036,8 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x2e
 	.4byte	.LVL15
-	.4byte	0x1031
-	.4byte	0xb2d
+	.4byte	0x105a
+	.4byte	0xb56
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5b
@@ -2039,8 +2059,8 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x2e
 	.4byte	.LVL18
-	.4byte	0x101d
-	.4byte	0xb42
+	.4byte	0x1046
+	.4byte	0xb6b
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5c
@@ -2050,8 +2070,8 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x2e
 	.4byte	.LVL20
-	.4byte	0x1031
-	.4byte	0xb5e
+	.4byte	0x105a
+	.4byte	0xb87
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2066,54 +2086,54 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL21
-	.4byte	0x1012
+	.4byte	0x103b
 	.uleb128 0x30
 	.4byte	.LVL23
-	.4byte	0x103c
+	.4byte	0x1065
 	.byte	0
 	.byte	0
 	.uleb128 0x27
-	.4byte	0x85f
+	.4byte	0x888
 	.4byte	.LBB18
 	.4byte	.Ldebug_ranges0+0x28
 	.byte	0x1
 	.byte	0xbe
-	.4byte	0xcbb
+	.4byte	0xce4
 	.uleb128 0x29
-	.4byte	0x87a
+	.4byte	0x8a3
 	.4byte	.LLST14
 	.uleb128 0x29
-	.4byte	0x86f
+	.4byte	0x898
 	.4byte	.LLST15
 	.uleb128 0x2a
 	.4byte	.Ldebug_ranges0+0x28
 	.uleb128 0x2c
-	.4byte	0x885
+	.4byte	0x8ae
 	.4byte	.LLST16
 	.uleb128 0x2b
-	.4byte	0x88e
+	.4byte	0x8b7
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -256
 	.uleb128 0x2b
-	.4byte	0x899
+	.4byte	0x8c2
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -72
 	.uleb128 0x2b
-	.4byte	0x8a4
+	.4byte	0x8cd
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -172
 	.uleb128 0x2b
-	.4byte	0x8af
+	.4byte	0x8d8
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$4688
+	.4byte	__FUNCTION__$4698
 	.uleb128 0x2e
 	.4byte	.LVL25
-	.4byte	0x1047
-	.4byte	0xbdf
+	.4byte	0x1070
+	.4byte	0xc08
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2123,8 +2143,8 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x2e
 	.4byte	.LVL27
-	.4byte	0x1052
-	.4byte	0xc0d
+	.4byte	0x107b
+	.4byte	0xc36
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2157,8 +2177,8 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x2e
 	.4byte	.LVL33
-	.4byte	0x1052
-	.4byte	0xc3b
+	.4byte	0x107b
+	.4byte	0xc64
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2191,8 +2211,8 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x2e
 	.4byte	.LVL36
-	.4byte	0x105d
-	.4byte	0xc63
+	.4byte	0x1086
+	.4byte	0xc8c
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2218,8 +2238,8 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x2e
 	.4byte	.LVL37
-	.4byte	0x105d
-	.4byte	0xc8b
+	.4byte	0x1086
+	.4byte	0xcb4
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2248,7 +2268,7 @@ __FUNCTION__$4688:
 	.uleb128 0x2
 	.byte	0x72
 	.sleb128 0
-	.4byte	0xcb0
+	.4byte	0xcd9
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2274,16 +2294,16 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL43
-	.4byte	0x1012
+	.4byte	0x103b
 	.byte	0
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL45
-	.4byte	0x1012
+	.4byte	0x103b
 	.uleb128 0x2e
 	.4byte	.LVL46
-	.4byte	0x103c
-	.4byte	0xcf2
+	.4byte	0x1065
+	.4byte	0xd1b
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2319,7 +2339,7 @@ __FUNCTION__$4688:
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
-	.4byte	0xd05
+	.4byte	0xd2e
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2329,11 +2349,11 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL48
-	.4byte	0x1012
+	.4byte	0x103b
 	.uleb128 0x2e
 	.4byte	.LVL49
-	.4byte	0x103c
-	.4byte	0xd36
+	.4byte	0x1065
+	.4byte	0xd5f
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2360,8 +2380,8 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x2e
 	.4byte	.LVL50
-	.4byte	0x1068
-	.4byte	0xd4a
+	.4byte	0x1091
+	.4byte	0xd73
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2374,7 +2394,7 @@ __FUNCTION__$4688:
 	.uleb128 0x2
 	.byte	0x72
 	.sleb128 0
-	.4byte	0xd5d
+	.4byte	0xd86
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2384,7 +2404,7 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x32
 	.4byte	.LVL53
-	.4byte	0xd7f
+	.4byte	0xda8
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2415,7 +2435,7 @@ __FUNCTION__$4688:
 	.uleb128 0x2
 	.byte	0x74
 	.sleb128 0
-	.4byte	0xd92
+	.4byte	0xdbb
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2425,8 +2445,8 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x2e
 	.4byte	.LVL56
-	.4byte	0x1073
-	.4byte	0xda6
+	.4byte	0x109c
+	.4byte	0xdcf
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2436,11 +2456,11 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL58
-	.4byte	0x1012
+	.4byte	0x103b
 	.uleb128 0x2e
 	.4byte	.LVL59
-	.4byte	0x103c
-	.4byte	0xddd
+	.4byte	0x1065
+	.4byte	0xe06
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2470,7 +2490,7 @@ __FUNCTION__$4688:
 	.uleb128 0x2
 	.byte	0x72
 	.sleb128 0
-	.4byte	0xdf0
+	.4byte	0xe19
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2483,7 +2503,7 @@ __FUNCTION__$4688:
 	.uleb128 0x2
 	.byte	0x72
 	.sleb128 0
-	.4byte	0xe03
+	.4byte	0xe2c
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2493,11 +2513,11 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL65
-	.4byte	0x1012
+	.4byte	0x103b
 	.uleb128 0x2e
 	.4byte	.LVL66
-	.4byte	0x103c
-	.4byte	0xe3a
+	.4byte	0x1065
+	.4byte	0xe63
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2524,11 +2544,11 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL68
-	.4byte	0x1012
+	.4byte	0x103b
 	.uleb128 0x2e
 	.4byte	.LVL69
-	.4byte	0x103c
-	.4byte	0xe77
+	.4byte	0x1065
+	.4byte	0xea0
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2561,8 +2581,8 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x2e
 	.4byte	.LVL75
-	.4byte	0x1031
-	.4byte	0xe99
+	.4byte	0x105a
+	.4byte	0xec2
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2583,8 +2603,8 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x2e
 	.4byte	.LVL76
-	.4byte	0x1073
-	.4byte	0xead
+	.4byte	0x109c
+	.4byte	0xed6
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2594,7 +2614,7 @@ __FUNCTION__$4688:
 	.byte	0
 	.uleb128 0x33
 	.4byte	.LVL79
-	.4byte	0x105d
+	.4byte	0x1086
 	.uleb128 0x2f
 	.uleb128 0x1
 	.byte	0x5a
@@ -2621,200 +2641,200 @@ __FUNCTION__$4688:
 	.byte	0
 	.byte	0
 	.uleb128 0x34
-	.4byte	.LASF128
-	.byte	0xa
+	.4byte	.LASF133
+	.byte	0xb
 	.byte	0x16
 	.4byte	0x127
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_anonymous_identity
 	.uleb128 0x34
-	.4byte	.LASF129
-	.byte	0xa
+	.4byte	.LASF134
+	.byte	0xb
 	.byte	0x17
 	.4byte	0x57
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_anonymous_identity_len
 	.uleb128 0x34
-	.4byte	.LASF130
-	.byte	0xa
+	.4byte	.LASF135
+	.byte	0xb
 	.byte	0x18
 	.4byte	0x127
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_username
 	.uleb128 0x34
-	.4byte	.LASF131
-	.byte	0xa
+	.4byte	.LASF136
+	.byte	0xb
 	.byte	0x19
 	.4byte	0x57
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_username_len
 	.uleb128 0x34
-	.4byte	.LASF132
-	.byte	0xa
+	.4byte	.LASF137
+	.byte	0xb
 	.byte	0x1a
 	.4byte	0x1e9
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_client_cert
 	.uleb128 0x34
-	.4byte	.LASF133
-	.byte	0xa
+	.4byte	.LASF138
+	.byte	0xb
 	.byte	0x1b
 	.4byte	0x57
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_client_cert_len
 	.uleb128 0x34
-	.4byte	.LASF134
-	.byte	0xa
+	.4byte	.LASF139
+	.byte	0xb
 	.byte	0x1c
 	.4byte	0x1e9
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_private_key
 	.uleb128 0x34
-	.4byte	.LASF135
-	.byte	0xa
+	.4byte	.LASF140
+	.byte	0xb
 	.byte	0x1d
 	.4byte	0x57
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_private_key_len
 	.uleb128 0x34
-	.4byte	.LASF136
-	.byte	0xa
+	.4byte	.LASF141
+	.byte	0xb
 	.byte	0x1e
 	.4byte	0x1e9
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_private_key_passwd
 	.uleb128 0x34
-	.4byte	.LASF137
-	.byte	0xa
+	.4byte	.LASF142
+	.byte	0xb
 	.byte	0x1f
 	.4byte	0x57
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_private_key_passwd_len
 	.uleb128 0x34
-	.4byte	.LASF138
-	.byte	0xa
+	.4byte	.LASF143
+	.byte	0xb
 	.byte	0x21
 	.4byte	0x1e9
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_ca_cert
 	.uleb128 0x34
-	.4byte	.LASF139
-	.byte	0xa
+	.4byte	.LASF144
+	.byte	0xb
 	.byte	0x22
 	.4byte	0x57
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_ca_cert_len
 	.uleb128 0x34
-	.4byte	.LASF140
-	.byte	0xa
+	.4byte	.LASF145
+	.byte	0xb
 	.byte	0x24
 	.4byte	0x127
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_password
 	.uleb128 0x34
-	.4byte	.LASF141
-	.byte	0xa
+	.4byte	.LASF146
+	.byte	0xb
 	.byte	0x25
 	.4byte	0x57
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_password_len
 	.uleb128 0x34
-	.4byte	.LASF142
-	.byte	0xa
+	.4byte	.LASF147
+	.byte	0xb
 	.byte	0x27
 	.4byte	0x127
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_new_password
 	.uleb128 0x34
-	.4byte	.LASF143
-	.byte	0xa
+	.4byte	.LASF148
+	.byte	0xb
 	.byte	0x28
 	.4byte	0x57
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_new_password_len
 	.uleb128 0x34
-	.4byte	.LASF144
-	.byte	0xb
-	.byte	0x83
+	.4byte	.LASF149
+	.byte	0xa
+	.byte	0x8a
 	.4byte	0x730
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	wpa2_crypto_funcs
 	.uleb128 0x35
-	.4byte	.LASF149
-	.4byte	.LASF149
+	.4byte	.LASF154
+	.4byte	.LASF154
 	.uleb128 0x36
-	.4byte	.LASF145
-	.4byte	.LASF145
+	.4byte	.LASF150
+	.4byte	.LASF150
 	.byte	0x6
 	.byte	0x3d
 	.uleb128 0x36
-	.4byte	.LASF146
-	.4byte	.LASF146
+	.4byte	.LASF151
+	.4byte	.LASF151
 	.byte	0x6
 	.byte	0x3f
 	.uleb128 0x36
-	.4byte	.LASF147
-	.4byte	.LASF147
+	.4byte	.LASF152
+	.4byte	.LASF152
 	.byte	0x7
 	.byte	0x57
 	.uleb128 0x36
-	.4byte	.LASF148
-	.4byte	.LASF148
+	.4byte	.LASF153
+	.4byte	.LASF153
 	.byte	0x6
 	.byte	0x3b
 	.uleb128 0x35
-	.4byte	.LASF150
-	.4byte	.LASF150
+	.4byte	.LASF155
+	.4byte	.LASF155
 	.uleb128 0x36
-	.4byte	.LASF151
-	.4byte	.LASF151
+	.4byte	.LASF156
+	.4byte	.LASF156
 	.byte	0xc
 	.byte	0x58
 	.uleb128 0x36
-	.4byte	.LASF152
-	.4byte	.LASF152
+	.4byte	.LASF157
+	.4byte	.LASF157
 	.byte	0x7
 	.byte	0x6b
 	.uleb128 0x36
-	.4byte	.LASF153
-	.4byte	.LASF153
+	.4byte	.LASF158
+	.4byte	.LASF158
 	.byte	0xd
 	.byte	0x21
 	.uleb128 0x36
-	.4byte	.LASF154
-	.4byte	.LASF154
+	.4byte	.LASF159
+	.4byte	.LASF159
 	.byte	0x9
 	.byte	0x32
 	.uleb128 0x36
-	.4byte	.LASF155
-	.4byte	.LASF155
+	.4byte	.LASF160
+	.4byte	.LASF160
 	.byte	0xc
 	.byte	0x6d
 	.uleb128 0x36
-	.4byte	.LASF156
-	.4byte	.LASF156
+	.4byte	.LASF161
+	.4byte	.LASF161
 	.byte	0xe
 	.byte	0x65
 	.uleb128 0x36
-	.4byte	.LASF157
-	.4byte	.LASF157
+	.4byte	.LASF162
+	.4byte	.LASF162
 	.byte	0xe
 	.byte	0x5a
 	.byte	0
@@ -3963,7 +3983,9 @@ __FUNCTION__$4688:
 	.string	"eap_peer_blob_deinit"
 .LASF42:
 	.string	"ESP_CRYPTO_HASH_ALG_HMAC_SHA256"
-.LASF115:
+.LASF108:
+	.string	"SIG_WPA2_RX"
+.LASF120:
 	.string	"params"
 .LASF46:
 	.string	"ESP_CRYPTO_CIPHER_ALG_3DES"
@@ -3975,15 +3997,17 @@ __FUNCTION__$4688:
 	.string	"ESP_CRYPTO_CIPHER_ALG_DES"
 .LASF53:
 	.string	"crypto_hash"
-.LASF153:
+.LASF158:
 	.string	"strlen"
-.LASF124:
+.LASF129:
 	.string	"__FUNCTION__"
 .LASF75:
 	.string	"esp_eap_sm_build_nak_t"
+.LASF109:
+	.string	"SIG_WPA2_TASK_DEL"
 .LASF99:
 	.string	"eap_sm_abort"
-.LASF128:
+.LASF133:
 	.string	"g_wpa_anonymous_identity"
 .LASF68:
 	.string	"esp_eap_peer_config_init_t"
@@ -3993,23 +4017,23 @@ __FUNCTION__$4688:
 	.string	"version"
 .LASF33:
 	.string	"constructed"
-.LASF114:
+.LASF119:
 	.string	"enc_alg_len"
 .LASF102:
 	.string	"eap_msg_alloc"
 .LASF76:
 	.string	"esp_eap_sm_build_identity_resp_t"
-.LASF116:
+.LASF121:
 	.string	"enc_alg_end"
-.LASF147:
+.LASF152:
 	.string	"esp_log_timestamp"
-.LASF134:
+.LASF139:
 	.string	"g_wpa_private_key"
 .LASF35:
 	.string	"asn1_hdr"
 .LASF82:
 	.string	"crypto_hash_finish"
-.LASF155:
+.LASF160:
 	.string	"wpa_hexdump_key"
 .LASF56:
 	.string	"esp_crypto_hash_update_t"
@@ -4023,13 +4047,13 @@ __FUNCTION__$4688:
 	.string	"uint32_t"
 .LASF93:
 	.string	"eap_peer_config_init"
-.LASF137:
+.LASF142:
 	.string	"g_wpa_private_key_passwd_len"
-.LASF109:
+.LASF114:
 	.string	"pkcs5_params"
-.LASF125:
+.LASF130:
 	.string	"enc_data"
-.LASF156:
+.LASF161:
 	.string	"malloc"
 .LASF36:
 	.string	"asn1_oid"
@@ -4037,13 +4061,13 @@ __FUNCTION__$4688:
 	.string	"long long unsigned int"
 .LASF101:
 	.string	"eap_sm_build_identity_resp"
-.LASF117:
+.LASF122:
 	.string	"obuf"
 .LASF41:
 	.string	"ESP_CRYPTO_HASH_ALG_SHA256"
 .LASF96:
 	.string	"eap_peer_unregister_methods"
-.LASF130:
+.LASF135:
 	.string	"g_wpa_username"
 .LASF103:
 	.string	"wpa2_crypto_funcs_t"
@@ -4057,11 +4081,11 @@ __FUNCTION__$4688:
 	.string	"esp_eap_peer_get_eap_method_t"
 .LASF52:
 	.string	"esp_crypto_cipher_t"
-.LASF158:
+.LASF163:
 	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
 .LASF91:
 	.string	"eap_peer_blob_init"
-.LASF120:
+.LASF125:
 	.string	"pkcs5_crypto_init"
 .LASF88:
 	.string	"sha256_vector"
@@ -4071,13 +4095,13 @@ __FUNCTION__$4688:
 	.string	"payload"
 .LASF104:
 	.string	"_Bool"
-.LASF157:
+.LASF162:
 	.string	"free"
 .LASF60:
 	.string	"esp_crypto_cipher_decrypt_t"
 .LASF18:
 	.string	"ESP_LOG_NONE"
-.LASF121:
+.LASF126:
 	.string	"passwd"
 .LASF54:
 	.string	"crypto_cipher"
@@ -4091,25 +4115,27 @@ __FUNCTION__$4688:
 	.string	"ESP_CRYPTO_CIPHER_ALG_RC2"
 .LASF49:
 	.string	"ESP_CRYPTO_CIPHER_ALG_RC4"
-.LASF122:
+.LASF127:
 	.string	"hash"
-.LASF139:
+.LASF144:
 	.string	"g_wpa_ca_cert_len"
-.LASF107:
+.LASF112:
 	.string	"PKCS5_ALG_UNKNOWN"
 .LASF86:
 	.string	"crypto_cipher_deinit"
+.LASF106:
+	.string	"SIG_WPA2"
 .LASF11:
 	.string	"uint8_t"
-.LASF160:
+.LASF165:
 	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/wpa_supplicant"
-.LASF126:
+.LASF131:
 	.string	"enc_data_len"
-.LASF112:
+.LASF117:
 	.string	"iter_count"
 .LASF43:
 	.string	"esp_crypto_hash_alg_t"
-.LASF108:
+.LASF113:
 	.string	"PKCS5_ALG_MD5_DES_CBC"
 .LASF26:
 	.string	"CRYPTO_CIPHER_ALG_3DES"
@@ -4123,27 +4149,27 @@ __FUNCTION__$4688:
 	.string	"esp_tls_init_t"
 .LASF89:
 	.string	"tls_init"
-.LASF133:
-	.string	"g_wpa_client_cert_len"
-.LASF149:
-	.string	"memset"
 .LASF138:
+	.string	"g_wpa_client_cert_len"
+.LASF154:
+	.string	"memset"
+.LASF143:
 	.string	"g_wpa_ca_cert"
 .LASF65:
 	.string	"esp_tls_deinit_t"
 .LASF78:
 	.string	"size"
-.LASF131:
+.LASF136:
 	.string	"g_wpa_username_len"
 .LASF21:
 	.string	"ESP_LOG_INFO"
-.LASF140:
+.LASF145:
 	.string	"g_wpa_password"
 .LASF69:
 	.string	"esp_eap_peer_config_deinit_t"
 .LASF97:
 	.string	"eap_deinit_prev_method"
-.LASF152:
+.LASF157:
 	.string	"esp_log_write"
 .LASF77:
 	.string	"esp_eap_msg_alloc_t"
@@ -4159,25 +4185,25 @@ __FUNCTION__$4688:
 	.string	"crypto_cipher_alg"
 .LASF100:
 	.string	"eap_sm_build_nak"
-.LASF111:
+.LASF116:
 	.string	"salt_len"
-.LASF127:
+.LASF132:
 	.string	"data_len"
 .LASF90:
 	.string	"tls_deinit"
 .LASF29:
 	.string	"CRYPTO_CIPHER_ALG_RC4"
-.LASF142:
+.LASF147:
 	.string	"g_wpa_new_password"
 .LASF85:
 	.string	"crypto_cipher_decrypt"
 .LASF2:
 	.string	"short int"
-.LASF129:
+.LASF134:
 	.string	"g_wpa_anonymous_identity_len"
 .LASF14:
 	.string	"long int"
-.LASF118:
+.LASF123:
 	.string	"pkcs5_get_params"
 .LASF98:
 	.string	"eap_peer_get_eap_method"
@@ -4185,21 +4211,23 @@ __FUNCTION__$4688:
 	.string	"length"
 .LASF57:
 	.string	"esp_crypto_hash_finish_t"
-.LASF119:
+.LASF124:
 	.string	"pkcs5_get_alg"
 .LASF70:
 	.string	"esp_eap_peer_register_methods_t"
+.LASF110:
+	.string	"SIG_WPA2_MAX"
 .LASF66:
 	.string	"esp_eap_peer_blob_init_t"
 .LASF3:
 	.string	"__uint8_t"
-.LASF151:
+.LASF156:
 	.string	"wpa_hexdump"
 .LASF31:
 	.string	"identifier"
-.LASF146:
+.LASF151:
 	.string	"asn1_oid_to_str"
-.LASF159:
+.LASF164:
 	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/tls/pkcs5.c"
 .LASF39:
 	.string	"ESP_CRYPTO_HASH_ALG_HMAC_MD5"
@@ -4211,13 +4239,13 @@ __FUNCTION__$4688:
 	.string	"esp_eap_peer_blob_deinit_t"
 .LASF23:
 	.string	"ESP_LOG_VERBOSE"
-.LASF154:
+.LASF159:
 	.string	"md5_vector"
 .LASF27:
 	.string	"CRYPTO_CIPHER_ALG_DES"
 .LASF87:
 	.string	"crypto_mod_exp"
-.LASF113:
+.LASF118:
 	.string	"enc_alg"
 .LASF1:
 	.string	"unsigned char"
@@ -4229,13 +4257,15 @@ __FUNCTION__$4688:
 	.string	"esp_eap_sm_abort_t"
 .LASF62:
 	.string	"esp_sha256_vector_t"
-.LASF148:
+.LASF153:
 	.string	"asn1_get_next"
+.LASF107:
+	.string	"SIG_WPA2_START"
 .LASF72:
 	.string	"esp_eap_deinit_prev_method_t"
 .LASF38:
 	.string	"ESP_CRYPTO_HASH_ALG_SHA1"
-.LASF123:
+.LASF128:
 	.string	"addr"
 .LASF81:
 	.string	"crypto_hash_update"
@@ -4243,21 +4273,21 @@ __FUNCTION__$4688:
 	.string	"ESP_LOG_DEBUG"
 .LASF32:
 	.string	"class"
-.LASF143:
+.LASF148:
 	.string	"g_wpa_new_password_len"
 .LASF63:
 	.string	"esp_crypto_mod_exp_t"
 .LASF37:
 	.string	"ESP_CRYPTO_HASH_ALG_MD5"
-.LASF145:
+.LASF150:
 	.string	"asn1_get_oid"
-.LASF106:
+.LASF111:
 	.string	"pkcs5_alg"
 .LASF0:
 	.string	"signed char"
 .LASF5:
 	.string	"short unsigned int"
-.LASF150:
+.LASF155:
 	.string	"memcpy"
 .LASF59:
 	.string	"esp_crypto_cipher_encrypt_t"
@@ -4265,19 +4295,19 @@ __FUNCTION__$4688:
 	.string	"esp_eap_peer_unregister_methods_t"
 .LASF95:
 	.string	"eap_peer_register_methods"
-.LASF144:
+.LASF149:
 	.string	"wpa2_crypto_funcs"
-.LASF132:
+.LASF137:
 	.string	"g_wpa_client_cert"
-.LASF141:
+.LASF146:
 	.string	"g_wpa_password_len"
-.LASF161:
+.LASF166:
 	.string	"pkcs5_decrypt"
-.LASF110:
+.LASF115:
 	.string	"salt"
-.LASF135:
+.LASF140:
 	.string	"g_wpa_private_key_len"
-.LASF136:
+.LASF141:
 	.string	"g_wpa_private_key_passwd"
 .LASF19:
 	.string	"ESP_LOG_ERROR"

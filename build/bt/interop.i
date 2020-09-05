@@ -1120,7 +1120,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h" 1
@@ -1206,189 +1206,8 @@ typedef __uintptr_t uintptr_t;
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdbool.h" 1 3 4
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h" 2
-# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef uint8_t UINT8;
-typedef uint16_t UINT16;
-typedef uint32_t UINT32;
-typedef uint64_t UINT64;
-
-typedef int8_t INT8;
-typedef int16_t INT16;
-typedef int32_t INT32;
-typedef 
-# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h" 3 4
-       _Bool 
-# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-            BOOLEAN;
-# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef struct {
-    uint16_t event;
-    uint16_t len;
-    uint16_t offset;
-    uint16_t layer_specific;
-    uint8_t data[];
-} BT_HDR;
-# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef UINT8 BD_ADDR[6];
-typedef UINT8 *BD_ADDR_PTR;
-
-
-
-
-typedef UINT8 tAMP_KEY_TYPE;
-
-
-typedef UINT8 BT_OCTET8[8];
-
-
-typedef UINT8 LINK_KEY[16];
-
-
-typedef UINT8 AMP_LINK_KEY[32];
-
-
-typedef UINT8 BT_OCTET16[16];
-
-
-typedef UINT8 PIN_CODE[16];
-typedef UINT8 *PIN_CODE_PTR;
-
-
-typedef UINT8 BT_OCTET32[32];
-
-
-typedef UINT8 DEV_CLASS[3];
-typedef UINT8 *DEV_CLASS_PTR;
-
-
-typedef UINT8 EXT_INQ_RESP[3];
-typedef UINT8 *EXT_INQ_RESP_PTR;
-
-
-typedef UINT8 BD_NAME[248 + 1];
-typedef UINT8 *BD_NAME_PTR;
-
-
-typedef UINT8 BD_FEATURES[8];
-
-
-typedef UINT8 BT_EVENT_MASK[8];
-
-
-typedef UINT8 LAP[3];
-typedef UINT8 INQ_LAP[3];
-
-
-typedef UINT8 RAND_NUM[16];
-
-
-typedef UINT8 ACO[12];
-
-
-typedef UINT8 COF[12];
-
-typedef struct {
-    UINT8 qos_flags;
-    UINT8 service_type;
-    UINT32 token_rate;
-    UINT32 token_bucket_size;
-    UINT32 peak_bandwidth;
-    UINT32 latency;
-    UINT32 delay_variation;
-} FLOW_SPEC;
-# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef UINT8 ACCESS_CODE[9];
-# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef struct {
-
-
-
-
-    UINT16 len;
-
-    union {
-        UINT16 uuid16;
-        UINT32 uuid32;
-        UINT8 uuid128[16];
-    } uu;
-
-} tBT_UUID;
-# 482 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef struct {
-    UINT32 is_connected;
-    INT32 rssi;
-    UINT32 bytes_sent;
-    UINT32 bytes_rcvd;
-    UINT32 duration;
-} tBT_CONN_STATS;
-# 504 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef UINT8 tBLE_ADDR_TYPE;
-
-
-
-
-
-typedef UINT8 tBT_TRANSPORT;
-
-
-
-typedef struct {
-    tBLE_ADDR_TYPE type;
-    BD_ADDR bda;
-} tBLE_BD_ADDR;
-
-
-
-
-
-
-typedef UINT8 tBT_DEVICE_TYPE;
-# 701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-typedef void (BT_LOG_FUNC) (int trace_type, const char *fmt_str, ...);
-# 716 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-static const BD_ADDR bd_addr_any = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
-static const BD_ADDR bd_addr_null = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
-# 733 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-static inline void bdcpy(BD_ADDR a, const BD_ADDR b)
-{
-    int i;
-
-    for (i = 6; i != 0; i--) {
-        *a++ = *b++;
-    }
-}
-# 752 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-static inline int bdcmp(const BD_ADDR a, const BD_ADDR b)
-{
-    int i;
-
-    for (i = 6; i != 0; i--) {
-        if (*a++ != *b++) {
-            return -1;
-        }
-    }
-    return 0;
-}
-# 774 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-static inline int bdcmpany(const BD_ADDR a)
-{
-    return bdcmp(a, bd_addr_any);
-}
-# 789 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-static inline void bdsetany(BD_ADDR a)
-{
-    bdcpy(a, bd_addr_any);
-}
-# 804 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-static inline void bt_rcopy(UINT8 *dst, UINT8 const *src, UINT16 len)
-{
-    src += len;
-    while (len --) {
-        *dst++ = *--src;
-    }
-}
-# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h" 2
-# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/include/bt_common.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/include/bt_common.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
@@ -1836,17 +1655,223 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
-# 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h" 2
-# 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h"
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/include/bt_common.h" 2
+# 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/include/bt_common.h"
+typedef enum {
+    BT_STATUS_SUCCESS = 0,
+    BT_STATUS_FAIL,
+    BT_STATUS_NOT_READY,
+    BT_STATUS_NOMEM,
+    BT_STATUS_BUSY,
+    BT_STATUS_DONE,
+    BT_STATUS_UNSUPPORTED,
+    BT_STATUS_PARM_INVALID,
+    BT_STATUS_UNHANDLED,
+    BT_STATUS_AUTH_FAILURE,
+    BT_STATUS_RMT_DEV_DOWN,
+    BT_STATUS_AUTH_REJECTED,
+    BT_STATUS_INVALID_STATIC_RAND_ADDR,
+    BT_STATUS_PENDING,
+    BT_STATUS_UNACCEPT_CONN_INTERVAL,
+    BT_STATUS_PARAM_OUT_OF_RANGE,
+    BT_STATUS_TIMEOUT,
+    BT_STATUS_MEMORY_FULL,
+    BT_STATUS_EIR_TOO_LARGE,
+} bt_status_t;
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h" 2
+
+typedef uint8_t UINT8;
+typedef uint16_t UINT16;
+typedef uint32_t UINT32;
+typedef uint64_t UINT64;
+
+typedef int8_t INT8;
+typedef int16_t INT16;
+typedef int32_t INT32;
+typedef 
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h" 3 4
+       _Bool 
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+            BOOLEAN;
+# 191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef struct {
+    uint16_t event;
+    uint16_t len;
+    uint16_t offset;
+    uint16_t layer_specific;
+    uint8_t data[];
+} BT_HDR;
+# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef UINT8 BD_ADDR[6];
+typedef UINT8 *BD_ADDR_PTR;
+
+
+
+
+typedef UINT8 tAMP_KEY_TYPE;
+
+
+typedef UINT8 BT_OCTET8[8];
+
+
+typedef UINT8 LINK_KEY[16];
+
+
+typedef UINT8 AMP_LINK_KEY[32];
+
+
+typedef UINT8 BT_OCTET16[16];
+
+
+typedef UINT8 PIN_CODE[16];
+typedef UINT8 *PIN_CODE_PTR;
+
+
+typedef UINT8 BT_OCTET32[32];
+
+
+typedef UINT8 DEV_CLASS[3];
+typedef UINT8 *DEV_CLASS_PTR;
+
+
+typedef UINT8 EXT_INQ_RESP[3];
+typedef UINT8 *EXT_INQ_RESP_PTR;
+
+
+typedef UINT8 BD_NAME[248 + 1];
+typedef UINT8 *BD_NAME_PTR;
+
+
+typedef UINT8 BD_FEATURES[8];
+
+
+typedef UINT8 BT_EVENT_MASK[8];
+
+
+typedef UINT8 LAP[3];
+typedef UINT8 INQ_LAP[3];
+
+
+typedef UINT8 RAND_NUM[16];
+
+
+typedef UINT8 ACO[12];
+
+
+typedef UINT8 COF[12];
+
+typedef struct {
+    UINT8 qos_flags;
+    UINT8 service_type;
+    UINT32 token_rate;
+    UINT32 token_bucket_size;
+    UINT32 peak_bandwidth;
+    UINT32 latency;
+    UINT32 delay_variation;
+} FLOW_SPEC;
+# 389 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef UINT8 ACCESS_CODE[9];
+# 413 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef struct {
+
+
+
+
+    UINT16 len;
+
+    union {
+        UINT16 uuid16;
+        UINT32 uuid32;
+        UINT8 uuid128[16];
+    } uu;
+
+} tBT_UUID;
+# 475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef struct {
+    UINT32 is_connected;
+    INT32 rssi;
+    UINT32 bytes_sent;
+    UINT32 bytes_rcvd;
+    UINT32 duration;
+} tBT_CONN_STATS;
+# 497 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef UINT8 tBLE_ADDR_TYPE;
+
+
+
+
+
+typedef UINT8 tBT_TRANSPORT;
+
+
+
+typedef struct {
+    tBLE_ADDR_TYPE type;
+    BD_ADDR bda;
+} tBLE_BD_ADDR;
+
+
+
+
+
+
+typedef UINT8 tBT_DEVICE_TYPE;
+# 681 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+typedef void (BT_LOG_FUNC) (int trace_type, const char *fmt_str, ...);
+# 696 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+static const BD_ADDR bd_addr_any = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+static const BD_ADDR bd_addr_null = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+# 713 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+static inline void bdcpy(BD_ADDR a, const BD_ADDR b)
+{
+    int i;
+
+    for (i = 6; i != 0; i--) {
+        *a++ = *b++;
+    }
+}
+# 732 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+static inline int bdcmp(const BD_ADDR a, const BD_ADDR b)
+{
+    int i;
+
+    for (i = 6; i != 0; i--) {
+        if (*a++ != *b++) {
+            return -1;
+        }
+    }
+    return 0;
+}
+# 754 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+static inline int bdcmpany(const BD_ADDR a)
+{
+    return bdcmp(a, bd_addr_any);
+}
+# 769 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+static inline void bdsetany(BD_ADDR a)
+{
+    bdcpy(a, bd_addr_any);
+}
+# 784 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+static inline void bt_rcopy(UINT8 *dst, UINT8 const *src, UINT16 len)
+{
+    src += len;
+    while (len --) {
+        *dst++ = *--src;
+    }
+}
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h" 2
+
+
 inline void trc_dump_buffer(const char *prefix, uint8_t *data, uint16_t len)
 {
     uint16_t i;
@@ -1866,9 +1891,9 @@ inline void trc_dump_buffer(const char *prefix, uint8_t *data, uint16_t len)
     }
     printf("\r\n");
 }
-# 472 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h"
+# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h"
 extern UINT8 btif_trace_level;
-# 726 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h"
+# 651 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h"
 typedef UINT8 tBTTRC_PARAM_TYPE;
 typedef UINT8 tBTTRC_LAYER_ID;
 typedef UINT8 tBTTRC_TYPE;
@@ -1899,16 +1924,16 @@ extern UINT8 appl_trace_level;
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_defs.h" 1
 # 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_defs.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h" 1
-# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h"
+# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h"
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
-# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h" 2
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h" 2
 
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/dyn_mem.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/dyn_mem.h"
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/dyn_mem.h" 2
-# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h" 2
+# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_target.h" 2
 # 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_defs.h" 2
 
 
@@ -1937,31 +1962,6 @@ typedef struct {
 typedef struct {
     uint8_t uu[16];
 } bt_uuid_t;
-
-
-
-
-
-typedef enum {
-    BT_STATUS_SUCCESS = 0,
-    BT_STATUS_FAIL,
-    BT_STATUS_NOT_READY,
-    BT_STATUS_NOMEM,
-    BT_STATUS_BUSY,
-    BT_STATUS_DONE,
-    BT_STATUS_UNSUPPORTED,
-    BT_STATUS_PARM_INVALID,
-    BT_STATUS_UNHANDLED,
-    BT_STATUS_AUTH_FAILURE,
-    BT_STATUS_RMT_DEV_DOWN,
-    BT_STATUS_AUTH_REJECTED,
-    BT_STATUS_INVALID_STATIC_RAND_ADDR,
-    BT_STATUS_PENDING,
-    BT_STATUS_UNACCEPT_CONN_INTERVAL,
-    BT_STATUS_PARAM_OUT_OF_RANGE,
-    BT_STATUS_TIMEOUT,
-    BT_STATUS_MEMORY_FULL,
-} bt_status_t;
 
 
 
@@ -2024,8 +2024,8 @@ inline uint32_t htonl(uint32_t x)
 
 }
 # 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/device/include/device/bdaddr.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h" 1
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
 struct hash_map_t;
 typedef struct hash_map_t hash_map_t;
 
@@ -2040,20 +2040,20 @@ typedef size_t hash_index_t;
 
 typedef hash_index_t (*hash_index_fn)(const void *key);
 typedef 
-# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h" 3 4
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h" 3 4
        _Bool 
-# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h"
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
             (*hash_map_iter_cb)(hash_map_entry_t *hash_entry, void *context);
 
 typedef 
-# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h" 3 4
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h" 3 4
        _Bool 
-# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h"
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
             (*key_equality_fn)(const void *x, const void *y);
 
 typedef void (*key_free_fn)(void *data);
 typedef void (*data_free_fn)(void *data);
-# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h"
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
 hash_map_t *hash_map_new(
     size_t size,
     hash_index_fn hash_fn,
@@ -2064,11 +2064,11 @@ hash_map_t *hash_map_new(
 
 
 void hash_map_free(hash_map_t *hash_map);
-# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h"
+# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
 
-# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h" 3 4
+# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h" 3 4
 _Bool 
-# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h"
+# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
     hash_map_has_key(const hash_map_t *hash_map, const void *key);
 
 
@@ -2081,9 +2081,9 @@ void *hash_map_get(const hash_map_t *hash_map, const void *key);
 
 
 
-# 91 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h" 3 4
+# 91 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h" 3 4
 _Bool 
-# 91 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h"
+# 91 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
     hash_map_set(hash_map_t *hash_map, const void *key, void *data);
 
 
@@ -2091,9 +2091,9 @@ _Bool
 
 
 
-# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h" 3 4
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h" 3 4
 _Bool 
-# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
     hash_map_erase(hash_map_t *hash_map, const void *key);
 
 
@@ -2208,6 +2208,7 @@ static const interop_entry_t interop_database[] = {
 
 
 
+
 static const char *interop_feature_string(const interop_feature_t feature)
 {
     switch (feature) {
@@ -2220,32 +2221,34 @@ static const char *interop_feature_string(const interop_feature_t feature)
 
 
 
-# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/device/interop.c" 3 4
+# 42 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/device/interop.c" 3 4
 _Bool 
-# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/device/interop.c"
+# 42 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/device/interop.c"
     interop_match(const interop_feature_t feature, const bt_bdaddr_t *addr)
 {
-    ((addr) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/device/interop.c", 43, __func__, "addr"));
+    ((addr) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/device/interop.c", 44, __func__, "addr"));
 
     const size_t db_size = sizeof(interop_database) / sizeof(interop_entry_t);
 
     for (size_t i = 0; i != db_size; ++i) {
         if (feature == interop_database[i].feature &&
                 memcmp(addr, &interop_database[i].addr, interop_database[i].len) == 0) {
+
             char bdstr[20] = {0};
+
             {if (3 >= ESP_LOG_WARN) esp_log_write(ESP_LOG_WARN, "BT_LOG", "\033[0;" "33" "m" "W" " (%d) %s: " "%s() Device %s is a match for interop workaround %s" "\033[0m" "\n", esp_log_timestamp(), "BT_LOG", __func__, bdaddr_to_string(addr, bdstr, sizeof(bdstr)), interop_feature_string(feature)); }
                                                                                                    ;
             return 
-# 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/device/interop.c" 3 4
+# 56 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/device/interop.c" 3 4
                   1
-# 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/device/interop.c"
+# 56 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/device/interop.c"
                       ;
         }
     }
 
     return 
-# 57 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/device/interop.c" 3 4
+# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/device/interop.c" 3 4
           0
-# 57 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/device/interop.c"
+# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/device/interop.c"
                ;
 }

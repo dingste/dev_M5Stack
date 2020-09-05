@@ -1,12 +1,12 @@
 	.file	"ip4_addr.c"
 	.text
 .Ltext0:
-	.section	.iram1,"ax",@progbits
+	.section	.text.ip4_addr_isbroadcast_u32,"ax",@progbits
 	.align	4
 	.global	ip4_addr_isbroadcast_u32
 	.type	ip4_addr_isbroadcast_u32, @function
 ip4_addr_isbroadcast_u32:
-.LFB18:
+.LFB27:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/ipv4/ip4_addr.c"
 	.loc 1 63 0
 .LVL0:
@@ -51,7 +51,7 @@ ip4_addr_isbroadcast_u32:
 	.loc 1 89 0
 	mov.n	a2, a8
 	retw.n
-.LFE18:
+.LFE27:
 	.size	ip4_addr_isbroadcast_u32, .-ip4_addr_isbroadcast_u32
 	.section	.text.ip4_addr_netmask_valid,"ax",@progbits
 	.literal_position
@@ -60,7 +60,7 @@ ip4_addr_isbroadcast_u32:
 	.global	ip4_addr_netmask_valid
 	.type	ip4_addr_netmask_valid, @function
 ip4_addr_netmask_valid:
-.LFB19:
+.LFB28:
 	.loc 1 98 0
 .LVL5:
 	entry	sp, 32
@@ -100,7 +100,7 @@ ip4_addr_netmask_valid:
 	movi.n	a2, 0
 	.loc 1 117 0
 	retw.n
-.LFE19:
+.LFE28:
 	.size	ip4_addr_netmask_valid, .-ip4_addr_netmask_valid
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC7:
@@ -113,13 +113,13 @@ ip4_addr_netmask_valid:
 	.literal .LC5, 16777215
 	.literal .LC6, 65535
 	.literal .LC8, .LC7
-	.literal .LC9, __func__$6112
+	.literal .LC9, __func__$6176
 	.literal .LC11, .LC10
 	.align	4
 	.global	ip4addr_aton
 	.type	ip4addr_aton, @function
 ip4addr_aton:
-.LFB21:
+.LFB30:
 	.loc 1 160 0
 .LVL10:
 	entry	sp, 64
@@ -406,14 +406,14 @@ ip4addr_aton:
 .L19:
 	.loc 1 299 0
 	retw.n
-.LFE21:
+.LFE30:
 	.size	ip4addr_aton, .-ip4addr_aton
 	.section	.text.ipaddr_addr,"ax",@progbits
 	.align	4
 	.global	ipaddr_addr
 	.type	ipaddr_addr, @function
 ipaddr_addr:
-.LFB20:
+.LFB29:
 	.loc 1 138 0
 .LVL58:
 	entry	sp, 48
@@ -429,7 +429,7 @@ ipaddr_addr:
 	movi.n	a8, -1
 	moveqz	a2, a8, a10
 	retw.n
-.LFE20:
+.LFE29:
 	.size	ipaddr_addr, .-ipaddr_addr
 	.section	.text.ip4addr_ntoa_r,"ax",@progbits
 	.literal_position
@@ -438,7 +438,7 @@ ipaddr_addr:
 	.global	ip4addr_ntoa_r
 	.type	ip4addr_ntoa_r, @function
 ip4addr_ntoa_r:
-.LFB23:
+.LFB32:
 	.loc 1 327 0
 .LVL61:
 	entry	sp, 48
@@ -555,16 +555,16 @@ ip4addr_ntoa_r:
 	movi.n	a2, 0
 	.loc 1 362 0
 	retw.n
-.LFE23:
+.LFE32:
 	.size	ip4addr_ntoa_r, .-ip4addr_ntoa_r
 	.section	.text.ip4addr_ntoa,"ax",@progbits
 	.literal_position
-	.literal .LC13, str$6116
+	.literal .LC13, str$6180
 	.align	4
 	.global	ip4addr_ntoa
 	.type	ip4addr_ntoa, @function
 ip4addr_ntoa:
-.LFB22:
+.LFB31:
 	.loc 1 311 0
 .LVL84:
 	entry	sp, 32
@@ -579,17 +579,17 @@ ip4addr_ntoa:
 	mov.n	a2, a10
 .LVL86:
 	retw.n
-.LFE22:
+.LFE31:
 	.size	ip4addr_ntoa, .-ip4addr_ntoa
-	.section	.bss.str$6116,"aw",@nobits
-	.type	str$6116, @object
-	.size	str$6116, 16
-str$6116:
+	.section	.bss.str$6180,"aw",@nobits
+	.type	str$6180, @object
+	.size	str$6180, 16
+str$6180:
 	.zero	16
-	.section	.rodata.__func__$6112,"a",@progbits
-	.type	__func__$6112, @object
-	.size	__func__$6112, 13
-__func__$6112:
+	.section	.rodata.__func__$6176,"a",@progbits
+	.type	__func__$6176, @object
+	.size	__func__$6176, 13
+__func__$6176:
 	.string	"ip4addr_aton"
 	.global	ip_addr_broadcast
 	.section	.rodata.ip_addr_broadcast,"a",@progbits
@@ -629,10 +629,10 @@ ip_addr_any:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI0-.LFB18
+	.4byte	.LCFI0-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -641,10 +641,10 @@ ip_addr_any:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI1-.LFB19
+	.4byte	.LCFI1-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -653,10 +653,10 @@ ip_addr_any:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI2-.LFB21
+	.4byte	.LCFI2-.LFB30
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -665,10 +665,10 @@ ip_addr_any:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI3-.LFB20
+	.4byte	.LCFI3-.LFB29
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -677,10 +677,10 @@ ip_addr_any:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI4-.LFB23
+	.4byte	.LCFI4-.LFB32
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -689,10 +689,10 @@ ip_addr_any:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI5-.LFB22
+	.4byte	.LCFI5-.LFB31
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1475,8 +1475,8 @@ ip_addr_any:
 	.byte	0x1
 	.byte	0x3e
 	.4byte	0xca
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x685
@@ -1509,8 +1509,8 @@ ip_addr_any:
 	.byte	0x1
 	.byte	0x61
 	.4byte	0xca
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x6e5
@@ -1549,8 +1549,8 @@ ip_addr_any:
 	.byte	0x1
 	.byte	0x9f
 	.4byte	0x33
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x7d5
@@ -1622,7 +1622,7 @@ ip_addr_any:
 	.4byte	0x7f1
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6112
+	.4byte	__func__$6176
 	.uleb128 0x23
 	.4byte	.LVL54
 	.4byte	0x9b4
@@ -1644,7 +1644,7 @@ ip_addr_any:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6112
+	.4byte	__func__$6176
 	.uleb128 0x1e
 	.uleb128 0x1
 	.byte	0x5d
@@ -1676,8 +1676,8 @@ ip_addr_any:
 	.byte	0x1
 	.byte	0x89
 	.4byte	0xe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x842
@@ -1717,8 +1717,8 @@ ip_addr_any:
 	.byte	0x1
 	.2byte	0x146
 	.4byte	0xa7
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x901
@@ -1810,8 +1810,8 @@ ip_addr_any:
 	.byte	0x1
 	.2byte	0x136
 	.4byte	0xa7
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x972
@@ -1828,7 +1828,7 @@ ip_addr_any:
 	.4byte	0x972
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	str$6116
+	.4byte	str$6180
 	.uleb128 0x1d
 	.4byte	.LVL85
 	.4byte	0x842
@@ -1843,7 +1843,7 @@ ip_addr_any:
 	.byte	0x5b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	str$6116
+	.4byte	str$6180
 	.uleb128 0x1e
 	.uleb128 0x1
 	.byte	0x5c
@@ -2512,7 +2512,7 @@ ip_addr_any:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL3
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2526,7 +2526,7 @@ ip_addr_any:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL2
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2558,7 +2558,7 @@ ip_addr_any:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL7
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2576,7 +2576,7 @@ ip_addr_any:
 	.byte	0x1f
 	.byte	0x9f
 	.4byte	.LVL7
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -2828,7 +2828,7 @@ ip_addr_any:
 	.2byte	0x1
 	.byte	0x59
 	.4byte	.LVL56
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x1
 	.byte	0x59
 	.4byte	0
@@ -2925,7 +2925,7 @@ ip_addr_any:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL60
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2939,7 +2939,7 @@ ip_addr_any:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL63
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2981,7 +2981,7 @@ ip_addr_any:
 	.sleb128 -1
 	.byte	0x9f
 	.4byte	.LVL83
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x1
 	.byte	0x59
 	.4byte	0
@@ -2994,7 +2994,7 @@ ip_addr_any:
 	.sleb128 -48
 	.byte	0x9f
 	.4byte	.LVL65
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x1
 	.byte	0x5c
 	.4byte	0
@@ -3025,7 +3025,7 @@ ip_addr_any:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL66
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x6
 	.byte	0x7c
 	.sleb128 0
@@ -3053,7 +3053,7 @@ ip_addr_any:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL78
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -3084,7 +3084,7 @@ ip_addr_any:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL86
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3100,34 +3100,34 @@ ip_addr_any:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB22
-	.4byte	.LFE22
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB28
+	.4byte	.LFE28
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB32
+	.4byte	.LFE32
+	.4byte	.LFB31
+	.4byte	.LFE31
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

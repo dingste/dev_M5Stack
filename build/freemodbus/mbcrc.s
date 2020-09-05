@@ -10,7 +10,7 @@
 	.global	usMBCRC16
 	.type	usMBCRC16, @function
 usMBCRC16:
-.LFB21:
+.LFB30:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freemodbus/modbus/rtu/mbcrc.c"
 	.loc 1 86 0
 .LVL0:
@@ -65,7 +65,7 @@ usMBCRC16:
 	.loc 1 98 0
 	or	a2, a2, a8
 	retw.n
-.LFE21:
+.LFE30:
 	.size	usMBCRC16, .-usMBCRC16
 	.section	.rodata.aucCRCLo,"a",@progbits
 	.type	aucCRCLo, @object
@@ -606,10 +606,10 @@ aucCRCHi:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI0-.LFB21
+	.4byte	.LCFI0-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -686,20 +686,20 @@ aucCRCHi:
 	.uleb128 0x4
 	.4byte	.LASF12
 	.byte	0x2
-	.byte	0x44
+	.byte	0x47
 	.4byte	0x2c
 	.uleb128 0x4
 	.4byte	.LASF13
 	.byte	0x2
-	.byte	0x47
+	.byte	0x4a
 	.4byte	0x3a
 	.uleb128 0x5
 	.4byte	.LASF24
 	.byte	0x1
 	.byte	0x55
 	.4byte	0x8b
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xfb
@@ -963,7 +963,7 @@ aucCRCHi:
 	.sleb128 1
 	.byte	0x9f
 	.4byte	.LVL10
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -976,7 +976,7 @@ aucCRCHi:
 	.byte	0xff
 	.byte	0x9f
 	.4byte	.LVL2
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -993,7 +993,7 @@ aucCRCHi:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL7
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -1013,14 +1013,14 @@ aucCRCHi:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB21
-	.4byte	.LFE21
+	.4byte	.LFB30
+	.4byte	.LFE30
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

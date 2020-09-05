@@ -253,7 +253,7 @@ getrandom:
 	.4byte	.LASF24
 	.4byte	.LASF24
 	.byte	0x6
-	.byte	0xb1
+	.byte	0xb2
 	.uleb128 0x12
 	.uleb128 0x9
 	.byte	0x9e

@@ -13,7 +13,7 @@
 	.section	.text.ip6_reass_free_complete_datagram,"ax",@progbits
 	.literal_position
 	.literal .LC1, .LC0
-	.literal .LC2, __func__$6507
+	.literal .LC2, __func__$6571
 	.literal .LC4, .LC3
 	.literal .LC5, 65535
 	.literal .LC7, .LC6
@@ -23,7 +23,7 @@
 	.align	4
 	.type	ip6_reass_free_complete_datagram, @function
 ip6_reass_free_complete_datagram:
-.LFB19:
+.LFB28:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/ipv6/ip6_frag.c"
 	.loc 1 147 0
 .LVL0:
@@ -197,7 +197,7 @@ ip6_reass_free_complete_datagram:
 	l32i.n	a5, a2, 0
 	s32i.n	a5, a4, 0
 	j	.L8
-.LFE19:
+.LFE28:
 	.size	ip6_reass_free_complete_datagram, .-ip6_reass_free_complete_datagram
 	.section	.text.ip6_reass_remove_oldest_datagram,"ax",@progbits
 	.literal_position
@@ -206,7 +206,7 @@ ip6_reass_free_complete_datagram:
 	.align	4
 	.type	ip6_reass_remove_oldest_datagram, @function
 ip6_reass_remove_oldest_datagram:
-.LFB20:
+.LFB29:
 	.loc 1 224 0
 .LVL28:
 	entry	sp, 32
@@ -256,7 +256,7 @@ ip6_reass_remove_oldest_datagram:
 	bnez.n	a8, .L24
 .L17:
 	retw.n
-.LFE20:
+.LFE29:
 	.size	ip6_reass_remove_oldest_datagram, .-ip6_reass_remove_oldest_datagram
 	.section	.text.ip6_reass_tmr,"ax",@progbits
 	.literal_position
@@ -265,7 +265,7 @@ ip6_reass_remove_oldest_datagram:
 	.global	ip6_reass_tmr
 	.type	ip6_reass_tmr, @function
 ip6_reass_tmr:
-.LFB18:
+.LFB27:
 	.loc 1 112 0
 	entry	sp, 32
 .LCFI2:
@@ -298,7 +298,7 @@ ip6_reass_tmr:
 	bnez.n	a10, .L33
 	.loc 1 136 0
 	retw.n
-.LFE18:
+.LFE27:
 	.size	ip6_reass_tmr, .-ip6_reass_tmr
 	.section	.rodata.str1.1
 .LC18:
@@ -315,7 +315,7 @@ ip6_reass_tmr:
 	.literal .LC16, reassdatagrams
 	.literal .LC17, ip6_reass_pbufcount
 	.literal .LC19, .LC18
-	.literal .LC20, __func__$6550
+	.literal .LC20, __func__$6614
 	.literal .LC21, .LC3
 	.literal .LC23, .LC22
 	.literal .LC25, .LC24
@@ -324,7 +324,7 @@ ip6_reass_tmr:
 	.global	ip6_reass
 	.type	ip6_reass, @function
 ip6_reass:
-.LFB21:
+.LFB30:
 	.loc 1 260 0
 .LVL38:
 	entry	sp, 64
@@ -1068,17 +1068,17 @@ ip6_reass:
 .L92:
 	.loc 1 610 0
 	retw.n
-.LFE21:
+.LFE30:
 	.size	ip6_reass, .-ip6_reass
-	.section	.rodata.__func__$6550,"a",@progbits
-	.type	__func__$6550, @object
-	.size	__func__$6550, 10
-__func__$6550:
+	.section	.rodata.__func__$6614,"a",@progbits
+	.type	__func__$6614, @object
+	.size	__func__$6614, 10
+__func__$6614:
 	.string	"ip6_reass"
-	.section	.rodata.__func__$6507,"a",@progbits
-	.type	__func__$6507, @object
-	.size	__func__$6507, 33
-__func__$6507:
+	.section	.rodata.__func__$6571,"a",@progbits
+	.type	__func__$6571, @object
+	.size	__func__$6571, 33
+__func__$6571:
 	.string	"ip6_reass_free_complete_datagram"
 	.section	.bss.ip6_reass_pbufcount,"aw",@nobits
 	.align	2
@@ -1111,10 +1111,10 @@ reassdatagrams:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI0-.LFB19
+	.4byte	.LCFI0-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1123,10 +1123,10 @@ reassdatagrams:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI1-.LFB20
+	.4byte	.LCFI1-.LFB29
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1135,10 +1135,10 @@ reassdatagrams:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI2-.LFB18
+	.4byte	.LCFI2-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1147,10 +1147,10 @@ reassdatagrams:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI3-.LFB21
+	.4byte	.LCFI3-.LFB30
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -2251,8 +2251,8 @@ reassdatagrams:
 	.4byte	.LASF145
 	.byte	0x1
 	.byte	0x92
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x9e9
@@ -2297,7 +2297,7 @@ reassdatagrams:
 	.4byte	0x9ff
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6507
+	.4byte	__func__$6571
 	.uleb128 0x1e
 	.4byte	.LBB2
 	.4byte	.LBE2-.LBB2
@@ -2422,8 +2422,8 @@ reassdatagrams:
 	.4byte	.LASF146
 	.byte	0x1
 	.byte	0xdf
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xa59
@@ -2461,8 +2461,8 @@ reassdatagrams:
 	.4byte	.LASF173
 	.byte	0x1
 	.byte	0x6f
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xa9d
@@ -2499,8 +2499,8 @@ reassdatagrams:
 	.byte	0x1
 	.2byte	0x103
 	.4byte	0x1a7
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xd13
@@ -2586,7 +2586,7 @@ reassdatagrams:
 	.4byte	0xd29
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6550
+	.4byte	__func__$6614
 	.uleb128 0x1e
 	.4byte	.LBB3
 	.4byte	.LBE3-.LBB3
@@ -3543,7 +3543,7 @@ reassdatagrams:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL27
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -3554,7 +3554,7 @@ reassdatagrams:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL27
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -3574,7 +3574,7 @@ reassdatagrams:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL18
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -3663,7 +3663,7 @@ reassdatagrams:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL37
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -3721,7 +3721,7 @@ reassdatagrams:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL115
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -3814,7 +3814,7 @@ reassdatagrams:
 	.2byte	0x1
 	.byte	0x59
 	.4byte	.LVL119
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
@@ -3902,7 +3902,7 @@ reassdatagrams:
 	.byte	0x91
 	.sleb128 -60
 	.4byte	.LVL113
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -60
@@ -3915,7 +3915,7 @@ reassdatagrams:
 	.byte	0x91
 	.sleb128 -56
 	.4byte	.LVL113
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -56
@@ -3928,7 +3928,7 @@ reassdatagrams:
 	.byte	0x91
 	.sleb128 -64
 	.4byte	.LVL113
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -64
@@ -4017,26 +4017,26 @@ reassdatagrams:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB21
-	.4byte	.LFE21
+	.4byte	.LFB28
+	.4byte	.LFE28
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB30
+	.4byte	.LFE30
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

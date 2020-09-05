@@ -8,14 +8,14 @@
 	.string	"\033[0;31mE (%d) %s: %s UNKNOWN ACT %d\n\033[0m\n"
 	.section	.text.btc_gatt_com_call_handler,"ax",@progbits
 	.literal_position
-	.literal .LC0, __func__$9181
+	.literal .LC0, __func__$9268
 	.literal .LC2, .LC1
 	.literal .LC4, .LC3
 	.align	4
 	.global	btc_gatt_com_call_handler
 	.type	btc_gatt_com_call_handler, @function
 btc_gatt_com_call_handler:
-.LFB31:
+.LFB40:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/btc/profile/std/gatt/btc_gatt_common.c"
 	.loc 1 33 0
 .LVL0:
@@ -56,12 +56,12 @@ btc_gatt_com_call_handler:
 	call8	esp_log_write
 .LVL7:
 	retw.n
-.LFE31:
+.LFE40:
 	.size	btc_gatt_com_call_handler, .-btc_gatt_com_call_handler
-	.section	.rodata.__func__$9181,"a",@progbits
-	.type	__func__$9181, @object
-	.size	__func__$9181, 26
-__func__$9181:
+	.section	.rodata.__func__$9268,"a",@progbits
+	.type	__func__$9268, @object
+	.size	__func__$9268, 26
+__func__$9268:
 	.string	"btc_gatt_com_call_handler"
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -82,10 +82,10 @@ __func__$9181:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI0-.LFB31
+	.4byte	.LCFI0-.LFB40
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -95,7 +95,7 @@ __func__$9181:
 	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
 	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
 	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/btc/include/btc/btc_task.h"
+	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/btc/include/btc/btc_task.h"
 	.file 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/btc/profile/std/include/btc_gatt_common.h"
 	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/bta/include/bta/bta_gatt_common.h"
@@ -165,117 +165,117 @@ __func__$9181:
 	.byte	0x3
 	.byte	0x21
 	.4byte	0x45
-	.uleb128 0x3
-	.4byte	.LASF11
+	.uleb128 0x5
 	.byte	0x4
-	.byte	0x21
-	.4byte	0x73
 	.uleb128 0x2
-	.byte	0x1
-	.byte	0x2
+	.byte	0x4
+	.byte	0x5
+	.4byte	.LASF11
+	.uleb128 0x2
+	.byte	0x4
+	.byte	0x7
 	.4byte	.LASF12
 	.uleb128 0x2
 	.byte	0x4
 	.byte	0x7
 	.4byte	.LASF13
-	.uleb128 0x5
-	.4byte	0x89
-	.4byte	0xb2
-	.uleb128 0x6
-	.4byte	0x9b
-	.byte	0x5
-	.byte	0
 	.uleb128 0x2
 	.byte	0x1
 	.byte	0x8
 	.4byte	.LASF14
-	.uleb128 0x7
-	.byte	0x4
-	.uleb128 0x2
-	.byte	0x4
-	.byte	0x5
-	.4byte	.LASF15
-	.uleb128 0x2
-	.byte	0x4
-	.byte	0x7
-	.4byte	.LASF16
-	.uleb128 0x8
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x5e
 	.byte	0x6
 	.byte	0x1f
+	.4byte	0xd8
+	.uleb128 0x7
+	.4byte	.LASF15
+	.byte	0
+	.uleb128 0x7
+	.4byte	.LASF16
+	.byte	0x1
+	.uleb128 0x7
+	.4byte	.LASF17
+	.byte	0x2
+	.uleb128 0x7
+	.4byte	.LASF18
+	.byte	0x3
+	.uleb128 0x7
+	.4byte	.LASF19
+	.byte	0x4
+	.uleb128 0x7
+	.4byte	.LASF20
+	.byte	0x5
+	.byte	0
+	.uleb128 0x2
+	.byte	0x1
+	.byte	0x2
+	.4byte	.LASF21
+	.uleb128 0x3
+	.4byte	.LASF22
+	.byte	0x4
+	.byte	0x1a
+	.4byte	0x73
+	.uleb128 0x8
+	.4byte	0xdf
 	.4byte	0xfa
 	.uleb128 0x9
-	.4byte	.LASF17
-	.byte	0
-	.uleb128 0x9
-	.4byte	.LASF18
-	.byte	0x1
-	.uleb128 0x9
-	.4byte	.LASF19
-	.byte	0x2
-	.uleb128 0x9
-	.4byte	.LASF20
-	.byte	0x3
-	.uleb128 0x9
-	.4byte	.LASF21
-	.byte	0x4
-	.uleb128 0x9
-	.4byte	.LASF22
+	.4byte	0x92
 	.byte	0x5
 	.byte	0
 	.uleb128 0xa
 	.4byte	.LASF25
 	.byte	0x8
 	.byte	0x5
-	.byte	0x17
+	.byte	0x1a
 	.4byte	0x143
 	.uleb128 0xb
 	.string	"sig"
 	.byte	0x5
-	.byte	0x18
+	.byte	0x1b
 	.4byte	0x73
 	.byte	0
 	.uleb128 0xb
 	.string	"aid"
 	.byte	0x5
-	.byte	0x19
+	.byte	0x1c
 	.4byte	0x73
 	.byte	0x1
 	.uleb128 0xb
 	.string	"pid"
 	.byte	0x5
-	.byte	0x1a
+	.byte	0x1d
 	.4byte	0x73
 	.byte	0x2
 	.uleb128 0xb
 	.string	"act"
 	.byte	0x5
-	.byte	0x1b
+	.byte	0x1e
 	.4byte	0x73
 	.byte	0x3
 	.uleb128 0xb
 	.string	"arg"
 	.byte	0x5
-	.byte	0x1c
-	.4byte	0xb9
+	.byte	0x1f
+	.4byte	0x89
 	.byte	0x4
 	.byte	0
 	.uleb128 0x3
 	.4byte	.LASF23
 	.byte	0x5
-	.byte	0x1d
+	.byte	0x20
 	.4byte	0xfa
 	.uleb128 0xc
 	.byte	0x4
 	.4byte	0x143
-	.uleb128 0x8
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x5e
 	.byte	0x7
 	.byte	0x18
 	.4byte	0x167
-	.uleb128 0x9
+	.uleb128 0x7
 	.4byte	.LASF24
 	.byte	0
 	.byte	0
@@ -324,8 +324,8 @@ __func__$9181:
 	.4byte	.LASF38
 	.byte	0x1
 	.byte	0x20
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x26d
@@ -340,7 +340,7 @@ __func__$9181:
 	.4byte	0x27d
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$9181
+	.4byte	__func__$9268
 	.uleb128 0x14
 	.4byte	.LBB5
 	.4byte	.LBE5-.LBB5
@@ -399,7 +399,7 @@ __func__$9181:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$9181
+	.4byte	__func__$9268
 	.uleb128 0x1a
 	.uleb128 0x2
 	.byte	0x71
@@ -409,11 +409,11 @@ __func__$9181:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0x5
-	.4byte	0xb2
+	.uleb128 0x8
+	.4byte	0xa0
 	.4byte	0x27d
-	.uleb128 0x6
-	.4byte	0x9b
+	.uleb128 0x9
+	.4byte	0x92
 	.byte	0x19
 	.byte	0
 	.uleb128 0x1b
@@ -424,7 +424,7 @@ __func__$9181:
 	.uleb128 0x1c
 	.4byte	.LASF28
 	.byte	0x4
-	.2byte	0x2cc
+	.2byte	0x2b8
 	.4byte	0x29b
 	.byte	0x6
 	.byte	0xff
@@ -434,11 +434,11 @@ __func__$9181:
 	.byte	0xff
 	.byte	0xff
 	.uleb128 0x1b
-	.4byte	0xa2
+	.4byte	0xea
 	.uleb128 0x1c
 	.4byte	.LASF29
 	.byte	0x4
-	.2byte	0x2cd
+	.2byte	0x2b9
 	.4byte	0x2b3
 	.byte	0x6
 	.byte	0
@@ -448,7 +448,7 @@ __func__$9181:
 	.byte	0
 	.byte	0
 	.uleb128 0x1b
-	.4byte	0xa2
+	.4byte	0xea
 	.uleb128 0x1d
 	.4byte	.LASF30
 	.4byte	.LASF30
@@ -522,31 +522,13 @@ __func__$9181:
 	.byte	0
 	.byte	0
 	.uleb128 0x5
-	.uleb128 0x1
-	.byte	0x1
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x6
-	.uleb128 0x21
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2f
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x7
 	.uleb128 0xf
 	.byte	0
 	.uleb128 0xb
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0x6
 	.uleb128 0x4
 	.byte	0x1
 	.uleb128 0xb
@@ -561,12 +543,30 @@ __func__$9181:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x9
+	.uleb128 0x7
 	.uleb128 0x28
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
 	.uleb128 0x1c
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x8
+	.uleb128 0x1
+	.byte	0x1
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x9
+	.uleb128 0x21
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2f
 	.uleb128 0xb
 	.byte	0
 	.byte	0
@@ -854,7 +854,7 @@ __func__$9181:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL6
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -896,14 +896,14 @@ __func__$9181:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB31
-	.4byte	.LFE31
+	.4byte	.LFB40
+	.4byte	.LFE40
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -915,11 +915,11 @@ __func__$9181:
 	.string	"__uint8_t"
 .LASF29:
 	.string	"bd_addr_null"
-.LASF18:
+.LASF16:
 	.string	"ESP_LOG_ERROR"
-.LASF19:
+.LASF17:
 	.string	"ESP_LOG_WARN"
-.LASF11:
+.LASF22:
 	.string	"UINT8"
 .LASF37:
 	.string	"btc_set_local_mtu"
@@ -955,15 +955,15 @@ __func__$9181:
 	.string	"__uint16_t"
 .LASF27:
 	.string	"btc_ble_gatt_com_args_t"
-.LASF20:
+.LASF18:
 	.string	"ESP_LOG_INFO"
-.LASF16:
+.LASF13:
 	.string	"long unsigned int"
 .LASF7:
 	.string	"long long int"
 .LASF36:
 	.string	"set_mtu"
-.LASF21:
+.LASF19:
 	.string	"ESP_LOG_DEBUG"
 .LASF14:
 	.string	"char"
@@ -971,22 +971,22 @@ __func__$9181:
 	.string	"uint8_t"
 .LASF28:
 	.string	"bd_addr_any"
-.LASF13:
+.LASF12:
 	.string	"sizetype"
 .LASF2:
 	.string	"short int"
-.LASF17:
+.LASF15:
 	.string	"ESP_LOG_NONE"
 .LASF10:
 	.string	"uint16_t"
 .LASF32:
 	.string	"esp_log_write"
-.LASF15:
+.LASF11:
 	.string	"long int"
 .LASF0:
 	.string	"signed char"
-.LASF12:
+.LASF21:
 	.string	"_Bool"
-.LASF22:
+.LASF20:
 	.string	"ESP_LOG_VERBOSE"
 	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

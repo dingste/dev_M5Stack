@@ -8,26 +8,26 @@
 mbedtls_sha512_ret:
 .LFB0:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/sha512.c"
-	.loc 1 426 0
+	.loc 1 448 0
 .LVL0:
 	entry	sp, 256
 .LCFI0:
-	.loc 1 430 0
+	.loc 1 456 0
 	mov.n	a10, sp
 	call8	mbedtls_sha512_init
 .LVL1:
-	.loc 1 432 0
+	.loc 1 458 0
 	mov.n	a11, a5
 	mov.n	a10, sp
 	call8	mbedtls_sha512_starts_ret
 .LVL2:
-	.loc 1 426 0
+	.loc 1 448 0
 	mov.n	a6, a2
-	.loc 1 432 0
+	.loc 1 458 0
 	mov.n	a2, a10
 .LVL3:
 	bnez.n	a10, .L2
-	.loc 1 435 0
+	.loc 1 461 0
 	mov.n	a12, a3
 	mov.n	a11, a6
 	mov.n	a10, sp
@@ -36,7 +36,7 @@ mbedtls_sha512_ret:
 	mov.n	a2, a10
 .LVL5:
 	bnez.n	a10, .L2
-	.loc 1 438 0
+	.loc 1 464 0
 	mov.n	a11, a4
 	mov.n	a10, sp
 	call8	mbedtls_sha512_finish_ret
@@ -44,11 +44,11 @@ mbedtls_sha512_ret:
 	mov.n	a2, a10
 .LVL7:
 .L2:
-	.loc 1 442 0
+	.loc 1 468 0
 	mov.n	a10, sp
 	call8	mbedtls_sha512_free
 .LVL8:
-	.loc 1 445 0
+	.loc 1 471 0
 	retw.n
 .LFE0:
 	.size	mbedtls_sha512_ret, .-mbedtls_sha512_ret
@@ -58,11 +58,11 @@ mbedtls_sha512_ret:
 	.type	mbedtls_sha512, @function
 mbedtls_sha512:
 .LFB1:
-	.loc 1 452 0
+	.loc 1 478 0
 .LVL9:
 	entry	sp, 32
 .LCFI1:
-	.loc 1 453 0
+	.loc 1 479 0
 	mov.n	a13, a5
 	mov.n	a12, a4
 	mov.n	a11, a3
@@ -96,62 +96,62 @@ mbedtls_sha512:
 	.type	mbedtls_sha512_self_test, @function
 mbedtls_sha512_self_test:
 .LFB2:
-	.loc 1 532 0
+	.loc 1 558 0
 .LVL11:
 	entry	sp, 320
 .LCFI2:
 .LVL12:
-	.loc 1 538 0
+	.loc 1 564 0
 	movi.n	a11, 1
 	movi	a10, 0x400
 	call8	mbedtls_calloc
 .LVL13:
-	.loc 1 532 0
+	.loc 1 558 0
 	mov.n	a5, a2
-	.loc 1 538 0
+	.loc 1 564 0
 	mov.n	a6, a10
 .LVL14:
-	.loc 1 539 0
+	.loc 1 565 0
 	bnez.n	a10, .L5
-	.loc 1 544 0
+	.loc 1 570 0
 	movi.n	a2, 1
 .LVL15:
-	.loc 1 541 0
+	.loc 1 567 0
 	beqz.n	a5, .L6
-	.loc 1 542 0
+	.loc 1 568 0
 	l32r	a10, .LC1
 	call8	puts
 .LVL16:
 	retw.n
 .LVL17:
 .L5:
-	.loc 1 547 0
+	.loc 1 573 0
 	mov.n	a10, sp
 	call8	mbedtls_sha512_init
 .LVL18:
-	.loc 1 549 0
+	.loc 1 575 0
 	movi.n	a4, 0
 .LVL19:
 .L15:
-	.loc 1 551 0
+	.loc 1 577 0
 	l32r	a2, .LC2
 	srai	a11, a4, 31
 	mulsh	a3, a4, a2
-	.loc 1 552 0
+	.loc 1 578 0
 	movi.n	a7, 1
-	.loc 1 551 0
+	.loc 1 577 0
 	sub	a3, a3, a11
 	addx2	a3, a3, a3
 	sub	a3, a4, a3
 .LVL20:
-	.loc 1 552 0
+	.loc 1 578 0
 	blti	a4, 3, .L7
 	movi.n	a7, 0
 .L7:
 .LVL21:
-	.loc 1 554 0
+	.loc 1 580 0
 	beqz.n	a5, .L8
-	.loc 1 555 0
+	.loc 1 581 0
 	movi.n	a11, 4
 	sub	a11, a11, a7
 	l32r	a10, .LC4
@@ -160,7 +160,7 @@ mbedtls_sha512_self_test:
 	call8	printf
 .LVL22:
 .L8:
-	.loc 1 557 0
+	.loc 1 583 0
 	mov.n	a11, a7
 	mov.n	a10, sp
 	call8	mbedtls_sha512_starts_ret
@@ -168,10 +168,10 @@ mbedtls_sha512_self_test:
 	mov.n	a2, a10
 .LVL24:
 	bnez.n	a10, .L9
-	.loc 1 560 0
+	.loc 1 586 0
 	bnei	a3, 2, .L10
 .LVL25:
-	.loc 1 562 0
+	.loc 1 588 0
 	movi	a12, 0x3e8
 	movi	a11, 0x61
 	mov.n	a10, a6
@@ -180,7 +180,7 @@ mbedtls_sha512_self_test:
 	movi	a3, 0x3e8
 .LVL27:
 .L11:
-	.loc 1 566 0
+	.loc 1 592 0
 	movi	a12, 0x3e8
 	mov.n	a11, a6
 	mov.n	a10, sp
@@ -188,16 +188,16 @@ mbedtls_sha512_self_test:
 .LVL28:
 	mov.n	a2, a10
 .LVL29:
-	.loc 1 567 0
+	.loc 1 593 0
 	bnez.n	a10, .L9
 .LVL30:
 	addi.n	a3, a3, -1
 .LVL31:
-	.loc 1 564 0 discriminator 2
+	.loc 1 590 0 discriminator 2
 	bnez.n	a3, .L11
 .LVL32:
 .L13:
-	.loc 1 579 0
+	.loc 1 605 0
 	movi	a11, 0xd8
 	add.n	a11, a11, sp
 	mov.n	a10, sp
@@ -209,7 +209,7 @@ mbedtls_sha512_self_test:
 	j	.L9
 .LVL35:
 .L10:
-	.loc 1 573 0
+	.loc 1 599 0
 	l32r	a2, .LC5
 .LVL36:
 	subx8	a11, a3, a3
@@ -226,12 +226,12 @@ mbedtls_sha512_self_test:
 .LVL39:
 	mov.n	a2, a10
 .LVL40:
-	.loc 1 575 0
+	.loc 1 601 0
 	beqz.n	a10, .L13
 	j	.L9
 .LVL41:
 .L34:
-	.loc 1 582 0
+	.loc 1 608 0
 	movi.n	a12, 4
 	l32r	a3, .LC7
 	sub	a12, a12, a7
@@ -243,47 +243,47 @@ mbedtls_sha512_self_test:
 	call8	memcmp
 .LVL42:
 	bnez.n	a10, .L18
-	.loc 1 588 0
+	.loc 1 614 0
 	beqz.n	a5, .L14
-	.loc 1 589 0
+	.loc 1 615 0
 	l32r	a10, .LC9
 	call8	puts
 .LVL43:
 .L14:
-	.loc 1 549 0 discriminator 2
+	.loc 1 575 0 discriminator 2
 	addi.n	a4, a4, 1
 .LVL44:
 	bnei	a4, 6, .L15
-	.loc 1 592 0
+	.loc 1 618 0
 	beqz.n	a5, .L16
-	.loc 1 593 0
+	.loc 1 619 0
 	movi.n	a10, 0xa
 	call8	putchar
 .LVL45:
 	j	.L16
 .LVL46:
 .L18:
-	.loc 1 584 0
+	.loc 1 610 0
 	movi.n	a2, 1
 .LVL47:
 .L9:
-	.loc 1 598 0
+	.loc 1 624 0
 	beqz.n	a5, .L16
-	.loc 1 599 0
+	.loc 1 625 0
 	l32r	a10, .LC11
 	call8	puts
 .LVL48:
 .L16:
-	.loc 1 602 0
+	.loc 1 628 0
 	mov.n	a10, sp
 	call8	mbedtls_sha512_free
 .LVL49:
-	.loc 1 603 0
+	.loc 1 629 0
 	mov.n	a10, a6
 	call8	mbedtls_free
 .LVL50:
 .L6:
-	.loc 1 606 0
+	.loc 1 632 0
 	retw.n
 .LFE2:
 	.size	mbedtls_sha512_self_test, .-mbedtls_sha512_self_test
@@ -875,7 +875,7 @@ sha512_test_buf:
 	.uleb128 0xc
 	.4byte	.LASF27
 	.byte	0x1
-	.2byte	0x1a6
+	.2byte	0x1bc
 	.4byte	0x33
 	.4byte	.LFB0
 	.4byte	.LFE0-.LFB0
@@ -885,41 +885,41 @@ sha512_test_buf:
 	.uleb128 0xd
 	.4byte	.LASF24
 	.byte	0x1
-	.2byte	0x1a6
+	.2byte	0x1bc
 	.4byte	0x246
 	.4byte	.LLST0
 	.uleb128 0xe
 	.4byte	.LASF25
 	.byte	0x1
-	.2byte	0x1a7
+	.2byte	0x1bd
 	.4byte	0x3a
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0xe
 	.4byte	.LASF26
 	.byte	0x1
-	.2byte	0x1a8
+	.2byte	0x1be
 	.4byte	0x88
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0xe
 	.4byte	.LASF21
 	.byte	0x1
-	.2byte	0x1a9
+	.2byte	0x1bf
 	.4byte	0x33
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0xf
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x1ab
+	.2byte	0x1c1
 	.4byte	0x33
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0xf
 	.string	"ctx"
 	.byte	0x1
-	.2byte	0x1ac
+	.2byte	0x1c2
 	.4byte	0x13f
 	.uleb128 0x3
 	.byte	0x91
@@ -927,7 +927,7 @@ sha512_test_buf:
 	.uleb128 0x10
 	.4byte	.LASF32
 	.byte	0x1
-	.2byte	0x1b9
+	.2byte	0x1d3
 	.4byte	.L2
 	.uleb128 0x11
 	.4byte	.LVL1
@@ -1016,7 +1016,7 @@ sha512_test_buf:
 	.uleb128 0x15
 	.4byte	.LASF54
 	.byte	0x1
-	.2byte	0x1c0
+	.2byte	0x1da
 	.4byte	.LFB1
 	.4byte	.LFE1-.LFB1
 	.uleb128 0x1
@@ -1025,28 +1025,28 @@ sha512_test_buf:
 	.uleb128 0xe
 	.4byte	.LASF24
 	.byte	0x1
-	.2byte	0x1c0
+	.2byte	0x1da
 	.4byte	0x246
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0xe
 	.4byte	.LASF25
 	.byte	0x1
-	.2byte	0x1c1
+	.2byte	0x1db
 	.4byte	0x3a
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0xe
 	.4byte	.LASF26
 	.byte	0x1
-	.2byte	0x1c2
+	.2byte	0x1dc
 	.4byte	0x88
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0xe
 	.4byte	.LASF21
 	.byte	0x1
-	.2byte	0x1c3
+	.2byte	0x1dd
 	.4byte	0x33
 	.uleb128 0x1
 	.byte	0x55
@@ -1082,7 +1082,7 @@ sha512_test_buf:
 	.uleb128 0xc
 	.4byte	.LASF28
 	.byte	0x1
-	.2byte	0x213
+	.2byte	0x22d
 	.4byte	0x33
 	.4byte	.LFB2
 	.4byte	.LFE2-.LFB2
@@ -1092,50 +1092,50 @@ sha512_test_buf:
 	.uleb128 0xd
 	.4byte	.LASF29
 	.byte	0x1
-	.2byte	0x213
+	.2byte	0x22d
 	.4byte	0x33
 	.4byte	.LLST1
 	.uleb128 0x16
 	.string	"i"
 	.byte	0x1
-	.2byte	0x215
+	.2byte	0x22f
 	.4byte	0x33
 	.4byte	.LLST2
 	.uleb128 0x16
 	.string	"j"
 	.byte	0x1
-	.2byte	0x215
+	.2byte	0x22f
 	.4byte	0x33
 	.4byte	.LLST3
 	.uleb128 0x16
 	.string	"k"
 	.byte	0x1
-	.2byte	0x215
+	.2byte	0x22f
 	.4byte	0x33
 	.4byte	.LLST4
 	.uleb128 0x17
 	.4byte	.LASF30
 	.byte	0x1
-	.2byte	0x215
+	.2byte	0x22f
 	.4byte	0x33
 	.4byte	.LLST5
 	.uleb128 0x16
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x215
+	.2byte	0x22f
 	.4byte	0x33
 	.4byte	.LLST6
 	.uleb128 0xf
 	.string	"buf"
 	.byte	0x1
-	.2byte	0x216
+	.2byte	0x230
 	.4byte	0x88
 	.uleb128 0x1
 	.byte	0x56
 	.uleb128 0x18
 	.4byte	.LASF31
 	.byte	0x1
-	.2byte	0x217
+	.2byte	0x231
 	.4byte	0x51c
 	.uleb128 0x3
 	.byte	0x91
@@ -1143,7 +1143,7 @@ sha512_test_buf:
 	.uleb128 0xf
 	.string	"ctx"
 	.byte	0x1
-	.2byte	0x218
+	.2byte	0x232
 	.4byte	0x13f
 	.uleb128 0x3
 	.byte	0x91
@@ -1151,12 +1151,12 @@ sha512_test_buf:
 	.uleb128 0x10
 	.4byte	.LASF33
 	.byte	0x1
-	.2byte	0x255
+	.2byte	0x26f
 	.4byte	.L9
 	.uleb128 0x10
 	.4byte	.LASF32
 	.byte	0x1
-	.2byte	0x259
+	.2byte	0x273
 	.4byte	.L16
 	.uleb128 0x11
 	.4byte	.LVL13
@@ -1436,7 +1436,7 @@ sha512_test_buf:
 	.uleb128 0x18
 	.4byte	.LASF34
 	.byte	0x1
-	.2byte	0x1ce
+	.2byte	0x1e8
 	.4byte	0x554
 	.uleb128 0x5
 	.byte	0x3
@@ -1453,7 +1453,7 @@ sha512_test_buf:
 	.uleb128 0x18
 	.4byte	.LASF35
 	.byte	0x1
-	.2byte	0x1d6
+	.2byte	0x1f0
 	.4byte	0x57b
 	.uleb128 0x5
 	.byte	0x3
@@ -1473,7 +1473,7 @@ sha512_test_buf:
 	.uleb128 0x18
 	.4byte	.LASF36
 	.byte	0x1
-	.2byte	0x1db
+	.2byte	0x1f5
 	.4byte	0x5a8
 	.uleb128 0x5
 	.byte	0x3
@@ -1484,32 +1484,32 @@ sha512_test_buf:
 	.4byte	.LASF37
 	.4byte	.LASF37
 	.byte	0x6
-	.byte	0x4a
+	.byte	0x4d
 	.uleb128 0x19
 	.4byte	.LASF38
 	.4byte	.LASF38
 	.byte	0x6
-	.byte	0x66
+	.byte	0x6d
 	.uleb128 0x19
 	.4byte	.LASF39
 	.4byte	.LASF39
 	.byte	0x6
-	.byte	0x72
+	.byte	0x7c
 	.uleb128 0x19
 	.4byte	.LASF40
 	.4byte	.LASF40
 	.byte	0x6
-	.byte	0x80
+	.byte	0x8d
 	.uleb128 0x19
 	.4byte	.LASF41
 	.4byte	.LASF41
 	.byte	0x6
-	.byte	0x51
+	.byte	0x57
 	.uleb128 0x19
 	.4byte	.LASF42
 	.4byte	.LASF42
 	.byte	0x7
-	.byte	0x7c
+	.byte	0x7f
 	.uleb128 0x1a
 	.4byte	.LASF46
 	.4byte	.LASF48
@@ -1541,7 +1541,7 @@ sha512_test_buf:
 	.4byte	.LASF50
 	.4byte	.LASF50
 	.byte	0x7
-	.byte	0x7d
+	.byte	0x80
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:

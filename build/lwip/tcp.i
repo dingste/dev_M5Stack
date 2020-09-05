@@ -2593,7 +2593,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 2
 
@@ -2633,7 +2633,7 @@ void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int l
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
 typedef volatile struct {
     uint32_t bt_select;
     uint32_t out;
@@ -2852,6 +2852,9 @@ static inline void __attribute__ ((deprecated)) PIN_PULLDWN_EN(uint32_t PIN_NAME
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_pins.h" 1
@@ -2973,7 +2976,7 @@ void esp_intr_noniram_disable();
 void esp_intr_noniram_enable();
 # 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
 extern const uint32_t GPIO_PIN_MUX_REG[40];
 # 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
@@ -3448,25 +3451,25 @@ typedef enum {
 typedef esp_sleep_source_t esp_sleep_wakeup_cause_t;
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_disable_wakeup_source(esp_sleep_source_t source);
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ulp_wakeup();
-# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_timer_wakeup(uint64_t time_in_us);
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_touchpad_wakeup();
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 touch_pad_t esp_sleep_get_touchpad_wakeup_status();
-# 161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext0_wakeup(gpio_num_t gpio_num, int level);
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext1_wakeup(uint64_t mask, esp_sleep_ext1_wakeup_mode_t mode);
-# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_gpio_wakeup();
-# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_uart_wakeup(int uart_num);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 uint64_t esp_sleep_get_ext1_wakeup_status();
-# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
                                    esp_sleep_pd_option_t option);
 
@@ -3476,11 +3479,11 @@ esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
 
 
 void esp_deep_sleep_start() __attribute__((noreturn));
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_light_sleep_start();
-# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_deep_sleep(uint64_t time_in_us) __attribute__((noreturn));
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated));
 
 
@@ -3490,7 +3493,7 @@ void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated)
 
 
 esp_sleep_wakeup_cause_t esp_sleep_get_wakeup_cause();
-# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_wake_deep_sleep(void);
 
 
@@ -3498,7 +3501,7 @@ void esp_wake_deep_sleep(void);
 
 
 typedef void (*esp_deep_sleep_wake_stub_fn_t)(void);
-# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_set_deep_sleep_wake_stub(esp_deep_sleep_wake_stub_fn_t new_stub);
 
 
@@ -3522,6 +3525,12 @@ void esp_default_wake_deep_sleep(void);
 
 void esp_deep_sleep_disable_rom_logging(void);
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+       
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+const char* esp_get_idf_version(void);
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
 
 
 
@@ -3533,7 +3542,7 @@ typedef enum {
     ESP_MAC_BT,
     ESP_MAC_ETH,
 } esp_mac_type_t;
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef enum {
     ESP_RST_UNKNOWN,
     ESP_RST_POWERON,
@@ -3576,9 +3585,9 @@ typedef void (*shutdown_handler_t)(void);
 
 
 esp_err_t esp_register_shutdown_handler(shutdown_handler_t handle);
-# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_restart(void) __attribute__ ((noreturn));
-# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
@@ -3587,11 +3596,11 @@ void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
 esp_reset_reason_t esp_reset_reason(void);
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_time(void) __attribute__ ((deprecated));
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_get_free_heap_size(void);
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
@@ -3601,36 +3610,28 @@ uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
 uint32_t esp_get_minimum_free_heap_size( void );
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_random(void);
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_fill_random(void *buf, size_t len);
-# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_set(uint8_t *mac);
-# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_get(uint8_t *mac);
-# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_custom(uint8_t *mac);
-# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_default(uint8_t *mac);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t system_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_read_mac(uint8_t* mac, esp_mac_type_t type);
-# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_derive_local_mac(uint8_t* local_mac, const uint8_t* universal_mac);
-# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 const char* system_get_sdk_version(void) __attribute__ ((deprecated));
-
-
-
-
-
-
-
-const char* esp_get_idf_version(void);
 
 
 
@@ -3639,7 +3640,7 @@ const char* esp_get_idf_version(void);
 typedef enum {
     CHIP_ESP32 = 1,
 } esp_chip_model_t;
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef struct {
     esp_chip_model_t model;
     uint32_t features;
@@ -3655,7 +3656,61 @@ void esp_chip_info(esp_chip_info_t* out_info);
 # 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/sntp.h" 1
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/sntp.h"
+typedef enum {
+    SNTP_SYNC_MODE_IMMED,
+    SNTP_SYNC_MODE_SMOOTH,
+} sntp_sync_mode_t;
 
+
+typedef enum {
+    SNTP_SYNC_STATUS_RESET,
+    SNTP_SYNC_STATUS_COMPLETED,
+    SNTP_SYNC_STATUS_IN_PROGRESS,
+} sntp_sync_status_t;
+
+
+
+
+
+
+typedef void (*sntp_sync_time_cb_t) (struct timeval *tv);
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/sntp.h"
+void sntp_sync_time(struct timeval *tv);
+
+
+
+
+
+
+
+void sntp_set_sync_mode(sntp_sync_mode_t sync_mode);
+
+
+
+
+
+
+
+sntp_sync_mode_t sntp_get_sync_mode(void);
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/sntp.h"
+sntp_sync_status_t sntp_get_sync_status(void);
+
+
+
+
+
+
+void sntp_set_sync_status(sntp_sync_status_t sync_status);
+
+
+
+
+
+
+void sntp_set_time_sync_notification_cb(sntp_sync_time_cb_t callback);
+# 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h" 1
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h"
 
@@ -3722,6 +3777,77 @@ typedef void (*TaskFunction_t)( void * );
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/deprecated_definitions.h" 1
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 2
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void *get_sp()
+{
+    void *sp;
+    asm volatile ("mov %0, sp;" : "=r" (sp));
+    return sp;
+}
+
+
+
+
+
+static inline void cpu_write_dtlb(uint32_t vpn, unsigned attr)
+{
+    asm volatile ("wdtlb  %1, %0; dsync\n" :: "r" (vpn), "r" (attr));
+}
+
+
+static inline void cpu_write_itlb(unsigned vpn, unsigned attr)
+{
+    asm volatile ("witlb  %1, %0; isync\n" :: "r" (vpn), "r" (attr));
+}
+
+static inline void cpu_init_memctl()
+{
+
+    uint32_t memctl = 0x00000000;
+    asm volatile ("wsr %0, " "MEMCTL" : : "r" (memctl));;
+
+}
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void cpu_configure_region_protection()
+{
+    const uint32_t pages_to_protect[] = {0x00000000, 0x80000000, 0xa0000000, 0xc0000000, 0xe0000000};
+    for (int i = 0; i < sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
+        cpu_write_dtlb(pages_to_protect[i], 0xf);
+        cpu_write_itlb(pages_to_protect[i], 0xf);
+    }
+    cpu_write_dtlb(0x20000000, 0);
+    cpu_write_itlb(0x20000000, 0);
+}
+
+
+
+
+
+void esp_cpu_stall(int cpu_id);
+
+
+
+
+
+void esp_cpu_unstall(int cpu_id);
+
+
+
+
+
+void esp_cpu_reset(int cpu_id);
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 3 4
+_Bool 
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+    esp_cpu_in_ocd_debug_mode();
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 
 
 
@@ -4149,7 +4275,7 @@ inline static
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_dma_capable(const void *p)
+                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
 {
     return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
 }
@@ -4158,24 +4284,37 @@ inline static
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_executable(const void *p)
+                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
+{
+    return ((intptr_t)p) % 4 == 0;
+}
+
+inline static 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
 {
     intptr_t ip = (intptr_t) p;
     return (ip >= 0x400D0000 && ip < 0x40400000)
         || (ip >= 0x40080000 && ip < 0x400A0000)
+        || (ip >= 0x40000000 && ip < 0x40070000)
+
+        || (ip >= 0x40078000 && ip < 0x40080000)
+
         || (ip >= 0x400C0000 && ip < 0x400C2000);
 }
 
 inline static 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_byte_accessible(const void *p)
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
 {
     
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x40000000);
 
@@ -4185,14 +4324,14 @@ inline static
 }
 
 inline static 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_internal(const void *p) {
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
     
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
     r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
@@ -4201,18 +4340,18 @@ inline static
 
 
 inline static 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_external_ram(const void *p) {
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
     return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
 }
 
 inline static 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_iram(const void *p) {
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
 
 
 
@@ -4221,19 +4360,35 @@ inline static
 }
 
 inline static 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_drom(const void *p) {
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
     return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
 }
 
 inline static 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_dram(const void *p) {
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
     return ((intptr_t)p >= 0x3FAE0000 && (intptr_t)p < 0x40000000);
+}
+
+inline static 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
+    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x3FFFFFFC);
+}
+
+inline static 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
+    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400BFFFC);
 }
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
@@ -4282,24 +4437,24 @@ typedef struct {
 void vPortAssertIfInISR();
 # 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortCPUInitializeMutex(portMUX_TYPE *mux);
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vTaskExitCritical( portMUX_TYPE *mux );
 void vTaskEnterCritical( portMUX_TYPE *mux );
 void vPortCPUAcquireMutex(portMUX_TYPE *mux);
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
 _Bool 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
     vPortCPUAcquireMutexTimeout(portMUX_TYPE *mux, int timeout_cycles);
 void vPortCPUReleaseMutex(portMUX_TYPE *mux);
-# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline unsigned portENTER_CRITICAL_NESTED() {
  unsigned state = ({ unsigned __tmp; __asm__ __volatile__( "rsil	%0, " "3" "\n" : "=a" (__tmp) : : "memory" ); __tmp;});
  ;
  return state;
 }
-# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, uint32_t *set) {
     __asm__ __volatile__ (
         "WSR 	    %2,SCOMPARE1 \n"
@@ -4308,20 +4463,20 @@ static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, u
         :"r"(addr), "r"(compare), "0"(*set)
         );
 }
-# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortYield( void );
 void _frxt_setup_switch( void );
 
 
 
 static inline uint32_t xPortGetCoreID();
-# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef struct {
 
  volatile StackType_t* coproc_area;
-# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 } xMPU_SETTINGS;
-# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 extern void esp_vApplicationIdleHook( void );
 extern void esp_vApplicationTickHook( void );
 
@@ -4332,13 +4487,13 @@ extern void esp_vApplicationTickHook( void );
 
 void _xt_coproc_release(volatile void * coproc_sa_base);
 void vApplicationSleep( TickType_t xExpectedIdleTime );
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/mpu_wrappers.h" 1
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters, BaseType_t xRunPrivileged ) ;
-# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 BaseType_t xPortStartScheduler( void ) ;
 
 
@@ -4374,14 +4529,14 @@ BaseType_t xPortInIsrContext();
 
 
 BaseType_t xPortInterruptedFromISRContext();
-# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  struct xMEMORY_REGION;
  void vPortStoreTaskMPUSettings( xMPU_SETTINGS *xMPUSettings, const struct xMEMORY_REGION * const xRegions, StackType_t *pxBottomOfStack, uint32_t usStackDepth ) ;
  void vPortReleaseTaskMPUSettings( xMPU_SETTINGS *xMPUSettings );
 
 
 
-static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
+static inline uint32_t __attribute__((section(".iram1" "." "11"))) xPortGetCoreID() {
     int id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -4392,6 +4547,21 @@ static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
 
 
 uint32_t xPortGetTickRateHz(void);
+
+
+static inline 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 3 4
+             _Bool 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+                  __attribute__((section(".iram1" "." "12"))) xPortCanYield(void)
+{
+    uint32_t ps_reg = 0;
+
+
+    asm volatile ("rsr %0, " "PS" : "=r" (ps_reg));;
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+    return ((ps_reg & 0x0000000F) == 0);
+}
 
 
 
@@ -4701,7 +4871,7 @@ typedef enum
           TaskHandle_t * const pvCreatedTask,
           const BaseType_t xCoreID);
 # 432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
- static inline __attribute__((section(".iram1"))) BaseType_t xTaskCreate(
+ static inline __attribute__((section(".iram1" "." "13"))) BaseType_t xTaskCreate(
    TaskFunction_t pvTaskCode,
    const char * const pcName,
    const uint32_t usStackDepth,
@@ -5008,6 +5178,10 @@ sys_sem_t* sys_thread_sem_get(void);
 
 
 
+
+
+
+
 typedef uint8_t u8_t;
 typedef int8_t s8_t;
 typedef uint16_t u16_t;
@@ -5087,7 +5261,7 @@ char* lwip_strnstr(const char* buffer, const char* token, size_t n);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/mem.h" 1
 # 50 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/mem.h"
 typedef size_t mem_size_t;
-# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/mem.h"
+# 72 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/mem.h"
 void mem_init(void);
 void *mem_trim(void *mem, mem_size_t size);
 void *mem_malloc(mem_size_t size);
@@ -6690,7 +6864,7 @@ void
 tcp_init(void)
 {
 
-
+  tcp_port = ((u16_t)(((esp_random()) & ~0xc000) + 0xc000));
 
 }
 
@@ -7466,22 +7640,16 @@ tcp_new_port(void)
   struct tcp_pcb *pcb;
 
 again:
-
-
-  tcp_port = abs(esp_random()) % (0xffff - 0xc000);
-  tcp_port += 0xc000;
-
-
-
-
-
+  if (tcp_port++ == 0xffff) {
+    tcp_port = 0xc000;
+  }
 
 
   for (i = 0; i < 4; i++) {
     for (pcb = *tcp_pcb_lists[i]; pcb != 
-# 860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 854 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                                         ((void *)0)
-# 860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 854 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                                             ; pcb = pcb->next) {
       if (pcb->local_port == tcp_port) {
         if (++n > (0xffff - 0xc000)) {
@@ -7493,7 +7661,7 @@ again:
   }
   return tcp_port;
 }
-# 886 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 880 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
 err_t
 tcp_connect(struct tcp_pcb *pcb, const ip_addr_t *ipaddr, u16_t port,
       tcp_connected_fn connected)
@@ -7503,13 +7671,13 @@ tcp_connect(struct tcp_pcb *pcb, const ip_addr_t *ipaddr, u16_t port,
   u16_t old_local_port;
 
   if ((pcb == 
-# 894 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
              ((void *)0)
-# 894 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                  ) || (ipaddr == 
-# 894 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                                  ((void *)0)
-# 894 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                                      )) {
     return ERR_VAL;
   }
@@ -7518,86 +7686,86 @@ tcp_connect(struct tcp_pcb *pcb, const ip_addr_t *ipaddr, u16_t port,
 
   do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("tcp_connect to port %""d""\n", port);} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0);
   do{ do { if((&pcb->remote_ip) != 
-# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
  ((void *)0)
-# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
  ) { do { (*(&pcb->remote_ip)).type = (((ipaddr)->type)); }while(0); }}while(0); if((((ipaddr) != 
-# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
  ((void *)0)
-# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
  ) && (((&*(ipaddr))->type) == IPADDR_TYPE_V6))){ do{((&((&pcb->remote_ip)->u_addr.ip6)))->addr[0] = ((&((ipaddr)->u_addr.ip6))) == 
-# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
  ((void *)0) 
-# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
  ? 0 : ((&((ipaddr)->u_addr.ip6)))->addr[0]; ((&((&pcb->remote_ip)->u_addr.ip6)))->addr[1] = ((&((ipaddr)->u_addr.ip6))) == 
-# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
  ((void *)0) 
-# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
  ? 0 : ((&((ipaddr)->u_addr.ip6)))->addr[1]; ((&((&pcb->remote_ip)->u_addr.ip6)))->addr[2] = ((&((ipaddr)->u_addr.ip6))) == 
-# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
  ((void *)0) 
-# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
  ? 0 : ((&((ipaddr)->u_addr.ip6)))->addr[2]; ((&((&pcb->remote_ip)->u_addr.ip6)))->addr[3] = ((&((ipaddr)->u_addr.ip6))) == 
-# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
  ((void *)0) 
-# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
  ? 0 : ((&((ipaddr)->u_addr.ip6)))->addr[3];}while(0); }else{ (((&((&pcb->remote_ip)->u_addr.ip4)))->addr = (((&((ipaddr)->u_addr.ip4))) == 
-# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
  ((void *)0) 
-# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
  ? 0 : ((&((ipaddr)->u_addr.ip4)))->addr)); }}while(0);
   pcb->remote_port = port;
 
 
   if ((((((&pcb->local_ip) != 
-# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 899 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
      ((void *)0)
-# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 899 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
      ) && (((&*(&pcb->local_ip))->type) == IPADDR_TYPE_V6))) ? ((((&((&pcb->local_ip)->u_addr.ip6))) == 
-# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 899 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
      ((void *)0)
-# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 899 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
      ) || (((*((&((&pcb->local_ip)->u_addr.ip6)))).addr[0] == 0) && ((*((&((&pcb->local_ip)->u_addr.ip6)))).addr[1] == 0) && ((*((&((&pcb->local_ip)->u_addr.ip6)))).addr[2] == 0) && ((*((&((&pcb->local_ip)->u_addr.ip6)))).addr[3] == 0))) : (((&((&pcb->local_ip)->u_addr.ip4))) == 
-# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 899 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
      ((void *)0) 
-# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 899 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
      || ((*((&((&pcb->local_ip)->u_addr.ip4)))).addr == ((u32_t)0x00000000UL))))) {
 
     struct netif *netif;
     const ip_addr_t *local_ip;
     do { (netif) = ((((&pcb->remote_ip) != 
-# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
    ((void *)0)
-# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
    ) && (((&*(&pcb->remote_ip))->type) == IPADDR_TYPE_V6)) ? ip6_route((&((&pcb->local_ip)->u_addr.ip6)), (&((&pcb->remote_ip)->u_addr.ip6))) : ip4_route_src((&((&pcb->remote_ip)->u_addr.ip4)), (&((&pcb->local_ip)->u_addr.ip4)))); (local_ip) = ((((&pcb->remote_ip) != 
-# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
    ((void *)0)
-# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
    ) && (((&*(&pcb->remote_ip))->type) == IPADDR_TYPE_V6)) ? (((netif) != 
-# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
    ((void *)0)
-# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
    ) ? ip6_select_source_address(netif, (&((&pcb->remote_ip)->u_addr.ip6))) : 
-# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
    ((void *)0)
-# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
    ) : (((netif) != 
-# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
    ((void *)0)
-# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
    ) ? ((const ip_addr_t*)&((netif)->ip_addr)) : 
-# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
    ((void *)0)
-# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
    )); }while(0);
     if ((netif == 
-# 910 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 904 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                  ((void *)0)
-# 910 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 904 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                      ) || (local_ip == 
-# 910 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 904 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                                        ((void *)0)
-# 910 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 904 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                                            )) {
 
 
@@ -7623,9 +7791,9 @@ tcp_connect(struct tcp_pcb *pcb, const ip_addr_t *ipaddr, u16_t port,
 
       for (i = 2; i < 4; i++) {
         for (cpcb = *tcp_pcb_lists[i]; cpcb != 
-# 934 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 928 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                                               ((void *)0)
-# 934 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 928 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                                                   ; cpcb = cpcb->next) {
           if ((cpcb->local_port == pcb->local_port) &&
               (cpcb->remote_port == port) &&
@@ -7671,13 +7839,13 @@ tcp_connect(struct tcp_pcb *pcb, const ip_addr_t *ipaddr, u16_t port,
     pcb->state = SYN_SENT;
     if (old_local_port != 0) {
       do { if(*(&tcp_bound_pcbs) == (pcb)) { (*(&tcp_bound_pcbs)) = (*&tcp_bound_pcbs)->next; } else { struct tcp_pcb *tcp_tmp_pcb; for (tcp_tmp_pcb = *&tcp_bound_pcbs; tcp_tmp_pcb != 
-# 978 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
      ((void *)0)
-# 978 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
      ; tcp_tmp_pcb = tcp_tmp_pcb->next) { if(tcp_tmp_pcb->next == (pcb)) { tcp_tmp_pcb->next = (pcb)->next; break; } } } (pcb)->next = 
-# 978 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
      ((void *)0)
-# 978 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
      ; } while(0);
     }
     do { do { (pcb)->next = *&tcp_active_pcbs; *(&tcp_active_pcbs) = (pcb); tcp_timer_needed(); } while (0); tcp_active_pcbs_changed = 1; } while (0);
@@ -7687,7 +7855,7 @@ tcp_connect(struct tcp_pcb *pcb, const ip_addr_t *ipaddr, u16_t port,
   }
   return ret;
 }
-# 995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 989 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
 void
 tcp_slowtmr(void)
 {
@@ -7705,27 +7873,27 @@ tcp_slowtmr(void)
 tcp_slowtmr_start:
 
   prev = 
-# 1011 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1005 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
         ((void *)0)
-# 1011 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1005 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
             ;
   pcb = tcp_active_pcbs;
   if (pcb == 
-# 1013 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1007 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
             ((void *)0)
-# 1013 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1007 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                 ) {
     do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("tcp_slowtmr: no active pcbs\n");} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0);
   }
   while (pcb != 
-# 1016 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                ((void *)0)
-# 1016 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                    ) {
     do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("tcp_slowtmr: processing active pcb\n");} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0);
-    do { if (!(pcb->state != CLOSED)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1018, __func__, "tcp_slowtmr: active pcb->state != CLOSED\n"); }} while(0);
-    do { if (!(pcb->state != LISTEN)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1019, __func__, "tcp_slowtmr: active pcb->state != LISTEN\n"); }} while(0);
-    do { if (!(pcb->state != TIME_WAIT)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1020, __func__, "tcp_slowtmr: active pcb->state != TIME-WAIT\n"); }} while(0);
+    do { if (!(pcb->state != CLOSED)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1012, __func__, "tcp_slowtmr: active pcb->state != CLOSED\n"); }} while(0);
+    do { if (!(pcb->state != LISTEN)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1013, __func__, "tcp_slowtmr: active pcb->state != LISTEN\n"); }} while(0);
+    do { if (!(pcb->state != TIME_WAIT)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1014, __func__, "tcp_slowtmr: active pcb->state != TIME-WAIT\n"); }} while(0);
     if (pcb->last_timer == tcp_timer_ctr) {
 
       pcb = pcb->next;
@@ -7766,9 +7934,9 @@ tcp_slowtmr_start:
         }
 
         if (pcb->unacked != 
-# 1060 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1054 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                            ((void *)0) 
-# 1060 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1054 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                                 && pcb->rtime >= pcb->rto) {
 
           do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("tcp_slowtmr: rtime %""d" " pcb->rto %""d""\n", pcb->rtime, pcb->rto);} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0)
@@ -7832,57 +8000,57 @@ tcp_slowtmr_start:
       {
         do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("tcp_slowtmr: KEEPALIVE timeout. Aborting connection to ");} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0);
         do { if((((&pcb->remote_ip) != 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
        ((void *)0)
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
        ) && (((&*(&pcb->remote_ip))->type) == IPADDR_TYPE_V6))) { do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("%" "x" ":%" "x" ":%" "x" ":%" "x" ":%" "x" ":%" "x" ":%" "x" ":%" "x", (u16_t)(((&((&pcb->remote_ip)->u_addr.ip6))) != 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
        ((void *)0) 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
        ? ((u16_t)((lwip_htonl(((&((&pcb->remote_ip)->u_addr.ip6)))->addr[0]) >> 16) & 0xffff)) : 0), (u16_t)(((&((&pcb->remote_ip)->u_addr.ip6))) != 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
        ((void *)0) 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
        ? ((u16_t)((lwip_htonl(((&((&pcb->remote_ip)->u_addr.ip6)))->addr[0])) & 0xffff)) : 0), (u16_t)(((&((&pcb->remote_ip)->u_addr.ip6))) != 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
        ((void *)0) 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
        ? ((u16_t)((lwip_htonl(((&((&pcb->remote_ip)->u_addr.ip6)))->addr[1]) >> 16) & 0xffff)) : 0), (u16_t)(((&((&pcb->remote_ip)->u_addr.ip6))) != 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
        ((void *)0) 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
        ? ((u16_t)((lwip_htonl(((&((&pcb->remote_ip)->u_addr.ip6)))->addr[1])) & 0xffff)) : 0), (u16_t)(((&((&pcb->remote_ip)->u_addr.ip6))) != 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
        ((void *)0) 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
        ? ((u16_t)((lwip_htonl(((&((&pcb->remote_ip)->u_addr.ip6)))->addr[2]) >> 16) & 0xffff)) : 0), (u16_t)(((&((&pcb->remote_ip)->u_addr.ip6))) != 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
        ((void *)0) 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
        ? ((u16_t)((lwip_htonl(((&((&pcb->remote_ip)->u_addr.ip6)))->addr[2])) & 0xffff)) : 0), (u16_t)(((&((&pcb->remote_ip)->u_addr.ip6))) != 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
        ((void *)0) 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
        ? ((u16_t)((lwip_htonl(((&((&pcb->remote_ip)->u_addr.ip6)))->addr[3]) >> 16) & 0xffff)) : 0), (u16_t)(((&((&pcb->remote_ip)->u_addr.ip6))) != 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
        ((void *)0) 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
        ? ((u16_t)((lwip_htonl(((&((&pcb->remote_ip)->u_addr.ip6)))->addr[3])) & 0xffff)) : 0));} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0); } else { do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("%" "d" ".%" "d" ".%" "d" ".%" "d", (u16_t)(((&((&pcb->remote_ip)->u_addr.ip4))) != 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
        ((void *)0) 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
        ? ((u16_t)(((const u8_t*)(&((&((&pcb->remote_ip)->u_addr.ip4)))->addr))[0])) : 0), (u16_t)(((&((&pcb->remote_ip)->u_addr.ip4))) != 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
        ((void *)0) 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
        ? ((u16_t)(((const u8_t*)(&((&((&pcb->remote_ip)->u_addr.ip4)))->addr))[1])) : 0), (u16_t)(((&((&pcb->remote_ip)->u_addr.ip4))) != 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
        ((void *)0) 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
        ? ((u16_t)(((const u8_t*)(&((&((&pcb->remote_ip)->u_addr.ip4)))->addr))[2])) : 0), (u16_t)(((&((&pcb->remote_ip)->u_addr.ip4))) != 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
        ((void *)0) 
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
        ? ((u16_t)(((const u8_t*)(&((&((&pcb->remote_ip)->u_addr.ip4)))->addr))[3])) : 0));} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0); }}while(0);
         do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("\n");} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0);
 
@@ -7904,16 +8072,16 @@ tcp_slowtmr_start:
 
 
     if (pcb->ooseq != 
-# 1142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                      ((void *)0) 
-# 1142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                           &&
         (u32_t)tcp_ticks - pcb->tmr >= pcb->rto * 6U) {
       tcp_segs_free(pcb->ooseq);
       pcb->ooseq = 
-# 1145 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                   ((void *)0)
-# 1145 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                       ;
       do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("tcp_slowtmr: dropping OOSEQ queued data\n");} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0);
     }
@@ -7947,15 +8115,15 @@ tcp_slowtmr_start:
       tcp_pcb_purge(pcb);
 
       if (prev != 
-# 1177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                  ((void *)0)
-# 1177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                      ) {
-        do { if (!(pcb != tcp_active_pcbs)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1178, __func__, "tcp_slowtmr: middle tcp != tcp_active_pcbs"); }} while(0);
+        do { if (!(pcb != tcp_active_pcbs)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1172, __func__, "tcp_slowtmr: middle tcp != tcp_active_pcbs"); }} while(0);
         prev->next = pcb->next;
       } else {
 
-        do { if (!(tcp_active_pcbs == pcb)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1182, __func__, "tcp_slowtmr: first pcb == tcp_active_pcbs"); }} while(0);
+        do { if (!(tcp_active_pcbs == pcb)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1176, __func__, "tcp_slowtmr: first pcb == tcp_active_pcbs"); }} while(0);
         tcp_active_pcbs = pcb->next;
       }
 
@@ -7972,9 +8140,9 @@ tcp_slowtmr_start:
 
       tcp_active_pcbs_changed = 0;
       do { (void)last_state; if((err_fn) != 
-# 1198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
      ((void *)0)
-# 1198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
      ) (err_fn)((err_arg),(ERR_ABRT)); } while (0);
       if (tcp_active_pcbs_changed) {
         goto tcp_slowtmr_start;
@@ -7991,9 +8159,9 @@ tcp_slowtmr_start:
         do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("tcp_slowtmr: polling application\n");} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0);
         tcp_active_pcbs_changed = 0;
         do { if((prev)->poll != 
-# 1213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1207 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
        ((void *)0)
-# 1213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1207 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
        ) (err) = (prev)->poll((prev)->callback_arg,(prev)); else (err) = ERR_OK; } while (0);
         if (tcp_active_pcbs_changed) {
           goto tcp_slowtmr_start;
@@ -8009,17 +8177,17 @@ tcp_slowtmr_start:
 
 
   prev = 
-# 1227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
         ((void *)0)
-# 1227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
             ;
   pcb = tcp_tw_pcbs;
   while (pcb != 
-# 1229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1223 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                ((void *)0)
-# 1229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1223 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                    ) {
-    do { if (!(pcb->state == TIME_WAIT)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1230, __func__, "tcp_slowtmr: TIME-WAIT pcb->state == TIME-WAIT"); }} while(0);
+    do { if (!(pcb->state == TIME_WAIT)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1224, __func__, "tcp_slowtmr: TIME-WAIT pcb->state == TIME-WAIT"); }} while(0);
     pcb_remove = 0;
 
 
@@ -8033,15 +8201,15 @@ tcp_slowtmr_start:
       tcp_pcb_purge(pcb);
 
       if (prev != 
-# 1243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                  ((void *)0)
-# 1243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                      ) {
-        do { if (!(pcb != tcp_tw_pcbs)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1244, __func__, "tcp_slowtmr: middle tcp != tcp_tw_pcbs"); }} while(0);
+        do { if (!(pcb != tcp_tw_pcbs)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1238, __func__, "tcp_slowtmr: middle tcp != tcp_tw_pcbs"); }} while(0);
         prev->next = pcb->next;
       } else {
 
-        do { if (!(tcp_tw_pcbs == pcb)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1248, __func__, "tcp_slowtmr: first pcb == tcp_tw_pcbs"); }} while(0);
+        do { if (!(tcp_tw_pcbs == pcb)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1242, __func__, "tcp_slowtmr: first pcb == tcp_tw_pcbs"); }} while(0);
         tcp_tw_pcbs = pcb->next;
       }
       pcb2 = pcb;
@@ -8071,9 +8239,9 @@ tcp_fasttmr_start:
   pcb = tcp_active_pcbs;
 
   while (pcb != 
-# 1277 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                ((void *)0)
-# 1277 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                    ) {
     if (pcb->last_timer != tcp_timer_ctr) {
       struct tcp_pcb *next;
@@ -8096,9 +8264,9 @@ tcp_fasttmr_start:
 
 
       if (pcb->refused_data != 
-# 1298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                               ((void *)0)
-# 1298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                                   ) {
         tcp_active_pcbs_changed = 0;
         tcp_process_refused_data(pcb);
@@ -8121,9 +8289,9 @@ tcp_txnow(void)
   struct tcp_pcb *pcb;
 
   for (pcb = tcp_active_pcbs; pcb != 
-# 1319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1313 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                                     ((void *)0)
-# 1319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1313 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                                         ; pcb = pcb->next) {
     if (pcb->flags & 0x80U) {
       tcp_output(pcb);
@@ -8150,21 +8318,21 @@ tcp_process_refused_data(struct tcp_pcb *pcb)
 
 
     pcb->refused_data = 
-# 1344 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                        ((void *)0)
-# 1344 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                            ;
 
 
     do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("tcp_input: notify kept packet\n");} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0);
     do { if((pcb)->recv != 
-# 1348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
    ((void *)0)
-# 1348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
    ) { (err) = (pcb)->recv((pcb)->callback_arg,(pcb),(refused_data),(ERR_OK)); } else { (err) = tcp_recv_null(
-# 1348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
    ((void *)0)
-# 1348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
    , (pcb), (refused_data), (ERR_OK)); } } while (0);
     if (err == ERR_OK) {
 
@@ -8179,13 +8347,13 @@ tcp_process_refused_data(struct tcp_pcb *pcb)
           pcb->rcv_wnd++;
         }
         do { if(((pcb)->recv != 
-# 1361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1355 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
        ((void *)0)
-# 1361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1355 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
        )) { (err) = (pcb)->recv((pcb)->callback_arg,(pcb),
-# 1361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1355 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
        ((void *)0)
-# 1361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1355 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
        ,ERR_OK); } else { (err) = ERR_OK; } } while (0);
         if (err == ERR_ABRT) {
           return ERR_ABRT;
@@ -8220,9 +8388,9 @@ void
 tcp_segs_free(struct tcp_seg *seg)
 {
   while (seg != 
-# 1394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                ((void *)0)
-# 1394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                    ) {
     struct tcp_seg *next = seg->next;
     tcp_seg_free(seg);
@@ -8239,14 +8407,14 @@ void
 tcp_seg_free(struct tcp_seg *seg)
 {
   if (seg != 
-# 1409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1403 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
             ((void *)0)
-# 1409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1403 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                 ) {
     if (seg->p != 
-# 1410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                  ((void *)0)
-# 1410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                      ) {
       pbuf_free(seg->p);
 
@@ -8268,7 +8436,7 @@ tcp_setprio(struct tcp_pcb *pcb, u8_t prio)
 {
   pcb->prio = prio;
 }
-# 1440 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1434 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
 struct tcp_seg *
 tcp_seg_copy(struct tcp_seg *seg)
 {
@@ -8276,14 +8444,14 @@ tcp_seg_copy(struct tcp_seg *seg)
 
   cseg = (struct tcp_seg *)memp_malloc(MEMP_TCP_SEG);
   if (cseg == 
-# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1440 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
              ((void *)0)
-# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1440 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                  ) {
     return 
-# 1447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
           ((void *)0)
-# 1447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
               ;
   }
   memcpy((u8_t *)cseg,(const u8_t *)seg,sizeof(struct tcp_seg));
@@ -8302,9 +8470,9 @@ tcp_recv_null(void *arg, struct tcp_pcb *pcb, struct pbuf *p, err_t err)
 {
   (void)arg;
   if (p != 
-# 1464 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
           ((void *)0)
-# 1464 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
               ) {
     tcp_recved(pcb, p->tot_len);
     pbuf_free(p);
@@ -8313,7 +8481,7 @@ tcp_recv_null(void *arg, struct tcp_pcb *pcb, struct pbuf *p, err_t err)
   }
   return ERR_OK;
 }
-# 1480 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
 static void
 tcp_kill_prio(u8_t prio)
 {
@@ -8326,14 +8494,14 @@ tcp_kill_prio(u8_t prio)
 
   inactivity = 0;
   inactive = 
-# 1491 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
             ((void *)0)
-# 1491 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                 ;
   for (pcb = tcp_active_pcbs; pcb != 
-# 1492 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1486 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                                     ((void *)0)
-# 1492 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1486 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                                         ; pcb = pcb->next) {
     if (pcb->prio <= mprio &&
        (u32_t)(tcp_ticks - pcb->tmr) >= inactivity) {
@@ -8343,9 +8511,9 @@ tcp_kill_prio(u8_t prio)
     }
   }
   if (inactive != 
-# 1500 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1494 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                  ((void *)0)
-# 1500 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1494 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                      ) {
     do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("tcp_kill_prio: killing oldest PCB %p (%""d"")\n", (void *)inactive, inactivity);} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0)
                                          ;
@@ -8369,16 +8537,16 @@ tcp_kill_state(enum tcp_state state)
 
   inactivity = 0;
   inactive = 
-# 1522 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1516 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
             ((void *)0)
-# 1522 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1516 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                 ;
 
 
   for (pcb = tcp_active_pcbs; pcb != 
-# 1525 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1519 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                                     ((void *)0)
-# 1525 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1519 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                                         ; pcb = pcb->next) {
     if (pcb->state == state) {
       if ((u32_t)(tcp_ticks - pcb->tmr) >= inactivity) {
@@ -8388,9 +8556,9 @@ tcp_kill_state(enum tcp_state state)
     }
   }
   if (inactive != 
-# 1533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                  ((void *)0)
-# 1533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                      ) {
     do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("tcp_kill_closing: killing oldest %s PCB %p (%""d"")\n", tcp_state_str[state], (void *)inactive, inactivity);} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0)
                                                                ;
@@ -8411,15 +8579,15 @@ tcp_kill_timewait(void)
 
   inactivity = 0;
   inactive = 
-# 1552 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1546 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
             ((void *)0)
-# 1552 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1546 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                 ;
 
   for (pcb = tcp_tw_pcbs; pcb != 
-# 1554 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                                 ((void *)0)
-# 1554 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                                     ; pcb = pcb->next) {
     if ((u32_t)(tcp_ticks - pcb->tmr) >= inactivity) {
       inactivity = tcp_ticks - pcb->tmr;
@@ -8427,9 +8595,9 @@ tcp_kill_timewait(void)
     }
   }
   if (inactive != 
-# 1560 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1554 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                  ((void *)0)
-# 1560 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1554 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                      ) {
     do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("tcp_kill_timewait: killing oldest TIME-WAIT PCB %p (%""d"")\n", (void *)inactive, inactivity);} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0)
                                          ;
@@ -8460,18 +8628,18 @@ static void tcp_pcb_num_cal(tcp_pcb_num_t *tcp_pcb_num)
 
     memset(tcp_pcb_num, 0, sizeof(*tcp_pcb_num));
     for(pcb = tcp_tw_pcbs; pcb != 
-# 1589 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1583 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                                  ((void *)0)
-# 1589 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1583 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                                      ; pcb = pcb->next) {
         tcp_pcb_num->total ++;
         tcp_pcb_num->time_wait ++;
     }
 
     for (pcb = tcp_active_pcbs; pcb != 
-# 1594 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1588 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                                       ((void *)0)
-# 1594 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1588 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                                           ; pcb = pcb->next){
         tcp_pcb_num->total ++;
         if (pcb->state == FIN_WAIT_2){
@@ -8486,24 +8654,24 @@ static void tcp_pcb_num_cal(tcp_pcb_num_t *tcp_pcb_num)
     }
 
     for (listen = tcp_listen_pcbs.listen_pcbs; listen != 
-# 1607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1601 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                                                         ((void *)0)
-# 1607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1601 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                                                             ; listen = listen->next){
         tcp_pcb_num->total ++;
         tcp_pcb_num->listen ++;
     }
 
     for (pcb = tcp_bound_pcbs; pcb != 
-# 1612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1606 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                                      ((void *)0)
-# 1612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1606 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                                          ; pcb = pcb->next){
         tcp_pcb_num->total ++;
         tcp_pcb_num->bound ++;
     }
 }
-# 1625 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
 struct tcp_pcb *
 tcp_alloc(u8_t prio)
 {
@@ -8536,9 +8704,9 @@ tcp_alloc(u8_t prio)
 
                                                                                                 ;
         return 
-# 1656 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1650 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
               ((void *)0)
-# 1656 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1650 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                   ;
     }
 
@@ -8546,9 +8714,9 @@ tcp_alloc(u8_t prio)
 
   pcb = (struct tcp_pcb *)memp_malloc(MEMP_TCP_PCB);
   if (pcb == 
-# 1662 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1656 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
             ((void *)0)
-# 1662 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1656 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                 ) {
 
     do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("tcp_alloc: killing off oldest TIME-WAIT connection\n");} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0);
@@ -8556,9 +8724,9 @@ tcp_alloc(u8_t prio)
 
     pcb = (struct tcp_pcb *)memp_malloc(MEMP_TCP_PCB);
     if (pcb == 
-# 1668 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1662 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
               ((void *)0)
-# 1668 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1662 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                   ) {
 
       do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("tcp_alloc: killing off oldest LAST-ACK connection\n");} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0);
@@ -8566,9 +8734,9 @@ tcp_alloc(u8_t prio)
 
       pcb = (struct tcp_pcb *)memp_malloc(MEMP_TCP_PCB);
       if (pcb == 
-# 1674 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1668 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                 ((void *)0)
-# 1674 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1668 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                     ) {
 
         do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("tcp_alloc: killing off oldest CLOSING connection\n");} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0);
@@ -8576,9 +8744,9 @@ tcp_alloc(u8_t prio)
 
         pcb = (struct tcp_pcb *)memp_malloc(MEMP_TCP_PCB);
         if (pcb == 
-# 1680 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1674 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                   ((void *)0)
-# 1680 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1674 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                       ) {
 
           do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("tcp_alloc: killing connection with prio lower than %d\n", prio);} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0);
@@ -8586,45 +8754,45 @@ tcp_alloc(u8_t prio)
 
           pcb = (struct tcp_pcb *)memp_malloc(MEMP_TCP_PCB);
           if (pcb != 
-# 1686 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1680 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                     ((void *)0)
-# 1686 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1680 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                         ) {
 
             ;
           }
         }
         if (pcb != 
-# 1691 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1685 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                   ((void *)0)
-# 1691 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1685 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                       ) {
 
           ;
         }
       }
       if (pcb != 
-# 1696 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1690 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                 ((void *)0)
-# 1696 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1690 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                     ) {
 
         ;
       }
     }
     if (pcb != 
-# 1701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1695 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
               ((void *)0)
-# 1701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1695 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                   ) {
 
       ;
     }
   }
   if (pcb != 
-# 1706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
             ((void *)0)
-# 1706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                 ) {
 
     memset(pcb, 0, sizeof(struct tcp_pcb));
@@ -8666,13 +8834,13 @@ tcp_alloc(u8_t prio)
   }
   return pcb;
 }
-# 1761 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1755 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
 struct tcp_pcb *
 tcp_new(void)
 {
   return tcp_alloc(64);
 }
-# 1778 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1772 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
 struct tcp_pcb *
 tcp_new_ip_type(u8_t type)
 {
@@ -8680,9 +8848,9 @@ tcp_new_ip_type(u8_t type)
   pcb = tcp_alloc(64);
 
   if (pcb != 
-# 1784 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1778 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
             ((void *)0)
-# 1784 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1778 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                 ) {
     do { (pcb->local_ip).type = (type); }while(0);
     do { (pcb->remote_ip).type = (type); }while(0);
@@ -8692,77 +8860,77 @@ tcp_new_ip_type(u8_t type)
 
   return pcb;
 }
-# 1802 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1796 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
 void
 tcp_arg(struct tcp_pcb *pcb, void *arg)
 {
 
 
   if (pcb != 
-# 1807 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
             ((void *)0)
-# 1807 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                 ) {
     pcb->callback_arg = arg;
   }
 }
-# 1821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1815 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
 void
 tcp_recv(struct tcp_pcb *pcb, tcp_recv_fn recv)
 {
   if (pcb != 
-# 1824 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1818 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
             ((void *)0)
-# 1824 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1818 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                 ) {
-    do { if (!(pcb->state != LISTEN)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1825, __func__, "invalid socket state for recv callback"); }} while(0);
+    do { if (!(pcb->state != LISTEN)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1819, __func__, "invalid socket state for recv callback"); }} while(0);
     pcb->recv = recv;
   }
 }
-# 1838 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
 void
 tcp_sent(struct tcp_pcb *pcb, tcp_sent_fn sent)
 {
   if (pcb != 
-# 1841 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1835 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
             ((void *)0)
-# 1841 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1835 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                 ) {
-    do { if (!(pcb->state != LISTEN)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1842, __func__, "invalid socket state for sent callback"); }} while(0);
+    do { if (!(pcb->state != LISTEN)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1836, __func__, "invalid socket state for sent callback"); }} while(0);
     pcb->sent = sent;
   }
 }
-# 1858 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1852 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
 void
 tcp_err(struct tcp_pcb *pcb, tcp_err_fn err)
 {
   if (pcb != 
-# 1861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1855 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
             ((void *)0)
-# 1861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1855 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                 ) {
-    do { if (!(pcb->state != LISTEN)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1862, __func__, "invalid socket state for err callback"); }} while(0);
+    do { if (!(pcb->state != LISTEN)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1856, __func__, "invalid socket state for err callback"); }} while(0);
     pcb->errf = err;
   }
 }
-# 1876 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1870 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
 void
 tcp_accept(struct tcp_pcb *pcb, tcp_accept_fn accept)
 {
   if ((pcb != 
-# 1879 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
              ((void *)0)
-# 1879 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                  ) && (pcb->state == LISTEN)) {
     struct tcp_pcb_listen *lpcb = (struct tcp_pcb_listen*)pcb;
     lpcb->accept = accept;
   }
 }
-# 1894 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
 void
 tcp_poll(struct tcp_pcb *pcb, tcp_poll_fn poll, u8_t interval)
 {
-  do { if (!(pcb->state != LISTEN)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1897, __func__, "invalid socket state for poll"); }} while(0);
+  do { if (!(pcb->state != LISTEN)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1891, __func__, "invalid socket state for poll"); }} while(0);
 
   pcb->poll = poll;
 
@@ -8789,45 +8957,45 @@ tcp_pcb_purge(struct tcp_pcb *pcb)
     tcp_backlog_accepted(pcb);
 
     if (pcb->refused_data != 
-# 1923 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1917 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                             ((void *)0)
-# 1923 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1917 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                                 ) {
       do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("tcp_pcb_purge: data left on ->refused_data\n");} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0);
       pbuf_free(pcb->refused_data);
       pcb->refused_data = 
-# 1926 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1920 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                          ((void *)0)
-# 1926 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1920 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                              ;
     }
     if (pcb->unsent != 
-# 1928 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1922 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                       ((void *)0)
-# 1928 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1922 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                           ) {
       do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("tcp_pcb_purge: not all data sent\n");} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0);
     }
     if (pcb->unacked != 
-# 1931 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1925 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                        ((void *)0)
-# 1931 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1925 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                            ) {
       do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("tcp_pcb_purge: data left on ->unacked\n");} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0);
     }
 
     if (pcb->ooseq != 
-# 1935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1929 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                      ((void *)0)
-# 1935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1929 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                          ) {
       do { if ( ((0x00U) & 0x80U) && ((0x00U) & 0x80U) && ((s16_t)((0x00U) & 0x03) >= 0x00)) { do {printf ("tcp_pcb_purge: data left on ->ooseq\n");} while(0); if ((0x00U) & 0x08U) { while(1); } } } while(0);
     }
     tcp_segs_free(pcb->ooseq);
     pcb->ooseq = 
-# 1939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1933 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                 ((void *)0)
-# 1939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1933 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                     ;
 
 
@@ -8838,9 +9006,9 @@ tcp_pcb_purge(struct tcp_pcb *pcb)
     tcp_segs_free(pcb->unsent);
     tcp_segs_free(pcb->unacked);
     pcb->unacked = pcb->unsent = 
-# 1948 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1942 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                                 ((void *)0)
-# 1948 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1942 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                                     ;
 
     pcb->unsent_oversize = 0;
@@ -8858,13 +9026,13 @@ void
 tcp_pcb_remove(struct tcp_pcb **pcblist, struct tcp_pcb *pcb)
 {
   do { if(*(pcblist) == (pcb)) { (*(pcblist)) = (*pcblist)->next; } else { struct tcp_pcb *tcp_tmp_pcb; for (tcp_tmp_pcb = *pcblist; tcp_tmp_pcb != 
-# 1964 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1958 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
  ((void *)0)
-# 1964 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1958 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
  ; tcp_tmp_pcb = tcp_tmp_pcb->next) { if(tcp_tmp_pcb->next == (pcb)) { tcp_tmp_pcb->next = (pcb)->next; break; } } } (pcb)->next = 
-# 1964 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1958 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
  ((void *)0)
-# 1964 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 1958 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
  ; } while(0);
 
   tcp_pcb_purge(pcb);
@@ -8879,21 +9047,21 @@ tcp_pcb_remove(struct tcp_pcb **pcblist, struct tcp_pcb *pcb)
 
   if (pcb->state != LISTEN) {
     do { if (!(pcb->unsent == 
-# 1977 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1971 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
    ((void *)0)
-# 1977 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
-   )) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1977, __func__, "unsent segments leaking"); }} while(0);
+# 1971 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+   )) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1971, __func__, "unsent segments leaking"); }} while(0);
     do { if (!(pcb->unacked == 
-# 1978 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
    ((void *)0)
-# 1978 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
-   )) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1978, __func__, "unacked segments leaking"); }} while(0);
+# 1972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+   )) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1972, __func__, "unacked segments leaking"); }} while(0);
 
     do { if (!(pcb->ooseq == 
-# 1980 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 1974 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
    ((void *)0)
-# 1980 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
-   )) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1980, __func__, "ooseq segments leaking"); }} while(0);
+# 1974 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+   )) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1974, __func__, "ooseq segments leaking"); }} while(0);
 
   }
 
@@ -8901,7 +9069,7 @@ tcp_pcb_remove(struct tcp_pcb **pcblist, struct tcp_pcb *pcb)
 
   pcb->local_port = 0;
 
-  do { if (!(1)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1988, __func__, "tcp_pcb_remove: tcp_pcbs_sane()"); }} while(0);
+  do { if (!(1)) { __assert_func("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c", 1982, __func__, "tcp_pcb_remove: tcp_pcbs_sane()"); }} while(0);
 }
 
 
@@ -8942,16 +9110,16 @@ tcp_eff_send_mss_impl(u16_t sendmss, const ip_addr_t *dest
   s16_t mtu;
 
   outif = ((((dest) != 
-# 2028 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 2022 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
          ((void *)0)
-# 2028 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 2022 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
          ) && (((&*(dest))->type) == IPADDR_TYPE_V6)) ? ip6_route((&((src)->u_addr.ip6)), (&((dest)->u_addr.ip6))) : ip4_route_src((&((dest)->u_addr.ip4)), (&((src)->u_addr.ip4))));
 
 
   if ((((dest) != 
-# 2031 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 2025 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
      ((void *)0)
-# 2031 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 2025 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
      ) && (((&*(dest))->type) == IPADDR_TYPE_V6)))
 
   {
@@ -8965,9 +9133,9 @@ tcp_eff_send_mss_impl(u16_t sendmss, const ip_addr_t *dest
 
   {
     if (outif == 
-# 2043 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 2037 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                 ((void *)0)
-# 2043 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 2037 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                     ) {
       return sendmss;
     }
@@ -8979,9 +9147,9 @@ tcp_eff_send_mss_impl(u16_t sendmss, const ip_addr_t *dest
 
 
     if ((((dest) != 
-# 2053 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 2047 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
        ((void *)0)
-# 2053 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 2047 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
        ) && (((&*(dest))->type) == IPADDR_TYPE_V6)))
 
     {
@@ -9013,9 +9181,9 @@ tcp_netif_ip_addr_changed_pcblist(const ip_addr_t* old_addr, struct tcp_pcb* pcb
   struct tcp_pcb *pcb;
   pcb = pcb_list;
   while (pcb != 
-# 2083 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 2077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                ((void *)0)
-# 2083 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 2077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                    ) {
 
     if (((((&pcb->local_ip)->type) != ((old_addr)->type)) ? 0 : ((((&*(&pcb->local_ip))->type) == IPADDR_TYPE_V6) ? ((((&((&pcb->local_ip)->u_addr.ip6)))->addr[0] == ((&((old_addr)->u_addr.ip6)))->addr[0]) && (((&((&pcb->local_ip)->u_addr.ip6)))->addr[1] == ((&((old_addr)->u_addr.ip6)))->addr[1]) && (((&((&pcb->local_ip)->u_addr.ip6)))->addr[2] == ((&((old_addr)->u_addr.ip6)))->addr[2]) && (((&((&pcb->local_ip)->u_addr.ip6)))->addr[3] == ((&((old_addr)->u_addr.ip6)))->addr[3])) : (((&((&pcb->local_ip)->u_addr.ip4)))->addr == ((&((old_addr)->u_addr.ip4)))->addr)))
@@ -9046,17 +9214,17 @@ tcp_netif_ip_addr_changed(const ip_addr_t* old_addr, const ip_addr_t* new_addr)
   struct tcp_pcb_listen *lpcb, *next;
 
   if (!(((((old_addr) != 
-# 2112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 2106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
       ((void *)0)
-# 2112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 2106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
       ) && (((&*(old_addr))->type) == IPADDR_TYPE_V6))) ? ((((&((old_addr)->u_addr.ip6))) == 
-# 2112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 2106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
       ((void *)0)
-# 2112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 2106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
       ) || (((*((&((old_addr)->u_addr.ip6)))).addr[0] == 0) && ((*((&((old_addr)->u_addr.ip6)))).addr[1] == 0) && ((*((&((old_addr)->u_addr.ip6)))).addr[2] == 0) && ((*((&((old_addr)->u_addr.ip6)))).addr[3] == 0))) : (((&((old_addr)->u_addr.ip4))) == 
-# 2112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 2106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
       ((void *)0) 
-# 2112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 2106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
       || ((*((&((old_addr)->u_addr.ip4)))).addr == ((u32_t)0x00000000UL))))) {
 
 
@@ -9068,23 +9236,23 @@ tcp_netif_ip_addr_changed(const ip_addr_t* old_addr, const ip_addr_t* new_addr)
 
 
     if (!(((((new_addr) != 
-# 2122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 2116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
         ((void *)0)
-# 2122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 2116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
         ) && (((&*(new_addr))->type) == IPADDR_TYPE_V6))) ? ((((&((new_addr)->u_addr.ip6))) == 
-# 2122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 2116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
         ((void *)0)
-# 2122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 2116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
         ) || (((*((&((new_addr)->u_addr.ip6)))).addr[0] == 0) && ((*((&((new_addr)->u_addr.ip6)))).addr[1] == 0) && ((*((&((new_addr)->u_addr.ip6)))).addr[2] == 0) && ((*((&((new_addr)->u_addr.ip6)))).addr[3] == 0))) : (((&((new_addr)->u_addr.ip4))) == 
-# 2122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 2116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
         ((void *)0) 
-# 2122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 2116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
         || ((*((&((new_addr)->u_addr.ip4)))).addr == ((u32_t)0x00000000UL))))) {
 
       for (lpcb = tcp_listen_pcbs.listen_pcbs; lpcb != 
-# 2124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
+# 2118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c" 3 4
                                                       ((void *)0)
-# 2124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
+# 2118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/tcp.c"
                                                           ; lpcb = next) {
         next = lpcb->next;
 

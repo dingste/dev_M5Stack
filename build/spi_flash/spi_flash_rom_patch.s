@@ -485,10 +485,10 @@ esp_rom_spiflash_unlock:
 	.type	esp_rom_spiflash_lock, @function
 esp_rom_spiflash_lock:
 .LFB12:
-	.loc 1 350 0
+	.loc 1 351 0
 	entry	sp, 48
 .LCFI7:
-	.loc 1 354 0
+	.loc 1 355 0
 	l32r	a4, .LC28
 	mov.n	a11, sp
 	mov.n	a10, a4
@@ -496,11 +496,11 @@ esp_rom_spiflash_lock:
 .LVL44:
 	beqz.n	a10, .L47
 .L49:
-	.loc 1 355 0
+	.loc 1 356 0
 	movi.n	a2, 1
 	retw.n
 .L47:
-	.loc 1 358 0
+	.loc 1 359 0
 	l32r	a3, .LC29
 	l32r	a2, .LC30
 	memw
@@ -508,22 +508,22 @@ esp_rom_spiflash_lock:
 	or	a2, a8, a2
 	memw
 	s32i.n	a2, a3, 0
-	.loc 1 360 0
+	.loc 1 361 0
 	call8	esp_rom_spiflash_enable_write$constprop$6
 .LVL45:
 	mov.n	a3, a10
 	bnez.n	a10, .L49
-	.loc 1 364 0
+	.loc 1 365 0
 	l32i.n	a2, sp, 0
 	movi.n	a11, 0x1c
 	or	a11, a11, a2
 	mov.n	a10, a4
 	call8	esp_rom_spiflash_write_status
 .LVL46:
-	.loc 1 355 0
+	.loc 1 356 0
 	movi.n	a2, 1
 	moveqz	a2, a3, a10
-	.loc 1 369 0
+	.loc 1 370 0
 	retw.n
 .LFE12:
 	.size	esp_rom_spiflash_lock, .-esp_rom_spiflash_lock
@@ -546,35 +546,36 @@ esp_rom_spiflash_lock:
 	.literal .LC45, 1072967716
 	.literal .LC46, -65536
 	.literal .LC48, 1543503872
-	.literal .LC52, -536870913
-	.literal .LC53, 536870912
-	.literal .LC54, 1342177280
+	.literal .LC51, 1811939328
+	.literal .LC53, -536870913
+	.literal .LC54, 536870912
+	.literal .LC55, 1342177280
 	.align	4
 	.global	esp_rom_spiflash_config_readmode
 	.type	esp_rom_spiflash_config_readmode, @function
 esp_rom_spiflash_config_readmode:
 .LFB13:
-	.loc 1 373 0
+	.loc 1 374 0
 .LVL47:
 	entry	sp, 32
 .LCFI8:
-	.loc 1 376 0
+	.loc 1 377 0
 	l32r	a9, .LC31
 .L51:
-	.loc 1 376 0 is_stmt 0 discriminator 1
+	.loc 1 377 0 is_stmt 0 discriminator 1
 	memw
 	l32i.n	a8, a9, 0
 	extui	a8, a8, 0, 3
 	bnez.n	a8, .L51
-	.loc 1 378 0 is_stmt 1
+	.loc 1 379 0 is_stmt 1
 	l32r	a8, .LC32
 .L52:
-	.loc 1 378 0 is_stmt 0 discriminator 1
+	.loc 1 379 0 is_stmt 0 discriminator 1
 	memw
 	l32i.n	a9, a8, 0
 	extui	a9, a9, 0, 3
 	bnez.n	a9, .L52
-	.loc 1 381 0 is_stmt 1
+	.loc 1 382 0 is_stmt 1
 	l32r	a8, .LC33
 	l32r	a10, .LC34
 	memw
@@ -582,7 +583,7 @@ esp_rom_spiflash_config_readmode:
 	and	a11, a11, a10
 	memw
 	s32i.n	a11, a8, 0
-	.loc 1 382 0
+	.loc 1 383 0
 	l32r	a11, .LC35
 	memw
 	l32i.n	a12, a11, 0
@@ -596,7 +597,7 @@ esp_rom_spiflash_config_readmode:
 	l32i.n	a9, a2, 0
 .L53:
 .LVL49:
-	.loc 1 394 0
+	.loc 1 395 0
 	memw
 	l32i.n	a2, a8, 0
 .LBB8:
@@ -605,11 +606,11 @@ esp_rom_spiflash_config_readmode:
 	l32r	a11, .LC37
 .LBE9:
 .LBE8:
-	.loc 1 394 0
+	.loc 1 395 0
 	or	a2, a9, a2
 	memw
 	s32i.n	a2, a8, 0
-	.loc 1 395 0
+	.loc 1 396 0
 	l32r	a8, .LC35
 .LBB12:
 .LBB10:
@@ -617,7 +618,7 @@ esp_rom_spiflash_config_readmode:
 	and	a12, a9, a11
 .LBE10:
 .LBE12:
-	.loc 1 395 0
+	.loc 1 396 0
 	memw
 	l32i.n	a2, a8, 0
 	l32r	a10, .LC39
@@ -700,11 +701,11 @@ esp_rom_spiflash_config_readmode:
 	l32r	a10, .LC42
 	memw
 	l32i.n	a11, a8, 0
-	and	a11, a11, a10
-	l32r	a10, .LC48
-	or	a10, a11, a10
+	and	a12, a11, a10
+	l32r	a11, .LC48
+	or	a11, a12, a11
 	memw
-	s32i.n	a10, a8, 0
+	s32i.n	a11, a8, 0
 	.loc 1 321 0
 	bbci	a9, 20, .L57
 	.loc 1 322 0
@@ -735,18 +736,26 @@ esp_rom_spiflash_config_readmode:
 	.loc 1 324 0
 	bbci	a9, 23, .L58
 	.loc 1 325 0
-	l8ui	a11, a2, 0
 	memw
 	l32i.n	a9, a8, 0
 .LVL55:
-	addi.n	a11, a11, 3
+	and	a10, a9, a10
+	l32r	a9, .LC51
+	or	a10, a10, a9
+	memw
+	s32i.n	a10, a8, 0
+	.loc 1 326 0
+	l8ui	a11, a2, 0
+	memw
+	l32i.n	a9, a8, 0
+	addi.n	a11, a11, 1
 	movi	a10, -0x100
 	extui	a11, a11, 0, 8
 	and	a9, a9, a10
 	or	a9, a11, a9
 	memw
 	s32i.n	a9, a8, 0
-	.loc 1 326 0
+	.loc 1 327 0
 	l32r	a9, .LC45
 	l32r	a2, .LC46
 	memw
@@ -756,9 +765,9 @@ esp_rom_spiflash_config_readmode:
 	j	.L65
 .LVL56:
 .L58:
-	.loc 1 327 0
-	bbci	a9, 14, .L59
 	.loc 1 328 0
+	bbci	a9, 14, .L59
+	.loc 1 329 0
 	l8ui	a11, a2, 0
 	memw
 	l32i.n	a9, a8, 0
@@ -770,7 +779,7 @@ esp_rom_spiflash_config_readmode:
 	or	a9, a11, a9
 	memw
 	s32i.n	a9, a8, 0
-	.loc 1 329 0
+	.loc 1 330 0
 	l32r	a9, .LC45
 	l32r	a2, .LC46
 	memw
@@ -780,7 +789,7 @@ esp_rom_spiflash_config_readmode:
 	j	.L65
 .LVL58:
 .L59:
-	.loc 1 331 0
+	.loc 1 332 0
 	l8ui	a11, a2, 0
 	memw
 	l32i.n	a9, a8, 0
@@ -792,7 +801,7 @@ esp_rom_spiflash_config_readmode:
 	or	a9, a11, a9
 	memw
 	s32i.n	a9, a8, 0
-	.loc 1 332 0
+	.loc 1 333 0
 	l32r	a9, .LC45
 	l32r	a2, .LC46
 	memw
@@ -802,36 +811,36 @@ esp_rom_spiflash_config_readmode:
 	j	.L65
 .LVL60:
 .L56:
-	.loc 1 335 0
+	.loc 1 336 0
 	memw
 	l32i.n	a9, a8, 0
 .LVL61:
 	and	a10, a9, a10
 	memw
 	s32i.n	a10, a8, 0
-	.loc 1 336 0
+	.loc 1 337 0
 	l8ui	a9, a2, 0
 	bnez.n	a9, .L60
-	.loc 1 337 0
+	.loc 1 338 0
 	memw
 	l32i.n	a9, a8, 0
-	l32r	a2, .LC52
+	l32r	a2, .LC53
 	and	a2, a9, a2
 	memw
 	s32i.n	a2, a8, 0
 	j	.L61
 .L60:
-	.loc 1 339 0
+	.loc 1 340 0
 	memw
 	l32i.n	a10, a8, 0
-	l32r	a9, .LC53
-	.loc 1 340 0
+	l32r	a9, .LC54
+	.loc 1 341 0
 	l32r	a11, .LC41
-	.loc 1 339 0
+	.loc 1 340 0
 	or	a9, a10, a9
 	memw
 	s32i.n	a9, a8, 0
-	.loc 1 340 0
+	.loc 1 341 0
 	l8ui	a10, a2, 0
 	memw
 	l32i.n	a8, a11, 0
@@ -843,18 +852,18 @@ esp_rom_spiflash_config_readmode:
 	memw
 	s32i.n	a8, a11, 0
 .L61:
-	.loc 1 342 0
+	.loc 1 343 0
 	l32r	a8, .LC38
-	l32r	a2, .LC54
+	l32r	a2, .LC55
 	memw
 	l32i.n	a9, a8, 0
 	or	a2, a9, a2
-	.loc 1 343 0
+	.loc 1 344 0
 	l32r	a9, .LC41
-	.loc 1 342 0
+	.loc 1 343 0
 	memw
 	s32i.n	a2, a8, 0
-	.loc 1 343 0
+	.loc 1 344 0
 	memw
 	l32i.n	a8, a9, 0
 	l32r	a2, .LC42
@@ -863,7 +872,7 @@ esp_rom_spiflash_config_readmode:
 	or	a2, a8, a2
 	memw
 	s32i.n	a2, a9, 0
-	.loc 1 344 0
+	.loc 1 345 0
 	l32r	a9, .LC45
 	l32r	a2, .LC46
 	memw
@@ -877,25 +886,25 @@ esp_rom_spiflash_config_readmode:
 .L55:
 .LBE11:
 .LBE13:
-	.loc 1 399 0
+	.loc 1 400 0
 	movi.n	a2, 0
 	retw.n
 .LFE13:
 	.size	esp_rom_spiflash_config_readmode, .-esp_rom_spiflash_config_readmode
 	.section	.text.esp_rom_spiflash_erase_chip,"ax",@progbits
 	.literal_position
-	.literal .LC55, g_rom_spiflash_chip
-	.literal .LC56, 1072963584
-	.literal .LC57, 4194304
+	.literal .LC56, g_rom_spiflash_chip
+	.literal .LC57, 1072963584
+	.literal .LC58, 4194304
 	.align	4
 	.global	esp_rom_spiflash_erase_chip
 	.type	esp_rom_spiflash_erase_chip, @function
 esp_rom_spiflash_erase_chip:
 .LFB14:
-	.loc 1 402 0
+	.loc 1 403 0
 	entry	sp, 32
 .LCFI9:
-	.loc 1 403 0
+	.loc 1 404 0
 	call8	esp_rom_spiflash_enable_write$constprop$6
 .LVL62:
 	mov.n	a2, a10
@@ -904,13 +913,13 @@ esp_rom_spiflash_erase_chip:
 .LBB16:
 .LBB17:
 	.loc 1 94 0
-	l32r	a3, .LC55
+	l32r	a3, .LC56
 	mov.n	a10, a3
 	call8	esp_rom_spiflash_wait_idle
 .LVL64:
 	.loc 1 97 0
-	l32r	a8, .LC56
-	l32r	a9, .LC57
+	l32r	a8, .LC57
+	l32r	a9, .LC58
 	mov.n	a10, a3
 	memw
 	s32i.n	a9, a8, 0
@@ -924,69 +933,69 @@ esp_rom_spiflash_erase_chip:
 .LVL65:
 .LBE17:
 .LBE16:
-	.loc 1 411 0
+	.loc 1 412 0
 	retw.n
 .LVL66:
 .L69:
-	.loc 1 404 0
+	.loc 1 405 0
 	movi.n	a2, 1
-	.loc 1 412 0
+	.loc 1 413 0
 	retw.n
 .LFE14:
 	.size	esp_rom_spiflash_erase_chip, .-esp_rom_spiflash_erase_chip
 	.section	.text.esp_rom_spiflash_erase_block,"ax",@progbits
 	.literal_position
-	.literal .LC58, 1072963612
-	.literal .LC59, -536870913
-	.literal .LC60, 1072963616
-	.literal .LC61, 67108863
-	.literal .LC62, 1543503872
-	.literal .LC63, g_rom_spiflash_chip
-	.literal .LC64, 16777215
-	.literal .LC65, 1072963588
-	.literal .LC66, 1072963584
-	.literal .LC67, 8388608
+	.literal .LC59, 1072963612
+	.literal .LC60, -536870913
+	.literal .LC61, 1072963616
+	.literal .LC62, 67108863
+	.literal .LC63, 1543503872
+	.literal .LC64, g_rom_spiflash_chip
+	.literal .LC65, 16777215
+	.literal .LC66, 1072963588
+	.literal .LC67, 1072963584
+	.literal .LC68, 8388608
 	.align	4
 	.global	esp_rom_spiflash_erase_block
 	.type	esp_rom_spiflash_erase_block, @function
 esp_rom_spiflash_erase_block:
 .LFB15:
-	.loc 1 415 0
+	.loc 1 416 0
 .LVL67:
 	entry	sp, 32
 .LCFI10:
-	.loc 1 417 0
-	l32r	a4, .LC58
-	l32r	a3, .LC59
+	.loc 1 418 0
+	l32r	a4, .LC59
+	l32r	a3, .LC60
 	memw
 	l32i.n	a8, a4, 0
 	and	a3, a8, a3
+	.loc 1 419 0
+	l32r	a8, .LC61
 	.loc 1 418 0
-	l32r	a8, .LC60
-	.loc 1 417 0
 	memw
 	s32i.n	a3, a4, 0
-	.loc 1 418 0
+	.loc 1 419 0
 	memw
 	l32i.n	a4, a8, 0
-	l32r	a3, .LC61
-	and	a4, a4, a3
 	l32r	a3, .LC62
+	and	a4, a4, a3
+	l32r	a3, .LC63
 	or	a3, a4, a3
 	memw
 	s32i.n	a3, a8, 0
-	.loc 1 421 0
-	l32r	a3, .LC63
+	.loc 1 422 0
+	l32r	a3, .LC64
 	l32i.n	a4, a3, 4
 	l32i.n	a8, a3, 8
 	quou	a4, a4, a8
 	bltu	a2, a4, .L72
 .L74:
-	.loc 1 422 0
+	.loc 1 423 0
 	movi.n	a4, 1
 	j	.L73
 .L72:
-	.loc 1 425 0
+	.loc 1 426 0
 	call8	esp_rom_spiflash_enable_write$constprop$6
 .LVL68:
 	mov.n	a4, a10
@@ -994,7 +1003,7 @@ esp_rom_spiflash_erase_block:
 .LVL69:
 .LBB22:
 .LBB23:
-	.loc 1 429 0
+	.loc 1 430 0
 	l32i.n	a8, a3, 8
 .LBB24:
 .LBB25:
@@ -1002,7 +1011,7 @@ esp_rom_spiflash_erase_block:
 	mov.n	a10, a3
 .LBE25:
 .LBE24:
-	.loc 1 429 0
+	.loc 1 430 0
 	mull	a2, a2, a8
 .LVL70:
 .LBB27:
@@ -1011,15 +1020,15 @@ esp_rom_spiflash_erase_block:
 	call8	esp_rom_spiflash_wait_idle
 .LVL71:
 	.loc 1 132 0
-	l32r	a8, .LC64
+	l32r	a8, .LC65
 	and	a2, a2, a8
 .LVL72:
-	l32r	a8, .LC65
+	l32r	a8, .LC66
 	memw
 	s32i.n	a2, a8, 0
 	.loc 1 133 0
-	l32r	a8, .LC66
-	l32r	a2, .LC67
+	l32r	a8, .LC67
+	l32r	a2, .LC68
 	memw
 	s32i.n	a2, a8, 0
 .L75:
@@ -1036,64 +1045,64 @@ esp_rom_spiflash_erase_block:
 .LBE27:
 .LBE23:
 .LBE22:
-	.loc 1 433 0
+	.loc 1 434 0
 	mov.n	a2, a4
 	retw.n
 .LFE15:
 	.size	esp_rom_spiflash_erase_block, .-esp_rom_spiflash_erase_block
 	.section	.text.esp_rom_spiflash_erase_sector,"ax",@progbits
 	.literal_position
-	.literal .LC68, 1072963612
-	.literal .LC69, -536870913
-	.literal .LC70, 1072963616
-	.literal .LC71, 67108863
-	.literal .LC72, 1543503872
-	.literal .LC73, g_rom_spiflash_chip
-	.literal .LC74, 16777215
-	.literal .LC75, 1072963588
-	.literal .LC76, 1072963584
-	.literal .LC77, 16777216
+	.literal .LC69, 1072963612
+	.literal .LC70, -536870913
+	.literal .LC71, 1072963616
+	.literal .LC72, 67108863
+	.literal .LC73, 1543503872
+	.literal .LC74, g_rom_spiflash_chip
+	.literal .LC75, 16777215
+	.literal .LC76, 1072963588
+	.literal .LC77, 1072963584
+	.literal .LC78, 16777216
 	.align	4
 	.global	esp_rom_spiflash_erase_sector
 	.type	esp_rom_spiflash_erase_sector, @function
 esp_rom_spiflash_erase_sector:
 .LFB16:
-	.loc 1 436 0
+	.loc 1 437 0
 .LVL74:
 	entry	sp, 32
 .LCFI11:
-	.loc 1 438 0
-	l32r	a4, .LC68
-	l32r	a3, .LC69
+	.loc 1 439 0
+	l32r	a4, .LC69
+	l32r	a3, .LC70
 	memw
 	l32i.n	a5, a4, 0
 	and	a3, a5, a3
 	memw
 	s32i.n	a3, a4, 0
-	.loc 1 439 0
-	l32r	a4, .LC70
-	l32r	a3, .LC71
+	.loc 1 440 0
+	l32r	a4, .LC71
+	l32r	a3, .LC72
 	memw
 	l32i.n	a5, a4, 0
 	and	a5, a5, a3
-	l32r	a3, .LC72
+	l32r	a3, .LC73
 	or	a3, a5, a3
 	memw
 	s32i.n	a3, a4, 0
-	.loc 1 442 0
-	l32r	a3, .LC73
+	.loc 1 443 0
+	l32r	a3, .LC74
 	l32i.n	a5, a3, 4
 	l32i.n	a4, a3, 12
 	quou	a5, a5, a4
 	bltu	a2, a5, .L78
 .LVL75:
 .L80:
-	.loc 1 443 0
+	.loc 1 444 0
 	movi.n	a5, 1
 	j	.L79
 .LVL76:
 .L78:
-	.loc 1 446 0
+	.loc 1 447 0
 	call8	esp_rom_spiflash_enable_write$constprop$6
 .LVL77:
 	mov.n	a5, a10
@@ -1101,7 +1110,7 @@ esp_rom_spiflash_erase_sector:
 .LVL78:
 .LBB32:
 .LBB33:
-	.loc 1 450 0
+	.loc 1 451 0
 	l32i.n	a4, a3, 12
 	mull	a4, a2, a4
 .LVL79:
@@ -1116,17 +1125,17 @@ esp_rom_spiflash_erase_sector:
 	call8	esp_rom_spiflash_wait_idle
 .LVL81:
 	.loc 1 117 0
-	l32r	a2, .LC74
+	l32r	a2, .LC75
 	.loc 1 118 0
-	l32r	a8, .LC76
+	l32r	a8, .LC77
 	.loc 1 117 0
 	and	a4, a4, a2
 .LVL82:
-	l32r	a2, .LC75
+	l32r	a2, .LC76
 	memw
 	s32i.n	a4, a2, 0
 	.loc 1 118 0
-	l32r	a2, .LC77
+	l32r	a2, .LC78
 	memw
 	s32i.n	a2, a8, 0
 .L81:
@@ -1143,92 +1152,92 @@ esp_rom_spiflash_erase_sector:
 .LBE34:
 .LBE33:
 .LBE32:
-	.loc 1 455 0
+	.loc 1 456 0
 	mov.n	a2, a5
 	retw.n
 .LFE16:
 	.size	esp_rom_spiflash_erase_sector, .-esp_rom_spiflash_erase_sector
 	.section	.text.esp_rom_spiflash_write,"ax",@progbits
 	.literal_position
-	.literal .LC78, 1072963612
-	.literal .LC79, -536870913
-	.literal .LC80, 1072963616
-	.literal .LC81, 67108863
-	.literal .LC82, 1543503872
-	.literal .LC83, g_rom_spiflash_chip
+	.literal .LC79, 1072963612
+	.literal .LC80, -536870913
+	.literal .LC81, 1072963616
+	.literal .LC82, 67108863
+	.literal .LC83, 1543503872
+	.literal .LC84, g_rom_spiflash_chip
 	.align	4
 	.global	esp_rom_spiflash_write
 	.type	esp_rom_spiflash_write, @function
 esp_rom_spiflash_write:
 .LFB17:
-	.loc 1 458 0
+	.loc 1 459 0
 .LVL84:
 	entry	sp, 48
 .LCFI12:
-	.loc 1 464 0
-	l32r	a6, .LC78
-	l32r	a5, .LC79
+	.loc 1 465 0
+	l32r	a6, .LC79
+	l32r	a5, .LC80
 	memw
 	l32i.n	a7, a6, 0
 	and	a5, a7, a5
+	.loc 1 466 0
+	l32r	a7, .LC81
 	.loc 1 465 0
-	l32r	a7, .LC80
-	.loc 1 464 0
 	memw
 	s32i.n	a5, a6, 0
-	.loc 1 465 0
+	.loc 1 466 0
 	memw
 	l32i.n	a6, a7, 0
-	l32r	a5, .LC81
-	and	a6, a6, a5
 	l32r	a5, .LC82
+	and	a6, a6, a5
+	l32r	a5, .LC83
 	or	a5, a6, a5
 	memw
 	s32i.n	a5, a7, 0
-	.loc 1 468 0
-	l32r	a5, .LC83
+	.loc 1 469 0
+	l32r	a5, .LC84
 	add.n	a6, a4, a2
 	l32i.n	a7, a5, 4
 	bgeu	a7, a6, .L84
 .L87:
-	.loc 1 469 0
+	.loc 1 470 0
 	movi.n	a2, 1
 .LVL85:
 	retw.n
 .LVL86:
 .L84:
-	.loc 1 472 0
+	.loc 1 473 0
 	l32i.n	a7, a5, 16
 .LVL87:
-	.loc 1 473 0
+	.loc 1 474 0
 	remu	a5, a2, a7
 	sub	a5, a7, a5
 .LVL88:
-	.loc 1 474 0
-	bgeu	a4, a5, .L86
 	.loc 1 475 0
+	bgeu	a4, a5, .L86
+	.loc 1 476 0
 	mov.n	a12, a4
 	mov.n	a11, a3
 	mov.n	a10, a2
 	j	.L90
 .L86:
-	.loc 1 480 0
+	.loc 1 481 0
 	mov.n	a12, a5
 	mov.n	a11, a3
 	mov.n	a10, a2
 	call8	esp_rom_spiflash_program_page_internal$constprop$4
 .LVL89:
 	bnez.n	a10, .L87
-	.loc 1 486 0
+	.loc 1 487 0
 	sub	a8, a4, a5
 	quou	a8, a8, a7
 .LVL90:
-	.loc 1 487 0
+	.loc 1 488 0
 	mov.n	a6, a10
 	j	.L88
 .LVL91:
 .L89:
-	.loc 1 488 0
+	.loc 1 489 0
 	mov.n	a12, a7
 	addx4	a11, a11, a3
 	s32i.n	a8, sp, 0
@@ -1236,34 +1245,34 @@ esp_rom_spiflash_write:
 .LVL92:
 	l32i.n	a8, sp, 0
 	bnez.n	a10, .L87
-	.loc 1 487 0 discriminator 2
+	.loc 1 488 0 discriminator 2
 	addi.n	a6, a6, 1
 .LVL93:
-	.loc 1 492 0 discriminator 2
+	.loc 1 493 0 discriminator 2
 	add.n	a5, a5, a7
 .LVL94:
-	.loc 1 487 0 discriminator 2
+	.loc 1 488 0 discriminator 2
 	extui	a6, a6, 0, 8
 .LVL95:
 .L88:
 	srli	a11, a5, 2
 	add.n	a10, a5, a2
-	.loc 1 487 0 is_stmt 0 discriminator 1
+	.loc 1 488 0 is_stmt 0 discriminator 1
 	bltu	a6, a8, .L89
-	.loc 1 496 0 is_stmt 1
+	.loc 1 497 0 is_stmt 1
 	sub	a12, a4, a5
 	addx4	a11, a11, a3
 .LVL96:
 .L90:
 	call8	esp_rom_spiflash_program_page_internal$constprop$4
 .LVL97:
-	.loc 1 469 0
+	.loc 1 470 0
 	movi.n	a3, 1
 .LVL98:
 	movi.n	a2, 0
 .LVL99:
 	movnez	a2, a3, a10
-	.loc 1 502 0
+	.loc 1 503 0
 	retw.n
 .LFE17:
 	.size	esp_rom_spiflash_write, .-esp_rom_spiflash_write
@@ -1273,31 +1282,31 @@ esp_rom_spiflash_write:
 	.type	esp_rom_spiflash_write_encrypted, @function
 esp_rom_spiflash_write_encrypted:
 .LFB18:
-	.loc 1 505 0
+	.loc 1 506 0
 .LVL100:
 	entry	sp, 32
 .LCFI13:
 .LVL101:
-	.loc 1 509 0
+	.loc 1 510 0
 	or	a5, a2, a4
 	extui	a5, a5, 0, 5
-	.loc 1 505 0
+	.loc 1 506 0
 	mov.n	a6, a2
-	.loc 1 510 0
+	.loc 1 511 0
 	movi.n	a2, 1
 .LVL102:
-	.loc 1 509 0
+	.loc 1 510 0
 	bnez.n	a5, .L92
-	.loc 1 513 0
+	.loc 1 514 0
 	call8	esp_rom_spiflash_write_encrypted_enable
 .LVL103:
-	.loc 1 515 0
+	.loc 1 516 0
 	srli	a4, a4, 5
 .LVL104:
 	j	.L93
 .LVL105:
 .L95:
-	.loc 1 516 0
+	.loc 1 517 0
 	slli	a11, a5, 5
 	add.n	a7, a11, a6
 	mov.n	a10, a7
@@ -1307,7 +1316,7 @@ esp_rom_spiflash_write_encrypted:
 	mov.n	a2, a10
 .LVL107:
 	bnez.n	a10, .L94
-	.loc 1 520 0
+	.loc 1 521 0
 	movi.n	a12, 0x20
 	mov.n	a11, a3
 	mov.n	a10, a7
@@ -1316,102 +1325,102 @@ esp_rom_spiflash_write_encrypted:
 	mov.n	a2, a10
 .LVL109:
 	bnez.n	a10, .L94
-	.loc 1 515 0 discriminator 2
+	.loc 1 516 0 discriminator 2
 	addi.n	a5, a5, 1
 .LVL110:
 .L93:
-	.loc 1 515 0 is_stmt 0 discriminator 1
+	.loc 1 516 0 is_stmt 0 discriminator 1
 	bne	a5, a4, .L95
 	movi.n	a2, 0
 .LVL111:
 .L94:
-	.loc 1 525 0 is_stmt 1
+	.loc 1 526 0 is_stmt 1
 	call8	esp_rom_spiflash_write_encrypted_disable
 .LVL112:
 .L92:
-	.loc 1 528 0
+	.loc 1 529 0
 	retw.n
 .LFE18:
 	.size	esp_rom_spiflash_write_encrypted, .-esp_rom_spiflash_write_encrypted
 	.section	.text.esp_rom_spiflash_read,"ax",@progbits
 	.literal_position
-	.literal .LC84, 1072963712
-	.literal .LC85, 1072963592
-	.literal .LC86, 16785408
-	.literal .LC87, 1072963612
-	.literal .LC88, -134217729
-	.literal .LC89, 1879048192
-	.literal .LC90, 1072963616
-	.literal .LC91, 67108863
-	.literal .LC92, 2080374784
-	.literal .LC93, g_rom_spiflash_dummy_len_plus
-	.literal .LC94, 1072963620
-	.literal .LC95, 1879048427
-	.literal .LC97, 1342177280
-	.literal .LC99, -536870913
-	.literal .LC100, 1879048379
-	.literal .LC101, 536870912
-	.literal .LC102, -65536
-	.literal .LC104, 1879048299
-	.literal .LC106, 1879048251
-	.literal .LC107, 1879048203
-	.literal .LC108, 1543503872
-	.literal .LC109, 1879048195
-	.literal .LC110, g_rom_spiflash_chip
-	.literal .LC111, 1072963628
-	.literal .LC112, 1072963588
-	.literal .LC113, 1072963584
-	.literal .LC114, 262144
+	.literal .LC85, 1072963712
+	.literal .LC86, 1072963592
+	.literal .LC87, 16785408
+	.literal .LC88, 1072963612
+	.literal .LC89, -134217729
+	.literal .LC90, 1879048192
+	.literal .LC91, 1072963616
+	.literal .LC92, 67108863
+	.literal .LC93, 2080374784
+	.literal .LC94, g_rom_spiflash_dummy_len_plus
+	.literal .LC95, 1072963620
+	.literal .LC96, 1879048427
+	.literal .LC98, 1342177280
+	.literal .LC100, -536870913
+	.literal .LC101, 1879048379
+	.literal .LC102, 536870912
+	.literal .LC103, -65536
+	.literal .LC105, 1879048299
+	.literal .LC107, 1879048251
+	.literal .LC108, 1879048203
+	.literal .LC109, 1543503872
+	.literal .LC110, 1879048195
+	.literal .LC111, g_rom_spiflash_chip
+	.literal .LC112, 1072963628
+	.literal .LC113, 1072963588
+	.literal .LC114, 1072963584
+	.literal .LC115, 262144
 	.align	4
 	.global	esp_rom_spiflash_read
 	.type	esp_rom_spiflash_read, @function
 esp_rom_spiflash_read:
 .LFB19:
-	.loc 1 532 0
+	.loc 1 533 0
 .LVL113:
 	entry	sp, 32
 .LCFI14:
-	.loc 1 535 0
-	l32r	a5, .LC85
 	.loc 1 536 0
-	l32r	a9, .LC86
-	.loc 1 535 0
+	l32r	a5, .LC86
+	.loc 1 537 0
+	l32r	a9, .LC87
+	.loc 1 536 0
 	memw
 	l32i.n	a8, a5, 0
 .LVL114:
-	l32r	a6, .LC88
-	.loc 1 536 0
-	and	a10, a8, a9
-	l32r	a5, .LC87
-	l32r	a7, .LC93
-	bne	a10, a9, .L98
+	l32r	a6, .LC89
 	.loc 1 537 0
+	and	a10, a8, a9
+	l32r	a5, .LC88
+	l32r	a7, .LC94
+	bne	a10, a9, .L98
+	.loc 1 538 0
 	memw
 	l32i.n	a8, a5, 0
 .LVL115:
 	and	a6, a8, a6
 	memw
 	s32i.n	a6, a5, 0
-	.loc 1 538 0
+	.loc 1 539 0
 	memw
 	l32i.n	a8, a5, 0
-	l32r	a6, .LC89
+	l32r	a6, .LC90
 	or	a6, a8, a6
+	.loc 1 540 0
+	l32r	a8, .LC91
 	.loc 1 539 0
-	l32r	a8, .LC90
-	.loc 1 538 0
 	memw
 	s32i.n	a6, a5, 0
-	.loc 1 539 0
+	.loc 1 540 0
 	memw
 	l32i.n	a6, a8, 0
-	l32r	a5, .LC91
-	and	a6, a6, a5
 	l32r	a5, .LC92
+	and	a6, a6, a5
+	l32r	a5, .LC93
 	or	a5, a6, a5
 	memw
 	s32i.n	a5, a8, 0
-	.loc 1 540 0
+	.loc 1 541 0
 	l8ui	a7, a7, 1
 	memw
 	l32i.n	a5, a8, 0
@@ -1422,70 +1431,70 @@ esp_rom_spiflash_read:
 	or	a5, a7, a5
 	memw
 	s32i.n	a5, a8, 0
-	.loc 1 542 0
-	l32r	a6, .LC95
+	.loc 1 543 0
+	l32r	a6, .LC96
 	j	.L126
 .LVL116:
 .L98:
-	.loc 1 543 0
-	bbci	a8, 13, .L100
 	.loc 1 544 0
+	bbci	a8, 13, .L100
+	.loc 1 545 0
 	memw
 	l32i.n	a9, a5, 0
 	and	a6, a9, a6
 	memw
 	s32i.n	a6, a5, 0
-	.loc 1 545 0
+	.loc 1 546 0
 	memw
 	l32i.n	a9, a5, 0
-	l32r	a6, .LC97
+	l32r	a6, .LC98
 	or	a6, a9, a6
 	memw
 	s32i.n	a6, a5, 0
-	.loc 1 546 0
-	bbci	a8, 23, .L101
 	.loc 1 547 0
+	bbci	a8, 23, .L101
+	.loc 1 548 0
 	l8ui	a8, a7, 1
 .LVL117:
-	l32r	a6, .LC90
+	l32r	a6, .LC91
 	bnez.n	a8, .L102
-	.loc 1 548 0
+	.loc 1 549 0
 	memw
 	l32i.n	a8, a5, 0
-	l32r	a7, .LC99
+	l32r	a7, .LC100
 	and	a7, a8, a7
 	memw
 	s32i.n	a7, a5, 0
-	.loc 1 549 0
+	.loc 1 550 0
 	memw
 	l32i.n	a7, a6, 0
-	l32r	a5, .LC91
-	and	a7, a7, a5
 	l32r	a5, .LC92
+	and	a7, a7, a5
+	l32r	a5, .LC93
 	or	a5, a7, a5
 	memw
 	s32i.n	a5, a6, 0
-	.loc 1 550 0
-	l32r	a6, .LC100
+	.loc 1 551 0
+	l32r	a6, .LC101
 	j	.L126
 .L102:
-	.loc 1 552 0
+	.loc 1 553 0
 	memw
 	l32i.n	a9, a5, 0
-	l32r	a8, .LC101
+	l32r	a8, .LC102
 	or	a8, a9, a8
 	memw
 	s32i.n	a8, a5, 0
-	.loc 1 553 0
+	.loc 1 554 0
 	memw
 	l32i.n	a8, a6, 0
-	l32r	a5, .LC91
-	and	a8, a8, a5
 	l32r	a5, .LC92
+	and	a8, a8, a5
+	l32r	a5, .LC93
 	or	a5, a8, a5
 	memw
 	s32i.n	a5, a6, 0
-	.loc 1 554 0
+	.loc 1 555 0
 	l8ui	a8, a7, 1
 	memw
 	l32i.n	a5, a6, 0
@@ -1494,15 +1503,15 @@ esp_rom_spiflash_read:
 	and	a5, a5, a7
 	extui	a8, a8, 0, 8
 	or	a5, a8, a5
+	.loc 1 556 0
+	l32r	a7, .LC95
 	.loc 1 555 0
-	l32r	a7, .LC94
-	.loc 1 554 0
 	memw
 	s32i.n	a5, a6, 0
-	.loc 1 555 0
+	.loc 1 556 0
 	memw
 	l32i.n	a6, a7, 0
-	l32r	a5, .LC102
+	l32r	a5, .LC103
 	and	a6, a6, a5
 	movi	a5, 0xbb
 	or	a5, a6, a5
@@ -1511,44 +1520,44 @@ esp_rom_spiflash_read:
 	j	.L99
 .LVL118:
 .L101:
-	l32r	a5, .LC94
-	.loc 1 560 0
-	l32r	a6, .LC104
-	.loc 1 558 0
+	l32r	a5, .LC95
+	.loc 1 561 0
+	l32r	a6, .LC105
+	.loc 1 559 0
 	bbsi	a8, 20, .L125
 .L103:
-	.loc 1 563 0
-	l32r	a6, .LC106
-	.loc 1 561 0
+	.loc 1 564 0
+	l32r	a6, .LC107
+	.loc 1 562 0
 	bbsi	a8, 14, .L125
 .L105:
-	.loc 1 566 0
-	l32r	a6, .LC107
+	.loc 1 567 0
+	l32r	a6, .LC108
 .L125:
 	memw
 	s32i.n	a6, a5, 0
-	.loc 1 568 0
-	l32r	a6, .LC87
-	l32r	a5, .LC101
+	.loc 1 569 0
+	l32r	a6, .LC88
+	l32r	a5, .LC102
 	memw
 	l32i.n	a8, a6, 0
 .LVL119:
 	or	a5, a8, a5
+	.loc 1 570 0
+	l32r	a8, .LC91
 	.loc 1 569 0
-	l32r	a8, .LC90
-	.loc 1 568 0
 	memw
 	s32i.n	a5, a6, 0
-	.loc 1 569 0
+	.loc 1 570 0
 	memw
 	l32i.n	a6, a8, 0
-	l32r	a5, .LC91
+	l32r	a5, .LC92
 	and	a6, a6, a5
-	l32r	a5, .LC108
+	l32r	a5, .LC109
 	or	a5, a6, a5
 	memw
 	s32i.n	a5, a8, 0
-	.loc 1 570 0
+	.loc 1 571 0
 	l8ui	a7, a7, 1
 	memw
 	l32i.n	a5, a8, 0
@@ -1562,34 +1571,34 @@ esp_rom_spiflash_read:
 	j	.L99
 .LVL120:
 .L100:
-	.loc 1 573 0
+	.loc 1 574 0
 	memw
 	l32i.n	a8, a5, 0
 .LVL121:
 	and	a6, a8, a6
 	memw
 	s32i.n	a6, a5, 0
-	.loc 1 574 0
+	.loc 1 575 0
 	l8ui	a6, a7, 1
 	bnez.n	a6, .L106
-	.loc 1 575 0
+	.loc 1 576 0
 	memw
 	l32i.n	a7, a5, 0
-	l32r	a6, .LC99
+	l32r	a6, .LC100
 	and	a6, a7, a6
 	memw
 	s32i.n	a6, a5, 0
 	j	.L107
 .L106:
-	.loc 1 577 0
+	.loc 1 578 0
 	memw
 	l32i.n	a8, a5, 0
-	l32r	a6, .LC101
+	l32r	a6, .LC102
 	or	a6, a8, a6
 	memw
 	s32i.n	a6, a5, 0
-	.loc 1 578 0
-	l32r	a8, .LC90
+	.loc 1 579 0
+	l32r	a8, .LC91
 	l8ui	a7, a7, 1
 	memw
 	l32i.n	a5, a8, 0
@@ -1601,32 +1610,32 @@ esp_rom_spiflash_read:
 	memw
 	s32i.n	a5, a8, 0
 .L107:
-	.loc 1 580 0
-	l32r	a6, .LC87
-	l32r	a5, .LC97
+	.loc 1 581 0
+	l32r	a6, .LC88
+	l32r	a5, .LC98
 	memw
 	l32i.n	a7, a6, 0
 	or	a5, a7, a5
+	.loc 1 582 0
+	l32r	a7, .LC91
 	.loc 1 581 0
-	l32r	a7, .LC90
-	.loc 1 580 0
 	memw
 	s32i.n	a5, a6, 0
-	.loc 1 581 0
+	.loc 1 582 0
 	memw
 	l32i.n	a6, a7, 0
-	l32r	a5, .LC91
+	l32r	a5, .LC92
 	and	a6, a6, a5
-	l32r	a5, .LC108
+	l32r	a5, .LC109
 	or	a5, a6, a5
-	.loc 1 583 0
-	l32r	a6, .LC109
-	.loc 1 581 0
+	.loc 1 584 0
+	l32r	a6, .LC110
+	.loc 1 582 0
 	memw
 	s32i.n	a5, a7, 0
 .L126:
-	.loc 1 583 0
-	l32r	a5, .LC94
+	.loc 1 584 0
+	l32r	a5, .LC95
 	memw
 	s32i.n	a6, a5, 0
 .L99:
@@ -1634,12 +1643,12 @@ esp_rom_spiflash_read:
 .LBB38:
 .LBB39:
 	.loc 1 207 0
-	l32r	a10, .LC110
+	l32r	a10, .LC111
 	add.n	a5, a4, a2
 	l32i.n	a7, a10, 4
 .LBE39:
 .LBE38:
-	.loc 1 587 0
+	.loc 1 588 0
 	movi.n	a6, 1
 .LBB41:
 .LBB40:
@@ -1650,11 +1659,11 @@ esp_rom_spiflash_read:
 	call8	esp_rom_spiflash_wait_idle
 .LVL124:
 	.loc 1 233 0
-	l32r	a8, .LC113
-	l32r	a14, .LC114
+	l32r	a8, .LC114
+	l32r	a14, .LC115
 	.loc 1 217 0
 	movi.n	a5, 0x3f
-	l32r	a12, .LC112
+	l32r	a12, .LC113
 	.loc 1 232 0
 	movi	a13, 0x1ff
 	.loc 1 221 0
@@ -1667,7 +1676,7 @@ esp_rom_spiflash_read:
 	.loc 1 217 0
 	bge	a5, a4, .L110
 	.loc 1 219 0
-	l32r	a9, .LC111
+	l32r	a9, .LC112
 	memw
 	s32i.n	a13, a9, 0
 	.loc 1 220 0
@@ -1681,7 +1690,7 @@ esp_rom_spiflash_read:
 	memw
 	l32i.n	a7, a15, 0
 	bnez.n	a7, .L111
-	l32r	a10, .LC84
+	l32r	a10, .LC85
 	mov.n	a11, a3
 	.loc 1 224 0
 	movi.n	a9, 0x10
@@ -1708,7 +1717,7 @@ esp_rom_spiflash_read:
 .LVL130:
 .L110:
 	.loc 1 232 0
-	l32r	a2, .LC111
+	l32r	a2, .LC112
 .LVL131:
 	.loc 1 231 0
 	memw
@@ -1733,7 +1742,7 @@ esp_rom_spiflash_read:
 	extui	a4, a4, 0, 8
 	mov.n	a2, a5
 	mov.n	a5, a4
-	l32r	a4, .LC84
+	l32r	a4, .LC85
 	movnez	a5, a2, a6
 .LVL133:
 	mov.n	a2, a3
@@ -1762,133 +1771,133 @@ esp_rom_spiflash_read:
 .L124:
 .LBE40:
 .LBE41:
-	.loc 1 589 0
+	.loc 1 590 0
 	movi.n	a6, 0
 .L108:
-	.loc 1 590 0
+	.loc 1 591 0
 	mov.n	a2, a6
 	retw.n
 .LFE19:
 	.size	esp_rom_spiflash_read, .-esp_rom_spiflash_read
 	.section	.text.esp_rom_spiflash_erase_area,"ax",@progbits
 	.literal_position
-	.literal .LC116, g_rom_spiflash_chip
+	.literal .LC117, g_rom_spiflash_chip
 	.align	4
 	.global	esp_rom_spiflash_erase_area
 	.type	esp_rom_spiflash_erase_area, @function
 esp_rom_spiflash_erase_area:
 .LFB20:
-	.loc 1 593 0
+	.loc 1 594 0
 .LVL139:
 	entry	sp, 32
 .LCFI15:
-	.loc 1 603 0
+	.loc 1 604 0
 	movi.n	a10, 5
 	call8	esp_rom_spiflash_config_readmode
 .LVL140:
-	.loc 1 606 0
-	l32r	a6, .LC116
+	.loc 1 607 0
+	l32r	a6, .LC117
 	add.n	a4, a2, a3
 	l32i.n	a5, a6, 4
 	bgeu	a5, a4, .L128
 .LVL141:
 .L130:
-	.loc 1 607 0
+	.loc 1 608 0
 	movi.n	a7, 1
 	j	.L129
 .LVL142:
 .L128:
-	.loc 1 611 0
+	.loc 1 612 0
 	l32i.n	a4, a6, 12
 	remu	a4, a2, a4
 	bnez.n	a4, .L130
-	.loc 1 616 0
+	.loc 1 617 0
 	call8	esp_rom_spiflash_unlock
 .LVL143:
 	mov.n	a7, a10
 	bnez.n	a10, .L130
-	.loc 1 620 0
-	l32i.n	a4, a6, 12
 	.loc 1 621 0
-	l32i.n	a6, a6, 8
+	l32i.n	a4, a6, 12
 	.loc 1 622 0
+	l32i.n	a6, a6, 8
+	.loc 1 623 0
 	remu	a8, a3, a4
 	quou	a3, a3, a4
 .LVL144:
-	.loc 1 620 0
+	.loc 1 621 0
 	quou	a5, a2, a4
 .LVL145:
-	.loc 1 621 0
+	.loc 1 622 0
 	quou	a6, a6, a4
 .LVL146:
-	.loc 1 622 0
+	.loc 1 623 0
 	addi.n	a4, a3, 1
 	moveqz	a4, a3, a8
 .LVL147:
-	.loc 1 626 0
+	.loc 1 627 0
 	remu	a3, a5, a6
 	sub	a3, a6, a3
 .LVL148:
-	.loc 1 628 0
+	.loc 1 629 0
 	min	a3, a4, a3
 .LVL149:
 	add.n	a2, a3, a5
 .LVL150:
-	.loc 1 635 0
+	.loc 1 636 0
 	j	.L133
 .LVL151:
 .L134:
-	.loc 1 636 0
+	.loc 1 637 0
 	mov.n	a10, a5
 	call8	esp_rom_spiflash_erase_sector
 .LVL152:
 	bnez.n	a10, .L130
-	.loc 1 639 0
+	.loc 1 640 0
 	addi.n	a5, a5, 1
 .LVL153:
 .L133:
-	.loc 1 635 0
+	.loc 1 636 0
 	bne	a5, a2, .L134
-	.loc 1 632 0
+	.loc 1 633 0
 	sub	a3, a4, a3
 .LVL154:
 	j	.L135
 .LVL155:
 .L136:
-	.loc 1 643 0
+	.loc 1 644 0
 	quou	a10, a2, a6
 	call8	esp_rom_spiflash_erase_block
 .LVL156:
 	bnez.n	a10, .L130
-	.loc 1 646 0
+	.loc 1 647 0
 	add.n	a2, a2, a6
 .LVL157:
 	sub	a3, a3, a6
 .LVL158:
 .L135:
-	.loc 1 642 0
+	.loc 1 643 0
 	bltu	a6, a3, .L136
 	add.n	a2, a2, a3
 .LVL159:
 	j	.L137
 .LVL160:
 .L138:
-	.loc 1 652 0
+	.loc 1 653 0
 	call8	esp_rom_spiflash_erase_sector
 .LVL161:
 	bnez.n	a10, .L130
 .LVL162:
-	.loc 1 656 0
+	.loc 1 657 0
 	addi.n	a3, a3, -1
 .LVL163:
 .L137:
 	sub	a10, a2, a3
 .LVL164:
-	.loc 1 651 0
+	.loc 1 652 0
 	bgei	a3, 1, .L138
 .LVL165:
 .L129:
-	.loc 1 660 0
+	.loc 1 661 0
 	mov.n	a2, a7
 	retw.n
 .LFE20:
@@ -2215,7 +2224,7 @@ CSWTCH$38:
 	.byte	0x4
 	.4byte	0x21
 	.byte	0x4
-	.byte	0x7a
+	.byte	0x80
 	.4byte	0xef
 	.uleb128 0x6
 	.4byte	.LASF18
@@ -2239,13 +2248,13 @@ CSWTCH$38:
 	.uleb128 0x3
 	.4byte	.LASF24
 	.byte	0x4
-	.byte	0x81
+	.byte	0x87
 	.4byte	0xbe
 	.uleb128 0x5
 	.byte	0x4
 	.4byte	0x21
 	.byte	0x4
-	.byte	0x83
+	.byte	0x89
 	.4byte	0x119
 	.uleb128 0x6
 	.4byte	.LASF25
@@ -2260,54 +2269,54 @@ CSWTCH$38:
 	.uleb128 0x3
 	.4byte	.LASF28
 	.byte	0x4
-	.byte	0x87
+	.byte	0x8d
 	.4byte	0xfa
 	.uleb128 0x7
 	.byte	0x18
 	.byte	0x4
-	.byte	0x89
+	.byte	0x8f
 	.4byte	0x175
 	.uleb128 0x8
 	.4byte	.LASF29
 	.byte	0x4
-	.byte	0x8a
+	.byte	0x90
 	.4byte	0x90
 	.byte	0
 	.uleb128 0x8
 	.4byte	.LASF30
 	.byte	0x4
-	.byte	0x8b
+	.byte	0x91
 	.4byte	0x90
 	.byte	0x4
 	.uleb128 0x8
 	.4byte	.LASF31
 	.byte	0x4
-	.byte	0x8c
+	.byte	0x92
 	.4byte	0x90
 	.byte	0x8
 	.uleb128 0x8
 	.4byte	.LASF32
 	.byte	0x4
-	.byte	0x8d
+	.byte	0x93
 	.4byte	0x90
 	.byte	0xc
 	.uleb128 0x8
 	.4byte	.LASF33
 	.byte	0x4
-	.byte	0x8e
+	.byte	0x94
 	.4byte	0x90
 	.byte	0x10
 	.uleb128 0x8
 	.4byte	.LASF34
 	.byte	0x4
-	.byte	0x8f
+	.byte	0x95
 	.4byte	0x90
 	.byte	0x14
 	.byte	0
 	.uleb128 0x3
 	.4byte	.LASF35
 	.byte	0x4
-	.byte	0x90
+	.byte	0x96
 	.4byte	0x124
 	.uleb128 0x9
 	.4byte	.LASF46
@@ -2366,27 +2375,27 @@ CSWTCH$38:
 	.uleb128 0xf
 	.4byte	.LASF43
 	.byte	0x1
-	.2byte	0x19e
+	.2byte	0x19f
 	.4byte	0x119
 	.byte	0x1
 	.4byte	0x211
 	.uleb128 0x10
 	.4byte	.LASF42
 	.byte	0x1
-	.2byte	0x19e
+	.2byte	0x19f
 	.4byte	0x90
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LASF44
 	.byte	0x1
-	.2byte	0x1b3
+	.2byte	0x1b4
 	.4byte	0x119
 	.byte	0x1
 	.4byte	0x22f
 	.uleb128 0x10
 	.4byte	.LASF45
 	.byte	0x1
-	.2byte	0x1b3
+	.2byte	0x1b4
 	.4byte	0x90
 	.byte	0
 	.uleb128 0x9
@@ -2893,7 +2902,7 @@ CSWTCH$38:
 	.uleb128 0x23
 	.4byte	.LASF64
 	.byte	0x1
-	.2byte	0x15d
+	.2byte	0x15e
 	.4byte	0x119
 	.4byte	.LFB12
 	.4byte	.LFE12-.LFB12
@@ -2903,7 +2912,7 @@ CSWTCH$38:
 	.uleb128 0x27
 	.4byte	.LASF57
 	.byte	0x1
-	.2byte	0x15f
+	.2byte	0x160
 	.4byte	0x90
 	.uleb128 0x2
 	.byte	0x91
@@ -2962,7 +2971,7 @@ CSWTCH$38:
 	.uleb128 0x23
 	.4byte	.LASF66
 	.byte	0x1
-	.2byte	0x174
+	.2byte	0x175
 	.4byte	0x119
 	.4byte	.LFB13
 	.4byte	.LFE13-.LFB13
@@ -2972,13 +2981,13 @@ CSWTCH$38:
 	.uleb128 0x29
 	.4byte	.LASF67
 	.byte	0x1
-	.2byte	0x174
+	.2byte	0x175
 	.4byte	0xef
 	.4byte	.LLST14
 	.uleb128 0x2a
 	.4byte	.LASF65
 	.byte	0x1
-	.2byte	0x176
+	.2byte	0x177
 	.4byte	0x90
 	.4byte	.LLST15
 	.uleb128 0x2b
@@ -2986,7 +2995,7 @@ CSWTCH$38:
 	.4byte	.LBB8
 	.4byte	.Ldebug_ranges0+0
 	.byte	0x1
-	.2byte	0x18c
+	.2byte	0x18d
 	.uleb128 0x1e
 	.4byte	0x6ab
 	.4byte	.LLST16
@@ -2995,7 +3004,7 @@ CSWTCH$38:
 	.uleb128 0x23
 	.4byte	.LASF68
 	.byte	0x1
-	.2byte	0x191
+	.2byte	0x192
 	.4byte	0x119
 	.4byte	.LFB14
 	.4byte	.LFE14-.LFB14
@@ -3007,7 +3016,7 @@ CSWTCH$38:
 	.4byte	.LBB16
 	.4byte	.LBE16-.LBB16
 	.byte	0x1
-	.2byte	0x197
+	.2byte	0x198
 	.4byte	0x75e
 	.uleb128 0x1c
 	.4byte	0x23f
@@ -3052,7 +3061,7 @@ CSWTCH$38:
 	.4byte	.LBB24
 	.4byte	.Ldebug_ranges0+0x20
 	.byte	0x1
-	.2byte	0x1ad
+	.2byte	0x1ae
 	.uleb128 0x1c
 	.4byte	0x282
 	.uleb128 0x1e
@@ -3107,7 +3116,7 @@ CSWTCH$38:
 	.4byte	.LBB34
 	.4byte	.LBE34-.LBB34
 	.byte	0x1
-	.2byte	0x1c2
+	.2byte	0x1c3
 	.uleb128 0x1c
 	.4byte	0x25b
 	.uleb128 0x1e
@@ -3143,7 +3152,7 @@ CSWTCH$38:
 	.uleb128 0x23
 	.4byte	.LASF69
 	.byte	0x1
-	.2byte	0x1c9
+	.2byte	0x1ca
 	.4byte	0x119
 	.4byte	.LFB17
 	.4byte	.LFE17-.LFB17
@@ -3153,46 +3162,46 @@ CSWTCH$38:
 	.uleb128 0x29
 	.4byte	.LASF70
 	.byte	0x1
-	.2byte	0x1c9
+	.2byte	0x1ca
 	.4byte	0x90
 	.4byte	.LLST23
 	.uleb128 0x29
 	.4byte	.LASF71
 	.byte	0x1
-	.2byte	0x1c9
+	.2byte	0x1ca
 	.4byte	0x935
 	.4byte	.LLST24
 	.uleb128 0x2f
 	.string	"len"
 	.byte	0x1
-	.2byte	0x1c9
+	.2byte	0x1ca
 	.4byte	0x85
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x27
 	.4byte	.LASF33
 	.byte	0x1
-	.2byte	0x1cb
+	.2byte	0x1cc
 	.4byte	0x90
 	.uleb128 0x1
 	.byte	0x57
 	.uleb128 0x27
 	.4byte	.LASF72
 	.byte	0x1
-	.2byte	0x1cc
+	.2byte	0x1cd
 	.4byte	0x90
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x2a
 	.4byte	.LASF73
 	.byte	0x1
-	.2byte	0x1cc
+	.2byte	0x1cd
 	.4byte	0x90
 	.4byte	.LLST25
 	.uleb128 0x30
 	.string	"i"
 	.byte	0x1
-	.2byte	0x1cd
+	.2byte	0x1ce
 	.4byte	0x7a
 	.4byte	.LLST26
 	.uleb128 0x1d
@@ -3254,7 +3263,7 @@ CSWTCH$38:
 	.uleb128 0x23
 	.4byte	.LASF74
 	.byte	0x1
-	.2byte	0x1f8
+	.2byte	0x1f9
 	.4byte	0x119
 	.4byte	.LFB18
 	.4byte	.LFE18-.LFB18
@@ -3264,32 +3273,32 @@ CSWTCH$38:
 	.uleb128 0x29
 	.4byte	.LASF54
 	.byte	0x1
-	.2byte	0x1f8
+	.2byte	0x1f9
 	.4byte	0x90
 	.4byte	.LLST27
 	.uleb128 0x25
 	.4byte	.LASF75
 	.byte	0x1
-	.2byte	0x1f8
+	.2byte	0x1f9
 	.4byte	0x1ed
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x24
 	.string	"len"
 	.byte	0x1
-	.2byte	0x1f8
+	.2byte	0x1f9
 	.4byte	0x90
 	.4byte	.LLST28
 	.uleb128 0x30
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x1fa
+	.2byte	0x1fb
 	.4byte	0x119
 	.4byte	.LLST29
 	.uleb128 0x30
 	.string	"i"
 	.byte	0x1
-	.2byte	0x1fb
+	.2byte	0x1fc
 	.4byte	0x90
 	.4byte	.LLST30
 	.uleb128 0x22
@@ -3347,7 +3356,7 @@ CSWTCH$38:
 	.uleb128 0x23
 	.4byte	.LASF76
 	.byte	0x1
-	.2byte	0x213
+	.2byte	0x214
 	.4byte	0x119
 	.4byte	.LFB19
 	.4byte	.LFE19-.LFB19
@@ -3357,25 +3366,25 @@ CSWTCH$38:
 	.uleb128 0x29
 	.4byte	.LASF70
 	.byte	0x1
-	.2byte	0x213
+	.2byte	0x214
 	.4byte	0x90
 	.4byte	.LLST31
 	.uleb128 0x29
 	.4byte	.LASF77
 	.byte	0x1
-	.2byte	0x213
+	.2byte	0x214
 	.4byte	0x1ed
 	.4byte	.LLST32
 	.uleb128 0x24
 	.string	"len"
 	.byte	0x1
-	.2byte	0x213
+	.2byte	0x214
 	.4byte	0x85
 	.4byte	.LLST33
 	.uleb128 0x2a
 	.4byte	.LASF65
 	.byte	0x1
-	.2byte	0x216
+	.2byte	0x217
 	.4byte	0x90
 	.4byte	.LLST34
 	.uleb128 0x2b
@@ -3383,7 +3392,7 @@ CSWTCH$38:
 	.4byte	.LBB38
 	.4byte	.Ldebug_ranges0+0x38
 	.byte	0x1
-	.2byte	0x24a
+	.2byte	0x24b
 	.uleb128 0x1c
 	.4byte	0x2d3
 	.uleb128 0x1e
@@ -3418,7 +3427,7 @@ CSWTCH$38:
 	.uleb128 0x23
 	.4byte	.LASF78
 	.byte	0x1
-	.2byte	0x250
+	.2byte	0x251
 	.4byte	0x119
 	.4byte	.LFB20
 	.4byte	.LFE20-.LFB20
@@ -3428,37 +3437,37 @@ CSWTCH$38:
 	.uleb128 0x29
 	.4byte	.LASF79
 	.byte	0x1
-	.2byte	0x250
+	.2byte	0x251
 	.4byte	0x90
 	.4byte	.LLST42
 	.uleb128 0x29
 	.4byte	.LASF80
 	.byte	0x1
-	.2byte	0x250
+	.2byte	0x251
 	.4byte	0x90
 	.4byte	.LLST43
 	.uleb128 0x2a
 	.4byte	.LASF81
 	.byte	0x1
-	.2byte	0x252
+	.2byte	0x253
 	.4byte	0x85
 	.4byte	.LLST44
 	.uleb128 0x2a
 	.4byte	.LASF82
 	.byte	0x1
-	.2byte	0x253
+	.2byte	0x254
 	.4byte	0x85
 	.4byte	.LLST45
 	.uleb128 0x2a
 	.4byte	.LASF83
 	.byte	0x1
-	.2byte	0x254
+	.2byte	0x255
 	.4byte	0x90
 	.4byte	.LLST46
 	.uleb128 0x2a
 	.4byte	.LASF84
 	.byte	0x1
-	.2byte	0x255
+	.2byte	0x256
 	.4byte	0x90
 	.4byte	.LLST47
 	.uleb128 0x1d
@@ -3528,22 +3537,22 @@ CSWTCH$38:
 	.4byte	.LASF87
 	.4byte	.LASF87
 	.byte	0x4
-	.2byte	0x114
+	.2byte	0x11a
 	.uleb128 0x36
 	.4byte	.LASF88
 	.4byte	.LASF88
 	.byte	0x4
-	.2byte	0x1c9
+	.2byte	0x1cf
 	.uleb128 0x36
 	.4byte	.LASF89
 	.4byte	.LASF89
 	.byte	0x4
-	.2byte	0x1d7
+	.2byte	0x1dd
 	.uleb128 0x36
 	.4byte	.LASF90
 	.4byte	.LASF90
 	.byte	0x4
-	.2byte	0x1e1
+	.2byte	0x1e7
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:

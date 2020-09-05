@@ -7,7 +7,7 @@
 	.global	ipaddr_aton
 	.type	ipaddr_aton, @function
 ipaddr_aton:
-.LFB18:
+.LFB27:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/ip.c"
 	.loc 1 81 0
 .LVL0:
@@ -72,14 +72,14 @@ ipaddr_aton:
 	mov.n	a2, a10
 .LVL8:
 	retw.n
-.LFE18:
+.LFE27:
 	.size	ipaddr_aton, .-ipaddr_aton
 	.section	.text.ip_input,"ax",@progbits
 	.align	4
 	.global	ip_input
 	.type	ip_input, @function
 ip_input:
-.LFB19:
+.LFB28:
 	.loc 1 112 0
 .LVL9:
 	entry	sp, 32
@@ -111,7 +111,7 @@ ip_input:
 .L17:
 	.loc 1 120 0
 	retw.n
-.LFE19:
+.LFE28:
 	.size	ip_input, .-ip_input
 	.global	ip_addr_any_type
 	.section	.rodata.ip_addr_any_type,"a",@progbits
@@ -145,10 +145,10 @@ ip_addr_any_type:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI0-.LFB18
+	.4byte	.LCFI0-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -157,10 +157,10 @@ ip_addr_any_type:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI1-.LFB19
+	.4byte	.LCFI1-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1202,8 +1202,8 @@ ip_addr_any_type:
 	.byte	0x1
 	.byte	0x50
 	.4byte	0x33
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x8a6
@@ -1259,8 +1259,8 @@ ip_addr_any_type:
 	.byte	0x1
 	.byte	0x6f
 	.4byte	0x1d7
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x904
@@ -1821,7 +1821,7 @@ ip_addr_any_type:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL8
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1861,7 +1861,7 @@ ip_addr_any_type:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL13-1
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1877,10 +1877,10 @@ ip_addr_any_type:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -1891,10 +1891,10 @@ ip_addr_any_type:
 	.4byte	.LBE3
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB19
-	.4byte	.LFE19
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB28
+	.4byte	.LFE28
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

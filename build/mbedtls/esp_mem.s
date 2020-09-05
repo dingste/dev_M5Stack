@@ -1,7 +1,7 @@
 	.file	"esp_mem.c"
 	.text
 .Ltext0:
-	.section	.iram1,"ax",@progbits
+	.section	.iram1.0,"ax",@progbits
 	.literal_position
 	.literal .LC0, 2052
 	.align	4
@@ -10,32 +10,33 @@
 esp_mbedtls_mem_calloc:
 .LFB0:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/esp_mem.c"
-	.loc 1 22 0
+	.loc 1 23 0
 .LVL0:
 	entry	sp, 32
 .LCFI0:
-	.loc 1 24 0
+	.loc 1 25 0
 	l32r	a12, .LC0
 	mov.n	a11, a3
 	mov.n	a10, a2
 	call8	heap_caps_calloc
 .LVL1:
-	.loc 1 30 0
+	.loc 1 31 0
 	mov.n	a2, a10
 .LVL2:
 	retw.n
 .LFE0:
 	.size	esp_mbedtls_mem_calloc, .-esp_mbedtls_mem_calloc
+	.section	.iram1.1,"ax",@progbits
 	.align	4
 	.global	esp_mbedtls_mem_free
 	.type	esp_mbedtls_mem_free, @function
 esp_mbedtls_mem_free:
 .LFB1:
-	.loc 1 33 0
+	.loc 1 34 0
 .LVL3:
 	entry	sp, 32
 .LCFI1:
-	.loc 1 34 0
+	.loc 1 35 0
 	mov.n	a10, a2
 	call8	heap_caps_free
 .LVL4:
@@ -156,7 +157,7 @@ esp_mbedtls_mem_free:
 	.uleb128 0x6
 	.4byte	.LASF17
 	.byte	0x1
-	.byte	0x15
+	.byte	0x16
 	.4byte	0x72
 	.4byte	.LFB0
 	.4byte	.LFE0-.LFB0
@@ -166,13 +167,13 @@ esp_mbedtls_mem_free:
 	.uleb128 0x7
 	.string	"n"
 	.byte	0x1
-	.byte	0x15
+	.byte	0x16
 	.4byte	0x59
 	.4byte	.LLST0
 	.uleb128 0x8
 	.4byte	.LASF11
 	.byte	0x1
-	.byte	0x15
+	.byte	0x16
 	.4byte	0x59
 	.uleb128 0x1
 	.byte	0x53
@@ -202,7 +203,7 @@ esp_mbedtls_mem_free:
 	.uleb128 0xb
 	.4byte	.LASF18
 	.byte	0x1
-	.byte	0x20
+	.byte	0x21
 	.4byte	.LFB1
 	.4byte	.LFE1-.LFB1
 	.uleb128 0x1
@@ -211,7 +212,7 @@ esp_mbedtls_mem_free:
 	.uleb128 0xc
 	.string	"ptr"
 	.byte	0x1
-	.byte	0x20
+	.byte	0x21
 	.4byte	0x72
 	.uleb128 0x1
 	.byte	0x52

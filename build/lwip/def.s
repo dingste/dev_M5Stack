@@ -6,7 +6,7 @@
 	.global	lwip_htons
 	.type	lwip_htons, @function
 lwip_htons:
-.LFB18:
+.LFB27:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/def.c"
 	.loc 1 77 0
 .LVL0:
@@ -22,7 +22,7 @@ lwip_htons:
 	.loc 1 79 0
 	extui	a2, a2, 0, 16
 	retw.n
-.LFE18:
+.LFE27:
 	.size	lwip_htons, .-lwip_htons
 	.section	.text.lwip_htonl,"ax",@progbits
 	.literal_position
@@ -32,7 +32,7 @@ lwip_htons:
 	.global	lwip_htonl
 	.type	lwip_htonl, @function
 lwip_htonl:
-.LFB19:
+.LFB28:
 	.loc 1 91 0
 .LVL2:
 	entry	sp, 32
@@ -52,7 +52,7 @@ lwip_htonl:
 	.loc 1 93 0
 	or	a2, a8, a2
 	retw.n
-.LFE19:
+.LFE28:
 	.size	lwip_htonl, .-lwip_htonl
 	.section	.text.lwip_strnstr,"ax",@progbits
 	.literal_position
@@ -60,7 +60,7 @@ lwip_htonl:
 	.global	lwip_strnstr
 	.type	lwip_strnstr, @function
 lwip_strnstr:
-.LFB20:
+.LFB29:
 	.loc 1 106 0
 .LVL4:
 	entry	sp, 32
@@ -114,14 +114,14 @@ lwip_strnstr:
 .L4:
 	.loc 1 118 0
 	retw.n
-.LFE20:
+.LFE29:
 	.size	lwip_strnstr, .-lwip_strnstr
 	.section	.text.lwip_stricmp,"ax",@progbits
 	.align	4
 	.global	lwip_stricmp
 	.type	lwip_stricmp, @function
 lwip_stricmp:
-.LFB21:
+.LFB30:
 	.loc 1 129 0
 .LVL14:
 	entry	sp, 32
@@ -181,14 +181,14 @@ lwip_stricmp:
 .LBE5:
 	.loc 1 153 0
 	retw.n
-.LFE21:
+.LFE30:
 	.size	lwip_stricmp, .-lwip_stricmp
 	.section	.text.lwip_strnicmp,"ax",@progbits
 	.align	4
 	.global	lwip_strnicmp
 	.type	lwip_strnicmp, @function
 lwip_strnicmp:
-.LFB22:
+.LFB31:
 	.loc 1 164 0
 .LVL27:
 	entry	sp, 32
@@ -252,7 +252,7 @@ lwip_strnicmp:
 .LBE9:
 	.loc 1 188 0
 	retw.n
-.LFE22:
+.LFE31:
 	.size	lwip_strnicmp, .-lwip_strnicmp
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC5:
@@ -265,7 +265,7 @@ lwip_strnicmp:
 	.global	lwip_itoa
 	.type	lwip_itoa, @function
 lwip_itoa:
-.LFB23:
+.LFB32:
 	.loc 1 199 0
 .LVL39:
 	entry	sp, 32
@@ -339,7 +339,7 @@ lwip_itoa:
 	bltu	a2, a8, .L35
 	.loc 1 221 0
 	retw.n
-.LFE23:
+.LFE32:
 	.size	lwip_itoa, .-lwip_itoa
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -360,10 +360,10 @@ lwip_itoa:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI0-.LFB18
+	.4byte	.LCFI0-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -372,10 +372,10 @@ lwip_itoa:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI1-.LFB19
+	.4byte	.LCFI1-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -384,10 +384,10 @@ lwip_itoa:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI2-.LFB20
+	.4byte	.LCFI2-.LFB29
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -396,10 +396,10 @@ lwip_itoa:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI3-.LFB21
+	.4byte	.LCFI3-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -408,10 +408,10 @@ lwip_itoa:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI4-.LFB22
+	.4byte	.LCFI4-.LFB31
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -420,10 +420,10 @@ lwip_itoa:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI5-.LFB23
+	.4byte	.LCFI5-.LFB32
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -543,8 +543,8 @@ lwip_itoa:
 	.byte	0x1
 	.byte	0x4c
 	.4byte	0xb6
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xfa
@@ -560,8 +560,8 @@ lwip_itoa:
 	.byte	0x1
 	.byte	0x5a
 	.4byte	0xc1
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x121
@@ -577,8 +577,8 @@ lwip_itoa:
 	.byte	0x1
 	.byte	0x69
 	.4byte	0x9e
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1ae
@@ -653,8 +653,8 @@ lwip_itoa:
 	.byte	0x1
 	.byte	0x80
 	.4byte	0x49
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x230
@@ -707,8 +707,8 @@ lwip_itoa:
 	.byte	0x1
 	.byte	0xa3
 	.4byte	0x49
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2c1
@@ -766,8 +766,8 @@ lwip_itoa:
 	.4byte	.LASF42
 	.byte	0x1
 	.byte	0xc6
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x34a
@@ -1134,7 +1134,7 @@ lwip_itoa:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL1
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1148,7 +1148,7 @@ lwip_itoa:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL3
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1162,7 +1162,7 @@ lwip_itoa:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL8
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1176,7 +1176,7 @@ lwip_itoa:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL7
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1306,7 +1306,7 @@ lwip_itoa:
 	.byte	0x72
 	.sleb128 0
 	.4byte	.LVL26
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -1323,7 +1323,7 @@ lwip_itoa:
 	.byte	0x73
 	.sleb128 -1
 	.4byte	.LVL25
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x2
 	.byte	0x73
 	.sleb128 0
@@ -1335,7 +1335,7 @@ lwip_itoa:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL25
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -1379,7 +1379,7 @@ lwip_itoa:
 	.2byte	0x1
 	.byte	0x59
 	.4byte	.LVL38
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x3
 	.byte	0x79
 	.sleb128 1
@@ -1450,7 +1450,7 @@ lwip_itoa:
 	.byte	0x79
 	.sleb128 -1
 	.4byte	.LVL38
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x2
 	.byte	0x79
 	.sleb128 0
@@ -1468,7 +1468,7 @@ lwip_itoa:
 	.byte	0x73
 	.sleb128 -1
 	.4byte	.LVL38
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x2
 	.byte	0x73
 	.sleb128 0
@@ -1480,7 +1480,7 @@ lwip_itoa:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL38
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -1514,7 +1514,7 @@ lwip_itoa:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL48
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1559,7 +1559,7 @@ lwip_itoa:
 	.2byte	0x1
 	.byte	0x5b
 	.4byte	.LVL47
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -1576,7 +1576,7 @@ lwip_itoa:
 	.sleb128 1
 	.byte	0x9f
 	.4byte	.LVL52
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -1613,18 +1613,18 @@ lwip_itoa:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -1645,18 +1645,18 @@ lwip_itoa:
 	.4byte	.LBE9
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB23
-	.4byte	.LFE23
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB28
+	.4byte	.LFE28
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB31
+	.4byte	.LFE31
+	.4byte	.LFB32
+	.4byte	.LFE32
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

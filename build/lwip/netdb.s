@@ -3,17 +3,17 @@
 .Ltext0:
 	.section	.text.lwip_gethostbyname,"ax",@progbits
 	.literal_position
-	.literal .LC0, s_hostent$6734
+	.literal .LC0, s_hostent$6798
 	.literal .LC1, h_errno
-	.literal .LC2, s_hostent_addr$6736
-	.literal .LC3, s_phostent_addr$6737
-	.literal .LC4, s_hostname$6738
-	.literal .LC5, s_aliases$6735
+	.literal .LC2, s_hostent_addr$6800
+	.literal .LC3, s_phostent_addr$6801
+	.literal .LC4, s_hostname$6802
+	.literal .LC5, s_aliases$6799
 	.align	4
 	.global	lwip_gethostbyname
 	.type	lwip_gethostbyname, @function
 lwip_gethostbyname:
-.LFB36:
+.LFB45:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/api/netdb.c"
 	.loc 1 88 0
 .LVL0:
@@ -89,14 +89,14 @@ lwip_gethostbyname:
 	s32i.n	a4, a2, 16
 	.loc 1 143 0
 	retw.n
-.LFE36:
+.LFE45:
 	.size	lwip_gethostbyname, .-lwip_gethostbyname
 	.section	.text.lwip_gethostbyname_r,"ax",@progbits
 	.align	4
 	.global	lwip_gethostbyname_r
 	.type	lwip_gethostbyname_r, @function
 lwip_gethostbyname_r:
-.LFB37:
+.LFB46:
 	.loc 1 164 0
 .LVL10:
 	entry	sp, 64
@@ -229,14 +229,14 @@ lwip_gethostbyname_r:
 	mov.n	a2, a5
 	.loc 1 226 0
 	retw.n
-.LFE37:
+.LFE46:
 	.size	lwip_gethostbyname_r, .-lwip_gethostbyname_r
 	.section	.text.lwip_freeaddrinfo,"ax",@progbits
 	.align	4
 	.global	lwip_freeaddrinfo
 	.type	lwip_freeaddrinfo, @function
 lwip_freeaddrinfo:
-.LFB38:
+.LFB47:
 	.loc 1 237 0
 .LVL29:
 	entry	sp, 32
@@ -258,7 +258,7 @@ lwip_freeaddrinfo:
 	bnez.n	a2, .L16
 	.loc 1 245 0
 	retw.n
-.LFE38:
+.LFE47:
 	.size	lwip_freeaddrinfo, .-lwip_freeaddrinfo
 	.section	.text.lwip_getaddrinfo,"ax",@progbits
 	.literal_position
@@ -270,7 +270,7 @@ lwip_freeaddrinfo:
 	.global	lwip_getaddrinfo
 	.type	lwip_getaddrinfo, @function
 lwip_getaddrinfo:
-.LFB39:
+.LFB48:
 	.loc 1 271 0
 .LVL32:
 	entry	sp, 80
@@ -617,36 +617,36 @@ lwip_getaddrinfo:
 	.loc 1 426 0
 	mov.n	a2, a9
 	retw.n
-.LFE39:
+.LFE48:
 	.size	lwip_getaddrinfo, .-lwip_getaddrinfo
-	.section	.bss.s_aliases$6735,"aw",@nobits
+	.section	.bss.s_aliases$6799,"aw",@nobits
 	.align	4
-	.type	s_aliases$6735, @object
-	.size	s_aliases$6735, 4
-s_aliases$6735:
+	.type	s_aliases$6799, @object
+	.size	s_aliases$6799, 4
+s_aliases$6799:
 	.zero	4
-	.section	.bss.s_hostent$6734,"aw",@nobits
+	.section	.bss.s_hostent$6798,"aw",@nobits
 	.align	4
-	.type	s_hostent$6734, @object
-	.size	s_hostent$6734, 20
-s_hostent$6734:
+	.type	s_hostent$6798, @object
+	.size	s_hostent$6798, 20
+s_hostent$6798:
 	.zero	20
-	.section	.bss.s_hostname$6738,"aw",@nobits
-	.type	s_hostname$6738, @object
-	.size	s_hostname$6738, 257
-s_hostname$6738:
+	.section	.bss.s_hostname$6802,"aw",@nobits
+	.type	s_hostname$6802, @object
+	.size	s_hostname$6802, 257
+s_hostname$6802:
 	.zero	257
-	.section	.bss.s_phostent_addr$6737,"aw",@nobits
+	.section	.bss.s_phostent_addr$6801,"aw",@nobits
 	.align	4
-	.type	s_phostent_addr$6737, @object
-	.size	s_phostent_addr$6737, 8
-s_phostent_addr$6737:
+	.type	s_phostent_addr$6801, @object
+	.size	s_phostent_addr$6801, 8
+s_phostent_addr$6801:
 	.zero	8
-	.section	.bss.s_hostent_addr$6736,"aw",@nobits
+	.section	.bss.s_hostent_addr$6800,"aw",@nobits
 	.align	4
-	.type	s_hostent_addr$6736, @object
-	.size	s_hostent_addr$6736, 20
-s_hostent_addr$6736:
+	.type	s_hostent_addr$6800, @object
+	.size	s_hostent_addr$6800, 20
+s_hostent_addr$6800:
 	.zero	20
 	.comm	h_errno,4,4
 	.section	.debug_frame,"",@progbits
@@ -668,10 +668,10 @@ s_hostent_addr$6736:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.byte	0x4
-	.4byte	.LCFI0-.LFB36
+	.4byte	.LCFI0-.LFB45
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -680,10 +680,10 @@ s_hostent_addr$6736:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.byte	0x4
-	.4byte	.LCFI1-.LFB37
+	.4byte	.LCFI1-.LFB46
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -692,10 +692,10 @@ s_hostent_addr$6736:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI2-.LFB38
+	.4byte	.LCFI2-.LFB47
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -704,10 +704,10 @@ s_hostent_addr$6736:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI3-.LFB39
+	.4byte	.LCFI3-.LFB48
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -883,7 +883,7 @@ s_hostent_addr$6736:
 	.uleb128 0x2
 	.4byte	.LASF23
 	.byte	0x5
-	.byte	0x35
+	.byte	0x39
 	.4byte	0xad
 	.uleb128 0x9
 	.4byte	.LASF25
@@ -1471,8 +1471,8 @@ s_hostent_addr$6736:
 	.byte	0x1
 	.byte	0x57
 	.4byte	0x6c7
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x6c7
@@ -1503,7 +1503,7 @@ s_hostent_addr$6736:
 	.4byte	0x441
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	s_hostent$6734
+	.4byte	s_hostent$6798
 	.uleb128 0x16
 	.4byte	.LASF124
 	.byte	0x1
@@ -1511,7 +1511,7 @@ s_hostent_addr$6736:
 	.4byte	0xb4
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	s_aliases$6735
+	.4byte	s_aliases$6799
 	.uleb128 0x16
 	.4byte	.LASF125
 	.byte	0x1
@@ -1519,7 +1519,7 @@ s_hostent_addr$6736:
 	.4byte	0x204
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	s_hostent_addr$6736
+	.4byte	s_hostent_addr$6800
 	.uleb128 0x16
 	.4byte	.LASF126
 	.byte	0x1
@@ -1527,7 +1527,7 @@ s_hostent_addr$6736:
 	.4byte	0x5b9
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	s_phostent_addr$6737
+	.4byte	s_phostent_addr$6801
 	.uleb128 0x16
 	.4byte	.LASF127
 	.byte	0x1
@@ -1535,7 +1535,7 @@ s_hostent_addr$6736:
 	.4byte	0x6cd
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	s_hostname$6738
+	.4byte	s_hostname$6802
 	.uleb128 0x17
 	.4byte	.LVL1
 	.4byte	0xa78
@@ -1620,8 +1620,8 @@ s_hostent_addr$6736:
 	.byte	0x1
 	.byte	0xa2
 	.4byte	0x3e
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x7df
@@ -1758,8 +1758,8 @@ s_hostent_addr$6736:
 	.4byte	.LASF158
 	.byte	0x1
 	.byte	0xec
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x833
@@ -1790,8 +1790,8 @@ s_hostent_addr$6736:
 	.byte	0x1
 	.2byte	0x10d
 	.4byte	0x3e
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xa2f
@@ -2751,7 +2751,7 @@ s_hostent_addr$6736:
 	.2byte	0x1
 	.byte	0x5b
 	.4byte	.LVL8-1
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2769,10 +2769,10 @@ s_hostent_addr$6736:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL9
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x5
 	.byte	0x3
-	.4byte	s_aliases$6735
+	.4byte	s_aliases$6799
 	.4byte	0
 	.4byte	0
 .LLST2:
@@ -2814,7 +2814,7 @@ s_hostent_addr$6736:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL28
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2834,7 +2834,7 @@ s_hostent_addr$6736:
 	.sleb128 -3
 	.byte	0x9f
 	.4byte	.LVL21
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2848,7 +2848,7 @@ s_hostent_addr$6736:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL19
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2888,7 +2888,7 @@ s_hostent_addr$6736:
 	.2byte	0x1
 	.byte	0x5d
 	.4byte	.LVL22-1
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x10
 	.byte	0xf3
 	.uleb128 0x1
@@ -2917,7 +2917,7 @@ s_hostent_addr$6736:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL26
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -2928,7 +2928,7 @@ s_hostent_addr$6736:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL25
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -2939,7 +2939,7 @@ s_hostent_addr$6736:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL25
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x1
 	.byte	0x57
 	.4byte	0
@@ -2967,7 +2967,7 @@ s_hostent_addr$6736:
 	.2byte	0x1
 	.byte	0x5b
 	.4byte	.LVL31
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -2996,7 +2996,7 @@ s_hostent_addr$6736:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL77
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3032,7 +3032,7 @@ s_hostent_addr$6736:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL43
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3069,7 +3069,7 @@ s_hostent_addr$6736:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL77
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3259,26 +3259,26 @@ s_hostent_addr$6736:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB36
-	.4byte	.LFE36
-	.4byte	.LFB37
-	.4byte	.LFE37
-	.4byte	.LFB38
-	.4byte	.LFE38
-	.4byte	.LFB39
-	.4byte	.LFE39
+	.4byte	.LFB45
+	.4byte	.LFE45
+	.4byte	.LFB46
+	.4byte	.LFE46
+	.4byte	.LFB47
+	.4byte	.LFE47
+	.4byte	.LFB48
+	.4byte	.LFE48
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

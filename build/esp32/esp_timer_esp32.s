@@ -1,926 +1,953 @@
 	.file	"esp_timer_esp32.c"
 	.text
 .Ltext0:
-	.section	.iram1,"ax",@progbits
+	.section	.iram1.14,"ax",@progbits
 	.literal_position
-	.literal .LC0, s_overflow_happened
-	.literal .LC1, 1072984104
-	.literal .LC2, 1072984112
-	.literal .LC3, -268435457
-	.literal .LC4, 1072984100
-	.literal .LC5, s_mask_overflow
+	.literal .LC0, 1072984104
+	.literal .LC1, 1072984112
+	.literal .LC2, -268435457
+	.literal .LC3, 1072984100
+	.literal .LC4, s_mask_overflow
 	.align	4
 	.type	timer_overflow_happened, @function
 timer_overflow_happened:
-.LFB18:
+.LFB27:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/esp_timer_esp32.c"
-	.loc 1 154 0
+	.loc 1 148 0
 	entry	sp, 32
 .LCFI0:
-	.loc 1 155 0
+	.loc 1 149 0
 	l32r	a2, .LC0
-	l8ui	a2, a2, 0
-	bnez.n	a2, .L2
-.LBB4:
-	.loc 1 159 0
-	l32r	a8, .LC1
 	memw
-	l32i.n	a8, a8, 0
-	bbci	a8, 8, .L3
-	.loc 1 160 0
-	l32r	a8, .LC2
-	.loc 1 159 0
-	l32r	a2, .LC3
-	.loc 1 160 0
+	l32i.n	a8, a2, 0
+	movi.n	a2, 0
+	bbci	a8, 8, .L2
+	.loc 1 150 0 discriminator 1
+	l32r	a8, .LC1
+	.loc 1 149 0 discriminator 1
+	l32r	a2, .LC2
+	.loc 1 150 0 discriminator 1
 	memw
 	l32i.n	a9, a8, 0
-	.loc 1 159 0
-	bne	a9, a2, .L4
-	.loc 1 160 0
-	l32r	a2, .LC4
+	.loc 1 149 0 discriminator 1
+	bne	a9, a2, .L3
+	.loc 1 150 0
+	l32r	a2, .LC3
 	memw
 	l32i.n	a10, a2, 0
-	bgeu	a9, a10, .L4
+	bgeu	a9, a10, .L3
+	.loc 1 150 0 is_stmt 0 discriminator 1
 	memw
 	l32i.n	a2, a2, 0
-	l32r	a2, .LC5
+	l32r	a2, .LC4
 	l8ui	a9, a2, 0
-	.loc 1 159 0
+	.loc 1 149 0 is_stmt 1 discriminator 1
 	movi.n	a2, 1
-	.loc 1 160 0
-	beqz.n	a9, .L3
+	.loc 1 150 0 discriminator 1
+	beqz.n	a9, .L2
+.L3:
+	.loc 1 151 0 discriminator 5
+	memw
+	l32i.n	a2, a8, 0
+	.loc 1 150 0 discriminator 5
+	l32r	a9, .LC2
+	bgeu	a9, a2, .L4
+	.loc 1 151 0
+	memw
+	l32i.n	a2, a8, 0
+	.loc 1 149 0
+	movi.n	a2, 0
+	retw.n
 .L4:
-	.loc 1 161 0
-	memw
-	l32i.n	a2, a8, 0
-	.loc 1 160 0
-	l32r	a9, .LC3
-	bgeu	a9, a2, .L5
-	.loc 1 161 0
-	memw
-	l32i.n	a2, a8, 0
-	.loc 1 159 0
+	.loc 1 151 0 discriminator 1
+	l32r	a8, .LC3
+	.loc 1 149 0 discriminator 1
 	movi.n	a2, 0
-	j	.L3
-.L5:
-	.loc 1 161 0
-	l32r	a8, .LC4
-	.loc 1 159 0
-	movi.n	a2, 0
-	.loc 1 161 0
+	.loc 1 151 0 discriminator 1
 	memw
 	l32i.n	a10, a8, 0
-	bgeu	a9, a10, .L3
+	bgeu	a9, a10, .L2
+	.loc 1 151 0 is_stmt 0 discriminator 2
 	memw
 	l32i.n	a2, a8, 0
-	.loc 1 159 0
+	.loc 1 149 0 is_stmt 1 discriminator 2
 	movi.n	a2, 1
-.L3:
-	extui	a2, a2, 0, 1
 .L2:
-.LBE4:
-	.loc 1 162 0
+	.loc 1 152 0 discriminator 4
 	retw.n
-.LFE18:
+.LFE27:
 	.size	timer_overflow_happened, .-timer_overflow_happened
 	.section	.rodata.str1.1,"aMS",@progbits,1
-.LC14:
+.LC9:
 	.string	"TIMER_IS_AFTER_OVERFLOW(REG_READ(FRC_TIMER_COUNT_REG(1)))"
-.LC17:
+.LC12:
 	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/esp_timer_esp32.c"
-	.section	.iram1
+	.section	.iram1.15,"ax",@progbits
 	.literal_position
-	.literal .LC6, s_time_update_lock
-	.literal .LC7, 1072984100
-	.literal .LC8, -268435457
-	.literal .LC9, 268435457
-	.literal .LC10, 1072984096
-	.literal .LC11, s_time_base_us
-	.literal .LC12, s_timer_us_per_overflow
-	.literal .LC13, s_overflow_happened
-	.literal .LC15, .LC14
-	.literal .LC16, __func__$5409
-	.literal .LC18, .LC17
-	.literal .LC19, s_mask_overflow
-	.literal .LC20, 1072984108
-	.literal .LC21, 1072984112
-	.literal .LC22, s_alarm_handler
+	.literal .LC5, 1072984100
+	.literal .LC6, -268435457
+	.literal .LC7, 268435457
+	.literal .LC8, 1072984096
+	.literal .LC10, .LC9
+	.literal .LC11, __func__$5454
+	.literal .LC13, .LC12
+	.align	4
+	.type	timer_count_reload, @function
+timer_count_reload:
+.LFB28:
+	.loc 1 155 0
+	entry	sp, 32
+.LCFI1:
+	.loc 1 157 0
+	l32r	a8, .LC5
+	l32r	a10, .LC6
+	memw
+	l32i.n	a9, a8, 0
+	bgeu	a10, a9, .L11
+	.loc 1 157 0 is_stmt 0 discriminator 2
+	memw
+	l32i.n	a9, a8, 0
+	.loc 1 166 0 is_stmt 1 discriminator 2
+	memw
+	l32i.n	a9, a8, 0
+	l32r	a8, .LC7
+	add.n	a8, a9, a8
+	l32r	a9, .LC8
+	memw
+	s32i.n	a8, a9, 0
+	.loc 1 167 0 discriminator 2
+	retw.n
+.L11:
+.LBB4:
+.LBB5:
+	.loc 1 157 0
+	l32r	a13, .LC10
+	l32r	a12, .LC11
+	l32r	a10, .LC13
+	movi	a11, 0x9d
+	call8	__assert_func
+.LVL0:
+.LBE5:
+.LBE4:
+.LFE28:
+	.size	timer_count_reload, .-timer_count_reload
+	.section	.iram1.18,"ax",@progbits
+	.literal_position
+	.literal .LC14, s_time_update_lock
+	.literal .LC15, s_time_base_us
+	.literal .LC16, s_timer_us_per_overflow
+	.literal .LC17, s_mask_overflow
+	.literal .LC18, 1072984108
+	.literal .LC19, 1072984112
+	.literal .LC20, -268435457
+	.literal .LC21, 1072984100
+	.literal .LC22, 1072984104
+	.literal .LC23, s_alarm_handler
 	.align	4
 	.type	timer_alarm_isr, @function
 timer_alarm_isr:
-.LFB24:
-	.loc 1 258 0
-.LVL0:
-	entry	sp, 32
-.LCFI1:
-	.loc 1 259 0
-	l32r	a3, .LC6
-	mov.n	a10, a3
-	call8	vTaskEnterCritical
+.LFB33:
+	.loc 1 260 0
 .LVL1:
+	entry	sp, 32
+.LCFI2:
 	.loc 1 261 0
-	call8	timer_overflow_happened
+	l32r	a4, .LC14
+	mov.n	a10, a4
+	call8	vTaskEnterCritical
 .LVL2:
-	beqz.n	a10, .L12
-.LBB7:
-.LBB8:
-	.loc 1 167 0
-	l32r	a8, .LC7
-	l32r	a10, .LC8
-	memw
-	l32i.n	a9, a8, 0
-	bgeu	a10, a9, .L13
-	memw
-	l32i.n	a9, a8, 0
-	.loc 1 176 0
-	memw
-	l32i.n	a9, a8, 0
-	l32r	a8, .LC9
-.LBE8:
-.LBE7:
 	.loc 1 263 0
-	movi.n	a12, 1
-.LBB11:
-.LBB9:
-	.loc 1 176 0
-	add.n	a8, a9, a8
-	l32r	a9, .LC10
-	memw
-	s32i.n	a8, a9, 0
-.LBE9:
-.LBE11:
-	.loc 1 263 0
-	l32r	a8, .LC11
-	l32r	a9, .LC12
-	l32i.n	a13, a8, 0
-	l32i.n	a9, a9, 0
-	l32i.n	a11, a8, 4
-	add.n	a9, a13, a9
-	bltu	a9, a13, .L14
-	movi.n	a12, 0
-.L14:
-	add.n	a11, a12, a11
-	s32i.n	a9, a8, 0
-	s32i.n	a11, a8, 4
-	.loc 1 264 0
-	l32r	a8, .LC13
-	movi.n	a9, 0
-	s8i	a9, a8, 0
-	j	.L12
-.L13:
-.LBB12:
-.LBB10:
-	.loc 1 167 0
-	l32r	a13, .LC15
-	l32r	a12, .LC16
-	l32r	a10, .LC18
-	movi	a11, 0xa7
-	call8	__assert_func
+	call8	timer_overflow_happened
 .LVL3:
-.L12:
-.LBE10:
-.LBE12:
-	.loc 1 266 0
-	l32r	a8, .LC19
-	movi.n	a9, 0
-	s8i	a9, a8, 0
-	.loc 1 268 0
-	l32r	a8, .LC20
-	movi.n	a9, 1
-	memw
-	s32i.n	a9, a8, 0
-	.loc 1 271 0
-	l32r	a9, .LC8
-	l32r	a8, .LC21
-	.loc 1 272 0
-	mov.n	a10, a3
-	.loc 1 271 0
-	memw
-	s32i.n	a9, a8, 0
-	.loc 1 272 0
-	call8	vTaskExitCritical
+	beqz.n	a10, .L14
+	.loc 1 264 0
+	call8	timer_count_reload
 .LVL4:
-	.loc 1 274 0
-	l32r	a3, .LC22
+	.loc 1 265 0
+	l32r	a3, .LC15
+	l32r	a5, .LC16
+	l32i.n	a10, a3, 0
+	l32i.n	a5, a5, 0
+	l32i.n	a8, a3, 4
+	add.n	a5, a10, a5
+	movi.n	a9, 1
+	bltu	a5, a10, .L15
+	movi.n	a9, 0
+.L15:
+	add.n	a8, a9, a8
+	s32i.n	a5, a3, 0
+	s32i.n	a8, a3, 4
+.L14:
+	.loc 1 267 0
+	l32r	a3, .LC17
+	movi.n	a5, 0
+	s8i	a5, a3, 0
+	.loc 1 269 0
+	l32r	a5, .LC18
+	movi.n	a3, 1
+	memw
+	s32i.n	a3, a5, 0
+	.loc 1 272 0
+	l32r	a8, .LC19
+	l32r	a5, .LC20
+	memw
+	s32i.n	a5, a8, 0
+	.loc 1 273 0
+	l32r	a8, .LC21
+	memw
+	l32i.n	a8, a8, 0
+	bgeu	a5, a8, .L16
+	.loc 1 274 0 discriminator 1
+	l32r	a5, .LC22
+	memw
+	l32i.n	a8, a5, 0
+	.loc 1 273 0 discriminator 1
+	movi	a5, 0x100
+	and	a5, a8, a5
+	bnez.n	a5, .L16
+	.loc 1 281 0
+	call8	timer_count_reload
+.LVL5:
+	.loc 1 282 0
+	l32r	a9, .LC15
+	l32r	a8, .LC16
+	l32i.n	a12, a9, 0
+	l32i.n	a10, a8, 0
+	l32i.n	a11, a9, 4
+	add.n	a10, a12, a10
+	mov.n	a8, a3
+	bltu	a10, a12, .L17
+	mov.n	a8, a5
+.L17:
+	add.n	a8, a8, a11
+	s32i.n	a10, a9, 0
+	s32i.n	a8, a9, 4
+.L16:
+	.loc 1 284 0
+	mov.n	a10, a4
+	call8	vTaskExitCritical
+.LVL6:
+	.loc 1 286 0
+	l32r	a3, .LC23
 	mov.n	a10, a2
 	l32i.n	a3, a3, 0
 	callx8	a3
-.LVL5:
+.LVL7:
 	retw.n
-.LFE24:
+.LFE33:
 	.size	timer_alarm_isr, .-timer_alarm_isr
 	.section	.text.esp_timer_impl_lock,"ax",@progbits
 	.literal_position
-	.literal .LC23, s_time_update_lock
+	.literal .LC24, s_time_update_lock
 	.align	4
 	.global	esp_timer_impl_lock
 	.type	esp_timer_impl_lock, @function
 esp_timer_impl_lock:
-.LFB20:
-	.loc 1 180 0
+.LFB29:
+	.loc 1 170 0
 	entry	sp, 32
-.LCFI2:
-	.loc 1 181 0
-	l32r	a10, .LC23
+.LCFI3:
+	.loc 1 171 0
+	l32r	a10, .LC24
 	call8	vTaskEnterCritical
-.LVL6:
+.LVL8:
 	retw.n
-.LFE20:
+.LFE29:
 	.size	esp_timer_impl_lock, .-esp_timer_impl_lock
 	.section	.text.esp_timer_impl_unlock,"ax",@progbits
 	.literal_position
-	.literal .LC24, s_time_update_lock
+	.literal .LC25, s_time_update_lock
 	.align	4
 	.global	esp_timer_impl_unlock
 	.type	esp_timer_impl_unlock, @function
 esp_timer_impl_unlock:
-.LFB21:
-	.loc 1 185 0
+.LFB30:
+	.loc 1 175 0
 	entry	sp, 32
-.LCFI3:
-	.loc 1 186 0
-	l32r	a10, .LC24
+.LCFI4:
+	.loc 1 176 0
+	l32r	a10, .LC25
 	call8	vTaskExitCritical
-.LVL7:
+.LVL9:
 	retw.n
-.LFE21:
+.LFE30:
 	.size	esp_timer_impl_unlock, .-esp_timer_impl_unlock
-	.section	.iram1
+	.section	.iram1.16,"ax",@progbits
 	.literal_position
-	.literal .LC25, 1072984100
-	.literal .LC26, s_time_base_us
-	.literal .LC27, s_timer_ticks_per_us
+	.literal .LC26, 1072984100
+	.literal .LC27, s_time_base_us
+	.literal .LC28, s_timer_ticks_per_us
 	.align	4
 	.global	esp_timer_impl_get_time
 	.type	esp_timer_impl_get_time, @function
 esp_timer_impl_get_time:
-.LFB22:
-	.loc 1 190 0
+.LFB31:
+	.loc 1 180 0
 	entry	sp, 32
-.LCFI4:
-	.loc 1 198 0
-	l32r	a6, .LC25
-.L21:
-	.loc 1 199 0
-	l32r	a5, .LC26
-	.loc 1 198 0
+.LCFI5:
+	.loc 1 188 0
+	l32r	a6, .LC26
+.L24:
+	.loc 1 189 0
+	l32r	a5, .LC27
+	.loc 1 188 0
 	memw
 	l32i.n	a4, a6, 0
-.LVL8:
-	.loc 1 199 0
+.LVL10:
+	.loc 1 189 0
 	l32i.n	a2, a5, 0
 	l32i.n	a3, a5, 4
-.LVL9:
-	.loc 1 200 0
+.LVL11:
+	.loc 1 190 0
 	call8	timer_overflow_happened
-.LVL10:
-	.loc 1 207 0
+.LVL12:
+	.loc 1 197 0
 	memw
 	l32i.n	a8, a6, 0
-	.loc 1 200 0
+	.loc 1 190 0
 	mov.n	a7, a10
-.LVL11:
-	.loc 1 207 0
-	bgeu	a4, a8, .L21
-	.loc 1 208 0 discriminator 1
+.LVL13:
+	.loc 1 197 0
+	bgeu	a4, a8, .L24
+	.loc 1 198 0 discriminator 1
 	memw
 	l32i.n	a8, a5, 0
 	memw
 	l32i.n	a9, a5, 4
-	.loc 1 207 0 discriminator 1
-	bne	a2, a8, .L21
-	bne	a3, a9, .L21
-	.loc 1 209 0
-	l32r	a5, .LC27
+	.loc 1 197 0 discriminator 1
+	bne	a2, a8, .L24
+	bne	a3, a9, .L24
+	.loc 1 199 0
+	l32r	a5, .LC28
 	l32i.n	a5, a5, 0
-.LVL12:
-	.loc 1 210 0
-	call8	timer_overflow_happened
-.LVL13:
-	.loc 1 209 0
-	bne	a7, a10, .L21
 .LVL14:
-	.loc 1 219 0
-	quou	a4, a4, a5
+	.loc 1 200 0
+	call8	timer_overflow_happened
 .LVL15:
-	add.n	a2, a4, a2
+	.loc 1 199 0
+	bne	a7, a10, .L24
 .LVL16:
-	movi.n	a5, 1
+	.loc 1 209 0
+	quou	a4, a4, a5
 .LVL17:
-	bltu	a2, a4, .L23
+	add.n	a2, a4, a2
+.LVL18:
+	movi.n	a5, 1
+.LVL19:
+	bltu	a2, a4, .L26
 	movi.n	a5, 0
-.L23:
-	.loc 1 220 0
+.L26:
+	.loc 1 210 0
 	add.n	a3, a5, a3
 	retw.n
-.LFE22:
+.LFE31:
 	.size	esp_timer_impl_get_time, .-esp_timer_impl_get_time
-	.section	.rodata.str1.1
-.LC33:
-	.string	"time_after_timebase_us > s_timer_us_per_overflow"
-	.section	.iram1
+	.section	.iram1.17,"ax",@progbits
 	.literal_position
-	.literal .LC28, -268435457
-	.literal .LC29, s_time_update_lock
-	.literal .LC30, s_time_base_us
-	.literal .LC31, 1072984100
-	.literal .LC32, s_timer_us_per_overflow
-	.literal .LC34, .LC33
-	.literal .LC35, __func__$5429
-	.literal .LC36, .LC17
-	.literal .LC37, s_overflow_happened
-	.literal .LC38, s_timer_ticks_per_us
-	.literal .LC39, -268435458
-	.literal .LC40, -268435457, 0
-	.literal .LC41, 1072984112
+	.literal .LC29, -268435457
+	.literal .LC30, s_time_update_lock
+	.literal .LC31, s_timer_ticks_per_us
+	.literal .LC32, 1072984100
+	.literal .LC33, 1072984104
+	.literal .LC34, s_time_base_us
+	.literal .LC35, s_timer_us_per_overflow
+	.literal .LC36, s_mask_overflow
+	.literal .LC37, -268435458
+	.literal .LC38, 1072984112
 	.align	4
 	.global	esp_timer_impl_set_alarm
 	.type	esp_timer_impl_set_alarm, @function
 esp_timer_impl_set_alarm:
-.LFB23:
-	.loc 1 223 0
-.LVL18:
-	entry	sp, 32
-.LCFI5:
-	.loc 1 224 0
-	l32r	a5, .LC29
-	mov.n	a10, a5
-	call8	vTaskEnterCritical
-.LVL19:
-	.loc 1 226 0
-	l32r	a4, .LC30
-	l32i.n	a6, a4, 0
-	l32i.n	a8, a4, 4
-	sub	a6, a2, a6
-	movi.n	a4, 1
-	bltu	a2, a6, .L25
-	movi.n	a4, 0
-.L25:
-	sub	a3, a3, a8
-	.loc 1 228 0
-	call8	timer_overflow_happened
+.LFB32:
+	.loc 1 213 0
 .LVL20:
-	.loc 1 229 0
-	l32r	a8, .LC31
-	.loc 1 226 0
-	sub	a3, a3, a4
-	.loc 1 229 0
-	memw
-	l32i.n	a13, a8, 0
-	.loc 1 226 0
-	mov.n	a4, a6
-	mov.n	a2, a3
+	entry	sp, 32
+.LCFI6:
+	.loc 1 214 0
+	l32r	a4, .LC30
+	mov.n	a10, a4
+	call8	vTaskEnterCritical
 .LVL21:
-	.loc 1 231 0
-	beqz.n	a10, .L26
-	.loc 1 232 0
-	l32r	a2, .LC32
+	.loc 1 219 0
+	l32r	a5, .LC31
+	l32i.n	a9, a5, 0
+	slli	a6, a9, 1
 .LVL22:
-	l32i.n	a4, a2, 0
-.LVL23:
-	bnez.n	a3, .L27
-	bltu	a4, a6, .L27
-	.loc 1 232 0 is_stmt 0 discriminator 1
-	l32r	a13, .LC34
-.LVL24:
-	l32r	a12, .LC35
-	l32r	a10, .LC36
-.LVL25:
-	movi	a11, 0xe8
-	call8	__assert_func
-.LVL26:
-.L27:
-	.loc 1 233 0 is_stmt 1
-	sub	a4, a6, a4
-	movi.n	a2, 1
-	bltu	a6, a4, .L29
-	movi.n	a2, 0
-.L29:
-	sub	a2, a3, a2
-.LVL27:
-	.loc 1 234 0
-	l32r	a3, .LC37
-	movi.n	a6, 1
-	s8i	a6, a3, 0
-.LVL28:
-.L26:
-	.loc 1 237 0
-	l32r	a3, .LC38
-	l32i.n	a12, a3, 0
-	muluh	a9, a12, a4
-	mull	a11, a2, a12
-	mull	a8, a12, a4
-	add.n	a11, a11, a9
-	mov.n	a9, a11
-.LVL29:
-	.loc 1 244 0
-	bnez.n	a11, .L37
-	l32r	a2, .LC39
-.LVL30:
-	bltu	a2, a8, .L37
-	.loc 1 245 0
-	slli	a12, a12, 1
-.LVL31:
-	add.n	a2, a12, a13
-	movi.n	a3, 1
-	bltu	a2, a12, .L32
-	mov.n	a3, a11
-.L32:
-	addx2	a11, a11, a3
-	bltu	a9, a11, .L40
-	bne	a11, a9, .L30
-	bgeu	a8, a2, .L30
 .L40:
-.LVL32:
-	mov.n	a8, a2
-	bnez.n	a11, .L36
-	l32r	a2, .LC28
-.LVL33:
-	bgeu	a2, a8, .L30
-.L36:
-	l32r	a8, .LC40
-.LVL34:
-	j	.L30
-.LVL35:
-.L37:
-	.loc 1 238 0
-	l32r	a8, .LC28
-.LVL36:
-.L30:
-	.loc 1 253 0
-	l32r	a2, .LC41
-	.loc 1 254 0
-	mov.n	a10, a5
-.LVL37:
-	.loc 1 253 0
+.LBB6:
+	.loc 1 222 0
+	call8	timer_overflow_happened
+.LVL23:
+	l32r	a7, .LC34
+	bnez.n	a10, .L28
+	.loc 1 223 0 discriminator 1
+	l32r	a8, .LC32
+	.loc 1 222 0 discriminator 1
+	l32r	a9, .LC29
+	.loc 1 223 0 discriminator 1
 	memw
-	s32i.n	a8, a2, 0
-.LVL38:
-	.loc 1 254 0
+	l32i.n	a8, a8, 0
+	.loc 1 222 0 discriminator 1
+	bgeu	a9, a8, .L29
+	.loc 1 224 0
+	l32r	a8, .LC33
+	memw
+	l32i.n	a8, a8, 0
+	.loc 1 223 0
+	bbsi	a8, 8, .L29
+.L28:
+	.loc 1 227 0
+	call8	timer_count_reload
+.LVL24:
+	.loc 1 228 0
+	l32r	a8, .LC35
+	l32i.n	a11, a7, 0
+	l32i.n	a8, a8, 0
+	l32i.n	a9, a7, 4
+	add.n	a8, a11, a8
+	movi.n	a10, 1
+	bltu	a8, a11, .L30
+	movi.n	a10, 0
+.L30:
+	add.n	a9, a10, a9
+	s32i.n	a8, a7, 0
+	s32i.n	a9, a7, 4
+.L29:
+	.loc 1 230 0
+	l32r	a8, .LC36
+	movi.n	a9, 0
+	s8i	a9, a8, 0
+	.loc 1 235 0
+	l32i.n	a9, a7, 0
+	.loc 1 231 0
+	l32r	a8, .LC32
+	.loc 1 235 0
+	sub	a9, a2, a9
+	.loc 1 231 0
+	memw
+	l32i.n	a11, a8, 0
+.LVL25:
+	.loc 1 235 0
+	l32i.n	a10, a7, 4
+	movi.n	a7, 1
+	bltu	a2, a9, .L31
+	movi.n	a7, 0
+.L31:
+	l32i.n	a8, a5, 0
+	sub	a10, a3, a10
+	sub	a10, a10, a7
+	mull	a10, a10, a8
+	mull	a7, a9, a8
+	muluh	a9, a9, a8
+	.loc 1 237 0
+	add.n	a8, a11, a6
+	.loc 1 235 0
+	add.n	a9, a10, a9
+.LVL26:
+	.loc 1 237 0
+	movi.n	a12, 1
+	srai	a10, a6, 31
+	bltu	a8, a11, .L32
+	movi.n	a12, 0
+.L32:
+	add.n	a10, a12, a10
+	blt	a10, a9, .L34
+	bne	a9, a10, .L33
+	bgeu	a8, a7, .L33
+.L34:
+	mov.n	a8, a7
+	mov.n	a10, a9
+.L33:
+.LVL27:
+	.loc 1 239 0
+	bgei	a10, 1, .L41
+	bnez.n	a10, .L35
+	l32r	a7, .LC37
+	bgeu	a7, a8, .L35
+.L41:
+	.loc 1 238 0
+	l32r	a8, .LC29
+.LVL28:
+.L35:
+	.loc 1 242 0
+	l32r	a7, .LC38
+	memw
+	s32i.n	a8, a7, 0
+	.loc 1 243 0
+	l32r	a7, .LC32
+	memw
+	l32i.n	a10, a7, 0
+	sub	a9, a8, a10
+	bltu	a8, a9, .L43
+	.loc 1 244 0
+	bnez.n	a9, .L38
+.L43:
+	.loc 1 251 0
+	l32i.n	a7, a5, 0
+	abs	a9, a9
+	addx2	a6, a7, a6
+.LVL29:
+	add.n	a6, a6, a9
+.LVL30:
+.LBE6:
+	.loc 1 255 0
+	j	.L40
+.L38:
+	.loc 1 256 0
+	mov.n	a10, a4
 	call8	vTaskExitCritical
-.LVL39:
+.LVL31:
 	retw.n
-.LFE23:
+.LFE32:
 	.size	esp_timer_impl_set_alarm, .-esp_timer_impl_set_alarm
 	.global	__udivdi3
+	.section	.iram1.19,"ax",@progbits
 	.literal_position
-	.literal .LC43, -268435457
-	.literal .LC44, s_time_update_lock
-	.literal .LC45, s_timer_interrupt_handle
-	.literal .LC46, 1072984112
-	.literal .LC47, 1072984100
-	.literal .LC48, s_timer_ticks_per_us
-	.literal .LC49, s_mask_overflow
-	.literal .LC50, 1072984096
-	.literal .LC51, s_time_base_us
-	.literal .LC52, s_timer_us_per_overflow
+	.literal .LC39, -268435457
+	.literal .LC40, s_time_update_lock
+	.literal .LC41, s_timer_interrupt_handle
+	.literal .LC42, 1072984112
+	.literal .LC43, 1072984100
+	.literal .LC44, s_timer_ticks_per_us
+	.literal .LC45, s_mask_overflow
+	.literal .LC46, 1072984096
+	.literal .LC47, s_time_base_us
+	.literal .LC48, s_timer_us_per_overflow
 	.align	4
 	.global	esp_timer_impl_update_apb_freq
 	.type	esp_timer_impl_update_apb_freq, @function
 esp_timer_impl_update_apb_freq:
-.LFB25:
-	.loc 1 278 0
-.LVL40:
+.LFB34:
+	.loc 1 290 0
+.LVL32:
 	entry	sp, 32
-.LCFI6:
-	.loc 1 279 0
-	l32r	a3, .LC44
+.LCFI7:
+	.loc 1 291 0
+	l32r	a3, .LC40
 	mov.n	a10, a3
 	call8	vTaskEnterCritical
-.LVL41:
-	.loc 1 281 0
-	l32r	a4, .LC45
+.LVL33:
+	.loc 1 293 0
+	l32r	a4, .LC41
 	mov.n	a6, a3
 	l32i.n	a4, a4, 0
-	.loc 1 282 0
+	.loc 1 294 0
 	mov.n	a10, a3
-	.loc 1 281 0
-	beqz.n	a4, .L58
-.L45:
-.LVL42:
-	.loc 1 287 0
-	l32r	a7, .LC46
-	.loc 1 288 0
-	l32r	a4, .LC47
-	.loc 1 287 0
+	.loc 1 293 0
+	beqz.n	a4, .L60
+.L47:
+.LVL34:
+	.loc 1 299 0
+	l32r	a7, .LC42
+	.loc 1 300 0
+	l32r	a4, .LC43
+	.loc 1 299 0
 	memw
 	l32i.n	a3, a7, 0
-.LVL43:
-	.loc 1 288 0
+.LVL35:
+	.loc 1 300 0
 	memw
 	l32i.n	a4, a4, 0
-.LVL44:
-	.loc 1 290 0
-	l32r	a5, .LC48
-	.loc 1 289 0
+.LVL36:
+	.loc 1 302 0
+	l32r	a5, .LC44
+	.loc 1 301 0
 	sub	a10, a3, a4
-.LVL45:
-	.loc 1 290 0
+.LVL37:
+	.loc 1 302 0
 	muluh	a11, a10, a2
 	l32i.n	a12, a5, 0
 	mull	a10, a10, a2
-.LVL46:
+.LVL38:
 	movi.n	a13, 0
 	call8	__udivdi3
-.LVL47:
-	l32r	a8, .LC43
-	.loc 1 292 0
-	bgeu	a4, a3, .L47
-	bnez.n	a11, .L47
-	bgeu	a8, a10, .L51
-.L47:
-.LVL48:
-	.loc 1 295 0
+.LVL39:
+	l32r	a8, .LC39
+	.loc 1 304 0
+	bgeu	a4, a3, .L49
+	bnez.n	a11, .L49
+	bgeu	a8, a10, .L53
+.L49:
+.LVL40:
+	.loc 1 307 0
 	mov.n	a10, a3
-.LVL49:
-	.loc 1 296 0
-	beq	a3, a8, .L51
-	.loc 1 297 0
-	l32r	a3, .LC49
-.LVL50:
+.LVL41:
+	.loc 1 308 0
+	beq	a3, a8, .L53
+	.loc 1 309 0
+	l32r	a3, .LC45
+.LVL42:
 	movi.n	a9, 1
 	s8i	a9, a3, 0
-	.loc 1 295 0
+	.loc 1 307 0
 	mov.n	a10, a8
-.LVL51:
-.L51:
-	.loc 1 301 0
-	l32r	a3, .LC50
-	.loc 1 300 0
+.LVL43:
+.L53:
+	.loc 1 313 0
+	l32r	a3, .LC46
+	.loc 1 312 0
 	memw
 	s32i.n	a10, a7, 0
-	.loc 1 301 0
+	.loc 1 313 0
 	movi.n	a10, 0
-.LVL52:
+.LVL44:
 	memw
 	s32i.n	a10, a3, 0
-.LVL53:
-	.loc 1 303 0
-	l32r	a3, .LC51
+.LVL45:
+	.loc 1 315 0
+	l32r	a3, .LC47
 	l32i.n	a7, a5, 0
 	l32i.n	a8, a3, 0
 	quou	a4, a4, a7
-.LVL54:
+.LVL46:
 	add.n	a8, a4, a8
 	l32i.n	a7, a3, 4
 	movi.n	a9, 1
-	bltu	a8, a4, .L52
+	bltu	a8, a4, .L54
 	mov.n	a9, a10
-.L52:
+.L54:
 	add.n	a4, a9, a7
 	s32i.n	a8, a3, 0
 	s32i.n	a4, a3, 4
-	.loc 1 322 0
-	l32r	a3, .LC43
-	.loc 1 321 0
+	.loc 1 334 0
+	l32r	a3, .LC39
+	.loc 1 333 0
 	s32i.n	a2, a5, 0
-	.loc 1 322 0
+	.loc 1 334 0
 	quou	a2, a3, a2
-.LVL55:
-	l32r	a3, .LC52
-	.loc 1 324 0
+.LVL47:
+	l32r	a3, .LC48
+	.loc 1 336 0
 	mov.n	a10, a6
-	.loc 1 322 0
+	.loc 1 334 0
 	s32i.n	a2, a3, 0
-.LVL56:
-.L58:
-	.loc 1 324 0
+.LVL48:
+.L60:
+	.loc 1 336 0
 	call8	vTaskExitCritical
-.LVL57:
+.LVL49:
 	retw.n
-.LFE25:
+.LFE34:
 	.size	esp_timer_impl_update_apb_freq, .-esp_timer_impl_update_apb_freq
 	.section	.rodata.str1.1
-.LC53:
+.LC49:
 	.string	"time_us > 0 && \"negative adjustments not supported yet\""
 	.section	.text.esp_timer_impl_advance,"ax",@progbits
 	.literal_position
-	.literal .LC54, .LC53
-	.literal .LC55, __func__$5448
-	.literal .LC56, .LC17
-	.literal .LC57, s_time_update_lock
-	.literal .LC58, 1072984100
-	.literal .LC59, 1072984112
-	.literal .LC60, 1072984096
-	.literal .LC61, s_time_base_us
-	.literal .LC62, s_timer_ticks_per_us
-	.literal .LC63, s_overflow_happened
+	.literal .LC50, .LC49
+	.literal .LC51, __func__$5494
+	.literal .LC52, .LC12
+	.literal .LC53, s_time_update_lock
+	.literal .LC54, 1072984100
+	.literal .LC55, 1072984112
+	.literal .LC56, 1072984096
+	.literal .LC57, s_time_base_us
+	.literal .LC58, s_timer_ticks_per_us
 	.align	4
 	.global	esp_timer_impl_advance
 	.type	esp_timer_impl_advance, @function
 esp_timer_impl_advance:
-.LFB26:
-	.loc 1 328 0
-.LVL58:
+.LFB35:
+	.loc 1 340 0
+.LVL50:
 	entry	sp, 32
-.LCFI7:
-	.loc 1 329 0
-	bgei	a3, 1, .L60
-	bnez.n	a3, .L64
-	bnez.n	a2, .L60
-.L64:
-	.loc 1 329 0 is_stmt 0 discriminator 1
-	l32r	a13, .LC54
-	l32r	a12, .LC55
-	l32r	a10, .LC56
-	movi	a11, 0x149
+.LCFI8:
+	.loc 1 341 0
+	bgei	a3, 1, .L62
+	bnez.n	a3, .L66
+	bnez.n	a2, .L62
+.L66:
+	.loc 1 341 0 is_stmt 0 discriminator 1
+	l32r	a13, .LC50
+	l32r	a12, .LC51
+	l32r	a10, .LC52
+	movi	a11, 0x155
 	call8	__assert_func
-.LVL59:
-.L60:
-	.loc 1 331 0 is_stmt 1
-	l32r	a4, .LC57
-	.loc 1 336 0
+.LVL51:
+.L62:
+	.loc 1 343 0 is_stmt 1
+	l32r	a4, .LC53
+	.loc 1 348 0
 	movi.n	a6, 0
-	.loc 1 331 0
+	.loc 1 343 0
 	mov.n	a10, a4
 	call8	vTaskEnterCritical
-.LVL60:
-	.loc 1 332 0
-	l32r	a5, .LC58
-	.loc 1 338 0
-	l32r	a8, .LC62
-	.loc 1 332 0
+.LVL52:
+	.loc 1 344 0
+	l32r	a5, .LC54
+	.loc 1 350 0
+	l32r	a8, .LC58
+	.loc 1 344 0
 	memw
 	l32i.n	a10, a5, 0
-.LVL61:
-	.loc 1 336 0
-	l32r	a5, .LC59
-	.loc 1 338 0
+.LVL53:
+	.loc 1 348 0
+	l32r	a5, .LC55
+	.loc 1 350 0
 	mov.n	a13, a6
-	.loc 1 336 0
+	.loc 1 348 0
 	memw
 	s32i.n	a6, a5, 0
-	.loc 1 337 0
-	l32r	a5, .LC60
-	.loc 1 338 0
+	.loc 1 349 0
+	l32r	a5, .LC56
+	.loc 1 350 0
 	mov.n	a11, a6
-	.loc 1 337 0
+	.loc 1 349 0
 	memw
 	s32i.n	a6, a5, 0
-	.loc 1 338 0
+	.loc 1 350 0
 	l32i.n	a12, a8, 0
-	l32r	a5, .LC61
+	l32r	a5, .LC57
 	call8	__udivdi3
-.LVL62:
+.LVL54:
 	l32i.n	a9, a5, 0
 	mov.n	a13, a10
 	add.n	a9, a10, a9
 	l32i.n	a8, a5, 4
 	movi.n	a12, 1
 	mov.n	a10, a4
-	bltu	a9, a13, .L62
+	bltu	a9, a13, .L64
 	mov.n	a12, a6
-.L62:
+.L64:
 	add.n	a11, a11, a8
 	add.n	a2, a9, a2
-.LVL63:
+.LVL55:
 	add.n	a11, a12, a11
 	movi.n	a6, 1
-	bltu	a2, a9, .L63
+	bltu	a2, a9, .L65
 	movi.n	a6, 0
-.L63:
+.L65:
 	add.n	a3, a11, a3
 	add.n	a3, a6, a3
 	s32i.n	a2, a5, 0
-	.loc 1 339 0
-	l32r	a2, .LC63
-	.loc 1 338 0
 	s32i.n	a3, a5, 4
-	.loc 1 339 0
-	movi.n	a3, 0
-	s8i	a3, a2, 0
-	.loc 1 340 0
+	.loc 1 351 0
 	call8	vTaskExitCritical
-.LVL64:
+.LVL56:
 	retw.n
-.LFE26:
+.LFE35:
 	.size	esp_timer_impl_advance, .-esp_timer_impl_advance
 	.section	.rodata.str1.1
-.LC68:
+.LC63:
 	.string	"esp_timer_impl"
-.LC70:
+.LC65:
 	.string	"\033[0;31mE (%d) %s: esp_intr_alloc failed (0x%0x)\033[0m\n"
-.LC74:
+.LC69:
 	.string	"s_timer_ticks_per_us > 0 && apb_freq % TIMER_DIV == 0 && \"APB frequency does not result in a valid ticks_per_us value\""
-.LC86:
+.LC81:
 	.string	"esp_intr_enable(s_timer_interrupt_handle)"
 	.section	.text.esp_timer_impl_init,"ax",@progbits
 	.literal_position
-	.literal .LC64, s_alarm_handler
-	.literal .LC65, s_timer_interrupt_handle
-	.literal .LC66, timer_alarm_isr
-	.literal .LC67, 3072
-	.literal .LC69, .LC68
-	.literal .LC71, .LC70
-	.literal .LC72, 1125899907
-	.literal .LC73, s_timer_ticks_per_us
-	.literal .LC75, .LC74
-	.literal .LC76, __func__$5455
-	.literal .LC77, .LC17
-	.literal .LC78, s_timer_us_per_overflow
-	.literal .LC79, -268435457
-	.literal .LC80, s_time_base_us
-	.literal .LC81, 0, 0
-	.literal .LC82, 1072984112
-	.literal .LC83, 1072984096
-	.literal .LC84, 1072984104
-	.literal .LC85, 1072984108
-	.literal .LC87, .LC86
+	.literal .LC59, s_alarm_handler
+	.literal .LC60, s_timer_interrupt_handle
+	.literal .LC61, timer_alarm_isr
+	.literal .LC62, 3072
+	.literal .LC64, .LC63
+	.literal .LC66, .LC65
+	.literal .LC67, 1125899907
+	.literal .LC68, s_timer_ticks_per_us
+	.literal .LC70, .LC69
+	.literal .LC71, __func__$5501
+	.literal .LC72, .LC12
+	.literal .LC73, s_timer_us_per_overflow
+	.literal .LC74, -268435457
+	.literal .LC75, s_time_base_us
+	.literal .LC76, 0, 0
+	.literal .LC77, 1072984112
+	.literal .LC78, 1072984096
+	.literal .LC79, 1072984104
+	.literal .LC80, 1072984108
+	.literal .LC82, .LC81
 	.align	4
 	.global	esp_timer_impl_init
 	.type	esp_timer_impl_init, @function
 esp_timer_impl_init:
-.LFB27:
-	.loc 1 344 0
-.LVL65:
+.LFB36:
+	.loc 1 355 0
+.LVL57:
 	entry	sp, 32
-.LCFI8:
-	.loc 1 345 0
-	l32r	a3, .LC64
-	.loc 1 347 0
-	l32r	a12, .LC66
-	.loc 1 345 0
+.LCFI9:
+	.loc 1 356 0
+	l32r	a3, .LC59
+	.loc 1 358 0
+	l32r	a12, .LC61
+	.loc 1 356 0
 	s32i.n	a2, a3, 0
-	.loc 1 347 0
-	l32r	a3, .LC65
-	l32r	a11, .LC67
+	.loc 1 358 0
+	l32r	a3, .LC60
+	l32r	a11, .LC62
 	mov.n	a14, a3
 	movi.n	a13, 0
 	movi.n	a10, 0x39
 	call8	esp_intr_alloc
-.LVL66:
+.LVL58:
 	mov.n	a2, a10
-.LVL67:
-	.loc 1 351 0
-	beqz.n	a10, .L66
-	.loc 1 352 0 discriminator 1
+.LVL59:
+	.loc 1 362 0
+	beqz.n	a10, .L68
+	.loc 1 363 0 discriminator 1
 	call8	esp_log_timestamp
-.LVL68:
+.LVL60:
 	mov.n	a11, a10
-	l32r	a12, .LC69
-	l32r	a10, .LC71
+	l32r	a12, .LC64
+	l32r	a10, .LC66
 	mov.n	a13, a2
 	call8	ets_printf
-.LVL69:
-	.loc 1 353 0 discriminator 1
+.LVL61:
+	.loc 1 364 0 discriminator 1
 	retw.n
-.L66:
-	.loc 1 356 0
+.L68:
+	.loc 1 367 0
 	call8	rtc_clk_apb_freq_get
-.LVL70:
-	.loc 1 357 0
-	l32r	a8, .LC72
+.LVL62:
+	.loc 1 368 0
+	l32r	a8, .LC67
 	muluh	a10, a10, a8
-.LVL71:
-	l32r	a8, .LC73
+.LVL63:
+	l32r	a8, .LC68
 	extui	a10, a10, 18, 14
 	s32i.n	a10, a8, 0
-	.loc 1 358 0
-	bnez.n	a10, .L68
-	.loc 1 358 0 is_stmt 0 discriminator 1
-	l32r	a13, .LC75
-	l32r	a12, .LC76
-	l32r	a10, .LC77
-	movi	a11, 0x168
+	.loc 1 369 0
+	bnez.n	a10, .L70
+	.loc 1 369 0 is_stmt 0 discriminator 1
+	l32r	a13, .LC70
+	l32r	a12, .LC71
+	l32r	a10, .LC72
+	movi	a11, 0x173
 	call8	__assert_func
-.LVL72:
-.L68:
-	.loc 1 361 0 is_stmt 1
-	l32r	a8, .LC79
-	l32r	a9, .LC78
+.LVL64:
+.L70:
+	.loc 1 372 0 is_stmt 1
+	l32r	a8, .LC74
+	l32r	a9, .LC73
 	quou	a10, a8, a10
 	s32i.n	a10, a9, 0
-	.loc 1 362 0
-	l32r	a11, .LC81+4
-	l32r	a9, .LC80
-	l32r	a10, .LC81
+	.loc 1 373 0
+	l32r	a11, .LC76+4
+	l32r	a9, .LC75
+	l32r	a10, .LC76
 	s32i.n	a11, a9, 4
 	s32i.n	a10, a9, 0
-	.loc 1 364 0
-	l32r	a9, .LC82
-.LBB13:
-	.loc 1 369 0
+	.loc 1 375 0
+	l32r	a9, .LC77
+.LBB7:
+	.loc 1 380 0
 	l32i.n	a10, a3, 0
-.LBE13:
-	.loc 1 364 0
+.LBE7:
+	.loc 1 375 0
 	memw
 	s32i.n	a8, a9, 0
-	.loc 1 365 0
-	l32r	a8, .LC83
-	.loc 1 366 0
+	.loc 1 376 0
+	l32r	a8, .LC78
+	.loc 1 377 0
 	movi	a9, 0x81
-	.loc 1 365 0
+	.loc 1 376 0
 	memw
 	s32i.n	a2, a8, 0
-	.loc 1 366 0
-	l32r	a8, .LC84
+	.loc 1 377 0
+	l32r	a8, .LC79
 	memw
 	s32i.n	a9, a8, 0
-	.loc 1 368 0
-	l32r	a8, .LC85
+	.loc 1 379 0
+	l32r	a8, .LC80
 	movi.n	a9, 1
 	memw
 	s32i.n	a9, a8, 0
-.LBB14:
-	.loc 1 369 0
+.LBB8:
+	.loc 1 380 0
 	call8	esp_intr_enable
-.LVL73:
-	beqz.n	a10, .L67
-	.loc 1 369 0 is_stmt 0 discriminator 1
-	l32r	a14, .LC87
-	l32r	a13, .LC76
-	l32r	a11, .LC77
-	movi	a12, 0x171
+.LVL65:
+	beqz.n	a10, .L69
+	.loc 1 380 0 is_stmt 0 discriminator 1
+	l32r	a14, .LC82
+	l32r	a13, .LC71
+	l32r	a11, .LC72
+	movi	a12, 0x17c
 	call8	_esp_error_check_failed
-.LVL74:
-.L67:
-.LBE14:
-	.loc 1 372 0 is_stmt 1
+.LVL66:
+.L69:
+.LBE8:
+	.loc 1 383 0 is_stmt 1
 	retw.n
-.LFE27:
+.LFE36:
 	.size	esp_timer_impl_init, .-esp_timer_impl_init
 	.section	.text.esp_timer_impl_deinit,"ax",@progbits
 	.literal_position
-	.literal .LC88, s_timer_interrupt_handle
-	.literal .LC89, 1072984104
-	.literal .LC90, 1072984112
-	.literal .LC91, 1072984096
+	.literal .LC83, s_timer_interrupt_handle
+	.literal .LC84, 1072984104
+	.literal .LC85, 1072984112
+	.literal .LC86, 1072984096
 	.align	4
 	.global	esp_timer_impl_deinit
 	.type	esp_timer_impl_deinit, @function
 esp_timer_impl_deinit:
-.LFB28:
-	.loc 1 375 0
+.LFB37:
+	.loc 1 386 0
 	entry	sp, 32
-.LCFI9:
-	.loc 1 376 0
-	l32r	a3, .LC88
-	.loc 1 378 0
+.LCFI10:
+	.loc 1 387 0
+	l32r	a3, .LC83
+	.loc 1 389 0
 	movi.n	a2, 0
-	.loc 1 376 0
+	.loc 1 387 0
 	l32i.n	a10, a3, 0
 	call8	esp_intr_disable
-.LVL75:
-	.loc 1 378 0
-	l32r	a8, .LC89
-	.loc 1 382 0
+.LVL67:
+	.loc 1 389 0
+	l32r	a8, .LC84
+	.loc 1 393 0
 	l32i.n	a10, a3, 0
-	.loc 1 378 0
+	.loc 1 389 0
 	memw
 	s32i.n	a2, a8, 0
-	.loc 1 379 0
-	l32r	a8, .LC90
+	.loc 1 390 0
+	l32r	a8, .LC85
 	memw
 	s32i.n	a2, a8, 0
-	.loc 1 380 0
-	l32r	a8, .LC91
+	.loc 1 391 0
+	l32r	a8, .LC86
 	memw
 	s32i.n	a2, a8, 0
-	.loc 1 382 0
+	.loc 1 393 0
 	call8	esp_intr_free
-.LVL76:
-	.loc 1 383 0
+.LVL68:
+	.loc 1 394 0
 	s32i.n	a2, a3, 0
 	retw.n
-.LFE28:
+.LFE37:
 	.size	esp_timer_impl_deinit, .-esp_timer_impl_deinit
-	.section	.iram1
+	.section	.iram1.20,"ax",@progbits
 	.literal_position
-	.literal .LC92, 50, 0
+	.literal .LC87, 50, 0
 	.align	4
 	.global	esp_timer_impl_get_min_period_us
 	.type	esp_timer_impl_get_min_period_us, @function
 esp_timer_impl_get_min_period_us:
-.LFB29:
-	.loc 1 390 0
+.LFB38:
+	.loc 1 401 0
 	entry	sp, 32
-.LCFI10:
-	.loc 1 392 0
-	l32r	a2, .LC92
-	l32r	a3, .LC92+4
+.LCFI11:
+	.loc 1 403 0
+	l32r	a2, .LC87
+	l32r	a3, .LC87+4
 	retw.n
-.LFE29:
+.LFE38:
 	.size	esp_timer_impl_get_min_period_us, .-esp_timer_impl_get_min_period_us
-	.section	.rodata.__func__$5409,"a",@progbits
-	.type	__func__$5409, @object
-	.size	__func__$5409, 19
-__func__$5409:
-	.string	"timer_count_reload"
-	.section	.rodata.__func__$5455,"a",@progbits
-	.type	__func__$5455, @object
-	.size	__func__$5455, 20
-__func__$5455:
+	.section	.rodata.__func__$5501,"a",@progbits
+	.type	__func__$5501, @object
+	.size	__func__$5501, 20
+__func__$5501:
 	.string	"esp_timer_impl_init"
-	.section	.rodata.__func__$5448,"a",@progbits
-	.type	__func__$5448, @object
-	.size	__func__$5448, 23
-__func__$5448:
+	.section	.rodata.__func__$5494,"a",@progbits
+	.type	__func__$5494, @object
+	.size	__func__$5494, 23
+__func__$5494:
 	.string	"esp_timer_impl_advance"
-	.section	.rodata.__func__$5429,"a",@progbits
-	.type	__func__$5429, @object
-	.size	__func__$5429, 25
-__func__$5429:
-	.string	"esp_timer_impl_set_alarm"
+	.section	.rodata.__func__$5454,"a",@progbits
+	.type	__func__$5454, @object
+	.size	__func__$5454, 19
+__func__$5454:
+	.string	"timer_count_reload"
 	.global	s_time_update_lock
 	.section	.data.s_time_update_lock,"aw",@progbits
 	.align	4
@@ -929,11 +956,6 @@ __func__$5429:
 s_time_update_lock:
 	.word	-1287651329
 	.word	0
-	.section	.bss.s_overflow_happened,"aw",@nobits
-	.type	s_overflow_happened, @object
-	.size	s_overflow_happened, 1
-s_overflow_happened:
-	.zero	1
 	.section	.bss.s_mask_overflow,"aw",@nobits
 	.type	s_mask_overflow, @object
 	.size	s_mask_overflow, 1
@@ -988,10 +1010,10 @@ s_timer_interrupt_handle:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI0-.LFB18
+	.4byte	.LCFI0-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1000,10 +1022,10 @@ s_timer_interrupt_handle:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI1-.LFB24
+	.4byte	.LCFI1-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1012,10 +1034,10 @@ s_timer_interrupt_handle:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI2-.LFB20
+	.4byte	.LCFI2-.LFB33
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1024,10 +1046,10 @@ s_timer_interrupt_handle:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI3-.LFB21
+	.4byte	.LCFI3-.LFB29
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1036,10 +1058,10 @@ s_timer_interrupt_handle:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI4-.LFB22
+	.4byte	.LCFI4-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1048,10 +1070,10 @@ s_timer_interrupt_handle:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI5-.LFB23
+	.4byte	.LCFI5-.LFB31
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1060,10 +1082,10 @@ s_timer_interrupt_handle:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI6-.LFB25
+	.4byte	.LCFI6-.LFB32
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1072,10 +1094,10 @@ s_timer_interrupt_handle:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.byte	0x4
-	.4byte	.LCFI7-.LFB26
+	.4byte	.LCFI7-.LFB34
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1084,10 +1106,10 @@ s_timer_interrupt_handle:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.byte	0x4
-	.4byte	.LCFI8-.LFB27
+	.4byte	.LCFI8-.LFB35
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1096,10 +1118,10 @@ s_timer_interrupt_handle:
 	.4byte	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.4byte	.Lframe0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.byte	0x4
-	.4byte	.LCFI9-.LFB28
+	.4byte	.LCFI9-.LFB36
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1108,14 +1130,26 @@ s_timer_interrupt_handle:
 	.4byte	.LEFDE20-.LASFDE20
 .LASFDE20:
 	.4byte	.Lframe0
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.byte	0x4
-	.4byte	.LCFI10-.LFB29
+	.4byte	.LCFI10-.LFB37
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
 .LEFDE20:
+.LSFDE22:
+	.4byte	.LEFDE22-.LASFDE22
+.LASFDE22:
+	.4byte	.Lframe0
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
+	.byte	0x4
+	.4byte	.LCFI11-.LFB38
+	.byte	0xe
+	.uleb128 0x20
+	.align	4
+.LEFDE22:
 	.text
 .Letext0:
 	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
@@ -1129,7 +1163,7 @@ s_timer_interrupt_handle:
 	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x83e
+	.4byte	0x801
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -1138,7 +1172,7 @@ s_timer_interrupt_handle:
 	.byte	0xc
 	.4byte	.LASF81
 	.4byte	.LASF82
-	.4byte	.Ldebug_ranges0+0x38
+	.4byte	.Ldebug_ranges0+0x18
 	.4byte	0
 	.4byte	.Ldebug_line0
 	.uleb128 0x2
@@ -1326,468 +1360,123 @@ s_timer_interrupt_handle:
 	.uleb128 0xf
 	.4byte	.LASF83
 	.byte	0x1
-	.byte	0x99
-	.4byte	0xfa
+	.byte	0x9a
 	.byte	0x3
+	.4byte	0x1a9
 	.uleb128 0x10
-	.4byte	0x18f
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.uleb128 0x1
-	.byte	0x9c
-	.uleb128 0x11
-	.4byte	.LASF84
-	.byte	0x1
-	.byte	0xa4
-	.byte	0x3
-	.4byte	0x1c4
-	.uleb128 0x12
 	.4byte	.LASF39
-	.4byte	0x1d4
-	.4byte	.LASF84
+	.4byte	0x1b9
+	.4byte	.LASF83
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x11
 	.4byte	0xcc
-	.4byte	0x1d4
-	.uleb128 0x14
+	.4byte	0x1b9
+	.uleb128 0x12
 	.4byte	0xbe
 	.byte	0x12
 	.byte	0
 	.uleb128 0x7
-	.4byte	0x1c4
-	.uleb128 0x15
-	.4byte	.LASF85
+	.4byte	0x1a9
+	.uleb128 0x13
+	.4byte	.LASF84
 	.byte	0x1
-	.2byte	0x101
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.byte	0x93
+	.4byte	0xfa
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x28f
+	.uleb128 0x14
+	.4byte	0x18f
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
+	.uleb128 0x1
+	.byte	0x9c
+	.4byte	0x232
+	.uleb128 0x15
+	.4byte	0x19b
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	__func__$5454
 	.uleb128 0x16
+	.4byte	.LBB5
+	.4byte	.LBE5-.LBB5
+	.uleb128 0x15
+	.4byte	0x19b
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	__func__$5454
+	.uleb128 0x17
+	.4byte	.LVL0
+	.4byte	0x789
+	.uleb128 0x18
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	.LC12
+	.uleb128 0x18
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x8
+	.byte	0x9d
+	.uleb128 0x18
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	__func__$5454
+	.uleb128 0x18
+	.uleb128 0x1
+	.byte	0x5d
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	.LC9
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x19
+	.4byte	.LASF85
+	.byte	0x1
+	.2byte	0x103
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
+	.uleb128 0x1
+	.byte	0x9c
+	.4byte	0x2a9
+	.uleb128 0x1a
 	.string	"arg"
 	.byte	0x1
-	.2byte	0x101
+	.2byte	0x103
 	.4byte	0xb5
 	.uleb128 0x1
 	.byte	0x52
-	.uleb128 0x17
-	.4byte	0x1aa
-	.4byte	.LBB7
-	.4byte	.Ldebug_ranges0+0
-	.byte	0x1
-	.2byte	0x106
-	.4byte	0x24e
+	.uleb128 0x1b
+	.4byte	.LVL2
+	.4byte	0x794
+	.4byte	0x26a
 	.uleb128 0x18
-	.4byte	.Ldebug_ranges0+0
-	.uleb128 0x19
-	.4byte	0x1b6
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	__func__$5409
-	.uleb128 0x1a
-	.4byte	.LVL3
-	.4byte	0x7c6
-	.uleb128 0x1b
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	.LC17
-	.uleb128 0x1b
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x8
-	.byte	0xa7
-	.uleb128 0x1b
-	.uleb128 0x1
-	.byte	0x5c
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	__func__$5409
-	.uleb128 0x1b
-	.uleb128 0x1
-	.byte	0x5d
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	.LC14
-	.byte	0
-	.byte	0
-	.byte	0
-	.uleb128 0x1c
-	.4byte	.LVL1
-	.4byte	0x7d1
-	.4byte	0x262
-	.uleb128 0x1b
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x2
-	.byte	0x73
+	.byte	0x74
 	.sleb128 0
 	.byte	0
-	.uleb128 0x1d
-	.4byte	.LVL2
-	.4byte	0x18f
+	.uleb128 0x1c
+	.4byte	.LVL3
+	.4byte	0x1be
 	.uleb128 0x1c
 	.4byte	.LVL4
-	.4byte	0x7dc
-	.4byte	0x27f
-	.uleb128 0x1b
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x73
-	.sleb128 0
-	.byte	0
-	.uleb128 0x1e
+	.4byte	0x18f
+	.uleb128 0x1c
 	.4byte	.LVL5
-	.uleb128 0x2
-	.byte	0x73
-	.sleb128 0
+	.4byte	0x18f
 	.uleb128 0x1b
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x72
-	.sleb128 0
-	.byte	0
-	.byte	0
-	.uleb128 0x1f
-	.4byte	.LASF33
-	.byte	0x1
-	.byte	0xb3
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.uleb128 0x1
-	.byte	0x9c
-	.4byte	0x2b8
-	.uleb128 0x1a
 	.4byte	.LVL6
-	.4byte	0x7d1
-	.uleb128 0x1b
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	s_time_update_lock
-	.byte	0
-	.byte	0
-	.uleb128 0x1f
-	.4byte	.LASF34
-	.byte	0x1
-	.byte	0xb8
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.uleb128 0x1
-	.byte	0x9c
-	.4byte	0x2e1
-	.uleb128 0x1a
-	.4byte	.LVL7
-	.4byte	0x7dc
-	.uleb128 0x1b
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	s_time_update_lock
-	.byte	0
-	.byte	0
-	.uleb128 0x20
-	.4byte	.LASF41
-	.byte	0x1
-	.byte	0xbd
-	.4byte	0xaa
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.uleb128 0x1
-	.byte	0x9c
-	.4byte	0x352
-	.uleb128 0x21
-	.4byte	.LASF35
-	.byte	0x1
-	.byte	0xbf
-	.4byte	0x94
-	.4byte	.LLST0
-	.uleb128 0x21
-	.4byte	.LASF36
-	.byte	0x1
-	.byte	0xc0
-	.4byte	0xaa
-	.4byte	.LLST1
-	.uleb128 0x21
-	.4byte	.LASF37
-	.byte	0x1
-	.byte	0xc1
-	.4byte	0x94
-	.4byte	.LLST2
-	.uleb128 0x22
-	.4byte	.LASF38
-	.byte	0x1
-	.byte	0xc2
-	.4byte	0xfa
-	.uleb128 0x1
-	.byte	0x57
-	.uleb128 0x23
-	.4byte	.LASF40
-	.byte	0x1
-	.byte	0xd9
-	.4byte	0xaa
-	.uleb128 0x1d
-	.4byte	.LVL10
-	.4byte	0x18f
-	.uleb128 0x1d
-	.4byte	.LVL13
-	.4byte	0x18f
-	.byte	0
-	.uleb128 0x24
-	.4byte	.LASF42
-	.byte	0x1
-	.byte	0xde
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.uleb128 0x1
-	.byte	0x9c
-	.4byte	0x43c
-	.uleb128 0x25
-	.4byte	.LASF43
-	.byte	0x1
-	.byte	0xde
-	.4byte	0xaa
-	.4byte	.LLST3
-	.uleb128 0x21
-	.4byte	.LASF44
-	.byte	0x1
-	.byte	0xe2
-	.4byte	0xaa
-	.4byte	.LLST4
-	.uleb128 0x21
-	.4byte	.LASF38
-	.byte	0x1
-	.byte	0xe4
-	.4byte	0xfa
-	.4byte	.LLST5
-	.uleb128 0x21
-	.4byte	.LASF45
-	.byte	0x1
-	.byte	0xe5
-	.4byte	0xaa
-	.4byte	.LLST6
-	.uleb128 0x26
-	.4byte	.LASF39
-	.4byte	0x44c
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	__func__$5429
-	.uleb128 0x21
-	.4byte	.LASF46
-	.byte	0x1
-	.byte	0xed
-	.4byte	0xaa
-	.4byte	.LLST7
-	.uleb128 0x21
-	.4byte	.LASF47
-	.byte	0x1
-	.byte	0xee
-	.4byte	0x94
-	.4byte	.LLST8
-	.uleb128 0x21
-	.4byte	.LASF48
-	.byte	0x1
-	.byte	0xf3
-	.4byte	0x451
-	.4byte	.LLST9
-	.uleb128 0x1c
-	.4byte	.LVL19
-	.4byte	0x7d1
-	.4byte	0x3f3
-	.uleb128 0x1b
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x75
-	.sleb128 0
-	.byte	0
-	.uleb128 0x1d
-	.4byte	.LVL20
-	.4byte	0x18f
-	.uleb128 0x1c
-	.4byte	.LVL26
-	.4byte	0x7c6
-	.4byte	0x42b
-	.uleb128 0x1b
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	.LC17
-	.uleb128 0x1b
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x8
-	.byte	0xe8
-	.uleb128 0x1b
-	.uleb128 0x1
-	.byte	0x5c
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	__func__$5429
-	.uleb128 0x1b
-	.uleb128 0x1
-	.byte	0x5d
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	.LC33
-	.byte	0
-	.uleb128 0x1a
-	.4byte	.LVL39
-	.4byte	0x7dc
-	.uleb128 0x1b
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x75
-	.sleb128 0
-	.byte	0
-	.byte	0
-	.uleb128 0x13
-	.4byte	0xcc
-	.4byte	0x44c
-	.uleb128 0x14
-	.4byte	0xbe
-	.byte	0x18
-	.byte	0
-	.uleb128 0x7
-	.4byte	0x43c
-	.uleb128 0x7
-	.4byte	0x94
-	.uleb128 0x27
-	.4byte	.LASF49
-	.byte	0x1
-	.2byte	0x115
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
-	.uleb128 0x1
-	.byte	0x9c
-	.4byte	0x4f6
-	.uleb128 0x28
-	.4byte	.LASF50
-	.byte	0x1
-	.2byte	0x115
-	.4byte	0x94
-	.4byte	.LLST10
-	.uleb128 0x29
-	.4byte	.LASF51
-	.byte	0x1
-	.2byte	0x11e
-	.4byte	0x94
-	.4byte	.LLST11
-	.uleb128 0x29
-	.4byte	.LASF52
-	.byte	0x1
-	.2byte	0x11f
-	.4byte	0x94
-	.4byte	.LLST12
-	.uleb128 0x29
-	.4byte	.LASF31
-	.byte	0x1
-	.2byte	0x120
-	.4byte	0x94
-	.4byte	.LLST13
-	.uleb128 0x2a
-	.4byte	.LASF53
-	.byte	0x1
-	.2byte	0x121
-	.4byte	0xaa
-	.uleb128 0x29
-	.4byte	.LASF54
-	.byte	0x1
-	.2byte	0x122
-	.4byte	0xaa
-	.4byte	.LLST14
-	.uleb128 0x29
-	.4byte	.LASF55
-	.byte	0x1
-	.2byte	0x123
-	.4byte	0x94
-	.4byte	.LLST15
-	.uleb128 0x1c
-	.4byte	.LVL41
-	.4byte	0x7d1
-	.4byte	0x4ec
-	.uleb128 0x1b
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x73
-	.sleb128 0
-	.byte	0
-	.uleb128 0x1d
-	.4byte	.LVL57
-	.4byte	0x7dc
-	.byte	0
-	.uleb128 0x27
-	.4byte	.LASF56
-	.byte	0x1
-	.2byte	0x147
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
-	.uleb128 0x1
-	.byte	0x9c
-	.4byte	0x589
-	.uleb128 0x28
-	.4byte	.LASF57
-	.byte	0x1
-	.2byte	0x147
-	.4byte	0x9f
-	.4byte	.LLST16
-	.uleb128 0x26
-	.4byte	.LASF39
-	.4byte	0x599
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	__func__$5448
-	.uleb128 0x29
-	.4byte	.LASF31
-	.byte	0x1
-	.2byte	0x14c
-	.4byte	0xaa
-	.4byte	.LLST17
-	.uleb128 0x1c
-	.4byte	.LVL59
-	.4byte	0x7c6
-	.4byte	0x56b
-	.uleb128 0x1b
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	.LC17
-	.uleb128 0x1b
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x3
-	.byte	0xa
-	.2byte	0x149
-	.uleb128 0x1b
-	.uleb128 0x1
-	.byte	0x5c
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	__func__$5448
-	.uleb128 0x1b
-	.uleb128 0x1
-	.byte	0x5d
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	.LC53
-	.byte	0
-	.uleb128 0x1c
-	.4byte	.LVL60
-	.4byte	0x7d1
-	.4byte	0x57f
-	.uleb128 0x1b
+	.4byte	0x79f
+	.4byte	0x299
+	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x2
@@ -1795,289 +1484,601 @@ s_timer_interrupt_handle:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1d
-	.4byte	.LVL64
-	.4byte	0x7dc
+	.4byte	.LVL7
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.uleb128 0x18
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x72
+	.sleb128 0
 	.byte	0
-	.uleb128 0x13
-	.4byte	0xcc
-	.4byte	0x599
-	.uleb128 0x14
-	.4byte	0xbe
-	.byte	0x16
 	.byte	0
-	.uleb128 0x7
-	.4byte	0x589
-	.uleb128 0x2b
-	.4byte	.LASF86
+	.uleb128 0x1e
+	.4byte	.LASF33
 	.byte	0x1
-	.2byte	0x157
-	.4byte	0xde
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.byte	0xa9
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x6d8
+	.4byte	0x2d2
+	.uleb128 0x17
+	.4byte	.LVL8
+	.4byte	0x794
+	.uleb128 0x18
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	s_time_update_lock
+	.byte	0
+	.byte	0
+	.uleb128 0x1e
+	.4byte	.LASF34
+	.byte	0x1
+	.byte	0xae
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.uleb128 0x1
+	.byte	0x9c
+	.4byte	0x2fb
+	.uleb128 0x17
+	.4byte	.LVL9
+	.4byte	0x79f
+	.uleb128 0x18
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	s_time_update_lock
+	.byte	0
+	.byte	0
+	.uleb128 0x1f
+	.4byte	.LASF41
+	.byte	0x1
+	.byte	0xb3
+	.4byte	0xaa
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
+	.uleb128 0x1
+	.byte	0x9c
+	.4byte	0x36c
+	.uleb128 0x20
+	.4byte	.LASF35
+	.byte	0x1
+	.byte	0xb5
+	.4byte	0x94
+	.4byte	.LLST0
+	.uleb128 0x20
+	.4byte	.LASF36
+	.byte	0x1
+	.byte	0xb6
+	.4byte	0xaa
+	.4byte	.LLST1
+	.uleb128 0x20
+	.4byte	.LASF37
+	.byte	0x1
+	.byte	0xb7
+	.4byte	0x94
+	.4byte	.LLST2
+	.uleb128 0x21
+	.4byte	.LASF38
+	.byte	0x1
+	.byte	0xb8
+	.4byte	0xfa
+	.uleb128 0x1
+	.byte	0x57
+	.uleb128 0x22
+	.4byte	.LASF40
+	.byte	0x1
+	.byte	0xcf
+	.4byte	0xaa
+	.uleb128 0x1c
+	.4byte	.LVL12
+	.4byte	0x1be
+	.uleb128 0x1c
+	.4byte	.LVL15
+	.4byte	0x1be
+	.byte	0
+	.uleb128 0x23
+	.4byte	.LASF42
+	.byte	0x1
+	.byte	0xd4
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
+	.uleb128 0x1
+	.byte	0x9c
+	.4byte	0x42a
+	.uleb128 0x24
+	.4byte	.LASF43
+	.byte	0x1
+	.byte	0xd4
+	.4byte	0xaa
+	.uleb128 0x6
+	.byte	0x52
+	.byte	0x93
+	.uleb128 0x4
+	.byte	0x53
+	.byte	0x93
+	.uleb128 0x4
+	.uleb128 0x20
+	.4byte	.LASF44
+	.byte	0x1
+	.byte	0xdb
+	.4byte	0x89
+	.4byte	.LLST3
+	.uleb128 0x25
+	.4byte	.LBB6
+	.4byte	.LBE6-.LBB6
+	.4byte	0x405
+	.uleb128 0x20
+	.4byte	.LASF45
+	.byte	0x1
+	.byte	0xe7
+	.4byte	0x9f
+	.4byte	.LLST4
+	.uleb128 0x22
+	.4byte	.LASF46
+	.byte	0x1
+	.byte	0xe9
+	.4byte	0x9f
+	.uleb128 0x20
+	.4byte	.LASF47
+	.byte	0x1
+	.byte	0xeb
+	.4byte	0x9f
+	.4byte	.LLST5
+	.uleb128 0x20
+	.4byte	.LASF48
+	.byte	0x1
+	.byte	0xee
+	.4byte	0x94
+	.4byte	.LLST6
+	.uleb128 0x22
+	.4byte	.LASF49
+	.byte	0x1
+	.byte	0xf3
+	.4byte	0x9f
+	.uleb128 0x1c
+	.4byte	.LVL23
+	.4byte	0x1be
+	.uleb128 0x1c
+	.4byte	.LVL24
+	.4byte	0x18f
+	.byte	0
+	.uleb128 0x1b
+	.4byte	.LVL21
+	.4byte	0x794
+	.4byte	0x419
+	.uleb128 0x18
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.byte	0
+	.uleb128 0x17
+	.4byte	.LVL31
+	.4byte	0x79f
+	.uleb128 0x18
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.byte	0
+	.byte	0
+	.uleb128 0x26
+	.4byte	.LASF50
+	.byte	0x1
+	.2byte	0x121
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
+	.uleb128 0x1
+	.byte	0x9c
+	.4byte	0x4ca
+	.uleb128 0x27
+	.4byte	.LASF51
+	.byte	0x1
+	.2byte	0x121
+	.4byte	0x94
+	.4byte	.LLST7
 	.uleb128 0x28
+	.4byte	.LASF52
+	.byte	0x1
+	.2byte	0x12a
+	.4byte	0x94
+	.4byte	.LLST8
+	.uleb128 0x28
+	.4byte	.LASF53
+	.byte	0x1
+	.2byte	0x12b
+	.4byte	0x94
+	.4byte	.LLST9
+	.uleb128 0x28
+	.4byte	.LASF31
+	.byte	0x1
+	.2byte	0x12c
+	.4byte	0x94
+	.4byte	.LLST10
+	.uleb128 0x29
+	.4byte	.LASF54
+	.byte	0x1
+	.2byte	0x12d
+	.4byte	0xaa
+	.uleb128 0x28
+	.4byte	.LASF55
+	.byte	0x1
+	.2byte	0x12e
+	.4byte	0xaa
+	.4byte	.LLST11
+	.uleb128 0x28
+	.4byte	.LASF56
+	.byte	0x1
+	.2byte	0x12f
+	.4byte	0x94
+	.4byte	.LLST12
+	.uleb128 0x1b
+	.4byte	.LVL33
+	.4byte	0x794
+	.4byte	0x4c0
+	.uleb128 0x18
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.byte	0
+	.uleb128 0x1c
+	.4byte	.LVL49
+	.4byte	0x79f
+	.byte	0
+	.uleb128 0x26
+	.4byte	.LASF57
+	.byte	0x1
+	.2byte	0x153
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
+	.uleb128 0x1
+	.byte	0x9c
+	.4byte	0x55d
+	.uleb128 0x27
 	.4byte	.LASF58
 	.byte	0x1
-	.2byte	0x157
-	.4byte	0x101
-	.4byte	.LLST18
-	.uleb128 0x2c
-	.string	"err"
-	.byte	0x1
-	.2byte	0x15b
-	.4byte	0xde
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x29
-	.4byte	.LASF59
-	.byte	0x1
-	.2byte	0x164
-	.4byte	0x94
-	.4byte	.LLST19
-	.uleb128 0x26
+	.2byte	0x153
+	.4byte	0x9f
+	.4byte	.LLST13
+	.uleb128 0x2a
 	.4byte	.LASF39
-	.4byte	0x6e8
+	.4byte	0x56d
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5455
-	.uleb128 0x2d
-	.4byte	.Ldebug_ranges0+0x20
-	.4byte	0x644
-	.uleb128 0x29
-	.4byte	.LASF60
+	.4byte	__func__$5494
+	.uleb128 0x28
+	.4byte	.LASF31
 	.byte	0x1
-	.2byte	0x171
-	.4byte	0xde
-	.4byte	.LLST20
-	.uleb128 0x1d
-	.4byte	.LVL73
-	.4byte	0x7e7
-	.uleb128 0x1a
-	.4byte	.LVL74
-	.4byte	0x7f3
+	.2byte	0x158
+	.4byte	0xaa
+	.4byte	.LLST14
 	.uleb128 0x1b
+	.4byte	.LVL51
+	.4byte	0x789
+	.4byte	0x53f
+	.uleb128 0x18
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	.LC12
+	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5b
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	.LC17
-	.uleb128 0x1b
-	.uleb128 0x1
-	.byte	0x5c
 	.uleb128 0x3
 	.byte	0xa
-	.2byte	0x171
-	.uleb128 0x1b
+	.2byte	0x155
+	.uleb128 0x18
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	__func__$5494
+	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5d
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5455
+	.4byte	.LC49
+	.byte	0
 	.uleb128 0x1b
+	.4byte	.LVL52
+	.4byte	0x794
+	.4byte	0x553
+	.uleb128 0x18
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.byte	0
+	.uleb128 0x1c
+	.4byte	.LVL56
+	.4byte	0x79f
+	.byte	0
+	.uleb128 0x11
+	.4byte	0xcc
+	.4byte	0x56d
+	.uleb128 0x12
+	.4byte	0xbe
+	.byte	0x16
+	.byte	0
+	.uleb128 0x7
+	.4byte	0x55d
+	.uleb128 0x2b
+	.4byte	.LASF86
+	.byte	0x1
+	.2byte	0x162
+	.4byte	0xde
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
+	.uleb128 0x1
+	.byte	0x9c
+	.4byte	0x6ac
+	.uleb128 0x27
+	.4byte	.LASF59
+	.byte	0x1
+	.2byte	0x162
+	.4byte	0x101
+	.4byte	.LLST15
+	.uleb128 0x2c
+	.string	"err"
+	.byte	0x1
+	.2byte	0x166
+	.4byte	0xde
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x28
+	.4byte	.LASF60
+	.byte	0x1
+	.2byte	0x16f
+	.4byte	0x94
+	.4byte	.LLST16
+	.uleb128 0x2a
+	.4byte	.LASF39
+	.4byte	0x6bc
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	__func__$5501
+	.uleb128 0x2d
+	.4byte	.Ldebug_ranges0+0
+	.4byte	0x618
+	.uleb128 0x28
+	.4byte	.LASF61
+	.byte	0x1
+	.2byte	0x17c
+	.4byte	0xde
+	.4byte	.LLST17
+	.uleb128 0x1c
+	.4byte	.LVL65
+	.4byte	0x7aa
+	.uleb128 0x17
+	.4byte	.LVL66
+	.4byte	0x7b6
+	.uleb128 0x18
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	.LC12
+	.uleb128 0x18
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x3
+	.byte	0xa
+	.2byte	0x17c
+	.uleb128 0x18
+	.uleb128 0x1
+	.byte	0x5d
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	__func__$5501
+	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5e
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC86
+	.4byte	.LC81
 	.byte	0
 	.byte	0
-	.uleb128 0x1c
-	.4byte	.LVL66
-	.4byte	0x7fe
-	.4byte	0x673
 	.uleb128 0x1b
+	.4byte	.LVL58
+	.4byte	0x7c1
+	.4byte	0x647
+	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x2
 	.byte	0x8
 	.byte	0x39
-	.uleb128 0x1b
+	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5b
 	.uleb128 0x3
 	.byte	0xa
 	.2byte	0xc00
-	.uleb128 0x1b
+	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	timer_alarm_isr
-	.uleb128 0x1b
+	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5d
 	.uleb128 0x1
 	.byte	0x30
-	.uleb128 0x1b
+	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5e
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
 	.byte	0
-	.uleb128 0x1d
-	.4byte	.LVL68
-	.4byte	0x809
 	.uleb128 0x1c
-	.4byte	.LVL69
-	.4byte	0x814
-	.4byte	0x6a2
+	.4byte	.LVL60
+	.4byte	0x7cc
 	.uleb128 0x1b
+	.4byte	.LVL61
+	.4byte	0x7d7
+	.4byte	0x676
+	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC70
-	.uleb128 0x1b
+	.4byte	.LC65
+	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC68
-	.uleb128 0x1b
+	.4byte	.LC63
+	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5d
 	.uleb128 0x2
 	.byte	0x72
 	.sleb128 0
 	.byte	0
-	.uleb128 0x1d
-	.4byte	.LVL70
-	.4byte	0x81f
-	.uleb128 0x1a
-	.4byte	.LVL72
-	.4byte	0x7c6
-	.uleb128 0x1b
+	.uleb128 0x1c
+	.4byte	.LVL62
+	.4byte	0x7e2
+	.uleb128 0x17
+	.4byte	.LVL64
+	.4byte	0x789
+	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC17
-	.uleb128 0x1b
+	.4byte	.LC12
+	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5b
 	.uleb128 0x3
 	.byte	0xa
-	.2byte	0x168
-	.uleb128 0x1b
+	.2byte	0x173
+	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5455
-	.uleb128 0x1b
+	.4byte	__func__$5501
+	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5d
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC74
+	.4byte	.LC69
 	.byte	0
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x11
 	.4byte	0xcc
-	.4byte	0x6e8
-	.uleb128 0x14
+	.4byte	0x6bc
+	.uleb128 0x12
 	.4byte	0xbe
 	.byte	0x13
 	.byte	0
 	.uleb128 0x7
-	.4byte	0x6d8
+	.4byte	0x6ac
 	.uleb128 0x2e
-	.4byte	.LASF61
+	.4byte	.LASF62
 	.byte	0x1
-	.2byte	0x176
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.2byte	0x181
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x716
-	.uleb128 0x1d
-	.4byte	.LVL75
-	.4byte	0x82b
-	.uleb128 0x1d
-	.4byte	.LVL76
-	.4byte	0x836
+	.4byte	0x6ea
+	.uleb128 0x1c
+	.4byte	.LVL67
+	.4byte	0x7ee
+	.uleb128 0x1c
+	.4byte	.LVL68
+	.4byte	0x7f9
 	.byte	0
 	.uleb128 0x2f
 	.4byte	.LASF87
 	.byte	0x1
-	.2byte	0x185
+	.2byte	0x190
 	.4byte	0xaa
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x30
 	.string	"TAG"
 	.byte	0x1
-	.byte	0x62
+	.byte	0x63
 	.4byte	0x18a
 	.uleb128 0x6
 	.byte	0x3
-	.4byte	.LC68
+	.4byte	.LC63
 	.byte	0x9f
-	.uleb128 0x22
-	.4byte	.LASF62
+	.uleb128 0x21
+	.4byte	.LASF63
 	.byte	0x1
-	.byte	0x65
+	.byte	0x66
 	.4byte	0x11c
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	s_timer_interrupt_handle
-	.uleb128 0x22
-	.4byte	.LASF63
+	.uleb128 0x21
+	.4byte	.LASF64
 	.byte	0x1
-	.byte	0x69
+	.byte	0x6a
 	.4byte	0x101
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	s_alarm_handler
-	.uleb128 0x22
-	.4byte	.LASF64
+	.uleb128 0x21
+	.4byte	.LASF65
 	.byte	0x1
-	.byte	0x6e
+	.byte	0x6f
 	.4byte	0xaa
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	s_time_base_us
-	.uleb128 0x22
-	.4byte	.LASF65
+	.uleb128 0x21
+	.4byte	.LASF66
 	.byte	0x1
-	.byte	0x71
+	.byte	0x72
 	.4byte	0x94
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	s_timer_ticks_per_us
-	.uleb128 0x22
-	.4byte	.LASF66
+	.uleb128 0x21
+	.4byte	.LASF67
 	.byte	0x1
-	.byte	0x75
+	.byte	0x76
 	.4byte	0x94
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	s_timer_us_per_overflow
-	.uleb128 0x22
-	.4byte	.LASF67
+	.uleb128 0x21
+	.4byte	.LASF68
 	.byte	0x1
-	.byte	0x80
+	.byte	0x81
 	.4byte	0xfa
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	s_mask_overflow
-	.uleb128 0x22
-	.4byte	.LASF68
-	.byte	0x1
-	.byte	0x87
-	.4byte	0xfa
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	s_overflow_happened
 	.uleb128 0x31
 	.4byte	.LASF88
 	.byte	0x1
-	.byte	0x93
+	.byte	0x8d
 	.4byte	0x17f
 	.uleb128 0x5
 	.byte	0x3
@@ -2091,12 +2092,12 @@ s_timer_interrupt_handle:
 	.4byte	.LASF70
 	.4byte	.LASF70
 	.byte	0x6
-	.byte	0xda
+	.byte	0xf4
 	.uleb128 0x32
 	.4byte	.LASF71
 	.4byte	.LASF71
 	.byte	0x6
-	.byte	0xd9
+	.byte	0xf3
 	.uleb128 0x33
 	.4byte	.LASF72
 	.4byte	.LASF72
@@ -2296,36 +2297,6 @@ s_timer_interrupt_handle:
 	.byte	0
 	.uleb128 0xf
 	.uleb128 0x2e
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x20
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x10
-	.uleb128 0x2e
-	.byte	0
-	.uleb128 0x31
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x6
-	.uleb128 0x40
-	.uleb128 0x18
-	.uleb128 0x2117
-	.uleb128 0x19
-	.byte	0
-	.byte	0
-	.uleb128 0x11
-	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3
 	.uleb128 0xe
@@ -2341,7 +2312,7 @@ s_timer_interrupt_handle:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x12
+	.uleb128 0x10
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -2354,7 +2325,7 @@ s_timer_interrupt_handle:
 	.uleb128 0xe
 	.byte	0
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x11
 	.uleb128 0x1
 	.byte	0x1
 	.uleb128 0x49
@@ -2363,7 +2334,7 @@ s_timer_interrupt_handle:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x12
 	.uleb128 0x21
 	.byte	0
 	.uleb128 0x49
@@ -2372,7 +2343,81 @@ s_timer_interrupt_handle:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
+	.uleb128 0x13
+	.uleb128 0x2e
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x6
+	.uleb128 0x40
+	.uleb128 0x18
+	.uleb128 0x2117
+	.uleb128 0x19
+	.byte	0
+	.byte	0
+	.uleb128 0x14
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x6
+	.uleb128 0x40
+	.uleb128 0x18
+	.uleb128 0x2117
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
 	.uleb128 0x15
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x16
+	.uleb128 0xb
+	.byte	0x1
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x6
+	.byte	0
+	.byte	0
+	.uleb128 0x17
+	.uleb128 0x4109
+	.byte	0x1
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x31
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x18
+	.uleb128 0x410a
+	.byte	0
+	.uleb128 0x2
+	.uleb128 0x18
+	.uleb128 0x2111
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x19
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3
@@ -2395,7 +2440,7 @@ s_timer_interrupt_handle:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x16
+	.uleb128 0x1a
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -2410,78 +2455,27 @@ s_timer_interrupt_handle:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x17
-	.uleb128 0x1d
-	.byte	0x1
-	.uleb128 0x31
-	.uleb128 0x13
-	.uleb128 0x52
-	.uleb128 0x1
-	.uleb128 0x55
-	.uleb128 0x17
-	.uleb128 0x58
-	.uleb128 0xb
-	.uleb128 0x59
-	.uleb128 0x5
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x18
-	.uleb128 0xb
-	.byte	0x1
-	.uleb128 0x55
-	.uleb128 0x17
-	.byte	0
-	.byte	0
-	.uleb128 0x19
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x31
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x1a
+	.uleb128 0x1b
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
 	.uleb128 0x1
 	.uleb128 0x31
 	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x1b
-	.uleb128 0x410a
-	.byte	0
-	.uleb128 0x2
-	.uleb128 0x18
-	.uleb128 0x2111
-	.uleb128 0x18
+	.uleb128 0x1
+	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x1c
 	.uleb128 0x4109
-	.byte	0x1
+	.byte	0
 	.uleb128 0x11
 	.uleb128 0x1
 	.uleb128 0x31
-	.uleb128 0x13
-	.uleb128 0x1
 	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x1d
-	.uleb128 0x4109
-	.byte	0
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x31
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x1e
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
@@ -2490,7 +2484,7 @@ s_timer_interrupt_handle:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x1f
+	.uleb128 0x1e
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -2513,7 +2507,7 @@ s_timer_interrupt_handle:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x20
+	.uleb128 0x1f
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -2536,6 +2530,21 @@ s_timer_interrupt_handle:
 	.uleb128 0x19
 	.uleb128 0x1
 	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x20
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x17
 	.byte	0
 	.byte	0
 	.uleb128 0x21
@@ -2550,7 +2559,7 @@ s_timer_interrupt_handle:
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x2
-	.uleb128 0x17
+	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x22
@@ -2564,24 +2573,9 @@ s_timer_interrupt_handle:
 	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x23
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x24
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -2606,7 +2600,7 @@ s_timer_interrupt_handle:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x25
+	.uleb128 0x24
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -2618,23 +2612,21 @@ s_timer_interrupt_handle:
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x2
-	.uleb128 0x17
-	.byte	0
-	.byte	0
-	.uleb128 0x26
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x34
-	.uleb128 0x19
-	.uleb128 0x2
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x27
+	.uleb128 0x25
+	.uleb128 0xb
+	.byte	0x1
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x6
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x26
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -2659,8 +2651,23 @@ s_timer_interrupt_handle:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x28
+	.uleb128 0x27
 	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x17
+	.byte	0
+	.byte	0
+	.uleb128 0x28
+	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
@@ -2685,8 +2692,6 @@ s_timer_interrupt_handle:
 	.uleb128 0x5
 	.uleb128 0x49
 	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x17
 	.byte	0
 	.byte	0
 	.uleb128 0x2a
@@ -2694,12 +2699,12 @@ s_timer_interrupt_handle:
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
 	.uleb128 0x49
 	.uleb128 0x13
+	.uleb128 0x34
+	.uleb128 0x19
+	.uleb128 0x2
+	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x2b
@@ -2869,15 +2874,15 @@ s_timer_interrupt_handle:
 	.section	.debug_loc,"",@progbits
 .Ldebug_loc0:
 .LLST0:
-	.4byte	.LVL8
-	.4byte	.LVL15
+	.4byte	.LVL10
+	.4byte	.LVL17
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
 	.4byte	0
 .LLST1:
-	.4byte	.LVL9
-	.4byte	.LVL16
+	.4byte	.LVL11
+	.4byte	.LVL18
 	.2byte	0x6
 	.byte	0x52
 	.byte	0x93
@@ -2888,195 +2893,87 @@ s_timer_interrupt_handle:
 	.4byte	0
 	.4byte	0
 .LLST2:
-	.4byte	.LVL11
-	.4byte	.LVL12
+	.4byte	.LVL13
+	.4byte	.LVL14
 	.2byte	0x5
 	.byte	0x3
 	.4byte	s_timer_ticks_per_us
-	.4byte	.LVL12
-	.4byte	.LVL17
+	.4byte	.LVL14
+	.4byte	.LVL19
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
 	.4byte	0
 .LLST3:
-	.4byte	.LVL18
-	.4byte	.LVL21
-	.2byte	0x6
-	.byte	0x52
-	.byte	0x93
-	.uleb128 0x4
-	.byte	0x53
-	.byte	0x93
-	.uleb128 0x4
-	.4byte	.LVL21
-	.4byte	.LFE23
-	.2byte	0x6
-	.byte	0xf3
-	.uleb128 0x3
-	.byte	0xf5
-	.uleb128 0x2
-	.uleb128 0x25
-	.byte	0x9f
+	.4byte	.LVL22
+	.4byte	.LVL29
+	.2byte	0x1
+	.byte	0x56
+	.4byte	.LVL30
+	.4byte	.LFE32
+	.2byte	0x1
+	.byte	0x56
 	.4byte	0
 	.4byte	0
 .LLST4:
-	.4byte	.LVL21
-	.4byte	.LVL22
-	.2byte	0x6
-	.byte	0x54
-	.byte	0x93
-	.uleb128 0x4
-	.byte	0x52
-	.byte	0x93
-	.uleb128 0x4
-	.4byte	.LVL22
-	.4byte	.LVL23
-	.2byte	0x6
-	.byte	0x54
-	.byte	0x93
-	.uleb128 0x4
-	.byte	0x53
-	.byte	0x93
-	.uleb128 0x4
-	.4byte	.LVL23
-	.4byte	.LVL27
-	.2byte	0x6
-	.byte	0x56
-	.byte	0x93
-	.uleb128 0x4
-	.byte	0x53
-	.byte	0x93
-	.uleb128 0x4
-	.4byte	.LVL27
-	.4byte	.LVL30
-	.2byte	0x6
-	.byte	0x54
-	.byte	0x93
-	.uleb128 0x4
-	.byte	0x52
-	.byte	0x93
-	.uleb128 0x4
+	.4byte	.LVL25
+	.4byte	.LVL31-1
+	.2byte	0x7
+	.byte	0x7b
+	.sleb128 0
+	.byte	0xf7
+	.uleb128 0x2c
+	.byte	0xf7
+	.uleb128 0x25
+	.byte	0x9f
 	.4byte	0
 	.4byte	0
 .LLST5:
-	.4byte	.LVL21
-	.4byte	.LVL25
-	.2byte	0x1
-	.byte	0x5a
 	.4byte	.LVL26
-	.4byte	.LVL37
-	.2byte	0x1
-	.byte	0x5a
-	.4byte	0
-	.4byte	0
-.LLST6:
-	.4byte	.LVL21
-	.4byte	.LVL24
-	.2byte	0x7
-	.byte	0x7d
-	.sleb128 0
-	.byte	0xf7
-	.uleb128 0x2c
-	.byte	0xf7
-	.uleb128 0x25
-	.byte	0x9f
-	.4byte	.LVL26
-	.4byte	.LVL39-1
-	.2byte	0x7
-	.byte	0x7d
-	.sleb128 0
-	.byte	0xf7
-	.uleb128 0x2c
-	.byte	0xf7
-	.uleb128 0x25
-	.byte	0x9f
-	.4byte	0
-	.4byte	0
-.LLST7:
-	.4byte	.LVL32
-	.4byte	.LVL33
+	.4byte	.LVL27
 	.2byte	0x6
-	.byte	0x52
+	.byte	0x57
 	.byte	0x93
 	.uleb128 0x4
-	.byte	0x5b
+	.byte	0x59
 	.byte	0x93
 	.uleb128 0x4
-	.4byte	.LVL33
-	.4byte	.LVL34
+	.4byte	.LVL27
+	.4byte	.LVL28
 	.2byte	0x6
 	.byte	0x58
 	.byte	0x93
 	.uleb128 0x4
-	.byte	0x5b
+	.byte	0x5a
 	.byte	0x93
 	.uleb128 0x4
-	.4byte	.LVL34
-	.4byte	.LVL35
-	.2byte	0xa
-	.byte	0x9e
-	.uleb128 0x8
-	.8byte	0xefffffff
 	.4byte	0
 	.4byte	0
-.LLST8:
-	.4byte	.LVL29
-	.4byte	.LVL36
+.LLST6:
+	.4byte	.LVL27
+	.4byte	.LVL28
 	.2byte	0x6
 	.byte	0x9e
 	.uleb128 0x4
 	.4byte	0xefffffff
-	.4byte	.LVL36
-	.4byte	.LVL39-1
+	.4byte	.LVL28
+	.4byte	.LVL31-1
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
 	.4byte	0
-.LLST9:
-	.4byte	.LVL29
-	.4byte	.LVL31
-	.2byte	0x5
-	.byte	0x7c
-	.sleb128 0
-	.byte	0x31
-	.byte	0x24
-	.byte	0x9f
-	.4byte	.LVL31
-	.4byte	.LVL35
-	.2byte	0x1
-	.byte	0x5c
-	.4byte	.LVL35
-	.4byte	.LVL36
-	.2byte	0x5
-	.byte	0x7c
-	.sleb128 0
-	.byte	0x31
-	.byte	0x24
-	.byte	0x9f
-	.4byte	.LVL36
-	.4byte	.LVL38
-	.2byte	0x9
-	.byte	0x3
-	.4byte	s_timer_ticks_per_us
-	.byte	0x6
-	.byte	0x31
-	.byte	0x24
-	.byte	0x9f
-	.4byte	0
-	.4byte	0
-.LLST10:
-	.4byte	.LVL40
-	.4byte	.LVL55
+.LLST7:
+	.4byte	.LVL32
+	.4byte	.LVL47
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL55
-	.4byte	.LVL56
+	.4byte	.LVL47
+	.4byte	.LVL48
 	.2byte	0x5
 	.byte	0x3
 	.4byte	s_timer_ticks_per_us
-	.4byte	.LVL56
-	.4byte	.LFE25
+	.4byte	.LVL48
+	.4byte	.LFE34
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3084,39 +2981,39 @@ s_timer_interrupt_handle:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST11:
-	.4byte	.LVL42
-	.4byte	.LVL55
+.LLST8:
+	.4byte	.LVL34
+	.4byte	.LVL47
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL55
-	.4byte	.LVL56
+	.4byte	.LVL47
+	.4byte	.LVL48
 	.2byte	0x5
 	.byte	0x3
 	.4byte	s_timer_ticks_per_us
 	.4byte	0
 	.4byte	0
-.LLST12:
-	.4byte	.LVL43
-	.4byte	.LVL50
+.LLST9:
+	.4byte	.LVL35
+	.4byte	.LVL42
 	.2byte	0x1
 	.byte	0x53
-	.4byte	.LVL50
-	.4byte	.LVL51
+	.4byte	.LVL42
+	.4byte	.LVL43
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
 	.4byte	0
-.LLST13:
-	.4byte	.LVL44
-	.4byte	.LVL54
+.LLST10:
+	.4byte	.LVL36
+	.4byte	.LVL46
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
 	.4byte	0
-.LLST14:
-	.4byte	.LVL47
-	.4byte	.LVL49
+.LLST11:
+	.4byte	.LVL39
+	.4byte	.LVL41
 	.2byte	0x6
 	.byte	0x5a
 	.byte	0x93
@@ -3126,27 +3023,27 @@ s_timer_interrupt_handle:
 	.uleb128 0x4
 	.4byte	0
 	.4byte	0
-.LLST15:
-	.4byte	.LVL48
-	.4byte	.LVL51
+.LLST12:
+	.4byte	.LVL40
+	.4byte	.LVL43
 	.2byte	0x6
 	.byte	0x9e
 	.uleb128 0x4
 	.4byte	0xefffffff
-	.4byte	.LVL51
-	.4byte	.LVL52
+	.4byte	.LVL43
+	.4byte	.LVL44
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL52
-	.4byte	.LVL53
+	.4byte	.LVL44
+	.4byte	.LVL45
 	.2byte	0x2
 	.byte	0x77
 	.sleb128 0
 	.4byte	0
 	.4byte	0
-.LLST16:
-	.4byte	.LVL58
-	.4byte	.LVL63
+.LLST13:
+	.4byte	.LVL50
+	.4byte	.LVL55
 	.2byte	0x6
 	.byte	0x52
 	.byte	0x93
@@ -3154,8 +3051,8 @@ s_timer_interrupt_handle:
 	.byte	0x53
 	.byte	0x93
 	.uleb128 0x4
-	.4byte	.LVL63
-	.4byte	.LFE26
+	.4byte	.LVL55
+	.4byte	.LFE35
 	.2byte	0x6
 	.byte	0xf3
 	.uleb128 0x3
@@ -3165,9 +3062,9 @@ s_timer_interrupt_handle:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST17:
-	.4byte	.LVL61
-	.4byte	.LVL62-1
+.LLST14:
+	.4byte	.LVL53
+	.4byte	.LVL54-1
 	.2byte	0x7
 	.byte	0x7a
 	.sleb128 0
@@ -3178,13 +3075,13 @@ s_timer_interrupt_handle:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST18:
-	.4byte	.LVL65
-	.4byte	.LVL67
+.LLST15:
+	.4byte	.LVL57
+	.4byte	.LVL59
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL67
-	.4byte	.LFE27
+	.4byte	.LVL59
+	.4byte	.LFE36
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3192,94 +3089,90 @@ s_timer_interrupt_handle:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST19:
-	.4byte	.LVL70
-	.4byte	.LVL71
+.LLST16:
+	.4byte	.LVL62
+	.4byte	.LVL63
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
 	.4byte	0
-.LLST20:
-	.4byte	.LVL73
-	.4byte	.LVL74-1
+.LLST17:
+	.4byte	.LVL65
+	.4byte	.LVL66-1
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL74
-	.4byte	.LFE27
+	.4byte	.LVL66
+	.4byte	.LFE36
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
 	.4byte	0
 	.section	.debug_aranges,"",@progbits
-	.4byte	0x6c
+	.4byte	0x74
 	.2byte	0x2
 	.4byte	.Ldebug_info0
 	.byte	0x4
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
 	.4byte	.LFB27
 	.4byte	.LFE27-.LFB27
 	.4byte	.LFB28
 	.4byte	.LFE28-.LFB28
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.4byte	.LFB29
 	.4byte	.LFE29-.LFB29
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
 	.4byte	.LBB7
 	.4byte	.LBE7
-	.4byte	.LBB11
-	.4byte	.LBE11
-	.4byte	.LBB12
-	.4byte	.LBE12
+	.4byte	.LBB8
+	.4byte	.LBE8
 	.4byte	0
 	.4byte	0
-	.4byte	.LBB13
-	.4byte	.LBE13
-	.4byte	.LBB14
-	.4byte	.LBE14
-	.4byte	0
-	.4byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB24
-	.4byte	.LFE24
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB25
-	.4byte	.LFE25
-	.4byte	.LFB26
-	.4byte	.LFE26
 	.4byte	.LFB27
 	.4byte	.LFE27
 	.4byte	.LFB28
 	.4byte	.LFE28
+	.4byte	.LFB33
+	.4byte	.LFE33
 	.4byte	.LFB29
 	.4byte	.LFE29
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB31
+	.4byte	.LFE31
+	.4byte	.LFB32
+	.4byte	.LFE32
+	.4byte	.LFB34
+	.4byte	.LFE34
+	.4byte	.LFB35
+	.4byte	.LFE35
+	.4byte	.LFB36
+	.4byte	.LFE36
+	.4byte	.LFB37
+	.4byte	.LFE37
+	.4byte	.LFB38
+	.4byte	.LFE38
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -3289,11 +3182,9 @@ s_timer_interrupt_handle:
 	.string	"intr_handler_t"
 .LASF79:
 	.string	"esp_intr_free"
-.LASF68:
-	.string	"s_overflow_happened"
 .LASF40:
 	.string	"result"
-.LASF60:
+.LASF61:
 	.string	"__err_rc"
 .LASF43:
 	.string	"timestamp"
@@ -3301,25 +3192,27 @@ s_timer_interrupt_handle:
 	.string	"timer_alarm_isr"
 .LASF29:
 	.string	"ESP_LOG_VERBOSE"
-.LASF55:
+.LASF56:
 	.string	"new_alarm_val"
 .LASF74:
 	.string	"esp_intr_alloc"
-.LASF64:
+.LASF65:
 	.string	"s_time_base_us"
 .LASF70:
 	.string	"vTaskEnterCritical"
 .LASF16:
 	.string	"sizetype"
-.LASF46:
+.LASF47:
 	.string	"compare_val"
-.LASF61:
+.LASF62:
 	.string	"esp_timer_impl_deinit"
-.LASF65:
+.LASF49:
+	.string	"delta"
+.LASF66:
 	.string	"s_timer_ticks_per_us"
 .LASF7:
 	.string	"__uint32_t"
-.LASF51:
+.LASF52:
 	.string	"new_ticks_per_us"
 .LASF87:
 	.string	"esp_timer_impl_get_min_period_us"
@@ -3345,29 +3238,29 @@ s_timer_interrupt_handle:
 	.string	"short int"
 .LASF9:
 	.string	"long long int"
-.LASF66:
+.LASF67:
 	.string	"s_timer_us_per_overflow"
-.LASF50:
+.LASF51:
 	.string	"apb_ticks_per_us"
-.LASF58:
+.LASF59:
 	.string	"alarm_handler"
 .LASF15:
 	.string	"long int"
 .LASF8:
 	.string	"__int64_t"
-.LASF48:
+.LASF44:
 	.string	"offset"
 .LASF42:
 	.string	"esp_timer_impl_set_alarm"
 .LASF36:
 	.string	"time_base"
-.LASF67:
+.LASF68:
 	.string	"s_mask_overflow"
 .LASF71:
 	.string	"vTaskExitCritical"
-.LASF53:
+.LASF54:
 	.string	"ticks_to_alarm"
-.LASF44:
+.LASF46:
 	.string	"time_after_timebase_us"
 .LASF3:
 	.string	"unsigned char"
@@ -3375,7 +3268,7 @@ s_timer_interrupt_handle:
 	.string	"__func__"
 .LASF30:
 	.string	"owner"
-.LASF84:
+.LASF83:
 	.string	"timer_count_reload"
 .LASF2:
 	.string	"signed char"
@@ -3387,11 +3280,11 @@ s_timer_interrupt_handle:
 	.string	"_esp_error_check_failed"
 .LASF1:
 	.string	"unsigned int"
-.LASF52:
+.LASF53:
 	.string	"alarm"
-.LASF49:
+.LASF50:
 	.string	"esp_timer_impl_update_apb_freq"
-.LASF59:
+.LASF60:
 	.string	"apb_freq"
 .LASF35:
 	.string	"timer_val"
@@ -3401,7 +3294,7 @@ s_timer_interrupt_handle:
 	.string	"short unsigned int"
 .LASF18:
 	.string	"char"
-.LASF54:
+.LASF55:
 	.string	"new_ticks"
 .LASF28:
 	.string	"ESP_LOG_DEBUG"
@@ -3413,7 +3306,7 @@ s_timer_interrupt_handle:
 	.string	"ticks_per_us"
 .LASF38:
 	.string	"overflow"
-.LASF62:
+.LASF63:
 	.string	"s_timer_interrupt_handle"
 .LASF20:
 	.string	"_Bool"
@@ -3433,13 +3326,13 @@ s_timer_interrupt_handle:
 	.string	"long unsigned int"
 .LASF78:
 	.string	"esp_intr_disable"
-.LASF47:
+.LASF48:
 	.string	"alarm_reg_val"
-.LASF56:
+.LASF57:
 	.string	"esp_timer_impl_advance"
 .LASF31:
 	.string	"count"
-.LASF57:
+.LASF58:
 	.string	"time_us"
 .LASF6:
 	.string	"__int32_t"
@@ -3453,7 +3346,7 @@ s_timer_interrupt_handle:
 	.string	"__assert_func"
 .LASF80:
 	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
-.LASF83:
+.LASF84:
 	.string	"timer_overflow_happened"
 .LASF82:
 	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/esp32"
@@ -3461,6 +3354,6 @@ s_timer_interrupt_handle:
 	.string	"ESP_LOG_ERROR"
 .LASF19:
 	.string	"esp_err_t"
-.LASF63:
+.LASF64:
 	.string	"s_alarm_handler"
 	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

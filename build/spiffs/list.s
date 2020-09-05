@@ -6,7 +6,7 @@
 	.global	list_init
 	.type	list_init, @function
 list_init:
-.LFB17:
+.LFB26:
 	.file 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/spiffs/list.c"
 	.loc 1 39 0
 .LVL0:
@@ -38,14 +38,14 @@ list_init:
 	call8	mtx_unlock
 .LVL3:
 	retw.n
-.LFE17:
+.LFE26:
 	.size	list_init, .-list_init
 	.section	.text.list_add,"ax",@progbits
 	.align	4
 	.global	list_add
 	.type	list_add, @function
 list_add:
-.LFB18:
+.LFB27:
 	.loc 1 53 0
 .LVL4:
 	entry	sp, 32
@@ -148,14 +148,14 @@ list_add:
 	.loc 1 76 0
 	bnez.n	a10, .L13
 	j	.L7
-.LFE18:
+.LFE27:
 	.size	list_add, .-list_add
-	.section	.iram1,"ax",@progbits
+	.section	.iram1.13,"ax",@progbits
 	.align	4
 	.global	list_get
 	.type	list_get, @function
 list_get:
-.LFB19:
+.LFB28:
 	.loc 1 112 0
 .LVL23:
 	entry	sp, 32
@@ -219,14 +219,14 @@ list_get:
 .LVL36:
 	.loc 1 150 0
 	retw.n
-.LFE19:
+.LFE28:
 	.size	list_get, .-list_get
 	.section	.text.list_remove,"ax",@progbits
 	.align	4
 	.global	list_remove
 	.type	list_remove, @function
 list_remove:
-.LFB20:
+.LFB29:
 	.loc 1 152 0
 .LVL37:
 	entry	sp, 32
@@ -291,14 +291,14 @@ list_remove:
 .LVL49:
 	.loc 1 186 0
 	retw.n
-.LFE20:
+.LFE29:
 	.size	list_remove, .-list_remove
-	.section	.iram1
+	.section	.iram1.14,"ax",@progbits
 	.align	4
 	.global	list_first
 	.type	list_first, @function
 list_first:
-.LFB21:
+.LFB30:
 	.loc 1 188 0
 .LVL50:
 	entry	sp, 32
@@ -346,13 +346,14 @@ list_first:
 .LVL58:
 	.loc 1 204 0
 	retw.n
-.LFE21:
+.LFE30:
 	.size	list_first, .-list_first
+	.section	.iram1.15,"ax",@progbits
 	.align	4
 	.global	list_next
 	.type	list_next, @function
 list_next:
-.LFB22:
+.LFB31:
 	.loc 1 206 0
 .LVL59:
 	entry	sp, 32
@@ -418,14 +419,14 @@ list_next:
 .LVL72:
 	.loc 1 232 0
 	retw.n
-.LFE22:
+.LFE31:
 	.size	list_next, .-list_next
 	.section	.text.list_destroy,"ax",@progbits
 	.align	4
 	.global	list_destroy
 	.type	list_destroy, @function
 list_destroy:
-.LFB23:
+.LFB32:
 	.loc 1 234 0
 .LVL73:
 	entry	sp, 32
@@ -475,7 +476,7 @@ list_destroy:
 	l8ui	a8, a2, 12
 	blt	a3, a8, .L47
 	j	.L44
-.LFE23:
+.LFE32:
 	.size	list_destroy, .-list_destroy
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -496,10 +497,10 @@ list_destroy:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.byte	0x4
-	.4byte	.LCFI0-.LFB17
+	.4byte	.LCFI0-.LFB26
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -508,10 +509,10 @@ list_destroy:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI1-.LFB18
+	.4byte	.LCFI1-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -520,10 +521,10 @@ list_destroy:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI2-.LFB19
+	.4byte	.LCFI2-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -532,10 +533,10 @@ list_destroy:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI3-.LFB20
+	.4byte	.LCFI3-.LFB29
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -544,10 +545,10 @@ list_destroy:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI4-.LFB21
+	.4byte	.LCFI4-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -556,10 +557,10 @@ list_destroy:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI5-.LFB22
+	.4byte	.LCFI5-.LFB31
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -568,10 +569,10 @@ list_destroy:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI6-.LFB23
+	.4byte	.LCFI6-.LFB32
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -762,8 +763,8 @@ list_destroy:
 	.4byte	.LASF37
 	.byte	0x1
 	.byte	0x27
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1ca
@@ -837,8 +838,8 @@ list_destroy:
 	.byte	0x1
 	.byte	0x35
 	.4byte	0x25
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2d0
@@ -979,8 +980,8 @@ list_destroy:
 	.byte	0x1
 	.byte	0x70
 	.4byte	0x25
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x371
@@ -1056,8 +1057,8 @@ list_destroy:
 	.byte	0x1
 	.byte	0x98
 	.4byte	0x25
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x41b
@@ -1133,8 +1134,8 @@ list_destroy:
 	.byte	0x1
 	.byte	0xbc
 	.4byte	0x25
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x486
@@ -1183,8 +1184,8 @@ list_destroy:
 	.byte	0x1
 	.byte	0xce
 	.4byte	0x25
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x514
@@ -1249,8 +1250,8 @@ list_destroy:
 	.4byte	.LASF38
 	.byte	0x1
 	.byte	0xea
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x5a1
@@ -1691,7 +1692,7 @@ list_destroy:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL20
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -1714,7 +1715,7 @@ list_destroy:
 	.byte	0x53
 	.byte	0x9f
 	.4byte	.LVL20
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -1739,7 +1740,7 @@ list_destroy:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL20
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
@@ -1761,7 +1762,7 @@ list_destroy:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL22
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -1778,7 +1779,7 @@ list_destroy:
 	.byte	0x31
 	.byte	0x9f
 	.4byte	.LVL20
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x2
 	.byte	0x31
 	.byte	0x9f
@@ -1801,7 +1802,7 @@ list_destroy:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL36
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1815,7 +1816,7 @@ list_destroy:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL26
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1908,7 +1909,7 @@ list_destroy:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL49
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1922,7 +1923,7 @@ list_destroy:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL40
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1937,7 +1938,7 @@ list_destroy:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL46
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -1974,7 +1975,7 @@ list_destroy:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL53
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -2009,7 +2010,7 @@ list_destroy:
 	.byte	0xff
 	.byte	0x9f
 	.4byte	.LVL57
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -2031,7 +2032,7 @@ list_destroy:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL72
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2045,7 +2046,7 @@ list_destroy:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL65
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2071,7 +2072,7 @@ list_destroy:
 	.byte	0xff
 	.byte	0x9f
 	.4byte	.LVL70
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -2093,7 +2094,7 @@ list_destroy:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL75
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2109,38 +2110,38 @@ list_destroy:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB17
-	.4byte	.LFE17
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB23
-	.4byte	.LFE23
+	.4byte	.LFB26
+	.4byte	.LFE26
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB28
+	.4byte	.LFE28
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB31
+	.4byte	.LFE31
+	.4byte	.LFB32
+	.4byte	.LFE32
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

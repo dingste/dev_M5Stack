@@ -6,21 +6,21 @@
 	.global	bta_gatts_co_update_handle_range
 	.type	bta_gatts_co_update_handle_range, @function
 bta_gatts_co_update_handle_range:
-.LFB30:
+.LFB39:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/bta/gatt/bta_gatts_co.c"
 	.loc 1 109 0
 .LVL0:
 	entry	sp, 32
 .LCFI0:
 	retw.n
-.LFE30:
+.LFE39:
 	.size	bta_gatts_co_update_handle_range, .-bta_gatts_co_update_handle_range
 	.section	.text.bta_gatts_co_srv_chg,"ax",@progbits
 	.align	4
 	.global	bta_gatts_co_srv_chg
 	.type	bta_gatts_co_srv_chg, @function
 bta_gatts_co_srv_chg:
-.LFB31:
+.LFB40:
 	.loc 1 134 0
 .LVL1:
 	.loc 1 134 0
@@ -30,14 +30,14 @@ bta_gatts_co_srv_chg:
 	movi.n	a2, 0
 .LVL2:
 	retw.n
-.LFE31:
+.LFE40:
 	.size	bta_gatts_co_srv_chg, .-bta_gatts_co_srv_chg
 	.section	.text.bta_gatts_co_load_handle_range,"ax",@progbits
 	.align	4
 	.global	bta_gatts_co_load_handle_range
 	.type	bta_gatts_co_load_handle_range, @function
 bta_gatts_co_load_handle_range:
-.LFB32:
+.LFB41:
 	.loc 1 156 0
 .LVL3:
 	entry	sp, 32
@@ -46,7 +46,7 @@ bta_gatts_co_load_handle_range:
 	movi.n	a2, 0
 .LVL4:
 	retw.n
-.LFE32:
+.LFE41:
 	.size	bta_gatts_co_load_handle_range, .-bta_gatts_co_load_handle_range
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -67,10 +67,10 @@ bta_gatts_co_load_handle_range:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI0-.LFB30
+	.4byte	.LCFI0-.LFB39
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -79,10 +79,10 @@ bta_gatts_co_load_handle_range:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI1-.LFB31
+	.4byte	.LCFI1-.LFB40
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -91,10 +91,10 @@ bta_gatts_co_load_handle_range:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.byte	0x4
-	.4byte	.LCFI2-.LFB32
+	.4byte	.LCFI2-.LFB41
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -182,114 +182,114 @@ bta_gatts_co_load_handle_range:
 	.byte	0x3
 	.byte	0x2d
 	.4byte	0x5e
-	.uleb128 0x3
-	.4byte	.LASF13
-	.byte	0x4
-	.byte	0x21
-	.4byte	0x7e
-	.uleb128 0x3
-	.4byte	.LASF14
-	.byte	0x4
-	.byte	0x22
-	.4byte	0x89
-	.uleb128 0x3
-	.4byte	.LASF15
-	.byte	0x4
-	.byte	0x23
-	.4byte	0x94
-	.uleb128 0x3
-	.4byte	.LASF16
-	.byte	0x4
-	.byte	0x29
-	.4byte	0xcb
 	.uleb128 0x2
-	.byte	0x1
-	.byte	0x2
-	.4byte	.LASF17
+	.byte	0x4
+	.byte	0x5
+	.4byte	.LASF13
 	.uleb128 0x2
 	.byte	0x4
 	.byte	0x7
+	.4byte	.LASF14
+	.uleb128 0x2
+	.byte	0x4
+	.byte	0x7
+	.4byte	.LASF15
+	.uleb128 0x2
+	.byte	0x1
+	.byte	0x8
+	.4byte	.LASF16
+	.uleb128 0x3
+	.4byte	.LASF17
+	.byte	0x4
+	.byte	0x1a
+	.4byte	0x7e
+	.uleb128 0x3
 	.4byte	.LASF18
-	.uleb128 0x5
+	.byte	0x4
+	.byte	0x1b
+	.4byte	0x89
+	.uleb128 0x3
 	.4byte	.LASF19
 	.byte	0x4
-	.2byte	0x132
-	.4byte	0xe5
+	.byte	0x1c
+	.4byte	0x94
+	.uleb128 0x3
+	.4byte	.LASF20
+	.byte	0x4
+	.byte	0x22
+	.4byte	0xe7
+	.uleb128 0x2
+	.byte	0x1
+	.byte	0x2
+	.4byte	.LASF21
+	.uleb128 0x5
+	.4byte	.LASF22
+	.byte	0x4
+	.2byte	0x12b
+	.4byte	0xfa
 	.uleb128 0x6
-	.4byte	0x9f
-	.4byte	0xf5
+	.4byte	0xbb
+	.4byte	0x10a
 	.uleb128 0x7
-	.4byte	0xd2
+	.4byte	0xa6
 	.byte	0x5
 	.byte	0
 	.uleb128 0x6
-	.4byte	0x9f
-	.4byte	0x105
+	.4byte	0xbb
+	.4byte	0x11a
 	.uleb128 0x7
-	.4byte	0xd2
+	.4byte	0xa6
 	.byte	0xf
 	.byte	0
 	.uleb128 0x8
 	.byte	0x10
 	.byte	0x4
-	.2byte	0x1ab
-	.4byte	0x133
+	.2byte	0x1a4
+	.4byte	0x148
 	.uleb128 0x9
-	.4byte	.LASF20
+	.4byte	.LASF23
 	.byte	0x4
-	.2byte	0x1ac
-	.4byte	0xaa
+	.2byte	0x1a5
+	.4byte	0xc6
 	.uleb128 0x9
-	.4byte	.LASF21
+	.4byte	.LASF24
 	.byte	0x4
-	.2byte	0x1ad
-	.4byte	0xb5
+	.2byte	0x1a6
+	.4byte	0xd1
 	.uleb128 0x9
-	.4byte	.LASF22
+	.4byte	.LASF25
 	.byte	0x4
-	.2byte	0x1ae
-	.4byte	0xf5
+	.2byte	0x1a7
+	.4byte	0x10a
 	.byte	0
 	.uleb128 0xa
 	.byte	0x14
 	.byte	0x4
-	.2byte	0x1a4
-	.4byte	0x156
+	.2byte	0x19d
+	.4byte	0x16b
 	.uleb128 0xb
 	.string	"len"
 	.byte	0x4
-	.2byte	0x1a9
-	.4byte	0xaa
+	.2byte	0x1a2
+	.4byte	0xc6
 	.byte	0
 	.uleb128 0xb
 	.string	"uu"
 	.byte	0x4
-	.2byte	0x1af
-	.4byte	0x105
+	.2byte	0x1a8
+	.4byte	0x11a
 	.byte	0x4
 	.byte	0
 	.uleb128 0x5
-	.4byte	.LASF23
-	.byte	0x4
-	.2byte	0x1b1
-	.4byte	0x133
-	.uleb128 0x2
-	.byte	0x1
-	.byte	0x8
-	.4byte	.LASF24
-	.uleb128 0x2
-	.byte	0x4
-	.byte	0x5
-	.4byte	.LASF25
-	.uleb128 0x2
-	.byte	0x4
-	.byte	0x7
 	.4byte	.LASF26
+	.byte	0x4
+	.2byte	0x1aa
+	.4byte	0x148
 	.uleb128 0x5
 	.4byte	.LASF27
 	.byte	0x5
 	.2byte	0x26a
-	.4byte	0x9f
+	.4byte	0xbb
 	.uleb128 0xa
 	.byte	0x7
 	.byte	0x5
@@ -299,13 +299,13 @@ bta_gatts_co_load_handle_range:
 	.string	"bda"
 	.byte	0x5
 	.2byte	0x26d
-	.4byte	0xd9
+	.4byte	0xee
 	.byte	0
 	.uleb128 0xc
 	.4byte	.LASF28
 	.byte	0x5
 	.2byte	0x26e
-	.4byte	0xc0
+	.4byte	0xdc
 	.byte	0x6
 	.byte	0
 	.uleb128 0x5
@@ -327,7 +327,7 @@ bta_gatts_co_load_handle_range:
 	.4byte	.LASF31
 	.byte	0x5
 	.2byte	0x274
-	.4byte	0x9f
+	.4byte	0xbb
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF32
@@ -348,7 +348,7 @@ bta_gatts_co_load_handle_range:
 	.4byte	.LASF33
 	.byte	0x5
 	.2byte	0x279
-	.4byte	0x9f
+	.4byte	0xbb
 	.byte	0
 	.uleb128 0x5
 	.4byte	.LASF34
@@ -364,37 +364,37 @@ bta_gatts_co_load_handle_range:
 	.4byte	.LASF35
 	.byte	0x6
 	.2byte	0x1fc
-	.4byte	0x156
+	.4byte	0x16b
 	.byte	0
 	.uleb128 0xc
 	.4byte	.LASF36
 	.byte	0x6
 	.2byte	0x1fd
-	.4byte	0x156
+	.4byte	0x16b
 	.byte	0x14
 	.uleb128 0xc
 	.4byte	.LASF37
 	.byte	0x6
 	.2byte	0x1fe
-	.4byte	0xaa
+	.4byte	0xc6
 	.byte	0x28
 	.uleb128 0xc
 	.4byte	.LASF38
 	.byte	0x6
 	.2byte	0x1ff
-	.4byte	0xaa
+	.4byte	0xc6
 	.byte	0x2a
 	.uleb128 0xc
 	.4byte	.LASF39
 	.byte	0x6
 	.2byte	0x200
-	.4byte	0xaa
+	.4byte	0xc6
 	.byte	0x2c
 	.uleb128 0xc
 	.4byte	.LASF40
 	.byte	0x6
 	.2byte	0x201
-	.4byte	0xc0
+	.4byte	0xdc
 	.byte	0x2e
 	.byte	0
 	.uleb128 0x5
@@ -421,8 +421,8 @@ bta_gatts_co_load_handle_range:
 	.4byte	.LASF58
 	.byte	0x1
 	.byte	0x6c
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2c7
@@ -430,7 +430,7 @@ bta_gatts_co_load_handle_range:
 	.4byte	.LASF45
 	.byte	0x1
 	.byte	0x6c
-	.4byte	0xc0
+	.4byte	0xdc
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0xe
@@ -448,9 +448,9 @@ bta_gatts_co_load_handle_range:
 	.4byte	.LASF49
 	.byte	0x1
 	.byte	0x83
-	.4byte	0xc0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	0xdc
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x310
@@ -485,9 +485,9 @@ bta_gatts_co_load_handle_range:
 	.4byte	.LASF50
 	.byte	0x1
 	.byte	0x9a
-	.4byte	0xc0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	0xdc
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x352
@@ -495,7 +495,7 @@ bta_gatts_co_load_handle_range:
 	.4byte	.LASF51
 	.byte	0x1
 	.byte	0x9a
-	.4byte	0x9f
+	.4byte	0xbb
 	.4byte	.LLST1
 	.uleb128 0xe
 	.4byte	.LASF52
@@ -508,7 +508,7 @@ bta_gatts_co_load_handle_range:
 	.uleb128 0x13
 	.4byte	.LASF53
 	.byte	0x4
-	.2byte	0x2cc
+	.2byte	0x2b8
 	.4byte	0x365
 	.byte	0x6
 	.byte	0xff
@@ -518,11 +518,11 @@ bta_gatts_co_load_handle_range:
 	.byte	0xff
 	.byte	0xff
 	.uleb128 0x14
-	.4byte	0xe5
+	.4byte	0xfa
 	.uleb128 0x13
 	.4byte	.LASF54
 	.byte	0x4
-	.2byte	0x2cd
+	.2byte	0x2b9
 	.4byte	0x37d
 	.byte	0x6
 	.byte	0
@@ -532,7 +532,7 @@ bta_gatts_co_load_handle_range:
 	.byte	0
 	.byte	0
 	.uleb128 0x14
-	.4byte	0xe5
+	.4byte	0xfa
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -827,7 +827,7 @@ bta_gatts_co_load_handle_range:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL2
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -841,7 +841,7 @@ bta_gatts_co_load_handle_range:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL4
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -857,22 +857,22 @@ bta_gatts_co_load_handle_range:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB30
-	.4byte	.LFE30
-	.4byte	.LFB31
-	.4byte	.LFE31
-	.4byte	.LFB32
-	.4byte	.LFE32
+	.4byte	.LFB39
+	.4byte	.LFE39
+	.4byte	.LFB40
+	.4byte	.LFE40
+	.4byte	.LFB41
+	.4byte	.LFE41
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -882,15 +882,15 @@ bta_gatts_co_load_handle_range:
 	.string	"svc_inst"
 .LASF54:
 	.string	"bd_addr_null"
-.LASF23:
+.LASF26:
 	.string	"tBT_UUID"
 .LASF2:
 	.string	"short int"
-.LASF18:
+.LASF14:
 	.string	"sizetype"
 .LASF52:
 	.string	"p_handle_range"
-.LASF15:
+.LASF19:
 	.string	"UINT32"
 .LASF8:
 	.string	"long long int"
@@ -908,17 +908,17 @@ bta_gatts_co_load_handle_range:
 	.string	"bta_gatts_co_update_handle_range"
 .LASF44:
 	.string	"tBTA_GATTS_SRV_CHG_RSP"
-.LASF16:
+.LASF20:
 	.string	"BOOLEAN"
-.LASF25:
-	.string	"long int"
 .LASF13:
+	.string	"long int"
+.LASF17:
 	.string	"UINT8"
 .LASF39:
 	.string	"e_handle"
 .LASF3:
 	.string	"__uint8_t"
-.LASF22:
+.LASF25:
 	.string	"uuid128"
 .LASF42:
 	.string	"tBTA_GATTS_SRV_CHG_CMD"
@@ -928,7 +928,7 @@ bta_gatts_co_load_handle_range:
 	.string	"client_read_index"
 .LASF1:
 	.string	"unsigned char"
-.LASF21:
+.LASF24:
 	.string	"uuid32"
 .LASF27:
 	.string	"tGATTS_SRV_CHG_CMD"
@@ -952,21 +952,21 @@ bta_gatts_co_load_handle_range:
 	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/bt"
 .LASF49:
 	.string	"bta_gatts_co_srv_chg"
-.LASF14:
+.LASF18:
 	.string	"UINT16"
-.LASF24:
+.LASF16:
 	.string	"char"
 .LASF29:
 	.string	"tGATTS_SRV_CHG"
 .LASF28:
 	.string	"srv_changed"
-.LASF17:
+.LASF21:
 	.string	"_Bool"
 .LASF41:
 	.string	"tBTA_GATTS_HNDL_RANGE"
 .LASF33:
 	.string	"num_clients"
-.LASF26:
+.LASF15:
 	.string	"long unsigned int"
 .LASF6:
 	.string	"__uint32_t"
@@ -980,7 +980,7 @@ bta_gatts_co_load_handle_range:
 	.string	"bd_addr_any"
 .LASF48:
 	.string	"p_rsp"
-.LASF19:
+.LASF22:
 	.string	"BD_ADDR"
 .LASF45:
 	.string	"is_add"
@@ -990,7 +990,7 @@ bta_gatts_co_load_handle_range:
 	.string	"unsigned int"
 .LASF55:
 	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
-.LASF20:
+.LASF23:
 	.string	"uuid16"
 .LASF56:
 	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/bta/gatt/bta_gatts_co.c"

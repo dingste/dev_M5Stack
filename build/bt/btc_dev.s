@@ -6,7 +6,7 @@
 	.global	btc_dev_call_handler
 	.type	btc_dev_call_handler, @function
 btc_dev_call_handler:
-.LFB30:
+.LFB39:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/btc/core/btc_dev.c"
 	.loc 1 22 0
 .LVL0:
@@ -22,7 +22,7 @@ btc_dev_call_handler:
 .LVL2:
 .L1:
 	retw.n
-.LFE30:
+.LFE39:
 	.size	btc_dev_call_handler, .-btc_dev_call_handler
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -43,10 +43,10 @@ btc_dev_call_handler:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI0-.LFB30
+	.4byte	.LCFI0-.LFB39
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -56,7 +56,7 @@ btc_dev_call_handler:
 	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
 	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
 	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/btc/include/btc/btc_task.h"
+	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/btc/include/btc/btc_task.h"
 	.file 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/btc/include/btc/btc_dev.h"
 	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/bta/include/bta/bta_api.h"
@@ -134,99 +134,99 @@ btc_dev_call_handler:
 	.byte	0x3
 	.byte	0x15
 	.4byte	0x41
-	.uleb128 0x4
-	.4byte	.LASF13
-	.byte	0x4
-	.byte	0x21
-	.4byte	0x86
-	.uleb128 0x3
-	.byte	0x1
-	.byte	0x2
-	.4byte	.LASF14
 	.uleb128 0x6
-	.4byte	0x91
-	.4byte	0xb3
-	.uleb128 0x7
-	.4byte	0x6f
-	.byte	0x5
-	.byte	0
-	.uleb128 0x8
 	.byte	0x4
 	.4byte	0x2c
 	.byte	0x6
 	.byte	0x1f
-	.4byte	0xe4
-	.uleb128 0x9
-	.4byte	.LASF15
+	.4byte	0xc2
+	.uleb128 0x7
+	.4byte	.LASF13
 	.byte	0
-	.uleb128 0x9
-	.4byte	.LASF16
+	.uleb128 0x7
+	.4byte	.LASF14
 	.byte	0x1
-	.uleb128 0x9
-	.4byte	.LASF17
+	.uleb128 0x7
+	.4byte	.LASF15
 	.byte	0x2
-	.uleb128 0x9
-	.4byte	.LASF18
+	.uleb128 0x7
+	.4byte	.LASF16
 	.byte	0x3
-	.uleb128 0x9
+	.uleb128 0x7
+	.4byte	.LASF17
+	.byte	0x4
+	.uleb128 0x7
+	.4byte	.LASF18
+	.byte	0x5
+	.byte	0
+	.uleb128 0x4
 	.4byte	.LASF19
 	.byte	0x4
-	.uleb128 0x9
+	.byte	0x1a
+	.4byte	0x86
+	.uleb128 0x3
+	.byte	0x1
+	.byte	0x2
 	.4byte	.LASF20
+	.uleb128 0x8
+	.4byte	0xc2
+	.4byte	0xe4
+	.uleb128 0x9
+	.4byte	0x6f
 	.byte	0x5
 	.byte	0
 	.uleb128 0xa
 	.4byte	.LASF23
 	.byte	0x8
 	.byte	0x5
-	.byte	0x17
+	.byte	0x1a
 	.4byte	0x12d
 	.uleb128 0xb
 	.string	"sig"
 	.byte	0x5
-	.byte	0x18
+	.byte	0x1b
 	.4byte	0x86
 	.byte	0
 	.uleb128 0xb
 	.string	"aid"
 	.byte	0x5
-	.byte	0x19
+	.byte	0x1c
 	.4byte	0x86
 	.byte	0x1
 	.uleb128 0xb
 	.string	"pid"
 	.byte	0x5
-	.byte	0x1a
+	.byte	0x1d
 	.4byte	0x86
 	.byte	0x2
 	.uleb128 0xb
 	.string	"act"
 	.byte	0x5
-	.byte	0x1b
+	.byte	0x1e
 	.4byte	0x86
 	.byte	0x3
 	.uleb128 0xb
 	.string	"arg"
 	.byte	0x5
-	.byte	0x1c
+	.byte	0x1f
 	.4byte	0x76
 	.byte	0x4
 	.byte	0
 	.uleb128 0x4
 	.4byte	.LASF21
 	.byte	0x5
-	.byte	0x1d
+	.byte	0x20
 	.4byte	0xe4
 	.uleb128 0xc
 	.byte	0x4
 	.4byte	0x12d
-	.uleb128 0x8
+	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x2c
 	.byte	0x7
 	.byte	0x16
 	.4byte	0x151
-	.uleb128 0x9
+	.uleb128 0x7
 	.4byte	.LASF22
 	.byte	0
 	.byte	0
@@ -243,10 +243,10 @@ btc_dev_call_handler:
 	.4byte	0x16a
 	.byte	0
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	0x7f
 	.4byte	0x17a
-	.uleb128 0x7
+	.uleb128 0x9
 	.4byte	0x6f
 	.byte	0x20
 	.byte	0
@@ -270,8 +270,8 @@ btc_dev_call_handler:
 	.4byte	.LASF33
 	.byte	0x1
 	.byte	0x15
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1dd
@@ -298,10 +298,10 @@ btc_dev_call_handler:
 	.uleb128 0xc
 	.byte	0x4
 	.4byte	0x18e
-	.uleb128 0x6
+	.uleb128 0x8
 	.4byte	0x7f
 	.4byte	0x1f3
-	.uleb128 0x7
+	.uleb128 0x9
 	.4byte	0x6f
 	.byte	0x14
 	.byte	0
@@ -310,7 +310,7 @@ btc_dev_call_handler:
 	.uleb128 0x16
 	.4byte	.LASF27
 	.byte	0x4
-	.2byte	0x2cc
+	.2byte	0x2b8
 	.4byte	0x20b
 	.byte	0x6
 	.byte	0xff
@@ -320,11 +320,11 @@ btc_dev_call_handler:
 	.byte	0xff
 	.byte	0xff
 	.uleb128 0x15
-	.4byte	0xa3
+	.4byte	0xd4
 	.uleb128 0x16
 	.4byte	.LASF28
 	.byte	0x4
-	.2byte	0x2cd
+	.2byte	0x2b9
 	.4byte	0x223
 	.byte	0x6
 	.byte	0
@@ -334,12 +334,12 @@ btc_dev_call_handler:
 	.byte	0
 	.byte	0
 	.uleb128 0x15
-	.4byte	0xa3
+	.4byte	0xd4
 	.uleb128 0x17
 	.4byte	.LASF35
 	.4byte	.LASF35
 	.byte	0x8
-	.2byte	0x5ab
+	.2byte	0x5ac
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -405,24 +405,6 @@ btc_dev_call_handler:
 	.byte	0
 	.byte	0
 	.uleb128 0x6
-	.uleb128 0x1
-	.byte	0x1
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x7
-	.uleb128 0x21
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2f
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x8
 	.uleb128 0x4
 	.byte	0x1
 	.uleb128 0xb
@@ -437,12 +419,30 @@ btc_dev_call_handler:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x9
+	.uleb128 0x7
 	.uleb128 0x28
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
 	.uleb128 0x1c
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x8
+	.uleb128 0x1
+	.byte	0x1
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x9
+	.uleb128 0x21
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2f
 	.uleb128 0xb
 	.byte	0
 	.byte	0
@@ -659,14 +659,14 @@ btc_dev_call_handler:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB30
-	.4byte	.LFE30
+	.4byte	.LFB39
+	.4byte	.LFE39
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -678,11 +678,11 @@ btc_dev_call_handler:
 	.string	"__uint8_t"
 .LASF28:
 	.string	"bd_addr_null"
-.LASF16:
+.LASF14:
 	.string	"ESP_LOG_ERROR"
-.LASF17:
+.LASF15:
 	.string	"ESP_LOG_WARN"
-.LASF13:
+.LASF19:
 	.string	"UINT8"
 .LASF23:
 	.string	"btc_msg"
@@ -712,13 +712,13 @@ btc_dev_call_handler:
 	.string	"__FUNCTION__"
 .LASF32:
 	.string	"set_dev_name"
-.LASF18:
+.LASF16:
 	.string	"ESP_LOG_INFO"
 .LASF9:
 	.string	"long unsigned int"
 .LASF0:
 	.string	"unsigned int"
-.LASF19:
+.LASF17:
 	.string	"ESP_LOG_DEBUG"
 .LASF10:
 	.string	"char"
@@ -732,7 +732,7 @@ btc_dev_call_handler:
 	.string	"sizetype"
 .LASF33:
 	.string	"btc_dev_call_handler"
-.LASF15:
+.LASF13:
 	.string	"ESP_LOG_NONE"
 .LASF7:
 	.string	"long int"
@@ -740,8 +740,8 @@ btc_dev_call_handler:
 	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/btc/core/btc_dev.c"
 .LASF2:
 	.string	"signed char"
-.LASF14:
-	.string	"_Bool"
 .LASF20:
+	.string	"_Bool"
+.LASF18:
 	.string	"ESP_LOG_VERBOSE"
 	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

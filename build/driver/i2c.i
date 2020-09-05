@@ -1115,7 +1115,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h" 1
@@ -1205,6 +1205,9 @@ typedef __uintptr_t uintptr_t;
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h" 2
 # 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr.h" 1
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr.h"
@@ -2306,15 +2309,15 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/malloc.h" 1
 # 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/malloc.h"
@@ -2483,6 +2486,77 @@ typedef void (*TaskFunction_t)( void * );
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/deprecated_definitions.h" 1
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 2
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void *get_sp()
+{
+    void *sp;
+    asm volatile ("mov %0, sp;" : "=r" (sp));
+    return sp;
+}
+
+
+
+
+
+static inline void cpu_write_dtlb(uint32_t vpn, unsigned attr)
+{
+    asm volatile ("wdtlb  %1, %0; dsync\n" :: "r" (vpn), "r" (attr));
+}
+
+
+static inline void cpu_write_itlb(unsigned vpn, unsigned attr)
+{
+    asm volatile ("witlb  %1, %0; isync\n" :: "r" (vpn), "r" (attr));
+}
+
+static inline void cpu_init_memctl()
+{
+
+    uint32_t memctl = 0x00000000;
+    asm volatile ("wsr %0, " "MEMCTL" : : "r" (memctl));;
+
+}
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void cpu_configure_region_protection()
+{
+    const uint32_t pages_to_protect[] = {0x00000000, 0x80000000, 0xa0000000, 0xc0000000, 0xe0000000};
+    for (int i = 0; i < sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
+        cpu_write_dtlb(pages_to_protect[i], 0xf);
+        cpu_write_itlb(pages_to_protect[i], 0xf);
+    }
+    cpu_write_dtlb(0x20000000, 0);
+    cpu_write_itlb(0x20000000, 0);
+}
+
+
+
+
+
+void esp_cpu_stall(int cpu_id);
+
+
+
+
+
+void esp_cpu_unstall(int cpu_id);
+
+
+
+
+
+void esp_cpu_reset(int cpu_id);
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 3 4
+_Bool 
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+    esp_cpu_in_ocd_debug_mode();
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 
 
 
@@ -2927,7 +3001,7 @@ inline static
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_dma_capable(const void *p)
+                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
 {
     return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
 }
@@ -2936,24 +3010,37 @@ inline static
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_executable(const void *p)
+                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
+{
+    return ((intptr_t)p) % 4 == 0;
+}
+
+inline static 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
 {
     intptr_t ip = (intptr_t) p;
     return (ip >= 0x400D0000 && ip < 0x40400000)
         || (ip >= 0x40080000 && ip < 0x400A0000)
+        || (ip >= 0x40000000 && ip < 0x40070000)
+
+        || (ip >= 0x40078000 && ip < 0x40080000)
+
         || (ip >= 0x400C0000 && ip < 0x400C2000);
 }
 
 inline static 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_byte_accessible(const void *p)
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
 {
     
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x40000000);
 
@@ -2963,14 +3050,14 @@ inline static
 }
 
 inline static 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_internal(const void *p) {
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
     
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
     r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
@@ -2979,18 +3066,18 @@ inline static
 
 
 inline static 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_external_ram(const void *p) {
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
     return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
 }
 
 inline static 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_iram(const void *p) {
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
 
 
 
@@ -2999,19 +3086,35 @@ inline static
 }
 
 inline static 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_drom(const void *p) {
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
     return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
 }
 
 inline static 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_dram(const void *p) {
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
     return ((intptr_t)p >= 0x3FAE0000 && (intptr_t)p < 0x40000000);
+}
+
+inline static 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
+    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x3FFFFFFC);
+}
+
+inline static 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
+    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400BFFFC);
 }
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
@@ -3060,24 +3163,24 @@ typedef struct {
 void vPortAssertIfInISR();
 # 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortCPUInitializeMutex(portMUX_TYPE *mux);
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vTaskExitCritical( portMUX_TYPE *mux );
 void vTaskEnterCritical( portMUX_TYPE *mux );
 void vPortCPUAcquireMutex(portMUX_TYPE *mux);
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
 _Bool 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
     vPortCPUAcquireMutexTimeout(portMUX_TYPE *mux, int timeout_cycles);
 void vPortCPUReleaseMutex(portMUX_TYPE *mux);
-# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline unsigned portENTER_CRITICAL_NESTED() {
  unsigned state = ({ unsigned __tmp; __asm__ __volatile__( "rsil	%0, " "3" "\n" : "=a" (__tmp) : : "memory" ); __tmp;});
  ;
  return state;
 }
-# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, uint32_t *set) {
     __asm__ __volatile__ (
         "WSR 	    %2,SCOMPARE1 \n"
@@ -3086,20 +3189,20 @@ static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, u
         :"r"(addr), "r"(compare), "0"(*set)
         );
 }
-# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortYield( void );
 void _frxt_setup_switch( void );
 
 
 
 static inline uint32_t xPortGetCoreID();
-# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef struct {
 
  volatile StackType_t* coproc_area;
-# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 } xMPU_SETTINGS;
-# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 extern void esp_vApplicationIdleHook( void );
 extern void esp_vApplicationTickHook( void );
 
@@ -3110,10 +3213,10 @@ extern void esp_vApplicationTickHook( void );
 
 void _xt_coproc_release(volatile void * coproc_sa_base);
 void vApplicationSleep( TickType_t xExpectedIdleTime );
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/mpu_wrappers.h" 1
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h" 1
@@ -3130,7 +3233,7 @@ void vApplicationSleep( TickType_t xExpectedIdleTime );
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
 typedef volatile struct {
     uint32_t bt_select;
     uint32_t out;
@@ -3467,7 +3570,7 @@ void esp_intr_noniram_disable();
 void esp_intr_noniram_enable();
 # 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
 extern const uint32_t GPIO_PIN_MUX_REG[40];
 # 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
@@ -3902,25 +4005,25 @@ typedef enum {
 typedef esp_sleep_source_t esp_sleep_wakeup_cause_t;
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_disable_wakeup_source(esp_sleep_source_t source);
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ulp_wakeup();
-# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_timer_wakeup(uint64_t time_in_us);
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_touchpad_wakeup();
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 touch_pad_t esp_sleep_get_touchpad_wakeup_status();
-# 161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext0_wakeup(gpio_num_t gpio_num, int level);
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext1_wakeup(uint64_t mask, esp_sleep_ext1_wakeup_mode_t mode);
-# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_gpio_wakeup();
-# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_uart_wakeup(int uart_num);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 uint64_t esp_sleep_get_ext1_wakeup_status();
-# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
                                    esp_sleep_pd_option_t option);
 
@@ -3930,11 +4033,11 @@ esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
 
 
 void esp_deep_sleep_start() __attribute__((noreturn));
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_light_sleep_start();
-# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_deep_sleep(uint64_t time_in_us) __attribute__((noreturn));
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated));
 
 
@@ -3944,7 +4047,7 @@ void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated)
 
 
 esp_sleep_wakeup_cause_t esp_sleep_get_wakeup_cause();
-# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_wake_deep_sleep(void);
 
 
@@ -3952,7 +4055,7 @@ void esp_wake_deep_sleep(void);
 
 
 typedef void (*esp_deep_sleep_wake_stub_fn_t)(void);
-# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_set_deep_sleep_wake_stub(esp_deep_sleep_wake_stub_fn_t new_stub);
 
 
@@ -3976,6 +4079,12 @@ void esp_default_wake_deep_sleep(void);
 
 void esp_deep_sleep_disable_rom_logging(void);
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+       
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+const char* esp_get_idf_version(void);
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
 
 
 
@@ -3987,7 +4096,7 @@ typedef enum {
     ESP_MAC_BT,
     ESP_MAC_ETH,
 } esp_mac_type_t;
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef enum {
     ESP_RST_UNKNOWN,
     ESP_RST_POWERON,
@@ -4030,9 +4139,9 @@ typedef void (*shutdown_handler_t)(void);
 
 
 esp_err_t esp_register_shutdown_handler(shutdown_handler_t handle);
-# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_restart(void) __attribute__ ((noreturn));
-# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
@@ -4041,11 +4150,11 @@ void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
 esp_reset_reason_t esp_reset_reason(void);
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_time(void) __attribute__ ((deprecated));
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_get_free_heap_size(void);
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
@@ -4055,36 +4164,28 @@ uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
 uint32_t esp_get_minimum_free_heap_size( void );
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_random(void);
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_fill_random(void *buf, size_t len);
-# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_set(uint8_t *mac);
-# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_get(uint8_t *mac);
-# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_custom(uint8_t *mac);
-# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_default(uint8_t *mac);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t system_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_read_mac(uint8_t* mac, esp_mac_type_t type);
-# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_derive_local_mac(uint8_t* local_mac, const uint8_t* universal_mac);
-# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 const char* system_get_sdk_version(void) __attribute__ ((deprecated));
-
-
-
-
-
-
-
-const char* esp_get_idf_version(void);
 
 
 
@@ -4093,7 +4194,7 @@ const char* esp_get_idf_version(void);
 typedef enum {
     CHIP_ESP32 = 1,
 } esp_chip_model_t;
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef struct {
     esp_chip_model_t model;
     uint32_t features;
@@ -4106,10 +4207,10 @@ typedef struct {
 
 
 void esp_chip_info(esp_chip_info_t* out_info);
-# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters, BaseType_t xRunPrivileged ) ;
-# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 BaseType_t xPortStartScheduler( void ) ;
 
 
@@ -4145,14 +4246,14 @@ BaseType_t xPortInIsrContext();
 
 
 BaseType_t xPortInterruptedFromISRContext();
-# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  struct xMEMORY_REGION;
  void vPortStoreTaskMPUSettings( xMPU_SETTINGS *xMPUSettings, const struct xMEMORY_REGION * const xRegions, StackType_t *pxBottomOfStack, uint32_t usStackDepth ) ;
  void vPortReleaseTaskMPUSettings( xMPU_SETTINGS *xMPUSettings );
 
 
 
-static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
+static inline uint32_t __attribute__((section(".iram1" "." "11"))) xPortGetCoreID() {
     int id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -4163,6 +4264,21 @@ static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
 
 
 uint32_t xPortGetTickRateHz(void);
+
+
+static inline 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 3 4
+             _Bool 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+                  __attribute__((section(".iram1" "." "12"))) xPortCanYield(void)
+{
+    uint32_t ps_reg = 0;
+
+
+    asm volatile ("rsr %0, " "PS" : "=r" (ps_reg));;
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+    return ((ps_reg & 0x0000000F) == 0);
+}
 
 
 
@@ -4571,7 +4687,7 @@ typedef enum
           TaskHandle_t * const pvCreatedTask,
           const BaseType_t xCoreID);
 # 432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
- static inline __attribute__((section(".iram1"))) BaseType_t xTaskCreate(
+ static inline __attribute__((section(".iram1" "." "13"))) BaseType_t xTaskCreate(
    TaskFunction_t pvTaskCode,
    const char * const pcName,
    const uint32_t usStackDepth,
@@ -4881,7 +4997,7 @@ void esp_dport_access_int_abort(void);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/uart_reg.h" 1
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h" 2
 # 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "14"))) DPORT_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -4890,7 +5006,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_
 
 }
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "15"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -4899,7 +5015,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_REA
 
 }
 # 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_READ_PERI_REG(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "16"))) DPORT_READ_PERI_REG(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -4910,7 +5026,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_READ_PERI_REG(ui
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_reg.h" 2
 # 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/i2c_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/i2c_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/i2c_struct.h"
 typedef volatile struct {
     union {
         struct {
@@ -5382,6 +5498,389 @@ void periph_module_disable(periph_module_t periph);
 # 63 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/periph_ctrl.h"
 void periph_module_reset(periph_module_t periph);
 # 32 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h"
+       
+
+
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp32/pm.h" 1
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp32/pm.h"
+       
+
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+       
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h" 2
+# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+typedef enum {
+    RTC_XTAL_FREQ_AUTO = 0,
+    RTC_XTAL_FREQ_40M = 40,
+    RTC_XTAL_FREQ_26M = 26,
+    RTC_XTAL_FREQ_24M = 24,
+} rtc_xtal_freq_t;
+
+
+
+
+typedef enum {
+    RTC_CPU_FREQ_XTAL = 0,
+    RTC_CPU_FREQ_80M = 1,
+    RTC_CPU_FREQ_160M = 2,
+    RTC_CPU_FREQ_240M = 3,
+    RTC_CPU_FREQ_2M = 4,
+} rtc_cpu_freq_t;
+
+
+
+
+typedef enum {
+    RTC_CPU_FREQ_SRC_XTAL,
+    RTC_CPU_FREQ_SRC_PLL,
+    RTC_CPU_FREQ_SRC_8M,
+    RTC_CPU_FREQ_SRC_APLL
+} rtc_cpu_freq_src_t;
+
+
+
+
+typedef struct {
+    rtc_cpu_freq_src_t source;
+    uint32_t source_freq_mhz;
+    uint32_t div;
+    uint32_t freq_mhz;
+} rtc_cpu_freq_config_t;
+
+
+
+
+typedef enum {
+    RTC_SLOW_FREQ_RTC = 0,
+    RTC_SLOW_FREQ_32K_XTAL = 1,
+    RTC_SLOW_FREQ_8MD256 = 2,
+} rtc_slow_freq_t;
+
+
+
+
+typedef enum {
+    RTC_FAST_FREQ_XTALD4 = 0,
+    RTC_FAST_FREQ_8M = 1,
+} rtc_fast_freq_t;
+
+
+
+
+
+
+
+typedef enum {
+    RTC_CAL_RTC_MUX = 0,
+    RTC_CAL_8MD256 = 1,
+    RTC_CAL_32K_XTAL = 2
+} rtc_cal_sel_t;
+
+
+
+
+typedef struct {
+    rtc_xtal_freq_t xtal_freq : 8;
+    rtc_cpu_freq_t cpu_freq_mhz : 10;
+    rtc_fast_freq_t fast_freq : 1;
+    rtc_slow_freq_t slow_freq : 2;
+    uint32_t clk_8m_div : 3;
+    uint32_t slow_clk_dcap : 8;
+    uint32_t clk_8m_dfreq : 8;
+} rtc_clk_config_t;
+# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+void rtc_clk_init(rtc_clk_config_t cfg);
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+rtc_xtal_freq_t rtc_clk_xtal_freq_get();
+# 188 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+void rtc_clk_xtal_freq_update(rtc_xtal_freq_t xtal_freq);
+
+
+
+
+
+void rtc_clk_32k_enable(
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h" 3 4
+                       _Bool 
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+                            en);
+
+
+
+
+void rtc_clk_32k_enable_external();
+
+
+
+
+
+
+# 205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h" 3 4
+_Bool 
+# 205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+    rtc_clk_32k_enabled();
+# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+void rtc_clk_32k_bootstrap(uint32_t cycle);
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+void rtc_clk_8m_enable(
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h" 3 4
+                      _Bool 
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+                           clk_8m_en, 
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h" 3 4
+                                      _Bool 
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+                                           d256_en);
+
+
+
+
+
+
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h" 3 4
+_Bool 
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+    rtc_clk_8m_enabled();
+
+
+
+
+
+
+# 247 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h" 3 4
+_Bool 
+# 247 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+    rtc_clk_8md256_enabled();
+# 265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+void rtc_clk_apll_enable(
+# 265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h" 3 4
+                        _Bool 
+# 265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+                             enable, uint32_t sdm0, uint32_t sdm1,
+        uint32_t sdm2, uint32_t o_div);
+
+
+
+
+
+void rtc_clk_slow_freq_set(rtc_slow_freq_t slow_freq);
+
+
+
+
+
+rtc_slow_freq_t rtc_clk_slow_freq_get();
+# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+uint32_t rtc_clk_slow_freq_get_hz();
+
+
+
+
+
+void rtc_clk_fast_freq_set(rtc_fast_freq_t fast_freq);
+
+
+
+
+
+rtc_fast_freq_t rtc_clk_fast_freq_get();
+# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+void rtc_clk_cpu_freq_set(rtc_cpu_freq_t cpu_freq) __attribute__((deprecated));
+# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+void rtc_clk_cpu_freq_set_fast(rtc_cpu_freq_t cpu_freq) __attribute__((deprecated));
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+rtc_cpu_freq_t rtc_clk_cpu_freq_get() __attribute__((deprecated));
+# 368 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+uint32_t rtc_clk_cpu_freq_value(rtc_cpu_freq_t cpu_freq) __attribute__((deprecated));
+# 380 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+ 
+# 380 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h" 3 4
+_Bool 
+# 380 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+     rtc_clk_cpu_freq_from_mhz(int cpu_freq_mhz, rtc_cpu_freq_t* out_val) __attribute__((deprecated));
+
+
+
+
+
+
+ void rtc_clk_cpu_freq_to_config(rtc_cpu_freq_t cpu_freq, rtc_cpu_freq_config_t* out_config);
+
+
+
+
+
+
+
+ 
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h" 3 4
+_Bool 
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+     rtc_clk_cpu_freq_mhz_to_config(uint32_t freq_mhz, rtc_cpu_freq_config_t* out_config);
+# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+ void rtc_clk_cpu_freq_set_config(const rtc_cpu_freq_config_t* config);
+# 431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+ void rtc_clk_cpu_freq_set_config_fast(const rtc_cpu_freq_config_t* config);
+
+
+
+
+
+ void rtc_clk_cpu_freq_get_config(rtc_cpu_freq_config_t* out_config);
+# 446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+ void rtc_clk_cpu_freq_set_xtal();
+# 461 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+void rtc_clk_apb_freq_update(uint32_t apb_freq);
+
+
+
+
+
+uint32_t rtc_clk_apb_freq_get();
+# 484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+uint32_t rtc_clk_cal(rtc_cal_sel_t cal_clk, uint32_t slow_clk_cycles);
+# 493 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+uint32_t rtc_clk_cal_ratio(rtc_cal_sel_t cal_clk, uint32_t slow_clk_cycles);
+# 502 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+uint64_t rtc_time_us_to_slowclk(uint64_t time_in_us, uint32_t period);
+# 511 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+uint64_t rtc_time_slowclk_to_us(uint64_t rtc_cycles, uint32_t period);
+# 524 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+uint64_t rtc_time_get();
+# 533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+void rtc_clk_wait_for_slow_cycle();
+
+
+
+
+typedef struct {
+    uint32_t lslp_mem_inf_fpu : 1;
+    uint32_t rtc_mem_inf_fpu : 1;
+    uint32_t rtc_mem_inf_follow_cpu : 1;
+    uint32_t rtc_fastmem_pd_en : 1;
+    uint32_t rtc_slowmem_pd_en : 1;
+    uint32_t rtc_peri_pd_en : 1;
+    uint32_t wifi_pd_en : 1;
+    uint32_t rom_mem_pd_en : 1;
+    uint32_t deep_slp : 1;
+    uint32_t wdt_flashboot_mod_en : 1;
+    uint32_t dig_dbias_wak : 3;
+    uint32_t dig_dbias_slp : 3;
+    uint32_t rtc_dbias_wak : 3;
+    uint32_t rtc_dbias_slp : 3;
+    uint32_t lslp_meminf_pd : 1;
+    uint32_t vddsdio_pd_en : 1;
+    uint32_t xtal_fpu : 1;
+} rtc_sleep_config_t;
+# 607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+void rtc_sleep_init(rtc_sleep_config_t cfg);
+
+
+
+
+
+
+
+void rtc_sleep_set_wakeup_time(uint64_t t);
+# 655 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+uint32_t rtc_sleep_start(uint32_t wakeup_opt, uint32_t reject_opt);
+
+
+
+
+typedef struct {
+    uint32_t ck8m_wait : 8;
+    uint32_t xtal_wait : 8;
+    uint32_t pll_wait : 8;
+    uint32_t clkctl_init : 1;
+    uint32_t pwrctl_init : 1;
+    uint32_t rtc_dboost_fpd : 1;
+} rtc_config_t;
+# 688 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+void rtc_init(rtc_config_t cfg);
+
+
+
+
+
+
+
+typedef struct {
+    uint32_t force : 1;
+    uint32_t enable : 1;
+    uint32_t tieh : 1;
+    uint32_t drefh : 2;
+    uint32_t drefm : 2;
+    uint32_t drefl : 2;
+} rtc_vddsdio_config_t;
+# 712 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+rtc_vddsdio_config_t rtc_vddsdio_get_config();
+# 721 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
+void rtc_vddsdio_set_config(rtc_vddsdio_config_t config);
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp32/pm.h" 2
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp32/pm.h"
+typedef struct {
+    rtc_cpu_freq_t max_cpu_freq __attribute__((deprecated));
+    int max_freq_mhz;
+    rtc_cpu_freq_t min_cpu_freq __attribute__((deprecated));
+    int min_freq_mhz;
+    
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp32/pm.h" 3 4
+   _Bool 
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp32/pm.h"
+        light_sleep_enable;
+} esp_pm_config_esp32_t;
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h" 2
+# 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h"
+typedef enum {
+
+
+
+
+    ESP_PM_CPU_FREQ_MAX,
+
+
+
+
+    ESP_PM_APB_FREQ_MAX,
+
+
+
+
+    ESP_PM_NO_LIGHT_SLEEP,
+} esp_pm_lock_type_t;
+# 57 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h"
+esp_err_t esp_pm_configure(const void* config);
+
+
+
+
+
+typedef struct esp_pm_lock* esp_pm_lock_handle_t;
+# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h"
+esp_err_t esp_pm_lock_create(esp_pm_lock_type_t lock_type, int arg,
+        const char* name, esp_pm_lock_handle_t* out_handle);
+# 114 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h"
+esp_err_t esp_pm_lock_acquire(esp_pm_lock_handle_t handle);
+# 138 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h"
+esp_err_t esp_pm_lock_release(esp_pm_lock_handle_t handle);
+# 154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h"
+esp_err_t esp_pm_lock_delete(esp_pm_lock_handle_t handle);
+# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h"
+esp_err_t esp_pm_dump_locks(FILE* stream);
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 2
 
 static const char* I2C_TAG = "i2c";
 
@@ -5391,8 +5890,8 @@ static const char* I2C_TAG = "i2c";
 
 static portMUX_TYPE i2c_spinlock[I2C_NUM_MAX] = {{ .owner = 0xB33FFFFF, .count = 0, }, { .owner = 0xB33FFFFF, .count = 0, }};
 
-static __attribute__((section(".dram1"))) i2c_dev_t* const I2C[I2C_NUM_MAX] = { &I2C0, &I2C1 };
-# 86 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+static __attribute__((section(".dram1" "." "17"))) i2c_dev_t* const I2C[I2C_NUM_MAX] = { &I2C0, &I2C1 };
+# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
 typedef struct {
     uint8_t byte_num;
     uint8_t ack_en;
@@ -5444,6 +5943,9 @@ typedef struct {
 
 
     SemaphoreHandle_t cmd_mux;
+
+    esp_pm_lock_handle_t pm_lock;
+
     size_t tx_fifo_remain;
     size_t rx_fifo_remain;
 
@@ -5457,50 +5959,50 @@ typedef struct {
 
 static i2c_obj_t *p_i2c_obj[I2C_NUM_MAX] = {0};
 static void i2c_isr_handler_default(void* arg);
-static void __attribute__((section(".iram1"))) i2c_master_cmd_begin_static(i2c_port_t i2c_num);
-static esp_err_t __attribute__((section(".iram1"))) i2c_hw_fsm_reset(i2c_port_t i2c_num);
-# 160 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+static void __attribute__((section(".iram1" "." "18"))) i2c_master_cmd_begin_static(i2c_port_t i2c_num);
+static esp_err_t __attribute__((section(".iram1" "." "19"))) i2c_hw_fsm_reset(i2c_port_t i2c_num);
+# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
 esp_err_t i2c_driver_install(i2c_port_t i2c_num, i2c_mode_t mode, size_t slv_rx_buf_len, size_t slv_tx_buf_len,
     int intr_alloc_flags)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 163, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 163, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 163, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 163, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 163, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 168, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 168, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 168, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 168, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 168, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
     if(!(mode == I2C_MODE_MASTER || ( slv_rx_buf_len > 100 || slv_tx_buf_len > 100 ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     ,
- 165
-# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+ 170
+# 169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     , __FUNCTION__, "i2c buffer size too small for slave mode"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     ,
- 165
-# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+ 170
+# 169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     , __FUNCTION__, "i2c buffer size too small for slave mode"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     ,
- 165
-# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+ 170
+# 169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     , __FUNCTION__, "i2c buffer size too small for slave mode"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     ,
- 165
-# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+ 170
+# 169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     , __FUNCTION__, "i2c buffer size too small for slave mode"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG,
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     ,
- 165
-# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+ 170
+# 169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     , __FUNCTION__, "i2c buffer size too small for slave mode"); } } while(0); } while(0); return (0x102); }
                             ;
     uint32_t intr_mask = 0;
     if (p_i2c_obj[i2c_num] == 
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                              ((void *)0)
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                  ) {
 
 
@@ -5513,9 +6015,9 @@ esp_err_t i2c_driver_install(i2c_port_t i2c_num, i2c_mode_t mode, size_t slv_rx_
 
 
         if (p_i2c_obj[i2c_num] == 
-# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 183 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                  ((void *)0)
-# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 183 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                      ) {
             do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "i2c driver malloc error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "i2c driver malloc error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "i2c driver malloc error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "i2c driver malloc error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "i2c driver malloc error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } } while(0); } while(0);
             return -1;
@@ -5538,9 +6040,9 @@ esp_err_t i2c_driver_install(i2c_port_t i2c_num, i2c_mode_t mode, size_t slv_rx_
             if (slv_rx_buf_len > 0) {
                 p_i2c->rx_ring_buf = xRingbufferCreate(slv_rx_buf_len, RINGBUF_TYPE_BYTEBUF);
                 if (p_i2c->rx_ring_buf == 
-# 199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                          ((void *)0)
-# 199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                              ) {
                     do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "i2c ringbuffer error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "i2c ringbuffer error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "i2c ringbuffer error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "i2c ringbuffer error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "i2c ringbuffer error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } } while(0); } while(0);
                     goto err;
@@ -5548,18 +6050,18 @@ esp_err_t i2c_driver_install(i2c_port_t i2c_num, i2c_mode_t mode, size_t slv_rx_
                 p_i2c->rx_buf_length = slv_rx_buf_len;
             } else {
                 p_i2c->rx_ring_buf = 
-# 205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                     ((void *)0)
-# 205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                         ;
                 p_i2c->rx_buf_length = 0;
             }
             if (slv_tx_buf_len > 0) {
                 p_i2c->tx_ring_buf = xRingbufferCreate(slv_tx_buf_len, RINGBUF_TYPE_BYTEBUF);
                 if (p_i2c->tx_ring_buf == 
-# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                          ((void *)0)
-# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                              ) {
                     do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "i2c ringbuffer error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "i2c ringbuffer error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "i2c ringbuffer error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "i2c ringbuffer error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "i2c ringbuffer error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } } while(0); } while(0);
                     goto err;
@@ -5567,22 +6069,22 @@ esp_err_t i2c_driver_install(i2c_port_t i2c_num, i2c_mode_t mode, size_t slv_rx_
                 p_i2c->tx_buf_length = slv_tx_buf_len;
             } else {
                 p_i2c->tx_ring_buf = 
-# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                     ((void *)0)
-# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                         ;
                 p_i2c->tx_buf_length = 0;
             }
             p_i2c->slv_rx_mux = xQueueCreateMutex( ( ( uint8_t ) 1U ) );
             p_i2c->slv_tx_mux = xQueueCreateMutex( ( ( uint8_t ) 1U ) );
             if (p_i2c->slv_rx_mux == 
-# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                     ((void *)0) 
-# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                          || p_i2c->slv_tx_mux == 
-# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                                                  ((void *)0)
-# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                                                      ) {
                 do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "i2c semaphore error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "i2c semaphore error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "i2c semaphore error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "i2c semaphore error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "i2c semaphore error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } } while(0); } while(0);
                 goto err;
@@ -5592,47 +6094,53 @@ esp_err_t i2c_driver_install(i2c_port_t i2c_num, i2c_mode_t mode, size_t slv_rx_
 
             p_i2c->cmd_mux = xQueueCreateMutex( ( ( uint8_t ) 1U ) );
 
+            if (esp_pm_lock_create(ESP_PM_APB_FREQ_MAX, 0, "i2c_driver", &p_i2c->pm_lock) != 0) {
+                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Power lock creation error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Power lock creation error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "Power lock creation error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "Power lock creation error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Power lock creation error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } } while(0); } while(0);
+                goto err;
+            }
+
+
             p_i2c->cmd_evt_queue = xQueueGenericCreate( ( (1) ), ( sizeof(i2c_cmd_evt_t) ), ( ( ( uint8_t ) 0U ) ) );
-# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
             if (p_i2c->cmd_mux == 
-# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                  ((void *)0) 
-# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                       || p_i2c->cmd_evt_queue == 
-# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                                                  ((void *)0)
-# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                                                      ) {
                 do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "i2c semaphore error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "i2c semaphore error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "i2c semaphore error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "i2c semaphore error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "i2c semaphore error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } } while(0); } while(0);
                 goto err;
             }
 
             p_i2c->cmd_link.cur = 
-# 249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 260 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                  ((void *)0)
-# 249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 260 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                      ;
             p_i2c->cmd_link.head = 
-# 250 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                   ((void *)0)
-# 250 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                       ;
             p_i2c->cmd_link.free = 
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                   ((void *)0)
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                       ;
 
             p_i2c->tx_ring_buf = 
-# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 264 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                 ((void *)0)
-# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 264 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                     ;
             p_i2c->rx_buf_length = 0;
             p_i2c->tx_ring_buf = 
-# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                 ((void *)0)
-# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                     ;
             p_i2c->tx_buf_length = 0;
             intr_mask |= ((1UL << (5))) | ((1UL << (8)));
@@ -5658,27 +6166,27 @@ esp_err_t i2c_driver_install(i2c_port_t i2c_num, i2c_mode_t mode, size_t slv_rx_
         if (p_i2c_obj[i2c_num]->rx_ring_buf) {
             vRingbufferDelete(p_i2c_obj[i2c_num]->rx_ring_buf);
             p_i2c_obj[i2c_num]->rx_ring_buf = 
-# 279 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                              ((void *)0)
-# 279 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                                  ;
             p_i2c_obj[i2c_num]->rx_buf_length = 0;
         }
         if (p_i2c_obj[i2c_num]->tx_ring_buf) {
             vRingbufferDelete(p_i2c_obj[i2c_num]->tx_ring_buf);
             p_i2c_obj[i2c_num]->tx_ring_buf = 
-# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                              ((void *)0)
-# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                                  ;
             p_i2c_obj[i2c_num]->tx_buf_length = 0;
         }
         if (p_i2c_obj[i2c_num]->cmd_evt_queue) {
             vQueueDelete(p_i2c_obj[i2c_num]->cmd_evt_queue);
             p_i2c_obj[i2c_num]->cmd_evt_queue = 
-# 289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                                ((void *)0)
-# 289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                                    ;
         }
         if (p_i2c_obj[i2c_num]->cmd_mux) {
@@ -5691,6 +6199,16 @@ esp_err_t i2c_driver_install(i2c_port_t i2c_num, i2c_mode_t mode, size_t slv_rx_
             vQueueDelete( ( QueueHandle_t ) ( p_i2c_obj[i2c_num]->slv_tx_mux ) );
         }
 
+        if (p_i2c_obj[i2c_num]->pm_lock) {
+            esp_pm_lock_delete(p_i2c_obj[i2c_num]->pm_lock);
+            p_i2c_obj[i2c_num]->pm_lock = 
+# 314 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+                                         ((void *)0)
+# 314 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+                                             ;
+        }
+
+
 
 
 
@@ -5699,9 +6217,9 @@ esp_err_t i2c_driver_install(i2c_port_t i2c_num, i2c_mode_t mode, size_t slv_rx_
     }
     free(p_i2c_obj[i2c_num]);
     p_i2c_obj[i2c_num] = 
-# 308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                         ((void *)0)
-# 308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                             ;
     return -1;
 }
@@ -5728,37 +6246,37 @@ static esp_err_t i2c_hw_disable(i2c_port_t i2c_num)
 
 esp_err_t i2c_driver_delete(i2c_port_t i2c_num)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 334, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 334, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 334, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 334, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 334, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 351, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 351, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 351, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 351, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 351, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
     if(!(p_i2c_obj[i2c_num] != 
-# 335 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
    ((void *)0)
-# 335 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 335, __FUNCTION__, "i2c driver install error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 335, __FUNCTION__, "i2c driver install error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 335, __FUNCTION__, "i2c driver install error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 335, __FUNCTION__, "i2c driver install error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 335, __FUNCTION__, "i2c driver install error"); } } while(0); } while(0); return (-1); };
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 352, __FUNCTION__, "i2c driver install error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 352, __FUNCTION__, "i2c driver install error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 352, __FUNCTION__, "i2c driver install error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 352, __FUNCTION__, "i2c driver install error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 352, __FUNCTION__, "i2c driver install error"); } } while(0); } while(0); return (-1); };
 
     i2c_obj_t* p_i2c = p_i2c_obj[i2c_num];
 
     I2C[i2c_num]->int_ena.val = 0;
     esp_intr_free(p_i2c->intr_handle);
     p_i2c->intr_handle = 
-# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                         ((void *)0)
-# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                             ;
 
     if (p_i2c->cmd_mux) {
         xQueueGenericReceive( ( QueueHandle_t ) ( p_i2c->cmd_mux ), 
-# 344 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
        ((void *)0)
-# 344 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
        , ( ( TickType_t ) 0xffffffffUL ), ( ( BaseType_t ) 0 ) );
         vQueueDelete( ( QueueHandle_t ) ( p_i2c->cmd_mux ) );
     }
     if (p_i2c_obj[i2c_num]->cmd_evt_queue) {
         vQueueDelete(p_i2c_obj[i2c_num]->cmd_evt_queue);
         p_i2c_obj[i2c_num]->cmd_evt_queue = 
-# 349 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 366 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                            ((void *)0)
-# 349 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 366 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                                ;
     }
     if (p_i2c->slv_rx_mux) {
@@ -5771,33 +6289,36 @@ esp_err_t i2c_driver_delete(i2c_port_t i2c_num)
     if (p_i2c->rx_ring_buf) {
         vRingbufferDelete(p_i2c->rx_ring_buf);
         p_i2c->rx_ring_buf = 
-# 360 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 377 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                             ((void *)0)
-# 360 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 377 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                 ;
         p_i2c->rx_buf_length = 0;
     }
     if (p_i2c->tx_ring_buf) {
         vRingbufferDelete(p_i2c->tx_ring_buf);
         p_i2c->tx_ring_buf = 
-# 365 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 382 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                             ((void *)0)
-# 365 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 382 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                 ;
         p_i2c->tx_buf_length = 0;
     }
 
-
-
-
-
-
-
+        if (p_i2c->pm_lock) {
+            esp_pm_lock_delete(p_i2c->pm_lock);
+            p_i2c->pm_lock = 
+# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+                            ((void *)0)
+# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+                                ;
+        }
+# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     free(p_i2c_obj[i2c_num]);
     p_i2c_obj[i2c_num] = 
-# 376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 399 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                         ((void *)0)
-# 376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 399 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                             ;
 
     i2c_hw_disable(i2c_num);
@@ -5806,7 +6327,7 @@ esp_err_t i2c_driver_delete(i2c_port_t i2c_num)
 
 esp_err_t i2c_reset_tx_fifo(i2c_port_t i2c_num)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 384, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 384, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 384, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 384, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 384, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 407, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 407, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 407, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 407, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 407, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&i2c_spinlock[i2c_num]);
     I2C[i2c_num]->fifo_conf.tx_fifo_rst = 1;
     I2C[i2c_num]->fifo_conf.tx_fifo_rst = 0;
@@ -5816,7 +6337,7 @@ esp_err_t i2c_reset_tx_fifo(i2c_port_t i2c_num)
 
 esp_err_t i2c_reset_rx_fifo(i2c_port_t i2c_num)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 394, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 394, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 394, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 394, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 394, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 417, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 417, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 417, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 417, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 417, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&i2c_spinlock[i2c_num]);
     I2C[i2c_num]->fifo_conf.rx_fifo_rst = 1;
     I2C[i2c_num]->fifo_conf.rx_fifo_rst = 0;
@@ -5824,7 +6345,7 @@ esp_err_t i2c_reset_rx_fifo(i2c_port_t i2c_num)
     return 0;
 }
 
-static void __attribute__((section(".iram1"))) i2c_isr_handler_default(void* arg)
+static void __attribute__((section(".iram1" "." "20"))) i2c_isr_handler_default(void* arg)
 {
     i2c_obj_t* p_i2c = (i2c_obj_t*) arg;
     int i2c_num = p_i2c->i2c_num;
@@ -5922,9 +6443,9 @@ static void __attribute__((section(".iram1"))) i2c_isr_handler_default(void* arg
 
 esp_err_t i2c_set_data_mode(i2c_port_t i2c_num, i2c_trans_mode_t tx_trans_mode, i2c_trans_mode_t rx_trans_mode)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 500, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 500, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 500, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 500, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 500, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
-    if(!(tx_trans_mode < I2C_DATA_MODE_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 501, __FUNCTION__, "i2c trans mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 501, __FUNCTION__, "i2c trans mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 501, __FUNCTION__, "i2c trans mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 501, __FUNCTION__, "i2c trans mode error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 501, __FUNCTION__, "i2c trans mode error"); } } while(0); } while(0); return (0x102); };
-    if(!(rx_trans_mode < I2C_DATA_MODE_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 502, __FUNCTION__, "i2c trans mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 502, __FUNCTION__, "i2c trans mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 502, __FUNCTION__, "i2c trans mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 502, __FUNCTION__, "i2c trans mode error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 502, __FUNCTION__, "i2c trans mode error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 523, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 523, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 523, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 523, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 523, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!(tx_trans_mode < I2C_DATA_MODE_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 524, __FUNCTION__, "i2c trans mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 524, __FUNCTION__, "i2c trans mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 524, __FUNCTION__, "i2c trans mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 524, __FUNCTION__, "i2c trans mode error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 524, __FUNCTION__, "i2c trans mode error"); } } while(0); } while(0); return (0x102); };
+    if(!(rx_trans_mode < I2C_DATA_MODE_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 525, __FUNCTION__, "i2c trans mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 525, __FUNCTION__, "i2c trans mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 525, __FUNCTION__, "i2c trans mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 525, __FUNCTION__, "i2c trans mode error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 525, __FUNCTION__, "i2c trans mode error"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&i2c_spinlock[i2c_num]);
     I2C[i2c_num]->ctr.rx_lsb_first = rx_trans_mode;
     I2C[i2c_num]->ctr.tx_lsb_first = tx_trans_mode;
@@ -5934,7 +6455,7 @@ esp_err_t i2c_set_data_mode(i2c_port_t i2c_num, i2c_trans_mode_t tx_trans_mode, 
 
 esp_err_t i2c_get_data_mode(i2c_port_t i2c_num, i2c_trans_mode_t *tx_trans_mode, i2c_trans_mode_t *rx_trans_mode)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 512, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 512, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 512, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 512, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 512, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 535, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 535, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 535, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 535, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 535, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
     if (tx_trans_mode) {
         *tx_trans_mode = I2C[i2c_num]->ctr.tx_lsb_first;
     }
@@ -5951,7 +6472,7 @@ esp_err_t i2c_get_data_mode(i2c_port_t i2c_num, i2c_trans_mode_t *tx_trans_mode,
 
 static esp_err_t i2c_master_clear_bus(i2c_port_t i2c_num)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 529, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 529, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 529, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 529, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 529, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 552, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 552, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 552, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 552, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 552, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
     const int scl_half_period = (5);
     int sda_in_sig = 0, scl_in_sig = 0;
     int i = 0;
@@ -5964,8 +6485,8 @@ static esp_err_t i2c_master_clear_bus(i2c_port_t i2c_num)
     }
     int scl_io = GPIO.func_in_sel_cfg[scl_in_sig].func_sel;
     int sda_io = GPIO.func_in_sel_cfg[sda_in_sig].func_sel;
-    if(!((((((scl_io < 40 && GPIO_PIN_MUX_REG[scl_io] != 0))) && (scl_io < 34))))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 542, __FUNCTION__, "scl gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 542, __FUNCTION__, "scl gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 542, __FUNCTION__, "scl gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 542, __FUNCTION__, "scl gpio number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 542, __FUNCTION__, "scl gpio number error"); } } while(0); } while(0); return (0x102); };
-    if(!((((((sda_io < 40 && GPIO_PIN_MUX_REG[sda_io] != 0))) && (sda_io < 34))))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 543, __FUNCTION__, "sda gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 543, __FUNCTION__, "sda gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 543, __FUNCTION__, "sda gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 543, __FUNCTION__, "sda gpio number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 543, __FUNCTION__, "sda gpio number error"); } } while(0); } while(0); return (0x102); };
+    if(!((((((scl_io < 40 && GPIO_PIN_MUX_REG[scl_io] != 0))) && (scl_io < 34))))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 565, __FUNCTION__, "scl gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 565, __FUNCTION__, "scl gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 565, __FUNCTION__, "scl gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 565, __FUNCTION__, "scl gpio number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 565, __FUNCTION__, "scl gpio number error"); } } while(0); } while(0); return (0x102); };
+    if(!((((((sda_io < 40 && GPIO_PIN_MUX_REG[sda_io] != 0))) && (sda_io < 34))))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 566, __FUNCTION__, "sda gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 566, __FUNCTION__, "sda gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 566, __FUNCTION__, "sda gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 566, __FUNCTION__, "sda gpio number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 566, __FUNCTION__, "sda gpio number error"); } } while(0); } while(0); return (0x102); };
     gpio_set_direction(scl_io, GPIO_MODE_OUTPUT_OD);
     gpio_set_direction(sda_io, GPIO_MODE_INPUT_OUTPUT_OD);
 
@@ -5996,7 +6517,7 @@ static esp_err_t i2c_master_clear_bus(i2c_port_t i2c_num)
 
 static esp_err_t i2c_hw_fsm_reset(i2c_port_t i2c_num)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 574, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 574, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 574, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 574, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 574, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 597, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 597, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 597, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 597, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 597, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
     uint32_t ctr = I2C[i2c_num]->ctr.val;
     uint32_t fifo_conf = I2C[i2c_num]->fifo_conf.val;
     uint32_t scl_low_period = I2C[i2c_num]->scl_low_period.val;
@@ -6049,13 +6570,13 @@ static esp_err_t i2c_hw_fsm_reset(i2c_port_t i2c_num)
 
 esp_err_t i2c_param_config(i2c_port_t i2c_num, const i2c_config_t* i2c_conf)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 627, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 627, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 627, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 627, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 627, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 650, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 650, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 650, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 650, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 650, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
     if(!(i2c_conf != 
-# 628 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 651 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
    ((void *)0)
-# 628 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 628, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 628, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 628, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 628, __FUNCTION__, "i2c null address error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 628, __FUNCTION__, "i2c null address error"); } } while(0); } while(0); return (0x102); };
-    if(!(i2c_conf->mode < I2C_MODE_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 629, __FUNCTION__, "i2c mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 629, __FUNCTION__, "i2c mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 629, __FUNCTION__, "i2c mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 629, __FUNCTION__, "i2c mode error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 629, __FUNCTION__, "i2c mode error"); } } while(0); } while(0); return (0x102); };
+# 651 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 651, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 651, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 651, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 651, __FUNCTION__, "i2c null address error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 651, __FUNCTION__, "i2c null address error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_conf->mode < I2C_MODE_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 652, __FUNCTION__, "i2c mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 652, __FUNCTION__, "i2c mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 652, __FUNCTION__, "i2c mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 652, __FUNCTION__, "i2c mode error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 652, __FUNCTION__, "i2c mode error"); } } while(0); } while(0); return (0x102); };
 
     esp_err_t ret = i2c_set_pin(i2c_num, i2c_conf->sda_io_num, i2c_conf->scl_io_num,
                                 i2c_conf->sda_pullup_en, i2c_conf->scl_pullup_en, i2c_conf->mode);
@@ -6112,9 +6633,9 @@ esp_err_t i2c_param_config(i2c_port_t i2c_num, const i2c_config_t* i2c_conf)
 
 esp_err_t i2c_set_period(i2c_port_t i2c_num, int high_period, int low_period)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 686, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 686, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 686, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 686, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 686, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
-    if(!((high_period <= 0x3FFF) && (high_period > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 687, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 687, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 687, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 687, __FUNCTION__, "i2c timing value error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 687, __FUNCTION__, "i2c timing value error"); } } while(0); } while(0); return (0x102); };
-    if(!((low_period <= 0x3FFF) && (low_period > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 688, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 688, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 688, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 688, __FUNCTION__, "i2c timing value error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 688, __FUNCTION__, "i2c timing value error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 709, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 709, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 709, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 709, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 709, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!((high_period <= 0x3FFF) && (high_period > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 710, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 710, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 710, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 710, __FUNCTION__, "i2c timing value error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 710, __FUNCTION__, "i2c timing value error"); } } while(0); } while(0); return (0x102); };
+    if(!((low_period <= 0x3FFF) && (low_period > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 711, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 711, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 711, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 711, __FUNCTION__, "i2c timing value error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 711, __FUNCTION__, "i2c timing value error"); } } while(0); } while(0); return (0x102); };
 
     vTaskEnterCritical(&i2c_spinlock[i2c_num]);
     I2C[i2c_num]->scl_high_period.period = high_period;
@@ -6125,7 +6646,7 @@ esp_err_t i2c_set_period(i2c_port_t i2c_num, int high_period, int low_period)
 
 esp_err_t i2c_get_period(i2c_port_t i2c_num, int* high_period, int* low_period)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 699, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 699, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 699, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 699, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 699, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 722, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 722, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 722, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 722, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 722, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&i2c_spinlock[i2c_num]);
     if (high_period) {
         *high_period = I2C[i2c_num]->scl_high_period.period;
@@ -6139,7 +6660,7 @@ esp_err_t i2c_get_period(i2c_port_t i2c_num, int* high_period, int* low_period)
 
 esp_err_t i2c_filter_enable(i2c_port_t i2c_num, uint8_t cyc_num)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 713, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 713, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 713, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 713, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 713, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 736, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 736, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 736, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 736, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 736, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&i2c_spinlock[i2c_num]);
     I2C[i2c_num]->scl_filter_cfg.thres = cyc_num;
     I2C[i2c_num]->sda_filter_cfg.thres = cyc_num;
@@ -6151,7 +6672,7 @@ esp_err_t i2c_filter_enable(i2c_port_t i2c_num, uint8_t cyc_num)
 
 esp_err_t i2c_filter_disable(i2c_port_t i2c_num)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 725, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 725, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 725, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 725, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 725, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 748, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 748, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 748, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 748, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 748, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&i2c_spinlock[i2c_num]);
     I2C[i2c_num]->scl_filter_cfg.en = 0;
     I2C[i2c_num]->sda_filter_cfg.en = 0;
@@ -6161,9 +6682,9 @@ esp_err_t i2c_filter_disable(i2c_port_t i2c_num)
 
 esp_err_t i2c_set_start_timing(i2c_port_t i2c_num, int setup_time, int hold_time)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 735, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 735, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 735, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 735, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 735, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
-    if(!((hold_time <= 0x3FF) && (hold_time > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 736, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 736, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 736, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 736, __FUNCTION__, "i2c timing value error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 736, __FUNCTION__, "i2c timing value error"); } } while(0); } while(0); return (0x102); };
-    if(!((setup_time <= 0x3FF) && (setup_time > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 737, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 737, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 737, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 737, __FUNCTION__, "i2c timing value error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 737, __FUNCTION__, "i2c timing value error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 758, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 758, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 758, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 758, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 758, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!((hold_time <= 0x3FF) && (hold_time > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 759, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 759, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 759, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 759, __FUNCTION__, "i2c timing value error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 759, __FUNCTION__, "i2c timing value error"); } } while(0); } while(0); return (0x102); };
+    if(!((setup_time <= 0x3FF) && (setup_time > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 760, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 760, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 760, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 760, __FUNCTION__, "i2c timing value error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 760, __FUNCTION__, "i2c timing value error"); } } while(0); } while(0); return (0x102); };
 
     vTaskEnterCritical(&i2c_spinlock[i2c_num]);
     I2C[i2c_num]->scl_start_hold.time = hold_time;
@@ -6174,7 +6695,7 @@ esp_err_t i2c_set_start_timing(i2c_port_t i2c_num, int setup_time, int hold_time
 
 esp_err_t i2c_get_start_timing(i2c_port_t i2c_num, int* setup_time, int* hold_time)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 748, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 748, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 748, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 748, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 748, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 771, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 771, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 771, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 771, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 771, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&i2c_spinlock[i2c_num]);
     if (hold_time) {
         *hold_time = I2C[i2c_num]->scl_start_hold.time;
@@ -6188,9 +6709,9 @@ esp_err_t i2c_get_start_timing(i2c_port_t i2c_num, int* setup_time, int* hold_ti
 
 esp_err_t i2c_set_stop_timing(i2c_port_t i2c_num, int setup_time, int hold_time)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 762, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 762, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 762, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 762, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 762, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
-    if(!((setup_time <= 0x3FF) && (setup_time > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 763, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 763, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 763, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 763, __FUNCTION__, "i2c timing value error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 763, __FUNCTION__, "i2c timing value error"); } } while(0); } while(0); return (0x102); };
-    if(!((hold_time <= 0x3FFF) && (hold_time > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 764, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 764, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 764, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 764, __FUNCTION__, "i2c timing value error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 764, __FUNCTION__, "i2c timing value error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 785, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 785, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 785, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 785, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 785, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!((setup_time <= 0x3FF) && (setup_time > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 786, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 786, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 786, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 786, __FUNCTION__, "i2c timing value error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 786, __FUNCTION__, "i2c timing value error"); } } while(0); } while(0); return (0x102); };
+    if(!((hold_time <= 0x3FFF) && (hold_time > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 787, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 787, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 787, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 787, __FUNCTION__, "i2c timing value error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 787, __FUNCTION__, "i2c timing value error"); } } while(0); } while(0); return (0x102); };
 
     vTaskEnterCritical(&i2c_spinlock[i2c_num]);
     I2C[i2c_num]->scl_stop_hold.time = hold_time;
@@ -6201,7 +6722,7 @@ esp_err_t i2c_set_stop_timing(i2c_port_t i2c_num, int setup_time, int hold_time)
 
 esp_err_t i2c_get_stop_timing(i2c_port_t i2c_num, int* setup_time, int* hold_time)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 775, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 775, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 775, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 775, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 775, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 798, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 798, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 798, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 798, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 798, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&i2c_spinlock[i2c_num]);
     if (setup_time) {
         *setup_time = I2C[i2c_num]->scl_stop_setup.time;
@@ -6215,9 +6736,9 @@ esp_err_t i2c_get_stop_timing(i2c_port_t i2c_num, int* setup_time, int* hold_tim
 
 esp_err_t i2c_set_data_timing(i2c_port_t i2c_num, int sample_time, int hold_time)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 789, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 789, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 789, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 789, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 789, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
-    if(!((sample_time <= 0x3FF) && (sample_time > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 790, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 790, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 790, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 790, __FUNCTION__, "i2c timing value error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 790, __FUNCTION__, "i2c timing value error"); } } while(0); } while(0); return (0x102); };
-    if(!((hold_time <= 0x3FF) && (hold_time > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 791, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 791, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 791, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 791, __FUNCTION__, "i2c timing value error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 791, __FUNCTION__, "i2c timing value error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 812, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 812, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 812, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 812, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 812, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!((sample_time <= 0x3FF) && (sample_time > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 813, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 813, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 813, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 813, __FUNCTION__, "i2c timing value error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 813, __FUNCTION__, "i2c timing value error"); } } while(0); } while(0); return (0x102); };
+    if(!((hold_time <= 0x3FF) && (hold_time > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 814, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 814, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 814, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 814, __FUNCTION__, "i2c timing value error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 814, __FUNCTION__, "i2c timing value error"); } } while(0); } while(0); return (0x102); };
 
     vTaskEnterCritical(&i2c_spinlock[i2c_num]);
     I2C[i2c_num]->sda_hold.time = hold_time;
@@ -6228,7 +6749,7 @@ esp_err_t i2c_set_data_timing(i2c_port_t i2c_num, int sample_time, int hold_time
 
 esp_err_t i2c_get_data_timing(i2c_port_t i2c_num, int* sample_time, int* hold_time)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 802, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 802, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 802, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 802, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 802, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 825, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 825, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 825, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 825, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 825, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&i2c_spinlock[i2c_num]);
     if (sample_time) {
         *sample_time = I2C[i2c_num]->sda_sample.time;
@@ -6242,8 +6763,8 @@ esp_err_t i2c_get_data_timing(i2c_port_t i2c_num, int* sample_time, int* hold_ti
 
 esp_err_t i2c_set_timeout(i2c_port_t i2c_num, int timeout)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 816, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 816, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 816, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 816, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 816, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
-    if(!((timeout <= 0xFFFFF) && (timeout > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 817, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 817, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 817, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 817, __FUNCTION__, "i2c timing value error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 817, __FUNCTION__, "i2c timing value error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 839, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 839, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 839, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 839, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 839, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!((timeout <= 0xFFFFF) && (timeout > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 840, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 840, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 840, __FUNCTION__, "i2c timing value error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 840, __FUNCTION__, "i2c timing value error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 840, __FUNCTION__, "i2c timing value error"); } } while(0); } while(0); return (0x102); };
 
     vTaskEnterCritical(&i2c_spinlock[i2c_num]);
     I2C[i2c_num]->timeout.tout = timeout;
@@ -6253,7 +6774,7 @@ esp_err_t i2c_set_timeout(i2c_port_t i2c_num, int timeout)
 
 esp_err_t i2c_get_timeout(i2c_port_t i2c_num, int* timeout)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 827, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 827, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 827, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 827, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 827, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 850, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 850, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 850, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 850, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 850, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
     if (timeout) {
         *timeout = I2C[i2c_num]->timeout.tout;
     }
@@ -6262,12 +6783,12 @@ esp_err_t i2c_get_timeout(i2c_port_t i2c_num, int* timeout)
 
 esp_err_t i2c_isr_register(i2c_port_t i2c_num, void (*fn)(void*), void * arg, int intr_alloc_flags, intr_handle_t *handle)
 {
-    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 836, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 836, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 836, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 836, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 836, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!(i2c_num < I2C_NUM_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 859, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 859, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 859, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 859, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 859, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
     if(!(fn != 
-# 837 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
    ((void *)0)
-# 837 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 837, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 837, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 837, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 837, __FUNCTION__, "i2c null address error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 837, __FUNCTION__, "i2c null address error"); } } while(0); } while(0); return (0x102); };
+# 860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 860, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 860, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 860, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 860, __FUNCTION__, "i2c null address error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 860, __FUNCTION__, "i2c null address error"); } } while(0); } while(0); return (0x102); };
     esp_err_t ret;
     switch (i2c_num) {
         case I2C_NUM_1:
@@ -6288,68 +6809,68 @@ esp_err_t i2c_isr_free(intr_handle_t handle)
 
 esp_err_t i2c_set_pin(i2c_port_t i2c_num, int sda_io_num, int scl_io_num, gpio_pullup_t sda_pullup_en, gpio_pullup_t scl_pullup_en, i2c_mode_t mode)
 {
-    if(!(( i2c_num < I2C_NUM_MAX ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 858, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 858, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 858, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 858, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 858, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
-    if(!(((sda_io_num < 0) || ((((((sda_io_num < 40 && GPIO_PIN_MUX_REG[sda_io_num] != 0))) && (sda_io_num < 34))))))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 859, __FUNCTION__, "sda gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 859, __FUNCTION__, "sda gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 859, __FUNCTION__, "sda gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 859, __FUNCTION__, "sda gpio number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 859, __FUNCTION__, "sda gpio number error"); } } while(0); } while(0); return (0x102); };
+    if(!(( i2c_num < I2C_NUM_MAX ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 881, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 881, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 881, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 881, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 881, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!(((sda_io_num < 0) || ((((((sda_io_num < 40 && GPIO_PIN_MUX_REG[sda_io_num] != 0))) && (sda_io_num < 34))))))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 882, __FUNCTION__, "sda gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 882, __FUNCTION__, "sda gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 882, __FUNCTION__, "sda gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 882, __FUNCTION__, "sda gpio number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 882, __FUNCTION__, "sda gpio number error"); } } while(0); } while(0); return (0x102); };
     if(!(scl_io_num < 0 || (((((scl_io_num < 40 && GPIO_PIN_MUX_REG[scl_io_num] != 0))) && (scl_io_num < 34))) || (((scl_io_num < 40 && GPIO_PIN_MUX_REG[scl_io_num] != 0)) && mode == I2C_MODE_SLAVE))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG,
 
 
 
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-# 860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     ,
 
 
 
- 864
-# 860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+ 887
+# 883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     , __FUNCTION__, "scl gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG,
 
 
 
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-# 860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     ,
 
 
 
- 864
-# 860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+ 887
+# 883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     , __FUNCTION__, "scl gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG,
 
 
 
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-# 860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     ,
 
 
 
- 864
-# 860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+ 887
+# 883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     , __FUNCTION__, "scl gpio number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG,
 
 
 
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-# 860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     ,
 
 
 
- 864
-# 860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+ 887
+# 883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     , __FUNCTION__, "scl gpio number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG,
 
 
 
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-# 860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     ,
 
 
 
- 864
-# 860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+ 887
+# 883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     , __FUNCTION__, "scl gpio number error"); } } while(0); } while(0); return (0x102); }
 
 
@@ -6358,86 +6879,86 @@ esp_err_t i2c_set_pin(i2c_port_t i2c_num, int sda_io_num, int scl_io_num, gpio_p
     if(!(sda_io_num < 0 || (sda_pullup_en == GPIO_PULLUP_ENABLE && ((((sda_io_num < 40 && GPIO_PIN_MUX_REG[sda_io_num] != 0))) && (sda_io_num < 34))) || sda_pullup_en == GPIO_PULLUP_DISABLE)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG,
 
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-# 865 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     ,
 
- 867
-# 865 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+ 890
+# 888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     , __FUNCTION__, "this i2c pin does not support internal pull-up"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG,
 
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-# 865 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     ,
 
- 867
-# 865 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+ 890
+# 888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     , __FUNCTION__, "this i2c pin does not support internal pull-up"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG,
 
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-# 865 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     ,
 
- 867
-# 865 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+ 890
+# 888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     , __FUNCTION__, "this i2c pin does not support internal pull-up"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG,
 
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-# 865 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     ,
 
- 867
-# 865 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+ 890
+# 888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     , __FUNCTION__, "this i2c pin does not support internal pull-up"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG,
 
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-# 865 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     ,
 
- 867
-# 865 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+ 890
+# 888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     , __FUNCTION__, "this i2c pin does not support internal pull-up"); } } while(0); } while(0); return (0x102); }
 
                                                                                                   ;
     if(!(scl_io_num < 0 || (scl_pullup_en == GPIO_PULLUP_ENABLE && ((((scl_io_num < 40 && GPIO_PIN_MUX_REG[scl_io_num] != 0))) && (scl_io_num < 34))) || scl_pullup_en == GPIO_PULLUP_DISABLE)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG,
 
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-# 868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     ,
 
- 870
-# 868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+ 893
+# 891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     , __FUNCTION__, "this i2c pin does not support internal pull-up"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG,
 
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-# 868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     ,
 
- 870
-# 868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+ 893
+# 891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     , __FUNCTION__, "this i2c pin does not support internal pull-up"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG,
 
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-# 868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     ,
 
- 870
-# 868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+ 893
+# 891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     , __FUNCTION__, "this i2c pin does not support internal pull-up"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG,
 
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-# 868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     ,
 
- 870
-# 868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+ 893
+# 891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     , __FUNCTION__, "this i2c pin does not support internal pull-up"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG,
 
  "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-# 868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     ,
 
- 870
-# 868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+ 893
+# 891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     , __FUNCTION__, "this i2c pin does not support internal pull-up"); } } while(0); } while(0); return (0x102); }
 
                                                                                                   ;
@@ -6504,9 +7025,9 @@ i2c_cmd_handle_t i2c_cmd_link_create()
 void i2c_cmd_link_delete(i2c_cmd_handle_t cmd_handle)
 {
     if (cmd_handle == 
-# 933 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 956 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                      ((void *)0)
-# 933 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 956 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                          ) {
         return;
     }
@@ -6517,19 +7038,19 @@ void i2c_cmd_link_delete(i2c_cmd_handle_t cmd_handle)
         free(ptmp);
     }
     cmd->cur = 
-# 942 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 965 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
               ((void *)0)
-# 942 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 965 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                   ;
     cmd->free = 
-# 943 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 966 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                ((void *)0)
-# 943 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 966 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                    ;
     cmd->head = 
-# 944 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 967 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                ((void *)0)
-# 944 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 967 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                    ;
     free(cmd_handle);
     return;
@@ -6539,9 +7060,9 @@ static esp_err_t i2c_cmd_link_append(i2c_cmd_handle_t cmd_handle, i2c_cmd_t* cmd
 {
     i2c_cmd_desc_t* cmd_desc = (i2c_cmd_desc_t*) cmd_handle;
     if (cmd_desc->head == 
-# 952 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 975 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                          ((void *)0)
-# 952 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 975 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                              ) {
 
         cmd_desc->head = (i2c_cmd_link_t*) calloc(1, sizeof(i2c_cmd_link_t));
@@ -6549,9 +7070,9 @@ static esp_err_t i2c_cmd_link_append(i2c_cmd_handle_t cmd_handle, i2c_cmd_t* cmd
 
 
         if (cmd_desc->head == 
-# 958 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 981 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                              ((void *)0)
-# 958 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 981 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                  ) {
             do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "i2c command link malloc error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "i2c command link malloc error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "i2c command link malloc error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "i2c command link malloc error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "i2c command link malloc error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } } while(0); } while(0);
             goto err;
@@ -6565,9 +7086,9 @@ static esp_err_t i2c_cmd_link_append(i2c_cmd_handle_t cmd_handle, i2c_cmd_t* cmd
 
 
         if (cmd_desc->cur->next == 
-# 970 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 993 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                   ((void *)0)
-# 970 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 993 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                       ) {
             do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "i2c command link malloc error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "i2c command link malloc error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "i2c command link malloc error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "i2c command link malloc error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "i2c command link malloc error" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG); } } while(0); } while(0);
             goto err;
@@ -6576,9 +7097,9 @@ static esp_err_t i2c_cmd_link_append(i2c_cmd_handle_t cmd_handle, i2c_cmd_t* cmd
     }
     memcpy((uint8_t*) &cmd_desc->cur->cmd, (uint8_t*) cmd, sizeof(i2c_cmd_t));
     cmd_desc->cur->next = 
-# 977 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1000 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                          ((void *)0)
-# 977 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 1000 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                              ;
     return 0;
 
@@ -6589,19 +7110,19 @@ static esp_err_t i2c_cmd_link_append(i2c_cmd_handle_t cmd_handle, i2c_cmd_t* cmd
 esp_err_t i2c_master_start(i2c_cmd_handle_t cmd_handle)
 {
     if(!(cmd_handle != 
-# 986 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1009 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
    ((void *)0)
-# 986 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 986, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 986, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 986, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 986, __FUNCTION__, "i2c command link error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 986, __FUNCTION__, "i2c command link error"); } } while(0); } while(0); return (0x102); };
+# 1009 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1009, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1009, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1009, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1009, __FUNCTION__, "i2c command link error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1009, __FUNCTION__, "i2c command link error"); } } while(0); } while(0); return (0x102); };
     i2c_cmd_t cmd;
     cmd.ack_en = 0;
     cmd.ack_exp = 0;
     cmd.ack_val = 0;
     cmd.byte_num = 0;
     cmd.data = 
-# 992 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1015 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
               ((void *)0)
-# 992 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 1015 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                   ;
     cmd.op_code = I2C_CMD_RESTART;
     return i2c_cmd_link_append(cmd_handle, &cmd);
@@ -6610,40 +7131,40 @@ esp_err_t i2c_master_start(i2c_cmd_handle_t cmd_handle)
 esp_err_t i2c_master_stop(i2c_cmd_handle_t cmd_handle)
 {
     if(!(cmd_handle != 
-# 999 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1022 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
    ((void *)0)
-# 999 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 999, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 999, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 999, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 999, __FUNCTION__, "i2c command link error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 999, __FUNCTION__, "i2c command link error"); } } while(0); } while(0); return (0x102); };
+# 1022 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1022, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1022, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1022, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1022, __FUNCTION__, "i2c command link error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1022, __FUNCTION__, "i2c command link error"); } } while(0); } while(0); return (0x102); };
     i2c_cmd_t cmd;
     cmd.ack_en = 0;
     cmd.ack_exp = 0;
     cmd.ack_val = 0;
     cmd.byte_num = 0;
     cmd.data = 
-# 1005 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1028 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
               ((void *)0)
-# 1005 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 1028 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                   ;
     cmd.op_code = I2C_CMD_STOP;
     return i2c_cmd_link_append(cmd_handle, &cmd);
 }
 
 esp_err_t i2c_master_write(i2c_cmd_handle_t cmd_handle, uint8_t* data, size_t data_len, 
-# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                                                                        _Bool 
-# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                                                                             ack_en)
 {
     if(!((data != 
-# 1012 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1035 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
    ((void *)0)
-# 1012 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1012, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1012, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1012, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1012, __FUNCTION__, "i2c null address error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1012, __FUNCTION__, "i2c null address error"); } } while(0); } while(0); return (0x102); };
+# 1035 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1035, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1035, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1035, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1035, __FUNCTION__, "i2c null address error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1035, __FUNCTION__, "i2c null address error"); } } while(0); } while(0); return (0x102); };
     if(!(cmd_handle != 
-# 1013 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1036 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
    ((void *)0)
-# 1013 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1013, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1013, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1013, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1013, __FUNCTION__, "i2c command link error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1013, __FUNCTION__, "i2c command link error"); } } while(0); } while(0); return (0x102); };
+# 1036 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1036, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1036, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1036, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1036, __FUNCTION__, "i2c command link error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1036, __FUNCTION__, "i2c command link error"); } } while(0); } while(0); return (0x102); };
 
     uint8_t len_tmp;
     int data_offset = 0;
@@ -6668,16 +7189,16 @@ esp_err_t i2c_master_write(i2c_cmd_handle_t cmd_handle, uint8_t* data, size_t da
 }
 
 esp_err_t i2c_master_write_byte(i2c_cmd_handle_t cmd_handle, uint8_t data, 
-# 1037 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1060 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                                                           _Bool 
-# 1037 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 1060 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                                                                ack_en)
 {
     if(!(cmd_handle != 
-# 1039 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1062 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
    ((void *)0)
-# 1039 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1039, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1039, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1039, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1039, __FUNCTION__, "i2c command link error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1039, __FUNCTION__, "i2c command link error"); } } while(0); } while(0); return (0x102); };
+# 1062 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1062, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1062, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1062, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1062, __FUNCTION__, "i2c command link error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1062, __FUNCTION__, "i2c command link error"); } } while(0); } while(0); return (0x102); };
     i2c_cmd_t cmd;
     cmd.ack_en = ack_en;
     cmd.ack_exp = 0;
@@ -6685,9 +7206,9 @@ esp_err_t i2c_master_write_byte(i2c_cmd_handle_t cmd_handle, uint8_t data,
     cmd.byte_num = 1;
     cmd.op_code = I2C_CMD_WRITE;
     cmd.data = 
-# 1046 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1069 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
               ((void *)0)
-# 1046 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 1069 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                   ;
     cmd.byte_cmd = data;
     return i2c_cmd_link_append(cmd_handle, &cmd);
@@ -6720,16 +7241,16 @@ static esp_err_t i2c_master_read_static(i2c_cmd_handle_t cmd_handle, uint8_t* da
 esp_err_t i2c_master_read_byte(i2c_cmd_handle_t cmd_handle, uint8_t* data, i2c_ack_type_t ack)
 {
     if(!((data != 
-# 1077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
    ((void *)0)
-# 1077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1077, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1077, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1077, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1077, __FUNCTION__, "i2c null address error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1077, __FUNCTION__, "i2c null address error"); } } while(0); } while(0); return (0x102); };
+# 1100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1100, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1100, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1100, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1100, __FUNCTION__, "i2c null address error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1100, __FUNCTION__, "i2c null address error"); } } while(0); } while(0); return (0x102); };
     if(!(cmd_handle != 
-# 1078 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
    ((void *)0)
-# 1078 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1078, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1078, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1078, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1078, __FUNCTION__, "i2c command link error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1078, __FUNCTION__, "i2c command link error"); } } while(0); } while(0); return (0x102); };
-    if(!(ack < I2C_MASTER_ACK_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1079, __FUNCTION__, "i2c ack type error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1079, __FUNCTION__, "i2c ack type error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1079, __FUNCTION__, "i2c ack type error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1079, __FUNCTION__, "i2c ack type error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1079, __FUNCTION__, "i2c ack type error"); } } while(0); } while(0); return (0x102); };
+# 1101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1101, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1101, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1101, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1101, __FUNCTION__, "i2c command link error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1101, __FUNCTION__, "i2c command link error"); } } while(0); } while(0); return (0x102); };
+    if(!(ack < I2C_MASTER_ACK_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1102, __FUNCTION__, "i2c ack type error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1102, __FUNCTION__, "i2c ack type error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1102, __FUNCTION__, "i2c ack type error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1102, __FUNCTION__, "i2c ack type error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1102, __FUNCTION__, "i2c ack type error"); } } while(0); } while(0); return (0x102); };
 
     i2c_cmd_t cmd;
     cmd.ack_en = 0;
@@ -6744,17 +7265,17 @@ esp_err_t i2c_master_read_byte(i2c_cmd_handle_t cmd_handle, uint8_t* data, i2c_a
 esp_err_t i2c_master_read(i2c_cmd_handle_t cmd_handle, uint8_t* data, size_t data_len, i2c_ack_type_t ack)
 {
     if(!((data != 
-# 1093 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
    ((void *)0)
-# 1093 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1093, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1093, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1093, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1093, __FUNCTION__, "i2c null address error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1093, __FUNCTION__, "i2c null address error"); } } while(0); } while(0); return (0x102); };
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1116, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1116, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1116, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1116, __FUNCTION__, "i2c null address error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1116, __FUNCTION__, "i2c null address error"); } } while(0); } while(0); return (0x102); };
     if(!(cmd_handle != 
-# 1094 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1117 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
    ((void *)0)
-# 1094 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1094, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1094, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1094, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1094, __FUNCTION__, "i2c command link error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1094, __FUNCTION__, "i2c command link error"); } } while(0); } while(0); return (0x102); };
-    if(!(ack < I2C_MASTER_ACK_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1095, __FUNCTION__, "i2c ack type error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1095, __FUNCTION__, "i2c ack type error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1095, __FUNCTION__, "i2c ack type error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1095, __FUNCTION__, "i2c ack type error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1095, __FUNCTION__, "i2c ack type error"); } } while(0); } while(0); return (0x102); };
-    if(!(data_len > 0)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1096, __FUNCTION__, "i2c data read length error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1096, __FUNCTION__, "i2c data read length error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1096, __FUNCTION__, "i2c data read length error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1096, __FUNCTION__, "i2c data read length error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1096, __FUNCTION__, "i2c data read length error"); } } while(0); } while(0); return (0x102); };
+# 1117 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1117, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1117, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1117, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1117, __FUNCTION__, "i2c command link error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1117, __FUNCTION__, "i2c command link error"); } } while(0); } while(0); return (0x102); };
+    if(!(ack < I2C_MASTER_ACK_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1118, __FUNCTION__, "i2c ack type error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1118, __FUNCTION__, "i2c ack type error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1118, __FUNCTION__, "i2c ack type error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1118, __FUNCTION__, "i2c ack type error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1118, __FUNCTION__, "i2c ack type error"); } } while(0); } while(0); return (0x102); };
+    if(!(data_len > 0)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1119, __FUNCTION__, "i2c data read length error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1119, __FUNCTION__, "i2c data read length error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1119, __FUNCTION__, "i2c data read length error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1119, __FUNCTION__, "i2c data read length error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1119, __FUNCTION__, "i2c data read length error"); } } while(0); } while(0); return (0x102); };
 
     if(ack != I2C_MASTER_LAST_NACK) {
         return i2c_master_read_static(cmd_handle, data, data_len, ack);
@@ -6771,7 +7292,7 @@ esp_err_t i2c_master_read(i2c_cmd_handle_t cmd_handle, uint8_t* data, size_t dat
     }
 }
 
-static void __attribute__((section(".iram1"))) i2c_master_cmd_begin_static(i2c_port_t i2c_num)
+static void __attribute__((section(".iram1" "." "21"))) i2c_master_cmd_begin_static(i2c_port_t i2c_num)
 {
     i2c_obj_t* p_i2c = p_i2c_obj[i2c_num];
     int HPTaskAwoken = ( ( BaseType_t ) 0 );
@@ -6797,9 +7318,9 @@ static void __attribute__((section(".iram1"))) i2c_master_cmd_begin_static(i2c_p
         }
         return;
     } else if (p_i2c->cmd_link.head != 
-# 1138 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                       ((void *)0) 
-# 1138 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 1161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                            && p_i2c->status == I2C_STATUS_READ) {
         i2c_cmd_t *cmd = &p_i2c->cmd_link.head->cmd;
         while (p_i2c->rx_cnt-- > 0) {
@@ -6813,14 +7334,14 @@ static void __attribute__((section(".iram1"))) i2c_master_cmd_begin_static(i2c_p
         }
     }
     if (p_i2c->cmd_link.head == 
-# 1150 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                ((void *)0)
-# 1150 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 1173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                    ) {
         p_i2c->cmd_link.cur = 
-# 1151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                              ((void *)0)
-# 1151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 1174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                  ;
         evt.type = (1);
         xQueueGenericSendFromISR( ( p_i2c->cmd_evt_queue ), ( &evt ), ( &HPTaskAwoken ), ( ( BaseType_t ) 2 ) );
@@ -6882,9 +7403,9 @@ static void __attribute__((section(".iram1"))) i2c_master_cmd_begin_static(i2c_p
         p_i2c->cmd_idx++;
         p_i2c->cmd_link.head = p_i2c->cmd_link.head->next;
         if (p_i2c->cmd_link.head == 
-# 1211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1234 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                                    ((void *)0) 
-# 1211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 1234 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                                         || p_i2c->cmd_idx >= 15) {
             p_i2c->tx_fifo_remain = (32);
             p_i2c->cmd_idx = 0;
@@ -6897,31 +7418,34 @@ static void __attribute__((section(".iram1"))) i2c_master_cmd_begin_static(i2c_p
     I2C[i2c_num]->ctr.trans_start = 1;
     return;
 }
-# 1241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 1264 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
 esp_err_t i2c_master_cmd_begin(i2c_port_t i2c_num, i2c_cmd_handle_t cmd_handle, TickType_t ticks_to_wait)
 {
-    if(!(( i2c_num < I2C_NUM_MAX ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1243, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1243, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1243, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1243, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1243, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
+    if(!(( i2c_num < I2C_NUM_MAX ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1266, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1266, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1266, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1266, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1266, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (0x102); };
     if(!(p_i2c_obj[i2c_num] != 
-# 1244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
    ((void *)0)
-# 1244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1244, __FUNCTION__, "i2c driver not installed"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1244, __FUNCTION__, "i2c driver not installed"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1244, __FUNCTION__, "i2c driver not installed"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1244, __FUNCTION__, "i2c driver not installed"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1244, __FUNCTION__, "i2c driver not installed"); } } while(0); } while(0); return (0x103); };
-    if(!(p_i2c_obj[i2c_num]->mode == I2C_MODE_MASTER)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1245, __FUNCTION__, "Only allowed in master mode"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1245, __FUNCTION__, "Only allowed in master mode"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1245, __FUNCTION__, "Only allowed in master mode"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1245, __FUNCTION__, "Only allowed in master mode"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1245, __FUNCTION__, "Only allowed in master mode"); } } while(0); } while(0); return (0x103); };
+# 1267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1267, __FUNCTION__, "i2c driver not installed"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1267, __FUNCTION__, "i2c driver not installed"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1267, __FUNCTION__, "i2c driver not installed"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1267, __FUNCTION__, "i2c driver not installed"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1267, __FUNCTION__, "i2c driver not installed"); } } while(0); } while(0); return (0x103); };
+    if(!(p_i2c_obj[i2c_num]->mode == I2C_MODE_MASTER)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1268, __FUNCTION__, "Only allowed in master mode"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1268, __FUNCTION__, "Only allowed in master mode"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1268, __FUNCTION__, "Only allowed in master mode"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1268, __FUNCTION__, "Only allowed in master mode"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1268, __FUNCTION__, "Only allowed in master mode"); } } while(0); } while(0); return (0x103); };
     if(!(cmd_handle != 
-# 1246 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
    ((void *)0)
-# 1246 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1246, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1246, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1246, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1246, __FUNCTION__, "i2c command link error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1246, __FUNCTION__, "i2c command link error"); } } while(0); } while(0); return (0x102); };
-# 1259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 1269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1269, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1269, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1269, __FUNCTION__, "i2c command link error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1269, __FUNCTION__, "i2c command link error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1269, __FUNCTION__, "i2c command link error"); } } while(0); } while(0); return (0x102); };
+# 1282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
     static uint8_t clear_bus_cnt = 0;
     esp_err_t ret = -1;
     i2c_obj_t* p_i2c = p_i2c_obj[i2c_num];
     TickType_t ticks_start = xTaskGetTickCount();
     int res = xQueueGenericReceive( ( QueueHandle_t ) ( p_i2c->cmd_mux ), 
-# 1263 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1286 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
                        ((void *)0)
-# 1263 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 1286 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
                        , ( ticks_to_wait ), ( ( BaseType_t ) 0 ) );
+
+    esp_pm_lock_acquire(p_i2c->pm_lock);
+
     if (res == ( ( BaseType_t ) 0 )) {
         return 0x107;
     }
@@ -6999,38 +7523,46 @@ esp_err_t i2c_master_cmd_begin(i2c_port_t i2c_num, i2c_cmd_handle_t cmd_handle, 
         }
     }
     p_i2c->status = I2C_STATUS_DONE;
+
+    esp_pm_lock_release(p_i2c->pm_lock);
+
     xQueueGenericSend( ( QueueHandle_t ) ( p_i2c->cmd_mux ), 
-# 1341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
    ((void *)0)
-# 1341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 1370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     return ret;
 }
 
 int i2c_slave_write_buffer(i2c_port_t i2c_num, uint8_t* data, int size, TickType_t ticks_to_wait)
 {
-    if(!(( i2c_num < I2C_NUM_MAX ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1347, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1347, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1347, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1347, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1347, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (-1); };
+    if(!(( i2c_num < I2C_NUM_MAX ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1376, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1376, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1376, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1376, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1376, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (-1); };
     if(!((data != 
-# 1348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1377 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
    ((void *)0)
-# 1348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1348, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1348, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1348, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1348, __FUNCTION__, "i2c null address error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1348, __FUNCTION__, "i2c null address error"); } } while(0); } while(0); return (-1); };
-    if(!(p_i2c_obj[i2c_num]->mode == I2C_MODE_SLAVE)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1349, __FUNCTION__, "Only allowed in slave mode"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1349, __FUNCTION__, "Only allowed in slave mode"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1349, __FUNCTION__, "Only allowed in slave mode"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1349, __FUNCTION__, "Only allowed in slave mode"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1349, __FUNCTION__, "Only allowed in slave mode"); } } while(0); } while(0); return (-1); };
+# 1377 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1377, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1377, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1377, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1377, __FUNCTION__, "i2c null address error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1377, __FUNCTION__, "i2c null address error"); } } while(0); } while(0); return (-1); };
+    if(!(p_i2c_obj[i2c_num]->mode == I2C_MODE_SLAVE)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1378, __FUNCTION__, "Only allowed in slave mode"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1378, __FUNCTION__, "Only allowed in slave mode"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1378, __FUNCTION__, "Only allowed in slave mode"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1378, __FUNCTION__, "Only allowed in slave mode"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1378, __FUNCTION__, "Only allowed in slave mode"); } } while(0); } while(0); return (-1); };
     i2c_obj_t* p_i2c = p_i2c_obj[i2c_num];
 
     int res;
     int cnt = 0;
-    TickType_t ticks_end = xTaskGetTickCount() + ticks_to_wait;
+    TickType_t ticks_start = xTaskGetTickCount();
 
     res = xQueueGenericReceive( ( QueueHandle_t ) ( p_i2c->slv_tx_mux ), 
-# 1356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
          ((void *)0)
-# 1356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 1385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
          , ( ticks_to_wait ), ( ( BaseType_t ) 0 ) );
     if (res == ( ( BaseType_t ) 0 )) {
         return 0;
     }
-    ticks_to_wait = ticks_end - xTaskGetTickCount();
+    TickType_t ticks_end = xTaskGetTickCount();
+    if (ticks_end - ticks_start > ticks_to_wait) {
+        ticks_to_wait = 0;
+    } else {
+        ticks_to_wait = ticks_to_wait - (ticks_end - ticks_start);
+    }
     res = xRingbufferSend(p_i2c->tx_ring_buf, data, size, ticks_to_wait);
     if (res == ( ( BaseType_t ) 0 )) {
         cnt = 0;
@@ -7042,9 +7574,9 @@ int i2c_slave_write_buffer(i2c_port_t i2c_num, uint8_t* data, int size, TickType
         cnt = size;
     }
     xQueueGenericSend( ( QueueHandle_t ) ( p_i2c->slv_tx_mux ), 
-# 1371 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
    ((void *)0)
-# 1371 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 1405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     return cnt;
 }
@@ -7063,32 +7595,42 @@ static int i2c_slave_read(i2c_port_t i2c_num, uint8_t* data, size_t max_size, Ti
 
 int i2c_slave_read_buffer(i2c_port_t i2c_num, uint8_t* data, size_t max_size, TickType_t ticks_to_wait)
 {
-    if(!(( i2c_num < I2C_NUM_MAX ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1389, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1389, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1389, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1389, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1389, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (-1); };
+    if(!(( i2c_num < I2C_NUM_MAX ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1423, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1423, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1423, __FUNCTION__, "i2c number error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1423, __FUNCTION__, "i2c number error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1423, __FUNCTION__, "i2c number error"); } } while(0); } while(0); return (-1); };
     if(!((data != 
-# 1390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
    ((void *)0)
-# 1390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
-   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1390, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1390, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1390, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1390, __FUNCTION__, "i2c null address error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1390, __FUNCTION__, "i2c null address error"); } } while(0); } while(0); return (-1); };
-    if(!(p_i2c_obj[i2c_num]->mode == I2C_MODE_SLAVE)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1391, __FUNCTION__, "Only allowed in slave mode"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1391, __FUNCTION__, "Only allowed in slave mode"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1391, __FUNCTION__, "Only allowed in slave mode"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1391, __FUNCTION__, "Only allowed in slave mode"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1391, __FUNCTION__, "Only allowed in slave mode"); } } while(0); } while(0); return (-1); };
+# 1424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1424, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1424, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1424, __FUNCTION__, "i2c null address error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1424, __FUNCTION__, "i2c null address error"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1424, __FUNCTION__, "i2c null address error"); } } while(0); } while(0); return (-1); };
+    if(!(p_i2c_obj[i2c_num]->mode == I2C_MODE_SLAVE)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2C_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1425, __FUNCTION__, "Only allowed in slave mode"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2C_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1425, __FUNCTION__, "Only allowed in slave mode"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2C_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1425, __FUNCTION__, "Only allowed in slave mode"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2C_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1425, __FUNCTION__, "Only allowed in slave mode"); } else { esp_log_write(ESP_LOG_INFO, I2C_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2C_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c", 1425, __FUNCTION__, "Only allowed in slave mode"); } } while(0); } while(0); return (-1); };
 
     i2c_obj_t* p_i2c = p_i2c_obj[i2c_num];
     int res;
-    TickType_t ticks_end = xTaskGetTickCount() + ticks_to_wait;
+    TickType_t ticks_start = xTaskGetTickCount();
     res = xQueueGenericReceive( ( QueueHandle_t ) ( p_i2c->slv_rx_mux ), 
-# 1396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1430 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
          ((void *)0)
-# 1396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 1430 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
          , ( ticks_to_wait ), ( ( BaseType_t ) 0 ) );
     if (res == ( ( BaseType_t ) 0 )) {
         return 0;
     }
-    ticks_to_wait = ticks_end - xTaskGetTickCount();
+    TickType_t ticks_end = xTaskGetTickCount();
+    if (ticks_end - ticks_start > ticks_to_wait) {
+        ticks_to_wait = 0;
+    } else {
+        ticks_to_wait = ticks_to_wait - (ticks_end - ticks_start);
+    }
     int cnt = i2c_slave_read(i2c_num, data, max_size, ticks_to_wait);
     if (cnt > 0) {
         vTaskEnterCritical(&i2c_spinlock[i2c_num]);
         I2C[i2c_num]->int_ena.rx_fifo_full = 1;
         vTaskExitCritical(&i2c_spinlock[i2c_num]);
-        ticks_to_wait = ticks_end - xTaskGetTickCount();
+        ticks_end = xTaskGetTickCount();
+        if (ticks_end - ticks_start > ticks_to_wait) {
+            ticks_to_wait = 0;
+        } else {
+            ticks_to_wait = ticks_to_wait - (ticks_end - ticks_start);
+        }
         if (cnt < max_size && ticks_to_wait > 0) {
             cnt += i2c_slave_read(i2c_num, data + cnt, max_size - cnt, ticks_to_wait);
         }
@@ -7096,9 +7638,9 @@ int i2c_slave_read_buffer(i2c_port_t i2c_num, uint8_t* data, size_t max_size, Ti
         cnt = 0;
     }
     xQueueGenericSend( ( QueueHandle_t ) ( p_i2c->slv_rx_mux ), 
-# 1413 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
+# 1457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c" 3 4
    ((void *)0)
-# 1413 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
+# 1457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2c.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     return cnt;
 }

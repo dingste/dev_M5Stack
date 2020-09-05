@@ -6,20 +6,20 @@
 	.global	coap_memory_init
 	.type	coap_memory_init, @function
 coap_memory_init:
-.LFB38:
+.LFB47:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/coap/libcoap/src/mem.c"
 	.loc 1 24 0
 	entry	sp, 32
 .LCFI0:
 	retw.n
-.LFE38:
+.LFE47:
 	.size	coap_memory_init, .-coap_memory_init
 	.section	.text.coap_malloc_type,"ax",@progbits
 	.align	4
 	.global	coap_malloc_type
 	.type	coap_malloc_type, @function
 coap_malloc_type:
-.LFB39:
+.LFB48:
 	.loc 1 34 0
 .LVL0:
 	.loc 1 34 0
@@ -33,14 +33,14 @@ coap_malloc_type:
 	mov.n	a2, a10
 .LVL2:
 	retw.n
-.LFE39:
+.LFE48:
 	.size	coap_malloc_type, .-coap_malloc_type
 	.section	.text.coap_free_type,"ax",@progbits
 	.align	4
 	.global	coap_free_type
 	.type	coap_free_type, @function
 coap_free_type:
-.LFB40:
+.LFB49:
 	.loc 1 39 0
 .LVL3:
 	entry	sp, 32
@@ -50,7 +50,7 @@ coap_free_type:
 	call8	free
 .LVL4:
 	retw.n
-.LFE40:
+.LFE49:
 	.size	coap_free_type, .-coap_free_type
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -71,10 +71,10 @@ coap_free_type:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI0-.LFB38
+	.4byte	.LCFI0-.LFB47
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -83,10 +83,10 @@ coap_free_type:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI1-.LFB39
+	.4byte	.LCFI1-.LFB48
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -95,10 +95,10 @@ coap_free_type:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.byte	0x4
-	.4byte	.LCFI2-.LFB40
+	.4byte	.LCFI2-.LFB49
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -230,8 +230,8 @@ coap_free_type:
 	.4byte	.LASF32
 	.byte	0x1
 	.byte	0x18
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x9
@@ -239,8 +239,8 @@ coap_free_type:
 	.byte	0x1
 	.byte	0x22
 	.4byte	0x76
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x13e
@@ -272,8 +272,8 @@ coap_free_type:
 	.4byte	.LASF34
 	.byte	0x1
 	.byte	0x27
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x17c
@@ -564,7 +564,7 @@ coap_free_type:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL2
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -580,22 +580,22 @@ coap_free_type:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB38
-	.4byte	.LFE38
-	.4byte	.LFB39
-	.4byte	.LFE39
-	.4byte	.LFB40
-	.4byte	.LFE40
+	.4byte	.LFB47
+	.4byte	.LFE47
+	.4byte	.LFB48
+	.4byte	.LFE48
+	.4byte	.LFB49
+	.4byte	.LFE49
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

@@ -7,91 +7,91 @@
 	.align	4
 	.type	get_power_down_flags, @function
 get_power_down_flags:
-.LFB59:
+.LFB63:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/sleep_modes.c"
-	.loc 1 634 0
+	.loc 1 642 0
 	entry	sp, 32
 .LCFI0:
-	.loc 1 645 0
+	.loc 1 653 0
 	l32r	a8, .LC4
 	l32i.n	a2, a8, 4
 	bnei	a2, 2, .L2
-	.loc 1 648 0
+	.loc 1 656 0
 	movi.n	a2, 1
 	s32i.n	a2, a8, 4
 .L2:
-	.loc 1 656 0
+	.loc 1 664 0
 	l32i.n	a2, a8, 8
 	bnei	a2, 2, .L3
-	.loc 1 657 0
+	.loc 1 665 0
 	movi.n	a2, 1
 	s32i.n	a2, a8, 8
 .L3:
-	.loc 1 662 0
+	.loc 1 670 0
 	l32i.n	a2, a8, 0
 	bnei	a2, 2, .L4
-	.loc 1 663 0
+	.loc 1 671 0
 	l32i.n	a9, a8, 24
 	movi.n	a2, 5
 	extui	a9, a9, 0, 11
 	and	a2, a9, a2
 	beqz.n	a2, .L5
-	.loc 1 664 0
+	.loc 1 672 0
 	movi.n	a2, 1
 	j	.L24
 .L5:
-	.loc 1 665 0
+	.loc 1 673 0
 	movi	a10, 0x300
 	bnone	a9, a10, .L4
 .L24:
-	.loc 1 668 0
+	.loc 1 676 0
 	s32i.n	a2, a8, 0
 .L4:
-	.loc 1 672 0
+	.loc 1 680 0
 	l32i.n	a2, a8, 12
 	bnei	a2, 2, .L6
-	.loc 1 673 0
+	.loc 1 681 0
 	movi.n	a2, 0
 	s32i.n	a2, a8, 12
 .L6:
 .LVL0:
-	.loc 1 684 0
+	.loc 1 692 0
 	l32i.n	a2, a8, 8
-	.loc 1 685 0
+	.loc 1 693 0
 	movi.n	a10, 0
 	addi.n	a9, a2, -1
 	movi.n	a2, 8
 	moveqz	a2, a10, a9
 .LVL1:
-	.loc 1 687 0
+	.loc 1 695 0
 	l32i.n	a9, a8, 4
 	beqi	a9, 1, .L8
-	.loc 1 688 0
+	.loc 1 696 0
 	movi.n	a9, 4
 	or	a2, a2, a9
 .LVL2:
 .L8:
-	.loc 1 690 0
+	.loc 1 698 0
 	l32i.n	a9, a8, 0
 	beqi	a9, 1, .L9
-	.loc 1 691 0
+	.loc 1 699 0
 	movi.n	a9, 2
 	or	a2, a2, a9
 .LVL3:
 .L9:
-	.loc 1 693 0
+	.loc 1 701 0
 	l32i.n	a8, a8, 12
 	beqi	a8, 1, .L10
-	.loc 1 694 0
+	.loc 1 702 0
 	movi.n	a8, 0x40
 	or	a2, a2, a8
 .LVL4:
 .L10:
-	.loc 1 697 0
+	.loc 1 712 0
 	retw.n
-.LFE59:
+.LFE63:
 	.size	get_power_down_flags, .-get_power_down_flags
-	.section	.rtc.text,"ax",@progbits
+	.section	.rtc.text.24,"ax",@progbits
 	.literal_position
 	.literal .LC5, 1072693316
 	.literal .LC6, 8192
@@ -101,11 +101,11 @@ get_power_down_flags:
 	.global	esp_default_wake_deep_sleep
 	.type	esp_default_wake_deep_sleep, @function
 esp_default_wake_deep_sleep:
-.LFB35:
-	.loc 1 127 0
+.LFB39:
+	.loc 1 129 0
 	entry	sp, 32
 .LCFI1:
-	.loc 1 129 0
+	.loc 1 131 0
 	l32r	a8, .LC5
 	l32r	a9, .LC6
 	memw
@@ -113,14 +113,14 @@ esp_default_wake_deep_sleep:
 	or	a9, a10, a9
 	memw
 	s32i.n	a9, a8, 0
-	.loc 1 131 0
+	.loc 1 133 0
 	memw
 	l32i.n	a10, a8, 0
 	l32r	a9, .LC7
 	and	a9, a10, a9
 	memw
 	s32i.n	a9, a8, 0
-	.loc 1 136 0
+	.loc 1 138 0
 	call8	ets_get_detected_xtal_freq
 .LVL5:
 	l32r	a8, .LC8
@@ -128,16 +128,16 @@ esp_default_wake_deep_sleep:
 	extui	a10, a10, 18, 14
 	call8	ets_update_cpu_frequency_rom
 .LVL6:
-	.loc 1 139 0
+	.loc 1 141 0
 	movi	a10, 0x7d0
 	call8	ets_delay_us
 .LVL7:
 	retw.n
-.LFE35:
+.LFE39:
 	.size	esp_default_wake_deep_sleep, .-esp_default_wake_deep_sleep
 	.weak	esp_wake_deep_sleep
 	.set	esp_wake_deep_sleep,esp_default_wake_deep_sleep
-	.section	.iram1,"ax",@progbits
+	.section	.iram1.28,"ax",@progbits
 	.literal_position
 	.literal .LC11, 57344
 	.literal .LC12, 16372
@@ -166,12 +166,12 @@ esp_default_wake_deep_sleep:
 	.align	4
 	.type	esp_sleep_start, @function
 esp_sleep_start:
-.LFB40:
-	.loc 1 178 0
+.LFB44:
+	.loc 1 180 0
 .LVL8:
 	entry	sp, 64
 .LCFI2:
-	.loc 1 182 0
+	.loc 1 184 0
 	extui	a4, a2, 0, 1
 	beqz.n	a4, .L27
 	movi.n	a5, 0
@@ -205,7 +205,7 @@ esp_sleep_start:
 	bany	a6, a10, .L28
 .LBE26:
 .LBE25:
-	.loc 1 153 0
+	.loc 1 155 0
 	addi.n	a5, a5, 1
 .LVL11:
 	bnei	a5, 3, .L29
@@ -213,14 +213,14 @@ esp_sleep_start:
 .L36:
 .LBE24:
 .LBE23:
-	.loc 1 190 0
+	.loc 1 192 0
 	mov.n	a10, sp
 	call8	rtc_clk_cpu_freq_get_config
 .LVL13:
-	.loc 1 191 0
+	.loc 1 193 0
 	call8	rtc_clk_cpu_freq_set_xtal
 .LVL14:
-	.loc 1 194 0
+	.loc 1 196 0
 	l32r	a3, .LC14
 	l32i.n	a5, a3, 24
 	bbci	a5, 0, .L37
@@ -231,7 +231,7 @@ esp_sleep_start:
 	mov.n	a6, a4
 .LBB27:
 .LBB28:
-	.loc 1 161 0
+	.loc 1 163 0
 	mov.n	a9, a4
 	movi.n	a10, 8
 .L35:
@@ -244,19 +244,19 @@ esp_sleep_start:
 	add.n	a3, a12, a5
 	memw
 	l32i.n	a5, a3, 52
-	.loc 1 162 0
+	.loc 1 164 0
 	addi	a3, a3, 28
-	.loc 1 161 0
+	.loc 1 163 0
 	or	a5, a5, a10
 	memw
 	s32i.n	a5, a3, 24
 .L34:
-	.loc 1 162 0
+	.loc 1 164 0
 	memw
 	l32i.n	a5, a3, 0
 	extui	a5, a5, 24, 4
 	bnez.n	a5, .L34
-	.loc 1 160 0
+	.loc 1 162 0
 	addi.n	a6, a6, 1
 .LVL16:
 	bnei	a6, 3, .L35
@@ -267,27 +267,27 @@ esp_sleep_start:
 .LBE27:
 .LBB29:
 .LBB30:
-	.loc 1 478 0
+	.loc 1 486 0
 	l32r	a9, .LC15
-	.loc 1 476 0
+	.loc 1 484 0
 	l32i.n	a8, a3, 28
-	.loc 1 478 0
+	.loc 1 486 0
 	memw
 	l32i.n	a7, a9, 0
 	l32r	a6, .LC16
-	.loc 1 476 0
+	.loc 1 484 0
 	extui	a8, a8, 0, 5
 .LVL18:
-	.loc 1 478 0
+	.loc 1 486 0
 	and	a7, a7, a6
 	slli	a6, a8, 27
 	or	a6, a7, a6
-	.loc 1 480 0
+	.loc 1 488 0
 	l32r	a7, .LC17
-	.loc 1 478 0
+	.loc 1 486 0
 	memw
 	s32i.n	a6, a9, 0
-	.loc 1 480 0
+	.loc 1 488 0
 	memw
 	l32i.n	a9, a7, 0
 	l32r	a6, .LC18
@@ -300,7 +300,7 @@ esp_sleep_start:
 .LVL19:
 	l32r	a7, .LC19
 .LBB31:
-	.loc 1 483 0
+	.loc 1 491 0
 	movi.n	a5, 0
 	mov.n	a6, a7
 	movi.n	a9, 0x28
@@ -308,10 +308,10 @@ esp_sleep_start:
 .LVL20:
 .L39:
 .LBB32:
-	.loc 1 485 0
+	.loc 1 493 0
 	l32i.n	a10, a7, 48
 	bne	a8, a10, .L38
-	.loc 1 486 0
+	.loc 1 494 0
 	addx2	a7, a5, a5
 	addx4	a5, a7, a5
 .LVL21:
@@ -324,7 +324,7 @@ esp_sleep_start:
 	or	a7, a8, a7
 	memw
 	s32i.n	a7, a6, 0
-	.loc 1 487 0
+	.loc 1 495 0
 	l32i.n	a7, a5, 8
 	movi.n	a8, 3
 	memw
@@ -336,7 +336,7 @@ esp_sleep_start:
 	and	a7, a7, a9
 	memw
 	s32i.n	a7, a6, 0
-	.loc 1 488 0
+	.loc 1 496 0
 	memw
 	l32i.n	a7, a6, 0
 	l32i.n	a5, a5, 12
@@ -347,7 +347,7 @@ esp_sleep_start:
 .LVL23:
 .L38:
 .LBE32:
-	.loc 1 483 0
+	.loc 1 491 0
 	addi.n	a5, a5, 1
 .LVL24:
 	addi	a7, a7, 52
@@ -357,41 +357,41 @@ esp_sleep_start:
 .LBE31:
 .LBE30:
 .LBE29:
-	.loc 1 197 0
+	.loc 1 199 0
 	l32i.n	a10, a3, 24
 	bbci	a10, 1, .L40
 .LBB33:
 .LBB34:
-	.loc 1 520 0
+	.loc 1 528 0
 	l32r	a5, .LC20
 	srli	a10, a10, 12
 	and	a10, a10, a5
 .LVL26:
 .LBB35:
 .LBB36:
-	.loc 1 533 0
+	.loc 1 541 0
 	l32i.n	a5, a3, 0
 	l32r	a8, .LC19
 	s32i.n	a5, sp, 16
 .LBE36:
-	.loc 1 521 0
+	.loc 1 529 0
 	movi.n	a14, 0
 	movi.n	a5, 0x27
 	movi.n	a6, 1
 .LBB37:
-	.loc 1 529 0
+	.loc 1 537 0
 	movi.n	a7, 3
 	movi.n	a13, -1
 	j	.L41
 .LVL27:
 .L44:
-	.loc 1 522 0
+	.loc 1 530 0
 	l32i.n	a11, a8, 48
 .LVL28:
-	.loc 1 523 0
+	.loc 1 531 0
 	bbc	a10, a11, .L42
 .LVL29:
-	.loc 1 528 0
+	.loc 1 536 0
 	l32i.n	a9, a8, 0
 	l32i.n	a12, a8, 4
 	memw
@@ -399,7 +399,7 @@ esp_sleep_start:
 	or	a12, a15, a12
 	memw
 	s32i.n	a12, a9, 0
-	.loc 1 529 0
+	.loc 1 537 0
 	l32i.n	a12, a8, 8
 	memw
 	l32i.n	a15, a9, 0
@@ -409,17 +409,17 @@ esp_sleep_start:
 	and	a12, a12, a15
 	memw
 	s32i.n	a12, a9, 0
-	.loc 1 531 0
+	.loc 1 539 0
 	memw
 	l32i.n	a15, a9, 0
 	l32i.n	a12, a8, 12
 	or	a12, a15, a12
 	memw
 	s32i.n	a12, a9, 0
-	.loc 1 533 0
+	.loc 1 541 0
 	l32i.n	a12, sp, 16
 	beqi	a12, 1, .L43
-	.loc 1 537 0
+	.loc 1 545 0
 	l32i.n	a15, a8, 20
 	memw
 	l32i.n	a12, a9, 0
@@ -427,7 +427,7 @@ esp_sleep_start:
 	and	a12, a15, a12
 	memw
 	s32i.n	a12, a9, 0
-	.loc 1 538 0
+	.loc 1 546 0
 	l32i.n	a15, a8, 16
 	memw
 	l32i.n	a12, a9, 0
@@ -435,7 +435,7 @@ esp_sleep_start:
 	and	a12, a15, a12
 	memw
 	s32i.n	a12, a9, 0
-	.loc 1 539 0
+	.loc 1 547 0
 	l32r	a9, .LC21
 	memw
 	l32i.n	a12, a9, 0
@@ -445,7 +445,7 @@ esp_sleep_start:
 	memw
 	s32i.n	a9, a12, 0
 .L43:
-	.loc 1 542 0
+	.loc 1 550 0
 	ssl	a11
 	sll	a11, a6
 .LVL30:
@@ -454,7 +454,7 @@ esp_sleep_start:
 .LVL31:
 .L42:
 .LBE37:
-	.loc 1 521 0
+	.loc 1 529 0
 	addi.n	a14, a14, 1
 .LVL32:
 	addi	a8, a8, 52
@@ -464,18 +464,18 @@ esp_sleep_start:
 	bnez.n	a10, .L44
 .L69:
 .LBE35:
-	.loc 1 545 0
+	.loc 1 553 0
 	l32r	a8, .LC22
 	l32r	a5, .LC23
 	memw
 	l32i.n	a6, a8, 0
-	.loc 1 547 0
+	.loc 1 555 0
 	l32r	a7, .LC20
-	.loc 1 545 0
+	.loc 1 553 0
 	or	a5, a6, a5
 	memw
 	s32i.n	a5, a8, 0
-	.loc 1 547 0
+	.loc 1 555 0
 	memw
 	l32i.n	a6, a8, 0
 	l32r	a5, .LC24
@@ -484,12 +484,12 @@ esp_sleep_start:
 	srli	a6, a5, 12
 	and	a6, a6, a7
 	or	a6, a9, a6
-	.loc 1 549 0
+	.loc 1 557 0
 	l32r	a7, .LC17
-	.loc 1 547 0
+	.loc 1 555 0
 	memw
 	s32i.n	a6, a8, 0
-	.loc 1 549 0
+	.loc 1 557 0
 	memw
 	l32i.n	a8, a7, 0
 	l32r	a6, .LC25
@@ -503,10 +503,10 @@ esp_sleep_start:
 .L40:
 .LBE34:
 .LBE33:
-	.loc 1 201 0
+	.loc 1 203 0
 	l32i.n	a5, a3, 24
 	bbci	a5, 9, .L47
-	.loc 1 202 0
+	.loc 1 204 0
 	l32r	a6, .LC26
 	l32r	a5, .LC27
 	memw
@@ -515,7 +515,7 @@ esp_sleep_start:
 	memw
 	s32i.n	a5, a6, 0
 .L47:
-	.loc 1 206 0
+	.loc 1 208 0
 	extui	a7, a2, 4, 1
 	extui	a5, a2, 3, 1
 	slli	a6, a5, 3
@@ -553,34 +553,34 @@ esp_sleep_start:
 	xor	a2, a2, a4
 	slli	a2, a2, 24
 	and	a10, a5, a10
-	.loc 1 207 0
+	.loc 1 209 0
 	or	a10, a10, a2
 	call8	rtc_sleep_init
 .LVL36:
-	.loc 1 210 0
+	.loc 1 212 0
 	l32i.n	a2, a3, 24
 	bbci	a2, 3, .L48
-	.loc 1 210 0 is_stmt 0 discriminator 1
+	.loc 1 212 0 is_stmt 0 discriminator 1
 	l32i.n	a2, a3, 16
 	l32i.n	a5, a3, 20
 	or	a2, a2, a5
 	beqz.n	a2, .L48
 .LBB38:
 .LBB39:
-	.loc 1 425 0 is_stmt 1 discriminator 1
+	.loc 1 430 0 is_stmt 1 discriminator 1
 	call8	esp_clk_slowclk_cal_get
 .LVL37:
-	.loc 1 426 0 discriminator 1
+	.loc 1 431 0 discriminator 1
 	l32i.n	a2, a3, 32
 	l32i.n	a5, a3, 16
 	l32i.n	a6, a3, 20
 	sub	a2, a5, a2
 	bltu	a5, a2, .L50
-	.loc 1 426 0 is_stmt 0
+	.loc 1 431 0 is_stmt 0
 	movi.n	a4, 0
 .L50:
 .LVL38:
-	.loc 1 430 0 is_stmt 1
+	.loc 1 435 0 is_stmt 1
 	sub	a11, a6, a4
 	mov.n	a5, a2
 	bgez	a11, .L51
@@ -592,7 +592,7 @@ esp_sleep_start:
 .LVL39:
 	call8	rtc_time_us_to_slowclk
 .LVL40:
-	.loc 1 432 0
+	.loc 1 437 0
 	l32i.n	a2, a3, 40
 .LVL41:
 	l32i.n	a4, a3, 44
@@ -610,7 +610,7 @@ esp_sleep_start:
 .L48:
 .LBE39:
 .LBE38:
-	.loc 1 214 0
+	.loc 1 216 0
 	l32i.n	a10, a3, 24
 	movi.n	a11, 0
 	extui	a10, a10, 0, 11
@@ -618,30 +618,30 @@ esp_sleep_start:
 .LVL44:
 	mov.n	a2, a10
 .LVL45:
-	.loc 1 217 0
+	.loc 1 219 0
 	mov.n	a10, sp
 	call8	rtc_clk_cpu_freq_set_config
 .LVL46:
 .LBB40:
 .LBB41:
-	.loc 1 171 0
+	.loc 1 173 0
 	l32r	a7, .LC11
-	.loc 1 170 0
+	.loc 1 172 0
 	movi.n	a5, 0
-	.loc 1 171 0
+	.loc 1 173 0
 	mov.n	a6, a5
 	mov.n	a14, a7
 	movi.n	a13, -9
-	.loc 1 172 0
+	.loc 1 174 0
 	mov.n	a12, a7
 	mov.n	a11, a7
 	movi.n	a10, 4
-	.loc 1 173 0
+	.loc 1 175 0
 	mov.n	a9, a7
 .LVL47:
 .L60:
 	l32r	a4, .LC12
-	.loc 1 171 0
+	.loc 1 173 0
 	mov.n	a15, a6
 	add.n	a3, a5, a4
 	addi	a4, a5, -2
@@ -656,7 +656,7 @@ esp_sleep_start:
 	and	a15, a15, a13
 	memw
 	s32i.n	a15, a8, 52
-	.loc 1 172 0
+	.loc 1 174 0
 	mov.n	a15, a6
 	moveqz	a15, a11, a4
 	add.n	a15, a15, a3
@@ -668,7 +668,7 @@ esp_sleep_start:
 	or	a15, a15, a10
 	memw
 	s32i.n	a15, a8, 52
-	.loc 1 173 0
+	.loc 1 175 0
 	l32r	a15, .LC11
 	mov.n	a8, a6
 	moveqz	a8, a9, a4
@@ -681,52 +681,53 @@ esp_sleep_start:
 	and	a3, a4, a3
 	memw
 	s32i.n	a3, a8, 52
-	.loc 1 170 0
+	.loc 1 172 0
 	addi.n	a5, a5, 1
 .LVL48:
 	bnei	a5, 3, .L60
 .LBE41:
 .LBE40:
-	.loc 1 223 0
+	.loc 1 225 0
 	retw.n
-.LFE40:
+.LFE44:
 	.size	esp_sleep_start, .-esp_sleep_start
+	.section	.iram1.30,"ax",@progbits
 	.literal_position
 	.literal .LC37, 2700
 	.align	4
 	.type	esp_light_sleep_inner$constprop$0, @function
 esp_light_sleep_inner$constprop$0:
-.LFB61:
-	.loc 1 259 0
+.LFB65:
+	.loc 1 261 0
 .LVL49:
 	entry	sp, 32
 .LCFI3:
 .LVL50:
-	.loc 1 264 0
+	.loc 1 266 0
 	mov.n	a10, a2
 	call8	esp_sleep_start
 .LVL51:
 	mov.n	a4, a10
 .LVL52:
-	.loc 1 268 0
+	.loc 1 270 0
 	bbci	a3, 0, .L98
-	.loc 1 269 0
+	.loc 1 271 0
 	mov.n	a10, a3
 	call8	rtc_vddsdio_set_config
 .LVL53:
 .L98:
-	.loc 1 273 0
-	bbci	a2, 5, .L99
 	.loc 1 275 0
+	bbci	a2, 5, .L99
+	.loc 1 277 0
 	l32r	a10, .LC37
 	call8	ets_delay_us
 .LVL54:
 .L99:
-	.loc 1 278 0
+	.loc 1 280 0
 	mov.n	a2, a4
 .LVL55:
 	retw.n
-.LFE61:
+.LFE65:
 	.size	esp_light_sleep_inner$constprop$0, .-esp_light_sleep_inner$constprop$0
 	.section	.text.esp_get_deep_sleep_wake_stub,"ax",@progbits
 	.literal_position
@@ -735,309 +736,326 @@ esp_light_sleep_inner$constprop$0:
 	.literal .LC40, 1072988344
 	.literal .LC41, -1074593792
 	.literal .LC42, 3342335
-	.literal .LC43, -1074266112
-	.literal .LC44, 131071
-	.literal .LC45, -1074528256
-	.literal .LC46, 8191
+	.literal .LC43, -1073741824
+	.literal .LC44, 458751
+	.literal .LC45, -1074233344
+	.literal .LC46, 163839
+	.literal .LC47, -1074528256
+	.literal .LC48, 8191
 	.align	4
 	.global	esp_get_deep_sleep_wake_stub
 	.type	esp_get_deep_sleep_wake_stub, @function
 esp_get_deep_sleep_wake_stub:
-.LFB33:
-	.loc 1 101 0
+.LFB37:
+	.loc 1 103 0
 	entry	sp, 32
 .LCFI4:
-	.loc 1 102 0
+	.loc 1 104 0
 	l32r	a4, .LC38
 	mov.n	a10, a4
 	call8	_lock_acquire
 .LVL56:
-	.loc 1 103 0
+	.loc 1 105 0
 	l32r	a2, .LC39
 	memw
 	l32i.n	a3, a2, 0
 .LVL57:
-	.loc 1 104 0
+	.loc 1 106 0
 	call8	set_rtc_memory_crc
 .LVL58:
-	.loc 1 105 0
+	.loc 1 107 0
 	memw
 	l32i.n	a5, a2, 0
 .LVL59:
-	.loc 1 107 0
+	.loc 1 109 0
 	mov.n	a10, a4
-	.loc 1 106 0
+	.loc 1 108 0
 	memw
 	s32i.n	a3, a2, 0
-	.loc 1 107 0
+	.loc 1 109 0
 	call8	_lock_release
 .LVL60:
-	.loc 1 110 0
-	movi.n	a2, 0
-	.loc 1 109 0
-	bne	a3, a5, .L107
 	.loc 1 112 0
-	l32r	a3, .LC40
-.LVL61:
+	movi.n	a2, 0
+	.loc 1 111 0
+	bne	a3, a5, .L107
+	.loc 1 114 0
+	l32r	a2, .LC40
 .LBB44:
 .LBB45:
 	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-	.loc 3 152 0
+	.loc 3 161 0
 	l32r	a9, .LC41
 .LBE45:
 .LBE44:
-	.loc 1 112 0
+	.loc 1 114 0
 	memw
-	l32i.n	a8, a3, 0
-.LVL62:
-.LBB47:
+	l32i.n	a8, a2, 0
+.LVL61:
+.LBB48:
 .LBB46:
-	.loc 3 152 0
+	.loc 3 161 0
 	l32r	a3, .LC42
+.LVL62:
 	add.n	a9, a8, a9
-	bgeu	a3, a9, .L111
+.LBE46:
+.LBE48:
+	.loc 1 118 0
+	mov.n	a2, a8
+.LBB49:
+.LBB47:
+	.loc 3 161 0
+	bgeu	a3, a9, .L107
+	.loc 3 157 0
 	l32r	a9, .LC43
 	l32r	a3, .LC44
 	add.n	a9, a8, a9
-	bgeu	a3, a9, .L111
-.LBE46:
-.LBE47:
-	.loc 1 113 0
+	bgeu	a3, a9, .L107
+	.loc 3 159 0
 	l32r	a9, .LC45
 	l32r	a3, .LC46
 	add.n	a9, a8, a9
+	bgeu	a3, a9, .L107
+.LBE47:
+.LBE49:
+	.loc 1 115 0
+	l32r	a9, .LC47
+	l32r	a3, .LC48
+	add.n	a9, a8, a9
+	.loc 1 112 0
+	movi.n	a2, 0
+	.loc 1 115 0
 	bltu	a3, a9, .L107
-.L111:
-	.loc 1 116 0
+	.loc 1 118 0
 	mov.n	a2, a8
 .LVL63:
 .L107:
-	.loc 1 117 0
+	.loc 1 119 0
 	retw.n
-.LFE33:
+.LFE37:
 	.size	esp_get_deep_sleep_wake_stub, .-esp_get_deep_sleep_wake_stub
 	.section	.text.esp_set_deep_sleep_wake_stub,"ax",@progbits
 	.literal_position
-	.literal .LC47, lock_rtc_memory_crc
-	.literal .LC48, 1072988344
+	.literal .LC49, lock_rtc_memory_crc
+	.literal .LC50, 1072988344
 	.align	4
 	.global	esp_set_deep_sleep_wake_stub
 	.type	esp_set_deep_sleep_wake_stub, @function
 esp_set_deep_sleep_wake_stub:
-.LFB34:
-	.loc 1 120 0
+.LFB38:
+	.loc 1 122 0
 .LVL64:
 	entry	sp, 32
 .LCFI5:
-	.loc 1 121 0
-	l32r	a3, .LC47
+	.loc 1 123 0
+	l32r	a3, .LC49
 	mov.n	a10, a3
 	call8	_lock_acquire
 .LVL65:
-	.loc 1 122 0
-	l32r	a8, .LC48
+	.loc 1 124 0
+	l32r	a8, .LC50
 	memw
 	s32i.n	a2, a8, 0
-	.loc 1 123 0
+	.loc 1 125 0
 	call8	set_rtc_memory_crc
 .LVL66:
-	.loc 1 124 0
+	.loc 1 126 0
 	mov.n	a10, a3
 	call8	_lock_release
 .LVL67:
 	retw.n
-.LFE34:
+.LFE38:
 	.size	esp_set_deep_sleep_wake_stub, .-esp_set_deep_sleep_wake_stub
-	.section	.iram1
+	.section	.iram1.29,"ax",@progbits
 	.literal_position
-	.literal .LC49, s_config
-	.literal .LC50, esp_wake_deep_sleep
+	.literal .LC51, s_config
+	.literal .LC52, esp_wake_deep_sleep
 	.align	4
 	.global	esp_deep_sleep_start
 	.type	esp_deep_sleep_start, @function
 esp_deep_sleep_start:
-.LFB41:
-	.loc 1 226 0
+.LFB45:
+	.loc 1 228 0
 	entry	sp, 32
 .LCFI6:
-	.loc 1 228 0
+	.loc 1 230 0
 	call8	rtc_time_get
 .LVL68:
-	l32r	a2, .LC49
+	l32r	a2, .LC51
 	s32i.n	a10, a2, 40
 	s32i.n	a11, a2, 44
-	.loc 1 229 0
+	.loc 1 231 0
 	call8	esp_sync_counters_rtc_and_frc
 .LVL69:
-	.loc 1 231 0
+	.loc 1 233 0
 	call8	esp_get_deep_sleep_wake_stub
 .LVL70:
-	bnez.n	a10, .L117
-	.loc 1 232 0
-	l32r	a10, .LC50
+	bnez.n	a10, .L115
+	.loc 1 234 0
+	l32r	a10, .LC52
 	call8	esp_set_deep_sleep_wake_stub
 .LVL71:
-.L117:
-	.loc 1 236 0
+.L115:
+	.loc 1 238 0
 	call8	get_power_down_flags
 .LVL72:
-	.loc 1 239 0
+	.loc 1 241 0
 	movi	a8, 0x190
 	s32i.n	a8, a2, 32
-	.loc 1 242 0
+	.loc 1 244 0
 	movi	a2, 0x61
 	or	a10, a10, a2
 .LVL73:
 	call8	esp_sleep_start
 .LVL74:
-.L118:
-	j	.L118
-.LFE41:
+.L116:
+	j	.L116
+.LFE45:
 	.size	esp_deep_sleep_start, .-esp_deep_sleep_start
 	.section	.text.esp_light_sleep_start,"ax",@progbits
 	.literal_position
-	.literal .LC51, light_sleep_lock$6728
-	.literal .LC52, s_config
-	.literal .LC53, 3195
-	.literal .LC54, 2995
-	.literal .LC55, s_light_sleep_wakeup
+	.literal .LC53, light_sleep_lock$6750
+	.literal .LC54, s_config
+	.literal .LC55, 3195
+	.literal .LC56, 2995
+	.literal .LC57, s_light_sleep_wakeup
 	.align	4
 	.global	esp_light_sleep_start
 	.type	esp_light_sleep_start, @function
 esp_light_sleep_start:
-.LFB43:
-	.loc 1 281 0
+.LFB47:
+	.loc 1 283 0
 	entry	sp, 48
 .LCFI7:
-	.loc 1 283 0
-	l32r	a5, .LC51
-	.loc 1 298 0
+	.loc 1 285 0
+	l32r	a5, .LC53
+	.loc 1 300 0
 	movi	a2, 0x127
-	.loc 1 283 0
+	.loc 1 285 0
 	mov.n	a10, a5
 	call8	vTaskEnterCritical
 .LVL75:
-	.loc 1 288 0
+	.loc 1 290 0
 	call8	esp_timer_impl_lock
 .LVL76:
-	.loc 1 289 0
+	.loc 1 291 0
 	call8	rtc_time_get
 .LVL77:
-	l32r	a3, .LC52
+	l32r	a3, .LC54
 	s32i.n	a10, a3, 40
 	s32i.n	a11, a3, 44
-	.loc 1 290 0
+	.loc 1 292 0
 	call8	esp_timer_get_time
 .LVL78:
 	mov.n	a7, a10
 	s32i.n	a11, sp, 0
 .LVL79:
-	.loc 1 294 0
+	.loc 1 296 0
 	call8	get_power_down_flags
 .LVL80:
-	.loc 1 298 0
+	.loc 1 300 0
 	s32i.n	a2, a3, 32
-	.loc 1 309 0
+	.loc 1 311 0
 	l32i.n	a2, a3, 20
-	.loc 1 294 0
+	.loc 1 296 0
 	mov.n	a6, a10
 .LVL81:
-	.loc 1 309 0
-	bnez.n	a2, .L129
+	.loc 1 311 0
+	bnez.n	a2, .L127
 	l32i.n	a2, a3, 16
-	l32r	a4, .LC53
-	bgeu	a4, a2, .L120
-.L129:
-	.loc 1 310 0
+	l32r	a4, .LC55
+	bgeu	a4, a2, .L118
+.L127:
+	.loc 1 312 0
 	movi.n	a2, 0x20
 	or	a6, a6, a2
 .LVL82:
-	.loc 1 311 0
-	l32r	a2, .LC54
+	.loc 1 313 0
+	l32r	a2, .LC56
 	s32i.n	a2, a3, 32
-.L120:
-	.loc 1 315 0
+.L118:
+	.loc 1 317 0
 	call8	rtc_vddsdio_get_config
 .LVL83:
 	mov.n	a2, a10
 .LVL84:
-	.loc 1 318 0
+	.loc 1 320 0
 	call8	rtc_wdt_is_on
 .LVL85:
 	mov.n	a4, a10
 .LVL86:
-	.loc 1 319 0
-	bnez.n	a10, .L122
-	.loc 1 320 0
+	.loc 1 321 0
+	bnez.n	a10, .L120
+	.loc 1 322 0
 	call8	rtc_wdt_protect_off
 .LVL87:
-	.loc 1 321 0
+	.loc 1 323 0
 	call8	rtc_wdt_disable
 .LVL88:
-	.loc 1 322 0
+	.loc 1 324 0
 	movi.n	a11, 7
 	mov.n	a10, a4
 	call8	rtc_wdt_set_length_of_reset_signal
 .LVL89:
-	.loc 1 323 0
+	.loc 1 325 0
 	movi.n	a11, 7
 	movi.n	a10, 1
 	call8	rtc_wdt_set_length_of_reset_signal
 .LVL90:
-	.loc 1 324 0
+	.loc 1 326 0
 	movi.n	a11, 4
 	mov.n	a10, a4
 	call8	rtc_wdt_set_stage
 .LVL91:
-	.loc 1 325 0
+	.loc 1 327 0
 	movi	a11, 0x3e8
 	mov.n	a10, a4
 	call8	rtc_wdt_set_time
 .LVL92:
-	.loc 1 326 0
+	.loc 1 328 0
 	call8	rtc_wdt_enable
 .LVL93:
-	.loc 1 327 0
+	.loc 1 329 0
 	call8	rtc_wdt_protect_on
 .LVL94:
-.L122:
-	.loc 1 331 0
+.L120:
+	.loc 1 333 0
 	mov.n	a11, a2
 	mov.n	a10, a6
 	call8	esp_light_sleep_inner$constprop$0
 .LVL95:
-	.loc 1 334 0
-	l32r	a8, .LC55
+	.loc 1 336 0
+	l32r	a8, .LC57
 	movi.n	a9, 1
 	s8i	a9, a8, 0
-	.loc 1 331 0
+	.loc 1 333 0
 	mov.n	a2, a10
 .LVL96:
-	.loc 1 337 0
+	.loc 1 339 0
 	call8	rtc_time_get
 .LVL97:
-	.loc 1 338 0
+	.loc 1 340 0
 	s32i.n	a11, sp, 8
 	s32i.n	a10, sp, 4
 	call8	esp_timer_get_time
 .LVL98:
-	.loc 1 340 0
+	.loc 1 342 0
 	l32i.n	a13, a3, 40
 	l32i.n	a14, sp, 4
-	.loc 1 338 0
-	mov.n	a9, a10
 	.loc 1 340 0
+	mov.n	a9, a10
+	.loc 1 342 0
 	sub	a13, a14, a13
-	.loc 1 338 0
+	.loc 1 340 0
 	mov.n	a8, a11
 .LVL99:
-	.loc 1 340 0
+	.loc 1 342 0
 	movi.n	a10, 1
 	l32i.n	a11, a3, 44
 	l32i.n	a12, sp, 8
-	bltu	a14, a13, .L123
+	bltu	a14, a13, .L121
 	movi.n	a10, 0
-.L123:
+.L121:
 	sub	a11, a12, a11
 	sub	a3, a11, a10
 	s32i.n	a8, sp, 12
@@ -1051,521 +1069,521 @@ esp_light_sleep_start:
 	mov.n	a10, a13
 	call8	rtc_time_slowclk_to_us
 .LVL101:
-	.loc 1 344 0
+	.loc 1 346 0
 	l32i.n	a9, sp, 8
 	l32i.n	a8, sp, 12
 	sub	a3, a9, a7
 	movi.n	a7, 1
 .LVL102:
-	bltu	a9, a3, .L124
+	bltu	a9, a3, .L122
 	movi.n	a7, 0
-.L124:
+.L122:
 	l32i.n	a9, sp, 0
 	sub	a3, a10, a3
 	sub	a6, a8, a9
 .LVL103:
 	sub	a6, a6, a7
 	movi.n	a7, 1
-	bltu	a10, a3, .L125
+	bltu	a10, a3, .L123
 	movi.n	a7, 0
-.L125:
+.L123:
 	sub	a11, a11, a6
 .LVL104:
 	sub	a11, a11, a7
 .LVL105:
-	.loc 1 349 0
-	bgei	a11, 1, .L130
-	bnez.n	a11, .L126
-	beqz.n	a3, .L126
-.L130:
-	.loc 1 350 0
+	.loc 1 351 0
+	bgei	a11, 1, .L128
+	bnez.n	a11, .L124
+	beqz.n	a3, .L124
+.L128:
+	.loc 1 352 0
 	mov.n	a10, a3
 	call8	esp_timer_impl_advance
 .LVL106:
-.L126:
-	.loc 1 352 0
+.L124:
+	.loc 1 354 0
 	call8	esp_set_time_from_rtc
 .LVL107:
-	.loc 1 354 0
+	.loc 1 356 0
 	call8	esp_timer_impl_unlock
 .LVL108:
-	.loc 1 356 0
-	bnez.n	a4, .L128
-	.loc 1 357 0
+	.loc 1 358 0
+	bnez.n	a4, .L126
+	.loc 1 359 0
 	call8	rtc_wdt_disable
 .LVL109:
-.L128:
-	.loc 1 359 0
+.L126:
+	.loc 1 361 0
 	mov.n	a10, a5
 	call8	vTaskExitCritical
 .LVL110:
-	.loc 1 361 0
+	.loc 1 363 0
 	retw.n
-.LFE43:
+.LFE47:
 	.size	esp_light_sleep_start, .-esp_light_sleep_start
 	.section	.rodata.str1.1,"aMS",@progbits,1
-.LC61:
-	.string	"sleep"
 .LC63:
+	.string	"sleep"
+.LC65:
 	.string	"\033[0;31mE (%d) %s: Incorrect wakeup source (%d) to disable.\033[0m\n"
 	.section	.text.esp_sleep_disable_wakeup_source,"ax",@progbits
 	.literal_position
-	.literal .LC56, s_config
-	.literal .LC57, 0, 0
-	.literal .LC58, -1073741825
-	.literal .LC59, -1073737729
-	.literal .LC60, -2049
-	.literal .LC62, .LC61
+	.literal .LC58, s_config
+	.literal .LC59, 0, 0
+	.literal .LC60, -1073741825
+	.literal .LC61, -1073737729
+	.literal .LC62, -2049
 	.literal .LC64, .LC63
+	.literal .LC66, .LC65
 	.align	4
 	.global	esp_sleep_disable_wakeup_source
 	.type	esp_sleep_disable_wakeup_source, @function
 esp_sleep_disable_wakeup_source:
-.LFB44:
-	.loc 1 366 0
+.LFB48:
+	.loc 1 368 0
 .LVL111:
 	entry	sp, 32
 .LCFI8:
-	l32r	a8, .LC56
-	.loc 1 370 0
-	bnei	a2, 1, .L132
-	.loc 1 371 0
+	l32r	a8, .LC58
+	.loc 1 372 0
+	bnei	a2, 1, .L130
+	.loc 1 373 0
 	l32i.n	a9, a8, 24
 	movi	a2, -0x800
 .LVL112:
 	and	a2, a9, a2
 	s32i.n	a2, a8, 24
-	j	.L183
+	j	.L181
 .LVL113:
-.L132:
-	.loc 1 372 0
+.L130:
+	.loc 1 374 0
 	l32i.n	a10, a8, 24
 	extui	a9, a10, 0, 11
-	bbci	a9, 3, .L134
-	bnei	a2, 4, .L134
-	.loc 1 373 0
+	bbci	a9, 3, .L132
+	bnei	a2, 4, .L132
+	.loc 1 375 0
 	movi	a2, 0x7f7
 .LVL114:
 	and	a9, a9, a2
 	movi	a2, -0x800
 	and	a2, a10, a2
-	.loc 1 374 0
-	l32r	a11, .LC57+4
-	l32r	a10, .LC57
-	.loc 1 373 0
+	.loc 1 376 0
+	l32r	a11, .LC59+4
+	l32r	a10, .LC59
+	.loc 1 375 0
 	or	a9, a2, a9
 	s32i.n	a9, a8, 24
-	.loc 1 374 0
+	.loc 1 376 0
 	s32i.n	a10, a8, 16
 	s32i.n	a11, a8, 20
-.L183:
-	.loc 1 399 0
+.L181:
+	.loc 1 401 0
 	movi.n	a2, 0
-	.loc 1 374 0
+	.loc 1 376 0
 	retw.n
 .LVL115:
-.L134:
-	.loc 1 375 0
-	bnei	a2, 2, .L135
-	bbci	a9, 0, .L135
-	.loc 1 376 0
+.L132:
+	.loc 1 377 0
+	bnei	a2, 2, .L133
+	bbci	a9, 0, .L133
+	.loc 1 378 0
 	l32i.n	a10, a8, 28
 	movi.n	a2, -0x20
 .LVL116:
 	and	a2, a10, a2
 	s32i.n	a2, a8, 28
-	.loc 1 377 0
-	l32i.n	a10, a8, 24
-	l32r	a2, .LC58
-	and	a10, a10, a2
-	.loc 1 378 0
-	movi	a2, 0x7fe
-	j	.L186
-.LVL117:
-.L135:
 	.loc 1 379 0
-	bbci	a9, 1, .L136
-	bnei	a2, 3, .L136
-	.loc 1 380 0
 	l32i.n	a10, a8, 24
-	l32r	a2, .LC59
+	l32r	a2, .LC60
+	and	a10, a10, a2
+	.loc 1 380 0
+	movi	a2, 0x7fe
+	j	.L184
+.LVL117:
+.L133:
+	.loc 1 381 0
+	bbci	a9, 1, .L134
+	bnei	a2, 3, .L134
+	.loc 1 382 0
+	l32i.n	a10, a8, 24
+	l32r	a2, .LC61
 .LVL118:
 	and	a2, a10, a2
-	.loc 1 381 0
-	l32r	a10, .LC60
-	and	a10, a2, a10
-	.loc 1 382 0
-	movi	a2, 0x7fd
-.L186:
-	and	a9, a9, a2
-	j	.L184
-.LVL119:
-.L136:
 	.loc 1 383 0
-	bbci	a9, 8, .L137
-	bnei	a2, 5, .L137
+	l32r	a10, .LC62
+	and	a10, a2, a10
 	.loc 1 384 0
+	movi	a2, 0x7fd
+.L184:
+	and	a9, a9, a2
+	j	.L182
+.LVL119:
+.L134:
+	.loc 1 385 0
+	bbci	a9, 8, .L135
+	bnei	a2, 5, .L135
+	.loc 1 386 0
 	movi	a2, 0x6ff
 .LVL120:
-	j	.L185
+	j	.L183
 .LVL121:
-.L137:
-	.loc 1 385 0
-	bbci	a9, 2, .L138
-	bnei	a2, 7, .L138
-	.loc 1 386 0
+.L135:
+	.loc 1 387 0
+	bbci	a9, 2, .L136
+	bnei	a2, 7, .L136
+	.loc 1 388 0
 	movi	a2, 0x7fb
 .LVL122:
-	j	.L185
+	j	.L183
 .LVL123:
-.L138:
-	.loc 1 387 0
+.L136:
+	.loc 1 389 0
 	movi	a10, 0xc0
-	bnone	a9, a10, .L139
-	bnei	a2, 8, .L139
-	.loc 1 388 0
+	bnone	a9, a10, .L137
+	bnei	a2, 8, .L137
+	.loc 1 390 0
 	movi	a2, 0x73f
 .LVL124:
-	j	.L185
+	j	.L183
 .LVL125:
-.L139:
-	.loc 1 391 0
-	bbci	a9, 9, .L140
-	bnei	a2, 6, .L140
-	.loc 1 392 0
+.L137:
+	.loc 1 393 0
+	bbci	a9, 9, .L138
+	bnei	a2, 6, .L138
+	.loc 1 394 0
 	movi	a2, 0x5ff
 .LVL126:
-.L185:
+.L183:
 	l32i.n	a10, a8, 24
 	and	a9, a9, a2
-.L184:
+.L182:
 	movi	a2, -0x800
 	and	a2, a10, a2
 	or	a9, a2, a9
 	s32i.n	a9, a8, 24
-	j	.L183
+	j	.L181
 .LVL127:
-.L140:
-	.loc 1 396 0 discriminator 2
+.L138:
+	.loc 1 398 0 discriminator 2
 	call8	esp_log_timestamp
 .LVL128:
-	l32r	a11, .LC62
-	l32r	a12, .LC64
+	l32r	a11, .LC64
+	l32r	a12, .LC66
 	mov.n	a15, a2
 	mov.n	a13, a10
 	mov.n	a14, a11
 	movi.n	a10, 1
 	call8	esp_log_write
 .LVL129:
-	.loc 1 397 0 discriminator 2
+	.loc 1 399 0 discriminator 2
 	movi	a2, 0x103
 .LVL130:
-	.loc 1 400 0 discriminator 2
+	.loc 1 402 0 discriminator 2
 	retw.n
-.LFE44:
+.LFE48:
 	.size	esp_sleep_disable_wakeup_source, .-esp_sleep_disable_wakeup_source
 	.section	.rodata.str1.1
-.LC67:
+.LC69:
 	.string	"\033[0;31mE (%d) %s: Conflicting wake-up trigger: ext0\033[0m\n"
 	.section	.text.esp_sleep_enable_ulp_wakeup,"ax",@progbits
 	.literal_position
-	.literal .LC65, s_config
-	.literal .LC66, .LC61
-	.literal .LC68, .LC67
+	.literal .LC67, s_config
+	.literal .LC68, .LC63
+	.literal .LC70, .LC69
 	.align	4
 	.global	esp_sleep_enable_ulp_wakeup
 	.type	esp_sleep_enable_ulp_wakeup, @function
 esp_sleep_enable_ulp_wakeup:
-.LFB45:
-	.loc 1 403 0
+.LFB49:
+	.loc 1 405 0
 	entry	sp, 32
 .LCFI9:
-	.loc 1 405 0
-	l32r	a10, .LC65
+	.loc 1 410 0
+	l32r	a10, .LC67
 	l32i.n	a11, a10, 24
 	extui	a8, a11, 0, 11
 	extui	a2, a8, 0, 1
-	beqz.n	a2, .L188
-	.loc 1 406 0 discriminator 2
+	beqz.n	a2, .L186
+	.loc 1 411 0 discriminator 2
 	call8	esp_log_timestamp
 .LVL131:
-	l32r	a11, .LC66
-	l32r	a12, .LC68
+	l32r	a11, .LC68
+	l32r	a12, .LC70
 	mov.n	a13, a10
 	mov.n	a14, a11
 	movi.n	a10, 1
 	call8	esp_log_write
 .LVL132:
-	.loc 1 407 0 discriminator 2
+	.loc 1 412 0 discriminator 2
 	movi	a2, 0x103
 	retw.n
-.L188:
-	.loc 1 409 0
+.L186:
+	.loc 1 414 0
 	movi	a9, 0x200
 	or	a9, a8, a9
 	movi	a8, -0x800
 	and	a8, a11, a8
 	or	a8, a8, a9
 	s32i.n	a8, a10, 24
-	.loc 1 414 0
+	.loc 1 419 0
 	retw.n
-.LFE45:
+.LFE49:
 	.size	esp_sleep_enable_ulp_wakeup, .-esp_sleep_enable_ulp_wakeup
 	.section	.text.esp_sleep_enable_timer_wakeup,"ax",@progbits
 	.literal_position
-	.literal .LC69, s_config
+	.literal .LC71, s_config
 	.align	4
 	.global	esp_sleep_enable_timer_wakeup
 	.type	esp_sleep_enable_timer_wakeup, @function
 esp_sleep_enable_timer_wakeup:
-.LFB46:
-	.loc 1 417 0
+.LFB50:
+	.loc 1 422 0
 .LVL133:
 	entry	sp, 32
 .LCFI10:
-	.loc 1 418 0
-	l32r	a8, .LC69
+	.loc 1 423 0
+	l32r	a8, .LC71
 	movi.n	a9, 8
 	l32i.n	a10, a8, 24
-	.loc 1 419 0
+	.loc 1 424 0
 	s32i.n	a2, a8, 16
-	.loc 1 418 0
+	.loc 1 423 0
 	or	a9, a10, a9
 	s32i.n	a9, a8, 24
-	.loc 1 419 0
+	.loc 1 424 0
 	s32i.n	a3, a8, 20
-	.loc 1 421 0
+	.loc 1 426 0
 	movi.n	a2, 0
 .LVL134:
 	retw.n
-.LFE46:
+.LFE50:
 	.size	esp_sleep_enable_timer_wakeup, .-esp_sleep_enable_timer_wakeup
 	.section	.text.esp_deep_sleep,"ax",@progbits
 	.align	4
 	.global	esp_deep_sleep
 	.type	esp_deep_sleep, @function
 esp_deep_sleep:
-.LFB36:
-	.loc 1 146 0
+.LFB40:
+	.loc 1 148 0
 .LVL135:
 	entry	sp, 32
 .LCFI11:
-	.loc 1 147 0
+	.loc 1 149 0
 	mov.n	a11, a3
 	mov.n	a10, a2
 	call8	esp_sleep_enable_timer_wakeup
 .LVL136:
-	.loc 1 148 0
+	.loc 1 150 0
 	call8	esp_deep_sleep_start
 .LVL137:
-.LFE36:
+.LFE40:
 	.size	esp_deep_sleep, .-esp_deep_sleep
 	.global	system_deep_sleep
 	.set	system_deep_sleep,esp_deep_sleep
 	.section	.text.esp_sleep_enable_touchpad_wakeup,"ax",@progbits
 	.literal_position
-	.literal .LC70, s_config
-	.literal .LC71, .LC61
-	.literal .LC72, .LC67
+	.literal .LC72, s_config
+	.literal .LC73, .LC63
+	.literal .LC74, .LC69
 	.align	4
 	.global	esp_sleep_enable_touchpad_wakeup
 	.type	esp_sleep_enable_touchpad_wakeup, @function
 esp_sleep_enable_touchpad_wakeup:
-.LFB48:
-	.loc 1 436 0
+.LFB52:
+	.loc 1 441 0
 	entry	sp, 32
 .LCFI12:
-	.loc 1 437 0
-	l32r	a10, .LC70
+	.loc 1 445 0
+	l32r	a10, .LC72
 	l32i.n	a11, a10, 24
 	extui	a8, a11, 0, 11
 	extui	a2, a8, 0, 1
-	beqz.n	a2, .L193
-	.loc 1 438 0 discriminator 2
+	beqz.n	a2, .L191
+	.loc 1 446 0 discriminator 2
 	call8	esp_log_timestamp
 .LVL138:
-	l32r	a11, .LC71
-	l32r	a12, .LC72
+	l32r	a11, .LC73
+	l32r	a12, .LC74
 	mov.n	a13, a10
 	mov.n	a14, a11
 	movi.n	a10, 1
 	call8	esp_log_write
 .LVL139:
-	.loc 1 439 0 discriminator 2
+	.loc 1 447 0 discriminator 2
 	movi	a2, 0x103
 	retw.n
-.L193:
-	.loc 1 441 0
+.L191:
+	.loc 1 449 0
 	movi	a9, 0x100
 	or	a9, a8, a9
 	movi	a8, -0x800
 	and	a8, a11, a8
 	or	a8, a8, a9
 	s32i.n	a8, a10, 24
-	.loc 1 443 0
+	.loc 1 451 0
 	retw.n
-.LFE48:
+.LFE52:
 	.size	esp_sleep_enable_touchpad_wakeup, .-esp_sleep_enable_touchpad_wakeup
 	.section	.rodata.str1.1
-.LC75:
+.LC77:
 	.string	"\033[0;31mE (%d) %s: Conflicting wake-up triggers: touch / ULP\033[0m\n"
 	.section	.text.esp_sleep_enable_ext0_wakeup,"ax",@progbits
 	.literal_position
-	.literal .LC73, rtc_gpio_desc
-	.literal .LC74, .LC61
-	.literal .LC76, .LC75
-	.literal .LC77, s_config
-	.literal .LC78, -1073741825
+	.literal .LC75, rtc_gpio_desc
+	.literal .LC76, .LC63
+	.literal .LC78, .LC77
+	.literal .LC79, s_config
+	.literal .LC80, -1073741825
 	.align	4
 	.global	esp_sleep_enable_ext0_wakeup
 	.type	esp_sleep_enable_ext0_wakeup, @function
 esp_sleep_enable_ext0_wakeup:
-.LFB50:
-	.loc 1 457 0
+.LFB54:
+	.loc 1 465 0
 .LVL140:
 	entry	sp, 32
 .LCFI13:
-	.loc 1 459 0
+	.loc 1 467 0
 	movi	a8, 0x102
-	.loc 1 458 0
-	bgeui	a3, 2, .L202
+	.loc 1 466 0
+	bgeui	a3, 2, .L200
 .LVL141:
-.LBB50:
-.LBB51:
+.LBB52:
+.LBB53:
 	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/rtc_io.h"
 	.loc 4 43 0
 	movi.n	a9, 0x27
-	bltu	a9, a2, .L202
+	bltu	a9, a2, .L200
 	addx2	a9, a2, a2
 	addx4	a2, a9, a2
 .LVL142:
-	l32r	a9, .LC73
+	l32r	a9, .LC75
 	addx4	a9, a2, a9
 	l32i.n	a2, a9, 0
-	beqz.n	a2, .L202
-	j	.L197
-.L198:
-.LBE51:
-.LBE50:
-	.loc 1 465 0 discriminator 2
+	beqz.n	a2, .L200
+	j	.L195
+.L196:
+.LBE53:
+.LBE52:
+	.loc 1 473 0 discriminator 2
 	call8	esp_log_timestamp
 .LVL143:
-	l32r	a11, .LC74
-	l32r	a12, .LC76
+	l32r	a11, .LC76
+	l32r	a12, .LC78
 	mov.n	a13, a10
 	mov.n	a14, a11
 	movi.n	a10, 1
 	call8	esp_log_write
 .LVL144:
-	.loc 1 466 0 discriminator 2
+	.loc 1 474 0 discriminator 2
 	movi	a8, 0x103
-	j	.L202
-.L203:
-	.loc 1 468 0
+	j	.L200
+.L201:
+	.loc 1 476 0
 	l8ui	a10, a9, 48
 	movi.n	a9, -0x20
 	extui	a11, a10, 0, 5
 	l32i.n	a10, a12, 28
-	.loc 1 469 0
+	.loc 1 477 0
 	extui	a3, a3, 0, 1
 .LVL145:
-	.loc 1 468 0
+	.loc 1 476 0
 	and	a10, a10, a9
 	or	a10, a10, a11
 	s32i.n	a10, a12, 28
-	.loc 1 469 0
+	.loc 1 477 0
 	slli	a10, a3, 30
-	l32r	a3, .LC78
-	.loc 1 470 0
+	l32r	a3, .LC80
+	.loc 1 478 0
 	movi.n	a9, 1
-	.loc 1 469 0
+	.loc 1 477 0
 	and	a3, a13, a3
-	.loc 1 470 0
+	.loc 1 478 0
 	or	a9, a2, a9
-	.loc 1 469 0
+	.loc 1 477 0
 	or	a3, a3, a10
-	.loc 1 470 0
+	.loc 1 478 0
 	movi	a2, -0x800
 	and	a2, a3, a2
 	or	a2, a2, a9
 	s32i.n	a2, a12, 24
-	.loc 1 471 0
-	j	.L202
+	.loc 1 479 0
+	j	.L200
 .LVL146:
-.L197:
-	.loc 1 464 0
-	l32r	a12, .LC77
+.L195:
+	.loc 1 472 0
+	l32r	a12, .LC79
 	movi	a8, 0x300
 	l32i.n	a13, a12, 24
 	extui	a2, a13, 0, 11
 	and	a8, a2, a8
-	beqz.n	a8, .L203
-	j	.L198
+	beqz.n	a8, .L201
+	j	.L196
 .LVL147:
-.L202:
-	.loc 1 472 0
+.L200:
+	.loc 1 480 0
 	mov.n	a2, a8
 	retw.n
-.LFE50:
+.LFE54:
 	.size	esp_sleep_enable_ext0_wakeup, .-esp_sleep_enable_ext0_wakeup
 	.section	.rodata.str1.1
-.LC85:
+.LC87:
 	.string	"\033[0;31mE (%d) %s: Not an RTC IO: GPIO%d\033[0m\n"
 	.section	.text.esp_sleep_enable_ext1_wakeup,"ax",@progbits
 	.literal_position
-	.literal .LC79, rtc_gpio_desc
-	.literal .LC80, s_config
-	.literal .LC81, 262143
-	.literal .LC82, -1073737729
-	.literal .LC83, -2049
-	.literal .LC84, .LC61
-	.literal .LC86, .LC85
+	.literal .LC81, rtc_gpio_desc
+	.literal .LC82, s_config
+	.literal .LC83, 262143
+	.literal .LC84, -1073737729
+	.literal .LC85, -2049
+	.literal .LC86, .LC63
+	.literal .LC88, .LC87
 	.align	4
 	.global	esp_sleep_enable_ext1_wakeup
 	.type	esp_sleep_enable_ext1_wakeup, @function
 esp_sleep_enable_ext1_wakeup:
-.LFB52:
-	.loc 1 495 0
+.LFB56:
+	.loc 1 503 0
 .LVL148:
 	entry	sp, 32
 .LCFI14:
-	.loc 1 495 0
+	.loc 1 503 0
 	mov.n	a10, a2
-	.loc 1 497 0
+	.loc 1 505 0
 	movi	a2, 0x102
 .LVL149:
-	.loc 1 496 0
-	bgeui	a4, 2, .L215
+	.loc 1 504 0
+	bgeui	a4, 2, .L213
 	movi.n	a5, 0
-	l32r	a11, .LC79
+	l32r	a11, .LC81
 	mov.n	a9, a5
-.LBB55:
-.LBB56:
 .LBB57:
+.LBB58:
+.LBB59:
 	.loc 4 43 0
 	movi.n	a12, 0x27
-.LBE57:
-.LBE56:
-	.loc 1 509 0
-	movi.n	a8, 1
-	j	.L206
-.LVL150:
-.L211:
-	.loc 1 502 0
-	bbci	a10, 0, .L207
-.LVL151:
-.LBB59:
-.LBB58:
-	.loc 4 43 0
-	blt	a12, a5, .L209
-	l32i.n	a2, a11, 0
-	beqz.n	a2, .L209
-	j	.L210
-.LVL152:
-.L207:
-.LBE58:
 .LBE59:
-	.loc 1 501 0 discriminator 2
+.LBE58:
+	.loc 1 517 0
+	movi.n	a8, 1
+	j	.L204
+.LVL150:
+.L209:
+	.loc 1 510 0
+	bbci	a10, 0, .L205
+.LVL151:
+.LBB61:
+.LBB60:
+	.loc 4 43 0
+	blt	a12, a5, .L207
+	l32i.n	a2, a11, 0
+	beqz.n	a2, .L207
+	j	.L208
+.LVL152:
+.L205:
+.LBE60:
+.LBE61:
+	.loc 1 509 0 discriminator 2
 	slli	a2, a3, 31
 	srli	a10, a10, 1
 .LVL153:
@@ -1576,328 +1594,328 @@ esp_sleep_enable_ext1_wakeup:
 .LVL155:
 	addi	a11, a11, 52
 .LVL156:
-.L206:
-	.loc 1 501 0 is_stmt 0 discriminator 1
+.L204:
+	.loc 1 509 0 is_stmt 0 discriminator 1
 	or	a2, a10, a3
-	bnez.n	a2, .L211
-.LBE55:
-	.loc 1 511 0 is_stmt 1
-	l32r	a8, .LC81
-	l32r	a5, .LC80
+	bnez.n	a2, .L209
+.LBE57:
+	.loc 1 519 0 is_stmt 1
+	l32r	a8, .LC83
+	l32r	a5, .LC82
 .LVL157:
 	and	a8, a9, a8
 	slli	a9, a8, 12
 .LVL158:
 	l32i.n	a10, a5, 24
 .LVL159:
-	l32r	a8, .LC82
-	.loc 1 512 0
+	l32r	a8, .LC84
+	.loc 1 520 0
 	extui	a4, a4, 0, 1
 .LVL160:
-	.loc 1 511 0
+	.loc 1 519 0
 	and	a8, a10, a8
 	or	a8, a8, a9
-	.loc 1 512 0
-	l32r	a9, .LC83
+	.loc 1 520 0
+	l32r	a9, .LC85
 	slli	a4, a4, 11
 	and	a8, a8, a9
 	or	a8, a8, a4
-	.loc 1 513 0
+	.loc 1 521 0
 	movi.n	a4, 2
 	or	a8, a8, a4
 	s32i.n	a8, a5, 24
-	.loc 1 514 0
+	.loc 1 522 0
 	retw.n
 .LVL161:
-.L209:
-.LBB60:
-	.loc 1 506 0
+.L207:
+.LBB62:
+	.loc 1 514 0
 	call8	esp_log_timestamp
 .LVL162:
-	l32r	a11, .LC84
-	l32r	a12, .LC86
+	l32r	a11, .LC86
+	l32r	a12, .LC88
 	mov.n	a13, a10
 	mov.n	a15, a5
 	mov.n	a14, a11
 	movi.n	a10, 1
 	call8	esp_log_write
 .LVL163:
-	.loc 1 507 0
+	.loc 1 515 0
 	movi	a2, 0x102
 	retw.n
 .LVL164:
-.L210:
-	.loc 1 509 0
+.L208:
+	.loc 1 517 0
 	l32i.n	a2, a11, 48
 	ssl	a2
 	sll	a2, a8
 	or	a9, a9, a2
 .LVL165:
-	j	.L207
+	j	.L205
 .LVL166:
-.L215:
-.LBE60:
-	.loc 1 515 0
+.L213:
+.LBE62:
+	.loc 1 523 0
 	retw.n
-.LFE52:
+.LFE56:
 	.size	esp_sleep_enable_ext1_wakeup, .-esp_sleep_enable_ext1_wakeup
 	.section	.text.esp_sleep_enable_gpio_wakeup,"ax",@progbits
 	.literal_position
-	.literal .LC87, s_config
-	.literal .LC88, .LC61
-	.literal .LC89, .LC75
+	.literal .LC89, s_config
+	.literal .LC90, .LC63
+	.literal .LC91, .LC77
 	.align	4
 	.global	esp_sleep_enable_gpio_wakeup
 	.type	esp_sleep_enable_gpio_wakeup, @function
 esp_sleep_enable_gpio_wakeup:
-.LFB55:
-	.loc 1 575 0
+.LFB59:
+	.loc 1 583 0
 	entry	sp, 32
 .LCFI15:
-	.loc 1 576 0
-	l32r	a10, .LC87
+	.loc 1 584 0
+	l32r	a10, .LC89
 	movi	a2, 0x300
 	l32i.n	a11, a10, 24
 	extui	a8, a11, 0, 11
 	and	a2, a8, a2
-	beqz.n	a2, .L218
-	.loc 1 577 0 discriminator 2
+	beqz.n	a2, .L216
+	.loc 1 585 0 discriminator 2
 	call8	esp_log_timestamp
 .LVL167:
-	l32r	a11, .LC88
-	l32r	a12, .LC89
+	l32r	a11, .LC90
+	l32r	a12, .LC91
 	mov.n	a13, a10
 	mov.n	a14, a11
 	movi.n	a10, 1
 	call8	esp_log_write
 .LVL168:
-	.loc 1 578 0 discriminator 2
+	.loc 1 586 0 discriminator 2
 	movi	a2, 0x103
 	retw.n
-.L218:
-	.loc 1 580 0
+.L216:
+	.loc 1 588 0
 	movi.n	a9, 4
 	or	a9, a8, a9
 	movi	a8, -0x800
 	and	a8, a11, a8
 	or	a8, a8, a9
 	s32i.n	a8, a10, 24
-	.loc 1 582 0
+	.loc 1 590 0
 	retw.n
-.LFE55:
+.LFE59:
 	.size	esp_sleep_enable_gpio_wakeup, .-esp_sleep_enable_gpio_wakeup
 	.section	.text.esp_sleep_enable_uart_wakeup,"ax",@progbits
 	.literal_position
-	.literal .LC90, s_config
+	.literal .LC92, s_config
 	.align	4
 	.global	esp_sleep_enable_uart_wakeup
 	.type	esp_sleep_enable_uart_wakeup, @function
 esp_sleep_enable_uart_wakeup:
-.LFB56:
-	.loc 1 585 0
+.LFB60:
+	.loc 1 593 0
 .LVL169:
 	entry	sp, 32
 .LCFI16:
-	.loc 1 586 0
-	bnez.n	a2, .L221
-	.loc 1 587 0
-	l32r	a9, .LC90
+	.loc 1 594 0
+	bnez.n	a2, .L219
+	.loc 1 595 0
+	l32r	a9, .LC92
 	movi.n	a8, 0x40
 	l32i.n	a10, a9, 24
 	or	a8, a10, a8
 	s32i.n	a8, a9, 24
-	.loc 1 594 0
+	.loc 1 602 0
 	mov.n	a8, a2
-	j	.L222
-.L221:
-	.loc 1 591 0
+	j	.L220
+.L219:
+	.loc 1 599 0
 	movi	a8, 0x102
-	.loc 1 588 0
-	bnei	a2, 1, .L222
-	.loc 1 589 0
-	l32r	a2, .LC90
+	.loc 1 596 0
+	bnei	a2, 1, .L220
+	.loc 1 597 0
+	l32r	a2, .LC92
 .LVL170:
 	movi	a8, 0x80
 	l32i.n	a9, a2, 24
 	or	a8, a9, a8
 	s32i.n	a8, a2, 24
-	.loc 1 594 0
+	.loc 1 602 0
 	movi.n	a8, 0
-.L222:
-	.loc 1 595 0
+.L220:
+	.loc 1 603 0
 	mov.n	a2, a8
 	retw.n
-.LFE56:
+.LFE60:
 	.size	esp_sleep_enable_uart_wakeup, .-esp_sleep_enable_uart_wakeup
 	.section	.text.esp_sleep_get_wakeup_cause,"ax",@progbits
 	.literal_position
-	.literal .LC91, s_light_sleep_wakeup
-	.literal .LC92, 1072988216
+	.literal .LC93, s_light_sleep_wakeup
+	.literal .LC94, 1072988216
 	.align	4
 	.global	esp_sleep_get_wakeup_cause
 	.type	esp_sleep_get_wakeup_cause, @function
 esp_sleep_get_wakeup_cause:
-.LFB57:
-	.loc 1 598 0
+.LFB61:
+	.loc 1 606 0
 	entry	sp, 32
 .LCFI17:
-	.loc 1 599 0
+	.loc 1 607 0
 	movi.n	a10, 0
 	call8	rtc_get_reset_reason
 .LVL171:
-	beqi	a10, 5, .L225
-	.loc 1 599 0 is_stmt 0 discriminator 1
-	l32r	a2, .LC91
+	beqi	a10, 5, .L223
+	.loc 1 607 0 is_stmt 0 discriminator 1
+	l32r	a2, .LC93
 	l8ui	a8, a2, 0
-	.loc 1 619 0 is_stmt 1 discriminator 1
+	.loc 1 627 0 is_stmt 1 discriminator 1
 	movi.n	a2, 0
-	.loc 1 599 0 discriminator 1
-	beq	a8, a2, .L226
-.L225:
-	.loc 1 603 0
-	l32r	a2, .LC92
+	.loc 1 607 0 discriminator 1
+	beq	a8, a2, .L224
+.L223:
+	.loc 1 611 0
+	l32r	a2, .LC94
 	memw
 	l32i.n	a8, a2, 0
 .LVL172:
 	movi.n	a2, 2
-	.loc 1 604 0
-	bbsi	a8, 0, .L226
-	.loc 1 607 0
-	movi.n	a2, 3
-	.loc 1 606 0
-	bbsi	a8, 1, .L226
-	.loc 1 608 0
-	movi.n	a10, 8
-	.loc 1 609 0
-	movi.n	a2, 4
-	.loc 1 608 0
-	bany	a8, a10, .L226
-	.loc 1 611 0
-	movi.n	a2, 5
-	.loc 1 610 0
-	bbs	a8, a10, .L226
-	.loc 1 613 0
-	movi.n	a2, 6
 	.loc 1 612 0
-	bbsi	a8, 9, .L226
+	bbsi	a8, 0, .L224
+	.loc 1 615 0
+	movi.n	a2, 3
 	.loc 1 614 0
+	bbsi	a8, 1, .L224
+	.loc 1 616 0
+	movi.n	a10, 8
+	.loc 1 617 0
+	movi.n	a2, 4
+	.loc 1 616 0
+	bany	a8, a10, .L224
+	.loc 1 619 0
+	movi.n	a2, 5
+	.loc 1 618 0
+	bbs	a8, a10, .L224
+	.loc 1 621 0
+	movi.n	a2, 6
+	.loc 1 620 0
+	bbsi	a8, 9, .L224
+	.loc 1 622 0
 	movi.n	a9, 4
 	and	a9, a8, a9
-	.loc 1 615 0
+	.loc 1 623 0
 	movi.n	a2, 7
-	.loc 1 614 0
-	bnez.n	a9, .L226
-	.loc 1 616 0
+	.loc 1 622 0
+	bnez.n	a9, .L224
+	.loc 1 624 0
 	movi	a2, 0xc0
 	and	a2, a8, a2
-	.loc 1 617 0
+	.loc 1 625 0
 	moveqz	a10, a9, a2
 	mov.n	a2, a10
 .LVL173:
-.L226:
-	.loc 1 621 0
+.L224:
+	.loc 1 629 0
 	retw.n
-.LFE57:
+.LFE61:
 	.size	esp_sleep_get_wakeup_cause, .-esp_sleep_get_wakeup_cause
 	.section	.rodata.str1.1
-.LC93:
+.LC95:
 	.string	"ret == ESP_OK && \"wakeup reason is RTC_TOUCH_TRIG_EN but SENS_TOUCH_MEAS_EN is zero\""
-.LC96:
+.LC98:
 	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/sleep_modes.c"
 	.section	.text.esp_sleep_get_touchpad_wakeup_status,"ax",@progbits
 	.literal_position
-	.literal .LC94, .LC93
-	.literal .LC95, __func__$6762
-	.literal .LC97, .LC96
+	.literal .LC96, .LC95
+	.literal .LC97, __func__$6784
+	.literal .LC99, .LC98
 	.align	4
 	.global	esp_sleep_get_touchpad_wakeup_status
 	.type	esp_sleep_get_touchpad_wakeup_status, @function
 esp_sleep_get_touchpad_wakeup_status:
-.LFB49:
-	.loc 1 446 0
+.LFB53:
+	.loc 1 454 0
 	entry	sp, 48
 .LCFI18:
-	.loc 1 447 0
+	.loc 1 455 0
 	call8	esp_sleep_get_wakeup_cause
 .LVL174:
-	.loc 1 448 0
+	.loc 1 456 0
 	movi.n	a2, 0xa
-	.loc 1 447 0
-	bnei	a10, 5, .L240
-	.loc 1 451 0
+	.loc 1 455 0
+	bnei	a10, 5, .L238
+	.loc 1 459 0
 	mov.n	a10, sp
 	call8	touch_pad_get_wakeup_status
 .LVL175:
-	.loc 1 453 0
+	.loc 1 461 0
 	l32i.n	a2, sp, 0
-	.loc 1 452 0
-	beqz.n	a10, .L240
-	.loc 1 452 0 is_stmt 0 discriminator 1
-	l32r	a13, .LC94
-	l32r	a12, .LC95
-	l32r	a10, .LC97
+	.loc 1 460 0
+	beqz.n	a10, .L238
+	.loc 1 460 0 is_stmt 0 discriminator 1
+	l32r	a13, .LC96
+	l32r	a12, .LC97
+	l32r	a10, .LC99
 .LVL176:
-	movi	a11, 0x1c4
+	movi	a11, 0x1cc
 	call8	__assert_func
 .LVL177:
-.L240:
-	.loc 1 454 0 is_stmt 1
+.L238:
+	.loc 1 462 0 is_stmt 1
 	retw.n
-.LFE49:
+.LFE53:
 	.size	esp_sleep_get_touchpad_wakeup_status, .-esp_sleep_get_touchpad_wakeup_status
 	.global	__ashldi3
 	.section	.text.esp_sleep_get_ext1_wakeup_status,"ax",@progbits
 	.literal_position
-	.literal .LC99, 1072988368
-	.literal .LC100, 262143
-	.literal .LC101, rtc_gpio_desc
-	.literal .LC102, 1, 0
+	.literal .LC101, 1072988368
+	.literal .LC102, 262143
+	.literal .LC103, rtc_gpio_desc
+	.literal .LC104, 1, 0
 	.align	4
 	.global	esp_sleep_get_ext1_wakeup_status
 	.type	esp_sleep_get_ext1_wakeup_status, @function
 esp_sleep_get_ext1_wakeup_status:
-.LFB54:
-	.loc 1 554 0
+.LFB58:
+	.loc 1 562 0
 	entry	sp, 32
 .LCFI19:
-	.loc 1 556 0
+	.loc 1 564 0
 	movi.n	a2, 0
-	.loc 1 555 0
+	.loc 1 563 0
 	call8	esp_sleep_get_wakeup_cause
 .LVL178:
-	.loc 1 556 0
+	.loc 1 564 0
 	mov.n	a3, a2
-	.loc 1 555 0
-	bnei	a10, 3, .L245
-	.loc 1 558 0
-	l32r	a4, .LC99
-	l32r	a5, .LC101
+	.loc 1 563 0
+	bnei	a10, 3, .L243
+	.loc 1 566 0
+	l32r	a4, .LC101
+	l32r	a5, .LC103
 	memw
 	l32i.n	a6, a4, 0
-	l32r	a4, .LC100
-.LBB65:
-	.loc 1 561 0
+	l32r	a4, .LC102
+.LBB67:
+	.loc 1 569 0
 	movi.n	a7, 0x28
-.LBE65:
-	.loc 1 558 0
+.LBE67:
+	.loc 1 566 0
 	and	a6, a6, a4
 .LVL179:
-.LBB67:
-	.loc 1 561 0
+.LBB69:
+	.loc 1 569 0
 	mov.n	a4, a2
 .LVL180:
-.L247:
-.LBB66:
-	.loc 1 562 0
+.L245:
+.LBB68:
+	.loc 1 570 0
 	l32i.n	a8, a5, 0
-	beqz.n	a8, .L246
+	beqz.n	a8, .L244
 .LVL181:
-	.loc 1 566 0
+	.loc 1 574 0
 	l32i.n	a8, a5, 48
-	bbc	a6, a8, .L246
-	.loc 1 569 0
-	l32r	a10, .LC102
-	l32r	a11, .LC102+4
+	bbc	a6, a8, .L244
+	.loc 1 577 0
+	l32r	a10, .LC104
+	l32r	a11, .LC104+4
 	mov.n	a12, a4
 	call8	__ashldi3
 .LVL182:
@@ -1907,85 +1925,85 @@ esp_sleep_get_ext1_wakeup_status:
 .LVL183:
 	mov.n	a3, a11
 .LVL184:
-.L246:
-.LBE66:
-	.loc 1 561 0 discriminator 2
+.L244:
+.LBE68:
+	.loc 1 569 0 discriminator 2
 	addi.n	a4, a4, 1
 .LVL185:
 	addi	a5, a5, 52
-	bne	a4, a7, .L247
+	bne	a4, a7, .L245
 .LVL186:
-.L245:
-.LBE67:
-	.loc 1 572 0
+.L243:
+.LBE69:
+	.loc 1 580 0
 	retw.n
-.LFE54:
+.LFE58:
 	.size	esp_sleep_get_ext1_wakeup_status, .-esp_sleep_get_ext1_wakeup_status
 	.section	.text.esp_sleep_pd_config,"ax",@progbits
 	.literal_position
-	.literal .LC103, s_config
+	.literal .LC105, s_config
 	.align	4
 	.global	esp_sleep_pd_config
 	.type	esp_sleep_pd_config, @function
 esp_sleep_pd_config:
-.LFB58:
-	.loc 1 625 0
+.LFB62:
+	.loc 1 633 0
 .LVL187:
 	entry	sp, 32
 .LCFI20:
-	.loc 1 626 0
-	bgeui	a2, 4, .L260
-	bgeui	a3, 3, .L260
-	.loc 1 629 0
-	l32r	a8, .LC103
+	.loc 1 634 0
+	bgeui	a2, 4, .L258
+	bgeui	a3, 3, .L258
+	.loc 1 637 0
+	l32r	a8, .LC105
 	addx4	a2, a2, a8
 .LVL188:
 	s32i.n	a3, a2, 0
-	.loc 1 630 0
+	.loc 1 638 0
 	movi.n	a2, 0
 	retw.n
 .LVL189:
-.L260:
-	.loc 1 627 0
+.L258:
+	.loc 1 635 0
 	movi	a2, 0x102
 .LVL190:
-	.loc 1 631 0
+	.loc 1 639 0
 	retw.n
-.LFE58:
+.LFE62:
 	.size	esp_sleep_pd_config, .-esp_sleep_pd_config
 	.section	.text.esp_deep_sleep_disable_rom_logging,"ax",@progbits
 	.literal_position
-	.literal .LC104, 1072988336
-	.literal .LC105, 65537
+	.literal .LC106, 1072988336
+	.literal .LC107, 65537
 	.align	4
 	.global	esp_deep_sleep_disable_rom_logging
 	.type	esp_deep_sleep_disable_rom_logging, @function
 esp_deep_sleep_disable_rom_logging:
-.LFB60:
-	.loc 1 700 0
+.LFB64:
+	.loc 1 715 0
 	entry	sp, 32
 .LCFI21:
-	.loc 1 706 0
-	l32r	a9, .LC104
-	l32r	a8, .LC105
+	.loc 1 721 0
+	l32r	a9, .LC106
+	l32r	a8, .LC107
 	memw
 	l32i.n	a10, a9, 0
 	or	a8, a10, a8
 	memw
 	s32i.n	a8, a9, 0
 	retw.n
-.LFE60:
+.LFE64:
 	.size	esp_deep_sleep_disable_rom_logging, .-esp_deep_sleep_disable_rom_logging
-	.section	.rodata.__func__$6762,"a",@progbits
-	.type	__func__$6762, @object
-	.size	__func__$6762, 37
-__func__$6762:
+	.section	.rodata.__func__$6784,"a",@progbits
+	.type	__func__$6784, @object
+	.size	__func__$6784, 37
+__func__$6784:
 	.string	"esp_sleep_get_touchpad_wakeup_status"
-	.section	.data.light_sleep_lock$6728,"aw",@progbits
+	.section	.data.light_sleep_lock$6750,"aw",@progbits
 	.align	4
-	.type	light_sleep_lock$6728, @object
-	.size	light_sleep_lock$6728, 8
-light_sleep_lock$6728:
+	.type	light_sleep_lock$6750, @object
+	.size	light_sleep_lock$6750, 8
+light_sleep_lock$6750:
 	.word	-1287651329
 	.word	0
 	.section	.bss.lock_rtc_memory_crc,"aw",@nobits
@@ -1994,7 +2012,6 @@ light_sleep_lock$6728:
 	.size	lock_rtc_memory_crc, 4
 lock_rtc_memory_crc:
 	.zero	4
-	.global	s_light_sleep_wakeup
 	.section	.bss.s_light_sleep_wakeup,"aw",@nobits
 	.type	s_light_sleep_wakeup, @object
 	.size	s_light_sleep_wakeup, 1
@@ -2032,10 +2049,10 @@ s_config:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB59
-	.4byte	.LFE59-.LFB59
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
 	.byte	0x4
-	.4byte	.LCFI0-.LFB59
+	.4byte	.LCFI0-.LFB63
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2044,10 +2061,10 @@ s_config:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI1-.LFB35
+	.4byte	.LCFI1-.LFB39
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2056,10 +2073,10 @@ s_config:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.byte	0x4
-	.4byte	.LCFI2-.LFB40
+	.4byte	.LCFI2-.LFB44
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -2068,10 +2085,10 @@ s_config:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB61
-	.4byte	.LFE61-.LFB61
+	.4byte	.LFB65
+	.4byte	.LFE65-.LFB65
 	.byte	0x4
-	.4byte	.LCFI3-.LFB61
+	.4byte	.LCFI3-.LFB65
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2080,10 +2097,10 @@ s_config:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.byte	0x4
-	.4byte	.LCFI4-.LFB33
+	.4byte	.LCFI4-.LFB37
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2092,10 +2109,10 @@ s_config:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.byte	0x4
-	.4byte	.LCFI5-.LFB34
+	.4byte	.LCFI5-.LFB38
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2104,10 +2121,10 @@ s_config:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.byte	0x4
-	.4byte	.LCFI6-.LFB41
+	.4byte	.LCFI6-.LFB45
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2116,10 +2133,10 @@ s_config:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI7-.LFB43
+	.4byte	.LCFI7-.LFB47
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -2128,10 +2145,10 @@ s_config:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI8-.LFB44
+	.4byte	.LCFI8-.LFB48
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2140,10 +2157,10 @@ s_config:
 	.4byte	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.4byte	.Lframe0
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.byte	0x4
-	.4byte	.LCFI9-.LFB45
+	.4byte	.LCFI9-.LFB49
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2152,10 +2169,10 @@ s_config:
 	.4byte	.LEFDE20-.LASFDE20
 .LASFDE20:
 	.4byte	.Lframe0
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.byte	0x4
-	.4byte	.LCFI10-.LFB46
+	.4byte	.LCFI10-.LFB50
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2164,10 +2181,10 @@ s_config:
 	.4byte	.LEFDE22-.LASFDE22
 .LASFDE22:
 	.4byte	.Lframe0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI11-.LFB36
+	.4byte	.LCFI11-.LFB40
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2176,10 +2193,10 @@ s_config:
 	.4byte	.LEFDE24-.LASFDE24
 .LASFDE24:
 	.4byte	.Lframe0
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.byte	0x4
-	.4byte	.LCFI12-.LFB48
+	.4byte	.LCFI12-.LFB52
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2188,10 +2205,10 @@ s_config:
 	.4byte	.LEFDE26-.LASFDE26
 .LASFDE26:
 	.4byte	.Lframe0
-	.4byte	.LFB50
-	.4byte	.LFE50-.LFB50
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.byte	0x4
-	.4byte	.LCFI13-.LFB50
+	.4byte	.LCFI13-.LFB54
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2200,10 +2217,10 @@ s_config:
 	.4byte	.LEFDE28-.LASFDE28
 .LASFDE28:
 	.4byte	.Lframe0
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.byte	0x4
-	.4byte	.LCFI14-.LFB52
+	.4byte	.LCFI14-.LFB56
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2212,10 +2229,10 @@ s_config:
 	.4byte	.LEFDE30-.LASFDE30
 .LASFDE30:
 	.4byte	.Lframe0
-	.4byte	.LFB55
-	.4byte	.LFE55-.LFB55
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
 	.byte	0x4
-	.4byte	.LCFI15-.LFB55
+	.4byte	.LCFI15-.LFB59
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2224,10 +2241,10 @@ s_config:
 	.4byte	.LEFDE32-.LASFDE32
 .LASFDE32:
 	.4byte	.Lframe0
-	.4byte	.LFB56
-	.4byte	.LFE56-.LFB56
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.byte	0x4
-	.4byte	.LCFI16-.LFB56
+	.4byte	.LCFI16-.LFB60
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2236,10 +2253,10 @@ s_config:
 	.4byte	.LEFDE34-.LASFDE34
 .LASFDE34:
 	.4byte	.Lframe0
-	.4byte	.LFB57
-	.4byte	.LFE57-.LFB57
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
 	.byte	0x4
-	.4byte	.LCFI17-.LFB57
+	.4byte	.LCFI17-.LFB61
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2248,10 +2265,10 @@ s_config:
 	.4byte	.LEFDE36-.LASFDE36
 .LASFDE36:
 	.4byte	.Lframe0
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.byte	0x4
-	.4byte	.LCFI18-.LFB49
+	.4byte	.LCFI18-.LFB53
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -2260,10 +2277,10 @@ s_config:
 	.4byte	.LEFDE38-.LASFDE38
 .LASFDE38:
 	.4byte	.Lframe0
-	.4byte	.LFB54
-	.4byte	.LFE54-.LFB54
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
 	.byte	0x4
-	.4byte	.LCFI19-.LFB54
+	.4byte	.LCFI19-.LFB58
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2272,10 +2289,10 @@ s_config:
 	.4byte	.LEFDE40-.LASFDE40
 .LASFDE40:
 	.4byte	.Lframe0
-	.4byte	.LFB58
-	.4byte	.LFE58-.LFB58
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
 	.byte	0x4
-	.4byte	.LCFI20-.LFB58
+	.4byte	.LCFI20-.LFB62
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2284,10 +2301,10 @@ s_config:
 	.4byte	.LEFDE42-.LASFDE42
 .LASFDE42:
 	.4byte	.Lframe0
-	.4byte	.LFB60
-	.4byte	.LFE60-.LFB60
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
 	.byte	0x4
-	.4byte	.LCFI21-.LFB60
+	.4byte	.LCFI21-.LFB64
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2326,7 +2343,7 @@ s_config:
 	.byte	0xc
 	.4byte	.LASF334
 	.4byte	.LASF335
-	.4byte	.Ldebug_ranges0+0x78
+	.4byte	.Ldebug_ranges0+0x80
 	.4byte	0
 	.4byte	.Ldebug_line0
 	.uleb128 0x2
@@ -2744,7 +2761,7 @@ s_config:
 	.uleb128 0xb
 	.4byte	.LASF99
 	.byte	0xc
-	.2byte	0x14d
+	.2byte	0x14f
 	.4byte	0x10c
 	.uleb128 0x9
 	.byte	0x4
@@ -3490,55 +3507,55 @@ s_config:
 	.uleb128 0x15
 	.4byte	.LASF244
 	.byte	0x1
-	.2byte	0x103
+	.2byte	0x105
 	.4byte	0x12c
 	.byte	0x1
 	.4byte	0x92e
 	.uleb128 0x16
 	.4byte	.LASF221
 	.byte	0x1
-	.2byte	0x103
+	.2byte	0x105
 	.4byte	0xcb
 	.uleb128 0x16
 	.4byte	.LASF222
 	.byte	0x1
-	.2byte	0x104
+	.2byte	0x106
 	.4byte	0xcb
 	.uleb128 0x16
 	.4byte	.LASF223
 	.byte	0x1
-	.2byte	0x105
+	.2byte	0x107
 	.4byte	0x696
 	.uleb128 0x17
 	.string	"err"
 	.byte	0x1
-	.2byte	0x108
+	.2byte	0x10a
 	.4byte	0x12c
 	.byte	0
 	.uleb128 0x18
 	.4byte	.LASF336
 	.byte	0x1
-	.2byte	0x279
+	.2byte	0x281
 	.4byte	0xcb
-	.4byte	.LFB59
-	.4byte	.LFE59-.LFB59
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x971
 	.uleb128 0x19
-	.4byte	.LASF291
+	.4byte	.LASF292
 	.byte	0x1
-	.2byte	0x283
+	.2byte	0x28b
 	.4byte	0x2c
 	.uleb128 0x1a
 	.4byte	.LASF224
 	.byte	0x1
-	.2byte	0x2a4
+	.2byte	0x2ac
 	.4byte	0x971
 	.uleb128 0x1b
 	.4byte	.LASF221
 	.byte	0x1
-	.2byte	0x2ab
+	.2byte	0x2b3
 	.4byte	0xcb
 	.4byte	.LLST0
 	.byte	0
@@ -3552,9 +3569,9 @@ s_config:
 	.uleb128 0x1c
 	.4byte	.LASF249
 	.byte	0x1
-	.byte	0x7f
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.byte	0x81
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x9ba
@@ -3578,14 +3595,14 @@ s_config:
 	.uleb128 0x20
 	.4byte	.LASF227
 	.byte	0x1
-	.byte	0x97
+	.byte	0x99
 	.byte	0x1
 	.4byte	0x9d2
 	.uleb128 0x21
 	.uleb128 0x22
 	.string	"i"
 	.byte	0x1
-	.byte	0x99
+	.byte	0x9b
 	.4byte	0x2c
 	.byte	0
 	.byte	0
@@ -3609,39 +3626,39 @@ s_config:
 	.uleb128 0x20
 	.4byte	.LASF228
 	.byte	0x1
-	.byte	0x9e
+	.byte	0xa0
 	.byte	0x1
 	.4byte	0xa10
 	.uleb128 0x21
 	.uleb128 0x22
 	.string	"i"
 	.byte	0x1
-	.byte	0xa0
+	.byte	0xa2
 	.4byte	0x2c
 	.byte	0
 	.byte	0
 	.uleb128 0x24
 	.4byte	.LASF229
 	.byte	0x1
-	.2byte	0x1da
+	.2byte	0x1e2
 	.byte	0x1
 	.4byte	0xa46
 	.uleb128 0x1a
 	.4byte	.LASF230
 	.byte	0x1
-	.2byte	0x1dc
+	.2byte	0x1e4
 	.4byte	0x2c
 	.uleb128 0x21
 	.uleb128 0x1a
 	.4byte	.LASF231
 	.byte	0x1
-	.2byte	0x1e3
+	.2byte	0x1eb
 	.4byte	0x33
 	.uleb128 0x21
 	.uleb128 0x1a
 	.4byte	.LASF232
 	.byte	0x1
-	.2byte	0x1e4
+	.2byte	0x1ec
 	.4byte	0xa46
 	.byte	0
 	.byte	0
@@ -3654,30 +3671,30 @@ s_config:
 	.uleb128 0x24
 	.4byte	.LASF233
 	.byte	0x1
-	.2byte	0x205
+	.2byte	0x20d
 	.byte	0x1
 	.4byte	0xa93
 	.uleb128 0x1a
 	.4byte	.LASF234
 	.byte	0x1
-	.2byte	0x208
+	.2byte	0x210
 	.4byte	0xcb
 	.uleb128 0x21
 	.uleb128 0x1a
 	.4byte	.LASF235
 	.byte	0x1
-	.2byte	0x209
+	.2byte	0x211
 	.4byte	0x2c
 	.uleb128 0x21
 	.uleb128 0x1a
 	.4byte	.LASF236
 	.byte	0x1
-	.2byte	0x20a
+	.2byte	0x212
 	.4byte	0x2c
 	.uleb128 0x1a
 	.4byte	.LASF232
 	.byte	0x1
-	.2byte	0x20e
+	.2byte	0x216
 	.4byte	0xa46
 	.byte	0
 	.byte	0
@@ -3685,59 +3702,59 @@ s_config:
 	.uleb128 0x24
 	.4byte	.LASF237
 	.byte	0x1
-	.2byte	0x1a7
+	.2byte	0x1ac
 	.byte	0x1
 	.4byte	0xac5
 	.uleb128 0x1a
 	.4byte	.LASF238
 	.byte	0x1
-	.2byte	0x1a9
+	.2byte	0x1ae
 	.4byte	0xcb
 	.uleb128 0x1a
 	.4byte	.LASF212
 	.byte	0x1
-	.2byte	0x1aa
+	.2byte	0x1af
 	.4byte	0xd6
 	.uleb128 0x1a
 	.4byte	.LASF239
 	.byte	0x1
-	.2byte	0x1ae
+	.2byte	0x1b3
 	.4byte	0xd6
 	.byte	0
 	.uleb128 0x20
 	.4byte	.LASF240
 	.byte	0x1
-	.byte	0xa8
+	.byte	0xaa
 	.byte	0x1
 	.4byte	0xadd
 	.uleb128 0x21
 	.uleb128 0x22
 	.string	"i"
 	.byte	0x1
-	.byte	0xaa
+	.byte	0xac
 	.4byte	0x2c
 	.byte	0
 	.byte	0
 	.uleb128 0x25
 	.4byte	.LASF338
 	.byte	0x1
-	.byte	0xb1
+	.byte	0xb3
 	.4byte	0xcb
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xd11
 	.uleb128 0x26
 	.4byte	.LASF221
 	.byte	0x1
-	.byte	0xb1
+	.byte	0xb3
 	.4byte	0xcb
 	.4byte	.LLST1
 	.uleb128 0x27
 	.4byte	.LASF241
 	.byte	0x1
-	.byte	0xbd
+	.byte	0xbf
 	.4byte	0x4fb
 	.uleb128 0x2
 	.byte	0x91
@@ -3745,12 +3762,12 @@ s_config:
 	.uleb128 0x28
 	.4byte	.LASF242
 	.byte	0x1
-	.byte	0xce
+	.byte	0xd0
 	.4byte	0x620
 	.uleb128 0x27
 	.4byte	.LASF243
 	.byte	0x1
-	.byte	0xd6
+	.byte	0xd8
 	.4byte	0xcb
 	.uleb128 0x1
 	.byte	0x52
@@ -3759,7 +3776,7 @@ s_config:
 	.4byte	.LBB23
 	.4byte	.LBE23-.LBB23
 	.byte	0x1
-	.byte	0xb7
+	.byte	0xb9
 	.4byte	0xb7e
 	.uleb128 0x2a
 	.4byte	.LBB24
@@ -3772,7 +3789,7 @@ s_config:
 	.4byte	.LBB25
 	.4byte	.LBE25-.LBB25
 	.byte	0x1
-	.byte	0x9a
+	.byte	0x9c
 	.uleb128 0x2d
 	.4byte	0x9df
 	.4byte	.LLST3
@@ -3791,7 +3808,7 @@ s_config:
 	.4byte	.LBB27
 	.4byte	.LBE27-.LBB27
 	.byte	0x1
-	.byte	0xb9
+	.byte	0xbb
 	.4byte	0xba5
 	.uleb128 0x2a
 	.4byte	.LBB28
@@ -3806,7 +3823,7 @@ s_config:
 	.4byte	.LBB29
 	.4byte	.LBE29-.LBB29
 	.byte	0x1
-	.byte	0xc3
+	.byte	0xc5
 	.4byte	0xbee
 	.uleb128 0x2a
 	.4byte	.LBB30
@@ -3834,7 +3851,7 @@ s_config:
 	.4byte	.LBB33
 	.4byte	.LBE33-.LBB33
 	.byte	0x1
-	.byte	0xc6
+	.byte	0xc8
 	.4byte	0xc3c
 	.uleb128 0x2a
 	.4byte	.LBB34
@@ -3864,7 +3881,7 @@ s_config:
 	.4byte	.LBB38
 	.4byte	.LBE38-.LBB38
 	.byte	0x1
-	.byte	0xd4
+	.byte	0xd6
 	.4byte	0xc8c
 	.uleb128 0x2a
 	.4byte	.LBB39
@@ -3893,7 +3910,7 @@ s_config:
 	.4byte	.LBB40
 	.4byte	.LBE40-.LBB40
 	.byte	0x1
-	.byte	0xdc
+	.byte	0xde
 	.4byte	0xcb3
 	.uleb128 0x2a
 	.4byte	.LBB41
@@ -3957,8 +3974,8 @@ s_config:
 	.byte	0
 	.uleb128 0x31
 	.4byte	0x8ec
-	.4byte	.LFB61
-	.4byte	.LFE61-.LFB61
+	.4byte	.LFB65
+	.4byte	.LFE65-.LFB65
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xd7c
@@ -4012,48 +4029,48 @@ s_config:
 	.uleb128 0x35
 	.4byte	.LASF245
 	.byte	0x3
-	.byte	0x93
+	.byte	0x98
 	.4byte	0x137
 	.byte	0x3
 	.4byte	0xda0
 	.uleb128 0x36
 	.string	"p"
 	.byte	0x3
-	.byte	0x93
+	.byte	0x98
 	.4byte	0x125
 	.uleb128 0x22
 	.string	"ip"
 	.byte	0x3
-	.byte	0x95
+	.byte	0x9a
 	.4byte	0xec
 	.byte	0
 	.uleb128 0x37
 	.4byte	.LASF263
 	.byte	0x1
-	.byte	0x64
+	.byte	0x66
 	.4byte	0x35f
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xe3e
 	.uleb128 0x38
 	.4byte	.LASF246
 	.byte	0x1
-	.byte	0x67
+	.byte	0x69
 	.4byte	0xcb
 	.4byte	.LLST15
 	.uleb128 0x27
 	.4byte	.LASF247
 	.byte	0x1
-	.byte	0x69
+	.byte	0x6b
 	.4byte	0xcb
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x38
 	.4byte	.LASF248
 	.byte	0x1
-	.byte	0x70
+	.byte	0x72
 	.4byte	0x35f
 	.4byte	.LLST16
 	.uleb128 0x39
@@ -4061,7 +4078,7 @@ s_config:
 	.4byte	.LBB44
 	.4byte	.Ldebug_ranges0+0x18
 	.byte	0x1
-	.byte	0x71
+	.byte	0x73
 	.4byte	0xe10
 	.uleb128 0x2d
 	.4byte	0xd8c
@@ -4101,16 +4118,16 @@ s_config:
 	.uleb128 0x1c
 	.4byte	.LASF250
 	.byte	0x1
-	.byte	0x77
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.byte	0x79
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xe8e
 	.uleb128 0x3a
 	.4byte	.LASF251
 	.byte	0x1
-	.byte	0x77
+	.byte	0x79
 	.4byte	0x35f
 	.uleb128 0x1
 	.byte	0x52
@@ -4142,16 +4159,16 @@ s_config:
 	.uleb128 0x3b
 	.4byte	.LASF252
 	.byte	0x1
-	.byte	0xe1
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.byte	0xe3
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xef7
 	.uleb128 0x38
 	.4byte	.LASF221
 	.byte	0x1
-	.byte	0xec
+	.byte	0xee
 	.4byte	0xcb
 	.4byte	.LLST19
 	.uleb128 0x1d
@@ -4184,92 +4201,92 @@ s_config:
 	.uleb128 0x3c
 	.4byte	.LASF253
 	.byte	0x1
-	.2byte	0x118
+	.2byte	0x11a
 	.4byte	0x12c
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x111d
 	.uleb128 0x3d
 	.4byte	.LASF254
 	.byte	0x1
-	.2byte	0x11a
+	.2byte	0x11c
 	.4byte	0x818
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	light_sleep_lock$6728
+	.4byte	light_sleep_lock$6750
 	.uleb128 0x1b
 	.4byte	.LASF255
 	.byte	0x1
-	.2byte	0x122
+	.2byte	0x124
 	.4byte	0xe1
 	.4byte	.LLST20
 	.uleb128 0x1b
 	.4byte	.LASF221
 	.byte	0x1
-	.2byte	0x126
+	.2byte	0x128
 	.4byte	0xcb
 	.4byte	.LLST21
 	.uleb128 0x3e
 	.4byte	.LASF222
 	.byte	0x1
-	.2byte	0x12e
+	.2byte	0x130
 	.4byte	0x111d
 	.2byte	0xa8c
 	.uleb128 0x3e
 	.4byte	.LASF256
 	.byte	0x1
-	.2byte	0x132
+	.2byte	0x134
 	.4byte	0x111d
 	.2byte	0xc7b
 	.uleb128 0x1b
 	.4byte	.LASF223
 	.byte	0x1
-	.2byte	0x13b
+	.2byte	0x13d
 	.4byte	0x696
 	.4byte	.LLST22
 	.uleb128 0x3d
 	.4byte	.LASF257
 	.byte	0x1
-	.2byte	0x13e
+	.2byte	0x140
 	.4byte	0x137
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x3f
 	.string	"err"
 	.byte	0x1
-	.2byte	0x14b
+	.2byte	0x14d
 	.4byte	0x12c
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x1b
 	.4byte	.LASF258
 	.byte	0x1
-	.2byte	0x151
+	.2byte	0x153
 	.4byte	0xe1
 	.4byte	.LLST23
 	.uleb128 0x1b
 	.4byte	.LASF259
 	.byte	0x1
-	.2byte	0x152
+	.2byte	0x154
 	.4byte	0xe1
 	.4byte	.LLST24
 	.uleb128 0x1b
 	.4byte	.LASF260
 	.byte	0x1
-	.2byte	0x154
+	.2byte	0x156
 	.4byte	0xe1
 	.4byte	.LLST25
 	.uleb128 0x1a
 	.4byte	.LASF261
 	.byte	0x1
-	.2byte	0x156
+	.2byte	0x158
 	.4byte	0xe1
 	.uleb128 0x1b
 	.4byte	.LASF262
 	.byte	0x1
-	.2byte	0x158
+	.2byte	0x15a
 	.4byte	0xd6
 	.4byte	.LLST26
 	.uleb128 0x30
@@ -4434,17 +4451,17 @@ s_config:
 	.uleb128 0x40
 	.4byte	.LASF264
 	.byte	0x1
-	.2byte	0x16d
+	.2byte	0x16f
 	.4byte	0x12c
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1186
 	.uleb128 0x41
 	.4byte	.LASF145
 	.byte	0x1
-	.2byte	0x16d
+	.2byte	0x16f
 	.4byte	0x349
 	.4byte	.LLST27
 	.uleb128 0x1d
@@ -4463,19 +4480,19 @@ s_config:
 	.byte	0x5b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC61
+	.4byte	.LC63
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC63
+	.4byte	.LC65
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5e
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC61
+	.4byte	.LC63
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5f
@@ -4487,10 +4504,10 @@ s_config:
 	.uleb128 0x3c
 	.4byte	.LASF265
 	.byte	0x1
-	.2byte	0x192
+	.2byte	0x194
 	.4byte	0x12c
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x11d4
@@ -4510,51 +4527,51 @@ s_config:
 	.byte	0x5b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC61
+	.4byte	.LC63
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC67
+	.4byte	.LC69
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5e
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC61
+	.4byte	.LC63
 	.byte	0
 	.byte	0
 	.uleb128 0x40
 	.4byte	.LASF266
 	.byte	0x1
-	.2byte	0x1a0
+	.2byte	0x1a5
 	.4byte	0x12c
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x11ff
 	.uleb128 0x41
 	.4byte	.LASF267
 	.byte	0x1
-	.2byte	0x1a0
+	.2byte	0x1a5
 	.4byte	0xe1
 	.4byte	.LLST28
 	.byte	0
 	.uleb128 0x42
 	.4byte	.LASF268
 	.byte	0x1
-	.byte	0x91
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.byte	0x93
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1239
 	.uleb128 0x3a
 	.4byte	.LASF267
 	.byte	0x1
-	.byte	0x91
+	.byte	0x93
 	.4byte	0xe1
 	.uleb128 0x6
 	.byte	0x52
@@ -4573,10 +4590,10 @@ s_config:
 	.uleb128 0x3c
 	.4byte	.LASF269
 	.byte	0x1
-	.2byte	0x1b3
+	.2byte	0x1b8
 	.4byte	0x12c
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1287
@@ -4596,19 +4613,19 @@ s_config:
 	.byte	0x5b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC61
+	.4byte	.LC63
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC67
+	.4byte	.LC69
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5e
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC61
+	.4byte	.LC63
 	.byte	0
 	.byte	0
 	.uleb128 0x35
@@ -4627,31 +4644,31 @@ s_config:
 	.uleb128 0x40
 	.4byte	.LASF271
 	.byte	0x1
-	.2byte	0x1c8
+	.2byte	0x1d0
 	.4byte	0x12c
-	.4byte	.LFB50
-	.4byte	.LFE50-.LFB50
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x132f
 	.uleb128 0x41
 	.4byte	.LASF231
 	.byte	0x1
-	.2byte	0x1c8
+	.2byte	0x1d0
 	.4byte	0x21d
 	.4byte	.LLST29
 	.uleb128 0x41
 	.4byte	.LASF272
 	.byte	0x1
-	.2byte	0x1c8
+	.2byte	0x1d0
 	.4byte	0x2c
 	.4byte	.LLST30
 	.uleb128 0x44
 	.4byte	0x1287
-	.4byte	.LBB50
-	.4byte	.LBE50-.LBB50
+	.4byte	.LBB52
+	.4byte	.LBE52-.LBB52
 	.byte	0x1
-	.2byte	0x1cd
+	.2byte	0x1d5
 	.4byte	0x12fb
 	.uleb128 0x2d
 	.4byte	0x1297
@@ -4673,63 +4690,63 @@ s_config:
 	.byte	0x5b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC61
+	.4byte	.LC63
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC75
+	.4byte	.LC77
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5e
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC61
+	.4byte	.LC63
 	.byte	0
 	.byte	0
 	.uleb128 0x40
 	.4byte	.LASF273
 	.byte	0x1
-	.2byte	0x1ee
+	.2byte	0x1f6
 	.4byte	0x12c
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x13e7
 	.uleb128 0x41
 	.4byte	.LASF274
 	.byte	0x1
-	.2byte	0x1ee
+	.2byte	0x1f6
 	.4byte	0xe1
 	.4byte	.LLST32
 	.uleb128 0x41
 	.4byte	.LASF275
 	.byte	0x1
-	.2byte	0x1ee
+	.2byte	0x1f6
 	.4byte	0x29b
 	.4byte	.LLST33
 	.uleb128 0x1b
 	.4byte	.LASF234
 	.byte	0x1
-	.2byte	0x1f4
+	.2byte	0x1fc
 	.4byte	0xcb
 	.4byte	.LLST34
 	.uleb128 0x2f
-	.4byte	.Ldebug_ranges0+0x30
+	.4byte	.Ldebug_ranges0+0x38
 	.uleb128 0x1b
 	.4byte	.LASF235
 	.byte	0x1
-	.2byte	0x1f5
+	.2byte	0x1fd
 	.4byte	0x2c
 	.4byte	.LLST35
 	.uleb128 0x45
 	.4byte	0x1287
-	.4byte	.LBB56
-	.4byte	.Ldebug_ranges0+0x48
+	.4byte	.LBB58
+	.4byte	.Ldebug_ranges0+0x50
 	.byte	0x1
-	.2byte	0x1f9
+	.2byte	0x201
 	.4byte	0x13ac
 	.uleb128 0x2d
 	.4byte	0x1297
@@ -4751,19 +4768,19 @@ s_config:
 	.byte	0x5b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC61
+	.4byte	.LC63
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC85
+	.4byte	.LC87
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5e
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC61
+	.4byte	.LC63
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5f
@@ -4776,10 +4793,10 @@ s_config:
 	.uleb128 0x3c
 	.4byte	.LASF276
 	.byte	0x1
-	.2byte	0x23e
+	.2byte	0x246
 	.4byte	0x12c
-	.4byte	.LFB55
-	.4byte	.LFE55-.LFB55
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1435
@@ -4799,52 +4816,52 @@ s_config:
 	.byte	0x5b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC61
+	.4byte	.LC63
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC75
+	.4byte	.LC77
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5e
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC61
+	.4byte	.LC63
 	.byte	0
 	.byte	0
 	.uleb128 0x40
 	.4byte	.LASF277
 	.byte	0x1
-	.2byte	0x248
+	.2byte	0x250
 	.4byte	0x12c
-	.4byte	.LFB56
-	.4byte	.LFE56-.LFB56
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1460
 	.uleb128 0x41
 	.4byte	.LASF278
 	.byte	0x1
-	.2byte	0x248
+	.2byte	0x250
 	.4byte	0x2c
 	.4byte	.LLST37
 	.byte	0
 	.uleb128 0x3c
 	.4byte	.LASF279
 	.byte	0x1
-	.2byte	0x255
+	.2byte	0x25d
 	.4byte	0x354
-	.4byte	.LFB57
-	.4byte	.LFE57-.LFB57
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x149a
 	.uleb128 0x1b
 	.4byte	.LASF280
 	.byte	0x1
-	.2byte	0x25b
+	.2byte	0x263
 	.4byte	0xcb
 	.4byte	.LLST38
 	.uleb128 0x1e
@@ -4860,17 +4877,17 @@ s_config:
 	.uleb128 0x3c
 	.4byte	.LASF281
 	.byte	0x1
-	.2byte	0x1bd
+	.2byte	0x1c5
 	.4byte	0x277
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x152c
 	.uleb128 0x3d
 	.4byte	.LASF282
 	.byte	0x1
-	.2byte	0x1c2
+	.2byte	0x1ca
 	.4byte	0x277
 	.uleb128 0x2
 	.byte	0x91
@@ -4878,7 +4895,7 @@ s_config:
 	.uleb128 0x46
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x1c3
+	.2byte	0x1cb
 	.4byte	0x12c
 	.4byte	.LLST39
 	.uleb128 0x47
@@ -4886,7 +4903,7 @@ s_config:
 	.4byte	0x153c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6762
+	.4byte	__func__$6784
 	.uleb128 0x1d
 	.4byte	.LVL174
 	.4byte	0x1460
@@ -4909,25 +4926,25 @@ s_config:
 	.byte	0x5a
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC96
+	.4byte	.LC98
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5b
 	.uleb128 0x3
 	.byte	0xa
-	.2byte	0x1c4
+	.2byte	0x1cc
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6762
+	.4byte	__func__$6784
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5d
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC93
+	.4byte	.LC95
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -4942,41 +4959,41 @@ s_config:
 	.uleb128 0x48
 	.4byte	.LASF284
 	.byte	0x1
-	.2byte	0x229
+	.2byte	0x231
 	.4byte	0xe1
-	.4byte	.LFB54
-	.4byte	.LFE54-.LFB54
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x15b9
 	.uleb128 0x1b
 	.4byte	.LASF226
 	.byte	0x1
-	.2byte	0x22e
+	.2byte	0x236
 	.4byte	0xcb
 	.4byte	.LLST40
 	.uleb128 0x1b
 	.4byte	.LASF285
 	.byte	0x1
-	.2byte	0x230
+	.2byte	0x238
 	.4byte	0xe1
 	.4byte	.LLST41
 	.uleb128 0x49
-	.4byte	.Ldebug_ranges0+0x60
+	.4byte	.Ldebug_ranges0+0x68
 	.4byte	0x15af
 	.uleb128 0x1b
 	.4byte	.LASF235
 	.byte	0x1
-	.2byte	0x231
+	.2byte	0x239
 	.4byte	0x2c
 	.4byte	.LLST42
 	.uleb128 0x2a
-	.4byte	.LBB66
-	.4byte	.LBE66-.LBB66
+	.4byte	.LBB68
+	.4byte	.LBE68-.LBB68
 	.uleb128 0x1b
 	.4byte	.LASF236
 	.byte	0x1
-	.2byte	0x235
+	.2byte	0x23d
 	.4byte	0x2c
 	.4byte	.LLST43
 	.byte	0
@@ -4988,23 +5005,23 @@ s_config:
 	.uleb128 0x40
 	.4byte	.LASF286
 	.byte	0x1
-	.2byte	0x26f
+	.2byte	0x277
 	.4byte	0x12c
-	.4byte	.LFB58
-	.4byte	.LFE58-.LFB58
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x15f2
 	.uleb128 0x41
 	.4byte	.LASF287
 	.byte	0x1
-	.2byte	0x26f
+	.2byte	0x277
 	.4byte	0x2d1
 	.4byte	.LLST44
 	.uleb128 0x4a
 	.4byte	.LASF288
 	.byte	0x1
-	.2byte	0x270
+	.2byte	0x278
 	.4byte	0x2fb
 	.uleb128 0x1
 	.byte	0x53
@@ -5012,9 +5029,9 @@ s_config:
 	.uleb128 0x4b
 	.4byte	.LASF339
 	.byte	0x1
-	.2byte	0x2bb
-	.4byte	.LFB60
-	.4byte	.LFE60-.LFB60
+	.2byte	0x2ca
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x27
@@ -5028,7 +5045,15 @@ s_config:
 	.uleb128 0x27
 	.4byte	.LASF290
 	.byte	0x1
-	.byte	0x58
+	.byte	0x56
+	.4byte	0x137
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	s_light_sleep_wakeup
+	.uleb128 0x27
+	.4byte	.LASF291
+	.byte	0x1
+	.byte	0x5a
 	.4byte	0x4c
 	.uleb128 0x5
 	.byte	0x3
@@ -5036,230 +5061,222 @@ s_config:
 	.uleb128 0x4c
 	.string	"TAG"
 	.byte	0x1
-	.byte	0x5a
+	.byte	0x5c
 	.4byte	0x823
 	.uleb128 0x6
 	.byte	0x3
-	.4byte	.LC61
+	.4byte	.LC63
 	.byte	0x9f
 	.uleb128 0x13
 	.4byte	0x7ec
-	.4byte	0x1648
+	.4byte	0x1659
 	.uleb128 0x14
 	.4byte	0xfe
 	.byte	0x27
 	.byte	0
 	.uleb128 0x4d
-	.4byte	.LASF292
+	.4byte	.LASF293
 	.byte	0x11
 	.byte	0x38
-	.4byte	0x1653
+	.4byte	0x1664
 	.uleb128 0x7
-	.4byte	0x1638
-	.uleb128 0x4e
-	.4byte	.LASF293
-	.byte	0x1
-	.byte	0x54
-	.4byte	0x137
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	s_light_sleep_wakeup
+	.4byte	0x1649
 	.uleb128 0x19
-	.4byte	.LASF291
+	.4byte	.LASF292
 	.byte	0x1
-	.2byte	0x283
+	.2byte	0x28b
 	.4byte	0x2c
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	.LASF294
 	.4byte	.LASF294
 	.byte	0x14
 	.2byte	0x1b5
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	.LASF295
 	.4byte	.LASF295
 	.byte	0x14
 	.2byte	0x195
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	.LASF296
 	.4byte	.LASF296
 	.byte	0x14
 	.2byte	0x17f
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF297
 	.4byte	.LASF297
 	.byte	0x15
-	.byte	0x1f
-	.uleb128 0x4f
+	.byte	0x20
+	.uleb128 0x4e
 	.4byte	.LASF298
 	.4byte	.LASF298
 	.byte	0xf
 	.2byte	0x1f6
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	.LASF299
 	.4byte	.LASF299
 	.byte	0xf
 	.2byte	0x267
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	.LASF300
 	.4byte	.LASF300
 	.byte	0xf
 	.2byte	0x1b5
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	.LASF301
 	.4byte	.LASF301
 	.byte	0xf
 	.2byte	0x1be
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	.LASF302
 	.4byte	.LASF302
 	.byte	0xf
 	.2byte	0x25f
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	.LASF303
 	.4byte	.LASF303
 	.byte	0xf
 	.2byte	0x28f
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	.LASF304
 	.4byte	.LASF304
 	.byte	0xf
 	.2byte	0x199
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	.LASF305
 	.4byte	.LASF305
 	.byte	0xf
 	.2byte	0x2d1
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF306
 	.4byte	.LASF306
 	.byte	0x6
 	.byte	0x20
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF307
 	.4byte	.LASF307
 	.byte	0xe
 	.byte	0xb9
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF308
 	.4byte	.LASF308
 	.byte	0x6
 	.byte	0x24
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	.LASF309
 	.4byte	.LASF309
 	.byte	0xf
 	.2byte	0x20c
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF310
 	.4byte	.LASF310
 	.byte	0x16
 	.byte	0x2c
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF311
 	.4byte	.LASF311
 	.byte	0x12
-	.byte	0xda
-	.uleb128 0x50
+	.byte	0xf4
+	.uleb128 0x4f
 	.4byte	.LASF312
 	.4byte	.LASF312
 	.byte	0x17
 	.byte	0x5f
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF313
 	.4byte	.LASF313
 	.byte	0x18
 	.byte	0xbe
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	.LASF314
 	.4byte	.LASF314
 	.byte	0xf
 	.2byte	0x2c8
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF315
 	.4byte	.LASF315
 	.byte	0x10
 	.byte	0xc4
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF316
 	.4byte	.LASF316
 	.byte	0x10
 	.byte	0x72
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF317
 	.4byte	.LASF317
 	.byte	0x10
 	.byte	0x85
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF318
 	.4byte	.LASF318
 	.byte	0x10
 	.byte	0xbc
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF319
 	.4byte	.LASF319
 	.byte	0x10
 	.byte	0xb0
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF320
 	.4byte	.LASF320
 	.byte	0x10
 	.byte	0x98
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF321
 	.4byte	.LASF321
 	.byte	0x10
 	.byte	0x77
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF322
 	.4byte	.LASF322
 	.byte	0x10
 	.byte	0x6d
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	.LASF323
 	.4byte	.LASF323
 	.byte	0xf
 	.2byte	0x1ff
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF324
 	.4byte	.LASF324
 	.byte	0x17
 	.byte	0x46
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF325
 	.4byte	.LASF325
 	.byte	0x16
 	.byte	0x27
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF326
 	.4byte	.LASF326
 	.byte	0x17
 	.byte	0x65
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF327
 	.4byte	.LASF327
 	.byte	0x12
-	.byte	0xd9
-	.uleb128 0x50
+	.byte	0xf3
+	.uleb128 0x4f
 	.4byte	.LASF328
 	.4byte	.LASF328
 	.byte	0xd
 	.byte	0x57
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF329
 	.4byte	.LASF329
 	.byte	0xd
 	.byte	0x6b
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF330
 	.4byte	.LASF330
 	.byte	0xe
 	.byte	0x9c
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	.LASF331
 	.4byte	.LASF331
 	.byte	0xb
 	.2byte	0x231
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	.LASF332
 	.4byte	.LASF332
 	.byte	0x19
@@ -6387,23 +6404,6 @@ s_config:
 	.byte	0
 	.byte	0
 	.uleb128 0x4e
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x4f
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -6420,7 +6420,7 @@ s_config:
 	.uleb128 0x5
 	.byte	0
 	.byte	0
-	.uleb128 0x50
+	.uleb128 0x4f
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -6447,7 +6447,7 @@ s_config:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL1
-	.4byte	.LFE59
+	.4byte	.LFE63
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -6458,7 +6458,7 @@ s_config:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL35
-	.4byte	.LFE40
+	.4byte	.LFE44
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6592,7 +6592,7 @@ s_config:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL47
-	.4byte	.LFE40
+	.4byte	.LFE44
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -6603,7 +6603,7 @@ s_config:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL55
-	.4byte	.LFE61
+	.4byte	.LFE65
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6613,13 +6613,13 @@ s_config:
 	.4byte	0
 .LLST15:
 	.4byte	.LVL57
-	.4byte	.LVL61
+	.4byte	.LVL62
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
 	.4byte	0
 .LLST16:
-	.4byte	.LVL62
+	.4byte	.LVL61
 	.4byte	.LVL63
 	.2byte	0x1
 	.byte	0x58
@@ -6810,7 +6810,7 @@ s_config:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL130
-	.4byte	.LFE44
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6829,7 +6829,7 @@ s_config:
 	.byte	0x93
 	.uleb128 0x4
 	.4byte	.LVL134
-	.4byte	.LFE46
+	.4byte	.LFE50
 	.2byte	0x6
 	.byte	0xf3
 	.uleb128 0x3
@@ -6845,7 +6845,7 @@ s_config:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL142
-	.4byte	.LFE50
+	.4byte	.LFE54
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6870,7 +6870,7 @@ s_config:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL147
-	.4byte	.LFE50
+	.4byte	.LFE54
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6948,7 +6948,7 @@ s_config:
 	.byte	0x93
 	.uleb128 0x4
 	.4byte	.LVL166
-	.4byte	.LFE52
+	.4byte	.LFE56
 	.2byte	0x6
 	.byte	0xf3
 	.uleb128 0x3
@@ -6971,7 +6971,7 @@ s_config:
 	.byte	0x54
 	.byte	0x9f
 	.4byte	.LVL161
-	.4byte	.LFE52
+	.4byte	.LFE56
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -7019,7 +7019,7 @@ s_config:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL170
-	.4byte	.LFE56
+	.4byte	.LFE60
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7117,7 +7117,7 @@ s_config:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL190
-	.4byte	.LFE58
+	.4byte	.LFE62
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7133,50 +7133,50 @@ s_config:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB59
-	.4byte	.LFE59-.LFB59
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
-	.4byte	.LFB61
-	.4byte	.LFE61-.LFB61
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.4byte	.LFB44
 	.4byte	.LFE44-.LFB44
+	.4byte	.LFB65
+	.4byte	.LFE65-.LFB65
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.4byte	.LFB45
 	.4byte	.LFE45-.LFB45
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.4byte	.LFB48
 	.4byte	.LFE48-.LFB48
-	.4byte	.LFB50
-	.4byte	.LFE50-.LFB50
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
-	.4byte	.LFB55
-	.4byte	.LFE55-.LFB55
-	.4byte	.LFB56
-	.4byte	.LFE56-.LFB56
-	.4byte	.LFB57
-	.4byte	.LFE57-.LFB57
 	.4byte	.LFB49
 	.4byte	.LFE49-.LFB49
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.4byte	.LFB54
 	.4byte	.LFE54-.LFB54
-	.4byte	.LFB58
-	.4byte	.LFE58-.LFB58
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
 	.4byte	.LFB60
 	.4byte	.LFE60-.LFB60
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -7189,72 +7189,74 @@ s_config:
 	.4byte	0
 	.4byte	.LBB44
 	.4byte	.LBE44
-	.4byte	.LBB47
-	.4byte	.LBE47
+	.4byte	.LBB48
+	.4byte	.LBE48
+	.4byte	.LBB49
+	.4byte	.LBE49
 	.4byte	0
 	.4byte	0
-	.4byte	.LBB55
-	.4byte	.LBE55
-	.4byte	.LBB60
-	.4byte	.LBE60
+	.4byte	.LBB57
+	.4byte	.LBE57
+	.4byte	.LBB62
+	.4byte	.LBE62
 	.4byte	0
 	.4byte	0
-	.4byte	.LBB56
-	.4byte	.LBE56
-	.4byte	.LBB59
-	.4byte	.LBE59
+	.4byte	.LBB58
+	.4byte	.LBE58
+	.4byte	.LBB61
+	.4byte	.LBE61
 	.4byte	0
 	.4byte	0
-	.4byte	.LBB65
-	.4byte	.LBE65
 	.4byte	.LBB67
 	.4byte	.LBE67
+	.4byte	.LBB69
+	.4byte	.LBE69
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB59
-	.4byte	.LFE59
-	.4byte	.LFB35
-	.4byte	.LFE35
-	.4byte	.LFB40
-	.4byte	.LFE40
-	.4byte	.LFB61
-	.4byte	.LFE61
-	.4byte	.LFB33
-	.4byte	.LFE33
-	.4byte	.LFB34
-	.4byte	.LFE34
-	.4byte	.LFB41
-	.4byte	.LFE41
-	.4byte	.LFB43
-	.4byte	.LFE43
+	.4byte	.LFB63
+	.4byte	.LFE63
+	.4byte	.LFB39
+	.4byte	.LFE39
 	.4byte	.LFB44
 	.4byte	.LFE44
+	.4byte	.LFB65
+	.4byte	.LFE65
+	.4byte	.LFB37
+	.4byte	.LFE37
+	.4byte	.LFB38
+	.4byte	.LFE38
 	.4byte	.LFB45
 	.4byte	.LFE45
-	.4byte	.LFB46
-	.4byte	.LFE46
-	.4byte	.LFB36
-	.4byte	.LFE36
+	.4byte	.LFB47
+	.4byte	.LFE47
 	.4byte	.LFB48
 	.4byte	.LFE48
-	.4byte	.LFB50
-	.4byte	.LFE50
-	.4byte	.LFB52
-	.4byte	.LFE52
-	.4byte	.LFB55
-	.4byte	.LFE55
-	.4byte	.LFB56
-	.4byte	.LFE56
-	.4byte	.LFB57
-	.4byte	.LFE57
 	.4byte	.LFB49
 	.4byte	.LFE49
+	.4byte	.LFB50
+	.4byte	.LFE50
+	.4byte	.LFB40
+	.4byte	.LFE40
+	.4byte	.LFB52
+	.4byte	.LFE52
 	.4byte	.LFB54
 	.4byte	.LFE54
-	.4byte	.LFB58
-	.4byte	.LFE58
+	.4byte	.LFB56
+	.4byte	.LFE56
+	.4byte	.LFB59
+	.4byte	.LFE59
 	.4byte	.LFB60
 	.4byte	.LFE60
+	.4byte	.LFB61
+	.4byte	.LFE61
+	.4byte	.LFB53
+	.4byte	.LFE53
+	.4byte	.LFB58
+	.4byte	.LFE58
+	.4byte	.LFB62
+	.4byte	.LFE62
+	.4byte	.LFB64
+	.4byte	.LFE64
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -7270,7 +7272,7 @@ s_config:
 	.string	"size_t"
 .LASF215:
 	.string	"ext1_rtc_gpio_mask"
-.LASF292:
+.LASF293:
 	.string	"rtc_gpio_desc"
 .LASF22:
 	.string	"sizetype"
@@ -7432,7 +7434,7 @@ s_config:
 	.string	"resume_uarts"
 .LASF295:
 	.string	"ets_update_cpu_frequency_rom"
-.LASF291:
+.LASF292:
 	.string	"_rtc_slow_length"
 .LASF216:
 	.string	"ext0_trigger_level"
@@ -7578,7 +7580,7 @@ s_config:
 	.string	"_lock_t"
 .LASF12:
 	.string	"long long int"
-.LASF293:
+.LASF290:
 	.string	"s_light_sleep_wakeup"
 .LASF202:
 	.string	"rtc_num"
@@ -7698,7 +7700,7 @@ s_config:
 	.string	"GPIO_NUM_38"
 .LASF60:
 	.string	"GPIO_NUM_39"
-.LASF290:
+.LASF291:
 	.string	"lock_rtc_memory_crc"
 .LASF94:
 	.string	"ESP_SLEEP_WAKEUP_ULP"

@@ -5348,9 +5348,8 @@ tlsv1_server_set_session_ticket_cb:
 	.4byte	.LVL93
 	.4byte	.LVL94
 	.2byte	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x52
+	.byte	0x72
+	.sleb128 -256
 	.byte	0x9f
 	.4byte	.LVL94
 	.4byte	.LVL96
@@ -5359,8 +5358,9 @@ tlsv1_server_set_session_ticket_cb:
 	.4byte	.LVL96
 	.4byte	.LVL98
 	.2byte	0x4
-	.byte	0x72
-	.sleb128 -256
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL98
 	.4byte	.LVL101

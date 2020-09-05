@@ -1093,7 +1093,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 1
@@ -1462,16 +1462,33 @@ typedef void (*spi_flash_op_lock_func_t)(void);
 
 
 typedef void (*spi_flash_op_unlock_func_t)(void);
-# 345 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+
+
+
+typedef 
+# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h" 3 4
+       _Bool 
+# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+            (*spi_flash_is_safe_write_address_t)(size_t addr, size_t size);
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 typedef struct {
     spi_flash_guard_start_func_t start;
     spi_flash_guard_end_func_t end;
     spi_flash_op_lock_func_t op_lock;
     spi_flash_op_unlock_func_t op_unlock;
+
+    spi_flash_is_safe_write_address_t is_safe_write_address;
+
 } spi_flash_guard_funcs_t;
-# 360 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 void spi_flash_guard_set(const spi_flash_guard_funcs_t* funcs);
-# 369 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+
+
+
+
+
+
+
 const spi_flash_guard_funcs_t *spi_flash_guard_get();
 
 
@@ -1487,7 +1504,9 @@ extern const spi_flash_guard_funcs_t g_flash_guard_default_ops;
 
 extern const spi_flash_guard_funcs_t g_flash_guard_no_os_ops;
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h" 2
-# 50 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
+uint32_t bootloader_mmap_get_free_pages();
+# 57 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
 const void *bootloader_mmap(uint32_t src_addr, uint32_t size);
 
 
@@ -1497,23 +1516,23 @@ const void *bootloader_mmap(uint32_t src_addr, uint32_t size);
 
 
 void bootloader_munmap(const void *mapping);
-# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
+# 82 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
 esp_err_t bootloader_flash_read(size_t src_addr, void *dest, size_t size, 
-# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h" 3 4
+# 82 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h" 3 4
                                                                          _Bool 
-# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
+# 82 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
                                                                               allow_decrypt);
-# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
+# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
 esp_err_t bootloader_flash_write(size_t dest_addr, void *src, size_t size, 
-# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h" 3 4
+# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h" 3 4
                                                                           _Bool 
-# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
+# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
                                                                                write_encrypted);
-# 102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
+# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
 esp_err_t bootloader_flash_erase_sector(size_t sector);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
+# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
 esp_err_t bootloader_flash_erase_range(uint32_t start_addr, uint32_t size);
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
+# 133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h"
 static inline uint32_t bootloader_cache_pages_to_map(uint32_t size, uint32_t vaddr)
 {
     return (size + (vaddr - (vaddr & (~(0x00010000 - 1)))) + 0x00010000 - 1) / 0x00010000;
@@ -1710,15 +1729,15 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/secure_boot_signatures.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h" 1
 # 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
@@ -1729,10 +1748,22 @@ void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint1
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 1
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_flash_data_types.h" 1
-# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_flash_data_types.h"
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_flash_data_types.h"
+typedef enum {
+    ESP_OTA_IMG_NEW = 0x0U,
+    ESP_OTA_IMG_PENDING_VERIFY = 0x1U,
+    ESP_OTA_IMG_VALID = 0x2U,
+    ESP_OTA_IMG_INVALID = 0x3U,
+    ESP_OTA_IMG_ABORTED = 0x4U,
+    ESP_OTA_IMG_UNDEFINED = 0xFFFFFFFFU,
+} esp_ota_img_states_t;
+
+
+
 typedef struct {
     uint32_t ota_seq;
-    uint8_t seq_label[24];
+    uint8_t seq_label[20];
+    uint32_t ota_state;
     uint32_t crc;
 } esp_ota_select_entry_t;
 
@@ -1806,6 +1837,19 @@ typedef enum {
 
 
 
+
+
+
+typedef enum {
+    ESP_CHIP_ID_ESP32 = 0x0000,
+    ESP_CHIP_ID_INVALID = 0xFFFF
+} __attribute__((packed)) esp_chip_id_t;
+
+
+_Static_assert(sizeof(esp_chip_id_t) == 2, "esp_chip_id_t should be 16 bit");
+
+
+
 typedef struct {
     uint8_t magic;
     uint8_t segment_count;
@@ -1821,8 +1865,9 @@ typedef struct {
     uint8_t wp_pin;
 
     uint8_t spi_pin_drv[3];
-
-    uint8_t reserved[11];
+    esp_chip_id_t chip_id;
+    uint8_t min_chip_rev;
+    uint8_t reserved[8];
 
 
 
@@ -1838,6 +1883,25 @@ typedef struct {
     uint32_t load_addr;
     uint32_t data_len;
 } esp_image_segment_header_t;
+
+
+
+
+
+
+typedef struct {
+    uint32_t magic_word;
+    uint32_t secure_version;
+    uint32_t reserv1[2];
+    char version[32];
+    char project_name[32];
+    char time[16];
+    char date[16];
+    char idf_ver[32];
+    uint8_t app_elf_sha256[32];
+    uint32_t reserv2[20];
+} esp_app_desc_t;
+_Static_assert(sizeof(esp_app_desc_t) == 256, "esp_app_desc_t should be 256 bytes");
 
 
 
@@ -1859,15 +1923,15 @@ typedef enum {
 
 
 } esp_image_load_mode_t;
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t esp_image_load(esp_image_load_mode_t mode, const esp_partition_pos_t *part, esp_image_metadata_t *data) __attribute__((deprecated));
-# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 201 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t esp_image_verify(esp_image_load_mode_t mode, const esp_partition_pos_t *part, esp_image_metadata_t *data);
-# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t bootloader_load_image(const esp_partition_pos_t *part, esp_image_metadata_t *data);
-# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t esp_image_verify_bootloader(uint32_t *length);
-# 213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 246 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t esp_image_verify_bootloader_data(esp_image_metadata_t *data);
 
 
@@ -1902,11 +1966,13 @@ static inline
                   esp_secure_boot_enabled(void) {
     return ({ ; (*(volatile uint32_t *)((0x3ff5A000 + 0x018))); }) & ((1UL << (4)));
 }
-# 72 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_secure_boot.h"
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_secure_boot.h"
+esp_err_t esp_secure_boot_generate_digest(void);
+# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_secure_boot.h"
 esp_err_t esp_secure_boot_permanently_enable(void);
-# 86 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_secure_boot.h"
+# 108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_secure_boot.h"
 esp_err_t esp_secure_boot_verify_signature(uint32_t src_addr, uint32_t length);
-# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_secure_boot.h"
+# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/include/esp_secure_boot.h"
 typedef struct {
     uint32_t version;
     uint8_t signature[64];
@@ -2016,93 +2082,21 @@ int uECC_verify(const uint8_t *public_key,
                 uECC_Curve curve);
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/secure_boot_signatures.c" 2
 
-
-
-
-
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/sha.h" 1
-# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/sha.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/sha.h" 1
-# 32 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/sha.h"
-typedef struct SHAContext {
-    
-# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/sha.h" 3 4
-   _Bool 
-# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/sha.h"
-        start;
-    uint32_t total_input_bits[4];
-} SHA_CTX;
-
-enum SHA_TYPE {
-    SHA1 = 0,
-    SHA2_256,
-    SHA2_384,
-    SHA2_512,
-
-
-    SHA_INVALID = -1,
-};
-
-void ets_sha_init(SHA_CTX *ctx);
-
-void ets_sha_enable(void);
-
-void ets_sha_disable(void);
-
-void ets_sha_update(SHA_CTX *ctx, enum SHA_TYPE type, const uint8_t *input, size_t input_bits);
-
-void ets_sha_finish(SHA_CTX *ctx, enum SHA_TYPE type, uint8_t *output);
-# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/sha.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h" 1
-# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h" 2
-# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/sha.h" 2
-# 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/sha.h"
-typedef enum SHA_TYPE esp_sha_type;
-# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/sha.h"
-void esp_sha(esp_sha_type sha_type, const unsigned char *input, size_t ilen, unsigned char *output);
-# 102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/sha.h"
-void esp_sha_block(esp_sha_type sha_type, const void *data_block, 
-# 102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/sha.h" 3 4
-                                                                 _Bool 
-# 102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/sha.h"
-                                                                      is_first_block);
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/sha.h"
-void esp_sha_read_digest_state(esp_sha_type sha_type, void *digest_state);
-# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/sha.h"
-void esp_sha_lock_engine(esp_sha_type sha_type);
-# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/sha.h"
-
-# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/sha.h" 3 4
-_Bool 
-# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/sha.h"
-    esp_sha_try_lock_engine(esp_sha_type sha_type);
-
-
-
-
-
-
-void esp_sha_unlock_engine(esp_sha_type sha_type);
-# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/sha.h"
-void esp_sha_lock_memory_block(void);
-# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/sha.h"
-void esp_sha_unlock_memory_block(void);
-# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/hwcrypto/sha.h"
-void esp_sha_wait_idle(void);
-# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/secure_boot_signatures.c" 2
-
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/param.h" 1
+# 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/param.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/syslimits.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/param.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/endian.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/param.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/param.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/param.h" 2
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/secure_boot_signatures.c" 2
 
 static const char* TAG = "secure_boot";
 
 extern const uint8_t signature_verification_key_start[] asm("_binary_signature_verification_key_bin_start");
 extern const uint8_t signature_verification_key_end[] asm("_binary_signature_verification_key_bin_end");
-
-
-
-
-
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/secure_boot_signatures.c"
 esp_err_t esp_secure_boot_verify_signature(uint32_t src_addr, uint32_t length)
 {
     uint8_t digest[32];
@@ -2111,23 +2105,48 @@ esp_err_t esp_secure_boot_verify_signature(uint32_t src_addr, uint32_t length)
 
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "verifying signature src_addr 0x%x length 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, src_addr, length); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "verifying signature src_addr 0x%x length 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, src_addr, length); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "verifying signature src_addr 0x%x length 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, src_addr, length); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "verifying signature src_addr 0x%x length 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, src_addr, length); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "verifying signature src_addr 0x%x length 0x%x" "\033[0m" "\n", esp_log_timestamp(), TAG, src_addr, length); } } while(0); } while(0);
 
-    data = bootloader_mmap(src_addr, length + sizeof(esp_secure_boot_sig_block_t));
-    if(data == 
-# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/secure_boot_signatures.c" 3 4
-              ((void *)0)
-# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/secure_boot_signatures.c"
-                  ) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, src_addr, length+sizeof(esp_secure_boot_sig_block_t)); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, src_addr, length+sizeof(esp_secure_boot_sig_block_t)); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, src_addr, length+sizeof(esp_secure_boot_sig_block_t)); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, src_addr, length+sizeof(esp_secure_boot_sig_block_t)); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, src_addr, length+sizeof(esp_secure_boot_sig_block_t)); } } while(0); } while(0);
+    bootloader_sha256_handle_t handle = bootloader_sha256_start();
+
+    uint32_t free_page_count = bootloader_mmap_get_free_pages();
+    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "free data page_count 0x%08x" "\033[0m" "\n", esp_log_timestamp(), TAG, free_page_count); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "free data page_count 0x%08x" "\033[0m" "\n", esp_log_timestamp(), TAG, free_page_count); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "free data page_count 0x%08x" "\033[0m" "\n", esp_log_timestamp(), TAG, free_page_count); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "free data page_count 0x%08x" "\033[0m" "\n", esp_log_timestamp(), TAG, free_page_count); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "free data page_count 0x%08x" "\033[0m" "\n", esp_log_timestamp(), TAG, free_page_count); } } while(0); } while(0);
+
+    int32_t data_len_remain = length;
+    uint32_t data_addr = src_addr;
+    while (data_len_remain > 0) {
+        uint32_t offset_page = ((data_addr & 0x0000FFFF) != 0) ? 1 : 0;
+
+        uint32_t data_len = ((data_len_remain) < (((free_page_count - offset_page) * 0x10000)) ? (data_len_remain) : (((free_page_count - offset_page) * 0x10000)));
+        data = (const uint8_t *) bootloader_mmap(data_addr, data_len);
+        if(!data) {
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, data_addr, data_len); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, data_addr, data_len); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, data_addr, data_len); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, data_addr, data_len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, data_addr, data_len); } } while(0); } while(0);
+            bootloader_sha256_finish(handle, 
+# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/secure_boot_signatures.c" 3 4
+                                            ((void *)0)
+# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/secure_boot_signatures.c"
+                                                );
+            return -1;
+        }
+        bootloader_sha256_data(handle, data, data_len);
+        bootloader_munmap(data);
+
+        data_addr += data_len;
+        data_len_remain -= data_len;
+    }
+
+
+    bootloader_sha256_finish(handle, digest);
+
+
+    sigblock = (const esp_secure_boot_sig_block_t *) bootloader_mmap(src_addr + length, sizeof(esp_secure_boot_sig_block_t));
+    if(!sigblock) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, src_addr + length, sizeof(esp_secure_boot_sig_block_t)); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, src_addr + length, sizeof(esp_secure_boot_sig_block_t)); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, src_addr + length, sizeof(esp_secure_boot_sig_block_t)); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, src_addr + length, sizeof(esp_secure_boot_sig_block_t)); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "bootloader_mmap(0x%x, 0x%x) failed" "\033[0m" "\n", esp_log_timestamp(), TAG, src_addr + length, sizeof(esp_secure_boot_sig_block_t)); } } while(0); } while(0);
         return -1;
     }
-# 61 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/secure_boot_signatures.c"
-    esp_sha(SHA2_256, data, length, digest);
 
-
-
-    sigblock = (const esp_secure_boot_sig_block_t *)(data + length);
     esp_err_t err = esp_secure_boot_verify_signature_block(sigblock, digest);
-    bootloader_munmap(data);
+
+    bootloader_munmap(sigblock);
+
     return err;
 }
 
@@ -2135,9 +2154,9 @@ esp_err_t esp_secure_boot_verify_signature_block(const esp_secure_boot_sig_block
 {
     ptrdiff_t keylen;
     
-# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/secure_boot_signatures.c" 3 4
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/secure_boot_signatures.c" 3 4
    _Bool 
-# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/secure_boot_signatures.c"
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bootloader_support/src/secure_boot_signatures.c"
         is_valid;
 
     keylen = signature_verification_key_end - signature_verification_key_start;

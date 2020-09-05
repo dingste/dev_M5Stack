@@ -1,7 +1,7 @@
 	.file	"ethernet.c"
 	.text
 .Ltext0:
-	.section	.iram1,"ax",@progbits
+	.section	.text.ethernet_input,"ax",@progbits
 	.literal_position
 	.literal .LC0, ethbroadcast
 	.literal .LC1, 56710
@@ -9,7 +9,7 @@
 	.global	ethernet_input
 	.type	ethernet_input, @function
 ethernet_input:
-.LFB18:
+.LFB27:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/netif/ethernet.c"
 	.loc 1 86 0
 .LVL0:
@@ -142,7 +142,7 @@ ethernet_input:
 	movi.n	a2, 0
 .LVL17:
 	retw.n
-.LFE18:
+.LFE27:
 	.size	ethernet_input, .-ethernet_input
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC2:
@@ -152,13 +152,13 @@ ethernet_input:
 	.section	.text.ethernet_output,"ax",@progbits
 	.literal_position
 	.literal .LC3, .LC2
-	.literal .LC4, __func__$6487
+	.literal .LC4, __func__$6551
 	.literal .LC6, .LC5
 	.align	4
 	.global	ethernet_output
 	.type	ethernet_output, @function
 ethernet_output:
-.LFB19:
+.LFB28:
 	.loc 1 271 0
 .LVL18:
 	entry	sp, 32
@@ -225,12 +225,12 @@ ethernet_output:
 .LVL31:
 	.loc 1 316 0
 	retw.n
-.LFE19:
+.LFE28:
 	.size	ethernet_output, .-ethernet_output
-	.section	.rodata.__func__$6487,"a",@progbits
-	.type	__func__$6487, @object
-	.size	__func__$6487, 16
-__func__$6487:
+	.section	.rodata.__func__$6551,"a",@progbits
+	.type	__func__$6551, @object
+	.size	__func__$6551, 16
+__func__$6551:
 	.string	"ethernet_output"
 	.global	ethzero
 	.section	.rodata.ethzero,"a",@progbits
@@ -268,10 +268,10 @@ ethbroadcast:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI0-.LFB18
+	.4byte	.LCFI0-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -280,10 +280,10 @@ ethbroadcast:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI1-.LFB19
+	.4byte	.LCFI1-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1213,8 +1213,8 @@ ethbroadcast:
 	.byte	0x1
 	.byte	0x55
 	.4byte	0x123
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x89a
@@ -1391,8 +1391,8 @@ ethbroadcast:
 	.byte	0x1
 	.2byte	0x10c
 	.4byte	0x123
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x9e8
@@ -1450,7 +1450,7 @@ ethbroadcast:
 	.4byte	0xa03
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6487
+	.4byte	__func__$6551
 	.uleb128 0x21
 	.4byte	.LVL19
 	.4byte	0xa6c
@@ -1534,7 +1534,7 @@ ethbroadcast:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6487
+	.4byte	__func__$6551
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5d
@@ -2242,7 +2242,7 @@ ethbroadcast:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL17
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2289,7 +2289,7 @@ ethbroadcast:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL31
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2310,7 +2310,7 @@ ethbroadcast:
 	.byte	0x54
 	.byte	0x9f
 	.4byte	.LVL30
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -2321,7 +2321,7 @@ ethbroadcast:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL20
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2342,7 +2342,7 @@ ethbroadcast:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL30
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -2355,18 +2355,18 @@ ethbroadcast:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB19
-	.4byte	.LFE19
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB28
+	.4byte	.LFE28
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

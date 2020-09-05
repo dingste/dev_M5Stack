@@ -414,8 +414,8 @@ generate_nt_response_pwhash:
 	.literal_position
 	.literal .LC4, .LC0
 	.literal .LC5, .LC1
-	.literal .LC6, magic1$4109
-	.literal .LC7, magic2$4110
+	.literal .LC6, magic1$4114
+	.literal .LC7, magic2$4115
 	.align	4
 	.global	generate_authenticator_response_pwhash
 	.type	generate_authenticator_response_pwhash, @function
@@ -595,7 +595,7 @@ nt_challenge_response:
 	.section	.text.get_master_key,"ax",@progbits
 	.literal_position
 	.literal .LC8, .LC2
-	.literal .LC9, magic1$4140
+	.literal .LC9, magic1$4145
 	.align	4
 	.global	get_master_key
 	.type	get_master_key, @function
@@ -660,11 +660,11 @@ get_master_key:
 	.word	40
 	.section	.text.get_asymetric_start_key,"ax",@progbits
 	.literal_position
-	.literal .LC10, magic3$4152
-	.literal .LC11, magic2$4151
+	.literal .LC10, magic3$4157
+	.literal .LC11, magic2$4156
 	.literal .LC12, .LC3
-	.literal .LC13, shs_pad1$4153
-	.literal .LC14, shs_pad2$4154
+	.literal .LC13, shs_pad1$4158
+	.literal .LC14, shs_pad2$4159
 	.align	4
 	.global	get_asymetric_start_key
 	.type	get_asymetric_start_key, @function
@@ -937,10 +937,10 @@ old_nt_password_hash_encrypted_with_new_nt_password_hash:
 	retw.n
 .LFE49:
 	.size	old_nt_password_hash_encrypted_with_new_nt_password_hash, .-old_nt_password_hash_encrypted_with_new_nt_password_hash
-	.section	.rodata.shs_pad2$4154,"a",@progbits
-	.type	shs_pad2$4154, @object
-	.size	shs_pad2$4154, 40
-shs_pad2$4154:
+	.section	.rodata.shs_pad2$4159,"a",@progbits
+	.type	shs_pad2$4159, @object
+	.size	shs_pad2$4159, 40
+shs_pad2$4159:
 	.byte	-14
 	.byte	-14
 	.byte	-14
@@ -981,10 +981,10 @@ shs_pad2$4154:
 	.byte	-14
 	.byte	-14
 	.byte	-14
-	.section	.rodata.magic2$4151,"a",@progbits
-	.type	magic2$4151, @object
-	.size	magic2$4151, 84
-magic2$4151:
+	.section	.rodata.magic2$4156,"a",@progbits
+	.type	magic2$4156, @object
+	.size	magic2$4156, 84
+magic2$4156:
 	.byte	79
 	.byte	110
 	.byte	32
@@ -1069,10 +1069,10 @@ magic2$4151:
 	.byte	101
 	.byte	121
 	.byte	46
-	.section	.rodata.magic3$4152,"a",@progbits
-	.type	magic3$4152, @object
-	.size	magic3$4152, 84
-magic3$4152:
+	.section	.rodata.magic3$4157,"a",@progbits
+	.type	magic3$4157, @object
+	.size	magic3$4157, 84
+magic3$4157:
 	.byte	79
 	.byte	110
 	.byte	32
@@ -1157,15 +1157,15 @@ magic3$4152:
 	.byte	101
 	.byte	121
 	.byte	46
-	.section	.rodata.shs_pad1$4153,"a",@progbits
-	.type	shs_pad1$4153, @object
-	.size	shs_pad1$4153, 40
-shs_pad1$4153:
+	.section	.rodata.shs_pad1$4158,"a",@progbits
+	.type	shs_pad1$4158, @object
+	.size	shs_pad1$4158, 40
+shs_pad1$4158:
 	.zero	40
-	.section	.rodata.magic1$4140,"a",@progbits
-	.type	magic1$4140, @object
-	.size	magic1$4140, 27
-magic1$4140:
+	.section	.rodata.magic1$4145,"a",@progbits
+	.type	magic1$4145, @object
+	.size	magic1$4145, 27
+magic1$4145:
 	.byte	84
 	.byte	104
 	.byte	105
@@ -1193,10 +1193,10 @@ magic1$4140:
 	.byte	75
 	.byte	101
 	.byte	121
-	.section	.rodata.magic2$4110,"a",@progbits
-	.type	magic2$4110, @object
-	.size	magic2$4110, 41
-magic2$4110:
+	.section	.rodata.magic2$4115,"a",@progbits
+	.type	magic2$4115, @object
+	.size	magic2$4115, 41
+magic2$4115:
 	.byte	80
 	.byte	97
 	.byte	100
@@ -1238,10 +1238,10 @@ magic2$4110:
 	.byte	105
 	.byte	111
 	.byte	110
-	.section	.rodata.magic1$4109,"a",@progbits
-	.type	magic1$4109, @object
-	.size	magic1$4109, 39
-magic1$4109:
+	.section	.rodata.magic1$4114,"a",@progbits
+	.type	magic1$4114, @object
+	.size	magic1$4114, 39
+magic1$4114:
 	.byte	77
 	.byte	97
 	.byte	103
@@ -2533,7 +2533,7 @@ magic1$4109:
 	.4byte	0x85f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	magic1$4109
+	.4byte	magic1$4114
 	.uleb128 0xf
 	.4byte	.LASF42
 	.byte	0x1
@@ -2541,7 +2541,7 @@ magic1$4109:
 	.4byte	0x874
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	magic2$4110
+	.4byte	magic2$4115
 	.uleb128 0xf
 	.4byte	.LASF34
 	.byte	0x1
@@ -2997,7 +2997,7 @@ magic1$4109:
 	.4byte	0xaf0
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	magic1$4140
+	.4byte	magic1$4145
 	.uleb128 0x24
 	.4byte	.LASF27
 	.byte	0x1
@@ -3132,7 +3132,7 @@ magic1$4109:
 	.4byte	0xc3e
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	magic2$4151
+	.4byte	magic2$4156
 	.uleb128 0x24
 	.4byte	.LASF56
 	.byte	0x1
@@ -3140,7 +3140,7 @@ magic1$4109:
 	.4byte	0xc43
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	magic3$4152
+	.4byte	magic3$4157
 	.uleb128 0x24
 	.4byte	.LASF57
 	.byte	0x1
@@ -3148,7 +3148,7 @@ magic1$4109:
 	.4byte	0xc58
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	shs_pad1$4153
+	.4byte	shs_pad1$4158
 	.uleb128 0x24
 	.4byte	.LASF58
 	.byte	0x1
@@ -3156,7 +3156,7 @@ magic1$4109:
 	.4byte	0xc5d
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	shs_pad2$4154
+	.4byte	shs_pad2$4159
 	.uleb128 0x24
 	.4byte	.LASF59
 	.byte	0x1

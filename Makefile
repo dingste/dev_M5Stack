@@ -11,6 +11,6 @@ CFLAGS		?= -std=gnu99 -Os -Wall
 CXXFLAGS += -DDEBUG -O1 -g -std=gnu++11 -Wall
 EXTRA_CFLAGS += --save-temps
 
-# IDF_PATH=$(PROJECT_DIR)/../../esp-idf
+IDF_PATH=/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf
 include $(IDF_PATH)/make/project.mk
 

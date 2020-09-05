@@ -7,7 +7,7 @@
 	.align	4
 	.type	find_task_in_twdt_list, @function
 find_task_in_twdt_list:
-.LFB22:
+.LFB31:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/task_wdt.c"
 	.loc 1 90 0
 .LVL0:
@@ -54,7 +54,7 @@ find_task_in_twdt_list:
 	mov.n	a2, a9
 .LVL5:
 	retw.n
-.LFE22:
+.LFE31:
 	.size	find_task_in_twdt_list, .-find_task_in_twdt_list
 	.section	.text.reset_hw_timer,"ax",@progbits
 	.literal_position
@@ -64,7 +64,7 @@ find_task_in_twdt_list:
 	.align	4
 	.type	reset_hw_timer, @function
 reset_hw_timer:
-.LFB23:
+.LFB32:
 	.loc 1 110 0
 	entry	sp, 32
 .LCFI1:
@@ -100,19 +100,19 @@ reset_hw_timer:
 .LBE4:
 	.loc 1 119 0
 	retw.n
-.LFE23:
+.LFE32:
 	.size	reset_hw_timer, .-reset_hw_timer
 	.section	.text.esp_task_wdt_isr_user_handler,"ax",@progbits
 	.align	4
 	.weak	esp_task_wdt_isr_user_handler
 	.type	esp_task_wdt_isr_user_handler, @function
 esp_task_wdt_isr_user_handler:
-.LFB24:
+.LFB33:
 	.loc 1 128 0
 	entry	sp, 32
 .LCFI2:
 	retw.n
-.LFE24:
+.LFE33:
 	.size	esp_task_wdt_isr_user_handler, .-esp_task_wdt_isr_user_handler
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC11:
@@ -129,9 +129,9 @@ esp_task_wdt_isr_user_handler:
 	.string	"\033[0;31mE (%d) %s: Aborting.\033[0m\n"
 	.section	.text.task_wdt_isr,"ax",@progbits
 	.literal_position
-	.literal .LC4, __c$5819
-	.literal .LC5, __c$5821
-	.literal .LC6, __c$5823
+	.literal .LC4, __c$5865
+	.literal .LC5, __c$5867
+	.literal .LC6, __c$5869
 	.literal .LC7, twdt_spinlock
 	.literal .LC8, TIMERG0
 	.literal .LC9, 1356348065
@@ -140,14 +140,14 @@ esp_task_wdt_isr_user_handler:
 	.literal .LC14, .LC13
 	.literal .LC15, 2147483647
 	.literal .LC17, .LC16
-	.literal .LC18, __c$5828
+	.literal .LC18, __c$5874
 	.literal .LC20, .LC19
 	.literal .LC22, .LC21
 	.literal .LC24, .LC23
 	.align	4
 	.type	task_wdt_isr, @function
 task_wdt_isr:
-.LFB25:
+.LFB34:
 	.loc 1 137 0
 .LVL8:
 	.loc 1 137 0
@@ -303,7 +303,7 @@ task_wdt_isr:
 	.loc 1 174 0 discriminator 1
 	call8	abort
 .LVL35:
-.LFE25:
+.LFE34:
 	.size	task_wdt_isr, .-task_wdt_isr
 	.section	.rodata.str1.1
 .LC28:
@@ -316,7 +316,7 @@ task_wdt_isr:
 	.literal .LC26, twdt_config
 	.literal .LC27, task_wdt_isr
 	.literal .LC29, .LC28
-	.literal .LC30, __func__$5839
+	.literal .LC30, __func__$5885
 	.literal .LC32, .LC31
 	.literal .LC33, TIMERG0
 	.literal .LC34, 1356348065
@@ -333,7 +333,7 @@ task_wdt_isr:
 	.global	esp_task_wdt_init
 	.type	esp_task_wdt_init, @function
 esp_task_wdt_init:
-.LFB26:
+.LFB35:
 	.loc 1 187 0
 .LVL36:
 	entry	sp, 32
@@ -544,7 +544,7 @@ esp_task_wdt_init:
 	movi.n	a2, 0
 	.loc 1 232 0
 	retw.n
-.LFE26:
+.LFE35:
 	.size	esp_task_wdt_init, .-esp_task_wdt_init
 	.section	.rodata.str1.1
 .LC49:
@@ -557,13 +557,13 @@ esp_task_wdt_init:
 	.literal .LC47, 1356348065
 	.literal .LC48, 2147483647
 	.literal .LC50, .LC49
-	.literal .LC51, __func__$5843
+	.literal .LC51, __func__$5889
 	.literal .LC52, .LC31
 	.align	4
 	.global	esp_task_wdt_deinit
 	.type	esp_task_wdt_deinit, @function
 esp_task_wdt_deinit:
-.LFB27:
+.LFB36:
 	.loc 1 235 0
 	entry	sp, 32
 .LCFI5:
@@ -638,7 +638,7 @@ esp_task_wdt_deinit:
 .LVL58:
 	.loc 1 252 0
 	retw.n
-.LFE27:
+.LFE36:
 	.size	esp_task_wdt_deinit, .-esp_task_wdt_deinit
 	.section	.rodata.str1.1
 .LC56:
@@ -649,13 +649,13 @@ esp_task_wdt_deinit:
 	.literal .LC54, twdt_config
 	.literal .LC55, idle_hook_cb
 	.literal .LC57, .LC56
-	.literal .LC58, __func__$5855
+	.literal .LC58, __func__$5901
 	.literal .LC59, .LC31
 	.align	4
 	.global	esp_task_wdt_add
 	.type	esp_task_wdt_add, @function
 esp_task_wdt_add:
-.LFB28:
+.LFB37:
 	.loc 1 255 0
 .LVL59:
 	entry	sp, 48
@@ -798,7 +798,7 @@ esp_task_wdt_add:
 	movi.n	a2, 0
 	.loc 1 300 0
 	retw.n
-.LFE28:
+.LFE37:
 	.size	esp_task_wdt_add, .-esp_task_wdt_add
 	.section	.text.esp_task_wdt_reset,"ax",@progbits
 	.literal_position
@@ -808,7 +808,7 @@ esp_task_wdt_add:
 	.global	esp_task_wdt_reset
 	.type	esp_task_wdt_reset, @function
 esp_task_wdt_reset:
-.LFB29:
+.LFB38:
 	.loc 1 303 0
 	entry	sp, 48
 .LCFI7:
@@ -865,13 +865,13 @@ esp_task_wdt_reset:
 	movi.n	a2, 0
 	.loc 1 324 0
 	retw.n
-.LFE29:
+.LFE38:
 	.size	esp_task_wdt_reset, .-esp_task_wdt_reset
 	.section	.text.idle_hook_cb,"ax",@progbits
 	.align	4
 	.type	idle_hook_cb, @function
 idle_hook_cb:
-.LFB21:
+.LFB30:
 	.loc 1 79 0
 	entry	sp, 32
 .LCFI8:
@@ -881,7 +881,7 @@ idle_hook_cb:
 	.loc 1 82 0
 	movi.n	a2, 1
 	retw.n
-.LFE21:
+.LFE30:
 	.size	idle_hook_cb, .-idle_hook_cb
 	.section	.text.esp_task_wdt_delete,"ax",@progbits
 	.literal_position
@@ -892,7 +892,7 @@ idle_hook_cb:
 	.global	esp_task_wdt_delete
 	.type	esp_task_wdt_delete, @function
 esp_task_wdt_delete:
-.LFB30:
+.LFB39:
 	.loc 1 327 0
 .LVL97:
 	entry	sp, 48
@@ -999,7 +999,7 @@ esp_task_wdt_delete:
 	movi.n	a2, 0
 	.loc 1 367 0
 	retw.n
-.LFE30:
+.LFE39:
 	.size	esp_task_wdt_delete, .-esp_task_wdt_delete
 	.section	.text.esp_task_wdt_status,"ax",@progbits
 	.literal_position
@@ -1009,7 +1009,7 @@ esp_task_wdt_delete:
 	.global	esp_task_wdt_status
 	.type	esp_task_wdt_status, @function
 esp_task_wdt_status:
-.LFB31:
+.LFB40:
 	.loc 1 370 0
 .LVL118:
 	entry	sp, 32
@@ -1070,7 +1070,7 @@ esp_task_wdt_status:
 .LVL131:
 	.loc 1 388 0
 	retw.n
-.LFE31:
+.LFE40:
 	.size	esp_task_wdt_status, .-esp_task_wdt_status
 	.section	.text.esp_task_wdt_feed,"ax",@progbits
 	.literal_position
@@ -1080,7 +1080,7 @@ esp_task_wdt_status:
 	.global	esp_task_wdt_feed
 	.type	esp_task_wdt_feed, @function
 esp_task_wdt_feed:
-.LFB32:
+.LFB41:
 	.loc 1 391 0
 	entry	sp, 48
 .LCFI11:
@@ -1168,39 +1168,42 @@ esp_task_wdt_feed:
 	call8	vTaskExitCritical
 .LVL145:
 	retw.n
-.LFE32:
+.LFE41:
 	.size	esp_task_wdt_feed, .-esp_task_wdt_feed
-	.section	.rodata.__func__$5855,"a",@progbits
-	.type	__func__$5855, @object
-	.size	__func__$5855, 17
-__func__$5855:
+	.section	.rodata.__func__$5901,"a",@progbits
+	.type	__func__$5901, @object
+	.size	__func__$5901, 17
+__func__$5901:
 	.string	"esp_task_wdt_add"
-	.section	.rodata.__func__$5843,"a",@progbits
-	.type	__func__$5843, @object
-	.size	__func__$5843, 20
-__func__$5843:
+	.section	.rodata.__func__$5889,"a",@progbits
+	.type	__func__$5889, @object
+	.size	__func__$5889, 20
+__func__$5889:
 	.string	"esp_task_wdt_deinit"
-	.section	.rodata.__func__$5839,"a",@progbits
-	.type	__func__$5839, @object
-	.size	__func__$5839, 18
-__func__$5839:
+	.section	.rodata.__func__$5885,"a",@progbits
+	.type	__func__$5885, @object
+	.size	__func__$5885, 18
+__func__$5885:
 	.string	"esp_task_wdt_init"
-	.section	.dram1,"a",@progbits
-	.type	__c$5828, @object
-	.size	__c$5828, 25
-__c$5828:
+	.section	.dram1.20,"a",@progbits
+	.type	__c$5874, @object
+	.size	__c$5874, 25
+__c$5874:
 	.string	"Tasks currently running:"
-	.type	__c$5823, @object
-	.size	__c$5823, 8
-__c$5823:
+	.section	.dram1.19,"a",@progbits
+	.type	__c$5869, @object
+	.size	__c$5869, 8
+__c$5869:
 	.string	"CPU 0/1"
-	.type	__c$5821, @object
-	.size	__c$5821, 6
-__c$5821:
+	.section	.dram1.18,"a",@progbits
+	.type	__c$5867, @object
+	.size	__c$5867, 6
+__c$5867:
 	.string	"CPU 1"
-	.type	__c$5819, @object
-	.size	__c$5819, 6
-__c$5819:
+	.section	.dram1.17,"a",@progbits
+	.type	__c$5865, @object
+	.size	__c$5865, 6
+__c$5865:
 	.string	"CPU 0"
 	.section	.data.twdt_spinlock,"aw",@progbits
 	.align	4
@@ -1234,10 +1237,10 @@ twdt_config:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI0-.LFB22
+	.4byte	.LCFI0-.LFB31
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1246,10 +1249,10 @@ twdt_config:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI1-.LFB23
+	.4byte	.LCFI1-.LFB32
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1258,10 +1261,10 @@ twdt_config:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI2-.LFB24
+	.4byte	.LCFI2-.LFB33
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1270,10 +1273,10 @@ twdt_config:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.byte	0x4
-	.4byte	.LCFI3-.LFB25
+	.4byte	.LCFI3-.LFB34
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1282,10 +1285,10 @@ twdt_config:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.byte	0x4
-	.4byte	.LCFI4-.LFB26
+	.4byte	.LCFI4-.LFB35
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1294,10 +1297,10 @@ twdt_config:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.byte	0x4
-	.4byte	.LCFI5-.LFB27
+	.4byte	.LCFI5-.LFB36
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1306,10 +1309,10 @@ twdt_config:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.byte	0x4
-	.4byte	.LCFI6-.LFB28
+	.4byte	.LCFI6-.LFB37
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1318,10 +1321,10 @@ twdt_config:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.byte	0x4
-	.4byte	.LCFI7-.LFB29
+	.4byte	.LCFI7-.LFB38
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1330,10 +1333,10 @@ twdt_config:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI8-.LFB21
+	.4byte	.LCFI8-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1342,10 +1345,10 @@ twdt_config:
 	.4byte	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI9-.LFB30
+	.4byte	.LCFI9-.LFB39
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1354,10 +1357,10 @@ twdt_config:
 	.4byte	.LEFDE20-.LASFDE20
 .LASFDE20:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI10-.LFB31
+	.4byte	.LCFI10-.LFB40
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1366,10 +1369,10 @@ twdt_config:
 	.4byte	.LEFDE22-.LASFDE22
 .LASFDE22:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.byte	0x4
-	.4byte	.LCFI11-.LFB32
+	.4byte	.LCFI11-.LFB41
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1531,7 +1534,7 @@ twdt_config:
 	.byte	0x4
 	.4byte	0x5e
 	.byte	0x9
-	.byte	0x2b
+	.byte	0x2c
 	.4byte	0x160
 	.uleb128 0xc
 	.4byte	.LASF22
@@ -1577,12 +1580,12 @@ twdt_config:
 	.uleb128 0x8
 	.byte	0x4
 	.byte	0x8
-	.byte	0x18
+	.byte	0x1a
 	.4byte	0x1f1
 	.uleb128 0xd
 	.4byte	.LASF34
 	.byte	0x8
-	.byte	0x19
+	.byte	0x1b
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0xa
@@ -1591,7 +1594,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF35
 	.byte	0x8
-	.byte	0x1a
+	.byte	0x1c
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -1600,7 +1603,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF36
 	.byte	0x8
-	.byte	0x1b
+	.byte	0x1d
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -1609,7 +1612,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF37
 	.byte	0x8
-	.byte	0x1c
+	.byte	0x1e
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -1618,7 +1621,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF38
 	.byte	0x8
-	.byte	0x1d
+	.byte	0x1f
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x10
@@ -1627,7 +1630,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF39
 	.byte	0x8
-	.byte	0x1e
+	.byte	0x20
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -1636,7 +1639,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF40
 	.byte	0x8
-	.byte	0x1f
+	.byte	0x21
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -1645,7 +1648,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF41
 	.byte	0x8
-	.byte	0x20
+	.byte	0x22
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -1655,85 +1658,85 @@ twdt_config:
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0x8
-	.byte	0x17
+	.byte	0x19
 	.4byte	0x20a
 	.uleb128 0xf
 	.4byte	0x170
 	.uleb128 0x10
 	.string	"val"
 	.byte	0x8
-	.byte	0x22
+	.byte	0x24
 	.4byte	0x7e
 	.byte	0
 	.uleb128 0x8
 	.byte	0x24
 	.byte	0x8
-	.byte	0x16
+	.byte	0x18
 	.4byte	0x27f
 	.uleb128 0x9
 	.4byte	.LASF42
 	.byte	0x8
-	.byte	0x23
+	.byte	0x25
 	.4byte	0x1f1
 	.byte	0
 	.uleb128 0x9
 	.4byte	.LASF43
 	.byte	0x8
-	.byte	0x24
+	.byte	0x26
 	.4byte	0x7e
 	.byte	0x4
 	.uleb128 0x9
 	.4byte	.LASF44
 	.byte	0x8
-	.byte	0x25
+	.byte	0x27
 	.4byte	0x7e
 	.byte	0x8
 	.uleb128 0x9
 	.4byte	.LASF45
 	.byte	0x8
-	.byte	0x26
+	.byte	0x28
 	.4byte	0x7e
 	.byte	0xc
 	.uleb128 0x9
 	.4byte	.LASF46
 	.byte	0x8
-	.byte	0x27
+	.byte	0x29
 	.4byte	0x7e
 	.byte	0x10
 	.uleb128 0x9
 	.4byte	.LASF47
 	.byte	0x8
-	.byte	0x28
+	.byte	0x2a
 	.4byte	0x7e
 	.byte	0x14
 	.uleb128 0x9
 	.4byte	.LASF48
 	.byte	0x8
-	.byte	0x29
+	.byte	0x2b
 	.4byte	0x7e
 	.byte	0x18
 	.uleb128 0x9
 	.4byte	.LASF49
 	.byte	0x8
-	.byte	0x2a
+	.byte	0x2c
 	.4byte	0x7e
 	.byte	0x1c
 	.uleb128 0x9
 	.4byte	.LASF50
 	.byte	0x8
-	.byte	0x2b
+	.byte	0x2d
 	.4byte	0x7e
 	.byte	0x20
 	.byte	0
 	.uleb128 0x8
 	.byte	0x4
 	.byte	0x8
-	.byte	0x2e
+	.byte	0x30
 	.4byte	0x32c
 	.uleb128 0xd
 	.4byte	.LASF34
 	.byte	0x8
-	.byte	0x2f
+	.byte	0x31
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0xe
@@ -1742,7 +1745,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF51
 	.byte	0x8
-	.byte	0x30
+	.byte	0x32
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -1751,7 +1754,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF52
 	.byte	0x8
-	.byte	0x31
+	.byte	0x33
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x3
@@ -1760,7 +1763,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF53
 	.byte	0x8
-	.byte	0x32
+	.byte	0x34
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x3
@@ -1769,7 +1772,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF36
 	.byte	0x8
-	.byte	0x33
+	.byte	0x35
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -1778,7 +1781,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF37
 	.byte	0x8
-	.byte	0x34
+	.byte	0x36
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -1787,7 +1790,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF54
 	.byte	0x8
-	.byte	0x35
+	.byte	0x37
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x2
@@ -1796,7 +1799,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF55
 	.byte	0x8
-	.byte	0x36
+	.byte	0x38
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x2
@@ -1805,7 +1808,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF56
 	.byte	0x8
-	.byte	0x37
+	.byte	0x39
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x2
@@ -1814,7 +1817,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF57
 	.byte	0x8
-	.byte	0x38
+	.byte	0x3a
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x2
@@ -1823,7 +1826,7 @@ twdt_config:
 	.uleb128 0x11
 	.string	"en"
 	.byte	0x8
-	.byte	0x39
+	.byte	0x3b
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -1833,25 +1836,25 @@ twdt_config:
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0x8
-	.byte	0x2d
+	.byte	0x2f
 	.4byte	0x345
 	.uleb128 0xf
 	.4byte	0x27f
 	.uleb128 0x10
 	.string	"val"
 	.byte	0x8
-	.byte	0x3b
+	.byte	0x3d
 	.4byte	0x7e
 	.byte	0
 	.uleb128 0x8
 	.byte	0x4
 	.byte	0x8
-	.byte	0x3e
+	.byte	0x40
 	.4byte	0x36c
 	.uleb128 0xd
 	.4byte	.LASF34
 	.byte	0x8
-	.byte	0x3f
+	.byte	0x41
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x10
@@ -1860,7 +1863,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF58
 	.byte	0x8
-	.byte	0x40
+	.byte	0x42
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x10
@@ -1870,25 +1873,25 @@ twdt_config:
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0x8
-	.byte	0x3d
+	.byte	0x3f
 	.4byte	0x385
 	.uleb128 0xf
 	.4byte	0x345
 	.uleb128 0x10
 	.string	"val"
 	.byte	0x8
-	.byte	0x42
+	.byte	0x44
 	.4byte	0x7e
 	.byte	0
 	.uleb128 0x8
 	.byte	0x4
 	.byte	0x8
-	.byte	0x4b
+	.byte	0x4d
 	.4byte	0x3e8
 	.uleb128 0xd
 	.4byte	.LASF34
 	.byte	0x8
-	.byte	0x4c
+	.byte	0x4e
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0xc
@@ -1897,7 +1900,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF59
 	.byte	0x8
-	.byte	0x4d
+	.byte	0x4f
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -1906,7 +1909,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF60
 	.byte	0x8
-	.byte	0x4e
+	.byte	0x50
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x2
@@ -1915,7 +1918,7 @@ twdt_config:
 	.uleb128 0x11
 	.string	"rdy"
 	.byte	0x8
-	.byte	0x4f
+	.byte	0x51
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -1924,7 +1927,7 @@ twdt_config:
 	.uleb128 0x11
 	.string	"max"
 	.byte	0x8
-	.byte	0x50
+	.byte	0x52
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0xf
@@ -1933,7 +1936,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF61
 	.byte	0x8
-	.byte	0x51
+	.byte	0x53
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -1943,25 +1946,25 @@ twdt_config:
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0x8
-	.byte	0x4a
+	.byte	0x4c
 	.4byte	0x401
 	.uleb128 0xf
 	.4byte	0x385
 	.uleb128 0x10
 	.string	"val"
 	.byte	0x8
-	.byte	0x53
+	.byte	0x55
 	.4byte	0x7e
 	.byte	0
 	.uleb128 0x8
 	.byte	0x4
 	.byte	0x8
-	.byte	0x56
+	.byte	0x58
 	.4byte	0x428
 	.uleb128 0xd
 	.4byte	.LASF34
 	.byte	0x8
-	.byte	0x57
+	.byte	0x59
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x7
@@ -1970,7 +1973,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF62
 	.byte	0x8
-	.byte	0x58
+	.byte	0x5a
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x19
@@ -1980,25 +1983,25 @@ twdt_config:
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0x8
-	.byte	0x55
+	.byte	0x57
 	.4byte	0x441
 	.uleb128 0xf
 	.4byte	0x401
 	.uleb128 0x10
 	.string	"val"
 	.byte	0x8
-	.byte	0x5a
+	.byte	0x5c
 	.4byte	0x7e
 	.byte	0
 	.uleb128 0x8
 	.byte	0x4
 	.byte	0x8
-	.byte	0x5d
+	.byte	0x5f
 	.4byte	0x4ee
 	.uleb128 0xd
 	.4byte	.LASF34
 	.byte	0x8
-	.byte	0x5e
+	.byte	0x60
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x7
@@ -2007,7 +2010,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF63
 	.byte	0x8
-	.byte	0x5f
+	.byte	0x61
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2016,7 +2019,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF64
 	.byte	0x8
-	.byte	0x60
+	.byte	0x62
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2025,7 +2028,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF65
 	.byte	0x8
-	.byte	0x61
+	.byte	0x63
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2034,7 +2037,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF35
 	.byte	0x8
-	.byte	0x62
+	.byte	0x64
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2043,7 +2046,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF36
 	.byte	0x8
-	.byte	0x63
+	.byte	0x65
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2052,7 +2055,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF37
 	.byte	0x8
-	.byte	0x64
+	.byte	0x66
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2061,7 +2064,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF38
 	.byte	0x8
-	.byte	0x65
+	.byte	0x67
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x10
@@ -2070,7 +2073,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF39
 	.byte	0x8
-	.byte	0x66
+	.byte	0x68
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2079,7 +2082,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF40
 	.byte	0x8
-	.byte	0x67
+	.byte	0x69
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2088,7 +2091,7 @@ twdt_config:
 	.uleb128 0x11
 	.string	"en"
 	.byte	0x8
-	.byte	0x68
+	.byte	0x6a
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2098,25 +2101,25 @@ twdt_config:
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0x8
-	.byte	0x5c
+	.byte	0x5e
 	.4byte	0x507
 	.uleb128 0xf
 	.4byte	0x441
 	.uleb128 0x10
 	.string	"val"
 	.byte	0x8
-	.byte	0x6a
+	.byte	0x6c
 	.4byte	0x7e
 	.byte	0
 	.uleb128 0x8
 	.byte	0x4
 	.byte	0x8
-	.byte	0x6d
+	.byte	0x6f
 	.4byte	0x52e
 	.uleb128 0xd
 	.4byte	.LASF34
 	.byte	0x8
-	.byte	0x6e
+	.byte	0x70
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x6
@@ -2125,7 +2128,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF66
 	.byte	0x8
-	.byte	0x6f
+	.byte	0x71
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1a
@@ -2135,25 +2138,25 @@ twdt_config:
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0x8
-	.byte	0x6c
+	.byte	0x6e
 	.4byte	0x547
 	.uleb128 0xf
 	.4byte	0x507
 	.uleb128 0x10
 	.string	"val"
 	.byte	0x8
-	.byte	0x71
+	.byte	0x73
 	.4byte	0x7e
 	.byte	0
 	.uleb128 0x8
 	.byte	0x4
 	.byte	0x8
-	.byte	0x7c
+	.byte	0x7e
 	.4byte	0x599
 	.uleb128 0x11
 	.string	"t0"
 	.byte	0x8
-	.byte	0x7d
+	.byte	0x7f
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2162,7 +2165,7 @@ twdt_config:
 	.uleb128 0x11
 	.string	"t1"
 	.byte	0x8
-	.byte	0x7e
+	.byte	0x80
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2171,7 +2174,7 @@ twdt_config:
 	.uleb128 0x11
 	.string	"wdt"
 	.byte	0x8
-	.byte	0x7f
+	.byte	0x81
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2180,7 +2183,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF67
 	.byte	0x8
-	.byte	0x80
+	.byte	0x82
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2189,7 +2192,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF68
 	.byte	0x8
-	.byte	0x81
+	.byte	0x83
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1c
@@ -2199,25 +2202,25 @@ twdt_config:
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0x8
-	.byte	0x7b
+	.byte	0x7d
 	.4byte	0x5b2
 	.uleb128 0xf
 	.4byte	0x547
 	.uleb128 0x10
 	.string	"val"
 	.byte	0x8
-	.byte	0x83
+	.byte	0x85
 	.4byte	0x7e
 	.byte	0
 	.uleb128 0x8
 	.byte	0x4
 	.byte	0x8
-	.byte	0x86
+	.byte	0x88
 	.4byte	0x604
 	.uleb128 0x11
 	.string	"t0"
 	.byte	0x8
-	.byte	0x87
+	.byte	0x89
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2226,7 +2229,7 @@ twdt_config:
 	.uleb128 0x11
 	.string	"t1"
 	.byte	0x8
-	.byte	0x88
+	.byte	0x8a
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2235,7 +2238,7 @@ twdt_config:
 	.uleb128 0x11
 	.string	"wdt"
 	.byte	0x8
-	.byte	0x89
+	.byte	0x8b
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2244,7 +2247,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF67
 	.byte	0x8
-	.byte	0x8a
+	.byte	0x8c
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2253,7 +2256,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF68
 	.byte	0x8
-	.byte	0x8b
+	.byte	0x8d
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1c
@@ -2263,25 +2266,25 @@ twdt_config:
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0x8
-	.byte	0x85
+	.byte	0x87
 	.4byte	0x61d
 	.uleb128 0xf
 	.4byte	0x5b2
 	.uleb128 0x10
 	.string	"val"
 	.byte	0x8
-	.byte	0x8d
+	.byte	0x8f
 	.4byte	0x7e
 	.byte	0
 	.uleb128 0x8
 	.byte	0x4
 	.byte	0x8
-	.byte	0x90
+	.byte	0x92
 	.4byte	0x66f
 	.uleb128 0x11
 	.string	"t0"
 	.byte	0x8
-	.byte	0x91
+	.byte	0x93
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2290,7 +2293,7 @@ twdt_config:
 	.uleb128 0x11
 	.string	"t1"
 	.byte	0x8
-	.byte	0x92
+	.byte	0x94
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2299,7 +2302,7 @@ twdt_config:
 	.uleb128 0x11
 	.string	"wdt"
 	.byte	0x8
-	.byte	0x93
+	.byte	0x95
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2308,7 +2311,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF67
 	.byte	0x8
-	.byte	0x94
+	.byte	0x96
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2317,7 +2320,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF68
 	.byte	0x8
-	.byte	0x95
+	.byte	0x97
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1c
@@ -2327,25 +2330,25 @@ twdt_config:
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0x8
-	.byte	0x8f
+	.byte	0x91
 	.4byte	0x688
 	.uleb128 0xf
 	.4byte	0x61d
 	.uleb128 0x10
 	.string	"val"
 	.byte	0x8
-	.byte	0x97
+	.byte	0x99
 	.4byte	0x7e
 	.byte	0
 	.uleb128 0x8
 	.byte	0x4
 	.byte	0x8
-	.byte	0x9a
+	.byte	0x9c
 	.4byte	0x6da
 	.uleb128 0x11
 	.string	"t0"
 	.byte	0x8
-	.byte	0x9b
+	.byte	0x9d
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2354,7 +2357,7 @@ twdt_config:
 	.uleb128 0x11
 	.string	"t1"
 	.byte	0x8
-	.byte	0x9c
+	.byte	0x9e
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2363,7 +2366,7 @@ twdt_config:
 	.uleb128 0x11
 	.string	"wdt"
 	.byte	0x8
-	.byte	0x9d
+	.byte	0x9f
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2372,7 +2375,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF67
 	.byte	0x8
-	.byte	0x9e
+	.byte	0xa0
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2381,7 +2384,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF68
 	.byte	0x8
-	.byte	0x9f
+	.byte	0xa1
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1c
@@ -2391,25 +2394,25 @@ twdt_config:
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0x8
-	.byte	0x99
+	.byte	0x9b
 	.4byte	0x6f3
 	.uleb128 0xf
 	.4byte	0x688
 	.uleb128 0x10
 	.string	"val"
 	.byte	0x8
-	.byte	0xa1
+	.byte	0xa3
 	.4byte	0x7e
 	.byte	0
 	.uleb128 0x8
 	.byte	0x4
 	.byte	0x8
-	.byte	0xb8
+	.byte	0xba
 	.4byte	0x71a
 	.uleb128 0xd
 	.4byte	.LASF69
 	.byte	0x8
-	.byte	0xb9
+	.byte	0xbb
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1c
@@ -2418,7 +2421,7 @@ twdt_config:
 	.uleb128 0xd
 	.4byte	.LASF70
 	.byte	0x8
-	.byte	0xba
+	.byte	0xbc
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x4
@@ -2428,25 +2431,25 @@ twdt_config:
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0x8
-	.byte	0xb7
+	.byte	0xb9
 	.4byte	0x733
 	.uleb128 0xf
 	.4byte	0x6f3
 	.uleb128 0x10
 	.string	"val"
 	.byte	0x8
-	.byte	0xbc
+	.byte	0xbe
 	.4byte	0x7e
 	.byte	0
 	.uleb128 0x8
 	.byte	0x4
 	.byte	0x8
-	.byte	0xbf
+	.byte	0xc1
 	.4byte	0x759
 	.uleb128 0xd
 	.4byte	.LASF34
 	.byte	0x8
-	.byte	0xc0
+	.byte	0xc2
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1f
@@ -2455,7 +2458,7 @@ twdt_config:
 	.uleb128 0x11
 	.string	"en"
 	.byte	0x8
-	.byte	0xc1
+	.byte	0xc3
 	.4byte	0x7e
 	.byte	0x4
 	.byte	0x1
@@ -2465,301 +2468,301 @@ twdt_config:
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0x8
-	.byte	0xbe
+	.byte	0xc0
 	.4byte	0x772
 	.uleb128 0xf
 	.4byte	0x733
 	.uleb128 0x10
 	.string	"val"
 	.byte	0x8
-	.byte	0xc3
+	.byte	0xc5
 	.4byte	0x7e
 	.byte	0
 	.uleb128 0x12
 	.2byte	0x100
 	.byte	0x8
-	.byte	0x15
+	.byte	0x17
 	.4byte	0x9b0
 	.uleb128 0x9
 	.4byte	.LASF71
 	.byte	0x8
-	.byte	0x2c
+	.byte	0x2e
 	.4byte	0x9b0
 	.byte	0
 	.uleb128 0x9
 	.4byte	.LASF72
 	.byte	0x8
-	.byte	0x3c
+	.byte	0x3e
 	.4byte	0x32c
 	.byte	0x48
 	.uleb128 0x9
 	.4byte	.LASF73
 	.byte	0x8
-	.byte	0x43
+	.byte	0x45
 	.4byte	0x36c
 	.byte	0x4c
 	.uleb128 0x9
 	.4byte	.LASF74
 	.byte	0x8
-	.byte	0x44
+	.byte	0x46
 	.4byte	0x7e
 	.byte	0x50
 	.uleb128 0x9
 	.4byte	.LASF75
 	.byte	0x8
-	.byte	0x45
+	.byte	0x47
 	.4byte	0x7e
 	.byte	0x54
 	.uleb128 0x9
 	.4byte	.LASF76
 	.byte	0x8
-	.byte	0x46
+	.byte	0x48
 	.4byte	0x7e
 	.byte	0x58
 	.uleb128 0x9
 	.4byte	.LASF77
 	.byte	0x8
-	.byte	0x47
+	.byte	0x49
 	.4byte	0x7e
 	.byte	0x5c
 	.uleb128 0x9
 	.4byte	.LASF78
 	.byte	0x8
-	.byte	0x48
+	.byte	0x4a
 	.4byte	0x7e
 	.byte	0x60
 	.uleb128 0x9
 	.4byte	.LASF79
 	.byte	0x8
-	.byte	0x49
+	.byte	0x4b
 	.4byte	0x7e
 	.byte	0x64
 	.uleb128 0x9
 	.4byte	.LASF80
 	.byte	0x8
-	.byte	0x54
+	.byte	0x56
 	.4byte	0x3e8
 	.byte	0x68
 	.uleb128 0x9
 	.4byte	.LASF81
 	.byte	0x8
-	.byte	0x5b
+	.byte	0x5d
 	.4byte	0x428
 	.byte	0x6c
 	.uleb128 0x9
 	.4byte	.LASF82
 	.byte	0x8
-	.byte	0x6b
+	.byte	0x6d
 	.4byte	0x4ee
 	.byte	0x70
 	.uleb128 0x9
 	.4byte	.LASF83
 	.byte	0x8
-	.byte	0x72
+	.byte	0x74
 	.4byte	0x52e
 	.byte	0x74
 	.uleb128 0x9
 	.4byte	.LASF84
 	.byte	0x8
-	.byte	0x73
+	.byte	0x75
 	.4byte	0x7e
 	.byte	0x78
 	.uleb128 0x9
 	.4byte	.LASF85
 	.byte	0x8
-	.byte	0x74
+	.byte	0x76
 	.4byte	0x7e
 	.byte	0x7c
 	.uleb128 0x9
 	.4byte	.LASF86
 	.byte	0x8
-	.byte	0x75
+	.byte	0x77
 	.4byte	0x7e
 	.byte	0x80
 	.uleb128 0x9
 	.4byte	.LASF87
 	.byte	0x8
-	.byte	0x76
+	.byte	0x78
 	.4byte	0x7e
 	.byte	0x84
 	.uleb128 0x9
 	.4byte	.LASF88
 	.byte	0x8
-	.byte	0x77
+	.byte	0x79
 	.4byte	0x7e
 	.byte	0x88
 	.uleb128 0x9
 	.4byte	.LASF89
 	.byte	0x8
-	.byte	0x78
+	.byte	0x7a
 	.4byte	0x7e
 	.byte	0x8c
 	.uleb128 0x9
 	.4byte	.LASF90
 	.byte	0x8
-	.byte	0x79
+	.byte	0x7b
 	.4byte	0x7e
 	.byte	0x90
 	.uleb128 0x9
 	.4byte	.LASF91
 	.byte	0x8
-	.byte	0x7a
+	.byte	0x7c
 	.4byte	0x7e
 	.byte	0x94
 	.uleb128 0x9
 	.4byte	.LASF92
 	.byte	0x8
-	.byte	0x84
+	.byte	0x86
 	.4byte	0x599
 	.byte	0x98
 	.uleb128 0x9
 	.4byte	.LASF93
 	.byte	0x8
-	.byte	0x8e
+	.byte	0x90
 	.4byte	0x604
 	.byte	0x9c
 	.uleb128 0x9
 	.4byte	.LASF94
 	.byte	0x8
-	.byte	0x98
+	.byte	0x9a
 	.4byte	0x66f
 	.byte	0xa0
 	.uleb128 0x9
 	.4byte	.LASF95
 	.byte	0x8
-	.byte	0xa2
+	.byte	0xa4
 	.4byte	0x6da
 	.byte	0xa4
 	.uleb128 0x9
 	.4byte	.LASF96
 	.byte	0x8
-	.byte	0xa3
+	.byte	0xa5
 	.4byte	0x7e
 	.byte	0xa8
 	.uleb128 0x9
 	.4byte	.LASF97
 	.byte	0x8
-	.byte	0xa4
+	.byte	0xa6
 	.4byte	0x7e
 	.byte	0xac
 	.uleb128 0x9
 	.4byte	.LASF98
 	.byte	0x8
-	.byte	0xa5
+	.byte	0xa7
 	.4byte	0x7e
 	.byte	0xb0
 	.uleb128 0x9
 	.4byte	.LASF99
 	.byte	0x8
-	.byte	0xa6
+	.byte	0xa8
 	.4byte	0x7e
 	.byte	0xb4
 	.uleb128 0x9
 	.4byte	.LASF100
 	.byte	0x8
-	.byte	0xa7
+	.byte	0xa9
 	.4byte	0x7e
 	.byte	0xb8
 	.uleb128 0x9
 	.4byte	.LASF101
 	.byte	0x8
-	.byte	0xa8
+	.byte	0xaa
 	.4byte	0x7e
 	.byte	0xbc
 	.uleb128 0x9
 	.4byte	.LASF102
 	.byte	0x8
-	.byte	0xa9
+	.byte	0xab
 	.4byte	0x7e
 	.byte	0xc0
 	.uleb128 0x9
 	.4byte	.LASF103
 	.byte	0x8
-	.byte	0xaa
+	.byte	0xac
 	.4byte	0x7e
 	.byte	0xc4
 	.uleb128 0x9
 	.4byte	.LASF104
 	.byte	0x8
-	.byte	0xab
+	.byte	0xad
 	.4byte	0x7e
 	.byte	0xc8
 	.uleb128 0x9
 	.4byte	.LASF105
 	.byte	0x8
-	.byte	0xac
+	.byte	0xae
 	.4byte	0x7e
 	.byte	0xcc
 	.uleb128 0x9
 	.4byte	.LASF106
 	.byte	0x8
-	.byte	0xad
+	.byte	0xaf
 	.4byte	0x7e
 	.byte	0xd0
 	.uleb128 0x9
 	.4byte	.LASF107
 	.byte	0x8
-	.byte	0xae
+	.byte	0xb0
 	.4byte	0x7e
 	.byte	0xd4
 	.uleb128 0x9
 	.4byte	.LASF108
 	.byte	0x8
-	.byte	0xaf
+	.byte	0xb1
 	.4byte	0x7e
 	.byte	0xd8
 	.uleb128 0x9
 	.4byte	.LASF109
 	.byte	0x8
-	.byte	0xb0
+	.byte	0xb2
 	.4byte	0x7e
 	.byte	0xdc
 	.uleb128 0x9
 	.4byte	.LASF110
 	.byte	0x8
-	.byte	0xb1
+	.byte	0xb3
 	.4byte	0x7e
 	.byte	0xe0
 	.uleb128 0x9
 	.4byte	.LASF111
 	.byte	0x8
-	.byte	0xb2
+	.byte	0xb4
 	.4byte	0x7e
 	.byte	0xe4
 	.uleb128 0x9
 	.4byte	.LASF112
 	.byte	0x8
-	.byte	0xb3
+	.byte	0xb5
 	.4byte	0x7e
 	.byte	0xe8
 	.uleb128 0x9
 	.4byte	.LASF113
 	.byte	0x8
-	.byte	0xb4
+	.byte	0xb6
 	.4byte	0x7e
 	.byte	0xec
 	.uleb128 0x9
 	.4byte	.LASF114
 	.byte	0x8
-	.byte	0xb5
+	.byte	0xb7
 	.4byte	0x7e
 	.byte	0xf0
 	.uleb128 0x9
 	.4byte	.LASF115
 	.byte	0x8
-	.byte	0xb6
+	.byte	0xb8
 	.4byte	0x7e
 	.byte	0xf4
 	.uleb128 0x9
 	.4byte	.LASF116
 	.byte	0x8
-	.byte	0xbd
+	.byte	0xbf
 	.4byte	0x71a
 	.byte	0xf8
 	.uleb128 0x13
 	.string	"clk"
 	.byte	0x8
-	.byte	0xc4
+	.byte	0xc6
 	.4byte	0x759
 	.byte	0xfc
 	.byte	0
@@ -2773,7 +2776,7 @@ twdt_config:
 	.uleb128 0x3
 	.4byte	.LASF117
 	.byte	0x8
-	.byte	0xc5
+	.byte	0xc7
 	.4byte	0x9cb
 	.uleb128 0x16
 	.4byte	0x772
@@ -2988,8 +2991,8 @@ twdt_config:
 	.byte	0x1
 	.byte	0x59
 	.4byte	0xb1c
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xbc2
@@ -3030,8 +3033,8 @@ twdt_config:
 	.4byte	.LASF209
 	.byte	0x1
 	.byte	0x6d
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xbf5
@@ -3051,16 +3054,16 @@ twdt_config:
 	.4byte	.LASF210
 	.byte	0x1
 	.byte	0x7f
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x21
 	.4byte	.LASF211
 	.byte	0x1
 	.byte	0x88
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xdd8
@@ -3245,7 +3248,7 @@ twdt_config:
 	.byte	0x5d
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__c$5828
+	.4byte	__c$5874
 	.byte	0
 	.uleb128 0x25
 	.4byte	.LVL29
@@ -3300,8 +3303,8 @@ twdt_config:
 	.byte	0x1
 	.byte	0xba
 	.4byte	0xb2
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xef4
@@ -3322,7 +3325,7 @@ twdt_config:
 	.4byte	0xf04
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5839
+	.4byte	__func__$5885
 	.uleb128 0x2b
 	.4byte	.Ldebug_ranges0+0x18
 	.4byte	0xe90
@@ -3386,7 +3389,7 @@ twdt_config:
 	.byte	0x5d
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5839
+	.4byte	__func__$5885
 	.uleb128 0x27
 	.uleb128 0x1
 	.byte	0x5e
@@ -3467,8 +3470,8 @@ twdt_config:
 	.byte	0x1
 	.byte	0xea
 	.4byte	0xb2
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xfdc
@@ -3477,7 +3480,7 @@ twdt_config:
 	.4byte	0xfec
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5843
+	.4byte	__func__$5889
 	.uleb128 0x24
 	.4byte	.LBB8
 	.4byte	.LBE8-.LBB8
@@ -3518,7 +3521,7 @@ twdt_config:
 	.byte	0x5d
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5843
+	.4byte	__func__$5889
 	.uleb128 0x27
 	.uleb128 0x1
 	.byte	0x5e
@@ -3588,8 +3591,8 @@ twdt_config:
 	.byte	0x1
 	.byte	0xfe
 	.4byte	0xb2
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1197
@@ -3618,7 +3621,7 @@ twdt_config:
 	.4byte	0x11a7
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5855
+	.4byte	__func__$5901
 	.uleb128 0x2b
 	.4byte	.Ldebug_ranges0+0x30
 	.4byte	0x10d4
@@ -3674,7 +3677,7 @@ twdt_config:
 	.byte	0x5d
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5855
+	.4byte	__func__$5901
 	.uleb128 0x27
 	.uleb128 0x1
 	.byte	0x5e
@@ -3811,8 +3814,8 @@ twdt_config:
 	.byte	0x1
 	.2byte	0x12e
 	.4byte	0xb2
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1268
@@ -3902,8 +3905,8 @@ twdt_config:
 	.byte	0x1
 	.byte	0x4e
 	.4byte	0xbd
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x128b
@@ -3916,8 +3919,8 @@ twdt_config:
 	.byte	0x1
 	.2byte	0x146
 	.4byte	0xb2
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x13b7
@@ -4062,8 +4065,8 @@ twdt_config:
 	.byte	0x1
 	.2byte	0x171
 	.4byte	0xb2
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1435
@@ -4115,8 +4118,8 @@ twdt_config:
 	.4byte	.LASF212
 	.byte	0x1
 	.2byte	0x186
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1501
@@ -4242,7 +4245,7 @@ twdt_config:
 	.uleb128 0x35
 	.4byte	.LASF213
 	.byte	0x8
-	.byte	0xc6
+	.byte	0xc8
 	.4byte	0x9c0
 	.uleb128 0x36
 	.4byte	.LASF187
@@ -4268,12 +4271,12 @@ twdt_config:
 	.4byte	.LASF191
 	.4byte	.LASF191
 	.byte	0x5
-	.byte	0xda
+	.byte	0xf4
 	.uleb128 0x36
 	.4byte	.LASF192
 	.4byte	.LASF192
 	.byte	0x5
-	.byte	0xd9
+	.byte	0xf3
 	.uleb128 0x37
 	.4byte	.LASF193
 	.4byte	.LASF193
@@ -5154,7 +5157,7 @@ twdt_config:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL5
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5176,7 +5179,7 @@ twdt_config:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL10
-	.4byte	.LFE25
+	.4byte	.LFE34
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5205,7 +5208,7 @@ twdt_config:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL28
-	.4byte	.LFE25
+	.4byte	.LFE34
 	.2byte	0x2
 	.byte	0x31
 	.byte	0x9f
@@ -5247,7 +5250,7 @@ twdt_config:
 	.byte	0x23
 	.uleb128 0x4
 	.4byte	.LVL49
-	.4byte	.LFE26
+	.4byte	.LFE35
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5261,7 +5264,7 @@ twdt_config:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL43
-	.4byte	.LFE26
+	.4byte	.LFE35
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5328,7 +5331,7 @@ twdt_config:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL81
-	.4byte	.LFE28
+	.4byte	.LFE37
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
@@ -5407,7 +5410,7 @@ twdt_config:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL113
-	.4byte	.LFE30
+	.4byte	.LFE39
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
@@ -5496,30 +5499,30 @@ twdt_config:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
 	.4byte	.LFB31
 	.4byte	.LFE31-.LFB31
 	.4byte	.LFB32
 	.4byte	.LFE32-.LFB32
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -5548,30 +5551,30 @@ twdt_config:
 	.4byte	.LBE15
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB24
-	.4byte	.LFE24
-	.4byte	.LFB25
-	.4byte	.LFE25
-	.4byte	.LFB26
-	.4byte	.LFE26
-	.4byte	.LFB27
-	.4byte	.LFE27
-	.4byte	.LFB28
-	.4byte	.LFE28
-	.4byte	.LFB29
-	.4byte	.LFE29
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB30
-	.4byte	.LFE30
 	.4byte	.LFB31
 	.4byte	.LFE31
 	.4byte	.LFB32
 	.4byte	.LFE32
+	.4byte	.LFB33
+	.4byte	.LFE33
+	.4byte	.LFB34
+	.4byte	.LFE34
+	.4byte	.LFB35
+	.4byte	.LFE35
+	.4byte	.LFB36
+	.4byte	.LFE36
+	.4byte	.LFB37
+	.4byte	.LFE37
+	.4byte	.LFB38
+	.4byte	.LFE38
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB39
+	.4byte	.LFE39
+	.4byte	.LFB40
+	.4byte	.LFE40
+	.4byte	.LFB41
+	.4byte	.LFE41
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

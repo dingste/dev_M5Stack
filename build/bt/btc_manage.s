@@ -8,29 +8,29 @@
 	.global	esp_profile_cb_reset
 	.type	esp_profile_cb_reset, @function
 esp_profile_cb_reset:
-.LFB30:
-	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/btc/core/btc_manage.c"
-	.loc 1 25 0
+.LFB33:
+	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/btc/core/btc_manage.c"
+	.loc 1 22 0
 	entry	sp, 32
 .LCFI0:
 .LVL0:
-	.loc 1 25 0
+	.loc 1 22 0
 	movi.n	a8, 0
-	.loc 1 29 0
+	.loc 1 26 0
 	l32r	a12, .LC2
 	mov.n	a11, a8
 	movi.n	a9, 0x10
 	loop	a9, .L2_LEND
 .LVL1:
 .L2:
-	.loc 1 29 0 is_stmt 0 discriminator 3
+	.loc 1 26 0 is_stmt 0 discriminator 3
 	add.n	a10, a8, a12
 	s32i.n	a11, a10, 0
 	addi.n	a8, a8, 4
 	.L2_LEND:
-	.loc 1 31 0 is_stmt 1
+	.loc 1 28 0 is_stmt 1
 	retw.n
-.LFE30:
+.LFE33:
 	.size	esp_profile_cb_reset, .-esp_profile_cb_reset
 	.section	.text.btc_profile_cb_set,"ax",@progbits
 	.literal_position
@@ -39,31 +39,31 @@ esp_profile_cb_reset:
 	.global	btc_profile_cb_set
 	.type	btc_profile_cb_set, @function
 btc_profile_cb_set:
-.LFB31:
-	.loc 1 34 0
+.LFB34:
+	.loc 1 31 0
 .LVL2:
 	entry	sp, 32
 .LCFI1:
-	.loc 1 34 0
+	.loc 1 31 0
 	mov.n	a8, a2
-	.loc 1 35 0
+	.loc 1 32 0
 	movi.n	a9, 0xf
-	.loc 1 36 0
+	.loc 1 33 0
 	movi.n	a2, -1
 .LVL3:
-	.loc 1 35 0
+	.loc 1 32 0
 	bltu	a9, a8, .L5
-	.loc 1 39 0
+	.loc 1 36 0
 	l32r	a2, .LC3
 	addx4	a8, a8, a2
 .LVL4:
 	s32i.n	a3, a8, 0
-	.loc 1 41 0
+	.loc 1 38 0
 	movi.n	a2, 0
 .L5:
-	.loc 1 42 0
+	.loc 1 39 0
 	retw.n
-.LFE31:
+.LFE34:
 	.size	btc_profile_cb_set, .-btc_profile_cb_set
 	.section	.text.btc_profile_cb_get,"ax",@progbits
 	.literal_position
@@ -72,29 +72,29 @@ btc_profile_cb_set:
 	.global	btc_profile_cb_get
 	.type	btc_profile_cb_get, @function
 btc_profile_cb_get:
-.LFB32:
-	.loc 1 45 0
+.LFB35:
+	.loc 1 42 0
 .LVL5:
 	entry	sp, 32
 .LCFI2:
-	.loc 1 45 0
+	.loc 1 42 0
 	mov.n	a8, a2
-	.loc 1 46 0
+	.loc 1 43 0
 	movi.n	a9, 0xf
-	.loc 1 47 0
+	.loc 1 44 0
 	movi.n	a2, 0
 .LVL6:
-	.loc 1 46 0
+	.loc 1 43 0
 	bltu	a9, a8, .L8
-	.loc 1 50 0
+	.loc 1 47 0
 	l32r	a2, .LC4
 	addx4	a8, a8, a2
 .LVL7:
 	l32i.n	a2, a8, 0
 .L8:
-	.loc 1 51 0
+	.loc 1 48 0
 	retw.n
-.LFE32:
+.LFE35:
 	.size	btc_profile_cb_get, .-btc_profile_cb_get
 	.section	.bss.btc_profile_cb_tab,"aw",@nobits
 	.align	4
@@ -121,10 +121,10 @@ btc_profile_cb_tab:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI0-.LFB30
+	.4byte	.LCFI0-.LFB33
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -133,10 +133,10 @@ btc_profile_cb_tab:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.byte	0x4
-	.4byte	.LCFI1-.LFB31
+	.4byte	.LCFI1-.LFB34
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -145,10 +145,10 @@ btc_profile_cb_tab:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.byte	0x4
-	.4byte	.LCFI2-.LFB32
+	.4byte	.LCFI2-.LFB35
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -158,7 +158,7 @@ btc_profile_cb_tab:
 	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
 	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
 	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/btc/include/btc/btc_task.h"
+	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/btc/include/btc/btc_task.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
 	.4byte	0x200
@@ -215,45 +215,45 @@ btc_profile_cb_tab:
 	.byte	0x3
 	.byte	0x15
 	.4byte	0x2c
-	.uleb128 0x3
-	.4byte	.LASF9
+	.uleb128 0x5
 	.byte	0x4
-	.byte	0x21
-	.4byte	0x68
 	.uleb128 0x2
-	.byte	0x1
-	.byte	0x2
+	.byte	0x4
+	.byte	0x5
+	.4byte	.LASF9
+	.uleb128 0x2
+	.byte	0x4
+	.byte	0x7
 	.4byte	.LASF10
 	.uleb128 0x2
 	.byte	0x4
 	.byte	0x7
 	.4byte	.LASF11
-	.uleb128 0x5
-	.4byte	0x73
-	.4byte	0x9c
-	.uleb128 0x6
-	.4byte	0x85
-	.byte	0x5
-	.byte	0
 	.uleb128 0x2
 	.byte	0x1
 	.byte	0x8
 	.4byte	.LASF12
-	.uleb128 0x7
-	.byte	0x4
 	.uleb128 0x2
-	.byte	0x4
-	.byte	0x5
+	.byte	0x1
+	.byte	0x2
 	.4byte	.LASF13
-	.uleb128 0x2
-	.byte	0x4
-	.byte	0x7
+	.uleb128 0x3
 	.4byte	.LASF14
+	.byte	0x4
+	.byte	0x1a
+	.4byte	0x68
+	.uleb128 0x6
+	.4byte	0x98
+	.4byte	0xb3
+	.uleb128 0x7
+	.4byte	0x7c
+	.byte	0x5
+	.byte	0
 	.uleb128 0x8
 	.byte	0x4
 	.4byte	0x53
 	.byte	0x5
-	.byte	0x2a
+	.byte	0x2d
 	.4byte	0x126
 	.uleb128 0x9
 	.4byte	.LASF15
@@ -310,69 +310,69 @@ btc_profile_cb_tab:
 	.uleb128 0x3
 	.4byte	.LASF32
 	.byte	0x5
-	.byte	0x43
+	.byte	0x56
 	.4byte	0xb3
 	.uleb128 0xa
 	.4byte	.LASF42
 	.byte	0x1
-	.byte	0x18
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.byte	0x15
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x154
 	.uleb128 0xb
 	.string	"i"
 	.byte	0x1
-	.byte	0x1a
+	.byte	0x17
 	.4byte	0x4c
 	.4byte	.LLST0
 	.byte	0
 	.uleb128 0xc
 	.4byte	.LASF34
 	.byte	0x1
-	.byte	0x21
+	.byte	0x1e
 	.4byte	0x4c
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x189
 	.uleb128 0xd
 	.4byte	.LASF33
 	.byte	0x1
-	.byte	0x21
+	.byte	0x1e
 	.4byte	0x126
 	.4byte	.LLST1
 	.uleb128 0xe
 	.string	"cb"
 	.byte	0x1
-	.byte	0x21
-	.4byte	0xa3
+	.byte	0x1e
+	.4byte	0x73
 	.uleb128 0x1
 	.byte	0x53
 	.byte	0
 	.uleb128 0xc
 	.4byte	.LASF35
 	.byte	0x1
-	.byte	0x2c
-	.4byte	0xa3
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.byte	0x29
+	.4byte	0x73
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1b2
 	.uleb128 0xd
 	.4byte	.LASF33
 	.byte	0x1
-	.byte	0x2c
+	.byte	0x29
 	.4byte	0x126
 	.4byte	.LLST2
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LASF36
 	.byte	0x4
-	.2byte	0x2cc
+	.2byte	0x2b8
 	.4byte	0x1c5
 	.byte	0x6
 	.byte	0xff
@@ -382,11 +382,11 @@ btc_profile_cb_tab:
 	.byte	0xff
 	.byte	0xff
 	.uleb128 0x10
-	.4byte	0x8c
+	.4byte	0xa3
 	.uleb128 0xf
 	.4byte	.LASF37
 	.byte	0x4
-	.2byte	0x2cd
+	.2byte	0x2b9
 	.4byte	0x1dd
 	.byte	0x6
 	.byte	0
@@ -396,18 +396,18 @@ btc_profile_cb_tab:
 	.byte	0
 	.byte	0
 	.uleb128 0x10
-	.4byte	0x8c
-	.uleb128 0x5
 	.4byte	0xa3
-	.4byte	0x1f2
 	.uleb128 0x6
-	.4byte	0x85
+	.4byte	0x73
+	.4byte	0x1f2
+	.uleb128 0x7
+	.4byte	0x7c
 	.byte	0xf
 	.byte	0
 	.uleb128 0x11
 	.4byte	.LASF38
 	.byte	0x1
-	.byte	0x16
+	.byte	0x13
 	.4byte	0x1e2
 	.uleb128 0x5
 	.byte	0x3
@@ -470,6 +470,13 @@ btc_profile_cb_tab:
 	.byte	0
 	.byte	0
 	.uleb128 0x5
+	.uleb128 0xf
+	.byte	0
+	.uleb128 0xb
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x6
 	.uleb128 0x1
 	.byte	0x1
 	.uleb128 0x49
@@ -478,19 +485,12 @@ btc_profile_cb_tab:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x7
 	.uleb128 0x21
 	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x2f
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x7
-	.uleb128 0xf
-	.byte	0
-	.uleb128 0xb
 	.uleb128 0xb
 	.byte	0
 	.byte	0
@@ -673,7 +673,7 @@ btc_profile_cb_tab:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL4
-	.4byte	.LFE31
+	.4byte	.LFE34
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -691,7 +691,7 @@ btc_profile_cb_tab:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL7
-	.4byte	.LFE32
+	.4byte	.LFE35
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -707,22 +707,22 @@ btc_profile_cb_tab:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB30
-	.4byte	.LFE30
-	.4byte	.LFB31
-	.4byte	.LFE31
-	.4byte	.LFB32
-	.4byte	.LFE32
+	.4byte	.LFB33
+	.4byte	.LFE33
+	.4byte	.LFB34
+	.4byte	.LFE34
+	.4byte	.LFB35
+	.4byte	.LFE35
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -738,7 +738,7 @@ btc_profile_cb_tab:
 	.string	"BTC_PID_GATTS"
 .LASF23:
 	.string	"BTC_PID_BLUFI"
-.LASF9:
+.LASF14:
 	.string	"UINT8"
 .LASF3:
 	.string	"short unsigned int"
@@ -756,7 +756,7 @@ btc_profile_cb_tab:
 	.string	"btc_profile_cb_set"
 .LASF27:
 	.string	"BTC_PID_PRF_QUE"
-.LASF14:
+.LASF11:
 	.string	"long unsigned int"
 .LASF38:
 	.string	"btc_profile_cb_tab"
@@ -776,8 +776,10 @@ btc_profile_cb_tab:
 	.string	"uint8_t"
 .LASF22:
 	.string	"BTC_PID_SPPLIKE"
-.LASF11:
+.LASF10:
 	.string	"sizetype"
+.LASF40:
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/btc/core/btc_manage.c"
 .LASF5:
 	.string	"long long int"
 .LASF36:
@@ -794,7 +796,7 @@ btc_profile_cb_tab:
 	.string	"BTC_PID_BLE_HID"
 .LASF19:
 	.string	"BTC_PID_GATT_COMMON"
-.LASF13:
+.LASF9:
 	.string	"long int"
 .LASF37:
 	.string	"bd_addr_null"
@@ -806,9 +808,7 @@ btc_profile_cb_tab:
 	.string	"signed char"
 .LASF18:
 	.string	"BTC_PID_GATTC"
-.LASF40:
-	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/btc/core/btc_manage.c"
-.LASF10:
+.LASF13:
 	.string	"_Bool"
 .LASF6:
 	.string	"long long unsigned int"

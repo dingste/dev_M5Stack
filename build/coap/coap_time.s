@@ -8,7 +8,7 @@
 	.global	coap_clock_init
 	.type	coap_clock_init, @function
 coap_clock_init:
-.LFB38:
+.LFB47:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/coap/libcoap/src/coap_time.c"
 	.loc 1 27 0
 	entry	sp, 48
@@ -23,7 +23,7 @@ coap_clock_init:
 	l32r	a8, .LC0
 	s32i.n	a9, a8, 0
 	retw.n
-.LFE38:
+.LFE47:
 	.size	coap_clock_init, .-coap_clock_init
 	.section	.text.coap_ticks,"ax",@progbits
 	.literal_position
@@ -32,7 +32,7 @@ coap_clock_init:
 	.global	coap_ticks
 	.type	coap_ticks, @function
 coap_ticks:
-.LFB39:
+.LFB48:
 	.loc 1 49 0
 .LVL1:
 	entry	sp, 48
@@ -53,7 +53,7 @@ coap_ticks:
 	slli	a8, a8, 3
 	s32i.n	a8, a2, 0
 	retw.n
-.LFE39:
+.LFE48:
 	.size	coap_ticks, .-coap_ticks
 	.section	.text.coap_ticks_to_rt,"ax",@progbits
 	.literal_position
@@ -63,7 +63,7 @@ coap_ticks:
 	.global	coap_ticks_to_rt
 	.type	coap_ticks_to_rt, @function
 coap_ticks_to_rt:
-.LFB40:
+.LFB49:
 	.loc 1 82 0
 .LVL3:
 	entry	sp, 32
@@ -78,7 +78,7 @@ coap_ticks_to_rt:
 	.loc 1 84 0
 	add.n	a2, a2, a8
 	retw.n
-.LFE40:
+.LFE49:
 	.size	coap_ticks_to_rt, .-coap_ticks_to_rt
 	.section	.bss.coap_clock_offset,"aw",@nobits
 	.align	4
@@ -105,10 +105,10 @@ coap_clock_offset:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI0-.LFB38
+	.4byte	.LCFI0-.LFB47
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -117,10 +117,10 @@ coap_clock_offset:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI1-.LFB39
+	.4byte	.LCFI1-.LFB48
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -129,10 +129,10 @@ coap_clock_offset:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.byte	0x4
-	.4byte	.LCFI2-.LFB40
+	.4byte	.LCFI2-.LFB49
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -251,8 +251,8 @@ coap_clock_offset:
 	.4byte	.LASF18
 	.byte	0x1
 	.byte	0x1b
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x10a
@@ -284,8 +284,8 @@ coap_clock_offset:
 	.4byte	.LASF19
 	.byte	0x1
 	.byte	0x31
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x159
@@ -334,8 +334,8 @@ coap_clock_offset:
 	.byte	0x1
 	.byte	0x52
 	.4byte	0xc7
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x186
@@ -639,7 +639,7 @@ coap_clock_offset:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL4
-	.4byte	.LFE40
+	.4byte	.LFE49
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -655,22 +655,22 @@ coap_clock_offset:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB38
-	.4byte	.LFE38
-	.4byte	.LFB39
-	.4byte	.LFE39
-	.4byte	.LFB40
-	.4byte	.LFE40
+	.4byte	.LFB47
+	.4byte	.LFE47
+	.4byte	.LFB48
+	.4byte	.LFE48
+	.4byte	.LFB49
+	.4byte	.LFE49
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

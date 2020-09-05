@@ -1,14 +1,14 @@
 	.file	"cache_utils.c"
 	.text
 .Ltext0:
-	.section	.iram1,"ax",@progbits
+	.section	.iram1.30,"ax",@progbits
 	.literal_position
 	.literal .LC0, 1072693312
 	.literal .LC1, 1072693316
 	.align	4
 	.type	spi_flash_restore_cache$part$0, @function
 spi_flash_restore_cache$part$0:
-.LFB36:
+.LFB45:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/spi_flash/cache_utils.c"
 	.loc 1 282 0
 .LVL0:
@@ -60,8 +60,9 @@ spi_flash_restore_cache$part$0:
 	memw
 	s32i.n	a2, a9, 0
 	retw.n
-.LFE36:
+.LFE45:
 	.size	spi_flash_restore_cache$part$0, .-spi_flash_restore_cache$part$0
+	.section	.iram1.29,"ax",@progbits
 	.literal_position
 	.literal .LC2, 1072693316
 	.literal .LC3, 1072694256
@@ -70,7 +71,7 @@ spi_flash_restore_cache$part$0:
 	.align	4
 	.type	spi_flash_disable_cache$constprop$1, @function
 spi_flash_disable_cache$constprop$1:
-.LFB37:
+.LFB46:
 	.loc 1 263 0
 	entry	sp, 32
 .LCFI1:
@@ -130,26 +131,26 @@ spi_flash_disable_cache$constprop$1:
 	l32r	a9, .LC5
 	s32i.n	a8, a9, 0
 	retw.n
-.LFE37:
+.LFE46:
 	.size	spi_flash_disable_cache$constprop$1, .-spi_flash_disable_cache$constprop$1
 	.section	.text.spi_flash_init_lock,"ax",@progbits
 	.align	4
 	.global	spi_flash_init_lock
 	.type	spi_flash_init_lock, @function
 spi_flash_init_lock:
-.LFB26:
+.LFB35:
 	.loc 1 207 0
 	entry	sp, 32
 .LCFI2:
 	retw.n
-.LFE26:
+.LFE35:
 	.size	spi_flash_init_lock, .-spi_flash_init_lock
 	.section	.text.spi_flash_op_lock,"ax",@progbits
 	.align	4
 	.global	spi_flash_op_lock
 	.type	spi_flash_op_lock, @function
 spi_flash_op_lock:
-.LFB27:
+.LFB36:
 	.loc 1 211 0
 	.loc 1 211 0
 	entry	sp, 32
@@ -158,14 +159,14 @@ spi_flash_op_lock:
 	call8	vTaskSuspendAll
 .LVL7:
 	retw.n
-.LFE27:
+.LFE36:
 	.size	spi_flash_op_lock, .-spi_flash_op_lock
 	.section	.text.spi_flash_op_unlock,"ax",@progbits
 	.align	4
 	.global	spi_flash_op_unlock
 	.type	spi_flash_op_unlock, @function
 spi_flash_op_unlock:
-.LFB28:
+.LFB37:
 	.loc 1 216 0
 	entry	sp, 32
 .LCFI4:
@@ -173,14 +174,14 @@ spi_flash_op_unlock:
 	call8	xTaskResumeAll
 .LVL8:
 	retw.n
-.LFE28:
+.LFE37:
 	.size	spi_flash_op_unlock, .-spi_flash_op_unlock
-	.section	.iram1
+	.section	.iram1.25,"ax",@progbits
 	.align	4
 	.global	spi_flash_disable_interrupts_caches_and_other_cpu
 	.type	spi_flash_disable_interrupts_caches_and_other_cpu, @function
 spi_flash_disable_interrupts_caches_and_other_cpu:
-.LFB29:
+.LFB38:
 	.loc 1 222 0
 	entry	sp, 32
 .LCFI5:
@@ -198,15 +199,16 @@ spi_flash_disable_interrupts_caches_and_other_cpu:
 	call8	spi_flash_disable_cache$constprop$1
 .LVL11:
 	retw.n
-.LFE29:
+.LFE38:
 	.size	spi_flash_disable_interrupts_caches_and_other_cpu, .-spi_flash_disable_interrupts_caches_and_other_cpu
+	.section	.iram1.26,"ax",@progbits
 	.literal_position
 	.literal .LC6, s_flash_op_cache_state
 	.align	4
 	.global	spi_flash_enable_interrupts_caches_and_other_cpu
 	.type	spi_flash_enable_interrupts_caches_and_other_cpu, @function
 spi_flash_enable_interrupts_caches_and_other_cpu:
-.LFB30:
+.LFB39:
 	.loc 1 229 0
 	entry	sp, 32
 .LCFI6:
@@ -231,13 +233,14 @@ spi_flash_enable_interrupts_caches_and_other_cpu:
 	retw.n
 .LBE85:
 .LBE84:
-.LFE30:
+.LFE39:
 	.size	spi_flash_enable_interrupts_caches_and_other_cpu, .-spi_flash_enable_interrupts_caches_and_other_cpu
+	.section	.iram1.27,"ax",@progbits
 	.align	4
 	.global	spi_flash_disable_interrupts_caches_and_other_cpu_no_os
 	.type	spi_flash_disable_interrupts_caches_and_other_cpu_no_os, @function
 spi_flash_disable_interrupts_caches_and_other_cpu_no_os:
-.LFB31:
+.LFB40:
 	.loc 1 236 0
 	entry	sp, 32
 .LCFI7:
@@ -248,15 +251,16 @@ spi_flash_disable_interrupts_caches_and_other_cpu_no_os:
 	call8	spi_flash_disable_cache$constprop$1
 .LVL17:
 	retw.n
-.LFE31:
+.LFE40:
 	.size	spi_flash_disable_interrupts_caches_and_other_cpu_no_os, .-spi_flash_disable_interrupts_caches_and_other_cpu_no_os
+	.section	.iram1.28,"ax",@progbits
 	.literal_position
 	.literal .LC7, s_flash_op_cache_state
 	.align	4
 	.global	spi_flash_enable_interrupts_caches_no_os
 	.type	spi_flash_enable_interrupts_caches_no_os, @function
 spi_flash_enable_interrupts_caches_no_os:
-.LFB32:
+.LFB41:
 	.loc 1 244 0
 	entry	sp, 32
 .LCFI8:
@@ -274,15 +278,16 @@ spi_flash_enable_interrupts_caches_no_os:
 	call8	esp_intr_noniram_enable
 .LVL20:
 	retw.n
-.LFE32:
+.LFE41:
 	.size	spi_flash_enable_interrupts_caches_no_os, .-spi_flash_enable_interrupts_caches_no_os
+	.section	.iram1.31,"ax",@progbits
 	.literal_position
 	.literal .LC8, 1072693312
 	.align	4
 	.global	spi_flash_cache_enabled
 	.type	spi_flash_cache_enabled, @function
 spi_flash_cache_enabled:
-.LFB35:
+.LFB44:
 	.loc 1 295 0
 	entry	sp, 32
 .LCFI9:
@@ -300,7 +305,7 @@ spi_flash_cache_enabled:
 	extui	a2, a2, 3, 1
 .LVL23:
 	retw.n
-.LFE35:
+.LFE44:
 	.size	spi_flash_cache_enabled, .-spi_flash_cache_enabled
 	.section	.bss.s_flash_op_cache_state,"aw",@nobits
 	.align	4
@@ -327,10 +332,10 @@ s_flash_op_cache_state:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.byte	0x4
-	.4byte	.LCFI0-.LFB36
+	.4byte	.LCFI0-.LFB45
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -339,10 +344,10 @@ s_flash_op_cache_state:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.byte	0x4
-	.4byte	.LCFI1-.LFB37
+	.4byte	.LCFI1-.LFB46
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -351,10 +356,10 @@ s_flash_op_cache_state:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.byte	0x4
-	.4byte	.LCFI2-.LFB26
+	.4byte	.LCFI2-.LFB35
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -363,10 +368,10 @@ s_flash_op_cache_state:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.byte	0x4
-	.4byte	.LCFI3-.LFB27
+	.4byte	.LCFI3-.LFB36
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -375,10 +380,10 @@ s_flash_op_cache_state:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.byte	0x4
-	.4byte	.LCFI4-.LFB28
+	.4byte	.LCFI4-.LFB37
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -387,10 +392,10 @@ s_flash_op_cache_state:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.byte	0x4
-	.4byte	.LCFI5-.LFB29
+	.4byte	.LCFI5-.LFB38
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -399,10 +404,10 @@ s_flash_op_cache_state:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI6-.LFB30
+	.4byte	.LCFI6-.LFB39
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -411,10 +416,10 @@ s_flash_op_cache_state:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI7-.LFB31
+	.4byte	.LCFI7-.LFB40
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -423,10 +428,10 @@ s_flash_op_cache_state:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.byte	0x4
-	.4byte	.LCFI8-.LFB32
+	.4byte	.LCFI8-.LFB41
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -435,10 +440,10 @@ s_flash_op_cache_state:
 	.4byte	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.4byte	.Lframe0
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.byte	0x4
-	.4byte	.LCFI9-.LFB35
+	.4byte	.LCFI9-.LFB44
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -605,8 +610,8 @@ s_flash_op_cache_state:
 	.4byte	0x84
 	.uleb128 0xc
 	.4byte	0xb2
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x19d
@@ -643,8 +648,8 @@ s_flash_op_cache_state:
 	.byte	0
 	.uleb128 0xc
 	.4byte	0x104
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x222
@@ -697,14 +702,14 @@ s_flash_op_cache_state:
 	.4byte	.LASF36
 	.byte	0x1
 	.byte	0xce
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0xc
 	.4byte	0xd8
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x250
@@ -714,8 +719,8 @@ s_flash_op_cache_state:
 	.byte	0
 	.uleb128 0xc
 	.4byte	0xe0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x26d
@@ -727,8 +732,8 @@ s_flash_op_cache_state:
 	.4byte	.LASF22
 	.byte	0x1
 	.byte	0xdd
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2b2
@@ -754,8 +759,8 @@ s_flash_op_cache_state:
 	.4byte	.LASF23
 	.byte	0x1
 	.byte	0xe4
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x322
@@ -800,8 +805,8 @@ s_flash_op_cache_state:
 	.4byte	.LASF24
 	.byte	0x1
 	.byte	0xeb
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x34a
@@ -816,8 +821,8 @@ s_flash_op_cache_state:
 	.4byte	.LASF25
 	.byte	0x1
 	.byte	0xf3
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x39d
@@ -852,8 +857,8 @@ s_flash_op_cache_state:
 	.byte	0x1
 	.2byte	0x126
 	.4byte	0x8f
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x3e2
@@ -1391,7 +1396,7 @@ s_flash_op_cache_state:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL2
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1406,7 +1411,7 @@ s_flash_op_cache_state:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL5
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -1448,26 +1453,26 @@ s_flash_op_cache_state:
 	.byte	0
 	.2byte	0
 	.2byte	0
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.4byte	.LFB36
 	.4byte	.LFE36-.LFB36
 	.4byte	.LFB37
 	.4byte	.LFE37-.LFB37
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -1502,26 +1507,26 @@ s_flash_op_cache_state:
 	.4byte	.LBE79
 	.4byte	0
 	.4byte	0
+	.4byte	.LFB45
+	.4byte	.LFE45
+	.4byte	.LFB46
+	.4byte	.LFE46
+	.4byte	.LFB35
+	.4byte	.LFE35
 	.4byte	.LFB36
 	.4byte	.LFE36
 	.4byte	.LFB37
 	.4byte	.LFE37
-	.4byte	.LFB26
-	.4byte	.LFE26
-	.4byte	.LFB27
-	.4byte	.LFE27
-	.4byte	.LFB28
-	.4byte	.LFE28
-	.4byte	.LFB29
-	.4byte	.LFE29
-	.4byte	.LFB30
-	.4byte	.LFE30
-	.4byte	.LFB31
-	.4byte	.LFE31
-	.4byte	.LFB32
-	.4byte	.LFE32
-	.4byte	.LFB35
-	.4byte	.LFE35
+	.4byte	.LFB38
+	.4byte	.LFE38
+	.4byte	.LFB39
+	.4byte	.LFE39
+	.4byte	.LFB40
+	.4byte	.LFE40
+	.4byte	.LFB41
+	.4byte	.LFE41
+	.4byte	.LFB44
+	.4byte	.LFE44
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

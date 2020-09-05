@@ -11,7 +11,7 @@
 	.section	.text.btc_compare_address_key_value,"ax",@progbits
 	.literal_position
 	.literal .LC3, .LC2
-	.literal .LC4, __func__$5948
+	.literal .LC4, __func__$5995
 	.literal .LC6, .LC5
 	.literal .LC8, .LC7
 	.literal .LC9, config
@@ -19,7 +19,7 @@
 	.global	btc_compare_address_key_value
 	.type	btc_compare_address_key_value, @function
 btc_compare_address_key_value:
-.LFB30:
+.LFB39:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/btc/core/btc_config.c"
 	.loc 1 40 0
 .LVL0:
@@ -114,7 +114,7 @@ btc_compare_address_key_value:
 .LVL14:
 	.loc 1 52 0
 	retw.n
-.LFE30:
+.LFE39:
 	.size	btc_compare_address_key_value, .-btc_compare_address_key_value
 	.section	.rodata.str1.1
 .LC11:
@@ -132,7 +132,7 @@ btc_compare_address_key_value:
 	.literal .LC10, lock
 	.literal .LC12, .LC11
 	.literal .LC13, config
-	.literal .LC14, __func__$5965
+	.literal .LC14, __func__$6012
 	.literal .LC16, .LC15
 	.literal .LC18, .LC17
 	.literal .LC20, .LC19
@@ -141,7 +141,7 @@ btc_compare_address_key_value:
 	.global	btc_config_init
 	.type	btc_config_init, @function
 btc_config_init:
-.LFB32:
+.LFB41:
 	.loc 1 72 0
 	entry	sp, 32
 .LCFI1:
@@ -225,7 +225,7 @@ btc_config_init:
 	movi.n	a2, 1
 	.loc 1 95 0
 	retw.n
-.LFE32:
+.LFE41:
 	.size	btc_config_init, .-btc_config_init
 	.section	.rodata.str1.1
 .LC24:
@@ -236,14 +236,14 @@ btc_config_init:
 	.literal_position
 	.literal .LC23, config
 	.literal .LC25, .LC24
-	.literal .LC26, __func__$5976
+	.literal .LC26, __func__$6023
 	.literal .LC27, .LC5
 	.literal .LC29, .LC28
 	.align	4
 	.global	btc_config_has_section
 	.type	btc_config_has_section, @function
 btc_config_has_section:
-.LFB35:
+.LFB44:
 	.loc 1 114 0
 .LVL27:
 	entry	sp, 32
@@ -280,7 +280,7 @@ btc_config_has_section:
 	mov.n	a2, a10
 .LVL30:
 	retw.n
-.LFE35:
+.LFE44:
 	.size	btc_config_has_section, .-btc_config_has_section
 	.section	.rodata.str1.1
 .LC35:
@@ -289,7 +289,7 @@ btc_config_has_section:
 	.literal_position
 	.literal .LC30, config
 	.literal .LC31, .LC24
-	.literal .LC32, __func__$5981
+	.literal .LC32, __func__$6028
 	.literal .LC33, .LC5
 	.literal .LC34, .LC28
 	.literal .LC36, .LC35
@@ -297,7 +297,7 @@ btc_config_has_section:
 	.global	btc_config_exist
 	.type	btc_config_exist, @function
 btc_config_exist:
-.LFB36:
+.LFB45:
 	.loc 1 122 0
 .LVL31:
 	entry	sp, 32
@@ -344,7 +344,7 @@ btc_config_exist:
 	mov.n	a2, a10
 .LVL34:
 	retw.n
-.LFE36:
+.LFE45:
 	.size	btc_config_exist, .-btc_config_exist
 	.section	.rodata.str1.1
 .LC43:
@@ -353,7 +353,7 @@ btc_config_exist:
 	.literal_position
 	.literal .LC37, config
 	.literal .LC38, .LC24
-	.literal .LC39, __func__$5987
+	.literal .LC39, __func__$6034
 	.literal .LC40, .LC5
 	.literal .LC41, .LC28
 	.literal .LC42, .LC35
@@ -362,7 +362,7 @@ btc_config_exist:
 	.global	btc_config_get_int
 	.type	btc_config_get_int, @function
 btc_config_get_int:
-.LFB37:
+.LFB46:
 	.loc 1 131 0
 .LVL35:
 	entry	sp, 32
@@ -427,13 +427,13 @@ btc_config_get_int:
 	mov.n	a2, a5
 .LVL40:
 	retw.n
-.LFE37:
+.LFE46:
 	.size	btc_config_get_int, .-btc_config_get_int
 	.section	.text.btc_config_set_int,"ax",@progbits
 	.literal_position
 	.literal .LC45, config
 	.literal .LC46, .LC24
-	.literal .LC47, __func__$5994
+	.literal .LC47, __func__$6041
 	.literal .LC48, .LC5
 	.literal .LC49, .LC28
 	.literal .LC50, .LC35
@@ -441,7 +441,7 @@ btc_config_get_int:
 	.global	btc_config_set_int
 	.type	btc_config_set_int, @function
 btc_config_set_int:
-.LFB38:
+.LFB47:
 	.loc 1 146 0
 .LVL41:
 	entry	sp, 32
@@ -489,7 +489,7 @@ btc_config_set_int:
 	movi.n	a2, 1
 .LVL44:
 	retw.n
-.LFE38:
+.LFE47:
 	.size	btc_config_set_int, .-btc_config_set_int
 	.section	.rodata.str1.1
 .LC58:
@@ -498,7 +498,7 @@ btc_config_set_int:
 	.literal_position
 	.literal .LC51, config
 	.literal .LC52, .LC24
-	.literal .LC53, __func__$6001
+	.literal .LC53, __func__$6048
 	.literal .LC54, .LC5
 	.literal .LC55, .LC28
 	.literal .LC56, .LC35
@@ -508,7 +508,7 @@ btc_config_set_int:
 	.global	btc_config_get_str
 	.type	btc_config_get_str, @function
 btc_config_get_str:
-.LFB39:
+.LFB48:
 	.loc 1 157 0
 .LVL45:
 	entry	sp, 32
@@ -590,13 +590,13 @@ btc_config_get_str:
 .L43:
 	.loc 1 174 0
 	retw.n
-.LFE39:
+.LFE48:
 	.size	btc_config_get_str, .-btc_config_get_str
 	.section	.text.btc_config_set_str,"ax",@progbits
 	.literal_position
 	.literal .LC60, config
 	.literal .LC61, .LC24
-	.literal .LC62, __func__$6008
+	.literal .LC62, __func__$6055
 	.literal .LC63, .LC5
 	.literal .LC64, .LC28
 	.literal .LC65, .LC35
@@ -605,7 +605,7 @@ btc_config_get_str:
 	.global	btc_config_set_str
 	.type	btc_config_set_str, @function
 btc_config_set_str:
-.LFB40:
+.LFB49:
 	.loc 1 177 0
 .LVL52:
 	entry	sp, 32
@@ -662,7 +662,7 @@ btc_config_set_str:
 	movi.n	a2, 1
 .LVL55:
 	retw.n
-.LFE40:
+.LFE49:
 	.size	btc_config_set_str, .-btc_config_set_str
 	.section	.rodata.str1.1
 .LC74:
@@ -673,7 +673,7 @@ btc_config_set_str:
 	.literal_position
 	.literal .LC67, config
 	.literal .LC68, .LC24
-	.literal .LC69, __func__$6015
+	.literal .LC69, __func__$6062
 	.literal .LC70, .LC5
 	.literal .LC71, .LC28
 	.literal .LC72, .LC35
@@ -685,7 +685,7 @@ btc_config_set_str:
 	.global	btc_config_get_bin
 	.type	btc_config_get_bin, @function
 btc_config_get_bin:
-.LFB41:
+.LFB50:
 	.loc 1 189 0
 .LVL56:
 	entry	sp, 48
@@ -816,13 +816,13 @@ btc_config_get_bin:
 .L59:
 	.loc 1 219 0
 	retw.n
-.LFE41:
+.LFE50:
 	.size	btc_config_get_bin, .-btc_config_get_bin
 	.section	.text.btc_config_get_bin_length,"ax",@progbits
 	.literal_position
 	.literal .LC79, config
 	.literal .LC80, .LC24
-	.literal .LC81, __func__$6030
+	.literal .LC81, __func__$6077
 	.literal .LC82, .LC5
 	.literal .LC83, .LC28
 	.literal .LC84, .LC35
@@ -830,7 +830,7 @@ btc_config_get_bin:
 	.global	btc_config_get_bin_length
 	.type	btc_config_get_bin_length, @function
 btc_config_get_bin_length:
-.LFB42:
+.LFB51:
 	.loc 1 222 0
 .LVL65:
 	entry	sp, 32
@@ -891,13 +891,13 @@ btc_config_get_bin_length:
 .L74:
 	.loc 1 235 0
 	retw.n
-.LFE42:
+.LFE51:
 	.size	btc_config_get_bin_length, .-btc_config_get_bin_length
 	.section	.text.btc_config_set_bin,"ax",@progbits
 	.literal_position
 	.literal .LC85, config
 	.literal .LC86, .LC24
-	.literal .LC87, __func__$6040
+	.literal .LC87, __func__$6087
 	.literal .LC88, .LC5
 	.literal .LC89, .LC28
 	.literal .LC90, .LC35
@@ -907,7 +907,7 @@ btc_config_get_bin_length:
 	.global	btc_config_set_bin
 	.type	btc_config_set_bin, @function
 btc_config_set_bin:
-.LFB43:
+.LFB52:
 	.loc 1 238 0
 .LVL72:
 	entry	sp, 48
@@ -1019,19 +1019,19 @@ btc_config_set_bin:
 .L83:
 	.loc 1 263 0
 	retw.n
-.LFE43:
+.LFE52:
 	.size	btc_config_set_bin, .-btc_config_set_bin
 	.section	.text.btc_config_section_begin,"ax",@progbits
 	.literal_position
 	.literal .LC93, config
 	.literal .LC94, .LC24
-	.literal .LC95, __func__$6049
+	.literal .LC95, __func__$6096
 	.literal .LC96, .LC5
 	.align	4
 	.global	btc_config_section_begin
 	.type	btc_config_section_begin, @function
 btc_config_section_begin:
-.LFB44:
+.LFB53:
 	.loc 1 266 0
 	entry	sp, 32
 .LCFI11:
@@ -1054,19 +1054,19 @@ btc_config_section_begin:
 	.loc 1 269 0
 	mov.n	a2, a10
 	retw.n
-.LFE44:
+.LFE53:
 	.size	btc_config_section_begin, .-btc_config_section_begin
 	.section	.text.btc_config_section_end,"ax",@progbits
 	.literal_position
 	.literal .LC97, config
 	.literal .LC98, .LC24
-	.literal .LC99, __func__$6053
+	.literal .LC99, __func__$6100
 	.literal .LC100, .LC5
 	.align	4
 	.global	btc_config_section_end
 	.type	btc_config_section_end, @function
 btc_config_section_end:
-.LFB45:
+.LFB54:
 	.loc 1 272 0
 	entry	sp, 32
 .LCFI12:
@@ -1089,20 +1089,20 @@ btc_config_section_end:
 	.loc 1 275 0
 	mov.n	a2, a10
 	retw.n
-.LFE45:
+.LFE54:
 	.size	btc_config_section_end, .-btc_config_section_end
 	.section	.text.btc_config_section_next,"ax",@progbits
 	.literal_position
 	.literal .LC101, config
 	.literal .LC102, .LC24
-	.literal .LC103, __func__$6057
+	.literal .LC103, __func__$6104
 	.literal .LC104, .LC5
 	.literal .LC105, .LC28
 	.align	4
 	.global	btc_config_section_next
 	.type	btc_config_section_next, @function
 btc_config_section_next:
-.LFB46:
+.LFB55:
 	.loc 1 278 0
 .LVL89:
 	entry	sp, 32
@@ -1138,20 +1138,20 @@ btc_config_section_next:
 	mov.n	a2, a10
 .LVL92:
 	retw.n
-.LFE46:
+.LFE55:
 	.size	btc_config_section_next, .-btc_config_section_next
 	.section	.text.btc_config_section_name,"ax",@progbits
 	.literal_position
 	.literal .LC106, config
 	.literal .LC107, .LC24
-	.literal .LC108, __func__$6061
+	.literal .LC108, __func__$6108
 	.literal .LC109, .LC5
 	.literal .LC110, .LC28
 	.align	4
 	.global	btc_config_section_name
 	.type	btc_config_section_name, @function
 btc_config_section_name:
-.LFB47:
+.LFB56:
 	.loc 1 285 0
 .LVL93:
 	entry	sp, 32
@@ -1187,13 +1187,13 @@ btc_config_section_name:
 	mov.n	a2, a10
 .LVL96:
 	retw.n
-.LFE47:
+.LFE56:
 	.size	btc_config_section_name, .-btc_config_section_name
 	.section	.text.btc_config_remove,"ax",@progbits
 	.literal_position
 	.literal .LC111, config
 	.literal .LC112, .LC24
-	.literal .LC113, __func__$6066
+	.literal .LC113, __func__$6113
 	.literal .LC114, .LC5
 	.literal .LC115, .LC28
 	.literal .LC116, .LC35
@@ -1201,7 +1201,7 @@ btc_config_section_name:
 	.global	btc_config_remove
 	.type	btc_config_remove, @function
 btc_config_remove:
-.LFB48:
+.LFB57:
 	.loc 1 294 0
 .LVL97:
 	entry	sp, 32
@@ -1248,20 +1248,20 @@ btc_config_remove:
 	mov.n	a2, a10
 .LVL100:
 	retw.n
-.LFE48:
+.LFE57:
 	.size	btc_config_remove, .-btc_config_remove
 	.section	.text.btc_config_remove_section,"ax",@progbits
 	.literal_position
 	.literal .LC117, config
 	.literal .LC118, .LC24
-	.literal .LC119, __func__$6070
+	.literal .LC119, __func__$6117
 	.literal .LC120, .LC5
 	.literal .LC121, .LC28
 	.align	4
 	.global	btc_config_remove_section
 	.type	btc_config_remove_section, @function
 btc_config_remove_section:
-.LFB49:
+.LFB58:
 	.loc 1 303 0
 .LVL101:
 	entry	sp, 32
@@ -1298,20 +1298,20 @@ btc_config_remove_section:
 	mov.n	a2, a10
 .LVL104:
 	retw.n
-.LFE49:
+.LFE58:
 	.size	btc_config_remove_section, .-btc_config_remove_section
 	.section	.text.btc_config_flush,"ax",@progbits
 	.literal_position
 	.literal .LC122, config
 	.literal .LC123, .LC24
-	.literal .LC124, __func__$6074
+	.literal .LC124, __func__$6121
 	.literal .LC125, .LC5
 	.literal .LC126, .LC11
 	.align	4
 	.global	btc_config_flush
 	.type	btc_config_flush, @function
 btc_config_flush:
-.LFB50:
+.LFB59:
 	.loc 1 311 0
 	entry	sp, 32
 .LCFI17:
@@ -1336,14 +1336,14 @@ btc_config_flush:
 	call8	config_save
 .LVL106:
 	retw.n
-.LFE50:
+.LFE59:
 	.size	btc_config_flush, .-btc_config_flush
 	.section	.text.btc_config_shut_down,"ax",@progbits
 	.align	4
 	.global	btc_config_shut_down
 	.type	btc_config_shut_down, @function
 btc_config_shut_down:
-.LFB33:
+.LFB42:
 	.loc 1 98 0
 	entry	sp, 32
 .LCFI18:
@@ -1353,7 +1353,7 @@ btc_config_shut_down:
 	.loc 1 101 0
 	movi.n	a2, 1
 	retw.n
-.LFE33:
+.LFE42:
 	.size	btc_config_shut_down, .-btc_config_shut_down
 	.section	.text.btc_config_clean_up,"ax",@progbits
 	.literal_position
@@ -1363,7 +1363,7 @@ btc_config_shut_down:
 	.global	btc_config_clean_up
 	.type	btc_config_clean_up, @function
 btc_config_clean_up:
-.LFB34:
+.LFB43:
 	.loc 1 104 0
 	entry	sp, 32
 .LCFI19:
@@ -1385,20 +1385,20 @@ btc_config_clean_up:
 	.loc 1 111 0
 	movi.n	a2, 1
 	retw.n
-.LFE34:
+.LFE43:
 	.size	btc_config_clean_up, .-btc_config_clean_up
 	.section	.text.btc_config_clear,"ax",@progbits
 	.literal_position
 	.literal .LC129, config
 	.literal .LC130, .LC24
-	.literal .LC131, __func__$6078
+	.literal .LC131, __func__$6125
 	.literal .LC132, .LC5
 	.literal .LC133, .LC11
 	.align	4
 	.global	btc_config_clear
 	.type	btc_config_clear, @function
 btc_config_clear:
-.LFB51:
+.LFB60:
 	.loc 1 318 0
 	entry	sp, 32
 .LCFI20:
@@ -1435,7 +1435,7 @@ btc_config_clear:
 .L117:
 	.loc 1 329 0
 	retw.n
-.LFE51:
+.LFE60:
 	.size	btc_config_clear, .-btc_config_clear
 	.section	.text.btc_config_lock,"ax",@progbits
 	.literal_position
@@ -1444,7 +1444,7 @@ btc_config_clear:
 	.global	btc_config_lock
 	.type	btc_config_lock, @function
 btc_config_lock:
-.LFB52:
+.LFB61:
 	.loc 1 332 0
 	entry	sp, 32
 .LCFI21:
@@ -1454,7 +1454,7 @@ btc_config_lock:
 	call8	osi_mutex_lock
 .LVL116:
 	retw.n
-.LFE52:
+.LFE61:
 	.size	btc_config_lock, .-btc_config_lock
 	.section	.text.btc_config_unlock,"ax",@progbits
 	.literal_position
@@ -1463,7 +1463,7 @@ btc_config_lock:
 	.global	btc_config_unlock
 	.type	btc_config_unlock, @function
 btc_config_unlock:
-.LFB53:
+.LFB62:
 	.loc 1 337 0
 	entry	sp, 32
 .LCFI22:
@@ -1472,102 +1472,102 @@ btc_config_unlock:
 	call8	osi_mutex_unlock
 .LVL117:
 	retw.n
-.LFE53:
+.LFE62:
 	.size	btc_config_unlock, .-btc_config_unlock
-	.section	.rodata.__func__$6078,"a",@progbits
-	.type	__func__$6078, @object
-	.size	__func__$6078, 17
-__func__$6078:
+	.section	.rodata.__func__$6125,"a",@progbits
+	.type	__func__$6125, @object
+	.size	__func__$6125, 17
+__func__$6125:
 	.string	"btc_config_clear"
-	.section	.rodata.__func__$6074,"a",@progbits
-	.type	__func__$6074, @object
-	.size	__func__$6074, 17
-__func__$6074:
+	.section	.rodata.__func__$6121,"a",@progbits
+	.type	__func__$6121, @object
+	.size	__func__$6121, 17
+__func__$6121:
 	.string	"btc_config_flush"
-	.section	.rodata.__func__$6070,"a",@progbits
-	.type	__func__$6070, @object
-	.size	__func__$6070, 26
-__func__$6070:
+	.section	.rodata.__func__$6117,"a",@progbits
+	.type	__func__$6117, @object
+	.size	__func__$6117, 26
+__func__$6117:
 	.string	"btc_config_remove_section"
-	.section	.rodata.__func__$6066,"a",@progbits
-	.type	__func__$6066, @object
-	.size	__func__$6066, 18
-__func__$6066:
+	.section	.rodata.__func__$6113,"a",@progbits
+	.type	__func__$6113, @object
+	.size	__func__$6113, 18
+__func__$6113:
 	.string	"btc_config_remove"
-	.section	.rodata.__func__$6061,"a",@progbits
-	.type	__func__$6061, @object
-	.size	__func__$6061, 24
-__func__$6061:
+	.section	.rodata.__func__$6108,"a",@progbits
+	.type	__func__$6108, @object
+	.size	__func__$6108, 24
+__func__$6108:
 	.string	"btc_config_section_name"
-	.section	.rodata.__func__$6057,"a",@progbits
-	.type	__func__$6057, @object
-	.size	__func__$6057, 24
-__func__$6057:
+	.section	.rodata.__func__$6104,"a",@progbits
+	.type	__func__$6104, @object
+	.size	__func__$6104, 24
+__func__$6104:
 	.string	"btc_config_section_next"
-	.section	.rodata.__func__$6053,"a",@progbits
-	.type	__func__$6053, @object
-	.size	__func__$6053, 23
-__func__$6053:
+	.section	.rodata.__func__$6100,"a",@progbits
+	.type	__func__$6100, @object
+	.size	__func__$6100, 23
+__func__$6100:
 	.string	"btc_config_section_end"
-	.section	.rodata.__func__$6049,"a",@progbits
-	.type	__func__$6049, @object
-	.size	__func__$6049, 25
-__func__$6049:
+	.section	.rodata.__func__$6096,"a",@progbits
+	.type	__func__$6096, @object
+	.size	__func__$6096, 25
+__func__$6096:
 	.string	"btc_config_section_begin"
-	.section	.rodata.__func__$6040,"a",@progbits
-	.type	__func__$6040, @object
-	.size	__func__$6040, 19
-__func__$6040:
+	.section	.rodata.__func__$6087,"a",@progbits
+	.type	__func__$6087, @object
+	.size	__func__$6087, 19
+__func__$6087:
 	.string	"btc_config_set_bin"
-	.section	.rodata.__func__$6030,"a",@progbits
-	.type	__func__$6030, @object
-	.size	__func__$6030, 26
-__func__$6030:
+	.section	.rodata.__func__$6077,"a",@progbits
+	.type	__func__$6077, @object
+	.size	__func__$6077, 26
+__func__$6077:
 	.string	"btc_config_get_bin_length"
-	.section	.rodata.__func__$6015,"a",@progbits
-	.type	__func__$6015, @object
-	.size	__func__$6015, 19
-__func__$6015:
+	.section	.rodata.__func__$6062,"a",@progbits
+	.type	__func__$6062, @object
+	.size	__func__$6062, 19
+__func__$6062:
 	.string	"btc_config_get_bin"
-	.section	.rodata.__func__$6008,"a",@progbits
-	.type	__func__$6008, @object
-	.size	__func__$6008, 19
-__func__$6008:
+	.section	.rodata.__func__$6055,"a",@progbits
+	.type	__func__$6055, @object
+	.size	__func__$6055, 19
+__func__$6055:
 	.string	"btc_config_set_str"
-	.section	.rodata.__func__$6001,"a",@progbits
-	.type	__func__$6001, @object
-	.size	__func__$6001, 19
-__func__$6001:
+	.section	.rodata.__func__$6048,"a",@progbits
+	.type	__func__$6048, @object
+	.size	__func__$6048, 19
+__func__$6048:
 	.string	"btc_config_get_str"
-	.section	.rodata.__func__$5994,"a",@progbits
-	.type	__func__$5994, @object
-	.size	__func__$5994, 19
-__func__$5994:
+	.section	.rodata.__func__$6041,"a",@progbits
+	.type	__func__$6041, @object
+	.size	__func__$6041, 19
+__func__$6041:
 	.string	"btc_config_set_int"
-	.section	.rodata.__func__$5987,"a",@progbits
-	.type	__func__$5987, @object
-	.size	__func__$5987, 19
-__func__$5987:
+	.section	.rodata.__func__$6034,"a",@progbits
+	.type	__func__$6034, @object
+	.size	__func__$6034, 19
+__func__$6034:
 	.string	"btc_config_get_int"
-	.section	.rodata.__func__$5981,"a",@progbits
-	.type	__func__$5981, @object
-	.size	__func__$5981, 17
-__func__$5981:
+	.section	.rodata.__func__$6028,"a",@progbits
+	.type	__func__$6028, @object
+	.size	__func__$6028, 17
+__func__$6028:
 	.string	"btc_config_exist"
-	.section	.rodata.__func__$5976,"a",@progbits
-	.type	__func__$5976, @object
-	.size	__func__$5976, 23
-__func__$5976:
+	.section	.rodata.__func__$6023,"a",@progbits
+	.type	__func__$6023, @object
+	.size	__func__$6023, 23
+__func__$6023:
 	.string	"btc_config_has_section"
-	.section	.rodata.__func__$5965,"a",@progbits
-	.type	__func__$5965, @object
-	.size	__func__$5965, 16
-__func__$5965:
+	.section	.rodata.__func__$6012,"a",@progbits
+	.type	__func__$6012, @object
+	.size	__func__$6012, 16
+__func__$6012:
 	.string	"btc_config_init"
-	.section	.rodata.__func__$5948,"a",@progbits
-	.type	__func__$5948, @object
-	.size	__func__$5948, 30
-__func__$5948:
+	.section	.rodata.__func__$5995,"a",@progbits
+	.type	__func__$5995, @object
+	.size	__func__$5995, 30
+__func__$5995:
 	.string	"btc_compare_address_key_value"
 	.section	.bss.config,"aw",@nobits
 	.align	4
@@ -1600,10 +1600,10 @@ lock:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI0-.LFB30
+	.4byte	.LCFI0-.LFB39
 	.byte	0xe
 	.uleb128 0x90
 	.align	4
@@ -1612,10 +1612,10 @@ lock:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.byte	0x4
-	.4byte	.LCFI1-.LFB32
+	.4byte	.LCFI1-.LFB41
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1624,10 +1624,10 @@ lock:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.byte	0x4
-	.4byte	.LCFI2-.LFB35
+	.4byte	.LCFI2-.LFB44
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1636,10 +1636,10 @@ lock:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.byte	0x4
-	.4byte	.LCFI3-.LFB36
+	.4byte	.LCFI3-.LFB45
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1648,10 +1648,10 @@ lock:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.byte	0x4
-	.4byte	.LCFI4-.LFB37
+	.4byte	.LCFI4-.LFB46
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1660,10 +1660,10 @@ lock:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI5-.LFB38
+	.4byte	.LCFI5-.LFB47
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1672,10 +1672,10 @@ lock:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI6-.LFB39
+	.4byte	.LCFI6-.LFB48
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1684,10 +1684,10 @@ lock:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.byte	0x4
-	.4byte	.LCFI7-.LFB40
+	.4byte	.LCFI7-.LFB49
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1696,10 +1696,10 @@ lock:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.byte	0x4
-	.4byte	.LCFI8-.LFB41
+	.4byte	.LCFI8-.LFB50
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1708,10 +1708,10 @@ lock:
 	.4byte	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.4byte	.Lframe0
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.byte	0x4
-	.4byte	.LCFI9-.LFB42
+	.4byte	.LCFI9-.LFB51
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1720,10 +1720,10 @@ lock:
 	.4byte	.LEFDE20-.LASFDE20
 .LASFDE20:
 	.4byte	.Lframe0
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.byte	0x4
-	.4byte	.LCFI10-.LFB43
+	.4byte	.LCFI10-.LFB52
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1732,10 +1732,10 @@ lock:
 	.4byte	.LEFDE22-.LASFDE22
 .LASFDE22:
 	.4byte	.Lframe0
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.byte	0x4
-	.4byte	.LCFI11-.LFB44
+	.4byte	.LCFI11-.LFB53
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1744,10 +1744,10 @@ lock:
 	.4byte	.LEFDE24-.LASFDE24
 .LASFDE24:
 	.4byte	.Lframe0
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.byte	0x4
-	.4byte	.LCFI12-.LFB45
+	.4byte	.LCFI12-.LFB54
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1756,10 +1756,10 @@ lock:
 	.4byte	.LEFDE26-.LASFDE26
 .LASFDE26:
 	.4byte	.Lframe0
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.byte	0x4
-	.4byte	.LCFI13-.LFB46
+	.4byte	.LCFI13-.LFB55
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1768,10 +1768,10 @@ lock:
 	.4byte	.LEFDE28-.LASFDE28
 .LASFDE28:
 	.4byte	.Lframe0
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.byte	0x4
-	.4byte	.LCFI14-.LFB47
+	.4byte	.LCFI14-.LFB56
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1780,10 +1780,10 @@ lock:
 	.4byte	.LEFDE30-.LASFDE30
 .LASFDE30:
 	.4byte	.Lframe0
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
 	.byte	0x4
-	.4byte	.LCFI15-.LFB48
+	.4byte	.LCFI15-.LFB57
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1792,10 +1792,10 @@ lock:
 	.4byte	.LEFDE32-.LASFDE32
 .LASFDE32:
 	.4byte	.Lframe0
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
 	.byte	0x4
-	.4byte	.LCFI16-.LFB49
+	.4byte	.LCFI16-.LFB58
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1804,10 +1804,10 @@ lock:
 	.4byte	.LEFDE34-.LASFDE34
 .LASFDE34:
 	.4byte	.Lframe0
-	.4byte	.LFB50
-	.4byte	.LFE50-.LFB50
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
 	.byte	0x4
-	.4byte	.LCFI17-.LFB50
+	.4byte	.LCFI17-.LFB59
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1816,10 +1816,10 @@ lock:
 	.4byte	.LEFDE36-.LASFDE36
 .LASFDE36:
 	.4byte	.Lframe0
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.byte	0x4
-	.4byte	.LCFI18-.LFB33
+	.4byte	.LCFI18-.LFB42
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1828,10 +1828,10 @@ lock:
 	.4byte	.LEFDE38-.LASFDE38
 .LASFDE38:
 	.4byte	.Lframe0
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.byte	0x4
-	.4byte	.LCFI19-.LFB34
+	.4byte	.LCFI19-.LFB43
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1840,10 +1840,10 @@ lock:
 	.4byte	.LEFDE40-.LASFDE40
 .LASFDE40:
 	.4byte	.Lframe0
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.byte	0x4
-	.4byte	.LCFI20-.LFB51
+	.4byte	.LCFI20-.LFB60
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1852,10 +1852,10 @@ lock:
 	.4byte	.LEFDE42-.LASFDE42
 .LASFDE42:
 	.4byte	.Lframe0
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
 	.byte	0x4
-	.4byte	.LCFI21-.LFB52
+	.4byte	.LCFI21-.LFB61
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1864,10 +1864,10 @@ lock:
 	.4byte	.LEFDE44-.LASFDE44
 .LASFDE44:
 	.4byte	.Lframe0
-	.4byte	.LFB53
-	.4byte	.LFE53-.LFB53
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
 	.byte	0x4
-	.4byte	.LCFI22-.LFB53
+	.4byte	.LCFI22-.LFB62
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1878,12 +1878,12 @@ lock:
 	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h"
 	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
 	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-	.file 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/alarm.h"
+	.file 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/alarm.h"
 	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/btc/include/btc/btc_config.h"
-	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/config.h"
+	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/config.h"
 	.file 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/semphr.h"
-	.file 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/mutex.h"
+	.file 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/mutex.h"
 	.file 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
 	.file 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 	.file 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
@@ -1987,45 +1987,45 @@ lock:
 	.byte	0x4
 	.byte	0x39
 	.4byte	0x61
-	.uleb128 0x3
-	.4byte	.LASF16
-	.byte	0x5
-	.byte	0x21
-	.4byte	0xad
-	.uleb128 0x2
-	.byte	0x1
-	.byte	0x2
-	.4byte	.LASF17
 	.uleb128 0x8
-	.4byte	0xc3
-	.4byte	0xe5
-	.uleb128 0x9
-	.4byte	0x87
-	.byte	0x5
-	.byte	0
-	.uleb128 0xa
 	.byte	0x4
 	.4byte	0x53
 	.byte	0xd
 	.byte	0x1f
+	.4byte	0xf4
+	.uleb128 0x9
+	.4byte	.LASF16
+	.byte	0
+	.uleb128 0x9
+	.4byte	.LASF17
+	.byte	0x1
+	.uleb128 0x9
+	.4byte	.LASF18
+	.byte	0x2
+	.uleb128 0x9
+	.4byte	.LASF19
+	.byte	0x3
+	.uleb128 0x9
+	.4byte	.LASF20
+	.byte	0x4
+	.uleb128 0x9
+	.4byte	.LASF21
+	.byte	0x5
+	.byte	0
+	.uleb128 0x3
+	.4byte	.LASF22
+	.byte	0x5
+	.byte	0x1a
+	.4byte	0xad
+	.uleb128 0x2
+	.byte	0x1
+	.byte	0x2
+	.4byte	.LASF23
+	.uleb128 0xa
+	.4byte	0xf4
 	.4byte	0x116
 	.uleb128 0xb
-	.4byte	.LASF18
-	.byte	0
-	.uleb128 0xb
-	.4byte	.LASF19
-	.byte	0x1
-	.uleb128 0xb
-	.4byte	.LASF20
-	.byte	0x2
-	.uleb128 0xb
-	.4byte	.LASF21
-	.byte	0x3
-	.uleb128 0xb
-	.4byte	.LASF22
-	.byte	0x4
-	.uleb128 0xb
-	.4byte	.LASF23
+	.4byte	0x87
 	.byte	0x5
 	.byte	0
 	.uleb128 0x3
@@ -2040,10 +2040,10 @@ lock:
 	.4byte	0x12c
 	.uleb128 0xc
 	.4byte	.LASF25
-	.uleb128 0x8
+	.uleb128 0xa
 	.4byte	0x9b
 	.4byte	0x141
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	0x87
 	.byte	0x11
 	.byte	0
@@ -2089,10 +2089,10 @@ lock:
 	.4byte	0x1b2
 	.4byte	.LASF36
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0xa
 	.4byte	0x9b
 	.4byte	0x1b2
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	0x87
 	.byte	0x10
 	.byte	0
@@ -2139,10 +2139,10 @@ lock:
 	.uleb128 0x6
 	.byte	0x4
 	.4byte	0xad
-	.uleb128 0x8
+	.uleb128 0xa
 	.4byte	0x9b
 	.4byte	0x21e
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	0x87
 	.byte	0x17
 	.byte	0
@@ -2152,9 +2152,9 @@ lock:
 	.4byte	.LASF41
 	.byte	0x1
 	.byte	0x27
-	.4byte	0xce
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	0xff
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x360
@@ -2188,12 +2188,12 @@ lock:
 	.4byte	0x370
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5948
+	.4byte	__func__$5995
 	.uleb128 0x18
 	.4byte	.LASF40
 	.byte	0x1
 	.byte	0x2a
-	.4byte	0xce
+	.4byte	0xff
 	.4byte	.LLST3
 	.uleb128 0x19
 	.4byte	.LASF32
@@ -2251,7 +2251,7 @@ lock:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5948
+	.4byte	__func__$5995
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5d
@@ -2309,19 +2309,19 @@ lock:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0xa
 	.4byte	0x9b
 	.4byte	0x370
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	0x87
 	.byte	0x1d
 	.byte	0
 	.uleb128 0x7
 	.4byte	0x360
-	.uleb128 0x8
+	.uleb128 0xa
 	.4byte	0x9b
 	.4byte	0x385
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	0x87
 	.byte	0x63
 	.byte	0
@@ -2329,9 +2329,9 @@ lock:
 	.4byte	.LASF42
 	.byte	0x1
 	.byte	0x47
-	.4byte	0xce
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	0xff
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x4c2
@@ -2340,7 +2340,7 @@ lock:
 	.4byte	0x4d2
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5965
+	.4byte	__func__$6012
 	.uleb128 0x22
 	.4byte	.LASF106
 	.byte	0x1
@@ -2507,10 +2507,10 @@ lock:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0xa
 	.4byte	0x9b
 	.4byte	0x4d2
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	0x87
 	.byte	0xf
 	.byte	0
@@ -2520,9 +2520,9 @@ lock:
 	.4byte	.LASF43
 	.byte	0x1
 	.byte	0x71
-	.4byte	0xce
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	0xff
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x52f
@@ -2537,7 +2537,7 @@ lock:
 	.4byte	0x53f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5976
+	.4byte	__func__$6023
 	.uleb128 0x1f
 	.4byte	.LVL28
 	.4byte	0xfd8
@@ -2553,10 +2553,10 @@ lock:
 	.4byte	.LVL29
 	.4byte	0x105a
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0xa
 	.4byte	0x9b
 	.4byte	0x53f
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	0x87
 	.byte	0x16
 	.byte	0
@@ -2566,9 +2566,9 @@ lock:
 	.4byte	.LASF44
 	.byte	0x1
 	.byte	0x79
-	.4byte	0xce
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	0xff
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x5a9
@@ -2590,7 +2590,7 @@ lock:
 	.4byte	0x5a9
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5981
+	.4byte	__func__$6028
 	.uleb128 0x1f
 	.4byte	.LVL32
 	.4byte	0xfd8
@@ -2612,9 +2612,9 @@ lock:
 	.4byte	.LASF45
 	.byte	0x1
 	.byte	0x82
-	.4byte	0xce
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	0xff
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x654
@@ -2643,12 +2643,12 @@ lock:
 	.4byte	0x66a
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5987
+	.4byte	__func__$6034
 	.uleb128 0x25
 	.string	"ret"
 	.byte	0x1
 	.byte	0x89
-	.4byte	0xce
+	.4byte	0xff
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x1f
@@ -2699,10 +2699,10 @@ lock:
 	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x4c
-	.uleb128 0x8
+	.uleb128 0xa
 	.4byte	0x9b
 	.4byte	0x66a
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	0x87
 	.byte	0x12
 	.byte	0
@@ -2712,9 +2712,9 @@ lock:
 	.4byte	.LASF47
 	.byte	0x1
 	.byte	0x91
-	.4byte	0xce
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	0xff
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x6e1
@@ -2743,7 +2743,7 @@ lock:
 	.4byte	0x6e1
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5994
+	.4byte	__func__$6041
 	.uleb128 0x1f
 	.4byte	.LVL42
 	.4byte	0xfd8
@@ -2765,9 +2765,9 @@ lock:
 	.4byte	.LASF48
 	.byte	0x1
 	.byte	0x9c
-	.4byte	0xce
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	0xff
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x7a8
@@ -2803,7 +2803,7 @@ lock:
 	.4byte	0x7a8
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6001
+	.4byte	__func__$6048
 	.uleb128 0x18
 	.4byte	.LASF50
 	.byte	0x1
@@ -2865,9 +2865,9 @@ lock:
 	.4byte	.LASF51
 	.byte	0x1
 	.byte	0xb0
-	.4byte	0xce
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	0xff
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x825
@@ -2896,7 +2896,7 @@ lock:
 	.4byte	0x825
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6008
+	.4byte	__func__$6055
 	.uleb128 0x1f
 	.4byte	.LVL53
 	.4byte	0xfd8
@@ -2924,9 +2924,9 @@ lock:
 	.4byte	.LASF52
 	.byte	0x1
 	.byte	0xbc
-	.4byte	0xce
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	0xff
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x93f
@@ -2961,7 +2961,7 @@ lock:
 	.4byte	0x945
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6015
+	.4byte	__func__$6062
 	.uleb128 0x19
 	.4byte	.LASF32
 	.byte	0x1
@@ -3074,8 +3074,8 @@ lock:
 	.byte	0x1
 	.byte	0xdd
 	.4byte	0x73
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x9ed
@@ -3097,7 +3097,7 @@ lock:
 	.4byte	0x9fd
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6030
+	.4byte	__func__$6077
 	.uleb128 0x18
 	.4byte	.LASF32
 	.byte	0x1
@@ -3148,10 +3148,10 @@ lock:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0xa
 	.4byte	0x9b
 	.4byte	0x9fd
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	0x87
 	.byte	0x19
 	.byte	0
@@ -3161,9 +3161,9 @@ lock:
 	.4byte	.LASF56
 	.byte	0x1
 	.byte	0xed
-	.4byte	0xce
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	0xff
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xb09
@@ -3206,7 +3206,7 @@ lock:
 	.4byte	0xb14
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6040
+	.4byte	__func__$6087
 	.uleb128 0x25
 	.string	"str"
 	.byte	0x1
@@ -3308,8 +3308,8 @@ lock:
 	.byte	0x1
 	.2byte	0x109
 	.4byte	0xb7c
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xb7c
@@ -3318,7 +3318,7 @@ lock:
 	.4byte	0xb97
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6049
+	.4byte	__func__$6096
 	.uleb128 0x1f
 	.4byte	.LVL85
 	.4byte	0xfd8
@@ -3340,7 +3340,7 @@ lock:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6049
+	.4byte	__func__$6096
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5d
@@ -3357,10 +3357,10 @@ lock:
 	.4byte	0xb82
 	.uleb128 0x7
 	.4byte	0x121
-	.uleb128 0x8
+	.uleb128 0xa
 	.4byte	0x9b
 	.4byte	0xb97
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	0x87
 	.byte	0x18
 	.byte	0
@@ -3371,8 +3371,8 @@ lock:
 	.byte	0x1
 	.2byte	0x10f
 	.4byte	0xb7c
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xbff
@@ -3381,7 +3381,7 @@ lock:
 	.4byte	0xbff
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6053
+	.4byte	__func__$6100
 	.uleb128 0x1f
 	.4byte	.LVL87
 	.4byte	0xfd8
@@ -3403,7 +3403,7 @@ lock:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6053
+	.4byte	__func__$6100
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5d
@@ -3422,8 +3422,8 @@ lock:
 	.byte	0x1
 	.2byte	0x115
 	.4byte	0xb7c
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xc5e
@@ -3438,7 +3438,7 @@ lock:
 	.4byte	0xc5e
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6057
+	.4byte	__func__$6104
 	.uleb128 0x1f
 	.4byte	.LVL90
 	.4byte	0xfd8
@@ -3461,8 +3461,8 @@ lock:
 	.byte	0x1
 	.2byte	0x11c
 	.4byte	0xa2
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xcbd
@@ -3477,7 +3477,7 @@ lock:
 	.4byte	0xcbd
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6061
+	.4byte	__func__$6108
 	.uleb128 0x1f
 	.4byte	.LVL94
 	.4byte	0xfd8
@@ -3499,9 +3499,9 @@ lock:
 	.4byte	.LASF61
 	.byte	0x1
 	.2byte	0x125
-	.4byte	0xce
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
+	.4byte	0xff
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xd2a
@@ -3523,7 +3523,7 @@ lock:
 	.4byte	0xd2a
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6066
+	.4byte	__func__$6113
 	.uleb128 0x1f
 	.4byte	.LVL98
 	.4byte	0xfd8
@@ -3545,9 +3545,9 @@ lock:
 	.4byte	.LASF62
 	.byte	0x1
 	.2byte	0x12e
-	.4byte	0xce
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
+	.4byte	0xff
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xd89
@@ -3562,7 +3562,7 @@ lock:
 	.4byte	0xd89
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6070
+	.4byte	__func__$6117
 	.uleb128 0x1f
 	.4byte	.LVL102
 	.4byte	0xfd8
@@ -3582,8 +3582,8 @@ lock:
 	.4byte	0x9ed
 	.uleb128 0x2c
 	.4byte	0x187
-	.4byte	.LFB50
-	.4byte	.LFE50-.LFB50
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xe05
@@ -3591,7 +3591,7 @@ lock:
 	.4byte	0x194
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6074
+	.4byte	__func__$6121
 	.uleb128 0x27
 	.4byte	.LBB17
 	.4byte	.LBE17-.LBB17
@@ -3600,7 +3600,7 @@ lock:
 	.4byte	0x194
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6074
+	.4byte	__func__$6121
 	.uleb128 0x21
 	.4byte	.LVL105
 	.4byte	0xfd8
@@ -3621,7 +3621,7 @@ lock:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6074
+	.4byte	__func__$6121
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5d
@@ -3645,9 +3645,9 @@ lock:
 	.4byte	.LASF63
 	.byte	0x1
 	.byte	0x61
-	.4byte	0xce
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	0xff
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xe28
@@ -3659,9 +3659,9 @@ lock:
 	.4byte	.LASF64
 	.byte	0x1
 	.byte	0x67
-	.4byte	0xce
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	0xff
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xe67
@@ -3687,8 +3687,8 @@ lock:
 	.byte	0x1
 	.2byte	0x13d
 	.4byte	0x4c
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xef2
@@ -3697,7 +3697,7 @@ lock:
 	.4byte	0xef2
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6078
+	.4byte	__func__$6125
 	.uleb128 0x2e
 	.string	"ret"
 	.byte	0x1
@@ -3724,7 +3724,7 @@ lock:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6078
+	.4byte	__func__$6125
 	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5d
@@ -3755,8 +3755,8 @@ lock:
 	.4byte	.LASF66
 	.byte	0x1
 	.2byte	0x14b
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xf27
@@ -3781,8 +3781,8 @@ lock:
 	.4byte	.LASF67
 	.byte	0x1
 	.2byte	0x150
-	.4byte	.LFB53
-	.4byte	.LFE53-.LFB53
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xf51
@@ -3800,7 +3800,7 @@ lock:
 	.uleb128 0x30
 	.4byte	.LASF68
 	.byte	0x5
-	.2byte	0x2cc
+	.2byte	0x2b8
 	.4byte	0xf64
 	.byte	0x6
 	.byte	0xff
@@ -3810,11 +3810,11 @@ lock:
 	.byte	0xff
 	.byte	0xff
 	.uleb128 0x7
-	.4byte	0xd5
+	.4byte	0x106
 	.uleb128 0x30
 	.4byte	.LASF69
 	.byte	0x5
-	.2byte	0x2cd
+	.2byte	0x2b9
 	.4byte	0xf7c
 	.byte	0x6
 	.byte	0
@@ -3824,7 +3824,7 @@ lock:
 	.byte	0
 	.byte	0
 	.uleb128 0x7
-	.4byte	0xd5
+	.4byte	0x106
 	.uleb128 0x19
 	.4byte	.LASF70
 	.byte	0x1
@@ -4095,24 +4095,6 @@ lock:
 	.byte	0
 	.byte	0
 	.uleb128 0x8
-	.uleb128 0x1
-	.byte	0x1
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x9
-	.uleb128 0x21
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2f
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0xa
 	.uleb128 0x4
 	.byte	0x1
 	.uleb128 0xb
@@ -4127,12 +4109,30 @@ lock:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xb
+	.uleb128 0x9
 	.uleb128 0x28
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
 	.uleb128 0x1c
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0xa
+	.uleb128 0x1
+	.byte	0x1
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xb
+	.uleb128 0x21
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2f
 	.uleb128 0xb
 	.byte	0
 	.byte	0
@@ -4725,7 +4725,7 @@ lock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL14
-	.4byte	.LFE30
+	.4byte	.LFE39
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4739,7 +4739,7 @@ lock:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL4
-	.4byte	.LFE30
+	.4byte	.LFE39
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4753,7 +4753,7 @@ lock:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL3
-	.4byte	.LFE30
+	.4byte	.LFE39
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4818,7 +4818,7 @@ lock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL30
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4832,7 +4832,7 @@ lock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL34
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4846,7 +4846,7 @@ lock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL40
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4860,7 +4860,7 @@ lock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL44
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4874,7 +4874,7 @@ lock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL48
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4899,7 +4899,7 @@ lock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL55
-	.4byte	.LFE40
+	.4byte	.LFE49
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4913,7 +4913,7 @@ lock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL60
-	.4byte	.LFE41
+	.4byte	.LFE50
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4927,7 +4927,7 @@ lock:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL59
-	.4byte	.LFE41
+	.4byte	.LFE50
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4948,7 +4948,7 @@ lock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL68
-	.4byte	.LFE42
+	.4byte	.LFE51
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4980,7 +4980,7 @@ lock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL74
-	.4byte	.LFE43
+	.4byte	.LFE52
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -4991,7 +4991,7 @@ lock:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL78
-	.4byte	.LFE43
+	.4byte	.LFE52
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5005,7 +5005,7 @@ lock:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL77
-	.4byte	.LFE43
+	.4byte	.LFE52
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5053,7 +5053,7 @@ lock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL92
-	.4byte	.LFE46
+	.4byte	.LFE55
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5067,7 +5067,7 @@ lock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL96
-	.4byte	.LFE47
+	.4byte	.LFE56
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5081,7 +5081,7 @@ lock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL100
-	.4byte	.LFE48
+	.4byte	.LFE57
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5095,7 +5095,7 @@ lock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL104
-	.4byte	.LFE49
+	.4byte	.LFE58
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5111,28 +5111,10 @@ lock:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
 	.4byte	.LFB39
 	.4byte	.LFE39-.LFB39
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
 	.4byte	.LFB41
 	.4byte	.LFE41-.LFB41
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
 	.4byte	.LFB44
 	.4byte	.LFE44-.LFB44
 	.4byte	.LFB45
@@ -5147,16 +5129,34 @@ lock:
 	.4byte	.LFE49-.LFB49
 	.4byte	.LFB50
 	.4byte	.LFE50-.LFB50
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
 	.4byte	.LFB51
 	.4byte	.LFE51-.LFB51
 	.4byte	.LFB52
 	.4byte	.LFE52-.LFB52
 	.4byte	.LFB53
 	.4byte	.LFE53-.LFB53
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -5167,28 +5167,10 @@ lock:
 	.4byte	.LBE10
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB30
-	.4byte	.LFE30
-	.4byte	.LFB32
-	.4byte	.LFE32
-	.4byte	.LFB35
-	.4byte	.LFE35
-	.4byte	.LFB36
-	.4byte	.LFE36
-	.4byte	.LFB37
-	.4byte	.LFE37
-	.4byte	.LFB38
-	.4byte	.LFE38
 	.4byte	.LFB39
 	.4byte	.LFE39
-	.4byte	.LFB40
-	.4byte	.LFE40
 	.4byte	.LFB41
 	.4byte	.LFE41
-	.4byte	.LFB42
-	.4byte	.LFE42
-	.4byte	.LFB43
-	.4byte	.LFE43
 	.4byte	.LFB44
 	.4byte	.LFE44
 	.4byte	.LFB45
@@ -5203,16 +5185,34 @@ lock:
 	.4byte	.LFE49
 	.4byte	.LFB50
 	.4byte	.LFE50
-	.4byte	.LFB33
-	.4byte	.LFE33
-	.4byte	.LFB34
-	.4byte	.LFE34
 	.4byte	.LFB51
 	.4byte	.LFE51
 	.4byte	.LFB52
 	.4byte	.LFE52
 	.4byte	.LFB53
 	.4byte	.LFE53
+	.4byte	.LFB54
+	.4byte	.LFE54
+	.4byte	.LFB55
+	.4byte	.LFE55
+	.4byte	.LFB56
+	.4byte	.LFE56
+	.4byte	.LFB57
+	.4byte	.LFE57
+	.4byte	.LFB58
+	.4byte	.LFE58
+	.4byte	.LFB59
+	.4byte	.LFE59
+	.4byte	.LFB42
+	.4byte	.LFE42
+	.4byte	.LFB43
+	.4byte	.LFE43
+	.4byte	.LFB60
+	.4byte	.LFE60
+	.4byte	.LFB61
+	.4byte	.LFE61
+	.4byte	.LFB62
+	.4byte	.LFE62
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -5304,9 +5304,9 @@ lock:
 	.string	"btc_config_clean_up"
 .LASF87:
 	.string	"config_get_int"
-.LASF21:
+.LASF19:
 	.string	"ESP_LOG_INFO"
-.LASF16:
+.LASF22:
 	.string	"UINT8"
 .LASF88:
 	.string	"config_set_int"
@@ -5362,9 +5362,9 @@ lock:
 	.string	"config_remove_section"
 .LASF10:
 	.string	"long int"
-.LASF22:
+.LASF20:
 	.string	"ESP_LOG_DEBUG"
-.LASF18:
+.LASF16:
 	.string	"ESP_LOG_NONE"
 .LASF72:
 	.string	"lock"
@@ -5374,11 +5374,11 @@ lock:
 	.string	"config_has_section"
 .LASF61:
 	.string	"btc_config_remove"
-.LASF17:
+.LASF23:
 	.string	"_Bool"
 .LASF7:
 	.string	"__uint64_t"
-.LASF20:
+.LASF18:
 	.string	"ESP_LOG_WARN"
 .LASF84:
 	.string	"config_save"
@@ -5396,7 +5396,7 @@ lock:
 	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/bt"
 .LASF103:
 	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
-.LASF23:
+.LASF21:
 	.string	"ESP_LOG_VERBOSE"
 .LASF31:
 	.string	"key_value"
@@ -5430,7 +5430,7 @@ lock:
 	.string	"config_section_end"
 .LASF95:
 	.string	"free"
-.LASF19:
+.LASF17:
 	.string	"ESP_LOG_ERROR"
 .LASF77:
 	.string	"osi_mutex_new"

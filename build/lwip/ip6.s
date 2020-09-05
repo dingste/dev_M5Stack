@@ -11,7 +11,7 @@
 	.global	ip6_route
 	.type	ip6_route, @function
 ip6_route:
-.LFB18:
+.LFB27:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/ipv6/ip6.c"
 	.loc 1 85 0
 .LVL0:
@@ -255,7 +255,7 @@ ip6_route:
 	.loc 1 193 0
 	mov.n	a2, a8
 	retw.n
-.LFE18:
+.LFE27:
 	.size	ip6_route, .-ip6_route
 	.section	.text.ip6_select_source_address,"ax",@progbits
 	.literal_position
@@ -270,7 +270,7 @@ ip6_route:
 	.global	ip6_select_source_address
 	.type	ip6_select_source_address, @function
 ip6_select_source_address:
-.LFB19:
+.LFB28:
 	.loc 1 208 0
 .LVL19:
 	entry	sp, 32
@@ -519,7 +519,7 @@ ip6_select_source_address:
 .L78:
 	.loc 1 276 0
 	retw.n
-.LFE19:
+.LFE28:
 	.size	ip6_select_source_address, .-ip6_select_source_address
 	.section	.text.ip6_input,"ax",@progbits
 	.literal_position
@@ -535,7 +535,7 @@ ip6_select_source_address:
 	.global	ip6_input
 	.type	ip6_input, @function
 ip6_input:
-.LFB20:
+.LFB29:
 	.loc 1 392 0
 .LVL48:
 	entry	sp, 48
@@ -1110,7 +1110,7 @@ ip6_input:
 	.loc 1 789 0
 	movi.n	a2, 0
 	retw.n
-.LFE20:
+.LFE29:
 	.size	ip6_input, .-ip6_input
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC23:
@@ -1123,7 +1123,7 @@ ip6_input:
 	.literal_position
 	.literal .LC22, ip6_addr_any
 	.literal .LC24, .LC23
-	.literal .LC25, __func__$6899
+	.literal .LC25, __func__$6963
 	.literal .LC27, .LC26
 	.literal .LC29, .LC28
 	.literal .LC30, 1610612736
@@ -1131,7 +1131,7 @@ ip6_input:
 	.global	ip6_output_if_src
 	.type	ip6_output_if_src, @function
 ip6_output_if_src:
-.LFB22:
+.LFB31:
 	.loc 1 844 0
 .LVL104:
 	entry	sp, 64
@@ -1420,14 +1420,14 @@ ip6_output_if_src:
 .LVL128:
 	.loc 1 924 0
 	retw.n
-.LFE22:
+.LFE31:
 	.size	ip6_output_if_src, .-ip6_output_if_src
 	.section	.text.ip6_output_if,"ax",@progbits
 	.align	4
 	.global	ip6_output_if
 	.type	ip6_output_if, @function
 ip6_output_if:
-.LFB21:
+.LFB30:
 	.loc 1 820 0
 .LVL129:
 	entry	sp, 48
@@ -1500,18 +1500,18 @@ ip6_output_if:
 	mov.n	a2, a8
 .LVL137:
 	retw.n
-.LFE21:
+.LFE30:
 	.size	ip6_output_if, .-ip6_output_if
 	.section	.text.ip6_output,"ax",@progbits
 	.literal_position
 	.literal .LC31, .LC23
-	.literal .LC32, __func__$6920
+	.literal .LC32, __func__$6984
 	.literal .LC33, .LC26
 	.align	4
 	.global	ip6_output
 	.type	ip6_output, @function
 ip6_output:
-.LFB23:
+.LFB32:
 	.loc 1 947 0
 .LVL138:
 	entry	sp, 80
@@ -1660,14 +1660,14 @@ ip6_output:
 	mov.n	a2, a8
 .LVL146:
 	retw.n
-.LFE23:
+.LFE32:
 	.size	ip6_output, .-ip6_output
 	.section	.text.ip6_options_add_hbh_ra,"ax",@progbits
 	.align	4
 	.global	ip6_options_add_hbh_ra
 	.type	ip6_options_add_hbh_ra, @function
 ip6_options_add_hbh_ra:
-.LFB24:
+.LFB33:
 	.loc 1 1058 0
 .LVL147:
 	entry	sp, 32
@@ -1718,17 +1718,17 @@ ip6_options_add_hbh_ra:
 	.loc 1 1080 0
 	mov.n	a2, a8
 	retw.n
-.LFE24:
+.LFE33:
 	.size	ip6_options_add_hbh_ra, .-ip6_options_add_hbh_ra
-	.section	.rodata.__func__$6920,"a",@progbits
-	.type	__func__$6920, @object
-	.size	__func__$6920, 11
-__func__$6920:
+	.section	.rodata.__func__$6984,"a",@progbits
+	.type	__func__$6984, @object
+	.size	__func__$6984, 11
+__func__$6984:
 	.string	"ip6_output"
-	.section	.rodata.__func__$6899,"a",@progbits
-	.type	__func__$6899, @object
-	.size	__func__$6899, 18
-__func__$6899:
+	.section	.rodata.__func__$6963,"a",@progbits
+	.type	__func__$6963, @object
+	.size	__func__$6963, 18
+__func__$6963:
 	.string	"ip6_output_if_src"
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -1749,10 +1749,10 @@ __func__$6899:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI0-.LFB18
+	.4byte	.LCFI0-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1761,10 +1761,10 @@ __func__$6899:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI1-.LFB19
+	.4byte	.LCFI1-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1773,10 +1773,10 @@ __func__$6899:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI2-.LFB20
+	.4byte	.LCFI2-.LFB29
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1785,10 +1785,10 @@ __func__$6899:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI3-.LFB22
+	.4byte	.LCFI3-.LFB31
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -1797,10 +1797,10 @@ __func__$6899:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI4-.LFB21
+	.4byte	.LCFI4-.LFB30
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1809,10 +1809,10 @@ __func__$6899:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI5-.LFB23
+	.4byte	.LCFI5-.LFB32
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -1821,10 +1821,10 @@ __func__$6899:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI6-.LFB24
+	.4byte	.LCFI6-.LFB33
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -3005,8 +3005,8 @@ __func__$6899:
 	.byte	0x1
 	.byte	0x54
 	.4byte	0x482
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x9a1
@@ -3042,8 +3042,8 @@ __func__$6899:
 	.byte	0x1
 	.byte	0xcf
 	.4byte	0x90d
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x9f3
@@ -3078,8 +3078,8 @@ __func__$6899:
 	.byte	0x1
 	.2byte	0x187
 	.4byte	0x123
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xc7a
@@ -3419,8 +3419,8 @@ __func__$6899:
 	.byte	0x1
 	.2byte	0x349
 	.4byte	0x123
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xdeb
@@ -3487,7 +3487,7 @@ __func__$6899:
 	.4byte	0xdfb
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6899
+	.4byte	__func__$6963
 	.uleb128 0x2e
 	.4byte	.Ldebug_ranges0+0
 	.4byte	0xd62
@@ -3618,8 +3618,8 @@ __func__$6899:
 	.byte	0x1
 	.2byte	0x331
 	.4byte	0x123
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xed9
@@ -3743,8 +3743,8 @@ __func__$6899:
 	.byte	0x1
 	.2byte	0x3b1
 	.4byte	0x123
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xffa
@@ -3822,7 +3822,7 @@ __func__$6899:
 	.4byte	0x100a
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6920
+	.4byte	__func__$6984
 	.uleb128 0x27
 	.4byte	.LVL139
 	.4byte	0x1156
@@ -3844,7 +3844,7 @@ __func__$6899:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6920
+	.4byte	__func__$6984
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5d
@@ -3910,8 +3910,8 @@ __func__$6899:
 	.byte	0x1
 	.2byte	0x421
 	.4byte	0x123
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x107b
@@ -4794,7 +4794,7 @@ __func__$6899:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL18
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4834,7 +4834,7 @@ __func__$6899:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL12-1
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4867,7 +4867,7 @@ __func__$6899:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL21
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x1
 	.byte	0x5e
 	.4byte	0
@@ -4999,7 +4999,7 @@ __func__$6899:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL99
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5142,7 +5142,7 @@ __func__$6899:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL128
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5171,7 +5171,7 @@ __func__$6899:
 	.byte	0x53
 	.byte	0x9f
 	.4byte	.LVL127
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -5195,7 +5195,7 @@ __func__$6899:
 	.sleb128 -64
 	.byte	0x9f
 	.4byte	.LVL121
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -5206,7 +5206,7 @@ __func__$6899:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL110
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5220,7 +5220,7 @@ __func__$6899:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL111
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5238,7 +5238,7 @@ __func__$6899:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL106-1
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5280,7 +5280,7 @@ __func__$6899:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL137
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5298,7 +5298,7 @@ __func__$6899:
 	.2byte	0x1
 	.byte	0x5b
 	.4byte	.LVL132
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5338,7 +5338,7 @@ __func__$6899:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL146
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5376,7 +5376,7 @@ __func__$6899:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL150
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5390,7 +5390,7 @@ __func__$6899:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL151
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5413,20 +5413,20 @@ __func__$6899:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -5437,20 +5437,20 @@ __func__$6899:
 	.4byte	.LBE5
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB24
-	.4byte	.LFE24
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB28
+	.4byte	.LFE28
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB31
+	.4byte	.LFE31
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB32
+	.4byte	.LFE32
+	.4byte	.LFB33
+	.4byte	.LFE33
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

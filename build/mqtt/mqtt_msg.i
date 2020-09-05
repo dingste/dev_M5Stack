@@ -4,17 +4,52 @@
 # 1 "<command-line>"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
 # 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 1
-# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h" 1
-# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/newlib.h" 1
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 1
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/features.h" 1
-# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h" 2
+# 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core-isa.h" 1
+# 190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
+
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
+typedef int ptrdiff_t;
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
+typedef unsigned int size_t;
+# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
+typedef short unsigned int wchar_t;
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 1
 
 
 
 
 
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
 typedef signed char __int8_t ;
 typedef unsigned char __uint8_t ;
 
@@ -49,122 +84,9 @@ typedef __uint64_t __uint_least64_t;
 
 typedef int __intptr_t;
 typedef unsigned int __uintptr_t;
-# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_intsup.h" 1
-# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 2
-
-
-
-
-
-
-typedef __int8_t int8_t ;
-typedef __uint8_t uint8_t ;
-
-
-
-
-typedef __int_least8_t int_least8_t;
-typedef __uint_least8_t uint_least8_t;
-
-
-
-
-typedef __int16_t int16_t ;
-typedef __uint16_t uint16_t ;
-
-
-
-
-typedef __int_least16_t int_least16_t;
-typedef __uint_least16_t uint_least16_t;
-
-
-
-
-typedef __int32_t int32_t ;
-typedef __uint32_t uint32_t ;
-
-
-
-
-typedef __int_least32_t int_least32_t;
-typedef __uint_least32_t uint_least32_t;
-
-
-
-
-typedef __int64_t int64_t ;
-typedef __uint64_t uint64_t ;
-
-
-
-
-typedef __int_least64_t int_least64_t;
-typedef __uint_least64_t uint_least64_t;
-# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
-  typedef int int_fast8_t;
-  typedef unsigned int uint_fast8_t;
-# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
-  typedef int int_fast16_t;
-  typedef unsigned int uint_fast16_t;
-# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
-  typedef int int_fast32_t;
-  typedef unsigned int uint_fast32_t;
-# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
-  typedef long long int int_fast64_t;
-  typedef long long unsigned int uint_fast64_t;
-# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
-  typedef long long int intmax_t;
-# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
-  typedef long long unsigned int uintmax_t;
-
-
-
-
-
-
-typedef __intptr_t intptr_t;
-typedef __uintptr_t uintptr_t;
-# 32 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 1
-# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
-# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/newlib.h" 1
-# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 1
-
-
-
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
-# 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core-isa.h" 1
-# 190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
-# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
-# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 1
-# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
-# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
-
-# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
-typedef int ptrdiff_t;
-# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
-typedef unsigned int size_t;
-# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
-typedef short unsigned int wchar_t;
-# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 1
-# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 1
+# 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 2
 # 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h" 1
-# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
-
 # 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 typedef int _lock_t;
 typedef _lock_t _LOCK_RECURSIVE_T;
@@ -614,108 +536,976 @@ char *strsignal (int __signo);
 # 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
 
 
-# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 2
+# 32 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/mqtt_msg.h" 1
 
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_intsup.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 2
+
+
+
+
+
+
+typedef __int8_t int8_t ;
+typedef __uint8_t uint8_t ;
+
+
+
+
+typedef __int_least8_t int_least8_t;
+typedef __uint_least8_t uint_least8_t;
+
+
+
+
+typedef __int16_t int16_t ;
+typedef __uint16_t uint16_t ;
+
+
+
+
+typedef __int_least16_t int_least16_t;
+typedef __uint_least16_t uint_least16_t;
+
+
+
+
+typedef __int32_t int32_t ;
+typedef __uint32_t uint32_t ;
+
+
+
+
+typedef __int_least32_t int_least32_t;
+typedef __uint_least32_t uint_least32_t;
+
+
+
+
+typedef __int64_t int64_t ;
+typedef __uint64_t uint64_t ;
+
+
+
+
+typedef __int_least64_t int_least64_t;
+typedef __uint_least64_t uint_least64_t;
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef int int_fast8_t;
+  typedef unsigned int uint_fast8_t;
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef int int_fast16_t;
+  typedef unsigned int uint_fast16_t;
+# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef int int_fast32_t;
+  typedef unsigned int uint_fast32_t;
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long int int_fast64_t;
+  typedef long long unsigned int uint_fast64_t;
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long int intmax_t;
+# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long unsigned int uintmax_t;
+
+
+
+
+
+
+typedef __intptr_t intptr_t;
+typedef __uintptr_t uintptr_t;
+# 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/mqtt_msg.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdbool.h" 1 3 4
+# 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/mqtt_msg.h" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_config.h" 1
 # 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_config.h"
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_config.h" 2
-# 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/mqtt_msg.h" 2
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/mqtt_msg.h"
-enum mqtt_message_type
-{
-    MQTT_MSG_TYPE_CONNECT = 1,
-    MQTT_MSG_TYPE_CONNACK = 2,
-    MQTT_MSG_TYPE_PUBLISH = 3,
-    MQTT_MSG_TYPE_PUBACK = 4,
-    MQTT_MSG_TYPE_PUBREC = 5,
-    MQTT_MSG_TYPE_PUBREL = 6,
-    MQTT_MSG_TYPE_PUBCOMP = 7,
-    MQTT_MSG_TYPE_SUBSCRIBE = 8,
-    MQTT_MSG_TYPE_SUBACK = 9,
-    MQTT_MSG_TYPE_UNSUBSCRIBE = 10,
-    MQTT_MSG_TYPE_UNSUBACK = 11,
-    MQTT_MSG_TYPE_PINGREQ = 12,
-    MQTT_MSG_TYPE_PINGRESP = 13,
-    MQTT_MSG_TYPE_DISCONNECT = 14
+# 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/mqtt_msg.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
+       
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 1
+# 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
+
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
+typedef __builtin_va_list __gnuc_va_list;
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
+# 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 1
+# 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h"
+
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h"
+typedef long int __off_t;
+typedef int __pid_t;
+
+__extension__ typedef long long int __loff_t;
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned char u_char;
+
+
+
+typedef unsigned short u_short;
+
+
+
+typedef unsigned int u_int;
+
+
+
+typedef unsigned long u_long;
+
+
+
+
+
+typedef unsigned short ushort;
+typedef unsigned int uint;
+typedef unsigned long ulong;
+
+
+
+typedef unsigned long clock_t;
+
+
+
+
+typedef long time_t;
+
+
+
+
+
+
+
+struct timespec {
+  time_t tv_sec;
+  long tv_nsec;
 };
 
-enum mqtt_connect_return_code
-{
-    CONNECTION_ACCEPTED = 0,
-    CONNECTION_REFUSE_PROTOCOL,
-    CONNECTION_REFUSE_ID_REJECTED,
-    CONNECTION_REFUSE_SERVER_UNAVAILABLE,
-    CONNECTION_REFUSE_BAD_USERNAME,
-    CONNECTION_REFUSE_NOT_AUTHORIZED
+
+struct itimerspec {
+  struct timespec it_interval;
+  struct timespec it_value;
 };
 
-typedef struct mqtt_message
+
+typedef long daddr_t;
+
+
+
+typedef char * caddr_t;
+# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned short ino_t;
+# 184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef _off_t off_t;
+typedef __dev_t dev_t;
+typedef __uid_t uid_t;
+typedef __gid_t gid_t;
+
+
+
+
+
+typedef int pid_t;
+
+
+
+
+
+
+
+typedef long key_t;
+
+typedef _ssize_t ssize_t;
+# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned int mode_t __attribute__ ((__mode__ (__SI__)));
+
+
+
+
+typedef unsigned short nlink_t;
+# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef long fd_mask;
+
+
+
+
+
+
+
+typedef struct _types_fd_set {
+ fd_mask fds_bits[(((64)+(((sizeof (fd_mask) * 8))-1))/((sizeof (fd_mask) * 8)))];
+} _types_fd_set;
+# 275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned long clockid_t;
+
+
+
+
+typedef unsigned long timer_t;
+
+
+
+typedef unsigned long useconds_t;
+typedef long suseconds_t;
+# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h" 1
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h"
+struct sched_param {
+  int sched_priority;
+# 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h"
+};
+
+int sched_yield( void );
+# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef __uint32_t pthread_t;
+# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef struct {
+  int is_initialized;
+  void *stackaddr;
+  int stacksize;
+  int contentionscope;
+  int inheritsched;
+  int schedpolicy;
+  struct sched_param schedparam;
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+  int detachstate;
+
+
+
+
+
+} pthread_attr_t;
+# 442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef __uint32_t pthread_mutex_t;
+
+typedef struct {
+  int is_initialized;
+# 454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+  int type;
+
+  int recursive;
+} pthread_mutexattr_t;
+
+
+
+
+typedef __uint32_t pthread_cond_t;
+
+typedef struct {
+  int is_initialized;
+
+
+
+} pthread_condattr_t;
+
+
+
+typedef __uint32_t pthread_key_t;
+
+typedef struct {
+  int is_initialized;
+  int init_executed;
+} pthread_once_t;
+# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
+
+
+
+typedef __FILE FILE;
+
+
+
+
+typedef _fpos_t fpos_t;
+
+
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/stdio.h" 1
+# 64 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+FILE * tmpfile (void);
+char * tmpnam (char *);
+
+char * tempnam (const char *, const char *);
+
+int fclose (FILE *);
+int fflush (FILE *);
+FILE * freopen (const char *restrict, const char *restrict, FILE *restrict);
+void setbuf (FILE *restrict, char *restrict);
+int setvbuf (FILE *restrict, char *restrict, int, size_t);
+int fprintf (FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int fscanf (FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int printf (const char *restrict, ...) __attribute__ ((__format__ (__printf__, 1, 2)))
+                                                            ;
+int scanf (const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 1, 2)))
+                                                           ;
+int sscanf (const char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int vfprintf (FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vprintf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 1, 0)))
+                                                            ;
+int vsprintf (char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int fgetc (FILE *);
+char * fgets (char *restrict, int, FILE *restrict);
+int fputc (int, FILE *);
+int fputs (const char *restrict, FILE *restrict);
+int getc (FILE *);
+int getchar (void);
+char * gets (char *);
+int putc (int, FILE *);
+int putchar (int);
+int puts (const char *);
+int ungetc (int, FILE *);
+size_t fread (void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t fwrite (const void * restrict , size_t _size, size_t _n, FILE *);
+
+
+
+int fgetpos (FILE *restrict, fpos_t *restrict);
+
+int fseek (FILE *, long, int);
+
+
+
+int fsetpos (FILE *, const fpos_t *);
+
+long ftell ( FILE *);
+void rewind (FILE *);
+void clearerr (FILE *);
+int feof (FILE *);
+int ferror (FILE *);
+void perror (const char *);
+
+FILE * fopen (const char *restrict _name, const char *restrict _type);
+int sprintf (char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int remove (const char *);
+int rename (const char *, const char *);
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+int fseeko (FILE *, off_t, int);
+off_t ftello ( FILE *);
+
+
+
+
+
+
+
+int asiprintf (char **, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+char * asniprintf (char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+char * asnprintf (char *restrict, size_t *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int asprintf (char **restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+
+int diprintf (int, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+
+int fiprintf (FILE *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int fiscanf (FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int iprintf (const char *, ...) __attribute__ ((__format__ (__printf__, 1, 2)))
+                                                            ;
+int iscanf (const char *, ...) __attribute__ ((__format__ (__scanf__, 1, 2)))
+                                                           ;
+int siprintf (char *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int siscanf (const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int snprintf (char *restrict, size_t, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int sniprintf (char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int vasiprintf (char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+char * vasniprintf (char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+char * vasnprintf (char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vasprintf (char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vdiprintf (int, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vfiprintf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vfiscanf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int vfscanf (FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int viprintf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 1, 0)))
+                                                            ;
+int viscanf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 1, 0)))
+                                                           ;
+int vscanf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 1, 0)))
+                                                           ;
+int vsiprintf (char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vsiscanf (const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int vsniprintf (char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vsnprintf (char *restrict, size_t, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vsscanf (const char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+# 313 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+FILE * fdopen (int, const char *);
+
+int fileno (FILE *);
+int getw (FILE *);
+int pclose (FILE *);
+FILE * popen (const char *, const char *);
+int putw (int, FILE *);
+void setbuffer (FILE *, char *, int);
+int setlinebuf (FILE *);
+int getc_unlocked (FILE *);
+int getchar_unlocked (void);
+void flockfile (FILE *);
+int ftrylockfile (FILE *);
+void funlockfile (FILE *);
+int putc_unlocked (int, FILE *);
+int putchar_unlocked (int);
+# 338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+int dprintf (int, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+
+FILE * fmemopen (void *restrict, size_t, const char *restrict);
+
+
+FILE * open_memstream (char **, size_t *);
+
+int renameat (int, const char *, int, const char *);
+
+int vdprintf (int, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+
+
+
+
+
+
+
+int _asiprintf_r (struct _reent *, char **, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+char * _asniprintf_r (struct _reent *, char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+char * _asnprintf_r (struct _reent *, char *restrict, size_t *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _asprintf_r (struct _reent *, char **restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _diprintf_r (struct _reent *, int, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _dprintf_r (struct _reent *, int, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _fclose_r (struct _reent *, FILE *);
+int _fcloseall_r (struct _reent *);
+FILE * _fdopen_r (struct _reent *, int, const char *);
+int _fflush_r (struct _reent *, FILE *);
+int _fgetc_r (struct _reent *, FILE *);
+int _fgetc_unlocked_r (struct _reent *, FILE *);
+char * _fgets_r (struct _reent *, char *restrict, int, FILE *restrict);
+char * _fgets_unlocked_r (struct _reent *, char *restrict, int, FILE *restrict);
+
+
+
+
+int _fgetpos_r (struct _reent *, FILE *, fpos_t *);
+int _fsetpos_r (struct _reent *, FILE *, const fpos_t *);
+
+int _fiprintf_r (struct _reent *, FILE *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _fiscanf_r (struct _reent *, FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
+FILE * _fmemopen_r (struct _reent *, void *restrict, size_t, const char *restrict);
+FILE * _fopen_r (struct _reent *, const char *restrict, const char *restrict);
+FILE * _freopen_r (struct _reent *, const char *restrict, const char *restrict, FILE *restrict);
+int _fprintf_r (struct _reent *, FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _fpurge_r (struct _reent *, FILE *);
+int _fputc_r (struct _reent *, int, FILE *);
+int _fputc_unlocked_r (struct _reent *, int, FILE *);
+int _fputs_r (struct _reent *, const char *restrict, FILE *restrict);
+int _fputs_unlocked_r (struct _reent *, const char *restrict, FILE *restrict);
+size_t _fread_r (struct _reent *, void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t _fread_unlocked_r (struct _reent *, void * restrict, size_t _size, size_t _n, FILE *restrict);
+int _fscanf_r (struct _reent *, FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
+int _fseek_r (struct _reent *, FILE *, long, int);
+int _fseeko_r (struct _reent *, FILE *, _off_t, int);
+long _ftell_r (struct _reent *, FILE *);
+_off_t _ftello_r (struct _reent *, FILE *);
+void _rewind_r (struct _reent *, FILE *);
+size_t _fwrite_r (struct _reent *, const void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t _fwrite_unlocked_r (struct _reent *, const void * restrict, size_t _size, size_t _n, FILE *restrict);
+int _getc_r (struct _reent *, FILE *);
+int _getc_unlocked_r (struct _reent *, FILE *);
+int _getchar_r (struct _reent *);
+int _getchar_unlocked_r (struct _reent *);
+char * _gets_r (struct _reent *, char *);
+int _iprintf_r (struct _reent *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int _iscanf_r (struct _reent *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+FILE * _open_memstream_r (struct _reent *, char **, size_t *);
+void _perror_r (struct _reent *, const char *);
+int _printf_r (struct _reent *, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int _putc_r (struct _reent *, int, FILE *);
+int _putc_unlocked_r (struct _reent *, int, FILE *);
+int _putchar_unlocked_r (struct _reent *, int);
+int _putchar_r (struct _reent *, int);
+int _puts_r (struct _reent *, const char *);
+int _remove_r (struct _reent *, const char *);
+int _rename_r (struct _reent *, const char *_old, const char *_new)
+                                          ;
+int _scanf_r (struct _reent *, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int _siprintf_r (struct _reent *, char *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _siscanf_r (struct _reent *, const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
+int _sniprintf_r (struct _reent *, char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _snprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _sprintf_r (struct _reent *, char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _sscanf_r (struct _reent *, const char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
+char * _tempnam_r (struct _reent *, const char *, const char *);
+FILE * _tmpfile_r (struct _reent *);
+char * _tmpnam_r (struct _reent *, char *);
+int _ungetc_r (struct _reent *, int, FILE *);
+int _vasiprintf_r (struct _reent *, char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+char * _vasniprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+char * _vasnprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vasprintf_r (struct _reent *, char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vdiprintf_r (struct _reent *, int, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vdprintf_r (struct _reent *, int, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfiprintf_r (struct _reent *, FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfiscanf_r (struct _reent *, FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _vfprintf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfscanf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _viprintf_r (struct _reent *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int _viscanf_r (struct _reent *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int _vprintf_r (struct _reent *, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int _vscanf_r (struct _reent *, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int _vsiprintf_r (struct _reent *, char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vsiscanf_r (struct _reent *, const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _vsniprintf_r (struct _reent *, char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vsnprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vsprintf_r (struct _reent *, char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vsscanf_r (struct _reent *, const char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+
+
+
+int fpurge (FILE *);
+ssize_t __getdelim (char **, size_t *, int, FILE *);
+ssize_t __getline (char **, size_t *, FILE *);
+
+
+void clearerr_unlocked (FILE *);
+int feof_unlocked (FILE *);
+int ferror_unlocked (FILE *);
+int fileno_unlocked (FILE *);
+int fflush_unlocked (FILE *);
+int fgetc_unlocked (FILE *);
+int fputc_unlocked (int, FILE *);
+size_t fread_unlocked (void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t fwrite_unlocked (const void * restrict , size_t _size, size_t _n, FILE *);
+# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+int __srget_r (struct _reent *, FILE *);
+int __swbuf_r (struct _reent *, int, FILE *);
+# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+FILE *funopen (const void * __cookie, int (*__readfn)(void * __cookie, char *__buf, int __n), int (*__writefn)(void * __cookie, const char *__buf, int __n), fpos_t (*__seekfn)(void * __cookie, fpos_t __off, int __whence), int (*__closefn)(void * __cookie))
+
+
+
+
+
+                                   ;
+FILE *_funopen_r (struct _reent *, const void * __cookie, int (*__readfn)(void * __cookie, char *__buf, int __n), int (*__writefn)(void * __cookie, const char *__buf, int __n), fpos_t (*__seekfn)(void * __cookie, fpos_t __off, int __whence), int (*__closefn)(void * __cookie))
+
+
+
+
+
+                                   ;
+
+
+
+
+
+
+
+typedef ssize_t cookie_read_function_t(void *__cookie, char *__buf, size_t __n);
+typedef ssize_t cookie_write_function_t(void *__cookie, const char *__buf,
+     size_t __n);
+
+
+
+
+typedef int cookie_seek_function_t(void *__cookie, off_t *__off, int __whence);
+
+typedef int cookie_close_function_t(void *__cookie);
+typedef struct
 {
-    uint8_t* data;
-    uint32_t length;
-    uint32_t fragmented_msg_total_length;
-    uint32_t fragmented_msg_data_offset;
-} mqtt_message_t;
 
-typedef struct mqtt_connection
+
+  cookie_read_function_t *read;
+  cookie_write_function_t *write;
+  cookie_seek_function_t *seek;
+  cookie_close_function_t *close;
+} cookie_io_functions_t;
+FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __functions)
+                                                         ;
+FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
+                                                         ;
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h"
+       
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+
+
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/stdlib.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/alloca.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+
+
+
+
+
+
+
+
+typedef struct
 {
-    mqtt_message_t message;
+  int quot;
+  int rem;
+} div_t;
 
-    uint16_t message_id;
-    uint8_t* buffer;
-    uint16_t buffer_length;
-
-} mqtt_connection_t;
-
-typedef struct mqtt_connect_info
+typedef struct
 {
-    char* client_id;
-    char* username;
-    char* password;
-    char* will_topic;
-    char* will_message;
-    int keepalive;
-    int will_length;
-    int will_qos;
-    int will_retain;
-    int clean_session;
-
-} mqtt_connect_info_t;
+  long quot;
+  long rem;
+} ldiv_t;
 
 
-static inline int mqtt_get_type(uint8_t* buffer) { return (buffer[0] & 0xf0) >> 4; }
-static inline int mqtt_get_connect_session_present(uint8_t* buffer) { return buffer[2] & 0x01; }
-static inline int mqtt_get_connect_return_code(uint8_t* buffer) { return buffer[3]; }
-static inline int mqtt_get_dup(uint8_t* buffer) { return (buffer[0] & 0x08) >> 3; }
-static inline int mqtt_get_qos(uint8_t* buffer) { return (buffer[0] & 0x06) >> 1; }
-static inline int mqtt_get_retain(uint8_t* buffer) { return (buffer[0] & 0x01); }
 
-void mqtt_msg_init(mqtt_connection_t* connection, uint8_t* buffer, uint16_t buffer_length);
-uint32_t mqtt_get_total_length(uint8_t* buffer, uint16_t length);
-const char* mqtt_get_publish_topic(uint8_t* buffer, uint32_t* length);
-const char* mqtt_get_publish_data(uint8_t* buffer, uint32_t* length);
-uint16_t mqtt_get_id(uint8_t* buffer, uint16_t length);
 
-mqtt_message_t* mqtt_msg_connect(mqtt_connection_t* connection, mqtt_connect_info_t* info);
-mqtt_message_t* mqtt_msg_publish(mqtt_connection_t* connection, const char* topic, const char* data, int data_length, int qos, int retain, uint16_t* message_id);
-mqtt_message_t* mqtt_msg_puback(mqtt_connection_t* connection, uint16_t message_id);
-mqtt_message_t* mqtt_msg_pubrec(mqtt_connection_t* connection, uint16_t message_id);
-mqtt_message_t* mqtt_msg_pubrel(mqtt_connection_t* connection, uint16_t message_id);
-mqtt_message_t* mqtt_msg_pubcomp(mqtt_connection_t* connection, uint16_t message_id);
-mqtt_message_t* mqtt_msg_subscribe(mqtt_connection_t* connection, const char* topic, int qos, uint16_t* message_id);
-mqtt_message_t* mqtt_msg_unsubscribe(mqtt_connection_t* connection, const char* topic, uint16_t* message_id);
-mqtt_message_t* mqtt_msg_pingreq(mqtt_connection_t* connection);
-mqtt_message_t* mqtt_msg_pingresp(mqtt_connection_t* connection);
-mqtt_message_t* mqtt_msg_disconnect(mqtt_connection_t* connection);
-# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 2
+typedef struct
+{
+  long long int quot;
+  long long int rem;
+} lldiv_t;
 
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform.h" 1
-# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform_esp32_idf.h" 1
-# 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform_esp32_idf.h"
+
+
+
+typedef int (*__compar_fn_t) (const void *, const void *);
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
+int __locale_mb_cur_max (void);
+
+
+
+void abort (void) __attribute__ ((__noreturn__));
+int abs (int);
+int atexit (void (*__func)(void));
+double atof (const char *__nptr);
+
+float atoff (const char *__nptr);
+
+int atoi (const char *__nptr);
+int _atoi_r (struct _reent *, const char *__nptr);
+long atol (const char *__nptr);
+long _atol_r (struct _reent *, const char *__nptr);
+void * bsearch (const void * __key, const void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar)
+
+
+
+                                ;
+void * calloc (size_t __nmemb, size_t __size) ;
+div_t div (int __numer, int __denom);
+void exit (int __status) __attribute__ ((__noreturn__));
+void free (void *) ;
+char * getenv (const char *__string);
+char * _getenv_r (struct _reent *, const char *__string);
+char * _findenv (const char *, int *);
+char * _findenv_r (struct _reent *, const char *, int *);
+
+extern char *suboptarg;
+int getsubopt (char **, char * const *, char **);
+
+long labs (long);
+ldiv_t ldiv (long __numer, long __denom);
+void * malloc (size_t __size) ;
+int mblen (const char *, size_t);
+int _mblen_r (struct _reent *, const char *, size_t, _mbstate_t *);
+int mbtowc (wchar_t *restrict, const char *restrict, size_t);
+int _mbtowc_r (struct _reent *, wchar_t *restrict, const char *restrict, size_t, _mbstate_t *);
+int wctomb (char *, wchar_t);
+int _wctomb_r (struct _reent *, char *, wchar_t, _mbstate_t *);
+size_t mbstowcs (wchar_t *restrict, const char *restrict, size_t);
+size_t _mbstowcs_r (struct _reent *, wchar_t *restrict, const char *restrict, size_t, _mbstate_t *);
+size_t wcstombs (char *restrict, const wchar_t *restrict, size_t);
+size_t _wcstombs_r (struct _reent *, char *restrict, const wchar_t *restrict, size_t, _mbstate_t *);
+
+
+char * mkdtemp (char *);
+int mkostemp (char *, int);
+int mkostemps (char *, int, int);
+int mkstemp (char *);
+int mkstemps (char *, int);
+
+char * mktemp (char *);
+
+
+
+
+char * _mkdtemp_r (struct _reent *, char *);
+int _mkostemp_r (struct _reent *, char *, int);
+int _mkostemps_r (struct _reent *, char *, int, int);
+int _mkstemp_r (struct _reent *, char *);
+int _mkstemps_r (struct _reent *, char *, int);
+
+char * _mktemp_r (struct _reent *, char *);
+
+
+
+
+void qsort (void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
+int rand (void);
+void * realloc (void * __r, size_t __size) ;
+
+void * reallocf (void * __r, size_t __size);
+char * realpath (const char *restrict path, char *restrict resolved_path);
+
+void srand (unsigned __seed);
+double strtod (const char *restrict __n, char **restrict __end_PTR);
+double _strtod_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR);
+
+
+
+float strtof (const char *restrict __n, char **restrict __end_PTR);
+
+
+
+
+
+
+
+long strtol (const char *restrict __n, char **restrict __end_PTR, int __base);
+long _strtol_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR, int __base);
+unsigned long strtoul (const char *restrict __n, char **restrict __end_PTR, int __base);
+unsigned long _strtoul_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR, int __base);
+
+int system (const char *__string);
+
+
+long a64l (const char *__input);
+char * l64a (long __input);
+char * _l64a_r (struct _reent *,long __input);
+int on_exit (void (*__func)(int, void *),void * __arg);
+
+
+
+
+void _Exit (int __status) __attribute__ ((__noreturn__));
+
+
+int putenv (char *__string);
+int _putenv_r (struct _reent *, char *__string);
+void * _reallocf_r (struct _reent *, void *, size_t);
+int setenv (const char *__string, const char *__value, int __overwrite);
+int _setenv_r (struct _reent *, const char *__string, const char *__value, int __overwrite);
+
+char * gcvt (double,int,char *);
+char * gcvtf (float,int,char *);
+char * fcvt (double,int,int *,int *);
+char * fcvtf (float,int,int *,int *);
+char * ecvt (double,int,int *,int *);
+char * ecvtbuf (double, int, int*, int*, char *);
+char * fcvtbuf (double, int, int*, int*, char *);
+char * ecvtf (float,int,int *,int *);
+char * dtoa (double, int, int, int *, int*, char**);
+
+char * __itoa (int, char *, int);
+char * __utoa (unsigned, char *, int);
+
+char * itoa (int, char *, int);
+char * utoa (unsigned, char *, int);
+int rand_r (unsigned *__seed);
+
+double drand48 (void);
+double _drand48_r (struct _reent *);
+double erand48 (unsigned short [3]);
+double _erand48_r (struct _reent *, unsigned short [3]);
+long jrand48 (unsigned short [3]);
+long _jrand48_r (struct _reent *, unsigned short [3]);
+void lcong48 (unsigned short [7]);
+void _lcong48_r (struct _reent *, unsigned short [7]);
+long lrand48 (void);
+long _lrand48_r (struct _reent *);
+long mrand48 (void);
+long _mrand48_r (struct _reent *);
+long nrand48 (unsigned short [3]);
+long _nrand48_r (struct _reent *, unsigned short [3]);
+unsigned short *
+       seed48 (unsigned short [3]);
+unsigned short *
+       _seed48_r (struct _reent *, unsigned short [3]);
+void srand48 (long);
+void _srand48_r (struct _reent *, long);
+
+
+
+
+long long atoll (const char *__nptr);
+
+
+long long _atoll_r (struct _reent *, const char *__nptr);
+
+
+
+
+long long llabs (long long);
+lldiv_t lldiv (long long __numer, long long __denom);
+long long strtoll (const char *restrict __n, char **restrict __end_PTR, int __base);
+
+
+long long _strtoll_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
+
+
+
+
+unsigned long long strtoull (const char *restrict __n, char **restrict __end_PTR, int __base);
+
+
+unsigned long long _strtoull_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
+
+
+void cfree (void *);
+int unsetenv (const char *__string);
+int _unsetenv_r (struct _reent *, const char *__string);
+# 258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
+char * _dtoa_r (struct _reent *, double, int, int, int *, int*, char**);
+
+void * _malloc_r (struct _reent *, size_t) ;
+void * _calloc_r (struct _reent *, size_t, size_t) ;
+void _free_r (struct _reent *, void *) ;
+void * _realloc_r (struct _reent *, void *, size_t) ;
+void _mstats_r (struct _reent *, char *);
+
+int _system_r (struct _reent *, const char *);
+
+void __eprintf (const char *, const char *, unsigned int, const char *);
+# 291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
+extern long double strtold (const char *restrict, char **restrict);
+
+
+
+
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h" 1
+# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
+void __assert (const char *, int, const char *) __attribute__ ((__noreturn__))
+                                 ;
+void __assert_func (const char *, int, const char *, const char *) __attribute__ ((__noreturn__))
+                                 ;
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 2
+
+
+
+
+
+typedef int32_t esp_err_t;
+# 58 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
+const char *esp_err_to_name(esp_err_t code);
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
+const char *esp_err_to_name_r(esp_err_t code, char *buf, size_t buflen);
+
+
+void _esp_error_check_failed(esp_err_t rc, const char *file, int line, const char *function, const char *expression) __attribute__((noreturn));
+
+
+void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int line, const char *function, const char *expression);
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_config.h" 1
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 1
 # 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
@@ -1353,285 +2143,12 @@ long a3;
 
 
 
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 1
-# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
-# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
-
-
-
-
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
-
-
-
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/stdlib.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
-
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/alloca.h" 1
-# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
-
-
-
-
-
-
-
-
-typedef struct
-{
-  int quot;
-  int rem;
-} div_t;
-
-typedef struct
-{
-  long quot;
-  long rem;
-} ldiv_t;
-
-
-
-
-typedef struct
-{
-  long long int quot;
-  long long int rem;
-} lldiv_t;
-
-
-
-
-typedef int (*__compar_fn_t) (const void *, const void *);
-# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
-int __locale_mb_cur_max (void);
-
-
-
-void abort (void) __attribute__ ((__noreturn__));
-int abs (int);
-int atexit (void (*__func)(void));
-double atof (const char *__nptr);
-
-float atoff (const char *__nptr);
-
-int atoi (const char *__nptr);
-int _atoi_r (struct _reent *, const char *__nptr);
-long atol (const char *__nptr);
-long _atol_r (struct _reent *, const char *__nptr);
-void * bsearch (const void * __key, const void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar)
-
-
-
-                                ;
-void * calloc (size_t __nmemb, size_t __size) ;
-div_t div (int __numer, int __denom);
-void exit (int __status) __attribute__ ((__noreturn__));
-void free (void *) ;
-char * getenv (const char *__string);
-char * _getenv_r (struct _reent *, const char *__string);
-char * _findenv (const char *, int *);
-char * _findenv_r (struct _reent *, const char *, int *);
-
-extern char *suboptarg;
-int getsubopt (char **, char * const *, char **);
-
-long labs (long);
-ldiv_t ldiv (long __numer, long __denom);
-void * malloc (size_t __size) ;
-int mblen (const char *, size_t);
-int _mblen_r (struct _reent *, const char *, size_t, _mbstate_t *);
-int mbtowc (wchar_t *restrict, const char *restrict, size_t);
-int _mbtowc_r (struct _reent *, wchar_t *restrict, const char *restrict, size_t, _mbstate_t *);
-int wctomb (char *, wchar_t);
-int _wctomb_r (struct _reent *, char *, wchar_t, _mbstate_t *);
-size_t mbstowcs (wchar_t *restrict, const char *restrict, size_t);
-size_t _mbstowcs_r (struct _reent *, wchar_t *restrict, const char *restrict, size_t, _mbstate_t *);
-size_t wcstombs (char *restrict, const wchar_t *restrict, size_t);
-size_t _wcstombs_r (struct _reent *, char *restrict, const wchar_t *restrict, size_t, _mbstate_t *);
-
-
-char * mkdtemp (char *);
-int mkostemp (char *, int);
-int mkostemps (char *, int, int);
-int mkstemp (char *);
-int mkstemps (char *, int);
-
-char * mktemp (char *);
-
-
-
-
-char * _mkdtemp_r (struct _reent *, char *);
-int _mkostemp_r (struct _reent *, char *, int);
-int _mkostemps_r (struct _reent *, char *, int, int);
-int _mkstemp_r (struct _reent *, char *);
-int _mkstemps_r (struct _reent *, char *, int);
-
-char * _mktemp_r (struct _reent *, char *);
-
-
-
-
-void qsort (void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
-int rand (void);
-void * realloc (void * __r, size_t __size) ;
-
-void * reallocf (void * __r, size_t __size);
-char * realpath (const char *restrict path, char *restrict resolved_path);
-
-void srand (unsigned __seed);
-double strtod (const char *restrict __n, char **restrict __end_PTR);
-double _strtod_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR);
-
-
-
-float strtof (const char *restrict __n, char **restrict __end_PTR);
-
-
-
-
-
-
-
-long strtol (const char *restrict __n, char **restrict __end_PTR, int __base);
-long _strtol_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR, int __base);
-unsigned long strtoul (const char *restrict __n, char **restrict __end_PTR, int __base);
-unsigned long _strtoul_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR, int __base);
-
-int system (const char *__string);
-
-
-long a64l (const char *__input);
-char * l64a (long __input);
-char * _l64a_r (struct _reent *,long __input);
-int on_exit (void (*__func)(int, void *),void * __arg);
-
-
-
-
-void _Exit (int __status) __attribute__ ((__noreturn__));
-
-
-int putenv (char *__string);
-int _putenv_r (struct _reent *, char *__string);
-void * _reallocf_r (struct _reent *, void *, size_t);
-int setenv (const char *__string, const char *__value, int __overwrite);
-int _setenv_r (struct _reent *, const char *__string, const char *__value, int __overwrite);
-
-char * gcvt (double,int,char *);
-char * gcvtf (float,int,char *);
-char * fcvt (double,int,int *,int *);
-char * fcvtf (float,int,int *,int *);
-char * ecvt (double,int,int *,int *);
-char * ecvtbuf (double, int, int*, int*, char *);
-char * fcvtbuf (double, int, int*, int*, char *);
-char * ecvtf (float,int,int *,int *);
-char * dtoa (double, int, int, int *, int*, char**);
-
-char * __itoa (int, char *, int);
-char * __utoa (unsigned, char *, int);
-
-char * itoa (int, char *, int);
-char * utoa (unsigned, char *, int);
-int rand_r (unsigned *__seed);
-
-double drand48 (void);
-double _drand48_r (struct _reent *);
-double erand48 (unsigned short [3]);
-double _erand48_r (struct _reent *, unsigned short [3]);
-long jrand48 (unsigned short [3]);
-long _jrand48_r (struct _reent *, unsigned short [3]);
-void lcong48 (unsigned short [7]);
-void _lcong48_r (struct _reent *, unsigned short [7]);
-long lrand48 (void);
-long _lrand48_r (struct _reent *);
-long mrand48 (void);
-long _mrand48_r (struct _reent *);
-long nrand48 (unsigned short [3]);
-long _nrand48_r (struct _reent *, unsigned short [3]);
-unsigned short *
-       seed48 (unsigned short [3]);
-unsigned short *
-       _seed48_r (struct _reent *, unsigned short [3]);
-void srand48 (long);
-void _srand48_r (struct _reent *, long);
-
-
-
-
-long long atoll (const char *__nptr);
-
-
-long long _atoll_r (struct _reent *, const char *__nptr);
-
-
-
-
-long long llabs (long long);
-lldiv_t lldiv (long long __numer, long long __denom);
-long long strtoll (const char *restrict __n, char **restrict __end_PTR, int __base);
-
-
-long long _strtoll_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
-
-
-
-
-unsigned long long strtoull (const char *restrict __n, char **restrict __end_PTR, int __base);
-
-
-unsigned long long _strtoull_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
-
-
-void cfree (void *);
-int unsetenv (const char *__string);
-int _unsetenv_r (struct _reent *, const char *__string);
-# 258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
-char * _dtoa_r (struct _reent *, double, int, int, int *, int*, char**);
-
-void * _malloc_r (struct _reent *, size_t) ;
-void * _calloc_r (struct _reent *, size_t, size_t) ;
-void _free_r (struct _reent *, void *) ;
-void * _realloc_r (struct _reent *, void *, size_t) ;
-void _mstats_r (struct _reent *, char *);
-
-int _system_r (struct _reent *, const char *);
-
-void __eprintf (const char *, const char *, unsigned int, const char *);
-# 291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
-extern long double strtold (const char *restrict, char **restrict);
-
-
-
-
-# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 1
-# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdbool.h" 1 3 4
-# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 2
-
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h" 1
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h" 1
-# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h"
-       
-# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
-
-
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h" 1
-# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
-void __assert (const char *, int, const char *) __attribute__ ((__noreturn__))
-                                 ;
-void __assert_func (const char *, int, const char *, const char *) __attribute__ ((__noreturn__))
-                                 ;
-# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
-# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h" 2
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 2
 # 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
@@ -1784,6 +2301,77 @@ typedef void (*TaskFunction_t)( void * );
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/deprecated_definitions.h" 1
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 2
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void *get_sp()
+{
+    void *sp;
+    asm volatile ("mov %0, sp;" : "=r" (sp));
+    return sp;
+}
+
+
+
+
+
+static inline void cpu_write_dtlb(uint32_t vpn, unsigned attr)
+{
+    asm volatile ("wdtlb  %1, %0; dsync\n" :: "r" (vpn), "r" (attr));
+}
+
+
+static inline void cpu_write_itlb(unsigned vpn, unsigned attr)
+{
+    asm volatile ("witlb  %1, %0; isync\n" :: "r" (vpn), "r" (attr));
+}
+
+static inline void cpu_init_memctl()
+{
+
+    uint32_t memctl = 0x00000000;
+    asm volatile ("wsr %0, " "MEMCTL" : : "r" (memctl));;
+
+}
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void cpu_configure_region_protection()
+{
+    const uint32_t pages_to_protect[] = {0x00000000, 0x80000000, 0xa0000000, 0xc0000000, 0xe0000000};
+    for (int i = 0; i < sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
+        cpu_write_dtlb(pages_to_protect[i], 0xf);
+        cpu_write_itlb(pages_to_protect[i], 0xf);
+    }
+    cpu_write_dtlb(0x20000000, 0);
+    cpu_write_itlb(0x20000000, 0);
+}
+
+
+
+
+
+void esp_cpu_stall(int cpu_id);
+
+
+
+
+
+void esp_cpu_unstall(int cpu_id);
+
+
+
+
+
+void esp_cpu_reset(int cpu_id);
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 3 4
+_Bool 
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+    esp_cpu_in_ocd_debug_mode();
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 
 
 
@@ -1960,604 +2548,6 @@ void esp_crosscore_int_send_freq_switch(int core_id);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h" 1
 # 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h"
        
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 1
-# 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
-
-
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
-# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
-
-# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
-typedef __builtin_va_list __gnuc_va_list;
-# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
-# 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 1
-# 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h" 1
-# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h"
-
-# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h"
-typedef long int __off_t;
-typedef int __pid_t;
-
-__extension__ typedef long long int __loff_t;
-# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
-# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
-typedef unsigned char u_char;
-
-
-
-typedef unsigned short u_short;
-
-
-
-typedef unsigned int u_int;
-
-
-
-typedef unsigned long u_long;
-
-
-
-
-
-typedef unsigned short ushort;
-typedef unsigned int uint;
-typedef unsigned long ulong;
-
-
-
-typedef unsigned long clock_t;
-
-
-
-
-typedef long time_t;
-
-
-
-
-
-
-
-struct timespec {
-  time_t tv_sec;
-  long tv_nsec;
-};
-
-
-struct itimerspec {
-  struct timespec it_interval;
-  struct timespec it_value;
-};
-
-
-typedef long daddr_t;
-
-
-
-typedef char * caddr_t;
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
-typedef unsigned short ino_t;
-# 184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
-typedef _off_t off_t;
-typedef __dev_t dev_t;
-typedef __uid_t uid_t;
-typedef __gid_t gid_t;
-
-
-
-
-
-typedef int pid_t;
-
-
-
-
-
-
-
-typedef long key_t;
-
-typedef _ssize_t ssize_t;
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
-typedef unsigned int mode_t __attribute__ ((__mode__ (__SI__)));
-
-
-
-
-typedef unsigned short nlink_t;
-# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
-typedef long fd_mask;
-
-
-
-
-
-
-
-typedef struct _types_fd_set {
- fd_mask fds_bits[(((64)+(((sizeof (fd_mask) * 8))-1))/((sizeof (fd_mask) * 8)))];
-} _types_fd_set;
-# 275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
-typedef unsigned long clockid_t;
-
-
-
-
-typedef unsigned long timer_t;
-
-
-
-typedef unsigned long useconds_t;
-typedef long suseconds_t;
-# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h" 1
-# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h"
-struct sched_param {
-  int sched_priority;
-# 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h"
-};
-
-int sched_yield( void );
-# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
-# 308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
-typedef __uint32_t pthread_t;
-# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
-typedef struct {
-  int is_initialized;
-  void *stackaddr;
-  int stacksize;
-  int contentionscope;
-  int inheritsched;
-  int schedpolicy;
-  struct sched_param schedparam;
-# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
-  int detachstate;
-
-
-
-
-
-} pthread_attr_t;
-# 442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
-typedef __uint32_t pthread_mutex_t;
-
-typedef struct {
-  int is_initialized;
-# 454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
-  int type;
-
-  int recursive;
-} pthread_mutexattr_t;
-
-
-
-
-typedef __uint32_t pthread_cond_t;
-
-typedef struct {
-  int is_initialized;
-
-
-
-} pthread_condattr_t;
-
-
-
-typedef __uint32_t pthread_key_t;
-
-typedef struct {
-  int is_initialized;
-  int init_executed;
-} pthread_once_t;
-# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
-
-
-
-typedef __FILE FILE;
-
-
-
-
-typedef _fpos_t fpos_t;
-
-
-
-
-
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/stdio.h" 1
-# 64 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
-# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
-FILE * tmpfile (void);
-char * tmpnam (char *);
-
-char * tempnam (const char *, const char *);
-
-int fclose (FILE *);
-int fflush (FILE *);
-FILE * freopen (const char *restrict, const char *restrict, FILE *restrict);
-void setbuf (FILE *restrict, char *restrict);
-int setvbuf (FILE *restrict, char *restrict, int, size_t);
-int fprintf (FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
-                                                            ;
-int fscanf (FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
-                                                           ;
-int printf (const char *restrict, ...) __attribute__ ((__format__ (__printf__, 1, 2)))
-                                                            ;
-int scanf (const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 1, 2)))
-                                                           ;
-int sscanf (const char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
-                                                           ;
-int vfprintf (FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
-                                                            ;
-int vprintf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 1, 0)))
-                                                            ;
-int vsprintf (char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
-                                                            ;
-int fgetc (FILE *);
-char * fgets (char *restrict, int, FILE *restrict);
-int fputc (int, FILE *);
-int fputs (const char *restrict, FILE *restrict);
-int getc (FILE *);
-int getchar (void);
-char * gets (char *);
-int putc (int, FILE *);
-int putchar (int);
-int puts (const char *);
-int ungetc (int, FILE *);
-size_t fread (void * restrict, size_t _size, size_t _n, FILE *restrict);
-size_t fwrite (const void * restrict , size_t _size, size_t _n, FILE *);
-
-
-
-int fgetpos (FILE *restrict, fpos_t *restrict);
-
-int fseek (FILE *, long, int);
-
-
-
-int fsetpos (FILE *, const fpos_t *);
-
-long ftell ( FILE *);
-void rewind (FILE *);
-void clearerr (FILE *);
-int feof (FILE *);
-int ferror (FILE *);
-void perror (const char *);
-
-FILE * fopen (const char *restrict _name, const char *restrict _type);
-int sprintf (char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
-                                                            ;
-int remove (const char *);
-int rename (const char *, const char *);
-# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
-int fseeko (FILE *, off_t, int);
-off_t ftello ( FILE *);
-
-
-
-
-
-
-
-int asiprintf (char **, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
-                                                            ;
-char * asniprintf (char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
-                                                            ;
-char * asnprintf (char *restrict, size_t *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
-                                                            ;
-int asprintf (char **restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
-                                                            ;
-
-int diprintf (int, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
-                                                            ;
-
-int fiprintf (FILE *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
-                                                            ;
-int fiscanf (FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
-                                                           ;
-int iprintf (const char *, ...) __attribute__ ((__format__ (__printf__, 1, 2)))
-                                                            ;
-int iscanf (const char *, ...) __attribute__ ((__format__ (__scanf__, 1, 2)))
-                                                           ;
-int siprintf (char *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
-                                                            ;
-int siscanf (const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
-                                                           ;
-int snprintf (char *restrict, size_t, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
-                                                            ;
-int sniprintf (char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
-                                                            ;
-int vasiprintf (char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
-                                                            ;
-char * vasniprintf (char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
-                                                            ;
-char * vasnprintf (char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
-                                                            ;
-int vasprintf (char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
-                                                            ;
-int vdiprintf (int, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
-                                                            ;
-int vfiprintf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
-                                                            ;
-int vfiscanf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
-                                                           ;
-int vfscanf (FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
-                                                           ;
-int viprintf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 1, 0)))
-                                                            ;
-int viscanf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 1, 0)))
-                                                           ;
-int vscanf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 1, 0)))
-                                                           ;
-int vsiprintf (char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
-                                                            ;
-int vsiscanf (const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
-                                                           ;
-int vsniprintf (char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
-                                                            ;
-int vsnprintf (char *restrict, size_t, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
-                                                            ;
-int vsscanf (const char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
-                                                           ;
-# 313 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
-FILE * fdopen (int, const char *);
-
-int fileno (FILE *);
-int getw (FILE *);
-int pclose (FILE *);
-FILE * popen (const char *, const char *);
-int putw (int, FILE *);
-void setbuffer (FILE *, char *, int);
-int setlinebuf (FILE *);
-int getc_unlocked (FILE *);
-int getchar_unlocked (void);
-void flockfile (FILE *);
-int ftrylockfile (FILE *);
-void funlockfile (FILE *);
-int putc_unlocked (int, FILE *);
-int putchar_unlocked (int);
-# 338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
-int dprintf (int, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
-                                                            ;
-
-FILE * fmemopen (void *restrict, size_t, const char *restrict);
-
-
-FILE * open_memstream (char **, size_t *);
-
-int renameat (int, const char *, int, const char *);
-
-int vdprintf (int, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
-                                                            ;
-
-
-
-
-
-
-
-int _asiprintf_r (struct _reent *, char **, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
-                                                            ;
-char * _asniprintf_r (struct _reent *, char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
-                                                            ;
-char * _asnprintf_r (struct _reent *, char *restrict, size_t *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
-                                                            ;
-int _asprintf_r (struct _reent *, char **restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
-                                                            ;
-int _diprintf_r (struct _reent *, int, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
-                                                            ;
-int _dprintf_r (struct _reent *, int, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
-                                                            ;
-int _fclose_r (struct _reent *, FILE *);
-int _fcloseall_r (struct _reent *);
-FILE * _fdopen_r (struct _reent *, int, const char *);
-int _fflush_r (struct _reent *, FILE *);
-int _fgetc_r (struct _reent *, FILE *);
-int _fgetc_unlocked_r (struct _reent *, FILE *);
-char * _fgets_r (struct _reent *, char *restrict, int, FILE *restrict);
-char * _fgets_unlocked_r (struct _reent *, char *restrict, int, FILE *restrict);
-
-
-
-
-int _fgetpos_r (struct _reent *, FILE *, fpos_t *);
-int _fsetpos_r (struct _reent *, FILE *, const fpos_t *);
-
-int _fiprintf_r (struct _reent *, FILE *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
-                                                            ;
-int _fiscanf_r (struct _reent *, FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
-                                                           ;
-FILE * _fmemopen_r (struct _reent *, void *restrict, size_t, const char *restrict);
-FILE * _fopen_r (struct _reent *, const char *restrict, const char *restrict);
-FILE * _freopen_r (struct _reent *, const char *restrict, const char *restrict, FILE *restrict);
-int _fprintf_r (struct _reent *, FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
-                                                            ;
-int _fpurge_r (struct _reent *, FILE *);
-int _fputc_r (struct _reent *, int, FILE *);
-int _fputc_unlocked_r (struct _reent *, int, FILE *);
-int _fputs_r (struct _reent *, const char *restrict, FILE *restrict);
-int _fputs_unlocked_r (struct _reent *, const char *restrict, FILE *restrict);
-size_t _fread_r (struct _reent *, void * restrict, size_t _size, size_t _n, FILE *restrict);
-size_t _fread_unlocked_r (struct _reent *, void * restrict, size_t _size, size_t _n, FILE *restrict);
-int _fscanf_r (struct _reent *, FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
-                                                           ;
-int _fseek_r (struct _reent *, FILE *, long, int);
-int _fseeko_r (struct _reent *, FILE *, _off_t, int);
-long _ftell_r (struct _reent *, FILE *);
-_off_t _ftello_r (struct _reent *, FILE *);
-void _rewind_r (struct _reent *, FILE *);
-size_t _fwrite_r (struct _reent *, const void * restrict, size_t _size, size_t _n, FILE *restrict);
-size_t _fwrite_unlocked_r (struct _reent *, const void * restrict, size_t _size, size_t _n, FILE *restrict);
-int _getc_r (struct _reent *, FILE *);
-int _getc_unlocked_r (struct _reent *, FILE *);
-int _getchar_r (struct _reent *);
-int _getchar_unlocked_r (struct _reent *);
-char * _gets_r (struct _reent *, char *);
-int _iprintf_r (struct _reent *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
-                                                            ;
-int _iscanf_r (struct _reent *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
-                                                           ;
-FILE * _open_memstream_r (struct _reent *, char **, size_t *);
-void _perror_r (struct _reent *, const char *);
-int _printf_r (struct _reent *, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
-                                                            ;
-int _putc_r (struct _reent *, int, FILE *);
-int _putc_unlocked_r (struct _reent *, int, FILE *);
-int _putchar_unlocked_r (struct _reent *, int);
-int _putchar_r (struct _reent *, int);
-int _puts_r (struct _reent *, const char *);
-int _remove_r (struct _reent *, const char *);
-int _rename_r (struct _reent *, const char *_old, const char *_new)
-                                          ;
-int _scanf_r (struct _reent *, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
-                                                           ;
-int _siprintf_r (struct _reent *, char *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
-                                                            ;
-int _siscanf_r (struct _reent *, const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
-                                                           ;
-int _sniprintf_r (struct _reent *, char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
-                                                            ;
-int _snprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
-                                                            ;
-int _sprintf_r (struct _reent *, char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
-                                                            ;
-int _sscanf_r (struct _reent *, const char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
-                                                           ;
-char * _tempnam_r (struct _reent *, const char *, const char *);
-FILE * _tmpfile_r (struct _reent *);
-char * _tmpnam_r (struct _reent *, char *);
-int _ungetc_r (struct _reent *, int, FILE *);
-int _vasiprintf_r (struct _reent *, char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
-                                                            ;
-char * _vasniprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
-                                                            ;
-char * _vasnprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
-                                                            ;
-int _vasprintf_r (struct _reent *, char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
-                                                            ;
-int _vdiprintf_r (struct _reent *, int, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
-                                                            ;
-int _vdprintf_r (struct _reent *, int, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
-                                                            ;
-int _vfiprintf_r (struct _reent *, FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
-                                                            ;
-int _vfiscanf_r (struct _reent *, FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
-                                                           ;
-int _vfprintf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
-                                                            ;
-int _vfscanf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
-                                                           ;
-int _viprintf_r (struct _reent *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
-                                                            ;
-int _viscanf_r (struct _reent *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
-                                                           ;
-int _vprintf_r (struct _reent *, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
-                                                            ;
-int _vscanf_r (struct _reent *, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
-                                                           ;
-int _vsiprintf_r (struct _reent *, char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
-                                                            ;
-int _vsiscanf_r (struct _reent *, const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
-                                                           ;
-int _vsniprintf_r (struct _reent *, char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
-                                                            ;
-int _vsnprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
-                                                            ;
-int _vsprintf_r (struct _reent *, char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
-                                                            ;
-int _vsscanf_r (struct _reent *, const char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
-                                                           ;
-
-
-
-int fpurge (FILE *);
-ssize_t __getdelim (char **, size_t *, int, FILE *);
-ssize_t __getline (char **, size_t *, FILE *);
-
-
-void clearerr_unlocked (FILE *);
-int feof_unlocked (FILE *);
-int ferror_unlocked (FILE *);
-int fileno_unlocked (FILE *);
-int fflush_unlocked (FILE *);
-int fgetc_unlocked (FILE *);
-int fputc_unlocked (int, FILE *);
-size_t fread_unlocked (void * restrict, size_t _size, size_t _n, FILE *restrict);
-size_t fwrite_unlocked (const void * restrict , size_t _size, size_t _n, FILE *);
-# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
-int __srget_r (struct _reent *, FILE *);
-int __swbuf_r (struct _reent *, int, FILE *);
-# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
-FILE *funopen (const void * __cookie, int (*__readfn)(void * __cookie, char *__buf, int __n), int (*__writefn)(void * __cookie, const char *__buf, int __n), fpos_t (*__seekfn)(void * __cookie, fpos_t __off, int __whence), int (*__closefn)(void * __cookie))
-
-
-
-
-
-                                   ;
-FILE *_funopen_r (struct _reent *, const void * __cookie, int (*__readfn)(void * __cookie, char *__buf, int __n), int (*__writefn)(void * __cookie, const char *__buf, int __n), fpos_t (*__seekfn)(void * __cookie, fpos_t __off, int __whence), int (*__closefn)(void * __cookie))
-
-
-
-
-
-                                   ;
-
-
-
-
-
-
-
-typedef ssize_t cookie_read_function_t(void *__cookie, char *__buf, size_t __n);
-typedef ssize_t cookie_write_function_t(void *__cookie, const char *__buf,
-     size_t __n);
-
-
-
-
-typedef int cookie_seek_function_t(void *__cookie, off_t *__off, int __whence);
-
-typedef int cookie_close_function_t(void *__cookie);
-typedef struct
-{
-
-
-  cookie_read_function_t *read;
-  cookie_write_function_t *write;
-  cookie_seek_function_t *seek;
-  cookie_close_function_t *close;
-} cookie_io_functions_t;
-FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __functions)
-                                                         ;
-FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
-                                                         ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
-
-# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 1
-# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
-       
-# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
-typedef int32_t esp_err_t;
-# 58 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
-const char *esp_err_to_name(esp_err_t code);
-# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
-const char *esp_err_to_name_r(esp_err_t code, char *buf, size_t buflen);
-
-
-void _esp_error_check_failed(esp_err_t rc, const char *file, int line, const char *function, const char *expression) __attribute__((noreturn));
-
-
-void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int line, const char *function, const char *expression);
-# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h" 2
 # 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h"
 typedef struct esp_timer* esp_timer_handle_t;
 
@@ -2756,6 +2746,9 @@ void heap_caps_dump_all();
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
 # 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
 typedef struct {
@@ -2811,7 +2804,7 @@ inline static
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_dma_capable(const void *p)
+                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
 {
     return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
 }
@@ -2820,24 +2813,37 @@ inline static
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_executable(const void *p)
+                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
+{
+    return ((intptr_t)p) % 4 == 0;
+}
+
+inline static 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
 {
     intptr_t ip = (intptr_t) p;
     return (ip >= 0x400D0000 && ip < 0x40400000)
         || (ip >= 0x40080000 && ip < 0x400A0000)
+        || (ip >= 0x40000000 && ip < 0x40070000)
+
+        || (ip >= 0x40078000 && ip < 0x40080000)
+
         || (ip >= 0x400C0000 && ip < 0x400C2000);
 }
 
 inline static 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_byte_accessible(const void *p)
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
 {
     
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x40000000);
 
@@ -2847,14 +2853,14 @@ inline static
 }
 
 inline static 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_internal(const void *p) {
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
     
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
     r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
@@ -2863,18 +2869,18 @@ inline static
 
 
 inline static 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_external_ram(const void *p) {
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
     return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
 }
 
 inline static 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_iram(const void *p) {
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
 
 
 
@@ -2883,19 +2889,35 @@ inline static
 }
 
 inline static 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_drom(const void *p) {
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
     return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
 }
 
 inline static 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_dram(const void *p) {
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
     return ((intptr_t)p >= 0x3FAE0000 && (intptr_t)p < 0x40000000);
+}
+
+inline static 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
+    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x3FFFFFFC);
+}
+
+inline static 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
+    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400BFFFC);
 }
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
@@ -2944,24 +2966,24 @@ typedef struct {
 void vPortAssertIfInISR();
 # 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortCPUInitializeMutex(portMUX_TYPE *mux);
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vTaskExitCritical( portMUX_TYPE *mux );
 void vTaskEnterCritical( portMUX_TYPE *mux );
 void vPortCPUAcquireMutex(portMUX_TYPE *mux);
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
 _Bool 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
     vPortCPUAcquireMutexTimeout(portMUX_TYPE *mux, int timeout_cycles);
 void vPortCPUReleaseMutex(portMUX_TYPE *mux);
-# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline unsigned portENTER_CRITICAL_NESTED() {
  unsigned state = ({ unsigned __tmp; __asm__ __volatile__( "rsil	%0, " "3" "\n" : "=a" (__tmp) : : "memory" ); __tmp;});
  ;
  return state;
 }
-# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, uint32_t *set) {
     __asm__ __volatile__ (
         "WSR 	    %2,SCOMPARE1 \n"
@@ -2970,20 +2992,20 @@ static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, u
         :"r"(addr), "r"(compare), "0"(*set)
         );
 }
-# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortYield( void );
 void _frxt_setup_switch( void );
 
 
 
 static inline uint32_t xPortGetCoreID();
-# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef struct {
 
  volatile StackType_t* coproc_area;
-# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 } xMPU_SETTINGS;
-# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 extern void esp_vApplicationIdleHook( void );
 extern void esp_vApplicationTickHook( void );
 
@@ -2994,10 +3016,10 @@ extern void esp_vApplicationTickHook( void );
 
 void _xt_coproc_release(volatile void * coproc_sa_base);
 void vApplicationSleep( TickType_t xExpectedIdleTime );
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/mpu_wrappers.h" 1
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h" 1
@@ -3019,7 +3041,7 @@ void vApplicationSleep( TickType_t xExpectedIdleTime );
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
 typedef volatile struct {
     uint32_t bt_select;
     uint32_t out;
@@ -3356,7 +3378,7 @@ void esp_intr_noniram_disable();
 void esp_intr_noniram_enable();
 # 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
 extern const uint32_t GPIO_PIN_MUX_REG[40];
 # 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
@@ -3831,25 +3853,25 @@ typedef enum {
 typedef esp_sleep_source_t esp_sleep_wakeup_cause_t;
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_disable_wakeup_source(esp_sleep_source_t source);
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ulp_wakeup();
-# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_timer_wakeup(uint64_t time_in_us);
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_touchpad_wakeup();
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 touch_pad_t esp_sleep_get_touchpad_wakeup_status();
-# 161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext0_wakeup(gpio_num_t gpio_num, int level);
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext1_wakeup(uint64_t mask, esp_sleep_ext1_wakeup_mode_t mode);
-# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_gpio_wakeup();
-# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_uart_wakeup(int uart_num);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 uint64_t esp_sleep_get_ext1_wakeup_status();
-# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
                                    esp_sleep_pd_option_t option);
 
@@ -3859,11 +3881,11 @@ esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
 
 
 void esp_deep_sleep_start() __attribute__((noreturn));
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_light_sleep_start();
-# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_deep_sleep(uint64_t time_in_us) __attribute__((noreturn));
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated));
 
 
@@ -3873,7 +3895,7 @@ void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated)
 
 
 esp_sleep_wakeup_cause_t esp_sleep_get_wakeup_cause();
-# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_wake_deep_sleep(void);
 
 
@@ -3881,7 +3903,7 @@ void esp_wake_deep_sleep(void);
 
 
 typedef void (*esp_deep_sleep_wake_stub_fn_t)(void);
-# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_set_deep_sleep_wake_stub(esp_deep_sleep_wake_stub_fn_t new_stub);
 
 
@@ -3905,6 +3927,12 @@ void esp_default_wake_deep_sleep(void);
 
 void esp_deep_sleep_disable_rom_logging(void);
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+       
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+const char* esp_get_idf_version(void);
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
 
 
 
@@ -3916,7 +3944,7 @@ typedef enum {
     ESP_MAC_BT,
     ESP_MAC_ETH,
 } esp_mac_type_t;
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef enum {
     ESP_RST_UNKNOWN,
     ESP_RST_POWERON,
@@ -3959,9 +3987,9 @@ typedef void (*shutdown_handler_t)(void);
 
 
 esp_err_t esp_register_shutdown_handler(shutdown_handler_t handle);
-# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_restart(void) __attribute__ ((noreturn));
-# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
@@ -3970,11 +3998,11 @@ void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
 esp_reset_reason_t esp_reset_reason(void);
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_time(void) __attribute__ ((deprecated));
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_get_free_heap_size(void);
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
@@ -3984,36 +4012,28 @@ uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
 uint32_t esp_get_minimum_free_heap_size( void );
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_random(void);
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_fill_random(void *buf, size_t len);
-# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_set(uint8_t *mac);
-# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_get(uint8_t *mac);
-# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_custom(uint8_t *mac);
-# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_default(uint8_t *mac);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t system_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_read_mac(uint8_t* mac, esp_mac_type_t type);
-# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_derive_local_mac(uint8_t* local_mac, const uint8_t* universal_mac);
-# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 const char* system_get_sdk_version(void) __attribute__ ((deprecated));
-
-
-
-
-
-
-
-const char* esp_get_idf_version(void);
 
 
 
@@ -4022,7 +4042,7 @@ const char* esp_get_idf_version(void);
 typedef enum {
     CHIP_ESP32 = 1,
 } esp_chip_model_t;
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef struct {
     esp_chip_model_t model;
     uint32_t features;
@@ -4035,10 +4055,10 @@ typedef struct {
 
 
 void esp_chip_info(esp_chip_info_t* out_info);
-# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters, BaseType_t xRunPrivileged ) ;
-# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 BaseType_t xPortStartScheduler( void ) ;
 
 
@@ -4074,14 +4094,14 @@ BaseType_t xPortInIsrContext();
 
 
 BaseType_t xPortInterruptedFromISRContext();
-# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  struct xMEMORY_REGION;
  void vPortStoreTaskMPUSettings( xMPU_SETTINGS *xMPUSettings, const struct xMEMORY_REGION * const xRegions, StackType_t *pxBottomOfStack, uint32_t usStackDepth ) ;
  void vPortReleaseTaskMPUSettings( xMPU_SETTINGS *xMPUSettings );
 
 
 
-static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
+static inline uint32_t __attribute__((section(".iram1" "." "11"))) xPortGetCoreID() {
     int id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -4092,6 +4112,21 @@ static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
 
 
 uint32_t xPortGetTickRateHz(void);
+
+
+static inline 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 3 4
+             _Bool 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+                  __attribute__((section(".iram1" "." "12"))) xPortCanYield(void)
+{
+    uint32_t ps_reg = 0;
+
+
+    asm volatile ("rsr %0, " "PS" : "=r" (ps_reg));;
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+    return ((ps_reg & 0x0000000F) == 0);
+}
 
 
 
@@ -4222,7 +4257,7 @@ typedef struct xSTATIC_TIMER
  void *pvDummy5[ 2 ];
 # 1046 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
 } StaticTimer_t;
-# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform_esp32_idf.h" 2
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h" 1
 # 78 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 1
@@ -4401,7 +4436,7 @@ typedef enum
           TaskHandle_t * const pvCreatedTask,
           const BaseType_t xCoreID);
 # 432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
- static inline __attribute__((section(".iram1"))) BaseType_t xTaskCreate(
+ static inline __attribute__((section(".iram1" "." "13"))) BaseType_t xTaskCreate(
    TaskFunction_t pvTaskCode,
    const char * const pcName,
    const uint32_t usStackDepth,
@@ -4580,9 +4615,7 @@ eSleepModeStatus eTaskConfirmSleepModeStatus( void ) ;
 void *pvTaskIncrementMutexHeldCount( void );
 # 2307 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 UBaseType_t uxTaskGetSnapshotAll( TaskSnapshot_t * const pxTaskSnapshotArray, const UBaseType_t uxArraySize, UBaseType_t * const pxTcbSz );
-# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform_esp32_idf.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/semphr.h" 1
-# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/semphr.h"
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h" 1
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 typedef void * QueueHandle_t;
@@ -4675,92 +4708,545 @@ BaseType_t xQueueGenericReset( QueueHandle_t xQueue, BaseType_t xNewQueue ) ;
 void vQueueSetQueueNumber( QueueHandle_t xQueue, UBaseType_t uxQueueNumber ) ;
 UBaseType_t uxQueueGetQueueNumber( QueueHandle_t xQueue ) ;
 uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) ;
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/semphr.h" 1
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/semphr.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h" 1
 # 78 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/semphr.h" 2
 
 typedef QueueHandle_t SemaphoreHandle_t;
-# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform_esp32_idf.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h" 1
-# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform_esp32_idf.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h" 1
-# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h" 1
-# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h" 1
-# 81 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h" 2
-# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
-typedef void * TimerHandle_t;
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h" 2
 
-
-
-
-typedef void (*TimerCallbackFunction_t)( TimerHandle_t xTimer );
-
-
-
-
-
-typedef void (*PendedFunction_t)( void *, uint32_t );
-# 263 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
- TimerHandle_t xTimerCreate( const char * const pcTimerName,
-        const TickType_t xTimerPeriodInTicks,
-        const UBaseType_t uxAutoReload,
-        void * const pvTimerID,
-        TimerCallbackFunction_t pxCallbackFunction ) ;
-# 412 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
-void *pvTimerGetTimerID( TimerHandle_t xTimer ) ;
-# 431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
-void vTimerSetTimerID( TimerHandle_t xTimer, void *pvNewID ) ;
-# 468 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
-BaseType_t xTimerIsTimerActive( TimerHandle_t xTimer ) ;
-# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
-TaskHandle_t xTimerGetTimerDaemonTaskHandle( void );
-# 486 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
-TickType_t xTimerGetPeriod( TimerHandle_t xTimer ) ;
-# 499 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
-TickType_t xTimerGetExpiryTime( TimerHandle_t xTimer ) ;
-# 1203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
-BaseType_t xTimerPendFunctionCallFromISR( PendedFunction_t xFunctionToPend, void *pvParameter1, uint32_t ulParameter2, BaseType_t *pxHigherPriorityTaskWoken );
-# 1231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
-BaseType_t xTimerPendFunctionCall( PendedFunction_t xFunctionToPend, void *pvParameter1, uint32_t ulParameter2, TickType_t xTicksToWait );
-# 1240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
-const char * pcTimerGetTimerName( TimerHandle_t xTimer );
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event_base.h" 1
+# 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event_base.h"
+typedef const char* esp_event_base_t;
+typedef void* esp_event_loop_handle_t;
+typedef void (*esp_event_handler_t)(void* event_handler_arg,
+                                        esp_event_base_t event_base,
+                                        int32_t event_id,
+                                        void* event_data);
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/queue.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_interface.h" 1
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_interface.h"
+typedef enum {
+    ESP_IF_WIFI_STA = 0,
+    ESP_IF_WIFI_AP,
+    ESP_IF_ETH,
+    ESP_IF_MAX
+} esp_interface_t;
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h" 2
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 2
 
 
 
 
 
+typedef enum {
+    WIFI_MODE_NULL = 0,
+    WIFI_MODE_STA,
+    WIFI_MODE_AP,
+    WIFI_MODE_APSTA,
+    WIFI_MODE_MAX
+} wifi_mode_t;
 
-BaseType_t xTimerCreateTimerTask( void ) ;
-BaseType_t xTimerGenericCommand( TimerHandle_t xTimer, const BaseType_t xCommandID, const TickType_t xOptionalValue, BaseType_t * const pxHigherPriorityTaskWoken, const TickType_t xTicksToWait ) ;
-# 78 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h" 2
-# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
-typedef void * EventGroupHandle_t;
-# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
-typedef TickType_t EventBits_t;
-# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
- EventGroupHandle_t xEventGroupCreate( void ) ;
-# 311 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
-EventBits_t xEventGroupWaitBits( EventGroupHandle_t xEventGroup, const EventBits_t uxBitsToWaitFor, const BaseType_t xClearOnExit, const BaseType_t xWaitForAllBits, TickType_t xTicksToWait ) ;
-# 362 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
-EventBits_t xEventGroupClearBits( EventGroupHandle_t xEventGroup, const EventBits_t uxBitsToClear ) ;
-# 483 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
-EventBits_t xEventGroupSetBits( EventGroupHandle_t xEventGroup, const EventBits_t uxBitsToSet ) ;
-# 672 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
-EventBits_t xEventGroupSync( EventGroupHandle_t xEventGroup, const EventBits_t uxBitsToSet, const EventBits_t uxBitsToWaitFor, TickType_t xTicksToWait ) ;
-# 696 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
-EventBits_t xEventGroupGetBitsFromISR( EventGroupHandle_t xEventGroup );
-# 706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
-void vEventGroupDelete( EventGroupHandle_t xEventGroup );
+typedef esp_interface_t wifi_interface_t;
 
 
 
 
-void vEventGroupSetBitsCallback( void *pvEventGroup, const uint32_t ulBitsToSet );
-void vEventGroupClearBitsCallback( void *pvEventGroup, const uint32_t ulBitsToClear );
-# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform_esp32_idf.h" 2
+typedef enum {
+    WIFI_COUNTRY_POLICY_AUTO,
+    WIFI_COUNTRY_POLICY_MANUAL,
+} wifi_country_policy_t;
 
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/err.h" 1
-# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/err.h"
+
+typedef struct {
+    char cc[3];
+    uint8_t schan;
+    uint8_t nchan;
+    int8_t max_tx_power;
+    wifi_country_policy_t policy;
+} wifi_country_t;
+
+typedef enum {
+    WIFI_AUTH_OPEN = 0,
+    WIFI_AUTH_WEP,
+    WIFI_AUTH_WPA_PSK,
+    WIFI_AUTH_WPA2_PSK,
+    WIFI_AUTH_WPA_WPA2_PSK,
+    WIFI_AUTH_WPA2_ENTERPRISE,
+    WIFI_AUTH_MAX
+} wifi_auth_mode_t;
+
+typedef enum {
+    WIFI_REASON_UNSPECIFIED = 1,
+    WIFI_REASON_AUTH_EXPIRE = 2,
+    WIFI_REASON_AUTH_LEAVE = 3,
+    WIFI_REASON_ASSOC_EXPIRE = 4,
+    WIFI_REASON_ASSOC_TOOMANY = 5,
+    WIFI_REASON_NOT_AUTHED = 6,
+    WIFI_REASON_NOT_ASSOCED = 7,
+    WIFI_REASON_ASSOC_LEAVE = 8,
+    WIFI_REASON_ASSOC_NOT_AUTHED = 9,
+    WIFI_REASON_DISASSOC_PWRCAP_BAD = 10,
+    WIFI_REASON_DISASSOC_SUPCHAN_BAD = 11,
+    WIFI_REASON_IE_INVALID = 13,
+    WIFI_REASON_MIC_FAILURE = 14,
+    WIFI_REASON_4WAY_HANDSHAKE_TIMEOUT = 15,
+    WIFI_REASON_GROUP_KEY_UPDATE_TIMEOUT = 16,
+    WIFI_REASON_IE_IN_4WAY_DIFFERS = 17,
+    WIFI_REASON_GROUP_CIPHER_INVALID = 18,
+    WIFI_REASON_PAIRWISE_CIPHER_INVALID = 19,
+    WIFI_REASON_AKMP_INVALID = 20,
+    WIFI_REASON_UNSUPP_RSN_IE_VERSION = 21,
+    WIFI_REASON_INVALID_RSN_IE_CAP = 22,
+    WIFI_REASON_802_1X_AUTH_FAILED = 23,
+    WIFI_REASON_CIPHER_SUITE_REJECTED = 24,
+
+    WIFI_REASON_BEACON_TIMEOUT = 200,
+    WIFI_REASON_NO_AP_FOUND = 201,
+    WIFI_REASON_AUTH_FAIL = 202,
+    WIFI_REASON_ASSOC_FAIL = 203,
+    WIFI_REASON_HANDSHAKE_TIMEOUT = 204,
+    WIFI_REASON_CONNECTION_FAIL = 205,
+    WIFI_REASON_AUTH_CHANGED = 206,
+} wifi_err_reason_t;
+
+typedef enum {
+    WIFI_SECOND_CHAN_NONE = 0,
+    WIFI_SECOND_CHAN_ABOVE,
+    WIFI_SECOND_CHAN_BELOW,
+} wifi_second_chan_t;
+
+typedef enum {
+    WIFI_SCAN_TYPE_ACTIVE = 0,
+    WIFI_SCAN_TYPE_PASSIVE,
+} wifi_scan_type_t;
+
+
+typedef struct {
+    uint32_t min;
+    uint32_t max;
+
+} wifi_active_scan_time_t;
+
+
+typedef struct {
+    wifi_active_scan_time_t active;
+    uint32_t passive;
+
+} wifi_scan_time_t;
+
+
+typedef struct {
+    uint8_t *ssid;
+    uint8_t *bssid;
+    uint8_t channel;
+    
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        show_hidden;
+    wifi_scan_type_t scan_type;
+    wifi_scan_time_t scan_time;
+} wifi_scan_config_t;
+
+typedef enum {
+    WIFI_CIPHER_TYPE_NONE = 0,
+    WIFI_CIPHER_TYPE_WEP40,
+    WIFI_CIPHER_TYPE_WEP104,
+    WIFI_CIPHER_TYPE_TKIP,
+    WIFI_CIPHER_TYPE_CCMP,
+    WIFI_CIPHER_TYPE_TKIP_CCMP,
+    WIFI_CIPHER_TYPE_UNKNOWN,
+} wifi_cipher_type_t;
+
+
+
+
+
+typedef enum {
+    WIFI_ANT_ANT0,
+    WIFI_ANT_ANT1,
+    WIFI_ANT_MAX,
+} wifi_ant_t;
+
+
+typedef struct {
+    uint8_t bssid[6];
+    uint8_t ssid[33];
+    uint8_t primary;
+    wifi_second_chan_t second;
+    int8_t rssi;
+    wifi_auth_mode_t authmode;
+    wifi_cipher_type_t pairwise_cipher;
+    wifi_cipher_type_t group_cipher;
+    wifi_ant_t ant;
+    uint32_t phy_11b:1;
+    uint32_t phy_11g:1;
+    uint32_t phy_11n:1;
+    uint32_t phy_lr:1;
+    uint32_t wps:1;
+    uint32_t reserved:27;
+    wifi_country_t country;
+} wifi_ap_record_t;
+
+typedef enum {
+    WIFI_FAST_SCAN = 0,
+    WIFI_ALL_CHANNEL_SCAN,
+}wifi_scan_method_t;
+
+typedef enum {
+    WIFI_CONNECT_AP_BY_SIGNAL = 0,
+    WIFI_CONNECT_AP_BY_SECURITY,
+}wifi_sort_method_t;
+
+
+typedef struct {
+    int8_t rssi;
+    wifi_auth_mode_t authmode;
+}wifi_fast_scan_threshold_t;
+
+typedef wifi_fast_scan_threshold_t wifi_scan_threshold_t;
+
+typedef enum {
+    WIFI_PS_NONE,
+    WIFI_PS_MIN_MODEM,
+    WIFI_PS_MAX_MODEM,
+} wifi_ps_type_t;
+# 205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+typedef enum {
+    WIFI_BW_HT20 = 1,
+    WIFI_BW_HT40,
+} wifi_bandwidth_t;
+
+
+typedef struct {
+    uint8_t ssid[32];
+    uint8_t password[64];
+    uint8_t ssid_len;
+    uint8_t channel;
+    wifi_auth_mode_t authmode;
+    uint8_t ssid_hidden;
+    uint8_t max_connection;
+    uint16_t beacon_interval;
+} wifi_ap_config_t;
+
+
+typedef struct {
+    uint8_t ssid[32];
+    uint8_t password[64];
+    wifi_scan_method_t scan_method;
+    
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        bssid_set;
+    uint8_t bssid[6];
+    uint8_t channel;
+    uint16_t listen_interval;
+    wifi_sort_method_t sort_method;
+    wifi_scan_threshold_t threshold;
+} wifi_sta_config_t;
+
+
+
+
+
+
+
+typedef union {
+    wifi_ap_config_t ap;
+    wifi_sta_config_t sta;
+} wifi_config_t;
+
+
+typedef struct {
+    uint8_t mac[6];
+    int8_t rssi;
+    uint32_t phy_11b:1;
+    uint32_t phy_11g:1;
+    uint32_t phy_11n:1;
+    uint32_t phy_lr:1;
+    uint32_t reserved:28;
+} wifi_sta_info_t;
+
+
+
+
+typedef struct {
+    wifi_sta_info_t sta[(10)];
+    int num;
+} wifi_sta_list_t;
+
+typedef enum {
+    WIFI_STORAGE_FLASH,
+    WIFI_STORAGE_RAM,
+} wifi_storage_t;
+
+
+
+
+
+
+typedef enum {
+    WIFI_VND_IE_TYPE_BEACON,
+    WIFI_VND_IE_TYPE_PROBE_REQ,
+    WIFI_VND_IE_TYPE_PROBE_RESP,
+    WIFI_VND_IE_TYPE_ASSOC_REQ,
+    WIFI_VND_IE_TYPE_ASSOC_RESP,
+} wifi_vendor_ie_type_t;
+
+
+
+
+
+
+typedef enum {
+    WIFI_VND_IE_ID_0,
+    WIFI_VND_IE_ID_1,
+} wifi_vendor_ie_id_t;
+# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+typedef struct {
+    uint8_t element_id;
+    uint8_t length;
+    uint8_t vendor_oui[3];
+    uint8_t vendor_oui_type;
+    uint8_t payload[0];
+} vendor_ie_data_t;
+
+
+typedef struct {
+    signed rssi:8;
+    unsigned rate:5;
+    unsigned :1;
+    unsigned sig_mode:2;
+    unsigned :16;
+    unsigned mcs:7;
+    unsigned cwb:1;
+    unsigned :16;
+    unsigned smoothing:1;
+    unsigned not_sounding:1;
+    unsigned :1;
+    unsigned aggregation:1;
+    unsigned stbc:2;
+    unsigned fec_coding:1;
+    unsigned sgi:1;
+    signed noise_floor:8;
+    unsigned ampdu_cnt:8;
+    unsigned channel:4;
+    unsigned secondary_channel:4;
+    unsigned :8;
+    unsigned timestamp:32;
+    unsigned :32;
+    unsigned :31;
+    unsigned ant:1;
+    unsigned sig_len:12;
+    unsigned :12;
+    unsigned rx_state:8;
+} wifi_pkt_rx_ctrl_t;
+
+
+
+typedef struct {
+    wifi_pkt_rx_ctrl_t rx_ctrl;
+    uint8_t payload[0];
+} wifi_promiscuous_pkt_t;
+
+
+
+
+
+
+
+typedef enum {
+    WIFI_PKT_MGMT,
+    WIFI_PKT_CTRL,
+    WIFI_PKT_DATA,
+    WIFI_PKT_MISC,
+} wifi_promiscuous_pkt_type_t;
+# 380 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+typedef struct {
+    uint32_t filter_mask;
+} wifi_promiscuous_filter_t;
+# 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+typedef struct {
+    
+# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        lltf_en;
+    
+# 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        htltf_en;
+    
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        stbc_htltf2_en;
+    
+# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        ltf_merge_en;
+    
+# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        channel_filter_en;
+    
+# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        manu_scale;
+    uint8_t shift;
+} wifi_csi_config_t;
+
+
+
+
+
+typedef struct {
+    wifi_pkt_rx_ctrl_t rx_ctrl;
+    uint8_t mac[6];
+    
+# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        first_word_invalid;
+    int8_t *buf;
+    uint16_t len;
+} wifi_csi_info_t;
+
+
+
+
+
+typedef struct {
+    uint8_t gpio_select: 1,
+            gpio_num: 7;
+} wifi_ant_gpio_t;
+
+
+
+
+
+typedef struct {
+    wifi_ant_gpio_t gpio_cfg[4];
+} wifi_ant_gpio_config_t;
+
+
+
+
+
+typedef enum {
+    WIFI_ANT_MODE_ANT0,
+    WIFI_ANT_MODE_ANT1,
+    WIFI_ANT_MODE_AUTO,
+    WIFI_ANT_MODE_MAX,
+} wifi_ant_mode_t;
+
+
+
+
+
+typedef struct {
+    wifi_ant_mode_t rx_ant_mode;
+    wifi_ant_t rx_ant_default;
+    wifi_ant_mode_t tx_ant_mode;
+    uint8_t enabled_ant0: 4,
+                    enabled_ant1: 4;
+} wifi_ant_config_t;
+
+
+
+
+
+typedef enum {
+    WIFI_PHY_RATE_1M_L = 0x00,
+    WIFI_PHY_RATE_2M_L = 0x01,
+    WIFI_PHY_RATE_5M_L = 0x02,
+    WIFI_PHY_RATE_11M_L = 0x03,
+    WIFI_PHY_RATE_2M_S = 0x05,
+    WIFI_PHY_RATE_5M_S = 0x06,
+    WIFI_PHY_RATE_11M_S = 0x07,
+    WIFI_PHY_RATE_48M = 0x08,
+    WIFI_PHY_RATE_24M = 0x09,
+    WIFI_PHY_RATE_12M = 0x0A,
+    WIFI_PHY_RATE_6M = 0x0B,
+    WIFI_PHY_RATE_54M = 0x0C,
+    WIFI_PHY_RATE_36M = 0x0D,
+    WIFI_PHY_RATE_18M = 0x0E,
+    WIFI_PHY_RATE_9M = 0x0F,
+    WIFI_PHY_RATE_MCS0_LGI = 0x10,
+    WIFI_PHY_RATE_MCS1_LGI = 0x11,
+    WIFI_PHY_RATE_MCS2_LGI = 0x12,
+    WIFI_PHY_RATE_MCS3_LGI = 0x13,
+    WIFI_PHY_RATE_MCS4_LGI = 0x14,
+    WIFI_PHY_RATE_MCS5_LGI = 0x15,
+    WIFI_PHY_RATE_MCS6_LGI = 0x16,
+    WIFI_PHY_RATE_MCS7_LGI = 0x17,
+    WIFI_PHY_RATE_MCS0_SGI = 0x18,
+    WIFI_PHY_RATE_MCS1_SGI = 0x19,
+    WIFI_PHY_RATE_MCS2_SGI = 0x1A,
+    WIFI_PHY_RATE_MCS3_SGI = 0x1B,
+    WIFI_PHY_RATE_MCS4_SGI = 0x1C,
+    WIFI_PHY_RATE_MCS5_SGI = 0x1D,
+    WIFI_PHY_RATE_MCS6_SGI = 0x1E,
+    WIFI_PHY_RATE_MCS7_SGI = 0x1F,
+    WIFI_PHY_RATE_LORA_250K = 0x29,
+    WIFI_PHY_RATE_LORA_500K = 0x2A,
+    WIFI_PHY_RATE_MAX,
+} wifi_phy_rate_t;
+
+
+
+
+
+typedef enum {
+    WIFI_IOCTL_SET_STA_HT2040_COEX = 1,
+    WIFI_IOCTL_GET_STA_HT2040_COEX,
+    WIFI_IOCTL_MAX,
+} wifi_ioctl_cmd_t;
+
+
+
+
+
+typedef struct {
+    int enable;
+} wifi_ht2040_coex_t;
+
+
+
+
+
+typedef struct {
+    union {
+        wifi_ht2040_coex_t ht2040_coex;
+    } data;
+} wifi_ioctl_config_t;
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h" 1
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/opt.h" 1
 # 51 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/opt.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 1
@@ -5234,7 +5720,61 @@ int select(int nfds, _types_fd_set *readfds, _types_fd_set *writefds, _types_fd_
 
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/sntp.h" 1
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/sntp.h"
+typedef enum {
+    SNTP_SYNC_MODE_IMMED,
+    SNTP_SYNC_MODE_SMOOTH,
+} sntp_sync_mode_t;
 
+
+typedef enum {
+    SNTP_SYNC_STATUS_RESET,
+    SNTP_SYNC_STATUS_COMPLETED,
+    SNTP_SYNC_STATUS_IN_PROGRESS,
+} sntp_sync_status_t;
+
+
+
+
+
+
+typedef void (*sntp_sync_time_cb_t) (struct timeval *tv);
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/sntp.h"
+void sntp_sync_time(struct timeval *tv);
+
+
+
+
+
+
+
+void sntp_set_sync_mode(sntp_sync_mode_t sync_mode);
+
+
+
+
+
+
+
+sntp_sync_mode_t sntp_get_sync_mode(void);
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/sntp.h"
+sntp_sync_status_t sntp_get_sync_status(void);
+
+
+
+
+
+
+void sntp_set_sync_status(sntp_sync_status_t sync_status);
+
+
+
+
+
+
+void sntp_set_time_sync_notification_cb(sntp_sync_time_cb_t callback);
+# 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h" 1
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h"
 
@@ -5309,6 +5849,10 @@ sys_sem_t* sys_thread_sem_get(void);
 
 
 
+
+
+
+
 typedef uint8_t u8_t;
 typedef int8_t s8_t;
 typedef uint16_t u16_t;
@@ -5358,62 +5902,7 @@ extern uintmax_t wcstoumax(const wchar_t *restrict, wchar_t **restrict, int);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/opt.h" 1
 # 42 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/debug.h" 2
 # 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/opt.h" 2
-# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/err.h" 2
-# 57 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/err.h"
-typedef s8_t err_t;
-
-
-
-typedef enum {
-
-  ERR_OK = 0,
-
-  ERR_MEM = -1,
-
-  ERR_BUF = -2,
-
-  ERR_TIMEOUT = -3,
-
-  ERR_RTE = -4,
-
-  ERR_INPROGRESS = -5,
-
-  ERR_VAL = -6,
-
-  ERR_WOULDBLOCK = -7,
-
-  ERR_USE = -8,
-
-  ERR_ALREADY = -9,
-
-  ERR_ISCONN = -10,
-
-  ERR_CONN = -11,
-
-  ERR_IF = -12,
-
-
-  ERR_ABRT = -13,
-
-  ERR_RST = -14,
-
-  ERR_CLSD = -15,
-
-  ERR_ARG = -16
-} err_enum_t;
-# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/err.h"
-extern const char *lwip_strerr(err_t err);
-
-
-
-
-
-int err_to_errno(err_t err);
-# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform_esp32_idf.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h" 1
-# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h" 1
-# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h"
+# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/def.h" 1
 # 85 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/def.h"
 u16_t lwip_htons(u16_t x);
@@ -5521,8 +6010,868 @@ extern const ip_addr_t ip_addr_any;
 extern const ip_addr_t ip_addr_broadcast;
 # 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h"
 extern const ip_addr_t ip6_addr_any;
-# 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h" 2
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h" 2
 
+
+typedef struct dhcps_state{
+        s16_t state;
+} dhcps_state;
+
+typedef struct dhcps_msg {
+        u8_t op, htype, hlen, hops;
+        u8_t xid[4];
+        u16_t secs, flags;
+        u8_t ciaddr[4];
+        u8_t yiaddr[4];
+        u8_t siaddr[4];
+        u8_t giaddr[4];
+        u8_t chaddr[16];
+        u8_t sname[64];
+        u8_t file[128];
+        u8_t options[312];
+}dhcps_msg;
+
+
+typedef struct {
+ 
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h" 3 4
+_Bool 
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h"
+     enable;
+ ip4_addr_t start_ip;
+ ip4_addr_t end_ip;
+} dhcps_lease_t;
+
+enum dhcps_offer_option{
+ OFFER_START = 0x00,
+ OFFER_ROUTER = 0x01,
+ OFFER_DNS = 0x02,
+ OFFER_END
+};
+
+
+
+
+
+
+struct dhcps_pool{
+ ip4_addr_t ip;
+ u8_t mac[6];
+ u32_t lease_timer;
+};
+
+typedef u32_t dhcps_time_t;
+typedef u8_t dhcps_offer_t;
+
+typedef struct {
+        dhcps_offer_t dhcps_offer;
+        dhcps_offer_t dhcps_dns;
+        dhcps_time_t dhcps_time;
+        dhcps_lease_t dhcps_poll;
+} dhcps_options_t;
+
+typedef void (*dhcps_cb_t)(u8_t client_ip[4]);
+
+static inline 
+# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h" 3 4
+             _Bool 
+# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h"
+                  dhcps_router_enabled (dhcps_offer_t offer)
+{
+    return (offer & OFFER_ROUTER) != 0;
+}
+
+static inline 
+# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h" 3 4
+             _Bool 
+# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h"
+                  dhcps_dns_enabled (dhcps_offer_t offer)
+{
+    return (offer & OFFER_DNS) != 0;
+}
+
+void dhcps_start(struct netif *netif, ip4_addr_t ip);
+void dhcps_stop(struct netif *netif);
+void *dhcps_option_info(u8_t op_id, u32_t opt_len);
+void dhcps_set_option_info(u8_t op_id, void *opt_info, u32_t opt_len);
+
+# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h" 3 4
+_Bool 
+# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h"
+    dhcp_search_ip_on_mac(u8_t *mac, ip4_addr_t *ip);
+void dhcps_dns_setserver(const ip_addr_t *dnsserver);
+ip4_addr_t dhcps_dns_getserver();
+void dhcps_set_new_lease_cb(dhcps_cb_t cb);
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
+
+typedef dhcps_lease_t tcpip_adapter_dhcps_lease_t;
+# 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+typedef struct {
+    ip4_addr_t ip;
+    ip4_addr_t netmask;
+    ip4_addr_t gw;
+} tcpip_adapter_ip_info_t;
+
+
+
+typedef struct {
+    ip6_addr_t ip;
+} tcpip_adapter_ip6_info_t;
+
+
+
+
+
+typedef struct {
+    uint8_t mac[6];
+    ip4_addr_t ip;
+} tcpip_adapter_sta_info_t;
+
+
+
+
+
+typedef struct {
+    tcpip_adapter_sta_info_t sta[(10)];
+    int num;
+} tcpip_adapter_sta_list_t;
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+typedef enum {
+    TCPIP_ADAPTER_IF_STA = 0,
+    TCPIP_ADAPTER_IF_AP,
+    TCPIP_ADAPTER_IF_ETH,
+    TCPIP_ADAPTER_IF_MAX
+} tcpip_adapter_if_t;
+
+
+typedef enum {
+    TCPIP_ADAPTER_DNS_MAIN= 0,
+    TCPIP_ADAPTER_DNS_BACKUP,
+    TCPIP_ADAPTER_DNS_FALLBACK,
+    TCPIP_ADAPTER_DNS_MAX
+} tcpip_adapter_dns_type_t;
+
+
+typedef struct {
+    ip_addr_t ip;
+} tcpip_adapter_dns_info_t;
+
+
+typedef enum {
+    TCPIP_ADAPTER_DHCP_INIT = 0,
+    TCPIP_ADAPTER_DHCP_STARTED,
+    TCPIP_ADAPTER_DHCP_STOPPED,
+    TCPIP_ADAPTER_DHCP_STATUS_MAX
+} tcpip_adapter_dhcp_status_t;
+
+
+typedef enum{
+    TCPIP_ADAPTER_OP_START = 0,
+    TCPIP_ADAPTER_OP_SET,
+    TCPIP_ADAPTER_OP_GET,
+    TCPIP_ADAPTER_OP_MAX
+} tcpip_adapter_dhcp_option_mode_t;
+
+
+typedef tcpip_adapter_dhcp_option_mode_t tcpip_adapter_option_mode_t;
+
+
+typedef enum{
+    TCPIP_ADAPTER_DOMAIN_NAME_SERVER = 6,
+    TCPIP_ADAPTER_ROUTER_SOLICITATION_ADDRESS = 32,
+    TCPIP_ADAPTER_REQUESTED_IP_ADDRESS = 50,
+    TCPIP_ADAPTER_IP_ADDRESS_LEASE_TIME = 51,
+    TCPIP_ADAPTER_IP_REQUEST_RETRY_TIME = 52,
+} tcpip_adapter_dhcp_option_id_t;
+
+
+typedef tcpip_adapter_dhcp_option_id_t tcpip_adapter_option_id_t;
+
+
+
+
+
+
+void tcpip_adapter_init(void);
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_eth_start(uint8_t *mac, tcpip_adapter_ip_info_t *ip_info);
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_sta_start(uint8_t *mac, tcpip_adapter_ip_info_t *ip_info);
+# 199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_ap_start(uint8_t *mac, tcpip_adapter_ip_info_t *ip_info);
+# 220 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_stop(tcpip_adapter_if_t tcpip_if);
+# 236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_up(tcpip_adapter_if_t tcpip_if);
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_down(tcpip_adapter_if_t tcpip_if);
+# 269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_get_ip_info(tcpip_adapter_if_t tcpip_if, tcpip_adapter_ip_info_t *ip_info);
+# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_set_ip_info(tcpip_adapter_if_t tcpip_if, const tcpip_adapter_ip_info_t *ip_info);
+# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_set_dns_info(tcpip_adapter_if_t tcpip_if, tcpip_adapter_dns_type_t type, tcpip_adapter_dns_info_t *dns);
+# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_get_dns_info(tcpip_adapter_if_t tcpip_if, tcpip_adapter_dns_type_t type, tcpip_adapter_dns_info_t *dns);
+# 358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_get_old_ip_info(tcpip_adapter_if_t tcpip_if, tcpip_adapter_ip_info_t *ip_info);
+# 376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_set_old_ip_info(tcpip_adapter_if_t tcpip_if, const tcpip_adapter_ip_info_t *ip_info);
+# 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_create_ip6_linklocal(tcpip_adapter_if_t tcpip_if);
+# 407 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_get_ip6_linklocal(tcpip_adapter_if_t tcpip_if, ip6_addr_t *if_ip6);
+# 422 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_get_ip6_global(tcpip_adapter_if_t tcpip_if, ip6_addr_t *if_ip6);
+# 439 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_dhcps_get_status(tcpip_adapter_if_t tcpip_if, tcpip_adapter_dhcp_status_t *status);
+# 455 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_dhcps_option(tcpip_adapter_dhcp_option_mode_t opt_op, tcpip_adapter_dhcp_option_id_t opt_id, void *opt_val, uint32_t opt_len);
+# 469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_dhcps_start(tcpip_adapter_if_t tcpip_if);
+# 484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_dhcps_stop(tcpip_adapter_if_t tcpip_if);
+# 495 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_dhcpc_get_status(tcpip_adapter_if_t tcpip_if, tcpip_adapter_dhcp_status_t *status);
+# 510 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_dhcpc_option(tcpip_adapter_dhcp_option_mode_t opt_op, tcpip_adapter_dhcp_option_id_t opt_id, void *opt_val, uint32_t opt_len);
+# 527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_dhcpc_start(tcpip_adapter_if_t tcpip_if);
+# 544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_dhcpc_stop(tcpip_adapter_if_t tcpip_if);
+# 560 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_eth_input(void *buffer, uint16_t len, void *eb);
+# 578 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_sta_input(void *buffer, uint16_t len, void *eb);
+# 596 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_ap_input(void *buffer, uint16_t len, void *eb);
+# 611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_interface_t tcpip_adapter_get_esp_if(void *dev);
+# 624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_get_sta_list(const wifi_sta_list_t *wifi_sta_list, tcpip_adapter_sta_list_t *tcpip_sta_list);
+# 638 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_set_hostname(tcpip_adapter_if_t tcpip_if, const char *hostname);
+# 651 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_get_hostname(tcpip_adapter_if_t tcpip_if, const char **hostname);
+# 666 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_get_netif(tcpip_adapter_if_t tcpip_if, void ** netif);
+# 677 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+
+# 677 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 3 4
+_Bool 
+# 677 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+    tcpip_adapter_is_netif_up(tcpip_adapter_if_t tcpip_if);
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h" 2
+
+
+
+
+
+typedef enum {
+    SYSTEM_EVENT_WIFI_READY = 0,
+    SYSTEM_EVENT_SCAN_DONE,
+    SYSTEM_EVENT_STA_START,
+    SYSTEM_EVENT_STA_STOP,
+    SYSTEM_EVENT_STA_CONNECTED,
+    SYSTEM_EVENT_STA_DISCONNECTED,
+    SYSTEM_EVENT_STA_AUTHMODE_CHANGE,
+    SYSTEM_EVENT_STA_GOT_IP,
+    SYSTEM_EVENT_STA_LOST_IP,
+    SYSTEM_EVENT_STA_WPS_ER_SUCCESS,
+    SYSTEM_EVENT_STA_WPS_ER_FAILED,
+    SYSTEM_EVENT_STA_WPS_ER_TIMEOUT,
+    SYSTEM_EVENT_STA_WPS_ER_PIN,
+    SYSTEM_EVENT_STA_WPS_ER_PBC_OVERLAP,
+    SYSTEM_EVENT_AP_START,
+    SYSTEM_EVENT_AP_STOP,
+    SYSTEM_EVENT_AP_STACONNECTED,
+    SYSTEM_EVENT_AP_STADISCONNECTED,
+    SYSTEM_EVENT_AP_STAIPASSIGNED,
+    SYSTEM_EVENT_AP_PROBEREQRECVED,
+    SYSTEM_EVENT_GOT_IP6,
+    SYSTEM_EVENT_ETH_START,
+    SYSTEM_EVENT_ETH_STOP,
+    SYSTEM_EVENT_ETH_CONNECTED,
+    SYSTEM_EVENT_ETH_DISCONNECTED,
+    SYSTEM_EVENT_ETH_GOT_IP,
+    SYSTEM_EVENT_MAX
+} system_event_id_t;
+
+
+
+
+
+
+typedef enum {
+    WPS_FAIL_REASON_NORMAL = 0,
+    WPS_FAIL_REASON_RECV_M2D,
+    WPS_FAIL_REASON_MAX
+}system_event_sta_wps_fail_reason_t;
+typedef struct {
+    uint32_t status;
+    uint8_t number;
+    uint8_t scan_id;
+} system_event_sta_scan_done_t;
+
+typedef struct {
+    uint8_t ssid[32];
+    uint8_t ssid_len;
+    uint8_t bssid[6];
+    uint8_t channel;
+    wifi_auth_mode_t authmode;
+} system_event_sta_connected_t;
+
+typedef struct {
+    uint8_t ssid[32];
+    uint8_t ssid_len;
+    uint8_t bssid[6];
+    uint8_t reason;
+} system_event_sta_disconnected_t;
+
+typedef struct {
+    wifi_auth_mode_t old_mode;
+    wifi_auth_mode_t new_mode;
+} system_event_sta_authmode_change_t;
+
+typedef struct {
+    tcpip_adapter_ip_info_t ip_info;
+    
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h" 3 4
+   _Bool 
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
+        ip_changed;
+} system_event_sta_got_ip_t;
+
+typedef struct {
+    uint8_t pin_code[8];
+} system_event_sta_wps_er_pin_t;
+
+typedef struct {
+    tcpip_adapter_if_t if_index;
+    tcpip_adapter_ip6_info_t ip6_info;
+} system_event_got_ip6_t;
+
+typedef struct {
+    uint8_t mac[6];
+    uint8_t aid;
+} system_event_ap_staconnected_t;
+
+typedef struct {
+    uint8_t mac[6];
+    uint8_t aid;
+} system_event_ap_stadisconnected_t;
+
+typedef struct {
+    int rssi;
+    uint8_t mac[6];
+} system_event_ap_probe_req_rx_t;
+
+typedef struct {
+    ip4_addr_t ip;
+} system_event_ap_staipassigned_t;
+
+typedef union {
+    system_event_sta_connected_t connected;
+    system_event_sta_disconnected_t disconnected;
+    system_event_sta_scan_done_t scan_done;
+    system_event_sta_authmode_change_t auth_change;
+    system_event_sta_got_ip_t got_ip;
+    system_event_sta_wps_er_pin_t sta_er_pin;
+    system_event_sta_wps_fail_reason_t sta_er_fail_reason;
+    system_event_ap_staconnected_t sta_connected;
+    system_event_ap_stadisconnected_t sta_disconnected;
+    system_event_ap_probe_req_rx_t ap_probereqrecved;
+    system_event_ap_staipassigned_t ap_staipassigned;
+    system_event_got_ip6_t got_ip6;
+} system_event_info_t;
+
+typedef struct {
+    system_event_id_t event_id;
+    system_event_info_t event_info;
+} system_event_t;
+
+typedef esp_err_t (*system_event_handler_t)(system_event_t *event);
+# 160 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
+esp_err_t esp_event_send(system_event_t *event);
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
+esp_err_t esp_event_process_default(system_event_t *event);
+
+
+
+
+
+void esp_event_set_default_eth_handlers();
+
+
+
+
+
+void esp_event_set_default_wifi_handlers();
+# 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h" 2
+
+
+
+
+
+
+
+typedef struct {
+    int32_t queue_size;
+    const char* task_name;
+
+    UBaseType_t task_priority;
+    uint32_t task_stack_size;
+    BaseType_t task_core_id;
+
+} esp_event_loop_args_t;
+# 56 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_loop_create(const esp_event_loop_args_t* event_loop_args, esp_event_loop_handle_t* event_loop);
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_loop_delete(esp_event_loop_handle_t event_loop);
+# 78 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_loop_create_default();
+# 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_loop_delete_default();
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_loop_run(esp_event_loop_handle_t event_loop, TickType_t ticks_to_run);
+# 145 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_handler_register(esp_event_base_t event_base,
+                                        int32_t event_id,
+                                        esp_event_handler_t event_handler,
+                                        void* event_handler_arg);
+# 171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_handler_register_with(esp_event_loop_handle_t event_loop,
+                                            esp_event_base_t event_base,
+                                            int32_t event_id,
+                                            esp_event_handler_t event_handler,
+                                            void* event_handler_arg);
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_handler_unregister(esp_event_base_t event_base, int32_t event_id, esp_event_handler_t event_handler);
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_handler_unregister_with(esp_event_loop_handle_t event_loop,
+                                            esp_event_base_t event_base,
+                                            int32_t event_id,
+                                            esp_event_handler_t event_handler);
+# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_post(esp_event_base_t event_base,
+                            int32_t event_id,
+                            void* event_data,
+                            size_t event_data_size,
+                            TickType_t ticks_to_wait);
+# 269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_post_to(esp_event_loop_handle_t event_loop,
+                            esp_event_base_t event_base,
+                            int32_t event_id,
+                            void* event_data,
+                            size_t event_data_size,
+                            TickType_t ticks_to_wait);
+# 320 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+esp_err_t esp_event_dump(FILE* file);
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h" 2
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+typedef struct esp_mqtt_client *esp_mqtt_client_handle_t;
+# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+typedef enum {
+    MQTT_EVENT_ANY = -1,
+    MQTT_EVENT_ERROR = 0,
+    MQTT_EVENT_CONNECTED,
+    MQTT_EVENT_DISCONNECTED,
+    MQTT_EVENT_SUBSCRIBED,
+    MQTT_EVENT_UNSUBSCRIBED,
+    MQTT_EVENT_PUBLISHED,
+    MQTT_EVENT_DATA,
+# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+    MQTT_EVENT_BEFORE_CONNECT,
+} esp_mqtt_event_id_t;
+
+
+
+
+typedef enum {
+    MQTT_CONNECTION_ACCEPTED = 0,
+    MQTT_CONNECTION_REFUSE_PROTOCOL,
+    MQTT_CONNECTION_REFUSE_ID_REJECTED,
+    MQTT_CONNECTION_REFUSE_SERVER_UNAVAILABLE,
+    MQTT_CONNECTION_REFUSE_BAD_USERNAME,
+    MQTT_CONNECTION_REFUSE_NOT_AUTHORIZED
+} esp_mqtt_connect_return_code_t;
+
+
+
+
+typedef enum {
+    MQTT_ERROR_TYPE_NONE = 0,
+    MQTT_ERROR_TYPE_ESP_TLS,
+    MQTT_ERROR_TYPE_CONNECTION_REFUSED,
+} esp_mqtt_error_type_t;
+
+typedef enum {
+    MQTT_TRANSPORT_UNKNOWN = 0x0,
+    MQTT_TRANSPORT_OVER_TCP,
+    MQTT_TRANSPORT_OVER_SSL,
+    MQTT_TRANSPORT_OVER_WS,
+    MQTT_TRANSPORT_OVER_WSS
+} esp_mqtt_transport_t;
+
+
+
+
+typedef enum {
+    MQTT_PROTOCOL_UNDEFINED = 0,
+    MQTT_PROTOCOL_V_3_1,
+    MQTT_PROTOCOL_V_3_1_1
+} esp_mqtt_protocol_ver_t;
+# 113 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+typedef struct esp_mqtt_error_codes {
+
+    esp_err_t esp_tls_last_esp_err;
+    int esp_tls_stack_err;
+    int esp_tls_cert_verify_flags;
+
+    esp_mqtt_error_type_t error_type;
+    esp_mqtt_connect_return_code_t connect_return_code;
+} esp_mqtt_error_codes_t;
+
+
+
+
+typedef struct {
+    esp_mqtt_event_id_t event_id;
+    esp_mqtt_client_handle_t client;
+    void *user_context;
+    char *data;
+    int data_len;
+    int total_data_len;
+    int current_data_offset;
+    char *topic;
+    int topic_len;
+    int msg_id;
+    int session_present;
+    esp_mqtt_error_codes_t *error_handle;
+} esp_mqtt_event_t;
+
+typedef esp_mqtt_event_t *esp_mqtt_event_handle_t;
+
+typedef esp_err_t (* mqtt_event_callback_t)(esp_mqtt_event_handle_t event);
+
+
+
+
+typedef struct {
+    mqtt_event_callback_t event_handle;
+    esp_event_loop_handle_t event_loop_handle;
+    const char *host;
+    const char *uri;
+    uint32_t port;
+    const char *client_id;
+    const char *username;
+    const char *password;
+    const char *lwt_topic;
+    const char *lwt_msg;
+    int lwt_qos;
+    int lwt_retain;
+    int lwt_msg_len;
+    int disable_clean_session;
+    int keepalive;
+    
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h" 3 4
+   _Bool 
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+        disable_auto_reconnect;
+    void *user_context;
+    int task_prio;
+    int task_stack;
+    int buffer_size;
+    const char *cert_pem;
+    size_t cert_len;
+    const char *client_cert_pem;
+    size_t client_cert_len;
+    const char *client_key_pem;
+    size_t client_key_len;
+    esp_mqtt_transport_t transport;
+    int refresh_connection_after_ms;
+    const struct psk_key_hint* psk_hint_key;
+    
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h" 3 4
+   _Bool 
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+                 use_global_ca_store;
+    int reconnect_timeout_ms;
+    const char **alpn_protos;
+    const char *clientkey_password;
+    int clientkey_password_len;
+    esp_mqtt_protocol_ver_t protocol_ver;
+    int out_buffer_size;
+} esp_mqtt_client_config_t;
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+esp_mqtt_client_handle_t esp_mqtt_client_init(const esp_mqtt_client_config_t *config);
+# 205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+esp_err_t esp_mqtt_client_set_uri(esp_mqtt_client_handle_t client, const char *uri);
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+esp_err_t esp_mqtt_client_start(esp_mqtt_client_handle_t client);
+# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+esp_err_t esp_mqtt_client_reconnect(esp_mqtt_client_handle_t client);
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+esp_err_t esp_mqtt_client_disconnect(esp_mqtt_client_handle_t client);
+# 245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+esp_err_t esp_mqtt_client_stop(esp_mqtt_client_handle_t client);
+# 264 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+int esp_mqtt_client_subscribe(esp_mqtt_client_handle_t client, const char *topic, int qos);
+# 279 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+int esp_mqtt_client_unsubscribe(esp_mqtt_client_handle_t client, const char *topic);
+# 302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+int esp_mqtt_client_publish(esp_mqtt_client_handle_t client, const char *topic, const char *data, int len, int qos, int retain);
+# 311 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+esp_err_t esp_mqtt_client_destroy(esp_mqtt_client_handle_t client);
+# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+esp_err_t esp_mqtt_set_config(esp_mqtt_client_handle_t client, const esp_mqtt_client_config_t *config);
+# 336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/include/mqtt_client.h"
+esp_err_t esp_mqtt_client_register_event(esp_mqtt_client_handle_t client, esp_mqtt_event_id_t event, esp_event_handler_t event_handler, void* event_handler_arg);
+# 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/mqtt_msg.h" 2
+# 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/mqtt_msg.h"
+enum mqtt_message_type {
+    MQTT_MSG_TYPE_CONNECT = 1,
+    MQTT_MSG_TYPE_CONNACK = 2,
+    MQTT_MSG_TYPE_PUBLISH = 3,
+    MQTT_MSG_TYPE_PUBACK = 4,
+    MQTT_MSG_TYPE_PUBREC = 5,
+    MQTT_MSG_TYPE_PUBREL = 6,
+    MQTT_MSG_TYPE_PUBCOMP = 7,
+    MQTT_MSG_TYPE_SUBSCRIBE = 8,
+    MQTT_MSG_TYPE_SUBACK = 9,
+    MQTT_MSG_TYPE_UNSUBSCRIBE = 10,
+    MQTT_MSG_TYPE_UNSUBACK = 11,
+    MQTT_MSG_TYPE_PINGREQ = 12,
+    MQTT_MSG_TYPE_PINGRESP = 13,
+    MQTT_MSG_TYPE_DISCONNECT = 14
+};
+
+typedef struct mqtt_message {
+    uint8_t *data;
+    uint32_t length;
+    uint32_t fragmented_msg_total_length;
+    uint32_t fragmented_msg_data_offset;
+} mqtt_message_t;
+
+typedef struct mqtt_connection {
+    mqtt_message_t message;
+
+    uint16_t message_id;
+    uint8_t *buffer;
+    uint32_t buffer_length;
+
+} mqtt_connection_t;
+
+typedef struct mqtt_connect_info {
+    char *client_id;
+    char *username;
+    char *password;
+    char *will_topic;
+    char *will_message;
+    int keepalive;
+    int will_length;
+    int will_qos;
+    int will_retain;
+    int clean_session;
+    esp_mqtt_protocol_ver_t protocol_ver;
+
+} mqtt_connect_info_t;
+
+
+static inline int mqtt_get_type(const uint8_t *buffer)
+{
+    return (buffer[0] & 0xf0) >> 4;
+}
+static inline int mqtt_get_connect_session_present(const uint8_t *buffer)
+{
+    return buffer[2] & 0x01;
+}
+static inline int mqtt_get_connect_return_code(const uint8_t *buffer)
+{
+    return buffer[3];
+}
+static inline int mqtt_get_dup(const uint8_t *buffer)
+{
+    return (buffer[0] & 0x08) >> 3;
+}
+static inline void mqtt_set_dup(uint8_t *buffer)
+{
+    buffer[0] |= 0x08;
+}
+static inline int mqtt_get_qos(const uint8_t *buffer)
+{
+    return (buffer[0] & 0x06) >> 1;
+}
+static inline int mqtt_get_retain(const uint8_t *buffer)
+{
+    return (buffer[0] & 0x01);
+}
+
+void mqtt_msg_init(mqtt_connection_t *connection, uint8_t *buffer, uint32_t buffer_length);
+
+# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/mqtt_msg.h" 3 4
+_Bool 
+# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/mqtt_msg.h"
+    mqtt_header_complete(uint8_t *buffer, uint32_t buffer_length);
+uint32_t mqtt_get_total_length(const uint8_t *buffer, uint32_t length, int *fixed_size_len);
+char *mqtt_get_publish_topic(uint8_t *buffer, uint32_t *length);
+char *mqtt_get_publish_data(uint8_t *buffer, uint32_t *length);
+uint16_t mqtt_get_id(uint8_t *buffer, uint32_t length);
+int mqtt_has_valid_msg_hdr(uint8_t *buffer, uint32_t length);
+
+mqtt_message_t *mqtt_msg_connect(mqtt_connection_t *connection, mqtt_connect_info_t *info);
+mqtt_message_t *mqtt_msg_publish(mqtt_connection_t *connection, const char *topic, const char *data, int data_length, int qos, int retain, uint16_t *message_id);
+mqtt_message_t *mqtt_msg_puback(mqtt_connection_t *connection, uint16_t message_id);
+mqtt_message_t *mqtt_msg_pubrec(mqtt_connection_t *connection, uint16_t message_id);
+mqtt_message_t *mqtt_msg_pubrel(mqtt_connection_t *connection, uint16_t message_id);
+mqtt_message_t *mqtt_msg_pubcomp(mqtt_connection_t *connection, uint16_t message_id);
+mqtt_message_t *mqtt_msg_subscribe(mqtt_connection_t *connection, const char *topic, int qos, uint16_t *message_id);
+mqtt_message_t *mqtt_msg_unsubscribe(mqtt_connection_t *connection, const char *topic, uint16_t *message_id);
+mqtt_message_t *mqtt_msg_pingreq(mqtt_connection_t *connection);
+mqtt_message_t *mqtt_msg_pingresp(mqtt_connection_t *connection);
+mqtt_message_t *mqtt_msg_disconnect(mqtt_connection_t *connection);
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform_esp32_idf.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform_esp32_idf.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h" 1
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h" 1
+# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h" 1
+# 81 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h" 2
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
+typedef void * TimerHandle_t;
+
+
+
+
+typedef void (*TimerCallbackFunction_t)( TimerHandle_t xTimer );
+
+
+
+
+
+typedef void (*PendedFunction_t)( void *, uint32_t );
+# 263 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
+ TimerHandle_t xTimerCreate( const char * const pcTimerName,
+        const TickType_t xTimerPeriodInTicks,
+        const UBaseType_t uxAutoReload,
+        void * const pvTimerID,
+        TimerCallbackFunction_t pxCallbackFunction ) ;
+# 412 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
+void *pvTimerGetTimerID( TimerHandle_t xTimer ) ;
+# 431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
+void vTimerSetTimerID( TimerHandle_t xTimer, void *pvNewID ) ;
+# 468 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
+BaseType_t xTimerIsTimerActive( TimerHandle_t xTimer ) ;
+# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
+TaskHandle_t xTimerGetTimerDaemonTaskHandle( void );
+# 486 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
+TickType_t xTimerGetPeriod( TimerHandle_t xTimer ) ;
+# 499 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
+TickType_t xTimerGetExpiryTime( TimerHandle_t xTimer ) ;
+# 1203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
+BaseType_t xTimerPendFunctionCallFromISR( PendedFunction_t xFunctionToPend, void *pvParameter1, uint32_t ulParameter2, BaseType_t *pxHigherPriorityTaskWoken );
+# 1231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
+BaseType_t xTimerPendFunctionCall( PendedFunction_t xFunctionToPend, void *pvParameter1, uint32_t ulParameter2, TickType_t xTicksToWait );
+# 1240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/timers.h"
+const char * pcTimerGetTimerName( TimerHandle_t xTimer );
+
+
+
+
+
+
+BaseType_t xTimerCreateTimerTask( void ) ;
+BaseType_t xTimerGenericCommand( TimerHandle_t xTimer, const BaseType_t xCommandID, const TickType_t xOptionalValue, BaseType_t * const pxHigherPriorityTaskWoken, const TickType_t xTicksToWait ) ;
+# 78 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h" 2
+# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
+typedef void * EventGroupHandle_t;
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
+typedef TickType_t EventBits_t;
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
+ EventGroupHandle_t xEventGroupCreate( void ) ;
+# 311 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
+EventBits_t xEventGroupWaitBits( EventGroupHandle_t xEventGroup, const EventBits_t uxBitsToWaitFor, const BaseType_t xClearOnExit, const BaseType_t xWaitForAllBits, TickType_t xTicksToWait ) ;
+# 362 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
+EventBits_t xEventGroupClearBits( EventGroupHandle_t xEventGroup, const EventBits_t uxBitsToClear ) ;
+# 483 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
+EventBits_t xEventGroupSetBits( EventGroupHandle_t xEventGroup, const EventBits_t uxBitsToSet ) ;
+# 672 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
+EventBits_t xEventGroupSync( EventGroupHandle_t xEventGroup, const EventBits_t uxBitsToSet, const EventBits_t uxBitsToWaitFor, TickType_t xTicksToWait ) ;
+# 696 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
+EventBits_t xEventGroupGetBitsFromISR( EventGroupHandle_t xEventGroup );
+# 706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
+void vEventGroupDelete( EventGroupHandle_t xEventGroup );
+
+
+
+
+void vEventGroupSetBitsCallback( void *pvEventGroup, const uint32_t ulBitsToSet );
+void vEventGroupClearBitsCallback( void *pvEventGroup, const uint32_t ulBitsToClear );
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform_esp32_idf.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/err.h" 1
+# 57 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/err.h"
+typedef s8_t err_t;
+
+
+
+typedef enum {
+
+  ERR_OK = 0,
+
+  ERR_MEM = -1,
+
+  ERR_BUF = -2,
+
+  ERR_TIMEOUT = -3,
+
+  ERR_RTE = -4,
+
+  ERR_INPROGRESS = -5,
+
+  ERR_VAL = -6,
+
+  ERR_WOULDBLOCK = -7,
+
+  ERR_USE = -8,
+
+  ERR_ALREADY = -9,
+
+  ERR_ISCONN = -10,
+
+  ERR_CONN = -11,
+
+  ERR_IF = -12,
+
+
+  ERR_ABRT = -13,
+
+  ERR_RST = -14,
+
+  ERR_CLSD = -15,
+
+  ERR_ARG = -16
+} err_enum_t;
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/err.h"
+extern const char *lwip_strerr(err_t err);
+
+
+
+
+
+int err_to_errno(err_t err);
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform_esp32_idf.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h" 1
+# 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/inet.h" 1
 # 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/inet.h"
 typedef u32_t in_addr_t;
@@ -5916,11 +7265,7 @@ typedef void (*dns_found_callback)(const char *name, const ip_addr_t *ipaddr, vo
 void dns_init(void);
 void dns_tmr(void);
 void dns_setserver(u8_t numdns, const ip_addr_t *dnsserver);
-
-ip_addr_t dns_getserver(u8_t numdns);
-
-
-
+const ip_addr_t* dns_getserver(u8_t numdns);
 err_t dns_gethostbyname(const char *hostname, ip_addr_t *addr,
                                    dns_found_callback found, void *callback_arg);
 err_t dns_gethostbyname_addrtype(const char *hostname, ip_addr_t *addr,
@@ -5928,13 +7273,13 @@ err_t dns_gethostbyname_addrtype(const char *hostname, ip_addr_t *addr,
                                    u8_t dns_addrtype);
 
 void dns_clear_servers(
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/dns.h" 3 4
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/dns.h" 3 4
                                   _Bool 
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/dns.h"
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/dns.h"
                                        keep_fallback);
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform_esp32_idf.h" 2
 
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/queue.h" 1
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/queue.h" 1
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform_esp32_idf.h" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 1
@@ -5970,29 +7315,30 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform_esp32_idf.h" 2
 
 
-char *platform_create_id_string();
+char *platform_create_id_string(void);
 int platform_random(int max);
-long long platform_tick_get_ms();
+long long platform_tick_get_ms(void);
 void ms_to_timeval(int timeout_ms, struct timeval *tv);
 # 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/include/platform.h" 2
-# 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 2
+# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 2
 
 
 
-enum mqtt_connect_flag
-{
+
+
+enum mqtt_connect_flag {
     MQTT_CONNECT_FLAG_USERNAME = 1 << 7,
     MQTT_CONNECT_FLAG_PASSWORD = 1 << 6,
     MQTT_CONNECT_FLAG_WILL_RETAIN = 1 << 5,
@@ -6000,25 +7346,11 @@ enum mqtt_connect_flag
     MQTT_CONNECT_FLAG_CLEAN_SESSION = 1 << 1
 };
 
-struct __attribute((__packed__)) mqtt_connect_variable_header
+static int append_string(mqtt_connection_t *connection, const char *string, int len)
 {
-    uint8_t lengthMsb;
-    uint8_t lengthLsb;
-
-    uint8_t magic[4];
-
-
-
-    uint8_t version;
-    uint8_t flags;
-    uint8_t keepaliveMsb;
-    uint8_t keepaliveLsb;
-};
-
-static int append_string(mqtt_connection_t* connection, const char* string, int len)
-{
-    if (connection->message.length + len + 2 > connection->buffer_length)
+    if (connection->message.length + len + 2 > connection->buffer_length) {
         return -1;
+    }
 
     connection->buffer[connection->message.length++] = len >> 8;
     connection->buffer[connection->message.length++] = len & 0xff;
@@ -6028,7 +7360,7 @@ static int append_string(mqtt_connection_t* connection, const char* string, int 
     return len + 2;
 }
 
-static uint16_t append_message_id(mqtt_connection_t* connection, uint16_t message_id)
+static uint16_t append_message_id(mqtt_connection_t *connection, uint16_t message_id)
 {
 
 
@@ -6036,8 +7368,9 @@ static uint16_t append_message_id(mqtt_connection_t* connection, uint16_t messag
         message_id = platform_random(65535);
     }
 
-    if (connection->message.length + 2 > connection->buffer_length)
+    if (connection->message.length + 2 > connection->buffer_length) {
         return 0;
+    }
 
     connection->buffer[connection->message.length++] = message_id >> 8;
     connection->buffer[connection->message.length++] = message_id & 0xff;
@@ -6045,20 +7378,20 @@ static uint16_t append_message_id(mqtt_connection_t* connection, uint16_t messag
     return message_id;
 }
 
-static int init_message(mqtt_connection_t* connection)
+static int init_message(mqtt_connection_t *connection)
 {
     connection->message.length = 5;
     return 5;
 }
 
-static mqtt_message_t* fail_message(mqtt_connection_t* connection)
+static mqtt_message_t *fail_message(mqtt_connection_t *connection)
 {
     connection->message.data = connection->buffer;
     connection->message.length = 0;
     return &connection->message;
 }
 
-static mqtt_message_t* fini_message(mqtt_connection_t* connection, int type, int dup, int qos, int retain)
+static mqtt_message_t *fini_message(mqtt_connection_t *connection, int type, int dup, int qos, int retain)
 {
     int message_length = connection->message.length - 5;
     int total_length = message_length;
@@ -6094,77 +7427,121 @@ static mqtt_message_t* fini_message(mqtt_connection_t* connection, int type, int
 
     connection->buffer[offs++] = ((type & 0x0f) << 4) | ((dup & 1) << 3) | ((qos & 3) << 1) | (retain & 1);
 
-    for (int j = 0; j<len_bytes; j++) {
+    for (int j = 0; j < len_bytes; j++) {
         connection->buffer[offs++] = encoded_lens[j];
     }
 
     return &connection->message;
 }
 
-void mqtt_msg_init(mqtt_connection_t* connection, uint8_t* buffer, uint16_t buffer_length)
+void mqtt_msg_init(mqtt_connection_t *connection, uint8_t *buffer, uint32_t buffer_length)
 {
     memset(connection, 0, sizeof(mqtt_connection_t));
     connection->buffer = buffer;
     connection->buffer_length = buffer_length;
 }
 
-uint32_t mqtt_get_total_length(uint8_t* buffer, uint16_t length)
+uint32_t mqtt_get_total_length(const uint8_t *buffer, uint32_t length, int *fixed_size_len)
 {
     int i;
     uint32_t totlen = 0;
 
-    for (i = 1; i < length; ++i)
-    {
+    for (i = 1; i < length; ++i) {
         totlen += (buffer[i] & 0x7f) << (7 * (i - 1));
-        if ((buffer[i] & 0x80) == 0)
-        {
+        if ((buffer[i] & 0x80) == 0) {
             ++i;
             break;
         }
     }
     totlen += i;
+    if (fixed_size_len) {
+        *fixed_size_len = i;
+    }
 
     return totlen;
 }
 
-const char* mqtt_get_publish_topic(uint8_t* buffer, uint32_t* length)
+
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
+_Bool 
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
+    mqtt_header_complete(uint8_t *buffer, uint32_t buffer_length)
+{
+    uint16_t i;
+    uint16_t topiclen;
+
+    for (i = 1; i < 5; ++i) {
+        if (i >= buffer_length) {
+            return 
+# 170 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
+                  0
+# 170 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
+                       ;
+        }
+        if ((buffer[i] & 0x80) == 0) {
+            ++i;
+            break;
+        }
+    }
+
+
+    if (i + 2 >= buffer_length) {
+        return 
+# 180 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
+              0
+# 180 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
+                   ;
+    }
+    topiclen = buffer[i++] << 8;
+    topiclen |= buffer[i++];
+
+    i += topiclen;
+
+    if (mqtt_get_qos(buffer) > 0) {
+        i += 2;
+    }
+
+    return buffer_length >= i;
+}
+
+char *mqtt_get_publish_topic(uint8_t *buffer, uint32_t *length)
 {
     int i;
     int totlen = 0;
     int topiclen;
 
-    for (i = 1; i < *length; ++i)
-    {
+    for (i = 1; i < *length; ++i) {
         totlen += (buffer[i] & 0x7f) << (7 * (i - 1));
-        if ((buffer[i] & 0x80) == 0)
-        {
+        if ((buffer[i] & 0x80) == 0) {
             ++i;
             break;
         }
     }
     totlen += i;
 
-    if (i + 2 >= *length)
+    if (i + 2 >= *length) {
         return 
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
               ((void *)0)
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
                   ;
+    }
     topiclen = buffer[i++] << 8;
     topiclen |= buffer[i++];
 
-    if (i + topiclen > *length)
+    if (i + topiclen > *length) {
         return 
-# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
               ((void *)0)
-# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
                   ;
+    }
 
     *length = topiclen;
-    return (const char*)(buffer + i);
+    return (char *)(buffer + i);
 }
 
-const char* mqtt_get_publish_data(uint8_t* buffer, uint32_t* length)
+char *mqtt_get_publish_data(uint8_t *buffer, uint32_t *length)
 {
     int i;
     int totlen = 0;
@@ -6172,229 +7549,257 @@ const char* mqtt_get_publish_data(uint8_t* buffer, uint32_t* length)
     int blength = *length;
     *length = 0;
 
-    for (i = 1; i < blength; ++i)
-    {
+    for (i = 1; i < blength; ++i) {
         totlen += (buffer[i] & 0x7f) << (7 * (i - 1));
-        if ((buffer[i] & 0x80) == 0)
-        {
+        if ((buffer[i] & 0x80) == 0) {
             ++i;
             break;
         }
     }
     totlen += i;
 
-    if (i + 2 >= blength)
-        return 
-# 224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
-              ((void *)0)
-# 224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
-                  ;
-    topiclen = buffer[i++] << 8;
-    topiclen |= buffer[i++];
-
-    if (i + topiclen >= blength)
-        return 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
-              ((void *)0)
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
-                  ;
-
-    i += topiclen;
-
-    if (mqtt_get_qos(buffer) > 0)
-    {
-        if (i + 2 >= blength)
-            return 
-# 236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
-                  ((void *)0)
-# 236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
-                      ;
-        i += 2;
-    }
-
-    if (totlen < i)
+    if (i + 2 >= blength) {
         return 
 # 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
               ((void *)0)
 # 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
                   ;
+    }
+    topiclen = buffer[i++] << 8;
+    topiclen |= buffer[i++];
 
-    if (totlen <= blength)
+    if (i + topiclen >= blength) {
+        return 
+# 247 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
+              ((void *)0)
+# 247 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
+                  ;
+    }
+
+    i += topiclen;
+
+    if (mqtt_get_qos(buffer) > 0) {
+        if (i + 2 >= blength) {
+            return 
+# 254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
+                  ((void *)0)
+# 254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
+                      ;
+        }
+        i += 2;
+    }
+
+    if (totlen < i) {
+        return 
+# 260 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
+              ((void *)0)
+# 260 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
+                  ;
+    }
+
+    if (totlen <= blength) {
         *length = totlen - i;
-    else
+    } else {
         *length = blength - i;
-    return (const char*)(buffer + i);
+    }
+    return (char *)(buffer + i);
 }
 
-uint16_t mqtt_get_id(uint8_t* buffer, uint16_t length)
+uint16_t mqtt_get_id(uint8_t *buffer, uint32_t length)
 {
-    if (length < 1)
+    if (length < 1) {
         return 0;
+    }
 
-    switch (mqtt_get_type(buffer))
-    {
-        case MQTT_MSG_TYPE_PUBLISH:
-            {
-                int i;
-                int topiclen;
+    switch (mqtt_get_type(buffer)) {
+    case MQTT_MSG_TYPE_PUBLISH: {
+        int i;
+        int topiclen;
 
-                for (i = 1; i < length; ++i)
-                {
-                    if ((buffer[i] & 0x80) == 0)
-                    {
-                        ++i;
-                        break;
-                    }
-                }
-
-                if (i + 2 >= length)
-                    return 0;
-                topiclen = buffer[i++] << 8;
-                topiclen |= buffer[i++];
-
-                if (i + topiclen >= length)
-                    return 0;
-                i += topiclen;
-
-                if (mqtt_get_qos(buffer) > 0)
-                {
-                    if (i + 2 >= length)
-                        return 0;
-
-                } else {
-                    return 0;
-                }
-
-                return (buffer[i] << 8) | buffer[i + 1];
+        for (i = 1; i < length; ++i) {
+            if ((buffer[i] & 0x80) == 0) {
+                ++i;
+                break;
             }
-        case MQTT_MSG_TYPE_PUBACK:
-        case MQTT_MSG_TYPE_PUBREC:
-        case MQTT_MSG_TYPE_PUBREL:
-        case MQTT_MSG_TYPE_PUBCOMP:
-        case MQTT_MSG_TYPE_SUBACK:
-        case MQTT_MSG_TYPE_UNSUBACK:
-        case MQTT_MSG_TYPE_SUBSCRIBE:
-            {
+        }
 
-
-                if (length >= 4 && (buffer[1] & 0x80) == 0)
-                    return (buffer[2] << 8) | buffer[3];
-                else
-                    return 0;
-            }
-
-        default:
+        if (i + 2 >= length) {
             return 0;
+        }
+        topiclen = buffer[i++] << 8;
+        topiclen |= buffer[i++];
+
+        if (i + topiclen > length) {
+            return 0;
+        }
+        i += topiclen;
+
+        if (mqtt_get_qos(buffer) > 0) {
+            if (i + 2 > length) {
+                return 0;
+            }
+
+        } else {
+            return 0;
+        }
+
+        return (buffer[i] << 8) | buffer[i + 1];
+    }
+    case MQTT_MSG_TYPE_PUBACK:
+    case MQTT_MSG_TYPE_PUBREC:
+    case MQTT_MSG_TYPE_PUBREL:
+    case MQTT_MSG_TYPE_PUBCOMP:
+    case MQTT_MSG_TYPE_SUBACK:
+    case MQTT_MSG_TYPE_UNSUBACK:
+    case MQTT_MSG_TYPE_SUBSCRIBE:
+    case MQTT_MSG_TYPE_UNSUBSCRIBE: {
+
+
+        if (length >= 4 && (buffer[1] & 0x80) == 0) {
+            return (buffer[2] << 8) | buffer[3];
+        } else {
+            return 0;
+        }
+    }
+
+    default:
+        return 0;
     }
 }
 
-mqtt_message_t* mqtt_msg_connect(mqtt_connection_t* connection, mqtt_connect_info_t* info)
+mqtt_message_t *mqtt_msg_connect(mqtt_connection_t *connection, mqtt_connect_info_t *info)
 {
-    struct mqtt_connect_variable_header* variable_header;
 
     init_message(connection);
 
-    if (connection->message.length + sizeof(*variable_header) > connection->buffer_length)
+    int header_len;
+    if (info->protocol_ver == MQTT_PROTOCOL_V_3_1) {
+        header_len = 12;
+    } else {
+        header_len = 10;
+    }
+
+    if (connection->message.length + header_len > connection->buffer_length) {
         return fail_message(connection);
-    variable_header = (void*)(connection->buffer + connection->message.length);
-    connection->message.length += sizeof(*variable_header);
+    }
+    char* variable_header = (void *)(connection->buffer + connection->message.length);
+    connection->message.length += header_len;
 
-    variable_header->lengthMsb = 0;
+    int header_idx = 0;
+    variable_header[header_idx++] = 0;
 
-    variable_header->lengthLsb = 4;
-    memcpy(variable_header->magic, "MQTT", 4);
-    variable_header->version = 4;
+    if (info->protocol_ver == MQTT_PROTOCOL_V_3_1) {
+        variable_header[header_idx++] = 6;
+        memcpy(&variable_header[header_idx], "MQIsdp", 6);
+        header_idx = header_idx + 6;
+        variable_header[header_idx++] = 3;
+    } else {
 
+        variable_header[header_idx++] = 4;
+        memcpy(&variable_header[header_idx], "MQTT", 4);
+        header_idx = header_idx + 4;
+        variable_header[header_idx++] = 4;
+    }
 
+    int flags_offset = header_idx;
+    variable_header[header_idx++] = 0;
+    variable_header[header_idx++] = info->keepalive >> 8;
+    variable_header[header_idx] = info->keepalive & 0xff;
 
-
-
-
-    variable_header->flags = 0;
-    variable_header->keepaliveMsb = info->keepalive >> 8;
-    variable_header->keepaliveLsb = info->keepalive & 0xff;
-
-    if (info->clean_session)
-        variable_header->flags |= MQTT_CONNECT_FLAG_CLEAN_SESSION;
+    if (info->clean_session) {
+        variable_header[flags_offset] |= MQTT_CONNECT_FLAG_CLEAN_SESSION;
+    }
 
     if (info->client_id != 
-# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
+# 376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
                           ((void *)0) 
-# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
-                               && info->client_id[0] != '\0')
-    {
-        if (append_string(connection, info->client_id, strlen(info->client_id)) < 0)
+# 376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
+                               && info->client_id[0] != '\0') {
+        if (append_string(connection, info->client_id, strlen(info->client_id)) < 0) {
             return fail_message(connection);
-    }
-    else
+        }
+    } else {
         return fail_message(connection);
+    }
 
     if (info->will_topic != 
-# 349 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
+# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
                            ((void *)0) 
-# 349 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
-                                && info->will_topic[0] != '\0')
-    {
-        if (append_string(connection, info->will_topic, strlen(info->will_topic)) < 0)
+# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
+                                && info->will_topic[0] != '\0') {
+        if (append_string(connection, info->will_topic, strlen(info->will_topic)) < 0) {
             return fail_message(connection);
+        }
 
-        if (append_string(connection, info->will_message, info->will_length) < 0)
+        if (append_string(connection, info->will_message, info->will_length) < 0) {
             return fail_message(connection);
+        }
 
-        variable_header->flags |= MQTT_CONNECT_FLAG_WILL;
-        if (info->will_retain)
-            variable_header->flags |= MQTT_CONNECT_FLAG_WILL_RETAIN;
-        variable_header->flags |= (info->will_qos & 3) << 3;
+        variable_header[flags_offset] |= MQTT_CONNECT_FLAG_WILL;
+        if (info->will_retain) {
+            variable_header[flags_offset] |= MQTT_CONNECT_FLAG_WILL_RETAIN;
+        }
+        variable_header[flags_offset] |= (info->will_qos & 3) << 3;
     }
 
     if (info->username != 
-# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
+# 400 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
                          ((void *)0) 
-# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
-                              && info->username[0] != '\0')
-    {
-        if (append_string(connection, info->username, strlen(info->username)) < 0)
+# 400 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
+                              && info->username[0] != '\0') {
+        if (append_string(connection, info->username, strlen(info->username)) < 0) {
             return fail_message(connection);
+        }
 
-        variable_header->flags |= MQTT_CONNECT_FLAG_USERNAME;
+        variable_header[flags_offset] |= MQTT_CONNECT_FLAG_USERNAME;
     }
 
     if (info->password != 
-# 371 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
+# 408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
                          ((void *)0) 
-# 371 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
-                              && info->password[0] != '\0')
-    {
-        if (append_string(connection, info->password, strlen(info->password)) < 0)
+# 408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
+                              && info->password[0] != '\0') {
+        if (append_string(connection, info->password, strlen(info->password)) < 0) {
             return fail_message(connection);
+        }
 
-        variable_header->flags |= MQTT_CONNECT_FLAG_PASSWORD;
+        variable_header[flags_offset] |= MQTT_CONNECT_FLAG_PASSWORD;
     }
 
     return fini_message(connection, MQTT_MSG_TYPE_CONNECT, 0, 0, 0);
 }
 
-mqtt_message_t* mqtt_msg_publish(mqtt_connection_t* connection, const char* topic, const char* data, int data_length, int qos, int retain, uint16_t* message_id)
+mqtt_message_t *mqtt_msg_publish(mqtt_connection_t *connection, const char *topic, const char *data, int data_length, int qos, int retain, uint16_t *message_id)
 {
     init_message(connection);
 
     if (topic == 
-# 386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
+# 423 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
                 ((void *)0) 
-# 386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
-                     || topic[0] == '\0')
+# 423 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
+                     || topic[0] == '\0') {
         return fail_message(connection);
-
-    if (append_string(connection, topic, strlen(topic)) < 0)
-        return fail_message(connection);
-
-    if (qos > 0)
-    {
-        if ((*message_id = append_message_id(connection, 0)) == 0)
-            return fail_message(connection);
     }
-    else
+
+    if (append_string(connection, topic, strlen(topic)) < 0) {
+        return fail_message(connection);
+    }
+
+    if (data == 
+# 431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
+               ((void *)0) 
+# 431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
+                    && data_length > 0) {
+       return fail_message(connection);
+    }
+
+    if (qos > 0) {
+        if ((*message_id = append_message_id(connection, 0)) == 0) {
+            return fail_message(connection);
+        }
+    } else {
         *message_id = 0;
+    }
 
     if (connection->message.length + data_length > connection->buffer_length) {
 
@@ -6403,103 +7808,161 @@ mqtt_message_t* mqtt_msg_publish(mqtt_connection_t* connection, const char* topi
         connection->message.length = connection->buffer_length;
         connection->message.fragmented_msg_total_length = data_length + connection->message.fragmented_msg_data_offset;
     } else {
-        memcpy(connection->buffer + connection->message.length, data, data_length);
-        connection->message.length += data_length;
+        if (data != 
+# 450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
+                   ((void *)0)
+# 450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
+                       )
+        {
+            memcpy(connection->buffer + connection->message.length, data, data_length);
+            connection->message.length += data_length;
+        }
         connection->message.fragmented_msg_total_length = 0;
     }
     return fini_message(connection, MQTT_MSG_TYPE_PUBLISH, 0, qos, retain);
 }
 
-mqtt_message_t* mqtt_msg_puback(mqtt_connection_t* connection, uint16_t message_id)
+mqtt_message_t *mqtt_msg_puback(mqtt_connection_t *connection, uint16_t message_id)
 {
     init_message(connection);
-    if (append_message_id(connection, message_id) == 0)
+    if (append_message_id(connection, message_id) == 0) {
         return fail_message(connection);
+    }
     return fini_message(connection, MQTT_MSG_TYPE_PUBACK, 0, 0, 0);
 }
 
-mqtt_message_t* mqtt_msg_pubrec(mqtt_connection_t* connection, uint16_t message_id)
+mqtt_message_t *mqtt_msg_pubrec(mqtt_connection_t *connection, uint16_t message_id)
 {
     init_message(connection);
-    if (append_message_id(connection, message_id) == 0)
+    if (append_message_id(connection, message_id) == 0) {
         return fail_message(connection);
+    }
     return fini_message(connection, MQTT_MSG_TYPE_PUBREC, 0, 0, 0);
 }
 
-mqtt_message_t* mqtt_msg_pubrel(mqtt_connection_t* connection, uint16_t message_id)
+mqtt_message_t *mqtt_msg_pubrel(mqtt_connection_t *connection, uint16_t message_id)
 {
     init_message(connection);
-    if (append_message_id(connection, message_id) == 0)
+    if (append_message_id(connection, message_id) == 0) {
         return fail_message(connection);
+    }
     return fini_message(connection, MQTT_MSG_TYPE_PUBREL, 0, 1, 0);
 }
 
-mqtt_message_t* mqtt_msg_pubcomp(mqtt_connection_t* connection, uint16_t message_id)
+mqtt_message_t *mqtt_msg_pubcomp(mqtt_connection_t *connection, uint16_t message_id)
 {
     init_message(connection);
-    if (append_message_id(connection, message_id) == 0)
+    if (append_message_id(connection, message_id) == 0) {
         return fail_message(connection);
+    }
     return fini_message(connection, MQTT_MSG_TYPE_PUBCOMP, 0, 0, 0);
 }
 
-mqtt_message_t* mqtt_msg_subscribe(mqtt_connection_t* connection, const char* topic, int qos, uint16_t* message_id)
+mqtt_message_t *mqtt_msg_subscribe(mqtt_connection_t *connection, const char *topic, int qos, uint16_t *message_id)
 {
     init_message(connection);
 
     if (topic == 
-# 450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
+# 500 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
                 ((void *)0) 
-# 450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
-                     || topic[0] == '\0')
+# 500 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
+                     || topic[0] == '\0') {
         return fail_message(connection);
+    }
 
-    if ((*message_id = append_message_id(connection, 0)) == 0)
+    if ((*message_id = append_message_id(connection, 0)) == 0) {
         return fail_message(connection);
+    }
 
-    if (append_string(connection, topic, strlen(topic)) < 0)
+    if (append_string(connection, topic, strlen(topic)) < 0) {
         return fail_message(connection);
+    }
 
-    if (connection->message.length + 1 > connection->buffer_length)
+    if (connection->message.length + 1 > connection->buffer_length) {
         return fail_message(connection);
+    }
     connection->buffer[connection->message.length++] = qos;
 
     return fini_message(connection, MQTT_MSG_TYPE_SUBSCRIBE, 0, 1, 0);
 }
 
-mqtt_message_t* mqtt_msg_unsubscribe(mqtt_connection_t* connection, const char* topic, uint16_t* message_id)
+mqtt_message_t *mqtt_msg_unsubscribe(mqtt_connection_t *connection, const char *topic, uint16_t *message_id)
 {
     init_message(connection);
 
     if (topic == 
-# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
+# 524 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c" 3 4
                 ((void *)0) 
-# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
-                     || topic[0] == '\0')
+# 524 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c"
+                     || topic[0] == '\0') {
         return fail_message(connection);
+    }
 
-    if ((*message_id = append_message_id(connection, 0)) == 0)
+    if ((*message_id = append_message_id(connection, 0)) == 0) {
         return fail_message(connection);
+    }
 
-    if (append_string(connection, topic, strlen(topic)) < 0)
+    if (append_string(connection, topic, strlen(topic)) < 0) {
         return fail_message(connection);
+    }
 
     return fini_message(connection, MQTT_MSG_TYPE_UNSUBSCRIBE, 0, 1, 0);
 }
 
-mqtt_message_t* mqtt_msg_pingreq(mqtt_connection_t* connection)
+mqtt_message_t *mqtt_msg_pingreq(mqtt_connection_t *connection)
 {
     init_message(connection);
     return fini_message(connection, MQTT_MSG_TYPE_PINGREQ, 0, 0, 0);
 }
 
-mqtt_message_t* mqtt_msg_pingresp(mqtt_connection_t* connection)
+mqtt_message_t *mqtt_msg_pingresp(mqtt_connection_t *connection)
 {
     init_message(connection);
     return fini_message(connection, MQTT_MSG_TYPE_PINGRESP, 0, 0, 0);
 }
 
-mqtt_message_t* mqtt_msg_disconnect(mqtt_connection_t* connection)
+mqtt_message_t *mqtt_msg_disconnect(mqtt_connection_t *connection)
 {
     init_message(connection);
     return fini_message(connection, MQTT_MSG_TYPE_DISCONNECT, 0, 0, 0);
+}
+
+
+
+
+
+int mqtt_has_valid_msg_hdr(uint8_t *buffer, uint32_t length)
+{
+    int qos, dup;
+
+    if (length < 1) {
+        return 0;
+    }
+    switch (mqtt_get_type(buffer)) {
+    case MQTT_MSG_TYPE_CONNECT:
+    case MQTT_MSG_TYPE_CONNACK:
+    case MQTT_MSG_TYPE_PUBACK:
+    case MQTT_MSG_TYPE_PUBREC:
+    case MQTT_MSG_TYPE_PUBCOMP:
+    case MQTT_MSG_TYPE_SUBACK:
+    case MQTT_MSG_TYPE_UNSUBACK:
+    case MQTT_MSG_TYPE_PINGREQ:
+    case MQTT_MSG_TYPE_PINGRESP:
+    case MQTT_MSG_TYPE_DISCONNECT:
+        return (buffer[0] & 0x0f) == 0;
+    case MQTT_MSG_TYPE_PUBREL:
+    case MQTT_MSG_TYPE_SUBSCRIBE:
+    case MQTT_MSG_TYPE_UNSUBSCRIBE:
+        return (buffer[0] & 0x0f) == 0x02;
+    case MQTT_MSG_TYPE_PUBLISH:
+        qos = mqtt_get_qos(buffer);
+        dup = mqtt_get_dup(buffer);
+
+
+
+
+        return (qos < 3) && ((qos > 0) || (dup == 0));
+    default:
+        return 0;
+    }
 }

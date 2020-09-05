@@ -5,36 +5,36 @@
 	.align	4
 	.type	sys_thread_sem_free, @function
 sys_thread_sem_free:
-.LFB42:
+.LFB51:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/freertos/sys_arch.c"
-	.loc 1 501 0
+	.loc 1 506 0
 .LVL0:
 	entry	sp, 32
 .LCFI0:
 .LVL1:
-	.loc 1 504 0
+	.loc 1 509 0
 	beqz.n	a2, .L1
-	.loc 1 504 0 is_stmt 0 discriminator 1
+	.loc 1 509 0 is_stmt 0 discriminator 1
 	l32i.n	a10, a2, 0
 	beqz.n	a10, .L3
-	.loc 1 506 0 is_stmt 1
+	.loc 1 511 0 is_stmt 1
 	call8	vQueueDelete
 .LVL2:
 .L3:
-	.loc 1 511 0
+	.loc 1 516 0
 	mov.n	a10, a2
 	call8	free
 .LVL3:
 .L1:
 	retw.n
-.LFE42:
+.LFE51:
 	.size	sys_thread_sem_free, .-sys_thread_sem_free
 	.section	.text.sys_mutex_new,"ax",@progbits
 	.align	4
 	.global	sys_mutex_new
 	.type	sys_mutex_new, @function
 sys_mutex_new:
-.LFB18:
+.LFB27:
 	.loc 1 59 0
 .LVL4:
 	entry	sp, 32
@@ -55,14 +55,14 @@ sys_mutex_new:
 	.loc 1 71 0
 	extui	a2, a2, 0, 8
 	retw.n
-.LFE18:
+.LFE27:
 	.size	sys_mutex_new, .-sys_mutex_new
-	.section	.iram1,"ax",@progbits
+	.section	.text.sys_mutex_lock,"ax",@progbits
 	.align	4
 	.global	sys_mutex_lock
 	.type	sys_mutex_lock, @function
 sys_mutex_lock:
-.LFB19:
+.LFB28:
 	.loc 1 77 0
 .LVL9:
 	entry	sp, 32
@@ -78,14 +78,14 @@ sys_mutex_lock:
 	bnei	a10, 1, .L12
 	.loc 1 79 0
 	retw.n
-.LFE19:
+.LFE28:
 	.size	sys_mutex_lock, .-sys_mutex_lock
 	.section	.text.sys_mutex_trylock,"ax",@progbits
 	.align	4
 	.global	sys_mutex_trylock
 	.type	sys_mutex_trylock, @function
 sys_mutex_trylock:
-.LFB20:
+.LFB29:
 	.loc 1 83 0
 .LVL11:
 	entry	sp, 32
@@ -106,14 +106,14 @@ sys_mutex_trylock:
 	.loc 1 86 0
 	extui	a2, a2, 0, 8
 	retw.n
-.LFE20:
+.LFE29:
 	.size	sys_mutex_trylock, .-sys_mutex_trylock
 	.section	.text.sys_sem_new,"ax",@progbits
 	.align	4
 	.global	sys_sem_new
 	.type	sys_sem_new, @function
 sys_sem_new:
-.LFB23:
+.LFB32:
 	.loc 1 111 0
 .LVL14:
 	entry	sp, 32
@@ -157,14 +157,14 @@ sys_sem_new:
 .L17:
 	.loc 1 126 0
 	retw.n
-.LFE23:
+.LFE32:
 	.size	sys_sem_new, .-sys_sem_new
-	.section	.iram1
+	.section	.text.sys_sem_signal,"ax",@progbits
 	.align	4
 	.global	sys_sem_signal
 	.type	sys_sem_signal, @function
 sys_sem_signal:
-.LFB24:
+.LFB33:
 	.loc 1 132 0
 .LVL20:
 	entry	sp, 32
@@ -177,26 +177,27 @@ sys_sem_signal:
 	call8	xQueueGenericSend
 .LVL21:
 	retw.n
-.LFE24:
+.LFE33:
 	.size	sys_sem_signal, .-sys_sem_signal
+	.section	.text.sys_mutex_unlock,"ax",@progbits
 	.align	4
 	.global	sys_mutex_unlock
 	.type	sys_mutex_unlock, @function
 sys_mutex_unlock:
-.LFB50:
+.LFB59:
 	entry	sp, 32
 .LCFI6:
 	mov.n	a10, a2
 	call8	sys_sem_signal
 	retw.n
-.LFE50:
+.LFE59:
 	.size	sys_mutex_unlock, .-sys_mutex_unlock
 	.section	.text.sys_sem_signal_isr,"ax",@progbits
 	.align	4
 	.global	sys_sem_signal_isr
 	.type	sys_sem_signal_isr, @function
 sys_sem_signal_isr:
-.LFB25:
+.LFB34:
 	.loc 1 139 0
 .LVL22:
 	.loc 1 139 0
@@ -222,16 +223,16 @@ sys_sem_signal_isr:
 	mov.n	a2, a3
 	.loc 1 143 0
 	retw.n
-.LFE25:
+.LFE34:
 	.size	sys_sem_signal_isr, .-sys_sem_signal_isr
-	.section	.iram1
+	.section	.text.sys_arch_sem_wait,"ax",@progbits
 	.literal_position
 	.literal .LC0, -858993459
 	.align	4
 	.global	sys_arch_sem_wait
 	.type	sys_arch_sem_wait, @function
 sys_arch_sem_wait:
-.LFB26:
+.LFB35:
 	.loc 1 163 0
 .LVL25:
 	entry	sp, 32
@@ -288,14 +289,14 @@ sys_arch_sem_wait:
 .L28:
 	.loc 1 196 0
 	retw.n
-.LFE26:
+.LFE35:
 	.size	sys_arch_sem_wait, .-sys_arch_sem_wait
 	.section	.text.sys_sem_free,"ax",@progbits
 	.align	4
 	.global	sys_sem_free
 	.type	sys_sem_free, @function
 sys_sem_free:
-.LFB27:
+.LFB36:
 	.loc 1 202 0
 .LVL37:
 	entry	sp, 32
@@ -305,27 +306,27 @@ sys_sem_free:
 	call8	vQueueDelete
 .LVL38:
 	retw.n
-.LFE27:
+.LFE36:
 	.size	sys_sem_free, .-sys_sem_free
 	.section	.text.sys_mutex_free,"ax",@progbits
 	.align	4
 	.global	sys_mutex_free
 	.type	sys_mutex_free, @function
 sys_mutex_free:
-.LFB48:
+.LFB57:
 	entry	sp, 32
 .LCFI10:
 	mov.n	a10, a2
 	call8	sys_sem_free
 	retw.n
-.LFE48:
+.LFE57:
 	.size	sys_mutex_free, .-sys_mutex_free
 	.section	.text.sys_mbox_new,"ax",@progbits
 	.align	4
 	.global	sys_mbox_new
 	.type	sys_mbox_new, @function
 sys_mbox_new:
-.LFB28:
+.LFB37:
 	.loc 1 210 0
 .LVL39:
 	.loc 1 210 0
@@ -369,14 +370,14 @@ sys_mbox_new:
 .L41:
 	.loc 1 231 0
 	retw.n
-.LFE28:
+.LFE37:
 	.size	sys_mbox_new, .-sys_mbox_new
-	.section	.iram1
+	.section	.text.sys_mbox_post,"ax",@progbits
 	.align	4
 	.global	sys_mbox_post
 	.type	sys_mbox_post, @function
 sys_mbox_post:
-.LFB29:
+.LFB38:
 	.loc 1 237 0
 .LVL44:
 	entry	sp, 48
@@ -396,13 +397,14 @@ sys_mbox_post:
 	bnei	a10, 1, .L45
 	.loc 1 239 0
 	retw.n
-.LFE29:
+.LFE38:
 	.size	sys_mbox_post, .-sys_mbox_post
+	.section	.text.sys_mbox_trypost,"ax",@progbits
 	.align	4
 	.global	sys_mbox_trypost
 	.type	sys_mbox_trypost, @function
 sys_mbox_trypost:
-.LFB30:
+.LFB39:
 	.loc 1 244 0
 .LVL48:
 	entry	sp, 48
@@ -429,15 +431,16 @@ sys_mbox_trypost:
 	.loc 1 255 0
 	extui	a2, a2, 0, 8
 	retw.n
-.LFE30:
+.LFE39:
 	.size	sys_mbox_trypost, .-sys_mbox_trypost
+	.section	.text.sys_arch_mbox_fetch,"ax",@progbits
 	.literal_position
 	.literal .LC1, -858993459
 	.align	4
 	.global	sys_arch_mbox_fetch
 	.type	sys_arch_mbox_fetch, @function
 sys_arch_mbox_fetch:
-.LFB31:
+.LFB40:
 	.loc 1 275 0
 .LVL52:
 	entry	sp, 48
@@ -504,14 +507,14 @@ sys_arch_mbox_fetch:
 .L51:
 	.loc 1 311 0
 	retw.n
-.LFE31:
+.LFE40:
 	.size	sys_arch_mbox_fetch, .-sys_arch_mbox_fetch
 	.section	.text.sys_arch_mbox_tryfetch,"ax",@progbits
 	.align	4
 	.global	sys_arch_mbox_tryfetch
 	.type	sys_arch_mbox_tryfetch, @function
 sys_arch_mbox_tryfetch:
-.LFB32:
+.LFB41:
 	.loc 1 316 0
 .LVL66:
 	entry	sp, 48
@@ -537,14 +540,14 @@ sys_arch_mbox_tryfetch:
 	.loc 1 331 0
 	neg	a2, a2
 	retw.n
-.LFE32:
+.LFE41:
 	.size	sys_arch_mbox_tryfetch, .-sys_arch_mbox_tryfetch
 	.section	.text.sys_mbox_set_owner,"ax",@progbits
 	.align	4
 	.global	sys_mbox_set_owner
 	.type	sys_mbox_set_owner, @function
 sys_mbox_set_owner:
-.LFB33:
+.LFB42:
 	.loc 1 337 0
 .LVL72:
 	entry	sp, 32
@@ -558,7 +561,7 @@ sys_mbox_set_owner:
 	s32i.n	a3, a8, 4
 .L59:
 	retw.n
-.LFE33:
+.LFE42:
 	.size	sys_mbox_set_owner, .-sys_mbox_set_owner
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC2:
@@ -576,7 +579,7 @@ sys_mbox_set_owner:
 	.global	sys_mbox_free
 	.type	sys_mbox_free, @function
 sys_mbox_free:
-.LFB34:
+.LFB43:
 	.loc 1 351 0
 .LVL73:
 	entry	sp, 32
@@ -671,7 +674,7 @@ sys_mbox_free:
 	s32i.n	a3, a2, 0
 .L67:
 	retw.n
-.LFE34:
+.LFE43:
 	.size	sys_mbox_free, .-sys_mbox_free
 	.section	.text.sys_thread_new,"ax",@progbits
 	.literal_position
@@ -680,7 +683,7 @@ sys_mbox_free:
 	.global	sys_thread_new
 	.type	sys_thread_new, @function
 sys_thread_new:
-.LFB35:
+.LFB44:
 	.loc 1 410 0
 .LVL89:
 	entry	sp, 64
@@ -705,7 +708,7 @@ sys_thread_new:
 	moveqz	a2, a8, a10
 	.loc 1 422 0
 	retw.n
-.LFE35:
+.LFE44:
 	.size	sys_thread_new, .-sys_thread_new
 	.section	.rodata.str1.1
 .LC11:
@@ -721,17 +724,20 @@ sys_thread_new:
 	.global	sys_init
 	.type	sys_init, @function
 sys_init:
-.LFB36:
+.LFB45:
 	.loc 1 428 0
 	entry	sp, 32
 .LCFI19:
 	.loc 1 429 0
 	l32r	a10, .LC9
+	l32i.n	a8, a10, 0
+	bnez.n	a8, .L93
+	.loc 1 430 0
 	call8	sys_mutex_new
 .LVL93:
 	extui	a10, a10, 0, 8
-	beqz.n	a10, .L92
-	.loc 1 430 0 discriminator 2
+	beqz.n	a10, .L93
+	.loc 1 431 0 discriminator 2
 	call8	esp_log_timestamp
 .LVL94:
 	l32r	a11, .LC10
@@ -741,52 +747,52 @@ sys_init:
 	movi.n	a10, 1
 	call8	esp_log_write
 .LVL95:
-.L92:
-	.loc 1 434 0
+.L93:
+	.loc 1 436 0
 	l32r	a11, .LC13
 	l32r	a10, .LC14
 	call8	pthread_key_create
 .LVL96:
-	.loc 1 436 0
+	.loc 1 438 0
 	call8	esp_vfs_lwip_sockets_register
 .LVL97:
 	retw.n
-.LFE36:
+.LFE45:
 	.size	sys_init, .-sys_init
 	.section	.text.sys_jiffies,"ax",@progbits
 	.align	4
 	.global	sys_jiffies
 	.type	sys_jiffies, @function
 sys_jiffies:
-.LFB37:
-	.loc 1 442 0
+.LFB46:
+	.loc 1 444 0
 	entry	sp, 32
 .LCFI20:
-	.loc 1 443 0
+	.loc 1 445 0
 	call8	xTaskGetTickCount
 .LVL98:
-	.loc 1 444 0
+	.loc 1 446 0
 	mov.n	a2, a10
 	retw.n
-.LFE37:
+.LFE46:
 	.size	sys_jiffies, .-sys_jiffies
 	.section	.text.sys_now,"ax",@progbits
 	.align	4
 	.global	sys_now
 	.type	sys_now, @function
 sys_now:
-.LFB38:
-	.loc 1 449 0
+.LFB47:
+	.loc 1 451 0
 	entry	sp, 32
 .LCFI21:
-	.loc 1 450 0
+	.loc 1 452 0
 	call8	xTaskGetTickCount
 .LVL99:
 	addx4	a10, a10, a10
-	.loc 1 451 0
+	.loc 1 453 0
 	slli	a2, a10, 1
 	retw.n
-.LFE38:
+.LFE47:
 	.size	sys_now, .-sys_now
 	.section	.text.sys_arch_protect,"ax",@progbits
 	.literal_position
@@ -795,20 +801,27 @@ sys_now:
 	.global	sys_arch_protect
 	.type	sys_arch_protect, @function
 sys_arch_protect:
-.LFB39:
-	.loc 1 468 0
+.LFB48:
+	.loc 1 470 0
 	entry	sp, 32
 .LCFI22:
-	.loc 1 469 0
-	l32r	a10, .LC15
 	.loc 1 471 0
-	movi.n	a2, 1
-	.loc 1 469 0
-	call8	sys_mutex_lock
+	l32r	a2, .LC15
+	l32i.n	a8, a2, 0
+	bnez.n	a8, .L101
+	.loc 1 472 0
+	mov.n	a10, a2
+	call8	sys_mutex_new
 .LVL100:
-	.loc 1 471 0
+.L101:
+	.loc 1 474 0
+	mov.n	a10, a2
+	call8	sys_mutex_lock
+.LVL101:
+	.loc 1 476 0
+	movi.n	a2, 1
 	retw.n
-.LFE39:
+.LFE48:
 	.size	sys_arch_protect, .-sys_arch_protect
 	.section	.text.sys_arch_unprotect,"ax",@progbits
 	.literal_position
@@ -817,17 +830,17 @@ sys_arch_protect:
 	.global	sys_arch_unprotect
 	.type	sys_arch_unprotect, @function
 sys_arch_unprotect:
-.LFB40:
-	.loc 1 482 0
-.LVL101:
+.LFB49:
+	.loc 1 487 0
+.LVL102:
 	entry	sp, 32
 .LCFI23:
-	.loc 1 483 0
+	.loc 1 488 0
 	l32r	a10, .LC16
 	call8	sys_sem_signal
-.LVL102:
+.LVL103:
 	retw.n
-.LFE40:
+.LFE49:
 	.size	sys_arch_unprotect, .-sys_arch_unprotect
 	.section	.rodata.str1.1
 .LC18:
@@ -841,73 +854,73 @@ sys_arch_unprotect:
 	.global	sys_thread_sem_init
 	.type	sys_thread_sem_init, @function
 sys_thread_sem_init:
-.LFB43:
-	.loc 1 516 0
+.LFB52:
+	.loc 1 521 0
 	entry	sp, 32
 .LCFI24:
-	.loc 1 517 0
+	.loc 1 522 0
 	movi.n	a10, 4
 	call8	mem_malloc
-.LVL103:
-	mov.n	a2, a10
 .LVL104:
-	.loc 1 519 0
-	bnez.n	a10, .L101
+	mov.n	a2, a10
+.LVL105:
+	.loc 1 524 0
+	bnez.n	a10, .L104
 .LBB4:
 .LBB5:
-	.loc 1 520 0
+	.loc 1 525 0
 	call8	esp_log_timestamp
-.LVL105:
+.LVL106:
 	l32r	a11, .LC17
 	l32r	a12, .LC19
 	mov.n	a13, a10
 	mov.n	a14, a11
 	movi.n	a10, 1
 	call8	esp_log_write
-.LVL106:
+.LVL107:
 	retw.n
-.L101:
+.L104:
 .LBE5:
 .LBE4:
-	.loc 1 524 0
+	.loc 1 529 0
 	movi.n	a12, 3
 	movi.n	a11, 0
 	movi.n	a10, 1
 	call8	xQueueGenericCreate
-.LVL107:
+.LVL108:
 	s32i.n	a10, a2, 0
 	mov.n	a3, a10
-	.loc 1 525 0
-	bnez.n	a10, .L103
-	.loc 1 526 0
+	.loc 1 530 0
+	bnez.n	a10, .L106
+	.loc 1 531 0
 	mov.n	a10, a2
 	call8	free
-.LVL108:
-	.loc 1 527 0
-	call8	esp_log_timestamp
 .LVL109:
+	.loc 1 532 0
+	call8	esp_log_timestamp
+.LVL110:
 	l32r	a11, .LC17
 	l32r	a12, .LC19
 	mov.n	a13, a10
 	mov.n	a14, a11
 	movi.n	a10, 1
 	call8	esp_log_write
-.LVL110:
-	.loc 1 528 0
-	mov.n	a2, a3
 .LVL111:
-	retw.n
+	.loc 1 533 0
+	mov.n	a2, a3
 .LVL112:
-.L103:
-	.loc 1 531 0
+	retw.n
+.LVL113:
+.L106:
+	.loc 1 536 0
 	l32r	a3, .LC20
 	mov.n	a11, a2
 	l32i.n	a10, a3, 0
 	call8	pthread_setspecific
-.LVL113:
-	.loc 1 533 0
+.LVL114:
+	.loc 1 538 0
 	retw.n
-.LFE43:
+.LFE52:
 	.size	sys_thread_sem_init, .-sys_thread_sem_init
 	.section	.text.sys_thread_sem_get,"ax",@progbits
 	.literal_position
@@ -916,25 +929,25 @@ sys_thread_sem_init:
 	.global	sys_thread_sem_get
 	.type	sys_thread_sem_get, @function
 sys_thread_sem_get:
-.LFB41:
-	.loc 1 490 0
+.LFB50:
+	.loc 1 495 0
 	entry	sp, 32
 .LCFI25:
-	.loc 1 491 0
+	.loc 1 496 0
 	l32r	a8, .LC21
 	l32i.n	a10, a8, 0
 	call8	pthread_getspecific
-.LVL114:
-	.loc 1 493 0
-	bnez.n	a10, .L105
-	.loc 1 494 0
-	call8	sys_thread_sem_init
 .LVL115:
-.L105:
 	.loc 1 498 0
+	bnez.n	a10, .L108
+	.loc 1 499 0
+	call8	sys_thread_sem_init
+.LVL116:
+.L108:
+	.loc 1 503 0
 	mov.n	a2, a10
 	retw.n
-.LFE41:
+.LFE50:
 	.size	sys_thread_sem_get, .-sys_thread_sem_get
 	.section	.text.sys_thread_sem_deinit,"ax",@progbits
 	.literal_position
@@ -943,28 +956,28 @@ sys_thread_sem_get:
 	.global	sys_thread_sem_deinit
 	.type	sys_thread_sem_deinit, @function
 sys_thread_sem_deinit:
-.LFB44:
-	.loc 1 536 0
+.LFB53:
+	.loc 1 541 0
 	entry	sp, 32
 .LCFI26:
-	.loc 1 537 0
+	.loc 1 542 0
 	l32r	a2, .LC22
 	l32i.n	a10, a2, 0
 	call8	pthread_getspecific
-.LVL116:
-	.loc 1 538 0
-	beqz.n	a10, .L106
-	.loc 1 539 0
-	call8	sys_thread_sem_free
 .LVL117:
-	.loc 1 540 0
+	.loc 1 543 0
+	beqz.n	a10, .L109
+	.loc 1 544 0
+	call8	sys_thread_sem_free
+.LVL118:
+	.loc 1 545 0
 	l32i.n	a10, a2, 0
 	movi.n	a11, 0
 	call8	pthread_setspecific
-.LVL118:
-.L106:
+.LVL119:
+.L109:
 	retw.n
-.LFE44:
+.LFE53:
 	.size	sys_thread_sem_deinit, .-sys_thread_sem_deinit
 	.section	.text.sys_delay_ms,"ax",@progbits
 	.literal_position
@@ -973,19 +986,19 @@ sys_thread_sem_deinit:
 	.global	sys_delay_ms
 	.type	sys_delay_ms, @function
 sys_delay_ms:
-.LFB45:
-	.loc 1 545 0
-.LVL119:
+.LFB54:
+	.loc 1 550 0
+.LVL120:
 	entry	sp, 32
 .LCFI27:
-	.loc 1 546 0
+	.loc 1 551 0
 	l32r	a8, .LC23
 	muluh	a10, a2, a8
 	srli	a10, a10, 3
 	call8	vTaskDelay
-.LVL120:
+.LVL121:
 	retw.n
-.LFE45:
+.LFE54:
 	.size	sys_delay_ms, .-sys_delay_ms
 	.section	.bss.sys_thread_sem_key,"aw",@nobits
 	.align	4
@@ -1018,10 +1031,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.byte	0x4
-	.4byte	.LCFI0-.LFB42
+	.4byte	.LCFI0-.LFB51
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1030,10 +1043,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI1-.LFB18
+	.4byte	.LCFI1-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1042,10 +1055,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI2-.LFB19
+	.4byte	.LCFI2-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1054,10 +1067,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI3-.LFB20
+	.4byte	.LCFI3-.LFB29
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1066,10 +1079,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI4-.LFB23
+	.4byte	.LCFI4-.LFB32
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1078,10 +1091,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI5-.LFB24
+	.4byte	.LCFI5-.LFB33
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1090,10 +1103,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB50
-	.4byte	.LFE50-.LFB50
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
 	.byte	0x4
-	.4byte	.LCFI6-.LFB50
+	.4byte	.LCFI6-.LFB59
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1102,10 +1115,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.byte	0x4
-	.4byte	.LCFI7-.LFB25
+	.4byte	.LCFI7-.LFB34
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1114,10 +1127,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.byte	0x4
-	.4byte	.LCFI8-.LFB26
+	.4byte	.LCFI8-.LFB35
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1126,10 +1139,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.4byte	.Lframe0
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.byte	0x4
-	.4byte	.LCFI9-.LFB27
+	.4byte	.LCFI9-.LFB36
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1138,10 +1151,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE20-.LASFDE20
 .LASFDE20:
 	.4byte	.Lframe0
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
 	.byte	0x4
-	.4byte	.LCFI10-.LFB48
+	.4byte	.LCFI10-.LFB57
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1150,10 +1163,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE22-.LASFDE22
 .LASFDE22:
 	.4byte	.Lframe0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.byte	0x4
-	.4byte	.LCFI11-.LFB28
+	.4byte	.LCFI11-.LFB37
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1162,10 +1175,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE24-.LASFDE24
 .LASFDE24:
 	.4byte	.Lframe0
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.byte	0x4
-	.4byte	.LCFI12-.LFB29
+	.4byte	.LCFI12-.LFB38
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1174,10 +1187,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE26-.LASFDE26
 .LASFDE26:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI13-.LFB30
+	.4byte	.LCFI13-.LFB39
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1186,10 +1199,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE28-.LASFDE28
 .LASFDE28:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI14-.LFB31
+	.4byte	.LCFI14-.LFB40
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1198,10 +1211,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE30-.LASFDE30
 .LASFDE30:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.byte	0x4
-	.4byte	.LCFI15-.LFB32
+	.4byte	.LCFI15-.LFB41
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1210,10 +1223,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE32-.LASFDE32
 .LASFDE32:
 	.4byte	.Lframe0
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.byte	0x4
-	.4byte	.LCFI16-.LFB33
+	.4byte	.LCFI16-.LFB42
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1222,10 +1235,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE34-.LASFDE34
 .LASFDE34:
 	.4byte	.Lframe0
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.byte	0x4
-	.4byte	.LCFI17-.LFB34
+	.4byte	.LCFI17-.LFB43
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1234,10 +1247,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE36-.LASFDE36
 .LASFDE36:
 	.4byte	.Lframe0
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.byte	0x4
-	.4byte	.LCFI18-.LFB35
+	.4byte	.LCFI18-.LFB44
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -1246,10 +1259,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE38-.LASFDE38
 .LASFDE38:
 	.4byte	.Lframe0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.byte	0x4
-	.4byte	.LCFI19-.LFB36
+	.4byte	.LCFI19-.LFB45
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1258,10 +1271,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE40-.LASFDE40
 .LASFDE40:
 	.4byte	.Lframe0
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.byte	0x4
-	.4byte	.LCFI20-.LFB37
+	.4byte	.LCFI20-.LFB46
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1270,10 +1283,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE42-.LASFDE42
 .LASFDE42:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI21-.LFB38
+	.4byte	.LCFI21-.LFB47
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1282,10 +1295,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE44-.LASFDE44
 .LASFDE44:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI22-.LFB39
+	.4byte	.LCFI22-.LFB48
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1294,10 +1307,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE46-.LASFDE46
 .LASFDE46:
 	.4byte	.Lframe0
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.byte	0x4
-	.4byte	.LCFI23-.LFB40
+	.4byte	.LCFI23-.LFB49
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1306,10 +1319,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE48-.LASFDE48
 .LASFDE48:
 	.4byte	.Lframe0
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.byte	0x4
-	.4byte	.LCFI24-.LFB43
+	.4byte	.LCFI24-.LFB52
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1318,10 +1331,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE50-.LASFDE50
 .LASFDE50:
 	.4byte	.Lframe0
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.byte	0x4
-	.4byte	.LCFI25-.LFB41
+	.4byte	.LCFI25-.LFB50
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1330,10 +1343,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE52-.LASFDE52
 .LASFDE52:
 	.4byte	.Lframe0
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.byte	0x4
-	.4byte	.LCFI26-.LFB44
+	.4byte	.LCFI26-.LFB53
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1342,10 +1355,10 @@ g_lwip_protect_mutex:
 	.4byte	.LEFDE54-.LASFDE54
 .LASFDE54:
 	.4byte	.Lframe0
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.byte	0x4
-	.4byte	.LCFI27-.LFB45
+	.4byte	.LCFI27-.LFB54
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1371,7 +1384,7 @@ g_lwip_protect_mutex:
 	.file 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/arch/vfs_lwip.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0xe75
+	.4byte	0xe86
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -1570,7 +1583,7 @@ g_lwip_protect_mutex:
 	.uleb128 0x3
 	.4byte	.LASF33
 	.byte	0xa
-	.byte	0x36
+	.byte	0x3a
 	.4byte	0x70
 	.uleb128 0x3
 	.4byte	.LASF34
@@ -1732,14 +1745,14 @@ g_lwip_protect_mutex:
 	.uleb128 0x10
 	.4byte	.LASF149
 	.byte	0x1
-	.2byte	0x203
+	.2byte	0x208
 	.4byte	0x2fd
 	.byte	0x1
 	.4byte	0x2fd
 	.uleb128 0x11
 	.string	"sem"
 	.byte	0x1
-	.2byte	0x205
+	.2byte	0x20a
 	.4byte	0x2fd
 	.byte	0
 	.uleb128 0x7
@@ -1748,32 +1761,32 @@ g_lwip_protect_mutex:
 	.uleb128 0x12
 	.4byte	.LASF150
 	.byte	0x1
-	.2byte	0x1f4
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.2byte	0x1f9
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x34f
 	.uleb128 0x13
 	.4byte	.LASF78
 	.byte	0x1
-	.2byte	0x1f4
+	.2byte	0x1f9
 	.4byte	0x97
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x14
 	.string	"sem"
 	.byte	0x1
-	.2byte	0x1f6
+	.2byte	0x1fb
 	.4byte	0x2fd
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x15
 	.4byte	.LVL2
-	.4byte	0xd99
+	.4byte	0xdaa
 	.uleb128 0x16
 	.4byte	.LVL3
-	.4byte	0xda5
+	.4byte	0xdb6
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5a
@@ -1787,8 +1800,8 @@ g_lwip_protect_mutex:
 	.byte	0x1
 	.byte	0x3a
 	.4byte	0x1a6
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x396
@@ -1806,7 +1819,7 @@ g_lwip_protect_mutex:
 	.4byte	.LLST1
 	.uleb128 0x16
 	.4byte	.LVL6
-	.4byte	0xdb0
+	.4byte	0xdc1
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5a
@@ -1821,8 +1834,8 @@ g_lwip_protect_mutex:
 	.4byte	.LASF85
 	.byte	0x1
 	.byte	0x4c
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x3d9
@@ -1835,7 +1848,7 @@ g_lwip_protect_mutex:
 	.byte	0x52
 	.uleb128 0x16
 	.4byte	.LVL10
-	.4byte	0xdbc
+	.4byte	0xdcd
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5b
@@ -1859,8 +1872,8 @@ g_lwip_protect_mutex:
 	.byte	0x1
 	.byte	0x52
 	.4byte	0x1a6
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x41b
@@ -1872,7 +1885,7 @@ g_lwip_protect_mutex:
 	.4byte	.LLST2
 	.uleb128 0x16
 	.4byte	.LVL12
-	.4byte	0xdbc
+	.4byte	0xdcd
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5b
@@ -1895,8 +1908,8 @@ g_lwip_protect_mutex:
 	.byte	0x1
 	.byte	0x6e
 	.4byte	0x1a6
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x4b5
@@ -1921,7 +1934,7 @@ g_lwip_protect_mutex:
 	.4byte	.LLST4
 	.uleb128 0x1e
 	.4byte	.LVL16
-	.4byte	0xdc8
+	.4byte	0xdd9
 	.4byte	0x47c
 	.uleb128 0x17
 	.uleb128 0x1
@@ -1941,7 +1954,7 @@ g_lwip_protect_mutex:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL17
-	.4byte	0xdd4
+	.4byte	0xde5
 	.4byte	0x499
 	.uleb128 0x17
 	.uleb128 0x1
@@ -1961,7 +1974,7 @@ g_lwip_protect_mutex:
 	.byte	0
 	.uleb128 0x16
 	.4byte	.LVL19
-	.4byte	0xdbc
+	.4byte	0xdcd
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5b
@@ -1985,8 +1998,8 @@ g_lwip_protect_mutex:
 	.4byte	.LASF86
 	.byte	0x1
 	.byte	0x83
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x4f1
@@ -1999,7 +2012,7 @@ g_lwip_protect_mutex:
 	.byte	0x52
 	.uleb128 0x16
 	.4byte	.LVL21
-	.4byte	0xdd4
+	.4byte	0xde5
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5b
@@ -2022,8 +2035,8 @@ g_lwip_protect_mutex:
 	.byte	0x1
 	.byte	0x8a
 	.4byte	0x70
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x538
@@ -2043,7 +2056,7 @@ g_lwip_protect_mutex:
 	.sleb128 -48
 	.uleb128 0x16
 	.4byte	.LVL23
-	.4byte	0xde0
+	.4byte	0xdf1
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5b
@@ -2057,8 +2070,8 @@ g_lwip_protect_mutex:
 	.byte	0x1
 	.byte	0xa2
 	.4byte	0xf0
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x609
@@ -2103,10 +2116,10 @@ g_lwip_protect_mutex:
 	.byte	0x52
 	.uleb128 0x15
 	.4byte	.LVL26
-	.4byte	0xdec
+	.4byte	0xdfd
 	.uleb128 0x1e
 	.4byte	.LVL28
-	.4byte	0xdbc
+	.4byte	0xdcd
 	.4byte	0x5e5
 	.uleb128 0x17
 	.uleb128 0x1
@@ -2145,10 +2158,10 @@ g_lwip_protect_mutex:
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LVL30
-	.4byte	0xdec
+	.4byte	0xdfd
 	.uleb128 0x16
 	.4byte	.LVL35
-	.4byte	0xdbc
+	.4byte	0xdcd
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5b
@@ -2171,8 +2184,8 @@ g_lwip_protect_mutex:
 	.4byte	.LASF95
 	.byte	0x1
 	.byte	0xc9
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x635
@@ -2185,15 +2198,15 @@ g_lwip_protect_mutex:
 	.byte	0x52
 	.uleb128 0x15
 	.4byte	.LVL38
-	.4byte	0xd99
+	.4byte	0xdaa
 	.byte	0
 	.uleb128 0x18
 	.4byte	.LASF96
 	.byte	0x1
 	.byte	0xd1
 	.4byte	0x1a6
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x6a5
@@ -2212,7 +2225,7 @@ g_lwip_protect_mutex:
 	.byte	0x53
 	.uleb128 0x1e
 	.4byte	.LVL40
-	.4byte	0xdf8
+	.4byte	0xe09
 	.4byte	0x67d
 	.uleb128 0x17
 	.uleb128 0x1
@@ -2222,7 +2235,7 @@ g_lwip_protect_mutex:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL42
-	.4byte	0xdc8
+	.4byte	0xdd9
 	.4byte	0x69b
 	.uleb128 0x17
 	.uleb128 0x1
@@ -2243,7 +2256,7 @@ g_lwip_protect_mutex:
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LVL43
-	.4byte	0xda5
+	.4byte	0xdb6
 	.byte	0
 	.uleb128 0x7
 	.byte	0x4
@@ -2252,8 +2265,8 @@ g_lwip_protect_mutex:
 	.4byte	.LASF99
 	.byte	0x1
 	.byte	0xec
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x6f8
@@ -2272,7 +2285,7 @@ g_lwip_protect_mutex:
 	.4byte	.LLST10
 	.uleb128 0x16
 	.4byte	.LVL47
-	.4byte	0xdd4
+	.4byte	0xde5
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5b
@@ -2297,8 +2310,8 @@ g_lwip_protect_mutex:
 	.byte	0x1
 	.byte	0xf3
 	.4byte	0x1a6
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x757
@@ -2323,7 +2336,7 @@ g_lwip_protect_mutex:
 	.4byte	.LLST12
 	.uleb128 0x16
 	.4byte	.LVL50
-	.4byte	0xdd4
+	.4byte	0xde5
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5b
@@ -2347,8 +2360,8 @@ g_lwip_protect_mutex:
 	.byte	0x1
 	.2byte	0x112
 	.4byte	0xf0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x816
@@ -2404,10 +2417,10 @@ g_lwip_protect_mutex:
 	.4byte	0x99
 	.uleb128 0x15
 	.4byte	.LVL53
-	.4byte	0xdec
+	.4byte	0xdfd
 	.uleb128 0x1e
 	.4byte	.LVL60
-	.4byte	0xdbc
+	.4byte	0xdcd
 	.4byte	0x80c
 	.uleb128 0x17
 	.uleb128 0x1
@@ -2423,7 +2436,7 @@ g_lwip_protect_mutex:
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LVL62
-	.4byte	0xdec
+	.4byte	0xdfd
 	.byte	0
 	.uleb128 0x7
 	.byte	0x4
@@ -2433,8 +2446,8 @@ g_lwip_protect_mutex:
 	.byte	0x1
 	.2byte	0x13b
 	.4byte	0xf0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x89b
@@ -2466,7 +2479,7 @@ g_lwip_protect_mutex:
 	.4byte	.LLST20
 	.uleb128 0x16
 	.4byte	.LVL70
-	.4byte	0xdbc
+	.4byte	0xdcd
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5b
@@ -2499,8 +2512,8 @@ g_lwip_protect_mutex:
 	.4byte	.LASF105
 	.byte	0x1
 	.2byte	0x150
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x8ce
@@ -2523,8 +2536,8 @@ g_lwip_protect_mutex:
 	.4byte	.LASF106
 	.byte	0x1
 	.2byte	0x15e
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x9c1
@@ -2542,7 +2555,7 @@ g_lwip_protect_mutex:
 	.4byte	.LLST22
 	.uleb128 0x15
 	.4byte	.LVL75
-	.4byte	0xe03
+	.4byte	0xe14
 	.uleb128 0x1e
 	.4byte	.LVL77
 	.4byte	0x6f8
@@ -2562,10 +2575,10 @@ g_lwip_protect_mutex:
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LVL78
-	.4byte	0xe0f
+	.4byte	0xe20
 	.uleb128 0x1e
 	.4byte	.LVL79
-	.4byte	0xe1a
+	.4byte	0xe2b
 	.4byte	0x95e
 	.uleb128 0x17
 	.uleb128 0x1
@@ -2593,10 +2606,10 @@ g_lwip_protect_mutex:
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LVL83
-	.4byte	0xe0f
+	.4byte	0xe20
 	.uleb128 0x1e
 	.4byte	.LVL84
-	.4byte	0xe1a
+	.4byte	0xe2b
 	.4byte	0x99b
 	.uleb128 0x17
 	.uleb128 0x1
@@ -2630,7 +2643,7 @@ g_lwip_protect_mutex:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL86
-	.4byte	0xe25
+	.4byte	0xe36
 	.4byte	0x9ae
 	.uleb128 0x17
 	.uleb128 0x1
@@ -2640,18 +2653,18 @@ g_lwip_protect_mutex:
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LVL87
-	.4byte	0xd99
+	.4byte	0xdaa
 	.uleb128 0x15
 	.4byte	.LVL88
-	.4byte	0xda5
+	.4byte	0xdb6
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LASF108
 	.byte	0x1
 	.2byte	0x199
 	.4byte	0x15a
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xa7b
@@ -2705,7 +2718,7 @@ g_lwip_protect_mutex:
 	.4byte	.LLST24
 	.uleb128 0x16
 	.4byte	.LVL90
-	.4byte	0xe31
+	.4byte	0xe42
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5a
@@ -2755,8 +2768,8 @@ g_lwip_protect_mutex:
 	.4byte	.LASF115
 	.byte	0x1
 	.2byte	0x1ab
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xb09
@@ -2773,10 +2786,10 @@ g_lwip_protect_mutex:
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LVL94
-	.4byte	0xe0f
+	.4byte	0xe20
 	.uleb128 0x1e
 	.4byte	.LVL95
-	.4byte	0xe1a
+	.4byte	0xe2b
 	.4byte	0xadf
 	.uleb128 0x17
 	.uleb128 0x1
@@ -2804,7 +2817,7 @@ g_lwip_protect_mutex:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL96
-	.4byte	0xe3d
+	.4byte	0xe4e
 	.4byte	0xaff
 	.uleb128 0x17
 	.uleb128 0x1
@@ -2821,75 +2834,86 @@ g_lwip_protect_mutex:
 	.byte	0
 	.uleb128 0x15
 	.4byte	.LVL97
-	.4byte	0xe49
+	.4byte	0xe5a
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LASF116
 	.byte	0x1
-	.2byte	0x1b9
+	.2byte	0x1bb
 	.4byte	0xf0
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xb2d
 	.uleb128 0x15
 	.4byte	.LVL98
-	.4byte	0xdec
+	.4byte	0xdfd
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LASF117
 	.byte	0x1
-	.2byte	0x1c0
+	.2byte	0x1c2
 	.4byte	0xf0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xb51
 	.uleb128 0x15
 	.4byte	.LVL99
-	.4byte	0xdec
+	.4byte	0xdfd
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LASF118
 	.byte	0x1
-	.2byte	0x1d3
+	.2byte	0x1d5
 	.4byte	0x19b
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xb7f
-	.uleb128 0x16
+	.4byte	0xb90
+	.uleb128 0x1e
 	.4byte	.LVL100
+	.4byte	0x34f
+	.4byte	0xb7f
+	.uleb128 0x17
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x72
+	.sleb128 0
+	.byte	0
+	.uleb128 0x16
+	.4byte	.LVL101
 	.4byte	0x39c
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5a
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	g_lwip_protect_mutex
+	.uleb128 0x2
+	.byte	0x72
+	.sleb128 0
 	.byte	0
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LASF119
 	.byte	0x1
-	.2byte	0x1e1
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.2byte	0x1e6
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xbb7
+	.4byte	0xbc8
 	.uleb128 0x13
 	.4byte	.LASF120
 	.byte	0x1
-	.2byte	0x1e1
+	.2byte	0x1e6
 	.4byte	0x19b
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x16
-	.4byte	.LVL102
+	.4byte	.LVL103
 	.4byte	0x4b5
 	.uleb128 0x17
 	.uleb128 0x1
@@ -2901,26 +2925,26 @@ g_lwip_protect_mutex:
 	.byte	0
 	.uleb128 0x29
 	.4byte	0x2df
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xca5
+	.4byte	0xcb6
 	.uleb128 0x2a
 	.4byte	0x2f0
 	.4byte	.LLST25
 	.uleb128 0x2b
 	.4byte	.LBB5
 	.4byte	.LBE5-.LBB5
-	.4byte	0xc19
+	.4byte	0xc2a
 	.uleb128 0x2c
 	.4byte	0x2f0
 	.uleb128 0x15
-	.4byte	.LVL105
-	.4byte	0xe0f
-	.uleb128 0x16
 	.4byte	.LVL106
-	.4byte	0xe1a
+	.4byte	0xe20
+	.uleb128 0x16
+	.4byte	.LVL107
+	.4byte	0xe2b
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5a
@@ -2947,9 +2971,9 @@ g_lwip_protect_mutex:
 	.byte	0
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL103
-	.4byte	0xdf8
-	.4byte	0xc2c
+	.4byte	.LVL104
+	.4byte	0xe09
+	.4byte	0xc3d
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5a
@@ -2957,9 +2981,9 @@ g_lwip_protect_mutex:
 	.byte	0x34
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL107
-	.4byte	0xdc8
-	.4byte	0xc49
+	.4byte	.LVL108
+	.4byte	0xdd9
+	.4byte	0xc5a
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5a
@@ -2977,9 +3001,9 @@ g_lwip_protect_mutex:
 	.byte	0x33
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL108
-	.4byte	0xda5
-	.4byte	0xc5d
+	.4byte	.LVL109
+	.4byte	0xdb6
+	.4byte	0xc6e
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5a
@@ -2988,12 +3012,12 @@ g_lwip_protect_mutex:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x15
-	.4byte	.LVL109
-	.4byte	0xe0f
-	.uleb128 0x1e
 	.4byte	.LVL110
-	.4byte	0xe1a
-	.4byte	0xc94
+	.4byte	0xe20
+	.uleb128 0x1e
+	.4byte	.LVL111
+	.4byte	0xe2b
+	.4byte	0xca5
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5a
@@ -3019,8 +3043,8 @@ g_lwip_protect_mutex:
 	.4byte	.LC2
 	.byte	0
 	.uleb128 0x16
-	.4byte	.LVL113
-	.4byte	0xe54
+	.4byte	.LVL114
+	.4byte	0xe65
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5b
@@ -3032,50 +3056,50 @@ g_lwip_protect_mutex:
 	.uleb128 0x21
 	.4byte	.LASF121
 	.byte	0x1
-	.2byte	0x1e9
+	.2byte	0x1ee
 	.4byte	0x2fd
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xce2
+	.4byte	0xcf3
 	.uleb128 0x2d
 	.string	"sem"
 	.byte	0x1
-	.2byte	0x1eb
+	.2byte	0x1f0
 	.4byte	0x2fd
 	.4byte	.LLST26
 	.uleb128 0x15
-	.4byte	.LVL114
-	.4byte	0xe60
-	.uleb128 0x15
 	.4byte	.LVL115
+	.4byte	0xe71
+	.uleb128 0x15
+	.4byte	.LVL116
 	.4byte	0x2df
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LASF122
 	.byte	0x1
-	.2byte	0x217
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.2byte	0x21c
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xd2a
+	.4byte	0xd3b
 	.uleb128 0x2d
 	.string	"sem"
 	.byte	0x1
-	.2byte	0x219
+	.2byte	0x21e
 	.4byte	0x2fd
 	.4byte	.LLST27
 	.uleb128 0x15
-	.4byte	.LVL116
-	.4byte	0xe60
-	.uleb128 0x15
 	.4byte	.LVL117
+	.4byte	0xe71
+	.uleb128 0x15
+	.4byte	.LVL118
 	.4byte	0x303
 	.uleb128 0x16
-	.4byte	.LVL118
-	.4byte	0xe54
+	.4byte	.LVL119
+	.4byte	0xe65
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5b
@@ -3086,22 +3110,22 @@ g_lwip_protect_mutex:
 	.uleb128 0x27
 	.4byte	.LASF123
 	.byte	0x1
-	.2byte	0x220
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.2byte	0x225
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xd77
+	.4byte	0xd88
 	.uleb128 0x28
 	.string	"ms"
 	.byte	0x1
-	.2byte	0x220
+	.2byte	0x225
 	.4byte	0xf0
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x16
-	.4byte	.LVL120
-	.4byte	0xe6c
+	.4byte	.LVL121
+	.4byte	0xe7d
 	.uleb128 0x17
 	.uleb128 0x1
 	.byte	0x5a
@@ -3188,7 +3212,7 @@ g_lwip_protect_mutex:
 	.4byte	.LASF134
 	.4byte	.LASF134
 	.byte	0x10
-	.byte	0x5a
+	.byte	0x4a
 	.uleb128 0x2e
 	.4byte	.LASF135
 	.4byte	.LASF135
@@ -3920,7 +3944,7 @@ g_lwip_protect_mutex:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL8
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3936,7 +3960,7 @@ g_lwip_protect_mutex:
 	.byte	0xff
 	.byte	0x9f
 	.4byte	.LVL7
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x6
 	.byte	0x7a
 	.sleb128 0
@@ -3952,7 +3976,7 @@ g_lwip_protect_mutex:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL13
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3966,7 +3990,7 @@ g_lwip_protect_mutex:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL18
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3982,7 +4006,7 @@ g_lwip_protect_mutex:
 	.byte	0xff
 	.byte	0x9f
 	.4byte	.LVL19
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -3993,7 +4017,7 @@ g_lwip_protect_mutex:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL24
-	.4byte	.LFE25
+	.4byte	.LFE34
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4018,7 +4042,7 @@ g_lwip_protect_mutex:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL36
-	.4byte	.LFE26
+	.4byte	.LFE35
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4054,7 +4078,7 @@ g_lwip_protect_mutex:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL41
-	.4byte	.LFE28
+	.4byte	.LFE37
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -4075,7 +4099,7 @@ g_lwip_protect_mutex:
 	.byte	0x7b
 	.sleb128 0
 	.4byte	.LVL47-1
-	.4byte	.LFE29
+	.4byte	.LFE38
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -48
@@ -4087,7 +4111,7 @@ g_lwip_protect_mutex:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL49
-	.4byte	.LFE30
+	.4byte	.LFE39
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4106,7 +4130,7 @@ g_lwip_protect_mutex:
 	.byte	0x1f
 	.byte	0x9f
 	.4byte	.LVL51
-	.4byte	.LFE30
+	.4byte	.LFE39
 	.2byte	0x6
 	.byte	0x7a
 	.sleb128 0
@@ -4133,7 +4157,7 @@ g_lwip_protect_mutex:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL59
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4151,7 +4175,7 @@ g_lwip_protect_mutex:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL61
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x10
 	.byte	0xf3
 	.uleb128 0x1
@@ -4201,7 +4225,7 @@ g_lwip_protect_mutex:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL68
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4235,7 +4259,7 @@ g_lwip_protect_mutex:
 	.2byte	0x1
 	.byte	0x5b
 	.4byte	.LVL70-1
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0xe
 	.byte	0x73
 	.sleb128 0
@@ -4266,7 +4290,7 @@ g_lwip_protect_mutex:
 	.byte	0x1f
 	.byte	0x9f
 	.4byte	.LVL71
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x9
 	.byte	0x7a
 	.sleb128 0
@@ -4292,7 +4316,7 @@ g_lwip_protect_mutex:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL82
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -4319,7 +4343,7 @@ g_lwip_protect_mutex:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL92
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4333,7 +4357,7 @@ g_lwip_protect_mutex:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL91
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x3
 	.byte	0x7a
 	.sleb128 1
@@ -4341,30 +4365,30 @@ g_lwip_protect_mutex:
 	.4byte	0
 	.4byte	0
 .LLST25:
-	.4byte	.LVL104
-	.4byte	.LVL111
+	.4byte	.LVL105
+	.4byte	.LVL112
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL112
-	.4byte	.LFE43
+	.4byte	.LVL113
+	.4byte	.LFE52
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
 	.4byte	0
 .LLST26:
-	.4byte	.LVL114
-	.4byte	.LVL115-1
+	.4byte	.LVL115
+	.4byte	.LVL116-1
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL115
-	.4byte	.LFE41
+	.4byte	.LVL116
+	.4byte	.LFE50
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
 	.4byte	0
 .LLST27:
-	.4byte	.LVL116
-	.4byte	.LVL117-1
+	.4byte	.LVL117
+	.4byte	.LVL118-1
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -4377,32 +4401,14 @@ g_lwip_protect_mutex:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.4byte	.LFB27
 	.4byte	.LFE27-.LFB27
 	.4byte	.LFB28
 	.4byte	.LFE28-.LFB28
 	.4byte	.LFB29
 	.4byte	.LFE29-.LFB29
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
 	.4byte	.LFB32
 	.4byte	.LFE32-.LFB32
 	.4byte	.LFB33
@@ -4421,44 +4427,44 @@ g_lwip_protect_mutex:
 	.4byte	.LFE39-.LFB39
 	.4byte	.LFB40
 	.4byte	.LFE40-.LFB40
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
 	.4byte	.LFB41
 	.4byte	.LFE41-.LFB41
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.4byte	.LFB44
 	.4byte	.LFE44-.LFB44
 	.4byte	.LFB45
 	.4byte	.LFE45-.LFB45
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB42
-	.4byte	.LFE42
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB24
-	.4byte	.LFE24
-	.4byte	.LFB25
-	.4byte	.LFE25
-	.4byte	.LFB26
-	.4byte	.LFE26
+	.4byte	.LFB51
+	.4byte	.LFE51
 	.4byte	.LFB27
 	.4byte	.LFE27
 	.4byte	.LFB28
 	.4byte	.LFE28
 	.4byte	.LFB29
 	.4byte	.LFE29
-	.4byte	.LFB30
-	.4byte	.LFE30
-	.4byte	.LFB31
-	.4byte	.LFE31
 	.4byte	.LFB32
 	.4byte	.LFE32
 	.4byte	.LFB33
@@ -4477,14 +4483,32 @@ g_lwip_protect_mutex:
 	.4byte	.LFE39
 	.4byte	.LFB40
 	.4byte	.LFE40
-	.4byte	.LFB43
-	.4byte	.LFE43
 	.4byte	.LFB41
 	.4byte	.LFE41
+	.4byte	.LFB42
+	.4byte	.LFE42
+	.4byte	.LFB43
+	.4byte	.LFE43
 	.4byte	.LFB44
 	.4byte	.LFE44
 	.4byte	.LFB45
 	.4byte	.LFE45
+	.4byte	.LFB46
+	.4byte	.LFE46
+	.4byte	.LFB47
+	.4byte	.LFE47
+	.4byte	.LFB48
+	.4byte	.LFE48
+	.4byte	.LFB49
+	.4byte	.LFE49
+	.4byte	.LFB52
+	.4byte	.LFE52
+	.4byte	.LFB50
+	.4byte	.LFE50
+	.4byte	.LFB53
+	.4byte	.LFE53
+	.4byte	.LFB54
+	.4byte	.LFE54
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

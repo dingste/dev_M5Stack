@@ -5,7 +5,7 @@
 	.align	4
 	.type	r1_response_to_err, @function
 r1_response_to_err:
-.LFB20:
+.LFB29:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdspi_transaction.c"
 	.loc 1 55 0
 .LVL0:
@@ -80,7 +80,7 @@ r1_response_to_err:
 	retw.n
 .LBE5:
 .LBE4:
-.LFE20:
+.LFE29:
 	.size	r1_response_to_err, .-r1_response_to_err
 	.global	__bswapsi2
 	.section	.text.make_hw_cmd,"ax",@progbits
@@ -88,7 +88,7 @@ r1_response_to_err:
 	.global	make_hw_cmd
 	.type	make_hw_cmd, @function
 make_hw_cmd:
-.LFB19:
+.LFB28:
 	.loc 1 40 0
 .LVL15:
 	entry	sp, 48
@@ -153,7 +153,7 @@ make_hw_cmd:
 	.loc 1 51 0
 	s32i.n	a4, a5, 24
 	retw.n
-.LFE19:
+.LFE28:
 	.size	make_hw_cmd, .-make_hw_cmd
 	.section	.text.sdspi_host_do_transaction,"ax",@progbits
 	.literal_position
@@ -164,7 +164,7 @@ make_hw_cmd:
 	.global	sdspi_host_do_transaction
 	.type	sdspi_host_do_transaction, @function
 sdspi_host_do_transaction:
-.LFB21:
+.LFB30:
 	.loc 1 83 0
 .LVL21:
 	entry	sp, 64
@@ -324,7 +324,7 @@ sdspi_host_do_transaction:
 	.loc 1 145 0
 	l32i.n	a2, sp, 28
 	retw.n
-.LFE21:
+.LFE30:
 	.size	sdspi_host_do_transaction, .-sdspi_host_do_transaction
 	.section	.bss.s_app_cmd,"aw",@nobits
 	.type	s_app_cmd, @object
@@ -356,10 +356,10 @@ s_lock:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI0-.LFB20
+	.4byte	.LCFI0-.LFB29
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -368,10 +368,10 @@ s_lock:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI1-.LFB19
+	.4byte	.LCFI1-.LFB28
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -380,10 +380,10 @@ s_lock:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI2-.LFB21
+	.4byte	.LCFI2-.LFB30
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -747,8 +747,8 @@ s_lock:
 	.4byte	0xde
 	.uleb128 0x13
 	.4byte	0x273
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2f6
@@ -804,8 +804,8 @@ s_lock:
 	.4byte	.LASF63
 	.byte	0x1
 	.byte	0x27
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x3dd
@@ -905,8 +905,8 @@ s_lock:
 	.byte	0x1
 	.byte	0x52
 	.4byte	0xde
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x4c0
@@ -1680,7 +1680,7 @@ s_lock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL13
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1715,7 +1715,7 @@ s_lock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL16
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1740,7 +1740,7 @@ s_lock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL31
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1765,7 +1765,7 @@ s_lock:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL37
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1801,22 +1801,22 @@ s_lock:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB21
-	.4byte	.LFE21
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB28
+	.4byte	.LFE28
+	.4byte	.LFB30
+	.4byte	.LFE30
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

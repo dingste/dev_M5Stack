@@ -344,12 +344,12 @@ os_get_random:
 	.4byte	.LASF25
 	.4byte	.LASF25
 	.byte	0x6
-	.byte	0xa7
+	.byte	0xa8
 	.uleb128 0x10
 	.4byte	.LASF26
 	.4byte	.LASF26
 	.byte	0x6
-	.byte	0xb1
+	.byte	0xb2
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:

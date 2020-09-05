@@ -11,7 +11,7 @@
 	.align	4
 	.type	rtc_brownout_isr_handler, @function
 rtc_brownout_isr_handler:
-.LFB22:
+.LFB26:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/brownout.c"
 	.loc 1 35 0
 	entry	sp, 32
@@ -24,9 +24,9 @@ rtc_brownout_isr_handler:
 .LBB4:
 .LBB5:
 	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
-	.loc 2 208 0
+	.loc 2 210 0
 #APP
-# 208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 1
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 1
 	rsr.prid a8
  extui a8,a8,13,1
 # 0 "" 2
@@ -51,7 +51,7 @@ rtc_brownout_isr_handler:
 	.loc 1 47 0
 	call8	esp_restart_noos
 .LVL4:
-.LFE22:
+.LFE26:
 	.size	rtc_brownout_isr_handler, .-rtc_brownout_isr_handler
 	.section	.rodata.str1.1
 .LC6:
@@ -64,14 +64,14 @@ rtc_brownout_isr_handler:
 	.literal .LC4, 1073905664
 	.literal .LC5, rtc_brownout_isr_handler
 	.literal .LC7, .LC6
-	.literal .LC8, __func__$4840
+	.literal .LC8, __func__$4853
 	.literal .LC10, .LC9
 	.literal .LC11, 1072988220
 	.align	4
 	.global	esp_brownout_init
 	.type	esp_brownout_init, @function
 esp_brownout_init:
-.LFB23:
+.LFB27:
 	.loc 1 51 0
 	entry	sp, 32
 .LCFI1:
@@ -112,12 +112,12 @@ esp_brownout_init:
 	memw
 	s32i.n	a8, a9, 0
 	retw.n
-.LFE23:
+.LFE27:
 	.size	esp_brownout_init, .-esp_brownout_init
-	.section	.rodata.__func__$4840,"a",@progbits
-	.type	__func__$4840, @object
-	.size	__func__$4840, 18
-__func__$4840:
+	.section	.rodata.__func__$4853,"a",@progbits
+	.type	__func__$4853, @object
+	.size	__func__$4853, 18
+__func__$4853:
 	.string	"esp_brownout_init"
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -138,10 +138,10 @@ __func__$4840:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.byte	0x4
-	.4byte	.LCFI0-.LFB22
+	.4byte	.LCFI0-.LFB26
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -150,10 +150,10 @@ __func__$4840:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI1-.LFB23
+	.4byte	.LCFI1-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -263,7 +263,7 @@ __func__$4840:
 	.byte	0x4
 	.4byte	0x5e
 	.byte	0xa
-	.byte	0x2b
+	.byte	0x2c
 	.4byte	0x106
 	.uleb128 0x6
 	.4byte	.LASF17
@@ -302,22 +302,22 @@ __func__$4840:
 	.uleb128 0x7
 	.4byte	.LASF38
 	.byte	0x2
-	.byte	0xce
+	.byte	0xd0
 	.4byte	0x7e
 	.byte	0x3
 	.4byte	0x121
 	.uleb128 0x8
 	.string	"id"
 	.byte	0x2
-	.byte	0xcf
+	.byte	0xd1
 	.4byte	0x4c
 	.byte	0
 	.uleb128 0x9
 	.4byte	.LASF39
 	.byte	0x1
 	.byte	0x22
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x19a
@@ -368,8 +368,8 @@ __func__$4840:
 	.4byte	.LASF40
 	.byte	0x1
 	.byte	0x32
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x221
@@ -378,7 +378,7 @@ __func__$4840:
 	.4byte	0x231
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$4840
+	.4byte	__func__$4853
 	.uleb128 0x12
 	.4byte	.Ldebug_ranges0+0
 	.uleb128 0x13
@@ -429,7 +429,7 @@ __func__$4840:
 	.byte	0x5d
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$4840
+	.4byte	__func__$4853
 	.uleb128 0xf
 	.uleb128 0x1
 	.byte	0x5e
@@ -814,10 +814,10 @@ __func__$4840:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -828,10 +828,10 @@ __func__$4840:
 	.4byte	.LBE7
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB23
-	.4byte	.LFE23
+	.4byte	.LFB26
+	.4byte	.LFE26
+	.4byte	.LFB27
+	.4byte	.LFE27
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

@@ -2032,6 +2032,77 @@ typedef void (*TaskFunction_t)( void * );
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/deprecated_definitions.h" 1
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 2
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void *get_sp()
+{
+    void *sp;
+    asm volatile ("mov %0, sp;" : "=r" (sp));
+    return sp;
+}
+
+
+
+
+
+static inline void cpu_write_dtlb(uint32_t vpn, unsigned attr)
+{
+    asm volatile ("wdtlb  %1, %0; dsync\n" :: "r" (vpn), "r" (attr));
+}
+
+
+static inline void cpu_write_itlb(unsigned vpn, unsigned attr)
+{
+    asm volatile ("witlb  %1, %0; isync\n" :: "r" (vpn), "r" (attr));
+}
+
+static inline void cpu_init_memctl()
+{
+
+    uint32_t memctl = 0x00000000;
+    asm volatile ("wsr %0, " "MEMCTL" : : "r" (memctl));;
+
+}
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void cpu_configure_region_protection()
+{
+    const uint32_t pages_to_protect[] = {0x00000000, 0x80000000, 0xa0000000, 0xc0000000, 0xe0000000};
+    for (int i = 0; i < sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
+        cpu_write_dtlb(pages_to_protect[i], 0xf);
+        cpu_write_itlb(pages_to_protect[i], 0xf);
+    }
+    cpu_write_dtlb(0x20000000, 0);
+    cpu_write_itlb(0x20000000, 0);
+}
+
+
+
+
+
+void esp_cpu_stall(int cpu_id);
+
+
+
+
+
+void esp_cpu_unstall(int cpu_id);
+
+
+
+
+
+void esp_cpu_reset(int cpu_id);
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 3 4
+_Bool 
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+    esp_cpu_in_ocd_debug_mode();
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+
 
 
 
@@ -2786,7 +2857,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 1
@@ -3003,6 +3074,9 @@ void heap_caps_dump_all();
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
 # 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
 typedef struct {
@@ -3058,7 +3132,7 @@ inline static
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_dma_capable(const void *p)
+                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
 {
     return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
 }
@@ -3067,24 +3141,37 @@ inline static
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_executable(const void *p)
+                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
+{
+    return ((intptr_t)p) % 4 == 0;
+}
+
+inline static 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
 {
     intptr_t ip = (intptr_t) p;
     return (ip >= 0x400D0000 && ip < 0x40400000)
         || (ip >= 0x40080000 && ip < 0x400A0000)
+        || (ip >= 0x40000000 && ip < 0x40070000)
+
+        || (ip >= 0x40078000 && ip < 0x40080000)
+
         || (ip >= 0x400C0000 && ip < 0x400C2000);
 }
 
 inline static 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_byte_accessible(const void *p)
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
 {
     
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x40000000);
 
@@ -3094,14 +3181,14 @@ inline static
 }
 
 inline static 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_internal(const void *p) {
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
     
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
     r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
@@ -3110,18 +3197,18 @@ inline static
 
 
 inline static 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_external_ram(const void *p) {
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
     return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
 }
 
 inline static 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_iram(const void *p) {
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
 
 
 
@@ -3130,19 +3217,35 @@ inline static
 }
 
 inline static 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_drom(const void *p) {
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
     return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
 }
 
 inline static 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_dram(const void *p) {
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
     return ((intptr_t)p >= 0x3FAE0000 && (intptr_t)p < 0x40000000);
+}
+
+inline static 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
+    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x3FFFFFFC);
+}
+
+inline static 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
+    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400BFFFC);
 }
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
@@ -3191,24 +3294,24 @@ typedef struct {
 void vPortAssertIfInISR();
 # 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortCPUInitializeMutex(portMUX_TYPE *mux);
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vTaskExitCritical( portMUX_TYPE *mux );
 void vTaskEnterCritical( portMUX_TYPE *mux );
 void vPortCPUAcquireMutex(portMUX_TYPE *mux);
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
 _Bool 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
     vPortCPUAcquireMutexTimeout(portMUX_TYPE *mux, int timeout_cycles);
 void vPortCPUReleaseMutex(portMUX_TYPE *mux);
-# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline unsigned portENTER_CRITICAL_NESTED() {
  unsigned state = ({ unsigned __tmp; __asm__ __volatile__( "rsil	%0, " "3" "\n" : "=a" (__tmp) : : "memory" ); __tmp;});
  ;
  return state;
 }
-# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, uint32_t *set) {
     __asm__ __volatile__ (
         "WSR 	    %2,SCOMPARE1 \n"
@@ -3217,20 +3320,20 @@ static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, u
         :"r"(addr), "r"(compare), "0"(*set)
         );
 }
-# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortYield( void );
 void _frxt_setup_switch( void );
 
 
 
 static inline uint32_t xPortGetCoreID();
-# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef struct {
 
  volatile StackType_t* coproc_area;
-# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 } xMPU_SETTINGS;
-# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 extern void esp_vApplicationIdleHook( void );
 extern void esp_vApplicationTickHook( void );
 
@@ -3241,10 +3344,10 @@ extern void esp_vApplicationTickHook( void );
 
 void _xt_coproc_release(volatile void * coproc_sa_base);
 void vApplicationSleep( TickType_t xExpectedIdleTime );
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/mpu_wrappers.h" 1
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h" 1
@@ -3261,7 +3364,7 @@ void vApplicationSleep( TickType_t xExpectedIdleTime );
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
 typedef volatile struct {
     uint32_t bt_select;
     uint32_t out;
@@ -3598,7 +3701,7 @@ void esp_intr_noniram_disable();
 void esp_intr_noniram_enable();
 # 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
 extern const uint32_t GPIO_PIN_MUX_REG[40];
 # 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
@@ -4073,25 +4176,25 @@ typedef enum {
 typedef esp_sleep_source_t esp_sleep_wakeup_cause_t;
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_disable_wakeup_source(esp_sleep_source_t source);
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ulp_wakeup();
-# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_timer_wakeup(uint64_t time_in_us);
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_touchpad_wakeup();
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 touch_pad_t esp_sleep_get_touchpad_wakeup_status();
-# 161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext0_wakeup(gpio_num_t gpio_num, int level);
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext1_wakeup(uint64_t mask, esp_sleep_ext1_wakeup_mode_t mode);
-# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_gpio_wakeup();
-# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_uart_wakeup(int uart_num);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 uint64_t esp_sleep_get_ext1_wakeup_status();
-# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
                                    esp_sleep_pd_option_t option);
 
@@ -4101,11 +4204,11 @@ esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
 
 
 void esp_deep_sleep_start() __attribute__((noreturn));
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_light_sleep_start();
-# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_deep_sleep(uint64_t time_in_us) __attribute__((noreturn));
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated));
 
 
@@ -4115,7 +4218,7 @@ void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated)
 
 
 esp_sleep_wakeup_cause_t esp_sleep_get_wakeup_cause();
-# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_wake_deep_sleep(void);
 
 
@@ -4123,7 +4226,7 @@ void esp_wake_deep_sleep(void);
 
 
 typedef void (*esp_deep_sleep_wake_stub_fn_t)(void);
-# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_set_deep_sleep_wake_stub(esp_deep_sleep_wake_stub_fn_t new_stub);
 
 
@@ -4147,6 +4250,12 @@ void esp_default_wake_deep_sleep(void);
 
 void esp_deep_sleep_disable_rom_logging(void);
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+       
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+const char* esp_get_idf_version(void);
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
 
 
 
@@ -4158,7 +4267,7 @@ typedef enum {
     ESP_MAC_BT,
     ESP_MAC_ETH,
 } esp_mac_type_t;
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef enum {
     ESP_RST_UNKNOWN,
     ESP_RST_POWERON,
@@ -4201,9 +4310,9 @@ typedef void (*shutdown_handler_t)(void);
 
 
 esp_err_t esp_register_shutdown_handler(shutdown_handler_t handle);
-# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_restart(void) __attribute__ ((noreturn));
-# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
@@ -4212,11 +4321,11 @@ void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
 esp_reset_reason_t esp_reset_reason(void);
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_time(void) __attribute__ ((deprecated));
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_get_free_heap_size(void);
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
@@ -4226,36 +4335,28 @@ uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
 uint32_t esp_get_minimum_free_heap_size( void );
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_random(void);
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_fill_random(void *buf, size_t len);
-# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_set(uint8_t *mac);
-# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_get(uint8_t *mac);
-# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_custom(uint8_t *mac);
-# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_default(uint8_t *mac);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t system_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_read_mac(uint8_t* mac, esp_mac_type_t type);
-# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_derive_local_mac(uint8_t* local_mac, const uint8_t* universal_mac);
-# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 const char* system_get_sdk_version(void) __attribute__ ((deprecated));
-
-
-
-
-
-
-
-const char* esp_get_idf_version(void);
 
 
 
@@ -4264,7 +4365,7 @@ const char* esp_get_idf_version(void);
 typedef enum {
     CHIP_ESP32 = 1,
 } esp_chip_model_t;
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef struct {
     esp_chip_model_t model;
     uint32_t features;
@@ -4277,10 +4378,10 @@ typedef struct {
 
 
 void esp_chip_info(esp_chip_info_t* out_info);
-# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters, BaseType_t xRunPrivileged ) ;
-# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 BaseType_t xPortStartScheduler( void ) ;
 
 
@@ -4316,14 +4417,14 @@ BaseType_t xPortInIsrContext();
 
 
 BaseType_t xPortInterruptedFromISRContext();
-# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  struct xMEMORY_REGION;
  void vPortStoreTaskMPUSettings( xMPU_SETTINGS *xMPUSettings, const struct xMEMORY_REGION * const xRegions, StackType_t *pxBottomOfStack, uint32_t usStackDepth ) ;
  void vPortReleaseTaskMPUSettings( xMPU_SETTINGS *xMPUSettings );
 
 
 
-static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
+static inline uint32_t __attribute__((section(".iram1" "." "11"))) xPortGetCoreID() {
     int id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -4334,6 +4435,21 @@ static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
 
 
 uint32_t xPortGetTickRateHz(void);
+
+
+static inline 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 3 4
+             _Bool 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+                  __attribute__((section(".iram1" "." "12"))) xPortCanYield(void)
+{
+    uint32_t ps_reg = 0;
+
+
+    asm volatile ("rsr %0, " "PS" : "=r" (ps_reg));;
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+    return ((ps_reg & 0x0000000F) == 0);
+}
 
 
 
@@ -4585,7 +4701,7 @@ void esp_dport_access_int_abort(void);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/uart_reg.h" 1
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h" 2
 # 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "13"))) DPORT_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -4594,7 +4710,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_
 
 }
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "14"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -4603,7 +4719,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_REA
 
 }
 # 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_READ_PERI_REG(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "15"))) DPORT_READ_PERI_REG(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -5008,7 +5124,7 @@ static inline void lldesc_config(lldesc_t *ds, uint8_t owner, uint8_t eof, uint8
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/i2s_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/i2s_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/i2s_struct.h"
 typedef volatile struct {
     uint32_t reserved_0;
     uint32_t reserved_4;
@@ -5822,44 +5938,56 @@ typedef struct {
 } i2s_pin_config_t;
 
 
+
+
+typedef enum {
+    I2S_PDM_DSR_8S = 0,
+    I2S_PDM_DSR_16S,
+    I2S_PDM_DSR_MAX,
+} i2s_pdm_dsr_t;
+
 typedef intr_handle_t i2s_isr_handle_t;
-# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
+# 224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
 esp_err_t i2s_set_pin(i2s_port_t i2s_num, const i2s_pin_config_t *pin);
-# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
+esp_err_t i2s_set_pdm_rx_down_sample(i2s_port_t i2s_num, i2s_pdm_dsr_t dsr);
+# 258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
 esp_err_t i2s_set_dac_mode(i2s_dac_mode_t dac_mode);
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
+# 278 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
 esp_err_t i2s_driver_install(i2s_port_t i2s_num, const i2s_config_t *i2s_config, int queue_size, void* i2s_queue);
-# 262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
+# 289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
 esp_err_t i2s_driver_uninstall(i2s_port_t i2s_num);
-# 274 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
+# 301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
 int i2s_write_bytes(i2s_port_t i2s_num, const void *src, size_t size, TickType_t ticks_to_wait) __attribute__ ((deprecated));
-# 298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
+# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
 esp_err_t i2s_write(i2s_port_t i2s_num, const void *src, size_t size, size_t *bytes_written, TickType_t ticks_to_wait);
-# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
+# 356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
 esp_err_t i2s_write_expand(i2s_port_t i2s_num, const void *src, size_t size, size_t src_bits, size_t aim_bits, size_t *bytes_written, TickType_t ticks_to_wait);
-# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
+# 368 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
 int i2s_read_bytes(i2s_port_t i2s_num, void *dest, size_t size, TickType_t ticks_to_wait) __attribute__ ((deprecated));
-# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
+# 390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
 esp_err_t i2s_read(i2s_port_t i2s_num, void *dest, size_t size, size_t *bytes_read, TickType_t ticks_to_wait);
-# 381 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
+# 408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
 int i2s_push_sample(i2s_port_t i2s_num, const void *sample, TickType_t ticks_to_wait) __attribute__ ((deprecated));
-# 399 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
+# 426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
 int i2s_pop_sample(i2s_port_t i2s_num, void *sample, TickType_t ticks_to_wait) __attribute__ ((deprecated));
-# 417 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
-esp_err_t i2s_set_sample_rates(i2s_port_t i2s_num, uint32_t rate);
-# 430 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
-esp_err_t i2s_stop(i2s_port_t i2s_num);
 # 444 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
-esp_err_t i2s_start(i2s_port_t i2s_num);
+esp_err_t i2s_set_sample_rates(i2s_port_t i2s_num, uint32_t rate);
 # 457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
+esp_err_t i2s_stop(i2s_port_t i2s_num);
+# 471 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
+esp_err_t i2s_start(i2s_port_t i2s_num);
+# 484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
 esp_err_t i2s_zero_dma_buffer(i2s_port_t i2s_num);
-# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
+# 504 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
 esp_err_t i2s_set_clk(i2s_port_t i2s_num, uint32_t rate, i2s_bits_per_sample_t bits, i2s_channel_t ch);
-# 488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
+# 514 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
+float i2s_get_clk(i2s_port_t i2s_num);
+# 525 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
 esp_err_t i2s_set_adc_mode(adc_unit_t adc_unit, adc1_channel_t adc_channel);
-# 501 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
+# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
 esp_err_t i2s_adc_enable(i2s_port_t i2s_num);
-# 512 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
+# 549 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/i2s.h"
 esp_err_t i2s_adc_disable(i2s_port_t i2s_num);
 # 32 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/rtc_io.h" 1
@@ -6030,19 +6158,81 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h"
+       
+
+
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp32/pm.h" 1
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp32/pm.h"
+       
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp32/pm.h"
+typedef struct {
+    rtc_cpu_freq_t max_cpu_freq __attribute__((deprecated));
+    int max_freq_mhz;
+    rtc_cpu_freq_t min_cpu_freq __attribute__((deprecated));
+    int min_freq_mhz;
+    
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp32/pm.h" 3 4
+   _Bool 
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp32/pm.h"
+        light_sleep_enable;
+} esp_pm_config_esp32_t;
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h" 2
+# 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h"
+typedef enum {
+
+
+
+
+    ESP_PM_CPU_FREQ_MAX,
+
+
+
+
+    ESP_PM_APB_FREQ_MAX,
+
+
+
+
+    ESP_PM_NO_LIGHT_SLEEP,
+} esp_pm_lock_type_t;
+# 57 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h"
+esp_err_t esp_pm_configure(const void* config);
+
+
+
+
+
+typedef struct esp_pm_lock* esp_pm_lock_handle_t;
+# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h"
+esp_err_t esp_pm_lock_create(esp_pm_lock_type_t lock_type, int arg,
+        const char* name, esp_pm_lock_handle_t* out_handle);
+# 114 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h"
+esp_err_t esp_pm_lock_acquire(esp_pm_lock_handle_t handle);
+# 138 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h"
+esp_err_t esp_pm_lock_release(esp_pm_lock_handle_t handle);
+# 154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h"
+esp_err_t esp_pm_lock_delete(esp_pm_lock_handle_t handle);
+# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h"
+esp_err_t esp_pm_dump_locks(FILE* stream);
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 2
 
 static const char* I2S_TAG = "I2S";
-# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 64 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
 typedef struct {
     char **buf;
     int buf_size;
@@ -6072,20 +6262,25 @@ typedef struct {
     i2s_mode_t mode;
     uint32_t sample_rate;
     
-# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 92 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
    _Bool 
-# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 92 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
         use_apll;
     
-# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
    _Bool 
-# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
         tx_desc_auto_clear;
     int fixed_mclk;
+    double real_rate;
+
+    esp_pm_lock_handle_t pm_lock;
+
 } i2s_obj_t;
 
 static i2s_obj_t *p_i2s_obj[I2S_NUM_MAX] = {0};
-static i2s_dev_t* I2S[I2S_NUM_MAX] = {&I2S0, &I2S1};
+
+static __attribute__((section(".dram1" "." "16"))) i2s_dev_t* I2S[I2S_NUM_MAX] = {&I2S0, &I2S1};
 static portMUX_TYPE i2s_spinlock[I2S_NUM_MAX] = {{ .owner = 0xB33FFFFF, .count = 0, }, { .owner = 0xB33FFFFF, .count = 0, }};
 static int _i2s_adc_unit = -1;
 static int _i2s_adc_channel = -1;
@@ -6094,7 +6289,7 @@ static i2s_dma_t *i2s_create_dma_queue(i2s_port_t i2s_num, int dma_buf_count, in
 static esp_err_t i2s_destroy_dma_queue(i2s_port_t i2s_num, i2s_dma_t *dma);
 static esp_err_t i2s_reset_fifo(i2s_port_t i2s_num)
 {
-    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 103, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 103, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 103, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 103, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 103, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 112, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 112, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 112, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 112, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 112, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&i2s_spinlock[i2s_num]);
     I2S[i2s_num]->conf.rx_fifo_reset = 1;
     I2S[i2s_num]->conf.rx_fifo_reset = 0;
@@ -6105,13 +6300,13 @@ static esp_err_t i2s_reset_fifo(i2s_port_t i2s_num)
 }
 
 inline static void gpio_matrix_out_check(uint32_t gpio, uint32_t signal_idx, 
-# 113 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                                                             _Bool 
-# 113 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                                                                  out_inv, 
-# 113 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                                                                           _Bool 
-# 113 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                                                                                oen_inv)
 {
 
@@ -6122,9 +6317,9 @@ inline static void gpio_matrix_out_check(uint32_t gpio, uint32_t signal_idx,
     }
 }
 inline static void gpio_matrix_in_check(uint32_t gpio, uint32_t signal_idx, 
-# 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                                                            _Bool 
-# 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                                                                 inv)
 {
     if (gpio != -1) {
@@ -6138,7 +6333,7 @@ inline static void gpio_matrix_in_check(uint32_t gpio, uint32_t signal_idx,
 
 esp_err_t i2s_clear_intr_status(i2s_port_t i2s_num, uint32_t clr_mask)
 {
-    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 135, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 135, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 135, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 135, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 135, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 144, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 144, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 144, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 144, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 144, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
     I2S[i2s_num]->int_clr.val = clr_mask;
     return 0;
 }
@@ -6180,6 +6375,12 @@ esp_err_t i2s_enable_tx_intr(i2s_port_t i2s_num)
     return 0;
 }
 
+float i2s_get_clk(i2s_port_t i2s_num)
+{
+    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 188, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 188, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 188, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 188, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 188, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
+    return p_i2s_obj[i2s_num]->real_rate;
+}
+
 static esp_err_t i2s_isr_register(i2s_port_t i2s_num, int intr_alloc_flags, void (*fn)(void*), void * arg, i2s_isr_handle_t *handle)
 {
     return esp_intr_alloc(32 + i2s_num, intr_alloc_flags, fn, arg, handle);
@@ -6201,7 +6402,7 @@ static float i2s_apll_get_fi2s(int bits_per_sample, int sdm0, int sdm1, int sdm2
     float fpll = fout / (2 * (odir+2));
     return fpll/2;
 }
-# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
 static esp_err_t i2s_apll_calculate_fi2s(int rate, int bits_per_sample, int *sdm0, int *sdm1, int *sdm2, int *odir)
 {
     int _odir, _sdm0, _sdm1, _sdm2;
@@ -6221,7 +6422,7 @@ static esp_err_t i2s_apll_calculate_fi2s(int rate, int bits_per_sample, int *sdm
         max_rate = i2s_apll_get_fi2s(bits_per_sample, 255, 255, _sdm2, 0);
         min_rate = i2s_apll_get_fi2s(bits_per_sample, 0, 0, _sdm2, 31);
         avg = (max_rate + min_rate)/2;
-        if(abs(avg - rate) < min_diff) {
+        if (abs(avg - rate) < min_diff) {
             min_diff = abs(avg - rate);
             *sdm2 = _sdm2;
         }
@@ -6231,9 +6432,19 @@ static esp_err_t i2s_apll_calculate_fi2s(int rate, int bits_per_sample, int *sdm
         max_rate = i2s_apll_get_fi2s(bits_per_sample, 255, 255, *sdm2, _odir);
         min_rate = i2s_apll_get_fi2s(bits_per_sample, 0, 0, *sdm2, _odir);
         avg = (max_rate + min_rate)/2;
-        if(abs(avg - rate) < min_diff) {
+        if (abs(avg - rate) < min_diff) {
             min_diff = abs(avg - rate);
             *odir = _odir;
+        }
+    }
+    min_diff = (500000000);
+    for (_sdm2 = 4; _sdm2 < 9; _sdm2 ++) {
+        max_rate = i2s_apll_get_fi2s(bits_per_sample, 255, 255, _sdm2, *odir);
+        min_rate = i2s_apll_get_fi2s(bits_per_sample, 0, 0, _sdm2, *odir);
+        avg = (max_rate + min_rate)/2;
+        if (abs(avg - rate) < min_diff) {
+            min_diff = abs(avg - rate);
+            *sdm2 = _sdm2;
         }
     }
 
@@ -6266,16 +6477,16 @@ esp_err_t i2s_set_clk(i2s_port_t i2s_num, uint32_t rate, i2s_bits_per_sample_t b
     double denom = (double)1 / 64;
     int channel = 2;
     i2s_dma_t *save_tx = 
-# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                         ((void *)0)
-# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                             , *save_rx = 
-# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                          ((void *)0)
-# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                              ;
 
-    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 298, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 298, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 298, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 298, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 298, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 323, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 323, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 323, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 323, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 323, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
 
     if (bits % 8 != 0 || bits > I2S_BITS_PER_SAMPLE_32BIT || bits < I2S_BITS_PER_SAMPLE_16BIT) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Invalid bits per sample" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Invalid bits per sample" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "Invalid bits per sample" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "Invalid bits per sample" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Invalid bits per sample" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } } while(0); } while(0);
@@ -6283,9 +6494,9 @@ esp_err_t i2s_set_clk(i2s_port_t i2s_num, uint32_t rate, i2s_bits_per_sample_t b
     }
 
     if (p_i2s_obj[i2s_num] == 
-# 305 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                              ((void *)0)
-# 305 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                  ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Not initialized yet" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Not initialized yet" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "Not initialized yet" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "Not initialized yet" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Not initialized yet" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } } while(0); } while(0);
         return 0x102;
@@ -6301,16 +6512,16 @@ esp_err_t i2s_set_clk(i2s_port_t i2s_num, uint32_t rate, i2s_bits_per_sample_t b
 
     if ((p_i2s_obj[i2s_num]->mode & I2S_MODE_TX) && p_i2s_obj[i2s_num]->tx) {
         xQueueGenericReceive( ( QueueHandle_t ) ( p_i2s_obj[i2s_num]->tx->mux ), 
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 344 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
        ((void *)0)
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 344 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
        , ( (TickType_t)( TickType_t ) 0xffffffffUL ), ( ( BaseType_t ) 0 ) );
     }
     if ((p_i2s_obj[i2s_num]->mode & I2S_MODE_RX) && p_i2s_obj[i2s_num]->rx) {
         xQueueGenericReceive( ( QueueHandle_t ) ( p_i2s_obj[i2s_num]->rx->mux ), 
-# 322 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
        ((void *)0)
-# 322 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
        , ( (TickType_t)( TickType_t ) 0xffffffffUL ), ( ( BaseType_t ) 0 ) );
     }
 
@@ -6357,9 +6568,9 @@ esp_err_t i2s_set_clk(i2s_port_t i2s_num, uint32_t rate, i2s_bits_per_sample_t b
 
             p_i2s_obj[i2s_num]->tx = i2s_create_dma_queue(i2s_num, p_i2s_obj[i2s_num]->dma_buf_count, p_i2s_obj[i2s_num]->dma_buf_len);
             if (p_i2s_obj[i2s_num]->tx == 
-# 367 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                          ((void *)0)
-# 367 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                              ) {
                 do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Failed to create tx dma buffer" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Failed to create tx dma buffer" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "Failed to create tx dma buffer" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "Failed to create tx dma buffer" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Failed to create tx dma buffer" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } } while(0); } while(0);
                 i2s_driver_uninstall(i2s_num);
@@ -6379,9 +6590,9 @@ esp_err_t i2s_set_clk(i2s_port_t i2s_num, uint32_t rate, i2s_bits_per_sample_t b
 
             p_i2s_obj[i2s_num]->rx = i2s_create_dma_queue(i2s_num, p_i2s_obj[i2s_num]->dma_buf_count, p_i2s_obj[i2s_num]->dma_buf_len);
             if (p_i2s_obj[i2s_num]->rx == 
-# 385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                          ((void *)0)
-# 385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                              ){
                 do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Failed to create rx dma buffer" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Failed to create rx dma buffer" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "Failed to create rx dma buffer" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "Failed to create rx dma buffer" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Failed to create rx dma buffer" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } } while(0); } while(0);
                 i2s_driver_uninstall(i2s_num);
@@ -6399,11 +6610,14 @@ esp_err_t i2s_set_clk(i2s_port_t i2s_num, uint32_t rate, i2s_bits_per_sample_t b
     }
 
     double mclk;
+    int sdm0, sdm1, sdm2, odir, m_scale = 8;
+    int fi2s_clk = rate*channel*bits*m_scale;
     if (p_i2s_obj[i2s_num]->mode & (I2S_MODE_DAC_BUILT_IN | I2S_MODE_ADC_BUILT_IN)) {
 
 
 
-        uint32_t b_clk = rate * 2;
+        uint32_t b_clk = rate * (2);
+        fi2s_clk /= (2);
         int factor2 = 60;
         mclk = b_clk * factor2;
         clkmdiv = ((double) (2*( 80*1000000 ))) / mclk;
@@ -6415,9 +6629,11 @@ esp_err_t i2s_set_clk(i2s_port_t i2s_num, uint32_t rate, i2s_bits_per_sample_t b
         if (p_i2s_obj[i2s_num]->mode & I2S_MODE_TX) {
             int fp = I2S[i2s_num]->pdm_freq_conf.tx_pdm_fp;
             int fs = I2S[i2s_num]->pdm_freq_conf.tx_pdm_fs;
-            b_clk = rate * 64 * (fp / fs);
+            b_clk = rate * (64) * (fp / fs);
+            fi2s_clk /= ((64) * (fp / fs));
         } else if (p_i2s_obj[i2s_num]->mode & I2S_MODE_RX) {
-            b_clk = rate * 64 * (I2S[i2s_num]->pdm_conf.rx_sinc_dsr_16_en + 1);
+            b_clk = rate * (64) * (I2S[i2s_num]->pdm_conf.rx_sinc_dsr_16_en + 1);
+            fi2s_clk /= ((64) * (I2S[i2s_num]->pdm_conf.rx_sinc_dsr_16_en + 1));
         }
         int factor2 = 5 ;
         mclk = b_clk * factor2;
@@ -6431,8 +6647,7 @@ esp_err_t i2s_set_clk(i2s_port_t i2s_num, uint32_t rate, i2s_bits_per_sample_t b
         mclk = clkmInteger + denom * clkmDecimals;
         bck = factor/(bits * channel);
     }
-    int sdm0, sdm1, sdm2, odir, m_scale = 8;
-    int fi2s_clk = rate*channel*bits*m_scale;
+
     if(p_i2s_obj[i2s_num]->use_apll && p_i2s_obj[i2s_num]->fixed_mclk) {
         fi2s_clk = p_i2s_obj[i2s_num]->fixed_mclk;
         m_scale = fi2s_clk/bits/rate/channel;
@@ -6447,6 +6662,7 @@ esp_err_t i2s_set_clk(i2s_port_t i2s_num, uint32_t rate, i2s_bits_per_sample_t b
         I2S[i2s_num]->sample_rate_conf.rx_bck_div_num = m_scale;
         I2S[i2s_num]->clkm_conf.clka_en = 1;
         double fi2s_rate = i2s_apll_get_fi2s(bits, sdm0, sdm1, sdm2, odir);
+        p_i2s_obj[i2s_num]->real_rate = fi2s_rate/bits/channel/m_scale;
         do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "APLL: Req RATE: %d, real rate: %0.3f, BITS: %u, CLKM: %u, BCK_M: %u, MCLK: %0.3f, SCLK: %f, diva: %d, divb: %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, rate, fi2s_rate/bits/channel/m_scale, bits, 1, m_scale, fi2s_rate, fi2s_rate/8, 1, 0); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "APLL: Req RATE: %d, real rate: %0.3f, BITS: %u, CLKM: %u, BCK_M: %u, MCLK: %0.3f, SCLK: %f, diva: %d, divb: %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, rate, fi2s_rate/bits/channel/m_scale, bits, 1, m_scale, fi2s_rate, fi2s_rate/8, 1, 0); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "APLL: Req RATE: %d, real rate: %0.3f, BITS: %u, CLKM: %u, BCK_M: %u, MCLK: %0.3f, SCLK: %f, diva: %d, divb: %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, rate, fi2s_rate/bits/channel/m_scale, bits, 1, m_scale, fi2s_rate, fi2s_rate/8, 1, 0); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "APLL: Req RATE: %d, real rate: %0.3f, BITS: %u, CLKM: %u, BCK_M: %u, MCLK: %0.3f, SCLK: %f, diva: %d, divb: %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, rate, fi2s_rate/bits/channel/m_scale, bits, 1, m_scale, fi2s_rate, fi2s_rate/8, 1, 0); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "APLL: Req RATE: %d, real rate: %0.3f, BITS: %u, CLKM: %u, BCK_M: %u, MCLK: %0.3f, SCLK: %f, diva: %d, divb: %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, rate, fi2s_rate/bits/channel/m_scale, bits, 1, m_scale, fi2s_rate, fi2s_rate/8, 1, 0); } } while(0); } while(0)
                                                                                                  ;
     } else {
@@ -6457,6 +6673,7 @@ esp_err_t i2s_set_clk(i2s_port_t i2s_num, uint32_t rate, i2s_bits_per_sample_t b
         I2S[i2s_num]->sample_rate_conf.tx_bck_div_num = bck;
         I2S[i2s_num]->sample_rate_conf.rx_bck_div_num = bck;
         double real_rate = (double) ((2*( 80*1000000 )) / (bck * bits * clkmInteger) / 2);
+        p_i2s_obj[i2s_num]->real_rate = real_rate;
         do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "PLL_D2: Req RATE: %d, real rate: %0.3f, BITS: %u, CLKM: %u, BCK: %u, MCLK: %0.3f, SCLK: %f, diva: %d, divb: %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, rate, real_rate, bits, clkmInteger, bck, (double)(2*( 80*1000000 )) / mclk, real_rate*bits*channel, 64, clkmDecimals); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "PLL_D2: Req RATE: %d, real rate: %0.3f, BITS: %u, CLKM: %u, BCK: %u, MCLK: %0.3f, SCLK: %f, diva: %d, divb: %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, rate, real_rate, bits, clkmInteger, bck, (double)(2*( 80*1000000 )) / mclk, real_rate*bits*channel, 64, clkmDecimals); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "PLL_D2: Req RATE: %d, real rate: %0.3f, BITS: %u, CLKM: %u, BCK: %u, MCLK: %0.3f, SCLK: %f, diva: %d, divb: %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, rate, real_rate, bits, clkmInteger, bck, (double)(2*( 80*1000000 )) / mclk, real_rate*bits*channel, 64, clkmDecimals); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "PLL_D2: Req RATE: %d, real rate: %0.3f, BITS: %u, CLKM: %u, BCK: %u, MCLK: %0.3f, SCLK: %f, diva: %d, divb: %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, rate, real_rate, bits, clkmInteger, bck, (double)(2*( 80*1000000 )) / mclk, real_rate*bits*channel, 64, clkmDecimals); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "PLL_D2: Req RATE: %d, real rate: %0.3f, BITS: %u, CLKM: %u, BCK: %u, MCLK: %0.3f, SCLK: %f, diva: %d, divb: %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, rate, real_rate, bits, clkmInteger, bck, (double)(2*( 80*1000000 )) / mclk, real_rate*bits*channel, 64, clkmDecimals); } } while(0); } while(0)
                                                                                                                            ;
     }
@@ -6467,23 +6684,23 @@ esp_err_t i2s_set_clk(i2s_port_t i2s_num, uint32_t rate, i2s_bits_per_sample_t b
 
     if ((p_i2s_obj[i2s_num]->mode & I2S_MODE_TX) && p_i2s_obj[i2s_num]->tx) {
         xQueueGenericSend( ( QueueHandle_t ) ( p_i2s_obj[i2s_num]->tx->mux ), 
-# 469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 500 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
        ((void *)0)
-# 469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 500 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
        , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     }
     if ((p_i2s_obj[i2s_num]->mode & I2S_MODE_RX) && p_i2s_obj[i2s_num]->rx) {
         xQueueGenericSend( ( QueueHandle_t ) ( p_i2s_obj[i2s_num]->rx->mux ), 
-# 472 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 503 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
        ((void *)0)
-# 472 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 503 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
        , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     }
     i2s_start(i2s_num);
     return 0;
 }
 
-static void __attribute__((section(".iram1"))) i2s_intr_handler_default(void *arg)
+static void __attribute__((section(".iram1" "." "17"))) i2s_intr_handler_default(void *arg)
 {
     i2s_obj_t *p_i2s = (i2s_obj_t*) arg;
     uint8_t i2s_num = p_i2s->i2s_num;
@@ -6515,9 +6732,9 @@ static void __attribute__((section(".iram1"))) i2s_intr_handler_default(void *ar
 
 
             if (p_i2s->tx_desc_auto_clear == 
-# 509 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 540 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                             1
-# 509 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 540 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                                 ) {
                 memset((void *) dummy, 0, p_i2s->tx->buf_size);
             }
@@ -6530,7 +6747,6 @@ static void __attribute__((section(".iram1"))) i2s_intr_handler_default(void *ar
             }
             xQueueGenericSendFromISR( ( p_i2s->i2s_queue ), ( (void * )&i2s_event ), ( &high_priority_task_awoken ), ( ( BaseType_t ) 0 ) );
         }
-
     }
 
     if (i2s_reg->int_st.in_suc_eof && p_i2s->rx) {
@@ -6559,17 +6775,17 @@ static esp_err_t i2s_destroy_dma_queue(i2s_port_t i2s_num, i2s_dma_t *dma)
 {
     int bux_idx;
     if (p_i2s_obj[i2s_num] == 
-# 549 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 579 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                              ((void *)0)
-# 549 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 579 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                  ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Not initialized yet" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Not initialized yet" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "Not initialized yet" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "Not initialized yet" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Not initialized yet" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } } while(0); } while(0);
         return 0x102;
     }
     if (dma == 
-# 553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 583 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
               ((void *)0)
-# 553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 583 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                   ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "dma is NULL" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "dma is NULL" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "dma is NULL" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "dma is NULL" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "dma is NULL" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } } while(0); } while(0);
         return 0x102;
@@ -6600,31 +6816,31 @@ static i2s_dma_t *i2s_create_dma_queue(i2s_port_t i2s_num, int dma_buf_count, in
     int sample_size = p_i2s_obj[i2s_num]->bytes_per_sample * p_i2s_obj[i2s_num]->channel_num;
     i2s_dma_t *dma = (i2s_dma_t*) malloc(sizeof(i2s_dma_t));
     if (dma == 
-# 582 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
               ((void *)0)
-# 582 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                   ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error malloc i2s_dma_t" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error malloc i2s_dma_t" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "Error malloc i2s_dma_t" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "Error malloc i2s_dma_t" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error malloc i2s_dma_t" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } } while(0); } while(0);
         return 
-# 584 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
               ((void *)0)
-# 584 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                   ;
     }
     memset(dma, 0, sizeof(i2s_dma_t));
 
     dma->buf = (char **)malloc(sizeof(char*) * dma_buf_count);
     if (dma->buf == 
-# 589 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                    ((void *)0)
-# 589 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                        ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error malloc dma buffer pointer" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error malloc dma buffer pointer" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "Error malloc dma buffer pointer" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "Error malloc dma buffer pointer" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error malloc dma buffer pointer" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } } while(0); } while(0);
         free(dma);
         return 
-# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
               ((void *)0)
-# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                   ;
     }
     memset(dma->buf, 0, sizeof(char*) * dma_buf_count);
@@ -6632,16 +6848,16 @@ static i2s_dma_t *i2s_create_dma_queue(i2s_port_t i2s_num, int dma_buf_count, in
     for (bux_idx = 0; bux_idx < dma_buf_count; bux_idx++) {
         dma->buf[bux_idx] = (char*) heap_caps_calloc(1, dma_buf_len * sample_size, (1<<3));
         if (dma->buf[bux_idx] == 
-# 598 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 628 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                 ((void *)0)
-# 598 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 628 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                     ) {
             do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error malloc dma buffer" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error malloc dma buffer" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "Error malloc dma buffer" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "Error malloc dma buffer" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error malloc dma buffer" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } } while(0); } while(0);
             i2s_destroy_dma_queue(i2s_num, dma);
             return 
-# 601 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 631 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                   ((void *)0)
-# 601 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 631 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                       ;
         }
         do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Addr[%d] = %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, bux_idx, (int)dma->buf[bux_idx]); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Addr[%d] = %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, bux_idx, (int)dma->buf[bux_idx]); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "Addr[%d] = %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, bux_idx, (int)dma->buf[bux_idx]); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "Addr[%d] = %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, bux_idx, (int)dma->buf[bux_idx]); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Addr[%d] = %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, bux_idx, (int)dma->buf[bux_idx]); } } while(0); } while(0);
@@ -6649,31 +6865,31 @@ static i2s_dma_t *i2s_create_dma_queue(i2s_port_t i2s_num, int dma_buf_count, in
 
     dma->desc = (lldesc_t**) malloc(sizeof(lldesc_t*) * dma_buf_count);
     if (dma->desc == 
-# 607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 637 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                     ((void *)0)
-# 607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 637 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                         ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error malloc dma description" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error malloc dma description" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "Error malloc dma description" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "Error malloc dma description" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error malloc dma description" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } } while(0); } while(0);
         i2s_destroy_dma_queue(i2s_num, dma);
         return 
-# 610 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 640 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
               ((void *)0)
-# 610 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 640 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                   ;
     }
     for (bux_idx = 0; bux_idx < dma_buf_count; bux_idx++) {
         dma->desc[bux_idx] = (lldesc_t*) heap_caps_malloc(sizeof(lldesc_t), (1<<3));
         if (dma->desc[bux_idx] == 
-# 614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 644 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                  ((void *)0)
-# 614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 644 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                      ) {
             do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error malloc dma description entry" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error malloc dma description entry" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "Error malloc dma description entry" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "Error malloc dma description entry" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error malloc dma description entry" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } } while(0); } while(0);
             i2s_destroy_dma_queue(i2s_num, dma);
             return 
-# 617 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 647 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                   ((void *)0)
-# 617 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 647 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                       ;
         }
     }
@@ -6693,9 +6909,9 @@ static i2s_dma_t *i2s_create_dma_queue(i2s_port_t i2s_num, int dma_buf_count, in
     dma->rw_pos = 0;
     dma->buf_size = dma_buf_len * sample_size;
     dma->curr_ptr = 
-# 635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 665 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                    ((void *)0)
-# 635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 665 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                        ;
     do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "DMA Malloc info, datalen=blocksize=%d, dma_buf_count=%d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, dma_buf_len * sample_size, dma_buf_count); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "DMA Malloc info, datalen=blocksize=%d, dma_buf_count=%d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, dma_buf_len * sample_size, dma_buf_count); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "DMA Malloc info, datalen=blocksize=%d, dma_buf_count=%d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, dma_buf_len * sample_size, dma_buf_count); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "DMA Malloc info, datalen=blocksize=%d, dma_buf_count=%d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, dma_buf_len * sample_size, dma_buf_count); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "DMA Malloc info, datalen=blocksize=%d, dma_buf_count=%d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, dma_buf_len * sample_size, dma_buf_count); } } while(0); } while(0);
     return dma;
@@ -6704,7 +6920,7 @@ static i2s_dma_t *i2s_create_dma_queue(i2s_port_t i2s_num, int dma_buf_count, in
 
 esp_err_t i2s_start(i2s_port_t i2s_num)
 {
-    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 643, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 643, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 643, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 643, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 643, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 673, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 673, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 673, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 673, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 673, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
 
     vTaskEnterCritical(&i2s_spinlock[i2s_num]);
     i2s_reset_fifo(i2s_num);
@@ -6738,7 +6954,7 @@ esp_err_t i2s_start(i2s_port_t i2s_num)
 
 esp_err_t i2s_stop(i2s_port_t i2s_num)
 {
-    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 677, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 677, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 677, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 677, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 677, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 707, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 707, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 707, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 707, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 707, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&i2s_spinlock[i2s_num]);
     esp_intr_disable(p_i2s_obj[i2s_num]->i2s_isr_handle);
     if (p_i2s_obj[i2s_num]->mode & I2S_MODE_TX) {
@@ -6758,7 +6974,7 @@ esp_err_t i2s_stop(i2s_port_t i2s_num)
 
 esp_err_t i2s_set_dac_mode(i2s_dac_mode_t dac_mode)
 {
-    if (!((dac_mode < I2S_DAC_CHANNEL_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 697, __FUNCTION__, "i2s dac mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 697, __FUNCTION__, "i2s dac mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 697, __FUNCTION__, "i2s dac mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 697, __FUNCTION__, "i2s dac mode error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 697, __FUNCTION__, "i2s dac mode error"); } } while(0); } while(0); return (0x102); };
+    if (!((dac_mode < I2S_DAC_CHANNEL_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 727, __FUNCTION__, "i2s dac mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 727, __FUNCTION__, "i2s dac mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 727, __FUNCTION__, "i2s dac mode error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 727, __FUNCTION__, "i2s dac mode error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 727, __FUNCTION__, "i2s dac mode error"); } } while(0); } while(0); return (0x102); };
     if (dac_mode == I2S_DAC_CHANNEL_DISABLE) {
         dac_output_disable(DAC_CHANNEL_1);
         dac_output_disable(DAC_CHANNEL_2);
@@ -6780,13 +6996,13 @@ esp_err_t i2s_set_dac_mode(i2s_dac_mode_t dac_mode)
 
 static esp_err_t _i2s_adc_mode_recover()
 {
-    if (!(((_i2s_adc_unit != -1) && (_i2s_adc_channel != -1)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 719, __FUNCTION__, "i2s ADC recover error, not initialized..."); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 719, __FUNCTION__, "i2s ADC recover error, not initialized..."); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 719, __FUNCTION__, "i2s ADC recover error, not initialized..."); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 719, __FUNCTION__, "i2s ADC recover error, not initialized..."); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 719, __FUNCTION__, "i2s ADC recover error, not initialized..."); } } while(0); } while(0); return (0x102); };
+    if (!(((_i2s_adc_unit != -1) && (_i2s_adc_channel != -1)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 749, __FUNCTION__, "i2s ADC recover error, not initialized..."); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 749, __FUNCTION__, "i2s ADC recover error, not initialized..."); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 749, __FUNCTION__, "i2s ADC recover error, not initialized..."); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 749, __FUNCTION__, "i2s ADC recover error, not initialized..."); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 749, __FUNCTION__, "i2s ADC recover error, not initialized..."); } } while(0); } while(0); return (0x102); };
     return adc_i2s_mode_init(_i2s_adc_unit, _i2s_adc_channel);
 }
 
 esp_err_t i2s_set_adc_mode(adc_unit_t adc_unit, adc1_channel_t adc_channel)
 {
-    if (!((adc_unit < ADC_UNIT_2))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 725, __FUNCTION__, "i2s ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 725, __FUNCTION__, "i2s ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 725, __FUNCTION__, "i2s ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 725, __FUNCTION__, "i2s ADC unit error, only support ADC1 for now"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 725, __FUNCTION__, "i2s ADC unit error, only support ADC1 for now"); } } while(0); } while(0); return (0x102); };
+    if (!((adc_unit < ADC_UNIT_2))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 755, __FUNCTION__, "i2s ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 755, __FUNCTION__, "i2s ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 755, __FUNCTION__, "i2s ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 755, __FUNCTION__, "i2s ADC unit error, only support ADC1 for now"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 755, __FUNCTION__, "i2s ADC unit error, only support ADC1 for now"); } } while(0); } while(0); return (0x102); };
 
     _i2s_adc_unit = adc_unit;
     _i2s_adc_channel = adc_channel;
@@ -6795,11 +7011,11 @@ esp_err_t i2s_set_adc_mode(adc_unit_t adc_unit, adc1_channel_t adc_channel)
 
 esp_err_t i2s_set_pin(i2s_port_t i2s_num, const i2s_pin_config_t *pin)
 {
-    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 734, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 734, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 734, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 734, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 734, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 764, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 764, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 764, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 764, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 764, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
     if (pin == 
-# 735 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 765 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
               ((void *)0)
-# 735 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 765 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                   ) {
         return i2s_set_dac_mode(I2S_DAC_CHANNEL_BOTH_EN);
     }
@@ -6908,24 +7124,25 @@ esp_err_t i2s_set_pin(i2s_port_t i2s_num, const i2s_pin_config_t *pin)
 
 esp_err_t i2s_set_sample_rates(i2s_port_t i2s_num, uint32_t rate)
 {
-    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 843, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 843, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 843, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 843, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 843, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
-    if (!((p_i2s_obj[i2s_num]->bytes_per_sample > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 844, __FUNCTION__, "bits_per_sample not set"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 844, __FUNCTION__, "bits_per_sample not set"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 844, __FUNCTION__, "bits_per_sample not set"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 844, __FUNCTION__, "bits_per_sample not set"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 844, __FUNCTION__, "bits_per_sample not set"); } } while(0); } while(0); return (0x102); };
+    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 873, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 873, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 873, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 873, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 873, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((p_i2s_obj[i2s_num]->bytes_per_sample > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 874, __FUNCTION__, "bits_per_sample not set"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 874, __FUNCTION__, "bits_per_sample not set"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 874, __FUNCTION__, "bits_per_sample not set"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 874, __FUNCTION__, "bits_per_sample not set"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 874, __FUNCTION__, "bits_per_sample not set"); } } while(0); } while(0); return (0x102); };
     return i2s_set_clk(i2s_num, rate, p_i2s_obj[i2s_num]->bits_per_sample, p_i2s_obj[i2s_num]->channel_num);
+}
+
+esp_err_t i2s_set_pdm_rx_down_sample(i2s_port_t i2s_num, i2s_pdm_dsr_t dsr)
+{
+    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 880, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 880, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 880, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 880, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 880, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
+    I2S[i2s_num]->pdm_conf.rx_sinc_dsr_16_en = dsr;
+    return i2s_set_clk(i2s_num, p_i2s_obj[i2s_num]->sample_rate, p_i2s_obj[i2s_num]->bits_per_sample, p_i2s_obj[i2s_num]->channel_num);
 }
 
 static esp_err_t i2s_param_config(i2s_port_t i2s_num, const i2s_config_t *i2s_config)
 {
-    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 850, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 850, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 850, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 850, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 850, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
-    if (!((i2s_config))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 851, __FUNCTION__, "param null"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 851, __FUNCTION__, "param null"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 851, __FUNCTION__, "param null"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 851, __FUNCTION__, "param null"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 851, __FUNCTION__, "param null"); } } while(0); } while(0); return (0x102); };
-    if (!(!((i2s_config->mode & I2S_MODE_ADC_BUILT_IN) && (i2s_num != I2S_NUM_0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 852, __FUNCTION__, "I2S ADC built-in only support on I2S0"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 852, __FUNCTION__, "I2S ADC built-in only support on I2S0"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 852, __FUNCTION__, "I2S ADC built-in only support on I2S0"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 852, __FUNCTION__, "I2S ADC built-in only support on I2S0"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 852, __FUNCTION__, "I2S ADC built-in only support on I2S0"); } } while(0); } while(0); return (0x102); };
-    if (!(!((i2s_config->mode & I2S_MODE_DAC_BUILT_IN) && (i2s_num != I2S_NUM_0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 853, __FUNCTION__, "I2S DAC built-in only support on I2S0"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 853, __FUNCTION__, "I2S DAC built-in only support on I2S0"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 853, __FUNCTION__, "I2S DAC built-in only support on I2S0"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 853, __FUNCTION__, "I2S DAC built-in only support on I2S0"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 853, __FUNCTION__, "I2S DAC built-in only support on I2S0"); } } while(0); } while(0); return (0x102); };
-    if (!(!((i2s_config->mode & I2S_MODE_PDM) && (i2s_num != I2S_NUM_0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 854, __FUNCTION__, "I2S DAC PDM only support on I2S0"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 854, __FUNCTION__, "I2S DAC PDM only support on I2S0"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 854, __FUNCTION__, "I2S DAC PDM only support on I2S0"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 854, __FUNCTION__, "I2S DAC PDM only support on I2S0"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 854, __FUNCTION__, "I2S DAC PDM only support on I2S0"); } } while(0); } while(0); return (0x102); };
-
-    if (i2s_num == I2S_NUM_1) {
-        periph_module_enable(PERIPH_I2S1_MODULE);
-    } else {
-        periph_module_enable(PERIPH_I2S0_MODULE);
-    }
+    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 887, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 887, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 887, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 887, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 887, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((i2s_config))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 888, __FUNCTION__, "param null"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 888, __FUNCTION__, "param null"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 888, __FUNCTION__, "param null"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 888, __FUNCTION__, "param null"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 888, __FUNCTION__, "param null"); } } while(0); } while(0); return (0x102); };
+    if (!(!((i2s_config->mode & I2S_MODE_ADC_BUILT_IN) && (i2s_num != I2S_NUM_0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 889, __FUNCTION__, "I2S ADC built-in only support on I2S0"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 889, __FUNCTION__, "I2S ADC built-in only support on I2S0"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 889, __FUNCTION__, "I2S ADC built-in only support on I2S0"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 889, __FUNCTION__, "I2S ADC built-in only support on I2S0"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 889, __FUNCTION__, "I2S ADC built-in only support on I2S0"); } } while(0); } while(0); return (0x102); };
+    if (!(!((i2s_config->mode & I2S_MODE_DAC_BUILT_IN) && (i2s_num != I2S_NUM_0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 890, __FUNCTION__, "I2S DAC built-in only support on I2S0"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 890, __FUNCTION__, "I2S DAC built-in only support on I2S0"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 890, __FUNCTION__, "I2S DAC built-in only support on I2S0"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 890, __FUNCTION__, "I2S DAC built-in only support on I2S0"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 890, __FUNCTION__, "I2S DAC built-in only support on I2S0"); } } while(0); } while(0); return (0x102); };
+    if (!(!((i2s_config->mode & I2S_MODE_PDM) && (i2s_num != I2S_NUM_0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 891, __FUNCTION__, "I2S DAC PDM only support on I2S0"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 891, __FUNCTION__, "I2S DAC PDM only support on I2S0"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 891, __FUNCTION__, "I2S DAC PDM only support on I2S0"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 891, __FUNCTION__, "I2S DAC PDM only support on I2S0"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 891, __FUNCTION__, "I2S DAC PDM only support on I2S0"); } } while(0); } while(0); return (0x102); };
 
     if(i2s_config->mode & I2S_MODE_ADC_BUILT_IN) {
 
@@ -6979,7 +7196,7 @@ static esp_err_t i2s_param_config(i2s_port_t i2s_num, const i2s_config_t *i2s_co
     I2S[i2s_num]->conf.rx_start = 0;
 
     if (i2s_config->mode & I2S_MODE_TX) {
-        I2S[i2s_num]->conf.tx_msb_right = 0;
+        I2S[i2s_num]->conf.tx_msb_right = 1;
         I2S[i2s_num]->conf.tx_right_first = 0;
 
         I2S[i2s_num]->conf.tx_slave_mod = 0;
@@ -6991,7 +7208,7 @@ static esp_err_t i2s_param_config(i2s_port_t i2s_num, const i2s_config_t *i2s_co
     }
 
     if (i2s_config->mode & I2S_MODE_RX) {
-        I2S[i2s_num]->conf.rx_msb_right = 0;
+        I2S[i2s_num]->conf.rx_msb_right = 1;
         I2S[i2s_num]->conf.rx_right_first = 0;
         I2S[i2s_num]->conf.rx_slave_mod = 0;
         I2S[i2s_num]->fifo_conf.rx_fifo_mod_force_en = 1;
@@ -7073,20 +7290,20 @@ static esp_err_t i2s_param_config(i2s_port_t i2s_num, const i2s_config_t *i2s_co
 
 esp_err_t i2s_zero_dma_buffer(i2s_port_t i2s_num)
 {
-    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1008, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1008, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1008, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1008, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1008, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1039, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1039, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1039, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1039, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1039, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
     if (p_i2s_obj[i2s_num]->rx && p_i2s_obj[i2s_num]->rx->buf != 
-# 1009 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1040 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                                                 ((void *)0) 
-# 1009 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1040 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                                                      && p_i2s_obj[i2s_num]->rx->buf_size != 0) {
         for (int i = 0; i < p_i2s_obj[i2s_num]->dma_buf_count; i++) {
             memset(p_i2s_obj[i2s_num]->rx->buf[i], 0, p_i2s_obj[i2s_num]->rx->buf_size);
         }
     }
     if (p_i2s_obj[i2s_num]->tx && p_i2s_obj[i2s_num]->tx->buf != 
-# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1045 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                                                 ((void *)0) 
-# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1045 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                                                      && p_i2s_obj[i2s_num]->tx->buf_size != 0) {
         int bytes_left = 0;
         bytes_left = (p_i2s_obj[i2s_num]->tx->buf_size - p_i2s_obj[i2s_num]->tx->rw_pos) % 4;
@@ -7104,24 +7321,24 @@ esp_err_t i2s_zero_dma_buffer(i2s_port_t i2s_num)
 esp_err_t i2s_driver_install(i2s_port_t i2s_num, const i2s_config_t *i2s_config, int queue_size, void* i2s_queue)
 {
     esp_err_t err;
-    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1031, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1031, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1031, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1031, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1031, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1062, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1062, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1062, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1062, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1062, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
     if (!((i2s_config != 
-# 1032 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1063 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
    ((void *)0)
-# 1032 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
-   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1032, __FUNCTION__, "I2S configuration must not NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1032, __FUNCTION__, "I2S configuration must not NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1032, __FUNCTION__, "I2S configuration must not NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1032, __FUNCTION__, "I2S configuration must not NULL"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1032, __FUNCTION__, "I2S configuration must not NULL"); } } while(0); } while(0); return (0x102); };
-    if (!((i2s_config->dma_buf_count >= 2 && i2s_config->dma_buf_count <= 128))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1033, __FUNCTION__, "I2S buffer count less than 128 and more than 2"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1033, __FUNCTION__, "I2S buffer count less than 128 and more than 2"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1033, __FUNCTION__, "I2S buffer count less than 128 and more than 2"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1033, __FUNCTION__, "I2S buffer count less than 128 and more than 2"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1033, __FUNCTION__, "I2S buffer count less than 128 and more than 2"); } } while(0); } while(0); return (0x102); };
-    if (!((i2s_config->dma_buf_len >= 8 && i2s_config->dma_buf_len <= 1024))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1034, __FUNCTION__, "I2S buffer length at most 1024 and more than 8"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1034, __FUNCTION__, "I2S buffer length at most 1024 and more than 8"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1034, __FUNCTION__, "I2S buffer length at most 1024 and more than 8"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1034, __FUNCTION__, "I2S buffer length at most 1024 and more than 8"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1034, __FUNCTION__, "I2S buffer length at most 1024 and more than 8"); } } while(0); } while(0); return (0x102); };
+# 1063 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1063, __FUNCTION__, "I2S configuration must not NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1063, __FUNCTION__, "I2S configuration must not NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1063, __FUNCTION__, "I2S configuration must not NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1063, __FUNCTION__, "I2S configuration must not NULL"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1063, __FUNCTION__, "I2S configuration must not NULL"); } } while(0); } while(0); return (0x102); };
+    if (!((i2s_config->dma_buf_count >= 2 && i2s_config->dma_buf_count <= 128))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1064, __FUNCTION__, "I2S buffer count less than 128 and more than 2"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1064, __FUNCTION__, "I2S buffer count less than 128 and more than 2"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1064, __FUNCTION__, "I2S buffer count less than 128 and more than 2"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1064, __FUNCTION__, "I2S buffer count less than 128 and more than 2"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1064, __FUNCTION__, "I2S buffer count less than 128 and more than 2"); } } while(0); } while(0); return (0x102); };
+    if (!((i2s_config->dma_buf_len >= 8 && i2s_config->dma_buf_len <= 1024))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1065, __FUNCTION__, "I2S buffer length at most 1024 and more than 8"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1065, __FUNCTION__, "I2S buffer length at most 1024 and more than 8"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1065, __FUNCTION__, "I2S buffer length at most 1024 and more than 8"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1065, __FUNCTION__, "I2S buffer length at most 1024 and more than 8"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1065, __FUNCTION__, "I2S buffer length at most 1024 and more than 8"); } } while(0); } while(0); return (0x102); };
     if (p_i2s_obj[i2s_num] == 
-# 1035 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1066 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                              ((void *)0)
-# 1035 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1066 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                  ) {
         p_i2s_obj[i2s_num] = (i2s_obj_t*) malloc(sizeof(i2s_obj_t));
         if (p_i2s_obj[i2s_num] == 
-# 1037 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1068 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                  ((void *)0)
-# 1037 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1068 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                      ) {
             do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Malloc I2S driver error" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Malloc I2S driver error" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "Malloc I2S driver error" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "Malloc I2S driver error" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Malloc I2S driver error" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } } while(0); } while(0);
             return 0x101;
@@ -7139,20 +7356,45 @@ esp_err_t i2s_driver_install(i2s_port_t i2s_num, const i2s_config_t *i2s_config,
         p_i2s_obj[i2s_num]->channel_num = i2s_config->channel_format < I2S_CHANNEL_FMT_ONLY_RIGHT ? 2 : 1;
 
 
+    if (i2s_config->use_apll) {
+        err = esp_pm_lock_create(ESP_PM_NO_LIGHT_SLEEP, 0, "i2s_driver", &p_i2s_obj[i2s_num]->pm_lock);
+    } else {
+        err = esp_pm_lock_create(ESP_PM_APB_FREQ_MAX, 0, "i2s_driver", &p_i2s_obj[i2s_num]->pm_lock);
+    }
+    if (err != 0) {
+        free(p_i2s_obj[i2s_num]);
+        p_i2s_obj[i2s_num] = 
+# 1092 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+                            ((void *)0)
+# 1092 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+                                ;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "I2S pm lock error" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "I2S pm lock error" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "I2S pm lock error" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "I2S pm lock error" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "I2S pm lock error" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } } while(0); } while(0);
+        return err;
+    }
+
+
+
         if (i2s_num == I2S_NUM_1) {
+            periph_module_reset(PERIPH_I2S1_MODULE);
             periph_module_enable(PERIPH_I2S1_MODULE);
         } else {
+            periph_module_reset(PERIPH_I2S0_MODULE);
             periph_module_enable(PERIPH_I2S0_MODULE);
         }
 
 
         err = i2s_isr_register(i2s_num, i2s_config->intr_alloc_flags, i2s_intr_handler_default, p_i2s_obj[i2s_num], &p_i2s_obj[i2s_num]->i2s_isr_handle);
         if (err != 0) {
+
+            if (p_i2s_obj[i2s_num]->pm_lock) {
+                esp_pm_lock_delete(p_i2s_obj[i2s_num]->pm_lock);
+            }
+
             free(p_i2s_obj[i2s_num]);
             p_i2s_obj[i2s_num] = 
-# 1064 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                 ((void *)0)
-# 1064 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                     ;
             do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Register I2S Interrupt error" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Register I2S Interrupt error" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "Register I2S Interrupt error" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "Register I2S Interrupt error" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Register I2S Interrupt error" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } } while(0); } while(0);
             return err;
@@ -7171,9 +7413,9 @@ esp_err_t i2s_driver_install(i2s_port_t i2s_num, const i2s_config_t *i2s_config,
             do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "queue free spaces: %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, uxQueueSpacesAvailable(p_i2s_obj[i2s_num]->i2s_queue)); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "queue free spaces: %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, uxQueueSpacesAvailable(p_i2s_obj[i2s_num]->i2s_queue)); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "queue free spaces: %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, uxQueueSpacesAvailable(p_i2s_obj[i2s_num]->i2s_queue)); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "queue free spaces: %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, uxQueueSpacesAvailable(p_i2s_obj[i2s_num]->i2s_queue)); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "queue free spaces: %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, uxQueueSpacesAvailable(p_i2s_obj[i2s_num]->i2s_queue)); } } while(0); } while(0);
         } else {
             p_i2s_obj[i2s_num]->i2s_queue = 
-# 1081 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                            ((void *)0)
-# 1081 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                                ;
         }
 
@@ -7186,11 +7428,11 @@ esp_err_t i2s_driver_install(i2s_port_t i2s_num, const i2s_config_t *i2s_config,
 
 esp_err_t i2s_driver_uninstall(i2s_port_t i2s_num)
 {
-    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1093, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1093, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1093, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1093, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1093, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1145, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1145, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1145, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1145, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1145, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
     if (p_i2s_obj[i2s_num] == 
-# 1094 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                              ((void *)0)
-# 1094 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                  ) {
         do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "already uninstalled" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "already uninstalled" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "already uninstalled" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "already uninstalled" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "already uninstalled" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG); } } while(0); } while(0);
         return 0;
@@ -7199,36 +7441,36 @@ esp_err_t i2s_driver_uninstall(i2s_port_t i2s_num)
     esp_intr_free(p_i2s_obj[i2s_num]->i2s_isr_handle);
 
     if (p_i2s_obj[i2s_num]->tx != 
-# 1101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                  ((void *)0) 
-# 1101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                       && p_i2s_obj[i2s_num]->mode & I2S_MODE_TX) {
         i2s_destroy_dma_queue(i2s_num, p_i2s_obj[i2s_num]->tx);
         p_i2s_obj[i2s_num]->tx = 
-# 1103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                 ((void *)0)
-# 1103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                     ;
     }
     if (p_i2s_obj[i2s_num]->rx != 
-# 1105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                  ((void *)0) 
-# 1105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                       && p_i2s_obj[i2s_num]->mode & I2S_MODE_RX) {
         i2s_destroy_dma_queue(i2s_num, p_i2s_obj[i2s_num]->rx);
         p_i2s_obj[i2s_num]->rx = 
-# 1107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1159 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                 ((void *)0)
-# 1107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1159 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                     ;
     }
 
     if (p_i2s_obj[i2s_num]->i2s_queue) {
         vQueueDelete(p_i2s_obj[i2s_num]->i2s_queue);
         p_i2s_obj[i2s_num]->i2s_queue = 
-# 1112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                        ((void *)0)
-# 1112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                            ;
     }
 
@@ -7236,11 +7478,16 @@ esp_err_t i2s_driver_uninstall(i2s_port_t i2s_num)
         rtc_clk_apll_enable(0, 0, 0, 0, 0);
     }
 
+    if (p_i2s_obj[i2s_num]->pm_lock) {
+        esp_pm_lock_delete(p_i2s_obj[i2s_num]->pm_lock);
+    }
+
+
     free(p_i2s_obj[i2s_num]);
     p_i2s_obj[i2s_num] = 
-# 1120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                         ((void *)0)
-# 1120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                             ;
 
     if (i2s_num == I2S_NUM_0) {
@@ -7268,20 +7515,23 @@ esp_err_t i2s_write(i2s_port_t i2s_num, const void *src, size_t size, size_t *by
     char *data_ptr, *src_byte;
     int bytes_can_write;
     *bytes_written = 0;
-    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1147, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1147, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1147, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1147, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1147, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
-    if (!((size < (4 * 1024 * 1024)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1148, __FUNCTION__, "size is too large"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1148, __FUNCTION__, "size is too large"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1148, __FUNCTION__, "size is too large"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1148, __FUNCTION__, "size is too large"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1148, __FUNCTION__, "size is too large"); } } while(0); } while(0); return (0x102); };
-    if (!((p_i2s_obj[i2s_num]->tx))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1149, __FUNCTION__, "tx NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1149, __FUNCTION__, "tx NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1149, __FUNCTION__, "tx NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1149, __FUNCTION__, "tx NULL"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1149, __FUNCTION__, "tx NULL"); } } while(0); } while(0); return (0x102); };
+    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1204, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1204, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1204, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1204, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1204, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((size < (4 * 1024 * 1024)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1205, __FUNCTION__, "size is too large"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1205, __FUNCTION__, "size is too large"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1205, __FUNCTION__, "size is too large"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1205, __FUNCTION__, "size is too large"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1205, __FUNCTION__, "size is too large"); } } while(0); } while(0); return (0x102); };
+    if (!((p_i2s_obj[i2s_num]->tx))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1206, __FUNCTION__, "tx NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1206, __FUNCTION__, "tx NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1206, __FUNCTION__, "tx NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1206, __FUNCTION__, "tx NULL"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1206, __FUNCTION__, "tx NULL"); } } while(0); } while(0); return (0x102); };
     xQueueGenericReceive( ( QueueHandle_t ) ( p_i2s_obj[i2s_num]->tx->mux ), 
-# 1150 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1207 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
    ((void *)0)
-# 1150 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1207 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
    , ( (TickType_t)( TickType_t ) 0xffffffffUL ), ( ( BaseType_t ) 0 ) );
+
+    esp_pm_lock_acquire(p_i2s_obj[i2s_num]->pm_lock);
+
     src_byte = (char *)src;
     while (size > 0) {
         if (p_i2s_obj[i2s_num]->tx->rw_pos == p_i2s_obj[i2s_num]->tx->buf_size || p_i2s_obj[i2s_num]->tx->curr_ptr == 
-# 1153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                                                                                                      ((void *)0)
-# 1153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                                                                                                          ) {
             if (xQueueGenericReceive( ( p_i2s_obj[i2s_num]->tx->queue ), ( &p_i2s_obj[i2s_num]->tx->curr_ptr ), ( ticks_to_wait ), ( ( BaseType_t ) 0 ) ) == ( ( BaseType_t ) 0 )) {
                 break;
@@ -7301,23 +7551,27 @@ esp_err_t i2s_write(i2s_port_t i2s_num, const void *src, size_t size, size_t *by
         p_i2s_obj[i2s_num]->tx->rw_pos += bytes_can_write;
         (*bytes_written) += bytes_can_write;
     }
+
+    esp_pm_lock_release(p_i2s_obj[i2s_num]->pm_lock);
+
+
     xQueueGenericSend( ( QueueHandle_t ) ( p_i2s_obj[i2s_num]->tx->mux ), 
-# 1172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
    ((void *)0)
-# 1172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     return 0;
 }
 
 esp_err_t i2s_adc_enable(i2s_port_t i2s_num)
 {
-    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1178, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1178, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1178, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1178, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1178, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1242, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1242, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1242, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1242, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1242, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
     if (!((p_i2s_obj[i2s_num] != 
-# 1179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
    ((void *)0)
-# 1179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
-   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1179, __FUNCTION__, "Not initialized yet"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1179, __FUNCTION__, "Not initialized yet"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1179, __FUNCTION__, "Not initialized yet"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1179, __FUNCTION__, "Not initialized yet"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1179, __FUNCTION__, "Not initialized yet"); } } while(0); } while(0); return (0x103); };
-    if (!((p_i2s_obj[i2s_num]->mode & I2S_MODE_ADC_BUILT_IN))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1180, __FUNCTION__, "i2s built-in adc not enabled"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1180, __FUNCTION__, "i2s built-in adc not enabled"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1180, __FUNCTION__, "i2s built-in adc not enabled"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1180, __FUNCTION__, "i2s built-in adc not enabled"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1180, __FUNCTION__, "i2s built-in adc not enabled"); } } while(0); } while(0); return (0x103); };
+# 1243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1243, __FUNCTION__, "Not initialized yet"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1243, __FUNCTION__, "Not initialized yet"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1243, __FUNCTION__, "Not initialized yet"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1243, __FUNCTION__, "Not initialized yet"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1243, __FUNCTION__, "Not initialized yet"); } } while(0); } while(0); return (0x103); };
+    if (!((p_i2s_obj[i2s_num]->mode & I2S_MODE_ADC_BUILT_IN))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1244, __FUNCTION__, "i2s built-in adc not enabled"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1244, __FUNCTION__, "i2s built-in adc not enabled"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1244, __FUNCTION__, "i2s built-in adc not enabled"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1244, __FUNCTION__, "i2s built-in adc not enabled"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1244, __FUNCTION__, "i2s built-in adc not enabled"); } } while(0); } while(0); return (0x103); };
 
     adc1_i2s_mode_acquire();
     _i2s_adc_mode_recover();
@@ -7326,13 +7580,13 @@ esp_err_t i2s_adc_enable(i2s_port_t i2s_num)
 
 esp_err_t i2s_adc_disable(i2s_port_t i2s_num)
 {
-    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1189, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1189, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1189, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1189, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1189, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1253, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1253, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1253, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1253, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1253, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
     if (!((p_i2s_obj[i2s_num] != 
-# 1190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
    ((void *)0)
-# 1190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
-   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1190, __FUNCTION__, "Not initialized yet"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1190, __FUNCTION__, "Not initialized yet"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1190, __FUNCTION__, "Not initialized yet"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1190, __FUNCTION__, "Not initialized yet"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1190, __FUNCTION__, "Not initialized yet"); } } while(0); } while(0); return (0x103); };
-    if (!((p_i2s_obj[i2s_num]->mode & I2S_MODE_ADC_BUILT_IN))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1191, __FUNCTION__, "i2s built-in adc not enabled"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1191, __FUNCTION__, "i2s built-in adc not enabled"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1191, __FUNCTION__, "i2s built-in adc not enabled"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1191, __FUNCTION__, "i2s built-in adc not enabled"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1191, __FUNCTION__, "i2s built-in adc not enabled"); } } while(0); } while(0); return (0x103); };
+# 1254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+   ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1254, __FUNCTION__, "Not initialized yet"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1254, __FUNCTION__, "Not initialized yet"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1254, __FUNCTION__, "Not initialized yet"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1254, __FUNCTION__, "Not initialized yet"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1254, __FUNCTION__, "Not initialized yet"); } } while(0); } while(0); return (0x103); };
+    if (!((p_i2s_obj[i2s_num]->mode & I2S_MODE_ADC_BUILT_IN))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1255, __FUNCTION__, "i2s built-in adc not enabled"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1255, __FUNCTION__, "i2s built-in adc not enabled"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1255, __FUNCTION__, "i2s built-in adc not enabled"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1255, __FUNCTION__, "i2s built-in adc not enabled"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1255, __FUNCTION__, "i2s built-in adc not enabled"); } } while(0); } while(0); return (0x103); };
 
     adc1_lock_release();
     return 0;
@@ -7344,11 +7598,11 @@ esp_err_t i2s_write_expand(i2s_port_t i2s_num, const void *src, size_t size, siz
     int bytes_can_write, tail;
     int src_bytes, aim_bytes, zero_bytes;
     *bytes_written = 0;
-    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1203, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1203, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1203, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1203, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1203, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
-    if (!((size > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1204, __FUNCTION__, "size must greater than zero"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1204, __FUNCTION__, "size must greater than zero"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1204, __FUNCTION__, "size must greater than zero"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1204, __FUNCTION__, "size must greater than zero"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1204, __FUNCTION__, "size must greater than zero"); } } while(0); } while(0); return (0x102); };
-    if (!((aim_bits * size < (4 * 1024 * 1024)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1205, __FUNCTION__, "size is too large"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1205, __FUNCTION__, "size is too large"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1205, __FUNCTION__, "size is too large"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1205, __FUNCTION__, "size is too large"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1205, __FUNCTION__, "size is too large"); } } while(0); } while(0); return (0x102); };
-    if (!((aim_bits >= src_bits))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1206, __FUNCTION__, "aim_bits musn't less than src_bits"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1206, __FUNCTION__, "aim_bits musn't less than src_bits"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1206, __FUNCTION__, "aim_bits musn't less than src_bits"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1206, __FUNCTION__, "aim_bits musn't less than src_bits"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1206, __FUNCTION__, "aim_bits musn't less than src_bits"); } } while(0); } while(0); return (0x102); };
-    if (!((p_i2s_obj[i2s_num]->tx))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1207, __FUNCTION__, "tx NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1207, __FUNCTION__, "tx NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1207, __FUNCTION__, "tx NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1207, __FUNCTION__, "tx NULL"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1207, __FUNCTION__, "tx NULL"); } } while(0); } while(0); return (0x102); };
+    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1267, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1267, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1267, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1267, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1267, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((size > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1268, __FUNCTION__, "size must greater than zero"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1268, __FUNCTION__, "size must greater than zero"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1268, __FUNCTION__, "size must greater than zero"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1268, __FUNCTION__, "size must greater than zero"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1268, __FUNCTION__, "size must greater than zero"); } } while(0); } while(0); return (0x102); };
+    if (!((aim_bits * size < (4 * 1024 * 1024)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1269, __FUNCTION__, "size is too large"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1269, __FUNCTION__, "size is too large"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1269, __FUNCTION__, "size is too large"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1269, __FUNCTION__, "size is too large"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1269, __FUNCTION__, "size is too large"); } } while(0); } while(0); return (0x102); };
+    if (!((aim_bits >= src_bits))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1270, __FUNCTION__, "aim_bits musn't less than src_bits"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1270, __FUNCTION__, "aim_bits musn't less than src_bits"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1270, __FUNCTION__, "aim_bits musn't less than src_bits"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1270, __FUNCTION__, "aim_bits musn't less than src_bits"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1270, __FUNCTION__, "aim_bits musn't less than src_bits"); } } while(0); } while(0); return (0x102); };
+    if (!((p_i2s_obj[i2s_num]->tx))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1271, __FUNCTION__, "tx NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1271, __FUNCTION__, "tx NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1271, __FUNCTION__, "tx NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1271, __FUNCTION__, "tx NULL"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1271, __FUNCTION__, "tx NULL"); } } while(0); } while(0); return (0x102); };
     if (src_bits < I2S_BITS_PER_SAMPLE_8BIT || aim_bits < I2S_BITS_PER_SAMPLE_8BIT) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "bits musn't be less than 8, src_bits %d aim_bits %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, src_bits, aim_bits); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "bits musn't be less than 8, src_bits %d aim_bits %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, src_bits, aim_bits); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "bits musn't be less than 8, src_bits %d aim_bits %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, src_bits, aim_bits); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "bits musn't be less than 8, src_bits %d aim_bits %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, src_bits, aim_bits); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "bits musn't be less than 8, src_bits %d aim_bits %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, src_bits, aim_bits); } } while(0); } while(0);
         return 0x102;
@@ -7370,17 +7624,17 @@ esp_err_t i2s_write_expand(i2s_port_t i2s_num, const void *src, size_t size, siz
     aim_bytes = aim_bits / 8;
     zero_bytes = aim_bytes - src_bytes;
     xQueueGenericReceive( ( QueueHandle_t ) ( p_i2s_obj[i2s_num]->tx->mux ), 
-# 1228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
    ((void *)0)
-# 1228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
    , ( (TickType_t)( TickType_t ) 0xffffffffUL ), ( ( BaseType_t ) 0 ) );
     size = size * aim_bytes / src_bytes;
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "aim_bytes %d src_bytes %d size %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, aim_bytes, src_bytes, size); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "aim_bytes %d src_bytes %d size %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, aim_bytes, src_bytes, size); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "aim_bytes %d src_bytes %d size %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, aim_bytes, src_bytes, size); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "aim_bytes %d src_bytes %d size %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, aim_bytes, src_bytes, size); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "aim_bytes %d src_bytes %d size %d" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, aim_bytes, src_bytes, size); } } while(0); } while(0);
     while (size > 0) {
         if (p_i2s_obj[i2s_num]->tx->rw_pos == p_i2s_obj[i2s_num]->tx->buf_size || p_i2s_obj[i2s_num]->tx->curr_ptr == 
-# 1232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                                                                                                      ((void *)0)
-# 1232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                                                                                                          ) {
             if (xQueueGenericReceive( ( p_i2s_obj[i2s_num]->tx->queue ), ( &p_i2s_obj[i2s_num]->tx->curr_ptr ), ( ticks_to_wait ), ( ( BaseType_t ) 0 ) ) == ( ( BaseType_t ) 0 )) {
                 break;
@@ -7406,9 +7660,9 @@ esp_err_t i2s_write_expand(i2s_port_t i2s_num, const void *src, size_t size, siz
         p_i2s_obj[i2s_num]->tx->rw_pos += bytes_can_write;
     }
     xQueueGenericSend( ( QueueHandle_t ) ( p_i2s_obj[i2s_num]->tx->mux ), 
-# 1256 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1320 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
    ((void *)0)
-# 1256 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1320 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     return 0;
 }
@@ -7431,19 +7685,22 @@ esp_err_t i2s_read(i2s_port_t i2s_num, void *dest, size_t size, size_t *bytes_re
     int bytes_can_read;
     *bytes_read = 0;
     dest_byte = (char *)dest;
-    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1278, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1278, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1278, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1278, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1278, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
-    if (!((size < (4 * 1024 * 1024)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1279, __FUNCTION__, "size is too large"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1279, __FUNCTION__, "size is too large"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1279, __FUNCTION__, "size is too large"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1279, __FUNCTION__, "size is too large"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1279, __FUNCTION__, "size is too large"); } } while(0); } while(0); return (0x102); };
-    if (!((p_i2s_obj[i2s_num]->rx))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1280, __FUNCTION__, "rx NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1280, __FUNCTION__, "rx NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1280, __FUNCTION__, "rx NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1280, __FUNCTION__, "rx NULL"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1280, __FUNCTION__, "rx NULL"); } } while(0); } while(0); return (0x102); };
+    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1342, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1342, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1342, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1342, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1342, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (0x102); };
+    if (!((size < (4 * 1024 * 1024)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1343, __FUNCTION__, "size is too large"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1343, __FUNCTION__, "size is too large"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1343, __FUNCTION__, "size is too large"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1343, __FUNCTION__, "size is too large"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1343, __FUNCTION__, "size is too large"); } } while(0); } while(0); return (0x102); };
+    if (!((p_i2s_obj[i2s_num]->rx))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1344, __FUNCTION__, "rx NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1344, __FUNCTION__, "rx NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1344, __FUNCTION__, "rx NULL"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1344, __FUNCTION__, "rx NULL"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1344, __FUNCTION__, "rx NULL"); } } while(0); } while(0); return (0x102); };
     xQueueGenericReceive( ( QueueHandle_t ) ( p_i2s_obj[i2s_num]->rx->mux ), 
-# 1281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1345 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
    ((void *)0)
-# 1281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1345 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
    , ( (TickType_t)( TickType_t ) 0xffffffffUL ), ( ( BaseType_t ) 0 ) );
+
+    esp_pm_lock_acquire(p_i2s_obj[i2s_num]->pm_lock);
+
     while (size > 0) {
         if (p_i2s_obj[i2s_num]->rx->rw_pos == p_i2s_obj[i2s_num]->rx->buf_size || p_i2s_obj[i2s_num]->rx->curr_ptr == 
-# 1283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1350 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
                                                                                                                      ((void *)0)
-# 1283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1350 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
                                                                                                                          ) {
             if (xQueueGenericReceive( ( p_i2s_obj[i2s_num]->rx->queue ), ( &p_i2s_obj[i2s_num]->rx->curr_ptr ), ( ticks_to_wait ), ( ( BaseType_t ) 0 ) ) == ( ( BaseType_t ) 0 )) {
                 break;
@@ -7462,10 +7719,13 @@ esp_err_t i2s_read(i2s_port_t i2s_num, void *dest, size_t size, size_t *bytes_re
         p_i2s_obj[i2s_num]->rx->rw_pos += bytes_can_read;
         (*bytes_read) += bytes_can_read;
     }
+
+    esp_pm_lock_release(p_i2s_obj[i2s_num]->pm_lock);
+
     xQueueGenericSend( ( QueueHandle_t ) ( p_i2s_obj[i2s_num]->rx->mux ), 
-# 1301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
+# 1371 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c" 3 4
    ((void *)0)
-# 1301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
+# 1371 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     return 0;
 }
@@ -7474,7 +7734,7 @@ int i2s_push_sample(i2s_port_t i2s_num, const void *sample, TickType_t ticks_to_
 {
     size_t bytes_push = 0;
     int res = 0;
-    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1309, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1309, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1309, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1309, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1309, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (-1); };
+    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1379, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1379, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1379, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1379, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1379, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (-1); };
     res = i2s_write(i2s_num, sample, p_i2s_obj[i2s_num]->bytes_per_sample, &bytes_push, ticks_to_wait);
     if (res != 0) {
         return -1;
@@ -7487,7 +7747,7 @@ int i2s_pop_sample(i2s_port_t i2s_num, void *sample, TickType_t ticks_to_wait)
 {
     size_t bytes_pop = 0;
     int res = 0;
-    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1322, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1322, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1322, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1322, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1322, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (-1); };
+    if (!((i2s_num < I2S_NUM_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, I2S_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1392, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, I2S_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1392, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, I2S_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1392, __FUNCTION__, "i2s_num error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, I2S_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1392, __FUNCTION__, "i2s_num error"); } else { esp_log_write(ESP_LOG_INFO, I2S_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), I2S_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/i2s.c", 1392, __FUNCTION__, "i2s_num error"); } } while(0); } while(0); return (-1); };
     res = i2s_read(i2s_num, sample, p_i2s_obj[i2s_num]->bytes_per_sample, &bytes_pop, ticks_to_wait);
     if (res != 0) {
         return -1;

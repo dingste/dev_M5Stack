@@ -8,26 +8,26 @@
 mbedtls_sha256_ret:
 .LFB0:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/sha256.c"
-	.loc 1 394 0
+	.loc 1 416 0
 .LVL0:
 	entry	sp, 144
 .LCFI0:
-	.loc 1 398 0
+	.loc 1 424 0
 	mov.n	a10, sp
 	call8	mbedtls_sha256_init
 .LVL1:
-	.loc 1 400 0
+	.loc 1 426 0
 	mov.n	a11, a5
 	mov.n	a10, sp
 	call8	mbedtls_sha256_starts_ret
 .LVL2:
-	.loc 1 394 0
+	.loc 1 416 0
 	mov.n	a6, a2
-	.loc 1 400 0
+	.loc 1 426 0
 	mov.n	a2, a10
 .LVL3:
 	bnez.n	a10, .L2
-	.loc 1 403 0
+	.loc 1 429 0
 	mov.n	a12, a3
 	mov.n	a11, a6
 	mov.n	a10, sp
@@ -36,7 +36,7 @@ mbedtls_sha256_ret:
 	mov.n	a2, a10
 .LVL5:
 	bnez.n	a10, .L2
-	.loc 1 406 0
+	.loc 1 432 0
 	mov.n	a11, a4
 	mov.n	a10, sp
 	call8	mbedtls_sha256_finish_ret
@@ -44,11 +44,11 @@ mbedtls_sha256_ret:
 	mov.n	a2, a10
 .LVL7:
 .L2:
-	.loc 1 410 0
+	.loc 1 436 0
 	mov.n	a10, sp
 	call8	mbedtls_sha256_free
 .LVL8:
-	.loc 1 413 0
+	.loc 1 439 0
 	retw.n
 .LFE0:
 	.size	mbedtls_sha256_ret, .-mbedtls_sha256_ret
@@ -58,11 +58,11 @@ mbedtls_sha256_ret:
 	.type	mbedtls_sha256, @function
 mbedtls_sha256:
 .LFB1:
-	.loc 1 420 0
+	.loc 1 446 0
 .LVL9:
 	entry	sp, 32
 .LCFI1:
-	.loc 1 421 0
+	.loc 1 447 0
 	mov.n	a13, a5
 	mov.n	a12, a4
 	mov.n	a11, a3
@@ -96,62 +96,62 @@ mbedtls_sha256:
 	.type	mbedtls_sha256_self_test, @function
 mbedtls_sha256_self_test:
 .LFB2:
-	.loc 1 480 0
+	.loc 1 506 0
 .LVL11:
 	entry	sp, 176
 .LCFI2:
 .LVL12:
-	.loc 1 486 0
+	.loc 1 512 0
 	movi.n	a11, 1
 	movi	a10, 0x400
 	call8	mbedtls_calloc
 .LVL13:
-	.loc 1 480 0
+	.loc 1 506 0
 	mov.n	a5, a2
-	.loc 1 486 0
+	.loc 1 512 0
 	mov.n	a6, a10
 .LVL14:
-	.loc 1 487 0
+	.loc 1 513 0
 	bnez.n	a10, .L5
-	.loc 1 492 0
+	.loc 1 518 0
 	movi.n	a2, 1
 .LVL15:
-	.loc 1 489 0
+	.loc 1 515 0
 	beqz.n	a5, .L6
-	.loc 1 490 0
+	.loc 1 516 0
 	l32r	a10, .LC1
 	call8	puts
 .LVL16:
 	retw.n
 .LVL17:
 .L5:
-	.loc 1 495 0
+	.loc 1 521 0
 	mov.n	a10, sp
 	call8	mbedtls_sha256_init
 .LVL18:
-	.loc 1 497 0
+	.loc 1 523 0
 	movi.n	a4, 0
 .LVL19:
 .L15:
-	.loc 1 499 0
+	.loc 1 525 0
 	l32r	a2, .LC2
 	srai	a11, a4, 31
 	mulsh	a3, a4, a2
-	.loc 1 500 0
+	.loc 1 526 0
 	movi.n	a7, 1
-	.loc 1 499 0
+	.loc 1 525 0
 	sub	a3, a3, a11
 	addx2	a3, a3, a3
 	sub	a3, a4, a3
 .LVL20:
-	.loc 1 500 0
+	.loc 1 526 0
 	blti	a4, 3, .L7
 	movi.n	a7, 0
 .L7:
 .LVL21:
-	.loc 1 502 0
+	.loc 1 528 0
 	beqz.n	a5, .L8
-	.loc 1 503 0
+	.loc 1 529 0
 	movi.n	a11, 8
 	sub	a11, a11, a7
 	l32r	a10, .LC4
@@ -160,7 +160,7 @@ mbedtls_sha256_self_test:
 	call8	printf
 .LVL22:
 .L8:
-	.loc 1 505 0
+	.loc 1 531 0
 	mov.n	a11, a7
 	mov.n	a10, sp
 	call8	mbedtls_sha256_starts_ret
@@ -168,10 +168,10 @@ mbedtls_sha256_self_test:
 	mov.n	a2, a10
 .LVL24:
 	bnez.n	a10, .L9
-	.loc 1 508 0
+	.loc 1 534 0
 	bnei	a3, 2, .L10
 .LVL25:
-	.loc 1 510 0
+	.loc 1 536 0
 	movi	a12, 0x3e8
 	movi	a11, 0x61
 	mov.n	a10, a6
@@ -180,7 +180,7 @@ mbedtls_sha256_self_test:
 	movi	a3, 0x3e8
 .LVL27:
 .L11:
-	.loc 1 514 0
+	.loc 1 540 0
 	movi	a12, 0x3e8
 	mov.n	a11, a6
 	mov.n	a10, sp
@@ -188,16 +188,16 @@ mbedtls_sha256_self_test:
 .LVL28:
 	mov.n	a2, a10
 .LVL29:
-	.loc 1 515 0
+	.loc 1 541 0
 	bnez.n	a10, .L9
 .LVL30:
 	addi.n	a3, a3, -1
 .LVL31:
-	.loc 1 512 0 discriminator 2
+	.loc 1 538 0 discriminator 2
 	bnez.n	a3, .L11
 .LVL32:
 .L13:
-	.loc 1 528 0
+	.loc 1 554 0
 	addi	a11, sp, 112
 	mov.n	a10, sp
 	call8	mbedtls_sha256_finish_ret
@@ -208,7 +208,7 @@ mbedtls_sha256_self_test:
 	j	.L9
 .LVL35:
 .L10:
-	.loc 1 522 0
+	.loc 1 548 0
 	l32r	a2, .LC5
 .LVL36:
 	subx8	a11, a3, a3
@@ -224,12 +224,12 @@ mbedtls_sha256_self_test:
 .LVL39:
 	mov.n	a2, a10
 .LVL40:
-	.loc 1 524 0
+	.loc 1 550 0
 	beqz.n	a10, .L13
 	j	.L9
 .LVL41:
 .L34:
-	.loc 1 532 0
+	.loc 1 558 0
 	movi.n	a12, 8
 	l32r	a3, .LC7
 	sub	a12, a12, a7
@@ -240,47 +240,47 @@ mbedtls_sha256_self_test:
 	call8	memcmp
 .LVL42:
 	bnez.n	a10, .L18
-	.loc 1 538 0
+	.loc 1 564 0
 	beqz.n	a5, .L14
-	.loc 1 539 0
+	.loc 1 565 0
 	l32r	a10, .LC9
 	call8	puts
 .LVL43:
 .L14:
-	.loc 1 497 0 discriminator 2
+	.loc 1 523 0 discriminator 2
 	addi.n	a4, a4, 1
 .LVL44:
 	bnei	a4, 6, .L15
-	.loc 1 542 0
+	.loc 1 568 0
 	beqz.n	a5, .L16
-	.loc 1 543 0
+	.loc 1 569 0
 	movi.n	a10, 0xa
 	call8	putchar
 .LVL45:
 	j	.L16
 .LVL46:
 .L18:
-	.loc 1 534 0
+	.loc 1 560 0
 	movi.n	a2, 1
 .LVL47:
 .L9:
-	.loc 1 548 0
+	.loc 1 574 0
 	beqz.n	a5, .L16
-	.loc 1 549 0
+	.loc 1 575 0
 	l32r	a10, .LC11
 	call8	puts
 .LVL48:
 .L16:
-	.loc 1 552 0
+	.loc 1 578 0
 	mov.n	a10, sp
 	call8	mbedtls_sha256_free
 .LVL49:
-	.loc 1 553 0
+	.loc 1 579 0
 	mov.n	a10, a6
 	call8	mbedtls_free
 .LVL50:
 .L6:
-	.loc 1 556 0
+	.loc 1 582 0
 	retw.n
 .LFE2:
 	.size	mbedtls_sha256_self_test, .-mbedtls_sha256_self_test
@@ -716,7 +716,7 @@ sha256_test_buf:
 	.uleb128 0xc
 	.4byte	.LASF27
 	.byte	0x1
-	.2byte	0x186
+	.2byte	0x19c
 	.4byte	0x33
 	.4byte	.LFB0
 	.4byte	.LFE0-.LFB0
@@ -726,41 +726,41 @@ sha256_test_buf:
 	.uleb128 0xd
 	.4byte	.LASF24
 	.byte	0x1
-	.2byte	0x186
+	.2byte	0x19c
 	.4byte	0x246
 	.4byte	.LLST0
 	.uleb128 0xe
 	.4byte	.LASF25
 	.byte	0x1
-	.2byte	0x187
+	.2byte	0x19d
 	.4byte	0x3a
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0xe
 	.4byte	.LASF26
 	.byte	0x1
-	.2byte	0x188
+	.2byte	0x19e
 	.4byte	0x88
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0xe
 	.4byte	.LASF21
 	.byte	0x1
-	.2byte	0x189
+	.2byte	0x19f
 	.4byte	0x33
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0xf
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x18b
+	.2byte	0x1a1
 	.4byte	0x33
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0xf
 	.string	"ctx"
 	.byte	0x1
-	.2byte	0x18c
+	.2byte	0x1a2
 	.4byte	0x13f
 	.uleb128 0x3
 	.byte	0x91
@@ -768,7 +768,7 @@ sha256_test_buf:
 	.uleb128 0x10
 	.4byte	.LASF32
 	.byte	0x1
-	.2byte	0x199
+	.2byte	0x1b3
 	.4byte	.L2
 	.uleb128 0x11
 	.4byte	.LVL1
@@ -857,7 +857,7 @@ sha256_test_buf:
 	.uleb128 0x15
 	.4byte	.LASF54
 	.byte	0x1
-	.2byte	0x1a0
+	.2byte	0x1ba
 	.4byte	.LFB1
 	.4byte	.LFE1-.LFB1
 	.uleb128 0x1
@@ -866,28 +866,28 @@ sha256_test_buf:
 	.uleb128 0xe
 	.4byte	.LASF24
 	.byte	0x1
-	.2byte	0x1a0
+	.2byte	0x1ba
 	.4byte	0x246
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0xe
 	.4byte	.LASF25
 	.byte	0x1
-	.2byte	0x1a1
+	.2byte	0x1bb
 	.4byte	0x3a
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0xe
 	.4byte	.LASF26
 	.byte	0x1
-	.2byte	0x1a2
+	.2byte	0x1bc
 	.4byte	0x88
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0xe
 	.4byte	.LASF21
 	.byte	0x1
-	.2byte	0x1a3
+	.2byte	0x1bd
 	.4byte	0x33
 	.uleb128 0x1
 	.byte	0x55
@@ -923,7 +923,7 @@ sha256_test_buf:
 	.uleb128 0xc
 	.4byte	.LASF28
 	.byte	0x1
-	.2byte	0x1df
+	.2byte	0x1f9
 	.4byte	0x33
 	.4byte	.LFB2
 	.4byte	.LFE2-.LFB2
@@ -933,50 +933,50 @@ sha256_test_buf:
 	.uleb128 0xd
 	.4byte	.LASF29
 	.byte	0x1
-	.2byte	0x1df
+	.2byte	0x1f9
 	.4byte	0x33
 	.4byte	.LLST1
 	.uleb128 0x16
 	.string	"i"
 	.byte	0x1
-	.2byte	0x1e1
+	.2byte	0x1fb
 	.4byte	0x33
 	.4byte	.LLST2
 	.uleb128 0x16
 	.string	"j"
 	.byte	0x1
-	.2byte	0x1e1
+	.2byte	0x1fb
 	.4byte	0x33
 	.4byte	.LLST3
 	.uleb128 0x16
 	.string	"k"
 	.byte	0x1
-	.2byte	0x1e1
+	.2byte	0x1fb
 	.4byte	0x33
 	.4byte	.LLST4
 	.uleb128 0x17
 	.4byte	.LASF30
 	.byte	0x1
-	.2byte	0x1e1
+	.2byte	0x1fb
 	.4byte	0x33
 	.4byte	.LLST5
 	.uleb128 0x16
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x1e1
+	.2byte	0x1fb
 	.4byte	0x33
 	.4byte	.LLST6
 	.uleb128 0xf
 	.string	"buf"
 	.byte	0x1
-	.2byte	0x1e2
+	.2byte	0x1fc
 	.4byte	0x88
 	.uleb128 0x1
 	.byte	0x56
 	.uleb128 0x18
 	.4byte	.LASF31
 	.byte	0x1
-	.2byte	0x1e3
+	.2byte	0x1fd
 	.4byte	0x519
 	.uleb128 0x2
 	.byte	0x91
@@ -984,7 +984,7 @@ sha256_test_buf:
 	.uleb128 0xf
 	.string	"ctx"
 	.byte	0x1
-	.2byte	0x1e4
+	.2byte	0x1fe
 	.4byte	0x13f
 	.uleb128 0x3
 	.byte	0x91
@@ -992,12 +992,12 @@ sha256_test_buf:
 	.uleb128 0x10
 	.4byte	.LASF33
 	.byte	0x1
-	.2byte	0x223
+	.2byte	0x23d
 	.4byte	.L9
 	.uleb128 0x10
 	.4byte	.LASF32
 	.byte	0x1
-	.2byte	0x227
+	.2byte	0x241
 	.4byte	.L16
 	.uleb128 0x11
 	.4byte	.LVL13
@@ -1277,7 +1277,7 @@ sha256_test_buf:
 	.uleb128 0x18
 	.4byte	.LASF34
 	.byte	0x1
-	.2byte	0x1ad
+	.2byte	0x1c7
 	.4byte	0x551
 	.uleb128 0x5
 	.byte	0x3
@@ -1294,7 +1294,7 @@ sha256_test_buf:
 	.uleb128 0x18
 	.4byte	.LASF35
 	.byte	0x1
-	.2byte	0x1b4
+	.2byte	0x1ce
 	.4byte	0x578
 	.uleb128 0x5
 	.byte	0x3
@@ -1314,7 +1314,7 @@ sha256_test_buf:
 	.uleb128 0x18
 	.4byte	.LASF36
 	.byte	0x1
-	.2byte	0x1b9
+	.2byte	0x1d3
 	.4byte	0x5a5
 	.uleb128 0x5
 	.byte	0x3
@@ -1325,32 +1325,32 @@ sha256_test_buf:
 	.4byte	.LASF37
 	.4byte	.LASF37
 	.byte	0x6
-	.byte	0x4b
+	.byte	0x4d
 	.uleb128 0x19
 	.4byte	.LASF38
 	.4byte	.LASF38
 	.byte	0x6
-	.byte	0x67
+	.byte	0x6c
 	.uleb128 0x19
 	.4byte	.LASF39
 	.4byte	.LASF39
 	.byte	0x6
-	.byte	0x73
+	.byte	0x7b
 	.uleb128 0x19
 	.4byte	.LASF40
 	.4byte	.LASF40
 	.byte	0x6
-	.byte	0x80
+	.byte	0x8b
 	.uleb128 0x19
 	.4byte	.LASF41
 	.4byte	.LASF41
 	.byte	0x6
-	.byte	0x52
+	.byte	0x56
 	.uleb128 0x19
 	.4byte	.LASF42
 	.4byte	.LASF42
 	.byte	0x7
-	.byte	0x7c
+	.byte	0x7f
 	.uleb128 0x1a
 	.4byte	.LASF46
 	.4byte	.LASF48
@@ -1382,7 +1382,7 @@ sha256_test_buf:
 	.4byte	.LASF50
 	.4byte	.LASF50
 	.byte	0x7
-	.byte	0x7d
+	.byte	0x80
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:

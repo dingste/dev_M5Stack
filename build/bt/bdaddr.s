@@ -9,7 +9,7 @@
 	.section	.text.bdaddr_is_empty,"ax",@progbits
 	.literal_position
 	.literal .LC1, .LC0
-	.literal .LC2, __func__$3511
+	.literal .LC2, __func__$3517
 	.literal .LC4, .LC3
 	.align	4
 	.global	bdaddr_is_empty
@@ -58,7 +58,7 @@ bdaddr_is_empty:
 	.section	.text.bdaddr_equals,"ax",@progbits
 	.literal_position
 	.literal .LC6, .LC5
-	.literal .LC7, __func__$3517
+	.literal .LC7, __func__$3523
 	.literal .LC8, .LC3
 	.literal .LC10, .LC9
 	.align	4
@@ -112,7 +112,7 @@ bdaddr_equals:
 	.section	.text.bdaddr_copy,"ax",@progbits
 	.literal_position
 	.literal .LC12, .LC11
-	.literal .LC13, __func__$3522
+	.literal .LC13, __func__$3528
 	.literal .LC14, .LC3
 	.literal .LC16, .LC15
 	.align	4
@@ -164,7 +164,7 @@ bdaddr_copy:
 	.section	.text.bdaddr_to_string,"ax",@progbits
 	.literal_position
 	.literal .LC17, .LC0
-	.literal .LC18, __func__$3528
+	.literal .LC18, __func__$3534
 	.literal .LC19, .LC3
 	.literal .LC21, .LC20
 	.literal .LC23, .LC22
@@ -230,7 +230,7 @@ bdaddr_to_string:
 	.section	.text.string_is_bdaddr,"ax",@progbits
 	.literal_position
 	.literal .LC26, .LC20
-	.literal .LC27, __func__$3533
+	.literal .LC27, __func__$3539
 	.literal .LC28, .LC3
 	.literal .LC29, -1431655765
 	.align	4
@@ -334,7 +334,7 @@ string_is_bdaddr:
 	.section	.text.string_to_bdaddr,"ax",@progbits
 	.literal_position
 	.literal .LC32, .LC20
-	.literal .LC33, __func__$3543
+	.literal .LC33, __func__$3549
 	.literal .LC34, .LC3
 	.literal .LC35, .LC0
 	.literal .LC36, .LC22
@@ -456,35 +456,35 @@ hash_function_bdaddr:
 	retw.n
 .LFE19:
 	.size	hash_function_bdaddr, .-hash_function_bdaddr
-	.section	.rodata.__func__$3543,"a",@progbits
-	.type	__func__$3543, @object
-	.size	__func__$3543, 17
-__func__$3543:
+	.section	.rodata.__func__$3549,"a",@progbits
+	.type	__func__$3549, @object
+	.size	__func__$3549, 17
+__func__$3549:
 	.string	"string_to_bdaddr"
-	.section	.rodata.__func__$3533,"a",@progbits
-	.type	__func__$3533, @object
-	.size	__func__$3533, 17
-__func__$3533:
+	.section	.rodata.__func__$3539,"a",@progbits
+	.type	__func__$3539, @object
+	.size	__func__$3539, 17
+__func__$3539:
 	.string	"string_is_bdaddr"
+	.section	.rodata.__func__$3534,"a",@progbits
+	.type	__func__$3534, @object
+	.size	__func__$3534, 17
+__func__$3534:
+	.string	"bdaddr_to_string"
 	.section	.rodata.__func__$3528,"a",@progbits
 	.type	__func__$3528, @object
-	.size	__func__$3528, 17
+	.size	__func__$3528, 12
 __func__$3528:
-	.string	"bdaddr_to_string"
-	.section	.rodata.__func__$3522,"a",@progbits
-	.type	__func__$3522, @object
-	.size	__func__$3522, 12
-__func__$3522:
 	.string	"bdaddr_copy"
+	.section	.rodata.__func__$3523,"a",@progbits
+	.type	__func__$3523, @object
+	.size	__func__$3523, 14
+__func__$3523:
+	.string	"bdaddr_equals"
 	.section	.rodata.__func__$3517,"a",@progbits
 	.type	__func__$3517, @object
-	.size	__func__$3517, 14
+	.size	__func__$3517, 16
 __func__$3517:
-	.string	"bdaddr_equals"
-	.section	.rodata.__func__$3511,"a",@progbits
-	.type	__func__$3511, @object
-	.size	__func__$3511, 16
-__func__$3511:
 	.string	"bdaddr_is_empty"
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -592,7 +592,7 @@ __func__$3511:
 	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
 	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
 	.file 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_defs.h"
-	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h"
+	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
 	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
 	.file 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
 	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
@@ -691,26 +691,26 @@ __func__$3511:
 	.byte	0x4
 	.byte	0x2d
 	.4byte	0x53
+	.uleb128 0x5
+	.byte	0x4
+	.4byte	0xc7
+	.uleb128 0x7
 	.uleb128 0x3
 	.4byte	.LASF16
 	.byte	0x5
-	.byte	0x21
+	.byte	0x1a
 	.4byte	0xab
 	.uleb128 0x2
 	.byte	0x1
 	.byte	0x2
 	.4byte	.LASF17
-	.uleb128 0x7
-	.4byte	0xc1
-	.4byte	0xe3
 	.uleb128 0x8
+	.4byte	0xc8
+	.4byte	0xea
+	.uleb128 0x9
 	.4byte	0x85
 	.byte	0x5
 	.byte	0
-	.uleb128 0x5
-	.byte	0x4
-	.4byte	0xe9
-	.uleb128 0x9
 	.uleb128 0xa
 	.byte	0x6
 	.byte	0x6
@@ -723,10 +723,10 @@ __func__$3511:
 	.4byte	0xff
 	.byte	0
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.4byte	0xab
 	.4byte	0x10f
-	.uleb128 0x8
+	.uleb128 0x9
 	.4byte	0x85
 	.byte	0x5
 	.byte	0
@@ -744,7 +744,7 @@ __func__$3511:
 	.4byte	.LASF20
 	.byte	0x1
 	.byte	0x23
-	.4byte	0xcc
+	.4byte	0xd3
 	.4byte	.LFB13
 	.4byte	.LFE13-.LFB13
 	.uleb128 0x1
@@ -761,7 +761,7 @@ __func__$3511:
 	.4byte	0x1d1
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$3511
+	.4byte	__func__$3517
 	.uleb128 0xf
 	.4byte	.LASF31
 	.byte	0x1
@@ -791,7 +791,7 @@ __func__$3511:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$3511
+	.4byte	__func__$3517
 	.uleb128 0x11
 	.uleb128 0x1
 	.byte	0x5d
@@ -827,10 +827,10 @@ __func__$3511:
 	.4byte	0x1bc
 	.uleb128 0x6
 	.4byte	0x10f
-	.uleb128 0x7
+	.uleb128 0x8
 	.4byte	0x99
 	.4byte	0x1d1
-	.uleb128 0x8
+	.uleb128 0x9
 	.4byte	0x85
 	.byte	0xf
 	.byte	0
@@ -840,7 +840,7 @@ __func__$3511:
 	.4byte	.LASF21
 	.byte	0x1
 	.byte	0x2b
-	.4byte	0xcc
+	.4byte	0xd3
 	.4byte	.LFB14
 	.4byte	.LFE14-.LFB14
 	.uleb128 0x1
@@ -864,7 +864,7 @@ __func__$3511:
 	.4byte	0x257
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$3517
+	.4byte	__func__$3523
 	.uleb128 0x10
 	.4byte	.LVL5
 	.4byte	0x627
@@ -892,10 +892,10 @@ __func__$3511:
 	.byte	0x36
 	.byte	0
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.4byte	0x99
 	.4byte	0x257
-	.uleb128 0x8
+	.uleb128 0x9
 	.4byte	0x85
 	.byte	0xd
 	.byte	0
@@ -929,7 +929,7 @@ __func__$3511:
 	.4byte	0x2dd
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$3522
+	.4byte	__func__$3528
 	.uleb128 0x10
 	.4byte	.LVL9
 	.4byte	0x627
@@ -954,10 +954,10 @@ __func__$3511:
 	.uleb128 0x5
 	.byte	0x4
 	.4byte	0x10f
-	.uleb128 0x7
+	.uleb128 0x8
 	.4byte	0x99
 	.4byte	0x2dd
-	.uleb128 0x8
+	.uleb128 0x9
 	.4byte	0x85
 	.byte	0xb
 	.byte	0
@@ -998,7 +998,7 @@ __func__$3511:
 	.4byte	0x38a
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$3528
+	.4byte	__func__$3534
 	.uleb128 0x15
 	.string	"ptr"
 	.byte	0x1
@@ -1040,10 +1040,10 @@ __func__$3511:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.4byte	0x99
 	.4byte	0x38a
-	.uleb128 0x8
+	.uleb128 0x9
 	.4byte	0x85
 	.byte	0x10
 	.byte	0
@@ -1058,7 +1058,7 @@ __func__$3511:
 	.4byte	.LASF50
 	.byte	0x1
 	.byte	0x18
-	.4byte	0xcc
+	.4byte	0xd3
 	.byte	0x3
 	.4byte	0x3b4
 	.uleb128 0x17
@@ -1071,7 +1071,7 @@ __func__$3511:
 	.4byte	.LASF32
 	.byte	0x1
 	.byte	0x4b
-	.4byte	0xcc
+	.4byte	0xd3
 	.4byte	.LFB17
 	.4byte	.LFE17-.LFB17
 	.uleb128 0x1
@@ -1088,7 +1088,7 @@ __func__$3511:
 	.4byte	0x46a
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$3533
+	.4byte	__func__$3539
 	.uleb128 0x15
 	.string	"len"
 	.byte	0x1
@@ -1136,7 +1136,7 @@ __func__$3511:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$3533
+	.4byte	__func__$3539
 	.uleb128 0x11
 	.uleb128 0x1
 	.byte	0x5d
@@ -1161,7 +1161,7 @@ __func__$3511:
 	.4byte	.LASF33
 	.byte	0x1
 	.byte	0x62
-	.4byte	0xcc
+	.4byte	0xd3
 	.4byte	.LFB18
 	.4byte	.LFE18-.LFB18
 	.uleb128 0x1
@@ -1185,7 +1185,7 @@ __func__$3511:
 	.4byte	0x57e
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$3543
+	.4byte	__func__$3549
 	.uleb128 0xf
 	.4byte	.LASF34
 	.byte	0x1
@@ -1212,7 +1212,7 @@ __func__$3511:
 	.string	"ret"
 	.byte	0x1
 	.byte	0x6a
-	.4byte	0xcc
+	.4byte	0xd3
 	.4byte	.LLST11
 	.uleb128 0x1b
 	.4byte	.LBB12
@@ -1318,10 +1318,10 @@ __func__$3511:
 	.uleb128 0x5
 	.byte	0x4
 	.4byte	0xab
-	.uleb128 0x7
+	.uleb128 0x8
 	.4byte	0xb6
 	.4byte	0x599
-	.uleb128 0x8
+	.uleb128 0x9
 	.4byte	0x85
 	.byte	0x5
 	.byte	0
@@ -1339,7 +1339,7 @@ __func__$3511:
 	.string	"key"
 	.byte	0x1
 	.byte	0x76
-	.4byte	0xe3
+	.4byte	0xc1
 	.4byte	.LLST13
 	.uleb128 0x1d
 	.4byte	.LASF37
@@ -1367,7 +1367,7 @@ __func__$3511:
 	.uleb128 0x1f
 	.4byte	.LASF39
 	.byte	0x5
-	.2byte	0x2cc
+	.2byte	0x2b8
 	.4byte	0x60a
 	.byte	0x6
 	.byte	0xff
@@ -1377,11 +1377,11 @@ __func__$3511:
 	.byte	0xff
 	.byte	0xff
 	.uleb128 0x6
-	.4byte	0xd3
+	.4byte	0xda
 	.uleb128 0x1f
 	.4byte	.LASF40
 	.byte	0x5
-	.2byte	0x2cd
+	.2byte	0x2b9
 	.4byte	0x622
 	.byte	0x6
 	.byte	0
@@ -1391,7 +1391,7 @@ __func__$3511:
 	.byte	0
 	.byte	0
 	.uleb128 0x6
-	.4byte	0xd3
+	.4byte	0xda
 	.uleb128 0x20
 	.4byte	.LASF41
 	.4byte	.LASF41
@@ -1494,6 +1494,11 @@ __func__$3511:
 	.byte	0
 	.byte	0
 	.uleb128 0x7
+	.uleb128 0x26
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x8
 	.uleb128 0x1
 	.byte	0x1
 	.uleb128 0x49
@@ -1502,18 +1507,13 @@ __func__$3511:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0x9
 	.uleb128 0x21
 	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x2f
 	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x9
-	.uleb128 0x26
-	.byte	0
 	.byte	0
 	.byte	0
 	.uleb128 0xa

@@ -193,7 +193,7 @@ _xt_tick_divisor:
 	.4byte	.LASF16
 	.4byte	.LASF16
 	.byte	0x2
-	.byte	0x34
+	.byte	0x35
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:

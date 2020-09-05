@@ -10,13 +10,13 @@
 	.literal_position
 	.literal .LC0, ip_data+20
 	.literal .LC2, .LC1
-	.literal .LC3, __func__$6598
+	.literal .LC3, __func__$6662
 	.literal .LC5, .LC4
 	.literal .LC6, ip_data
 	.align	4
 	.type	icmp6_send_response, @function
 icmp6_send_response:
-.LFB23:
+.LFB32:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/ipv6/icmp6.c"
 	.loc 1 273 0
 .LVL0:
@@ -244,7 +244,7 @@ icmp6_send_response:
 .LVL22:
 .L1:
 	retw.n
-.LFE23:
+.LFE32:
 	.size	icmp6_send_response, .-icmp6_send_response
 	.section	.text.icmp6_input,"ax",@progbits
 	.literal_position
@@ -255,7 +255,7 @@ icmp6_send_response:
 	.global	icmp6_input
 	.type	icmp6_input, @function
 icmp6_input:
-.LFB18:
+.LFB27:
 	.loc 1 82 0
 .LVL23:
 	entry	sp, 64
@@ -390,14 +390,14 @@ icmp6_input:
 	call8	pbuf_free
 .LVL37:
 	retw.n
-.LFE18:
+.LFE27:
 	.size	icmp6_input, .-icmp6_input
 	.section	.text.icmp6_dest_unreach,"ax",@progbits
 	.align	4
 	.global	icmp6_dest_unreach
 	.type	icmp6_dest_unreach, @function
 icmp6_dest_unreach:
-.LFB19:
+.LFB28:
 	.loc 1 218 0
 .LVL38:
 	entry	sp, 32
@@ -410,14 +410,14 @@ icmp6_dest_unreach:
 	call8	icmp6_send_response
 .LVL39:
 	retw.n
-.LFE19:
+.LFE28:
 	.size	icmp6_dest_unreach, .-icmp6_dest_unreach
 	.section	.text.icmp6_packet_too_big,"ax",@progbits
 	.align	4
 	.global	icmp6_packet_too_big
 	.type	icmp6_packet_too_big, @function
 icmp6_packet_too_big:
-.LFB20:
+.LFB29:
 	.loc 1 231 0
 .LVL40:
 	entry	sp, 32
@@ -430,14 +430,14 @@ icmp6_packet_too_big:
 	call8	icmp6_send_response
 .LVL41:
 	retw.n
-.LFE20:
+.LFE29:
 	.size	icmp6_packet_too_big, .-icmp6_packet_too_big
 	.section	.text.icmp6_time_exceeded,"ax",@progbits
 	.align	4
 	.global	icmp6_time_exceeded
 	.type	icmp6_time_exceeded, @function
 icmp6_time_exceeded:
-.LFB21:
+.LFB30:
 	.loc 1 244 0
 .LVL42:
 	entry	sp, 32
@@ -450,14 +450,14 @@ icmp6_time_exceeded:
 	call8	icmp6_send_response
 .LVL43:
 	retw.n
-.LFE21:
+.LFE30:
 	.size	icmp6_time_exceeded, .-icmp6_time_exceeded
 	.section	.text.icmp6_param_problem,"ax",@progbits
 	.align	4
 	.global	icmp6_param_problem
 	.type	icmp6_param_problem, @function
 icmp6_param_problem:
-.LFB22:
+.LFB31:
 	.loc 1 258 0
 .LVL44:
 	entry	sp, 32
@@ -470,12 +470,12 @@ icmp6_param_problem:
 	call8	icmp6_send_response
 .LVL45:
 	retw.n
-.LFE22:
+.LFE31:
 	.size	icmp6_param_problem, .-icmp6_param_problem
-	.section	.rodata.__func__$6598,"a",@progbits
-	.type	__func__$6598, @object
-	.size	__func__$6598, 20
-__func__$6598:
+	.section	.rodata.__func__$6662,"a",@progbits
+	.type	__func__$6662, @object
+	.size	__func__$6662, 20
+__func__$6662:
 	.string	"icmp6_send_response"
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -496,10 +496,10 @@ __func__$6598:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI0-.LFB23
+	.4byte	.LCFI0-.LFB32
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -508,10 +508,10 @@ __func__$6598:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI1-.LFB18
+	.4byte	.LCFI1-.LFB27
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -520,10 +520,10 @@ __func__$6598:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI2-.LFB19
+	.4byte	.LCFI2-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -532,10 +532,10 @@ __func__$6598:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI3-.LFB20
+	.4byte	.LCFI3-.LFB29
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -544,10 +544,10 @@ __func__$6598:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI4-.LFB21
+	.4byte	.LCFI4-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -556,10 +556,10 @@ __func__$6598:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI5-.LFB22
+	.4byte	.LCFI5-.LFB31
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1758,8 +1758,8 @@ __func__$6598:
 	.4byte	.LASF197
 	.byte	0x1
 	.2byte	0x110
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xb53
@@ -1845,7 +1845,7 @@ __func__$6598:
 	.4byte	0xb6f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6598
+	.4byte	__func__$6662
 	.uleb128 0x21
 	.4byte	.LVL1
 	.4byte	0xe36
@@ -1888,7 +1888,7 @@ __func__$6598:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6598
+	.4byte	__func__$6662
 	.uleb128 0x22
 	.uleb128 0x1
 	.byte	0x5d
@@ -2048,8 +2048,8 @@ __func__$6598:
 	.4byte	.LASF177
 	.byte	0x1
 	.byte	0x51
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xcde
@@ -2276,8 +2276,8 @@ __func__$6598:
 	.4byte	.LASF178
 	.byte	0x1
 	.byte	0xd9
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xd2d
@@ -2329,8 +2329,8 @@ __func__$6598:
 	.4byte	.LASF179
 	.byte	0x1
 	.byte	0xe6
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xd7b
@@ -2379,8 +2379,8 @@ __func__$6598:
 	.4byte	.LASF180
 	.byte	0x1
 	.byte	0xf3
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xdca
@@ -2432,8 +2432,8 @@ __func__$6598:
 	.4byte	.LASF181
 	.byte	0x1
 	.2byte	0x101
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xe2b
@@ -3180,7 +3180,7 @@ __func__$6598:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL16
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3205,7 +3205,7 @@ __func__$6598:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL18
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3219,7 +3219,7 @@ __func__$6598:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL5
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3233,7 +3233,7 @@ __func__$6598:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL19
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3333,34 +3333,34 @@ __func__$6598:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB22
-	.4byte	.LFE22
+	.4byte	.LFB32
+	.4byte	.LFE32
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB28
+	.4byte	.LFE28
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB31
+	.4byte	.LFE31
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

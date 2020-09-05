@@ -8,7 +8,7 @@
 	.align	4
 	.type	find_key, @function
 find_key:
-.LFB19:
+.LFB28:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/pthread/pthread_local_storage.c"
 	.loc 1 79 0
 .LVL0:
@@ -45,7 +45,7 @@ find_key:
 .LVL5:
 	.loc 1 89 0
 	retw.n
-.LFE19:
+.LFE28:
 	.size	find_key, .-find_key
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC2:
@@ -55,12 +55,12 @@ find_key:
 	.section	.text.pthread_local_storage_thread_deleted_callback,"ax",@progbits
 	.literal_position
 	.literal .LC3, .LC2
-	.literal .LC4, __func__$5797
+	.literal .LC4, __func__$5843
 	.literal .LC6, .LC5
 	.align	4
 	.type	pthread_local_storage_thread_deleted_callback, @function
 pthread_local_storage_thread_deleted_callback:
-.LFB21:
+.LFB30:
 	.loc 1 124 0
 .LVL6:
 	entry	sp, 32
@@ -121,7 +121,7 @@ pthread_local_storage_thread_deleted_callback:
 	call8	free
 .LVL17:
 	retw.n
-.LFE21:
+.LFE30:
 	.size	pthread_local_storage_thread_deleted_callback, .-pthread_local_storage_thread_deleted_callback
 	.section	.text.pthread_key_create,"ax",@progbits
 	.literal_position
@@ -131,7 +131,7 @@ pthread_local_storage_thread_deleted_callback:
 	.global	pthread_key_create
 	.type	pthread_key_create, @function
 pthread_key_create:
-.LFB18:
+.LFB27:
 	.loc 1 59 0
 .LVL18:
 	entry	sp, 32
@@ -183,7 +183,7 @@ pthread_key_create:
 	mov.n	a2, a5
 .LVL24:
 	retw.n
-.LFE18:
+.LFE27:
 	.size	pthread_key_create, .-pthread_key_create
 	.section	.text.pthread_key_delete,"ax",@progbits
 	.literal_position
@@ -193,7 +193,7 @@ pthread_key_create:
 	.global	pthread_key_delete
 	.type	pthread_key_delete, @function
 pthread_key_delete:
-.LFB20:
+.LFB29:
 	.loc 1 92 0
 .LVL25:
 	entry	sp, 32
@@ -244,14 +244,14 @@ pthread_key_delete:
 	movi.n	a2, 0
 .LVL33:
 	retw.n
-.LFE20:
+.LFE29:
 	.size	pthread_key_delete, .-pthread_key_delete
 	.section	.text.pthread_internal_local_storage_destructor_callback,"ax",@progbits
 	.align	4
 	.global	pthread_internal_local_storage_destructor_callback
 	.type	pthread_internal_local_storage_destructor_callback, @function
 pthread_internal_local_storage_destructor_callback:
-.LFB22:
+.LFB31:
 	.loc 1 170 0
 	entry	sp, 32
 .LCFI4:
@@ -277,14 +277,14 @@ pthread_internal_local_storage_destructor_callback:
 .LVL37:
 .L32:
 	retw.n
-.LFE22:
+.LFE31:
 	.size	pthread_internal_local_storage_destructor_callback, .-pthread_internal_local_storage_destructor_callback
 	.section	.text.pthread_getspecific,"ax",@progbits
 	.align	4
 	.global	pthread_getspecific
 	.type	pthread_getspecific, @function
 pthread_getspecific:
-.LFB24:
+.LFB33:
 	.loc 1 200 0
 .LVL38:
 	entry	sp, 32
@@ -326,7 +326,7 @@ pthread_getspecific:
 	mov.n	a2, a8
 .LVL44:
 	retw.n
-.LFE24:
+.LFE33:
 	.size	pthread_getspecific, .-pthread_getspecific
 	.section	.text.pthread_setspecific,"ax",@progbits
 	.literal_position
@@ -335,7 +335,7 @@ pthread_getspecific:
 	.global	pthread_setspecific
 	.type	pthread_setspecific, @function
 pthread_setspecific:
-.LFB25:
+.LFB34:
 	.loc 1 214 0
 .LVL45:
 	entry	sp, 32
@@ -473,12 +473,12 @@ pthread_setspecific:
 	.loc 1 257 0
 	mov.n	a2, a4
 	retw.n
-.LFE25:
+.LFE34:
 	.size	pthread_setspecific, .-pthread_setspecific
-	.section	.rodata.__func__$5797,"a",@progbits
-	.type	__func__$5797, @object
-	.size	__func__$5797, 46
-__func__$5797:
+	.section	.rodata.__func__$5843,"a",@progbits
+	.type	__func__$5843, @object
+	.size	__func__$5843, 46
+__func__$5843:
 	.string	"pthread_local_storage_thread_deleted_callback"
 	.section	.data.s_keys_lock,"aw",@progbits
 	.align	4
@@ -513,10 +513,10 @@ s_keys:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI0-.LFB19
+	.4byte	.LCFI0-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -525,10 +525,10 @@ s_keys:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI1-.LFB21
+	.4byte	.LCFI1-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -537,10 +537,10 @@ s_keys:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI2-.LFB18
+	.4byte	.LCFI2-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -549,10 +549,10 @@ s_keys:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI3-.LFB20
+	.4byte	.LCFI3-.LFB29
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -561,10 +561,10 @@ s_keys:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI4-.LFB22
+	.4byte	.LCFI4-.LFB31
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -573,10 +573,10 @@ s_keys:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI5-.LFB24
+	.4byte	.LCFI5-.LFB33
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -585,10 +585,10 @@ s_keys:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.byte	0x4
-	.4byte	.LCFI6-.LFB25
+	.4byte	.LCFI6-.LFB34
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -912,8 +912,8 @@ s_keys:
 	.byte	0x1
 	.byte	0x4e
 	.4byte	0x25d
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2b8
@@ -946,8 +946,8 @@ s_keys:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	0x1de
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x3aa
@@ -966,7 +966,7 @@ s_keys:
 	.4byte	0x20b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5797
+	.4byte	__func__$5843
 	.uleb128 0x22
 	.4byte	0x218
 	.4byte	.LLST3
@@ -991,7 +991,7 @@ s_keys:
 	.4byte	0x20b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5797
+	.4byte	__func__$5843
 	.uleb128 0x26
 	.4byte	.LVL9
 	.4byte	0x78d
@@ -1012,7 +1012,7 @@ s_keys:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5797
+	.4byte	__func__$5843
 	.uleb128 0x1c
 	.uleb128 0x1
 	.byte	0x5d
@@ -1062,8 +1062,8 @@ s_keys:
 	.byte	0x1
 	.byte	0x3a
 	.4byte	0x25
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x42c
@@ -1131,8 +1131,8 @@ s_keys:
 	.byte	0x1
 	.byte	0x5b
 	.4byte	0x25
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x4d3
@@ -1199,8 +1199,8 @@ s_keys:
 	.4byte	.LASF60
 	.byte	0x1
 	.byte	0xa9
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x541
@@ -1293,8 +1293,8 @@ s_keys:
 	.byte	0x1
 	.byte	0xc7
 	.4byte	0x76
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x60e
@@ -1359,8 +1359,8 @@ s_keys:
 	.byte	0x1
 	.byte	0xd5
 	.4byte	0x25
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x755
@@ -1536,12 +1536,12 @@ s_keys:
 	.4byte	.LASF47
 	.4byte	.LASF47
 	.byte	0x5
-	.byte	0xda
+	.byte	0xf4
 	.uleb128 0x31
 	.4byte	.LASF48
 	.4byte	.LASF48
 	.byte	0x5
-	.byte	0xd9
+	.byte	0xf3
 	.uleb128 0x31
 	.4byte	.LASF49
 	.4byte	.LASF49
@@ -2228,7 +2228,7 @@ s_keys:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL2
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -2240,7 +2240,7 @@ s_keys:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL3
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -2251,7 +2251,7 @@ s_keys:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL10
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2269,7 +2269,7 @@ s_keys:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL16
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -2309,7 +2309,7 @@ s_keys:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL24
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2330,7 +2330,7 @@ s_keys:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL33
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2369,7 +2369,7 @@ s_keys:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL44
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2429,7 +2429,7 @@ s_keys:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL68
-	.4byte	.LFE25
+	.4byte	.LFE34
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2531,38 +2531,38 @@ s_keys:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB24
-	.4byte	.LFE24
-	.4byte	.LFB25
-	.4byte	.LFE25
+	.4byte	.LFB28
+	.4byte	.LFE28
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB31
+	.4byte	.LFE31
+	.4byte	.LFB33
+	.4byte	.LFE33
+	.4byte	.LFB34
+	.4byte	.LFE34
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

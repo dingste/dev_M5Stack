@@ -6,7 +6,7 @@
 	.global	select
 	.type	select, @function
 select:
-.LFB17:
+.LFB26:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/select.c"
 	.loc 1 43 0
 .LVL0:
@@ -24,7 +24,7 @@ select:
 	mov.n	a2, a10
 .LVL2:
 	retw.n
-.LFE17:
+.LFE26:
 	.size	select, .-select
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -45,10 +45,10 @@ select:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.byte	0x4
-	.4byte	.LCFI0-.LFB17
+	.4byte	.LCFI0-.LFB26
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -194,8 +194,8 @@ select:
 	.byte	0x1
 	.byte	0x2a
 	.4byte	0x41
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x18c
@@ -272,7 +272,7 @@ select:
 	.4byte	.LASF29
 	.4byte	.LASF29
 	.byte	0x4
-	.2byte	0x167
+	.2byte	0x170
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -501,7 +501,7 @@ select:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL2
-	.4byte	.LFE17
+	.4byte	.LFE26
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -517,14 +517,14 @@ select:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB17
-	.4byte	.LFE17
+	.4byte	.LFB26
+	.4byte	.LFE26
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

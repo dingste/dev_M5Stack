@@ -8,21 +8,21 @@
 mbedtls_hardware_poll:
 .LFB6:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/esp_hardware.c"
-	.loc 1 18 0
+	.loc 1 20 0
 .LVL0:
 	entry	sp, 32
 .LCFI0:
-	.loc 1 19 0
+	.loc 1 21 0
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	esp_fill_random
 .LVL1:
-	.loc 1 22 0
+	.loc 1 24 0
 	movi.n	a2, 0
 .LVL2:
-	.loc 1 20 0
-	s32i.n	a4, a5, 0
 	.loc 1 22 0
+	s32i.n	a4, a5, 0
+	.loc 1 24 0
 	retw.n
 .LFE6:
 	.size	mbedtls_hardware_poll, .-mbedtls_hardware_poll
@@ -136,7 +136,7 @@ mbedtls_hardware_poll:
 	.uleb128 0x7
 	.4byte	.LASF19
 	.byte	0x1
-	.byte	0x10
+	.byte	0x12
 	.4byte	0x3e
 	.4byte	.LFB6
 	.4byte	.LFE6-.LFB6
@@ -146,27 +146,27 @@ mbedtls_hardware_poll:
 	.uleb128 0x8
 	.4byte	.LASF12
 	.byte	0x1
-	.byte	0x10
+	.byte	0x12
 	.4byte	0x76
 	.4byte	.LLST0
 	.uleb128 0x9
 	.4byte	.LASF13
 	.byte	0x1
-	.byte	0x11
+	.byte	0x13
 	.4byte	0x7f
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0xa
 	.string	"len"
 	.byte	0x1
-	.byte	0x11
+	.byte	0x13
 	.4byte	0x25
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x9
 	.4byte	.LASF14
 	.byte	0x1
-	.byte	0x11
+	.byte	0x13
 	.4byte	0xf9
 	.uleb128 0x1
 	.byte	0x55
@@ -194,7 +194,7 @@ mbedtls_hardware_poll:
 	.4byte	.LASF20
 	.4byte	.LASF20
 	.byte	0x3
-	.byte	0xb1
+	.byte	0xb2
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:

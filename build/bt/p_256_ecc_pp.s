@@ -857,7 +857,7 @@ ECC_CheckPointIsInElliCur_P256:
 	.file 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/smp/include/p_256_multprecision.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x114b
+	.4byte	0x114f
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -865,6 +865,7 @@ ECC_CheckPointIsInElliCur_P256:
 	.4byte	.LASF55
 	.byte	0xc
 	.4byte	.LASF56
+	.4byte	.LASF57
 	.4byte	.Ldebug_ranges0+0x20
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -888,7 +889,7 @@ ECC_CheckPointIsInElliCur_P256:
 	.4byte	.LASF5
 	.byte	0x2
 	.byte	0x12
-	.4byte	0x48
+	.4byte	0x4c
 	.uleb128 0x3
 	.byte	0x1
 	.byte	0x8
@@ -901,7 +902,7 @@ ECC_CheckPointIsInElliCur_P256:
 	.4byte	.LASF6
 	.byte	0x2
 	.byte	0x1a
-	.4byte	0x28
+	.4byte	0x2c
 	.uleb128 0x3
 	.byte	0x8
 	.byte	0x5
@@ -930,111 +931,111 @@ ECC_CheckPointIsInElliCur_P256:
 	.4byte	.LASF13
 	.byte	0x3
 	.byte	0x15
-	.4byte	0x3d
+	.4byte	0x41
 	.uleb128 0x4
 	.4byte	.LASF14
 	.byte	0x3
 	.byte	0x2d
-	.4byte	0x56
+	.4byte	0x5a
 	.uleb128 0x4
 	.4byte	.LASF15
 	.byte	0x4
-	.byte	0x21
-	.4byte	0x8b
+	.byte	0x1a
+	.4byte	0x8f
 	.uleb128 0x3
 	.byte	0x1
 	.byte	0x2
 	.4byte	.LASF16
 	.uleb128 0x5
-	.4byte	0xa1
-	.4byte	0xc3
+	.4byte	0xa5
+	.4byte	0xc7
 	.uleb128 0x6
-	.4byte	0x76
+	.4byte	0x7a
 	.byte	0x5
 	.byte	0
 	.uleb128 0x7
 	.byte	0x60
 	.byte	0x5
 	.byte	0x1f
-	.4byte	0xea
+	.4byte	0xee
 	.uleb128 0x8
 	.string	"x"
 	.byte	0x5
 	.byte	0x20
-	.4byte	0xea
+	.4byte	0xee
 	.byte	0
 	.uleb128 0x8
 	.string	"y"
 	.byte	0x5
 	.byte	0x21
-	.4byte	0xea
+	.4byte	0xee
 	.byte	0x20
 	.uleb128 0x8
 	.string	"z"
 	.byte	0x5
 	.byte	0x22
-	.4byte	0xea
+	.4byte	0xee
 	.byte	0x40
 	.byte	0
 	.uleb128 0x5
-	.4byte	0x7d
-	.4byte	0xfa
+	.4byte	0x81
+	.4byte	0xfe
 	.uleb128 0x6
-	.4byte	0x76
+	.4byte	0x7a
 	.byte	0x7
 	.byte	0
 	.uleb128 0x4
 	.4byte	.LASF17
 	.byte	0x5
 	.byte	0x23
-	.4byte	0xc3
+	.4byte	0xc7
 	.uleb128 0x7
 	.byte	0xe4
 	.byte	0x5
 	.byte	0x25
-	.4byte	0x14e
+	.4byte	0x152
 	.uleb128 0x8
 	.string	"a"
 	.byte	0x5
 	.byte	0x27
-	.4byte	0xea
+	.4byte	0xee
 	.byte	0
 	.uleb128 0x8
 	.string	"b"
 	.byte	0x5
 	.byte	0x28
-	.4byte	0xea
+	.4byte	0xee
 	.byte	0x20
 	.uleb128 0x9
 	.4byte	.LASF18
 	.byte	0x5
 	.byte	0x2b
-	.4byte	0x21
+	.4byte	0x25
 	.byte	0x40
 	.uleb128 0x8
 	.string	"p"
 	.byte	0x5
 	.byte	0x2e
-	.4byte	0xea
+	.4byte	0xee
 	.byte	0x44
 	.uleb128 0x9
 	.4byte	.LASF19
 	.byte	0x5
 	.byte	0x31
-	.4byte	0xea
+	.4byte	0xee
 	.byte	0x64
 	.uleb128 0x8
 	.string	"G"
 	.byte	0x5
 	.byte	0x34
-	.4byte	0xfa
+	.4byte	0xfe
 	.byte	0x84
 	.byte	0
 	.uleb128 0x4
 	.4byte	.LASF20
 	.byte	0x5
 	.byte	0x36
-	.4byte	0x105
+	.4byte	0x109
 	.uleb128 0xa
 	.4byte	.LASF22
 	.byte	0x1
@@ -1043,33 +1044,33 @@ ECC_CheckPointIsInElliCur_P256:
 	.4byte	.LFE7-.LFB7
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x510
+	.4byte	0x514
 	.uleb128 0xb
 	.string	"q"
 	.byte	0x1
 	.byte	0x2c
-	.4byte	0x510
+	.4byte	0x514
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0xb
 	.string	"p"
 	.byte	0x1
 	.byte	0x2c
-	.4byte	0x510
+	.4byte	0x514
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0xc
 	.4byte	.LASF21
 	.byte	0x1
 	.byte	0x2c
-	.4byte	0x96
+	.4byte	0x9a
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0xd
 	.string	"t1"
 	.byte	0x1
 	.byte	0x2e
-	.4byte	0xea
+	.4byte	0xee
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -80
@@ -1077,7 +1078,7 @@ ECC_CheckPointIsInElliCur_P256:
 	.string	"t2"
 	.byte	0x1
 	.byte	0x2f
-	.4byte	0xea
+	.4byte	0xee
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -112
@@ -1085,7 +1086,7 @@ ECC_CheckPointIsInElliCur_P256:
 	.string	"t3"
 	.byte	0x1
 	.byte	0x30
-	.4byte	0xea
+	.4byte	0xee
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -144
@@ -1093,46 +1094,46 @@ ECC_CheckPointIsInElliCur_P256:
 	.string	"x1"
 	.byte	0x1
 	.byte	0x31
-	.4byte	0x516
+	.4byte	0x51a
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0xd
 	.string	"x3"
 	.byte	0x1
 	.byte	0x32
-	.4byte	0x516
+	.4byte	0x51a
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0xe
 	.string	"y1"
 	.byte	0x1
 	.byte	0x33
-	.4byte	0x516
+	.4byte	0x51a
 	.4byte	.LLST0
 	.uleb128 0xd
 	.string	"y3"
 	.byte	0x1
 	.byte	0x34
-	.4byte	0x516
+	.4byte	0x51a
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0xe
 	.string	"z1"
 	.byte	0x1
 	.byte	0x35
-	.4byte	0x516
+	.4byte	0x51a
 	.4byte	.LLST1
 	.uleb128 0xd
 	.string	"z3"
 	.byte	0x1
 	.byte	0x36
-	.4byte	0x516
+	.4byte	0x51a
 	.uleb128 0x1
 	.byte	0x56
 	.uleb128 0xf
 	.4byte	.LVL1
-	.4byte	0x1097
-	.4byte	0x221
+	.4byte	0x109b
+	.4byte	0x225
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1148,8 +1149,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL2
-	.4byte	0x10a2
-	.4byte	0x23b
+	.4byte	0x10a6
+	.4byte	0x23f
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1165,8 +1166,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL5
-	.4byte	0x10ad
-	.4byte	0x25c
+	.4byte	0x10b1
+	.4byte	0x260
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1188,8 +1189,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL6
-	.4byte	0x10b8
-	.4byte	0x284
+	.4byte	0x10bc
+	.4byte	0x288
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1217,8 +1218,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL7
-	.4byte	0x10c3
-	.4byte	0x2ac
+	.4byte	0x10c7
+	.4byte	0x2b0
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1246,8 +1247,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL8
-	.4byte	0x10ce
-	.4byte	0x2d5
+	.4byte	0x10d2
+	.4byte	0x2d9
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1275,8 +1276,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL9
-	.4byte	0x10d9
-	.4byte	0x2f7
+	.4byte	0x10dd
+	.4byte	0x2fb
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1298,8 +1299,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL10
-	.4byte	0x10c3
-	.4byte	0x320
+	.4byte	0x10c7
+	.4byte	0x324
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1327,8 +1328,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL11
-	.4byte	0x10ce
-	.4byte	0x347
+	.4byte	0x10d2
+	.4byte	0x34b
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1357,8 +1358,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL12
-	.4byte	0x10d9
-	.4byte	0x367
+	.4byte	0x10dd
+	.4byte	0x36b
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1380,8 +1381,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL14
-	.4byte	0x10ad
-	.4byte	0x388
+	.4byte	0x10b1
+	.4byte	0x38c
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1404,8 +1405,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL15
-	.4byte	0x10d9
-	.4byte	0x3a8
+	.4byte	0x10dd
+	.4byte	0x3ac
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1427,8 +1428,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL16
-	.4byte	0x10ce
-	.4byte	0x3cf
+	.4byte	0x10d2
+	.4byte	0x3d3
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1456,8 +1457,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL17
-	.4byte	0x10d9
-	.4byte	0x3f1
+	.4byte	0x10dd
+	.4byte	0x3f5
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1479,8 +1480,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL18
-	.4byte	0x10ad
-	.4byte	0x411
+	.4byte	0x10b1
+	.4byte	0x415
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1502,8 +1503,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL19
-	.4byte	0x10d9
-	.4byte	0x431
+	.4byte	0x10dd
+	.4byte	0x435
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1525,8 +1526,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL20
-	.4byte	0x10ad
-	.4byte	0x452
+	.4byte	0x10b1
+	.4byte	0x456
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1548,8 +1549,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL21
-	.4byte	0x10d9
-	.4byte	0x474
+	.4byte	0x10dd
+	.4byte	0x478
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1571,8 +1572,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL22
-	.4byte	0x10b8
-	.4byte	0x49b
+	.4byte	0x10bc
+	.4byte	0x49f
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1600,8 +1601,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL23
-	.4byte	0x10b8
-	.4byte	0x4c3
+	.4byte	0x10bc
+	.4byte	0x4c7
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1629,8 +1630,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL24
-	.4byte	0x10ce
-	.4byte	0x4ec
+	.4byte	0x10d2
+	.4byte	0x4f0
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1658,7 +1659,7 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0x11
 	.4byte	.LVL25
-	.4byte	0x10b8
+	.4byte	0x10bc
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1687,26 +1688,26 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0x12
 	.byte	0x4
-	.4byte	0xfa
+	.4byte	0xfe
 	.uleb128 0x12
 	.byte	0x4
-	.4byte	0x7d
+	.4byte	0x81
 	.uleb128 0x13
 	.4byte	.LASF24
 	.byte	0x1
 	.byte	0x26
 	.byte	0x1
-	.4byte	0x53b
+	.4byte	0x53f
 	.uleb128 0x14
 	.string	"q"
 	.byte	0x1
 	.byte	0x26
-	.4byte	0x510
+	.4byte	0x514
 	.uleb128 0x14
 	.string	"p"
 	.byte	0x1
 	.byte	0x26
-	.4byte	0x510
+	.4byte	0x514
 	.byte	0
 	.uleb128 0xa
 	.4byte	.LASF23
@@ -1716,39 +1717,39 @@ ECC_CheckPointIsInElliCur_P256:
 	.4byte	.LFE8-.LFB8
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x9b5
+	.4byte	0x9b9
 	.uleb128 0xb
 	.string	"r"
 	.byte	0x1
 	.byte	0x5a
-	.4byte	0x510
+	.4byte	0x514
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0xb
 	.string	"p"
 	.byte	0x1
 	.byte	0x5a
-	.4byte	0x510
+	.4byte	0x514
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x15
 	.string	"q"
 	.byte	0x1
 	.byte	0x5a
-	.4byte	0x510
+	.4byte	0x514
 	.4byte	.LLST2
 	.uleb128 0xc
 	.4byte	.LASF21
 	.byte	0x1
 	.byte	0x5a
-	.4byte	0x96
+	.4byte	0x9a
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0xd
 	.string	"t1"
 	.byte	0x1
 	.byte	0x5c
-	.4byte	0xea
+	.4byte	0xee
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -80
@@ -1756,7 +1757,7 @@ ECC_CheckPointIsInElliCur_P256:
 	.string	"t2"
 	.byte	0x1
 	.byte	0x5d
-	.4byte	0xea
+	.4byte	0xee
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -112
@@ -1764,27 +1765,27 @@ ECC_CheckPointIsInElliCur_P256:
 	.string	"x1"
 	.byte	0x1
 	.byte	0x5e
-	.4byte	0x516
+	.4byte	0x51a
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0xe
 	.string	"x2"
 	.byte	0x1
 	.byte	0x5f
-	.4byte	0x516
+	.4byte	0x51a
 	.4byte	.LLST3
 	.uleb128 0xd
 	.string	"x3"
 	.byte	0x1
 	.byte	0x60
-	.4byte	0x516
+	.4byte	0x51a
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0xd
 	.string	"y1"
 	.byte	0x1
 	.byte	0x61
-	.4byte	0x516
+	.4byte	0x51a
 	.uleb128 0x3
 	.byte	0x73
 	.sleb128 32
@@ -1793,13 +1794,13 @@ ECC_CheckPointIsInElliCur_P256:
 	.string	"y2"
 	.byte	0x1
 	.byte	0x62
-	.4byte	0x516
+	.4byte	0x51a
 	.4byte	.LLST4
 	.uleb128 0xd
 	.string	"y3"
 	.byte	0x1
 	.byte	0x63
-	.4byte	0x516
+	.4byte	0x51a
 	.uleb128 0x3
 	.byte	0x72
 	.sleb128 32
@@ -1808,51 +1809,51 @@ ECC_CheckPointIsInElliCur_P256:
 	.string	"z1"
 	.byte	0x1
 	.byte	0x64
-	.4byte	0x516
+	.4byte	0x51a
 	.4byte	.LLST5
 	.uleb128 0xe
 	.string	"z2"
 	.byte	0x1
 	.byte	0x65
-	.4byte	0x516
+	.4byte	0x51a
 	.4byte	.LLST6
 	.uleb128 0xd
 	.string	"z3"
 	.byte	0x1
 	.byte	0x66
-	.4byte	0x516
+	.4byte	0x51a
 	.uleb128 0x4
 	.byte	0x72
 	.sleb128 64
 	.byte	0x9f
 	.uleb128 0x16
-	.4byte	0x51c
+	.4byte	0x520
 	.4byte	.LBB6
 	.4byte	.LBE6-.LBB6
 	.byte	0x1
 	.byte	0x6e
-	.4byte	0x635
+	.4byte	0x639
 	.uleb128 0x17
-	.4byte	0x531
+	.4byte	0x535
 	.uleb128 0x17
-	.4byte	0x528
+	.4byte	0x52c
 	.byte	0
 	.uleb128 0x16
-	.4byte	0x51c
+	.4byte	0x520
 	.4byte	.LBB8
 	.4byte	.LBE8-.LBB8
 	.byte	0x1
 	.byte	0x74
-	.4byte	0x66b
+	.4byte	0x66f
 	.uleb128 0x18
-	.4byte	0x531
+	.4byte	0x535
 	.4byte	.LLST7
 	.uleb128 0x18
-	.4byte	0x528
+	.4byte	0x52c
 	.4byte	.LLST8
 	.uleb128 0x11
 	.4byte	.LVL34
-	.4byte	0x10e4
+	.4byte	0x10e8
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1863,8 +1864,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL29
-	.4byte	0x1097
-	.4byte	0x686
+	.4byte	0x109b
+	.4byte	0x68a
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1880,8 +1881,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL31
-	.4byte	0x1097
-	.4byte	0x6a0
+	.4byte	0x109b
+	.4byte	0x6a4
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1897,8 +1898,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL36
-	.4byte	0x10ad
-	.4byte	0x6c1
+	.4byte	0x10b1
+	.4byte	0x6c5
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1920,8 +1921,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL37
-	.4byte	0x10ce
-	.4byte	0x6e9
+	.4byte	0x10d2
+	.4byte	0x6ed
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1949,8 +1950,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL38
-	.4byte	0x10ce
-	.4byte	0x711
+	.4byte	0x10d2
+	.4byte	0x715
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -1978,8 +1979,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL39
-	.4byte	0x10ce
-	.4byte	0x739
+	.4byte	0x10d2
+	.4byte	0x73d
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2007,8 +2008,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL40
-	.4byte	0x10b8
-	.4byte	0x761
+	.4byte	0x10bc
+	.4byte	0x765
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2036,8 +2037,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL41
-	.4byte	0x10b8
-	.4byte	0x789
+	.4byte	0x10bc
+	.4byte	0x78d
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2065,8 +2066,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL42
-	.4byte	0x1097
-	.4byte	0x7a4
+	.4byte	0x109b
+	.4byte	0x7a8
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2082,8 +2083,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL43
-	.4byte	0x1097
-	.4byte	0x7bf
+	.4byte	0x109b
+	.4byte	0x7c3
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2099,8 +2100,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL44
-	.4byte	0x159
-	.4byte	0x7df
+	.4byte	0x15d
+	.4byte	0x7e3
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2122,8 +2123,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL45
-	.4byte	0x10a2
-	.4byte	0x7fa
+	.4byte	0x10a6
+	.4byte	0x7fe
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2140,8 +2141,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL47
-	.4byte	0x10ce
-	.4byte	0x822
+	.4byte	0x10d2
+	.4byte	0x826
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2170,8 +2171,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL48
-	.4byte	0x10ad
-	.4byte	0x843
+	.4byte	0x10b1
+	.4byte	0x847
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2193,8 +2194,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL49
-	.4byte	0x10ce
-	.4byte	0x86a
+	.4byte	0x10d2
+	.4byte	0x86e
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2222,8 +2223,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL50
-	.4byte	0x10ce
-	.4byte	0x890
+	.4byte	0x10d2
+	.4byte	0x894
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2251,8 +2252,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL51
-	.4byte	0x10d9
-	.4byte	0x8b1
+	.4byte	0x10dd
+	.4byte	0x8b5
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2274,8 +2275,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL52
-	.4byte	0x10ad
-	.4byte	0x8d2
+	.4byte	0x10b1
+	.4byte	0x8d6
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2297,8 +2298,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL53
-	.4byte	0x10b8
-	.4byte	0x8f9
+	.4byte	0x10bc
+	.4byte	0x8fd
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2326,8 +2327,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL54
-	.4byte	0x10b8
-	.4byte	0x91f
+	.4byte	0x10bc
+	.4byte	0x923
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2355,8 +2356,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL55
-	.4byte	0x10b8
-	.4byte	0x945
+	.4byte	0x10bc
+	.4byte	0x949
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2384,8 +2385,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL56
-	.4byte	0x10ce
-	.4byte	0x96c
+	.4byte	0x10d2
+	.4byte	0x970
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2413,8 +2414,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL57
-	.4byte	0x10ce
-	.4byte	0x992
+	.4byte	0x10d2
+	.4byte	0x996
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2442,7 +2443,7 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0x11
 	.4byte	.LVL58
-	.4byte	0x10b8
+	.4byte	0x10bc
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2474,112 +2475,112 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0x1
 	.byte	0x99
 	.byte	0x1
-	.4byte	0xa14
+	.4byte	0xa18
 	.uleb128 0x14
 	.string	"naf"
 	.byte	0x1
 	.byte	0x99
-	.4byte	0xa14
+	.4byte	0xa18
 	.uleb128 0x19
 	.4byte	.LASF26
 	.byte	0x1
 	.byte	0x99
-	.4byte	0xa1a
+	.4byte	0xa1e
 	.uleb128 0x14
 	.string	"k"
 	.byte	0x1
 	.byte	0x99
-	.4byte	0x516
+	.4byte	0x51a
 	.uleb128 0x19
 	.4byte	.LASF21
 	.byte	0x1
 	.byte	0x99
-	.4byte	0x96
+	.4byte	0x9a
 	.uleb128 0x1a
 	.4byte	.LASF27
 	.byte	0x1
 	.byte	0x9b
-	.4byte	0x96
+	.4byte	0x9a
 	.uleb128 0x1b
 	.string	"i"
 	.byte	0x1
 	.byte	0x9c
-	.4byte	0x21
+	.4byte	0x25
 	.uleb128 0x1b
 	.string	"j"
 	.byte	0x1
 	.byte	0x9d
-	.4byte	0x21
+	.4byte	0x25
 	.uleb128 0x1b
 	.string	"var"
 	.byte	0x1
 	.byte	0x9e
-	.4byte	0x96
+	.4byte	0x9a
 	.byte	0
 	.uleb128 0x12
 	.byte	0x4
-	.4byte	0x8b
+	.4byte	0x8f
 	.uleb128 0x12
 	.byte	0x4
-	.4byte	0x96
+	.4byte	0x9a
 	.uleb128 0x13
 	.4byte	.LASF28
 	.byte	0x1
 	.byte	0x21
 	.byte	0x1
-	.4byte	0xa36
+	.4byte	0xa3a
 	.uleb128 0x14
 	.string	"q"
 	.byte	0x1
 	.byte	0x21
-	.4byte	0x510
+	.4byte	0x514
 	.byte	0
 	.uleb128 0x1c
-	.4byte	.LASF57
+	.4byte	.LASF58
 	.byte	0x1
 	.byte	0xbd
 	.4byte	.LFB10
 	.4byte	.LFE10-.LFB10
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xe57
+	.4byte	0xe5b
 	.uleb128 0xb
 	.string	"q"
 	.byte	0x1
 	.byte	0xbd
-	.4byte	0x510
+	.4byte	0x514
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x15
 	.string	"p"
 	.byte	0x1
 	.byte	0xbd
-	.4byte	0x510
+	.4byte	0x514
 	.4byte	.LLST9
 	.uleb128 0x15
 	.string	"n"
 	.byte	0x1
 	.byte	0xbd
-	.4byte	0x516
+	.4byte	0x51a
 	.4byte	.LLST10
 	.uleb128 0xc
 	.4byte	.LASF21
 	.byte	0x1
 	.byte	0xbd
-	.4byte	0x96
+	.4byte	0x9a
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x1d
 	.4byte	.LASF27
 	.byte	0x1
 	.byte	0xbf
-	.4byte	0x96
+	.4byte	0x9a
 	.4byte	.LLST11
 	.uleb128 0xd
 	.string	"naf"
 	.byte	0x1
 	.byte	0xc0
-	.4byte	0xe57
+	.4byte	0xe5b
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -128
@@ -2587,13 +2588,13 @@ ECC_CheckPointIsInElliCur_P256:
 	.4byte	.LASF29
 	.byte	0x1
 	.byte	0xc1
-	.4byte	0x96
+	.4byte	0x9a
 	.4byte	.LLST12
 	.uleb128 0x1e
 	.4byte	.LASF30
 	.byte	0x1
 	.byte	0xc2
-	.4byte	0xfa
+	.4byte	0xfe
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -224
@@ -2601,7 +2602,7 @@ ECC_CheckPointIsInElliCur_P256:
 	.string	"r"
 	.byte	0x1
 	.byte	0xc3
-	.4byte	0xfa
+	.4byte	0xfe
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -320
@@ -2609,21 +2610,21 @@ ECC_CheckPointIsInElliCur_P256:
 	.4byte	.LASF31
 	.byte	0x1
 	.byte	0xc4
-	.4byte	0x516
+	.4byte	0x51a
 	.4byte	.LLST13
 	.uleb128 0x1f
-	.4byte	0xa20
+	.4byte	0xa24
 	.4byte	.LBB23
 	.4byte	.Ldebug_ranges0+0
 	.byte	0x1
 	.byte	0xcc
-	.4byte	0xb0e
+	.4byte	0xb12
 	.uleb128 0x18
-	.4byte	0xa2c
+	.4byte	0xa30
 	.4byte	.LLST14
 	.uleb128 0x11
 	.4byte	.LVL61
-	.4byte	0x10ed
+	.4byte	0x10f1
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2644,19 +2645,19 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.byte	0
 	.uleb128 0x16
-	.4byte	0xa20
+	.4byte	0xa24
 	.4byte	.LBB29
 	.4byte	.LBE29-.LBB29
 	.byte	0x1
 	.byte	0xd1
-	.4byte	0xb44
+	.4byte	0xb48
 	.uleb128 0x20
-	.4byte	0xa2c
+	.4byte	0xa30
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x11
 	.4byte	.LVL64
-	.4byte	0x10ed
+	.4byte	0x10f1
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2677,27 +2678,27 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.byte	0
 	.uleb128 0x16
-	.4byte	0x9b5
+	.4byte	0x9b9
 	.4byte	.LBB31
 	.4byte	.LBE31-.LBB31
 	.byte	0x1
 	.byte	0xdc
-	.4byte	0xbde
+	.4byte	0xbe2
 	.uleb128 0x20
-	.4byte	0x9e0
+	.4byte	0x9e4
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x18
-	.4byte	0x9d7
+	.4byte	0x9db
 	.4byte	.LLST15
 	.uleb128 0x20
-	.4byte	0x9cc
+	.4byte	0x9d0
 	.uleb128 0x6
 	.byte	0xf2
-	.4byte	.Ldebug_info0+2715
+	.4byte	.Ldebug_info0+2719
 	.sleb128 0
 	.uleb128 0x20
-	.4byte	0x9c1
+	.4byte	0x9c5
 	.uleb128 0x4
 	.byte	0x91
 	.sleb128 -128
@@ -2706,20 +2707,20 @@ ECC_CheckPointIsInElliCur_P256:
 	.4byte	.LBB32
 	.4byte	.LBE32-.LBB32
 	.uleb128 0x22
-	.4byte	0x9eb
+	.4byte	0x9ef
 	.4byte	.LLST16
 	.uleb128 0x22
-	.4byte	0x9f6
+	.4byte	0x9fa
 	.4byte	.LLST17
 	.uleb128 0x23
-	.4byte	0x9ff
+	.4byte	0xa03
 	.uleb128 0x22
-	.4byte	0xa08
+	.4byte	0xa0c
 	.4byte	.LLST18
 	.uleb128 0xf
 	.4byte	.LVL74
-	.4byte	0x10f6
-	.4byte	0xbc6
+	.4byte	0x10fa
+	.4byte	0xbca
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2741,7 +2742,7 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0x11
 	.4byte	.LVL77
-	.4byte	0x1101
+	.4byte	0x1105
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2760,30 +2761,30 @@ ECC_CheckPointIsInElliCur_P256:
 	.uleb128 0x24
 	.4byte	.LBB33
 	.4byte	.LBE33-.LBB33
-	.4byte	0xcf8
+	.4byte	0xcfc
 	.uleb128 0xd
 	.string	"i"
 	.byte	0x1
 	.byte	0xde
-	.4byte	0x21
+	.4byte	0x25
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x16
-	.4byte	0x51c
+	.4byte	0x520
 	.4byte	.LBB34
 	.4byte	.LBE34-.LBB34
 	.byte	0x1
 	.byte	0xdf
-	.4byte	0xc39
+	.4byte	0xc3d
 	.uleb128 0x18
-	.4byte	0x531
+	.4byte	0x535
 	.4byte	.LLST19
 	.uleb128 0x18
-	.4byte	0x528
+	.4byte	0x52c
 	.4byte	.LLST20
 	.uleb128 0x11
 	.4byte	.LVL83
-	.4byte	0x10e4
+	.4byte	0x10e8
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2805,21 +2806,21 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.byte	0
 	.uleb128 0x16
-	.4byte	0x51c
+	.4byte	0x520
 	.4byte	.LBB36
 	.4byte	.LBE36-.LBB36
 	.byte	0x1
 	.byte	0xe4
-	.4byte	0xc7c
+	.4byte	0xc80
 	.uleb128 0x18
-	.4byte	0x531
+	.4byte	0x535
 	.4byte	.LLST21
 	.uleb128 0x18
-	.4byte	0x528
+	.4byte	0x52c
 	.4byte	.LLST22
 	.uleb128 0x11
 	.4byte	.LVL89
-	.4byte	0x10e4
+	.4byte	0x10e8
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2841,21 +2842,21 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.byte	0
 	.uleb128 0x16
-	.4byte	0x51c
+	.4byte	0x520
 	.4byte	.LBB38
 	.4byte	.LBE38-.LBB38
 	.byte	0x1
 	.byte	0xe7
-	.4byte	0xcbf
+	.4byte	0xcc3
 	.uleb128 0x18
-	.4byte	0x531
+	.4byte	0x535
 	.4byte	.LLST23
 	.uleb128 0x18
-	.4byte	0x528
+	.4byte	0x52c
 	.4byte	.LLST24
 	.uleb128 0x11
 	.4byte	.LVL93
-	.4byte	0x10e4
+	.4byte	0x10e8
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2878,8 +2879,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL85
-	.4byte	0x159
-	.4byte	0xce0
+	.4byte	0x15d
+	.4byte	0xce4
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2901,7 +2902,7 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0x11
 	.4byte	.LVL96
-	.4byte	0x53b
+	.4byte	0x53f
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2918,8 +2919,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL62
-	.4byte	0x10a2
-	.4byte	0xd13
+	.4byte	0x10a6
+	.4byte	0xd17
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2935,8 +2936,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL65
-	.4byte	0x110c
-	.4byte	0xd34
+	.4byte	0x1110
+	.4byte	0xd38
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2958,8 +2959,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL67
-	.4byte	0x1117
-	.4byte	0xd6b
+	.4byte	0x111b
+	.4byte	0xd6f
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -2997,8 +2998,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL68
-	.4byte	0x10a2
-	.4byte	0xd86
+	.4byte	0x10a6
+	.4byte	0xd8a
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -3014,8 +3015,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL69
-	.4byte	0x10ed
-	.4byte	0xda5
+	.4byte	0x10f1
+	.4byte	0xda9
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -3036,8 +3037,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL99
-	.4byte	0x1122
-	.4byte	0xdc6
+	.4byte	0x1126
+	.4byte	0xdca
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -3059,8 +3060,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL100
-	.4byte	0x10ad
-	.4byte	0xde7
+	.4byte	0x10b1
+	.4byte	0xdeb
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -3082,8 +3083,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL101
-	.4byte	0x10ce
-	.4byte	0xe0d
+	.4byte	0x10d2
+	.4byte	0xe11
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -3111,8 +3112,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL102
-	.4byte	0x10ce
-	.4byte	0xe34
+	.4byte	0x10d2
+	.4byte	0xe38
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -3140,7 +3141,7 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0x11
 	.4byte	.LVL103
-	.4byte	0x10ce
+	.4byte	0x10d2
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -3168,33 +3169,33 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.byte	0
 	.uleb128 0x5
-	.4byte	0xa1
-	.4byte	0xe67
+	.4byte	0xa5
+	.4byte	0xe6b
 	.uleb128 0x6
-	.4byte	0x76
+	.4byte	0x7a
 	.byte	0x40
 	.byte	0
 	.uleb128 0x25
-	.4byte	.LASF58
+	.4byte	.LASF59
 	.byte	0x1
 	.byte	0xf3
-	.4byte	0xac
+	.4byte	0xb0
 	.4byte	.LFB11
 	.4byte	.LFE11-.LFB11
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1035
+	.4byte	0x1039
 	.uleb128 0x15
 	.string	"p"
 	.byte	0x1
 	.byte	0xf3
-	.4byte	0x510
+	.4byte	0x514
 	.4byte	.LLST25
 	.uleb128 0x1e
 	.4byte	.LASF32
 	.byte	0x1
 	.byte	0xf6
-	.4byte	0xea
+	.4byte	0xee
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
@@ -3202,7 +3203,7 @@ ECC_CheckPointIsInElliCur_P256:
 	.4byte	.LASF33
 	.byte	0x1
 	.byte	0xf8
-	.4byte	0xea
+	.4byte	0xee
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -96
@@ -3210,7 +3211,7 @@ ECC_CheckPointIsInElliCur_P256:
 	.string	"x_q"
 	.byte	0x1
 	.byte	0xfa
-	.4byte	0xea
+	.4byte	0xee
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -128
@@ -3218,14 +3219,14 @@ ECC_CheckPointIsInElliCur_P256:
 	.string	"x_x"
 	.byte	0x1
 	.byte	0xfd
-	.4byte	0x1035
+	.4byte	0x1039
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -192
 	.uleb128 0xf
 	.4byte	.LVL105
-	.4byte	0x10ed
-	.4byte	0xee7
+	.4byte	0x10f1
+	.4byte	0xeeb
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -3246,8 +3247,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL106
-	.4byte	0x10ed
-	.4byte	0xf07
+	.4byte	0x10f1
+	.4byte	0xf0b
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -3268,8 +3269,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL107
-	.4byte	0x10ed
-	.4byte	0xf27
+	.4byte	0x10f1
+	.4byte	0xf2b
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -3290,8 +3291,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL108
-	.4byte	0x10ed
-	.4byte	0xf47
+	.4byte	0x10f1
+	.4byte	0xf4b
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -3312,8 +3313,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL109
-	.4byte	0x10ad
-	.4byte	0xf69
+	.4byte	0x10b1
+	.4byte	0xf6d
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -3337,8 +3338,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL110
-	.4byte	0x112d
-	.4byte	0xf8f
+	.4byte	0x1131
+	.4byte	0xf93
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -3365,8 +3366,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL111
-	.4byte	0x1138
-	.4byte	0xfab
+	.4byte	0x113c
+	.4byte	0xfaf
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -3382,8 +3383,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL112
-	.4byte	0x112d
-	.4byte	0xfd2
+	.4byte	0x1131
+	.4byte	0xfd6
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -3410,8 +3411,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL113
-	.4byte	0x1138
-	.4byte	0xfee
+	.4byte	0x113c
+	.4byte	0xff2
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -3427,8 +3428,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LVL114
-	.4byte	0x10c3
-	.4byte	0x1018
+	.4byte	0x10c7
+	.4byte	0x101c
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -3455,7 +3456,7 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.uleb128 0x11
 	.4byte	.LVL115
-	.4byte	0x1143
+	.4byte	0x1147
 	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
@@ -3476,17 +3477,17 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.byte	0
 	.uleb128 0x5
-	.4byte	0x7d
-	.4byte	0x1045
+	.4byte	0x81
+	.4byte	0x1049
 	.uleb128 0x6
-	.4byte	0x76
+	.4byte	0x7a
 	.byte	0xf
 	.byte	0
 	.uleb128 0x26
 	.4byte	.LASF34
 	.byte	0x4
-	.2byte	0x2cc
-	.4byte	0x1058
+	.2byte	0x2b8
+	.4byte	0x105c
 	.byte	0x6
 	.byte	0xff
 	.byte	0xff
@@ -3495,12 +3496,12 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0xff
 	.byte	0xff
 	.uleb128 0x27
-	.4byte	0xb3
+	.4byte	0xb7
 	.uleb128 0x26
 	.4byte	.LASF35
 	.byte	0x4
-	.2byte	0x2cd
-	.4byte	0x1070
+	.2byte	0x2b9
+	.4byte	0x1074
 	.byte	0x6
 	.byte	0
 	.byte	0
@@ -3509,12 +3510,12 @@ ECC_CheckPointIsInElliCur_P256:
 	.byte	0
 	.byte	0
 	.uleb128 0x27
-	.4byte	0xb3
+	.4byte	0xb7
 	.uleb128 0x28
 	.4byte	.LASF36
 	.byte	0x1
 	.byte	0x1e
-	.4byte	0x14e
+	.4byte	0x152
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	curve
@@ -3522,7 +3523,7 @@ ECC_CheckPointIsInElliCur_P256:
 	.4byte	.LASF37
 	.byte	0x1
 	.byte	0x1f
-	.4byte	0x14e
+	.4byte	0x152
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	curve_p256
@@ -3618,6 +3619,8 @@ ECC_CheckPointIsInElliCur_P256:
 	.uleb128 0x13
 	.uleb128 0xb
 	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x1b
 	.uleb128 0xe
 	.uleb128 0x55
 	.uleb128 0x17
@@ -4667,122 +4670,124 @@ ECC_CheckPointIsInElliCur_P256:
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
-.LASF39:
-	.string	"multiprecision_init"
-.LASF30:
-	.string	"minus_p"
-.LASF5:
-	.string	"__uint8_t"
-.LASF32:
-	.string	"y_y_q"
-.LASF20:
-	.string	"elliptic_curve_t"
-.LASF8:
-	.string	"long long unsigned int"
-.LASF57:
-	.string	"ECC_PointMult_Bin_NAF"
-.LASF7:
-	.string	"long long int"
-.LASF2:
-	.string	"signed char"
-.LASF51:
-	.string	"multiprecision_inv_mod"
-.LASF9:
-	.string	"long int"
-.LASF45:
-	.string	"memcpy"
-.LASF26:
-	.string	"NumNAF"
-.LASF17:
-	.string	"Point"
-.LASF42:
-	.string	"multiprecision_add_mod"
-.LASF44:
-	.string	"multiprecision_lshift_mod"
-.LASF6:
-	.string	"__uint32_t"
-.LASF25:
-	.string	"ECC_NAF"
-.LASF18:
-	.string	"a_minus3"
-.LASF23:
-	.string	"ECC_Add"
-.LASF22:
-	.string	"ECC_Double"
-.LASF0:
-	.string	"unsigned int"
-.LASF11:
-	.string	"long unsigned int"
-.LASF55:
-	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
-.LASF21:
-	.string	"keyLength"
-.LASF1:
-	.string	"short unsigned int"
-.LASF47:
-	.string	"multiprecision_rshift"
-.LASF53:
-	.string	"multiprecision_fast_mod_P256"
-.LASF49:
-	.string	"multiprecision_copy"
-.LASF10:
-	.string	"sizetype"
-.LASF43:
-	.string	"multiprecision_mersenns_mult_mod"
-.LASF38:
-	.string	"multiprecision_iszero"
-.LASF29:
-	.string	"NumNaf"
-.LASF40:
-	.string	"multiprecision_mersenns_squa_mod"
-.LASF41:
-	.string	"multiprecision_sub_mod"
-.LASF37:
-	.string	"curve_p256"
-.LASF58:
-	.string	"ECC_CheckPointIsInElliCur_P256"
 .LASF35:
 	.string	"bd_addr_null"
-.LASF16:
-	.string	"_Bool"
-.LASF3:
-	.string	"unsigned char"
-.LASF4:
-	.string	"short int"
-.LASF52:
-	.string	"multiprecision_mult"
-.LASF19:
-	.string	"omega"
-.LASF14:
-	.string	"uint32_t"
-.LASF24:
-	.string	"p_256_copy_point"
-.LASF33:
-	.string	"x_x_q"
-.LASF12:
-	.string	"char"
-.LASF31:
-	.string	"modp"
-.LASF56:
-	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/smp/p_256_ecc_pp.c"
-.LASF28:
-	.string	"p_256_init_point"
-.LASF46:
-	.string	"memset"
+.LASF44:
+	.string	"multiprecision_lshift_mod"
+.LASF49:
+	.string	"multiprecision_copy"
 .LASF54:
 	.string	"multiprecision_compare"
-.LASF15:
-	.string	"UINT8"
+.LASF2:
+	.string	"signed char"
+.LASF22:
+	.string	"ECC_Double"
+.LASF39:
+	.string	"multiprecision_init"
+.LASF10:
+	.string	"sizetype"
+.LASF52:
+	.string	"multiprecision_mult"
+.LASF59:
+	.string	"ECC_CheckPointIsInElliCur_P256"
+.LASF6:
+	.string	"__uint32_t"
+.LASF42:
+	.string	"multiprecision_add_mod"
+.LASF33:
+	.string	"x_x_q"
+.LASF21:
+	.string	"keyLength"
+.LASF4:
+	.string	"short int"
+.LASF45:
+	.string	"memcpy"
+.LASF31:
+	.string	"modp"
 .LASF13:
 	.string	"uint8_t"
-.LASF34:
-	.string	"bd_addr_any"
+.LASF14:
+	.string	"uint32_t"
+.LASF51:
+	.string	"multiprecision_inv_mod"
+.LASF20:
+	.string	"elliptic_curve_t"
+.LASF30:
+	.string	"minus_p"
+.LASF7:
+	.string	"long long int"
+.LASF29:
+	.string	"NumNaf"
+.LASF46:
+	.string	"memset"
+.LASF9:
+	.string	"long int"
+.LASF15:
+	.string	"UINT8"
+.LASF5:
+	.string	"__uint8_t"
+.LASF19:
+	.string	"omega"
+.LASF57:
+	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/bt"
+.LASF3:
+	.string	"unsigned char"
+.LASF32:
+	.string	"y_y_q"
+.LASF40:
+	.string	"multiprecision_mersenns_squa_mod"
+.LASF18:
+	.string	"a_minus3"
+.LASF8:
+	.string	"long long unsigned int"
+.LASF17:
+	.string	"Point"
+.LASF0:
+	.string	"unsigned int"
+.LASF50:
+	.string	"multiprecision_sub"
+.LASF37:
+	.string	"curve_p256"
+.LASF12:
+	.string	"char"
+.LASF41:
+	.string	"multiprecision_sub_mod"
+.LASF26:
+	.string	"NumNAF"
+.LASF1:
+	.string	"short unsigned int"
+.LASF23:
+	.string	"ECC_Add"
+.LASF28:
+	.string	"p_256_init_point"
+.LASF38:
+	.string	"multiprecision_iszero"
+.LASF16:
+	.string	"_Bool"
+.LASF58:
+	.string	"ECC_PointMult_Bin_NAF"
+.LASF25:
+	.string	"ECC_NAF"
+.LASF53:
+	.string	"multiprecision_fast_mod_P256"
+.LASF11:
+	.string	"long unsigned int"
 .LASF27:
 	.string	"sign"
 .LASF36:
 	.string	"curve"
-.LASF50:
-	.string	"multiprecision_sub"
+.LASF47:
+	.string	"multiprecision_rshift"
+.LASF43:
+	.string	"multiprecision_mersenns_mult_mod"
 .LASF48:
 	.string	"multiprecision_most_signbits"
+.LASF34:
+	.string	"bd_addr_any"
+.LASF24:
+	.string	"p_256_copy_point"
+.LASF55:
+	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
+.LASF56:
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/smp/p_256_ecc_pp.c"
 	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

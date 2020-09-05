@@ -6,7 +6,7 @@
 	.global	lwip_init
 	.type	lwip_init, @function
 lwip_init:
-.LFB36:
+.LFB45:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/init.c"
 	.loc 1 338 0
 	entry	sp, 32
@@ -40,7 +40,7 @@ lwip_init:
 	call8	sys_timeouts_init
 .LVL9:
 	retw.n
-.LFE36:
+.LFE45:
 	.size	lwip_init, .-lwip_init
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -61,10 +61,10 @@ lwip_init:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.byte	0x4
-	.4byte	.LCFI0-.LFB36
+	.4byte	.LCFI0-.LFB45
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -156,8 +156,8 @@ lwip_init:
 	.4byte	.LASF25
 	.byte	0x1
 	.2byte	0x151
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x10a
@@ -216,7 +216,7 @@ lwip_init:
 	.4byte	.LASF13
 	.4byte	.LASF13
 	.byte	0x3
-	.byte	0x58
+	.byte	0x48
 	.uleb128 0xd
 	.4byte	.LASF14
 	.4byte	.LASF14
@@ -447,14 +447,14 @@ lwip_init:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB36
-	.4byte	.LFE36
+	.4byte	.LFB45
+	.4byte	.LFE45
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

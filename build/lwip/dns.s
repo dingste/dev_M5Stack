@@ -10,7 +10,7 @@
 	.literal_position
 	.literal .LC3, dns_table
 	.literal .LC5, .LC4
-	.literal .LC6, __func__$6638
+	.literal .LC6, __func__$6702
 	.literal .LC8, .LC7
 	.literal .LC9, dns_requests
 	.literal .LC10, dns_requests+48
@@ -18,20 +18,20 @@
 	.align	4
 	.type	dns_call_found, @function
 dns_call_found:
-.LFB29:
+.LFB38:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/dns.c"
-	.loc 1 965 0
+	.loc 1 953 0
 .LVL0:
 	entry	sp, 32
 .LCFI0:
-	.loc 1 971 0
+	.loc 1 959 0
 	beqz.n	a3, .L2
-	.loc 1 973 0
+	.loc 1 961 0
 	l8ui	a5, a3, 16
 	l32r	a4, .LC3
 	slli	a8, a2, 3
 	bnei	a5, 6, .L3
-	.loc 1 974 0
+	.loc 1 962 0
 	add.n	a9, a8, a2
 	addx8	a9, a9, a2
 	addx4	a8, a9, a4
@@ -41,24 +41,24 @@ dns_call_found:
 	movi	a4, 0xfd
 	and	a4, a5, a4
 	beqi	a4, 1, .L4
-	.loc 1 974 0 is_stmt 0 discriminator 1
+	.loc 1 962 0 is_stmt 0 discriminator 1
 	l32r	a13, .LC5
 	l32r	a12, .LC6
-	movi	a11, 0x3ce
+	movi	a11, 0x3c2
 	j	.L20
 .L4:
-	.loc 1 975 0 is_stmt 1
+	.loc 1 963 0 is_stmt 1
 	s8i	a4, a8, 0
 .L2:
 .LVL1:
-	.loc 1 986 0 discriminator 1
+	.loc 1 974 0 discriminator 1
 	addx8	a5, a2, a2
 	l32r	a4, .LC9
 	addx8	a5, a5, a2
 	j	.L5
 .LVL2:
 .L3:
-	.loc 1 977 0
+	.loc 1 965 0
 	add.n	a8, a8, a2
 	addx8	a8, a8, a2
 	addx4	a8, a8, a4
@@ -68,26 +68,26 @@ dns_call_found:
 	movi	a4, 0xfd
 	and	a4, a5, a4
 	bnei	a4, 1, .L6
-	.loc 1 977 0 is_stmt 0 discriminator 1
+	.loc 1 965 0 is_stmt 0 discriminator 1
 	l32r	a13, .LC5
 	l32r	a12, .LC6
-	movi	a11, 0x3d1
+	movi	a11, 0x3c5
 .L20:
 	l32r	a10, .LC8
 	call8	__assert_func
 .LVL3:
 .L6:
-	.loc 1 978 0 is_stmt 1
+	.loc 1 966 0 is_stmt 1
 	movi.n	a4, 0
 	j	.L4
 .L5:
-	.loc 1 985 0
+	.loc 1 973 0
 	l32i.n	a9, a4, 0
 	beqz.n	a9, .L7
-	.loc 1 985 0 is_stmt 0 discriminator 1
+	.loc 1 973 0 is_stmt 0 discriminator 1
 	l8ui	a8, a4, 8
 	bne	a8, a2, .L7
-	.loc 1 986 0 is_stmt 1
+	.loc 1 974 0 is_stmt 1
 	l32r	a10, .LC3
 	slli	a8, a5, 2
 	addi	a8, a8, 32
@@ -96,45 +96,45 @@ dns_call_found:
 	mov.n	a11, a3
 	callx8	a9
 .LVL4:
-	.loc 1 988 0
+	.loc 1 976 0
 	movi.n	a8, 0
 	s32i.n	a8, a4, 0
 .L7:
-	.loc 1 984 0 discriminator 2
+	.loc 1 972 0 discriminator 2
 	l32r	a6, .LC10
 	addi.n	a4, a4, 12
 	bne	a6, a4, .L5
 	l32r	a4, .LC3
-	.loc 1 1004 0
+	.loc 1 992 0
 	addx8	a8, a2, a2
 	addx8	a8, a8, a2
 	addx4	a10, a8, a4
-	.loc 1 984 0
+	.loc 1 972 0
 	movi.n	a9, 0
 	mov.n	a5, a4
-	.loc 1 1004 0
+	.loc 1 992 0
 	addi	a10, a10, 31
 	movi	a11, 0x124
 	movi.n	a3, 4
 .LVL5:
 .L10:
-	.loc 1 1000 0
+	.loc 1 988 0
 	beq	a2, a9, .L8
-	.loc 1 1003 0
+	.loc 1 991 0
 	l8ui	a12, a4, 26
 	bnei	a12, 2, .L8
-	.loc 1 1004 0
+	.loc 1 992 0
 	l8ui	a13, a4, 31
 	l8ui	a12, a10, 0
 	bne	a13, a12, .L8
-	.loc 1 1006 0
+	.loc 1 994 0
 	addx4	a8, a8, a5
 	movi.n	a3, 4
 	s8i	a3, a8, 31
-	.loc 1 1007 0
+	.loc 1 995 0
 	j	.L9
 .L8:
-	.loc 1 999 0 discriminator 2
+	.loc 1 987 0 discriminator 2
 	addi.n	a9, a9, 1
 .LVL6:
 	extui	a9, a9, 0, 8
@@ -144,32 +144,32 @@ dns_call_found:
 	bnez.n	a3, .L10
 .LVL8:
 .L9:
-	.loc 1 1011 0
+	.loc 1 999 0
 	addx8	a8, a2, a2
 	addx8	a2, a8, a2
 .LVL9:
 	addx4	a2, a2, a5
 	l8ui	a4, a2, 31
 	bgeui	a4, 4, .L1
-	.loc 1 1013 0
+	.loc 1 1001 0
 	l32r	a5, .LC11
 	addx4	a4, a4, a5
 	l32i.n	a10, a4, 0
-	.loc 1 1014 0
+	.loc 1 1002 0
 	movi.n	a4, 0
-	.loc 1 1013 0
+	.loc 1 1001 0
 	call8	udp_remove
 .LVL10:
-	.loc 1 1014 0
+	.loc 1 1002 0
 	l8ui	a3, a2, 31
 	addx4	a3, a3, a5
 	s32i.n	a4, a3, 0
-	.loc 1 1015 0
+	.loc 1 1003 0
 	movi.n	a3, 4
 	s8i	a3, a2, 31
 .L1:
 	retw.n
-.LFE29:
+.LFE38:
 	.size	dns_call_found, .-dns_call_found
 	.section	.text.unlikely.dns_correct_response,"ax",@progbits
 	.literal_position
@@ -178,42 +178,42 @@ dns_call_found:
 	.align	4
 	.type	dns_correct_response, @function
 dns_correct_response:
-.LFB33:
-	.loc 1 1149 0
+.LFB42:
+	.loc 1 1141 0
 .LVL11:
 	entry	sp, 32
 .LCFI1:
 .LVL12:
-	.loc 1 1152 0
+	.loc 1 1144 0
 	l32r	a8, .LC12
 	addx8	a4, a2, a2
 	addx8	a4, a4, a2
 	addx4	a4, a4, a8
 	movi.n	a8, 3
 	s8i	a8, a4, 26
-	.loc 1 1160 0
+	.loc 1 1152 0
 	l32r	a8, .LC13
-	.loc 1 1149 0
+	.loc 1 1141 0
 	mov.n	a10, a2
-	.loc 1 1159 0
+	.loc 1 1151 0
 	minu	a3, a3, a8
 .LVL13:
 	s32i.n	a3, a4, 0
-	.loc 1 1163 0
+	.loc 1 1155 0
 	addi.n	a11, a4, 4
 	call8	dns_call_found
 .LVL14:
-	.loc 1 1165 0
+	.loc 1 1157 0
 	l32i.n	a3, a4, 0
 	bnez.n	a3, .L21
-	.loc 1 1171 0
+	.loc 1 1163 0
 	l8ui	a8, a4, 26
 	bnei	a8, 3, .L21
-	.loc 1 1172 0
+	.loc 1 1164 0
 	s8i	a3, a4, 26
 .L21:
 	retw.n
-.LFE33:
+.LFE42:
 	.size	dns_correct_response, .-dns_correct_response
 	.section	.rodata.str1.1
 .LC15:
@@ -222,7 +222,7 @@ dns_correct_response:
 	.literal_position
 	.literal .LC14, dns_table
 	.literal .LC16, .LC15
-	.literal .LC17, __func__$6604
+	.literal .LC17, __func__$6668
 	.literal .LC18, .LC7
 	.literal .LC19, dns_servers
 	.literal .LC20, 7168
@@ -230,13 +230,13 @@ dns_correct_response:
 	.align	4
 	.type	dns_send, @function
 dns_send:
-.LFB26:
-	.loc 1 777 0
+.LFB35:
+	.loc 1 765 0
 .LVL15:
 	entry	sp, 64
 .LCFI2:
 .LVL16:
-	.loc 1 790 0
+	.loc 1 778 0
 	slli	a3, a2, 3
 	l32r	a6, .LC14
 	add.n	a4, a3, a2
@@ -244,66 +244,66 @@ dns_send:
 	addx4	a4, a4, a6
 	l8ui	a5, a4, 27
 	bltui	a5, 3, .L26
-	.loc 1 790 0 is_stmt 0 discriminator 1
+	.loc 1 778 0 is_stmt 0 discriminator 1
 	l32r	a13, .LC16
 	l32r	a12, .LC17
 	l32r	a10, .LC18
-	movi	a11, 0x316
+	movi	a11, 0x30a
 	call8	__assert_func
 .LVL17:
 .L26:
-	.loc 1 791 0 is_stmt 1
+	.loc 1 779 0 is_stmt 1
 	l32r	a4, .LC19
 	addx4	a5, a5, a5
 	addx4	a5, a5, a4
 	l8ui	a6, a5, 16
 	bnei	a6, 6, .L27
-	.loc 1 791 0 is_stmt 0 discriminator 1
+	.loc 1 779 0 is_stmt 0 discriminator 1
 	l32i.n	a6, a5, 0
 	movi.n	a4, 0
 	bne	a6, a4, .L29
-	.loc 1 791 0 discriminator 3
+	.loc 1 779 0 discriminator 3
 	l32i.n	a6, a5, 4
 	bne	a6, a4, .L29
-	.loc 1 791 0 discriminator 5
+	.loc 1 779 0 discriminator 5
 	l32i.n	a6, a5, 8
 	bne	a6, a4, .L29
-	.loc 1 791 0 discriminator 7
+	.loc 1 779 0 discriminator 7
 	l32i.n	a6, a5, 12
 	movi.n	a5, 1
 	moveqz	a4, a5, a6
 	j	.L29
 .L27:
-	.loc 1 791 0 discriminator 2
+	.loc 1 779 0 discriminator 2
 	l32i.n	a5, a5, 0
 	movi.n	a4, 0
 	movi.n	a6, 1
 	moveqz	a4, a6, a5
 	extui	a4, a4, 0, 8
 .L29:
-	.loc 1 791 0 discriminator 14
+	.loc 1 779 0 discriminator 14
 	beqz.n	a4, .L30
-	.loc 1 798 0 is_stmt 1
+	.loc 1 786 0 is_stmt 1
 	mov.n	a10, a2
 	movi.n	a11, 0
 	call8	dns_call_found
 .LVL18:
-	.loc 1 800 0
+	.loc 1 788 0
 	add.n	a3, a3, a2
 	addx8	a8, a3, a2
 	l32r	a3, .LC14
-	.loc 1 801 0
+	.loc 1 789 0
 	movi.n	a10, 0
-	.loc 1 800 0
+	.loc 1 788 0
 	addx4	a2, a8, a3
 .LVL19:
 	movi.n	a3, 0
 	s8i	a3, a2, 26
-	.loc 1 801 0
+	.loc 1 789 0
 	j	.L31
 .LVL20:
 .L30:
-	.loc 1 805 0
+	.loc 1 793 0
 	add.n	a5, a3, a2
 	addx8	a5, a5, a2
 	l32r	a8, .LC14
@@ -321,68 +321,68 @@ dns_send:
 .LVL22:
 	mov.n	a7, a10
 .LVL23:
-	.loc 1 880 0
+	.loc 1 868 0
 	movi	a10, 0xff
-	.loc 1 807 0
+	.loc 1 795 0
 	beqz.n	a7, .L31
 .LBB3:
-	.loc 1 811 0
+	.loc 1 799 0
 	movi.n	a12, 0xc
 	mov.n	a11, a4
 	mov.n	a10, sp
 	call8	memset
 .LVL24:
-	.loc 1 812 0
+	.loc 1 800 0
 	l32r	a8, .LC14
-	.loc 1 817 0
+	.loc 1 805 0
 	addi.n	a6, a6, -1
-	.loc 1 812 0
+	.loc 1 800 0
 	add.n	a5, a8, a5
 	l16ui	a10, a5, 24
-	.loc 1 813 0
+	.loc 1 801 0
 	movi.n	a5, 1
-	.loc 1 812 0
+	.loc 1 800 0
 	call8	lwip_htons
 .LVL25:
 	s16i	a10, sp, 0
-	.loc 1 813 0
+	.loc 1 801 0
 	s8i	a5, sp, 2
-	.loc 1 815 0
+	.loc 1 803 0
 	movi.n	a12, 0xc
-	.loc 1 814 0
+	.loc 1 802 0
 	movi	a5, 0x100
-	.loc 1 815 0
+	.loc 1 803 0
 	mov.n	a11, sp
 	mov.n	a10, a7
-	.loc 1 814 0
+	.loc 1 802 0
 	s16i	a5, sp, 4
-	.loc 1 815 0
+	.loc 1 803 0
 	call8	pbuf_take
 .LVL26:
-	.loc 1 820 0
+	.loc 1 808 0
 	movi.n	a9, 0xc
 .LVL27:
 .L35:
-	.loc 1 822 0
+	.loc 1 810 0
 	addi.n	a6, a6, 1
 .LVL28:
 	mov.n	a14, a6
-	.loc 1 824 0
+	.loc 1 812 0
 	movi.n	a5, 0
 	movi.n	a12, 1
 	j	.L32
 .LVL29:
 .L33:
-	.loc 1 825 0 discriminator 3
+	.loc 1 813 0 discriminator 3
 	addi.n	a5, a5, 1
 .LVL30:
 	extui	a5, a5, 0, 8
 .LVL31:
-	.loc 1 824 0 discriminator 3
+	.loc 1 812 0 discriminator 3
 	addi.n	a6, a6, 1
 .LVL32:
 .L32:
-	.loc 1 824 0 is_stmt 0 discriminator 1
+	.loc 1 812 0 is_stmt 0 discriminator 1
 	l8ui	a10, a6, 0
 	mov.n	a8, a4
 	addi	a11, a10, -46
@@ -392,10 +392,10 @@ dns_send:
 	movnez	a8, a12, a10
 	bnez.n	a8, .L33
 .L42:
-	.loc 1 827 0 is_stmt 1
+	.loc 1 815 0 is_stmt 1
 	sub	a15, a6, a14
 .LVL33:
-	.loc 1 828 0
+	.loc 1 816 0
 	mov.n	a12, a5
 	mov.n	a11, a9
 	mov.n	a10, a7
@@ -404,7 +404,7 @@ dns_send:
 	s32i.n	a15, sp, 20
 	call8	pbuf_put_at
 .LVL34:
-	.loc 1 829 0
+	.loc 1 817 0
 	l32i.n	a9, sp, 24
 	l32i.n	a15, sp, 20
 	l32i.n	a14, sp, 16
@@ -415,30 +415,30 @@ dns_send:
 	mov.n	a10, a7
 	call8	pbuf_take_at
 .LVL35:
-	.loc 1 830 0
+	.loc 1 818 0
 	l32i.n	a9, sp, 24
-	.loc 1 831 0
+	.loc 1 819 0
 	l8ui	a12, a6, 0
-	.loc 1 830 0
+	.loc 1 818 0
 	add.n	a5, a9, a5
 .LVL36:
 	extui	a5, a5, 0, 16
 	addi.n	a9, a5, 1
 	extui	a9, a9, 0, 16
 .LVL37:
-	.loc 1 831 0
+	.loc 1 819 0
 	bnez.n	a12, .L35
-	.loc 1 832 0
+	.loc 1 820 0
 	mov.n	a11, a9
 	mov.n	a10, a7
 	call8	pbuf_put_at
 .LVL38:
-	.loc 1 833 0
+	.loc 1 821 0
 	addi.n	a5, a5, 2
 .LVL39:
 	extui	a13, a5, 0, 16
 .LVL40:
-	.loc 1 836 0
+	.loc 1 824 0
 	add.n	a4, a3, a2
 	l32r	a5, .LC14
 .LVL41:
@@ -451,40 +451,40 @@ dns_send:
 	and	a4, a5, a4
 	movi	a5, 0x100
 	bnei	a4, 1, .L36
-	.loc 1 837 0
+	.loc 1 825 0
 	l32r	a8, .LC20
 	s16i	a8, sp, 12
 	j	.L37
 .L36:
-	.loc 1 839 0
+	.loc 1 827 0
 	s16i	a5, sp, 12
 .L37:
-	.loc 1 842 0
+	.loc 1 830 0
 	movi.n	a12, 4
 	addi.n	a11, sp, 12
 	mov.n	a10, a7
-	.loc 1 873 0
+	.loc 1 861 0
 	add.n	a3, a3, a2
-	.loc 1 841 0
+	.loc 1 829 0
 	s16i	a5, sp, 14
-	.loc 1 842 0
+	.loc 1 830 0
 	call8	pbuf_take_at
 .LVL42:
-	.loc 1 873 0
+	.loc 1 861 0
 	addx8	a8, a3, a2
 	l32r	a3, .LC14
-	.loc 1 875 0
+	.loc 1 863 0
 	l32r	a4, .LC19
-	.loc 1 873 0
+	.loc 1 861 0
 	addx4	a2, a8, a3
 .LVL43:
 	l8ui	a12, a2, 27
-	.loc 1 875 0
+	.loc 1 863 0
 	l32r	a3, .LC21
 	l8ui	a2, a2, 31
-	.loc 1 873 0
+	.loc 1 861 0
 	addx4	a12, a12, a12
-	.loc 1 875 0
+	.loc 1 863 0
 	addx4	a2, a2, a3
 	l32i.n	a10, a2, 0
 	movi.n	a13, 0x35
@@ -494,20 +494,20 @@ dns_send:
 .LVL44:
 	extui	a2, a10, 0, 8
 .LVL45:
-	.loc 1 878 0
+	.loc 1 866 0
 	mov.n	a10, a7
 .LVL46:
 	call8	pbuf_free
 .LVL47:
-	.loc 1 875 0
+	.loc 1 863 0
 	mov.n	a10, a2
 .LVL48:
 .L31:
 .LBE3:
-	.loc 1 884 0
+	.loc 1 872 0
 	mov.n	a2, a10
 	retw.n
-.LFE26:
+.LFE35:
 	.size	dns_send, .-dns_send
 	.section	.rodata.str1.1
 .LC24:
@@ -517,7 +517,7 @@ dns_send:
 	.section	.text.dns_check_entry,"ax",@progbits
 	.literal_position
 	.literal .LC25, .LC24
-	.literal .LC26, __func__$6660
+	.literal .LC26, __func__$6724
 	.literal .LC27, .LC7
 	.literal .LC28, dns_table
 	.literal .LC29, dns_servers
@@ -525,21 +525,21 @@ dns_send:
 	.align	4
 	.type	dns_check_entry, @function
 dns_check_entry:
-.LFB31:
-	.loc 1 1053 0
+.LFB40:
+	.loc 1 1041 0
 .LVL49:
 	entry	sp, 32
 .LCFI3:
 .LVL50:
-	.loc 1 1057 0
+	.loc 1 1045 0
 	bltui	a2, 4, .L48
-	.loc 1 1057 0 is_stmt 0 discriminator 1
+	.loc 1 1045 0 is_stmt 0 discriminator 1
 	l32r	a13, .LC25
 	l32r	a12, .LC26
-	movi	a11, 0x421
-	j	.L91
+	movi	a11, 0x415
+	j	.L102
 .L48:
-	.loc 1 1059 0 is_stmt 1
+	.loc 1 1047 0 is_stmt 1
 	slli	a3, a2, 3
 	l32r	a4, .LC28
 	add.n	a8, a3, a2
@@ -550,11 +550,11 @@ dns_check_entry:
 	beqz.n	a9, .L47
 	beqi	a9, 2, .L52
 	beqi	a9, 3, .L53
-	j	.L88
+	j	.L98
 .L50:
 .LBB6:
 .LBB7:
-	.loc 1 1028 0
+	.loc 1 1016 0
 	call8	esp_random
 .LVL51:
 	movi.n	a9, 4
@@ -566,7 +566,7 @@ dns_check_entry:
 	loop	a11, .L55_LEND
 .LVL53:
 .L55:
-	.loc 1 1032 0
+	.loc 1 1020 0
 	l8ui	a13, a8, 26
 	bnei	a13, 2, .L54
 	l16ui	a13, a8, 24
@@ -581,121 +581,155 @@ dns_check_entry:
 	.L55_LEND:
 .LBE7:
 .LBE6:
-	.loc 1 1062 0
+	.loc 1 1050 0
 	add.n	a3, a3, a2
 	addx8	a3, a3, a2
 	addx4	a8, a3, a4
-	.loc 1 1063 0
+	.loc 1 1051 0
 	movi.n	a3, 2
 	s8i	a3, a8, 26
-	.loc 1 1065 0
+	.loc 1 1053 0
 	movi.n	a3, 1
-	.loc 1 1062 0
-	s16i	a10, a8, 24
-	.loc 1 1064 0
+	.loc 1 1052 0
 	s8i	a9, a8, 27
-	.loc 1 1065 0
-	s8i	a3, a8, 28
-	.loc 1 1066 0
+	.loc 1 1054 0
 	s8i	a9, a8, 29
-	j	.L64
+	.loc 1 1050 0
+	s16i	a10, a8, 24
+	.loc 1 1053 0
+	s8i	a3, a8, 28
+	.loc 1 1056 0
+	l32r	a9, .LC29
+	addi	a8, a8, 27
+	j	.L56
 .LVL57:
+.L59:
+	.loc 1 1057 0
+	addi.n	a4, a4, 1
+	s8i	a4, a8, 0
+.L56:
+	.loc 1 1056 0
+	l8ui	a4, a8, 0
+	bgeui	a4, 3, .L68
+	.loc 1 1056 0 is_stmt 0 discriminator 1
+	addx4	a3, a4, a4
+	addx4	a3, a3, a9
+	l8ui	a10, a3, 16
+	bnei	a10, 6, .L58
+	.loc 1 1056 0 discriminator 2
+	l32i.n	a10, a3, 0
+	bnez.n	a10, .L68
+	.loc 1 1056 0 discriminator 4
+	l32i.n	a10, a3, 4
+	bnez.n	a10, .L68
+	.loc 1 1056 0 discriminator 6
+	l32i.n	a10, a3, 8
+	bnez.n	a10, .L68
+	.loc 1 1056 0 discriminator 8
+	l32i.n	a3, a3, 12
+	j	.L101
+.L58:
+	.loc 1 1056 0 discriminator 3
+	l32i.n	a3, a3, 0
+.L101:
+	beqz.n	a3, .L59
+	j	.L68
 .L52:
-	.loc 1 1076 0
+	.loc 1 1068 0 is_stmt 1
 	l8ui	a9, a8, 28
 	addi.n	a9, a9, -1
 	extui	a9, a9, 0, 8
 	s8i	a9, a8, 28
 	bnez.n	a9, .L47
-	.loc 1 1077 0
+	.loc 1 1069 0
 	l8ui	a9, a8, 29
 	addi.n	a9, a9, 1
 	extui	a9, a9, 0, 8
 	s8i	a9, a8, 29
-	bnei	a9, 4, .L89
-	.loc 1 1080 0
+	bnei	a9, 4, .L99
+	.loc 1 1072 0
 	addi	a8, a8, 27
-	l32r	a12, .LC29
-	j	.L57
-.L62:
-	.loc 1 1081 0
-	s8i	a10, a8, 0
-.L57:
-	.loc 1 1080 0
-	l8ui	a10, a8, 0
-	bgei	a10, 2, .L59
-	.loc 1 1080 0 is_stmt 0 discriminator 1
-	addi.n	a10, a10, 1
-	slli	a9, a10, 2
-	add.n	a11, a9, a10
-	addx4	a11, a11, a12
-	l8ui	a13, a11, 16
-	bnei	a13, 6, .L60
-	.loc 1 1080 0 discriminator 2
-	l32i.n	a13, a11, 0
-	bnez.n	a13, .L61
-	.loc 1 1080 0 discriminator 4
-	l32i.n	a13, a11, 4
-	bnez.n	a13, .L61
-	.loc 1 1080 0 discriminator 6
-	l32i.n	a13, a11, 8
-	bnez.n	a13, .L61
-	.loc 1 1080 0 discriminator 8
-	l32i.n	a11, a11, 12
-	beqz.n	a11, .L62
+	l32r	a9, .LC29
 	j	.L61
-.L60:
-	.loc 1 1080 0 discriminator 3
-	l32i.n	a9, a11, 0
-	beqz.n	a9, .L62
-	j	.L63
-.L90:
-	.loc 1 1084 0 is_stmt 1 discriminator 5
-	l32i.n	a9, a8, 4
-	bnez.n	a9, .L63
-	.loc 1 1084 0 is_stmt 0 discriminator 7
-	l32i.n	a9, a8, 8
-	bnez.n	a9, .L63
-	.loc 1 1084 0 discriminator 9
-	l32i.n	a8, a8, 12
-	beqz.n	a8, .L59
-.L63:
-	.loc 1 1090 0 is_stmt 1
+.L66:
+	.loc 1 1073 0
+	s8i	a11, a8, 0
+.L61:
+	.loc 1 1072 0
+	l8ui	a11, a8, 0
+	bgei	a11, 2, .L63
+	.loc 1 1072 0 is_stmt 0 discriminator 1
+	addi.n	a11, a11, 1
+	slli	a10, a11, 2
+	add.n	a12, a10, a11
+	addx4	a12, a12, a9
+	l8ui	a13, a12, 16
+	bnei	a13, 6, .L64
+	.loc 1 1072 0 discriminator 2
+	l32i.n	a13, a12, 0
+	bnez.n	a13, .L65
+	.loc 1 1072 0 discriminator 4
+	l32i.n	a13, a12, 4
+	bnez.n	a13, .L65
+	.loc 1 1072 0 discriminator 6
+	l32i.n	a13, a12, 8
+	bnez.n	a13, .L65
+	.loc 1 1072 0 discriminator 8
+	l32i.n	a12, a12, 12
+	beqz.n	a12, .L66
+	j	.L65
+.L64:
+	.loc 1 1072 0 discriminator 3
+	l32i.n	a10, a12, 0
+	beqz.n	a10, .L66
+	j	.L67
+.L100:
+	.loc 1 1076 0 is_stmt 1 discriminator 5
+	l32i.n	a8, a9, 4
+	bnez.n	a8, .L67
+	.loc 1 1076 0 is_stmt 0 discriminator 7
+	l32i.n	a8, a9, 8
+	bnez.n	a8, .L67
+	.loc 1 1076 0 discriminator 9
+	l32i.n	a8, a9, 12
+	beqz.n	a8, .L63
+.L67:
+	.loc 1 1082 0 is_stmt 1
 	add.n	a8, a3, a2
 	addx8	a8, a8, a2
 	addx4	a8, a8, a4
-	.loc 1 1091 0
+	.loc 1 1083 0
 	movi.n	a3, 1
 	s8i	a3, a8, 28
-	.loc 1 1092 0
+	.loc 1 1084 0
 	movi.n	a3, 0
-	.loc 1 1090 0
-	s8i	a10, a8, 27
-	.loc 1 1092 0
+	.loc 1 1082 0
+	s8i	a11, a8, 27
+	.loc 1 1084 0
 	s8i	a3, a8, 29
-	j	.L64
-.L59:
-	.loc 1 1096 0
+	j	.L68
+.L63:
+	.loc 1 1088 0
 	movi.n	a11, 0
 	mov.n	a10, a2
 	call8	dns_call_found
 .LVL58:
-	j	.L66
-.L89:
-	.loc 1 1103 0
+	j	.L70
+.L99:
+	.loc 1 1095 0
 	s8i	a9, a8, 28
-.L64:
-	.loc 1 1107 0
+.L68:
+	.loc 1 1099 0
 	mov.n	a10, a2
 	call8	dns_send
 .LVL59:
 	retw.n
 .L53:
-	.loc 1 1116 0
+	.loc 1 1108 0
 	l32i.n	a9, a8, 0
-	bnez.n	a9, .L65
-.L66:
-	.loc 1 1119 0
+	bnez.n	a9, .L69
+.L70:
+	.loc 1 1111 0
 	add.n	a8, a3, a2
 	addx8	a2, a8, a2
 .LVL60:
@@ -704,31 +738,31 @@ dns_check_entry:
 	s8i	a2, a8, 26
 	retw.n
 .LVL61:
-.L65:
-	.loc 1 1116 0 discriminator 1
+.L69:
+	.loc 1 1108 0 discriminator 1
 	addi.n	a9, a9, -1
 	s32i.n	a9, a8, 0
-	beqz.n	a9, .L66
+	beqz.n	a9, .L70
 	retw.n
-.L88:
-	.loc 1 1126 0 discriminator 1
+.L98:
+	.loc 1 1118 0 discriminator 1
 	l32r	a13, .LC31
 	l32r	a12, .LC26
-	movi	a11, 0x466
-.L91:
+	movi	a11, 0x45e
+.L102:
 	l32r	a10, .LC27
 	call8	__assert_func
 .LVL62:
-.L61:
-	.loc 1 1084 0
-	add.n	a9, a9, a10
-	addx4	a8, a9, a12
-	l32i.n	a9, a8, 0
-	bnez.n	a9, .L63
-	j	.L90
+.L65:
+	.loc 1 1076 0
+	add.n	a10, a10, a11
+	addx4	a9, a10, a9
+	l32i.n	a8, a9, 0
+	bnez.n	a8, .L67
+	j	.L100
 .L47:
 	retw.n
-.LFE31:
+.LFE40:
 	.size	dns_check_entry, .-dns_check_entry
 	.section	.text.dns_lookup,"ax",@progbits
 	.literal_position
@@ -736,65 +770,65 @@ dns_check_entry:
 	.align	4
 	.type	dns_lookup, @function
 dns_lookup:
-.LFB23:
-	.loc 1 647 0
+.LFB32:
+	.loc 1 635 0
 .LVL63:
 	entry	sp, 32
 .LCFI4:
 .LVL64:
 	l32r	a7, .LC32
-	.loc 1 666 0
+	.loc 1 654 0
 	movi.n	a8, -3
 	and	a4, a4, a8
 .LVL65:
-	.loc 1 647 0
+	.loc 1 635 0
 	movi.n	a5, 0
 	mov.n	a6, a7
-	.loc 1 666 0
+	.loc 1 654 0
 	addi.n	a4, a4, -1
 .LVL66:
-.L98:
-	.loc 1 664 0
+.L109:
+	.loc 1 652 0
 	l8ui	a8, a7, 26
-	bnei	a8, 3, .L93
-	.loc 1 665 0 discriminator 1
+	bnei	a8, 3, .L104
+	.loc 1 653 0 discriminator 1
 	movi	a12, 0x100
 	addi	a11, a7, 32
 	mov.n	a10, a2
 	call8	lwip_strnicmp
 .LVL67:
-	.loc 1 664 0 discriminator 1
-	bnez.n	a10, .L93
-	.loc 1 666 0
+	.loc 1 652 0 discriminator 1
+	bnez.n	a10, .L104
+	.loc 1 654 0
 	l8ui	a8, a7, 20
 	movi.n	a9, 1
-	.loc 1 665 0
-	bnei	a8, 6, .L94
-	.loc 1 666 0 discriminator 1
+	.loc 1 653 0
+	bnei	a8, 6, .L105
+	.loc 1 654 0 discriminator 1
 	moveqz	a10, a9, a4
-	j	.L104
-.L94:
-	.loc 1 666 0 is_stmt 0 discriminator 2
+	j	.L115
+.L105:
+	.loc 1 654 0 is_stmt 0 discriminator 2
 	movnez	a10, a9, a4
-.L104:
+.L115:
 	extui	a10, a10, 0, 8
-	.loc 1 665 0 is_stmt 1 discriminator 2
-	beqz.n	a10, .L93
-	.loc 1 673 0
+	.loc 1 653 0 is_stmt 1 discriminator 2
+	beqz.n	a10, .L104
+	.loc 1 661 0
 	mov.n	a2, a3
 .LVL68:
-	.loc 1 670 0
-	beqz.n	a3, .L96
+	.loc 1 658 0
+	beqz.n	a3, .L107
 .LVL69:
-	.loc 1 671 0
+	.loc 1 659 0
 	addx8	a9, a5, a5
 	s8i	a8, a3, 16
 	addx8	a8, a9, a5
 	addx4	a8, a8, a6
 	l8ui	a2, a8, 20
 .LVL70:
-	bnei	a2, 6, .L97
-	.loc 1 671 0 is_stmt 0 discriminator 1
+	bnei	a2, 6, .L108
+	.loc 1 659 0 is_stmt 0 discriminator 1
 	l32i.n	a2, a8, 4
 	s32i.n	a2, a3, 0
 	l32i.n	a2, a8, 8
@@ -803,30 +837,30 @@ dns_lookup:
 	s32i.n	a2, a3, 8
 	l32i.n	a2, a8, 16
 	s32i.n	a2, a3, 12
-	j	.L105
-.L97:
-	.loc 1 671 0 discriminator 2
+	j	.L116
+.L108:
+	.loc 1 659 0 discriminator 2
 	l32i.n	a2, a8, 4
 	s32i.n	a2, a3, 0
-.L105:
-	.loc 1 673 0 is_stmt 1 discriminator 2
+.L116:
+	.loc 1 661 0 is_stmt 1 discriminator 2
 	movi.n	a2, 0
 	retw.n
 .LVL71:
-.L93:
+.L104:
 	movi	a8, 0x124
 	addi.n	a5, a5, 1
 .LVL72:
 	add.n	a7, a7, a8
-	.loc 1 663 0
-	bnei	a5, 4, .L98
-	.loc 1 677 0
+	.loc 1 651 0
+	bnei	a5, 4, .L109
+	.loc 1 665 0
 	movi	a2, 0xf0
 .LVL73:
-.L96:
-	.loc 1 678 0
+.L107:
+	.loc 1 666 0
 	retw.n
-.LFE23:
+.LFE32:
 	.size	dns_lookup, .-dns_lookup
 	.section	.text.dns_recv,"ax",@progbits
 	.literal_position
@@ -838,26 +872,26 @@ dns_lookup:
 	.align	4
 	.type	dns_recv, @function
 dns_recv:
-.LFB34:
-	.loc 1 1181 0
+.LFB43:
+	.loc 1 1173 0
 .LVL74:
 	entry	sp, 96
 .LCFI5:
-	.loc 1 1195 0
+	.loc 1 1187 0
 	l16ui	a2, a4, 8
 .LVL75:
 	movi.n	a3, 0xf
 .LVL76:
-	bgeu	a3, a2, .L126
-	.loc 1 1202 0
+	bgeu	a3, a2, .L137
+	.loc 1 1194 0
 	movi.n	a13, 0
 	movi.n	a12, 0xc
 	addi	a11, sp, 16
 	mov.n	a10, a4
 	call8	pbuf_copy_partial
 .LVL77:
-	bnei	a10, 12, .L126
-	.loc 1 1204 0
+	bnei	a10, 12, .L137
+	.loc 1 1196 0
 	l16ui	a10, sp, 16
 	movi.n	a2, 0
 	call8	lwip_htons
@@ -868,43 +902,43 @@ dns_recv:
 .LVL79:
 	movi.n	a7, 4
 .LVL80:
-.L132:
+.L143:
 .LBB16:
-	.loc 1 1207 0
+	.loc 1 1199 0
 	l8ui	a9, a3, 26
-	bnei	a9, 2, .L108
-	.loc 1 1207 0 is_stmt 0 discriminator 1
+	bnei	a9, 2, .L119
+	.loc 1 1199 0 is_stmt 0 discriminator 1
 	l16ui	a9, a3, 24
-	bne	a9, a10, .L108
-	.loc 1 1212 0 is_stmt 1
+	bne	a9, a10, .L119
+	.loc 1 1204 0 is_stmt 1
 	l16ui	a10, sp, 20
 .LVL81:
-	.loc 1 1220 0
-	movi.n	a3, -1
 	.loc 1 1212 0
+	movi.n	a3, -1
+	.loc 1 1204 0
 	call8	lwip_htons
 .LVL82:
 	mov.n	a7, a10
 .LVL83:
-	.loc 1 1213 0
+	.loc 1 1205 0
 	l16ui	a10, sp, 22
 	call8	lwip_htons
 .LVL84:
-	.loc 1 1220 0
+	.loc 1 1212 0
 	l8ui	a8, sp, 18
-	.loc 1 1213 0
+	.loc 1 1205 0
 	s32i.n	a10, sp, 48
 .LVL85:
-	.loc 1 1220 0
+	.loc 1 1212 0
 	xor	a3, a3, a8
 	extui	a3, a3, 7, 1
-	bnez.n	a3, .L126
+	bnez.n	a3, .L137
 	addi.n	a10, a7, -1
 	movi.n	a9, 1
 	movnez	a3, a9, a10
 	mov.n	a10, a3
-	bnez.n	a3, .L126
-	.loc 1 1231 0
+	bnez.n	a3, .L137
+	.loc 1 1223 0
 	slli	a3, a2, 3
 	add.n	a8, a3, a2
 	addx8	a8, a8, a2
@@ -915,40 +949,40 @@ dns_recv:
 	addx4	a8, a8, a12
 	l8ui	a11, a5, 16
 	l8ui	a12, a8, 16
-	bne	a12, a11, .L126
-	.loc 1 1231 0 is_stmt 0 discriminator 1
-	bnei	a12, 6, .L109
-	.loc 1 1231 0 discriminator 3
+	bne	a12, a11, .L137
+	.loc 1 1223 0 is_stmt 0 discriminator 1
+	bnei	a12, 6, .L120
+	.loc 1 1223 0 discriminator 3
 	l32i.n	a12, a5, 0
 	l32i.n	a11, a8, 0
-	bne	a12, a11, .L111
-	.loc 1 1231 0 discriminator 6
+	bne	a12, a11, .L122
+	.loc 1 1223 0 discriminator 6
 	l32i.n	a12, a5, 4
 	l32i.n	a11, a8, 4
-	bne	a12, a11, .L111
-	.loc 1 1231 0 discriminator 8
+	bne	a12, a11, .L122
+	.loc 1 1223 0 discriminator 8
 	l32i.n	a12, a5, 8
 	l32i.n	a11, a8, 8
-	bne	a12, a11, .L111
-	.loc 1 1231 0 discriminator 10
+	bne	a12, a11, .L122
+	.loc 1 1223 0 discriminator 10
 	l32i.n	a5, a5, 12
 .LVL86:
 	l32i.n	a8, a8, 12
 	sub	a5, a5, a8
 	moveqz	a9, a10, a5
-	j	.L111
+	j	.L122
 .LVL87:
-.L109:
-	.loc 1 1231 0 discriminator 4
+.L120:
+	.loc 1 1223 0 discriminator 4
 	l32i.n	a5, a5, 0
 .LVL88:
 	l32i.n	a8, a8, 0
 	sub	a5, a5, a8
 	moveqz	a9, a10, a5
-.L111:
-	.loc 1 1231 0 discriminator 18
-	bnez.n	a9, .L126
-	.loc 1 1238 0 is_stmt 1
+.L122:
+	.loc 1 1223 0 discriminator 18
+	bnez.n	a9, .L137
+	.loc 1 1230 0 is_stmt 1
 	add.n	a9, a3, a2
 	addx8	a9, a9, a2
 	addx4	a9, a9, a6
@@ -956,11 +990,11 @@ dns_recv:
 .LVL89:
 .LBB17:
 .LBB18:
-	.loc 1 695 0
+	.loc 1 683 0
 	movi.n	a7, 0xc
 .LVL90:
-.L115:
-	.loc 1 698 0
+.L126:
+	.loc 1 686 0
 	addi.n	a12, a7, 1
 	extui	a12, a12, 0, 16
 .LVL91:
@@ -969,130 +1003,130 @@ dns_recv:
 	s32i.n	a12, sp, 56
 	call8	pbuf_try_get_at
 .LVL92:
-	.loc 1 699 0
+	.loc 1 687 0
 	l32i.n	a12, sp, 56
-	bltz	a10, .L126
-	.loc 1 703 0
+	bltz	a10, .L137
+	.loc 1 691 0
 	movi	a9, 0xc0
 	and	a8, a10, a9
-	beq	a8, a9, .L126
+	beq	a8, a9, .L137
 	add.n	a13, a5, a10
 	mov.n	a7, a12
 .LVL93:
-	j	.L113
+	j	.L124
 .LVL94:
-.L114:
+.L125:
 .LBB19:
-	.loc 1 709 0
+	.loc 1 697 0
 	mov.n	a11, a7
 	mov.n	a10, a4
 	s32i.n	a13, sp, 56
 	call8	pbuf_try_get_at
 .LVL95:
-	.loc 1 710 0
+	.loc 1 698 0
 	l32i.n	a13, sp, 56
-	bltz	a10, .L126
-	.loc 1 713 0
+	bltz	a10, .L137
+	.loc 1 701 0
 	l8ui	a11, a5, 0
 	extui	a10, a10, 0, 8
 .LVL96:
-	bne	a11, a10, .L126
-	.loc 1 716 0
+	bne	a11, a10, .L137
+	.loc 1 704 0
 	addi.n	a8, a7, 1
 	extui	a7, a8, 0, 16
 .LVL97:
-	.loc 1 717 0
+	.loc 1 705 0
 	addi.n	a5, a5, 1
 .LVL98:
-.L113:
+.L124:
 .LBE19:
-	.loc 1 708 0
-	bne	a13, a5, .L114
-	.loc 1 722 0
+	.loc 1 696 0
+	bne	a13, a5, .L125
+	.loc 1 710 0
 	mov.n	a11, a7
 	mov.n	a10, a4
-	.loc 1 720 0
+	.loc 1 708 0
 	addi.n	a5, a13, 1
 .LVL99:
-	.loc 1 722 0
+	.loc 1 710 0
 	call8	pbuf_try_get_at
 .LVL100:
-	.loc 1 723 0
-	bltz	a10, .L126
-	.loc 1 726 0
-	bnez.n	a10, .L115
-	.loc 1 728 0
+	.loc 1 711 0
+	bltz	a10, .L137
+	.loc 1 714 0
+	bnez.n	a10, .L126
+	.loc 1 716 0
 	addi.n	a13, a7, 1
 .LBE18:
 .LBE17:
-	.loc 1 1239 0
+	.loc 1 1231 0
 	l32r	a5, .LC35
 .LVL101:
 .LBB21:
 .LBB20:
-	.loc 1 728 0
+	.loc 1 716 0
 	extui	a13, a13, 0, 16
 .LBE20:
 .LBE21:
-	.loc 1 1239 0
-	beq	a13, a5, .L126
-	.loc 1 1245 0
+	.loc 1 1231 0
+	beq	a13, a5, .L137
+	.loc 1 1237 0
 	movi.n	a12, 4
 	addi	a11, sp, 40
 	mov.n	a10, a4
 .LVL102:
 	call8	pbuf_copy_partial
 .LVL103:
-	bnei	a10, 4, .L126
-	.loc 1 1248 0
+	bnei	a10, 4, .L137
+	.loc 1 1240 0
 	l16ui	a5, sp, 42
-	bnei	a5, 256, .L126
-	.loc 1 1249 0 discriminator 1
+	bnei	a5, 256, .L137
+	.loc 1 1241 0 discriminator 1
 	add.n	a5, a3, a2
 	addx8	a5, a5, a2
 	movi	a9, 0x120
 	addx4	a5, a5, a6
 	add.n	a5, a5, a9
-	.loc 1 1248 0 discriminator 1
+	.loc 1 1240 0 discriminator 1
 	l8ui	a9, a5, 0
 	movi	a5, 0xfd
 	and	a5, a9, a5
 	l16ui	a9, sp, 40
-	bnei	a5, 1, .L116
-	.loc 1 1249 0
+	bnei	a5, 1, .L127
+	.loc 1 1241 0
 	l32r	a5, .LC36
-	bne	a9, a5, .L126
-	j	.L117
-.L116:
+	bne	a9, a5, .L137
+	j	.L128
+.L127:
+	.loc 1 1242 0
+	bnei	a9, 256, .L137
+.L128:
 	.loc 1 1250 0
-	bnei	a9, 256, .L126
-.L117:
-	.loc 1 1258 0
 	l8ui	a5, sp, 19
-	.loc 1 1255 0
+	.loc 1 1247 0
 	addi.n	a8, a7, 5
-	.loc 1 1258 0
+	.loc 1 1250 0
 	extui	a5, a5, 0, 4
-	.loc 1 1255 0
+	.loc 1 1247 0
 	extui	a8, a8, 0, 16
 .LVL104:
-	.loc 1 1258 0
-	bnez.n	a5, .L118
-	.loc 1 1297 0
+	.loc 1 1250 0
+	bnez.n	a5, .L129
+	.loc 1 1289 0
 	add.n	a5, a3, a2
 	addx8	a5, a5, a2
 	slli	a5, a5, 2
 	s32i.n	a5, sp, 52
-	j	.L119
+	j	.L130
 .LVL105:
-.L129:
+.L140:
 .LBB22:
 .LBB23:
-	.loc 1 750 0
+	.loc 1 738 0
 	movi	a7, 0xc0
 .LVL106:
-.L121:
-	.loc 1 745 0
+.L132:
+	.loc 1 733 0
 	addi.n	a10, a8, 1
 	extui	a5, a10, 0, 16
 .LVL107:
@@ -1101,74 +1135,74 @@ dns_recv:
 .LVL108:
 	call8	pbuf_try_get_at
 .LVL109:
-	.loc 1 746 0
-	bltz	a10, .L126
-	.loc 1 750 0
+	.loc 1 734 0
+	bltz	a10, .L137
+	.loc 1 738 0
 	and	a8, a10, a7
-	beq	a8, a7, .L120
-	.loc 1 755 0
+	beq	a8, a7, .L131
+	.loc 1 743 0
 	l16ui	a8, a4, 8
 	add.n	a10, a5, a10
 .LVL110:
-	bge	a10, a8, .L126
-	.loc 1 758 0
+	bge	a10, a8, .L137
+	.loc 1 746 0
 	extui	a8, a10, 0, 16
 .LVL111:
-	.loc 1 760 0
+	.loc 1 748 0
 	mov.n	a11, a8
 	mov.n	a10, a4
 .LVL112:
 	s32i.n	a8, sp, 56
 	call8	pbuf_try_get_at
 .LVL113:
-	.loc 1 761 0
+	.loc 1 749 0
 	l32i.n	a8, sp, 56
-	bltz	a10, .L126
-	.loc 1 764 0
-	bnez.n	a10, .L121
-	.loc 1 758 0
+	bltz	a10, .L137
+	.loc 1 752 0
+	bnez.n	a10, .L132
+	.loc 1 746 0
 	mov.n	a5, a8
-.L120:
+.L131:
 .LVL114:
-	.loc 1 766 0
+	.loc 1 754 0
 	addi.n	a13, a5, 1
 .LBE23:
 .LBE22:
-	.loc 1 1264 0
+	.loc 1 1256 0
 	l32r	a7, .LC35
 .LBB25:
 .LBB24:
-	.loc 1 766 0
+	.loc 1 754 0
 	extui	a13, a13, 0, 16
 .LBE24:
 .LBE25:
-	.loc 1 1264 0
-	beq	a13, a7, .L126
-	.loc 1 1269 0
+	.loc 1 1256 0
+	beq	a13, a7, .L137
+	.loc 1 1261 0
 	movi.n	a12, 0xa
 	addi	a11, sp, 28
 	mov.n	a10, a4
 .LVL115:
 	call8	pbuf_copy_partial
 .LVL116:
-	bnei	a10, 10, .L126
-	.loc 1 1274 0
+	bnei	a10, 10, .L137
+	.loc 1 1266 0
 	l16ui	a8, sp, 30
-	.loc 1 1272 0
+	.loc 1 1264 0
 	addi.n	a5, a5, 11
 .LVL117:
 	extui	a5, a5, 0, 16
 .LVL118:
 	l16ui	a10, sp, 36
-	.loc 1 1274 0
-	bnei	a8, 256, .L122
-	.loc 1 1276 0
+	.loc 1 1266 0
+	bnei	a8, 256, .L133
+	.loc 1 1268 0
 	l16ui	a8, sp, 28
-	bnei	a8, 256, .L123
-	.loc 1 1276 0 is_stmt 0 discriminator 1
+	bnei	a8, 256, .L134
+	.loc 1 1268 0 is_stmt 0 discriminator 1
 	movi	a8, 0x400
-	bne	a10, a8, .L122
-	.loc 1 1278 0 is_stmt 1
+	bne	a10, a8, .L133
+	.loc 1 1270 0 is_stmt 1
 	l32i.n	a9, sp, 52
 	l32r	a8, .LC33
 	add.n	a8, a8, a9
@@ -1177,9 +1211,9 @@ dns_recv:
 	l8ui	a11, a9, 0
 	movi	a9, 0xfd
 	and	a9, a11, a9
-	beqi	a9, 1, .L122
+	beqi	a9, 1, .L133
 .LBB26:
-	.loc 1 1283 0
+	.loc 1 1275 0
 	mov.n	a13, a5
 	movi.n	a12, 4
 	mov.n	a11, sp
@@ -1188,21 +1222,21 @@ dns_recv:
 	call8	pbuf_copy_partial
 .LVL119:
 	l32i.n	a8, sp, 56
-	bnei	a10, 4, .L126
-	.loc 1 1286 0
+	bnei	a10, 4, .L137
+	.loc 1 1278 0
 	l32i.n	a3, sp, 0
 	s32i.n	a3, a8, 4
 	movi.n	a3, 0
-	j	.L146
-.L123:
+	j	.L157
+.L134:
 .LBE26:
-	.loc 1 1295 0
+	.loc 1 1287 0
 	l32r	a9, .LC36
-	bne	a8, a9, .L122
-	.loc 1 1295 0 is_stmt 0 discriminator 1
+	bne	a8, a9, .L133
+	.loc 1 1287 0 is_stmt 0 discriminator 1
 	l32r	a8, .LC37
-	bne	a10, a8, .L122
-	.loc 1 1297 0 is_stmt 1
+	bne	a10, a8, .L133
+	.loc 1 1289 0 is_stmt 1
 	l32i.n	a9, sp, 52
 	l32r	a8, .LC33
 	add.n	a8, a8, a9
@@ -1211,9 +1245,9 @@ dns_recv:
 	l8ui	a11, a9, 0
 	movi	a9, 0xfd
 	and	a9, a11, a9
-	bnei	a9, 1, .L122
+	bnei	a9, 1, .L133
 .LBB27:
-	.loc 1 1302 0
+	.loc 1 1294 0
 	mov.n	a13, a5
 	movi.n	a12, 0x10
 	mov.n	a11, sp
@@ -1222,8 +1256,8 @@ dns_recv:
 	call8	pbuf_copy_partial
 .LVL120:
 	l32i.n	a8, sp, 56
-	bnei	a10, 16, .L126
-	.loc 1 1305 0
+	bnei	a10, 16, .L137
+	.loc 1 1297 0
 	l32i.n	a3, sp, 0
 	s32i.n	a3, a8, 4
 	l32i.n	a3, sp, 4
@@ -1233,13 +1267,13 @@ dns_recv:
 	l32i.n	a3, sp, 12
 	s32i.n	a3, a8, 16
 	movi.n	a3, 6
-.L146:
+.L157:
 	s8i	a3, a8, 20
-	.loc 1 1306 0
+	.loc 1 1298 0
 	mov.n	a10, a4
 	call8	pbuf_free
 .LVL121:
-	.loc 1 1308 0
+	.loc 1 1300 0
 	l32i.n	a10, sp, 32
 	call8	lwip_htonl
 .LVL122:
@@ -1248,39 +1282,39 @@ dns_recv:
 	call8	dns_correct_response
 .LVL123:
 	retw.n
-.L122:
+.L133:
 .LBE27:
-	.loc 1 1315 0
+	.loc 1 1307 0
 	call8	lwip_htons
 .LVL124:
 	l32r	a8, .LC35
 	add.n	a10, a5, a10
-	blt	a8, a10, .L126
-	.loc 1 1318 0
+	blt	a8, a10, .L137
+	.loc 1 1310 0
 	l16ui	a10, sp, 36
 	call8	lwip_htons
 .LVL125:
 	add.n	a10, a5, a10
-	.loc 1 1319 0
+	.loc 1 1311 0
 	l32i.n	a5, sp, 48
 .LVL126:
-	.loc 1 1318 0
+	.loc 1 1310 0
 	extui	a8, a10, 0, 16
 .LVL127:
-	.loc 1 1319 0
+	.loc 1 1311 0
 	addi.n	a7, a5, -1
 	extui	a9, a7, 0, 16
 	s32i.n	a9, sp, 48
 .LVL128:
-.L119:
-	.loc 1 1261 0
+.L130:
+	.loc 1 1253 0
 	l32i.n	a5, sp, 48
-	beqz.n	a5, .L128
-	.loc 1 1261 0 is_stmt 0 discriminator 1
+	beqz.n	a5, .L139
+	.loc 1 1253 0 is_stmt 0 discriminator 1
 	l16ui	a5, a4, 8
-	bltu	a8, a5, .L129
-.L128:
-	.loc 1 1322 0 is_stmt 1
+	bltu	a8, a5, .L140
+.L139:
+	.loc 1 1314 0 is_stmt 1
 	add.n	a5, a3, a2
 	addx8	a5, a5, a2
 	addx4	a7, a5, a6
@@ -1290,84 +1324,84 @@ dns_recv:
 .LVL129:
 	addi	a7, a8, -2
 	extui	a7, a7, 0, 8
-	bgeui	a7, 2, .L118
-	.loc 1 1326 0
+	bgeui	a7, 2, .L129
+	.loc 1 1318 0
 	movi.n	a7, 1
-	.loc 1 1324 0
-	beqi	a8, 2, .L145
-.L130:
-	.loc 1 1329 0
+	.loc 1 1316 0
+	beqi	a8, 2, .L156
+.L141:
+	.loc 1 1321 0
 	movi.n	a7, 0
-.L145:
-	.loc 1 1332 0
+.L156:
+	.loc 1 1324 0
 	add.n	a3, a3, a2
 	addx8	a3, a3, a2
-	.loc 1 1329 0
+	.loc 1 1321 0
 	s8i	a7, a5, 0
-	.loc 1 1331 0
+	.loc 1 1323 0
 	mov.n	a10, a4
 	call8	pbuf_free
 .LVL130:
-	.loc 1 1332 0
+	.loc 1 1324 0
 	addx4	a6, a3, a6
 	movi.n	a3, 1
 	s8i	a3, a6, 26
-	.loc 1 1333 0
+	.loc 1 1325 0
 	mov.n	a10, a2
 	call8	dns_check_entry
 .LVL131:
-	.loc 1 1334 0
+	.loc 1 1326 0
 	retw.n
-.L118:
-	.loc 1 1340 0
+.L129:
+	.loc 1 1332 0
 	mov.n	a10, a4
 	call8	pbuf_free
 .LVL132:
-	.loc 1 1342 0
+	.loc 1 1334 0
 	add.n	a3, a3, a2
-	.loc 1 1341 0
+	.loc 1 1333 0
 	mov.n	a10, a2
 	movi.n	a11, 0
-	.loc 1 1342 0
+	.loc 1 1334 0
 	addx8	a2, a3, a2
 .LVL133:
 	addx4	a6, a2, a6
-	.loc 1 1341 0
+	.loc 1 1333 0
 	call8	dns_call_found
 .LVL134:
-	.loc 1 1342 0
+	.loc 1 1334 0
 	movi.n	a2, 0
 	s8i	a2, a6, 26
-	.loc 1 1343 0
+	.loc 1 1335 0
 	retw.n
 .LVL135:
-.L108:
+.L119:
 	addi.n	a2, a2, 1
 .LVL136:
 	add.n	a3, a3, a8
 	addi.n	a7, a7, -1
-	bnez.n	a7, .L132
+	bnez.n	a7, .L143
 .LVL137:
-.L126:
+.L137:
 .LBE16:
-	.loc 1 1350 0
+	.loc 1 1342 0
 	mov.n	a10, a4
 	call8	pbuf_free
 .LVL138:
 	retw.n
-.LFE34:
+.LFE43:
 	.size	dns_recv, .-dns_recv
 	.section	.text.dns_init,"ax",@progbits
 	.align	4
 	.global	dns_init
 	.type	dns_init, @function
 dns_init:
-.LFB18:
+.LFB27:
 	.loc 1 319 0
 	entry	sp, 32
 .LCFI6:
 	retw.n
-.LFE18:
+.LFE27:
 	.size	dns_init, .-dns_init
 	.section	.text.dns_setserver,"ax",@progbits
 	.literal_position
@@ -1377,7 +1411,7 @@ dns_init:
 	.global	dns_setserver
 	.type	dns_setserver, @function
 dns_setserver:
-.LFB19:
+.LFB28:
 	.loc 1 377 0
 .LVL139:
 	.loc 1 377 0
@@ -1387,7 +1421,7 @@ dns_setserver:
 	extui	a2, a2, 0, 8
 	mov.n	a11, a3
 	.loc 1 378 0
-	bgeui	a2, 3, .L148
+	bgeui	a2, 3, .L159
 	slli	a8, a2, 2
 	l32r	a10, .LC38
 	.loc 1 380 0
@@ -1395,31 +1429,31 @@ dns_setserver:
 .LVL140:
 	movi.n	a12, 0x14
 	.loc 1 379 0
-	beqz.n	a3, .L150
-	j	.L151
-.L150:
+	beqz.n	a3, .L161
+	j	.L162
+.L161:
 .LVL141:
 .LBB30:
 .LBB31:
 	.loc 1 382 0
 	l32r	a11, .LC39
 .LVL142:
-.L151:
+.L162:
 	addx4	a10, a2, a10
 	call8	memcpy
 .LVL143:
-.L148:
+.L159:
 	retw.n
 .LBE31:
 .LBE30:
-.LFE19:
+.LFE28:
 	.size	dns_setserver, .-dns_setserver
 	.section	.text.dns_clear_servers,"ax",@progbits
 	.align	4
 	.global	dns_clear_servers
 	.type	dns_clear_servers, @function
 dns_clear_servers:
-.LFB20:
+.LFB29:
 	.loc 1 390 0
 .LVL144:
 	entry	sp, 32
@@ -1429,75 +1463,69 @@ dns_clear_servers:
 	extui	a2, a2, 0, 8
 	movi.n	a3, 0
 .LVL146:
-.L155:
+.L166:
 	.loc 1 394 0
 	extui	a8, a3, 0, 8
-	bnei	a8, 2, .L156
-	bnez.n	a2, .L153
-.L156:
+	bnei	a8, 2, .L167
+	bnez.n	a2, .L164
+.L167:
 	.loc 1 398 0
 	movi.n	a11, 0
 	mov.n	a10, a3
 	call8	dns_setserver
 .LVL147:
-.L153:
+.L164:
 	addi.n	a3, a3, 1
 .LVL148:
 	.loc 1 393 0 discriminator 2
-	bnei	a3, 3, .L155
+	bnei	a3, 3, .L166
 	.loc 1 400 0
 	retw.n
-.LFE20:
+.LFE29:
 	.size	dns_clear_servers, .-dns_clear_servers
 	.section	.text.dns_getserver,"ax",@progbits
 	.literal_position
-	.literal .LC40, dns_servers
-	.literal .LC41, ip_addr_any
+	.literal .LC40, ip_addr_any
+	.literal .LC41, dns_servers
 	.align	4
 	.global	dns_getserver
 	.type	dns_getserver, @function
 dns_getserver:
-.LFB21:
-	.loc 1 414 0
+.LFB30:
+	.loc 1 413 0
 .LVL149:
 	entry	sp, 32
 .LCFI9:
-	.loc 1 414 0
-	extui	a3, a3, 0, 8
-	.loc 1 418 0
-	movi.n	a12, 0x14
-	l32r	a11, .LC41
-	.loc 1 415 0
-	bgeui	a3, 3, .L164
-	.loc 1 416 0
-	l32r	a11, .LC40
-	addx4	a3, a3, a3
+	.loc 1 413 0
+	extui	a8, a2, 0, 8
+	.loc 1 417 0
+	l32r	a2, .LC40
 .LVL150:
-	movi.n	a12, 0x14
-	addx4	a11, a3, a11
-	j	.L164
-.L164:
-	.loc 1 418 0
-	mov.n	a10, a2
-	call8	memcpy
+	.loc 1 414 0
+	bgeui	a8, 3, .L173
+	.loc 1 415 0
+	l32r	a2, .LC41
+	addx4	a8, a8, a8
 .LVL151:
-	.loc 1 420 0
+	addx4	a2, a8, a2
+.L173:
+	.loc 1 419 0
 	retw.n
-.LFE21:
+.LFE30:
 	.size	dns_getserver, .-dns_getserver
 	.section	.text.dns_tmr,"ax",@progbits
 	.align	4
 	.global	dns_tmr
 	.type	dns_tmr, @function
 dns_tmr:
-.LFB22:
-	.loc 1 440 0
+.LFB31:
+	.loc 1 428 0
 	entry	sp, 32
 .LCFI10:
 .LVL152:
 .LBB34:
 .LBB35:
-	.loc 1 1140 0
+	.loc 1 1132 0
 	movi.n	a10, 0
 	call8	dns_check_entry
 .LVL153:
@@ -1513,7 +1541,7 @@ dns_tmr:
 	retw.n
 .LBE35:
 .LBE34:
-.LFE22:
+.LFE31:
 	.size	dns_tmr, .-dns_tmr
 	.section	.rodata.str1.1
 .LC42:
@@ -1535,137 +1563,137 @@ dns_tmr:
 	.global	dns_gethostbyname_addrtype
 	.type	dns_gethostbyname_addrtype, @function
 dns_gethostbyname_addrtype:
-.LFB38:
-	.loc 1 1551 0
+.LFB47:
+	.loc 1 1543 0
 .LVL157:
 	entry	sp, 64
 .LCFI11:
-	.loc 1 1551 0
+	.loc 1 1543 0
 	mov.n	a7, a2
 	s32i.n	a5, sp, 8
 	mov.n	a2, a3
 .LVL158:
-	.loc 1 1558 0
+	.loc 1 1550 0
 	movi.n	a5, 0
 .LVL159:
 	movi.n	a3, 1
 .LVL160:
 	moveqz	a5, a3, a2
-	.loc 1 1551 0
+	.loc 1 1543 0
 	s32i.n	a4, sp, 4
-	.loc 1 1558 0
+	.loc 1 1550 0
 	extui	a5, a5, 0, 8
-	.loc 1 1551 0
+	.loc 1 1543 0
 	extui	a6, a6, 0, 8
-	.loc 1 1558 0
-	bnez.n	a5, .L207
+	.loc 1 1550 0
+	bnez.n	a5, .L217
 	moveqz	a5, a3, a7
-	bnez.n	a5, .L207
-	.loc 1 1559 0
+	bnez.n	a5, .L217
+	.loc 1 1551 0
 	l8ui	a9, a7, 0
-	.loc 1 1560 0
+	.loc 1 1552 0
 	movi	a10, 0xf0
+	.loc 1 1551 0
+	beqz.n	a9, .L241
 	.loc 1 1559 0
-	beqz.n	a9, .L231
-	.loc 1 1567 0
 	mov.n	a10, a7
 	call8	strlen
 .LVL161:
 	s32i.n	a10, sp, 0
 .LVL162:
-	.loc 1 1568 0
+	.loc 1 1560 0
 	l32i.n	a4, sp, 0
 .LVL163:
 	movi	a9, 0xff
-	.loc 1 1560 0
+	.loc 1 1552 0
 	movi	a10, 0xf0
 .LVL164:
-	.loc 1 1568 0
-	bltu	a9, a4, .L231
-	.loc 1 1575 0
+	.loc 1 1560 0
+	bltu	a9, a4, .L241
+	.loc 1 1567 0
 	l32r	a11, .LC43
 	mov.n	a10, a7
 	call8	strcmp
 .LVL165:
-	bnez.n	a10, .L168
-	.loc 1 1576 0
+	bnez.n	a10, .L178
+	.loc 1 1568 0
 	movi.n	a3, -3
 	and	a6, a6, a3
 .LVL166:
-	bnei	a6, 1, .L169
-	.loc 1 1576 0 is_stmt 0 discriminator 1
+	bnei	a6, 1, .L179
+	.loc 1 1568 0 is_stmt 0 discriminator 1
 	l32r	a3, .LC44
 	s32i.n	a10, a2, 0
 	s32i.n	a3, a2, 12
-	.loc 1 1576 0 is_stmt 1 discriminator 1
+	.loc 1 1568 0 is_stmt 1 discriminator 1
 	movi.n	a3, 6
-	.loc 1 1576 0 discriminator 1
+	.loc 1 1568 0 discriminator 1
 	s32i.n	a10, a2, 4
 	s32i.n	a10, a2, 8
-	.loc 1 1576 0 discriminator 1
+	.loc 1 1568 0 discriminator 1
 	s8i	a3, a2, 16
-	j	.L231
-.L169:
-	.loc 1 1576 0 is_stmt 0 discriminator 2
+	j	.L241
+.L179:
+	.loc 1 1568 0 is_stmt 0 discriminator 2
 	l32r	a3, .LC45
-	.loc 1 1576 0 is_stmt 1 discriminator 2
+	.loc 1 1568 0 is_stmt 1 discriminator 2
 	s8i	a10, a2, 16
-	.loc 1 1576 0 discriminator 2
+	.loc 1 1568 0 discriminator 2
 	s32i.n	a3, a2, 0
-	j	.L231
-.L168:
-	.loc 1 1582 0
+	j	.L241
+.L178:
+	.loc 1 1574 0
 	mov.n	a11, a2
 	mov.n	a10, a7
 	call8	ipaddr_aton
 .LVL167:
-	beqz.n	a10, .L170
-	.loc 1 1584 0 discriminator 1
+	beqz.n	a10, .L180
+	.loc 1 1576 0 discriminator 1
 	mov.n	a9, a5
 	movnez	a9, a3, a6
 	l8ui	a10, a2, 16
-	beqz.n	a9, .L171
+	beqz.n	a9, .L181
 	addi	a9, a10, -6
 	moveqz	a5, a3, a9
-	beqz.n	a5, .L171
-.L172:
-	.loc 1 1588 0
+	beqz.n	a5, .L181
+.L182:
+	.loc 1 1580 0
 	movi.n	a10, 0
-	j	.L231
-.L171:
-	.loc 1 1585 0
-	beqi	a6, 1, .L170
-	beqz.n	a10, .L172
-.L170:
-	.loc 1 1592 0
+	j	.L241
+.L181:
+	.loc 1 1577 0
+	beqi	a6, 1, .L180
+	beqz.n	a10, .L182
+.L180:
+	.loc 1 1584 0
 	mov.n	a12, a6
 	mov.n	a11, a2
 	mov.n	a10, a7
 	call8	dns_lookup
 .LVL168:
 	extui	a10, a10, 0, 8
-	beqz.n	a10, .L172
-	.loc 1 1596 0
+	beqz.n	a10, .L182
+	.loc 1 1588 0
 	addi	a3, a6, -2
 	extui	a5, a3, 0, 8
-	bltui	a5, 2, .L174
-.L176:
+	bltui	a5, 2, .L184
+.L186:
 .LVL169:
 .LBB47:
 .LBB48:
-	.loc 1 1525 0
+	.loc 1 1517 0
 	movi.n	a9, 0
 	l32r	a8, .LC46
 	movi.n	a10, 1
-	.loc 1 1526 0
+	.loc 1 1518 0
 	mov.n	a11, a9
-	j	.L175
+	j	.L185
 .LVL170:
-.L174:
+.L184:
 .LBE48:
 .LBE47:
 .LBB51:
-	.loc 1 1604 0
+	.loc 1 1596 0
 	movi.n	a5, 0
 	movi.n	a12, 1
 	movnez	a12, a5, a3
@@ -1674,50 +1702,50 @@ dns_gethostbyname_addrtype:
 	call8	dns_lookup
 .LVL171:
 	extui	a10, a10, 0, 8
-	bne	a10, a5, .L176
-	j	.L172
+	bne	a10, a5, .L186
+	j	.L182
 .LVL172:
-.L175:
+.L185:
 .LBE51:
 .LBB52:
 .LBB49:
-	.loc 1 1526 0
+	.loc 1 1518 0
 	l8ui	a3, a8, 16
 	l32i.n	a5, a8, 0
-	bnei	a3, 6, .L177
+	bnei	a3, 6, .L187
 	movi.n	a3, 1
-	bnez.n	a5, .L178
+	bnez.n	a5, .L188
 	l32i.n	a5, a8, 4
-	bnez.n	a5, .L178
+	bnez.n	a5, .L188
 	l32i.n	a5, a8, 8
-	bnez.n	a5, .L178
+	bnez.n	a5, .L188
 	l32i.n	a3, a8, 12
 	movnez	a5, a10, a3
 	mov.n	a3, a5
-.L178:
+.L188:
 	extui	a3, a3, 0, 1
-	j	.L179
-.L177:
+	j	.L189
+.L187:
 	mov.n	a3, a11
 	movnez	a3, a10, a5
 	extui	a3, a3, 0, 8
-.L179:
-	bnez.n	a3, .L180
-	.loc 1 1525 0
+.L189:
+	bnez.n	a3, .L190
+	.loc 1 1517 0
 	addi.n	a9, a9, 1
 .LVL173:
 	addi	a8, a8, 20
-	bnei	a9, 3, .L175
+	bnei	a9, 3, .L185
 .LBE49:
 .LBE52:
-	.loc 1 1628 0
+	.loc 1 1620 0
 	movi	a10, 0xfa
-	j	.L231
-.L180:
+	j	.L241
+.L190:
 	l32r	a5, .LC47
 .LBB53:
 .LBB50:
-	.loc 1 1526 0
+	.loc 1 1518 0
 	movi.n	a4, 0
 .LVL174:
 	mov.n	a3, a5
@@ -1726,25 +1754,25 @@ dns_gethostbyname_addrtype:
 .LBE53:
 .LBB54:
 .LBB55:
-	.loc 1 1380 0
+	.loc 1 1372 0
 	movi	a13, 0x120
 .LVL175:
-.L182:
-	.loc 1 1377 0
+.L192:
+	.loc 1 1369 0
 	l8ui	a9, a3, 26
-	beqi	a9, 2, .L181
-.L184:
-	.loc 1 1376 0
+	beqi	a9, 2, .L191
+.L194:
+	.loc 1 1368 0
 	addi.n	a8, a4, 1
 	movi	a9, 0x124
 	extui	a4, a8, 0, 8
 .LVL176:
 	add.n	a3, a3, a9
-	bnei	a4, 4, .L182
-	j	.L250
+	bnei	a4, 4, .L192
+	j	.L260
 .LVL177:
-.L181:
-	.loc 1 1378 0
+.L191:
+	.loc 1 1370 0
 	movi	a12, 0x100
 	addi	a11, a3, 32
 	mov.n	a10, a7
@@ -1752,162 +1780,162 @@ dns_gethostbyname_addrtype:
 	s32i.n	a15, sp, 16
 	call8	lwip_strnicmp
 .LVL178:
-	.loc 1 1377 0
+	.loc 1 1369 0
 	l32i.n	a13, sp, 20
 	l32i.n	a15, sp, 16
-	bnez.n	a10, .L184
-	.loc 1 1380 0
+	bnez.n	a10, .L194
+	.loc 1 1372 0
 	add.n	a9, a3, a13
 	l8ui	a9, a9, 0
-	bne	a9, a6, .L184
+	bne	a9, a6, .L194
 	l32r	a9, .LC48
 	movi.n	a11, 4
 	mov.n	a12, a9
-	loop	a11, .L186_LEND
-.L186:
+	loop	a11, .L196_LEND
+.L196:
 .LVL179:
-	.loc 1 1389 0
+	.loc 1 1381 0
 	l32i.n	a14, a9, 0
-	bnez.n	a14, .L185
-	.loc 1 1390 0
+	bnez.n	a14, .L195
+	.loc 1 1382 0
 	addx2	a10, a10, a10
 .LVL180:
 	l32i.n	a8, sp, 4
-	.loc 1 1391 0
+	.loc 1 1383 0
 	l32i.n	a2, sp, 8
 .LVL181:
-	.loc 1 1390 0
+	.loc 1 1382 0
 	addx4	a12, a10, a12
 	s32i.n	a8, a12, 0
-	.loc 1 1391 0
+	.loc 1 1383 0
 	s32i.n	a2, a12, 4
-	.loc 1 1392 0
+	.loc 1 1384 0
 	s8i	a4, a12, 8
-	.loc 1 1393 0
+	.loc 1 1385 0
 	s8i	a6, a12, 9
-	j	.L253
+	j	.L263
 .LVL182:
-.L185:
+.L195:
 	addi.n	a10, a10, 1
 .LVL183:
 	addi.n	a9, a9, 12
-	.L186_LEND:
-	j	.L184
+	.L196_LEND:
+	j	.L194
 .LVL184:
-.L250:
+.L260:
 .LBB56:
-	.loc 1 1414 0
+	.loc 1 1406 0
 	l32r	a10, .LC49
 	movi.n	a3, 0
 	l8ui	a11, a10, 0
 	mov.n	a13, a3
 	mov.n	a14, a9
 	mov.n	a10, a4
-	loop	a10, .L190_LEND
+	loop	a10, .L200_LEND
 .LVL185:
-.L190:
+.L200:
 .LBE56:
-	.loc 1 1409 0
+	.loc 1 1401 0
 	l8ui	a9, a5, 26
 	extui	a12, a3, 0, 8
 .LVL186:
-	bnez.n	a9, .L187
-	.loc 1 1407 0
+	bnez.n	a9, .L197
+	.loc 1 1399 0
 	addx8	a5, a3, a3
 	addx8	a3, a5, a3
 .LVL187:
 	addx4	a3, a3, a15
 	mov.n	a4, a12
-	j	.L188
+	j	.L198
 .LVL188:
-.L187:
-	.loc 1 1413 0
-	bnei	a9, 3, .L189
+.L197:
+	.loc 1 1405 0
+	bnei	a9, 3, .L199
 .LBB57:
-	.loc 1 1414 0
+	.loc 1 1406 0
 	l8ui	a9, a5, 30
 	sub	a9, a11, a9
 	extui	a9, a9, 0, 8
 .LVL189:
-	.loc 1 1415 0
-	bgeu	a13, a9, .L189
+	.loc 1 1407 0
+	bgeu	a13, a9, .L199
 	mov.n	a4, a12
 	mov.n	a13, a9
 .LVL190:
-.L189:
+.L199:
 	addi.n	a3, a3, 1
 .LVL191:
 	add.n	a5, a5, a14
-	.L190_LEND:
-	j	.L251
+	.L200_LEND:
+	j	.L261
 .LVL192:
-.L252:
+.L262:
 .LBE57:
-	.loc 1 1424 0
+	.loc 1 1416 0
 	addx8	a3, a4, a4
 .LVL193:
 	addx8	a3, a3, a4
 	addx4	a3, a3, a15
 	l8ui	a5, a3, 26
-	bnei	a5, 3, .L231
+	bnei	a5, 3, .L241
 .LVL194:
-.L188:
+.L198:
 	l32r	a10, .LC48
-	.loc 1 1407 0
+	.loc 1 1399 0
 	movi.n	a5, 0
 	movi.n	a12, 4
-	loop	a12, .L194_LEND
+	loop	a12, .L204_LEND
 .LVL195:
-.L194:
-	.loc 1 1439 0
+.L204:
+	.loc 1 1431 0
 	l32i.n	a9, a10, 0
-	bnez.n	a9, .L192
+	bnez.n	a9, .L202
 .LVL196:
-	.loc 1 1449 0
+	.loc 1 1441 0
 	slli	a8, a5, 1
 	l32r	a2, .LC48
 .LVL197:
 	add.n	a10, a8, a5
-	.loc 1 1459 0
+	.loc 1 1451 0
 	movi.n	a12, 1
-	.loc 1 1449 0
+	.loc 1 1441 0
 	addx4	a10, a10, a2
-	.loc 1 1459 0
+	.loc 1 1451 0
 	s8i	a12, a3, 26
-	.loc 1 1460 0
+	.loc 1 1452 0
 	s8i	a11, a3, 30
-	.loc 1 1464 0
+	.loc 1 1456 0
 	l32i.n	a2, sp, 8
-	.loc 1 1461 0
+	.loc 1 1453 0
 	addmi	a11, a3, 0x100
 	s8i	a6, a11, 32
-	.loc 1 1462 0
+	.loc 1 1454 0
 	s8i	a6, a10, 9
-	.loc 1 1465 0
+	.loc 1 1457 0
 	l32i.n	a6, sp, 0
-	.loc 1 1464 0
+	.loc 1 1456 0
 	s32i.n	a2, a10, 4
-	.loc 1 1449 0
+	.loc 1 1441 0
 	s32i.n	a8, sp, 12
-	.loc 1 1465 0
+	.loc 1 1457 0
 	movi	a2, 0xff
-	.loc 1 1463 0
+	.loc 1 1455 0
 	l32i.n	a8, sp, 4
-	.loc 1 1465 0
+	.loc 1 1457 0
 	minu	a2, a6, a2
 .LVL198:
-	.loc 1 1449 0
+	.loc 1 1441 0
 	s8i	a4, a10, 8
-	.loc 1 1463 0
+	.loc 1 1455 0
 	s32i.n	a8, a10, 0
-	.loc 1 1466 0
+	.loc 1 1458 0
 	mov.n	a12, a2
 	mov.n	a11, a7
 	addi	a10, a3, 32
 	s32i.n	a9, sp, 16
 	call8	memcpy
 .LVL199:
-	.loc 1 1467 0
+	.loc 1 1459 0
 	l32i.n	a9, sp, 16
 	add.n	a2, a3, a2
 .LVL200:
@@ -1916,44 +1944,44 @@ dns_gethostbyname_addrtype:
 	l32r	a10, .LC50
 	mov.n	a2, a9
 	movi.n	a9, 4
-	j	.L193
+	j	.L203
 .LVL202:
-.L192:
+.L202:
 	addi.n	a5, a5, 1
 .LVL203:
 	addi.n	a10, a10, 12
-	.L194_LEND:
-	j	.L254
+	.L204_LEND:
+	j	.L264
 .LVL204:
-.L193:
+.L203:
 	extui	a8, a2, 0, 8
 .LBB58:
 .LBB59:
-	.loc 1 928 0
+	.loc 1 916 0
 	l32i.n	a7, a10, 0
 	s32i.n	a8, sp, 0
 .LVL205:
-	beqz.n	a7, .L195
+	beqz.n	a7, .L205
 .LVL206:
 	addi.n	a2, a2, 1
 .LVL207:
 	addi.n	a10, a10, 4
 	addi.n	a9, a9, -1
-	bnez.n	a9, .L193
-	j	.L196
+	bnez.n	a9, .L203
+	j	.L206
 .LVL208:
-.L197:
+.L207:
 .LBB60:
 .LBB61:
 .LBB62:
-	.loc 1 899 0
+	.loc 1 887 0
 	call8	esp_random
 .LVL209:
-	.loc 1 900 0
+	.loc 1 888 0
 	extui	a11, a10, 0, 16
 	movi	a8, 0x3ff
-	bgeu	a8, a11, .L197
-	.loc 1 905 0
+	bgeu	a8, a11, .L207
+	.loc 1 893 0
 	mov.n	a12, a11
 	l32r	a11, .LC51
 	mov.n	a10, a6
@@ -1963,90 +1991,90 @@ dns_gethostbyname_addrtype:
 	extui	a12, a10, 0, 8
 .LVL212:
 .LBE62:
-	.loc 1 906 0
+	.loc 1 894 0
 	sext	a11, a12, 7
 	movi.n	a10, -8
 .LVL213:
-	beq	a11, a10, .L197
-	.loc 1 907 0
-	beqz.n	a12, .L199
-	.loc 1 908 0
+	beq	a11, a10, .L207
+	.loc 1 895 0
+	beqz.n	a12, .L209
+	.loc 1 896 0
 	mov.n	a10, a6
 	call8	udp_remove
 .LVL214:
-	j	.L200
+	j	.L210
 .LVL215:
-.L199:
-	.loc 1 911 0
+.L209:
+	.loc 1 899 0
 	l32r	a11, .LC52
 	mov.n	a10, a6
 	call8	udp_recv
 .LVL216:
 	mov.n	a7, a6
-.L200:
+.L210:
 .LBE61:
 .LBE60:
-	.loc 1 933 0
+	.loc 1 921 0
 	l32r	a6, .LC50
 .LVL217:
 	addx4	a2, a2, a6
 	s32i.n	a7, a2, 0
-	.loc 1 934 0
-	beqz.n	a7, .L196
-	.loc 1 936 0
+	.loc 1 922 0
+	beqz.n	a7, .L206
+	.loc 1 924 0
 	l32r	a2, .LC53
 	l32i.n	a8, sp, 0
 	s8i	a8, a2, 0
 	mov.n	a2, a8
-	j	.L201
+	j	.L211
 .LVL218:
-.L196:
-	.loc 1 942 0
+.L206:
+	.loc 1 930 0
 	l32r	a6, .LC53
-	.loc 1 944 0
+	.loc 1 932 0
 	movi.n	a7, 4
-	.loc 1 942 0
+	.loc 1 930 0
 	l8ui	a2, a6, 0
 	addi.n	a2, a2, 1
 	extui	a2, a2, 0, 8
 .LVL219:
-.L204:
-	.loc 1 943 0
-	bltui	a2, 4, .L202
-	.loc 1 944 0
+.L214:
+	.loc 1 931 0
+	bltui	a2, 4, .L212
+	.loc 1 932 0
 	movi.n	a2, 0
 .LVL220:
-.L202:
-	.loc 1 946 0
+.L212:
+	.loc 1 934 0
 	l32r	a8, .LC50
 	addx4	a9, a2, a8
 	l32i.n	a9, a9, 0
-	beqz.n	a9, .L203
-	.loc 1 947 0
+	beqz.n	a9, .L213
+	.loc 1 935 0
 	s8i	a2, a6, 0
-	j	.L201
-.L203:
-	.loc 1 942 0
+	j	.L211
+.L213:
+	.loc 1 930 0
 	addi.n	a2, a2, 1
 .LVL221:
 	extui	a2, a2, 0, 8
 .LVL222:
 	addi.n	a7, a7, -1
-	bnez.n	a7, .L204
-	.loc 1 951 0
+	bnez.n	a7, .L214
+	.loc 1 939 0
 	movi.n	a2, 4
 .LVL223:
-.L201:
+.L211:
 .LBE59:
 .LBE58:
-	.loc 1 1470 0
+	.loc 1 1462 0
 	s8i	a2, a3, 31
-	.loc 1 1471 0
-	bnei	a2, 4, .L205
-	.loc 1 1474 0
+	.loc 1 1463 0
+	bnei	a2, 4, .L215
+	.loc 1 1466 0
 	movi.n	a2, 0
 	s8i	a2, a3, 26
-	.loc 1 1475 0
+	.loc 1 1467 0
 	l32i.n	a2, sp, 12
 	l32r	a3, .LC48
 .LVL224:
@@ -2055,82 +2083,82 @@ dns_gethostbyname_addrtype:
 	addx4	a5, a5, a3
 	movi.n	a2, 0
 	s32i.n	a2, a5, 0
-.L254:
-	.loc 1 1476 0
+.L264:
+	.loc 1 1468 0
 	movi	a10, 0xff
-	j	.L231
+	j	.L241
 .LVL226:
-.L205:
-	.loc 1 1485 0
+.L215:
+	.loc 1 1477 0
 	l32r	a6, .LC49
-	.loc 1 1488 0
+	.loc 1 1480 0
 	mov.n	a10, a4
-	.loc 1 1485 0
+	.loc 1 1477 0
 	l8ui	a2, a6, 0
 	addi.n	a2, a2, 1
 	s8i	a2, a6, 0
-	.loc 1 1488 0
+	.loc 1 1480 0
 	call8	dns_check_entry
 .LVL227:
-.L253:
-	.loc 1 1491 0
+.L263:
+	.loc 1 1483 0
 	movi	a10, 0xfb
-	j	.L231
+	j	.L241
 .LVL228:
-.L207:
+.L217:
 .LBE55:
 .LBE54:
-	.loc 1 1560 0
+	.loc 1 1552 0
 	movi	a10, 0xf0
-	j	.L231
+	j	.L241
 .LVL229:
-.L251:
+.L261:
 .LBB68:
 .LBB67:
-	.loc 1 1427 0
+	.loc 1 1419 0
 	movi	a10, 0xff
-	.loc 1 1424 0
-	bnei	a4, 4, .L252
-	j	.L231
+	.loc 1 1416 0
+	bnei	a4, 4, .L262
+	j	.L241
 .LVL230:
-.L195:
+.L205:
 .LBB66:
 .LBB65:
 .LBB64:
 .LBB63:
-	.loc 1 893 0
+	.loc 1 881 0
 	movi.n	a10, 0x2e
 	call8	udp_new_ip_type
 .LVL231:
 	mov.n	a6, a10
 .LVL232:
-	.loc 1 894 0
-	beqz.n	a10, .L200
-	j	.L197
+	.loc 1 882 0
+	beqz.n	a10, .L210
+	j	.L207
 .LVL233:
-.L231:
+.L241:
 .LBE63:
 .LBE64:
 .LBE65:
 .LBE66:
 .LBE67:
 .LBE68:
-	.loc 1 1635 0
+	.loc 1 1627 0
 	mov.n	a2, a10
 	retw.n
-.LFE38:
+.LFE47:
 	.size	dns_gethostbyname_addrtype, .-dns_gethostbyname_addrtype
 	.section	.text.dns_gethostbyname,"ax",@progbits
 	.align	4
 	.global	dns_gethostbyname
 	.type	dns_gethostbyname, @function
 dns_gethostbyname:
-.LFB36:
-	.loc 1 1517 0
+.LFB45:
+	.loc 1 1509 0
 .LVL234:
 	entry	sp, 32
 .LCFI12:
-	.loc 1 1518 0
+	.loc 1 1510 0
 	movi.n	a14, 2
 	mov.n	a13, a5
 	mov.n	a12, a4
@@ -2138,26 +2166,26 @@ dns_gethostbyname:
 	mov.n	a10, a2
 	call8	dns_gethostbyname_addrtype
 .LVL235:
-	.loc 1 1519 0
+	.loc 1 1511 0
 	extui	a2, a10, 0, 8
 .LVL236:
 	retw.n
-.LFE36:
+.LFE45:
 	.size	dns_gethostbyname, .-dns_gethostbyname
-	.section	.rodata.__func__$6604,"a",@progbits
-	.type	__func__$6604, @object
-	.size	__func__$6604, 9
-__func__$6604:
+	.section	.rodata.__func__$6668,"a",@progbits
+	.type	__func__$6668, @object
+	.size	__func__$6668, 9
+__func__$6668:
 	.string	"dns_send"
-	.section	.rodata.__func__$6638,"a",@progbits
-	.type	__func__$6638, @object
-	.size	__func__$6638, 15
-__func__$6638:
+	.section	.rodata.__func__$6702,"a",@progbits
+	.type	__func__$6702, @object
+	.size	__func__$6702, 15
+__func__$6702:
 	.string	"dns_call_found"
-	.section	.rodata.__func__$6660,"a",@progbits
-	.type	__func__$6660, @object
-	.size	__func__$6660, 16
-__func__$6660:
+	.section	.rodata.__func__$6724,"a",@progbits
+	.type	__func__$6724, @object
+	.size	__func__$6724, 16
+__func__$6724:
 	.string	"dns_check_entry"
 	.global	dns_mquery_v6group
 	.section	.rodata.dns_mquery_v6group,"a",@progbits
@@ -2236,10 +2264,10 @@ dns_pcbs:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.byte	0x4
-	.4byte	.LCFI0-.LFB29
+	.4byte	.LCFI0-.LFB38
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2248,10 +2276,10 @@ dns_pcbs:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.byte	0x4
-	.4byte	.LCFI1-.LFB33
+	.4byte	.LCFI1-.LFB42
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2260,10 +2288,10 @@ dns_pcbs:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.byte	0x4
-	.4byte	.LCFI2-.LFB26
+	.4byte	.LCFI2-.LFB35
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -2272,10 +2300,10 @@ dns_pcbs:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI3-.LFB31
+	.4byte	.LCFI3-.LFB40
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2284,10 +2312,10 @@ dns_pcbs:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI4-.LFB23
+	.4byte	.LCFI4-.LFB32
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2296,10 +2324,10 @@ dns_pcbs:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.byte	0x4
-	.4byte	.LCFI5-.LFB34
+	.4byte	.LCFI5-.LFB43
 	.byte	0xe
 	.uleb128 0x60
 	.align	4
@@ -2308,10 +2336,10 @@ dns_pcbs:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI6-.LFB18
+	.4byte	.LCFI6-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2320,10 +2348,10 @@ dns_pcbs:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI7-.LFB19
+	.4byte	.LCFI7-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2332,10 +2360,10 @@ dns_pcbs:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI8-.LFB20
+	.4byte	.LCFI8-.LFB29
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2344,10 +2372,10 @@ dns_pcbs:
 	.4byte	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI9-.LFB21
+	.4byte	.LCFI9-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2356,10 +2384,10 @@ dns_pcbs:
 	.4byte	.LEFDE20-.LASFDE20
 .LASFDE20:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI10-.LFB22
+	.4byte	.LCFI10-.LFB31
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2368,10 +2396,10 @@ dns_pcbs:
 	.4byte	.LEFDE22-.LASFDE22
 .LASFDE22:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI11-.LFB38
+	.4byte	.LCFI11-.LFB47
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -2380,10 +2408,10 @@ dns_pcbs:
 	.4byte	.LEFDE24-.LASFDE24
 .LASFDE24:
 	.4byte	.Lframe0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.byte	0x4
-	.4byte	.LCFI12-.LFB36
+	.4byte	.LCFI12-.LFB45
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -2409,7 +2437,7 @@ dns_pcbs:
 	.file 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x1b6b
+	.4byte	0x1b5b
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -3653,68 +3681,68 @@ dns_pcbs:
 	.uleb128 0x1d
 	.4byte	.LASF178
 	.byte	0x1
-	.2byte	0x2b4
+	.2byte	0x2a8
 	.4byte	0xf0
 	.byte	0x1
 	.4byte	0xa64
 	.uleb128 0x1c
 	.4byte	.LASF167
 	.byte	0x1
-	.2byte	0x2b4
+	.2byte	0x2a8
 	.4byte	0xc4
 	.uleb128 0x1e
 	.string	"p"
 	.byte	0x1
-	.2byte	0x2b4
+	.2byte	0x2a8
 	.4byte	0x275
 	.uleb128 0x1c
 	.4byte	.LASF168
 	.byte	0x1
-	.2byte	0x2b4
+	.2byte	0x2a8
 	.4byte	0xf0
 	.uleb128 0x1f
 	.string	"n"
 	.byte	0x1
-	.2byte	0x2b6
+	.2byte	0x2aa
 	.4byte	0x3e
 	.uleb128 0x20
 	.4byte	.LASF169
 	.byte	0x1
-	.2byte	0x2b7
+	.2byte	0x2ab
 	.4byte	0xf0
 	.uleb128 0x21
 	.uleb128 0x1f
 	.string	"c"
 	.byte	0x1
-	.2byte	0x2c5
+	.2byte	0x2b9
 	.4byte	0x3e
 	.byte	0
 	.byte	0
 	.uleb128 0x22
 	.4byte	.LASF171
 	.byte	0x1
-	.2byte	0x3c4
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.2byte	0x3b8
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xaf6
 	.uleb128 0x23
 	.string	"idx"
 	.byte	0x1
-	.2byte	0x3c4
+	.2byte	0x3b8
 	.4byte	0xda
 	.4byte	.LLST0
 	.uleb128 0x24
 	.4byte	.LASF86
 	.byte	0x1
-	.2byte	0x3c4
+	.2byte	0x3b8
 	.4byte	0xaf6
 	.4byte	.LLST1
 	.uleb128 0x25
 	.string	"i"
 	.byte	0x1
-	.2byte	0x3c7
+	.2byte	0x3bb
 	.4byte	0xda
 	.4byte	.LLST2
 	.uleb128 0x26
@@ -3722,10 +3750,10 @@ dns_pcbs:
 	.4byte	0xb0c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6638
+	.4byte	__func__$6702
 	.uleb128 0x27
 	.4byte	.LVL3
-	.4byte	0x1a7e
+	.4byte	0x1a6e
 	.4byte	0xace
 	.uleb128 0x28
 	.uleb128 0x1
@@ -3757,7 +3785,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x2a
 	.4byte	.LVL10
-	.4byte	0x1a89
+	.4byte	0x1a79
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
@@ -3774,29 +3802,29 @@ dns_pcbs:
 	.uleb128 0x22
 	.4byte	.LASF172
 	.byte	0x1
-	.2byte	0x47c
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.2byte	0x474
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xb76
 	.uleb128 0x2b
 	.string	"idx"
 	.byte	0x1
-	.2byte	0x47c
+	.2byte	0x474
 	.4byte	0xda
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x23
 	.string	"ttl"
 	.byte	0x1
-	.2byte	0x47c
+	.2byte	0x474
 	.4byte	0xfb
 	.4byte	.LLST3
 	.uleb128 0x2c
 	.4byte	.LASF173
 	.byte	0x1
-	.2byte	0x47e
+	.2byte	0x476
 	.4byte	0xb76
 	.uleb128 0xd
 	.byte	0x72
@@ -3831,29 +3859,29 @@ dns_pcbs:
 	.uleb128 0x2e
 	.4byte	.LASF181
 	.byte	0x1
-	.2byte	0x308
+	.2byte	0x2fc
 	.4byte	0x12e
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xdd9
 	.uleb128 0x23
 	.string	"idx"
 	.byte	0x1
-	.2byte	0x308
+	.2byte	0x2fc
 	.4byte	0xda
 	.4byte	.LLST4
 	.uleb128 0x25
 	.string	"err"
 	.byte	0x1
-	.2byte	0x30a
+	.2byte	0x2fe
 	.4byte	0x12e
 	.4byte	.LLST5
 	.uleb128 0x2f
 	.string	"hdr"
 	.byte	0x1
-	.2byte	0x30b
+	.2byte	0x2ff
 	.4byte	0x821
 	.uleb128 0x2
 	.byte	0x91
@@ -3861,7 +3889,7 @@ dns_pcbs:
 	.uleb128 0x2f
 	.string	"qry"
 	.byte	0x1
-	.2byte	0x30c
+	.2byte	0x300
 	.4byte	0x881
 	.uleb128 0x2
 	.byte	0x91
@@ -3869,48 +3897,48 @@ dns_pcbs:
 	.uleb128 0x25
 	.string	"p"
 	.byte	0x1
-	.2byte	0x30d
+	.2byte	0x301
 	.4byte	0x275
 	.4byte	.LLST6
 	.uleb128 0x30
 	.4byte	.LASF174
 	.byte	0x1
-	.2byte	0x30e
+	.2byte	0x302
 	.4byte	0xf0
 	.4byte	.LLST7
 	.uleb128 0x30
 	.4byte	.LASF175
 	.byte	0x1
-	.2byte	0x30e
+	.2byte	0x302
 	.4byte	0xf0
 	.4byte	.LLST8
 	.uleb128 0x30
 	.4byte	.LASF74
 	.byte	0x1
-	.2byte	0x30f
+	.2byte	0x303
 	.4byte	0xc4
 	.4byte	.LLST9
 	.uleb128 0x20
 	.4byte	.LASF176
 	.byte	0x1
-	.2byte	0x30f
+	.2byte	0x303
 	.4byte	0xc4
 	.uleb128 0x25
 	.string	"n"
 	.byte	0x1
-	.2byte	0x310
+	.2byte	0x304
 	.4byte	0xda
 	.4byte	.LLST10
 	.uleb128 0x30
 	.4byte	.LASF160
 	.byte	0x1
-	.2byte	0x311
+	.2byte	0x305
 	.4byte	0xda
 	.4byte	.LLST11
 	.uleb128 0x30
 	.4byte	.LASF173
 	.byte	0x1
-	.2byte	0x312
+	.2byte	0x306
 	.4byte	0xb76
 	.4byte	.LLST12
 	.uleb128 0x26
@@ -3918,7 +3946,7 @@ dns_pcbs:
 	.4byte	0xde9
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6604
+	.4byte	__func__$6668
 	.uleb128 0x31
 	.4byte	.LBB3
 	.4byte	.LBE3-.LBB3
@@ -3926,18 +3954,18 @@ dns_pcbs:
 	.uleb128 0x25
 	.string	"dst"
 	.byte	0x1
-	.2byte	0x328
+	.2byte	0x31c
 	.4byte	0x7f0
 	.4byte	.LLST13
 	.uleb128 0x30
 	.4byte	.LASF177
 	.byte	0x1
-	.2byte	0x329
+	.2byte	0x31d
 	.4byte	0xf0
 	.4byte	.LLST14
 	.uleb128 0x27
 	.4byte	.LVL24
-	.4byte	0x1a94
+	.4byte	0x1a84
 	.4byte	0xca7
 	.uleb128 0x28
 	.uleb128 0x1
@@ -3959,10 +3987,10 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x2a
 	.4byte	.LVL25
-	.4byte	0x1a9d
+	.4byte	0x1a8d
 	.uleb128 0x27
 	.4byte	.LVL26
-	.4byte	0x1aa8
+	.4byte	0x1a98
 	.4byte	0xccf
 	.uleb128 0x28
 	.uleb128 0x1
@@ -3984,7 +4012,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL34
-	.4byte	0x1ab3
+	.4byte	0x1aa3
 	.4byte	0xce9
 	.uleb128 0x28
 	.uleb128 0x1
@@ -4001,7 +4029,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL35
-	.4byte	0x1abf
+	.4byte	0x1aaf
 	.4byte	0xcfd
 	.uleb128 0x28
 	.uleb128 0x1
@@ -4012,7 +4040,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL38
-	.4byte	0x1ab3
+	.4byte	0x1aa3
 	.4byte	0xd1b
 	.uleb128 0x28
 	.uleb128 0x1
@@ -4032,7 +4060,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL42
-	.4byte	0x1abf
+	.4byte	0x1aaf
 	.4byte	0xd3a
 	.uleb128 0x28
 	.uleb128 0x1
@@ -4054,7 +4082,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL44
-	.4byte	0x1aca
+	.4byte	0x1aba
 	.4byte	0xd54
 	.uleb128 0x28
 	.uleb128 0x1
@@ -4071,7 +4099,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x2d
 	.4byte	.LVL47
-	.4byte	0x1ad5
+	.4byte	0x1ac5
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -4082,7 +4110,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL17
-	.4byte	0x1a7e
+	.4byte	0x1a6e
 	.4byte	0xd95
 	.uleb128 0x28
 	.uleb128 0x1
@@ -4095,13 +4123,13 @@ dns_pcbs:
 	.byte	0x5b
 	.uleb128 0x3
 	.byte	0xa
-	.2byte	0x316
+	.2byte	0x30a
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6604
+	.4byte	__func__$6668
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5d
@@ -4127,7 +4155,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL21
-	.4byte	0x1ae0
+	.4byte	0x1ad0
 	.4byte	0xdc2
 	.uleb128 0x28
 	.uleb128 0x1
@@ -4138,7 +4166,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x2d
 	.4byte	.LVL22
-	.4byte	0x1aeb
+	.4byte	0x1adb
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -4165,49 +4193,49 @@ dns_pcbs:
 	.uleb128 0x1d
 	.4byte	.LASF179
 	.byte	0x1
-	.2byte	0x3fe
+	.2byte	0x3f2
 	.4byte	0xf0
 	.byte	0x1
 	.4byte	0xe1e
 	.uleb128 0x20
 	.4byte	.LASF156
 	.byte	0x1
-	.2byte	0x400
+	.2byte	0x3f4
 	.4byte	0xf0
 	.uleb128 0x1f
 	.string	"i"
 	.byte	0x1
-	.2byte	0x401
+	.2byte	0x3f5
 	.4byte	0xda
 	.uleb128 0x32
 	.4byte	.LASF246
 	.byte	0x1
-	.2byte	0x403
+	.2byte	0x3f7
 	.byte	0
 	.uleb128 0x22
 	.4byte	.LASF180
 	.byte	0x1
-	.2byte	0x41c
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.2byte	0x410
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xeed
 	.uleb128 0x23
 	.string	"i"
 	.byte	0x1
-	.2byte	0x41c
+	.2byte	0x410
 	.4byte	0xda
 	.4byte	.LLST15
 	.uleb128 0x1f
 	.string	"err"
 	.byte	0x1
-	.2byte	0x41e
+	.2byte	0x412
 	.4byte	0x12e
 	.uleb128 0x30
 	.4byte	.LASF173
 	.byte	0x1
-	.2byte	0x41f
+	.2byte	0x413
 	.4byte	0xb76
 	.4byte	.LLST16
 	.uleb128 0x26
@@ -4215,13 +4243,13 @@ dns_pcbs:
 	.4byte	0xefd
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6660
+	.4byte	__func__$6724
 	.uleb128 0x33
 	.4byte	0xdee
 	.4byte	.LBB6
 	.4byte	.LBE6-.LBB6
 	.byte	0x1
-	.2byte	0x426
+	.2byte	0x41a
 	.4byte	0xeac
 	.uleb128 0x34
 	.4byte	.LBB7
@@ -4236,7 +4264,7 @@ dns_pcbs:
 	.4byte	0xe15
 	.uleb128 0x2a
 	.4byte	.LVL51
-	.4byte	0x1af6
+	.4byte	0x1ae6
 	.byte	0
 	.byte	0
 	.uleb128 0x27
@@ -4268,7 +4296,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x2d
 	.4byte	.LVL62
-	.4byte	0x1a7e
+	.4byte	0x1a6e
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -4289,40 +4317,40 @@ dns_pcbs:
 	.uleb128 0x2e
 	.4byte	.LASF182
 	.byte	0x1
-	.2byte	0x286
+	.2byte	0x27a
 	.4byte	0x12e
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xf78
 	.uleb128 0x24
 	.4byte	.LASF77
 	.byte	0x1
-	.2byte	0x286
+	.2byte	0x27a
 	.4byte	0xc4
 	.4byte	.LLST19
 	.uleb128 0x24
 	.4byte	.LASF86
 	.byte	0x1
-	.2byte	0x286
+	.2byte	0x27a
 	.4byte	0xaf6
 	.4byte	.LLST20
 	.uleb128 0x24
 	.4byte	.LASF183
 	.byte	0x1
-	.2byte	0x286
+	.2byte	0x27a
 	.4byte	0xda
 	.4byte	.LLST21
 	.uleb128 0x25
 	.string	"i"
 	.byte	0x1
-	.2byte	0x288
+	.2byte	0x27c
 	.4byte	0xda
 	.4byte	.LLST22
 	.uleb128 0x2d
 	.4byte	.LVL67
-	.4byte	0x1b01
+	.4byte	0x1af1
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -4346,93 +4374,93 @@ dns_pcbs:
 	.uleb128 0x1d
 	.4byte	.LASF184
 	.byte	0x1
-	.2byte	0x2e3
+	.2byte	0x2d7
 	.4byte	0xf0
 	.byte	0x1
 	.4byte	0xfb6
 	.uleb128 0x1e
 	.string	"p"
 	.byte	0x1
-	.2byte	0x2e3
+	.2byte	0x2d7
 	.4byte	0x275
 	.uleb128 0x1c
 	.4byte	.LASF174
 	.byte	0x1
-	.2byte	0x2e3
+	.2byte	0x2d7
 	.4byte	0xf0
 	.uleb128 0x1f
 	.string	"n"
 	.byte	0x1
-	.2byte	0x2e5
+	.2byte	0x2d9
 	.4byte	0x3e
 	.uleb128 0x20
 	.4byte	.LASF185
 	.byte	0x1
-	.2byte	0x2e6
+	.2byte	0x2da
 	.4byte	0xf0
 	.byte	0
 	.uleb128 0x22
 	.4byte	.LASF186
 	.byte	0x1
-	.2byte	0x49c
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.2byte	0x494
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1371
 	.uleb128 0x23
 	.string	"arg"
 	.byte	0x1
-	.2byte	0x49c
+	.2byte	0x494
 	.4byte	0xad
 	.4byte	.LLST23
 	.uleb128 0x23
 	.string	"pcb"
 	.byte	0x1
-	.2byte	0x49c
+	.2byte	0x494
 	.4byte	0x79a
 	.4byte	.LLST24
 	.uleb128 0x2b
 	.string	"p"
 	.byte	0x1
-	.2byte	0x49c
+	.2byte	0x494
 	.4byte	0x275
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x24
 	.4byte	.LASF86
 	.byte	0x1
-	.2byte	0x49c
+	.2byte	0x494
 	.4byte	0x7f0
 	.4byte	.LLST25
 	.uleb128 0x24
 	.4byte	.LASF187
 	.byte	0x1
-	.2byte	0x49c
+	.2byte	0x494
 	.4byte	0xf0
 	.4byte	.LLST26
 	.uleb128 0x25
 	.string	"i"
 	.byte	0x1
-	.2byte	0x49e
+	.2byte	0x496
 	.4byte	0xda
 	.4byte	.LLST27
 	.uleb128 0x30
 	.4byte	.LASF156
 	.byte	0x1
-	.2byte	0x49f
+	.2byte	0x497
 	.4byte	0xf0
 	.4byte	.LLST28
 	.uleb128 0x30
 	.4byte	.LASF188
 	.byte	0x1
-	.2byte	0x4a0
+	.2byte	0x498
 	.4byte	0xf0
 	.4byte	.LLST29
 	.uleb128 0x2f
 	.string	"hdr"
 	.byte	0x1
-	.2byte	0x4a1
+	.2byte	0x499
 	.4byte	0x821
 	.uleb128 0x3
 	.byte	0x91
@@ -4440,7 +4468,7 @@ dns_pcbs:
 	.uleb128 0x2f
 	.string	"ans"
 	.byte	0x1
-	.2byte	0x4a2
+	.2byte	0x49a
 	.4byte	0x8a6
 	.uleb128 0x3
 	.byte	0x91
@@ -4448,7 +4476,7 @@ dns_pcbs:
 	.uleb128 0x2f
 	.string	"qry"
 	.byte	0x1
-	.2byte	0x4a3
+	.2byte	0x49b
 	.4byte	0x881
 	.uleb128 0x2
 	.byte	0x91
@@ -4456,20 +4484,20 @@ dns_pcbs:
 	.uleb128 0x30
 	.4byte	.LASF189
 	.byte	0x1
-	.2byte	0x4a4
+	.2byte	0x49c
 	.4byte	0xf0
 	.4byte	.LLST30
 	.uleb128 0x30
 	.4byte	.LASF190
 	.byte	0x1
-	.2byte	0x4a4
+	.2byte	0x49c
 	.4byte	0xf0
 	.4byte	.LLST31
 	.uleb128 0x37
 	.4byte	.LASF247
 	.byte	0x1
-	.2byte	0x544
-	.4byte	.L126
+	.2byte	0x53c
+	.4byte	.L137
 	.uleb128 0x31
 	.4byte	.LBB16
 	.4byte	.LBE16-.LBB16
@@ -4477,7 +4505,7 @@ dns_pcbs:
 	.uleb128 0x30
 	.4byte	.LASF173
 	.byte	0x1
-	.2byte	0x4b6
+	.2byte	0x4ae
 	.4byte	0x1371
 	.4byte	.LLST32
 	.uleb128 0x38
@@ -4485,7 +4513,7 @@ dns_pcbs:
 	.4byte	.LBB17
 	.4byte	.Ldebug_ranges0+0
 	.byte	0x1
-	.2byte	0x4d6
+	.2byte	0x4ce
 	.4byte	0x1163
 	.uleb128 0x39
 	.4byte	0xa35
@@ -4513,7 +4541,7 @@ dns_pcbs:
 	.4byte	.LLST38
 	.uleb128 0x2d
 	.4byte	.LVL95
-	.4byte	0x1b0c
+	.4byte	0x1afc
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -4530,7 +4558,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL92
-	.4byte	0x1b0c
+	.4byte	0x1afc
 	.4byte	0x114b
 	.uleb128 0x28
 	.uleb128 0x1
@@ -4547,7 +4575,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x2d
 	.4byte	.LVL100
-	.4byte	0x1b0c
+	.4byte	0x1afc
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -4568,7 +4596,7 @@ dns_pcbs:
 	.4byte	.LBB22
 	.4byte	.Ldebug_ranges0+0x18
 	.byte	0x1
-	.2byte	0x4ef
+	.2byte	0x4e7
 	.4byte	0x11be
 	.uleb128 0x3b
 	.4byte	0xf93
@@ -4584,7 +4612,7 @@ dns_pcbs:
 	.4byte	.LLST40
 	.uleb128 0x27
 	.4byte	.LVL109
-	.4byte	0x1b0c
+	.4byte	0x1afc
 	.4byte	0x11ac
 	.uleb128 0x28
 	.uleb128 0x1
@@ -4595,7 +4623,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x2d
 	.4byte	.LVL113
-	.4byte	0x1b0c
+	.4byte	0x1afc
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -4612,14 +4640,14 @@ dns_pcbs:
 	.uleb128 0x2c
 	.4byte	.LASF191
 	.byte	0x1
-	.2byte	0x501
+	.2byte	0x4f9
 	.4byte	0x432
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -96
 	.uleb128 0x2d
 	.4byte	.LVL119
-	.4byte	0x1b18
+	.4byte	0x1b08
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -4652,14 +4680,14 @@ dns_pcbs:
 	.uleb128 0x2c
 	.4byte	.LASF192
 	.byte	0x1
-	.2byte	0x514
+	.2byte	0x50c
 	.4byte	0x466
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -96
 	.uleb128 0x27
 	.4byte	.LVL120
-	.4byte	0x1b18
+	.4byte	0x1b08
 	.4byte	0x1241
 	.uleb128 0x28
 	.uleb128 0x1
@@ -4687,7 +4715,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL121
-	.4byte	0x1ad5
+	.4byte	0x1ac5
 	.4byte	0x1255
 	.uleb128 0x28
 	.uleb128 0x1
@@ -4698,7 +4726,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x2a
 	.4byte	.LVL122
-	.4byte	0x1b23
+	.4byte	0x1b13
 	.uleb128 0x2d
 	.4byte	.LVL123
 	.4byte	0xb11
@@ -4712,13 +4740,13 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x2a
 	.4byte	.LVL82
-	.4byte	0x1a9d
+	.4byte	0x1a8d
 	.uleb128 0x2a
 	.4byte	.LVL84
-	.4byte	0x1a9d
+	.4byte	0x1a8d
 	.uleb128 0x27
 	.4byte	.LVL103
-	.4byte	0x1b18
+	.4byte	0x1b08
 	.4byte	0x12aa
 	.uleb128 0x28
 	.uleb128 0x1
@@ -4749,7 +4777,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL116
-	.4byte	0x1b18
+	.4byte	0x1b08
 	.4byte	0x12d4
 	.uleb128 0x28
 	.uleb128 0x1
@@ -4780,13 +4808,13 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x2a
 	.4byte	.LVL124
-	.4byte	0x1a9d
+	.4byte	0x1a8d
 	.uleb128 0x2a
 	.4byte	.LVL125
-	.4byte	0x1a9d
+	.4byte	0x1a8d
 	.uleb128 0x27
 	.4byte	.LVL130
-	.4byte	0x1ad5
+	.4byte	0x1ac5
 	.4byte	0x12fa
 	.uleb128 0x28
 	.uleb128 0x1
@@ -4808,7 +4836,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL132
-	.4byte	0x1ad5
+	.4byte	0x1ac5
 	.4byte	0x1322
 	.uleb128 0x28
 	.uleb128 0x1
@@ -4829,7 +4857,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL77
-	.4byte	0x1b18
+	.4byte	0x1b08
 	.4byte	0x1357
 	.uleb128 0x28
 	.uleb128 0x1
@@ -4856,10 +4884,10 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x2a
 	.4byte	.LVL78
-	.4byte	0x1a9d
+	.4byte	0x1a8d
 	.uleb128 0x2d
 	.4byte	.LVL138
-	.4byte	0x1ad5
+	.4byte	0x1ac5
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -4877,8 +4905,8 @@ dns_pcbs:
 	.4byte	.LASF193
 	.byte	0x1
 	.2byte	0x13e
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x139c
@@ -4890,8 +4918,8 @@ dns_pcbs:
 	.4byte	0xdd9
 	.uleb128 0x3e
 	.4byte	0x9e8
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x13f9
@@ -4913,7 +4941,7 @@ dns_pcbs:
 	.4byte	.LLST43
 	.uleb128 0x2d
 	.4byte	.LVL143
-	.4byte	0x1b2e
+	.4byte	0x1b1e
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -4932,8 +4960,8 @@ dns_pcbs:
 	.4byte	.LASF194
 	.byte	0x1
 	.2byte	0x185
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1443
@@ -4969,67 +4997,57 @@ dns_pcbs:
 	.uleb128 0x41
 	.4byte	.LASF206
 	.byte	0x1
-	.2byte	0x19d
-	.4byte	0x4d8
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.2byte	0x19c
+	.4byte	0x7f0
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x147e
+	.4byte	0x146e
 	.uleb128 0x24
 	.4byte	.LASF165
 	.byte	0x1
-	.2byte	0x19d
+	.2byte	0x19c
 	.4byte	0xda
 	.4byte	.LLST45
-	.uleb128 0x2d
-	.4byte	.LVL151
-	.4byte	0x1b2e
-	.uleb128 0x28
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x72
-	.sleb128 0
-	.byte	0
 	.byte	0
 	.uleb128 0x42
 	.4byte	.LASF248
 	.byte	0x1
-	.2byte	0x46f
+	.2byte	0x467
 	.byte	0x1
-	.4byte	0x1496
+	.4byte	0x1486
 	.uleb128 0x1f
 	.string	"i"
 	.byte	0x1
-	.2byte	0x471
+	.2byte	0x469
 	.4byte	0xda
 	.byte	0
 	.uleb128 0x3c
 	.4byte	.LASF196
 	.byte	0x1
-	.2byte	0x1b7
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.2byte	0x1ab
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1519
+	.4byte	0x1509
 	.uleb128 0x43
-	.4byte	0x147e
+	.4byte	0x146e
 	.4byte	.LBB34
 	.4byte	.LBE34-.LBB34
 	.byte	0x1
-	.2byte	0x1ba
+	.2byte	0x1ae
 	.uleb128 0x34
 	.4byte	.LBB35
 	.4byte	.LBE35-.LBB35
 	.uleb128 0x35
-	.4byte	0x148b
+	.4byte	0x147b
 	.4byte	.LLST46
 	.uleb128 0x27
 	.4byte	.LVL153
 	.4byte	0xe1e
-	.4byte	0x14e1
+	.4byte	0x14d1
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -5039,7 +5057,7 @@ dns_pcbs:
 	.uleb128 0x27
 	.4byte	.LVL154
 	.4byte	0xe1e
-	.4byte	0x14f4
+	.4byte	0x14e4
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -5049,7 +5067,7 @@ dns_pcbs:
 	.uleb128 0x27
 	.4byte	.LVL155
 	.4byte	0xe1e
-	.4byte	0x1507
+	.4byte	0x14f7
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -5071,88 +5089,88 @@ dns_pcbs:
 	.uleb128 0x1d
 	.4byte	.LASF197
 	.byte	0x1
-	.2byte	0x5f2
+	.2byte	0x5ea
 	.4byte	0x117
 	.byte	0x1
-	.4byte	0x1535
+	.4byte	0x1525
 	.uleb128 0x1f
 	.string	"i"
 	.byte	0x1
-	.2byte	0x5f4
+	.2byte	0x5ec
 	.4byte	0x3e
 	.byte	0
 	.uleb128 0x1d
 	.4byte	.LASF198
 	.byte	0x1
-	.2byte	0x554
+	.2byte	0x54c
 	.4byte	0x12e
 	.byte	0x1
-	.4byte	0x15e1
+	.4byte	0x15d1
 	.uleb128 0x1c
 	.4byte	.LASF77
 	.byte	0x1
-	.2byte	0x554
+	.2byte	0x54c
 	.4byte	0xc4
 	.uleb128 0x1c
 	.4byte	.LASF199
 	.byte	0x1
-	.2byte	0x554
+	.2byte	0x54c
 	.4byte	0x25
 	.uleb128 0x1c
 	.4byte	.LASF163
 	.byte	0x1
-	.2byte	0x554
+	.2byte	0x54c
 	.4byte	0x7fb
 	.uleb128 0x1c
 	.4byte	.LASF200
 	.byte	0x1
-	.2byte	0x555
+	.2byte	0x54d
 	.4byte	0xad
 	.uleb128 0x1c
 	.4byte	.LASF183
 	.byte	0x1
-	.2byte	0x555
+	.2byte	0x54d
 	.4byte	0xda
 	.uleb128 0x1f
 	.string	"i"
 	.byte	0x1
-	.2byte	0x557
+	.2byte	0x54f
 	.4byte	0xda
 	.uleb128 0x20
 	.4byte	.LASF201
 	.byte	0x1
-	.2byte	0x558
+	.2byte	0x550
 	.4byte	0xda
 	.uleb128 0x20
 	.4byte	.LASF202
 	.byte	0x1
-	.2byte	0x558
+	.2byte	0x550
 	.4byte	0xda
 	.uleb128 0x20
 	.4byte	.LASF173
 	.byte	0x1
-	.2byte	0x559
+	.2byte	0x551
 	.4byte	0xb76
 	.uleb128 0x20
 	.4byte	.LASF203
 	.byte	0x1
-	.2byte	0x55a
+	.2byte	0x552
 	.4byte	0x25
 	.uleb128 0x1f
 	.string	"req"
 	.byte	0x1
-	.2byte	0x55b
-	.4byte	0x15e1
+	.2byte	0x553
+	.4byte	0x15d1
 	.uleb128 0x1f
 	.string	"r"
 	.byte	0x1
-	.2byte	0x55e
+	.2byte	0x556
 	.4byte	0xda
 	.uleb128 0x21
 	.uleb128 0x1f
 	.string	"age"
 	.byte	0x1
-	.2byte	0x586
+	.2byte	0x57e
 	.4byte	0xda
 	.byte	0
 	.byte	0
@@ -5162,114 +5180,114 @@ dns_pcbs:
 	.uleb128 0x1d
 	.4byte	.LASF204
 	.byte	0x1
-	.2byte	0x39a
+	.2byte	0x38e
 	.4byte	0xda
 	.byte	0x1
-	.4byte	0x160f
+	.4byte	0x15ff
 	.uleb128 0x1f
 	.string	"i"
 	.byte	0x1
-	.2byte	0x39c
+	.2byte	0x390
 	.4byte	0xda
 	.uleb128 0x1f
 	.string	"idx"
 	.byte	0x1
-	.2byte	0x39d
+	.2byte	0x391
 	.4byte	0xda
 	.byte	0
 	.uleb128 0x1d
 	.4byte	.LASF205
 	.byte	0x1
-	.2byte	0x378
+	.2byte	0x36c
 	.4byte	0x79a
 	.byte	0x1
-	.4byte	0x1647
+	.4byte	0x1637
 	.uleb128 0x1f
 	.string	"err"
 	.byte	0x1
-	.2byte	0x37a
+	.2byte	0x36e
 	.4byte	0x12e
 	.uleb128 0x1f
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x37b
+	.2byte	0x36f
 	.4byte	0x79a
 	.uleb128 0x21
 	.uleb128 0x20
 	.4byte	.LASF187
 	.byte	0x1
-	.2byte	0x383
+	.2byte	0x377
 	.4byte	0xf0
 	.byte	0
 	.byte	0
 	.uleb128 0x41
 	.4byte	.LASF207
 	.byte	0x1
-	.2byte	0x60d
+	.2byte	0x605
 	.4byte	0x12e
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x192b
+	.4byte	0x191b
 	.uleb128 0x24
 	.4byte	.LASF74
 	.byte	0x1
-	.2byte	0x60d
+	.2byte	0x605
 	.4byte	0xc4
 	.4byte	.LLST47
 	.uleb128 0x24
 	.4byte	.LASF86
 	.byte	0x1
-	.2byte	0x60d
+	.2byte	0x605
 	.4byte	0xaf6
 	.4byte	.LLST48
 	.uleb128 0x24
 	.4byte	.LASF163
 	.byte	0x1
-	.2byte	0x60d
+	.2byte	0x605
 	.4byte	0x7fb
 	.4byte	.LLST49
 	.uleb128 0x24
 	.4byte	.LASF200
 	.byte	0x1
-	.2byte	0x60e
+	.2byte	0x606
 	.4byte	0xad
 	.4byte	.LLST50
 	.uleb128 0x24
 	.4byte	.LASF183
 	.byte	0x1
-	.2byte	0x60e
+	.2byte	0x606
 	.4byte	0xda
 	.4byte	.LLST51
 	.uleb128 0x30
 	.4byte	.LASF199
 	.byte	0x1
-	.2byte	0x610
+	.2byte	0x608
 	.4byte	0x25
 	.4byte	.LLST52
 	.uleb128 0x38
-	.4byte	0x1519
+	.4byte	0x1509
 	.4byte	.LBB47
 	.4byte	.Ldebug_ranges0+0x30
 	.byte	0x1
-	.2byte	0x658
-	.4byte	0x16e5
+	.2byte	0x650
+	.4byte	0x16d5
 	.uleb128 0x3a
 	.4byte	.Ldebug_ranges0+0x30
 	.uleb128 0x35
-	.4byte	0x152a
+	.4byte	0x151a
 	.4byte	.LLST53
 	.byte	0
 	.byte	0
 	.uleb128 0x31
 	.4byte	.LBB51
 	.4byte	.LBE51-.LBB51
-	.4byte	0x1729
+	.4byte	0x1719
 	.uleb128 0x30
 	.4byte	.LASF208
 	.byte	0x1
-	.2byte	0x63e
+	.2byte	0x636
 	.4byte	0xda
 	.4byte	.LLST54
 	.uleb128 0x2d
@@ -5305,93 +5323,93 @@ dns_pcbs:
 	.byte	0
 	.byte	0
 	.uleb128 0x38
-	.4byte	0x1535
+	.4byte	0x1525
 	.4byte	.LBB54
 	.4byte	.Ldebug_ranges0+0x50
 	.byte	0x1
-	.2byte	0x661
-	.4byte	0x18c3
+	.2byte	0x659
+	.4byte	0x18b3
 	.uleb128 0x3b
-	.4byte	0x1576
+	.4byte	0x1566
 	.uleb128 0x3b
-	.4byte	0x156a
+	.4byte	0x155a
 	.uleb128 0x3b
-	.4byte	0x155e
+	.4byte	0x154e
 	.uleb128 0x3b
-	.4byte	0x1552
+	.4byte	0x1542
 	.uleb128 0x3b
-	.4byte	0x1546
+	.4byte	0x1536
 	.uleb128 0x3a
 	.4byte	.Ldebug_ranges0+0x50
 	.uleb128 0x35
-	.4byte	0x1582
+	.4byte	0x1572
 	.4byte	.LLST55
 	.uleb128 0x35
-	.4byte	0x158c
+	.4byte	0x157c
 	.4byte	.LLST56
 	.uleb128 0x44
-	.4byte	0x1598
+	.4byte	0x1588
 	.uleb128 0x35
-	.4byte	0x15a4
+	.4byte	0x1594
 	.4byte	.LLST57
 	.uleb128 0x35
-	.4byte	0x15b0
+	.4byte	0x15a0
 	.4byte	.LLST58
 	.uleb128 0x35
-	.4byte	0x15bc
+	.4byte	0x15ac
 	.4byte	.LLST59
 	.uleb128 0x35
-	.4byte	0x15c8
+	.4byte	0x15b8
 	.4byte	.LLST60
 	.uleb128 0x45
 	.4byte	.Ldebug_ranges0+0x68
-	.4byte	0x17a9
+	.4byte	0x1799
 	.uleb128 0x35
-	.4byte	0x15d3
+	.4byte	0x15c3
 	.4byte	.LLST61
 	.byte	0
 	.uleb128 0x38
-	.4byte	0x15e7
+	.4byte	0x15d7
 	.4byte	.LBB58
 	.4byte	.Ldebug_ranges0+0x80
 	.byte	0x1
-	.2byte	0x5be
-	.4byte	0x1870
+	.2byte	0x5b6
+	.4byte	0x1860
 	.uleb128 0x3a
 	.4byte	.Ldebug_ranges0+0x80
 	.uleb128 0x35
-	.4byte	0x15f8
+	.4byte	0x15e8
 	.4byte	.LLST62
 	.uleb128 0x35
-	.4byte	0x1602
+	.4byte	0x15f2
 	.4byte	.LLST63
 	.uleb128 0x46
-	.4byte	0x160f
+	.4byte	0x15ff
 	.4byte	.LBB60
 	.4byte	.Ldebug_ranges0+0x98
 	.byte	0x1
-	.2byte	0x3a5
+	.2byte	0x399
 	.uleb128 0x3a
 	.4byte	.Ldebug_ranges0+0x98
 	.uleb128 0x35
-	.4byte	0x1620
+	.4byte	0x1610
 	.4byte	.LLST64
 	.uleb128 0x35
-	.4byte	0x162c
+	.4byte	0x161c
 	.4byte	.LLST65
 	.uleb128 0x31
 	.4byte	.LBB62
 	.4byte	.LBE62-.LBB62
-	.4byte	0x182b
+	.4byte	0x181b
 	.uleb128 0x35
-	.4byte	0x1639
+	.4byte	0x1629
 	.4byte	.LLST66
 	.uleb128 0x2a
 	.4byte	.LVL209
-	.4byte	0x1af6
+	.4byte	0x1ae6
 	.uleb128 0x2d
 	.4byte	.LVL211
-	.4byte	0x1b37
+	.4byte	0x1b27
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -5402,8 +5420,8 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL214
-	.4byte	0x1a89
-	.4byte	0x183f
+	.4byte	0x1a79
+	.4byte	0x182f
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -5413,8 +5431,8 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL216
-	.4byte	0x1b42
-	.4byte	0x185c
+	.4byte	0x1b32
+	.4byte	0x184c
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -5430,7 +5448,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x2d
 	.4byte	.LVL231
-	.4byte	0x1b4d
+	.4byte	0x1b3d
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -5444,8 +5462,8 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL178
-	.4byte	0x1b01
-	.4byte	0x1891
+	.4byte	0x1af1
+	.4byte	0x1881
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -5467,8 +5485,8 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL199
-	.4byte	0x1b2e
-	.4byte	0x18b1
+	.4byte	0x1b1e
+	.4byte	0x18a1
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -5502,8 +5520,8 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL161
-	.4byte	0x1ae0
-	.4byte	0x18d7
+	.4byte	0x1ad0
+	.4byte	0x18c7
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -5513,8 +5531,8 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL165
-	.4byte	0x1b58
-	.4byte	0x18f4
+	.4byte	0x1b48
+	.4byte	0x18e4
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -5530,8 +5548,8 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL167
-	.4byte	0x1b63
-	.4byte	0x190e
+	.4byte	0x1b53
+	.4byte	0x18fe
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -5571,43 +5589,43 @@ dns_pcbs:
 	.uleb128 0x41
 	.4byte	.LASF209
 	.byte	0x1
-	.2byte	0x5eb
+	.2byte	0x5e3
 	.4byte	0x12e
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x19a7
+	.4byte	0x1997
 	.uleb128 0x24
 	.4byte	.LASF74
 	.byte	0x1
-	.2byte	0x5eb
+	.2byte	0x5e3
 	.4byte	0xc4
 	.4byte	.LLST67
 	.uleb128 0x40
 	.4byte	.LASF86
 	.byte	0x1
-	.2byte	0x5eb
+	.2byte	0x5e3
 	.4byte	0xaf6
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x40
 	.4byte	.LASF163
 	.byte	0x1
-	.2byte	0x5eb
+	.2byte	0x5e3
 	.4byte	0x7fb
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x40
 	.4byte	.LASF200
 	.byte	0x1
-	.2byte	0x5ec
+	.2byte	0x5e4
 	.4byte	0xad
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x2d
 	.4byte	.LVL235
-	.4byte	0x1647
+	.4byte	0x1637
 	.uleb128 0x28
 	.uleb128 0x1
 	.byte	0x5a
@@ -5641,7 +5659,7 @@ dns_pcbs:
 	.byte	0
 	.uleb128 0xb
 	.4byte	0x79a
-	.4byte	0x19b7
+	.4byte	0x19a7
 	.uleb128 0xc
 	.4byte	0xa6
 	.byte	0x3
@@ -5650,7 +5668,7 @@ dns_pcbs:
 	.4byte	.LASF210
 	.byte	0x1
 	.2byte	0x129
-	.4byte	0x19a7
+	.4byte	0x1997
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	dns_pcbs
@@ -5672,7 +5690,7 @@ dns_pcbs:
 	.4byte	dns_seqno
 	.uleb128 0xb
 	.4byte	0x908
-	.4byte	0x19fd
+	.4byte	0x19ed
 	.uleb128 0xc
 	.4byte	0xa6
 	.byte	0x3
@@ -5681,13 +5699,13 @@ dns_pcbs:
 	.4byte	.LASF213
 	.byte	0x1
 	.2byte	0x12e
-	.4byte	0x19ed
+	.4byte	0x19dd
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	dns_table
 	.uleb128 0xb
 	.4byte	0x9ab
-	.4byte	0x1a1f
+	.4byte	0x1a0f
 	.uleb128 0xc
 	.4byte	0xa6
 	.byte	0x3
@@ -5696,7 +5714,7 @@ dns_pcbs:
 	.4byte	.LASF214
 	.byte	0x1
 	.2byte	0x12f
-	.4byte	0x1a0f
+	.4byte	0x19ff
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	dns_requests
@@ -5791,7 +5809,7 @@ dns_pcbs:
 	.4byte	.LASF230
 	.4byte	.LASF230
 	.byte	0x12
-	.byte	0xa7
+	.byte	0xa8
 	.uleb128 0x4a
 	.4byte	.LASF231
 	.4byte	.LASF231
@@ -6852,7 +6870,7 @@ dns_pcbs:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL9
-	.4byte	.LFE29
+	.4byte	.LFE38
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6866,7 +6884,7 @@ dns_pcbs:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL5
-	.4byte	.LFE29
+	.4byte	.LFE38
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6902,7 +6920,7 @@ dns_pcbs:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL13
-	.4byte	.LFE33
+	.4byte	.LFE42
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6927,7 +6945,7 @@ dns_pcbs:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL43
-	.4byte	.LFE26
+	.4byte	.LFE35
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7117,7 +7135,7 @@ dns_pcbs:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL61
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -7136,7 +7154,7 @@ dns_pcbs:
 	.byte	0x22
 	.byte	0x9f
 	.4byte	.LVL61
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0xd
 	.byte	0x72
 	.sleb128 0
@@ -7205,7 +7223,7 @@ dns_pcbs:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL73
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7223,7 +7241,7 @@ dns_pcbs:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL70
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -7234,7 +7252,7 @@ dns_pcbs:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL65
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7272,7 +7290,7 @@ dns_pcbs:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL75
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7286,7 +7304,7 @@ dns_pcbs:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL76
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7322,7 +7340,7 @@ dns_pcbs:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL137
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7336,7 +7354,7 @@ dns_pcbs:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL79
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7587,7 +7605,7 @@ dns_pcbs:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL140
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7627,7 +7645,7 @@ dns_pcbs:
 	.sleb128 1
 	.byte	0x9f
 	.4byte	.LVL148
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x3
 	.byte	0x73
 	.sleb128 0
@@ -7638,13 +7656,17 @@ dns_pcbs:
 	.4byte	.LVL149
 	.4byte	.LVL150
 	.2byte	0x1
-	.byte	0x53
+	.byte	0x52
 	.4byte	.LVL150
-	.4byte	.LFE21
+	.4byte	.LVL151
+	.2byte	0x1
+	.byte	0x58
+	.4byte	.LVL151
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
-	.byte	0x53
+	.byte	0x52
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
@@ -7670,7 +7692,7 @@ dns_pcbs:
 	.byte	0x33
 	.byte	0x9f
 	.4byte	.LVL156
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x2
 	.byte	0x34
 	.byte	0x9f
@@ -7697,7 +7719,7 @@ dns_pcbs:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL230
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7748,7 +7770,7 @@ dns_pcbs:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL230
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7771,7 +7793,7 @@ dns_pcbs:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL229
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -60
@@ -7783,7 +7805,7 @@ dns_pcbs:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL159
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -56
@@ -7795,7 +7817,7 @@ dns_pcbs:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL166
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -8263,7 +8285,7 @@ dns_pcbs:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL236
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -8279,32 +8301,32 @@ dns_pcbs:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
 	.4byte	.LFB38
 	.4byte	.LFE38-.LFB38
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -8353,32 +8375,32 @@ dns_pcbs:
 	.4byte	.LBE64
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB29
-	.4byte	.LFE29
-	.4byte	.LFB33
-	.4byte	.LFE33
-	.4byte	.LFB26
-	.4byte	.LFE26
-	.4byte	.LFB31
-	.4byte	.LFE31
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB34
-	.4byte	.LFE34
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB22
-	.4byte	.LFE22
 	.4byte	.LFB38
 	.4byte	.LFE38
-	.4byte	.LFB36
-	.4byte	.LFE36
+	.4byte	.LFB42
+	.4byte	.LFE42
+	.4byte	.LFB35
+	.4byte	.LFE35
+	.4byte	.LFB40
+	.4byte	.LFE40
+	.4byte	.LFB32
+	.4byte	.LFE32
+	.4byte	.LFB43
+	.4byte	.LFE43
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB28
+	.4byte	.LFE28
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB31
+	.4byte	.LFE31
+	.4byte	.LFB47
+	.4byte	.LFE47
+	.4byte	.LFB45
+	.4byte	.LFE45
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

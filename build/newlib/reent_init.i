@@ -539,6 +539,9 @@ char *strsignal (int __signo);
 # 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/reent_init.c" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/reent_init.c" 2
 
 
@@ -547,7 +550,7 @@ char *strsignal (int __signo);
 
 extern void _cleanup_r(struct _reent* r);
 # 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/reent_init.c"
-void __attribute__((section(".iram1"))) esp_reent_init(struct _reent* r)
+void __attribute__((section(".iram1" "." "0"))) esp_reent_init(struct _reent* r)
 {
     memset(r, 0, sizeof(*r));
     r->_stdout = _global_impure_ptr->_stdout;

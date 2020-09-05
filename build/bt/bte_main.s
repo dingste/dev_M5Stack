@@ -12,7 +12,7 @@
 	.literal_position
 	.literal .LC0, hci
 	.literal .LC1, appl_trace_level
-	.literal .LC2, __func__$8818
+	.literal .LC2, __func__$8891
 	.literal .LC4, .LC3
 	.literal .LC6, .LC5
 	.literal .LC7, bluedroid_init_done_cb
@@ -21,7 +21,7 @@
 	.global	bte_main_boot_entry
 	.type	bte_main_boot_entry, @function
 bte_main_boot_entry:
-.LFB30:
+.LFB39:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/main/bte_main.c"
 	.loc 1 77 0
 .LVL0:
@@ -100,14 +100,14 @@ bte_main_boot_entry:
 .LBE7:
 	.loc 1 92 0
 	retw.n
-.LFE30:
+.LFE39:
 	.size	bte_main_boot_entry, .-bte_main_boot_entry
 	.section	.text.bte_main_shutdown,"ax",@progbits
 	.align	4
 	.global	bte_main_shutdown
 	.type	bte_main_shutdown, @function
 bte_main_shutdown:
-.LFB31:
+.LFB40:
 	.loc 1 104 0
 	entry	sp, 32
 .LCFI1:
@@ -128,7 +128,7 @@ bte_main_shutdown:
 	call8	osi_deinit
 .LVL15:
 	retw.n
-.LFE31:
+.LFE40:
 	.size	bte_main_shutdown, .-bte_main_shutdown
 	.section	.text.bte_main_postload_cfg,"ax",@progbits
 	.literal_position
@@ -137,7 +137,7 @@ bte_main_shutdown:
 	.global	bte_main_postload_cfg
 	.type	bte_main_postload_cfg, @function
 bte_main_postload_cfg:
-.LFB34:
+.LFB43:
 	.loc 1 169 0
 	entry	sp, 32
 .LCFI2:
@@ -148,7 +148,7 @@ bte_main_postload_cfg:
 	callx8	a8
 .LVL16:
 	retw.n
-.LFE34:
+.LFE43:
 	.size	bte_main_postload_cfg, .-bte_main_postload_cfg
 	.section	.text.bte_main_hci_send,"ax",@progbits
 	.literal_position
@@ -157,7 +157,7 @@ bte_main_postload_cfg:
 	.global	bte_main_hci_send
 	.type	bte_main_hci_send, @function
 bte_main_hci_send:
-.LFB35:
+.LFB44:
 	.loc 1 232 0
 .LVL17:
 	entry	sp, 32
@@ -188,12 +188,12 @@ bte_main_hci_send:
 	call8	free
 .LVL22:
 	retw.n
-.LFE35:
+.LFE44:
 	.size	bte_main_hci_send, .-bte_main_hci_send
-	.section	.rodata.__func__$8818,"a",@progbits
-	.type	__func__$8818, @object
-	.size	__func__$8818, 20
-__func__$8818:
+	.section	.rodata.__func__$8891,"a",@progbits
+	.type	__func__$8891, @object
+	.size	__func__$8891, 20
+__func__$8891:
 	.string	"bte_main_boot_entry"
 	.comm	bluedroid_init_done_cb,4,4
 	.section	.bss.hci,"aw",@nobits
@@ -221,10 +221,10 @@ hci:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI0-.LFB30
+	.4byte	.LCFI0-.LFB39
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -233,10 +233,10 @@ hci:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI1-.LFB31
+	.4byte	.LCFI1-.LFB40
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -245,10 +245,10 @@ hci:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.byte	0x4
-	.4byte	.LCFI2-.LFB34
+	.4byte	.LCFI2-.LFB43
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -257,10 +257,10 @@ hci:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.byte	0x4
-	.4byte	.LCFI3-.LFB35
+	.4byte	.LCFI3-.LFB44
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -273,14 +273,14 @@ hci:
 	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 	.file 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_common_types.h"
 	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/semphr.h"
-	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/semaphore.h"
-	.file 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/future.h"
+	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/semaphore.h"
+	.file 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/future.h"
 	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/hci/include/hci/hci_layer.h"
 	.file 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 	.file 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_api.h"
 	.file 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_trace.h"
 	.file 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btu.h"
-	.file 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/osi.h"
+	.file 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/osi.h"
 	.file 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/bta/include/bta/bta_api.h"
 	.file 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 	.section	.debug_info,"",@progbits
@@ -381,102 +381,102 @@ hci:
 	.byte	0x3
 	.byte	0x2d
 	.4byte	0x65
-	.uleb128 0x4
-	.4byte	.LASF17
-	.byte	0x4
-	.byte	0x21
-	.4byte	0xa3
-	.uleb128 0x4
-	.4byte	.LASF18
-	.byte	0x4
-	.byte	0x22
-	.4byte	0xae
-	.uleb128 0x4
-	.4byte	.LASF19
-	.byte	0x4
-	.byte	0x23
-	.4byte	0xb9
-	.uleb128 0x2
-	.byte	0x1
-	.byte	0x2
-	.4byte	.LASF20
 	.uleb128 0x8
-	.byte	0x8
-	.byte	0x4
-	.byte	0xc6
-	.4byte	0x131
-	.uleb128 0x9
-	.4byte	.LASF21
-	.byte	0x4
-	.byte	0xc7
-	.4byte	0xae
-	.byte	0
-	.uleb128 0xa
-	.string	"len"
-	.byte	0x4
-	.byte	0xc8
-	.4byte	0xae
-	.byte	0x2
-	.uleb128 0x9
-	.4byte	.LASF22
-	.byte	0x4
-	.byte	0xc9
-	.4byte	0xae
-	.byte	0x4
-	.uleb128 0x9
-	.4byte	.LASF23
-	.byte	0x4
-	.byte	0xca
-	.4byte	0xae
-	.byte	0x6
-	.uleb128 0x9
-	.4byte	.LASF24
-	.byte	0x4
-	.byte	0xcb
-	.4byte	0x131
-	.byte	0x8
-	.byte	0
-	.uleb128 0xb
-	.4byte	0xa3
-	.4byte	0x140
-	.uleb128 0xc
-	.4byte	0x85
-	.byte	0
-	.uleb128 0x4
-	.4byte	.LASF25
-	.byte	0x4
-	.byte	0xcc
-	.4byte	0xec
-	.uleb128 0xb
-	.4byte	0xc4
-	.4byte	0x15b
-	.uleb128 0xd
-	.4byte	0x85
-	.byte	0x5
-	.byte	0
-	.uleb128 0xe
 	.byte	0x4
 	.4byte	0x25
 	.byte	0xb
 	.byte	0x1f
-	.4byte	0x18c
-	.uleb128 0xf
-	.4byte	.LASF26
+	.4byte	0xf5
+	.uleb128 0x9
+	.4byte	.LASF17
 	.byte	0
-	.uleb128 0xf
-	.4byte	.LASF27
+	.uleb128 0x9
+	.4byte	.LASF18
 	.byte	0x1
-	.uleb128 0xf
-	.4byte	.LASF28
+	.uleb128 0x9
+	.4byte	.LASF19
 	.byte	0x2
-	.uleb128 0xf
-	.4byte	.LASF29
+	.uleb128 0x9
+	.4byte	.LASF20
 	.byte	0x3
-	.uleb128 0xf
+	.uleb128 0x9
+	.4byte	.LASF21
+	.byte	0x4
+	.uleb128 0x9
+	.4byte	.LASF22
+	.byte	0x5
+	.byte	0
+	.uleb128 0x4
+	.4byte	.LASF23
+	.byte	0x4
+	.byte	0x1a
+	.4byte	0xa3
+	.uleb128 0x4
+	.4byte	.LASF24
+	.byte	0x4
+	.byte	0x1b
+	.4byte	0xae
+	.uleb128 0x4
+	.4byte	.LASF25
+	.byte	0x4
+	.byte	0x1c
+	.4byte	0xb9
+	.uleb128 0x2
+	.byte	0x1
+	.byte	0x2
+	.4byte	.LASF26
+	.uleb128 0xa
+	.byte	0x8
+	.byte	0x4
+	.byte	0xbf
+	.4byte	0x162
+	.uleb128 0xb
+	.4byte	.LASF27
+	.byte	0x4
+	.byte	0xc0
+	.4byte	0xae
+	.byte	0
+	.uleb128 0xc
+	.string	"len"
+	.byte	0x4
+	.byte	0xc1
+	.4byte	0xae
+	.byte	0x2
+	.uleb128 0xb
+	.4byte	.LASF28
+	.byte	0x4
+	.byte	0xc2
+	.4byte	0xae
+	.byte	0x4
+	.uleb128 0xb
+	.4byte	.LASF29
+	.byte	0x4
+	.byte	0xc3
+	.4byte	0xae
+	.byte	0x6
+	.uleb128 0xb
 	.4byte	.LASF30
 	.byte	0x4
-	.uleb128 0xf
+	.byte	0xc4
+	.4byte	0x162
+	.byte	0x8
+	.byte	0
+	.uleb128 0xd
+	.4byte	0xa3
+	.4byte	0x171
+	.uleb128 0xe
+	.4byte	0x85
+	.byte	0
+	.uleb128 0x4
 	.4byte	.LASF31
+	.byte	0x4
+	.byte	0xc5
+	.4byte	0x11d
+	.uleb128 0xd
+	.4byte	0xf5
+	.4byte	0x18c
+	.uleb128 0xf
+	.4byte	0x85
 	.byte	0x5
 	.byte	0
 	.uleb128 0x4
@@ -491,7 +491,7 @@ hci:
 	.4byte	0x95
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x140
+	.4byte	0x171
 	.uleb128 0x4
 	.4byte	.LASF34
 	.byte	0x7
@@ -508,19 +508,19 @@ hci:
 	.byte	0x9
 	.byte	0x18
 	.4byte	0x1ef
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF36
 	.byte	0x9
 	.byte	0x19
-	.4byte	0xe5
+	.4byte	0x116
 	.byte	0
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF37
 	.byte	0x9
 	.byte	0x1a
 	.4byte	0x1b3
 	.byte	0x4
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF38
 	.byte	0x9
 	.byte	0x1b
@@ -570,25 +570,25 @@ hci:
 	.byte	0xa
 	.byte	0x48
 	.4byte	0x27e
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF44
 	.byte	0xa
 	.byte	0x4d
 	.4byte	0x95
 	.byte	0
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF45
 	.byte	0xa
 	.byte	0x50
 	.4byte	0x298
 	.byte	0x4
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF46
 	.byte	0xa
 	.byte	0x57
 	.4byte	0x2b3
 	.byte	0x8
-	.uleb128 0x9
+	.uleb128 0xb
 	.4byte	.LASF47
 	.byte	0xa
 	.byte	0x5a
@@ -642,145 +642,145 @@ hci:
 	.byte	0xc
 	.2byte	0x1c2
 	.4byte	0x402
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF48
 	.byte	0
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF49
 	.byte	0x1
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF50
 	.byte	0x2
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF51
 	.byte	0x3
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF52
 	.byte	0x4
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF53
 	.byte	0x5
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF54
 	.byte	0x6
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF55
 	.byte	0x7
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF56
 	.byte	0x8
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF57
 	.byte	0x9
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF58
 	.byte	0xa
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF59
 	.byte	0xb
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF60
 	.byte	0xc
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF61
 	.byte	0xd
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF62
 	.byte	0xe
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF63
 	.byte	0xf
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF64
 	.byte	0x10
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF65
 	.byte	0x11
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF66
 	.byte	0x12
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF67
 	.byte	0x13
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF68
 	.byte	0x14
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF69
 	.byte	0x15
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF70
 	.byte	0x16
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF71
 	.byte	0x17
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF72
 	.byte	0x18
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF73
 	.byte	0x19
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF74
 	.byte	0x1a
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF75
 	.byte	0x1b
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF76
 	.byte	0x1c
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF77
 	.byte	0x1d
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF78
 	.byte	0x1e
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF79
 	.byte	0x1f
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF80
 	.byte	0x20
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF81
 	.byte	0x21
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF82
 	.byte	0x22
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF83
 	.byte	0x23
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF84
 	.byte	0x24
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF85
 	.byte	0x25
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF86
 	.byte	0x26
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF87
 	.byte	0x27
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF88
 	.byte	0x28
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF89
 	.byte	0x29
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF90
 	.byte	0x2a
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF91
 	.byte	0x2b
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF92
 	.byte	0x2c
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF93
 	.byte	0x2d
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF94
 	.byte	0x2e
 	.byte	0
@@ -790,25 +790,25 @@ hci:
 	.byte	0xc
 	.2byte	0x6ec
 	.4byte	0x43a
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF95
 	.byte	0
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF96
 	.byte	0x1
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF97
 	.byte	0x2
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF98
 	.byte	0x3
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF99
 	.byte	0x4
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF100
 	.byte	0x5
-	.uleb128 0xf
+	.uleb128 0x9
 	.4byte	.LASF101
 	.byte	0x6
 	.byte	0
@@ -822,8 +822,8 @@ hci:
 	.byte	0x1
 	.byte	0x4c
 	.4byte	0x33
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x528
@@ -838,7 +838,7 @@ hci:
 	.4byte	0x538
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$8818
+	.4byte	__func__$8891
 	.uleb128 0x19
 	.4byte	0x43a
 	.4byte	.LBB4
@@ -922,16 +922,16 @@ hci:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$8818
+	.4byte	__func__$8891
 	.byte	0
 	.uleb128 0x1a
 	.4byte	.LVL6
 	.4byte	0x6ae
 	.byte	0
-	.uleb128 0xb
+	.uleb128 0xd
 	.4byte	0x9c
 	.4byte	0x538
-	.uleb128 0xd
+	.uleb128 0xf
 	.4byte	0x85
 	.byte	0x13
 	.byte	0
@@ -946,8 +946,8 @@ hci:
 	.4byte	.LASF104
 	.byte	0x1
 	.byte	0x67
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x593
@@ -976,16 +976,16 @@ hci:
 	.4byte	.LASF128
 	.byte	0x1
 	.byte	0xa8
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x1e
 	.4byte	.LASF105
 	.byte	0x1
 	.byte	0xe7
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x60d
@@ -997,17 +997,17 @@ hci:
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x21
-	.4byte	.LASF21
+	.4byte	.LASF27
 	.byte	0x1
 	.byte	0xe7
-	.4byte	0xcf
+	.4byte	0x100
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x22
 	.4byte	.LASF107
 	.byte	0x1
 	.byte	0xe9
-	.4byte	0xcf
+	.4byte	0x100
 	.4byte	.LLST1
 	.uleb128 0x23
 	.4byte	.LVL19
@@ -1042,7 +1042,7 @@ hci:
 	.uleb128 0x25
 	.4byte	.LASF108
 	.byte	0x4
-	.2byte	0x2cc
+	.2byte	0x2b8
 	.4byte	0x620
 	.byte	0x6
 	.byte	0xff
@@ -1052,11 +1052,11 @@ hci:
 	.byte	0xff
 	.byte	0xff
 	.uleb128 0x1d
-	.4byte	0x14b
+	.4byte	0x17c
 	.uleb128 0x25
 	.4byte	.LASF109
 	.byte	0x4
-	.2byte	0x2cd
+	.2byte	0x2b9
 	.4byte	0x638
 	.byte	0x6
 	.byte	0
@@ -1066,7 +1066,7 @@ hci:
 	.byte	0
 	.byte	0
 	.uleb128 0x1d
-	.4byte	0x14b
+	.4byte	0x17c
 	.uleb128 0x26
 	.string	"hci"
 	.byte	0x1
@@ -1083,8 +1083,8 @@ hci:
 	.uleb128 0x27
 	.4byte	.LASF110
 	.byte	0xd
-	.2byte	0x2ea
-	.4byte	0xc4
+	.2byte	0x29f
+	.4byte	0xf5
 	.uleb128 0x28
 	.4byte	.LASF111
 	.byte	0x1
@@ -1137,7 +1137,7 @@ hci:
 	.4byte	.LASF120
 	.4byte	.LASF120
 	.byte	0x10
-	.2byte	0xa0a
+	.2byte	0xa2b
 	.uleb128 0x29
 	.4byte	.LASF121
 	.4byte	.LASF121
@@ -1229,74 +1229,6 @@ hci:
 	.byte	0
 	.byte	0
 	.uleb128 0x8
-	.uleb128 0x13
-	.byte	0x1
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x9
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x38
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0xa
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x38
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0xb
-	.uleb128 0x1
-	.byte	0x1
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xc
-	.uleb128 0x21
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xd
-	.uleb128 0x21
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2f
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0xe
 	.uleb128 0x4
 	.byte	0x1
 	.uleb128 0xb
@@ -1311,12 +1243,80 @@ hci:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xf
+	.uleb128 0x9
 	.uleb128 0x28
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
 	.uleb128 0x1c
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0xa
+	.uleb128 0x13
+	.byte	0x1
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xb
+	.uleb128 0xd
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x38
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0xc
+	.uleb128 0xd
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x38
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0xd
+	.uleb128 0x1
+	.byte	0x1
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xe
+	.uleb128 0x21
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xf
+	.uleb128 0x21
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2f
 	.uleb128 0xb
 	.byte	0
 	.byte	0
@@ -1731,7 +1731,7 @@ hci:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL8
-	.4byte	.LFE30
+	.4byte	.LFE39
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1768,7 +1768,7 @@ hci:
 	.byte	0x1a
 	.byte	0x9f
 	.4byte	.LVL21
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x6
 	.byte	0x73
 	.sleb128 0
@@ -1786,14 +1786,14 @@ hci:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -1804,14 +1804,14 @@ hci:
 	.4byte	.LBE7
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB30
-	.4byte	.LFE30
-	.4byte	.LFB31
-	.4byte	.LFE31
-	.4byte	.LFB34
-	.4byte	.LFE34
-	.4byte	.LFB35
-	.4byte	.LFE35
+	.4byte	.LFB39
+	.4byte	.LFE39
+	.4byte	.LFB40
+	.4byte	.LFE40
+	.4byte	.LFB43
+	.4byte	.LFE43
+	.4byte	.LFB44
+	.4byte	.LFE44
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -1835,7 +1835,7 @@ hci:
 	.string	"transmit_command"
 .LASF84:
 	.string	"BTM_EIR_UUID_SERVCLASS_PBAP_PSE"
-.LASF24:
+.LASF30:
 	.string	"data"
 .LASF118:
 	.string	"hci_shut_down"
@@ -1847,7 +1847,7 @@ hci:
 	.string	"BTM_EIR_UUID_SERVCLASS_PNP_INFORMATION"
 .LASF41:
 	.string	"command_status_cb"
-.LASF30:
+.LASF21:
 	.string	"ESP_LOG_DEBUG"
 .LASF8:
 	.string	"long long int"
@@ -1883,7 +1883,7 @@ hci:
 	.string	"BTM_EIR_UUID_SERVCLASS_BASIC_PRINTING"
 .LASF89:
 	.string	"BTM_EIR_UUID_SERVCLASS_VIDEO_SINK"
-.LASF18:
+.LASF24:
 	.string	"UINT16"
 .LASF99:
 	.string	"BTM_PM_STS_SSR"
@@ -1905,7 +1905,7 @@ hci:
 	.string	"BTM_EIR_UUID_SERVCLASS_OBEX_FILE_TRANSFER"
 .LASF51:
 	.string	"BTM_EIR_UUID_SERVCLASS_DIALUP_NETWORKING"
-.LASF25:
+.LASF31:
 	.string	"BT_HDR"
 .LASF12:
 	.string	"long unsigned int"
@@ -1915,7 +1915,7 @@ hci:
 	.string	"BTM_PM_STS_ACTIVE"
 .LASF85:
 	.string	"BTM_EIR_UUID_SERVCLASS_PHONE_ACCESS"
-.LASF21:
+.LASF27:
 	.string	"event"
 .LASF1:
 	.string	"short unsigned int"
@@ -1925,13 +1925,13 @@ hci:
 	.string	"bluedroid_init_done_cb_t"
 .LASF81:
 	.string	"BTM_EIR_UUID_SERVCLASS_HCRP_SCAN"
-.LASF28:
+.LASF19:
 	.string	"ESP_LOG_WARN"
 .LASF91:
 	.string	"BTM_EIR_UUID_SERVCLASS_MESSAGE_NOTIFICATION"
 .LASF44:
 	.string	"do_postload"
-.LASF29:
+.LASF20:
 	.string	"ESP_LOG_INFO"
 .LASF101:
 	.string	"BTM_PM_STS_ERROR"
@@ -1941,7 +1941,7 @@ hci:
 	.string	"osi_init"
 .LASF46:
 	.string	"transmit_command_futured"
-.LASF19:
+.LASF25:
 	.string	"UINT32"
 .LASF90:
 	.string	"BTM_EIR_UUID_SERVCLASS_MESSAGE_ACCESS"
@@ -1973,7 +1973,7 @@ hci:
 	.string	"semaphore"
 .LASF102:
 	.string	"bte_main_enable"
-.LASF20:
+.LASF26:
 	.string	"_Bool"
 .LASF59:
 	.string	"BTM_EIR_UUID_SERVCLASS_AUDIO_SINK"
@@ -1989,7 +1989,7 @@ hci:
 	.string	"hci_start_up"
 .LASF113:
 	.string	"esp_log_timestamp"
-.LASF27:
+.LASF18:
 	.string	"ESP_LOG_ERROR"
 .LASF97:
 	.string	"BTM_PM_STS_SNIFF"
@@ -2009,7 +2009,7 @@ hci:
 	.string	"SemaphoreHandle_t"
 .LASF13:
 	.string	"char"
-.LASF31:
+.LASF22:
 	.string	"ESP_LOG_VERBOSE"
 .LASF103:
 	.string	"bte_main_disable"
@@ -2017,7 +2017,7 @@ hci:
 	.string	"__uint16_t"
 .LASF115:
 	.string	"BTU_StartUp"
-.LASF26:
+.LASF17:
 	.string	"ESP_LOG_NONE"
 .LASF64:
 	.string	"BTM_EIR_UUID_SERVCLASS_HEADSET_AUDIO_GATEWAY"
@@ -2027,11 +2027,11 @@ hci:
 	.string	"BTM_EIR_UUID_SERVCLASS_NAP"
 .LASF80:
 	.string	"BTM_EIR_UUID_SERVCLASS_HCRP_PRINT"
-.LASF22:
+.LASF28:
 	.string	"offset"
 .LASF116:
 	.string	"hci_layer_get_interface"
-.LASF23:
+.LASF29:
 	.string	"layer_specific"
 .LASF55:
 	.string	"BTM_EIR_UUID_SERVCLASS_IRMC_SYNC_COMMAND"
@@ -2045,7 +2045,7 @@ hci:
 	.string	"appl_trace_level"
 .LASF62:
 	.string	"BTM_EIR_UUID_SERVCLASS_INTERCOM"
-.LASF17:
+.LASF23:
 	.string	"UINT8"
 .LASF86:
 	.string	"BTM_EIR_UUID_SERVCLASS_HEADSET_HS"

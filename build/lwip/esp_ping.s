@@ -11,7 +11,7 @@
 	.global	esp_ping_set_target
 	.type	esp_ping_set_target, @function
 esp_ping_set_target:
-.LFB18:
+.LFB27:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/apps/ping/esp_ping.c"
 	.loc 1 36 0
 .LVL0:
@@ -149,7 +149,7 @@ esp_ping_set_target:
 	.loc 1 84 0
 	mov.n	a2, a8
 	retw.n
-.LFE18:
+.LFE27:
 	.size	esp_ping_set_target, .-esp_ping_set_target
 	.section	.text.esp_ping_get_target,"ax",@progbits
 	.literal_position
@@ -160,7 +160,7 @@ esp_ping_set_target:
 	.global	esp_ping_get_target
 	.type	esp_ping_get_target, @function
 esp_ping_get_target:
-.LFB19:
+.LFB28:
 	.loc 1 87 0
 .LVL19:
 	entry	sp, 32
@@ -272,7 +272,7 @@ esp_ping_get_target:
 	.loc 1 129 0
 	mov.n	a2, a8
 	retw.n
-.LFE19:
+.LFE28:
 	.size	esp_ping_get_target, .-esp_ping_get_target
 	.section	.text.esp_ping_result,"ax",@progbits
 	.literal_position
@@ -282,7 +282,7 @@ esp_ping_get_target:
 	.global	esp_ping_result
 	.type	esp_ping_result, @function
 esp_ping_result:
-.LFB20:
+.LFB29:
 	.loc 1 132 0
 .LVL23:
 	entry	sp, 32
@@ -370,7 +370,7 @@ esp_ping_result:
 	movi.n	a2, 0
 .LVL30:
 	retw.n
-.LFE20:
+.LFE29:
 	.size	esp_ping_result, .-esp_ping_result
 	.section	.bss.ping_option_info,"aw",@nobits
 	.align	4
@@ -397,10 +397,10 @@ ping_option_info:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI0-.LFB18
+	.4byte	.LCFI0-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -409,10 +409,10 @@ ping_option_info:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI1-.LFB19
+	.4byte	.LCFI1-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -421,10 +421,10 @@ ping_option_info:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI2-.LFB20
+	.4byte	.LCFI2-.LFB29
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -811,8 +811,8 @@ ping_option_info:
 	.byte	0x1
 	.byte	0x23
 	.4byte	0xf4
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x359
@@ -868,8 +868,8 @@ ping_option_info:
 	.byte	0x1
 	.byte	0x56
 	.4byte	0xf4
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x3a8
@@ -905,8 +905,8 @@ ping_option_info:
 	.byte	0x1
 	.byte	0x83
 	.4byte	0xf4
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x42f
@@ -1298,7 +1298,7 @@ ping_option_info:
 	.sleb128 50
 	.byte	0x9f
 	.4byte	.LVL3
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1389,7 +1389,7 @@ ping_option_info:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL18
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1409,7 +1409,7 @@ ping_option_info:
 	.sleb128 50
 	.byte	0x9f
 	.4byte	.LVL22
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1423,7 +1423,7 @@ ping_option_info:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL30
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1442,7 +1442,7 @@ ping_option_info:
 	.byte	0x78
 	.sleb128 48
 	.4byte	.LVL27
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1461,7 +1461,7 @@ ping_option_info:
 	.byte	0x3
 	.4byte	ping_option_info+28
 	.4byte	.LVL27
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1477,22 +1477,22 @@ ping_option_info:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB20
-	.4byte	.LFE20
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB28
+	.4byte	.LFE28
+	.4byte	.LFB29
+	.4byte	.LFE29
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

@@ -807,7 +807,7 @@ ulp_set_wakeup_period:
 	.4byte	.LASF56
 	.4byte	.LASF56
 	.byte	0x7
-	.byte	0x1f
+	.byte	0x20
 	.uleb128 0x18
 	.4byte	.LASF57
 	.4byte	.LASF57

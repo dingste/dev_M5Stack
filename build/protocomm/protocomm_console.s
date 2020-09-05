@@ -5,7 +5,7 @@
 	.align	4
 	.type	protocomm_console_remove_endpoint, @function
 protocomm_console_remove_endpoint:
-.LFB27:
+.LFB36:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_console.c"
 	.loc 1 193 0
 .LVL0:
@@ -15,7 +15,7 @@ protocomm_console_remove_endpoint:
 	movi.n	a2, 0
 .LVL1:
 	retw.n
-.LFE27:
+.LFE36:
 	.size	protocomm_console_remove_endpoint, .-protocomm_console_remove_endpoint
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC0:
@@ -27,7 +27,7 @@ protocomm_console_remove_endpoint:
 	.align	4
 	.type	protocomm_console_add_endpoint, @function
 protocomm_console_add_endpoint:
-.LFB26:
+.LFB35:
 	.loc 1 175 0
 .LVL2:
 	entry	sp, 64
@@ -57,13 +57,13 @@ protocomm_console_add_endpoint:
 	mov.n	a2, a10
 .LVL5:
 	retw.n
-.LFE26:
+.LFE35:
 	.size	protocomm_console_add_endpoint, .-protocomm_console_add_endpoint
 	.section	.text.stopped,"ax",@progbits
 	.align	4
 	.type	stopped, @function
 stopped:
-.LFB23:
+.LFB32:
 	.loc 1 64 0
 	entry	sp, 48
 .LCFI2:
@@ -86,7 +86,7 @@ stopped:
 	mov.n	a2, a3
 	.loc 1 68 0
 	retw.n
-.LFE23:
+.LFE32:
 	.size	stopped, .-stopped
 	.section	.rodata.str1.1
 .LC5:
@@ -110,7 +110,7 @@ stopped:
 	.align	4
 	.type	protocomm_console_task, @function
 protocomm_console_task:
-.LFB24:
+.LFB33:
 	.loc 1 71 0
 .LVL7:
 	entry	sp, 320
@@ -282,7 +282,7 @@ protocomm_console_task:
 	call8	vTaskDelete
 .LVL33:
 	retw.n
-.LFE24:
+.LFE33:
 	.size	protocomm_console_task, .-protocomm_console_task
 	.section	.rodata.str1.1
 .LC16:
@@ -301,7 +301,7 @@ protocomm_console_task:
 	.align	4
 	.type	common_cmd_handler, @function
 common_cmd_handler:
-.LFB25:
+.LFB34:
 	.loc 1 132 0
 .LVL34:
 	entry	sp, 64
@@ -453,7 +453,7 @@ common_cmd_handler:
 .LBE6:
 	.loc 1 172 0
 	retw.n
-.LFE25:
+.LFE34:
 	.size	common_cmd_handler, .-common_cmd_handler
 	.section	.rodata.str1.1
 .LC26:
@@ -471,7 +471,7 @@ common_cmd_handler:
 	.global	protocomm_console_stop
 	.type	protocomm_console_stop, @function
 protocomm_console_stop:
-.LFB21:
+.LFB30:
 	.loc 1 36 0
 .LVL65:
 	entry	sp, 32
@@ -519,7 +519,7 @@ protocomm_console_stop:
 	movi.n	a2, 0
 	.loc 1 45 0 discriminator 9
 	retw.n
-.LFE21:
+.LFE30:
 	.size	protocomm_console_stop, .-protocomm_console_stop
 	.section	.text.protocomm_console_start,"ax",@progbits
 	.literal_position
@@ -534,7 +534,7 @@ protocomm_console_stop:
 	.global	protocomm_console_start
 	.type	protocomm_console_start, @function
 protocomm_console_start:
-.LFB28:
+.LFB37:
 	.loc 1 200 0
 .LVL74:
 	entry	sp, 48
@@ -595,7 +595,7 @@ protocomm_console_start:
 	mov.n	a2, a13
 .LVL80:
 	retw.n
-.LFE28:
+.LFE37:
 	.size	protocomm_console_start, .-protocomm_console_start
 	.section	.bss.console_task,"aw",@nobits
 	.align	4
@@ -634,10 +634,10 @@ session_id:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.byte	0x4
-	.4byte	.LCFI0-.LFB27
+	.4byte	.LCFI0-.LFB36
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -646,10 +646,10 @@ session_id:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.byte	0x4
-	.4byte	.LCFI1-.LFB26
+	.4byte	.LCFI1-.LFB35
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -658,10 +658,10 @@ session_id:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI2-.LFB23
+	.4byte	.LCFI2-.LFB32
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -670,10 +670,10 @@ session_id:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI3-.LFB24
+	.4byte	.LCFI3-.LFB33
 	.byte	0xe
 	.uleb128 0x140
 	.align	4
@@ -682,10 +682,10 @@ session_id:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.byte	0x4
-	.4byte	.LCFI4-.LFB25
+	.4byte	.LCFI4-.LFB34
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -694,10 +694,10 @@ session_id:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI5-.LFB21
+	.4byte	.LCFI5-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -706,10 +706,10 @@ session_id:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.byte	0x4
-	.4byte	.LCFI6-.LFB28
+	.4byte	.LCFI6-.LFB37
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1575,8 +1575,8 @@ session_id:
 	.byte	0x1
 	.byte	0xc0
 	.4byte	0x147
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x6f3
@@ -1592,8 +1592,8 @@ session_id:
 	.byte	0x1
 	.byte	0xae
 	.4byte	0x147
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x77f
@@ -1669,8 +1669,8 @@ session_id:
 	.byte	0x1
 	.byte	0x3f
 	.4byte	0x21c
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x7c8
@@ -1714,8 +1714,8 @@ session_id:
 	.4byte	.LASF156
 	.byte	0x1
 	.byte	0x46
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xa1d
@@ -2108,8 +2108,8 @@ session_id:
 	.byte	0
 	.uleb128 0x27
 	.4byte	0x5e9
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xc66
@@ -2348,8 +2348,8 @@ session_id:
 	.byte	0x1
 	.byte	0x23
 	.4byte	0x147
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xd04
@@ -2444,8 +2444,8 @@ session_id:
 	.byte	0x1
 	.byte	0xc7
 	.4byte	0x147
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xdbc
@@ -3376,7 +3376,7 @@ session_id:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL1
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3390,7 +3390,7 @@ session_id:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL5
-	.4byte	.LFE26
+	.4byte	.LFE35
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3404,7 +3404,7 @@ session_id:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL29
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3470,7 +3470,7 @@ session_id:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL38
-	.4byte	.LFE25
+	.4byte	.LFE34
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3484,7 +3484,7 @@ session_id:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL54
-	.4byte	.LFE25
+	.4byte	.LFE34
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3647,7 +3647,7 @@ session_id:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL72
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3661,7 +3661,7 @@ session_id:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL80
-	.4byte	.LFE28
+	.4byte	.LFE37
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3675,7 +3675,7 @@ session_id:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL78
-	.4byte	.LFE28
+	.4byte	.LFE37
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3742,20 +3742,20 @@ session_id:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -3766,20 +3766,20 @@ session_id:
 	.4byte	.LBE11
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB27
-	.4byte	.LFE27
-	.4byte	.LFB26
-	.4byte	.LFE26
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB24
-	.4byte	.LFE24
-	.4byte	.LFB25
-	.4byte	.LFE25
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB28
-	.4byte	.LFE28
+	.4byte	.LFB36
+	.4byte	.LFE36
+	.4byte	.LFB35
+	.4byte	.LFE35
+	.4byte	.LFB32
+	.4byte	.LFE32
+	.4byte	.LFB33
+	.4byte	.LFE33
+	.4byte	.LFB34
+	.4byte	.LFE34
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB37
+	.4byte	.LFE37
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

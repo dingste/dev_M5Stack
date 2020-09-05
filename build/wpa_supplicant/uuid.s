@@ -881,6 +881,12 @@ is_nil_uuid:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL17
+	.4byte	.LVL19-1
+	.2byte	0x3
+	.byte	0x7a
+	.sleb128 -24
+	.byte	0x9f
+	.4byte	.LVL19-1
 	.4byte	.LFE34
 	.2byte	0x4
 	.byte	0xf3

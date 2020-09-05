@@ -783,112 +783,112 @@ utl_isdialstr:
 	.byte	0x3
 	.byte	0x2c
 	.4byte	0x70
-	.uleb128 0x4
-	.4byte	.LASF15
+	.uleb128 0x5
 	.byte	0x4
-	.byte	0x21
-	.4byte	0x89
-	.uleb128 0x4
-	.4byte	.LASF16
-	.byte	0x4
-	.byte	0x22
-	.4byte	0x9f
-	.uleb128 0x4
-	.4byte	.LASF17
-	.byte	0x4
-	.byte	0x27
-	.4byte	0x94
-	.uleb128 0x4
-	.4byte	.LASF18
-	.byte	0x4
-	.byte	0x28
-	.4byte	0xaa
-	.uleb128 0x4
-	.4byte	.LASF19
-	.byte	0x4
-	.byte	0x29
-	.4byte	0xec
 	.uleb128 0x3
-	.byte	0x1
-	.byte	0x2
-	.4byte	.LASF20
+	.byte	0x4
+	.byte	0x5
+	.4byte	.LASF15
 	.uleb128 0x3
 	.byte	0x4
 	.byte	0x7
-	.4byte	.LASF21
-	.uleb128 0x5
-	.4byte	0xb5
-	.4byte	0x10a
+	.4byte	.LASF16
+	.uleb128 0x3
+	.byte	0x4
+	.byte	0x7
+	.4byte	.LASF17
 	.uleb128 0x6
-	.4byte	0xf3
-	.byte	0x5
-	.byte	0
-	.uleb128 0x7
 	.byte	0x4
-	.4byte	0xb5
-	.uleb128 0x8
-	.4byte	.LASF22
-	.byte	0x4
-	.2byte	0x14e
-	.4byte	0x11c
-	.uleb128 0x5
-	.4byte	0xb5
-	.4byte	0x12c
-	.uleb128 0x6
-	.4byte	0xf3
-	.byte	0x2
-	.byte	0
-	.uleb128 0x7
-	.byte	0x4
-	.4byte	0x139
+	.4byte	0xd2
 	.uleb128 0x3
 	.byte	0x1
 	.byte	0x8
+	.4byte	.LASF18
+	.uleb128 0x6
+	.byte	0x4
+	.4byte	0xdf
+	.uleb128 0x7
+	.4byte	0xd2
+	.uleb128 0x4
+	.4byte	.LASF19
+	.byte	0x4
+	.byte	0x1a
+	.4byte	0x89
+	.uleb128 0x4
+	.4byte	.LASF20
+	.byte	0x4
+	.byte	0x1b
+	.4byte	0x9f
+	.uleb128 0x4
+	.4byte	.LASF21
+	.byte	0x4
+	.byte	0x20
+	.4byte	0x94
+	.uleb128 0x4
+	.4byte	.LASF22
+	.byte	0x4
+	.byte	0x21
+	.4byte	0xaa
+	.uleb128 0x4
 	.4byte	.LASF23
-	.uleb128 0x9
+	.byte	0x4
+	.byte	0x22
+	.4byte	0x11b
+	.uleb128 0x3
+	.byte	0x1
+	.byte	0x2
+	.4byte	.LASF24
+	.uleb128 0x8
+	.4byte	0xe4
 	.4byte	0x132
+	.uleb128 0x9
+	.4byte	0xbe
+	.byte	0x5
+	.byte	0
+	.uleb128 0x6
+	.byte	0x4
+	.4byte	0xe4
 	.uleb128 0xa
+	.4byte	.LASF25
+	.byte	0x4
+	.2byte	0x147
+	.4byte	0x144
+	.uleb128 0x8
+	.4byte	0xe4
+	.4byte	0x154
+	.uleb128 0x9
+	.4byte	0xbe
+	.byte	0x2
+	.byte	0
+	.uleb128 0xb
 	.byte	0x4
 	.byte	0x5
 	.byte	0x2d
-	.4byte	0x16b
-	.uleb128 0xb
-	.4byte	.LASF24
-	.byte	0x5
-	.byte	0x2e
-	.4byte	0xb5
-	.byte	0
-	.uleb128 0xb
-	.4byte	.LASF25
-	.byte	0x5
-	.byte	0x2f
-	.4byte	0xb5
-	.byte	0x1
-	.uleb128 0xb
+	.4byte	0x181
+	.uleb128 0xc
 	.4byte	.LASF26
 	.byte	0x5
+	.byte	0x2e
+	.4byte	0xe4
+	.byte	0
+	.uleb128 0xc
+	.4byte	.LASF27
+	.byte	0x5
+	.byte	0x2f
+	.4byte	0xe4
+	.byte	0x1
+	.uleb128 0xc
+	.4byte	.LASF28
+	.byte	0x5
 	.byte	0x30
-	.4byte	0xc0
+	.4byte	0xef
 	.byte	0x2
 	.byte	0
 	.uleb128 0x4
-	.4byte	.LASF27
+	.4byte	.LASF29
 	.byte	0x5
 	.byte	0x31
-	.4byte	0x13e
-	.uleb128 0x3
-	.byte	0x4
-	.byte	0x5
-	.4byte	.LASF28
-	.uleb128 0xc
-	.byte	0x4
-	.uleb128 0x3
-	.byte	0x4
-	.byte	0x7
-	.4byte	.LASF29
-	.uleb128 0x7
-	.byte	0x4
-	.4byte	0x132
+	.4byte	0x154
 	.uleb128 0xd
 	.byte	0x4
 	.4byte	0x2c
@@ -981,7 +981,7 @@ utl_isdialstr:
 	.4byte	.LASF57
 	.byte	0x1
 	.byte	0x2a
-	.4byte	0xcb
+	.4byte	0xfa
 	.4byte	.LFB12
 	.4byte	.LFE12-.LFB12
 	.uleb128 0x1
@@ -991,13 +991,13 @@ utl_isdialstr:
 	.string	"p_s"
 	.byte	0x1
 	.byte	0x2a
-	.4byte	0x12c
+	.4byte	0xd9
 	.4byte	.LLST0
 	.uleb128 0x11
 	.string	"val"
 	.byte	0x1
 	.byte	0x2c
-	.4byte	0xd6
+	.4byte	0x105
 	.4byte	.LLST1
 	.byte	0
 	.uleb128 0xf
@@ -1014,26 +1014,26 @@ utl_isdialstr:
 	.string	"p_s"
 	.byte	0x1
 	.byte	0x54
-	.4byte	0x12c
+	.4byte	0xd9
 	.4byte	.LLST2
 	.uleb128 0x10
 	.string	"p_t"
 	.byte	0x1
 	.byte	0x54
-	.4byte	0x12c
+	.4byte	0xd9
 	.4byte	.LLST3
 	.uleb128 0x11
 	.string	"c"
 	.byte	0x1
 	.byte	0x56
-	.4byte	0x132
+	.4byte	0xd2
 	.4byte	.LLST4
 	.byte	0
 	.uleb128 0xf
 	.4byte	.LASF59
 	.byte	0x1
 	.byte	0x77
-	.4byte	0xb5
+	.4byte	0xe4
 	.4byte	.LFB14
 	.4byte	.LFE14-.LFB14
 	.uleb128 0x1
@@ -1043,38 +1043,38 @@ utl_isdialstr:
 	.string	"i"
 	.byte	0x1
 	.byte	0x77
-	.4byte	0xc0
+	.4byte	0xef
 	.4byte	.LLST5
 	.uleb128 0x12
 	.string	"p_s"
 	.byte	0x1
 	.byte	0x77
-	.4byte	0x186
+	.4byte	0xcc
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x11
 	.string	"j"
 	.byte	0x1
 	.byte	0x79
-	.4byte	0xc0
+	.4byte	0xef
 	.4byte	.LLST6
 	.uleb128 0x11
 	.string	"k"
 	.byte	0x1
 	.byte	0x79
-	.4byte	0xc0
+	.4byte	0xef
 	.4byte	.LLST7
 	.uleb128 0x11
 	.string	"p"
 	.byte	0x1
 	.byte	0x7a
-	.4byte	0x186
+	.4byte	0xcc
 	.4byte	.LLST8
 	.uleb128 0x13
 	.4byte	.LASF60
 	.byte	0x1
 	.byte	0x7b
-	.4byte	0xe1
+	.4byte	0x110
 	.4byte	.LLST9
 	.byte	0
 	.uleb128 0x14
@@ -1097,14 +1097,14 @@ utl_isdialstr:
 	.4byte	.LVL38
 	.4byte	0x503
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x17d
+	.4byte	0xb5
 	.uleb128 0xf
 	.4byte	.LASF61
 	.byte	0x1
 	.byte	0xb6
-	.4byte	0xe1
+	.4byte	0x110
 	.4byte	.LFB16
 	.4byte	.LFE16-.LFB16
 	.uleb128 0x1
@@ -1120,37 +1120,37 @@ utl_isdialstr:
 	.string	"cmd"
 	.byte	0x1
 	.byte	0xb6
-	.4byte	0xb5
+	.4byte	0xe4
 	.4byte	.LLST11
 	.uleb128 0x11
 	.string	"dev"
 	.byte	0x1
 	.byte	0xb8
-	.4byte	0x10a
+	.4byte	0x132
 	.4byte	.LLST12
+	.uleb128 0x13
+	.4byte	.LASF28
+	.byte	0x1
+	.byte	0xb9
+	.4byte	0xef
+	.4byte	.LLST13
 	.uleb128 0x13
 	.4byte	.LASF26
 	.byte	0x1
-	.byte	0xb9
-	.4byte	0xc0
-	.4byte	.LLST13
-	.uleb128 0x13
-	.4byte	.LASF24
-	.byte	0x1
 	.byte	0xba
-	.4byte	0xb5
+	.4byte	0xe4
 	.4byte	.LLST14
 	.uleb128 0x13
-	.4byte	.LASF25
+	.4byte	.LASF27
 	.byte	0x1
 	.byte	0xba
-	.4byte	0xb5
+	.4byte	0xe4
 	.4byte	.LLST15
 	.uleb128 0x17
 	.4byte	.LASF63
 	.byte	0x1
 	.byte	0xbb
-	.4byte	0x110
+	.4byte	0x138
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
@@ -1168,14 +1168,14 @@ utl_isdialstr:
 	.sleb128 -48
 	.byte	0
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x16b
+	.4byte	0x181
 	.uleb128 0xf
 	.4byte	.LASF64
 	.byte	0x1
 	.byte	0xfb
-	.4byte	0xe1
+	.4byte	0x110
 	.4byte	.LFB17
 	.4byte	.LFE17-.LFB17
 	.uleb128 0x1
@@ -1191,25 +1191,25 @@ utl_isdialstr:
 	.string	"dev"
 	.byte	0x1
 	.byte	0xfd
-	.4byte	0x10a
+	.4byte	0x132
 	.4byte	.LLST17
+	.uleb128 0x13
+	.4byte	.LASF28
+	.byte	0x1
+	.byte	0xfe
+	.4byte	0xef
+	.4byte	.LLST18
 	.uleb128 0x13
 	.4byte	.LASF26
 	.byte	0x1
-	.byte	0xfe
-	.4byte	0xc0
-	.4byte	.LLST18
-	.uleb128 0x13
-	.4byte	.LASF24
-	.byte	0x1
 	.byte	0xff
-	.4byte	0xb5
+	.4byte	0xe4
 	.4byte	.LLST19
 	.uleb128 0x13
-	.4byte	.LASF25
+	.4byte	.LASF27
 	.byte	0x1
 	.byte	0xff
-	.4byte	0xb5
+	.4byte	0xe4
 	.4byte	.LLST20
 	.uleb128 0x15
 	.4byte	.LVL76
@@ -1219,7 +1219,7 @@ utl_isdialstr:
 	.4byte	.LASF65
 	.byte	0x1
 	.2byte	0x118
-	.4byte	0xe1
+	.4byte	0x110
 	.4byte	.LFB18
 	.4byte	.LFE18-.LFB18
 	.uleb128 0x1
@@ -1229,20 +1229,20 @@ utl_isdialstr:
 	.string	"p_s"
 	.byte	0x1
 	.2byte	0x118
-	.4byte	0x12c
+	.4byte	0xd9
 	.4byte	.LLST21
 	.uleb128 0x1c
 	.string	"i"
 	.byte	0x1
 	.2byte	0x11a
-	.4byte	0xc0
+	.4byte	0xef
 	.4byte	.LLST22
 	.byte	0
 	.uleb128 0x1a
 	.4byte	.LASF66
 	.byte	0x1
 	.2byte	0x130
-	.4byte	0xe1
+	.4byte	0x110
 	.4byte	.LFB19
 	.4byte	.LFE19-.LFB19
 	.uleb128 0x1
@@ -1252,19 +1252,19 @@ utl_isdialstr:
 	.string	"p_s"
 	.byte	0x1
 	.2byte	0x130
-	.4byte	0x12c
+	.4byte	0xd9
 	.4byte	.LLST23
 	.uleb128 0x1c
 	.string	"i"
 	.byte	0x1
 	.2byte	0x132
-	.4byte	0xc0
+	.4byte	0xef
 	.4byte	.LLST24
 	.byte	0
 	.uleb128 0x1d
 	.4byte	.LASF67
 	.byte	0x4
-	.2byte	0x2cc
+	.2byte	0x2b8
 	.4byte	0x4e6
 	.byte	0x6
 	.byte	0xff
@@ -1273,12 +1273,12 @@ utl_isdialstr:
 	.byte	0xff
 	.byte	0xff
 	.byte	0xff
-	.uleb128 0x9
-	.4byte	0xfa
+	.uleb128 0x7
+	.4byte	0x122
 	.uleb128 0x1d
 	.4byte	.LASF68
 	.byte	0x4
-	.2byte	0x2cd
+	.2byte	0x2b9
 	.4byte	0x4fe
 	.byte	0x6
 	.byte	0
@@ -1287,8 +1287,8 @@ utl_isdialstr:
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x9
-	.4byte	0xfa
+	.uleb128 0x7
+	.4byte	0x122
 	.uleb128 0x1e
 	.4byte	.LASF69
 	.4byte	.LASF69
@@ -1362,24 +1362,13 @@ utl_isdialstr:
 	.byte	0
 	.byte	0
 	.uleb128 0x5
-	.uleb128 0x1
-	.byte	0x1
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
+	.uleb128 0xf
 	.byte	0
-	.byte	0
-	.uleb128 0x6
-	.uleb128 0x21
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2f
+	.uleb128 0xb
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x6
 	.uleb128 0xf
 	.byte	0
 	.uleb128 0xb
@@ -1388,7 +1377,32 @@ utl_isdialstr:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+	.uleb128 0x7
+	.uleb128 0x26
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
 	.uleb128 0x8
+	.uleb128 0x1
+	.byte	0x1
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x9
+	.uleb128 0x21
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2f
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0xa
 	.uleb128 0x16
 	.byte	0
 	.uleb128 0x3
@@ -1401,14 +1415,7 @@ utl_isdialstr:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x9
-	.uleb128 0x26
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xa
+	.uleb128 0xb
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0xb
@@ -1421,7 +1428,7 @@ utl_isdialstr:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xb
+	.uleb128 0xc
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -1433,13 +1440,6 @@ utl_isdialstr:
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x38
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0xc
-	.uleb128 0xf
-	.byte	0
-	.uleb128 0xb
 	.uleb128 0xb
 	.byte	0
 	.byte	0
@@ -2297,7 +2297,7 @@ utl_isdialstr:
 	.section	.debug_str,"MS",@progbits,1
 .LASF68:
 	.string	"bd_addr_null"
-.LASF27:
+.LASF29:
 	.string	"tBTA_UTL_COD"
 .LASF56:
 	.string	"BTM_INVALID_STATIC_RAND_ADDR"
@@ -2311,7 +2311,7 @@ utl_isdialstr:
 	.string	"BTM_ReadDeviceClass"
 .LASF6:
 	.string	"short int"
-.LASF21:
+.LASF16:
 	.string	"sizetype"
 .LASF12:
 	.string	"int16_t"
@@ -2323,7 +2323,7 @@ utl_isdialstr:
 	.string	"BTM_REPEATED_ATTEMPTS"
 .LASF60:
 	.string	"fill"
-.LASF25:
+.LASF27:
 	.string	"major"
 .LASF44:
 	.string	"BTM_ILLEGAL_ACTION"
@@ -2335,9 +2335,9 @@ utl_isdialstr:
 	.string	"utl_set_device_class"
 .LASF9:
 	.string	"long long int"
-.LASF19:
+.LASF23:
 	.string	"BOOLEAN"
-.LASF28:
+.LASF15:
 	.string	"long int"
 .LASF65:
 	.string	"utl_isintstr"
@@ -2345,7 +2345,7 @@ utl_isdialstr:
 	.string	"BTM_MODE4_LEVEL4_NOT_SUPPORTED"
 .LASF34:
 	.string	"BTM_MODE_UNSUPPORTED"
-.LASF15:
+.LASF19:
 	.string	"UINT8"
 .LASF47:
 	.string	"BTM_SUCCESS_NO_SECURITY"
@@ -2353,7 +2353,7 @@ utl_isdialstr:
 	.string	"__uint8_t"
 .LASF75:
 	.string	"utl_freebuf"
-.LASF17:
+.LASF21:
 	.string	"INT16"
 .LASF58:
 	.string	"utl_strucmp"
@@ -2385,11 +2385,11 @@ utl_isdialstr:
 	.string	"short unsigned int"
 .LASF74:
 	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/bt"
-.LASF16:
+.LASF20:
 	.string	"UINT16"
-.LASF23:
+.LASF18:
 	.string	"char"
-.LASF26:
+.LASF28:
 	.string	"service"
 .LASF38:
 	.string	"BTM_DEVICE_TIMEOUT"
@@ -2399,7 +2399,7 @@ utl_isdialstr:
 	.string	"BTM_SET_PRIVACY_FAIL"
 .LASF57:
 	.string	"utl_str2int"
-.LASF20:
+.LASF24:
 	.string	"_Bool"
 .LASF30:
 	.string	"BTM_SUCCESS"
@@ -2413,7 +2413,7 @@ utl_isdialstr:
 	.string	"BTM_CONTROL_LE_DATA_LEN_UNSUPPORTED"
 .LASF53:
 	.string	"BTM_SET_PRIVACY_SUCCESS"
-.LASF29:
+.LASF17:
 	.string	"long unsigned int"
 .LASF51:
 	.string	"BTM_PEER_LE_DATA_LEN_UNSUPPORTED"
@@ -2425,7 +2425,7 @@ utl_isdialstr:
 	.string	"__int32_t"
 .LASF46:
 	.string	"BTM_SCO_BAD_LENGTH"
-.LASF24:
+.LASF26:
 	.string	"minor"
 .LASF11:
 	.string	"uint8_t"
@@ -2435,13 +2435,13 @@ utl_isdialstr:
 	.string	"BTM_DELAY_CHECK"
 .LASF63:
 	.string	"dev_class"
-.LASF22:
+.LASF25:
 	.string	"DEV_CLASS"
 .LASF66:
 	.string	"utl_isdialstr"
 .LASF67:
 	.string	"bd_addr_any"
-.LASF18:
+.LASF22:
 	.string	"INT32"
 .LASF33:
 	.string	"BTM_NO_RESOURCES"

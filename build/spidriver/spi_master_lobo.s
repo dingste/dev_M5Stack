@@ -14,7 +14,7 @@
 	.global	spi_lobo_setup_dma_desc_links
 	.type	spi_lobo_setup_dma_desc_links, @function
 spi_lobo_setup_dma_desc_links:
-.LFB23:
+.LFB32:
 	.file 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/spidriver/spi_master_lobo.c"
 	.loc 1 204 0
 .LVL0:
@@ -146,9 +146,9 @@ spi_lobo_setup_dma_desc_links:
 	s32i.n	a4, a2, 0
 	.loc 1 227 0
 	retw.n
-.LFE23:
+.LFE32:
 	.size	spi_lobo_setup_dma_desc_links, .-spi_lobo_setup_dma_desc_links
-	.section	.iram1,"ax",@progbits
+	.section	.iram1.17,"ax",@progbits
 	.literal_position
 	.literal .LC9, dmaworkaround_mux
 	.literal .LC10, dmaworkaround_channels_busy
@@ -162,7 +162,7 @@ spi_lobo_setup_dma_desc_links:
 	.global	spi_lobo_dmaworkaround_req_reset
 	.type	spi_lobo_dmaworkaround_req_reset, @function
 spi_lobo_dmaworkaround_req_reset:
-.LFB24:
+.LFB33:
 	.loc 1 247 0
 .LVL11:
 	entry	sp, 32
@@ -248,15 +248,16 @@ spi_lobo_dmaworkaround_req_reset:
 .LVL22:
 	.loc 1 265 0
 	retw.n
-.LFE24:
+.LFE33:
 	.size	spi_lobo_dmaworkaround_req_reset, .-spi_lobo_dmaworkaround_req_reset
+	.section	.iram1.18,"ax",@progbits
 	.literal_position
 	.literal .LC17, dmaworkaround_waiting_for_chan
 	.align	4
 	.global	spi_lobo_dmaworkaround_reset_in_progress
 	.type	spi_lobo_dmaworkaround_reset_in_progress, @function
 spi_lobo_dmaworkaround_reset_in_progress:
-.LFB25:
+.LFB34:
 	.loc 1 269 0
 	entry	sp, 32
 .LCFI2:
@@ -268,8 +269,9 @@ spi_lobo_dmaworkaround_reset_in_progress:
 	movnez	a2, a9, a8
 	.loc 1 271 0
 	retw.n
-.LFE25:
+.LFE34:
 	.size	spi_lobo_dmaworkaround_reset_in_progress, .-spi_lobo_dmaworkaround_reset_in_progress
+	.section	.iram1.19,"ax",@progbits
 	.literal_position
 	.literal .LC18, dmaworkaround_mux
 	.literal .LC19, dmaworkaround_channels_busy
@@ -283,7 +285,7 @@ spi_lobo_dmaworkaround_reset_in_progress:
 	.global	spi_lobo_dmaworkaround_idle
 	.type	spi_lobo_dmaworkaround_idle, @function
 spi_lobo_dmaworkaround_idle:
-.LFB26:
+.LFB35:
 	.loc 1 275 0
 .LVL23:
 	entry	sp, 32
@@ -356,8 +358,9 @@ spi_lobo_dmaworkaround_idle:
 	call8	vTaskExitCritical
 .LVL29:
 	retw.n
-.LFE26:
+.LFE35:
 	.size	spi_lobo_dmaworkaround_idle, .-spi_lobo_dmaworkaround_idle
+	.section	.iram1.20,"ax",@progbits
 	.literal_position
 	.literal .LC26, dmaworkaround_mux
 	.literal .LC27, dmaworkaround_channels_busy
@@ -365,7 +368,7 @@ spi_lobo_dmaworkaround_idle:
 	.global	spi_lobo_dmaworkaround_transfer_active
 	.type	spi_lobo_dmaworkaround_transfer_active, @function
 spi_lobo_dmaworkaround_transfer_active:
-.LFB27:
+.LFB36:
 	.loc 1 292 0
 .LVL30:
 	entry	sp, 32
@@ -393,7 +396,7 @@ spi_lobo_dmaworkaround_transfer_active:
 	call8	vTaskExitCritical
 .LVL34:
 	retw.n
-.LFE27:
+.LFE36:
 	.size	spi_lobo_dmaworkaround_transfer_active, .-spi_lobo_dmaworkaround_transfer_active
 	.section	.text.spi_lobo_periph_claim,"ax",@progbits
 	.literal_position
@@ -403,7 +406,7 @@ spi_lobo_dmaworkaround_transfer_active:
 	.global	spi_lobo_periph_claim
 	.type	spi_lobo_periph_claim, @function
 spi_lobo_periph_claim:
-.LFB28:
+.LFB37:
 	.loc 1 301 0
 .LVL35:
 	entry	sp, 32
@@ -456,7 +459,7 @@ spi_lobo_periph_claim:
 	.loc 1 305 0 is_stmt 1
 	mov.n	a2, a3
 	retw.n
-.LFE28:
+.LFE37:
 	.size	spi_lobo_periph_claim, .-spi_lobo_periph_claim
 	.section	.text.spi_lobo_periph_free,"ax",@progbits
 	.literal_position
@@ -466,7 +469,7 @@ spi_lobo_periph_claim:
 	.global	spi_lobo_periph_free
 	.type	spi_lobo_periph_free, @function
 spi_lobo_periph_free:
-.LFB29:
+.LFB38:
 	.loc 1 310 0
 .LVL39:
 	entry	sp, 32
@@ -521,7 +524,7 @@ spi_lobo_periph_free:
 	.loc 1 314 0 is_stmt 1
 	mov.n	a2, a3
 	retw.n
-.LFE29:
+.LFE38:
 	.size	spi_lobo_periph_free, .-spi_lobo_periph_free
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC32:
@@ -531,7 +534,7 @@ spi_lobo_periph_free:
 	.section	.text.spi_lobo_dma_chan_claim,"ax",@progbits
 	.literal_position
 	.literal .LC33, .LC32
-	.literal .LC34, __func__$7074
+	.literal .LC34, __func__$7120
 	.literal .LC36, .LC35
 	.literal .LC37, spi_dma_spinlock
 	.literal .LC38, spi_dma_chan_enabled
@@ -539,7 +542,7 @@ spi_lobo_periph_free:
 	.global	spi_lobo_dma_chan_claim
 	.type	spi_lobo_dma_chan_claim, @function
 spi_lobo_dma_chan_claim:
-.LFB30:
+.LFB39:
 	.loc 1 318 0
 .LVL43:
 	entry	sp, 32
@@ -592,7 +595,7 @@ spi_lobo_dma_chan_claim:
 .LVL52:
 	.loc 1 332 0
 	retw.n
-.LFE30:
+.LFE39:
 	.size	spi_lobo_dma_chan_claim, .-spi_lobo_dma_chan_claim
 	.section	.rodata.str1.1
 .LC40:
@@ -621,7 +624,7 @@ spi_lobo_dma_chan_claim:
 	.string	"dma channel already in use"
 	.section	.text.spi_lobo_bus_initialize,"ax",@progbits
 	.literal_position
-	.literal .LC39, __FUNCTION__$7087
+	.literal .LC39, __FUNCTION__$7133
 	.literal .LC41, .LC40
 	.literal .LC43, .LC42
 	.literal .LC45, .LC44
@@ -647,7 +650,7 @@ spi_lobo_dma_chan_claim:
 	.align	4
 	.type	spi_lobo_bus_initialize, @function
 spi_lobo_bus_initialize:
-.LFB32:
+.LFB41:
 	.loc 1 357 0
 .LVL53:
 	entry	sp, 64
@@ -1552,7 +1555,7 @@ spi_lobo_bus_initialize:
 	.loc 1 502 0
 	mov.n	a2, a5
 	retw.n
-.LFE32:
+.LFE41:
 	.size	spi_lobo_bus_initialize, .-spi_lobo_bus_initialize
 	.section	.rodata.str1.1
 .LC78:
@@ -1560,7 +1563,7 @@ spi_lobo_bus_initialize:
 	.section	.text.spi_lobo_dma_chan_free,"ax",@progbits
 	.literal_position
 	.literal .LC74, .LC32
-	.literal .LC75, __func__$7078
+	.literal .LC75, __func__$7124
 	.literal .LC76, .LC35
 	.literal .LC77, spi_dma_chan_enabled
 	.literal .LC79, .LC78
@@ -1569,7 +1572,7 @@ spi_lobo_bus_initialize:
 	.global	spi_lobo_dma_chan_free
 	.type	spi_lobo_dma_chan_free, @function
 spi_lobo_dma_chan_free:
-.LFB31:
+.LFB40:
 	.loc 1 336 0
 .LVL139:
 	entry	sp, 32
@@ -1629,7 +1632,7 @@ spi_lobo_dma_chan_free:
 	.loc 1 349 0
 	movi.n	a2, 1
 	retw.n
-.LFE31:
+.LFE40:
 	.size	spi_lobo_dma_chan_free, .-spi_lobo_dma_chan_free
 	.section	.text.spi_lobo_bus_add_device,"ax",@progbits
 	.literal_position
@@ -1645,7 +1648,7 @@ spi_lobo_dma_chan_free:
 	.global	spi_lobo_bus_add_device
 	.type	spi_lobo_bus_add_device, @function
 spi_lobo_bus_add_device:
-.LFB34:
+.LFB43:
 	.loc 1 535 0
 .LVL148:
 	entry	sp, 48
@@ -2009,7 +2012,7 @@ spi_lobo_bus_add_device:
 	.loc 1 620 0
 	mov.n	a2, a10
 	retw.n
-.LFE34:
+.LFE43:
 	.size	spi_lobo_bus_add_device, .-spi_lobo_bus_add_device
 	.section	.text.spi_lobo_bus_remove_device,"ax",@progbits
 	.literal_position
@@ -2018,7 +2021,7 @@ spi_lobo_bus_add_device:
 	.global	spi_lobo_bus_remove_device
 	.type	spi_lobo_bus_remove_device, @function
 spi_lobo_bus_remove_device:
-.LFB35:
+.LFB44:
 	.loc 1 624 0
 .LVL175:
 	entry	sp, 32
@@ -2176,9 +2179,9 @@ spi_lobo_bus_remove_device:
 .LBE69:
 	.loc 1 644 0
 	retw.n
-.LFE35:
+.LFE44:
 	.size	spi_lobo_bus_remove_device, .-spi_lobo_bus_remove_device
-	.section	.iram1
+	.section	.iram1.23,"ax",@progbits
 	.literal_position
 	.literal .LC90, 8192
 	.literal .LC91, 80000000
@@ -2205,7 +2208,7 @@ spi_lobo_bus_remove_device:
 	.global	spi_lobo_device_select
 	.type	spi_lobo_device_select, @function
 spi_lobo_device_select:
-.LFB38:
+.LFB47:
 	.loc 1 712 0
 .LVL193:
 	entry	sp, 48
@@ -2939,13 +2942,14 @@ spi_lobo_device_select:
 .LBE103:
 	.loc 1 824 0
 	retw.n
-.LFE38:
+.LFE47:
 	.size	spi_lobo_device_select, .-spi_lobo_device_select
+	.section	.iram1.24,"ax",@progbits
 	.align	4
 	.global	spi_lobo_device_deselect
 	.type	spi_lobo_device_deselect, @function
 spi_lobo_device_deselect:
-.LFB39:
+.LFB48:
 	.loc 1 828 0
 .LVL251:
 	entry	sp, 32
@@ -3020,13 +3024,14 @@ spi_lobo_device_deselect:
 	mov.n	a2, a8
 .LVL258:
 	retw.n
-.LFE39:
+.LFE48:
 	.size	spi_lobo_device_deselect, .-spi_lobo_device_deselect
+	.section	.iram1.25,"ax",@progbits
 	.align	4
 	.global	spi_lobo_device_TakeSemaphore
 	.type	spi_lobo_device_TakeSemaphore, @function
 spi_lobo_device_TakeSemaphore:
-.LFB40:
+.LFB49:
 	.loc 1 855 0
 .LVL259:
 	entry	sp, 32
@@ -3046,13 +3051,14 @@ spi_lobo_device_TakeSemaphore:
 	moveqz	a2, a8, a10
 	.loc 1 858 0
 	retw.n
-.LFE40:
+.LFE49:
 	.size	spi_lobo_device_TakeSemaphore, .-spi_lobo_device_TakeSemaphore
+	.section	.iram1.26,"ax",@progbits
 	.align	4
 	.global	spi_lobo_device_GiveSemaphore
 	.type	spi_lobo_device_GiveSemaphore, @function
 spi_lobo_device_GiveSemaphore:
-.LFB41:
+.LFB50:
 	.loc 1 862 0
 .LVL262:
 	entry	sp, 32
@@ -3066,7 +3072,7 @@ spi_lobo_device_GiveSemaphore:
 	call8	xQueueGenericReceive
 .LVL263:
 	retw.n
-.LFE41:
+.LFE50:
 	.size	spi_lobo_device_GiveSemaphore, .-spi_lobo_device_GiveSemaphore
 	.section	.text.spi_lobo_get_speed,"ax",@progbits
 	.literal_position
@@ -3075,7 +3081,7 @@ spi_lobo_device_GiveSemaphore:
 	.global	spi_lobo_get_speed
 	.type	spi_lobo_get_speed, @function
 spi_lobo_get_speed:
-.LFB42:
+.LFB51:
 	.loc 1 868 0
 .LVL264:
 	entry	sp, 32
@@ -3119,7 +3125,7 @@ spi_lobo_get_speed:
 	mov.n	a2, a3
 .LVL269:
 	retw.n
-.LFE42:
+.LFE51:
 	.size	spi_lobo_get_speed, .-spi_lobo_get_speed
 	.section	.text.spi_lobo_set_speed,"ax",@progbits
 	.literal_position
@@ -3128,7 +3134,7 @@ spi_lobo_get_speed:
 	.global	spi_lobo_set_speed
 	.type	spi_lobo_set_speed, @function
 spi_lobo_set_speed:
-.LFB43:
+.LFB52:
 	.loc 1 881 0
 .LVL270:
 	entry	sp, 32
@@ -3191,14 +3197,14 @@ spi_lobo_set_speed:
 	mov.n	a2, a3
 .LVL280:
 	retw.n
-.LFE43:
+.LFE52:
 	.size	spi_lobo_set_speed, .-spi_lobo_set_speed
 	.section	.text.spi_lobo_uses_native_pins,"ax",@progbits
 	.align	4
 	.global	spi_lobo_uses_native_pins
 	.type	spi_lobo_uses_native_pins, @function
 spi_lobo_uses_native_pins:
-.LFB44:
+.LFB53:
 	.loc 1 899 0
 .LVL281:
 	entry	sp, 32
@@ -3209,7 +3215,7 @@ spi_lobo_uses_native_pins:
 	l8ui	a2, a8, 44
 .LVL282:
 	retw.n
-.LFE44:
+.LFE53:
 	.size	spi_lobo_uses_native_pins, .-spi_lobo_uses_native_pins
 	.section	.text.spi_lobo_get_native_pins,"ax",@progbits
 	.literal_position
@@ -3218,7 +3224,7 @@ spi_lobo_uses_native_pins:
 	.global	spi_lobo_get_native_pins
 	.type	spi_lobo_get_native_pins, @function
 spi_lobo_get_native_pins:
-.LFB45:
+.LFB54:
 	.loc 1 905 0
 .LVL283:
 	entry	sp, 32
@@ -3239,9 +3245,9 @@ spi_lobo_get_native_pins:
 	.loc 1 908 0
 	s32i.n	a2, a5, 0
 	retw.n
-.LFE45:
+.LFE54:
 	.size	spi_lobo_get_native_pins, .-spi_lobo_get_native_pins
-	.section	.iram1
+	.section	.iram1.27,"ax",@progbits
 	.literal_position
 	.literal .LC116, -33554433
 	.literal .LC117, -65536
@@ -3256,7 +3262,7 @@ spi_lobo_get_native_pins:
 	.global	spi_lobo_transfer_data
 	.type	spi_lobo_transfer_data, @function
 spi_lobo_transfer_data:
-.LFB46:
+.LFB55:
 	.loc 1 921 0
 .LVL285:
 	entry	sp, 64
@@ -3895,22 +3901,22 @@ spi_lobo_transfer_data:
 	.loc 1 1153 0
 	mov.n	a2, a10
 	retw.n
-.LFE46:
+.LFE55:
 	.size	spi_lobo_transfer_data, .-spi_lobo_transfer_data
-	.section	.rodata.__FUNCTION__$7087,"a",@progbits
-	.type	__FUNCTION__$7087, @object
-	.size	__FUNCTION__$7087, 24
-__FUNCTION__$7087:
+	.section	.rodata.__FUNCTION__$7133,"a",@progbits
+	.type	__FUNCTION__$7133, @object
+	.size	__FUNCTION__$7133, 24
+__FUNCTION__$7133:
 	.string	"spi_lobo_bus_initialize"
-	.section	.rodata.__func__$7078,"a",@progbits
-	.type	__func__$7078, @object
-	.size	__func__$7078, 23
-__func__$7078:
+	.section	.rodata.__func__$7124,"a",@progbits
+	.type	__func__$7124, @object
+	.size	__func__$7124, 23
+__func__$7124:
 	.string	"spi_lobo_dma_chan_free"
-	.section	.rodata.__func__$7074,"a",@progbits
-	.type	__func__$7074, @object
-	.size	__func__$7074, 24
-__func__$7074:
+	.section	.rodata.__func__$7120,"a",@progbits
+	.type	__func__$7120, @object
+	.size	__func__$7120, 24
+__func__$7120:
 	.string	"spi_lobo_dma_chan_claim"
 	.section	.data.spi_dma_spinlock,"aw",@progbits
 	.align	4
@@ -4058,10 +4064,10 @@ spihost:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI0-.LFB23
+	.4byte	.LCFI0-.LFB32
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4070,10 +4076,10 @@ spihost:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI1-.LFB24
+	.4byte	.LCFI1-.LFB33
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4082,10 +4088,10 @@ spihost:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.byte	0x4
-	.4byte	.LCFI2-.LFB25
+	.4byte	.LCFI2-.LFB34
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4094,10 +4100,10 @@ spihost:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.byte	0x4
-	.4byte	.LCFI3-.LFB26
+	.4byte	.LCFI3-.LFB35
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4106,10 +4112,10 @@ spihost:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.byte	0x4
-	.4byte	.LCFI4-.LFB27
+	.4byte	.LCFI4-.LFB36
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4118,10 +4124,10 @@ spihost:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.byte	0x4
-	.4byte	.LCFI5-.LFB28
+	.4byte	.LCFI5-.LFB37
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4130,10 +4136,10 @@ spihost:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.byte	0x4
-	.4byte	.LCFI6-.LFB29
+	.4byte	.LCFI6-.LFB38
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4142,10 +4148,10 @@ spihost:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI7-.LFB30
+	.4byte	.LCFI7-.LFB39
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4154,10 +4160,10 @@ spihost:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.byte	0x4
-	.4byte	.LCFI8-.LFB32
+	.4byte	.LCFI8-.LFB41
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -4166,10 +4172,10 @@ spihost:
 	.4byte	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI9-.LFB31
+	.4byte	.LCFI9-.LFB40
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4178,10 +4184,10 @@ spihost:
 	.4byte	.LEFDE20-.LASFDE20
 .LASFDE20:
 	.4byte	.Lframe0
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.byte	0x4
-	.4byte	.LCFI10-.LFB34
+	.4byte	.LCFI10-.LFB43
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -4190,10 +4196,10 @@ spihost:
 	.4byte	.LEFDE22-.LASFDE22
 .LASFDE22:
 	.4byte	.Lframe0
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.byte	0x4
-	.4byte	.LCFI11-.LFB35
+	.4byte	.LCFI11-.LFB44
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4202,10 +4208,10 @@ spihost:
 	.4byte	.LEFDE24-.LASFDE24
 .LASFDE24:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI12-.LFB38
+	.4byte	.LCFI12-.LFB47
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -4214,10 +4220,10 @@ spihost:
 	.4byte	.LEFDE26-.LASFDE26
 .LASFDE26:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI13-.LFB39
+	.4byte	.LCFI13-.LFB48
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4226,10 +4232,10 @@ spihost:
 	.4byte	.LEFDE28-.LASFDE28
 .LASFDE28:
 	.4byte	.Lframe0
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.byte	0x4
-	.4byte	.LCFI14-.LFB40
+	.4byte	.LCFI14-.LFB49
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4238,10 +4244,10 @@ spihost:
 	.4byte	.LEFDE30-.LASFDE30
 .LASFDE30:
 	.4byte	.Lframe0
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.byte	0x4
-	.4byte	.LCFI15-.LFB41
+	.4byte	.LCFI15-.LFB50
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4250,10 +4256,10 @@ spihost:
 	.4byte	.LEFDE32-.LASFDE32
 .LASFDE32:
 	.4byte	.Lframe0
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.byte	0x4
-	.4byte	.LCFI16-.LFB42
+	.4byte	.LCFI16-.LFB51
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4262,10 +4268,10 @@ spihost:
 	.4byte	.LEFDE34-.LASFDE34
 .LASFDE34:
 	.4byte	.Lframe0
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.byte	0x4
-	.4byte	.LCFI17-.LFB43
+	.4byte	.LCFI17-.LFB52
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4274,10 +4280,10 @@ spihost:
 	.4byte	.LEFDE36-.LASFDE36
 .LASFDE36:
 	.4byte	.Lframe0
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.byte	0x4
-	.4byte	.LCFI18-.LFB44
+	.4byte	.LCFI18-.LFB53
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4286,10 +4292,10 @@ spihost:
 	.4byte	.LEFDE38-.LASFDE38
 .LASFDE38:
 	.4byte	.Lframe0
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.byte	0x4
-	.4byte	.LCFI19-.LFB45
+	.4byte	.LCFI19-.LFB54
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4298,10 +4304,10 @@ spihost:
 	.4byte	.LEFDE40-.LASFDE40
 .LASFDE40:
 	.4byte	.Lframe0
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.byte	0x4
-	.4byte	.LCFI20-.LFB46
+	.4byte	.LCFI20-.LFB55
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -4330,7 +4336,7 @@ spihost:
 	.file 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x40ad
+	.4byte	0x40af
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -4705,12 +4711,12 @@ spihost:
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0xd
-	.byte	0x17
+	.byte	0x19
 	.4byte	0x400
 	.uleb128 0x12
 	.4byte	.LASF80
 	.byte	0xd
-	.byte	0x18
+	.byte	0x1a
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x10
@@ -4719,7 +4725,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF81
 	.byte	0xd
-	.byte	0x19
+	.byte	0x1b
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4728,7 +4734,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF82
 	.byte	0xd
-	.byte	0x1a
+	.byte	0x1c
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4737,7 +4743,7 @@ spihost:
 	.uleb128 0x13
 	.string	"usr"
 	.byte	0xd
-	.byte	0x1b
+	.byte	0x1d
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4746,7 +4752,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF83
 	.byte	0xd
-	.byte	0x1c
+	.byte	0x1e
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4755,7 +4761,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF84
 	.byte	0xd
-	.byte	0x1d
+	.byte	0x1f
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4764,7 +4770,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF85
 	.byte	0xd
-	.byte	0x1e
+	.byte	0x20
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4773,7 +4779,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF86
 	.byte	0xd
-	.byte	0x1f
+	.byte	0x21
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4782,7 +4788,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF87
 	.byte	0xd
-	.byte	0x20
+	.byte	0x22
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4791,7 +4797,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF88
 	.byte	0xd
-	.byte	0x21
+	.byte	0x23
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4800,7 +4806,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF89
 	.byte	0xd
-	.byte	0x22
+	.byte	0x24
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4809,7 +4815,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF90
 	.byte	0xd
-	.byte	0x23
+	.byte	0x25
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4818,7 +4824,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF91
 	.byte	0xd
-	.byte	0x24
+	.byte	0x26
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4827,7 +4833,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF92
 	.byte	0xd
-	.byte	0x25
+	.byte	0x27
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4836,7 +4842,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF93
 	.byte	0xd
-	.byte	0x26
+	.byte	0x28
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4845,7 +4851,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF94
 	.byte	0xd
-	.byte	0x27
+	.byte	0x29
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4854,7 +4860,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF95
 	.byte	0xd
-	.byte	0x28
+	.byte	0x2a
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4864,25 +4870,25 @@ spihost:
 	.uleb128 0x14
 	.byte	0x4
 	.byte	0xd
-	.byte	0x16
+	.byte	0x18
 	.4byte	0x419
 	.uleb128 0x15
 	.4byte	0x2f8
 	.uleb128 0x16
 	.string	"val"
 	.byte	0xd
-	.byte	0x2a
+	.byte	0x2c
 	.4byte	0xe9
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0xd
-	.byte	0x2e
+	.byte	0x30
 	.4byte	0x511
 	.uleb128 0x12
 	.4byte	.LASF80
 	.byte	0xd
-	.byte	0x2f
+	.byte	0x31
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0xa
@@ -4891,7 +4897,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF96
 	.byte	0xd
-	.byte	0x30
+	.byte	0x32
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4900,7 +4906,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF97
 	.byte	0xd
-	.byte	0x31
+	.byte	0x33
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4909,7 +4915,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF98
 	.byte	0xd
-	.byte	0x32
+	.byte	0x34
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4918,7 +4924,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF99
 	.byte	0xd
-	.byte	0x33
+	.byte	0x35
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4927,7 +4933,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF100
 	.byte	0xd
-	.byte	0x34
+	.byte	0x36
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4936,7 +4942,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF101
 	.byte	0xd
-	.byte	0x35
+	.byte	0x37
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4945,7 +4951,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF102
 	.byte	0xd
-	.byte	0x36
+	.byte	0x38
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x4
@@ -4954,7 +4960,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF103
 	.byte	0xd
-	.byte	0x37
+	.byte	0x39
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4963,7 +4969,7 @@ spihost:
 	.uleb128 0x13
 	.string	"wp"
 	.byte	0xd
-	.byte	0x38
+	.byte	0x3a
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4972,7 +4978,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF104
 	.byte	0xd
-	.byte	0x39
+	.byte	0x3b
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4981,7 +4987,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF105
 	.byte	0xd
-	.byte	0x3a
+	.byte	0x3c
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4990,7 +4996,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF106
 	.byte	0xd
-	.byte	0x3b
+	.byte	0x3d
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -4999,7 +5005,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF107
 	.byte	0xd
-	.byte	0x3c
+	.byte	0x3e
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5008,7 +5014,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF108
 	.byte	0xd
-	.byte	0x3d
+	.byte	0x3f
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5017,7 +5023,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF109
 	.byte	0xd
-	.byte	0x3e
+	.byte	0x40
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x5
@@ -5027,25 +5033,25 @@ spihost:
 	.uleb128 0x14
 	.byte	0x4
 	.byte	0xd
-	.byte	0x2d
+	.byte	0x2f
 	.4byte	0x52a
 	.uleb128 0x15
 	.4byte	0x419
 	.uleb128 0x16
 	.string	"val"
 	.byte	0xd
-	.byte	0x40
+	.byte	0x42
 	.4byte	0xe9
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0xd
-	.byte	0x43
+	.byte	0x45
 	.4byte	0x560
 	.uleb128 0x12
 	.4byte	.LASF80
 	.byte	0xd
-	.byte	0x44
+	.byte	0x46
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x10
@@ -5054,7 +5060,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF110
 	.byte	0xd
-	.byte	0x45
+	.byte	0x47
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0xc
@@ -5063,7 +5069,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF111
 	.byte	0xd
-	.byte	0x46
+	.byte	0x48
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x4
@@ -5073,25 +5079,25 @@ spihost:
 	.uleb128 0x14
 	.byte	0x4
 	.byte	0xd
-	.byte	0x42
+	.byte	0x44
 	.4byte	0x579
 	.uleb128 0x15
 	.4byte	0x52a
 	.uleb128 0x16
 	.string	"val"
 	.byte	0xd
-	.byte	0x48
+	.byte	0x4a
 	.4byte	0xe9
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0xd
-	.byte	0x4b
+	.byte	0x4d
 	.4byte	0x5af
 	.uleb128 0x12
 	.4byte	.LASF112
 	.byte	0xd
-	.byte	0x4c
+	.byte	0x4e
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x10
@@ -5100,7 +5106,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF113
 	.byte	0xd
-	.byte	0x4d
+	.byte	0x4f
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x8
@@ -5109,7 +5115,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF114
 	.byte	0xd
-	.byte	0x4e
+	.byte	0x50
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x8
@@ -5119,25 +5125,25 @@ spihost:
 	.uleb128 0x14
 	.byte	0x4
 	.byte	0xd
-	.byte	0x4a
+	.byte	0x4c
 	.4byte	0x5c8
 	.uleb128 0x15
 	.4byte	0x579
 	.uleb128 0x16
 	.string	"val"
 	.byte	0xd
-	.byte	0x50
+	.byte	0x52
 	.4byte	0xe9
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0xd
-	.byte	0x53
+	.byte	0x55
 	.4byte	0x667
 	.uleb128 0x12
 	.4byte	.LASF115
 	.byte	0xd
-	.byte	0x54
+	.byte	0x56
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x4
@@ -5146,7 +5152,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF116
 	.byte	0xd
-	.byte	0x55
+	.byte	0x57
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x4
@@ -5155,7 +5161,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF117
 	.byte	0xd
-	.byte	0x56
+	.byte	0x58
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x4
@@ -5164,7 +5170,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF118
 	.byte	0xd
-	.byte	0x57
+	.byte	0x59
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x4
@@ -5173,7 +5179,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF119
 	.byte	0xd
-	.byte	0x58
+	.byte	0x5a
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x2
@@ -5182,7 +5188,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF120
 	.byte	0xd
-	.byte	0x59
+	.byte	0x5b
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x3
@@ -5191,7 +5197,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF121
 	.byte	0xd
-	.byte	0x5a
+	.byte	0x5c
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x2
@@ -5200,7 +5206,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF122
 	.byte	0xd
-	.byte	0x5b
+	.byte	0x5d
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x3
@@ -5209,7 +5215,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF123
 	.byte	0xd
-	.byte	0x5c
+	.byte	0x5e
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x2
@@ -5218,7 +5224,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF124
 	.byte	0xd
-	.byte	0x5d
+	.byte	0x5f
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x4
@@ -5228,25 +5234,25 @@ spihost:
 	.uleb128 0x14
 	.byte	0x4
 	.byte	0xd
-	.byte	0x52
+	.byte	0x54
 	.4byte	0x680
 	.uleb128 0x15
 	.4byte	0x5c8
 	.uleb128 0x16
 	.string	"val"
 	.byte	0xd
-	.byte	0x5f
+	.byte	0x61
 	.4byte	0xe9
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0xd
-	.byte	0x62
+	.byte	0x64
 	.4byte	0x6d4
 	.uleb128 0x12
 	.4byte	.LASF125
 	.byte	0xd
-	.byte	0x63
+	.byte	0x65
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x6
@@ -5255,7 +5261,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF126
 	.byte	0xd
-	.byte	0x64
+	.byte	0x66
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x6
@@ -5264,7 +5270,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF127
 	.byte	0xd
-	.byte	0x65
+	.byte	0x67
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x6
@@ -5273,7 +5279,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF128
 	.byte	0xd
-	.byte	0x66
+	.byte	0x68
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0xd
@@ -5282,7 +5288,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF129
 	.byte	0xd
-	.byte	0x67
+	.byte	0x69
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5292,25 +5298,25 @@ spihost:
 	.uleb128 0x14
 	.byte	0x4
 	.byte	0xd
-	.byte	0x61
+	.byte	0x63
 	.4byte	0x6ed
 	.uleb128 0x15
 	.4byte	0x680
 	.uleb128 0x16
 	.string	"val"
 	.byte	0xd
-	.byte	0x69
+	.byte	0x6b
 	.4byte	0xe9
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0xd
-	.byte	0x6c
+	.byte	0x6e
 	.4byte	0x8a9
 	.uleb128 0x12
 	.4byte	.LASF130
 	.byte	0xd
-	.byte	0x6d
+	.byte	0x6f
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5319,7 +5325,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF131
 	.byte	0xd
-	.byte	0x6e
+	.byte	0x70
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x3
@@ -5328,7 +5334,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF132
 	.byte	0xd
-	.byte	0x6f
+	.byte	0x71
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5337,7 +5343,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF133
 	.byte	0xd
-	.byte	0x70
+	.byte	0x72
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5346,7 +5352,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF134
 	.byte	0xd
-	.byte	0x71
+	.byte	0x73
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5355,7 +5361,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF135
 	.byte	0xd
-	.byte	0x72
+	.byte	0x74
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5364,7 +5370,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF136
 	.byte	0xd
-	.byte	0x73
+	.byte	0x75
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x2
@@ -5373,7 +5379,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF137
 	.byte	0xd
-	.byte	0x74
+	.byte	0x76
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5382,7 +5388,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF138
 	.byte	0xd
-	.byte	0x75
+	.byte	0x77
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5391,7 +5397,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF139
 	.byte	0xd
-	.byte	0x76
+	.byte	0x78
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5400,7 +5406,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF140
 	.byte	0xd
-	.byte	0x77
+	.byte	0x79
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5409,7 +5415,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF141
 	.byte	0xd
-	.byte	0x78
+	.byte	0x7a
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5418,7 +5424,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF142
 	.byte	0xd
-	.byte	0x79
+	.byte	0x7b
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5427,7 +5433,7 @@ spihost:
 	.uleb128 0x13
 	.string	"sio"
 	.byte	0xd
-	.byte	0x7a
+	.byte	0x7c
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5436,7 +5442,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF143
 	.byte	0xd
-	.byte	0x7b
+	.byte	0x7d
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5445,7 +5451,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF144
 	.byte	0xd
-	.byte	0x7c
+	.byte	0x7e
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5454,7 +5460,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF145
 	.byte	0xd
-	.byte	0x7d
+	.byte	0x7f
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5463,7 +5469,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF146
 	.byte	0xd
-	.byte	0x7e
+	.byte	0x80
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5472,7 +5478,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF147
 	.byte	0xd
-	.byte	0x7f
+	.byte	0x81
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5481,7 +5487,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF148
 	.byte	0xd
-	.byte	0x80
+	.byte	0x82
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5490,7 +5496,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF149
 	.byte	0xd
-	.byte	0x81
+	.byte	0x83
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5499,7 +5505,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF150
 	.byte	0xd
-	.byte	0x82
+	.byte	0x84
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5508,7 +5514,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF151
 	.byte	0xd
-	.byte	0x83
+	.byte	0x85
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5517,7 +5523,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF152
 	.byte	0xd
-	.byte	0x84
+	.byte	0x86
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5526,7 +5532,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF153
 	.byte	0xd
-	.byte	0x85
+	.byte	0x87
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5535,7 +5541,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF154
 	.byte	0xd
-	.byte	0x86
+	.byte	0x88
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5544,7 +5550,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF155
 	.byte	0xd
-	.byte	0x87
+	.byte	0x89
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5553,7 +5559,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF156
 	.byte	0xd
-	.byte	0x88
+	.byte	0x8a
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5562,7 +5568,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF157
 	.byte	0xd
-	.byte	0x89
+	.byte	0x8b
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5572,25 +5578,25 @@ spihost:
 	.uleb128 0x14
 	.byte	0x4
 	.byte	0xd
-	.byte	0x6b
+	.byte	0x6d
 	.4byte	0x8c2
 	.uleb128 0x15
 	.4byte	0x6ed
 	.uleb128 0x16
 	.string	"val"
 	.byte	0xd
-	.byte	0x8b
+	.byte	0x8d
 	.4byte	0xe9
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0xd
-	.byte	0x8e
+	.byte	0x90
 	.4byte	0x8f8
 	.uleb128 0x12
 	.4byte	.LASF158
 	.byte	0xd
-	.byte	0x8f
+	.byte	0x91
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x8
@@ -5599,7 +5605,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF136
 	.byte	0xd
-	.byte	0x90
+	.byte	0x92
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x12
@@ -5608,7 +5614,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF159
 	.byte	0xd
-	.byte	0x91
+	.byte	0x93
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x6
@@ -5618,25 +5624,25 @@ spihost:
 	.uleb128 0x14
 	.byte	0x4
 	.byte	0xd
-	.byte	0x8d
+	.byte	0x8f
 	.4byte	0x911
 	.uleb128 0x15
 	.4byte	0x8c2
 	.uleb128 0x16
 	.string	"val"
 	.byte	0xd
-	.byte	0x93
+	.byte	0x95
 	.4byte	0xe9
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0xd
-	.byte	0x96
+	.byte	0x98
 	.4byte	0x947
 	.uleb128 0x12
 	.4byte	.LASF160
 	.byte	0xd
-	.byte	0x97
+	.byte	0x99
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x10
@@ -5645,7 +5651,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF102
 	.byte	0xd
-	.byte	0x98
+	.byte	0x9a
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0xc
@@ -5654,7 +5660,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF161
 	.byte	0xd
-	.byte	0x99
+	.byte	0x9b
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x4
@@ -5664,25 +5670,25 @@ spihost:
 	.uleb128 0x14
 	.byte	0x4
 	.byte	0xd
-	.byte	0x95
+	.byte	0x97
 	.4byte	0x960
 	.uleb128 0x15
 	.4byte	0x911
 	.uleb128 0x16
 	.string	"val"
 	.byte	0xd
-	.byte	0x9b
+	.byte	0x9d
 	.4byte	0xe9
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0xd
-	.byte	0x9e
+	.byte	0xa0
 	.4byte	0x987
 	.uleb128 0x12
 	.4byte	.LASF162
 	.byte	0xd
-	.byte	0x9f
+	.byte	0xa1
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x18
@@ -5691,7 +5697,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF163
 	.byte	0xd
-	.byte	0xa0
+	.byte	0xa2
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x8
@@ -5701,25 +5707,25 @@ spihost:
 	.uleb128 0x14
 	.byte	0x4
 	.byte	0xd
-	.byte	0x9d
+	.byte	0x9f
 	.4byte	0x9a0
 	.uleb128 0x15
 	.4byte	0x960
 	.uleb128 0x16
 	.string	"val"
 	.byte	0xd
-	.byte	0xa2
+	.byte	0xa4
 	.4byte	0xe9
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0xd
-	.byte	0xa5
+	.byte	0xa7
 	.4byte	0x9c7
 	.uleb128 0x12
 	.4byte	.LASF164
 	.byte	0xd
-	.byte	0xa6
+	.byte	0xa8
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x18
@@ -5728,7 +5734,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF163
 	.byte	0xd
-	.byte	0xa7
+	.byte	0xa9
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x8
@@ -5738,25 +5744,25 @@ spihost:
 	.uleb128 0x14
 	.byte	0x4
 	.byte	0xd
-	.byte	0xa4
+	.byte	0xa6
 	.4byte	0x9e0
 	.uleb128 0x15
 	.4byte	0x9a0
 	.uleb128 0x16
 	.string	"val"
 	.byte	0xd
-	.byte	0xa9
+	.byte	0xab
 	.4byte	0xe9
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0xd
-	.byte	0xad
+	.byte	0xaf
 	.4byte	0xa9d
 	.uleb128 0x12
 	.4byte	.LASF165
 	.byte	0xd
-	.byte	0xae
+	.byte	0xb0
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5765,7 +5771,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF166
 	.byte	0xd
-	.byte	0xaf
+	.byte	0xb1
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5774,7 +5780,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF167
 	.byte	0xd
-	.byte	0xb0
+	.byte	0xb2
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5783,7 +5789,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF168
 	.byte	0xd
-	.byte	0xb1
+	.byte	0xb3
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x2
@@ -5792,7 +5798,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF169
 	.byte	0xd
-	.byte	0xb2
+	.byte	0xb4
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5801,7 +5807,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF170
 	.byte	0xd
-	.byte	0xb3
+	.byte	0xb5
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x3
@@ -5810,7 +5816,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF171
 	.byte	0xd
-	.byte	0xb4
+	.byte	0xb6
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x2
@@ -5819,7 +5825,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF172
 	.byte	0xd
-	.byte	0xb5
+	.byte	0xb7
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x3
@@ -5828,7 +5834,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF173
 	.byte	0xd
-	.byte	0xb6
+	.byte	0xb8
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0xf
@@ -5837,7 +5843,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF174
 	.byte	0xd
-	.byte	0xb7
+	.byte	0xb9
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5846,7 +5852,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF175
 	.byte	0xd
-	.byte	0xb8
+	.byte	0xba
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5855,7 +5861,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF176
 	.byte	0xd
-	.byte	0xb9
+	.byte	0xbb
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5865,25 +5871,25 @@ spihost:
 	.uleb128 0x14
 	.byte	0x4
 	.byte	0xd
-	.byte	0xac
+	.byte	0xae
 	.4byte	0xab6
 	.uleb128 0x15
 	.4byte	0x9e0
 	.uleb128 0x16
 	.string	"val"
 	.byte	0xd
-	.byte	0xbb
+	.byte	0xbd
 	.4byte	0xe9
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0xd
-	.byte	0xbe
+	.byte	0xc0
 	.4byte	0xbeb
 	.uleb128 0x12
 	.4byte	.LASF177
 	.byte	0xd
-	.byte	0xbf
+	.byte	0xc1
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5892,7 +5898,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF178
 	.byte	0xd
-	.byte	0xc0
+	.byte	0xc2
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5901,7 +5907,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF179
 	.byte	0xd
-	.byte	0xc1
+	.byte	0xc3
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5910,7 +5916,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF180
 	.byte	0xd
-	.byte	0xc2
+	.byte	0xc4
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5919,7 +5925,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF181
 	.byte	0xd
-	.byte	0xc3
+	.byte	0xc5
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5928,7 +5934,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF182
 	.byte	0xd
-	.byte	0xc4
+	.byte	0xc6
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5937,7 +5943,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF183
 	.byte	0xd
-	.byte	0xc5
+	.byte	0xc7
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5946,7 +5952,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF184
 	.byte	0xd
-	.byte	0xc6
+	.byte	0xc8
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5955,7 +5961,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF185
 	.byte	0xd
-	.byte	0xc7
+	.byte	0xc9
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5964,7 +5970,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF186
 	.byte	0xd
-	.byte	0xc8
+	.byte	0xca
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -5973,7 +5979,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF187
 	.byte	0xd
-	.byte	0xc9
+	.byte	0xcb
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x2
@@ -5982,7 +5988,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF188
 	.byte	0xd
-	.byte	0xca
+	.byte	0xcc
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x5
@@ -5991,7 +5997,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF189
 	.byte	0xd
-	.byte	0xcb
+	.byte	0xcd
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x3
@@ -6000,7 +6006,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF190
 	.byte	0xd
-	.byte	0xcc
+	.byte	0xce
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x3
@@ -6009,7 +6015,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF191
 	.byte	0xd
-	.byte	0xcd
+	.byte	0xcf
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x4
@@ -6018,7 +6024,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF192
 	.byte	0xd
-	.byte	0xce
+	.byte	0xd0
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -6027,7 +6033,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF193
 	.byte	0xd
-	.byte	0xcf
+	.byte	0xd1
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -6036,7 +6042,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF194
 	.byte	0xd
-	.byte	0xd0
+	.byte	0xd2
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -6045,7 +6051,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF195
 	.byte	0xd
-	.byte	0xd1
+	.byte	0xd3
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -6054,7 +6060,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF196
 	.byte	0xd
-	.byte	0xd2
+	.byte	0xd4
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -6064,25 +6070,25 @@ spihost:
 	.uleb128 0x14
 	.byte	0x4
 	.byte	0xd
-	.byte	0xbd
+	.byte	0xbf
 	.4byte	0xc04
 	.uleb128 0x15
 	.4byte	0xab6
 	.uleb128 0x16
 	.string	"val"
 	.byte	0xd
-	.byte	0xd4
+	.byte	0xd6
 	.4byte	0xe9
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0xd
-	.byte	0xd7
+	.byte	0xd9
 	.4byte	0xca3
 	.uleb128 0x12
 	.4byte	.LASF197
 	.byte	0xd
-	.byte	0xd8
+	.byte	0xda
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -6091,7 +6097,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF198
 	.byte	0xd
-	.byte	0xd9
+	.byte	0xdb
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -6100,7 +6106,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF199
 	.byte	0xd
-	.byte	0xda
+	.byte	0xdc
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -6109,7 +6115,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF200
 	.byte	0xd
-	.byte	0xdb
+	.byte	0xdd
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -6118,7 +6124,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF201
 	.byte	0xd
-	.byte	0xdc
+	.byte	0xde
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x6
@@ -6127,7 +6133,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF202
 	.byte	0xd
-	.byte	0xdd
+	.byte	0xdf
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x6
@@ -6136,7 +6142,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF102
 	.byte	0xd
-	.byte	0xde
+	.byte	0xe0
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x9
@@ -6145,7 +6151,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF203
 	.byte	0xd
-	.byte	0xdf
+	.byte	0xe1
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -6154,7 +6160,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF204
 	.byte	0xd
-	.byte	0xe0
+	.byte	0xe2
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -6163,7 +6169,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF205
 	.byte	0xd
-	.byte	0xe1
+	.byte	0xe3
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x5
@@ -6173,25 +6179,25 @@ spihost:
 	.uleb128 0x14
 	.byte	0x4
 	.byte	0xd
-	.byte	0xd6
+	.byte	0xd8
 	.4byte	0xcbc
 	.uleb128 0x15
 	.4byte	0xc04
 	.uleb128 0x16
 	.string	"val"
 	.byte	0xd
-	.byte	0xe3
+	.byte	0xe5
 	.4byte	0xe9
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0xd
-	.byte	0xe6
+	.byte	0xe8
 	.4byte	0xd01
 	.uleb128 0x12
 	.4byte	.LASF206
 	.byte	0xd
-	.byte	0xe7
+	.byte	0xe9
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x8
@@ -6200,7 +6206,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF207
 	.byte	0xd
-	.byte	0xe8
+	.byte	0xea
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x8
@@ -6209,7 +6215,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF208
 	.byte	0xd
-	.byte	0xe9
+	.byte	0xeb
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x8
@@ -6218,7 +6224,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF209
 	.byte	0xd
-	.byte	0xea
+	.byte	0xec
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x8
@@ -6228,25 +6234,25 @@ spihost:
 	.uleb128 0x14
 	.byte	0x4
 	.byte	0xd
-	.byte	0xe5
+	.byte	0xe7
 	.4byte	0xd1a
 	.uleb128 0x15
 	.4byte	0xcbc
 	.uleb128 0x16
 	.string	"val"
 	.byte	0xd
-	.byte	0xec
+	.byte	0xee
 	.4byte	0xe9
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0xd
-	.byte	0xef
+	.byte	0xf1
 	.4byte	0xd5f
 	.uleb128 0x12
 	.4byte	.LASF210
 	.byte	0xd
-	.byte	0xf0
+	.byte	0xf2
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x8
@@ -6255,7 +6261,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF211
 	.byte	0xd
-	.byte	0xf1
+	.byte	0xf3
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x8
@@ -6264,7 +6270,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF212
 	.byte	0xd
-	.byte	0xf2
+	.byte	0xf4
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x8
@@ -6273,7 +6279,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF213
 	.byte	0xd
-	.byte	0xf3
+	.byte	0xf5
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x8
@@ -6283,25 +6289,25 @@ spihost:
 	.uleb128 0x14
 	.byte	0x4
 	.byte	0xd
-	.byte	0xee
+	.byte	0xf0
 	.4byte	0xd78
 	.uleb128 0x15
 	.4byte	0xd1a
 	.uleb128 0x16
 	.string	"val"
 	.byte	0xd
-	.byte	0xf5
+	.byte	0xf7
 	.4byte	0xe9
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0xd
-	.byte	0xf8
+	.byte	0xfa
 	.4byte	0xd9f
 	.uleb128 0x12
 	.4byte	.LASF214
 	.byte	0xd
-	.byte	0xf9
+	.byte	0xfb
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x18
@@ -6310,7 +6316,7 @@ spihost:
 	.uleb128 0x12
 	.4byte	.LASF163
 	.byte	0xd
-	.byte	0xfa
+	.byte	0xfc
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x8
@@ -6320,244 +6326,244 @@ spihost:
 	.uleb128 0x14
 	.byte	0x4
 	.byte	0xd
-	.byte	0xf7
+	.byte	0xf9
 	.4byte	0xdb8
 	.uleb128 0x15
 	.4byte	0xd78
 	.uleb128 0x16
 	.string	"val"
 	.byte	0xd
-	.byte	0xfc
+	.byte	0xfe
 	.4byte	0xe9
 	.byte	0
-	.uleb128 0xb
+	.uleb128 0x17
 	.byte	0x4
 	.byte	0xd
-	.byte	0xff
-	.4byte	0xde1
-	.uleb128 0x17
+	.2byte	0x101
+	.4byte	0xde2
+	.uleb128 0x18
 	.4byte	.LASF214
 	.byte	0xd
-	.2byte	0x100
+	.2byte	0x102
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x18
 	.byte	0x8
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF163
 	.byte	0xd
-	.2byte	0x101
+	.2byte	0x103
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x8
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x14
-	.byte	0x4
-	.byte	0xd
-	.byte	0xfe
-	.4byte	0xdfb
-	.uleb128 0x15
-	.4byte	0xdb8
-	.uleb128 0x18
-	.string	"val"
-	.byte	0xd
-	.2byte	0x103
-	.4byte	0xe9
-	.byte	0
 	.uleb128 0x19
 	.byte	0x4
 	.byte	0xd
-	.2byte	0x106
-	.4byte	0xe55
-	.uleb128 0x17
-	.4byte	.LASF215
+	.2byte	0x100
+	.4byte	0xdfd
+	.uleb128 0x15
+	.4byte	0xdb8
+	.uleb128 0x1a
+	.string	"val"
 	.byte	0xd
-	.2byte	0x107
+	.2byte	0x105
 	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0x1f
 	.byte	0
 	.uleb128 0x17
-	.4byte	.LASF216
+	.byte	0x4
 	.byte	0xd
 	.2byte	0x108
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0x1e
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF217
+	.4byte	0xe57
+	.uleb128 0x18
+	.4byte	.LASF215
 	.byte	0xd
 	.2byte	0x109
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x1d
+	.byte	0x1f
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF218
+	.uleb128 0x18
+	.4byte	.LASF216
 	.byte	0xd
 	.2byte	0x10a
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x1c
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF219
-	.byte	0xd
-	.2byte	0x10b
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1c
-	.byte	0
-	.byte	0
-	.byte	0
-	.uleb128 0x1a
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x105
-	.4byte	0xe70
-	.uleb128 0x15
-	.4byte	0xdfb
-	.uleb128 0x18
-	.string	"val"
-	.byte	0xd
-	.2byte	0x10d
-	.4byte	0xe9
-	.byte	0
-	.uleb128 0x19
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x110
-	.4byte	0xf2a
-	.uleb128 0x17
-	.4byte	.LASF80
-	.byte	0xd
-	.2byte	0x111
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0x1f
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF220
-	.byte	0xd
-	.2byte	0x112
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
 	.byte	0x1e
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF221
+	.uleb128 0x18
+	.4byte	.LASF217
 	.byte	0xd
-	.2byte	0x113
+	.2byte	0x10b
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1d
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF222
+	.uleb128 0x18
+	.4byte	.LASF218
 	.byte	0xd
-	.2byte	0x114
+	.2byte	0x10c
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1c
 	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF219
+	.byte	0xd
+	.2byte	0x10d
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1c
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x19
+	.byte	0x4
+	.byte	0xd
+	.2byte	0x107
+	.4byte	0xe72
+	.uleb128 0x15
+	.4byte	0xdfd
+	.uleb128 0x1a
+	.string	"val"
+	.byte	0xd
+	.2byte	0x10f
+	.4byte	0xe9
+	.byte	0
 	.uleb128 0x17
-	.4byte	.LASF223
+	.byte	0x4
+	.byte	0xd
+	.2byte	0x112
+	.4byte	0xf2c
+	.uleb128 0x18
+	.4byte	.LASF80
+	.byte	0xd
+	.2byte	0x113
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
+	.byte	0x1f
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF220
+	.byte	0xd
+	.2byte	0x114
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
+	.byte	0x1e
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF221
 	.byte	0xd
 	.2byte	0x115
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x1b
+	.byte	0x1d
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF224
+	.uleb128 0x18
+	.4byte	.LASF222
 	.byte	0xd
 	.2byte	0x116
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x1a
+	.byte	0x1c
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF225
+	.uleb128 0x18
+	.4byte	.LASF223
 	.byte	0xd
 	.2byte	0x117
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
+	.byte	0x1b
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF224
+	.byte	0xd
+	.2byte	0x118
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
+	.byte	0x1a
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF225
+	.byte	0xd
+	.2byte	0x119
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x8
 	.byte	0x12
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF226
 	.byte	0xd
-	.2byte	0x118
+	.2byte	0x11a
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x8
 	.byte	0xa
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF227
 	.byte	0xd
-	.2byte	0x119
+	.2byte	0x11b
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x6
 	.byte	0x4
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF228
 	.byte	0xd
-	.2byte	0x11a
+	.2byte	0x11c
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
 	.byte	0x3
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF229
 	.byte	0xd
-	.2byte	0x11b
+	.2byte	0x11d
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x3
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x1a
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x10f
-	.4byte	0xf45
-	.uleb128 0x15
-	.4byte	0xe70
-	.uleb128 0x18
-	.string	"val"
-	.byte	0xd
-	.2byte	0x11d
-	.4byte	0xe9
-	.byte	0
 	.uleb128 0x19
 	.byte	0x4
 	.byte	0xd
-	.2byte	0x120
-	.4byte	0xf9f
+	.2byte	0x111
+	.4byte	0xf47
+	.uleb128 0x15
+	.4byte	0xe72
+	.uleb128 0x1a
+	.string	"val"
+	.byte	0xd
+	.2byte	0x11f
+	.4byte	0xe9
+	.byte	0
+	.uleb128 0x17
+	.byte	0x4
+	.byte	0xd
+	.2byte	0x122
+	.4byte	0xfa1
 	.uleb128 0x1b
 	.string	"dio"
 	.byte	0xd
-	.2byte	0x121
+	.2byte	0x123
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
@@ -6566,2685 +6572,2685 @@ spihost:
 	.uleb128 0x1b
 	.string	"qio"
 	.byte	0xd
-	.2byte	0x122
+	.2byte	0x124
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1e
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF230
 	.byte	0xd
-	.2byte	0x123
+	.2byte	0x125
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x2
 	.byte	0x1c
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF231
 	.byte	0xd
-	.2byte	0x124
+	.2byte	0x126
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1b
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF232
 	.byte	0xd
-	.2byte	0x125
+	.2byte	0x127
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1b
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x1a
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x11f
-	.4byte	0xfba
-	.uleb128 0x15
-	.4byte	0xf45
-	.uleb128 0x18
-	.string	"val"
-	.byte	0xd
-	.2byte	0x127
-	.4byte	0xe9
-	.byte	0
 	.uleb128 0x19
 	.byte	0x4
 	.byte	0xd
-	.2byte	0x12a
-	.4byte	0xff4
-	.uleb128 0x17
-	.4byte	.LASF233
+	.2byte	0x121
+	.4byte	0xfbc
+	.uleb128 0x15
+	.4byte	0xf47
+	.uleb128 0x1a
+	.string	"val"
 	.byte	0xd
-	.2byte	0x12b
+	.2byte	0x129
 	.4byte	0xe9
-	.byte	0x4
-	.byte	0x10
-	.byte	0x10
 	.byte	0
 	.uleb128 0x17
-	.4byte	.LASF102
+	.byte	0x4
 	.byte	0xd
 	.2byte	0x12c
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0xc
-	.byte	0x4
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF234
+	.4byte	0xff6
+	.uleb128 0x18
+	.4byte	.LASF233
 	.byte	0xd
 	.2byte	0x12d
 	.4byte	0xe9
 	.byte	0x4
-	.byte	0x4
+	.byte	0x10
+	.byte	0x10
 	.byte	0
-	.byte	0
-	.byte	0
-	.uleb128 0x1a
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x129
-	.4byte	0x100f
-	.uleb128 0x15
-	.4byte	0xfba
 	.uleb128 0x18
-	.string	"val"
-	.byte	0xd
-	.2byte	0x12f
-	.4byte	0xe9
-	.byte	0
-	.uleb128 0x19
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x132
-	.4byte	0x1049
-	.uleb128 0x17
-	.4byte	.LASF235
-	.byte	0xd
-	.2byte	0x133
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x10
-	.byte	0x10
-	.byte	0
-	.uleb128 0x17
 	.4byte	.LASF102
 	.byte	0xd
-	.2byte	0x134
+	.2byte	0x12e
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0xc
 	.byte	0x4
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF236
-	.byte	0xd
-	.2byte	0x135
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x4
-	.byte	0
-	.byte	0
-	.byte	0
-	.uleb128 0x1a
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x131
-	.4byte	0x1064
-	.uleb128 0x15
-	.4byte	0x100f
 	.uleb128 0x18
-	.string	"val"
+	.4byte	.LASF234
 	.byte	0xd
-	.2byte	0x137
+	.2byte	0x12f
 	.4byte	0xe9
+	.byte	0x4
+	.byte	0x4
+	.byte	0
+	.byte	0
 	.byte	0
 	.uleb128 0x19
 	.byte	0x4
 	.byte	0xd
-	.2byte	0x13a
-	.4byte	0x108e
+	.2byte	0x12b
+	.4byte	0x1011
+	.uleb128 0x15
+	.4byte	0xfbc
+	.uleb128 0x1a
+	.string	"val"
+	.byte	0xd
+	.2byte	0x131
+	.4byte	0xe9
+	.byte	0
 	.uleb128 0x17
+	.byte	0x4
+	.byte	0xd
+	.2byte	0x134
+	.4byte	0x104b
+	.uleb128 0x18
+	.4byte	.LASF235
+	.byte	0xd
+	.2byte	0x135
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x10
+	.byte	0x10
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF102
+	.byte	0xd
+	.2byte	0x136
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0xc
+	.byte	0x4
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF236
+	.byte	0xd
+	.2byte	0x137
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x4
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x19
+	.byte	0x4
+	.byte	0xd
+	.2byte	0x133
+	.4byte	0x1066
+	.uleb128 0x15
+	.4byte	0x1011
+	.uleb128 0x1a
+	.string	"val"
+	.byte	0xd
+	.2byte	0x139
+	.4byte	0xe9
+	.byte	0
+	.uleb128 0x17
+	.byte	0x4
+	.byte	0xd
+	.2byte	0x13c
+	.4byte	0x1090
+	.uleb128 0x18
 	.4byte	.LASF237
 	.byte	0xd
-	.2byte	0x13b
+	.2byte	0x13d
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x18
 	.byte	0x8
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF163
 	.byte	0xd
-	.2byte	0x13c
+	.2byte	0x13e
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x8
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x1a
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x139
-	.4byte	0x10a9
-	.uleb128 0x15
-	.4byte	0x1064
-	.uleb128 0x18
-	.string	"val"
-	.byte	0xd
-	.2byte	0x13e
-	.4byte	0xe9
-	.byte	0
 	.uleb128 0x19
 	.byte	0x4
 	.byte	0xd
-	.2byte	0x154
-	.4byte	0x1103
-	.uleb128 0x17
-	.4byte	.LASF238
+	.2byte	0x13b
+	.4byte	0x10ab
+	.uleb128 0x15
+	.4byte	0x1066
+	.uleb128 0x1a
+	.string	"val"
 	.byte	0xd
-	.2byte	0x155
+	.2byte	0x140
 	.4byte	0xe9
-	.byte	0x4
-	.byte	0xc
-	.byte	0x14
 	.byte	0
 	.uleb128 0x17
-	.4byte	.LASF188
+	.byte	0x4
 	.byte	0xd
 	.2byte	0x156
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x4
-	.byte	0x10
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF239
+	.4byte	0x1105
+	.uleb128 0x18
+	.4byte	.LASF238
 	.byte	0xd
 	.2byte	0x157
 	.4byte	0xe9
 	.byte	0x4
-	.byte	0x4
-	.byte	0xc
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF240
-	.byte	0xd
-	.2byte	0x158
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0xb
-	.byte	0x1
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF241
-	.byte	0xd
-	.2byte	0x159
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0
-	.byte	0
-	.byte	0
-	.uleb128 0x1a
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x153
-	.4byte	0x111e
-	.uleb128 0x15
-	.4byte	0x10a9
-	.uleb128 0x18
-	.string	"val"
-	.byte	0xd
-	.2byte	0x15b
-	.4byte	0xe9
-	.byte	0
-	.uleb128 0x19
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x15e
-	.4byte	0x1178
-	.uleb128 0x17
-	.4byte	.LASF242
-	.byte	0xd
-	.2byte	0x15f
-	.4byte	0xe9
-	.byte	0x4
 	.byte	0xc
 	.byte	0x14
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF188
 	.byte	0xd
-	.2byte	0x160
+	.2byte	0x158
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x4
 	.byte	0x10
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF243
+	.uleb128 0x18
+	.4byte	.LASF239
 	.byte	0xd
-	.2byte	0x161
+	.2byte	0x159
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x4
 	.byte	0xc
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF240
 	.byte	0xd
-	.2byte	0x162
+	.2byte	0x15a
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0xb
 	.byte	0x1
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF244
+	.uleb128 0x18
+	.4byte	.LASF241
 	.byte	0xd
-	.2byte	0x163
+	.2byte	0x15b
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x1a
+	.uleb128 0x19
 	.byte	0x4
 	.byte	0xd
-	.2byte	0x15d
-	.4byte	0x1193
+	.2byte	0x155
+	.4byte	0x1120
 	.uleb128 0x15
-	.4byte	0x111e
-	.uleb128 0x18
+	.4byte	0x10ab
+	.uleb128 0x1a
 	.string	"val"
+	.byte	0xd
+	.2byte	0x15d
+	.4byte	0xe9
+	.byte	0
+	.uleb128 0x17
+	.byte	0x4
+	.byte	0xd
+	.2byte	0x160
+	.4byte	0x117a
+	.uleb128 0x18
+	.4byte	.LASF242
+	.byte	0xd
+	.2byte	0x161
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0xc
+	.byte	0x14
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF188
+	.byte	0xd
+	.2byte	0x162
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x4
+	.byte	0x10
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF243
+	.byte	0xd
+	.2byte	0x163
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x4
+	.byte	0xc
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF240
+	.byte	0xd
+	.2byte	0x164
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0xb
+	.byte	0x1
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF244
 	.byte	0xd
 	.2byte	0x165
 	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
+	.byte	0
+	.byte	0
 	.byte	0
 	.uleb128 0x19
 	.byte	0x4
 	.byte	0xd
-	.2byte	0x168
-	.4byte	0x11bc
+	.2byte	0x15f
+	.4byte	0x1195
+	.uleb128 0x15
+	.4byte	0x1120
+	.uleb128 0x1a
+	.string	"val"
+	.byte	0xd
+	.2byte	0x167
+	.4byte	0xe9
+	.byte	0
+	.uleb128 0x17
+	.byte	0x4
+	.byte	0xd
+	.2byte	0x16a
+	.4byte	0x11be
 	.uleb128 0x1b
 	.string	"st"
 	.byte	0xd
-	.2byte	0x169
+	.2byte	0x16b
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x3
 	.byte	0x1d
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF168
-	.byte	0xd
-	.2byte	0x16a
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1d
-	.byte	0
-	.byte	0
-	.byte	0
-	.uleb128 0x1a
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x167
-	.4byte	0x11d7
-	.uleb128 0x15
-	.4byte	0x1193
 	.uleb128 0x18
-	.string	"val"
+	.4byte	.LASF168
 	.byte	0xd
 	.2byte	0x16c
 	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1d
+	.byte	0
+	.byte	0
 	.byte	0
 	.uleb128 0x19
 	.byte	0x4
 	.byte	0xd
-	.2byte	0x16f
-	.4byte	0x1201
+	.2byte	0x169
+	.4byte	0x11d9
+	.uleb128 0x15
+	.4byte	0x1195
+	.uleb128 0x1a
+	.string	"val"
+	.byte	0xd
+	.2byte	0x16e
+	.4byte	0xe9
+	.byte	0
 	.uleb128 0x17
+	.byte	0x4
+	.byte	0xd
+	.2byte	0x171
+	.4byte	0x1203
+	.uleb128 0x18
 	.4byte	.LASF245
 	.byte	0xd
-	.2byte	0x170
+	.2byte	0x172
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x2
 	.byte	0x1e
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF230
-	.byte	0xd
-	.2byte	0x171
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1e
-	.byte	0
-	.byte	0
-	.byte	0
-	.uleb128 0x1a
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x16e
-	.4byte	0x121c
-	.uleb128 0x15
-	.4byte	0x11d7
 	.uleb128 0x18
-	.string	"val"
+	.4byte	.LASF230
 	.byte	0xd
 	.2byte	0x173
 	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1e
+	.byte	0
+	.byte	0
 	.byte	0
 	.uleb128 0x19
 	.byte	0x4
 	.byte	0xd
-	.2byte	0x176
-	.4byte	0x1336
-	.uleb128 0x17
-	.4byte	.LASF80
+	.2byte	0x170
+	.4byte	0x121e
+	.uleb128 0x15
+	.4byte	0x11d9
+	.uleb128 0x1a
+	.string	"val"
 	.byte	0xd
-	.2byte	0x177
+	.2byte	0x175
 	.4byte	0xe9
-	.byte	0x4
-	.byte	0x2
-	.byte	0x1e
 	.byte	0
 	.uleb128 0x17
-	.4byte	.LASF246
+	.byte	0x4
 	.byte	0xd
 	.2byte	0x178
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0x1d
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF247
+	.4byte	0x1338
+	.uleb128 0x18
+	.4byte	.LASF80
 	.byte	0xd
 	.2byte	0x179
 	.4byte	0xe9
 	.byte	0x4
-	.byte	0x1
-	.byte	0x1c
+	.byte	0x2
+	.byte	0x1e
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF248
+	.uleb128 0x18
+	.4byte	.LASF246
 	.byte	0xd
 	.2byte	0x17a
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x1b
+	.byte	0x1d
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF249
+	.uleb128 0x18
+	.4byte	.LASF247
 	.byte	0xd
 	.2byte	0x17b
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x1a
+	.byte	0x1c
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF250
+	.uleb128 0x18
+	.4byte	.LASF248
 	.byte	0xd
 	.2byte	0x17c
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x19
+	.byte	0x1b
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF251
+	.uleb128 0x18
+	.4byte	.LASF249
 	.byte	0xd
 	.2byte	0x17d
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x18
+	.byte	0x1a
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF252
+	.uleb128 0x18
+	.4byte	.LASF250
 	.byte	0xd
 	.2byte	0x17e
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x17
+	.byte	0x19
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF253
+	.uleb128 0x18
+	.4byte	.LASF251
 	.byte	0xd
 	.2byte	0x17f
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x16
+	.byte	0x18
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF254
+	.uleb128 0x18
+	.4byte	.LASF252
 	.byte	0xd
 	.2byte	0x180
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x15
+	.byte	0x17
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF255
+	.uleb128 0x18
+	.4byte	.LASF253
 	.byte	0xd
 	.2byte	0x181
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x14
+	.byte	0x16
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF256
+	.uleb128 0x18
+	.4byte	.LASF254
 	.byte	0xd
 	.2byte	0x182
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x13
+	.byte	0x15
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF257
+	.uleb128 0x18
+	.4byte	.LASF255
 	.byte	0xd
 	.2byte	0x183
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x12
+	.byte	0x14
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF258
+	.uleb128 0x18
+	.4byte	.LASF256
 	.byte	0xd
 	.2byte	0x184
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x11
+	.byte	0x13
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF259
+	.uleb128 0x18
+	.4byte	.LASF257
 	.byte	0xd
 	.2byte	0x185
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x10
+	.byte	0x12
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF260
+	.uleb128 0x18
+	.4byte	.LASF258
 	.byte	0xd
 	.2byte	0x186
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0xf
+	.byte	0x11
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF261
+	.uleb128 0x18
+	.4byte	.LASF259
 	.byte	0xd
 	.2byte	0x187
 	.4byte	0xe9
 	.byte	0x4
+	.byte	0x1
+	.byte	0x10
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF260
+	.byte	0xd
+	.2byte	0x188
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
+	.byte	0xf
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF261
+	.byte	0xd
+	.2byte	0x189
+	.4byte	0xe9
+	.byte	0x4
 	.byte	0xf
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x1a
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x175
-	.4byte	0x1351
-	.uleb128 0x15
-	.4byte	0x121c
-	.uleb128 0x18
-	.string	"val"
-	.byte	0xd
-	.2byte	0x189
-	.4byte	0xe9
-	.byte	0
 	.uleb128 0x19
 	.byte	0x4
 	.byte	0xd
-	.2byte	0x18c
-	.4byte	0x13bb
+	.2byte	0x177
+	.4byte	0x1353
+	.uleb128 0x15
+	.4byte	0x121e
+	.uleb128 0x1a
+	.string	"val"
+	.byte	0xd
+	.2byte	0x18b
+	.4byte	0xe9
+	.byte	0
 	.uleb128 0x17
+	.byte	0x4
+	.byte	0xd
+	.2byte	0x18e
+	.4byte	0x13bd
+	.uleb128 0x18
 	.4byte	.LASF262
 	.byte	0xd
-	.2byte	0x18d
+	.2byte	0x18f
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x14
 	.byte	0xc
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF240
 	.byte	0xd
-	.2byte	0x18e
+	.2byte	0x190
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x8
 	.byte	0x4
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF263
-	.byte	0xd
-	.2byte	0x18f
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0x3
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF264
-	.byte	0xd
-	.2byte	0x190
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0x2
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF265
 	.byte	0xd
 	.2byte	0x191
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x1
+	.byte	0x3
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF176
+	.uleb128 0x18
+	.4byte	.LASF264
 	.byte	0xd
 	.2byte	0x192
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
+	.byte	0x2
 	.byte	0
-	.byte	0
-	.byte	0
-	.uleb128 0x1a
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x18b
-	.4byte	0x13d6
-	.uleb128 0x15
-	.4byte	0x1351
 	.uleb128 0x18
-	.string	"val"
+	.4byte	.LASF265
+	.byte	0xd
+	.2byte	0x193
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
+	.byte	0x1
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF176
 	.byte	0xd
 	.2byte	0x194
 	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
+	.byte	0
+	.byte	0
 	.byte	0
 	.uleb128 0x19
 	.byte	0x4
 	.byte	0xd
-	.2byte	0x197
-	.4byte	0x1450
+	.2byte	0x18d
+	.4byte	0x13d8
+	.uleb128 0x15
+	.4byte	0x1353
+	.uleb128 0x1a
+	.string	"val"
+	.byte	0xd
+	.2byte	0x196
+	.4byte	0xe9
+	.byte	0
 	.uleb128 0x17
+	.byte	0x4
+	.byte	0xd
+	.2byte	0x199
+	.4byte	0x1452
+	.uleb128 0x18
 	.4byte	.LASF262
 	.byte	0xd
-	.2byte	0x198
+	.2byte	0x19a
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x14
 	.byte	0xc
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF266
-	.byte	0xd
-	.2byte	0x199
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0xb
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF267
-	.byte	0xd
-	.2byte	0x19a
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x7
-	.byte	0x4
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF263
 	.byte	0xd
 	.2byte	0x19b
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x3
+	.byte	0xb
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF264
+	.uleb128 0x18
+	.4byte	.LASF267
 	.byte	0xd
 	.2byte	0x19c
 	.4byte	0xe9
 	.byte	0x4
-	.byte	0x1
-	.byte	0x2
+	.byte	0x7
+	.byte	0x4
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF265
+	.uleb128 0x18
+	.4byte	.LASF263
 	.byte	0xd
 	.2byte	0x19d
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x1
+	.byte	0x3
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF176
+	.uleb128 0x18
+	.4byte	.LASF264
 	.byte	0xd
 	.2byte	0x19e
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
+	.byte	0x2
 	.byte	0
-	.byte	0
-	.byte	0
-	.uleb128 0x1a
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x196
-	.4byte	0x146b
-	.uleb128 0x15
-	.4byte	0x13d6
 	.uleb128 0x18
-	.string	"val"
+	.4byte	.LASF265
+	.byte	0xd
+	.2byte	0x19f
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
+	.byte	0x1
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF176
 	.byte	0xd
 	.2byte	0x1a0
 	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
+	.byte	0
+	.byte	0
 	.byte	0
 	.uleb128 0x19
 	.byte	0x4
 	.byte	0xd
-	.2byte	0x1a3
-	.4byte	0x14a5
-	.uleb128 0x17
-	.4byte	.LASF268
+	.2byte	0x198
+	.4byte	0x146d
+	.uleb128 0x15
+	.4byte	0x13d8
+	.uleb128 0x1a
+	.string	"val"
 	.byte	0xd
-	.2byte	0x1a4
+	.2byte	0x1a2
 	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0x1f
 	.byte	0
 	.uleb128 0x17
-	.4byte	.LASF269
+	.byte	0x4
 	.byte	0xd
 	.2byte	0x1a5
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0x1e
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF230
+	.4byte	0x14a7
+	.uleb128 0x18
+	.4byte	.LASF268
 	.byte	0xd
 	.2byte	0x1a6
 	.4byte	0xe9
 	.byte	0x4
+	.byte	0x1
+	.byte	0x1f
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF269
+	.byte	0xd
+	.2byte	0x1a7
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
 	.byte	0x1e
 	.byte	0
-	.byte	0
-	.byte	0
-	.uleb128 0x1a
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x1a2
-	.4byte	0x14c0
-	.uleb128 0x15
-	.4byte	0x146b
 	.uleb128 0x18
-	.string	"val"
+	.4byte	.LASF230
 	.byte	0xd
 	.2byte	0x1a8
 	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1e
+	.byte	0
+	.byte	0
 	.byte	0
 	.uleb128 0x19
 	.byte	0x4
 	.byte	0xd
-	.2byte	0x1ab
-	.4byte	0x156a
-	.uleb128 0x17
-	.4byte	.LASF270
+	.2byte	0x1a4
+	.4byte	0x14c2
+	.uleb128 0x15
+	.4byte	0x146d
+	.uleb128 0x1a
+	.string	"val"
 	.byte	0xd
-	.2byte	0x1ac
+	.2byte	0x1aa
 	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0x1f
 	.byte	0
 	.uleb128 0x17
-	.4byte	.LASF271
+	.byte	0x4
 	.byte	0xd
 	.2byte	0x1ad
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0x1e
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF272
+	.4byte	0x156c
+	.uleb128 0x18
+	.4byte	.LASF270
 	.byte	0xd
 	.2byte	0x1ae
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x1d
+	.byte	0x1f
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF273
+	.uleb128 0x18
+	.4byte	.LASF271
 	.byte	0xd
 	.2byte	0x1af
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x1c
+	.byte	0x1e
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF274
+	.uleb128 0x18
+	.4byte	.LASF272
 	.byte	0xd
 	.2byte	0x1b0
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x1b
+	.byte	0x1d
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF275
+	.uleb128 0x18
+	.4byte	.LASF273
 	.byte	0xd
 	.2byte	0x1b1
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x1a
+	.byte	0x1c
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF276
+	.uleb128 0x18
+	.4byte	.LASF274
 	.byte	0xd
 	.2byte	0x1b2
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x19
+	.byte	0x1b
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF277
+	.uleb128 0x18
+	.4byte	.LASF275
 	.byte	0xd
 	.2byte	0x1b3
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x18
+	.byte	0x1a
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF278
+	.uleb128 0x18
+	.4byte	.LASF276
 	.byte	0xd
 	.2byte	0x1b4
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x17
+	.byte	0x19
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF171
+	.uleb128 0x18
+	.4byte	.LASF277
 	.byte	0xd
 	.2byte	0x1b5
 	.4byte	0xe9
 	.byte	0x4
+	.byte	0x1
+	.byte	0x18
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF278
+	.byte	0xd
+	.2byte	0x1b6
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
+	.byte	0x17
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF171
+	.byte	0xd
+	.2byte	0x1b7
+	.4byte	0xe9
+	.byte	0x4
 	.byte	0x17
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x1a
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x1aa
-	.4byte	0x1585
-	.uleb128 0x15
-	.4byte	0x14c0
-	.uleb128 0x18
-	.string	"val"
-	.byte	0xd
-	.2byte	0x1b7
-	.4byte	0xe9
-	.byte	0
 	.uleb128 0x19
 	.byte	0x4
 	.byte	0xd
-	.2byte	0x1ba
-	.4byte	0x162f
-	.uleb128 0x17
-	.4byte	.LASF270
+	.2byte	0x1ac
+	.4byte	0x1587
+	.uleb128 0x15
+	.4byte	0x14c2
+	.uleb128 0x1a
+	.string	"val"
 	.byte	0xd
-	.2byte	0x1bb
+	.2byte	0x1b9
 	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0x1f
 	.byte	0
 	.uleb128 0x17
-	.4byte	.LASF271
+	.byte	0x4
 	.byte	0xd
 	.2byte	0x1bc
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0x1e
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF272
+	.4byte	0x1631
+	.uleb128 0x18
+	.4byte	.LASF270
 	.byte	0xd
 	.2byte	0x1bd
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x1d
+	.byte	0x1f
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF273
+	.uleb128 0x18
+	.4byte	.LASF271
 	.byte	0xd
 	.2byte	0x1be
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x1c
+	.byte	0x1e
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF274
+	.uleb128 0x18
+	.4byte	.LASF272
 	.byte	0xd
 	.2byte	0x1bf
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x1b
+	.byte	0x1d
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF275
+	.uleb128 0x18
+	.4byte	.LASF273
 	.byte	0xd
 	.2byte	0x1c0
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x1a
+	.byte	0x1c
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF276
+	.uleb128 0x18
+	.4byte	.LASF274
 	.byte	0xd
 	.2byte	0x1c1
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x19
+	.byte	0x1b
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF277
+	.uleb128 0x18
+	.4byte	.LASF275
 	.byte	0xd
 	.2byte	0x1c2
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x18
+	.byte	0x1a
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF278
+	.uleb128 0x18
+	.4byte	.LASF276
 	.byte	0xd
 	.2byte	0x1c3
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x17
+	.byte	0x19
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF171
+	.uleb128 0x18
+	.4byte	.LASF277
 	.byte	0xd
 	.2byte	0x1c4
 	.4byte	0xe9
 	.byte	0x4
+	.byte	0x1
+	.byte	0x18
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF278
+	.byte	0xd
+	.2byte	0x1c5
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
+	.byte	0x17
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF171
+	.byte	0xd
+	.2byte	0x1c6
+	.4byte	0xe9
+	.byte	0x4
 	.byte	0x17
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x1a
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x1b9
-	.4byte	0x164a
-	.uleb128 0x15
-	.4byte	0x1585
-	.uleb128 0x18
-	.string	"val"
-	.byte	0xd
-	.2byte	0x1c6
-	.4byte	0xe9
-	.byte	0
 	.uleb128 0x19
 	.byte	0x4
 	.byte	0xd
-	.2byte	0x1c9
-	.4byte	0x16f4
-	.uleb128 0x17
-	.4byte	.LASF270
+	.2byte	0x1bb
+	.4byte	0x164c
+	.uleb128 0x15
+	.4byte	0x1587
+	.uleb128 0x1a
+	.string	"val"
 	.byte	0xd
-	.2byte	0x1ca
+	.2byte	0x1c8
 	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0x1f
 	.byte	0
 	.uleb128 0x17
-	.4byte	.LASF271
+	.byte	0x4
 	.byte	0xd
 	.2byte	0x1cb
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0x1e
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF272
+	.4byte	0x16f6
+	.uleb128 0x18
+	.4byte	.LASF270
 	.byte	0xd
 	.2byte	0x1cc
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x1d
+	.byte	0x1f
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF273
+	.uleb128 0x18
+	.4byte	.LASF271
 	.byte	0xd
 	.2byte	0x1cd
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x1c
+	.byte	0x1e
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF274
+	.uleb128 0x18
+	.4byte	.LASF272
 	.byte	0xd
 	.2byte	0x1ce
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x1b
+	.byte	0x1d
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF275
+	.uleb128 0x18
+	.4byte	.LASF273
 	.byte	0xd
 	.2byte	0x1cf
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x1a
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF276
-	.byte	0xd
-	.2byte	0x1d0
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0x19
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF277
-	.byte	0xd
-	.2byte	0x1d1
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0x18
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF278
-	.byte	0xd
-	.2byte	0x1d2
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0x17
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF171
-	.byte	0xd
-	.2byte	0x1d3
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x17
-	.byte	0
-	.byte	0
-	.byte	0
-	.uleb128 0x1a
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x1c8
-	.4byte	0x170f
-	.uleb128 0x15
-	.4byte	0x164a
-	.uleb128 0x18
-	.string	"val"
-	.byte	0xd
-	.2byte	0x1d5
-	.4byte	0xe9
-	.byte	0
-	.uleb128 0x19
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x1d8
-	.4byte	0x17b9
-	.uleb128 0x17
-	.4byte	.LASF270
-	.byte	0xd
-	.2byte	0x1d9
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0x1f
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF271
-	.byte	0xd
-	.2byte	0x1da
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0x1e
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF272
-	.byte	0xd
-	.2byte	0x1db
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
-	.byte	0x1d
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF273
-	.byte	0xd
-	.2byte	0x1dc
-	.4byte	0xe9
-	.byte	0x4
-	.byte	0x1
 	.byte	0x1c
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF274
 	.byte	0xd
-	.2byte	0x1dd
+	.2byte	0x1d0
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1b
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF275
 	.byte	0xd
-	.2byte	0x1de
+	.2byte	0x1d1
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1a
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF276
 	.byte	0xd
-	.2byte	0x1df
+	.2byte	0x1d2
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
 	.byte	0x19
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF277
 	.byte	0xd
-	.2byte	0x1e0
+	.2byte	0x1d3
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
 	.byte	0x18
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF278
+	.byte	0xd
+	.2byte	0x1d4
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
+	.byte	0x17
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF171
+	.byte	0xd
+	.2byte	0x1d5
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x17
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x19
+	.byte	0x4
+	.byte	0xd
+	.2byte	0x1ca
+	.4byte	0x1711
+	.uleb128 0x15
+	.4byte	0x164c
+	.uleb128 0x1a
+	.string	"val"
+	.byte	0xd
+	.2byte	0x1d7
+	.4byte	0xe9
+	.byte	0
+	.uleb128 0x17
+	.byte	0x4
+	.byte	0xd
+	.2byte	0x1da
+	.4byte	0x17bb
+	.uleb128 0x18
+	.4byte	.LASF270
+	.byte	0xd
+	.2byte	0x1db
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
+	.byte	0x1f
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF271
+	.byte	0xd
+	.2byte	0x1dc
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
+	.byte	0x1e
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF272
+	.byte	0xd
+	.2byte	0x1dd
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
+	.byte	0x1d
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF273
+	.byte	0xd
+	.2byte	0x1de
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
+	.byte	0x1c
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF274
+	.byte	0xd
+	.2byte	0x1df
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
+	.byte	0x1b
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF275
+	.byte	0xd
+	.2byte	0x1e0
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
+	.byte	0x1a
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF276
 	.byte	0xd
 	.2byte	0x1e1
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1
-	.byte	0x17
+	.byte	0x19
 	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF171
+	.uleb128 0x18
+	.4byte	.LASF277
 	.byte	0xd
 	.2byte	0x1e2
 	.4byte	0xe9
 	.byte	0x4
+	.byte	0x1
+	.byte	0x18
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF278
+	.byte	0xd
+	.2byte	0x1e3
+	.4byte	0xe9
+	.byte	0x4
+	.byte	0x1
+	.byte	0x17
+	.byte	0
+	.uleb128 0x18
+	.4byte	.LASF171
+	.byte	0xd
+	.2byte	0x1e4
+	.4byte	0xe9
+	.byte	0x4
 	.byte	0x17
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x1a
-	.byte	0x4
-	.byte	0xd
-	.2byte	0x1d7
-	.4byte	0x17d4
-	.uleb128 0x15
-	.4byte	0x170f
-	.uleb128 0x18
-	.string	"val"
-	.byte	0xd
-	.2byte	0x1e4
-	.4byte	0xe9
-	.byte	0
 	.uleb128 0x19
 	.byte	0x4
 	.byte	0xd
-	.2byte	0x29e
-	.4byte	0x17fe
+	.2byte	0x1d9
+	.4byte	0x17d6
+	.uleb128 0x15
+	.4byte	0x1711
+	.uleb128 0x1a
+	.string	"val"
+	.byte	0xd
+	.2byte	0x1e6
+	.4byte	0xe9
+	.byte	0
 	.uleb128 0x17
+	.byte	0x4
+	.byte	0xd
+	.2byte	0x2a0
+	.4byte	0x1800
+	.uleb128 0x18
 	.4byte	.LASF279
 	.byte	0xd
-	.2byte	0x29f
+	.2byte	0x2a1
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x1c
 	.byte	0x4
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF280
 	.byte	0xd
-	.2byte	0x2a0
+	.2byte	0x2a2
 	.4byte	0xe9
 	.byte	0x4
 	.byte	0x4
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x1a
+	.uleb128 0x19
 	.byte	0x4
 	.byte	0xd
-	.2byte	0x29d
-	.4byte	0x1819
+	.2byte	0x29f
+	.4byte	0x181b
 	.uleb128 0x15
-	.4byte	0x17d4
-	.uleb128 0x18
+	.4byte	0x17d6
+	.uleb128 0x1a
 	.string	"val"
 	.byte	0xd
-	.2byte	0x2a2
+	.2byte	0x2a4
 	.4byte	0xe9
 	.byte	0
 	.uleb128 0x1c
 	.2byte	0x400
 	.byte	0xd
-	.byte	0x15
-	.4byte	0x250d
+	.byte	0x17
+	.4byte	0x250f
 	.uleb128 0x1d
 	.string	"cmd"
 	.byte	0xd
-	.byte	0x2b
+	.byte	0x2d
 	.4byte	0x400
 	.byte	0
 	.uleb128 0xc
 	.4byte	.LASF262
 	.byte	0xd
-	.byte	0x2c
+	.byte	0x2e
 	.4byte	0xe9
 	.byte	0x4
 	.uleb128 0xc
 	.4byte	.LASF281
 	.byte	0xd
-	.byte	0x41
+	.byte	0x43
 	.4byte	0x511
 	.byte	0x8
 	.uleb128 0xc
 	.4byte	.LASF282
 	.byte	0xd
-	.byte	0x49
+	.byte	0x4b
 	.4byte	0x560
 	.byte	0xc
 	.uleb128 0xc
 	.4byte	.LASF283
 	.byte	0xd
-	.byte	0x51
+	.byte	0x53
 	.4byte	0x5af
 	.byte	0x10
 	.uleb128 0xc
 	.4byte	.LASF284
 	.byte	0xd
-	.byte	0x60
+	.byte	0x62
 	.4byte	0x667
 	.byte	0x14
 	.uleb128 0xc
 	.4byte	.LASF285
 	.byte	0xd
-	.byte	0x6a
+	.byte	0x6c
 	.4byte	0x6d4
 	.byte	0x18
 	.uleb128 0xc
 	.4byte	.LASF286
 	.byte	0xd
-	.byte	0x8c
+	.byte	0x8e
 	.4byte	0x8a9
 	.byte	0x1c
 	.uleb128 0xc
 	.4byte	.LASF287
 	.byte	0xd
-	.byte	0x94
+	.byte	0x96
 	.4byte	0x8f8
 	.byte	0x20
 	.uleb128 0xc
 	.4byte	.LASF288
 	.byte	0xd
-	.byte	0x9c
+	.byte	0x9e
 	.4byte	0x947
 	.byte	0x24
 	.uleb128 0xc
 	.4byte	.LASF289
 	.byte	0xd
-	.byte	0xa3
+	.byte	0xa5
 	.4byte	0x987
 	.byte	0x28
 	.uleb128 0xc
 	.4byte	.LASF290
 	.byte	0xd
-	.byte	0xaa
+	.byte	0xac
 	.4byte	0x9c7
 	.byte	0x2c
 	.uleb128 0xc
 	.4byte	.LASF291
 	.byte	0xd
-	.byte	0xab
+	.byte	0xad
 	.4byte	0xe9
 	.byte	0x30
 	.uleb128 0x1d
 	.string	"pin"
 	.byte	0xd
-	.byte	0xbc
+	.byte	0xbe
 	.4byte	0xa9d
 	.byte	0x34
 	.uleb128 0xc
 	.4byte	.LASF292
 	.byte	0xd
-	.byte	0xd5
+	.byte	0xd7
 	.4byte	0xbeb
 	.byte	0x38
 	.uleb128 0xc
 	.4byte	.LASF293
 	.byte	0xd
-	.byte	0xe4
+	.byte	0xe6
 	.4byte	0xca3
 	.byte	0x3c
 	.uleb128 0xc
 	.4byte	.LASF294
 	.byte	0xd
-	.byte	0xed
+	.byte	0xef
 	.4byte	0xd01
 	.byte	0x40
 	.uleb128 0xc
 	.4byte	.LASF295
 	.byte	0xd
-	.byte	0xf6
+	.byte	0xf8
 	.4byte	0xd5f
 	.byte	0x44
 	.uleb128 0xc
 	.4byte	.LASF296
 	.byte	0xd
-	.byte	0xfd
+	.byte	0xff
 	.4byte	0xd9f
 	.byte	0x48
 	.uleb128 0x1e
 	.4byte	.LASF297
 	.byte	0xd
-	.2byte	0x104
-	.4byte	0xde1
+	.2byte	0x106
+	.4byte	0xde2
 	.byte	0x4c
 	.uleb128 0x1e
 	.4byte	.LASF298
 	.byte	0xd
-	.2byte	0x10e
-	.4byte	0xe55
+	.2byte	0x110
+	.4byte	0xe57
 	.byte	0x50
 	.uleb128 0x1e
 	.4byte	.LASF299
 	.byte	0xd
-	.2byte	0x11e
-	.4byte	0xf2a
+	.2byte	0x120
+	.4byte	0xf2c
 	.byte	0x54
 	.uleb128 0x1e
 	.4byte	.LASF300
 	.byte	0xd
-	.2byte	0x128
-	.4byte	0xf9f
+	.2byte	0x12a
+	.4byte	0xfa1
 	.byte	0x58
 	.uleb128 0x1e
 	.4byte	.LASF301
 	.byte	0xd
-	.2byte	0x130
-	.4byte	0xff4
+	.2byte	0x132
+	.4byte	0xff6
 	.byte	0x5c
 	.uleb128 0x1e
 	.4byte	.LASF302
 	.byte	0xd
-	.2byte	0x138
-	.4byte	0x1049
+	.2byte	0x13a
+	.4byte	0x104b
 	.byte	0x60
 	.uleb128 0x1e
 	.4byte	.LASF303
 	.byte	0xd
-	.2byte	0x13f
-	.4byte	0x108e
+	.2byte	0x141
+	.4byte	0x1090
 	.byte	0x64
 	.uleb128 0x1e
 	.4byte	.LASF304
 	.byte	0xd
-	.2byte	0x140
+	.2byte	0x142
 	.4byte	0xe9
 	.byte	0x68
 	.uleb128 0x1e
 	.4byte	.LASF305
 	.byte	0xd
-	.2byte	0x141
+	.2byte	0x143
 	.4byte	0xe9
 	.byte	0x6c
 	.uleb128 0x1e
 	.4byte	.LASF306
 	.byte	0xd
-	.2byte	0x142
+	.2byte	0x144
 	.4byte	0xe9
 	.byte	0x70
 	.uleb128 0x1e
 	.4byte	.LASF307
 	.byte	0xd
-	.2byte	0x143
+	.2byte	0x145
 	.4byte	0xe9
 	.byte	0x74
 	.uleb128 0x1e
 	.4byte	.LASF308
 	.byte	0xd
-	.2byte	0x144
+	.2byte	0x146
 	.4byte	0xe9
 	.byte	0x78
 	.uleb128 0x1e
 	.4byte	.LASF309
 	.byte	0xd
-	.2byte	0x145
+	.2byte	0x147
 	.4byte	0xe9
 	.byte	0x7c
 	.uleb128 0x1e
 	.4byte	.LASF310
 	.byte	0xd
-	.2byte	0x146
-	.4byte	0x250d
+	.2byte	0x148
+	.4byte	0x250f
 	.byte	0x80
 	.uleb128 0x1e
 	.4byte	.LASF311
 	.byte	0xd
-	.2byte	0x147
+	.2byte	0x149
 	.4byte	0xe9
 	.byte	0xc0
 	.uleb128 0x1e
 	.4byte	.LASF312
 	.byte	0xd
-	.2byte	0x148
+	.2byte	0x14a
 	.4byte	0xe9
 	.byte	0xc4
 	.uleb128 0x1e
 	.4byte	.LASF313
 	.byte	0xd
-	.2byte	0x149
+	.2byte	0x14b
 	.4byte	0xe9
 	.byte	0xc8
 	.uleb128 0x1e
 	.4byte	.LASF314
 	.byte	0xd
-	.2byte	0x14a
+	.2byte	0x14c
 	.4byte	0xe9
 	.byte	0xcc
 	.uleb128 0x1e
 	.4byte	.LASF315
 	.byte	0xd
-	.2byte	0x14b
+	.2byte	0x14d
 	.4byte	0xe9
 	.byte	0xd0
 	.uleb128 0x1e
 	.4byte	.LASF316
 	.byte	0xd
-	.2byte	0x14c
+	.2byte	0x14e
 	.4byte	0xe9
 	.byte	0xd4
 	.uleb128 0x1e
 	.4byte	.LASF317
 	.byte	0xd
-	.2byte	0x14d
+	.2byte	0x14f
 	.4byte	0xe9
 	.byte	0xd8
 	.uleb128 0x1e
 	.4byte	.LASF318
 	.byte	0xd
-	.2byte	0x14e
+	.2byte	0x150
 	.4byte	0xe9
 	.byte	0xdc
 	.uleb128 0x1e
 	.4byte	.LASF319
 	.byte	0xd
-	.2byte	0x14f
+	.2byte	0x151
 	.4byte	0xe9
 	.byte	0xe0
 	.uleb128 0x1e
 	.4byte	.LASF320
 	.byte	0xd
-	.2byte	0x150
+	.2byte	0x152
 	.4byte	0xe9
 	.byte	0xe4
 	.uleb128 0x1e
 	.4byte	.LASF321
 	.byte	0xd
-	.2byte	0x151
+	.2byte	0x153
 	.4byte	0xe9
 	.byte	0xe8
 	.uleb128 0x1e
 	.4byte	.LASF322
 	.byte	0xd
-	.2byte	0x152
+	.2byte	0x154
 	.4byte	0xe9
 	.byte	0xec
 	.uleb128 0x1e
 	.4byte	.LASF323
 	.byte	0xd
-	.2byte	0x15c
-	.4byte	0x1103
+	.2byte	0x15e
+	.4byte	0x1105
 	.byte	0xf0
 	.uleb128 0x1e
 	.4byte	.LASF324
 	.byte	0xd
-	.2byte	0x166
-	.4byte	0x1178
+	.2byte	0x168
+	.4byte	0x117a
 	.byte	0xf4
 	.uleb128 0x1e
 	.4byte	.LASF325
 	.byte	0xd
-	.2byte	0x16d
-	.4byte	0x11bc
+	.2byte	0x16f
+	.4byte	0x11be
 	.byte	0xf8
 	.uleb128 0x1e
 	.4byte	.LASF326
 	.byte	0xd
-	.2byte	0x174
-	.4byte	0x1201
+	.2byte	0x176
+	.4byte	0x1203
 	.byte	0xfc
 	.uleb128 0x1f
 	.4byte	.LASF327
 	.byte	0xd
-	.2byte	0x18a
-	.4byte	0x1336
+	.2byte	0x18c
+	.4byte	0x1338
 	.2byte	0x100
 	.uleb128 0x1f
 	.4byte	.LASF328
 	.byte	0xd
-	.2byte	0x195
-	.4byte	0x13bb
+	.2byte	0x197
+	.4byte	0x13bd
 	.2byte	0x104
 	.uleb128 0x1f
 	.4byte	.LASF329
 	.byte	0xd
-	.2byte	0x1a1
-	.4byte	0x1450
+	.2byte	0x1a3
+	.4byte	0x1452
 	.2byte	0x108
 	.uleb128 0x1f
 	.4byte	.LASF330
 	.byte	0xd
-	.2byte	0x1a9
-	.4byte	0x14a5
+	.2byte	0x1ab
+	.4byte	0x14a7
 	.2byte	0x10c
 	.uleb128 0x1f
 	.4byte	.LASF331
 	.byte	0xd
-	.2byte	0x1b8
-	.4byte	0x156a
+	.2byte	0x1ba
+	.4byte	0x156c
 	.2byte	0x110
 	.uleb128 0x1f
 	.4byte	.LASF332
 	.byte	0xd
-	.2byte	0x1c7
-	.4byte	0x162f
+	.2byte	0x1c9
+	.4byte	0x1631
 	.2byte	0x114
 	.uleb128 0x1f
 	.4byte	.LASF333
 	.byte	0xd
-	.2byte	0x1d6
-	.4byte	0x16f4
+	.2byte	0x1d8
+	.4byte	0x16f6
 	.2byte	0x118
 	.uleb128 0x1f
 	.4byte	.LASF334
 	.byte	0xd
-	.2byte	0x1e5
-	.4byte	0x17b9
+	.2byte	0x1e7
+	.4byte	0x17bb
 	.2byte	0x11c
 	.uleb128 0x1f
 	.4byte	.LASF335
 	.byte	0xd
-	.2byte	0x1e6
+	.2byte	0x1e8
 	.4byte	0xe9
 	.2byte	0x120
 	.uleb128 0x1f
 	.4byte	.LASF336
 	.byte	0xd
-	.2byte	0x1e7
+	.2byte	0x1e9
 	.4byte	0xe9
 	.2byte	0x124
 	.uleb128 0x1f
 	.4byte	.LASF337
 	.byte	0xd
-	.2byte	0x1e8
+	.2byte	0x1ea
 	.4byte	0xe9
 	.2byte	0x128
 	.uleb128 0x1f
 	.4byte	.LASF338
 	.byte	0xd
-	.2byte	0x1e9
+	.2byte	0x1eb
 	.4byte	0xe9
 	.2byte	0x12c
 	.uleb128 0x1f
 	.4byte	.LASF339
 	.byte	0xd
-	.2byte	0x1ea
+	.2byte	0x1ec
 	.4byte	0xe9
 	.2byte	0x130
 	.uleb128 0x1f
 	.4byte	.LASF340
 	.byte	0xd
-	.2byte	0x1eb
+	.2byte	0x1ed
 	.4byte	0xe9
 	.2byte	0x134
 	.uleb128 0x1f
 	.4byte	.LASF341
 	.byte	0xd
-	.2byte	0x1ec
+	.2byte	0x1ee
 	.4byte	0xe9
 	.2byte	0x138
 	.uleb128 0x1f
 	.4byte	.LASF342
 	.byte	0xd
-	.2byte	0x1ed
+	.2byte	0x1ef
 	.4byte	0xe9
 	.2byte	0x13c
 	.uleb128 0x1f
 	.4byte	.LASF343
 	.byte	0xd
-	.2byte	0x1ee
+	.2byte	0x1f0
 	.4byte	0xe9
 	.2byte	0x140
 	.uleb128 0x1f
 	.4byte	.LASF344
 	.byte	0xd
-	.2byte	0x1ef
+	.2byte	0x1f1
 	.4byte	0xe9
 	.2byte	0x144
 	.uleb128 0x1f
 	.4byte	.LASF345
 	.byte	0xd
-	.2byte	0x1f0
+	.2byte	0x1f2
 	.4byte	0xe9
 	.2byte	0x148
 	.uleb128 0x1f
 	.4byte	.LASF346
 	.byte	0xd
-	.2byte	0x1f1
+	.2byte	0x1f3
 	.4byte	0xe9
 	.2byte	0x14c
 	.uleb128 0x1f
 	.4byte	.LASF347
 	.byte	0xd
-	.2byte	0x1f2
+	.2byte	0x1f4
 	.4byte	0xe9
 	.2byte	0x150
 	.uleb128 0x1f
 	.4byte	.LASF348
 	.byte	0xd
-	.2byte	0x1f3
+	.2byte	0x1f5
 	.4byte	0xe9
 	.2byte	0x154
 	.uleb128 0x1f
 	.4byte	.LASF349
 	.byte	0xd
-	.2byte	0x1f4
+	.2byte	0x1f6
 	.4byte	0xe9
 	.2byte	0x158
 	.uleb128 0x1f
 	.4byte	.LASF350
 	.byte	0xd
-	.2byte	0x1f5
+	.2byte	0x1f7
 	.4byte	0xe9
 	.2byte	0x15c
 	.uleb128 0x1f
 	.4byte	.LASF351
 	.byte	0xd
-	.2byte	0x1f6
+	.2byte	0x1f8
 	.4byte	0xe9
 	.2byte	0x160
 	.uleb128 0x1f
 	.4byte	.LASF352
 	.byte	0xd
-	.2byte	0x1f7
+	.2byte	0x1f9
 	.4byte	0xe9
 	.2byte	0x164
 	.uleb128 0x1f
 	.4byte	.LASF353
 	.byte	0xd
-	.2byte	0x1f8
+	.2byte	0x1fa
 	.4byte	0xe9
 	.2byte	0x168
 	.uleb128 0x1f
 	.4byte	.LASF354
 	.byte	0xd
-	.2byte	0x1f9
+	.2byte	0x1fb
 	.4byte	0xe9
 	.2byte	0x16c
 	.uleb128 0x1f
 	.4byte	.LASF355
 	.byte	0xd
-	.2byte	0x1fa
+	.2byte	0x1fc
 	.4byte	0xe9
 	.2byte	0x170
 	.uleb128 0x1f
 	.4byte	.LASF356
 	.byte	0xd
-	.2byte	0x1fb
+	.2byte	0x1fd
 	.4byte	0xe9
 	.2byte	0x174
 	.uleb128 0x1f
 	.4byte	.LASF357
 	.byte	0xd
-	.2byte	0x1fc
+	.2byte	0x1fe
 	.4byte	0xe9
 	.2byte	0x178
 	.uleb128 0x1f
 	.4byte	.LASF358
 	.byte	0xd
-	.2byte	0x1fd
+	.2byte	0x1ff
 	.4byte	0xe9
 	.2byte	0x17c
 	.uleb128 0x1f
 	.4byte	.LASF359
 	.byte	0xd
-	.2byte	0x1fe
+	.2byte	0x200
 	.4byte	0xe9
 	.2byte	0x180
 	.uleb128 0x1f
 	.4byte	.LASF360
 	.byte	0xd
-	.2byte	0x1ff
+	.2byte	0x201
 	.4byte	0xe9
 	.2byte	0x184
 	.uleb128 0x1f
 	.4byte	.LASF361
 	.byte	0xd
-	.2byte	0x200
+	.2byte	0x202
 	.4byte	0xe9
 	.2byte	0x188
 	.uleb128 0x1f
 	.4byte	.LASF362
 	.byte	0xd
-	.2byte	0x201
+	.2byte	0x203
 	.4byte	0xe9
 	.2byte	0x18c
 	.uleb128 0x1f
 	.4byte	.LASF363
 	.byte	0xd
-	.2byte	0x202
+	.2byte	0x204
 	.4byte	0xe9
 	.2byte	0x190
 	.uleb128 0x1f
 	.4byte	.LASF364
 	.byte	0xd
-	.2byte	0x203
+	.2byte	0x205
 	.4byte	0xe9
 	.2byte	0x194
 	.uleb128 0x1f
 	.4byte	.LASF365
 	.byte	0xd
-	.2byte	0x204
+	.2byte	0x206
 	.4byte	0xe9
 	.2byte	0x198
 	.uleb128 0x1f
 	.4byte	.LASF366
 	.byte	0xd
-	.2byte	0x205
+	.2byte	0x207
 	.4byte	0xe9
 	.2byte	0x19c
 	.uleb128 0x1f
 	.4byte	.LASF367
 	.byte	0xd
-	.2byte	0x206
+	.2byte	0x208
 	.4byte	0xe9
 	.2byte	0x1a0
 	.uleb128 0x1f
 	.4byte	.LASF368
 	.byte	0xd
-	.2byte	0x207
+	.2byte	0x209
 	.4byte	0xe9
 	.2byte	0x1a4
 	.uleb128 0x1f
 	.4byte	.LASF369
 	.byte	0xd
-	.2byte	0x208
+	.2byte	0x20a
 	.4byte	0xe9
 	.2byte	0x1a8
 	.uleb128 0x1f
 	.4byte	.LASF370
 	.byte	0xd
-	.2byte	0x209
+	.2byte	0x20b
 	.4byte	0xe9
 	.2byte	0x1ac
 	.uleb128 0x1f
 	.4byte	.LASF371
 	.byte	0xd
-	.2byte	0x20a
+	.2byte	0x20c
 	.4byte	0xe9
 	.2byte	0x1b0
 	.uleb128 0x1f
 	.4byte	.LASF372
 	.byte	0xd
-	.2byte	0x20b
+	.2byte	0x20d
 	.4byte	0xe9
 	.2byte	0x1b4
 	.uleb128 0x1f
 	.4byte	.LASF373
 	.byte	0xd
-	.2byte	0x20c
+	.2byte	0x20e
 	.4byte	0xe9
 	.2byte	0x1b8
 	.uleb128 0x1f
 	.4byte	.LASF374
 	.byte	0xd
-	.2byte	0x20d
+	.2byte	0x20f
 	.4byte	0xe9
 	.2byte	0x1bc
 	.uleb128 0x1f
 	.4byte	.LASF375
 	.byte	0xd
-	.2byte	0x20e
+	.2byte	0x210
 	.4byte	0xe9
 	.2byte	0x1c0
 	.uleb128 0x1f
 	.4byte	.LASF376
 	.byte	0xd
-	.2byte	0x20f
+	.2byte	0x211
 	.4byte	0xe9
 	.2byte	0x1c4
 	.uleb128 0x1f
 	.4byte	.LASF377
 	.byte	0xd
-	.2byte	0x210
+	.2byte	0x212
 	.4byte	0xe9
 	.2byte	0x1c8
 	.uleb128 0x1f
 	.4byte	.LASF378
 	.byte	0xd
-	.2byte	0x211
+	.2byte	0x213
 	.4byte	0xe9
 	.2byte	0x1cc
 	.uleb128 0x1f
 	.4byte	.LASF379
 	.byte	0xd
-	.2byte	0x212
+	.2byte	0x214
 	.4byte	0xe9
 	.2byte	0x1d0
 	.uleb128 0x1f
 	.4byte	.LASF380
 	.byte	0xd
-	.2byte	0x213
+	.2byte	0x215
 	.4byte	0xe9
 	.2byte	0x1d4
 	.uleb128 0x1f
 	.4byte	.LASF381
 	.byte	0xd
-	.2byte	0x214
+	.2byte	0x216
 	.4byte	0xe9
 	.2byte	0x1d8
 	.uleb128 0x1f
 	.4byte	.LASF382
 	.byte	0xd
-	.2byte	0x215
+	.2byte	0x217
 	.4byte	0xe9
 	.2byte	0x1dc
 	.uleb128 0x1f
 	.4byte	.LASF383
 	.byte	0xd
-	.2byte	0x216
+	.2byte	0x218
 	.4byte	0xe9
 	.2byte	0x1e0
 	.uleb128 0x1f
 	.4byte	.LASF384
 	.byte	0xd
-	.2byte	0x217
+	.2byte	0x219
 	.4byte	0xe9
 	.2byte	0x1e4
 	.uleb128 0x1f
 	.4byte	.LASF385
 	.byte	0xd
-	.2byte	0x218
+	.2byte	0x21a
 	.4byte	0xe9
 	.2byte	0x1e8
 	.uleb128 0x1f
 	.4byte	.LASF386
 	.byte	0xd
-	.2byte	0x219
+	.2byte	0x21b
 	.4byte	0xe9
 	.2byte	0x1ec
 	.uleb128 0x1f
 	.4byte	.LASF387
 	.byte	0xd
-	.2byte	0x21a
+	.2byte	0x21c
 	.4byte	0xe9
 	.2byte	0x1f0
 	.uleb128 0x1f
 	.4byte	.LASF388
 	.byte	0xd
-	.2byte	0x21b
+	.2byte	0x21d
 	.4byte	0xe9
 	.2byte	0x1f4
 	.uleb128 0x1f
 	.4byte	.LASF389
 	.byte	0xd
-	.2byte	0x21c
+	.2byte	0x21e
 	.4byte	0xe9
 	.2byte	0x1f8
 	.uleb128 0x1f
 	.4byte	.LASF390
 	.byte	0xd
-	.2byte	0x21d
+	.2byte	0x21f
 	.4byte	0xe9
 	.2byte	0x1fc
 	.uleb128 0x1f
 	.4byte	.LASF391
 	.byte	0xd
-	.2byte	0x21e
+	.2byte	0x220
 	.4byte	0xe9
 	.2byte	0x200
 	.uleb128 0x1f
 	.4byte	.LASF392
 	.byte	0xd
-	.2byte	0x21f
+	.2byte	0x221
 	.4byte	0xe9
 	.2byte	0x204
 	.uleb128 0x1f
 	.4byte	.LASF393
 	.byte	0xd
-	.2byte	0x220
+	.2byte	0x222
 	.4byte	0xe9
 	.2byte	0x208
 	.uleb128 0x1f
 	.4byte	.LASF394
 	.byte	0xd
-	.2byte	0x221
+	.2byte	0x223
 	.4byte	0xe9
 	.2byte	0x20c
 	.uleb128 0x1f
 	.4byte	.LASF395
 	.byte	0xd
-	.2byte	0x222
+	.2byte	0x224
 	.4byte	0xe9
 	.2byte	0x210
 	.uleb128 0x1f
 	.4byte	.LASF396
 	.byte	0xd
-	.2byte	0x223
+	.2byte	0x225
 	.4byte	0xe9
 	.2byte	0x214
 	.uleb128 0x1f
 	.4byte	.LASF397
 	.byte	0xd
-	.2byte	0x224
+	.2byte	0x226
 	.4byte	0xe9
 	.2byte	0x218
 	.uleb128 0x1f
 	.4byte	.LASF398
 	.byte	0xd
-	.2byte	0x225
+	.2byte	0x227
 	.4byte	0xe9
 	.2byte	0x21c
 	.uleb128 0x1f
 	.4byte	.LASF399
 	.byte	0xd
-	.2byte	0x226
+	.2byte	0x228
 	.4byte	0xe9
 	.2byte	0x220
 	.uleb128 0x1f
 	.4byte	.LASF400
 	.byte	0xd
-	.2byte	0x227
+	.2byte	0x229
 	.4byte	0xe9
 	.2byte	0x224
 	.uleb128 0x1f
 	.4byte	.LASF401
 	.byte	0xd
-	.2byte	0x228
+	.2byte	0x22a
 	.4byte	0xe9
 	.2byte	0x228
 	.uleb128 0x1f
 	.4byte	.LASF402
 	.byte	0xd
-	.2byte	0x229
+	.2byte	0x22b
 	.4byte	0xe9
 	.2byte	0x22c
 	.uleb128 0x1f
 	.4byte	.LASF403
 	.byte	0xd
-	.2byte	0x22a
+	.2byte	0x22c
 	.4byte	0xe9
 	.2byte	0x230
 	.uleb128 0x1f
 	.4byte	.LASF404
 	.byte	0xd
-	.2byte	0x22b
+	.2byte	0x22d
 	.4byte	0xe9
 	.2byte	0x234
 	.uleb128 0x1f
 	.4byte	.LASF405
 	.byte	0xd
-	.2byte	0x22c
+	.2byte	0x22e
 	.4byte	0xe9
 	.2byte	0x238
 	.uleb128 0x1f
 	.4byte	.LASF406
 	.byte	0xd
-	.2byte	0x22d
+	.2byte	0x22f
 	.4byte	0xe9
 	.2byte	0x23c
 	.uleb128 0x1f
 	.4byte	.LASF407
 	.byte	0xd
-	.2byte	0x22e
+	.2byte	0x230
 	.4byte	0xe9
 	.2byte	0x240
 	.uleb128 0x1f
 	.4byte	.LASF408
 	.byte	0xd
-	.2byte	0x22f
+	.2byte	0x231
 	.4byte	0xe9
 	.2byte	0x244
 	.uleb128 0x1f
 	.4byte	.LASF409
 	.byte	0xd
-	.2byte	0x230
+	.2byte	0x232
 	.4byte	0xe9
 	.2byte	0x248
 	.uleb128 0x1f
 	.4byte	.LASF410
 	.byte	0xd
-	.2byte	0x231
+	.2byte	0x233
 	.4byte	0xe9
 	.2byte	0x24c
 	.uleb128 0x1f
 	.4byte	.LASF411
 	.byte	0xd
-	.2byte	0x232
+	.2byte	0x234
 	.4byte	0xe9
 	.2byte	0x250
 	.uleb128 0x1f
 	.4byte	.LASF412
 	.byte	0xd
-	.2byte	0x233
+	.2byte	0x235
 	.4byte	0xe9
 	.2byte	0x254
 	.uleb128 0x1f
 	.4byte	.LASF413
 	.byte	0xd
-	.2byte	0x234
+	.2byte	0x236
 	.4byte	0xe9
 	.2byte	0x258
 	.uleb128 0x1f
 	.4byte	.LASF414
 	.byte	0xd
-	.2byte	0x235
+	.2byte	0x237
 	.4byte	0xe9
 	.2byte	0x25c
 	.uleb128 0x1f
 	.4byte	.LASF415
 	.byte	0xd
-	.2byte	0x236
+	.2byte	0x238
 	.4byte	0xe9
 	.2byte	0x260
 	.uleb128 0x1f
 	.4byte	.LASF416
 	.byte	0xd
-	.2byte	0x237
+	.2byte	0x239
 	.4byte	0xe9
 	.2byte	0x264
 	.uleb128 0x1f
 	.4byte	.LASF417
 	.byte	0xd
-	.2byte	0x238
+	.2byte	0x23a
 	.4byte	0xe9
 	.2byte	0x268
 	.uleb128 0x1f
 	.4byte	.LASF418
 	.byte	0xd
-	.2byte	0x239
+	.2byte	0x23b
 	.4byte	0xe9
 	.2byte	0x26c
 	.uleb128 0x1f
 	.4byte	.LASF419
 	.byte	0xd
-	.2byte	0x23a
+	.2byte	0x23c
 	.4byte	0xe9
 	.2byte	0x270
 	.uleb128 0x1f
 	.4byte	.LASF420
 	.byte	0xd
-	.2byte	0x23b
+	.2byte	0x23d
 	.4byte	0xe9
 	.2byte	0x274
 	.uleb128 0x1f
 	.4byte	.LASF421
 	.byte	0xd
-	.2byte	0x23c
+	.2byte	0x23e
 	.4byte	0xe9
 	.2byte	0x278
 	.uleb128 0x1f
 	.4byte	.LASF422
 	.byte	0xd
-	.2byte	0x23d
+	.2byte	0x23f
 	.4byte	0xe9
 	.2byte	0x27c
 	.uleb128 0x1f
 	.4byte	.LASF423
 	.byte	0xd
-	.2byte	0x23e
+	.2byte	0x240
 	.4byte	0xe9
 	.2byte	0x280
 	.uleb128 0x1f
 	.4byte	.LASF424
 	.byte	0xd
-	.2byte	0x23f
+	.2byte	0x241
 	.4byte	0xe9
 	.2byte	0x284
 	.uleb128 0x1f
 	.4byte	.LASF425
 	.byte	0xd
-	.2byte	0x240
+	.2byte	0x242
 	.4byte	0xe9
 	.2byte	0x288
 	.uleb128 0x1f
 	.4byte	.LASF426
 	.byte	0xd
-	.2byte	0x241
+	.2byte	0x243
 	.4byte	0xe9
 	.2byte	0x28c
 	.uleb128 0x1f
 	.4byte	.LASF427
 	.byte	0xd
-	.2byte	0x242
+	.2byte	0x244
 	.4byte	0xe9
 	.2byte	0x290
 	.uleb128 0x1f
 	.4byte	.LASF428
 	.byte	0xd
-	.2byte	0x243
+	.2byte	0x245
 	.4byte	0xe9
 	.2byte	0x294
 	.uleb128 0x1f
 	.4byte	.LASF429
 	.byte	0xd
-	.2byte	0x244
+	.2byte	0x246
 	.4byte	0xe9
 	.2byte	0x298
 	.uleb128 0x1f
 	.4byte	.LASF430
 	.byte	0xd
-	.2byte	0x245
+	.2byte	0x247
 	.4byte	0xe9
 	.2byte	0x29c
 	.uleb128 0x1f
 	.4byte	.LASF431
 	.byte	0xd
-	.2byte	0x246
+	.2byte	0x248
 	.4byte	0xe9
 	.2byte	0x2a0
 	.uleb128 0x1f
 	.4byte	.LASF432
 	.byte	0xd
-	.2byte	0x247
+	.2byte	0x249
 	.4byte	0xe9
 	.2byte	0x2a4
 	.uleb128 0x1f
 	.4byte	.LASF433
 	.byte	0xd
-	.2byte	0x248
+	.2byte	0x24a
 	.4byte	0xe9
 	.2byte	0x2a8
 	.uleb128 0x1f
 	.4byte	.LASF434
 	.byte	0xd
-	.2byte	0x249
+	.2byte	0x24b
 	.4byte	0xe9
 	.2byte	0x2ac
 	.uleb128 0x1f
 	.4byte	.LASF435
 	.byte	0xd
-	.2byte	0x24a
+	.2byte	0x24c
 	.4byte	0xe9
 	.2byte	0x2b0
 	.uleb128 0x1f
 	.4byte	.LASF436
 	.byte	0xd
-	.2byte	0x24b
+	.2byte	0x24d
 	.4byte	0xe9
 	.2byte	0x2b4
 	.uleb128 0x1f
 	.4byte	.LASF437
 	.byte	0xd
-	.2byte	0x24c
+	.2byte	0x24e
 	.4byte	0xe9
 	.2byte	0x2b8
 	.uleb128 0x1f
 	.4byte	.LASF438
 	.byte	0xd
-	.2byte	0x24d
+	.2byte	0x24f
 	.4byte	0xe9
 	.2byte	0x2bc
 	.uleb128 0x1f
 	.4byte	.LASF439
 	.byte	0xd
-	.2byte	0x24e
+	.2byte	0x250
 	.4byte	0xe9
 	.2byte	0x2c0
 	.uleb128 0x1f
 	.4byte	.LASF440
 	.byte	0xd
-	.2byte	0x24f
+	.2byte	0x251
 	.4byte	0xe9
 	.2byte	0x2c4
 	.uleb128 0x1f
 	.4byte	.LASF441
 	.byte	0xd
-	.2byte	0x250
+	.2byte	0x252
 	.4byte	0xe9
 	.2byte	0x2c8
 	.uleb128 0x1f
 	.4byte	.LASF442
 	.byte	0xd
-	.2byte	0x251
+	.2byte	0x253
 	.4byte	0xe9
 	.2byte	0x2cc
 	.uleb128 0x1f
 	.4byte	.LASF443
 	.byte	0xd
-	.2byte	0x252
+	.2byte	0x254
 	.4byte	0xe9
 	.2byte	0x2d0
 	.uleb128 0x1f
 	.4byte	.LASF444
 	.byte	0xd
-	.2byte	0x253
+	.2byte	0x255
 	.4byte	0xe9
 	.2byte	0x2d4
 	.uleb128 0x1f
 	.4byte	.LASF445
 	.byte	0xd
-	.2byte	0x254
+	.2byte	0x256
 	.4byte	0xe9
 	.2byte	0x2d8
 	.uleb128 0x1f
 	.4byte	.LASF446
 	.byte	0xd
-	.2byte	0x255
+	.2byte	0x257
 	.4byte	0xe9
 	.2byte	0x2dc
 	.uleb128 0x1f
 	.4byte	.LASF447
 	.byte	0xd
-	.2byte	0x256
+	.2byte	0x258
 	.4byte	0xe9
 	.2byte	0x2e0
 	.uleb128 0x1f
 	.4byte	.LASF448
 	.byte	0xd
-	.2byte	0x257
+	.2byte	0x259
 	.4byte	0xe9
 	.2byte	0x2e4
 	.uleb128 0x1f
 	.4byte	.LASF449
 	.byte	0xd
-	.2byte	0x258
+	.2byte	0x25a
 	.4byte	0xe9
 	.2byte	0x2e8
 	.uleb128 0x1f
 	.4byte	.LASF450
 	.byte	0xd
-	.2byte	0x259
+	.2byte	0x25b
 	.4byte	0xe9
 	.2byte	0x2ec
 	.uleb128 0x1f
 	.4byte	.LASF451
 	.byte	0xd
-	.2byte	0x25a
+	.2byte	0x25c
 	.4byte	0xe9
 	.2byte	0x2f0
 	.uleb128 0x1f
 	.4byte	.LASF452
 	.byte	0xd
-	.2byte	0x25b
+	.2byte	0x25d
 	.4byte	0xe9
 	.2byte	0x2f4
 	.uleb128 0x1f
 	.4byte	.LASF453
 	.byte	0xd
-	.2byte	0x25c
+	.2byte	0x25e
 	.4byte	0xe9
 	.2byte	0x2f8
 	.uleb128 0x1f
 	.4byte	.LASF454
 	.byte	0xd
-	.2byte	0x25d
+	.2byte	0x25f
 	.4byte	0xe9
 	.2byte	0x2fc
 	.uleb128 0x1f
 	.4byte	.LASF455
 	.byte	0xd
-	.2byte	0x25e
+	.2byte	0x260
 	.4byte	0xe9
 	.2byte	0x300
 	.uleb128 0x1f
 	.4byte	.LASF456
 	.byte	0xd
-	.2byte	0x25f
+	.2byte	0x261
 	.4byte	0xe9
 	.2byte	0x304
 	.uleb128 0x1f
 	.4byte	.LASF457
 	.byte	0xd
-	.2byte	0x260
+	.2byte	0x262
 	.4byte	0xe9
 	.2byte	0x308
 	.uleb128 0x1f
 	.4byte	.LASF458
 	.byte	0xd
-	.2byte	0x261
+	.2byte	0x263
 	.4byte	0xe9
 	.2byte	0x30c
 	.uleb128 0x1f
 	.4byte	.LASF459
 	.byte	0xd
-	.2byte	0x262
+	.2byte	0x264
 	.4byte	0xe9
 	.2byte	0x310
 	.uleb128 0x1f
 	.4byte	.LASF460
 	.byte	0xd
-	.2byte	0x263
+	.2byte	0x265
 	.4byte	0xe9
 	.2byte	0x314
 	.uleb128 0x1f
 	.4byte	.LASF461
 	.byte	0xd
-	.2byte	0x264
+	.2byte	0x266
 	.4byte	0xe9
 	.2byte	0x318
 	.uleb128 0x1f
 	.4byte	.LASF462
 	.byte	0xd
-	.2byte	0x265
+	.2byte	0x267
 	.4byte	0xe9
 	.2byte	0x31c
 	.uleb128 0x1f
 	.4byte	.LASF463
 	.byte	0xd
-	.2byte	0x266
+	.2byte	0x268
 	.4byte	0xe9
 	.2byte	0x320
 	.uleb128 0x1f
 	.4byte	.LASF464
 	.byte	0xd
-	.2byte	0x267
+	.2byte	0x269
 	.4byte	0xe9
 	.2byte	0x324
 	.uleb128 0x1f
 	.4byte	.LASF465
 	.byte	0xd
-	.2byte	0x268
+	.2byte	0x26a
 	.4byte	0xe9
 	.2byte	0x328
 	.uleb128 0x1f
 	.4byte	.LASF466
 	.byte	0xd
-	.2byte	0x269
+	.2byte	0x26b
 	.4byte	0xe9
 	.2byte	0x32c
 	.uleb128 0x1f
 	.4byte	.LASF467
 	.byte	0xd
-	.2byte	0x26a
+	.2byte	0x26c
 	.4byte	0xe9
 	.2byte	0x330
 	.uleb128 0x1f
 	.4byte	.LASF468
 	.byte	0xd
-	.2byte	0x26b
+	.2byte	0x26d
 	.4byte	0xe9
 	.2byte	0x334
 	.uleb128 0x1f
 	.4byte	.LASF469
 	.byte	0xd
-	.2byte	0x26c
+	.2byte	0x26e
 	.4byte	0xe9
 	.2byte	0x338
 	.uleb128 0x1f
 	.4byte	.LASF470
 	.byte	0xd
-	.2byte	0x26d
+	.2byte	0x26f
 	.4byte	0xe9
 	.2byte	0x33c
 	.uleb128 0x1f
 	.4byte	.LASF471
 	.byte	0xd
-	.2byte	0x26e
+	.2byte	0x270
 	.4byte	0xe9
 	.2byte	0x340
 	.uleb128 0x1f
 	.4byte	.LASF472
 	.byte	0xd
-	.2byte	0x26f
+	.2byte	0x271
 	.4byte	0xe9
 	.2byte	0x344
 	.uleb128 0x1f
 	.4byte	.LASF473
 	.byte	0xd
-	.2byte	0x270
+	.2byte	0x272
 	.4byte	0xe9
 	.2byte	0x348
 	.uleb128 0x1f
 	.4byte	.LASF474
 	.byte	0xd
-	.2byte	0x271
+	.2byte	0x273
 	.4byte	0xe9
 	.2byte	0x34c
 	.uleb128 0x1f
 	.4byte	.LASF475
 	.byte	0xd
-	.2byte	0x272
+	.2byte	0x274
 	.4byte	0xe9
 	.2byte	0x350
 	.uleb128 0x1f
 	.4byte	.LASF476
 	.byte	0xd
-	.2byte	0x273
+	.2byte	0x275
 	.4byte	0xe9
 	.2byte	0x354
 	.uleb128 0x1f
 	.4byte	.LASF477
 	.byte	0xd
-	.2byte	0x274
+	.2byte	0x276
 	.4byte	0xe9
 	.2byte	0x358
 	.uleb128 0x1f
 	.4byte	.LASF478
 	.byte	0xd
-	.2byte	0x275
+	.2byte	0x277
 	.4byte	0xe9
 	.2byte	0x35c
 	.uleb128 0x1f
 	.4byte	.LASF479
 	.byte	0xd
-	.2byte	0x276
+	.2byte	0x278
 	.4byte	0xe9
 	.2byte	0x360
 	.uleb128 0x1f
 	.4byte	.LASF480
 	.byte	0xd
-	.2byte	0x277
+	.2byte	0x279
 	.4byte	0xe9
 	.2byte	0x364
 	.uleb128 0x1f
 	.4byte	.LASF481
 	.byte	0xd
-	.2byte	0x278
+	.2byte	0x27a
 	.4byte	0xe9
 	.2byte	0x368
 	.uleb128 0x1f
 	.4byte	.LASF482
 	.byte	0xd
-	.2byte	0x279
+	.2byte	0x27b
 	.4byte	0xe9
 	.2byte	0x36c
 	.uleb128 0x1f
 	.4byte	.LASF483
 	.byte	0xd
-	.2byte	0x27a
+	.2byte	0x27c
 	.4byte	0xe9
 	.2byte	0x370
 	.uleb128 0x1f
 	.4byte	.LASF484
 	.byte	0xd
-	.2byte	0x27b
+	.2byte	0x27d
 	.4byte	0xe9
 	.2byte	0x374
 	.uleb128 0x1f
 	.4byte	.LASF485
 	.byte	0xd
-	.2byte	0x27c
+	.2byte	0x27e
 	.4byte	0xe9
 	.2byte	0x378
 	.uleb128 0x1f
 	.4byte	.LASF486
 	.byte	0xd
-	.2byte	0x27d
+	.2byte	0x27f
 	.4byte	0xe9
 	.2byte	0x37c
 	.uleb128 0x1f
 	.4byte	.LASF487
 	.byte	0xd
-	.2byte	0x27e
+	.2byte	0x280
 	.4byte	0xe9
 	.2byte	0x380
 	.uleb128 0x1f
 	.4byte	.LASF488
 	.byte	0xd
-	.2byte	0x27f
+	.2byte	0x281
 	.4byte	0xe9
 	.2byte	0x384
 	.uleb128 0x1f
 	.4byte	.LASF489
 	.byte	0xd
-	.2byte	0x280
+	.2byte	0x282
 	.4byte	0xe9
 	.2byte	0x388
 	.uleb128 0x1f
 	.4byte	.LASF490
 	.byte	0xd
-	.2byte	0x281
+	.2byte	0x283
 	.4byte	0xe9
 	.2byte	0x38c
 	.uleb128 0x1f
 	.4byte	.LASF491
 	.byte	0xd
-	.2byte	0x282
+	.2byte	0x284
 	.4byte	0xe9
 	.2byte	0x390
 	.uleb128 0x1f
 	.4byte	.LASF492
 	.byte	0xd
-	.2byte	0x283
+	.2byte	0x285
 	.4byte	0xe9
 	.2byte	0x394
 	.uleb128 0x1f
 	.4byte	.LASF493
 	.byte	0xd
-	.2byte	0x284
+	.2byte	0x286
 	.4byte	0xe9
 	.2byte	0x398
 	.uleb128 0x1f
 	.4byte	.LASF494
 	.byte	0xd
-	.2byte	0x285
+	.2byte	0x287
 	.4byte	0xe9
 	.2byte	0x39c
 	.uleb128 0x1f
 	.4byte	.LASF495
 	.byte	0xd
-	.2byte	0x286
+	.2byte	0x288
 	.4byte	0xe9
 	.2byte	0x3a0
 	.uleb128 0x1f
 	.4byte	.LASF496
 	.byte	0xd
-	.2byte	0x287
+	.2byte	0x289
 	.4byte	0xe9
 	.2byte	0x3a4
 	.uleb128 0x1f
 	.4byte	.LASF497
 	.byte	0xd
-	.2byte	0x288
+	.2byte	0x28a
 	.4byte	0xe9
 	.2byte	0x3a8
 	.uleb128 0x1f
 	.4byte	.LASF498
 	.byte	0xd
-	.2byte	0x289
+	.2byte	0x28b
 	.4byte	0xe9
 	.2byte	0x3ac
 	.uleb128 0x1f
 	.4byte	.LASF499
 	.byte	0xd
-	.2byte	0x28a
+	.2byte	0x28c
 	.4byte	0xe9
 	.2byte	0x3b0
 	.uleb128 0x1f
 	.4byte	.LASF500
 	.byte	0xd
-	.2byte	0x28b
+	.2byte	0x28d
 	.4byte	0xe9
 	.2byte	0x3b4
 	.uleb128 0x1f
 	.4byte	.LASF501
 	.byte	0xd
-	.2byte	0x28c
+	.2byte	0x28e
 	.4byte	0xe9
 	.2byte	0x3b8
 	.uleb128 0x1f
 	.4byte	.LASF502
 	.byte	0xd
-	.2byte	0x28d
+	.2byte	0x28f
 	.4byte	0xe9
 	.2byte	0x3bc
 	.uleb128 0x1f
 	.4byte	.LASF503
 	.byte	0xd
-	.2byte	0x28e
+	.2byte	0x290
 	.4byte	0xe9
 	.2byte	0x3c0
 	.uleb128 0x1f
 	.4byte	.LASF504
 	.byte	0xd
-	.2byte	0x28f
+	.2byte	0x291
 	.4byte	0xe9
 	.2byte	0x3c4
 	.uleb128 0x1f
 	.4byte	.LASF505
 	.byte	0xd
-	.2byte	0x290
+	.2byte	0x292
 	.4byte	0xe9
 	.2byte	0x3c8
 	.uleb128 0x1f
 	.4byte	.LASF506
 	.byte	0xd
-	.2byte	0x291
+	.2byte	0x293
 	.4byte	0xe9
 	.2byte	0x3cc
 	.uleb128 0x1f
 	.4byte	.LASF507
 	.byte	0xd
-	.2byte	0x292
+	.2byte	0x294
 	.4byte	0xe9
 	.2byte	0x3d0
 	.uleb128 0x1f
 	.4byte	.LASF508
 	.byte	0xd
-	.2byte	0x293
+	.2byte	0x295
 	.4byte	0xe9
 	.2byte	0x3d4
 	.uleb128 0x1f
 	.4byte	.LASF509
 	.byte	0xd
-	.2byte	0x294
+	.2byte	0x296
 	.4byte	0xe9
 	.2byte	0x3d8
 	.uleb128 0x1f
 	.4byte	.LASF510
 	.byte	0xd
-	.2byte	0x295
+	.2byte	0x297
 	.4byte	0xe9
 	.2byte	0x3dc
 	.uleb128 0x1f
 	.4byte	.LASF511
 	.byte	0xd
-	.2byte	0x296
+	.2byte	0x298
 	.4byte	0xe9
 	.2byte	0x3e0
 	.uleb128 0x1f
 	.4byte	.LASF512
 	.byte	0xd
-	.2byte	0x297
+	.2byte	0x299
 	.4byte	0xe9
 	.2byte	0x3e4
 	.uleb128 0x1f
 	.4byte	.LASF513
 	.byte	0xd
-	.2byte	0x298
+	.2byte	0x29a
 	.4byte	0xe9
 	.2byte	0x3e8
 	.uleb128 0x1f
 	.4byte	.LASF514
 	.byte	0xd
-	.2byte	0x299
+	.2byte	0x29b
 	.4byte	0xe9
 	.2byte	0x3ec
 	.uleb128 0x1f
 	.4byte	.LASF515
 	.byte	0xd
-	.2byte	0x29a
+	.2byte	0x29c
 	.4byte	0xe9
 	.2byte	0x3f0
 	.uleb128 0x1f
 	.4byte	.LASF516
 	.byte	0xd
-	.2byte	0x29b
+	.2byte	0x29d
 	.4byte	0xe9
 	.2byte	0x3f4
 	.uleb128 0x1f
 	.4byte	.LASF517
 	.byte	0xd
-	.2byte	0x29c
+	.2byte	0x29e
 	.4byte	0xe9
 	.2byte	0x3f8
 	.uleb128 0x1f
 	.4byte	.LASF279
 	.byte	0xd
-	.2byte	0x2a3
-	.4byte	0x17fe
+	.2byte	0x2a5
+	.4byte	0x1800
 	.2byte	0x3fc
 	.byte	0
 	.uleb128 0x10
 	.4byte	0xe9
-	.4byte	0x251d
+	.4byte	0x251f
 	.uleb128 0x11
 	.4byte	0xa6
 	.byte	0xf
@@ -9252,20 +9258,20 @@ spihost:
 	.uleb128 0x20
 	.4byte	.LASF518
 	.byte	0xd
-	.2byte	0x2a4
-	.4byte	0x2529
+	.2byte	0x2a6
+	.4byte	0x252b
 	.uleb128 0x21
-	.4byte	0x1819
+	.4byte	0x181b
 	.uleb128 0xb
 	.byte	0x4
 	.byte	0xe
 	.byte	0x4d
-	.4byte	0x2543
+	.4byte	0x2545
 	.uleb128 0xc
 	.4byte	.LASF519
 	.byte	0xe
 	.byte	0x4d
-	.4byte	0x25bc
+	.4byte	0x25be
 	.byte	0
 	.byte	0
 	.uleb128 0x22
@@ -9273,12 +9279,12 @@ spihost:
 	.byte	0xc
 	.byte	0xe
 	.byte	0x43
-	.4byte	0x25bc
+	.4byte	0x25be
 	.uleb128 0x12
 	.4byte	.LASF520
 	.byte	0xe
 	.byte	0x44
-	.4byte	0x25e0
+	.4byte	0x25e2
 	.byte	0x4
 	.byte	0xc
 	.byte	0x14
@@ -9287,7 +9293,7 @@ spihost:
 	.4byte	.LASF521
 	.byte	0xe
 	.byte	0x45
-	.4byte	0x25e0
+	.4byte	0x25e2
 	.byte	0x4
 	.byte	0xc
 	.byte	0x8
@@ -9296,7 +9302,7 @@ spihost:
 	.4byte	.LASF522
 	.byte	0xe
 	.byte	0x46
-	.4byte	0x25e0
+	.4byte	0x25e2
 	.byte	0x4
 	.byte	0x5
 	.byte	0x3
@@ -9305,7 +9311,7 @@ spihost:
 	.4byte	.LASF523
 	.byte	0xe
 	.byte	0x47
-	.4byte	0x25e0
+	.4byte	0x25e2
 	.byte	0x4
 	.byte	0x1
 	.byte	0x2
@@ -9314,7 +9320,7 @@ spihost:
 	.string	"eof"
 	.byte	0xe
 	.byte	0x48
-	.4byte	0x25e0
+	.4byte	0x25e2
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1
@@ -9323,7 +9329,7 @@ spihost:
 	.4byte	.LASF26
 	.byte	0xe
 	.byte	0x49
-	.4byte	0x25e0
+	.4byte	0x25e2
 	.byte	0x4
 	.byte	0x1
 	.byte	0
@@ -9332,52 +9338,52 @@ spihost:
 	.string	"buf"
 	.byte	0xe
 	.byte	0x4a
-	.4byte	0x25e5
+	.4byte	0x25e7
 	.byte	0x4
 	.uleb128 0x23
-	.4byte	0x25c2
+	.4byte	0x25c4
 	.byte	0x8
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x2543
+	.4byte	0x2545
 	.uleb128 0x14
 	.byte	0x4
 	.byte	0xe
 	.byte	0x4b
-	.4byte	0x25e0
+	.4byte	0x25e2
 	.uleb128 0x24
 	.4byte	.LASF524
 	.byte	0xe
 	.byte	0x4c
-	.4byte	0x25e0
+	.4byte	0x25e2
 	.uleb128 0x16
 	.string	"qe"
 	.byte	0xe
 	.byte	0x4d
-	.4byte	0x252e
+	.4byte	0x2530
 	.byte	0
 	.uleb128 0x21
 	.4byte	0xe9
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x25eb
+	.4byte	0x25ed
 	.uleb128 0x21
 	.4byte	0xc8
 	.uleb128 0x4
 	.4byte	.LASF525
 	.byte	0xe
 	.byte	0x4f
-	.4byte	0x2543
+	.4byte	0x2545
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x25f0
+	.4byte	0x25f2
 	.uleb128 0xe
 	.byte	0x4
 	.4byte	0x2c
 	.byte	0xf
 	.byte	0x28
-	.4byte	0x2620
+	.4byte	0x2622
 	.uleb128 0xf
 	.4byte	.LASF526
 	.byte	0
@@ -9392,12 +9398,12 @@ spihost:
 	.4byte	.LASF529
 	.byte	0xf
 	.byte	0x2c
-	.4byte	0x2601
+	.4byte	0x2603
 	.uleb128 0xb
 	.byte	0x18
 	.byte	0xf
 	.byte	0x36
-	.4byte	0x267c
+	.4byte	0x267e
 	.uleb128 0xc
 	.4byte	.LASF530
 	.byte	0xf
@@ -9439,18 +9445,18 @@ spihost:
 	.4byte	.LASF536
 	.byte	0xf
 	.byte	0x3d
-	.4byte	0x262b
+	.4byte	0x262d
 	.uleb128 0x4
 	.4byte	.LASF537
 	.byte	0xf
 	.byte	0x4a
-	.4byte	0x2692
+	.4byte	0x2694
 	.uleb128 0x22
 	.4byte	.LASF537
 	.byte	0x28
 	.byte	0xf
 	.byte	0x6b
-	.4byte	0x26f3
+	.4byte	0x26f5
 	.uleb128 0xc
 	.4byte	.LASF539
 	.byte	0xf
@@ -9488,33 +9494,33 @@ spihost:
 	.4byte	0xad
 	.byte	0x18
 	.uleb128 0x23
-	.4byte	0x27d1
+	.4byte	0x27d3
 	.byte	0x1c
 	.uleb128 0x23
-	.4byte	0x2800
+	.4byte	0x2802
 	.byte	0x20
 	.byte	0
 	.uleb128 0x4
 	.4byte	.LASF543
 	.byte	0xf
 	.byte	0x4b
-	.4byte	0x26fe
+	.4byte	0x2700
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x2704
+	.4byte	0x2706
 	.uleb128 0x9
-	.4byte	0x270f
+	.4byte	0x2711
 	.uleb128 0xa
-	.4byte	0x270f
+	.4byte	0x2711
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x2687
+	.4byte	0x2689
 	.uleb128 0xb
 	.byte	0x24
 	.byte	0xf
 	.byte	0x50
-	.4byte	0x27c6
+	.4byte	0x27c8
 	.uleb128 0xc
 	.4byte	.LASF544
 	.byte	0xf
@@ -9585,13 +9591,13 @@ spihost:
 	.4byte	.LASF554
 	.byte	0xf
 	.byte	0x5c
-	.4byte	0x26f3
+	.4byte	0x26f5
 	.byte	0x18
 	.uleb128 0xc
 	.4byte	.LASF555
 	.byte	0xf
 	.byte	0x5d
-	.4byte	0x26f3
+	.4byte	0x26f5
 	.byte	0x1c
 	.uleb128 0xc
 	.4byte	.LASF556
@@ -9604,12 +9610,12 @@ spihost:
 	.4byte	.LASF557
 	.byte	0xf
 	.byte	0x5f
-	.4byte	0x2715
+	.4byte	0x2717
 	.uleb128 0x14
 	.byte	0x4
 	.byte	0xf
 	.byte	0x72
-	.4byte	0x27f0
+	.4byte	0x27f2
 	.uleb128 0x24
 	.4byte	.LASF558
 	.byte	0xf
@@ -9619,11 +9625,11 @@ spihost:
 	.4byte	.LASF559
 	.byte	0xf
 	.byte	0x74
-	.4byte	0x27f0
+	.4byte	0x27f2
 	.byte	0
 	.uleb128 0x10
 	.4byte	0xc8
-	.4byte	0x2800
+	.4byte	0x2802
 	.uleb128 0x11
 	.4byte	0xa6
 	.byte	0x3
@@ -9632,7 +9638,7 @@ spihost:
 	.byte	0x4
 	.byte	0xf
 	.byte	0x76
-	.4byte	0x281f
+	.4byte	0x2821
 	.uleb128 0x24
 	.4byte	.LASF560
 	.byte	0xf
@@ -9642,54 +9648,54 @@ spihost:
 	.4byte	.LASF561
 	.byte	0xf
 	.byte	0x78
-	.4byte	0x27f0
+	.4byte	0x27f2
 	.byte	0
 	.uleb128 0x4
 	.4byte	.LASF562
 	.byte	0xf
 	.byte	0x80
-	.4byte	0x282a
+	.4byte	0x282c
 	.uleb128 0x22
 	.4byte	.LASF562
 	.byte	0x44
 	.byte	0xf
 	.byte	0x91
-	.4byte	0x2867
+	.4byte	0x2869
 	.uleb128 0x1d
 	.string	"cfg"
 	.byte	0xf
 	.byte	0x92
-	.4byte	0x27c6
+	.4byte	0x27c8
 	.byte	0
 	.uleb128 0xc
 	.4byte	.LASF563
 	.byte	0xf
 	.byte	0x93
-	.4byte	0x291a
+	.4byte	0x291c
 	.byte	0x24
 	.uleb128 0xc
 	.4byte	.LASF564
 	.byte	0xf
 	.byte	0x94
-	.4byte	0x267c
+	.4byte	0x267e
 	.byte	0x28
 	.uleb128 0xc
 	.4byte	.LASF565
 	.byte	0xf
 	.byte	0x95
-	.4byte	0x2620
+	.4byte	0x2622
 	.byte	0x40
 	.byte	0
 	.uleb128 0xb
 	.byte	0x54
 	.byte	0xf
 	.byte	0x82
-	.4byte	0x28f3
+	.4byte	0x28f5
 	.uleb128 0xc
 	.4byte	.LASF566
 	.byte	0xf
 	.byte	0x83
-	.4byte	0x28f3
+	.4byte	0x28f5
 	.byte	0
 	.uleb128 0xc
 	.4byte	.LASF567
@@ -9701,7 +9707,7 @@ spihost:
 	.string	"hw"
 	.byte	0xf
 	.byte	0x85
-	.4byte	0x2909
+	.4byte	0x290b
 	.byte	0x1c
 	.uleb128 0xc
 	.4byte	.LASF568
@@ -9713,13 +9719,13 @@ spihost:
 	.4byte	.LASF569
 	.byte	0xf
 	.byte	0x88
-	.4byte	0x25fb
+	.4byte	0x25fd
 	.byte	0x24
 	.uleb128 0xc
 	.4byte	.LASF570
 	.byte	0xf
 	.byte	0x89
-	.4byte	0x25fb
+	.4byte	0x25fd
 	.byte	0x28
 	.uleb128 0xc
 	.4byte	.LASF571
@@ -9749,162 +9755,162 @@ spihost:
 	.4byte	.LASF574
 	.byte	0xf
 	.byte	0x8e
-	.4byte	0x267c
+	.4byte	0x267e
 	.byte	0x3c
 	.byte	0
 	.uleb128 0x10
-	.4byte	0x2903
-	.4byte	0x2903
+	.4byte	0x2905
+	.4byte	0x2905
 	.uleb128 0x11
 	.4byte	0xa6
 	.byte	0x5
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x281f
+	.4byte	0x2821
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x251d
+	.4byte	0x251f
 	.uleb128 0x4
 	.4byte	.LASF575
 	.byte	0xf
 	.byte	0x8f
-	.4byte	0x2867
+	.4byte	0x2869
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x290f
+	.4byte	0x2911
 	.uleb128 0x4
 	.4byte	.LASF576
 	.byte	0xf
 	.byte	0x98
-	.4byte	0x2903
+	.4byte	0x2905
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x27c6
+	.4byte	0x27c8
 	.uleb128 0xb
 	.byte	0x1c
 	.byte	0x1
 	.byte	0x65
-	.4byte	0x2a29
+	.4byte	0x2a2b
 	.uleb128 0xc
 	.4byte	.LASF577
 	.byte	0x1
 	.byte	0x66
-	.4byte	0x2a29
+	.4byte	0x2a2b
 	.byte	0
 	.uleb128 0xc
 	.4byte	.LASF578
 	.byte	0x1
 	.byte	0x67
-	.4byte	0x2a29
+	.4byte	0x2a2b
 	.byte	0x1
 	.uleb128 0xc
 	.4byte	.LASF579
 	.byte	0x1
 	.byte	0x68
-	.4byte	0x2a29
+	.4byte	0x2a2b
 	.byte	0x2
 	.uleb128 0xc
 	.4byte	.LASF580
 	.byte	0x1
 	.byte	0x69
-	.4byte	0x2a29
+	.4byte	0x2a2b
 	.byte	0x3
 	.uleb128 0xc
 	.4byte	.LASF581
 	.byte	0x1
 	.byte	0x6a
-	.4byte	0x2a29
+	.4byte	0x2a2b
 	.byte	0x4
 	.uleb128 0xc
 	.4byte	.LASF582
 	.byte	0x1
 	.byte	0x6b
-	.4byte	0x2a29
+	.4byte	0x2a2b
 	.byte	0x5
 	.uleb128 0xc
 	.4byte	.LASF583
 	.byte	0x1
 	.byte	0x6c
-	.4byte	0x2a29
+	.4byte	0x2a2b
 	.byte	0x6
 	.uleb128 0xc
 	.4byte	.LASF584
 	.byte	0x1
 	.byte	0x6d
-	.4byte	0x2a29
+	.4byte	0x2a2b
 	.byte	0x7
 	.uleb128 0xc
 	.4byte	.LASF585
 	.byte	0x1
 	.byte	0x6e
-	.4byte	0x2a29
+	.4byte	0x2a2b
 	.byte	0x8
 	.uleb128 0xc
 	.4byte	.LASF586
 	.byte	0x1
 	.byte	0x6f
-	.4byte	0x2a2e
+	.4byte	0x2a30
 	.byte	0x9
 	.uleb128 0xc
 	.4byte	.LASF587
 	.byte	0x1
 	.byte	0x70
-	.4byte	0x2a29
+	.4byte	0x2a2b
 	.byte	0xc
 	.uleb128 0xc
 	.4byte	.LASF588
 	.byte	0x1
 	.byte	0x71
-	.4byte	0x2a29
+	.4byte	0x2a2b
 	.byte	0xd
 	.uleb128 0xc
 	.4byte	.LASF589
 	.byte	0x1
 	.byte	0x72
-	.4byte	0x2a29
+	.4byte	0x2a2b
 	.byte	0xe
 	.uleb128 0xc
 	.4byte	.LASF590
 	.byte	0x1
 	.byte	0x73
-	.4byte	0x2a29
+	.4byte	0x2a2b
 	.byte	0xf
 	.uleb128 0xc
 	.4byte	.LASF591
 	.byte	0x1
 	.byte	0x74
-	.4byte	0x2a29
+	.4byte	0x2a2b
 	.byte	0x10
 	.uleb128 0xc
 	.4byte	.LASF592
 	.byte	0x1
 	.byte	0x75
-	.4byte	0x2a29
+	.4byte	0x2a2b
 	.byte	0x11
 	.uleb128 0x1d
 	.string	"irq"
 	.byte	0x1
 	.byte	0x76
-	.4byte	0x2a29
+	.4byte	0x2a2b
 	.byte	0x12
 	.uleb128 0xc
 	.4byte	.LASF593
 	.byte	0x1
 	.byte	0x77
-	.4byte	0x2a29
+	.4byte	0x2a2b
 	.byte	0x13
 	.uleb128 0xc
 	.4byte	.LASF594
 	.byte	0x1
 	.byte	0x78
-	.4byte	0x2a33
+	.4byte	0x2a35
 	.byte	0x14
 	.uleb128 0x1d
 	.string	"hw"
 	.byte	0x1
 	.byte	0x79
-	.4byte	0x2909
+	.4byte	0x290b
 	.byte	0x18
 	.byte	0
 	.uleb128 0x7
@@ -9917,7 +9923,7 @@ spihost:
 	.4byte	.LASF595
 	.byte	0x1
 	.byte	0x7a
-	.4byte	0x2931
+	.4byte	0x2933
 	.uleb128 0x4
 	.4byte	.LASF596
 	.byte	0x1
@@ -9929,7 +9935,7 @@ spihost:
 	.2byte	0x287
 	.4byte	0x33
 	.byte	0x1
-	.4byte	0x2a82
+	.4byte	0x2a84
 	.uleb128 0x26
 	.4byte	.LASF597
 	.byte	0x1
@@ -9952,7 +9958,7 @@ spihost:
 	.byte	0xa7
 	.4byte	0xe9
 	.byte	0x3
-	.4byte	0x2a9e
+	.4byte	0x2aa0
 	.uleb128 0x29
 	.string	"reg"
 	.byte	0x2
@@ -9965,7 +9971,7 @@ spihost:
 	.2byte	0x13d
 	.4byte	0x122
 	.byte	0x1
-	.4byte	0x2ad5
+	.4byte	0x2ad7
 	.uleb128 0x26
 	.4byte	.LASF572
 	.byte	0x1
@@ -9978,25 +9984,25 @@ spihost:
 	.4byte	0x122
 	.uleb128 0x2c
 	.4byte	.LASF600
-	.4byte	0x2ae5
+	.4byte	0x2ae7
 	.4byte	.LASF601
 	.byte	0
 	.uleb128 0x10
 	.4byte	0xb6
-	.4byte	0x2ae5
+	.4byte	0x2ae7
 	.uleb128 0x11
 	.4byte	0xa6
 	.byte	0x17
 	.byte	0
 	.uleb128 0x7
-	.4byte	0x2ad5
+	.4byte	0x2ad7
 	.uleb128 0x2a
 	.4byte	.LASF602
 	.byte	0x1
 	.2byte	0x14f
 	.4byte	0x122
 	.byte	0x1
-	.4byte	0x2b15
+	.4byte	0x2b17
 	.uleb128 0x26
 	.4byte	.LASF572
 	.byte	0x1
@@ -10004,30 +10010,30 @@ spihost:
 	.4byte	0x33
 	.uleb128 0x2c
 	.4byte	.LASF600
-	.4byte	0x2b25
+	.4byte	0x2b27
 	.4byte	.LASF602
 	.byte	0
 	.uleb128 0x10
 	.4byte	0xb6
-	.4byte	0x2b25
+	.4byte	0x2b27
 	.uleb128 0x11
 	.4byte	0xa6
 	.byte	0x16
 	.byte	0
 	.uleb128 0x7
-	.4byte	0x2b15
+	.4byte	0x2b17
 	.uleb128 0x25
 	.4byte	.LASF603
 	.byte	0x1
 	.2byte	0x1f9
 	.4byte	0x117
 	.byte	0x1
-	.4byte	0x2b60
+	.4byte	0x2b62
 	.uleb128 0x26
 	.4byte	.LASF563
 	.byte	0x1
 	.2byte	0x1f9
-	.4byte	0x2620
+	.4byte	0x2622
 	.uleb128 0x26
 	.4byte	.LASF604
 	.byte	0x1
@@ -10047,12 +10053,12 @@ spihost:
 	.2byte	0x2c7
 	.4byte	0x117
 	.byte	0x1
-	.4byte	0x2be4
+	.4byte	0x2be6
 	.uleb128 0x26
 	.4byte	.LASF606
 	.byte	0x1
 	.2byte	0x2c7
-	.4byte	0x2920
+	.4byte	0x2922
 	.uleb128 0x26
 	.4byte	.LASF607
 	.byte	0x1
@@ -10067,9 +10073,9 @@ spihost:
 	.4byte	.LASF563
 	.byte	0x1
 	.2byte	0x2ce
-	.4byte	0x291a
+	.4byte	0x291c
 	.uleb128 0x2f
-	.4byte	0x2bb1
+	.4byte	0x2bb3
 	.uleb128 0x2b
 	.string	"err"
 	.byte	0x1
@@ -10105,12 +10111,12 @@ spihost:
 	.2byte	0x33b
 	.4byte	0x117
 	.byte	0x1
-	.4byte	0x2c18
+	.4byte	0x2c1a
 	.uleb128 0x26
 	.4byte	.LASF606
 	.byte	0x1
 	.2byte	0x33b
-	.4byte	0x2920
+	.4byte	0x2922
 	.uleb128 0x2b
 	.string	"i"
 	.byte	0x1
@@ -10120,7 +10126,7 @@ spihost:
 	.4byte	.LASF563
 	.byte	0x1
 	.2byte	0x342
-	.4byte	0x291a
+	.4byte	0x291c
 	.byte	0
 	.uleb128 0x25
 	.4byte	.LASF613
@@ -10128,12 +10134,12 @@ spihost:
 	.2byte	0x290
 	.4byte	0x33
 	.byte	0x1
-	.4byte	0x2cc0
+	.4byte	0x2cc2
 	.uleb128 0x27
 	.string	"hw"
 	.byte	0x1
 	.2byte	0x290
-	.4byte	0x2909
+	.4byte	0x290b
 	.uleb128 0x26
 	.4byte	.LASF597
 	.byte	0x1
@@ -10201,16 +10207,16 @@ spihost:
 	.4byte	.LASF626
 	.byte	0x1
 	.byte	0xcb
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2d34
+	.4byte	0x2d36
 	.uleb128 0x31
 	.4byte	.LASF620
 	.byte	0x1
 	.byte	0xcb
-	.4byte	0x25fb
+	.4byte	0x25fd
 	.4byte	.LLST0
 	.uleb128 0x32
 	.string	"len"
@@ -10222,7 +10228,7 @@ spihost:
 	.4byte	.LASF621
 	.byte	0x1
 	.byte	0xcb
-	.4byte	0x2d34
+	.4byte	0x2d36
 	.4byte	.LLST2
 	.uleb128 0x31
 	.4byte	.LASF622
@@ -10248,17 +10254,17 @@ spihost:
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x2a29
+	.4byte	0x2a2b
 	.uleb128 0x36
 	.4byte	.LASF629
 	.byte	0x1
 	.byte	0xf6
 	.4byte	0x122
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2df3
+	.4byte	0x2df5
 	.uleb128 0x31
 	.4byte	.LASF624
 	.byte	0x1
@@ -10269,7 +10275,7 @@ spihost:
 	.string	"cb"
 	.byte	0x1
 	.byte	0xf6
-	.4byte	0x2a43
+	.4byte	0x2a45
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x37
@@ -10292,31 +10298,31 @@ spihost:
 	.4byte	0x122
 	.4byte	.LLST8
 	.uleb128 0x38
-	.4byte	0x2a82
+	.4byte	0x2a84
 	.4byte	.LBB29
 	.4byte	.Ldebug_ranges0+0x20
 	.byte	0x1
 	.2byte	0x103
-	.4byte	0x2db7
+	.4byte	0x2db9
 	.uleb128 0x39
-	.4byte	0x2a92
+	.4byte	0x2a94
 	.4byte	.LLST9
 	.byte	0
 	.uleb128 0x3a
-	.4byte	0x2a82
+	.4byte	0x2a84
 	.4byte	.LBB33
 	.4byte	.LBE33-.LBB33
 	.byte	0x1
 	.2byte	0x104
-	.4byte	0x2dd5
+	.4byte	0x2dd7
 	.uleb128 0x39
-	.4byte	0x2a92
+	.4byte	0x2a94
 	.4byte	.LLST10
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL14
-	.4byte	0x3fc7
-	.4byte	0x2de9
+	.4byte	0x3fc9
+	.4byte	0x2deb
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10326,26 +10332,26 @@ spihost:
 	.byte	0
 	.uleb128 0x3d
 	.4byte	.LVL22
-	.4byte	0x3fd2
+	.4byte	0x3fd4
 	.byte	0
 	.uleb128 0x3e
 	.4byte	.LASF703
 	.byte	0x1
 	.2byte	0x10c
 	.4byte	0x122
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x3f
 	.4byte	.LASF627
 	.byte	0x1
 	.2byte	0x112
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2e98
+	.4byte	0x2e9a
 	.uleb128 0x40
 	.4byte	.LASF624
 	.byte	0x1
@@ -10353,31 +10359,31 @@ spihost:
 	.4byte	0x33
 	.4byte	.LLST11
 	.uleb128 0x38
-	.4byte	0x2a82
+	.4byte	0x2a84
 	.4byte	.LBB35
 	.4byte	.Ldebug_ranges0+0x38
 	.byte	0x1
 	.2byte	0x118
-	.4byte	0x2e4d
+	.4byte	0x2e4f
 	.uleb128 0x39
-	.4byte	0x2a92
+	.4byte	0x2a94
 	.4byte	.LLST12
 	.byte	0
 	.uleb128 0x3a
-	.4byte	0x2a82
+	.4byte	0x2a84
 	.4byte	.LBB39
 	.4byte	.LBE39-.LBB39
 	.byte	0x1
 	.2byte	0x119
-	.4byte	0x2e6b
+	.4byte	0x2e6d
 	.uleb128 0x39
-	.4byte	0x2a92
+	.4byte	0x2a94
 	.4byte	.LLST13
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL24
-	.4byte	0x3fc7
-	.4byte	0x2e7f
+	.4byte	0x3fc9
+	.4byte	0x2e81
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10392,7 +10398,7 @@ spihost:
 	.sleb128 0
 	.uleb128 0x42
 	.4byte	.LVL29
-	.4byte	0x3fd2
+	.4byte	0x3fd4
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10405,11 +10411,11 @@ spihost:
 	.4byte	.LASF628
 	.byte	0x1
 	.2byte	0x123
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2ee3
+	.4byte	0x2ee5
 	.uleb128 0x40
 	.4byte	.LASF624
 	.byte	0x1
@@ -10418,8 +10424,8 @@ spihost:
 	.4byte	.LLST14
 	.uleb128 0x3b
 	.4byte	.LVL32
-	.4byte	0x3fc7
-	.4byte	0x2ed2
+	.4byte	0x3fc9
+	.4byte	0x2ed4
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10429,7 +10435,7 @@ spihost:
 	.byte	0
 	.uleb128 0x42
 	.4byte	.LVL34
-	.4byte	0x3fd2
+	.4byte	0x3fd4
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10443,16 +10449,16 @@ spihost:
 	.byte	0x1
 	.2byte	0x12c
 	.4byte	0x122
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2f2d
+	.4byte	0x2f2f
 	.uleb128 0x40
 	.4byte	.LASF563
 	.byte	0x1
 	.2byte	0x12c
-	.4byte	0x2620
+	.4byte	0x2622
 	.4byte	.LLST15
 	.uleb128 0x44
 	.string	"ret"
@@ -10463,7 +10469,7 @@ spihost:
 	.byte	0x53
 	.uleb128 0x42
 	.4byte	.LVL38
-	.4byte	0x3fdd
+	.4byte	0x3fdf
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10478,16 +10484,16 @@ spihost:
 	.byte	0x1
 	.2byte	0x135
 	.4byte	0x122
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2f77
+	.4byte	0x2f79
 	.uleb128 0x40
 	.4byte	.LASF563
 	.byte	0x1
 	.2byte	0x135
-	.4byte	0x2620
+	.4byte	0x2622
 	.4byte	.LLST16
 	.uleb128 0x44
 	.string	"ret"
@@ -10498,7 +10504,7 @@ spihost:
 	.byte	0x53
 	.uleb128 0x42
 	.4byte	.LVL42
-	.4byte	0x3fe8
+	.4byte	0x3fea
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10509,43 +10515,43 @@ spihost:
 	.byte	0
 	.byte	0
 	.uleb128 0x45
-	.4byte	0x2a9e
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	0x2aa0
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x303c
+	.4byte	0x303e
 	.uleb128 0x39
-	.4byte	0x2aaf
+	.4byte	0x2ab1
 	.4byte	.LLST17
 	.uleb128 0x46
-	.4byte	0x2abb
+	.4byte	0x2abd
 	.4byte	.LLST18
 	.uleb128 0x47
-	.4byte	0x2ac7
+	.4byte	0x2ac9
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$7074
+	.4byte	__func__$7120
 	.uleb128 0x48
 	.4byte	.LBB43
 	.4byte	.LBE43-.LBB43
-	.4byte	0x3004
+	.4byte	0x3006
 	.uleb128 0x39
-	.4byte	0x2aaf
+	.4byte	0x2ab1
 	.4byte	.LLST19
 	.uleb128 0x49
 	.4byte	.LBB44
 	.4byte	.LBE44-.LBB44
 	.uleb128 0x4a
-	.4byte	0x2abb
+	.4byte	0x2abd
 	.uleb128 0x47
-	.4byte	0x2ac7
+	.4byte	0x2ac9
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$7074
+	.4byte	__func__$7120
 	.uleb128 0x42
 	.4byte	.LVL46
-	.4byte	0x3ff3
+	.4byte	0x3ff5
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10563,7 +10569,7 @@ spihost:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$7074
+	.4byte	__func__$7120
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5d
@@ -10575,8 +10581,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL48
-	.4byte	0x3fc7
-	.4byte	0x3018
+	.4byte	0x3fc9
+	.4byte	0x301a
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10586,8 +10592,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL51
-	.4byte	0x3fdd
-	.4byte	0x302b
+	.4byte	0x3fdf
+	.4byte	0x302d
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10596,7 +10602,7 @@ spihost:
 	.byte	0
 	.uleb128 0x42
 	.4byte	.LVL52
-	.4byte	0x3fd2
+	.4byte	0x3fd4
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10610,22 +10616,22 @@ spihost:
 	.byte	0x1
 	.2byte	0x164
 	.4byte	0x117
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x34e2
+	.4byte	0x34e4
 	.uleb128 0x40
 	.4byte	.LASF563
 	.byte	0x1
 	.2byte	0x164
-	.4byte	0x2620
+	.4byte	0x2622
 	.4byte	.LLST20
 	.uleb128 0x40
 	.4byte	.LASF564
 	.byte	0x1
 	.2byte	0x164
-	.4byte	0x34e2
+	.4byte	0x34e4
 	.4byte	.LLST21
 	.uleb128 0x40
 	.4byte	.LASF632
@@ -10653,10 +10659,10 @@ spihost:
 	.4byte	.LLST25
 	.uleb128 0x4d
 	.4byte	.LASF636
-	.4byte	0x34e8
+	.4byte	0x34ea
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$7087
+	.4byte	__FUNCTION__$7133
 	.uleb128 0x4e
 	.4byte	.LASF705
 	.byte	0x1
@@ -10665,7 +10671,7 @@ spihost:
 	.uleb128 0x48
 	.4byte	.LBB45
 	.4byte	.LBE45-.LBB45
-	.4byte	0x3179
+	.4byte	0x317b
 	.uleb128 0x4c
 	.4byte	.LASF637
 	.byte	0x1
@@ -10673,20 +10679,20 @@ spihost:
 	.4byte	0x33
 	.4byte	.LLST26
 	.uleb128 0x38
-	.4byte	0x2a82
+	.4byte	0x2a84
 	.4byte	.LBB46
 	.4byte	.Ldebug_ranges0+0x50
 	.byte	0x1
 	.2byte	0x1ea
-	.4byte	0x310c
+	.4byte	0x310e
 	.uleb128 0x39
-	.4byte	0x2a92
+	.4byte	0x2a94
 	.4byte	.LLST27
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL116
-	.4byte	0x2a9e
-	.4byte	0x3120
+	.4byte	0x2aa0
+	.4byte	0x3122
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10696,8 +10702,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL118
-	.4byte	0x2f2d
-	.4byte	0x3134
+	.4byte	0x2f2f
+	.4byte	0x3136
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10707,11 +10713,11 @@ spihost:
 	.byte	0
 	.uleb128 0x3d
 	.4byte	.LVL119
-	.4byte	0x3ffe
+	.4byte	0x4000
 	.uleb128 0x3b
 	.4byte	.LVL127
-	.4byte	0x4009
-	.4byte	0x3156
+	.4byte	0x400b
+	.4byte	0x3158
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10726,8 +10732,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL128
-	.4byte	0x4009
-	.4byte	0x316f
+	.4byte	0x400b
+	.4byte	0x3171
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10742,15 +10748,15 @@ spihost:
 	.byte	0
 	.uleb128 0x3d
 	.4byte	.LVL129
-	.4byte	0x2e09
+	.4byte	0x2e0b
 	.byte	0
 	.uleb128 0x3d
 	.4byte	.LVL55
-	.4byte	0x3ffe
+	.4byte	0x4000
 	.uleb128 0x3b
 	.4byte	.LVL57
-	.4byte	0x4014
-	.4byte	0x31ca
+	.4byte	0x4016
+	.4byte	0x31cc
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10779,7 +10785,7 @@ spihost:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$7087
+	.4byte	__FUNCTION__$7133
 	.uleb128 0x3c
 	.uleb128 0x2
 	.byte	0x71
@@ -10797,17 +10803,17 @@ spihost:
 	.byte	0
 	.uleb128 0x3d
 	.4byte	.LVL59
-	.4byte	0x3ffe
+	.4byte	0x4000
 	.uleb128 0x3d
 	.4byte	.LVL62
-	.4byte	0x3ffe
+	.4byte	0x4000
 	.uleb128 0x3d
 	.4byte	.LVL65
-	.4byte	0x3ffe
+	.4byte	0x4000
 	.uleb128 0x3b
 	.4byte	.LVL68
-	.4byte	0x4014
-	.4byte	0x3223
+	.4byte	0x4016
+	.4byte	0x3225
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10836,7 +10842,7 @@ spihost:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$7087
+	.4byte	__FUNCTION__$7133
 	.uleb128 0x3c
 	.uleb128 0x2
 	.byte	0x71
@@ -10847,11 +10853,11 @@ spihost:
 	.byte	0
 	.uleb128 0x3d
 	.4byte	.LVL70
-	.4byte	0x3ffe
+	.4byte	0x4000
 	.uleb128 0x3b
 	.4byte	.LVL72
-	.4byte	0x4014
-	.4byte	0x326a
+	.4byte	0x4016
+	.4byte	0x326c
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10880,7 +10886,7 @@ spihost:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$7087
+	.4byte	__FUNCTION__$7133
 	.uleb128 0x3c
 	.uleb128 0x2
 	.byte	0x71
@@ -10891,20 +10897,20 @@ spihost:
 	.byte	0
 	.uleb128 0x3d
 	.4byte	.LVL74
-	.4byte	0x3ffe
+	.4byte	0x4000
 	.uleb128 0x3d
 	.4byte	.LVL77
-	.4byte	0x3ffe
+	.4byte	0x4000
 	.uleb128 0x3d
 	.4byte	.LVL80
-	.4byte	0x3ffe
+	.4byte	0x4000
 	.uleb128 0x3d
 	.4byte	.LVL83
-	.4byte	0x3ffe
+	.4byte	0x4000
 	.uleb128 0x3b
 	.4byte	.LVL86
-	.4byte	0x401f
-	.4byte	0x32a7
+	.4byte	0x4021
+	.4byte	0x32a9
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -10919,8 +10925,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL87
-	.4byte	0x2ee3
-	.4byte	0x32bb
+	.4byte	0x2ee5
+	.4byte	0x32bd
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10930,11 +10936,11 @@ spihost:
 	.byte	0
 	.uleb128 0x3d
 	.4byte	.LVL88
-	.4byte	0x3ffe
+	.4byte	0x4000
 	.uleb128 0x3b
 	.4byte	.LVL92
-	.4byte	0x4009
-	.4byte	0x32dd
+	.4byte	0x400b
+	.4byte	0x32df
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10949,8 +10955,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL93
-	.4byte	0x4028
-	.4byte	0x32f6
+	.4byte	0x402a
+	.4byte	0x32f8
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -10965,8 +10971,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL94
-	.4byte	0x4031
-	.4byte	0x3309
+	.4byte	0x4033
+	.4byte	0x330b
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -10975,8 +10981,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL101
-	.4byte	0x403d
-	.4byte	0x331c
+	.4byte	0x403f
+	.4byte	0x331e
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -10985,8 +10991,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL102
-	.4byte	0x4049
-	.4byte	0x334b
+	.4byte	0x404b
+	.4byte	0x334d
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -11023,8 +11029,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL103
-	.4byte	0x4054
-	.4byte	0x335f
+	.4byte	0x4056
+	.4byte	0x3361
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5c
@@ -11034,8 +11040,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL104
-	.4byte	0x403d
-	.4byte	0x3372
+	.4byte	0x403f
+	.4byte	0x3374
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -11044,8 +11050,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL105
-	.4byte	0x4049
-	.4byte	0x339f
+	.4byte	0x404b
+	.4byte	0x33a1
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -11080,8 +11086,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL106
-	.4byte	0x4054
-	.4byte	0x33b2
+	.4byte	0x4056
+	.4byte	0x33b4
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5c
@@ -11090,8 +11096,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL107
-	.4byte	0x403d
-	.4byte	0x33c5
+	.4byte	0x403f
+	.4byte	0x33c7
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -11100,8 +11106,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL108
-	.4byte	0x4049
-	.4byte	0x33f2
+	.4byte	0x404b
+	.4byte	0x33f4
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -11136,8 +11142,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL109
-	.4byte	0x4054
-	.4byte	0x3405
+	.4byte	0x4056
+	.4byte	0x3407
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5c
@@ -11146,8 +11152,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL110
-	.4byte	0x403d
-	.4byte	0x3418
+	.4byte	0x403f
+	.4byte	0x341a
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -11156,8 +11162,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL111
-	.4byte	0x4049
-	.4byte	0x3445
+	.4byte	0x404b
+	.4byte	0x3447
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -11192,8 +11198,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL112
-	.4byte	0x4054
-	.4byte	0x3458
+	.4byte	0x4056
+	.4byte	0x345a
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5c
@@ -11202,8 +11208,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL113
-	.4byte	0x403d
-	.4byte	0x346b
+	.4byte	0x403f
+	.4byte	0x346d
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -11212,8 +11218,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL114
-	.4byte	0x4049
-	.4byte	0x3496
+	.4byte	0x404b
+	.4byte	0x3498
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -11246,8 +11252,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL115
-	.4byte	0x3fdd
-	.4byte	0x34ab
+	.4byte	0x3fdf
+	.4byte	0x34ad
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -11258,14 +11264,14 @@ spihost:
 	.byte	0
 	.uleb128 0x3d
 	.4byte	.LVL134
-	.4byte	0x405f
+	.4byte	0x4061
 	.uleb128 0x3d
 	.4byte	.LVL135
-	.4byte	0x405f
+	.4byte	0x4061
 	.uleb128 0x3b
 	.4byte	.LVL136
-	.4byte	0x405f
-	.4byte	0x34d1
+	.4byte	0x4061
+	.4byte	0x34d3
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -11275,7 +11281,7 @@ spihost:
 	.byte	0
 	.uleb128 0x42
 	.4byte	.LVL137
-	.4byte	0x2f2d
+	.4byte	0x2f2f
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -11286,45 +11292,45 @@ spihost:
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x267c
+	.4byte	0x267e
 	.uleb128 0x7
-	.4byte	0x2ad5
+	.4byte	0x2ad7
 	.uleb128 0x45
-	.4byte	0x2aea
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	0x2aec
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x358f
+	.4byte	0x3591
 	.uleb128 0x39
-	.4byte	0x2afb
+	.4byte	0x2afd
 	.4byte	.LLST28
 	.uleb128 0x47
-	.4byte	0x2b07
+	.4byte	0x2b09
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$7078
+	.4byte	__func__$7124
 	.uleb128 0x48
 	.4byte	.LBB52
 	.4byte	.LBE52-.LBB52
-	.4byte	0x3540
+	.4byte	0x3542
 	.uleb128 0x39
-	.4byte	0x2afb
+	.4byte	0x2afd
 	.4byte	.LLST29
 	.uleb128 0x49
 	.4byte	.LBB53
 	.4byte	.LBE53-.LBB53
 	.uleb128 0x47
-	.4byte	0x2b07
+	.4byte	0x2b09
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$7078
+	.4byte	__func__$7124
 	.byte	0
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL143
-	.4byte	0x3ff3
-	.4byte	0x3557
+	.4byte	0x3ff5
+	.4byte	0x3559
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -11334,8 +11340,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL144
-	.4byte	0x3fc7
-	.4byte	0x356b
+	.4byte	0x3fc9
+	.4byte	0x356d
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -11345,8 +11351,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL146
-	.4byte	0x3fe8
-	.4byte	0x357e
+	.4byte	0x3fea
+	.4byte	0x3580
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -11355,7 +11361,7 @@ spihost:
 	.byte	0
 	.uleb128 0x42
 	.4byte	.LVL147
-	.4byte	0x3fd2
+	.4byte	0x3fd4
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -11369,34 +11375,34 @@ spihost:
 	.byte	0x1
 	.2byte	0x216
 	.4byte	0x117
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x372d
+	.4byte	0x372f
 	.uleb128 0x40
 	.4byte	.LASF563
 	.byte	0x1
 	.2byte	0x216
-	.4byte	0x2620
+	.4byte	0x2622
 	.4byte	.LLST30
 	.uleb128 0x40
 	.4byte	.LASF564
 	.byte	0x1
 	.2byte	0x216
-	.4byte	0x34e2
+	.4byte	0x34e4
 	.4byte	.LLST31
 	.uleb128 0x40
 	.4byte	.LASF639
 	.byte	0x1
 	.2byte	0x216
-	.4byte	0x292b
+	.4byte	0x292d
 	.4byte	.LLST32
 	.uleb128 0x40
 	.4byte	.LASF606
 	.byte	0x1
 	.2byte	0x216
-	.4byte	0x372d
+	.4byte	0x372f
 	.4byte	.LLST33
 	.uleb128 0x4c
 	.4byte	.LASF640
@@ -11420,12 +11426,12 @@ spihost:
 	.string	"dev"
 	.byte	0x1
 	.2byte	0x240
-	.4byte	0x2903
+	.4byte	0x2905
 	.4byte	.LLST37
 	.uleb128 0x48
 	.4byte	.LBB54
 	.4byte	.LBE54-.LBB54
-	.4byte	0x3662
+	.4byte	0x3664
 	.uleb128 0x4f
 	.string	"ret"
 	.byte	0x1
@@ -11434,7 +11440,7 @@ spihost:
 	.4byte	.LLST38
 	.uleb128 0x42
 	.4byte	.LVL154
-	.4byte	0x303c
+	.4byte	0x303e
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -11456,8 +11462,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL159
-	.4byte	0x406a
-	.4byte	0x3676
+	.4byte	0x406c
+	.4byte	0x3678
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -11467,8 +11473,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL161
-	.4byte	0x4028
-	.4byte	0x3695
+	.4byte	0x402a
+	.4byte	0x3697
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -11489,8 +11495,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL162
-	.4byte	0x401f
-	.4byte	0x36b5
+	.4byte	0x4021
+	.4byte	0x36b7
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -11512,8 +11518,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL163
-	.4byte	0x401f
-	.4byte	0x36d4
+	.4byte	0x4021
+	.4byte	0x36d6
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -11534,8 +11540,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL167
-	.4byte	0x403d
-	.4byte	0x36e7
+	.4byte	0x403f
+	.4byte	0x36e9
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -11544,8 +11550,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL168
-	.4byte	0x4049
-	.4byte	0x370a
+	.4byte	0x404b
+	.4byte	0x370c
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -11570,8 +11576,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL170
-	.4byte	0x403d
-	.4byte	0x371d
+	.4byte	0x403f
+	.4byte	0x371f
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -11580,7 +11586,7 @@ spihost:
 	.byte	0
 	.uleb128 0x42
 	.4byte	.LVL171
-	.4byte	0x4075
+	.4byte	0x4077
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -11590,22 +11596,22 @@ spihost:
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x2920
+	.4byte	0x2922
 	.uleb128 0x43
 	.4byte	.LASF642
 	.byte	0x1
 	.2byte	0x26f
 	.4byte	0x117
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x382a
+	.4byte	0x382c
 	.uleb128 0x40
 	.4byte	.LASF606
 	.byte	0x1
 	.2byte	0x26f
-	.4byte	0x2920
+	.4byte	0x2922
 	.4byte	.LLST39
 	.uleb128 0x2b
 	.string	"x"
@@ -11613,47 +11619,47 @@ spihost:
 	.2byte	0x271
 	.4byte	0x33
 	.uleb128 0x38
-	.4byte	0x2b2a
+	.4byte	0x2b2c
 	.4byte	.LBB61
 	.4byte	.Ldebug_ranges0+0x68
 	.byte	0x1
 	.2byte	0x27f
-	.4byte	0x3805
+	.4byte	0x3807
 	.uleb128 0x39
-	.4byte	0x2b47
+	.4byte	0x2b49
 	.4byte	.LLST40
 	.uleb128 0x39
-	.4byte	0x2b3b
+	.4byte	0x2b3d
 	.4byte	.LLST41
 	.uleb128 0x48
 	.4byte	.LBB63
 	.4byte	.LBE63-.LBB63
-	.4byte	0x37a0
+	.4byte	0x37a2
 	.uleb128 0x4a
-	.4byte	0x2b54
+	.4byte	0x2b56
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LBB64
 	.4byte	.LBE64-.LBB64
-	.4byte	0x37eb
+	.4byte	0x37ed
 	.uleb128 0x39
-	.4byte	0x2b47
+	.4byte	0x2b49
 	.4byte	.LLST42
 	.uleb128 0x39
-	.4byte	0x2b3b
+	.4byte	0x2b3d
 	.4byte	.LLST43
 	.uleb128 0x3d
 	.4byte	.LVL182
-	.4byte	0x4081
+	.4byte	0x4083
 	.uleb128 0x3d
 	.4byte	.LVL183
-	.4byte	0x405f
+	.4byte	0x4061
 	.uleb128 0x3d
 	.4byte	.LVL184
-	.4byte	0x405f
+	.4byte	0x4061
 	.uleb128 0x42
 	.4byte	.LVL185
-	.4byte	0x405f
+	.4byte	0x4061
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -11664,10 +11670,10 @@ spihost:
 	.byte	0
 	.uleb128 0x3d
 	.4byte	.LVL180
-	.4byte	0x2aea
+	.4byte	0x2aec
 	.uleb128 0x42
 	.4byte	.LVL181
-	.4byte	0x2f2d
+	.4byte	0x2f2f
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -11678,8 +11684,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL187
-	.4byte	0x405f
-	.4byte	0x3819
+	.4byte	0x4061
+	.4byte	0x381b
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -11689,7 +11695,7 @@ spihost:
 	.byte	0
 	.uleb128 0x42
 	.4byte	.LVL189
-	.4byte	0x405f
+	.4byte	0x4061
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -11699,63 +11705,63 @@ spihost:
 	.byte	0
 	.byte	0
 	.uleb128 0x45
-	.4byte	0x2b60
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	0x2b62
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x3a38
+	.4byte	0x3a3a
 	.uleb128 0x39
-	.4byte	0x2b71
+	.4byte	0x2b73
 	.4byte	.LLST44
 	.uleb128 0x39
-	.4byte	0x2b7d
+	.4byte	0x2b7f
 	.4byte	.LLST45
 	.uleb128 0x4a
-	.4byte	0x2b89
+	.4byte	0x2b8b
 	.uleb128 0x4a
-	.4byte	0x2b93
+	.4byte	0x2b95
 	.uleb128 0x34
 	.4byte	.Ldebug_ranges0+0x88
 	.uleb128 0x39
-	.4byte	0x2b7d
+	.4byte	0x2b7f
 	.4byte	.LLST46
 	.uleb128 0x39
-	.4byte	0x2b71
+	.4byte	0x2b73
 	.4byte	.LLST47
 	.uleb128 0x34
 	.4byte	.Ldebug_ranges0+0x88
 	.uleb128 0x46
-	.4byte	0x2b89
+	.4byte	0x2b8b
 	.4byte	.LLST48
 	.uleb128 0x46
-	.4byte	0x2b93
+	.4byte	0x2b95
 	.4byte	.LLST49
 	.uleb128 0x50
 	.4byte	.Ldebug_ranges0+0xa0
-	.4byte	0x3902
+	.4byte	0x3904
 	.uleb128 0x46
-	.4byte	0x2ba4
+	.4byte	0x2ba6
 	.4byte	.LLST50
 	.uleb128 0x3a
-	.4byte	0x2b2a
+	.4byte	0x2b2c
 	.4byte	.LBB87
 	.4byte	.LBE87-.LBB87
 	.byte	0x1
 	.2byte	0x2db
-	.4byte	0x38d8
+	.4byte	0x38da
 	.uleb128 0x39
-	.4byte	0x2b47
+	.4byte	0x2b49
 	.4byte	.LLST51
 	.uleb128 0x39
-	.4byte	0x2b3b
+	.4byte	0x2b3d
 	.4byte	.LLST52
 	.uleb128 0x3d
 	.4byte	.LVL201
-	.4byte	0x2aea
+	.4byte	0x2aec
 	.uleb128 0x42
 	.4byte	.LVL202
-	.4byte	0x2f2d
+	.4byte	0x2f2f
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -11765,8 +11771,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL203
-	.4byte	0x303c
-	.4byte	0x38f8
+	.4byte	0x303e
+	.4byte	0x38fa
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -11788,86 +11794,86 @@ spihost:
 	.byte	0
 	.uleb128 0x3d
 	.4byte	.LVL250
-	.4byte	0x408d
+	.4byte	0x408f
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LBB89
 	.4byte	.LBE89-.LBB89
-	.4byte	0x39e8
+	.4byte	0x39ea
 	.uleb128 0x46
-	.4byte	0x2bb2
+	.4byte	0x2bb4
 	.4byte	.LLST53
 	.uleb128 0x47
-	.4byte	0x2bbe
+	.4byte	0x2bc0
 	.uleb128 0x1
 	.byte	0x5b
 	.uleb128 0x46
-	.4byte	0x2bca
+	.4byte	0x2bcc
 	.4byte	.LLST54
 	.uleb128 0x46
-	.4byte	0x2bd6
+	.4byte	0x2bd8
 	.4byte	.LLST55
 	.uleb128 0x51
-	.4byte	0x2c18
+	.4byte	0x2c1a
 	.4byte	.LBB90
 	.4byte	.Ldebug_ranges0+0xb8
 	.byte	0x1
 	.2byte	0x2f2
 	.uleb128 0x39
-	.4byte	0x2c34
+	.4byte	0x2c36
 	.4byte	.LLST56
 	.uleb128 0x39
-	.4byte	0x2c4b
+	.4byte	0x2c4d
 	.4byte	.LLST57
 	.uleb128 0x39
-	.4byte	0x2c40
+	.4byte	0x2c42
 	.4byte	.LLST58
 	.uleb128 0x39
-	.4byte	0x2c29
+	.4byte	0x2c2b
 	.4byte	.LLST59
 	.uleb128 0x34
 	.4byte	.Ldebug_ranges0+0xb8
 	.uleb128 0x46
-	.4byte	0x2c57
+	.4byte	0x2c59
 	.4byte	.LLST60
 	.uleb128 0x46
-	.4byte	0x2c63
+	.4byte	0x2c65
 	.4byte	.LLST61
 	.uleb128 0x46
-	.4byte	0x2c6d
+	.4byte	0x2c6f
 	.4byte	.LLST62
 	.uleb128 0x46
-	.4byte	0x2c77
+	.4byte	0x2c79
 	.4byte	.LLST63
 	.uleb128 0x46
-	.4byte	0x2c81
+	.4byte	0x2c83
 	.4byte	.LLST64
 	.uleb128 0x49
 	.4byte	.LBB92
 	.4byte	.LBE92-.LBB92
 	.uleb128 0x46
-	.4byte	0x2c8e
+	.4byte	0x2c90
 	.4byte	.LLST65
 	.uleb128 0x4a
-	.4byte	0x2c9a
+	.4byte	0x2c9c
 	.uleb128 0x46
-	.4byte	0x2ca6
+	.4byte	0x2ca8
 	.4byte	.LLST66
 	.uleb128 0x46
-	.4byte	0x2cb2
+	.4byte	0x2cb4
 	.4byte	.LLST67
 	.uleb128 0x51
-	.4byte	0x2a4e
+	.4byte	0x2a50
 	.4byte	.LBB93
 	.4byte	.Ldebug_ranges0+0xd0
 	.byte	0x1
 	.2byte	0x2bf
 	.uleb128 0x52
-	.4byte	0x2a77
+	.4byte	0x2a79
 	.uleb128 0x52
-	.4byte	0x2a6b
+	.4byte	0x2a6d
 	.uleb128 0x39
-	.4byte	0x2a5f
+	.4byte	0x2a61
 	.4byte	.LLST68
 	.byte	0
 	.byte	0
@@ -11876,8 +11882,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL199
-	.4byte	0x4099
-	.4byte	0x3a07
+	.4byte	0x409b
+	.4byte	0x3a09
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -11898,8 +11904,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL246
-	.4byte	0x4075
-	.4byte	0x3a1a
+	.4byte	0x4077
+	.4byte	0x3a1c
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -11908,7 +11914,7 @@ spihost:
 	.byte	0
 	.uleb128 0x42
 	.4byte	.LVL248
-	.4byte	0x40a4
+	.4byte	0x40a6
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -11930,36 +11936,36 @@ spihost:
 	.byte	0
 	.byte	0
 	.uleb128 0x45
-	.4byte	0x2be4
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	0x2be6
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x3ab2
+	.4byte	0x3ab4
 	.uleb128 0x39
-	.4byte	0x2bf5
+	.4byte	0x2bf7
 	.4byte	.LLST69
 	.uleb128 0x4a
-	.4byte	0x2c01
+	.4byte	0x2c03
 	.uleb128 0x4a
-	.4byte	0x2c0b
+	.4byte	0x2c0d
 	.uleb128 0x34
 	.4byte	.Ldebug_ranges0+0xf0
 	.uleb128 0x39
-	.4byte	0x2bf5
+	.4byte	0x2bf7
 	.4byte	.LLST70
 	.uleb128 0x34
 	.4byte	.Ldebug_ranges0+0xf0
 	.uleb128 0x46
-	.4byte	0x2c01
+	.4byte	0x2c03
 	.4byte	.LLST71
 	.uleb128 0x46
-	.4byte	0x2c0b
+	.4byte	0x2c0d
 	.4byte	.LLST72
 	.uleb128 0x3b
 	.4byte	.LVL255
-	.4byte	0x4075
-	.4byte	0x3a96
+	.4byte	0x4077
+	.4byte	0x3a98
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -11968,7 +11974,7 @@ spihost:
 	.byte	0
 	.uleb128 0x42
 	.4byte	.LVL256
-	.4byte	0x408d
+	.4byte	0x408f
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -11993,20 +11999,20 @@ spihost:
 	.byte	0x1
 	.2byte	0x356
 	.4byte	0x117
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x3af8
+	.4byte	0x3afa
 	.uleb128 0x40
 	.4byte	.LASF606
 	.byte	0x1
 	.2byte	0x356
-	.4byte	0x2920
+	.4byte	0x2922
 	.4byte	.LLST73
 	.uleb128 0x42
 	.4byte	.LVL261
-	.4byte	0x40a4
+	.4byte	0x40a6
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -12029,21 +12035,21 @@ spihost:
 	.4byte	.LASF644
 	.byte	0x1
 	.2byte	0x35d
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x3b37
+	.4byte	0x3b39
 	.uleb128 0x53
 	.4byte	.LASF606
 	.byte	0x1
 	.2byte	0x35d
-	.4byte	0x2920
+	.4byte	0x2922
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x42
 	.4byte	.LVL263
-	.4byte	0x40a4
+	.4byte	0x40a6
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5b
@@ -12067,22 +12073,22 @@ spihost:
 	.byte	0x1
 	.2byte	0x363
 	.4byte	0xe9
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x3baa
+	.4byte	0x3bac
 	.uleb128 0x40
 	.4byte	.LASF606
 	.byte	0x1
 	.2byte	0x363
-	.4byte	0x2920
+	.4byte	0x2922
 	.4byte	.LLST74
 	.uleb128 0x54
 	.4byte	.LASF563
 	.byte	0x1
 	.2byte	0x365
-	.4byte	0x291a
+	.4byte	0x291c
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x4c
@@ -12093,8 +12099,8 @@ spihost:
 	.4byte	.LLST75
 	.uleb128 0x3b
 	.4byte	.LVL266
-	.4byte	0x2b60
-	.4byte	0x3b99
+	.4byte	0x2b62
+	.4byte	0x3b9b
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -12110,7 +12116,7 @@ spihost:
 	.byte	0
 	.uleb128 0x42
 	.4byte	.LVL268
-	.4byte	0x2be4
+	.4byte	0x2be6
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -12124,16 +12130,16 @@ spihost:
 	.byte	0x1
 	.2byte	0x370
 	.4byte	0xe9
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x3c59
+	.4byte	0x3c5b
 	.uleb128 0x40
 	.4byte	.LASF606
 	.byte	0x1
 	.2byte	0x370
-	.4byte	0x2920
+	.4byte	0x2922
 	.4byte	.LLST76
 	.uleb128 0x40
 	.4byte	.LASF646
@@ -12145,7 +12151,7 @@ spihost:
 	.4byte	.LASF563
 	.byte	0x1
 	.2byte	0x372
-	.4byte	0x291a
+	.4byte	0x291c
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x4c
@@ -12156,8 +12162,8 @@ spihost:
 	.4byte	.LLST78
 	.uleb128 0x3b
 	.4byte	.LVL272
-	.4byte	0x2b60
-	.4byte	0x3c1b
+	.4byte	0x2b62
+	.4byte	0x3c1d
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -12172,8 +12178,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL275
-	.4byte	0x2be4
-	.4byte	0x3c2f
+	.4byte	0x2be6
+	.4byte	0x3c31
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -12183,8 +12189,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL276
-	.4byte	0x2b60
-	.4byte	0x3c48
+	.4byte	0x2b62
+	.4byte	0x3c4a
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -12199,7 +12205,7 @@ spihost:
 	.byte	0
 	.uleb128 0x42
 	.4byte	.LVL279
-	.4byte	0x2be4
+	.4byte	0x2be6
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -12213,27 +12219,27 @@ spihost:
 	.byte	0x1
 	.2byte	0x382
 	.4byte	0x122
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x3c84
+	.4byte	0x3c86
 	.uleb128 0x40
 	.4byte	.LASF606
 	.byte	0x1
 	.2byte	0x382
-	.4byte	0x2920
+	.4byte	0x2922
 	.4byte	.LLST79
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LASF650
 	.byte	0x1
 	.2byte	0x388
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x3cd5
+	.4byte	0x3cd7
 	.uleb128 0x40
 	.4byte	.LASF563
 	.byte	0x1
@@ -12244,21 +12250,21 @@ spihost:
 	.string	"sdi"
 	.byte	0x1
 	.2byte	0x388
-	.4byte	0x3cd5
+	.4byte	0x3cd7
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x55
 	.string	"sdo"
 	.byte	0x1
 	.2byte	0x388
-	.4byte	0x3cd5
+	.4byte	0x3cd7
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x55
 	.string	"sck"
 	.byte	0x1
 	.2byte	0x388
-	.4byte	0x3cd5
+	.4byte	0x3cd7
 	.uleb128 0x1
 	.byte	0x55
 	.byte	0
@@ -12270,29 +12276,29 @@ spihost:
 	.byte	0x1
 	.2byte	0x399
 	.4byte	0x117
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x3e77
+	.4byte	0x3e79
 	.uleb128 0x40
 	.4byte	.LASF606
 	.byte	0x1
 	.2byte	0x399
-	.4byte	0x2920
+	.4byte	0x2922
 	.4byte	.LLST81
 	.uleb128 0x53
 	.4byte	.LASF652
 	.byte	0x1
 	.2byte	0x399
-	.4byte	0x270f
+	.4byte	0x2711
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x4c
 	.4byte	.LASF563
 	.byte	0x1
 	.2byte	0x39f
-	.4byte	0x291a
+	.4byte	0x291c
 	.4byte	.LLST82
 	.uleb128 0x4f
 	.string	"ret"
@@ -12310,13 +12316,13 @@ spihost:
 	.4byte	.LASF654
 	.byte	0x1
 	.2byte	0x3a2
-	.4byte	0x2d34
+	.4byte	0x2d36
 	.4byte	.LLST85
 	.uleb128 0x4c
 	.4byte	.LASF655
 	.byte	0x1
 	.2byte	0x3a3
-	.4byte	0x3e77
+	.4byte	0x3e79
 	.4byte	.LLST86
 	.uleb128 0x4c
 	.4byte	.LASF656
@@ -12386,7 +12392,7 @@ spihost:
 	.4byte	.LLST97
 	.uleb128 0x50
 	.4byte	.Ldebug_ranges0+0x108
-	.4byte	0x3e2b
+	.4byte	0x3e2d
 	.uleb128 0x4f
 	.string	"idx"
 	.byte	0x1
@@ -12396,8 +12402,8 @@ spihost:
 	.byte	0
 	.uleb128 0x3b
 	.4byte	.LVL297
-	.4byte	0x2b60
-	.4byte	0x3e46
+	.4byte	0x2b62
+	.4byte	0x3e48
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -12414,7 +12420,7 @@ spihost:
 	.byte	0
 	.uleb128 0x56
 	.4byte	.LVL299
-	.4byte	0x3e56
+	.4byte	0x3e58
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -12424,7 +12430,7 @@ spihost:
 	.byte	0
 	.uleb128 0x56
 	.4byte	.LVL361
-	.4byte	0x3e66
+	.4byte	0x3e68
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -12434,7 +12440,7 @@ spihost:
 	.byte	0
 	.uleb128 0x42
 	.4byte	.LVL362
-	.4byte	0x2be4
+	.4byte	0x2be6
 	.uleb128 0x3c
 	.uleb128 0x1
 	.byte	0x5a
@@ -12447,8 +12453,8 @@ spihost:
 	.byte	0x4
 	.4byte	0xc8
 	.uleb128 0x10
-	.4byte	0x291a
-	.4byte	0x3e8d
+	.4byte	0x291c
+	.4byte	0x3e8f
 	.uleb128 0x11
 	.4byte	0xa6
 	.byte	0x2
@@ -12457,7 +12463,7 @@ spihost:
 	.4byte	.LASF664
 	.byte	0x1
 	.byte	0x58
-	.4byte	0x3e7d
+	.4byte	0x3e7f
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	spihost
@@ -12471,8 +12477,8 @@ spihost:
 	.4byte	.LC40
 	.byte	0x9f
 	.uleb128 0x10
-	.4byte	0x2a38
-	.4byte	0x3ec0
+	.4byte	0x2a3a
+	.4byte	0x3ec2
 	.uleb128 0x11
 	.4byte	0xa6
 	.byte	0x2
@@ -12481,15 +12487,15 @@ spihost:
 	.4byte	.LASF666
 	.byte	0x1
 	.byte	0x7f
-	.4byte	0x3ed1
+	.4byte	0x3ed3
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	io_signal
 	.uleb128 0x7
-	.4byte	0x3eb0
+	.4byte	0x3eb2
 	.uleb128 0x10
 	.4byte	0x33
-	.4byte	0x3ee6
+	.4byte	0x3ee8
 	.uleb128 0x11
 	.4byte	0xa6
 	.byte	0x1
@@ -12498,17 +12504,17 @@ spihost:
 	.4byte	.LASF667
 	.byte	0x1
 	.byte	0xec
-	.4byte	0x3ef7
+	.4byte	0x3ef9
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	dmaworkaround_channels_busy
 	.uleb128 0x21
-	.4byte	0x3ed6
+	.4byte	0x3ed8
 	.uleb128 0x57
 	.4byte	.LASF668
 	.byte	0x1
 	.byte	0xed
-	.4byte	0x2a43
+	.4byte	0x2a45
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	dmaworkaround_cb
@@ -12538,7 +12544,7 @@ spihost:
 	.4byte	dmaworkaround_waiting_for_chan
 	.uleb128 0x10
 	.4byte	0x122
-	.4byte	0x3f50
+	.4byte	0x3f52
 	.uleb128 0x11
 	.4byte	0xa6
 	.byte	0x2
@@ -12547,7 +12553,7 @@ spihost:
 	.4byte	.LASF672
 	.byte	0x1
 	.byte	0xf1
-	.4byte	0x3f40
+	.4byte	0x3f42
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	spi_periph_claimed
@@ -12569,7 +12575,7 @@ spihost:
 	.4byte	spi_dma_spinlock
 	.uleb128 0x10
 	.4byte	0xe9
-	.4byte	0x3f93
+	.4byte	0x3f95
 	.uleb128 0x11
 	.4byte	0xa6
 	.byte	0x27
@@ -12577,35 +12583,35 @@ spihost:
 	.uleb128 0x58
 	.4byte	.LASF675
 	.byte	0x10
-	.byte	0x19
-	.4byte	0x3f9e
+	.byte	0x1d
+	.4byte	0x3fa0
 	.uleb128 0x7
-	.4byte	0x3f83
+	.4byte	0x3f85
 	.uleb128 0x59
 	.4byte	.LASF676
 	.byte	0xd
-	.2byte	0x2a6
-	.4byte	0x251d
+	.2byte	0x2a8
+	.4byte	0x251f
 	.uleb128 0x59
 	.4byte	.LASF677
 	.byte	0xd
-	.2byte	0x2a7
-	.4byte	0x251d
+	.2byte	0x2a9
+	.4byte	0x251f
 	.uleb128 0x59
 	.4byte	.LASF678
 	.byte	0xd
-	.2byte	0x2a8
-	.4byte	0x251d
+	.2byte	0x2aa
+	.4byte	0x251f
 	.uleb128 0x5a
 	.4byte	.LASF679
 	.4byte	.LASF679
 	.byte	0x7
-	.byte	0xda
+	.byte	0xf4
 	.uleb128 0x5a
 	.4byte	.LASF680
 	.4byte	.LASF680
 	.byte	0x7
-	.byte	0xd9
+	.byte	0xf3
 	.uleb128 0x5a
 	.4byte	.LASF681
 	.4byte	.LASF681
@@ -12953,6 +12959,19 @@ spihost:
 	.byte	0
 	.byte	0
 	.uleb128 0x17
+	.uleb128 0x13
+	.byte	0x1
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x18
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -12973,21 +12992,8 @@ spihost:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x18
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
 	.uleb128 0x19
-	.uleb128 0x13
+	.uleb128 0x17
 	.byte	0x1
 	.uleb128 0xb
 	.uleb128 0xb
@@ -13000,15 +13006,15 @@ spihost:
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
-	.uleb128 0x17
-	.byte	0x1
-	.uleb128 0xb
-	.uleb128 0xb
+	.uleb128 0xd
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0x5
-	.uleb128 0x1
+	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
@@ -13959,7 +13965,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL8
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -13973,7 +13979,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL4
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -13995,7 +14001,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL9
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14038,7 +14044,7 @@ spihost:
 	.sleb128 1
 	.byte	0x9f
 	.4byte	.LVL13
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14077,7 +14083,7 @@ spihost:
 	.byte	0x13
 	.byte	0x9f
 	.4byte	.LVL21
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0xd
 	.byte	0x32
 	.byte	0x31
@@ -14105,7 +14111,7 @@ spihost:
 	.byte	0x31
 	.byte	0x9f
 	.4byte	.LVL21
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -14134,7 +14140,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL26
-	.4byte	.LFE26
+	.4byte	.LFE35
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14172,7 +14178,7 @@ spihost:
 	.sleb128 1
 	.byte	0x9f
 	.4byte	.LVL33
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14186,7 +14192,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL37
-	.4byte	.LFE28
+	.4byte	.LFE37
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14200,7 +14206,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL41
-	.4byte	.LFE29
+	.4byte	.LFE38
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14220,7 +14226,7 @@ spihost:
 	.sleb128 1
 	.byte	0x9f
 	.4byte	.LVL49
-	.4byte	.LFE30
+	.4byte	.LFE39
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14235,7 +14241,7 @@ spihost:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL50
-	.4byte	.LFE30
+	.4byte	.LFE39
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -14385,7 +14391,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL138
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14399,7 +14405,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL123
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14424,7 +14430,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL138
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14607,7 +14613,7 @@ spihost:
 	.sleb128 1
 	.byte	0x9f
 	.4byte	.LVL145
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14645,7 +14651,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL172
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14670,7 +14676,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL171
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14692,7 +14698,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL155
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -14708,7 +14714,7 @@ spihost:
 	.byte	0x91
 	.sleb128 -44
 	.4byte	.LVL173
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14796,7 +14802,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL191
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14849,7 +14855,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL194
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -14867,7 +14873,7 @@ spihost:
 	.byte	0x53
 	.byte	0x9f
 	.4byte	.LVL247
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -15156,7 +15162,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL258
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15192,7 +15198,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL260
-	.4byte	.LFE40
+	.4byte	.LFE49
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15206,7 +15212,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL269
-	.4byte	.LFE42
+	.4byte	.LFE51
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15221,7 +15227,7 @@ spihost:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL267
-	.4byte	.LFE42
+	.4byte	.LFE51
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -15232,7 +15238,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL280
-	.4byte	.LFE43
+	.4byte	.LFE52
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15257,7 +15263,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL277
-	.4byte	.LFE43
+	.4byte	.LFE52
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15272,7 +15278,7 @@ spihost:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL278
-	.4byte	.LFE43
+	.4byte	.LFE52
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -15283,7 +15289,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL282
-	.4byte	.LFE44
+	.4byte	.LFE53
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15297,7 +15303,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL284
-	.4byte	.LFE45
+	.4byte	.LFE54
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15311,7 +15317,7 @@ spihost:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL286
-	.4byte	.LFE46
+	.4byte	.LFE55
 	.2byte	0x1
 	.byte	0x57
 	.4byte	0
@@ -15779,48 +15785,48 @@ spihost:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
 	.4byte	.LFB32
 	.4byte	.LFE32-.LFB32
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.4byte	.LFB34
 	.4byte	.LFE34-.LFB34
 	.4byte	.LFB35
 	.4byte	.LFE35-.LFB35
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.4byte	.LFB38
 	.4byte	.LFE38-.LFB38
 	.4byte	.LFB39
 	.4byte	.LFE39-.LFB39
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
 	.4byte	.LFB41
 	.4byte	.LFE41-.LFB41
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.4byte	.LFB43
 	.4byte	.LFE43-.LFB43
 	.4byte	.LFB44
 	.4byte	.LFE44-.LFB44
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -15897,48 +15903,48 @@ spihost:
 	.4byte	.LBE111
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB24
-	.4byte	.LFE24
-	.4byte	.LFB25
-	.4byte	.LFE25
-	.4byte	.LFB26
-	.4byte	.LFE26
-	.4byte	.LFB27
-	.4byte	.LFE27
-	.4byte	.LFB28
-	.4byte	.LFE28
-	.4byte	.LFB29
-	.4byte	.LFE29
-	.4byte	.LFB30
-	.4byte	.LFE30
 	.4byte	.LFB32
 	.4byte	.LFE32
-	.4byte	.LFB31
-	.4byte	.LFE31
+	.4byte	.LFB33
+	.4byte	.LFE33
 	.4byte	.LFB34
 	.4byte	.LFE34
 	.4byte	.LFB35
 	.4byte	.LFE35
+	.4byte	.LFB36
+	.4byte	.LFE36
+	.4byte	.LFB37
+	.4byte	.LFE37
 	.4byte	.LFB38
 	.4byte	.LFE38
 	.4byte	.LFB39
 	.4byte	.LFE39
-	.4byte	.LFB40
-	.4byte	.LFE40
 	.4byte	.LFB41
 	.4byte	.LFE41
-	.4byte	.LFB42
-	.4byte	.LFE42
+	.4byte	.LFB40
+	.4byte	.LFE40
 	.4byte	.LFB43
 	.4byte	.LFE43
 	.4byte	.LFB44
 	.4byte	.LFE44
-	.4byte	.LFB45
-	.4byte	.LFE45
-	.4byte	.LFB46
-	.4byte	.LFE46
+	.4byte	.LFB47
+	.4byte	.LFE47
+	.4byte	.LFB48
+	.4byte	.LFE48
+	.4byte	.LFB49
+	.4byte	.LFE49
+	.4byte	.LFB50
+	.4byte	.LFE50
+	.4byte	.LFB51
+	.4byte	.LFE51
+	.4byte	.LFB52
+	.4byte	.LFE52
+	.4byte	.LFB53
+	.4byte	.LFE53
+	.4byte	.LFB54
+	.4byte	.LFE54
+	.4byte	.LFB55
+	.4byte	.LFE55
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

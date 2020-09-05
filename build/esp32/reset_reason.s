@@ -24,7 +24,7 @@ esp_reset_reason:
 	.string	"(hint & (~RST_REASON_MASK)) == 0"
 .LC5:
 	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/reset_reason.c"
-	.section	.iram1,"ax",@progbits
+	.section	.iram1.0,"ax",@progbits
 	.literal_position
 	.literal .LC1, -32768
 	.literal .LC3, .LC2
@@ -68,6 +68,7 @@ esp_reset_reason_set_hint:
 	retw.n
 .LFE9:
 	.size	esp_reset_reason_set_hint, .-esp_reset_reason_set_hint
+	.section	.iram1.1,"ax",@progbits
 	.literal_position
 	.literal .LC9, 1072988344
 	.align	4
@@ -387,7 +388,7 @@ s_reset_reason:
 	.byte	0x4
 	.4byte	0x53
 	.byte	0x4
-	.byte	0x2b
+	.byte	0x2c
 	.4byte	0xe5
 	.uleb128 0x6
 	.4byte	.LASF14
@@ -426,7 +427,7 @@ s_reset_reason:
 	.uleb128 0x4
 	.4byte	.LASF25
 	.byte	0x4
-	.byte	0x37
+	.byte	0x38
 	.4byte	0x96
 	.uleb128 0x5
 	.byte	0x4

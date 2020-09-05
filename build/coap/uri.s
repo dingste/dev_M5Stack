@@ -5,7 +5,7 @@
 	.align	4
 	.type	hash_segment, @function
 hash_segment:
-.LFB57:
+.LFB66:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/coap/libcoap/src/uri.c"
 	.loc 1 478 0
 .LVL0:
@@ -18,7 +18,7 @@ hash_segment:
 	call8	coap_hash_impl
 .LVL1:
 	retw.n
-.LFE57:
+.LFE66:
 	.size	hash_segment, .-hash_segment
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC2:
@@ -34,17 +34,17 @@ hash_segment:
 	.section	.text.write_option,"ax",@progbits
 	.literal_position
 	.literal .LC3, .LC2
-	.literal .LC4, __func__$6675
+	.literal .LC4, __func__$6739
 	.literal .LC6, .LC5
 	.literal .LC7, __ctype_ptr__
 	.literal .LC9, .LC8
 	.literal .LC11, .LC10
-	.literal .LC12, __func__$6645
+	.literal .LC12, __func__$6709
 	.literal .LC14, .LC13
 	.align	4
 	.type	write_option, @function
 write_option:
-.LFB52:
+.LFB61:
 	.loc 1 362 0
 .LVL2:
 	entry	sp, 32
@@ -253,13 +253,13 @@ write_option:
 .LVL33:
 .L2:
 	retw.n
-.LFE52:
+.LFE61:
 	.size	write_option, .-write_option
 	.section	.text.coap_split_path_impl,"ax",@progbits
 	.align	4
 	.type	coap_split_path_impl, @function
 coap_split_path_impl:
-.LFB51:
+.LFB60:
 	.loc 1 329 0
 .LVL34:
 	entry	sp, 48
@@ -390,7 +390,7 @@ coap_split_path_impl:
 	addi.n	a7, a6, 1
 	bne	a8, a11, .L44
 	j	.L43
-.LFE51:
+.LFE60:
 	.size	coap_split_path_impl, .-coap_split_path_impl
 	.section	.rodata.str1.1
 .LC15:
@@ -408,7 +408,7 @@ coap_split_path_impl:
 	.global	coap_split_uri
 	.type	coap_split_uri, @function
 coap_split_uri:
-.LFB46:
+.LFB55:
 	.loc 1 48 0
 .LVL56:
 	entry	sp, 32
@@ -784,7 +784,7 @@ coap_split_uri:
 	.loc 1 181 0
 	mov.n	a2, a9
 	retw.n
-.LFE46:
+.LFE55:
 	.size	coap_split_uri, .-coap_split_uri
 	.section	.text.coap_split_path,"ax",@progbits
 	.literal_position
@@ -793,7 +793,7 @@ coap_split_uri:
 	.global	coap_split_path
 	.type	coap_split_path, @function
 coap_split_path:
-.LFB53:
+.LFB62:
 	.loc 1 377 0
 .LVL118:
 	entry	sp, 48
@@ -828,14 +828,14 @@ coap_split_path:
 	s32i.n	a8, a5, 0
 	.loc 1 385 0
 	retw.n
-.LFE53:
+.LFE62:
 	.size	coap_split_path, .-coap_split_path
 	.section	.text.coap_split_query,"ax",@progbits
 	.align	4
 	.global	coap_split_query
 	.type	coap_split_query, @function
 coap_split_query:
-.LFB54:
+.LFB63:
 	.loc 1 389 0
 .LVL121:
 	entry	sp, 48
@@ -897,14 +897,14 @@ coap_split_query:
 	l8ui	a8, a2, 0
 	bne	a8, a6, .L155
 	j	.L156
-.LFE54:
+.LFE63:
 	.size	coap_split_query, .-coap_split_query
 	.section	.text.coap_new_uri,"ax",@progbits
 	.align	4
 	.global	coap_new_uri
 	.type	coap_new_uri, @function
 coap_new_uri:
-.LFB55:
+.LFB64:
 	.loc 1 414 0
 .LVL132:
 	entry	sp, 32
@@ -963,14 +963,14 @@ coap_new_uri:
 	mov.n	a2, a11
 .LVL141:
 	retw.n
-.LFE55:
+.LFE64:
 	.size	coap_new_uri, .-coap_new_uri
 	.section	.text.coap_clone_uri,"ax",@progbits
 	.align	4
 	.global	coap_clone_uri
 	.type	coap_clone_uri, @function
 coap_clone_uri:
-.LFB56:
+.LFB65:
 	.loc 1 433 0
 .LVL142:
 	entry	sp, 32
@@ -1065,7 +1065,7 @@ coap_clone_uri:
 .L164:
 	.loc 1 471 0
 	retw.n
-.LFE56:
+.LFE65:
 	.size	coap_clone_uri, .-coap_clone_uri
 	.section	.text.coap_hash_path,"ax",@progbits
 	.literal_position
@@ -1074,7 +1074,7 @@ coap_clone_uri:
 	.global	coap_hash_path
 	.type	coap_hash_path, @function
 coap_hash_path:
-.LFB58:
+.LFB67:
 	.loc 1 483 0
 .LVL152:
 	entry	sp, 32
@@ -1102,17 +1102,17 @@ coap_hash_path:
 	mov.n	a2, a11
 .LVL155:
 	retw.n
-.LFE58:
+.LFE67:
 	.size	coap_hash_path, .-coap_hash_path
-	.section	.rodata.__func__$6645,"a",@progbits
-	.type	__func__$6645, @object
-	.size	__func__$6645, 20
-__func__$6645:
+	.section	.rodata.__func__$6709,"a",@progbits
+	.type	__func__$6709, @object
+	.size	__func__$6709, 20
+__func__$6709:
 	.string	"make_decoded_option"
-	.section	.rodata.__func__$6675,"a",@progbits
-	.type	__func__$6675, @object
-	.size	__func__$6675, 13
-__func__$6675:
+	.section	.rodata.__func__$6739,"a",@progbits
+	.type	__func__$6739, @object
+	.size	__func__$6739, 13
+__func__$6739:
 	.string	"write_option"
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -1133,10 +1133,10 @@ __func__$6675:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB57
-	.4byte	.LFE57-.LFB57
+	.4byte	.LFB66
+	.4byte	.LFE66-.LFB66
 	.byte	0x4
-	.4byte	.LCFI0-.LFB57
+	.4byte	.LCFI0-.LFB66
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1145,10 +1145,10 @@ __func__$6675:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
 	.byte	0x4
-	.4byte	.LCFI1-.LFB52
+	.4byte	.LCFI1-.LFB61
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1157,10 +1157,10 @@ __func__$6675:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.byte	0x4
-	.4byte	.LCFI2-.LFB51
+	.4byte	.LCFI2-.LFB60
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1169,10 +1169,10 @@ __func__$6675:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.byte	0x4
-	.4byte	.LCFI3-.LFB46
+	.4byte	.LCFI3-.LFB55
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1181,10 +1181,10 @@ __func__$6675:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB53
-	.4byte	.LFE53-.LFB53
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
 	.byte	0x4
-	.4byte	.LCFI4-.LFB53
+	.4byte	.LCFI4-.LFB62
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1193,10 +1193,10 @@ __func__$6675:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB54
-	.4byte	.LFE54-.LFB54
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
 	.byte	0x4
-	.4byte	.LCFI5-.LFB54
+	.4byte	.LCFI5-.LFB63
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1205,10 +1205,10 @@ __func__$6675:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB55
-	.4byte	.LFE55-.LFB55
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
 	.byte	0x4
-	.4byte	.LCFI6-.LFB55
+	.4byte	.LCFI6-.LFB64
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1217,10 +1217,10 @@ __func__$6675:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB56
-	.4byte	.LFE56-.LFB56
+	.4byte	.LFB65
+	.4byte	.LFE65-.LFB65
 	.byte	0x4
-	.4byte	.LCFI7-.LFB56
+	.4byte	.LCFI7-.LFB65
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1229,10 +1229,10 @@ __func__$6675:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB58
-	.4byte	.LFE58-.LFB58
+	.4byte	.LFB67
+	.4byte	.LFE67-.LFB67
 	.byte	0x4
-	.4byte	.LCFI8-.LFB58
+	.4byte	.LCFI8-.LFB67
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1570,8 +1570,8 @@ __func__$6675:
 	.4byte	.LASF77
 	.byte	0x1
 	.2byte	0x1de
-	.4byte	.LFB57
-	.4byte	.LFE57-.LFB57
+	.4byte	.LFB66
+	.4byte	.LFE66-.LFB66
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2e3
@@ -1722,8 +1722,8 @@ __func__$6675:
 	.byte	0
 	.uleb128 0x26
 	.4byte	0x1ea
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x554
@@ -1747,7 +1747,7 @@ __func__$6675:
 	.4byte	0x231
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6675
+	.4byte	__func__$6739
 	.uleb128 0x2b
 	.4byte	.LBB10
 	.4byte	.LBE10-.LBB10
@@ -1772,7 +1772,7 @@ __func__$6675:
 	.4byte	0x231
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6675
+	.4byte	__func__$6739
 	.byte	0
 	.byte	0
 	.uleb128 0x2d
@@ -1805,7 +1805,7 @@ __func__$6675:
 	.4byte	0x33a
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6645
+	.4byte	__func__$6709
 	.uleb128 0x2f
 	.4byte	0x368
 	.4byte	.LBB14
@@ -1912,8 +1912,8 @@ __func__$6675:
 	.byte	0x1
 	.2byte	0x148
 	.4byte	0x25
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x681
@@ -2024,8 +2024,8 @@ __func__$6675:
 	.byte	0x1
 	.byte	0x30
 	.4byte	0x3e
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x758
@@ -2137,8 +2137,8 @@ __func__$6675:
 	.byte	0x1
 	.2byte	0x178
 	.4byte	0x3e
-	.4byte	.LFB53
-	.4byte	.LFE53-.LFB53
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x7e5
@@ -2214,8 +2214,8 @@ __func__$6675:
 	.byte	0x1
 	.2byte	0x184
 	.4byte	0x3e
-	.4byte	.LFB54
-	.4byte	.LFE54-.LFB54
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x883
@@ -2310,8 +2310,8 @@ __func__$6675:
 	.byte	0x1
 	.2byte	0x19e
 	.4byte	0x758
-	.4byte	.LFB55
-	.4byte	.LFE55-.LFB55
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x998
@@ -2430,8 +2430,8 @@ __func__$6675:
 	.byte	0x1
 	.2byte	0x1b1
 	.4byte	0x758
-	.4byte	.LFB56
-	.4byte	.LFE56-.LFB56
+	.4byte	.LFB65
+	.4byte	.LFE65-.LFB65
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xa40
@@ -2515,8 +2515,8 @@ __func__$6675:
 	.byte	0x1
 	.2byte	0x1e3
 	.4byte	0x3e
-	.4byte	.LFB58
-	.4byte	.LFE58-.LFB58
+	.4byte	.LFB67
+	.4byte	.LFE67-.LFB67
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xad5
@@ -3631,7 +3631,7 @@ __func__$6675:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL21
-	.4byte	.LFE52
+	.4byte	.LFE61
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3645,7 +3645,7 @@ __func__$6675:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL21
-	.4byte	.LFE52
+	.4byte	.LFE61
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3727,7 +3727,7 @@ __func__$6675:
 	.sleb128 -1
 	.byte	0x9f
 	.4byte	.LVL26
-	.4byte	.LFE52
+	.4byte	.LFE61
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -3895,7 +3895,7 @@ __func__$6675:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL50
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -3936,7 +3936,7 @@ __func__$6675:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL55
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -3967,7 +3967,7 @@ __func__$6675:
 	.sleb128 -1
 	.byte	0x9f
 	.4byte	.LVL53
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -3994,7 +3994,7 @@ __func__$6675:
 	.byte	0x31
 	.byte	0x9f
 	.4byte	.LVL55
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x2
 	.byte	0x31
 	.byte	0x9f
@@ -4022,7 +4022,7 @@ __func__$6675:
 	.byte	0x77
 	.sleb128 -1
 	.4byte	.LVL55
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x2
 	.byte	0x76
 	.sleb128 0
@@ -4097,7 +4097,7 @@ __func__$6675:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL114
-	.4byte	.LFE46
+	.4byte	.LFE55
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4330,7 +4330,7 @@ __func__$6675:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL120
-	.4byte	.LFE53
+	.4byte	.LFE62
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4348,7 +4348,7 @@ __func__$6675:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL131
-	.4byte	.LFE54
+	.4byte	.LFE63
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -4359,7 +4359,7 @@ __func__$6675:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL124
-	.4byte	.LFE54
+	.4byte	.LFE63
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4378,7 +4378,7 @@ __func__$6675:
 	.byte	0x91
 	.sleb128 -44
 	.4byte	.LVL125
-	.4byte	.LFE54
+	.4byte	.LFE63
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4400,7 +4400,7 @@ __func__$6675:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL131
-	.4byte	.LFE54
+	.4byte	.LFE63
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -4411,7 +4411,7 @@ __func__$6675:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL141
-	.4byte	.LFE55
+	.4byte	.LFE64
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4431,7 +4431,7 @@ __func__$6675:
 	.2byte	0x1
 	.byte	0x5b
 	.4byte	.LVL135-1
-	.4byte	.LFE55
+	.4byte	.LFE64
 	.2byte	0x3
 	.byte	0x73
 	.sleb128 29
@@ -4459,7 +4459,7 @@ __func__$6675:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL145
-	.4byte	.LFE56
+	.4byte	.LFE65
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -4523,7 +4523,7 @@ __func__$6675:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL155
-	.4byte	.LFE58
+	.4byte	.LFE67
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -4539,24 +4539,24 @@ __func__$6675:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB57
-	.4byte	.LFE57-.LFB57
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
-	.4byte	.LFB53
-	.4byte	.LFE53-.LFB53
-	.4byte	.LFB54
-	.4byte	.LFE54-.LFB54
+	.4byte	.LFB66
+	.4byte	.LFE66-.LFB66
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.4byte	.LFB55
 	.4byte	.LFE55-.LFB55
-	.4byte	.LFB56
-	.4byte	.LFE56-.LFB56
-	.4byte	.LFB58
-	.4byte	.LFE58-.LFB58
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
+	.4byte	.LFB65
+	.4byte	.LFE65-.LFB65
+	.4byte	.LFB67
+	.4byte	.LFE67-.LFB67
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -4593,24 +4593,24 @@ __func__$6675:
 	.4byte	.LBE41
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB57
-	.4byte	.LFE57
-	.4byte	.LFB52
-	.4byte	.LFE52
-	.4byte	.LFB51
-	.4byte	.LFE51
-	.4byte	.LFB46
-	.4byte	.LFE46
-	.4byte	.LFB53
-	.4byte	.LFE53
-	.4byte	.LFB54
-	.4byte	.LFE54
+	.4byte	.LFB66
+	.4byte	.LFE66
+	.4byte	.LFB61
+	.4byte	.LFE61
+	.4byte	.LFB60
+	.4byte	.LFE60
 	.4byte	.LFB55
 	.4byte	.LFE55
-	.4byte	.LFB56
-	.4byte	.LFE56
-	.4byte	.LFB58
-	.4byte	.LFE58
+	.4byte	.LFB62
+	.4byte	.LFE62
+	.4byte	.LFB63
+	.4byte	.LFE63
+	.4byte	.LFB64
+	.4byte	.LFE64
+	.4byte	.LFB65
+	.4byte	.LFE65
+	.4byte	.LFB67
+	.4byte	.LFE67
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

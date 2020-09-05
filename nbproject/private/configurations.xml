@@ -2,10 +2,6 @@
 <configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
-      <df name=".kdev4">
-      </df>
-      <df name=".vscode">
-      </df>
       <df name="build">
         <df name="app_trace">
           <df name="gcov">
@@ -16,8 +12,6 @@
           <in>app_trace_util.s</in>
           <in>gcov_rtio.i</in>
           <in>gcov_rtio.s</in>
-          <in>heap_trace_tohost.i</in>
-          <in>heap_trace_tohost.s</in>
           <in>host_file_io.i</in>
           <in>host_file_io.s</in>
         </df>
@@ -40,16 +34,12 @@
         <df name="bootloader">
           <df name="bootloader_support">
             <df name="src">
-              <df name="esp32">
-              </df>
             </df>
           </df>
           <df name="efuse">
             <df name="esp32">
             </df>
             <df name="src">
-              <df name="esp32">
-              </df>
             </df>
           </df>
           <df name="esptool_py">
@@ -66,40 +56,28 @@
             <df name="esp32">
             </df>
             <df name="src">
-              <df name="hal">
-              </df>
             </df>
           </df>
           <df name="spi_flash">
-            <df name="esp32">
-            </df>
           </df>
         </df>
         <df name="bootloader_support">
           <df name="src">
-            <df name="idf">
-            </df>
           </df>
           <in>bootloader_clock.i</in>
           <in>bootloader_clock.s</in>
           <in>bootloader_common.i</in>
           <in>bootloader_common.s</in>
-          <in>bootloader_efuse_esp32.i</in>
-          <in>bootloader_efuse_esp32.s</in>
           <in>bootloader_flash.i</in>
           <in>bootloader_flash.s</in>
           <in>bootloader_flash_config.i</in>
           <in>bootloader_flash_config.s</in>
-          <in>bootloader_flash_config_esp32.i</in>
-          <in>bootloader_flash_config_esp32.s</in>
           <in>bootloader_random.i</in>
           <in>bootloader_random.s</in>
           <in>bootloader_sha.i</in>
           <in>bootloader_sha.s</in>
           <in>bootloader_utility.i</in>
           <in>bootloader_utility.s</in>
-          <in>efuse.i</in>
-          <in>efuse.s</in>
           <in>esp_image_format.i</in>
           <in>esp_image_format.s</in>
           <in>flash_encrypt.i</in>
@@ -228,126 +206,6 @@
             <df name="osi">
             </df>
           </df>
-          <df name="controller">
-          </df>
-          <df name="esp_ble_mesh">
-            <df name="api">
-              <df name="core">
-              </df>
-              <df name="models">
-              </df>
-            </df>
-            <df name="btc">
-            </df>
-            <df name="mesh_core">
-              <df name="settings">
-              </df>
-            </df>
-            <df name="mesh_models">
-            </df>
-          </df>
-          <df name="host">
-            <df name="bluedroid">
-              <df name="api">
-              </df>
-              <df name="bta">
-                <df name="ar">
-                </df>
-                <df name="av">
-                </df>
-                <df name="dm">
-                </df>
-                <df name="gatt">
-                </df>
-                <df name="hf_ag">
-                </df>
-                <df name="hf_client">
-                </df>
-                <df name="hh">
-                </df>
-                <df name="jv">
-                </df>
-                <df name="sdp">
-                </df>
-                <df name="sys">
-                </df>
-              </df>
-              <df name="btc">
-                <df name="core">
-                </df>
-                <df name="profile">
-                  <df name="esp">
-                    <df name="blufi">
-                    </df>
-                  </df>
-                  <df name="std">
-                    <df name="a2dp">
-                    </df>
-                    <df name="avrc">
-                    </df>
-                    <df name="gap">
-                    </df>
-                    <df name="gatt">
-                    </df>
-                    <df name="hf_ag">
-                    </df>
-                    <df name="hf_client">
-                    </df>
-                    <df name="spp">
-                    </df>
-                  </df>
-                </df>
-              </df>
-              <df name="device">
-              </df>
-              <df name="external">
-                <df name="sbc">
-                  <df name="decoder">
-                    <df name="srce">
-                    </df>
-                  </df>
-                  <df name="encoder">
-                    <df name="srce">
-                    </df>
-                  </df>
-                  <df name="plc">
-                  </df>
-                </df>
-              </df>
-              <df name="hci">
-              </df>
-              <df name="main">
-              </df>
-              <df name="stack">
-                <df name="a2dp">
-                </df>
-                <df name="avct">
-                </df>
-                <df name="avdt">
-                </df>
-                <df name="avrc">
-                </df>
-                <df name="btm">
-                </df>
-                <df name="btu">
-                </df>
-                <df name="gap">
-                </df>
-                <df name="gatt">
-                </df>
-                <df name="hcic">
-                </df>
-                <df name="l2cap">
-                </df>
-                <df name="rfcomm">
-                </df>
-                <df name="sdp">
-                </df>
-                <df name="smp">
-                </df>
-              </df>
-            </df>
-          </df>
           <in>a2d_api.i</in>
           <in>a2d_api.s</in>
           <in>a2d_sbc.i</in>
@@ -418,26 +276,6 @@
           <in>blufi_protocol.s</in>
           <in>bt.i</in>
           <in>bt.s</in>
-          <in>bta_ag_act.i</in>
-          <in>bta_ag_act.s</in>
-          <in>bta_ag_api.i</in>
-          <in>bta_ag_api.s</in>
-          <in>bta_ag_at.i</in>
-          <in>bta_ag_at.s</in>
-          <in>bta_ag_cfg.i</in>
-          <in>bta_ag_cfg.s</in>
-          <in>bta_ag_cmd.i</in>
-          <in>bta_ag_cmd.s</in>
-          <in>bta_ag_co.i</in>
-          <in>bta_ag_co.s</in>
-          <in>bta_ag_main.i</in>
-          <in>bta_ag_main.s</in>
-          <in>bta_ag_rfc.i</in>
-          <in>bta_ag_rfc.s</in>
-          <in>bta_ag_sco.i</in>
-          <in>bta_ag_sco.s</in>
-          <in>bta_ag_sdp.i</in>
-          <in>bta_ag_sdp.s</in>
           <in>bta_ar.i</in>
           <in>bta_ar.s</in>
           <in>bta_av_aact.i</in>
@@ -458,8 +296,6 @@
           <in>bta_av_sbc.s</in>
           <in>bta_av_ssm.i</in>
           <in>bta_av_ssm.s</in>
-          <in>bta_avrc_co.i</in>
-          <in>bta_avrc_co.s</in>
           <in>bta_dm_act.i</in>
           <in>bta_dm_act.s</in>
           <in>bta_dm_api.i</in>
@@ -476,8 +312,6 @@
           <in>bta_dm_pm.s</in>
           <in>bta_dm_sco.i</in>
           <in>bta_dm_sco.s</in>
-          <in>bta_gap_bt_co.i</in>
-          <in>bta_gap_bt_co.s</in>
           <in>bta_gatt_common.i</in>
           <in>bta_gatt_common.s</in>
           <in>bta_gattc_act.i</in>
@@ -588,8 +422,6 @@
           <in>btc_gattc.s</in>
           <in>btc_gatts.i</in>
           <in>btc_gatts.s</in>
-          <in>btc_hf_ag.i</in>
-          <in>btc_hf_ag.s</in>
           <in>btc_hf_client.i</in>
           <in>btc_hf_client.s</in>
           <in>btc_main.i</in>
@@ -688,8 +520,6 @@
           <in>esp_gattc_api.s</in>
           <in>esp_gatts_api.i</in>
           <in>esp_gatts_api.s</in>
-          <in>esp_hf_ag_api.i</in>
-          <in>esp_hf_ag_api.s</in>
           <in>esp_hf_client_api.i</in>
           <in>esp_hf_client_api.s</in>
           <in>esp_spp_api.i</in>
@@ -814,8 +644,6 @@
           <in>sbc_encoder.s</in>
           <in>sbc_packing.i</in>
           <in>sbc_packing.s</in>
-          <in>sbc_plc.i</in>
-          <in>sbc_plc.s</in>
           <in>sdp_api.i</in>
           <in>sdp_api.s</in>
           <in>sdp_db.i</in>
@@ -852,52 +680,8 @@
           <in>synthesis-dct8.s</in>
           <in>synthesis-sbc.i</in>
           <in>synthesis-sbc.s</in>
-          <in>thread.i</in>
-          <in>thread.s</in>
           <in>utl.i</in>
           <in>utl.s</in>
-        </df>
-        <df name="cbor">
-          <df name="tinycbor">
-            <df name="src">
-            </df>
-          </df>
-          <in>cborencoder.i</in>
-          <in>cborencoder.s</in>
-          <in>cborencoder_close_container_checked.i</in>
-          <in>cborencoder_close_container_checked.s</in>
-          <in>cborerrorstrings.i</in>
-          <in>cborerrorstrings.s</in>
-          <in>cborparser.i</in>
-          <in>cborparser.s</in>
-          <in>cborparser_dup_string.i</in>
-          <in>cborparser_dup_string.s</in>
-          <in>cborpretty.i</in>
-          <in>cborpretty.s</in>
-          <in>cborpretty_stdio.i</in>
-          <in>cborpretty_stdio.s</in>
-          <in>cbortojson.i</in>
-          <in>cbortojson.s</in>
-          <in>cborvalidation.i</in>
-          <in>cborvalidation.s</in>
-          <in>open_memstream.i</in>
-          <in>open_memstream.s</in>
-        </df>
-        <df name="CMakeFiles">
-          <df name="3.16.3">
-            <df name="CompilerIdC">
-              <df name="tmp">
-              </df>
-              <in>CMakeCCompilerId.c</in>
-            </df>
-            <df name="CompilerIdCXX">
-              <df name="tmp">
-              </df>
-              <in>CMakeCXXCompilerId.cpp</in>
-            </df>
-          </df>
-          <df name="CMakeTmp">
-          </df>
         </df>
         <df name="coap">
           <df name="libcoap">
@@ -912,22 +696,8 @@
           <in>async.s</in>
           <in>block.i</in>
           <in>block.s</in>
-          <in>coap_debug.i</in>
-          <in>coap_debug.s</in>
-          <in>coap_event.i</in>
-          <in>coap_event.s</in>
-          <in>coap_hashkey.i</in>
-          <in>coap_hashkey.s</in>
-          <in>coap_io.i</in>
-          <in>coap_io.s</in>
           <in>coap_io_socket.i</in>
           <in>coap_io_socket.s</in>
-          <in>coap_mbedtls.i</in>
-          <in>coap_mbedtls.s</in>
-          <in>coap_notls.i</in>
-          <in>coap_notls.s</in>
-          <in>coap_session.i</in>
-          <in>coap_session.s</in>
           <in>coap_time.i</in>
           <in>coap_time.s</in>
           <in>debug.i</in>
@@ -966,8 +736,6 @@
           <in>linenoise.s</in>
           <in>split_argv.i</in>
           <in>split_argv.s</in>
-        </df>
-        <df name="cpp_utils">
         </df>
         <df name="cxx">
         </df>
@@ -1021,8 +789,6 @@
           <df name="esp32">
           </df>
           <df name="src">
-            <df name="esp32">
-            </df>
           </df>
           <in>esp_efuse_api.i</in>
           <in>esp_efuse_api.s</in>
@@ -1036,8 +802,6 @@
         <df name="esp-tls">
           <in>esp_tls.i</in>
           <in>esp_tls.s</in>
-          <in>esp_tls_mbedtls.i</in>
-          <in>esp_tls_mbedtls.s</in>
         </df>
         <df name="esp32">
           <df name="hwcrypto">
@@ -1054,8 +818,6 @@
           <in>clk.s</in>
           <in>coexist.i</in>
           <in>coexist.s</in>
-          <in>core_dump.i</in>
-          <in>core_dump.s</in>
           <in>cpu_start.i</in>
           <in>cpu_start.s</in>
           <in>crosscore_int.i</in>
@@ -1092,8 +854,6 @@
           <in>int_wdt.s</in>
           <in>intr_alloc.i</in>
           <in>intr_alloc.s</in>
-          <in>ipc.i</in>
-          <in>ipc.s</in>
           <in>lib_printf.i</in>
           <in>lib_printf.s</in>
           <in>panic.i</in>
@@ -1122,78 +882,14 @@
           <in>stack_check.s</in>
           <in>system_api.i</in>
           <in>system_api.s</in>
-          <in>system_api_esp32.i</in>
-          <in>system_api_esp32.s</in>
           <in>task_wdt.i</in>
           <in>task_wdt.s</in>
           <in>wifi_init.i</in>
           <in>wifi_init.s</in>
-          <in>wifi_os_adapter.i</in>
-          <in>wifi_os_adapter.s</in>
-        </df>
-        <df name="esp32-wifi-manager">
-          <df name="embed_bin">
-          </df>
-          <df name="src">
-          </df>
-          <in>dns_server.i</in>
-          <in>dns_server.s</in>
-          <in>http_server.i</in>
-          <in>http_server.s</in>
-          <in>json.i</in>
-          <in>json.s</in>
-          <in>wifi_manager.i</in>
-          <in>wifi_manager.s</in>
-        </df>
-        <df name="esp32s2beta">
         </df>
         <df name="esp_adc_cal">
           <in>esp_adc_cal.i</in>
           <in>esp_adc_cal.s</in>
-        </df>
-        <df name="esp_common">
-          <df name="src">
-          </df>
-          <in>dbg_stubs.i</in>
-          <in>dbg_stubs.s</in>
-          <in>esp_err_to_name.i</in>
-          <in>esp_err_to_name.s</in>
-          <in>esp_timer.i</in>
-          <in>esp_timer.s</in>
-          <in>ets_timer_legacy.i</in>
-          <in>ets_timer_legacy.s</in>
-          <in>freertos_hooks.i</in>
-          <in>freertos_hooks.s</in>
-          <in>ipc.i</in>
-          <in>ipc.s</in>
-          <in>mac_addr.i</in>
-          <in>mac_addr.s</in>
-          <in>pm_locks.i</in>
-          <in>pm_locks.s</in>
-          <in>stack_check.i</in>
-          <in>stack_check.s</in>
-          <in>system_api.i</in>
-          <in>system_api.s</in>
-        </df>
-        <df name="esp_eth">
-          <df name="src">
-          </df>
-          <in>esp_eth.i</in>
-          <in>esp_eth.s</in>
-          <in>esp_eth_mac_dm9051.i</in>
-          <in>esp_eth_mac_dm9051.s</in>
-          <in>esp_eth_mac_esp32.i</in>
-          <in>esp_eth_mac_esp32.s</in>
-          <in>esp_eth_phy_dm9051.i</in>
-          <in>esp_eth_phy_dm9051.s</in>
-          <in>esp_eth_phy_dp83848.i</in>
-          <in>esp_eth_phy_dp83848.s</in>
-          <in>esp_eth_phy_ip101.i</in>
-          <in>esp_eth_phy_ip101.s</in>
-          <in>esp_eth_phy_lan8720.i</in>
-          <in>esp_eth_phy_lan8720.s</in>
-          <in>esp_eth_phy_rtl8201.i</in>
-          <in>esp_eth_phy_rtl8201.s</in>
         </df>
         <df name="esp_event">
           <in>default_event_loop.i</in>
@@ -1202,26 +898,6 @@
           <in>esp_event.s</in>
           <in>esp_event_private.i</in>
           <in>esp_event_private.s</in>
-          <in>event_loop_legacy.i</in>
-          <in>event_loop_legacy.s</in>
-          <in>event_send.i</in>
-          <in>event_send.s</in>
-        </df>
-        <df name="esp_gdbstub">
-          <df name="esp32">
-          </df>
-          <df name="src">
-          </df>
-          <df name="xtensa">
-          </df>
-          <in>gdbstub.i</in>
-          <in>gdbstub.s</in>
-          <in>gdbstub_esp32.i</in>
-          <in>gdbstub_esp32.s</in>
-          <in>gdbstub_xtensa.i</in>
-          <in>gdbstub_xtensa.s</in>
-          <in>packet.i</in>
-          <in>packet.s</in>
         </df>
         <df name="esp_http_client">
           <df name="lib">
@@ -1265,77 +941,13 @@
           <in>https_server.i</in>
           <in>https_server.s</in>
         </df>
-        <df name="esp_local_ctrl">
-          <df name="proto-c">
-          </df>
-          <df name="src">
-          </df>
-          <in>esp_local_ctrl.i</in>
-          <in>esp_local_ctrl.pb-c.i</in>
-          <in>esp_local_ctrl.pb-c.s</in>
-          <in>esp_local_ctrl.s</in>
-          <in>esp_local_ctrl_handler.i</in>
-          <in>esp_local_ctrl_handler.s</in>
-          <in>esp_local_ctrl_transport_ble.i</in>
-          <in>esp_local_ctrl_transport_ble.s</in>
-          <in>esp_local_ctrl_transport_httpd.i</in>
-          <in>esp_local_ctrl_transport_httpd.s</in>
-        </df>
-        <df name="esp_netif">
-          <df name="loopback">
-          </df>
-          <df name="lwip">
-          </df>
-          <in>esp_netif_defaults.i</in>
-          <in>esp_netif_defaults.s</in>
-          <in>esp_netif_handlers.i</in>
-          <in>esp_netif_handlers.s</in>
-          <in>esp_netif_loopback.i</in>
-          <in>esp_netif_loopback.s</in>
-          <in>esp_netif_lwip.i</in>
-          <in>esp_netif_lwip.s</in>
-          <in>esp_netif_lwip_defaults.i</in>
-          <in>esp_netif_lwip_defaults.s</in>
-          <in>esp_netif_objects.i</in>
-          <in>esp_netif_objects.s</in>
-          <in>esp_netif_sta_list.i</in>
-          <in>esp_netif_sta_list.s</in>
-        </df>
         <df name="esp_ringbuf">
           <in>ringbuf.i</in>
           <in>ringbuf.s</in>
         </df>
-        <df name="esp_rom">
-          <in>esp_rom.i</in>
-          <in>esp_rom.s</in>
-        </df>
         <df name="esp_websocket_client">
           <in>esp_websocket_client.i</in>
           <in>esp_websocket_client.s</in>
-        </df>
-        <df name="esp_wifi">
-          <df name="src">
-          </df>
-          <in>coexist.i</in>
-          <in>coexist.s</in>
-          <in>lib_printf.i</in>
-          <in>lib_printf.s</in>
-          <in>mesh_event.i</in>
-          <in>mesh_event.s</in>
-          <in>phy_init.i</in>
-          <in>phy_init.s</in>
-          <in>restore.i</in>
-          <in>restore.s</in>
-          <in>smartconfig.i</in>
-          <in>smartconfig.s</in>
-          <in>smartconfig_ack.i</in>
-          <in>smartconfig_ack.s</in>
-          <in>wifi_default.i</in>
-          <in>wifi_default.s</in>
-          <in>wifi_init.i</in>
-          <in>wifi_init.s</in>
-          <in>wifi_netif.i</in>
-          <in>wifi_netif.s</in>
         </df>
         <df name="espcoredump">
           <df name="src">
@@ -1376,8 +988,6 @@
           </df>
           <df name="port">
           </df>
-          <in>loadlibrary.i</in>
-          <in>loadlibrary.s</in>
           <in>xmlparse.i</in>
           <in>xmlparse.s</in>
           <in>xmlrole.i</in>
@@ -1390,17 +1000,9 @@
           <in>xmltok_ns.s</in>
         </df>
         <df name="fatfs">
-          <df name="diskio">
-          </df>
-          <df name="port">
-            <df name="freertos">
-            </df>
-          </df>
           <df name="src">
             <df name="option">
             </df>
-          </df>
-          <df name="vfs">
           </df>
           <in>diskio.i</in>
           <in>diskio.s</in>
@@ -1424,8 +1026,6 @@
           <in>vfs_fat_spiflash.s</in>
         </df>
         <df name="freemodbus">
-          <df name="common">
-          </df>
           <df name="modbus">
             <df name="ascii">
             </df>
@@ -1433,85 +1033,43 @@
             </df>
             <df name="rtu">
             </df>
-            <df name="tcp">
-            </df>
           </df>
           <df name="modbus_controller">
           </df>
           <df name="port">
           </df>
-          <df name="serial_master">
-            <df name="modbus_controller">
-            </df>
-          </df>
-          <df name="serial_slave">
-            <df name="modbus_controller">
-            </df>
-          </df>
-          <in>esp_modbus_master.i</in>
-          <in>esp_modbus_master.s</in>
-          <in>esp_modbus_slave.i</in>
-          <in>esp_modbus_slave.s</in>
           <in>mb.i</in>
           <in>mb.s</in>
-          <in>mb_m.i</in>
-          <in>mb_m.s</in>
           <in>mbascii.i</in>
           <in>mbascii.s</in>
-          <in>mbc_serial_master.i</in>
-          <in>mbc_serial_master.s</in>
-          <in>mbc_serial_slave.i</in>
-          <in>mbc_serial_slave.s</in>
           <in>mbcontroller.i</in>
           <in>mbcontroller.s</in>
           <in>mbcrc.i</in>
           <in>mbcrc.s</in>
           <in>mbfunccoils.i</in>
           <in>mbfunccoils.s</in>
-          <in>mbfunccoils_m.i</in>
-          <in>mbfunccoils_m.s</in>
           <in>mbfuncdiag.i</in>
           <in>mbfuncdiag.s</in>
           <in>mbfuncdisc.i</in>
           <in>mbfuncdisc.s</in>
-          <in>mbfuncdisc_m.i</in>
-          <in>mbfuncdisc_m.s</in>
           <in>mbfuncholding.i</in>
           <in>mbfuncholding.s</in>
-          <in>mbfuncholding_m.i</in>
-          <in>mbfuncholding_m.s</in>
           <in>mbfuncinput.i</in>
           <in>mbfuncinput.s</in>
-          <in>mbfuncinput_m.i</in>
-          <in>mbfuncinput_m.s</in>
           <in>mbfuncother.i</in>
           <in>mbfuncother.s</in>
           <in>mbrtu.i</in>
           <in>mbrtu.s</in>
-          <in>mbrtu_m.i</in>
-          <in>mbrtu_m.s</in>
-          <in>mbtcp.i</in>
-          <in>mbtcp.s</in>
           <in>mbutils.i</in>
           <in>mbutils.s</in>
-          <in>port.i</in>
-          <in>port.s</in>
           <in>portevent.i</in>
           <in>portevent.s</in>
-          <in>portevent_m.i</in>
-          <in>portevent_m.s</in>
           <in>portother.i</in>
           <in>portother.s</in>
-          <in>portother_m.i</in>
-          <in>portother_m.s</in>
           <in>portserial.i</in>
           <in>portserial.s</in>
-          <in>portserial_m.i</in>
-          <in>portserial_m.s</in>
           <in>porttimer.i</in>
           <in>porttimer.s</in>
-          <in>porttimer_m.i</in>
-          <in>porttimer_m.s</in>
         </df>
         <df name="freertos">
           <in>FreeRTOS-openocd.i</in>
@@ -1551,1850 +1109,6 @@
         </df>
         <df name="include">
           <df name="config">
-            <df name="a2d">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="adc">
-              <df name="cal">
-                <df name="efuse">
-                  <df name="tp">
-                    <in>enable.h</in>
-                  </df>
-                  <df name="vref">
-                    <in>enable.h</in>
-                  </df>
-                </df>
-                <df name="lut">
-                  <in>enable.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="adc2">
-              <df name="disable">
-                <in>dac.h</in>
-              </df>
-            </df>
-            <df name="appl">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="avct">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="avdt">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="avrc">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="aws">
-              <df name="iot">
-                <df name="mqtt">
-                  <in>host.h</in>
-                </df>
-                <df name="override">
-                  <df name="thing">
-                    <df name="shadow">
-                      <df name="rx">
-                        <in>buffer.h</in>
-                      </df>
-                    </df>
-                  </df>
-                </df>
-              </df>
-            </df>
-            <df name="ble">
-              <df name="adv">
-                <df name="report">
-                  <df name="discard">
-                    <in>thrshold.h</in>
-                  </df>
-                  <df name="flow">
-                    <df name="control">
-                      <in>num.h</in>
-                      <in>supported.h</in>
-                    </df>
-                  </df>
-                </df>
-              </df>
-              <df name="scan">
-                <in>duplicate.h</in>
-              </df>
-              <df name="smp">
-                <in>enable.h</in>
-              </df>
-            </df>
-            <df name="bluedroid">
-              <df name="pinned">
-                <df name="to">
-                  <df name="core">
-                    <in>0.h</in>
-                    <in>1.h</in>
-                  </df>
-                  <in>core.h</in>
-                </df>
-              </df>
-              <in>enabled.h</in>
-            </df>
-            <df name="blufi">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="bnep">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="bootloader">
-              <df name="data">
-                <df name="factory">
-                  <in>reset.h</in>
-                </df>
-              </df>
-              <df name="ota">
-                <df name="data">
-                  <in>erase.h</in>
-                </df>
-              </df>
-              <df name="vddsdio">
-                <df name="boost">
-                  <df name="1">
-                    <in>9v.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="wdt">
-                <df name="disable">
-                  <df name="in">
-                    <df name="user">
-                      <in>code.h</in>
-                    </df>
-                  </df>
-                </df>
-              </df>
-            </df>
-            <df name="brownout">
-              <df name="det">
-                <df name="lvl">
-                  <df name="sel">
-                    <in>0.h</in>
-                    <in>1.h</in>
-                    <in>2.h</in>
-                    <in>3.h</in>
-                    <in>4.h</in>
-                    <in>5.h</in>
-                    <in>6.h</in>
-                    <in>7.h</in>
-                  </df>
-                </df>
-              </df>
-            </df>
-            <df name="bt">
-              <df name="acl">
-                <in>connections.h</in>
-              </df>
-              <df name="ble">
-                <df name="dynamic">
-                  <df name="env">
-                    <in>memory.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="reserve">
-                <in>dram.h</in>
-              </df>
-              <df name="spp">
-                <in>enabled.h</in>
-              </df>
-              <in>enabled.h</in>
-            </df>
-            <df name="btc">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="task">
-                <df name="stack">
-                  <in>size.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="btdm">
-              <df name="controller">
-                <df name="ble">
-                  <df name="max">
-                    <df name="conn">
-                      <in>eff.h</in>
-                    </df>
-                    <in>conn.h</in>
-                  </df>
-                </df>
-                <df name="br">
-                  <df name="edr">
-                    <df name="max">
-                      <df name="acl">
-                        <df name="conn">
-                          <in>eff.h</in>
-                        </df>
-                      </df>
-                      <df name="sync">
-                        <df name="conn">
-                          <in>eff.h</in>
-                        </df>
-                      </df>
-                    </df>
-                  </df>
-                </df>
-                <df name="hci">
-                  <df name="mode">
-                    <in>vhci.h</in>
-                  </df>
-                </df>
-                <df name="mode">
-                  <df name="ble">
-                    <in>only.h</in>
-                  </df>
-                </df>
-                <df name="modem">
-                  <in>sleep.h</in>
-                </df>
-                <df name="pinned">
-                  <df name="to">
-                    <df name="core">
-                      <in>0.h</in>
-                      <in>1.h</in>
-                    </df>
-                    <in>core.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="lpclk">
-                <df name="sel">
-                  <df name="ext">
-                    <df name="32k">
-                      <in>xtal.h</in>
-                    </df>
-                  </df>
-                  <df name="main">
-                    <in>xtal.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="modem">
-                <df name="sleep">
-                  <df name="mode">
-                    <in>orig.h</in>
-                  </df>
-                </df>
-              </df>
-            </df>
-            <df name="btif">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="btm">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="classic">
-              <df name="bt">
-                <in>enabled.h</in>
-              </df>
-            </df>
-            <df name="console">
-              <df name="uart">
-                <df name="custom">
-                  <df name="num">
-                    <in>0.h</in>
-                    <in>1.h</in>
-                  </df>
-                </df>
-                <in>baudrate.h</in>
-                <in>default.h</in>
-                <in>num.h</in>
-              </df>
-            </df>
-            <df name="cxx">
-              <df name="exceptions">
-                <df name="emg">
-                  <df name="pool">
-                    <in>size.h</in>
-                  </df>
-                </df>
-              </df>
-              <in>exceptions.h</in>
-            </df>
-            <df name="disable">
-              <df name="basic">
-                <df name="rom">
-                  <in>console.h</in>
-                </df>
-              </df>
-              <df name="gcc8">
-                <in>warnings.h</in>
-              </df>
-            </df>
-            <df name="dma">
-              <df name="rx">
-                <df name="buf">
-                  <in>num.h</in>
-                </df>
-              </df>
-              <df name="tx">
-                <df name="buf">
-                  <in>num.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="duplicate">
-              <df name="scan">
-                <df name="cache">
-                  <in>size.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="emac">
-              <df name="check">
-                <df name="link">
-                  <df name="period">
-                    <in>ms.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="l2">
-                <df name="to">
-                  <df name="l3">
-                    <df name="rx">
-                      <df name="buf">
-                        <in>mode.h</in>
-                      </df>
-                    </df>
-                  </df>
-                </df>
-              </df>
-              <df name="task">
-                <df name="stack">
-                  <in>size.h</in>
-                </df>
-                <in>priority.h</in>
-              </df>
-            </df>
-            <df name="enable">
-              <df name="static">
-                <df name="task">
-                  <df name="clean">
-                    <df name="up">
-                      <in>hook.h</in>
-                    </df>
-                  </df>
-                </df>
-              </df>
-            </df>
-            <df name="esp">
-              <df name="err">
-                <df name="to">
-                  <df name="name">
-                    <in>lookup.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="gratuitous">
-                <in>arp.h</in>
-              </df>
-              <df name="http">
-                <df name="client">
-                  <df name="enable">
-                    <in>https.h</in>
-                  </df>
-                </df>
-              </df>
-            </df>
-            <df name="esp32">
-              <df name="apptrace">
-                <df name="dest">
-                  <in>none.h</in>
-                </df>
-                <df name="lock">
-                  <in>enable.h</in>
-                </df>
-              </df>
-              <df name="deep">
-                <df name="sleep">
-                  <df name="wakeup">
-                    <in>delay.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="default">
-                <df name="cpu">
-                  <df name="freq">
-                    <in>160.h</in>
-                    <in>mhz.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="enable">
-                <df name="coredump">
-                  <df name="to">
-                    <in>none.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="gcov">
-                <in>enable.h</in>
-              </df>
-              <df name="panic">
-                <df name="print">
-                  <in>halt.h</in>
-                </df>
-              </df>
-              <df name="phy">
-                <df name="calibration">
-                  <df name="and">
-                    <df name="data">
-                      <in>storage.h</in>
-                    </df>
-                  </df>
-                </df>
-                <df name="init">
-                  <df name="data">
-                    <df name="in">
-                      <in>partition.h</in>
-                    </df>
-                  </df>
-                </df>
-                <df name="max">
-                  <df name="tx">
-                    <in>power.h</in>
-                  </df>
-                  <df name="wifi">
-                    <df name="tx">
-                      <in>power.h</in>
-                    </df>
-                  </df>
-                </df>
-              </df>
-              <df name="pthread">
-                <df name="task">
-                  <df name="prio">
-                    <in>default.h</in>
-                  </df>
-                  <df name="stack">
-                    <df name="size">
-                      <in>default.h</in>
-                    </df>
-                  </df>
-                </df>
-              </df>
-              <df name="rtc">
-                <df name="clk">
-                  <df name="cal">
-                    <in>cycles.h</in>
-                  </df>
-                </df>
-                <df name="clock">
-                  <df name="source">
-                    <df name="internal">
-                      <in>rc.h</in>
-                    </df>
-                  </df>
-                </df>
-              </df>
-              <df name="rtcdata">
-                <df name="in">
-                  <df name="fast">
-                    <in>mem.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="time">
-                <df name="syscall">
-                  <df name="use">
-                    <in>rtc.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="trax">
-                <in>twobanks.h</in>
-              </df>
-              <df name="wifi">
-                <df name="ampdu">
-                  <df name="rx">
-                    <in>enabled.h</in>
-                  </df>
-                  <df name="tx">
-                    <in>enabled.h</in>
-                  </df>
-                </df>
-                <df name="dynamic">
-                  <df name="rx">
-                    <df name="buffer">
-                      <in>num.h</in>
-                    </df>
-                  </df>
-                  <df name="tx">
-                    <df name="buffer">
-                      <in>num.h</in>
-                    </df>
-                    <in>buffer.h</in>
-                  </df>
-                </df>
-                <df name="nvs">
-                  <in>enabled.h</in>
-                </df>
-                <df name="rx">
-                  <df name="ba">
-                    <in>win.h</in>
-                  </df>
-                </df>
-                <df name="softap">
-                  <df name="beacon">
-                    <df name="max">
-                      <in>len.h</in>
-                    </df>
-                  </df>
-                </df>
-                <df name="static">
-                  <df name="rx">
-                    <df name="buffer">
-                      <in>num.h</in>
-                    </df>
-                  </df>
-                </df>
-                <df name="task">
-                  <df name="pinned">
-                    <df name="to">
-                      <df name="core">
-                        <in>0.h</in>
-                        <in>1.h</in>
-                      </df>
-                    </df>
-                  </df>
-                </df>
-                <df name="tx">
-                  <df name="ba">
-                    <in>win.h</in>
-                  </df>
-                  <df name="buffer">
-                    <in>type.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="xtal">
-                <df name="freq">
-                  <in>auto.h</in>
-                </df>
-                <in>freq.h</in>
-              </df>
-            </df>
-            <df name="esptoolpy">
-              <df name="after">
-                <in>reset.h</in>
-              </df>
-              <df name="baud">
-                <df name="other">
-                  <in>val.h</in>
-                </df>
-                <in>921600b.h</in>
-              </df>
-              <df name="before">
-                <in>reset.h</in>
-              </df>
-              <df name="flashfreq">
-                <in>40m.h</in>
-              </df>
-              <df name="flashsize">
-                <in>4mb.h</in>
-                <in>detect.h</in>
-              </df>
-              <in>after.h</in>
-              <in>baud.h</in>
-              <in>before.h</in>
-              <in>compressed.h</in>
-              <in>flashfreq.h</in>
-              <in>flashmode.h</in>
-              <in>flashsize.h</in>
-              <in>port.h</in>
-            </df>
-            <df name="event">
-              <df name="loop">
-                <in>profiling.h</in>
-              </df>
-            </df>
-            <df name="fatfs">
-              <df name="api">
-                <df name="encoding">
-                  <df name="ansi">
-                    <in>oem.h</in>
-                  </df>
-                  <df name="utf">
-                    <in>16.h</in>
-                    <in>8.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="codepage">
-                <in>437.h</in>
-              </df>
-              <df name="fs">
-                <in>lock.h</in>
-              </df>
-              <df name="lfn">
-                <in>none.h</in>
-              </df>
-              <df name="per">
-                <df name="file">
-                  <in>cache.h</in>
-                </df>
-              </df>
-              <df name="timeout">
-                <in>ms.h</in>
-              </df>
-              <in>codepage.h</in>
-            </df>
-            <df name="flash">
-              <df name="encryption">
-                <df name="uart">
-                  <df name="bootloader">
-                    <df name="allow">
-                      <in>cache.h</in>
-                      <in>decrypt.h</in>
-                      <in>encrypt.h</in>
-                    </df>
-                  </df>
-                </df>
-                <in>insecure.h</in>
-              </df>
-            </df>
-            <df name="flashmode">
-              <in>dio.h</in>
-            </df>
-            <df name="four">
-              <df name="universal">
-                <df name="mac">
-                  <in>address.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="freertos">
-              <df name="assert">
-                <df name="fail">
-                  <in>abort.h</in>
-                </df>
-              </df>
-              <df name="check">
-                <df name="stackoverflow">
-                  <in>canary.h</in>
-                </df>
-              </df>
-              <df name="coretimer">
-                <in>0.h</in>
-              </df>
-              <df name="idle">
-                <df name="task">
-                  <in>stacksize.h</in>
-                </df>
-              </df>
-              <df name="interrupt">
-                <in>backtrace.h</in>
-              </df>
-              <df name="isr">
-                <in>stacksize.h</in>
-              </df>
-              <df name="max">
-                <df name="task">
-                  <df name="name">
-                    <in>len.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="no">
-                <in>affinity.h</in>
-              </df>
-              <df name="portmux">
-                <df name="debug">
-                  <in>recursive.h</in>
-                </df>
-                <in>debug.h</in>
-              </df>
-              <df name="queue">
-                <df name="registry">
-                  <in>size.h</in>
-                </df>
-              </df>
-              <df name="run">
-                <df name="time">
-                  <df name="stats">
-                    <df name="using">
-                      <df name="cpu">
-                        <in>clk.h</in>
-                      </df>
-                      <df name="esp">
-                        <in>timer.h</in>
-                      </df>
-                    </df>
-                  </df>
-                </df>
-              </df>
-              <df name="task">
-                <df name="function">
-                  <in>wrapper.h</in>
-                </df>
-              </df>
-              <df name="thread">
-                <df name="local">
-                  <df name="storage">
-                    <in>pointers.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="use">
-                <df name="stats">
-                  <df name="formatting">
-                    <in>functions.h</in>
-                  </df>
-                </df>
-                <df name="tickless">
-                  <in>idle.h</in>
-                </df>
-              </df>
-              <df name="vtasklist">
-                <df name="include">
-                  <in>coreid.h</in>
-                </df>
-              </df>
-              <in>hz.h</in>
-              <in>unicore.h</in>
-            </df>
-            <df name="gap">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="garp">
-              <df name="tmr">
-                <in>interval.h</in>
-              </df>
-            </df>
-            <df name="gatt">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="gattc">
-              <in>enable.h</in>
-            </df>
-            <df name="gatts">
-              <df name="send">
-                <df name="service">
-                  <df name="change">
-                    <in>manual.h</in>
-                    <in>mode.h</in>
-                  </df>
-                </df>
-              </df>
-              <in>enable.h</in>
-            </df>
-            <df name="hci">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="heap">
-              <df name="poisoning">
-                <in>disabled.h</in>
-              </df>
-              <df name="task">
-                <in>tracking.h</in>
-              </df>
-            </df>
-            <df name="hfp">
-              <df name="audio">
-                <df name="data">
-                  <df name="path">
-                    <in>hci.h</in>
-                    <in>pcm.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="client">
-                <in>enable.h</in>
-              </df>
-            </df>
-            <df name="hid">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="httpd">
-              <df name="max">
-                <df name="req">
-                  <df name="hdr">
-                    <in>len.h</in>
-                  </df>
-                </df>
-                <df name="uri">
-                  <in>len.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="int">
-              <df name="wdt">
-                <df name="check">
-                  <in>cpu1.h</in>
-                </df>
-                <df name="timeout">
-                  <in>ms.h</in>
-                </df>
-              </df>
-              <in>wdt.h</in>
-            </df>
-            <df name="ip">
-              <df name="lost">
-                <df name="timer">
-                  <in>interval.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="ipc">
-              <df name="task">
-                <df name="stack">
-                  <in>size.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="l2cap">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="libsodium">
-              <df name="use">
-                <df name="mbedtls">
-                  <in>sha.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="log">
-              <df name="bootloader">
-                <df name="level">
-                  <in>info.h</in>
-                </df>
-                <in>level.h</in>
-              </df>
-              <df name="default">
-                <df name="level">
-                  <in>info.h</in>
-                </df>
-                <in>level.h</in>
-              </df>
-              <in>colors.h</in>
-            </df>
-            <df name="lwip">
-              <df name="dhcp">
-                <df name="does">
-                  <df name="arp">
-                    <in>check.h</in>
-                  </df>
-                </df>
-                <df name="max">
-                  <df name="ntp">
-                    <in>servers.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="dhcps">
-                <df name="lease">
-                  <in>unit.h</in>
-                </df>
-                <df name="max">
-                  <df name="station">
-                    <in>num.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="iram">
-                <in>optimization.h</in>
-              </df>
-              <df name="loopback">
-                <df name="max">
-                  <in>pbufs.h</in>
-                </df>
-              </df>
-              <df name="max">
-                <df name="active">
-                  <in>tcp.h</in>
-                </df>
-                <df name="listening">
-                  <in>tcp.h</in>
-                </df>
-                <df name="raw">
-                  <in>pcbs.h</in>
-                </df>
-                <df name="udp">
-                  <in>pcbs.h</in>
-                </df>
-                <in>sockets.h</in>
-              </df>
-              <df name="netif">
-                <in>loopback.h</in>
-              </df>
-              <df name="so">
-                <df name="reuse">
-                  <in>rxtoall.h</in>
-                </df>
-                <in>reuse.h</in>
-              </df>
-            </df>
-            <df name="main">
-              <df name="task">
-                <df name="stack">
-                  <in>size.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="make">
-              <df name="warn">
-                <df name="undefined">
-                  <in>variables.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="mb">
-              <df name="controller">
-                <df name="notify">
-                  <df name="queue">
-                    <in>size.h</in>
-                  </df>
-                  <in>timeout.h</in>
-                </df>
-                <df name="stack">
-                  <in>size.h</in>
-                </df>
-              </df>
-              <df name="event">
-                <df name="queue">
-                  <in>timeout.h</in>
-                </df>
-              </df>
-              <df name="queue">
-                <in>length.h</in>
-              </df>
-              <df name="serial">
-                <df name="buf">
-                  <in>size.h</in>
-                </df>
-                <df name="task">
-                  <df name="stack">
-                    <in>size.h</in>
-                  </df>
-                  <in>prio.h</in>
-                </df>
-              </df>
-              <df name="timer">
-                <df name="port">
-                  <in>enabled.h</in>
-                </df>
-                <in>group.h</in>
-                <in>index.h</in>
-              </df>
-            </df>
-            <df name="mbedtls">
-              <df name="aes">
-                <in>c.h</in>
-              </df>
-              <df name="asymmetric">
-                <df name="content">
-                  <in>len.h</in>
-                </df>
-              </df>
-              <df name="ccm">
-                <in>c.h</in>
-              </df>
-              <df name="ecdh">
-                <in>c.h</in>
-              </df>
-              <df name="ecdsa">
-                <in>c.h</in>
-              </df>
-              <df name="ecp">
-                <df name="dp">
-                  <df name="bp256r1">
-                    <in>enabled.h</in>
-                  </df>
-                  <df name="bp384r1">
-                    <in>enabled.h</in>
-                  </df>
-                  <df name="bp512r1">
-                    <in>enabled.h</in>
-                  </df>
-                  <df name="curve25519">
-                    <in>enabled.h</in>
-                  </df>
-                  <df name="secp192k1">
-                    <in>enabled.h</in>
-                  </df>
-                  <df name="secp192r1">
-                    <in>enabled.h</in>
-                  </df>
-                  <df name="secp224k1">
-                    <in>enabled.h</in>
-                  </df>
-                  <df name="secp224r1">
-                    <in>enabled.h</in>
-                  </df>
-                  <df name="secp256k1">
-                    <in>enabled.h</in>
-                  </df>
-                  <df name="secp256r1">
-                    <in>enabled.h</in>
-                  </df>
-                  <df name="secp384r1">
-                    <in>enabled.h</in>
-                  </df>
-                  <df name="secp521r1">
-                    <in>enabled.h</in>
-                  </df>
-                </df>
-                <df name="nist">
-                  <in>optim.h</in>
-                </df>
-                <in>c.h</in>
-              </df>
-              <df name="external">
-                <df name="mem">
-                  <in>alloc.h</in>
-                </df>
-              </df>
-              <df name="gcm">
-                <in>c.h</in>
-              </df>
-              <df name="hardware">
-                <in>aes.h</in>
-                <in>mpi.h</in>
-                <in>sha.h</in>
-              </df>
-              <df name="have">
-                <in>time.h</in>
-              </df>
-              <df name="internal">
-                <df name="mem">
-                  <in>alloc.h</in>
-                </df>
-              </df>
-              <df name="key">
-                <df name="exchange">
-                  <df name="dhe">
-                    <in>psk.h</in>
-                    <in>rsa.h</in>
-                  </df>
-                  <df name="ecdh">
-                    <in>ecdsa.h</in>
-                    <in>rsa.h</in>
-                  </df>
-                  <df name="ecdhe">
-                    <in>ecdsa.h</in>
-                    <in>psk.h</in>
-                    <in>rsa.h</in>
-                  </df>
-                  <df name="elliptic">
-                    <in>curve.h</in>
-                  </df>
-                  <df name="rsa">
-                    <in>psk.h</in>
-                  </df>
-                  <in>psk.h</in>
-                  <in>rsa.h</in>
-                </df>
-              </df>
-              <df name="pem">
-                <df name="parse">
-                  <in>c.h</in>
-                </df>
-                <df name="write">
-                  <in>c.h</in>
-                </df>
-              </df>
-              <df name="psk">
-                <in>modes.h</in>
-              </df>
-              <df name="rc4">
-                <in>disabled.h</in>
-              </df>
-              <df name="ssl">
-                <df name="in">
-                  <df name="content">
-                    <in>len.h</in>
-                  </df>
-                </df>
-                <df name="out">
-                  <df name="content">
-                    <in>len.h</in>
-                  </df>
-                </df>
-                <df name="proto">
-                  <df name="tls1">
-                    <in>1.h</in>
-                    <in>2.h</in>
-                  </df>
-                  <in>dtls.h</in>
-                  <in>tls1.h</in>
-                </df>
-                <df name="session">
-                  <in>tickets.h</in>
-                </df>
-                <in>alpn.h</in>
-                <in>renegotiation.h</in>
-              </df>
-              <df name="tls">
-                <df name="server">
-                  <df name="and">
-                    <in>client.h</in>
-                  </df>
-                </df>
-                <in>client.h</in>
-                <in>enabled.h</in>
-                <in>server.h</in>
-              </df>
-              <df name="x509">
-                <df name="crl">
-                  <df name="parse">
-                    <in>c.h</in>
-                  </df>
-                </df>
-                <df name="csr">
-                  <df name="parse">
-                    <in>c.h</in>
-                  </df>
-                </df>
-              </df>
-            </df>
-            <df name="mca">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="mdns">
-              <df name="max">
-                <in>services.h</in>
-              </df>
-            </df>
-            <df name="monitor">
-              <df name="baud">
-                <df name="other">
-                  <in>val.h</in>
-                </df>
-                <in>115200b.h</in>
-              </df>
-              <in>baud.h</in>
-            </df>
-            <df name="mqtt">
-              <df name="protocol">
-                <in>311.h</in>
-              </df>
-              <df name="transport">
-                <df name="websocket">
-                  <in>secure.h</in>
-                </df>
-                <in>ssl.h</in>
-                <in>websocket.h</in>
-              </df>
-              <df name="use">
-                <df name="core">
-                  <in>0.h</in>
-                  <in>1.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="newlib">
-              <df name="stdin">
-                <df name="line">
-                  <df name="ending">
-                    <in>cr.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="stdout">
-                <df name="line">
-                  <df name="ending">
-                    <in>crlf.h</in>
-                  </df>
-                </df>
-              </df>
-            </df>
-            <df name="no">
-              <in>blobs.h</in>
-            </df>
-            <df name="number">
-              <df name="of">
-                <df name="universal">
-                  <df name="mac">
-                    <in>address.h</in>
-                  </df>
-                </df>
-              </df>
-            </df>
-            <df name="nvs">
-              <in>encryption.h</in>
-            </df>
-            <df name="openssl">
-              <df name="assert">
-                <df name="debug">
-                  <in>block.h</in>
-                  <in>exit.h</in>
-                </df>
-                <df name="do">
-                  <in>nothing.h</in>
-                </df>
-                <in>debug.h</in>
-              </df>
-              <df name="lowlevel">
-                <in>debug.h</in>
-              </df>
-            </df>
-            <df name="optimization">
-              <df name="assertions">
-                <in>enabled.h</in>
-              </df>
-              <df name="level">
-                <in>debug.h</in>
-              </df>
-            </df>
-            <df name="osi">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="pan">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="partition">
-              <df name="table">
-                <df name="custom">
-                  <in>filename.h</in>
-                </df>
-                <in>custom.h</in>
-                <in>filename.h</in>
-                <in>md5.h</in>
-                <in>offset.h</in>
-              </df>
-            </df>
-            <df name="pm">
-              <df name="dfs">
-                <df name="init">
-                  <in>auto.h</in>
-                </df>
-              </df>
-              <df name="use">
-                <df name="rtc">
-                  <df name="timer">
-                    <in>ref.h</in>
-                  </df>
-                </df>
-              </df>
-              <in>enable.h</in>
-              <in>profiling.h</in>
-              <in>trace.h</in>
-            </df>
-            <df name="ppp">
-              <df name="chap">
-                <in>support.h</in>
-              </df>
-              <df name="debug">
-                <in>on.h</in>
-              </df>
-              <df name="mppe">
-                <in>support.h</in>
-              </df>
-              <df name="mschap">
-                <in>support.h</in>
-              </df>
-              <df name="pap">
-                <in>support.h</in>
-              </df>
-            </df>
-            <df name="pthread">
-              <df name="stack">
-                <in>min.h</in>
-              </df>
-            </df>
-            <df name="reduce">
-              <df name="phy">
-                <df name="tx">
-                  <in>power.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="rfcomm">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="scan">
-              <df name="duplicate">
-                <df name="by">
-                  <df name="device">
-                    <in>addr.h</in>
-                  </df>
-                </df>
-                <in>type.h</in>
-              </df>
-            </df>
-            <df name="sdp">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="secure">
-              <df name="boot">
-                <df name="allow">
-                  <df name="rom">
-                    <in>basic.h</in>
-                  </df>
-                  <df name="short">
-                    <df name="app">
-                      <in>partition.h</in>
-                    </df>
-                  </df>
-                  <in>jtag.h</in>
-                </df>
-                <df name="build">
-                  <df name="signed">
-                    <in>binaries.h</in>
-                  </df>
-                </df>
-                <df name="signing">
-                  <in>key.h</in>
-                </df>
-                <df name="test">
-                  <in>mode.h</in>
-                </df>
-                <df name="verification">
-                  <in>key.h</in>
-                </df>
-                <in>insecure.h</in>
-              </df>
-              <df name="bootloader">
-                <df name="key">
-                  <df name="encoding">
-                    <in>192bit.h</in>
-                    <in>256bit.h</in>
-                  </df>
-                </df>
-                <df name="one">
-                  <df name="time">
-                    <in>flash.h</in>
-                  </df>
-                </df>
-                <in>reflashable.h</in>
-              </df>
-              <df name="signed">
-                <df name="on">
-                  <df name="boot">
-                    <df name="no">
-                      <df name="secure">
-                        <in>boot.h</in>
-                      </df>
-                    </df>
-                  </df>
-                  <df name="update">
-                    <df name="no">
-                      <df name="secure">
-                        <in>boot.h</in>
-                      </df>
-                    </df>
-                  </df>
-                  <in>boot.h</in>
-                  <in>update.h</in>
-                </df>
-                <in>apps.h</in>
-              </df>
-            </df>
-            <df name="smp">
-              <df name="initial">
-                <df name="trace">
-                  <in>level.h</in>
-                </df>
-              </df>
-              <df name="trace">
-                <df name="level">
-                  <in>warning.h</in>
-                </df>
-              </df>
-              <in>enable.h</in>
-            </df>
-            <df name="spi">
-              <df name="flash">
-                <df name="log">
-                  <df name="failed">
-                    <in>write.h</in>
-                  </df>
-                </df>
-                <df name="rom">
-                  <df name="driver">
-                    <in>patch.h</in>
-                  </df>
-                </df>
-                <df name="warn">
-                  <df name="setting">
-                    <df name="zero">
-                      <df name="to">
-                        <in>one.h</in>
-                      </df>
-                    </df>
-                  </df>
-                </df>
-                <df name="writing">
-                  <df name="dangerous">
-                    <df name="regions">
-                      <in>aborts.h</in>
-                    </df>
-                  </df>
-                </df>
-              </df>
-              <df name="master">
-                <df name="isr">
-                  <df name="in">
-                    <in>iram.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="slave">
-                <df name="isr">
-                  <df name="in">
-                    <in>iram.h</in>
-                  </df>
-                </df>
-              </df>
-            </df>
-            <df name="spiram">
-              <df name="allow">
-                <df name="bss">
-                  <df name="seg">
-                    <df name="external">
-                      <in>memory.h</in>
-                    </df>
-                  </df>
-                </df>
-                <df name="stack">
-                  <df name="external">
-                    <in>memory.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="bankswitch">
-                <in>enable.h</in>
-              </df>
-              <df name="boot">
-                <in>init.h</in>
-              </df>
-              <df name="cache">
-                <in>workaround.h</in>
-              </df>
-              <df name="ignore">
-                <in>notfound.h</in>
-              </df>
-              <df name="occupy">
-                <df name="hspi">
-                  <in>host.h</in>
-                </df>
-                <df name="vspi">
-                  <in>host.h</in>
-                </df>
-              </df>
-              <df name="speed">
-                <in>40m.h</in>
-                <in>80m.h</in>
-              </df>
-              <df name="type">
-                <in>auto.h</in>
-                <in>esppsram32.h</in>
-                <in>esppsram64.h</in>
-              </df>
-              <df name="use">
-                <df name="caps">
-                  <in>alloc.h</in>
-                </df>
-                <in>malloc.h</in>
-                <in>memmap.h</in>
-              </df>
-              <in>memtest.h</in>
-            </df>
-            <df name="stack">
-              <df name="check">
-                <in>none.h</in>
-              </df>
-            </df>
-            <df name="support">
-              <in>termios.h</in>
-            </df>
-            <df name="suppress">
-              <df name="select">
-                <df name="debug">
-                  <in>output.h</in>
-                </df>
-              </df>
-            </df>
-            <df name="sw">
-              <df name="coexist">
-                <df name="preference">
-                  <in>balance.h</in>
-                  <in>value.h</in>
-                </df>
-                <in>enable.h</in>
-              </df>
-            </df>
-            <df name="system">
-              <df name="event">
-                <df name="queue">
-                  <in>size.h</in>
-                </df>
-                <df name="task">
-                  <df name="stack">
-                    <in>size.h</in>
-                  </df>
-                </df>
-              </df>
-            </df>
-            <df name="sysview">
-              <df name="evt">
-                <df name="idle">
-                  <in>enable.h</in>
-                </df>
-                <df name="isr">
-                  <df name="enter">
-                    <in>enable.h</in>
-                  </df>
-                  <df name="exit">
-                    <in>enable.h</in>
-                  </df>
-                  <df name="to">
-                    <df name="scheduler">
-                      <in>enable.h</in>
-                    </df>
-                  </df>
-                </df>
-                <df name="overflow">
-                  <in>enable.h</in>
-                </df>
-                <df name="task">
-                  <df name="create">
-                    <in>enable.h</in>
-                  </df>
-                  <df name="start">
-                    <df name="exec">
-                      <in>enable.h</in>
-                    </df>
-                    <df name="ready">
-                      <in>enable.h</in>
-                    </df>
-                  </df>
-                  <df name="stop">
-                    <df name="exec">
-                      <in>enable.h</in>
-                    </df>
-                    <df name="ready">
-                      <in>enable.h</in>
-                    </df>
-                  </df>
-                  <df name="terminate">
-                    <in>enable.h</in>
-                  </df>
-                </df>
-                <df name="timer">
-                  <df name="enter">
-                    <in>enable.h</in>
-                  </df>
-                  <df name="exit">
-                    <in>enable.h</in>
-                  </df>
-                </df>
-              </df>
-              <df name="ts">
-                <df name="source">
-                  <df name="esp">
-                    <in>timer.h</in>
-                  </df>
-                  <df name="timer">
-                    <in>00.h</in>
-                    <in>01.h</in>
-                    <in>10.h</in>
-                    <in>11.h</in>
-                  </df>
-                  <in>ccount.h</in>
-                </df>
-              </df>
-              <in>enable.h</in>
-            </df>
-            <df name="task">
-              <df name="wdt">
-                <df name="check">
-                  <df name="idle">
-                    <df name="task">
-                      <in>cpu0.h</in>
-                      <in>cpu1.h</in>
-                    </df>
-                  </df>
-                </df>
-                <df name="timeout">
-                  <in>s.h</in>
-                </df>
-                <in>panic.h</in>
-              </df>
-              <in>wdt.h</in>
-            </df>
-            <df name="tcp">
-              <df name="oversize">
-                <in>mss.h</in>
-              </df>
-              <df name="queue">
-                <in>ooseq.h</in>
-              </df>
-              <df name="recvmbox">
-                <in>size.h</in>
-              </df>
-              <df name="snd">
-                <df name="buf">
-                  <in>default.h</in>
-                </df>
-              </df>
-              <df name="wnd">
-                <in>default.h</in>
-              </df>
-              <in>maxrtx.h</in>
-              <in>msl.h</in>
-              <in>mss.h</in>
-              <in>synmaxrtx.h</in>
-            </df>
-            <df name="tcpip">
-              <df name="recvmbox">
-                <in>size.h</in>
-              </df>
-              <df name="task">
-                <df name="affinity">
-                  <df name="no">
-                    <in>affinity.h</in>
-                  </df>
-                  <in>cpu1.h</in>
-                </df>
-                <df name="stack">
-                  <in>size.h</in>
-                </df>
-                <in>affinity.h</in>
-              </df>
-              <in>lwip.h</in>
-            </df>
-            <df name="timer">
-              <df name="queue">
-                <in>length.h</in>
-              </df>
-              <df name="task">
-                <df name="stack">
-                  <in>depth.h</in>
-                  <in>size.h</in>
-                </df>
-                <in>priority.h</in>
-              </df>
-            </df>
-            <df name="tracemem">
-              <df name="reserve">
-                <in>dram.h</in>
-              </df>
-            </df>
-            <df name="u8g2">
-              <in>present.h</in>
-            </df>
-            <df name="udp">
-              <df name="recvmbox">
-                <in>size.h</in>
-              </df>
-            </df>
-            <df name="ulp">
-              <df name="coproc">
-                <df name="reserve">
-                  <in>mem.h</in>
-                </df>
-                <in>enabled.h</in>
-              </df>
-            </df>
-            <df name="wifi">
-              <df name="lwip">
-                <df name="allocation">
-                  <df name="from">
-                    <df name="spiram">
-                      <in>first.h</in>
-                    </df>
-                  </df>
-                </df>
-              </df>
-            </df>
-            <df name="wl">
-              <df name="sector">
-                <df name="mode">
-                  <in>perf.h</in>
-                  <in>safe.h</in>
-                </df>
-                <df name="size">
-                  <in>4096.h</in>
-                </df>
-                <in>size.h</in>
-              </df>
-            </df>
-            <in>python.h</in>
-            <in>toolprefix.h</in>
           </df>
           <in>sdkconfig.h</in>
         </df>
@@ -3536,8 +1250,6 @@
             </df>
           </df>
           <df name="port">
-            <df name="crypto_hash_mbedtls">
-            </df>
           </df>
           <in>aead_chacha20poly1305.i</in>
           <in>aead_chacha20poly1305.s</in>
@@ -3597,10 +1309,6 @@
           <in>crypto_generichash.s</in>
           <in>crypto_hash.i</in>
           <in>crypto_hash.s</in>
-          <in>crypto_hash_sha256_mbedtls.i</in>
-          <in>crypto_hash_sha256_mbedtls.s</in>
-          <in>crypto_hash_sha512_mbedtls.i</in>
-          <in>crypto_hash_sha512_mbedtls.s</in>
           <in>crypto_kdf.i</in>
           <in>crypto_kdf.s</in>
           <in>crypto_kx.i</in>
@@ -3716,8 +1424,6 @@
               <df name="api">
               </df>
               <df name="apps">
-                <df name="netbiosns">
-                </df>
                 <df name="sntp">
                 </df>
               </df>
@@ -3741,22 +1447,12 @@
               </df>
             </df>
           </df>
-          <in>altcp.i</in>
-          <in>altcp.s</in>
-          <in>altcp_alloc.i</in>
-          <in>altcp_alloc.s</in>
-          <in>altcp_tcp.i</in>
-          <in>altcp_tcp.s</in>
           <in>api_lib.i</in>
           <in>api_lib.s</in>
           <in>api_msg.i</in>
           <in>api_msg.s</in>
           <in>autoip.i</in>
           <in>autoip.s</in>
-          <in>bridgeif.i</in>
-          <in>bridgeif.s</in>
-          <in>bridgeif_fdb.i</in>
-          <in>bridgeif_fdb.s</in>
           <in>def.i</in>
           <in>def.s</in>
           <in>dhcp.i</in>
@@ -3785,8 +1481,6 @@
           <in>icmp.s</in>
           <in>icmp6.i</in>
           <in>icmp6.s</in>
-          <in>if_api.i</in>
-          <in>if_api.s</in>
           <in>igmp.i</in>
           <in>igmp.s</in>
           <in>inet6.i</in>
@@ -3811,10 +1505,6 @@
           <in>ip6_frag.s</in>
           <in>lowpan6.i</in>
           <in>lowpan6.s</in>
-          <in>lowpan6_ble.i</in>
-          <in>lowpan6_ble.s</in>
-          <in>lowpan6_common.i</in>
-          <in>lowpan6_common.s</in>
           <in>lwip_debug.i</in>
           <in>lwip_debug.s</in>
           <in>mem.i</in>
@@ -3825,8 +1515,6 @@
           <in>mld6.s</in>
           <in>nd6.i</in>
           <in>nd6.s</in>
-          <in>netbiosns.i</in>
-          <in>netbiosns.s</in>
           <in>netbuf.i</in>
           <in>netbuf.s</in>
           <in>netdb.i</in>
@@ -3835,14 +1523,10 @@
           <in>netif.s</in>
           <in>netifapi.i</in>
           <in>netifapi.s</in>
-          <in>nettestif.i</in>
-          <in>nettestif.s</in>
           <in>pbuf.i</in>
           <in>pbuf.s</in>
           <in>ping.i</in>
           <in>ping.s</in>
-          <in>ping_sock.i</in>
-          <in>ping_sock.s</in>
           <in>raw.i</in>
           <in>raw.s</in>
           <in>slipif.i</in>
@@ -3873,32 +1557,12 @@
           <in>vfs_lwip.s</in>
           <in>wlanif.i</in>
           <in>wlanif.s</in>
-          <in>zepif.i</in>
-          <in>zepif.s</in>
         </df>
         <df name="main">
-          <df name="DataLife">
-          </df>
-          <df name="HAL">
-            <df name="LCD">
-              <df name="ESP32_TFT_library">
-                <df name="components">
-                  <df name="spidriver">
-                  </df>
-                  <df name="spiffs">
-                  </df>
-                  <df name="tft">
-                  </df>
-                </df>
-              </df>
-            </df>
-          </df>
           <df name="HardwareLife">
             <df name="Clock">
             </df>
             <df name="Gpio">
-              <df name="Kiss">
-              </df>
               <df name="Pwm">
               </df>
             </df>
@@ -3906,46 +1570,24 @@
             </df>
             <df name="IMU">
             </df>
-            <df name="Key">
+            <df name="JsonFileSystem">
             </df>
             <df name="Lcd">
               <df name="Content">
-                <df name="Face">
-                </df>
-                <df name="Line">
-                  <df name="TopLine">
-                  </df>
-                </df>
                 <df name="Screens">
                 </df>
                 <df name="Widgets">
                 </df>
               </df>
             </df>
-            <df name="MPU9250">
+            <df name="LibraryJson">
             </df>
             <df name="OLED">
             </df>
-            <df name="TransportAbstraction">
-            </df>
             <df name="Uart">
-              <df name="SerialAbstraction">
-              </df>
             </df>
             <df name="WiFi">
-              <df name="Config">
-              </df>
-              <df name="esp32-wifi-manager">
-                <df name="src">
-                </df>
-              </df>
             </df>
-          </df>
-          <df name="IdLife">
-            <df name="Auth">
-            </df>
-          </df>
-          <df name="LifeCycle">
           </df>
           <df name="Logic">
             <df name="Atomar">
@@ -3963,22 +1605,14 @@
             <df name="Screen">
             </df>
           </df>
-          <df name="u8g2-esp-idf">
+          <df name="Use">
+            <df name="ProjektEi">
+            </df>
           </df>
           <in>MPU9250.i</in>
           <in>MPU9250.s</in>
           <in>TftDisplayBackend.i</in>
           <in>TftDisplayBackend.s</in>
-          <in>TftDisplayBackend_legacy.i</in>
-          <in>TftDisplayBackend_legacy.s</in>
-          <in>dns_server.i</in>
-          <in>dns_server.s</in>
-          <in>http_server.i</in>
-          <in>http_server.s</in>
-          <in>json.i</in>
-          <in>json.s</in>
-          <in>wifi_manager.i</in>
-          <in>wifi_manager.s</in>
         </df>
         <df name="mbedtls">
           <df name="mbedtls">
@@ -3986,8 +1620,6 @@
             </df>
           </df>
           <df name="port">
-            <df name="esp32">
-            </df>
           </df>
           <in>aes.i</in>
           <in>aes.s</in>
@@ -4053,16 +1685,12 @@
           <in>esp_hardware.s</in>
           <in>esp_mem.i</in>
           <in>esp_mem.s</in>
-          <in>esp_sha.i</in>
-          <in>esp_sha.s</in>
           <in>esp_sha1.i</in>
           <in>esp_sha1.s</in>
           <in>esp_sha256.i</in>
           <in>esp_sha256.s</in>
           <in>esp_sha512.i</in>
           <in>esp_sha512.s</in>
-          <in>esp_timing.i</in>
-          <in>esp_timing.s</in>
           <in>gcm.i</in>
           <in>gcm.s</in>
           <in>havege.i</in>
@@ -4121,8 +1749,6 @@
           <in>rsa.s</in>
           <in>rsa_internal.i</in>
           <in>rsa_internal.s</in>
-          <in>sha.i</in>
-          <in>sha.s</in>
           <in>sha1.i</in>
           <in>sha1.s</in>
           <in>sha256.i</in>
@@ -4199,18 +1825,12 @@
           <in>platform_esp32_idf.s</in>
         </df>
         <df name="newlib">
-          <in>heap.i</in>
-          <in>heap.s</in>
           <in>locks.i</in>
           <in>locks.s</in>
           <in>poll.i</in>
           <in>poll.s</in>
-          <in>pread.i</in>
-          <in>pread.s</in>
           <in>pthread.i</in>
           <in>pthread.s</in>
-          <in>pwrite.i</in>
-          <in>pwrite.s</in>
           <in>random.i</in>
           <in>random.s</in>
           <in>reent_init.i</in>
@@ -4312,14 +1932,6 @@
         </df>
         <df name="partition_table">
         </df>
-        <df name="perfmon">
-          <in>xtensa_perfmon_access.i</in>
-          <in>xtensa_perfmon_access.s</in>
-          <in>xtensa_perfmon_apis.i</in>
-          <in>xtensa_perfmon_apis.s</in>
-          <in>xtensa_perfmon_masks.i</in>
-          <in>xtensa_perfmon_masks.s</in>
-        </df>
         <df name="protobuf-c">
           <df name="protobuf-c">
             <df name="protobuf-c">
@@ -4394,23 +2006,11 @@
           <df name="esp32">
           </df>
           <df name="src">
-            <df name="hal">
-            </df>
           </df>
           <in>cpu_util.i</in>
           <in>cpu_util.s</in>
-          <in>emac_hal.i</in>
-          <in>emac_hal.s</in>
           <in>gpio_periph.i</in>
           <in>gpio_periph.s</in>
-          <in>i2s_periph.i</in>
-          <in>i2s_periph.s</in>
-          <in>interrupts.i</in>
-          <in>interrupts.s</in>
-          <in>ledc_periph.i</in>
-          <in>ledc_periph.s</in>
-          <in>lldesc.i</in>
-          <in>lldesc.s</in>
           <in>memory_layout_utils.i</in>
           <in>memory_layout_utils.s</in>
           <in>rtc_clk.i</in>
@@ -4433,56 +2033,20 @@
           <in>sdio_slave_periph.s</in>
           <in>sdmmc_periph.i</in>
           <in>sdmmc_periph.s</in>
-          <in>soc_include_legacy_warn.i</in>
-          <in>soc_include_legacy_warn.s</in>
           <in>soc_memory_layout.i</in>
           <in>soc_memory_layout.s</in>
-          <in>spi_flash_hal.i</in>
-          <in>spi_flash_hal.s</in>
-          <in>spi_flash_hal_iram.i</in>
-          <in>spi_flash_hal_iram.s</in>
-          <in>spi_hal.i</in>
-          <in>spi_hal.s</in>
-          <in>spi_hal_iram.i</in>
-          <in>spi_hal_iram.s</in>
           <in>spi_periph.i</in>
           <in>spi_periph.s</in>
-          <in>spi_slave_hal.i</in>
-          <in>spi_slave_hal.s</in>
-          <in>spi_slave_hal_iram.i</in>
-          <in>spi_slave_hal_iram.s</in>
         </df>
         <df name="spi_flash">
-          <df name="esp32">
-          </df>
           <in>cache_utils.i</in>
           <in>cache_utils.s</in>
-          <in>esp_flash_api.i</in>
-          <in>esp_flash_api.s</in>
-          <in>esp_flash_spi_init.i</in>
-          <in>esp_flash_spi_init.s</in>
           <in>flash_mmap.i</in>
           <in>flash_mmap.s</in>
           <in>flash_ops.i</in>
           <in>flash_ops.s</in>
-          <in>flash_ops_esp32.i</in>
-          <in>flash_ops_esp32.s</in>
-          <in>memspi_host_driver.i</in>
-          <in>memspi_host_driver.s</in>
           <in>partition.i</in>
           <in>partition.s</in>
-          <in>spi_flash_chip_drivers.i</in>
-          <in>spi_flash_chip_drivers.s</in>
-          <in>spi_flash_chip_gd.i</in>
-          <in>spi_flash_chip_gd.s</in>
-          <in>spi_flash_chip_generic.i</in>
-          <in>spi_flash_chip_generic.s</in>
-          <in>spi_flash_chip_issi.i</in>
-          <in>spi_flash_chip_issi.s</in>
-          <in>spi_flash_os_func_app.i</in>
-          <in>spi_flash_os_func_app.s</in>
-          <in>spi_flash_os_func_noos.i</in>
-          <in>spi_flash_os_func_noos.s</in>
           <in>spi_flash_rom_patch.i</in>
           <in>spi_flash_rom_patch.s</in>
         </df>
@@ -4491,10 +2055,6 @@
           <in>spi_master_lobo.s</in>
         </df>
         <df name="spiffs">
-          <df name="spiffs">
-            <df name="src">
-            </df>
-          </df>
           <in>esp_spiffs.i</in>
           <in>esp_spiffs.s</in>
           <in>list.i</in>
@@ -4531,46 +2091,22 @@
           <in>transport_ws.s</in>
         </df>
         <df name="tcpip_adapter">
-          <in>event_handlers.i</in>
-          <in>event_handlers.s</in>
-          <in>tcpip_adapter_compat.i</in>
-          <in>tcpip_adapter_compat.s</in>
           <in>tcpip_adapter_lwip.i</in>
           <in>tcpip_adapter_lwip.s</in>
         </df>
         <df name="tft">
           <in>DefaultFont.i</in>
           <in>DefaultFont.s</in>
-          <in>DejaVuSans18.i</in>
-          <in>DejaVuSans18.s</in>
-          <in>DejaVuSans24.i</in>
-          <in>DejaVuSans24.s</in>
           <in>MontserratEB.i</in>
           <in>MontserratEB.s</in>
           <in>MontserratR.i</in>
           <in>MontserratR.s</in>
           <in>MontserratSB.i</in>
           <in>MontserratSB.s</in>
-          <in>SmallFont.i</in>
-          <in>SmallFont.s</in>
-          <in>Ubuntu16.i</in>
-          <in>Ubuntu16.s</in>
-          <in>comic24.i</in>
-          <in>comic24.s</in>
-          <in>def_small.i</in>
-          <in>def_small.s</in>
-          <in>minya24.i</in>
-          <in>minya24.s</in>
           <in>tft.i</in>
           <in>tft.s</in>
-          <in>tft_1.i</in>
-          <in>tft_legacy.i</in>
-          <in>tft_legacy.s</in>
           <in>tftspi.i</in>
           <in>tftspi.s</in>
-          <in>tftspi_1.i</in>
-          <in>tooney32.i</in>
-          <in>tooney32.s</in>
         </df>
         <df name="u8g2">
           <df name="csrc">
@@ -4789,8 +2325,6 @@
         <df name="vfs">
           <in>vfs.i</in>
           <in>vfs.s</in>
-          <in>vfs_semihost.i</in>
-          <in>vfs_semihost.s</in>
           <in>vfs_uart.i</in>
           <in>vfs_uart.s</in>
         </df>
@@ -4826,23 +2360,9 @@
           <df name="port">
           </df>
           <df name="src">
-            <df name="ap">
-            </df>
-            <df name="common">
-            </df>
             <df name="crypto">
             </df>
-            <df name="eap_peer">
-            </df>
-            <df name="esp_supplicant">
-            </df>
             <df name="fast_crypto">
-            </df>
-            <df name="rsn_supp">
-            </df>
-            <df name="tls">
-            </df>
-            <df name="utils">
             </df>
             <df name="wpa2">
               <df name="eap_peer">
@@ -4867,8 +2387,6 @@
           <in>aes-unwrap.s</in>
           <in>aes-wrap.i</in>
           <in>aes-wrap.s</in>
-          <in>ap_config.i</in>
-          <in>ap_config.s</in>
           <in>asn1.i</in>
           <in>asn1.s</in>
           <in>base64.i</in>
@@ -4877,8 +2395,6 @@
           <in>bignum.s</in>
           <in>chap.i</in>
           <in>chap.s</in>
-          <in>common.i</in>
-          <in>common.s</in>
           <in>crypto_internal-cipher.i</in>
           <in>crypto_internal-cipher.s</in>
           <in>crypto_internal-modexp.i</in>
@@ -4889,8 +2405,6 @@
           <in>crypto_internal.s</in>
           <in>crypto_mbedtls.i</in>
           <in>crypto_mbedtls.s</in>
-          <in>crypto_ops.i</in>
-          <in>crypto_ops.s</in>
           <in>des-internal.i</in>
           <in>des-internal.s</in>
           <in>dh_group5.i</in>
@@ -4913,16 +2427,6 @@
           <in>eap_tls_common.s</in>
           <in>eap_ttls.i</in>
           <in>eap_ttls.s</in>
-          <in>esp_hostap.i</in>
-          <in>esp_hostap.s</in>
-          <in>esp_wpa2.i</in>
-          <in>esp_wpa2.s</in>
-          <in>esp_wpa_main.i</in>
-          <in>esp_wpa_main.s</in>
-          <in>esp_wpas_glue.i</in>
-          <in>esp_wpas_glue.s</in>
-          <in>esp_wps.i</in>
-          <in>esp_wps.s</in>
           <in>ext_password.i</in>
           <in>ext_password.s</in>
           <in>fast_aes-cbc.i</in>
@@ -4941,8 +2445,6 @@
           <in>fast_sha256-internal.s</in>
           <in>fast_sha256.i</in>
           <in>fast_sha256.s</in>
-          <in>ieee802_1x.i</in>
-          <in>ieee802_1x.s</in>
           <in>md4-internal.i</in>
           <in>md4-internal.s</in>
           <in>md5-internal.i</in>
@@ -4961,8 +2463,6 @@
           <in>pkcs5.s</in>
           <in>pkcs8.i</in>
           <in>pkcs8.s</in>
-          <in>pmksa_cache.i</in>
-          <in>pmksa_cache.s</in>
           <in>rc4.i</in>
           <in>rc4.s</in>
           <in>rsa.i</in>
@@ -4999,20 +2499,6 @@
           <in>tlsv1_server_write.s</in>
           <in>uuid.i</in>
           <in>uuid.s</in>
-          <in>wpa.i</in>
-          <in>wpa.s</in>
-          <in>wpa_auth.i</in>
-          <in>wpa_auth.s</in>
-          <in>wpa_auth_ie.i</in>
-          <in>wpa_auth_ie.s</in>
-          <in>wpa_common.i</in>
-          <in>wpa_common.s</in>
-          <in>wpa_debug.i</in>
-          <in>wpa_debug.s</in>
-          <in>wpa_ie.i</in>
-          <in>wpa_ie.s</in>
-          <in>wpabuf.i</in>
-          <in>wpabuf.s</in>
           <in>wps.i</in>
           <in>wps.s</in>
           <in>wps_attr_build.i</in>
@@ -5034,16 +2520,6 @@
           <in>x509v3.i</in>
           <in>x509v3.s</in>
         </df>
-        <df name="xtensa">
-          <in>debug_helpers.i</in>
-          <in>debug_helpers.s</in>
-          <in>eri.i</in>
-          <in>eri.s</in>
-          <in>stdatomic.i</in>
-          <in>stdatomic.s</in>
-          <in>trax.i</in>
-          <in>trax.s</in>
-        </df>
         <df name="xtensa-debug-module">
           <in>eri.i</in>
           <in>eri.s</in>
@@ -5051,298 +2527,7 @@
           <in>trax.s</in>
         </df>
       </df>
-      <df name="buildk">
-        <df name="CMakeFiles">
-          <df name="3.16.3">
-            <df name="CompilerIdC">
-              <df name="tmp">
-              </df>
-              <in>CMakeCCompilerId.c</in>
-            </df>
-            <df name="CompilerIdCXX">
-              <df name="tmp">
-              </df>
-              <in>CMakeCXXCompilerId.cpp</in>
-            </df>
-          </df>
-          <df name="CMakeTmp">
-          </df>
-        </df>
-      </df>
-      <df name="CMakeFiles">
-        <df name="3.13.4">
-          <df name="CompilerIdC">
-            <in>CMakeCCompilerId.c</in>
-          </df>
-          <df name="CompilerIdCXX">
-            <in>CMakeCXXCompilerId.cpp</in>
-          </df>
-        </df>
-        <df name="3.16.3">
-          <df name="CompilerIdC">
-            <df name="tmp">
-            </df>
-            <in>CMakeCCompilerId.c</in>
-          </df>
-          <df name="CompilerIdCXX">
-            <df name="tmp">
-            </df>
-            <in>CMakeCXXCompilerId.cpp</in>
-          </df>
-        </df>
-        <df name="CMakeTmp">
-        </df>
-      </df>
       <df name="components">
-        <df name="cpp_utils">
-          <df name="BLEXML">
-            <df name="Characteristics">
-              <df name="code">
-              </df>
-            </df>
-            <df name="Services">
-              <df name="code">
-              </df>
-            </df>
-          </df>
-          <df name="DesignNotes">
-          </df>
-          <df name="tests">
-            <df name="BLETests">
-              <df name="Arduino">
-                <df name="BLE_client">
-                </df>
-                <df name="BLE_iBeacon">
-                </df>
-                <df name="BLE_notify">
-                </df>
-                <df name="BLE_scan">
-                </df>
-                <df name="BLE_server">
-                </df>
-                <df name="BLE_uart">
-                </df>
-                <df name="BLE_write">
-                </df>
-                <df name="security">
-                  <df name="BLE_client">
-                    <df name="BLE_client_encrypted">
-                    </df>
-                    <df name="BLE_client_numeric_confirmation">
-                    </df>
-                    <df name="BLE_client_passkey">
-                    </df>
-                  </df>
-                  <df name="BLE_server">
-                    <df name="BLE_server_authorization">
-                    </df>
-                    <df name="BLE_server_encrypted">
-                    </df>
-                    <df name="BLE_server_numeric_confirmation">
-                    </df>
-                    <df name="BLE_server_passkey">
-                    </df>
-                  </df>
-                  <df name="StaticPIN">
-                  </df>
-                </df>
-              </df>
-              <df name="security">
-                <in>SampleClient_Encryption.cpp</in>
-                <in>SampleClient_authentication_numeric_confirmation.cpp</in>
-                <in>SampleClient_authentication_passkey.cpp</in>
-                <in>SampleServer_Encryption.cpp</in>
-                <in>SampleServer_authentication_numeric_confirmation.cpp</in>
-                <in>SampleServer_authentication_passkey.cpp</in>
-                <in>SampleServer_authorization.cpp</in>
-                <in>app_main_security.cpp</in>
-              </df>
-              <in>Sample-MLE-15.cpp</in>
-              <in>Sample1.cpp</in>
-              <in>SampleAsyncScan.cpp</in>
-              <in>SampleClient.cpp</in>
-              <in>SampleClientAndServer.cpp</in>
-              <in>SampleClientWithWiFi.cpp</in>
-              <in>SampleClient_Notify.cpp</in>
-              <in>SampleDisconnect.cpp</in>
-              <in>SampleHIDDevice.cpp</in>
-              <in>SampleHIDKeyboard.cpp</in>
-              <in>SampleKeyboardTypes.h</in>
-              <in>SampleNotify.cpp</in>
-              <in>SampleRead.cpp</in>
-              <in>SampleScan.cpp</in>
-              <in>SampleSensorTag.cpp</in>
-              <in>SampleServer.cpp</in>
-              <in>SampleWrite.cpp</in>
-              <in>main.cpp</in>
-            </df>
-            <df name="MFRC522">
-              <in>DumpInfo.cpp</in>
-              <in>main.cpp</in>
-            </df>
-            <in>task_i2c_scanner.cpp</in>
-            <in>task_mdns.cpp</in>
-            <in>test_max7219.cpp</in>
-            <in>test_rest.cpp</in>
-            <in>test_rest_ifttt.cpp</in>
-          </df>
-          <in>AWS.cpp</in>
-          <in>AWS.h</in>
-          <in>Apa102.cpp</in>
-          <in>Apa102.h</in>
-          <in>BLE2902.cpp</in>
-          <in>BLE2902.h</in>
-          <in>BLE2904.cpp</in>
-          <in>BLE2904.h</in>
-          <in>BLEAddress.cpp</in>
-          <in>BLEAddress.h</in>
-          <in>BLEAdvertisedDevice.cpp</in>
-          <in>BLEAdvertisedDevice.h</in>
-          <in>BLEAdvertising.cpp</in>
-          <in>BLEAdvertising.h</in>
-          <in>BLEBeacon.cpp</in>
-          <in>BLEBeacon.h</in>
-          <in>BLECharacteristic.cpp</in>
-          <in>BLECharacteristic.h</in>
-          <in>BLECharacteristicMap.cpp</in>
-          <in>BLEClient.cpp</in>
-          <in>BLEClient.h</in>
-          <in>BLEDescriptor.cpp</in>
-          <in>BLEDescriptor.h</in>
-          <in>BLEDescriptorMap.cpp</in>
-          <in>BLEDevice.cpp</in>
-          <in>BLEDevice.h</in>
-          <in>BLEEddystoneTLM.cpp</in>
-          <in>BLEEddystoneTLM.h</in>
-          <in>BLEEddystoneURL.cpp</in>
-          <in>BLEEddystoneURL.h</in>
-          <in>BLEExceptions.cpp</in>
-          <in>BLEExceptions.h</in>
-          <in>BLEHIDDevice.cpp</in>
-          <in>BLEHIDDevice.h</in>
-          <in>BLERemoteCharacteristic.cpp</in>
-          <in>BLERemoteCharacteristic.h</in>
-          <in>BLERemoteDescriptor.cpp</in>
-          <in>BLERemoteDescriptor.h</in>
-          <in>BLERemoteService.cpp</in>
-          <in>BLERemoteService.h</in>
-          <in>BLEScan.cpp</in>
-          <in>BLEScan.h</in>
-          <in>BLESecurity.cpp</in>
-          <in>BLESecurity.h</in>
-          <in>BLEServer.cpp</in>
-          <in>BLEServer.h</in>
-          <in>BLEService.cpp</in>
-          <in>BLEService.h</in>
-          <in>BLEServiceMap.cpp</in>
-          <in>BLEUUID.cpp</in>
-          <in>BLEUUID.h</in>
-          <in>BLEUtils.cpp</in>
-          <in>BLEUtils.h</in>
-          <in>BLEValue.cpp</in>
-          <in>BLEValue.h</in>
-          <in>CPPNVS.cpp</in>
-          <in>CPPNVS.h</in>
-          <in>Console.cpp</in>
-          <in>Console.h</in>
-          <in>FATFS_VFS.cpp</in>
-          <in>FATFS_VFS.h</in>
-          <in>FTPCallbacks.cpp</in>
-          <in>FTPServer.cpp</in>
-          <in>FTPServer.h</in>
-          <in>File.cpp</in>
-          <in>File.h</in>
-          <in>FileSystem.cpp</in>
-          <in>FileSystem.h</in>
-          <in>FreeRTOS.cpp</in>
-          <in>FreeRTOS.h</in>
-          <in>FreeRTOSTimer.cpp</in>
-          <in>FreeRTOSTimer.h</in>
-          <in>GPIO.cpp</in>
-          <in>GPIO.h</in>
-          <in>GeneralUtils.cpp</in>
-          <in>GeneralUtils.h</in>
-          <in>HIDKeyboardTypes.h</in>
-          <in>HIDTypes.h</in>
-          <in>HttpParser.cpp</in>
-          <in>HttpParser.h</in>
-          <in>HttpRequest.cpp</in>
-          <in>HttpRequest.h</in>
-          <in>HttpResponse.cpp</in>
-          <in>HttpResponse.h</in>
-          <in>HttpServer.cpp</in>
-          <in>HttpServer.h</in>
-          <in>I2C.cpp</in>
-          <in>I2C.h</in>
-          <in>I2S.cpp</in>
-          <in>I2S.h</in>
-          <in>IFTTT.cpp</in>
-          <in>IFTTT.h</in>
-          <in>JSON.cpp</in>
-          <in>JSON.h</in>
-          <in>MAX7219.cpp</in>
-          <in>MAX7219.h</in>
-          <in>MFRC522.cpp</in>
-          <in>MFRC522.h</in>
-          <in>MFRC522Debug.h</in>
-          <in>MMU.cpp</in>
-          <in>MMU.h</in>
-          <in>MPU6050.cpp</in>
-          <in>MPU6050.h</in>
-          <in>MRFC522Debug.cpp</in>
-          <in>Memory.cpp</in>
-          <in>Memory.h</in>
-          <in>NeoPixelWiFiEventHandler.cpp</in>
-          <in>NeoPixelWiFiEventHandler.h</in>
-          <in>OV7670.cpp</in>
-          <in>OV7670.h</in>
-          <in>PCF8574.cpp</in>
-          <in>PCF8574.h</in>
-          <in>PCF8575.cpp</in>
-          <in>PCF8575.h</in>
-          <in>PWM.cpp</in>
-          <in>PWM.h</in>
-          <in>PubSubClient.cpp</in>
-          <in>PubSubClient.h</in>
-          <in>RESTClient.cpp</in>
-          <in>RESTClient.h</in>
-          <in>RMT.cpp</in>
-          <in>RMT.h</in>
-          <in>SOC.cpp</in>
-          <in>SOC.h</in>
-          <in>SPI.cpp</in>
-          <in>SPI.h</in>
-          <in>SSLUtils.cpp</in>
-          <in>SSLUtils.h</in>
-          <in>SmartLED.cpp</in>
-          <in>SmartLED.h</in>
-          <in>SockServ.cpp</in>
-          <in>SockServ.h</in>
-          <in>Socket.cpp</in>
-          <in>Socket.h</in>
-          <in>System.cpp</in>
-          <in>System.h</in>
-          <in>TFTP.cpp</in>
-          <in>TFTP.h</in>
-          <in>Task.cpp</in>
-          <in>Task.h</in>
-          <in>U8G2.cpp</in>
-          <in>U8G2.h</in>
-          <in>WS2812.cpp</in>
-          <in>WS2812.h</in>
-          <in>WebServer.cpp</in>
-          <in>WebServer.h</in>
-          <in>WebSocket.cpp</in>
-          <in>WebSocket.h</in>
-          <in>WebSocketFileTransfer.cpp</in>
-          <in>WebSocketFileTransfer.h</in>
-          <in>WiFi.cpp</in>
-          <in>WiFi.h</in>
-          <in>WiFiEventHandler.cpp</in>
-          <in>WiFiEventHandler.h</in>
-        </df>
-        <df name="esp32-wifi-manager">
-        </df>
         <df name="mkspiffs">
           <df name="src">
             <df name="spiffs">
@@ -8437,17 +5622,6 @@
         </df>
       </df>
       <df name="main">
-        <df name="egg">
-          <in>ContentBinder.cpp</in>
-          <in>ContentBinder.h</in>
-          <in>Descriptor.cpp</in>
-          <in>Descriptor.h</in>
-          <in>IIDKEY.h</in>
-          <in>SIDKEY.h</in>
-          <in>SMEDIA.h</in>
-          <in>example.cpp</in>
-          <in>example.h</in>
-        </df>
         <df name="HardwareLife">
           <df name="Clock">
             <in>Clock.cpp</in>
@@ -8486,6 +5660,13 @@
             <in>MPU9250_reg.h</in>
             <in>Quaternion.h</in>
             <in>RegisterMap.h</in>
+          </df>
+          <df name="JsonFileSystem">
+            <in>FileTypes.h</in>
+            <in>GetSetItem.h</in>
+            <in>IFile.h</in>
+            <in>JsonFileSystem.cpp</in>
+            <in>JsonFileSystem.h</in>
           </df>
           <df name="Lcd">
             <df name="Backlight">
@@ -8532,6 +5713,13 @@
             <in>Defines_Lcd.h</in>
             <in>TftDisplayBackend.c</in>
           </df>
+          <df name="LibraryJson">
+            <in>IJson.h</in>
+            <in>jsl-data.cpp</in>
+            <in>jsl-data.h</in>
+            <in>jsl-parser.cpp</in>
+            <in>jsl-parser.h</in>
+          </df>
           <df name="OLED">
             <in>OLED.cpp</in>
             <in>OLED.h</in>
@@ -8541,6 +5729,7 @@
             </df>
           </df>
           <df name="Uart">
+            <in>IUart.h</in>
             <in>Uart.cpp</in>
             <in>Uart.h</in>
           </df>
@@ -8591,6 +5780,23 @@
             <in>ScreenView.h</in>
           </df>
           <in>ITranspondUnit.h</in>
+        </df>
+        <df name="Use">
+          <df name="ProjektEi">
+            <in>DESCRIPTORS.h</in>
+            <in>DeviceMaintenance.cpp</in>
+            <in>DeviceMaintenance.h</in>
+            <in>Ei.cpp</in>
+            <in>Ei.h</in>
+            <in>EierKarton.cpp</in>
+            <in>EierKarton.h</in>
+          </df>
+          <in>KUhr.cpp</in>
+          <in>KUhr.h</in>
+          <in>ProjektEi.cpp</in>
+          <in>ProjektEi.h</in>
+          <in>VallP.cpp</in>
+          <in>VallP.h</in>
         </df>
         <in>Log.h</in>
         <in>main.cpp</in>

@@ -702,51 +702,52 @@ mbedtls_rsa_validate_params:
 	mov.n	a10, sp
 	call8	mbedtls_mpi_init
 .LVL136:
-	.loc 1 354 0
+	.loc 1 359 0
 	movi.n	a8, 0
-	l32i.n	a13, sp, 44
+	l32i.n	a14, sp, 44
 	movi.n	a7, 1
 .LVL137:
 	mov.n	a9, a8
-	movnez	a9, a7, a13
+	movnez	a9, a7, a14
 	extui	a9, a9, 0, 8
-	.loc 1 354 0
+	.loc 1 359 0
 	moveqz	a7, a8, a3
 	.loc 1 342 0
-	.loc 1 354 0
+	.loc 1 359 0
 	extui	a7, a7, 0, 8
-	.loc 1 354 0
+	.loc 1 359 0
 	beq	a9, a8, .L57
 	bne	a7, a8, .L51
 .LVL138:
 .L57:
-	.loc 1 361 0
+	.loc 1 366 0
 	movi.n	a10, 0
 	movi.n	a8, 1
 	moveqz	a8, a10, a4
 	extui	a8, a8, 0, 8
-	.loc 1 361 0
+	.loc 1 366 0
 	beq	a9, a10, .L55
 	beq	a8, a10, .L55
 	j	.L53
 .L51:
-	.loc 1 354 0 discriminator 1
-	l32i	a12, sp, 80
-	mov.n	a11, a13
+	.loc 1 359 0 discriminator 1
+	l32i	a13, sp, 80
+	mov.n	a12, a14
+	movi.n	a11, 0x32
 	mov.n	a10, a3
 	s32i.n	a9, sp, 40
-	s32i.n	a13, sp, 44
-	call8	mbedtls_mpi_is_prime
+	s32i.n	a14, sp, 44
+	call8	mbedtls_mpi_is_prime_ext
 .LVL139:
 	l32i.n	a9, sp, 40
-	l32i.n	a13, sp, 44
+	l32i.n	a14, sp, 44
 	bnez.n	a10, .L56
 	j	.L57
 .LVL140:
 .L55:
-	.loc 1 376 0
+	.loc 1 381 0
 	and	a7, a7, a8
-	.loc 1 376 0
+	.loc 1 381 0
 	movi.n	a9, 1
 	movi.n	a8, 0
 	movnez	a8, a9, a2
@@ -756,12 +757,13 @@ mbedtls_rsa_validate_params:
 	bnez.n	a7, .L58
 	j	.L60
 .L53:
-	.loc 1 361 0 discriminator 1
-	l32i	a12, sp, 80
-	mov.n	a11, a13
+	.loc 1 366 0 discriminator 1
+	l32i	a13, sp, 80
+	mov.n	a12, a14
+	movi.n	a11, 0x32
 	mov.n	a10, a4
 	s32i.n	a8, sp, 40
-	call8	mbedtls_mpi_is_prime
+	call8	mbedtls_mpi_is_prime_ext
 .LVL141:
 	l32i.n	a8, sp, 40
 	bnez.n	a10, .L56
@@ -775,14 +777,14 @@ mbedtls_rsa_validate_params:
 	movnez	a9, a8, a5
 	and	a9, a10, a9
 	s32i.n	a9, sp, 36
-	.loc 1 391 0
+	.loc 1 396 0
 	l32i.n	a9, sp, 32
 	beqz.n	a9, .L63
 	l32i.n	a9, sp, 36
 	bnez.n	a9, .L61
 	j	.L63
 .L58:
-	.loc 1 378 0
+	.loc 1 383 0
 	mov.n	a12, a4
 	mov.n	a11, a3
 	addi.n	a10, sp, 12
@@ -793,28 +795,28 @@ mbedtls_rsa_validate_params:
 .LVL144:
 	l32i.n	a9, sp, 40
 	bnez.n	a10, .L64
-	.loc 1 379 0
+	.loc 1 384 0
 	mov.n	a11, a9
 	mov.n	a10, a2
 	call8	mbedtls_mpi_cmp_int
 .LVL145:
 	blti	a10, 1, .L56
-	.loc 1 380 0 discriminator 1
+	.loc 1 385 0 discriminator 1
 	mov.n	a11, a2
 	addi.n	a10, sp, 12
 	call8	mbedtls_mpi_cmp_mpi
 .LVL146:
-	.loc 1 379 0 discriminator 1
+	.loc 1 384 0 discriminator 1
 	bnez.n	a10, .L56
 	j	.L60
 .LVL147:
 .L63:
 	mov.n	a8, a7
-	.loc 1 407 0
+	.loc 1 412 0
 	beqz.n	a7, .L64
 	j	.L65
 .L61:
-	.loc 1 393 0
+	.loc 1 398 0
 	mov.n	a11, a8
 	mov.n	a10, a5
 	s32i.n	a8, sp, 40
@@ -822,48 +824,48 @@ mbedtls_rsa_validate_params:
 .LVL148:
 	l32i.n	a8, sp, 40
 	blti	a10, 1, .L56
-	.loc 1 394 0 discriminator 1
+	.loc 1 399 0 discriminator 1
 	mov.n	a11, a8
 	mov.n	a10, a6
 	call8	mbedtls_mpi_cmp_int
 .LVL149:
-	.loc 1 393 0 discriminator 1
+	.loc 1 398 0 discriminator 1
 	blti	a10, 1, .L56
-	.loc 1 395 0
+	.loc 1 400 0
 	mov.n	a11, a2
 	mov.n	a10, a5
 	call8	mbedtls_mpi_cmp_mpi
 .LVL150:
-	.loc 1 394 0
+	.loc 1 399 0
 	bgez	a10, .L56
-	.loc 1 396 0
+	.loc 1 401 0
 	mov.n	a11, a2
 	mov.n	a10, a6
 	call8	mbedtls_mpi_cmp_mpi
 .LVL151:
-	.loc 1 395 0
+	.loc 1 400 0
 	bgez	a10, .L56
 	j	.L63
 .L65:
-	.loc 1 407 0 discriminator 1
+	.loc 1 412 0 discriminator 1
 	l32i.n	a2, sp, 36
 .LVL152:
 	movi.n	a8, 0
 	beq	a2, a8, .L64
-	.loc 1 409 0
+	.loc 1 414 0
 	movi.n	a11, 1
 	mov.n	a10, a3
 	call8	mbedtls_mpi_cmp_int
 .LVL153:
 	blti	a10, 1, .L56
-	.loc 1 410 0 discriminator 1
+	.loc 1 415 0 discriminator 1
 	movi.n	a11, 1
 	mov.n	a10, a4
 	call8	mbedtls_mpi_cmp_int
 .LVL154:
-	.loc 1 409 0 discriminator 1
+	.loc 1 414 0 discriminator 1
 	blti	a10, 1, .L56
-	.loc 1 417 0
+	.loc 1 422 0
 	mov.n	a12, a6
 	mov.n	a11, a5
 	addi.n	a10, sp, 12
@@ -872,7 +874,7 @@ mbedtls_rsa_validate_params:
 	mov.n	a8, a10
 .LVL156:
 	bnez.n	a10, .L64
-	.loc 1 418 0
+	.loc 1 423 0
 	addi.n	a11, sp, 12
 	movi.n	a12, 1
 	mov.n	a10, a11
@@ -881,7 +883,7 @@ mbedtls_rsa_validate_params:
 	mov.n	a8, a10
 .LVL158:
 	bnez.n	a10, .L64
-	.loc 1 419 0
+	.loc 1 424 0
 	movi.n	a12, 1
 	mov.n	a11, a3
 	mov.n	a10, sp
@@ -890,7 +892,7 @@ mbedtls_rsa_validate_params:
 	mov.n	a8, a10
 .LVL160:
 	bnez.n	a10, .L64
-	.loc 1 420 0
+	.loc 1 425 0
 	addi.n	a11, sp, 12
 	mov.n	a12, sp
 	mov.n	a10, a11
@@ -899,13 +901,13 @@ mbedtls_rsa_validate_params:
 	mov.n	a8, a10
 .LVL162:
 	bnez.n	a10, .L64
-	.loc 1 421 0
+	.loc 1 426 0
 	mov.n	a11, a10
 	addi.n	a10, sp, 12
 	call8	mbedtls_mpi_cmp_int
 .LVL163:
 	bnez.n	a10, .L56
-	.loc 1 428 0
+	.loc 1 433 0
 	mov.n	a12, a6
 	mov.n	a11, a5
 	addi.n	a10, sp, 12
@@ -914,7 +916,7 @@ mbedtls_rsa_validate_params:
 	mov.n	a8, a10
 .LVL165:
 	bnez.n	a10, .L64
-	.loc 1 429 0
+	.loc 1 434 0
 	addi.n	a11, sp, 12
 	movi.n	a12, 1
 	mov.n	a10, a11
@@ -923,7 +925,7 @@ mbedtls_rsa_validate_params:
 	mov.n	a8, a10
 .LVL167:
 	bnez.n	a10, .L64
-	.loc 1 430 0
+	.loc 1 435 0
 	movi.n	a12, 1
 	mov.n	a11, a4
 	mov.n	a10, sp
@@ -932,7 +934,7 @@ mbedtls_rsa_validate_params:
 	mov.n	a8, a10
 .LVL169:
 	bnez.n	a10, .L64
-	.loc 1 431 0
+	.loc 1 436 0
 	addi.n	a11, sp, 12
 	mov.n	a12, sp
 	mov.n	a10, a11
@@ -941,7 +943,7 @@ mbedtls_rsa_validate_params:
 	mov.n	a8, a10
 .LVL171:
 	bnez.n	a10, .L64
-	.loc 1 432 0
+	.loc 1 437 0
 	mov.n	a11, a10
 	addi.n	a10, sp, 12
 	s32i.n	a8, sp, 40
@@ -951,30 +953,30 @@ mbedtls_rsa_validate_params:
 	beqz.n	a10, .L64
 .L56:
 .LVL173:
-	.loc 1 434 0
+	.loc 1 439 0
 	l32r	a8, .LC4
 .LVL174:
 .L64:
-	.loc 1 441 0
+	.loc 1 446 0
 	addi.n	a10, sp, 12
 	s32i.n	a8, sp, 40
 	call8	mbedtls_mpi_free
 .LVL175:
-	.loc 1 442 0
+	.loc 1 447 0
 	mov.n	a10, sp
 	call8	mbedtls_mpi_free
 .LVL176:
-	.loc 1 445 0
+	.loc 1 450 0
 	l32i.n	a8, sp, 40
 	beqz.n	a8, .L66
 	addmi	a3, a8, 0x4200
 .LVL177:
-	.loc 1 447 0
+	.loc 1 452 0
 	addmi	a2, a8, -0x4200
 	movnez	a8, a2, a3
 .L66:
 .LVL178:
-	.loc 1 451 0
+	.loc 1 456 0
 	mov.n	a2, a8
 	retw.n
 .LFE3:
@@ -985,26 +987,26 @@ mbedtls_rsa_validate_params:
 	.type	mbedtls_rsa_deduce_crt, @function
 mbedtls_rsa_deduce_crt:
 .LFB4:
-	.loc 1 456 0
+	.loc 1 461 0
 .LVL179:
 	entry	sp, 64
 .LCFI4:
 .LVL180:
-	.loc 1 459 0
+	.loc 1 464 0
 	mov.n	a10, sp
-	.loc 1 456 0
-	.loc 1 459 0
+	.loc 1 461 0
+	.loc 1 464 0
 	call8	mbedtls_mpi_init
 .LVL181:
-	.loc 1 462 0
+	.loc 1 467 0
 	bnez.n	a5, .L90
 .LVL182:
 .L94:
-	.loc 1 469 0
+	.loc 1 474 0
 	bnez.n	a6, .L91
 	j	.L92
 .L90:
-	.loc 1 464 0
+	.loc 1 469 0
 	movi.n	a12, 1
 	mov.n	a11, a2
 	mov.n	a10, sp
@@ -1013,7 +1015,7 @@ mbedtls_rsa_deduce_crt:
 	mov.n	a8, a10
 .LVL184:
 	bnez.n	a10, .L93
-	.loc 1 465 0
+	.loc 1 470 0
 	mov.n	a12, sp
 	mov.n	a11, a4
 	mov.n	a10, a5
@@ -1026,11 +1028,11 @@ mbedtls_rsa_deduce_crt:
 .LVL187:
 .L92:
 	mov.n	a8, a7
-	.loc 1 476 0
+	.loc 1 481 0
 	beqz.n	a7, .L93
 	j	.L95
 .L91:
-	.loc 1 471 0
+	.loc 1 476 0
 	movi.n	a12, 1
 	mov.n	a11, a3
 	mov.n	a10, sp
@@ -1039,7 +1041,7 @@ mbedtls_rsa_deduce_crt:
 	mov.n	a8, a10
 .LVL189:
 	bnez.n	a10, .L93
-	.loc 1 472 0
+	.loc 1 477 0
 	mov.n	a12, sp
 	mov.n	a11, a4
 	mov.n	a10, a6
@@ -1051,7 +1053,7 @@ mbedtls_rsa_deduce_crt:
 	j	.L93
 .LVL192:
 .L95:
-	.loc 1 478 0
+	.loc 1 483 0
 	mov.n	a12, a2
 	mov.n	a11, a3
 	mov.n	a10, a7
@@ -1060,12 +1062,12 @@ mbedtls_rsa_deduce_crt:
 	mov.n	a8, a10
 .LVL194:
 .L93:
-	.loc 1 482 0
+	.loc 1 487 0
 	mov.n	a10, sp
 	s32i.n	a8, sp, 16
 	call8	mbedtls_mpi_free
 .LVL195:
-	.loc 1 485 0
+	.loc 1 490 0
 	l32i.n	a8, sp, 16
 	mov.n	a2, a8
 .LVL196:
@@ -1155,7 +1157,7 @@ mbedtls_rsa_deduce_crt:
 	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0xee5
+	.4byte	0xef1
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -1248,30 +1250,30 @@ mbedtls_rsa_deduce_crt:
 	.uleb128 0x2
 	.4byte	.LASF16
 	.byte	0x5
-	.byte	0xa8
+	.byte	0xad
 	.4byte	0xad
 	.uleb128 0x7
 	.4byte	.LASF17
 	.byte	0xc
 	.byte	0x5
-	.byte	0xb6
+	.byte	0xbb
 	.4byte	0xee
 	.uleb128 0x8
 	.string	"s"
 	.byte	0x5
-	.byte	0xb8
+	.byte	0xbd
 	.4byte	0x3e
 	.byte	0
 	.uleb128 0x8
 	.string	"n"
 	.byte	0x5
-	.byte	0xb9
+	.byte	0xbe
 	.4byte	0x25
 	.byte	0x4
 	.uleb128 0x8
 	.string	"p"
 	.byte	0x5
-	.byte	0xba
+	.byte	0xbf
 	.4byte	0xee
 	.byte	0x8
 	.byte	0
@@ -1281,7 +1283,7 @@ mbedtls_rsa_deduce_crt:
 	.uleb128 0x2
 	.4byte	.LASF17
 	.byte	0x5
-	.byte	0xbc
+	.byte	0xc1
 	.4byte	0xc3
 	.uleb128 0x9
 	.4byte	.LASF23
@@ -1386,7 +1388,7 @@ mbedtls_rsa_deduce_crt:
 	.4byte	.L6
 	.uleb128 0x12
 	.4byte	.LVL2
-	.4byte	0xe15
+	.4byte	0xe21
 	.4byte	0x1f4
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1409,7 +1411,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL5
-	.4byte	0xe1e
+	.4byte	0xe2a
 	.4byte	0x208
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1420,7 +1422,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL6
-	.4byte	0xe1e
+	.4byte	0xe2a
 	.4byte	0x222
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1437,7 +1439,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL7
-	.4byte	0xe2a
+	.4byte	0xe36
 	.4byte	0x23c
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1454,7 +1456,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL8
-	.4byte	0xe1e
+	.4byte	0xe2a
 	.4byte	0x256
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1471,7 +1473,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL9
-	.4byte	0xe2a
+	.4byte	0xe36
 	.4byte	0x270
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1488,7 +1490,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL10
-	.4byte	0xe36
+	.4byte	0xe42
 	.4byte	0x285
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1499,7 +1501,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL11
-	.4byte	0xe36
+	.4byte	0xe42
 	.4byte	0x299
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1510,7 +1512,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL12
-	.4byte	0xe41
+	.4byte	0xe4d
 	.4byte	0x2b9
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1533,7 +1535,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL14
-	.4byte	0xe4d
+	.4byte	0xe59
 	.4byte	0x2d8
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1555,7 +1557,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL16
-	.4byte	0xe59
+	.4byte	0xe65
 	.4byte	0x2ec
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1566,7 +1568,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL22
-	.4byte	0xe65
+	.4byte	0xe71
 	.4byte	0x30a
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1586,7 +1588,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL27
-	.4byte	0xe71
+	.4byte	0xe7d
 	.4byte	0x31f
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1597,7 +1599,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL28
-	.4byte	0xe7d
+	.4byte	0xe89
 	.4byte	0x340
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1620,7 +1622,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL30
-	.4byte	0xe1e
+	.4byte	0xe2a
 	.4byte	0x359
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1636,7 +1638,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL33
-	.4byte	0xe89
+	.4byte	0xe95
 	.4byte	0x387
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1671,7 +1673,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL36
-	.4byte	0xe1e
+	.4byte	0xe2a
 	.4byte	0x3a1
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1687,7 +1689,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL38
-	.4byte	0xe1e
+	.4byte	0xe2a
 	.4byte	0x3bb
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1703,7 +1705,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL40
-	.4byte	0xe95
+	.4byte	0xea1
 	.4byte	0x3dc
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1725,7 +1727,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL42
-	.4byte	0xe7d
+	.4byte	0xe89
 	.4byte	0x3fd
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1748,7 +1750,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL44
-	.4byte	0xe1e
+	.4byte	0xe2a
 	.4byte	0x416
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1764,7 +1766,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL45
-	.4byte	0xe2a
+	.4byte	0xe36
 	.4byte	0x430
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1781,7 +1783,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL46
-	.4byte	0xea1
+	.4byte	0xead
 	.4byte	0x456
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1810,7 +1812,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL48
-	.4byte	0xe4d
+	.4byte	0xe59
 	.4byte	0x477
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1832,7 +1834,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL50
-	.4byte	0xe41
+	.4byte	0xe4d
 	.4byte	0x49a
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1855,7 +1857,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL52
-	.4byte	0xead
+	.4byte	0xeb9
 	.4byte	0x4bc
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1878,7 +1880,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL57
-	.4byte	0xeb9
+	.4byte	0xec5
 	.4byte	0x4d1
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1889,7 +1891,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x14
 	.4byte	.LVL58
-	.4byte	0xeb9
+	.4byte	0xec5
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -1983,7 +1985,7 @@ mbedtls_rsa_deduce_crt:
 	.4byte	.L22
 	.uleb128 0x12
 	.4byte	.LVL64
-	.4byte	0xe1e
+	.4byte	0xe2a
 	.4byte	0x59f
 	.uleb128 0x13
 	.uleb128 0x1
@@ -1999,7 +2001,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL65
-	.4byte	0xe1e
+	.4byte	0xe2a
 	.4byte	0x5b8
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2015,7 +2017,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL66
-	.4byte	0xe1e
+	.4byte	0xe2a
 	.4byte	0x5d1
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2031,7 +2033,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL67
-	.4byte	0xe1e
+	.4byte	0xe2a
 	.4byte	0x5eb
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2048,7 +2050,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL68
-	.4byte	0xe36
+	.4byte	0xe42
 	.4byte	0x5ff
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2059,7 +2061,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL69
-	.4byte	0xe36
+	.4byte	0xe42
 	.4byte	0x613
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2070,7 +2072,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL70
-	.4byte	0xe4d
+	.4byte	0xe59
 	.4byte	0x632
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2092,7 +2094,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL72
-	.4byte	0xe4d
+	.4byte	0xe59
 	.4byte	0x651
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2114,7 +2116,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL74
-	.4byte	0xe7d
+	.4byte	0xe89
 	.4byte	0x671
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2137,7 +2139,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL76
-	.4byte	0xe41
+	.4byte	0xe4d
 	.4byte	0x691
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2160,7 +2162,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL78
-	.4byte	0xea1
+	.4byte	0xead
 	.4byte	0x6b7
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2189,7 +2191,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL80
-	.4byte	0xec4
+	.4byte	0xed0
 	.4byte	0x6d7
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2212,7 +2214,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL82
-	.4byte	0xeb9
+	.4byte	0xec5
 	.4byte	0x6eb
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2223,7 +2225,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x14
 	.4byte	.LVL83
-	.4byte	0xeb9
+	.4byte	0xec5
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -2309,7 +2311,7 @@ mbedtls_rsa_deduce_crt:
 	.4byte	.L31
 	.uleb128 0x12
 	.4byte	.LVL86
-	.4byte	0xe36
+	.4byte	0xe42
 	.4byte	0x7ac
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2320,7 +2322,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL87
-	.4byte	0xe36
+	.4byte	0xe42
 	.4byte	0x7c1
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2331,7 +2333,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL91
-	.4byte	0xe4d
+	.4byte	0xe59
 	.4byte	0x7e1
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2353,7 +2355,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL94
-	.4byte	0xed0
+	.4byte	0xedc
 	.4byte	0x802
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2376,7 +2378,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL97
-	.4byte	0xead
+	.4byte	0xeb9
 	.4byte	0x825
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2399,7 +2401,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL100
-	.4byte	0xe1e
+	.4byte	0xe2a
 	.4byte	0x83a
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2410,7 +2412,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL102
-	.4byte	0xe4d
+	.4byte	0xe59
 	.4byte	0x85a
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2432,7 +2434,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL105
-	.4byte	0xed0
+	.4byte	0xedc
 	.4byte	0x87b
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2455,7 +2457,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL108
-	.4byte	0xead
+	.4byte	0xeb9
 	.4byte	0x89e
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2478,7 +2480,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL111
-	.4byte	0xe1e
+	.4byte	0xe2a
 	.4byte	0x8b3
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2489,7 +2491,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL116
-	.4byte	0xe41
+	.4byte	0xe4d
 	.4byte	0x8d4
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2512,7 +2514,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL119
-	.4byte	0xe4d
+	.4byte	0xe59
 	.4byte	0x8f6
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2535,7 +2537,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL122
-	.4byte	0xead
+	.4byte	0xeb9
 	.4byte	0x918
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2558,7 +2560,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL125
-	.4byte	0xe1e
+	.4byte	0xe2a
 	.4byte	0x92d
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2569,7 +2571,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL131
-	.4byte	0xeb9
+	.4byte	0xec5
 	.4byte	0x942
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2580,7 +2582,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x14
 	.4byte	.LVL132
-	.4byte	0xeb9
+	.4byte	0xec5
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -2598,7 +2600,7 @@ mbedtls_rsa_deduce_crt:
 	.4byte	.LFE3-.LFB3
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xca3
+	.4byte	0xcaf
 	.uleb128 0x1a
 	.string	"N"
 	.byte	0x1
@@ -2636,7 +2638,7 @@ mbedtls_rsa_deduce_crt:
 	.4byte	.LASF28
 	.byte	0x1
 	.2byte	0x154
-	.4byte	0xcbc
+	.4byte	0xcc8
 	.4byte	.LLST16
 	.uleb128 0x1d
 	.4byte	.LASF29
@@ -2671,11 +2673,11 @@ mbedtls_rsa_deduce_crt:
 	.uleb128 0x18
 	.4byte	.LASF25
 	.byte	0x1
-	.2byte	0x1b7
+	.2byte	0x1bc
 	.4byte	.L64
 	.uleb128 0x12
 	.4byte	.LVL135
-	.4byte	0xe36
+	.4byte	0xe42
 	.4byte	0xa1a
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2686,7 +2688,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL136
-	.4byte	0xe36
+	.4byte	0xe42
 	.4byte	0xa2f
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2697,8 +2699,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL139
-	.4byte	0xedc
-	.4byte	0xa4a
+	.4byte	0xee8
+	.4byte	0xa50
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -2707,7 +2709,13 @@ mbedtls_rsa_deduce_crt:
 	.sleb128 0
 	.uleb128 0x13
 	.uleb128 0x1
-	.byte	0x5c
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x8
+	.byte	0x32
+	.uleb128 0x13
+	.uleb128 0x1
+	.byte	0x5d
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 0
@@ -2715,8 +2723,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL141
-	.4byte	0xedc
-	.4byte	0xa65
+	.4byte	0xee8
+	.4byte	0xa71
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -2725,7 +2733,13 @@ mbedtls_rsa_deduce_crt:
 	.sleb128 0
 	.uleb128 0x13
 	.uleb128 0x1
-	.byte	0x5c
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x8
+	.byte	0x32
+	.uleb128 0x13
+	.uleb128 0x1
+	.byte	0x5d
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 0
@@ -2733,8 +2747,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL143
-	.4byte	0xe41
-	.4byte	0xa86
+	.4byte	0xe4d
+	.4byte	0xa92
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -2756,8 +2770,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL145
-	.4byte	0xe1e
-	.4byte	0xa9a
+	.4byte	0xe2a
+	.4byte	0xaa6
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -2767,8 +2781,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL146
-	.4byte	0xe2a
-	.4byte	0xab5
+	.4byte	0xe36
+	.4byte	0xac1
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -2784,8 +2798,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL148
-	.4byte	0xe1e
-	.4byte	0xace
+	.4byte	0xe2a
+	.4byte	0xada
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -2800,8 +2814,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL149
-	.4byte	0xe1e
-	.4byte	0xae2
+	.4byte	0xe2a
+	.4byte	0xaee
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -2811,8 +2825,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL150
-	.4byte	0xe2a
-	.4byte	0xafc
+	.4byte	0xe36
+	.4byte	0xb08
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -2828,8 +2842,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL151
-	.4byte	0xe2a
-	.4byte	0xb16
+	.4byte	0xe36
+	.4byte	0xb22
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -2845,8 +2859,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL153
-	.4byte	0xe1e
-	.4byte	0xb2f
+	.4byte	0xe2a
+	.4byte	0xb3b
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -2861,8 +2875,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL154
-	.4byte	0xe1e
-	.4byte	0xb48
+	.4byte	0xe2a
+	.4byte	0xb54
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -2877,8 +2891,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL155
-	.4byte	0xe41
-	.4byte	0xb69
+	.4byte	0xe4d
+	.4byte	0xb75
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -2900,8 +2914,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL157
-	.4byte	0xe4d
-	.4byte	0xb8a
+	.4byte	0xe59
+	.4byte	0xb96
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -2922,8 +2936,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL159
-	.4byte	0xe4d
-	.4byte	0xbaa
+	.4byte	0xe59
+	.4byte	0xbb6
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -2944,8 +2958,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL161
-	.4byte	0xead
-	.4byte	0xbcd
+	.4byte	0xeb9
+	.4byte	0xbd9
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -2967,8 +2981,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL163
-	.4byte	0xe1e
-	.4byte	0xbe2
+	.4byte	0xe2a
+	.4byte	0xbee
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -2978,8 +2992,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL164
-	.4byte	0xe41
-	.4byte	0xc03
+	.4byte	0xe4d
+	.4byte	0xc0f
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -3001,8 +3015,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL166
-	.4byte	0xe4d
-	.4byte	0xc24
+	.4byte	0xe59
+	.4byte	0xc30
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -3023,8 +3037,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL168
-	.4byte	0xe4d
-	.4byte	0xc44
+	.4byte	0xe59
+	.4byte	0xc50
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -3045,8 +3059,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL170
-	.4byte	0xead
-	.4byte	0xc67
+	.4byte	0xeb9
+	.4byte	0xc73
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -3068,8 +3082,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL172
-	.4byte	0xe1e
-	.4byte	0xc7c
+	.4byte	0xe2a
+	.4byte	0xc88
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -3079,8 +3093,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL175
-	.4byte	0xeb9
-	.4byte	0xc91
+	.4byte	0xec5
+	.4byte	0xc9d
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -3090,7 +3104,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x14
 	.4byte	.LVL176
-	.4byte	0xeb9
+	.4byte	0xec5
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -3101,7 +3115,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x20
 	.4byte	0x3e
-	.4byte	0xcbc
+	.4byte	0xcc8
 	.uleb128 0x21
 	.4byte	0x8c
 	.uleb128 0x21
@@ -3111,68 +3125,68 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0xca3
+	.4byte	0xcaf
 	.uleb128 0x19
 	.4byte	.LASF30
 	.byte	0x1
-	.2byte	0x1c5
+	.2byte	0x1ca
 	.4byte	0x3e
 	.4byte	.LFB4
 	.4byte	.LFE4-.LFB4
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xe15
+	.4byte	0xe21
 	.uleb128 0x1a
 	.string	"P"
 	.byte	0x1
-	.2byte	0x1c5
+	.2byte	0x1ca
 	.4byte	0x4e2
 	.4byte	.LLST18
 	.uleb128 0x1b
 	.string	"Q"
 	.byte	0x1
-	.2byte	0x1c5
+	.2byte	0x1ca
 	.4byte	0x4e2
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x1b
 	.string	"D"
 	.byte	0x1
-	.2byte	0x1c6
+	.2byte	0x1cb
 	.4byte	0x4e2
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x1b
 	.string	"DP"
 	.byte	0x1
-	.2byte	0x1c6
+	.2byte	0x1cb
 	.4byte	0x4ed
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x1b
 	.string	"DQ"
 	.byte	0x1
-	.2byte	0x1c7
+	.2byte	0x1cc
 	.4byte	0x4ed
 	.uleb128 0x1
 	.byte	0x56
 	.uleb128 0x1b
 	.string	"QP"
 	.byte	0x1
-	.2byte	0x1c7
+	.2byte	0x1cc
 	.4byte	0x4ed
 	.uleb128 0x1
 	.byte	0x57
 	.uleb128 0x1e
 	.string	"ret"
 	.byte	0x1
-	.2byte	0x1c9
+	.2byte	0x1ce
 	.4byte	0x3e
 	.4byte	.LLST19
 	.uleb128 0x1f
 	.string	"K"
 	.byte	0x1
-	.2byte	0x1ca
+	.2byte	0x1cf
 	.4byte	0xf4
 	.uleb128 0x2
 	.byte	0x91
@@ -3180,12 +3194,12 @@ mbedtls_rsa_deduce_crt:
 	.uleb128 0x18
 	.4byte	.LASF25
 	.byte	0x1
-	.2byte	0x1e1
+	.2byte	0x1e6
 	.4byte	.L93
 	.uleb128 0x12
 	.4byte	.LVL181
-	.4byte	0xe36
-	.4byte	0xd66
+	.4byte	0xe42
+	.4byte	0xd72
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -3195,8 +3209,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL183
-	.4byte	0xe4d
-	.4byte	0xd85
+	.4byte	0xe59
+	.4byte	0xd91
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -3217,8 +3231,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL185
-	.4byte	0xead
-	.4byte	0xda5
+	.4byte	0xeb9
+	.4byte	0xdb1
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -3240,8 +3254,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL188
-	.4byte	0xe4d
-	.4byte	0xdc4
+	.4byte	0xe59
+	.4byte	0xdd0
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -3262,8 +3276,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL190
-	.4byte	0xead
-	.4byte	0xde4
+	.4byte	0xeb9
+	.4byte	0xdf0
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -3285,8 +3299,8 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL193
-	.4byte	0xec4
-	.4byte	0xe04
+	.4byte	0xed0
+	.4byte	0xe10
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -3308,7 +3322,7 @@ mbedtls_rsa_deduce_crt:
 	.byte	0
 	.uleb128 0x14
 	.4byte	.LVL195
-	.4byte	0xeb9
+	.4byte	0xec5
 	.uleb128 0x13
 	.uleb128 0x1
 	.byte	0x5a
@@ -3324,87 +3338,87 @@ mbedtls_rsa_deduce_crt:
 	.4byte	.LASF31
 	.4byte	.LASF31
 	.byte	0x5
-	.2byte	0x1f9
+	.2byte	0x250
 	.uleb128 0x23
 	.4byte	.LASF32
 	.4byte	.LASF32
 	.byte	0x5
-	.2byte	0x1ed
+	.2byte	0x232
 	.uleb128 0x24
 	.4byte	.LASF33
 	.4byte	.LASF33
 	.byte	0x5
-	.byte	0xc5
+	.byte	0xcb
 	.uleb128 0x23
 	.4byte	.LASF34
 	.4byte	.LASF34
 	.byte	0x5
-	.2byte	0x24d
+	.2byte	0x2b4
 	.uleb128 0x23
 	.4byte	.LASF35
 	.4byte	.LASF35
 	.byte	0x5
-	.2byte	0x241
+	.2byte	0x2a5
 	.uleb128 0x23
 	.4byte	.LASF36
 	.4byte	.LASF36
 	.byte	0x5
-	.2byte	0x150
+	.2byte	0x175
 	.uleb128 0x23
 	.4byte	.LASF37
 	.4byte	.LASF37
 	.byte	0x5
-	.2byte	0x1d5
+	.2byte	0x21a
 	.uleb128 0x23
 	.4byte	.LASF38
 	.4byte	.LASF38
 	.byte	0x5
-	.2byte	0x12c
+	.2byte	0x14a
 	.uleb128 0x23
 	.4byte	.LASF39
 	.4byte	.LASF39
 	.byte	0x5
-	.2byte	0x2ca
+	.2byte	0x356
 	.uleb128 0x23
 	.4byte	.LASF40
 	.4byte	.LASF40
 	.byte	0x5
-	.2byte	0x2ab
+	.2byte	0x332
 	.uleb128 0x23
 	.4byte	.LASF41
 	.4byte	.LASF41
 	.byte	0x5
-	.2byte	0x235
+	.2byte	0x296
 	.uleb128 0x23
 	.4byte	.LASF42
 	.4byte	.LASF42
 	.byte	0x5
-	.2byte	0x26b
+	.2byte	0x2d9
 	.uleb128 0x23
 	.4byte	.LASF43
 	.4byte	.LASF43
 	.byte	0x5
-	.2byte	0x289
+	.2byte	0x302
 	.uleb128 0x24
 	.4byte	.LASF44
 	.4byte	.LASF44
 	.byte	0x5
-	.byte	0xcc
+	.byte	0xd4
 	.uleb128 0x23
 	.4byte	.LASF45
 	.4byte	.LASF45
 	.byte	0x5
-	.2byte	0x2d8
+	.2byte	0x369
 	.uleb128 0x23
 	.4byte	.LASF46
 	.4byte	.LASF46
 	.byte	0x5
-	.2byte	0x229
+	.2byte	0x288
 	.uleb128 0x23
 	.4byte	.LASF47
 	.4byte	.LASF47
 	.byte	0x5
-	.2byte	0x2e5
+	.2byte	0x3a6
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -4465,8 +4479,6 @@ mbedtls_rsa_deduce_crt:
 	.string	"size_t"
 .LASF35:
 	.string	"mbedtls_mpi_sub_int"
-.LASF47:
-	.string	"mbedtls_mpi_is_prime"
 .LASF9:
 	.string	"long long unsigned int"
 .LASF20:
@@ -4557,6 +4569,8 @@ mbedtls_rsa_deduce_crt:
 	.string	"__uint16_t"
 .LASF34:
 	.string	"mbedtls_mpi_mul_mpi"
+.LASF47:
+	.string	"mbedtls_mpi_is_prime_ext"
 .LASF27:
 	.string	"mbedtls_rsa_validate_params"
 .LASF26:

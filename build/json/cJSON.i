@@ -1123,7 +1123,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 42 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/math.h" 1
@@ -1723,13 +1723,11 @@ extern long double strtold (const char *restrict, char **restrict);
 
 
 # 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/float.h" 1 3 4
-# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 1
 # 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed/limits.h" 1 3 4
 # 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 2
-# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 2
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/ctype.h" 1
 
 
@@ -1767,16 +1765,16 @@ extern char * const __ctype_ptr__;
 extern const char _ctype_[];
 
 
-# 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 2
-# 56 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 2
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
 #pragma GCC visibility pop
 
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.h" 1
-# 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.h"
+# 86 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.h" 2
-# 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.h"
+# 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.h" 2
+# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.h"
 typedef struct cJSON
 {
 
@@ -1801,12 +1799,13 @@ typedef struct cJSON
 
 typedef struct cJSON_Hooks
 {
-      void *(*malloc_fn)(size_t sz);
-      void (*free_fn)(void *ptr);
+
+      void *( *malloc_fn)(size_t sz);
+      void ( *free_fn)(void *ptr);
 } cJSON_Hooks;
 
 typedef int cJSON_bool;
-# 133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.h"
+# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.h"
 const char* cJSON_Version(void);
 
 
@@ -1946,20 +1945,16 @@ double cJSON_SetNumberHelper(cJSON *object, double number);
 
 void * cJSON_malloc(size_t size);
 void cJSON_free(void *object);
-# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 2
-
-
-
-
-
+# 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 2
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
 typedef struct {
     const unsigned char *json;
     size_t position;
 } error;
 static error global_error = { 
-# 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                              ((void *)0)
-# 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                  , 0 };
 
 const char * cJSON_GetErrorPtr(void)
@@ -1970,9 +1965,9 @@ const char * cJSON_GetErrorPtr(void)
 char * cJSON_GetStringValue(cJSON *item) {
     if (!cJSON_IsString(item)) {
         return 
-# 78 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 78 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
@@ -1987,7 +1982,7 @@ char * cJSON_GetStringValue(cJSON *item) {
 const char* cJSON_Version(void)
 {
     static char version[15];
-    sprintf(version, "%i.%i.%i", 1, 7, 1);
+    sprintf(version, "%i.%i.%i", 1, 7, 12);
 
     return version;
 }
@@ -1996,13 +1991,13 @@ const char* cJSON_Version(void)
 static int case_insensitive_strcmp(const unsigned char *string1, const unsigned char *string2)
 {
     if ((string1 == 
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                    ((void *)0)
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                        ) || (string2 == 
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                         ((void *)0)
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                             ))
     {
         return 1;
@@ -2026,47 +2021,47 @@ static int case_insensitive_strcmp(const unsigned char *string1, const unsigned 
 
 typedef struct internal_hooks
 {
-    void *(*allocate)(size_t size);
-    void (*deallocate)(void *pointer);
-    void *(*reallocate)(void *pointer, size_t size);
+    void *( *allocate)(size_t size);
+    void ( *deallocate)(void *pointer);
+    void *( *reallocate)(void *pointer, size_t size);
 } internal_hooks;
-# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
 static internal_hooks global_hooks = { malloc, free, realloc };
 
 static unsigned char* cJSON_strdup(const unsigned char* string, const internal_hooks * const hooks)
 {
     size_t length = 0;
     unsigned char *copy = 
-# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                          ((void *)0)
-# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                              ;
 
     if (string == 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                  ((void *)0)
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                      )
     {
         return 
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
     length = strlen((const char*)string) + sizeof("");
     copy = (unsigned char*)hooks->allocate(length);
     if (copy == 
-# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                ((void *)0)
-# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                    )
     {
         return 
-# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
     memcpy(copy, string, length);
@@ -2077,9 +2072,9 @@ static unsigned char* cJSON_strdup(const unsigned char* string, const internal_h
 void cJSON_InitHooks(cJSON_Hooks* hooks)
 {
     if (hooks == 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                 ((void *)0)
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                     )
     {
 
@@ -2091,9 +2086,9 @@ void cJSON_InitHooks(cJSON_Hooks* hooks)
 
     global_hooks.allocate = malloc;
     if (hooks->malloc_fn != 
-# 183 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                            ((void *)0)
-# 183 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                )
     {
         global_hooks.allocate = hooks->malloc_fn;
@@ -2101,9 +2096,9 @@ void cJSON_InitHooks(cJSON_Hooks* hooks)
 
     global_hooks.deallocate = free;
     if (hooks->free_fn != 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                          ((void *)0)
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                              )
     {
         global_hooks.deallocate = hooks->free_fn;
@@ -2111,9 +2106,9 @@ void cJSON_InitHooks(cJSON_Hooks* hooks)
 
 
     global_hooks.reallocate = 
-# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                              ((void *)0)
-# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                  ;
     if ((global_hooks.allocate == malloc) && (global_hooks.deallocate == free))
     {
@@ -2137,37 +2132,37 @@ static cJSON *cJSON_New_Item(const internal_hooks * const hooks)
 void cJSON_Delete(cJSON *item)
 {
     cJSON *next = 
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                  ((void *)0)
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                      ;
     while (item != 
-# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       )
     {
         next = item->next;
         if (!(item->type & 256) && (item->child != 
-# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 230 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                                                 ((void *)0)
-# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 230 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                                                     ))
         {
             cJSON_Delete(item->child);
         }
         if (!(item->type & 256) && (item->valuestring != 
-# 225 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 234 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                                                       ((void *)0)
-# 225 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 234 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                                                           ))
         {
             global_hooks.deallocate(item->valuestring);
         }
         if (!(item->type & 512) && (item->string != 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 238 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                                                    ((void *)0)
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 238 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                                                        ))
         {
             global_hooks.deallocate(item->string);
@@ -2196,27 +2191,27 @@ typedef struct
     size_t depth;
     internal_hooks hooks;
 } parse_buffer;
-# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
 static cJSON_bool parse_number(cJSON * const item, parse_buffer * const input_buffer)
 {
     double number = 0;
     unsigned char *after_end = 
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 279 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                               ((void *)0)
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 279 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                   ;
     unsigned char number_c_string[64];
     unsigned char decimal_point = get_decimal_point();
     size_t i = 0;
 
     if ((input_buffer == 
-# 275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                         ((void *)0)
-# 275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                             ) || (input_buffer->content == 
-# 275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                                            ((void *)0)
-# 275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                                                ))
     {
         return ((cJSON_bool)0);
@@ -2226,9 +2221,9 @@ static cJSON_bool parse_number(cJSON * const item, parse_buffer * const input_bu
 
 
     for (i = 0; (i < (sizeof(number_c_string) - 1)) && ((input_buffer != 
-# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                                       ((void *)0)
-# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                                       ) && (((input_buffer)->offset + i) < (input_buffer)->length)); i++)
     {
         switch (((input_buffer)->content + (input_buffer)->offset)[i])
@@ -2274,16 +2269,16 @@ loop_end:
     {
         item->valueint = 0x7fffffff;
     }
-    else if (number <= 
-# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
-                      (-0x7fffffff - 1)
-# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
-                             )
+    else if (number <= (double)
+# 337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+                              (-0x7fffffff - 1)
+# 337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+                                     )
     {
         item->valueint = 
-# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                         (-0x7fffffff - 1)
-# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                ;
     }
     else
@@ -2304,16 +2299,16 @@ double cJSON_SetNumberHelper(cJSON *object, double number)
     {
         object->valueint = 0x7fffffff;
     }
-    else if (number <= 
-# 350 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
-                      (-0x7fffffff - 1)
-# 350 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
-                             )
+    else if (number <= (double)
+# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+                              (-0x7fffffff - 1)
+# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+                                     )
     {
         object->valueint = 
-# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                           (-0x7fffffff - 1)
-# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                  ;
     }
     else
@@ -2339,26 +2334,26 @@ typedef struct
 static unsigned char* ensure(printbuffer * const p, size_t needed)
 {
     unsigned char *newbuffer = 
-# 376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                               ((void *)0)
-# 376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                   ;
     size_t newsize = 0;
 
     if ((p == 
-# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
              ((void *)0)
-# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                  ) || (p->buffer == 
-# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                     ((void *)0)
-# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                         ))
     {
         return 
-# 381 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 381 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
@@ -2366,9 +2361,9 @@ static unsigned char* ensure(printbuffer * const p, size_t needed)
     {
 
         return 
-# 387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
@@ -2376,9 +2371,9 @@ static unsigned char* ensure(printbuffer * const p, size_t needed)
     {
 
         return 
-# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
@@ -2390,9 +2385,9 @@ static unsigned char* ensure(printbuffer * const p, size_t needed)
 
     if (p->noalloc) {
         return 
-# 403 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 412 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 403 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 412 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
@@ -2407,9 +2402,9 @@ static unsigned char* ensure(printbuffer * const p, size_t needed)
         else
         {
             return 
-# 416 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 425 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 416 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 425 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       ;
         }
     }
@@ -2419,31 +2414,31 @@ static unsigned char* ensure(printbuffer * const p, size_t needed)
     }
 
     if (p->hooks.reallocate != 
-# 424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 433 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                               ((void *)0)
-# 424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 433 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                   )
     {
 
         newbuffer = (unsigned char*)p->hooks.reallocate(p->buffer, newsize);
         if (newbuffer == 
-# 428 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                         ((void *)0)
-# 428 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                             )
         {
             p->hooks.deallocate(p->buffer);
             p->length = 0;
             p->buffer = 
-# 432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                        ((void *)0)
-# 432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                            ;
 
             return 
-# 434 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 443 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 434 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 443 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       ;
         }
     }
@@ -2456,15 +2451,15 @@ static unsigned char* ensure(printbuffer * const p, size_t needed)
             p->hooks.deallocate(p->buffer);
             p->length = 0;
             p->buffer = 
-# 445 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                        ((void *)0)
-# 445 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                            ;
 
             return 
-# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 456 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 456 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       ;
         }
         if (newbuffer)
@@ -2483,18 +2478,18 @@ static unsigned char* ensure(printbuffer * const p, size_t needed)
 static void update_offset(printbuffer * const buffer)
 {
     const unsigned char *buffer_pointer = 
-# 464 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 473 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                          ((void *)0)
-# 464 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 473 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                              ;
     if ((buffer == 
-# 465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       ) || (buffer->buffer == 
-# 465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                               ((void *)0)
-# 465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                                   ))
     {
         return;
@@ -2508,9 +2503,9 @@ static void update_offset(printbuffer * const buffer)
 static cJSON_bool print_number(const cJSON * const item, printbuffer * const output_buffer)
 {
     unsigned char *output_pointer = 
-# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 486 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                    ((void *)0)
-# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 486 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                        ;
     double d = item->valuedouble;
     int length = 0;
@@ -2520,9 +2515,9 @@ static cJSON_bool print_number(const cJSON * const item, printbuffer * const out
     double test;
 
     if (output_buffer == 
-# 485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 494 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                         ((void *)0)
-# 485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 494 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                             )
     {
         return ((cJSON_bool)0);
@@ -2555,9 +2550,9 @@ static cJSON_bool print_number(const cJSON * const item, printbuffer * const out
 
     output_pointer = ensure(output_buffer, (size_t)length + sizeof(""));
     if (output_pointer == 
-# 516 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 525 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                          ((void *)0)
-# 516 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 525 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                              )
     {
         return ((cJSON_bool)0);
@@ -2746,14 +2741,14 @@ static cJSON_bool parse_string(cJSON * const item, parse_buffer * const input_bu
     const unsigned char *input_pointer = ((input_buffer)->content + (input_buffer)->offset) + 1;
     const unsigned char *input_end = ((input_buffer)->content + (input_buffer)->offset) + 1;
     unsigned char *output_pointer = 
-# 703 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 712 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                    ((void *)0)
-# 703 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 712 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                        ;
     unsigned char *output = 
-# 704 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 713 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                            ((void *)0)
-# 704 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 713 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                ;
 
 
@@ -2790,9 +2785,9 @@ static cJSON_bool parse_string(cJSON * const item, parse_buffer * const input_bu
         allocation_length = (size_t) (input_end - ((input_buffer)->content + (input_buffer)->offset)) - skipped_bytes;
         output = (unsigned char*)input_buffer->hooks.allocate(allocation_length + sizeof(""));
         if (output == 
-# 739 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 748 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                      ((void *)0)
-# 739 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 748 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                          )
         {
             goto fail;
@@ -2869,18 +2864,18 @@ static cJSON_bool parse_string(cJSON * const item, parse_buffer * const input_bu
 
 fail:
     if (output != 
-# 814 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 823 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                  ((void *)0)
-# 814 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 823 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                      )
     {
         input_buffer->hooks.deallocate(output);
     }
 
     if (input_pointer != 
-# 819 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 828 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                         ((void *)0)
-# 819 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 828 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                             )
     {
         input_buffer->offset = (size_t)(input_pointer - input_buffer->content);
@@ -2893,28 +2888,28 @@ fail:
 static cJSON_bool print_string_ptr(const unsigned char * const input, printbuffer * const output_buffer)
 {
     const unsigned char *input_pointer = 
-# 830 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                         ((void *)0)
-# 830 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                             ;
     unsigned char *output = 
-# 831 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                            ((void *)0)
-# 831 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                ;
     unsigned char *output_pointer = 
-# 832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 841 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                    ((void *)0)
-# 832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 841 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                        ;
     size_t output_length = 0;
 
     size_t escape_characters = 0;
 
     if (output_buffer == 
-# 837 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                         ((void *)0)
-# 837 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                             )
     {
         return ((cJSON_bool)0);
@@ -2922,16 +2917,16 @@ static cJSON_bool print_string_ptr(const unsigned char * const input, printbuffe
 
 
     if (input == 
-# 843 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 852 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                 ((void *)0)
-# 843 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 852 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                     )
     {
         output = ensure(output_buffer, sizeof("\"\""));
         if (output == 
-# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 855 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                      ((void *)0)
-# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 855 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                          )
         {
             return ((cJSON_bool)0);
@@ -2969,9 +2964,9 @@ static cJSON_bool print_string_ptr(const unsigned char * const input, printbuffe
 
     output = ensure(output_buffer, output_length + sizeof("\"\""));
     if (output == 
-# 882 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                  ((void *)0)
-# 882 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                      )
     {
         return ((cJSON_bool)0);
@@ -3057,26 +3052,26 @@ static cJSON_bool print_object(const cJSON * const item, printbuffer * const out
 static parse_buffer *buffer_skip_whitespace(parse_buffer * const buffer)
 {
     if ((buffer == 
-# 966 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 975 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 966 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 975 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       ) || (buffer->content == 
-# 966 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 975 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                                ((void *)0)
-# 966 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 975 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                                    ))
     {
         return 
-# 968 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 977 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 968 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 977 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
     while (((buffer != 
-# 971 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 980 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
           ((void *)0)
-# 971 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 980 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
           ) && (((buffer)->offset + 0) < (buffer)->length)) && (((buffer)->content + (buffer)->offset)[0] <= 32))
     {
        buffer->offset++;
@@ -3094,26 +3089,26 @@ static parse_buffer *buffer_skip_whitespace(parse_buffer * const buffer)
 static parse_buffer *skip_utf8_bom(parse_buffer * const buffer)
 {
     if ((buffer == 
-# 987 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 996 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 987 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 996 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       ) || (buffer->content == 
-# 987 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 996 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                                ((void *)0)
-# 987 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 996 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                                    ) || (buffer->offset != 0))
     {
         return 
-# 989 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 998 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 989 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 998 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
     if (((buffer != 
-# 992 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1001 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
        ((void *)0)
-# 992 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1001 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
        ) && (((buffer)->offset + 4) < (buffer)->length)) && (strncmp((const char*)((buffer)->content + (buffer)->offset), "\xEF\xBB\xBF", 3) == 0))
     {
         buffer->offset += 3;
@@ -3127,23 +3122,23 @@ cJSON * cJSON_ParseWithOpts(const char *value, const char **return_parse_end, cJ
 {
     parse_buffer buffer = { 0, 0, 0, 0, { 0, 0, 0 } };
     cJSON *item = 
-# 1004 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1013 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                  ((void *)0)
-# 1004 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1013 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                      ;
 
 
     global_error.json = 
-# 1007 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1016 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                        ((void *)0)
-# 1007 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1016 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                            ;
     global_error.position = 0;
 
     if (value == 
-# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1019 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                 ((void *)0)
-# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1019 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                     )
     {
         goto fail;
@@ -3156,9 +3151,9 @@ cJSON * cJSON_ParseWithOpts(const char *value, const char **return_parse_end, cJ
 
     item = cJSON_New_Item(&global_hooks);
     if (item == 
-# 1021 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1030 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                ((void *)0)
-# 1021 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1030 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                    )
     {
         goto fail;
@@ -3188,18 +3183,18 @@ cJSON * cJSON_ParseWithOpts(const char *value, const char **return_parse_end, cJ
 
 fail:
     if (item != 
-# 1049 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1058 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                ((void *)0)
-# 1049 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1058 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                    )
     {
         cJSON_Delete(item);
     }
 
     if (value != 
-# 1054 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1063 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                 ((void *)0)
-# 1054 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1063 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                     )
     {
         error local_error;
@@ -3216,9 +3211,9 @@ fail:
         }
 
         if (return_parse_end != 
-# 1069 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1078 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                ((void *)0)
-# 1069 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1078 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                    )
         {
             *return_parse_end = (const char*)local_error.json + local_error.position;
@@ -3228,9 +3223,9 @@ fail:
     }
 
     return 
-# 1077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1086 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
           ((void *)0)
-# 1077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1086 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
               ;
 }
 
@@ -3247,9 +3242,9 @@ static unsigned char *print(const cJSON * const item, cJSON_bool format, const i
     static const size_t default_buffer_size = 256;
     printbuffer buffer[1];
     unsigned char *printed = 
-# 1092 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                             ((void *)0)
-# 1092 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                 ;
 
     memset(buffer, 0, sizeof(buffer));
@@ -3260,9 +3255,9 @@ static unsigned char *print(const cJSON * const item, cJSON_bool format, const i
     buffer->format = format;
     buffer->hooks = *hooks;
     if (buffer->buffer == 
-# 1101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                          ((void *)0)
-# 1101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                              )
     {
         goto fail;
@@ -3277,32 +3272,32 @@ static unsigned char *print(const cJSON * const item, cJSON_bool format, const i
 
 
     if (hooks->reallocate != 
-# 1114 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                             ((void *)0)
-# 1114 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                 )
     {
         printed = (unsigned char*) hooks->reallocate(buffer->buffer, buffer->offset + 1);
-        buffer->buffer = 
-# 1117 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
-                        ((void *)0)
-# 1117 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
-                            ;
         if (printed == 
-# 1118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                       ((void *)0)
-# 1118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                           ) {
             goto fail;
         }
+        buffer->buffer = 
+# 1129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+                        ((void *)0)
+# 1129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+                            ;
     }
     else
     {
         printed = (unsigned char*) hooks->allocate(buffer->offset + 1);
         if (printed == 
-# 1125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1134 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                       ((void *)0)
-# 1125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1134 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                           )
         {
             goto fail;
@@ -3318,27 +3313,27 @@ static unsigned char *print(const cJSON * const item, cJSON_bool format, const i
 
 fail:
     if (buffer->buffer != 
-# 1139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                          ((void *)0)
-# 1139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                              )
     {
         hooks->deallocate(buffer->buffer);
     }
 
     if (printed != 
-# 1144 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 1144 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       )
     {
         hooks->deallocate(printed);
     }
 
     return 
-# 1149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
           ((void *)0)
-# 1149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
               ;
 }
 
@@ -3360,9 +3355,9 @@ char * cJSON_PrintBuffered(const cJSON *item, int prebuffer, cJSON_bool fmt)
     if (prebuffer < 0)
     {
         return 
-# 1169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 1169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
@@ -3370,9 +3365,9 @@ char * cJSON_PrintBuffered(const cJSON *item, int prebuffer, cJSON_bool fmt)
     if (!p.buffer)
     {
         return 
-# 1175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 1175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
@@ -3386,9 +3381,9 @@ char * cJSON_PrintBuffered(const cJSON *item, int prebuffer, cJSON_bool fmt)
     {
         global_hooks.deallocate(p.buffer);
         return 
-# 1187 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 1187 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
@@ -3400,9 +3395,9 @@ cJSON_bool cJSON_PrintPreallocated(cJSON *item, char *buf, const int len, const 
     printbuffer p = { 0, 0, 0, 0, 0, 0, { 0, 0, 0 } };
 
     if ((len < 0) || (buf == 
-# 1197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                             ((void *)0)
-# 1197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                 ))
     {
         return ((cJSON_bool)0);
@@ -3422,13 +3417,13 @@ cJSON_bool cJSON_PrintPreallocated(cJSON *item, char *buf, const int len, const 
 static cJSON_bool parse_value(cJSON * const item, parse_buffer * const input_buffer)
 {
     if ((input_buffer == 
-# 1215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                         ((void *)0)
-# 1215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                             ) || (input_buffer->content == 
-# 1215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                                            ((void *)0)
-# 1215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                                                ))
     {
         return ((cJSON_bool)0);
@@ -3437,9 +3432,9 @@ static cJSON_bool parse_value(cJSON * const item, parse_buffer * const input_buf
 
 
     if (((input_buffer != 
-# 1222 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
        ((void *)0)
-# 1222 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
        ) && (((input_buffer)->offset + 4) <= (input_buffer)->length)) && (strncmp((const char*)((input_buffer)->content + (input_buffer)->offset), "null", 4) == 0))
     {
         item->type = (1 << 2);
@@ -3448,9 +3443,9 @@ static cJSON_bool parse_value(cJSON * const item, parse_buffer * const input_buf
     }
 
     if (((input_buffer != 
-# 1229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1238 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
        ((void *)0)
-# 1229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1238 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
        ) && (((input_buffer)->offset + 5) <= (input_buffer)->length)) && (strncmp((const char*)((input_buffer)->content + (input_buffer)->offset), "false", 5) == 0))
     {
         item->type = (1 << 0);
@@ -3459,9 +3454,9 @@ static cJSON_bool parse_value(cJSON * const item, parse_buffer * const input_buf
     }
 
     if (((input_buffer != 
-# 1236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
        ((void *)0)
-# 1236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
        ) && (((input_buffer)->offset + 4) <= (input_buffer)->length)) && (strncmp((const char*)((input_buffer)->content + (input_buffer)->offset), "true", 4) == 0))
     {
         item->type = (1 << 1);
@@ -3471,36 +3466,36 @@ static cJSON_bool parse_value(cJSON * const item, parse_buffer * const input_buf
     }
 
     if (((input_buffer != 
-# 1244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
        ((void *)0)
-# 1244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
        ) && (((input_buffer)->offset + 0) < (input_buffer)->length)) && (((input_buffer)->content + (input_buffer)->offset)[0] == '\"'))
     {
         return parse_string(item, input_buffer);
     }
 
     if (((input_buffer != 
-# 1249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
        ((void *)0)
-# 1249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
        ) && (((input_buffer)->offset + 0) < (input_buffer)->length)) && ((((input_buffer)->content + (input_buffer)->offset)[0] == '-') || ((((input_buffer)->content + (input_buffer)->offset)[0] >= '0') && (((input_buffer)->content + (input_buffer)->offset)[0] <= '9'))))
     {
         return parse_number(item, input_buffer);
     }
 
     if (((input_buffer != 
-# 1254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1263 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
        ((void *)0)
-# 1254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1263 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
        ) && (((input_buffer)->offset + 0) < (input_buffer)->length)) && (((input_buffer)->content + (input_buffer)->offset)[0] == '['))
     {
         return parse_array(item, input_buffer);
     }
 
     if (((input_buffer != 
-# 1259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1268 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
        ((void *)0)
-# 1259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1268 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
        ) && (((input_buffer)->offset + 0) < (input_buffer)->length)) && (((input_buffer)->content + (input_buffer)->offset)[0] == '{'))
     {
         return parse_object(item, input_buffer);
@@ -3513,19 +3508,19 @@ static cJSON_bool parse_value(cJSON * const item, parse_buffer * const input_buf
 static cJSON_bool print_value(const cJSON * const item, printbuffer * const output_buffer)
 {
     unsigned char *output = 
-# 1270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1279 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                            ((void *)0)
-# 1270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1279 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                ;
 
     if ((item == 
-# 1272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                 ((void *)0)
-# 1272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                     ) || (output_buffer == 
-# 1272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                            ((void *)0)
-# 1272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                                ))
     {
         return ((cJSON_bool)0);
@@ -3536,9 +3531,9 @@ static cJSON_bool print_value(const cJSON * const item, printbuffer * const outp
         case (1 << 2):
             output = ensure(output_buffer, 5);
             if (output == 
-# 1281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                          ((void *)0)
-# 1281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                              )
             {
                 return ((cJSON_bool)0);
@@ -3549,9 +3544,9 @@ static cJSON_bool print_value(const cJSON * const item, printbuffer * const outp
         case (1 << 0):
             output = ensure(output_buffer, 6);
             if (output == 
-# 1290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                          ((void *)0)
-# 1290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                              )
             {
                 return ((cJSON_bool)0);
@@ -3562,9 +3557,9 @@ static cJSON_bool print_value(const cJSON * const item, printbuffer * const outp
         case (1 << 1):
             output = ensure(output_buffer, 5);
             if (output == 
-# 1299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                          ((void *)0)
-# 1299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                              )
             {
                 return ((cJSON_bool)0);
@@ -3579,24 +3574,20 @@ static cJSON_bool print_value(const cJSON * const item, printbuffer * const outp
         {
             size_t raw_length = 0;
             if (item->valuestring == 
-# 1312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                     ((void *)0)
-# 1312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                         )
             {
-                if (!output_buffer->noalloc)
-                {
-                    output_buffer->hooks.deallocate(output_buffer->buffer);
-                }
                 return ((cJSON_bool)0);
             }
 
             raw_length = strlen(item->valuestring) + sizeof("");
             output = ensure(output_buffer, raw_length);
             if (output == 
-# 1323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                          ((void *)0)
-# 1323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                              )
             {
                 return ((cJSON_bool)0);
@@ -3623,14 +3614,14 @@ static cJSON_bool print_value(const cJSON * const item, printbuffer * const outp
 static cJSON_bool parse_array(cJSON * const item, parse_buffer * const input_buffer)
 {
     cJSON *head = 
-# 1348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                  ((void *)0)
-# 1348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                      ;
     cJSON *current_item = 
-# 1349 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1354 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                          ((void *)0)
-# 1349 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1354 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                              ;
 
     if (input_buffer->depth >= 1000)
@@ -3648,9 +3639,9 @@ static cJSON_bool parse_array(cJSON * const item, parse_buffer * const input_buf
     input_buffer->offset++;
     buffer_skip_whitespace(input_buffer);
     if (((input_buffer != 
-# 1365 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
        ((void *)0)
-# 1365 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
        ) && (((input_buffer)->offset + 0) < (input_buffer)->length)) && (((input_buffer)->content + (input_buffer)->offset)[0] == ']'))
     {
 
@@ -3659,9 +3650,9 @@ static cJSON_bool parse_array(cJSON * const item, parse_buffer * const input_buf
 
 
     if ((!((input_buffer != 
-# 1372 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1377 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
        ((void *)0)
-# 1372 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1377 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
        ) && (((input_buffer)->offset + 0) < (input_buffer)->length))))
     {
         input_buffer->offset--;
@@ -3676,9 +3667,9 @@ static cJSON_bool parse_array(cJSON * const item, parse_buffer * const input_buf
 
         cJSON *new_item = cJSON_New_Item(&(input_buffer->hooks));
         if (new_item == 
-# 1385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                        ((void *)0)
-# 1385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                            )
         {
             goto fail;
@@ -3686,9 +3677,9 @@ static cJSON_bool parse_array(cJSON * const item, parse_buffer * const input_buf
 
 
         if (head == 
-# 1391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                    ((void *)0)
-# 1391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                        )
         {
 
@@ -3712,15 +3703,15 @@ static cJSON_bool parse_array(cJSON * const item, parse_buffer * const input_buf
         buffer_skip_whitespace(input_buffer);
     }
     while (((input_buffer != 
-# 1413 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1418 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
           ((void *)0)
-# 1413 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1418 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
           ) && (((input_buffer)->offset + 0) < (input_buffer)->length)) && (((input_buffer)->content + (input_buffer)->offset)[0] == ','));
 
     if ((!((input_buffer != 
-# 1415 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
        ((void *)0)
-# 1415 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
        ) && (((input_buffer)->offset + 0) < (input_buffer)->length))) || ((input_buffer)->content + (input_buffer)->offset)[0] != ']')
     {
         goto fail;
@@ -3738,9 +3729,9 @@ success:
 
 fail:
     if (head != 
-# 1431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1436 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                ((void *)0)
-# 1431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1436 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                    )
     {
         cJSON_Delete(head);
@@ -3753,17 +3744,17 @@ fail:
 static cJSON_bool print_array(const cJSON * const item, printbuffer * const output_buffer)
 {
     unsigned char *output_pointer = 
-# 1442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                    ((void *)0)
-# 1442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                        ;
     size_t length = 0;
     cJSON *current_element = item->child;
 
     if (output_buffer == 
-# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1451 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                         ((void *)0)
-# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1451 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                             )
     {
         return ((cJSON_bool)0);
@@ -3773,9 +3764,9 @@ static cJSON_bool print_array(const cJSON * const item, printbuffer * const outp
 
     output_pointer = ensure(output_buffer, 1);
     if (output_pointer == 
-# 1454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1459 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                          ((void *)0)
-# 1454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1459 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                              )
     {
         return ((cJSON_bool)0);
@@ -3786,9 +3777,9 @@ static cJSON_bool print_array(const cJSON * const item, printbuffer * const outp
     output_buffer->depth++;
 
     while (current_element != 
-# 1463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1468 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                              ((void *)0)
-# 1463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1468 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                  )
     {
         if (!print_value(current_element, output_buffer))
@@ -3801,9 +3792,9 @@ static cJSON_bool print_array(const cJSON * const item, printbuffer * const outp
             length = (size_t) (output_buffer->format ? 2 : 1);
             output_pointer = ensure(output_buffer, length + 1);
             if (output_pointer == 
-# 1474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1479 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                  ((void *)0)
-# 1474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1479 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                      )
             {
                 return ((cJSON_bool)0);
@@ -3821,9 +3812,9 @@ static cJSON_bool print_array(const cJSON * const item, printbuffer * const outp
 
     output_pointer = ensure(output_buffer, 2);
     if (output_pointer == 
-# 1490 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1495 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                          ((void *)0)
-# 1490 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1495 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                              )
     {
         return ((cJSON_bool)0);
@@ -3839,14 +3830,14 @@ static cJSON_bool print_array(const cJSON * const item, printbuffer * const outp
 static cJSON_bool parse_object(cJSON * const item, parse_buffer * const input_buffer)
 {
     cJSON *head = 
-# 1504 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1509 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                  ((void *)0)
-# 1504 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1509 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                      ;
     cJSON *current_item = 
-# 1505 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1510 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                          ((void *)0)
-# 1505 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1510 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                              ;
 
     if (input_buffer->depth >= 1000)
@@ -3856,9 +3847,9 @@ static cJSON_bool parse_object(cJSON * const item, parse_buffer * const input_bu
     input_buffer->depth++;
 
     if ((!((input_buffer != 
-# 1513 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1518 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
        ((void *)0)
-# 1513 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1518 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
        ) && (((input_buffer)->offset + 0) < (input_buffer)->length))) || (((input_buffer)->content + (input_buffer)->offset)[0] != '{'))
     {
         goto fail;
@@ -3867,9 +3858,9 @@ static cJSON_bool parse_object(cJSON * const item, parse_buffer * const input_bu
     input_buffer->offset++;
     buffer_skip_whitespace(input_buffer);
     if (((input_buffer != 
-# 1520 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1525 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
        ((void *)0)
-# 1520 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1525 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
        ) && (((input_buffer)->offset + 0) < (input_buffer)->length)) && (((input_buffer)->content + (input_buffer)->offset)[0] == '}'))
     {
         goto success;
@@ -3877,9 +3868,9 @@ static cJSON_bool parse_object(cJSON * const item, parse_buffer * const input_bu
 
 
     if ((!((input_buffer != 
-# 1526 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1531 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
        ((void *)0)
-# 1526 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1531 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
        ) && (((input_buffer)->offset + 0) < (input_buffer)->length))))
     {
         input_buffer->offset--;
@@ -3894,9 +3885,9 @@ static cJSON_bool parse_object(cJSON * const item, parse_buffer * const input_bu
 
         cJSON *new_item = cJSON_New_Item(&(input_buffer->hooks));
         if (new_item == 
-# 1539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                        ((void *)0)
-# 1539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                            )
         {
             goto fail;
@@ -3904,9 +3895,9 @@ static cJSON_bool parse_object(cJSON * const item, parse_buffer * const input_bu
 
 
         if (head == 
-# 1545 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                    ((void *)0)
-# 1545 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                        )
         {
 
@@ -3932,15 +3923,15 @@ static cJSON_bool parse_object(cJSON * const item, parse_buffer * const input_bu
 
         current_item->string = current_item->valuestring;
         current_item->valuestring = 
-# 1569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                    ((void *)0)
-# 1569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                        ;
 
         if ((!((input_buffer != 
-# 1571 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1576 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
            ((void *)0)
-# 1571 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1576 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
            ) && (((input_buffer)->offset + 0) < (input_buffer)->length))) || (((input_buffer)->content + (input_buffer)->offset)[0] != ':'))
         {
             goto fail;
@@ -3956,15 +3947,15 @@ static cJSON_bool parse_object(cJSON * const item, parse_buffer * const input_bu
         buffer_skip_whitespace(input_buffer);
     }
     while (((input_buffer != 
-# 1585 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1590 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
           ((void *)0)
-# 1585 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1590 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
           ) && (((input_buffer)->offset + 0) < (input_buffer)->length)) && (((input_buffer)->content + (input_buffer)->offset)[0] == ','));
 
     if ((!((input_buffer != 
-# 1587 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
        ((void *)0)
-# 1587 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
        ) && (((input_buffer)->offset + 0) < (input_buffer)->length))) || (((input_buffer)->content + (input_buffer)->offset)[0] != '}'))
     {
         goto fail;
@@ -3981,9 +3972,9 @@ success:
 
 fail:
     if (head != 
-# 1602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                ((void *)0)
-# 1602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                    )
     {
         cJSON_Delete(head);
@@ -3996,17 +3987,17 @@ fail:
 static cJSON_bool print_object(const cJSON * const item, printbuffer * const output_buffer)
 {
     unsigned char *output_pointer = 
-# 1613 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1618 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                    ((void *)0)
-# 1613 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1618 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                        ;
     size_t length = 0;
     cJSON *current_item = item->child;
 
     if (output_buffer == 
-# 1617 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                         ((void *)0)
-# 1617 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                             )
     {
         return ((cJSON_bool)0);
@@ -4016,9 +4007,9 @@ static cJSON_bool print_object(const cJSON * const item, printbuffer * const out
     length = (size_t) (output_buffer->format ? 2 : 1);
     output_pointer = ensure(output_buffer, length + 1);
     if (output_pointer == 
-# 1625 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                          ((void *)0)
-# 1625 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                              )
     {
         return ((cJSON_bool)0);
@@ -4039,9 +4030,9 @@ static cJSON_bool print_object(const cJSON * const item, printbuffer * const out
             size_t i;
             output_pointer = ensure(output_buffer, output_buffer->depth);
             if (output_pointer == 
-# 1644 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                  ((void *)0)
-# 1644 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                      )
             {
                 return ((cJSON_bool)0);
@@ -4063,9 +4054,9 @@ static cJSON_bool print_object(const cJSON * const item, printbuffer * const out
         length = (size_t) (output_buffer->format ? 2 : 1);
         output_pointer = ensure(output_buffer, length);
         if (output_pointer == 
-# 1664 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1669 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                              ((void *)0)
-# 1664 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1669 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                  )
         {
             return ((cJSON_bool)0);
@@ -4085,12 +4076,12 @@ static cJSON_bool print_object(const cJSON * const item, printbuffer * const out
         update_offset(output_buffer);
 
 
-        length = (size_t) ((output_buffer->format ? 1 : 0) + (current_item->next ? 1 : 0));
+        length = ((size_t)(output_buffer->format ? 1 : 0) + (size_t)(current_item->next ? 1 : 0));
         output_pointer = ensure(output_buffer, length + 1);
         if (output_pointer == 
-# 1685 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1690 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                              ((void *)0)
-# 1685 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1690 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                  )
         {
             return ((cJSON_bool)0);
@@ -4112,9 +4103,9 @@ static cJSON_bool print_object(const cJSON * const item, printbuffer * const out
 
     output_pointer = ensure(output_buffer, output_buffer->format ? (output_buffer->depth + 1) : 2);
     if (output_pointer == 
-# 1705 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1710 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                          ((void *)0)
-# 1705 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1710 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                              )
     {
         return ((cJSON_bool)0);
@@ -4138,16 +4129,16 @@ static cJSON_bool print_object(const cJSON * const item, printbuffer * const out
 int cJSON_GetArraySize(const cJSON *array)
 {
     cJSON *child = 
-# 1727 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1732 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 1727 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1732 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       ;
     size_t size = 0;
 
     if (array == 
-# 1730 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1735 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                 ((void *)0)
-# 1730 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1735 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                     )
     {
         return 0;
@@ -4156,9 +4147,9 @@ int cJSON_GetArraySize(const cJSON *array)
     child = array->child;
 
     while(child != 
-# 1737 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1742 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 1737 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1742 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       )
     {
         size++;
@@ -4173,29 +4164,29 @@ int cJSON_GetArraySize(const cJSON *array)
 static cJSON* get_array_item(const cJSON *array, size_t index)
 {
     cJSON *current_child = 
-# 1750 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1755 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                           ((void *)0)
-# 1750 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1755 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                               ;
 
     if (array == 
-# 1752 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1757 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                 ((void *)0)
-# 1752 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1757 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                     )
     {
         return 
-# 1754 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 1754 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
     current_child = array->child;
     while ((current_child != 
-# 1758 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1763 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                             ((void *)0)
-# 1758 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1763 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                 ) && (index > 0))
     {
         index--;
@@ -4210,9 +4201,9 @@ cJSON * cJSON_GetArrayItem(const cJSON *array, int index)
     if (index < 0)
     {
         return 
-# 1771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1776 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 1771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1776 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
@@ -4222,25 +4213,25 @@ cJSON * cJSON_GetArrayItem(const cJSON *array, int index)
 static cJSON *get_object_item(const cJSON * const object, const char * const name, const cJSON_bool case_sensitive)
 {
     cJSON *current_element = 
-# 1779 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1784 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                             ((void *)0)
-# 1779 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1784 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                 ;
 
     if ((object == 
-# 1781 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1786 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 1781 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1786 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       ) || (name == 
-# 1781 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1786 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                     ((void *)0)
-# 1781 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1786 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                         ))
     {
         return 
-# 1783 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 1783 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
@@ -4248,10 +4239,14 @@ static cJSON *get_object_item(const cJSON * const object, const char * const nam
     if (case_sensitive)
     {
         while ((current_element != 
-# 1789 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1794 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                   ((void *)0)
-# 1789 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
-                                      ) && (strcmp(name, current_element->string) != 0))
+# 1794 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+                                      ) && (current_element->string != 
+# 1794 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+                                                                       ((void *)0)
+# 1794 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+                                                                           ) && (strcmp(name, current_element->string) != 0))
         {
             current_element = current_element->next;
         }
@@ -4259,13 +4254,29 @@ static cJSON *get_object_item(const cJSON * const object, const char * const nam
     else
     {
         while ((current_element != 
-# 1796 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                   ((void *)0)
-# 1796 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                       ) && (case_insensitive_strcmp((const unsigned char*)name, (const unsigned char*)(current_element->string)) != 0))
         {
             current_element = current_element->next;
         }
+    }
+
+    if ((current_element == 
+# 1807 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+                           ((void *)0)
+# 1807 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+                               ) || (current_element->string == 
+# 1807 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+                                                                ((void *)0)
+# 1807 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+                                                                    )) {
+        return 
+# 1808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+              ((void *)0)
+# 1808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+                  ;
     }
 
     return current_element;
@@ -4297,48 +4308,48 @@ static void suffix_object(cJSON *prev, cJSON *item)
 static cJSON *create_reference(const cJSON *item, const internal_hooks * const hooks)
 {
     cJSON *reference = 
-# 1830 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                       ((void *)0)
-# 1830 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                           ;
     if (item == 
-# 1831 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                ((void *)0)
-# 1831 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                    )
     {
         return 
-# 1833 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1842 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 1833 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1842 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
     reference = cJSON_New_Item(hooks);
     if (reference == 
-# 1837 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                     ((void *)0)
-# 1837 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                         )
     {
         return 
-# 1839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1848 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 1839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1848 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
     memcpy(reference, item, sizeof(cJSON));
     reference->string = 
-# 1843 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1852 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                        ((void *)0)
-# 1843 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1852 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                            ;
     reference->type |= 256;
     reference->next = reference->prev = 
-# 1845 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1854 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                        ((void *)0)
-# 1845 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1854 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                            ;
     return reference;
 }
@@ -4346,19 +4357,19 @@ static cJSON *create_reference(const cJSON *item, const internal_hooks * const h
 static cJSON_bool add_item_to_array(cJSON *array, cJSON *item)
 {
     cJSON *child = 
-# 1851 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 1851 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       ;
 
     if ((item == 
-# 1853 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1862 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                 ((void *)0)
-# 1853 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1862 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                     ) || (array == 
-# 1853 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1862 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                    ((void *)0)
-# 1853 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1862 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                        ))
     {
         return ((cJSON_bool)0);
@@ -4367,9 +4378,9 @@ static cJSON_bool add_item_to_array(cJSON *array, cJSON *item)
     child = array->child;
 
     if (child == 
-# 1860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1869 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                 ((void *)0)
-# 1860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1869 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                     )
     {
 
@@ -4412,52 +4423,61 @@ static void* cast_away_const(const void* string)
 
 static cJSON_bool add_item_to_object(cJSON * const object, const char * const string, cJSON * const item, const internal_hooks * const hooks, const cJSON_bool constant_key)
 {
+    char *new_key = 
+# 1911 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+                   ((void *)0)
+# 1911 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+                       ;
+    int new_type = (0);
+
     if ((object == 
-# 1902 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1914 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 1902 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1914 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       ) || (string == 
-# 1902 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1914 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                       ((void *)0)
-# 1902 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1914 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                           ) || (item == 
-# 1902 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1914 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                                         ((void *)0)
-# 1902 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1914 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                                             ))
     {
         return ((cJSON_bool)0);
     }
 
+    if (constant_key)
+    {
+        new_key = (char*)cast_away_const(string);
+        new_type = item->type | 512;
+    }
+    else
+    {
+        new_key = (char*)cJSON_strdup((const unsigned char*)string, hooks);
+        if (new_key == 
+# 1927 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+                      ((void *)0)
+# 1927 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+                          )
+        {
+            return ((cJSON_bool)0);
+        }
+
+        new_type = item->type & ~512;
+    }
+
     if (!(item->type & 512) && (item->string != 
-# 1907 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                                                ((void *)0)
-# 1907 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                                                    ))
     {
         hooks->deallocate(item->string);
     }
 
-    if (constant_key)
-    {
-        item->string = (char*)cast_away_const(string);
-        item->type |= 512;
-    }
-    else
-    {
-        char *key = (char*)cJSON_strdup((const unsigned char*)string, hooks);
-        if (key == 
-# 1920 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
-                  ((void *)0)
-# 1920 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
-                      )
-        {
-            return ((cJSON_bool)0);
-        }
-
-        item->string = key;
-        item->type &= ~512;
-    }
+    item->string = new_key;
+    item->type = new_type;
 
     return add_item_to_array(object, item);
 }
@@ -4476,9 +4496,9 @@ void cJSON_AddItemToObjectCS(cJSON *object, const char *string, cJSON *item)
 void cJSON_AddItemReferenceToArray(cJSON *array, cJSON *item)
 {
     if (array == 
-# 1945 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                 ((void *)0)
-# 1945 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                     )
     {
         return;
@@ -4490,13 +4510,13 @@ void cJSON_AddItemReferenceToArray(cJSON *array, cJSON *item)
 void cJSON_AddItemReferenceToObject(cJSON *object, const char *string, cJSON *item)
 {
     if ((object == 
-# 1955 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1969 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 1955 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1969 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       ) || (string == 
-# 1955 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1969 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                       ((void *)0)
-# 1955 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1969 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                           ))
     {
         return;
@@ -4515,9 +4535,9 @@ cJSON* cJSON_AddNullToObject(cJSON * const object, const char * const name)
 
     cJSON_Delete(null);
     return 
-# 1972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1986 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
           ((void *)0)
-# 1972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1986 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
               ;
 }
 
@@ -4531,9 +4551,9 @@ cJSON* cJSON_AddTrueToObject(cJSON * const object, const char * const name)
 
     cJSON_Delete(true_item);
     return 
-# 1984 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 1998 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
           ((void *)0)
-# 1984 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 1998 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
               ;
 }
 
@@ -4547,9 +4567,9 @@ cJSON* cJSON_AddFalseToObject(cJSON * const object, const char * const name)
 
     cJSON_Delete(false_item);
     return 
-# 1996 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
           ((void *)0)
-# 1996 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
               ;
 }
 
@@ -4563,9 +4583,9 @@ cJSON* cJSON_AddBoolToObject(cJSON * const object, const char * const name, cons
 
     cJSON_Delete(bool_item);
     return 
-# 2008 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2022 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
           ((void *)0)
-# 2008 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2022 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
               ;
 }
 
@@ -4579,9 +4599,9 @@ cJSON* cJSON_AddNumberToObject(cJSON * const object, const char * const name, co
 
     cJSON_Delete(number_item);
     return 
-# 2020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2034 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
           ((void *)0)
-# 2020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2034 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
               ;
 }
 
@@ -4595,9 +4615,9 @@ cJSON* cJSON_AddStringToObject(cJSON * const object, const char * const name, co
 
     cJSON_Delete(string_item);
     return 
-# 2032 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2046 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
           ((void *)0)
-# 2032 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2046 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
               ;
 }
 
@@ -4611,9 +4631,9 @@ cJSON* cJSON_AddRawToObject(cJSON * const object, const char * const name, const
 
     cJSON_Delete(raw_item);
     return 
-# 2044 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2058 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
           ((void *)0)
-# 2044 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2058 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
               ;
 }
 
@@ -4627,9 +4647,9 @@ cJSON* cJSON_AddObjectToObject(cJSON * const object, const char * const name)
 
     cJSON_Delete(object_item);
     return 
-# 2056 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2070 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
           ((void *)0)
-# 2056 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2070 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
               ;
 }
 
@@ -4643,44 +4663,44 @@ cJSON* cJSON_AddArrayToObject(cJSON * const object, const char * const name)
 
     cJSON_Delete(array);
     return 
-# 2068 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2082 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
           ((void *)0)
-# 2068 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2082 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
               ;
 }
 
 cJSON * cJSON_DetachItemViaPointer(cJSON *parent, cJSON * const item)
 {
     if ((parent == 
-# 2073 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2087 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 2073 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2087 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       ) || (item == 
-# 2073 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2087 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                     ((void *)0)
-# 2073 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2087 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                         ))
     {
         return 
-# 2075 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2089 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 2075 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2089 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
     if (item->prev != 
-# 2078 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2092 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                      ((void *)0)
-# 2078 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2092 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                          )
     {
 
         item->prev->next = item->next;
     }
     if (item->next != 
-# 2083 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2097 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                      ((void *)0)
-# 2083 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2097 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                          )
     {
 
@@ -4694,14 +4714,14 @@ cJSON * cJSON_DetachItemViaPointer(cJSON *parent, cJSON * const item)
     }
 
     item->prev = 
-# 2095 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                 ((void *)0)
-# 2095 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                     ;
     item->next = 
-# 2096 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                 ((void *)0)
-# 2096 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                     ;
 
     return item;
@@ -4712,9 +4732,9 @@ cJSON * cJSON_DetachItemFromArray(cJSON *array, int which)
     if (which < 0)
     {
         return 
-# 2105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 2105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
@@ -4754,9 +4774,9 @@ void cJSON_DeleteItemFromObjectCaseSensitive(cJSON *object, const char *string)
 void cJSON_InsertItemInArray(cJSON *array, int which, cJSON *newitem)
 {
     cJSON *after_inserted = 
-# 2143 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                            ((void *)0)
-# 2143 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                ;
 
     if (which < 0)
@@ -4766,9 +4786,9 @@ void cJSON_InsertItemInArray(cJSON *array, int which, cJSON *newitem)
 
     after_inserted = get_array_item(array, (size_t)which);
     if (after_inserted == 
-# 2151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                          ((void *)0)
-# 2151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                              )
     {
         add_item_to_array(array, newitem);
@@ -4791,17 +4811,17 @@ void cJSON_InsertItemInArray(cJSON *array, int which, cJSON *newitem)
 cJSON_bool cJSON_ReplaceItemViaPointer(cJSON * const parent, cJSON * const item, cJSON * replacement)
 {
     if ((parent == 
-# 2172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 2172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       ) || (replacement == 
-# 2172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                            ((void *)0)
-# 2172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                                ) || (item == 
-# 2172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                                              ((void *)0)
-# 2172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                                                  ))
     {
         return ((cJSON_bool)0);
@@ -4816,17 +4836,17 @@ cJSON_bool cJSON_ReplaceItemViaPointer(cJSON * const parent, cJSON * const item,
     replacement->prev = item->prev;
 
     if (replacement->next != 
-# 2185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                             ((void *)0)
-# 2185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                 )
     {
         replacement->next->prev = replacement;
     }
     if (replacement->prev != 
-# 2189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                             ((void *)0)
-# 2189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                 )
     {
         replacement->prev->next = replacement;
@@ -4837,14 +4857,14 @@ cJSON_bool cJSON_ReplaceItemViaPointer(cJSON * const parent, cJSON * const item,
     }
 
     item->next = 
-# 2198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2212 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                 ((void *)0)
-# 2198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2212 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                     ;
     item->prev = 
-# 2199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                 ((void *)0)
-# 2199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                     ;
     cJSON_Delete(item);
 
@@ -4864,13 +4884,13 @@ void cJSON_ReplaceItemInArray(cJSON *array, int which, cJSON *newitem)
 static cJSON_bool replace_item_in_object(cJSON *object, const char *string, cJSON *replacement, cJSON_bool case_sensitive)
 {
     if ((replacement == 
-# 2217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                        ((void *)0)
-# 2217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                            ) || (string == 
-# 2217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                            ((void *)0)
-# 2217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                                ))
     {
         return ((cJSON_bool)0);
@@ -4878,9 +4898,9 @@ static cJSON_bool replace_item_in_object(cJSON *object, const char *string, cJSO
 
 
     if (!(replacement->type & 512) && (replacement->string != 
-# 2223 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                                                              ((void *)0)
-# 2223 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                                                                  ))
     {
         cJSON_free(replacement->string);
@@ -4961,16 +4981,16 @@ cJSON * cJSON_CreateNumber(double num)
         {
             item->valueint = 0x7fffffff;
         }
-        else if (num <= 
-# 2303 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
-                       (-0x7fffffff - 1)
-# 2303 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
-                              )
+        else if (num <= (double)
+# 2317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+                               (-0x7fffffff - 1)
+# 2317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+                                      )
         {
             item->valueint = 
-# 2305 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                             (-0x7fffffff - 1)
-# 2305 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                    ;
         }
         else
@@ -4993,9 +5013,9 @@ cJSON * cJSON_CreateString(const char *string)
         {
             cJSON_Delete(item);
             return 
-# 2326 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2340 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 2326 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2340 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       ;
         }
     }
@@ -5007,9 +5027,9 @@ cJSON * cJSON_CreateStringReference(const char *string)
 {
     cJSON *item = cJSON_New_Item(&global_hooks);
     if (item != 
-# 2336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2350 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                ((void *)0)
-# 2336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2350 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                    )
     {
         item->type = (1 << 4) | 256;
@@ -5023,9 +5043,9 @@ cJSON * cJSON_CreateObjectReference(const cJSON *child)
 {
     cJSON *item = cJSON_New_Item(&global_hooks);
     if (item != 
-# 2348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2362 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                ((void *)0)
-# 2348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2362 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                    ) {
         item->type = (1 << 6) | 256;
         item->child = (cJSON*)cast_away_const(child);
@@ -5037,9 +5057,9 @@ cJSON * cJSON_CreateObjectReference(const cJSON *child)
 cJSON * cJSON_CreateArrayReference(const cJSON *child) {
     cJSON *item = cJSON_New_Item(&global_hooks);
     if (item != 
-# 2358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2372 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                ((void *)0)
-# 2358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2372 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                    ) {
         item->type = (1 << 5) | 256;
         item->child = (cJSON*)cast_away_const(child);
@@ -5059,9 +5079,9 @@ cJSON * cJSON_CreateRaw(const char *raw)
         {
             cJSON_Delete(item);
             return 
-# 2376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 2376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       ;
         }
     }
@@ -5096,31 +5116,31 @@ cJSON * cJSON_CreateIntArray(const int *numbers, int count)
 {
     size_t i = 0;
     cJSON *n = 
-# 2409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2423 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 2409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2423 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     cJSON *p = 
-# 2410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 2410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     cJSON *a = 
-# 2411 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2425 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 2411 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2425 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
 
     if ((count < 0) || (numbers == 
-# 2413 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                   ((void *)0)
-# 2413 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                       ))
     {
         return 
-# 2415 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 2415 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
@@ -5132,9 +5152,9 @@ cJSON * cJSON_CreateIntArray(const int *numbers, int count)
         {
             cJSON_Delete(a);
             return 
-# 2425 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2439 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 2425 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2439 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       ;
         }
         if(!i)
@@ -5155,31 +5175,31 @@ cJSON * cJSON_CreateFloatArray(const float *numbers, int count)
 {
     size_t i = 0;
     cJSON *n = 
-# 2444 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 2444 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     cJSON *p = 
-# 2445 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2459 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 2445 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2459 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     cJSON *a = 
-# 2446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2460 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 2446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2460 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
 
     if ((count < 0) || (numbers == 
-# 2448 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2462 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                   ((void *)0)
-# 2448 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2462 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                       ))
     {
         return 
-# 2450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2464 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 2450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2464 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
@@ -5192,9 +5212,9 @@ cJSON * cJSON_CreateFloatArray(const float *numbers, int count)
         {
             cJSON_Delete(a);
             return 
-# 2461 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 2461 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       ;
         }
         if(!i)
@@ -5215,31 +5235,31 @@ cJSON * cJSON_CreateDoubleArray(const double *numbers, int count)
 {
     size_t i = 0;
     cJSON *n = 
-# 2480 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2494 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 2480 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2494 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     cJSON *p = 
-# 2481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2495 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 2481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2495 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     cJSON *a = 
-# 2482 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 2482 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
 
     if ((count < 0) || (numbers == 
-# 2484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2498 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                   ((void *)0)
-# 2484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2498 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                       ))
     {
         return 
-# 2486 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2500 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 2486 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2500 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
@@ -5252,9 +5272,9 @@ cJSON * cJSON_CreateDoubleArray(const double *numbers, int count)
         {
             cJSON_Delete(a);
             return 
-# 2497 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2511 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 2497 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2511 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       ;
         }
         if(!i)
@@ -5275,31 +5295,31 @@ cJSON * cJSON_CreateStringArray(const char **strings, int count)
 {
     size_t i = 0;
     cJSON *n = 
-# 2516 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2530 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 2516 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2530 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     cJSON *p = 
-# 2517 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2531 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 2517 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2531 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     cJSON *a = 
-# 2518 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2532 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 2518 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2532 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
 
     if ((count < 0) || (strings == 
-# 2520 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                   ((void *)0)
-# 2520 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                       ))
     {
         return 
-# 2522 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2536 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
               ((void *)0)
-# 2522 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2536 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                   ;
     }
 
@@ -5312,9 +5332,9 @@ cJSON * cJSON_CreateStringArray(const char **strings, int count)
         {
             cJSON_Delete(a);
             return 
-# 2533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2547 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 2533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2547 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       ;
         }
         if(!i)
@@ -5335,24 +5355,24 @@ cJSON * cJSON_CreateStringArray(const char **strings, int count)
 cJSON * cJSON_Duplicate(const cJSON *item, cJSON_bool recurse)
 {
     cJSON *newitem = 
-# 2552 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2566 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                     ((void *)0)
-# 2552 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2566 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                         ;
     cJSON *child = 
-# 2553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2567 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 2553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2567 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       ;
     cJSON *next = 
-# 2554 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2568 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                  ((void *)0)
-# 2554 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2568 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                      ;
     cJSON *newchild = 
-# 2555 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                      ((void *)0)
-# 2555 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                          ;
 
 
@@ -5394,9 +5414,9 @@ cJSON * cJSON_Duplicate(const cJSON *item, cJSON_bool recurse)
 
     child = item->child;
     while (child != 
-# 2595 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2609 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                    ((void *)0)
-# 2595 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2609 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                        )
     {
         newchild = cJSON_Duplicate(child, ((cJSON_bool)1));
@@ -5405,9 +5425,9 @@ cJSON * cJSON_Duplicate(const cJSON *item, cJSON_bool recurse)
             goto fail;
         }
         if (next != 
-# 2602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2616 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                    ((void *)0)
-# 2602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2616 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                        )
         {
 
@@ -5428,88 +5448,115 @@ cJSON * cJSON_Duplicate(const cJSON *item, cJSON_bool recurse)
 
 fail:
     if (newitem != 
-# 2621 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                   ((void *)0)
-# 2621 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                       )
     {
         cJSON_Delete(newitem);
     }
 
     return 
-# 2626 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2640 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
           ((void *)0)
-# 2626 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2640 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
               ;
+}
+
+static void skip_oneline_comment(char **input)
+{
+    *input += (sizeof("//") - sizeof(""));
+
+    for (; (*input)[0] != '\0'; ++(*input))
+    {
+        if ((*input)[0] == '\n') {
+            *input += (sizeof("\n") - sizeof(""));
+            return;
+        }
+    }
+}
+
+static void skip_multiline_comment(char **input)
+{
+    *input += (sizeof("/*") - sizeof(""));
+
+    for (; (*input)[0] != '\0'; ++(*input))
+    {
+        if (((*input)[0] == '*') && ((*input)[1] == '/'))
+        {
+            *input += (sizeof("*/") - sizeof(""));
+            return;
+        }
+    }
+}
+
+static void minify_string(char **input, char **output) {
+    (*output)[0] = (*input)[0];
+    *input += (sizeof("\"") - sizeof(""));
+    *output += (sizeof("\"") - sizeof(""));
+
+
+    for (; (*input)[0] != '\0'; (void)++(*input), ++(*output)) {
+        (*output)[0] = (*input)[0];
+
+        if ((*input)[0] == '\"') {
+            (*output)[0] = '\"';
+            *input += (sizeof("\"") - sizeof(""));
+            *output += (sizeof("\"") - sizeof(""));
+            return;
+        } else if (((*input)[0] == '\\') && ((*input)[1] == '\"')) {
+            (*output)[1] = (*input)[1];
+            *input += (sizeof("\"") - sizeof(""));
+            *output += (sizeof("\"") - sizeof(""));
+        }
+    }
 }
 
 void cJSON_Minify(char *json)
 {
-    unsigned char *into = (unsigned char*)json;
+    char *into = json;
 
     if (json == 
-# 2633 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2696 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                ((void *)0)
-# 2633 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2696 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                    )
     {
         return;
     }
 
-    while (*json)
+    while (json[0] != '\0')
     {
-        if (*json == ' ')
+        switch (json[0])
         {
-            json++;
-        }
-        else if (*json == '\t')
-        {
-
-            json++;
-        }
-        else if (*json == '\r')
-        {
-            json++;
-        }
-        else if (*json=='\n')
-        {
-            json++;
-        }
-        else if ((*json == '/') && (json[1] == '/'))
-        {
-
-            while (*json && (*json != '\n'))
-            {
+            case ' ':
+            case '\t':
+            case '\r':
+            case '\n':
                 json++;
-            }
-        }
-        else if ((*json == '/') && (json[1] == '*'))
-        {
+                break;
 
-            while (*json && !((*json == '*') && (json[1] == '/')))
-            {
-                json++;
-            }
-            json += 2;
-        }
-        else if (*json == '\"')
-        {
-
-            *into++ = (unsigned char)*json++;
-            while (*json && (*json != '\"'))
-            {
-                if (*json == '\\')
+            case '/':
+                if (json[1] == '/')
                 {
-                    *into++ = (unsigned char)*json++;
+                    skip_oneline_comment(&json);
                 }
-                *into++ = (unsigned char)*json++;
-            }
-            *into++ = (unsigned char)*json++;
-        }
-        else
-        {
+                else if (json[1] == '*')
+                {
+                    skip_multiline_comment(&json);
+                } else {
+                    json++;
+                }
+                break;
 
-            *into++ = (unsigned char)*json++;
+            case '\"':
+                minify_string(&json, (char**)&into);
+                break;
+
+            default:
+                into[0] = json[0];
+                json++;
+                into++;
         }
     }
 
@@ -5520,9 +5567,9 @@ void cJSON_Minify(char *json)
 cJSON_bool cJSON_IsInvalid(const cJSON * const item)
 {
     if (item == 
-# 2701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2742 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                ((void *)0)
-# 2701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2742 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                    )
     {
         return ((cJSON_bool)0);
@@ -5534,9 +5581,9 @@ cJSON_bool cJSON_IsInvalid(const cJSON * const item)
 cJSON_bool cJSON_IsFalse(const cJSON * const item)
 {
     if (item == 
-# 2711 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2752 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                ((void *)0)
-# 2711 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2752 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                    )
     {
         return ((cJSON_bool)0);
@@ -5548,9 +5595,9 @@ cJSON_bool cJSON_IsFalse(const cJSON * const item)
 cJSON_bool cJSON_IsTrue(const cJSON * const item)
 {
     if (item == 
-# 2721 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2762 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                ((void *)0)
-# 2721 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2762 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                    )
     {
         return ((cJSON_bool)0);
@@ -5563,9 +5610,9 @@ cJSON_bool cJSON_IsTrue(const cJSON * const item)
 cJSON_bool cJSON_IsBool(const cJSON * const item)
 {
     if (item == 
-# 2732 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2773 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                ((void *)0)
-# 2732 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2773 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                    )
     {
         return ((cJSON_bool)0);
@@ -5576,9 +5623,9 @@ cJSON_bool cJSON_IsBool(const cJSON * const item)
 cJSON_bool cJSON_IsNull(const cJSON * const item)
 {
     if (item == 
-# 2741 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2782 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                ((void *)0)
-# 2741 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2782 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                    )
     {
         return ((cJSON_bool)0);
@@ -5590,9 +5637,9 @@ cJSON_bool cJSON_IsNull(const cJSON * const item)
 cJSON_bool cJSON_IsNumber(const cJSON * const item)
 {
     if (item == 
-# 2751 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2792 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                ((void *)0)
-# 2751 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2792 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                    )
     {
         return ((cJSON_bool)0);
@@ -5604,9 +5651,9 @@ cJSON_bool cJSON_IsNumber(const cJSON * const item)
 cJSON_bool cJSON_IsString(const cJSON * const item)
 {
     if (item == 
-# 2761 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2802 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                ((void *)0)
-# 2761 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2802 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                    )
     {
         return ((cJSON_bool)0);
@@ -5618,9 +5665,9 @@ cJSON_bool cJSON_IsString(const cJSON * const item)
 cJSON_bool cJSON_IsArray(const cJSON * const item)
 {
     if (item == 
-# 2771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2812 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                ((void *)0)
-# 2771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2812 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                    )
     {
         return ((cJSON_bool)0);
@@ -5632,9 +5679,9 @@ cJSON_bool cJSON_IsArray(const cJSON * const item)
 cJSON_bool cJSON_IsObject(const cJSON * const item)
 {
     if (item == 
-# 2781 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2822 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                ((void *)0)
-# 2781 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2822 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                    )
     {
         return ((cJSON_bool)0);
@@ -5646,9 +5693,9 @@ cJSON_bool cJSON_IsObject(const cJSON * const item)
 cJSON_bool cJSON_IsRaw(const cJSON * const item)
 {
     if (item == 
-# 2791 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                ((void *)0)
-# 2791 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                    )
     {
         return ((cJSON_bool)0);
@@ -5660,13 +5707,13 @@ cJSON_bool cJSON_IsRaw(const cJSON * const item)
 cJSON_bool cJSON_Compare(const cJSON * const a, const cJSON * const b, const cJSON_bool case_sensitive)
 {
     if ((a == 
-# 2801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2842 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
              ((void *)0)
-# 2801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2842 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                  ) || (b == 
-# 2801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2842 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                             ((void *)0)
-# 2801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2842 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                 ) || ((a->type & 0xFF) != (b->type & 0xFF)) || cJSON_IsInvalid(a))
     {
         return ((cJSON_bool)0);
@@ -5713,13 +5760,13 @@ cJSON_bool cJSON_Compare(const cJSON * const a, const cJSON * const b, const cJS
         case (1 << 4):
         case (1 << 7):
             if ((a->valuestring == 
-# 2846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2887 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                   ((void *)0)
-# 2846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2887 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                       ) || (b->valuestring == 
-# 2846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2887 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                                               ((void *)0)
-# 2846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2887 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                                                   ))
             {
                 return ((cJSON_bool)0);
@@ -5737,13 +5784,13 @@ cJSON_bool cJSON_Compare(const cJSON * const a, const cJSON * const b, const cJS
             cJSON *b_element = b->child;
 
             for (; (a_element != 
-# 2862 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                 ((void *)0)
-# 2862 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                     ) && (b_element != 
-# 2862 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                                        ((void *)0)
-# 2862 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                                            );)
             {
                 if (!cJSON_Compare(a_element, b_element, case_sensitive))
@@ -5766,35 +5813,35 @@ cJSON_bool cJSON_Compare(const cJSON * const a, const cJSON * const b, const cJS
         case (1 << 6):
         {
             cJSON *a_element = 
-# 2883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2924 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                               ((void *)0)
-# 2883 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2924 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                   ;
             cJSON *b_element = 
-# 2884 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2925 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                               ((void *)0)
-# 2884 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2925 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                   ;
             for(a_element = (a != 
-# 2885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2926 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
            ((void *)0)
-# 2885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2926 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
            ) ? (a)->child : 
-# 2885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2926 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
            ((void *)0)
-# 2885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2926 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
            ; a_element != 
-# 2885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2926 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
            ((void *)0)
-# 2885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2926 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
            ; a_element = a_element->next)
             {
 
                 b_element = get_object_item(b, a_element->string, case_sensitive);
                 if (b_element == 
-# 2889 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2930 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                 ((void *)0)
-# 2889 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2930 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                     )
                 {
                     return ((cJSON_bool)0);
@@ -5809,24 +5856,24 @@ cJSON_bool cJSON_Compare(const cJSON * const a, const cJSON * const b, const cJS
 
 
             for(b_element = (b != 
-# 2902 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2943 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
            ((void *)0)
-# 2902 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2943 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
            ) ? (b)->child : 
-# 2902 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2943 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
            ((void *)0)
-# 2902 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2943 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
            ; b_element != 
-# 2902 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2943 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
            ((void *)0)
-# 2902 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2943 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
            ; b_element = b_element->next)
             {
                 a_element = get_object_item(a, b_element->string, case_sensitive);
                 if (a_element == 
-# 2905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
+# 2946 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c" 3 4
                                 ((void *)0)
-# 2905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
+# 2946 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/json/cJSON/cJSON.c"
                                     )
                 {
                     return ((cJSON_bool)0);

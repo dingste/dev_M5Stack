@@ -677,7 +677,7 @@ extern long double strtold (const char *restrict, char **restrict);
 void *esp_mbedtls_mem_calloc(size_t n, size_t size);
 void esp_mbedtls_mem_free(void *ptr);
 # 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
-# 2717 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h"
+# 2758 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h" 1
 # 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 1
@@ -685,16 +685,13 @@ void esp_mbedtls_mem_free(void *ptr);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed/limits.h" 1 3 4
 # 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 2
 # 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h" 2
-# 681 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
+# 706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
 typedef int mbedtls_iso_c_forbids_empty_translation_units;
-# 2718 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
+# 2759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
 # 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 2
-
-
-
-
+# 81 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h" 1
-# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h" 1
 # 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
@@ -1358,15 +1355,15 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h" 2
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
     typedef int32_t mbedtls_mpi_sint;
     typedef uint32_t mbedtls_mpi_uint;
 
         typedef uint64_t mbedtls_t_udbl;
-# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 187 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 typedef struct mbedtls_mpi
 {
     int s;
@@ -1374,20 +1371,15 @@ typedef struct mbedtls_mpi
     mbedtls_mpi_uint *p;
 }
 mbedtls_mpi;
-# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 void mbedtls_mpi_init( mbedtls_mpi *X );
-
-
-
-
-
-
+# 212 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 void mbedtls_mpi_free( mbedtls_mpi *X );
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_grow( mbedtls_mpi *X, size_t nblimbs );
-# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_shrink( mbedtls_mpi *X, size_t nblimbs );
-# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_copy( mbedtls_mpi *X, const mbedtls_mpi *Y );
 
 
@@ -1397,96 +1389,127 @@ int mbedtls_mpi_copy( mbedtls_mpi *X, const mbedtls_mpi *Y );
 
 
 void mbedtls_mpi_swap( mbedtls_mpi *X, mbedtls_mpi *Y );
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_safe_cond_assign( mbedtls_mpi *X, const mbedtls_mpi *Y, unsigned char assign );
-# 289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 318 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_safe_cond_swap( mbedtls_mpi *X, mbedtls_mpi *Y, unsigned char assign );
-# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_lset( mbedtls_mpi *X, mbedtls_mpi_sint z );
-# 310 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_get_bit( const mbedtls_mpi *X, size_t pos );
-# 326 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_set_bit( mbedtls_mpi *X, size_t pos, unsigned char val );
-# 336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 373 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 size_t mbedtls_mpi_lsb( const mbedtls_mpi *X );
-# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 size_t mbedtls_mpi_bitlen( const mbedtls_mpi *X );
-
-
-
-
-
-
+# 402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 size_t mbedtls_mpi_size( const mbedtls_mpi *X );
-# 364 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 414 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_read_string( mbedtls_mpi *X, int radix, const char *s );
-# 382 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_write_string( const mbedtls_mpi *X, int radix,
                               char *buf, size_t buflen, size_t *olen );
-# 406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_read_file( mbedtls_mpi *X, int radix, FILE *fin );
-# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_write_file( const char *p, const mbedtls_mpi *X, int radix, FILE *fout );
-# 433 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_read_binary( mbedtls_mpi *X, const unsigned char *buf, size_t buflen );
-# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_write_binary( const mbedtls_mpi *X, unsigned char *buf, size_t buflen );
-# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 480 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_write_file( const char *p, const mbedtls_mpi *X,
+                            int radix, FILE *fout );
+# 496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_read_binary( mbedtls_mpi *X, const unsigned char *buf,
+                             size_t buflen );
+# 513 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_write_binary( const mbedtls_mpi *X, unsigned char *buf,
+                              size_t buflen );
+# 526 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_shift_l( mbedtls_mpi *X, size_t count );
-# 469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_shift_r( mbedtls_mpi *X, size_t count );
-# 481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_cmp_abs( const mbedtls_mpi *X, const mbedtls_mpi *Y );
-# 493 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_cmp_mpi( const mbedtls_mpi *X, const mbedtls_mpi *Y );
-# 505 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 579 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_lt_mpi_ct( const mbedtls_mpi *X, const mbedtls_mpi *Y,
+        unsigned *ret );
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_cmp_int( const mbedtls_mpi *X, mbedtls_mpi_sint z );
-# 517 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_add_abs( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 529 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_sub_abs( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 541 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_add_mpi( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_sub_mpi( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_add_int( mbedtls_mpi *X, const mbedtls_mpi *A, mbedtls_mpi_sint b );
-# 577 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_sub_int( mbedtls_mpi *X, const mbedtls_mpi *A, mbedtls_mpi_sint b );
-# 589 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_mul_mpi( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 603 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_mul_int( mbedtls_mpi *X, const mbedtls_mpi *A, mbedtls_mpi_uint b );
-# 619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_div_mpi( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_div_int( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A, mbedtls_mpi_sint b );
-# 649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_mod_mpi( mbedtls_mpi *R, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 663 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_mod_int( mbedtls_mpi_uint *r, const mbedtls_mpi *A, mbedtls_mpi_sint b );
-# 683 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_exp_mod( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *E, const mbedtls_mpi *N, mbedtls_mpi *_RR );
-# 700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_add_abs( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 620 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_sub_abs( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 634 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_add_mpi( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 648 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_sub_mpi( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 662 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_add_int( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b );
+# 677 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_sub_int( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b );
+# 692 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_mul_mpi( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 708 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_mul_int( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         mbedtls_mpi_uint b );
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_div_mpi( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 750 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_div_int( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b );
+# 770 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_mod_mpi( mbedtls_mpi *R, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 789 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_mod_int( mbedtls_mpi_uint *r, const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b );
+# 818 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_exp_mod( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *E, const mbedtls_mpi *N,
+                         mbedtls_mpi *_RR );
+# 839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_fill_random( mbedtls_mpi *X, size_t size,
                      int (*f_rng)(void *, unsigned char *, size_t),
                      void *p_rng );
-# 714 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_gcd( mbedtls_mpi *G, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 728 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_inv_mod( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *N );
-# 741 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_is_prime( const mbedtls_mpi *X,
-                  int (*f_rng)(void *, unsigned char *, size_t),
-                  void *p_rng );
-# 759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_gen_prime( mbedtls_mpi *X, size_t nbits, int dh_flag,
+# 854 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_gcd( mbedtls_mpi *G, const mbedtls_mpi *A,
+                     const mbedtls_mpi *B );
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_inv_mod( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *N );
+# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+ int mbedtls_mpi_is_prime( const mbedtls_mpi *X,
+                          int (*f_rng)(void *, unsigned char *, size_t),
+                          void *p_rng );
+# 934 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_is_prime_ext( const mbedtls_mpi *X, int rounds,
+                              int (*f_rng)(void *, unsigned char *, size_t),
+                              void *p_rng );
+
+
+
+
+
+
+typedef enum {
+    MBEDTLS_MPI_GEN_PRIME_FLAG_DH = 0x0001,
+    MBEDTLS_MPI_GEN_PRIME_FLAG_LOW_ERR = 0x0002,
+} mbedtls_mpi_gen_prime_flag_t;
+# 967 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_gen_prime( mbedtls_mpi *X, size_t nbits, int flags,
                    int (*f_rng)(void *, unsigned char *, size_t),
                    void *p_rng );
-# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 981 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_self_test( int verbose );
-# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h" 2
-# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h" 2
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 typedef enum
 {
     MBEDTLS_ECP_DP_NONE = 0,
@@ -1504,7 +1527,7 @@ typedef enum
     MBEDTLS_ECP_DP_SECP256K1,
     MBEDTLS_ECP_DP_CURVE448,
 } mbedtls_ecp_group_id;
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 typedef struct mbedtls_ecp_curve_info
 {
     mbedtls_ecp_group_id grp_id;
@@ -1512,7 +1535,7 @@ typedef struct mbedtls_ecp_curve_info
     uint16_t bit_size;
     const char *name;
 } mbedtls_ecp_curve_info;
-# 114 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 typedef struct mbedtls_ecp_point
 {
     mbedtls_mpi X;
@@ -1520,7 +1543,7 @@ typedef struct mbedtls_ecp_point
     mbedtls_mpi Z;
 }
 mbedtls_ecp_point;
-# 159 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 typedef struct mbedtls_ecp_group
 {
     mbedtls_ecp_group_id id;
@@ -1545,7 +1568,9 @@ typedef struct mbedtls_ecp_group
     size_t T_size;
 }
 mbedtls_ecp_group;
-# 254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 320 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+typedef void mbedtls_ecp_restart_ctx;
+# 332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 typedef struct mbedtls_ecp_keypair
 {
     mbedtls_ecp_group grp;
@@ -1553,15 +1578,15 @@ typedef struct mbedtls_ecp_keypair
     mbedtls_ecp_point Q;
 }
 mbedtls_ecp_keypair;
-# 280 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 const mbedtls_ecp_curve_info *mbedtls_ecp_curve_list( void );
-# 290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 const mbedtls_ecp_group_id *mbedtls_ecp_grp_id_list( void );
-# 301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 448 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 const mbedtls_ecp_curve_info *mbedtls_ecp_curve_info_from_grp_id( mbedtls_ecp_group_id grp_id );
-# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 459 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 const mbedtls_ecp_curve_info *mbedtls_ecp_curve_info_from_tls_id( uint16_t tls_id );
-# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 const mbedtls_ecp_curve_info *mbedtls_ecp_curve_info_from_name( const char *name );
 
 
@@ -1570,7 +1595,7 @@ const mbedtls_ecp_curve_info *mbedtls_ecp_curve_info_from_name( const char *name
 
 
 void mbedtls_ecp_point_init( mbedtls_ecp_point *pt );
-# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 void mbedtls_ecp_group_init( mbedtls_ecp_group *grp );
 
 
@@ -1586,92 +1611,115 @@ void mbedtls_ecp_keypair_init( mbedtls_ecp_keypair *key );
 
 
 void mbedtls_ecp_point_free( mbedtls_ecp_point *pt );
-
-
-
-
-
+# 511 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 void mbedtls_ecp_group_free( mbedtls_ecp_group *grp );
-
-
-
-
-
+# 520 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 void mbedtls_ecp_keypair_free( mbedtls_ecp_keypair *key );
-# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 552 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_copy( mbedtls_ecp_point *P, const mbedtls_ecp_point *Q );
-# 391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_group_copy( mbedtls_ecp_group *dst, const mbedtls_ecp_group *src );
-# 401 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_group_copy( mbedtls_ecp_group *dst,
+                            const mbedtls_ecp_group *src );
+# 577 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_set_zero( mbedtls_ecp_point *pt );
-# 411 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 588 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_is_zero( mbedtls_ecp_point *pt );
-# 425 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_point_cmp( const mbedtls_ecp_point *P,
                            const mbedtls_ecp_point *Q );
-# 440 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 617 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_point_read_string( mbedtls_ecp_point *P, int radix,
                            const char *x, const char *y );
-# 457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 640 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_point_write_binary( const mbedtls_ecp_group *grp, const mbedtls_ecp_point *P,
                             int format, size_t *olen,
                             unsigned char *buf, size_t buflen );
-# 480 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_point_read_binary( const mbedtls_ecp_group *grp, mbedtls_ecp_point *P,
-                           const unsigned char *buf, size_t ilen );
-# 498 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_tls_read_point( const mbedtls_ecp_group *grp, mbedtls_ecp_point *pt,
-                        const unsigned char **buf, size_t len );
-# 516 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_tls_write_point( const mbedtls_ecp_group *grp, const mbedtls_ecp_point *pt,
-                         int format, size_t *olen,
-                         unsigned char *buf, size_t blen );
-# 536 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 666 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_point_read_binary( const mbedtls_ecp_group *grp,
+                                   mbedtls_ecp_point *P,
+                                   const unsigned char *buf, size_t ilen );
+# 688 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_tls_read_point( const mbedtls_ecp_group *grp,
+                                mbedtls_ecp_point *pt,
+                                const unsigned char **buf, size_t len );
+# 714 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_tls_write_point( const mbedtls_ecp_group *grp,
+                                 const mbedtls_ecp_point *pt,
+                                 int format, size_t *olen,
+                                 unsigned char *buf, size_t blen );
+# 736 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_group_load( mbedtls_ecp_group *grp, mbedtls_ecp_group_id id );
-# 552 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_tls_read_group( mbedtls_ecp_group *grp, const unsigned char **buf, size_t len );
-# 565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_tls_write_group( const mbedtls_ecp_group *grp, size_t *olen,
-                         unsigned char *buf, size_t blen );
-# 596 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 755 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_tls_read_group( mbedtls_ecp_group *grp,
+                                const unsigned char **buf, size_t len );
+# 776 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_tls_read_group_id( mbedtls_ecp_group_id *grp,
+                                   const unsigned char **buf,
+                                   size_t len );
+# 797 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_tls_write_group( const mbedtls_ecp_group *grp,
+                                 size_t *olen,
+                                 unsigned char *buf, size_t blen );
+# 834 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_mul( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
              const mbedtls_mpi *m, const mbedtls_ecp_point *P,
              int (*f_rng)(void *, unsigned char *, size_t), void *p_rng );
-# 622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_mul_restartable( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
+             const mbedtls_mpi *m, const mbedtls_ecp_point *P,
+             int (*f_rng)(void *, unsigned char *, size_t), void *p_rng,
+             mbedtls_ecp_restart_ctx *rs_ctx );
+# 902 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_muladd( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
              const mbedtls_mpi *m, const mbedtls_ecp_point *P,
              const mbedtls_mpi *n, const mbedtls_ecp_point *Q );
-# 649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_check_pubkey( const mbedtls_ecp_group *grp, const mbedtls_ecp_point *pt );
-# 666 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_check_privkey( const mbedtls_ecp_group *grp, const mbedtls_mpi *d );
-# 688 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+# 940 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_muladd_restartable(
+             mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
+             const mbedtls_mpi *m, const mbedtls_ecp_point *P,
+             const mbedtls_mpi *n, const mbedtls_ecp_point *Q,
+             mbedtls_ecp_restart_ctx *rs_ctx );
+# 973 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_check_pubkey( const mbedtls_ecp_group *grp,
+                              const mbedtls_ecp_point *pt );
+# 995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_check_privkey( const mbedtls_ecp_group *grp,
+                               const mbedtls_mpi *d );
+# 1013 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_gen_privkey( const mbedtls_ecp_group *grp,
+                     mbedtls_mpi *d,
+                     int (*f_rng)(void *, unsigned char *, size_t),
+                     void *p_rng );
+# 1045 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_gen_keypair_base( mbedtls_ecp_group *grp,
-                     const mbedtls_ecp_point *G,
-                     mbedtls_mpi *d, mbedtls_ecp_point *Q,
-                     int (*f_rng)(void *, unsigned char *, size_t),
-                     void *p_rng );
-# 712 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_gen_keypair( mbedtls_ecp_group *grp, mbedtls_mpi *d, mbedtls_ecp_point *Q,
-                     int (*f_rng)(void *, unsigned char *, size_t),
-                     void *p_rng );
-# 728 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+                                  const mbedtls_ecp_point *G,
+                                  mbedtls_mpi *d, mbedtls_ecp_point *Q,
+                                  int (*f_rng)(void *, unsigned char *, size_t),
+                                  void *p_rng );
+# 1074 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_gen_keypair( mbedtls_ecp_group *grp, mbedtls_mpi *d,
+                             mbedtls_ecp_point *Q,
+                             int (*f_rng)(void *, unsigned char *, size_t),
+                             void *p_rng );
+# 1092 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_gen_key( mbedtls_ecp_group_id grp_id, mbedtls_ecp_keypair *key,
-                int (*f_rng)(void *, unsigned char *, size_t), void *p_rng );
-# 746 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
-int mbedtls_ecp_check_pub_priv( const mbedtls_ecp_keypair *pub, const mbedtls_ecp_keypair *prv );
-# 756 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+                         int (*f_rng)(void *, unsigned char *, size_t),
+                         void *p_rng );
+# 1113 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
+int mbedtls_ecp_check_pub_priv( const mbedtls_ecp_keypair *pub,
+                                const mbedtls_ecp_keypair *prv );
+# 1124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp.h"
 int mbedtls_ecp_self_test( int verbose );
-# 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 2
+# 82 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/threading.h" 1
-# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 2
+# 83 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h" 1
 # 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
 # 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h" 2
-# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h"
+# 159 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h"
 void mbedtls_platform_zeroize( void *buf, size_t len );
-# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 2
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 1
 # 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
@@ -1793,11 +1841,8 @@ char *strsignal (int __signo);
 # 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
 
 
-# 57 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 2
-
-
-
-
+# 86 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 2
+# 96 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h" 1
 # 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h" 1
@@ -1904,38 +1949,38 @@ int clock_getres (clockid_t clock_id, struct timespec *res);
 # 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h" 2
 typedef time_t mbedtls_time_t;
 # 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h" 2
-# 123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h" 2
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h" 2
 extern void *mbedtls_calloc( size_t n, size_t size );
 extern void mbedtls_free( void *ptr );
-# 136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 int mbedtls_platform_set_calloc_free( void * (*calloc_func)( size_t, size_t ),
                               void (*free_func)( void * ) );
-# 318 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 typedef struct mbedtls_platform_context
 {
     char dummy;
 }
 mbedtls_platform_context;
-# 343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 int mbedtls_platform_setup( mbedtls_platform_context *ctx );
-# 358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 void mbedtls_platform_teardown( mbedtls_platform_context *ctx );
-# 62 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 2
-# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 2
+# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/ecp_internal.h" 1
-# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 2
-# 82 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 2
+# 117 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
 static unsigned long add_count, dbl_count, mul_count;
-# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 369 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
 typedef enum
 {
     ECP_TYPE_NONE = 0,
     ECP_TYPE_SHORT_WEIERSTRASS,
     ECP_TYPE_MONTGOMERY,
 } ecp_curve_type;
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
 static const mbedtls_ecp_curve_info ecp_supported_curves[] =
 {
 
@@ -1972,9 +2017,9 @@ static const mbedtls_ecp_curve_info ecp_supported_curves[] =
     { MBEDTLS_ECP_DP_SECP192K1, 18, 192, "secp192k1" },
 
     { MBEDTLS_ECP_DP_NONE, 0, 0, 
-# 161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 423 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
                                                   ((void *)0) 
-# 161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 423 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
                                                                       },
 };
 
@@ -2033,9 +2078,9 @@ const mbedtls_ecp_curve_info *mbedtls_ecp_curve_info_from_grp_id( mbedtls_ecp_gr
     }
 
     return( 
-# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 480 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
            ((void *)0) 
-# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 480 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
                 );
 }
 
@@ -2055,9 +2100,9 @@ const mbedtls_ecp_curve_info *mbedtls_ecp_curve_info_from_tls_id( uint16_t tls_i
     }
 
     return( 
-# 236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 498 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
            ((void *)0) 
-# 236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 498 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
                 );
 }
 
@@ -2068,6 +2113,17 @@ const mbedtls_ecp_curve_info *mbedtls_ecp_curve_info_from_name( const char *name
 {
     const mbedtls_ecp_curve_info *curve_info;
 
+    if( name == 
+# 508 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+               ((void *)0) 
+# 508 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+                    )
+        return( 
+# 509 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+               ((void *)0) 
+# 509 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+                    );
+
     for( curve_info = mbedtls_ecp_curve_list();
          curve_info->grp_id != MBEDTLS_ECP_DP_NONE;
          curve_info++ )
@@ -2077,9 +2133,9 @@ const mbedtls_ecp_curve_info *mbedtls_ecp_curve_info_from_name( const char *name
     }
 
     return( 
-# 254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 519 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
            ((void *)0) 
-# 254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 519 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
                 );
 }
 
@@ -2089,16 +2145,16 @@ const mbedtls_ecp_curve_info *mbedtls_ecp_curve_info_from_name( const char *name
 static inline ecp_curve_type ecp_get_type( const mbedtls_ecp_group *grp )
 {
     if( grp->G.X.p == 
-# 262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
                      ((void *)0) 
-# 262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
                           )
         return( ECP_TYPE_NONE );
 
     if( grp->G.Y.p == 
-# 265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 530 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
                      ((void *)0) 
-# 265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 530 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
                           )
         return( ECP_TYPE_MONTGOMERY );
     else
@@ -2110,12 +2166,7 @@ static inline ecp_curve_type ecp_get_type( const mbedtls_ecp_group *grp )
 
 void mbedtls_ecp_point_init( mbedtls_ecp_point *pt )
 {
-    if( pt == 
-# 276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
-             ((void *)0) 
-# 276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
-                  )
-        return;
+    do { } while( 0 );
 
     mbedtls_mpi_init( &pt->X );
     mbedtls_mpi_init( &pt->Y );
@@ -2127,14 +2178,43 @@ void mbedtls_ecp_point_init( mbedtls_ecp_point *pt )
 
 void mbedtls_ecp_group_init( mbedtls_ecp_group *grp )
 {
-    if( grp == 
-# 289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
-              ((void *)0) 
-# 289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
-                   )
-        return;
+    do { } while( 0 );
 
-    memset( grp, 0, sizeof( mbedtls_ecp_group ) );
+    grp->id = MBEDTLS_ECP_DP_NONE;
+    mbedtls_mpi_init( &grp->P );
+    mbedtls_mpi_init( &grp->A );
+    mbedtls_mpi_init( &grp->B );
+    mbedtls_ecp_point_init( &grp->G );
+    mbedtls_mpi_init( &grp->N );
+    grp->pbits = 0;
+    grp->nbits = 0;
+    grp->h = 0;
+    grp->modp = 
+# 564 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+               ((void *)0)
+# 564 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+                   ;
+    grp->t_pre = 
+# 565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+                ((void *)0)
+# 565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+                    ;
+    grp->t_post = 
+# 566 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+                 ((void *)0)
+# 566 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+                     ;
+    grp->t_data = 
+# 567 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+                 ((void *)0)
+# 567 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+                     ;
+    grp->T = 
+# 568 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+            ((void *)0)
+# 568 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+                ;
+    grp->T_size = 0;
 }
 
 
@@ -2142,12 +2222,7 @@ void mbedtls_ecp_group_init( mbedtls_ecp_group *grp )
 
 void mbedtls_ecp_keypair_init( mbedtls_ecp_keypair *key )
 {
-    if( key == 
-# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
-              ((void *)0) 
-# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
-                   )
-        return;
+    do { } while( 0 );
 
     mbedtls_ecp_group_init( &key->grp );
     mbedtls_mpi_init( &key->d );
@@ -2160,9 +2235,9 @@ void mbedtls_ecp_keypair_init( mbedtls_ecp_keypair *key )
 void mbedtls_ecp_point_free( mbedtls_ecp_point *pt )
 {
     if( pt == 
-# 313 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 589 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
              ((void *)0) 
-# 313 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 589 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
                   )
         return;
 
@@ -2179,9 +2254,9 @@ void mbedtls_ecp_group_free( mbedtls_ecp_group *grp )
     size_t i;
 
     if( grp == 
-# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
               ((void *)0) 
-# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
                    )
         return;
 
@@ -2195,9 +2270,9 @@ void mbedtls_ecp_group_free( mbedtls_ecp_group *grp )
     }
 
     if( grp->T != 
-# 340 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 616 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
                  ((void *)0) 
-# 340 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 616 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
                       )
     {
         for( i = 0; i < grp->T_size; i++ )
@@ -2214,9 +2289,9 @@ void mbedtls_ecp_group_free( mbedtls_ecp_group *grp )
 void mbedtls_ecp_keypair_free( mbedtls_ecp_keypair *key )
 {
     if( key == 
-# 355 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 631 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
               ((void *)0) 
-# 355 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 631 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
                    )
         return;
 
@@ -2231,10 +2306,12 @@ void mbedtls_ecp_keypair_free( mbedtls_ecp_keypair *key )
 int mbedtls_ecp_copy( mbedtls_ecp_point *P, const mbedtls_ecp_point *Q )
 {
     int ret;
+    do { } while( 0 );
+    do { } while( 0 );
 
-    do { if( ( ret = mbedtls_mpi_copy( &P->X, &Q->X ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_copy( &P->Y, &Q->Y ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_copy( &P->Z, &Q->Z ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_copy( &P->X, &Q->X )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_copy( &P->Y, &Q->Y )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_copy( &P->Z, &Q->Z )) ) != 0 ) goto cleanup; } while( 0 );
 
 cleanup:
     return( ret );
@@ -2245,7 +2322,10 @@ cleanup:
 
 int mbedtls_ecp_group_copy( mbedtls_ecp_group *dst, const mbedtls_ecp_group *src )
 {
-    return mbedtls_ecp_group_load( dst, src->id );
+    do { } while( 0 );
+    do { } while( 0 );
+
+    return( mbedtls_ecp_group_load( dst, src->id ) );
 }
 
 
@@ -2254,10 +2334,11 @@ int mbedtls_ecp_group_copy( mbedtls_ecp_group *dst, const mbedtls_ecp_group *src
 int mbedtls_ecp_set_zero( mbedtls_ecp_point *pt )
 {
     int ret;
+    do { } while( 0 );
 
-    do { if( ( ret = mbedtls_mpi_lset( &pt->X , 1 ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_lset( &pt->Y , 1 ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_lset( &pt->Z , 0 ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_lset( &pt->X , 1 )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_lset( &pt->Y , 1 )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_lset( &pt->Z , 0 )) ) != 0 ) goto cleanup; } while( 0 );
 
 cleanup:
     return( ret );
@@ -2268,6 +2349,8 @@ cleanup:
 
 int mbedtls_ecp_is_zero( mbedtls_ecp_point *pt )
 {
+    do { } while( 0 );
+
     return( mbedtls_mpi_cmp_int( &pt->Z, 0 ) == 0 );
 }
 
@@ -2277,6 +2360,9 @@ int mbedtls_ecp_is_zero( mbedtls_ecp_point *pt )
 int mbedtls_ecp_point_cmp( const mbedtls_ecp_point *P,
                            const mbedtls_ecp_point *Q )
 {
+    do { } while( 0 );
+    do { } while( 0 );
+
     if( mbedtls_mpi_cmp_mpi( &P->X, &Q->X ) == 0 &&
         mbedtls_mpi_cmp_mpi( &P->Y, &Q->Y ) == 0 &&
         mbedtls_mpi_cmp_mpi( &P->Z, &Q->Z ) == 0 )
@@ -2294,10 +2380,13 @@ int mbedtls_ecp_point_read_string( mbedtls_ecp_point *P, int radix,
                            const char *x, const char *y )
 {
     int ret;
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
 
-    do { if( ( ret = mbedtls_mpi_read_string( &P->X, radix, x ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_read_string( &P->Y, radix, y ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_lset( &P->Z, 1 ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_read_string( &P->X, radix, x )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_read_string( &P->Y, radix, y )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_lset( &P->Z, 1 )) ) != 0 ) goto cleanup; } while( 0 );
 
 cleanup:
     return( ret );
@@ -2306,16 +2395,19 @@ cleanup:
 
 
 
-int mbedtls_ecp_point_write_binary( const mbedtls_ecp_group *grp, const mbedtls_ecp_point *P,
-                            int format, size_t *olen,
-                            unsigned char *buf, size_t buflen )
+int mbedtls_ecp_point_write_binary( const mbedtls_ecp_group *grp,
+                                    const mbedtls_ecp_point *P,
+                                    int format, size_t *olen,
+                                    unsigned char *buf, size_t buflen )
 {
     int ret = 0;
     size_t plen;
-
-    if( format != 0 &&
-        format != 1 )
-        return( -0x4F80 );
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 )
+                                                           ;
 
 
 
@@ -2341,8 +2433,8 @@ int mbedtls_ecp_point_write_binary( const mbedtls_ecp_group *grp, const mbedtls_
             return( -0x4F00 );
 
         buf[0] = 0x04;
-        do { if( ( ret = mbedtls_mpi_write_binary( &P->X, buf + 1, plen ) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_write_binary( &P->Y, buf + 1 + plen, plen ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_write_binary( &P->X, buf + 1, plen )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_write_binary( &P->Y, buf + 1 + plen, plen )) ) != 0 ) goto cleanup; } while( 0 );
     }
     else if( format == 1 )
     {
@@ -2352,7 +2444,7 @@ int mbedtls_ecp_point_write_binary( const mbedtls_ecp_group *grp, const mbedtls_
             return( -0x4F00 );
 
         buf[0] = 0x02 + mbedtls_mpi_get_bit( &P->Y, 0 );
-        do { if( ( ret = mbedtls_mpi_write_binary( &P->X, buf + 1, plen ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_write_binary( &P->X, buf + 1, plen )) ) != 0 ) goto cleanup; } while( 0 );
     }
 
 cleanup:
@@ -2362,11 +2454,15 @@ cleanup:
 
 
 
-int mbedtls_ecp_point_read_binary( const mbedtls_ecp_group *grp, mbedtls_ecp_point *pt,
-                           const unsigned char *buf, size_t ilen )
+int mbedtls_ecp_point_read_binary( const mbedtls_ecp_group *grp,
+                                   mbedtls_ecp_point *pt,
+                                   const unsigned char *buf, size_t ilen )
 {
     int ret;
     size_t plen;
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
 
     if( ilen < 1 )
         return( -0x4F80 );
@@ -2387,9 +2483,9 @@ int mbedtls_ecp_point_read_binary( const mbedtls_ecp_group *grp, mbedtls_ecp_poi
     if( ilen != 2 * plen + 1 )
         return( -0x4F80 );
 
-    do { if( ( ret = mbedtls_mpi_read_binary( &pt->X, buf + 1, plen ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_read_binary( &pt->Y, buf + 1 + plen, plen ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_lset( &pt->Z, 1 ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_read_binary( &pt->X, buf + 1, plen )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_read_binary( &pt->Y, buf + 1 + plen, plen )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_lset( &pt->Z, 1 )) ) != 0 ) goto cleanup; } while( 0 );
 
 cleanup:
     return( ret );
@@ -2401,11 +2497,16 @@ cleanup:
 
 
 
-int mbedtls_ecp_tls_read_point( const mbedtls_ecp_group *grp, mbedtls_ecp_point *pt,
-                        const unsigned char **buf, size_t buf_len )
+int mbedtls_ecp_tls_read_point( const mbedtls_ecp_group *grp,
+                                mbedtls_ecp_point *pt,
+                                const unsigned char **buf, size_t buf_len )
 {
     unsigned char data_len;
     const unsigned char *buf_start;
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
 
 
 
@@ -2423,7 +2524,7 @@ int mbedtls_ecp_tls_read_point( const mbedtls_ecp_group *grp, mbedtls_ecp_point 
     buf_start = *buf;
     *buf += data_len;
 
-    return mbedtls_ecp_point_read_binary( grp, pt, buf_start, data_len );
+    return( mbedtls_ecp_point_read_binary( grp, pt, buf_start, data_len ) );
 }
 
 
@@ -2437,6 +2538,12 @@ int mbedtls_ecp_tls_write_point( const mbedtls_ecp_group *grp, const mbedtls_ecp
                          unsigned char *buf, size_t blen )
 {
     int ret;
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 )
+                                                           ;
 
 
 
@@ -2460,10 +2567,33 @@ int mbedtls_ecp_tls_write_point( const mbedtls_ecp_group *grp, const mbedtls_ecp
 
 
 
-int mbedtls_ecp_tls_read_group( mbedtls_ecp_group *grp, const unsigned char **buf, size_t len )
+int mbedtls_ecp_tls_read_group( mbedtls_ecp_group *grp,
+                                const unsigned char **buf, size_t len )
+{
+    int ret;
+    mbedtls_ecp_group_id grp_id;
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+
+    if( ( ret = mbedtls_ecp_tls_read_group_id( &grp_id, buf, len ) ) != 0 )
+        return( ret );
+
+    return( mbedtls_ecp_group_load( grp, grp_id ) );
+}
+
+
+
+
+
+int mbedtls_ecp_tls_read_group_id( mbedtls_ecp_group_id *grp,
+                                   const unsigned char **buf, size_t len )
 {
     uint16_t tls_id;
     const mbedtls_ecp_curve_info *curve_info;
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
 
 
 
@@ -2485,13 +2615,15 @@ int mbedtls_ecp_tls_read_group( mbedtls_ecp_group *grp, const unsigned char **bu
     tls_id |= *(*buf)++;
 
     if( ( curve_info = mbedtls_ecp_curve_info_from_tls_id( tls_id ) ) == 
-# 622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 953 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
                                                                         ((void *)0) 
-# 622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 953 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
                                                                              )
         return( -0x4E80 );
 
-    return mbedtls_ecp_group_load( grp, curve_info->grp_id );
+    *grp = curve_info->grp_id;
+
+    return( 0 );
 }
 
 
@@ -2501,11 +2633,14 @@ int mbedtls_ecp_tls_write_group( const mbedtls_ecp_group *grp, size_t *olen,
                          unsigned char *buf, size_t blen )
 {
     const mbedtls_ecp_curve_info *curve_info;
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
 
     if( ( curve_info = mbedtls_ecp_curve_info_from_grp_id( grp->id ) ) == 
-# 636 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
                                                                          ((void *)0) 
-# 636 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
                                                                               )
         return( -0x4F80 );
 
@@ -2541,9 +2676,9 @@ static int ecp_modp( mbedtls_mpi *N, const mbedtls_ecp_group *grp )
     int ret;
 
     if( grp->modp == 
-# 670 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 1006 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
                     ((void *)0) 
-# 670 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 1006 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
                          )
         return( mbedtls_mpi_mod_mpi( N, N, &grp->P ) );
 
@@ -2554,20 +2689,20 @@ static int ecp_modp( mbedtls_mpi *N, const mbedtls_ecp_group *grp )
         return( -0x4F80 );
     }
 
-    do { if( ( ret = grp->modp( N ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (grp->modp( N )) ) != 0 ) goto cleanup; } while( 0 );
 
 
     while( N->s < 0 && mbedtls_mpi_cmp_int( N, 0 ) != 0 )
-        do { if( ( ret = mbedtls_mpi_add_mpi( N, N, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_add_mpi( N, N, &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
 
     while( mbedtls_mpi_cmp_mpi( N, &grp->P ) >= 0 )
 
-        do { if( ( ret = mbedtls_mpi_sub_abs( N, N, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_sub_abs( N, N, &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
 
 cleanup:
     return( ret );
 }
-# 746 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 1086 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
 static int ecp_normalize_jac( const mbedtls_ecp_group *grp, mbedtls_ecp_point *pt )
 {
     int ret;
@@ -2581,26 +2716,25 @@ static int ecp_normalize_jac( const mbedtls_ecp_group *grp, mbedtls_ecp_point *p
 
 
 
-
     mbedtls_mpi_init( &Zi ); mbedtls_mpi_init( &ZZi );
 
 
 
 
-    do { if( ( ret = mbedtls_mpi_inv_mod( &Zi, &pt->Z, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &ZZi, &Zi, &Zi ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &ZZi, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &pt->X, &pt->X, &ZZi ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &pt->X, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_inv_mod( &Zi, &pt->Z, &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &ZZi, &Zi, &Zi )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(ZZi), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &pt->X, &pt->X, &ZZi )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(pt->X), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
 
 
 
 
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &pt->Y, &pt->Y, &ZZi ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &pt->Y, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &pt->Y, &pt->Y, &Zi ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &pt->Y, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &pt->Y, &pt->Y, &ZZi )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(pt->Y), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &pt->Y, &pt->Y, &Zi )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(pt->Y), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
 
 
 
 
-    do { if( ( ret = mbedtls_mpi_lset( &pt->Z, 1 ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_lset( &pt->Z, 1 )) ) != 0 ) goto cleanup; } while( 0 );
 
 cleanup:
 
@@ -2608,63 +2742,71 @@ cleanup:
 
     return( ret );
 }
-# 798 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 1137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
 static int ecp_normalize_jac_many( const mbedtls_ecp_group *grp,
-                                   mbedtls_ecp_point *T[], size_t t_len )
+                                   mbedtls_ecp_point *T[], size_t T_size )
 {
     int ret;
     size_t i;
     mbedtls_mpi *c, u, Zi, ZZi;
 
-    if( t_len < 2 )
+    if( T_size < 2 )
         return( ecp_normalize_jac( grp, *T ) );
-# 815 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
-    if( ( c = mbedtls_calloc( t_len, sizeof( mbedtls_mpi ) ) ) == 
-# 815 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
-                                                                 ((void *)0) 
-# 815 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
-                                                                      )
+
+
+
+
+
+
+    if( ( c = mbedtls_calloc( T_size, sizeof( mbedtls_mpi ) ) ) == 
+# 1152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+                                                                  ((void *)0) 
+# 1152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+                                                                       )
         return( -0x4D80 );
+
+    for( i = 0; i < T_size; i++ )
+        mbedtls_mpi_init( &c[i] );
 
     mbedtls_mpi_init( &u ); mbedtls_mpi_init( &Zi ); mbedtls_mpi_init( &ZZi );
 
 
 
 
-    do { if( ( ret = mbedtls_mpi_copy( &c[0], &T[0]->Z ) ) != 0 ) goto cleanup; } while( 0 );
-    for( i = 1; i < t_len; i++ )
+    do { if( ( ret = (mbedtls_mpi_copy( &c[0], &T[0]->Z )) ) != 0 ) goto cleanup; } while( 0 );
+    for( i = 1; i < T_size; i++ )
     {
-        do { if( ( ret = mbedtls_mpi_mul_mpi( &c[i], &c[i-1], &T[i]->Z ) ) != 0 ) goto cleanup; } while( 0 );
-        do { do { if( ( ret = ecp_modp( &c[i], grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_mul_mpi( &c[i], &c[i-1], &T[i]->Z )) ) != 0 ) goto cleanup; } while( 0 );
+        do { do { if( ( ret = (ecp_modp( &(c[i]), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
     }
 
 
 
 
-    do { if( ( ret = mbedtls_mpi_inv_mod( &u, &c[t_len-1], &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_inv_mod( &u, &c[T_size-1], &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
 
-    for( i = t_len - 1; ; i-- )
+    for( i = T_size - 1; ; i-- )
     {
 
 
 
 
         if( i == 0 ) {
-            do { if( ( ret = mbedtls_mpi_copy( &Zi, &u ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_copy( &Zi, &u )) ) != 0 ) goto cleanup; } while( 0 );
         }
         else
         {
-            do { if( ( ret = mbedtls_mpi_mul_mpi( &Zi, &u, &c[i-1] ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &Zi, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-            do { if( ( ret = mbedtls_mpi_mul_mpi( &u, &u, &T[i]->Z ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &u, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_mul_mpi( &Zi, &u, &c[i-1] )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(Zi), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_mul_mpi( &u, &u, &T[i]->Z )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(u), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
         }
 
 
 
 
-        do { if( ( ret = mbedtls_mpi_mul_mpi( &ZZi, &Zi, &Zi ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &ZZi, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_mul_mpi( &T[i]->X, &T[i]->X, &ZZi ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &T[i]->X, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_mul_mpi( &T[i]->Y, &T[i]->Y, &ZZi ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &T[i]->Y, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_mul_mpi( &T[i]->Y, &T[i]->Y, &Zi ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &T[i]->Y, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_mul_mpi( &ZZi, &Zi, &Zi )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(ZZi), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_mul_mpi( &T[i]->X, &T[i]->X, &ZZi )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(T[i]->X), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_mul_mpi( &T[i]->Y, &T[i]->Y, &ZZi )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(T[i]->Y), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_mul_mpi( &T[i]->Y, &T[i]->Y, &Zi )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(T[i]->Y), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
 
 
 
@@ -2672,8 +2814,8 @@ static int ecp_normalize_jac_many( const mbedtls_ecp_group *grp,
 
 
 
-        do { if( ( ret = mbedtls_mpi_shrink( &T[i]->X, grp->P.n ) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_shrink( &T[i]->Y, grp->P.n ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_shrink( &T[i]->X, grp->P.n )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_shrink( &T[i]->Y, grp->P.n )) ) != 0 ) goto cleanup; } while( 0 );
         mbedtls_mpi_free( &T[i]->Z );
 
         if( i == 0 )
@@ -2683,7 +2825,7 @@ static int ecp_normalize_jac_many( const mbedtls_ecp_group *grp,
 cleanup:
 
     mbedtls_mpi_free( &u ); mbedtls_mpi_free( &Zi ); mbedtls_mpi_free( &ZZi );
-    for( i = 0; i < t_len; i++ )
+    for( i = 0; i < T_size; i++ )
         mbedtls_mpi_free( &c[i] );
     mbedtls_free( c );
 
@@ -2705,16 +2847,16 @@ static int ecp_safe_invert_jac( const mbedtls_ecp_group *grp,
     mbedtls_mpi_init( &mQY );
 
 
-    do { if( ( ret = mbedtls_mpi_sub_mpi( &mQY, &grp->P, &Q->Y ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_sub_mpi( &mQY, &grp->P, &Q->Y )) ) != 0 ) goto cleanup; } while( 0 );
     nonzero = mbedtls_mpi_cmp_int( &Q->Y, 0 ) != 0;
-    do { if( ( ret = mbedtls_mpi_safe_cond_assign( &Q->Y, &mQY, inv & nonzero ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_safe_cond_assign( &Q->Y, &mQY, inv & nonzero )) ) != 0 ) goto cleanup; } while( 0 );
 
 cleanup:
     mbedtls_mpi_free( &mQY );
 
     return( ret );
 }
-# 921 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 1261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
 static int ecp_double_jac( const mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
                            const mbedtls_ecp_point *P )
 {
@@ -2723,74 +2865,80 @@ static int ecp_double_jac( const mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
 
 
     dbl_count++;
-# 938 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+
+
+
+
+
+
+
     mbedtls_mpi_init( &M ); mbedtls_mpi_init( &S ); mbedtls_mpi_init( &T ); mbedtls_mpi_init( &U );
 
 
     if( grp->A.p == 
-# 941 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 1279 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
                    ((void *)0) 
-# 941 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 1279 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
                         )
     {
 
-        do { if( ( ret = mbedtls_mpi_mul_mpi( &S, &P->Z, &P->Z ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &S, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_add_mpi( &T, &P->X, &S ) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &T, &grp->P ) >= 0 ) do { if( ( ret = mbedtls_mpi_sub_abs( &T, &T, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_sub_mpi( &U, &P->X, &S ) ) != 0 ) goto cleanup; } while( 0 ); while( U.s < 0 && mbedtls_mpi_cmp_int( &U, 0 ) != 0 ) do { if( ( ret = mbedtls_mpi_add_mpi( &U, &U, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_mul_mpi( &S, &T, &U ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &S, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_mul_int( &M, &S, 3 ) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &M, &grp->P ) >= 0 ) do { if( ( ret = mbedtls_mpi_sub_abs( &M, &M, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_mul_mpi( &S, &P->Z, &P->Z )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(S), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_add_mpi( &T, &P->X, &S )) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &(T), &grp->P ) >= 0 ) do { if( ( ret = (mbedtls_mpi_sub_abs( &(T), &(T), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_sub_mpi( &U, &P->X, &S )) ) != 0 ) goto cleanup; } while( 0 ); while( (U).s < 0 && mbedtls_mpi_cmp_int( &(U), 0 ) != 0 ) do { if( ( ret = (mbedtls_mpi_add_mpi( &(U), &(U), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_mul_mpi( &S, &T, &U )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(S), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_mul_int( &M, &S, 3 )) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &(M), &grp->P ) >= 0 ) do { if( ( ret = (mbedtls_mpi_sub_abs( &(M), &(M), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
     }
     else
     {
 
-        do { if( ( ret = mbedtls_mpi_mul_mpi( &S, &P->X, &P->X ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &S, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_mul_int( &M, &S, 3 ) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &M, &grp->P ) >= 0 ) do { if( ( ret = mbedtls_mpi_sub_abs( &M, &M, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_mul_mpi( &S, &P->X, &P->X )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(S), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_mul_int( &M, &S, 3 )) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &(M), &grp->P ) >= 0 ) do { if( ( ret = (mbedtls_mpi_sub_abs( &(M), &(M), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
 
 
         if( mbedtls_mpi_cmp_int( &grp->A, 0 ) != 0 )
         {
 
-            do { if( ( ret = mbedtls_mpi_mul_mpi( &S, &P->Z, &P->Z ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &S, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-            do { if( ( ret = mbedtls_mpi_mul_mpi( &T, &S, &S ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &T, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-            do { if( ( ret = mbedtls_mpi_mul_mpi( &S, &T, &grp->A ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &S, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-            do { if( ( ret = mbedtls_mpi_add_mpi( &M, &M, &S ) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &M, &grp->P ) >= 0 ) do { if( ( ret = mbedtls_mpi_sub_abs( &M, &M, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_mul_mpi( &S, &P->Z, &P->Z )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(S), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_mul_mpi( &T, &S, &S )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(T), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_mul_mpi( &S, &T, &grp->A )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(S), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_add_mpi( &M, &M, &S )) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &(M), &grp->P ) >= 0 ) do { if( ( ret = (mbedtls_mpi_sub_abs( &(M), &(M), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
         }
     }
 
 
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &T, &P->Y, &P->Y ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &T, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_shift_l( &T, 1 ) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &T, &grp->P ) >= 0 ) do { if( ( ret = mbedtls_mpi_sub_abs( &T, &T, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &S, &P->X, &T ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &S, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_shift_l( &S, 1 ) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &S, &grp->P ) >= 0 ) do { if( ( ret = mbedtls_mpi_sub_abs( &S, &S, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &T, &P->Y, &P->Y )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(T), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_shift_l( &T, 1 )) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &(T), &grp->P ) >= 0 ) do { if( ( ret = (mbedtls_mpi_sub_abs( &(T), &(T), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &S, &P->X, &T )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(S), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_shift_l( &S, 1 )) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &(S), &grp->P ) >= 0 ) do { if( ( ret = (mbedtls_mpi_sub_abs( &(S), &(S), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
 
 
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &U, &T, &T ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &U, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_shift_l( &U, 1 ) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &U, &grp->P ) >= 0 ) do { if( ( ret = mbedtls_mpi_sub_abs( &U, &U, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &U, &T, &T )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(U), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_shift_l( &U, 1 )) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &(U), &grp->P ) >= 0 ) do { if( ( ret = (mbedtls_mpi_sub_abs( &(U), &(U), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
 
 
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &T, &M, &M ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &T, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_sub_mpi( &T, &T, &S ) ) != 0 ) goto cleanup; } while( 0 ); while( T.s < 0 && mbedtls_mpi_cmp_int( &T, 0 ) != 0 ) do { if( ( ret = mbedtls_mpi_add_mpi( &T, &T, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_sub_mpi( &T, &T, &S ) ) != 0 ) goto cleanup; } while( 0 ); while( T.s < 0 && mbedtls_mpi_cmp_int( &T, 0 ) != 0 ) do { if( ( ret = mbedtls_mpi_add_mpi( &T, &T, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &T, &M, &M )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(T), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_sub_mpi( &T, &T, &S )) ) != 0 ) goto cleanup; } while( 0 ); while( (T).s < 0 && mbedtls_mpi_cmp_int( &(T), 0 ) != 0 ) do { if( ( ret = (mbedtls_mpi_add_mpi( &(T), &(T), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_sub_mpi( &T, &T, &S )) ) != 0 ) goto cleanup; } while( 0 ); while( (T).s < 0 && mbedtls_mpi_cmp_int( &(T), 0 ) != 0 ) do { if( ( ret = (mbedtls_mpi_add_mpi( &(T), &(T), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
 
 
-    do { if( ( ret = mbedtls_mpi_sub_mpi( &S, &S, &T ) ) != 0 ) goto cleanup; } while( 0 ); while( S.s < 0 && mbedtls_mpi_cmp_int( &S, 0 ) != 0 ) do { if( ( ret = mbedtls_mpi_add_mpi( &S, &S, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &S, &S, &M ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &S, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_sub_mpi( &S, &S, &U ) ) != 0 ) goto cleanup; } while( 0 ); while( S.s < 0 && mbedtls_mpi_cmp_int( &S, 0 ) != 0 ) do { if( ( ret = mbedtls_mpi_add_mpi( &S, &S, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_sub_mpi( &S, &S, &T )) ) != 0 ) goto cleanup; } while( 0 ); while( (S).s < 0 && mbedtls_mpi_cmp_int( &(S), 0 ) != 0 ) do { if( ( ret = (mbedtls_mpi_add_mpi( &(S), &(S), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &S, &S, &M )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(S), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_sub_mpi( &S, &S, &U )) ) != 0 ) goto cleanup; } while( 0 ); while( (S).s < 0 && mbedtls_mpi_cmp_int( &(S), 0 ) != 0 ) do { if( ( ret = (mbedtls_mpi_add_mpi( &(S), &(S), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
 
 
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &U, &P->Y, &P->Z ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &U, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_shift_l( &U, 1 ) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &U, &grp->P ) >= 0 ) do { if( ( ret = mbedtls_mpi_sub_abs( &U, &U, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &U, &P->Y, &P->Z )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(U), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_shift_l( &U, 1 )) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &(U), &grp->P ) >= 0 ) do { if( ( ret = (mbedtls_mpi_sub_abs( &(U), &(U), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
 
-    do { if( ( ret = mbedtls_mpi_copy( &R->X, &T ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_copy( &R->Y, &S ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_copy( &R->Z, &U ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_copy( &R->X, &T )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_copy( &R->Y, &S )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_copy( &R->Z, &U )) ) != 0 ) goto cleanup; } while( 0 );
 
 cleanup:
     mbedtls_mpi_free( &M ); mbedtls_mpi_free( &S ); mbedtls_mpi_free( &T ); mbedtls_mpi_free( &U );
 
     return( ret );
 }
-# 1019 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 1357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
 static int ecp_add_mixed( const mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
                           const mbedtls_ecp_point *P, const mbedtls_ecp_point *Q )
 {
@@ -2799,14 +2947,14 @@ static int ecp_add_mixed( const mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
 
 
     add_count++;
-# 1039 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 1375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
     if( mbedtls_mpi_cmp_int( &P->Z, 0 ) == 0 )
         return( mbedtls_ecp_copy( R, Q ) );
 
     if( Q->Z.p != 
-# 1042 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 1378 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
                  ((void *)0) 
-# 1042 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 1378 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
                       && mbedtls_mpi_cmp_int( &Q->Z, 0 ) == 0 )
         return( mbedtls_ecp_copy( R, P ) );
 
@@ -2814,21 +2962,21 @@ static int ecp_add_mixed( const mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
 
 
     if( Q->Z.p != 
-# 1048 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 1384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
                  ((void *)0) 
-# 1048 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 1384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
                       && mbedtls_mpi_cmp_int( &Q->Z, 1 ) != 0 )
         return( -0x4F80 );
 
     mbedtls_mpi_init( &T1 ); mbedtls_mpi_init( &T2 ); mbedtls_mpi_init( &T3 ); mbedtls_mpi_init( &T4 );
     mbedtls_mpi_init( &X ); mbedtls_mpi_init( &Y ); mbedtls_mpi_init( &Z );
 
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &T1, &P->Z, &P->Z ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &T1, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &T2, &T1, &P->Z ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &T2, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &T1, &T1, &Q->X ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &T1, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &T2, &T2, &Q->Y ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &T2, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_sub_mpi( &T1, &T1, &P->X ) ) != 0 ) goto cleanup; } while( 0 ); while( T1.s < 0 && mbedtls_mpi_cmp_int( &T1, 0 ) != 0 ) do { if( ( ret = mbedtls_mpi_add_mpi( &T1, &T1, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_sub_mpi( &T2, &T2, &P->Y ) ) != 0 ) goto cleanup; } while( 0 ); while( T2.s < 0 && mbedtls_mpi_cmp_int( &T2, 0 ) != 0 ) do { if( ( ret = mbedtls_mpi_add_mpi( &T2, &T2, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &T1, &P->Z, &P->Z )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(T1), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &T2, &T1, &P->Z )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(T2), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &T1, &T1, &Q->X )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(T1), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &T2, &T2, &Q->Y )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(T2), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_sub_mpi( &T1, &T1, &P->X )) ) != 0 ) goto cleanup; } while( 0 ); while( (T1).s < 0 && mbedtls_mpi_cmp_int( &(T1), 0 ) != 0 ) do { if( ( ret = (mbedtls_mpi_add_mpi( &(T1), &(T1), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_sub_mpi( &T2, &T2, &P->Y )) ) != 0 ) goto cleanup; } while( 0 ); while( (T2).s < 0 && mbedtls_mpi_cmp_int( &(T2), 0 ) != 0 ) do { if( ( ret = (mbedtls_mpi_add_mpi( &(T2), &(T2), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
 
 
     if( mbedtls_mpi_cmp_int( &T1, 0 ) == 0 )
@@ -2845,22 +2993,22 @@ static int ecp_add_mixed( const mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
         }
     }
 
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &Z, &P->Z, &T1 ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &Z, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &T3, &T1, &T1 ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &T3, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &T4, &T3, &T1 ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &T4, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &T3, &T3, &P->X ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &T3, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_int( &T1, &T3, 2 ) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &T1, &grp->P ) >= 0 ) do { if( ( ret = mbedtls_mpi_sub_abs( &T1, &T1, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &X, &T2, &T2 ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &X, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_sub_mpi( &X, &X, &T1 ) ) != 0 ) goto cleanup; } while( 0 ); while( X.s < 0 && mbedtls_mpi_cmp_int( &X, 0 ) != 0 ) do { if( ( ret = mbedtls_mpi_add_mpi( &X, &X, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_sub_mpi( &X, &X, &T4 ) ) != 0 ) goto cleanup; } while( 0 ); while( X.s < 0 && mbedtls_mpi_cmp_int( &X, 0 ) != 0 ) do { if( ( ret = mbedtls_mpi_add_mpi( &X, &X, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_sub_mpi( &T3, &T3, &X ) ) != 0 ) goto cleanup; } while( 0 ); while( T3.s < 0 && mbedtls_mpi_cmp_int( &T3, 0 ) != 0 ) do { if( ( ret = mbedtls_mpi_add_mpi( &T3, &T3, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &T3, &T3, &T2 ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &T3, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &T4, &T4, &P->Y ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &T4, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_sub_mpi( &Y, &T3, &T4 ) ) != 0 ) goto cleanup; } while( 0 ); while( Y.s < 0 && mbedtls_mpi_cmp_int( &Y, 0 ) != 0 ) do { if( ( ret = mbedtls_mpi_add_mpi( &Y, &Y, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &Z, &P->Z, &T1 )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(Z), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &T3, &T1, &T1 )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(T3), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &T4, &T3, &T1 )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(T4), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &T3, &T3, &P->X )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(T3), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_int( &T1, &T3, 2 )) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &(T1), &grp->P ) >= 0 ) do { if( ( ret = (mbedtls_mpi_sub_abs( &(T1), &(T1), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &X, &T2, &T2 )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(X), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_sub_mpi( &X, &X, &T1 )) ) != 0 ) goto cleanup; } while( 0 ); while( (X).s < 0 && mbedtls_mpi_cmp_int( &(X), 0 ) != 0 ) do { if( ( ret = (mbedtls_mpi_add_mpi( &(X), &(X), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_sub_mpi( &X, &X, &T4 )) ) != 0 ) goto cleanup; } while( 0 ); while( (X).s < 0 && mbedtls_mpi_cmp_int( &(X), 0 ) != 0 ) do { if( ( ret = (mbedtls_mpi_add_mpi( &(X), &(X), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_sub_mpi( &T3, &T3, &X )) ) != 0 ) goto cleanup; } while( 0 ); while( (T3).s < 0 && mbedtls_mpi_cmp_int( &(T3), 0 ) != 0 ) do { if( ( ret = (mbedtls_mpi_add_mpi( &(T3), &(T3), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &T3, &T3, &T2 )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(T3), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &T4, &T4, &P->Y )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(T4), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_sub_mpi( &Y, &T3, &T4 )) ) != 0 ) goto cleanup; } while( 0 ); while( (Y).s < 0 && mbedtls_mpi_cmp_int( &(Y), 0 ) != 0 ) do { if( ( ret = (mbedtls_mpi_add_mpi( &(Y), &(Y), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
 
-    do { if( ( ret = mbedtls_mpi_copy( &R->X, &X ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_copy( &R->Y, &Y ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_copy( &R->Z, &Z ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_copy( &R->X, &X )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_copy( &R->Y, &Y )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_copy( &R->Z, &Z )) ) != 0 ) goto cleanup; } while( 0 );
 
 cleanup:
 
@@ -2869,7 +3017,7 @@ cleanup:
 
     return( ret );
 }
-# 1108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 1444 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
 static int ecp_randomize_jac( const mbedtls_ecp_group *grp, mbedtls_ecp_point *pt,
                 int (*f_rng)(void *, unsigned char *, size_t), void *p_rng )
 {
@@ -2877,17 +3025,22 @@ static int ecp_randomize_jac( const mbedtls_ecp_group *grp, mbedtls_ecp_point *p
     mbedtls_mpi l, ll;
     size_t p_size;
     int count = 0;
-# 1123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+
+
+
+
+
+
     p_size = ( grp->pbits + 7 ) / 8;
     mbedtls_mpi_init( &l ); mbedtls_mpi_init( &ll );
 
 
     do
     {
-        do { if( ( ret = mbedtls_mpi_fill_random( &l, p_size, f_rng, p_rng ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_fill_random( &l, p_size, f_rng, p_rng )) ) != 0 ) goto cleanup; } while( 0 );
 
         while( mbedtls_mpi_cmp_mpi( &l, &grp->P ) >= 0 )
-            do { if( ( ret = mbedtls_mpi_shift_r( &l, 1 ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_shift_r( &l, 1 )) ) != 0 ) goto cleanup; } while( 0 );
 
         if( count++ > 10 )
             return( -0x4D00 );
@@ -2895,24 +3048,24 @@ static int ecp_randomize_jac( const mbedtls_ecp_group *grp, mbedtls_ecp_point *p
     while( mbedtls_mpi_cmp_int( &l, 1 ) <= 0 );
 
 
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &pt->Z, &pt->Z, &l ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &pt->Z, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &pt->Z, &pt->Z, &l )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(pt->Z), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
 
 
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &ll, &l, &l ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &ll, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &pt->X, &pt->X, &ll ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &pt->X, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &ll, &l, &l )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(ll), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &pt->X, &pt->X, &ll )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(pt->X), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
 
 
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &ll, &ll, &l ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &ll, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &pt->Y, &pt->Y, &ll ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &pt->Y, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &ll, &ll, &l )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(ll), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &pt->Y, &pt->Y, &ll )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(pt->Y), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
 
 cleanup:
     mbedtls_mpi_free( &l ); mbedtls_mpi_free( &ll );
 
     return( ret );
 }
-# 1189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
-static void ecp_comb_fixed( unsigned char x[], size_t d,
-                            unsigned char w, const mbedtls_mpi *m )
+# 1550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+static void ecp_comb_recode_core( unsigned char x[], size_t d,
+                                  unsigned char w, const mbedtls_mpi *m )
 {
     size_t i, j;
     unsigned char c, cc, adjust;
@@ -2940,62 +3093,78 @@ static void ecp_comb_fixed( unsigned char x[], size_t d,
         x[i-1] |= adjust << 7;
     }
 }
-# 1229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 1614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
 static int ecp_precompute_comb( const mbedtls_ecp_group *grp,
                                 mbedtls_ecp_point T[], const mbedtls_ecp_point *P,
-                                unsigned char w, size_t d )
+                                unsigned char w, size_t d,
+                                mbedtls_ecp_restart_ctx *rs_ctx )
 {
     int ret;
-    unsigned char i, k;
-    size_t j;
+    unsigned char i;
+    size_t j = 0;
+    const unsigned char T_size = 1U << ( w - 1 );
     mbedtls_ecp_point *cur, *TT[( 1 << ( 6 - 1 ) ) - 1];
+# 1638 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+    (void) rs_ctx;
+# 1656 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+    do { if( ( ret = (mbedtls_ecp_copy( &T[0], P )) ) != 0 ) goto cleanup; } while( 0 );
 
 
 
 
 
-    do { if( ( ret = mbedtls_ecp_copy( &T[0], P ) ) != 0 ) goto cleanup; } while( 0 );
 
-    k = 0;
-    for( i = 1; i < ( 1U << ( w - 1 ) ); i <<= 1 )
+        j = 0;
+
+    for( ; j < d * ( w - 1 ); j++ )
     {
+        ;
+
+        i = 1U << ( j / d );
         cur = T + i;
-        do { if( ( ret = mbedtls_ecp_copy( cur, T + ( i >> 1 ) ) ) != 0 ) goto cleanup; } while( 0 );
-        for( j = 0; j < d; j++ )
-            do { if( ( ret = ecp_double_jac( grp, cur, cur ) ) != 0 ) goto cleanup; } while( 0 );
 
-        TT[k++] = cur;
+        if( j % d == 0 )
+            do { if( ( ret = (mbedtls_ecp_copy( cur, T + ( i >> 1 ) )) ) != 0 ) goto cleanup; } while( 0 );
+
+        do { if( ( ret = (ecp_double_jac( grp, cur, cur )) ) != 0 ) goto cleanup; } while( 0 );
     }
+# 1688 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+    j = 0;
+    for( i = 1; i < T_size; i <<= 1 )
+        TT[j++] = T + i;
 
-    do { if( ( ret = ecp_normalize_jac_many( grp, TT, k ) ) != 0 ) goto cleanup; } while( 0 );
+    ;
 
+    do { if( ( ret = (ecp_normalize_jac_many( grp, TT, j )) ) != 0 ) goto cleanup; } while( 0 );
+# 1706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+    ;
 
-
-
-
-    k = 0;
-    for( i = 1; i < ( 1U << ( w - 1 ) ); i <<= 1 )
+    for( i = 1; i < T_size; i <<= 1 )
     {
         j = i;
         while( j-- )
-        {
-            do { if( ( ret = ecp_add_mixed( grp, &T[i + j], &T[j], &T[i] ) ) != 0 ) goto cleanup; } while( 0 );
-            TT[k++] = &T[i + j];
-        }
+            do { if( ( ret = (ecp_add_mixed( grp, &T[i + j], &T[j], &T[i] )) ) != 0 ) goto cleanup; } while( 0 );
     }
+# 1726 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+    for( j = 0; j + 1 < T_size; j++ )
+        TT[j] = T + j + 1;
 
-    do { if( ( ret = ecp_normalize_jac_many( grp, TT, k ) ) != 0 ) goto cleanup; } while( 0 );
+    ;
+
+    do { if( ( ret = (ecp_normalize_jac_many( grp, TT, j )) ) != 0 ) goto cleanup; } while( 0 );
 
 cleanup:
-
+# 1743 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
     return( ret );
 }
 
 
 
 
+
+
 static int ecp_select_comb( const mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
-                            const mbedtls_ecp_point T[], unsigned char t_len,
+                            const mbedtls_ecp_point T[], unsigned char T_size,
                             unsigned char i )
 {
     int ret;
@@ -3005,14 +3174,14 @@ static int ecp_select_comb( const mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
     ii = ( i & 0x7Fu ) >> 1;
 
 
-    for( j = 0; j < t_len; j++ )
+    for( j = 0; j < T_size; j++ )
     {
-        do { if( ( ret = mbedtls_mpi_safe_cond_assign( &R->X, &T[j].X, j == ii ) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_safe_cond_assign( &R->Y, &T[j].Y, j == ii ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_safe_cond_assign( &R->X, &T[j].X, j == ii )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_safe_cond_assign( &R->Y, &T[j].Y, j == ii )) ) != 0 ) goto cleanup; } while( 0 );
     }
 
 
-    do { if( ( ret = ecp_safe_invert_jac( grp, R, i >> 7 ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (ecp_safe_invert_jac( grp, R, i >> 7 )) ) != 0 ) goto cleanup; } while( 0 );
 
 cleanup:
     return( ret );
@@ -3025,52 +3194,55 @@ cleanup:
 
 
 static int ecp_mul_comb_core( const mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
-                              const mbedtls_ecp_point T[], unsigned char t_len,
+                              const mbedtls_ecp_point T[], unsigned char T_size,
                               const unsigned char x[], size_t d,
                               int (*f_rng)(void *, unsigned char *, size_t),
-                              void *p_rng )
+                              void *p_rng,
+                              mbedtls_ecp_restart_ctx *rs_ctx )
 {
-    int ret;
+    int ret = 0;
     mbedtls_ecp_point Txi;
     size_t i;
 
     mbedtls_ecp_point_init( &Txi );
 
 
-    i = d;
-    do { if( ( ret = ecp_select_comb( grp, R, T, t_len, x[i] ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_lset( &R->Z, 1 ) ) != 0 ) goto cleanup; } while( 0 );
-    if( f_rng != 0 )
-        do { if( ( ret = ecp_randomize_jac( grp, R, f_rng, p_rng ) ) != 0 ) goto cleanup; } while( 0 );
-
-    while( i-- != 0 )
+    (void) rs_ctx;
+# 1814 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
     {
-        do { if( ( ret = ecp_double_jac( grp, R, R ) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = ecp_select_comb( grp, &Txi, T, t_len, x[i] ) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = ecp_add_mixed( grp, R, R, &Txi ) ) != 0 ) goto cleanup; } while( 0 );
+
+        i = d;
+        do { if( ( ret = (ecp_select_comb( grp, R, T, T_size, x[i] )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_lset( &R->Z, 1 )) ) != 0 ) goto cleanup; } while( 0 );
+        if( f_rng != 0 )
+            do { if( ( ret = (ecp_randomize_jac( grp, R, f_rng, p_rng )) ) != 0 ) goto cleanup; } while( 0 );
+    }
+
+    while( i != 0 )
+    {
+        ;
+        --i;
+
+        do { if( ( ret = (ecp_double_jac( grp, R, R )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (ecp_select_comb( grp, &Txi, T, T_size, x[i] )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (ecp_add_mixed( grp, R, R, &Txi )) ) != 0 ) goto cleanup; } while( 0 );
     }
 
 cleanup:
 
     mbedtls_ecp_point_free( &Txi );
-
+# 1846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
     return( ret );
 }
-
-
-
-
-
-static int ecp_mul_comb( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
-                         const mbedtls_mpi *m, const mbedtls_ecp_point *P,
-                         int (*f_rng)(void *, unsigned char *, size_t),
-                         void *p_rng )
+# 1861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+static int ecp_comb_recode_scalar( const mbedtls_ecp_group *grp,
+                                   const mbedtls_mpi *m,
+                                   unsigned char k[( 521 + 1 ) / 2 + 1],
+                                   size_t d,
+                                   unsigned char w,
+                                   unsigned char *parity_trick )
 {
     int ret;
-    unsigned char w, m_is_odd, p_eq_g, pre_len, i;
-    size_t d;
-    unsigned char k[( 521 + 1 ) / 2 + 1];
-    mbedtls_ecp_point *T;
     mbedtls_mpi M, mm;
 
     mbedtls_mpi_init( &M );
@@ -3079,6 +3251,72 @@ static int ecp_mul_comb( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
 
     if( mbedtls_mpi_get_bit( &grp->N, 0 ) != 1 )
         return( -0x4F80 );
+
+
+    *parity_trick = ( mbedtls_mpi_get_bit( m, 0 ) == 0 );
+
+
+    do { if( ( ret = (mbedtls_mpi_copy( &M, m )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_sub_mpi( &mm, &grp->N, m )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_safe_cond_assign( &M, &mm, *parity_trick )) ) != 0 ) goto cleanup; } while( 0 );
+
+
+    ecp_comb_recode_core( k, d, w, &M );
+
+cleanup:
+    mbedtls_mpi_free( &mm );
+    mbedtls_mpi_free( &M );
+
+    return( ret );
+}
+# 1903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+static int ecp_mul_comb_after_precomp( const mbedtls_ecp_group *grp,
+                                mbedtls_ecp_point *R,
+                                const mbedtls_mpi *m,
+                                const mbedtls_ecp_point *T,
+                                unsigned char T_size,
+                                unsigned char w,
+                                size_t d,
+                                int (*f_rng)(void *, unsigned char *, size_t),
+                                void *p_rng,
+                                mbedtls_ecp_restart_ctx *rs_ctx )
+{
+    int ret;
+    unsigned char parity_trick;
+    unsigned char k[( 521 + 1 ) / 2 + 1];
+    mbedtls_ecp_point *RR = R;
+# 1929 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+    do { if( ( ret = (ecp_comb_recode_scalar( grp, m, k, d, w, &parity_trick )) ) != 0 ) goto cleanup; } while( 0 )
+                                                             ;
+    do { if( ( ret = (ecp_mul_comb_core( grp, RR, T, T_size, k, d, f_rng, p_rng, rs_ctx )) ) != 0 ) goto cleanup; } while( 0 )
+                                                                ;
+    do { if( ( ret = (ecp_safe_invert_jac( grp, RR, parity_trick )) ) != 0 ) goto cleanup; } while( 0 );
+
+
+
+
+
+
+
+    ;
+    do { if( ( ret = (ecp_normalize_jac( grp, RR )) ) != 0 ) goto cleanup; } while( 0 );
+
+
+
+
+
+
+cleanup:
+    return( ret );
+}
+
+
+
+
+static unsigned char ecp_pick_window_size( const mbedtls_ecp_group *grp,
+                                           unsigned char p_eq_g )
+{
+    unsigned char w;
 
 
 
@@ -3092,117 +3330,149 @@ static int ecp_mul_comb( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
 
 
 
-
-    p_eq_g = ( mbedtls_mpi_cmp_mpi( &P->Y, &grp->G.Y ) == 0 &&
-               mbedtls_mpi_cmp_mpi( &P->X, &grp->G.X ) == 0 );
     if( p_eq_g )
         w++;
-# 1393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+
+
+
+
+
     if( w > 6 )
         w = 6;
     if( w >= grp->nbits )
         w = 2;
 
+    return( w );
+}
+# 2001 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+static int ecp_mul_comb( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
+                         const mbedtls_mpi *m, const mbedtls_ecp_point *P,
+                         int (*f_rng)(void *, unsigned char *, size_t),
+                         void *p_rng,
+                         mbedtls_ecp_restart_ctx *rs_ctx )
+{
+    int ret;
+    unsigned char w, p_eq_g, i;
+    size_t d;
+    unsigned char T_size, T_ok;
+    mbedtls_ecp_point *T;
 
-    pre_len = 1U << ( w - 1 );
+    (void) rs_ctx;;
+
+
+
+    p_eq_g = ( mbedtls_mpi_cmp_mpi( &P->Y, &grp->G.Y ) == 0 &&
+               mbedtls_mpi_cmp_mpi( &P->X, &grp->G.X ) == 0 );
+
+
+
+
+
+    w = ecp_pick_window_size( grp, p_eq_g );
+    T_size = 1U << ( w - 1 );
     d = ( grp->nbits + w - 1 ) / w;
 
 
-
-
-
-    T = p_eq_g ? grp->T : 
-# 1406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
-                         ((void *)0)
-# 1406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
-                             ;
-
-    if( T == 
-# 1408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
-            ((void *)0) 
-# 1408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
-                 )
+    if( p_eq_g && grp->T != 
+# 2029 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+                           ((void *)0) 
+# 2029 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+                                )
     {
-        T = mbedtls_calloc( pre_len, sizeof( mbedtls_ecp_point ) );
+
+        T = grp->T;
+        T_ok = 1;
+    }
+    else
+# 2051 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+    {
+        T = mbedtls_calloc( T_size, sizeof( mbedtls_ecp_point ) );
         if( T == 
-# 1411 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 2053 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
                 ((void *)0) 
-# 1411 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 2053 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
                      )
         {
             ret = -0x4D80;
             goto cleanup;
         }
 
-        do { if( ( ret = ecp_precompute_comb( grp, T, P, w, d ) ) != 0 ) goto cleanup; } while( 0 );
+        for( i = 0; i < T_size; i++ )
+            mbedtls_ecp_point_init( &T[i] );
+
+        T_ok = 0;
+    }
+
+
+    if( !T_ok )
+    {
+        do { if( ( ret = (ecp_precompute_comb( grp, T, P, w, d, rs_ctx )) ) != 0 ) goto cleanup; } while( 0 );
 
         if( p_eq_g )
         {
+
+
             grp->T = T;
-            grp->T_size = pre_len;
+            grp->T_size = T_size;
         }
     }
 
 
+    do { if( ( ret = (ecp_mul_comb_after_precomp( grp, R, m, T, T_size, w, d, f_rng, p_rng, rs_ctx )) ) != 0 ) goto cleanup; } while( 0 )
 
-
-
-    m_is_odd = ( mbedtls_mpi_get_bit( m, 0 ) == 1 );
-    do { if( ( ret = mbedtls_mpi_copy( &M, m ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_sub_mpi( &mm, &grp->N, m ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_safe_cond_assign( &M, &mm, ! m_is_odd ) ) != 0 ) goto cleanup; } while( 0 );
-
-
-
-
-    ecp_comb_fixed( k, d, w, &M );
-    do { if( ( ret = ecp_mul_comb_core( grp, R, T, pre_len, k, d, f_rng, p_rng ) ) != 0 ) goto cleanup; } while( 0 );
-
-
-
-
-    do { if( ( ret = ecp_safe_invert_jac( grp, R, ! m_is_odd ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = ecp_normalize_jac( grp, R ) ) != 0 ) goto cleanup; } while( 0 );
+                                                                         ;
 
 cleanup:
 
 
-
-
-
-
+    if( T == grp->T )
+        T = 
+# 2088 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+           ((void *)0)
+# 2088 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+               ;
+# 2102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
     if( T != 
-# 1454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 2102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
             ((void *)0) 
-# 1454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
-                 && T != grp->T )
+# 2102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+                 )
     {
-        for( i = 0; i < pre_len; i++ )
+        for( i = 0; i < T_size; i++ )
             mbedtls_ecp_point_free( &T[i] );
         mbedtls_free( T );
     }
 
-    mbedtls_mpi_free( &M );
-    mbedtls_mpi_free( &mm );
+
+
+
+
 
     if( ret != 0 )
         mbedtls_ecp_point_free( R );
 
+    (void) rs_ctx;;
+
     return( ret );
 }
-# 1485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 2137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
 static int ecp_normalize_mxz( const mbedtls_ecp_group *grp, mbedtls_ecp_point *P )
 {
     int ret;
-# 1496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
-    do { if( ( ret = mbedtls_mpi_inv_mod( &P->Z, &P->Z, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &P->X, &P->X, &P->Z ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &P->X, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_lset( &P->Z, 1 ) ) != 0 ) goto cleanup; } while( 0 );
+
+
+
+
+
+
+    do { if( ( ret = (mbedtls_mpi_inv_mod( &P->Z, &P->Z, &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &P->X, &P->X, &P->Z )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(P->X), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_lset( &P->Z, 1 )) ) != 0 ) goto cleanup; } while( 0 );
 
 cleanup:
     return( ret );
 }
-# 1512 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 2162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
 static int ecp_randomize_mxz( const mbedtls_ecp_group *grp, mbedtls_ecp_point *P,
                 int (*f_rng)(void *, unsigned char *, size_t), void *p_rng )
 {
@@ -3210,32 +3480,37 @@ static int ecp_randomize_mxz( const mbedtls_ecp_group *grp, mbedtls_ecp_point *P
     mbedtls_mpi l;
     size_t p_size;
     int count = 0;
-# 1527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+
+
+
+
+
+
     p_size = ( grp->pbits + 7 ) / 8;
     mbedtls_mpi_init( &l );
 
 
     do
     {
-        do { if( ( ret = mbedtls_mpi_fill_random( &l, p_size, f_rng, p_rng ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_fill_random( &l, p_size, f_rng, p_rng )) ) != 0 ) goto cleanup; } while( 0 );
 
         while( mbedtls_mpi_cmp_mpi( &l, &grp->P ) >= 0 )
-            do { if( ( ret = mbedtls_mpi_shift_r( &l, 1 ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_shift_r( &l, 1 )) ) != 0 ) goto cleanup; } while( 0 );
 
         if( count++ > 10 )
             return( -0x4D00 );
     }
     while( mbedtls_mpi_cmp_int( &l, 1 ) <= 0 );
 
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &P->X, &P->X, &l ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &P->X, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &P->Z, &P->Z, &l ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &P->Z, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &P->X, &P->X, &l )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(P->X), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &P->Z, &P->Z, &l )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(P->Z), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
 
 cleanup:
     mbedtls_mpi_free( &l );
 
     return( ret );
 }
-# 1567 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 2215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
 static int ecp_double_add_mxz( const mbedtls_ecp_group *grp,
                                mbedtls_ecp_point *R, mbedtls_ecp_point *S,
                                const mbedtls_ecp_point *P, const mbedtls_ecp_point *Q,
@@ -3243,29 +3518,34 @@ static int ecp_double_add_mxz( const mbedtls_ecp_group *grp,
 {
     int ret;
     mbedtls_mpi A, AA, B, BB, E, C, D, DA, CB;
-# 1582 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+
+
+
+
+
+
     mbedtls_mpi_init( &A ); mbedtls_mpi_init( &AA ); mbedtls_mpi_init( &B );
     mbedtls_mpi_init( &BB ); mbedtls_mpi_init( &E ); mbedtls_mpi_init( &C );
     mbedtls_mpi_init( &D ); mbedtls_mpi_init( &DA ); mbedtls_mpi_init( &CB );
 
-    do { if( ( ret = mbedtls_mpi_add_mpi( &A, &P->X, &P->Z ) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &A, &grp->P ) >= 0 ) do { if( ( ret = mbedtls_mpi_sub_abs( &A, &A, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &AA, &A, &A ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &AA, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_sub_mpi( &B, &P->X, &P->Z ) ) != 0 ) goto cleanup; } while( 0 ); while( B.s < 0 && mbedtls_mpi_cmp_int( &B, 0 ) != 0 ) do { if( ( ret = mbedtls_mpi_add_mpi( &B, &B, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &BB, &B, &B ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &BB, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_sub_mpi( &E, &AA, &BB ) ) != 0 ) goto cleanup; } while( 0 ); while( E.s < 0 && mbedtls_mpi_cmp_int( &E, 0 ) != 0 ) do { if( ( ret = mbedtls_mpi_add_mpi( &E, &E, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_add_mpi( &C, &Q->X, &Q->Z ) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &C, &grp->P ) >= 0 ) do { if( ( ret = mbedtls_mpi_sub_abs( &C, &C, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_sub_mpi( &D, &Q->X, &Q->Z ) ) != 0 ) goto cleanup; } while( 0 ); while( D.s < 0 && mbedtls_mpi_cmp_int( &D, 0 ) != 0 ) do { if( ( ret = mbedtls_mpi_add_mpi( &D, &D, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &DA, &D, &A ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &DA, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &CB, &C, &B ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &CB, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_add_mpi( &S->X, &DA, &CB ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &S->X, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &S->X, &S->X, &S->X ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &S->X, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_sub_mpi( &S->Z, &DA, &CB ) ) != 0 ) goto cleanup; } while( 0 ); while( S->Z.s < 0 && mbedtls_mpi_cmp_int( &S->Z, 0 ) != 0 ) do { if( ( ret = mbedtls_mpi_add_mpi( &S->Z, &S->Z, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &S->Z, &S->Z, &S->Z ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &S->Z, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &S->Z, d, &S->Z ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &S->Z, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &R->X, &AA, &BB ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &R->X, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &R->Z, &grp->A, &E ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &R->Z, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_add_mpi( &R->Z, &BB, &R->Z ) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &R->Z, &grp->P ) >= 0 ) do { if( ( ret = mbedtls_mpi_sub_abs( &R->Z, &R->Z, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &R->Z, &E, &R->Z ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &R->Z, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_add_mpi( &A, &P->X, &P->Z )) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &(A), &grp->P ) >= 0 ) do { if( ( ret = (mbedtls_mpi_sub_abs( &(A), &(A), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &AA, &A, &A )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(AA), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_sub_mpi( &B, &P->X, &P->Z )) ) != 0 ) goto cleanup; } while( 0 ); while( (B).s < 0 && mbedtls_mpi_cmp_int( &(B), 0 ) != 0 ) do { if( ( ret = (mbedtls_mpi_add_mpi( &(B), &(B), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &BB, &B, &B )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(BB), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_sub_mpi( &E, &AA, &BB )) ) != 0 ) goto cleanup; } while( 0 ); while( (E).s < 0 && mbedtls_mpi_cmp_int( &(E), 0 ) != 0 ) do { if( ( ret = (mbedtls_mpi_add_mpi( &(E), &(E), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_add_mpi( &C, &Q->X, &Q->Z )) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &(C), &grp->P ) >= 0 ) do { if( ( ret = (mbedtls_mpi_sub_abs( &(C), &(C), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_sub_mpi( &D, &Q->X, &Q->Z )) ) != 0 ) goto cleanup; } while( 0 ); while( (D).s < 0 && mbedtls_mpi_cmp_int( &(D), 0 ) != 0 ) do { if( ( ret = (mbedtls_mpi_add_mpi( &(D), &(D), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &DA, &D, &A )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(DA), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &CB, &C, &B )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(CB), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_add_mpi( &S->X, &DA, &CB )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(S->X), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &S->X, &S->X, &S->X )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(S->X), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_sub_mpi( &S->Z, &DA, &CB )) ) != 0 ) goto cleanup; } while( 0 ); while( (S->Z).s < 0 && mbedtls_mpi_cmp_int( &(S->Z), 0 ) != 0 ) do { if( ( ret = (mbedtls_mpi_add_mpi( &(S->Z), &(S->Z), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &S->Z, &S->Z, &S->Z )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(S->Z), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &S->Z, d, &S->Z )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(S->Z), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &R->X, &AA, &BB )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(R->X), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &R->Z, &grp->A, &E )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(R->Z), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_add_mpi( &R->Z, &BB, &R->Z )) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &(R->Z), &grp->P ) >= 0 ) do { if( ( ret = (mbedtls_mpi_sub_abs( &(R->Z), &(R->Z), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &R->Z, &E, &R->Z )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(R->Z), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
 
 cleanup:
     mbedtls_mpi_free( &A ); mbedtls_mpi_free( &AA ); mbedtls_mpi_free( &B );
@@ -3293,24 +3573,24 @@ static int ecp_mul_mxz( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
     mbedtls_ecp_point_init( &RP ); mbedtls_mpi_init( &PX );
 
 
-    do { if( ( ret = mbedtls_mpi_copy( &PX, &P->X ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_ecp_copy( &RP, P ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_copy( &PX, &P->X )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_ecp_copy( &RP, P )) ) != 0 ) goto cleanup; } while( 0 );
 
 
-    do { if( ( ret = mbedtls_mpi_lset( &R->X, 1 ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_lset( &R->Z, 0 ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_lset( &R->X, 1 )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_lset( &R->Z, 0 )) ) != 0 ) goto cleanup; } while( 0 );
     mbedtls_mpi_free( &R->Y );
 
 
-    while( mbedtls_mpi_cmp_mpi( &RP.X, &grp->P ) >= 0 ) do { if( ( ret = mbedtls_mpi_sub_abs( &RP.X, &RP.X, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
+    while( mbedtls_mpi_cmp_mpi( &(RP.X), &grp->P ) >= 0 ) do { if( ( ret = (mbedtls_mpi_sub_abs( &(RP.X), &(RP.X), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
 
 
     if( f_rng != 
-# 1643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 2289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
                 ((void *)0) 
-# 1643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 2289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
                      )
-        do { if( ( ret = ecp_randomize_mxz( grp, &RP, f_rng, p_rng ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (ecp_randomize_mxz( grp, &RP, f_rng, p_rng )) ) != 0 ) goto cleanup; } while( 0 );
 
 
     i = mbedtls_mpi_bitlen( m );
@@ -3324,14 +3604,14 @@ static int ecp_mul_mxz( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
 
 
 
-        do { if( ( ret = mbedtls_mpi_safe_cond_swap( &R->X, &RP.X, b ) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_safe_cond_swap( &R->Z, &RP.Z, b ) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = ecp_double_add_mxz( grp, R, &RP, R, &RP, &PX ) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_safe_cond_swap( &R->X, &RP.X, b ) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_safe_cond_swap( &R->Z, &RP.Z, b ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_safe_cond_swap( &R->X, &RP.X, b )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_safe_cond_swap( &R->Z, &RP.Z, b )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (ecp_double_add_mxz( grp, R, &RP, R, &RP, &PX )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_safe_cond_swap( &R->X, &RP.X, b )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_safe_cond_swap( &R->Z, &RP.Z, b )) ) != 0 ) goto cleanup; } while( 0 );
     }
 
-    do { if( ( ret = ecp_normalize_mxz( grp, R ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (ecp_normalize_mxz( grp, R )) ) != 0 ) goto cleanup; } while( 0 );
 
 cleanup:
     mbedtls_ecp_point_free( &RP ); mbedtls_mpi_free( &PX );
@@ -3344,32 +3624,60 @@ cleanup:
 
 
 
-int mbedtls_ecp_mul( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
+int mbedtls_ecp_mul_restartable( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
              const mbedtls_mpi *m, const mbedtls_ecp_point *P,
-             int (*f_rng)(void *, unsigned char *, size_t), void *p_rng )
+             int (*f_rng)(void *, unsigned char *, size_t), void *p_rng,
+             mbedtls_ecp_restart_ctx *rs_ctx )
 {
     int ret = -0x4F80;
 
 
 
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+# 2353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+    {
+
+        ;
 
 
-    if( mbedtls_mpi_cmp_int( &P->Z, 1 ) != 0 )
-        return( -0x4F80 );
+        do { if( ( ret = (mbedtls_ecp_check_privkey( grp, m )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_ecp_check_pubkey( grp, P )) ) != 0 ) goto cleanup; } while( 0 );
+    }
 
-    if( ( ret = mbedtls_ecp_check_privkey( grp, m ) ) != 0 ||
-        ( ret = mbedtls_ecp_check_pubkey( grp, P ) ) != 0 )
-        return( ret );
-# 1703 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+    ret = -0x4F80;
+
     if( ecp_get_type( grp ) == ECP_TYPE_MONTGOMERY )
-        ret = ecp_mul_mxz( grp, R, m, P, f_rng, p_rng );
-
+        do { if( ( ret = (ecp_mul_mxz( grp, R, m, P, f_rng, p_rng )) ) != 0 ) goto cleanup; } while( 0 );
 
 
     if( ecp_get_type( grp ) == ECP_TYPE_SHORT_WEIERSTRASS )
-        ret = ecp_mul_comb( grp, R, m, P, f_rng, p_rng );
-# 1721 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+        do { if( ( ret = (ecp_mul_comb( grp, R, m, P, f_rng, p_rng, rs_ctx )) ) != 0 ) goto cleanup; } while( 0 );
+
+
+cleanup:
+# 2384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
     return( ret );
+}
+
+
+
+
+int mbedtls_ecp_mul( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
+             const mbedtls_mpi *m, const mbedtls_ecp_point *P,
+             int (*f_rng)(void *, unsigned char *, size_t), void *p_rng )
+{
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+    return( mbedtls_ecp_mul_restartable( grp, R, m, P, f_rng, p_rng, 
+# 2398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+                                                                    ((void *)0) 
+# 2398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+                                                                         ) );
 }
 
 
@@ -3395,25 +3703,25 @@ static int ecp_check_pubkey_sw( const mbedtls_ecp_group *grp, const mbedtls_ecp_
 
 
 
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &YY, &pt->Y, &pt->Y ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &YY, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &RHS, &pt->X, &pt->X ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &RHS, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &YY, &pt->Y, &pt->Y )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(YY), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &RHS, &pt->X, &pt->X )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(RHS), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
 
 
     if( grp->A.p == 
-# 1751 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 2428 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
                    ((void *)0) 
-# 1751 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 2428 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
                         )
     {
-        do { if( ( ret = mbedtls_mpi_sub_int( &RHS, &RHS, 3 ) ) != 0 ) goto cleanup; } while( 0 ); while( RHS.s < 0 && mbedtls_mpi_cmp_int( &RHS, 0 ) != 0 ) do { if( ( ret = mbedtls_mpi_add_mpi( &RHS, &RHS, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_sub_int( &RHS, &RHS, 3 )) ) != 0 ) goto cleanup; } while( 0 ); while( (RHS).s < 0 && mbedtls_mpi_cmp_int( &(RHS), 0 ) != 0 ) do { if( ( ret = (mbedtls_mpi_add_mpi( &(RHS), &(RHS), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
     }
     else
     {
-        do { if( ( ret = mbedtls_mpi_add_mpi( &RHS, &RHS, &grp->A ) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &RHS, &grp->P ) >= 0 ) do { if( ( ret = mbedtls_mpi_sub_abs( &RHS, &RHS, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_add_mpi( &RHS, &RHS, &grp->A )) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &(RHS), &grp->P ) >= 0 ) do { if( ( ret = (mbedtls_mpi_sub_abs( &(RHS), &(RHS), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
     }
 
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &RHS, &RHS, &pt->X ) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = ecp_modp( &RHS, grp ) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_add_mpi( &RHS, &RHS, &grp->B ) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &RHS, &grp->P ) >= 0 ) do { if( ( ret = mbedtls_mpi_sub_abs( &RHS, &RHS, &grp->P ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &RHS, &RHS, &pt->X )) ) != 0 ) goto cleanup; } while( 0 ); do { do { if( ( ret = (ecp_modp( &(RHS), grp )) ) != 0 ) goto cleanup; } while( 0 ); mul_count++; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_add_mpi( &RHS, &RHS, &grp->B )) ) != 0 ) goto cleanup; } while( 0 ); while( mbedtls_mpi_cmp_mpi( &(RHS), &grp->P ) >= 0 ) do { if( ( ret = (mbedtls_mpi_sub_abs( &(RHS), &(RHS), &grp->P )) ) != 0 ) goto cleanup; } while( 0 );
 
     if( mbedtls_mpi_cmp_mpi( &YY, &RHS ) != 0 )
         ret = -0x4C80;
@@ -3433,34 +3741,105 @@ cleanup:
 static int mbedtls_ecp_mul_shortcuts( mbedtls_ecp_group *grp,
                                       mbedtls_ecp_point *R,
                                       const mbedtls_mpi *m,
-                                      const mbedtls_ecp_point *P )
+                                      const mbedtls_ecp_point *P,
+                                      mbedtls_ecp_restart_ctx *rs_ctx )
 {
     int ret;
 
     if( mbedtls_mpi_cmp_int( m, 1 ) == 0 )
     {
-        do { if( ( ret = mbedtls_ecp_copy( R, P ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_ecp_copy( R, P )) ) != 0 ) goto cleanup; } while( 0 );
     }
     else if( mbedtls_mpi_cmp_int( m, -1 ) == 0 )
     {
-        do { if( ( ret = mbedtls_ecp_copy( R, P ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_ecp_copy( R, P )) ) != 0 ) goto cleanup; } while( 0 );
         if( mbedtls_mpi_cmp_int( &R->Y, 0 ) != 0 )
-            do { if( ( ret = mbedtls_mpi_sub_mpi( &R->Y, &grp->P, &R->Y ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_sub_mpi( &R->Y, &grp->P, &R->Y )) ) != 0 ) goto cleanup; } while( 0 );
     }
     else
     {
-        do { if( ( ret = mbedtls_ecp_mul( grp, R, m, P, 
-# 1797 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+        do { if( ( ret = (mbedtls_ecp_mul_restartable( grp, R, m, P, 
+# 2475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
        ((void *)0)
-# 1797 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 2475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
        , 
-# 1797 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
-       ((void *)0) 
-# 1797 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
-       ) ) != 0 ) goto cleanup; } while( 0 );
+# 2475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+       ((void *)0)
+# 2475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+       , rs_ctx )) ) != 0 ) goto cleanup; } while( 0 )
+                                                                            ;
     }
 
 cleanup:
+    return( ret );
+}
+
+
+
+
+
+int mbedtls_ecp_muladd_restartable(
+             mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
+             const mbedtls_mpi *m, const mbedtls_ecp_point *P,
+             const mbedtls_mpi *n, const mbedtls_ecp_point *Q,
+             mbedtls_ecp_restart_ctx *rs_ctx )
+{
+    int ret;
+    mbedtls_ecp_point mP;
+    mbedtls_ecp_point *pmP = &mP;
+    mbedtls_ecp_point *pR = R;
+
+
+
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+
+    if( ecp_get_type( grp ) != ECP_TYPE_SHORT_WEIERSTRASS )
+        return( -0x4E80 );
+
+    mbedtls_ecp_point_init( &mP );
+
+    (void) rs_ctx;;
+# 2531 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+    do { if( ( ret = (mbedtls_ecp_mul_shortcuts( grp, pmP, m, P, rs_ctx )) ) != 0 ) goto cleanup; } while( 0 );
+
+
+
+
+
+
+    do { if( ( ret = (mbedtls_ecp_mul_shortcuts( grp, pR, n, Q, rs_ctx )) ) != 0 ) goto cleanup; } while( 0 );
+# 2551 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+    ;
+    do { if( ( ret = (ecp_add_mixed( grp, pR, pmP, pR )) ) != 0 ) goto cleanup; } while( 0 );
+
+
+
+
+
+
+    ;
+    do { if( ( ret = (ecp_normalize_jac( grp, pR )) ) != 0 ) goto cleanup; } while( 0 );
+
+
+
+
+
+
+cleanup:
+
+
+
+
+
+    mbedtls_ecp_point_free( &mP );
+
+    (void) rs_ctx;;
+
     return( ret );
 }
 
@@ -3472,30 +3851,18 @@ int mbedtls_ecp_muladd( mbedtls_ecp_group *grp, mbedtls_ecp_point *R,
              const mbedtls_mpi *m, const mbedtls_ecp_point *P,
              const mbedtls_mpi *n, const mbedtls_ecp_point *Q )
 {
-    int ret;
-    mbedtls_ecp_point mP;
-
-
-
-
-    if( ecp_get_type( grp ) != ECP_TYPE_SHORT_WEIERSTRASS )
-        return( -0x4E80 );
-
-    mbedtls_ecp_point_init( &mP );
-
-    do { if( ( ret = mbedtls_ecp_mul_shortcuts( grp, &mP, m, P ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_ecp_mul_shortcuts( grp, R, n, Q ) ) != 0 ) goto cleanup; } while( 0 );
-# 1833 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
-    do { if( ( ret = ecp_add_mixed( grp, R, &mP, R ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = ecp_normalize_jac( grp, R ) ) != 0 ) goto cleanup; } while( 0 );
-
-cleanup:
-# 1845 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
-    mbedtls_ecp_point_free( &mP );
-
-    return( ret );
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+    return( mbedtls_ecp_muladd_restartable( grp, R, m, P, n, Q, 
+# 2594 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+                                                               ((void *)0) 
+# 2594 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+                                                                    ) );
 }
-
 
 
 
@@ -3516,8 +3883,12 @@ static int ecp_check_pubkey_mx( const mbedtls_ecp_group *grp, const mbedtls_ecp_
 
 
 
-int mbedtls_ecp_check_pubkey( const mbedtls_ecp_group *grp, const mbedtls_ecp_point *pt )
+int mbedtls_ecp_check_pubkey( const mbedtls_ecp_group *grp,
+                              const mbedtls_ecp_point *pt )
 {
+    do { } while( 0 );
+    do { } while( 0 );
+
 
     if( mbedtls_mpi_cmp_int( &pt->Z, 1 ) != 0 )
         return( -0x4C80 );
@@ -3536,8 +3907,12 @@ int mbedtls_ecp_check_pubkey( const mbedtls_ecp_group *grp, const mbedtls_ecp_po
 
 
 
-int mbedtls_ecp_check_privkey( const mbedtls_ecp_group *grp, const mbedtls_mpi *d )
+int mbedtls_ecp_check_privkey( const mbedtls_ecp_group *grp,
+                               const mbedtls_mpi *d )
 {
+    do { } while( 0 );
+    do { } while( 0 );
+
 
     if( ecp_get_type( grp ) == ECP_TYPE_MONTGOMERY )
     {
@@ -3572,14 +3947,19 @@ int mbedtls_ecp_check_privkey( const mbedtls_ecp_group *grp, const mbedtls_mpi *
 
 
 
-int mbedtls_ecp_gen_keypair_base( mbedtls_ecp_group *grp,
-                     const mbedtls_ecp_point *G,
-                     mbedtls_mpi *d, mbedtls_ecp_point *Q,
+int mbedtls_ecp_gen_privkey( const mbedtls_ecp_group *grp,
+                     mbedtls_mpi *d,
                      int (*f_rng)(void *, unsigned char *, size_t),
                      void *p_rng )
 {
-    int ret;
-    size_t n_size = ( grp->nbits + 7 ) / 8;
+    int ret = -0x4F80;
+    size_t n_size;
+
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+
+    n_size = ( grp->nbits + 7 ) / 8;
 
 
     if( ecp_get_type( grp ) == ECP_TYPE_MONTGOMERY )
@@ -3588,53 +3968,77 @@ int mbedtls_ecp_gen_keypair_base( mbedtls_ecp_group *grp,
         size_t b;
 
         do {
-            do { if( ( ret = mbedtls_mpi_fill_random( d, n_size, f_rng, p_rng ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_fill_random( d, n_size, f_rng, p_rng )) ) != 0 ) goto cleanup; } while( 0 );
         } while( mbedtls_mpi_bitlen( d ) == 0);
 
 
         b = mbedtls_mpi_bitlen( d ) - 1;
         if( b > grp->nbits )
-            do { if( ( ret = mbedtls_mpi_shift_r( d, b - grp->nbits ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_shift_r( d, b - grp->nbits )) ) != 0 ) goto cleanup; } while( 0 );
         else
-            do { if( ( ret = mbedtls_mpi_set_bit( d, grp->nbits, 1 ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_set_bit( d, grp->nbits, 1 )) ) != 0 ) goto cleanup; } while( 0 );
 
 
 
-        do { if( ( ret = mbedtls_mpi_set_bit( d, 0, 0 ) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_set_bit( d, 1, 0 ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_set_bit( d, 0, 0 )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_set_bit( d, 1, 0 )) ) != 0 ) goto cleanup; } while( 0 );
         if( grp->nbits == 254 )
         {
-            do { if( ( ret = mbedtls_mpi_set_bit( d, 2, 0 ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_set_bit( d, 2, 0 )) ) != 0 ) goto cleanup; } while( 0 );
         }
     }
-    else
+
 
 
     if( ecp_get_type( grp ) == ECP_TYPE_SHORT_WEIERSTRASS )
     {
 
         int count = 0;
-# 1976 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+        unsigned cmp = 0;
+# 2736 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
         do
         {
-            do { if( ( ret = mbedtls_mpi_fill_random( d, n_size, f_rng, p_rng ) ) != 0 ) goto cleanup; } while( 0 );
-            do { if( ( ret = mbedtls_mpi_shift_r( d, 8 * n_size - grp->nbits ) ) != 0 ) goto cleanup; } while( 0 );
-# 1990 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+            do { if( ( ret = (mbedtls_mpi_fill_random( d, n_size, f_rng, p_rng )) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_shift_r( d, 8 * n_size - grp->nbits )) ) != 0 ) goto cleanup; } while( 0 );
+# 2750 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
             if( ++count > 30 )
                 return( -0x4D00 );
-        }
-        while( mbedtls_mpi_cmp_int( d, 1 ) < 0 ||
-               mbedtls_mpi_cmp_mpi( d, &grp->N ) >= 0 );
-    }
-    else
 
-        return( -0x4F80 );
+            ret = mbedtls_mpi_lt_mpi_ct( d, &grp->N, &cmp );
+            if( ret != 0 )
+            {
+                goto cleanup;
+            }
+        }
+        while( mbedtls_mpi_cmp_int( d, 1 ) < 0 || cmp != 1 );
+    }
+
 
 cleanup:
-    if( ret != 0 )
-        return( ret );
+    return( ret );
+}
 
-    return( mbedtls_ecp_mul( grp, Q, d, G, f_rng, p_rng ) );
+
+
+
+int mbedtls_ecp_gen_keypair_base( mbedtls_ecp_group *grp,
+                     const mbedtls_ecp_point *G,
+                     mbedtls_mpi *d, mbedtls_ecp_point *Q,
+                     int (*f_rng)(void *, unsigned char *, size_t),
+                     void *p_rng )
+{
+    int ret;
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+
+    do { if( ( ret = (mbedtls_ecp_gen_privkey( grp, d, f_rng, p_rng )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_ecp_mul( grp, Q, d, G, f_rng, p_rng )) ) != 0 ) goto cleanup; } while( 0 );
+
+cleanup:
+    return( ret );
 }
 
 
@@ -3645,6 +4049,11 @@ int mbedtls_ecp_gen_keypair( mbedtls_ecp_group *grp,
                              int (*f_rng)(void *, unsigned char *, size_t),
                              void *p_rng )
 {
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+
     return( mbedtls_ecp_gen_keypair_base( grp, &grp->G, d, Q, f_rng, p_rng ) );
 }
 
@@ -3655,6 +4064,8 @@ int mbedtls_ecp_gen_key( mbedtls_ecp_group_id grp_id, mbedtls_ecp_keypair *key,
                 int (*f_rng)(void *, unsigned char *, size_t), void *p_rng )
 {
     int ret;
+    do { } while( 0 );
+    do { } while( 0 );
 
     if( ( ret = mbedtls_ecp_group_load( &key->grp, grp_id ) ) != 0 )
         return( ret );
@@ -3670,6 +4081,8 @@ int mbedtls_ecp_check_pub_priv( const mbedtls_ecp_keypair *pub, const mbedtls_ec
     int ret;
     mbedtls_ecp_point Q;
     mbedtls_ecp_group grp;
+    do { } while( 0 );
+    do { } while( 0 );
 
     if( pub->grp.id == MBEDTLS_ECP_DP_NONE ||
         pub->grp.id != prv->grp.id ||
@@ -3687,15 +4100,15 @@ int mbedtls_ecp_check_pub_priv( const mbedtls_ecp_keypair *pub, const mbedtls_ec
     mbedtls_ecp_group_copy( &grp, &prv->grp );
 
 
-    do { if( ( ret = mbedtls_ecp_mul( &grp, &Q, &prv->d, &prv->grp.G, 
-# 2057 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+    do { if( ( ret = (mbedtls_ecp_mul( &grp, &Q, &prv->d, &prv->grp.G, 
+# 2849 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
    ((void *)0)
-# 2057 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 2849 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
    , 
-# 2057 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 2849 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
    ((void *)0) 
-# 2057 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
-   ) ) != 0 ) goto cleanup; } while( 0 );
+# 2849 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+   )) ) != 0 ) goto cleanup; } while( 0 );
 
     if( mbedtls_mpi_cmp_mpi( &Q.X, &prv->Q.X ) ||
         mbedtls_mpi_cmp_mpi( &Q.Y, &prv->Q.Y ) ||
@@ -3743,7 +4156,7 @@ int mbedtls_ecp_self_test( int verbose )
 
 
 
-    do { if( ( ret = mbedtls_ecp_group_load( &grp, MBEDTLS_ECP_DP_SECP192R1 ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_ecp_group_load( &grp, MBEDTLS_ECP_DP_SECP192R1 )) ) != 0 ) goto cleanup; } while( 0 );
 
 
 
@@ -3752,30 +4165,30 @@ int mbedtls_ecp_self_test( int verbose )
         printf( "  ECP test #1 (constant op_count, base point G): " );
 
 
-    do { if( ( ret = mbedtls_mpi_lset( &m, 2 ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_ecp_mul( &grp, &P, &m, &grp.G, 
-# 2115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+    do { if( ( ret = (mbedtls_mpi_lset( &m, 2 )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_ecp_mul( &grp, &P, &m, &grp.G, 
+# 2907 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
    ((void *)0)
-# 2115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 2907 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
    , 
-# 2115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 2907 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
    ((void *)0) 
-# 2115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
-   ) ) != 0 ) goto cleanup; } while( 0 );
+# 2907 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+   )) ) != 0 ) goto cleanup; } while( 0 );
 
     add_count = 0;
     dbl_count = 0;
     mul_count = 0;
-    do { if( ( ret = mbedtls_mpi_read_string( &m, 16, exponents[0] ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_ecp_mul( &grp, &R, &m, &grp.G, 
-# 2121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+    do { if( ( ret = (mbedtls_mpi_read_string( &m, 16, exponents[0] )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_ecp_mul( &grp, &R, &m, &grp.G, 
+# 2913 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
    ((void *)0)
-# 2121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 2913 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
    , 
-# 2121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 2913 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
    ((void *)0) 
-# 2121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
-   ) ) != 0 ) goto cleanup; } while( 0 );
+# 2913 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+   )) ) != 0 ) goto cleanup; } while( 0 );
 
     for( i = 1; i < sizeof( exponents ) / sizeof( exponents[0] ); i++ )
     {
@@ -3786,16 +4199,16 @@ int mbedtls_ecp_self_test( int verbose )
         dbl_count = 0;
         mul_count = 0;
 
-        do { if( ( ret = mbedtls_mpi_read_string( &m, 16, exponents[i] ) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = mbedtls_ecp_mul( &grp, &R, &m, &grp.G, 
-# 2133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+        do { if( ( ret = (mbedtls_mpi_read_string( &m, 16, exponents[i] )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_ecp_mul( &grp, &R, &m, &grp.G, 
+# 2925 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
        ((void *)0)
-# 2133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 2925 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
        , 
-# 2133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 2925 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
        ((void *)0) 
-# 2133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
-       ) ) != 0 ) goto cleanup; } while( 0 );
+# 2925 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+       )) ) != 0 ) goto cleanup; } while( 0 );
 
         if( add_count != add_c_prev ||
             dbl_count != dbl_c_prev ||
@@ -3819,16 +4232,16 @@ int mbedtls_ecp_self_test( int verbose )
     add_count = 0;
     dbl_count = 0;
     mul_count = 0;
-    do { if( ( ret = mbedtls_mpi_read_string( &m, 16, exponents[0] ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_ecp_mul( &grp, &R, &m, &P, 
-# 2158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+    do { if( ( ret = (mbedtls_mpi_read_string( &m, 16, exponents[0] )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_ecp_mul( &grp, &R, &m, &P, 
+# 2950 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
    ((void *)0)
-# 2158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 2950 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
    , 
-# 2158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 2950 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
    ((void *)0) 
-# 2158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
-   ) ) != 0 ) goto cleanup; } while( 0 );
+# 2950 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+   )) ) != 0 ) goto cleanup; } while( 0 );
 
     for( i = 1; i < sizeof( exponents ) / sizeof( exponents[0] ); i++ )
     {
@@ -3839,16 +4252,16 @@ int mbedtls_ecp_self_test( int verbose )
         dbl_count = 0;
         mul_count = 0;
 
-        do { if( ( ret = mbedtls_mpi_read_string( &m, 16, exponents[i] ) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = mbedtls_ecp_mul( &grp, &R, &m, &P, 
-# 2170 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+        do { if( ( ret = (mbedtls_mpi_read_string( &m, 16, exponents[i] )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_ecp_mul( &grp, &R, &m, &P, 
+# 2962 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
        ((void *)0)
-# 2170 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+# 2962 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
        , 
-# 2170 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
+# 2962 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c" 3 4
        ((void *)0) 
-# 2170 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
-       ) ) != 0 ) goto cleanup; } while( 0 );
+# 2962 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/ecp.c"
+       )) ) != 0 ) goto cleanup; } while( 0 );
 
         if( add_count != add_c_prev ||
             dbl_count != dbl_c_prev ||

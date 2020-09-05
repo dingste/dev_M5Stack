@@ -1204,7 +1204,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 1
@@ -1515,7 +1515,7 @@ void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int l
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
 typedef volatile struct {
     uint32_t bt_select;
     uint32_t out;
@@ -1734,6 +1734,9 @@ static inline void __attribute__ ((deprecated)) PIN_PULLDWN_EN(uint32_t PIN_NAME
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_pins.h" 1
@@ -1855,7 +1858,7 @@ void esp_intr_noniram_disable();
 void esp_intr_noniram_enable();
 # 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
 extern const uint32_t GPIO_PIN_MUX_REG[40];
 # 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
@@ -3084,25 +3087,25 @@ typedef enum {
 typedef esp_sleep_source_t esp_sleep_wakeup_cause_t;
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_disable_wakeup_source(esp_sleep_source_t source);
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ulp_wakeup();
-# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_timer_wakeup(uint64_t time_in_us);
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_touchpad_wakeup();
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 touch_pad_t esp_sleep_get_touchpad_wakeup_status();
-# 161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext0_wakeup(gpio_num_t gpio_num, int level);
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext1_wakeup(uint64_t mask, esp_sleep_ext1_wakeup_mode_t mode);
-# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_gpio_wakeup();
-# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_uart_wakeup(int uart_num);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 uint64_t esp_sleep_get_ext1_wakeup_status();
-# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
                                    esp_sleep_pd_option_t option);
 
@@ -3112,11 +3115,11 @@ esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
 
 
 void esp_deep_sleep_start() __attribute__((noreturn));
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_light_sleep_start();
-# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_deep_sleep(uint64_t time_in_us) __attribute__((noreturn));
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated));
 
 
@@ -3126,7 +3129,7 @@ void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated)
 
 
 esp_sleep_wakeup_cause_t esp_sleep_get_wakeup_cause();
-# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_wake_deep_sleep(void);
 
 
@@ -3134,7 +3137,7 @@ void esp_wake_deep_sleep(void);
 
 
 typedef void (*esp_deep_sleep_wake_stub_fn_t)(void);
-# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_set_deep_sleep_wake_stub(esp_deep_sleep_wake_stub_fn_t new_stub);
 
 
@@ -3158,6 +3161,12 @@ void esp_default_wake_deep_sleep(void);
 
 void esp_deep_sleep_disable_rom_logging(void);
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+       
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+const char* esp_get_idf_version(void);
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
 
 
 
@@ -3169,7 +3178,7 @@ typedef enum {
     ESP_MAC_BT,
     ESP_MAC_ETH,
 } esp_mac_type_t;
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef enum {
     ESP_RST_UNKNOWN,
     ESP_RST_POWERON,
@@ -3212,9 +3221,9 @@ typedef void (*shutdown_handler_t)(void);
 
 
 esp_err_t esp_register_shutdown_handler(shutdown_handler_t handle);
-# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_restart(void) __attribute__ ((noreturn));
-# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
@@ -3223,11 +3232,11 @@ void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
 esp_reset_reason_t esp_reset_reason(void);
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_time(void) __attribute__ ((deprecated));
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_get_free_heap_size(void);
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
@@ -3237,36 +3246,28 @@ uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
 uint32_t esp_get_minimum_free_heap_size( void );
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_random(void);
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_fill_random(void *buf, size_t len);
-# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_set(uint8_t *mac);
-# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_get(uint8_t *mac);
-# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_custom(uint8_t *mac);
-# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_default(uint8_t *mac);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t system_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_read_mac(uint8_t* mac, esp_mac_type_t type);
-# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_derive_local_mac(uint8_t* local_mac, const uint8_t* universal_mac);
-# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 const char* system_get_sdk_version(void) __attribute__ ((deprecated));
-
-
-
-
-
-
-
-const char* esp_get_idf_version(void);
 
 
 
@@ -3275,7 +3276,7 @@ const char* esp_get_idf_version(void);
 typedef enum {
     CHIP_ESP32 = 1,
 } esp_chip_model_t;
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef struct {
     esp_chip_model_t model;
     uint32_t features;
@@ -3291,7 +3292,518 @@ void esp_chip_info(esp_chip_info_t* out_info);
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 1
-# 62 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 63 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/queue.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_interface.h" 1
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_interface.h"
+typedef enum {
+    ESP_IF_WIFI_STA = 0,
+    ESP_IF_WIFI_AP,
+    ESP_IF_ETH,
+    ESP_IF_MAX
+} esp_interface_t;
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h" 2
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 2
+
+
+
+
+
+typedef enum {
+    WIFI_MODE_NULL = 0,
+    WIFI_MODE_STA,
+    WIFI_MODE_AP,
+    WIFI_MODE_APSTA,
+    WIFI_MODE_MAX
+} wifi_mode_t;
+
+typedef esp_interface_t wifi_interface_t;
+
+
+
+
+typedef enum {
+    WIFI_COUNTRY_POLICY_AUTO,
+    WIFI_COUNTRY_POLICY_MANUAL,
+} wifi_country_policy_t;
+
+
+typedef struct {
+    char cc[3];
+    uint8_t schan;
+    uint8_t nchan;
+    int8_t max_tx_power;
+    wifi_country_policy_t policy;
+} wifi_country_t;
+
+typedef enum {
+    WIFI_AUTH_OPEN = 0,
+    WIFI_AUTH_WEP,
+    WIFI_AUTH_WPA_PSK,
+    WIFI_AUTH_WPA2_PSK,
+    WIFI_AUTH_WPA_WPA2_PSK,
+    WIFI_AUTH_WPA2_ENTERPRISE,
+    WIFI_AUTH_MAX
+} wifi_auth_mode_t;
+
+typedef enum {
+    WIFI_REASON_UNSPECIFIED = 1,
+    WIFI_REASON_AUTH_EXPIRE = 2,
+    WIFI_REASON_AUTH_LEAVE = 3,
+    WIFI_REASON_ASSOC_EXPIRE = 4,
+    WIFI_REASON_ASSOC_TOOMANY = 5,
+    WIFI_REASON_NOT_AUTHED = 6,
+    WIFI_REASON_NOT_ASSOCED = 7,
+    WIFI_REASON_ASSOC_LEAVE = 8,
+    WIFI_REASON_ASSOC_NOT_AUTHED = 9,
+    WIFI_REASON_DISASSOC_PWRCAP_BAD = 10,
+    WIFI_REASON_DISASSOC_SUPCHAN_BAD = 11,
+    WIFI_REASON_IE_INVALID = 13,
+    WIFI_REASON_MIC_FAILURE = 14,
+    WIFI_REASON_4WAY_HANDSHAKE_TIMEOUT = 15,
+    WIFI_REASON_GROUP_KEY_UPDATE_TIMEOUT = 16,
+    WIFI_REASON_IE_IN_4WAY_DIFFERS = 17,
+    WIFI_REASON_GROUP_CIPHER_INVALID = 18,
+    WIFI_REASON_PAIRWISE_CIPHER_INVALID = 19,
+    WIFI_REASON_AKMP_INVALID = 20,
+    WIFI_REASON_UNSUPP_RSN_IE_VERSION = 21,
+    WIFI_REASON_INVALID_RSN_IE_CAP = 22,
+    WIFI_REASON_802_1X_AUTH_FAILED = 23,
+    WIFI_REASON_CIPHER_SUITE_REJECTED = 24,
+
+    WIFI_REASON_BEACON_TIMEOUT = 200,
+    WIFI_REASON_NO_AP_FOUND = 201,
+    WIFI_REASON_AUTH_FAIL = 202,
+    WIFI_REASON_ASSOC_FAIL = 203,
+    WIFI_REASON_HANDSHAKE_TIMEOUT = 204,
+    WIFI_REASON_CONNECTION_FAIL = 205,
+    WIFI_REASON_AUTH_CHANGED = 206,
+} wifi_err_reason_t;
+
+typedef enum {
+    WIFI_SECOND_CHAN_NONE = 0,
+    WIFI_SECOND_CHAN_ABOVE,
+    WIFI_SECOND_CHAN_BELOW,
+} wifi_second_chan_t;
+
+typedef enum {
+    WIFI_SCAN_TYPE_ACTIVE = 0,
+    WIFI_SCAN_TYPE_PASSIVE,
+} wifi_scan_type_t;
+
+
+typedef struct {
+    uint32_t min;
+    uint32_t max;
+
+} wifi_active_scan_time_t;
+
+
+typedef struct {
+    wifi_active_scan_time_t active;
+    uint32_t passive;
+
+} wifi_scan_time_t;
+
+
+typedef struct {
+    uint8_t *ssid;
+    uint8_t *bssid;
+    uint8_t channel;
+    
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        show_hidden;
+    wifi_scan_type_t scan_type;
+    wifi_scan_time_t scan_time;
+} wifi_scan_config_t;
+
+typedef enum {
+    WIFI_CIPHER_TYPE_NONE = 0,
+    WIFI_CIPHER_TYPE_WEP40,
+    WIFI_CIPHER_TYPE_WEP104,
+    WIFI_CIPHER_TYPE_TKIP,
+    WIFI_CIPHER_TYPE_CCMP,
+    WIFI_CIPHER_TYPE_TKIP_CCMP,
+    WIFI_CIPHER_TYPE_UNKNOWN,
+} wifi_cipher_type_t;
+
+
+
+
+
+typedef enum {
+    WIFI_ANT_ANT0,
+    WIFI_ANT_ANT1,
+    WIFI_ANT_MAX,
+} wifi_ant_t;
+
+
+typedef struct {
+    uint8_t bssid[6];
+    uint8_t ssid[33];
+    uint8_t primary;
+    wifi_second_chan_t second;
+    int8_t rssi;
+    wifi_auth_mode_t authmode;
+    wifi_cipher_type_t pairwise_cipher;
+    wifi_cipher_type_t group_cipher;
+    wifi_ant_t ant;
+    uint32_t phy_11b:1;
+    uint32_t phy_11g:1;
+    uint32_t phy_11n:1;
+    uint32_t phy_lr:1;
+    uint32_t wps:1;
+    uint32_t reserved:27;
+    wifi_country_t country;
+} wifi_ap_record_t;
+
+typedef enum {
+    WIFI_FAST_SCAN = 0,
+    WIFI_ALL_CHANNEL_SCAN,
+}wifi_scan_method_t;
+
+typedef enum {
+    WIFI_CONNECT_AP_BY_SIGNAL = 0,
+    WIFI_CONNECT_AP_BY_SECURITY,
+}wifi_sort_method_t;
+
+
+typedef struct {
+    int8_t rssi;
+    wifi_auth_mode_t authmode;
+}wifi_fast_scan_threshold_t;
+
+typedef wifi_fast_scan_threshold_t wifi_scan_threshold_t;
+
+typedef enum {
+    WIFI_PS_NONE,
+    WIFI_PS_MIN_MODEM,
+    WIFI_PS_MAX_MODEM,
+} wifi_ps_type_t;
+# 205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+typedef enum {
+    WIFI_BW_HT20 = 1,
+    WIFI_BW_HT40,
+} wifi_bandwidth_t;
+
+
+typedef struct {
+    uint8_t ssid[32];
+    uint8_t password[64];
+    uint8_t ssid_len;
+    uint8_t channel;
+    wifi_auth_mode_t authmode;
+    uint8_t ssid_hidden;
+    uint8_t max_connection;
+    uint16_t beacon_interval;
+} wifi_ap_config_t;
+
+
+typedef struct {
+    uint8_t ssid[32];
+    uint8_t password[64];
+    wifi_scan_method_t scan_method;
+    
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        bssid_set;
+    uint8_t bssid[6];
+    uint8_t channel;
+    uint16_t listen_interval;
+    wifi_sort_method_t sort_method;
+    wifi_scan_threshold_t threshold;
+} wifi_sta_config_t;
+
+
+
+
+
+
+
+typedef union {
+    wifi_ap_config_t ap;
+    wifi_sta_config_t sta;
+} wifi_config_t;
+
+
+typedef struct {
+    uint8_t mac[6];
+    int8_t rssi;
+    uint32_t phy_11b:1;
+    uint32_t phy_11g:1;
+    uint32_t phy_11n:1;
+    uint32_t phy_lr:1;
+    uint32_t reserved:28;
+} wifi_sta_info_t;
+
+
+
+
+typedef struct {
+    wifi_sta_info_t sta[(10)];
+    int num;
+} wifi_sta_list_t;
+
+typedef enum {
+    WIFI_STORAGE_FLASH,
+    WIFI_STORAGE_RAM,
+} wifi_storage_t;
+
+
+
+
+
+
+typedef enum {
+    WIFI_VND_IE_TYPE_BEACON,
+    WIFI_VND_IE_TYPE_PROBE_REQ,
+    WIFI_VND_IE_TYPE_PROBE_RESP,
+    WIFI_VND_IE_TYPE_ASSOC_REQ,
+    WIFI_VND_IE_TYPE_ASSOC_RESP,
+} wifi_vendor_ie_type_t;
+
+
+
+
+
+
+typedef enum {
+    WIFI_VND_IE_ID_0,
+    WIFI_VND_IE_ID_1,
+} wifi_vendor_ie_id_t;
+# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+typedef struct {
+    uint8_t element_id;
+    uint8_t length;
+    uint8_t vendor_oui[3];
+    uint8_t vendor_oui_type;
+    uint8_t payload[0];
+} vendor_ie_data_t;
+
+
+typedef struct {
+    signed rssi:8;
+    unsigned rate:5;
+    unsigned :1;
+    unsigned sig_mode:2;
+    unsigned :16;
+    unsigned mcs:7;
+    unsigned cwb:1;
+    unsigned :16;
+    unsigned smoothing:1;
+    unsigned not_sounding:1;
+    unsigned :1;
+    unsigned aggregation:1;
+    unsigned stbc:2;
+    unsigned fec_coding:1;
+    unsigned sgi:1;
+    signed noise_floor:8;
+    unsigned ampdu_cnt:8;
+    unsigned channel:4;
+    unsigned secondary_channel:4;
+    unsigned :8;
+    unsigned timestamp:32;
+    unsigned :32;
+    unsigned :31;
+    unsigned ant:1;
+    unsigned sig_len:12;
+    unsigned :12;
+    unsigned rx_state:8;
+} wifi_pkt_rx_ctrl_t;
+
+
+
+typedef struct {
+    wifi_pkt_rx_ctrl_t rx_ctrl;
+    uint8_t payload[0];
+} wifi_promiscuous_pkt_t;
+
+
+
+
+
+
+
+typedef enum {
+    WIFI_PKT_MGMT,
+    WIFI_PKT_CTRL,
+    WIFI_PKT_DATA,
+    WIFI_PKT_MISC,
+} wifi_promiscuous_pkt_type_t;
+# 380 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+typedef struct {
+    uint32_t filter_mask;
+} wifi_promiscuous_filter_t;
+# 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+typedef struct {
+    
+# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        lltf_en;
+    
+# 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        htltf_en;
+    
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        stbc_htltf2_en;
+    
+# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        ltf_merge_en;
+    
+# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        channel_filter_en;
+    
+# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        manu_scale;
+    uint8_t shift;
+} wifi_csi_config_t;
+
+
+
+
+
+typedef struct {
+    wifi_pkt_rx_ctrl_t rx_ctrl;
+    uint8_t mac[6];
+    
+# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        first_word_invalid;
+    int8_t *buf;
+    uint16_t len;
+} wifi_csi_info_t;
+
+
+
+
+
+typedef struct {
+    uint8_t gpio_select: 1,
+            gpio_num: 7;
+} wifi_ant_gpio_t;
+
+
+
+
+
+typedef struct {
+    wifi_ant_gpio_t gpio_cfg[4];
+} wifi_ant_gpio_config_t;
+
+
+
+
+
+typedef enum {
+    WIFI_ANT_MODE_ANT0,
+    WIFI_ANT_MODE_ANT1,
+    WIFI_ANT_MODE_AUTO,
+    WIFI_ANT_MODE_MAX,
+} wifi_ant_mode_t;
+
+
+
+
+
+typedef struct {
+    wifi_ant_mode_t rx_ant_mode;
+    wifi_ant_t rx_ant_default;
+    wifi_ant_mode_t tx_ant_mode;
+    uint8_t enabled_ant0: 4,
+                    enabled_ant1: 4;
+} wifi_ant_config_t;
+
+
+
+
+
+typedef enum {
+    WIFI_PHY_RATE_1M_L = 0x00,
+    WIFI_PHY_RATE_2M_L = 0x01,
+    WIFI_PHY_RATE_5M_L = 0x02,
+    WIFI_PHY_RATE_11M_L = 0x03,
+    WIFI_PHY_RATE_2M_S = 0x05,
+    WIFI_PHY_RATE_5M_S = 0x06,
+    WIFI_PHY_RATE_11M_S = 0x07,
+    WIFI_PHY_RATE_48M = 0x08,
+    WIFI_PHY_RATE_24M = 0x09,
+    WIFI_PHY_RATE_12M = 0x0A,
+    WIFI_PHY_RATE_6M = 0x0B,
+    WIFI_PHY_RATE_54M = 0x0C,
+    WIFI_PHY_RATE_36M = 0x0D,
+    WIFI_PHY_RATE_18M = 0x0E,
+    WIFI_PHY_RATE_9M = 0x0F,
+    WIFI_PHY_RATE_MCS0_LGI = 0x10,
+    WIFI_PHY_RATE_MCS1_LGI = 0x11,
+    WIFI_PHY_RATE_MCS2_LGI = 0x12,
+    WIFI_PHY_RATE_MCS3_LGI = 0x13,
+    WIFI_PHY_RATE_MCS4_LGI = 0x14,
+    WIFI_PHY_RATE_MCS5_LGI = 0x15,
+    WIFI_PHY_RATE_MCS6_LGI = 0x16,
+    WIFI_PHY_RATE_MCS7_LGI = 0x17,
+    WIFI_PHY_RATE_MCS0_SGI = 0x18,
+    WIFI_PHY_RATE_MCS1_SGI = 0x19,
+    WIFI_PHY_RATE_MCS2_SGI = 0x1A,
+    WIFI_PHY_RATE_MCS3_SGI = 0x1B,
+    WIFI_PHY_RATE_MCS4_SGI = 0x1C,
+    WIFI_PHY_RATE_MCS5_SGI = 0x1D,
+    WIFI_PHY_RATE_MCS6_SGI = 0x1E,
+    WIFI_PHY_RATE_MCS7_SGI = 0x1F,
+    WIFI_PHY_RATE_LORA_250K = 0x29,
+    WIFI_PHY_RATE_LORA_500K = 0x2A,
+    WIFI_PHY_RATE_MAX,
+} wifi_phy_rate_t;
+
+
+
+
+
+typedef enum {
+    WIFI_IOCTL_SET_STA_HT2040_COEX = 1,
+    WIFI_IOCTL_GET_STA_HT2040_COEX,
+    WIFI_IOCTL_MAX,
+} wifi_ioctl_cmd_t;
+
+
+
+
+
+typedef struct {
+    int enable;
+} wifi_ht2040_coex_t;
+
+
+
+
+
+typedef struct {
+    union {
+        wifi_ht2040_coex_t ht2040_coex;
+    } data;
+} wifi_ioctl_config_t;
+# 64 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 1
 # 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
@@ -3332,6 +3844,77 @@ typedef void (*TaskFunction_t)( void * );
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/deprecated_definitions.h" 1
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 2
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void *get_sp()
+{
+    void *sp;
+    asm volatile ("mov %0, sp;" : "=r" (sp));
+    return sp;
+}
+
+
+
+
+
+static inline void cpu_write_dtlb(uint32_t vpn, unsigned attr)
+{
+    asm volatile ("wdtlb  %1, %0; dsync\n" :: "r" (vpn), "r" (attr));
+}
+
+
+static inline void cpu_write_itlb(unsigned vpn, unsigned attr)
+{
+    asm volatile ("witlb  %1, %0; isync\n" :: "r" (vpn), "r" (attr));
+}
+
+static inline void cpu_init_memctl()
+{
+
+    uint32_t memctl = 0x00000000;
+    asm volatile ("wsr %0, " "MEMCTL" : : "r" (memctl));;
+
+}
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void cpu_configure_region_protection()
+{
+    const uint32_t pages_to_protect[] = {0x00000000, 0x80000000, 0xa0000000, 0xc0000000, 0xe0000000};
+    for (int i = 0; i < sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
+        cpu_write_dtlb(pages_to_protect[i], 0xf);
+        cpu_write_itlb(pages_to_protect[i], 0xf);
+    }
+    cpu_write_dtlb(0x20000000, 0);
+    cpu_write_itlb(0x20000000, 0);
+}
+
+
+
+
+
+void esp_cpu_stall(int cpu_id);
+
+
+
+
+
+void esp_cpu_unstall(int cpu_id);
+
+
+
+
+
+void esp_cpu_reset(int cpu_id);
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 3 4
+_Bool 
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+    esp_cpu_in_ocd_debug_mode();
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 
 
 
@@ -3759,7 +4342,7 @@ inline static
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_dma_capable(const void *p)
+                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
 {
     return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
 }
@@ -3768,24 +4351,37 @@ inline static
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_executable(const void *p)
+                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
+{
+    return ((intptr_t)p) % 4 == 0;
+}
+
+inline static 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
 {
     intptr_t ip = (intptr_t) p;
     return (ip >= 0x400D0000 && ip < 0x40400000)
         || (ip >= 0x40080000 && ip < 0x400A0000)
+        || (ip >= 0x40000000 && ip < 0x40070000)
+
+        || (ip >= 0x40078000 && ip < 0x40080000)
+
         || (ip >= 0x400C0000 && ip < 0x400C2000);
 }
 
 inline static 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_byte_accessible(const void *p)
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
 {
     
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x40000000);
 
@@ -3795,14 +4391,14 @@ inline static
 }
 
 inline static 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_internal(const void *p) {
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
     
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
     r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
@@ -3811,18 +4407,18 @@ inline static
 
 
 inline static 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_external_ram(const void *p) {
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
     return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
 }
 
 inline static 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_iram(const void *p) {
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
 
 
 
@@ -3831,19 +4427,35 @@ inline static
 }
 
 inline static 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_drom(const void *p) {
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
     return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
 }
 
 inline static 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_dram(const void *p) {
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
     return ((intptr_t)p >= 0x3FAE0000 && (intptr_t)p < 0x40000000);
+}
+
+inline static 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
+    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x3FFFFFFC);
+}
+
+inline static 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
+    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400BFFFC);
 }
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
@@ -3892,24 +4504,24 @@ typedef struct {
 void vPortAssertIfInISR();
 # 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortCPUInitializeMutex(portMUX_TYPE *mux);
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vTaskExitCritical( portMUX_TYPE *mux );
 void vTaskEnterCritical( portMUX_TYPE *mux );
 void vPortCPUAcquireMutex(portMUX_TYPE *mux);
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
 _Bool 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
     vPortCPUAcquireMutexTimeout(portMUX_TYPE *mux, int timeout_cycles);
 void vPortCPUReleaseMutex(portMUX_TYPE *mux);
-# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline unsigned portENTER_CRITICAL_NESTED() {
  unsigned state = ({ unsigned __tmp; __asm__ __volatile__( "rsil	%0, " "3" "\n" : "=a" (__tmp) : : "memory" ); __tmp;});
  ;
  return state;
 }
-# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, uint32_t *set) {
     __asm__ __volatile__ (
         "WSR 	    %2,SCOMPARE1 \n"
@@ -3918,20 +4530,20 @@ static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, u
         :"r"(addr), "r"(compare), "0"(*set)
         );
 }
-# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortYield( void );
 void _frxt_setup_switch( void );
 
 
 
 static inline uint32_t xPortGetCoreID();
-# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef struct {
 
  volatile StackType_t* coproc_area;
-# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 } xMPU_SETTINGS;
-# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 extern void esp_vApplicationIdleHook( void );
 extern void esp_vApplicationTickHook( void );
 
@@ -3942,13 +4554,13 @@ extern void esp_vApplicationTickHook( void );
 
 void _xt_coproc_release(volatile void * coproc_sa_base);
 void vApplicationSleep( TickType_t xExpectedIdleTime );
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/mpu_wrappers.h" 1
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters, BaseType_t xRunPrivileged ) ;
-# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 BaseType_t xPortStartScheduler( void ) ;
 
 
@@ -3984,14 +4596,14 @@ BaseType_t xPortInIsrContext();
 
 
 BaseType_t xPortInterruptedFromISRContext();
-# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  struct xMEMORY_REGION;
  void vPortStoreTaskMPUSettings( xMPU_SETTINGS *xMPUSettings, const struct xMEMORY_REGION * const xRegions, StackType_t *pxBottomOfStack, uint32_t usStackDepth ) ;
  void vPortReleaseTaskMPUSettings( xMPU_SETTINGS *xMPUSettings );
 
 
 
-static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
+static inline uint32_t __attribute__((section(".iram1" "." "11"))) xPortGetCoreID() {
     int id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -4002,6 +4614,21 @@ static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
 
 
 uint32_t xPortGetTickRateHz(void);
+
+
+static inline 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 3 4
+             _Bool 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+                  __attribute__((section(".iram1" "." "12"))) xPortCanYield(void)
+{
+    uint32_t ps_reg = 0;
+
+
+    asm volatile ("rsr %0, " "PS" : "=r" (ps_reg));;
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+    return ((ps_reg & 0x0000000F) == 0);
+}
 
 
 
@@ -4132,927 +4759,7 @@ typedef struct xSTATIC_TIMER
  void *pvDummy5[ 2 ];
 # 1046 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
 } StaticTimer_t;
-# 63 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h" 1
-# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
-typedef void * QueueHandle_t;
-
-
-
-
-
-
-typedef void * QueueSetHandle_t;
-
-
-
-
-
-
-typedef void * QueueSetMemberHandle_t;
-# 613 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
-BaseType_t xQueueGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, const BaseType_t xCopyPosition ) ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
-BaseType_t xQueuePeekFromISR( QueueHandle_t xQueue, void * const pvBuffer ) ;
-# 906 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
-BaseType_t xQueueGenericReceive( QueueHandle_t xQueue, void * const pvBuffer, TickType_t xTicksToWait, const BaseType_t xJustPeek ) ;
-# 917 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
-UBaseType_t uxQueueMessagesWaiting( const QueueHandle_t xQueue ) ;
-# 930 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
-UBaseType_t uxQueueSpacesAvailable( const QueueHandle_t xQueue ) ;
-# 940 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
-void vQueueDelete( QueueHandle_t xQueue ) ;
-# 1267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
-BaseType_t xQueueGenericSendFromISR( QueueHandle_t xQueue, const void * const pvItemToQueue, BaseType_t * const pxHigherPriorityTaskWoken, const BaseType_t xCopyPosition ) ;
-BaseType_t xQueueGiveFromISR( QueueHandle_t xQueue, BaseType_t * const pxHigherPriorityTaskWoken ) ;
-# 1347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
-BaseType_t xQueueReceiveFromISR( QueueHandle_t xQueue, void * const pvBuffer, BaseType_t * const pxHigherPriorityTaskWoken ) ;
-
-
-
-
-
-
-BaseType_t xQueueIsQueueEmptyFromISR( const QueueHandle_t xQueue ) ;
-BaseType_t xQueueIsQueueFullFromISR( const QueueHandle_t xQueue ) ;
-UBaseType_t uxQueueMessagesWaitingFromISR( const QueueHandle_t xQueue ) ;
-# 1374 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
-BaseType_t xQueueAltGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, BaseType_t xCopyPosition );
-BaseType_t xQueueAltGenericReceive( QueueHandle_t xQueue, void * const pvBuffer, TickType_t xTicksToWait, BaseType_t xJustPeeking );
-# 1390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
-BaseType_t xQueueCRSendFromISR( QueueHandle_t xQueue, const void *pvItemToQueue, BaseType_t xCoRoutinePreviouslyWoken );
-BaseType_t xQueueCRReceiveFromISR( QueueHandle_t xQueue, void *pvBuffer, BaseType_t *pxTaskWoken );
-BaseType_t xQueueCRSend( QueueHandle_t xQueue, const void *pvItemToQueue, TickType_t xTicksToWait );
-BaseType_t xQueueCRReceive( QueueHandle_t xQueue, void *pvBuffer, TickType_t xTicksToWait );
-
-
-
-
-
-
-QueueHandle_t xQueueCreateMutex( const uint8_t ucQueueType ) ;
-QueueHandle_t xQueueCreateMutexStatic( const uint8_t ucQueueType, StaticQueue_t *pxStaticQueue ) ;
-QueueHandle_t xQueueCreateCountingSemaphore( const UBaseType_t uxMaxCount, const UBaseType_t uxInitialCount ) ;
-QueueHandle_t xQueueCreateCountingSemaphoreStatic( const UBaseType_t uxMaxCount, const UBaseType_t uxInitialCount, StaticQueue_t *pxStaticQueue ) ;
-void* xQueueGetMutexHolder( QueueHandle_t xSemaphore ) ;
-
-
-
-
-
-BaseType_t xQueueTakeMutexRecursive( QueueHandle_t xMutex, TickType_t xTicksToWait ) ;
-BaseType_t xQueueGiveMutexRecursive( QueueHandle_t pxMutex ) ;
-# 1488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
- QueueHandle_t xQueueGenericCreate( const UBaseType_t uxQueueLength, const UBaseType_t uxItemSize, const uint8_t ucQueueType ) ;
-# 1548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
-QueueSetHandle_t xQueueCreateSet( const UBaseType_t uxEventQueueLength ) ;
-# 1572 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
-BaseType_t xQueueAddToSet( QueueSetMemberHandle_t xQueueOrSemaphore, QueueSetHandle_t xQueueSet ) ;
-# 1591 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
-BaseType_t xQueueRemoveFromSet( QueueSetMemberHandle_t xQueueOrSemaphore, QueueSetHandle_t xQueueSet ) ;
-# 1627 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
-QueueSetMemberHandle_t xQueueSelectFromSet( QueueSetHandle_t xQueueSet, const TickType_t xTicksToWait ) ;
-
-
-
-
-QueueSetMemberHandle_t xQueueSelectFromSetFromISR( QueueSetHandle_t xQueueSet ) ;
-
-
-
-void vQueueWaitForMessageRestricted( QueueHandle_t xQueue, TickType_t xTicksToWait ) ;
-BaseType_t xQueueGenericReset( QueueHandle_t xQueue, BaseType_t xNewQueue ) ;
-void vQueueSetQueueNumber( QueueHandle_t xQueue, UBaseType_t uxQueueNumber ) ;
-UBaseType_t uxQueueGetQueueNumber( QueueHandle_t xQueue ) ;
-uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) ;
-# 64 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/queue.h" 1
-# 65 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 2
-# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
-# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 2
-
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 1
-# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_interface.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_interface.h"
-typedef enum {
-    ESP_IF_WIFI_STA = 0,
-    ESP_IF_WIFI_AP,
-    ESP_IF_ETH,
-    ESP_IF_MAX
-} esp_interface_t;
-# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 2
-
-
-
-
-
-typedef enum {
-    WIFI_MODE_NULL = 0,
-    WIFI_MODE_STA,
-    WIFI_MODE_AP,
-    WIFI_MODE_APSTA,
-    WIFI_MODE_MAX
-} wifi_mode_t;
-
-typedef esp_interface_t wifi_interface_t;
-
-
-
-
-typedef enum {
-    WIFI_COUNTRY_POLICY_AUTO,
-    WIFI_COUNTRY_POLICY_MANUAL,
-} wifi_country_policy_t;
-
-
-typedef struct {
-    char cc[3];
-    uint8_t schan;
-    uint8_t nchan;
-    int8_t max_tx_power;
-    wifi_country_policy_t policy;
-} wifi_country_t;
-
-typedef enum {
-    WIFI_AUTH_OPEN = 0,
-    WIFI_AUTH_WEP,
-    WIFI_AUTH_WPA_PSK,
-    WIFI_AUTH_WPA2_PSK,
-    WIFI_AUTH_WPA_WPA2_PSK,
-    WIFI_AUTH_WPA2_ENTERPRISE,
-    WIFI_AUTH_MAX
-} wifi_auth_mode_t;
-
-typedef enum {
-    WIFI_REASON_UNSPECIFIED = 1,
-    WIFI_REASON_AUTH_EXPIRE = 2,
-    WIFI_REASON_AUTH_LEAVE = 3,
-    WIFI_REASON_ASSOC_EXPIRE = 4,
-    WIFI_REASON_ASSOC_TOOMANY = 5,
-    WIFI_REASON_NOT_AUTHED = 6,
-    WIFI_REASON_NOT_ASSOCED = 7,
-    WIFI_REASON_ASSOC_LEAVE = 8,
-    WIFI_REASON_ASSOC_NOT_AUTHED = 9,
-    WIFI_REASON_DISASSOC_PWRCAP_BAD = 10,
-    WIFI_REASON_DISASSOC_SUPCHAN_BAD = 11,
-    WIFI_REASON_IE_INVALID = 13,
-    WIFI_REASON_MIC_FAILURE = 14,
-    WIFI_REASON_4WAY_HANDSHAKE_TIMEOUT = 15,
-    WIFI_REASON_GROUP_KEY_UPDATE_TIMEOUT = 16,
-    WIFI_REASON_IE_IN_4WAY_DIFFERS = 17,
-    WIFI_REASON_GROUP_CIPHER_INVALID = 18,
-    WIFI_REASON_PAIRWISE_CIPHER_INVALID = 19,
-    WIFI_REASON_AKMP_INVALID = 20,
-    WIFI_REASON_UNSUPP_RSN_IE_VERSION = 21,
-    WIFI_REASON_INVALID_RSN_IE_CAP = 22,
-    WIFI_REASON_802_1X_AUTH_FAILED = 23,
-    WIFI_REASON_CIPHER_SUITE_REJECTED = 24,
-
-    WIFI_REASON_BEACON_TIMEOUT = 200,
-    WIFI_REASON_NO_AP_FOUND = 201,
-    WIFI_REASON_AUTH_FAIL = 202,
-    WIFI_REASON_ASSOC_FAIL = 203,
-    WIFI_REASON_HANDSHAKE_TIMEOUT = 204,
-} wifi_err_reason_t;
-
-typedef enum {
-    WIFI_SECOND_CHAN_NONE = 0,
-    WIFI_SECOND_CHAN_ABOVE,
-    WIFI_SECOND_CHAN_BELOW,
-} wifi_second_chan_t;
-
-typedef enum {
-    WIFI_SCAN_TYPE_ACTIVE = 0,
-    WIFI_SCAN_TYPE_PASSIVE,
-} wifi_scan_type_t;
-
-
-typedef struct {
-    uint32_t min;
-    uint32_t max;
-
-} wifi_active_scan_time_t;
-
-
-typedef union {
-    wifi_active_scan_time_t active;
-    uint32_t passive;
-
-} wifi_scan_time_t;
-
-
-typedef struct {
-    uint8_t *ssid;
-    uint8_t *bssid;
-    uint8_t channel;
-    
-# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
-   _Bool 
-# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        show_hidden;
-    wifi_scan_type_t scan_type;
-    wifi_scan_time_t scan_time;
-} wifi_scan_config_t;
-
-typedef enum {
-    WIFI_CIPHER_TYPE_NONE = 0,
-    WIFI_CIPHER_TYPE_WEP40,
-    WIFI_CIPHER_TYPE_WEP104,
-    WIFI_CIPHER_TYPE_TKIP,
-    WIFI_CIPHER_TYPE_CCMP,
-    WIFI_CIPHER_TYPE_TKIP_CCMP,
-    WIFI_CIPHER_TYPE_UNKNOWN,
-} wifi_cipher_type_t;
-
-
-
-
-
-typedef enum {
-    WIFI_ANT_ANT0,
-    WIFI_ANT_ANT1,
-    WIFI_ANT_MAX,
-} wifi_ant_t;
-
-
-typedef struct {
-    uint8_t bssid[6];
-    uint8_t ssid[33];
-    uint8_t primary;
-    wifi_second_chan_t second;
-    int8_t rssi;
-    wifi_auth_mode_t authmode;
-    wifi_cipher_type_t pairwise_cipher;
-    wifi_cipher_type_t group_cipher;
-    wifi_ant_t ant;
-    uint32_t phy_11b:1;
-    uint32_t phy_11g:1;
-    uint32_t phy_11n:1;
-    uint32_t phy_lr:1;
-    uint32_t wps:1;
-    uint32_t reserved:27;
-    wifi_country_t country;
-} wifi_ap_record_t;
-
-typedef enum {
-    WIFI_FAST_SCAN = 0,
-    WIFI_ALL_CHANNEL_SCAN,
-}wifi_scan_method_t;
-
-typedef enum {
-    WIFI_CONNECT_AP_BY_SIGNAL = 0,
-    WIFI_CONNECT_AP_BY_SECURITY,
-}wifi_sort_method_t;
-
-
-typedef struct {
-    int8_t rssi;
-    wifi_auth_mode_t authmode;
-}wifi_fast_scan_threshold_t;
-
-typedef wifi_fast_scan_threshold_t wifi_scan_threshold_t;
-
-typedef enum {
-    WIFI_PS_NONE,
-    WIFI_PS_MIN_MODEM,
-    WIFI_PS_MAX_MODEM,
-} wifi_ps_type_t;
-# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-typedef enum {
-    WIFI_BW_HT20 = 1,
-    WIFI_BW_HT40,
-} wifi_bandwidth_t;
-
-
-typedef struct {
-    uint8_t ssid[32];
-    uint8_t password[64];
-    uint8_t ssid_len;
-    uint8_t channel;
-    wifi_auth_mode_t authmode;
-    uint8_t ssid_hidden;
-    uint8_t max_connection;
-    uint16_t beacon_interval;
-} wifi_ap_config_t;
-
-
-typedef struct {
-    uint8_t ssid[32];
-    uint8_t password[64];
-    wifi_scan_method_t scan_method;
-    
-# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
-   _Bool 
-# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        bssid_set;
-    uint8_t bssid[6];
-    uint8_t channel;
-    uint16_t listen_interval;
-    wifi_sort_method_t sort_method;
-    wifi_scan_threshold_t threshold;
-} wifi_sta_config_t;
-
-
-
-
-
-
-
-typedef union {
-    wifi_ap_config_t ap;
-    wifi_sta_config_t sta;
-} wifi_config_t;
-
-
-typedef struct {
-    uint8_t mac[6];
-    int8_t rssi;
-    uint32_t phy_11b:1;
-    uint32_t phy_11g:1;
-    uint32_t phy_11n:1;
-    uint32_t phy_lr:1;
-    uint32_t reserved:28;
-} wifi_sta_info_t;
-
-
-
-
-typedef struct {
-    wifi_sta_info_t sta[(10)];
-    int num;
-} wifi_sta_list_t;
-
-typedef enum {
-    WIFI_STORAGE_FLASH,
-    WIFI_STORAGE_RAM,
-} wifi_storage_t;
-
-
-
-
-
-
-typedef enum {
-    WIFI_VND_IE_TYPE_BEACON,
-    WIFI_VND_IE_TYPE_PROBE_REQ,
-    WIFI_VND_IE_TYPE_PROBE_RESP,
-    WIFI_VND_IE_TYPE_ASSOC_REQ,
-    WIFI_VND_IE_TYPE_ASSOC_RESP,
-} wifi_vendor_ie_type_t;
-
-
-
-
-
-
-typedef enum {
-    WIFI_VND_IE_ID_0,
-    WIFI_VND_IE_ID_1,
-} wifi_vendor_ie_id_t;
-# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-typedef struct {
-    uint8_t element_id;
-    uint8_t length;
-    uint8_t vendor_oui[3];
-    uint8_t vendor_oui_type;
-    uint8_t payload[0];
-} vendor_ie_data_t;
-
-
-typedef struct {
-    signed rssi:8;
-    unsigned rate:5;
-    unsigned :1;
-    unsigned sig_mode:2;
-    unsigned :16;
-    unsigned mcs:7;
-    unsigned cwb:1;
-    unsigned :16;
-    unsigned smoothing:1;
-    unsigned not_sounding:1;
-    unsigned :1;
-    unsigned aggregation:1;
-    unsigned stbc:2;
-    unsigned fec_coding:1;
-    unsigned sgi:1;
-    signed noise_floor:8;
-    unsigned ampdu_cnt:8;
-    unsigned channel:4;
-    unsigned secondary_channel:4;
-    unsigned :8;
-    unsigned timestamp:32;
-    unsigned :32;
-    unsigned :31;
-    unsigned ant:1;
-    unsigned sig_len:12;
-    unsigned :12;
-    unsigned rx_state:8;
-} wifi_pkt_rx_ctrl_t;
-
-
-
-typedef struct {
-    wifi_pkt_rx_ctrl_t rx_ctrl;
-    uint8_t payload[0];
-} wifi_promiscuous_pkt_t;
-
-
-
-
-
-
-
-typedef enum {
-    WIFI_PKT_MGMT,
-    WIFI_PKT_CTRL,
-    WIFI_PKT_DATA,
-    WIFI_PKT_MISC,
-} wifi_promiscuous_pkt_type_t;
-# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-typedef struct {
-    uint32_t filter_mask;
-} wifi_promiscuous_filter_t;
-# 391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-typedef struct {
-    
-# 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
-   _Bool 
-# 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        lltf_en;
-    
-# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
-   _Bool 
-# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        htltf_en;
-    
-# 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
-   _Bool 
-# 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        stbc_htltf2_en;
-    
-# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
-   _Bool 
-# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        ltf_merge_en;
-    
-# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
-   _Bool 
-# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        channel_filter_en;
-    
-# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
-   _Bool 
-# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        manu_scale;
-    uint8_t shift;
-} wifi_csi_config_t;
-
-
-
-
-
-typedef struct {
-    wifi_pkt_rx_ctrl_t rx_ctrl;
-    uint8_t mac[6];
-    
-# 408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
-   _Bool 
-# 408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        first_word_invalid;
-    int8_t *buf;
-    uint16_t len;
-} wifi_csi_info_t;
-
-
-
-
-
-typedef struct {
-    uint8_t gpio_select: 1,
-            gpio_num: 7;
-} wifi_ant_gpio_t;
-
-
-
-
-
-typedef struct {
-    wifi_ant_gpio_t gpio_cfg[4];
-} wifi_ant_gpio_config_t;
-
-
-
-
-
-typedef enum {
-    WIFI_ANT_MODE_ANT0,
-    WIFI_ANT_MODE_ANT1,
-    WIFI_ANT_MODE_AUTO,
-    WIFI_ANT_MODE_MAX,
-} wifi_ant_mode_t;
-
-
-
-
-
-typedef struct {
-    wifi_ant_mode_t rx_ant_mode;
-    wifi_ant_t rx_ant_default;
-    wifi_ant_mode_t tx_ant_mode;
-    uint8_t enabled_ant0: 4,
-                    enabled_ant1: 4;
-} wifi_ant_config_t;
-
-
-
-
-
-typedef enum {
-    WIFI_PHY_RATE_1M_L = 0x00,
-    WIFI_PHY_RATE_2M_L = 0x01,
-    WIFI_PHY_RATE_5M_L = 0x02,
-    WIFI_PHY_RATE_11M_L = 0x03,
-    WIFI_PHY_RATE_2M_S = 0x05,
-    WIFI_PHY_RATE_5M_S = 0x06,
-    WIFI_PHY_RATE_11M_S = 0x07,
-    WIFI_PHY_RATE_48M = 0x08,
-    WIFI_PHY_RATE_24M = 0x09,
-    WIFI_PHY_RATE_12M = 0x0A,
-    WIFI_PHY_RATE_6M = 0x0B,
-    WIFI_PHY_RATE_54M = 0x0C,
-    WIFI_PHY_RATE_36M = 0x0D,
-    WIFI_PHY_RATE_18M = 0x0E,
-    WIFI_PHY_RATE_9M = 0x0F,
-    WIFI_PHY_RATE_MCS0_LGI = 0x10,
-    WIFI_PHY_RATE_MCS1_LGI = 0x11,
-    WIFI_PHY_RATE_MCS2_LGI = 0x12,
-    WIFI_PHY_RATE_MCS3_LGI = 0x13,
-    WIFI_PHY_RATE_MCS4_LGI = 0x14,
-    WIFI_PHY_RATE_MCS5_LGI = 0x15,
-    WIFI_PHY_RATE_MCS6_LGI = 0x16,
-    WIFI_PHY_RATE_MCS7_LGI = 0x17,
-    WIFI_PHY_RATE_MCS0_SGI = 0x18,
-    WIFI_PHY_RATE_MCS1_SGI = 0x19,
-    WIFI_PHY_RATE_MCS2_SGI = 0x1A,
-    WIFI_PHY_RATE_MCS3_SGI = 0x1B,
-    WIFI_PHY_RATE_MCS4_SGI = 0x1C,
-    WIFI_PHY_RATE_MCS5_SGI = 0x1D,
-    WIFI_PHY_RATE_MCS6_SGI = 0x1E,
-    WIFI_PHY_RATE_MCS7_SGI = 0x1F,
-    WIFI_PHY_RATE_LORA_250K = 0x29,
-    WIFI_PHY_RATE_LORA_500K = 0x2A,
-    WIFI_PHY_RATE_MAX,
-} wifi_phy_rate_t;
-# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h" 1
-# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef enum {
-    ESP_CRYPTO_HASH_ALG_MD5, ESP_CRYPTO_HASH_ALG_SHA1,
-    ESP_CRYPTO_HASH_ALG_HMAC_MD5, ESP_CRYPTO_HASH_ALG_HMAC_SHA1,
-    ESP_CRYPTO_HASH_ALG_SHA256, ESP_CRYPTO_HASH_ALG_HMAC_SHA256
-}esp_crypto_hash_alg_t;
-
-
-
-
-
-
-typedef enum {
-    ESP_CRYPTO_CIPHER_NULL, ESP_CRYPTO_CIPHER_ALG_AES, ESP_CRYPTO_CIPHER_ALG_3DES,
-    ESP_CRYPTO_CIPHER_ALG_DES, ESP_CRYPTO_CIPHER_ALG_RC2, ESP_CRYPTO_CIPHER_ALG_RC4
-} esp_crypto_cipher_alg_t;
-
-
-
-
-
-typedef struct crypto_hash esp_crypto_hash_t;
-
-
-
-
-
-typedef struct crypto_cipher esp_crypto_cipher_t;
-# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef esp_crypto_hash_t * (*esp_crypto_hash_init_t)(esp_crypto_hash_alg_t alg, const unsigned char *key, int key_len);
-# 85 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef void (*esp_crypto_hash_update_t)(esp_crypto_hash_t *ctx, const unsigned char *data, int len);
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef int (*esp_crypto_hash_finish_t)(esp_crypto_hash_t *ctx, unsigned char *hash, int *len);
-# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef int (*esp_aes_128_encrypt_t)(const unsigned char *key, const unsigned char *iv, unsigned char *data, int data_len);
-# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef int (*esp_aes_128_decrypt_t)(const unsigned char *key, const unsigned char *iv, unsigned char *data, int data_len);
-# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef int (*esp_aes_wrap_t)(const unsigned char *kek, int n, const unsigned char *plain, unsigned char *cipher);
-# 143 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef int (*esp_aes_unwrap_t)(const unsigned char *kek, int n, const unsigned char *cipher, unsigned char *plain);
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef esp_crypto_cipher_t * (*esp_crypto_cipher_init_t)(esp_crypto_cipher_alg_t alg, const unsigned char *iv, const unsigned char *key, int key_len);
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef int (*esp_crypto_cipher_encrypt_t)(esp_crypto_cipher_t *ctx,
-                 const unsigned char *plain, unsigned char *crypt, int len);
-# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef int (*esp_crypto_cipher_decrypt_t)(esp_crypto_cipher_t *ctx,
-                 const unsigned char *crypt, unsigned char *plain, int len);
-
-
-
-
-
-
-
-typedef void (*esp_crypto_cipher_deinit_t)(esp_crypto_cipher_t *ctx);
-# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef void (*esp_hmac_sha256_t)(const unsigned char *key, int key_len, const unsigned char *data,
-                      int data_len, unsigned char *mac);
-# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef void (*esp_hmac_sha256_vector_t)(const unsigned char *key, int key_len, int num_elem,
-                      const unsigned char *addr[], const int *len, unsigned char *mac);
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef void (*esp_sha256_prf_t)(const unsigned char *key, int key_len, const char *label,
-                            const unsigned char *data, int data_len, unsigned char *buf, int buf_len);
-# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef int (*esp_sha256_vector_t)(int num_elem, const unsigned char *addr[], const int *len,
-                       unsigned char *mac);
-# 258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef int (*esp_crypto_mod_exp_t)(const unsigned char *base, int base_len,
-                        const unsigned char *power, int power_len,
-                        const unsigned char *modulus, int modulus_len,
-                        unsigned char *result, unsigned int *result_len);
-# 273 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef int (*esp_hmac_md5_t)(const unsigned char *key, unsigned int key_len, const unsigned char *data,
-                              unsigned int data_len, unsigned char *mac);
-# 287 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef int (*esp_hmac_md5_vector_t)(const unsigned char *key, unsigned int key_len, unsigned int num_elem,
-                              const unsigned char *addr[], const unsigned int *len, unsigned char *mac);
-# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef int (*esp_hmac_sha1_t)(const unsigned char *key, unsigned int key_len, const unsigned char *data,
-                              unsigned int data_len, unsigned char *mac);
-# 314 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef int (*esp_hmac_sha1_vector_t)(const unsigned char *key, unsigned int key_len, unsigned int num_elem,
-                              const unsigned char *addr[], const unsigned int *len, unsigned char *mac);
-# 332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef int (*esp_sha1_prf_t)(const unsigned char *key, unsigned int key_len, const char *label,
-                              const unsigned char *data, unsigned int data_len, unsigned char *buf, unsigned int buf_len);
-# 344 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef int (*esp_sha1_vector_t)(unsigned int num_elem, const unsigned char *addr[], const unsigned int *len,
-                              unsigned char *mac);
-# 362 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef int (*esp_pbkdf2_sha1_t)(const char *passphrase, const char *ssid, unsigned int ssid_len,
-                              int iterations, unsigned char *buf, unsigned int buflen);
-# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef int (*esp_rc4_skip_t)(const unsigned char *key, unsigned int keylen, unsigned int skip,
-                              unsigned char *data, unsigned int data_len);
-# 391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef int (*esp_md5_vector_t)(unsigned int num_elem, const unsigned char *addr[], const unsigned int *len,
-                              unsigned char *mac);
-# 401 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef void (*esp_aes_encrypt_t)(void *ctx, const unsigned char *plain, unsigned char *crypt);
-# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef void * (*esp_aes_encrypt_init_t)(const unsigned char *key, unsigned int len);
-
-
-
-
-
-
-typedef void (*esp_aes_encrypt_deinit_t)(void *ctx);
-# 426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef void (*esp_aes_decrypt_t)(void *ctx, const unsigned char *crypt, unsigned char *plain);
-# 435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef void * (*esp_aes_decrypt_init_t)(const unsigned char *key, unsigned int len);
-
-
-
-
-
-
-typedef void (*esp_aes_decrypt_deinit_t)(void *ctx);
-# 457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef void * (*esp_tls_init_t)(void);
-# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef void (*esp_tls_deinit_t)(void *tls_ctx);
-# 479 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef int (*esp_eap_peer_blob_init_t)(void *sm);
-
-
-
-
-
-
-
-typedef void (*esp_eap_peer_blob_deinit_t)(void *sm);
-# 499 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef int (*esp_eap_peer_config_init_t)(void *sm, unsigned char *private_key_passwd,int private_key_passwd_len);
-
-
-
-
-
-
-
-typedef void (*esp_eap_peer_config_deinit_t)(void *sm);
-
-
-
-
-
-
-
-typedef int (*esp_eap_peer_register_methods_t)(void);
-
-
-
-
-
-
-
-typedef void (*esp_eap_peer_unregister_methods_t)(void);
-
-
-
-
-
-
-
-typedef void (*esp_eap_deinit_prev_method_t)(void *sm, const char *txt);
-# 540 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef const void * (*esp_eap_peer_get_eap_method_t)(int vendor, int method);
-# 550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef void (*esp_eap_sm_abort_t)(void *sm);
-# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef void * (*esp_eap_sm_build_nak_t)(void *sm, int type, unsigned char id);
-# 576 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef void * (*esp_eap_sm_build_identity_resp_t)(void *sm, unsigned char id, int encrypted);
-# 595 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef void * (*esp_eap_msg_alloc_t)(int vendor, int type, unsigned int payload_len,
-                             unsigned char code, unsigned char identifier);
-
-
-
-
-
-
-
-typedef void (*esp_uuid_gen_mac_addr_t)(const unsigned char *mac_addr, unsigned char *uuid);
-
-
-
-
-
-typedef void (*esp_dh5_free_t)(void *ctx);
-# 620 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef void * (*esp_wps_build_assoc_req_ie_t)(int req_type);
-# 629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef void * (*esp_wps_build_assoc_resp_ie_t)(void);
-# 646 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef void * (*esp_wps_build_probe_req_ie_t)(uint16_t pw_id, void *dev, const unsigned char *uuid,
-                             int req_type, unsigned int num_req_dev_types, const unsigned char *req_dev_types);
-
-
-
-
-
-
-typedef int (*esp_wps_build_public_key_t)(void *wps, void *msg, int mode);
-
-
-
-
-
-
-
-typedef void * (*esp_wps_enrollee_get_msg_t)(void *wps, void *op_code);
-
-
-
-
-
-
-typedef int (*esp_wps_enrollee_process_msg_t)(void *wps, int op_code, const void *msg);
-
-
-
-
-
-
-typedef unsigned int (*esp_wps_generate_pin_t)(void);
-
-
-
-
-
-
-
-typedef int (*esp_wps_is_selected_pin_registrar_t)(const void *msg, unsigned char *bssid);
-
-
-
-
-
-
-
-typedef int (*esp_wps_is_selected_pbc_registrar_t)(const void *msg, unsigned char *bssid);
-# 701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-typedef struct {
-    uint32_t size;
-    uint32_t version;
-    esp_aes_wrap_t aes_wrap;
-    esp_aes_unwrap_t aes_unwrap;
-    esp_hmac_sha256_vector_t hmac_sha256_vector;
-    esp_sha256_prf_t sha256_prf;
-    esp_hmac_md5_t hmac_md5;
-    esp_hmac_md5_vector_t hamc_md5_vector;
-    esp_hmac_sha1_t hmac_sha1;
-    esp_hmac_sha1_vector_t hmac_sha1_vector;
-    esp_sha1_prf_t sha1_prf;
-    esp_sha1_vector_t sha1_vector;
-    esp_pbkdf2_sha1_t pbkdf2_sha1;
-    esp_rc4_skip_t rc4_skip;
-    esp_md5_vector_t md5_vector;
-    esp_aes_encrypt_t aes_encrypt;
-    esp_aes_encrypt_init_t aes_encrypt_init;
-    esp_aes_encrypt_deinit_t aes_encrypt_deinit;
-    esp_aes_decrypt_t aes_decrypt;
-    esp_aes_decrypt_init_t aes_decrypt_init;
-    esp_aes_decrypt_deinit_t aes_decrypt_deinit;
-}wpa_crypto_funcs_t;
-
-
-
-
-
-
-typedef struct{
-    uint32_t size;
-    uint32_t version;
-    esp_aes_128_encrypt_t aes_128_encrypt;
-    esp_aes_128_decrypt_t aes_128_decrypt;
-    esp_crypto_mod_exp_t crypto_mod_exp;
-    esp_hmac_sha256_t hmac_sha256;
-    esp_hmac_sha256_vector_t hmac_sha256_vector;
-    esp_sha256_vector_t sha256_vector;
-    esp_uuid_gen_mac_addr_t uuid_gen_mac_addr;
-    esp_dh5_free_t dh5_free;
-    esp_wps_build_assoc_req_ie_t wps_build_assoc_req_ie;
-    esp_wps_build_assoc_resp_ie_t wps_build_assoc_resp_ie;
-    esp_wps_build_probe_req_ie_t wps_build_probe_req_ie;
-    esp_wps_build_public_key_t wps_build_public_key;
-    esp_wps_enrollee_get_msg_t wps_enrollee_get_msg;
-    esp_wps_enrollee_process_msg_t wps_enrollee_process_msg;
-    esp_wps_generate_pin_t wps_generate_pin;
-    esp_wps_is_selected_pin_registrar_t wps_is_selected_pin_registrar;
-    esp_wps_is_selected_pbc_registrar_t wps_is_selected_pbc_registrar;
-    esp_eap_msg_alloc_t eap_msg_alloc;
-}wps_crypto_funcs_t;
-
-
-
-
-
-
-typedef struct {
-    uint32_t size;
-    uint32_t version;
-    esp_crypto_hash_init_t crypto_hash_init;
-    esp_crypto_hash_update_t crypto_hash_update;
-    esp_crypto_hash_finish_t crypto_hash_finish;
-    esp_crypto_cipher_init_t crypto_cipher_init;
-    esp_crypto_cipher_encrypt_t crypto_cipher_encrypt;
-    esp_crypto_cipher_decrypt_t crypto_cipher_decrypt;
-    esp_crypto_cipher_deinit_t crypto_cipher_deinit;
-    esp_crypto_mod_exp_t crypto_mod_exp;
-    esp_sha256_vector_t sha256_vector;
-    esp_tls_init_t tls_init;
-    esp_tls_deinit_t tls_deinit;
-    esp_eap_peer_blob_init_t eap_peer_blob_init;
-    esp_eap_peer_blob_deinit_t eap_peer_blob_deinit;
-    esp_eap_peer_config_init_t eap_peer_config_init;
-    esp_eap_peer_config_deinit_t eap_peer_config_deinit;
-    esp_eap_peer_register_methods_t eap_peer_register_methods;
-    esp_eap_peer_unregister_methods_t eap_peer_unregister_methods;
-    esp_eap_deinit_prev_method_t eap_deinit_prev_method;
-    esp_eap_peer_get_eap_method_t eap_peer_get_eap_method;
-    esp_eap_sm_abort_t eap_sm_abort;
-    esp_eap_sm_build_nak_t eap_sm_build_nak;
-    esp_eap_sm_build_identity_resp_t eap_sm_build_identity_resp;
-    esp_eap_msg_alloc_t eap_msg_alloc;
-} wpa2_crypto_funcs_t;
-
-
-
-
-
-
-typedef struct{
-    esp_aes_128_encrypt_t aes_128_encrypt;
-    esp_aes_128_decrypt_t aes_128_decrypt;
-} mesh_crypto_funcs_t;
-# 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h" 1
 # 78 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 1
@@ -5231,7 +4938,7 @@ typedef enum
           TaskHandle_t * const pvCreatedTask,
           const BaseType_t xCoreID);
 # 432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
- static inline __attribute__((section(".iram1"))) BaseType_t xTaskCreate(
+ static inline __attribute__((section(".iram1" "." "13"))) BaseType_t xTaskCreate(
    TaskFunction_t pvTaskCode,
    const char * const pcName,
    const uint32_t usStackDepth,
@@ -5411,7 +5118,99 @@ void *pvTaskIncrementMutexHeldCount( void );
 # 2307 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 UBaseType_t uxTaskGetSnapshotAll( TaskSnapshot_t * const pxTaskSnapshotArray, const UBaseType_t uxArraySize, UBaseType_t * const pxTcbSz );
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h" 1
+# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
+typedef void * QueueHandle_t;
 
+
+
+
+
+
+typedef void * QueueSetHandle_t;
+
+
+
+
+
+
+typedef void * QueueSetMemberHandle_t;
+# 613 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
+BaseType_t xQueueGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, const BaseType_t xCopyPosition ) ;
+# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
+BaseType_t xQueuePeekFromISR( QueueHandle_t xQueue, void * const pvBuffer ) ;
+# 906 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
+BaseType_t xQueueGenericReceive( QueueHandle_t xQueue, void * const pvBuffer, TickType_t xTicksToWait, const BaseType_t xJustPeek ) ;
+# 917 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
+UBaseType_t uxQueueMessagesWaiting( const QueueHandle_t xQueue ) ;
+# 930 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
+UBaseType_t uxQueueSpacesAvailable( const QueueHandle_t xQueue ) ;
+# 940 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
+void vQueueDelete( QueueHandle_t xQueue ) ;
+# 1267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
+BaseType_t xQueueGenericSendFromISR( QueueHandle_t xQueue, const void * const pvItemToQueue, BaseType_t * const pxHigherPriorityTaskWoken, const BaseType_t xCopyPosition ) ;
+BaseType_t xQueueGiveFromISR( QueueHandle_t xQueue, BaseType_t * const pxHigherPriorityTaskWoken ) ;
+# 1347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
+BaseType_t xQueueReceiveFromISR( QueueHandle_t xQueue, void * const pvBuffer, BaseType_t * const pxHigherPriorityTaskWoken ) ;
+
+
+
+
+
+
+BaseType_t xQueueIsQueueEmptyFromISR( const QueueHandle_t xQueue ) ;
+BaseType_t xQueueIsQueueFullFromISR( const QueueHandle_t xQueue ) ;
+UBaseType_t uxQueueMessagesWaitingFromISR( const QueueHandle_t xQueue ) ;
+# 1374 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
+BaseType_t xQueueAltGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, BaseType_t xCopyPosition );
+BaseType_t xQueueAltGenericReceive( QueueHandle_t xQueue, void * const pvBuffer, TickType_t xTicksToWait, BaseType_t xJustPeeking );
+# 1390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
+BaseType_t xQueueCRSendFromISR( QueueHandle_t xQueue, const void *pvItemToQueue, BaseType_t xCoRoutinePreviouslyWoken );
+BaseType_t xQueueCRReceiveFromISR( QueueHandle_t xQueue, void *pvBuffer, BaseType_t *pxTaskWoken );
+BaseType_t xQueueCRSend( QueueHandle_t xQueue, const void *pvItemToQueue, TickType_t xTicksToWait );
+BaseType_t xQueueCRReceive( QueueHandle_t xQueue, void *pvBuffer, TickType_t xTicksToWait );
+
+
+
+
+
+
+QueueHandle_t xQueueCreateMutex( const uint8_t ucQueueType ) ;
+QueueHandle_t xQueueCreateMutexStatic( const uint8_t ucQueueType, StaticQueue_t *pxStaticQueue ) ;
+QueueHandle_t xQueueCreateCountingSemaphore( const UBaseType_t uxMaxCount, const UBaseType_t uxInitialCount ) ;
+QueueHandle_t xQueueCreateCountingSemaphoreStatic( const UBaseType_t uxMaxCount, const UBaseType_t uxInitialCount, StaticQueue_t *pxStaticQueue ) ;
+void* xQueueGetMutexHolder( QueueHandle_t xSemaphore ) ;
+
+
+
+
+
+BaseType_t xQueueTakeMutexRecursive( QueueHandle_t xMutex, TickType_t xTicksToWait ) ;
+BaseType_t xQueueGiveMutexRecursive( QueueHandle_t pxMutex ) ;
+# 1488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
+ QueueHandle_t xQueueGenericCreate( const UBaseType_t uxQueueLength, const UBaseType_t uxItemSize, const uint8_t ucQueueType ) ;
+# 1548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
+QueueSetHandle_t xQueueCreateSet( const UBaseType_t uxEventQueueLength ) ;
+# 1572 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
+BaseType_t xQueueAddToSet( QueueSetMemberHandle_t xQueueOrSemaphore, QueueSetHandle_t xQueueSet ) ;
+# 1591 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
+BaseType_t xQueueRemoveFromSet( QueueSetMemberHandle_t xQueueOrSemaphore, QueueSetHandle_t xQueueSet ) ;
+# 1627 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
+QueueSetMemberHandle_t xQueueSelectFromSet( QueueSetHandle_t xQueueSet, const TickType_t xTicksToWait ) ;
+
+
+
+
+QueueSetMemberHandle_t xQueueSelectFromSetFromISR( QueueSetHandle_t xQueueSet ) ;
+
+
+
+void vQueueWaitForMessageRestricted( QueueHandle_t xQueue, TickType_t xTicksToWait ) ;
+BaseType_t xQueueGenericReset( QueueHandle_t xQueue, BaseType_t xNewQueue ) ;
+void vQueueSetQueueNumber( QueueHandle_t xQueue, UBaseType_t uxQueueNumber ) ;
+UBaseType_t uxQueueGetQueueNumber( QueueHandle_t xQueue ) ;
+uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) ;
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/semphr.h" 1
 # 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/semphr.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h" 1
@@ -5432,13 +5231,11 @@ typedef void (*esp_event_handler_t)(void* event_handler_arg,
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h" 1
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 1
-# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/queue.h" 1
-# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 1
-# 42 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
 
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h" 1
@@ -5916,7 +5713,61 @@ int select(int nfds, _types_fd_set *readfds, _types_fd_set *writefds, _types_fd_
 
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/sntp.h" 1
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/sntp.h"
+typedef enum {
+    SNTP_SYNC_MODE_IMMED,
+    SNTP_SYNC_MODE_SMOOTH,
+} sntp_sync_mode_t;
 
+
+typedef enum {
+    SNTP_SYNC_STATUS_RESET,
+    SNTP_SYNC_STATUS_COMPLETED,
+    SNTP_SYNC_STATUS_IN_PROGRESS,
+} sntp_sync_status_t;
+
+
+
+
+
+
+typedef void (*sntp_sync_time_cb_t) (struct timeval *tv);
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/sntp.h"
+void sntp_sync_time(struct timeval *tv);
+
+
+
+
+
+
+
+void sntp_set_sync_mode(sntp_sync_mode_t sync_mode);
+
+
+
+
+
+
+
+sntp_sync_mode_t sntp_get_sync_mode(void);
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/sntp.h"
+sntp_sync_status_t sntp_get_sync_status(void);
+
+
+
+
+
+
+void sntp_set_sync_status(sntp_sync_status_t sync_status);
+
+
+
+
+
+
+void sntp_set_time_sync_notification_cb(sntp_sync_time_cb_t callback);
+# 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h" 1
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h"
 
@@ -5988,6 +5839,10 @@ sys_sem_t* sys_thread_sem_init(void);
 void sys_thread_sem_deinit(void);
 sys_sem_t* sys_thread_sem_get(void);
 # 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/arch/cc.h" 2
+
+
+
+
 
 
 
@@ -6148,7 +6003,7 @@ extern const ip_addr_t ip_addr_any;
 extern const ip_addr_t ip_addr_broadcast;
 # 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h"
 extern const ip_addr_t ip6_addr_any;
-# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h" 1
 # 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h"
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
@@ -6244,30 +6099,40 @@ _Bool
 void dhcps_dns_setserver(const ip_addr_t *dnsserver);
 ip4_addr_t dhcps_dns_getserver();
 void dhcps_set_new_lease_cb(dhcps_cb_t cb);
-# 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
-# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
+
+typedef dhcps_lease_t tcpip_adapter_dhcps_lease_t;
+# 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 typedef struct {
     ip4_addr_t ip;
     ip4_addr_t netmask;
     ip4_addr_t gw;
 } tcpip_adapter_ip_info_t;
 
+
+
 typedef struct {
     ip6_addr_t ip;
 } tcpip_adapter_ip6_info_t;
 
-typedef dhcps_lease_t tcpip_adapter_dhcps_lease_t;
+
+
+
 
 typedef struct {
     uint8_t mac[6];
     ip4_addr_t ip;
 } tcpip_adapter_sta_info_t;
 
+
+
+
+
 typedef struct {
     tcpip_adapter_sta_info_t sta[(10)];
     int num;
 } tcpip_adapter_sta_list_t;
-# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 typedef enum {
     TCPIP_ADAPTER_IF_STA = 0,
     TCPIP_ADAPTER_IF_AP,
@@ -6302,7 +6167,11 @@ typedef enum{
     TCPIP_ADAPTER_OP_SET,
     TCPIP_ADAPTER_OP_GET,
     TCPIP_ADAPTER_OP_MAX
-} tcpip_adapter_option_mode_t;
+} tcpip_adapter_dhcp_option_mode_t;
+
+
+typedef tcpip_adapter_dhcp_option_mode_t tcpip_adapter_option_mode_t;
+
 
 typedef enum{
     TCPIP_ADAPTER_DOMAIN_NAME_SERVER = 6,
@@ -6310,32 +6179,10 @@ typedef enum{
     TCPIP_ADAPTER_REQUESTED_IP_ADDRESS = 50,
     TCPIP_ADAPTER_IP_ADDRESS_LEASE_TIME = 51,
     TCPIP_ADAPTER_IP_REQUEST_RETRY_TIME = 52,
-} tcpip_adapter_option_id_t;
+} tcpip_adapter_dhcp_option_id_t;
 
-struct tcpip_adapter_api_msg_s;
-typedef int (*tcpip_adapter_api_fn)(struct tcpip_adapter_api_msg_s *msg);
-typedef struct tcpip_adapter_api_msg_s {
-    int type;
-    int ret;
-    tcpip_adapter_api_fn api_fn;
-    tcpip_adapter_if_t tcpip_if;
-    tcpip_adapter_ip_info_t *ip_info;
-    uint8_t *mac;
-    void *data;
-} tcpip_adapter_api_msg_t;
 
-typedef struct tcpip_adapter_dns_param_s {
-    tcpip_adapter_dns_type_t dns_type;
-    tcpip_adapter_dns_info_t *dns_info;
-} tcpip_adapter_dns_param_t;
-# 188 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
-typedef struct tcpip_adatper_ip_lost_timer_s {
-    
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 3 4
-   _Bool 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
-        timer_running;
-} tcpip_adapter_ip_lost_timer_t;
+typedef tcpip_adapter_dhcp_option_id_t tcpip_adapter_option_id_t;
 
 
 
@@ -6343,71 +6190,73 @@ typedef struct tcpip_adatper_ip_lost_timer_s {
 
 
 void tcpip_adapter_init(void);
-# 209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_eth_start(uint8_t *mac, tcpip_adapter_ip_info_t *ip_info);
-# 223 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_sta_start(uint8_t *mac, tcpip_adapter_ip_info_t *ip_info);
-# 239 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_ap_start(uint8_t *mac, tcpip_adapter_ip_info_t *ip_info);
-# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 220 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_stop(tcpip_adapter_if_t tcpip_if);
-# 264 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_up(tcpip_adapter_if_t tcpip_if);
-# 276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_down(tcpip_adapter_if_t tcpip_if);
-# 290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_get_ip_info(tcpip_adapter_if_t tcpip_if, tcpip_adapter_ip_info_t *ip_info);
-# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
-esp_err_t tcpip_adapter_set_ip_info(tcpip_adapter_if_t tcpip_if, tcpip_adapter_ip_info_t *ip_info);
-# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_set_ip_info(tcpip_adapter_if_t tcpip_if, const tcpip_adapter_ip_info_t *ip_info);
+# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_set_dns_info(tcpip_adapter_if_t tcpip_if, tcpip_adapter_dns_type_t type, tcpip_adapter_dns_info_t *dns);
-# 347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_get_dns_info(tcpip_adapter_if_t tcpip_if, tcpip_adapter_dns_type_t type, tcpip_adapter_dns_info_t *dns);
-# 362 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_get_old_ip_info(tcpip_adapter_if_t tcpip_if, tcpip_adapter_ip_info_t *ip_info);
-# 377 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
-esp_err_t tcpip_adapter_set_old_ip_info(tcpip_adapter_if_t tcpip_if, tcpip_adapter_ip_info_t *ip_info);
-# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_set_old_ip_info(tcpip_adapter_if_t tcpip_if, const tcpip_adapter_ip_info_t *ip_info);
+# 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_create_ip6_linklocal(tcpip_adapter_if_t tcpip_if);
 # 407 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_get_ip6_linklocal(tcpip_adapter_if_t tcpip_if, ip6_addr_t *if_ip6);
-# 423 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 422 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_get_ip6_global(tcpip_adapter_if_t tcpip_if, ip6_addr_t *if_ip6);
+# 439 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_dhcps_get_status(tcpip_adapter_if_t tcpip_if, tcpip_adapter_dhcp_status_t *status);
-# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
-esp_err_t tcpip_adapter_dhcps_option(tcpip_adapter_option_mode_t opt_op, tcpip_adapter_option_id_t opt_id, void *opt_val, uint32_t opt_len);
-# 451 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 455 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_dhcps_option(tcpip_adapter_dhcp_option_mode_t opt_op, tcpip_adapter_dhcp_option_id_t opt_id, void *opt_val, uint32_t opt_len);
+# 469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_dhcps_start(tcpip_adapter_if_t tcpip_if);
-# 465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_dhcps_stop(tcpip_adapter_if_t tcpip_if);
-# 475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 495 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_dhcpc_get_status(tcpip_adapter_if_t tcpip_if, tcpip_adapter_dhcp_status_t *status);
-# 489 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
-esp_err_t tcpip_adapter_dhcpc_option(tcpip_adapter_option_mode_t opt_op, tcpip_adapter_option_id_t opt_id, void *opt_val, uint32_t opt_len);
-# 503 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 510 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_dhcpc_option(tcpip_adapter_dhcp_option_mode_t opt_op, tcpip_adapter_dhcp_option_id_t opt_id, void *opt_val, uint32_t opt_len);
+# 527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_dhcpc_start(tcpip_adapter_if_t tcpip_if);
-# 517 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_dhcpc_stop(tcpip_adapter_if_t tcpip_if);
-# 530 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 560 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_eth_input(void *buffer, uint16_t len, void *eb);
-# 543 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 578 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_sta_input(void *buffer, uint16_t len, void *eb);
-# 556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 596 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_ap_input(void *buffer, uint16_t len, void *eb);
-# 570 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_interface_t tcpip_adapter_get_esp_if(void *dev);
-# 582 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
-esp_err_t tcpip_adapter_get_sta_list(wifi_sta_list_t *wifi_sta_list, tcpip_adapter_sta_list_t *tcpip_sta_list);
-# 595 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_get_sta_list(const wifi_sta_list_t *wifi_sta_list, tcpip_adapter_sta_list_t *tcpip_sta_list);
+# 638 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_set_hostname(tcpip_adapter_if_t tcpip_if, const char *hostname);
-# 607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 651 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_get_hostname(tcpip_adapter_if_t tcpip_if, const char **hostname);
-# 619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 666 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_get_netif(tcpip_adapter_if_t tcpip_if, void ** netif);
-# 629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 677 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 
-# 629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 3 4
+# 677 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 3 4
 _Bool 
-# 629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 677 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
     tcpip_adapter_is_netif_up(tcpip_adapter_if_t tcpip_if);
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h" 2
 
@@ -6429,6 +6278,7 @@ typedef enum {
     SYSTEM_EVENT_STA_WPS_ER_FAILED,
     SYSTEM_EVENT_STA_WPS_ER_TIMEOUT,
     SYSTEM_EVENT_STA_WPS_ER_PIN,
+    SYSTEM_EVENT_STA_WPS_ER_PBC_OVERLAP,
     SYSTEM_EVENT_AP_START,
     SYSTEM_EVENT_AP_STOP,
     SYSTEM_EVENT_AP_STACONNECTED,
@@ -6483,9 +6333,9 @@ typedef struct {
 typedef struct {
     tcpip_adapter_ip_info_t ip_info;
     
-# 96 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h" 3 4
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h" 3 4
    _Bool 
-# 96 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
         ip_changed;
 } system_event_sta_got_ip_t;
 
@@ -6513,6 +6363,10 @@ typedef struct {
     uint8_t mac[6];
 } system_event_ap_probe_req_rx_t;
 
+typedef struct {
+    ip4_addr_t ip;
+} system_event_ap_staipassigned_t;
+
 typedef union {
     system_event_sta_connected_t connected;
     system_event_sta_disconnected_t disconnected;
@@ -6524,6 +6378,7 @@ typedef union {
     system_event_ap_staconnected_t sta_connected;
     system_event_ap_stadisconnected_t sta_disconnected;
     system_event_ap_probe_req_rx_t ap_probereqrecved;
+    system_event_ap_staipassigned_t ap_staipassigned;
     system_event_got_ip6_t got_ip6;
 } system_event_info_t;
 
@@ -6533,9 +6388,9 @@ typedef struct {
 } system_event_t;
 
 typedef esp_err_t (*system_event_handler_t)(system_event_t *event);
-# 154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
+# 160 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
 esp_err_t esp_event_send(system_event_t *event);
-# 169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
 esp_err_t esp_event_process_default(system_event_t *event);
 
 
@@ -6581,35 +6436,385 @@ esp_err_t esp_event_handler_register(esp_event_base_t event_base,
                                         int32_t event_id,
                                         esp_event_handler_t event_handler,
                                         void* event_handler_arg);
-# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+# 171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
 esp_err_t esp_event_handler_register_with(esp_event_loop_handle_t event_loop,
                                             esp_event_base_t event_base,
                                             int32_t event_id,
                                             esp_event_handler_t event_handler,
                                             void* event_handler_arg);
-# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
 esp_err_t esp_event_handler_unregister(esp_event_base_t event_base, int32_t event_id, esp_event_handler_t event_handler);
-# 213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
 esp_err_t esp_event_handler_unregister_with(esp_event_loop_handle_t event_loop,
                                             esp_event_base_t event_base,
                                             int32_t event_id,
                                             esp_event_handler_t event_handler);
-# 237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
 esp_err_t esp_event_post(esp_event_base_t event_base,
                             int32_t event_id,
                             void* event_data,
                             size_t event_data_size,
                             TickType_t ticks_to_wait);
-# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+# 269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
 esp_err_t esp_event_post_to(esp_event_loop_handle_t event_loop,
                             esp_event_base_t event_base,
                             int32_t event_id,
                             void* event_data,
                             size_t event_data_size,
                             TickType_t ticks_to_wait);
-# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+# 320 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
 esp_err_t esp_event_dump(FILE* file);
-# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 2
+# 65 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_private.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_private.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_private.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h" 1
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef enum {
+    ESP_CRYPTO_HASH_ALG_MD5, ESP_CRYPTO_HASH_ALG_SHA1,
+    ESP_CRYPTO_HASH_ALG_HMAC_MD5, ESP_CRYPTO_HASH_ALG_HMAC_SHA1,
+    ESP_CRYPTO_HASH_ALG_SHA256, ESP_CRYPTO_HASH_ALG_HMAC_SHA256
+}esp_crypto_hash_alg_t;
+
+
+
+
+
+
+typedef enum {
+    ESP_CRYPTO_CIPHER_NULL, ESP_CRYPTO_CIPHER_ALG_AES, ESP_CRYPTO_CIPHER_ALG_3DES,
+    ESP_CRYPTO_CIPHER_ALG_DES, ESP_CRYPTO_CIPHER_ALG_RC2, ESP_CRYPTO_CIPHER_ALG_RC4
+} esp_crypto_cipher_alg_t;
+
+
+
+
+
+typedef struct crypto_hash esp_crypto_hash_t;
+
+
+
+
+
+typedef struct crypto_cipher esp_crypto_cipher_t;
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef esp_crypto_hash_t * (*esp_crypto_hash_init_t)(esp_crypto_hash_alg_t alg, const unsigned char *key, int key_len);
+# 85 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void (*esp_crypto_hash_update_t)(esp_crypto_hash_t *ctx, const unsigned char *data, int len);
+# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_crypto_hash_finish_t)(esp_crypto_hash_t *ctx, unsigned char *hash, int *len);
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_aes_128_encrypt_t)(const unsigned char *key, const unsigned char *iv, unsigned char *data, int data_len);
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_aes_128_decrypt_t)(const unsigned char *key, const unsigned char *iv, unsigned char *data, int data_len);
+# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_aes_wrap_t)(const unsigned char *kek, int n, const unsigned char *plain, unsigned char *cipher);
+# 143 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_aes_unwrap_t)(const unsigned char *kek, int n, const unsigned char *cipher, unsigned char *plain);
+# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef esp_crypto_cipher_t * (*esp_crypto_cipher_init_t)(esp_crypto_cipher_alg_t alg, const unsigned char *iv, const unsigned char *key, int key_len);
+# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_crypto_cipher_encrypt_t)(esp_crypto_cipher_t *ctx,
+                 const unsigned char *plain, unsigned char *crypt, int len);
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_crypto_cipher_decrypt_t)(esp_crypto_cipher_t *ctx,
+                 const unsigned char *crypt, unsigned char *plain, int len);
+
+
+
+
+
+
+
+typedef void (*esp_crypto_cipher_deinit_t)(esp_crypto_cipher_t *ctx);
+# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void (*esp_hmac_sha256_t)(const unsigned char *key, int key_len, const unsigned char *data,
+                      int data_len, unsigned char *mac);
+# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void (*esp_hmac_sha256_vector_t)(const unsigned char *key, int key_len, int num_elem,
+                      const unsigned char *addr[], const int *len, unsigned char *mac);
+# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void (*esp_sha256_prf_t)(const unsigned char *key, int key_len, const char *label,
+                            const unsigned char *data, int data_len, unsigned char *buf, int buf_len);
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_sha256_vector_t)(int num_elem, const unsigned char *addr[], const int *len,
+                       unsigned char *mac);
+# 258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_crypto_mod_exp_t)(const unsigned char *base, int base_len,
+                        const unsigned char *power, int power_len,
+                        const unsigned char *modulus, int modulus_len,
+                        unsigned char *result, unsigned int *result_len);
+# 273 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_hmac_md5_t)(const unsigned char *key, unsigned int key_len, const unsigned char *data,
+                              unsigned int data_len, unsigned char *mac);
+# 287 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_hmac_md5_vector_t)(const unsigned char *key, unsigned int key_len, unsigned int num_elem,
+                              const unsigned char *addr[], const unsigned int *len, unsigned char *mac);
+# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_hmac_sha1_t)(const unsigned char *key, unsigned int key_len, const unsigned char *data,
+                              unsigned int data_len, unsigned char *mac);
+# 314 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_hmac_sha1_vector_t)(const unsigned char *key, unsigned int key_len, unsigned int num_elem,
+                              const unsigned char *addr[], const unsigned int *len, unsigned char *mac);
+# 332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_sha1_prf_t)(const unsigned char *key, unsigned int key_len, const char *label,
+                              const unsigned char *data, unsigned int data_len, unsigned char *buf, unsigned int buf_len);
+# 344 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_sha1_vector_t)(unsigned int num_elem, const unsigned char *addr[], const unsigned int *len,
+                              unsigned char *mac);
+# 362 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_pbkdf2_sha1_t)(const char *passphrase, const char *ssid, unsigned int ssid_len,
+                              int iterations, unsigned char *buf, unsigned int buflen);
+# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_rc4_skip_t)(const unsigned char *key, unsigned int keylen, unsigned int skip,
+                              unsigned char *data, unsigned int data_len);
+# 391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_md5_vector_t)(unsigned int num_elem, const unsigned char *addr[], const unsigned int *len,
+                              unsigned char *mac);
+# 401 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void (*esp_aes_encrypt_t)(void *ctx, const unsigned char *plain, unsigned char *crypt);
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void * (*esp_aes_encrypt_init_t)(const unsigned char *key, unsigned int len);
+
+
+
+
+
+
+typedef void (*esp_aes_encrypt_deinit_t)(void *ctx);
+# 426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void (*esp_aes_decrypt_t)(void *ctx, const unsigned char *crypt, unsigned char *plain);
+# 435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void * (*esp_aes_decrypt_init_t)(const unsigned char *key, unsigned int len);
+
+
+
+
+
+
+typedef void (*esp_aes_decrypt_deinit_t)(void *ctx);
+# 457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void * (*esp_tls_init_t)(void);
+# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void (*esp_tls_deinit_t)(void *tls_ctx);
+# 479 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_eap_peer_blob_init_t)(void *sm);
+
+
+
+
+
+
+
+typedef void (*esp_eap_peer_blob_deinit_t)(void *sm);
+# 499 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_eap_peer_config_init_t)(void *sm, unsigned char *private_key_passwd,int private_key_passwd_len);
+
+
+
+
+
+
+
+typedef void (*esp_eap_peer_config_deinit_t)(void *sm);
+
+
+
+
+
+
+
+typedef int (*esp_eap_peer_register_methods_t)(void);
+
+
+
+
+
+
+
+typedef void (*esp_eap_peer_unregister_methods_t)(void);
+
+
+
+
+
+
+
+typedef void (*esp_eap_deinit_prev_method_t)(void *sm, const char *txt);
+# 540 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef const void * (*esp_eap_peer_get_eap_method_t)(int vendor, int method);
+# 550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void (*esp_eap_sm_abort_t)(void *sm);
+# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void * (*esp_eap_sm_build_nak_t)(void *sm, int type, unsigned char id);
+# 576 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void * (*esp_eap_sm_build_identity_resp_t)(void *sm, unsigned char id, int encrypted);
+# 595 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void * (*esp_eap_msg_alloc_t)(int vendor, int type, unsigned int payload_len,
+                             unsigned char code, unsigned char identifier);
+
+
+
+
+
+
+
+typedef void (*esp_uuid_gen_mac_addr_t)(const unsigned char *mac_addr, unsigned char *uuid);
+
+
+
+
+
+typedef void (*esp_dh5_free_t)(void *ctx);
+# 620 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void * (*esp_wps_build_assoc_req_ie_t)(int req_type);
+# 629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void * (*esp_wps_build_assoc_resp_ie_t)(void);
+# 646 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void * (*esp_wps_build_probe_req_ie_t)(uint16_t pw_id, void *dev, const unsigned char *uuid,
+                             int req_type, unsigned int num_req_dev_types, const unsigned char *req_dev_types);
+
+
+
+
+
+
+typedef int (*esp_wps_build_public_key_t)(void *wps, void *msg, int mode);
+
+
+
+
+
+
+
+typedef void * (*esp_wps_enrollee_get_msg_t)(void *wps, void *op_code);
+
+
+
+
+
+
+typedef int (*esp_wps_enrollee_process_msg_t)(void *wps, int op_code, const void *msg);
+
+
+
+
+
+
+typedef unsigned int (*esp_wps_generate_pin_t)(void);
+
+
+
+
+
+
+
+typedef int (*esp_wps_is_selected_pin_registrar_t)(const void *msg, unsigned char *bssid);
+
+
+
+
+
+
+
+typedef int (*esp_wps_is_selected_pbc_registrar_t)(const void *msg, unsigned char *bssid);
+# 701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef struct {
+    uint32_t size;
+    uint32_t version;
+    esp_aes_wrap_t aes_wrap;
+    esp_aes_unwrap_t aes_unwrap;
+    esp_hmac_sha256_vector_t hmac_sha256_vector;
+    esp_sha256_prf_t sha256_prf;
+    esp_hmac_md5_t hmac_md5;
+    esp_hmac_md5_vector_t hamc_md5_vector;
+    esp_hmac_sha1_t hmac_sha1;
+    esp_hmac_sha1_vector_t hmac_sha1_vector;
+    esp_sha1_prf_t sha1_prf;
+    esp_sha1_vector_t sha1_vector;
+    esp_pbkdf2_sha1_t pbkdf2_sha1;
+    esp_rc4_skip_t rc4_skip;
+    esp_md5_vector_t md5_vector;
+    esp_aes_encrypt_t aes_encrypt;
+    esp_aes_encrypt_init_t aes_encrypt_init;
+    esp_aes_encrypt_deinit_t aes_encrypt_deinit;
+    esp_aes_decrypt_t aes_decrypt;
+    esp_aes_decrypt_init_t aes_decrypt_init;
+    esp_aes_decrypt_deinit_t aes_decrypt_deinit;
+}wpa_crypto_funcs_t;
+
+
+
+
+
+
+typedef struct{
+    uint32_t size;
+    uint32_t version;
+    esp_aes_128_encrypt_t aes_128_encrypt;
+    esp_aes_128_decrypt_t aes_128_decrypt;
+    esp_crypto_mod_exp_t crypto_mod_exp;
+    esp_hmac_sha256_t hmac_sha256;
+    esp_hmac_sha256_vector_t hmac_sha256_vector;
+    esp_sha256_vector_t sha256_vector;
+    esp_uuid_gen_mac_addr_t uuid_gen_mac_addr;
+    esp_dh5_free_t dh5_free;
+    esp_wps_build_assoc_req_ie_t wps_build_assoc_req_ie;
+    esp_wps_build_assoc_resp_ie_t wps_build_assoc_resp_ie;
+    esp_wps_build_probe_req_ie_t wps_build_probe_req_ie;
+    esp_wps_build_public_key_t wps_build_public_key;
+    esp_wps_enrollee_get_msg_t wps_enrollee_get_msg;
+    esp_wps_enrollee_process_msg_t wps_enrollee_process_msg;
+    esp_wps_generate_pin_t wps_generate_pin;
+    esp_wps_is_selected_pin_registrar_t wps_is_selected_pin_registrar;
+    esp_wps_is_selected_pbc_registrar_t wps_is_selected_pbc_registrar;
+    esp_eap_msg_alloc_t eap_msg_alloc;
+}wps_crypto_funcs_t;
+
+
+
+
+
+
+typedef struct {
+    uint32_t size;
+    uint32_t version;
+    esp_crypto_hash_init_t crypto_hash_init;
+    esp_crypto_hash_update_t crypto_hash_update;
+    esp_crypto_hash_finish_t crypto_hash_finish;
+    esp_crypto_cipher_init_t crypto_cipher_init;
+    esp_crypto_cipher_encrypt_t crypto_cipher_encrypt;
+    esp_crypto_cipher_decrypt_t crypto_cipher_decrypt;
+    esp_crypto_cipher_deinit_t crypto_cipher_deinit;
+    esp_crypto_mod_exp_t crypto_mod_exp;
+    esp_sha256_vector_t sha256_vector;
+    esp_tls_init_t tls_init;
+    esp_tls_deinit_t tls_deinit;
+    esp_eap_peer_blob_init_t eap_peer_blob_init;
+    esp_eap_peer_blob_deinit_t eap_peer_blob_deinit;
+    esp_eap_peer_config_init_t eap_peer_config_init;
+    esp_eap_peer_config_deinit_t eap_peer_config_deinit;
+    esp_eap_peer_register_methods_t eap_peer_register_methods;
+    esp_eap_peer_unregister_methods_t eap_peer_unregister_methods;
+    esp_eap_deinit_prev_method_t eap_deinit_prev_method;
+    esp_eap_peer_get_eap_method_t eap_peer_get_eap_method;
+    esp_eap_sm_abort_t eap_sm_abort;
+    esp_eap_sm_build_nak_t eap_sm_build_nak;
+    esp_eap_sm_build_identity_resp_t eap_sm_build_identity_resp;
+    esp_eap_msg_alloc_t eap_msg_alloc;
+} wpa2_crypto_funcs_t;
+
+
+
+
+
+
+typedef struct{
+    esp_aes_128_encrypt_t aes_128_encrypt;
+    esp_aes_128_decrypt_t aes_128_decrypt;
+} mesh_crypto_funcs_t;
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_private.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h" 1
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
@@ -6630,14 +6835,12 @@ typedef struct {
     void (* _spin_lock_delete)(void *lock);
     uint32_t (*_wifi_int_disable)(void *wifi_int_mux);
     void (*_wifi_int_restore)(void *wifi_int_mux, uint32_t tmp);
-    void (*_task_yield)(void);
     void (*_task_yield_from_isr)(void);
     void *(*_semphr_create)(uint32_t max, uint32_t init);
     void (*_semphr_delete)(void *semphr);
-    int32_t (*_semphr_take_from_isr)(void *semphr, void *hptw);
-    int32_t (*_semphr_give_from_isr)(void *semphr, void *hptw);
     int32_t (*_semphr_take)(void *semphr, uint32_t block_time_tick);
     int32_t (*_semphr_give)(void *semphr);
+    void *(*_wifi_thread_semphr_get)(void);
     void *(*_mutex_create)(void);
     void *(*_recursive_mutex_create)(void);
     void (*_mutex_delete)(void *mutex);
@@ -6650,7 +6853,6 @@ typedef struct {
     int32_t (* _queue_send_to_back)(void *queue, void *item, uint32_t block_time_tick);
     int32_t (* _queue_send_to_front)(void *queue, void *item, uint32_t block_time_tick);
     int32_t (* _queue_recv)(void *queue, void *item, uint32_t block_time_tick);
-    int32_t (* _queue_recv_from_isr)(void *queue, void * const item, int32_t * const hptw);
     uint32_t (* _queue_msg_waiting)(void *queue);
     void *(* _event_group_create)(void);
     void (* _event_group_delete)(void *event);
@@ -6664,31 +6866,29 @@ typedef struct {
     int32_t (* _task_ms_to_tick)(uint32_t ms);
     void *(* _task_get_current_task)(void);
     int32_t (* _task_get_max_priority)(void);
-    int32_t (* _is_in_isr)(void);
     void *(* _malloc)(uint32_t size);
     void (* _free)(void *p);
     uint32_t (* _get_free_heap_size)(void);
     uint32_t (* _rand)(void);
     void (* _dport_access_stall_other_cpu_start_wrap)(void);
     void (* _dport_access_stall_other_cpu_end_wrap)(void);
-    int32_t (* _phy_rf_init)(const void * init_data, uint32_t mode, void * calibration_data, uint32_t module);
     int32_t (* _phy_rf_deinit)(uint32_t module);
     void (* _phy_load_cal_and_init)(uint32_t module);
+    void (* _phy_common_clock_enable)(void);
+    void (* _phy_common_clock_disable)(void);
     int32_t (* _read_mac)(uint8_t* mac, uint32_t type);
-    void (* _timer_init)(void);
-    void (* _timer_deinit)(void);
     void (* _timer_arm)(void *timer, uint32_t tmout, 
-# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h" 3 4
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h" 3 4
                                                     _Bool 
-# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h"
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h"
                                                          repeat);
     void (* _timer_disarm)(void *timer);
     void (* _timer_done)(void *ptimer);
     void (* _timer_setfn)(void *ptimer, void *pfunction, void *parg);
     void (* _timer_arm_us)(void *ptimer, uint32_t us, 
-# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h" 3 4
+# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h" 3 4
                                                      _Bool 
-# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h"
+# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h"
                                                           repeat);
     void (* _periph_module_enable)(uint32_t periph);
     void (* _periph_module_disable)(uint32_t periph);
@@ -6709,6 +6909,7 @@ typedef struct {
     int32_t (* _get_time)(void *t);
     unsigned long (* _random)(void);
     void (* _log_write)(uint32_t level, const char* tag, const char* format, ...);
+    void (* _log_writev)(uint32_t level, const char* tag, const char* format, va_list args);
     uint32_t (* _log_timestamp)(void);
     void * (* _malloc_internal)(size_t size);
     void * (* _realloc_internal)(void *ptr, size_t size);
@@ -6726,12 +6927,21 @@ typedef struct {
     int32_t (* _modem_sleep_deregister)(uint32_t module);
     void (* _sc_ack_send)(void *param);
     void (* _sc_ack_send_stop)(void);
+    uint32_t (* _coex_status_get)(void);
+    void (* _coex_condition_set)(uint32_t type, 
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h" 3 4
+                                               _Bool 
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h"
+                                                    dissatisfy);
+    int32_t (* _coex_wifi_request)(uint32_t event, uint32_t latency, uint32_t duration);
+    int32_t (* _coex_wifi_release)(uint32_t event);
     int32_t _magic;
 } wifi_osi_funcs_t;
 
 extern wifi_osi_funcs_t g_wifi_osi_funcs;
-# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 2
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_private.h" 2
+# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 2
+# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 typedef struct {
     system_event_handler_t event_handler;
     wifi_osi_funcs_t* osi_funcs;
@@ -6750,161 +6960,169 @@ typedef struct {
     int rx_ba_win;
     int wifi_task_core_id;
     int beacon_max_len;
+    int mgmt_sbuf_num;
     int magic;
 } wifi_init_config_t;
 # 158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 extern const wpa_crypto_funcs_t g_wifi_default_wpa_crypto_funcs;
-# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_init(const wifi_init_config_t *config);
-# 238 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_deinit(void);
-# 254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_mode(wifi_mode_t mode);
-# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 273 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_mode(wifi_mode_t *mode);
-# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_start(void);
-# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_stop(void);
-# 309 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_restore(void);
-# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_connect(void);
-# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_disconnect(void);
-# 351 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_clear_fast_connect(void);
-# 365 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 372 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_deauth_sta(uint16_t aid);
-# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_scan_start(const wifi_scan_config_t *config, 
-# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
                                                                _Bool 
-# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
                                                                     block);
-# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_scan_stop(void);
-# 413 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_scan_get_ap_num(uint16_t *number);
-# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 436 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_scan_get_ap_records(uint16_t *number, wifi_ap_record_t *ap_records);
-# 445 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_sta_get_ap_info(wifi_ap_record_t *ap_info);
-# 456 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_ps(wifi_ps_type_t type);
-# 467 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_ps(wifi_ps_type_t *type);
-# 484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 491 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_protocol(wifi_interface_t ifx, uint8_t protocol_bitmap);
-# 499 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 506 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_protocol(wifi_interface_t ifx, uint8_t *protocol_bitmap);
-# 517 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 524 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_bandwidth(wifi_interface_t ifx, wifi_bandwidth_t bw);
-# 533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 540 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_bandwidth(wifi_interface_t ifx, wifi_bandwidth_t *bw);
-# 550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 559 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_channel(uint8_t primary, wifi_second_chan_t second);
-# 565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_channel(uint8_t *primary, wifi_second_chan_t *second);
-# 591 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 600 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_country(const wifi_country_t *country);
-# 603 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_country(wifi_country_t *country);
-# 626 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_mac(wifi_interface_t ifx, const uint8_t mac[6]);
-# 640 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_mac(wifi_interface_t ifx, uint8_t mac[6]);
-# 650 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 typedef void (* wifi_promiscuous_cb_t)(void *buf, wifi_promiscuous_pkt_type_t type);
-# 663 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 672 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_promiscuous_rx_cb(wifi_promiscuous_cb_t cb);
-# 674 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 683 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_promiscuous(
-# 674 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
+# 683 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
                                   _Bool 
-# 674 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 683 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
                                        en);
-# 686 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 695 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_promiscuous(
-# 686 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
+# 695 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
                                   _Bool 
-# 686 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 695 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
                                        *en);
-# 699 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 708 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_promiscuous_filter(const wifi_promiscuous_filter_t *filter);
-# 711 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 720 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_promiscuous_filter(wifi_promiscuous_filter_t *filter);
-# 724 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 733 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_promiscuous_ctrl_filter(const wifi_promiscuous_filter_t *filter);
-# 736 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 745 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_promiscuous_ctrl_filter(wifi_promiscuous_filter_t *filter);
-# 759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 768 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_config(wifi_interface_t interface, wifi_config_t *conf);
-# 773 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 782 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_config(wifi_interface_t interface, wifi_config_t *conf);
-# 792 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_ap_get_sta_list(wifi_sta_list_t *sta);
-# 807 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 817 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+esp_err_t esp_wifi_ap_get_sta_aid(const uint8_t mac[6], uint16_t *aid);
+# 831 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_storage(wifi_storage_t storage);
-# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 845 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_auto_connect(
-# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
+# 845 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
                                    _Bool 
-# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 845 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
                                         en) __attribute__ ((deprecated));
-# 833 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 857 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_auto_connect(
-# 833 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
+# 857 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
                                    _Bool 
-# 833 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 857 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
                                         *en) __attribute__ ((deprecated));
-# 851 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
-esp_err_t esp_wifi_set_vendor_ie(
-# 851 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
-                                _Bool 
-# 851 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
-                                     enable, wifi_vendor_ie_type_t type, wifi_vendor_ie_id_t idx, const void *vnd_ie);
-# 861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 867 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 typedef void (*esp_vendor_ie_cb_t) (void *ctx, wifi_vendor_ie_type_t type, const uint8_t sa[6], const vendor_ie_data_t *vnd_ie, int rssi);
-# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+esp_err_t esp_wifi_set_vendor_ie(
+# 885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
+                                _Bool 
+# 885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+                                     enable, wifi_vendor_ie_type_t type, wifi_vendor_ie_id_t idx, const void *vnd_ie);
+# 897 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_vendor_ie_cb(esp_vendor_ie_cb_t cb, void *ctx);
-# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 941 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_max_tx_power(int8_t power);
-# 937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
-esp_err_t esp_wifi_get_max_tx_power(int8_t *power);
 # 954 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+esp_err_t esp_wifi_get_max_tx_power(int8_t *power);
+# 971 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_event_mask(uint32_t mask);
-# 966 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 983 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_event_mask(uint32_t *mask);
-# 993 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_80211_tx(wifi_interface_t ifx, const void *buffer, int len, 
-# 993 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
+# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
                                                                               _Bool 
-# 993 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
                                                                                    en_sys_seq);
-# 1004 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1021 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 typedef void (* wifi_csi_cb_t)(void *ctx, wifi_csi_info_t *data);
-# 1020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1037 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_csi_rx_cb(wifi_csi_cb_t cb, void *ctx);
-# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1050 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_csi_config(const wifi_csi_config_t *config);
-# 1046 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1063 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_csi(
-# 1046 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
+# 1063 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
                           _Bool 
-# 1046 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1063 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
                                en);
-# 1058 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1075 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_ant_gpio(const wifi_ant_gpio_config_t *config);
-# 1070 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1087 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_ant_gpio(wifi_ant_gpio_config_t *config);
-# 1083 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_ant(const wifi_ant_config_t *config);
-# 1095 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_ant(wifi_ant_config_t *config);
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h" 1
-# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/queue.h" 1
+# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h" 2
+
+
+
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 1
 # 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h" 2
 
@@ -6916,13 +7134,36 @@ typedef struct {
     QueueHandle_t handle;
     void *storage;
 } wifi_static_queue_t;
-# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
-esp_err_t esp_wifi_init_internal(const wifi_init_config_t *config);
-# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
 
-# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h" 3 4
+
+
+
+
+typedef enum {
+    WIFI_LOG_ERROR = 0,
+    WIFI_LOG_WARNING,
+    WIFI_LOG_INFO,
+    WIFI_LOG_DEBUG,
+    WIFI_LOG_VERBOSE,
+} wifi_log_level_t;
+
+
+
+
+
+typedef enum {
+    WIFI_LOG_MODULE_ALL = 0,
+    WIFI_LOG_MODULE_WIFI,
+    WIFI_LOG_MODULE_COEX,
+    WIFI_LOG_MODULE_MESH,
+} wifi_log_module_t;
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+esp_err_t esp_wifi_init_internal(const wifi_init_config_t *config);
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h" 3 4
 _Bool 
-# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
     esp_wifi_internal_tx_is_stop(void);
 
 
@@ -6931,7 +7172,7 @@ _Bool
 
 
 void esp_wifi_internal_free_rx_buffer(void* buffer);
-# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
 int esp_wifi_internal_tx(wifi_interface_t wifi_if, void *buffer, uint16_t len);
 
 
@@ -6940,30 +7181,50 @@ int esp_wifi_internal_tx(wifi_interface_t wifi_if, void *buffer, uint16_t len);
 
 
 typedef esp_err_t (*wifi_rxcb_t)(void *buffer, uint16_t len, void *eb);
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
 esp_err_t esp_wifi_internal_reg_rxcb(wifi_interface_t ifx, wifi_rxcb_t fn);
-# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
 esp_err_t esp_wifi_internal_set_sta_ip(void);
-# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
 esp_err_t esp_wifi_internal_set_fix_rate(wifi_interface_t ifx, 
-# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h" 3 4
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h" 3 4
                                                               _Bool 
-# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
                                                                    en, wifi_phy_rate_t rate);
-# 159 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
 esp_err_t esp_wifi_internal_osi_funcs_md5_check(const char *md5);
-# 170 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
-esp_err_t esp_wifi_internal_crypto_funcs_md5_check(const char *md5);
-# 181 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
-esp_err_t esp_wifi_internal_git_commit_id_check(void);
-# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
-void *wifi_malloc( size_t size );
 # 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+esp_err_t esp_wifi_internal_crypto_funcs_md5_check(const char *md5);
+# 215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+esp_err_t esp_wifi_internal_wifi_type_md5_check(const char *md5);
+# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+esp_err_t esp_wifi_internal_esp_wifi_md5_check(const char *md5);
+# 237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+void *wifi_malloc( size_t size );
+# 249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
 void *wifi_realloc( void *ptr, size_t size );
-# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+# 261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
 void *wifi_calloc( size_t n, size_t size );
-# 225 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+typedef esp_err_t (* wifi_mac_time_update_cb_t)( uint32_t time_delta );
+# 279 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
 esp_err_t esp_wifi_internal_update_mac_time( uint32_t time_delta );
+# 290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+esp_err_t esp_wifi_internal_set_log_level(wifi_log_level_t level);
+# 308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+esp_err_t esp_wifi_internal_set_log_mod(wifi_log_module_t module, uint32_t submodule, 
+# 308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h" 3 4
+                                                                                     _Bool 
+# 308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+                                                                                          enable);
+# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+esp_err_t esp_wifi_internal_get_log(wifi_log_level_t *log_level, uint32_t *log_mod);
+# 331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+esp_err_t esp_wifi_internal_get_config_channel(wifi_interface_t ifx, uint8_t *primary, uint8_t *second);
+# 345 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+esp_err_t esp_wifi_internal_get_negotiated_channel(wifi_interface_t ifx, uint8_t aid, uint8_t *primary, uint8_t *second);
+# 356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+esp_err_t esp_wifi_internal_get_negotiated_bandwidth(wifi_interface_t ifx, uint8_t aid, uint8_t *bw);
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 1
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
@@ -6990,15 +7251,15 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 2
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 2
@@ -7039,7 +7300,7 @@ void esp_dport_access_int_abort(void);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/uart_reg.h" 1
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h" 2
 # 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "14"))) DPORT_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -7048,7 +7309,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_
 
 }
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "15"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -7057,7 +7318,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_REA
 
 }
 # 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_READ_PERI_REG(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "16"))) DPORT_READ_PERI_REG(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -7069,7 +7330,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_READ_PERI_REG(ui
 # 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/cache.h"
 void mmu_init(int cpu_no);
 # 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/cache.h"
-static inline unsigned int __attribute__((section(".iram1"))) cache_flash_mmu_set(int cpu_no, int pid, unsigned int vaddr, unsigned int paddr, int psize, int num)
+static inline unsigned int __attribute__((section(".iram1" "." "17"))) cache_flash_mmu_set(int cpu_no, int pid, unsigned int vaddr, unsigned int paddr, int psize, int num)
 {
     extern unsigned int cache_flash_mmu_set_rom(int cpu_no, int pid, unsigned int vaddr, unsigned int paddr, int psize, int num);
 
@@ -7082,9 +7343,9 @@ static inline unsigned int __attribute__((section(".iram1"))) cache_flash_mmu_se
     return ret;
 }
 # 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/cache.h"
-unsigned int __attribute__((section(".iram1"))) cache_sram_mmu_set(int cpu_no, int pid, unsigned int vaddr, unsigned int paddr, int psize, int num);
+unsigned int __attribute__((section(".iram1" "." "18"))) cache_sram_mmu_set(int cpu_no, int pid, unsigned int vaddr, unsigned int paddr, int psize, int num);
 # 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/cache.h"
-static inline void __attribute__((section(".iram1"))) Cache_Read_Init(int cpu_no)
+static inline void __attribute__((section(".iram1" "." "19"))) Cache_Read_Init(int cpu_no)
 {
     extern void Cache_Read_Init_rom(int cpu_no);
     ;
@@ -7092,7 +7353,7 @@ static inline void __attribute__((section(".iram1"))) Cache_Read_Init(int cpu_no
     ;
 }
 # 138 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/cache.h"
-static inline void __attribute__((section(".iram1"))) Cache_Flush(int cpu_no)
+static inline void __attribute__((section(".iram1" "." "20"))) Cache_Flush(int cpu_no)
 {
     extern void Cache_Flush_rom(int cpu_no);
     ;
@@ -7100,7 +7361,7 @@ static inline void __attribute__((section(".iram1"))) Cache_Flush(int cpu_no)
     ;
 }
 # 154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/cache.h"
-static inline void __attribute__((section(".iram1"))) Cache_Read_Disable(int cpu_no)
+static inline void __attribute__((section(".iram1" "." "21"))) Cache_Read_Disable(int cpu_no)
 {
     extern void Cache_Read_Disable_rom(int cpu_no);
     ;
@@ -7108,7 +7369,7 @@ static inline void __attribute__((section(".iram1"))) Cache_Read_Disable(int cpu
     ;
 }
 # 170 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/cache.h"
-static inline void __attribute__((section(".iram1"))) Cache_Read_Enable(int cpu_no)
+static inline void __attribute__((section(".iram1" "." "22"))) Cache_Read_Enable(int cpu_no)
 {
     extern void Cache_Read_Enable_rom(int cpu_no);
     ;
@@ -7240,7 +7501,7 @@ STATUS uart_tx_one_char2(uint8_t TxChar);
 # 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/uart.h"
 void uart_tx_flush(uint8_t uart_no);
 # 269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/uart.h"
-static inline void __attribute__((section(".iram1"))) uart_tx_wait_idle(uint8_t uart_no) {
+static inline void __attribute__((section(".iram1" "." "23"))) uart_tx_wait_idle(uint8_t uart_no) {
     uint32_t status;
     do {
         status = ({ ; (*((volatile uint32_t *)(((0x3ff40000 + (uart_no) * 0x10000 + ( (uart_no) > 1 ? 0xe000 : 0 ) ) + 0x1C)))); });
@@ -7285,7 +7546,7 @@ extern UartDevice UartDev;
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/timer_group_reg.h" 1
 # 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/timer_group_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/timer_group_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/timer_group_struct.h"
 typedef volatile struct {
     struct{
         union {
@@ -7466,76 +7727,7 @@ typedef volatile struct {
 extern timg_dev_t TIMERG0;
 extern timg_dev_t TIMERG1;
 # 32 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 1
-# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 2
-# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
-static inline void *get_sp()
-{
-    void *sp;
-    asm volatile ("mov %0, sp;" : "=r" (sp));
-    return sp;
-}
 
-
-
-
-
-static inline void cpu_write_dtlb(uint32_t vpn, unsigned attr)
-{
-    asm volatile ("wdtlb  %1, %0; dsync\n" :: "r" (vpn), "r" (attr));
-}
-
-
-static inline void cpu_write_itlb(unsigned vpn, unsigned attr)
-{
-    asm volatile ("witlb  %1, %0; isync\n" :: "r" (vpn), "r" (attr));
-}
-
-static inline void cpu_init_memctl()
-{
-
-    uint32_t memctl = 0x00000000;
-    asm volatile ("wsr %0, " "MEMCTL" : : "r" (memctl));;
-
-}
-# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
-static inline void cpu_configure_region_protection()
-{
-    const uint32_t pages_to_protect[] = {0x00000000, 0x80000000, 0xa0000000, 0xc0000000, 0xe0000000};
-    for (int i = 0; i < sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
-        cpu_write_dtlb(pages_to_protect[i], 0xf);
-        cpu_write_itlb(pages_to_protect[i], 0xf);
-    }
-    cpu_write_dtlb(0x20000000, 0);
-    cpu_write_itlb(0x20000000, 0);
-}
-
-
-
-
-
-void esp_cpu_stall(int cpu_id);
-
-
-
-
-
-void esp_cpu_unstall(int cpu_id);
-
-
-
-
-
-void esp_cpu_reset(int cpu_id);
-# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
-
-# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 3 4
-_Bool 
-# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
-    esp_cpu_in_ocd_debug_mode();
-# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h" 1
 # 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc.h"
        
@@ -7970,6 +8162,143 @@ void esp_reset_reason_set_hint(esp_reset_reason_t hint);
 
 esp_reset_reason_t esp_reset_reason_get_hint(void);
 # 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h" 1
+# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+typedef enum {
+    EFUSE_BLK0 = 0,
+    EFUSE_BLK1 = 1,
+    EFUSE_BLK2 = 2,
+    EFUSE_BLK3 = 3
+} esp_efuse_block_t;
+
+
+
+
+typedef enum {
+    EFUSE_CODING_SCHEME_NONE = 0,
+    EFUSE_CODING_SCHEME_3_4 = 1,
+    EFUSE_CODING_SCHEME_REPEAT = 2,
+} esp_efuse_coding_scheme_t;
+
+
+
+
+typedef struct {
+    esp_efuse_block_t efuse_block: 8;
+    uint8_t bit_start;
+    uint16_t bit_count;
+} esp_efuse_desc_t;
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_read_field_blob(const esp_efuse_desc_t* field[], void* dst, size_t dst_size_bits);
+# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_read_field_cnt(const esp_efuse_desc_t* field[], size_t* out_cnt);
+# 108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_write_field_blob(const esp_efuse_desc_t* field[], const void* src, size_t src_size_bits);
+# 124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_write_field_cnt(const esp_efuse_desc_t* field[], size_t cnt);
+# 139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_set_write_protect(esp_efuse_block_t blk);
+# 154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_set_read_protect(esp_efuse_block_t blk);
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+int esp_efuse_get_field_size(const esp_efuse_desc_t* field[]);
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+uint32_t esp_efuse_read_reg(esp_efuse_block_t blk, unsigned int num_reg);
+# 191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_write_reg(esp_efuse_block_t blk, unsigned int num_reg, uint32_t val);
+# 201 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_efuse_coding_scheme_t esp_efuse_get_coding_scheme(esp_efuse_block_t blk);
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_read_block(esp_efuse_block_t blk, void* dst_key, size_t offset_in_bits, size_t size_bits);
+# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_write_block(esp_efuse_block_t blk, const void* src_key, size_t offset_in_bits, size_t size_bits);
+
+
+
+
+
+
+uint8_t esp_efuse_get_chip_ver(void);
+
+
+
+
+
+
+uint32_t esp_efuse_get_pkg_ver(void);
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+void esp_efuse_burn_new_values(void);
+# 278 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+void esp_efuse_reset(void);
+# 288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+void esp_efuse_disable_basic_rom_console(void);
+# 302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_apply_34_encoding(const uint8_t *in_bytes, uint32_t *out_words, size_t in_bytes_len);
+# 320 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+void esp_efuse_write_random_key(uint32_t blk_wdata0_reg);
+
+
+
+
+uint32_t esp_efuse_read_secure_version();
+
+
+
+
+
+
+
+
+# 333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h" 3 4
+_Bool 
+# 333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+    esp_efuse_check_secure_version(uint32_t secure_version);
+# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+esp_err_t esp_efuse_update_secure_version(uint32_t secure_version);
+# 356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/include/esp_efuse.h"
+void esp_efuse_init(uint32_t offset, uint32_t size);
+# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/esp32/include/esp_efuse_table.h" 1
+# 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/efuse/esp32/include/esp_efuse_table.h"
+extern const esp_efuse_desc_t* ESP_EFUSE_MAC_FACTORY[];
+extern const esp_efuse_desc_t* ESP_EFUSE_MAC_FACTORY_CRC[];
+extern const esp_efuse_desc_t* ESP_EFUSE_MAC_CUSTOM_CRC[];
+extern const esp_efuse_desc_t* ESP_EFUSE_MAC_CUSTOM[];
+extern const esp_efuse_desc_t* ESP_EFUSE_MAC_CUSTOM_VER[];
+extern const esp_efuse_desc_t* ESP_EFUSE_SECURE_BOOT_KEY[];
+extern const esp_efuse_desc_t* ESP_EFUSE_ABS_DONE_0[];
+extern const esp_efuse_desc_t* ESP_EFUSE_ENCRYPT_FLASH_KEY[];
+extern const esp_efuse_desc_t* ESP_EFUSE_ENCRYPT_CONFIG[];
+extern const esp_efuse_desc_t* ESP_EFUSE_DISABLE_DL_ENCRYPT[];
+extern const esp_efuse_desc_t* ESP_EFUSE_DISABLE_DL_DECRYPT[];
+extern const esp_efuse_desc_t* ESP_EFUSE_DISABLE_DL_CACHE[];
+extern const esp_efuse_desc_t* ESP_EFUSE_DISABLE_JTAG[];
+extern const esp_efuse_desc_t* ESP_EFUSE_CONSOLE_DEBUG_DISABLE[];
+extern const esp_efuse_desc_t* ESP_EFUSE_FLASH_CRYPT_CNT[];
+extern const esp_efuse_desc_t* ESP_EFUSE_WR_DIS_FLASH_CRYPT_CNT[];
+extern const esp_efuse_desc_t* ESP_EFUSE_WR_DIS_BLK1[];
+extern const esp_efuse_desc_t* ESP_EFUSE_WR_DIS_BLK2[];
+extern const esp_efuse_desc_t* ESP_EFUSE_WR_DIS_BLK3[];
+extern const esp_efuse_desc_t* ESP_EFUSE_RD_DIS_BLK1[];
+extern const esp_efuse_desc_t* ESP_EFUSE_RD_DIS_BLK2[];
+extern const esp_efuse_desc_t* ESP_EFUSE_RD_DIS_BLK3[];
+extern const esp_efuse_desc_t* ESP_EFUSE_CHIP_VER_DIS_APP_CPU[];
+extern const esp_efuse_desc_t* ESP_EFUSE_CHIP_VER_DIS_BT[];
+extern const esp_efuse_desc_t* ESP_EFUSE_CHIP_VER_PKG[];
+extern const esp_efuse_desc_t* ESP_EFUSE_CHIP_CPU_FREQ_LOW[];
+extern const esp_efuse_desc_t* ESP_EFUSE_CHIP_CPU_FREQ_RATED[];
+extern const esp_efuse_desc_t* ESP_EFUSE_CHIP_VER_REV1[];
+extern const esp_efuse_desc_t* ESP_EFUSE_CHIP_VER_REV2[];
+extern const esp_efuse_desc_t* ESP_EFUSE_XPD_SDIO_REG[];
+extern const esp_efuse_desc_t* ESP_EFUSE_SDIO_TIEH[];
+extern const esp_efuse_desc_t* ESP_EFUSE_SDIO_FORCE[];
+extern const esp_efuse_desc_t* ESP_EFUSE_ADC_VREF_AND_SDIO_DREF[];
+extern const esp_efuse_desc_t* ESP_EFUSE_ADC1_TP_LOW[];
+extern const esp_efuse_desc_t* ESP_EFUSE_ADC2_TP_LOW[];
+extern const esp_efuse_desc_t* ESP_EFUSE_ADC1_TP_HIGH[];
+extern const esp_efuse_desc_t* ESP_EFUSE_ADC2_TP_HIGH[];
+extern const esp_efuse_desc_t* ESP_EFUSE_SECURE_VERSION[];
+# 42 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 2
 
 static const char* TAG = "system_api";
 
@@ -7985,9 +8314,9 @@ void system_init()
 esp_err_t esp_base_mac_addr_set(uint8_t *mac)
 {
     if (mac == 
-# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 3 4
+# 56 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 3 4
               ((void *)0)
-# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c"
+# 56 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c"
                   ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Base MAC address is NULL" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Base MAC address is NULL" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Base MAC address is NULL" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Base MAC address is NULL" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Base MAC address is NULL" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         abort();
@@ -8014,31 +8343,17 @@ esp_err_t esp_base_mac_addr_get(uint8_t *mac)
 
 esp_err_t esp_efuse_mac_get_custom(uint8_t *mac)
 {
-    uint32_t mac_low;
-    uint32_t mac_high;
-    uint8_t efuse_crc;
-    uint8_t calc_crc;
-
-    uint8_t version = ({ ; (*(volatile uint32_t *)((0x3ff5A000 + 0x08c))); }) >> 24;
-
+    uint8_t version;
+    esp_efuse_read_field_blob(ESP_EFUSE_MAC_CUSTOM_VER, &version, 8);
     if (version != 1) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Base MAC address from BLK3 of EFUSE version error, version = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, version); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Base MAC address from BLK3 of EFUSE version error, version = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, version); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Base MAC address from BLK3 of EFUSE version error, version = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, version); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Base MAC address from BLK3 of EFUSE version error, version = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, version); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Base MAC address from BLK3 of EFUSE version error, version = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, version); } } while(0); } while(0);
         return 0x10A;
     }
 
-    mac_low = ({ ; (*(volatile uint32_t *)((0x3ff5A000 + 0x07c))); });
-    mac_high = ({ ; (*(volatile uint32_t *)((0x3ff5A000 + 0x078))); });
-
-    mac[0] = mac_high >> 8;
-    mac[1] = mac_high >> 16;
-    mac[2] = mac_high >> 24;
-    mac[3] = mac_low;
-    mac[4] = mac_low >> 8;
-    mac[5] = mac_low >> 16;
-
-    efuse_crc = mac_high;
-
-    calc_crc = esp_crc8(mac, 6);
+    uint8_t efuse_crc;
+    esp_efuse_read_field_blob(ESP_EFUSE_MAC_CUSTOM, mac, 48);
+    esp_efuse_read_field_blob(ESP_EFUSE_MAC_CUSTOM_CRC, &efuse_crc, 8);
+    uint8_t calc_crc = esp_crc8(mac, 6);
 
     if (efuse_crc != calc_crc) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Base MAC address from BLK3 of EFUSE CRC error, efuse_crc = 0x%02x; calc_crc = 0x%02x" "\033[0m" "\n", esp_log_timestamp(), TAG, efuse_crc, calc_crc); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Base MAC address from BLK3 of EFUSE CRC error, efuse_crc = 0x%02x; calc_crc = 0x%02x" "\033[0m" "\n", esp_log_timestamp(), TAG, efuse_crc, calc_crc); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Base MAC address from BLK3 of EFUSE CRC error, efuse_crc = 0x%02x; calc_crc = 0x%02x" "\033[0m" "\n", esp_log_timestamp(), TAG, efuse_crc, calc_crc); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Base MAC address from BLK3 of EFUSE CRC error, efuse_crc = 0x%02x; calc_crc = 0x%02x" "\033[0m" "\n", esp_log_timestamp(), TAG, efuse_crc, calc_crc); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Base MAC address from BLK3 of EFUSE CRC error, efuse_crc = 0x%02x; calc_crc = 0x%02x" "\033[0m" "\n", esp_log_timestamp(), TAG, efuse_crc, calc_crc); } } while(0); } while(0);
@@ -8049,29 +8364,17 @@ esp_err_t esp_efuse_mac_get_custom(uint8_t *mac)
 
 esp_err_t esp_efuse_mac_get_default(uint8_t* mac)
 {
-    uint32_t mac_low;
-    uint32_t mac_high;
     uint8_t efuse_crc;
-    uint8_t calc_crc;
-
-    mac_low = ({ ; (*(volatile uint32_t *)((0x3ff5A000 + 0x004))); });
-    mac_high = ({ ; (*(volatile uint32_t *)((0x3ff5A000 + 0x008))); });
-
-    mac[0] = mac_high >> 8;
-    mac[1] = mac_high;
-    mac[2] = mac_low >> 24;
-    mac[3] = mac_low >> 16;
-    mac[4] = mac_low >> 8;
-    mac[5] = mac_low;
-
-    efuse_crc = mac_high >> 16;
-
-    calc_crc = esp_crc8(mac, 6);
+    esp_efuse_read_field_blob(ESP_EFUSE_MAC_FACTORY, mac, 48);
+    esp_efuse_read_field_blob(ESP_EFUSE_MAC_FACTORY_CRC, &efuse_crc, 8);
+    uint8_t calc_crc = esp_crc8(mac, 6);
 
     if (efuse_crc != calc_crc) {
 
 
+        uint32_t mac_high = ((uint32_t)mac[0] << 8) | mac[1];
         if ((mac_high & 0xFFFF) == 0x18fe) {
+            uint32_t mac_low = ((uint32_t)mac[2] << 24) | ((uint32_t)mac[3] << 16) | ((uint32_t)mac[4] << 8) | mac[5];
             if ((mac_low >= 0x346a85c7) && (mac_low <= 0x346a85f8)) {
                 return 0;
             }
@@ -8091,13 +8394,13 @@ esp_err_t esp_derive_local_mac(uint8_t* local_mac, const uint8_t* universal_mac)
     uint8_t idx;
 
     if (local_mac == 
-# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 3 4
+# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 3 4
                     ((void *)0) 
-# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c"
+# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c"
                          || universal_mac == 
-# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 3 4
+# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 3 4
                                              ((void *)0)
-# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c"
+# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c"
                                                  ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "mac address param is NULL" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "mac address param is NULL" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "mac address param is NULL" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "mac address param is NULL" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "mac address param is NULL" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         return 0x102;
@@ -8121,9 +8424,9 @@ esp_err_t esp_read_mac(uint8_t* mac, esp_mac_type_t type)
     uint8_t efuse_mac[6];
 
     if (mac == 
-# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 3 4
+# 154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 3 4
               ((void *)0)
-# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c"
+# 154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c"
                   ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "mac address param is NULL" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "mac address param is NULL" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "mac address param is NULL" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "mac address param is NULL" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "mac address param is NULL" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         return 0x102;
@@ -8187,9 +8490,9 @@ esp_err_t esp_register_shutdown_handler(shutdown_handler_t handler)
      int i;
      for (i = 0; i < 2; i++) {
    if (shutdown_handlers[i] == 
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 3 4
                               ((void *)0)
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c"
                                   ) {
         shutdown_handlers[i] = handler;
         return 0;
@@ -8200,7 +8503,7 @@ esp_err_t esp_register_shutdown_handler(shutdown_handler_t handler)
 
 void esp_restart_noos() __attribute__ ((noreturn));
 
-void __attribute__((section(".iram1"))) esp_restart(void)
+void __attribute__((section(".iram1" "." "24"))) esp_restart(void)
 {
      int i;
      for (i = 0; i < 2; i++) {
@@ -8219,7 +8522,7 @@ void __attribute__((section(".iram1"))) esp_restart(void)
 
 
 
-void __attribute__((section(".iram1"))) esp_restart_noos()
+void __attribute__((section(".iram1" "." "25"))) esp_restart_noos()
 {
 
     xt_ints_off(0xFFFFFFFF);
@@ -8281,8 +8584,8 @@ void __attribute__((section(".iram1"))) esp_restart_noos()
     (*(volatile uint32_t *)(((0x3ff00000 + 0x0D0)))) = ((0));
 
 
-    (*((volatile uint32_t *)((((0x3ff00000 + 0x0C4)))))) = (uint32_t)(((DPORT_READ_PERI_REG((0x3ff00000 + 0x0C4))|(((1UL << (0))) | ((1UL << (1))) | ((1UL << (2)))))))
-                                                                ;
+    (*((volatile uint32_t *)((((0x3ff00000 + 0x0C4)))))) = (uint32_t)(((DPORT_READ_PERI_REG((0x3ff00000 + 0x0C4))|(((1UL << (0))) | ((1UL << (1))) | ((1UL << (2))) | ((1UL << (5))) | ((1UL << (23)))))))
+                                                                                                    ;
     (*(volatile uint32_t *)(((0x3ff00000 + 0x0C4)))) = ((0));
 
 
@@ -8304,9 +8607,9 @@ void __attribute__((section(".iram1"))) esp_restart_noos()
         esp_cpu_reset(1);
     }
     while(
-# 353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 3 4
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c" 3 4
          1
-# 353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c"
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/system_api.c"
              ) {
         ;
     }
@@ -8333,38 +8636,30 @@ const char* system_get_sdk_version(void)
 
 const char* esp_get_idf_version(void)
 {
-    return "v3.2";
+    return "v3.3.2-270-gf4333c8e3";
 }
 
-static void get_chip_info_esp32(esp_chip_info_t* out_info)
+void esp_chip_info(esp_chip_info_t* out_info)
 {
-    uint32_t reg = ({ ; (*(volatile uint32_t *)((0x3ff5A000 + 0x00c))); });
+    uint32_t efuse_rd3 = ({ ; (*(volatile uint32_t *)((0x3ff5A000 + 0x00c))); });
     memset(out_info, 0, sizeof(*out_info));
 
     out_info->model = CHIP_ESP32;
-    if ((reg & ((0x1)<<(15))) != 0) {
-        out_info->revision = 1;
-    }
-    if ((reg & ((1UL << (0)))) == 0) {
+    out_info->revision = esp_efuse_get_chip_ver();
+
+    if ((efuse_rd3 & ((1UL << (0)))) == 0) {
         out_info->cores = 2;
     } else {
         out_info->cores = 1;
     }
     out_info->features = (1UL << (1));
-    if ((reg & ((1UL << (1)))) == 0) {
+    if ((efuse_rd3 & ((1UL << (1)))) == 0) {
         out_info->features |= (1UL << (5)) | (1UL << (4));
     }
-    int package = (reg & ((0x7)<<(9))) >> 9;
+    int package = (efuse_rd3 & ((0x7)<<(9))) >> 9;
     if (package == 2 ||
         package == 4 ||
         package == 5) {
         out_info->features |= (1UL << (0));
     }
-}
-
-void esp_chip_info(esp_chip_info_t* out_info)
-{
-
-
-    return get_chip_info_esp32(out_info);
 }

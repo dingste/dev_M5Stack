@@ -945,15 +945,15 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_common_api.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_common_api.h"
@@ -1530,7 +1530,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 2
 
@@ -1624,7 +1624,356 @@ typedef uint8_t esp_ble_key_mask_t;
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_common_api.h" 2
 # 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_common_api.h"
 extern esp_err_t esp_ble_gatt_set_local_mtu (uint16_t mtu);
+
+
+extern uint16_t esp_ble_get_sendable_packets_num (void);
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h" 1
+# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+typedef struct {
+    uint32_t reserved_2: 2;
+    uint32_t minor: 6;
+    uint32_t major: 5;
+    uint32_t service: 11;
+    uint32_t reserved_8: 8;
+} esp_bt_cod_t;
+
+
+typedef enum {
+    ESP_BT_SET_COD_MAJOR_MINOR = 0x01,
+    ESP_BT_SET_COD_SERVICE_CLASS = 0x02,
+    ESP_BT_CLR_COD_SERVICE_CLASS = 0x04,
+    ESP_BT_SET_COD_ALL = 0x08,
+    ESP_BT_INIT_COD = 0x0a,
+} esp_bt_cod_mode_t;
+
+
+typedef enum {
+    ESP_BT_SCAN_MODE_NONE = 0,
+    ESP_BT_SCAN_MODE_CONNECTABLE,
+    ESP_BT_SCAN_MODE_CONNECTABLE_DISCOVERABLE
+} esp_bt_scan_mode_t;
+
+
+typedef enum {
+    ESP_BT_GAP_DEV_PROP_BDNAME = 1,
+    ESP_BT_GAP_DEV_PROP_COD,
+    ESP_BT_GAP_DEV_PROP_RSSI,
+    ESP_BT_GAP_DEV_PROP_EIR,
+} esp_bt_gap_dev_prop_type_t;
+# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+typedef struct {
+    esp_bt_gap_dev_prop_type_t type;
+    int len;
+    void *val;
+} esp_bt_gap_dev_prop_t;
+
+
+typedef enum {
+    ESP_BT_EIR_TYPE_FLAGS = 0x01,
+    ESP_BT_EIR_TYPE_INCMPL_16BITS_UUID = 0x02,
+    ESP_BT_EIR_TYPE_CMPL_16BITS_UUID = 0x03,
+    ESP_BT_EIR_TYPE_INCMPL_32BITS_UUID = 0x04,
+    ESP_BT_EIR_TYPE_CMPL_32BITS_UUID = 0x05,
+    ESP_BT_EIR_TYPE_INCMPL_128BITS_UUID = 0x06,
+    ESP_BT_EIR_TYPE_CMPL_128BITS_UUID = 0x07,
+    ESP_BT_EIR_TYPE_SHORT_LOCAL_NAME = 0x08,
+    ESP_BT_EIR_TYPE_CMPL_LOCAL_NAME = 0x09,
+    ESP_BT_EIR_TYPE_TX_POWER_LEVEL = 0x0a,
+    ESP_BT_EIR_TYPE_MANU_SPECIFIC = 0xff,
+} esp_bt_eir_type_t;
+
+
+typedef enum {
+    ESP_BT_COD_SRVC_NONE = 0,
+    ESP_BT_COD_SRVC_LMTD_DISCOVER = 0x1,
+    ESP_BT_COD_SRVC_POSITIONING = 0x8,
+    ESP_BT_COD_SRVC_NETWORKING = 0x10,
+    ESP_BT_COD_SRVC_RENDERING = 0x20,
+    ESP_BT_COD_SRVC_CAPTURING = 0x40,
+    ESP_BT_COD_SRVC_OBJ_TRANSFER = 0x80,
+    ESP_BT_COD_SRVC_AUDIO = 0x100,
+    ESP_BT_COD_SRVC_TELEPHONY = 0x200,
+    ESP_BT_COD_SRVC_INFORMATION = 0x400,
+} esp_bt_cod_srvc_t;
+
+typedef enum{
+    ESP_BT_PIN_TYPE_VARIABLE = 0,
+    ESP_BT_PIN_TYPE_FIXED = 1,
+} esp_bt_pin_type_t;
+
+
+typedef uint8_t esp_bt_pin_code_t[16];
+
+typedef enum {
+    ESP_BT_SP_IOCAP_MODE = 0,
+
+} esp_bt_sp_param_t;
+
+
+
+
+
+
+typedef uint8_t esp_bt_io_cap_t;
+
+
+
+
+
+
+typedef enum {
+    ESP_BT_COD_MAJOR_DEV_MISC = 0,
+    ESP_BT_COD_MAJOR_DEV_COMPUTER = 1,
+    ESP_BT_COD_MAJOR_DEV_PHONE = 2,
+    ESP_BT_COD_MAJOR_DEV_LAN_NAP = 3,
+    ESP_BT_COD_MAJOR_DEV_AV = 4,
+    ESP_BT_COD_MAJOR_DEV_PERIPHERAL = 5,
+    ESP_BT_COD_MAJOR_DEV_IMAGING = 6,
+    ESP_BT_COD_MAJOR_DEV_WEARABLE = 7,
+    ESP_BT_COD_MAJOR_DEV_TOY = 8,
+    ESP_BT_COD_MAJOR_DEV_HEALTH = 9,
+    ESP_BT_COD_MAJOR_DEV_UNCATEGORIZED = 31,
+} esp_bt_cod_major_dev_t;
+# 160 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+typedef enum {
+    ESP_BT_GAP_DISCOVERY_STOPPED,
+    ESP_BT_GAP_DISCOVERY_STARTED,
+} esp_bt_gap_discovery_state_t;
+
+
+typedef enum {
+    ESP_BT_GAP_DISC_RES_EVT = 0,
+    ESP_BT_GAP_DISC_STATE_CHANGED_EVT,
+    ESP_BT_GAP_RMT_SRVCS_EVT,
+    ESP_BT_GAP_RMT_SRVC_REC_EVT,
+    ESP_BT_GAP_AUTH_CMPL_EVT,
+    ESP_BT_GAP_PIN_REQ_EVT,
+    ESP_BT_GAP_CFM_REQ_EVT,
+    ESP_BT_GAP_KEY_NOTIF_EVT,
+    ESP_BT_GAP_KEY_REQ_EVT,
+    ESP_BT_GAP_READ_RSSI_DELTA_EVT,
+    ESP_BT_GAP_EVT_MAX,
+} esp_bt_gap_cb_event_t;
+
+
+typedef enum {
+    ESP_BT_INQ_MODE_GENERAL_INQUIRY,
+    ESP_BT_INQ_MODE_LIMITED_INQUIRY,
+} esp_bt_inq_mode_t;
+
+
+
+
+
+
+typedef union {
+
+
+
+    struct disc_res_param {
+        esp_bd_addr_t bda;
+        int num_prop;
+        esp_bt_gap_dev_prop_t *prop;
+    } disc_res;
+
+
+
+
+    struct disc_state_changed_param {
+        esp_bt_gap_discovery_state_t state;
+    } disc_st_chg;
+
+
+
+
+    struct rmt_srvcs_param {
+        esp_bd_addr_t bda;
+        esp_bt_status_t stat;
+        int num_uuids;
+        esp_bt_uuid_t *uuid_list;
+    } rmt_srvcs;
+
+
+
+
+    struct rmt_srvc_rec_param {
+        esp_bd_addr_t bda;
+        esp_bt_status_t stat;
+    } rmt_srvc_rec;
+
+
+
+
+    struct read_rssi_delta_param {
+        esp_bd_addr_t bda;
+        esp_bt_status_t stat;
+        int8_t rssi_delta;
+    } read_rssi_delta;
+
+
+
+
+    struct auth_cmpl_param {
+        esp_bd_addr_t bda;
+        esp_bt_status_t stat;
+        uint8_t device_name[(248) + 1];
+    } auth_cmpl;
+
+
+
+
+    struct pin_req_param {
+        esp_bd_addr_t bda;
+        
+# 249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
+       _Bool 
+# 249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+            min_16_digit;
+    } pin_req;
+
+
+
+
+    struct cfm_req_param {
+        esp_bd_addr_t bda;
+        uint32_t num_val;
+    } cfm_req;
+
+
+
+
+    struct key_notif_param {
+        esp_bd_addr_t bda;
+        uint32_t passkey;
+    } key_notif;
+
+
+
+
+    struct key_req_param {
+        esp_bd_addr_t bda;
+    } key_req;
+} esp_bt_gap_cb_param_t;
+
+
+
+
+
+
+typedef void (* esp_bt_gap_cb_t)(esp_bt_gap_cb_event_t event, esp_bt_gap_cb_param_t *param);
+
+
+
+
+
+
+inline uint32_t esp_bt_gap_get_cod_srvc(uint32_t cod)
+{
+    return (cod & (0xffe000)) >> (13);
+}
+
+
+
+
+
+
+inline uint32_t esp_bt_gap_get_cod_major_dev(uint32_t cod)
+{
+    return (cod & (0x1f00)) >> (8);
+}
+
+
+
+
+
+
+inline uint32_t esp_bt_gap_get_cod_minor_dev(uint32_t cod)
+{
+    return (cod & (0xfc)) >> (2);
+}
+
+
+
+
+
+
+inline uint32_t esp_bt_gap_get_cod_format_type(uint32_t cod)
+{
+    return (cod & (0x03));
+}
+# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+inline 
+# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
+      _Bool 
+# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+           esp_bt_gap_is_valid_cod(uint32_t cod)
+{
+    if (esp_bt_gap_get_cod_format_type(cod) == (0x00) &&
+            esp_bt_gap_get_cod_srvc(cod) != ESP_BT_COD_SRVC_NONE) {
+        return 
+# 334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
+              1
+# 334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+                  ;
+    }
+
+    return 
+# 337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
+          0
+# 337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+               ;
+}
+# 347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_register_callback(esp_bt_gap_cb_t callback);
+# 361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_set_scan_mode(esp_bt_scan_mode_t mode);
+# 380 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_start_discovery(esp_bt_inq_mode_t mode, uint8_t inq_len, uint8_t num_rsps);
+# 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_cancel_discovery(void);
+# 403 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_get_remote_services(esp_bd_addr_t remote_bda);
+# 415 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_get_remote_service_record(esp_bd_addr_t remote_bda, esp_bt_uuid_t *uuid);
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+uint8_t *esp_bt_gap_resolve_eir_data(uint8_t *eir, esp_bt_eir_type_t type, uint8_t *length);
+# 444 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_set_cod(esp_bt_cod_t cod, esp_bt_cod_mode_t mode);
+# 455 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_get_cod(esp_bt_cod_t *cod);
+# 467 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_read_rssi_delta(esp_bd_addr_t remote_addr);
+# 479 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_remove_bond_device(esp_bd_addr_t bd_addr);
+# 489 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+int esp_bt_gap_get_bond_device_num(void);
+# 506 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_get_bond_device_list(int *dev_num, esp_bd_addr_t *dev_list);
+# 523 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_set_pin(esp_bt_pin_type_t pin_type, uint8_t pin_code_len, esp_bt_pin_code_t pin_code);
+# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_pin_reply(esp_bd_addr_t bd_addr, 
+# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
+                                                     _Bool 
+# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+                                                          accept, uint8_t pin_code_len, esp_bt_pin_code_t pin_code);
+# 553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_set_security_param(esp_bt_sp_param_t param_type,
+                                        void *value, uint8_t len);
+# 569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_ssp_passkey_reply(esp_bd_addr_t bd_addr, 
+# 569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
+                                                             _Bool 
+# 569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+                                                                  accept, uint32_t passkey);
+# 583 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+esp_err_t esp_bt_gap_ssp_confirm_reply(esp_bd_addr_t bd_addr, 
+# 583 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
+                                                             _Bool 
+# 583 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_bt_api.h"
+                                                                  accept);
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h" 1
 # 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h"
@@ -1733,223 +2082,17 @@ esp_err_t protocomm_set_version(protocomm_t *pc, const char *ep_name,
                                 const char *version);
 # 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h"
 esp_err_t protocomm_unset_version(protocomm_t *pc, const char *ep_name);
-# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/transports/protocomm_ble.h" 1
 # 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/transports/protocomm_ble.h"
        
-# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/transports/protocomm_ble.h"
-typedef struct name_uuid {
-
-
-
-    const char *name;
-
-
-
-
-
-    uint16_t uuid;
-} protocomm_ble_name_uuid_t;
-
-
-
-
-typedef struct {
-
-
-
-    char device_name[13];
-    uint8_t service_uuid[16];
-    ssize_t nu_lookup_count;
-
-
-
-
-    protocomm_ble_name_uuid_t *nu_lookup;
-} protocomm_ble_config_t;
-# 79 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/transports/protocomm_ble.h"
-esp_err_t protocomm_ble_start(protocomm_t *pc, const protocomm_ble_config_t *config);
-# 96 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/transports/protocomm_ble.h"
-esp_err_t protocomm_ble_stop(protocomm_t *pc);
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
-
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/common/protocomm_priv.h" 1
-# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/common/protocomm_priv.h"
-       
-
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/queue.h" 1
-# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/common/protocomm_priv.h" 2
-# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/common/protocomm_priv.h"
-typedef struct protocomm_ep {
-    const char *ep_name;
-    protocomm_req_handler_t req_handler;
-
-
-
-    void *priv_data;
-
-    uint32_t flag;
-
-
-    struct { struct protocomm_ep *sle_next; } next;
-} protocomm_ep_t;
-# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/common/protocomm_priv.h"
-struct protocomm {
-
-
-    int (*add_endpoint)(const char *ep_name, protocomm_req_handler_t h, void *priv_data);
-
-
-
-    int (*remove_endpoint)(const char *ep_name);
-
-
-
-    const protocomm_security_t *sec;
-
-
-    protocomm_security_pop_t *pop;
-
-
-    struct eptable_t { struct protocomm_ep *slh_first; } endpoints;
-
-
-    void* priv;
-
-
-    const char* ver;
-};
-# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h" 1
-# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 1
-# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
-
-
-
-void * memchr (const void *, int, size_t);
-int memcmp (const void *, const void *, size_t);
-void * memcpy (void * restrict, const void * restrict, size_t);
-void * memmove (void *, const void *, size_t);
-void * memset (void *, int, size_t);
-char *strcat (char *restrict, const char *restrict);
-char *strchr (const char *, int);
-int strcmp (const char *, const char *);
-int strcoll (const char *, const char *);
-char *strcpy (char *restrict, const char *restrict);
-size_t strcspn (const char *, const char *);
-char *strerror (int);
-size_t strlen (const char *);
-char *strncat (char *restrict, const char *restrict, size_t);
-int strncmp (const char *, const char *, size_t);
-char *strncpy (char *restrict, const char *restrict, size_t);
-char *strpbrk (const char *, const char *);
-char *strrchr (const char *, int);
-size_t strspn (const char *, const char *);
-char *strstr (const char *, const char *);
-
-char *strtok (char *restrict, const char *restrict);
-
-size_t strxfrm (char *restrict, const char *restrict, size_t);
-
-
-char *strtok_r (char *restrict, const char *restrict, char **restrict);
-
-
-int bcmp (const void *, const void *, size_t);
-void bcopy (const void *, void *, size_t);
-void bzero (void *, size_t);
-int ffs (int);
-char *index (const char *, int);
-
-
-void * memccpy (void * restrict, const void * restrict, int, size_t);
-
-
-
-
-
-void * memrchr (const void *, int, size_t);
-
-
-
-
-char *rindex (const char *, int);
-
-char *stpcpy (char *restrict, const char *restrict);
-char *stpncpy (char *restrict, const char *restrict, size_t);
-
-int strcasecmp (const char *, const char *);
-
-
-
-
-
-
-char *strdup (const char *);
-
-
-char *_strdup_r (struct _reent *, const char *);
-
-
-char *strndup (const char *, size_t);
-
-
-
-char *_strndup_r (struct _reent *, const char *, size_t);
-# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
-int strerror_r (int, char *, size_t)
-             __asm__ ("" "__xpg_strerror_r");
-
-
-
-
-
-
-
-char * _strerror_r (struct _reent *, int, int, int *);
-
-
-size_t strlcat (char *, const char *, size_t);
-size_t strlcpy (char *, const char *, size_t);
-
-
-int strncasecmp (const char *, const char *, size_t);
-
-
-
-size_t strnlen (const char *, size_t);
-
-
-char *strsep (char **, const char *);
-
-
-
-
-
-
-
-char *strlwr (char *);
-char *strupr (char *);
-
-
-
-char *strsignal (int __signo);
-# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/string.h" 1
-# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
-
-
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 1
 # 51 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 typedef uint8_t esp_ble_key_type_t;
-# 61 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 62 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 typedef uint8_t esp_ble_auth_req_t;
-# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 typedef uint8_t esp_ble_io_cap_t;
 
 
@@ -1985,7 +2128,7 @@ typedef enum {
     ESP_GAP_BLE_UPDATE_DUPLICATE_EXCEPTIONAL_LIST_COMPLETE_EVT,
     ESP_GAP_BLE_EVT_MAX,
 } esp_gap_ble_cb_event_t;
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 181 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 typedef enum {
     ESP_BLE_AD_TYPE_FLAG = 0x01,
     ESP_BLE_AD_TYPE_16SRV_PART = 0x02,
@@ -2075,14 +2218,26 @@ typedef enum {
 
 typedef enum {
     ESP_BLE_SM_PASSKEY = 0,
+
     ESP_BLE_SM_AUTHEN_REQ_MODE,
+
     ESP_BLE_SM_IOCAP_MODE,
+
     ESP_BLE_SM_SET_INIT_KEY,
+
     ESP_BLE_SM_SET_RSP_KEY,
+
     ESP_BLE_SM_MAX_KEY_SIZE,
+
+    ESP_BLE_SM_MIN_KEY_SIZE,
+
     ESP_BLE_SM_SET_STATIC_PASSKEY,
+
     ESP_BLE_SM_CLEAR_STATIC_PASSKEY,
+
     ESP_BLE_SM_ONLY_ACCEPT_SPECIFIED_SEC_AUTH,
+
+    ESP_BLE_SM_OOB_SUPPORT,
     ESP_BLE_SM_MAX_PARAM,
 } esp_ble_sm_param_t;
 
@@ -2107,19 +2262,19 @@ typedef struct {
 
 typedef struct {
     
-# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
+# 313 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
    _Bool 
-# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 313 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
                            set_scan_rsp;
     
-# 298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
+# 314 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
    _Bool 
-# 298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 314 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
                            include_name;
     
-# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
+# 315 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
    _Bool 
-# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 315 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
                            include_txpower;
     int min_interval;
 
@@ -2347,16 +2502,16 @@ typedef struct
 {
     esp_bd_addr_t bd_addr;
     
-# 525 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
+# 541 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
    _Bool 
-# 525 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 541 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
                          key_present;
     esp_link_key key;
     uint8_t key_type;
     
-# 528 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
+# 544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
    _Bool 
-# 528 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
                          success;
     uint8_t fail_reason;
     esp_ble_addr_type_t addr_type;
@@ -2416,12 +2571,18 @@ typedef enum {
 typedef enum {
     ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_INFO_ADV_ADDR = 0,
     ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_INFO_MESH_LINK_ID,
+    ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_INFO_MESH_BEACON_TYPE,
+    ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_INFO_MESH_PROV_SRV_ADV,
+    ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_INFO_MESH_PROXY_SRV_ADV,
 } esp_ble_duplicate_exceptional_info_type_t;
 
 typedef enum {
     ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_ADDR_LIST = (1UL<<(0)),
     ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_MESH_LINK_ID_LIST = (1UL<<(1)),
-    ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_ALL_LIST = ((1UL<<(0)) | (1UL<<(1))),
+    ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_MESH_BEACON_TYPE_LIST = (1UL<<(2)),
+    ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_MESH_PROV_SRV_ADV_LIST = (1UL<<(3)),
+    ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_MESH_PROXY_SRV_ADV_LIST = (1UL<<(4)),
+    ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_ALL_LIST = 0xFFFF,
 } esp_duplicate_scan_exceptional_list_type_t;
 
 typedef uint8_t esp_duplicate_info_t[6];
@@ -2589,102 +2750,320 @@ typedef union {
 
 
 typedef void (* esp_gap_ble_cb_t)(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param);
-# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 793 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_register_callback(esp_gap_ble_cb_t callback);
-# 786 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_config_adv_data (esp_ble_adv_data_t *adv_data);
-# 801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 823 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_set_scan_params(esp_ble_scan_params_t *scan_params);
-# 814 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
-esp_err_t esp_ble_gap_start_scanning(uint32_t duration);
-# 824 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
-esp_err_t esp_ble_gap_stop_scanning(void);
 # 836 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+esp_err_t esp_ble_gap_start_scanning(uint32_t duration);
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+esp_err_t esp_ble_gap_stop_scanning(void);
+# 858 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_start_advertising (esp_ble_adv_params_t *adv_params);
-# 848 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 870 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_stop_advertising(void);
-# 862 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 884 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_update_conn_params(esp_ble_conn_update_params_t *params);
-# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
-esp_err_t esp_ble_gap_set_pkt_data_len(esp_bd_addr_t remote_device, uint16_t tx_data_length);
-# 885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
-esp_err_t esp_ble_gap_set_rand_addr(esp_bd_addr_t rand_addr);
 # 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+esp_err_t esp_ble_gap_set_pkt_data_len(esp_bd_addr_t remote_device, uint16_t tx_data_length);
+# 907 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+esp_err_t esp_ble_gap_set_rand_addr(esp_bd_addr_t rand_addr);
+# 917 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_clear_rand_addr(void);
-# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 931 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_config_local_privacy (
-# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
+# 931 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
                                            _Bool 
-# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 931 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
                                                 privacy_enable);
-# 923 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 945 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_config_local_icon (uint16_t icon);
-# 935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 957 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_update_whitelist(
-# 935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
+# 957 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
                                       _Bool 
-# 935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 957 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
                                            add_remove, esp_bd_addr_t remote_bda);
-# 946 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 968 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_get_whitelist_size(uint16_t *length);
-# 964 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 986 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_set_prefer_conn_params(esp_bd_addr_t bd_addr,
                                                                  uint16_t min_conn_int, uint16_t max_conn_int,
                                                                  uint16_t slave_latency, uint16_t supervision_tout);
-# 978 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1000 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_set_device_name(const char *name);
-# 991 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1013 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_get_local_used_addr(esp_bd_addr_t local_used_addr, uint8_t * addr_type);
-# 1002 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1024 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 uint8_t *esp_ble_resolve_adv_data(uint8_t *adv_data, uint8_t type, uint8_t *length);
-# 1016 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1038 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_config_adv_data_raw(uint8_t *raw_data, uint32_t raw_data_len);
-# 1029 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1051 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_config_scan_rsp_data_raw(uint8_t *raw_data, uint32_t raw_data_len);
-# 1042 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1064 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_read_rssi(esp_bd_addr_t remote_addr);
-# 1054 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_add_duplicate_scan_exceptional_device(esp_ble_duplicate_exceptional_info_type_t type, esp_duplicate_info_t device_info);
-# 1066 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1090 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_remove_duplicate_scan_exceptional_device(esp_ble_duplicate_exceptional_info_type_t type, esp_duplicate_info_t device_info);
-# 1079 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_clean_duplicate_scan_exceptional_list(esp_duplicate_scan_exceptional_list_type_t list_type);
-# 1093 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1117 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_set_security_param(esp_ble_sm_param_t param_type,
                                          void *value, uint8_t len);
-# 1106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_security_rsp(esp_bd_addr_t bd_addr, 
-# 1106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
+# 1130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
                                                           _Bool 
-# 1106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
                                                                accept);
-# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_set_encryption(esp_bd_addr_t bd_addr, esp_ble_sec_act_t sec_act);
-# 1136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1160 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_passkey_reply(esp_bd_addr_t bd_addr, 
-# 1136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
+# 1160 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
                                                       _Bool 
-# 1136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1160 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
                                                            accept, uint32_t passkey);
-# 1149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_confirm_reply(esp_bd_addr_t bd_addr, 
-# 1149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
+# 1173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
                                                       _Bool 
-# 1149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
                                                            accept);
-# 1161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_remove_bond_device(esp_bd_addr_t bd_addr);
-# 1171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 int esp_ble_get_bond_device_num(void);
-# 1187 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_get_bond_device_list(int *dev_num, esp_ble_bond_dev_t *dev_list);
-# 1206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1225 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+esp_err_t esp_ble_oob_req_reply(esp_bd_addr_t bd_addr, uint8_t *TK, uint8_t len);
+# 1244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_disconnect(esp_bd_addr_t remote_device);
-# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h" 2
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/transports/protocomm_ble.h" 2
+# 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/transports/protocomm_ble.h"
+typedef struct name_uuid {
+
+
+
+    const char *name;
+
+
+
+
+
+    uint16_t uuid;
+} protocomm_ble_name_uuid_t;
+
+
+
+
+typedef struct {
+
+
+
+    char device_name[(31 - 2)];
+
+
+
+
+    uint8_t service_uuid[16];
+
+
+
+
+    ssize_t nu_lookup_count;
+
+
+
+
+    protocomm_ble_name_uuid_t *nu_lookup;
+} protocomm_ble_config_t;
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/transports/protocomm_ble.h"
+esp_err_t protocomm_ble_start(protocomm_t *pc, const protocomm_ble_config_t *config);
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/transports/protocomm_ble.h"
+esp_err_t protocomm_ble_stop(protocomm_t *pc);
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/common/protocomm_priv.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/common/protocomm_priv.h"
+       
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/queue.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/common/protocomm_priv.h" 2
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/common/protocomm_priv.h"
+typedef struct protocomm_ep {
+    const char *ep_name;
+    protocomm_req_handler_t req_handler;
+
+
+
+    void *priv_data;
+
+    uint32_t flag;
+
+
+    struct { struct protocomm_ep *sle_next; } next;
+} protocomm_ep_t;
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/common/protocomm_priv.h"
+struct protocomm {
+
+
+    int (*add_endpoint)(const char *ep_name, protocomm_req_handler_t h, void *priv_data);
+
+
+
+    int (*remove_endpoint)(const char *ep_name);
+
+
+
+    const protocomm_security_t *sec;
+
+
+    protocomm_security_pop_t *pop;
+
+
+    struct eptable_t { struct protocomm_ep *slh_first; } endpoints;
+
+
+    void* priv;
+
+
+    const char* ver;
+};
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
+
+
+
+void * memchr (const void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void * memcpy (void * restrict, const void * restrict, size_t);
+void * memmove (void *, const void *, size_t);
+void * memset (void *, int, size_t);
+char *strcat (char *restrict, const char *restrict);
+char *strchr (const char *, int);
+int strcmp (const char *, const char *);
+int strcoll (const char *, const char *);
+char *strcpy (char *restrict, const char *restrict);
+size_t strcspn (const char *, const char *);
+char *strerror (int);
+size_t strlen (const char *);
+char *strncat (char *restrict, const char *restrict, size_t);
+int strncmp (const char *, const char *, size_t);
+char *strncpy (char *restrict, const char *restrict, size_t);
+char *strpbrk (const char *, const char *);
+char *strrchr (const char *, int);
+size_t strspn (const char *, const char *);
+char *strstr (const char *, const char *);
+
+char *strtok (char *restrict, const char *restrict);
+
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+
+
+int bcmp (const void *, const void *, size_t);
+void bcopy (const void *, void *, size_t);
+void bzero (void *, size_t);
+int ffs (int);
+char *index (const char *, int);
+
+
+void * memccpy (void * restrict, const void * restrict, int, size_t);
+
+
+
+
+
+void * memrchr (const void *, int, size_t);
+
+
+
+
+char *rindex (const char *, int);
+
+char *stpcpy (char *restrict, const char *restrict);
+char *stpncpy (char *restrict, const char *restrict, size_t);
+
+int strcasecmp (const char *, const char *);
+
+
+
+
+
+
+char *strdup (const char *);
+
+
+char *_strdup_r (struct _reent *, const char *);
+
+
+char *strndup (const char *, size_t);
+
+
+
+char *_strndup_r (struct _reent *, const char *, size_t);
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+int strerror_r (int, char *, size_t)
+             __asm__ ("" "__xpg_strerror_r");
+
+
+
+
+
+
+
+char * _strerror_r (struct _reent *, int, int, int *);
+
+
+size_t strlcat (char *, const char *, size_t);
+size_t strlcpy (char *, const char *, size_t);
+
+
+int strncasecmp (const char *, const char *, size_t);
+
+
+
+size_t strnlen (const char *, size_t);
+
+
+char *strsep (char **, const char *);
+
+
+
+
+
+
+
+char *strlwr (char *);
+char *strupr (char *);
+
+
+
+char *strsignal (int __signo);
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/string.h" 1
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
+
+
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h" 2
+
+
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h" 1
-# 159 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h"
+# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h"
 typedef enum {
     ESP_GATT_PREP_WRITE_CANCEL = 0x00,
     ESP_GATT_PREP_WRITE_EXEC = 0x01,
@@ -2775,9 +3154,9 @@ typedef struct {
 typedef struct {
     esp_gatt_id_t id;
     
-# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h" 3 4
+# 254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h" 3 4
    _Bool 
-# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h"
+# 254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h"
                    is_primary;
 } __attribute__((packed)) esp_gatt_srvc_id_t;
 
@@ -2792,9 +3171,9 @@ typedef enum {
     ESP_GATT_AUTH_REQ_SIGNED_NO_MITM = 3,
     ESP_GATT_AUTH_REQ_SIGNED_MITM = 4,
 } esp_gatt_auth_req_t;
-# 275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h"
+# 281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h"
 typedef uint16_t esp_gatt_perm_t;
-# 287 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h"
 typedef uint8_t esp_gatt_char_prop_t;
 
 
@@ -2939,9 +3318,9 @@ typedef struct {
 
 typedef struct {
     
-# 430 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h" 3 4
+# 436 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h" 3 4
    _Bool 
-# 430 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h"
+# 436 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h"
                                is_primary;
     uint16_t start_handle;
     uint16_t end_handle;
@@ -3318,9 +3697,14 @@ typedef struct {
 
     const char *device_name;
 
-    esp_ble_adv_data_t adv_data;
+    uint8_t *raw_adv_data_p;
+    uint8_t raw_adv_data_len;
+
+    uint8_t *raw_scan_rsp_data_p;
+    uint8_t raw_scan_rsp_data_len;
 
     esp_ble_adv_params_t adv_params;
+
 
     esp_gatts_attr_db_t *gatt_db;
 
@@ -3338,7 +3722,7 @@ typedef struct {
 
     simple_ble_cb_t *set_mtu_fn;
 } simple_ble_cfg_t;
-# 65 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h"
+# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h"
 simple_ble_cfg_t *simple_ble_init();
 
 
@@ -3348,13 +3732,13 @@ simple_ble_cfg_t *simple_ble_init();
 
 
 esp_err_t simple_ble_deinit();
-# 86 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h"
+# 91 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h"
 esp_err_t simple_ble_start(simple_ble_cfg_t *cfg);
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h"
+# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h"
 esp_err_t simple_ble_stop();
-# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h"
-uint16_t simple_ble_get_uuid(uint16_t handle);
-# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h"
+const uint8_t *simple_ble_get_uuid128(uint16_t handle);
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
 
 
 
@@ -3362,10 +3746,17 @@ uint16_t simple_ble_get_uuid(uint16_t handle);
 static const char *TAG = "protocomm_ble";
 
 
-const uint16_t GATTS_SERVICE_UUID_PROV = 0xFFFF;
-const uint16_t primary_service_uuid = 0x2800;
-const uint16_t character_declaration_uuid = 0x2803;
-const uint8_t char_prop_read_write = (1 << 1) | (1 << 3);
+static const uint16_t primary_service_uuid = 0x2800;
+static const uint16_t character_declaration_uuid = 0x2803;
+static const uint16_t character_user_description = 0x2901;
+static const uint8_t character_prop_read_write = (1 << 1) | (1 << 3);
+static const uint8_t ble_advertisement_flags = (0x01 << 1) | (0x01 << 2);
+
+typedef struct {
+    uint8_t type;
+    uint8_t length;
+    uint8_t *data_p;
+} raw_data_info_t;
 
 typedef struct {
     uint8_t *prepare_buf;
@@ -3375,11 +3766,21 @@ typedef struct {
 
 static prepare_type_env_t prepare_write_env;
 
+typedef struct name_uuid128 {
+    const char *name;
+    uint8_t uuid128[16];
+} name_uuid128_t;
+
 typedef struct _protocomm_ble {
     protocomm_t *pc_ble;
-    protocomm_ble_name_uuid_t *g_nu_lookup;
+    name_uuid128_t *g_nu_lookup;
     ssize_t g_nu_lookup_count;
     uint16_t gatt_mtu;
+    uint8_t *service_uuid;
+    uint8_t *raw_adv_data_p;
+    uint8_t raw_adv_data_len;
+    uint8_t *raw_scan_rsp_data_p;
+    uint8_t raw_scan_rsp_data_len;
 } _protocomm_ble_internal_t;
 
 static _protocomm_ble_internal_t *protoble_internal;
@@ -3394,51 +3795,10 @@ static esp_ble_adv_params_t adv_params = {
 };
 
 static char* protocomm_ble_device_name = 
-# 62 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                         ((void *)0)
-# 62 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                             ;
-
-
-static esp_ble_adv_data_t adv_data = {
-    .set_scan_rsp = 
-# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                          0
-# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                               ,
-    .include_name = 
-# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                          1
-# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                              ,
-    .include_txpower = 
-# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                          1
-# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                              ,
-    .min_interval = 0x100,
-    .max_interval = 0x100,
-    .appearance = 0x0000,
-    .manufacturer_len = 0,
-    .p_manufacturer_data = 
-# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                          ((void *)0)
-# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                              ,
-    .service_data_len = 0,
-    .p_service_data = 
-# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                          ((void *)0)
-# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                              ,
-    .service_uuid_len = 0,
-    .p_service_uuid = 
-# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                          ((void *)0)
-# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                              ,
-    .flag = ((0x01 << 1) | (0x01 << 2)),
-};
 
 static void hexdump(const char *msg, uint8_t *buf, int len)
 {
@@ -3446,34 +3806,46 @@ static void hexdump(const char *msg, uint8_t *buf, int len)
     do { if ( 3 >= (ESP_LOG_DEBUG) ) { esp_log_buffer_hex_internal( TAG, buf, len, ESP_LOG_DEBUG ); } } while(0);
 }
 
+static const uint16_t *uuid128_to_16(const uint8_t *uuid128)
+{
+    return (const uint16_t *) &uuid128[12];
+}
+
 static const char *handle_to_handler(uint16_t handle)
 {
-    uint16_t uuid = simple_ble_get_uuid(handle);
+    const uint8_t *uuid128 = simple_ble_get_uuid128(handle);
+    if (!uuid128) {
+        return 
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+              ((void *)0)
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+                  ;
+    }
     for (int i = 0; i < protoble_internal->g_nu_lookup_count; i++) {
-        if (protoble_internal->g_nu_lookup[i].uuid == uuid ) {
+        if (*uuid128_to_16(protoble_internal->g_nu_lookup[i].uuid128) == *uuid128_to_16(uuid128)) {
             return protoble_internal->g_nu_lookup[i].name;
         }
     }
     return 
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
           ((void *)0)
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
               ;
 }
 
 static void transport_simple_ble_read(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param)
 {
     static const uint8_t *read_buf = 
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                     ((void *)0)
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                         ;
     static uint16_t read_len = 0;
     esp_gatt_status_t status = 0;
 
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Inside read w/ session - %d on param %d %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->read.conn_id, param->read.handle, read_len); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Inside read w/ session - %d on param %d %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->read.conn_id, param->read.handle, read_len); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Inside read w/ session - %d on param %d %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->read.conn_id, param->read.handle, read_len); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Inside read w/ session - %d on param %d %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->read.conn_id, param->read.handle, read_len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Inside read w/ session - %d on param %d %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->read.conn_id, param->read.handle, read_len); } } while(0); } while(0)
                                                                ;
-    if (!read_len) {
+    if (!read_len && !param->read.offset) {
         do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Reading attr value first time" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Reading attr value first time" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Reading attr value first time" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Reading attr value first time" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Reading attr value first time" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         status = esp_ble_gatts_get_attr_value(param->read.handle, &read_len, &read_buf);
     } else {
@@ -3501,48 +3873,68 @@ static void transport_simple_ble_read(esp_gatts_cb_event_t event, esp_gatt_if_t 
 static esp_err_t prepare_write_event_env(esp_gatt_if_t gatts_if,
                                          esp_ble_gatts_cb_param_t *param)
 {
-    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "prepare write, handle = %d, value len = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.handle, param->write.len); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "prepare write, handle = %d, value len = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.handle, param->write.len); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "prepare write, handle = %d, value len = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.handle, param->write.len); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "prepare write, handle = %d, value len = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.handle, param->write.len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "prepare write, handle = %d, value len = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.handle, param->write.len); } } while(0); } while(0)
-                                                   ;
+    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "prepare write, handle = %d, value len = %d, offset = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.handle, param->write.len, param->write.offset); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "prepare write, handle = %d, value len = %d, offset = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.handle, param->write.len, param->write.offset); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "prepare write, handle = %d, value len = %d, offset = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.handle, param->write.len, param->write.offset); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "prepare write, handle = %d, value len = %d, offset = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.handle, param->write.len, param->write.offset); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "prepare write, handle = %d, value len = %d, offset = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.handle, param->write.len, param->write.offset); } } while(0); } while(0)
+                                                                        ;
     esp_gatt_status_t status = ESP_GATT_OK;
-    if (prepare_write_env.prepare_buf == 
-# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                                        ((void *)0)
-# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                                            ) {
-        prepare_write_env.prepare_buf = (uint8_t *) malloc((256 + 1) * sizeof(uint8_t));
-        if (prepare_write_env.prepare_buf == 
-# 139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                                            ((void *)0)
-# 139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                                                ) {
-            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s , failed tp allocate preparebuf" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s , failed tp allocate preparebuf" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s , failed tp allocate preparebuf" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s , failed tp allocate preparebuf" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s , failed tp allocate preparebuf" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } } while(0); } while(0);
-            status = ESP_GATT_NO_RESOURCES;
-        }
 
+
+    if (param->write.offset > (256 + 1)) {
+        status = ESP_GATT_INVALID_OFFSET;
+    } else if ((param->write.offset + param->write.len) > (256 + 1)) {
+        status = ESP_GATT_INVALID_ATTR_LEN;
     } else {
-        if (param->write.offset > (256 + 1)) {
-            status = ESP_GATT_INVALID_OFFSET;
-        } else if ((param->write.offset + param->write.len) > (256 + 1)) {
-            status = ESP_GATT_INVALID_ATTR_LEN;
+
+        if (prepare_write_env.prepare_buf == 
+# 154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+                                            ((void *)0)
+# 154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+                                                ) {
+            prepare_write_env.prepare_len = 0;
+            prepare_write_env.prepare_buf = (uint8_t *) malloc((256 + 1) * sizeof(uint8_t));
+            if (prepare_write_env.prepare_buf == 
+# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+                                                ((void *)0)
+# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+                                                    ) {
+                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s , failed to allocate prepare buf" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s , failed to allocate prepare buf" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s , failed to allocate prepare buf" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s , failed to allocate prepare buf" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s , failed to allocate prepare buf" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } } while(0); } while(0);
+                status = ESP_GATT_NO_RESOURCES;
+            }
         }
     }
-    memcpy(prepare_write_env.prepare_buf + param->write.offset,
-           param->write.value,
-           param->write.len);
-    prepare_write_env.prepare_len += param->write.len;
-    prepare_write_env.handle = param->write.handle;
+
+
+    if (status == ESP_GATT_OK) {
+        memcpy(prepare_write_env.prepare_buf + param->write.offset,
+               param->write.value,
+               param->write.len);
+        prepare_write_env.prepare_len += param->write.len;
+        prepare_write_env.handle = param->write.handle;
+    }
+
+
     if (param->write.need_rsp) {
-        esp_gatt_rsp_t gatt_rsp = {0};
-        gatt_rsp.attr_value.len = param->write.len;
-        gatt_rsp.attr_value.handle = param->write.handle;
-        gatt_rsp.attr_value.offset = param->write.offset;
-        gatt_rsp.attr_value.auth_req = ESP_GATT_AUTH_REQ_NONE;
-        if (gatt_rsp.attr_value.len && param->write.value) {
-            memcpy(gatt_rsp.attr_value.value, param->write.value, param->write.len);
+        esp_err_t response_err;
+
+
+        if (status == ESP_GATT_OK) {
+            esp_gatt_rsp_t gatt_rsp = {0};
+            gatt_rsp.attr_value.len = param->write.len;
+            gatt_rsp.attr_value.handle = param->write.handle;
+            gatt_rsp.attr_value.offset = param->write.offset;
+            gatt_rsp.attr_value.auth_req = ESP_GATT_AUTH_REQ_NONE;
+            if (gatt_rsp.attr_value.len && param->write.value) {
+                memcpy(gatt_rsp.attr_value.value, param->write.value, param->write.len);
+            }
+            response_err = esp_ble_gatts_send_response(gatts_if,
+                param->write.conn_id, param->write.trans_id, status, &gatt_rsp);
+        } else {
+            response_err = esp_ble_gatts_send_response(gatts_if,
+                param->write.conn_id, param->write.trans_id, status, 
+# 191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+                                                                    ((void *)0)
+# 191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+                                                                        );
         }
-        esp_err_t response_err = esp_ble_gatts_send_response(gatts_if, param->write.conn_id,
-                param->write.trans_id, status,
-                &gatt_rsp);
         if (response_err != 0) {
             do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Send response error in prep write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Send response error in prep write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Send response error in prep write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Send response error in prep write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Send response error in prep write" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         }
@@ -3551,9 +3943,9 @@ static esp_err_t prepare_write_event_env(esp_gatt_if_t gatts_if,
         if (prepare_write_env.prepare_buf) {
             free(prepare_write_env.prepare_buf);
             prepare_write_env.prepare_buf = 
-# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                            ((void *)0)
-# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                                ;
             prepare_write_env.prepare_len = 0;
         }
@@ -3565,14 +3957,14 @@ static esp_err_t prepare_write_event_env(esp_gatt_if_t gatts_if,
 static void transport_simple_ble_write(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param)
 {
     uint8_t *outbuf = 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                      ((void *)0)
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                          ;
     ssize_t outlen = 0;
     esp_err_t ret;
 
-    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Inside write with session - %d on attr handle - %d \nLen -%d IS Prep - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.conn_id, param->write.handle, param->write.len, param->write.is_prep); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Inside write with session - %d on attr handle - %d \nLen -%d IS Prep - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.conn_id, param->write.handle, param->write.len, param->write.is_prep); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Inside write with session - %d on attr handle - %d \nLen -%d IS Prep - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.conn_id, param->write.handle, param->write.len, param->write.is_prep); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Inside write with session - %d on attr handle - %d \nLen -%d IS Prep - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.conn_id, param->write.handle, param->write.len, param->write.is_prep); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Inside write with session - %d on attr handle - %d \nLen -%d IS Prep - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.conn_id, param->write.handle, param->write.len, param->write.is_prep); } } while(0); } while(0)
+    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Inside write with session - %d on attr handle = %d \nlen = %d, is_prep = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.conn_id, param->write.handle, param->write.len, param->write.is_prep); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Inside write with session - %d on attr handle = %d \nlen = %d, is_prep = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.conn_id, param->write.handle, param->write.len, param->write.is_prep); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Inside write with session - %d on attr handle = %d \nlen = %d, is_prep = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.conn_id, param->write.handle, param->write.len, param->write.is_prep); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Inside write with session - %d on attr handle = %d \nlen = %d, is_prep = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.conn_id, param->write.handle, param->write.len, param->write.is_prep); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Inside write with session - %d on attr handle = %d \nlen = %d, is_prep = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.conn_id, param->write.handle, param->write.len, param->write.is_prep); } } while(0); } while(0)
                                                                                                ;
 
     if (param->write.is_prep) {
@@ -3587,7 +3979,7 @@ static void transport_simple_ble_write(esp_gatts_cb_event_t event, esp_gatt_if_t
 
     ret = protocomm_req_handle(protoble_internal->pc_ble,
                                handle_to_handler(param->write.handle),
-                               param->exec_write.conn_id,
+                               param->write.conn_id,
                                param->write.value,
                                param->write.len,
                                &outbuf, &outlen);
@@ -3598,9 +3990,9 @@ static void transport_simple_ble_write(esp_gatts_cb_event_t event, esp_gatt_if_t
         }
         ret = esp_ble_gatts_send_response(gatts_if, param->write.conn_id,
                                           param->write.trans_id, ESP_GATT_OK, 
-# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 239 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                                                              ((void *)0)
-# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 239 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                                                                  );
         if (ret != 0) {
             do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Send response error in write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Send response error in write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Send response error in write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Send response error in write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Send response error in write" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
@@ -3616,14 +4008,13 @@ static void transport_simple_ble_write(esp_gatts_cb_event_t event, esp_gatt_if_t
     }
 }
 
-
 static void transport_simple_ble_exec_write(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param)
 {
     esp_err_t err;
     uint8_t *outbuf = 
-# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 257 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                      ((void *)0)
-# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 257 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                          ;
     ssize_t outlen = 0;
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Inside exec_write w/ session - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->exec_write.conn_id); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Inside exec_write w/ session - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->exec_write.conn_id); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Inside exec_write w/ session - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->exec_write.conn_id); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Inside exec_write w/ session - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->exec_write.conn_id); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Inside exec_write w/ session - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->exec_write.conn_id); } } while(0); } while(0);
@@ -3640,7 +4031,7 @@ static void transport_simple_ble_exec_write(esp_gatts_cb_event_t event, esp_gatt
 
         if (err != 0) {
             do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Invalid content received, killing connection" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Invalid content received, killing connection" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Invalid content received, killing connection" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Invalid content received, killing connection" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Invalid content received, killing connection" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-            esp_ble_gatts_close(gatts_if, param->write.conn_id);
+            esp_ble_gatts_close(gatts_if, param->exec_write.conn_id);
         } else {
             hexdump("Response from exec write", outbuf, outlen);
             esp_ble_gatts_set_attr_value(prepare_write_env.handle, outlen, outbuf);
@@ -3649,17 +4040,17 @@ static void transport_simple_ble_exec_write(esp_gatts_cb_event_t event, esp_gatt
     if (prepare_write_env.prepare_buf) {
         free(prepare_write_env.prepare_buf);
         prepare_write_env.prepare_buf = 
-# 257 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                        ((void *)0)
-# 257 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                            ;
         prepare_write_env.prepare_len = 0;
     }
 
     err = esp_ble_gatts_send_response(gatts_if, param->exec_write.conn_id, param->exec_write.trans_id, ESP_GATT_OK, 
-# 261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                                                                                                    ((void *)0)
-# 261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                                                                                                        );
     if (err != 0) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Send response error in exec write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Send response error in exec write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Send response error in exec write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Send response error in exec write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Send response error in exec write" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
@@ -3716,19 +4107,24 @@ static esp_err_t protocomm_ble_remove_endpoint(const char *ep_name)
     return 0;
 }
 
-
 static ssize_t populate_gatt_db(esp_gatts_attr_db_t **gatt_db_generated)
 {
     int i;
 
-    ssize_t gatt_db_generated_entries = 2 * protoble_internal->g_nu_lookup_count + 1;
+
+
+
+
+
+
+    ssize_t gatt_db_generated_entries = 3 * protoble_internal->g_nu_lookup_count + 1;
 
     *gatt_db_generated = (esp_gatts_attr_db_t *) malloc(sizeof(esp_gatts_attr_db_t) *
                                                         (gatt_db_generated_entries));
     if ((*gatt_db_generated) == 
-# 326 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 355 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                ((void *)0)
-# 326 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 355 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                    ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Failed to assign memory to gatt_db" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Failed to assign memory to gatt_db" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Failed to assign memory to gatt_db" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Failed to assign memory to gatt_db" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Failed to assign memory to gatt_db" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         return -1;
@@ -3739,32 +4135,42 @@ static ssize_t populate_gatt_db(esp_gatts_attr_db_t **gatt_db_generated)
     (*gatt_db_generated)[0].att_desc.uuid_length = 2;
     (*gatt_db_generated)[0].att_desc.uuid_p = (uint8_t *) &primary_service_uuid;
     (*gatt_db_generated)[0].att_desc.perm = (1 << 0);
-    (*gatt_db_generated)[0].att_desc.max_length = sizeof(uint16_t);
-    (*gatt_db_generated)[0].att_desc.length = sizeof(GATTS_SERVICE_UUID_PROV);
-    (*gatt_db_generated)[0].att_desc.value = (uint8_t *) &GATTS_SERVICE_UUID_PROV;
+    (*gatt_db_generated)[0].att_desc.max_length = 16;
+    (*gatt_db_generated)[0].att_desc.length = 16;
+    (*gatt_db_generated)[0].att_desc.value = protoble_internal->service_uuid;
 
 
     for (i = 1 ; i < gatt_db_generated_entries ; i++) {
         (*gatt_db_generated)[i].attr_control.auto_rsp = 0;
 
-        (*gatt_db_generated)[i].att_desc.uuid_length = 2;
-        (*gatt_db_generated)[i].att_desc.perm = (1 << 0) |
-                                                          (1 << 4);
+        if (i % 3 == 1) {
 
-        if (i % 2 == 1) {
+            (*gatt_db_generated)[i].att_desc.perm = (1 << 0);
+            (*gatt_db_generated)[i].att_desc.uuid_length = 2;
             (*gatt_db_generated)[i].att_desc.uuid_p = (uint8_t *) &character_declaration_uuid;
             (*gatt_db_generated)[i].att_desc.max_length = sizeof(uint8_t);
             (*gatt_db_generated)[i].att_desc.length = sizeof(uint8_t);
-            (*gatt_db_generated)[i].att_desc.value = (uint8_t *) &char_prop_read_write;
-        } else {
-            (*gatt_db_generated)[i].att_desc.uuid_p = (uint8_t *)&protoble_internal->g_nu_lookup[i / 2 - 1].uuid;
+            (*gatt_db_generated)[i].att_desc.value = (uint8_t *) &character_prop_read_write;
+        } else if (i % 3 == 2) {
+
+            (*gatt_db_generated)[i].att_desc.perm = (1 << 0) | (1 << 4);
+            (*gatt_db_generated)[i].att_desc.uuid_length = 16;
+            (*gatt_db_generated)[i].att_desc.uuid_p = protoble_internal->g_nu_lookup[i / 3].uuid128;
             (*gatt_db_generated)[i].att_desc.max_length = (256 + 1);
             (*gatt_db_generated)[i].att_desc.length = 0;
             (*gatt_db_generated)[i].att_desc.value = 
-# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                                                         ((void *)0)
-# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                                                             ;
+# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+                                                           ((void *)0)
+# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+                                                               ;
+        } else {
+
+            (*gatt_db_generated)[i].att_desc.perm = (1 << 0);
+            (*gatt_db_generated)[i].att_desc.uuid_length = 2;
+            (*gatt_db_generated)[i].att_desc.uuid_p = (uint8_t *) &character_user_description;
+            (*gatt_db_generated)[i].att_desc.max_length = strlen(protoble_internal->g_nu_lookup[i / 3 - 1].name);
+            (*gatt_db_generated)[i].att_desc.length = (*gatt_db_generated)[i].att_desc.max_length;
+            (*gatt_db_generated)[i].att_desc.value = (uint8_t *) protoble_internal->g_nu_lookup[i / 3 - 1].name;
         }
     }
     return gatt_db_generated_entries;
@@ -3781,29 +4187,22 @@ static void protocomm_ble_cleanup(void)
             }
             free(protoble_internal->g_nu_lookup);
         }
+        free(protoble_internal->raw_adv_data_p);
+        free(protoble_internal->raw_scan_rsp_data_p);
         free(protoble_internal);
         protoble_internal = 
-# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 416 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                            ((void *)0)
-# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 416 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                ;
     }
     if (protocomm_ble_device_name) {
         free(protocomm_ble_device_name);
         protocomm_ble_device_name = 
-# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                    ((void *)0)
-# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                        ;
-    }
-    if (adv_data.p_service_uuid) {
-        free(adv_data.p_service_uuid);
-        adv_data.p_service_uuid = 
-# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                                 ((void *)0)
-# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                                     ;
-        adv_data.service_uuid_len = 0;
     }
 }
 
@@ -3819,25 +4218,11 @@ esp_err_t protocomm_ble_start(protocomm_t *pc, const protocomm_ble_config_t *con
     }
 
 
-    adv_data.service_uuid_len = sizeof(config->service_uuid);
-    adv_data.p_service_uuid = malloc(sizeof(config->service_uuid));
-    if (adv_data.p_service_uuid == 
-# 402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                                  ((void *)0)
-# 402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                                      ) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error allocating memory for storing service UUID" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error allocating memory for storing service UUID" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error allocating memory for storing service UUID" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error allocating memory for storing service UUID" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error allocating memory for storing service UUID" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-        protocomm_ble_cleanup();
-        return 0x101;
-    }
-    memcpy(adv_data.p_service_uuid, config->service_uuid, adv_data.service_uuid_len);
-
-
     protocomm_ble_device_name = strdup(config->device_name);
     if (protocomm_ble_device_name == 
-# 411 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                     ((void *)0)
-# 411 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                         ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error allocating memory for storing BLE device name" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error allocating memory for storing BLE device name" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error allocating memory for storing BLE device name" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error allocating memory for storing BLE device name" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error allocating memory for storing BLE device name" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         protocomm_ble_cleanup();
@@ -3846,9 +4231,9 @@ esp_err_t protocomm_ble_start(protocomm_t *pc, const protocomm_ble_config_t *con
 
     protoble_internal = (_protocomm_ble_internal_t *) calloc(1, sizeof(_protocomm_ble_internal_t));
     if (protoble_internal == 
-# 418 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 444 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                             ((void *)0)
-# 418 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 444 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                 ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error allocating internal protocomm structure" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error allocating internal protocomm structure" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error allocating internal protocomm structure" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error allocating internal protocomm structure" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error allocating internal protocomm structure" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         protocomm_ble_cleanup();
@@ -3856,11 +4241,11 @@ esp_err_t protocomm_ble_start(protocomm_t *pc, const protocomm_ble_config_t *con
     }
 
     protoble_internal->g_nu_lookup_count = config->nu_lookup_count;
-    protoble_internal->g_nu_lookup = malloc(config->nu_lookup_count * sizeof(protocomm_ble_name_uuid_t));
+    protoble_internal->g_nu_lookup = malloc(config->nu_lookup_count * sizeof(name_uuid128_t));
     if (protoble_internal->g_nu_lookup == 
-# 426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                          ((void *)0)
-# 426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                              ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error allocating internal name UUID table" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error allocating internal name UUID table" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error allocating internal name UUID table" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error allocating internal name UUID table" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error allocating internal name UUID table" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         protocomm_ble_cleanup();
@@ -3868,12 +4253,15 @@ esp_err_t protocomm_ble_start(protocomm_t *pc, const protocomm_ble_config_t *con
     }
 
     for (unsigned i = 0; i < protoble_internal->g_nu_lookup_count; i++) {
-        protoble_internal->g_nu_lookup[i].uuid = config->nu_lookup[i].uuid;
+        memcpy(protoble_internal->g_nu_lookup[i].uuid128, config->service_uuid, 16);
+        memcpy((uint8_t *)uuid128_to_16(protoble_internal->g_nu_lookup[i].uuid128),
+               &config->nu_lookup[i].uuid, 2);
+
         protoble_internal->g_nu_lookup[i].name = strdup(config->nu_lookup[i].name);
         if (protoble_internal->g_nu_lookup[i].name == 
-# 435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 464 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                                      ((void *)0)
-# 435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 464 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                                          ) {
             do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error allocating internal name UUID entry" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error allocating internal name UUID entry" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error allocating internal name UUID entry" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error allocating internal name UUID entry" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error allocating internal name UUID entry" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
             protocomm_ble_cleanup();
@@ -3885,12 +4273,118 @@ esp_err_t protocomm_ble_start(protocomm_t *pc, const protocomm_ble_config_t *con
     pc->remove_endpoint = protocomm_ble_remove_endpoint;
     protoble_internal->pc_ble = pc;
     protoble_internal->gatt_mtu = 23;
+# 485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+    raw_data_info_t adv_data[] = {
+        {
+            .type = ESP_BLE_AD_TYPE_FLAG,
+            .length = sizeof(ble_advertisement_flags),
+            .data_p = (uint8_t *) &ble_advertisement_flags
+        },
+        {
+            .type = ESP_BLE_AD_TYPE_128SRV_CMPL,
+            .length = 16,
+            .data_p = (uint8_t *) config->service_uuid
+        },
+    };
+
+
+    uint8_t adv_data_len = 0;
+    for (uint8_t i = 0; i < (sizeof(adv_data)/sizeof(adv_data[0])); i++) {
+
+
+        adv_data_len += adv_data[i].length + 2;
+    }
+    if (adv_data_len > 31) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Advertisement data too long = %d bytes" "\033[0m" "\n", esp_log_timestamp(), TAG, adv_data_len); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Advertisement data too long = %d bytes" "\033[0m" "\n", esp_log_timestamp(), TAG, adv_data_len); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Advertisement data too long = %d bytes" "\033[0m" "\n", esp_log_timestamp(), TAG, adv_data_len); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Advertisement data too long = %d bytes" "\033[0m" "\n", esp_log_timestamp(), TAG, adv_data_len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Advertisement data too long = %d bytes" "\033[0m" "\n", esp_log_timestamp(), TAG, adv_data_len); } } while(0); } while(0);
+        protocomm_ble_cleanup();
+        return 0x101;
+    }
+
+
+    protoble_internal->raw_adv_data_len = adv_data_len;
+    protoble_internal->raw_adv_data_p = malloc(adv_data_len);
+    if (protoble_internal->raw_adv_data_p == 
+# 514 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+                                            ((void *)0)
+# 514 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+                                                ) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error allocating memory for raw advertisement data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error allocating memory for raw advertisement data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error allocating memory for raw advertisement data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error allocating memory for raw advertisement data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error allocating memory for raw advertisement data" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        protocomm_ble_cleanup();
+        return 0x101;
+    }
+
+
+    for (uint8_t i = 0, len = 0; i < (sizeof(adv_data)/sizeof(adv_data[0])); i++) {
+        protoble_internal->raw_adv_data_p[len++] = adv_data[i].length + 1;
+        protoble_internal->raw_adv_data_p[len++] = adv_data[i].type;
+        memcpy(&protoble_internal->raw_adv_data_p[len],
+               adv_data[i].data_p, adv_data[i].length);
+
+        if (adv_data[i].type == ESP_BLE_AD_TYPE_128SRV_CMPL) {
+
+
+
+
+            protoble_internal->service_uuid = &protoble_internal->raw_adv_data_p[len];
+        }
+
+        len += adv_data[i].length;
+    }
+
+    size_t ble_devname_len = strlen(protocomm_ble_device_name);
+# 547 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+    raw_data_info_t scan_resp_data[] = {
+        {
+
+
+
+            .type = (ble_devname_len > (31 - 2) ?
+                       ESP_BLE_AD_TYPE_NAME_SHORT : ESP_BLE_AD_TYPE_NAME_CMPL),
+            .length = ((ble_devname_len) < ((31 - 2)) ? (ble_devname_len) : ((31 - 2))),
+            .data_p = (uint8_t *) protocomm_ble_device_name
+        },
+    };
+
+
+    uint8_t scan_resp_data_len = 0;
+    for (int i = 0; i < (sizeof(scan_resp_data)/sizeof(scan_resp_data[0])); i++) {
+
+
+        scan_resp_data_len += scan_resp_data[i].length + 2;
+    }
+    if (scan_resp_data_len > 31) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Scan response data too long = %d bytes" "\033[0m" "\n", esp_log_timestamp(), TAG, scan_resp_data_len); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Scan response data too long = %d bytes" "\033[0m" "\n", esp_log_timestamp(), TAG, scan_resp_data_len); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Scan response data too long = %d bytes" "\033[0m" "\n", esp_log_timestamp(), TAG, scan_resp_data_len); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Scan response data too long = %d bytes" "\033[0m" "\n", esp_log_timestamp(), TAG, scan_resp_data_len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Scan response data too long = %d bytes" "\033[0m" "\n", esp_log_timestamp(), TAG, scan_resp_data_len); } } while(0); } while(0);
+        protocomm_ble_cleanup();
+        return 0x101;
+    }
+
+
+    protoble_internal->raw_scan_rsp_data_len = scan_resp_data_len;
+    protoble_internal->raw_scan_rsp_data_p = malloc(scan_resp_data_len);
+    if (protoble_internal->raw_scan_rsp_data_p == 
+# 575 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+                                                 ((void *)0)
+# 575 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+                                                     ) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error allocating memory for raw response data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error allocating memory for raw response data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error allocating memory for raw response data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error allocating memory for raw response data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error allocating memory for raw response data" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        protocomm_ble_cleanup();
+        return 0x101;
+    }
+
+
+    for (uint8_t i = 0, len = 0; i < (sizeof(scan_resp_data)/sizeof(scan_resp_data[0])); i++) {
+        protoble_internal->raw_scan_rsp_data_p[len++] = scan_resp_data[i].length + 1;
+        protoble_internal->raw_scan_rsp_data_p[len++] = scan_resp_data[i].type;
+        memcpy(&protoble_internal->raw_scan_rsp_data_p[len],
+               scan_resp_data[i].data_p, scan_resp_data[i].length);
+        len += scan_resp_data[i].length;
+    }
 
     simple_ble_cfg_t *ble_config = simple_ble_init();
     if (ble_config == 
-# 448 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 591 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                      ((void *)0)
-# 448 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 591 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                          ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Ran out of memory for BLE config" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Ran out of memory for BLE config" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Ran out of memory for BLE config" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Ran out of memory for BLE config" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Ran out of memory for BLE config" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         protocomm_ble_cleanup();
@@ -3906,8 +4400,12 @@ esp_err_t protocomm_ble_start(protocomm_t *pc, const protocomm_ble_config_t *con
     ble_config->set_mtu_fn = transport_simple_ble_set_mtu;
 
 
-    ble_config->adv_data = adv_data;
     ble_config->adv_params = adv_params;
+
+    ble_config->raw_adv_data_p = protoble_internal->raw_adv_data_p;
+    ble_config->raw_adv_data_len = protoble_internal->raw_adv_data_len;
+    ble_config->raw_scan_rsp_data_p = protoble_internal->raw_scan_rsp_data_p;
+    ble_config->raw_scan_rsp_data_len = protoble_internal->raw_scan_rsp_data_len;
 
     ble_config->device_name = protocomm_ble_device_name;
     ble_config->gatt_db_count = populate_gatt_db(&ble_config->gatt_db);
@@ -3928,9 +4426,9 @@ esp_err_t protocomm_ble_start(protocomm_t *pc, const protocomm_ble_config_t *con
     }
 
     prepare_write_env.prepare_buf = 
-# 484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 631 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                    ((void *)0)
-# 484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 631 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                        ;
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Waiting for client to connect ......" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Waiting for client to connect ......" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Waiting for client to connect ......" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Waiting for client to connect ......" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Waiting for client to connect ......" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
     return 0;
@@ -3939,14 +4437,14 @@ esp_err_t protocomm_ble_start(protocomm_t *pc, const protocomm_ble_config_t *con
 esp_err_t protocomm_ble_stop(protocomm_t *pc)
 {
     if ((pc != 
-# 491 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 638 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
               ((void *)0)
-# 491 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 638 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                   ) &&
         (protoble_internal != 
-# 492 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 639 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                              ((void *)0) 
-# 492 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 639 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                   ) &&
         (pc == protoble_internal->pc_ble)) {
         esp_err_t ret = 0;

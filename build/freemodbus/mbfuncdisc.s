@@ -6,7 +6,7 @@
 	.global	eMBFuncReadDiscreteInputs
 	.type	eMBFuncReadDiscreteInputs, @function
 eMBFuncReadDiscreteInputs:
-.LFB21:
+.LFB30:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freemodbus/modbus/functions/mbfuncdisc.c"
 	.loc 1 50 0
 .LVL0:
@@ -103,7 +103,7 @@ eMBFuncReadDiscreteInputs:
 	.loc 1 123 0
 	mov.n	a2, a10
 	retw.n
-.LFE21:
+.LFE30:
 	.size	eMBFuncReadDiscreteInputs, .-eMBFuncReadDiscreteInputs
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -124,10 +124,10 @@ eMBFuncReadDiscreteInputs:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI0-.LFB21
+	.4byte	.LCFI0-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -206,12 +206,12 @@ eMBFuncReadDiscreteInputs:
 	.uleb128 0x4
 	.4byte	.LASF12
 	.byte	0x2
-	.byte	0x44
+	.byte	0x47
 	.4byte	0x41
 	.uleb128 0x4
 	.4byte	.LASF13
 	.byte	0x2
-	.byte	0x47
+	.byte	0x4a
 	.4byte	0x2c
 	.uleb128 0x5
 	.byte	0x4
@@ -302,8 +302,8 @@ eMBFuncReadDiscreteInputs:
 	.byte	0x1
 	.byte	0x31
 	.4byte	0xdf
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1eb
@@ -615,7 +615,7 @@ eMBFuncReadDiscreteInputs:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL13
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -736,7 +736,7 @@ eMBFuncReadDiscreteInputs:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL14
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -760,14 +760,14 @@ eMBFuncReadDiscreteInputs:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB21
-	.4byte	.LFE21
+	.4byte	.LFB30
+	.4byte	.LFE30
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

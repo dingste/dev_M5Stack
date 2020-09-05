@@ -5,7 +5,7 @@
 	.align	4
 	.type	s_compare_reserved_regions, @function
 s_compare_reserved_regions:
-.LFB10:
+.LFB13:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/src/memory_layout_utils.c"
 	.loc 1 53 0
 .LVL0:
@@ -19,7 +19,7 @@ s_compare_reserved_regions:
 	.loc 1 57 0
 	sub	a2, a2, a8
 	retw.n
-.LFE10:
+.LFE13:
 	.size	s_compare_reserved_regions, .-s_compare_reserved_regions
 	.section	.text.soc_get_available_memory_region_max_count,"ax",@progbits
 	.literal_position
@@ -30,7 +30,7 @@ s_compare_reserved_regions:
 	.global	soc_get_available_memory_region_max_count
 	.type	soc_get_available_memory_region_max_count, @function
 soc_get_available_memory_region_max_count:
-.LFB9:
+.LFB12:
 	.loc 1 45 0
 	entry	sp, 32
 .LCFI1:
@@ -45,7 +45,7 @@ soc_get_available_memory_region_max_count:
 	.loc 1 50 0
 	add.n	a2, a8, a2
 	retw.n
-.LFE9:
+.LFE12:
 	.size	soc_get_available_memory_region_max_count, .-soc_get_available_memory_region_max_count
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC14:
@@ -70,7 +70,7 @@ soc_get_available_memory_region_max_count:
 	.literal .LC12, _iram_end
 	.literal .LC13, s_compare_reserved_regions
 	.literal .LC15, .LC14
-	.literal .LC16, __func__$2514
+	.literal .LC16, __func__$2528
 	.literal .LC18, .LC17
 	.literal .LC20, .LC19
 	.literal .LC22, .LC21
@@ -79,7 +79,7 @@ soc_get_available_memory_region_max_count:
 	.global	soc_get_available_memory_regions
 	.type	soc_get_available_memory_regions, @function
 soc_get_available_memory_regions:
-.LFB12:
+.LFB15:
 	.loc 1 104 0
 .LVL3:
 	entry	sp, 80
@@ -408,12 +408,12 @@ soc_get_available_memory_regions:
 .LVL57:
 	j	.L21
 .LBE28:
-.LFE12:
+.LFE15:
 	.size	soc_get_available_memory_regions, .-soc_get_available_memory_regions
-	.section	.rodata.__func__$2514,"a",@progbits
-	.type	__func__$2514, @object
-	.size	__func__$2514, 27
-__func__$2514:
+	.section	.rodata.__func__$2528,"a",@progbits
+	.type	__func__$2528, @object
+	.size	__func__$2528, 27
+__func__$2528:
 	.string	"s_prepare_reserved_regions"
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -434,10 +434,10 @@ __func__$2514:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB10
-	.4byte	.LFE10-.LFB10
+	.4byte	.LFB13
+	.4byte	.LFE13-.LFB13
 	.byte	0x4
-	.4byte	.LCFI0-.LFB10
+	.4byte	.LCFI0-.LFB13
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -446,10 +446,10 @@ __func__$2514:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB9
-	.4byte	.LFE9-.LFB9
+	.4byte	.LFB12
+	.4byte	.LFE12-.LFB12
 	.byte	0x4
-	.4byte	.LCFI1-.LFB9
+	.4byte	.LCFI1-.LFB12
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -458,10 +458,10 @@ __func__$2514:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB12
-	.4byte	.LFE12-.LFB12
+	.4byte	.LFB15
+	.4byte	.LFE15-.LFB15
 	.byte	0x4
-	.4byte	.LCFI2-.LFB12
+	.4byte	.LCFI2-.LFB15
 	.byte	0xc
 	.uleb128 0x7
 	.uleb128 0x50
@@ -661,8 +661,8 @@ __func__$2514:
 	.byte	0x1
 	.byte	0x34
 	.4byte	0x41
-	.4byte	.LFB10
-	.4byte	.LFE10-.LFB10
+	.4byte	.LFB13
+	.4byte	.LFE13-.LFB13
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1ae
@@ -703,8 +703,8 @@ __func__$2514:
 	.byte	0x1
 	.byte	0x2c
 	.4byte	0x73
-	.4byte	.LFB9
-	.4byte	.LFE9-.LFB9
+	.4byte	.LFB12
+	.4byte	.LFE12-.LFB12
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x14
@@ -752,8 +752,8 @@ __func__$2514:
 	.byte	0x1
 	.byte	0x67
 	.4byte	0x73
-	.4byte	.LFB12
-	.4byte	.LFE12-.LFB12
+	.4byte	.LFB15
+	.4byte	.LFE15-.LFB15
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x406
@@ -824,7 +824,7 @@ __func__$2514:
 	.4byte	0x1f0
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$2514
+	.4byte	__func__$2528
 	.uleb128 0x27
 	.4byte	.Ldebug_ranges0+0x30
 	.4byte	0x34a
@@ -1756,7 +1756,7 @@ __func__$2514:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL2
-	.4byte	.LFE10
+	.4byte	.LFE13
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1770,7 +1770,7 @@ __func__$2514:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL2
-	.4byte	.LFE10
+	.4byte	.LFE13
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1796,7 +1796,7 @@ __func__$2514:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL25
-	.4byte	.LFE12
+	.4byte	.LFE15
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -48
@@ -1833,7 +1833,7 @@ __func__$2514:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL56
-	.4byte	.LFE12
+	.4byte	.LFE15
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -1869,7 +1869,7 @@ __func__$2514:
 	.2byte	0x1
 	.byte	0x59
 	.4byte	.LVL28
-	.4byte	.LFE12
+	.4byte	.LFE15
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -1896,7 +1896,7 @@ __func__$2514:
 	.byte	0x71
 	.sleb128 16
 	.4byte	.LVL51
-	.4byte	.LFE12
+	.4byte	.LFE15
 	.2byte	0x2
 	.byte	0x73
 	.sleb128 0
@@ -1924,7 +1924,7 @@ __func__$2514:
 	.sleb128 16
 	.byte	0x9f
 	.4byte	.LVL51
-	.4byte	.LFE12
+	.4byte	.LFE15
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -2037,12 +2037,15 @@ __func__$2514:
 	.uleb128 0x8
 	.4byte	.LVL38
 	.4byte	.LVL39
-	.2byte	0x5
+	.2byte	0x8
 	.byte	0x5b
 	.byte	0x93
 	.uleb128 0x4
+	.byte	0x5f
 	.byte	0x93
-	.uleb128 0xc
+	.uleb128 0x4
+	.byte	0x93
+	.uleb128 0x8
 	.4byte	.LVL39
 	.4byte	.LVL40
 	.2byte	0x8
@@ -2159,7 +2162,7 @@ __func__$2514:
 	.byte	0x93
 	.uleb128 0xc
 	.4byte	.LVL57
-	.4byte	.LFE12
+	.4byte	.LFE15
 	.2byte	0x5
 	.byte	0x5c
 	.byte	0x93
@@ -2186,7 +2189,7 @@ __func__$2514:
 	.2byte	0x1
 	.byte	0x5c
 	.4byte	.LVL51
-	.4byte	.LFE12
+	.4byte	.LFE15
 	.2byte	0x1
 	.byte	0x5c
 	.4byte	0
@@ -2225,7 +2228,7 @@ __func__$2514:
 	.byte	0x31
 	.byte	0x9f
 	.4byte	.LVL51
-	.4byte	.LFE12
+	.4byte	.LFE15
 	.2byte	0x2
 	.byte	0x31
 	.byte	0x9f
@@ -2257,7 +2260,7 @@ __func__$2514:
 	.byte	0x31
 	.byte	0x9f
 	.4byte	.LVL52
-	.4byte	.LFE12
+	.4byte	.LFE15
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -2290,12 +2293,12 @@ __func__$2514:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB10
-	.4byte	.LFE10-.LFB10
-	.4byte	.LFB9
-	.4byte	.LFE9-.LFB9
+	.4byte	.LFB13
+	.4byte	.LFE13-.LFB13
 	.4byte	.LFB12
 	.4byte	.LFE12-.LFB12
+	.4byte	.LFB15
+	.4byte	.LFE15-.LFB15
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -2330,12 +2333,12 @@ __func__$2514:
 	.4byte	.LBE27
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB10
-	.4byte	.LFE10
-	.4byte	.LFB9
-	.4byte	.LFE9
+	.4byte	.LFB13
+	.4byte	.LFE13
 	.4byte	.LFB12
 	.4byte	.LFE12
+	.4byte	.LFB15
+	.4byte	.LFE15
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

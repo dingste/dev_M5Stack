@@ -2382,7 +2382,7 @@ supported_digests:
 	.byte	0x4
 	.4byte	0x30
 	.byte	0x6
-	.byte	0x38
+	.byte	0x3a
 	.4byte	0x83d
 	.uleb128 0x1c
 	.4byte	.LASF117
@@ -2418,12 +2418,12 @@ supported_digests:
 	.uleb128 0x2
 	.4byte	.LASF127
 	.byte	0x6
-	.byte	0x43
+	.byte	0x45
 	.4byte	0x7f4
 	.uleb128 0x2
 	.4byte	.LASF128
 	.byte	0x6
-	.byte	0x4e
+	.byte	0x50
 	.4byte	0x853
 	.uleb128 0xd
 	.4byte	.LASF128
@@ -2508,24 +2508,24 @@ supported_digests:
 	.4byte	.LASF141
 	.byte	0xc
 	.byte	0x6
-	.byte	0x53
+	.byte	0x55
 	.4byte	0x921
 	.uleb128 0xb
 	.4byte	.LASF142
 	.byte	0x6
-	.byte	0x56
+	.byte	0x58
 	.4byte	0x921
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LASF143
 	.byte	0x6
-	.byte	0x59
+	.byte	0x5b
 	.4byte	0x114
 	.byte	0x4
 	.uleb128 0xb
 	.4byte	.LASF144
 	.byte	0x6
-	.byte	0x5c
+	.byte	0x5e
 	.4byte	0x114
 	.byte	0x8
 	.byte	0
@@ -2537,7 +2537,7 @@ supported_digests:
 	.uleb128 0x2
 	.4byte	.LASF141
 	.byte	0x6
-	.byte	0x5d
+	.byte	0x5f
 	.4byte	0x8f0
 	.uleb128 0x16
 	.4byte	0x3e
@@ -4091,17 +4091,17 @@ supported_digests:
 	.4byte	.LASF187
 	.4byte	.LASF187
 	.byte	0xa
-	.byte	0x42
+	.byte	0x9f
 	.uleb128 0x45
 	.4byte	.LASF188
 	.4byte	.LASF188
 	.byte	0xb
-	.byte	0x7d
+	.byte	0x80
 	.uleb128 0x45
 	.4byte	.LASF189
 	.4byte	.LASF189
 	.byte	0xb
-	.byte	0x7c
+	.byte	0x7f
 	.uleb128 0x45
 	.4byte	.LASF190
 	.4byte	.LASF190

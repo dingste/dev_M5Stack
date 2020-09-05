@@ -6,7 +6,7 @@
 	.global	coap_fls
 	.type	coap_fls, @function
 coap_fls:
-.LFB36:
+.LFB45:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/coap/libcoap/src/encode.c"
 	.loc 1 17 0
 .LVL0:
@@ -31,7 +31,7 @@ coap_fls:
 	mov.n	a2, a8
 .LVL5:
 	retw.n
-.LFE36:
+.LFE45:
 	.size	coap_fls, .-coap_fls
 	.section	.text.coap_decode_var_bytes,"ax",@progbits
 	.literal_position
@@ -39,7 +39,7 @@ coap_fls:
 	.global	coap_decode_var_bytes
 	.type	coap_decode_var_bytes, @function
 coap_decode_var_bytes:
-.LFB37:
+.LFB46:
 	.loc 1 25 0
 .LVL6:
 	entry	sp, 32
@@ -68,14 +68,14 @@ coap_decode_var_bytes:
 	mov.n	a2, a8
 .LVL13:
 	retw.n
-.LFE37:
+.LFE46:
 	.size	coap_decode_var_bytes, .-coap_decode_var_bytes
 	.section	.text.coap_encode_var_bytes,"ax",@progbits
 	.align	4
 	.global	coap_encode_var_bytes
 	.type	coap_encode_var_bytes, @function
 coap_encode_var_bytes:
-.LFB38:
+.LFB47:
 	.loc 1 34 0
 .LVL14:
 	entry	sp, 32
@@ -119,7 +119,7 @@ coap_encode_var_bytes:
 	mov.n	a2, a8
 .LVL24:
 	retw.n
-.LFE38:
+.LFE47:
 	.size	coap_encode_var_bytes, .-coap_encode_var_bytes
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -140,10 +140,10 @@ coap_encode_var_bytes:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.byte	0x4
-	.4byte	.LCFI0-.LFB36
+	.4byte	.LCFI0-.LFB45
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -152,10 +152,10 @@ coap_encode_var_bytes:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.byte	0x4
-	.4byte	.LCFI1-.LFB37
+	.4byte	.LCFI1-.LFB46
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -164,10 +164,10 @@ coap_encode_var_bytes:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI2-.LFB38
+	.4byte	.LCFI2-.LFB47
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -248,8 +248,8 @@ coap_encode_var_bytes:
 	.byte	0x1
 	.byte	0x11
 	.4byte	0x41
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xba
@@ -271,8 +271,8 @@ coap_encode_var_bytes:
 	.byte	0x1
 	.byte	0x19
 	.4byte	0x48
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x10c
@@ -306,8 +306,8 @@ coap_encode_var_bytes:
 	.byte	0x1
 	.byte	0x22
 	.4byte	0x48
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x6
@@ -491,7 +491,7 @@ coap_encode_var_bytes:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL2
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -502,7 +502,7 @@ coap_encode_var_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL9
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -516,7 +516,7 @@ coap_encode_var_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL8
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -575,7 +575,7 @@ coap_encode_var_bytes:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL11
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -592,7 +592,7 @@ coap_encode_var_bytes:
 	.sleb128 1
 	.byte	0x9f
 	.4byte	.LVL24
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -606,7 +606,7 @@ coap_encode_var_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL22
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -618,7 +618,7 @@ coap_encode_var_bytes:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL16
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -663,7 +663,7 @@ coap_encode_var_bytes:
 	.byte	0x22
 	.byte	0x9f
 	.4byte	.LVL24
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x7
 	.byte	0x79
 	.sleb128 0
@@ -682,22 +682,22 @@ coap_encode_var_bytes:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB36
-	.4byte	.LFE36
-	.4byte	.LFB37
-	.4byte	.LFE37
-	.4byte	.LFB38
-	.4byte	.LFE38
+	.4byte	.LFB45
+	.4byte	.LFE45
+	.4byte	.LFB46
+	.4byte	.LFE46
+	.4byte	.LFB47
+	.4byte	.LFE47
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

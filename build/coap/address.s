@@ -11,14 +11,14 @@
 	.section	.text.coap_address_equals,"ax",@progbits
 	.literal_position
 	.literal .LC1, .LC0
-	.literal .LC2, __func__$6330
+	.literal .LC2, __func__$6394
 	.literal .LC4, .LC3
 	.literal .LC6, .LC5
 	.align	4
 	.global	coap_address_equals
 	.type	coap_address_equals, @function
 coap_address_equals:
-.LFB39:
+.LFB48:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/coap/libcoap/src/address.c"
 	.loc 1 18 0
 .LVL0:
@@ -89,7 +89,7 @@ coap_address_equals:
 .L4:
 	.loc 1 39 0
 	retw.n
-.LFE39:
+.LFE48:
 	.size	coap_address_equals, .-coap_address_equals
 	.section	.text.coap_is_mcast,"ax",@progbits
 	.literal_position
@@ -99,7 +99,7 @@ coap_address_equals:
 	.global	coap_is_mcast
 	.type	coap_is_mcast, @function
 coap_is_mcast:
-.LFB40:
+.LFB49:
 	.loc 1 41 0
 .LVL8:
 	entry	sp, 32
@@ -146,12 +146,12 @@ coap_is_mcast:
 	.loc 1 54 0
 	mov.n	a2, a10
 	retw.n
-.LFE40:
+.LFE49:
 	.size	coap_is_mcast, .-coap_is_mcast
-	.section	.rodata.__func__$6330,"a",@progbits
-	.type	__func__$6330, @object
-	.size	__func__$6330, 20
-__func__$6330:
+	.section	.rodata.__func__$6394,"a",@progbits
+	.type	__func__$6394, @object
+	.size	__func__$6394, 20
+__func__$6394:
 	.string	"coap_address_equals"
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -172,10 +172,10 @@ __func__$6330:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI0-.LFB39
+	.4byte	.LCFI0-.LFB48
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -184,10 +184,10 @@ __func__$6330:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.byte	0x4
-	.4byte	.LCFI1-.LFB40
+	.4byte	.LCFI1-.LFB49
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -196,7 +196,7 @@ __func__$6330:
 .Letext0:
 	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
 	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
-	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/../../../lwip/src/include/lwip/inet.h"
+	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/../../../lwip/src/include/lwip/inet.h"
 	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/sockets.h"
 	.file 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/coap/libcoap/include/coap/address.h"
 	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
@@ -599,8 +599,8 @@ __func__$6330:
 	.byte	0x1
 	.byte	0x12
 	.4byte	0x33
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x38a
@@ -621,7 +621,7 @@ __func__$6330:
 	.4byte	0x3a5
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6330
+	.4byte	__func__$6394
 	.uleb128 0x10
 	.4byte	.LVL1
 	.4byte	0x3ea
@@ -642,7 +642,7 @@ __func__$6330:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6330
+	.4byte	__func__$6394
 	.byte	0
 	.uleb128 0x12
 	.4byte	.LVL6
@@ -667,8 +667,8 @@ __func__$6330:
 	.byte	0x1
 	.byte	0x29
 	.4byte	0x33
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x3da
@@ -1020,7 +1020,7 @@ __func__$6330:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL5
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1034,7 +1034,7 @@ __func__$6330:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL7
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1063,7 +1063,7 @@ __func__$6330:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL13
-	.4byte	.LFE40
+	.4byte	.LFE49
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1079,18 +1079,18 @@ __func__$6330:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB39
-	.4byte	.LFE39
-	.4byte	.LFB40
-	.4byte	.LFE40
+	.4byte	.LFB48
+	.4byte	.LFE48
+	.4byte	.LFB49
+	.4byte	.LFE49
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

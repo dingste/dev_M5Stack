@@ -14,7 +14,7 @@
 	.global	coap_register_async
 	.type	coap_register_async, @function
 coap_register_async:
-.LFB61:
+.LFB70:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/coap/libcoap/src/async.c"
 	.loc 1 25 0
 .LVL0:
@@ -187,14 +187,14 @@ coap_register_async:
 	.loc 1 42 0
 	bnez.n	a10, .L16
 	j	.L9
-.LFE61:
+.LFE70:
 	.size	coap_register_async, .-coap_register_async
 	.section	.text.coap_find_async,"ax",@progbits
 	.align	4
 	.global	coap_find_async
 	.type	coap_find_async, @function
 coap_find_async:
-.LFB62:
+.LFB71:
 	.loc 1 73 0
 .LVL23:
 	entry	sp, 32
@@ -216,14 +216,14 @@ coap_find_async:
 .L19:
 	.loc 1 77 0 is_stmt 1
 	retw.n
-.LFE62:
+.LFE71:
 	.size	coap_find_async, .-coap_find_async
 	.section	.text.coap_remove_async,"ax",@progbits
 	.align	4
 	.global	coap_remove_async
 	.type	coap_remove_async, @function
 coap_remove_async:
-.LFB63:
+.LFB72:
 	.loc 1 81 0
 .LVL26:
 	entry	sp, 32
@@ -273,14 +273,14 @@ coap_remove_async:
 	s32i.n	a2, a8, 20
 	j	.L22
 .LBE17:
-.LFE63:
+.LFE72:
 	.size	coap_remove_async, .-coap_remove_async
 	.section	.text.coap_free_async,"ax",@progbits
 	.align	4
 	.global	coap_free_async
 	.type	coap_free_async, @function
 coap_free_async:
-.LFB64:
+.LFB73:
 	.loc 1 92 0
 .LVL33:
 	entry	sp, 32
@@ -310,7 +310,7 @@ coap_free_async:
 	retw.n
 .LBE25:
 .LBE24:
-.LFE64:
+.LFE73:
 	.size	coap_free_async, .-coap_free_async
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -331,10 +331,10 @@ coap_free_async:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB61
-	.4byte	.LFE61-.LFB61
+	.4byte	.LFB70
+	.4byte	.LFE70-.LFB70
 	.byte	0x4
-	.4byte	.LCFI0-.LFB61
+	.4byte	.LCFI0-.LFB70
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -343,10 +343,10 @@ coap_free_async:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB62
-	.4byte	.LFE62-.LFB62
+	.4byte	.LFB71
+	.4byte	.LFE71-.LFB71
 	.byte	0x4
-	.4byte	.LCFI1-.LFB62
+	.4byte	.LCFI1-.LFB71
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -355,10 +355,10 @@ coap_free_async:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB63
-	.4byte	.LFE63-.LFB63
+	.4byte	.LFB72
+	.4byte	.LFE72-.LFB72
 	.byte	0x4
-	.4byte	.LCFI2-.LFB63
+	.4byte	.LCFI2-.LFB72
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -367,10 +367,10 @@ coap_free_async:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB64
-	.4byte	.LFE64-.LFB64
+	.4byte	.LFB73
+	.4byte	.LFE73-.LFB73
 	.byte	0x4
-	.4byte	.LCFI3-.LFB64
+	.4byte	.LCFI3-.LFB73
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1686,8 +1686,8 @@ coap_free_async:
 	.byte	0x1
 	.byte	0x18
 	.4byte	0x9ef
-	.4byte	.LFB61
-	.4byte	.LFE61-.LFB61
+	.4byte	.LFB70
+	.4byte	.LFE70-.LFB70
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xb82
@@ -1884,8 +1884,8 @@ coap_free_async:
 	.byte	0x1
 	.byte	0x49
 	.4byte	0x9ef
-	.4byte	.LFB62
-	.4byte	.LFE62-.LFB62
+	.4byte	.LFB71
+	.4byte	.LFE71-.LFB71
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xbc4
@@ -1915,8 +1915,8 @@ coap_free_async:
 	.byte	0x1
 	.byte	0x50
 	.4byte	0x3e
-	.4byte	.LFB63
-	.4byte	.LFE63-.LFB63
+	.4byte	.LFB72
+	.4byte	.LFE72-.LFB72
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xc42
@@ -1992,8 +1992,8 @@ coap_free_async:
 	.4byte	.LASF158
 	.byte	0x1
 	.byte	0x5c
-	.4byte	.LFB64
-	.4byte	.LFE64-.LFB64
+	.4byte	.LFB73
+	.4byte	.LFE73-.LFB73
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xcd9
@@ -2818,7 +2818,7 @@ coap_free_async:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL20
-	.4byte	.LFE61
+	.4byte	.LFE70
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -2833,7 +2833,7 @@ coap_free_async:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL2-1
-	.4byte	.LFE61
+	.4byte	.LFE70
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -48
@@ -2856,7 +2856,7 @@ coap_free_async:
 	.byte	0x54
 	.byte	0x9f
 	.4byte	.LVL17
-	.4byte	.LFE61
+	.4byte	.LFE70
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -2871,7 +2871,7 @@ coap_free_async:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL10
-	.4byte	.LFE61
+	.4byte	.LFE70
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2913,7 +2913,7 @@ coap_free_async:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL24
-	.4byte	.LFE62
+	.4byte	.LFE71
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2927,7 +2927,7 @@ coap_free_async:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL28
-	.4byte	.LFE63
+	.4byte	.LFE72
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2948,7 +2948,7 @@ coap_free_async:
 	.byte	0x54
 	.byte	0x9f
 	.4byte	.LVL32
-	.4byte	.LFE63
+	.4byte	.LFE72
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -2959,7 +2959,7 @@ coap_free_async:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL32
-	.4byte	.LFE63
+	.4byte	.LFE72
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -2980,14 +2980,14 @@ coap_free_async:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB61
-	.4byte	.LFE61-.LFB61
-	.4byte	.LFB62
-	.4byte	.LFE62-.LFB62
-	.4byte	.LFB63
-	.4byte	.LFE63-.LFB63
-	.4byte	.LFB64
-	.4byte	.LFE64-.LFB64
+	.4byte	.LFB70
+	.4byte	.LFE70-.LFB70
+	.4byte	.LFB71
+	.4byte	.LFE71-.LFB71
+	.4byte	.LFB72
+	.4byte	.LFE72-.LFB72
+	.4byte	.LFB73
+	.4byte	.LFE73-.LFB73
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -3010,14 +3010,14 @@ coap_free_async:
 	.4byte	.LBE17
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB61
-	.4byte	.LFE61
-	.4byte	.LFB62
-	.4byte	.LFE62
-	.4byte	.LFB63
-	.4byte	.LFE63
-	.4byte	.LFB64
-	.4byte	.LFE64
+	.4byte	.LFB70
+	.4byte	.LFE70
+	.4byte	.LFB71
+	.4byte	.LFE71
+	.4byte	.LFB72
+	.4byte	.LFE72
+	.4byte	.LFB73
+	.4byte	.LFE73
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

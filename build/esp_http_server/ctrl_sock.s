@@ -11,7 +11,7 @@
 	.global	cs_create_ctrl_sock
 	.type	cs_create_ctrl_sock, @function
 cs_create_ctrl_sock:
-.LFB36:
+.LFB45:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_http_server/src/util/ctrl_sock.c"
 	.loc 1 28 0
 .LVL0:
@@ -84,14 +84,14 @@ cs_create_ctrl_sock:
 .L2:
 	.loc 1 46 0
 	retw.n
-.LFE36:
+.LFE45:
 	.size	cs_create_ctrl_sock, .-cs_create_ctrl_sock
 	.section	.text.cs_free_ctrl_sock,"ax",@progbits
 	.align	4
 	.global	cs_free_ctrl_sock
 	.type	cs_free_ctrl_sock, @function
 cs_free_ctrl_sock:
-.LFB37:
+.LFB46:
 	.loc 1 49 0
 .LVL10:
 	entry	sp, 32
@@ -101,7 +101,7 @@ cs_free_ctrl_sock:
 	call8	close
 .LVL11:
 	retw.n
-.LFE37:
+.LFE46:
 	.size	cs_free_ctrl_sock, .-cs_free_ctrl_sock
 	.section	.text.cs_send_to_ctrl_sock,"ax",@progbits
 	.literal_position
@@ -110,7 +110,7 @@ cs_free_ctrl_sock:
 	.global	cs_send_to_ctrl_sock
 	.type	cs_send_to_ctrl_sock, @function
 cs_send_to_ctrl_sock:
-.LFB38:
+.LFB47:
 	.loc 1 54 0
 .LVL12:
 	entry	sp, 48
@@ -149,14 +149,14 @@ cs_send_to_ctrl_sock:
 .LVL17:
 	max	a2, a10, a2
 	retw.n
-.LFE38:
+.LFE47:
 	.size	cs_send_to_ctrl_sock, .-cs_send_to_ctrl_sock
 	.section	.text.cs_recv_from_ctrl_sock,"ax",@progbits
 	.align	4
 	.global	cs_recv_from_ctrl_sock
 	.type	cs_recv_from_ctrl_sock, @function
 cs_recv_from_ctrl_sock:
-.LFB39:
+.LFB48:
 	.loc 1 69 0
 .LVL18:
 	entry	sp, 32
@@ -180,7 +180,7 @@ cs_recv_from_ctrl_sock:
 .LVL21:
 	max	a2, a10, a2
 	retw.n
-.LFE39:
+.LFE48:
 	.size	cs_recv_from_ctrl_sock, .-cs_recv_from_ctrl_sock
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -201,10 +201,10 @@ cs_recv_from_ctrl_sock:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.byte	0x4
-	.4byte	.LCFI0-.LFB36
+	.4byte	.LCFI0-.LFB45
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -213,10 +213,10 @@ cs_recv_from_ctrl_sock:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.byte	0x4
-	.4byte	.LCFI1-.LFB37
+	.4byte	.LCFI1-.LFB46
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -225,10 +225,10 @@ cs_recv_from_ctrl_sock:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI2-.LFB38
+	.4byte	.LCFI2-.LFB47
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -237,10 +237,10 @@ cs_recv_from_ctrl_sock:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI3-.LFB39
+	.4byte	.LCFI3-.LFB48
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -626,8 +626,8 @@ cs_recv_from_ctrl_sock:
 	.byte	0x1
 	.byte	0x1b
 	.4byte	0x25
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x441
@@ -796,8 +796,8 @@ cs_recv_from_ctrl_sock:
 	.4byte	.LASF71
 	.byte	0x1
 	.byte	0x30
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x473
@@ -824,8 +824,8 @@ cs_recv_from_ctrl_sock:
 	.byte	0x1
 	.byte	0x35
 	.4byte	0x25
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x579
@@ -971,8 +971,8 @@ cs_recv_from_ctrl_sock:
 	.byte	0x1
 	.byte	0x44
 	.4byte	0x25
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x62a
@@ -1583,7 +1583,7 @@ cs_recv_from_ctrl_sock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL3
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -1628,7 +1628,7 @@ cs_recv_from_ctrl_sock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL17
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1648,7 +1648,7 @@ cs_recv_from_ctrl_sock:
 	.2byte	0x1
 	.byte	0x5e
 	.4byte	.LVL16-1
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -48
@@ -1661,7 +1661,7 @@ cs_recv_from_ctrl_sock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL17
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1675,7 +1675,7 @@ cs_recv_from_ctrl_sock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL21
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1689,7 +1689,7 @@ cs_recv_from_ctrl_sock:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL21
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1705,14 +1705,14 @@ cs_recv_from_ctrl_sock:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -1723,14 +1723,14 @@ cs_recv_from_ctrl_sock:
 	.4byte	.LBE13
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB36
-	.4byte	.LFE36
-	.4byte	.LFB37
-	.4byte	.LFE37
-	.4byte	.LFB38
-	.4byte	.LFE38
-	.4byte	.LFB39
-	.4byte	.LFE39
+	.4byte	.LFB45
+	.4byte	.LFE45
+	.4byte	.LFB46
+	.4byte	.LFE46
+	.4byte	.LFB47
+	.4byte	.LFE47
+	.4byte	.LFB48
+	.4byte	.LFE48
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

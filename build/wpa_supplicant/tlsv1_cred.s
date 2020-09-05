@@ -199,7 +199,7 @@ tlsv1_set_dhparams_der:
 	.string	"\033[0;32mI (%d) %s: TLSv1: %s - failed to parse certificate\033[0m\n"
 	.section	.text.tlsv1_add_cert_der,"ax",@progbits
 	.literal_position
-	.literal .LC4, __func__$4088
+	.literal .LC4, __func__$4093
 	.literal .LC6, .LC5
 	.literal .LC8, .LC7
 	.align	4
@@ -1074,10 +1074,10 @@ tlsv1_set_dhparams:
 	retw.n
 .LFE48:
 	.size	tlsv1_set_dhparams, .-tlsv1_set_dhparams
-	.section	.rodata.__func__$4088,"a",@progbits
-	.type	__func__$4088, @object
-	.size	__func__$4088, 19
-__func__$4088:
+	.section	.rodata.__func__$4093,"a",@progbits
+	.type	__func__$4093, @object
+	.size	__func__$4093, 19
+__func__$4093:
 	.string	"tlsv1_add_cert_der"
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -2221,7 +2221,7 @@ __func__$4088:
 	.4byte	0x4a1
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$4088
+	.4byte	__func__$4093
 	.uleb128 0x30
 	.4byte	.LBB5
 	.4byte	.LBE5-.LBB5
@@ -2248,7 +2248,7 @@ __func__$4088:
 	.4byte	0x4a1
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$4088
+	.4byte	__func__$4093
 	.uleb128 0x2b
 	.4byte	.LVL34
 	.4byte	0x1661
@@ -2283,7 +2283,7 @@ __func__$4088:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$4088
+	.4byte	__func__$4093
 	.byte	0
 	.byte	0
 	.byte	0

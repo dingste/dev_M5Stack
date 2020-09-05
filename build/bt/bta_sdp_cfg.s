@@ -106,107 +106,107 @@ bta_sdp_db_data:
 	.byte	0x2
 	.byte	0x2d
 	.4byte	0x56
-	.uleb128 0x3
+	.uleb128 0x2
+	.byte	0x4
+	.byte	0x5
 	.4byte	.LASF13
+	.uleb128 0x2
+	.byte	0x4
+	.byte	0x7
+	.4byte	.LASF14
+	.uleb128 0x2
+	.byte	0x4
+	.byte	0x7
+	.4byte	.LASF15
+	.uleb128 0x2
+	.byte	0x1
+	.byte	0x8
+	.4byte	.LASF16
+	.uleb128 0x3
+	.4byte	.LASF17
 	.byte	0x3
-	.byte	0x21
+	.byte	0x1a
 	.4byte	0x76
 	.uleb128 0x3
-	.4byte	.LASF14
+	.4byte	.LASF18
 	.byte	0x3
-	.byte	0x22
+	.byte	0x1b
 	.4byte	0x81
 	.uleb128 0x3
-	.4byte	.LASF15
+	.4byte	.LASF19
 	.byte	0x3
-	.byte	0x23
+	.byte	0x1c
 	.4byte	0x8c
 	.uleb128 0x2
 	.byte	0x1
 	.byte	0x2
-	.4byte	.LASF16
-	.uleb128 0x2
-	.byte	0x4
-	.byte	0x7
-	.4byte	.LASF17
+	.4byte	.LASF20
 	.uleb128 0x5
-	.4byte	.LASF18
+	.4byte	.LASF21
 	.byte	0x3
-	.2byte	0x132
-	.4byte	0xd2
+	.2byte	0x12b
+	.4byte	0xe7
 	.uleb128 0x6
-	.4byte	0x97
-	.4byte	0xe2
+	.4byte	0xb3
+	.4byte	0xf7
 	.uleb128 0x7
-	.4byte	0xbf
+	.4byte	0x9e
 	.byte	0x5
 	.byte	0
 	.uleb128 0x8
 	.byte	0x4
-	.4byte	0x97
+	.4byte	0xb3
 	.uleb128 0x6
-	.4byte	0x97
-	.4byte	0xf8
+	.4byte	0xb3
+	.4byte	0x10d
 	.uleb128 0x7
-	.4byte	0xbf
+	.4byte	0x9e
 	.byte	0xf
 	.byte	0
 	.uleb128 0x9
 	.byte	0x10
 	.byte	0x3
-	.2byte	0x1ab
-	.4byte	0x126
+	.2byte	0x1a4
+	.4byte	0x13b
 	.uleb128 0xa
-	.4byte	.LASF19
+	.4byte	.LASF22
 	.byte	0x3
-	.2byte	0x1ac
-	.4byte	0xa2
+	.2byte	0x1a5
+	.4byte	0xbe
 	.uleb128 0xa
-	.4byte	.LASF20
+	.4byte	.LASF23
 	.byte	0x3
-	.2byte	0x1ad
-	.4byte	0xad
+	.2byte	0x1a6
+	.4byte	0xc9
 	.uleb128 0xa
-	.4byte	.LASF21
+	.4byte	.LASF24
 	.byte	0x3
-	.2byte	0x1ae
-	.4byte	0xe8
+	.2byte	0x1a7
+	.4byte	0xfd
 	.byte	0
 	.uleb128 0xb
 	.byte	0x14
 	.byte	0x3
-	.2byte	0x1a4
-	.4byte	0x149
+	.2byte	0x19d
+	.4byte	0x15e
 	.uleb128 0xc
 	.string	"len"
 	.byte	0x3
-	.2byte	0x1a9
-	.4byte	0xa2
+	.2byte	0x1a2
+	.4byte	0xbe
 	.byte	0
 	.uleb128 0xc
 	.string	"uu"
 	.byte	0x3
-	.2byte	0x1af
-	.4byte	0xf8
+	.2byte	0x1a8
+	.4byte	0x10d
 	.byte	0x4
 	.byte	0
 	.uleb128 0x5
-	.4byte	.LASF22
-	.byte	0x3
-	.2byte	0x1b1
-	.4byte	0x126
-	.uleb128 0x2
-	.byte	0x1
-	.byte	0x8
-	.4byte	.LASF23
-	.uleb128 0x2
-	.byte	0x4
-	.byte	0x5
-	.4byte	.LASF24
-	.uleb128 0x2
-	.byte	0x4
-	.byte	0x7
 	.4byte	.LASF25
+	.byte	0x3
+	.2byte	0x1aa
+	.4byte	0x13b
 	.uleb128 0xd
 	.byte	0x4
 	.byte	0x4
@@ -216,17 +216,17 @@ bta_sdp_db_data:
 	.string	"u8"
 	.byte	0x4
 	.byte	0x60
-	.4byte	0x97
+	.4byte	0xb3
 	.uleb128 0xe
 	.string	"u16"
 	.byte	0x4
 	.byte	0x61
-	.4byte	0xa2
+	.4byte	0xbe
 	.uleb128 0xe
 	.string	"u32"
 	.byte	0x4
 	.byte	0x62
-	.4byte	0xad
+	.4byte	0xc9
 	.uleb128 0xf
 	.4byte	.LASF26
 	.byte	0x4
@@ -239,10 +239,10 @@ bta_sdp_db_data:
 	.4byte	0x1f6
 	.byte	0
 	.uleb128 0x6
-	.4byte	0x97
+	.4byte	0xb3
 	.4byte	0x1b9
 	.uleb128 0x7
-	.4byte	0xbf
+	.4byte	0x9e
 	.byte	0x3
 	.byte	0
 	.uleb128 0x10
@@ -261,13 +261,13 @@ bta_sdp_db_data:
 	.4byte	.LASF29
 	.byte	0x4
 	.byte	0x6b
-	.4byte	0xa2
+	.4byte	0xbe
 	.byte	0x4
 	.uleb128 0x11
 	.4byte	.LASF30
 	.byte	0x4
 	.byte	0x6c
-	.4byte	0xa2
+	.4byte	0xbe
 	.byte	0x6
 	.uleb128 0x11
 	.4byte	.LASF31
@@ -323,13 +323,13 @@ bta_sdp_db_data:
 	.4byte	.LASF38
 	.byte	0x4
 	.byte	0x73
-	.4byte	0xad
+	.4byte	0xc9
 	.byte	0x8
 	.uleb128 0x11
 	.4byte	.LASF39
 	.byte	0x4
 	.byte	0x74
-	.4byte	0xc6
+	.4byte	0xdb
 	.byte	0xc
 	.byte	0
 	.uleb128 0x8
@@ -352,13 +352,13 @@ bta_sdp_db_data:
 	.4byte	.LASF41
 	.byte	0x4
 	.byte	0x78
-	.4byte	0xad
+	.4byte	0xc9
 	.byte	0
 	.uleb128 0x11
 	.4byte	.LASF42
 	.byte	0x4
 	.byte	0x79
-	.4byte	0xad
+	.4byte	0xc9
 	.byte	0x4
 	.uleb128 0x11
 	.4byte	.LASF43
@@ -370,7 +370,7 @@ bta_sdp_db_data:
 	.4byte	.LASF44
 	.byte	0x4
 	.byte	0x7b
-	.4byte	0xa2
+	.4byte	0xbe
 	.byte	0xc
 	.uleb128 0x11
 	.4byte	.LASF45
@@ -382,7 +382,7 @@ bta_sdp_db_data:
 	.4byte	.LASF46
 	.byte	0x4
 	.byte	0x7d
-	.4byte	0xa2
+	.4byte	0xbe
 	.byte	0x4c
 	.uleb128 0x11
 	.4byte	.LASF47
@@ -394,42 +394,42 @@ bta_sdp_db_data:
 	.4byte	.LASF48
 	.byte	0x4
 	.byte	0x7f
-	.4byte	0xe2
+	.4byte	0xf7
 	.byte	0x6c
 	.uleb128 0x11
 	.4byte	.LASF49
 	.byte	0x4
 	.byte	0x81
-	.4byte	0xe2
+	.4byte	0xf7
 	.byte	0x70
 	.uleb128 0x11
 	.4byte	.LASF50
 	.byte	0x4
 	.byte	0x82
-	.4byte	0xad
+	.4byte	0xc9
 	.byte	0x74
 	.uleb128 0x11
 	.4byte	.LASF51
 	.byte	0x4
 	.byte	0x83
-	.4byte	0xad
+	.4byte	0xc9
 	.byte	0x78
 	.byte	0
 	.uleb128 0x8
 	.byte	0x4
 	.4byte	0x26e
 	.uleb128 0x6
-	.4byte	0x149
+	.4byte	0x15e
 	.4byte	0x31c
 	.uleb128 0x7
-	.4byte	0xbf
+	.4byte	0x9e
 	.byte	0x2
 	.byte	0
 	.uleb128 0x6
-	.4byte	0xa2
+	.4byte	0xbe
 	.4byte	0x32c
 	.uleb128 0x7
-	.4byte	0xbf
+	.4byte	0x9e
 	.byte	0xe
 	.byte	0
 	.uleb128 0x3
@@ -622,7 +622,7 @@ bta_sdp_db_data:
 	.4byte	.LASF107
 	.byte	0x6
 	.byte	0x49
-	.4byte	0xa2
+	.4byte	0xbe
 	.byte	0
 	.uleb128 0x11
 	.4byte	.LASF108
@@ -642,7 +642,7 @@ bta_sdp_db_data:
 	.uleb128 0x16
 	.4byte	.LASF110
 	.byte	0x3
-	.2byte	0x2cc
+	.2byte	0x2b8
 	.4byte	0x4dc
 	.byte	0x6
 	.byte	0xff
@@ -652,11 +652,11 @@ bta_sdp_db_data:
 	.byte	0xff
 	.byte	0xff
 	.uleb128 0x17
-	.4byte	0xd2
+	.4byte	0xe7
 	.uleb128 0x16
 	.4byte	.LASF111
 	.byte	0x3
-	.2byte	0x2cd
+	.2byte	0x2b9
 	.4byte	0x4f4
 	.byte	0x6
 	.byte	0
@@ -666,12 +666,12 @@ bta_sdp_db_data:
 	.byte	0
 	.byte	0
 	.uleb128 0x17
-	.4byte	0xd2
+	.4byte	0xe7
 	.uleb128 0x6
-	.4byte	0x97
+	.4byte	0xb3
 	.4byte	0x50a
 	.uleb128 0x18
-	.4byte	0xbf
+	.4byte	0x9e
 	.2byte	0x5db
 	.byte	0
 	.uleb128 0x19
@@ -1078,7 +1078,7 @@ bta_sdp_db_data:
 	.string	"tSDP_DISC_REC"
 .LASF45:
 	.string	"uuid_filters"
-.LASF15:
+.LASF19:
 	.string	"UINT32"
 .LASF8:
 	.string	"long long int"
@@ -1120,13 +1120,13 @@ bta_sdp_db_data:
 	.string	"remote_bd_addr"
 .LASF52:
 	.string	"tSDP_DISCOVERY_DB"
-.LASF24:
+.LASF13:
 	.string	"long int"
 .LASF37:
 	.string	"p_next_rec"
 .LASF91:
 	.string	"BTM_EIR_UUID_SERVCLASS_HEADSET_HS"
-.LASF13:
+.LASF17:
 	.string	"UINT8"
 .LASF93:
 	.string	"BTM_EIR_UUID_SERVCLASS_VIDEO_SOURCE"
@@ -1156,7 +1156,7 @@ bta_sdp_db_data:
 	.string	"unsigned char"
 .LASF29:
 	.string	"attr_id"
-.LASF20:
+.LASF23:
 	.string	"uuid32"
 .LASF77:
 	.string	"BTM_EIR_UUID_SERVCLASS_IMAGING_REF_OBJECTS"
@@ -1192,13 +1192,13 @@ bta_sdp_db_data:
 	.string	"short unsigned int"
 .LASF117:
 	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/bt"
-.LASF17:
+.LASF14:
 	.string	"sizetype"
 .LASF57:
 	.string	"BTM_EIR_UUID_SERVCLASS_IRMC_SYNC"
-.LASF14:
+.LASF18:
 	.string	"UINT16"
-.LASF23:
+.LASF16:
 	.string	"char"
 .LASF81:
 	.string	"BTM_EIR_UUID_SERVCLASS_BASIC_PRINTING"
@@ -1208,7 +1208,7 @@ bta_sdp_db_data:
 	.string	"BTM_EIR_UUID_SERVCLASS_DIALUP_NETWORKING"
 .LASF96:
 	.string	"BTM_EIR_UUID_SERVCLASS_MESSAGE_NOTIFICATION"
-.LASF16:
+.LASF20:
 	.string	"_Bool"
 .LASF66:
 	.string	"BTM_EIR_UUID_SERVCLASS_AV_REMOTE_CONTROL"
@@ -1218,9 +1218,9 @@ bta_sdp_db_data:
 	.string	"BTM_EIR_UUID_SERVCLASS_FAX"
 .LASF100:
 	.string	"BTM_PM_STS_ACTIVE"
-.LASF22:
-	.string	"tBT_UUID"
 .LASF25:
+	.string	"tBT_UUID"
+.LASF15:
 	.string	"long unsigned int"
 .LASF71:
 	.string	"BTM_EIR_UUID_SERVCLASS_NAP"
@@ -1238,7 +1238,7 @@ bta_sdp_db_data:
 	.string	"BTM_EIR_UUID_SERVCLASS_CORDLESS_TELEPHONY"
 .LASF84:
 	.string	"BTM_EIR_UUID_SERVCLASS_CABLE_REPLACEMENT"
-.LASF21:
+.LASF24:
 	.string	"uuid128"
 .LASF30:
 	.string	"attr_len_type"
@@ -1258,7 +1258,7 @@ bta_sdp_db_data:
 	.string	"sdp_db_size"
 .LASF95:
 	.string	"BTM_EIR_UUID_SERVCLASS_MESSAGE_ACCESS"
-.LASF18:
+.LASF21:
 	.string	"BD_ADDR"
 .LASF27:
 	.string	"p_sub_attr"
@@ -1280,7 +1280,7 @@ bta_sdp_db_data:
 	.string	"bta_sdp_db_data"
 .LASF61:
 	.string	"BTM_EIR_UUID_SERVCLASS_HEADSET"
-.LASF19:
+.LASF22:
 	.string	"uuid16"
 .LASF47:
 	.string	"attr_filters"

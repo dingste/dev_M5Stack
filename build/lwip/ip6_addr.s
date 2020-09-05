@@ -7,7 +7,7 @@
 	.global	ip6addr_aton
 	.type	ip6addr_aton, @function
 ip6addr_aton:
-.LFB18:
+.LFB27:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/ipv6/ip6_addr.c"
 	.loc 1 74 0
 .LVL0:
@@ -233,7 +233,7 @@ ip6addr_aton:
 .L28:
 	addi	a2, a3, 16
 	j	.L29
-.LFE18:
+.LFE27:
 	.size	ip6addr_aton, .-ip6addr_aton
 	.section	.text.ip6addr_ntoa_r,"ax",@progbits
 	.literal_position
@@ -243,7 +243,7 @@ ip6addr_aton:
 	.global	ip6addr_ntoa_r
 	.type	ip6addr_ntoa_r, @function
 ip6addr_ntoa_r:
-.LFB20:
+.LFB29:
 	.loc 1 192 0
 .LVL36:
 	entry	sp, 48
@@ -497,16 +497,16 @@ ip6addr_ntoa_r:
 	mov.n	a2, a3
 	.loc 1 290 0
 	retw.n
-.LFE20:
+.LFE29:
 	.size	ip6addr_ntoa_r, .-ip6addr_ntoa_r
 	.section	.text.ip6addr_ntoa,"ax",@progbits
 	.literal_position
-	.literal .LC5, str$5768
+	.literal .LC5, str$5832
 	.align	4
 	.global	ip6addr_ntoa
 	.type	ip6addr_ntoa, @function
 ip6addr_ntoa:
-.LFB19:
+.LFB28:
 	.loc 1 176 0
 .LVL75:
 	entry	sp, 32
@@ -521,12 +521,12 @@ ip6addr_ntoa:
 	mov.n	a2, a10
 .LVL77:
 	retw.n
-.LFE19:
+.LFE28:
 	.size	ip6addr_ntoa, .-ip6addr_ntoa
-	.section	.bss.str$5768,"aw",@nobits
-	.type	str$5768, @object
-	.size	str$5768, 40
-str$5768:
+	.section	.bss.str$5832,"aw",@nobits
+	.type	str$5832, @object
+	.size	str$5832, 40
+str$5832:
 	.zero	40
 	.global	ip6_addr_any
 	.section	.rodata.ip6_addr_any,"a",@progbits
@@ -559,10 +559,10 @@ ip6_addr_any:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI0-.LFB18
+	.4byte	.LCFI0-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -571,10 +571,10 @@ ip6_addr_any:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI1-.LFB20
+	.4byte	.LCFI1-.LFB29
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -583,10 +583,10 @@ ip6_addr_any:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI2-.LFB19
+	.4byte	.LCFI2-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -808,8 +808,8 @@ ip6_addr_any:
 	.byte	0x1
 	.byte	0x49
 	.4byte	0x33
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x226
@@ -867,8 +867,8 @@ ip6_addr_any:
 	.byte	0x1
 	.byte	0xbf
 	.4byte	0x93
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2db
@@ -944,8 +944,8 @@ ip6_addr_any:
 	.byte	0x1
 	.byte	0xaf
 	.4byte	0x93
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x33f
@@ -962,7 +962,7 @@ ip6_addr_any:
 	.4byte	0x33f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	str$5768
+	.4byte	str$5832
 	.uleb128 0x17
 	.4byte	.LVL76
 	.4byte	0x22c
@@ -977,7 +977,7 @@ ip6_addr_any:
 	.byte	0x5b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	str$5768
+	.4byte	str$5832
 	.uleb128 0x18
 	.uleb128 0x1
 	.byte	0x5c
@@ -1368,7 +1368,7 @@ ip6_addr_any:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL7
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1399,7 +1399,7 @@ ip6_addr_any:
 	.sleb128 -16
 	.byte	0x9f
 	.4byte	.LVL35
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -1426,7 +1426,7 @@ ip6_addr_any:
 	.2byte	0x1
 	.byte	0x59
 	.4byte	.LVL35
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
@@ -1447,7 +1447,7 @@ ip6_addr_any:
 	.2byte	0x1
 	.byte	0x5b
 	.4byte	.LVL35
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x1
 	.byte	0x5b
 	.4byte	0
@@ -1464,7 +1464,7 @@ ip6_addr_any:
 	.sleb128 7
 	.byte	0x9f
 	.4byte	.LVL28
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -1559,7 +1559,7 @@ ip6_addr_any:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL73
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1573,7 +1573,7 @@ ip6_addr_any:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL38
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1777,7 +1777,7 @@ ip6_addr_any:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL77
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1793,22 +1793,22 @@ ip6_addr_any:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB19
-	.4byte	.LFE19
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB28
+	.4byte	.LFE28
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

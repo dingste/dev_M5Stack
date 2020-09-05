@@ -27,7 +27,7 @@
 	.global	esp_vfs_fat_sdmmc_mount
 	.type	esp_vfs_fat_sdmmc_mount, @function
 esp_vfs_fat_sdmmc_mount:
-.LFB20:
+.LFB29:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/fatfs/src/vfs_fat_sdmmc.c"
 	.loc 1 36 0
 .LVL0:
@@ -81,106 +81,106 @@ esp_vfs_fat_sdmmc_mount:
 	.loc 1 53 0
 	beqz.n	a10, .L4
 .LVL6:
-	.loc 1 58 0
+	.loc 1 59 0
 	movi	a10, 0x88
 	call8	malloc
 .LVL7:
 	s32i.n	a10, a6, 0
-	.loc 1 59 0
+	.loc 1 60 0
 	beqz.n	a10, .L14
-	.loc 1 64 0
+	.loc 1 65 0
 	l32i.n	a10, a3, 16
 	callx8	a10
 .LVL8:
 	mov.n	a2, a10
 .LVL9:
-	.loc 1 65 0
+	.loc 1 66 0
 	bnez.n	a10, .L15
-	.loc 1 71 0
-	l32i.n	a8, a3, 0
 	.loc 1 72 0
+	l32i.n	a8, a3, 0
+	.loc 1 73 0
 	mov.n	a11, a4
 	l32i.n	a10, a3, 4
-	.loc 1 71 0
-	bnei	a8, 8, .L6
 	.loc 1 72 0
+	bnei	a8, 8, .L6
+	.loc 1 73 0
 	call8	sdspi_host_init_slot
 .LVL10:
 	j	.L41
 .L6:
-	.loc 1 75 0
+	.loc 1 76 0
 	call8	sdmmc_host_init_slot
 .LVL11:
 .L41:
 	.loc 1 38 0
 	movi.n	a7, 0
-	.loc 1 75 0
+	.loc 1 76 0
 	mov.n	a2, a10
 .LVL12:
-	.loc 1 78 0
+	.loc 1 79 0
 	bne	a10, a7, .L5
-	.loc 1 84 0
+	.loc 1 85 0
 	l32i.n	a11, a6, 0
 	mov.n	a10, a3
 	call8	sdmmc_card_init
 .LVL13:
 	mov.n	a2, a10
 .LVL14:
-	.loc 1 85 0
+	.loc 1 86 0
 	bne	a10, a7, .L5
-	.loc 1 89 0
+	.loc 1 90 0
 	l32i.n	a2, sp, 40
 .LVL15:
 	beq	a2, a7, .L8
-	.loc 1 90 0
+	.loc 1 91 0
 	l32i.n	a4, a6, 0
 .LVL16:
 	s32i.n	a4, a2, 0
 .L8:
-	.loc 1 93 0
+	.loc 1 94 0
 	l32i.n	a11, a6, 0
 	l8ui	a10, sp, 23
 .LVL17:
 	call8	ff_diskio_register_sdmmc
 .LVL18:
-	.loc 1 94 0
+	.loc 1 95 0
 	l32r	a8, .LC2
 	l8ui	a4, sp, 23
-	.loc 1 99 0
+	.loc 1 100 0
 	l32i.n	a12, a5, 4
-	.loc 1 94 0
+	.loc 1 95 0
 	s8i	a4, a8, 0
-	.loc 1 96 0
+	.loc 1 97 0
 	addi	a4, a4, 48
 	s8i	a4, sp, 20
-	.loc 1 99 0
+	.loc 1 100 0
 	l32i.n	a10, sp, 36
-	.loc 1 96 0
+	.loc 1 97 0
 	movi.n	a4, 0x3a
 	s8i	a4, sp, 21
-	.loc 1 99 0
+	.loc 1 100 0
 	addi	a13, sp, 16
-	.loc 1 96 0
+	.loc 1 97 0
 	movi.n	a4, 0
-	.loc 1 99 0
+	.loc 1 100 0
 	addi	a11, sp, 20
-	.loc 1 96 0
+	.loc 1 97 0
 	s8i	a4, sp, 22
-	.loc 1 99 0
+	.loc 1 100 0
 	call8	esp_vfs_fat_register
 .LVL19:
 	mov.n	a2, a10
 .LVL20:
-	.loc 1 102 0
+	.loc 1 103 0
 	beqz.n	a10, .L22
 	movi	a4, -0x103
 	add.n	a4, a10, a4
 	.loc 1 38 0
 	movi.n	a7, 0
-	.loc 1 102 0
+	.loc 1 103 0
 	bne	a4, a7, .L5
 .L22:
-	.loc 1 108 0
+	.loc 1 109 0
 	l32i.n	a10, sp, 16
 	movi.n	a12, 1
 	addi	a11, sp, 20
@@ -188,11 +188,11 @@ esp_vfs_fat_sdmmc_mount:
 .LVL21:
 	mov.n	a2, a10
 .LVL22:
-	.loc 1 109 0
+	.loc 1 110 0
 	beqz.n	a10, .L2
 .LVL23:
 .LBB5:
-	.loc 1 111 0
+	.loc 1 112 0
 	call8	esp_log_timestamp
 .LVL24:
 	l32r	a4, .LC4
@@ -204,13 +204,13 @@ esp_vfs_fat_sdmmc_mount:
 	movi.n	a10, 2
 	call8	esp_log_write
 .LVL25:
-	.loc 1 112 0
+	.loc 1 113 0
 	movi.n	a9, 0xd
 	bne	a2, a9, .L10
-	.loc 1 112 0 is_stmt 0 discriminator 1
+	.loc 1 113 0 is_stmt 0 discriminator 1
 	l8ui	a8, a5, 0
 	beqz.n	a8, .L10
-	.loc 1 115 0 is_stmt 1 discriminator 4
+	.loc 1 116 0 is_stmt 1 discriminator 4
 	call8	esp_log_timestamp
 .LVL26:
 	l32r	a12, .LC8
@@ -220,33 +220,33 @@ esp_vfs_fat_sdmmc_mount:
 	movi.n	a10, 2
 	call8	esp_log_write
 .LVL27:
-	.loc 1 116 0 discriminator 4
+	.loc 1 117 0 discriminator 4
 	l32r	a10, .LC9
-	call8	malloc
+	call8	ff_memalloc
 .LVL28:
 	mov.n	a7, a10
 .LVL29:
-	.loc 1 117 0 discriminator 4
+	.loc 1 118 0 discriminator 4
 	beqz.n	a10, .L19
-	.loc 1 121 0
+	.loc 1 122 0
 	movi	a8, 0x64
 	s32i.n	a8, sp, 0
 	movi.n	a8, 0
 	s32i.n	a8, sp, 4
 	s32i.n	a8, sp, 8
 	s32i.n	a8, sp, 12
-	.loc 1 122 0
+	.loc 1 123 0
 	l32r	a8, .LC2
 	mov.n	a12, a10
 	l8ui	a10, a8, 0
 	mov.n	a11, sp
 	call8	f_fdisk
 .LVL30:
-	.loc 1 124 0
+	.loc 1 125 0
 	movi.n	a2, -1
-	.loc 1 123 0
+	.loc 1 124 0
 	bnez.n	a10, .L5
-	.loc 1 129 0
+	.loc 1 130 0
 	l32i.n	a6, a6, 0
 .LBB6:
 .LBB7:
@@ -256,10 +256,10 @@ esp_vfs_fat_sdmmc_mount:
 .LVL31:
 .LBE7:
 .LBE6:
-	.loc 1 128 0
+	.loc 1 129 0
 	l32i	a6, a6, 100
 .LVL32:
-	.loc 1 131 0
+	.loc 1 132 0
 	call8	esp_log_timestamp
 .LVL33:
 .LBB9:
@@ -272,7 +272,7 @@ esp_vfs_fat_sdmmc_mount:
 .LVL35:
 .LBE8:
 .LBE9:
-	.loc 1 131 0
+	.loc 1 132 0
 	l32r	a12, .LC11
 	mov.n	a15, a5
 	mov.n	a13, a10
@@ -281,7 +281,7 @@ esp_vfs_fat_sdmmc_mount:
 	movi.n	a10, 2
 	call8	esp_log_write
 .LVL36:
-	.loc 1 132 0
+	.loc 1 133 0
 	l32r	a14, .LC9
 	mov.n	a12, a5
 	mov.n	a13, a7
@@ -291,13 +291,13 @@ esp_vfs_fat_sdmmc_mount:
 .LVL37:
 	mov.n	a5, a10
 .LVL38:
-	.loc 1 133 0
+	.loc 1 134 0
 	bnez.n	a10, .L5
-	.loc 1 138 0
+	.loc 1 139 0
 	mov.n	a10, a7
 	call8	free
 .LVL39:
-	.loc 1 140 0
+	.loc 1 141 0
 	call8	esp_log_timestamp
 .LVL40:
 	l32r	a12, .LC13
@@ -307,17 +307,17 @@ esp_vfs_fat_sdmmc_mount:
 	mov.n	a14, a4
 	call8	esp_log_write
 .LVL41:
-	.loc 1 141 0
+	.loc 1 142 0
 	l32i.n	a10, sp, 16
 	mov.n	a12, a5
 	addi	a11, sp, 20
 	call8	f_mount
 .LVL42:
-	.loc 1 142 0
+	.loc 1 143 0
 	beqz.n	a10, .L2
 .LVL43:
 .L10:
-	.loc 1 110 0
+	.loc 1 111 0
 	movi.n	a2, -1
 .LBE5:
 	.loc 1 38 0
@@ -326,14 +326,14 @@ esp_vfs_fat_sdmmc_mount:
 .LVL44:
 .L19:
 .LBB10:
-	.loc 1 118 0
+	.loc 1 119 0
 	movi	a2, 0x101
 .LVL45:
 	j	.L5
 .LVL46:
 .L14:
 .LBE10:
-	.loc 1 60 0
+	.loc 1 61 0
 	movi	a2, 0x101
 	.loc 1 38 0
 	mov.n	a7, a10
@@ -343,53 +343,60 @@ esp_vfs_fat_sdmmc_mount:
 	l32i.n	a7, sp, 32
 .LVL48:
 .L5:
-	.loc 1 151 0
+	.loc 1 152 0
 	l32i.n	a10, a3, 40
 	callx8	a10
 .LVL49:
-	.loc 1 152 0
+	.loc 1 153 0
 	mov.n	a10, a7
 	call8	free
 .LVL50:
-	.loc 1 153 0
+	.loc 1 154 0
 	l32i.n	a3, sp, 16
 .LVL51:
 	beqz.n	a3, .L12
-	.loc 1 154 0
+	.loc 1 155 0
 	movi.n	a12, 0
 	addi	a11, sp, 20
 	mov.n	a10, a12
 	call8	f_mount
 .LVL52:
 .L12:
-	.loc 1 156 0
+	.loc 1 157 0
 	l32i.n	a10, sp, 36
-	.loc 1 159 0
+	.loc 1 160 0
 	movi.n	a3, 0
-	.loc 1 156 0
+	.loc 1 157 0
 	call8	esp_vfs_fat_unregister_path
 .LVL53:
-	.loc 1 157 0
+	.loc 1 158 0
 	l8ui	a10, sp, 23
 	movi.n	a11, 0
 	call8	ff_diskio_register
 .LVL54:
-	.loc 1 158 0
+	.loc 1 159 0
 	l32r	a4, .LC0
 	l32i.n	a10, a4, 0
 	call8	free
 .LVL55:
-	.loc 1 159 0
-	s32i.n	a3, a4, 0
-.LVL56:
-.L42:
 	.loc 1 160 0
+	s32i.n	a3, a4, 0
+	.loc 1 161 0
+	l32r	a4, .LC1
+	l32i.n	a10, a4, 0
+	call8	free
+.LVL56:
+	.loc 1 162 0
+	s32i.n	a3, a4, 0
+.LVL57:
+.L42:
+	.loc 1 163 0
 	s32i.n	a2, sp, 32
 .L2:
-	.loc 1 161 0
+	.loc 1 164 0
 	l32i.n	a2, sp, 32
 	retw.n
-.LFE20:
+.LFE29:
 	.size	esp_vfs_fat_sdmmc_mount, .-esp_vfs_fat_sdmmc_mount
 	.section	.text.esp_vfs_fat_sdmmc_unmount,"ax",@progbits
 	.literal_position
@@ -400,80 +407,80 @@ esp_vfs_fat_sdmmc_mount:
 	.global	esp_vfs_fat_sdmmc_unmount
 	.type	esp_vfs_fat_sdmmc_unmount, @function
 esp_vfs_fat_sdmmc_unmount:
-.LFB21:
-	.loc 1 164 0
+.LFB30:
+	.loc 1 167 0
 	entry	sp, 48
 .LCFI1:
-	.loc 1 165 0
+	.loc 1 168 0
 	l32r	a3, .LC14
-	.loc 1 166 0
+	.loc 1 169 0
 	movi	a2, 0x103
-	.loc 1 165 0
+	.loc 1 168 0
 	l32i.n	a4, a3, 0
 	beqz.n	a4, .L44
-	.loc 1 169 0
+	.loc 1 172 0
 	l32r	a4, .LC15
-	.loc 1 170 0
+	.loc 1 173 0
 	movi.n	a12, 0
-	.loc 1 169 0
+	.loc 1 172 0
 	l8ui	a2, a4, 0
-	.loc 1 170 0
+	.loc 1 173 0
 	mov.n	a10, a12
-	.loc 1 169 0
+	.loc 1 172 0
 	addi	a2, a2, 48
 	s8i	a2, sp, 0
 	movi.n	a2, 0x3a
 	s8i	a2, sp, 1
-	.loc 1 170 0
+	.loc 1 173 0
 	mov.n	a11, sp
-	.loc 1 169 0
+	.loc 1 172 0
 	movi.n	a2, 0
 	s8i	a2, sp, 2
-	.loc 1 170 0
+	.loc 1 173 0
 	call8	f_mount
-.LVL57:
-	.loc 1 173 0
-	l8ui	a10, a4, 0
-	.loc 1 172 0
-	l32i.n	a2, a3, 0
-	.loc 1 173 0
-	movi.n	a11, 0
-	.loc 1 172 0
-	l32i.n	a2, a2, 40
 .LVL58:
-	.loc 1 173 0
-	call8	ff_diskio_register
-.LVL59:
-	.loc 1 174 0
-	l32i.n	a10, a3, 0
-	.loc 1 175 0
-	movi.n	a4, 0
-	.loc 1 174 0
-	call8	free
-.LVL60:
-	.loc 1 175 0
-	s32i.n	a4, a3, 0
 	.loc 1 176 0
-	callx8	a2
-.LVL61:
+	l8ui	a10, a4, 0
+	.loc 1 175 0
+	l32i.n	a2, a3, 0
+	.loc 1 176 0
+	movi.n	a11, 0
+	.loc 1 175 0
+	l32i.n	a2, a2, 40
+.LVL59:
+	.loc 1 176 0
+	call8	ff_diskio_register
+.LVL60:
 	.loc 1 177 0
+	l32i.n	a10, a3, 0
+	.loc 1 178 0
+	movi.n	a4, 0
+	.loc 1 177 0
+	call8	free
+.LVL61:
+	.loc 1 178 0
+	s32i.n	a4, a3, 0
+	.loc 1 179 0
+	callx8	a2
+.LVL62:
+	.loc 1 180 0
 	l32r	a3, .LC16
 	l32i.n	a10, a3, 0
 	call8	esp_vfs_fat_unregister_path
-.LVL62:
-	mov.n	a2, a10
 .LVL63:
-	.loc 1 178 0
+	mov.n	a2, a10
+.LVL64:
+	.loc 1 181 0
 	l32i.n	a10, a3, 0
 	call8	free
-.LVL64:
-	.loc 1 179 0
-	s32i.n	a4, a3, 0
 .LVL65:
+	.loc 1 182 0
+	s32i.n	a4, a3, 0
+.LVL66:
 .L44:
-	.loc 1 181 0
+	.loc 1 184 0
 	retw.n
-.LFE21:
+.LFE30:
 	.size	esp_vfs_fat_sdmmc_unmount, .-esp_vfs_fat_sdmmc_unmount
 	.section	.bss.s_base_path,"aw",@nobits
 	.align	4
@@ -511,10 +518,10 @@ s_card:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI0-.LFB20
+	.4byte	.LCFI0-.LFB29
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -523,10 +530,10 @@ s_card:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI1-.LFB21
+	.4byte	.LCFI1-.LFB30
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -548,21 +555,22 @@ s_card:
 	.file 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/fatfs/src/integer.h"
 	.file 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/fatfs/src/ff.h"
 	.file 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/fatfs/src/esp_vfs_fat.h"
-	.file 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
-	.file 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/fatfs/src/diskio.h"
-	.file 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
-	.file 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/sdmmc/include/sdmmc_cmd.h"
+	.file 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/fatfs/src/ffconf.h"
+	.file 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
+	.file 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/fatfs/src/diskio.h"
+	.file 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+	.file 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/sdmmc/include/sdmmc_cmd.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0xee7
+	.4byte	0xefc
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF211
-	.byte	0xc
 	.4byte	.LASF212
+	.byte	0xc
 	.4byte	.LASF213
+	.4byte	.LASF214
 	.4byte	.Ldebug_ranges0+0x30
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -1711,7 +1719,7 @@ s_card:
 	.byte	0x6f
 	.4byte	0x8d4
 	.uleb128 0x16
-	.4byte	.LASF214
+	.4byte	.LASF215
 	.byte	0x2
 	.byte	0x15
 	.4byte	0x25
@@ -1746,15 +1754,15 @@ s_card:
 	.uleb128 0x7
 	.4byte	0x25
 	.uleb128 0x19
-	.4byte	.LASF215
+	.4byte	.LASF216
 	.byte	0x1
 	.byte	0x1f
 	.4byte	0x137
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xd00
+	.4byte	0xd09
 	.uleb128 0x1a
 	.4byte	.LASF183
 	.byte	0x1
@@ -1765,7 +1773,7 @@ s_card:
 	.4byte	.LASF184
 	.byte	0x1
 	.byte	0x20
-	.4byte	0xd00
+	.4byte	0xd09
 	.4byte	.LLST1
 	.uleb128 0x1a
 	.4byte	.LASF185
@@ -1777,13 +1785,13 @@ s_card:
 	.4byte	.LASF186
 	.byte	0x1
 	.byte	0x22
-	.4byte	0xd0b
+	.4byte	0xd14
 	.4byte	.LLST3
 	.uleb128 0x1a
 	.4byte	.LASF187
 	.byte	0x1
 	.byte	0x23
-	.4byte	0xd16
+	.4byte	0xd1f
 	.4byte	.LLST4
 	.uleb128 0x1b
 	.4byte	.LASF188
@@ -1820,22 +1828,22 @@ s_card:
 	.4byte	0x137
 	.4byte	.LLST6
 	.uleb128 0x20
-	.4byte	.LASF216
+	.4byte	.LASF217
 	.byte	0x1
-	.byte	0x96
+	.byte	0x97
 	.4byte	.L5
 	.uleb128 0x1d
 	.string	"drv"
 	.byte	0x1
-	.byte	0x60
-	.4byte	0xd22
+	.byte	0x61
+	.4byte	0xd2b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -60
 	.uleb128 0x1f
 	.string	"res"
 	.byte	0x1
-	.byte	0x6c
+	.byte	0x6d
 	.4byte	0x8c9
 	.4byte	.LLST7
 	.uleb128 0x21
@@ -1844,15 +1852,15 @@ s_card:
 	.uleb128 0x1e
 	.4byte	.LASF190
 	.byte	0x1
-	.byte	0x79
-	.4byte	0xd32
+	.byte	0x7a
+	.4byte	0xd3b
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -80
 	.uleb128 0x1e
 	.4byte	.LASF180
 	.byte	0x1
-	.byte	0x80
+	.byte	0x81
 	.4byte	0x25
 	.uleb128 0x1
 	.byte	0x55
@@ -1861,7 +1869,7 @@ s_card:
 	.4byte	.LBB6
 	.4byte	.Ldebug_ranges0+0x18
 	.byte	0x1
-	.byte	0x80
+	.byte	0x81
 	.4byte	0xa93
 	.uleb128 0x23
 	.4byte	0x927
@@ -1883,10 +1891,10 @@ s_card:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL24
-	.4byte	0xe37
+	.4byte	0xe40
 	.uleb128 0x28
 	.4byte	.LVL25
-	.4byte	0xe42
+	.4byte	0xe4b
 	.4byte	0xaca
 	.uleb128 0x29
 	.uleb128 0x1
@@ -1920,10 +1928,10 @@ s_card:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL26
-	.4byte	0xe37
+	.4byte	0xe40
 	.uleb128 0x28
 	.4byte	.LVL27
-	.4byte	0xe42
+	.4byte	0xe4b
 	.4byte	0xafb
 	.uleb128 0x29
 	.uleb128 0x1
@@ -1951,7 +1959,7 @@ s_card:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL28
-	.4byte	0xe4d
+	.4byte	0xe56
 	.4byte	0xb10
 	.uleb128 0x29
 	.uleb128 0x1
@@ -1962,7 +1970,7 @@ s_card:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL30
-	.4byte	0xe58
+	.4byte	0xe62
 	.4byte	0xb2b
 	.uleb128 0x29
 	.uleb128 0x1
@@ -1979,10 +1987,10 @@ s_card:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL33
-	.4byte	0xe37
+	.4byte	0xe40
 	.uleb128 0x28
 	.4byte	.LVL36
-	.4byte	0xe42
+	.4byte	0xe4b
 	.4byte	0xb62
 	.uleb128 0x29
 	.uleb128 0x1
@@ -2016,7 +2024,7 @@ s_card:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL37
-	.4byte	0xe64
+	.4byte	0xe6e
 	.4byte	0xb8e
 	.uleb128 0x29
 	.uleb128 0x1
@@ -2050,7 +2058,7 @@ s_card:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL39
-	.4byte	0xe70
+	.4byte	0xe7a
 	.4byte	0xba2
 	.uleb128 0x29
 	.uleb128 0x1
@@ -2061,10 +2069,10 @@ s_card:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL40
-	.4byte	0xe37
+	.4byte	0xe40
 	.uleb128 0x28
 	.4byte	.LVL41
-	.4byte	0xe42
+	.4byte	0xe4b
 	.4byte	0xbd3
 	.uleb128 0x29
 	.uleb128 0x1
@@ -2092,7 +2100,7 @@ s_card:
 	.byte	0
 	.uleb128 0x2a
 	.4byte	.LVL42
-	.4byte	0xe7b
+	.4byte	0xe85
 	.uleb128 0x29
 	.uleb128 0x1
 	.byte	0x5b
@@ -2109,7 +2117,7 @@ s_card:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL4
-	.4byte	0xe87
+	.4byte	0xe91
 	.4byte	0xbfe
 	.uleb128 0x29
 	.uleb128 0x1
@@ -2120,7 +2128,7 @@ s_card:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL5
-	.4byte	0xe92
+	.4byte	0xe9c
 	.4byte	0xc13
 	.uleb128 0x29
 	.uleb128 0x1
@@ -2132,7 +2140,7 @@ s_card:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL7
-	.4byte	0xe4d
+	.4byte	0xea7
 	.4byte	0xc27
 	.uleb128 0x29
 	.uleb128 0x1
@@ -2143,7 +2151,7 @@ s_card:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL10
-	.4byte	0xe9d
+	.4byte	0xeb2
 	.4byte	0xc3b
 	.uleb128 0x29
 	.uleb128 0x1
@@ -2154,10 +2162,10 @@ s_card:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL11
-	.4byte	0xea8
+	.4byte	0xebd
 	.uleb128 0x28
 	.4byte	.LVL13
-	.4byte	0xeb3
+	.4byte	0xec8
 	.4byte	0xc58
 	.uleb128 0x29
 	.uleb128 0x1
@@ -2168,10 +2176,10 @@ s_card:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL18
-	.4byte	0xebe
+	.4byte	0xed3
 	.uleb128 0x28
 	.4byte	.LVL19
-	.4byte	0xec9
+	.4byte	0xede
 	.4byte	0xc82
 	.uleb128 0x29
 	.uleb128 0x1
@@ -2195,7 +2203,7 @@ s_card:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL21
-	.4byte	0xe7b
+	.4byte	0xe85
 	.4byte	0xc9b
 	.uleb128 0x29
 	.uleb128 0x1
@@ -2211,7 +2219,7 @@ s_card:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL50
-	.4byte	0xe70
+	.4byte	0xe7a
 	.4byte	0xcaf
 	.uleb128 0x29
 	.uleb128 0x1
@@ -2222,7 +2230,7 @@ s_card:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL52
-	.4byte	0xe7b
+	.4byte	0xe85
 	.4byte	0xccd
 	.uleb128 0x29
 	.uleb128 0x1
@@ -2243,7 +2251,7 @@ s_card:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL53
-	.4byte	0xed4
+	.4byte	0xee9
 	.4byte	0xce2
 	.uleb128 0x29
 	.uleb128 0x1
@@ -2255,7 +2263,7 @@ s_card:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL54
-	.4byte	0xedf
+	.4byte	0xef4
 	.4byte	0xcf6
 	.uleb128 0x29
 	.uleb128 0x1
@@ -2266,72 +2274,75 @@ s_card:
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LVL55
-	.4byte	0xe70
+	.4byte	0xe7a
+	.uleb128 0x27
+	.4byte	.LVL56
+	.4byte	0xe7a
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0xd06
+	.4byte	0xd0f
 	.uleb128 0x7
 	.4byte	0x574
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0xd11
+	.4byte	0xd1a
 	.uleb128 0x7
 	.4byte	0x901
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0xd1c
+	.4byte	0xd25
 	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x651
 	.uleb128 0x8
 	.4byte	0xb1
-	.4byte	0xd32
+	.4byte	0xd3b
 	.uleb128 0x9
 	.4byte	0x9b
 	.byte	0x2
 	.byte	0
 	.uleb128 0x8
 	.4byte	0x71e
-	.4byte	0xd42
+	.4byte	0xd4b
 	.uleb128 0x9
 	.4byte	0x9b
 	.byte	0x3
 	.byte	0
 	.uleb128 0x2b
-	.4byte	.LASF217
+	.4byte	.LASF218
 	.byte	0x1
-	.byte	0xa3
+	.byte	0xa6
 	.4byte	0x137
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xddc
+	.4byte	0xde5
 	.uleb128 0x1d
 	.string	"drv"
 	.byte	0x1
-	.byte	0xa9
-	.4byte	0xd22
+	.byte	0xac
+	.4byte	0xd2b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
 	.uleb128 0x1c
 	.4byte	.LASF191
 	.byte	0x1
-	.byte	0xac
-	.4byte	0xde7
+	.byte	0xaf
+	.4byte	0xdf0
 	.4byte	.LLST12
 	.uleb128 0x1f
 	.string	"err"
 	.byte	0x1
-	.byte	0xb1
+	.byte	0xb4
 	.4byte	0x137
 	.4byte	.LLST13
 	.uleb128 0x28
-	.4byte	.LVL57
-	.4byte	0xe7b
-	.4byte	0xda5
+	.4byte	.LVL58
+	.4byte	0xe85
+	.4byte	0xdae
 	.uleb128 0x29
 	.uleb128 0x1
 	.byte	0x5a
@@ -2350,9 +2361,9 @@ s_card:
 	.byte	0x30
 	.byte	0
 	.uleb128 0x28
-	.4byte	.LVL59
-	.4byte	0xedf
-	.4byte	0xdb8
+	.4byte	.LVL60
+	.4byte	0xef4
+	.4byte	0xdc1
 	.uleb128 0x29
 	.uleb128 0x1
 	.byte	0x5b
@@ -2360,33 +2371,33 @@ s_card:
 	.byte	0x30
 	.byte	0
 	.uleb128 0x27
-	.4byte	.LVL60
-	.4byte	0xe70
-	.uleb128 0x2c
 	.4byte	.LVL61
+	.4byte	0xe7a
+	.uleb128 0x2c
+	.4byte	.LVL62
 	.uleb128 0x2
 	.byte	0x72
 	.sleb128 0
 	.uleb128 0x27
-	.4byte	.LVL62
-	.4byte	0xed4
+	.4byte	.LVL63
+	.4byte	0xee9
 	.uleb128 0x27
-	.4byte	.LVL64
-	.4byte	0xe70
+	.4byte	.LVL65
+	.4byte	0xe7a
 	.byte	0
 	.uleb128 0x2d
 	.4byte	0x137
-	.4byte	0xde7
+	.4byte	0xdf0
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0xddc
+	.4byte	0xde5
 	.uleb128 0x1d
 	.string	"TAG"
 	.byte	0x1
 	.byte	0x1a
-	.4byte	0xdff
+	.4byte	0xe08
 	.uleb128 0x6
 	.byte	0x3
 	.4byte	.LC3
@@ -2397,7 +2408,7 @@ s_card:
 	.4byte	.LASF192
 	.byte	0x1
 	.byte	0x1b
-	.4byte	0xd1c
+	.4byte	0xd25
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	s_card
@@ -2427,11 +2438,11 @@ s_card:
 	.4byte	.LASF196
 	.byte	0x8
 	.byte	0x6b
-	.uleb128 0x2f
+	.uleb128 0x30
 	.4byte	.LASF197
 	.4byte	.LASF197
 	.byte	0x12
-	.byte	0x65
+	.2byte	0x133
 	.uleb128 0x30
 	.4byte	.LASF198
 	.4byte	.LASF198
@@ -2445,7 +2456,7 @@ s_card:
 	.uleb128 0x2f
 	.4byte	.LASF200
 	.4byte	.LASF200
-	.byte	0x12
+	.byte	0x13
 	.byte	0x5a
 	.uleb128 0x30
 	.4byte	.LASF201
@@ -2455,47 +2466,52 @@ s_card:
 	.uleb128 0x2f
 	.4byte	.LASF202
 	.4byte	.LASF202
-	.byte	0x13
+	.byte	0x14
 	.byte	0x5a
 	.uleb128 0x2f
 	.4byte	.LASF203
 	.4byte	.LASF203
-	.byte	0x14
+	.byte	0x15
 	.byte	0x50
 	.uleb128 0x2f
 	.4byte	.LASF204
 	.4byte	.LASF204
+	.byte	0x13
+	.byte	0x65
+	.uleb128 0x2f
+	.4byte	.LASF205
+	.4byte	.LASF205
 	.byte	0xe
 	.byte	0x6b
 	.uleb128 0x2f
-	.4byte	.LASF205
-	.4byte	.LASF205
+	.4byte	.LASF206
+	.4byte	.LASF206
 	.byte	0xd
 	.byte	0x72
 	.uleb128 0x2f
-	.4byte	.LASF206
-	.4byte	.LASF206
-	.byte	0x15
+	.4byte	.LASF207
+	.4byte	.LASF207
+	.byte	0x16
 	.byte	0x26
 	.uleb128 0x2f
-	.4byte	.LASF207
-	.4byte	.LASF207
-	.byte	0x13
+	.4byte	.LASF208
+	.4byte	.LASF208
+	.byte	0x14
 	.byte	0x50
 	.uleb128 0x2f
-	.4byte	.LASF208
-	.4byte	.LASF208
+	.4byte	.LASF209
+	.4byte	.LASF209
 	.byte	0x11
 	.byte	0x33
 	.uleb128 0x2f
-	.4byte	.LASF209
-	.4byte	.LASF209
+	.4byte	.LASF210
+	.4byte	.LASF210
 	.byte	0x11
 	.byte	0x54
 	.uleb128 0x2f
-	.4byte	.LASF210
-	.4byte	.LASF210
-	.byte	0x13
+	.4byte	.LASF211
+	.4byte	.LASF211
+	.byte	0x14
 	.byte	0x46
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
@@ -3099,7 +3115,7 @@ s_card:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL3
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -44
@@ -3111,7 +3127,7 @@ s_card:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL51
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3136,7 +3152,7 @@ s_card:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL48
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3161,7 +3177,7 @@ s_card:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL48
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3175,7 +3191,7 @@ s_card:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL2
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -40
@@ -3206,7 +3222,7 @@ s_card:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL48
-	.4byte	.LVL56
+	.4byte	.LVL57
 	.2byte	0x1
 	.byte	0x57
 	.4byte	0
@@ -3241,7 +3257,7 @@ s_card:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL47
-	.4byte	.LVL56
+	.4byte	.LVL57
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -3308,15 +3324,15 @@ s_card:
 	.4byte	0
 	.4byte	0
 .LLST12:
-	.4byte	.LVL58
-	.4byte	.LVL63
+	.4byte	.LVL59
+	.4byte	.LVL64
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
 	.4byte	0
 .LLST13:
-	.4byte	.LVL63
-	.4byte	.LVL65
+	.4byte	.LVL64
+	.4byte	.LVL66
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -3329,10 +3345,10 @@ s_card:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -3349,10 +3365,10 @@ s_card:
 	.4byte	.LBE9
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB21
-	.4byte	.LFE21
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB30
+	.4byte	.LFE30
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -3368,7 +3384,7 @@ s_card:
 	.string	"GPIO_NUM_36"
 .LASF60:
 	.string	"GPIO_NUM_37"
-.LASF197:
+.LASF204:
 	.string	"malloc"
 .LASF62:
 	.string	"GPIO_NUM_39"
@@ -3408,13 +3424,13 @@ s_card:
 	.string	"sdmmc_scr_t"
 .LASF196:
 	.string	"esp_log_write"
-.LASF209:
+.LASF210:
 	.string	"esp_vfs_fat_unregister_path"
 .LASF72:
 	.string	"card_command_class"
 .LASF65:
 	.string	"QueueHandle_t"
-.LASF206:
+.LASF207:
 	.string	"sdmmc_card_init"
 .LASF30:
 	.string	"GPIO_NUM_1"
@@ -3446,9 +3462,11 @@ s_card:
 	.string	"FR_INVALID_PARAMETER"
 .LASF147:
 	.string	"fsize"
-.LASF204:
+.LASF205:
 	.string	"sdspi_host_init_slot"
-.LASF214:
+.LASF197:
+	.string	"ff_memalloc"
+.LASF215:
 	.string	"esp_vfs_fat_get_allocation_unit_size"
 .LASF146:
 	.string	"n_fatent"
@@ -3520,9 +3538,9 @@ s_card:
 	.string	"long unsigned int"
 .LASF117:
 	.string	"num_io_functions"
-.LASF210:
-	.string	"ff_diskio_register"
 .LASF211:
+	.string	"ff_diskio_register"
+.LASF212:
 	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
 .LASF77:
 	.string	"name"
@@ -3548,7 +3566,7 @@ s_card:
 	.string	"GPIO_NUM_9"
 .LASF104:
 	.string	"set_card_clk"
-.LASF215:
+.LASF216:
 	.string	"esp_vfs_fat_sdmmc_mount"
 .LASF183:
 	.string	"base_path"
@@ -3574,7 +3592,7 @@ s_card:
 	.string	"WORD"
 .LASF164:
 	.string	"FR_WRITE_PROTECTED"
-.LASF216:
+.LASF217:
 	.string	"fail"
 .LASF192:
 	.string	"s_card"
@@ -3588,7 +3606,7 @@ s_card:
 	.string	"is_mem"
 .LASF92:
 	.string	"blklen"
-.LASF213:
+.LASF214:
 	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/fatfs"
 .LASF13:
 	.string	"sizetype"
@@ -3612,7 +3630,7 @@ s_card:
 	.string	"mmc_ver"
 .LASF158:
 	.string	"FR_NO_FILE"
-.LASF212:
+.LASF213:
 	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/fatfs/src/vfs_fat_sdmmc.c"
 .LASF175:
 	.string	"format_if_mount_failed"
@@ -3662,7 +3680,7 @@ s_card:
 	.string	"FR_MKFS_ABORTED"
 .LASF101:
 	.string	"set_bus_width"
-.LASF208:
+.LASF209:
 	.string	"esp_vfs_fat_register"
 .LASF170:
 	.string	"FR_LOCKED"
@@ -3692,7 +3710,7 @@ s_card:
 	.string	"sdmmc_response_t"
 .LASF15:
 	.string	"char"
-.LASF217:
+.LASF218:
 	.string	"esp_vfs_fat_sdmmc_unmount"
 .LASF66:
 	.string	"SemaphoreHandle_t"
@@ -3776,11 +3794,11 @@ s_card:
 	.string	"bus_width"
 .LASF159:
 	.string	"FR_NO_PATH"
-.LASF205:
+.LASF206:
 	.string	"sdmmc_host_init_slot"
 .LASF98:
 	.string	"max_freq_khz"
-.LASF207:
+.LASF208:
 	.string	"ff_diskio_register_sdmmc"
 .LASF102:
 	.string	"get_bus_width"

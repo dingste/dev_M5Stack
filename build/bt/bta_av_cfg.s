@@ -59,42 +59,42 @@
 	.byte	0x2
 	.byte	0x15
 	.4byte	0x39
-	.uleb128 0x4
-	.4byte	.LASF9
-	.byte	0x3
-	.byte	0x21
-	.4byte	0x60
 	.uleb128 0x3
-	.byte	0x1
-	.byte	0x2
+	.byte	0x4
+	.byte	0x5
+	.4byte	.LASF9
+	.uleb128 0x3
+	.byte	0x4
+	.byte	0x7
 	.4byte	.LASF10
 	.uleb128 0x3
 	.byte	0x4
 	.byte	0x7
 	.4byte	.LASF11
-	.uleb128 0x5
-	.4byte	0x6b
-	.4byte	0x94
-	.uleb128 0x6
-	.4byte	0x7d
-	.byte	0x5
-	.byte	0
 	.uleb128 0x3
 	.byte	0x1
 	.byte	0x8
 	.4byte	.LASF12
-	.uleb128 0x3
-	.byte	0x4
-	.byte	0x5
+	.uleb128 0x4
 	.4byte	.LASF13
+	.byte	0x3
+	.byte	0x1a
+	.4byte	0x60
 	.uleb128 0x3
-	.byte	0x4
-	.byte	0x7
+	.byte	0x1
+	.byte	0x2
 	.4byte	.LASF14
+	.uleb128 0x5
+	.4byte	0x87
+	.4byte	0xa9
+	.uleb128 0x6
+	.4byte	0x72
+	.byte	0x5
+	.byte	0
 	.uleb128 0x7
 	.4byte	.LASF15
 	.byte	0x3
-	.2byte	0x2cc
+	.2byte	0x2b8
 	.4byte	0xbc
 	.byte	0x6
 	.byte	0xff
@@ -104,11 +104,11 @@
 	.byte	0xff
 	.byte	0xff
 	.uleb128 0x8
-	.4byte	0x84
+	.4byte	0x99
 	.uleb128 0x7
 	.4byte	.LASF16
 	.byte	0x3
-	.2byte	0x2cd
+	.2byte	0x2b9
 	.4byte	0xd4
 	.byte	0x6
 	.byte	0
@@ -118,7 +118,7 @@
 	.byte	0
 	.byte	0
 	.uleb128 0x8
-	.4byte	0x84
+	.4byte	0x99
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -230,7 +230,7 @@
 	.string	"bd_addr_null"
 .LASF0:
 	.string	"unsigned int"
-.LASF14:
+.LASF11:
 	.string	"long unsigned int"
 .LASF6:
 	.string	"long long unsigned int"
@@ -242,11 +242,11 @@
 	.string	"unsigned char"
 .LASF12:
 	.string	"char"
-.LASF13:
+.LASF9:
 	.string	"long int"
 .LASF15:
 	.string	"bd_addr_any"
-.LASF10:
+.LASF14:
 	.string	"_Bool"
 .LASF5:
 	.string	"long long int"
@@ -262,8 +262,8 @@
 	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
 .LASF4:
 	.string	"short int"
-.LASF11:
+.LASF10:
 	.string	"sizetype"
-.LASF9:
+.LASF13:
 	.string	"UINT8"
 	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

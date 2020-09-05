@@ -823,21 +823,21 @@ tls_cipher_suites:
 	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 	.file 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa2/tls/tlsv1_common.h"
 	.file 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
-	.file 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa2/eap_peer/eap.h"
-	.file 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa2/eap_peer/eap_i.h"
+	.file 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa2/eap_peer/eap_i.h"
+	.file 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa2/eap_peer/eap.h"
 	.file 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h"
 	.file 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa2/tls/tls.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x1300
+	.4byte	0x1329
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF249
+	.4byte	.LASF254
 	.byte	0xc
-	.4byte	.LASF250
-	.4byte	.LASF251
+	.4byte	.LASF255
+	.4byte	.LASF256
 	.4byte	.Ldebug_ranges0+0
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -2231,16 +2231,36 @@ tls_cipher_suites:
 	.byte	0x1
 	.byte	0x2
 	.4byte	.LASF202
-	.uleb128 0x1f
+	.uleb128 0x14
 	.4byte	.LASF203
+	.byte	0x4
+	.4byte	0x69
+	.byte	0xd
+	.byte	0x66
+	.4byte	0xbc4
+	.uleb128 0xf
+	.4byte	.LASF204
+	.byte	0
+	.uleb128 0xf
+	.4byte	.LASF205
+	.byte	0x1
+	.uleb128 0xf
+	.4byte	.LASF206
+	.byte	0x2
+	.uleb128 0xf
+	.4byte	.LASF207
+	.byte	0x3
+	.byte	0
+	.uleb128 0x1f
+	.4byte	.LASF208
 	.byte	0x1
 	.byte	0x6d
-	.4byte	0xbd1
+	.4byte	0xbfa
 	.4byte	.LFB38
 	.4byte	.LFE38-.LFB38
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xbd1
+	.4byte	0xbfa
 	.uleb128 0x20
 	.4byte	.LASF115
 	.byte	0x1
@@ -2256,19 +2276,19 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0xbd7
+	.4byte	0xc00
 	.uleb128 0x8
 	.4byte	0x54c
 	.uleb128 0x1f
-	.4byte	.LASF204
+	.4byte	.LASF209
 	.byte	0x1
 	.byte	0x77
-	.4byte	0xc12
+	.4byte	0xc3b
 	.4byte	.LFB39
 	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xc12
+	.4byte	0xc3b
 	.uleb128 0x20
 	.4byte	.LASF117
 	.byte	0x1
@@ -2284,11 +2304,11 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0xc18
+	.4byte	0xc41
 	.uleb128 0x8
 	.4byte	0x5ad
 	.uleb128 0x1f
-	.4byte	.LASF205
+	.4byte	.LASF210
 	.byte	0x1
 	.byte	0x81
 	.4byte	0x57
@@ -2296,7 +2316,7 @@ tls_cipher_suites:
 	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xc69
+	.4byte	0xc92
 	.uleb128 0x20
 	.4byte	.LASF117
 	.byte	0x1
@@ -2307,11 +2327,11 @@ tls_cipher_suites:
 	.4byte	.LASF115
 	.byte	0x1
 	.byte	0x83
-	.4byte	0xbd1
+	.4byte	0xbfa
 	.4byte	.LLST5
 	.uleb128 0x23
 	.4byte	.LVL16
-	.4byte	0xb9b
+	.4byte	0xbc4
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5a
@@ -2324,7 +2344,7 @@ tls_cipher_suites:
 	.byte	0
 	.byte	0
 	.uleb128 0x1f
-	.4byte	.LASF206
+	.4byte	.LASF211
 	.byte	0x1
 	.byte	0xa5
 	.4byte	0x57
@@ -2332,7 +2352,7 @@ tls_cipher_suites:
 	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xd66
+	.4byte	0xd8f
 	.uleb128 0x25
 	.string	"buf"
 	.byte	0x1
@@ -2349,11 +2369,11 @@ tls_cipher_suites:
 	.string	"pk"
 	.byte	0x1
 	.byte	0xa5
-	.4byte	0xd6b
+	.4byte	0xd94
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x27
-	.4byte	.LASF207
+	.4byte	.LASF212
 	.byte	0x1
 	.byte	0xa7
 	.4byte	0x3f1
@@ -2361,8 +2381,8 @@ tls_cipher_suites:
 	.byte	0x53
 	.uleb128 0x28
 	.4byte	.LVL20
-	.4byte	0x1287
-	.4byte	0xce1
+	.4byte	0x12b0
+	.4byte	0xd0a
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5a
@@ -2389,8 +2409,8 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL21
-	.4byte	0x1292
-	.4byte	0xcfb
+	.4byte	0x12bb
+	.4byte	0xd24
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5a
@@ -2406,8 +2426,8 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL24
-	.4byte	0x129e
-	.4byte	0xd15
+	.4byte	0x12c7
+	.4byte	0xd3e
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5a
@@ -2423,11 +2443,11 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL27
-	.4byte	0x12a9
+	.4byte	0x12d2
 	.uleb128 0x28
 	.4byte	.LVL28
-	.4byte	0x12b5
-	.4byte	0xd32
+	.4byte	0x12de
+	.4byte	0xd5b
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5a
@@ -2437,10 +2457,10 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LVL29
-	.4byte	0x12c0
+	.4byte	0x12e9
 	.uleb128 0x23
 	.4byte	.LVL30
-	.4byte	0x12cb
+	.4byte	0x12f4
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5a
@@ -2467,27 +2487,27 @@ tls_cipher_suites:
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
-	.4byte	.LASF208
+	.4byte	.LASF213
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0xd71
+	.4byte	0xd9a
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0xd66
+	.4byte	0xd8f
 	.uleb128 0x2a
-	.4byte	.LASF210
+	.4byte	.LASF215
 	.byte	0x1
 	.byte	0xf3
 	.4byte	.LFB43
 	.4byte	.LFE43-.LFB43
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xe4c
+	.4byte	0xe75
 	.uleb128 0x2b
-	.4byte	.LASF209
+	.4byte	.LASF214
 	.byte	0x1
 	.byte	0xf3
-	.4byte	0xe4c
+	.4byte	0xe75
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x26
@@ -2506,8 +2526,8 @@ tls_cipher_suites:
 	.byte	0x54
 	.uleb128 0x28
 	.4byte	.LVL32
-	.4byte	0x12d6
-	.4byte	0xdcd
+	.4byte	0x12ff
+	.4byte	0xdf6
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5b
@@ -2523,8 +2543,8 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL33
-	.4byte	0x12d6
-	.4byte	0xde7
+	.4byte	0x12ff
+	.4byte	0xe10
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5b
@@ -2540,8 +2560,8 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL34
-	.4byte	0x12d6
-	.4byte	0xe01
+	.4byte	0x12ff
+	.4byte	0xe2a
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5b
@@ -2557,8 +2577,8 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL35
-	.4byte	0x12d6
-	.4byte	0xe1b
+	.4byte	0x12ff
+	.4byte	0xe44
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5b
@@ -2574,8 +2594,8 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL36
-	.4byte	0x12d6
-	.4byte	0xe35
+	.4byte	0x12ff
+	.4byte	0xe5e
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5b
@@ -2591,7 +2611,7 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL37
-	.4byte	0x12d6
+	.4byte	0x12ff
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5b
@@ -2610,25 +2630,25 @@ tls_cipher_suites:
 	.byte	0x4
 	.4byte	0x602
 	.uleb128 0x2c
-	.4byte	.LASF211
+	.4byte	.LASF216
 	.byte	0x1
 	.2byte	0x112
 	.4byte	.LFB44
 	.4byte	.LFE44-.LFB44
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xf03
+	.4byte	0xf2c
 	.uleb128 0x2d
-	.4byte	.LASF209
+	.4byte	.LASF214
 	.byte	0x1
 	.2byte	0x112
-	.4byte	0xe4c
+	.4byte	0xe75
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x28
 	.4byte	.LVL39
-	.4byte	0x12e1
-	.4byte	0xe8e
+	.4byte	0x130a
+	.4byte	0xeb7
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5b
@@ -2642,8 +2662,8 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL40
-	.4byte	0x12e1
-	.4byte	0xea6
+	.4byte	0x130a
+	.4byte	0xecf
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5b
@@ -2657,8 +2677,8 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL41
-	.4byte	0x12e1
-	.4byte	0xebe
+	.4byte	0x130a
+	.4byte	0xee7
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5b
@@ -2672,8 +2692,8 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL42
-	.4byte	0x12e1
-	.4byte	0xed6
+	.4byte	0x130a
+	.4byte	0xeff
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5b
@@ -2687,8 +2707,8 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL43
-	.4byte	0x12e1
-	.4byte	0xeee
+	.4byte	0x130a
+	.4byte	0xf17
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5b
@@ -2702,7 +2722,7 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL44
-	.4byte	0x12e1
+	.4byte	0x130a
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5b
@@ -2716,7 +2736,7 @@ tls_cipher_suites:
 	.byte	0
 	.byte	0
 	.uleb128 0x1f
-	.4byte	.LASF212
+	.4byte	.LASF217
 	.byte	0x1
 	.byte	0xd0
 	.4byte	0x57
@@ -2724,17 +2744,17 @@ tls_cipher_suites:
 	.4byte	.LFE42-.LFB42
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xffe
+	.4byte	0x1027
 	.uleb128 0x20
-	.4byte	.LASF209
+	.4byte	.LASF214
 	.byte	0x1
 	.byte	0xd0
-	.4byte	0xe4c
+	.4byte	0xe75
 	.4byte	.LLST8
 	.uleb128 0x28
 	.4byte	.LVL46
-	.4byte	0xe52
-	.4byte	0xf3f
+	.4byte	0xe7b
+	.4byte	0xf68
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5a
@@ -2744,8 +2764,8 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL47
-	.4byte	0x12ec
-	.4byte	0xf5c
+	.4byte	0x1315
+	.4byte	0xf85
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5a
@@ -2764,8 +2784,8 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL48
-	.4byte	0x12ec
-	.4byte	0xf79
+	.4byte	0x1315
+	.4byte	0xfa2
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5a
@@ -2784,8 +2804,8 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL49
-	.4byte	0x12ec
-	.4byte	0xf96
+	.4byte	0x1315
+	.4byte	0xfbf
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5a
@@ -2804,8 +2824,8 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL50
-	.4byte	0x12ec
-	.4byte	0xfb3
+	.4byte	0x1315
+	.4byte	0xfdc
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5a
@@ -2824,8 +2844,8 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL51
-	.4byte	0x12ec
-	.4byte	0xfd0
+	.4byte	0x1315
+	.4byte	0xff9
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5a
@@ -2844,8 +2864,8 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LVL52
-	.4byte	0x12ec
-	.4byte	0xfed
+	.4byte	0x1315
+	.4byte	0x1016
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5a
@@ -2864,7 +2884,7 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LVL54
-	.4byte	0xe52
+	.4byte	0xe7b
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5a
@@ -2874,7 +2894,7 @@ tls_cipher_suites:
 	.byte	0
 	.byte	0
 	.uleb128 0x2e
-	.4byte	.LASF213
+	.4byte	.LASF218
 	.byte	0x1
 	.2byte	0x130
 	.4byte	0x57
@@ -2882,7 +2902,7 @@ tls_cipher_suites:
 	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1029
+	.4byte	0x1052
 	.uleb128 0x2f
 	.string	"ver"
 	.byte	0x1
@@ -2891,7 +2911,7 @@ tls_cipher_suites:
 	.4byte	.LLST9
 	.byte	0
 	.uleb128 0x2e
-	.4byte	.LASF214
+	.4byte	.LASF219
 	.byte	0x1
 	.2byte	0x141
 	.4byte	0xdb
@@ -2899,7 +2919,7 @@ tls_cipher_suites:
 	.4byte	.LFE46-.LFB46
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1054
+	.4byte	0x107d
 	.uleb128 0x2f
 	.string	"ver"
 	.byte	0x1
@@ -2908,7 +2928,7 @@ tls_cipher_suites:
 	.4byte	.LLST10
 	.byte	0
 	.uleb128 0x2e
-	.4byte	.LASF215
+	.4byte	.LASF220
 	.byte	0x1
 	.2byte	0x150
 	.4byte	0x57
@@ -2916,7 +2936,7 @@ tls_cipher_suites:
 	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x111a
+	.4byte	0x1143
 	.uleb128 0x2f
 	.string	"ver"
 	.byte	0x1
@@ -2924,35 +2944,35 @@ tls_cipher_suites:
 	.4byte	0x118
 	.4byte	.LLST11
 	.uleb128 0x2d
-	.4byte	.LASF216
+	.4byte	.LASF221
 	.byte	0x1
 	.2byte	0x150
 	.4byte	0x164
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x2d
-	.4byte	.LASF217
+	.4byte	.LASF222
 	.byte	0x1
 	.2byte	0x150
 	.4byte	0x7e
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x2d
-	.4byte	.LASF218
+	.4byte	.LASF223
 	.byte	0x1
 	.2byte	0x150
 	.4byte	0xdb
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x2d
-	.4byte	.LASF219
+	.4byte	.LASF224
 	.byte	0x1
 	.2byte	0x151
 	.4byte	0x164
 	.uleb128 0x1
 	.byte	0x56
 	.uleb128 0x2d
-	.4byte	.LASF220
+	.4byte	.LASF225
 	.byte	0x1
 	.2byte	0x151
 	.4byte	0x7e
@@ -2967,7 +2987,7 @@ tls_cipher_suites:
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x2d
-	.4byte	.LASF221
+	.4byte	.LASF226
 	.byte	0x1
 	.2byte	0x151
 	.4byte	0x7e
@@ -2976,7 +2996,7 @@ tls_cipher_suites:
 	.sleb128 4
 	.uleb128 0x23
 	.4byte	.LVL60
-	.4byte	0x12f7
+	.4byte	0x1320
 	.uleb128 0x24
 	.uleb128 0x1
 	.byte	0x5a
@@ -3026,207 +3046,207 @@ tls_cipher_suites:
 	.byte	0
 	.uleb128 0x12
 	.4byte	0x54c
-	.4byte	0x112a
+	.4byte	0x1153
 	.uleb128 0x13
 	.4byte	0xb1
 	.byte	0xb
 	.byte	0
 	.uleb128 0x27
-	.4byte	.LASF222
+	.4byte	.LASF227
 	.byte	0x1
 	.byte	0x1b
-	.4byte	0x113b
+	.4byte	0x1164
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	tls_cipher_suites
 	.uleb128 0x8
-	.4byte	0x111a
+	.4byte	0x1143
 	.uleb128 0x12
 	.4byte	0x5ad
-	.4byte	0x1150
+	.4byte	0x1179
 	.uleb128 0x13
 	.4byte	0xb1
 	.byte	0x6
 	.byte	0
 	.uleb128 0x27
-	.4byte	.LASF223
+	.4byte	.LASF228
 	.byte	0x1
 	.byte	0x4a
-	.4byte	0x1161
+	.4byte	0x118a
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	tls_ciphers
 	.uleb128 0x8
-	.4byte	0x1140
+	.4byte	0x1169
 	.uleb128 0x31
-	.4byte	.LASF224
-	.byte	0xd
+	.4byte	.LASF229
+	.byte	0xe
 	.byte	0x16
 	.4byte	0x12d
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_anonymous_identity
 	.uleb128 0x31
-	.4byte	.LASF225
-	.byte	0xd
+	.4byte	.LASF230
+	.byte	0xe
 	.byte	0x17
 	.4byte	0x57
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_anonymous_identity_len
 	.uleb128 0x31
-	.4byte	.LASF226
-	.byte	0xd
+	.4byte	.LASF231
+	.byte	0xe
 	.byte	0x18
 	.4byte	0x12d
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_username
 	.uleb128 0x31
-	.4byte	.LASF227
-	.byte	0xd
+	.4byte	.LASF232
+	.byte	0xe
 	.byte	0x19
 	.4byte	0x57
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_username_len
 	.uleb128 0x31
-	.4byte	.LASF228
-	.byte	0xd
+	.4byte	.LASF233
+	.byte	0xe
 	.byte	0x1a
 	.4byte	0x164
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_client_cert
 	.uleb128 0x31
-	.4byte	.LASF229
-	.byte	0xd
+	.4byte	.LASF234
+	.byte	0xe
 	.byte	0x1b
 	.4byte	0x57
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_client_cert_len
 	.uleb128 0x31
-	.4byte	.LASF230
-	.byte	0xd
+	.4byte	.LASF235
+	.byte	0xe
 	.byte	0x1c
 	.4byte	0x164
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_private_key
 	.uleb128 0x31
-	.4byte	.LASF231
-	.byte	0xd
+	.4byte	.LASF236
+	.byte	0xe
 	.byte	0x1d
 	.4byte	0x57
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_private_key_len
 	.uleb128 0x31
-	.4byte	.LASF232
-	.byte	0xd
+	.4byte	.LASF237
+	.byte	0xe
 	.byte	0x1e
 	.4byte	0x164
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_private_key_passwd
 	.uleb128 0x31
-	.4byte	.LASF233
-	.byte	0xd
+	.4byte	.LASF238
+	.byte	0xe
 	.byte	0x1f
 	.4byte	0x57
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_private_key_passwd_len
 	.uleb128 0x31
-	.4byte	.LASF234
-	.byte	0xd
+	.4byte	.LASF239
+	.byte	0xe
 	.byte	0x21
 	.4byte	0x164
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_ca_cert
 	.uleb128 0x31
-	.4byte	.LASF235
-	.byte	0xd
+	.4byte	.LASF240
+	.byte	0xe
 	.byte	0x22
 	.4byte	0x57
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_ca_cert_len
 	.uleb128 0x31
-	.4byte	.LASF236
-	.byte	0xd
+	.4byte	.LASF241
+	.byte	0xe
 	.byte	0x24
 	.4byte	0x12d
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_password
 	.uleb128 0x31
-	.4byte	.LASF237
-	.byte	0xd
+	.4byte	.LASF242
+	.byte	0xe
 	.byte	0x25
 	.4byte	0x57
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_password_len
 	.uleb128 0x31
-	.4byte	.LASF238
-	.byte	0xd
+	.4byte	.LASF243
+	.byte	0xe
 	.byte	0x27
 	.4byte	0x12d
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_new_password
 	.uleb128 0x31
-	.4byte	.LASF239
-	.byte	0xd
+	.4byte	.LASF244
+	.byte	0xe
 	.byte	0x28
 	.4byte	0x57
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	g_wpa_new_password_len
 	.uleb128 0x31
-	.4byte	.LASF240
-	.byte	0xe
-	.byte	0x83
+	.4byte	.LASF245
+	.byte	0xd
+	.byte	0x8a
 	.4byte	0xb88
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	wpa2_crypto_funcs
 	.uleb128 0x32
-	.4byte	.LASF241
-	.4byte	.LASF241
+	.4byte	.LASF246
+	.4byte	.LASF246
 	.byte	0xf
 	.byte	0x58
 	.uleb128 0x33
-	.4byte	.LASF242
-	.4byte	.LASF242
+	.4byte	.LASF247
+	.4byte	.LASF247
 	.byte	0xa
 	.2byte	0x1b6
 	.uleb128 0x32
-	.4byte	.LASF243
-	.4byte	.LASF243
+	.4byte	.LASF248
+	.4byte	.LASF248
 	.byte	0x8
 	.byte	0x6d
 	.uleb128 0x33
-	.4byte	.LASF244
-	.4byte	.LASF244
+	.4byte	.LASF249
+	.4byte	.LASF249
 	.byte	0xa
 	.2byte	0x197
 	.uleb128 0x32
-	.4byte	.LASF245
-	.4byte	.LASF245
+	.4byte	.LASF250
+	.4byte	.LASF250
 	.byte	0x8
 	.byte	0x6c
 	.uleb128 0x32
-	.4byte	.LASF246
-	.4byte	.LASF246
+	.4byte	.LASF251
+	.4byte	.LASF251
 	.byte	0x9
 	.byte	0x57
 	.uleb128 0x32
-	.4byte	.LASF247
-	.4byte	.LASF247
+	.4byte	.LASF252
+	.4byte	.LASF252
 	.byte	0x9
 	.byte	0x6b
 	.uleb128 0x32
@@ -3245,8 +3265,8 @@ tls_cipher_suites:
 	.byte	0xa
 	.byte	0xbd
 	.uleb128 0x33
-	.4byte	.LASF248
-	.4byte	.LASF248
+	.4byte	.LASF253
+	.4byte	.LASF253
 	.byte	0x10
 	.2byte	0x216
 	.byte	0
@@ -4214,9 +4234,9 @@ tls_cipher_suites:
 	.string	"public_key_len"
 .LASF176:
 	.string	"esp_eap_msg_alloc_t"
-.LASF238:
+.LASF243:
 	.string	"g_wpa_new_password"
-.LASF245:
+.LASF250:
 	.string	"x509_certificate_free"
 .LASF142:
 	.string	"esp_crypto_hash_alg_t"
@@ -4242,7 +4262,7 @@ tls_cipher_suites:
 	.string	"esp_crypto_cipher_encrypt_t"
 .LASF196:
 	.string	"eap_peer_get_eap_method"
-.LASF205:
+.LASF210:
 	.string	"tls_server_key_exchange_allowed"
 .LASF175:
 	.string	"esp_eap_sm_build_identity_resp_t"
@@ -4256,14 +4276,18 @@ tls_cipher_suites:
 	.string	"TLS_KEY_X_DH_anon"
 .LASF140:
 	.string	"ESP_CRYPTO_HASH_ALG_SHA256"
+.LASF206:
+	.string	"SIG_WPA2_TASK_DEL"
 .LASF153:
 	.string	"crypto_cipher"
 .LASF36:
 	.string	"type"
 .LASF191:
 	.string	"eap_peer_config_init"
-.LASF230:
+.LASF235:
 	.string	"g_wpa_private_key"
+.LASF204:
+	.string	"SIG_WPA2_START"
 .LASF149:
 	.string	"esp_crypto_cipher_alg_t"
 .LASF102:
@@ -4282,7 +4306,7 @@ tls_cipher_suites:
 	.string	"esp_eap_peer_blob_init_t"
 .LASF74:
 	.string	"CRYPTO_HASH_ALG_HMAC_SHA1"
-.LASF229:
+.LASF234:
 	.string	"g_wpa_client_cert_len"
 .LASF172:
 	.string	"esp_eap_peer_get_eap_method_t"
@@ -4296,7 +4320,7 @@ tls_cipher_suites:
 	.string	"TLS_KEY_X_DHE_DSS_EXPORT"
 .LASF194:
 	.string	"eap_peer_unregister_methods"
-.LASF214:
+.LASF219:
 	.string	"tls_version_str"
 .LASF127:
 	.string	"md5_client"
@@ -4320,7 +4344,7 @@ tls_cipher_suites:
 	.string	"uint8_t"
 .LASF52:
 	.string	"issuer"
-.LASF207:
+.LASF212:
 	.string	"cert"
 .LASF1:
 	.string	"unsigned char"
@@ -4350,7 +4374,7 @@ tls_cipher_suites:
 	.string	"__uint16_t"
 .LASF117:
 	.string	"cipher"
-.LASF249:
+.LASF254:
 	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
 .LASF184:
 	.string	"crypto_cipher_deinit"
@@ -4384,7 +4408,7 @@ tls_cipher_suites:
 	.string	"CRYPTO_HASH_ALG_SHA1"
 .LASF104:
 	.string	"TLS_CIPHER_DES_CBC"
-.LASF232:
+.LASF237:
 	.string	"g_wpa_private_key_passwd"
 .LASF87:
 	.string	"TLS_KEY_X_DH_DSS_EXPORT"
@@ -4392,11 +4416,11 @@ tls_cipher_suites:
 	.string	"CRYPTO_HASH_ALG_MD5"
 .LASF67:
 	.string	"tbs_cert_start"
-.LASF244:
+.LASF249:
 	.string	"crypto_public_key_import"
 .LASF131:
 	.string	"sha1_server"
-.LASF228:
+.LASF233:
 	.string	"g_wpa_client_cert"
 .LASF62:
 	.string	"extensions_present"
@@ -4432,13 +4456,13 @@ tls_cipher_suites:
 	.string	"CRYPTO_HASH_ALG_HMAC_MD5"
 .LASF119:
 	.string	"TLS_CIPHER_STREAM"
-.LASF222:
+.LASF227:
 	.string	"tls_cipher_suites"
 .LASF100:
 	.string	"TLS_CIPHER_RC4_128"
 .LASF193:
 	.string	"eap_peer_register_methods"
-.LASF204:
+.LASF209:
 	.string	"tls_get_cipher_data"
 .LASF6:
 	.string	"__uint32_t"
@@ -4456,23 +4480,23 @@ tls_cipher_suites:
 	.string	"sha256_server"
 .LASF138:
 	.string	"ESP_CRYPTO_HASH_ALG_HMAC_MD5"
-.LASF210:
+.LASF215:
 	.string	"tls_verify_hash_add"
 .LASF95:
 	.string	"TLS_KEY_X_DH_anon_EXPORT"
 .LASF97:
 	.string	"tls_key_exchange"
-.LASF248:
+.LASF253:
 	.string	"tls_prf_sha1_md5"
 .LASF141:
 	.string	"ESP_CRYPTO_HASH_ALG_HMAC_SHA256"
 .LASF7:
 	.string	"unsigned int"
-.LASF231:
+.LASF236:
 	.string	"g_wpa_private_key_len"
 .LASF32:
 	.string	"X509_NAME_ATTR_ST"
-.LASF239:
+.LASF244:
 	.string	"g_wpa_new_password_len"
 .LASF90:
 	.string	"TLS_KEY_X_DH_RSA"
@@ -4484,23 +4508,25 @@ tls_cipher_suites:
 	.string	"ESP_LOG_WARN"
 .LASF40:
 	.string	"num_attr"
+.LASF205:
+	.string	"SIG_WPA2_RX"
 .LASF155:
 	.string	"esp_crypto_hash_update_t"
-.LASF234:
+.LASF239:
 	.string	"g_wpa_ca_cert"
 .LASF145:
 	.string	"ESP_CRYPTO_CIPHER_ALG_3DES"
-.LASF233:
+.LASF238:
 	.string	"g_wpa_private_key_passwd_len"
-.LASF241:
+.LASF246:
 	.string	"wpa_hexdump"
 .LASF174:
 	.string	"esp_eap_sm_build_nak_t"
 .LASF24:
 	.string	"ESP_LOG_VERBOSE"
-.LASF242:
+.LASF247:
 	.string	"crypto_public_key_from_cert"
-.LASF219:
+.LASF224:
 	.string	"seed"
 .LASF182:
 	.string	"crypto_cipher_encrypt"
@@ -4508,7 +4534,7 @@ tls_cipher_suites:
 	.string	"esp_eap_peer_register_methods_t"
 .LASF123:
 	.string	"key_material"
-.LASF224:
+.LASF229:
 	.string	"g_wpa_anonymous_identity"
 .LASF30:
 	.string	"X509_NAME_ATTR_C"
@@ -4524,7 +4550,7 @@ tls_cipher_suites:
 	.string	"ESP_CRYPTO_CIPHER_NULL"
 .LASF151:
 	.string	"esp_crypto_cipher_t"
-.LASF246:
+.LASF251:
 	.string	"esp_log_timestamp"
 .LASF59:
 	.string	"signature_alg"
@@ -4556,8 +4582,10 @@ tls_cipher_suites:
 	.string	"ESP_LOG_INFO"
 .LASF111:
 	.string	"TLS_HASH_SHA"
-.LASF209:
+.LASF214:
 	.string	"verify"
+.LASF207:
+	.string	"SIG_WPA2_MAX"
 .LASF88:
 	.string	"TLS_KEY_X_DH_DSS"
 .LASF43:
@@ -4566,7 +4594,7 @@ tls_cipher_suites:
 	.string	"block_size"
 .LASF121:
 	.string	"tls_cipher_type"
-.LASF208:
+.LASF213:
 	.string	"crypto_public_key"
 .LASF181:
 	.string	"crypto_cipher_init"
@@ -4584,7 +4612,7 @@ tls_cipher_suites:
 	.string	"X509_CERT_V3"
 .LASF112:
 	.string	"TLS_HASH_SHA256"
-.LASF212:
+.LASF217:
 	.string	"tls_verify_hash_init"
 .LASF99:
 	.string	"TLS_CIPHER_RC4_40"
@@ -4592,19 +4620,19 @@ tls_cipher_suites:
 	.string	"key_exchange"
 .LASF80:
 	.string	"CRYPTO_CIPHER_ALG_3DES"
-.LASF236:
+.LASF241:
 	.string	"g_wpa_password"
 .LASF53:
 	.string	"subject"
-.LASF220:
+.LASF225:
 	.string	"seed_len"
 .LASF79:
 	.string	"CRYPTO_CIPHER_ALG_AES"
 .LASF163:
 	.string	"esp_tls_init_t"
-.LASF240:
+.LASF245:
 	.string	"wpa2_crypto_funcs"
-.LASF223:
+.LASF228:
 	.string	"tls_ciphers"
 .LASF2:
 	.string	"short int"
@@ -4612,25 +4640,25 @@ tls_cipher_suites:
 	.string	"tbs_cert_len"
 .LASF85:
 	.string	"TLS_KEY_X_RSA"
-.LASF225:
+.LASF230:
 	.string	"g_wpa_anonymous_identity_len"
-.LASF237:
+.LASF242:
 	.string	"g_wpa_password_len"
-.LASF216:
+.LASF221:
 	.string	"secret"
-.LASF251:
+.LASF256:
 	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/wpa_supplicant"
-.LASF250:
+.LASF255:
 	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wpa2/tls/tlsv1_common.c"
-.LASF217:
+.LASF222:
 	.string	"secret_len"
-.LASF215:
+.LASF220:
 	.string	"tls_prf"
 .LASF157:
 	.string	"esp_crypto_cipher_init_t"
 .LASF54:
 	.string	"not_before"
-.LASF243:
+.LASF248:
 	.string	"x509_certificate_parse"
 .LASF51:
 	.string	"signature"
@@ -4646,9 +4674,9 @@ tls_cipher_suites:
 	.string	"wpa2_crypto_funcs_t"
 .LASF93:
 	.string	"TLS_KEY_X_DHE_RSA_EXPORT"
-.LASF235:
+.LASF240:
 	.string	"g_wpa_ca_cert_len"
-.LASF206:
+.LASF211:
 	.string	"tls_parse_cert"
 .LASF164:
 	.string	"esp_tls_deinit_t"
@@ -4656,13 +4684,13 @@ tls_cipher_suites:
 	.string	"TLS_CIPHER_BLOCK"
 .LASF13:
 	.string	"uint32_t"
-.LASF203:
+.LASF208:
 	.string	"tls_get_cipher_suite"
-.LASF226:
+.LASF231:
 	.string	"g_wpa_username"
 .LASF77:
 	.string	"crypto_cipher_alg"
-.LASF227:
+.LASF232:
 	.string	"g_wpa_username_len"
 .LASF124:
 	.string	"expanded_key_material"
@@ -4670,19 +4698,19 @@ tls_cipher_suites:
 	.string	"TLS_CIPHER_DES40_CBC"
 .LASF64:
 	.string	"key_usage"
-.LASF213:
+.LASF218:
 	.string	"tls_version_ok"
 .LASF5:
 	.string	"short unsigned int"
 .LASF25:
 	.string	"asn1_oid"
-.LASF221:
+.LASF226:
 	.string	"outlen"
-.LASF211:
+.LASF216:
 	.string	"tls_verify_hash_free"
 .LASF60:
 	.string	"sign_value"
-.LASF218:
+.LASF223:
 	.string	"label"
 .LASF197:
 	.string	"eap_sm_abort"
@@ -4692,12 +4720,14 @@ tls_cipher_suites:
 	.string	"cert_start"
 .LASF113:
 	.string	"tls_hash"
-.LASF247:
+.LASF252:
 	.string	"esp_log_write"
 .LASF48:
 	.string	"next"
 .LASF122:
 	.string	"tls_cipher_data"
+.LASF203:
+	.string	"SIG_WPA2"
 .LASF185:
 	.string	"crypto_mod_exp"
 .LASF168:

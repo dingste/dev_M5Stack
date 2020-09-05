@@ -16,7 +16,7 @@
 	.global	xCoRoutineCreate
 	.type	xCoRoutineCreate, @function
 xCoRoutineCreate:
-.LFB18:
+.LFB27:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/croutine.c"
 	.loc 1 142 0
 .LVL0:
@@ -134,7 +134,7 @@ xCoRoutineCreate:
 	.loc 1 196 0
 	mov.n	a2, a5
 	retw.n
-.LFE18:
+.LFE27:
 	.size	xCoRoutineCreate, .-xCoRoutineCreate
 	.section	.text.vCoRoutineAddToDelayedList,"ax",@progbits
 	.literal_position
@@ -146,7 +146,7 @@ xCoRoutineCreate:
 	.global	vCoRoutineAddToDelayedList
 	.type	vCoRoutineAddToDelayedList, @function
 vCoRoutineAddToDelayedList:
-.LFB19:
+.LFB28:
 	.loc 1 200 0
 .LVL18:
 	entry	sp, 32
@@ -199,7 +199,7 @@ vCoRoutineAddToDelayedList:
 .LVL25:
 .L6:
 	retw.n
-.LFE19:
+.LFE28:
 	.size	vCoRoutineAddToDelayedList, .-vCoRoutineAddToDelayedList
 	.section	.text.vCoRoutineSchedule,"ax",@progbits
 	.literal_position
@@ -216,7 +216,7 @@ vCoRoutineAddToDelayedList:
 	.global	vCoRoutineSchedule
 	.type	vCoRoutineSchedule, @function
 vCoRoutineSchedule:
-.LFB22:
+.LFB31:
 	.loc 1 319 0
 	entry	sp, 32
 .LCFI2:
@@ -466,7 +466,7 @@ vCoRoutineSchedule:
 	j	.L25
 .L14:
 	retw.n
-.LFE22:
+.LFE31:
 	.size	vCoRoutineSchedule, .-vCoRoutineSchedule
 	.section	.text.xCoRoutineRemoveFromEventList,"ax",@progbits
 	.literal_position
@@ -476,7 +476,7 @@ vCoRoutineSchedule:
 	.global	xCoRoutineRemoveFromEventList
 	.type	xCoRoutineRemoveFromEventList, @function
 xCoRoutineRemoveFromEventList:
-.LFB24:
+.LFB33:
 	.loc 1 369 0
 .LVL47:
 	entry	sp, 32
@@ -513,7 +513,7 @@ xCoRoutineRemoveFromEventList:
 .L40:
 	.loc 1 390 0
 	retw.n
-.LFE24:
+.LFE33:
 	.size	xCoRoutineRemoveFromEventList, .-xCoRoutineRemoveFromEventList
 	.section	.bss.xPassedTicks,"aw",@nobits
 	.align	4
@@ -601,10 +601,10 @@ pxReadyCoRoutineLists:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI0-.LFB18
+	.4byte	.LCFI0-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -613,10 +613,10 @@ pxReadyCoRoutineLists:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI1-.LFB19
+	.4byte	.LCFI1-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -625,10 +625,10 @@ pxReadyCoRoutineLists:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI2-.LFB22
+	.4byte	.LCFI2-.LFB31
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -637,10 +637,10 @@ pxReadyCoRoutineLists:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI3-.LFB24
+	.4byte	.LCFI3-.LFB33
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -950,8 +950,8 @@ pxReadyCoRoutineLists:
 	.byte	0x1
 	.byte	0x8d
 	.4byte	0xae
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x38c
@@ -1106,8 +1106,8 @@ pxReadyCoRoutineLists:
 	.4byte	.LASF56
 	.byte	0x1
 	.byte	0xc7
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x3f5
@@ -1218,8 +1218,8 @@ pxReadyCoRoutineLists:
 	.4byte	.LASF57
 	.byte	0x1
 	.2byte	0x13e
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x5d9
@@ -1371,8 +1371,8 @@ pxReadyCoRoutineLists:
 	.byte	0x1
 	.2byte	0x170
 	.4byte	0xae
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x656
@@ -2177,7 +2177,7 @@ pxReadyCoRoutineLists:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL13
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2231,7 +2231,7 @@ pxReadyCoRoutineLists:
 	.byte	0x77
 	.sleb128 48
 	.4byte	.LVL12-1
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2246,7 +2246,7 @@ pxReadyCoRoutineLists:
 	.byte	0x31
 	.byte	0x9f
 	.4byte	.LVL17
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -2275,7 +2275,7 @@ pxReadyCoRoutineLists:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL19
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2363,7 +2363,7 @@ pxReadyCoRoutineLists:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL48
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2452,7 +2452,7 @@ pxReadyCoRoutineLists:
 	.byte	0x1a
 	.byte	0x9f
 	.4byte	.LVL54
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x12
 	.byte	0x78
 	.sleb128 0
@@ -2482,14 +2482,14 @@ pxReadyCoRoutineLists:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -2506,14 +2506,14 @@ pxReadyCoRoutineLists:
 	.4byte	.LBE30
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB24
-	.4byte	.LFE24
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB28
+	.4byte	.LFE28
+	.4byte	.LFB31
+	.4byte	.LFE31
+	.4byte	.LFB33
+	.4byte	.LFE33
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

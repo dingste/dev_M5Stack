@@ -6,8 +6,8 @@
 	.global	osi_init
 	.type	osi_init, @function
 osi_init:
-.LFB18:
-	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/osi.c"
+.LFB27:
+	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/osi.c"
 	.loc 1 20 0
 	entry	sp, 32
 .LCFI0:
@@ -22,14 +22,14 @@ osi_init:
 	.loc 1 28 0
 	neg	a2, a2
 	retw.n
-.LFE18:
+.LFE27:
 	.size	osi_init, .-osi_init
 	.section	.text.osi_deinit,"ax",@progbits
 	.align	4
 	.global	osi_deinit
 	.type	osi_deinit, @function
 osi_deinit:
-.LFB19:
+.LFB28:
 	.loc 1 31 0
 	entry	sp, 32
 .LCFI1:
@@ -37,7 +37,7 @@ osi_deinit:
 	call8	osi_mutex_global_deinit
 .LVL2:
 	retw.n
-.LFE19:
+.LFE28:
 	.size	osi_deinit, .-osi_deinit
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -58,10 +58,10 @@ osi_deinit:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI0-.LFB18
+	.4byte	.LCFI0-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -70,17 +70,17 @@ osi_deinit:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI1-.LFB19
+	.4byte	.LCFI1-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
 .LEFDE2:
 	.text
 .Letext0:
-	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/mutex.h"
+	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/mutex.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
 	.4byte	0xe4
@@ -152,8 +152,8 @@ osi_deinit:
 	.byte	0x1
 	.byte	0x13
 	.4byte	0x41
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xb2
@@ -171,8 +171,8 @@ osi_deinit:
 	.4byte	.LASF18
 	.byte	0x1
 	.byte	0x1e
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xd1
@@ -337,7 +337,7 @@ osi_deinit:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL1
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x9
 	.byte	0x7a
 	.sleb128 0
@@ -358,18 +358,18 @@ osi_deinit:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB19
-	.4byte	.LFE19
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB28
+	.4byte	.LFE28
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -385,8 +385,6 @@ osi_deinit:
 	.string	"long long unsigned int"
 .LASF14:
 	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
-.LASF15:
-	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/osi.c"
 .LASF1:
 	.string	"unsigned char"
 .LASF12:
@@ -403,6 +401,8 @@ osi_deinit:
 	.string	"short unsigned int"
 .LASF0:
 	.string	"signed char"
+.LASF15:
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/osi.c"
 .LASF13:
 	.string	"osi_mutex_global_deinit"
 .LASF18:

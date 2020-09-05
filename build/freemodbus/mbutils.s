@@ -9,13 +9,13 @@
 	.section	.text.xMBUtilSetBits,"ax",@progbits
 	.literal_position
 	.literal .LC1, .LC0
-	.literal .LC2, __func__$6591
+	.literal .LC2, __func__$6637
 	.literal .LC4, .LC3
 	.align	4
 	.global	xMBUtilSetBits
 	.type	xMBUtilSetBits, @function
 xMBUtilSetBits:
-.LFB21:
+.LFB30:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freemodbus/modbus/functions/mbutils.c"
 	.loc 1 49 0
 .LVL0:
@@ -82,14 +82,14 @@ xMBUtilSetBits:
 .LVL10:
 	s8i	a8, a2, 0
 	retw.n
-.LFE21:
+.LFE30:
 	.size	xMBUtilSetBits, .-xMBUtilSetBits
 	.section	.text.xMBUtilGetBits,"ax",@progbits
 	.align	4
 	.global	xMBUtilGetBits
 	.type	xMBUtilGetBits, @function
 xMBUtilGetBits:
-.LFB22:
+.LFB31:
 	.loc 1 87 0
 .LVL11:
 	entry	sp, 32
@@ -125,7 +125,7 @@ xMBUtilGetBits:
 	.loc 1 114 0
 	extui	a2, a2, 0, 8
 	retw.n
-.LFE22:
+.LFE31:
 	.size	xMBUtilGetBits, .-xMBUtilGetBits
 	.section	.text.prveMBError2Exception,"ax",@progbits
 	.literal_position
@@ -134,7 +134,7 @@ xMBUtilGetBits:
 	.global	prveMBError2Exception
 	.type	prveMBError2Exception, @function
 prveMBError2Exception:
-.LFB23:
+.LFB32:
 	.loc 1 118 0
 .LVL19:
 	entry	sp, 32
@@ -152,7 +152,7 @@ prveMBError2Exception:
 .LVL22:
 	.loc 1 141 0
 	retw.n
-.LFE23:
+.LFE32:
 	.size	prveMBError2Exception, .-prveMBError2Exception
 	.section	.rodata.CSWTCH$7,"a",@progbits
 	.type	CSWTCH$7, @object
@@ -166,10 +166,10 @@ CSWTCH$7:
 	.byte	4
 	.byte	4
 	.byte	6
-	.section	.rodata.__func__$6591,"a",@progbits
-	.type	__func__$6591, @object
-	.size	__func__$6591, 15
-__func__$6591:
+	.section	.rodata.__func__$6637,"a",@progbits
+	.type	__func__$6637, @object
+	.size	__func__$6637, 15
+__func__$6637:
 	.string	"xMBUtilSetBits"
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -190,10 +190,10 @@ __func__$6591:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI0-.LFB21
+	.4byte	.LCFI0-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -202,10 +202,10 @@ __func__$6591:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI1-.LFB22
+	.4byte	.LCFI1-.LFB31
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -214,10 +214,10 @@ __func__$6591:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI2-.LFB23
+	.4byte	.LCFI2-.LFB32
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -303,12 +303,12 @@ __func__$6591:
 	.uleb128 0x2
 	.4byte	.LASF13
 	.byte	0x3
-	.byte	0x44
+	.byte	0x47
 	.4byte	0x4c
 	.uleb128 0x2
 	.4byte	.LASF14
 	.byte	0x3
-	.byte	0x47
+	.byte	0x4a
 	.4byte	0x37
 	.uleb128 0x5
 	.byte	0x4
@@ -395,8 +395,8 @@ __func__$6591:
 	.4byte	.LASF51
 	.byte	0x1
 	.byte	0x2f
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x218
@@ -460,7 +460,7 @@ __func__$6591:
 	.4byte	0x228
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6591
+	.4byte	__func__$6637
 	.uleb128 0xd
 	.4byte	.LVL2
 	.4byte	0x2e7
@@ -481,7 +481,7 @@ __func__$6591:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6591
+	.4byte	__func__$6637
 	.uleb128 0xe
 	.uleb128 0x1
 	.byte	0x5d
@@ -504,8 +504,8 @@ __func__$6591:
 	.byte	0x1
 	.byte	0x56
 	.4byte	0x8b
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2b1
@@ -567,8 +567,8 @@ __func__$6591:
 	.byte	0x1
 	.byte	0x75
 	.4byte	0xea
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2e7
@@ -875,7 +875,7 @@ __func__$6591:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL5
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -889,7 +889,7 @@ __func__$6591:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL7
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -903,7 +903,7 @@ __func__$6591:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL8
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -949,7 +949,7 @@ __func__$6591:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL10
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x15
 	.byte	0x31
 	.byte	0x74
@@ -1037,7 +1037,7 @@ __func__$6591:
 	.byte	0x24
 	.byte	0x9f
 	.4byte	.LVL7
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x22
 	.byte	0x31
 	.byte	0x74
@@ -1086,7 +1086,7 @@ __func__$6591:
 	.byte	0x25
 	.byte	0x9f
 	.4byte	.LVL7
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x6
 	.byte	0xf3
 	.uleb128 0x1
@@ -1122,7 +1122,7 @@ __func__$6591:
 	.byte	0x1c
 	.byte	0x9f
 	.4byte	.LVL7
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0xc
 	.byte	0xf3
 	.uleb128 0x1
@@ -1215,7 +1215,7 @@ __func__$6591:
 	.byte	0x24
 	.byte	0x9f
 	.4byte	.LVL8
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x17
 	.byte	0xf3
 	.uleb128 0x1
@@ -1247,7 +1247,7 @@ __func__$6591:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL13
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1261,7 +1261,7 @@ __func__$6591:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL17
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1416,7 +1416,7 @@ __func__$6591:
 	.byte	0x1a
 	.byte	0x9f
 	.4byte	.LVL18
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x2f
 	.byte	0x31
 	.byte	0xf3
@@ -1482,7 +1482,7 @@ __func__$6591:
 	.byte	0x1c
 	.byte	0x9f
 	.4byte	.LVL17
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0xb
 	.byte	0x31
 	.byte	0xf3
@@ -1507,7 +1507,7 @@ __func__$6591:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL21
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1523,22 +1523,22 @@ __func__$6591:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB23
-	.4byte	.LFE23
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB31
+	.4byte	.LFE31
+	.4byte	.LFB32
+	.4byte	.LFE32
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

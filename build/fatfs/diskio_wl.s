@@ -6,7 +6,7 @@
 	.global	ff_wl_status
 	.type	ff_wl_status, @function
 ff_wl_status:
-.LFB18:
+.LFB27:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/fatfs/src/diskio_wl.c"
 	.loc 1 36 0
 .LVL0:
@@ -16,7 +16,7 @@ ff_wl_status:
 	movi.n	a2, 0
 .LVL1:
 	retw.n
-.LFE18:
+.LFE27:
 	.size	ff_wl_status, .-ff_wl_status
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC1:
@@ -33,7 +33,7 @@ ff_wl_status:
 	.literal_position
 	.literal .LC0, ff_wl_handles
 	.literal .LC2, .LC1
-	.literal .LC3, __func__$5772
+	.literal .LC3, __func__$5833
 	.literal .LC5, .LC4
 	.literal .LC7, .LC6
 	.literal .LC9, .LC8
@@ -42,7 +42,7 @@ ff_wl_status:
 	.global	ff_wl_write
 	.type	ff_wl_write, @function
 ff_wl_write:
-.LFB20:
+.LFB29:
 	.loc 1 54 0
 .LVL2:
 	entry	sp, 32
@@ -130,7 +130,7 @@ ff_wl_write:
 .L5:
 	.loc 1 69 0
 	retw.n
-.LFE20:
+.LFE29:
 	.size	ff_wl_write, .-ff_wl_write
 	.section	.rodata.str1.1
 .LC17:
@@ -139,7 +139,7 @@ ff_wl_write:
 	.literal_position
 	.literal .LC12, ff_wl_handles
 	.literal .LC13, .LC1
-	.literal .LC14, __func__$5763
+	.literal .LC14, __func__$5824
 	.literal .LC15, .LC4
 	.literal .LC16, .LC6
 	.literal .LC18, .LC17
@@ -147,7 +147,7 @@ ff_wl_write:
 	.global	ff_wl_read
 	.type	ff_wl_read, @function
 ff_wl_read:
-.LFB19:
+.LFB28:
 	.loc 1 41 0
 .LVL19:
 	entry	sp, 32
@@ -214,19 +214,19 @@ ff_wl_read:
 .L11:
 	.loc 1 51 0
 	retw.n
-.LFE19:
+.LFE28:
 	.size	ff_wl_read, .-ff_wl_read
 	.section	.text.ff_wl_ioctl,"ax",@progbits
 	.literal_position
 	.literal .LC19, ff_wl_handles
 	.literal .LC20, .LC1
-	.literal .LC21, __func__$5780
+	.literal .LC21, __func__$5841
 	.literal .LC22, .LC4
 	.align	4
 	.global	ff_wl_ioctl
 	.type	ff_wl_ioctl, @function
 ff_wl_ioctl:
-.LFB21:
+.LFB30:
 	.loc 1 72 0
 .LVL32:
 	entry	sp, 32
@@ -289,29 +289,29 @@ ff_wl_ioctl:
 .L18:
 	.loc 1 89 0
 	retw.n
-.LFE21:
+.LFE30:
 	.size	ff_wl_ioctl, .-ff_wl_ioctl
 	.section	.text.ff_wl_initialize,"ax",@progbits
 	.align	4
 	.global	ff_wl_initialize
 	.type	ff_wl_initialize, @function
 ff_wl_initialize:
-.LFB28:
+.LFB37:
 	entry	sp, 32
 .LCFI4:
 	movi.n	a2, 0
 	retw.n
-.LFE28:
+.LFE37:
 	.size	ff_wl_initialize, .-ff_wl_initialize
 	.section	.text.ff_diskio_register_wl_partition,"ax",@progbits
 	.literal_position
 	.literal .LC23, ff_wl_handles
-	.literal .LC24, wl_impl$5789
+	.literal .LC24, wl_impl$5850
 	.align	4
 	.global	ff_diskio_register_wl_partition
 	.type	ff_diskio_register_wl_partition, @function
 ff_diskio_register_wl_partition:
-.LFB22:
+.LFB31:
 	.loc 1 93 0
 .LVL40:
 	.loc 1 93 0
@@ -339,7 +339,7 @@ ff_diskio_register_wl_partition:
 .L24:
 	.loc 1 107 0
 	retw.n
-.LFE22:
+.LFE31:
 	.size	ff_diskio_register_wl_partition, .-ff_diskio_register_wl_partition
 	.section	.text.ff_diskio_get_pdrv_wl,"ax",@progbits
 	.literal_position
@@ -348,7 +348,7 @@ ff_diskio_register_wl_partition:
 	.global	ff_diskio_get_pdrv_wl
 	.type	ff_diskio_get_pdrv_wl, @function
 ff_diskio_get_pdrv_wl:
-.LFB23:
+.LFB32:
 	.loc 1 110 0
 .LVL43:
 	entry	sp, 32
@@ -383,7 +383,7 @@ ff_diskio_get_pdrv_wl:
 	mov.n	a2, a8
 .LVL48:
 	retw.n
-.LFE23:
+.LFE32:
 	.size	ff_diskio_get_pdrv_wl, .-ff_diskio_get_pdrv_wl
 	.section	.text.ff_diskio_clear_pdrv_wl,"ax",@progbits
 	.literal_position
@@ -392,7 +392,7 @@ ff_diskio_get_pdrv_wl:
 	.global	ff_diskio_clear_pdrv_wl
 	.type	ff_diskio_clear_pdrv_wl, @function
 ff_diskio_clear_pdrv_wl:
-.LFB24:
+.LFB33:
 	.loc 1 120 0
 .LVL49:
 	entry	sp, 32
@@ -419,32 +419,32 @@ ff_diskio_clear_pdrv_wl:
 .L31:
 	retw.n
 .LBE12:
-.LFE24:
+.LFE33:
 	.size	ff_diskio_clear_pdrv_wl, .-ff_diskio_clear_pdrv_wl
-	.section	.rodata.wl_impl$5789,"a",@progbits
+	.section	.rodata.wl_impl$5850,"a",@progbits
 	.align	4
-	.type	wl_impl$5789, @object
-	.size	wl_impl$5789, 20
-wl_impl$5789:
+	.type	wl_impl$5850, @object
+	.size	wl_impl$5850, 20
+wl_impl$5850:
 	.word	ff_wl_initialize
 	.word	ff_wl_status
 	.word	ff_wl_read
 	.word	ff_wl_write
 	.word	ff_wl_ioctl
-	.section	.rodata.__func__$5780,"a",@progbits
-	.type	__func__$5780, @object
-	.size	__func__$5780, 12
-__func__$5780:
+	.section	.rodata.__func__$5841,"a",@progbits
+	.type	__func__$5841, @object
+	.size	__func__$5841, 12
+__func__$5841:
 	.string	"ff_wl_ioctl"
-	.section	.rodata.__func__$5772,"a",@progbits
-	.type	__func__$5772, @object
-	.size	__func__$5772, 12
-__func__$5772:
+	.section	.rodata.__func__$5833,"a",@progbits
+	.type	__func__$5833, @object
+	.size	__func__$5833, 12
+__func__$5833:
 	.string	"ff_wl_write"
-	.section	.rodata.__func__$5763,"a",@progbits
-	.type	__func__$5763, @object
-	.size	__func__$5763, 11
-__func__$5763:
+	.section	.rodata.__func__$5824,"a",@progbits
+	.type	__func__$5824, @object
+	.size	__func__$5824, 11
+__func__$5824:
 	.string	"ff_wl_read"
 	.global	ff_wl_handles
 	.section	.data.ff_wl_handles,"aw",@progbits
@@ -473,10 +473,10 @@ ff_wl_handles:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI0-.LFB18
+	.4byte	.LCFI0-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -485,10 +485,10 @@ ff_wl_handles:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI1-.LFB20
+	.4byte	.LCFI1-.LFB29
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -497,10 +497,10 @@ ff_wl_handles:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI2-.LFB19
+	.4byte	.LCFI2-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -509,10 +509,10 @@ ff_wl_handles:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI3-.LFB21
+	.4byte	.LCFI3-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -521,10 +521,10 @@ ff_wl_handles:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.byte	0x4
-	.4byte	.LCFI4-.LFB28
+	.4byte	.LCFI4-.LFB37
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -533,10 +533,10 @@ ff_wl_handles:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI5-.LFB22
+	.4byte	.LCFI5-.LFB31
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -545,10 +545,10 @@ ff_wl_handles:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI6-.LFB23
+	.4byte	.LCFI6-.LFB32
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -557,10 +557,10 @@ ff_wl_handles:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI7-.LFB24
+	.4byte	.LCFI7-.LFB33
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -957,8 +957,8 @@ ff_wl_handles:
 	.byte	0
 	.uleb128 0x16
 	.4byte	0x30f
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x348
@@ -971,8 +971,8 @@ ff_wl_handles:
 	.byte	0x1
 	.byte	0x35
 	.4byte	0x117
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x4a1
@@ -1013,7 +1013,7 @@ ff_wl_handles:
 	.4byte	0x4a1
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5772
+	.4byte	__func__$5833
 	.uleb128 0x1d
 	.string	"err"
 	.byte	0x1
@@ -1041,7 +1041,7 @@ ff_wl_handles:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5772
+	.4byte	__func__$5833
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5d
@@ -1153,8 +1153,8 @@ ff_wl_handles:
 	.4byte	0x2fa
 	.uleb128 0x16
 	.4byte	0x23b
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x5f2
@@ -1179,7 +1179,7 @@ ff_wl_handles:
 	.4byte	0x282
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5763
+	.4byte	__func__$5824
 	.uleb128 0x24
 	.4byte	0x28f
 	.uleb128 0x1
@@ -1211,7 +1211,7 @@ ff_wl_handles:
 	.4byte	0x282
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5763
+	.4byte	__func__$5824
 	.uleb128 0x21
 	.4byte	.LVL23
 	.4byte	0x7ee
@@ -1232,7 +1232,7 @@ ff_wl_handles:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5763
+	.4byte	__func__$5824
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5d
@@ -1326,8 +1326,8 @@ ff_wl_handles:
 	.byte	0
 	.uleb128 0x16
 	.4byte	0x2b0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x6d5
@@ -1350,7 +1350,7 @@ ff_wl_handles:
 	.4byte	0x2ec
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5780
+	.4byte	__func__$5841
 	.uleb128 0x25
 	.4byte	.LBB8
 	.4byte	.LBE8-.LBB8
@@ -1373,7 +1373,7 @@ ff_wl_handles:
 	.4byte	0x2ec
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5780
+	.4byte	__func__$5841
 	.uleb128 0x21
 	.4byte	.LVL36
 	.4byte	0x7ee
@@ -1394,7 +1394,7 @@ ff_wl_handles:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$5780
+	.4byte	__func__$5841
 	.uleb128 0x1f
 	.uleb128 0x1
 	.byte	0x5d
@@ -1442,8 +1442,8 @@ ff_wl_handles:
 	.byte	0x1
 	.byte	0x5c
 	.4byte	0xc8
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x739
@@ -1467,7 +1467,7 @@ ff_wl_handles:
 	.4byte	0x739
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	wl_impl$5789
+	.4byte	wl_impl$5850
 	.uleb128 0x21
 	.4byte	.LVL42
 	.4byte	0x846
@@ -1486,7 +1486,7 @@ ff_wl_handles:
 	.byte	0x5b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	wl_impl$5789
+	.4byte	wl_impl$5850
 	.byte	0
 	.byte	0
 	.uleb128 0x7
@@ -1496,8 +1496,8 @@ ff_wl_handles:
 	.byte	0x1
 	.byte	0x6d
 	.4byte	0x9c
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x77a
@@ -1521,8 +1521,8 @@ ff_wl_handles:
 	.4byte	.LASF66
 	.byte	0x1
 	.byte	0x77
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x7b6
@@ -2176,7 +2176,7 @@ ff_wl_handles:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL1
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2190,7 +2190,7 @@ ff_wl_handles:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL3
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2204,7 +2204,7 @@ ff_wl_handles:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL15
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2218,7 +2218,7 @@ ff_wl_handles:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL12
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2247,7 +2247,7 @@ ff_wl_handles:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL20
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2261,7 +2261,7 @@ ff_wl_handles:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL25
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2313,7 +2313,7 @@ ff_wl_handles:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL33
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2355,7 +2355,7 @@ ff_wl_handles:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL42-1
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2369,7 +2369,7 @@ ff_wl_handles:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL48
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2401,7 +2401,7 @@ ff_wl_handles:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL52
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2430,20 +2430,20 @@ ff_wl_handles:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -2454,20 +2454,20 @@ ff_wl_handles:
 	.4byte	.LBE11
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB24
-	.4byte	.LFE24
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB28
+	.4byte	.LFE28
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB31
+	.4byte	.LFE31
+	.4byte	.LFB32
+	.4byte	.LFE32
+	.4byte	.LFB33
+	.4byte	.LFE33
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

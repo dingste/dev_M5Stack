@@ -7,7 +7,7 @@
 	.align	4
 	.type	spiffs_object_get_data_page_index_reference, @function
 spiffs_object_get_data_page_index_reference:
-.LFB17:
+.LFB26:
 	.file 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/spiffs/spiffs_check.c"
 	.loc 1 51 0
 .LVL0:
@@ -94,7 +94,7 @@ spiffs_object_get_data_page_index_reference:
 	mov.n	a2, a3
 .LVL12:
 	retw.n
-.LFE17:
+.LFE26:
 	.size	spiffs_object_get_data_page_index_reference, .-spiffs_object_get_data_page_index_reference
 	.section	.text.spiffs_delete_obj_lazy,"ax",@progbits
 	.literal_position
@@ -102,7 +102,7 @@ spiffs_object_get_data_page_index_reference:
 	.align	4
 	.type	spiffs_delete_obj_lazy, @function
 spiffs_delete_obj_lazy:
-.LFB20:
+.LFB29:
 	.loc 1 156 0
 .LVL13:
 	entry	sp, 48
@@ -148,7 +148,7 @@ spiffs_delete_obj_lazy:
 	mov.n	a2, a8
 .LVL17:
 	retw.n
-.LFE20:
+.LFE29:
 	.size	spiffs_delete_obj_lazy, .-spiffs_delete_obj_lazy
 	.section	.text.spiffs_rewrite_index,"ax",@progbits
 	.literal_position
@@ -159,7 +159,7 @@ spiffs_delete_obj_lazy:
 	.align	4
 	.type	spiffs_rewrite_index, @function
 spiffs_rewrite_index:
-.LFB19:
+.LFB28:
 	.loc 1 91 0
 .LVL18:
 	entry	sp, 64
@@ -379,13 +379,13 @@ spiffs_rewrite_index:
 	mov.n	a2, a8
 .LVL48:
 	retw.n
-.LFE19:
+.LFE28:
 	.size	spiffs_rewrite_index, .-spiffs_rewrite_index
 	.section	.text.spiffs_rewrite_page,"ax",@progbits
 	.align	4
 	.type	spiffs_rewrite_page, @function
 spiffs_rewrite_page:
-.LFB18:
+.LFB27:
 	.loc 1 77 0
 .LVL49:
 	entry	sp, 48
@@ -435,7 +435,7 @@ spiffs_rewrite_page:
 	mov.n	a2, a10
 .LVL54:
 	retw.n
-.LFE18:
+.LFE27:
 	.size	spiffs_rewrite_page, .-spiffs_rewrite_page
 	.section	.text.spiffs_lookup_check_v,"ax",@progbits
 	.literal_position
@@ -448,7 +448,7 @@ spiffs_rewrite_page:
 	.align	4
 	.type	spiffs_lookup_check_v, @function
 spiffs_lookup_check_v:
-.LFB22:
+.LFB31:
 	.loc 1 446 0
 .LVL55:
 	entry	sp, 96
@@ -1431,7 +1431,7 @@ spiffs_lookup_check_v:
 	.loc 1 470 0
 	mov.n	a2, a10
 	retw.n
-.LFE22:
+.LFE31:
 	.size	spiffs_lookup_check_v, .-spiffs_lookup_check_v
 	.section	.text.spiffs_object_index_consistency_check_v,"ax",@progbits
 	.literal_position
@@ -1443,7 +1443,7 @@ spiffs_lookup_check_v:
 	.align	4
 	.type	spiffs_object_index_consistency_check_v, @function
 spiffs_object_index_consistency_check_v:
-.LFB27:
+.LFB36:
 	.loc 1 879 0
 .LVL170:
 	entry	sp, 64
@@ -1769,7 +1769,7 @@ spiffs_object_index_consistency_check_v:
 	.loc 1 967 0
 	mov.n	a2, a10
 	retw.n
-.LFE27:
+.LFE36:
 	.size	spiffs_object_index_consistency_check_v, .-spiffs_object_index_consistency_check_v
 	.section	.text.spiffs_lookup_consistency_check,"ax",@progbits
 	.literal_position
@@ -1779,7 +1779,7 @@ spiffs_object_index_consistency_check_v:
 	.global	spiffs_lookup_consistency_check
 	.type	spiffs_lookup_consistency_check, @function
 spiffs_lookup_consistency_check:
-.LFB23:
+.LFB32:
 	.loc 1 475 0
 .LVL217:
 	entry	sp, 48
@@ -1852,7 +1852,7 @@ spiffs_lookup_consistency_check:
 .L255:
 	.loc 1 494 0 is_stmt 1
 	retw.n
-.LFE23:
+.LFE32:
 	.size	spiffs_lookup_consistency_check, .-spiffs_lookup_consistency_check
 	.section	.text.spiffs_page_consistency_check,"ax",@progbits
 	.literal_position
@@ -1864,7 +1864,7 @@ spiffs_lookup_consistency_check:
 	.global	spiffs_page_consistency_check
 	.type	spiffs_page_consistency_check, @function
 spiffs_page_consistency_check:
-.LFB25:
+.LFB34:
 	.loc 1 851 0
 .LVL227:
 	entry	sp, 112
@@ -2947,7 +2947,7 @@ spiffs_page_consistency_check:
 .LBE117:
 	.loc 1 859 0
 	retw.n
-.LFE25:
+.LFE34:
 	.size	spiffs_page_consistency_check, .-spiffs_page_consistency_check
 	.section	.text.spiffs_object_index_consistency_check,"ax",@progbits
 	.literal_position
@@ -2957,7 +2957,7 @@ spiffs_page_consistency_check:
 	.global	spiffs_object_index_consistency_check
 	.type	spiffs_object_index_consistency_check, @function
 spiffs_object_index_consistency_check:
-.LFB28:
+.LFB37:
 	.loc 1 973 0
 .LVL357:
 	entry	sp, 64
@@ -3039,7 +3039,7 @@ spiffs_object_index_consistency_check:
 	.loc 1 993 0 is_stmt 1
 	mov.n	a2, a4
 	retw.n
-.LFE28:
+.LFE37:
 	.size	spiffs_object_index_consistency_check, .-spiffs_object_index_consistency_check
 	.comm	spiffs_mutex,4,4
 	.section	.debug_frame,"",@progbits
@@ -3061,10 +3061,10 @@ spiffs_object_index_consistency_check:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.byte	0x4
-	.4byte	.LCFI0-.LFB17
+	.4byte	.LCFI0-.LFB26
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -3073,10 +3073,10 @@ spiffs_object_index_consistency_check:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI1-.LFB20
+	.4byte	.LCFI1-.LFB29
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -3085,10 +3085,10 @@ spiffs_object_index_consistency_check:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI2-.LFB19
+	.4byte	.LCFI2-.LFB28
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -3097,10 +3097,10 @@ spiffs_object_index_consistency_check:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI3-.LFB18
+	.4byte	.LCFI3-.LFB27
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -3109,10 +3109,10 @@ spiffs_object_index_consistency_check:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI4-.LFB22
+	.4byte	.LCFI4-.LFB31
 	.byte	0xe
 	.uleb128 0x60
 	.align	4
@@ -3121,10 +3121,10 @@ spiffs_object_index_consistency_check:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.byte	0x4
-	.4byte	.LCFI5-.LFB27
+	.4byte	.LCFI5-.LFB36
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -3133,10 +3133,10 @@ spiffs_object_index_consistency_check:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI6-.LFB23
+	.4byte	.LCFI6-.LFB32
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -3145,10 +3145,10 @@ spiffs_object_index_consistency_check:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.byte	0x4
-	.4byte	.LCFI7-.LFB25
+	.4byte	.LCFI7-.LFB34
 	.byte	0xe
 	.uleb128 0x70
 	.align	4
@@ -3157,10 +3157,10 @@ spiffs_object_index_consistency_check:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.byte	0x4
-	.4byte	.LCFI8-.LFB28
+	.4byte	.LCFI8-.LFB37
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -3901,8 +3901,8 @@ spiffs_object_index_consistency_check:
 	.byte	0x1
 	.byte	0x2e
 	.4byte	0x94
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x6df
@@ -4034,8 +4034,8 @@ spiffs_object_index_consistency_check:
 	.byte	0x1
 	.byte	0x9c
 	.4byte	0x94
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x78e
@@ -4144,8 +4144,8 @@ spiffs_object_index_consistency_check:
 	.byte	0x1
 	.byte	0x5b
 	.4byte	0x94
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x931
@@ -4387,8 +4387,8 @@ spiffs_object_index_consistency_check:
 	.byte	0
 	.uleb128 0x28
 	.4byte	0x438
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x9f9
@@ -4503,8 +4503,8 @@ spiffs_object_index_consistency_check:
 	.byte	0x1
 	.2byte	0x1bd
 	.4byte	0x94
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x107a
@@ -5583,8 +5583,8 @@ spiffs_object_index_consistency_check:
 	.byte	0x1
 	.2byte	0x36e
 	.4byte	0x94
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1344
@@ -5932,8 +5932,8 @@ spiffs_object_index_consistency_check:
 	.byte	0x1
 	.2byte	0x1db
 	.4byte	0x94
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1446
@@ -6331,8 +6331,8 @@ spiffs_object_index_consistency_check:
 	.byte	0x1
 	.2byte	0x353
 	.4byte	0x94
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1be7
@@ -7234,8 +7234,8 @@ spiffs_object_index_consistency_check:
 	.byte	0x1
 	.2byte	0x3cd
 	.4byte	0x94
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1cf6
@@ -8418,7 +8418,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL12
-	.4byte	.LFE17
+	.4byte	.LFE26
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -8432,7 +8432,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL3
-	.4byte	.LFE17
+	.4byte	.LFE26
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -8457,7 +8457,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL8
-	.4byte	.LFE17
+	.4byte	.LFE26
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -8485,7 +8485,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL17
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -8506,7 +8506,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL48
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -8520,7 +8520,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL19
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -8545,7 +8545,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL40
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -8559,7 +8559,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL42
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -8642,7 +8642,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL54
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -8691,7 +8691,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL59
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -8702,7 +8702,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL102
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -8716,7 +8716,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL63
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -8730,7 +8730,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL60
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -8744,7 +8744,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL57
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -8758,7 +8758,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL58
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -8792,7 +8792,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL62
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -9253,7 +9253,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL216
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -9267,7 +9267,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL187
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -9281,7 +9281,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL174
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -9295,7 +9295,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL175
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -9309,7 +9309,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL172
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -9596,7 +9596,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL219
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -9607,7 +9607,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL221
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -9633,7 +9633,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL228
-	.4byte	.LFE25
+	.4byte	.LFE34
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -9773,7 +9773,7 @@ spiffs_object_index_consistency_check:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL231
-	.4byte	.LFE25
+	.4byte	.LFE34
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -80
@@ -10266,7 +10266,7 @@ spiffs_object_index_consistency_check:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL365
-	.4byte	.LFE28
+	.4byte	.LFE37
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -10294,24 +10294,24 @@ spiffs_object_index_consistency_check:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.4byte	.LFB28
 	.4byte	.LFE28-.LFB28
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -10428,24 +10428,24 @@ spiffs_object_index_consistency_check:
 	.4byte	.LBE112
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB17
-	.4byte	.LFE17
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB27
-	.4byte	.LFE27
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB25
-	.4byte	.LFE25
+	.4byte	.LFB26
+	.4byte	.LFE26
+	.4byte	.LFB29
+	.4byte	.LFE29
 	.4byte	.LFB28
 	.4byte	.LFE28
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB31
+	.4byte	.LFE31
+	.4byte	.LFB36
+	.4byte	.LFE36
+	.4byte	.LFB32
+	.4byte	.LFE32
+	.4byte	.LFB34
+	.4byte	.LFE34
+	.4byte	.LFB37
+	.4byte	.LFE37
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

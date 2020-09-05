@@ -7,7 +7,7 @@
 	.global	sdmmc_card_init
 	.type	sdmmc_card_init, @function
 sdmmc_card_init:
-.LFB21:
+.LFB30:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/sdmmc/sdmmc_init.c"
 	.loc 1 35 0
 .LVL0:
@@ -302,7 +302,7 @@ sdmmc_card_init:
 	mov.n	a2, a10
 .LVL59:
 	retw.n
-.LFE21:
+.LFE30:
 	.size	sdmmc_card_init, .-sdmmc_card_init
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -323,10 +323,10 @@ sdmmc_card_init:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI0-.LFB21
+	.4byte	.LCFI0-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1042,8 +1042,8 @@ sdmmc_card_init:
 	.byte	0x1
 	.byte	0x22
 	.4byte	0x12a
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xa0b
@@ -2272,7 +2272,7 @@ sdmmc_card_init:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL59
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2523,8 +2523,8 @@ sdmmc_card_init:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -2541,8 +2541,8 @@ sdmmc_card_init:
 	.4byte	.LBE48
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB21
-	.4byte	.LFE21
+	.4byte	.LFB30
+	.4byte	.LFE30
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

@@ -59,349 +59,363 @@
 .LC83:
 	.string	"ECP - The ECP hardware accelerator failed"
 .LC86:
-	.string	"MD - The selected feature is not available"
+	.string	"ECP - Operation in progress, call again with the same parameters to continue"
 .LC89:
-	.string	"MD - Bad input parameters to function"
+	.string	"MD - The selected feature is not available"
 .LC92:
-	.string	"MD - Failed to allocate memory"
+	.string	"MD - Bad input parameters to function"
 .LC95:
-	.string	"MD - Opening or reading of file failed"
+	.string	"MD - Failed to allocate memory"
 .LC98:
-	.string	"MD - MD hardware accelerator failed"
+	.string	"MD - Opening or reading of file failed"
 .LC101:
-	.string	"PEM - No PEM header or footer found"
+	.string	"MD - MD hardware accelerator failed"
 .LC104:
-	.string	"PEM - PEM string is not as expected"
+	.string	"PEM - No PEM header or footer found"
 .LC107:
-	.string	"PEM - Failed to allocate memory"
+	.string	"PEM - PEM string is not as expected"
 .LC110:
-	.string	"PEM - RSA IV is not in hex-format"
+	.string	"PEM - Failed to allocate memory"
 .LC113:
-	.string	"PEM - Unsupported key encryption algorithm"
+	.string	"PEM - RSA IV is not in hex-format"
 .LC116:
-	.string	"PEM - Private key password can't be empty"
+	.string	"PEM - Unsupported key encryption algorithm"
 .LC119:
-	.string	"PEM - Given private key password does not allow for correct decryption"
+	.string	"PEM - Private key password can't be empty"
 .LC122:
-	.string	"PEM - Unavailable feature, e.g. hashing/encryption combination"
+	.string	"PEM - Given private key password does not allow for correct decryption"
 .LC125:
-	.string	"PEM - Bad input parameters to function"
+	.string	"PEM - Unavailable feature, e.g. hashing/encryption combination"
 .LC128:
-	.string	"PK - Memory allocation failed"
+	.string	"PEM - Bad input parameters to function"
 .LC131:
-	.string	"PK - Type mismatch, eg attempt to encrypt with an ECDSA key"
+	.string	"PK - Memory allocation failed"
 .LC134:
-	.string	"PK - Bad input parameters to function"
+	.string	"PK - Type mismatch, eg attempt to encrypt with an ECDSA key"
 .LC137:
-	.string	"PK - Read/write of file failed"
+	.string	"PK - Bad input parameters to function"
 .LC140:
-	.string	"PK - Unsupported key version"
+	.string	"PK - Read/write of file failed"
 .LC143:
-	.string	"PK - Invalid key tag or value"
+	.string	"PK - Unsupported key version"
 .LC146:
-	.string	"PK - Key algorithm is unsupported (only RSA and EC are supported)"
+	.string	"PK - Invalid key tag or value"
 .LC149:
-	.string	"PK - Private key password can't be empty"
+	.string	"PK - Key algorithm is unsupported (only RSA and EC are supported)"
 .LC152:
-	.string	"PK - Given private key password does not allow for correct decryption"
+	.string	"PK - Private key password can't be empty"
 .LC155:
-	.string	"PK - The pubkey tag or value is invalid (only RSA and EC are supported)"
+	.string	"PK - Given private key password does not allow for correct decryption"
 .LC158:
-	.string	"PK - The algorithm tag or value is invalid"
+	.string	"PK - The pubkey tag or value is invalid (only RSA and EC are supported)"
 .LC161:
-	.string	"PK - Elliptic curve is unsupported (only NIST curves are supported)"
+	.string	"PK - The algorithm tag or value is invalid"
 .LC164:
-	.string	"PK - Unavailable feature, e.g. RSA disabled for RSA key"
+	.string	"PK - Elliptic curve is unsupported (only NIST curves are supported)"
 .LC167:
-	.string	"PK - The buffer contains a valid signature followed by more data"
+	.string	"PK - Unavailable feature, e.g. RSA disabled for RSA key"
 .LC170:
-	.string	"PK - PK hardware accelerator failed"
+	.string	"PK - The buffer contains a valid signature followed by more data"
 .LC173:
-	.string	"PKCS12 - Bad input parameters to function"
+	.string	"PK - PK hardware accelerator failed"
 .LC176:
-	.string	"PKCS12 - Feature not available, e.g. unsupported encryption scheme"
+	.string	"PKCS12 - Bad input parameters to function"
 .LC179:
-	.string	"PKCS12 - PBE ASN.1 data not as expected"
+	.string	"PKCS12 - Feature not available, e.g. unsupported encryption scheme"
 .LC182:
-	.string	"PKCS12 - Given private key password does not allow for correct decryption"
+	.string	"PKCS12 - PBE ASN.1 data not as expected"
 .LC185:
-	.string	"PKCS5 - Bad input parameters to function"
+	.string	"PKCS12 - Given private key password does not allow for correct decryption"
 .LC188:
-	.string	"PKCS5 - Unexpected ASN.1 data"
+	.string	"PKCS5 - Bad input parameters to function"
 .LC191:
-	.string	"PKCS5 - Requested encryption or digest alg not available"
+	.string	"PKCS5 - Unexpected ASN.1 data"
 .LC194:
-	.string	"PKCS5 - Given private key password does not allow for correct decryption"
+	.string	"PKCS5 - Requested encryption or digest alg not available"
 .LC197:
-	.string	"RSA - Bad input parameters to function"
+	.string	"PKCS5 - Given private key password does not allow for correct decryption"
 .LC200:
-	.string	"RSA - Input data contains invalid padding and is rejected"
+	.string	"RSA - Bad input parameters to function"
 .LC203:
-	.string	"RSA - Something failed during generation of a key"
+	.string	"RSA - Input data contains invalid padding and is rejected"
 .LC206:
-	.string	"RSA - Key failed to pass the validity check of the library"
+	.string	"RSA - Something failed during generation of a key"
 .LC209:
-	.string	"RSA - The public key operation failed"
+	.string	"RSA - Key failed to pass the validity check of the library"
 .LC212:
-	.string	"RSA - The private key operation failed"
+	.string	"RSA - The public key operation failed"
 .LC215:
-	.string	"RSA - The PKCS#1 verification failed"
+	.string	"RSA - The private key operation failed"
 .LC218:
-	.string	"RSA - The output buffer for decryption is not large enough"
+	.string	"RSA - The PKCS#1 verification failed"
 .LC221:
-	.string	"RSA - The random generator failed to generate non-zeros"
+	.string	"RSA - The output buffer for decryption is not large enough"
 .LC224:
-	.string	"RSA - The implementation does not offer the requested operation, for example, because of security violations or lack of functionality"
+	.string	"RSA - The random generator failed to generate non-zeros"
 .LC227:
-	.string	"RSA - RSA hardware accelerator failed"
+	.string	"RSA - The implementation does not offer the requested operation, for example, because of security violations or lack of functionality"
 .LC230:
-	.string	"SSL - The requested feature is not available"
+	.string	"RSA - RSA hardware accelerator failed"
 .LC233:
-	.string	"SSL - Bad input parameters to function"
+	.string	"SSL - The requested feature is not available"
 .LC236:
-	.string	"SSL - Verification of the message MAC failed"
+	.string	"SSL - Bad input parameters to function"
 .LC239:
-	.string	"SSL - An invalid SSL record was received"
+	.string	"SSL - Verification of the message MAC failed"
 .LC242:
-	.string	"SSL - The connection indicated an EOF"
+	.string	"SSL - An invalid SSL record was received"
 .LC245:
-	.string	"SSL - An unknown cipher was received"
+	.string	"SSL - The connection indicated an EOF"
 .LC248:
-	.string	"SSL - The server has no ciphersuites in common with the client"
+	.string	"SSL - An unknown cipher was received"
 .LC251:
-	.string	"SSL - No RNG was provided to the SSL module"
+	.string	"SSL - The server has no ciphersuites in common with the client"
 .LC254:
-	.string	"SSL - No client certification received from the client, but required by the authentication mode"
+	.string	"SSL - No RNG was provided to the SSL module"
 .LC257:
-	.string	"SSL - Our own certificate(s) is/are too large to send in an SSL message"
+	.string	"SSL - No client certification received from the client, but required by the authentication mode"
 .LC260:
-	.string	"SSL - The own certificate is not set, but needed by the server"
+	.string	"SSL - Our own certificate(s) is/are too large to send in an SSL message"
 .LC263:
-	.string	"SSL - The own private key or pre-shared key is not set, but needed"
+	.string	"SSL - The own certificate is not set, but needed by the server"
 .LC266:
-	.string	"SSL - No CA Chain is set, but required to operate"
+	.string	"SSL - The own private key or pre-shared key is not set, but needed"
 .LC269:
-	.string	"SSL - An unexpected message was received from our peer"
+	.string	"SSL - No CA Chain is set, but required to operate"
 .LC272:
-	.string	"SSL - A fatal alert message was received from our peer"
+	.string	"SSL - An unexpected message was received from our peer"
 .LC275:
-	.string	"SSL - Verification of our peer failed"
+	.string	"SSL - A fatal alert message was received from our peer"
 .LC278:
-	.string	"SSL - The peer notified us that the connection is going to be closed"
+	.string	"SSL - Verification of our peer failed"
 .LC281:
-	.string	"SSL - Processing of the ClientHello handshake message failed"
+	.string	"SSL - The peer notified us that the connection is going to be closed"
 .LC284:
-	.string	"SSL - Processing of the ServerHello handshake message failed"
+	.string	"SSL - Processing of the ClientHello handshake message failed"
 .LC287:
-	.string	"SSL - Processing of the Certificate handshake message failed"
+	.string	"SSL - Processing of the ServerHello handshake message failed"
 .LC290:
-	.string	"SSL - Processing of the CertificateRequest handshake message failed"
+	.string	"SSL - Processing of the Certificate handshake message failed"
 .LC293:
-	.string	"SSL - Processing of the ServerKeyExchange handshake message failed"
+	.string	"SSL - Processing of the CertificateRequest handshake message failed"
 .LC296:
-	.string	"SSL - Processing of the ServerHelloDone handshake message failed"
+	.string	"SSL - Processing of the ServerKeyExchange handshake message failed"
 .LC299:
-	.string	"SSL - Processing of the ClientKeyExchange handshake message failed"
+	.string	"SSL - Processing of the ServerHelloDone handshake message failed"
 .LC302:
-	.string	"SSL - Processing of the ClientKeyExchange handshake message failed in DHM / ECDH Read Public"
+	.string	"SSL - Processing of the ClientKeyExchange handshake message failed"
 .LC305:
-	.string	"SSL - Processing of the ClientKeyExchange handshake message failed in DHM / ECDH Calculate Secret"
+	.string	"SSL - Processing of the ClientKeyExchange handshake message failed in DHM / ECDH Read Public"
 .LC308:
-	.string	"SSL - Processing of the CertificateVerify handshake message failed"
+	.string	"SSL - Processing of the ClientKeyExchange handshake message failed in DHM / ECDH Calculate Secret"
 .LC311:
-	.string	"SSL - Processing of the ChangeCipherSpec handshake message failed"
+	.string	"SSL - Processing of the CertificateVerify handshake message failed"
 .LC314:
-	.string	"SSL - Processing of the Finished handshake message failed"
+	.string	"SSL - Processing of the ChangeCipherSpec handshake message failed"
 .LC317:
-	.string	"SSL - Memory allocation failed"
+	.string	"SSL - Processing of the Finished handshake message failed"
 .LC320:
-	.string	"SSL - Hardware acceleration function returned with error"
+	.string	"SSL - Memory allocation failed"
 .LC323:
-	.string	"SSL - Hardware acceleration function skipped / left alone data"
+	.string	"SSL - Hardware acceleration function returned with error"
 .LC326:
-	.string	"SSL - Processing of the compression / decompression failed"
+	.string	"SSL - Hardware acceleration function skipped / left alone data"
 .LC329:
-	.string	"SSL - Handshake protocol not within min/max boundaries"
+	.string	"SSL - Processing of the compression / decompression failed"
 .LC332:
-	.string	"SSL - Processing of the NewSessionTicket handshake message failed"
+	.string	"SSL - Handshake protocol not within min/max boundaries"
 .LC335:
-	.string	"SSL - Session ticket has expired"
+	.string	"SSL - Processing of the NewSessionTicket handshake message failed"
 .LC338:
-	.string	"SSL - Public key type mismatch (eg, asked for RSA key exchange and presented EC key)"
+	.string	"SSL - Session ticket has expired"
 .LC341:
-	.string	"SSL - Unknown identity received (eg, PSK identity)"
+	.string	"SSL - Public key type mismatch (eg, asked for RSA key exchange and presented EC key)"
 .LC344:
-	.string	"SSL - Internal error (eg, unexpected failure in lower-level module)"
+	.string	"SSL - Unknown identity received (eg, PSK identity)"
 .LC347:
-	.string	"SSL - A counter would wrap (eg, too many messages exchanged)"
+	.string	"SSL - Internal error (eg, unexpected failure in lower-level module)"
 .LC350:
-	.string	"SSL - Unexpected message at ServerHello in renegotiation"
+	.string	"SSL - A counter would wrap (eg, too many messages exchanged)"
 .LC353:
-	.string	"SSL - DTLS client must retry for hello verification"
+	.string	"SSL - Unexpected message at ServerHello in renegotiation"
 .LC356:
-	.string	"SSL - A buffer is too small to receive or write a message"
+	.string	"SSL - DTLS client must retry for hello verification"
 .LC359:
-	.string	"SSL - None of the common ciphersuites is usable (eg, no suitable certificate, see debug messages)"
+	.string	"SSL - A buffer is too small to receive or write a message"
 .LC362:
-	.string	"SSL - No data of requested type currently available on underlying transport"
+	.string	"SSL - None of the common ciphersuites is usable (eg, no suitable certificate, see debug messages)"
 .LC365:
-	.string	"SSL - Connection requires a write call"
+	.string	"SSL - No data of requested type currently available on underlying transport"
 .LC368:
-	.string	"SSL - The operation timed out"
+	.string	"SSL - Connection requires a write call"
 .LC371:
-	.string	"SSL - The client initiated a reconnect from the same port"
+	.string	"SSL - The operation timed out"
 .LC374:
-	.string	"SSL - Record header looks valid but is not expected"
+	.string	"SSL - The client initiated a reconnect from the same port"
 .LC377:
-	.string	"SSL - The alert message received indicates a non-fatal error"
+	.string	"SSL - Record header looks valid but is not expected"
 .LC380:
-	.string	"SSL - Couldn't set the hash for verifying CertificateVerify"
+	.string	"SSL - The alert message received indicates a non-fatal error"
 .LC383:
-	.string	"SSL - Internal-only message signaling that further message-processing should be done"
+	.string	"SSL - Couldn't set the hash for verifying CertificateVerify"
 .LC386:
-	.string	"SSL - The asynchronous operation is not completed yet"
+	.string	"SSL - Internal-only message signaling that further message-processing should be done"
 .LC389:
-	.string	"SSL - Internal-only message signaling that a message arrived early"
+	.string	"SSL - The asynchronous operation is not completed yet"
 .LC392:
-	.string	"X509 - Unavailable feature, e.g. RSA hashing/encryption combination"
+	.string	"SSL - Internal-only message signaling that a message arrived early"
 .LC395:
-	.string	"X509 - Requested OID is unknown"
+	.string	"SSL - A cryptographic operation is in progress. Try again later"
 .LC398:
-	.string	"X509 - The CRT/CRL/CSR format is invalid, e.g. different type expected"
+	.string	"X509 - Unavailable feature, e.g. RSA hashing/encryption combination"
 .LC401:
-	.string	"X509 - The CRT/CRL/CSR version element is invalid"
+	.string	"X509 - Requested OID is unknown"
 .LC404:
-	.string	"X509 - The serial tag or value is invalid"
+	.string	"X509 - The CRT/CRL/CSR format is invalid, e.g. different type expected"
 .LC407:
-	.string	"X509 - The algorithm tag or value is invalid"
+	.string	"X509 - The CRT/CRL/CSR version element is invalid"
 .LC410:
-	.string	"X509 - The name tag or value is invalid"
+	.string	"X509 - The serial tag or value is invalid"
 .LC413:
-	.string	"X509 - The date tag or value is invalid"
+	.string	"X509 - The algorithm tag or value is invalid"
 .LC416:
-	.string	"X509 - The signature tag or value invalid"
+	.string	"X509 - The name tag or value is invalid"
 .LC419:
-	.string	"X509 - The extension tag or value is invalid"
+	.string	"X509 - The date tag or value is invalid"
 .LC422:
-	.string	"X509 - CRT/CRL/CSR has an unsupported version number"
+	.string	"X509 - The signature tag or value invalid"
 .LC425:
-	.string	"X509 - Signature algorithm (oid) is unsupported"
+	.string	"X509 - The extension tag or value is invalid"
 .LC428:
-	.string	"X509 - Signature algorithms do not match. (see \\c ::mbedtls_x509_crt sig_oid)"
+	.string	"X509 - CRT/CRL/CSR has an unsupported version number"
 .LC431:
-	.string	"X509 - Certificate verification failed, e.g. CRL, CA or signature check failed"
+	.string	"X509 - Signature algorithm (oid) is unsupported"
 .LC434:
-	.string	"X509 - Format not recognized as DER or PEM"
+	.string	"X509 - Signature algorithms do not match. (see \\c ::mbedtls_x509_crt sig_oid)"
 .LC437:
-	.string	"X509 - Input invalid"
+	.string	"X509 - Certificate verification failed, e.g. CRL, CA or signature check failed"
 .LC440:
-	.string	"X509 - Allocation of memory failed"
+	.string	"X509 - Format not recognized as DER or PEM"
 .LC443:
-	.string	"X509 - Read/write of file failed"
+	.string	"X509 - Input invalid"
 .LC446:
-	.string	"X509 - Destination buffer is too small"
+	.string	"X509 - Allocation of memory failed"
 .LC449:
-	.string	"X509 - A fatal error occured, eg the chain is too long or the vrfy callback failed"
-.LC451:
+	.string	"X509 - Read/write of file failed"
+.LC452:
+	.string	"X509 - Destination buffer is too small"
+.LC455:
+	.string	"X509 - A fatal error occurred, eg the chain is too long or the vrfy callback failed"
+.LC457:
 	.string	"UNKNOWN ERROR CODE (%04X)"
-.LC454:
-	.string	" : "
-.LC456:
-	.string	"AES - Invalid key length"
-.LC458:
-	.string	"AES - Invalid data input length"
 .LC460:
-	.string	"AES - Invalid input data"
+	.string	" : "
 .LC462:
-	.string	"AES - Feature not available. For example, an unsupported AES key size"
+	.string	"AES - Invalid key length"
 .LC464:
-	.string	"AES - AES hardware accelerator failed"
+	.string	"AES - Invalid data input length"
 .LC466:
-	.string	"ASN1 - Out of data when parsing an ASN1 data structure"
+	.string	"AES - Invalid input data"
 .LC468:
-	.string	"ASN1 - ASN1 tag was of an unexpected value"
+	.string	"AES - Feature not available. For example, an unsupported AES key size"
 .LC470:
-	.string	"ASN1 - Error when trying to determine the length or invalid length"
+	.string	"AES - AES hardware accelerator failed"
 .LC472:
-	.string	"ASN1 - Actual length differs from expected length"
+	.string	"ASN1 - Out of data when parsing an ASN1 data structure"
 .LC474:
-	.string	"ASN1 - Data is invalid. (not used)"
+	.string	"ASN1 - ASN1 tag was of an unexpected value"
 .LC476:
-	.string	"ASN1 - Memory allocation failed"
+	.string	"ASN1 - Error when trying to determine the length or invalid length"
 .LC478:
-	.string	"ASN1 - Buffer too small when writing ASN.1 data structure"
+	.string	"ASN1 - Actual length differs from expected length"
 .LC480:
-	.string	"BASE64 - Output buffer too small"
+	.string	"ASN1 - Data is invalid. (not used)"
 .LC482:
-	.string	"BASE64 - Invalid character in input"
+	.string	"ASN1 - Memory allocation failed"
 .LC484:
-	.string	"BIGNUM - An error occurred while reading from or writing to a file"
+	.string	"ASN1 - Buffer too small when writing ASN.1 data structure"
 .LC486:
-	.string	"BIGNUM - Bad input parameters to function"
+	.string	"BASE64 - Output buffer too small"
 .LC488:
-	.string	"BIGNUM - There is an invalid character in the digit string"
+	.string	"BASE64 - Invalid character in input"
 .LC490:
-	.string	"BIGNUM - The buffer is too small to write to"
+	.string	"BIGNUM - An error occurred while reading from or writing to a file"
 .LC492:
-	.string	"BIGNUM - The input arguments are negative or result in illegal output"
+	.string	"BIGNUM - Bad input parameters to function"
 .LC494:
-	.string	"BIGNUM - The input argument for division is zero, which is not allowed"
+	.string	"BIGNUM - There is an invalid character in the digit string"
 .LC496:
-	.string	"BIGNUM - The input arguments are not acceptable"
+	.string	"BIGNUM - The buffer is too small to write to"
 .LC498:
-	.string	"BIGNUM - Memory allocation failed"
+	.string	"BIGNUM - The input arguments are negative or result in illegal output"
 .LC500:
-	.string	"CCM - Bad input parameters to the function"
+	.string	"BIGNUM - The input argument for division is zero, which is not allowed"
 .LC502:
-	.string	"CCM - Authenticated decryption failed"
+	.string	"BIGNUM - The input arguments are not acceptable"
 .LC504:
-	.string	"CCM - CCM hardware accelerator failed"
+	.string	"BIGNUM - Memory allocation failed"
 .LC506:
-	.string	"CTR_DRBG - The entropy source failed"
+	.string	"CCM - Bad input parameters to the function"
 .LC508:
-	.string	"CTR_DRBG - The requested random buffer length is too big"
+	.string	"CCM - Authenticated decryption failed"
 .LC510:
-	.string	"CTR_DRBG - The input (entropy + additional data) is too large"
+	.string	"CCM - CCM hardware accelerator failed"
 .LC512:
-	.string	"CTR_DRBG - Read or write error in file"
+	.string	"CTR_DRBG - The entropy source failed"
 .LC514:
-	.string	"ENTROPY - Critical entropy source failure"
+	.string	"CTR_DRBG - The requested random buffer length is too big"
 .LC516:
-	.string	"ENTROPY - No more sources can be added"
+	.string	"CTR_DRBG - The input (entropy + additional data) is too large"
 .LC518:
-	.string	"ENTROPY - No sources have been added to poll"
+	.string	"CTR_DRBG - Read or write error in file"
 .LC520:
-	.string	"ENTROPY - No strong sources have been added to poll"
+	.string	"ENTROPY - Critical entropy source failure"
 .LC522:
-	.string	"ENTROPY - Read/write error in file"
+	.string	"ENTROPY - No more sources can be added"
 .LC524:
-	.string	"GCM - Authenticated decryption failed"
+	.string	"ENTROPY - No sources have been added to poll"
 .LC526:
-	.string	"GCM - GCM hardware accelerator failed"
+	.string	"ENTROPY - No strong sources have been added to poll"
 .LC528:
-	.string	"GCM - Bad input parameters to function"
+	.string	"ENTROPY - Read/write error in file"
 .LC530:
-	.string	"HMAC_DRBG - Too many random requested in single call"
+	.string	"GCM - Authenticated decryption failed"
 .LC532:
-	.string	"HMAC_DRBG - Input too large (Entropy + additional)"
+	.string	"GCM - GCM hardware accelerator failed"
 .LC534:
-	.string	"HMAC_DRBG - Read/write error in file"
+	.string	"GCM - Bad input parameters to function"
 .LC536:
-	.string	"HMAC_DRBG - The entropy source failed"
+	.string	"HMAC_DRBG - Too many random requested in single call"
 .LC538:
-	.string	"MD5 - MD5 hardware accelerator failed"
+	.string	"HMAC_DRBG - Input too large (Entropy + additional)"
 .LC540:
-	.string	"OID - OID is not found"
+	.string	"HMAC_DRBG - Read/write error in file"
 .LC542:
-	.string	"OID - output buffer is too small"
+	.string	"HMAC_DRBG - The entropy source failed"
 .LC544:
-	.string	"PADLOCK - Input data should be aligned"
+	.string	"MD5 - MD5 hardware accelerator failed"
 .LC546:
-	.string	"SHA1 - SHA-1 hardware accelerator failed"
+	.string	"OID - OID is not found"
 .LC548:
-	.string	"SHA256 - SHA-256 hardware accelerator failed"
+	.string	"OID - output buffer is too small"
 .LC550:
+	.string	"PADLOCK - Input data should be aligned"
+.LC552:
+	.string	"PLATFORM - Hardware accelerator failed"
+.LC554:
+	.string	"PLATFORM - The requested feature is not supported by the platform"
+.LC556:
+	.string	"SHA1 - SHA-1 hardware accelerator failed"
+.LC558:
+	.string	"SHA1 - SHA-1 input data was malformed"
+.LC560:
+	.string	"SHA256 - SHA-256 hardware accelerator failed"
+.LC562:
+	.string	"SHA256 - SHA-256 input data was malformed"
+.LC564:
 	.string	"SHA512 - SHA-512 hardware accelerator failed"
+.LC566:
+	.string	"SHA512 - SHA-512 input data was malformed"
 	.section	.text.mbedtls_strerror,"ax",@progbits
 	.literal_position
 	.literal .LC0, 65408
@@ -461,255 +475,256 @@
 	.literal .LC81, .LC80
 	.literal .LC82, 19328
 	.literal .LC84, .LC83
-	.literal .LC85, 20608
+	.literal .LC85, 19200
 	.literal .LC87, .LC86
-	.literal .LC88, 20736
+	.literal .LC88, 20608
 	.literal .LC90, .LC89
-	.literal .LC91, 20864
+	.literal .LC91, 20736
 	.literal .LC93, .LC92
-	.literal .LC94, 20992
+	.literal .LC94, 20864
 	.literal .LC96, .LC95
-	.literal .LC97, 21120
+	.literal .LC97, 20992
 	.literal .LC99, .LC98
-	.literal .LC100, 4224
+	.literal .LC100, 21120
 	.literal .LC102, .LC101
-	.literal .LC103, 4352
+	.literal .LC103, 4224
 	.literal .LC105, .LC104
-	.literal .LC106, 4480
+	.literal .LC106, 4352
 	.literal .LC108, .LC107
-	.literal .LC109, 4608
+	.literal .LC109, 4480
 	.literal .LC111, .LC110
-	.literal .LC112, 4736
+	.literal .LC112, 4608
 	.literal .LC114, .LC113
-	.literal .LC115, 4864
+	.literal .LC115, 4736
 	.literal .LC117, .LC116
-	.literal .LC118, 4992
+	.literal .LC118, 4864
 	.literal .LC120, .LC119
-	.literal .LC121, 5120
+	.literal .LC121, 4992
 	.literal .LC123, .LC122
-	.literal .LC124, 5248
+	.literal .LC124, 5120
 	.literal .LC126, .LC125
-	.literal .LC127, 16256
+	.literal .LC127, 5248
 	.literal .LC129, .LC128
-	.literal .LC130, 16128
+	.literal .LC130, 16256
 	.literal .LC132, .LC131
-	.literal .LC133, 16000
+	.literal .LC133, 16128
 	.literal .LC135, .LC134
-	.literal .LC136, 15872
+	.literal .LC136, 16000
 	.literal .LC138, .LC137
-	.literal .LC139, 15744
+	.literal .LC139, 15872
 	.literal .LC141, .LC140
-	.literal .LC142, 15616
+	.literal .LC142, 15744
 	.literal .LC144, .LC143
-	.literal .LC145, 15488
+	.literal .LC145, 15616
 	.literal .LC147, .LC146
-	.literal .LC148, 15360
+	.literal .LC148, 15488
 	.literal .LC150, .LC149
-	.literal .LC151, 15232
+	.literal .LC151, 15360
 	.literal .LC153, .LC152
-	.literal .LC154, 15104
+	.literal .LC154, 15232
 	.literal .LC156, .LC155
-	.literal .LC157, 14976
+	.literal .LC157, 15104
 	.literal .LC159, .LC158
-	.literal .LC160, 14848
+	.literal .LC160, 14976
 	.literal .LC162, .LC161
-	.literal .LC163, 14720
+	.literal .LC163, 14848
 	.literal .LC165, .LC164
-	.literal .LC166, 14592
+	.literal .LC166, 14720
 	.literal .LC168, .LC167
-	.literal .LC169, 14464
+	.literal .LC169, 14592
 	.literal .LC171, .LC170
-	.literal .LC172, 8064
+	.literal .LC172, 14464
 	.literal .LC174, .LC173
-	.literal .LC175, 7936
+	.literal .LC175, 8064
 	.literal .LC177, .LC176
-	.literal .LC178, 7808
+	.literal .LC178, 7936
 	.literal .LC180, .LC179
-	.literal .LC181, 7680
+	.literal .LC181, 7808
 	.literal .LC183, .LC182
-	.literal .LC184, 12160
+	.literal .LC184, 7680
 	.literal .LC186, .LC185
-	.literal .LC187, 12032
+	.literal .LC187, 12160
 	.literal .LC189, .LC188
-	.literal .LC190, 11904
+	.literal .LC190, 12032
 	.literal .LC192, .LC191
-	.literal .LC193, 11776
+	.literal .LC193, 11904
 	.literal .LC195, .LC194
-	.literal .LC196, 16512
+	.literal .LC196, 11776
 	.literal .LC198, .LC197
-	.literal .LC199, 16640
+	.literal .LC199, 16512
 	.literal .LC201, .LC200
-	.literal .LC202, 16768
+	.literal .LC202, 16640
 	.literal .LC204, .LC203
-	.literal .LC205, 16896
+	.literal .LC205, 16768
 	.literal .LC207, .LC206
-	.literal .LC208, 17024
+	.literal .LC208, 16896
 	.literal .LC210, .LC209
-	.literal .LC211, 17152
+	.literal .LC211, 17024
 	.literal .LC213, .LC212
-	.literal .LC214, 17280
+	.literal .LC214, 17152
 	.literal .LC216, .LC215
-	.literal .LC217, 17408
+	.literal .LC217, 17280
 	.literal .LC219, .LC218
-	.literal .LC220, 17536
+	.literal .LC220, 17408
 	.literal .LC222, .LC221
-	.literal .LC223, 17664
+	.literal .LC223, 17536
 	.literal .LC225, .LC224
-	.literal .LC226, 17792
+	.literal .LC226, 17664
 	.literal .LC228, .LC227
-	.literal .LC229, 28800
+	.literal .LC229, 17792
 	.literal .LC231, .LC230
-	.literal .LC232, 28928
+	.literal .LC232, 28800
 	.literal .LC234, .LC233
-	.literal .LC235, 29056
+	.literal .LC235, 28928
 	.literal .LC237, .LC236
-	.literal .LC238, 29184
+	.literal .LC238, 29056
 	.literal .LC240, .LC239
-	.literal .LC241, 29312
+	.literal .LC241, 29184
 	.literal .LC243, .LC242
-	.literal .LC244, 29440
+	.literal .LC244, 29312
 	.literal .LC246, .LC245
-	.literal .LC247, 29568
+	.literal .LC247, 29440
 	.literal .LC249, .LC248
-	.literal .LC250, 29696
+	.literal .LC250, 29568
 	.literal .LC252, .LC251
-	.literal .LC253, 29824
+	.literal .LC253, 29696
 	.literal .LC255, .LC254
-	.literal .LC256, 29952
+	.literal .LC256, 29824
 	.literal .LC258, .LC257
-	.literal .LC259, 30080
+	.literal .LC259, 29952
 	.literal .LC261, .LC260
-	.literal .LC262, 30208
+	.literal .LC262, 30080
 	.literal .LC264, .LC263
-	.literal .LC265, 30336
+	.literal .LC265, 30208
 	.literal .LC267, .LC266
-	.literal .LC268, 30464
+	.literal .LC268, 30336
 	.literal .LC270, .LC269
-	.literal .LC271, 30592
+	.literal .LC271, 30464
 	.literal .LC273, .LC272
-	.literal .LC274, 30720
+	.literal .LC274, 30592
 	.literal .LC276, .LC275
-	.literal .LC277, 30848
+	.literal .LC277, 30720
 	.literal .LC279, .LC278
-	.literal .LC280, 30976
+	.literal .LC280, 30848
 	.literal .LC282, .LC281
-	.literal .LC283, 31104
+	.literal .LC283, 30976
 	.literal .LC285, .LC284
-	.literal .LC286, 31232
+	.literal .LC286, 31104
 	.literal .LC288, .LC287
-	.literal .LC289, 31360
+	.literal .LC289, 31232
 	.literal .LC291, .LC290
-	.literal .LC292, 31488
+	.literal .LC292, 31360
 	.literal .LC294, .LC293
-	.literal .LC295, 31616
+	.literal .LC295, 31488
 	.literal .LC297, .LC296
-	.literal .LC298, 31744
+	.literal .LC298, 31616
 	.literal .LC300, .LC299
-	.literal .LC301, 31872
+	.literal .LC301, 31744
 	.literal .LC303, .LC302
-	.literal .LC304, 32000
+	.literal .LC304, 31872
 	.literal .LC306, .LC305
-	.literal .LC307, 32128
+	.literal .LC307, 32000
 	.literal .LC309, .LC308
-	.literal .LC310, 32256
+	.literal .LC310, 32128
 	.literal .LC312, .LC311
-	.literal .LC313, 32384
+	.literal .LC313, 32256
 	.literal .LC315, .LC314
-	.literal .LC316, 32512
+	.literal .LC316, 32384
 	.literal .LC318, .LC317
-	.literal .LC319, 32640
+	.literal .LC319, 32512
 	.literal .LC321, .LC320
-	.literal .LC322, 28544
+	.literal .LC322, 32640
 	.literal .LC324, .LC323
-	.literal .LC325, 28416
+	.literal .LC325, 28544
 	.literal .LC327, .LC326
-	.literal .LC328, 28288
+	.literal .LC328, 28416
 	.literal .LC330, .LC329
-	.literal .LC331, 28160
+	.literal .LC331, 28288
 	.literal .LC333, .LC332
-	.literal .LC334, 28032
+	.literal .LC334, 28160
 	.literal .LC336, .LC335
-	.literal .LC337, 27904
+	.literal .LC337, 28032
 	.literal .LC339, .LC338
-	.literal .LC340, 27776
+	.literal .LC340, 27904
 	.literal .LC342, .LC341
-	.literal .LC343, 27648
+	.literal .LC343, 27776
 	.literal .LC345, .LC344
-	.literal .LC346, 27520
+	.literal .LC346, 27648
 	.literal .LC348, .LC347
-	.literal .LC349, 27392
+	.literal .LC349, 27520
 	.literal .LC351, .LC350
-	.literal .LC352, 27264
+	.literal .LC352, 27392
 	.literal .LC354, .LC353
-	.literal .LC355, 27136
+	.literal .LC355, 27264
 	.literal .LC357, .LC356
-	.literal .LC358, 27008
+	.literal .LC358, 27136
 	.literal .LC360, .LC359
-	.literal .LC361, 26880
+	.literal .LC361, 27008
 	.literal .LC363, .LC362
-	.literal .LC364, 26752
+	.literal .LC364, 26880
 	.literal .LC366, .LC365
-	.literal .LC367, 26624
+	.literal .LC367, 26752
 	.literal .LC369, .LC368
-	.literal .LC370, 26496
+	.literal .LC370, 26624
 	.literal .LC372, .LC371
-	.literal .LC373, 26368
+	.literal .LC373, 26496
 	.literal .LC375, .LC374
-	.literal .LC376, 26240
+	.literal .LC376, 26368
 	.literal .LC378, .LC377
-	.literal .LC379, 26112
+	.literal .LC379, 26240
 	.literal .LC381, .LC380
-	.literal .LC382, 25984
+	.literal .LC382, 26112
 	.literal .LC384, .LC383
-	.literal .LC385, 25856
+	.literal .LC385, 25984
 	.literal .LC387, .LC386
-	.literal .LC388, 25728
+	.literal .LC388, 25856
 	.literal .LC390, .LC389
-	.literal .LC391, 8320
+	.literal .LC391, 25728
 	.literal .LC393, .LC392
-	.literal .LC394, 8448
+	.literal .LC394, 28672
 	.literal .LC396, .LC395
-	.literal .LC397, 8576
+	.literal .LC397, 8320
 	.literal .LC399, .LC398
-	.literal .LC400, 8704
+	.literal .LC400, 8448
 	.literal .LC402, .LC401
-	.literal .LC403, 8832
+	.literal .LC403, 8576
 	.literal .LC405, .LC404
-	.literal .LC406, 8960
+	.literal .LC406, 8704
 	.literal .LC408, .LC407
-	.literal .LC409, 9088
+	.literal .LC409, 8832
 	.literal .LC411, .LC410
-	.literal .LC412, 9216
+	.literal .LC412, 8960
 	.literal .LC414, .LC413
-	.literal .LC415, 9344
+	.literal .LC415, 9088
 	.literal .LC417, .LC416
-	.literal .LC418, 9472
+	.literal .LC418, 9216
 	.literal .LC420, .LC419
-	.literal .LC421, 9600
+	.literal .LC421, 9344
 	.literal .LC423, .LC422
-	.literal .LC424, 9728
+	.literal .LC424, 9472
 	.literal .LC426, .LC425
-	.literal .LC427, 9856
+	.literal .LC427, 9600
 	.literal .LC429, .LC428
-	.literal .LC430, 9984
+	.literal .LC430, 9728
 	.literal .LC432, .LC431
-	.literal .LC433, 10112
+	.literal .LC433, 9856
 	.literal .LC435, .LC434
-	.literal .LC436, 10240
+	.literal .LC436, 9984
 	.literal .LC438, .LC437
-	.literal .LC439, 10368
+	.literal .LC439, 10112
 	.literal .LC441, .LC440
-	.literal .LC442, 10496
+	.literal .LC442, 10240
 	.literal .LC444, .LC443
-	.literal .LC445, 10624
+	.literal .LC445, 10368
 	.literal .LC447, .LC446
-	.literal .LC448, 12288
+	.literal .LC448, 10496
 	.literal .LC450, .LC449
-	.literal .LC452, .LC451
-	.literal .LC453, -65409
-	.literal .LC455, .LC454
-	.literal .LC457, .LC456
-	.literal .LC459, .LC458
+	.literal .LC451, 10624
+	.literal .LC453, .LC452
+	.literal .LC454, 12288
+	.literal .LC456, .LC455
+	.literal .LC458, .LC457
+	.literal .LC459, -65409
 	.literal .LC461, .LC460
 	.literal .LC463, .LC462
 	.literal .LC465, .LC464
@@ -756,54 +771,62 @@
 	.literal .LC547, .LC546
 	.literal .LC549, .LC548
 	.literal .LC551, .LC550
+	.literal .LC553, .LC552
+	.literal .LC555, .LC554
+	.literal .LC557, .LC556
+	.literal .LC559, .LC558
+	.literal .LC561, .LC560
+	.literal .LC563, .LC562
+	.literal .LC565, .LC564
+	.literal .LC567, .LC566
 	.align	4
 	.global	mbedtls_strerror
 	.type	mbedtls_strerror, @function
 mbedtls_strerror:
 .LFB17:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/error.c"
-	.loc 1 210 0
+	.loc 1 214 0
 .LVL0:
 	entry	sp, 32
 .LCFI0:
-	.loc 1 214 0
+	.loc 1 218 0
 	beqz.n	a4, .L1
-	.loc 1 217 0
+	.loc 1 221 0
 	mov.n	a12, a4
 	movi.n	a11, 0
 	mov.n	a10, a3
 	call8	memset
 .LVL1:
-	.loc 1 222 0
+	.loc 1 226 0
 	l32r	a5, .LC0
 	abs	a2, a2
 .LVL2:
 	and	a5, a2, a5
 	beqz.n	a5, .L5
 .LVL3:
-	.loc 1 230 0
+	.loc 1 234 0
 	l32r	a8, .LC1
-	.loc 1 231 0
+	.loc 1 235 0
 	l32r	a12, .LC3
-	.loc 1 230 0
-	beq	a5, a8, .L213
+	.loc 1 234 0
+	beq	a5, a8, .L220
 .L6:
-	.loc 1 232 0
+	.loc 1 236 0
 	l32r	a8, .LC4
 	bne	a5, a8, .L8
-	.loc 1 233 0
+	.loc 1 237 0
 	l32r	a12, .LC6
-.L213:
+.L220:
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL4:
 	j	.L7
 .L8:
-	.loc 1 234 0
+	.loc 1 238 0
 	l32r	a8, .LC7
 	bne	a5, a8, .L9
-	.loc 1 235 0
+	.loc 1 239 0
 	l32r	a12, .LC9
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -811,10 +834,10 @@ mbedtls_strerror:
 .LVL5:
 	j	.L10
 .L9:
-	.loc 1 236 0
+	.loc 1 240 0
 	l32r	a8, .LC10
 	bne	a5, a8, .L11
-	.loc 1 237 0
+	.loc 1 241 0
 	l32r	a12, .LC12
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -822,10 +845,10 @@ mbedtls_strerror:
 .LVL6:
 	j	.L12
 .L11:
-	.loc 1 238 0
+	.loc 1 242 0
 	l32r	a8, .LC13
 	bne	a5, a8, .L7
-	.loc 1 239 0
+	.loc 1 243 0
 	l32r	a12, .LC15
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -833,10 +856,10 @@ mbedtls_strerror:
 .LVL7:
 	j	.L13
 .L7:
-	.loc 1 240 0
+	.loc 1 244 0
 	l32r	a8, .LC16
 	bne	a5, a8, .L10
-	.loc 1 241 0
+	.loc 1 245 0
 	l32r	a12, .LC18
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -844,10 +867,10 @@ mbedtls_strerror:
 .LVL8:
 	j	.L14
 .L10:
-	.loc 1 242 0
+	.loc 1 246 0
 	l32r	a8, .LC19
 	bne	a5, a8, .L12
-	.loc 1 243 0
+	.loc 1 247 0
 	l32r	a12, .LC21
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -855,10 +878,10 @@ mbedtls_strerror:
 .LVL9:
 	j	.L15
 .L12:
-	.loc 1 244 0
+	.loc 1 248 0
 	l32r	a8, .LC22
 	bne	a5, a8, .L16
-	.loc 1 245 0
+	.loc 1 249 0
 	l32r	a12, .LC24
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -866,10 +889,10 @@ mbedtls_strerror:
 .LVL10:
 	j	.L17
 .L16:
-	.loc 1 249 0
+	.loc 1 253 0
 	l32r	a8, .LC25
 	bne	a5, a8, .L13
-	.loc 1 250 0
+	.loc 1 254 0
 	l32r	a12, .LC27
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -877,10 +900,10 @@ mbedtls_strerror:
 .LVL11:
 	j	.L18
 .L13:
-	.loc 1 251 0
+	.loc 1 255 0
 	l32r	a8, .LC28
 	bne	a5, a8, .L14
-	.loc 1 252 0
+	.loc 1 256 0
 	l32r	a12, .LC30
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -888,10 +911,10 @@ mbedtls_strerror:
 .LVL12:
 	j	.L19
 .L14:
-	.loc 1 253 0
+	.loc 1 257 0
 	l32r	a8, .LC31
 	bne	a5, a8, .L15
-	.loc 1 254 0
+	.loc 1 258 0
 	l32r	a12, .LC33
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -899,10 +922,10 @@ mbedtls_strerror:
 .LVL13:
 	j	.L20
 .L15:
-	.loc 1 255 0
+	.loc 1 259 0
 	l32r	a8, .LC34
 	bne	a5, a8, .L17
-	.loc 1 256 0
+	.loc 1 260 0
 	l32r	a12, .LC36
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -910,10 +933,10 @@ mbedtls_strerror:
 .LVL14:
 	j	.L21
 .L17:
-	.loc 1 257 0
+	.loc 1 261 0
 	l32r	a8, .LC37
 	bne	a5, a8, .L18
-	.loc 1 258 0
+	.loc 1 262 0
 	l32r	a12, .LC39
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -921,10 +944,10 @@ mbedtls_strerror:
 .LVL15:
 	j	.L22
 .L18:
-	.loc 1 259 0
+	.loc 1 263 0
 	l32r	a8, .LC40
 	bne	a5, a8, .L19
-	.loc 1 260 0
+	.loc 1 264 0
 	l32r	a12, .LC42
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -932,10 +955,10 @@ mbedtls_strerror:
 .LVL16:
 	j	.L23
 .L19:
-	.loc 1 261 0
+	.loc 1 265 0
 	l32r	a8, .LC43
 	bne	a5, a8, .L20
-	.loc 1 262 0
+	.loc 1 266 0
 	l32r	a12, .LC45
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -943,10 +966,10 @@ mbedtls_strerror:
 .LVL17:
 	j	.L24
 .L20:
-	.loc 1 263 0
+	.loc 1 267 0
 	l32r	a8, .LC46
 	bne	a5, a8, .L21
-	.loc 1 264 0
+	.loc 1 268 0
 	l32r	a12, .LC48
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -954,10 +977,10 @@ mbedtls_strerror:
 .LVL18:
 	j	.L25
 .L21:
-	.loc 1 265 0
+	.loc 1 269 0
 	l32r	a8, .LC49
 	bne	a5, a8, .L22
-	.loc 1 266 0
+	.loc 1 270 0
 	l32r	a12, .LC51
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -965,10 +988,10 @@ mbedtls_strerror:
 .LVL19:
 	j	.L26
 .L22:
-	.loc 1 267 0
+	.loc 1 271 0
 	l32r	a8, .LC52
 	bne	a5, a8, .L23
-	.loc 1 268 0
+	.loc 1 272 0
 	l32r	a12, .LC54
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -976,10 +999,10 @@ mbedtls_strerror:
 .LVL20:
 	j	.L27
 .L23:
-	.loc 1 269 0
+	.loc 1 273 0
 	l32r	a8, .LC55
 	bne	a5, a8, .L24
-	.loc 1 270 0
+	.loc 1 274 0
 	l32r	a12, .LC57
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -987,10 +1010,10 @@ mbedtls_strerror:
 .LVL21:
 	j	.L28
 .L24:
-	.loc 1 274 0
+	.loc 1 278 0
 	l32r	a8, .LC58
 	bne	a5, a8, .L25
-	.loc 1 275 0
+	.loc 1 279 0
 	l32r	a12, .LC60
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -998,10 +1021,10 @@ mbedtls_strerror:
 .LVL22:
 	j	.L29
 .L25:
-	.loc 1 276 0
+	.loc 1 280 0
 	l32r	a8, .LC61
 	bne	a5, a8, .L26
-	.loc 1 277 0
+	.loc 1 281 0
 	l32r	a12, .LC63
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1009,10 +1032,10 @@ mbedtls_strerror:
 .LVL23:
 	j	.L30
 .L26:
-	.loc 1 278 0
+	.loc 1 282 0
 	l32r	a8, .LC64
 	bne	a5, a8, .L27
-	.loc 1 279 0
+	.loc 1 283 0
 	l32r	a12, .LC66
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1020,10 +1043,10 @@ mbedtls_strerror:
 .LVL24:
 	j	.L31
 .L27:
-	.loc 1 280 0
+	.loc 1 284 0
 	l32r	a8, .LC67
 	bne	a5, a8, .L28
-	.loc 1 281 0
+	.loc 1 285 0
 	l32r	a12, .LC69
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1031,10 +1054,10 @@ mbedtls_strerror:
 .LVL25:
 	j	.L32
 .L28:
-	.loc 1 282 0
+	.loc 1 286 0
 	l32r	a8, .LC70
 	bne	a5, a8, .L29
-	.loc 1 283 0
+	.loc 1 287 0
 	l32r	a12, .LC72
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1042,10 +1065,10 @@ mbedtls_strerror:
 .LVL26:
 	j	.L33
 .L29:
-	.loc 1 284 0
+	.loc 1 288 0
 	l32r	a8, .LC73
 	bne	a5, a8, .L30
-	.loc 1 285 0
+	.loc 1 289 0
 	l32r	a12, .LC75
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1053,10 +1076,10 @@ mbedtls_strerror:
 .LVL27:
 	j	.L34
 .L30:
-	.loc 1 286 0
+	.loc 1 290 0
 	l32r	a8, .LC76
 	bne	a5, a8, .L31
-	.loc 1 287 0
+	.loc 1 291 0
 	l32r	a12, .LC78
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1064,10 +1087,10 @@ mbedtls_strerror:
 .LVL28:
 	j	.L35
 .L31:
-	.loc 1 288 0
+	.loc 1 292 0
 	l32r	a8, .LC79
 	bne	a5, a8, .L32
-	.loc 1 289 0
+	.loc 1 293 0
 	l32r	a12, .LC81
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1075,10 +1098,10 @@ mbedtls_strerror:
 .LVL29:
 	j	.L36
 .L32:
-	.loc 1 290 0
+	.loc 1 294 0
 	l32r	a8, .LC82
 	bne	a5, a8, .L33
-	.loc 1 291 0
+	.loc 1 295 0
 	l32r	a12, .LC84
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1086,10 +1109,10 @@ mbedtls_strerror:
 .LVL30:
 	j	.L37
 .L33:
-	.loc 1 295 0
+	.loc 1 296 0
 	l32r	a8, .LC85
 	bne	a5, a8, .L34
-	.loc 1 296 0
+	.loc 1 297 0
 	l32r	a12, .LC87
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1097,10 +1120,10 @@ mbedtls_strerror:
 .LVL31:
 	j	.L38
 .L34:
-	.loc 1 297 0
+	.loc 1 301 0
 	l32r	a8, .LC88
 	bne	a5, a8, .L35
-	.loc 1 298 0
+	.loc 1 302 0
 	l32r	a12, .LC90
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1108,10 +1131,10 @@ mbedtls_strerror:
 .LVL32:
 	j	.L39
 .L35:
-	.loc 1 299 0
+	.loc 1 303 0
 	l32r	a8, .LC91
 	bne	a5, a8, .L36
-	.loc 1 300 0
+	.loc 1 304 0
 	l32r	a12, .LC93
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1119,10 +1142,10 @@ mbedtls_strerror:
 .LVL33:
 	j	.L40
 .L36:
-	.loc 1 301 0
+	.loc 1 305 0
 	l32r	a8, .LC94
 	bne	a5, a8, .L37
-	.loc 1 302 0
+	.loc 1 306 0
 	l32r	a12, .LC96
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1130,10 +1153,10 @@ mbedtls_strerror:
 .LVL34:
 	j	.L41
 .L37:
-	.loc 1 303 0
+	.loc 1 307 0
 	l32r	a8, .LC97
 	bne	a5, a8, .L38
-	.loc 1 304 0
+	.loc 1 308 0
 	l32r	a12, .LC99
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1141,10 +1164,10 @@ mbedtls_strerror:
 .LVL35:
 	j	.L42
 .L38:
-	.loc 1 308 0
+	.loc 1 309 0
 	l32r	a8, .LC100
 	bne	a5, a8, .L39
-	.loc 1 309 0
+	.loc 1 310 0
 	l32r	a12, .LC102
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1152,10 +1175,10 @@ mbedtls_strerror:
 .LVL36:
 	j	.L43
 .L39:
-	.loc 1 310 0
+	.loc 1 314 0
 	l32r	a8, .LC103
 	bne	a5, a8, .L40
-	.loc 1 311 0
+	.loc 1 315 0
 	l32r	a12, .LC105
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1163,10 +1186,10 @@ mbedtls_strerror:
 .LVL37:
 	j	.L44
 .L40:
-	.loc 1 312 0
+	.loc 1 316 0
 	l32r	a8, .LC106
 	bne	a5, a8, .L41
-	.loc 1 313 0
+	.loc 1 317 0
 	l32r	a12, .LC108
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1174,10 +1197,10 @@ mbedtls_strerror:
 .LVL38:
 	j	.L45
 .L41:
-	.loc 1 314 0
+	.loc 1 318 0
 	l32r	a8, .LC109
 	bne	a5, a8, .L42
-	.loc 1 315 0
+	.loc 1 319 0
 	l32r	a12, .LC111
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1185,10 +1208,10 @@ mbedtls_strerror:
 .LVL39:
 	j	.L46
 .L42:
-	.loc 1 316 0
+	.loc 1 320 0
 	l32r	a8, .LC112
 	bne	a5, a8, .L43
-	.loc 1 317 0
+	.loc 1 321 0
 	l32r	a12, .LC114
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1196,10 +1219,10 @@ mbedtls_strerror:
 .LVL40:
 	j	.L47
 .L43:
-	.loc 1 318 0
+	.loc 1 322 0
 	l32r	a8, .LC115
 	bne	a5, a8, .L44
-	.loc 1 319 0
+	.loc 1 323 0
 	l32r	a12, .LC117
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1207,10 +1230,10 @@ mbedtls_strerror:
 .LVL41:
 	j	.L48
 .L44:
-	.loc 1 320 0
+	.loc 1 324 0
 	l32r	a8, .LC118
 	bne	a5, a8, .L45
-	.loc 1 321 0
+	.loc 1 325 0
 	l32r	a12, .LC120
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1218,10 +1241,10 @@ mbedtls_strerror:
 .LVL42:
 	j	.L49
 .L45:
-	.loc 1 322 0
+	.loc 1 326 0
 	l32r	a8, .LC121
 	bne	a5, a8, .L46
-	.loc 1 323 0
+	.loc 1 327 0
 	l32r	a12, .LC123
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1229,10 +1252,10 @@ mbedtls_strerror:
 .LVL43:
 	j	.L50
 .L46:
-	.loc 1 324 0
+	.loc 1 328 0
 	l32r	a8, .LC124
 	bne	a5, a8, .L47
-	.loc 1 325 0
+	.loc 1 329 0
 	l32r	a12, .LC126
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1240,10 +1263,10 @@ mbedtls_strerror:
 .LVL44:
 	j	.L51
 .L47:
-	.loc 1 329 0
+	.loc 1 330 0
 	l32r	a8, .LC127
 	bne	a5, a8, .L48
-	.loc 1 330 0
+	.loc 1 331 0
 	l32r	a12, .LC129
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1251,10 +1274,10 @@ mbedtls_strerror:
 .LVL45:
 	j	.L52
 .L48:
-	.loc 1 331 0
+	.loc 1 335 0
 	l32r	a8, .LC130
 	bne	a5, a8, .L49
-	.loc 1 332 0
+	.loc 1 336 0
 	l32r	a12, .LC132
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1262,10 +1285,10 @@ mbedtls_strerror:
 .LVL46:
 	j	.L53
 .L49:
-	.loc 1 333 0
+	.loc 1 337 0
 	l32r	a8, .LC133
 	bne	a5, a8, .L50
-	.loc 1 334 0
+	.loc 1 338 0
 	l32r	a12, .LC135
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1273,10 +1296,10 @@ mbedtls_strerror:
 .LVL47:
 	j	.L54
 .L50:
-	.loc 1 335 0
+	.loc 1 339 0
 	l32r	a8, .LC136
 	bne	a5, a8, .L51
-	.loc 1 336 0
+	.loc 1 340 0
 	l32r	a12, .LC138
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1284,10 +1307,10 @@ mbedtls_strerror:
 .LVL48:
 	j	.L55
 .L51:
-	.loc 1 337 0
+	.loc 1 341 0
 	l32r	a8, .LC139
 	bne	a5, a8, .L52
-	.loc 1 338 0
+	.loc 1 342 0
 	l32r	a12, .LC141
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1295,10 +1318,10 @@ mbedtls_strerror:
 .LVL49:
 	j	.L56
 .L52:
-	.loc 1 339 0
+	.loc 1 343 0
 	l32r	a8, .LC142
 	bne	a5, a8, .L53
-	.loc 1 340 0
+	.loc 1 344 0
 	l32r	a12, .LC144
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1306,10 +1329,10 @@ mbedtls_strerror:
 .LVL50:
 	j	.L57
 .L53:
-	.loc 1 341 0
+	.loc 1 345 0
 	l32r	a8, .LC145
 	bne	a5, a8, .L54
-	.loc 1 342 0
+	.loc 1 346 0
 	l32r	a12, .LC147
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1317,10 +1340,10 @@ mbedtls_strerror:
 .LVL51:
 	j	.L58
 .L54:
-	.loc 1 343 0
+	.loc 1 347 0
 	l32r	a8, .LC148
 	bne	a5, a8, .L55
-	.loc 1 344 0
+	.loc 1 348 0
 	l32r	a12, .LC150
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1328,10 +1351,10 @@ mbedtls_strerror:
 .LVL52:
 	j	.L59
 .L55:
-	.loc 1 345 0
+	.loc 1 349 0
 	l32r	a8, .LC151
 	bne	a5, a8, .L56
-	.loc 1 346 0
+	.loc 1 350 0
 	l32r	a12, .LC153
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1339,10 +1362,10 @@ mbedtls_strerror:
 .LVL53:
 	j	.L60
 .L56:
-	.loc 1 347 0
+	.loc 1 351 0
 	l32r	a8, .LC154
 	bne	a5, a8, .L57
-	.loc 1 348 0
+	.loc 1 352 0
 	l32r	a12, .LC156
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1350,10 +1373,10 @@ mbedtls_strerror:
 .LVL54:
 	j	.L61
 .L57:
-	.loc 1 349 0
+	.loc 1 353 0
 	l32r	a8, .LC157
 	bne	a5, a8, .L58
-	.loc 1 350 0
+	.loc 1 354 0
 	l32r	a12, .LC159
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1361,10 +1384,10 @@ mbedtls_strerror:
 .LVL55:
 	j	.L62
 .L58:
-	.loc 1 351 0
+	.loc 1 355 0
 	l32r	a8, .LC160
 	bne	a5, a8, .L59
-	.loc 1 352 0
+	.loc 1 356 0
 	l32r	a12, .LC162
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1372,10 +1395,10 @@ mbedtls_strerror:
 .LVL56:
 	j	.L63
 .L59:
-	.loc 1 353 0
+	.loc 1 357 0
 	l32r	a8, .LC163
 	bne	a5, a8, .L60
-	.loc 1 354 0
+	.loc 1 358 0
 	l32r	a12, .LC165
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1383,10 +1406,10 @@ mbedtls_strerror:
 .LVL57:
 	j	.L64
 .L60:
-	.loc 1 355 0
+	.loc 1 359 0
 	l32r	a8, .LC166
 	bne	a5, a8, .L61
-	.loc 1 356 0
+	.loc 1 360 0
 	l32r	a12, .LC168
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1394,10 +1417,10 @@ mbedtls_strerror:
 .LVL58:
 	j	.L65
 .L61:
-	.loc 1 357 0
+	.loc 1 361 0
 	l32r	a8, .LC169
 	bne	a5, a8, .L62
-	.loc 1 358 0
+	.loc 1 362 0
 	l32r	a12, .LC171
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1405,10 +1428,10 @@ mbedtls_strerror:
 .LVL59:
 	j	.L66
 .L62:
-	.loc 1 362 0
+	.loc 1 363 0
 	l32r	a8, .LC172
 	bne	a5, a8, .L63
-	.loc 1 363 0
+	.loc 1 364 0
 	l32r	a12, .LC174
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1416,10 +1439,10 @@ mbedtls_strerror:
 .LVL60:
 	j	.L67
 .L63:
-	.loc 1 364 0
+	.loc 1 368 0
 	l32r	a8, .LC175
 	bne	a5, a8, .L64
-	.loc 1 365 0
+	.loc 1 369 0
 	l32r	a12, .LC177
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1427,10 +1450,10 @@ mbedtls_strerror:
 .LVL61:
 	j	.L68
 .L64:
-	.loc 1 366 0
+	.loc 1 370 0
 	l32r	a8, .LC178
 	bne	a5, a8, .L65
-	.loc 1 367 0
+	.loc 1 371 0
 	l32r	a12, .LC180
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1438,10 +1461,10 @@ mbedtls_strerror:
 .LVL62:
 	j	.L69
 .L65:
-	.loc 1 368 0
+	.loc 1 372 0
 	l32r	a8, .LC181
 	bne	a5, a8, .L66
-	.loc 1 369 0
+	.loc 1 373 0
 	l32r	a12, .LC183
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1449,10 +1472,10 @@ mbedtls_strerror:
 .LVL63:
 	j	.L70
 .L66:
-	.loc 1 373 0
+	.loc 1 374 0
 	l32r	a8, .LC184
 	bne	a5, a8, .L67
-	.loc 1 374 0
+	.loc 1 375 0
 	l32r	a12, .LC186
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1460,10 +1483,10 @@ mbedtls_strerror:
 .LVL64:
 	j	.L71
 .L67:
-	.loc 1 375 0
+	.loc 1 379 0
 	l32r	a8, .LC187
 	bne	a5, a8, .L68
-	.loc 1 376 0
+	.loc 1 380 0
 	l32r	a12, .LC189
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1471,10 +1494,10 @@ mbedtls_strerror:
 .LVL65:
 	j	.L72
 .L68:
-	.loc 1 377 0
+	.loc 1 381 0
 	l32r	a8, .LC190
 	bne	a5, a8, .L69
-	.loc 1 378 0
+	.loc 1 382 0
 	l32r	a12, .LC192
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1482,10 +1505,10 @@ mbedtls_strerror:
 .LVL66:
 	j	.L73
 .L69:
-	.loc 1 379 0
+	.loc 1 383 0
 	l32r	a8, .LC193
 	bne	a5, a8, .L70
-	.loc 1 380 0
+	.loc 1 384 0
 	l32r	a12, .LC195
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1493,10 +1516,10 @@ mbedtls_strerror:
 .LVL67:
 	j	.L74
 .L70:
-	.loc 1 384 0
+	.loc 1 385 0
 	l32r	a8, .LC196
 	bne	a5, a8, .L71
-	.loc 1 385 0
+	.loc 1 386 0
 	l32r	a12, .LC198
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1504,10 +1527,10 @@ mbedtls_strerror:
 .LVL68:
 	j	.L75
 .L71:
-	.loc 1 386 0
+	.loc 1 390 0
 	l32r	a8, .LC199
 	bne	a5, a8, .L72
-	.loc 1 387 0
+	.loc 1 391 0
 	l32r	a12, .LC201
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1515,10 +1538,10 @@ mbedtls_strerror:
 .LVL69:
 	j	.L76
 .L72:
-	.loc 1 388 0
+	.loc 1 392 0
 	l32r	a8, .LC202
 	bne	a5, a8, .L73
-	.loc 1 389 0
+	.loc 1 393 0
 	l32r	a12, .LC204
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1526,10 +1549,10 @@ mbedtls_strerror:
 .LVL70:
 	j	.L77
 .L73:
-	.loc 1 390 0
+	.loc 1 394 0
 	l32r	a8, .LC205
 	bne	a5, a8, .L74
-	.loc 1 391 0
+	.loc 1 395 0
 	l32r	a12, .LC207
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1537,10 +1560,10 @@ mbedtls_strerror:
 .LVL71:
 	j	.L78
 .L74:
-	.loc 1 392 0
+	.loc 1 396 0
 	l32r	a8, .LC208
 	bne	a5, a8, .L75
-	.loc 1 393 0
+	.loc 1 397 0
 	l32r	a12, .LC210
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1548,10 +1571,10 @@ mbedtls_strerror:
 .LVL72:
 	j	.L79
 .L75:
-	.loc 1 394 0
+	.loc 1 398 0
 	l32r	a8, .LC211
 	bne	a5, a8, .L76
-	.loc 1 395 0
+	.loc 1 399 0
 	l32r	a12, .LC213
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1559,10 +1582,10 @@ mbedtls_strerror:
 .LVL73:
 	j	.L80
 .L76:
-	.loc 1 396 0
+	.loc 1 400 0
 	l32r	a8, .LC214
 	bne	a5, a8, .L77
-	.loc 1 397 0
+	.loc 1 401 0
 	l32r	a12, .LC216
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1570,10 +1593,10 @@ mbedtls_strerror:
 .LVL74:
 	j	.L81
 .L77:
-	.loc 1 398 0
+	.loc 1 402 0
 	l32r	a8, .LC217
 	bne	a5, a8, .L78
-	.loc 1 399 0
+	.loc 1 403 0
 	l32r	a12, .LC219
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1581,10 +1604,10 @@ mbedtls_strerror:
 .LVL75:
 	j	.L82
 .L78:
-	.loc 1 400 0
+	.loc 1 404 0
 	l32r	a8, .LC220
 	bne	a5, a8, .L79
-	.loc 1 401 0
+	.loc 1 405 0
 	l32r	a12, .LC222
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1592,10 +1615,10 @@ mbedtls_strerror:
 .LVL76:
 	j	.L83
 .L79:
-	.loc 1 402 0
+	.loc 1 406 0
 	l32r	a8, .LC223
 	bne	a5, a8, .L80
-	.loc 1 403 0
+	.loc 1 407 0
 	l32r	a12, .LC225
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1603,10 +1626,10 @@ mbedtls_strerror:
 .LVL77:
 	j	.L84
 .L80:
-	.loc 1 404 0
+	.loc 1 408 0
 	l32r	a8, .LC226
 	bne	a5, a8, .L81
-	.loc 1 405 0
+	.loc 1 409 0
 	l32r	a12, .LC228
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1614,10 +1637,10 @@ mbedtls_strerror:
 .LVL78:
 	j	.L85
 .L81:
-	.loc 1 409 0
+	.loc 1 410 0
 	l32r	a8, .LC229
 	bne	a5, a8, .L82
-	.loc 1 410 0
+	.loc 1 411 0
 	l32r	a12, .LC231
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1625,10 +1648,10 @@ mbedtls_strerror:
 .LVL79:
 	j	.L86
 .L82:
-	.loc 1 411 0
+	.loc 1 415 0
 	l32r	a8, .LC232
 	bne	a5, a8, .L83
-	.loc 1 412 0
+	.loc 1 416 0
 	l32r	a12, .LC234
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1636,10 +1659,10 @@ mbedtls_strerror:
 .LVL80:
 	j	.L87
 .L83:
-	.loc 1 413 0
+	.loc 1 417 0
 	l32r	a8, .LC235
 	bne	a5, a8, .L84
-	.loc 1 414 0
+	.loc 1 418 0
 	l32r	a12, .LC237
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1647,10 +1670,10 @@ mbedtls_strerror:
 .LVL81:
 	j	.L88
 .L84:
-	.loc 1 415 0
+	.loc 1 419 0
 	l32r	a8, .LC238
 	bne	a5, a8, .L85
-	.loc 1 416 0
+	.loc 1 420 0
 	l32r	a12, .LC240
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1658,10 +1681,10 @@ mbedtls_strerror:
 .LVL82:
 	j	.L89
 .L85:
-	.loc 1 417 0
+	.loc 1 421 0
 	l32r	a8, .LC241
 	bne	a5, a8, .L86
-	.loc 1 418 0
+	.loc 1 422 0
 	l32r	a12, .LC243
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1669,10 +1692,10 @@ mbedtls_strerror:
 .LVL83:
 	j	.L90
 .L86:
-	.loc 1 419 0
+	.loc 1 423 0
 	l32r	a8, .LC244
 	bne	a5, a8, .L87
-	.loc 1 420 0
+	.loc 1 424 0
 	l32r	a12, .LC246
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1680,10 +1703,10 @@ mbedtls_strerror:
 .LVL84:
 	j	.L91
 .L87:
-	.loc 1 421 0
+	.loc 1 425 0
 	l32r	a8, .LC247
 	bne	a5, a8, .L88
-	.loc 1 422 0
+	.loc 1 426 0
 	l32r	a12, .LC249
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1691,10 +1714,10 @@ mbedtls_strerror:
 .LVL85:
 	j	.L92
 .L88:
-	.loc 1 423 0
+	.loc 1 427 0
 	l32r	a8, .LC250
 	bne	a5, a8, .L89
-	.loc 1 424 0
+	.loc 1 428 0
 	l32r	a12, .LC252
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1702,10 +1725,10 @@ mbedtls_strerror:
 .LVL86:
 	j	.L93
 .L89:
-	.loc 1 425 0
+	.loc 1 429 0
 	l32r	a8, .LC253
 	bne	a5, a8, .L90
-	.loc 1 426 0
+	.loc 1 430 0
 	l32r	a12, .LC255
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1713,10 +1736,10 @@ mbedtls_strerror:
 .LVL87:
 	j	.L94
 .L90:
-	.loc 1 427 0
+	.loc 1 431 0
 	l32r	a8, .LC256
 	bne	a5, a8, .L91
-	.loc 1 428 0
+	.loc 1 432 0
 	l32r	a12, .LC258
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1724,10 +1747,10 @@ mbedtls_strerror:
 .LVL88:
 	j	.L95
 .L91:
-	.loc 1 429 0
+	.loc 1 433 0
 	l32r	a8, .LC259
 	bne	a5, a8, .L92
-	.loc 1 430 0
+	.loc 1 434 0
 	l32r	a12, .LC261
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1735,10 +1758,10 @@ mbedtls_strerror:
 .LVL89:
 	j	.L96
 .L92:
-	.loc 1 431 0
+	.loc 1 435 0
 	l32r	a8, .LC262
 	bne	a5, a8, .L93
-	.loc 1 432 0
+	.loc 1 436 0
 	l32r	a12, .LC264
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1746,10 +1769,10 @@ mbedtls_strerror:
 .LVL90:
 	j	.L97
 .L93:
-	.loc 1 433 0
+	.loc 1 437 0
 	l32r	a8, .LC265
 	bne	a5, a8, .L94
-	.loc 1 434 0
+	.loc 1 438 0
 	l32r	a12, .LC267
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1757,10 +1780,10 @@ mbedtls_strerror:
 .LVL91:
 	j	.L98
 .L94:
-	.loc 1 435 0
+	.loc 1 439 0
 	l32r	a8, .LC268
 	bne	a5, a8, .L95
-	.loc 1 436 0
+	.loc 1 440 0
 	l32r	a12, .LC270
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1768,52 +1791,52 @@ mbedtls_strerror:
 .LVL92:
 	j	.L99
 .L95:
-	.loc 1 437 0
+	.loc 1 441 0
 	l32r	a8, .LC271
 	bne	a5, a8, .L96
-	.loc 1 439 0
+	.loc 1 442 0
 	l32r	a12, .LC273
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL93:
-	.loc 1 440 0
-	retw.n
+	j	.L100
 .L96:
-	.loc 1 442 0
-	l32r	a8, .LC274
 	.loc 1 443 0
-	l32r	a12, .LC276
-	.loc 1 442 0
-	beq	a5, a8, .L214
-.L97:
-	.loc 1 444 0
-	l32r	a8, .LC277
-	bne	a5, a8, .L101
+	l32r	a8, .LC274
+	bne	a5, a8, .L97
 	.loc 1 445 0
-	l32r	a12, .LC279
-.L214:
+	l32r	a12, .LC276
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL94:
-	j	.L100
-.L101:
 	.loc 1 446 0
+	retw.n
+.L97:
+	.loc 1 448 0
+	l32r	a8, .LC277
+	.loc 1 449 0
+	l32r	a12, .LC279
+	.loc 1 448 0
+	beq	a5, a8, .L221
+.L98:
+	.loc 1 450 0
 	l32r	a8, .LC280
-	bne	a5, a8, .L98
-	.loc 1 447 0
+	bne	a5, a8, .L102
+	.loc 1 451 0
 	l32r	a12, .LC282
+.L221:
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL95:
-	j	.L102
-.L98:
-	.loc 1 448 0
+	j	.L101
+.L102:
+	.loc 1 452 0
 	l32r	a8, .LC283
 	bne	a5, a8, .L99
-	.loc 1 449 0
+	.loc 1 453 0
 	l32r	a12, .LC285
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1821,10 +1844,10 @@ mbedtls_strerror:
 .LVL96:
 	j	.L103
 .L99:
-	.loc 1 450 0
+	.loc 1 454 0
 	l32r	a8, .LC286
 	bne	a5, a8, .L100
-	.loc 1 451 0
+	.loc 1 455 0
 	l32r	a12, .LC288
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1832,32 +1855,32 @@ mbedtls_strerror:
 .LVL97:
 	j	.L104
 .L100:
-	.loc 1 452 0
+	.loc 1 456 0
 	l32r	a8, .LC289
-	bne	a5, a8, .L105
-	.loc 1 453 0
+	bne	a5, a8, .L101
+	.loc 1 457 0
 	l32r	a12, .LC291
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL98:
-	j	.L106
-.L105:
-	.loc 1 454 0
+	j	.L105
+.L101:
+	.loc 1 458 0
 	l32r	a8, .LC292
-	bne	a5, a8, .L102
-	.loc 1 455 0
+	bne	a5, a8, .L106
+	.loc 1 459 0
 	l32r	a12, .LC294
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL99:
 	j	.L107
-.L102:
-	.loc 1 456 0
+.L106:
+	.loc 1 460 0
 	l32r	a8, .LC295
 	bne	a5, a8, .L103
-	.loc 1 457 0
+	.loc 1 461 0
 	l32r	a12, .LC297
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1865,10 +1888,10 @@ mbedtls_strerror:
 .LVL100:
 	j	.L108
 .L103:
-	.loc 1 458 0
+	.loc 1 462 0
 	l32r	a8, .LC298
 	bne	a5, a8, .L104
-	.loc 1 459 0
+	.loc 1 463 0
 	l32r	a12, .LC300
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1876,21 +1899,21 @@ mbedtls_strerror:
 .LVL101:
 	j	.L109
 .L104:
-	.loc 1 460 0
+	.loc 1 464 0
 	l32r	a8, .LC301
-	bne	a5, a8, .L106
-	.loc 1 461 0
+	bne	a5, a8, .L105
+	.loc 1 465 0
 	l32r	a12, .LC303
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL102:
 	j	.L110
-.L106:
-	.loc 1 462 0
+.L105:
+	.loc 1 466 0
 	l32r	a8, .LC304
 	bne	a5, a8, .L107
-	.loc 1 463 0
+	.loc 1 467 0
 	l32r	a12, .LC306
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1898,10 +1921,10 @@ mbedtls_strerror:
 .LVL103:
 	j	.L111
 .L107:
-	.loc 1 464 0
+	.loc 1 468 0
 	l32r	a8, .LC307
 	bne	a5, a8, .L108
-	.loc 1 465 0
+	.loc 1 469 0
 	l32r	a12, .LC309
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1909,10 +1932,10 @@ mbedtls_strerror:
 .LVL104:
 	j	.L112
 .L108:
-	.loc 1 466 0
+	.loc 1 470 0
 	l32r	a8, .LC310
 	bne	a5, a8, .L109
-	.loc 1 467 0
+	.loc 1 471 0
 	l32r	a12, .LC312
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1920,10 +1943,10 @@ mbedtls_strerror:
 .LVL105:
 	j	.L113
 .L109:
-	.loc 1 468 0
+	.loc 1 472 0
 	l32r	a8, .LC313
 	bne	a5, a8, .L110
-	.loc 1 469 0
+	.loc 1 473 0
 	l32r	a12, .LC315
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1931,10 +1954,10 @@ mbedtls_strerror:
 .LVL106:
 	j	.L114
 .L110:
-	.loc 1 470 0
+	.loc 1 474 0
 	l32r	a8, .LC316
 	bne	a5, a8, .L111
-	.loc 1 471 0
+	.loc 1 475 0
 	l32r	a12, .LC318
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1942,10 +1965,10 @@ mbedtls_strerror:
 .LVL107:
 	j	.L115
 .L111:
-	.loc 1 472 0
+	.loc 1 476 0
 	l32r	a8, .LC319
 	bne	a5, a8, .L112
-	.loc 1 473 0
+	.loc 1 477 0
 	l32r	a12, .LC321
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1953,10 +1976,10 @@ mbedtls_strerror:
 .LVL108:
 	j	.L116
 .L112:
-	.loc 1 474 0
+	.loc 1 478 0
 	l32r	a8, .LC322
 	bne	a5, a8, .L113
-	.loc 1 475 0
+	.loc 1 479 0
 	l32r	a12, .LC324
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1964,10 +1987,10 @@ mbedtls_strerror:
 .LVL109:
 	j	.L117
 .L113:
-	.loc 1 476 0
+	.loc 1 480 0
 	l32r	a8, .LC325
 	bne	a5, a8, .L114
-	.loc 1 477 0
+	.loc 1 481 0
 	l32r	a12, .LC327
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1975,10 +1998,10 @@ mbedtls_strerror:
 .LVL110:
 	j	.L118
 .L114:
-	.loc 1 478 0
+	.loc 1 482 0
 	l32r	a8, .LC328
 	bne	a5, a8, .L115
-	.loc 1 479 0
+	.loc 1 483 0
 	l32r	a12, .LC330
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1986,10 +2009,10 @@ mbedtls_strerror:
 .LVL111:
 	j	.L119
 .L115:
-	.loc 1 480 0
+	.loc 1 484 0
 	l32r	a8, .LC331
 	bne	a5, a8, .L116
-	.loc 1 481 0
+	.loc 1 485 0
 	l32r	a12, .LC333
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1997,10 +2020,10 @@ mbedtls_strerror:
 .LVL112:
 	j	.L120
 .L116:
-	.loc 1 482 0
+	.loc 1 486 0
 	l32r	a8, .LC334
 	bne	a5, a8, .L117
-	.loc 1 483 0
+	.loc 1 487 0
 	l32r	a12, .LC336
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2008,10 +2031,10 @@ mbedtls_strerror:
 .LVL113:
 	j	.L121
 .L117:
-	.loc 1 484 0
+	.loc 1 488 0
 	l32r	a8, .LC337
 	bne	a5, a8, .L118
-	.loc 1 485 0
+	.loc 1 489 0
 	l32r	a12, .LC339
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2019,10 +2042,10 @@ mbedtls_strerror:
 .LVL114:
 	j	.L122
 .L118:
-	.loc 1 486 0
+	.loc 1 490 0
 	l32r	a8, .LC340
 	bne	a5, a8, .L119
-	.loc 1 487 0
+	.loc 1 491 0
 	l32r	a12, .LC342
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2030,10 +2053,10 @@ mbedtls_strerror:
 .LVL115:
 	j	.L123
 .L119:
-	.loc 1 488 0
+	.loc 1 492 0
 	l32r	a8, .LC343
 	bne	a5, a8, .L120
-	.loc 1 489 0
+	.loc 1 493 0
 	l32r	a12, .LC345
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2041,10 +2064,10 @@ mbedtls_strerror:
 .LVL116:
 	j	.L124
 .L120:
-	.loc 1 490 0
+	.loc 1 494 0
 	l32r	a8, .LC346
 	bne	a5, a8, .L121
-	.loc 1 491 0
+	.loc 1 495 0
 	l32r	a12, .LC348
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2052,10 +2075,10 @@ mbedtls_strerror:
 .LVL117:
 	j	.L125
 .L121:
-	.loc 1 492 0
+	.loc 1 496 0
 	l32r	a8, .LC349
 	bne	a5, a8, .L122
-	.loc 1 493 0
+	.loc 1 497 0
 	l32r	a12, .LC351
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2063,10 +2086,10 @@ mbedtls_strerror:
 .LVL118:
 	j	.L126
 .L122:
-	.loc 1 494 0
+	.loc 1 498 0
 	l32r	a8, .LC352
 	bne	a5, a8, .L123
-	.loc 1 495 0
+	.loc 1 499 0
 	l32r	a12, .LC354
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2074,10 +2097,10 @@ mbedtls_strerror:
 .LVL119:
 	j	.L127
 .L123:
-	.loc 1 496 0
+	.loc 1 500 0
 	l32r	a8, .LC355
 	bne	a5, a8, .L124
-	.loc 1 497 0
+	.loc 1 501 0
 	l32r	a12, .LC357
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2085,10 +2108,10 @@ mbedtls_strerror:
 .LVL120:
 	j	.L128
 .L124:
-	.loc 1 498 0
+	.loc 1 502 0
 	l32r	a8, .LC358
 	bne	a5, a8, .L125
-	.loc 1 499 0
+	.loc 1 503 0
 	l32r	a12, .LC360
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2096,10 +2119,10 @@ mbedtls_strerror:
 .LVL121:
 	j	.L129
 .L125:
-	.loc 1 500 0
+	.loc 1 504 0
 	l32r	a8, .LC361
 	bne	a5, a8, .L126
-	.loc 1 501 0
+	.loc 1 505 0
 	l32r	a12, .LC363
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2107,10 +2130,10 @@ mbedtls_strerror:
 .LVL122:
 	j	.L130
 .L126:
-	.loc 1 502 0
+	.loc 1 506 0
 	l32r	a8, .LC364
 	bne	a5, a8, .L127
-	.loc 1 503 0
+	.loc 1 507 0
 	l32r	a12, .LC366
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2118,10 +2141,10 @@ mbedtls_strerror:
 .LVL123:
 	j	.L131
 .L127:
-	.loc 1 504 0
+	.loc 1 508 0
 	l32r	a8, .LC367
 	bne	a5, a8, .L128
-	.loc 1 505 0
+	.loc 1 509 0
 	l32r	a12, .LC369
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2129,10 +2152,10 @@ mbedtls_strerror:
 .LVL124:
 	j	.L132
 .L128:
-	.loc 1 506 0
+	.loc 1 510 0
 	l32r	a8, .LC370
 	bne	a5, a8, .L129
-	.loc 1 507 0
+	.loc 1 511 0
 	l32r	a12, .LC372
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2140,10 +2163,10 @@ mbedtls_strerror:
 .LVL125:
 	j	.L133
 .L129:
-	.loc 1 508 0
+	.loc 1 512 0
 	l32r	a8, .LC373
 	bne	a5, a8, .L130
-	.loc 1 509 0
+	.loc 1 513 0
 	l32r	a12, .LC375
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2151,10 +2174,10 @@ mbedtls_strerror:
 .LVL126:
 	j	.L134
 .L130:
-	.loc 1 510 0
+	.loc 1 514 0
 	l32r	a8, .LC376
 	bne	a5, a8, .L131
-	.loc 1 511 0
+	.loc 1 515 0
 	l32r	a12, .LC378
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2162,10 +2185,10 @@ mbedtls_strerror:
 .LVL127:
 	j	.L135
 .L131:
-	.loc 1 512 0
+	.loc 1 516 0
 	l32r	a8, .LC379
 	bne	a5, a8, .L132
-	.loc 1 513 0
+	.loc 1 517 0
 	l32r	a12, .LC381
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2173,10 +2196,10 @@ mbedtls_strerror:
 .LVL128:
 	j	.L136
 .L132:
-	.loc 1 514 0
+	.loc 1 518 0
 	l32r	a8, .LC382
 	bne	a5, a8, .L133
-	.loc 1 515 0
+	.loc 1 519 0
 	l32r	a12, .LC384
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2184,10 +2207,10 @@ mbedtls_strerror:
 .LVL129:
 	j	.L137
 .L133:
-	.loc 1 516 0
+	.loc 1 520 0
 	l32r	a8, .LC385
 	bne	a5, a8, .L134
-	.loc 1 517 0
+	.loc 1 521 0
 	l32r	a12, .LC387
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2195,10 +2218,10 @@ mbedtls_strerror:
 .LVL130:
 	j	.L138
 .L134:
-	.loc 1 518 0
+	.loc 1 522 0
 	l32r	a8, .LC388
 	bne	a5, a8, .L135
-	.loc 1 519 0
+	.loc 1 523 0
 	l32r	a12, .LC390
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2206,10 +2229,10 @@ mbedtls_strerror:
 .LVL131:
 	j	.L139
 .L135:
-	.loc 1 523 0
+	.loc 1 524 0
 	l32r	a8, .LC391
 	bne	a5, a8, .L136
-	.loc 1 524 0
+	.loc 1 525 0
 	l32r	a12, .LC393
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2217,10 +2240,10 @@ mbedtls_strerror:
 .LVL132:
 	j	.L140
 .L136:
-	.loc 1 525 0
+	.loc 1 526 0
 	l32r	a8, .LC394
 	bne	a5, a8, .L137
-	.loc 1 526 0
+	.loc 1 527 0
 	l32r	a12, .LC396
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2228,10 +2251,10 @@ mbedtls_strerror:
 .LVL133:
 	j	.L141
 .L137:
-	.loc 1 527 0
+	.loc 1 531 0
 	l32r	a8, .LC397
 	bne	a5, a8, .L138
-	.loc 1 528 0
+	.loc 1 532 0
 	l32r	a12, .LC399
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2239,10 +2262,10 @@ mbedtls_strerror:
 .LVL134:
 	j	.L142
 .L138:
-	.loc 1 529 0
+	.loc 1 533 0
 	l32r	a8, .LC400
 	bne	a5, a8, .L139
-	.loc 1 530 0
+	.loc 1 534 0
 	l32r	a12, .LC402
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2250,10 +2273,10 @@ mbedtls_strerror:
 .LVL135:
 	j	.L143
 .L139:
-	.loc 1 531 0
+	.loc 1 535 0
 	l32r	a8, .LC403
 	bne	a5, a8, .L140
-	.loc 1 532 0
+	.loc 1 536 0
 	l32r	a12, .LC405
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2261,10 +2284,10 @@ mbedtls_strerror:
 .LVL136:
 	j	.L144
 .L140:
-	.loc 1 533 0
+	.loc 1 537 0
 	l32r	a8, .LC406
 	bne	a5, a8, .L141
-	.loc 1 534 0
+	.loc 1 538 0
 	l32r	a12, .LC408
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2272,10 +2295,10 @@ mbedtls_strerror:
 .LVL137:
 	j	.L145
 .L141:
-	.loc 1 535 0
+	.loc 1 539 0
 	l32r	a8, .LC409
 	bne	a5, a8, .L142
-	.loc 1 536 0
+	.loc 1 540 0
 	l32r	a12, .LC411
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2283,10 +2306,10 @@ mbedtls_strerror:
 .LVL138:
 	j	.L146
 .L142:
-	.loc 1 537 0
+	.loc 1 541 0
 	l32r	a8, .LC412
 	bne	a5, a8, .L143
-	.loc 1 538 0
+	.loc 1 542 0
 	l32r	a12, .LC414
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2294,10 +2317,10 @@ mbedtls_strerror:
 .LVL139:
 	j	.L147
 .L143:
-	.loc 1 539 0
+	.loc 1 543 0
 	l32r	a8, .LC415
 	bne	a5, a8, .L144
-	.loc 1 540 0
+	.loc 1 544 0
 	l32r	a12, .LC417
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2305,10 +2328,10 @@ mbedtls_strerror:
 .LVL140:
 	j	.L148
 .L144:
-	.loc 1 541 0
+	.loc 1 545 0
 	l32r	a8, .LC418
 	bne	a5, a8, .L145
-	.loc 1 542 0
+	.loc 1 546 0
 	l32r	a12, .LC420
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2316,10 +2339,10 @@ mbedtls_strerror:
 .LVL141:
 	j	.L149
 .L145:
-	.loc 1 543 0
+	.loc 1 547 0
 	l32r	a8, .LC421
 	bne	a5, a8, .L146
-	.loc 1 544 0
+	.loc 1 548 0
 	l32r	a12, .LC423
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2327,10 +2350,10 @@ mbedtls_strerror:
 .LVL142:
 	j	.L150
 .L146:
-	.loc 1 545 0
+	.loc 1 549 0
 	l32r	a8, .LC424
 	bne	a5, a8, .L147
-	.loc 1 546 0
+	.loc 1 550 0
 	l32r	a12, .LC426
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2338,10 +2361,10 @@ mbedtls_strerror:
 .LVL143:
 	j	.L151
 .L147:
-	.loc 1 547 0
+	.loc 1 551 0
 	l32r	a8, .LC427
 	bne	a5, a8, .L148
-	.loc 1 548 0
+	.loc 1 552 0
 	l32r	a12, .LC429
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2349,10 +2372,10 @@ mbedtls_strerror:
 .LVL144:
 	j	.L152
 .L148:
-	.loc 1 549 0
+	.loc 1 553 0
 	l32r	a8, .LC430
 	bne	a5, a8, .L149
-	.loc 1 550 0
+	.loc 1 554 0
 	l32r	a12, .LC432
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2360,10 +2383,10 @@ mbedtls_strerror:
 .LVL145:
 	j	.L153
 .L149:
-	.loc 1 551 0
+	.loc 1 555 0
 	l32r	a8, .LC433
 	bne	a5, a8, .L150
-	.loc 1 552 0
+	.loc 1 556 0
 	l32r	a12, .LC435
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -2371,234 +2394,234 @@ mbedtls_strerror:
 .LVL146:
 	j	.L154
 .L150:
-	.loc 1 553 0
+	.loc 1 557 0
 	l32r	a8, .LC436
-	.loc 1 554 0
-	l32r	a12, .LC438
-	.loc 1 553 0
-	beq	a5, a8, .L215
-.L151:
-	.loc 1 555 0
-	l32r	a8, .LC439
-	.loc 1 556 0
-	l32r	a12, .LC441
-	.loc 1 555 0
-	beq	a5, a8, .L215
-.L152:
-	.loc 1 557 0
-	l32r	a8, .LC442
+	bne	a5, a8, .L151
 	.loc 1 558 0
-	l32r	a12, .LC444
-	.loc 1 557 0
-	beq	a5, a8, .L215
-.L153:
-	.loc 1 559 0
-	l32r	a8, .LC445
-	.loc 1 560 0
-	l32r	a12, .LC447
-	.loc 1 559 0
-	beq	a5, a8, .L215
-.L154:
-	.loc 1 561 0
-	l32r	a8, .LC448
-	bne	a5, a8, .L155
-	.loc 1 562 0
-	l32r	a12, .LC450
-.L215:
+	l32r	a12, .LC438
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL147:
-.L155:
-	.loc 1 566 0
-	l8ui	a8, a3, 0
-	bnez.n	a8, .L5
-	.loc 1 567 0
-	l32r	a12, .LC452
-	mov.n	a13, a5
+	j	.L155
+.L151:
+	.loc 1 559 0
+	l32r	a8, .LC439
+	bne	a5, a8, .L152
+	.loc 1 560 0
+	l32r	a12, .LC441
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL148:
-.L5:
+	j	.L156
+.L152:
+	.loc 1 561 0
+	l32r	a8, .LC442
+	.loc 1 562 0
+	l32r	a12, .LC444
+	.loc 1 561 0
+	beq	a5, a8, .L222
+.L153:
+	.loc 1 563 0
+	l32r	a8, .LC445
+	.loc 1 564 0
+	l32r	a12, .LC447
+	.loc 1 563 0
+	beq	a5, a8, .L222
+.L154:
+	.loc 1 565 0
+	l32r	a8, .LC448
+	.loc 1 566 0
+	l32r	a12, .LC450
+	.loc 1 565 0
+	beq	a5, a8, .L222
+.L155:
+	.loc 1 567 0
+	l32r	a8, .LC451
+	.loc 1 568 0
+	l32r	a12, .LC453
+	.loc 1 567 0
+	beq	a5, a8, .L222
+.L156:
+	.loc 1 569 0
+	l32r	a8, .LC454
+	bne	a5, a8, .L157
 	.loc 1 570 0
-	l32r	a5, .LC453
-	and	a2, a2, a5
-.LVL149:
-	.loc 1 572 0
-	beqz.n	a2, .L1
-	.loc 1 578 0
+	l32r	a12, .LC456
+.L222:
+	mov.n	a11, a4
 	mov.n	a10, a3
-	call8	strlen
+	call8	snprintf
+.LVL149:
+.L157:
+	.loc 1 574 0
+	l8ui	a8, a3, 0
+	bnez.n	a8, .L5
+	.loc 1 575 0
+	l32r	a12, .LC458
+	mov.n	a13, a5
+	mov.n	a11, a4
+	mov.n	a10, a3
+	call8	snprintf
 .LVL150:
-	mov.n	a5, a10
+.L5:
+	.loc 1 578 0
+	l32r	a5, .LC459
+	and	a2, a2, a5
 .LVL151:
 	.loc 1 580 0
-	beqz.n	a10, .L158
-	.loc 1 582 0
-	sub	a4, a4, a10
-.LVL152:
-	bltui	a4, 5, .L1
-	.loc 1 585 0
-	l32r	a12, .LC455
-	mov.n	a11, a4
-	add.n	a10, a3, a10
-	.loc 1 587 0
-	addi.n	a5, a5, 3
-.LVL153:
-	.loc 1 585 0
-	call8	snprintf
-.LVL154:
-	.loc 1 587 0
-	add.n	a3, a3, a5
-.LVL155:
-	.loc 1 588 0
-	addi	a4, a4, -3
-.LVL156:
-.L158:
-	.loc 1 596 0
-	l32r	a12, .LC457
-	.loc 1 595 0
-	beqi	a2, 32, .L216
-.L159:
-	.loc 1 597 0
-	movi.n	a5, 0x22
-	bne	a2, a5, .L161
-	.loc 1 598 0
-	l32r	a12, .LC459
-.L216:
-	mov.n	a11, a4
+	beqz.n	a2, .L1
+	.loc 1 586 0
 	mov.n	a10, a3
-	call8	snprintf
-.LVL157:
-	j	.L160
-.L161:
-	.loc 1 599 0
-	movi.n	a5, 0x21
-	bne	a2, a5, .L162
-	.loc 1 600 0
+	call8	strlen
+.LVL152:
+	mov.n	a5, a10
+.LVL153:
+	.loc 1 588 0
+	beqz.n	a10, .L160
+	.loc 1 590 0
+	sub	a4, a4, a10
+.LVL154:
+	bltui	a4, 5, .L1
+	.loc 1 593 0
 	l32r	a12, .LC461
 	mov.n	a11, a4
-	mov.n	a10, a3
+	add.n	a10, a3, a10
+	.loc 1 595 0
+	addi.n	a5, a5, 3
+.LVL155:
+	.loc 1 593 0
 	call8	snprintf
+.LVL156:
+	.loc 1 595 0
+	add.n	a3, a3, a5
+.LVL157:
+	.loc 1 596 0
+	addi	a4, a4, -3
 .LVL158:
-	j	.L163
-.L162:
-	.loc 1 601 0
-	movi.n	a5, 0x23
-	bne	a2, a5, .L164
-	.loc 1 602 0
+.L160:
+	.loc 1 604 0
 	l32r	a12, .LC463
+	.loc 1 603 0
+	beqi	a2, 32, .L223
+.L161:
+	.loc 1 605 0
+	movi.n	a5, 0x22
+	bne	a2, a5, .L163
+	.loc 1 606 0
+	l32r	a12, .LC465
+.L223:
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL159:
-	j	.L165
-.L164:
-	.loc 1 603 0
-	movi.n	a5, 0x25
-	bne	a2, a5, .L160
-	.loc 1 604 0
-	l32r	a12, .LC465
+	j	.L162
+.L163:
+	.loc 1 607 0
+	movi.n	a5, 0x21
+	bne	a2, a5, .L164
+	.loc 1 608 0
+	l32r	a12, .LC467
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL160:
-	j	.L166
-.L160:
-	.loc 1 624 0
-	movi	a5, 0x60
-	bne	a2, a5, .L163
-	.loc 1 625 0
-	l32r	a12, .LC467
+	j	.L165
+.L164:
+	.loc 1 609 0
+	movi.n	a5, 0x23
+	bne	a2, a5, .L166
+	.loc 1 610 0
+	l32r	a12, .LC469
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL161:
 	j	.L167
-.L163:
-	.loc 1 626 0
-	movi	a5, 0x62
-	bne	a2, a5, .L165
-	.loc 1 627 0
-	l32r	a12, .LC469
+.L166:
+	.loc 1 611 0
+	movi.n	a5, 0x25
+	bne	a2, a5, .L162
+	.loc 1 612 0
+	l32r	a12, .LC471
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL162:
 	j	.L168
-.L165:
-	.loc 1 628 0
-	movi	a5, 0x64
-	bne	a2, a5, .L169
-	.loc 1 629 0
-	l32r	a12, .LC471
-	mov.n	a11, a4
-	mov.n	a10, a3
-	call8	snprintf
-.LVL163:
-	j	.L170
-.L169:
-	.loc 1 630 0
-	movi	a5, 0x66
-	bne	a2, a5, .L166
-	.loc 1 631 0
+.L162:
+	.loc 1 632 0
+	movi	a5, 0x60
+	bne	a2, a5, .L165
+	.loc 1 633 0
 	l32r	a12, .LC473
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
-.LVL164:
-	j	.L171
-.L166:
-	.loc 1 632 0
-	movi	a5, 0x68
+.LVL163:
+	j	.L169
+.L165:
+	.loc 1 634 0
+	movi	a5, 0x62
 	bne	a2, a5, .L167
-	.loc 1 633 0
+	.loc 1 635 0
 	l32r	a12, .LC475
+	mov.n	a11, a4
+	mov.n	a10, a3
+	call8	snprintf
+.LVL164:
+	j	.L170
+.L167:
+	.loc 1 636 0
+	movi	a5, 0x64
+	bne	a2, a5, .L171
+	.loc 1 637 0
+	l32r	a12, .LC477
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL165:
 	j	.L172
-.L167:
-	.loc 1 634 0
-	movi	a5, 0x6a
+.L171:
+	.loc 1 638 0
+	movi	a5, 0x66
 	bne	a2, a5, .L168
-	.loc 1 635 0
-	l32r	a12, .LC477
+	.loc 1 639 0
+	l32r	a12, .LC479
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL166:
 	j	.L173
 .L168:
-	.loc 1 636 0
-	movi	a5, 0x6c
-	bne	a2, a5, .L170
-	.loc 1 637 0
-	l32r	a12, .LC479
+	.loc 1 640 0
+	movi	a5, 0x68
+	bne	a2, a5, .L169
+	.loc 1 641 0
+	l32r	a12, .LC481
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL167:
 	j	.L174
-.L170:
-	.loc 1 641 0
-	movi.n	a5, 0x2a
-	bne	a2, a5, .L171
+.L169:
 	.loc 1 642 0
-	l32r	a12, .LC481
+	movi	a5, 0x6a
+	bne	a2, a5, .L170
+	.loc 1 643 0
+	l32r	a12, .LC483
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL168:
 	j	.L175
-.L171:
-	.loc 1 643 0
-	movi.n	a5, 0x2c
-	bne	a2, a5, .L172
+.L170:
 	.loc 1 644 0
-	l32r	a12, .LC483
+	movi	a5, 0x6c
+	bne	a2, a5, .L172
+	.loc 1 645 0
+	l32r	a12, .LC485
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
@@ -2606,354 +2629,431 @@ mbedtls_strerror:
 	j	.L176
 .L172:
 	.loc 1 649 0
-	l32r	a12, .LC485
-	.loc 1 648 0
-	beqi	a2, 2, .L217
-.L173:
+	movi.n	a5, 0x2a
+	bne	a2, a5, .L173
 	.loc 1 650 0
-	bnei	a2, 4, .L174
-	.loc 1 651 0
 	l32r	a12, .LC487
-.L217:
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL170:
-	j	.L178
-.L174:
-	.loc 1 653 0
-	l32r	a12, .LC489
+	j	.L177
+.L173:
+	.loc 1 651 0
+	movi.n	a5, 0x2c
+	bne	a2, a5, .L174
 	.loc 1 652 0
-	beqi	a2, 6, .L218
-.L175:
-	.loc 1 654 0
-	bnei	a2, 8, .L176
-	.loc 1 655 0
-	l32r	a12, .LC491
-.L218:
+	l32r	a12, .LC489
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL171:
-	j	.L180
-.L176:
-	.loc 1 656 0
-	bnei	a2, 10, .L177
+	j	.L178
+.L174:
 	.loc 1 657 0
+	l32r	a12, .LC491
+	.loc 1 656 0
+	beqi	a2, 2, .L224
+.L175:
+	.loc 1 658 0
+	bnei	a2, 4, .L176
+	.loc 1 659 0
 	l32r	a12, .LC493
+.L224:
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL172:
-	j	.L181
-.L177:
-	.loc 1 658 0
-	bnei	a2, 12, .L178
-	.loc 1 659 0
+	j	.L180
+.L176:
+	.loc 1 661 0
 	l32r	a12, .LC495
+	.loc 1 660 0
+	beqi	a2, 6, .L225
+.L177:
+	.loc 1 662 0
+	bnei	a2, 8, .L178
+	.loc 1 663 0
+	l32r	a12, .LC497
+.L225:
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL173:
 	j	.L182
 .L178:
-	.loc 1 660 0
-	movi.n	a5, 0xe
-	bne	a2, a5, .L179
-	.loc 1 661 0
-	l32r	a12, .LC497
+	.loc 1 664 0
+	bnei	a2, 10, .L179
+	.loc 1 665 0
+	l32r	a12, .LC499
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL174:
 	j	.L183
 .L179:
-	.loc 1 662 0
-	bnei	a2, 16, .L180
-	.loc 1 663 0
-	l32r	a12, .LC499
+	.loc 1 666 0
+	bnei	a2, 12, .L180
+	.loc 1 667 0
+	l32r	a12, .LC501
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL175:
 	j	.L184
 .L180:
-	.loc 1 685 0
-	movi.n	a5, 0xd
+	.loc 1 668 0
+	movi.n	a5, 0xe
 	bne	a2, a5, .L181
-	.loc 1 686 0
-	l32r	a12, .LC501
+	.loc 1 669 0
+	l32r	a12, .LC503
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL176:
 	j	.L185
 .L181:
-	.loc 1 687 0
-	movi.n	a5, 0xf
-	bne	a2, a5, .L182
-	.loc 1 688 0
-	l32r	a12, .LC503
+	.loc 1 670 0
+	bnei	a2, 16, .L182
+	.loc 1 671 0
+	l32r	a12, .LC505
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL177:
 	j	.L186
 .L182:
-	.loc 1 689 0
-	movi.n	a5, 0x11
+	.loc 1 693 0
+	movi.n	a5, 0xd
 	bne	a2, a5, .L183
-	.loc 1 690 0
-	l32r	a12, .LC505
+	.loc 1 694 0
+	l32r	a12, .LC507
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL178:
 	j	.L187
 .L183:
-	.loc 1 715 0
-	movi.n	a5, 0x34
+	.loc 1 695 0
+	movi.n	a5, 0xf
 	bne	a2, a5, .L184
-	.loc 1 716 0
-	l32r	a12, .LC507
+	.loc 1 696 0
+	l32r	a12, .LC509
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL179:
 	j	.L188
 .L184:
-	.loc 1 717 0
-	movi.n	a5, 0x36
+	.loc 1 697 0
+	movi.n	a5, 0x11
 	bne	a2, a5, .L185
-	.loc 1 718 0
-	l32r	a12, .LC509
+	.loc 1 698 0
+	l32r	a12, .LC511
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL180:
 	j	.L189
 .L185:
-	.loc 1 719 0
-	movi.n	a5, 0x38
+	.loc 1 723 0
+	movi.n	a5, 0x34
 	bne	a2, a5, .L186
-	.loc 1 720 0
-	l32r	a12, .LC511
+	.loc 1 724 0
+	l32r	a12, .LC513
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL181:
 	j	.L190
 .L186:
-	.loc 1 721 0
-	movi.n	a5, 0x3a
+	.loc 1 725 0
+	movi.n	a5, 0x36
 	bne	a2, a5, .L187
-	.loc 1 722 0
-	l32r	a12, .LC513
+	.loc 1 726 0
+	l32r	a12, .LC515
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL182:
 	j	.L191
 .L187:
-	.loc 1 733 0
-	movi.n	a5, 0x3c
+	.loc 1 727 0
+	movi.n	a5, 0x38
 	bne	a2, a5, .L188
-	.loc 1 734 0
-	l32r	a12, .LC515
+	.loc 1 728 0
+	l32r	a12, .LC517
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL183:
 	j	.L192
 .L188:
-	.loc 1 735 0
-	movi.n	a5, 0x3e
+	.loc 1 729 0
+	movi.n	a5, 0x3a
 	bne	a2, a5, .L189
-	.loc 1 736 0
-	l32r	a12, .LC517
+	.loc 1 730 0
+	l32r	a12, .LC519
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL184:
 	j	.L193
 .L189:
-	.loc 1 737 0
-	bnei	a2, 64, .L190
-	.loc 1 738 0
-	l32r	a12, .LC519
+	.loc 1 741 0
+	movi.n	a5, 0x3c
+	bne	a2, a5, .L190
+	.loc 1 742 0
+	l32r	a12, .LC521
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL185:
 	j	.L194
 .L190:
-	.loc 1 739 0
-	movi.n	a5, 0x3d
+	.loc 1 743 0
+	movi.n	a5, 0x3e
 	bne	a2, a5, .L191
-	.loc 1 740 0
-	l32r	a12, .LC521
+	.loc 1 744 0
+	l32r	a12, .LC523
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL186:
 	j	.L195
 .L191:
-	.loc 1 741 0
-	movi.n	a5, 0x3f
-	bne	a2, a5, .L192
-	.loc 1 742 0
-	l32r	a12, .LC523
+	.loc 1 745 0
+	bnei	a2, 64, .L192
+	.loc 1 746 0
+	l32r	a12, .LC525
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL187:
 	j	.L196
 .L192:
-	.loc 1 746 0
-	movi.n	a5, 0x12
-	bne	a2, a5, .L193
 	.loc 1 747 0
-	l32r	a12, .LC525
+	movi.n	a5, 0x3d
+	bne	a2, a5, .L193
+	.loc 1 748 0
+	l32r	a12, .LC527
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL188:
 	j	.L197
 .L193:
-	.loc 1 748 0
-	movi.n	a5, 0x13
-	bne	a2, a5, .L194
 	.loc 1 749 0
-	l32r	a12, .LC527
+	movi.n	a5, 0x3f
+	bne	a2, a5, .L194
+	.loc 1 750 0
+	l32r	a12, .LC529
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL189:
 	j	.L198
 .L194:
-	.loc 1 750 0
-	movi.n	a5, 0x14
+	.loc 1 754 0
+	movi.n	a5, 0x12
 	bne	a2, a5, .L195
-	.loc 1 751 0
-	l32r	a12, .LC529
+	.loc 1 755 0
+	l32r	a12, .LC531
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL190:
 	j	.L199
 .L195:
-	.loc 1 760 0
-	bnei	a2, 3, .L196
-	.loc 1 761 0
-	l32r	a12, .LC531
+	.loc 1 756 0
+	movi.n	a5, 0x13
+	bne	a2, a5, .L196
+	.loc 1 757 0
+	l32r	a12, .LC533
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL191:
 	j	.L200
 .L196:
-	.loc 1 762 0
-	bnei	a2, 5, .L197
-	.loc 1 763 0
-	l32r	a12, .LC533
+	.loc 1 758 0
+	movi.n	a5, 0x14
+	bne	a2, a5, .L197
+	.loc 1 759 0
+	l32r	a12, .LC535
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL192:
 	j	.L201
 .L197:
-	.loc 1 764 0
-	bnei	a2, 7, .L198
-	.loc 1 765 0
-	l32r	a12, .LC535
+	.loc 1 768 0
+	bnei	a2, 3, .L198
+	.loc 1 769 0
+	l32r	a12, .LC537
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL193:
 	j	.L202
 .L198:
-	.loc 1 766 0
-	movi.n	a5, 9
-	bne	a2, a5, .L199
-	.loc 1 767 0
-	l32r	a12, .LC537
+	.loc 1 770 0
+	bnei	a2, 5, .L199
+	.loc 1 771 0
+	l32r	a12, .LC539
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL194:
 	j	.L203
 .L199:
-	.loc 1 781 0
-	movi.n	a5, 0x2f
-	bne	a2, a5, .L200
-	.loc 1 782 0
-	l32r	a12, .LC539
+	.loc 1 772 0
+	bnei	a2, 7, .L200
+	.loc 1 773 0
+	l32r	a12, .LC541
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL195:
 	j	.L204
 .L200:
-	.loc 1 815 0
-	movi.n	a5, 0x2e
+	.loc 1 774 0
+	movi.n	a5, 9
 	bne	a2, a5, .L201
-	.loc 1 816 0
-	l32r	a12, .LC541
+	.loc 1 775 0
+	l32r	a12, .LC543
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL196:
 	j	.L205
 .L201:
-	.loc 1 817 0
-	movi.n	a5, 0xb
-	.loc 1 818 0
-	l32r	a12, .LC543
-	.loc 1 817 0
-	beq	a2, a5, .L219
-.L202:
-	.loc 1 822 0
-	movi.n	a5, 0x30
-	.loc 1 823 0
+	.loc 1 789 0
+	movi.n	a5, 0x2f
+	bne	a2, a5, .L202
+	.loc 1 790 0
 	l32r	a12, .LC545
-	.loc 1 822 0
-	beq	a2, a5, .L219
-.L203:
-	.loc 1 841 0
-	movi.n	a5, 0x35
-	.loc 1 842 0
-	l32r	a12, .LC547
-	.loc 1 841 0
-	beq	a2, a5, .L219
-.L204:
-	.loc 1 846 0
-	movi.n	a5, 0x37
-	.loc 1 847 0
-	l32r	a12, .LC549
-	.loc 1 846 0
-	beq	a2, a5, .L219
-.L205:
-	.loc 1 851 0
-	movi.n	a5, 0x39
-	bne	a2, a5, .L206
-	.loc 1 852 0
-	l32r	a12, .LC551
-.L219:
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL197:
-.L206:
-	.loc 1 872 0
-	l8ui	a5, a3, 0
-	bnez.n	a5, .L1
-	.loc 1 875 0
-	l32r	a12, .LC452
-	mov.n	a13, a2
+	j	.L206
+.L202:
+	.loc 1 823 0
+	movi.n	a5, 0x2e
+	bne	a2, a5, .L203
+	.loc 1 824 0
+	l32r	a12, .LC547
 	mov.n	a11, a4
 	mov.n	a10, a3
 	call8	snprintf
 .LVL198:
+	j	.L207
+.L203:
+	.loc 1 825 0
+	movi.n	a5, 0xb
+	bne	a2, a5, .L204
+	.loc 1 826 0
+	l32r	a12, .LC549
+	mov.n	a11, a4
+	mov.n	a10, a3
+	call8	snprintf
+.LVL199:
+	j	.L208
+.L204:
+	.loc 1 830 0
+	movi.n	a5, 0x30
+	bne	a2, a5, .L205
+	.loc 1 831 0
+	l32r	a12, .LC551
+	mov.n	a11, a4
+	mov.n	a10, a3
+	call8	snprintf
+.LVL200:
+	j	.L209
+.L205:
+	.loc 1 835 0
+	movi	a5, 0x70
+	bne	a2, a5, .L206
+	.loc 1 836 0
+	l32r	a12, .LC553
+	mov.n	a11, a4
+	mov.n	a10, a3
+	call8	snprintf
+.LVL201:
+	j	.L210
+.L206:
+	.loc 1 837 0
+	movi	a5, 0x72
+	bne	a2, a5, .L207
+	.loc 1 838 0
+	l32r	a12, .LC555
+	mov.n	a11, a4
+	mov.n	a10, a3
+	call8	snprintf
+.LVL202:
+	j	.L211
+.L207:
+	.loc 1 856 0
+	movi.n	a5, 0x35
+	bne	a2, a5, .L208
+	.loc 1 857 0
+	l32r	a12, .LC557
+	mov.n	a11, a4
+	mov.n	a10, a3
+	call8	snprintf
+.LVL203:
+	j	.L212
+.L208:
+	.loc 1 858 0
+	movi	a5, 0x73
+	.loc 1 859 0
+	l32r	a12, .LC559
+	.loc 1 858 0
+	beq	a2, a5, .L226
+.L209:
+	.loc 1 863 0
+	movi.n	a5, 0x37
+	.loc 1 864 0
+	l32r	a12, .LC561
+	.loc 1 863 0
+	beq	a2, a5, .L226
+.L210:
+	.loc 1 865 0
+	movi	a5, 0x74
+	.loc 1 866 0
+	l32r	a12, .LC563
+	.loc 1 865 0
+	beq	a2, a5, .L226
+.L211:
+	.loc 1 870 0
+	movi.n	a5, 0x39
+	.loc 1 871 0
+	l32r	a12, .LC565
+	.loc 1 870 0
+	beq	a2, a5, .L226
+.L212:
+	.loc 1 872 0
+	movi	a5, 0x75
+	bne	a2, a5, .L213
+	.loc 1 873 0
+	l32r	a12, .LC567
+.L226:
+	mov.n	a11, a4
+	mov.n	a10, a3
+	call8	snprintf
+.LVL204:
+.L213:
+	.loc 1 893 0
+	l8ui	a5, a3, 0
+	bnez.n	a5, .L1
+	.loc 1 896 0
+	l32r	a12, .LC458
+	mov.n	a13, a2
+	mov.n	a11, a4
+	mov.n	a10, a3
+	call8	snprintf
+.LVL205:
 .L1:
 	retw.n
 .LFE17:
@@ -2992,7 +3092,7 @@ mbedtls_strerror:
 	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x1abd
+	.4byte	0x1bb2
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -3063,45 +3163,45 @@ mbedtls_strerror:
 	.uleb128 0x6
 	.4byte	.LASF19
 	.byte	0x1
-	.byte	0xd1
+	.byte	0xd5
 	.4byte	.LFB17
 	.4byte	.LFE17-.LFB17
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1aa0
+	.4byte	0x1b95
 	.uleb128 0x7
 	.string	"ret"
 	.byte	0x1
-	.byte	0xd1
+	.byte	0xd5
 	.4byte	0x3e
 	.4byte	.LLST0
 	.uleb128 0x7
 	.string	"buf"
 	.byte	0x1
-	.byte	0xd1
+	.byte	0xd5
 	.4byte	0x7d
 	.4byte	.LLST1
 	.uleb128 0x8
 	.4byte	.LASF11
 	.byte	0x1
-	.byte	0xd1
+	.byte	0xd5
 	.4byte	0x25
 	.4byte	.LLST2
 	.uleb128 0x9
 	.string	"len"
 	.byte	0x1
-	.byte	0xd3
+	.byte	0xd7
 	.4byte	0x25
 	.4byte	.LLST3
 	.uleb128 0xa
 	.4byte	.LASF12
 	.byte	0x1
-	.byte	0xd4
+	.byte	0xd8
 	.4byte	0x3e
 	.4byte	.LLST4
 	.uleb128 0xb
 	.4byte	.LVL1
-	.4byte	0x1aa0
+	.4byte	0x1b95
 	.4byte	0x109
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3123,7 +3223,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL4
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x123
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3140,7 +3240,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL5
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x146
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3163,7 +3263,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL6
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x169
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3186,7 +3286,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL7
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x18c
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3209,7 +3309,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL8
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x1af
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3232,7 +3332,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL9
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x1d2
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3255,7 +3355,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL10
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x1f5
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3278,7 +3378,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL11
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x218
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3301,7 +3401,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL12
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x23b
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3324,7 +3424,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL13
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x25e
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3347,7 +3447,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL14
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x281
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3370,7 +3470,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL15
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x2a4
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3393,7 +3493,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL16
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x2c7
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3416,7 +3516,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL17
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x2ea
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3439,7 +3539,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL18
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x30d
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3462,7 +3562,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL19
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x330
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3485,7 +3585,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL20
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x353
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3508,7 +3608,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL21
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x376
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3531,7 +3631,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL22
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x399
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3554,7 +3654,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL23
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x3bc
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3577,7 +3677,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL24
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x3df
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3600,7 +3700,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL25
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x402
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3623,7 +3723,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL26
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x425
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3646,7 +3746,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL27
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x448
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3669,7 +3769,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL28
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x46b
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3692,7 +3792,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL29
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x48e
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3715,7 +3815,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL30
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x4b1
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3738,7 +3838,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL31
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x4d4
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3761,7 +3861,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL32
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x4f7
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3784,7 +3884,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL33
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x51a
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3807,7 +3907,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL34
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x53d
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3830,7 +3930,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL35
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x560
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3853,7 +3953,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL36
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x583
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3876,7 +3976,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL37
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x5a6
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3899,7 +3999,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL38
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x5c9
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3922,7 +4022,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL39
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x5ec
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3945,7 +4045,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL40
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x60f
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3968,7 +4068,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL41
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x632
 	.uleb128 0xc
 	.uleb128 0x1
@@ -3991,7 +4091,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL42
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x655
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4014,7 +4114,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL43
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x678
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4037,7 +4137,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL44
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x69b
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4060,7 +4160,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL45
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x6be
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4083,7 +4183,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL46
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x6e1
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4106,7 +4206,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL47
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x704
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4129,7 +4229,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL48
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x727
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4152,7 +4252,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL49
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x74a
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4175,7 +4275,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL50
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x76d
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4198,7 +4298,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL51
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x790
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4221,7 +4321,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL52
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x7b3
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4244,7 +4344,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL53
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x7d6
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4267,7 +4367,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL54
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x7f9
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4290,7 +4390,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL55
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x81c
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4313,7 +4413,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL56
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x83f
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4336,7 +4436,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL57
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x862
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4359,7 +4459,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL58
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x885
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4382,7 +4482,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL59
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x8a8
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4405,7 +4505,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL60
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x8cb
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4428,7 +4528,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL61
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x8ee
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4451,7 +4551,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL62
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x911
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4474,7 +4574,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL63
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x934
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4497,7 +4597,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL64
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x957
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4520,7 +4620,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL65
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x97a
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4543,7 +4643,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL66
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x99d
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4566,7 +4666,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL67
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x9c0
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4589,7 +4689,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL68
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x9e3
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4612,7 +4712,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL69
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xa06
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4635,7 +4735,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL70
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xa29
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4658,7 +4758,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL71
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xa4c
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4681,7 +4781,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL72
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xa6f
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4704,7 +4804,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL73
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xa92
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4727,7 +4827,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL74
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xab5
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4750,7 +4850,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL75
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xad8
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4773,7 +4873,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL76
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xafb
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4796,7 +4896,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL77
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xb1e
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4819,7 +4919,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL78
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xb41
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4842,7 +4942,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL79
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xb64
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4865,7 +4965,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL80
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xb87
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4888,7 +4988,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL81
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xbaa
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4911,7 +5011,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL82
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xbcd
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4934,7 +5034,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL83
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xbf0
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4957,7 +5057,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL84
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xc13
 	.uleb128 0xc
 	.uleb128 0x1
@@ -4980,7 +5080,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL85
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xc36
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5003,7 +5103,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL86
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xc59
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5026,7 +5126,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL87
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xc7c
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5049,7 +5149,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL88
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xc9f
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5072,7 +5172,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL89
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xcc2
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5095,7 +5195,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL90
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xce5
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5118,7 +5218,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL91
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xd08
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5141,7 +5241,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL92
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xd2b
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5164,7 +5264,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL93
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xd4e
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5187,25 +5287,8 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL94
-	.4byte	0x1aa9
-	.4byte	0xd68
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x73
-	.sleb128 0
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x74
-	.sleb128 0
-	.byte	0
-	.uleb128 0xb
-	.4byte	.LVL95
-	.4byte	0x1aa9
-	.4byte	0xd8b
+	.4byte	0x1b9e
+	.4byte	0xd71
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -5223,11 +5306,28 @@ mbedtls_strerror:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC281
+	.4byte	.LC275
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LVL95
+	.4byte	0x1b9e
+	.4byte	0xd8b
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL96
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xdae
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5250,7 +5350,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL97
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xdd1
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5273,7 +5373,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL98
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xdf4
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5296,7 +5396,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL99
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xe17
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5319,7 +5419,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL100
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xe3a
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5342,7 +5442,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL101
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xe5d
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5365,7 +5465,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL102
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xe80
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5388,7 +5488,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL103
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xea3
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5411,7 +5511,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL104
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xec6
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5434,7 +5534,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL105
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xee9
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5457,7 +5557,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL106
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xf0c
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5480,7 +5580,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL107
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xf2f
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5503,7 +5603,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL108
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xf52
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5526,7 +5626,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL109
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xf75
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5549,7 +5649,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL110
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xf98
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5572,7 +5672,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL111
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xfbb
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5595,7 +5695,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL112
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0xfde
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5618,7 +5718,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL113
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x1001
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5641,7 +5741,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL114
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x1024
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5664,7 +5764,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL115
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x1047
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5687,7 +5787,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL116
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x106a
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5710,7 +5810,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL117
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x108d
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5733,7 +5833,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL118
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x10b0
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5756,7 +5856,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL119
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x10d3
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5779,7 +5879,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL120
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x10f6
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5802,7 +5902,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL121
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x1119
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5825,7 +5925,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL122
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x113c
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5848,7 +5948,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL123
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x115f
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5871,7 +5971,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL124
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x1182
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5894,7 +5994,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL125
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x11a5
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5917,7 +6017,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL126
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x11c8
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5940,7 +6040,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL127
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x11eb
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5963,7 +6063,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL128
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x120e
 	.uleb128 0xc
 	.uleb128 0x1
@@ -5986,7 +6086,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL129
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x1231
 	.uleb128 0xc
 	.uleb128 0x1
@@ -6009,7 +6109,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL130
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x1254
 	.uleb128 0xc
 	.uleb128 0x1
@@ -6032,7 +6132,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL131
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x1277
 	.uleb128 0xc
 	.uleb128 0x1
@@ -6055,7 +6155,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL132
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x129a
 	.uleb128 0xc
 	.uleb128 0x1
@@ -6078,7 +6178,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL133
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x12bd
 	.uleb128 0xc
 	.uleb128 0x1
@@ -6101,7 +6201,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL134
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x12e0
 	.uleb128 0xc
 	.uleb128 0x1
@@ -6124,7 +6224,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL135
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x1303
 	.uleb128 0xc
 	.uleb128 0x1
@@ -6147,7 +6247,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL136
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x1326
 	.uleb128 0xc
 	.uleb128 0x1
@@ -6170,7 +6270,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL137
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x1349
 	.uleb128 0xc
 	.uleb128 0x1
@@ -6193,7 +6293,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL138
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x136c
 	.uleb128 0xc
 	.uleb128 0x1
@@ -6216,7 +6316,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL139
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x138f
 	.uleb128 0xc
 	.uleb128 0x1
@@ -6239,7 +6339,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL140
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x13b2
 	.uleb128 0xc
 	.uleb128 0x1
@@ -6262,7 +6362,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL141
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x13d5
 	.uleb128 0xc
 	.uleb128 0x1
@@ -6285,7 +6385,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL142
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x13f8
 	.uleb128 0xc
 	.uleb128 0x1
@@ -6308,7 +6408,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL143
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x141b
 	.uleb128 0xc
 	.uleb128 0x1
@@ -6331,7 +6431,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL144
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x143e
 	.uleb128 0xc
 	.uleb128 0x1
@@ -6354,7 +6454,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL145
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x1461
 	.uleb128 0xc
 	.uleb128 0x1
@@ -6377,7 +6477,7 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL146
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x1484
 	.uleb128 0xc
 	.uleb128 0x1
@@ -6400,25 +6500,8 @@ mbedtls_strerror:
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL147
-	.4byte	0x1aa9
-	.4byte	0x149e
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x73
-	.sleb128 0
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x74
-	.sleb128 0
-	.byte	0
-	.uleb128 0xb
-	.4byte	.LVL148
-	.4byte	0x1aa9
-	.4byte	0x14c7
+	.4byte	0x1b9e
+	.4byte	0x14a7
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -6436,7 +6519,70 @@ mbedtls_strerror:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC451
+	.4byte	.LC437
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LVL148
+	.4byte	0x1b9e
+	.4byte	0x14ca
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	.LC440
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LVL149
+	.4byte	0x1b9e
+	.4byte	0x14e4
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LVL150
+	.4byte	0x1b9e
+	.4byte	0x150d
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	.LC457
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5d
@@ -6445,9 +6591,9 @@ mbedtls_strerror:
 	.sleb128 0
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL150
-	.4byte	0x1ab5
-	.4byte	0x14db
+	.4byte	.LVL152
+	.4byte	0x1baa
+	.4byte	0x1521
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -6456,9 +6602,9 @@ mbedtls_strerror:
 	.sleb128 0
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL154
-	.4byte	0x1aa9
-	.4byte	0x1503
+	.4byte	.LVL156
+	.4byte	0x1b9e
+	.4byte	0x1549
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -6481,51 +6627,11 @@ mbedtls_strerror:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC454
-	.byte	0
-	.uleb128 0xb
-	.4byte	.LVL157
-	.4byte	0x1aa9
-	.4byte	0x151d
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x73
-	.sleb128 0
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x74
-	.sleb128 0
-	.byte	0
-	.uleb128 0xb
-	.4byte	.LVL158
-	.4byte	0x1aa9
-	.4byte	0x1540
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x73
-	.sleb128 0
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x74
-	.sleb128 0
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5c
-	.uleb128 0x5
-	.byte	0x3
 	.4byte	.LC460
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL159
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x1563
 	.uleb128 0xc
 	.uleb128 0x1
@@ -6539,40 +6645,11 @@ mbedtls_strerror:
 	.uleb128 0x2
 	.byte	0x74
 	.sleb128 0
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5c
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	.LC462
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL160
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x1586
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x73
-	.sleb128 0
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x74
-	.sleb128 0
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5c
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	.LC464
-	.byte	0
-	.uleb128 0xb
-	.4byte	.LVL161
-	.4byte	0x1aa9
-	.4byte	0x15a9
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -6593,9 +6670,9 @@ mbedtls_strerror:
 	.4byte	.LC466
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL162
-	.4byte	0x1aa9
-	.4byte	0x15cc
+	.4byte	.LVL161
+	.4byte	0x1b9e
+	.4byte	0x15a9
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -6616,9 +6693,9 @@ mbedtls_strerror:
 	.4byte	.LC468
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL163
-	.4byte	0x1aa9
-	.4byte	0x15ef
+	.4byte	.LVL162
+	.4byte	0x1b9e
+	.4byte	0x15cc
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -6639,9 +6716,9 @@ mbedtls_strerror:
 	.4byte	.LC470
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL164
-	.4byte	0x1aa9
-	.4byte	0x1612
+	.4byte	.LVL163
+	.4byte	0x1b9e
+	.4byte	0x15ef
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -6662,9 +6739,9 @@ mbedtls_strerror:
 	.4byte	.LC472
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL165
-	.4byte	0x1aa9
-	.4byte	0x1635
+	.4byte	.LVL164
+	.4byte	0x1b9e
+	.4byte	0x1612
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -6685,9 +6762,9 @@ mbedtls_strerror:
 	.4byte	.LC474
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL166
-	.4byte	0x1aa9
-	.4byte	0x1658
+	.4byte	.LVL165
+	.4byte	0x1b9e
+	.4byte	0x1635
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -6708,9 +6785,9 @@ mbedtls_strerror:
 	.4byte	.LC476
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL167
-	.4byte	0x1aa9
-	.4byte	0x167b
+	.4byte	.LVL166
+	.4byte	0x1b9e
+	.4byte	0x1658
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -6731,9 +6808,9 @@ mbedtls_strerror:
 	.4byte	.LC478
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL168
-	.4byte	0x1aa9
-	.4byte	0x169e
+	.4byte	.LVL167
+	.4byte	0x1b9e
+	.4byte	0x167b
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -6754,9 +6831,9 @@ mbedtls_strerror:
 	.4byte	.LC480
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL169
-	.4byte	0x1aa9
-	.4byte	0x16c1
+	.4byte	.LVL168
+	.4byte	0x1b9e
+	.4byte	0x169e
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -6777,43 +6854,9 @@ mbedtls_strerror:
 	.4byte	.LC482
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL170
-	.4byte	0x1aa9
-	.4byte	0x16db
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x73
-	.sleb128 0
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x74
-	.sleb128 0
-	.byte	0
-	.uleb128 0xb
-	.4byte	.LVL171
-	.4byte	0x1aa9
-	.4byte	0x16f5
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x73
-	.sleb128 0
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x74
-	.sleb128 0
-	.byte	0
-	.uleb128 0xb
-	.4byte	.LVL172
-	.4byte	0x1aa9
-	.4byte	0x1718
+	.4byte	.LVL169
+	.4byte	0x1b9e
+	.4byte	0x16c1
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -6831,11 +6874,74 @@ mbedtls_strerror:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC492
+	.4byte	.LC484
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LVL170
+	.4byte	0x1b9e
+	.4byte	0x16e4
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	.LC486
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LVL171
+	.4byte	0x1b9e
+	.4byte	0x1707
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	.LC488
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LVL172
+	.4byte	0x1b9e
+	.4byte	0x1721
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL173
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x173b
 	.uleb128 0xc
 	.uleb128 0x1
@@ -6849,40 +6955,11 @@ mbedtls_strerror:
 	.uleb128 0x2
 	.byte	0x74
 	.sleb128 0
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5c
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	.LC494
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LVL174
-	.4byte	0x1aa9
+	.4byte	0x1b9e
 	.4byte	0x175e
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x73
-	.sleb128 0
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x74
-	.sleb128 0
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5c
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	.LC496
-	.byte	0
-	.uleb128 0xb
-	.4byte	.LVL175
-	.4byte	0x1aa9
-	.4byte	0x1781
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -6903,9 +6980,9 @@ mbedtls_strerror:
 	.4byte	.LC498
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL176
-	.4byte	0x1aa9
-	.4byte	0x17a4
+	.4byte	.LVL175
+	.4byte	0x1b9e
+	.4byte	0x1781
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -6926,9 +7003,9 @@ mbedtls_strerror:
 	.4byte	.LC500
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL177
-	.4byte	0x1aa9
-	.4byte	0x17c7
+	.4byte	.LVL176
+	.4byte	0x1b9e
+	.4byte	0x17a4
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -6949,9 +7026,9 @@ mbedtls_strerror:
 	.4byte	.LC502
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL178
-	.4byte	0x1aa9
-	.4byte	0x17ea
+	.4byte	.LVL177
+	.4byte	0x1b9e
+	.4byte	0x17c7
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -6972,9 +7049,9 @@ mbedtls_strerror:
 	.4byte	.LC504
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL179
-	.4byte	0x1aa9
-	.4byte	0x180d
+	.4byte	.LVL178
+	.4byte	0x1b9e
+	.4byte	0x17ea
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -6995,9 +7072,9 @@ mbedtls_strerror:
 	.4byte	.LC506
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL180
-	.4byte	0x1aa9
-	.4byte	0x1830
+	.4byte	.LVL179
+	.4byte	0x1b9e
+	.4byte	0x180d
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -7018,9 +7095,9 @@ mbedtls_strerror:
 	.4byte	.LC508
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL181
-	.4byte	0x1aa9
-	.4byte	0x1853
+	.4byte	.LVL180
+	.4byte	0x1b9e
+	.4byte	0x1830
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -7041,9 +7118,9 @@ mbedtls_strerror:
 	.4byte	.LC510
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL182
-	.4byte	0x1aa9
-	.4byte	0x1876
+	.4byte	.LVL181
+	.4byte	0x1b9e
+	.4byte	0x1853
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -7064,9 +7141,9 @@ mbedtls_strerror:
 	.4byte	.LC512
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL183
-	.4byte	0x1aa9
-	.4byte	0x1899
+	.4byte	.LVL182
+	.4byte	0x1b9e
+	.4byte	0x1876
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -7087,9 +7164,9 @@ mbedtls_strerror:
 	.4byte	.LC514
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL184
-	.4byte	0x1aa9
-	.4byte	0x18bc
+	.4byte	.LVL183
+	.4byte	0x1b9e
+	.4byte	0x1899
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -7110,9 +7187,9 @@ mbedtls_strerror:
 	.4byte	.LC516
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL185
-	.4byte	0x1aa9
-	.4byte	0x18df
+	.4byte	.LVL184
+	.4byte	0x1b9e
+	.4byte	0x18bc
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -7133,9 +7210,9 @@ mbedtls_strerror:
 	.4byte	.LC518
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL186
-	.4byte	0x1aa9
-	.4byte	0x1902
+	.4byte	.LVL185
+	.4byte	0x1b9e
+	.4byte	0x18df
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -7156,9 +7233,9 @@ mbedtls_strerror:
 	.4byte	.LC520
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL187
-	.4byte	0x1aa9
-	.4byte	0x1925
+	.4byte	.LVL186
+	.4byte	0x1b9e
+	.4byte	0x1902
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -7179,9 +7256,9 @@ mbedtls_strerror:
 	.4byte	.LC522
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL188
-	.4byte	0x1aa9
-	.4byte	0x1948
+	.4byte	.LVL187
+	.4byte	0x1b9e
+	.4byte	0x1925
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -7202,9 +7279,9 @@ mbedtls_strerror:
 	.4byte	.LC524
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL189
-	.4byte	0x1aa9
-	.4byte	0x196b
+	.4byte	.LVL188
+	.4byte	0x1b9e
+	.4byte	0x1948
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -7225,9 +7302,9 @@ mbedtls_strerror:
 	.4byte	.LC526
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL190
-	.4byte	0x1aa9
-	.4byte	0x198e
+	.4byte	.LVL189
+	.4byte	0x1b9e
+	.4byte	0x196b
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -7248,9 +7325,9 @@ mbedtls_strerror:
 	.4byte	.LC528
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL191
-	.4byte	0x1aa9
-	.4byte	0x19b1
+	.4byte	.LVL190
+	.4byte	0x1b9e
+	.4byte	0x198e
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -7271,9 +7348,9 @@ mbedtls_strerror:
 	.4byte	.LC530
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL192
-	.4byte	0x1aa9
-	.4byte	0x19d4
+	.4byte	.LVL191
+	.4byte	0x1b9e
+	.4byte	0x19b1
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -7294,9 +7371,9 @@ mbedtls_strerror:
 	.4byte	.LC532
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL193
-	.4byte	0x1aa9
-	.4byte	0x19f7
+	.4byte	.LVL192
+	.4byte	0x1b9e
+	.4byte	0x19d4
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -7317,9 +7394,9 @@ mbedtls_strerror:
 	.4byte	.LC534
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL194
-	.4byte	0x1aa9
-	.4byte	0x1a1a
+	.4byte	.LVL193
+	.4byte	0x1b9e
+	.4byte	0x19f7
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -7340,9 +7417,9 @@ mbedtls_strerror:
 	.4byte	.LC536
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL195
-	.4byte	0x1aa9
-	.4byte	0x1a3d
+	.4byte	.LVL194
+	.4byte	0x1b9e
+	.4byte	0x1a1a
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -7363,9 +7440,9 @@ mbedtls_strerror:
 	.4byte	.LC538
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL196
-	.4byte	0x1aa9
-	.4byte	0x1a60
+	.4byte	.LVL195
+	.4byte	0x1b9e
+	.4byte	0x1a3d
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -7386,25 +7463,9 @@ mbedtls_strerror:
 	.4byte	.LC540
 	.byte	0
 	.uleb128 0xb
-	.4byte	.LVL197
-	.4byte	0x1aa9
-	.4byte	0x1a7a
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x73
-	.sleb128 0
-	.uleb128 0xc
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x74
-	.sleb128 0
-	.byte	0
-	.uleb128 0xd
-	.4byte	.LVL198
-	.4byte	0x1aa9
+	.4byte	.LVL196
+	.4byte	0x1b9e
+	.4byte	0x1a60
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5a
@@ -7422,7 +7483,207 @@ mbedtls_strerror:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	.LC451
+	.4byte	.LC542
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LVL197
+	.4byte	0x1b9e
+	.4byte	0x1a83
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	.LC544
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LVL198
+	.4byte	0x1b9e
+	.4byte	0x1aa6
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	.LC546
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LVL199
+	.4byte	0x1b9e
+	.4byte	0x1ac9
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	.LC548
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LVL200
+	.4byte	0x1b9e
+	.4byte	0x1aec
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	.LC550
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LVL201
+	.4byte	0x1b9e
+	.4byte	0x1b0f
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	.LC552
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LVL202
+	.4byte	0x1b9e
+	.4byte	0x1b32
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	.LC554
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LVL203
+	.4byte	0x1b9e
+	.4byte	0x1b55
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	.LC556
+	.byte	0
+	.uleb128 0xb
+	.4byte	.LVL204
+	.4byte	0x1b9e
+	.4byte	0x1b6f
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.byte	0
+	.uleb128 0xd
+	.4byte	.LVL205
+	.4byte	0x1b9e
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.uleb128 0xc
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	.LC457
 	.uleb128 0xc
 	.uleb128 0x1
 	.byte	0x5d
@@ -7680,11 +7941,11 @@ mbedtls_strerror:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL2
-	.4byte	.LVL149
+	.4byte	.LVL151
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL149
-	.4byte	.LVL198
+	.4byte	.LVL151
+	.4byte	.LVL205
 	.2byte	0x5
 	.byte	0xf3
 	.uleb128 0x1
@@ -7695,10 +7956,10 @@ mbedtls_strerror:
 	.4byte	0
 .LLST1:
 	.4byte	.LVL0
-	.4byte	.LVL155
+	.4byte	.LVL157
 	.2byte	0x1
 	.byte	0x53
-	.4byte	.LVL155
+	.4byte	.LVL157
 	.4byte	.LFE17
 	.2byte	0x1
 	.byte	0x53
@@ -7706,29 +7967,29 @@ mbedtls_strerror:
 	.4byte	0
 .LLST2:
 	.4byte	.LVL0
-	.4byte	.LVL152
+	.4byte	.LVL154
 	.2byte	0x1
 	.byte	0x54
-	.4byte	.LVL152
-	.4byte	.LVL156
+	.4byte	.LVL154
+	.4byte	.LVL158
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
 	.byte	0x54
 	.byte	0x9f
-	.4byte	.LVL156
-	.4byte	.LVL198
+	.4byte	.LVL158
+	.4byte	.LVL205
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
 	.4byte	0
 .LLST3:
-	.4byte	.LVL151
 	.4byte	.LVL153
+	.4byte	.LVL155
 	.2byte	0x1
 	.byte	0x55
-	.4byte	.LVL153
-	.4byte	.LVL156
+	.4byte	.LVL155
+	.4byte	.LVL158
 	.2byte	0x3
 	.byte	0x75
 	.sleb128 -3
@@ -7737,11 +7998,11 @@ mbedtls_strerror:
 	.4byte	0
 .LLST4:
 	.4byte	.LVL3
-	.4byte	.LVL148
+	.4byte	.LVL150
 	.2byte	0x1
 	.byte	0x55
-	.4byte	.LVL149
-	.4byte	.LVL198
+	.4byte	.LVL151
+	.4byte	.LVL205
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0

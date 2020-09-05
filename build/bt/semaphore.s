@@ -6,8 +6,8 @@
 	.global	osi_sem_new
 	.type	osi_sem_new, @function
 osi_sem_new:
-.LFB18:
-	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/semaphore.c"
+.LFB27:
+	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/semaphore.c"
 	.loc 1 27 0
 .LVL0:
 	entry	sp, 32
@@ -37,14 +37,14 @@ osi_sem_new:
 	.loc 1 38 0
 	mov.n	a2, a8
 	retw.n
-.LFE18:
+.LFE27:
 	.size	osi_sem_new, .-osi_sem_new
 	.section	.text.osi_sem_give,"ax",@progbits
 	.align	4
 	.global	osi_sem_give
 	.type	osi_sem_give, @function
 osi_sem_give:
-.LFB19:
+.LFB28:
 	.loc 1 43 0
 .LVL5:
 	entry	sp, 32
@@ -57,7 +57,7 @@ osi_sem_give:
 	call8	xQueueGenericSend
 .LVL6:
 	retw.n
-.LFE19:
+.LFE28:
 	.size	osi_sem_give, .-osi_sem_give
 	.section	.text.osi_sem_take,"ax",@progbits
 	.literal_position
@@ -66,7 +66,7 @@ osi_sem_give:
 	.global	osi_sem_take
 	.type	osi_sem_take, @function
 osi_sem_take:
-.LFB20:
+.LFB29:
 	.loc 1 56 0
 .LVL7:
 	entry	sp, 32
@@ -109,14 +109,14 @@ osi_sem_take:
 .LVL14:
 	.loc 1 70 0
 	retw.n
-.LFE20:
+.LFE29:
 	.size	osi_sem_take, .-osi_sem_take
 	.section	.text.osi_sem_free,"ax",@progbits
 	.align	4
 	.global	osi_sem_free
 	.type	osi_sem_free, @function
 osi_sem_free:
-.LFB21:
+.LFB30:
 	.loc 1 74 0
 .LVL15:
 	entry	sp, 32
@@ -129,7 +129,7 @@ osi_sem_free:
 	movi.n	a8, 0
 	s32i.n	a8, a2, 0
 	retw.n
-.LFE21:
+.LFE30:
 	.size	osi_sem_free, .-osi_sem_free
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -150,10 +150,10 @@ osi_sem_free:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI0-.LFB18
+	.4byte	.LCFI0-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -162,10 +162,10 @@ osi_sem_free:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI1-.LFB19
+	.4byte	.LCFI1-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -174,10 +174,10 @@ osi_sem_free:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI2-.LFB20
+	.4byte	.LCFI2-.LFB29
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -186,10 +186,10 @@ osi_sem_free:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI3-.LFB21
+	.4byte	.LCFI3-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -201,7 +201,7 @@ osi_sem_free:
 	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 	.file 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/semphr.h"
-	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/semaphore.h"
+	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/semaphore.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
 	.4byte	0x268
@@ -310,8 +310,8 @@ osi_sem_free:
 	.byte	0x1
 	.byte	0x1a
 	.4byte	0x33
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x137
@@ -365,8 +365,8 @@ osi_sem_free:
 	.4byte	.LASF24
 	.byte	0x1
 	.byte	0x2a
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x179
@@ -402,8 +402,8 @@ osi_sem_free:
 	.byte	0x1
 	.byte	0x37
 	.4byte	0x33
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x20f
@@ -490,8 +490,8 @@ osi_sem_free:
 	.4byte	.LASF25
 	.byte	0x1
 	.byte	0x49
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x23b
@@ -775,7 +775,7 @@ osi_sem_free:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL3
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -791,7 +791,7 @@ osi_sem_free:
 	.byte	0xff
 	.byte	0x9f
 	.4byte	.LVL4
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -813,7 +813,7 @@ osi_sem_free:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL13
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -828,7 +828,7 @@ osi_sem_free:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL14
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -841,26 +841,26 @@ osi_sem_free:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB21
-	.4byte	.LFE21
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB28
+	.4byte	.LFE28
+	.4byte	.LFB29
+	.4byte	.LFE29
+	.4byte	.LFB30
+	.4byte	.LFE30
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -906,8 +906,6 @@ osi_sem_free:
 	.string	"osi_sem_t"
 .LASF10:
 	.string	"char"
-.LASF31:
-	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/semaphore.c"
 .LASF0:
 	.string	"long long unsigned int"
 .LASF8:
@@ -916,6 +914,8 @@ osi_sem_free:
 	.string	"long long int"
 .LASF23:
 	.string	"timeout"
+.LASF31:
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/semaphore.c"
 .LASF27:
 	.string	"xQueueGenericSend"
 .LASF12:

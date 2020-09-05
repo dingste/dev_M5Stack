@@ -39,7 +39,7 @@ wpa_hexdump_buf_key:
 	.section	.text.wps_kdf,"ax",@progbits
 	.literal_position
 	.literal .LC1, wps_crypto_funcs
-	.literal .LC2, __FUNCTION__$5738
+	.literal .LC2, __FUNCTION__$5758
 	.literal .LC4, .LC3
 	.literal .LC6, .LC5
 	.align	4
@@ -203,7 +203,7 @@ wps_kdf:
 	.literal .LC12, .LC11
 	.literal .LC13, wps_crypto_funcs
 	.literal .LC15, .LC14
-	.literal .LC16, __FUNCTION__$5752
+	.literal .LC16, __FUNCTION__$5772
 	.literal .LC17, .LC3
 	.literal .LC19, .LC18
 	.literal .LC21, .LC20
@@ -491,7 +491,7 @@ wps_derive_keys:
 	.section	.text.wps_derive_psk,"ax",@progbits
 	.literal_position
 	.literal .LC32, wps_crypto_funcs
-	.literal .LC33, __FUNCTION__$5759
+	.literal .LC33, __FUNCTION__$5779
 	.literal .LC34, .LC3
 	.literal .LC36, .LC35
 	.literal .LC38, .LC37
@@ -596,7 +596,7 @@ wps_derive_psk:
 	.literal_position
 	.literal .LC44, .LC43
 	.literal .LC45, wps_crypto_funcs
-	.literal .LC46, __FUNCTION__$5770
+	.literal .LC46, __FUNCTION__$5790
 	.literal .LC47, .LC3
 	.literal .LC49, .LC48
 	.literal .LC51, .LC50
@@ -1695,25 +1695,25 @@ wps_build_wsc_nack:
 	retw.n
 .LFE52:
 	.size	wps_build_wsc_nack, .-wps_build_wsc_nack
-	.section	.rodata.__FUNCTION__$5770,"a",@progbits
-	.type	__FUNCTION__$5770, @object
-	.size	__FUNCTION__$5770, 26
-__FUNCTION__$5770:
+	.section	.rodata.__FUNCTION__$5790,"a",@progbits
+	.type	__FUNCTION__$5790, @object
+	.size	__FUNCTION__$5790, 26
+__FUNCTION__$5790:
 	.string	"wps_decrypt_encr_settings"
-	.section	.rodata.__FUNCTION__$5759,"a",@progbits
-	.type	__FUNCTION__$5759, @object
-	.size	__FUNCTION__$5759, 15
-__FUNCTION__$5759:
+	.section	.rodata.__FUNCTION__$5779,"a",@progbits
+	.type	__FUNCTION__$5779, @object
+	.size	__FUNCTION__$5779, 15
+__FUNCTION__$5779:
 	.string	"wps_derive_psk"
-	.section	.rodata.__FUNCTION__$5752,"a",@progbits
-	.type	__FUNCTION__$5752, @object
-	.size	__FUNCTION__$5752, 16
-__FUNCTION__$5752:
+	.section	.rodata.__FUNCTION__$5772,"a",@progbits
+	.type	__FUNCTION__$5772, @object
+	.size	__FUNCTION__$5772, 16
+__FUNCTION__$5772:
 	.string	"wps_derive_keys"
-	.section	.rodata.__FUNCTION__$5738,"a",@progbits
-	.type	__FUNCTION__$5738, @object
-	.size	__FUNCTION__$5738, 8
-__FUNCTION__$5738:
+	.section	.rodata.__FUNCTION__$5758,"a",@progbits
+	.type	__FUNCTION__$5758, @object
+	.size	__FUNCTION__$5758, 8
+__FUNCTION__$5758:
 	.string	"wps_kdf"
 	.comm	wps_crypto_funcs,80,4
 	.section	.debug_frame,"",@progbits
@@ -4233,7 +4233,7 @@ __FUNCTION__$5738:
 	.4byte	0x13ab
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$5738
+	.4byte	__FUNCTION__$5758
 	.uleb128 0x39
 	.4byte	.LVL7
 	.4byte	0x2458
@@ -4320,7 +4320,7 @@ __FUNCTION__$5738:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$5738
+	.4byte	__FUNCTION__$5758
 	.byte	0
 	.uleb128 0x39
 	.4byte	.LVL13
@@ -4464,7 +4464,7 @@ __FUNCTION__$5738:
 	.4byte	0x1767
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$5752
+	.4byte	__FUNCTION__$5772
 	.uleb128 0x2e
 	.4byte	0x1108
 	.4byte	.LBB28
@@ -4998,7 +4998,7 @@ __FUNCTION__$5738:
 	.4byte	0x18f8
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$5759
+	.4byte	__FUNCTION__$5779
 	.uleb128 0x40
 	.4byte	.LVL53
 	.uleb128 0x2
@@ -5207,7 +5207,7 @@ __FUNCTION__$5738:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$5759
+	.4byte	__FUNCTION__$5779
 	.byte	0
 	.byte	0
 	.uleb128 0x8
@@ -5305,7 +5305,7 @@ __FUNCTION__$5738:
 	.4byte	0x1b64
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$5770
+	.4byte	__FUNCTION__$5790
 	.uleb128 0x2e
 	.4byte	0x18fd
 	.4byte	.LBB44
@@ -5494,7 +5494,7 @@ __FUNCTION__$5738:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$5770
+	.4byte	__FUNCTION__$5790
 	.byte	0
 	.uleb128 0x39
 	.4byte	.LVL81

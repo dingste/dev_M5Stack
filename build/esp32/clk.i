@@ -483,6 +483,9 @@ int setitimer (int __which, const struct itimerval *restrict __value, struct iti
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
@@ -1188,30 +1191,30 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h" 1
 # 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
        
-# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
+# 32 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
 uint32_t esp_clk_slowclk_cal_get();
-# 42 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
+# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
 void esp_clk_slowclk_cal_set(uint32_t value);
-# 52 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
+# 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
 int esp_clk_cpu_freq(void);
-# 63 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
+# 64 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
 int esp_clk_apb_freq(void);
-# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
+# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
 int esp_clk_xtal_freq(void);
-# 86 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
+# 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_clk.h"
 uint64_t esp_clk_rtc_time();
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/esp_clk_internal.h" 1
@@ -1361,7 +1364,7 @@ STATUS uart_tx_one_char2(uint8_t TxChar);
 # 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/uart.h"
 void uart_tx_flush(uint8_t uart_no);
 # 269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/uart.h"
-static inline void __attribute__((section(".iram1"))) uart_tx_wait_idle(uint8_t uart_no) {
+static inline void __attribute__((section(".iram1" "." "0"))) uart_tx_wait_idle(uint8_t uart_no) {
     uint32_t status;
     do {
         status = ({ ; (*((volatile uint32_t *)(((0x3ff40000 + (uart_no) * 0x10000 + ( (uart_no) > 1 ? 0xe000 : 0 ) ) + 0x1C)))); });
@@ -2193,7 +2196,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 2
 
@@ -3061,7 +3064,7 @@ extern void _xtos_timer_1_delta( int cycles );
 extern void _xtos_timer_2_delta( int cycles );
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h" 2
 # 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "1"))) DPORT_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -3070,7 +3073,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_
 
 }
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "2"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -3079,7 +3082,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_REA
 
 }
 # 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_READ_PERI_REG(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "3"))) DPORT_READ_PERI_REG(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -3182,7 +3185,900 @@ static inline void XTHAL_WER (unsigned reg, unsigned value)
 
 void bootloader_clock_configure(void);
 # 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c" 2
-# 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/lldesc.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/lldesc.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/queue.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/lldesc.h" 2
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/lldesc.h"
+typedef struct lldesc_s {
+    volatile uint32_t size :12,
+                        length:12,
+                        offset: 5,
+                        sosf : 1,
+                        eof : 1,
+                        owner : 1;
+    volatile uint8_t *buf;
+    union{
+        volatile uint32_t empty;
+        struct { struct lldesc_s *stqe_next; } qe;
+    };
+} lldesc_t;
+
+typedef struct tx_ampdu_entry_s{
+    uint32_t sub_len :12,
+              dili_num : 7,
+                       : 1,
+              null_byte: 2,
+              data : 1,
+              enc : 1,
+              seq : 8;
+} tx_ampdu_entry_t;
+
+typedef struct lldesc_chain_s {
+    lldesc_t *head;
+    lldesc_t *tail;
+} lldesc_chain_t;
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/lldesc.h"
+void lldesc_build_chain(uint8_t *descptr, uint32_t desclen, uint8_t * mblkptr, uint32_t buflen, uint32_t blksz, uint8_t owner,
+                          lldesc_t **head,
+
+
+
+                          lldesc_t **tail);
+
+lldesc_t *lldesc_num2link(lldesc_t * head, uint16_t nblks);
+
+lldesc_t *lldesc_set_owner(lldesc_t * head, uint16_t nblks, uint8_t owner);
+
+static inline uint32_t lldesc_get_chain_length(lldesc_t *head)
+{
+    lldesc_t *ds = head;
+    uint32_t len = 0;
+
+    while (ds) {
+        len += ds->length;
+        ds = ((ds)->qe.stqe_next);
+    }
+
+    return len;
+}
+
+static inline void lldesc_config(lldesc_t *ds, uint8_t owner, uint8_t eof, uint8_t sosf, uint16_t len)
+{
+    ds->owner = owner;
+    ds->eof = eof;
+    ds->sosf = sosf;
+    ds->length = len;
+}
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/spi_periph.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/spi_periph.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/spi_pins.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/spi_periph.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/spi_reg.h" 1
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/spi_periph.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/spi_struct.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/spi_struct.h"
+typedef volatile struct {
+    union {
+        struct {
+            uint32_t reserved0: 16;
+            uint32_t flash_per: 1;
+            uint32_t flash_pes: 1;
+            uint32_t usr: 1;
+            uint32_t flash_hpm: 1;
+            uint32_t flash_res: 1;
+            uint32_t flash_dp: 1;
+            uint32_t flash_ce: 1;
+            uint32_t flash_be: 1;
+            uint32_t flash_se: 1;
+            uint32_t flash_pp: 1;
+            uint32_t flash_wrsr: 1;
+            uint32_t flash_rdsr: 1;
+            uint32_t flash_rdid: 1;
+            uint32_t flash_wrdi: 1;
+            uint32_t flash_wren: 1;
+            uint32_t flash_read: 1;
+        };
+        uint32_t val;
+    } cmd;
+    uint32_t addr;
+    union {
+        struct {
+            uint32_t reserved0: 10;
+            uint32_t fcs_crc_en: 1;
+            uint32_t tx_crc_en: 1;
+            uint32_t wait_flash_idle_en: 1;
+            uint32_t fastrd_mode: 1;
+            uint32_t fread_dual: 1;
+            uint32_t resandres: 1;
+            uint32_t reserved16: 4;
+            uint32_t fread_quad: 1;
+            uint32_t wp: 1;
+            uint32_t wrsr_2b: 1;
+            uint32_t fread_dio: 1;
+            uint32_t fread_qio: 1;
+            uint32_t rd_bit_order: 1;
+            uint32_t wr_bit_order: 1;
+            uint32_t reserved27: 5;
+        };
+        uint32_t val;
+    } ctrl;
+    union {
+        struct {
+            uint32_t reserved0: 16;
+            uint32_t cs_hold_delay_res:12;
+            uint32_t cs_hold_delay: 4;
+        };
+        uint32_t val;
+    } ctrl1;
+    union {
+        struct {
+            uint32_t status: 16;
+            uint32_t wb_mode: 8;
+            uint32_t status_ext: 8;
+        };
+        uint32_t val;
+    } rd_status;
+    union {
+        struct {
+            uint32_t setup_time: 4;
+            uint32_t hold_time: 4;
+            uint32_t ck_out_low_mode: 4;
+            uint32_t ck_out_high_mode: 4;
+            uint32_t miso_delay_mode: 2;
+            uint32_t miso_delay_num: 3;
+            uint32_t mosi_delay_mode: 2;
+            uint32_t mosi_delay_num: 3;
+            uint32_t cs_delay_mode: 2;
+            uint32_t cs_delay_num: 4;
+        };
+        uint32_t val;
+    } ctrl2;
+    union {
+        struct {
+            uint32_t clkcnt_l: 6;
+            uint32_t clkcnt_h: 6;
+            uint32_t clkcnt_n: 6;
+            uint32_t clkdiv_pre: 13;
+            uint32_t clk_equ_sysclk: 1;
+        };
+        uint32_t val;
+    } clock;
+    union {
+        struct {
+            uint32_t doutdin: 1;
+            uint32_t reserved1: 3;
+            uint32_t cs_hold: 1;
+            uint32_t cs_setup: 1;
+            uint32_t ck_i_edge: 1;
+            uint32_t ck_out_edge: 1;
+            uint32_t reserved8: 2;
+            uint32_t rd_byte_order: 1;
+            uint32_t wr_byte_order: 1;
+            uint32_t fwrite_dual: 1;
+            uint32_t fwrite_quad: 1;
+            uint32_t fwrite_dio: 1;
+            uint32_t fwrite_qio: 1;
+            uint32_t sio: 1;
+            uint32_t usr_hold_pol: 1;
+            uint32_t usr_dout_hold: 1;
+            uint32_t usr_din_hold: 1;
+            uint32_t usr_dummy_hold: 1;
+            uint32_t usr_addr_hold: 1;
+            uint32_t usr_cmd_hold: 1;
+            uint32_t usr_prep_hold: 1;
+            uint32_t usr_miso_highpart: 1;
+            uint32_t usr_mosi_highpart: 1;
+            uint32_t usr_dummy_idle: 1;
+            uint32_t usr_mosi: 1;
+            uint32_t usr_miso: 1;
+            uint32_t usr_dummy: 1;
+            uint32_t usr_addr: 1;
+            uint32_t usr_command: 1;
+        };
+        uint32_t val;
+    } user;
+    union {
+        struct {
+            uint32_t usr_dummy_cyclelen: 8;
+            uint32_t reserved8: 18;
+            uint32_t usr_addr_bitlen: 6;
+        };
+        uint32_t val;
+    } user1;
+    union {
+        struct {
+            uint32_t usr_command_value: 16;
+            uint32_t reserved16: 12;
+            uint32_t usr_command_bitlen: 4;
+        };
+        uint32_t val;
+    } user2;
+    union {
+        struct {
+            uint32_t usr_mosi_dbitlen:24;
+            uint32_t reserved24: 8;
+        };
+        uint32_t val;
+    } mosi_dlen;
+    union {
+        struct {
+            uint32_t usr_miso_dbitlen:24;
+            uint32_t reserved24: 8;
+        };
+        uint32_t val;
+    } miso_dlen;
+    uint32_t slv_wr_status;
+    union {
+        struct {
+            uint32_t cs0_dis: 1;
+            uint32_t cs1_dis: 1;
+            uint32_t cs2_dis: 1;
+            uint32_t reserved3: 2;
+            uint32_t ck_dis: 1;
+            uint32_t master_cs_pol: 3;
+            uint32_t reserved9: 2;
+            uint32_t master_ck_sel: 3;
+            uint32_t reserved14: 15;
+            uint32_t ck_idle_edge: 1;
+            uint32_t cs_keep_active: 1;
+            uint32_t reserved31: 1;
+        };
+        uint32_t val;
+    } pin;
+    union {
+        struct {
+            uint32_t rd_buf_done: 1;
+            uint32_t wr_buf_done: 1;
+            uint32_t rd_sta_done: 1;
+            uint32_t wr_sta_done: 1;
+            uint32_t trans_done: 1;
+            uint32_t rd_buf_inten: 1;
+            uint32_t wr_buf_inten: 1;
+            uint32_t rd_sta_inten: 1;
+            uint32_t wr_sta_inten: 1;
+            uint32_t trans_inten: 1;
+            uint32_t cs_i_mode: 2;
+            uint32_t reserved12: 5;
+            uint32_t last_command: 3;
+            uint32_t last_state: 3;
+            uint32_t trans_cnt: 4;
+            uint32_t cmd_define: 1;
+            uint32_t wr_rd_sta_en: 1;
+            uint32_t wr_rd_buf_en: 1;
+            uint32_t slave_mode: 1;
+            uint32_t sync_reset: 1;
+        };
+        uint32_t val;
+    } slave;
+    union {
+        struct {
+            uint32_t rdbuf_dummy_en: 1;
+            uint32_t wrbuf_dummy_en: 1;
+            uint32_t rdsta_dummy_en: 1;
+            uint32_t wrsta_dummy_en: 1;
+            uint32_t wr_addr_bitlen: 6;
+            uint32_t rd_addr_bitlen: 6;
+            uint32_t reserved16: 9;
+            uint32_t status_readback: 1;
+            uint32_t status_fast_en: 1;
+            uint32_t status_bitlen: 5;
+        };
+        uint32_t val;
+    } slave1;
+    union {
+        struct {
+            uint32_t rdsta_dummy_cyclelen: 8;
+            uint32_t wrsta_dummy_cyclelen: 8;
+            uint32_t rdbuf_dummy_cyclelen: 8;
+            uint32_t wrbuf_dummy_cyclelen: 8;
+        };
+        uint32_t val;
+    } slave2;
+    union {
+        struct {
+            uint32_t rdbuf_cmd_value: 8;
+            uint32_t wrbuf_cmd_value: 8;
+            uint32_t rdsta_cmd_value: 8;
+            uint32_t wrsta_cmd_value: 8;
+        };
+        uint32_t val;
+    } slave3;
+    union {
+        struct {
+            uint32_t bit_len: 24;
+            uint32_t reserved24: 8;
+        };
+        uint32_t val;
+    } slv_wrbuf_dlen;
+    union {
+        struct {
+            uint32_t bit_len: 24;
+            uint32_t reserved24: 8;
+        };
+        uint32_t val;
+    } slv_rdbuf_dlen;
+    union {
+        struct {
+            uint32_t req_en: 1;
+            uint32_t usr_cmd_4byte: 1;
+            uint32_t flash_usr_cmd: 1;
+            uint32_t flash_pes_en: 1;
+            uint32_t reserved4: 28;
+        };
+        uint32_t val;
+    } cache_fctrl;
+    union {
+        struct {
+            uint32_t reserved0: 1;
+            uint32_t usr_sram_dio: 1;
+            uint32_t usr_sram_qio: 1;
+            uint32_t usr_wr_sram_dummy: 1;
+            uint32_t usr_rd_sram_dummy: 1;
+            uint32_t cache_sram_usr_rcmd: 1;
+            uint32_t sram_bytes_len: 8;
+            uint32_t sram_dummy_cyclelen: 8;
+            uint32_t sram_addr_bitlen: 6;
+            uint32_t cache_sram_usr_wcmd: 1;
+            uint32_t reserved29: 3;
+        };
+        uint32_t val;
+    } cache_sctrl;
+    union {
+        struct {
+            uint32_t dio: 1;
+            uint32_t qio: 1;
+            uint32_t reserved2: 2;
+            uint32_t rst_io: 1;
+            uint32_t reserved5:27;
+        };
+        uint32_t val;
+    } sram_cmd;
+    union {
+        struct {
+            uint32_t usr_rd_cmd_value: 16;
+            uint32_t reserved16: 12;
+            uint32_t usr_rd_cmd_bitlen: 4;
+        };
+        uint32_t val;
+    } sram_drd_cmd;
+    union {
+        struct {
+            uint32_t usr_wr_cmd_value: 16;
+            uint32_t reserved16: 12;
+            uint32_t usr_wr_cmd_bitlen: 4;
+        };
+        uint32_t val;
+    } sram_dwr_cmd;
+    union {
+        struct {
+            uint32_t slv_rdata_bit:24;
+            uint32_t reserved24: 8;
+        };
+        uint32_t val;
+    } slv_rd_bit;
+    uint32_t reserved_68;
+    uint32_t reserved_6c;
+    uint32_t reserved_70;
+    uint32_t reserved_74;
+    uint32_t reserved_78;
+    uint32_t reserved_7c;
+    uint32_t data_buf[16];
+    uint32_t tx_crc;
+    uint32_t reserved_c4;
+    uint32_t reserved_c8;
+    uint32_t reserved_cc;
+    uint32_t reserved_d0;
+    uint32_t reserved_d4;
+    uint32_t reserved_d8;
+    uint32_t reserved_dc;
+    uint32_t reserved_e0;
+    uint32_t reserved_e4;
+    uint32_t reserved_e8;
+    uint32_t reserved_ec;
+    union {
+        struct {
+            uint32_t t_pp_time: 12;
+            uint32_t reserved12: 4;
+            uint32_t t_pp_shift: 4;
+            uint32_t reserved20:11;
+            uint32_t t_pp_ena: 1;
+        };
+        uint32_t val;
+    } ext0;
+    union {
+        struct {
+            uint32_t t_erase_time: 12;
+            uint32_t reserved12: 4;
+            uint32_t t_erase_shift: 4;
+            uint32_t reserved20: 11;
+            uint32_t t_erase_ena: 1;
+        };
+        uint32_t val;
+    } ext1;
+    union {
+        struct {
+            uint32_t st: 3;
+            uint32_t reserved3: 29;
+        };
+        uint32_t val;
+    } ext2;
+    union {
+        struct {
+            uint32_t int_hold_ena: 2;
+            uint32_t reserved2: 30;
+        };
+        uint32_t val;
+    } ext3;
+    union {
+        struct {
+            uint32_t reserved0: 2;
+            uint32_t in_rst: 1;
+            uint32_t out_rst: 1;
+            uint32_t ahbm_fifo_rst: 1;
+            uint32_t ahbm_rst: 1;
+            uint32_t in_loop_test: 1;
+            uint32_t out_loop_test: 1;
+            uint32_t out_auto_wrback: 1;
+            uint32_t out_eof_mode: 1;
+            uint32_t outdscr_burst_en: 1;
+            uint32_t indscr_burst_en: 1;
+            uint32_t out_data_burst_en: 1;
+            uint32_t reserved13: 1;
+            uint32_t dma_rx_stop: 1;
+            uint32_t dma_tx_stop: 1;
+            uint32_t dma_continue: 1;
+            uint32_t reserved17: 15;
+        };
+        uint32_t val;
+    } dma_conf;
+    union {
+        struct {
+            uint32_t addr: 20;
+            uint32_t reserved20: 8;
+            uint32_t stop: 1;
+            uint32_t start: 1;
+            uint32_t restart: 1;
+            uint32_t reserved31: 1;
+        };
+        uint32_t val;
+    } dma_out_link;
+    union {
+        struct {
+            uint32_t addr: 20;
+            uint32_t auto_ret: 1;
+            uint32_t reserved21: 7;
+            uint32_t stop: 1;
+            uint32_t start: 1;
+            uint32_t restart: 1;
+            uint32_t reserved31: 1;
+        };
+        uint32_t val;
+    } dma_in_link;
+    union {
+        struct {
+            uint32_t rx_en: 1;
+            uint32_t tx_en: 1;
+            uint32_t reserved2: 30;
+        };
+        uint32_t val;
+    } dma_status;
+    union {
+        struct {
+            uint32_t inlink_dscr_empty: 1;
+            uint32_t outlink_dscr_error: 1;
+            uint32_t inlink_dscr_error: 1;
+            uint32_t in_done: 1;
+            uint32_t in_err_eof: 1;
+            uint32_t in_suc_eof: 1;
+            uint32_t out_done: 1;
+            uint32_t out_eof: 1;
+            uint32_t out_total_eof: 1;
+            uint32_t reserved9: 23;
+        };
+        uint32_t val;
+    } dma_int_ena;
+    union {
+        struct {
+            uint32_t inlink_dscr_empty: 1;
+            uint32_t outlink_dscr_error: 1;
+            uint32_t inlink_dscr_error: 1;
+            uint32_t in_done: 1;
+            uint32_t in_err_eof: 1;
+            uint32_t in_suc_eof: 1;
+            uint32_t out_done: 1;
+            uint32_t out_eof: 1;
+            uint32_t out_total_eof: 1;
+            uint32_t reserved9: 23;
+        };
+        uint32_t val;
+    } dma_int_raw;
+    union {
+        struct {
+            uint32_t inlink_dscr_empty: 1;
+            uint32_t outlink_dscr_error: 1;
+            uint32_t inlink_dscr_error: 1;
+            uint32_t in_done: 1;
+            uint32_t in_err_eof: 1;
+            uint32_t in_suc_eof: 1;
+            uint32_t out_done: 1;
+            uint32_t out_eof: 1;
+            uint32_t out_total_eof: 1;
+            uint32_t reserved9: 23;
+        };
+        uint32_t val;
+    } dma_int_st;
+    union {
+        struct {
+            uint32_t inlink_dscr_empty: 1;
+            uint32_t outlink_dscr_error: 1;
+            uint32_t inlink_dscr_error: 1;
+            uint32_t in_done: 1;
+            uint32_t in_err_eof: 1;
+            uint32_t in_suc_eof: 1;
+            uint32_t out_done: 1;
+            uint32_t out_eof: 1;
+            uint32_t out_total_eof: 1;
+            uint32_t reserved9: 23;
+        };
+        uint32_t val;
+    } dma_int_clr;
+    uint32_t dma_in_err_eof_des_addr;
+    uint32_t dma_in_suc_eof_des_addr;
+    uint32_t dma_inlink_dscr;
+    uint32_t dma_inlink_dscr_bf0;
+    uint32_t dma_inlink_dscr_bf1;
+    uint32_t dma_out_eof_bfr_des_addr;
+    uint32_t dma_out_eof_des_addr;
+    uint32_t dma_outlink_dscr;
+    uint32_t dma_outlink_dscr_bf0;
+    uint32_t dma_outlink_dscr_bf1;
+    uint32_t dma_rx_status;
+    uint32_t dma_tx_status;
+    uint32_t reserved_150;
+    uint32_t reserved_154;
+    uint32_t reserved_158;
+    uint32_t reserved_15c;
+    uint32_t reserved_160;
+    uint32_t reserved_164;
+    uint32_t reserved_168;
+    uint32_t reserved_16c;
+    uint32_t reserved_170;
+    uint32_t reserved_174;
+    uint32_t reserved_178;
+    uint32_t reserved_17c;
+    uint32_t reserved_180;
+    uint32_t reserved_184;
+    uint32_t reserved_188;
+    uint32_t reserved_18c;
+    uint32_t reserved_190;
+    uint32_t reserved_194;
+    uint32_t reserved_198;
+    uint32_t reserved_19c;
+    uint32_t reserved_1a0;
+    uint32_t reserved_1a4;
+    uint32_t reserved_1a8;
+    uint32_t reserved_1ac;
+    uint32_t reserved_1b0;
+    uint32_t reserved_1b4;
+    uint32_t reserved_1b8;
+    uint32_t reserved_1bc;
+    uint32_t reserved_1c0;
+    uint32_t reserved_1c4;
+    uint32_t reserved_1c8;
+    uint32_t reserved_1cc;
+    uint32_t reserved_1d0;
+    uint32_t reserved_1d4;
+    uint32_t reserved_1d8;
+    uint32_t reserved_1dc;
+    uint32_t reserved_1e0;
+    uint32_t reserved_1e4;
+    uint32_t reserved_1e8;
+    uint32_t reserved_1ec;
+    uint32_t reserved_1f0;
+    uint32_t reserved_1f4;
+    uint32_t reserved_1f8;
+    uint32_t reserved_1fc;
+    uint32_t reserved_200;
+    uint32_t reserved_204;
+    uint32_t reserved_208;
+    uint32_t reserved_20c;
+    uint32_t reserved_210;
+    uint32_t reserved_214;
+    uint32_t reserved_218;
+    uint32_t reserved_21c;
+    uint32_t reserved_220;
+    uint32_t reserved_224;
+    uint32_t reserved_228;
+    uint32_t reserved_22c;
+    uint32_t reserved_230;
+    uint32_t reserved_234;
+    uint32_t reserved_238;
+    uint32_t reserved_23c;
+    uint32_t reserved_240;
+    uint32_t reserved_244;
+    uint32_t reserved_248;
+    uint32_t reserved_24c;
+    uint32_t reserved_250;
+    uint32_t reserved_254;
+    uint32_t reserved_258;
+    uint32_t reserved_25c;
+    uint32_t reserved_260;
+    uint32_t reserved_264;
+    uint32_t reserved_268;
+    uint32_t reserved_26c;
+    uint32_t reserved_270;
+    uint32_t reserved_274;
+    uint32_t reserved_278;
+    uint32_t reserved_27c;
+    uint32_t reserved_280;
+    uint32_t reserved_284;
+    uint32_t reserved_288;
+    uint32_t reserved_28c;
+    uint32_t reserved_290;
+    uint32_t reserved_294;
+    uint32_t reserved_298;
+    uint32_t reserved_29c;
+    uint32_t reserved_2a0;
+    uint32_t reserved_2a4;
+    uint32_t reserved_2a8;
+    uint32_t reserved_2ac;
+    uint32_t reserved_2b0;
+    uint32_t reserved_2b4;
+    uint32_t reserved_2b8;
+    uint32_t reserved_2bc;
+    uint32_t reserved_2c0;
+    uint32_t reserved_2c4;
+    uint32_t reserved_2c8;
+    uint32_t reserved_2cc;
+    uint32_t reserved_2d0;
+    uint32_t reserved_2d4;
+    uint32_t reserved_2d8;
+    uint32_t reserved_2dc;
+    uint32_t reserved_2e0;
+    uint32_t reserved_2e4;
+    uint32_t reserved_2e8;
+    uint32_t reserved_2ec;
+    uint32_t reserved_2f0;
+    uint32_t reserved_2f4;
+    uint32_t reserved_2f8;
+    uint32_t reserved_2fc;
+    uint32_t reserved_300;
+    uint32_t reserved_304;
+    uint32_t reserved_308;
+    uint32_t reserved_30c;
+    uint32_t reserved_310;
+    uint32_t reserved_314;
+    uint32_t reserved_318;
+    uint32_t reserved_31c;
+    uint32_t reserved_320;
+    uint32_t reserved_324;
+    uint32_t reserved_328;
+    uint32_t reserved_32c;
+    uint32_t reserved_330;
+    uint32_t reserved_334;
+    uint32_t reserved_338;
+    uint32_t reserved_33c;
+    uint32_t reserved_340;
+    uint32_t reserved_344;
+    uint32_t reserved_348;
+    uint32_t reserved_34c;
+    uint32_t reserved_350;
+    uint32_t reserved_354;
+    uint32_t reserved_358;
+    uint32_t reserved_35c;
+    uint32_t reserved_360;
+    uint32_t reserved_364;
+    uint32_t reserved_368;
+    uint32_t reserved_36c;
+    uint32_t reserved_370;
+    uint32_t reserved_374;
+    uint32_t reserved_378;
+    uint32_t reserved_37c;
+    uint32_t reserved_380;
+    uint32_t reserved_384;
+    uint32_t reserved_388;
+    uint32_t reserved_38c;
+    uint32_t reserved_390;
+    uint32_t reserved_394;
+    uint32_t reserved_398;
+    uint32_t reserved_39c;
+    uint32_t reserved_3a0;
+    uint32_t reserved_3a4;
+    uint32_t reserved_3a8;
+    uint32_t reserved_3ac;
+    uint32_t reserved_3b0;
+    uint32_t reserved_3b4;
+    uint32_t reserved_3b8;
+    uint32_t reserved_3bc;
+    uint32_t reserved_3c0;
+    uint32_t reserved_3c4;
+    uint32_t reserved_3c8;
+    uint32_t reserved_3cc;
+    uint32_t reserved_3d0;
+    uint32_t reserved_3d4;
+    uint32_t reserved_3d8;
+    uint32_t reserved_3dc;
+    uint32_t reserved_3e0;
+    uint32_t reserved_3e4;
+    uint32_t reserved_3e8;
+    uint32_t reserved_3ec;
+    uint32_t reserved_3f0;
+    uint32_t reserved_3f4;
+    uint32_t reserved_3f8;
+    union {
+        struct {
+            uint32_t date: 28;
+            uint32_t reserved28: 4;
+        };
+        uint32_t val;
+    } date;
+} spi_dev_t;
+extern spi_dev_t SPI0;
+extern spi_dev_t SPI1;
+extern spi_dev_t SPI2;
+extern spi_dev_t SPI3;
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/spi_periph.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h" 1
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/spi_periph.h" 2
+# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/spi_periph.h"
+typedef struct {
+    const uint8_t spiclk_out;
+    const uint8_t spiclk_in;
+    const uint8_t spid_out;
+    const uint8_t spiq_out;
+    const uint8_t spiwp_out;
+    const uint8_t spihd_out;
+    const uint8_t spid_in;
+    const uint8_t spiq_in;
+    const uint8_t spiwp_in;
+    const uint8_t spihd_in;
+    const uint8_t spics_out[3];
+    const uint8_t spics_in;
+    const uint8_t spiclk_iomux_pin;
+    const uint8_t spid_iomux_pin;
+    const uint8_t spiq_iomux_pin;
+    const uint8_t spiwp_iomux_pin;
+    const uint8_t spihd_iomux_pin;
+    const uint8_t spics0_iomux_pin;
+    const uint8_t irq;
+    const uint8_t irq_dma;
+    const periph_module_t module;
+    spi_dev_t *hw;
+} spi_signal_conn_t;
+
+extern const spi_signal_conn_t spi_periph_signal[3];
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 2
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 2
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+typedef enum {
+    SPI_HOST=0,
+    HSPI_HOST=1,
+    VSPI_HOST=2
+} spi_host_device_t;
+# 82 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+typedef struct {
+    int mosi_io_num;
+    int miso_io_num;
+    int sclk_io_num;
+    int quadwp_io_num;
+    int quadhd_io_num;
+    int max_transfer_sz;
+    uint32_t flags;
+    int intr_flags;
+
+
+
+
+} spi_bus_config_t;
+# 108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+
+# 108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
+_Bool 
+# 108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+    spicommon_periph_claim(spi_host_device_t host, const char* source);
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
+_Bool 
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+    spicommon_periph_in_use(spi_host_device_t host);
+
+
+
+
+
+
+
+
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
+_Bool 
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+    spicommon_periph_free(spi_host_device_t host);
+# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+
+# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
+_Bool 
+# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+    spicommon_dma_chan_claim(int dma_chan);
+# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+
+# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
+_Bool 
+# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+    spicommon_dma_chan_in_use(int dma_chan);
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
+_Bool 
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+    spicommon_dma_chan_free(int dma_chan);
+# 209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+esp_err_t spicommon_bus_initialize_io(spi_host_device_t host, const spi_bus_config_t *bus_config, int dma_chan, uint32_t flags, uint32_t *flags_o);
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+esp_err_t spicommon_bus_free_io(spi_host_device_t host) __attribute__((deprecated));
+# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+esp_err_t spicommon_bus_free_io_cfg(const spi_bus_config_t *bus_cfg);
+# 245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+void spicommon_cs_initialize(spi_host_device_t host, int cs_io_num, int cs_num, int force_gpio_matrix);
+# 254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+void spicommon_cs_free(spi_host_device_t host, int cs_num) __attribute__((deprecated));
+
+
+
+
+
+
+void spicommon_cs_free_io(int cs_gpio_num);
+# 277 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+void spicommon_setup_dma_desc_links(lldesc_t *dmadesc, int len, const uint8_t *data, 
+# 277 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
+                                                                                    _Bool 
+# 277 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+                                                                                         isrx);
+# 286 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+spi_dev_t *spicommon_hw_for_host(spi_host_device_t host);
+# 295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+int spicommon_irqsource_for_host(spi_host_device_t host);
+
+
+
+
+typedef void(*dmaworkaround_cb_t)(void *arg);
+# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+
+# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
+_Bool 
+# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+    spicommon_dmaworkaround_req_reset(int dmachan, dmaworkaround_cb_t cb, void *arg);
+
+
+
+
+
+
+
+
+# 331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
+_Bool 
+# 331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+    spicommon_dmaworkaround_reset_in_progress();
+# 340 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+void spicommon_dmaworkaround_idle(int dmachan);
+
+
+
+
+
+
+
+void spicommon_dmaworkaround_transfer_active(int dmachan);
+# 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c" 2
+# 65 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c"
 typedef enum {
     SLOW_CLK_150K = RTC_SLOW_FREQ_RTC,
     SLOW_CLK_32K_XTAL = RTC_SLOW_FREQ_32K_XTAL,
@@ -3205,25 +4101,25 @@ void esp_clk_init(void)
 {
     rtc_config_t cfg = { .ck8m_wait = 20, .xtal_wait = 20, .pll_wait = 20, .clkctl_init = 1, .pwrctl_init = 1, .rtc_dboost_fpd = 1 };
     rtc_init(cfg);
-# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c"
-    ((rtc_clk_xtal_freq_get() != RTC_XTAL_FREQ_AUTO) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c", 88, __func__, "rtc_clk_xtal_freq_get() != RTC_XTAL_FREQ_AUTO"));
+# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c"
+    ((rtc_clk_xtal_freq_get() != RTC_XTAL_FREQ_AUTO) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c", 100, __func__, "rtc_clk_xtal_freq_get() != RTC_XTAL_FREQ_AUTO"));
 
 
     rtc_clk_fast_freq_set(RTC_FAST_FREQ_8M);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c"
+# 124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c"
     select_rtc_slow_clk(RTC_SLOW_FREQ_RTC);
-# 123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c"
+# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c"
     rtc_cpu_freq_config_t old_config, new_config;
     rtc_clk_cpu_freq_get_config(&old_config);
     const uint32_t old_freq_mhz = old_config.freq_mhz;
     const uint32_t new_freq_mhz = 160;
 
     
-# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c" 3 4
+# 140 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c" 3 4
    _Bool 
-# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c"
+# 140 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c"
         res = rtc_clk_cpu_freq_mhz_to_config(new_freq_mhz, &new_config);
-    ((res) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c", 129, __func__, "res"));
+    ((res) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c", 141, __func__, "res"));
 
 
 
@@ -3235,22 +4131,22 @@ void esp_clk_init(void)
     do { int __ccount = (int)(({ int __ccount; __asm__ __volatile__("rsr.ccount %0" : "=a"(__ccount)); __ccount; }) * new_freq_mhz / old_freq_mhz); __asm__ __volatile__("wsr.ccount %0" :: "a"(__ccount):"memory"); } while(0);
 }
 
-int __attribute__((section(".iram1"))) esp_clk_cpu_freq(void)
+int __attribute__((section(".iram1" "." "4"))) esp_clk_cpu_freq(void)
 {
     return g_ticks_per_us_pro * (1000000);
 }
 
-int __attribute__((section(".iram1"))) esp_clk_apb_freq(void)
+int __attribute__((section(".iram1" "." "5"))) esp_clk_apb_freq(void)
 {
     return ((g_ticks_per_us_pro) < (80) ? (g_ticks_per_us_pro) : (80)) * (1000000);
 }
 
-int __attribute__((section(".iram1"))) esp_clk_xtal_freq(void)
+int __attribute__((section(".iram1" "." "6"))) esp_clk_xtal_freq(void)
 {
     return rtc_clk_xtal_freq_get() * (1000000);
 }
 
-void __attribute__((section(".iram1"))) ets_update_cpu_frequency(uint32_t ticks_per_us)
+void __attribute__((section(".iram1" "." "7"))) ets_update_cpu_frequency(uint32_t ticks_per_us)
 {
 
     g_ticks_per_us_pro = ticks_per_us;
@@ -3263,6 +4159,11 @@ static void select_rtc_slow_clk(slow_clk_sel_t slow_clk)
 {
     rtc_slow_freq_t rtc_slow_freq = slow_clk & 0x3;
     uint32_t cal_val = 0;
+
+
+
+    int retry_32k_xtal = 1;
+
     do {
         if (rtc_slow_freq == RTC_SLOW_FREQ_32K_XTAL) {
 
@@ -3275,9 +4176,9 @@ static void select_rtc_slow_clk(slow_clk_sel_t slow_clk)
             do { if (3 >= ESP_LOG_DEBUG) { ets_printf( "D" " (%d) %s: " "waiting for 32k oscillator to start up" "\033[0m" "\n", esp_log_timestamp(), TAG); }} while(0);
             if (slow_clk == SLOW_CLK_32K_XTAL) {
                 rtc_clk_32k_enable(
-# 180 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c" 3 4
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c" 3 4
                                   1
-# 180 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c"
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c"
                                       );
             } else if (slow_clk == SLOW_CLK_32K_EXT_OSC) {
                 rtc_clk_32k_enable_external();
@@ -3286,19 +4187,22 @@ static void select_rtc_slow_clk(slow_clk_sel_t slow_clk)
             if (1024 > 0) {
                 cal_val = rtc_clk_cal(RTC_CAL_32K_XTAL, 1024);
                 if (cal_val == 0 || cal_val < 15000000L) {
+                    if (retry_32k_xtal-- > 0) {
+                        continue;
+                    }
                     do { if (3 >= ESP_LOG_WARN) { ets_printf("\033[0;" "33" "m" "W" " (%d) %s: " "32 kHz XTAL not found, switching to internal 150 kHz oscillator" "\033[0m" "\n", esp_log_timestamp(), TAG); }} while(0);
                     rtc_slow_freq = RTC_SLOW_FREQ_RTC;
                 }
             }
         } else if (rtc_slow_freq == RTC_SLOW_FREQ_8MD256) {
             rtc_clk_8m_enable(
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c" 3 4
+# 213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c" 3 4
                              1
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c"
+# 213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c"
                                  , 
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c" 3 4
+# 213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c" 3 4
                                    1
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c"
+# 213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c"
                                        );
         }
         rtc_clk_slow_freq_set(rtc_slow_freq);
@@ -3339,7 +4243,7 @@ void esp_perip_clk_init(void)
 
 
     rst_reas[0] = rtc_get_reset_reason(0);
-# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c"
+# 261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c"
     if ((rst_reas[0] >= TGWDT_CPU_RESET && rst_reas[0] <= RTCWDT_CPU_RESET)
 
 
@@ -3392,7 +4296,7 @@ void esp_perip_clk_init(void)
                         ((1UL << (18))) |
                         ((1UL << (21))) |
                         ((1UL << (22)));
-# 305 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c"
+# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/clk.c"
     (*((volatile uint32_t *)((((( 0x3ff4F000 + ((0)*0x1E000)) + 0x00ac)))))) = (uint32_t)(((DPORT_READ_PERI_REG((( 0x3ff4F000 + ((0)*0x1E000)) + 0x00ac))|(((1UL << (21)))))));
     (*((volatile uint32_t *)((((( 0x3ff4F000 + ((1)*0x1E000)) + 0x00ac)))))) = (uint32_t)(((DPORT_READ_PERI_REG((( 0x3ff4F000 + ((1)*0x1E000)) + 0x00ac))|(((1UL << (21)))))));
 

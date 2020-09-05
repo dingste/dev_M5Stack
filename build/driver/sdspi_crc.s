@@ -566,7 +566,7 @@ crc7_table:
 	.4byte	.LASF21
 	.4byte	.LASF21
 	.byte	0x5
-	.byte	0x5a
+	.byte	0x7b
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:

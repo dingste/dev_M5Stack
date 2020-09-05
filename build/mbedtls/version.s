@@ -3,7 +3,7 @@
 .Ltext0:
 	.section	.text.mbedtls_version_get_number,"ax",@progbits
 	.literal_position
-	.literal .LC0, 34406656
+	.literal .LC0, 34604288
 	.align	4
 	.global	mbedtls_version_get_number
 	.type	mbedtls_version_get_number, @function
@@ -20,7 +20,7 @@ mbedtls_version_get_number:
 	.size	mbedtls_version_get_number, .-mbedtls_version_get_number
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC1:
-	.string	"2.13.1"
+	.string	"2.16.5"
 	.section	.text.mbedtls_version_get_string,"ax",@progbits
 	.literal_position
 	.literal .LC2, .LC1
@@ -44,7 +44,7 @@ mbedtls_version_get_string:
 	.size	mbedtls_version_get_string, .-mbedtls_version_get_string
 	.section	.rodata.str1.1
 .LC3:
-	.string	"mbed TLS 2.13.1"
+	.string	"mbed TLS 2.16.5"
 	.section	.text.mbedtls_version_get_string_full,"ax",@progbits
 	.literal_position
 	.literal .LC4, .LC3

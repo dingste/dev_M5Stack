@@ -1,7 +1,7 @@
 	.file	"cpu_util.c"
 	.text
 .Ltext0:
-	.section	.iram1,"ax",@progbits
+	.section	.iram1.0,"ax",@progbits
 	.literal_position
 	.literal .LC0, 1072988332
 	.literal .LC1, -66060289
@@ -82,6 +82,7 @@ esp_cpu_stall:
 	retw.n
 .LFE5:
 	.size	esp_cpu_stall, .-esp_cpu_stall
+	.section	.iram1.1,"ax",@progbits
 	.literal_position
 	.literal .LC6, 1072988332
 	.literal .LC7, -66060289
@@ -130,6 +131,7 @@ esp_cpu_unstall:
 	retw.n
 .LFE6:
 	.size	esp_cpu_unstall, .-esp_cpu_unstall
+	.section	.iram1.2,"ax",@progbits
 	.literal_position
 	.literal .LC10, 1072988160
 	.align	4
@@ -156,6 +158,7 @@ esp_cpu_reset:
 	retw.n
 .LFE7:
 	.size	esp_cpu_reset, .-esp_cpu_reset
+	.section	.iram1.3,"ax",@progbits
 	.align	4
 	.global	esp_cpu_in_ocd_debug_mode
 	.type	esp_cpu_in_ocd_debug_mode, @function

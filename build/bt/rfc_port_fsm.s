@@ -7,7 +7,7 @@
 	.align	4
 	.type	rfc_set_port_state, @function
 rfc_set_port_state:
-.LFB47:
+.LFB56:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/rfcomm/rfc_port_fsm.c"
 	.loc 1 869 0
 .LVL0:
@@ -72,7 +72,7 @@ rfc_set_port_state:
 	s8i	a3, a2, 8
 .L1:
 	retw.n
-.LFE47:
+.LFE56:
 	.size	rfc_set_port_state, .-rfc_set_port_state
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC2:
@@ -123,7 +123,7 @@ rfc_set_port_state:
 	.global	rfc_port_sm_execute
 	.type	rfc_port_sm_execute, @function
 rfc_port_sm_execute:
-.LFB30:
+.LFB39:
 	.loc 1 64 0
 .LVL2:
 	entry	sp, 48
@@ -964,7 +964,7 @@ rfc_port_sm_execute:
 	retw.n
 .LBE29:
 .LBE28:
-.LFE30:
+.LFE39:
 	.size	rfc_port_sm_execute, .-rfc_port_sm_execute
 	.section	.rodata.str1.1
 .LC34:
@@ -978,7 +978,7 @@ rfc_port_sm_execute:
 	.global	rfc_process_pn
 	.type	rfc_process_pn, @function
 rfc_process_pn:
-.LFB38:
+.LFB47:
 	.loc 1 519 0
 .LVL121:
 	entry	sp, 32
@@ -1057,7 +1057,7 @@ rfc_process_pn:
 .LVL132:
 .L154:
 	retw.n
-.LFE38:
+.LFE47:
 	.size	rfc_process_pn, .-rfc_process_pn
 	.section	.text.rfc_process_rpn,"ax",@progbits
 	.literal_position
@@ -1068,7 +1068,7 @@ rfc_process_pn:
 	.global	rfc_process_rpn
 	.type	rfc_process_rpn, @function
 rfc_process_rpn:
-.LFB39:
+.LFB48:
 	.loc 1 560 0
 .LVL133:
 	entry	sp, 48
@@ -1276,14 +1276,14 @@ rfc_process_rpn:
 .LVL155:
 .L166:
 	retw.n
-.LFE39:
+.LFE48:
 	.size	rfc_process_rpn, .-rfc_process_rpn
 	.section	.text.rfc_process_msc,"ax",@progbits
 	.align	4
 	.global	rfc_process_msc
 	.type	rfc_process_msc, @function
 rfc_process_msc:
-.LFB40:
+.LFB49:
 	.loc 1 666 0
 .LVL156:
 	entry	sp, 48
@@ -1420,14 +1420,14 @@ rfc_process_msc:
 .LVL169:
 .L200:
 	retw.n
-.LFE40:
+.LFE49:
 	.size	rfc_process_msc, .-rfc_process_msc
 	.section	.text.rfc_process_rls,"ax",@progbits
 	.align	4
 	.global	rfc_process_rls
 	.type	rfc_process_rls, @function
 rfc_process_rls:
-.LFB41:
+.LFB50:
 	.loc 1 742 0
 .LVL170:
 	entry	sp, 32
@@ -1471,27 +1471,27 @@ rfc_process_rls:
 .LVL176:
 .L230:
 	retw.n
-.LFE41:
+.LFE50:
 	.size	rfc_process_rls, .-rfc_process_rls
 	.section	.text.rfc_process_nsc,"ax",@progbits
 	.align	4
 	.global	rfc_process_nsc
 	.type	rfc_process_nsc, @function
 rfc_process_nsc:
-.LFB42:
+.LFB51:
 	.loc 1 771 0
 .LVL177:
 	entry	sp, 32
 .LCFI6:
 	retw.n
-.LFE42:
+.LFE51:
 	.size	rfc_process_nsc, .-rfc_process_nsc
 	.section	.text.rfc_process_test_rsp,"ax",@progbits
 	.align	4
 	.global	rfc_process_test_rsp
 	.type	rfc_process_test_rsp, @function
 rfc_process_test_rsp:
-.LFB43:
+.LFB52:
 	.loc 1 786 0
 .LVL178:
 	.loc 1 786 0
@@ -1502,7 +1502,7 @@ rfc_process_test_rsp:
 	call8	free
 .LVL179:
 	retw.n
-.LFE43:
+.LFE52:
 	.size	rfc_process_test_rsp, .-rfc_process_test_rsp
 	.section	.text.rfc_process_fcon,"ax",@progbits
 	.literal_position
@@ -1511,7 +1511,7 @@ rfc_process_test_rsp:
 	.global	rfc_process_fcon
 	.type	rfc_process_fcon, @function
 rfc_process_fcon:
-.LFB44:
+.LFB53:
 	.loc 1 802 0
 .LVL180:
 	entry	sp, 32
@@ -1542,7 +1542,7 @@ rfc_process_fcon:
 .LVL182:
 .L241:
 	retw.n
-.LFE44:
+.LFE53:
 	.size	rfc_process_fcon, .-rfc_process_fcon
 	.section	.text.rfc_process_fcoff,"ax",@progbits
 	.literal_position
@@ -1551,7 +1551,7 @@ rfc_process_fcon:
 	.global	rfc_process_fcoff
 	.type	rfc_process_fcoff, @function
 rfc_process_fcoff:
-.LFB45:
+.LFB54:
 	.loc 1 823 0
 .LVL183:
 	entry	sp, 32
@@ -1583,7 +1583,7 @@ rfc_process_fcoff:
 .LVL185:
 .L245:
 	retw.n
-.LFE45:
+.LFE54:
 	.size	rfc_process_fcoff, .-rfc_process_fcoff
 	.section	.text.rfc_process_l2cap_congestion,"ax",@progbits
 	.literal_position
@@ -1592,7 +1592,7 @@ rfc_process_fcoff:
 	.global	rfc_process_l2cap_congestion
 	.type	rfc_process_l2cap_congestion, @function
 rfc_process_l2cap_congestion:
-.LFB46:
+.LFB55:
 	.loc 1 844 0
 .LVL186:
 	entry	sp, 32
@@ -1629,7 +1629,7 @@ rfc_process_l2cap_congestion:
 .LVL188:
 .L251:
 	retw.n
-.LFE46:
+.LFE55:
 	.size	rfc_process_l2cap_congestion, .-rfc_process_l2cap_congestion
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -1650,10 +1650,10 @@ rfc_process_l2cap_congestion:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.byte	0x4
-	.4byte	.LCFI0-.LFB47
+	.4byte	.LCFI0-.LFB56
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1662,10 +1662,10 @@ rfc_process_l2cap_congestion:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI1-.LFB30
+	.4byte	.LCFI1-.LFB39
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1674,10 +1674,10 @@ rfc_process_l2cap_congestion:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI2-.LFB38
+	.4byte	.LCFI2-.LFB47
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1686,10 +1686,10 @@ rfc_process_l2cap_congestion:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI3-.LFB39
+	.4byte	.LCFI3-.LFB48
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1698,10 +1698,10 @@ rfc_process_l2cap_congestion:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.byte	0x4
-	.4byte	.LCFI4-.LFB40
+	.4byte	.LCFI4-.LFB49
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1710,10 +1710,10 @@ rfc_process_l2cap_congestion:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.byte	0x4
-	.4byte	.LCFI5-.LFB41
+	.4byte	.LCFI5-.LFB50
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1722,10 +1722,10 @@ rfc_process_l2cap_congestion:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.byte	0x4
-	.4byte	.LCFI6-.LFB42
+	.4byte	.LCFI6-.LFB51
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1734,10 +1734,10 @@ rfc_process_l2cap_congestion:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.byte	0x4
-	.4byte	.LCFI7-.LFB43
+	.4byte	.LCFI7-.LFB52
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1746,10 +1746,10 @@ rfc_process_l2cap_congestion:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.byte	0x4
-	.4byte	.LCFI8-.LFB44
+	.4byte	.LCFI8-.LFB53
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1758,10 +1758,10 @@ rfc_process_l2cap_congestion:
 	.4byte	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.4byte	.Lframe0
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.byte	0x4
-	.4byte	.LCFI9-.LFB45
+	.4byte	.LCFI9-.LFB54
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1770,10 +1770,10 @@ rfc_process_l2cap_congestion:
 	.4byte	.LEFDE20-.LASFDE20
 .LASFDE20:
 	.4byte	.Lframe0
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.byte	0x4
-	.4byte	.LCFI10-.LFB46
+	.4byte	.LCFI10-.LFB55
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1787,7 +1787,7 @@ rfc_process_l2cap_congestion:
 	.file 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/hcidefs.h"
 	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_api.h"
-	.file 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/fixed_queue.h"
+	.file 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/fixed_queue.h"
 	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/port_api.h"
 	.file 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/rfcomm/include/port_int.h"
 	.file 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/l2c_api.h"
@@ -1898,250 +1898,250 @@ rfc_process_l2cap_congestion:
 	.byte	0x3
 	.byte	0x2d
 	.4byte	0x70
-	.uleb128 0x4
-	.4byte	.LASF19
-	.byte	0x4
-	.byte	0x21
-	.4byte	0xa7
-	.uleb128 0x4
-	.4byte	.LASF20
-	.byte	0x4
-	.byte	0x22
-	.4byte	0xb2
-	.uleb128 0x4
-	.4byte	.LASF21
-	.byte	0x4
-	.byte	0x23
-	.4byte	0xc8
-	.uleb128 0x4
-	.4byte	.LASF22
-	.byte	0x4
-	.byte	0x28
-	.4byte	0xbd
-	.uleb128 0x4
-	.4byte	.LASF23
-	.byte	0x4
-	.byte	0x29
-	.4byte	0x10a
-	.uleb128 0x3
-	.byte	0x1
-	.byte	0x2
-	.4byte	.LASF24
 	.uleb128 0x6
-	.byte	0x8
-	.byte	0x4
-	.byte	0xc6
-	.4byte	0x156
+	.4byte	0xde
 	.uleb128 0x7
-	.4byte	.LASF25
-	.byte	0x4
-	.byte	0xc7
-	.4byte	0xb2
-	.byte	0
-	.uleb128 0x8
-	.string	"len"
-	.byte	0x4
-	.byte	0xc8
-	.4byte	0xb2
-	.byte	0x2
-	.uleb128 0x7
-	.4byte	.LASF26
-	.byte	0x4
-	.byte	0xc9
-	.4byte	0xb2
-	.byte	0x4
-	.uleb128 0x7
-	.4byte	.LASF27
-	.byte	0x4
-	.byte	0xca
-	.4byte	0xb2
-	.byte	0x6
-	.uleb128 0x7
-	.4byte	.LASF28
-	.byte	0x4
-	.byte	0xcb
-	.4byte	0x156
-	.byte	0x8
-	.byte	0
-	.uleb128 0x9
-	.4byte	0xa7
-	.4byte	0x165
-	.uleb128 0xa
-	.4byte	0x90
-	.byte	0
-	.uleb128 0x4
-	.4byte	.LASF29
-	.byte	0x4
-	.byte	0xcc
-	.4byte	0x111
-	.uleb128 0xb
-	.4byte	.LASF30
-	.byte	0x4
-	.2byte	0x132
-	.4byte	0x17c
-	.uleb128 0x9
-	.4byte	0xd3
-	.4byte	0x18c
-	.uleb128 0xc
-	.4byte	0x90
-	.byte	0x5
-	.byte	0
-	.uleb128 0xd
-	.byte	0x4
-	.4byte	0xd3
-	.uleb128 0xe
-	.byte	0x18
-	.byte	0x4
-	.2byte	0x16c
-	.4byte	0x1f7
-	.uleb128 0xf
-	.4byte	.LASF31
-	.byte	0x4
-	.2byte	0x16d
-	.4byte	0xd3
-	.byte	0
-	.uleb128 0xf
-	.4byte	.LASF32
-	.byte	0x4
-	.2byte	0x16e
-	.4byte	0xd3
-	.byte	0x1
-	.uleb128 0xf
-	.4byte	.LASF33
-	.byte	0x4
-	.2byte	0x16f
-	.4byte	0xe9
-	.byte	0x4
-	.uleb128 0xf
-	.4byte	.LASF34
-	.byte	0x4
-	.2byte	0x170
-	.4byte	0xe9
-	.byte	0x8
-	.uleb128 0xf
-	.4byte	.LASF35
-	.byte	0x4
-	.2byte	0x171
-	.4byte	0xe9
-	.byte	0xc
-	.uleb128 0xf
-	.4byte	.LASF36
-	.byte	0x4
-	.2byte	0x172
-	.4byte	0xe9
-	.byte	0x10
-	.uleb128 0xf
-	.4byte	.LASF37
-	.byte	0x4
-	.2byte	0x173
-	.4byte	0xe9
-	.byte	0x14
-	.byte	0
-	.uleb128 0xb
-	.4byte	.LASF38
-	.byte	0x4
-	.2byte	0x174
-	.4byte	0x192
-	.uleb128 0x10
-	.4byte	0x20e
-	.uleb128 0x11
 	.4byte	0x97
 	.byte	0
-	.uleb128 0x12
+	.uleb128 0x8
 	.byte	0x4
 	.4byte	0x2c
 	.byte	0x7
 	.byte	0x1f
-	.4byte	0x23f
+	.4byte	0x10f
+	.uleb128 0x9
+	.4byte	.LASF19
+	.byte	0
+	.uleb128 0x9
+	.4byte	.LASF20
+	.byte	0x1
+	.uleb128 0x9
+	.4byte	.LASF21
+	.byte	0x2
+	.uleb128 0x9
+	.4byte	.LASF22
+	.byte	0x3
+	.uleb128 0x9
+	.4byte	.LASF23
+	.byte	0x4
+	.uleb128 0x9
+	.4byte	.LASF24
+	.byte	0x5
+	.byte	0
+	.uleb128 0x4
+	.4byte	.LASF25
+	.byte	0x4
+	.byte	0x1a
+	.4byte	0xa7
+	.uleb128 0x4
+	.4byte	.LASF26
+	.byte	0x4
+	.byte	0x1b
+	.4byte	0xb2
+	.uleb128 0x4
+	.4byte	.LASF27
+	.byte	0x4
+	.byte	0x1c
+	.4byte	0xc8
+	.uleb128 0x4
+	.4byte	.LASF28
+	.byte	0x4
+	.byte	0x21
+	.4byte	0xbd
+	.uleb128 0x4
+	.4byte	.LASF29
+	.byte	0x4
+	.byte	0x22
+	.4byte	0x146
+	.uleb128 0x3
+	.byte	0x1
+	.byte	0x2
+	.4byte	.LASF30
+	.uleb128 0xa
+	.byte	0x8
+	.byte	0x4
+	.byte	0xbf
+	.4byte	0x192
+	.uleb128 0xb
+	.4byte	.LASF31
+	.byte	0x4
+	.byte	0xc0
+	.4byte	0xb2
+	.byte	0
+	.uleb128 0xc
+	.string	"len"
+	.byte	0x4
+	.byte	0xc1
+	.4byte	0xb2
+	.byte	0x2
+	.uleb128 0xb
+	.4byte	.LASF32
+	.byte	0x4
+	.byte	0xc2
+	.4byte	0xb2
+	.byte	0x4
+	.uleb128 0xb
+	.4byte	.LASF33
+	.byte	0x4
+	.byte	0xc3
+	.4byte	0xb2
+	.byte	0x6
+	.uleb128 0xb
+	.4byte	.LASF34
+	.byte	0x4
+	.byte	0xc4
+	.4byte	0x192
+	.byte	0x8
+	.byte	0
+	.uleb128 0xd
+	.4byte	0xa7
+	.4byte	0x1a1
+	.uleb128 0xe
+	.4byte	0x90
+	.byte	0
+	.uleb128 0x4
+	.4byte	.LASF35
+	.byte	0x4
+	.byte	0xc5
+	.4byte	0x14d
+	.uleb128 0xf
+	.4byte	.LASF36
+	.byte	0x4
+	.2byte	0x12b
+	.4byte	0x1b8
+	.uleb128 0xd
+	.4byte	0x10f
+	.4byte	0x1c8
+	.uleb128 0x10
+	.4byte	0x90
+	.byte	0x5
+	.byte	0
+	.uleb128 0x11
+	.byte	0x4
+	.4byte	0x10f
+	.uleb128 0x12
+	.byte	0x18
+	.byte	0x4
+	.2byte	0x165
+	.4byte	0x233
 	.uleb128 0x13
-	.4byte	.LASF39
+	.4byte	.LASF37
+	.byte	0x4
+	.2byte	0x166
+	.4byte	0x10f
 	.byte	0
 	.uleb128 0x13
-	.4byte	.LASF40
+	.4byte	.LASF38
+	.byte	0x4
+	.2byte	0x167
+	.4byte	0x10f
 	.byte	0x1
 	.uleb128 0x13
+	.4byte	.LASF39
+	.byte	0x4
+	.2byte	0x168
+	.4byte	0x125
+	.byte	0x4
+	.uleb128 0x13
+	.4byte	.LASF40
+	.byte	0x4
+	.2byte	0x169
+	.4byte	0x125
+	.byte	0x8
+	.uleb128 0x13
 	.4byte	.LASF41
-	.byte	0x2
+	.byte	0x4
+	.2byte	0x16a
+	.4byte	0x125
+	.byte	0xc
 	.uleb128 0x13
 	.4byte	.LASF42
-	.byte	0x3
+	.byte	0x4
+	.2byte	0x16b
+	.4byte	0x125
+	.byte	0x10
 	.uleb128 0x13
 	.4byte	.LASF43
 	.byte	0x4
-	.uleb128 0x13
-	.4byte	.LASF44
-	.byte	0x5
+	.2byte	0x16c
+	.4byte	0x125
+	.byte	0x14
 	.byte	0
+	.uleb128 0xf
+	.4byte	.LASF44
+	.byte	0x4
+	.2byte	0x16d
+	.4byte	0x1ce
 	.uleb128 0x4
 	.4byte	.LASF45
 	.byte	0x5
 	.byte	0x20
-	.4byte	0x203
+	.4byte	0xd3
 	.uleb128 0x14
 	.4byte	.LASF129
 	.byte	0x20
 	.byte	0x5
 	.byte	0x21
 	.4byte	0x2c3
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF46
 	.byte	0x5
 	.byte	0x22
 	.4byte	0x2c3
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF47
 	.byte	0x5
 	.byte	0x23
 	.4byte	0x2c3
 	.byte	0x4
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF48
 	.byte	0x5
 	.byte	0x24
 	.4byte	0x2c9
 	.byte	0x8
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF49
 	.byte	0x5
 	.byte	0x25
-	.4byte	0xf4
+	.4byte	0x130
 	.byte	0xc
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF50
 	.byte	0x5
 	.byte	0x26
-	.4byte	0xf4
+	.4byte	0x130
 	.byte	0x10
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF51
 	.byte	0x5
 	.byte	0x27
-	.4byte	0xe9
+	.4byte	0x125
 	.byte	0x14
-	.uleb128 0x7
-	.4byte	.LASF28
+	.uleb128 0xb
+	.4byte	.LASF34
 	.byte	0x5
 	.byte	0x28
-	.4byte	0xe9
+	.4byte	0x125
 	.byte	0x18
-	.uleb128 0x7
-	.4byte	.LASF25
+	.uleb128 0xb
+	.4byte	.LASF31
 	.byte	0x5
 	.byte	0x29
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x1c
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF52
 	.byte	0x5
 	.byte	0x2a
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x1e
 	.byte	0
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0x24a
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0x23f
 	.uleb128 0x4
@@ -2149,7 +2149,7 @@ rfc_process_l2cap_congestion:
 	.byte	0x5
 	.byte	0x2b
 	.4byte	0x24a
-	.uleb128 0xe
+	.uleb128 0x12
 	.byte	0x10
 	.byte	0x6
 	.2byte	0x56c
@@ -2158,140 +2158,140 @@ rfc_process_l2cap_congestion:
 	.string	"id"
 	.byte	0x6
 	.2byte	0x56d
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0
-	.uleb128 0xf
+	.uleb128 0x13
 	.4byte	.LASF54
 	.byte	0x6
 	.2byte	0x56e
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x1
-	.uleb128 0xf
+	.uleb128 0x13
 	.4byte	.LASF55
 	.byte	0x6
 	.2byte	0x56f
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x2
-	.uleb128 0xf
+	.uleb128 0x13
 	.4byte	.LASF56
 	.byte	0x6
 	.2byte	0x570
-	.4byte	0xe9
+	.4byte	0x125
 	.byte	0x4
-	.uleb128 0xf
+	.uleb128 0x13
 	.4byte	.LASF57
 	.byte	0x6
 	.2byte	0x571
-	.4byte	0xe9
+	.4byte	0x125
 	.byte	0x8
-	.uleb128 0xf
+	.uleb128 0x13
 	.4byte	.LASF58
 	.byte	0x6
 	.2byte	0x572
-	.4byte	0xe9
+	.4byte	0x125
 	.byte	0xc
 	.byte	0
-	.uleb128 0xb
+	.uleb128 0xf
 	.4byte	.LASF59
 	.byte	0x6
 	.2byte	0x573
 	.4byte	0x2da
-	.uleb128 0x10
+	.uleb128 0x6
 	.4byte	0x348
-	.uleb128 0x11
-	.4byte	0xde
+	.uleb128 0x7
+	.4byte	0x11a
 	.byte	0
-	.uleb128 0x12
+	.uleb128 0x8
 	.byte	0x4
 	.4byte	0x2c
 	.byte	0x8
 	.byte	0x31
 	.4byte	0x3f7
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF60
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF61
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF62
 	.byte	0x2
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF63
 	.byte	0x3
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF64
 	.byte	0x4
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF65
 	.byte	0x5
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF66
 	.byte	0x6
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF67
 	.byte	0x7
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF68
 	.byte	0x8
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF69
 	.byte	0x9
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF70
 	.byte	0xa
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF71
 	.byte	0xb
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF72
 	.byte	0xc
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF73
 	.byte	0xd
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF74
 	.byte	0xe
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF75
 	.byte	0xf
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF76
 	.byte	0x10
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF77
 	.byte	0x11
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF78
 	.byte	0x12
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF79
 	.byte	0x13
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF80
 	.byte	0x14
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF81
 	.byte	0x15
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF82
 	.byte	0x16
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF83
 	.byte	0x17
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF84
 	.byte	0x18
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF85
 	.byte	0x19
-	.uleb128 0x13
+	.uleb128 0x9
 	.4byte	.LASF86
 	.byte	0x1a
 	.byte	0
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
-	.4byte	0x165
+	.4byte	0x1a1
 	.uleb128 0x4
 	.4byte	.LASF87
 	.byte	0x9
@@ -2299,86 +2299,86 @@ rfc_process_l2cap_congestion:
 	.4byte	0x408
 	.uleb128 0x16
 	.4byte	.LASF87
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0x3fd
-	.uleb128 0x10
+	.uleb128 0x6
 	.4byte	0x41e
-	.uleb128 0x11
-	.4byte	0x18c
+	.uleb128 0x7
+	.4byte	0x1c8
 	.byte	0
-	.uleb128 0x9
-	.4byte	0xd3
+	.uleb128 0xd
+	.4byte	0x10f
 	.4byte	0x42e
-	.uleb128 0xc
+	.uleb128 0x10
 	.4byte	0x90
 	.byte	0x3d
 	.byte	0
-	.uleb128 0x10
-	.4byte	0x43e
-	.uleb128 0x11
-	.4byte	0xde
-	.uleb128 0x11
-	.4byte	0xde
-	.byte	0
 	.uleb128 0x6
+	.4byte	0x43e
+	.uleb128 0x7
+	.4byte	0x11a
+	.uleb128 0x7
+	.4byte	0x11a
+	.byte	0
+	.uleb128 0xa
 	.byte	0x9
 	.byte	0xa
 	.byte	0x25
 	.4byte	0x4b3
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF88
 	.byte	0xa
 	.byte	0x31
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF89
 	.byte	0xa
 	.byte	0x38
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x1
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF90
 	.byte	0xa
 	.byte	0x3c
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x2
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF91
 	.byte	0xa
 	.byte	0x40
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x3
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF92
 	.byte	0xa
 	.byte	0x47
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x4
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF93
 	.byte	0xa
 	.byte	0x51
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x5
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF94
 	.byte	0xa
 	.byte	0x53
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x6
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF95
 	.byte	0xa
 	.byte	0x56
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x7
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF96
 	.byte	0xa
 	.byte	0x59
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x8
 	.byte	0
 	.uleb128 0x4
@@ -2394,12 +2394,12 @@ rfc_process_l2cap_congestion:
 	.uleb128 0x17
 	.4byte	0x25
 	.4byte	0x4e2
-	.uleb128 0x11
-	.4byte	0xde
-	.uleb128 0x11
+	.uleb128 0x7
+	.4byte	0x11a
+	.uleb128 0x7
 	.4byte	0x97
-	.uleb128 0x11
-	.4byte	0xde
+	.uleb128 0x7
+	.4byte	0x11a
 	.byte	0
 	.uleb128 0x4
 	.4byte	.LASF99
@@ -2409,13 +2409,13 @@ rfc_process_l2cap_congestion:
 	.uleb128 0x17
 	.4byte	0x25
 	.4byte	0x50b
-	.uleb128 0x11
-	.4byte	0xde
-	.uleb128 0x11
-	.4byte	0x18c
-	.uleb128 0x11
-	.4byte	0xde
-	.uleb128 0x11
+	.uleb128 0x7
+	.4byte	0x11a
+	.uleb128 0x7
+	.4byte	0x1c8
+	.uleb128 0x7
+	.4byte	0x11a
+	.uleb128 0x7
 	.4byte	0x25
 	.byte	0
 	.uleb128 0x4
@@ -2423,50 +2423,50 @@ rfc_process_l2cap_congestion:
 	.byte	0xa
 	.byte	0x69
 	.4byte	0x516
-	.uleb128 0x10
-	.4byte	0x526
-	.uleb128 0x11
-	.4byte	0xe9
-	.uleb128 0x11
-	.4byte	0xde
-	.byte	0
 	.uleb128 0x6
+	.4byte	0x526
+	.uleb128 0x7
+	.4byte	0x125
+	.uleb128 0x7
+	.4byte	0x11a
+	.byte	0
+	.uleb128 0xa
 	.byte	0x10
 	.byte	0xb
 	.byte	0x37
 	.4byte	0x56b
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF101
 	.byte	0xb
 	.byte	0x38
 	.4byte	0x40d
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF102
 	.byte	0xb
 	.byte	0x39
-	.4byte	0xff
+	.4byte	0x13b
 	.byte	0x4
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF103
 	.byte	0xb
 	.byte	0x3a
-	.4byte	0xff
+	.4byte	0x13b
 	.byte	0x5
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF104
 	.byte	0xb
 	.byte	0x3b
-	.4byte	0xe9
+	.4byte	0x125
 	.byte	0x8
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF105
 	.byte	0xb
 	.byte	0x3c
 	.4byte	0x56b
 	.byte	0xc
 	.byte	0
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0x50b
 	.uleb128 0x4
@@ -2474,40 +2474,40 @@ rfc_process_l2cap_congestion:
 	.byte	0xb
 	.byte	0x3d
 	.4byte	0x526
-	.uleb128 0x6
+	.uleb128 0xa
 	.byte	0x5
 	.byte	0xb
 	.byte	0x42
 	.4byte	0x5c0
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF107
 	.byte	0xb
 	.byte	0x48
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF108
 	.byte	0xb
 	.byte	0x4a
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x1
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF109
 	.byte	0xb
 	.byte	0x4c
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x2
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF110
 	.byte	0xb
 	.byte	0x51
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x3
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"fc"
 	.byte	0xb
 	.byte	0x53
-	.4byte	0xff
+	.4byte	0x13b
 	.byte	0x4
 	.byte	0
 	.uleb128 0x4
@@ -2515,112 +2515,112 @@ rfc_process_l2cap_congestion:
 	.byte	0xb
 	.byte	0x54
 	.4byte	0x57c
-	.uleb128 0x6
+	.uleb128 0xa
 	.byte	0x7c
 	.byte	0xb
 	.byte	0x5a
 	.4byte	0x6a0
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"tle"
 	.byte	0xb
 	.byte	0x5b
 	.4byte	0x2cf
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF112
 	.byte	0xb
 	.byte	0x5c
 	.4byte	0x40d
 	.byte	0x20
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF113
 	.byte	0xb
 	.byte	0x5d
 	.4byte	0x41e
 	.byte	0x24
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF114
 	.byte	0xb
 	.byte	0x5f
-	.4byte	0x170
+	.4byte	0x1ac
 	.byte	0x62
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF115
 	.byte	0xb
 	.byte	0x60
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x68
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF116
 	.byte	0xb
 	.byte	0x61
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x6a
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF117
 	.byte	0xb
 	.byte	0x62
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x6c
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF118
 	.byte	0xb
 	.byte	0x63
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x6d
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF119
 	.byte	0xb
 	.byte	0x64
-	.4byte	0xff
+	.4byte	0x13b
 	.byte	0x6e
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF120
 	.byte	0xb
 	.byte	0x65
-	.4byte	0xff
+	.4byte	0x13b
 	.byte	0x6f
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF121
 	.byte	0xb
 	.byte	0x66
-	.4byte	0xff
+	.4byte	0x13b
 	.byte	0x70
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF122
 	.byte	0xb
 	.byte	0x67
-	.4byte	0xff
+	.4byte	0x13b
 	.byte	0x71
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF123
 	.byte	0xb
 	.byte	0x68
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x72
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF124
 	.byte	0xb
 	.byte	0x69
-	.4byte	0xff
+	.4byte	0x13b
 	.byte	0x73
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF125
 	.byte	0xb
 	.byte	0x6a
-	.4byte	0xff
+	.4byte	0x13b
 	.byte	0x74
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF126
 	.byte	0xb
 	.byte	0x6b
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x76
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF127
 	.byte	0xb
 	.byte	0x6c
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x78
 	.byte	0
 	.uleb128 0x4
@@ -2634,32 +2634,32 @@ rfc_process_l2cap_congestion:
 	.byte	0xb
 	.byte	0x73
 	.4byte	0x6e8
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF117
 	.byte	0xb
 	.byte	0x7a
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF131
 	.byte	0xb
 	.byte	0x82
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x1
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF132
 	.byte	0xb
 	.byte	0x84
 	.4byte	0x6e8
 	.byte	0x4
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"tle"
 	.byte	0xb
 	.byte	0x86
 	.4byte	0x2cf
 	.byte	0x8
 	.byte	0
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0x6a0
 	.uleb128 0x4
@@ -2673,215 +2673,215 @@ rfc_process_l2cap_congestion:
 	.byte	0xb
 	.byte	0x8e
 	.4byte	0x89c
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"inx"
 	.byte	0xb
 	.byte	0x8f
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF52
 	.byte	0xb
 	.byte	0x90
-	.4byte	0xff
+	.4byte	0x13b
 	.byte	0x1
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF117
 	.byte	0xb
 	.byte	0x97
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x2
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"scn"
 	.byte	0xb
 	.byte	0x99
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x3
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF135
 	.byte	0xb
 	.byte	0x9a
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x4
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF114
 	.byte	0xb
 	.byte	0x9c
-	.4byte	0x170
+	.4byte	0x1ac
 	.byte	0x6
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF136
 	.byte	0xb
 	.byte	0x9d
-	.4byte	0xff
+	.4byte	0x13b
 	.byte	0xc
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF137
 	.byte	0xb
 	.byte	0x9e
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0xd
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF138
 	.byte	0xb
 	.byte	0xa0
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0xe
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF139
 	.byte	0xb
 	.byte	0xa2
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0xf
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF140
 	.byte	0xb
 	.byte	0xa4
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x10
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"mtu"
 	.byte	0xb
 	.byte	0xa6
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x12
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF141
 	.byte	0xb
 	.byte	0xa7
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x14
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"tx"
 	.byte	0xb
 	.byte	0xa9
 	.4byte	0x571
 	.byte	0x18
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"rx"
 	.byte	0xb
 	.byte	0xaa
 	.4byte	0x571
 	.byte	0x28
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF142
 	.byte	0xb
 	.byte	0xac
 	.4byte	0x4b3
 	.byte	0x38
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF143
 	.byte	0xb
 	.byte	0xad
 	.4byte	0x4b3
 	.byte	0x41
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF144
 	.byte	0xb
 	.byte	0xaf
 	.4byte	0x5c0
 	.byte	0x4a
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF145
 	.byte	0xb
 	.byte	0xb0
 	.4byte	0x5c0
 	.byte	0x4f
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF146
 	.byte	0xb
 	.byte	0xb7
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x54
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF147
 	.byte	0xb
 	.byte	0xb9
-	.4byte	0xff
+	.4byte	0x13b
 	.byte	0x55
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"rfc"
 	.byte	0xb
 	.byte	0xbb
 	.4byte	0x6ee
 	.byte	0x58
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF148
 	.byte	0xb
 	.byte	0xbd
-	.4byte	0xe9
+	.4byte	0x125
 	.byte	0x80
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF105
 	.byte	0xb
 	.byte	0xbe
 	.4byte	0x56b
 	.byte	0x84
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF149
 	.byte	0xb
 	.byte	0xbf
 	.4byte	0x56b
 	.byte	0x88
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF150
 	.byte	0xb
 	.byte	0xc0
 	.4byte	0x89c
 	.byte	0x8c
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF151
 	.byte	0xb
 	.byte	0xc1
 	.4byte	0x8a2
 	.byte	0x90
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF152
 	.byte	0xb
 	.byte	0xc2
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x94
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF153
 	.byte	0xb
 	.byte	0xc3
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x96
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF154
 	.byte	0xb
 	.byte	0xc5
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x98
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF155
 	.byte	0xb
 	.byte	0xc6
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x9a
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF156
 	.byte	0xb
 	.byte	0xc7
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x9c
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF157
 	.byte	0xb
 	.byte	0xc8
-	.4byte	0xff
+	.4byte	0x13b
 	.byte	0x9e
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF158
 	.byte	0xb
 	.byte	0xca
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0xa0
 	.byte	0
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0x4be
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0x4e2
 	.uleb128 0x4
@@ -2894,7 +2894,7 @@ rfc_process_l2cap_congestion:
 	.byte	0xb
 	.byte	0xd1
 	.4byte	0x8d6
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF160
 	.byte	0xb
 	.byte	0xd2
@@ -2907,17 +2907,17 @@ rfc_process_l2cap_congestion:
 	.4byte	0x8e6
 	.2byte	0xa40
 	.byte	0
-	.uleb128 0x9
+	.uleb128 0xd
 	.4byte	0x8a8
 	.4byte	0x8e6
-	.uleb128 0xc
+	.uleb128 0x10
 	.4byte	0x90
 	.byte	0xf
 	.byte	0
-	.uleb128 0x9
+	.uleb128 0xd
 	.4byte	0x6a0
 	.4byte	0x8f6
-	.uleb128 0xc
+	.uleb128 0x10
 	.4byte	0x90
 	.byte	0x3
 	.byte	0
@@ -2926,46 +2926,46 @@ rfc_process_l2cap_congestion:
 	.byte	0xb
 	.byte	0xd4
 	.4byte	0x8b3
-	.uleb128 0x6
+	.uleb128 0xa
 	.byte	0xa
 	.byte	0xc
 	.byte	0x86
 	.4byte	0x952
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF163
 	.byte	0xc
 	.byte	0x8b
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF164
 	.byte	0xc
 	.byte	0x8d
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x1
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF165
 	.byte	0xc
 	.byte	0x8e
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x2
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF166
 	.byte	0xc
 	.byte	0x8f
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x4
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF167
 	.byte	0xc
 	.byte	0x90
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x6
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"mps"
 	.byte	0xc
 	.byte	0x91
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x8
 	.byte	0
 	.uleb128 0x4
@@ -2973,94 +2973,94 @@ rfc_process_l2cap_congestion:
 	.byte	0xc
 	.byte	0x92
 	.4byte	0x901
-	.uleb128 0x6
+	.uleb128 0xa
 	.byte	0x48
 	.byte	0xc
 	.byte	0x98
 	.4byte	0xa0e
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF169
 	.byte	0xc
 	.byte	0x99
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF170
 	.byte	0xc
 	.byte	0x9a
-	.4byte	0xff
+	.4byte	0x13b
 	.byte	0x2
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"mtu"
 	.byte	0xc
 	.byte	0x9b
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x4
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF171
 	.byte	0xc
 	.byte	0x9c
-	.4byte	0xff
+	.4byte	0x13b
 	.byte	0x6
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"qos"
 	.byte	0xc
 	.byte	0x9d
-	.4byte	0x1f7
+	.4byte	0x233
 	.byte	0x8
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF172
 	.byte	0xc
 	.byte	0x9e
-	.4byte	0xff
+	.4byte	0x13b
 	.byte	0x20
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF173
 	.byte	0xc
 	.byte	0x9f
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x22
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF174
 	.byte	0xc
 	.byte	0xa0
-	.4byte	0xff
+	.4byte	0x13b
 	.byte	0x24
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"fcr"
 	.byte	0xc
 	.byte	0xa1
 	.4byte	0x952
 	.byte	0x26
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF175
 	.byte	0xc
 	.byte	0xa2
-	.4byte	0xff
+	.4byte	0x13b
 	.byte	0x30
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"fcs"
 	.byte	0xc
 	.byte	0xa3
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x31
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF176
 	.byte	0xc
 	.byte	0xa4
-	.4byte	0xff
+	.4byte	0x13b
 	.byte	0x32
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF177
 	.byte	0xc
 	.byte	0xa5
 	.4byte	0x331
 	.byte	0x34
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF178
 	.byte	0xc
 	.byte	0xa6
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x44
 	.byte	0
 	.uleb128 0x4
@@ -3073,16 +3073,16 @@ rfc_process_l2cap_congestion:
 	.byte	0xc
 	.byte	0xc8
 	.4byte	0xa24
-	.uleb128 0x10
+	.uleb128 0x6
 	.4byte	0xa3e
-	.uleb128 0x11
-	.4byte	0x18c
-	.uleb128 0x11
-	.4byte	0xde
-	.uleb128 0x11
-	.4byte	0xde
-	.uleb128 0x11
-	.4byte	0xd3
+	.uleb128 0x7
+	.4byte	0x1c8
+	.uleb128 0x7
+	.4byte	0x11a
+	.uleb128 0x7
+	.4byte	0x11a
+	.uleb128 0x7
+	.4byte	0x10f
 	.byte	0
 	.uleb128 0x4
 	.4byte	.LASF181
@@ -3099,14 +3099,14 @@ rfc_process_l2cap_congestion:
 	.byte	0xc
 	.byte	0xdc
 	.4byte	0xa5f
-	.uleb128 0x10
+	.uleb128 0x6
 	.4byte	0xa6f
-	.uleb128 0x11
-	.4byte	0xde
-	.uleb128 0x11
+	.uleb128 0x7
+	.4byte	0x11a
+	.uleb128 0x7
 	.4byte	0xa6f
 	.byte	0
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0xa0e
 	.uleb128 0x4
@@ -3119,12 +3119,12 @@ rfc_process_l2cap_congestion:
 	.byte	0xc
 	.byte	0xea
 	.4byte	0xa8b
-	.uleb128 0x10
+	.uleb128 0x6
 	.4byte	0xa9b
-	.uleb128 0x11
-	.4byte	0xde
-	.uleb128 0x11
-	.4byte	0xff
+	.uleb128 0x7
+	.4byte	0x11a
+	.uleb128 0x7
+	.4byte	0x13b
 	.byte	0
 	.uleb128 0x4
 	.4byte	.LASF186
@@ -3141,347 +3141,347 @@ rfc_process_l2cap_congestion:
 	.byte	0xc
 	.byte	0xfe
 	.4byte	0xabc
-	.uleb128 0x10
+	.uleb128 0x6
 	.4byte	0xacc
-	.uleb128 0x11
-	.4byte	0xde
-	.uleb128 0x11
+	.uleb128 0x7
+	.4byte	0x11a
+	.uleb128 0x7
 	.4byte	0x3f7
 	.byte	0
-	.uleb128 0xb
+	.uleb128 0xf
 	.4byte	.LASF189
 	.byte	0xc
 	.2byte	0x114
 	.4byte	0xa8b
-	.uleb128 0xb
+	.uleb128 0xf
 	.4byte	.LASF190
 	.byte	0xc
 	.2byte	0x126
 	.4byte	0x42e
-	.uleb128 0xe
+	.uleb128 0x12
 	.byte	0x2c
 	.byte	0xc
 	.2byte	0x12d
 	.4byte	0xb7d
-	.uleb128 0xf
+	.uleb128 0x13
 	.4byte	.LASF191
 	.byte	0xc
 	.2byte	0x12e
 	.4byte	0xb7d
 	.byte	0
-	.uleb128 0xf
+	.uleb128 0x13
 	.4byte	.LASF192
 	.byte	0xc
 	.2byte	0x12f
 	.4byte	0xb83
 	.byte	0x4
-	.uleb128 0xf
+	.uleb128 0x13
 	.4byte	.LASF193
 	.byte	0xc
 	.2byte	0x130
 	.4byte	0xb89
 	.byte	0x8
-	.uleb128 0xf
+	.uleb128 0x13
 	.4byte	.LASF194
 	.byte	0xc
 	.2byte	0x131
 	.4byte	0xb8f
 	.byte	0xc
-	.uleb128 0xf
+	.uleb128 0x13
 	.4byte	.LASF195
 	.byte	0xc
 	.2byte	0x132
 	.4byte	0xb95
 	.byte	0x10
-	.uleb128 0xf
+	.uleb128 0x13
 	.4byte	.LASF196
 	.byte	0xc
 	.2byte	0x133
 	.4byte	0xb9b
 	.byte	0x14
-	.uleb128 0xf
+	.uleb128 0x13
 	.4byte	.LASF197
 	.byte	0xc
 	.2byte	0x134
 	.4byte	0xba1
 	.byte	0x18
-	.uleb128 0xf
+	.uleb128 0x13
 	.4byte	.LASF198
 	.byte	0xc
 	.2byte	0x135
 	.4byte	0xba7
 	.byte	0x1c
-	.uleb128 0xf
+	.uleb128 0x13
 	.4byte	.LASF199
 	.byte	0xc
 	.2byte	0x136
 	.4byte	0xbad
 	.byte	0x20
-	.uleb128 0xf
+	.uleb128 0x13
 	.4byte	.LASF200
 	.byte	0xc
 	.2byte	0x137
 	.4byte	0xbb3
 	.byte	0x24
-	.uleb128 0xf
+	.uleb128 0x13
 	.4byte	.LASF201
 	.byte	0xc
 	.2byte	0x138
 	.4byte	0xbb9
 	.byte	0x28
 	.byte	0
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0xa19
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0xa3e
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0xa49
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0xa54
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0xa75
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0xa80
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0xa9b
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0xaa6
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0xab1
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0xacc
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0xad8
-	.uleb128 0xb
+	.uleb128 0xf
 	.4byte	.LASF202
 	.byte	0xc
 	.2byte	0x13a
 	.4byte	0xae4
-	.uleb128 0x6
+	.uleb128 0xa
 	.byte	0xa
 	.byte	0xd
 	.byte	0x57
 	.4byte	0xc30
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF137
 	.byte	0xd
 	.byte	0x58
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF203
 	.byte	0xd
 	.byte	0x59
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x1
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF204
 	.byte	0xd
 	.byte	0x5a
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x2
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF205
 	.byte	0xd
 	.byte	0x5b
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x3
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"t1"
 	.byte	0xd
 	.byte	0x5c
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x4
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"mtu"
 	.byte	0xd
 	.byte	0x5d
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x6
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"n2"
 	.byte	0xd
 	.byte	0x5e
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x8
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"k"
 	.byte	0xd
 	.byte	0x5f
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x9
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0xa
 	.byte	0x8
 	.byte	0xd
 	.byte	0x61
 	.4byte	0xc51
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF206
 	.byte	0xd
 	.byte	0x62
-	.4byte	0x18c
+	.4byte	0x1c8
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF207
 	.byte	0xd
 	.byte	0x63
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0x4
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0xa
 	.byte	0x4
 	.byte	0xd
 	.byte	0x65
 	.4byte	0xc8a
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF137
 	.byte	0xd
 	.byte	0x66
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF208
 	.byte	0xd
 	.byte	0x67
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x1
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF209
 	.byte	0xd
 	.byte	0x68
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x2
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF210
 	.byte	0xd
 	.byte	0x69
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x3
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0xa
 	.byte	0x3
 	.byte	0xd
 	.byte	0x6b
 	.4byte	0xcb5
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"ea"
 	.byte	0xd
 	.byte	0x6c
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"cr"
 	.byte	0xd
 	.byte	0x6d
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x1
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF211
 	.byte	0xd
 	.byte	0x6e
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x2
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0xa
 	.byte	0xc
 	.byte	0xd
 	.byte	0x70
 	.4byte	0xd42
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF137
 	.byte	0xd
 	.byte	0x71
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF212
 	.byte	0xd
 	.byte	0x72
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x1
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF88
 	.byte	0xd
 	.byte	0x73
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x2
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF89
 	.byte	0xd
 	.byte	0x74
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x3
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF90
 	.byte	0xd
 	.byte	0x75
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x4
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF91
 	.byte	0xd
 	.byte	0x76
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x5
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF92
 	.byte	0xd
 	.byte	0x77
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x6
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF93
 	.byte	0xd
 	.byte	0x78
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x7
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF95
 	.byte	0xd
 	.byte	0x79
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x8
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF96
 	.byte	0xd
 	.byte	0x7a
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x9
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF213
 	.byte	0xd
 	.byte	0x7b
-	.4byte	0xde
+	.4byte	0x11a
 	.byte	0xa
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0xa
 	.byte	0x2
 	.byte	0xd
 	.byte	0x7d
 	.4byte	0xd63
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF137
 	.byte	0xd
 	.byte	0x7e
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF139
 	.byte	0xd
 	.byte	0x7f
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x1
 	.byte	0
 	.uleb128 0x1a
@@ -3520,48 +3520,48 @@ rfc_process_l2cap_congestion:
 	.byte	0x80
 	.4byte	0xd42
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0xa
 	.byte	0x14
 	.byte	0xd
 	.byte	0x4e
 	.4byte	0xe05
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF137
 	.byte	0xd
 	.byte	0x4f
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF211
 	.byte	0xd
 	.byte	0x50
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x1
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"cr"
 	.byte	0xd
 	.byte	0x51
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x2
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"ea"
 	.byte	0xd
 	.byte	0x52
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x3
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"pf"
 	.byte	0xd
 	.byte	0x53
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x4
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF215
 	.byte	0xd
 	.byte	0x54
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x5
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"u"
 	.byte	0xd
 	.byte	0x81
@@ -3573,52 +3573,52 @@ rfc_process_l2cap_congestion:
 	.byte	0xd
 	.byte	0x82
 	.4byte	0xdad
-	.uleb128 0x6
+	.uleb128 0xa
 	.byte	0x84
 	.byte	0xd
 	.byte	0xd2
 	.4byte	0xe61
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF217
 	.byte	0xd
 	.byte	0xd3
 	.4byte	0xe05
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF218
 	.byte	0xd
 	.byte	0xd4
 	.4byte	0xbbf
 	.byte	0x14
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF219
 	.byte	0xd
 	.byte	0xd5
 	.4byte	0xe61
 	.byte	0x40
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF220
 	.byte	0xd
 	.byte	0xd6
-	.4byte	0xff
+	.4byte	0x13b
 	.byte	0x80
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF221
 	.byte	0xd
 	.byte	0xd7
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x81
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF222
 	.byte	0xd
 	.byte	0xd8
-	.4byte	0xd3
+	.4byte	0x10f
 	.byte	0x82
 	.byte	0
-	.uleb128 0x9
+	.uleb128 0xd
 	.4byte	0x6e8
 	.4byte	0xe71
-	.uleb128 0xc
+	.uleb128 0x10
 	.4byte	0x90
 	.byte	0xf
 	.byte	0
@@ -3632,13 +3632,13 @@ rfc_process_l2cap_congestion:
 	.byte	0xd
 	.byte	0xdc
 	.4byte	0xeab
-	.uleb128 0x8
+	.uleb128 0xc
 	.string	"rfc"
 	.byte	0xd
 	.byte	0xdd
 	.4byte	0xe71
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0xb
 	.4byte	.LASF160
 	.byte	0xd
 	.byte	0xde
@@ -3648,7 +3648,7 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF224
 	.byte	0xd
 	.byte	0xdf
-	.4byte	0xd3
+	.4byte	0x10f
 	.2byte	0xcb4
 	.byte	0
 	.uleb128 0x4
@@ -3660,8 +3660,8 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF296
 	.byte	0x1
 	.2byte	0x364
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xeeb
@@ -3679,10 +3679,10 @@ rfc_process_l2cap_congestion:
 	.4byte	0xef1
 	.4byte	.LLST0
 	.byte	0
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0x4b3
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0xe05
 	.uleb128 0x20
@@ -3697,17 +3697,17 @@ rfc_process_l2cap_congestion:
 	.byte	0x6d
 	.4byte	0xf25
 	.uleb128 0x21
-	.4byte	.LASF25
+	.4byte	.LASF31
 	.byte	0x1
 	.byte	0x6d
-	.4byte	0xde
+	.4byte	0x11a
 	.uleb128 0x21
 	.4byte	.LASF206
 	.byte	0x1
 	.byte	0x6d
 	.4byte	0x97
 	.byte	0
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0x8a8
 	.uleb128 0x20
@@ -3722,10 +3722,10 @@ rfc_process_l2cap_congestion:
 	.byte	0xb0
 	.4byte	0xf25
 	.uleb128 0x21
-	.4byte	.LASF25
+	.4byte	.LASF31
 	.byte	0x1
 	.byte	0xb0
-	.4byte	0xde
+	.4byte	0x11a
 	.uleb128 0x21
 	.4byte	.LASF206
 	.byte	0x1
@@ -3744,10 +3744,10 @@ rfc_process_l2cap_congestion:
 	.2byte	0x141
 	.4byte	0xf25
 	.uleb128 0x23
-	.4byte	.LASF25
+	.4byte	.LASF31
 	.byte	0x1
 	.2byte	0x141
-	.4byte	0xde
+	.4byte	0x11a
 	.uleb128 0x23
 	.4byte	.LASF206
 	.byte	0x1
@@ -3766,10 +3766,10 @@ rfc_process_l2cap_congestion:
 	.byte	0xf7
 	.4byte	0xf25
 	.uleb128 0x21
-	.4byte	.LASF25
+	.4byte	.LASF31
 	.byte	0x1
 	.byte	0xf7
-	.4byte	0xde
+	.4byte	0x11a
 	.uleb128 0x21
 	.4byte	.LASF206
 	.byte	0x1
@@ -3788,10 +3788,10 @@ rfc_process_l2cap_congestion:
 	.2byte	0x171
 	.4byte	0xf25
 	.uleb128 0x23
-	.4byte	.LASF25
+	.4byte	.LASF31
 	.byte	0x1
 	.2byte	0x171
-	.4byte	0xde
+	.4byte	0x11a
 	.uleb128 0x23
 	.4byte	.LASF206
 	.byte	0x1
@@ -3827,10 +3827,10 @@ rfc_process_l2cap_congestion:
 	.2byte	0x1c3
 	.4byte	0xf25
 	.uleb128 0x23
-	.4byte	.LASF25
+	.4byte	.LASF31
 	.byte	0x1
 	.2byte	0x1c3
-	.4byte	0xde
+	.4byte	0x11a
 	.uleb128 0x23
 	.4byte	.LASF206
 	.byte	0x1
@@ -3841,8 +3841,8 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF237
 	.byte	0x1
 	.byte	0x3f
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1465
@@ -3853,10 +3853,10 @@ rfc_process_l2cap_congestion:
 	.4byte	0xf25
 	.4byte	.LLST1
 	.uleb128 0x25
-	.4byte	.LASF25
+	.4byte	.LASF31
 	.byte	0x1
 	.byte	0x3f
-	.4byte	0xde
+	.4byte	0x11a
 	.4byte	.LLST2
 	.uleb128 0x25
 	.4byte	.LASF206
@@ -4310,8 +4310,8 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF238
 	.byte	0x1
 	.2byte	0x206
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1571
@@ -4325,7 +4325,7 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF239
 	.byte	0x1
 	.2byte	0x206
-	.4byte	0xff
+	.4byte	0x13b
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x1e
@@ -4345,7 +4345,7 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF137
 	.byte	0x1
 	.2byte	0x209
-	.4byte	0xd3
+	.4byte	0x10f
 	.4byte	.LLST26
 	.uleb128 0x28
 	.4byte	.LVL123
@@ -4458,8 +4458,8 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF240
 	.byte	0x1
 	.2byte	0x22e
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1736
@@ -4474,13 +4474,13 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF239
 	.byte	0x1
 	.2byte	0x22e
-	.4byte	0xff
+	.4byte	0x13b
 	.4byte	.LLST27
 	.uleb128 0x1f
 	.4byte	.LASF212
 	.byte	0x1
 	.2byte	0x22f
-	.4byte	0xff
+	.4byte	0x13b
 	.4byte	.LLST28
 	.uleb128 0x1f
 	.4byte	.LASF227
@@ -4723,8 +4723,8 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF241
 	.byte	0x1
 	.2byte	0x299
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x183d
@@ -4738,7 +4738,7 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF239
 	.byte	0x1
 	.2byte	0x299
-	.4byte	0xff
+	.4byte	0x13b
 	.4byte	.LLST32
 	.uleb128 0x1e
 	.4byte	.LASF227
@@ -4766,13 +4766,13 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF243
 	.byte	0x1
 	.2byte	0x29d
-	.4byte	0xd3
+	.4byte	0x10f
 	.4byte	.LLST33
 	.uleb128 0x2e
 	.4byte	.LASF244
 	.byte	0x1
 	.2byte	0x29e
-	.4byte	0xff
+	.4byte	0x13b
 	.4byte	.LLST34
 	.uleb128 0x28
 	.4byte	.LVL158
@@ -4861,8 +4861,8 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF245
 	.byte	0x1
 	.2byte	0x2e5
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x18dc
@@ -4876,7 +4876,7 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF239
 	.byte	0x1
 	.2byte	0x2e5
-	.4byte	0xff
+	.4byte	0x13b
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x1f
@@ -4937,8 +4937,8 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF246
 	.byte	0x1
 	.2byte	0x302
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x190f
@@ -4961,8 +4961,8 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF247
 	.byte	0x1
 	.2byte	0x311
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1952
@@ -4995,8 +4995,8 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF248
 	.byte	0x1
 	.2byte	0x321
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x19b3
@@ -5011,7 +5011,7 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF239
 	.byte	0x1
 	.2byte	0x321
-	.4byte	0xff
+	.4byte	0x13b
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x28
@@ -5050,8 +5050,8 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF249
 	.byte	0x1
 	.2byte	0x336
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1a0f
@@ -5066,7 +5066,7 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF239
 	.byte	0x1
 	.2byte	0x336
-	.4byte	0xff
+	.4byte	0x13b
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x28
@@ -5100,8 +5100,8 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF250
 	.byte	0x1
 	.2byte	0x34b
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1a6c
@@ -5116,7 +5116,7 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF251
 	.byte	0x1
 	.2byte	0x34b
-	.4byte	0xff
+	.4byte	0x13b
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x28
@@ -5150,7 +5150,7 @@ rfc_process_l2cap_congestion:
 	.uleb128 0x30
 	.4byte	.LASF252
 	.byte	0x4
-	.2byte	0x2cc
+	.2byte	0x2b8
 	.4byte	0x1a7f
 	.byte	0x6
 	.byte	0xff
@@ -5160,11 +5160,11 @@ rfc_process_l2cap_congestion:
 	.byte	0xff
 	.byte	0xff
 	.uleb128 0x31
-	.4byte	0x17c
+	.4byte	0x1b8
 	.uleb128 0x30
 	.4byte	.LASF253
 	.byte	0x4
-	.2byte	0x2cd
+	.2byte	0x2b9
 	.4byte	0x1a97
 	.byte	0x6
 	.byte	0
@@ -5174,13 +5174,13 @@ rfc_process_l2cap_congestion:
 	.byte	0
 	.byte	0
 	.uleb128 0x31
-	.4byte	0x17c
+	.4byte	0x1b8
 	.uleb128 0x32
 	.4byte	.LASF297
 	.byte	0xd
 	.byte	0xe6
 	.4byte	0x1aa7
-	.uleb128 0xd
+	.uleb128 0x11
 	.byte	0x4
 	.4byte	0xeab
 	.uleb128 0x33
@@ -5197,7 +5197,7 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF256
 	.4byte	.LASF256
 	.byte	0xf
-	.2byte	0x439
+	.2byte	0x43b
 	.uleb128 0x33
 	.4byte	.LASF257
 	.4byte	.LASF257
@@ -5252,7 +5252,7 @@ rfc_process_l2cap_congestion:
 	.4byte	.LASF267
 	.4byte	.LASF267
 	.byte	0xf
-	.2byte	0x442
+	.2byte	0x444
 	.uleb128 0x34
 	.4byte	.LASF268
 	.4byte	.LASF268
@@ -5439,124 +5439,6 @@ rfc_process_l2cap_congestion:
 	.byte	0
 	.byte	0
 	.uleb128 0x6
-	.uleb128 0x13
-	.byte	0x1
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x7
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x38
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x8
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x38
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x9
-	.uleb128 0x1
-	.byte	0x1
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xa
-	.uleb128 0x21
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xb
-	.uleb128 0x16
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xc
-	.uleb128 0x21
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2f
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0xd
-	.uleb128 0xf
-	.byte	0
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xe
-	.uleb128 0x13
-	.byte	0x1
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xf
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x38
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x10
 	.uleb128 0x15
 	.byte	0x1
 	.uleb128 0x27
@@ -5565,14 +5447,14 @@ rfc_process_l2cap_congestion:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x11
+	.uleb128 0x7
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x12
+	.uleb128 0x8
 	.uleb128 0x4
 	.byte	0x1
 	.uleb128 0xb
@@ -5587,12 +5469,130 @@ rfc_process_l2cap_congestion:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x9
 	.uleb128 0x28
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
 	.uleb128 0x1c
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0xa
+	.uleb128 0x13
+	.byte	0x1
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xb
+	.uleb128 0xd
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x38
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0xc
+	.uleb128 0xd
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x38
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0xd
+	.uleb128 0x1
+	.byte	0x1
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xe
+	.uleb128 0x21
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xf
+	.uleb128 0x16
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x10
+	.uleb128 0x21
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2f
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x11
+	.uleb128 0xf
+	.byte	0
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x12
+	.uleb128 0x13
+	.byte	0x1
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x13
+	.uleb128 0xd
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x38
 	.uleb128 0xb
 	.byte	0
 	.byte	0
@@ -6097,7 +6097,7 @@ rfc_process_l2cap_congestion:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL1
-	.4byte	.LFE47
+	.4byte	.LFE56
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6232,7 +6232,7 @@ rfc_process_l2cap_congestion:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL117
-	.4byte	.LFE30
+	.4byte	.LFE39
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6246,7 +6246,7 @@ rfc_process_l2cap_congestion:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL7
-	.4byte	.LFE30
+	.4byte	.LFE39
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6315,7 +6315,7 @@ rfc_process_l2cap_congestion:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL120
-	.4byte	.LFE30
+	.4byte	.LFE39
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6838,7 +6838,7 @@ rfc_process_l2cap_congestion:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL132
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6878,7 +6878,7 @@ rfc_process_l2cap_congestion:
 	.byte	0x74
 	.sleb128 0
 	.4byte	.LVL130-1
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -6889,7 +6889,7 @@ rfc_process_l2cap_congestion:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL151
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6903,7 +6903,7 @@ rfc_process_l2cap_congestion:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL148
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6917,7 +6917,7 @@ rfc_process_l2cap_congestion:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL154
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6962,7 +6962,7 @@ rfc_process_l2cap_congestion:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL167
-	.4byte	.LFE40
+	.4byte	.LFE49
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6976,7 +6976,7 @@ rfc_process_l2cap_congestion:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL162
-	.4byte	.LFE40
+	.4byte	.LFE49
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7008,7 +7008,7 @@ rfc_process_l2cap_congestion:
 	.byte	0x91
 	.sleb128 -44
 	.4byte	.LVL166
-	.4byte	.LFE40
+	.4byte	.LFE49
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
@@ -7020,7 +7020,7 @@ rfc_process_l2cap_congestion:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL174
-	.4byte	.LFE41
+	.4byte	.LFE50
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7034,7 +7034,7 @@ rfc_process_l2cap_congestion:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL175
-	.4byte	.LFE41
+	.4byte	.LFE50
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7057,54 +7057,54 @@ rfc_process_l2cap_congestion:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.4byte	.LFB39
 	.4byte	.LFE39-.LFB39
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB47
-	.4byte	.LFE47
-	.4byte	.LFB30
-	.4byte	.LFE30
-	.4byte	.LFB38
-	.4byte	.LFE38
+	.4byte	.LFB56
+	.4byte	.LFE56
 	.4byte	.LFB39
 	.4byte	.LFE39
-	.4byte	.LFB40
-	.4byte	.LFE40
-	.4byte	.LFB41
-	.4byte	.LFE41
-	.4byte	.LFB42
-	.4byte	.LFE42
-	.4byte	.LFB43
-	.4byte	.LFE43
-	.4byte	.LFB44
-	.4byte	.LFE44
-	.4byte	.LFB45
-	.4byte	.LFE45
-	.4byte	.LFB46
-	.4byte	.LFE46
+	.4byte	.LFB47
+	.4byte	.LFE47
+	.4byte	.LFB48
+	.4byte	.LFE48
+	.4byte	.LFB49
+	.4byte	.LFE49
+	.4byte	.LFB50
+	.4byte	.LFE50
+	.4byte	.LFB51
+	.4byte	.LFE51
+	.4byte	.LFB52
+	.4byte	.LFE52
+	.4byte	.LFB53
+	.4byte	.LFE53
+	.4byte	.LFB54
+	.4byte	.LFE54
+	.4byte	.LFB55
+	.4byte	.LFE55
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -7126,7 +7126,7 @@ rfc_process_l2cap_congestion:
 	.string	"qos_present"
 .LASF85:
 	.string	"BTM_SET_STATIC_RAND_ADDR_FAIL"
-.LASF35:
+.LASF41:
 	.string	"peak_bandwidth"
 .LASF213:
 	.string	"param_mask"
@@ -7136,7 +7136,7 @@ rfc_process_l2cap_congestion:
 	.string	"peer_ctrl"
 .LASF100:
 	.string	"tPORT_CALLBACK"
-.LASF29:
+.LASF35:
 	.string	"BT_HDR"
 .LASF178:
 	.string	"flags"
@@ -7146,7 +7146,7 @@ rfc_process_l2cap_congestion:
 	.string	"BTM_SUCCESS_NO_SECURITY"
 .LASF275:
 	.string	"rfc_port_closed"
-.LASF20:
+.LASF26:
 	.string	"UINT16"
 .LASF179:
 	.string	"tL2CAP_CFG_INFO"
@@ -7182,7 +7182,7 @@ rfc_process_l2cap_congestion:
 	.string	"tx_win_sz"
 .LASF80:
 	.string	"BTM_MODE4_LEVEL4_NOT_SUPPORTED"
-.LASF23:
+.LASF29:
 	.string	"BOOLEAN"
 .LASF268:
 	.string	"PORT_DataInd"
@@ -7222,7 +7222,7 @@ rfc_process_l2cap_congestion:
 	.string	"rfc_port_sm_execute"
 .LASF296:
 	.string	"rfc_set_port_state"
-.LASF21:
+.LASF27:
 	.string	"UINT32"
 .LASF18:
 	.string	"uint32_t"
@@ -7238,13 +7238,13 @@ rfc_process_l2cap_congestion:
 	.string	"flush_to"
 .LASF297:
 	.string	"rfc_cb_ptr"
-.LASF25:
+.LASF31:
 	.string	"event"
 .LASF212:
 	.string	"is_request"
 .LASF92:
 	.string	"parity_type"
-.LASF22:
+.LASF28:
 	.string	"INT32"
 .LASF127:
 	.string	"pending_id"
@@ -7300,9 +7300,9 @@ rfc_process_l2cap_congestion:
 	.string	"tPORT_CTRL"
 .LASF166:
 	.string	"rtrans_tout"
-.LASF38:
+.LASF44:
 	.string	"FLOW_SPEC"
-.LASF26:
+.LASF32:
 	.string	"offset"
 .LASF234:
 	.string	"rfc_port_uplink_data"
@@ -7312,7 +7312,7 @@ rfc_process_l2cap_congestion:
 	.string	"rfc_send_disc"
 .LASF260:
 	.string	"PORT_DlcEstablishCnf"
-.LASF24:
+.LASF30:
 	.string	"_Bool"
 .LASF112:
 	.string	"cmd_q"
@@ -7336,7 +7336,7 @@ rfc_process_l2cap_congestion:
 	.string	"tL2CA_DATA_IND_CB"
 .LASF159:
 	.string	"tPORT"
-.LASF39:
+.LASF19:
 	.string	"ESP_LOG_NONE"
 .LASF183:
 	.string	"tL2CA_CONFIG_IND_CB"
@@ -7348,7 +7348,7 @@ rfc_process_l2cap_congestion:
 	.string	"rfc_send_ua"
 .LASF229:
 	.string	"rfc_port_sm_state_closed"
-.LASF33:
+.LASF39:
 	.string	"token_rate"
 .LASF168:
 	.string	"tL2CAP_FCR_OPTS"
@@ -7364,7 +7364,7 @@ rfc_process_l2cap_congestion:
 	.string	"port"
 .LASF152:
 	.string	"credit_tx"
-.LASF30:
+.LASF36:
 	.string	"BD_ADDR"
 .LASF191:
 	.string	"pL2CA_ConnectInd_Cb"
@@ -7382,9 +7382,9 @@ rfc_process_l2cap_congestion:
 	.string	"tPORT_STATE"
 .LASF59:
 	.string	"tHCI_EXT_FLOW_SPEC"
-.LASF42:
+.LASF22:
 	.string	"ESP_LOG_INFO"
-.LASF28:
+.LASF34:
 	.string	"data"
 .LASF228:
 	.string	"p_port"
@@ -7406,7 +7406,7 @@ rfc_process_l2cap_congestion:
 	.string	"credit_rx_max"
 .LASF193:
 	.string	"pL2CA_ConnectPnd_Cb"
-.LASF27:
+.LASF33:
 	.string	"layer_specific"
 .LASF248:
 	.string	"rfc_process_fcon"
@@ -7434,7 +7434,7 @@ rfc_process_l2cap_congestion:
 	.string	"pL2CA_ConfigCfm_Cb"
 .LASF170:
 	.string	"mtu_present"
-.LASF36:
+.LASF42:
 	.string	"latency"
 .LASF218:
 	.string	"reg_info"
@@ -7466,7 +7466,7 @@ rfc_process_l2cap_congestion:
 	.string	"_tle"
 .LASF52:
 	.string	"in_use"
-.LASF37:
+.LASF43:
 	.string	"delay_variation"
 .LASF157:
 	.string	"keep_port_handle"
@@ -7486,7 +7486,7 @@ rfc_process_l2cap_congestion:
 	.string	"BTM_ERR_PROCESSING"
 .LASF283:
 	.string	"PORT_PortNegCnf"
-.LASF32:
+.LASF38:
 	.string	"service_type"
 .LASF294:
 	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/rfcomm/rfc_port_fsm.c"
@@ -7594,7 +7594,7 @@ rfc_process_l2cap_congestion:
 	.string	"long unsigned int"
 .LASF243:
 	.string	"modem_signals"
-.LASF44:
+.LASF24:
 	.string	"ESP_LOG_VERBOSE"
 .LASF101:
 	.string	"queue"
@@ -7608,13 +7608,13 @@ rfc_process_l2cap_congestion:
 	.string	"rx_char1"
 .LASF211:
 	.string	"type"
-.LASF31:
+.LASF37:
 	.string	"qos_flags"
 .LASF278:
 	.string	"PORT_ParNegCnf"
 .LASF216:
 	.string	"MX_FRAME"
-.LASF41:
+.LASF21:
 	.string	"ESP_LOG_WARN"
 .LASF8:
 	.string	"__uint32_t"
@@ -7642,11 +7642,11 @@ rfc_process_l2cap_congestion:
 	.string	"is_congested"
 .LASF89:
 	.string	"byte_size"
-.LASF43:
+.LASF23:
 	.string	"ESP_LOG_DEBUG"
 .LASF273:
 	.string	"fixed_queue_is_empty"
-.LASF34:
+.LASF40:
 	.string	"token_bucket_size"
 .LASF230:
 	.string	"rfc_port_sm_sabme_wait_ua"
@@ -7682,7 +7682,7 @@ rfc_process_l2cap_congestion:
 	.string	"default_signal_state"
 .LASF61:
 	.string	"BTM_CMD_STARTED"
-.LASF19:
+.LASF25:
 	.string	"UINT8"
 .LASF131:
 	.string	"expected_rsp"
@@ -7704,6 +7704,6 @@ rfc_process_l2cap_congestion:
 	.string	"max_transmit"
 .LASF282:
 	.string	"PORT_PortNegInd"
-.LASF40:
+.LASF20:
 	.string	"ESP_LOG_ERROR"
 	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

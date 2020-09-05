@@ -992,7 +992,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 1
@@ -1373,6 +1373,9 @@ extern long double strtold (const char *restrict, char **restrict);
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 1
 # 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
@@ -1670,15 +1673,15 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/include/esp32/ulp.h" 1
 # 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/include/esp32/ulp.h"
@@ -1857,7 +1860,7 @@ esp_err_t ulp_load_binary(uint32_t load_addr, const uint8_t* program_binary, siz
 
 
 esp_err_t ulp_run(uint32_t entry_point);
-# 913 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/include/esp32/ulp.h"
+# 916 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/include/esp32/ulp.h"
 esp_err_t ulp_set_wakeup_period(size_t period_index, uint32_t period_us);
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c" 2
 
@@ -1881,7 +1884,27 @@ typedef struct {
     uint32_t unused : 1;
     uint32_t type : 4;
 } reloc_info_t;
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c"
+# 62 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c"
+static int reloc_sort_func(const void* p_lhs, const void* p_rhs)
+{
+    const reloc_info_t lhs = *(const reloc_info_t*) p_lhs;
+    const reloc_info_t rhs = *(const reloc_info_t*) p_rhs;
+    if (lhs.label < rhs.label) {
+        return -1;
+    } else if (lhs.label > rhs.label) {
+        return 1;
+    }
+
+    if (lhs.type < rhs.type) {
+        return -1;
+    } else if (lhs.type > rhs.type) {
+        return 1;
+    }
+
+
+    return 0;
+}
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c"
 static esp_err_t do_single_reloc(ulp_insn_t* program, uint32_t load_addr,
         reloc_info_t label_info, reloc_info_t branch_info)
 {
@@ -1891,10 +1914,10 @@ static esp_err_t do_single_reloc(ulp_insn_t* program, uint32_t load_addr,
 
     ((insn->b.opcode == 8 && "branch macro was applied to a non-branch instruction") ? (void)0 : __assert_func (
                                                                      "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c"
-# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c"
     ,
-                                                                     108
-# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c"
+                                                                     129
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c"
     , __func__, "insn->b.opcode == OPCODE_BRANCH && \"branch macro was applied to a non-branch instruction\""))
                                                                       ;
     switch (insn->b.sub_opcode) {
@@ -1914,10 +1937,10 @@ static esp_err_t do_single_reloc(ulp_insn_t* program, uint32_t load_addr,
         case 0: {
             ((insn->bx.reg == 0 && "relocation applied to a jump with offset in register") ? (void)0 : __assert_func (
                                                                           "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c"
-# 124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c"
+# 145 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c"
             ,
-                                                                          125
-# 124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c"
+                                                                          146
+# 145 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c"
             , __func__, "insn->bx.reg == 0 && \"relocation applied to a jump with offset in register\""))
                                                                            ;
             insn->bx.addr = label_info.addr;
@@ -1925,10 +1948,10 @@ static esp_err_t do_single_reloc(ulp_insn_t* program, uint32_t load_addr,
         }
         default:
             ((
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c" 3 4
+# 151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c" 3 4
            0 
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c"
-           && "unexpected sub-opcode") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c", 130, __func__, "false && \"unexpected sub-opcode\""));
+# 151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c"
+           && "unexpected sub-opcode") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c", 151, __func__, "false && \"unexpected sub-opcode\""));
     }
     return 0;
 }
@@ -1966,9 +1989,9 @@ esp_err_t ulp_process_macros_and_load(uint32_t load_addr, const ulp_insn_t* prog
     reloc_info_t* reloc_info =
             (reloc_info_t*) malloc(sizeof(reloc_info_t) * macro_count);
     if (reloc_info == 
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c" 3 4
+# 188 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c" 3 4
                      ((void *)0)
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c"
+# 188 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c"
                          ) {
         return 0x101;
     }
@@ -1993,10 +2016,10 @@ esp_err_t ulp_process_macros_and_load(uint32_t load_addr, const ulp_insn_t* prog
                                           ;
                     break;
                 default:
-                    ((0 && "invalid sub_opcode for macro insn") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c", 191, __func__, "0 && \"invalid sub_opcode for macro insn\""));
+                    ((0 && "invalid sub_opcode for macro insn") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c", 212, __func__, "0 && \"invalid sub_opcode for macro insn\""));
             }
             ++read_ptr;
-            ((read_ptr != end && "program can not end with macro insn") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c", 194, __func__, "read_ptr != end && \"program can not end with macro insn\""));
+            ((read_ptr != end && "program can not end with macro insn") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c", 215, __func__, "read_ptr != end && \"program can not end with macro insn\""));
             ++cur_reloc;
         } else {
 
@@ -2008,24 +2031,6 @@ esp_err_t ulp_process_macros_and_load(uint32_t load_addr, const ulp_insn_t* prog
     }
 
 
-    int reloc_sort_func(const void* p_lhs, const void* p_rhs) {
-        const reloc_info_t lhs = *(const reloc_info_t*) p_lhs;
-        const reloc_info_t rhs = *(const reloc_info_t*) p_rhs;
-        if (lhs.label < rhs.label) {
-            return -1;
-        } else if (lhs.label > rhs.label) {
-            return 1;
-        }
-
-        if (lhs.type < rhs.type) {
-            return -1;
-        } else if (lhs.type > rhs.type) {
-            return 1;
-        }
-
-
-        return 0;
-    }
     qsort(reloc_info, macro_count, sizeof(reloc_info_t),
             reloc_sort_func);
 
@@ -2034,7 +2039,7 @@ esp_err_t ulp_process_macros_and_load(uint32_t load_addr, const ulp_insn_t* prog
     cur_reloc = reloc_info;
     while(cur_reloc < reloc_end) {
         reloc_info_t label_info = *cur_reloc;
-        ((label_info.type == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c", 232, __func__, "label_info.type == RELOC_TYPE_LABEL"));
+        ((label_info.type == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/ulp/ulp_macro.c", 235, __func__, "label_info.type == RELOC_TYPE_LABEL"));
         ++cur_reloc;
         while (cur_reloc < reloc_end) {
             if (cur_reloc->type == 0) {

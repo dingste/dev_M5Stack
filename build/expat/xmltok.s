@@ -7,11 +7,11 @@
 isNever:
 .LFB0:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
-	.loc 1 158 0
+	.loc 1 134 0
 .LVL0:
 	entry	sp, 32
 .LCFI0:
-	.loc 1 160 0
+	.loc 1 138 0
 	movi.n	a2, 0
 .LVL1:
 	retw.n
@@ -25,11 +25,11 @@ isNever:
 	.type	utf8_isName2, @function
 utf8_isName2:
 .LFB1:
-	.loc 1 164 0
+	.loc 1 141 0
 .LVL2:
 	entry	sp, 32
 .LCFI1:
-	.loc 1 165 0
+	.loc 1 143 0
 	l8ui	a8, a3, 0
 	l8ui	a2, a3, 1
 .LVL3:
@@ -49,7 +49,7 @@ utf8_isName2:
 	ssl	a2
 	sll	a9, a9
 	l32i.n	a2, a8, 0
-	.loc 1 166 0
+	.loc 1 144 0
 	and	a2, a9, a2
 	retw.n
 .LFE1:
@@ -62,11 +62,11 @@ utf8_isName2:
 	.type	utf8_isName3, @function
 utf8_isName3:
 .LFB2:
-	.loc 1 170 0
+	.loc 1 147 0
 .LVL5:
 	entry	sp, 32
 .LCFI2:
-	.loc 1 171 0
+	.loc 1 149 0
 	l8ui	a8, a3, 0
 	l8ui	a10, a3, 1
 	slli	a8, a8, 4
@@ -90,7 +90,7 @@ utf8_isName3:
 	ssl	a2
 	sll	a8, a8
 	l32i.n	a2, a10, 0
-	.loc 1 172 0
+	.loc 1 150 0
 	and	a2, a8, a2
 	retw.n
 .LFE2:
@@ -103,11 +103,11 @@ utf8_isName3:
 	.type	utf8_isNmstrt2, @function
 utf8_isNmstrt2:
 .LFB3:
-	.loc 1 178 0
+	.loc 1 155 0
 .LVL8:
 	entry	sp, 32
 .LCFI3:
-	.loc 1 179 0
+	.loc 1 157 0
 	l8ui	a8, a3, 0
 	l8ui	a2, a3, 1
 .LVL9:
@@ -127,7 +127,7 @@ utf8_isNmstrt2:
 	ssl	a2
 	sll	a9, a9
 	l32i.n	a2, a8, 0
-	.loc 1 180 0
+	.loc 1 158 0
 	and	a2, a9, a2
 	retw.n
 .LFE3:
@@ -140,11 +140,11 @@ utf8_isNmstrt2:
 	.type	utf8_isNmstrt3, @function
 utf8_isNmstrt3:
 .LFB4:
-	.loc 1 184 0
+	.loc 1 161 0
 .LVL11:
 	entry	sp, 32
 .LCFI4:
-	.loc 1 185 0
+	.loc 1 163 0
 	l8ui	a8, a3, 0
 	l8ui	a10, a3, 1
 	slli	a8, a8, 4
@@ -168,7 +168,7 @@ utf8_isNmstrt3:
 	ssl	a2
 	sll	a8, a8
 	l32i.n	a2, a10, 0
-	.loc 1 186 0
+	.loc 1 164 0
 	and	a2, a8, a2
 	retw.n
 .LFE4:
@@ -178,45 +178,45 @@ utf8_isNmstrt3:
 	.type	utf8_isInvalid3, @function
 utf8_isInvalid3:
 .LFB6:
-	.loc 1 198 0
+	.loc 1 175 0
 .LVL14:
 	entry	sp, 32
 .LCFI5:
-	.loc 1 199 0
+	.loc 1 177 0
 	l8ui	a9, a3, 2
 	movi.n	a2, 1
 .LVL15:
 	sext	a8, a9, 7
 	bgez	a8, .L7
-	.loc 1 199 0 is_stmt 0 discriminator 2
+	.loc 1 177 0 is_stmt 0 discriminator 2
 	l8ui	a10, a3, 0
 	movi	a8, 0xef
 	bne	a10, a8, .L8
-	.loc 1 199 0 discriminator 3
+	.loc 1 177 0 discriminator 3
 	l8ui	a11, a3, 1
 	movi	a8, 0xbf
 	bne	a11, a8, .L8
-	.loc 1 199 0 discriminator 5
+	.loc 1 177 0 discriminator 5
 	movi	a8, 0xbd
 	bgeu	a8, a9, .L9
 	retw.n
 .L8:
-	.loc 1 199 0 discriminator 6
+	.loc 1 177 0 discriminator 6
 	movi	a8, -0x40
 	and	a9, a9, a8
 	movi	a11, 0xc0
 	movi.n	a2, 1
 	beq	a9, a11, .L7
-	.loc 1 199 0 discriminator 9
+	.loc 1 177 0 discriminator 9
 	movi	a2, 0xe0
 	bne	a10, a2, .L9
-	.loc 1 199 0 discriminator 10
+	.loc 1 177 0 discriminator 10
 	l8ui	a3, a3, 1
 .LVL16:
 	movi	a9, 0x9f
 	movi.n	a2, 1
 	bgeu	a9, a3, .L7
-	.loc 1 199 0 discriminator 13
+	.loc 1 177 0 discriminator 13
 	and	a8, a3, a8
 	sub	a8, a8, a11
 	movi.n	a3, 0
@@ -224,22 +224,22 @@ utf8_isInvalid3:
 	retw.n
 .LVL17:
 .L9:
-	.loc 1 199 0 discriminator 11
+	.loc 1 177 0 discriminator 11
 	l8ui	a8, a3, 1
 	movi.n	a2, 1
 	sext	a3, a8, 7
 .LVL18:
 	bgez	a3, .L7
-	.loc 1 199 0 discriminator 21
+	.loc 1 177 0 discriminator 21
 	movi	a3, 0xed
 	bne	a10, a3, .L10
-	.loc 1 199 0 discriminator 22
+	.loc 1 177 0 discriminator 22
 	movi	a3, 0x9f
 	bltu	a3, a8, .L7
 	movi.n	a2, 0
 	retw.n
 .L10:
-	.loc 1 199 0 discriminator 23
+	.loc 1 177 0 discriminator 23
 	movi	a3, -0x40
 	and	a8, a8, a3
 	movi	a3, -0xc0
@@ -247,7 +247,7 @@ utf8_isInvalid3:
 	movi.n	a8, 0
 	movnez	a2, a8, a3
 .L7:
-	.loc 1 200 0 is_stmt 1 discriminator 33
+	.loc 1 178 0 is_stmt 1 discriminator 33
 	retw.n
 .LFE6:
 	.size	utf8_isInvalid3, .-utf8_isInvalid3
@@ -257,35 +257,35 @@ utf8_isInvalid3:
 normal_scanComment:
 .LFB8:
 	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
-	.loc 2 140 0
+	.loc 2 136 0
 .LVL19:
 	entry	sp, 32
 .LCFI6:
-	.loc 2 141 0
+	.loc 2 137 0
 	sub	a6, a4, a3
 	bgei	a6, 1, .L18
 .LVL20:
 .L33:
-	.loc 2 170 0
+	.loc 2 166 0
 	movi.n	a2, -1
 	retw.n
 .LVL21:
 .L18:
-	.loc 2 142 0
+	.loc 2 138 0
 	l8ui	a8, a3, 0
 	movi.n	a6, 0x2d
 	beq	a8, a6, .L20
 	j	.L25
 .L20:
-	.loc 2 146 0
+	.loc 2 142 0
 	addi.n	a3, a3, 1
 .LVL22:
-	.loc 2 148 0
+	.loc 2 144 0
 	movi.n	a6, 0x1b
-	.loc 2 147 0
+	.loc 2 143 0
 	j	.L21
 .L35:
-	.loc 2 148 0
+	.loc 2 144 0
 	l8ui	a8, a3, 0
 	add.n	a8, a2, a8
 	l8ui	a8, a8, 72
@@ -300,9 +300,9 @@ normal_scanComment:
 	beq	a8, a6, .L28
 	j	.L22
 .L26:
-	.loc 2 149 0
+	.loc 2 145 0
 	beqi	a9, 1, .L38
-	.loc 2 149 0 is_stmt 0 discriminator 2
+	.loc 2 145 0 is_stmt 0 discriminator 2
 	l32i	a8, a2, 352
 	mov.n	a11, a3
 	mov.n	a10, a2
@@ -311,15 +311,15 @@ normal_scanComment:
 	beqz.n	a10, .L29
 	j	.L25
 .L29:
-	.loc 2 149 0 discriminator 4
+	.loc 2 145 0 discriminator 4
 	addi.n	a8, a3, 2
 .LVL24:
 	j	.L30
 .LVL25:
 .L23:
-	.loc 2 149 0
+	.loc 2 145 0
 	blti	a9, 3, .L38
-	.loc 2 149 0 discriminator 6
+	.loc 2 145 0 discriminator 6
 	l32i	a8, a2, 356
 	mov.n	a11, a3
 	mov.n	a10, a2
@@ -328,15 +328,15 @@ normal_scanComment:
 	beqz.n	a10, .L31
 	j	.L25
 .L31:
-	.loc 2 149 0 discriminator 8
+	.loc 2 145 0 discriminator 8
 	addi.n	a8, a3, 3
 .LVL27:
 	j	.L30
 .LVL28:
 .L27:
-	.loc 2 149 0
+	.loc 2 145 0
 	blti	a9, 4, .L38
-	.loc 2 149 0 discriminator 10
+	.loc 2 145 0 discriminator 10
 	l32i	a8, a2, 360
 	mov.n	a11, a3
 	mov.n	a10, a2
@@ -345,72 +345,72 @@ normal_scanComment:
 	beqz.n	a10, .L32
 	j	.L25
 .L32:
-	.loc 2 149 0 discriminator 12
+	.loc 2 145 0 discriminator 12
 	addi.n	a8, a3, 4
 .LVL30:
 	j	.L30
 .LVL31:
 .L25:
-	.loc 2 149 0
+	.loc 2 145 0
 	s32i.n	a3, a5, 0
 	j	.L42
 .L28:
-	.loc 2 151 0 is_stmt 1
+	.loc 2 147 0 is_stmt 1
 	addi.n	a8, a3, 1
 .LVL32:
-	.loc 2 152 0
+	.loc 2 148 0
 	sub	a9, a4, a8
 	blti	a9, 1, .L33
-	.loc 2 153 0
+	.loc 2 149 0
 	l8ui	a10, a3, 1
 	movi.n	a9, 0x2d
 	bne	a10, a9, .L30
-	.loc 2 154 0
+	.loc 2 150 0
 	addi.n	a2, a3, 2
 .LVL33:
-	.loc 2 155 0
+	.loc 2 151 0
 	sub	a4, a4, a2
 .LVL34:
 	blti	a4, 1, .L33
-	.loc 2 156 0
+	.loc 2 152 0
 	l8ui	a6, a3, 2
 	movi.n	a4, 0x3e
 	beq	a6, a4, .L34
-	.loc 2 157 0
+	.loc 2 153 0
 	s32i.n	a2, a5, 0
 .LVL35:
 .L42:
-	.loc 2 158 0
+	.loc 2 154 0
 	movi.n	a2, 0
 	retw.n
 .LVL36:
 .L34:
-	.loc 2 160 0
+	.loc 2 156 0
 	addi.n	a3, a3, 3
 	s32i.n	a3, a5, 0
-	.loc 2 161 0
+	.loc 2 157 0
 	movi.n	a2, 0xd
 .LVL37:
 	retw.n
 .LVL38:
 .L22:
-	.loc 2 165 0
+	.loc 2 161 0
 	addi.n	a8, a3, 1
 .LVL39:
 .L30:
-	.loc 2 140 0
+	.loc 2 136 0
 	mov.n	a3, a8
 .LVL40:
 .L21:
-	.loc 2 147 0
+	.loc 2 143 0
 	sub	a9, a4, a3
 	bgei	a9, 1, .L35
 	j	.L33
 .L38:
-	.loc 2 149 0
+	.loc 2 145 0
 	movi.n	a2, -2
 .LVL41:
-	.loc 2 171 0
+	.loc 2 167 0
 	retw.n
 .LFE8:
 	.size	normal_scanComment, .-normal_scanComment
@@ -633,39 +633,39 @@ normal_cdataSectionTok:
 .LVL67:
 	j	.L59
 .L64:
-	.loc 2 397 0
+	.loc 2 398 0 is_stmt 1
 	bgei	a3, 3, .L69
 	j	.L82
 .L69:
-	.loc 2 397 0 discriminator 6
+	.loc 2 398 0 is_stmt 0 discriminator 2
 	l32i	a3, a2, 356
 	mov.n	a11, a6
 	mov.n	a10, a2
 	callx8	a3
 .LVL68:
 	bnez.n	a10, .L82
-	.loc 2 397 0 discriminator 8
+	.loc 2 398 0 discriminator 4
 	addi.n	a6, a6, 3
 .LVL69:
 	j	.L59
 .L65:
-	.loc 2 397 0
+	.loc 2 399 0 is_stmt 1
 	bgei	a3, 4, .L71
 	j	.L82
 .L71:
-	.loc 2 397 0 discriminator 10
+	.loc 2 399 0 is_stmt 0 discriminator 2
 	l32i	a3, a2, 360
 	mov.n	a11, a6
 	mov.n	a10, a2
 	callx8	a3
 .LVL70:
 	bnez.n	a10, .L82
-	.loc 2 397 0 discriminator 12
+	.loc 2 399 0 discriminator 4
 	addi.n	a6, a6, 4
 .LVL71:
 	j	.L59
 .L60:
-	.loc 2 408 0 is_stmt 1
+	.loc 2 410 0 is_stmt 1
 	addi.n	a6, a6, 1
 .LVL72:
 .L59:
@@ -673,13 +673,13 @@ normal_cdataSectionTok:
 	sub	a3, a4, a6
 	bgei	a3, 1, .L73
 .L82:
-	.loc 2 412 0
+	.loc 2 414 0
 	s32i.n	a6, a5, 0
-	.loc 2 413 0
+	.loc 2 415 0
 	movi.n	a8, 6
 .LVL73:
 .L44:
-	.loc 2 414 0
+	.loc 2 416 0
 	mov.n	a2, a8
 	retw.n
 .LFE13:
@@ -691,11 +691,11 @@ normal_cdataSectionTok:
 	.type	normal_scanRef, @function
 normal_scanRef:
 .LFB17:
-	.loc 2 533 0
+	.loc 2 535 0
 .LVL74:
 	entry	sp, 32
 .LCFI8:
-	.loc 2 534 0
+	.loc 2 536 0
 	sub	a7, a4, a3
 	bgei	a7, 1, .L85
 .LVL75:
@@ -704,7 +704,7 @@ normal_scanRef:
 	j	.L86
 .LVL76:
 .L85:
-	.loc 2 535 0
+	.loc 2 537 0
 	l8ui	a6, a3, 0
 	movi.n	a8, 0x13
 	add.n	a6, a2, a6
@@ -723,16 +723,16 @@ normal_scanRef:
 	movi.n	a7, 0x16
 	bne	a6, a7, .L87
 .L93:
-	.loc 2 536 0 discriminator 2
+	.loc 2 538 0 discriminator 2
 	addi.n	a7, a3, 1
 .LVL77:
 .L98:
-	.loc 2 544 0
+	.loc 2 546 0
 	movi.n	a6, 0x18
 	j	.L95
 .LVL78:
 .L92:
-	.loc 2 536 0
+	.loc 2 538 0
 	bnei	a7, 1, .L96
 .LVL79:
 .L99:
@@ -740,7 +740,7 @@ normal_scanRef:
 	j	.L86
 .LVL80:
 .L96:
-	.loc 2 536 0 is_stmt 0 discriminator 4
+	.loc 2 538 0 is_stmt 0 discriminator 4
 	l32i	a6, a2, 340
 	mov.n	a11, a3
 	mov.n	a10, a2
@@ -750,57 +750,57 @@ normal_scanRef:
 	bnez.n	a10, .L98
 	j	.L87
 .L90:
-	.loc 2 536 0
+	.loc 2 538 0
 	blti	a7, 3, .L99
-	.loc 2 536 0 discriminator 8
+	.loc 2 538 0 discriminator 8
 	l32i	a6, a2, 344
 	mov.n	a11, a3
 	mov.n	a10, a2
 	callx8	a6
 .LVL82:
 	beqz.n	a10, .L87
-	.loc 2 536 0 discriminator 10
+	.loc 2 538 0 discriminator 10
 	addi.n	a7, a3, 3
 .LVL83:
 	j	.L98
 .LVL84:
 .L91:
-	.loc 2 536 0
+	.loc 2 538 0
 	blti	a7, 4, .L99
-	.loc 2 536 0 discriminator 12
+	.loc 2 538 0 discriminator 12
 	l32i	a6, a2, 348
 	mov.n	a11, a3
 	mov.n	a10, a2
 	callx8	a6
 .LVL85:
 	beqz.n	a10, .L87
-	.loc 2 536 0 discriminator 14
+	.loc 2 538 0 discriminator 14
 	addi.n	a7, a3, 4
 .LVL86:
 	j	.L98
 .LVL87:
 .L88:
-	.loc 2 538 0 is_stmt 1
+	.loc 2 540 0 is_stmt 1
 	addi.n	a7, a3, 1
 .LVL88:
 .LBB7:
 .LBB8:
-	.loc 2 502 0
+	.loc 2 505 0
 	sub	a6, a4, a7
 	blti	a6, 1, .L101
-	.loc 2 503 0
+	.loc 2 506 0
 	l8ui	a6, a3, 1
 	movi	a8, 0x78
 	bne	a6, a8, .L102
-	.loc 2 504 0
+	.loc 2 507 0
 	addi.n	a8, a3, 2
 .LVL89:
 .LBB9:
 .LBB10:
-	.loc 2 470 0
+	.loc 2 474 0
 	sub	a6, a4, a8
 	blti	a6, 1, .L101
-	.loc 2 471 0
+	.loc 2 475 0
 	l8ui	a6, a3, 2
 	add.n	a6, a2, a6
 	l8ui	a7, a6, 72
@@ -808,14 +808,14 @@ normal_scanRef:
 	movi.n	a6, 1
 	addi	a7, a7, -24
 	bgeu	a6, a7, .L140
-	.loc 2 476 0
+	.loc 2 480 0
 	s32i.n	a8, a5, 0
 	j	.L144
 .L140:
-	.loc 2 479 0
+	.loc 2 483 0
 	addi.n	a3, a3, 3
 .LVL91:
-	.loc 2 480 0
+	.loc 2 484 0
 	movi.n	a8, 0x12
 	mov.n	a7, a6
 	j	.L105
@@ -830,7 +830,7 @@ normal_scanRef:
 	bgeu	a7, a6, .L141
 	j	.L87
 .L141:
-	.loc 2 479 0
+	.loc 2 483 0
 	addi.n	a3, a3, 1
 .LVL93:
 .L105:
@@ -841,22 +841,22 @@ normal_scanRef:
 .L102:
 .LBE10:
 .LBE9:
-	.loc 2 505 0
+	.loc 2 508 0
 	add.n	a6, a2, a6
 	l8ui	a6, a6, 72
 	movi.n	a10, 0x19
-	.loc 2 512 0
+	.loc 2 515 0
 	addi.n	a3, a3, 2
 .LVL95:
-	.loc 2 513 0
+	.loc 2 516 0
 	movi.n	a8, 0x12
 	mov.n	a9, a6
-	.loc 2 505 0
+	.loc 2 508 0
 	beq	a6, a10, .L139
 	j	.L117
 .LVL96:
 .L116:
-	.loc 2 513 0
+	.loc 2 516 0
 	l8ui	a6, a3, 0
 	add.n	a6, a2, a6
 	l8ui	a6, a6, 72
@@ -865,15 +865,15 @@ normal_scanRef:
 	j	.L87
 .LVL97:
 .L114:
-	.loc 2 517 0
+	.loc 2 520 0
 	addi.n	a3, a3, 1
 	s32i.n	a3, a5, 0
-	.loc 2 518 0
+	.loc 2 521 0
 	movi.n	a10, 0xa
 	j	.L86
 .LVL98:
 .L115:
-	.loc 2 512 0
+	.loc 2 515 0
 	addi.n	a3, a3, 1
 .LVL99:
 .L139:
@@ -884,12 +884,12 @@ normal_scanRef:
 .L87:
 .LBE8:
 .LBE7:
-	.loc 2 540 0
+	.loc 2 542 0
 	s32i.n	a3, a5, 0
 	j	.L144
 .LVL101:
 .L129:
-	.loc 2 544 0
+	.loc 2 546 0
 	l8ui	a3, a7, 0
 	add.n	a3, a2, a3
 	l8ui	a3, a3, 72
@@ -931,14 +931,14 @@ normal_scanRef:
 	.word	.L117
 	.section	.text.normal_scanRef
 .L123:
-	.loc 2 545 0 discriminator 2
+	.loc 2 547 0 discriminator 2
 	addi.n	a7, a7, 1
 .LVL102:
 	j	.L95
 .L118:
-	.loc 2 545 0 is_stmt 0
+	.loc 2 547 0 is_stmt 0
 	beqi	a8, 1, .L99
-	.loc 2 545 0 discriminator 4
+	.loc 2 547 0 discriminator 4
 	l32i	a3, a2, 328
 	mov.n	a11, a7
 	mov.n	a10, a2
@@ -947,14 +947,14 @@ normal_scanRef:
 	bnez.n	a10, .L126
 	j	.L143
 .L126:
-	.loc 2 545 0 discriminator 6
+	.loc 2 547 0 discriminator 6
 	addi.n	a7, a7, 2
 .LVL104:
 	j	.L95
 .L120:
-	.loc 2 545 0
+	.loc 2 547 0
 	blti	a8, 3, .L99
-	.loc 2 545 0 discriminator 8
+	.loc 2 547 0 discriminator 8
 	l32i	a3, a2, 332
 	mov.n	a11, a7
 	mov.n	a10, a2
@@ -963,14 +963,14 @@ normal_scanRef:
 	bnez.n	a10, .L127
 	j	.L143
 .L127:
-	.loc 2 545 0 discriminator 10
+	.loc 2 547 0 discriminator 10
 	addi.n	a7, a7, 3
 .LVL106:
 	j	.L95
 .L121:
-	.loc 2 545 0
+	.loc 2 547 0
 	blti	a8, 4, .L99
-	.loc 2 545 0 discriminator 12
+	.loc 2 547 0 discriminator 12
 	l32i	a3, a2, 336
 	mov.n	a11, a7
 	mov.n	a10, a2
@@ -978,39 +978,39 @@ normal_scanRef:
 .LVL107:
 	bnez.n	a10, .L128
 .L143:
-	.loc 2 545 0 discriminator 13
+	.loc 2 547 0 discriminator 13
 	s32i.n	a7, a5, 0
 	j	.L86
 .L128:
-	.loc 2 545 0 discriminator 14
+	.loc 2 547 0 discriminator 14
 	addi.n	a7, a7, 4
 .LVL108:
 	j	.L95
 .L122:
-	.loc 2 547 0 is_stmt 1
+	.loc 2 549 0 is_stmt 1
 	addi.n	a7, a7, 1
 .LVL109:
 	s32i.n	a7, a5, 0
-	.loc 2 548 0
+	.loc 2 550 0
 	movi.n	a10, 9
 	j	.L86
 .LVL110:
 .L117:
-	.loc 2 550 0
+	.loc 2 552 0
 	s32i.n	a7, a5, 0
 .L144:
-	.loc 2 551 0
+	.loc 2 553 0
 	movi.n	a10, 0
 	j	.L86
 .L95:
 .LVL111:
-	.loc 2 543 0
+	.loc 2 545 0
 	sub	a8, a4, a7
 	bgei	a8, 1, .L129
 	j	.L101
 .LVL112:
 .L86:
-	.loc 2 555 0
+	.loc 2 557 0
 	mov.n	a2, a10
 .LVL113:
 	retw.n
@@ -1024,11 +1024,11 @@ normal_scanRef:
 	.type	normal_scanPercent, @function
 normal_scanPercent:
 .LFB21:
-	.loc 2 910 0
+	.loc 2 914 0
 .LVL114:
 	entry	sp, 32
 .LCFI9:
-	.loc 2 911 0
+	.loc 2 915 0
 	sub	a8, a4, a3
 	bgei	a8, 1, .L146
 .LVL115:
@@ -1037,7 +1037,7 @@ normal_scanPercent:
 	j	.L147
 .LVL116:
 .L146:
-	.loc 2 912 0
+	.loc 2 916 0
 	l8ui	a6, a3, 0
 	movi.n	a9, 0x19
 	add.n	a6, a2, a6
@@ -1081,16 +1081,16 @@ normal_scanPercent:
 	.word	.L153
 	.section	.text.normal_scanPercent
 .L154:
-	.loc 2 913 0 discriminator 2
+	.loc 2 917 0 discriminator 2
 	addi.n	a6, a3, 1
 .LVL117:
 .L159:
-	.loc 2 922 0
+	.loc 2 929 0
 	movi.n	a3, 0x18
 	j	.L156
 .LVL118:
 .L149:
-	.loc 2 913 0
+	.loc 2 917 0
 	bnei	a8, 1, .L157
 .LVL119:
 .L160:
@@ -1098,7 +1098,7 @@ normal_scanPercent:
 	j	.L147
 .LVL120:
 .L157:
-	.loc 2 913 0 is_stmt 0 discriminator 4
+	.loc 2 917 0 is_stmt 0 discriminator 4
 	l32i	a6, a2, 340
 	mov.n	a11, a3
 	mov.n	a10, a2
@@ -1108,48 +1108,48 @@ normal_scanPercent:
 	bnez.n	a10, .L159
 	j	.L148
 .L151:
-	.loc 2 913 0
+	.loc 2 917 0
 	blti	a8, 3, .L160
-	.loc 2 913 0 discriminator 8
+	.loc 2 917 0 discriminator 8
 	l32i	a6, a2, 344
 	mov.n	a11, a3
 	mov.n	a10, a2
 	callx8	a6
 .LVL122:
 	beqz.n	a10, .L148
-	.loc 2 913 0 discriminator 10
+	.loc 2 917 0 discriminator 10
 	addi.n	a6, a3, 3
 .LVL123:
 	j	.L159
 .LVL124:
 .L152:
-	.loc 2 913 0
+	.loc 2 917 0
 	blti	a8, 4, .L160
-	.loc 2 913 0 discriminator 12
+	.loc 2 917 0 discriminator 12
 	l32i	a6, a2, 348
 	mov.n	a11, a3
 	mov.n	a10, a2
 	callx8	a6
 .LVL125:
 	beqz.n	a10, .L148
-	.loc 2 913 0 discriminator 14
+	.loc 2 917 0 discriminator 14
 	addi.n	a6, a3, 4
 .LVL126:
 	j	.L159
 .LVL127:
 .L153:
-	.loc 2 915 0 is_stmt 1
+	.loc 2 922 0 is_stmt 1
 	s32i.n	a3, a5, 0
-	.loc 2 916 0
+	.loc 2 923 0
 	movi.n	a10, 0x16
 	j	.L147
 .L148:
-	.loc 2 918 0
+	.loc 2 925 0
 	s32i.n	a3, a5, 0
 	j	.L186
 .LVL128:
 .L174:
-	.loc 2 922 0
+	.loc 2 929 0
 	l8ui	a8, a6, 0
 	add.n	a8, a2, a8
 	l8ui	a8, a8, 72
@@ -1191,14 +1191,14 @@ normal_scanPercent:
 	.word	.L162
 	.section	.text.normal_scanPercent
 .L168:
-	.loc 2 923 0 discriminator 2
+	.loc 2 930 0 discriminator 2
 	addi.n	a6, a6, 1
 .LVL129:
 	j	.L156
 .L163:
-	.loc 2 923 0 is_stmt 0
+	.loc 2 930 0 is_stmt 0
 	beqi	a9, 1, .L160
-	.loc 2 923 0 discriminator 4
+	.loc 2 930 0 discriminator 4
 	l32i	a8, a2, 328
 	mov.n	a11, a6
 	mov.n	a10, a2
@@ -1207,14 +1207,14 @@ normal_scanPercent:
 	bnez.n	a10, .L171
 	j	.L187
 .L171:
-	.loc 2 923 0 discriminator 6
+	.loc 2 930 0 discriminator 6
 	addi.n	a6, a6, 2
 .LVL131:
 	j	.L156
 .L165:
-	.loc 2 923 0
+	.loc 2 930 0
 	blti	a9, 3, .L160
-	.loc 2 923 0 discriminator 8
+	.loc 2 930 0 discriminator 8
 	l32i	a8, a2, 332
 	mov.n	a11, a6
 	mov.n	a10, a2
@@ -1223,14 +1223,14 @@ normal_scanPercent:
 	bnez.n	a10, .L172
 	j	.L187
 .L172:
-	.loc 2 923 0 discriminator 10
+	.loc 2 930 0 discriminator 10
 	addi.n	a6, a6, 3
 .LVL133:
 	j	.L156
 .L166:
-	.loc 2 923 0
+	.loc 2 930 0
 	blti	a9, 4, .L160
-	.loc 2 923 0 discriminator 12
+	.loc 2 930 0 discriminator 12
 	l32i	a8, a2, 336
 	mov.n	a11, a6
 	mov.n	a10, a2
@@ -1238,40 +1238,40 @@ normal_scanPercent:
 .LVL134:
 	bnez.n	a10, .L173
 .L187:
-	.loc 2 923 0 discriminator 13
+	.loc 2 930 0 discriminator 13
 	s32i.n	a6, a5, 0
 	j	.L147
 .L173:
-	.loc 2 923 0 discriminator 14
+	.loc 2 930 0 discriminator 14
 	addi.n	a6, a6, 4
 .LVL135:
 	j	.L156
 .L167:
-	.loc 2 925 0 is_stmt 1
+	.loc 2 932 0 is_stmt 1
 	addi.n	a6, a6, 1
 .LVL136:
 	s32i.n	a6, a5, 0
-	.loc 2 926 0
+	.loc 2 933 0
 	movi.n	a10, 0x1c
 	j	.L147
 .LVL137:
 .L162:
-	.loc 2 928 0
+	.loc 2 935 0
 	s32i.n	a6, a5, 0
 .LVL138:
 .L186:
-	.loc 2 929 0
+	.loc 2 936 0
 	movi.n	a10, 0
 	j	.L147
 .L156:
 .LVL139:
-	.loc 2 921 0
+	.loc 2 928 0
 	sub	a9, a4, a6
 	bgei	a9, 1, .L174
 	j	.L175
 .LVL140:
 .L147:
-	.loc 2 933 0
+	.loc 2 940 0
 	mov.n	a2, a10
 .LVL141:
 	retw.n
@@ -1285,24 +1285,24 @@ normal_scanPercent:
 	.type	normal_scanLit, @function
 normal_scanLit:
 .LFB23:
-	.loc 2 965 0
+	.loc 2 974 0
 .LVL142:
 	entry	sp, 32
 .LCFI10:
 .LBB11:
-	.loc 2 968 0
+	.loc 2 977 0
 	movi.n	a7, 0xd
 .LBE11:
-	.loc 2 966 0
+	.loc 2 975 0
 	j	.L189
 .L202:
 .LBB12:
-	.loc 2 967 0
+	.loc 2 976 0
 	l8ui	a9, a4, 0
 	add.n	a9, a3, a9
 	l8ui	a9, a9, 72
 .LVL143:
-	.loc 2 968 0
+	.loc 2 977 0
 	bltu	a7, a9, .L190
 	l32r	a10, .LC15
 	addx4	a10, a9, a10
@@ -1328,9 +1328,9 @@ normal_scanLit:
 	.word	.L196
 	.section	.text.normal_scanLit
 .L193:
-	.loc 2 969 0
+	.loc 2 978 0
 	beqi	a8, 1, .L205
-	.loc 2 969 0 is_stmt 0 discriminator 2
+	.loc 2 978 0 is_stmt 0 discriminator 2
 	l32i	a8, a3, 352
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1339,15 +1339,15 @@ normal_scanLit:
 	beqz.n	a10, .L198
 	j	.L191
 .L198:
-	.loc 2 969 0 discriminator 4
+	.loc 2 978 0 discriminator 4
 	addi.n	a8, a4, 2
 .LVL145:
 	j	.L199
 .LVL146:
 .L194:
-	.loc 2 969 0
+	.loc 2 978 0
 	blti	a8, 3, .L205
-	.loc 2 969 0 discriminator 6
+	.loc 2 978 0 discriminator 6
 	l32i	a8, a3, 356
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1356,15 +1356,15 @@ normal_scanLit:
 	beqz.n	a10, .L200
 	j	.L191
 .L200:
-	.loc 2 969 0 discriminator 8
+	.loc 2 978 0 discriminator 8
 	addi.n	a8, a4, 3
 .LVL148:
 	j	.L199
 .LVL149:
 .L195:
-	.loc 2 969 0
+	.loc 2 978 0
 	blti	a8, 4, .L205
-	.loc 2 969 0 discriminator 10
+	.loc 2 978 0 discriminator 10
 	l32i	a8, a3, 360
 	mov.n	a11, a4
 	mov.n	a10, a3
@@ -1373,41 +1373,41 @@ normal_scanLit:
 	beqz.n	a10, .L201
 	j	.L191
 .L201:
-	.loc 2 969 0 discriminator 12
+	.loc 2 978 0 discriminator 12
 	addi.n	a8, a4, 4
 .LVL151:
 	j	.L199
 .LVL152:
 .L191:
-	.loc 2 969 0
+	.loc 2 978 0
 	s32i.n	a4, a6, 0
 	movi.n	a2, 0
 .LVL153:
 	retw.n
 .LVL154:
 .L196:
-	.loc 2 972 0 is_stmt 1
+	.loc 2 981 0 is_stmt 1
 	addi.n	a8, a4, 1
 .LVL155:
-	.loc 2 973 0
+	.loc 2 982 0
 	bne	a9, a2, .L199
-	.loc 2 975 0
+	.loc 2 984 0
 	sub	a5, a5, a8
 .LVL156:
-	.loc 2 976 0
+	.loc 2 985 0
 	movi.n	a2, -0x1b
 .LVL157:
-	.loc 2 975 0
+	.loc 2 984 0
 	blti	a5, 1, .L197
-	.loc 2 977 0
+	.loc 2 986 0
 	s32i.n	a8, a6, 0
-	.loc 2 978 0
+	.loc 2 987 0
 	l8ui	a2, a4, 1
 	add.n	a3, a3, a2
 .LVL158:
 	l8ui	a4, a3, 72
 	movi.n	a3, 0x1e
-	.loc 2 983 0
+	.loc 2 996 0
 	movi.n	a2, 0
 	bltu	a3, a4, .L197
 	movi.n	a3, 1
@@ -1415,37 +1415,37 @@ normal_scanLit:
 	sll	a4, a3
 	l32r	a3, .LC16
 	and	a3, a4, a3
-	.loc 2 981 0
+	.loc 2 994 0
 	movi.n	a4, 0x1b
 	movnez	a2, a4, a3
 	retw.n
 .LVL159:
 .L190:
-	.loc 2 986 0
+	.loc 2 999 0
 	addi.n	a8, a4, 1
 .LVL160:
 .L199:
 .LBE12:
-	.loc 2 965 0
+	.loc 2 974 0
 	mov.n	a4, a8
 .LVL161:
 .L189:
-	.loc 2 966 0
+	.loc 2 975 0
 	sub	a8, a5, a4
 	bgei	a8, 1, .L202
-	.loc 2 990 0
+	.loc 2 1003 0
 	movi.n	a2, -1
 .LVL162:
 	retw.n
 .LVL163:
 .L205:
 .LBB13:
-	.loc 2 969 0
+	.loc 2 978 0
 	movi.n	a2, -2
 .LVL164:
 .L197:
 .LBE13:
-	.loc 2 991 0
+	.loc 2 1004 0
 	retw.n
 .LFE23:
 	.size	normal_scanLit, .-normal_scanLit
@@ -1456,27 +1456,27 @@ normal_scanLit:
 	.type	normal_attributeValueTok, @function
 normal_attributeValueTok:
 .LFB25:
-	.loc 2 1224 0
+	.loc 2 1248 0
 .LVL165:
 	entry	sp, 32
 .LCFI11:
-	.loc 2 1224 0
+	.loc 2 1248 0
 	mov.n	a10, a2
 	mov.n	a12, a4
 	mov.n	a13, a5
-	.loc 2 1227 0
+	.loc 2 1251 0
 	movi.n	a8, -4
-	.loc 2 1226 0
+	.loc 2 1250 0
 	bgeu	a3, a4, .L210
-	.loc 2 1228 0
+	.loc 2 1252 0
 	sub	a2, a4, a3
 .LVL166:
-	.loc 2 1234 0
+	.loc 2 1258 0
 	movi.n	a8, -1
-	.loc 2 1228 0
+	.loc 2 1252 0
 	blti	a2, 1, .L210
 	mov.n	a11, a3
-	.loc 2 1238 0
+	.loc 2 1262 0
 	movi.n	a9, 0x13
 	l32r	a14, .LC17
 	j	.L211
@@ -1517,22 +1517,24 @@ normal_attributeValueTok:
 	.word	.L221
 	.section	.text.normal_attributeValueTok
 .L216:
-	.loc 2 1241 0
+	.loc 2 1267 0
 	addi.n	a11, a11, 2
 .LVL168:
 	j	.L211
 .L217:
+	.loc 2 1268 0
 	addi.n	a11, a11, 3
 .LVL169:
 	j	.L211
 .L218:
+	.loc 2 1269 0
 	addi.n	a11, a11, 4
 .LVL170:
 	j	.L211
 .L215:
-	.loc 2 1244 0
+	.loc 2 1272 0
 	bne	a11, a3, .L232
-	.loc 2 1245 0
+	.loc 2 1273 0
 	addi.n	a11, a11, 1
 .LVL171:
 	call8	normal_scanRef
@@ -1541,79 +1543,79 @@ normal_attributeValueTok:
 	j	.L210
 .LVL173:
 .L213:
-	.loc 2 1250 0
+	.loc 2 1278 0
 	s32i.n	a11, a13, 0
-	.loc 2 1251 0
+	.loc 2 1279 0
 	movi.n	a8, 0
 	j	.L210
 .L220:
-	.loc 2 1253 0
+	.loc 2 1281 0
 	bne	a11, a3, .L232
-	.loc 2 1254 0
+	.loc 2 1282 0
 	addi.n	a11, a11, 1
 .LVL174:
 	s32i.n	a11, a13, 0
 	j	.L233
 .LVL175:
 .L219:
-	.loc 2 1260 0
+	.loc 2 1288 0
 	bne	a11, a3, .L232
-	.loc 2 1261 0
+	.loc 2 1289 0
 	addi.n	a3, a11, 1
 .LVL176:
-	.loc 2 1262 0
+	.loc 2 1290 0
 	sub	a12, a12, a3
-	.loc 2 1263 0
+	.loc 2 1291 0
 	movi.n	a8, -3
-	.loc 2 1262 0
+	.loc 2 1290 0
 	blti	a12, 1, .L210
-	.loc 2 1264 0
+	.loc 2 1292 0
 	l8ui	a2, a11, 1
-	.loc 2 1265 0
+	.loc 2 1293 0
 	addi.n	a11, a11, 2
-	.loc 2 1264 0
+	.loc 2 1292 0
 	add.n	a10, a10, a2
 .LVL177:
 	l8ui	a8, a10, 72
-	.loc 2 1265 0
+	.loc 2 1293 0
 	addi	a8, a8, -10
 	moveqz	a3, a11, a8
 .LVL178:
-	.loc 2 1266 0
+	.loc 2 1294 0
 	s32i.n	a3, a13, 0
 .LVL179:
 .L233:
-	.loc 2 1267 0
+	.loc 2 1295 0
 	movi.n	a8, 7
 	j	.L210
 .LVL180:
 .L221:
-	.loc 2 1272 0
+	.loc 2 1300 0
 	bne	a11, a3, .L232
-	.loc 2 1273 0
+	.loc 2 1301 0
 	addi.n	a11, a11, 1
 .LVL181:
 	s32i.n	a11, a13, 0
-	.loc 2 1274 0
+	.loc 2 1302 0
 	movi.n	a8, 0x27
 	j	.L210
 .LVL182:
 .L212:
-	.loc 2 1279 0
+	.loc 2 1307 0
 	addi.n	a11, a11, 1
 .LVL183:
 .L211:
-	.loc 2 1237 0
+	.loc 2 1261 0
 	sub	a2, a12, a11
 	bgei	a2, 1, .L228
 .L232:
-	.loc 2 1283 0
+	.loc 2 1311 0
 	s32i.n	a11, a13, 0
-	.loc 2 1284 0
+	.loc 2 1312 0
 	movi.n	a8, 6
 .LVL184:
 .L210:
-	.loc 2 1285 0
+	.loc 2 1313 0
 	mov.n	a2, a8
 	retw.n
 .LFE25:
@@ -1623,27 +1625,27 @@ normal_attributeValueTok:
 	.type	normal_entityValueTok, @function
 normal_entityValueTok:
 .LFB26:
-	.loc 2 1290 0
+	.loc 2 1317 0
 .LVL185:
 	entry	sp, 32
 .LCFI12:
-	.loc 2 1290 0
+	.loc 2 1317 0
 	mov.n	a10, a2
 	mov.n	a12, a4
 	mov.n	a13, a5
-	.loc 2 1293 0
+	.loc 2 1320 0
 	movi.n	a8, -4
-	.loc 2 1292 0
+	.loc 2 1319 0
 	bgeu	a3, a4, .L235
-	.loc 2 1294 0
+	.loc 2 1321 0
 	sub	a2, a4, a3
 .LVL186:
-	.loc 2 1300 0
+	.loc 2 1327 0
 	movi.n	a8, -1
-	.loc 2 1294 0
+	.loc 2 1321 0
 	blti	a2, 1, .L235
 	mov.n	a11, a3
-	.loc 2 1304 0
+	.loc 2 1331 0
 	movi.n	a9, 0x1e
 	movi.n	a14, 9
 	j	.L236
@@ -1664,22 +1666,24 @@ normal_entityValueTok:
 	bne	a8, a14, .L237
 	j	.L245
 .L240:
-	.loc 2 1307 0
+	.loc 2 1336 0
 	addi.n	a11, a11, 2
 .LVL188:
 	j	.L236
 .L241:
+	.loc 2 1337 0
 	addi.n	a11, a11, 3
 .LVL189:
 	j	.L236
 .L238:
+	.loc 2 1338 0
 	addi.n	a11, a11, 4
 .LVL190:
 	j	.L236
 .L242:
-	.loc 2 1310 0
+	.loc 2 1341 0
 	bne	a11, a3, .L257
-	.loc 2 1311 0
+	.loc 2 1342 0
 	addi.n	a11, a11, 1
 .LVL191:
 	call8	normal_scanRef
@@ -1688,15 +1692,15 @@ normal_entityValueTok:
 	j	.L235
 .LVL193:
 .L244:
-	.loc 2 1315 0
+	.loc 2 1346 0
 	bne	a11, a3, .L257
 .LBB14:
-	.loc 2 1316 0
+	.loc 2 1347 0
 	addi.n	a11, a11, 1
 .LVL194:
 	call8	normal_scanPercent
 .LVL195:
-	.loc 2 1318 0
+	.loc 2 1348 0
 	addi	a9, a10, -22
 	movi.n	a8, 0
 	movnez	a8, a10, a9
@@ -1704,62 +1708,62 @@ normal_entityValueTok:
 .LVL196:
 .L243:
 .LBE14:
-	.loc 2 1323 0
+	.loc 2 1353 0
 	bne	a11, a3, .L257
-	.loc 2 1324 0
+	.loc 2 1354 0
 	addi.n	a11, a11, 1
 .LVL197:
 	s32i.n	a11, a13, 0
 	j	.L258
 .LVL198:
 .L245:
-	.loc 2 1330 0
+	.loc 2 1360 0
 	bne	a11, a3, .L257
-	.loc 2 1331 0
+	.loc 2 1361 0
 	addi.n	a3, a11, 1
 .LVL199:
-	.loc 2 1332 0
+	.loc 2 1362 0
 	sub	a12, a12, a3
-	.loc 2 1333 0
+	.loc 2 1363 0
 	movi.n	a8, -3
-	.loc 2 1332 0
+	.loc 2 1362 0
 	blti	a12, 1, .L235
-	.loc 2 1334 0
+	.loc 2 1364 0
 	l8ui	a2, a11, 1
-	.loc 2 1335 0
+	.loc 2 1365 0
 	addi.n	a11, a11, 2
-	.loc 2 1334 0
+	.loc 2 1364 0
 	add.n	a10, a10, a2
 .LVL200:
 	l8ui	a8, a10, 72
-	.loc 2 1335 0
+	.loc 2 1365 0
 	addi	a8, a8, -10
 	moveqz	a3, a11, a8
 .LVL201:
-	.loc 2 1336 0
+	.loc 2 1366 0
 	s32i.n	a3, a13, 0
 .LVL202:
 .L258:
-	.loc 2 1337 0
+	.loc 2 1367 0
 	movi.n	a8, 7
 	j	.L235
 .LVL203:
 .L237:
-	.loc 2 1342 0
+	.loc 2 1372 0
 	addi.n	a11, a11, 1
 .LVL204:
 .L236:
-	.loc 2 1303 0
+	.loc 2 1330 0
 	sub	a2, a12, a11
 	bgei	a2, 1, .L252
 .L257:
-	.loc 2 1346 0
+	.loc 2 1376 0
 	s32i.n	a11, a13, 0
-	.loc 2 1347 0
+	.loc 2 1377 0
 	movi.n	a8, 6
 .LVL205:
 .L235:
-	.loc 2 1348 0
+	.loc 2 1378 0
 	mov.n	a2, a8
 	retw.n
 .LFE26:
@@ -1771,20 +1775,20 @@ normal_entityValueTok:
 	.type	normal_ignoreSectionTok, @function
 normal_ignoreSectionTok:
 .LFB27:
-	.loc 2 1355 0
+	.loc 2 1384 0
 .LVL206:
 	entry	sp, 32
 .LCFI13:
 .LVL207:
-	.loc 2 1356 0
+	.loc 2 1385 0
 	movi.n	a6, 0
-	.loc 2 1365 0
+	.loc 2 1394 0
 	movi.n	a7, 8
-	.loc 2 1364 0
+	.loc 2 1393 0
 	j	.L260
 .LVL208:
 .L275:
-	.loc 2 1365 0
+	.loc 2 1394 0
 	l8ui	a9, a3, 0
 	add.n	a9, a2, a9
 	l8ui	a9, a9, 72
@@ -1808,9 +1812,9 @@ normal_ignoreSectionTok:
 	.word	.L262
 	.section	.text.normal_ignoreSectionTok
 .L266:
-	.loc 2 1366 0
+	.loc 2 1395 0
 	beqi	a8, 1, .L278
-	.loc 2 1366 0 is_stmt 0 discriminator 2
+	.loc 2 1395 0 is_stmt 0 discriminator 2
 	l32i	a8, a2, 352
 	mov.n	a11, a3
 	mov.n	a10, a2
@@ -1819,15 +1823,15 @@ normal_ignoreSectionTok:
 	beqz.n	a10, .L270
 	j	.L262
 .L270:
-	.loc 2 1366 0 discriminator 4
+	.loc 2 1395 0 discriminator 4
 	addi.n	a8, a3, 2
 .LVL210:
 	j	.L271
 .LVL211:
 .L267:
-	.loc 2 1366 0
+	.loc 2 1395 0
 	blti	a8, 3, .L278
-	.loc 2 1366 0 discriminator 6
+	.loc 2 1395 0 discriminator 6
 	l32i	a8, a2, 356
 	mov.n	a11, a3
 	mov.n	a10, a2
@@ -1836,9 +1840,9 @@ normal_ignoreSectionTok:
 	beqz.n	a10, .L283
 	j	.L262
 .L268:
-	.loc 2 1366 0
+	.loc 2 1395 0
 	blti	a8, 4, .L278
-	.loc 2 1366 0 discriminator 10
+	.loc 2 1395 0 discriminator 10
 	l32i	a8, a2, 360
 	mov.n	a11, a3
 	mov.n	a10, a2
@@ -1847,111 +1851,111 @@ normal_ignoreSectionTok:
 	beqz.n	a10, .L273
 	j	.L262
 .L273:
-	.loc 2 1366 0 discriminator 12
+	.loc 2 1395 0 discriminator 12
 	addi.n	a8, a3, 4
 .LVL214:
 	j	.L271
 .LVL215:
 .L262:
-	.loc 2 1366 0
+	.loc 2 1395 0
 	s32i.n	a3, a5, 0
 	movi.n	a2, 0
 .LVL216:
 	retw.n
 .LVL217:
 .L264:
-	.loc 2 1368 0 is_stmt 1
+	.loc 2 1397 0 is_stmt 1
 	addi.n	a8, a3, 1
 .LVL218:
-	.loc 2 1369 0
+	.loc 2 1398 0
 	sub	a9, a4, a8
 	blti	a9, 1, .L282
-	.loc 2 1370 0
+	.loc 2 1399 0
 	l8ui	a10, a3, 1
 	movi.n	a9, 0x21
 	bne	a10, a9, .L271
-	.loc 2 1371 0
+	.loc 2 1400 0
 	addi.n	a8, a3, 2
 .LVL219:
-	.loc 2 1372 0
+	.loc 2 1401 0
 	sub	a9, a4, a8
 	blti	a9, 1, .L282
-	.loc 2 1373 0
+	.loc 2 1402 0
 	l8ui	a10, a3, 2
 	movi.n	a9, 0x5b
 	bne	a10, a9, .L271
-	.loc 2 1374 0
+	.loc 2 1403 0
 	addi.n	a6, a6, 1
 .LVL220:
 .L283:
-	.loc 2 1375 0
+	.loc 2 1404 0
 	addi.n	a8, a3, 3
 .LVL221:
 	j	.L271
 .LVL222:
 .L265:
-	.loc 2 1380 0
+	.loc 2 1409 0
 	addi.n	a8, a3, 1
 .LVL223:
-	.loc 2 1381 0
+	.loc 2 1410 0
 	sub	a9, a4, a8
 	blti	a9, 1, .L282
-	.loc 2 1382 0
+	.loc 2 1411 0
 	l8ui	a10, a3, 1
 	movi.n	a9, 0x5d
 	bne	a10, a9, .L271
-	.loc 2 1383 0
+	.loc 2 1412 0
 	addi.n	a8, a3, 2
 .LVL224:
-	.loc 2 1384 0
+	.loc 2 1413 0
 	sub	a9, a4, a8
 	blti	a9, 1, .L282
-	.loc 2 1385 0
+	.loc 2 1414 0
 	l8ui	a10, a3, 2
 	movi.n	a9, 0x3e
 	bne	a10, a9, .L271
-	.loc 2 1386 0
+	.loc 2 1415 0
 	addi.n	a8, a3, 3
 .LVL225:
-	.loc 2 1387 0
+	.loc 2 1416 0
 	bnez.n	a6, .L274
-	.loc 2 1388 0
+	.loc 2 1417 0
 	s32i.n	a8, a5, 0
-	.loc 2 1389 0
+	.loc 2 1418 0
 	movi.n	a2, 0x2a
 .LVL226:
 	retw.n
 .LVL227:
 .L274:
-	.loc 2 1391 0
+	.loc 2 1420 0
 	addi.n	a6, a6, -1
 .LVL228:
 	j	.L271
 .LVL229:
 .L261:
-	.loc 2 1396 0
+	.loc 2 1425 0
 	addi.n	a8, a3, 1
 .LVL230:
 .L271:
-	.loc 2 1355 0
+	.loc 2 1384 0
 	mov.n	a3, a8
 .LVL231:
 .L260:
-	.loc 2 1364 0
+	.loc 2 1393 0
 	sub	a8, a4, a3
 	bgei	a8, 1, .L275
 	j	.L282
 .L278:
-	.loc 2 1366 0
+	.loc 2 1395 0
 	movi.n	a2, -2
 .LVL232:
 	retw.n
 .LVL233:
 .L282:
-	.loc 2 1369 0
+	.loc 2 1398 0
 	movi.n	a2, -1
 .LVL234:
-	.loc 2 1401 0
+	.loc 2 1430 0
 	retw.n
 .LFE27:
 	.size	normal_ignoreSectionTok, .-normal_ignoreSectionTok
@@ -1964,28 +1968,28 @@ normal_ignoreSectionTok:
 	.type	normal_isPublicId, @function
 normal_isPublicId:
 .LFB28:
-	.loc 2 1408 0
+	.loc 2 1436 0
 .LVL235:
 	entry	sp, 32
 .LCFI14:
-	.loc 2 1409 0
+	.loc 2 1437 0
 	addi.n	a3, a3, 1
 .LVL236:
-	.loc 2 1410 0
+	.loc 2 1438 0
 	addi.n	a4, a4, -1
 .LVL237:
 	movi.n	a11, 0x1a
-	.loc 2 1446 0
+	.loc 2 1475 0
 	movi.n	a12, 0x24
 	movi.n	a13, 1
-	.loc 2 1443 0
+	.loc 2 1471 0
 	movi	a15, -0x80
-	.loc 2 1436 0
+	.loc 2 1464 0
 	movi.n	a6, 9
-	.loc 2 1411 0
+	.loc 2 1439 0
 	j	.L285
 .L291:
-	.loc 2 1412 0
+	.loc 2 1440 0
 	l8ui	a10, a3, 0
 	add.n	a8, a2, a10
 	l8ui	a8, a8, 72
@@ -2001,36 +2005,36 @@ normal_isPublicId:
 	bnez.n	a9, .L288
 	l32r	a14, .LC21
 	bnone	a8, a14, .L286
-	.loc 2 1436 0
+	.loc 2 1464 0
 	bne	a10, a6, .L287
 	j	.L301
 .L288:
-	.loc 2 1443 0
+	.loc 2 1471 0
 	bnone	a10, a15, .L287
 .L286:
-	.loc 2 1446 0
+	.loc 2 1475 0
 	beq	a10, a12, .L287
 	beqi	a10, 64, .L287
 .L301:
-	.loc 2 1451 0
+	.loc 2 1480 0
 	s32i.n	a3, a5, 0
-	.loc 2 1452 0
+	.loc 2 1481 0
 	movi.n	a2, 0
 .LVL238:
 	retw.n
 .LVL239:
 .L287:
-	.loc 2 1411 0
+	.loc 2 1439 0
 	addi.n	a3, a3, 1
 .LVL240:
 .L285:
-	.loc 2 1411 0 is_stmt 0 discriminator 1
+	.loc 2 1439 0 is_stmt 0 discriminator 1
 	sub	a8, a4, a3
 	bgei	a8, 1, .L291
-	.loc 2 1457 0 is_stmt 1
+	.loc 2 1486 0 is_stmt 1
 	movi.n	a2, 1
 .LVL241:
-	.loc 2 1458 0
+	.loc 2 1487 0
 	retw.n
 .LFE28:
 	.size	normal_isPublicId, .-normal_isPublicId
@@ -2041,27 +2045,27 @@ normal_isPublicId:
 	.type	normal_getAtts, @function
 normal_getAtts:
 .LFB29:
-	.loc 2 1468 0
+	.loc 2 1496 0
 .LVL242:
 	entry	sp, 48
 .LCFI15:
 .LVL243:
-	.loc 2 1471 0
+	.loc 2 1499 0
 	movi.n	a10, 0
-	.loc 2 1469 0
+	.loc 2 1497 0
 	movi.n	a9, 1
-	.loc 2 1474 0
+	.loc 2 1502 0
 	addi.n	a3, a3, 1
 .LVL244:
-	.loc 2 1470 0
+	.loc 2 1498 0
 	mov.n	a8, a10
 	mov.n	a15, a10
 	movi.n	a7, 0xd
-	.loc 2 1491 0
+	.loc 2 1523 0
 	mov.n	a14, a9
 .LVL245:
 .L325:
-	.loc 2 1475 0
+	.loc 2 1503 0
 	l8ui	a6, a3, 0
 	movi.n	a12, 0x1a
 	add.n	a11, a2, a6
@@ -2107,67 +2111,67 @@ normal_getAtts:
 	.word	.L314
 	.section	.text.normal_getAtts
 .L306:
-	.loc 2 1486 0
+	.loc 2 1516 0
 	bnez.n	a9, .L315
-	.loc 2 1486 0 is_stmt 0 discriminator 1
+	.loc 2 1516 0 is_stmt 0 discriminator 1
 	movi.n	a9, 1
 .LVL246:
 	bge	a8, a4, .L315
-	.loc 2 1486 0 discriminator 3
+	.loc 2 1516 0 discriminator 3
 	slli	a11, a8, 4
 	add.n	a11, a5, a11
 	s32i.n	a3, a11, 0
 	s8i	a14, a11, 12
 .L315:
 .LVL247:
-	.loc 2 1486 0 discriminator 6
+	.loc 2 1516 0 discriminator 6
 	addi.n	a3, a3, 1
 .LVL248:
 	j	.L303
 .L307:
-	.loc 2 1486 0
+	.loc 2 1517 0 is_stmt 1
 	bnez.n	a9, .L316
-	.loc 2 1486 0 discriminator 7
+	.loc 2 1517 0 is_stmt 0 discriminator 1
 	movi.n	a9, 1
 .LVL249:
 	bge	a8, a4, .L316
-	.loc 2 1486 0 discriminator 9
+	.loc 2 1517 0 discriminator 3
 	slli	a11, a8, 4
 	add.n	a11, a5, a11
 	s32i.n	a3, a11, 0
 	s8i	a14, a11, 12
 .L316:
 .LVL250:
-	.loc 2 1486 0 discriminator 12
+	.loc 2 1517 0 discriminator 6
 	addi.n	a3, a3, 2
 .LVL251:
 	j	.L303
 .L308:
-	.loc 2 1486 0
+	.loc 2 1518 0 is_stmt 1
 	bnez.n	a9, .L317
-	.loc 2 1486 0 discriminator 13
+	.loc 2 1518 0 is_stmt 0 discriminator 1
 	movi.n	a9, 1
 .LVL252:
 	bge	a8, a4, .L317
-	.loc 2 1486 0 discriminator 15
+	.loc 2 1518 0 discriminator 3
 	slli	a11, a8, 4
 	add.n	a11, a5, a11
 	s32i.n	a3, a11, 0
 	s8i	a14, a11, 12
 .L317:
 .LVL253:
-	.loc 2 1486 0 discriminator 18
+	.loc 2 1518 0 discriminator 6
 	addi.n	a3, a3, 3
 .LVL254:
 	j	.L303
 .L314:
-	.loc 2 1491 0 is_stmt 1
+	.loc 2 1523 0 is_stmt 1
 	bnez.n	a9, .L303
-	.loc 2 1491 0 is_stmt 0 discriminator 1
+	.loc 2 1523 0 is_stmt 0 discriminator 1
 	movi.n	a9, 1
 .LVL255:
 	bge	a8, a4, .L303
-	.loc 2 1491 0 discriminator 2
+	.loc 2 1523 0 discriminator 2
 	slli	a11, a8, 4
 	add.n	a11, a5, a11
 	s32i.n	a3, a11, 0
@@ -2175,83 +2179,83 @@ normal_getAtts:
 	j	.L303
 .LVL256:
 .L311:
-	.loc 2 1495 0 is_stmt 1
+	.loc 2 1527 0 is_stmt 1
 	beqi	a9, 2, .L318
-	.loc 2 1499 0
+	.loc 2 1531 0
 	movi.n	a10, 0xc
 .LVL257:
-	.loc 2 1498 0
+	.loc 2 1530 0
 	movi.n	a9, 2
 .LVL258:
-	.loc 2 1496 0
+	.loc 2 1528 0
 	bge	a8, a4, .L303
-	.loc 2 1497 0
+	.loc 2 1529 0
 	slli	a9, a8, 4
 	addi.n	a10, a3, 1
 	add.n	a9, a5, a9
 	s32i.n	a10, a9, 4
-	.loc 2 1499 0
+	.loc 2 1531 0
 	movi.n	a10, 0xc
 	j	.L356
 .LVL259:
 .L318:
-	.loc 2 1501 0
+	.loc 2 1532 0
 	bnei	a10, 12, .L303
 .LVL260:
 	j	.L362
 .LVL261:
 .L312:
-	.loc 2 1509 0
+	.loc 2 1540 0
 	beqi	a9, 2, .L320
-	.loc 2 1513 0
+	.loc 2 1544 0
 	movi.n	a10, 0xd
 .LVL262:
-	.loc 2 1512 0
+	.loc 2 1543 0
 	movi.n	a9, 2
 .LVL263:
-	.loc 2 1510 0
+	.loc 2 1541 0
 	bge	a8, a4, .L303
-	.loc 2 1511 0
+	.loc 2 1542 0
 	slli	a9, a8, 4
 	addi.n	a10, a3, 1
 	add.n	a9, a5, a9
 	s32i.n	a10, a9, 4
-	.loc 2 1513 0
+	.loc 2 1544 0
 	movi.n	a10, 0xd
 .L356:
-	.loc 2 1512 0
+	.loc 2 1543 0
 	movi.n	a9, 2
 	j	.L303
 .LVL264:
 .L320:
-	.loc 2 1515 0
+	.loc 2 1545 0
 	bne	a10, a7, .L303
 .LVL265:
 .L362:
-	.loc 2 1517 0
+	.loc 2 1547 0
 	bge	a8, a4, .L321
-	.loc 2 1518 0
+	.loc 2 1548 0
 	slli	a9, a8, 4
 	add.n	a9, a5, a9
 	s32i.n	a3, a9, 8
 .L321:
-	.loc 2 1519 0
+	.loc 2 1549 0
 	addi.n	a8, a8, 1
 .LVL266:
 	j	.L335
 .LVL267:
 .L313:
-	.loc 2 1527 0
+	.loc 2 1557 0
 	beqi	a9, 1, .L335
-	.loc 2 1529 0
+	.loc 2 1559 0
 	bnei	a9, 2, .L303
 	bge	a8, a4, .L303
-	.loc 2 1531 0
+	.loc 2 1559 0 is_stmt 0 discriminator 1
 	slli	a13, a8, 4
 	add.n	a13, a5, a13
 	l8ui	a11, a13, 12
 	beqz.n	a11, .L303
-	.loc 2 1533 0
+	.loc 2 1561 0 is_stmt 1
 	l32i.n	a11, a13, 4
 	movi.n	a6, 0
 	sub	a11, a11, a3
@@ -2264,46 +2268,46 @@ normal_getAtts:
 	movi.n	a6, 1
 	moveqz	a6, a11, a12
 	bnez.n	a6, .L323
-	.loc 2 1534 0
+	.loc 2 1562 0
 	l8ui	a11, a3, 1
 	beqi	a11, 32, .L323
-	.loc 2 1535 0
+	.loc 2 1563 0
 	add.n	a11, a2, a11
 	l8ui	a11, a11, 72
 	bne	a10, a11, .L303
 .L323:
-	.loc 2 1536 0
+	.loc 2 1564 0
 	s8i	a15, a13, 12
 	j	.L356
 .L309:
-	.loc 2 1541 0
+	.loc 2 1570 0
 	beqi	a9, 1, .L335
-	.loc 2 1543 0
+	.loc 2 1572 0
 	bnei	a9, 2, .L303
 .L359:
 	bge	a8, a4, .L303
-	.loc 2 1544 0
+	.loc 2 1573 0
 	slli	a11, a8, 4
 	add.n	a11, a5, a11
 	s8i	a15, a11, 12
 	j	.L303
 .L310:
-	.loc 2 1548 0
+	.loc 2 1577 0
 	beqi	a9, 2, .L303
 	j	.L355
 .LVL268:
 .L335:
-	.loc 2 1542 0
+	.loc 2 1571 0
 	movi.n	a9, 0
 .LVL269:
 .L303:
-	.loc 2 1474 0
+	.loc 2 1502 0
 	addi.n	a3, a3, 1
 .LVL270:
-	.loc 2 1554 0
+	.loc 2 1583 0
 	j	.L325
 .L355:
-	.loc 2 1556 0
+	.loc 2 1585 0
 	mov.n	a2, a8
 .LVL271:
 	retw.n
@@ -2314,33 +2318,33 @@ normal_getAtts:
 	.type	normal_predefinedEntityName, @function
 normal_predefinedEntityName:
 .LFB31:
-	.loc 2 1605 0
+	.loc 2 1647 0
 .LVL272:
 	entry	sp, 32
 .LCFI16:
-	.loc 2 1606 0
+	.loc 2 1649 0
 	sub	a4, a4, a3
 .LVL273:
 	beqi	a4, 3, .L365
 	beqi	a4, 4, .L366
 	bnei	a4, 2, .L386
-	.loc 2 1608 0
+	.loc 2 1651 0
 	l8ui	a8, a3, 1
 	movi	a4, 0x74
-	.loc 2 1653 0
+	.loc 2 1696 0
 	movi.n	a2, 0
 .LVL274:
-	.loc 2 1608 0
+	.loc 2 1651 0
 	bne	a8, a4, .L364
-	.loc 2 1609 0
+	.loc 2 1652 0
 	l8ui	a3, a3, 0
 .LVL275:
 	movi	a4, 0x67
-	.loc 2 1613 0
+	.loc 2 1656 0
 	movi.n	a2, 0x3e
-	.loc 2 1609 0
+	.loc 2 1652 0
 	beq	a3, a4, .L364
-	.loc 2 1653 0
+	.loc 2 1696 0
 	addi	a3, a3, -108
 	movi.n	a4, 0x3c
 	movi.n	a2, 0
@@ -2348,30 +2352,30 @@ normal_predefinedEntityName:
 	retw.n
 .LVL276:
 .L365:
-	.loc 2 1618 0
+	.loc 2 1661 0
 	l8ui	a8, a3, 0
 	movi	a4, 0x61
-	.loc 2 1653 0
+	.loc 2 1696 0
 	movi.n	a2, 0
 .LVL277:
-	.loc 2 1618 0
+	.loc 2 1661 0
 	bne	a8, a4, .L364
 .LVL278:
-	.loc 2 1620 0
+	.loc 2 1663 0
 	l8ui	a8, a3, 1
 	movi	a4, 0x6d
 	bne	a8, a4, .L364
 .LVL279:
-	.loc 2 1622 0
+	.loc 2 1665 0
 	l8ui	a3, a3, 2
 .LVL280:
-	.loc 2 1623 0
+	.loc 2 1666 0
 	movi.n	a4, 0x26
 	addi	a3, a3, -112
 	j	.L387
 .LVL281:
 .L366:
-	.loc 2 1628 0
+	.loc 2 1671 0
 	l8ui	a2, a3, 0
 .LVL282:
 	movi	a4, 0x61
@@ -2379,45 +2383,45 @@ normal_predefinedEntityName:
 	movi	a4, 0x71
 	bne	a2, a4, .L386
 .LVL283:
-	.loc 2 1631 0
+	.loc 2 1674 0
 	l8ui	a8, a3, 1
 	movi	a4, 0x75
-	.loc 2 1653 0
+	.loc 2 1696 0
 	movi.n	a2, 0
-	.loc 2 1631 0
+	.loc 2 1674 0
 	bne	a8, a4, .L364
 .LVL284:
-	.loc 2 1633 0
+	.loc 2 1676 0
 	l8ui	a8, a3, 2
 	movi	a4, 0x6f
 	bne	a8, a4, .L364
 .LVL285:
-	.loc 2 1635 0
+	.loc 2 1678 0
 	l8ui	a3, a3, 3
 .LVL286:
-	.loc 2 1636 0
+	.loc 2 1679 0
 	movi.n	a4, 0x22
 	addi	a3, a3, -116
 	j	.L387
 .LVL287:
 .L370:
-	.loc 2 1642 0
+	.loc 2 1685 0
 	l8ui	a8, a3, 1
 	movi	a4, 0x70
-	.loc 2 1653 0
+	.loc 2 1696 0
 	movi.n	a2, 0
-	.loc 2 1642 0
+	.loc 2 1685 0
 	bne	a8, a4, .L364
 .LVL288:
-	.loc 2 1644 0
+	.loc 2 1687 0
 	l8ui	a8, a3, 2
 	movi	a4, 0x6f
 	bne	a8, a4, .L364
 .LVL289:
-	.loc 2 1646 0
+	.loc 2 1689 0
 	l8ui	a3, a3, 3
 .LVL290:
-	.loc 2 1647 0
+	.loc 2 1690 0
 	movi.n	a4, 0x27
 	addi	a3, a3, -115
 .LVL291:
@@ -2426,11 +2430,11 @@ normal_predefinedEntityName:
 	retw.n
 .LVL292:
 .L386:
-	.loc 2 1653 0
+	.loc 2 1696 0
 	movi.n	a2, 0
 .LVL293:
 .L364:
-	.loc 2 1654 0
+	.loc 2 1697 0
 	retw.n
 .LFE31:
 	.size	normal_predefinedEntityName, .-normal_predefinedEntityName
@@ -2439,30 +2443,30 @@ normal_predefinedEntityName:
 	.type	normal_nameMatchesAscii, @function
 normal_nameMatchesAscii:
 .LFB32:
-	.loc 2 1659 0
+	.loc 2 1701 0
 .LVL294:
 	entry	sp, 32
 .LCFI17:
-	.loc 2 1660 0
+	.loc 2 1703 0
 	j	.L389
 .LVL295:
 .L391:
-	.loc 2 1661 0
+	.loc 2 1704 0
 	sub	a2, a4, a3
 	blti	a2, 1, .L393
-	.loc 2 1669 0
+	.loc 2 1712 0
 	l8ui	a2, a3, 0
 	bne	a2, a8, .L393
-	.loc 2 1660 0
+	.loc 2 1703 0
 	addi.n	a3, a3, 1
 .LVL296:
 	addi.n	a5, a5, 1
 .LVL297:
 .L389:
-	.loc 2 1660 0 is_stmt 0 discriminator 1
+	.loc 2 1703 0 is_stmt 0 discriminator 1
 	l8ui	a8, a5, 0
 	bnez.n	a8, .L391
-	.loc 2 1672 0 is_stmt 1
+	.loc 2 1715 0 is_stmt 1
 	sub	a3, a3, a4
 .LVL298:
 	movi.n	a2, 1
@@ -2470,9 +2474,9 @@ normal_nameMatchesAscii:
 	retw.n
 .LVL299:
 .L393:
-	.loc 2 1667 0
+	.loc 2 1710 0
 	movi.n	a2, 0
-	.loc 2 1673 0
+	.loc 2 1716 0
 	retw.n
 .LFE32:
 	.size	normal_nameMatchesAscii, .-normal_nameMatchesAscii
@@ -2481,14 +2485,14 @@ normal_nameMatchesAscii:
 	.type	normal_nameLength, @function
 normal_nameLength:
 .LFB33:
-	.loc 2 1677 0
+	.loc 2 1719 0
 .LVL300:
 	entry	sp, 32
 .LCFI18:
 .LVL301:
-	.loc 2 1677 0
+	.loc 2 1719 0
 	mov.n	a8, a3
-	.loc 2 1680 0
+	.loc 2 1722 0
 	movi.n	a10, 0x16
 	movi.n	a11, 0x1b
 	movi.n	a12, 0x1d
@@ -2508,26 +2512,28 @@ normal_nameLength:
 	beq	a9, a12, .L401
 	j	.L396
 .L399:
-	.loc 2 1683 0
+	.loc 2 1727 0
 	addi.n	a8, a8, 2
 .LVL303:
 	j	.L395
 .L400:
+	.loc 2 1728 0
 	addi.n	a8, a8, 3
 .LVL304:
 	j	.L395
 .L397:
+	.loc 2 1729 0
 	addi.n	a8, a8, 4
 .LVL305:
 	j	.L395
 .L401:
-	.loc 2 1694 0
+	.loc 2 1740 0
 	addi.n	a8, a8, 1
 .LVL306:
-	.loc 2 1695 0
+	.loc 2 1741 0
 	j	.L395
 .L396:
-	.loc 2 1700 0
+	.loc 2 1746 0
 	sub	a2, a8, a3
 .LVL307:
 	retw.n
@@ -2540,26 +2546,26 @@ normal_nameLength:
 	.type	normal_skipS, @function
 normal_skipS:
 .LFB34:
-	.loc 2 1704 0
+	.loc 2 1749 0
 .LVL308:
 	entry	sp, 32
 .LCFI19:
 	l32r	a10, .LC23
 	movi.n	a9, 0x15
 .L405:
-	.loc 2 1706 0
+	.loc 2 1751 0
 	l8ui	a8, a3, 0
 	add.n	a8, a2, a8
 	l8ui	a8, a8, 72
 	bltu	a9, a8, .L404
 	bbc	a10, a8, .L404
-	.loc 2 1710 0
+	.loc 2 1755 0
 	addi.n	a3, a3, 1
 .LVL309:
-	.loc 2 1715 0
+	.loc 2 1760 0
 	j	.L405
 .L404:
-	.loc 2 1716 0
+	.loc 2 1761 0
 	mov.n	a2, a3
 .LVL310:
 	retw.n
@@ -2572,18 +2578,18 @@ normal_skipS:
 	.type	normal_updatePosition, @function
 normal_updatePosition:
 .LFB35:
-	.loc 2 1723 0
+	.loc 2 1765 0
 .LVL311:
 	entry	sp, 32
 .LCFI20:
-	.loc 2 1725 0
+	.loc 2 1767 0
 	l32r	a11, .LC24
-	.loc 2 1742 0
+	.loc 2 1786 0
 	movi.n	a10, -1
-	.loc 2 1724 0
+	.loc 2 1766 0
 	j	.L410
 .L420:
-	.loc 2 1725 0
+	.loc 2 1767 0
 	l8ui	a8, a3, 0
 	add.n	a8, a2, a8
 	l8ui	a8, a8, 72
@@ -2605,70 +2611,72 @@ normal_updatePosition:
 	.word	.L417
 	.section	.text.normal_updatePosition
 .L412:
-	.loc 2 1730 0
+	.loc 2 1772 0
 	addi.n	a3, a3, 2
 .LVL312:
 	j	.L418
 .L414:
+	.loc 2 1773 0
 	addi.n	a3, a3, 3
 .LVL313:
 	j	.L418
 .L415:
+	.loc 2 1774 0
 	addi.n	a3, a3, 4
 .LVL314:
 	j	.L418
 .L417:
-	.loc 2 1734 0
+	.loc 2 1778 0
 	l32i.n	a8, a5, 0
-	.loc 2 1733 0
+	.loc 2 1777 0
 	s32i.n	a10, a5, 4
-	.loc 2 1734 0
+	.loc 2 1778 0
 	addi.n	a8, a8, 1
 	s32i.n	a8, a5, 0
 	j	.L411
 .L416:
-	.loc 2 1738 0
+	.loc 2 1782 0
 	l32i.n	a8, a5, 0
 	addi.n	a8, a8, 1
 	s32i.n	a8, a5, 0
-	.loc 2 1739 0
+	.loc 2 1783 0
 	addi.n	a8, a3, 1
 .LVL315:
-	.loc 2 1740 0
+	.loc 2 1784 0
 	sub	a9, a4, a8
 	blti	a9, 1, .L419
-	.loc 2 1740 0 is_stmt 0 discriminator 1
+	.loc 2 1784 0 is_stmt 0 discriminator 1
 	l8ui	a9, a3, 1
-	.loc 2 1741 0 is_stmt 1 discriminator 1
+	.loc 2 1785 0 is_stmt 1 discriminator 1
 	addi.n	a3, a3, 2
-	.loc 2 1740 0 discriminator 1
+	.loc 2 1784 0 discriminator 1
 	add.n	a9, a2, a9
 	l8ui	a9, a9, 72
-	.loc 2 1741 0 discriminator 1
+	.loc 2 1785 0 discriminator 1
 	addi	a9, a9, -10
 	moveqz	a8, a3, a9
 .LVL316:
 .L419:
-	.loc 2 1742 0
+	.loc 2 1786 0
 	s32i.n	a10, a5, 4
-	.loc 2 1743 0
+	.loc 2 1787 0
 	mov.n	a3, a8
 	j	.L418
 .LVL317:
 .L411:
-	.loc 2 1745 0
+	.loc 2 1789 0
 	addi.n	a3, a3, 1
 .LVL318:
 .L418:
-	.loc 2 1748 0
+	.loc 2 1792 0
 	l32i.n	a8, a5, 4
 	addi.n	a8, a8, 1
 	s32i.n	a8, a5, 4
 .L410:
-	.loc 2 1724 0
+	.loc 2 1766 0
 	sub	a8, a4, a3
 	bgei	a8, 1, .L420
-	.loc 2 1750 0
+	.loc 2 1794 0
 	retw.n
 .LFE35:
 	.size	normal_updatePosition, .-normal_updatePosition
@@ -2681,67 +2689,67 @@ normal_updatePosition:
 	.type	utf8_toUtf16, @function
 utf8_toUtf16:
 .LFB38:
-	.loc 1 443 0
+	.loc 1 400 0
 .LVL319:
 	entry	sp, 32
 .LCFI21:
 .LVL320:
-	.loc 1 445 0
+	.loc 1 402 0
 	l32i.n	a10, a5, 0
 .LVL321:
-	.loc 1 446 0
+	.loc 1 403 0
 	l32i.n	a8, a3, 0
 .LVL322:
 .LBB15:
-	.loc 1 479 0
+	.loc 1 435 0
 	l32r	a11, .LC25
-	.loc 1 480 0
+	.loc 1 436 0
 	l32r	a12, .LC26
-	.loc 1 481 0
+	.loc 1 437 0
 	l32r	a13, .LC27
 .LBE15:
-	.loc 1 447 0
+	.loc 1 404 0
 	j	.L422
 .L443:
-	.loc 1 448 0
+	.loc 1 405 0
 	l8ui	a9, a8, 0
 	add.n	a14, a2, a9
 	l8ui	a14, a14, 72
 	beqi	a14, 6, .L424
 	beqi	a14, 7, .L425
 	bnei	a14, 5, .L444
-	.loc 1 450 0
+	.loc 1 407 0
 	sub	a14, a4, a8
 	blti	a14, 2, .L436
 .LVL323:
-	.loc 1 454 0
+	.loc 1 411 0
 	extui	a9, a9, 0, 5
 	slli	a14, a9, 6
 	l8ui	a9, a8, 1
-	.loc 1 455 0
+	.loc 1 412 0
 	addi.n	a8, a8, 2
 .LVL324:
-	.loc 1 454 0
+	.loc 1 411 0
 	extui	a9, a9, 0, 6
 	or	a9, a9, a14
 	s16i	a9, a10, 0
 	j	.L445
 .LVL325:
 .L424:
-	.loc 1 458 0
+	.loc 1 415 0
 	sub	a14, a4, a8
 	blti	a14, 3, .L436
 .LVL326:
-	.loc 1 462 0
+	.loc 1 419 0
 	l8ui	a14, a8, 2
 	slli	a9, a9, 12
 	extui	a14, a14, 0, 6
 	or	a9, a14, a9
 	l8ui	a14, a8, 1
-	.loc 1 464 0
+	.loc 1 421 0
 	addi.n	a8, a8, 3
 .LVL327:
-	.loc 1 462 0
+	.loc 1 419 0
 	extui	a14, a14, 0, 6
 	slli	a14, a14, 6
 	or	a9, a9, a14
@@ -2750,13 +2758,13 @@ utf8_toUtf16:
 .LVL328:
 .L425:
 .LBB16:
-	.loc 1 469 0
+	.loc 1 425 0
 	sub	a14, a6, a10
 	blti	a14, 4, .L435
-	.loc 1 473 0
+	.loc 1 429 0
 	sub	a14, a4, a8
 	blti	a14, 4, .L436
-	.loc 1 477 0
+	.loc 1 433 0
 	l8ui	a14, a8, 1
 	extui	a9, a9, 0, 3
 	extui	a14, a14, 0, 6
@@ -2767,40 +2775,40 @@ utf8_toUtf16:
 	extui	a14, a14, 0, 6
 	or	a9, a9, a14
 	l8ui	a14, a8, 2
-	.loc 1 483 0
+	.loc 1 439 0
 	addi.n	a8, a8, 4
 .LVL329:
-	.loc 1 477 0
+	.loc 1 433 0
 	extui	a14, a14, 0, 6
 	slli	a14, a14, 6
 	or	a9, a9, a14
 .LVL330:
-	.loc 1 479 0
+	.loc 1 435 0
 	add.n	a9, a9, a11
 .LVL331:
-	.loc 1 480 0
+	.loc 1 436 0
 	srli	a14, a9, 10
-	.loc 1 481 0
+	.loc 1 437 0
 	extui	a9, a9, 0, 10
 .LVL332:
-	.loc 1 480 0
+	.loc 1 436 0
 	or	a14, a14, a12
-	.loc 1 481 0
+	.loc 1 437 0
 	or	a9, a9, a13
-	.loc 1 480 0
+	.loc 1 436 0
 	s16i	a14, a10, 0
 .LVL333:
-	.loc 1 481 0
+	.loc 1 437 0
 	s16i	a9, a10, 2
-	.loc 1 482 0
+	.loc 1 438 0
 	addi.n	a10, a10, 4
 .LVL334:
 .LBE16:
-	.loc 1 485 0
+	.loc 1 440 0
 	j	.L422
 .L444:
 .LVL335:
-	.loc 1 487 0
+	.loc 1 442 0
 	addi.n	a8, a8, 1
 .LVL336:
 	s16i	a9, a10, 0
@@ -2809,39 +2817,39 @@ utf8_toUtf16:
 	addi.n	a10, a10, 2
 .L422:
 .LVL338:
-	.loc 1 447 0
+	.loc 1 404 0
 	bgeu	a8, a4, .L438
 	bltu	a10, a6, .L443
 .L438:
 .LBB17:
-	.loc 1 470 0
+	.loc 1 426 0
 	movi.n	a2, 2
 .LVL339:
 .LBE17:
-	.loc 1 491 0
+	.loc 1 446 0
 	bltu	a8, a4, .L427
-	.loc 1 444 0
+	.loc 1 401 0
 	movi.n	a2, 0
 	j	.L427
 .LVL340:
 .L435:
 .LBB18:
-	.loc 1 470 0
+	.loc 1 426 0
 	movi.n	a2, 2
 .LVL341:
 	j	.L427
 .LVL342:
 .L436:
 .LBE18:
-	.loc 1 451 0
+	.loc 1 408 0
 	movi.n	a2, 1
 .LVL343:
 .L427:
-	.loc 1 494 0
+	.loc 1 449 0
 	s32i.n	a8, a3, 0
-	.loc 1 495 0
+	.loc 1 450 0
 	s32i.n	a10, a5, 0
-	.loc 1 497 0
+	.loc 1 452 0
 	retw.n
 .LFE38:
 	.size	utf8_toUtf16, .-utf8_toUtf16
@@ -2850,56 +2858,56 @@ utf8_toUtf16:
 	.type	latin1_toUtf8, @function
 latin1_toUtf8:
 .LFB39:
-	.loc 1 549 0
+	.loc 1 498 0
 .LVL344:
 	entry	sp, 32
 .LCFI22:
 .LBB19:
-	.loc 1 558 0
+	.loc 1 508 0
 	movi	a11, -0x40
-	.loc 1 559 0
+	.loc 1 509 0
 	movi	a12, -0x80
 .LVL345:
 .L447:
-	.loc 1 552 0
+	.loc 1 502 0
 	l32i.n	a2, a3, 0
 	beq	a2, a4, .L451
-	.loc 1 554 0
+	.loc 1 504 0
 	l8ui	a10, a2, 0
 .LVL346:
 	l32i.n	a8, a5, 0
-	.loc 1 555 0
+	.loc 1 505 0
 	extui	a9, a10, 0, 8
 	sext	a2, a9, 7
 .LVL347:
 	bgez	a2, .L449
-	.loc 1 556 0
+	.loc 1 506 0
 	sub	a2, a6, a8
 	blti	a2, 2, .L453
-	.loc 1 558 0
+	.loc 1 508 0
 	addi.n	a2, a8, 1
 	srli	a10, a10, 6
 	s32i.n	a2, a5, 0
 .LVL348:
 	or	a10, a10, a11
 	s8i	a10, a8, 0
-	.loc 1 559 0
+	.loc 1 509 0
 	l32i.n	a2, a5, 0
 	extui	a9, a9, 0, 6
 	addi.n	a8, a2, 1
 	s32i.n	a8, a5, 0
 	or	a9, a9, a12
 	s8i	a9, a2, 0
-	.loc 1 560 0
+	.loc 1 510 0
 	l32i.n	a2, a3, 0
 	addi.n	a2, a2, 1
 	s32i.n	a2, a3, 0
 	j	.L447
 .LVL349:
 .L449:
-	.loc 1 563 0
+	.loc 1 512 0
 	beq	a8, a6, .L453
-	.loc 1 565 0
+	.loc 1 514 0
 	addi.n	a2, a8, 1
 	s32i.n	a2, a5, 0
 .LVL350:
@@ -2911,15 +2919,15 @@ latin1_toUtf8:
 	j	.L447
 .LVL351:
 .L451:
-	.loc 1 553 0
+	.loc 1 503 0
 	movi.n	a2, 0
 	retw.n
 .LVL352:
 .L453:
-	.loc 1 557 0
+	.loc 1 507 0
 	movi.n	a2, 2
 .LBE19:
-	.loc 1 568 0
+	.loc 1 517 0
 	retw.n
 .LFE39:
 	.size	latin1_toUtf8, .-latin1_toUtf8
@@ -2928,15 +2936,15 @@ latin1_toUtf8:
 	.type	latin1_toUtf16, @function
 latin1_toUtf16:
 .LFB40:
-	.loc 1 574 0
+	.loc 1 521 0
 .LVL353:
 	entry	sp, 32
 .LCFI23:
-	.loc 1 575 0
+	.loc 1 523 0
 	j	.L455
 .LVL354:
 .L460:
-	.loc 1 576 0
+	.loc 1 524 0
 	addi.n	a2, a8, 2
 	s32i.n	a2, a5, 0
 	l32i.n	a2, a3, 0
@@ -2945,27 +2953,27 @@ latin1_toUtf16:
 	l8ui	a2, a2, 0
 	s16i	a2, a8, 0
 .L455:
-	.loc 1 575 0
+	.loc 1 523 0
 	l32i.n	a9, a3, 0
 	l32i.n	a8, a5, 0
 	bltu	a9, a4, .L456
 .L461:
-	.loc 1 578 0
+	.loc 1 526 0
 	bne	a8, a6, .L463
-	.loc 1 579 0
+	.loc 1 527 0
 	movi.n	a2, 2
-	.loc 1 578 0
+	.loc 1 526 0
 	bltu	a9, a4, .L457
 .L463:
-	.loc 1 581 0
+	.loc 1 529 0
 	movi.n	a2, 0
 	retw.n
 .L456:
-	.loc 1 575 0 discriminator 1
+	.loc 1 523 0 discriminator 1
 	bltu	a8, a6, .L460
 	j	.L461
 .L457:
-	.loc 1 582 0
+	.loc 1 530 0
 	retw.n
 .LFE40:
 	.size	latin1_toUtf16, .-latin1_toUtf16
@@ -2974,15 +2982,15 @@ latin1_toUtf16:
 	.type	ascii_toUtf8, @function
 ascii_toUtf8:
 .LFB41:
-	.loc 1 612 0
+	.loc 1 556 0
 .LVL355:
 	entry	sp, 32
 .LCFI24:
-	.loc 1 613 0
+	.loc 1 558 0
 	j	.L469
 .LVL356:
 .L474:
-	.loc 1 614 0
+	.loc 1 559 0
 	addi.n	a2, a8, 1
 	s32i.n	a2, a5, 0
 	l32i.n	a2, a3, 0
@@ -2991,27 +2999,27 @@ ascii_toUtf8:
 	l8ui	a2, a2, 0
 	s8i	a2, a8, 0
 .L469:
-	.loc 1 613 0
+	.loc 1 558 0
 	l32i.n	a9, a3, 0
 	l32i.n	a8, a5, 0
 	bltu	a9, a4, .L470
 .L475:
-	.loc 1 616 0
+	.loc 1 561 0
 	bne	a8, a6, .L477
-	.loc 1 617 0
+	.loc 1 562 0
 	movi.n	a2, 2
-	.loc 1 616 0
+	.loc 1 561 0
 	bltu	a9, a4, .L471
 .L477:
-	.loc 1 619 0
+	.loc 1 564 0
 	movi.n	a2, 0
 	retw.n
 .L470:
-	.loc 1 613 0 discriminator 1
+	.loc 1 558 0 discriminator 1
 	bltu	a8, a6, .L474
 	j	.L475
 .L471:
-	.loc 1 620 0
+	.loc 1 565 0
 	retw.n
 .LFE41:
 	.size	ascii_toUtf8, .-ascii_toUtf8
@@ -3020,23 +3028,23 @@ ascii_toUtf8:
 	.type	unicode_byte_type, @function
 unicode_byte_type:
 .LFB42:
-	.loc 1 648 0
+	.loc 1 590 0
 .LVL357:
 	entry	sp, 32
 .LCFI25:
-	.loc 1 649 0
+	.loc 1 591 0
 	movi	a8, 0xdf
 	bltu	a8, a2, .L484
 	movi	a3, 0xdc
 .LVL358:
-	.loc 1 653 0
+	.loc 1 603 0
 	movi.n	a8, 8
-	.loc 1 649 0
+	.loc 1 591 0
 	bgeu	a2, a3, .L486
 	movi	a3, 0xd8
-	.loc 1 651 0
+	.loc 1 597 0
 	movi.n	a8, 7
-	.loc 1 649 0
+	.loc 1 591 0
 	bgeu	a2, a3, .L486
 	j	.L483
 .LVL359:
@@ -3045,25 +3053,25 @@ unicode_byte_type:
 	beq	a2, a8, .L487
 .LVL360:
 .L483:
-	.loc 1 662 0
+	.loc 1 612 0
 	movi.n	a8, 0x1d
 	j	.L486
 .LVL361:
 .L487:
-	.loc 1 655 0
+	.loc 1 605 0
 	movi	a2, 0xfe
 .LVL362:
-	.loc 1 662 0
+	.loc 1 612 0
 	movi.n	a8, 0x1d
-	.loc 1 655 0
+	.loc 1 605 0
 	bltu	a3, a2, .L486
 	j	.L492
 .L492:
-	.loc 1 658 0
+	.loc 1 608 0
 	movi.n	a8, 0
 .LVL363:
 .L486:
-	.loc 1 663 0
+	.loc 1 613 0
 	mov.n	a2, a8
 	retw.n
 .LFE42:
@@ -3073,11 +3081,11 @@ unicode_byte_type:
 	.type	little2_toUtf8, @function
 little2_toUtf8:
 .LFB43:
-	.loc 1 764 0
+	.loc 1 717 0
 .LVL364:
 	entry	sp, 32
 .LCFI26:
-	.loc 1 764 0
+	.loc 1 717 0
 	l32i.n	a10, a3, 0
 .LVL365:
 	movi.n	a2, -2
@@ -3096,7 +3104,7 @@ little2_toUtf8:
 	j	.L494
 .L507:
 .LBB21:
-	.loc 1 764 0 is_stmt 0 discriminator 23
+	.loc 1 717 0 is_stmt 0 discriminator 23
 	l8ui	a9, a10, 1
 	l8ui	a8, a10, 0
 .LVL369:
@@ -3111,26 +3119,26 @@ little2_toUtf8:
 	bgeu	a12, a7, .L509
 	j	.L495
 .L508:
-	.loc 1 764 0 discriminator 3
+	.loc 1 717 0 discriminator 3
 	sext	a7, a8, 7
 	bltz	a7, .L497
-	.loc 1 764 0 discriminator 6
+	.loc 1 717 0 discriminator 6
 	bne	a6, a2, .L500
 	j	.L514
 .L500:
-	.loc 1 764 0 discriminator 9
+	.loc 1 717 0 discriminator 9
 	addi.n	a7, a2, 1
 	s32i.n	a7, a5, 0
 .LVL370:
 	j	.L510
 .LVL371:
 .L497:
-	.loc 1 764 0 discriminator 7
+	.loc 1 717 0 discriminator 7
 	sub	a7, a6, a2
 	bgei	a7, 2, .L503
 	j	.L514
 .L503:
-	.loc 1 764 0 discriminator 12
+	.loc 1 717 0 discriminator 12
 	addi.n	a7, a2, 1
 	s32i.n	a7, a5, 0
 .LVL372:
@@ -3152,12 +3160,12 @@ little2_toUtf8:
 	j	.L502
 .LVL375:
 .L495:
-	.loc 1 764 0 discriminator 2
+	.loc 1 717 0 discriminator 2
 	sub	a7, a6, a2
 	bgei	a7, 3, .L504
 	j	.L514
 .L504:
-	.loc 1 764 0 discriminator 15
+	.loc 1 717 0 discriminator 15
 	addi.n	a7, a2, 1
 	s32i.n	a7, a5, 0
 .LVL376:
@@ -3175,28 +3183,28 @@ little2_toUtf8:
 	j	.L511
 .LVL378:
 .L509:
-	.loc 1 764 0 discriminator 5
+	.loc 1 717 0 discriminator 5
 	sub	a7, a6, a2
 	bgei	a7, 4, .L505
 .L514:
-	.loc 1 764 0 discriminator 17
+	.loc 1 717 0 discriminator 17
 	s32i.n	a10, a3, 0
 .LVL379:
 	movi.n	a2, 2
 	retw.n
 .LVL380:
 .L505:
-	.loc 1 764 0 discriminator 18
+	.loc 1 717 0 discriminator 18
 	sub	a7, a4, a10
 	bgei	a7, 4, .L506
-	.loc 1 764 0 discriminator 19
+	.loc 1 717 0 discriminator 19
 	s32i.n	a10, a3, 0
 .LVL381:
 	movi.n	a2, 1
 	retw.n
 .LVL382:
 .L506:
-	.loc 1 764 0 discriminator 20
+	.loc 1 717 0 discriminator 20
 	extui	a9, a9, 0, 2
 	srli	a7, a8, 6
 	slli	a9, a9, 2
@@ -3247,13 +3255,13 @@ little2_toUtf8:
 .LVL390:
 .L502:
 .LBE21:
-	.loc 1 764 0 discriminator 21
+	.loc 1 717 0 discriminator 21
 	addi.n	a10, a10, 2
 .LVL391:
 .L494:
-	.loc 1 764 0 discriminator 22
+	.loc 1 717 0 discriminator 22
 	bltu	a10, a4, .L507
-	.loc 1 764 0 discriminator 24
+	.loc 1 717 0 discriminator 24
 	s32i.n	a10, a3, 0
 	movi.n	a2, 0
 	retw.n
@@ -3264,12 +3272,12 @@ little2_toUtf8:
 	.type	little2_toUtf16, @function
 little2_toUtf16:
 .LFB44:
-	.loc 1 765 0 is_stmt 1
+	.loc 1 718 0 is_stmt 1
 .LVL392:
 	entry	sp, 32
 .LCFI27:
 .LVL393:
-	.loc 1 765 0
+	.loc 1 718 0
 	l32i.n	a8, a3, 0
 	movi.n	a9, -2
 	sub	a4, a4, a8
@@ -3283,7 +3291,7 @@ little2_toUtf16:
 	slli	a9, a9, 1
 	movi.n	a12, 0
 	bge	a9, a4, .L517
-	.loc 1 765 0 is_stmt 0 discriminator 1
+	.loc 1 718 0 is_stmt 0 discriminator 1
 	addi.n	a2, a8, -1
 .LVL396:
 	l8ui	a2, a2, 0
@@ -3291,14 +3299,14 @@ little2_toUtf16:
 	and	a4, a2, a4
 	movi	a2, 0xd8
 	bne	a4, a2, .L517
-	.loc 1 765 0 discriminator 2
+	.loc 1 718 0 discriminator 2
 	addi	a8, a8, -2
 .LVL397:
 	movi.n	a12, 1
 	j	.L517
 .LVL398:
 .L522:
-	.loc 1 765 0 discriminator 6
+	.loc 1 718 0 discriminator 6
 	addi.n	a2, a11, 2
 	s32i.n	a2, a5, 0
 	l32i.n	a9, a3, 0
@@ -3310,12 +3318,12 @@ little2_toUtf16:
 	addi.n	a9, a9, 2
 	s32i.n	a9, a3, 0
 .L517:
-	.loc 1 765 0 discriminator 3
+	.loc 1 718 0 discriminator 3
 	l32i.n	a4, a3, 0
 	l32i.n	a11, a5, 0
 	bltu	a4, a8, .L518
 .L523:
-	.loc 1 765 0
+	.loc 1 718 0
 	bne	a11, a6, .L527
 	movi.n	a2, 2
 	bltu	a4, a8, .L519
@@ -3323,11 +3331,11 @@ little2_toUtf16:
 	mov.n	a2, a12
 	retw.n
 .L518:
-	.loc 1 765 0 discriminator 4
+	.loc 1 718 0 discriminator 4
 	bltu	a11, a6, .L522
 	j	.L523
 .L519:
-	.loc 1 765 0
+	.loc 1 718 0
 	retw.n
 .LFE44:
 	.size	little2_toUtf16, .-little2_toUtf16
@@ -3336,11 +3344,11 @@ little2_toUtf16:
 	.type	big2_toUtf8, @function
 big2_toUtf8:
 .LFB45:
-	.loc 1 776 0 is_stmt 1
+	.loc 1 728 0 is_stmt 1
 .LVL399:
 	entry	sp, 32
 .LCFI28:
-	.loc 1 776 0
+	.loc 1 728 0
 	l32i.n	a10, a3, 0
 .LVL400:
 	movi.n	a2, -2
@@ -3359,7 +3367,7 @@ big2_toUtf8:
 	j	.L533
 .L546:
 .LBB23:
-	.loc 1 776 0 is_stmt 0 discriminator 23
+	.loc 1 728 0 is_stmt 0 discriminator 23
 	l8ui	a9, a10, 0
 	l8ui	a8, a10, 1
 .LVL404:
@@ -3374,26 +3382,26 @@ big2_toUtf8:
 	bgeu	a12, a7, .L548
 	j	.L534
 .L547:
-	.loc 1 776 0 discriminator 3
+	.loc 1 728 0 discriminator 3
 	sext	a7, a8, 7
 	bltz	a7, .L536
-	.loc 1 776 0 discriminator 6
+	.loc 1 728 0 discriminator 6
 	bne	a6, a2, .L539
 	j	.L553
 .L539:
-	.loc 1 776 0 discriminator 9
+	.loc 1 728 0 discriminator 9
 	addi.n	a7, a2, 1
 	s32i.n	a7, a5, 0
 .LVL405:
 	j	.L549
 .LVL406:
 .L536:
-	.loc 1 776 0 discriminator 7
+	.loc 1 728 0 discriminator 7
 	sub	a7, a6, a2
 	bgei	a7, 2, .L542
 	j	.L553
 .L542:
-	.loc 1 776 0 discriminator 12
+	.loc 1 728 0 discriminator 12
 	addi.n	a7, a2, 1
 	s32i.n	a7, a5, 0
 .LVL407:
@@ -3415,12 +3423,12 @@ big2_toUtf8:
 	j	.L541
 .LVL410:
 .L534:
-	.loc 1 776 0 discriminator 2
+	.loc 1 728 0 discriminator 2
 	sub	a7, a6, a2
 	bgei	a7, 3, .L543
 	j	.L553
 .L543:
-	.loc 1 776 0 discriminator 15
+	.loc 1 728 0 discriminator 15
 	addi.n	a7, a2, 1
 	s32i.n	a7, a5, 0
 .LVL411:
@@ -3438,28 +3446,28 @@ big2_toUtf8:
 	j	.L550
 .LVL413:
 .L548:
-	.loc 1 776 0 discriminator 5
+	.loc 1 728 0 discriminator 5
 	sub	a7, a6, a2
 	bgei	a7, 4, .L544
 .L553:
-	.loc 1 776 0 discriminator 17
+	.loc 1 728 0 discriminator 17
 	s32i.n	a10, a3, 0
 .LVL414:
 	movi.n	a2, 2
 	retw.n
 .LVL415:
 .L544:
-	.loc 1 776 0 discriminator 18
+	.loc 1 728 0 discriminator 18
 	sub	a7, a4, a10
 	bgei	a7, 4, .L545
-	.loc 1 776 0 discriminator 19
+	.loc 1 728 0 discriminator 19
 	s32i.n	a10, a3, 0
 .LVL416:
 	movi.n	a2, 1
 	retw.n
 .LVL417:
 .L545:
-	.loc 1 776 0 discriminator 20
+	.loc 1 728 0 discriminator 20
 	extui	a9, a9, 0, 2
 	srli	a7, a8, 6
 	slli	a9, a9, 2
@@ -3510,13 +3518,13 @@ big2_toUtf8:
 .LVL425:
 .L541:
 .LBE23:
-	.loc 1 776 0 discriminator 21
+	.loc 1 728 0 discriminator 21
 	addi.n	a10, a10, 2
 .LVL426:
 .L533:
-	.loc 1 776 0 discriminator 22
+	.loc 1 728 0 discriminator 22
 	bltu	a10, a4, .L546
-	.loc 1 776 0 discriminator 24
+	.loc 1 728 0 discriminator 24
 	s32i.n	a10, a3, 0
 	movi.n	a2, 0
 	retw.n
@@ -3527,12 +3535,12 @@ big2_toUtf8:
 	.type	big2_toUtf16, @function
 big2_toUtf16:
 .LFB46:
-	.loc 1 777 0 is_stmt 1
+	.loc 1 729 0 is_stmt 1
 .LVL427:
 	entry	sp, 32
 .LCFI29:
 .LVL428:
-	.loc 1 777 0
+	.loc 1 729 0
 	l32i.n	a8, a3, 0
 	movi.n	a9, -2
 	sub	a4, a4, a8
@@ -3546,7 +3554,7 @@ big2_toUtf16:
 	slli	a9, a9, 1
 	movi.n	a11, 0
 	bge	a9, a4, .L556
-	.loc 1 777 0 is_stmt 0 discriminator 1
+	.loc 1 729 0 is_stmt 0 discriminator 1
 	addi	a2, a8, -2
 .LVL431:
 	l8ui	a4, a2, 0
@@ -3562,7 +3570,7 @@ big2_toUtf16:
 	j	.L556
 .LVL434:
 .L561:
-	.loc 1 777 0 discriminator 6
+	.loc 1 729 0 discriminator 6
 	addi.n	a2, a12, 2
 	s32i.n	a2, a5, 0
 	l32i.n	a9, a3, 0
@@ -3575,12 +3583,12 @@ big2_toUtf16:
 	s32i.n	a9, a3, 0
 .LVL435:
 .L556:
-	.loc 1 777 0 discriminator 3
+	.loc 1 729 0 discriminator 3
 	l32i.n	a4, a3, 0
 	l32i.n	a12, a5, 0
 	bltu	a4, a8, .L557
 .L562:
-	.loc 1 777 0
+	.loc 1 729 0
 	bne	a12, a6, .L566
 	movi.n	a2, 2
 	bltu	a4, a8, .L558
@@ -3588,11 +3596,11 @@ big2_toUtf16:
 	mov.n	a2, a11
 	retw.n
 .L557:
-	.loc 1 777 0 discriminator 4
+	.loc 1 729 0 discriminator 4
 	bltu	a12, a6, .L561
 	j	.L562
 .L558:
-	.loc 1 777 0
+	.loc 1 729 0
 	retw.n
 .LFE46:
 	.size	big2_toUtf16, .-big2_toUtf16
@@ -3601,149 +3609,149 @@ big2_toUtf16:
 	.type	little2_scanComment, @function
 little2_scanComment:
 .LFB47:
-	.loc 2 140 0 is_stmt 1
+	.loc 2 136 0 is_stmt 1
 .LVL436:
 	entry	sp, 48
 .LCFI30:
-	.loc 2 141 0
+	.loc 2 137 0
 	sub	a6, a4, a3
-	.loc 2 170 0
+	.loc 2 166 0
 	movi.n	a8, -1
-	.loc 2 141 0
+	.loc 2 137 0
 	blti	a6, 2, .L598
-	.loc 2 142 0
+	.loc 2 138 0
 	l8ui	a6, a3, 1
 	bnez.n	a6, .L582
-	.loc 2 142 0 is_stmt 0 discriminator 1
+	.loc 2 138 0 is_stmt 0 discriminator 1
 	l8ui	a6, a3, 0
 	movi.n	a7, 0x2d
 	beq	a6, a7, .L574
 	j	.L582
 .L574:
-	.loc 2 146 0 is_stmt 1
+	.loc 2 142 0 is_stmt 1
 	addi.n	a3, a3, 2
 .LVL437:
-	.loc 2 148 0
+	.loc 2 144 0
 	movi.n	a7, 0x1b
-	.loc 2 153 0
+	.loc 2 149 0
 	mov.n	a9, a6
-	.loc 2 147 0
+	.loc 2 143 0
 	j	.L575
 .L587:
-	.loc 2 148 0
+	.loc 2 144 0
 	l8ui	a10, a3, 1
 	l8ui	a11, a3, 0
 	bnez.n	a10, .L576
-	.loc 2 148 0 is_stmt 0 discriminator 1
+	.loc 2 144 0 is_stmt 0 discriminator 1
 	add.n	a11, a2, a11
 	l8ui	a10, a11, 72
 	j	.L577
 .L576:
-	.loc 2 148 0 discriminator 2
+	.loc 2 144 0 discriminator 2
 	s32i.n	a9, sp, 0
 	call8	unicode_byte_type
 .LVL438:
 	l32i.n	a9, sp, 0
 	j	.L577
 .L580:
-	.loc 2 149 0 is_stmt 1
+	.loc 2 145 0 is_stmt 1
 	beqi	a6, 2, .L591
-	.loc 2 149 0 is_stmt 0 discriminator 8
+	.loc 2 145 0 is_stmt 0 discriminator 8
 	addi.n	a8, a3, 3
 .LVL439:
 	j	.L579
 .LVL440:
 .L581:
-	.loc 2 149 0
+	.loc 2 145 0
 	blti	a6, 4, .L591
-	.loc 2 149 0 discriminator 12
+	.loc 2 145 0 discriminator 12
 	addi.n	a8, a3, 4
 .LVL441:
 	j	.L579
 .LVL442:
 .L582:
-	.loc 2 149 0
+	.loc 2 145 0
 	s32i.n	a3, a5, 0
 	j	.L599
 .L583:
-	.loc 2 151 0 is_stmt 1
+	.loc 2 147 0 is_stmt 1
 	addi.n	a8, a3, 2
 .LVL443:
-	.loc 2 152 0
+	.loc 2 148 0
 	sub	a6, a4, a8
 	blti	a6, 2, .L592
-	.loc 2 153 0
+	.loc 2 149 0
 	l8ui	a6, a3, 3
 	bnez.n	a6, .L579
-	.loc 2 153 0 is_stmt 0 discriminator 1
+	.loc 2 149 0 is_stmt 0 discriminator 1
 	l8ui	a6, a3, 2
 	bne	a6, a9, .L579
-	.loc 2 154 0 is_stmt 1
+	.loc 2 150 0 is_stmt 1
 	addi.n	a2, a3, 4
 .LVL444:
-	.loc 2 155 0
+	.loc 2 151 0
 	sub	a4, a4, a2
 .LVL445:
-	.loc 2 170 0
+	.loc 2 166 0
 	movi.n	a8, -1
-	.loc 2 155 0
+	.loc 2 151 0
 	blti	a4, 2, .L598
-	.loc 2 156 0
+	.loc 2 152 0
 	l8ui	a4, a3, 5
 	bnez.n	a4, .L584
-	.loc 2 156 0 is_stmt 0 discriminator 1
+	.loc 2 152 0 is_stmt 0 discriminator 1
 	l8ui	a6, a3, 4
 	movi.n	a4, 0x3e
 	beq	a6, a4, .L585
 .L584:
-	.loc 2 157 0 is_stmt 1
+	.loc 2 153 0 is_stmt 1
 	s32i.n	a2, a5, 0
 .LVL446:
 .L599:
-	.loc 2 158 0
+	.loc 2 154 0
 	movi.n	a8, 0
 	j	.L598
 .LVL447:
 .L585:
-	.loc 2 160 0
+	.loc 2 156 0
 	addi.n	a3, a3, 6
 	s32i.n	a3, a5, 0
-	.loc 2 161 0
+	.loc 2 157 0
 	movi.n	a8, 0xd
 	j	.L598
 .LVL448:
 .L586:
-	.loc 2 165 0
+	.loc 2 161 0
 	addi.n	a8, a3, 2
 .LVL449:
 .L579:
-	.loc 2 140 0
+	.loc 2 136 0
 	mov.n	a3, a8
 .L575:
 .LVL450:
-	.loc 2 147 0
+	.loc 2 143 0
 	sub	a6, a4, a3
 	bgei	a6, 2, .L587
 	j	.L592
 .L591:
-	.loc 2 149 0
+	.loc 2 145 0
 	movi.n	a8, -2
 	j	.L598
 .LVL451:
 .L592:
-	.loc 2 170 0
+	.loc 2 166 0
 	movi.n	a8, -1
 	j	.L598
 .LVL452:
 .L577:
-	.loc 2 148 0
+	.loc 2 144 0
 	beqi	a10, 6, .L580
 	bgei	a10, 7, .L588
 	bltz	a10, .L586
 	blti	a10, 2, .L582
-	.loc 2 149 0
+	.loc 2 145 0
 	addi.n	a8, a3, 2
-	.loc 2 148 0
+	.loc 2 144 0
 	beqi	a10, 5, .L579
 	j	.L586
 .L588:
@@ -3753,7 +3761,7 @@ little2_scanComment:
 	j	.L586
 .LVL453:
 .L598:
-	.loc 2 171 0
+	.loc 2 167 0
 	mov.n	a2, a8
 	retw.n
 .LFE47:
@@ -3981,27 +3989,27 @@ little2_cdataSectionTok:
 .LVL483:
 	j	.L622
 .L625:
-	.loc 2 397 0 is_stmt 1
+	.loc 2 398 0 is_stmt 1
 	bnei	a7, 2, .L626
-	.loc 2 397 0 is_stmt 0 discriminator 3
+	.loc 2 398 0 is_stmt 0 discriminator 1
 	s32i.n	a6, a5, 0
 	j	.L646
 .L626:
-	.loc 2 397 0 discriminator 4
+	.loc 2 398 0 discriminator 2
 	addi.n	a6, a6, 3
 .LVL484:
 	j	.L620
 .L627:
-	.loc 2 397 0
+	.loc 2 399 0 is_stmt 1
 	bgei	a7, 4, .L628
 	j	.L648
 .L628:
-	.loc 2 397 0 discriminator 6
+	.loc 2 399 0 is_stmt 0 discriminator 2
 	addi.n	a6, a6, 4
 .LVL485:
 	j	.L620
 .L630:
-	.loc 2 408 0 is_stmt 1
+	.loc 2 410 0 is_stmt 1
 	addi.n	a6, a6, 2
 .LVL486:
 .L620:
@@ -4009,9 +4017,9 @@ little2_cdataSectionTok:
 	sub	a7, a4, a6
 	bgei	a7, 2, .L631
 .L648:
-	.loc 2 412 0
+	.loc 2 414 0
 	s32i.n	a6, a5, 0
-	.loc 2 413 0
+	.loc 2 415 0
 	movi.n	a10, 6
 	j	.L646
 .L622:
@@ -4039,7 +4047,7 @@ little2_cdataSectionTok:
 	.section	.text.little2_cdataSectionTok
 .LVL487:
 .L646:
-	.loc 2 414 0
+	.loc 2 416 0
 	mov.n	a2, a10
 	retw.n
 .LFE52:
@@ -4054,28 +4062,28 @@ little2_cdataSectionTok:
 	.type	little2_scanRef, @function
 little2_scanRef:
 .LFB56:
-	.loc 2 533 0
+	.loc 2 535 0
 .LVL488:
 	entry	sp, 48
 .LCFI32:
-	.loc 2 534 0
+	.loc 2 536 0
 	sub	a8, a4, a3
-	.loc 2 533 0
+	.loc 2 535 0
 	mov.n	a6, a2
-	.loc 2 534 0
+	.loc 2 536 0
 	movi.n	a2, -1
 .LVL489:
 	blti	a8, 2, .L704
-	.loc 2 535 0
+	.loc 2 537 0
 	l8ui	a2, a3, 1
 	l8ui	a7, a3, 0
 	bnez.n	a2, .L651
-	.loc 2 535 0 is_stmt 0 discriminator 1
+	.loc 2 537 0 is_stmt 0 discriminator 1
 	add.n	a9, a6, a7
 	l8ui	a10, a9, 72
 	j	.L652
 .L651:
-	.loc 2 535 0 discriminator 2
+	.loc 2 537 0 discriminator 2
 	mov.n	a11, a7
 	mov.n	a10, a2
 	s32i.n	a8, sp, 4
@@ -4084,7 +4092,7 @@ little2_scanRef:
 	l32i.n	a8, sp, 4
 	j	.L652
 .L653:
-	.loc 2 536 0 is_stmt 1
+	.loc 2 538 0 is_stmt 1
 	l32r	a8, .LC31
 	add.n	a2, a8, a2
 	l8ui	a2, a2, 0
@@ -4096,15 +4104,15 @@ little2_scanRef:
 	bbs	a2, a7, .L654
 	j	.L687
 .L654:
-	.loc 2 536 0 is_stmt 0 discriminator 2
+	.loc 2 538 0 is_stmt 0 discriminator 2
 	addi.n	a3, a3, 2
 .LVL491:
-	.loc 2 544 0 is_stmt 1 discriminator 2
+	.loc 2 546 0 is_stmt 1 discriminator 2
 	movi.n	a7, 0x18
-	.loc 2 536 0 discriminator 2
+	.loc 2 538 0 discriminator 2
 	j	.L655
 .L657:
-	.loc 2 536 0 is_stmt 0
+	.loc 2 538 0 is_stmt 0
 	movi.n	a2, -2
 	bnei	a8, 2, .L687
 	retw.n
@@ -4113,47 +4121,47 @@ little2_scanRef:
 	bgei	a8, 4, .L687
 	retw.n
 .L660:
-	.loc 2 538 0 is_stmt 1
+	.loc 2 540 0 is_stmt 1
 	addi.n	a7, a3, 2
 .LVL492:
 .LBB31:
 .LBB32:
-	.loc 2 502 0
+	.loc 2 505 0
 	sub	a8, a4, a7
 .LBE32:
 .LBE31:
-	.loc 2 534 0
+	.loc 2 536 0
 	movi.n	a2, -1
 .LBB39:
 .LBB37:
-	.loc 2 502 0
+	.loc 2 505 0
 	blti	a8, 2, .L704
-	.loc 2 503 0
+	.loc 2 506 0
 	l8ui	a10, a3, 3
 	l8ui	a11, a3, 2
 	bnez.n	a10, .L661
 	movi	a2, 0x78
 	bne	a11, a2, .L662
-	.loc 2 504 0
+	.loc 2 507 0
 	addi.n	a7, a3, 4
 .LVL493:
 .LBB33:
 .LBB34:
-	.loc 2 470 0
+	.loc 2 474 0
 	sub	a8, a4, a7
 .LBE34:
 .LBE33:
 .LBE37:
 .LBE39:
-	.loc 2 534 0
+	.loc 2 536 0
 	movi.n	a2, -1
 .LBB40:
 .LBB38:
 .LBB36:
 .LBB35:
-	.loc 2 470 0
+	.loc 2 474 0
 	blti	a8, 2, .L704
-	.loc 2 471 0
+	.loc 2 475 0
 	l8ui	a10, a3, 5
 	l8ui	a11, a3, 4
 	bnez.n	a10, .L663
@@ -4168,19 +4176,19 @@ little2_scanRef:
 	bltui	a10, 2, .L706
 .LVL495:
 .L711:
-	.loc 2 476 0
+	.loc 2 480 0
 	s32i.n	a7, a5, 0
 .LVL496:
 .L709:
-	.loc 2 477 0
+	.loc 2 481 0
 	movi.n	a2, 0
 	retw.n
 .LVL497:
 .L706:
-	.loc 2 479 0
+	.loc 2 483 0
 	addi.n	a3, a3, 6
 .LVL498:
-	.loc 2 480 0
+	.loc 2 484 0
 	movi.n	a2, 0x12
 	j	.L667
 .LVL499:
@@ -4201,7 +4209,7 @@ little2_scanRef:
 	bltui	a10, 2, .L707
 	j	.L687
 .L707:
-	.loc 2 479 0
+	.loc 2 483 0
 	addi.n	a3, a3, 2
 .LVL501:
 .L667:
@@ -4212,7 +4220,7 @@ little2_scanRef:
 .L662:
 .LBE35:
 .LBE36:
-	.loc 2 505 0
+	.loc 2 508 0
 	add.n	a11, a6, a11
 	l8ui	a10, a11, 72
 	j	.L674
@@ -4221,18 +4229,18 @@ little2_scanRef:
 .LVL503:
 .L674:
 	movi.n	a9, 0x19
-	.loc 2 512 0
+	.loc 2 515 0
 	addi.n	a3, a3, 4
 .LVL504:
-	.loc 2 513 0
+	.loc 2 516 0
 	movi.n	a2, 0x12
 	mov.n	a8, a10
-	.loc 2 505 0
+	.loc 2 508 0
 	beq	a10, a9, .L705
 	j	.L711
 .LVL505:
 .L683:
-	.loc 2 513 0
+	.loc 2 516 0
 	l8ui	a10, a3, 1
 	l8ui	a11, a3, 0
 	bnez.n	a10, .L678
@@ -4250,15 +4258,15 @@ little2_scanRef:
 	j	.L687
 .LVL507:
 .L681:
-	.loc 2 517 0
+	.loc 2 520 0
 	addi.n	a3, a3, 2
 	s32i.n	a3, a5, 0
-	.loc 2 518 0
+	.loc 2 521 0
 	movi.n	a2, 0xa
 	retw.n
 .LVL508:
 .L682:
-	.loc 2 512 0
+	.loc 2 515 0
 	addi.n	a3, a3, 2
 .LVL509:
 .L705:
@@ -4269,16 +4277,16 @@ little2_scanRef:
 .L695:
 .LBE38:
 .LBE40:
-	.loc 2 544 0
+	.loc 2 546 0
 	l8ui	a2, a3, 1
 	l8ui	a8, a3, 0
 	bnez.n	a2, .L685
-	.loc 2 544 0 is_stmt 0 discriminator 1
+	.loc 2 546 0 is_stmt 0 discriminator 1
 	add.n	a10, a6, a8
 	l8ui	a10, a10, 72
 	j	.L686
 .L685:
-	.loc 2 544 0 discriminator 2
+	.loc 2 546 0 discriminator 2
 	mov.n	a11, a8
 	mov.n	a10, a2
 	s32i.n	a8, sp, 4
@@ -4288,7 +4296,7 @@ little2_scanRef:
 	l32i.n	a9, sp, 0
 	l32i.n	a8, sp, 4
 .L686:
-	.loc 2 544 0 discriminator 4
+	.loc 2 546 0 discriminator 4
 	addi	a10, a10, -5
 	bltu	a7, a10, .L687
 	l32r	a11, .LC32
@@ -4326,7 +4334,7 @@ little2_scanRef:
 	.word	.L694
 	.section	.text.little2_scanRef
 .L694:
-	.loc 2 545 0 is_stmt 1
+	.loc 2 547 0 is_stmt 1
 	l32r	a9, .LC33
 	l32r	a11, .LC30
 	add.n	a2, a9, a2
@@ -4339,52 +4347,52 @@ little2_scanRef:
 	srl	a2, a2
 	extui	a2, a2, 0, 1
 	bnez.n	a2, .L693
-	.loc 2 545 0 is_stmt 0 discriminator 1
+	.loc 2 547 0 is_stmt 0 discriminator 1
 	s32i.n	a3, a5, 0
 	retw.n
 .L693:
-	.loc 2 545 0 discriminator 2
+	.loc 2 547 0 discriminator 2
 	addi.n	a3, a3, 2
 .LVL512:
 	j	.L655
 .L690:
-	.loc 2 536 0 is_stmt 1
+	.loc 2 538 0 is_stmt 1
 	movi.n	a2, -2
-	.loc 2 545 0
+	.loc 2 547 0
 	beqi	a9, 2, .L704
 	j	.L687
 .L691:
-	.loc 2 536 0
+	.loc 2 538 0
 	movi.n	a2, -2
-	.loc 2 545 0
+	.loc 2 547 0
 	blti	a9, 4, .L704
 	j	.L687
 .L692:
-	.loc 2 547 0
+	.loc 2 549 0
 	addi.n	a3, a3, 2
 .LVL513:
 	s32i.n	a3, a5, 0
-	.loc 2 548 0
+	.loc 2 550 0
 	movi.n	a2, 9
 	retw.n
 .LVL514:
 .L687:
-	.loc 2 550 0
+	.loc 2 552 0
 	s32i.n	a3, a5, 0
 	j	.L709
 .LVL515:
 .L655:
-	.loc 2 543 0
+	.loc 2 545 0
 	sub	a9, a4, a3
 	bgei	a9, 2, .L695
 .LVL516:
 .L710:
-	.loc 2 534 0
+	.loc 2 536 0
 	movi.n	a2, -1
 	retw.n
 .LVL517:
 .L652:
-	.loc 2 535 0
+	.loc 2 537 0
 	movi.n	a9, 0x13
 	beq	a10, a9, .L660
 	blt	a9, a10, .L696
@@ -4400,7 +4408,7 @@ little2_scanRef:
 	bne	a10, a2, .L687
 	j	.L654
 .L704:
-	.loc 2 555 0
+	.loc 2 557 0
 	retw.n
 .LFE56:
 	.size	little2_scanRef, .-little2_scanRef
@@ -4415,28 +4423,28 @@ little2_scanRef:
 	.type	little2_scanPercent, @function
 little2_scanPercent:
 .LFB60:
-	.loc 2 910 0
+	.loc 2 914 0
 .LVL518:
 	entry	sp, 48
 .LCFI33:
-	.loc 2 911 0
+	.loc 2 915 0
 	sub	a8, a4, a3
-	.loc 2 910 0
+	.loc 2 914 0
 	mov.n	a6, a2
-	.loc 2 911 0
+	.loc 2 915 0
 	movi.n	a2, -1
 .LVL519:
 	blti	a8, 2, .L742
-	.loc 2 912 0
+	.loc 2 916 0
 	l8ui	a2, a3, 1
 	l8ui	a7, a3, 0
 	bnez.n	a2, .L714
-	.loc 2 912 0 is_stmt 0 discriminator 1
+	.loc 2 916 0 is_stmt 0 discriminator 1
 	add.n	a9, a6, a7
 	l8ui	a10, a9, 72
 	j	.L715
 .L714:
-	.loc 2 912 0 discriminator 2
+	.loc 2 916 0 discriminator 2
 	mov.n	a11, a7
 	mov.n	a10, a2
 	s32i.n	a8, sp, 4
@@ -4445,7 +4453,7 @@ little2_scanPercent:
 	l32i.n	a8, sp, 4
 	j	.L715
 .L716:
-	.loc 2 913 0 is_stmt 1
+	.loc 2 917 0 is_stmt 1
 	l32r	a8, .LC35
 	add.n	a2, a8, a2
 	l8ui	a2, a2, 0
@@ -4457,15 +4465,15 @@ little2_scanPercent:
 	bbs	a2, a7, .L717
 	j	.L727
 .L717:
-	.loc 2 913 0 is_stmt 0 discriminator 2
+	.loc 2 917 0 is_stmt 0 discriminator 2
 	addi.n	a3, a3, 2
 .LVL521:
-	.loc 2 922 0 is_stmt 1 discriminator 2
+	.loc 2 929 0 is_stmt 1 discriminator 2
 	movi.n	a7, 0x18
-	.loc 2 913 0 discriminator 2
+	.loc 2 917 0 discriminator 2
 	j	.L718
 .L720:
-	.loc 2 913 0 is_stmt 0
+	.loc 2 917 0 is_stmt 0
 	movi.n	a2, -2
 	bnei	a8, 2, .L727
 	retw.n
@@ -4474,22 +4482,22 @@ little2_scanPercent:
 	bgei	a8, 4, .L727
 	retw.n
 .L723:
-	.loc 2 915 0 is_stmt 1
+	.loc 2 922 0 is_stmt 1
 	s32i.n	a3, a5, 0
-	.loc 2 916 0
+	.loc 2 923 0
 	movi.n	a2, 0x16
 	retw.n
 .L735:
-	.loc 2 922 0
+	.loc 2 929 0
 	l8ui	a9, a3, 1
 	l8ui	a2, a3, 0
 	bnez.n	a9, .L725
-	.loc 2 922 0 is_stmt 0 discriminator 1
+	.loc 2 929 0 is_stmt 0 discriminator 1
 	add.n	a10, a6, a2
 	l8ui	a10, a10, 72
 	j	.L726
 .L725:
-	.loc 2 922 0 discriminator 2
+	.loc 2 929 0 discriminator 2
 	mov.n	a10, a9
 	mov.n	a11, a2
 	s32i.n	a8, sp, 4
@@ -4499,7 +4507,7 @@ little2_scanPercent:
 	l32i.n	a9, sp, 0
 	l32i.n	a8, sp, 4
 .L726:
-	.loc 2 922 0 discriminator 4
+	.loc 2 929 0 discriminator 4
 	addi	a10, a10, -5
 	bltu	a7, a10, .L727
 	l32r	a11, .LC36
@@ -4537,7 +4545,7 @@ little2_scanPercent:
 	.word	.L734
 	.section	.text.little2_scanPercent
 .L734:
-	.loc 2 923 0 is_stmt 1
+	.loc 2 930 0 is_stmt 1
 	l32r	a8, .LC37
 	add.n	a9, a8, a9
 	l8ui	a8, a9, 0
@@ -4550,51 +4558,51 @@ little2_scanPercent:
 	srl	a2, a11
 	extui	a11, a2, 0, 1
 	bnez.n	a11, .L733
-	.loc 2 923 0 is_stmt 0 discriminator 1
+	.loc 2 930 0 is_stmt 0 discriminator 1
 	s32i.n	a3, a5, 0
 	mov.n	a2, a11
 	retw.n
 .L733:
-	.loc 2 923 0 discriminator 2
+	.loc 2 930 0 discriminator 2
 	addi.n	a3, a3, 2
 .LVL523:
 	j	.L718
 .L730:
-	.loc 2 913 0 is_stmt 1
+	.loc 2 917 0 is_stmt 1
 	movi.n	a2, -2
-	.loc 2 923 0
+	.loc 2 930 0
 	beqi	a8, 2, .L742
 	j	.L727
 .L731:
-	.loc 2 913 0
+	.loc 2 917 0
 	movi.n	a2, -2
-	.loc 2 923 0
+	.loc 2 930 0
 	blti	a8, 4, .L742
 	j	.L727
 .L732:
-	.loc 2 925 0
+	.loc 2 932 0
 	addi.n	a3, a3, 2
 .LVL524:
 	s32i.n	a3, a5, 0
-	.loc 2 926 0
+	.loc 2 933 0
 	movi.n	a2, 0x1c
 	retw.n
 .LVL525:
 .L727:
-	.loc 2 928 0
+	.loc 2 935 0
 	s32i.n	a3, a5, 0
-	.loc 2 929 0
+	.loc 2 936 0
 	movi.n	a2, 0
 	retw.n
 .L718:
-	.loc 2 921 0
+	.loc 2 928 0
 	sub	a8, a4, a3
 	bgei	a8, 2, .L735
-	.loc 2 911 0
+	.loc 2 915 0
 	movi.n	a2, -1
 	retw.n
 .L715:
-	.loc 2 912 0
+	.loc 2 916 0
 	addi	a10, a10, -5
 	movi.n	a9, 0x19
 	bltu	a9, a10, .L727
@@ -4634,7 +4642,7 @@ little2_scanPercent:
 	.word	.L723
 	.section	.text.little2_scanPercent
 .L742:
-	.loc 2 933 0
+	.loc 2 940 0
 	retw.n
 .LFE60:
 	.size	little2_scanPercent, .-little2_scanPercent
@@ -4646,28 +4654,28 @@ little2_scanPercent:
 	.type	little2_scanLit, @function
 little2_scanLit:
 .LFB62:
-	.loc 2 965 0
+	.loc 2 974 0
 .LVL526:
 	entry	sp, 48
 .LCFI34:
 .LBB41:
-	.loc 2 968 0
+	.loc 2 977 0
 	movi.n	a9, 0xd
 .LBE41:
-	.loc 2 966 0
+	.loc 2 975 0
 	j	.L745
 .L758:
 .LBB42:
-	.loc 2 967 0
+	.loc 2 976 0
 	l8ui	a10, a4, 1
 	l8ui	a11, a4, 0
 	bnez.n	a10, .L746
-	.loc 2 967 0 is_stmt 0 discriminator 1
+	.loc 2 976 0 is_stmt 0 discriminator 1
 	add.n	a11, a3, a11
 	l8ui	a10, a11, 72
 	j	.L747
 .L746:
-	.loc 2 967 0 discriminator 2
+	.loc 2 976 0 discriminator 2
 	s32i.n	a9, sp, 0
 	call8	unicode_byte_type
 .LVL527:
@@ -4675,61 +4683,61 @@ little2_scanLit:
 	j	.L747
 .LVL528:
 .L750:
-	.loc 2 969 0 is_stmt 1
+	.loc 2 978 0 is_stmt 1
 	beqi	a7, 2, .L761
-	.loc 2 969 0 is_stmt 0 discriminator 8
+	.loc 2 978 0 is_stmt 0 discriminator 8
 	addi.n	a8, a4, 3
 .LVL529:
 	j	.L749
 .LVL530:
 .L752:
-	.loc 2 969 0
+	.loc 2 978 0
 	blti	a7, 4, .L761
-	.loc 2 969 0 discriminator 12
+	.loc 2 978 0 discriminator 12
 	addi.n	a8, a4, 4
 .LVL531:
 	j	.L749
 .LVL532:
 .L753:
-	.loc 2 969 0
+	.loc 2 978 0
 	s32i.n	a4, a6, 0
 	movi.n	a2, 0
 .LVL533:
 	retw.n
 .LVL534:
 .L754:
-	.loc 2 972 0 is_stmt 1
+	.loc 2 981 0 is_stmt 1
 	addi.n	a8, a4, 2
 .LVL535:
-	.loc 2 973 0
+	.loc 2 982 0
 	bne	a2, a10, .L749
-	.loc 2 975 0
+	.loc 2 984 0
 	sub	a5, a5, a8
 .LVL536:
-	.loc 2 976 0
+	.loc 2 985 0
 	movi.n	a2, -0x1b
 .LVL537:
-	.loc 2 975 0
+	.loc 2 984 0
 	blti	a5, 2, .L765
-	.loc 2 977 0
+	.loc 2 986 0
 	s32i.n	a8, a6, 0
-	.loc 2 978 0
+	.loc 2 987 0
 	l8ui	a10, a4, 3
 .LVL538:
 	l8ui	a11, a4, 2
 	bnez.n	a10, .L755
-	.loc 2 978 0 is_stmt 0 discriminator 1
+	.loc 2 987 0 is_stmt 0 discriminator 1
 	add.n	a11, a3, a11
 	l8ui	a10, a11, 72
 	j	.L756
 .L755:
-	.loc 2 978 0 discriminator 2
+	.loc 2 987 0 discriminator 2
 	call8	unicode_byte_type
 .LVL539:
 .L756:
 	movi.n	a3, 0x1e
 .LVL540:
-	.loc 2 983 0 is_stmt 1 discriminator 4
+	.loc 2 996 0 is_stmt 1 discriminator 4
 	movi.n	a2, 0
 	bltu	a3, a10, .L765
 	movi.n	a3, 1
@@ -4737,38 +4745,38 @@ little2_scanLit:
 	sll	a10, a3
 	l32r	a3, .LC39
 	and	a10, a10, a3
-	.loc 2 981 0 discriminator 4
+	.loc 2 994 0 discriminator 4
 	movi.n	a3, 0x1b
 	movnez	a2, a3, a10
 	retw.n
 .LVL541:
 .L757:
-	.loc 2 986 0
+	.loc 2 999 0
 	addi.n	a8, a4, 2
 .LVL542:
 .L749:
 .LBE42:
-	.loc 2 965 0
+	.loc 2 974 0
 	mov.n	a4, a8
 .LVL543:
 .L745:
-	.loc 2 966 0
+	.loc 2 975 0
 	sub	a7, a5, a4
 	bgei	a7, 2, .L758
-	.loc 2 990 0
+	.loc 2 1003 0
 	movi.n	a2, -1
 .LVL544:
 	retw.n
 .LVL545:
 .L761:
 .LBB43:
-	.loc 2 969 0
+	.loc 2 978 0
 	movi.n	a2, -2
 .LVL546:
 	retw.n
 .LVL547:
 .L747:
-	.loc 2 968 0
+	.loc 2 977 0
 	bltu	a9, a10, .L757
 	l32r	a11, .LC40
 	addx4	a8, a10, a11
@@ -4796,7 +4804,7 @@ little2_scanLit:
 .LVL548:
 .L765:
 .LBE43:
-	.loc 2 991 0
+	.loc 2 1004 0
 	retw.n
 .LFE62:
 	.size	little2_scanLit, .-little2_scanLit
@@ -4807,22 +4815,22 @@ little2_scanLit:
 	.type	little2_attributeValueTok, @function
 little2_attributeValueTok:
 .LFB64:
-	.loc 2 1224 0
+	.loc 2 1248 0
 .LVL549:
 	entry	sp, 32
 .LCFI35:
-	.loc 2 1227 0
+	.loc 2 1251 0
 	movi.n	a10, -4
-	.loc 2 1226 0
+	.loc 2 1250 0
 	bgeu	a3, a4, .L767
-	.loc 2 1228 0
+	.loc 2 1252 0
 	sub	a6, a4, a3
-	.loc 2 1234 0
+	.loc 2 1258 0
 	movi.n	a10, -1
-	.loc 2 1228 0
+	.loc 2 1252 0
 	blti	a6, 2, .L767
 	mov.n	a6, a3
-	.loc 2 1238 0
+	.loc 2 1262 0
 	movi.n	a7, 0x13
 	j	.L768
 .LVL550:
@@ -4830,16 +4838,16 @@ little2_attributeValueTok:
 	l8ui	a10, a6, 1
 	l8ui	a11, a6, 0
 	bnez.n	a10, .L769
-	.loc 2 1238 0 is_stmt 0 discriminator 1
+	.loc 2 1262 0 is_stmt 0 discriminator 1
 	add.n	a11, a2, a11
 	l8ui	a10, a11, 72
 	j	.L770
 .L769:
-	.loc 2 1238 0 discriminator 2
+	.loc 2 1262 0 discriminator 2
 	call8	unicode_byte_type
 .LVL551:
 .L770:
-	.loc 2 1238 0 discriminator 4
+	.loc 2 1262 0 discriminator 4
 	addi	a10, a10, -2
 	bltu	a7, a10, .L771
 	l32r	a8, .LC41
@@ -4872,18 +4880,19 @@ little2_attributeValueTok:
 	.word	.L780
 	.section	.text.little2_attributeValueTok
 .L776:
-	.loc 2 1241 0 is_stmt 1
+	.loc 2 1268 0 is_stmt 1
 	addi.n	a6, a6, 3
 .LVL552:
 	j	.L768
 .L777:
+	.loc 2 1269 0
 	addi.n	a6, a6, 4
 .LVL553:
 	j	.L768
 .L774:
-	.loc 2 1244 0
+	.loc 2 1272 0
 	bne	a6, a3, .L795
-	.loc 2 1245 0
+	.loc 2 1273 0
 	mov.n	a13, a5
 	mov.n	a12, a4
 	addi.n	a11, a6, 2
@@ -4892,38 +4901,38 @@ little2_attributeValueTok:
 .LVL554:
 	j	.L767
 .L772:
-	.loc 2 1250 0
+	.loc 2 1278 0
 	s32i.n	a6, a5, 0
-	.loc 2 1251 0
+	.loc 2 1279 0
 	movi.n	a10, 0
 	j	.L767
 .L779:
-	.loc 2 1253 0
+	.loc 2 1281 0
 	bne	a6, a3, .L795
-	.loc 2 1254 0
+	.loc 2 1282 0
 	addi.n	a6, a6, 2
 .LVL555:
 	s32i.n	a6, a5, 0
 	j	.L796
 .LVL556:
 .L778:
-	.loc 2 1260 0
+	.loc 2 1288 0
 	bne	a6, a3, .L795
-	.loc 2 1261 0
+	.loc 2 1289 0
 	addi.n	a3, a6, 2
 .LVL557:
-	.loc 2 1262 0
+	.loc 2 1290 0
 	sub	a4, a4, a3
 .LVL558:
-	.loc 2 1263 0
+	.loc 2 1291 0
 	movi.n	a10, -3
-	.loc 2 1262 0
+	.loc 2 1290 0
 	blti	a4, 2, .L767
-	.loc 2 1264 0
+	.loc 2 1292 0
 	l8ui	a10, a6, 3
 	l8ui	a11, a6, 2
 	bnez.n	a10, .L785
-	.loc 2 1264 0 is_stmt 0 discriminator 1
+	.loc 2 1292 0 is_stmt 0 discriminator 1
 	add.n	a2, a2, a11
 .LVL559:
 	l8ui	a8, a2, 72
@@ -4933,7 +4942,7 @@ little2_attributeValueTok:
 	j	.L786
 .LVL560:
 .L785:
-	.loc 2 1264 0 discriminator 2
+	.loc 2 1292 0 discriminator 2
 	call8	unicode_byte_type
 .LVL561:
 	addi	a8, a10, -10
@@ -4943,45 +4952,45 @@ little2_attributeValueTok:
 	movnez	a10, a2, a8
 	extui	a10, a10, 0, 8
 .L786:
-	.loc 2 1265 0 is_stmt 1 discriminator 4
+	.loc 2 1293 0 is_stmt 1 discriminator 4
 	addi.n	a6, a6, 4
 	movnez	a3, a6, a10
 .LVL563:
-	.loc 2 1266 0 discriminator 4
+	.loc 2 1294 0 discriminator 4
 	s32i.n	a3, a5, 0
 .LVL564:
 .L796:
-	.loc 2 1267 0 discriminator 4
+	.loc 2 1295 0 discriminator 4
 	movi.n	a10, 7
 	j	.L767
 .LVL565:
 .L780:
-	.loc 2 1272 0
+	.loc 2 1300 0
 	bne	a6, a3, .L795
-	.loc 2 1273 0
+	.loc 2 1301 0
 	addi.n	a6, a6, 2
 .LVL566:
 	s32i.n	a6, a5, 0
-	.loc 2 1274 0
+	.loc 2 1302 0
 	movi.n	a10, 0x27
 	j	.L767
 .LVL567:
 .L771:
-	.loc 2 1279 0
+	.loc 2 1307 0
 	addi.n	a6, a6, 2
 .LVL568:
 .L768:
-	.loc 2 1237 0
+	.loc 2 1261 0
 	sub	a8, a4, a6
 	bgei	a8, 2, .L789
 .L795:
-	.loc 2 1283 0
+	.loc 2 1311 0
 	s32i.n	a6, a5, 0
-	.loc 2 1284 0
+	.loc 2 1312 0
 	movi.n	a10, 6
 .LVL569:
 .L767:
-	.loc 2 1285 0
+	.loc 2 1313 0
 	mov.n	a2, a10
 	retw.n
 .LFE64:
@@ -4991,22 +5000,22 @@ little2_attributeValueTok:
 	.type	little2_entityValueTok, @function
 little2_entityValueTok:
 .LFB65:
-	.loc 2 1290 0
+	.loc 2 1317 0
 .LVL570:
 	entry	sp, 48
 .LCFI36:
-	.loc 2 1293 0
+	.loc 2 1320 0
 	movi.n	a10, -4
-	.loc 2 1292 0
+	.loc 2 1319 0
 	bgeu	a3, a4, .L798
-	.loc 2 1294 0
+	.loc 2 1321 0
 	sub	a6, a4, a3
-	.loc 2 1300 0
+	.loc 2 1327 0
 	movi.n	a10, -1
-	.loc 2 1294 0
+	.loc 2 1321 0
 	blti	a6, 2, .L798
 	mov.n	a6, a3
-	.loc 2 1304 0
+	.loc 2 1331 0
 	movi.n	a7, 0x1e
 	movi.n	a9, 9
 	j	.L799
@@ -5015,18 +5024,18 @@ little2_entityValueTok:
 	l8ui	a10, a6, 1
 	l8ui	a11, a6, 0
 	bnez.n	a10, .L800
-	.loc 2 1304 0 is_stmt 0 discriminator 1
+	.loc 2 1331 0 is_stmt 0 discriminator 1
 	add.n	a11, a2, a11
 	l8ui	a10, a11, 72
 	j	.L801
 .L800:
-	.loc 2 1304 0 discriminator 2
+	.loc 2 1331 0 discriminator 2
 	s32i.n	a9, sp, 0
 	call8	unicode_byte_type
 .LVL572:
 	l32i.n	a9, sp, 0
 .L801:
-	.loc 2 1304 0 discriminator 4
+	.loc 2 1331 0 discriminator 4
 	beqi	a10, 7, .L803
 	bgei	a10, 8, .L804
 	beqi	a10, 5, .L802
@@ -5039,18 +5048,19 @@ little2_entityValueTok:
 	bne	a10, a9, .L802
 	j	.L810
 .L806:
-	.loc 2 1307 0 is_stmt 1
+	.loc 2 1337 0 is_stmt 1
 	addi.n	a6, a6, 3
 .LVL573:
 	j	.L799
 .L803:
+	.loc 2 1338 0
 	addi.n	a6, a6, 4
 .LVL574:
 	j	.L799
 .L807:
-	.loc 2 1310 0
+	.loc 2 1341 0
 	bne	a6, a3, .L826
-	.loc 2 1311 0
+	.loc 2 1342 0
 	mov.n	a13, a5
 	mov.n	a12, a4
 	addi.n	a11, a6, 2
@@ -5059,17 +5069,17 @@ little2_entityValueTok:
 .LVL575:
 	j	.L798
 .L809:
-	.loc 2 1315 0
+	.loc 2 1346 0
 	bne	a6, a3, .L826
 .LBB44:
-	.loc 2 1316 0
+	.loc 2 1347 0
 	addi.n	a11, a6, 2
 	mov.n	a10, a2
 	mov.n	a13, a5
 	mov.n	a12, a4
 	call8	little2_scanPercent
 .LVL576:
-	.loc 2 1318 0
+	.loc 2 1348 0
 	addi	a6, a10, -22
 .LVL577:
 	movi.n	a2, 0
@@ -5080,32 +5090,32 @@ little2_entityValueTok:
 .LVL580:
 .L808:
 .LBE44:
-	.loc 2 1323 0
+	.loc 2 1353 0
 	bne	a6, a3, .L826
-	.loc 2 1324 0
+	.loc 2 1354 0
 	addi.n	a6, a6, 2
 .LVL581:
 	s32i.n	a6, a5, 0
 	j	.L827
 .LVL582:
 .L810:
-	.loc 2 1330 0
+	.loc 2 1360 0
 	bne	a6, a3, .L826
-	.loc 2 1331 0
+	.loc 2 1361 0
 	addi.n	a3, a6, 2
 .LVL583:
-	.loc 2 1332 0
+	.loc 2 1362 0
 	sub	a4, a4, a3
 .LVL584:
-	.loc 2 1333 0
+	.loc 2 1363 0
 	movi.n	a10, -3
-	.loc 2 1332 0
+	.loc 2 1362 0
 	blti	a4, 2, .L798
-	.loc 2 1334 0
+	.loc 2 1364 0
 	l8ui	a10, a6, 3
 	l8ui	a11, a6, 2
 	bnez.n	a10, .L816
-	.loc 2 1334 0 is_stmt 0 discriminator 1
+	.loc 2 1364 0 is_stmt 0 discriminator 1
 	add.n	a2, a2, a11
 .LVL585:
 	l8ui	a8, a2, 72
@@ -5115,7 +5125,7 @@ little2_entityValueTok:
 	j	.L817
 .LVL586:
 .L816:
-	.loc 2 1334 0 discriminator 2
+	.loc 2 1364 0 discriminator 2
 	call8	unicode_byte_type
 .LVL587:
 	addi	a8, a10, -10
@@ -5125,34 +5135,34 @@ little2_entityValueTok:
 	movnez	a10, a2, a8
 	extui	a10, a10, 0, 8
 .L817:
-	.loc 2 1335 0 is_stmt 1 discriminator 4
+	.loc 2 1365 0 is_stmt 1 discriminator 4
 	addi.n	a6, a6, 4
 	movnez	a3, a6, a10
 .LVL589:
-	.loc 2 1336 0 discriminator 4
+	.loc 2 1366 0 discriminator 4
 	s32i.n	a3, a5, 0
 .LVL590:
 .L827:
-	.loc 2 1337 0 discriminator 4
+	.loc 2 1367 0 discriminator 4
 	movi.n	a10, 7
 	j	.L798
 .LVL591:
 .L802:
-	.loc 2 1342 0
+	.loc 2 1372 0
 	addi.n	a6, a6, 2
 .LVL592:
 .L799:
-	.loc 2 1303 0
+	.loc 2 1330 0
 	sub	a8, a4, a6
 	bgei	a8, 2, .L819
 .L826:
-	.loc 2 1346 0
+	.loc 2 1376 0
 	s32i.n	a6, a5, 0
-	.loc 2 1347 0
+	.loc 2 1377 0
 	movi.n	a10, 6
 .LVL593:
 .L798:
-	.loc 2 1348 0
+	.loc 2 1378 0
 	mov.n	a2, a10
 	retw.n
 .LFE65:
@@ -5164,19 +5174,19 @@ little2_entityValueTok:
 	.type	little2_ignoreSectionTok, @function
 little2_ignoreSectionTok:
 .LFB66:
-	.loc 2 1355 0
+	.loc 2 1384 0
 .LVL594:
 	entry	sp, 64
 .LCFI37:
 .LVL595:
 .LBB45:
-	.loc 2 1358 0
+	.loc 2 1387 0
 	sub	a6, a4, a3
 .LVL596:
-	.loc 2 1359 0
+	.loc 2 1388 0
 	bbci	a6, 0, .L829
 .LVL597:
-	.loc 2 1361 0
+	.loc 2 1390 0
 	movi.n	a4, -2
 .LVL598:
 	and	a4, a6, a4
@@ -5185,31 +5195,31 @@ little2_ignoreSectionTok:
 .LVL600:
 .L829:
 .LBE45:
-	.loc 2 1355 0
+	.loc 2 1384 0
 	movi.n	a6, 0
-	.loc 2 1365 0
+	.loc 2 1394 0
 	movi.n	a7, 8
-	.loc 2 1382 0
+	.loc 2 1411 0
 	movi.n	a9, 0x5d
-	.loc 2 1385 0
+	.loc 2 1414 0
 	movi.n	a12, 0x3e
-	.loc 2 1370 0
+	.loc 2 1399 0
 	movi.n	a13, 0x21
-	.loc 2 1373 0
+	.loc 2 1402 0
 	movi.n	a14, 0x5b
 	j	.L830
 .LVL601:
 .L843:
-	.loc 2 1365 0
+	.loc 2 1394 0
 	l8ui	a10, a3, 1
 	l8ui	a11, a3, 0
 	bnez.n	a10, .L831
-	.loc 2 1365 0 is_stmt 0 discriminator 1
+	.loc 2 1394 0 is_stmt 0 discriminator 1
 	add.n	a11, a2, a11
 	l8ui	a10, a11, 72
 	j	.L832
 .L831:
-	.loc 2 1365 0 discriminator 2
+	.loc 2 1394 0 discriminator 2
 	s32i.n	a8, sp, 0
 	s32i.n	a9, sp, 4
 	s32i.n	a12, sp, 8
@@ -5224,131 +5234,131 @@ little2_ignoreSectionTok:
 	l32i.n	a14, sp, 16
 	j	.L832
 .L835:
-	.loc 2 1366 0 is_stmt 1
+	.loc 2 1395 0 is_stmt 1
 	beqi	a8, 2, .L846
-	.loc 2 1366 0 is_stmt 0 discriminator 8
+	.loc 2 1395 0 is_stmt 0 discriminator 8
 	addi.n	a8, a3, 3
 .LVL603:
 	j	.L834
 .LVL604:
 .L837:
-	.loc 2 1366 0
+	.loc 2 1395 0
 	blti	a8, 4, .L846
-	.loc 2 1366 0 discriminator 12
+	.loc 2 1395 0 discriminator 12
 	addi.n	a8, a3, 4
 .LVL605:
 	j	.L834
 .LVL606:
 .L838:
-	.loc 2 1366 0
+	.loc 2 1395 0
 	s32i.n	a3, a5, 0
 	movi.n	a2, 0
 .LVL607:
 	retw.n
 .LVL608:
 .L839:
-	.loc 2 1368 0 is_stmt 1
+	.loc 2 1397 0 is_stmt 1
 	addi.n	a8, a3, 2
 .LVL609:
-	.loc 2 1369 0
+	.loc 2 1398 0
 	sub	a10, a4, a8
 	blti	a10, 2, .L850
-	.loc 2 1370 0
+	.loc 2 1399 0
 	l8ui	a10, a3, 3
 	bnez.n	a10, .L834
-	.loc 2 1370 0 is_stmt 0 discriminator 1
+	.loc 2 1399 0 is_stmt 0 discriminator 1
 	l8ui	a10, a3, 2
 	bne	a10, a13, .L834
-	.loc 2 1371 0 is_stmt 1
+	.loc 2 1400 0 is_stmt 1
 	addi.n	a8, a3, 4
 .LVL610:
-	.loc 2 1372 0
+	.loc 2 1401 0
 	sub	a10, a4, a8
 	blti	a10, 2, .L850
-	.loc 2 1373 0
+	.loc 2 1402 0
 	l8ui	a10, a3, 5
 	bnez.n	a10, .L834
-	.loc 2 1373 0 is_stmt 0 discriminator 1
+	.loc 2 1402 0 is_stmt 0 discriminator 1
 	l8ui	a10, a3, 4
 	bne	a10, a14, .L834
-	.loc 2 1374 0 is_stmt 1
+	.loc 2 1403 0 is_stmt 1
 	addi.n	a6, a6, 1
 .LVL611:
-	.loc 2 1375 0
+	.loc 2 1404 0
 	addi.n	a8, a3, 6
 .LVL612:
 	j	.L834
 .LVL613:
 .L840:
-	.loc 2 1380 0
+	.loc 2 1409 0
 	addi.n	a8, a3, 2
 .LVL614:
-	.loc 2 1381 0
+	.loc 2 1410 0
 	sub	a10, a4, a8
 	blti	a10, 2, .L850
-	.loc 2 1382 0
+	.loc 2 1411 0
 	l8ui	a10, a3, 3
 	bnez.n	a10, .L834
-	.loc 2 1382 0 is_stmt 0 discriminator 1
+	.loc 2 1411 0 is_stmt 0 discriminator 1
 	l8ui	a10, a3, 2
 	bne	a10, a9, .L834
-	.loc 2 1383 0 is_stmt 1
+	.loc 2 1412 0 is_stmt 1
 	addi.n	a8, a3, 4
 .LVL615:
-	.loc 2 1384 0
+	.loc 2 1413 0
 	sub	a10, a4, a8
 	blti	a10, 2, .L850
-	.loc 2 1385 0
+	.loc 2 1414 0
 	l8ui	a10, a3, 5
 	bnez.n	a10, .L834
-	.loc 2 1385 0 is_stmt 0 discriminator 1
+	.loc 2 1414 0 is_stmt 0 discriminator 1
 	l8ui	a10, a3, 4
 	bne	a10, a12, .L834
-	.loc 2 1386 0 is_stmt 1
+	.loc 2 1415 0 is_stmt 1
 	addi.n	a8, a3, 6
 .LVL616:
-	.loc 2 1387 0
+	.loc 2 1416 0
 	bnez.n	a6, .L841
-	.loc 2 1388 0
+	.loc 2 1417 0
 	s32i.n	a8, a5, 0
-	.loc 2 1389 0
+	.loc 2 1418 0
 	movi.n	a2, 0x2a
 .LVL617:
 	retw.n
 .LVL618:
 .L841:
-	.loc 2 1391 0
+	.loc 2 1420 0
 	addi.n	a6, a6, -1
 .LVL619:
 	j	.L834
 .LVL620:
 .L842:
-	.loc 2 1396 0
+	.loc 2 1425 0
 	addi.n	a8, a3, 2
 .LVL621:
 .L834:
-	.loc 2 1355 0
+	.loc 2 1384 0
 	mov.n	a3, a8
 .LVL622:
 .L830:
-	.loc 2 1364 0
+	.loc 2 1393 0
 	sub	a8, a4, a3
 	bgei	a8, 2, .L843
 	j	.L850
 .L846:
-	.loc 2 1366 0
+	.loc 2 1395 0
 	movi.n	a2, -2
 .LVL623:
 	retw.n
 .LVL624:
 .L850:
-	.loc 2 1369 0
+	.loc 2 1398 0
 	movi.n	a2, -1
 .LVL625:
 	retw.n
 .LVL626:
 .L832:
-	.loc 2 1365 0
+	.loc 2 1394 0
 	bltu	a7, a10, .L842
 	l32r	a11, .LC42
 	addx4	a10, a10, a11
@@ -5379,37 +5389,37 @@ little2_ignoreSectionTok:
 	.type	little2_isPublicId, @function
 little2_isPublicId:
 .LFB67:
-	.loc 2 1408 0
+	.loc 2 1436 0
 .LVL627:
 	entry	sp, 64
 .LCFI38:
-	.loc 2 1409 0
+	.loc 2 1437 0
 	addi.n	a3, a3, 2
 .LVL628:
-	.loc 2 1410 0
+	.loc 2 1438 0
 	addi	a4, a4, -2
 .LVL629:
 	movi.n	a8, 0x1a
-	.loc 2 1446 0
+	.loc 2 1475 0
 	movi.n	a9, 0x24
 	movi.n	a12, 1
-	.loc 2 1443 0
+	.loc 2 1471 0
 	movi	a13, -0x80
-	.loc 2 1436 0
+	.loc 2 1464 0
 	movi.n	a14, 9
-	.loc 2 1411 0
+	.loc 2 1439 0
 	j	.L856
 .L865:
-	.loc 2 1412 0
+	.loc 2 1440 0
 	l8ui	a6, a3, 1
 	l8ui	a7, a3, 0
 	bnez.n	a6, .L857
-	.loc 2 1412 0 is_stmt 0 discriminator 1
+	.loc 2 1440 0 is_stmt 0 discriminator 1
 	add.n	a10, a2, a7
 	l8ui	a10, a10, 72
 	j	.L858
 .L857:
-	.loc 2 1412 0 discriminator 2
+	.loc 2 1440 0 discriminator 2
 	mov.n	a11, a7
 	mov.n	a10, a6
 	s32i.n	a8, sp, 0
@@ -5435,44 +5445,44 @@ little2_isPublicId:
 	bany	a10, a11, .L861
 	l32r	a11, .LC45
 	bnone	a10, a11, .L859
-	.loc 2 1436 0 is_stmt 1
+	.loc 2 1464 0 is_stmt 1
 	bnez.n	a6, .L860
-	.loc 2 1436 0 is_stmt 0 discriminator 1
+	.loc 2 1464 0 is_stmt 0 discriminator 1
 	bne	a7, a14, .L860
 	j	.L863
 .L861:
-	.loc 2 1443 0 is_stmt 1
+	.loc 2 1471 0 is_stmt 1
 	bnez.n	a6, .L863
-	.loc 2 1443 0 is_stmt 0 discriminator 1
+	.loc 2 1471 0 is_stmt 0 discriminator 1
 	bnone	a7, a13, .L860
 	j	.L864
 .L859:
-	.loc 2 1446 0 is_stmt 1
+	.loc 2 1475 0 is_stmt 1
 	bnez.n	a6, .L863
 .L864:
-	.loc 2 1446 0 is_stmt 0 discriminator 1
+	.loc 2 1475 0 is_stmt 0 discriminator 1
 	beq	a7, a9, .L860
 	beqi	a7, 64, .L860
 .L863:
-	.loc 2 1451 0 is_stmt 1
+	.loc 2 1480 0 is_stmt 1
 	s32i.n	a3, a5, 0
-	.loc 2 1452 0
+	.loc 2 1481 0
 	movi.n	a2, 0
 .LVL631:
 	retw.n
 .LVL632:
 .L860:
-	.loc 2 1411 0
+	.loc 2 1439 0
 	addi.n	a3, a3, 2
 .LVL633:
 .L856:
-	.loc 2 1411 0 is_stmt 0 discriminator 1
+	.loc 2 1439 0 is_stmt 0 discriminator 1
 	sub	a6, a4, a3
 	bgei	a6, 2, .L865
-	.loc 2 1457 0 is_stmt 1
+	.loc 2 1486 0 is_stmt 1
 	movi.n	a2, 1
 .LVL634:
-	.loc 2 1458 0
+	.loc 2 1487 0
 	retw.n
 .LFE67:
 	.size	little2_isPublicId, .-little2_isPublicId
@@ -5483,39 +5493,39 @@ little2_isPublicId:
 	.type	little2_getAtts, @function
 little2_getAtts:
 .LFB68:
-	.loc 2 1468 0
+	.loc 2 1496 0
 .LVL635:
 	entry	sp, 64
 .LCFI39:
 .LVL636:
-	.loc 2 1471 0
+	.loc 2 1499 0
 	movi.n	a7, 0
-	.loc 2 1469 0
+	.loc 2 1497 0
 	movi.n	a6, 1
-	.loc 2 1468 0
+	.loc 2 1496 0
 	s32i.n	a2, sp, 0
-	.loc 2 1474 0
+	.loc 2 1502 0
 	addi.n	a3, a3, 2
 .LVL637:
-	.loc 2 1470 0
+	.loc 2 1498 0
 	mov.n	a2, a7
 .LVL638:
 	mov.n	a14, a7
-	.loc 2 1491 0
+	.loc 2 1523 0
 	mov.n	a13, a6
 .LVL639:
 .L901:
-	.loc 2 1475 0
+	.loc 2 1503 0
 	l8ui	a12, a3, 1
 	l8ui	a15, a3, 0
 	bnez.n	a12, .L876
-	.loc 2 1475 0 is_stmt 0 discriminator 1
+	.loc 2 1503 0 is_stmt 0 discriminator 1
 	l32i.n	a8, sp, 0
 	add.n	a9, a8, a15
 	l8ui	a10, a9, 72
 	j	.L877
 .L876:
-	.loc 2 1475 0 discriminator 2
+	.loc 2 1503 0 discriminator 2
 	mov.n	a11, a15
 	mov.n	a10, a12
 	s32i.n	a12, sp, 4
@@ -5529,7 +5539,7 @@ little2_getAtts:
 	l32i.n	a13, sp, 16
 	l32i.n	a12, sp, 4
 .L877:
-	.loc 2 1475 0 discriminator 4
+	.loc 2 1503 0 discriminator 4
 	addi	a10, a10, -3
 	movi.n	a8, 0x1a
 	bltu	a8, a10, .L878
@@ -5570,49 +5580,49 @@ little2_getAtts:
 	.word	.L889
 	.section	.text.little2_getAtts
 .L882:
-	.loc 2 1486 0 is_stmt 1
+	.loc 2 1517 0 is_stmt 1
 	bnez.n	a6, .L890
-	.loc 2 1486 0 is_stmt 0 discriminator 7
+	.loc 2 1517 0 is_stmt 0 discriminator 1
 	movi.n	a6, 1
 .LVL641:
 	bge	a2, a4, .L890
-	.loc 2 1486 0 discriminator 9
+	.loc 2 1517 0 discriminator 3
 	slli	a9, a2, 4
 	add.n	a9, a5, a9
 	s32i.n	a3, a9, 0
 	s8i	a13, a9, 12
 .L890:
 .LVL642:
-	.loc 2 1486 0 discriminator 12
+	.loc 2 1517 0 discriminator 6
 	addi.n	a3, a3, 1
 .LVL643:
 	j	.L878
 .L883:
-	.loc 2 1486 0
+	.loc 2 1518 0 is_stmt 1
 	bnez.n	a6, .L891
-	.loc 2 1486 0 discriminator 13
+	.loc 2 1518 0 is_stmt 0 discriminator 1
 	movi.n	a6, 1
 .LVL644:
 	bge	a2, a4, .L891
-	.loc 2 1486 0 discriminator 15
+	.loc 2 1518 0 discriminator 3
 	slli	a9, a2, 4
 	add.n	a9, a5, a9
 	s32i.n	a3, a9, 0
 	s8i	a13, a9, 12
 .L891:
 .LVL645:
-	.loc 2 1486 0 discriminator 18
+	.loc 2 1518 0 discriminator 6
 	addi.n	a3, a3, 2
 .LVL646:
 	j	.L878
 .L889:
-	.loc 2 1491 0 is_stmt 1
+	.loc 2 1523 0 is_stmt 1
 	bnez.n	a6, .L878
-	.loc 2 1491 0 is_stmt 0 discriminator 1
+	.loc 2 1523 0 is_stmt 0 discriminator 1
 	movi.n	a6, 1
 .LVL647:
 	bge	a2, a4, .L878
-	.loc 2 1491 0 discriminator 2
+	.loc 2 1523 0 discriminator 2
 	slli	a9, a2, 4
 	add.n	a9, a5, a9
 	s32i.n	a3, a9, 0
@@ -5620,32 +5630,32 @@ little2_getAtts:
 	j	.L878
 .LVL648:
 .L886:
-	.loc 2 1495 0 is_stmt 1
+	.loc 2 1527 0 is_stmt 1
 	beqi	a6, 2, .L892
-	.loc 2 1499 0
+	.loc 2 1531 0
 	movi.n	a7, 0xc
 .LVL649:
 	j	.L939
 .LVL650:
 .L892:
-	.loc 2 1501 0
+	.loc 2 1532 0
 	bnei	a7, 12, .L878
 .LVL651:
 	j	.L945
 .LVL652:
 .L887:
-	.loc 2 1509 0
+	.loc 2 1540 0
 	beqi	a6, 2, .L894
-	.loc 2 1513 0
+	.loc 2 1544 0
 	movi.n	a7, 0xd
 .LVL653:
 .L939:
-	.loc 2 1512 0
+	.loc 2 1543 0
 	movi.n	a6, 2
 .LVL654:
-	.loc 2 1510 0
+	.loc 2 1541 0
 	bge	a2, a4, .L878
-	.loc 2 1511 0
+	.loc 2 1542 0
 	slli	a6, a2, 4
 	add.n	a6, a5, a6
 	addi.n	a8, a3, 2
@@ -5653,35 +5663,35 @@ little2_getAtts:
 	j	.L934
 .LVL655:
 .L894:
-	.loc 2 1515 0
+	.loc 2 1545 0
 	movi.n	a10, 0xd
 	bne	a7, a10, .L878
 .LVL656:
 .L945:
-	.loc 2 1517 0
+	.loc 2 1547 0
 	bge	a2, a4, .L895
-	.loc 2 1518 0
+	.loc 2 1548 0
 	slli	a6, a2, 4
 	add.n	a6, a5, a6
 	s32i.n	a3, a6, 8
 .L895:
-	.loc 2 1519 0
+	.loc 2 1549 0
 	addi.n	a2, a2, 1
 .LVL657:
 	j	.L911
 .LVL658:
 .L888:
-	.loc 2 1527 0
+	.loc 2 1557 0
 	beqi	a6, 1, .L911
-	.loc 2 1529 0
+	.loc 2 1559 0
 	bnei	a6, 2, .L878
 	bge	a2, a4, .L878
-	.loc 2 1531 0
+	.loc 2 1559 0 is_stmt 0 discriminator 1
 	slli	a9, a2, 4
 	add.n	a9, a5, a9
 	l8ui	a10, a9, 12
 	beqz.n	a10, .L878
-	.loc 2 1533 0
+	.loc 2 1561 0 is_stmt 1
 	l32i.n	a6, a9, 4
 .LVL659:
 	movi.n	a8, 0
@@ -5692,21 +5702,21 @@ little2_getAtts:
 	bnez.n	a6, .L897
 	moveqz	a10, a6, a12
 	bnez.n	a10, .L897
-	.loc 2 1533 0 is_stmt 0 discriminator 1
+	.loc 2 1561 0 is_stmt 0 discriminator 1
 	bnei	a15, 32, .L897
-	.loc 2 1534 0 is_stmt 1
+	.loc 2 1562 0 is_stmt 1
 	l8ui	a10, a3, 3
 	l8ui	a11, a3, 2
 	bnez.n	a10, .L898
-	.loc 2 1534 0 is_stmt 0 discriminator 1
+	.loc 2 1562 0 is_stmt 0 discriminator 1
 	beqi	a11, 32, .L897
-	.loc 2 1535 0 is_stmt 1 discriminator 1
+	.loc 2 1563 0 is_stmt 1 discriminator 1
 	l32i.n	a6, sp, 0
 	add.n	a11, a6, a11
 	l8ui	a10, a11, 72
 	j	.L899
 .L898:
-	.loc 2 1535 0 is_stmt 0 discriminator 2
+	.loc 2 1563 0 is_stmt 0 discriminator 2
 	s32i.n	a9, sp, 4
 	s32i.n	a13, sp, 16
 	s32i.n	a14, sp, 12
@@ -5717,10 +5727,10 @@ little2_getAtts:
 	l32i.n	a9, sp, 4
 .L899:
 	movi.n	a6, 2
-	.loc 2 1535 0 discriminator 4
+	.loc 2 1563 0 discriminator 4
 	bne	a7, a10, .L878
 .L897:
-	.loc 2 1536 0 is_stmt 1
+	.loc 2 1564 0 is_stmt 1
 	s8i	a14, a9, 12
 .LVL661:
 .L934:
@@ -5728,31 +5738,31 @@ little2_getAtts:
 	j	.L878
 .LVL662:
 .L884:
-	.loc 2 1541 0
+	.loc 2 1570 0
 	beqi	a6, 1, .L911
-	.loc 2 1543 0
+	.loc 2 1572 0
 	bnei	a6, 2, .L878
 .L941:
 	bge	a2, a4, .L878
-	.loc 2 1544 0
+	.loc 2 1573 0
 	slli	a9, a2, 4
 	add.n	a9, a5, a9
 	s8i	a14, a9, 12
 	j	.L878
 .L885:
-	.loc 2 1548 0
+	.loc 2 1577 0
 	beqi	a6, 2, .L878
 	retw.n
 .LVL663:
 .L911:
-	.loc 2 1542 0
+	.loc 2 1571 0
 	movi.n	a6, 0
 .LVL664:
 .L878:
-	.loc 2 1474 0
+	.loc 2 1502 0
 	addi.n	a3, a3, 2
 .LVL665:
-	.loc 2 1554 0
+	.loc 2 1583 0
 	j	.L901
 .LFE68:
 	.size	little2_getAtts, .-little2_getAtts
@@ -5761,11 +5771,11 @@ little2_getAtts:
 	.type	little2_predefinedEntityName, @function
 little2_predefinedEntityName:
 .LFB70:
-	.loc 2 1605 0
+	.loc 2 1647 0
 .LVL666:
 	entry	sp, 32
 .LCFI40:
-	.loc 2 1606 0
+	.loc 2 1649 0
 	sub	a4, a4, a3
 .LVL667:
 	extui	a2, a4, 31, 1
@@ -5774,104 +5784,104 @@ little2_predefinedEntityName:
 	srai	a4, a4, 1
 	beqi	a4, 3, .L948
 	beqi	a4, 4, .L949
-	.loc 2 1653 0
+	.loc 2 1696 0
 	movi.n	a2, 0
-	.loc 2 1606 0
+	.loc 2 1649 0
 	bnei	a4, 2, .L947
-	.loc 2 1608 0
+	.loc 2 1651 0
 	l8ui	a4, a3, 3
-	.loc 2 1653 0
+	.loc 2 1696 0
 	movi.n	a2, 0
-	.loc 2 1608 0
+	.loc 2 1651 0
 	bne	a4, a2, .L947
-	.loc 2 1608 0 is_stmt 0 discriminator 1
+	.loc 2 1651 0 is_stmt 0 discriminator 1
 	l8ui	a8, a3, 2
 	movi	a4, 0x74
 	bne	a8, a4, .L947
-	.loc 2 1609 0 is_stmt 1
+	.loc 2 1652 0 is_stmt 1
 	l8ui	a4, a3, 1
 	bne	a4, a2, .L947
-	.loc 2 1609 0 is_stmt 0 discriminator 1
+	.loc 2 1652 0 is_stmt 0 discriminator 1
 	l8ui	a3, a3, 0
 .LVL669:
 	movi	a8, 0x67
-	.loc 2 1613 0 is_stmt 1 discriminator 1
+	.loc 2 1656 0 is_stmt 1 discriminator 1
 	movi.n	a2, 0x3e
-	.loc 2 1609 0 discriminator 1
+	.loc 2 1652 0 discriminator 1
 	beq	a3, a8, .L947
-	.loc 2 1653 0 discriminator 1
+	.loc 2 1696 0 discriminator 1
 	addi	a3, a3, -108
 	movi.n	a2, 0x3c
 	movnez	a2, a4, a3
 	retw.n
 .LVL670:
 .L948:
-	.loc 2 1618 0
+	.loc 2 1661 0
 	l8ui	a4, a3, 1
-	.loc 2 1653 0
+	.loc 2 1696 0
 	movi.n	a2, 0
-	.loc 2 1618 0
+	.loc 2 1661 0
 	bne	a4, a2, .L947
-	.loc 2 1618 0 is_stmt 0 discriminator 1
+	.loc 2 1661 0 is_stmt 0 discriminator 1
 	l8ui	a8, a3, 0
 	movi	a4, 0x61
 	bne	a8, a4, .L947
 .LVL671:
-	.loc 2 1620 0 is_stmt 1
+	.loc 2 1663 0 is_stmt 1
 	l8ui	a4, a3, 3
 	bne	a4, a2, .L947
-	.loc 2 1620 0 is_stmt 0 discriminator 1
+	.loc 2 1663 0 is_stmt 0 discriminator 1
 	l8ui	a8, a3, 2
 	movi	a4, 0x6d
 	bne	a8, a4, .L947
 .LVL672:
-	.loc 2 1622 0 is_stmt 1
+	.loc 2 1665 0 is_stmt 1
 	l8ui	a4, a3, 5
 	bne	a4, a2, .L947
-	.loc 2 1622 0 is_stmt 0 discriminator 1
+	.loc 2 1665 0 is_stmt 0 discriminator 1
 	l8ui	a3, a3, 4
 .LVL673:
-	.loc 2 1623 0 is_stmt 1 discriminator 1
+	.loc 2 1666 0 is_stmt 1 discriminator 1
 	movi.n	a4, 0x26
 	addi	a3, a3, -112
 	j	.L981
 .LVL674:
 .L949:
-	.loc 2 1628 0
+	.loc 2 1671 0
 	l8ui	a4, a3, 1
-	.loc 2 1653 0
+	.loc 2 1696 0
 	movi.n	a2, 0
-	.loc 2 1628 0
+	.loc 2 1671 0
 	bne	a4, a2, .L947
-	.loc 2 1628 0 is_stmt 0 discriminator 1
+	.loc 2 1671 0 is_stmt 0 discriminator 1
 	l8ui	a4, a3, 0
 	movi	a8, 0x61
 	beq	a4, a8, .L953
 	movi	a8, 0x71
 	bne	a4, a8, .L947
 .LVL675:
-	.loc 2 1631 0 is_stmt 1
+	.loc 2 1674 0 is_stmt 1
 	l8ui	a4, a3, 3
 	bne	a4, a2, .L947
-	.loc 2 1631 0 is_stmt 0 discriminator 1
+	.loc 2 1674 0 is_stmt 0 discriminator 1
 	l8ui	a8, a3, 2
 	movi	a4, 0x75
 	bne	a8, a4, .L947
 .LVL676:
-	.loc 2 1633 0 is_stmt 1
+	.loc 2 1676 0 is_stmt 1
 	l8ui	a4, a3, 5
 	bne	a4, a2, .L947
-	.loc 2 1633 0 is_stmt 0 discriminator 1
+	.loc 2 1676 0 is_stmt 0 discriminator 1
 	l8ui	a8, a3, 4
 	movi	a4, 0x6f
 	bne	a8, a4, .L947
 .LVL677:
-	.loc 2 1635 0 is_stmt 1
+	.loc 2 1678 0 is_stmt 1
 	l8ui	a4, a3, 7
 	bne	a4, a2, .L947
-	.loc 2 1635 0 is_stmt 0 discriminator 1
+	.loc 2 1678 0 is_stmt 0 discriminator 1
 	l8ui	a2, a3, 6
-	.loc 2 1636 0 is_stmt 1 discriminator 1
+	.loc 2 1679 0 is_stmt 1 discriminator 1
 	movi.n	a4, 0
 	addi	a3, a2, -116
 .LVL678:
@@ -5880,29 +5890,29 @@ little2_predefinedEntityName:
 	retw.n
 .LVL679:
 .L953:
-	.loc 2 1642 0
+	.loc 2 1685 0
 	l8ui	a4, a3, 3
 	bnez.n	a4, .L947
-	.loc 2 1642 0 is_stmt 0 discriminator 1
+	.loc 2 1685 0 is_stmt 0 discriminator 1
 	l8ui	a8, a3, 2
 	movi	a4, 0x70
 	bne	a8, a4, .L947
 .LVL680:
-	.loc 2 1644 0 is_stmt 1
+	.loc 2 1687 0 is_stmt 1
 	l8ui	a4, a3, 5
 	bnez.n	a4, .L947
-	.loc 2 1644 0 is_stmt 0 discriminator 1
+	.loc 2 1687 0 is_stmt 0 discriminator 1
 	l8ui	a8, a3, 4
 	movi	a4, 0x6f
 	bne	a8, a4, .L947
 .LVL681:
-	.loc 2 1646 0 is_stmt 1
+	.loc 2 1689 0 is_stmt 1
 	l8ui	a4, a3, 7
 	bnez.n	a4, .L947
-	.loc 2 1646 0 is_stmt 0 discriminator 1
+	.loc 2 1689 0 is_stmt 0 discriminator 1
 	l8ui	a3, a3, 6
 .LVL682:
-	.loc 2 1647 0 is_stmt 1 discriminator 1
+	.loc 2 1690 0 is_stmt 1 discriminator 1
 	movi.n	a4, 0x27
 	addi	a3, a3, -115
 .LVL683:
@@ -5910,7 +5920,7 @@ little2_predefinedEntityName:
 	moveqz	a2, a4, a3
 	retw.n
 .L947:
-	.loc 2 1654 0
+	.loc 2 1697 0
 	retw.n
 .LFE70:
 	.size	little2_predefinedEntityName, .-little2_predefinedEntityName
@@ -5919,33 +5929,33 @@ little2_predefinedEntityName:
 	.type	little2_nameMatchesAscii, @function
 little2_nameMatchesAscii:
 .LFB71:
-	.loc 2 1659 0
+	.loc 2 1701 0
 .LVL684:
 	entry	sp, 32
 .LCFI41:
-	.loc 2 1660 0
+	.loc 2 1703 0
 	j	.L983
 .LVL685:
 .L985:
-	.loc 2 1661 0
+	.loc 2 1704 0
 	sub	a2, a4, a3
 	blti	a2, 2, .L987
-	.loc 2 1669 0
+	.loc 2 1712 0
 	l8ui	a2, a3, 1
 	bnez.n	a2, .L987
-	.loc 2 1669 0 is_stmt 0 discriminator 1
+	.loc 2 1712 0 is_stmt 0 discriminator 1
 	l8ui	a8, a3, 0
 	bne	a8, a9, .L984
-	.loc 2 1660 0 is_stmt 1
+	.loc 2 1703 0 is_stmt 1
 	addi.n	a3, a3, 2
 .LVL686:
 	addi.n	a5, a5, 1
 .LVL687:
 .L983:
-	.loc 2 1660 0 is_stmt 0 discriminator 1
+	.loc 2 1703 0 is_stmt 0 discriminator 1
 	l8ui	a9, a5, 0
 	bnez.n	a9, .L985
-	.loc 2 1672 0 is_stmt 1
+	.loc 2 1715 0 is_stmt 1
 	sub	a3, a3, a4
 .LVL688:
 	movi.n	a8, 1
@@ -5954,10 +5964,10 @@ little2_nameMatchesAscii:
 	retw.n
 .LVL689:
 .L987:
-	.loc 2 1667 0
+	.loc 2 1710 0
 	movi.n	a2, 0
 .L984:
-	.loc 2 1673 0
+	.loc 2 1716 0
 	retw.n
 .LFE71:
 	.size	little2_nameMatchesAscii, .-little2_nameMatchesAscii
@@ -5966,14 +5976,14 @@ little2_nameMatchesAscii:
 	.type	little2_nameLength, @function
 little2_nameLength:
 .LFB72:
-	.loc 2 1677 0
+	.loc 2 1719 0
 .LVL690:
 	entry	sp, 32
 .LCFI42:
 .LVL691:
-	.loc 2 1677 0
+	.loc 2 1719 0
 	mov.n	a4, a3
-	.loc 2 1680 0
+	.loc 2 1722 0
 	movi.n	a5, 0x16
 	movi.n	a6, 0x1b
 	movi.n	a7, 0x1d
@@ -5982,16 +5992,16 @@ little2_nameLength:
 	l8ui	a10, a4, 1
 	l8ui	a11, a4, 0
 	bnez.n	a10, .L991
-	.loc 2 1680 0 is_stmt 0 discriminator 1
+	.loc 2 1722 0 is_stmt 0 discriminator 1
 	add.n	a11, a2, a11
 	l8ui	a10, a11, 72
 	j	.L992
 .L991:
-	.loc 2 1680 0 discriminator 2
+	.loc 2 1722 0 discriminator 2
 	call8	unicode_byte_type
 .LVL693:
 .L992:
-	.loc 2 1680 0 discriminator 4
+	.loc 2 1722 0 discriminator 4
 	beqi	a10, 7, .L994
 	bgei	a10, 8, .L995
 	beqi	a10, 5, .L998
@@ -6003,22 +6013,23 @@ little2_nameLength:
 	beq	a10, a7, .L998
 	j	.L993
 .L997:
-	.loc 2 1683 0 is_stmt 1
+	.loc 2 1728 0 is_stmt 1
 	addi.n	a4, a4, 3
 .LVL694:
 	j	.L990
 .L994:
+	.loc 2 1729 0
 	addi.n	a4, a4, 4
 .LVL695:
 	j	.L990
 .L998:
-	.loc 2 1694 0
+	.loc 2 1740 0
 	addi.n	a4, a4, 2
 .LVL696:
-	.loc 2 1695 0
+	.loc 2 1741 0
 	j	.L990
 .L993:
-	.loc 2 1700 0
+	.loc 2 1746 0
 	sub	a2, a4, a3
 .LVL697:
 	retw.n
@@ -6031,35 +6042,35 @@ little2_nameLength:
 	.type	little2_skipS, @function
 little2_skipS:
 .LFB73:
-	.loc 2 1704 0
+	.loc 2 1749 0
 .LVL698:
 	entry	sp, 32
 .LCFI43:
 	movi.n	a4, 0x15
 .L1004:
-	.loc 2 1706 0
+	.loc 2 1751 0
 	l8ui	a10, a3, 1
 	l8ui	a11, a3, 0
 	bnez.n	a10, .L1001
-	.loc 2 1706 0 is_stmt 0 discriminator 1
+	.loc 2 1751 0 is_stmt 0 discriminator 1
 	add.n	a11, a2, a11
 	l8ui	a10, a11, 72
 	j	.L1002
 .L1001:
-	.loc 2 1706 0 discriminator 2
+	.loc 2 1751 0 discriminator 2
 	call8	unicode_byte_type
 .LVL699:
 .L1002:
 	bltu	a4, a10, .L1003
 	l32r	a5, .LC47
 	bbc	a5, a10, .L1003
-	.loc 2 1710 0 is_stmt 1
+	.loc 2 1755 0 is_stmt 1
 	addi.n	a3, a3, 2
 .LVL700:
-	.loc 2 1715 0
+	.loc 2 1760 0
 	j	.L1004
 .L1003:
-	.loc 2 1716 0
+	.loc 2 1761 0
 	mov.n	a2, a3
 .LVL701:
 	retw.n
@@ -6072,31 +6083,31 @@ little2_skipS:
 	.type	little2_updatePosition, @function
 little2_updatePosition:
 .LFB74:
-	.loc 2 1723 0
+	.loc 2 1765 0
 .LVL702:
 	entry	sp, 48
 .LCFI44:
-	.loc 2 1742 0
+	.loc 2 1786 0
 	movi.n	a6, -1
-	.loc 2 1740 0
+	.loc 2 1784 0
 	movi.n	a7, 1
-	.loc 2 1724 0
+	.loc 2 1766 0
 	j	.L1009
 .L1023:
-	.loc 2 1725 0
+	.loc 2 1767 0
 	l8ui	a10, a3, 1
 	l8ui	a11, a3, 0
 	bnez.n	a10, .L1010
-	.loc 2 1725 0 is_stmt 0 discriminator 1
+	.loc 2 1767 0 is_stmt 0 discriminator 1
 	add.n	a11, a2, a11
 	l8ui	a10, a11, 72
 	j	.L1011
 .L1010:
-	.loc 2 1725 0 discriminator 2
+	.loc 2 1767 0 discriminator 2
 	call8	unicode_byte_type
 .LVL703:
 .L1011:
-	.loc 2 1725 0 discriminator 4
+	.loc 2 1767 0 discriminator 4
 	addi	a10, a10, -5
 	bgeui	a10, 6, .L1012
 	l32r	a8, .LC48
@@ -6115,46 +6126,47 @@ little2_updatePosition:
 	.word	.L1018
 	.section	.text.little2_updatePosition
 .L1015:
-	.loc 2 1730 0 is_stmt 1
+	.loc 2 1773 0 is_stmt 1
 	addi.n	a3, a3, 3
 .LVL704:
 	j	.L1019
 .L1016:
+	.loc 2 1774 0
 	addi.n	a3, a3, 4
 .LVL705:
 	j	.L1019
 .L1018:
-	.loc 2 1734 0
+	.loc 2 1778 0
 	l32i.n	a9, a5, 0
-	.loc 2 1733 0
+	.loc 2 1777 0
 	s32i.n	a6, a5, 4
-	.loc 2 1734 0
+	.loc 2 1778 0
 	addi.n	a9, a9, 1
 	s32i.n	a9, a5, 0
 	j	.L1012
 .L1017:
-	.loc 2 1738 0
+	.loc 2 1782 0
 	l32i.n	a9, a5, 0
 	addi.n	a9, a9, 1
 	s32i.n	a9, a5, 0
-	.loc 2 1739 0
+	.loc 2 1783 0
 	addi.n	a9, a3, 2
 .LVL706:
-	.loc 2 1740 0
+	.loc 2 1784 0
 	sub	a10, a4, a9
 	blti	a10, 2, .L1020
-	.loc 2 1740 0 is_stmt 0 discriminator 1
+	.loc 2 1784 0 is_stmt 0 discriminator 1
 	l8ui	a10, a3, 3
 	l8ui	a11, a3, 2
 	bnez.n	a10, .L1021
-	.loc 2 1740 0 discriminator 2
+	.loc 2 1784 0 discriminator 2
 	add.n	a11, a2, a11
 	l8ui	a11, a11, 72
 	addi	a11, a11, -10
 	moveqz	a10, a7, a11
 	j	.L1022
 .L1021:
-	.loc 2 1740 0 discriminator 3
+	.loc 2 1784 0 discriminator 3
 	s32i.n	a9, sp, 0
 	call8	unicode_byte_type
 .LVL707:
@@ -6165,31 +6177,31 @@ little2_updatePosition:
 	extui	a10, a8, 0, 8
 .LVL708:
 .L1022:
-	.loc 2 1741 0 is_stmt 1 discriminator 5
+	.loc 2 1785 0 is_stmt 1 discriminator 5
 	addi.n	a3, a3, 4
 	movnez	a9, a3, a10
 .LVL709:
 .L1020:
-	.loc 2 1742 0
+	.loc 2 1786 0
 	s32i.n	a6, a5, 4
-	.loc 2 1743 0
+	.loc 2 1787 0
 	mov.n	a3, a9
 	j	.L1019
 .LVL710:
 .L1012:
-	.loc 2 1745 0
+	.loc 2 1789 0
 	addi.n	a3, a3, 2
 .LVL711:
 .L1019:
-	.loc 2 1748 0
+	.loc 2 1792 0
 	l32i.n	a9, a5, 4
 	addi.n	a9, a9, 1
 	s32i.n	a9, a5, 4
 .L1009:
-	.loc 2 1724 0
+	.loc 2 1766 0
 	sub	a9, a4, a3
 	bgei	a9, 2, .L1023
-	.loc 2 1750 0
+	.loc 2 1794 0
 	retw.n
 .LFE74:
 	.size	little2_updatePosition, .-little2_updatePosition
@@ -6198,149 +6210,149 @@ little2_updatePosition:
 	.type	big2_scanComment, @function
 big2_scanComment:
 .LFB75:
-	.loc 2 140 0
+	.loc 2 136 0
 .LVL712:
 	entry	sp, 48
 .LCFI45:
-	.loc 2 141 0
+	.loc 2 137 0
 	sub	a6, a4, a3
-	.loc 2 170 0
+	.loc 2 166 0
 	movi.n	a8, -1
-	.loc 2 141 0
+	.loc 2 137 0
 	blti	a6, 2, .L1053
-	.loc 2 142 0
+	.loc 2 138 0
 	l8ui	a6, a3, 0
 	bnez.n	a6, .L1037
-	.loc 2 142 0 is_stmt 0 discriminator 1
+	.loc 2 138 0 is_stmt 0 discriminator 1
 	l8ui	a6, a3, 1
 	movi.n	a7, 0x2d
 	beq	a6, a7, .L1029
 	j	.L1037
 .L1029:
-	.loc 2 146 0 is_stmt 1
+	.loc 2 142 0 is_stmt 1
 	addi.n	a3, a3, 2
 .LVL713:
-	.loc 2 148 0
+	.loc 2 144 0
 	movi.n	a7, 0x1b
-	.loc 2 153 0
+	.loc 2 149 0
 	mov.n	a9, a6
-	.loc 2 147 0
+	.loc 2 143 0
 	j	.L1030
 .L1042:
-	.loc 2 148 0
+	.loc 2 144 0
 	l8ui	a10, a3, 0
 	l8ui	a11, a3, 1
 	bnez.n	a10, .L1031
-	.loc 2 148 0 is_stmt 0 discriminator 1
+	.loc 2 144 0 is_stmt 0 discriminator 1
 	add.n	a11, a2, a11
 	l8ui	a10, a11, 72
 	j	.L1032
 .L1031:
-	.loc 2 148 0 discriminator 2
+	.loc 2 144 0 discriminator 2
 	s32i.n	a9, sp, 0
 	call8	unicode_byte_type
 .LVL714:
 	l32i.n	a9, sp, 0
 	j	.L1032
 .L1035:
-	.loc 2 149 0 is_stmt 1
+	.loc 2 145 0 is_stmt 1
 	beqi	a6, 2, .L1046
-	.loc 2 149 0 is_stmt 0 discriminator 8
+	.loc 2 145 0 is_stmt 0 discriminator 8
 	addi.n	a8, a3, 3
 .LVL715:
 	j	.L1034
 .LVL716:
 .L1036:
-	.loc 2 149 0
+	.loc 2 145 0
 	blti	a6, 4, .L1046
-	.loc 2 149 0 discriminator 12
+	.loc 2 145 0 discriminator 12
 	addi.n	a8, a3, 4
 .LVL717:
 	j	.L1034
 .LVL718:
 .L1037:
-	.loc 2 149 0
+	.loc 2 145 0
 	s32i.n	a3, a5, 0
 	j	.L1054
 .L1038:
-	.loc 2 151 0 is_stmt 1
+	.loc 2 147 0 is_stmt 1
 	addi.n	a8, a3, 2
 .LVL719:
-	.loc 2 152 0
+	.loc 2 148 0
 	sub	a6, a4, a8
 	blti	a6, 2, .L1047
-	.loc 2 153 0
+	.loc 2 149 0
 	l8ui	a6, a3, 2
 	bnez.n	a6, .L1034
-	.loc 2 153 0 is_stmt 0 discriminator 1
+	.loc 2 149 0 is_stmt 0 discriminator 1
 	l8ui	a6, a3, 3
 	bne	a6, a9, .L1034
-	.loc 2 154 0 is_stmt 1
+	.loc 2 150 0 is_stmt 1
 	addi.n	a2, a3, 4
 .LVL720:
-	.loc 2 155 0
+	.loc 2 151 0
 	sub	a4, a4, a2
 .LVL721:
-	.loc 2 170 0
+	.loc 2 166 0
 	movi.n	a8, -1
-	.loc 2 155 0
+	.loc 2 151 0
 	blti	a4, 2, .L1053
-	.loc 2 156 0
+	.loc 2 152 0
 	l8ui	a4, a3, 4
 	bnez.n	a4, .L1039
-	.loc 2 156 0 is_stmt 0 discriminator 1
+	.loc 2 152 0 is_stmt 0 discriminator 1
 	l8ui	a6, a3, 5
 	movi.n	a4, 0x3e
 	beq	a6, a4, .L1040
 .L1039:
-	.loc 2 157 0 is_stmt 1
+	.loc 2 153 0 is_stmt 1
 	s32i.n	a2, a5, 0
 .LVL722:
 .L1054:
-	.loc 2 158 0
+	.loc 2 154 0
 	movi.n	a8, 0
 	j	.L1053
 .LVL723:
 .L1040:
-	.loc 2 160 0
+	.loc 2 156 0
 	addi.n	a3, a3, 6
 	s32i.n	a3, a5, 0
-	.loc 2 161 0
+	.loc 2 157 0
 	movi.n	a8, 0xd
 	j	.L1053
 .LVL724:
 .L1041:
-	.loc 2 165 0
+	.loc 2 161 0
 	addi.n	a8, a3, 2
 .LVL725:
 .L1034:
-	.loc 2 140 0
+	.loc 2 136 0
 	mov.n	a3, a8
 .L1030:
 .LVL726:
-	.loc 2 147 0
+	.loc 2 143 0
 	sub	a6, a4, a3
 	bgei	a6, 2, .L1042
 	j	.L1047
 .L1046:
-	.loc 2 149 0
+	.loc 2 145 0
 	movi.n	a8, -2
 	j	.L1053
 .LVL727:
 .L1047:
-	.loc 2 170 0
+	.loc 2 166 0
 	movi.n	a8, -1
 	j	.L1053
 .LVL728:
 .L1032:
-	.loc 2 148 0
+	.loc 2 144 0
 	beqi	a10, 6, .L1035
 	bgei	a10, 7, .L1043
 	bltz	a10, .L1041
 	blti	a10, 2, .L1037
-	.loc 2 149 0
+	.loc 2 145 0
 	addi.n	a8, a3, 2
-	.loc 2 148 0
+	.loc 2 144 0
 	beqi	a10, 5, .L1034
 	j	.L1041
 .L1043:
@@ -6350,7 +6362,7 @@ big2_scanComment:
 	j	.L1041
 .LVL729:
 .L1053:
-	.loc 2 171 0
+	.loc 2 167 0
 	mov.n	a2, a8
 	retw.n
 .LFE75:
@@ -6578,27 +6590,27 @@ big2_cdataSectionTok:
 .LVL759:
 	j	.L1077
 .L1080:
-	.loc 2 397 0 is_stmt 1
+	.loc 2 398 0 is_stmt 1
 	bnei	a7, 2, .L1081
-	.loc 2 397 0 is_stmt 0 discriminator 3
+	.loc 2 398 0 is_stmt 0 discriminator 1
 	s32i.n	a6, a5, 0
 	j	.L1101
 .L1081:
-	.loc 2 397 0 discriminator 4
+	.loc 2 398 0 discriminator 2
 	addi.n	a6, a6, 3
 .LVL760:
 	j	.L1075
 .L1082:
-	.loc 2 397 0
+	.loc 2 399 0 is_stmt 1
 	bgei	a7, 4, .L1083
 	j	.L1103
 .L1083:
-	.loc 2 397 0 discriminator 6
+	.loc 2 399 0 is_stmt 0 discriminator 2
 	addi.n	a6, a6, 4
 .LVL761:
 	j	.L1075
 .L1085:
-	.loc 2 408 0 is_stmt 1
+	.loc 2 410 0 is_stmt 1
 	addi.n	a6, a6, 2
 .LVL762:
 .L1075:
@@ -6606,9 +6618,9 @@ big2_cdataSectionTok:
 	sub	a7, a4, a6
 	bgei	a7, 2, .L1086
 .L1103:
-	.loc 2 412 0
+	.loc 2 414 0
 	s32i.n	a6, a5, 0
-	.loc 2 413 0
+	.loc 2 415 0
 	movi.n	a10, 6
 	j	.L1101
 .L1077:
@@ -6636,7 +6648,7 @@ big2_cdataSectionTok:
 	.section	.text.big2_cdataSectionTok
 .LVL763:
 .L1101:
-	.loc 2 414 0
+	.loc 2 416 0
 	mov.n	a2, a10
 	retw.n
 .LFE80:
@@ -6651,28 +6663,28 @@ big2_cdataSectionTok:
 	.type	big2_scanRef, @function
 big2_scanRef:
 .LFB84:
-	.loc 2 533 0
+	.loc 2 535 0
 .LVL764:
 	entry	sp, 48
 .LCFI47:
-	.loc 2 534 0
+	.loc 2 536 0
 	sub	a8, a4, a3
-	.loc 2 533 0
+	.loc 2 535 0
 	mov.n	a6, a2
-	.loc 2 534 0
+	.loc 2 536 0
 	movi.n	a2, -1
 .LVL765:
 	blti	a8, 2, .L1159
-	.loc 2 535 0
+	.loc 2 537 0
 	l8ui	a2, a3, 0
 	l8ui	a7, a3, 1
 	bnez.n	a2, .L1106
-	.loc 2 535 0 is_stmt 0 discriminator 1
+	.loc 2 537 0 is_stmt 0 discriminator 1
 	add.n	a9, a6, a7
 	l8ui	a10, a9, 72
 	j	.L1107
 .L1106:
-	.loc 2 535 0 discriminator 2
+	.loc 2 537 0 discriminator 2
 	mov.n	a11, a7
 	mov.n	a10, a2
 	s32i.n	a8, sp, 4
@@ -6681,7 +6693,7 @@ big2_scanRef:
 	l32i.n	a8, sp, 4
 	j	.L1107
 .L1108:
-	.loc 2 536 0 is_stmt 1
+	.loc 2 538 0 is_stmt 1
 	l32r	a8, .LC52
 	add.n	a2, a8, a2
 	l8ui	a2, a2, 0
@@ -6693,15 +6705,15 @@ big2_scanRef:
 	bbs	a2, a7, .L1109
 	j	.L1142
 .L1109:
-	.loc 2 536 0 is_stmt 0 discriminator 2
+	.loc 2 538 0 is_stmt 0 discriminator 2
 	addi.n	a3, a3, 2
 .LVL767:
-	.loc 2 544 0 is_stmt 1 discriminator 2
+	.loc 2 546 0 is_stmt 1 discriminator 2
 	movi.n	a7, 0x18
-	.loc 2 536 0 discriminator 2
+	.loc 2 538 0 discriminator 2
 	j	.L1110
 .L1112:
-	.loc 2 536 0 is_stmt 0
+	.loc 2 538 0 is_stmt 0
 	movi.n	a2, -2
 	bnei	a8, 2, .L1142
 	retw.n
@@ -6710,47 +6722,47 @@ big2_scanRef:
 	bgei	a8, 4, .L1142
 	retw.n
 .L1115:
-	.loc 2 538 0 is_stmt 1
+	.loc 2 540 0 is_stmt 1
 	addi.n	a7, a3, 2
 .LVL768:
 .LBB53:
 .LBB54:
-	.loc 2 502 0
+	.loc 2 505 0
 	sub	a8, a4, a7
 .LBE54:
 .LBE53:
-	.loc 2 534 0
+	.loc 2 536 0
 	movi.n	a2, -1
 .LBB61:
 .LBB59:
-	.loc 2 502 0
+	.loc 2 505 0
 	blti	a8, 2, .L1159
-	.loc 2 503 0
+	.loc 2 506 0
 	l8ui	a10, a3, 2
 	l8ui	a11, a3, 3
 	bnez.n	a10, .L1116
 	movi	a2, 0x78
 	bne	a11, a2, .L1117
-	.loc 2 504 0
+	.loc 2 507 0
 	addi.n	a7, a3, 4
 .LVL769:
 .LBB55:
 .LBB56:
-	.loc 2 470 0
+	.loc 2 474 0
 	sub	a8, a4, a7
 .LBE56:
 .LBE55:
 .LBE59:
 .LBE61:
-	.loc 2 534 0
+	.loc 2 536 0
 	movi.n	a2, -1
 .LBB62:
 .LBB60:
 .LBB58:
 .LBB57:
-	.loc 2 470 0
+	.loc 2 474 0
 	blti	a8, 2, .L1159
-	.loc 2 471 0
+	.loc 2 475 0
 	l8ui	a10, a3, 4
 	l8ui	a11, a3, 5
 	bnez.n	a10, .L1118
@@ -6765,19 +6777,19 @@ big2_scanRef:
 	bltui	a10, 2, .L1161
 .LVL771:
 .L1166:
-	.loc 2 476 0
+	.loc 2 480 0
 	s32i.n	a7, a5, 0
 .LVL772:
 .L1164:
-	.loc 2 477 0
+	.loc 2 481 0
 	movi.n	a2, 0
 	retw.n
 .LVL773:
 .L1161:
-	.loc 2 479 0
+	.loc 2 483 0
 	addi.n	a3, a3, 6
 .LVL774:
-	.loc 2 480 0
+	.loc 2 484 0
 	movi.n	a2, 0x12
 	j	.L1122
 .LVL775:
@@ -6798,7 +6810,7 @@ big2_scanRef:
 	bltui	a10, 2, .L1162
 	j	.L1142
 .L1162:
-	.loc 2 479 0
+	.loc 2 483 0
 	addi.n	a3, a3, 2
 .LVL777:
 .L1122:
@@ -6809,7 +6821,7 @@ big2_scanRef:
 .L1117:
 .LBE57:
 .LBE58:
-	.loc 2 505 0
+	.loc 2 508 0
 	add.n	a11, a6, a11
 	l8ui	a10, a11, 72
 	j	.L1129
@@ -6818,18 +6830,18 @@ big2_scanRef:
 .LVL779:
 .L1129:
 	movi.n	a9, 0x19
-	.loc 2 512 0
+	.loc 2 515 0
 	addi.n	a3, a3, 4
 .LVL780:
-	.loc 2 513 0
+	.loc 2 516 0
 	movi.n	a2, 0x12
 	mov.n	a8, a10
-	.loc 2 505 0
+	.loc 2 508 0
 	beq	a10, a9, .L1160
 	j	.L1166
 .LVL781:
 .L1138:
-	.loc 2 513 0
+	.loc 2 516 0
 	l8ui	a10, a3, 0
 	l8ui	a11, a3, 1
 	bnez.n	a10, .L1133
@@ -6847,15 +6859,15 @@ big2_scanRef:
 	j	.L1142
 .LVL783:
 .L1136:
-	.loc 2 517 0
+	.loc 2 520 0
 	addi.n	a3, a3, 2
 	s32i.n	a3, a5, 0
-	.loc 2 518 0
+	.loc 2 521 0
 	movi.n	a2, 0xa
 	retw.n
 .LVL784:
 .L1137:
-	.loc 2 512 0
+	.loc 2 515 0
 	addi.n	a3, a3, 2
 .LVL785:
 .L1160:
@@ -6866,16 +6878,16 @@ big2_scanRef:
 .L1150:
 .LBE60:
 .LBE62:
-	.loc 2 544 0
+	.loc 2 546 0
 	l8ui	a2, a3, 0
 	l8ui	a8, a3, 1
 	bnez.n	a2, .L1140
-	.loc 2 544 0 is_stmt 0 discriminator 1
+	.loc 2 546 0 is_stmt 0 discriminator 1
 	add.n	a10, a6, a8
 	l8ui	a10, a10, 72
 	j	.L1141
 .L1140:
-	.loc 2 544 0 discriminator 2
+	.loc 2 546 0 discriminator 2
 	mov.n	a11, a8
 	mov.n	a10, a2
 	s32i.n	a8, sp, 4
@@ -6885,7 +6897,7 @@ big2_scanRef:
 	l32i.n	a9, sp, 0
 	l32i.n	a8, sp, 4
 .L1141:
-	.loc 2 544 0 discriminator 4
+	.loc 2 546 0 discriminator 4
 	addi	a10, a10, -5
 	bltu	a7, a10, .L1142
 	l32r	a11, .LC53
@@ -6923,7 +6935,7 @@ big2_scanRef:
 	.word	.L1149
 	.section	.text.big2_scanRef
 .L1149:
-	.loc 2 545 0 is_stmt 1
+	.loc 2 547 0 is_stmt 1
 	l32r	a9, .LC54
 	l32r	a11, .LC51
 	add.n	a2, a9, a2
@@ -6936,52 +6948,52 @@ big2_scanRef:
 	srl	a2, a2
 	extui	a2, a2, 0, 1
 	bnez.n	a2, .L1148
-	.loc 2 545 0 is_stmt 0 discriminator 1
+	.loc 2 547 0 is_stmt 0 discriminator 1
 	s32i.n	a3, a5, 0
 	retw.n
 .L1148:
-	.loc 2 545 0 discriminator 2
+	.loc 2 547 0 discriminator 2
 	addi.n	a3, a3, 2
 .LVL788:
 	j	.L1110
 .L1145:
-	.loc 2 536 0 is_stmt 1
+	.loc 2 538 0 is_stmt 1
 	movi.n	a2, -2
-	.loc 2 545 0
+	.loc 2 547 0
 	beqi	a9, 2, .L1159
 	j	.L1142
 .L1146:
-	.loc 2 536 0
+	.loc 2 538 0
 	movi.n	a2, -2
-	.loc 2 545 0
+	.loc 2 547 0
 	blti	a9, 4, .L1159
 	j	.L1142
 .L1147:
-	.loc 2 547 0
+	.loc 2 549 0
 	addi.n	a3, a3, 2
 .LVL789:
 	s32i.n	a3, a5, 0
-	.loc 2 548 0
+	.loc 2 550 0
 	movi.n	a2, 9
 	retw.n
 .LVL790:
 .L1142:
-	.loc 2 550 0
+	.loc 2 552 0
 	s32i.n	a3, a5, 0
 	j	.L1164
 .LVL791:
 .L1110:
-	.loc 2 543 0
+	.loc 2 545 0
 	sub	a9, a4, a3
 	bgei	a9, 2, .L1150
 .LVL792:
 .L1165:
-	.loc 2 534 0
+	.loc 2 536 0
 	movi.n	a2, -1
 	retw.n
 .LVL793:
 .L1107:
-	.loc 2 535 0
+	.loc 2 537 0
 	movi.n	a9, 0x13
 	beq	a10, a9, .L1115
 	blt	a9, a10, .L1151
@@ -6997,7 +7009,7 @@ big2_scanRef:
 	bne	a10, a2, .L1142
 	j	.L1109
 .L1159:
-	.loc 2 555 0
+	.loc 2 557 0
 	retw.n
 .LFE84:
 	.size	big2_scanRef, .-big2_scanRef
@@ -7012,28 +7024,28 @@ big2_scanRef:
 	.type	big2_scanPercent, @function
 big2_scanPercent:
 .LFB88:
-	.loc 2 910 0
+	.loc 2 914 0
 .LVL794:
 	entry	sp, 48
 .LCFI48:
-	.loc 2 911 0
+	.loc 2 915 0
 	sub	a8, a4, a3
-	.loc 2 910 0
+	.loc 2 914 0
 	mov.n	a6, a2
-	.loc 2 911 0
+	.loc 2 915 0
 	movi.n	a2, -1
 .LVL795:
 	blti	a8, 2, .L1197
-	.loc 2 912 0
+	.loc 2 916 0
 	l8ui	a2, a3, 0
 	l8ui	a7, a3, 1
 	bnez.n	a2, .L1169
-	.loc 2 912 0 is_stmt 0 discriminator 1
+	.loc 2 916 0 is_stmt 0 discriminator 1
 	add.n	a9, a6, a7
 	l8ui	a10, a9, 72
 	j	.L1170
 .L1169:
-	.loc 2 912 0 discriminator 2
+	.loc 2 916 0 discriminator 2
 	mov.n	a11, a7
 	mov.n	a10, a2
 	s32i.n	a8, sp, 4
@@ -7042,7 +7054,7 @@ big2_scanPercent:
 	l32i.n	a8, sp, 4
 	j	.L1170
 .L1171:
-	.loc 2 913 0 is_stmt 1
+	.loc 2 917 0 is_stmt 1
 	l32r	a8, .LC56
 	add.n	a2, a8, a2
 	l8ui	a2, a2, 0
@@ -7054,15 +7066,15 @@ big2_scanPercent:
 	bbs	a2, a7, .L1172
 	j	.L1182
 .L1172:
-	.loc 2 913 0 is_stmt 0 discriminator 2
+	.loc 2 917 0 is_stmt 0 discriminator 2
 	addi.n	a3, a3, 2
 .LVL797:
-	.loc 2 922 0 is_stmt 1 discriminator 2
+	.loc 2 929 0 is_stmt 1 discriminator 2
 	movi.n	a7, 0x18
-	.loc 2 913 0 discriminator 2
+	.loc 2 917 0 discriminator 2
 	j	.L1173
 .L1175:
-	.loc 2 913 0 is_stmt 0
+	.loc 2 917 0 is_stmt 0
 	movi.n	a2, -2
 	bnei	a8, 2, .L1182
 	retw.n
@@ -7071,22 +7083,22 @@ big2_scanPercent:
 	bgei	a8, 4, .L1182
 	retw.n
 .L1178:
-	.loc 2 915 0 is_stmt 1
+	.loc 2 922 0 is_stmt 1
 	s32i.n	a3, a5, 0
-	.loc 2 916 0
+	.loc 2 923 0
 	movi.n	a2, 0x16
 	retw.n
 .L1190:
-	.loc 2 922 0
+	.loc 2 929 0
 	l8ui	a9, a3, 0
 	l8ui	a2, a3, 1
 	bnez.n	a9, .L1180
-	.loc 2 922 0 is_stmt 0 discriminator 1
+	.loc 2 929 0 is_stmt 0 discriminator 1
 	add.n	a10, a6, a2
 	l8ui	a10, a10, 72
 	j	.L1181
 .L1180:
-	.loc 2 922 0 discriminator 2
+	.loc 2 929 0 discriminator 2
 	mov.n	a10, a9
 	mov.n	a11, a2
 	s32i.n	a8, sp, 4
@@ -7096,7 +7108,7 @@ big2_scanPercent:
 	l32i.n	a9, sp, 0
 	l32i.n	a8, sp, 4
 .L1181:
-	.loc 2 922 0 discriminator 4
+	.loc 2 929 0 discriminator 4
 	addi	a10, a10, -5
 	bltu	a7, a10, .L1182
 	l32r	a11, .LC57
@@ -7134,7 +7146,7 @@ big2_scanPercent:
 	.word	.L1189
 	.section	.text.big2_scanPercent
 .L1189:
-	.loc 2 923 0 is_stmt 1
+	.loc 2 930 0 is_stmt 1
 	l32r	a8, .LC58
 	add.n	a9, a8, a9
 	l8ui	a8, a9, 0
@@ -7147,51 +7159,51 @@ big2_scanPercent:
 	srl	a2, a11
 	extui	a11, a2, 0, 1
 	bnez.n	a11, .L1188
-	.loc 2 923 0 is_stmt 0 discriminator 1
+	.loc 2 930 0 is_stmt 0 discriminator 1
 	s32i.n	a3, a5, 0
 	mov.n	a2, a11
 	retw.n
 .L1188:
-	.loc 2 923 0 discriminator 2
+	.loc 2 930 0 discriminator 2
 	addi.n	a3, a3, 2
 .LVL799:
 	j	.L1173
 .L1185:
-	.loc 2 913 0 is_stmt 1
+	.loc 2 917 0 is_stmt 1
 	movi.n	a2, -2
-	.loc 2 923 0
+	.loc 2 930 0
 	beqi	a8, 2, .L1197
 	j	.L1182
 .L1186:
-	.loc 2 913 0
+	.loc 2 917 0
 	movi.n	a2, -2
-	.loc 2 923 0
+	.loc 2 930 0
 	blti	a8, 4, .L1197
 	j	.L1182
 .L1187:
-	.loc 2 925 0
+	.loc 2 932 0
 	addi.n	a3, a3, 2
 .LVL800:
 	s32i.n	a3, a5, 0
-	.loc 2 926 0
+	.loc 2 933 0
 	movi.n	a2, 0x1c
 	retw.n
 .LVL801:
 .L1182:
-	.loc 2 928 0
+	.loc 2 935 0
 	s32i.n	a3, a5, 0
-	.loc 2 929 0
+	.loc 2 936 0
 	movi.n	a2, 0
 	retw.n
 .L1173:
-	.loc 2 921 0
+	.loc 2 928 0
 	sub	a8, a4, a3
 	bgei	a8, 2, .L1190
-	.loc 2 911 0
+	.loc 2 915 0
 	movi.n	a2, -1
 	retw.n
 .L1170:
-	.loc 2 912 0
+	.loc 2 916 0
 	addi	a10, a10, -5
 	movi.n	a9, 0x19
 	bltu	a9, a10, .L1182
@@ -7231,7 +7243,7 @@ big2_scanPercent:
 	.word	.L1178
 	.section	.text.big2_scanPercent
 .L1197:
-	.loc 2 933 0
+	.loc 2 940 0
 	retw.n
 .LFE88:
 	.size	big2_scanPercent, .-big2_scanPercent
@@ -7243,28 +7255,28 @@ big2_scanPercent:
 	.type	big2_scanLit, @function
 big2_scanLit:
 .LFB90:
-	.loc 2 965 0
+	.loc 2 974 0
 .LVL802:
 	entry	sp, 48
 .LCFI49:
 .LBB63:
-	.loc 2 968 0
+	.loc 2 977 0
 	movi.n	a9, 0xd
 .LBE63:
-	.loc 2 966 0
+	.loc 2 975 0
 	j	.L1200
 .L1213:
 .LBB64:
-	.loc 2 967 0
+	.loc 2 976 0
 	l8ui	a10, a4, 0
 	l8ui	a11, a4, 1
 	bnez.n	a10, .L1201
-	.loc 2 967 0 is_stmt 0 discriminator 1
+	.loc 2 976 0 is_stmt 0 discriminator 1
 	add.n	a11, a3, a11
 	l8ui	a10, a11, 72
 	j	.L1202
 .L1201:
-	.loc 2 967 0 discriminator 2
+	.loc 2 976 0 discriminator 2
 	s32i.n	a9, sp, 0
 	call8	unicode_byte_type
 .LVL803:
@@ -7272,61 +7284,61 @@ big2_scanLit:
 	j	.L1202
 .LVL804:
 .L1205:
-	.loc 2 969 0 is_stmt 1
+	.loc 2 978 0 is_stmt 1
 	beqi	a7, 2, .L1216
-	.loc 2 969 0 is_stmt 0 discriminator 8
+	.loc 2 978 0 is_stmt 0 discriminator 8
 	addi.n	a8, a4, 3
 .LVL805:
 	j	.L1204
 .LVL806:
 .L1207:
-	.loc 2 969 0
+	.loc 2 978 0
 	blti	a7, 4, .L1216
-	.loc 2 969 0 discriminator 12
+	.loc 2 978 0 discriminator 12
 	addi.n	a8, a4, 4
 .LVL807:
 	j	.L1204
 .LVL808:
 .L1208:
-	.loc 2 969 0
+	.loc 2 978 0
 	s32i.n	a4, a6, 0
 	movi.n	a2, 0
 .LVL809:
 	retw.n
 .LVL810:
 .L1209:
-	.loc 2 972 0 is_stmt 1
+	.loc 2 981 0 is_stmt 1
 	addi.n	a8, a4, 2
 .LVL811:
-	.loc 2 973 0
+	.loc 2 982 0
 	bne	a2, a10, .L1204
-	.loc 2 975 0
+	.loc 2 984 0
 	sub	a5, a5, a8
 .LVL812:
-	.loc 2 976 0
+	.loc 2 985 0
 	movi.n	a2, -0x1b
 .LVL813:
-	.loc 2 975 0
+	.loc 2 984 0
 	blti	a5, 2, .L1220
-	.loc 2 977 0
+	.loc 2 986 0
 	s32i.n	a8, a6, 0
-	.loc 2 978 0
+	.loc 2 987 0
 	l8ui	a10, a4, 2
 .LVL814:
 	l8ui	a11, a4, 3
 	bnez.n	a10, .L1210
-	.loc 2 978 0 is_stmt 0 discriminator 1
+	.loc 2 987 0 is_stmt 0 discriminator 1
 	add.n	a11, a3, a11
 	l8ui	a10, a11, 72
 	j	.L1211
 .L1210:
-	.loc 2 978 0 discriminator 2
+	.loc 2 987 0 discriminator 2
 	call8	unicode_byte_type
 .LVL815:
 .L1211:
 	movi.n	a3, 0x1e
 .LVL816:
-	.loc 2 983 0 is_stmt 1 discriminator 4
+	.loc 2 996 0 is_stmt 1 discriminator 4
 	movi.n	a2, 0
 	bltu	a3, a10, .L1220
 	movi.n	a3, 1
@@ -7334,38 +7346,38 @@ big2_scanLit:
 	sll	a10, a3
 	l32r	a3, .LC60
 	and	a10, a10, a3
-	.loc 2 981 0 discriminator 4
+	.loc 2 994 0 discriminator 4
 	movi.n	a3, 0x1b
 	movnez	a2, a3, a10
 	retw.n
 .LVL817:
 .L1212:
-	.loc 2 986 0
+	.loc 2 999 0
 	addi.n	a8, a4, 2
 .LVL818:
 .L1204:
 .LBE64:
-	.loc 2 965 0
+	.loc 2 974 0
 	mov.n	a4, a8
 .LVL819:
 .L1200:
-	.loc 2 966 0
+	.loc 2 975 0
 	sub	a7, a5, a4
 	bgei	a7, 2, .L1213
-	.loc 2 990 0
+	.loc 2 1003 0
 	movi.n	a2, -1
 .LVL820:
 	retw.n
 .LVL821:
 .L1216:
 .LBB65:
-	.loc 2 969 0
+	.loc 2 978 0
 	movi.n	a2, -2
 .LVL822:
 	retw.n
 .LVL823:
 .L1202:
-	.loc 2 968 0
+	.loc 2 977 0
 	bltu	a9, a10, .L1212
 	l32r	a11, .LC61
 	addx4	a8, a10, a11
@@ -7393,7 +7405,7 @@ big2_scanLit:
 .LVL824:
 .L1220:
 .LBE65:
-	.loc 2 991 0
+	.loc 2 1004 0
 	retw.n
 .LFE90:
 	.size	big2_scanLit, .-big2_scanLit
@@ -7404,22 +7416,22 @@ big2_scanLit:
 	.type	big2_attributeValueTok, @function
 big2_attributeValueTok:
 .LFB92:
-	.loc 2 1224 0
+	.loc 2 1248 0
 .LVL825:
 	entry	sp, 32
 .LCFI50:
-	.loc 2 1227 0
+	.loc 2 1251 0
 	movi.n	a10, -4
-	.loc 2 1226 0
+	.loc 2 1250 0
 	bgeu	a3, a4, .L1222
-	.loc 2 1228 0
+	.loc 2 1252 0
 	sub	a6, a4, a3
-	.loc 2 1234 0
+	.loc 2 1258 0
 	movi.n	a10, -1
-	.loc 2 1228 0
+	.loc 2 1252 0
 	blti	a6, 2, .L1222
 	mov.n	a6, a3
-	.loc 2 1238 0
+	.loc 2 1262 0
 	movi.n	a7, 0x13
 	j	.L1223
 .LVL826:
@@ -7427,16 +7439,16 @@ big2_attributeValueTok:
 	l8ui	a10, a6, 0
 	l8ui	a11, a6, 1
 	bnez.n	a10, .L1224
-	.loc 2 1238 0 is_stmt 0 discriminator 1
+	.loc 2 1262 0 is_stmt 0 discriminator 1
 	add.n	a11, a2, a11
 	l8ui	a10, a11, 72
 	j	.L1225
 .L1224:
-	.loc 2 1238 0 discriminator 2
+	.loc 2 1262 0 discriminator 2
 	call8	unicode_byte_type
 .LVL827:
 .L1225:
-	.loc 2 1238 0 discriminator 4
+	.loc 2 1262 0 discriminator 4
 	addi	a10, a10, -2
 	bltu	a7, a10, .L1226
 	l32r	a8, .LC62
@@ -7469,18 +7481,19 @@ big2_attributeValueTok:
 	.word	.L1235
 	.section	.text.big2_attributeValueTok
 .L1231:
-	.loc 2 1241 0 is_stmt 1
+	.loc 2 1268 0 is_stmt 1
 	addi.n	a6, a6, 3
 .LVL828:
 	j	.L1223
 .L1232:
+	.loc 2 1269 0
 	addi.n	a6, a6, 4
 .LVL829:
 	j	.L1223
 .L1229:
-	.loc 2 1244 0
+	.loc 2 1272 0
 	bne	a6, a3, .L1250
-	.loc 2 1245 0
+	.loc 2 1273 0
 	mov.n	a13, a5
 	mov.n	a12, a4
 	addi.n	a11, a6, 2
@@ -7489,38 +7502,38 @@ big2_attributeValueTok:
 .LVL830:
 	j	.L1222
 .L1227:
-	.loc 2 1250 0
+	.loc 2 1278 0
 	s32i.n	a6, a5, 0
-	.loc 2 1251 0
+	.loc 2 1279 0
 	movi.n	a10, 0
 	j	.L1222
 .L1234:
-	.loc 2 1253 0
+	.loc 2 1281 0
 	bne	a6, a3, .L1250
-	.loc 2 1254 0
+	.loc 2 1282 0
 	addi.n	a6, a6, 2
 .LVL831:
 	s32i.n	a6, a5, 0
 	j	.L1251
 .LVL832:
 .L1233:
-	.loc 2 1260 0
+	.loc 2 1288 0
 	bne	a6, a3, .L1250
-	.loc 2 1261 0
+	.loc 2 1289 0
 	addi.n	a3, a6, 2
 .LVL833:
-	.loc 2 1262 0
+	.loc 2 1290 0
 	sub	a4, a4, a3
 .LVL834:
-	.loc 2 1263 0
+	.loc 2 1291 0
 	movi.n	a10, -3
-	.loc 2 1262 0
+	.loc 2 1290 0
 	blti	a4, 2, .L1222
-	.loc 2 1264 0
+	.loc 2 1292 0
 	l8ui	a10, a6, 2
 	l8ui	a11, a6, 3
 	bnez.n	a10, .L1240
-	.loc 2 1264 0 is_stmt 0 discriminator 1
+	.loc 2 1292 0 is_stmt 0 discriminator 1
 	add.n	a2, a2, a11
 .LVL835:
 	l8ui	a8, a2, 72
@@ -7530,7 +7543,7 @@ big2_attributeValueTok:
 	j	.L1241
 .LVL836:
 .L1240:
-	.loc 2 1264 0 discriminator 2
+	.loc 2 1292 0 discriminator 2
 	call8	unicode_byte_type
 .LVL837:
 	addi	a8, a10, -10
@@ -7540,45 +7553,45 @@ big2_attributeValueTok:
 	movnez	a10, a2, a8
 	extui	a10, a10, 0, 8
 .L1241:
-	.loc 2 1265 0 is_stmt 1 discriminator 4
+	.loc 2 1293 0 is_stmt 1 discriminator 4
 	addi.n	a6, a6, 4
 	movnez	a3, a6, a10
 .LVL839:
-	.loc 2 1266 0 discriminator 4
+	.loc 2 1294 0 discriminator 4
 	s32i.n	a3, a5, 0
 .LVL840:
 .L1251:
-	.loc 2 1267 0 discriminator 4
+	.loc 2 1295 0 discriminator 4
 	movi.n	a10, 7
 	j	.L1222
 .LVL841:
 .L1235:
-	.loc 2 1272 0
+	.loc 2 1300 0
 	bne	a6, a3, .L1250
-	.loc 2 1273 0
+	.loc 2 1301 0
 	addi.n	a6, a6, 2
 .LVL842:
 	s32i.n	a6, a5, 0
-	.loc 2 1274 0
+	.loc 2 1302 0
 	movi.n	a10, 0x27
 	j	.L1222
 .LVL843:
 .L1226:
-	.loc 2 1279 0
+	.loc 2 1307 0
 	addi.n	a6, a6, 2
 .LVL844:
 .L1223:
-	.loc 2 1237 0
+	.loc 2 1261 0
 	sub	a8, a4, a6
 	bgei	a8, 2, .L1244
 .L1250:
-	.loc 2 1283 0
+	.loc 2 1311 0
 	s32i.n	a6, a5, 0
-	.loc 2 1284 0
+	.loc 2 1312 0
 	movi.n	a10, 6
 .LVL845:
 .L1222:
-	.loc 2 1285 0
+	.loc 2 1313 0
 	mov.n	a2, a10
 	retw.n
 .LFE92:
@@ -7588,22 +7601,22 @@ big2_attributeValueTok:
 	.type	big2_entityValueTok, @function
 big2_entityValueTok:
 .LFB93:
-	.loc 2 1290 0
+	.loc 2 1317 0
 .LVL846:
 	entry	sp, 48
 .LCFI51:
-	.loc 2 1293 0
+	.loc 2 1320 0
 	movi.n	a10, -4
-	.loc 2 1292 0
+	.loc 2 1319 0
 	bgeu	a3, a4, .L1253
-	.loc 2 1294 0
+	.loc 2 1321 0
 	sub	a6, a4, a3
-	.loc 2 1300 0
+	.loc 2 1327 0
 	movi.n	a10, -1
-	.loc 2 1294 0
+	.loc 2 1321 0
 	blti	a6, 2, .L1253
 	mov.n	a6, a3
-	.loc 2 1304 0
+	.loc 2 1331 0
 	movi.n	a7, 0x1e
 	movi.n	a9, 9
 	j	.L1254
@@ -7612,18 +7625,18 @@ big2_entityValueTok:
 	l8ui	a10, a6, 0
 	l8ui	a11, a6, 1
 	bnez.n	a10, .L1255
-	.loc 2 1304 0 is_stmt 0 discriminator 1
+	.loc 2 1331 0 is_stmt 0 discriminator 1
 	add.n	a11, a2, a11
 	l8ui	a10, a11, 72
 	j	.L1256
 .L1255:
-	.loc 2 1304 0 discriminator 2
+	.loc 2 1331 0 discriminator 2
 	s32i.n	a9, sp, 0
 	call8	unicode_byte_type
 .LVL848:
 	l32i.n	a9, sp, 0
 .L1256:
-	.loc 2 1304 0 discriminator 4
+	.loc 2 1331 0 discriminator 4
 	beqi	a10, 7, .L1258
 	bgei	a10, 8, .L1259
 	beqi	a10, 5, .L1257
@@ -7636,18 +7649,19 @@ big2_entityValueTok:
 	bne	a10, a9, .L1257
 	j	.L1265
 .L1261:
-	.loc 2 1307 0 is_stmt 1
+	.loc 2 1337 0 is_stmt 1
 	addi.n	a6, a6, 3
 .LVL849:
 	j	.L1254
 .L1258:
+	.loc 2 1338 0
 	addi.n	a6, a6, 4
 .LVL850:
 	j	.L1254
 .L1262:
-	.loc 2 1310 0
+	.loc 2 1341 0
 	bne	a6, a3, .L1281
-	.loc 2 1311 0
+	.loc 2 1342 0
 	mov.n	a13, a5
 	mov.n	a12, a4
 	addi.n	a11, a6, 2
@@ -7656,17 +7670,17 @@ big2_entityValueTok:
 .LVL851:
 	j	.L1253
 .L1264:
-	.loc 2 1315 0
+	.loc 2 1346 0
 	bne	a6, a3, .L1281
 .LBB66:
-	.loc 2 1316 0
+	.loc 2 1347 0
 	addi.n	a11, a6, 2
 	mov.n	a10, a2
 	mov.n	a13, a5
 	mov.n	a12, a4
 	call8	big2_scanPercent
 .LVL852:
-	.loc 2 1318 0
+	.loc 2 1348 0
 	addi	a6, a10, -22
 .LVL853:
 	movi.n	a2, 0
@@ -7677,32 +7691,32 @@ big2_entityValueTok:
 .LVL856:
 .L1263:
 .LBE66:
-	.loc 2 1323 0
+	.loc 2 1353 0
 	bne	a6, a3, .L1281
-	.loc 2 1324 0
+	.loc 2 1354 0
 	addi.n	a6, a6, 2
 .LVL857:
 	s32i.n	a6, a5, 0
 	j	.L1282
 .LVL858:
 .L1265:
-	.loc 2 1330 0
+	.loc 2 1360 0
 	bne	a6, a3, .L1281
-	.loc 2 1331 0
+	.loc 2 1361 0
 	addi.n	a3, a6, 2
 .LVL859:
-	.loc 2 1332 0
+	.loc 2 1362 0
 	sub	a4, a4, a3
 .LVL860:
-	.loc 2 1333 0
+	.loc 2 1363 0
 	movi.n	a10, -3
-	.loc 2 1332 0
+	.loc 2 1362 0
 	blti	a4, 2, .L1253
-	.loc 2 1334 0
+	.loc 2 1364 0
 	l8ui	a10, a6, 2
 	l8ui	a11, a6, 3
 	bnez.n	a10, .L1271
-	.loc 2 1334 0 is_stmt 0 discriminator 1
+	.loc 2 1364 0 is_stmt 0 discriminator 1
 	add.n	a2, a2, a11
 .LVL861:
 	l8ui	a8, a2, 72
@@ -7712,7 +7726,7 @@ big2_entityValueTok:
 	j	.L1272
 .LVL862:
 .L1271:
-	.loc 2 1334 0 discriminator 2
+	.loc 2 1364 0 discriminator 2
 	call8	unicode_byte_type
 .LVL863:
 	addi	a8, a10, -10
@@ -7722,34 +7736,34 @@ big2_entityValueTok:
 	movnez	a10, a2, a8
 	extui	a10, a10, 0, 8
 .L1272:
-	.loc 2 1335 0 is_stmt 1 discriminator 4
+	.loc 2 1365 0 is_stmt 1 discriminator 4
 	addi.n	a6, a6, 4
 	movnez	a3, a6, a10
 .LVL865:
-	.loc 2 1336 0 discriminator 4
+	.loc 2 1366 0 discriminator 4
 	s32i.n	a3, a5, 0
 .LVL866:
 .L1282:
-	.loc 2 1337 0 discriminator 4
+	.loc 2 1367 0 discriminator 4
 	movi.n	a10, 7
 	j	.L1253
 .LVL867:
 .L1257:
-	.loc 2 1342 0
+	.loc 2 1372 0
 	addi.n	a6, a6, 2
 .LVL868:
 .L1254:
-	.loc 2 1303 0
+	.loc 2 1330 0
 	sub	a8, a4, a6
 	bgei	a8, 2, .L1274
 .L1281:
-	.loc 2 1346 0
+	.loc 2 1376 0
 	s32i.n	a6, a5, 0
-	.loc 2 1347 0
+	.loc 2 1377 0
 	movi.n	a10, 6
 .LVL869:
 .L1253:
-	.loc 2 1348 0
+	.loc 2 1378 0
 	mov.n	a2, a10
 	retw.n
 .LFE93:
@@ -7761,19 +7775,19 @@ big2_entityValueTok:
 	.type	big2_ignoreSectionTok, @function
 big2_ignoreSectionTok:
 .LFB94:
-	.loc 2 1355 0
+	.loc 2 1384 0
 .LVL870:
 	entry	sp, 64
 .LCFI52:
 .LVL871:
 .LBB67:
-	.loc 2 1358 0
+	.loc 2 1387 0
 	sub	a6, a4, a3
 .LVL872:
-	.loc 2 1359 0
+	.loc 2 1388 0
 	bbci	a6, 0, .L1284
 .LVL873:
-	.loc 2 1361 0
+	.loc 2 1390 0
 	movi.n	a4, -2
 .LVL874:
 	and	a4, a6, a4
@@ -7782,31 +7796,31 @@ big2_ignoreSectionTok:
 .LVL876:
 .L1284:
 .LBE67:
-	.loc 2 1355 0
+	.loc 2 1384 0
 	movi.n	a6, 0
-	.loc 2 1365 0
+	.loc 2 1394 0
 	movi.n	a7, 8
-	.loc 2 1382 0
+	.loc 2 1411 0
 	movi.n	a9, 0x5d
-	.loc 2 1385 0
+	.loc 2 1414 0
 	movi.n	a12, 0x3e
-	.loc 2 1370 0
+	.loc 2 1399 0
 	movi.n	a13, 0x21
-	.loc 2 1373 0
+	.loc 2 1402 0
 	movi.n	a14, 0x5b
 	j	.L1285
 .LVL877:
 .L1298:
-	.loc 2 1365 0
+	.loc 2 1394 0
 	l8ui	a10, a3, 0
 	l8ui	a11, a3, 1
 	bnez.n	a10, .L1286
-	.loc 2 1365 0 is_stmt 0 discriminator 1
+	.loc 2 1394 0 is_stmt 0 discriminator 1
 	add.n	a11, a2, a11
 	l8ui	a10, a11, 72
 	j	.L1287
 .L1286:
-	.loc 2 1365 0 discriminator 2
+	.loc 2 1394 0 discriminator 2
 	s32i.n	a8, sp, 0
 	s32i.n	a9, sp, 4
 	s32i.n	a12, sp, 8
@@ -7821,131 +7835,131 @@ big2_ignoreSectionTok:
 	l32i.n	a14, sp, 16
 	j	.L1287
 .L1290:
-	.loc 2 1366 0 is_stmt 1
+	.loc 2 1395 0 is_stmt 1
 	beqi	a8, 2, .L1301
-	.loc 2 1366 0 is_stmt 0 discriminator 8
+	.loc 2 1395 0 is_stmt 0 discriminator 8
 	addi.n	a8, a3, 3
 .LVL879:
 	j	.L1289
 .LVL880:
 .L1292:
-	.loc 2 1366 0
+	.loc 2 1395 0
 	blti	a8, 4, .L1301
-	.loc 2 1366 0 discriminator 12
+	.loc 2 1395 0 discriminator 12
 	addi.n	a8, a3, 4
 .LVL881:
 	j	.L1289
 .LVL882:
 .L1293:
-	.loc 2 1366 0
+	.loc 2 1395 0
 	s32i.n	a3, a5, 0
 	movi.n	a2, 0
 .LVL883:
 	retw.n
 .LVL884:
 .L1294:
-	.loc 2 1368 0 is_stmt 1
+	.loc 2 1397 0 is_stmt 1
 	addi.n	a8, a3, 2
 .LVL885:
-	.loc 2 1369 0
+	.loc 2 1398 0
 	sub	a10, a4, a8
 	blti	a10, 2, .L1305
-	.loc 2 1370 0
+	.loc 2 1399 0
 	l8ui	a10, a3, 2
 	bnez.n	a10, .L1289
-	.loc 2 1370 0 is_stmt 0 discriminator 1
+	.loc 2 1399 0 is_stmt 0 discriminator 1
 	l8ui	a10, a3, 3
 	bne	a10, a13, .L1289
-	.loc 2 1371 0 is_stmt 1
+	.loc 2 1400 0 is_stmt 1
 	addi.n	a8, a3, 4
 .LVL886:
-	.loc 2 1372 0
+	.loc 2 1401 0
 	sub	a10, a4, a8
 	blti	a10, 2, .L1305
-	.loc 2 1373 0
+	.loc 2 1402 0
 	l8ui	a10, a3, 4
 	bnez.n	a10, .L1289
-	.loc 2 1373 0 is_stmt 0 discriminator 1
+	.loc 2 1402 0 is_stmt 0 discriminator 1
 	l8ui	a10, a3, 5
 	bne	a10, a14, .L1289
-	.loc 2 1374 0 is_stmt 1
+	.loc 2 1403 0 is_stmt 1
 	addi.n	a6, a6, 1
 .LVL887:
-	.loc 2 1375 0
+	.loc 2 1404 0
 	addi.n	a8, a3, 6
 .LVL888:
 	j	.L1289
 .LVL889:
 .L1295:
-	.loc 2 1380 0
+	.loc 2 1409 0
 	addi.n	a8, a3, 2
 .LVL890:
-	.loc 2 1381 0
+	.loc 2 1410 0
 	sub	a10, a4, a8
 	blti	a10, 2, .L1305
-	.loc 2 1382 0
+	.loc 2 1411 0
 	l8ui	a10, a3, 2
 	bnez.n	a10, .L1289
-	.loc 2 1382 0 is_stmt 0 discriminator 1
+	.loc 2 1411 0 is_stmt 0 discriminator 1
 	l8ui	a10, a3, 3
 	bne	a10, a9, .L1289
-	.loc 2 1383 0 is_stmt 1
+	.loc 2 1412 0 is_stmt 1
 	addi.n	a8, a3, 4
 .LVL891:
-	.loc 2 1384 0
+	.loc 2 1413 0
 	sub	a10, a4, a8
 	blti	a10, 2, .L1305
-	.loc 2 1385 0
+	.loc 2 1414 0
 	l8ui	a10, a3, 4
 	bnez.n	a10, .L1289
-	.loc 2 1385 0 is_stmt 0 discriminator 1
+	.loc 2 1414 0 is_stmt 0 discriminator 1
 	l8ui	a10, a3, 5
 	bne	a10, a12, .L1289
-	.loc 2 1386 0 is_stmt 1
+	.loc 2 1415 0 is_stmt 1
 	addi.n	a8, a3, 6
 .LVL892:
-	.loc 2 1387 0
+	.loc 2 1416 0
 	bnez.n	a6, .L1296
-	.loc 2 1388 0
+	.loc 2 1417 0
 	s32i.n	a8, a5, 0
-	.loc 2 1389 0
+	.loc 2 1418 0
 	movi.n	a2, 0x2a
 .LVL893:
 	retw.n
 .LVL894:
 .L1296:
-	.loc 2 1391 0
+	.loc 2 1420 0
 	addi.n	a6, a6, -1
 .LVL895:
 	j	.L1289
 .LVL896:
 .L1297:
-	.loc 2 1396 0
+	.loc 2 1425 0
 	addi.n	a8, a3, 2
 .LVL897:
 .L1289:
-	.loc 2 1355 0
+	.loc 2 1384 0
 	mov.n	a3, a8
 .LVL898:
 .L1285:
-	.loc 2 1364 0
+	.loc 2 1393 0
 	sub	a8, a4, a3
 	bgei	a8, 2, .L1298
 	j	.L1305
 .L1301:
-	.loc 2 1366 0
+	.loc 2 1395 0
 	movi.n	a2, -2
 .LVL899:
 	retw.n
 .LVL900:
 .L1305:
-	.loc 2 1369 0
+	.loc 2 1398 0
 	movi.n	a2, -1
 .LVL901:
 	retw.n
 .LVL902:
 .L1287:
-	.loc 2 1365 0
+	.loc 2 1394 0
 	bltu	a7, a10, .L1297
 	l32r	a11, .LC63
 	addx4	a10, a10, a11
@@ -7976,37 +7990,37 @@ big2_ignoreSectionTok:
 	.type	big2_isPublicId, @function
 big2_isPublicId:
 .LFB95:
-	.loc 2 1408 0
+	.loc 2 1436 0
 .LVL903:
 	entry	sp, 64
 .LCFI53:
-	.loc 2 1409 0
+	.loc 2 1437 0
 	addi.n	a3, a3, 2
 .LVL904:
-	.loc 2 1410 0
+	.loc 2 1438 0
 	addi	a4, a4, -2
 .LVL905:
 	movi.n	a8, 0x1a
-	.loc 2 1446 0
+	.loc 2 1475 0
 	movi.n	a9, 0x24
 	movi.n	a12, 1
-	.loc 2 1443 0
+	.loc 2 1471 0
 	movi	a13, -0x80
-	.loc 2 1436 0
+	.loc 2 1464 0
 	movi.n	a14, 9
-	.loc 2 1411 0
+	.loc 2 1439 0
 	j	.L1311
 .L1320:
-	.loc 2 1412 0
+	.loc 2 1440 0
 	l8ui	a6, a3, 0
 	l8ui	a7, a3, 1
 	bnez.n	a6, .L1312
-	.loc 2 1412 0 is_stmt 0 discriminator 1
+	.loc 2 1440 0 is_stmt 0 discriminator 1
 	add.n	a10, a2, a7
 	l8ui	a10, a10, 72
 	j	.L1313
 .L1312:
-	.loc 2 1412 0 discriminator 2
+	.loc 2 1440 0 discriminator 2
 	mov.n	a11, a7
 	mov.n	a10, a6
 	s32i.n	a8, sp, 0
@@ -8032,44 +8046,44 @@ big2_isPublicId:
 	bany	a10, a11, .L1316
 	l32r	a11, .LC66
 	bnone	a10, a11, .L1314
-	.loc 2 1436 0 is_stmt 1
+	.loc 2 1464 0 is_stmt 1
 	bnez.n	a6, .L1315
-	.loc 2 1436 0 is_stmt 0 discriminator 1
+	.loc 2 1464 0 is_stmt 0 discriminator 1
 	bne	a7, a14, .L1315
 	j	.L1318
 .L1316:
-	.loc 2 1443 0 is_stmt 1
+	.loc 2 1471 0 is_stmt 1
 	bnez.n	a6, .L1318
-	.loc 2 1443 0 is_stmt 0 discriminator 1
+	.loc 2 1471 0 is_stmt 0 discriminator 1
 	bnone	a7, a13, .L1315
 	j	.L1319
 .L1314:
-	.loc 2 1446 0 is_stmt 1
+	.loc 2 1475 0 is_stmt 1
 	bnez.n	a6, .L1318
 .L1319:
-	.loc 2 1446 0 is_stmt 0 discriminator 1
+	.loc 2 1475 0 is_stmt 0 discriminator 1
 	beq	a7, a9, .L1315
 	beqi	a7, 64, .L1315
 .L1318:
-	.loc 2 1451 0 is_stmt 1
+	.loc 2 1480 0 is_stmt 1
 	s32i.n	a3, a5, 0
-	.loc 2 1452 0
+	.loc 2 1481 0
 	movi.n	a2, 0
 .LVL907:
 	retw.n
 .LVL908:
 .L1315:
-	.loc 2 1411 0
+	.loc 2 1439 0
 	addi.n	a3, a3, 2
 .LVL909:
 .L1311:
-	.loc 2 1411 0 is_stmt 0 discriminator 1
+	.loc 2 1439 0 is_stmt 0 discriminator 1
 	sub	a6, a4, a3
 	bgei	a6, 2, .L1320
-	.loc 2 1457 0 is_stmt 1
+	.loc 2 1486 0 is_stmt 1
 	movi.n	a2, 1
 .LVL910:
-	.loc 2 1458 0
+	.loc 2 1487 0
 	retw.n
 .LFE95:
 	.size	big2_isPublicId, .-big2_isPublicId
@@ -8080,39 +8094,39 @@ big2_isPublicId:
 	.type	big2_getAtts, @function
 big2_getAtts:
 .LFB96:
-	.loc 2 1468 0
+	.loc 2 1496 0
 .LVL911:
 	entry	sp, 64
 .LCFI54:
 .LVL912:
-	.loc 2 1471 0
+	.loc 2 1499 0
 	movi.n	a7, 0
-	.loc 2 1469 0
+	.loc 2 1497 0
 	movi.n	a6, 1
-	.loc 2 1468 0
+	.loc 2 1496 0
 	s32i.n	a2, sp, 0
-	.loc 2 1474 0
+	.loc 2 1502 0
 	addi.n	a3, a3, 2
 .LVL913:
-	.loc 2 1470 0
+	.loc 2 1498 0
 	mov.n	a2, a7
 .LVL914:
 	mov.n	a14, a7
-	.loc 2 1491 0
+	.loc 2 1523 0
 	mov.n	a13, a6
 .LVL915:
 .L1356:
-	.loc 2 1475 0
+	.loc 2 1503 0
 	l8ui	a12, a3, 0
 	l8ui	a15, a3, 1
 	bnez.n	a12, .L1331
-	.loc 2 1475 0 is_stmt 0 discriminator 1
+	.loc 2 1503 0 is_stmt 0 discriminator 1
 	l32i.n	a8, sp, 0
 	add.n	a9, a8, a15
 	l8ui	a10, a9, 72
 	j	.L1332
 .L1331:
-	.loc 2 1475 0 discriminator 2
+	.loc 2 1503 0 discriminator 2
 	mov.n	a11, a15
 	mov.n	a10, a12
 	s32i.n	a12, sp, 4
@@ -8126,7 +8140,7 @@ big2_getAtts:
 	l32i.n	a13, sp, 16
 	l32i.n	a12, sp, 4
 .L1332:
-	.loc 2 1475 0 discriminator 4
+	.loc 2 1503 0 discriminator 4
 	addi	a10, a10, -3
 	movi.n	a8, 0x1a
 	bltu	a8, a10, .L1333
@@ -8167,49 +8181,49 @@ big2_getAtts:
 	.word	.L1344
 	.section	.text.big2_getAtts
 .L1337:
-	.loc 2 1486 0 is_stmt 1
+	.loc 2 1517 0 is_stmt 1
 	bnez.n	a6, .L1345
-	.loc 2 1486 0 is_stmt 0 discriminator 7
+	.loc 2 1517 0 is_stmt 0 discriminator 1
 	movi.n	a6, 1
 .LVL917:
 	bge	a2, a4, .L1345
-	.loc 2 1486 0 discriminator 9
+	.loc 2 1517 0 discriminator 3
 	slli	a9, a2, 4
 	add.n	a9, a5, a9
 	s32i.n	a3, a9, 0
 	s8i	a13, a9, 12
 .L1345:
 .LVL918:
-	.loc 2 1486 0 discriminator 12
+	.loc 2 1517 0 discriminator 6
 	addi.n	a3, a3, 1
 .LVL919:
 	j	.L1333
 .L1338:
-	.loc 2 1486 0
+	.loc 2 1518 0 is_stmt 1
 	bnez.n	a6, .L1346
-	.loc 2 1486 0 discriminator 13
+	.loc 2 1518 0 is_stmt 0 discriminator 1
 	movi.n	a6, 1
 .LVL920:
 	bge	a2, a4, .L1346
-	.loc 2 1486 0 discriminator 15
+	.loc 2 1518 0 discriminator 3
 	slli	a9, a2, 4
 	add.n	a9, a5, a9
 	s32i.n	a3, a9, 0
 	s8i	a13, a9, 12
 .L1346:
 .LVL921:
-	.loc 2 1486 0 discriminator 18
+	.loc 2 1518 0 discriminator 6
 	addi.n	a3, a3, 2
 .LVL922:
 	j	.L1333
 .L1344:
-	.loc 2 1491 0 is_stmt 1
+	.loc 2 1523 0 is_stmt 1
 	bnez.n	a6, .L1333
-	.loc 2 1491 0 is_stmt 0 discriminator 1
+	.loc 2 1523 0 is_stmt 0 discriminator 1
 	movi.n	a6, 1
 .LVL923:
 	bge	a2, a4, .L1333
-	.loc 2 1491 0 discriminator 2
+	.loc 2 1523 0 discriminator 2
 	slli	a9, a2, 4
 	add.n	a9, a5, a9
 	s32i.n	a3, a9, 0
@@ -8217,32 +8231,32 @@ big2_getAtts:
 	j	.L1333
 .LVL924:
 .L1341:
-	.loc 2 1495 0 is_stmt 1
+	.loc 2 1527 0 is_stmt 1
 	beqi	a6, 2, .L1347
-	.loc 2 1499 0
+	.loc 2 1531 0
 	movi.n	a7, 0xc
 .LVL925:
 	j	.L1394
 .LVL926:
 .L1347:
-	.loc 2 1501 0
+	.loc 2 1532 0
 	bnei	a7, 12, .L1333
 .LVL927:
 	j	.L1400
 .LVL928:
 .L1342:
-	.loc 2 1509 0
+	.loc 2 1540 0
 	beqi	a6, 2, .L1349
-	.loc 2 1513 0
+	.loc 2 1544 0
 	movi.n	a7, 0xd
 .LVL929:
 .L1394:
-	.loc 2 1512 0
+	.loc 2 1543 0
 	movi.n	a6, 2
 .LVL930:
-	.loc 2 1510 0
+	.loc 2 1541 0
 	bge	a2, a4, .L1333
-	.loc 2 1511 0
+	.loc 2 1542 0
 	slli	a6, a2, 4
 	add.n	a6, a5, a6
 	addi.n	a8, a3, 2
@@ -8250,35 +8264,35 @@ big2_getAtts:
 	j	.L1389
 .LVL931:
 .L1349:
-	.loc 2 1515 0
+	.loc 2 1545 0
 	movi.n	a10, 0xd
 	bne	a7, a10, .L1333
 .LVL932:
 .L1400:
-	.loc 2 1517 0
+	.loc 2 1547 0
 	bge	a2, a4, .L1350
-	.loc 2 1518 0
+	.loc 2 1548 0
 	slli	a6, a2, 4
 	add.n	a6, a5, a6
 	s32i.n	a3, a6, 8
 .L1350:
-	.loc 2 1519 0
+	.loc 2 1549 0
 	addi.n	a2, a2, 1
 .LVL933:
 	j	.L1366
 .LVL934:
 .L1343:
-	.loc 2 1527 0
+	.loc 2 1557 0
 	beqi	a6, 1, .L1366
-	.loc 2 1529 0
+	.loc 2 1559 0
 	bnei	a6, 2, .L1333
 	bge	a2, a4, .L1333
-	.loc 2 1531 0
+	.loc 2 1559 0 is_stmt 0 discriminator 1
 	slli	a9, a2, 4
 	add.n	a9, a5, a9
 	l8ui	a10, a9, 12
 	beqz.n	a10, .L1333
-	.loc 2 1533 0
+	.loc 2 1561 0 is_stmt 1
 	l32i.n	a6, a9, 4
 .LVL935:
 	movi.n	a8, 0
@@ -8289,21 +8303,21 @@ big2_getAtts:
 	bnez.n	a6, .L1352
 	moveqz	a10, a6, a12
 	bnez.n	a10, .L1352
-	.loc 2 1533 0 is_stmt 0 discriminator 1
+	.loc 2 1561 0 is_stmt 0 discriminator 1
 	bnei	a15, 32, .L1352
-	.loc 2 1534 0 is_stmt 1
+	.loc 2 1562 0 is_stmt 1
 	l8ui	a10, a3, 2
 	l8ui	a11, a3, 3
 	bnez.n	a10, .L1353
-	.loc 2 1534 0 is_stmt 0 discriminator 1
+	.loc 2 1562 0 is_stmt 0 discriminator 1
 	beqi	a11, 32, .L1352
-	.loc 2 1535 0 is_stmt 1 discriminator 1
+	.loc 2 1563 0 is_stmt 1 discriminator 1
 	l32i.n	a6, sp, 0
 	add.n	a11, a6, a11
 	l8ui	a10, a11, 72
 	j	.L1354
 .L1353:
-	.loc 2 1535 0 is_stmt 0 discriminator 2
+	.loc 2 1563 0 is_stmt 0 discriminator 2
 	s32i.n	a9, sp, 4
 	s32i.n	a13, sp, 16
 	s32i.n	a14, sp, 12
@@ -8314,10 +8328,10 @@ big2_getAtts:
 	l32i.n	a9, sp, 4
 .L1354:
 	movi.n	a6, 2
-	.loc 2 1535 0 discriminator 4
+	.loc 2 1563 0 discriminator 4
 	bne	a7, a10, .L1333
 .L1352:
-	.loc 2 1536 0 is_stmt 1
+	.loc 2 1564 0 is_stmt 1
 	s8i	a14, a9, 12
 .LVL937:
 .L1389:
@@ -8325,31 +8339,31 @@ big2_getAtts:
 	j	.L1333
 .LVL938:
 .L1339:
-	.loc 2 1541 0
+	.loc 2 1570 0
 	beqi	a6, 1, .L1366
-	.loc 2 1543 0
+	.loc 2 1572 0
 	bnei	a6, 2, .L1333
 .L1396:
 	bge	a2, a4, .L1333
-	.loc 2 1544 0
+	.loc 2 1573 0
 	slli	a9, a2, 4
 	add.n	a9, a5, a9
 	s8i	a14, a9, 12
 	j	.L1333
 .L1340:
-	.loc 2 1548 0
+	.loc 2 1577 0
 	beqi	a6, 2, .L1333
 	retw.n
 .LVL939:
 .L1366:
-	.loc 2 1542 0
+	.loc 2 1571 0
 	movi.n	a6, 0
 .LVL940:
 .L1333:
-	.loc 2 1474 0
+	.loc 2 1502 0
 	addi.n	a3, a3, 2
 .LVL941:
-	.loc 2 1554 0
+	.loc 2 1583 0
 	j	.L1356
 .LFE96:
 	.size	big2_getAtts, .-big2_getAtts
@@ -8358,11 +8372,11 @@ big2_getAtts:
 	.type	big2_predefinedEntityName, @function
 big2_predefinedEntityName:
 .LFB98:
-	.loc 2 1605 0
+	.loc 2 1647 0
 .LVL942:
 	entry	sp, 32
 .LCFI55:
-	.loc 2 1606 0
+	.loc 2 1649 0
 	sub	a4, a4, a3
 .LVL943:
 	extui	a2, a4, 31, 1
@@ -8371,104 +8385,104 @@ big2_predefinedEntityName:
 	srai	a4, a4, 1
 	beqi	a4, 3, .L1403
 	beqi	a4, 4, .L1404
-	.loc 2 1653 0
+	.loc 2 1696 0
 	movi.n	a2, 0
-	.loc 2 1606 0
+	.loc 2 1649 0
 	bnei	a4, 2, .L1402
-	.loc 2 1608 0
+	.loc 2 1651 0
 	l8ui	a4, a3, 2
-	.loc 2 1653 0
+	.loc 2 1696 0
 	movi.n	a2, 0
-	.loc 2 1608 0
+	.loc 2 1651 0
 	bne	a4, a2, .L1402
-	.loc 2 1608 0 is_stmt 0 discriminator 1
+	.loc 2 1651 0 is_stmt 0 discriminator 1
 	l8ui	a8, a3, 3
 	movi	a4, 0x74
 	bne	a8, a4, .L1402
-	.loc 2 1609 0 is_stmt 1
+	.loc 2 1652 0 is_stmt 1
 	l8ui	a4, a3, 0
 	bne	a4, a2, .L1402
-	.loc 2 1609 0 is_stmt 0 discriminator 1
+	.loc 2 1652 0 is_stmt 0 discriminator 1
 	l8ui	a3, a3, 1
 .LVL945:
 	movi	a8, 0x67
-	.loc 2 1613 0 is_stmt 1 discriminator 1
+	.loc 2 1656 0 is_stmt 1 discriminator 1
 	movi.n	a2, 0x3e
-	.loc 2 1609 0 discriminator 1
+	.loc 2 1652 0 discriminator 1
 	beq	a3, a8, .L1402
-	.loc 2 1653 0 discriminator 1
+	.loc 2 1696 0 discriminator 1
 	addi	a3, a3, -108
 	movi.n	a2, 0x3c
 	movnez	a2, a4, a3
 	retw.n
 .LVL946:
 .L1403:
-	.loc 2 1618 0
+	.loc 2 1661 0
 	l8ui	a4, a3, 0
-	.loc 2 1653 0
+	.loc 2 1696 0
 	movi.n	a2, 0
-	.loc 2 1618 0
+	.loc 2 1661 0
 	bne	a4, a2, .L1402
-	.loc 2 1618 0 is_stmt 0 discriminator 1
+	.loc 2 1661 0 is_stmt 0 discriminator 1
 	l8ui	a8, a3, 1
 	movi	a4, 0x61
 	bne	a8, a4, .L1402
 .LVL947:
-	.loc 2 1620 0 is_stmt 1
+	.loc 2 1663 0 is_stmt 1
 	l8ui	a4, a3, 2
 	bne	a4, a2, .L1402
-	.loc 2 1620 0 is_stmt 0 discriminator 1
+	.loc 2 1663 0 is_stmt 0 discriminator 1
 	l8ui	a8, a3, 3
 	movi	a4, 0x6d
 	bne	a8, a4, .L1402
 .LVL948:
-	.loc 2 1622 0 is_stmt 1
+	.loc 2 1665 0 is_stmt 1
 	l8ui	a4, a3, 4
 	bne	a4, a2, .L1402
-	.loc 2 1622 0 is_stmt 0 discriminator 1
+	.loc 2 1665 0 is_stmt 0 discriminator 1
 	l8ui	a3, a3, 5
 .LVL949:
-	.loc 2 1623 0 is_stmt 1 discriminator 1
+	.loc 2 1666 0 is_stmt 1 discriminator 1
 	movi.n	a4, 0x26
 	addi	a3, a3, -112
 	j	.L1436
 .LVL950:
 .L1404:
-	.loc 2 1628 0
+	.loc 2 1671 0
 	l8ui	a4, a3, 0
-	.loc 2 1653 0
+	.loc 2 1696 0
 	movi.n	a2, 0
-	.loc 2 1628 0
+	.loc 2 1671 0
 	bne	a4, a2, .L1402
-	.loc 2 1628 0 is_stmt 0 discriminator 1
+	.loc 2 1671 0 is_stmt 0 discriminator 1
 	l8ui	a4, a3, 1
 	movi	a8, 0x61
 	beq	a4, a8, .L1408
 	movi	a8, 0x71
 	bne	a4, a8, .L1402
 .LVL951:
-	.loc 2 1631 0 is_stmt 1
+	.loc 2 1674 0 is_stmt 1
 	l8ui	a4, a3, 2
 	bne	a4, a2, .L1402
-	.loc 2 1631 0 is_stmt 0 discriminator 1
+	.loc 2 1674 0 is_stmt 0 discriminator 1
 	l8ui	a8, a3, 3
 	movi	a4, 0x75
 	bne	a8, a4, .L1402
 .LVL952:
-	.loc 2 1633 0 is_stmt 1
+	.loc 2 1676 0 is_stmt 1
 	l8ui	a4, a3, 4
 	bne	a4, a2, .L1402
-	.loc 2 1633 0 is_stmt 0 discriminator 1
+	.loc 2 1676 0 is_stmt 0 discriminator 1
 	l8ui	a8, a3, 5
 	movi	a4, 0x6f
 	bne	a8, a4, .L1402
 .LVL953:
-	.loc 2 1635 0 is_stmt 1
+	.loc 2 1678 0 is_stmt 1
 	l8ui	a4, a3, 6
 	bne	a4, a2, .L1402
-	.loc 2 1635 0 is_stmt 0 discriminator 1
+	.loc 2 1678 0 is_stmt 0 discriminator 1
 	l8ui	a2, a3, 7
-	.loc 2 1636 0 is_stmt 1 discriminator 1
+	.loc 2 1679 0 is_stmt 1 discriminator 1
 	movi.n	a4, 0
 	addi	a3, a2, -116
 .LVL954:
@@ -8477,29 +8491,29 @@ big2_predefinedEntityName:
 	retw.n
 .LVL955:
 .L1408:
-	.loc 2 1642 0
+	.loc 2 1685 0
 	l8ui	a4, a3, 2
 	bnez.n	a4, .L1402
-	.loc 2 1642 0 is_stmt 0 discriminator 1
+	.loc 2 1685 0 is_stmt 0 discriminator 1
 	l8ui	a8, a3, 3
 	movi	a4, 0x70
 	bne	a8, a4, .L1402
 .LVL956:
-	.loc 2 1644 0 is_stmt 1
+	.loc 2 1687 0 is_stmt 1
 	l8ui	a4, a3, 4
 	bnez.n	a4, .L1402
-	.loc 2 1644 0 is_stmt 0 discriminator 1
+	.loc 2 1687 0 is_stmt 0 discriminator 1
 	l8ui	a8, a3, 5
 	movi	a4, 0x6f
 	bne	a8, a4, .L1402
 .LVL957:
-	.loc 2 1646 0 is_stmt 1
+	.loc 2 1689 0 is_stmt 1
 	l8ui	a4, a3, 6
 	bnez.n	a4, .L1402
-	.loc 2 1646 0 is_stmt 0 discriminator 1
+	.loc 2 1689 0 is_stmt 0 discriminator 1
 	l8ui	a3, a3, 7
 .LVL958:
-	.loc 2 1647 0 is_stmt 1 discriminator 1
+	.loc 2 1690 0 is_stmt 1 discriminator 1
 	movi.n	a4, 0x27
 	addi	a3, a3, -115
 .LVL959:
@@ -8507,7 +8521,7 @@ big2_predefinedEntityName:
 	moveqz	a2, a4, a3
 	retw.n
 .L1402:
-	.loc 2 1654 0
+	.loc 2 1697 0
 	retw.n
 .LFE98:
 	.size	big2_predefinedEntityName, .-big2_predefinedEntityName
@@ -8516,33 +8530,33 @@ big2_predefinedEntityName:
 	.type	big2_nameMatchesAscii, @function
 big2_nameMatchesAscii:
 .LFB99:
-	.loc 2 1659 0
+	.loc 2 1701 0
 .LVL960:
 	entry	sp, 32
 .LCFI56:
-	.loc 2 1660 0
+	.loc 2 1703 0
 	j	.L1438
 .LVL961:
 .L1440:
-	.loc 2 1661 0
+	.loc 2 1704 0
 	sub	a2, a4, a3
 	blti	a2, 2, .L1442
-	.loc 2 1669 0
+	.loc 2 1712 0
 	l8ui	a2, a3, 0
 	bnez.n	a2, .L1442
-	.loc 2 1669 0 is_stmt 0 discriminator 1
+	.loc 2 1712 0 is_stmt 0 discriminator 1
 	l8ui	a8, a3, 1
 	bne	a8, a9, .L1439
-	.loc 2 1660 0 is_stmt 1
+	.loc 2 1703 0 is_stmt 1
 	addi.n	a3, a3, 2
 .LVL962:
 	addi.n	a5, a5, 1
 .LVL963:
 .L1438:
-	.loc 2 1660 0 is_stmt 0 discriminator 1
+	.loc 2 1703 0 is_stmt 0 discriminator 1
 	l8ui	a9, a5, 0
 	bnez.n	a9, .L1440
-	.loc 2 1672 0 is_stmt 1
+	.loc 2 1715 0 is_stmt 1
 	sub	a3, a3, a4
 .LVL964:
 	movi.n	a8, 1
@@ -8551,10 +8565,10 @@ big2_nameMatchesAscii:
 	retw.n
 .LVL965:
 .L1442:
-	.loc 2 1667 0
+	.loc 2 1710 0
 	movi.n	a2, 0
 .L1439:
-	.loc 2 1673 0
+	.loc 2 1716 0
 	retw.n
 .LFE99:
 	.size	big2_nameMatchesAscii, .-big2_nameMatchesAscii
@@ -8563,14 +8577,14 @@ big2_nameMatchesAscii:
 	.type	big2_nameLength, @function
 big2_nameLength:
 .LFB100:
-	.loc 2 1677 0
+	.loc 2 1719 0
 .LVL966:
 	entry	sp, 32
 .LCFI57:
 .LVL967:
-	.loc 2 1677 0
+	.loc 2 1719 0
 	mov.n	a4, a3
-	.loc 2 1680 0
+	.loc 2 1722 0
 	movi.n	a5, 0x16
 	movi.n	a6, 0x1b
 	movi.n	a7, 0x1d
@@ -8579,16 +8593,16 @@ big2_nameLength:
 	l8ui	a10, a4, 0
 	l8ui	a11, a4, 1
 	bnez.n	a10, .L1446
-	.loc 2 1680 0 is_stmt 0 discriminator 1
+	.loc 2 1722 0 is_stmt 0 discriminator 1
 	add.n	a11, a2, a11
 	l8ui	a10, a11, 72
 	j	.L1447
 .L1446:
-	.loc 2 1680 0 discriminator 2
+	.loc 2 1722 0 discriminator 2
 	call8	unicode_byte_type
 .LVL969:
 .L1447:
-	.loc 2 1680 0 discriminator 4
+	.loc 2 1722 0 discriminator 4
 	beqi	a10, 7, .L1449
 	bgei	a10, 8, .L1450
 	beqi	a10, 5, .L1453
@@ -8600,22 +8614,23 @@ big2_nameLength:
 	beq	a10, a7, .L1453
 	j	.L1448
 .L1452:
-	.loc 2 1683 0 is_stmt 1
+	.loc 2 1728 0 is_stmt 1
 	addi.n	a4, a4, 3
 .LVL970:
 	j	.L1445
 .L1449:
+	.loc 2 1729 0
 	addi.n	a4, a4, 4
 .LVL971:
 	j	.L1445
 .L1453:
-	.loc 2 1694 0
+	.loc 2 1740 0
 	addi.n	a4, a4, 2
 .LVL972:
-	.loc 2 1695 0
+	.loc 2 1741 0
 	j	.L1445
 .L1448:
-	.loc 2 1700 0
+	.loc 2 1746 0
 	sub	a2, a4, a3
 .LVL973:
 	retw.n
@@ -8628,35 +8643,35 @@ big2_nameLength:
 	.type	big2_skipS, @function
 big2_skipS:
 .LFB101:
-	.loc 2 1704 0
+	.loc 2 1749 0
 .LVL974:
 	entry	sp, 32
 .LCFI58:
 	movi.n	a4, 0x15
 .L1459:
-	.loc 2 1706 0
+	.loc 2 1751 0
 	l8ui	a10, a3, 0
 	l8ui	a11, a3, 1
 	bnez.n	a10, .L1456
-	.loc 2 1706 0 is_stmt 0 discriminator 1
+	.loc 2 1751 0 is_stmt 0 discriminator 1
 	add.n	a11, a2, a11
 	l8ui	a10, a11, 72
 	j	.L1457
 .L1456:
-	.loc 2 1706 0 discriminator 2
+	.loc 2 1751 0 discriminator 2
 	call8	unicode_byte_type
 .LVL975:
 .L1457:
 	bltu	a4, a10, .L1458
 	l32r	a5, .LC68
 	bbc	a5, a10, .L1458
-	.loc 2 1710 0 is_stmt 1
+	.loc 2 1755 0 is_stmt 1
 	addi.n	a3, a3, 2
 .LVL976:
-	.loc 2 1715 0
+	.loc 2 1760 0
 	j	.L1459
 .L1458:
-	.loc 2 1716 0
+	.loc 2 1761 0
 	mov.n	a2, a3
 .LVL977:
 	retw.n
@@ -8669,31 +8684,31 @@ big2_skipS:
 	.type	big2_updatePosition, @function
 big2_updatePosition:
 .LFB102:
-	.loc 2 1723 0
+	.loc 2 1765 0
 .LVL978:
 	entry	sp, 48
 .LCFI59:
-	.loc 2 1742 0
+	.loc 2 1786 0
 	movi.n	a6, -1
-	.loc 2 1740 0
+	.loc 2 1784 0
 	movi.n	a7, 1
-	.loc 2 1724 0
+	.loc 2 1766 0
 	j	.L1464
 .L1478:
-	.loc 2 1725 0
+	.loc 2 1767 0
 	l8ui	a10, a3, 0
 	l8ui	a11, a3, 1
 	bnez.n	a10, .L1465
-	.loc 2 1725 0 is_stmt 0 discriminator 1
+	.loc 2 1767 0 is_stmt 0 discriminator 1
 	add.n	a11, a2, a11
 	l8ui	a10, a11, 72
 	j	.L1466
 .L1465:
-	.loc 2 1725 0 discriminator 2
+	.loc 2 1767 0 discriminator 2
 	call8	unicode_byte_type
 .LVL979:
 .L1466:
-	.loc 2 1725 0 discriminator 4
+	.loc 2 1767 0 discriminator 4
 	addi	a10, a10, -5
 	bgeui	a10, 6, .L1467
 	l32r	a8, .LC69
@@ -8712,46 +8727,47 @@ big2_updatePosition:
 	.word	.L1473
 	.section	.text.big2_updatePosition
 .L1470:
-	.loc 2 1730 0 is_stmt 1
+	.loc 2 1773 0 is_stmt 1
 	addi.n	a3, a3, 3
 .LVL980:
 	j	.L1474
 .L1471:
+	.loc 2 1774 0
 	addi.n	a3, a3, 4
 .LVL981:
 	j	.L1474
 .L1473:
-	.loc 2 1734 0
+	.loc 2 1778 0
 	l32i.n	a9, a5, 0
-	.loc 2 1733 0
+	.loc 2 1777 0
 	s32i.n	a6, a5, 4
-	.loc 2 1734 0
+	.loc 2 1778 0
 	addi.n	a9, a9, 1
 	s32i.n	a9, a5, 0
 	j	.L1467
 .L1472:
-	.loc 2 1738 0
+	.loc 2 1782 0
 	l32i.n	a9, a5, 0
 	addi.n	a9, a9, 1
 	s32i.n	a9, a5, 0
-	.loc 2 1739 0
+	.loc 2 1783 0
 	addi.n	a9, a3, 2
 .LVL982:
-	.loc 2 1740 0
+	.loc 2 1784 0
 	sub	a10, a4, a9
 	blti	a10, 2, .L1475
-	.loc 2 1740 0 is_stmt 0 discriminator 1
+	.loc 2 1784 0 is_stmt 0 discriminator 1
 	l8ui	a10, a3, 2
 	l8ui	a11, a3, 3
 	bnez.n	a10, .L1476
-	.loc 2 1740 0 discriminator 2
+	.loc 2 1784 0 discriminator 2
 	add.n	a11, a2, a11
 	l8ui	a11, a11, 72
 	addi	a11, a11, -10
 	moveqz	a10, a7, a11
 	j	.L1477
 .L1476:
-	.loc 2 1740 0 discriminator 3
+	.loc 2 1784 0 discriminator 3
 	s32i.n	a9, sp, 0
 	call8	unicode_byte_type
 .LVL983:
@@ -8762,31 +8778,31 @@ big2_updatePosition:
 	extui	a10, a8, 0, 8
 .LVL984:
 .L1477:
-	.loc 2 1741 0 is_stmt 1 discriminator 5
+	.loc 2 1785 0 is_stmt 1 discriminator 5
 	addi.n	a3, a3, 4
 	movnez	a9, a3, a10
 .LVL985:
 .L1475:
-	.loc 2 1742 0
+	.loc 2 1786 0
 	s32i.n	a6, a5, 4
-	.loc 2 1743 0
+	.loc 2 1787 0
 	mov.n	a3, a9
 	j	.L1474
 .LVL986:
 .L1467:
-	.loc 2 1745 0
+	.loc 2 1789 0
 	addi.n	a3, a3, 2
 .LVL987:
 .L1474:
-	.loc 2 1748 0
+	.loc 2 1792 0
 	l32i.n	a9, a5, 4
 	addi.n	a9, a9, 1
 	s32i.n	a9, a5, 4
 .L1464:
-	.loc 2 1724 0
+	.loc 2 1766 0
 	sub	a9, a4, a3
 	bgei	a9, 2, .L1478
-	.loc 2 1750 0
+	.loc 2 1794 0
 	retw.n
 .LFE102:
 	.size	big2_updatePosition, .-big2_updatePosition
@@ -8795,59 +8811,59 @@ big2_updatePosition:
 	.type	streqci, @function
 streqci:
 .LFB103:
-	.loc 1 1068 0
+	.loc 1 1007 0
 .LVL988:
 	entry	sp, 32
 .LCFI60:
 .LBB68:
-	.loc 1 1072 0
+	.loc 1 1011 0
 	movi.n	a11, 0x19
 .LVL989:
 .L1485:
-	.loc 1 1070 0
+	.loc 1 1009 0
 	l8ui	a8, a2, 0
 .LVL990:
-	.loc 1 1071 0
+	.loc 1 1010 0
 	l8ui	a9, a3, 0
 .LVL991:
-	.loc 1 1072 0
+	.loc 1 1011 0
 	addi	a10, a8, -97
 	extui	a10, a10, 0, 8
 	bltu	a11, a10, .L1482
-	.loc 1 1073 0
+	.loc 1 1012 0
 	addi	a8, a8, -32
 	extui	a8, a8, 0, 8
 .LVL992:
 .L1482:
-	.loc 1 1074 0
+	.loc 1 1013 0
 	addi	a10, a9, -97
 	extui	a10, a10, 0, 8
 	bltu	a11, a10, .L1483
-	.loc 1 1079 0
+	.loc 1 1018 0
 	addi	a9, a9, -32
 	extui	a9, a9, 0, 8
 .LVL993:
 .L1483:
-	.loc 1 1080 0
+	.loc 1 1019 0
 	bne	a8, a9, .L1486
 	addi.n	a2, a2, 1
 .LVL994:
 	addi.n	a3, a3, 1
-	.loc 1 1082 0
+	.loc 1 1021 0
 	bnez.n	a8, .L1485
 .LBE68:
-	.loc 1 1085 0
+	.loc 1 1024 0
 	movi.n	a2, 1
 .LVL995:
 	retw.n
 .LVL996:
 .L1486:
 .LBB69:
-	.loc 1 1081 0
+	.loc 1 1020 0
 	movi.n	a2, 0
 .LVL997:
 .LBE69:
-	.loc 1 1086 0
+	.loc 1 1025 0
 	retw.n
 .LFE103:
 	.size	streqci, .-streqci
@@ -8858,11 +8874,11 @@ streqci:
 	.type	initUpdatePosition, @function
 initUpdatePosition:
 .LFB104:
-	.loc 1 1091 0
+	.loc 1 1029 0
 .LVL998:
 	entry	sp, 32
 .LCFI61:
-	.loc 1 1092 0
+	.loc 1 1031 0
 	l32r	a10, .LC70
 	mov.n	a13, a5
 	mov.n	a12, a4
@@ -8877,22 +8893,22 @@ initUpdatePosition:
 	.type	toAscii, @function
 toAscii:
 .LFB105:
-	.loc 1 1097 0
+	.loc 1 1035 0
 .LVL1000:
 	entry	sp, 64
 .LCFI62:
-	.loc 1 1097 0
+	.loc 1 1035 0
 	s32i.n	a3, sp, 16
 	mov.n	a10, a2
-	.loc 1 1099 0
+	.loc 1 1037 0
 	addi.n	a3, sp, 4
 .LVL1001:
-	.loc 1 1100 0
+	.loc 1 1038 0
 	l32i.n	a2, a2, 56
 .LVL1002:
-	.loc 1 1099 0
+	.loc 1 1037 0
 	s32i.n	a3, sp, 0
-	.loc 1 1100 0
+	.loc 1 1038 0
 	addi.n	a14, sp, 5
 	mov.n	a13, sp
 	mov.n	a12, a4
@@ -8900,11 +8916,11 @@ toAscii:
 .LVL1003:
 	callx8	a2
 .LVL1004:
-	.loc 1 1104 0
+	.loc 1 1042 0
 	l32i.n	a8, sp, 0
 	l8ui	a2, sp, 4
 	sub	a8, a8, a3
-	.loc 1 1105 0
+	.loc 1 1043 0
 	movi.n	a3, -1
 	moveqz	a2, a3, a8
 	retw.n
@@ -8917,17 +8933,17 @@ toAscii:
 	.type	isSpace, @function
 isSpace:
 .LFB106:
-	.loc 1 1109 0
+	.loc 1 1046 0
 .LVL1005:
 	entry	sp, 32
 .LCFI63:
 	addi	a8, a2, -9
 	movi.n	a9, 0x17
-	.loc 1 1117 0
+	.loc 1 1054 0
 	movi.n	a2, 0
 .LVL1006:
 	bltu	a9, a8, .L1493
-	.loc 1 1115 0
+	.loc 1 1052 0
 	movi.n	a10, 1
 	l32r	a9, .LC71
 	ssl	a8
@@ -8936,7 +8952,7 @@ isSpace:
 	and	a8, a8, a9
 	movnez	a2, a10, a8
 .L1493:
-	.loc 1 1118 0
+	.loc 1 1055 0
 	retw.n
 .LFE106:
 	.size	isSpace, .-isSpace
@@ -8948,18 +8964,18 @@ isSpace:
 	.type	checkCharRefNumber, @function
 checkCharRefNumber:
 .LFB109:
-	.loc 1 1323 0
+	.loc 1 1233 0
 .LVL1008:
 	entry	sp, 32
 .LCFI64:
-	.loc 1 1324 0
+	.loc 1 1234 0
 	srai	a9, a2, 8
 	movi	a8, 0xdf
 	blt	a8, a9, .L1497
 	movi	a10, 0xd8
-	.loc 1 1327 0
+	.loc 1 1243 0
 	movi.n	a8, -1
-	.loc 1 1324 0
+	.loc 1 1234 0
 	bge	a9, a10, .L1498
 	beqz.n	a9, .L1499
 	j	.L1504
@@ -8968,25 +8984,25 @@ checkCharRefNumber:
 	beq	a9, a8, .L1500
 	j	.L1504
 .L1499:
-	.loc 1 1329 0
+	.loc 1 1245 0
 	l32r	a9, .LC72
 	add.n	a9, a9, a2
 	l8ui	a9, a9, 72
-	.loc 1 1330 0
+	.loc 1 1246 0
 	movnez	a8, a2, a9
 	j	.L1498
 .L1500:
-	.loc 1 1333 0
+	.loc 1 1249 0
 	l32r	a9, .LC73
-	.loc 1 1330 0
+	.loc 1 1246 0
 	movi.n	a8, -1
-	.loc 1 1333 0
+	.loc 1 1249 0
 	add.n	a9, a2, a9
 	bltui	a9, 2, .L1498
 .L1504:
 	mov.n	a8, a2
 .L1498:
-	.loc 1 1338 0
+	.loc 1 1254 0
 	mov.n	a2, a8
 .LVL1009:
 	retw.n
@@ -8999,52 +9015,52 @@ checkCharRefNumber:
 	.type	normal_charRefNumber, @function
 normal_charRefNumber:
 .LFB30:
-	.loc 2 1560 0
+	.loc 2 1588 0
 .LVL1010:
 	entry	sp, 32
 .LCFI65:
 .LVL1011:
-	.loc 2 1564 0
+	.loc 2 1593 0
 	l8ui	a8, a3, 2
 	movi	a2, 0x78
 .LVL1012:
 	beq	a8, a2, .L1506
-	.loc 2 1563 0
+	.loc 2 1592 0
 	addi.n	a3, a3, 2
 .LVL1013:
 	movi.n	a10, 0
-	.loc 2 1591 0
+	.loc 2 1634 0
 	movi.n	a9, 0x3b
 .LBB70:
-	.loc 2 1595 0
+	.loc 2 1638 0
 	l32r	a11, .LC74
 	j	.L1507
 .LVL1014:
 .L1506:
 .LBE70:
-	.loc 2 1565 0
+	.loc 2 1594 0
 	addi.n	a3, a3, 3
 .LVL1015:
-	.loc 2 1561 0
+	.loc 2 1589 0
 	movi.n	a10, 0
-	.loc 2 1565 0
+	.loc 2 1594 0
 	movi.n	a9, 0x3b
 .LBB71:
-	.loc 2 1569 0
+	.loc 2 1597 0
 	movi.n	a11, 0x46
-	.loc 2 1586 0
+	.loc 2 1630 0
 	l32r	a12, .LC74
-	.loc 2 1569 0
+	.loc 2 1597 0
 	movi.n	a13, 5
 	movi.n	a14, 0x41
 	movi.n	a15, 9
 .LBE71:
-	.loc 2 1565 0
+	.loc 2 1594 0
 	j	.L1508
 .LVL1016:
 .L1516:
 .LBB72:
-	.loc 2 1569 0
+	.loc 2 1597 0
 	bltu	a11, a8, .L1510
 	bgeu	a8, a14, .L1511
 	addi	a8, a8, -48
@@ -9058,83 +9074,82 @@ normal_charRefNumber:
 	j	.L1509
 .LVL1019:
 .L1521:
-	.loc 2 1572 0
+	.loc 2 1608 0
 	slli	a10, a10, 4
 .LVL1020:
-	.loc 2 1573 0
+	.loc 2 1609 0
 	or	a10, a8, a10
 .LVL1021:
-	.loc 2 1574 0
+	.loc 2 1610 0
 	j	.L1514
 .LVL1022:
 .L1511:
-	.loc 2 1577 0
+	.loc 2 1617 0
 	slli	a10, a10, 4
 .LVL1023:
-	.loc 2 1578 0
+	.loc 2 1618 0
 	addi	a8, a8, -55
 .LVL1024:
 	j	.L1523
 .LVL1025:
 .L1522:
-	.loc 2 1582 0
+	.loc 2 1626 0
 	slli	a10, a10, 4
 .LVL1026:
-	.loc 2 1583 0
+	.loc 2 1627 0
 	addi	a8, a8, -87
 .LVL1027:
 .L1523:
 	add.n	a10, a8, a10
 .LVL1028:
 .L1514:
-	.loc 2 1586 0
+	.loc 2 1630 0
 	blt	a12, a10, .L1520
 .L1509:
 .LBE72:
-	.loc 2 1567 0
+	.loc 2 1595 0
 	addi.n	a3, a3, 1
 .LVL1029:
 .L1508:
-	.loc 2 1566 0 discriminator 1
+	.loc 2 1594 0 discriminator 1
 	l8ui	a8, a3, 0
-	.loc 2 1565 0 discriminator 1
 	bne	a8, a9, .L1516
 	j	.L1517
 .L1518:
 .LVL1030:
 .LBB73:
-	.loc 2 1593 0
+	.loc 2 1636 0
 	addx4	a10, a10, a10
 .LVL1031:
-	.loc 2 1594 0
+	.loc 2 1637 0
 	addi	a8, a8, -48
 .LVL1032:
 	addx2	a10, a10, a8
 .LVL1033:
-	.loc 2 1595 0
+	.loc 2 1638 0
 	blt	a11, a10, .L1520
 .LBE73:
-	.loc 2 1591 0
+	.loc 2 1634 0
 	addi.n	a3, a3, 1
 .LVL1034:
 .L1507:
-	.loc 2 1591 0 is_stmt 0 discriminator 1
+	.loc 2 1634 0 is_stmt 0 discriminator 1
 	l8ui	a8, a3, 0
 	bne	a8, a9, .L1518
 .L1517:
-	.loc 2 1599 0 is_stmt 1
+	.loc 2 1642 0 is_stmt 1
 	call8	checkCharRefNumber
 .LVL1035:
 	j	.L1515
 .LVL1036:
 .L1520:
 .LBB74:
-	.loc 2 1587 0
+	.loc 2 1631 0
 	movi.n	a10, -1
 .LVL1037:
 .L1515:
 .LBE74:
-	.loc 2 1600 0
+	.loc 2 1643 0
 	mov.n	a2, a10
 	retw.n
 .LFE30:
@@ -9146,19 +9161,19 @@ normal_charRefNumber:
 	.type	little2_charRefNumber, @function
 little2_charRefNumber:
 .LFB69:
-	.loc 2 1560 0
+	.loc 2 1588 0
 .LVL1038:
 	entry	sp, 32
 .LCFI66:
 .LVL1039:
-	.loc 2 1564 0
+	.loc 2 1593 0
 	l8ui	a10, a3, 5
-	.loc 2 1563 0
+	.loc 2 1592 0
 	addi.n	a8, a3, 4
 .LVL1040:
-	.loc 2 1564 0
+	.loc 2 1593 0
 	bnez.n	a10, .L1539
-	.loc 2 1564 0 is_stmt 0 discriminator 1
+	.loc 2 1593 0 is_stmt 0 discriminator 1
 	l8ui	a9, a3, 4
 	movi	a2, 0x78
 .LVL1041:
@@ -9169,34 +9184,33 @@ little2_charRefNumber:
 	movi.n	a10, 0
 .LVL1043:
 .L1525:
-	.loc 2 1591 0 is_stmt 1 discriminator 1
+	.loc 2 1634 0 is_stmt 1 discriminator 1
 	movi.n	a9, 0x3b
 .LBB75:
-	.loc 2 1595 0 discriminator 1
+	.loc 2 1638 0 discriminator 1
 	l32r	a11, .LC75
 	j	.L1527
 .L1526:
 .LBE75:
-	.loc 2 1565 0
+	.loc 2 1594 0
 	addi.n	a3, a3, 6
 .LVL1044:
-	.loc 2 1566 0
 	movi.n	a9, 0x3b
 .LBB76:
-	.loc 2 1569 0
+	.loc 2 1597 0
 	movi.n	a11, 0x46
 	movi.n	a12, 5
 	movi.n	a13, 0x41
 	movi.n	a14, 9
-	.loc 2 1586 0
+	.loc 2 1630 0
 	l32r	a15, .LC75
 .LBE76:
-	.loc 2 1565 0
+	.loc 2 1594 0
 	j	.L1528
 .LVL1045:
 .L1535:
 .LBB77:
-	.loc 2 1569 0 discriminator 1
+	.loc 2 1597 0 discriminator 1
 	bltu	a11, a8, .L1530
 	bgeu	a8, a13, .L1531
 	addi	a8, a8, -48
@@ -9210,91 +9224,91 @@ little2_charRefNumber:
 	j	.L1529
 .LVL1048:
 .L1543:
-	.loc 2 1572 0
+	.loc 2 1608 0
 	slli	a10, a10, 4
 .LVL1049:
-	.loc 2 1573 0
+	.loc 2 1609 0
 	or	a10, a8, a10
 .LVL1050:
-	.loc 2 1574 0
+	.loc 2 1610 0
 	j	.L1529
 .LVL1051:
 .L1531:
-	.loc 2 1577 0
+	.loc 2 1617 0
 	slli	a10, a10, 4
 .LVL1052:
-	.loc 2 1578 0
+	.loc 2 1618 0
 	addi	a8, a8, -55
 .LVL1053:
 	j	.L1545
 .LVL1054:
 .L1544:
-	.loc 2 1582 0
+	.loc 2 1626 0
 	slli	a10, a10, 4
 .LVL1055:
-	.loc 2 1583 0
+	.loc 2 1627 0
 	addi	a8, a8, -87
 .LVL1056:
 .L1545:
 	add.n	a10, a8, a10
 .LVL1057:
 .L1529:
-	.loc 2 1586 0
+	.loc 2 1630 0
 	blt	a15, a10, .L1541
 .LBE77:
-	.loc 2 1567 0
+	.loc 2 1595 0
 	addi.n	a3, a3, 2
 .LVL1058:
 .L1528:
-	.loc 2 1565 0 discriminator 1
+	.loc 2 1594 0 discriminator 1
 	l8ui	a8, a3, 1
 	bnez.n	a8, .L1529
-	.loc 2 1566 0
+	.loc 2 1594 0 is_stmt 0 discriminator 2
 	l8ui	a8, a3, 0
 	bne	a8, a9, .L1535
 	j	.L1536
 .LVL1059:
 .L1542:
 .LBB78:
-	.loc 2 1592 0
+	.loc 2 1635 0 is_stmt 1
 	movi.n	a3, -1
 .L1537:
 .LVL1060:
-	.loc 2 1593 0 discriminator 4
+	.loc 2 1636 0 discriminator 4
 	addx4	a10, a10, a10
 .LVL1061:
-	.loc 2 1594 0 discriminator 4
+	.loc 2 1637 0 discriminator 4
 	addi	a3, a3, -48
 	addx2	a10, a10, a3
 .LVL1062:
-	.loc 2 1595 0 discriminator 4
+	.loc 2 1638 0 discriminator 4
 	blt	a11, a10, .L1541
 .LBE78:
-	.loc 2 1591 0
+	.loc 2 1634 0
 	addi.n	a8, a8, 2
 .LVL1063:
 .L1527:
-	.loc 2 1591 0 is_stmt 0 discriminator 1
+	.loc 2 1634 0 is_stmt 0 discriminator 1
 	l8ui	a3, a8, 1
 	bnez.n	a3, .L1542
-	.loc 2 1591 0 discriminator 2
+	.loc 2 1634 0 discriminator 2
 	l8ui	a3, a8, 0
 	bne	a3, a9, .L1537
 .LVL1064:
 .L1536:
-	.loc 2 1599 0 is_stmt 1
+	.loc 2 1642 0 is_stmt 1
 	call8	checkCharRefNumber
 .LVL1065:
 	j	.L1534
 .LVL1066:
 .L1541:
 .LBB79:
-	.loc 2 1587 0
+	.loc 2 1631 0
 	movi.n	a10, -1
 .LVL1067:
 .L1534:
 .LBE79:
-	.loc 2 1600 0
+	.loc 2 1643 0
 	mov.n	a2, a10
 	retw.n
 .LFE69:
@@ -9306,19 +9320,19 @@ little2_charRefNumber:
 	.type	big2_charRefNumber, @function
 big2_charRefNumber:
 .LFB97:
-	.loc 2 1560 0
+	.loc 2 1588 0
 .LVL1068:
 	entry	sp, 32
 .LCFI67:
 .LVL1069:
-	.loc 2 1564 0
+	.loc 2 1593 0
 	l8ui	a10, a3, 4
-	.loc 2 1563 0
+	.loc 2 1592 0
 	addi.n	a8, a3, 4
 .LVL1070:
-	.loc 2 1564 0
+	.loc 2 1593 0
 	bnez.n	a10, .L1561
-	.loc 2 1564 0 is_stmt 0 discriminator 1
+	.loc 2 1593 0 is_stmt 0 discriminator 1
 	l8ui	a9, a3, 5
 	movi	a2, 0x78
 .LVL1071:
@@ -9329,34 +9343,33 @@ big2_charRefNumber:
 	movi.n	a10, 0
 .LVL1073:
 .L1547:
-	.loc 2 1591 0 is_stmt 1 discriminator 1
+	.loc 2 1634 0 is_stmt 1 discriminator 1
 	movi.n	a9, 0x3b
 .LBB80:
-	.loc 2 1595 0 discriminator 1
+	.loc 2 1638 0 discriminator 1
 	l32r	a11, .LC76
 	j	.L1549
 .L1548:
 .LBE80:
-	.loc 2 1565 0
+	.loc 2 1594 0
 	addi.n	a3, a3, 6
 .LVL1074:
-	.loc 2 1566 0
 	movi.n	a9, 0x3b
 .LBB81:
-	.loc 2 1569 0
+	.loc 2 1597 0
 	movi.n	a11, 0x46
 	movi.n	a12, 5
 	movi.n	a13, 0x41
 	movi.n	a14, 9
-	.loc 2 1586 0
+	.loc 2 1630 0
 	l32r	a15, .LC76
 .LBE81:
-	.loc 2 1565 0
+	.loc 2 1594 0
 	j	.L1550
 .LVL1075:
 .L1557:
 .LBB82:
-	.loc 2 1569 0 discriminator 1
+	.loc 2 1597 0 discriminator 1
 	bltu	a11, a8, .L1552
 	bgeu	a8, a13, .L1553
 	addi	a8, a8, -48
@@ -9370,91 +9383,91 @@ big2_charRefNumber:
 	j	.L1551
 .LVL1078:
 .L1565:
-	.loc 2 1572 0
+	.loc 2 1608 0
 	slli	a10, a10, 4
 .LVL1079:
-	.loc 2 1573 0
+	.loc 2 1609 0
 	or	a10, a8, a10
 .LVL1080:
-	.loc 2 1574 0
+	.loc 2 1610 0
 	j	.L1551
 .LVL1081:
 .L1553:
-	.loc 2 1577 0
+	.loc 2 1617 0
 	slli	a10, a10, 4
 .LVL1082:
-	.loc 2 1578 0
+	.loc 2 1618 0
 	addi	a8, a8, -55
 .LVL1083:
 	j	.L1567
 .LVL1084:
 .L1566:
-	.loc 2 1582 0
+	.loc 2 1626 0
 	slli	a10, a10, 4
 .LVL1085:
-	.loc 2 1583 0
+	.loc 2 1627 0
 	addi	a8, a8, -87
 .LVL1086:
 .L1567:
 	add.n	a10, a8, a10
 .LVL1087:
 .L1551:
-	.loc 2 1586 0
+	.loc 2 1630 0
 	blt	a15, a10, .L1563
 .LBE82:
-	.loc 2 1567 0
+	.loc 2 1595 0
 	addi.n	a3, a3, 2
 .LVL1088:
 .L1550:
-	.loc 2 1565 0 discriminator 1
+	.loc 2 1594 0 discriminator 1
 	l8ui	a8, a3, 0
 	bnez.n	a8, .L1551
-	.loc 2 1566 0
+	.loc 2 1594 0 is_stmt 0 discriminator 2
 	l8ui	a8, a3, 1
 	bne	a8, a9, .L1557
 	j	.L1558
 .LVL1089:
 .L1564:
 .LBB83:
-	.loc 2 1592 0
+	.loc 2 1635 0 is_stmt 1
 	movi.n	a3, -1
 .L1559:
 .LVL1090:
-	.loc 2 1593 0 discriminator 4
+	.loc 2 1636 0 discriminator 4
 	addx4	a10, a10, a10
 .LVL1091:
-	.loc 2 1594 0 discriminator 4
+	.loc 2 1637 0 discriminator 4
 	addi	a3, a3, -48
 	addx2	a10, a10, a3
 .LVL1092:
-	.loc 2 1595 0 discriminator 4
+	.loc 2 1638 0 discriminator 4
 	blt	a11, a10, .L1563
 .LBE83:
-	.loc 2 1591 0
+	.loc 2 1634 0
 	addi.n	a8, a8, 2
 .LVL1093:
 .L1549:
-	.loc 2 1591 0 is_stmt 0 discriminator 1
+	.loc 2 1634 0 is_stmt 0 discriminator 1
 	l8ui	a3, a8, 0
 	bnez.n	a3, .L1564
-	.loc 2 1591 0 discriminator 2
+	.loc 2 1634 0 discriminator 2
 	l8ui	a3, a8, 1
 	bne	a3, a9, .L1559
 .LVL1094:
 .L1558:
-	.loc 2 1599 0 is_stmt 1
+	.loc 2 1642 0 is_stmt 1
 	call8	checkCharRefNumber
 .LVL1095:
 	j	.L1556
 .LVL1096:
 .L1563:
 .LBB84:
-	.loc 2 1587 0
+	.loc 2 1631 0
 	movi.n	a10, -1
 .LVL1097:
 .L1556:
 .LBE84:
-	.loc 2 1600 0
+	.loc 2 1643 0
 	mov.n	a2, a10
 	retw.n
 .LFE97:
@@ -9468,25 +9481,25 @@ big2_charRefNumber:
 	.type	unknown_isName, @function
 unknown_isName:
 .LFB113:
-	.loc 1 1413 0
+	.loc 1 1325 0
 .LVL1098:
 	entry	sp, 32
 .LCFI68:
 .LVL1099:
-	.loc 1 1415 0
+	.loc 1 1327 0
 	l32i	a8, a2, 364
 	l32i	a10, a2, 368
 	mov.n	a11, a3
 	callx8	a8
 .LVL1100:
-	.loc 1 1416 0
+	.loc 1 1328 0
 	l32r	a8, .LC77
-	.loc 1 1417 0
+	.loc 1 1329 0
 	movi.n	a2, 0
 .LVL1101:
-	.loc 1 1416 0
+	.loc 1 1328 0
 	bany	a10, a8, .L1569
-	.loc 1 1418 0
+	.loc 1 1330 0
 	l32r	a8, .LC79
 	srai	a2, a10, 8
 	add.n	a2, a8, a2
@@ -9501,7 +9514,7 @@ unknown_isName:
 	sll	a2, a2
 	and	a2, a2, a8
 .L1569:
-	.loc 1 1419 0
+	.loc 1 1331 0
 	retw.n
 .LFE113:
 	.size	unknown_isName, .-unknown_isName
@@ -9514,25 +9527,25 @@ unknown_isName:
 	.type	unknown_isNmstrt, @function
 unknown_isNmstrt:
 .LFB114:
-	.loc 1 1423 0
+	.loc 1 1334 0
 .LVL1102:
 	entry	sp, 32
 .LCFI69:
 .LVL1103:
-	.loc 1 1425 0
+	.loc 1 1336 0
 	l32i	a8, a2, 364
 	l32i	a10, a2, 368
 	mov.n	a11, a3
 	callx8	a8
 .LVL1104:
-	.loc 1 1426 0
+	.loc 1 1337 0
 	l32r	a8, .LC80
-	.loc 1 1427 0
+	.loc 1 1338 0
 	movi.n	a2, 0
 .LVL1105:
-	.loc 1 1426 0
+	.loc 1 1337 0
 	bany	a10, a8, .L1572
-	.loc 1 1428 0
+	.loc 1 1339 0
 	l32r	a8, .LC82
 	srai	a2, a10, 8
 	add.n	a2, a8, a2
@@ -9547,7 +9560,7 @@ unknown_isNmstrt:
 	sll	a2, a2
 	and	a2, a2, a8
 .L1572:
-	.loc 1 1429 0
+	.loc 1 1340 0
 	retw.n
 .LFE114:
 	.size	unknown_isNmstrt, .-unknown_isNmstrt
@@ -9558,28 +9571,28 @@ unknown_isNmstrt:
 	.type	unknown_isInvalid, @function
 unknown_isInvalid:
 .LFB115:
-	.loc 1 1433 0
+	.loc 1 1343 0
 .LVL1106:
 	entry	sp, 32
 .LCFI70:
 .LVL1107:
-	.loc 1 1435 0
+	.loc 1 1345 0
 	l32i	a8, a2, 364
 	l32i	a10, a2, 368
 	mov.n	a11, a3
 	callx8	a8
 .LVL1108:
-	.loc 1 1436 0
+	.loc 1 1346 0
 	l32r	a8, .LC83
 	movi.n	a2, 1
 .LVL1109:
 	bany	a10, a8, .L1575
-	.loc 1 1436 0 is_stmt 0 discriminator 2
+	.loc 1 1346 0 is_stmt 0 discriminator 2
 	call8	checkCharRefNumber
 .LVL1110:
 	extui	a2, a10, 31, 1
 .L1575:
-	.loc 1 1437 0 is_stmt 1 discriminator 6
+	.loc 1 1347 0 is_stmt 1 discriminator 6
 	retw.n
 .LFE115:
 	.size	unknown_isInvalid, .-unknown_isInvalid
@@ -9588,39 +9601,39 @@ unknown_isInvalid:
 	.type	unknown_toUtf16, @function
 unknown_toUtf16:
 .LFB117:
-	.loc 1 1476 0
+	.loc 1 1381 0
 .LVL1111:
 	entry	sp, 32
 .LCFI71:
 .LVL1112:
 .LBB85:
-	.loc 1 1479 0
+	.loc 1 1384 0
 	movi	a7, 0xb8
 .LBE85:
-	.loc 1 1478 0
+	.loc 1 1383 0
 	j	.L1578
 .L1585:
 .LBB86:
-	.loc 1 1479 0
+	.loc 1 1384 0
 	l8ui	a8, a11, 0
 	add.n	a8, a8, a7
 	addx2	a8, a8, a2
 	l16ui	a10, a8, 4
 .LVL1113:
-	.loc 1 1480 0
+	.loc 1 1385 0
 	bnez.n	a10, .L1579
-	.loc 1 1482 0
+	.loc 1 1386 0
 	l32i	a8, a2, 364
 .LVL1114:
 	l32i	a10, a2, 368
 	callx8	a8
 .LVL1115:
-	.loc 1 1483 0
+	.loc 1 1387 0
 	l32i.n	a11, a3, 0
-	.loc 1 1481 0
+	.loc 1 1386 0
 	extui	a10, a10, 0, 16
 .LVL1116:
-	.loc 1 1483 0
+	.loc 1 1387 0
 	l8ui	a9, a11, 0
 	add.n	a9, a2, a9
 	l8ui	a8, a9, 72
@@ -9630,12 +9643,12 @@ unknown_toUtf16:
 	j	.L1580
 .LVL1117:
 .L1579:
-	.loc 1 1487 0
+	.loc 1 1390 0
 	addi.n	a11, a11, 1
 	s32i.n	a11, a3, 0
 .LVL1118:
 .L1580:
-	.loc 1 1488 0
+	.loc 1 1391 0
 	l32i.n	a8, a5, 0
 	addi.n	a9, a8, 2
 	s32i.n	a9, a5, 0
@@ -9643,68 +9656,68 @@ unknown_toUtf16:
 .LVL1119:
 .L1578:
 .LBE86:
-	.loc 1 1478 0
+	.loc 1 1383 0
 	l32i.n	a11, a3, 0
 	l32i.n	a8, a5, 0
 	bltu	a11, a4, .L1581
 .L1586:
-	.loc 1 1491 0
+	.loc 1 1394 0
 	bne	a8, a6, .L1588
-	.loc 1 1492 0
+	.loc 1 1395 0
 	movi.n	a2, 2
 .LVL1120:
-	.loc 1 1491 0
+	.loc 1 1394 0
 	bltu	a11, a4, .L1582
 .L1588:
-	.loc 1 1494 0
+	.loc 1 1397 0
 	movi.n	a2, 0
 	retw.n
 .LVL1121:
 .L1581:
-	.loc 1 1478 0 discriminator 1
+	.loc 1 1383 0 discriminator 1
 	bltu	a8, a6, .L1585
 	j	.L1586
 .LVL1122:
 .L1582:
-	.loc 1 1495 0
+	.loc 1 1398 0
 	retw.n
 .LFE117:
 	.size	unknown_toUtf16, .-unknown_toUtf16
 	.section	.text.getEncodingIndex,"ax",@progbits
 	.literal_position
-	.literal .LC86, encodingNames$5076
+	.literal .LC86, encodingNames$5073
 	.align	4
 	.type	getEncodingIndex, @function
 getEncodingIndex:
 .LFB119:
-	.loc 1 1618 0
+	.loc 1 1504 0
 .LVL1123:
 	entry	sp, 32
 .LCFI72:
-	.loc 1 1629 0
+	.loc 1 1510 0
 	movi.n	a3, 6
-	.loc 1 1628 0
+	.loc 1 1509 0
 	beqz.n	a2, .L1594
 	l32r	a4, .LC86
 	movi.n	a3, 0
 .L1595:
 .LVL1124:
-	.loc 1 1631 0
+	.loc 1 1512 0
 	l32i.n	a11, a4, 0
 	mov.n	a10, a2
 	call8	streqci
 .LVL1125:
 	bnez.n	a10, .L1594
-	.loc 1 1630 0 discriminator 2
+	.loc 1 1511 0 discriminator 2
 	addi.n	a3, a3, 1
 .LVL1126:
 	addi.n	a4, a4, 4
 	bnei	a3, 6, .L1595
-	.loc 1 1633 0
+	.loc 1 1514 0
 	movi.n	a3, -1
 .LVL1127:
 .L1594:
-	.loc 1 1634 0
+	.loc 1 1515 0
 	mov.n	a2, a3
 .LVL1128:
 	retw.n
@@ -9720,32 +9733,32 @@ getEncodingIndex:
 	.type	initScan, @function
 initScan:
 .LFB120:
-	.loc 1 1658 0
+	.loc 1 1533 0
 .LVL1129:
 	entry	sp, 32
 .LCFI73:
-	.loc 1 1658 0
+	.loc 1 1533 0
 	mov.n	a13, a7
 	mov.n	a11, a5
 	mov.n	a12, a6
-	.loc 1 1662 0
+	.loc 1 1537 0
 	movi.n	a10, -4
-	.loc 1 1661 0
+	.loc 1 1536 0
 	bgeu	a5, a6, .L1601
-	.loc 1 1664 0
+	.loc 1 1539 0
 	addi.n	a5, a5, 1
 .LVL1130:
-	.loc 1 1663 0
+	.loc 1 1538 0
 	l32i	a8, a3, 72
 .LVL1131:
-	.loc 1 1664 0
+	.loc 1 1539 0
 	bne	a6, a5, .L1602
-	.loc 1 1673 0
+	.loc 1 1548 0
 	l8ui	a5, a3, 69
 	movi.n	a10, 2
 	addi	a9, a5, -3
 	bgeu	a10, a9, .L1623
-	.loc 1 1679 0
+	.loc 1 1554 0
 	l8ui	a9, a11, 0
 	movi	a10, 0xef
 	beq	a9, a10, .L1605
@@ -9758,12 +9771,12 @@ initScan:
 	movi	a10, 0xfe
 	bltu	a9, a10, .L1604
 .L1605:
-	.loc 1 1684 0
+	.loc 1 1558 0 discriminator 1
 	bnez.n	a5, .L1623
 	beqi	a4, 1, .L1604
 	j	.L1623
 .L1602:
-	.loc 1 1693 0
+	.loc 1 1566 0
 	l8ui	a5, a11, 0
 	l8ui	a15, a11, 1
 	slli	a9, a5, 8
@@ -9781,56 +9794,56 @@ initScan:
 	beq	a9, a10, .L1613
 	j	.L1608
 .L1612:
-	.loc 1 1696 0
+	.loc 1 1568 0
 	l8ui	a5, a3, 69
 	bnez.n	a5, .L1626
 	beqi	a4, 1, .L1604
 .L1626:
-	.loc 1 1698 0
+	.loc 1 1570 0
 	addi.n	a11, a11, 2
 .LVL1132:
 	s32i.n	a11, a13, 0
-	.loc 1 1699 0
+	.loc 1 1571 0
 	l32i.n	a2, a2, 16
 .LVL1133:
 	j	.L1652
 .LVL1134:
 .L1611:
-	.loc 1 1705 0
+	.loc 1 1577 0
 	l8ui	a9, a3, 69
 	addi	a9, a9, -3
 	extui	a9, a9, 0, 8
 	bgeui	a9, 2, .L1627
 	beqi	a4, 1, .L1604
 .L1627:
-	.loc 1 1707 0
+	.loc 1 1579 0
 	l32i.n	a10, a2, 20
 	j	.L1653
 .L1613:
-	.loc 1 1711 0
+	.loc 1 1582 0
 	l8ui	a5, a3, 69
 	bnez.n	a5, .L1628
 	beqi	a4, 1, .L1604
 .L1628:
-	.loc 1 1713 0
+	.loc 1 1584 0
 	addi.n	a11, a11, 2
 .LVL1135:
 	s32i.n	a11, a13, 0
-	.loc 1 1714 0
+	.loc 1 1585 0
 	l32i.n	a2, a2, 20
 .LVL1136:
 	j	.L1652
 .LVL1137:
 .L1609:
-	.loc 1 1724 0
+	.loc 1 1595 0
 	bnei	a4, 1, .L1618
 .LBB87:
-	.loc 1 1725 0
+	.loc 1 1596 0
 	l8ui	a9, a3, 69
 .LVL1138:
-	.loc 1 1726 0
+	.loc 1 1597 0
 	beqz.n	a9, .L1604
-	.loc 1 1727 0
+	.loc 1 1598 0 discriminator 1
 	addi	a9, a9, -3
 .LVL1139:
 	extui	a9, a9, 0, 8
@@ -9839,44 +9852,44 @@ initScan:
 .LVL1141:
 .L1618:
 .LBE87:
-	.loc 1 1730 0
+	.loc 1 1601 0
 	addi.n	a9, a11, 2
-	.loc 1 1689 0
+	.loc 1 1563 0
 	movi.n	a10, -1
-	.loc 1 1730 0
+	.loc 1 1601 0
 	beq	a12, a9, .L1601
-	.loc 1 1732 0
+	.loc 1 1603 0
 	l8ui	a9, a11, 2
 	movi	a5, 0xbf
 	bne	a9, a5, .L1604
-	.loc 1 1733 0
+	.loc 1 1604 0
 	addi.n	a11, a11, 3
 .LVL1142:
 	s32i.n	a11, a13, 0
-	.loc 1 1734 0
+	.loc 1 1605 0
 	l32i.n	a2, a2, 8
 .LVL1143:
 .L1652:
 	s32i.n	a2, a8, 0
-	.loc 1 1735 0
+	.loc 1 1606 0
 	movi.n	a10, 0xe
 	j	.L1601
 .LVL1144:
 .L1608:
 	slli	a9, a4, 2
-	.loc 1 1739 0
+	.loc 1 1610 0
 	bnez.n	a5, .L1619
-	.loc 1 1746 0
+	.loc 1 1617 0
 	bnei	a4, 1, .L1620
-	.loc 1 1746 0 is_stmt 0 discriminator 1
+	.loc 1 1617 0 is_stmt 0 discriminator 1
 	l8ui	a5, a3, 69
 	beqi	a5, 5, .L1604
 .L1620:
-	.loc 1 1748 0 is_stmt 1
+	.loc 1 1619 0 is_stmt 1
 	l32i.n	a10, a2, 16
 	j	.L1654
 .L1619:
-	.loc 1 1761 0
+	.loc 1 1631 0
 	addi.n	a14, a4, -1
 	movi.n	a5, 1
 	movi.n	a10, 0
@@ -9885,18 +9898,18 @@ initScan:
 	bnez.n	a10, .L1604
 	movnez	a10, a5, a15
 	bnez.n	a10, .L1604
-	.loc 1 1763 0
+	.loc 1 1633 0
 	l32i.n	a10, a2, 20
 .L1654:
 	s32i.n	a10, a8, 0
-	.loc 1 1764 0
+	.loc 1 1634 0
 	add.n	a9, a10, a9
 	l32i.n	a2, a9, 0
 .LVL1145:
 	j	.L1651
 .LVL1146:
 .L1604:
-	.loc 1 1769 0
+	.loc 1 1639 0
 	l8ui	a3, a3, 69
 .LVL1147:
 	addx4	a2, a3, a2
@@ -9904,7 +9917,7 @@ initScan:
 	l32i.n	a10, a2, 0
 .L1653:
 	s32i.n	a10, a8, 0
-	.loc 1 1770 0
+	.loc 1 1640 0
 	addx4	a4, a4, a10
 .LVL1149:
 	l32i.n	a2, a4, 0
@@ -9914,11 +9927,11 @@ initScan:
 	j	.L1601
 .LVL1151:
 .L1623:
-	.loc 1 1689 0
+	.loc 1 1563 0
 	movi.n	a10, -1
 .LVL1152:
 .L1601:
-	.loc 1 1771 0
+	.loc 1 1641 0
 	mov.n	a2, a10
 	retw.n
 .LFE120:
@@ -9931,11 +9944,11 @@ initScan:
 initScanProlog:
 .LFB123:
 	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_ns.c"
-	.loc 3 69 0
+	.loc 3 62 0
 .LVL1153:
 	entry	sp, 32
 .LCFI74:
-	.loc 3 70 0
+	.loc 3 63 0
 	l32r	a10, .LC91
 	mov.n	a11, a2
 	mov.n	a15, a5
@@ -9944,7 +9957,7 @@ initScanProlog:
 	movi.n	a12, 0
 	call8	initScan
 .LVL1154:
-	.loc 3 72 0
+	.loc 3 65 0
 	mov.n	a2, a10
 .LVL1155:
 	retw.n
@@ -9957,11 +9970,11 @@ initScanProlog:
 	.type	initScanContent, @function
 initScanContent:
 .LFB124:
-	.loc 3 77 0
+	.loc 3 69 0
 .LVL1156:
 	entry	sp, 32
 .LCFI75:
-	.loc 3 78 0
+	.loc 3 70 0
 	l32r	a10, .LC92
 	mov.n	a11, a2
 	mov.n	a15, a5
@@ -9970,7 +9983,7 @@ initScanContent:
 	movi.n	a12, 1
 	call8	initScan
 .LVL1157:
-	.loc 3 80 0
+	.loc 3 72 0
 	mov.n	a2, a10
 .LVL1158:
 	retw.n
@@ -9984,19 +9997,19 @@ initScanContent:
 	.type	findEncoding, @function
 findEncoding:
 .LFB126:
-	.loc 3 100 0
+	.loc 3 90 0
 .LVL1159:
 	entry	sp, 192
 .LCFI76:
-	.loc 3 105 0
+	.loc 3 95 0
 	l32i.n	a8, a2, 56
 	movi	a13, 0x80
 	movi	a11, 0x90
-	.loc 3 100 0
+	.loc 3 90 0
 	s32i	a3, sp, 144
-	.loc 3 103 0
+	.loc 3 93 0
 	s32i	sp, sp, 128
-	.loc 3 105 0
+	.loc 3 95 0
 	addi	a14, sp, 127
 	add.n	a13, sp, a13
 	mov.n	a12, a4
@@ -10004,48 +10017,48 @@ findEncoding:
 	mov.n	a10, a2
 	callx8	a8
 .LVL1160:
-	.loc 3 106 0
+	.loc 3 96 0
 	l32i	a8, sp, 144
 	beq	a4, a8, .L1658
 .LVL1161:
 .L1661:
-	.loc 3 107 0
+	.loc 3 97 0
 	movi.n	a2, 0
 .LVL1162:
 	retw.n
 .LVL1163:
 .L1658:
-	.loc 3 108 0
+	.loc 3 98 0
 	l32i	a4, sp, 128
 .LVL1164:
 	movi.n	a8, 0
-	.loc 3 109 0
+	.loc 3 99 0
 	l32r	a11, .LC93
-	.loc 3 108 0
+	.loc 3 98 0
 	s8i	a8, a4, 0
-	.loc 3 109 0
+	.loc 3 99 0
 	mov.n	a10, sp
 	call8	streqci
 .LVL1165:
 	beqz.n	a10, .L1660
-	.loc 3 109 0 is_stmt 0 discriminator 1
+	.loc 3 99 0 is_stmt 0 discriminator 1
 	l32i	a4, a2, 64
 	beqi	a4, 2, .L1659
 .L1660:
-	.loc 3 111 0 is_stmt 1
+	.loc 3 101 0 is_stmt 1
 	mov.n	a10, sp
 	call8	getEncodingIndex
 .LVL1166:
-	.loc 3 112 0
+	.loc 3 102 0
 	beqi	a10, -1, .L1661
-	.loc 3 114 0
+	.loc 3 104 0
 	l32r	a2, .LC94
 .LVL1167:
 	addx4	a10, a10, a2
 .LVL1168:
 	l32i.n	a2, a10, 0
 .L1659:
-	.loc 3 115 0
+	.loc 3 105 0
 	retw.n
 .LFE126:
 	.size	findEncoding, .-findEncoding
@@ -10056,11 +10069,11 @@ findEncoding:
 	.type	initScanPrologNS, @function
 initScanPrologNS:
 .LFB130:
-	.loc 3 69 0
+	.loc 3 62 0
 .LVL1169:
 	entry	sp, 32
 .LCFI77:
-	.loc 3 70 0
+	.loc 3 63 0
 	l32r	a10, .LC95
 	mov.n	a11, a2
 	mov.n	a15, a5
@@ -10069,7 +10082,7 @@ initScanPrologNS:
 	movi.n	a12, 0
 	call8	initScan
 .LVL1170:
-	.loc 3 72 0
+	.loc 3 65 0
 	mov.n	a2, a10
 .LVL1171:
 	retw.n
@@ -10082,11 +10095,11 @@ initScanPrologNS:
 	.type	initScanContentNS, @function
 initScanContentNS:
 .LFB131:
-	.loc 3 77 0
+	.loc 3 69 0
 .LVL1172:
 	entry	sp, 32
 .LCFI78:
-	.loc 3 78 0
+	.loc 3 70 0
 	l32r	a10, .LC96
 	mov.n	a11, a2
 	mov.n	a15, a5
@@ -10095,7 +10108,7 @@ initScanContentNS:
 	movi.n	a12, 1
 	call8	initScan
 .LVL1173:
-	.loc 3 80 0
+	.loc 3 72 0
 	mov.n	a2, a10
 .LVL1174:
 	retw.n
@@ -10109,19 +10122,19 @@ initScanContentNS:
 	.type	findEncodingNS, @function
 findEncodingNS:
 .LFB133:
-	.loc 3 100 0
+	.loc 3 90 0
 .LVL1175:
 	entry	sp, 192
 .LCFI79:
-	.loc 3 105 0
+	.loc 3 95 0
 	l32i.n	a8, a2, 56
 	movi	a13, 0x80
 	movi	a11, 0x90
-	.loc 3 100 0
+	.loc 3 90 0
 	s32i	a3, sp, 144
-	.loc 3 103 0
+	.loc 3 93 0
 	s32i	sp, sp, 128
-	.loc 3 105 0
+	.loc 3 95 0
 	addi	a14, sp, 127
 	add.n	a13, sp, a13
 	mov.n	a12, a4
@@ -10129,48 +10142,48 @@ findEncodingNS:
 	mov.n	a10, a2
 	callx8	a8
 .LVL1176:
-	.loc 3 106 0
+	.loc 3 96 0
 	l32i	a8, sp, 144
 	beq	a4, a8, .L1672
 .LVL1177:
 .L1675:
-	.loc 3 107 0
+	.loc 3 97 0
 	movi.n	a2, 0
 .LVL1178:
 	retw.n
 .LVL1179:
 .L1672:
-	.loc 3 108 0
+	.loc 3 98 0
 	l32i	a4, sp, 128
 .LVL1180:
 	movi.n	a8, 0
-	.loc 3 109 0
+	.loc 3 99 0
 	l32r	a11, .LC97
-	.loc 3 108 0
+	.loc 3 98 0
 	s8i	a8, a4, 0
-	.loc 3 109 0
+	.loc 3 99 0
 	mov.n	a10, sp
 	call8	streqci
 .LVL1181:
 	beqz.n	a10, .L1674
-	.loc 3 109 0 is_stmt 0 discriminator 1
+	.loc 3 99 0 is_stmt 0 discriminator 1
 	l32i	a4, a2, 64
 	beqi	a4, 2, .L1673
 .L1674:
-	.loc 3 111 0 is_stmt 1
+	.loc 3 101 0 is_stmt 1
 	mov.n	a10, sp
 	call8	getEncodingIndex
 .LVL1182:
-	.loc 3 112 0
+	.loc 3 102 0
 	beqi	a10, -1, .L1675
-	.loc 3 114 0
+	.loc 3 104 0
 	l32r	a2, .LC98
 .LVL1183:
 	addx4	a10, a10, a2
 .LVL1184:
 	l32i.n	a2, a10, 0
 .L1673:
-	.loc 3 115 0
+	.loc 3 105 0
 	retw.n
 .LFE133:
 	.size	findEncodingNS, .-findEncodingNS
@@ -10179,11 +10192,11 @@ findEncodingNS:
 	.type	utf8_isInvalid2, @function
 utf8_isInvalid2:
 .LFB5:
-	.loc 1 192 0
+	.loc 1 169 0
 .LVL1185:
 	entry	sp, 32
 .LCFI80:
-	.loc 1 193 0
+	.loc 1 171 0
 	l8ui	a8, a3, 0
 	movi	a9, 0xc1
 	movi.n	a2, 1
@@ -10206,7 +10219,7 @@ utf8_isInvalid2:
 	movnez	a2, a3, a8
 .LVL1189:
 .L1684:
-	.loc 1 194 0 discriminator 8
+	.loc 1 172 0 discriminator 8
 	retw.n
 .LFE5:
 	.size	utf8_isInvalid2, .-utf8_isInvalid2
@@ -10215,32 +10228,32 @@ utf8_isInvalid2:
 	.type	utf8_isInvalid4, @function
 utf8_isInvalid4:
 .LFB7:
-	.loc 1 204 0
+	.loc 1 181 0
 .LVL1190:
 	entry	sp, 32
 .LCFI81:
-	.loc 1 205 0
+	.loc 1 183 0
 	l8ui	a8, a3, 3
 	movi.n	a2, 1
 .LVL1191:
 	sext	a9, a8, 7
 	bgez	a9, .L1688
-	.loc 1 205 0 is_stmt 0 discriminator 2
+	.loc 1 183 0 is_stmt 0 discriminator 2
 	movi	a9, -0x40
 	and	a8, a8, a9
 	movi	a10, 0xc0
 	beq	a8, a10, .L1688
-	.loc 1 205 0 discriminator 4
+	.loc 1 183 0 discriminator 4
 	l8ui	a8, a3, 2
 	sext	a11, a8, 7
 	bgez	a11, .L1688
-	.loc 1 205 0 discriminator 6
+	.loc 1 183 0 discriminator 6
 	and	a8, a8, a9
 	beq	a8, a10, .L1688
 .LVL1192:
 .LBB94:
 .LBB95:
-	.loc 1 205 0
+	.loc 1 183 0
 	l8ui	a11, a3, 0
 	l8ui	a8, a3, 1
 	movi	a3, 0xf0
@@ -10267,7 +10280,7 @@ utf8_isInvalid4:
 .L1688:
 .LBE95:
 .LBE94:
-	.loc 1 206 0 is_stmt 1 discriminator 32
+	.loc 1 184 0 is_stmt 1 discriminator 32
 	retw.n
 .LFE7:
 	.size	utf8_isInvalid4, .-utf8_isInvalid4
@@ -10306,7 +10319,7 @@ normal_checkPiTarget$isra$2:
 	mov.n	a9, a8
 	j	.L1701
 .L1708:
-	.loc 2 224 0
+	.loc 2 223 0
 	movi.n	a9, 0
 .L1701:
 .LVL1199:
@@ -10358,12 +10371,12 @@ normal_checkPiTarget$isra$2:
 	.type	normal_scanPi, @function
 normal_scanPi:
 .LFB11:
-	.loc 2 268 0
+	.loc 2 267 0
 .LVL1204:
 	entry	sp, 48
 .LCFI83:
 .LVL1205:
-	.loc 2 271 0
+	.loc 2 270 0
 	sub	a7, a4, a3
 	bgei	a7, 1, .L1715
 .LVL1206:
@@ -10372,7 +10385,7 @@ normal_scanPi:
 	j	.L1716
 .LVL1207:
 .L1715:
-	.loc 2 272 0
+	.loc 2 271 0
 	l8ui	a6, a3, 0
 	add.n	a6, a2, a6
 	l8ui	a6, a6, 72
@@ -10389,16 +10402,16 @@ normal_scanPi:
 	movi.n	a7, 0x16
 	bne	a6, a7, .L1717
 .L1722:
-	.loc 2 273 0 discriminator 2
+	.loc 2 272 0 discriminator 2
 	addi.n	a6, a3, 1
 .LVL1208:
 .L1727:
-	.loc 2 279 0
+	.loc 2 278 0
 	movi.n	a7, 0x18
 	j	.L1724
 .LVL1209:
 .L1720:
-	.loc 2 273 0
+	.loc 2 272 0
 	bnei	a7, 1, .L1725
 .LVL1210:
 .L1728:
@@ -10406,7 +10419,7 @@ normal_scanPi:
 	j	.L1716
 .LVL1211:
 .L1725:
-	.loc 2 273 0 is_stmt 0 discriminator 4
+	.loc 2 272 0 is_stmt 0 discriminator 4
 	l32i	a6, a2, 340
 	mov.n	a11, a3
 	mov.n	a10, a2
@@ -10416,42 +10429,42 @@ normal_scanPi:
 	bnez.n	a10, .L1727
 	j	.L1717
 .L1721:
-	.loc 2 273 0
+	.loc 2 272 0
 	blti	a7, 3, .L1728
-	.loc 2 273 0 discriminator 8
+	.loc 2 272 0 discriminator 8
 	l32i	a6, a2, 344
 	mov.n	a11, a3
 	mov.n	a10, a2
 	callx8	a6
 .LVL1213:
 	beqz.n	a10, .L1717
-	.loc 2 273 0 discriminator 10
+	.loc 2 272 0 discriminator 10
 	addi.n	a6, a3, 3
 .LVL1214:
 	j	.L1727
 .LVL1215:
 .L1718:
-	.loc 2 273 0
+	.loc 2 272 0
 	blti	a7, 4, .L1728
-	.loc 2 273 0 discriminator 12
+	.loc 2 272 0 discriminator 12
 	l32i	a6, a2, 348
 	mov.n	a11, a3
 	mov.n	a10, a2
 	callx8	a6
 .LVL1216:
 	beqz.n	a10, .L1717
-	.loc 2 273 0 discriminator 14
+	.loc 2 272 0 discriminator 14
 	addi.n	a6, a3, 4
 .LVL1217:
 	j	.L1727
 .LVL1218:
 .L1717:
-	.loc 2 275 0 is_stmt 1
+	.loc 2 274 0 is_stmt 1
 	s32i.n	a3, a5, 0
 	j	.L1774
 .LVL1219:
 .L1759:
-	.loc 2 279 0
+	.loc 2 278 0
 	l8ui	a8, a6, 0
 	add.n	a8, a2, a8
 	l8ui	a8, a8, 72
@@ -10493,14 +10506,14 @@ normal_scanPi:
 	.word	.L1730
 	.section	.text.normal_scanPi
 .L1737:
-	.loc 2 280 0 discriminator 2
+	.loc 2 279 0 discriminator 2
 	addi.n	a6, a6, 1
 .LVL1220:
 	j	.L1724
 .L1731:
-	.loc 2 280 0 is_stmt 0
+	.loc 2 279 0 is_stmt 0
 	beqi	a9, 1, .L1728
-	.loc 2 280 0 discriminator 4
+	.loc 2 279 0 discriminator 4
 	l32i	a8, a2, 328
 	mov.n	a11, a6
 	mov.n	a10, a2
@@ -10509,14 +10522,14 @@ normal_scanPi:
 	bnez.n	a10, .L1740
 	j	.L1775
 .L1740:
-	.loc 2 280 0 discriminator 6
+	.loc 2 279 0 discriminator 6
 	addi.n	a6, a6, 2
 .LVL1222:
 	j	.L1724
 .L1733:
-	.loc 2 280 0
+	.loc 2 279 0
 	blti	a9, 3, .L1728
-	.loc 2 280 0 discriminator 8
+	.loc 2 279 0 discriminator 8
 	l32i	a8, a2, 332
 	mov.n	a11, a6
 	mov.n	a10, a2
@@ -10525,14 +10538,14 @@ normal_scanPi:
 	bnez.n	a10, .L1741
 	j	.L1775
 .L1741:
-	.loc 2 280 0 discriminator 10
+	.loc 2 279 0 discriminator 10
 	addi.n	a6, a6, 3
 .LVL1224:
 	j	.L1724
 .L1734:
-	.loc 2 280 0
+	.loc 2 279 0
 	blti	a9, 4, .L1728
-	.loc 2 280 0 discriminator 12
+	.loc 2 279 0 discriminator 12
 	l32i	a8, a2, 336
 	mov.n	a11, a6
 	mov.n	a10, a2
@@ -10541,28 +10554,28 @@ normal_scanPi:
 	bnez.n	a10, .L1742
 	j	.L1775
 .L1742:
-	.loc 2 280 0 discriminator 14
+	.loc 2 279 0 discriminator 14
 	addi.n	a6, a6, 4
 .LVL1226:
 	j	.L1724
 .L1735:
-	.loc 2 282 0 is_stmt 1
+	.loc 2 283 0 is_stmt 1
 	mov.n	a10, a3
 	mov.n	a12, sp
 	mov.n	a11, a6
 	call8	normal_checkPiTarget$isra$2
 .LVL1227:
-	.loc 2 286 0
+	.loc 2 287 0
 	addi.n	a7, a6, 1
-	.loc 2 288 0
+	.loc 2 289 0
 	movi.n	a3, 0xf
 .LVL1228:
-	.loc 2 282 0
+	.loc 2 283 0
 	bnez.n	a10, .L1773
 	j	.L1775
 .LVL1229:
 .L1757:
-	.loc 2 288 0
+	.loc 2 289 0
 	l8ui	a8, a7, 0
 	add.n	a8, a2, a8
 	l8ui	a8, a8, 72
@@ -10593,9 +10606,9 @@ normal_scanPi:
 	.word	.L1751
 	.section	.text.normal_scanPi
 .L1748:
-	.loc 2 289 0
+	.loc 2 290 0
 	beqi	a6, 1, .L1728
-	.loc 2 289 0 is_stmt 0 discriminator 2
+	.loc 2 290 0 is_stmt 0 discriminator 2
 	l32i	a6, a2, 352
 	mov.n	a11, a7
 	mov.n	a10, a2
@@ -10604,15 +10617,15 @@ normal_scanPi:
 	beqz.n	a10, .L1752
 	j	.L1746
 .L1752:
-	.loc 2 289 0 discriminator 4
+	.loc 2 290 0 discriminator 4
 	addi.n	a6, a7, 2
 .LVL1231:
 	j	.L1753
 .LVL1232:
 .L1749:
-	.loc 2 289 0
+	.loc 2 290 0
 	blti	a6, 3, .L1728
-	.loc 2 289 0 discriminator 6
+	.loc 2 290 0 discriminator 6
 	l32i	a6, a2, 356
 	mov.n	a11, a7
 	mov.n	a10, a2
@@ -10621,15 +10634,15 @@ normal_scanPi:
 	beqz.n	a10, .L1754
 	j	.L1746
 .L1754:
-	.loc 2 289 0 discriminator 8
+	.loc 2 290 0 discriminator 8
 	addi.n	a6, a7, 3
 .LVL1234:
 	j	.L1753
 .LVL1235:
 .L1750:
-	.loc 2 289 0
+	.loc 2 290 0
 	blti	a6, 4, .L1728
-	.loc 2 289 0 discriminator 10
+	.loc 2 290 0 discriminator 10
 	l32i	a6, a2, 360
 	mov.n	a11, a7
 	mov.n	a10, a2
@@ -10638,47 +10651,47 @@ normal_scanPi:
 	beqz.n	a10, .L1755
 	j	.L1746
 .L1755:
-	.loc 2 289 0 discriminator 12
+	.loc 2 290 0 discriminator 12
 	addi.n	a6, a7, 4
 .LVL1237:
 	j	.L1753
 .LVL1238:
 .L1746:
-	.loc 2 289 0
+	.loc 2 290 0
 	s32i.n	a7, a5, 0
 	j	.L1774
 .L1751:
-	.loc 2 291 0 is_stmt 1
+	.loc 2 292 0 is_stmt 1
 	addi.n	a6, a7, 1
 .LVL1239:
-	.loc 2 292 0
+	.loc 2 293 0
 	sub	a8, a4, a6
 	blti	a8, 1, .L1756
-	.loc 2 293 0
+	.loc 2 294 0
 	l8ui	a9, a7, 1
 	movi.n	a8, 0x3e
 	bne	a9, a8, .L1753
-	.loc 2 294 0
+	.loc 2 295 0
 	addi.n	a7, a7, 2
 	s32i.n	a7, a5, 0
 	j	.L1776
 .LVL1240:
 .L1745:
-	.loc 2 299 0
+	.loc 2 300 0
 	addi.n	a6, a7, 1
 .LVL1241:
 .L1753:
-	.loc 2 268 0
+	.loc 2 267 0
 	mov.n	a7, a6
 .L1773:
 .LVL1242:
-	.loc 2 287 0
+	.loc 2 288 0
 	sub	a6, a4, a7
 	bgei	a6, 1, .L1757
 	j	.L1756
 .LVL1243:
 .L1736:
-	.loc 2 305 0
+	.loc 2 306 0
 	mov.n	a12, sp
 	mov.n	a11, a6
 	mov.n	a10, a3
@@ -10687,54 +10700,54 @@ normal_scanPi:
 	bnez.n	a10, .L1758
 .LVL1245:
 .L1775:
-	.loc 2 306 0
-	s32i.n	a6, a5, 0
 	.loc 2 307 0
+	s32i.n	a6, a5, 0
+	.loc 2 308 0
 	j	.L1716
 .LVL1246:
 .L1758:
-	.loc 2 309 0
+	.loc 2 310 0
 	addi.n	a2, a6, 1
 .LVL1247:
-	.loc 2 310 0
+	.loc 2 311 0
 	sub	a4, a4, a2
 .LVL1248:
 	blti	a4, 1, .L1756
-	.loc 2 311 0
+	.loc 2 312 0
 	l8ui	a4, a6, 1
 	movi.n	a3, 0x3e
 .LVL1249:
 	bne	a4, a3, .L1760
-	.loc 2 312 0
+	.loc 2 313 0
 	addi.n	a6, a6, 2
 	s32i.n	a6, a5, 0
 .LVL1250:
 .L1776:
-	.loc 2 313 0
+	.loc 2 314 0
 	l32i.n	a10, sp, 0
 	j	.L1716
 .LVL1251:
 .L1760:
-	.loc 2 309 0
+	.loc 2 310 0
 	mov.n	a6, a2
 .LVL1252:
 .L1730:
-	.loc 2 317 0
+	.loc 2 318 0
 	s32i.n	a6, a5, 0
 .LVL1253:
 .L1774:
-	.loc 2 318 0
+	.loc 2 319 0
 	movi.n	a10, 0
 	j	.L1716
 .LVL1254:
 .L1724:
-	.loc 2 278 0
+	.loc 2 277 0
 	sub	a9, a4, a6
 	bgei	a9, 1, .L1759
 	j	.L1756
 .LVL1255:
 .L1716:
-	.loc 2 322 0
+	.loc 2 323 0
 	mov.n	a2, a10
 	retw.n
 .LFE11:
@@ -10753,15 +10766,15 @@ normal_scanPi:
 	.type	normal_prologTok, @function
 normal_prologTok:
 .LFB24:
-	.loc 2 996 0
+	.loc 2 1008 0
 .LVL1256:
 	entry	sp, 32
 .LCFI84:
-	.loc 2 999 0
+	.loc 2 1011 0
 	movi.n	a10, -4
-	.loc 2 998 0
+	.loc 2 1010 0
 	bgeu	a3, a4, .L1778
-	.loc 2 1009 0
+	.loc 2 1021 0
 	l8ui	a6, a3, 0
 	movi.n	a7, 0x22
 	add.n	a6, a2, a6
@@ -10814,7 +10827,7 @@ normal_prologTok:
 	.word	.L1799
 	.section	.text.normal_prologTok
 .L1789:
-	.loc 2 1011 0
+	.loc 2 1023 0
 	mov.n	a14, a5
 	mov.n	a13, a4
 	addi.n	a12, a3, 1
@@ -10822,7 +10835,7 @@ normal_prologTok:
 	movi.n	a10, 0xc
 	j	.L1934
 .L1790:
-	.loc 2 1013 0
+	.loc 2 1025 0
 	mov.n	a14, a5
 	mov.n	a13, a4
 	addi.n	a12, a3, 1
@@ -10833,14 +10846,14 @@ normal_prologTok:
 .LVL1257:
 	j	.L1778
 .L1780:
-	.loc 2 1016 0
+	.loc 2 1027 0
 	addi.n	a7, a3, 1
 .LVL1258:
-	.loc 2 1017 0
+	.loc 2 1028 0
 	sub	a6, a4, a7
 	movi.n	a10, -1
 	blti	a6, 1, .L1778
-	.loc 2 1018 0
+	.loc 2 1029 0
 	l8ui	a6, a3, 1
 	movi.n	a10, 0x1d
 	add.n	a6, a2, a6
@@ -10853,22 +10866,22 @@ normal_prologTok:
 	bany	a6, a8, .L1940
 	bbsi	a6, 15, .L1802
 	bbci	a6, 16, .L1800
-	.loc 2 1020 0
+	.loc 2 1031 0
 	addi.n	a7, a3, 2
 .LVL1259:
 .LBB104:
 .LBB105:
-	.loc 2 179 0
+	.loc 2 174 0
 	sub	a6, a4, a7
 .LBE105:
 .LBE104:
-	.loc 2 1017 0
+	.loc 2 1028 0
 	movi.n	a10, -1
 .LBB108:
 .LBB106:
-	.loc 2 179 0
+	.loc 2 174 0
 	blti	a6, 1, .L1778
-	.loc 2 180 0
+	.loc 2 175 0
 	l8ui	a6, a3, 2
 	movi.n	a8, 0x16
 	add.n	a6, a2, a6
@@ -10885,7 +10898,7 @@ normal_prologTok:
 	beq	a6, a8, .L1804
 	movi.n	a8, 0x1b
 	bne	a6, a8, .L1800
-	.loc 2 182 0
+	.loc 2 177 0
 	mov.n	a13, a5
 	mov.n	a12, a4
 	addi.n	a11, a3, 3
@@ -10895,16 +10908,16 @@ normal_prologTok:
 	j	.L1778
 .LVL1263:
 .L1806:
-	.loc 2 184 0
+	.loc 2 179 0
 	addi.n	a3, a3, 3
 .LVL1264:
 	s32i.n	a3, a5, 0
-	.loc 2 185 0
+	.loc 2 180 0
 	movi.n	a10, 0x21
 	j	.L1778
 .LVL1265:
 .L1804:
-	.loc 2 188 0
+	.loc 2 183 0
 	addi.n	a3, a3, 3
 .LVL1266:
 	movi.n	a8, 0x1e
@@ -10913,7 +10926,7 @@ normal_prologTok:
 	j	.L1808
 .LVL1267:
 .L1812:
-	.loc 2 195 0
+	.loc 2 190 0
 	l8ui	a6, a3, 0
 	add.n	a6, a2, a6
 	l8ui	a6, a6, 72
@@ -10928,13 +10941,13 @@ normal_prologTok:
 	bbci	a6, 30, .L1859
 .LBE106:
 .LBE108:
-	.loc 2 1017 0
+	.loc 2 1028 0
 	movi.n	a10, -1
 .LBB109:
 .LBB107:
-	.loc 2 197 0
+	.loc 2 192 0
 	beqi	a7, 1, .L1778
-	.loc 2 199 0
+	.loc 2 194 0
 	l8ui	a6, a3, 1
 	add.n	a2, a2, a6
 .LVL1269:
@@ -10943,9 +10956,9 @@ normal_prologTok:
 	bltu	a6, a2, .L1811
 	l32r	a6, .LC108
 	bbc	a6, a2, .L1811
-	.loc 2 201 0
+	.loc 2 199 0
 	s32i.n	a3, a5, 0
-	.loc 2 202 0
+	.loc 2 200 0
 	mov.n	a10, a4
 	j	.L1778
 .L1811:
@@ -10960,7 +10973,7 @@ normal_prologTok:
 	addi.n	a3, a3, 1
 .LVL1271:
 .L1808:
-	.loc 2 194 0
+	.loc 2 189 0
 	sub	a7, a4, a3
 	bgei	a7, 1, .L1812
 	j	.L1899
@@ -10968,7 +10981,7 @@ normal_prologTok:
 .L1802:
 .LBE107:
 .LBE109:
-	.loc 2 1022 0
+	.loc 2 1033 0
 	mov.n	a13, a5
 	mov.n	a12, a4
 	addi.n	a11, a3, 2
@@ -10978,38 +10991,38 @@ normal_prologTok:
 	j	.L1778
 .LVL1274:
 .L1800:
-	.loc 2 1032 0
+	.loc 2 1043 0
 	s32i.n	a7, a5, 0
 	j	.L1936
 .LVL1275:
 .L1786:
-	.loc 2 1036 0
+	.loc 2 1047 0
 	addi.n	a6, a3, 1
 	beq	a4, a6, .L1813
 .L1787:
-	.loc 2 1047 0
+	.loc 2 1059 0
 	movi.n	a8, 0x15
 	movi.n	a9, 9
 	j	.L1814
 .L1813:
-	.loc 2 1037 0
+	.loc 2 1048 0
 	s32i.n	a4, a5, 0
-	.loc 2 1039 0
+	.loc 2 1050 0
 	movi.n	a10, -0xf
 	j	.L1778
 .LVL1276:
 .L1815:
-	.loc 2 996 0
+	.loc 2 1008 0
 	mov.n	a3, a6
 .LVL1277:
 .L1814:
-	.loc 2 1044 0
+	.loc 2 1056 0
 	addi.n	a6, a3, 1
 .LVL1278:
-	.loc 2 1045 0
+	.loc 2 1057 0
 	sub	a7, a4, a6
 	blti	a7, 1, .L1816
-	.loc 2 1047 0
+	.loc 2 1059 0
 	l8ui	a7, a3, 1
 	add.n	a7, a2, a7
 	l8ui	a7, a7, 72
@@ -11017,17 +11030,17 @@ normal_prologTok:
 	beq	a7, a8, .L1815
 	bne	a7, a9, .L1816
 	addi.n	a3, a3, 2
-	.loc 2 1052 0
+	.loc 2 1065 0
 	bne	a4, a3, .L1815
 .L1816:
-	.loc 2 1060 0
+	.loc 2 1073 0
 	s32i.n	a6, a5, 0
-	.loc 2 1061 0
+	.loc 2 1074 0
 	movi.n	a10, 0xf
 	j	.L1778
 .LVL1279:
 .L1795:
-	.loc 2 1063 0
+	.loc 2 1076 0
 	mov.n	a13, a5
 	mov.n	a12, a4
 	addi.n	a11, a3, 1
@@ -11036,80 +11049,80 @@ normal_prologTok:
 .LVL1280:
 	j	.L1778
 .L1798:
-	.loc 2 1065 0
+	.loc 2 1078 0
 	addi.n	a3, a3, 1
 .LVL1281:
 	s32i.n	a3, a5, 0
-	.loc 2 1066 0
+	.loc 2 1079 0
 	movi.n	a10, 0x26
 	j	.L1778
 .LVL1282:
 .L1792:
-	.loc 2 1068 0
+	.loc 2 1081 0
 	addi.n	a3, a3, 1
 .LVL1283:
 	s32i.n	a3, a5, 0
-	.loc 2 1069 0
+	.loc 2 1082 0
 	movi.n	a10, 0x19
 	j	.L1778
 .LVL1284:
 .L1782:
-	.loc 2 1071 0
+	.loc 2 1084 0
 	addi.n	a2, a3, 1
 .LVL1285:
-	.loc 2 1072 0
+	.loc 2 1085 0
 	sub	a4, a4, a2
 .LVL1286:
-	.loc 2 1073 0
+	.loc 2 1086 0
 	movi.n	a10, -0x1a
-	.loc 2 1072 0
+	.loc 2 1085 0
 	blti	a4, 1, .L1778
-	.loc 2 1074 0
+	.loc 2 1087 0
 	l8ui	a7, a3, 1
 	movi.n	a6, 0x5d
 	bne	a7, a6, .L1819
-	.loc 2 1017 0
+	.loc 2 1028 0
 	movi.n	a10, -1
-	.loc 2 1075 0
+	.loc 2 1088 0
 	beqi	a4, 1, .L1778
-	.loc 2 1076 0
+	.loc 2 1089 0
 	l8ui	a6, a3, 2
 	movi.n	a4, 0x3e
 	bne	a6, a4, .L1819
-	.loc 2 1077 0
+	.loc 2 1090 0
 	addi.n	a3, a3, 3
 	s32i.n	a3, a5, 0
-	.loc 2 1078 0
+	.loc 2 1091 0
 	movi.n	a10, 0x22
 	j	.L1778
 .L1819:
-	.loc 2 1081 0
+	.loc 2 1094 0
 	s32i.n	a2, a5, 0
-	.loc 2 1082 0
+	.loc 2 1095 0
 	movi.n	a10, 0x1a
 	j	.L1778
 .LVL1287:
 .L1796:
-	.loc 2 1084 0
+	.loc 2 1097 0
 	addi.n	a3, a3, 1
 .LVL1288:
 	s32i.n	a3, a5, 0
-	.loc 2 1085 0
+	.loc 2 1098 0
 	movi.n	a10, 0x17
 	j	.L1778
 .LVL1289:
 .L1797:
-	.loc 2 1087 0
+	.loc 2 1100 0
 	addi.n	a6, a3, 1
 .LVL1290:
-	.loc 2 1088 0
+	.loc 2 1101 0
 	sub	a4, a4, a6
 .LVL1291:
-	.loc 2 1089 0
+	.loc 2 1102 0
 	movi.n	a10, -0x18
-	.loc 2 1088 0
+	.loc 2 1101 0
 	blti	a4, 1, .L1778
-	.loc 2 1090 0
+	.loc 2 1103 0
 	l8ui	a4, a3, 1
 	add.n	a2, a2, a4
 .LVL1292:
@@ -11156,68 +11169,68 @@ normal_prologTok:
 	.word	.L1821
 	.section	.text.normal_prologTok
 .L1824:
-	.loc 2 1092 0
+	.loc 2 1105 0
 	addi.n	a3, a3, 2
 	s32i.n	a3, a5, 0
-	.loc 2 1093 0
+	.loc 2 1106 0
 	movi.n	a10, 0x24
 	j	.L1778
 .L1823:
-	.loc 2 1095 0
+	.loc 2 1108 0
 	addi.n	a3, a3, 2
 	s32i.n	a3, a5, 0
-	.loc 2 1096 0
+	.loc 2 1109 0
 	movi.n	a10, 0x23
 	j	.L1778
 .L1825:
-	.loc 2 1098 0
+	.loc 2 1111 0
 	addi.n	a3, a3, 2
 	s32i.n	a3, a5, 0
-	.loc 2 1099 0
+	.loc 2 1112 0
 	movi.n	a10, 0x25
 	j	.L1778
 .L1821:
-	.loc 2 1103 0
+	.loc 2 1120 0
 	s32i.n	a6, a5, 0
-	.loc 2 1104 0
+	.loc 2 1121 0
 	movi.n	a10, 0x18
 	j	.L1778
 .LVL1293:
 .L1799:
-	.loc 2 1109 0
+	.loc 2 1126 0
 	addi.n	a3, a3, 1
 .LVL1294:
 	s32i.n	a3, a5, 0
-	.loc 2 1110 0
+	.loc 2 1127 0
 	movi.n	a10, 0x15
 	j	.L1778
 .LVL1295:
 .L1788:
-	.loc 2 1112 0
+	.loc 2 1129 0
 	addi.n	a3, a3, 1
 .LVL1296:
 	s32i.n	a3, a5, 0
-	.loc 2 1113 0
+	.loc 2 1130 0
 	movi.n	a10, 0x11
 	j	.L1778
 .LVL1297:
 .L1791:
-	.loc 2 1115 0
+	.loc 2 1132 0
 	addi.n	a6, a3, 1
 .LVL1298:
 .LBB110:
 .LBB111:
-	.loc 2 939 0
+	.loc 2 945 0
 	sub	a8, a4, a6
 .LBE111:
 .LBE110:
-	.loc 2 1017 0
+	.loc 2 1028 0
 	movi.n	a10, -1
 .LBB113:
 .LBB112:
-	.loc 2 939 0
+	.loc 2 945 0
 	blti	a8, 1, .L1778
-	.loc 2 940 0
+	.loc 2 946 0
 	l8ui	a7, a3, 1
 	add.n	a7, a2, a7
 	l8ui	a7, a7, 72
@@ -11234,17 +11247,17 @@ normal_prologTok:
 	movi.n	a8, 0x16
 	bne	a7, a8, .L1945
 .L1831:
-	.loc 2 941 0
+	.loc 2 947 0
 	addi.n	a3, a3, 2
 .LVL1299:
 .L1836:
-	.loc 2 947 0
+	.loc 2 953 0
 	movi.n	a6, 0x1f
 .LVL1300:
 	j	.L1833
 .LVL1301:
 .L1829:
-	.loc 2 941 0
+	.loc 2 947 0
 	bnei	a8, 1, .L1834
 .LVL1302:
 .L1837:
@@ -11286,7 +11299,7 @@ normal_prologTok:
 	j	.L1939
 .LVL1312:
 .L1852:
-	.loc 2 947 0
+	.loc 2 953 0
 	l8ui	a7, a3, 0
 	add.n	a7, a2, a7
 	l8ui	a7, a7, 72
@@ -11335,7 +11348,7 @@ normal_prologTok:
 	.word	.L1845
 	.section	.text.normal_prologTok
 .L1846:
-	.loc 2 948 0
+	.loc 2 954 0
 	addi.n	a3, a3, 1
 .LVL1313:
 	j	.L1833
@@ -11379,92 +11392,92 @@ normal_prologTok:
 .LVL1319:
 	j	.L1833
 .L1845:
-	.loc 2 951 0
+	.loc 2 962 0
 	s32i.n	a3, a5, 0
-	.loc 2 952 0
+	.loc 2 963 0
 	movi.n	a10, 0x14
 	j	.L1778
 .LVL1320:
 .L1833:
-	.loc 2 946 0
+	.loc 2 952 0
 	sub	a8, a4, a3
 	bgei	a8, 1, .L1852
-	.loc 2 958 0
+	.loc 2 969 0
 	movi.n	a10, -0x14
 	j	.L1778
 .LVL1321:
 .L1783:
 .LBE112:
 .LBE113:
-	.loc 2 1132 0
+	.loc 2 1149 0
 	sub	a6, a4, a3
 	blti	a6, 2, .L1837
-	.loc 2 1132 0 is_stmt 0 discriminator 2
+	.loc 2 1149 0 is_stmt 0 discriminator 2
 	l32i	a6, a2, 340
 	mov.n	a11, a3
 	mov.n	a10, a2
 	callx8	a6
 .LVL1322:
 	beqz.n	a10, .L1853
-	.loc 2 1132 0 discriminator 3
+	.loc 2 1149 0 discriminator 3
 	addi.n	a3, a3, 2
 .LVL1323:
 	j	.L1932
 .LVL1324:
 .L1853:
-	.loc 2 1132 0 discriminator 4
+	.loc 2 1149 0 discriminator 4
 	l32i	a6, a2, 328
 	mov.n	a11, a3
 	mov.n	a10, a2
 	callx8	a6
 .LVL1325:
 	beqz.n	a10, .L1859
-	.loc 2 1132 0 discriminator 5
+	.loc 2 1149 0 discriminator 5
 	addi.n	a3, a3, 2
 .LVL1326:
 	j	.L1933
 .LVL1327:
 .L1784:
-	.loc 2 1132 0
+	.loc 2 1150 0 is_stmt 1
 	sub	a6, a4, a3
 	blti	a6, 3, .L1837
-	.loc 2 1132 0 discriminator 8
+	.loc 2 1150 0 is_stmt 0 discriminator 2
 	l32i	a6, a2, 344
 	mov.n	a11, a3
 	mov.n	a10, a2
 	callx8	a6
 .LVL1328:
 	beqz.n	a10, .L1856
-	.loc 2 1132 0 discriminator 9
+	.loc 2 1150 0 discriminator 3
 	addi.n	a3, a3, 3
 .LVL1329:
 	j	.L1932
 .LVL1330:
 .L1856:
-	.loc 2 1132 0 discriminator 10
+	.loc 2 1150 0 discriminator 4
 	l32i	a6, a2, 332
 	mov.n	a11, a3
 	mov.n	a10, a2
 	callx8	a6
 .LVL1331:
 	beqz.n	a10, .L1859
-	.loc 2 1132 0 discriminator 11
+	.loc 2 1150 0 discriminator 5
 	addi.n	a3, a3, 3
 .LVL1332:
 	j	.L1933
 .LVL1333:
 .L1785:
-	.loc 2 1132 0
+	.loc 2 1151 0 is_stmt 1
 	sub	a6, a4, a3
 	blti	a6, 4, .L1837
-	.loc 2 1132 0 discriminator 14
+	.loc 2 1151 0 is_stmt 0 discriminator 2
 	l32i	a6, a2, 348
 	mov.n	a11, a3
 	mov.n	a10, a2
 	callx8	a6
 .LVL1334:
 	beqz.n	a10, .L1858
-	.loc 2 1132 0 discriminator 15
+	.loc 2 1151 0 discriminator 3
 	addi.n	a3, a3, 4
 .LVL1335:
 .L1932:
@@ -11472,36 +11485,36 @@ normal_prologTok:
 	j	.L1857
 .LVL1336:
 .L1858:
-	.loc 2 1132 0 discriminator 16
+	.loc 2 1151 0 discriminator 4
 	l32i	a6, a2, 336
 	mov.n	a11, a3
 	mov.n	a10, a2
 	callx8	a6
 .LVL1337:
 	beqz.n	a10, .L1859
-	.loc 2 1132 0 discriminator 17
+	.loc 2 1151 0 discriminator 5
 	addi.n	a3, a3, 4
 .LVL1338:
 	j	.L1933
 .LVL1339:
 .L1793:
-	.loc 2 1137 0 is_stmt 1
+	.loc 2 1156 0 is_stmt 1
 	addi.n	a3, a3, 1
 .LVL1340:
 	j	.L1932
 .LVL1341:
 .L1794:
-	.loc 2 1146 0
+	.loc 2 1165 0
 	addi.n	a3, a3, 1
 .LVL1342:
 .L1933:
-	.loc 2 1145 0
+	.loc 2 1164 0
 	movi.n	a7, 0x13
-	.loc 2 1147 0
+	.loc 2 1166 0
 	j	.L1857
 .LVL1343:
 .L1889:
-	.loc 2 1165 0
+	.loc 2 1184 0
 	l8ui	a8, a3, 0
 	movi.n	a6, 0x1f
 	add.n	a8, a2, a8
@@ -11551,15 +11564,15 @@ normal_prologTok:
 	.word	.L1864
 	.section	.text.normal_prologTok
 .L1866:
-	.loc 2 1166 0 discriminator 2
+	.loc 2 1185 0 discriminator 2
 	addi.n	a6, a3, 1
 .LVL1344:
 	j	.L1871
 .LVL1345:
 .L1860:
-	.loc 2 1166 0 is_stmt 0
+	.loc 2 1185 0 is_stmt 0
 	beqi	a9, 1, .L1837
-	.loc 2 1166 0 discriminator 4
+	.loc 2 1185 0 discriminator 4
 	l32i	a8, a2, 328
 	mov.n	a11, a3
 	mov.n	a10, a2
@@ -11568,15 +11581,15 @@ normal_prologTok:
 	bnez.n	a10, .L1872
 	j	.L1940
 .L1872:
-	.loc 2 1166 0 discriminator 6
+	.loc 2 1185 0 discriminator 6
 	addi.n	a6, a3, 2
 .LVL1347:
 	j	.L1871
 .LVL1348:
 .L1862:
-	.loc 2 1166 0
+	.loc 2 1185 0
 	blti	a9, 3, .L1837
-	.loc 2 1166 0 discriminator 8
+	.loc 2 1185 0 discriminator 8
 	l32i	a8, a2, 332
 	mov.n	a11, a3
 	mov.n	a10, a2
@@ -11585,15 +11598,15 @@ normal_prologTok:
 	bnez.n	a10, .L1873
 	j	.L1940
 .L1873:
-	.loc 2 1166 0 discriminator 10
+	.loc 2 1185 0 discriminator 10
 	addi.n	a6, a3, 3
 .LVL1350:
 	j	.L1871
 .LVL1351:
 .L1863:
-	.loc 2 1166 0
+	.loc 2 1185 0
 	blti	a9, 4, .L1837
-	.loc 2 1166 0 discriminator 12
+	.loc 2 1185 0 discriminator 12
 	l32i	a8, a2, 336
 	mov.n	a11, a3
 	mov.n	a10, a2
@@ -11602,31 +11615,31 @@ normal_prologTok:
 	bnez.n	a10, .L1874
 .LVL1353:
 .L1940:
-	.loc 2 1166 0 discriminator 13
+	.loc 2 1185 0 discriminator 13
 	s32i.n	a3, a5, 0
 	j	.L1778
 .LVL1354:
 .L1874:
-	.loc 2 1166 0 discriminator 14
+	.loc 2 1185 0 discriminator 14
 	addi.n	a6, a3, 4
 .LVL1355:
 	j	.L1871
 .LVL1356:
 .L1864:
-	.loc 2 1170 0 is_stmt 1
+	.loc 2 1195 0 is_stmt 1
 	s32i.n	a3, a5, 0
-	.loc 2 1171 0
+	.loc 2 1196 0
 	mov.n	a10, a7
 	j	.L1778
 .L1867:
-	.loc 2 1175 0
+	.loc 2 1200 0
 	movi.n	a9, 0x12
-	.loc 2 1174 0
+	.loc 2 1199 0
 	addi.n	a6, a3, 1
 .LVL1357:
-	.loc 2 1175 0
+	.loc 2 1200 0
 	beq	a7, a9, .L1876
-	.loc 2 1187 0
+	.loc 2 1212 0
 	addi	a9, a7, -41
 	movi.n	a3, 0x13
 	moveqz	a7, a3, a9
@@ -11634,11 +11647,11 @@ normal_prologTok:
 	j	.L1871
 .LVL1359:
 .L1876:
-	.loc 2 1177 0
+	.loc 2 1202 0
 	sub	a9, a4, a6
 	blti	a9, 1, .L1899
 .LVL1360:
-	.loc 2 1179 0
+	.loc 2 1204 0
 	l8ui	a7, a3, 1
 	movi.n	a10, 0x16
 	add.n	a7, a2, a7
@@ -11658,19 +11671,19 @@ normal_prologTok:
 	bne	a7, a3, .L1900
 .LVL1361:
 .L1945:
-	.loc 2 1180 0 discriminator 1
+	.loc 2 1205 0 discriminator 1
 	s32i.n	a6, a5, 0
 	j	.L1936
 .LVL1362:
 .L1877:
-	.loc 2 1180 0 is_stmt 0 discriminator 2
+	.loc 2 1205 0 is_stmt 0 discriminator 2
 	addi.n	a6, a3, 2
 .LVL1363:
 	j	.L1931
 .L1881:
-	.loc 2 1180 0
+	.loc 2 1205 0
 	beqi	a9, 1, .L1837
-	.loc 2 1180 0 discriminator 4
+	.loc 2 1205 0 discriminator 4
 	l32i	a7, a2, 328
 	mov.n	a11, a6
 	mov.n	a10, a2
@@ -11679,14 +11692,14 @@ normal_prologTok:
 	bnez.n	a10, .L1883
 	j	.L1939
 .L1883:
-	.loc 2 1180 0 discriminator 6
+	.loc 2 1205 0 discriminator 6
 	addi.n	a6, a3, 3
 .LVL1365:
 	j	.L1931
 .L1879:
-	.loc 2 1180 0
+	.loc 2 1205 0
 	blti	a9, 3, .L1837
-	.loc 2 1180 0 discriminator 8
+	.loc 2 1205 0 discriminator 8
 	l32i	a7, a2, 332
 	mov.n	a11, a6
 	mov.n	a10, a2
@@ -11695,18 +11708,18 @@ normal_prologTok:
 	bnez.n	a10, .L1884
 	j	.L1939
 .L1884:
-	.loc 2 1180 0 discriminator 10
+	.loc 2 1205 0 discriminator 10
 	addi.n	a6, a3, 4
 .LVL1367:
 .L1931:
-	.loc 2 1178 0 is_stmt 1 discriminator 10
+	.loc 2 1203 0 is_stmt 1 discriminator 10
 	movi.n	a7, 0x29
-	.loc 2 1180 0 discriminator 10
+	.loc 2 1205 0 discriminator 10
 	j	.L1871
 .L1880:
-	.loc 2 1180 0 is_stmt 0
+	.loc 2 1205 0 is_stmt 0
 	blti	a9, 4, .L1837
-	.loc 2 1180 0 discriminator 12
+	.loc 2 1205 0 discriminator 12
 	l32i	a7, a2, 336
 	mov.n	a11, a6
 	mov.n	a10, a2
@@ -11715,91 +11728,91 @@ normal_prologTok:
 	bnez.n	a10, .L1885
 .LVL1369:
 .L1939:
-	.loc 2 1180 0 discriminator 13
+	.loc 2 1205 0 discriminator 13
 	s32i.n	a6, a5, 0
 	j	.L1778
 .LVL1370:
 .L1885:
-	.loc 2 1180 0 discriminator 14
+	.loc 2 1205 0 discriminator 14
 	addi.n	a6, a3, 5
 .LVL1371:
 	j	.L1931
 .LVL1372:
 .L1870:
-	.loc 2 1193 0 is_stmt 1
+	.loc 2 1218 0 is_stmt 1
 	movi.n	a2, 0x13
 .LVL1373:
 	bne	a7, a2, .L1886
 	j	.L1859
 .L1886:
-	.loc 2 1197 0
+	.loc 2 1222 0
 	addi.n	a3, a3, 1
 .LVL1374:
 	s32i.n	a3, a5, 0
-	.loc 2 1198 0
+	.loc 2 1223 0
 	movi.n	a10, 0x20
 	j	.L1778
 .LVL1375:
 .L1869:
-	.loc 2 1200 0
+	.loc 2 1225 0
 	movi.n	a2, 0x13
 .LVL1376:
 	bne	a7, a2, .L1887
 	j	.L1859
 .L1887:
-	.loc 2 1204 0
+	.loc 2 1229 0
 	addi.n	a3, a3, 1
 .LVL1377:
 	s32i.n	a3, a5, 0
-	.loc 2 1205 0
+	.loc 2 1230 0
 	movi.n	a10, 0x1f
 	j	.L1778
 .LVL1378:
 .L1865:
-	.loc 2 1207 0
+	.loc 2 1232 0
 	movi.n	a2, 0x13
 .LVL1379:
 	bne	a7, a2, .L1888
 	j	.L1859
 .L1888:
-	.loc 2 1211 0
+	.loc 2 1236 0
 	addi.n	a3, a3, 1
 .LVL1380:
 	s32i.n	a3, a5, 0
-	.loc 2 1212 0
+	.loc 2 1237 0
 	movi.n	a10, 0x1e
 	j	.L1778
 .LVL1381:
 .L1859:
-	.loc 2 1214 0
+	.loc 2 1239 0
 	s32i.n	a3, a5, 0
 .L1936:
-	.loc 2 1215 0
+	.loc 2 1240 0
 	movi.n	a10, 0
 	j	.L1778
 .LVL1382:
 .L1900:
-	.loc 2 1182 0
+	.loc 2 1207 0
 	movi.n	a7, 0x13
 .LVL1383:
 .L1871:
-	.loc 2 1178 0
+	.loc 2 1203 0
 	mov.n	a3, a6
 .LVL1384:
 .L1857:
-	.loc 2 1164 0
+	.loc 2 1183 0
 	sub	a9, a4, a3
 	bgei	a9, 1, .L1889
-	.loc 2 1218 0
+	.loc 2 1243 0
 	neg	a10, a7
 	j	.L1778
 .LVL1385:
 .L1899:
-	.loc 2 1177 0
+	.loc 2 1202 0
 	movi.n	a10, -1
 .LVL1386:
 .L1778:
-	.loc 2 1219 0
+	.loc 2 1244 0
 	mov.n	a2, a10
 	retw.n
 .LFE24:
@@ -11822,15 +11835,15 @@ normal_prologTok:
 	.type	normal_contentTok, @function
 normal_contentTok:
 .LFB20:
-	.loc 2 811 0
+	.loc 2 814 0
 .LVL1387:
 	entry	sp, 48
 .LCFI85:
-	.loc 2 813 0
+	.loc 2 816 0
 	movi.n	a10, -4
-	.loc 2 812 0
+	.loc 2 815 0
 	bgeu	a3, a4, .L1947
-	.loc 2 823 0
+	.loc 2 826 0
 	l8ui	a6, a3, 0
 	movi.n	a7, 0xa
 	add.n	a6, a2, a6
@@ -11857,12 +11870,12 @@ normal_contentTok:
 	.word	.L1958
 	.section	.text.normal_contentTok
 .L1951:
-	.loc 2 825 0
+	.loc 2 828 0
 	addi.n	a6, a3, 1
 .LVL1388:
 .LBB126:
 .LBB127:
-	.loc 2 718 0
+	.loc 2 720 0
 	sub	a8, a4, a6
 	bgei	a8, 1, .L1959
 .LVL1389:
@@ -11871,7 +11884,7 @@ normal_contentTok:
 	j	.L1947
 .LVL1390:
 .L1959:
-	.loc 2 719 0
+	.loc 2 721 0
 	l8ui	a7, a3, 1
 	movi.n	a9, 0x18
 	add.n	a7, a2, a7
@@ -11914,17 +11927,17 @@ normal_contentTok:
 	.word	.L2218
 	.section	.text.normal_contentTok
 .L1968:
-	.loc 2 720 0
+	.loc 2 722 0
 	addi.n	a3, a3, 2
 .LVL1391:
 .L1973:
-	.loc 2 754 0
+	.loc 2 755 0
 	movi.n	a6, 0
 .LVL1392:
 	j	.L1970
 .LVL1393:
 .L1961:
-	.loc 2 720 0
+	.loc 2 722 0
 	bnei	a8, 1, .L1971
 .LVL1394:
 .L1974:
@@ -11966,13 +11979,13 @@ normal_contentTok:
 	j	.L2206
 .LVL1404:
 .L1966:
-	.loc 2 722 0
+	.loc 2 724 0
 	addi.n	a7, a3, 2
 .LVL1405:
-	.loc 2 723 0
+	.loc 2 725 0
 	sub	a6, a4, a7
 	blti	a6, 1, .L1977
-	.loc 2 724 0
+	.loc 2 726 0
 	l8ui	a6, a3, 2
 	movi.n	a8, 0x14
 	add.n	a6, a2, a6
@@ -11980,7 +11993,7 @@ normal_contentTok:
 	beq	a6, a8, .L1979
 	movi.n	a8, 0x1b
 	bne	a6, a8, .L2202
-	.loc 2 726 0
+	.loc 2 728 0
 	mov.n	a13, a5
 	mov.n	a12, a4
 	addi.n	a11, a3, 3
@@ -11989,12 +12002,12 @@ normal_contentTok:
 .LVL1406:
 	j	.L1947
 .L1979:
-	.loc 2 728 0
+	.loc 2 730 0
 	addi.n	a3, a3, 3
 .LVL1407:
 .LBB128:
 .LBB129:
-	.loc 2 332 0
+	.loc 2 333 0
 	sub	a4, a4, a3
 .LVL1408:
 	blti	a4, 6, .L1977
@@ -12003,28 +12016,28 @@ normal_contentTok:
 	loop	a2, .L1982_LEND
 .LVL1409:
 .L1982:
-	.loc 2 334 0
+	.loc 2 335 0
 	l8ui	a7, a3, 0
 	l8ui	a6, a4, 0
 	beq	a7, a6, .L1981
 	j	.L1949
 .L1981:
 .LVL1410:
-	.loc 2 333 0
+	.loc 2 334 0
 	addi.n	a3, a3, 1
 .LVL1411:
 	addi.n	a4, a4, 1
 	.L1982_LEND:
-	.loc 2 339 0
-	s32i.n	a3, a5, 0
 	.loc 2 340 0
+	s32i.n	a3, a5, 0
+	.loc 2 341 0
 	movi.n	a10, 8
 	j	.L1947
 .LVL1412:
 .L1965:
 .LBE129:
 .LBE128:
-	.loc 2 734 0
+	.loc 2 735 0
 	mov.n	a13, a5
 	mov.n	a12, a4
 	addi.n	a11, a3, 2
@@ -12033,15 +12046,15 @@ normal_contentTok:
 .LVL1413:
 	j	.L1947
 .L1967:
-	.loc 2 736 0
+	.loc 2 737 0
 	addi.n	a6, a3, 2
 .LVL1414:
 .LBB130:
 .LBB131:
-	.loc 2 422 0
+	.loc 2 423 0
 	sub	a8, a4, a6
 	blti	a8, 1, .L1977
-	.loc 2 423 0
+	.loc 2 424 0
 	l8ui	a7, a3, 2
 	add.n	a7, a2, a7
 	l8ui	a7, a7, 72
@@ -12058,17 +12071,17 @@ normal_contentTok:
 	movi.n	a8, 0x16
 	bne	a7, a8, .L2218
 .L1988:
-	.loc 2 424 0
+	.loc 2 425 0
 	addi.n	a3, a3, 3
 .LVL1415:
 .L1992:
-	.loc 2 430 0
+	.loc 2 431 0
 	movi.n	a6, 0x18
 .LVL1416:
 	j	.L1990
 .LVL1417:
 .L1986:
-	.loc 2 424 0
+	.loc 2 425 0
 	beqi	a8, 1, .L1974
 	l32i	a7, a2, 340
 	mov.n	a11, a6
@@ -12107,7 +12120,7 @@ normal_contentTok:
 	j	.L1947
 .LVL1427:
 .L2015:
-	.loc 2 430 0
+	.loc 2 431 0
 	l8ui	a7, a3, 0
 	add.n	a7, a2, a7
 	l8ui	a7, a7, 72
@@ -12149,7 +12162,7 @@ normal_contentTok:
 	.word	.L1949
 	.section	.text.normal_contentTok
 .L1996:
-	.loc 2 431 0
+	.loc 2 432 0
 	beqi	a8, 1, .L1974
 	l32i	a7, a2, 328
 	mov.n	a11, a3
@@ -12189,10 +12202,10 @@ normal_contentTok:
 .LVL1433:
 	j	.L1990
 .L2000:
-	.loc 2 433 0
+	.loc 2 436 0
 	addi.n	a3, a3, 1
 .LVL1434:
-	.loc 2 434 0
+	.loc 2 437 0
 	movi.n	a7, 0xb
 	movi.n	a8, 0x15
 	movi.n	a9, 9
@@ -12209,7 +12222,7 @@ normal_contentTok:
 	beq	a6, a8, .L2013
 	j	.L1949
 .L2013:
-	.loc 2 433 0
+	.loc 2 436 0
 	addi.n	a3, a3, 1
 .LVL1435:
 .L2009:
@@ -12217,21 +12230,21 @@ normal_contentTok:
 	bgei	a6, 1, .L2014
 	j	.L1977
 .L2003:
-	.loc 2 450 0
+	.loc 2 455 0
 	addi.n	a3, a3, 1
 .LVL1436:
 	j	.L1990
 .L2001:
-	.loc 2 454 0
+	.loc 2 459 0
 	addi.n	a3, a3, 1
 .LVL1437:
 	s32i.n	a3, a5, 0
-	.loc 2 455 0
+	.loc 2 460 0
 	movi.n	a10, 5
 	j	.L1947
 .LVL1438:
 .L1990:
-	.loc 2 429 0
+	.loc 2 430 0
 	sub	a8, a4, a3
 	bgei	a8, 1, .L2015
 	j	.L1977
@@ -12239,7 +12252,7 @@ normal_contentTok:
 .L2120:
 .LBE131:
 .LBE130:
-	.loc 2 746 0
+	.loc 2 747 0
 	l8ui	a7, a3, 0
 	movi.n	a8, 0x18
 	add.n	a7, a2, a7
@@ -12282,7 +12295,7 @@ normal_contentTok:
 	.word	.L1949
 	.section	.text.normal_contentTok
 .L2024:
-	.loc 2 747 0
+	.loc 2 748 0
 	addi.n	a3, a3, 1
 .LVL1440:
 	j	.L1970
@@ -12326,18 +12339,18 @@ normal_contentTok:
 .LVL1446:
 	j	.L1970
 .L2025:
-	.loc 2 750 0
+	.loc 2 751 0
 	beqz.n	a6, .L2031
 	j	.L1949
 .L2031:
 .LVL1447:
-	.loc 2 755 0
+	.loc 2 756 0
 	addi.n	a7, a3, 1
 .LVL1448:
-	.loc 2 756 0
+	.loc 2 757 0
 	sub	a10, a4, a7
 	blti	a10, 1, .L1977
-	.loc 2 757 0
+	.loc 2 758 0
 	l8ui	a9, a3, 1
 	add.n	a9, a2, a9
 	l8ui	a9, a9, 72
@@ -12355,7 +12368,7 @@ normal_contentTok:
 	bne	a9, a8, .L2202
 	j	.L2037
 .L2038:
-	.loc 2 758 0
+	.loc 2 759 0
 	s32i.n	a7, a5, 0
 	j	.L2207
 .L2037:
@@ -12390,12 +12403,12 @@ normal_contentTok:
 	addi.n	a3, a3, 4
 .LVL1455:
 .L2196:
-	.loc 2 754 0
+	.loc 2 755 0
 	movi.n	a6, 1
 	j	.L1970
 .LVL1456:
 .L2033:
-	.loc 2 758 0
+	.loc 2 759 0
 	blti	a10, 4, .L1974
 	l32i	a8, a2, 348
 	mov.n	a11, a7
@@ -12412,10 +12425,10 @@ normal_contentTok:
 	j	.L2196
 .LVL1459:
 .L2021:
-	.loc 2 767 0
+	.loc 2 769 0
 	addi.n	a3, a3, 1
 .LVL1460:
-	.loc 2 769 0
+	.loc 2 771 0
 	movi.n	a8, 0x18
 	l32r	a9, .LC117
 	j	.L2042
@@ -12461,7 +12474,7 @@ normal_contentTok:
 	.word	.L1949
 	.section	.text.normal_contentTok
 .L2049:
-	.loc 2 770 0
+	.loc 2 772 0
 	addi.n	a6, a3, 1
 .LVL1462:
 	j	.L2051
@@ -12496,7 +12509,7 @@ normal_contentTok:
 	bnez.n	a10, .L2051
 	j	.L2204
 .L2048:
-	.loc 2 776 0
+	.loc 2 780 0
 	addi.n	a3, a3, 1
 .LVL1467:
 	j	.L2042
@@ -12509,7 +12522,7 @@ normal_contentTok:
 .L2117:
 .LBB132:
 .LBB133:
-	.loc 2 567 0
+	.loc 2 568 0
 	l8ui	a3, a7, 0
 	movi.n	a8, 0x18
 	add.n	a3, a2, a3
@@ -12552,7 +12565,7 @@ normal_contentTok:
 	.word	.L2202
 	.section	.text.normal_contentTok
 .L2063:
-	.loc 2 568 0
+	.loc 2 569 0
 	addi.n	a7, a7, 1
 	s32i.n	a7, sp, 0
 	j	.L2055
@@ -12598,18 +12611,18 @@ normal_contentTok:
 	s32i.n	a3, sp, 0
 	j	.L2055
 .L2064:
-	.loc 2 571 0
+	.loc 2 572 0
 	beqz.n	a6, .L2070
 	j	.L2202
 .L2070:
 .LVL1474:
-	.loc 2 576 0
+	.loc 2 577 0
 	addi.n	a11, a7, 1
 	s32i.n	a11, sp, 0
-	.loc 2 577 0
+	.loc 2 578 0
 	sub	a9, a4, a11
 	blti	a9, 1, .L1977
-	.loc 2 578 0
+	.loc 2 579 0
 	l8ui	a3, a7, 1
 	add.n	a3, a2, a3
 	l8ui	a3, a3, 72
@@ -12627,7 +12640,7 @@ normal_contentTok:
 	bne	a3, a8, .L2090
 	j	.L2076
 .L2077:
-	.loc 2 579 0
+	.loc 2 580 0
 	s32i.n	a11, a5, 0
 .LVL1475:
 .L2207:
@@ -12676,30 +12689,30 @@ normal_contentTok:
 .L2193:
 	s32i.n	a3, sp, 0
 .L2194:
-	.loc 2 575 0
+	.loc 2 576 0
 	movi.n	a6, 1
 	j	.L2055
 .LVL1480:
 .L2061:
 	l32r	a8, .LC119
 .LBB134:
-	.loc 2 593 0
+	.loc 2 596 0
 	movi.n	a9, 0xe
 	movi.n	a10, 0x15
 .L2172:
-	.loc 2 590 0
+	.loc 2 593 0
 	l32i.n	a7, sp, 0
 	addi.n	a3, a7, 1
 	s32i.n	a3, sp, 0
-	.loc 2 591 0
+	.loc 2 594 0
 	sub	a11, a4, a3
 	blti	a11, 1, .L1977
-	.loc 2 592 0
+	.loc 2 595 0
 	l8ui	a7, a7, 1
 	add.n	a7, a2, a7
 	l8ui	a7, a7, 72
 .LVL1481:
-	.loc 2 593 0
+	.loc 2 596 0
 	beq	a7, a9, .L2062
 	bgeu	a10, a7, .L2081
 	j	.L1949
@@ -12713,19 +12726,19 @@ normal_contentTok:
 .L2085:
 .LBE134:
 .LBB135:
-	.loc 2 613 0
+	.loc 2 615 0
 	l32i.n	a7, sp, 0
 	addi.n	a8, a7, 1
 	s32i.n	a8, sp, 0
-	.loc 2 614 0
+	.loc 2 616 0
 	sub	a3, a4, a8
 	blti	a3, 1, .L1977
-	.loc 2 615 0
+	.loc 2 617 0
 	l8ui	a3, a7, 1
 	add.n	a3, a2, a3
 	l8ui	a3, a3, 72
 .LVL1483:
-	.loc 2 616 0
+	.loc 2 618 0
 	addi	a11, a3, -12
 	bltui	a11, 2, .L2083
 	bgeu	a10, a3, .L2084
@@ -12734,25 +12747,25 @@ normal_contentTok:
 	bbs	a9, a3, .L2085
 	j	.L2219
 .L2083:
-	.loc 2 628 0
+	.loc 2 630 0
 	addi.n	a7, a7, 2
 	s32i.n	a7, sp, 0
 .LBB136:
-	.loc 2 636 0
+	.loc 2 638 0
 	movi.n	a7, 8
 .L2087:
-	.loc 2 632 0
+	.loc 2 634 0
 	l32i.n	a11, sp, 0
 	sub	a9, a4, a11
 	blti	a9, 1, .L1977
-	.loc 2 633 0
+	.loc 2 635 0
 	l8ui	a8, a11, 0
 	add.n	a8, a2, a8
 	l8ui	a8, a8, 72
 .LVL1484:
-	.loc 2 634 0
-	beq	a3, a8, .L2088
 	.loc 2 636 0
+	beq	a3, a8, .L2088
+	.loc 2 638 0
 	bltu	a7, a8, .L2089
 	l32r	a10, .LC120
 	addx4	a8, a8, a10
@@ -12774,7 +12787,7 @@ normal_contentTok:
 	.word	.L2090
 	.section	.text.normal_contentTok
 .L2094:
-	.loc 2 637 0
+	.loc 2 639 0
 	beqi	a9, 1, .L1974
 	l32i	a8, a2, 352
 	mov.n	a10, a2
@@ -12826,7 +12839,7 @@ normal_contentTok:
 .LVL1493:
 .L2093:
 .LBB137:
-	.loc 2 640 0
+	.loc 2 641 0
 	mov.n	a13, sp
 	mov.n	a12, a4
 	addi.n	a11, a11, 1
@@ -12834,11 +12847,11 @@ normal_contentTok:
 	mov.n	a10, a2
 	call8	normal_scanRef
 .LVL1495:
-	.loc 2 641 0
-	bgei	a10, 1, .L2087
 	.loc 2 642 0
-	bnez.n	a10, .L1947
+	bgei	a10, 1, .L2087
 	.loc 2 643 0
+	bnez.n	a10, .L1947
+	.loc 2 644 0
 	l32i.n	a2, sp, 0
 .LVL1496:
 	s32i.n	a2, a5, 0
@@ -12846,7 +12859,7 @@ normal_contentTok:
 .LVL1497:
 .L2089:
 .LBE137:
-	.loc 2 652 0
+	.loc 2 653 0
 	addi.n	a11, a11, 1
 .LVL1498:
 	s32i.n	a11, sp, 0
@@ -12855,14 +12868,14 @@ normal_contentTok:
 .LVL1500:
 .L2088:
 .LBE136:
-	.loc 2 656 0
+	.loc 2 657 0
 	addi.n	a7, a11, 1
 	s32i.n	a7, sp, 0
-	.loc 2 657 0
+	.loc 2 658 0
 	sub	a3, a4, a7
 .LVL1501:
 	blti	a3, 1, .L1977
-	.loc 2 658 0
+	.loc 2 659 0
 	l8ui	a3, a11, 1
 	movi.n	a8, 0xc
 .LVL1502:
@@ -12894,18 +12907,18 @@ normal_contentTok:
 	.word	.L2102
 	.section	.text.normal_contentTok
 .L2102:
-	.loc 2 675 0
+	.loc 2 676 0
 	l32r	a9, .LC122
 .LVL1503:
 .L2171:
-	.loc 2 673 0
+	.loc 2 674 0
 	l32i.n	a7, sp, 0
 	addi.n	a11, a7, 1
 	s32i.n	a11, sp, 0
-	.loc 2 674 0
+	.loc 2 675 0
 	sub	a8, a4, a11
 	blti	a8, 1, .L1977
-	.loc 2 675 0
+	.loc 2 676 0
 	l8ui	a3, a7, 1
 	movi.n	a6, 0x18
 	add.n	a3, a2, a3
@@ -12947,7 +12960,7 @@ normal_contentTok:
 	.word	.L2090
 	.section	.text.normal_contentTok
 .L2111:
-	.loc 2 676 0
+	.loc 2 677 0
 	addi.n	a7, a7, 2
 	s32i.n	a7, sp, 0
 	j	.L2192
@@ -12993,46 +13006,46 @@ normal_contentTok:
 .L2191:
 	s32i.n	a3, sp, 0
 .L2192:
-	.loc 2 610 0
+	.loc 2 612 0
 	movi.n	a6, 0
 	j	.L2055
 .L2104:
-	.loc 2 681 0
+	.loc 2 684 0
 	l32i.n	a2, sp, 0
 .LVL1509:
-	.loc 2 682 0
+	.loc 2 685 0
 	movi.n	a10, 1
-	.loc 2 681 0
+	.loc 2 684 0
 	addi.n	a2, a2, 1
 	s32i.n	a2, a5, 0
 	j	.L1947
 .LVL1510:
 .L2105:
-	.loc 2 685 0
+	.loc 2 688 0
 	l32i.n	a2, sp, 0
 .LVL1511:
 	addi.n	a3, a2, 1
 	s32i.n	a3, sp, 0
-	.loc 2 686 0
+	.loc 2 689 0
 	sub	a4, a4, a3
 .LVL1512:
 	blti	a4, 1, .L1977
-	.loc 2 687 0
+	.loc 2 690 0
 	l8ui	a6, a2, 1
 	movi.n	a4, 0x3e
 	beq	a6, a4, .L2116
 	j	.L1949
 .L2116:
-	.loc 2 691 0
+	.loc 2 694 0
 	addi.n	a2, a2, 2
 	s32i.n	a2, a5, 0
-	.loc 2 692 0
+	.loc 2 695 0
 	movi.n	a10, 3
 	j	.L1947
 .LVL1513:
 .L2055:
 .LBE135:
-	.loc 2 566 0
+	.loc 2 567 0
 	l32i.n	a7, sp, 0
 	sub	a9, a4, a7
 	bgei	a9, 1, .L2117
@@ -13041,44 +13054,44 @@ normal_contentTok:
 .L2042:
 .LBE133:
 .LBE132:
-	.loc 2 768 0
+	.loc 2 770 0
 	sub	a7, a4, a3
 	bgei	a7, 1, .L2118
 	j	.L1977
 .L2022:
-	.loc 2 788 0
+	.loc 2 792 0
 	addi.n	a3, a3, 1
 .LVL1515:
 	s32i.n	a3, a5, 0
-	.loc 2 789 0
+	.loc 2 793 0
 	movi.n	a10, 2
 	j	.L1947
 .LVL1516:
 .L2023:
-	.loc 2 792 0
+	.loc 2 796 0
 	addi.n	a2, a3, 1
 .LVL1517:
-	.loc 2 793 0
+	.loc 2 797 0
 	sub	a4, a4, a2
 .LVL1518:
 	blti	a4, 1, .L1977
-	.loc 2 794 0
+	.loc 2 798 0
 	l8ui	a6, a3, 1
 	movi.n	a4, 0x3e
 	beq	a6, a4, .L2119
-	.loc 2 795 0
+	.loc 2 799 0
 	s32i.n	a2, a5, 0
 	j	.L2203
 .L2119:
-	.loc 2 798 0
+	.loc 2 802 0
 	addi.n	a3, a3, 2
 	s32i.n	a3, a5, 0
-	.loc 2 799 0
+	.loc 2 803 0
 	movi.n	a10, 4
 	j	.L1947
 .LVL1519:
 .L1970:
-	.loc 2 745 0
+	.loc 2 746 0
 	sub	a9, a4, a3
 	bgei	a9, 1, .L2120
 	j	.L1977
@@ -13086,7 +13099,7 @@ normal_contentTok:
 .L1952:
 .LBE127:
 .LBE126:
-	.loc 2 827 0
+	.loc 2 830 0
 	mov.n	a13, a5
 	mov.n	a12, a4
 	addi.n	a11, a3, 1
@@ -13095,78 +13108,78 @@ normal_contentTok:
 .LVL1521:
 	j	.L1947
 .L1957:
-	.loc 2 829 0
+	.loc 2 832 0
 	addi.n	a6, a3, 1
 .LVL1522:
-	.loc 2 830 0
+	.loc 2 833 0
 	sub	a4, a4, a6
 .LVL1523:
-	.loc 2 831 0
+	.loc 2 834 0
 	movi.n	a10, -3
-	.loc 2 830 0
-	blti	a4, 1, .L1947
-	.loc 2 832 0
-	l8ui	a4, a3, 1
 	.loc 2 833 0
+	blti	a4, 1, .L1947
+	.loc 2 835 0
+	l8ui	a4, a3, 1
+	.loc 2 836 0
 	addi.n	a3, a3, 2
-	.loc 2 832 0
+	.loc 2 835 0
 	add.n	a2, a2, a4
 .LVL1524:
 	l8ui	a2, a2, 72
-	.loc 2 833 0
+	.loc 2 836 0
 	addi	a2, a2, -10
 	moveqz	a6, a3, a2
 .LVL1525:
-	.loc 2 834 0
+	.loc 2 837 0
 	s32i.n	a6, a5, 0
 	j	.L2199
 .LVL1526:
 .L1958:
-	.loc 2 837 0
+	.loc 2 840 0
 	addi.n	a3, a3, 1
 .LVL1527:
 	s32i.n	a3, a5, 0
 .LVL1528:
 .L2199:
-	.loc 2 838 0
+	.loc 2 841 0
 	movi.n	a10, 7
 	j	.L1947
 .LVL1529:
 .L1953:
-	.loc 2 840 0
+	.loc 2 843 0
 	addi.n	a6, a3, 1
 .LVL1530:
-	.loc 2 841 0
+	.loc 2 844 0
 	sub	a7, a4, a6
-	.loc 2 842 0
+	.loc 2 845 0
 	movi.n	a10, -5
-	.loc 2 841 0
+	.loc 2 844 0
 	blti	a7, 1, .L1947
-	.loc 2 843 0
+	.loc 2 846 0
 	l8ui	a8, a3, 1
 	movi.n	a7, 0x5d
 	bne	a8, a7, .L2122
-	.loc 2 845 0
+	.loc 2 848 0
 	addi.n	a7, a3, 2
 .LVL1531:
-	.loc 2 846 0
+	.loc 2 849 0
 	sub	a8, a4, a7
 	blti	a8, 1, .L1947
-	.loc 2 848 0
+	.loc 2 851 0
 	l8ui	a8, a3, 2
 	movi.n	a3, 0x3e
 	bne	a8, a3, .L2122
 .LVL1532:
 .L2202:
-	.loc 2 852 0
+	.loc 2 855 0
 	s32i.n	a7, a5, 0
 	j	.L2203
 .LVL1533:
 .L1954:
-	.loc 2 854 0
+	.loc 2 857 0
 	sub	a6, a4, a3
 	blti	a6, 2, .L1974
-	.loc 2 854 0 is_stmt 0 discriminator 2
+	.loc 2 857 0 is_stmt 0 discriminator 2
 	l32i	a6, a2, 352
 	mov.n	a11, a3
 	mov.n	a10, a2
@@ -13176,48 +13189,48 @@ normal_contentTok:
 	beqz.n	a10, .L2122
 	j	.L1949
 .L1955:
-	.loc 2 854 0
+	.loc 2 857 0
 	sub	a6, a4, a3
 	blti	a6, 3, .L1974
-	.loc 2 854 0 discriminator 6
+	.loc 2 857 0 discriminator 6
 	l32i	a6, a2, 356
 	mov.n	a11, a3
 	mov.n	a10, a2
 	callx8	a6
 .LVL1535:
 	bnez.n	a10, .L1949
-	.loc 2 854 0 discriminator 8
+	.loc 2 857 0 discriminator 8
 	addi.n	a6, a3, 3
 .LVL1536:
 	j	.L2122
 .LVL1537:
 .L1956:
-	.loc 2 854 0
+	.loc 2 857 0
 	sub	a6, a4, a3
 	blti	a6, 4, .L1974
-	.loc 2 854 0 discriminator 10
+	.loc 2 857 0 discriminator 10
 	l32i	a6, a2, 360
 	mov.n	a11, a3
 	mov.n	a10, a2
 	callx8	a6
 .LVL1538:
 	bnez.n	a10, .L1949
-	.loc 2 854 0 discriminator 12
+	.loc 2 857 0 discriminator 12
 	addi.n	a6, a3, 4
 .LVL1539:
 	j	.L2122
 .LVL1540:
 .L1949:
-	.loc 2 854 0
+	.loc 2 857 0
 	s32i.n	a3, a5, 0
 	j	.L2203
 .LVL1541:
 .L1948:
-	.loc 2 856 0 is_stmt 1
+	.loc 2 859 0 is_stmt 1
 	addi.n	a6, a3, 1
 .LVL1542:
 .L2122:
-	.loc 2 860 0
+	.loc 2 863 0
 	movi.n	a7, 0xa
 	j	.L2126
 .LVL1543:
@@ -13247,71 +13260,71 @@ normal_contentTok:
 	.word	.L2198
 	.section	.text.normal_contentTok
 .L2131:
-	.loc 2 869 0
+	.loc 2 872 0
 	bnei	a3, 1, .L2134
 	j	.L2198
 .L2134:
-	.loc 2 869 0 is_stmt 0 discriminator 2
+	.loc 2 872 0 is_stmt 0 discriminator 2
 	l32i	a3, a2, 352
 	mov.n	a11, a6
 	mov.n	a10, a2
 	callx8	a3
 .LVL1544:
 	bnez.n	a10, .L2198
-	.loc 2 869 0 discriminator 4
+	.loc 2 872 0 discriminator 4
 	addi.n	a6, a6, 2
 .LVL1545:
 	j	.L2126
 .L2132:
-	.loc 2 869 0
+	.loc 2 873 0 is_stmt 1
 	bgei	a3, 3, .L2137
 	j	.L2198
 .L2137:
-	.loc 2 869 0 discriminator 6
+	.loc 2 873 0 is_stmt 0 discriminator 2
 	l32i	a3, a2, 356
 	mov.n	a11, a6
 	mov.n	a10, a2
 	callx8	a3
 .LVL1546:
 	bnez.n	a10, .L2198
-	.loc 2 869 0 discriminator 8
+	.loc 2 873 0 discriminator 4
 	addi.n	a6, a6, 3
 .LVL1547:
 	j	.L2126
 .L2133:
-	.loc 2 869 0
+	.loc 2 874 0 is_stmt 1
 	bgei	a3, 4, .L2139
 	j	.L2198
 .L2139:
-	.loc 2 869 0 discriminator 10
+	.loc 2 874 0 is_stmt 0 discriminator 2
 	l32i	a3, a2, 360
 	mov.n	a11, a6
 	mov.n	a10, a2
 	callx8	a3
 .LVL1548:
 	bnez.n	a10, .L2198
-	.loc 2 869 0 discriminator 12
+	.loc 2 874 0 discriminator 4
 	addi.n	a6, a6, 4
 .LVL1549:
 	j	.L2126
 .L2130:
-	.loc 2 872 0 is_stmt 1
+	.loc 2 877 0 is_stmt 1
 	beqi	a3, 1, .L2198
-	.loc 2 873 0
+	.loc 2 878 0
 	l8ui	a9, a6, 1
 	movi.n	a8, 0x5d
 	beq	a9, a8, .L2141
 	j	.L2127
 .L2141:
-	.loc 2 877 0
+	.loc 2 882 0
 	beqi	a3, 2, .L2198
-	.loc 2 878 0
+	.loc 2 883 0
 	l8ui	a8, a6, 2
 	movi.n	a3, 0x3e
 	beq	a8, a3, .L2142
 	j	.L2127
 .L2142:
-	.loc 2 882 0
+	.loc 2 887 0
 	addi.n	a6, a6, 2
 .LVL1550:
 .L2218:
@@ -13319,21 +13332,21 @@ normal_contentTok:
 	j	.L2203
 .LVL1551:
 .L2127:
-	.loc 2 897 0
+	.loc 2 902 0
 	addi.n	a6, a6, 1
 .LVL1552:
 .L2126:
-	.loc 2 859 0
+	.loc 2 862 0
 	sub	a3, a4, a6
 	bgei	a3, 1, .L2143
 .L2198:
-	.loc 2 901 0
+	.loc 2 906 0
 	s32i.n	a6, a5, 0
-	.loc 2 902 0
+	.loc 2 907 0
 	movi.n	a10, 6
 .LVL1553:
 .L1947:
-	.loc 2 903 0
+	.loc 2 908 0
 	mov.n	a2, a10
 	retw.n
 .LFE20:
@@ -13443,12 +13456,12 @@ little2_checkPiTarget$isra$5:
 	.type	little2_scanPi, @function
 little2_scanPi:
 .LFB50:
-	.loc 2 268 0
+	.loc 2 267 0
 .LVL1562:
 	entry	sp, 64
 .LCFI87:
 .LVL1563:
-	.loc 2 271 0
+	.loc 2 270 0
 	sub	a8, a4, a3
 	bgei	a8, 2, .L2243
 .LVL1564:
@@ -13457,16 +13470,16 @@ little2_scanPi:
 	j	.L2291
 .LVL1565:
 .L2243:
-	.loc 2 272 0
+	.loc 2 271 0
 	l8ui	a6, a3, 1
 	l8ui	a7, a3, 0
 	bnez.n	a6, .L2245
-	.loc 2 272 0 is_stmt 0 discriminator 1
+	.loc 2 271 0 is_stmt 0 discriminator 1
 	add.n	a9, a2, a7
 	l8ui	a10, a9, 72
 	j	.L2246
 .L2245:
-	.loc 2 272 0 discriminator 2
+	.loc 2 271 0 discriminator 2
 	mov.n	a11, a7
 	mov.n	a10, a6
 	s32i.n	a8, sp, 20
@@ -13475,7 +13488,7 @@ little2_scanPi:
 	l32i.n	a8, sp, 20
 	j	.L2246
 .L2247:
-	.loc 2 273 0 is_stmt 1
+	.loc 2 272 0 is_stmt 1
 	l32r	a8, .LC125
 	add.n	a6, a8, a6
 	l8ui	a6, a6, 0
@@ -13487,16 +13500,16 @@ little2_scanPi:
 	bbs	a6, a7, .L2248
 	j	.L2275
 .L2248:
-	.loc 2 273 0 is_stmt 0 discriminator 2
+	.loc 2 272 0 is_stmt 0 discriminator 2
 	addi.n	a6, a3, 2
 .LVL1567:
-	.loc 2 279 0 is_stmt 1 discriminator 2
+	.loc 2 278 0 is_stmt 1 discriminator 2
 	movi.n	a7, 0x18
-	.loc 2 273 0 discriminator 2
+	.loc 2 272 0 discriminator 2
 	j	.L2249
 .LVL1568:
 .L2251:
-	.loc 2 273 0 is_stmt 0
+	.loc 2 272 0 is_stmt 0
 	bnei	a8, 2, .L2275
 .LVL1569:
 .L2254:
@@ -13508,16 +13521,16 @@ little2_scanPi:
 	j	.L2254
 .LVL1571:
 .L2281:
-	.loc 2 279 0 is_stmt 1
+	.loc 2 278 0 is_stmt 1
 	l8ui	a8, a6, 1
 	l8ui	a9, a6, 0
 	bnez.n	a8, .L2256
-	.loc 2 279 0 is_stmt 0 discriminator 1
+	.loc 2 278 0 is_stmt 0 discriminator 1
 	add.n	a10, a2, a9
 	l8ui	a10, a10, 72
 	j	.L2257
 .L2256:
-	.loc 2 279 0 discriminator 2
+	.loc 2 278 0 discriminator 2
 	mov.n	a11, a9
 	mov.n	a10, a8
 	s32i.n	a8, sp, 20
@@ -13529,7 +13542,7 @@ little2_scanPi:
 	l32i.n	a9, sp, 24
 	l32i.n	a8, sp, 20
 .L2257:
-	.loc 2 279 0 discriminator 4
+	.loc 2 278 0 discriminator 4
 	addi	a10, a10, -5
 	bltu	a7, a10, .L2284
 	l32r	a11, .LC126
@@ -13567,7 +13580,7 @@ little2_scanPi:
 	.word	.L2266
 	.section	.text.little2_scanPi
 .L2266:
-	.loc 2 280 0 is_stmt 1
+	.loc 2 279 0 is_stmt 1
 	l32r	a10, .LC127
 	l32r	a11, .LC124
 	add.n	a8, a10, a8
@@ -13582,110 +13595,110 @@ little2_scanPi:
 	bnez.n	a10, .L2265
 	j	.L2295
 .L2265:
-	.loc 2 280 0 is_stmt 0 discriminator 2
+	.loc 2 279 0 is_stmt 0 discriminator 2
 	addi.n	a6, a6, 2
 .LVL1573:
 	j	.L2249
 .L2261:
-	.loc 2 280 0
+	.loc 2 279 0
 	beqi	a12, 2, .L2254
 	j	.L2296
 .L2262:
 	blti	a12, 4, .L2254
 .L2296:
-	.loc 2 280 0 discriminator 13
+	.loc 2 279 0 discriminator 13
 	s32i.n	a6, a5, 0
 	j	.L2293
 .L2263:
-	.loc 2 282 0 is_stmt 1
+	.loc 2 283 0 is_stmt 1
 	mov.n	a10, a3
 	mov.n	a12, sp
 	mov.n	a11, a6
 	call8	little2_checkPiTarget$isra$5
 .LVL1574:
-	.loc 2 286 0
+	.loc 2 287 0
 	addi.n	a3, a6, 2
 .LVL1575:
-	.loc 2 282 0
+	.loc 2 283 0
 	bnez.n	a10, .L2268
 	j	.L2295
 .LVL1576:
 .L2279:
-	.loc 2 288 0
+	.loc 2 289 0
 	l8ui	a10, a3, 1
 	l8ui	a11, a3, 0
 	bnez.n	a10, .L2269
-	.loc 2 288 0 is_stmt 0 discriminator 1
+	.loc 2 289 0 is_stmt 0 discriminator 1
 	add.n	a11, a2, a11
 	l8ui	a10, a11, 72
 	j	.L2270
 .L2269:
-	.loc 2 288 0 discriminator 2
+	.loc 2 289 0 discriminator 2
 	s32i.n	a9, sp, 24
 	call8	unicode_byte_type
 .LVL1577:
 	l32i.n	a9, sp, 24
 	j	.L2270
 .L2273:
-	.loc 2 289 0 is_stmt 1
+	.loc 2 290 0 is_stmt 1
 	beqi	a6, 2, .L2254
-	.loc 2 289 0 is_stmt 0 discriminator 8
+	.loc 2 290 0 is_stmt 0 discriminator 8
 	addi.n	a6, a3, 3
 .LVL1578:
 	j	.L2272
 .LVL1579:
 .L2274:
-	.loc 2 289 0
+	.loc 2 290 0
 	blti	a6, 4, .L2254
-	.loc 2 289 0 discriminator 12
+	.loc 2 290 0 discriminator 12
 	addi.n	a6, a3, 4
 .LVL1580:
 	j	.L2272
 .LVL1581:
 .L2275:
-	.loc 2 289 0
+	.loc 2 290 0
 	s32i.n	a3, a5, 0
 	j	.L2293
 .L2276:
-	.loc 2 291 0 is_stmt 1
+	.loc 2 292 0 is_stmt 1
 	addi.n	a6, a3, 2
 .LVL1582:
-	.loc 2 292 0
+	.loc 2 293 0
 	sub	a10, a4, a6
 	blti	a10, 2, .L2277
-	.loc 2 293 0
+	.loc 2 294 0
 	l8ui	a10, a3, 3
 	bnez.n	a10, .L2272
-	.loc 2 293 0 is_stmt 0 discriminator 1
+	.loc 2 294 0 is_stmt 0 discriminator 1
 	l8ui	a10, a3, 2
 	bne	a10, a9, .L2272
-	.loc 2 294 0 is_stmt 1
+	.loc 2 295 0 is_stmt 1
 	addi.n	a3, a3, 4
 	s32i.n	a3, a5, 0
 	j	.L2294
 .LVL1583:
 .L2278:
-	.loc 2 299 0
+	.loc 2 300 0
 	addi.n	a6, a3, 2
 .LVL1584:
 .L2272:
-	.loc 2 268 0
+	.loc 2 267 0
 	mov.n	a3, a6
 	j	.L2292
 .L2268:
-	.loc 2 288 0
+	.loc 2 289 0
 	movi.n	a7, 0xf
-	.loc 2 293 0
+	.loc 2 294 0
 	movi.n	a9, 0x3e
 .L2292:
 .LVL1585:
-	.loc 2 287 0
+	.loc 2 288 0
 	sub	a6, a4, a3
 	bgei	a6, 2, .L2279
 	j	.L2277
 .LVL1586:
 .L2264:
-	.loc 2 305 0
+	.loc 2 306 0
 	mov.n	a12, sp
 	mov.n	a11, a6
 	mov.n	a10, a3
@@ -13694,57 +13707,57 @@ little2_scanPi:
 	bnez.n	a10, .L2280
 .LVL1588:
 .L2295:
-	.loc 2 306 0
-	s32i.n	a6, a5, 0
 	.loc 2 307 0
+	s32i.n	a6, a5, 0
+	.loc 2 308 0
 	j	.L2291
 .LVL1589:
 .L2280:
-	.loc 2 309 0
+	.loc 2 310 0
 	addi.n	a2, a6, 2
 .LVL1590:
-	.loc 2 310 0
+	.loc 2 311 0
 	sub	a4, a4, a2
 .LVL1591:
 	blti	a4, 2, .L2277
-	.loc 2 311 0
+	.loc 2 312 0
 	l8ui	a3, a6, 3
 .LVL1592:
 	bnez.n	a3, .L2258
-	.loc 2 311 0 is_stmt 0 discriminator 1
+	.loc 2 312 0 is_stmt 0 discriminator 1
 	l8ui	a4, a6, 2
 	movi.n	a3, 0x3e
 	bne	a4, a3, .L2258
-	.loc 2 312 0 is_stmt 1
+	.loc 2 313 0 is_stmt 1
 	addi.n	a6, a6, 4
 	s32i.n	a6, a5, 0
 .LVL1593:
 .L2294:
-	.loc 2 313 0
+	.loc 2 314 0
 	l32i.n	a10, sp, 0
 	j	.L2291
 .LVL1594:
 .L2284:
-	.loc 2 279 0
+	.loc 2 278 0
 	mov.n	a2, a6
 .LVL1595:
 .L2258:
-	.loc 2 317 0
+	.loc 2 318 0
 	s32i.n	a2, a5, 0
 .LVL1596:
 .L2293:
-	.loc 2 318 0
+	.loc 2 319 0
 	movi.n	a10, 0
 	j	.L2291
 .LVL1597:
 .L2249:
-	.loc 2 278 0
+	.loc 2 277 0
 	sub	a12, a4, a6
 	bgei	a12, 2, .L2281
 	j	.L2277
 .LVL1598:
 .L2246:
-	.loc 2 272 0
+	.loc 2 271 0
 	beqi	a10, 7, .L2253
 	bgei	a10, 8, .L2282
 	beqi	a10, 5, .L2275
@@ -13760,7 +13773,7 @@ little2_scanPi:
 	j	.L2248
 .LVL1599:
 .L2270:
-	.loc 2 288 0
+	.loc 2 289 0
 	bltu	a7, a10, .L2278
 	l32r	a8, .LC128
 	addx4	a10, a10, a8
@@ -13789,7 +13802,7 @@ little2_scanPi:
 	.section	.text.little2_scanPi
 .LVL1600:
 .L2291:
-	.loc 2 322 0
+	.loc 2 323 0
 	mov.n	a2, a10
 	retw.n
 .LFE50:
@@ -13811,50 +13824,50 @@ little2_scanPi:
 	.type	little2_prologTok, @function
 little2_prologTok:
 .LFB63:
-	.loc 2 996 0
+	.loc 2 1008 0
 .LVL1601:
 	entry	sp, 64
 .LCFI88:
-	.loc 2 996 0
+	.loc 2 1008 0
 	s32i.n	a2, sp, 0
 	mov.n	a12, a4
 	mov.n	a6, a5
-	.loc 2 999 0
+	.loc 2 1011 0
 	movi.n	a10, -4
-	.loc 2 998 0
+	.loc 2 1010 0
 	bgeu	a3, a4, .L2457
 .LBB151:
-	.loc 2 1001 0
+	.loc 2 1013 0
 	sub	a4, a4, a3
 .LVL1602:
-	.loc 2 1002 0
+	.loc 2 1014 0
 	bbci	a4, 0, .L2299
-	.loc 2 1003 0
+	.loc 2 1015 0
 	movi.n	a2, -2
 .LVL1603:
 	and	a12, a4, a2
 .LVL1604:
-	.loc 2 1005 0
+	.loc 2 1017 0
 	movi.n	a10, -1
-	.loc 2 1004 0
+	.loc 2 1016 0
 	beqz.n	a12, .L2457
-	.loc 2 1006 0
+	.loc 2 1018 0
 	add.n	a12, a3, a12
 .LVL1605:
 .L2299:
 .LBE151:
-	.loc 2 1009 0
+	.loc 2 1021 0
 	l8ui	a5, a3, 1
 .LVL1606:
 	l8ui	a4, a3, 0
 	bnez.n	a5, .L2300
-	.loc 2 1009 0 is_stmt 0 discriminator 1
+	.loc 2 1021 0 is_stmt 0 discriminator 1
 	l32i.n	a8, sp, 0
 	add.n	a2, a8, a4
 	l8ui	a10, a2, 72
 	j	.L2301
 .L2300:
-	.loc 2 1009 0 discriminator 2
+	.loc 2 1021 0 discriminator 2
 	mov.n	a11, a4
 	mov.n	a10, a5
 	s32i.n	a12, sp, 20
@@ -13863,7 +13876,7 @@ little2_prologTok:
 	l32i.n	a12, sp, 20
 .LVL1608:
 .L2301:
-	.loc 2 1009 0 discriminator 4
+	.loc 2 1021 0 discriminator 4
 	addi	a10, a10, -2
 	movi.n	a2, 0x22
 	bltu	a2, a10, .L2462
@@ -13912,7 +13925,7 @@ little2_prologTok:
 	.word	.L2323
 	.section	.text.little2_prologTok
 .L2312:
-	.loc 2 1011 0 is_stmt 1
+	.loc 2 1023 0 is_stmt 1
 	mov.n	a13, a12
 	mov.n	a14, a6
 	addi.n	a12, a3, 2
@@ -13922,7 +13935,7 @@ little2_prologTok:
 	j	.L2460
 .LVL1610:
 .L2313:
-	.loc 2 1013 0
+	.loc 2 1025 0
 	l32i.n	a11, sp, 0
 	mov.n	a13, a12
 	mov.n	a14, a6
@@ -13935,28 +13948,28 @@ little2_prologTok:
 	j	.L2457
 .LVL1613:
 .L2303:
-	.loc 2 1016 0
+	.loc 2 1027 0
 	addi.n	a5, a3, 2
 .LVL1614:
-	.loc 2 1017 0
+	.loc 2 1028 0
 	sub	a2, a12, a5
 .LBB152:
-	.loc 2 1005 0
+	.loc 2 1017 0
 	movi.n	a10, -1
 .LBE152:
-	.loc 2 1017 0
+	.loc 2 1028 0
 	blti	a2, 2, .L2457
-	.loc 2 1018 0
+	.loc 2 1029 0
 	l8ui	a10, a3, 3
 	l8ui	a11, a3, 2
 	bnez.n	a10, .L2324
-	.loc 2 1018 0 is_stmt 0 discriminator 1
+	.loc 2 1029 0 is_stmt 0 discriminator 1
 	l32i.n	a9, sp, 0
 	add.n	a11, a9, a11
 	l8ui	a10, a11, 72
 	j	.L2325
 .L2324:
-	.loc 2 1018 0 discriminator 2
+	.loc 2 1029 0 discriminator 2
 	s32i.n	a12, sp, 20
 	call8	unicode_byte_type
 .LVL1615:
@@ -13972,24 +13985,24 @@ little2_prologTok:
 	bany	a4, a2, .L2393
 	bbsi	a4, 15, .L2328
 	bbci	a4, 16, .L2326
-	.loc 2 1020 0 is_stmt 1
+	.loc 2 1031 0 is_stmt 1
 	addi.n	a2, a3, 4
 .LVL1617:
 .LBB153:
 .LBB154:
-	.loc 2 179 0
+	.loc 2 174 0
 	sub	a4, a12, a2
 .LBE154:
 .LBE153:
 .LBB157:
-	.loc 2 1005 0
+	.loc 2 1017 0
 	movi.n	a10, -1
 .LBE157:
 .LBB158:
 .LBB155:
-	.loc 2 179 0
+	.loc 2 174 0
 	blti	a4, 2, .L2457
-	.loc 2 180 0
+	.loc 2 175 0
 	l8ui	a10, a3, 5
 	l8ui	a11, a3, 4
 	bnez.n	a10, .L2329
@@ -14015,7 +14028,7 @@ little2_prologTok:
 	beq	a10, a4, .L2332
 	movi.n	a4, 0x1b
 	bne	a10, a4, .L2370
-	.loc 2 182 0
+	.loc 2 177 0
 	l32i.n	a10, sp, 0
 	mov.n	a13, a6
 	addi.n	a11, a3, 6
@@ -14024,14 +14037,14 @@ little2_prologTok:
 	j	.L2457
 .LVL1621:
 .L2334:
-	.loc 2 184 0
+	.loc 2 179 0
 	addi.n	a3, a3, 6
 	s32i.n	a3, a6, 0
-	.loc 2 185 0
+	.loc 2 180 0
 	movi.n	a10, 0x21
 	j	.L2457
 .L2332:
-	.loc 2 188 0
+	.loc 2 183 0
 	addi.n	a3, a3, 6
 .LVL1622:
 	movi.n	a5, 0x1e
@@ -14042,7 +14055,7 @@ little2_prologTok:
 	j	.L2336
 .LVL1625:
 .L2344:
-	.loc 2 195 0
+	.loc 2 190 0
 	l8ui	a10, a3, 1
 	l8ui	a11, a3, 0
 	bnez.n	a10, .L2337
@@ -14067,14 +14080,14 @@ little2_prologTok:
 .LBE155:
 .LBE158:
 .LBB159:
-	.loc 2 1005 0
+	.loc 2 1017 0
 	movi.n	a10, -1
 .LBE159:
 .LBB160:
 .LBB156:
-	.loc 2 197 0
+	.loc 2 192 0
 	blti	a4, 4, .L2457
-	.loc 2 199 0
+	.loc 2 194 0
 	l8ui	a10, a3, 3
 	l8ui	a11, a3, 2
 	bnez.n	a10, .L2342
@@ -14092,10 +14105,10 @@ little2_prologTok:
 	bbc	a2, a10, .L2341
 .LVL1629:
 .L2462:
-	.loc 2 201 0
+	.loc 2 199 0
 	s32i.n	a3, a6, 0
 .L2461:
-	.loc 2 202 0
+	.loc 2 200 0
 	movi.n	a10, 0
 	j	.L2457
 .LVL1630:
@@ -14111,7 +14124,7 @@ little2_prologTok:
 	addi.n	a3, a3, 2
 .LVL1632:
 .L2336:
-	.loc 2 194 0
+	.loc 2 189 0
 	sub	a4, a12, a3
 	bgei	a4, 2, .L2344
 	j	.L2435
@@ -14119,7 +14132,7 @@ little2_prologTok:
 .L2328:
 .LBE156:
 .LBE160:
-	.loc 2 1022 0
+	.loc 2 1033 0
 	l32i.n	a10, sp, 0
 	mov.n	a13, a6
 	addi.n	a11, a3, 4
@@ -14128,70 +14141,70 @@ little2_prologTok:
 	j	.L2457
 .LVL1635:
 .L2326:
-	.loc 2 1032 0
+	.loc 2 1043 0
 	s32i.n	a5, a6, 0
 	j	.L2461
 .LVL1636:
 .L2309:
-	.loc 2 1036 0
+	.loc 2 1047 0
 	addi.n	a2, a3, 2
 	beq	a12, a2, .L2345
 .L2310:
-	.loc 2 1047 0
+	.loc 2 1059 0
 	movi.n	a4, 0x15
 	movi.n	a5, 9
 	j	.L2346
 .L2345:
-	.loc 2 1037 0
+	.loc 2 1048 0
 	s32i.n	a12, a6, 0
-	.loc 2 1039 0
+	.loc 2 1050 0
 	movi.n	a10, -0xf
 	j	.L2457
 .LVL1637:
 .L2347:
-	.loc 2 996 0
+	.loc 2 1008 0
 	mov.n	a3, a2
 .LVL1638:
 .L2346:
-	.loc 2 1044 0
+	.loc 2 1056 0
 	addi.n	a2, a3, 2
 .LVL1639:
-	.loc 2 1045 0
+	.loc 2 1057 0
 	sub	a7, a12, a2
 	blti	a7, 2, .L2348
-	.loc 2 1047 0
+	.loc 2 1059 0
 	l8ui	a10, a2, 1
 	l8ui	a11, a3, 2
 	bnez.n	a10, .L2349
-	.loc 2 1047 0 is_stmt 0 discriminator 1
+	.loc 2 1059 0 is_stmt 0 discriminator 1
 	l32i.n	a8, sp, 0
 	add.n	a11, a8, a11
 	l8ui	a10, a11, 72
 	j	.L2350
 .L2349:
-	.loc 2 1047 0 discriminator 2
+	.loc 2 1059 0 discriminator 2
 	s32i.n	a12, sp, 20
 	call8	unicode_byte_type
 .LVL1640:
 	l32i.n	a12, sp, 20
 .LVL1641:
 .L2350:
-	.loc 2 1047 0 discriminator 4
+	.loc 2 1059 0 discriminator 4
 	beqi	a10, 10, .L2347
 	beq	a10, a4, .L2347
 	bne	a10, a5, .L2348
 	addi.n	a3, a3, 4
-	.loc 2 1052 0 is_stmt 1
+	.loc 2 1065 0 is_stmt 1
 	bne	a12, a3, .L2347
 .L2348:
-	.loc 2 1060 0
+	.loc 2 1073 0
 	s32i.n	a2, a6, 0
-	.loc 2 1061 0
+	.loc 2 1074 0
 	movi.n	a10, 0xf
 	j	.L2457
 .LVL1642:
 .L2319:
-	.loc 2 1063 0
+	.loc 2 1076 0
 	l32i.n	a10, sp, 0
 	mov.n	a13, a6
 	addi.n	a11, a3, 2
@@ -14200,102 +14213,102 @@ little2_prologTok:
 	j	.L2457
 .LVL1644:
 .L2322:
-	.loc 2 1065 0
+	.loc 2 1078 0
 	addi.n	a3, a3, 2
 .LVL1645:
 	s32i.n	a3, a6, 0
-	.loc 2 1066 0
+	.loc 2 1079 0
 	movi.n	a10, 0x26
 	j	.L2457
 .LVL1646:
 .L2315:
-	.loc 2 1068 0
+	.loc 2 1081 0
 	addi.n	a3, a3, 2
 .LVL1647:
 	s32i.n	a3, a6, 0
-	.loc 2 1069 0
+	.loc 2 1082 0
 	movi.n	a10, 0x19
 	j	.L2457
 .LVL1648:
 .L2305:
-	.loc 2 1071 0
+	.loc 2 1084 0
 	addi.n	a2, a3, 2
 .LVL1649:
-	.loc 2 1072 0
+	.loc 2 1085 0
 	sub	a12, a12, a2
 .LVL1650:
-	.loc 2 1073 0
+	.loc 2 1086 0
 	movi.n	a10, -0x1a
-	.loc 2 1072 0
+	.loc 2 1085 0
 	blti	a12, 2, .L2457
-	.loc 2 1074 0
+	.loc 2 1087 0
 	l8ui	a4, a3, 3
 	bnez.n	a4, .L2353
-	.loc 2 1074 0 is_stmt 0 discriminator 1
+	.loc 2 1087 0 is_stmt 0 discriminator 1
 	l8ui	a5, a3, 2
 	movi.n	a4, 0x5d
 	bne	a5, a4, .L2353
 .LBB161:
-	.loc 2 1005 0 is_stmt 1
+	.loc 2 1017 0 is_stmt 1
 	movi.n	a10, -1
 .LBE161:
-	.loc 2 1075 0
+	.loc 2 1088 0
 	blti	a12, 4, .L2457
-	.loc 2 1076 0
+	.loc 2 1089 0
 	l8ui	a4, a3, 5
 	bnez.n	a4, .L2353
-	.loc 2 1076 0 is_stmt 0 discriminator 1
+	.loc 2 1089 0 is_stmt 0 discriminator 1
 	l8ui	a5, a3, 4
 	movi.n	a4, 0x3e
 	bne	a5, a4, .L2353
-	.loc 2 1077 0 is_stmt 1
+	.loc 2 1090 0 is_stmt 1
 	addi.n	a3, a3, 6
 	s32i.n	a3, a6, 0
-	.loc 2 1078 0
+	.loc 2 1091 0
 	movi.n	a10, 0x22
 	j	.L2457
 .L2353:
-	.loc 2 1081 0
+	.loc 2 1094 0
 	s32i.n	a2, a6, 0
-	.loc 2 1082 0
+	.loc 2 1095 0
 	movi.n	a10, 0x1a
 	j	.L2457
 .LVL1651:
 .L2320:
-	.loc 2 1084 0
+	.loc 2 1097 0
 	addi.n	a3, a3, 2
 .LVL1652:
 	s32i.n	a3, a6, 0
-	.loc 2 1085 0
+	.loc 2 1098 0
 	movi.n	a10, 0x17
 	j	.L2457
 .LVL1653:
 .L2321:
-	.loc 2 1087 0
+	.loc 2 1100 0
 	addi.n	a2, a3, 2
 .LVL1654:
-	.loc 2 1088 0
+	.loc 2 1101 0
 	sub	a12, a12, a2
 .LVL1655:
-	.loc 2 1089 0
+	.loc 2 1102 0
 	movi.n	a10, -0x18
-	.loc 2 1088 0
+	.loc 2 1101 0
 	blti	a12, 2, .L2457
-	.loc 2 1090 0
+	.loc 2 1103 0
 	l8ui	a10, a3, 3
 	l8ui	a11, a3, 2
 	bnez.n	a10, .L2354
-	.loc 2 1090 0 is_stmt 0 discriminator 1
+	.loc 2 1103 0 is_stmt 0 discriminator 1
 	l32i.n	a9, sp, 0
 	add.n	a11, a9, a11
 	l8ui	a10, a11, 72
 	j	.L2355
 .L2354:
-	.loc 2 1090 0 discriminator 2
+	.loc 2 1103 0 discriminator 2
 	call8	unicode_byte_type
 .LVL1656:
 .L2355:
-	.loc 2 1090 0 discriminator 4
+	.loc 2 1103 0 discriminator 4
 	addi	a10, a10, -9
 	movi.n	a4, 0x1b
 	bltu	a4, a10, .L2370
@@ -14337,70 +14350,70 @@ little2_prologTok:
 	.word	.L2357
 	.section	.text.little2_prologTok
 .L2360:
-	.loc 2 1092 0 is_stmt 1
+	.loc 2 1105 0 is_stmt 1
 	addi.n	a3, a3, 4
 	s32i.n	a3, a6, 0
-	.loc 2 1093 0
+	.loc 2 1106 0
 	movi.n	a10, 0x24
 	j	.L2457
 .L2359:
-	.loc 2 1095 0
+	.loc 2 1108 0
 	addi.n	a3, a3, 4
 	s32i.n	a3, a6, 0
-	.loc 2 1096 0
+	.loc 2 1109 0
 	movi.n	a10, 0x23
 	j	.L2457
 .L2361:
-	.loc 2 1098 0
+	.loc 2 1111 0
 	addi.n	a3, a3, 4
 	s32i.n	a3, a6, 0
-	.loc 2 1099 0
+	.loc 2 1112 0
 	movi.n	a10, 0x25
 	j	.L2457
 .L2357:
-	.loc 2 1103 0
+	.loc 2 1120 0
 	s32i.n	a2, a6, 0
-	.loc 2 1104 0
+	.loc 2 1121 0
 	movi.n	a10, 0x18
 	j	.L2457
 .LVL1657:
 .L2323:
-	.loc 2 1109 0
+	.loc 2 1126 0
 	addi.n	a3, a3, 2
 .LVL1658:
 	s32i.n	a3, a6, 0
-	.loc 2 1110 0
+	.loc 2 1127 0
 	movi.n	a10, 0x15
 	j	.L2457
 .LVL1659:
 .L2311:
-	.loc 2 1112 0
+	.loc 2 1129 0
 	addi.n	a3, a3, 2
 .LVL1660:
 	s32i.n	a3, a6, 0
-	.loc 2 1113 0
+	.loc 2 1130 0
 	movi.n	a10, 0x11
 	j	.L2457
 .LVL1661:
 .L2314:
-	.loc 2 1115 0
+	.loc 2 1132 0
 	addi.n	a2, a3, 2
 .LVL1662:
 .LBB162:
 .LBB163:
-	.loc 2 939 0
+	.loc 2 945 0
 	sub	a7, a12, a2
 .LBE163:
 .LBE162:
 .LBB173:
-	.loc 2 1005 0
+	.loc 2 1017 0
 	movi.n	a10, -1
 .LBE173:
 .LBB174:
 .LBB164:
-	.loc 2 939 0
+	.loc 2 945 0
 	blti	a7, 2, .L2457
-	.loc 2 940 0
+	.loc 2 946 0
 	l8ui	a4, a3, 3
 	l8ui	a5, a3, 2
 	bnez.n	a4, .L2362
@@ -14418,7 +14431,7 @@ little2_prologTok:
 .LVL1664:
 	j	.L2363
 .L2364:
-	.loc 2 941 0
+	.loc 2 947 0
 	l32r	a7, .LC139
 	add.n	a4, a7, a4
 	l8ui	a4, a4, 0
@@ -14440,12 +14453,12 @@ little2_prologTok:
 .L2365:
 	addi.n	a3, a3, 4
 .LVL1667:
-	.loc 2 947 0
+	.loc 2 953 0
 	movi.n	a5, 0x1f
 	j	.L2366
 .LVL1668:
 .L2368:
-	.loc 2 941 0
+	.loc 2 947 0
 	movi.n	a10, -2
 	beqi	a7, 2, .L2457
 	j	.L2370
@@ -14454,12 +14467,12 @@ little2_prologTok:
 	blti	a7, 4, .L2457
 .LVL1669:
 .L2370:
-	.loc 2 943 0
+	.loc 2 949 0
 	s32i.n	a2, a6, 0
 	j	.L2461
 .LVL1670:
 .L2381:
-	.loc 2 947 0
+	.loc 2 953 0
 	l8ui	a2, a3, 1
 	l8ui	a7, a3, 0
 	bnez.n	a2, .L2371
@@ -14520,7 +14533,7 @@ little2_prologTok:
 	.word	.L2378
 	.section	.text.little2_prologTok
 .L2380:
-	.loc 2 948 0
+	.loc 2 954 0
 	l32r	a10, .LC141
 	srli	a9, a7, 5
 	add.n	a2, a10, a2
@@ -14539,75 +14552,77 @@ little2_prologTok:
 .LVL1673:
 	j	.L2366
 .L2376:
-	.loc 2 941 0
+	.loc 2 947 0
 	movi.n	a10, -2
-	.loc 2 948 0
+	.loc 2 954 0
 	beqi	a4, 2, .L2457
 	j	.L2462
 .L2377:
-	.loc 2 941 0
+	.loc 2 947 0
 	movi.n	a10, -2
-	.loc 2 948 0
+	.loc 2 954 0
 	blti	a4, 4, .L2457
 	j	.L2462
 .L2378:
-	.loc 2 951 0
+	.loc 2 962 0
 	s32i.n	a3, a6, 0
-	.loc 2 952 0
+	.loc 2 963 0
 	movi.n	a10, 0x14
 	j	.L2457
 .L2366:
-	.loc 2 946 0
+	.loc 2 952 0
 	sub	a4, a12, a3
 	bgei	a4, 2, .L2381
-	.loc 2 958 0
+	.loc 2 969 0
 	movi.n	a10, -0x14
 	j	.L2457
 .LVL1674:
 .L2306:
 .LBE164:
 .LBE174:
-	.loc 2 1132 0
+	.loc 2 1149 0
 	sub	a12, a12, a3
 .LVL1675:
 .LBB175:
 .LBB165:
-	.loc 2 941 0
+	.loc 2 947 0
 	movi.n	a10, -2
 .LBE165:
 .LBE175:
-	.loc 2 1132 0
+	.loc 2 1149 0
 	blti	a12, 2, .L2457
 	j	.L2462
 .LVL1676:
 .L2307:
+	.loc 2 1150 0
 	sub	a12, a12, a3
 .LVL1677:
 .LBB176:
 .LBB166:
-	.loc 2 941 0
+	.loc 2 947 0
 	movi.n	a10, -2
 .LBE166:
 .LBE176:
-	.loc 2 1132 0
+	.loc 2 1150 0
 	bgei	a12, 3, .L2462
 	j	.L2457
 .LVL1678:
 .L2308:
+	.loc 2 1151 0
 	sub	a12, a12, a3
 .LVL1679:
 .LBB177:
 .LBB167:
-	.loc 2 941 0
+	.loc 2 947 0
 	movi.n	a10, -2
 .LBE167:
 .LBE177:
-	.loc 2 1132 0
+	.loc 2 1151 0
 	bgei	a12, 4, .L2462
 	j	.L2457
 .LVL1680:
 .L2318:
-	.loc 2 1149 0
+	.loc 2 1168 0
 	srli	a2, a4, 5
 	extui	a7, a4, 0, 5
 	l32r	a4, .LC139
@@ -14619,16 +14634,16 @@ little2_prologTok:
 	l32i.n	a4, a4, 0
 	bbc	a4, a7, .L2384
 .L2459:
-	.loc 2 1150 0
+	.loc 2 1169 0
 	addi.n	a3, a3, 2
 .LVL1681:
-	.loc 2 1151 0
+	.loc 2 1170 0
 	movi.n	a8, 0x12
-	.loc 2 1152 0
+	.loc 2 1171 0
 	j	.L2383
 .LVL1682:
 .L2384:
-	.loc 2 1154 0
+	.loc 2 1173 0
 	l32r	a10, .LC141
 	add.n	a10, a10, a5
 	l8ui	a4, a10, 0
@@ -14637,14 +14652,14 @@ little2_prologTok:
 	l32i.n	a2, a2, 0
 	bbc	a2, a7, .L2462
 .L2458:
-	.loc 2 1155 0
+	.loc 2 1174 0
 	addi.n	a3, a3, 2
 .LVL1683:
-	.loc 2 1156 0
+	.loc 2 1175 0
 	movi.n	a8, 0x13
 .LVL1684:
 .L2383:
-	.loc 2 1179 0
+	.loc 2 1204 0
 	movi.n	a7, 0x16
 	movi.n	a2, 0x18
 	movi.n	a4, 0x1b
@@ -14652,17 +14667,17 @@ little2_prologTok:
 	j	.L2385
 .LVL1685:
 .L2414:
-	.loc 2 1165 0
+	.loc 2 1184 0
 	l8ui	a9, a3, 1
 	l8ui	a14, a3, 0
 	bnez.n	a9, .L2386
-	.loc 2 1165 0 is_stmt 0 discriminator 1
+	.loc 2 1184 0 is_stmt 0 discriminator 1
 	l32i.n	a11, sp, 0
 	add.n	a10, a11, a14
 	l8ui	a10, a10, 72
 	j	.L2387
 .L2386:
-	.loc 2 1165 0 discriminator 2
+	.loc 2 1184 0 discriminator 2
 	mov.n	a11, a14
 	mov.n	a10, a9
 	s32i.n	a8, sp, 4
@@ -14680,7 +14695,7 @@ little2_prologTok:
 	l32i.n	a8, sp, 4
 .LVL1688:
 .L2387:
-	.loc 2 1165 0 discriminator 4
+	.loc 2 1184 0 discriminator 4
 	addi	a10, a10, -5
 	movi.n	a11, 0x1f
 	bltu	a11, a10, .L2462
@@ -14726,7 +14741,7 @@ little2_prologTok:
 	.word	.L2393
 	.section	.text.little2_prologTok
 .L2397:
-	.loc 2 1166 0 is_stmt 1
+	.loc 2 1185 0 is_stmt 1
 	l32r	a10, .LC141
 	add.n	a9, a10, a9
 	l8ui	a9, a9, 0
@@ -14739,11 +14754,11 @@ little2_prologTok:
 	srl	a10, a10
 	extui	a10, a10, 0, 1
 	bnez.n	a10, .L2395
-	.loc 2 1166 0 is_stmt 0 discriminator 1
+	.loc 2 1185 0 is_stmt 0 discriminator 1
 	s32i.n	a3, a6, 0
 	j	.L2457
 .L2395:
-	.loc 2 1166 0 discriminator 2
+	.loc 2 1185 0 discriminator 2
 	addi.n	a9, a3, 2
 .LVL1689:
 	j	.L2400
@@ -14751,38 +14766,38 @@ little2_prologTok:
 .L2391:
 .LBB178:
 .LBB168:
-	.loc 2 941 0 is_stmt 1
+	.loc 2 947 0 is_stmt 1
 	movi.n	a10, -2
 .LBE168:
 .LBE178:
-	.loc 2 1166 0
+	.loc 2 1185 0
 	beqi	a15, 2, .L2457
 	j	.L2462
 .L2392:
 .LBB179:
 .LBB169:
-	.loc 2 941 0
+	.loc 2 947 0
 	movi.n	a10, -2
 .LBE169:
 .LBE179:
-	.loc 2 1166 0
+	.loc 2 1185 0
 	blti	a15, 4, .L2457
 	j	.L2462
 .LVL1691:
 .L2393:
-	.loc 2 1170 0
+	.loc 2 1195 0
 	s32i.n	a3, a6, 0
 	j	.L2463
 .LVL1692:
 .L2396:
-	.loc 2 1175 0
+	.loc 2 1200 0
 	movi.n	a10, 0x12
-	.loc 2 1174 0
+	.loc 2 1199 0
 	addi.n	a9, a3, 2
 .LVL1693:
-	.loc 2 1175 0
+	.loc 2 1200 0
 	beq	a8, a10, .L2402
-	.loc 2 1187 0
+	.loc 2 1212 0
 	addi	a10, a8, -41
 	movi.n	a3, 0x13
 	moveqz	a8, a3, a10
@@ -14790,21 +14805,21 @@ little2_prologTok:
 	j	.L2400
 .LVL1695:
 .L2402:
-	.loc 2 1177 0
+	.loc 2 1202 0
 	sub	a15, a12, a9
 	blti	a15, 2, .L2435
 .LVL1696:
-	.loc 2 1179 0
+	.loc 2 1204 0
 	l8ui	a14, a3, 3
 	l8ui	a8, a3, 2
 	bnez.n	a14, .L2403
-	.loc 2 1179 0 is_stmt 0 discriminator 1
+	.loc 2 1204 0 is_stmt 0 discriminator 1
 	l32i.n	a11, sp, 0
 	add.n	a10, a11, a8
 	l8ui	a10, a10, 72
 	j	.L2404
 .L2403:
-	.loc 2 1179 0 discriminator 2
+	.loc 2 1204 0 discriminator 2
 	mov.n	a11, a8
 	mov.n	a10, a14
 	s32i.n	a8, sp, 4
@@ -14822,7 +14837,7 @@ little2_prologTok:
 	l32i.n	a8, sp, 4
 .LVL1699:
 .L2404:
-	.loc 2 1179 0 discriminator 4
+	.loc 2 1204 0 discriminator 4
 	beq	a10, a7, .L2405
 	blt	a7, a10, .L2406
 	beqi	a10, 6, .L2407
@@ -14833,7 +14848,7 @@ little2_prologTok:
 	blt	a10, a2, .L2436
 	bge	a4, a10, .L2405
 	bne	a10, a5, .L2436
-	.loc 2 1180 0 is_stmt 1
+	.loc 2 1205 0 is_stmt 1
 	l32r	a10, .LC141
 	srli	a11, a8, 5
 	add.n	a14, a10, a14
@@ -14846,107 +14861,107 @@ little2_prologTok:
 	srl	a8, a10
 	extui	a8, a8, 0, 1
 	bnez.n	a8, .L2405
-	.loc 2 1180 0 is_stmt 0 discriminator 1
+	.loc 2 1205 0 is_stmt 0 discriminator 1
 	s32i.n	a9, a6, 0
 	j	.L2463
 .L2405:
-	.loc 2 1180 0 discriminator 2
+	.loc 2 1205 0 discriminator 2
 	addi.n	a9, a3, 4
 .LVL1700:
-	.loc 2 1178 0 is_stmt 1 discriminator 2
+	.loc 2 1203 0 is_stmt 1 discriminator 2
 	movi.n	a8, 0x29
-	.loc 2 1180 0 discriminator 2
+	.loc 2 1205 0 discriminator 2
 	j	.L2400
 .L2407:
 .LBB180:
 .LBB170:
-	.loc 2 941 0
+	.loc 2 947 0
 	movi.n	a10, -2
 .LBE170:
 .LBE180:
-	.loc 2 1180 0
+	.loc 2 1205 0
 	beqi	a15, 2, .L2457
 	j	.L2464
 .L2408:
 .LBB181:
 .LBB171:
-	.loc 2 941 0
+	.loc 2 947 0
 	movi.n	a10, -2
 .LBE171:
 .LBE181:
-	.loc 2 1180 0
+	.loc 2 1205 0
 	blti	a15, 4, .L2457
 .L2464:
-	.loc 2 1180 0 is_stmt 0 discriminator 13
+	.loc 2 1205 0 is_stmt 0 discriminator 13
 	s32i.n	a9, a6, 0
 	j	.L2461
 .LVL1701:
 .L2399:
-	.loc 2 1193 0 is_stmt 1
+	.loc 2 1218 0 is_stmt 1
 	movi.n	a2, 0x13
 	bne	a8, a2, .L2411
 	j	.L2462
 .L2411:
-	.loc 2 1197 0
+	.loc 2 1222 0
 	addi.n	a3, a3, 2
 .LVL1702:
 	s32i.n	a3, a6, 0
-	.loc 2 1198 0
+	.loc 2 1223 0
 	movi.n	a10, 0x20
 	j	.L2457
 .LVL1703:
 .L2398:
-	.loc 2 1200 0
+	.loc 2 1225 0
 	movi.n	a2, 0x13
 	bne	a8, a2, .L2412
 	j	.L2462
 .L2412:
-	.loc 2 1204 0
+	.loc 2 1229 0
 	addi.n	a3, a3, 2
 .LVL1704:
 	s32i.n	a3, a6, 0
-	.loc 2 1205 0
+	.loc 2 1230 0
 	movi.n	a10, 0x1f
 	j	.L2457
 .LVL1705:
 .L2394:
-	.loc 2 1207 0
+	.loc 2 1232 0
 	movi.n	a2, 0x13
 	bne	a8, a2, .L2413
 	j	.L2462
 .L2413:
-	.loc 2 1211 0
+	.loc 2 1236 0
 	addi.n	a3, a3, 2
 .LVL1706:
 	s32i.n	a3, a6, 0
-	.loc 2 1212 0
+	.loc 2 1237 0
 	movi.n	a10, 0x1e
 	j	.L2457
 .LVL1707:
 .L2436:
-	.loc 2 1182 0
+	.loc 2 1207 0
 	movi.n	a8, 0x13
 .LVL1708:
 .L2400:
 	mov.n	a3, a9
 .LVL1709:
 .L2385:
-	.loc 2 1164 0
+	.loc 2 1183 0
 	sub	a15, a12, a3
 	bgei	a15, 2, .L2414
-	.loc 2 1218 0
+	.loc 2 1243 0
 	neg	a10, a8
 	j	.L2457
 .LVL1710:
 .L2435:
-	.loc 2 1177 0
+	.loc 2 1202 0
 	movi.n	a10, -1
 	j	.L2457
 .LVL1711:
 .L2363:
 .LBB182:
 .LBB172:
-	.loc 2 940 0
+	.loc 2 946 0
 	beqi	a10, 7, .L2369
 	bgei	a10, 8, .L2415
 	beqi	a10, 5, .L2370
@@ -14964,7 +14979,7 @@ little2_prologTok:
 .L2457:
 .LBE172:
 .LBE182:
-	.loc 2 1219 0
+	.loc 2 1244 0
 	mov.n	a2, a10
 	retw.n
 .LFE63:
@@ -14990,57 +15005,57 @@ little2_prologTok:
 	.type	little2_contentTok, @function
 little2_contentTok:
 .LFB59:
-	.loc 2 811 0
+	.loc 2 814 0
 .LVL1713:
 	entry	sp, 80
 .LCFI89:
-	.loc 2 811 0
+	.loc 2 814 0
 	s32i.n	a2, sp, 16
 	mov.n	a6, a5
-	.loc 2 813 0
+	.loc 2 816 0
 	movi.n	a2, -4
 .LVL1714:
-	.loc 2 812 0
+	.loc 2 815 0
 	bgeu	a3, a4, .L2693
 .LBB196:
-	.loc 2 815 0
+	.loc 2 818 0
 	sub	a5, a4, a3
 .LVL1715:
-	.loc 2 816 0
+	.loc 2 819 0
 	bbci	a5, 0, .L2468
-	.loc 2 817 0
+	.loc 2 820 0
 	movi.n	a2, -2
 	and	a2, a5, a2
 .LVL1716:
-	.loc 2 820 0
+	.loc 2 823 0
 	add.n	a4, a3, a2
 .LVL1717:
-	.loc 2 818 0
+	.loc 2 821 0
 	bnez.n	a2, .L2468
 .LVL1718:
 .L2483:
-	.loc 2 819 0
+	.loc 2 822 0
 	movi.n	a2, -1
 	retw.n
 .LVL1719:
 .L2468:
 .LBE196:
-	.loc 2 823 0
+	.loc 2 826 0
 	l8ui	a10, a3, 1
 	l8ui	a11, a3, 0
 	bnez.n	a10, .L2470
-	.loc 2 823 0 is_stmt 0 discriminator 1
+	.loc 2 826 0 is_stmt 0 discriminator 1
 	l32i.n	a2, sp, 16
 	add.n	a11, a2, a11
 	l8ui	a2, a11, 72
 	j	.L2471
 .L2470:
-	.loc 2 823 0 discriminator 2
+	.loc 2 826 0 discriminator 2
 	call8	unicode_byte_type
 .LVL1720:
 	mov.n	a2, a10
 .L2471:
-	.loc 2 823 0 discriminator 4
+	.loc 2 826 0 discriminator 4
 	movi.n	a5, 0xa
 	bltu	a5, a2, .L2472
 	l32r	a5, .LC143
@@ -15064,15 +15079,15 @@ little2_contentTok:
 	.word	.L2482
 	.section	.text.little2_contentTok
 .L2475:
-	.loc 2 825 0 is_stmt 1
+	.loc 2 828 0 is_stmt 1
 	addi.n	a5, a3, 2
 .LVL1721:
 .LBB197:
 .LBB198:
-	.loc 2 718 0
+	.loc 2 720 0
 	sub	a7, a4, a5
 	blti	a7, 2, .L2483
-	.loc 2 719 0
+	.loc 2 721 0
 	l8ui	a12, a3, 3
 	l8ui	a8, a3, 2
 	bnez.n	a12, .L2484
@@ -15091,7 +15106,7 @@ little2_contentTok:
 	l32i.n	a12, sp, 32
 	j	.L2485
 .L2486:
-	.loc 2 720 0
+	.loc 2 722 0
 	l32r	a7, .LC145
 	srli	a10, a8, 5
 	add.n	a12, a7, a12
@@ -15110,20 +15125,20 @@ little2_contentTok:
 .L2487:
 	addi.n	a8, a3, 4
 .LVL1723:
-	.loc 2 742 0
+	.loc 2 743 0
 	movi.n	a15, 0
-	.loc 2 746 0
+	.loc 2 747 0
 	movi.n	a7, 0x18
-	.loc 2 757 0
+	.loc 2 758 0
 	movi.n	a3, 0x16
 .LVL1724:
-	.loc 2 747 0
+	.loc 2 748 0
 	l32r	a5, .LC144
 .LVL1725:
 	j	.L2488
 .LVL1726:
 .L2490:
-	.loc 2 720 0
+	.loc 2 722 0
 	bnei	a7, 2, .L2534
 .LVL1727:
 .L2493:
@@ -15134,13 +15149,13 @@ little2_contentTok:
 	blti	a7, 4, .L2493
 	j	.L2534
 .L2494:
-	.loc 2 722 0
+	.loc 2 724 0
 	addi.n	a2, a3, 4
 .LVL1729:
-	.loc 2 723 0
+	.loc 2 725 0
 	sub	a5, a4, a2
 	blti	a5, 2, .L2483
-	.loc 2 724 0
+	.loc 2 726 0
 	l8ui	a10, a3, 5
 	l8ui	a11, a3, 4
 	bnez.n	a10, .L2495
@@ -15156,7 +15171,7 @@ little2_contentTok:
 	beq	a10, a5, .L2498
 	movi.n	a5, 0x1b
 	bne	a10, a5, .L2637
-	.loc 2 726 0
+	.loc 2 728 0
 	l32i.n	a10, sp, 16
 	mov.n	a13, a6
 	mov.n	a12, a4
@@ -15165,12 +15180,12 @@ little2_contentTok:
 .LVL1731:
 	j	.L2716
 .L2498:
-	.loc 2 728 0
+	.loc 2 730 0
 	addi.n	a3, a3, 6
 .LVL1732:
 .LBB199:
 .LBB200:
-	.loc 2 332 0
+	.loc 2 333 0
 	sub	a4, a4, a3
 	movi.n	a2, 0xb
 .LVL1733:
@@ -15180,40 +15195,40 @@ little2_contentTok:
 	loop	a2, .L2502_LEND
 .LVL1734:
 .L2502:
-	.loc 2 334 0
+	.loc 2 335 0
 	l8ui	a5, a3, 1
 	beqz.n	a5, .L2500
 .LVL1735:
 .L2501:
-	.loc 2 335 0
+	.loc 2 336 0
 	s32i.n	a3, a6, 0
 .L2714:
-	.loc 2 336 0
+	.loc 2 337 0
 	movi.n	a2, 0
 	retw.n
 .LVL1736:
 .L2500:
-	.loc 2 334 0
+	.loc 2 335 0
 	l8ui	a7, a3, 0
 	l8ui	a5, a4, 0
 	bne	a7, a5, .L2501
 .LVL1737:
-	.loc 2 333 0
+	.loc 2 334 0
 	addi.n	a3, a3, 2
 .LVL1738:
 	addi.n	a4, a4, 1
 .LVL1739:
 	.L2502_LEND:
-	.loc 2 339 0
-	s32i.n	a3, a6, 0
 	.loc 2 340 0
+	s32i.n	a3, a6, 0
+	.loc 2 341 0
 	movi.n	a2, 8
 	retw.n
 .LVL1740:
 .L2503:
 .LBE200:
 .LBE199:
-	.loc 2 734 0
+	.loc 2 735 0
 	l32i.n	a10, sp, 16
 	mov.n	a13, a6
 	mov.n	a12, a4
@@ -15225,15 +15240,15 @@ little2_contentTok:
 	retw.n
 .LVL1742:
 .L2504:
-	.loc 2 736 0
+	.loc 2 737 0
 	addi.n	a5, a3, 4
 .LVL1743:
 .LBB201:
 .LBB202:
-	.loc 2 422 0
+	.loc 2 423 0
 	sub	a8, a4, a5
 	blti	a8, 2, .L2483
-	.loc 2 423 0
+	.loc 2 424 0
 	l8ui	a7, a3, 5
 	l8ui	a2, a3, 4
 	bnez.n	a7, .L2505
@@ -15250,7 +15265,7 @@ little2_contentTok:
 	l32i.n	a8, sp, 36
 	j	.L2506
 .L2507:
-	.loc 2 424 0
+	.loc 2 425 0
 	l32r	a8, .LC145
 	add.n	a7, a8, a7
 	l8ui	a7, a7, 0
@@ -15268,12 +15283,12 @@ little2_contentTok:
 .LVL1745:
 	addi.n	a3, a3, 6
 .LVL1746:
-	.loc 2 430 0
+	.loc 2 431 0
 	movi.n	a7, 0x18
 	j	.L2509
 .LVL1747:
 .L2511:
-	.loc 2 424 0
+	.loc 2 425 0
 	beqi	a8, 2, .L2493
 	j	.L2534
 .L2512:
@@ -15281,7 +15296,7 @@ little2_contentTok:
 	j	.L2534
 .LVL1748:
 .L2533:
-	.loc 2 430 0
+	.loc 2 431 0
 	l8ui	a2, a3, 1
 	l8ui	a8, a3, 0
 	bnez.n	a2, .L2514
@@ -15334,7 +15349,7 @@ little2_contentTok:
 	.word	.L2524
 	.section	.text.little2_contentTok
 .L2524:
-	.loc 2 431 0
+	.loc 2 432 0
 	l32r	a5, .LC148
 	srli	a10, a8, 5
 	add.n	a2, a5, a2
@@ -15355,10 +15370,10 @@ little2_contentTok:
 	blti	a5, 4, .L2493
 	j	.L2501
 .L2521:
-	.loc 2 433 0
+	.loc 2 436 0
 	addi.n	a3, a3, 2
 .LVL1750:
-	.loc 2 434 0
+	.loc 2 437 0
 	movi.n	a2, 0xb
 	movi.n	a7, 0x15
 	movi.n	a8, 9
@@ -15385,7 +15400,7 @@ little2_contentTok:
 	beq	a10, a7, .L2531
 	j	.L2501
 .L2531:
-	.loc 2 433 0
+	.loc 2 436 0
 	addi.n	a3, a3, 2
 .LVL1752:
 .L2525:
@@ -15393,11 +15408,11 @@ little2_contentTok:
 	bgei	a5, 2, .L2532
 	j	.L2483
 .L2522:
-	.loc 2 454 0
+	.loc 2 459 0
 	addi.n	a3, a3, 2
 .LVL1753:
 	s32i.n	a3, a6, 0
-	.loc 2 455 0
+	.loc 2 460 0
 	movi.n	a2, 5
 	retw.n
 .LVL1754:
@@ -15405,7 +15420,7 @@ little2_contentTok:
 	addi.n	a3, a3, 2
 .LVL1755:
 .L2509:
-	.loc 2 429 0
+	.loc 2 430 0
 	sub	a5, a4, a3
 	bgei	a5, 2, .L2533
 	j	.L2483
@@ -15413,12 +15428,12 @@ little2_contentTok:
 .L2534:
 .LBE202:
 .LBE201:
-	.loc 2 738 0
+	.loc 2 739 0
 	s32i.n	a5, a6, 0
 	j	.L2714
 .LVL1757:
 .L2639:
-	.loc 2 746 0
+	.loc 2 747 0
 	l8ui	a12, a8, 1
 	l8ui	a13, a8, 0
 	bnez.n	a12, .L2535
@@ -15481,7 +15496,7 @@ little2_contentTok:
 	.word	.L2547
 	.section	.text.little2_contentTok
 .L2547:
-	.loc 2 747 0
+	.loc 2 748 0
 	l32r	a9, .LC148
 	srli	a11, a13, 5
 	add.n	a12, a9, a12
@@ -15507,18 +15522,18 @@ little2_contentTok:
 	blti	a14, 4, .L2493
 	j	.L2537
 .L2546:
-	.loc 2 750 0
+	.loc 2 751 0
 	beqz.n	a15, .L2549
 	j	.L2537
 .L2549:
 .LVL1762:
-	.loc 2 755 0
+	.loc 2 756 0
 	addi.n	a12, a8, 2
 .LVL1763:
-	.loc 2 756 0
+	.loc 2 757 0
 	sub	a15, a4, a12
 	blti	a15, 2, .L2483
-	.loc 2 757 0
+	.loc 2 758 0
 	l8ui	a13, a8, 3
 	l8ui	a14, a8, 2
 	bnez.n	a13, .L2550
@@ -15555,7 +15570,7 @@ little2_contentTok:
 	bne	a10, a3, .L2552
 	j	.L2557
 .L2558:
-	.loc 2 758 0
+	.loc 2 759 0
 	l32r	a9, .LC145
 	srli	a11, a14, 5
 	add.n	a13, a9, a13
@@ -15574,26 +15589,26 @@ little2_contentTok:
 .L2557:
 	addi.n	a8, a8, 4
 .LVL1766:
-	.loc 2 754 0
+	.loc 2 755 0
 	movi.n	a15, 1
 	j	.L2488
 .LVL1767:
 .L2556:
-	.loc 2 758 0
+	.loc 2 759 0
 	beqi	a15, 2, .L2493
 	j	.L2552
 .L2553:
 	blti	a15, 4, .L2493
 .L2552:
-	.loc 2 760 0
+	.loc 2 761 0
 	s32i.n	a12, a6, 0
 	j	.L2714
 .LVL1768:
 .L2542:
-	.loc 2 767 0
+	.loc 2 769 0
 	addi.n	a8, a8, 2
 .LVL1769:
-	.loc 2 769 0
+	.loc 2 771 0
 	movi.n	a3, 0x18
 	j	.L2559
 .LVL1770:
@@ -15650,7 +15665,7 @@ little2_contentTok:
 	.word	.L2569
 	.section	.text.little2_contentTok
 .L2569:
-	.loc 2 770 0
+	.loc 2 772 0
 	l32r	a2, .LC145
 	l8ui	a10, a8, 0
 	add.n	a5, a2, a5
@@ -15673,9 +15688,9 @@ little2_contentTok:
 .LVL1775:
 .LBB204:
 .LBB205:
-	.loc 2 564 0
+	.loc 2 565 0
 	movi.n	a7, 0
-	.loc 2 567 0
+	.loc 2 568 0
 	movi.n	a5, 0x18
 	j	.L2570
 .LVL1776:
@@ -15734,7 +15749,7 @@ little2_contentTok:
 	.word	.L2582
 	.section	.text.little2_contentTok
 .L2582:
-	.loc 2 568 0
+	.loc 2 569 0
 	l32r	a10, .LC148
 	add.n	a8, a10, a8
 	l8ui	a8, a8, 0
@@ -15759,18 +15774,18 @@ little2_contentTok:
 	blti	a12, 4, .L2493
 	j	.L2501
 .L2581:
-	.loc 2 571 0
+	.loc 2 572 0
 	beqz.n	a7, .L2584
 	j	.L2501
 .L2584:
 .LVL1778:
-	.loc 2 576 0
+	.loc 2 577 0
 	addi.n	a7, a3, 2
 	s32i.n	a7, sp, 0
-	.loc 2 577 0
+	.loc 2 578 0
 	sub	a12, a4, a7
 	blti	a12, 2, .L2483
-	.loc 2 578 0
+	.loc 2 579 0
 	l8ui	a8, a3, 3
 	l8ui	a2, a3, 2
 	bnez.n	a8, .L2585
@@ -15801,7 +15816,7 @@ little2_contentTok:
 	bne	a10, a2, .L2587
 	j	.L2592
 .L2593:
-	.loc 2 579 0
+	.loc 2 580 0
 	l32r	a10, .LC145
 	add.n	a8, a10, a8
 	l8ui	a8, a8, 0
@@ -15818,35 +15833,35 @@ little2_contentTok:
 .L2592:
 	addi.n	a3, a3, 4
 	s32i.n	a3, sp, 0
-	.loc 2 575 0
+	.loc 2 576 0
 	movi.n	a7, 1
 	j	.L2570
 .L2591:
-	.loc 2 579 0
+	.loc 2 580 0
 	beqi	a12, 2, .L2493
 	j	.L2587
 .L2588:
 	blti	a12, 4, .L2493
 .L2587:
-	.loc 2 581 0
+	.loc 2 582 0
 	s32i.n	a7, a6, 0
 	j	.L2714
 .LVL1780:
 .L2578:
 .LBB206:
-	.loc 2 593 0
+	.loc 2 596 0
 	movi.n	a2, 0xe
 	movi.n	a12, 0x15
 .LVL1781:
 .L2695:
-	.loc 2 590 0
+	.loc 2 593 0
 	l32i.n	a7, sp, 0
 	addi.n	a3, a7, 2
 	s32i.n	a3, sp, 0
-	.loc 2 591 0
+	.loc 2 594 0
 	sub	a10, a4, a3
 	blti	a10, 2, .L2483
-	.loc 2 592 0
+	.loc 2 595 0
 	l8ui	a10, a7, 3
 	l8ui	a11, a7, 2
 	bnez.n	a10, .L2594
@@ -15861,7 +15876,7 @@ little2_contentTok:
 	l32i.n	a12, sp, 32
 .L2595:
 .LVL1783:
-	.loc 2 593 0
+	.loc 2 596 0
 	beq	a10, a2, .L2579
 	bgeu	a12, a10, .L2596
 	j	.L2501
@@ -15875,14 +15890,14 @@ little2_contentTok:
 .L2602:
 .LBE206:
 .LBB207:
-	.loc 2 613 0
+	.loc 2 615 0
 	l32i.n	a3, sp, 0
 	addi.n	a2, a3, 2
 	s32i.n	a2, sp, 0
-	.loc 2 614 0
+	.loc 2 616 0
 	sub	a7, a4, a2
 	blti	a7, 2, .L2483
-	.loc 2 615 0
+	.loc 2 617 0
 	l8ui	a10, a3, 3
 	l8ui	a11, a3, 2
 	bnez.n	a10, .L2598
@@ -15898,7 +15913,7 @@ little2_contentTok:
 	mov.n	a7, a10
 .L2599:
 .LVL1786:
-	.loc 2 616 0
+	.loc 2 618 0
 	addi	a10, a7, -12
 	bltui	a10, 2, .L2600
 	bgeu	a12, a7, .L2601
@@ -15908,18 +15923,18 @@ little2_contentTok:
 	bbs	a9, a7, .L2602
 	j	.L2637
 .L2600:
-	.loc 2 628 0
+	.loc 2 630 0
 	addi.n	a3, a3, 4
 	s32i.n	a3, sp, 0
 .LBB208:
-	.loc 2 636 0
+	.loc 2 638 0
 	movi.n	a3, 8
 .L2604:
-	.loc 2 632 0
+	.loc 2 634 0
 	l32i.n	a2, sp, 0
 	sub	a8, a4, a2
 	blti	a8, 2, .L2483
-	.loc 2 633 0
+	.loc 2 635 0
 	l8ui	a10, a2, 1
 	l8ui	a11, a2, 0
 	bnez.n	a10, .L2605
@@ -15934,9 +15949,9 @@ little2_contentTok:
 	l32i.n	a8, sp, 36
 .L2606:
 .LVL1788:
-	.loc 2 634 0
-	beq	a7, a10, .L2607
 	.loc 2 636 0
+	beq	a7, a10, .L2607
+	.loc 2 638 0
 	bltu	a3, a10, .L2608
 	l32r	a11, .LC153
 	addx4	a10, a10, a11
@@ -15958,7 +15973,7 @@ little2_contentTok:
 	.word	.L2637
 	.section	.text.little2_contentTok
 .L2614:
-	.loc 2 637 0
+	.loc 2 639 0
 	beqi	a8, 2, .L2493
 	addi.n	a2, a2, 3
 	j	.L2711
@@ -15968,7 +15983,7 @@ little2_contentTok:
 	j	.L2711
 .L2612:
 .LBB209:
-	.loc 2 640 0
+	.loc 2 641 0
 	l32i.n	a10, sp, 16
 	mov.n	a13, sp
 .LVL1790:
@@ -15976,12 +15991,12 @@ little2_contentTok:
 	addi.n	a11, a2, 2
 	call8	little2_scanRef
 .LVL1791:
-	.loc 2 641 0
-	bgei	a10, 1, .L2604
 	.loc 2 642 0
+	bgei	a10, 1, .L2604
+	.loc 2 643 0
 	mov.n	a2, a10
 	bnez.n	a10, .L2693
-	.loc 2 643 0
+	.loc 2 644 0
 	l32i.n	a3, sp, 0
 .LVL1792:
 .L2719:
@@ -15990,7 +16005,7 @@ little2_contentTok:
 .LVL1793:
 .L2608:
 .LBE209:
-	.loc 2 652 0
+	.loc 2 653 0
 	addi.n	a2, a2, 2
 .L2711:
 	s32i.n	a2, sp, 0
@@ -15998,14 +16013,14 @@ little2_contentTok:
 .LVL1794:
 .L2607:
 .LBE208:
-	.loc 2 656 0
+	.loc 2 657 0
 	addi.n	a3, a2, 2
 	s32i.n	a3, sp, 0
-	.loc 2 657 0
+	.loc 2 658 0
 	sub	a7, a4, a3
 .LVL1795:
 	blti	a7, 2, .L2483
-	.loc 2 658 0
+	.loc 2 659 0
 	l8ui	a10, a2, 3
 .LVL1796:
 	l8ui	a11, a2, 2
@@ -16044,14 +16059,14 @@ little2_contentTok:
 	.word	.L2694
 	.section	.text.little2_contentTok
 .L2694:
-	.loc 2 673 0
+	.loc 2 674 0
 	l32i.n	a2, sp, 0
 	addi.n	a3, a2, 2
 	s32i.n	a3, sp, 0
-	.loc 2 674 0
+	.loc 2 675 0
 	sub	a7, a4, a3
 	blti	a7, 2, .L2483
-	.loc 2 675 0
+	.loc 2 676 0
 	l8ui	a8, a2, 3
 	l8ui	a12, a2, 2
 	bnez.n	a8, .L2624
@@ -16106,7 +16121,7 @@ little2_contentTok:
 	.word	.L2632
 	.section	.text.little2_contentTok
 .L2632:
-	.loc 2 676 0
+	.loc 2 677 0
 	l32r	a7, .LC145
 	add.n	a8, a7, a8
 	l8ui	a7, a8, 0
@@ -16124,33 +16139,33 @@ little2_contentTok:
 .L2631:
 	addi.n	a2, a2, 4
 	s32i.n	a2, sp, 0
-	.loc 2 610 0
+	.loc 2 612 0
 	movi.n	a7, 0
 	j	.L2570
 .L2629:
-	.loc 2 676 0
+	.loc 2 677 0
 	beqi	a7, 2, .L2493
 	j	.L2501
 .L2630:
 	blti	a7, 4, .L2493
 	j	.L2501
 .L2622:
-	.loc 2 681 0
+	.loc 2 684 0
 	l32i.n	a2, sp, 0
 	addi.n	a2, a2, 2
 	s32i.n	a2, a6, 0
-	.loc 2 682 0
+	.loc 2 685 0
 	movi.n	a2, 1
 	retw.n
 .L2623:
-	.loc 2 685 0
+	.loc 2 688 0
 	l32i.n	a2, sp, 0
 	addi.n	a3, a2, 2
 	s32i.n	a3, sp, 0
-	.loc 2 686 0
+	.loc 2 689 0
 	sub	a4, a4, a3
 	blti	a4, 2, .L2483
-	.loc 2 687 0
+	.loc 2 690 0
 	l8ui	a4, a2, 3
 	bnez.n	a4, .L2501
 	l8ui	a5, a2, 2
@@ -16158,16 +16173,16 @@ little2_contentTok:
 	beq	a5, a4, .L2634
 	j	.L2501
 .L2634:
-	.loc 2 691 0
+	.loc 2 694 0
 	addi.n	a2, a2, 4
 	s32i.n	a2, a6, 0
-	.loc 2 692 0
+	.loc 2 695 0
 	movi.n	a2, 3
 	retw.n
 .L2570:
 .LVL1799:
 .LBE207:
-	.loc 2 566 0
+	.loc 2 567 0
 	l32i.n	a3, sp, 0
 	sub	a12, a4, a3
 	bgei	a12, 2, .L2635
@@ -16176,23 +16191,23 @@ little2_contentTok:
 .L2565:
 .LBE205:
 .LBE204:
-	.loc 2 770 0
+	.loc 2 772 0
 	beqi	a7, 2, .L2493
 	j	.L2537
 .L2566:
 	blti	a7, 4, .L2493
 	j	.L2537
 .L2567:
-	.loc 2 776 0
+	.loc 2 780 0
 	addi.n	a8, a8, 2
 .LVL1801:
 .L2559:
-	.loc 2 768 0
+	.loc 2 770 0
 	sub	a7, a4, a8
 	bgei	a7, 2, .L2636
 	j	.L2483
 .L2543:
-	.loc 2 788 0
+	.loc 2 792 0
 	addi.n	a8, a8, 2
 .LVL1802:
 .L2720:
@@ -16200,13 +16215,13 @@ little2_contentTok:
 	retw.n
 .LVL1803:
 .L2544:
-	.loc 2 792 0
+	.loc 2 796 0
 	addi.n	a2, a8, 2
 .LVL1804:
-	.loc 2 793 0
+	.loc 2 797 0
 	sub	a4, a4, a2
 	blti	a4, 2, .L2483
-	.loc 2 794 0
+	.loc 2 798 0
 	l8ui	a3, a8, 3
 	bnez.n	a3, .L2637
 	l8ui	a4, a8, 2
@@ -16214,26 +16229,26 @@ little2_contentTok:
 	beq	a4, a3, .L2638
 .LVL1805:
 .L2637:
-	.loc 2 795 0
+	.loc 2 799 0
 	s32i.n	a2, a6, 0
 	j	.L2714
 .LVL1806:
 .L2638:
-	.loc 2 798 0
+	.loc 2 802 0
 	addi.n	a8, a8, 4
 	s32i.n	a8, a6, 0
-	.loc 2 799 0
+	.loc 2 803 0
 	movi.n	a2, 4
 .LVL1807:
 	retw.n
 .LVL1808:
 .L2537:
-	.loc 2 801 0
+	.loc 2 805 0
 	s32i.n	a8, a6, 0
 	j	.L2714
 .L2488:
 .LVL1809:
-	.loc 2 745 0
+	.loc 2 746 0
 	sub	a14, a4, a8
 	bgei	a14, 2, .L2639
 	j	.L2483
@@ -16241,7 +16256,7 @@ little2_contentTok:
 .L2476:
 .LBE198:
 .LBE197:
-	.loc 2 827 0
+	.loc 2 830 0
 	l32i.n	a10, sp, 16
 	mov.n	a13, a6
 	mov.n	a12, a4
@@ -16250,20 +16265,20 @@ little2_contentTok:
 .LVL1811:
 	j	.L2716
 .L2481:
-	.loc 2 829 0
+	.loc 2 832 0
 	addi.n	a5, a3, 2
 .LVL1812:
-	.loc 2 830 0
+	.loc 2 833 0
 	sub	a4, a4, a5
-	.loc 2 831 0
+	.loc 2 834 0
 	movi.n	a2, -3
-	.loc 2 830 0
+	.loc 2 833 0
 	blti	a4, 2, .L2693
-	.loc 2 832 0
+	.loc 2 835 0
 	l8ui	a10, a3, 3
 	l8ui	a11, a3, 2
 	bnez.n	a10, .L2640
-	.loc 2 832 0 is_stmt 0 discriminator 1
+	.loc 2 835 0 is_stmt 0 discriminator 1
 	l32i.n	a2, sp, 16
 	movi.n	a4, 1
 	add.n	a11, a2, a11
@@ -16272,7 +16287,7 @@ little2_contentTok:
 	moveqz	a10, a4, a2
 	j	.L2641
 .L2640:
-	.loc 2 832 0 discriminator 2
+	.loc 2 835 0 discriminator 2
 	call8	unicode_byte_type
 .LVL1813:
 	addi	a2, a10, -10
@@ -16281,112 +16296,112 @@ little2_contentTok:
 	movnez	a10, a4, a2
 	extui	a10, a10, 0, 8
 .L2641:
-	.loc 2 833 0 is_stmt 1 discriminator 4
+	.loc 2 836 0 is_stmt 1 discriminator 4
 	addi.n	a3, a3, 4
 	movnez	a5, a3, a10
 .LVL1814:
-	.loc 2 834 0 discriminator 4
+	.loc 2 837 0 discriminator 4
 	s32i.n	a5, a6, 0
 	j	.L2717
 .LVL1815:
 .L2482:
-	.loc 2 837 0
+	.loc 2 840 0
 	addi.n	a3, a3, 2
 .LVL1816:
 	s32i.n	a3, a6, 0
 .LVL1817:
 .L2717:
-	.loc 2 838 0
+	.loc 2 841 0
 	movi.n	a2, 7
 	retw.n
 .LVL1818:
 .L2477:
-	.loc 2 840 0
+	.loc 2 843 0
 	addi.n	a5, a3, 2
 .LVL1819:
-	.loc 2 841 0
+	.loc 2 844 0
 	sub	a7, a4, a5
-	.loc 2 842 0
+	.loc 2 845 0
 	movi.n	a2, -5
-	.loc 2 841 0
+	.loc 2 844 0
 	blti	a7, 2, .L2693
-	.loc 2 843 0
+	.loc 2 846 0
 	l8ui	a2, a3, 3
 	bnez.n	a2, .L2643
-	.loc 2 843 0 is_stmt 0 discriminator 1
+	.loc 2 846 0 is_stmt 0 discriminator 1
 	l8ui	a7, a3, 2
 	movi.n	a2, 0x5d
 	bne	a7, a2, .L2643
-	.loc 2 845 0 is_stmt 1
+	.loc 2 848 0 is_stmt 1
 	addi.n	a7, a3, 4
 .LVL1820:
-	.loc 2 846 0
+	.loc 2 849 0
 	sub	a8, a4, a7
-	.loc 2 842 0
+	.loc 2 845 0
 	movi.n	a2, -5
-	.loc 2 846 0
+	.loc 2 849 0
 	blti	a8, 2, .L2693
-	.loc 2 848 0
+	.loc 2 851 0
 	l8ui	a2, a3, 5
 	bnez.n	a2, .L2643
-	.loc 2 848 0 is_stmt 0 discriminator 1
+	.loc 2 851 0 is_stmt 0 discriminator 1
 	l8ui	a8, a3, 4
 	movi.n	a3, 0x3e
 	bne	a8, a3, .L2643
 .LVL1821:
 .L2718:
-	.loc 2 852 0 is_stmt 1
+	.loc 2 855 0 is_stmt 1
 	s32i.n	a7, a6, 0
-	.loc 2 853 0
+	.loc 2 856 0
 	retw.n
 .LVL1822:
 .L2478:
-	.loc 2 854 0
+	.loc 2 857 0
 	sub	a2, a4, a3
 	blti	a2, 2, .L2493
 	j	.L2472
 .L2479:
 	sub	a2, a4, a3
 	blti	a2, 3, .L2493
-	.loc 2 854 0 is_stmt 0 discriminator 8
+	.loc 2 857 0 is_stmt 0 discriminator 8
 	addi.n	a5, a3, 3
 .LVL1823:
 	j	.L2643
 .LVL1824:
 .L2480:
-	.loc 2 854 0
+	.loc 2 857 0
 	sub	a2, a4, a3
 	blti	a2, 4, .L2493
-	.loc 2 854 0 discriminator 12
+	.loc 2 857 0 discriminator 12
 	addi.n	a5, a3, 4
 .LVL1825:
 	j	.L2643
 .LVL1826:
 .L2472:
-	.loc 2 856 0 is_stmt 1
+	.loc 2 859 0 is_stmt 1
 	addi.n	a5, a3, 2
 .LVL1827:
 .L2643:
-	.loc 2 860 0
+	.loc 2 863 0
 	movi.n	a3, 0xa
-	.loc 2 873 0
-	movi.n	a12, 0x5d
 	.loc 2 878 0
+	movi.n	a12, 0x5d
+	.loc 2 883 0
 	movi.n	a13, 0x3e
 	j	.L2646
 .LVL1828:
 .L2662:
-	.loc 2 860 0
+	.loc 2 863 0
 	l8ui	a10, a5, 1
 	l8ui	a11, a5, 0
 	bnez.n	a10, .L2647
-	.loc 2 860 0 is_stmt 0 discriminator 1
+	.loc 2 863 0 is_stmt 0 discriminator 1
 	l32i.n	a8, sp, 16
 	add.n	a11, a8, a11
 	l8ui	a2, a11, 72
 	j	.L2648
 .L2647:
-	.loc 2 860 0 discriminator 2
+	.loc 2 863 0 discriminator 2
 	s32i.n	a12, sp, 32
 	s32i.n	a13, sp, 28
 	call8	unicode_byte_type
@@ -16396,71 +16411,71 @@ little2_contentTok:
 	l32i.n	a13, sp, 28
 	j	.L2648
 .L2651:
-	.loc 2 869 0 is_stmt 1
+	.loc 2 873 0 is_stmt 1
 	bnei	a7, 2, .L2652
 	j	.L2715
 .L2652:
-	.loc 2 869 0 is_stmt 0 discriminator 4
+	.loc 2 873 0 is_stmt 0 discriminator 2
 	addi.n	a5, a5, 3
 .LVL1830:
 	j	.L2646
 .L2653:
-	.loc 2 869 0
+	.loc 2 874 0 is_stmt 1
 	bgei	a7, 4, .L2654
 	j	.L2713
 .L2654:
-	.loc 2 869 0 discriminator 6
+	.loc 2 874 0 is_stmt 0 discriminator 2
 	addi.n	a5, a5, 4
 .LVL1831:
 	j	.L2646
 .L2655:
-	.loc 2 872 0 is_stmt 1
+	.loc 2 877 0 is_stmt 1
 	blti	a7, 4, .L2713
-	.loc 2 873 0
+	.loc 2 878 0
 	l8ui	a2, a5, 3
 	bnez.n	a2, .L2661
-	.loc 2 873 0 is_stmt 0 discriminator 1
+	.loc 2 878 0 is_stmt 0 discriminator 1
 	l8ui	a2, a5, 2
 	beq	a2, a12, .L2658
 	j	.L2661
 .L2658:
-	.loc 2 877 0 is_stmt 1
+	.loc 2 882 0 is_stmt 1
 	blti	a7, 6, .L2713
-	.loc 2 878 0
+	.loc 2 883 0
 	l8ui	a2, a5, 5
 	bnez.n	a2, .L2661
-	.loc 2 878 0 is_stmt 0 discriminator 1
+	.loc 2 883 0 is_stmt 0 discriminator 1
 	l8ui	a7, a5, 4
 	beq	a7, a13, .L2660
 	j	.L2661
 .L2660:
-	.loc 2 882 0 is_stmt 1
+	.loc 2 887 0 is_stmt 1
 	addi.n	a5, a5, 4
 .LVL1832:
 .L2715:
 	s32i.n	a5, a6, 0
-	.loc 2 883 0
+	.loc 2 888 0
 	retw.n
 .LVL1833:
 .L2661:
-	.loc 2 897 0
+	.loc 2 902 0
 	addi.n	a5, a5, 2
 .LVL1834:
 .L2646:
-	.loc 2 859 0
+	.loc 2 862 0
 	sub	a7, a4, a5
 	bgei	a7, 2, .L2662
 .L2713:
-	.loc 2 901 0
+	.loc 2 906 0
 	s32i.n	a5, a6, 0
-	.loc 2 902 0
+	.loc 2 907 0
 	movi.n	a2, 6
 	retw.n
 .LVL1835:
 .L2485:
 .LBB212:
 .LBB211:
-	.loc 2 719 0
+	.loc 2 721 0
 	addi	a10, a10, -5
 	movi.n	a11, 0x18
 	bltu	a11, a10, .L2534
@@ -16502,7 +16517,7 @@ little2_contentTok:
 .L2506:
 .LBB210:
 .LBB203:
-	.loc 2 423 0
+	.loc 2 424 0
 	beqi	a10, 7, .L2512
 	bgei	a10, 8, .L2664
 	beqi	a10, 5, .L2534
@@ -16522,7 +16537,7 @@ little2_contentTok:
 .LBE210:
 .LBE211:
 .LBE212:
-	.loc 2 860 0
+	.loc 2 863 0
 	bltu	a3, a2, .L2661
 	l32r	a9, .LC157
 	addx4	a10, a2, a9
@@ -16546,7 +16561,7 @@ little2_contentTok:
 	.section	.text.little2_contentTok
 .LVL1838:
 .L2693:
-	.loc 2 903 0
+	.loc 2 908 0
 	retw.n
 .LFE59:
 	.size	little2_contentTok, .-little2_contentTok
@@ -16655,12 +16670,12 @@ big2_checkPiTarget$isra$8:
 	.type	big2_scanPi, @function
 big2_scanPi:
 .LFB78:
-	.loc 2 268 0
+	.loc 2 267 0
 .LVL1847:
 	entry	sp, 64
 .LCFI91:
 .LVL1848:
-	.loc 2 271 0
+	.loc 2 270 0
 	sub	a8, a4, a3
 	bgei	a8, 2, .L2740
 .LVL1849:
@@ -16669,16 +16684,16 @@ big2_scanPi:
 	j	.L2788
 .LVL1850:
 .L2740:
-	.loc 2 272 0
+	.loc 2 271 0
 	l8ui	a6, a3, 0
 	l8ui	a7, a3, 1
 	bnez.n	a6, .L2742
-	.loc 2 272 0 is_stmt 0 discriminator 1
+	.loc 2 271 0 is_stmt 0 discriminator 1
 	add.n	a9, a2, a7
 	l8ui	a10, a9, 72
 	j	.L2743
 .L2742:
-	.loc 2 272 0 discriminator 2
+	.loc 2 271 0 discriminator 2
 	mov.n	a11, a7
 	mov.n	a10, a6
 	s32i.n	a8, sp, 20
@@ -16687,7 +16702,7 @@ big2_scanPi:
 	l32i.n	a8, sp, 20
 	j	.L2743
 .L2744:
-	.loc 2 273 0 is_stmt 1
+	.loc 2 272 0 is_stmt 1
 	l32r	a8, .LC159
 	add.n	a6, a8, a6
 	l8ui	a6, a6, 0
@@ -16699,16 +16714,16 @@ big2_scanPi:
 	bbs	a6, a7, .L2745
 	j	.L2772
 .L2745:
-	.loc 2 273 0 is_stmt 0 discriminator 2
+	.loc 2 272 0 is_stmt 0 discriminator 2
 	addi.n	a6, a3, 2
 .LVL1852:
-	.loc 2 279 0 is_stmt 1 discriminator 2
+	.loc 2 278 0 is_stmt 1 discriminator 2
 	movi.n	a7, 0x18
-	.loc 2 273 0 discriminator 2
+	.loc 2 272 0 discriminator 2
 	j	.L2746
 .LVL1853:
 .L2748:
-	.loc 2 273 0 is_stmt 0
+	.loc 2 272 0 is_stmt 0
 	bnei	a8, 2, .L2772
 .LVL1854:
 .L2751:
@@ -16720,16 +16735,16 @@ big2_scanPi:
 	j	.L2751
 .LVL1856:
 .L2778:
-	.loc 2 279 0 is_stmt 1
+	.loc 2 278 0 is_stmt 1
 	l8ui	a8, a6, 0
 	l8ui	a9, a6, 1
 	bnez.n	a8, .L2753
-	.loc 2 279 0 is_stmt 0 discriminator 1
+	.loc 2 278 0 is_stmt 0 discriminator 1
 	add.n	a10, a2, a9
 	l8ui	a10, a10, 72
 	j	.L2754
 .L2753:
-	.loc 2 279 0 discriminator 2
+	.loc 2 278 0 discriminator 2
 	mov.n	a11, a9
 	mov.n	a10, a8
 	s32i.n	a8, sp, 20
@@ -16741,7 +16756,7 @@ big2_scanPi:
 	l32i.n	a9, sp, 24
 	l32i.n	a8, sp, 20
 .L2754:
-	.loc 2 279 0 discriminator 4
+	.loc 2 278 0 discriminator 4
 	addi	a10, a10, -5
 	bltu	a7, a10, .L2781
 	l32r	a11, .LC160
@@ -16779,7 +16794,7 @@ big2_scanPi:
 	.word	.L2763
 	.section	.text.big2_scanPi
 .L2763:
-	.loc 2 280 0 is_stmt 1
+	.loc 2 279 0 is_stmt 1
 	l32r	a10, .LC161
 	l32r	a11, .LC158
 	add.n	a8, a10, a8
@@ -16794,110 +16809,110 @@ big2_scanPi:
 	bnez.n	a10, .L2762
 	j	.L2792
 .L2762:
-	.loc 2 280 0 is_stmt 0 discriminator 2
+	.loc 2 279 0 is_stmt 0 discriminator 2
 	addi.n	a6, a6, 2
 .LVL1858:
 	j	.L2746
 .L2758:
-	.loc 2 280 0
+	.loc 2 279 0
 	beqi	a12, 2, .L2751
 	j	.L2793
 .L2759:
 	blti	a12, 4, .L2751
 .L2793:
-	.loc 2 280 0 discriminator 13
+	.loc 2 279 0 discriminator 13
 	s32i.n	a6, a5, 0
 	j	.L2790
 .L2760:
-	.loc 2 282 0 is_stmt 1
+	.loc 2 283 0 is_stmt 1
 	mov.n	a10, a3
 	mov.n	a12, sp
 	mov.n	a11, a6
 	call8	big2_checkPiTarget$isra$8
 .LVL1859:
-	.loc 2 286 0
+	.loc 2 287 0
 	addi.n	a3, a6, 2
 .LVL1860:
-	.loc 2 282 0
+	.loc 2 283 0
 	bnez.n	a10, .L2765
 	j	.L2792
 .LVL1861:
 .L2776:
-	.loc 2 288 0
+	.loc 2 289 0
 	l8ui	a10, a3, 0
 	l8ui	a11, a3, 1
 	bnez.n	a10, .L2766
-	.loc 2 288 0 is_stmt 0 discriminator 1
+	.loc 2 289 0 is_stmt 0 discriminator 1
 	add.n	a11, a2, a11
 	l8ui	a10, a11, 72
 	j	.L2767
 .L2766:
-	.loc 2 288 0 discriminator 2
+	.loc 2 289 0 discriminator 2
 	s32i.n	a9, sp, 24
 	call8	unicode_byte_type
 .LVL1862:
 	l32i.n	a9, sp, 24
 	j	.L2767
 .L2770:
-	.loc 2 289 0 is_stmt 1
+	.loc 2 290 0 is_stmt 1
 	beqi	a6, 2, .L2751
-	.loc 2 289 0 is_stmt 0 discriminator 8
+	.loc 2 290 0 is_stmt 0 discriminator 8
 	addi.n	a6, a3, 3
 .LVL1863:
 	j	.L2769
 .LVL1864:
 .L2771:
-	.loc 2 289 0
+	.loc 2 290 0
 	blti	a6, 4, .L2751
-	.loc 2 289 0 discriminator 12
+	.loc 2 290 0 discriminator 12
 	addi.n	a6, a3, 4
 .LVL1865:
 	j	.L2769
 .LVL1866:
 .L2772:
-	.loc 2 289 0
+	.loc 2 290 0
 	s32i.n	a3, a5, 0
 	j	.L2790
 .L2773:
-	.loc 2 291 0 is_stmt 1
+	.loc 2 292 0 is_stmt 1
 	addi.n	a6, a3, 2
 .LVL1867:
-	.loc 2 292 0
+	.loc 2 293 0
 	sub	a10, a4, a6
 	blti	a10, 2, .L2774
-	.loc 2 293 0
+	.loc 2 294 0
 	l8ui	a10, a3, 2
 	bnez.n	a10, .L2769
-	.loc 2 293 0 is_stmt 0 discriminator 1
+	.loc 2 294 0 is_stmt 0 discriminator 1
 	l8ui	a10, a3, 3
 	bne	a10, a9, .L2769
-	.loc 2 294 0 is_stmt 1
+	.loc 2 295 0 is_stmt 1
 	addi.n	a3, a3, 4
 	s32i.n	a3, a5, 0
 	j	.L2791
 .LVL1868:
 .L2775:
-	.loc 2 299 0
+	.loc 2 300 0
 	addi.n	a6, a3, 2
 .LVL1869:
 .L2769:
-	.loc 2 268 0
+	.loc 2 267 0
 	mov.n	a3, a6
 	j	.L2789
 .L2765:
-	.loc 2 288 0
+	.loc 2 289 0
 	movi.n	a7, 0xf
-	.loc 2 293 0
+	.loc 2 294 0
 	movi.n	a9, 0x3e
 .L2789:
 .LVL1870:
-	.loc 2 287 0
+	.loc 2 288 0
 	sub	a6, a4, a3
 	bgei	a6, 2, .L2776
 	j	.L2774
 .LVL1871:
 .L2761:
-	.loc 2 305 0
+	.loc 2 306 0
 	mov.n	a12, sp
 	mov.n	a11, a6
 	mov.n	a10, a3
@@ -16906,57 +16921,57 @@ big2_scanPi:
 	bnez.n	a10, .L2777
 .LVL1873:
 .L2792:
-	.loc 2 306 0
-	s32i.n	a6, a5, 0
 	.loc 2 307 0
+	s32i.n	a6, a5, 0
+	.loc 2 308 0
 	j	.L2788
 .LVL1874:
 .L2777:
-	.loc 2 309 0
+	.loc 2 310 0
 	addi.n	a2, a6, 2
 .LVL1875:
-	.loc 2 310 0
+	.loc 2 311 0
 	sub	a4, a4, a2
 .LVL1876:
 	blti	a4, 2, .L2774
-	.loc 2 311 0
+	.loc 2 312 0
 	l8ui	a3, a6, 2
 .LVL1877:
 	bnez.n	a3, .L2755
-	.loc 2 311 0 is_stmt 0 discriminator 1
+	.loc 2 312 0 is_stmt 0 discriminator 1
 	l8ui	a4, a6, 3
 	movi.n	a3, 0x3e
 	bne	a4, a3, .L2755
-	.loc 2 312 0 is_stmt 1
+	.loc 2 313 0 is_stmt 1
 	addi.n	a6, a6, 4
 	s32i.n	a6, a5, 0
 .LVL1878:
 .L2791:
-	.loc 2 313 0
+	.loc 2 314 0
 	l32i.n	a10, sp, 0
 	j	.L2788
 .LVL1879:
 .L2781:
-	.loc 2 279 0
+	.loc 2 278 0
 	mov.n	a2, a6
 .LVL1880:
 .L2755:
-	.loc 2 317 0
+	.loc 2 318 0
 	s32i.n	a2, a5, 0
 .LVL1881:
 .L2790:
-	.loc 2 318 0
+	.loc 2 319 0
 	movi.n	a10, 0
 	j	.L2788
 .LVL1882:
 .L2746:
-	.loc 2 278 0
+	.loc 2 277 0
 	sub	a12, a4, a6
 	bgei	a12, 2, .L2778
 	j	.L2774
 .LVL1883:
 .L2743:
-	.loc 2 272 0
+	.loc 2 271 0
 	beqi	a10, 7, .L2750
 	bgei	a10, 8, .L2779
 	beqi	a10, 5, .L2772
@@ -16972,7 +16987,7 @@ big2_scanPi:
 	j	.L2745
 .LVL1884:
 .L2767:
-	.loc 2 288 0
+	.loc 2 289 0
 	bltu	a7, a10, .L2775
 	l32r	a8, .LC162
 	addx4	a10, a10, a8
@@ -17001,7 +17016,7 @@ big2_scanPi:
 	.section	.text.big2_scanPi
 .LVL1885:
 .L2788:
-	.loc 2 322 0
+	.loc 2 323 0
 	mov.n	a2, a10
 	retw.n
 .LFE78:
@@ -17023,50 +17038,50 @@ big2_scanPi:
 	.type	big2_prologTok, @function
 big2_prologTok:
 .LFB91:
-	.loc 2 996 0
+	.loc 2 1008 0
 .LVL1886:
 	entry	sp, 64
 .LCFI92:
-	.loc 2 996 0
+	.loc 2 1008 0
 	s32i.n	a2, sp, 0
 	mov.n	a12, a4
 	mov.n	a6, a5
-	.loc 2 999 0
+	.loc 2 1011 0
 	movi.n	a10, -4
-	.loc 2 998 0
+	.loc 2 1010 0
 	bgeu	a3, a4, .L2954
 .LBB226:
-	.loc 2 1001 0
+	.loc 2 1013 0
 	sub	a4, a4, a3
 .LVL1887:
-	.loc 2 1002 0
+	.loc 2 1014 0
 	bbci	a4, 0, .L2796
-	.loc 2 1003 0
+	.loc 2 1015 0
 	movi.n	a2, -2
 .LVL1888:
 	and	a12, a4, a2
 .LVL1889:
-	.loc 2 1005 0
+	.loc 2 1017 0
 	movi.n	a10, -1
-	.loc 2 1004 0
+	.loc 2 1016 0
 	beqz.n	a12, .L2954
-	.loc 2 1006 0
+	.loc 2 1018 0
 	add.n	a12, a3, a12
 .LVL1890:
 .L2796:
 .LBE226:
-	.loc 2 1009 0
+	.loc 2 1021 0
 	l8ui	a5, a3, 0
 .LVL1891:
 	l8ui	a4, a3, 1
 	bnez.n	a5, .L2797
-	.loc 2 1009 0 is_stmt 0 discriminator 1
+	.loc 2 1021 0 is_stmt 0 discriminator 1
 	l32i.n	a8, sp, 0
 	add.n	a2, a8, a4
 	l8ui	a10, a2, 72
 	j	.L2798
 .L2797:
-	.loc 2 1009 0 discriminator 2
+	.loc 2 1021 0 discriminator 2
 	mov.n	a11, a4
 	mov.n	a10, a5
 	s32i.n	a12, sp, 20
@@ -17075,7 +17090,7 @@ big2_prologTok:
 	l32i.n	a12, sp, 20
 .LVL1893:
 .L2798:
-	.loc 2 1009 0 discriminator 4
+	.loc 2 1021 0 discriminator 4
 	addi	a10, a10, -2
 	movi.n	a2, 0x22
 	bltu	a2, a10, .L2959
@@ -17124,7 +17139,7 @@ big2_prologTok:
 	.word	.L2820
 	.section	.text.big2_prologTok
 .L2809:
-	.loc 2 1011 0 is_stmt 1
+	.loc 2 1023 0 is_stmt 1
 	mov.n	a13, a12
 	mov.n	a14, a6
 	addi.n	a12, a3, 2
@@ -17134,7 +17149,7 @@ big2_prologTok:
 	j	.L2957
 .LVL1895:
 .L2810:
-	.loc 2 1013 0
+	.loc 2 1025 0
 	l32i.n	a11, sp, 0
 	mov.n	a13, a12
 	mov.n	a14, a6
@@ -17147,28 +17162,28 @@ big2_prologTok:
 	j	.L2954
 .LVL1898:
 .L2800:
-	.loc 2 1016 0
+	.loc 2 1027 0
 	addi.n	a5, a3, 2
 .LVL1899:
-	.loc 2 1017 0
+	.loc 2 1028 0
 	sub	a2, a12, a5
 .LBB227:
-	.loc 2 1005 0
+	.loc 2 1017 0
 	movi.n	a10, -1
 .LBE227:
-	.loc 2 1017 0
+	.loc 2 1028 0
 	blti	a2, 2, .L2954
-	.loc 2 1018 0
+	.loc 2 1029 0
 	l8ui	a10, a3, 2
 	l8ui	a11, a3, 3
 	bnez.n	a10, .L2821
-	.loc 2 1018 0 is_stmt 0 discriminator 1
+	.loc 2 1029 0 is_stmt 0 discriminator 1
 	l32i.n	a9, sp, 0
 	add.n	a11, a9, a11
 	l8ui	a10, a11, 72
 	j	.L2822
 .L2821:
-	.loc 2 1018 0 discriminator 2
+	.loc 2 1029 0 discriminator 2
 	s32i.n	a12, sp, 20
 	call8	unicode_byte_type
 .LVL1900:
@@ -17184,24 +17199,24 @@ big2_prologTok:
 	bany	a4, a2, .L2890
 	bbsi	a4, 15, .L2825
 	bbci	a4, 16, .L2823
-	.loc 2 1020 0 is_stmt 1
+	.loc 2 1031 0 is_stmt 1
 	addi.n	a2, a3, 4
 .LVL1902:
 .LBB228:
 .LBB229:
-	.loc 2 179 0
+	.loc 2 174 0
 	sub	a4, a12, a2
 .LBE229:
 .LBE228:
 .LBB232:
-	.loc 2 1005 0
+	.loc 2 1017 0
 	movi.n	a10, -1
 .LBE232:
 .LBB233:
 .LBB230:
-	.loc 2 179 0
+	.loc 2 174 0
 	blti	a4, 2, .L2954
-	.loc 2 180 0
+	.loc 2 175 0
 	l8ui	a10, a3, 4
 	l8ui	a11, a3, 5
 	bnez.n	a10, .L2826
@@ -17227,7 +17242,7 @@ big2_prologTok:
 	beq	a10, a4, .L2829
 	movi.n	a4, 0x1b
 	bne	a10, a4, .L2867
-	.loc 2 182 0
+	.loc 2 177 0
 	l32i.n	a10, sp, 0
 	mov.n	a13, a6
 	addi.n	a11, a3, 6
@@ -17236,14 +17251,14 @@ big2_prologTok:
 	j	.L2954
 .LVL1906:
 .L2831:
-	.loc 2 184 0
+	.loc 2 179 0
 	addi.n	a3, a3, 6
 	s32i.n	a3, a6, 0
-	.loc 2 185 0
+	.loc 2 180 0
 	movi.n	a10, 0x21
 	j	.L2954
 .L2829:
-	.loc 2 188 0
+	.loc 2 183 0
 	addi.n	a3, a3, 6
 .LVL1907:
 	movi.n	a5, 0x1e
@@ -17254,7 +17269,7 @@ big2_prologTok:
 	j	.L2833
 .LVL1910:
 .L2841:
-	.loc 2 195 0
+	.loc 2 190 0
 	l8ui	a10, a3, 0
 	l8ui	a11, a3, 1
 	bnez.n	a10, .L2834
@@ -17279,14 +17294,14 @@ big2_prologTok:
 .LBE230:
 .LBE233:
 .LBB234:
-	.loc 2 1005 0
+	.loc 2 1017 0
 	movi.n	a10, -1
 .LBE234:
 .LBB235:
 .LBB231:
-	.loc 2 197 0
+	.loc 2 192 0
 	blti	a4, 4, .L2954
-	.loc 2 199 0
+	.loc 2 194 0
 	l8ui	a10, a3, 2
 	l8ui	a11, a3, 3
 	bnez.n	a10, .L2839
@@ -17304,10 +17319,10 @@ big2_prologTok:
 	bbc	a2, a10, .L2838
 .LVL1914:
 .L2959:
-	.loc 2 201 0
+	.loc 2 199 0
 	s32i.n	a3, a6, 0
 .L2958:
-	.loc 2 202 0
+	.loc 2 200 0
 	movi.n	a10, 0
 	j	.L2954
 .LVL1915:
@@ -17323,7 +17338,7 @@ big2_prologTok:
 	addi.n	a3, a3, 2
 .LVL1917:
 .L2833:
-	.loc 2 194 0
+	.loc 2 189 0
 	sub	a4, a12, a3
 	bgei	a4, 2, .L2841
 	j	.L2932
@@ -17331,7 +17346,7 @@ big2_prologTok:
 .L2825:
 .LBE231:
 .LBE235:
-	.loc 2 1022 0
+	.loc 2 1033 0
 	l32i.n	a10, sp, 0
 	mov.n	a13, a6
 	addi.n	a11, a3, 4
@@ -17340,70 +17355,70 @@ big2_prologTok:
 	j	.L2954
 .LVL1920:
 .L2823:
-	.loc 2 1032 0
+	.loc 2 1043 0
 	s32i.n	a5, a6, 0
 	j	.L2958
 .LVL1921:
 .L2806:
-	.loc 2 1036 0
+	.loc 2 1047 0
 	addi.n	a2, a3, 2
 	beq	a12, a2, .L2842
 .L2807:
-	.loc 2 1047 0
+	.loc 2 1059 0
 	movi.n	a4, 0x15
 	movi.n	a5, 9
 	j	.L2843
 .L2842:
-	.loc 2 1037 0
+	.loc 2 1048 0
 	s32i.n	a12, a6, 0
-	.loc 2 1039 0
+	.loc 2 1050 0
 	movi.n	a10, -0xf
 	j	.L2954
 .LVL1922:
 .L2844:
-	.loc 2 996 0
+	.loc 2 1008 0
 	mov.n	a3, a2
 .LVL1923:
 .L2843:
-	.loc 2 1044 0
+	.loc 2 1056 0
 	addi.n	a2, a3, 2
 .LVL1924:
-	.loc 2 1045 0
+	.loc 2 1057 0
 	sub	a7, a12, a2
 	blti	a7, 2, .L2845
-	.loc 2 1047 0
+	.loc 2 1059 0
 	l8ui	a10, a3, 2
 	l8ui	a11, a2, 1
 	bnez.n	a10, .L2846
-	.loc 2 1047 0 is_stmt 0 discriminator 1
+	.loc 2 1059 0 is_stmt 0 discriminator 1
 	l32i.n	a8, sp, 0
 	add.n	a11, a8, a11
 	l8ui	a10, a11, 72
 	j	.L2847
 .L2846:
-	.loc 2 1047 0 discriminator 2
+	.loc 2 1059 0 discriminator 2
 	s32i.n	a12, sp, 20
 	call8	unicode_byte_type
 .LVL1925:
 	l32i.n	a12, sp, 20
 .LVL1926:
 .L2847:
-	.loc 2 1047 0 discriminator 4
+	.loc 2 1059 0 discriminator 4
 	beqi	a10, 10, .L2844
 	beq	a10, a4, .L2844
 	bne	a10, a5, .L2845
 	addi.n	a3, a3, 4
-	.loc 2 1052 0 is_stmt 1
+	.loc 2 1065 0 is_stmt 1
 	bne	a12, a3, .L2844
 .L2845:
-	.loc 2 1060 0
+	.loc 2 1073 0
 	s32i.n	a2, a6, 0
-	.loc 2 1061 0
+	.loc 2 1074 0
 	movi.n	a10, 0xf
 	j	.L2954
 .LVL1927:
 .L2816:
-	.loc 2 1063 0
+	.loc 2 1076 0
 	l32i.n	a10, sp, 0
 	mov.n	a13, a6
 	addi.n	a11, a3, 2
@@ -17412,102 +17427,102 @@ big2_prologTok:
 	j	.L2954
 .LVL1929:
 .L2819:
-	.loc 2 1065 0
+	.loc 2 1078 0
 	addi.n	a3, a3, 2
 .LVL1930:
 	s32i.n	a3, a6, 0
-	.loc 2 1066 0
+	.loc 2 1079 0
 	movi.n	a10, 0x26
 	j	.L2954
 .LVL1931:
 .L2812:
-	.loc 2 1068 0
+	.loc 2 1081 0
 	addi.n	a3, a3, 2
 .LVL1932:
 	s32i.n	a3, a6, 0
-	.loc 2 1069 0
+	.loc 2 1082 0
 	movi.n	a10, 0x19
 	j	.L2954
 .LVL1933:
 .L2802:
-	.loc 2 1071 0
+	.loc 2 1084 0
 	addi.n	a2, a3, 2
 .LVL1934:
-	.loc 2 1072 0
+	.loc 2 1085 0
 	sub	a12, a12, a2
 .LVL1935:
-	.loc 2 1073 0
+	.loc 2 1086 0
 	movi.n	a10, -0x1a
-	.loc 2 1072 0
+	.loc 2 1085 0
 	blti	a12, 2, .L2954
-	.loc 2 1074 0
+	.loc 2 1087 0
 	l8ui	a4, a3, 2
 	bnez.n	a4, .L2850
-	.loc 2 1074 0 is_stmt 0 discriminator 1
+	.loc 2 1087 0 is_stmt 0 discriminator 1
 	l8ui	a5, a3, 3
 	movi.n	a4, 0x5d
 	bne	a5, a4, .L2850
 .LBB236:
-	.loc 2 1005 0 is_stmt 1
+	.loc 2 1017 0 is_stmt 1
 	movi.n	a10, -1
 .LBE236:
-	.loc 2 1075 0
+	.loc 2 1088 0
 	blti	a12, 4, .L2954
-	.loc 2 1076 0
+	.loc 2 1089 0
 	l8ui	a4, a3, 4
 	bnez.n	a4, .L2850
-	.loc 2 1076 0 is_stmt 0 discriminator 1
+	.loc 2 1089 0 is_stmt 0 discriminator 1
 	l8ui	a5, a3, 5
 	movi.n	a4, 0x3e
 	bne	a5, a4, .L2850
-	.loc 2 1077 0 is_stmt 1
+	.loc 2 1090 0 is_stmt 1
 	addi.n	a3, a3, 6
 	s32i.n	a3, a6, 0
-	.loc 2 1078 0
+	.loc 2 1091 0
 	movi.n	a10, 0x22
 	j	.L2954
 .L2850:
-	.loc 2 1081 0
+	.loc 2 1094 0
 	s32i.n	a2, a6, 0
-	.loc 2 1082 0
+	.loc 2 1095 0
 	movi.n	a10, 0x1a
 	j	.L2954
 .LVL1936:
 .L2817:
-	.loc 2 1084 0
+	.loc 2 1097 0
 	addi.n	a3, a3, 2
 .LVL1937:
 	s32i.n	a3, a6, 0
-	.loc 2 1085 0
+	.loc 2 1098 0
 	movi.n	a10, 0x17
 	j	.L2954
 .LVL1938:
 .L2818:
-	.loc 2 1087 0
+	.loc 2 1100 0
 	addi.n	a2, a3, 2
 .LVL1939:
-	.loc 2 1088 0
+	.loc 2 1101 0
 	sub	a12, a12, a2
 .LVL1940:
-	.loc 2 1089 0
+	.loc 2 1102 0
 	movi.n	a10, -0x18
-	.loc 2 1088 0
+	.loc 2 1101 0
 	blti	a12, 2, .L2954
-	.loc 2 1090 0
+	.loc 2 1103 0
 	l8ui	a10, a3, 2
 	l8ui	a11, a3, 3
 	bnez.n	a10, .L2851
-	.loc 2 1090 0 is_stmt 0 discriminator 1
+	.loc 2 1103 0 is_stmt 0 discriminator 1
 	l32i.n	a9, sp, 0
 	add.n	a11, a9, a11
 	l8ui	a10, a11, 72
 	j	.L2852
 .L2851:
-	.loc 2 1090 0 discriminator 2
+	.loc 2 1103 0 discriminator 2
 	call8	unicode_byte_type
 .LVL1941:
 .L2852:
-	.loc 2 1090 0 discriminator 4
+	.loc 2 1103 0 discriminator 4
 	addi	a10, a10, -9
 	movi.n	a4, 0x1b
 	bltu	a4, a10, .L2867
@@ -17549,70 +17564,70 @@ big2_prologTok:
 	.word	.L2854
 	.section	.text.big2_prologTok
 .L2857:
-	.loc 2 1092 0 is_stmt 1
+	.loc 2 1105 0 is_stmt 1
 	addi.n	a3, a3, 4
 	s32i.n	a3, a6, 0
-	.loc 2 1093 0
+	.loc 2 1106 0
 	movi.n	a10, 0x24
 	j	.L2954
 .L2856:
-	.loc 2 1095 0
+	.loc 2 1108 0
 	addi.n	a3, a3, 4
 	s32i.n	a3, a6, 0
-	.loc 2 1096 0
+	.loc 2 1109 0
 	movi.n	a10, 0x23
 	j	.L2954
 .L2858:
-	.loc 2 1098 0
+	.loc 2 1111 0
 	addi.n	a3, a3, 4
 	s32i.n	a3, a6, 0
-	.loc 2 1099 0
+	.loc 2 1112 0
 	movi.n	a10, 0x25
 	j	.L2954
 .L2854:
-	.loc 2 1103 0
+	.loc 2 1120 0
 	s32i.n	a2, a6, 0
-	.loc 2 1104 0
+	.loc 2 1121 0
 	movi.n	a10, 0x18
 	j	.L2954
 .LVL1942:
 .L2820:
-	.loc 2 1109 0
+	.loc 2 1126 0
 	addi.n	a3, a3, 2
 .LVL1943:
 	s32i.n	a3, a6, 0
-	.loc 2 1110 0
+	.loc 2 1127 0
 	movi.n	a10, 0x15
 	j	.L2954
 .LVL1944:
 .L2808:
-	.loc 2 1112 0
+	.loc 2 1129 0
 	addi.n	a3, a3, 2
 .LVL1945:
 	s32i.n	a3, a6, 0
-	.loc 2 1113 0
+	.loc 2 1130 0
 	movi.n	a10, 0x11
 	j	.L2954
 .LVL1946:
 .L2811:
-	.loc 2 1115 0
+	.loc 2 1132 0
 	addi.n	a2, a3, 2
 .LVL1947:
 .LBB237:
 .LBB238:
-	.loc 2 939 0
+	.loc 2 945 0
 	sub	a7, a12, a2
 .LBE238:
 .LBE237:
 .LBB248:
-	.loc 2 1005 0
+	.loc 2 1017 0
 	movi.n	a10, -1
 .LBE248:
 .LBB249:
 .LBB239:
-	.loc 2 939 0
+	.loc 2 945 0
 	blti	a7, 2, .L2954
-	.loc 2 940 0
+	.loc 2 946 0
 	l8ui	a4, a3, 2
 	l8ui	a5, a3, 3
 	bnez.n	a4, .L2859
@@ -17630,7 +17645,7 @@ big2_prologTok:
 .LVL1949:
 	j	.L2860
 .L2861:
-	.loc 2 941 0
+	.loc 2 947 0
 	l32r	a7, .LC173
 	add.n	a4, a7, a4
 	l8ui	a4, a4, 0
@@ -17652,12 +17667,12 @@ big2_prologTok:
 .L2862:
 	addi.n	a3, a3, 4
 .LVL1952:
-	.loc 2 947 0
+	.loc 2 953 0
 	movi.n	a5, 0x1f
 	j	.L2863
 .LVL1953:
 .L2865:
-	.loc 2 941 0
+	.loc 2 947 0
 	movi.n	a10, -2
 	beqi	a7, 2, .L2954
 	j	.L2867
@@ -17666,12 +17681,12 @@ big2_prologTok:
 	blti	a7, 4, .L2954
 .LVL1954:
 .L2867:
-	.loc 2 943 0
+	.loc 2 949 0
 	s32i.n	a2, a6, 0
 	j	.L2958
 .LVL1955:
 .L2878:
-	.loc 2 947 0
+	.loc 2 953 0
 	l8ui	a2, a3, 0
 	l8ui	a7, a3, 1
 	bnez.n	a2, .L2868
@@ -17732,7 +17747,7 @@ big2_prologTok:
 	.word	.L2875
 	.section	.text.big2_prologTok
 .L2877:
-	.loc 2 948 0
+	.loc 2 954 0
 	l32r	a10, .LC175
 	srli	a9, a7, 5
 	add.n	a2, a10, a2
@@ -17751,75 +17766,77 @@ big2_prologTok:
 .LVL1958:
 	j	.L2863
 .L2873:
-	.loc 2 941 0
+	.loc 2 947 0
 	movi.n	a10, -2
-	.loc 2 948 0
+	.loc 2 954 0
 	beqi	a4, 2, .L2954
 	j	.L2959
 .L2874:
-	.loc 2 941 0
+	.loc 2 947 0
 	movi.n	a10, -2
-	.loc 2 948 0
+	.loc 2 954 0
 	blti	a4, 4, .L2954
 	j	.L2959
 .L2875:
-	.loc 2 951 0
+	.loc 2 962 0
 	s32i.n	a3, a6, 0
-	.loc 2 952 0
+	.loc 2 963 0
 	movi.n	a10, 0x14
 	j	.L2954
 .L2863:
-	.loc 2 946 0
+	.loc 2 952 0
 	sub	a4, a12, a3
 	bgei	a4, 2, .L2878
-	.loc 2 958 0
+	.loc 2 969 0
 	movi.n	a10, -0x14
 	j	.L2954
 .LVL1959:
 .L2803:
 .LBE239:
 .LBE249:
-	.loc 2 1132 0
+	.loc 2 1149 0
 	sub	a12, a12, a3
 .LVL1960:
 .LBB250:
 .LBB240:
-	.loc 2 941 0
+	.loc 2 947 0
 	movi.n	a10, -2
 .LBE240:
 .LBE250:
-	.loc 2 1132 0
+	.loc 2 1149 0
 	blti	a12, 2, .L2954
 	j	.L2959
 .LVL1961:
 .L2804:
+	.loc 2 1150 0
 	sub	a12, a12, a3
 .LVL1962:
 .LBB251:
 .LBB241:
-	.loc 2 941 0
+	.loc 2 947 0
 	movi.n	a10, -2
 .LBE241:
 .LBE251:
-	.loc 2 1132 0
+	.loc 2 1150 0
 	bgei	a12, 3, .L2959
 	j	.L2954
 .LVL1963:
 .L2805:
+	.loc 2 1151 0
 	sub	a12, a12, a3
 .LVL1964:
 .LBB252:
 .LBB242:
-	.loc 2 941 0
+	.loc 2 947 0
 	movi.n	a10, -2
 .LBE242:
 .LBE252:
-	.loc 2 1132 0
+	.loc 2 1151 0
 	bgei	a12, 4, .L2959
 	j	.L2954
 .LVL1965:
 .L2815:
-	.loc 2 1149 0
+	.loc 2 1168 0
 	srli	a2, a4, 5
 	extui	a7, a4, 0, 5
 	l32r	a4, .LC173
@@ -17831,16 +17848,16 @@ big2_prologTok:
 	l32i.n	a4, a4, 0
 	bbc	a4, a7, .L2881
 .L2956:
-	.loc 2 1150 0
+	.loc 2 1169 0
 	addi.n	a3, a3, 2
 .LVL1966:
-	.loc 2 1151 0
+	.loc 2 1170 0
 	movi.n	a8, 0x12
-	.loc 2 1152 0
+	.loc 2 1171 0
 	j	.L2880
 .LVL1967:
 .L2881:
-	.loc 2 1154 0
+	.loc 2 1173 0
 	l32r	a10, .LC175
 	add.n	a10, a10, a5
 	l8ui	a4, a10, 0
@@ -17849,14 +17866,14 @@ big2_prologTok:
 	l32i.n	a2, a2, 0
 	bbc	a2, a7, .L2959
 .L2955:
-	.loc 2 1155 0
+	.loc 2 1174 0
 	addi.n	a3, a3, 2
 .LVL1968:
-	.loc 2 1156 0
+	.loc 2 1175 0
 	movi.n	a8, 0x13
 .LVL1969:
 .L2880:
-	.loc 2 1179 0
+	.loc 2 1204 0
 	movi.n	a7, 0x16
 	movi.n	a2, 0x18
 	movi.n	a4, 0x1b
@@ -17864,17 +17881,17 @@ big2_prologTok:
 	j	.L2882
 .LVL1970:
 .L2911:
-	.loc 2 1165 0
+	.loc 2 1184 0
 	l8ui	a9, a3, 0
 	l8ui	a14, a3, 1
 	bnez.n	a9, .L2883
-	.loc 2 1165 0 is_stmt 0 discriminator 1
+	.loc 2 1184 0 is_stmt 0 discriminator 1
 	l32i.n	a11, sp, 0
 	add.n	a10, a11, a14
 	l8ui	a10, a10, 72
 	j	.L2884
 .L2883:
-	.loc 2 1165 0 discriminator 2
+	.loc 2 1184 0 discriminator 2
 	mov.n	a11, a14
 	mov.n	a10, a9
 	s32i.n	a8, sp, 4
@@ -17892,7 +17909,7 @@ big2_prologTok:
 	l32i.n	a8, sp, 4
 .LVL1973:
 .L2884:
-	.loc 2 1165 0 discriminator 4
+	.loc 2 1184 0 discriminator 4
 	addi	a10, a10, -5
 	movi.n	a11, 0x1f
 	bltu	a11, a10, .L2959
@@ -17938,7 +17955,7 @@ big2_prologTok:
 	.word	.L2890
 	.section	.text.big2_prologTok
 .L2894:
-	.loc 2 1166 0 is_stmt 1
+	.loc 2 1185 0 is_stmt 1
 	l32r	a10, .LC175
 	add.n	a9, a10, a9
 	l8ui	a9, a9, 0
@@ -17951,11 +17968,11 @@ big2_prologTok:
 	srl	a10, a10
 	extui	a10, a10, 0, 1
 	bnez.n	a10, .L2892
-	.loc 2 1166 0 is_stmt 0 discriminator 1
+	.loc 2 1185 0 is_stmt 0 discriminator 1
 	s32i.n	a3, a6, 0
 	j	.L2954
 .L2892:
-	.loc 2 1166 0 discriminator 2
+	.loc 2 1185 0 discriminator 2
 	addi.n	a9, a3, 2
 .LVL1974:
 	j	.L2897
@@ -17963,38 +17980,38 @@ big2_prologTok:
 .L2888:
 .LBB253:
 .LBB243:
-	.loc 2 941 0 is_stmt 1
+	.loc 2 947 0 is_stmt 1
 	movi.n	a10, -2
 .LBE243:
 .LBE253:
-	.loc 2 1166 0
+	.loc 2 1185 0
 	beqi	a15, 2, .L2954
 	j	.L2959
 .L2889:
 .LBB254:
 .LBB244:
-	.loc 2 941 0
+	.loc 2 947 0
 	movi.n	a10, -2
 .LBE244:
 .LBE254:
-	.loc 2 1166 0
+	.loc 2 1185 0
 	blti	a15, 4, .L2954
 	j	.L2959
 .LVL1976:
 .L2890:
-	.loc 2 1170 0
+	.loc 2 1195 0
 	s32i.n	a3, a6, 0
 	j	.L2960
 .LVL1977:
 .L2893:
-	.loc 2 1175 0
+	.loc 2 1200 0
 	movi.n	a10, 0x12
-	.loc 2 1174 0
+	.loc 2 1199 0
 	addi.n	a9, a3, 2
 .LVL1978:
-	.loc 2 1175 0
+	.loc 2 1200 0
 	beq	a8, a10, .L2899
-	.loc 2 1187 0
+	.loc 2 1212 0
 	addi	a10, a8, -41
 	movi.n	a3, 0x13
 	moveqz	a8, a3, a10
@@ -18002,21 +18019,21 @@ big2_prologTok:
 	j	.L2897
 .LVL1980:
 .L2899:
-	.loc 2 1177 0
+	.loc 2 1202 0
 	sub	a15, a12, a9
 	blti	a15, 2, .L2932
 .LVL1981:
-	.loc 2 1179 0
+	.loc 2 1204 0
 	l8ui	a14, a3, 2
 	l8ui	a8, a3, 3
 	bnez.n	a14, .L2900
-	.loc 2 1179 0 is_stmt 0 discriminator 1
+	.loc 2 1204 0 is_stmt 0 discriminator 1
 	l32i.n	a11, sp, 0
 	add.n	a10, a11, a8
 	l8ui	a10, a10, 72
 	j	.L2901
 .L2900:
-	.loc 2 1179 0 discriminator 2
+	.loc 2 1204 0 discriminator 2
 	mov.n	a11, a8
 	mov.n	a10, a14
 	s32i.n	a8, sp, 4
@@ -18034,7 +18051,7 @@ big2_prologTok:
 	l32i.n	a8, sp, 4
 .LVL1984:
 .L2901:
-	.loc 2 1179 0 discriminator 4
+	.loc 2 1204 0 discriminator 4
 	beq	a10, a7, .L2902
 	blt	a7, a10, .L2903
 	beqi	a10, 6, .L2904
@@ -18045,7 +18062,7 @@ big2_prologTok:
 	blt	a10, a2, .L2933
 	bge	a4, a10, .L2902
 	bne	a10, a5, .L2933
-	.loc 2 1180 0 is_stmt 1
+	.loc 2 1205 0 is_stmt 1
 	l32r	a10, .LC175
 	srli	a11, a8, 5
 	add.n	a14, a10, a14
@@ -18058,107 +18075,107 @@ big2_prologTok:
 	srl	a8, a10
 	extui	a8, a8, 0, 1
 	bnez.n	a8, .L2902
-	.loc 2 1180 0 is_stmt 0 discriminator 1
+	.loc 2 1205 0 is_stmt 0 discriminator 1
 	s32i.n	a9, a6, 0
 	j	.L2960
 .L2902:
-	.loc 2 1180 0 discriminator 2
+	.loc 2 1205 0 discriminator 2
 	addi.n	a9, a3, 4
 .LVL1985:
-	.loc 2 1178 0 is_stmt 1 discriminator 2
+	.loc 2 1203 0 is_stmt 1 discriminator 2
 	movi.n	a8, 0x29
-	.loc 2 1180 0 discriminator 2
+	.loc 2 1205 0 discriminator 2
 	j	.L2897
 .L2904:
 .LBB255:
 .LBB245:
-	.loc 2 941 0
+	.loc 2 947 0
 	movi.n	a10, -2
 .LBE245:
 .LBE255:
-	.loc 2 1180 0
+	.loc 2 1205 0
 	beqi	a15, 2, .L2954
 	j	.L2961
 .L2905:
 .LBB256:
 .LBB246:
-	.loc 2 941 0
+	.loc 2 947 0
 	movi.n	a10, -2
 .LBE246:
 .LBE256:
-	.loc 2 1180 0
+	.loc 2 1205 0
 	blti	a15, 4, .L2954
 .L2961:
-	.loc 2 1180 0 is_stmt 0 discriminator 13
+	.loc 2 1205 0 is_stmt 0 discriminator 13
 	s32i.n	a9, a6, 0
 	j	.L2958
 .LVL1986:
 .L2896:
-	.loc 2 1193 0 is_stmt 1
+	.loc 2 1218 0 is_stmt 1
 	movi.n	a2, 0x13
 	bne	a8, a2, .L2908
 	j	.L2959
 .L2908:
-	.loc 2 1197 0
+	.loc 2 1222 0
 	addi.n	a3, a3, 2
 .LVL1987:
 	s32i.n	a3, a6, 0
-	.loc 2 1198 0
+	.loc 2 1223 0
 	movi.n	a10, 0x20
 	j	.L2954
 .LVL1988:
 .L2895:
-	.loc 2 1200 0
+	.loc 2 1225 0
 	movi.n	a2, 0x13
 	bne	a8, a2, .L2909
 	j	.L2959
 .L2909:
-	.loc 2 1204 0
+	.loc 2 1229 0
 	addi.n	a3, a3, 2
 .LVL1989:
 	s32i.n	a3, a6, 0
-	.loc 2 1205 0
+	.loc 2 1230 0
 	movi.n	a10, 0x1f
 	j	.L2954
 .LVL1990:
 .L2891:
-	.loc 2 1207 0
+	.loc 2 1232 0
 	movi.n	a2, 0x13
 	bne	a8, a2, .L2910
 	j	.L2959
 .L2910:
-	.loc 2 1211 0
+	.loc 2 1236 0
 	addi.n	a3, a3, 2
 .LVL1991:
 	s32i.n	a3, a6, 0
-	.loc 2 1212 0
+	.loc 2 1237 0
 	movi.n	a10, 0x1e
 	j	.L2954
 .LVL1992:
 .L2933:
-	.loc 2 1182 0
+	.loc 2 1207 0
 	movi.n	a8, 0x13
 .LVL1993:
 .L2897:
 	mov.n	a3, a9
 .LVL1994:
 .L2882:
-	.loc 2 1164 0
+	.loc 2 1183 0
 	sub	a15, a12, a3
 	bgei	a15, 2, .L2911
-	.loc 2 1218 0
+	.loc 2 1243 0
 	neg	a10, a8
 	j	.L2954
 .LVL1995:
 .L2932:
-	.loc 2 1177 0
+	.loc 2 1202 0
 	movi.n	a10, -1
 	j	.L2954
 .LVL1996:
 .L2860:
 .LBB257:
 .LBB247:
-	.loc 2 940 0
+	.loc 2 946 0
 	beqi	a10, 7, .L2866
 	bgei	a10, 8, .L2912
 	beqi	a10, 5, .L2867
@@ -18176,7 +18193,7 @@ big2_prologTok:
 .L2954:
 .LBE247:
 .LBE257:
-	.loc 2 1219 0
+	.loc 2 1244 0
 	mov.n	a2, a10
 	retw.n
 .LFE91:
@@ -18202,57 +18219,57 @@ big2_prologTok:
 	.type	big2_contentTok, @function
 big2_contentTok:
 .LFB87:
-	.loc 2 811 0
+	.loc 2 814 0
 .LVL1998:
 	entry	sp, 80
 .LCFI93:
-	.loc 2 811 0
+	.loc 2 814 0
 	s32i.n	a2, sp, 16
 	mov.n	a6, a5
-	.loc 2 813 0
+	.loc 2 816 0
 	movi.n	a2, -4
 .LVL1999:
-	.loc 2 812 0
+	.loc 2 815 0
 	bgeu	a3, a4, .L3190
 .LBB271:
-	.loc 2 815 0
+	.loc 2 818 0
 	sub	a5, a4, a3
 .LVL2000:
-	.loc 2 816 0
+	.loc 2 819 0
 	bbci	a5, 0, .L2965
-	.loc 2 817 0
+	.loc 2 820 0
 	movi.n	a2, -2
 	and	a2, a5, a2
 .LVL2001:
-	.loc 2 820 0
+	.loc 2 823 0
 	add.n	a4, a3, a2
 .LVL2002:
-	.loc 2 818 0
+	.loc 2 821 0
 	bnez.n	a2, .L2965
 .LVL2003:
 .L2980:
-	.loc 2 819 0
+	.loc 2 822 0
 	movi.n	a2, -1
 	retw.n
 .LVL2004:
 .L2965:
 .LBE271:
-	.loc 2 823 0
+	.loc 2 826 0
 	l8ui	a10, a3, 0
 	l8ui	a11, a3, 1
 	bnez.n	a10, .L2967
-	.loc 2 823 0 is_stmt 0 discriminator 1
+	.loc 2 826 0 is_stmt 0 discriminator 1
 	l32i.n	a2, sp, 16
 	add.n	a11, a2, a11
 	l8ui	a2, a11, 72
 	j	.L2968
 .L2967:
-	.loc 2 823 0 discriminator 2
+	.loc 2 826 0 discriminator 2
 	call8	unicode_byte_type
 .LVL2005:
 	mov.n	a2, a10
 .L2968:
-	.loc 2 823 0 discriminator 4
+	.loc 2 826 0 discriminator 4
 	movi.n	a5, 0xa
 	bltu	a5, a2, .L2969
 	l32r	a5, .LC177
@@ -18276,15 +18293,15 @@ big2_contentTok:
 	.word	.L2979
 	.section	.text.big2_contentTok
 .L2972:
-	.loc 2 825 0 is_stmt 1
+	.loc 2 828 0 is_stmt 1
 	addi.n	a5, a3, 2
 .LVL2006:
 .LBB272:
 .LBB273:
-	.loc 2 718 0
+	.loc 2 720 0
 	sub	a7, a4, a5
 	blti	a7, 2, .L2980
-	.loc 2 719 0
+	.loc 2 721 0
 	l8ui	a12, a3, 2
 	l8ui	a8, a3, 3
 	bnez.n	a12, .L2981
@@ -18303,7 +18320,7 @@ big2_contentTok:
 	l32i.n	a12, sp, 32
 	j	.L2982
 .L2983:
-	.loc 2 720 0
+	.loc 2 722 0
 	l32r	a7, .LC179
 	srli	a10, a8, 5
 	add.n	a12, a7, a12
@@ -18322,20 +18339,20 @@ big2_contentTok:
 .L2984:
 	addi.n	a8, a3, 4
 .LVL2008:
-	.loc 2 742 0
+	.loc 2 743 0
 	movi.n	a15, 0
-	.loc 2 746 0
+	.loc 2 747 0
 	movi.n	a7, 0x18
-	.loc 2 757 0
+	.loc 2 758 0
 	movi.n	a3, 0x16
 .LVL2009:
-	.loc 2 747 0
+	.loc 2 748 0
 	l32r	a5, .LC178
 .LVL2010:
 	j	.L2985
 .LVL2011:
 .L2987:
-	.loc 2 720 0
+	.loc 2 722 0
 	bnei	a7, 2, .L3031
 .LVL2012:
 .L2990:
@@ -18346,13 +18363,13 @@ big2_contentTok:
 	blti	a7, 4, .L2990
 	j	.L3031
 .L2991:
-	.loc 2 722 0
+	.loc 2 724 0
 	addi.n	a2, a3, 4
 .LVL2014:
-	.loc 2 723 0
+	.loc 2 725 0
 	sub	a5, a4, a2
 	blti	a5, 2, .L2980
-	.loc 2 724 0
+	.loc 2 726 0
 	l8ui	a10, a3, 4
 	l8ui	a11, a3, 5
 	bnez.n	a10, .L2992
@@ -18368,7 +18385,7 @@ big2_contentTok:
 	beq	a10, a5, .L2995
 	movi.n	a5, 0x1b
 	bne	a10, a5, .L3134
-	.loc 2 726 0
+	.loc 2 728 0
 	l32i.n	a10, sp, 16
 	mov.n	a13, a6
 	mov.n	a12, a4
@@ -18377,12 +18394,12 @@ big2_contentTok:
 .LVL2016:
 	j	.L3213
 .L2995:
-	.loc 2 728 0
+	.loc 2 730 0
 	addi.n	a3, a3, 6
 .LVL2017:
 .LBB274:
 .LBB275:
-	.loc 2 332 0
+	.loc 2 333 0
 	sub	a4, a4, a3
 	movi.n	a2, 0xb
 .LVL2018:
@@ -18392,40 +18409,40 @@ big2_contentTok:
 	loop	a2, .L2999_LEND
 .LVL2019:
 .L2999:
-	.loc 2 334 0
+	.loc 2 335 0
 	l8ui	a5, a3, 0
 	beqz.n	a5, .L2997
 .LVL2020:
 .L2998:
-	.loc 2 335 0
+	.loc 2 336 0
 	s32i.n	a3, a6, 0
 .L3211:
-	.loc 2 336 0
+	.loc 2 337 0
 	movi.n	a2, 0
 	retw.n
 .LVL2021:
 .L2997:
-	.loc 2 334 0
+	.loc 2 335 0
 	l8ui	a7, a3, 1
 	l8ui	a5, a4, 0
 	bne	a7, a5, .L2998
 .LVL2022:
-	.loc 2 333 0
+	.loc 2 334 0
 	addi.n	a3, a3, 2
 .LVL2023:
 	addi.n	a4, a4, 1
 .LVL2024:
 	.L2999_LEND:
-	.loc 2 339 0
-	s32i.n	a3, a6, 0
 	.loc 2 340 0
+	s32i.n	a3, a6, 0
+	.loc 2 341 0
 	movi.n	a2, 8
 	retw.n
 .LVL2025:
 .L3000:
 .LBE275:
 .LBE274:
-	.loc 2 734 0
+	.loc 2 735 0
 	l32i.n	a10, sp, 16
 	mov.n	a13, a6
 	mov.n	a12, a4
@@ -18437,15 +18454,15 @@ big2_contentTok:
 	retw.n
 .LVL2027:
 .L3001:
-	.loc 2 736 0
+	.loc 2 737 0
 	addi.n	a5, a3, 4
 .LVL2028:
 .LBB276:
 .LBB277:
-	.loc 2 422 0
+	.loc 2 423 0
 	sub	a8, a4, a5
 	blti	a8, 2, .L2980
-	.loc 2 423 0
+	.loc 2 424 0
 	l8ui	a7, a3, 4
 	l8ui	a2, a3, 5
 	bnez.n	a7, .L3002
@@ -18462,7 +18479,7 @@ big2_contentTok:
 	l32i.n	a8, sp, 36
 	j	.L3003
 .L3004:
-	.loc 2 424 0
+	.loc 2 425 0
 	l32r	a8, .LC179
 	add.n	a7, a8, a7
 	l8ui	a7, a7, 0
@@ -18480,12 +18497,12 @@ big2_contentTok:
 .LVL2030:
 	addi.n	a3, a3, 6
 .LVL2031:
-	.loc 2 430 0
+	.loc 2 431 0
 	movi.n	a7, 0x18
 	j	.L3006
 .LVL2032:
 .L3008:
-	.loc 2 424 0
+	.loc 2 425 0
 	beqi	a8, 2, .L2990
 	j	.L3031
 .L3009:
@@ -18493,7 +18510,7 @@ big2_contentTok:
 	j	.L3031
 .LVL2033:
 .L3030:
-	.loc 2 430 0
+	.loc 2 431 0
 	l8ui	a2, a3, 0
 	l8ui	a8, a3, 1
 	bnez.n	a2, .L3011
@@ -18546,7 +18563,7 @@ big2_contentTok:
 	.word	.L3021
 	.section	.text.big2_contentTok
 .L3021:
-	.loc 2 431 0
+	.loc 2 432 0
 	l32r	a5, .LC182
 	srli	a10, a8, 5
 	add.n	a2, a5, a2
@@ -18567,10 +18584,10 @@ big2_contentTok:
 	blti	a5, 4, .L2990
 	j	.L2998
 .L3018:
-	.loc 2 433 0
+	.loc 2 436 0
 	addi.n	a3, a3, 2
 .LVL2035:
-	.loc 2 434 0
+	.loc 2 437 0
 	movi.n	a2, 0xb
 	movi.n	a7, 0x15
 	movi.n	a8, 9
@@ -18597,7 +18614,7 @@ big2_contentTok:
 	beq	a10, a7, .L3028
 	j	.L2998
 .L3028:
-	.loc 2 433 0
+	.loc 2 436 0
 	addi.n	a3, a3, 2
 .LVL2037:
 .L3022:
@@ -18605,11 +18622,11 @@ big2_contentTok:
 	bgei	a5, 2, .L3029
 	j	.L2980
 .L3019:
-	.loc 2 454 0
+	.loc 2 459 0
 	addi.n	a3, a3, 2
 .LVL2038:
 	s32i.n	a3, a6, 0
-	.loc 2 455 0
+	.loc 2 460 0
 	movi.n	a2, 5
 	retw.n
 .LVL2039:
@@ -18617,7 +18634,7 @@ big2_contentTok:
 	addi.n	a3, a3, 2
 .LVL2040:
 .L3006:
-	.loc 2 429 0
+	.loc 2 430 0
 	sub	a5, a4, a3
 	bgei	a5, 2, .L3030
 	j	.L2980
@@ -18625,12 +18642,12 @@ big2_contentTok:
 .L3031:
 .LBE277:
 .LBE276:
-	.loc 2 738 0
+	.loc 2 739 0
 	s32i.n	a5, a6, 0
 	j	.L3211
 .LVL2042:
 .L3136:
-	.loc 2 746 0
+	.loc 2 747 0
 	l8ui	a12, a8, 0
 	l8ui	a13, a8, 1
 	bnez.n	a12, .L3032
@@ -18693,7 +18710,7 @@ big2_contentTok:
 	.word	.L3044
 	.section	.text.big2_contentTok
 .L3044:
-	.loc 2 747 0
+	.loc 2 748 0
 	l32r	a9, .LC182
 	srli	a11, a13, 5
 	add.n	a12, a9, a12
@@ -18719,18 +18736,18 @@ big2_contentTok:
 	blti	a14, 4, .L2990
 	j	.L3034
 .L3043:
-	.loc 2 750 0
+	.loc 2 751 0
 	beqz.n	a15, .L3046
 	j	.L3034
 .L3046:
 .LVL2047:
-	.loc 2 755 0
+	.loc 2 756 0
 	addi.n	a12, a8, 2
 .LVL2048:
-	.loc 2 756 0
+	.loc 2 757 0
 	sub	a15, a4, a12
 	blti	a15, 2, .L2980
-	.loc 2 757 0
+	.loc 2 758 0
 	l8ui	a13, a8, 2
 	l8ui	a14, a8, 3
 	bnez.n	a13, .L3047
@@ -18767,7 +18784,7 @@ big2_contentTok:
 	bne	a10, a3, .L3049
 	j	.L3054
 .L3055:
-	.loc 2 758 0
+	.loc 2 759 0
 	l32r	a9, .LC179
 	srli	a11, a14, 5
 	add.n	a13, a9, a13
@@ -18786,26 +18803,26 @@ big2_contentTok:
 .L3054:
 	addi.n	a8, a8, 4
 .LVL2051:
-	.loc 2 754 0
+	.loc 2 755 0
 	movi.n	a15, 1
 	j	.L2985
 .LVL2052:
 .L3053:
-	.loc 2 758 0
+	.loc 2 759 0
 	beqi	a15, 2, .L2990
 	j	.L3049
 .L3050:
 	blti	a15, 4, .L2990
 .L3049:
-	.loc 2 760 0
+	.loc 2 761 0
 	s32i.n	a12, a6, 0
 	j	.L3211
 .LVL2053:
 .L3039:
-	.loc 2 767 0
+	.loc 2 769 0
 	addi.n	a8, a8, 2
 .LVL2054:
-	.loc 2 769 0
+	.loc 2 771 0
 	movi.n	a3, 0x18
 	j	.L3056
 .LVL2055:
@@ -18862,7 +18879,7 @@ big2_contentTok:
 	.word	.L3066
 	.section	.text.big2_contentTok
 .L3066:
-	.loc 2 770 0
+	.loc 2 772 0
 	l32r	a2, .LC179
 	l8ui	a10, a8, 1
 	add.n	a5, a2, a5
@@ -18885,9 +18902,9 @@ big2_contentTok:
 .LVL2060:
 .LBB279:
 .LBB280:
-	.loc 2 564 0
+	.loc 2 565 0
 	movi.n	a7, 0
-	.loc 2 567 0
+	.loc 2 568 0
 	movi.n	a5, 0x18
 	j	.L3067
 .LVL2061:
@@ -18946,7 +18963,7 @@ big2_contentTok:
 	.word	.L3079
 	.section	.text.big2_contentTok
 .L3079:
-	.loc 2 568 0
+	.loc 2 569 0
 	l32r	a10, .LC182
 	add.n	a8, a10, a8
 	l8ui	a8, a8, 0
@@ -18971,18 +18988,18 @@ big2_contentTok:
 	blti	a12, 4, .L2990
 	j	.L2998
 .L3078:
-	.loc 2 571 0
+	.loc 2 572 0
 	beqz.n	a7, .L3081
 	j	.L2998
 .L3081:
 .LVL2063:
-	.loc 2 576 0
+	.loc 2 577 0
 	addi.n	a7, a3, 2
 	s32i.n	a7, sp, 0
-	.loc 2 577 0
+	.loc 2 578 0
 	sub	a12, a4, a7
 	blti	a12, 2, .L2980
-	.loc 2 578 0
+	.loc 2 579 0
 	l8ui	a8, a3, 2
 	l8ui	a2, a3, 3
 	bnez.n	a8, .L3082
@@ -19013,7 +19030,7 @@ big2_contentTok:
 	bne	a10, a2, .L3084
 	j	.L3089
 .L3090:
-	.loc 2 579 0
+	.loc 2 580 0
 	l32r	a10, .LC179
 	add.n	a8, a10, a8
 	l8ui	a8, a8, 0
@@ -19030,35 +19047,35 @@ big2_contentTok:
 .L3089:
 	addi.n	a3, a3, 4
 	s32i.n	a3, sp, 0
-	.loc 2 575 0
+	.loc 2 576 0
 	movi.n	a7, 1
 	j	.L3067
 .L3088:
-	.loc 2 579 0
+	.loc 2 580 0
 	beqi	a12, 2, .L2990
 	j	.L3084
 .L3085:
 	blti	a12, 4, .L2990
 .L3084:
-	.loc 2 581 0
+	.loc 2 582 0
 	s32i.n	a7, a6, 0
 	j	.L3211
 .LVL2065:
 .L3075:
 .LBB281:
-	.loc 2 593 0
+	.loc 2 596 0
 	movi.n	a2, 0xe
 	movi.n	a12, 0x15
 .LVL2066:
 .L3192:
-	.loc 2 590 0
+	.loc 2 593 0
 	l32i.n	a7, sp, 0
 	addi.n	a3, a7, 2
 	s32i.n	a3, sp, 0
-	.loc 2 591 0
+	.loc 2 594 0
 	sub	a10, a4, a3
 	blti	a10, 2, .L2980
-	.loc 2 592 0
+	.loc 2 595 0
 	l8ui	a10, a7, 2
 	l8ui	a11, a7, 3
 	bnez.n	a10, .L3091
@@ -19073,7 +19090,7 @@ big2_contentTok:
 	l32i.n	a12, sp, 32
 .L3092:
 .LVL2068:
-	.loc 2 593 0
+	.loc 2 596 0
 	beq	a10, a2, .L3076
 	bgeu	a12, a10, .L3093
 	j	.L2998
@@ -19087,14 +19104,14 @@ big2_contentTok:
 .L3099:
 .LBE281:
 .LBB282:
-	.loc 2 613 0
+	.loc 2 615 0
 	l32i.n	a3, sp, 0
 	addi.n	a2, a3, 2
 	s32i.n	a2, sp, 0
-	.loc 2 614 0
+	.loc 2 616 0
 	sub	a7, a4, a2
 	blti	a7, 2, .L2980
-	.loc 2 615 0
+	.loc 2 617 0
 	l8ui	a10, a3, 2
 	l8ui	a11, a3, 3
 	bnez.n	a10, .L3095
@@ -19110,7 +19127,7 @@ big2_contentTok:
 	mov.n	a7, a10
 .L3096:
 .LVL2071:
-	.loc 2 616 0
+	.loc 2 618 0
 	addi	a10, a7, -12
 	bltui	a10, 2, .L3097
 	bgeu	a12, a7, .L3098
@@ -19120,18 +19137,18 @@ big2_contentTok:
 	bbs	a9, a7, .L3099
 	j	.L3134
 .L3097:
-	.loc 2 628 0
+	.loc 2 630 0
 	addi.n	a3, a3, 4
 	s32i.n	a3, sp, 0
 .LBB283:
-	.loc 2 636 0
+	.loc 2 638 0
 	movi.n	a3, 8
 .L3101:
-	.loc 2 632 0
+	.loc 2 634 0
 	l32i.n	a2, sp, 0
 	sub	a8, a4, a2
 	blti	a8, 2, .L2980
-	.loc 2 633 0
+	.loc 2 635 0
 	l8ui	a10, a2, 0
 	l8ui	a11, a2, 1
 	bnez.n	a10, .L3102
@@ -19146,9 +19163,9 @@ big2_contentTok:
 	l32i.n	a8, sp, 36
 .L3103:
 .LVL2073:
-	.loc 2 634 0
-	beq	a7, a10, .L3104
 	.loc 2 636 0
+	beq	a7, a10, .L3104
+	.loc 2 638 0
 	bltu	a3, a10, .L3105
 	l32r	a11, .LC187
 	addx4	a10, a10, a11
@@ -19170,7 +19187,7 @@ big2_contentTok:
 	.word	.L3134
 	.section	.text.big2_contentTok
 .L3111:
-	.loc 2 637 0
+	.loc 2 639 0
 	beqi	a8, 2, .L2990
 	addi.n	a2, a2, 3
 	j	.L3208
@@ -19180,7 +19197,7 @@ big2_contentTok:
 	j	.L3208
 .L3109:
 .LBB284:
-	.loc 2 640 0
+	.loc 2 641 0
 	l32i.n	a10, sp, 16
 	mov.n	a13, sp
 .LVL2075:
@@ -19188,12 +19205,12 @@ big2_contentTok:
 	addi.n	a11, a2, 2
 	call8	big2_scanRef
 .LVL2076:
-	.loc 2 641 0
-	bgei	a10, 1, .L3101
 	.loc 2 642 0
+	bgei	a10, 1, .L3101
+	.loc 2 643 0
 	mov.n	a2, a10
 	bnez.n	a10, .L3190
-	.loc 2 643 0
+	.loc 2 644 0
 	l32i.n	a3, sp, 0
 .LVL2077:
 .L3216:
@@ -19202,7 +19219,7 @@ big2_contentTok:
 .LVL2078:
 .L3105:
 .LBE284:
-	.loc 2 652 0
+	.loc 2 653 0
 	addi.n	a2, a2, 2
 .L3208:
 	s32i.n	a2, sp, 0
@@ -19210,14 +19227,14 @@ big2_contentTok:
 .LVL2079:
 .L3104:
 .LBE283:
-	.loc 2 656 0
+	.loc 2 657 0
 	addi.n	a3, a2, 2
 	s32i.n	a3, sp, 0
-	.loc 2 657 0
+	.loc 2 658 0
 	sub	a7, a4, a3
 .LVL2080:
 	blti	a7, 2, .L2980
-	.loc 2 658 0
+	.loc 2 659 0
 	l8ui	a10, a2, 2
 .LVL2081:
 	l8ui	a11, a2, 3
@@ -19256,14 +19273,14 @@ big2_contentTok:
 	.word	.L3191
 	.section	.text.big2_contentTok
 .L3191:
-	.loc 2 673 0
+	.loc 2 674 0
 	l32i.n	a2, sp, 0
 	addi.n	a3, a2, 2
 	s32i.n	a3, sp, 0
-	.loc 2 674 0
+	.loc 2 675 0
 	sub	a7, a4, a3
 	blti	a7, 2, .L2980
-	.loc 2 675 0
+	.loc 2 676 0
 	l8ui	a8, a2, 2
 	l8ui	a12, a2, 3
 	bnez.n	a8, .L3121
@@ -19318,7 +19335,7 @@ big2_contentTok:
 	.word	.L3129
 	.section	.text.big2_contentTok
 .L3129:
-	.loc 2 676 0
+	.loc 2 677 0
 	l32r	a7, .LC179
 	add.n	a8, a7, a8
 	l8ui	a7, a8, 0
@@ -19336,33 +19353,33 @@ big2_contentTok:
 .L3128:
 	addi.n	a2, a2, 4
 	s32i.n	a2, sp, 0
-	.loc 2 610 0
+	.loc 2 612 0
 	movi.n	a7, 0
 	j	.L3067
 .L3126:
-	.loc 2 676 0
+	.loc 2 677 0
 	beqi	a7, 2, .L2990
 	j	.L2998
 .L3127:
 	blti	a7, 4, .L2990
 	j	.L2998
 .L3119:
-	.loc 2 681 0
+	.loc 2 684 0
 	l32i.n	a2, sp, 0
 	addi.n	a2, a2, 2
 	s32i.n	a2, a6, 0
-	.loc 2 682 0
+	.loc 2 685 0
 	movi.n	a2, 1
 	retw.n
 .L3120:
-	.loc 2 685 0
+	.loc 2 688 0
 	l32i.n	a2, sp, 0
 	addi.n	a3, a2, 2
 	s32i.n	a3, sp, 0
-	.loc 2 686 0
+	.loc 2 689 0
 	sub	a4, a4, a3
 	blti	a4, 2, .L2980
-	.loc 2 687 0
+	.loc 2 690 0
 	l8ui	a4, a2, 2
 	bnez.n	a4, .L2998
 	l8ui	a5, a2, 3
@@ -19370,16 +19387,16 @@ big2_contentTok:
 	beq	a5, a4, .L3131
 	j	.L2998
 .L3131:
-	.loc 2 691 0
+	.loc 2 694 0
 	addi.n	a2, a2, 4
 	s32i.n	a2, a6, 0
-	.loc 2 692 0
+	.loc 2 695 0
 	movi.n	a2, 3
 	retw.n
 .L3067:
 .LVL2084:
 .LBE282:
-	.loc 2 566 0
+	.loc 2 567 0
 	l32i.n	a3, sp, 0
 	sub	a12, a4, a3
 	bgei	a12, 2, .L3132
@@ -19388,23 +19405,23 @@ big2_contentTok:
 .L3062:
 .LBE280:
 .LBE279:
-	.loc 2 770 0
+	.loc 2 772 0
 	beqi	a7, 2, .L2990
 	j	.L3034
 .L3063:
 	blti	a7, 4, .L2990
 	j	.L3034
 .L3064:
-	.loc 2 776 0
+	.loc 2 780 0
 	addi.n	a8, a8, 2
 .LVL2086:
 .L3056:
-	.loc 2 768 0
+	.loc 2 770 0
 	sub	a7, a4, a8
 	bgei	a7, 2, .L3133
 	j	.L2980
 .L3040:
-	.loc 2 788 0
+	.loc 2 792 0
 	addi.n	a8, a8, 2
 .LVL2087:
 .L3217:
@@ -19412,13 +19429,13 @@ big2_contentTok:
 	retw.n
 .LVL2088:
 .L3041:
-	.loc 2 792 0
+	.loc 2 796 0
 	addi.n	a2, a8, 2
 .LVL2089:
-	.loc 2 793 0
+	.loc 2 797 0
 	sub	a4, a4, a2
 	blti	a4, 2, .L2980
-	.loc 2 794 0
+	.loc 2 798 0
 	l8ui	a3, a8, 2
 	bnez.n	a3, .L3134
 	l8ui	a4, a8, 3
@@ -19426,26 +19443,26 @@ big2_contentTok:
 	beq	a4, a3, .L3135
 .LVL2090:
 .L3134:
-	.loc 2 795 0
+	.loc 2 799 0
 	s32i.n	a2, a6, 0
 	j	.L3211
 .LVL2091:
 .L3135:
-	.loc 2 798 0
+	.loc 2 802 0
 	addi.n	a8, a8, 4
 	s32i.n	a8, a6, 0
-	.loc 2 799 0
+	.loc 2 803 0
 	movi.n	a2, 4
 .LVL2092:
 	retw.n
 .LVL2093:
 .L3034:
-	.loc 2 801 0
+	.loc 2 805 0
 	s32i.n	a8, a6, 0
 	j	.L3211
 .L2985:
 .LVL2094:
-	.loc 2 745 0
+	.loc 2 746 0
 	sub	a14, a4, a8
 	bgei	a14, 2, .L3136
 	j	.L2980
@@ -19453,7 +19470,7 @@ big2_contentTok:
 .L2973:
 .LBE273:
 .LBE272:
-	.loc 2 827 0
+	.loc 2 830 0
 	l32i.n	a10, sp, 16
 	mov.n	a13, a6
 	mov.n	a12, a4
@@ -19462,20 +19479,20 @@ big2_contentTok:
 .LVL2096:
 	j	.L3213
 .L2978:
-	.loc 2 829 0
+	.loc 2 832 0
 	addi.n	a5, a3, 2
 .LVL2097:
-	.loc 2 830 0
+	.loc 2 833 0
 	sub	a4, a4, a5
-	.loc 2 831 0
+	.loc 2 834 0
 	movi.n	a2, -3
-	.loc 2 830 0
+	.loc 2 833 0
 	blti	a4, 2, .L3190
-	.loc 2 832 0
+	.loc 2 835 0
 	l8ui	a10, a3, 2
 	l8ui	a11, a3, 3
 	bnez.n	a10, .L3137
-	.loc 2 832 0 is_stmt 0 discriminator 1
+	.loc 2 835 0 is_stmt 0 discriminator 1
 	l32i.n	a2, sp, 16
 	movi.n	a4, 1
 	add.n	a11, a2, a11
@@ -19484,7 +19501,7 @@ big2_contentTok:
 	moveqz	a10, a4, a2
 	j	.L3138
 .L3137:
-	.loc 2 832 0 discriminator 2
+	.loc 2 835 0 discriminator 2
 	call8	unicode_byte_type
 .LVL2098:
 	addi	a2, a10, -10
@@ -19493,112 +19510,112 @@ big2_contentTok:
 	movnez	a10, a4, a2
 	extui	a10, a10, 0, 8
 .L3138:
-	.loc 2 833 0 is_stmt 1 discriminator 4
+	.loc 2 836 0 is_stmt 1 discriminator 4
 	addi.n	a3, a3, 4
 	movnez	a5, a3, a10
 .LVL2099:
-	.loc 2 834 0 discriminator 4
+	.loc 2 837 0 discriminator 4
 	s32i.n	a5, a6, 0
 	j	.L3214
 .LVL2100:
 .L2979:
-	.loc 2 837 0
+	.loc 2 840 0
 	addi.n	a3, a3, 2
 .LVL2101:
 	s32i.n	a3, a6, 0
 .LVL2102:
 .L3214:
-	.loc 2 838 0
+	.loc 2 841 0
 	movi.n	a2, 7
 	retw.n
 .LVL2103:
 .L2974:
-	.loc 2 840 0
+	.loc 2 843 0
 	addi.n	a5, a3, 2
 .LVL2104:
-	.loc 2 841 0
+	.loc 2 844 0
 	sub	a7, a4, a5
-	.loc 2 842 0
+	.loc 2 845 0
 	movi.n	a2, -5
-	.loc 2 841 0
+	.loc 2 844 0
 	blti	a7, 2, .L3190
-	.loc 2 843 0
+	.loc 2 846 0
 	l8ui	a2, a3, 2
 	bnez.n	a2, .L3140
-	.loc 2 843 0 is_stmt 0 discriminator 1
+	.loc 2 846 0 is_stmt 0 discriminator 1
 	l8ui	a7, a3, 3
 	movi.n	a2, 0x5d
 	bne	a7, a2, .L3140
-	.loc 2 845 0 is_stmt 1
+	.loc 2 848 0 is_stmt 1
 	addi.n	a7, a3, 4
 .LVL2105:
-	.loc 2 846 0
+	.loc 2 849 0
 	sub	a8, a4, a7
-	.loc 2 842 0
+	.loc 2 845 0
 	movi.n	a2, -5
-	.loc 2 846 0
+	.loc 2 849 0
 	blti	a8, 2, .L3190
-	.loc 2 848 0
+	.loc 2 851 0
 	l8ui	a2, a3, 4
 	bnez.n	a2, .L3140
-	.loc 2 848 0 is_stmt 0 discriminator 1
+	.loc 2 851 0 is_stmt 0 discriminator 1
 	l8ui	a8, a3, 5
 	movi.n	a3, 0x3e
 	bne	a8, a3, .L3140
 .LVL2106:
 .L3215:
-	.loc 2 852 0 is_stmt 1
+	.loc 2 855 0 is_stmt 1
 	s32i.n	a7, a6, 0
-	.loc 2 853 0
+	.loc 2 856 0
 	retw.n
 .LVL2107:
 .L2975:
-	.loc 2 854 0
+	.loc 2 857 0
 	sub	a2, a4, a3
 	blti	a2, 2, .L2990
 	j	.L2969
 .L2976:
 	sub	a2, a4, a3
 	blti	a2, 3, .L2990
-	.loc 2 854 0 is_stmt 0 discriminator 8
+	.loc 2 857 0 is_stmt 0 discriminator 8
 	addi.n	a5, a3, 3
 .LVL2108:
 	j	.L3140
 .LVL2109:
 .L2977:
-	.loc 2 854 0
+	.loc 2 857 0
 	sub	a2, a4, a3
 	blti	a2, 4, .L2990
-	.loc 2 854 0 discriminator 12
+	.loc 2 857 0 discriminator 12
 	addi.n	a5, a3, 4
 .LVL2110:
 	j	.L3140
 .LVL2111:
 .L2969:
-	.loc 2 856 0 is_stmt 1
+	.loc 2 859 0 is_stmt 1
 	addi.n	a5, a3, 2
 .LVL2112:
 .L3140:
-	.loc 2 860 0
+	.loc 2 863 0
 	movi.n	a3, 0xa
-	.loc 2 873 0
-	movi.n	a12, 0x5d
 	.loc 2 878 0
+	movi.n	a12, 0x5d
+	.loc 2 883 0
 	movi.n	a13, 0x3e
 	j	.L3143
 .LVL2113:
 .L3159:
-	.loc 2 860 0
+	.loc 2 863 0
 	l8ui	a10, a5, 0
 	l8ui	a11, a5, 1
 	bnez.n	a10, .L3144
-	.loc 2 860 0 is_stmt 0 discriminator 1
+	.loc 2 863 0 is_stmt 0 discriminator 1
 	l32i.n	a8, sp, 16
 	add.n	a11, a8, a11
 	l8ui	a2, a11, 72
 	j	.L3145
 .L3144:
-	.loc 2 860 0 discriminator 2
+	.loc 2 863 0 discriminator 2
 	s32i.n	a12, sp, 32
 	s32i.n	a13, sp, 28
 	call8	unicode_byte_type
@@ -19608,71 +19625,71 @@ big2_contentTok:
 	l32i.n	a13, sp, 28
 	j	.L3145
 .L3148:
-	.loc 2 869 0 is_stmt 1
+	.loc 2 873 0 is_stmt 1
 	bnei	a7, 2, .L3149
 	j	.L3212
 .L3149:
-	.loc 2 869 0 is_stmt 0 discriminator 4
+	.loc 2 873 0 is_stmt 0 discriminator 2
 	addi.n	a5, a5, 3
 .LVL2115:
 	j	.L3143
 .L3150:
-	.loc 2 869 0
+	.loc 2 874 0 is_stmt 1
 	bgei	a7, 4, .L3151
 	j	.L3210
 .L3151:
-	.loc 2 869 0 discriminator 6
+	.loc 2 874 0 is_stmt 0 discriminator 2
 	addi.n	a5, a5, 4
 .LVL2116:
 	j	.L3143
 .L3152:
-	.loc 2 872 0 is_stmt 1
+	.loc 2 877 0 is_stmt 1
 	blti	a7, 4, .L3210
-	.loc 2 873 0
+	.loc 2 878 0
 	l8ui	a2, a5, 2
 	bnez.n	a2, .L3158
-	.loc 2 873 0 is_stmt 0 discriminator 1
+	.loc 2 878 0 is_stmt 0 discriminator 1
 	l8ui	a2, a5, 3
 	beq	a2, a12, .L3155
 	j	.L3158
 .L3155:
-	.loc 2 877 0 is_stmt 1
+	.loc 2 882 0 is_stmt 1
 	blti	a7, 6, .L3210
-	.loc 2 878 0
+	.loc 2 883 0
 	l8ui	a2, a5, 4
 	bnez.n	a2, .L3158
-	.loc 2 878 0 is_stmt 0 discriminator 1
+	.loc 2 883 0 is_stmt 0 discriminator 1
 	l8ui	a7, a5, 5
 	beq	a7, a13, .L3157
 	j	.L3158
 .L3157:
-	.loc 2 882 0 is_stmt 1
+	.loc 2 887 0 is_stmt 1
 	addi.n	a5, a5, 4
 .LVL2117:
 .L3212:
 	s32i.n	a5, a6, 0
-	.loc 2 883 0
+	.loc 2 888 0
 	retw.n
 .LVL2118:
 .L3158:
-	.loc 2 897 0
+	.loc 2 902 0
 	addi.n	a5, a5, 2
 .LVL2119:
 .L3143:
-	.loc 2 859 0
+	.loc 2 862 0
 	sub	a7, a4, a5
 	bgei	a7, 2, .L3159
 .L3210:
-	.loc 2 901 0
+	.loc 2 906 0
 	s32i.n	a5, a6, 0
-	.loc 2 902 0
+	.loc 2 907 0
 	movi.n	a2, 6
 	retw.n
 .LVL2120:
 .L2982:
 .LBB287:
 .LBB286:
-	.loc 2 719 0
+	.loc 2 721 0
 	addi	a10, a10, -5
 	movi.n	a11, 0x18
 	bltu	a11, a10, .L3031
@@ -19714,7 +19731,7 @@ big2_contentTok:
 .L3003:
 .LBB285:
 .LBB278:
-	.loc 2 423 0
+	.loc 2 424 0
 	beqi	a10, 7, .L3009
 	bgei	a10, 8, .L3161
 	beqi	a10, 5, .L3031
@@ -19734,7 +19751,7 @@ big2_contentTok:
 .LBE285:
 .LBE286:
 .LBE287:
-	.loc 2 860 0
+	.loc 2 863 0
 	bltu	a3, a2, .L3158
 	l32r	a9, .LC191
 	addx4	a10, a2, a9
@@ -19758,7 +19775,7 @@ big2_contentTok:
 	.section	.text.big2_contentTok
 .LVL2123:
 .L3190:
-	.loc 2 903 0
+	.loc 2 908 0
 	retw.n
 .LFE87:
 	.size	big2_contentTok, .-big2_contentTok
@@ -19767,28 +19784,28 @@ big2_contentTok:
 	.type	parsePseudoAttribute, @function
 parsePseudoAttribute:
 .LFB107:
-	.loc 1 1131 0
+	.loc 1 1063 0
 .LVL2124:
 	entry	sp, 48
 .LCFI94:
-	.loc 1 1131 0
+	.loc 1 1063 0
 	s32i.n	a7, sp, 0
 	mov.n	a7, a3
 .LVL2125:
 	mov.n	a3, a5
 .LVL2126:
-	.loc 1 1134 0
+	.loc 1 1066 0
 	bne	a7, a4, .L3219
 .LVL2127:
 .L3223:
-	.loc 1 1135 0
+	.loc 1 1067 0
 	movi.n	a2, 0
 .LVL2128:
 	s32i.n	a2, a3, 0
 	j	.L3254
 .LVL2129:
 .L3219:
-	.loc 1 1138 0
+	.loc 1 1070 0
 	mov.n	a12, a4
 	mov.n	a11, a7
 	mov.n	a10, a2
@@ -19798,24 +19815,24 @@ parsePseudoAttribute:
 .LVL2131:
 	mov.n	a5, a10
 	bnez.n	a10, .L3247
-	.loc 1 1139 0
+	.loc 1 1071 0
 	l32i.n	a2, sp, 48
 .LVL2132:
 	s32i.n	a7, a2, 0
-	.loc 1 1140 0
+	.loc 1 1072 0
 	j	.L3220
 .LVL2133:
 .L3247:
 .LBB290:
 .LBB291:
-	.loc 1 1143 0
+	.loc 1 1075 0
 	l32i	a9, a2, 64
-	.loc 1 1144 0
+	.loc 1 1076 0
 	mov.n	a12, a4
-	.loc 1 1143 0
+	.loc 1 1075 0
 	add.n	a7, a7, a9
 .LVL2134:
-	.loc 1 1144 0
+	.loc 1 1076 0
 	mov.n	a11, a7
 	mov.n	a10, a2
 	call8	toAscii
@@ -19824,44 +19841,44 @@ parsePseudoAttribute:
 .LVL2136:
 	mov.n	a5, a10
 	bnez.n	a10, .L3247
-	.loc 1 1145 0
+	.loc 1 1077 0
 	beq	a4, a7, .L3223
-	.loc 1 1149 0
+	.loc 1 1081 0
 	s32i.n	a7, a3, 0
 .L3229:
-	.loc 1 1151 0
+	.loc 1 1083 0
 	mov.n	a12, a4
 	mov.n	a11, a7
 	mov.n	a10, a2
 	call8	toAscii
 .LVL2137:
-	.loc 1 1152 0
+	.loc 1 1084 0
 	bnei	a10, -1, .L3224
 	j	.L3255
 .L3224:
-	.loc 1 1156 0
+	.loc 1 1088 0
 	movi.n	a8, 0x3d
 	bne	a10, a8, .L3225
-	.loc 1 1157 0
+	.loc 1 1089 0
 	s32i.n	a7, a6, 0
 	j	.L3226
 .L3225:
-	.loc 1 1160 0
+	.loc 1 1092 0
 	call8	isSpace
 .LVL2138:
 	beqz.n	a10, .L3227
-	.loc 1 1161 0
+	.loc 1 1093 0
 	s32i.n	a7, a6, 0
 .LVL2139:
 .L3228:
-	.loc 1 1163 0
+	.loc 1 1095 0
 	l32i	a6, a2, 64
-	.loc 1 1164 0
+	.loc 1 1096 0
 	mov.n	a12, a4
-	.loc 1 1163 0
+	.loc 1 1095 0
 	add.n	a7, a7, a6
 .LVL2140:
-	.loc 1 1164 0
+	.loc 1 1096 0
 	mov.n	a11, a7
 	mov.n	a10, a2
 	call8	toAscii
@@ -19871,50 +19888,50 @@ parsePseudoAttribute:
 	call8	isSpace
 .LVL2143:
 	bnez.n	a10, .L3228
-	.loc 1 1165 0
+	.loc 1 1097 0
 	movi.n	a11, 0x3d
 	beq	a6, a11, .L3226
-	.loc 1 1166 0
+	.loc 1 1098 0
 	l32i.n	a2, sp, 48
 .LVL2144:
-	.loc 1 1167 0
+	.loc 1 1099 0
 	mov.n	a5, a10
-	.loc 1 1166 0
+	.loc 1 1098 0
 	s32i.n	a7, a2, 0
 	j	.L3220
 .LVL2145:
 .L3227:
-	.loc 1 1171 0
+	.loc 1 1103 0
 	l32i	a10, a2, 64
 	add.n	a7, a7, a10
 .LVL2146:
 	j	.L3229
 .LVL2147:
 .L3226:
-	.loc 1 1173 0
+	.loc 1 1105 0
 	l32i.n	a3, a3, 0
 .LVL2148:
 	bne	a3, a7, .L3230
 .L3255:
-	.loc 1 1174 0
+	.loc 1 1106 0
 	l32i.n	a8, sp, 48
 	s32i.n	a7, a8, 0
 	j	.L3220
 .L3230:
-	.loc 1 1177 0
+	.loc 1 1109 0
 	l32i	a3, a2, 64
 	add.n	a3, a7, a3
 .LVL2149:
 	j	.L3253
 .LVL2150:
 .L3232:
-	.loc 1 1180 0
+	.loc 1 1112 0
 	l32i	a6, a2, 64
 .LVL2151:
 	add.n	a3, a3, a6
 .LVL2152:
 .L3253:
-	.loc 1 1181 0
+	.loc 1 1113 0
 	mov.n	a12, a4
 	mov.n	a11, a3
 	mov.n	a10, a2
@@ -19922,12 +19939,12 @@ parsePseudoAttribute:
 .LVL2153:
 	mov.n	a6, a10
 .LVL2154:
-	.loc 1 1179 0
+	.loc 1 1111 0
 	call8	isSpace
 .LVL2155:
 	mov.n	a5, a10
 	bnez.n	a10, .L3232
-	.loc 1 1183 0
+	.loc 1 1115 0
 	addi	a10, a6, -34
 	movi.n	a11, 1
 	mov.n	a8, a5
@@ -19941,37 +19958,37 @@ parsePseudoAttribute:
 	j	.L3256
 .L3233:
 .LVL2156:
-	.loc 1 1188 0
+	.loc 1 1120 0
 	l32i	a8, a2, 64
-	.loc 1 1192 0
+	.loc 1 1124 0
 	extui	a6, a6, 0, 8
 .LVL2157:
-	.loc 1 1188 0
+	.loc 1 1120 0
 	add.n	a3, a3, a8
 .LVL2158:
-	.loc 1 1189 0
+	.loc 1 1121 0
 	l32i.n	a8, sp, 0
 	s32i.n	a3, a8, 0
 .L3237:
-	.loc 1 1191 0
+	.loc 1 1123 0
 	mov.n	a12, a4
 	mov.n	a11, a3
 	mov.n	a10, a2
 	call8	toAscii
 .LVL2159:
-	.loc 1 1192 0
+	.loc 1 1124 0
 	beq	a10, a6, .L3234
-	.loc 1 1194 0
+	.loc 1 1126 0
 	movi	a7, -0x21
 	and	a7, a10, a7
 	addi	a7, a7, -65
 	movi.n	a8, 0x19
 	bgeu	a8, a7, .L3235
-	.loc 1 1196 0
+	.loc 1 1127 0
 	addi	a7, a10, -48
 	movi.n	a8, 9
 	bgeu	a8, a7, .L3235
-	.loc 1 1199 0
+	.loc 1 1128 0
 	addi	a7, a10, -45
 	bltui	a7, 2, .L3235
 	addi	a10, a10, -95
@@ -19979,21 +19996,21 @@ parsePseudoAttribute:
 	beqz.n	a10, .L3235
 .LVL2161:
 .L3256:
-	.loc 1 1200 0
+	.loc 1 1129 0
 	l32i.n	a2, sp, 48
 .LVL2162:
 	s32i.n	a3, a2, 0
 	j	.L3220
 .LVL2163:
 .L3235:
-	.loc 1 1190 0
+	.loc 1 1122 0
 	l32i	a7, a2, 64
 	add.n	a3, a3, a7
 .LVL2164:
 	j	.L3237
 .LVL2165:
 .L3234:
-	.loc 1 1204 0
+	.loc 1 1133 0
 	l32i	a8, a2, 64
 	add.n	a3, a3, a8
 .LVL2166:
@@ -20001,12 +20018,12 @@ parsePseudoAttribute:
 	s32i.n	a3, a8, 0
 .LVL2167:
 .L3254:
-	.loc 1 1205 0
+	.loc 1 1134 0
 	movi.n	a5, 1
 .L3220:
 .LBE291:
 .LBE290:
-	.loc 1 1206 0
+	.loc 1 1135 0
 	mov.n	a2, a5
 	retw.n
 .LFE107:
@@ -20022,50 +20039,50 @@ parsePseudoAttribute:
 	.type	doParseXmlDecl, @function
 doParseXmlDecl:
 .LFB108:
-	.loc 1 1243 0
+	.loc 1 1157 0
 .LVL2168:
 	entry	sp, 80
 .LCFI95:
-	.loc 1 1244 0
+	.loc 1 1158 0
 	movi.n	a9, 0
 	s32i.n	a9, sp, 24
-	.loc 1 1245 0
+	.loc 1 1159 0
 	s32i.n	a9, sp, 20
-	.loc 1 1246 0
+	.loc 1 1160 0
 	s32i.n	a9, sp, 16
-	.loc 1 1247 0
+	.loc 1 1161 0
 	l32i	a9, a4, 64
-	.loc 1 1249 0
+	.loc 1 1163 0
 	addi	a15, sp, 24
-	.loc 1 1247 0
+	.loc 1 1161 0
 	addx4	a11, a9, a9
-	.loc 1 1248 0
+	.loc 1 1162 0
 	slli	a9, a9, 1
 	sub	a6, a6, a9
 .LVL2169:
-	.loc 1 1249 0
+	.loc 1 1163 0
 	addi	a9, sp, 32
-	.loc 1 1247 0
+	.loc 1 1161 0
 	add.n	a11, a5, a11
-	.loc 1 1249 0
+	.loc 1 1163 0
 	s32i.n	a9, sp, 0
 	addi	a14, sp, 16
 	addi	a13, sp, 20
 	mov.n	a12, a6
 	mov.n	a10, a4
-	.loc 1 1243 0
-	.loc 1 1247 0
+	.loc 1 1157 0
+	.loc 1 1161 0
 	s32i.n	a11, sp, 32
-	.loc 1 1249 0
+	.loc 1 1163 0
 	call8	parsePseudoAttribute
 .LVL2170:
 	beqz.n	a10, .L3266
-	.loc 1 1250 0
+	.loc 1 1164 0
 	l32i.n	a11, sp, 20
 	bnez.n	a11, .L3259
 	j	.L3266
 .L3259:
-	.loc 1 1254 0
+	.loc 1 1168 0
 	l32i.n	a9, a4, 24
 	l32r	a13, .LC192
 	l32i.n	a12, sp, 16
@@ -20073,30 +20090,30 @@ doParseXmlDecl:
 	callx8	a9
 .LVL2171:
 	bnez.n	a10, .L3261
-	.loc 1 1255 0
+	.loc 1 1169 0
 	bnez.n	a3, .L3262
-	.loc 1 1256 0
+	.loc 1 1170 0
 	l32i.n	a2, sp, 20
 .LVL2172:
 	j	.L3305
 .LVL2173:
 .L3261:
-	.loc 1 1261 0
+	.loc 1 1174 0
 	l32i	a5, sp, 80
 .LVL2174:
 	beqz.n	a5, .L3263
-	.loc 1 1262 0
+	.loc 1 1175 0
 	l32i.n	a9, sp, 24
 	s32i.n	a9, a5, 0
 .L3263:
-	.loc 1 1263 0
+	.loc 1 1176 0
 	l32i	a5, sp, 84
 	beqz.n	a5, .L3264
-	.loc 1 1264 0
+	.loc 1 1177 0
 	l32i.n	a9, sp, 32
 	s32i.n	a9, a5, 0
 .L3264:
-	.loc 1 1265 0
+	.loc 1 1178 0
 	addi	a9, sp, 32
 	l32i.n	a11, sp, 32
 	s32i.n	a9, sp, 0
@@ -20109,25 +20126,25 @@ doParseXmlDecl:
 .LVL2175:
 	bnez.n	a10, .L3265
 .L3266:
-	.loc 1 1266 0
+	.loc 1 1179 0
 	l32i.n	a2, sp, 32
 .LVL2176:
 	j	.L3306
 .LVL2177:
 .L3265:
-	.loc 1 1269 0
+	.loc 1 1182 0
 	l32i.n	a9, sp, 20
 	bnez.n	a9, .L3262
-	.loc 1 1270 0
+	.loc 1 1183 0
 	bnez.n	a3, .L3266
 .LVL2178:
 .L3274:
-	.loc 1 1275 0
+	.loc 1 1188 0
 	movi.n	a10, 1
 	j	.L3260
 .LVL2179:
 .L3262:
-	.loc 1 1278 0
+	.loc 1 1191 0
 	l32i.n	a9, a4, 24
 	l32r	a13, .LC193
 	l32i.n	a12, sp, 16
@@ -20138,7 +20155,7 @@ doParseXmlDecl:
 	bnez.n	a10, .L3267
 .LVL2181:
 .L3275:
-	.loc 1 1295 0
+	.loc 1 1208 0
 	l32i.n	a2, a4, 24
 	l32r	a13, .LC194
 	l32i.n	a12, sp, 16
@@ -20146,7 +20163,7 @@ doParseXmlDecl:
 	mov.n	a10, a4
 	callx8	a2
 .LVL2182:
-	.loc 1 1296 0
+	.loc 1 1209 0
 	movi.n	a9, 0
 	movi.n	a2, 1
 	moveqz	a9, a2, a10
@@ -20160,36 +20177,36 @@ doParseXmlDecl:
 .LVL2184:
 .L3267:
 .LBB292:
-	.loc 1 1279 0
+	.loc 1 1192 0
 	l32i.n	a11, sp, 24
 	mov.n	a12, a6
 	mov.n	a10, a4
 	call8	toAscii
 .LVL2185:
-	.loc 1 1280 0
+	.loc 1 1193 0
 	movi	a9, -0x21
 	and	a10, a10, a9
 .LVL2186:
 	addi	a10, a10, -65
 	movi.n	a9, 0x19
 	bgeu	a9, a10, .L3270
-	.loc 1 1281 0
+	.loc 1 1194 0
 	l32i.n	a2, sp, 24
 .LVL2187:
 	j	.L3306
 .LVL2188:
 .L3270:
-	.loc 1 1284 0
+	.loc 1 1197 0
 	l32i	a5, sp, 88
 	beqz.n	a5, .L3271
-	.loc 1 1285 0
+	.loc 1 1198 0
 	l32i.n	a9, sp, 24
 	s32i.n	a9, a5, 0
 .L3271:
-	.loc 1 1286 0
+	.loc 1 1199 0
 	l32i	a5, sp, 92
 	beqz.n	a5, .L3272
-	.loc 1 1287 0
+	.loc 1 1200 0
 	l32i	a9, a4, 64
 	l32i.n	a12, sp, 32
 	l32i.n	a11, sp, 24
@@ -20199,7 +20216,7 @@ doParseXmlDecl:
 .LVL2189:
 	s32i.n	a10, a5, 0
 .L3272:
-	.loc 1 1288 0
+	.loc 1 1201 0
 	addi	a2, sp, 32
 .LVL2190:
 	l32i.n	a11, sp, 32
@@ -20211,27 +20228,27 @@ doParseXmlDecl:
 	mov.n	a10, a4
 	call8	parsePseudoAttribute
 .LVL2191:
-	.loc 1 1289 0
+	.loc 1 1202 0
 	l32i.n	a2, sp, 32
-	.loc 1 1288 0
+	.loc 1 1201 0
 	beqz.n	a10, .L3305
 .L3273:
-	.loc 1 1292 0
+	.loc 1 1205 0
 	l32i.n	a2, sp, 20
 	bnez.n	a2, .L3275
 	j	.L3274
 .LVL2192:
 .L3268:
 .LBE292:
-	.loc 1 1297 0
+	.loc 1 1210 0
 	l32i.n	a2, sp, 20
 .L3306:
 	s32i.n	a2, a7, 0
-	.loc 1 1298 0
+	.loc 1 1211 0
 	movi.n	a10, 0
 	j	.L3260
 .L3304:
-	.loc 1 1300 0
+	.loc 1 1213 0
 	l32i	a9, a4, 64
 	l32i.n	a12, sp, 32
 	l32i.n	a3, a4, 24
@@ -20243,14 +20260,14 @@ doParseXmlDecl:
 .LVL2193:
 	mov.n	a3, a10
 	beqz.n	a10, .L3276
-	.loc 1 1301 0
+	.loc 1 1214 0
 	l32i	a3, sp, 96
 	beqz.n	a3, .L3279
-	.loc 1 1302 0
+	.loc 1 1215 0
 	s32i.n	a2, a3, 0
 	j	.L3279
 .L3276:
-	.loc 1 1304 0
+	.loc 1 1216 0
 	l32i	a9, a4, 64
 	l32i.n	a12, sp, 32
 	l32i.n	a2, a4, 24
@@ -20261,23 +20278,23 @@ doParseXmlDecl:
 	callx8	a2
 .LVL2194:
 	beqz.n	a10, .L3280
-	.loc 1 1305 0
+	.loc 1 1217 0
 	l32i	a2, sp, 96
 	beqz.n	a2, .L3279
-	.loc 1 1306 0
+	.loc 1 1218 0
 	s32i.n	a3, a2, 0
 	j	.L3279
 .L3280:
-	.loc 1 1309 0
+	.loc 1 1220 0
 	l32i.n	a2, sp, 24
 	j	.L3305
 .L3282:
-	.loc 1 1313 0
+	.loc 1 1224 0
 	l32i	a3, a4, 64
 	add.n	a2, a2, a3
 	s32i.n	a2, sp, 32
 .L3279:
-	.loc 1 1312 0
+	.loc 1 1223 0
 	l32i.n	a11, sp, 32
 	mov.n	a12, a6
 	mov.n	a10, a4
@@ -20287,13 +20304,13 @@ doParseXmlDecl:
 .LVL2196:
 	l32i.n	a2, sp, 32
 	bnez.n	a10, .L3282
-	.loc 1 1314 0
+	.loc 1 1225 0
 	beq	a6, a2, .L3274
 .L3305:
-	.loc 1 1315 0
+	.loc 1 1226 0
 	s32i.n	a2, a7, 0
 .L3260:
-	.loc 1 1319 0
+	.loc 1 1230 0
 	mov.n	a2, a10
 	retw.n
 .LFE108:
@@ -20304,78 +20321,78 @@ doParseXmlDecl:
 	.type	_INTERNAL_trim_to_complete_utf8_characters, @function
 _INTERNAL_trim_to_complete_utf8_characters:
 .LFB36:
-	.loc 1 366 0
+	.loc 1 322 0
 .LVL2197:
 	entry	sp, 32
 .LCFI96:
-	.loc 1 367 0
+	.loc 1 323 0
 	l32i.n	a10, a3, 0
 .LVL2198:
-	.loc 1 368 0
+	.loc 1 324 0
 	movi.n	a8, 0
 .LBB293:
-	.loc 1 371 0
+	.loc 1 327 0
 	movi.n	a12, -8
 	movi.n	a13, -0x10
 	movi	a14, 0xf0
-	.loc 1 378 0
+	.loc 1 335 0
 	movi.n	a15, -0x20
 	movi	a4, 0xe0
-	.loc 1 385 0
+	.loc 1 343 0
 	movi	a5, 0xc0
 .LBE293:
-	.loc 1 369 0
+	.loc 1 325 0
 	j	.L3308
 .LVL2199:
 .L3314:
 	addi.n	a11, a10, -1
 .LBB294:
-	.loc 1 370 0
+	.loc 1 326 0
 	l8ui	a9, a11, 0
 .LVL2200:
-	.loc 1 371 0
+	.loc 1 327 0
 	and	a6, a9, a12
 	bne	a6, a14, .L3309
-	.loc 1 372 0
+	.loc 1 329 0
 	addi.n	a8, a8, 1
 .LVL2201:
 	bltui	a8, 4, .L3317
-	.loc 1 373 0
+	.loc 1 330 0
 	addi.n	a10, a10, 3
 .LVL2202:
-	.loc 1 374 0
+	.loc 1 331 0
 	j	.L3311
 .LVL2203:
 .L3309:
-	.loc 1 378 0
+	.loc 1 335 0
 	and	a6, a9, a13
 	bne	a6, a4, .L3312
-	.loc 1 379 0
+	.loc 1 337 0
 	addi.n	a8, a8, 1
 .LVL2204:
 	bltui	a8, 3, .L3317
-	.loc 1 380 0
+	.loc 1 338 0
 	addi.n	a10, a10, 2
 .LVL2205:
-	.loc 1 381 0
+	.loc 1 339 0
 	j	.L3311
 .LVL2206:
 .L3312:
-	.loc 1 385 0
+	.loc 1 343 0
 	and	a6, a9, a15
 	bne	a6, a5, .L3313
-	.loc 1 386 0
+	.loc 1 345 0
 	addi.n	a8, a8, 1
 .LVL2207:
 	bltui	a8, 2, .L3317
-	.loc 1 387 0
+	.loc 1 346 0
 	addi.n	a10, a10, 1
 .LVL2208:
-	.loc 1 388 0
+	.loc 1 347 0
 	j	.L3311
 .LVL2209:
 .L3313:
-	.loc 1 392 0
+	.loc 1 351 0
 	sext	a9, a9, 7
 	bltz	a9, .L3310
 .LBE294:
@@ -20383,22 +20400,22 @@ _INTERNAL_trim_to_complete_utf8_characters:
 .LVL2210:
 .L3317:
 .LBB295:
-	.loc 1 376 0
+	.loc 1 333 0
 	movi.n	a8, 0
 .L3310:
 .LVL2211:
 .LBE295:
-	.loc 1 369 0
+	.loc 1 325 0
 	addi.n	a8, a8, 1
 .LVL2212:
 	mov.n	a10, a11
 .LVL2213:
 .L3308:
-	.loc 1 369 0 is_stmt 0 discriminator 1
+	.loc 1 325 0 is_stmt 0 discriminator 1
 	bltu	a2, a10, .L3314
 .LVL2214:
 .L3311:
-	.loc 1 396 0 is_stmt 1
+	.loc 1 356 0 is_stmt 1
 	s32i.n	a10, a3, 0
 	retw.n
 .LFE36:
@@ -20408,56 +20425,56 @@ _INTERNAL_trim_to_complete_utf8_characters:
 	.type	utf8_toUtf8, @function
 utf8_toUtf8:
 .LFB37:
-	.loc 1 403 0
+	.loc 1 361 0
 .LVL2215:
 	entry	sp, 48
 .LCFI97:
 .LVL2216:
-	.loc 1 408 0
+	.loc 1 366 0
 	l32i.n	a10, a3, 0
 .LVL2217:
-	.loc 1 409 0
+	.loc 1 367 0
 	l32i.n	a8, a5, 0
-	.loc 1 403 0
+	.loc 1 361 0
 	s32i.n	a4, sp, 0
 .LVL2218:
-	.loc 1 409 0
+	.loc 1 367 0
 	sub	a6, a6, a8
 .LVL2219:
-	.loc 1 410 0
+	.loc 1 369 0
 	sub	a4, a4, a10
 .LVL2220:
-	.loc 1 405 0
+	.loc 1 363 0
 	movi.n	a7, 0
-	.loc 1 410 0
+	.loc 1 369 0
 	bge	a6, a4, .L3319
-	.loc 1 411 0
+	.loc 1 370 0
 	add.n	a6, a10, a6
 .LVL2221:
 	s32i.n	a6, sp, 0
 .LVL2222:
-	.loc 1 412 0
+	.loc 1 371 0
 	movi.n	a7, 1
 .LVL2223:
 .L3319:
 .LBB296:
-	.loc 1 418 0
+	.loc 1 377 0
 	mov.n	a11, sp
-	.loc 1 417 0
+	.loc 1 376 0
 	l32i.n	a4, sp, 0
 .LVL2224:
-	.loc 1 418 0
+	.loc 1 377 0
 	call8	_INTERNAL_trim_to_complete_utf8_characters
 .LVL2225:
-	.loc 1 419 0
+	.loc 1 378 0
 	l32i.n	a8, sp, 0
 .LVL2226:
 .LBE296:
 .LBB297:
-	.loc 1 425 0
+	.loc 1 384 0
 	l32i.n	a11, a3, 0
 .LVL2227:
-	.loc 1 426 0
+	.loc 1 385 0
 	l32i.n	a10, a5, 0
 	sub	a2, a8, a11
 .LVL2228:
@@ -20465,32 +20482,32 @@ utf8_toUtf8:
 	s32i.n	a8, sp, 4
 	call8	memcpy
 .LVL2229:
-	.loc 1 427 0
+	.loc 1 386 0
 	l32i.n	a6, a3, 0
 .LBE297:
-	.loc 1 431 0
+	.loc 1 390 0
 	l32i.n	a8, sp, 4
 .LBB298:
-	.loc 1 427 0
+	.loc 1 386 0
 	add.n	a6, a6, a2
 	s32i.n	a6, a3, 0
-	.loc 1 428 0
+	.loc 1 387 0
 	l32i.n	a3, a5, 0
 .LVL2230:
 	add.n	a2, a3, a2
 .LVL2231:
 	s32i.n	a2, a5, 0
 .LBE298:
-	.loc 1 432 0
+	.loc 1 391 0
 	movi.n	a2, 2
-	.loc 1 431 0
+	.loc 1 390 0
 	bnez.n	a7, .L3320
-	.loc 1 432 0
+	.loc 1 391 0
 	movi.n	a2, 1
 	bltu	a8, a4, .L3320
 	mov.n	a2, a7
 .L3320:
-	.loc 1 437 0
+	.loc 1 396 0
 	retw.n
 .LFE37:
 	.size	utf8_toUtf8, .-utf8_toUtf8
@@ -20503,112 +20520,112 @@ utf8_toUtf8:
 	.type	XmlUtf8Encode, @function
 XmlUtf8Encode:
 .LFB110:
-	.loc 1 1342 0
+	.loc 1 1257 0
 .LVL2232:
 	entry	sp, 32
 .LCFI98:
-	.loc 1 1342 0
+	.loc 1 1257 0
 	mov.n	a8, a2
-	.loc 1 1351 0
+	.loc 1 1266 0
 	movi.n	a2, 0
 .LVL2233:
-	.loc 1 1350 0
+	.loc 1 1265 0
 	blt	a8, a2, .L3325
-	.loc 1 1352 0
+	.loc 1 1267 0
 	movi	a2, 0x7f
 	blt	a2, a8, .L3326
-	.loc 1 1353 0
+	.loc 1 1268 0
 	s8i	a8, a3, 0
-	.loc 1 1354 0
+	.loc 1 1269 0
 	movi.n	a2, 1
 	retw.n
 .L3326:
-	.loc 1 1356 0
+	.loc 1 1271 0
 	movi	a2, 0x7ff
 	blt	a2, a8, .L3327
-	.loc 1 1357 0
+	.loc 1 1272 0
 	srai	a9, a8, 6
 	movi	a2, -0x40
 	or	a2, a9, a2
-	.loc 1 1358 0
+	.loc 1 1273 0
 	extui	a8, a8, 0, 6
 .LVL2234:
 	movi	a9, -0x80
 	or	a8, a8, a9
-	.loc 1 1357 0
+	.loc 1 1272 0
 	s8i	a2, a3, 0
-	.loc 1 1358 0
+	.loc 1 1273 0
 	s8i	a8, a3, 1
-	.loc 1 1359 0
+	.loc 1 1274 0
 	movi.n	a2, 2
 	retw.n
 .LVL2235:
 .L3327:
-	.loc 1 1361 0
+	.loc 1 1276 0
 	l32r	a2, .LC197
 	blt	a2, a8, .L3328
-	.loc 1 1362 0
+	.loc 1 1277 0
 	srai	a9, a8, 12
 	movi.n	a2, -0x20
 	or	a2, a9, a2
 	s8i	a2, a3, 0
-	.loc 1 1363 0
+	.loc 1 1278 0
 	movi	a9, -0x80
 	extui	a2, a8, 6, 6
-	.loc 1 1364 0
+	.loc 1 1279 0
 	extui	a8, a8, 0, 6
 .LVL2236:
-	.loc 1 1363 0
+	.loc 1 1278 0
 	or	a2, a2, a9
-	.loc 1 1364 0
+	.loc 1 1279 0
 	or	a9, a8, a9
-	.loc 1 1363 0
+	.loc 1 1278 0
 	s8i	a2, a3, 1
-	.loc 1 1364 0
+	.loc 1 1279 0
 	s8i	a9, a3, 2
-	.loc 1 1365 0
+	.loc 1 1280 0
 	movi.n	a2, 3
 	retw.n
 .LVL2237:
 .L3328:
-	.loc 1 1367 0
+	.loc 1 1282 0
 	l32r	a9, .LC198
-	.loc 1 1351 0
+	.loc 1 1266 0
 	movi.n	a2, 0
-	.loc 1 1367 0
+	.loc 1 1282 0
 	blt	a9, a8, .L3325
 .LVL2238:
 .LBB301:
 .LBB302:
-	.loc 1 1368 0
+	.loc 1 1283 0
 	srai	a9, a8, 18
 	movi.n	a2, -0x10
 	or	a2, a9, a2
 	s8i	a2, a3, 0
-	.loc 1 1369 0
+	.loc 1 1284 0
 	extui	a9, a8, 12, 6
 	movi	a2, -0x80
 	or	a9, a9, a2
 	s8i	a9, a3, 1
-	.loc 1 1370 0
+	.loc 1 1285 0
 	extui	a9, a8, 6, 6
-	.loc 1 1371 0
+	.loc 1 1286 0
 	extui	a8, a8, 0, 6
 .LVL2239:
-	.loc 1 1370 0
+	.loc 1 1285 0
 	or	a9, a9, a2
-	.loc 1 1371 0
+	.loc 1 1286 0
 	or	a8, a8, a2
-	.loc 1 1370 0
+	.loc 1 1285 0
 	s8i	a9, a3, 2
-	.loc 1 1371 0
+	.loc 1 1286 0
 	s8i	a8, a3, 3
 	movi.n	a2, 4
 .LVL2240:
 .L3325:
 .LBE302:
 .LBE301:
-	.loc 1 1375 0
+	.loc 1 1290 0
 	retw.n
 .LFE110:
 	.size	XmlUtf8Encode, .-XmlUtf8Encode
@@ -20617,55 +20634,55 @@ XmlUtf8Encode:
 	.type	unknown_toUtf8, @function
 unknown_toUtf8:
 .LFB116:
-	.loc 1 1443 0
+	.loc 1 1351 0
 .LVL2241:
 	entry	sp, 64
 .LCFI99:
 .LVL2242:
 .LBB303:
-	.loc 1 1451 0
+	.loc 1 1359 0
 	movi	a7, 0xdc
 .L3337:
-	.loc 1 1449 0
+	.loc 1 1357 0
 	l32i.n	a11, a3, 0
 	beq	a11, a4, .L3338
-	.loc 1 1451 0
+	.loc 1 1359 0
 	l8ui	a8, a11, 0
 	add.n	a8, a8, a7
 	addx4	a8, a8, a2
 .LVL2243:
-	.loc 1 1452 0
+	.loc 1 1360 0
 	l8ui	a9, a8, 4
 .LVL2244:
-	.loc 1 1453 0
+	.loc 1 1361 0
 	bnez.n	a9, .L3333
 .LBB304:
-	.loc 1 1454 0
+	.loc 1 1362 0
 	l32i	a8, a2, 364
 .LVL2245:
 	l32i	a10, a2, 368
 	callx8	a8
 .LVL2246:
-	.loc 1 1455 0
+	.loc 1 1363 0
 	mov.n	a11, sp
 	call8	XmlUtf8Encode
 .LVL2247:
-	.loc 1 1456 0
+	.loc 1 1364 0
 	l32i.n	a8, a5, 0
-	.loc 1 1455 0
+	.loc 1 1363 0
 	mov.n	a9, a10
 .LVL2248:
-	.loc 1 1456 0
+	.loc 1 1364 0
 	sub	a8, a6, a8
 	bge	a8, a10, .L3334
 .L3336:
-	.loc 1 1457 0
+	.loc 1 1365 0
 	movi.n	a2, 2
 .LVL2249:
 	retw.n
 .LVL2250:
 .L3334:
-	.loc 1 1459 0
+	.loc 1 1367 0
 	l32i.n	a11, a3, 0
 	l8ui	a10, a11, 0
 	add.n	a10, a2, a10
@@ -20673,48 +20690,48 @@ unknown_toUtf8:
 	addi	a8, a8, -3
 	add.n	a8, a11, a8
 	s32i.n	a8, a3, 0
-	.loc 1 1458 0
+	.loc 1 1366 0
 	mov.n	a8, sp
 .LVL2251:
 .LBE304:
 	j	.L3335
 .LVL2252:
 .L3333:
-	.loc 1 1463 0
+	.loc 1 1370 0
 	l32i.n	a10, a5, 0
 	sub	a10, a6, a10
 	blt	a10, a9, .L3336
-	.loc 1 1465 0
+	.loc 1 1372 0
 	addi.n	a11, a11, 1
-	.loc 1 1452 0
+	.loc 1 1360 0
 	addi.n	a8, a8, 5
 .LVL2253:
-	.loc 1 1465 0
+	.loc 1 1372 0
 	s32i.n	a11, a3, 0
 .LVL2254:
 .L3335:
-	.loc 1 1467 0
+	.loc 1 1374 0
 	l32i.n	a10, a5, 0
 	mov.n	a12, a9
 	mov.n	a11, a8
 	s32i.n	a9, sp, 16
 	call8	memcpy
 .LVL2255:
-	.loc 1 1468 0
+	.loc 1 1375 0
 	l32i.n	a8, a5, 0
 	l32i.n	a9, sp, 16
 	add.n	a9, a8, a9
 	s32i.n	a9, a5, 0
 .LBE303:
-	.loc 1 1469 0
+	.loc 1 1376 0
 	j	.L3337
 .L3338:
 .LBB305:
-	.loc 1 1450 0
+	.loc 1 1358 0
 	movi.n	a2, 0
 .LVL2256:
 .LBE305:
-	.loc 1 1470 0
+	.loc 1 1377 0
 	retw.n
 .LFE116:
 	.size	unknown_toUtf8, .-unknown_toUtf8
@@ -20728,51 +20745,51 @@ unknown_toUtf8:
 	.type	XmlUtf16Encode, @function
 XmlUtf16Encode:
 .LFB111:
-	.loc 1 1379 0
+	.loc 1 1293 0
 .LVL2257:
 	entry	sp, 32
 .LCFI100:
-	.loc 1 1381 0
+	.loc 1 1295 0
 	movi.n	a8, 0
-	.loc 1 1380 0
+	.loc 1 1294 0
 	blt	a2, a8, .L3340
-	.loc 1 1382 0
+	.loc 1 1296 0
 	l32r	a8, .LC199
 	blt	a8, a2, .L3341
-	.loc 1 1383 0
+	.loc 1 1297 0
 	s16i	a2, a3, 0
-	.loc 1 1384 0
+	.loc 1 1298 0
 	movi.n	a8, 1
 	j	.L3340
 .L3341:
-	.loc 1 1386 0
+	.loc 1 1300 0
 	l32r	a9, .LC200
-	.loc 1 1381 0
+	.loc 1 1295 0
 	movi.n	a8, 0
-	.loc 1 1386 0
+	.loc 1 1300 0
 	blt	a9, a2, .L3340
-	.loc 1 1387 0
+	.loc 1 1301 0
 	l32r	a8, .LC201
 	add.n	a2, a2, a8
 .LVL2258:
-	.loc 1 1388 0
+	.loc 1 1302 0
 	srai	a8, a2, 10
-	.loc 1 1389 0
+	.loc 1 1303 0
 	extui	a2, a2, 0, 10
 .LVL2259:
-	.loc 1 1388 0
+	.loc 1 1302 0
 	addmi	a8, a8, -0x2800
-	.loc 1 1389 0
+	.loc 1 1303 0
 	addmi	a2, a2, -0x2400
-	.loc 1 1388 0
+	.loc 1 1302 0
 	s16i	a8, a3, 0
-	.loc 1 1389 0
+	.loc 1 1303 0
 	s16i	a2, a3, 2
-	.loc 1 1390 0
+	.loc 1 1304 0
 	movi.n	a8, 2
 .LVL2260:
 .L3340:
-	.loc 1 1393 0
+	.loc 1 1307 0
 	mov.n	a2, a8
 	retw.n
 .LFE111:
@@ -20783,10 +20800,10 @@ XmlUtf16Encode:
 	.type	XmlSizeOfUnknownEncoding, @function
 XmlSizeOfUnknownEncoding:
 .LFB112:
-	.loc 1 1407 0
+	.loc 1 1320 0
 	entry	sp, 32
 .LCFI101:
-	.loc 1 1409 0
+	.loc 1 1322 0
 	movi	a2, 0x774
 	retw.n
 .LFE112:
@@ -20808,293 +20825,274 @@ XmlSizeOfUnknownEncoding:
 	.type	XmlInitUnknownEncoding, @function
 XmlInitUnknownEncoding:
 .LFB118:
-	.loc 1 1502 0
+	.loc 1 1402 0
 .LVL2261:
 	entry	sp, 64
 .LCFI102:
 .LVL2262:
-	.loc 1 1502 0
-	s32i.n	a4, sp, 0
-	.loc 1 1506 0
-	l32r	a4, .LC205
-.LVL2263:
-	.loc 1 1502 0
+	.loc 1 1402 0
 	s32i.n	a5, sp, 4
-	.loc 1 1505 0
-	movi	a6, 0x16c
-	movi.n	a5, 0
-	loop	a6, .L3346_LEND
+	.loc 1 1405 0
+	l32r	a5, .LC205
+.LVL2263:
+	movi	a12, 0x16c
+	mov.n	a11, a5
+	mov.n	a10, a2
+	call8	memcpy
 .LVL2264:
-.L3346:
-	.loc 1 1506 0 discriminator 3
-	add.n	a7, a5, a4
-	l8ui	a8, a7, 0
-	add.n	a7, a2, a5
-	s8i	a8, a7, 0
-	.loc 1 1505 0 discriminator 3
-	addi.n	a5, a5, 1
-.LVL2265:
-	.L3346_LEND:
-	mov.n	a8, a3
-	.loc 1 1505 0 is_stmt 0
+	mov.n	a11, a5
+	mov.n	a9, a3
 	mov.n	a5, a3
-.LVL2266:
+	.loc 1 1406 0
 	movi.n	a6, 0
-	.loc 1 1508 0 is_stmt 1
+	.loc 1 1407 0
 	movi	a3, 0x80
-.LVL2267:
-.L3349:
-	l8ui	a7, a4, 72
-	addi	a9, a7, -28
-	beqz.n	a9, .L3347
-	beqz.n	a7, .L3347
-	.loc 1 1510 0
+.LVL2265:
+.L3348:
+	l8ui	a7, a11, 72
+	addi	a8, a7, -28
+	beqz.n	a8, .L3346
+	beqz.n	a7, .L3346
+	.loc 1 1408 0
 	l32i.n	a7, a5, 0
-	beq	a7, a6, .L3347
-.LVL2268:
-.L3353:
-	.loc 1 1511 0
+	beq	a7, a6, .L3346
+.LVL2266:
+.L3352:
+	.loc 1 1409 0
 	movi.n	a2, 0
-.LVL2269:
+.LVL2267:
 	retw.n
-.LVL2270:
-.L3347:
-	.loc 1 1507 0 discriminator 2
+.LVL2268:
+.L3346:
+	.loc 1 1406 0 discriminator 2
 	addi.n	a6, a6, 1
-.LVL2271:
-	addi.n	a4, a4, 1
+.LVL2269:
+	addi.n	a11, a11, 1
 	addi.n	a5, a5, 4
 	addi.n	a3, a3, -1
-	bnez.n	a3, .L3349
-	.loc 1 1507 0 is_stmt 0
-	movi.n	a4, 0
+	bnez.n	a3, .L3348
+	.loc 1 1406 0 is_stmt 0
+	movi.n	a8, 0
 .LBB309:
 .LBB310:
 .LBB311:
-	.loc 1 1525 0 is_stmt 1
-	l32i.n	a9, sp, 0
-	.loc 1 1534 0
-	movi.n	a14, 1
-	.loc 1 1525 0
-	mov.n	a5, a4
-	moveqz	a5, a14, a9
+	.loc 1 1429 0 is_stmt 1
+	movi.n	a13, 1
+	.loc 1 1422 0
+	mov.n	a12, a8
+	moveqz	a12, a13, a4
 	movi	a7, 0x174
 	movi	a6, 0x374
-.LVL2272:
-	extui	a5, a5, 0, 8
+.LVL2270:
+	extui	a12, a12, 0, 8
 	addi	a3, a2, 72
 	add.n	a7, a2, a7
 	add.n	a6, a2, a6
-	.loc 1 1534 0
-	mov.n	a12, a4
-	.loc 1 1525 0
-	s32i.n	a5, sp, 8
-.LVL2273:
-.L3362:
-	.loc 1 1513 0
-	l32i.n	a5, a8, 0
-.LVL2274:
-	.loc 1 1514 0
-	bnei	a5, -1, .L3350
-	.loc 1 1515 0
-	movi.n	a9, 1
-	s8i	a9, a3, 0
-	.loc 1 1517 0
-	s16i	a5, a7, 0
-	.loc 1 1518 0
-	s8i	a9, a6, 0
-	.loc 1 1519 0
-	movi.n	a5, 0
-.LVL2275:
-	j	.L3383
-.LVL2276:
-.L3350:
-	.loc 1 1521 0
-	bgez	a5, .L3352
-	.loc 1 1525 0
-	l32i.n	a9, sp, 8
-	bnez.n	a9, .L3353
-	movi.n	a9, -4
-	blt	a5, a9, .L3353
-	.loc 1 1527 0
-	movi.n	a9, 3
-	sub	a5, a9, a5
-.LVL2277:
-	s8i	a5, a3, 0
-.LVL2278:
-	.loc 1 1528 0
-	s8i	a12, a6, 0
-	.loc 1 1529 0
-	s16i	a12, a7, 0
-	j	.L3351
-.LVL2279:
-.L3352:
-	.loc 1 1531 0
-	movi	a9, 0x7f
-	blt	a9, a5, .L3355
-	.loc 1 1532 0
-	l32r	a9, .LC205
-	.loc 1 1534 0
-	mov.n	a11, a12
-	.loc 1 1532 0
-	add.n	a9, a9, a5
-	l8ui	a9, a9, 72
-	.loc 1 1534 0
-	addi	a10, a9, -28
-	movnez	a11, a14, a10
-	mov.n	a10, a11
-	mov.n	a11, a12
-	movnez	a11, a14, a9
-	bnone	a10, a11, .L3365
-	bne	a5, a4, .L3353
-.L3365:
-	.loc 1 1536 0
-	s8i	a9, a3, 0
-	.loc 1 1539 0
-	l32r	a10, .LC204
-	.loc 1 1537 0
-	movi.n	a9, 1
-	s8i	a9, a6, 0
-	.loc 1 1539 0
-	extui	a9, a5, 0, 16
-	.loc 1 1538 0
-	s8i	a5, a6, 1
-	.loc 1 1539 0
-	movnez	a10, a9, a5
-	mov.n	a5, a10
-.LVL2280:
-	s16i	a10, a7, 0
-	j	.L3351
-.LVL2281:
-.L3355:
-	.loc 1 1541 0
-	mov.n	a10, a5
-	s32i.n	a8, sp, 12
-	s32i.n	a12, sp, 20
-	s32i.n	a14, sp, 16
-	call8	checkCharRefNumber
-.LVL2282:
-	l32i.n	a8, sp, 12
-	l32i.n	a12, sp, 20
-	l32i.n	a14, sp, 16
-	bgez	a10, .L3358
-	.loc 1 1542 0
-	movi.n	a5, 0
-.LVL2283:
-	s8i	a5, a3, 0
-	.loc 1 1544 0
-	movi.n	a9, -1
-	s16i	a9, a7, 0
-	.loc 1 1545 0
-	movi.n	a9, 1
-	s8i	a9, a6, 0
-.L3383:
-	.loc 1 1546 0
-	s8i	a5, a6, 1
-	j	.L3351
-.LVL2284:
-.L3358:
-	.loc 1 1549 0
-	l32r	a9, .LC204
-	blt	a9, a5, .L3353
-	.loc 1 1551 0
-	l32r	a9, .LC207
-	srai	a10, a5, 8
-	add.n	a9, a9, a10
-	l8ui	a9, a9, 0
-	extui	a15, a5, 5, 3
-	l32r	a13, .LC206
-	addx8	a9, a9, a15
-	addx4	a9, a9, a13
-	l32i.n	a9, a9, 0
-	extui	a11, a5, 0, 5
-	bbc	a9, a11, .L3359
-	.loc 1 1552 0
-	movi.n	a9, 0x16
-	j	.L3382
-.L3359:
-	.loc 1 1553 0
-	l32r	a9, .LC208
-	add.n	a10, a9, a10
-	l8ui	a9, a10, 0
-	addx8	a15, a9, a15
-	addx4	a15, a15, a13
-	l32i.n	a9, a15, 0
-	bbc	a9, a11, .L3361
-	.loc 1 1554 0
-	movi.n	a9, 0x1a
-	j	.L3382
+	s32i.n	a12, sp, 0
+.LVL2271:
 .L3361:
-	.loc 1 1556 0
-	movi.n	a9, 0x1c
-.L3382:
-	s8i	a9, a3, 0
-	.loc 1 1557 0
+	.loc 1 1411 0
+	l32i.n	a5, a9, 0
+.LVL2272:
+	.loc 1 1412 0
+	bnei	a5, -1, .L3349
+	.loc 1 1413 0
+	movi.n	a10, 1
+	s8i	a10, a3, 0
+	.loc 1 1415 0
+	s16i	a5, a7, 0
+	.loc 1 1416 0
+	s8i	a10, a6, 0
+	.loc 1 1417 0
+	movi.n	a5, 0
+.LVL2273:
+	j	.L3381
+.LVL2274:
+.L3349:
+	.loc 1 1418 0
+	bgez	a5, .L3351
+	.loc 1 1422 0
+	movi.n	a10, -4
+	blt	a5, a10, .L3352
+	l32i.n	a12, sp, 0
+	bnez.n	a12, .L3352
+	.loc 1 1424 0
+	movi.n	a10, 3
+	sub	a5, a10, a5
+.LVL2275:
+	s8i	a5, a3, 0
+.LVL2276:
+	.loc 1 1425 0
+	s8i	a12, a6, 0
+	.loc 1 1426 0
+	s16i	a12, a7, 0
+	j	.L3350
+.LVL2277:
+.L3351:
+	.loc 1 1427 0
+	movi	a10, 0x7f
+	blt	a10, a5, .L3354
+	.loc 1 1428 0
+	l32r	a10, .LC205
+	.loc 1 1429 0
+	movi.n	a12, 0
+	.loc 1 1428 0
+	add.n	a10, a10, a5
+	l8ui	a10, a10, 72
+	.loc 1 1429 0
+	movi.n	a14, 0
+	addi	a11, a10, -28
+	movnez	a12, a13, a11
+	movnez	a14, a13, a10
+	bnone	a12, a14, .L3364
+	bne	a5, a8, .L3352
+.L3364:
+	.loc 1 1431 0
+	s8i	a10, a3, 0
+	.loc 1 1434 0
+	l32r	a11, .LC204
+	.loc 1 1432 0
+	movi.n	a10, 1
+	s8i	a10, a6, 0
+	.loc 1 1434 0
+	extui	a10, a5, 0, 16
+	.loc 1 1433 0
+	s8i	a5, a6, 1
+	.loc 1 1434 0
+	movnez	a11, a10, a5
+	mov.n	a5, a11
+.LVL2278:
+	s16i	a11, a7, 0
+	j	.L3350
+.LVL2279:
+.L3354:
+	.loc 1 1435 0
+	mov.n	a10, a5
+	s32i.n	a8, sp, 8
+	s32i.n	a9, sp, 12
+	s32i.n	a13, sp, 16
+	call8	checkCharRefNumber
+.LVL2280:
+	l32i.n	a8, sp, 8
+.LVL2281:
+	l32i.n	a9, sp, 12
+	l32i.n	a13, sp, 16
+	bgez	a10, .L3357
+	.loc 1 1436 0
+	movi.n	a5, 0
+.LVL2282:
+	s8i	a5, a3, 0
+	.loc 1 1438 0
+	movi.n	a10, -1
+	s16i	a10, a7, 0
+	.loc 1 1439 0
+	movi.n	a10, 1
+	s8i	a10, a6, 0
+.L3381:
+	.loc 1 1440 0
+	s8i	a5, a6, 1
+	j	.L3350
+.LVL2283:
+.L3357:
+	.loc 1 1442 0
+	l32r	a10, .LC204
+	blt	a10, a5, .L3352
+	.loc 1 1444 0
+	l32r	a10, .LC207
+	srai	a11, a5, 8
+	add.n	a10, a10, a11
+	l8ui	a10, a10, 0
+	extui	a15, a5, 5, 3
+	l32r	a12, .LC206
+	addx8	a10, a10, a15
+	addx4	a10, a10, a12
+	l32i.n	a10, a10, 0
+	extui	a14, a5, 0, 5
+	bbc	a10, a14, .L3358
+	.loc 1 1445 0
+	movi.n	a10, 0x16
+	j	.L3380
+.L3358:
+	.loc 1 1446 0
+	l32r	a10, .LC208
+	add.n	a11, a10, a11
+	l8ui	a10, a11, 0
+	addx8	a15, a10, a15
+	addx4	a15, a15, a12
+	l32i.n	a10, a15, 0
+	bbc	a10, a14, .L3360
+	.loc 1 1447 0
+	movi.n	a10, 0x1a
+	j	.L3380
+.L3360:
+	.loc 1 1449 0
+	movi.n	a10, 0x1c
+.L3380:
+	s8i	a10, a3, 0
+	.loc 1 1450 0
 	addi.n	a11, a6, 1
 	mov.n	a10, a5
-	s32i.n	a8, sp, 12
-	s32i.n	a12, sp, 20
-	s32i.n	a14, sp, 16
+	s32i.n	a8, sp, 8
+	s32i.n	a9, sp, 12
+	s32i.n	a13, sp, 16
 	call8	XmlUtf8Encode
-.LVL2285:
+.LVL2284:
 	s8i	a10, a6, 0
-	.loc 1 1558 0
-	l32i.n	a14, sp, 16
-	l32i.n	a12, sp, 20
-	l32i.n	a8, sp, 12
+	.loc 1 1451 0
+	l32i.n	a13, sp, 16
+	l32i.n	a9, sp, 12
+	l32i.n	a8, sp, 8
 	s16i	a5, a7, 0
-.LVL2286:
-.L3351:
+.LVL2285:
+.L3350:
 .LBE311:
-	.loc 1 1512 0
-	addi.n	a4, a4, 1
-.LVL2287:
-	addi.n	a8, a8, 4
+	.loc 1 1410 0
+	addi.n	a8, a8, 1
+.LVL2286:
+	addi.n	a9, a9, 4
 	addi.n	a3, a3, 1
 	addi.n	a7, a7, 2
 	addi.n	a6, a6, 4
-	bnei	a4, 256, .L3362
-	.loc 1 1561 0
+	bnei	a8, 256, .L3361
+	.loc 1 1454 0
 	l32i.n	a3, sp, 4
-	.loc 1 1562 0
-	l32i.n	a9, sp, 0
-	.loc 1 1561 0
+	.loc 1 1455 0
+	s32i	a4, a2, 364
+	.loc 1 1454 0
 	s32i	a3, a2, 368
-	.loc 1 1562 0
-	s32i	a9, a2, 364
-	.loc 1 1563 0
-	beqz.n	a9, .L3363
-	.loc 1 1564 0
+	.loc 1 1456 0
+	beqz.n	a4, .L3362
+	.loc 1 1457 0
 	l32r	a3, .LC209
 	s32i	a3, a2, 328
-	.loc 1 1565 0
+	.loc 1 1458 0
 	s32i	a3, a2, 332
-	.loc 1 1566 0
+	.loc 1 1459 0
 	s32i	a3, a2, 336
-	.loc 1 1567 0
+	.loc 1 1460 0
 	l32r	a3, .LC210
 	s32i	a3, a2, 340
-	.loc 1 1568 0
+	.loc 1 1461 0
 	s32i	a3, a2, 344
-	.loc 1 1569 0
+	.loc 1 1462 0
 	s32i	a3, a2, 348
-	.loc 1 1570 0
+	.loc 1 1463 0
 	l32r	a3, .LC211
 	s32i	a3, a2, 352
-	.loc 1 1571 0
+	.loc 1 1464 0
 	s32i	a3, a2, 356
-	.loc 1 1572 0
+	.loc 1 1465 0
 	s32i	a3, a2, 360
-.L3363:
-	.loc 1 1574 0
+.L3362:
+	.loc 1 1467 0
 	l32r	a3, .LC212
 	s32i.n	a3, a2, 56
-	.loc 1 1575 0
+	.loc 1 1468 0
 	l32r	a3, .LC213
 	s32i.n	a3, a2, 60
 .LBE310:
 .LBE309:
-	.loc 1 1577 0
+	.loc 1 1470 0
 	retw.n
 .LFE118:
 	.size	XmlInitUnknownEncoding, .-XmlInitUnknownEncoding
@@ -21106,10 +21104,10 @@ XmlInitUnknownEncoding:
 	.type	XmlGetUtf8InternalEncoding, @function
 XmlGetUtf8InternalEncoding:
 .LFB121:
-	.loc 3 37 0
+	.loc 3 36 0
 	entry	sp, 32
 .LCFI103:
-	.loc 3 39 0
+	.loc 3 38 0
 	l32r	a2, .LC214
 	retw.n
 .LFE121:
@@ -21122,10 +21120,10 @@ XmlGetUtf8InternalEncoding:
 	.type	XmlGetUtf16InternalEncoding, @function
 XmlGetUtf16InternalEncoding:
 .LFB122:
-	.loc 3 43 0
+	.loc 3 41 0
 	entry	sp, 32
 .LCFI104:
-	.loc 3 54 0
+	.loc 3 51 0
 	l32r	a2, .LC215
 	retw.n
 .LFE122:
@@ -21140,41 +21138,41 @@ XmlGetUtf16InternalEncoding:
 	.type	XmlInitEncoding, @function
 XmlInitEncoding:
 .LFB125:
-	.loc 3 85 0
-.LVL2288:
+	.loc 3 76 0
+.LVL2287:
 	entry	sp, 32
 .LCFI105:
-	.loc 3 86 0
+	.loc 3 77 0
 	mov.n	a10, a4
 	call8	getEncodingIndex
-.LVL2289:
-	.loc 3 88 0
+.LVL2288:
+	.loc 3 79 0
 	movi.n	a8, 0
-	.loc 3 87 0
-	beqi	a10, -1, .L3387
-	.loc 3 90 0
+	.loc 3 78 0
+	beqi	a10, -1, .L3385
+	.loc 3 81 0
 	l32r	a8, .LC216
-	.loc 3 89 0
+	.loc 3 80 0
 	s8i	a10, a2, 69
-	.loc 3 90 0
+	.loc 3 81 0
 	s32i.n	a8, a2, 0
-	.loc 3 91 0
+	.loc 3 82 0
 	l32r	a8, .LC217
-	.loc 3 93 0
+	.loc 3 84 0
 	s32i	a3, a2, 72
-	.loc 3 91 0
+	.loc 3 82 0
 	s32i.n	a8, a2, 4
-	.loc 3 92 0
+	.loc 3 83 0
 	l32r	a8, .LC218
 	s32i.n	a8, a2, 48
-	.loc 3 94 0
+	.loc 3 85 0
 	s32i.n	a2, a3, 0
-	.loc 3 95 0
+	.loc 3 86 0
 	movi.n	a8, 1
-.L3387:
-	.loc 3 96 0
+.L3385:
+	.loc 3 87 0
 	mov.n	a2, a8
-.LVL2290:
+.LVL2289:
 	retw.n
 .LFE125:
 	.size	XmlInitEncoding, .-XmlInitEncoding
@@ -21186,11 +21184,11 @@ XmlInitEncoding:
 	.type	XmlParseXmlDecl, @function
 XmlParseXmlDecl:
 .LFB127:
-	.loc 3 128 0
-.LVL2291:
+	.loc 3 112 0
+.LVL2290:
 	entry	sp, 64
 .LCFI106:
-	.loc 3 129 0
+	.loc 3 113 0
 	l32i	a8, sp, 76
 	l32r	a10, .LC219
 	s32i.n	a8, sp, 16
@@ -21207,12 +21205,12 @@ XmlParseXmlDecl:
 	mov.n	a13, a4
 	mov.n	a12, a3
 	call8	doParseXmlDecl
-.LVL2292:
-	.loc 3 140 0
+.LVL2291:
+	.loc 3 116 0
 	mov.n	a2, a10
-.LVL2293:
-	.loc 3 128 0
-	.loc 3 140 0
+.LVL2292:
+	.loc 3 112 0
+	.loc 3 116 0
 	retw.n
 .LFE127:
 	.size	XmlParseXmlDecl, .-XmlParseXmlDecl
@@ -21224,10 +21222,10 @@ XmlParseXmlDecl:
 	.type	XmlGetUtf8InternalEncodingNS, @function
 XmlGetUtf8InternalEncodingNS:
 .LFB128:
-	.loc 3 37 0
+	.loc 3 36 0
 	entry	sp, 32
 .LCFI107:
-	.loc 3 39 0
+	.loc 3 38 0
 	l32r	a2, .LC220
 	retw.n
 .LFE128:
@@ -21240,10 +21238,10 @@ XmlGetUtf8InternalEncodingNS:
 	.type	XmlGetUtf16InternalEncodingNS, @function
 XmlGetUtf16InternalEncodingNS:
 .LFB129:
-	.loc 3 43 0
+	.loc 3 41 0
 	entry	sp, 32
 .LCFI108:
-	.loc 3 54 0
+	.loc 3 51 0
 	l32r	a2, .LC221
 	retw.n
 .LFE129:
@@ -21258,41 +21256,41 @@ XmlGetUtf16InternalEncodingNS:
 	.type	XmlInitEncodingNS, @function
 XmlInitEncodingNS:
 .LFB132:
-	.loc 3 85 0
-.LVL2294:
+	.loc 3 76 0
+.LVL2293:
 	entry	sp, 32
 .LCFI109:
-	.loc 3 86 0
+	.loc 3 77 0
 	mov.n	a10, a4
 	call8	getEncodingIndex
-.LVL2295:
-	.loc 3 88 0
+.LVL2294:
+	.loc 3 79 0
 	movi.n	a8, 0
-	.loc 3 87 0
-	beqi	a10, -1, .L3393
-	.loc 3 90 0
+	.loc 3 78 0
+	beqi	a10, -1, .L3391
+	.loc 3 81 0
 	l32r	a8, .LC222
-	.loc 3 89 0
+	.loc 3 80 0
 	s8i	a10, a2, 69
-	.loc 3 90 0
+	.loc 3 81 0
 	s32i.n	a8, a2, 0
-	.loc 3 91 0
+	.loc 3 82 0
 	l32r	a8, .LC223
-	.loc 3 93 0
+	.loc 3 84 0
 	s32i	a3, a2, 72
-	.loc 3 91 0
+	.loc 3 82 0
 	s32i.n	a8, a2, 4
-	.loc 3 92 0
+	.loc 3 83 0
 	l32r	a8, .LC224
 	s32i.n	a8, a2, 48
-	.loc 3 94 0
+	.loc 3 85 0
 	s32i.n	a2, a3, 0
-	.loc 3 95 0
+	.loc 3 86 0
 	movi.n	a8, 1
-.L3393:
-	.loc 3 96 0
+.L3391:
+	.loc 3 87 0
 	mov.n	a2, a8
-.LVL2296:
+.LVL2295:
 	retw.n
 .LFE132:
 	.size	XmlInitEncodingNS, .-XmlInitEncodingNS
@@ -21304,11 +21302,11 @@ XmlInitEncodingNS:
 	.type	XmlParseXmlDeclNS, @function
 XmlParseXmlDeclNS:
 .LFB134:
-	.loc 3 128 0
-.LVL2297:
+	.loc 3 112 0
+.LVL2296:
 	entry	sp, 64
 .LCFI110:
-	.loc 3 129 0
+	.loc 3 113 0
 	l32i	a8, sp, 76
 	l32r	a10, .LC225
 	s32i.n	a8, sp, 16
@@ -21325,12 +21323,12 @@ XmlParseXmlDeclNS:
 	mov.n	a13, a4
 	mov.n	a12, a3
 	call8	doParseXmlDecl
-.LVL2298:
-	.loc 3 140 0
+.LVL2297:
+	.loc 3 116 0
 	mov.n	a2, a10
-.LVL2299:
-	.loc 3 128 0
-	.loc 3 140 0
+.LVL2298:
+	.loc 3 112 0
+	.loc 3 116 0
 	retw.n
 .LFE134:
 	.size	XmlParseXmlDeclNS, .-XmlParseXmlDeclNS
@@ -21340,34 +21338,34 @@ XmlParseXmlDeclNS:
 	.type	XmlInitUnknownEncodingNS, @function
 XmlInitUnknownEncodingNS:
 .LFB135:
-	.loc 1 1799 0
-.LVL2300:
+	.loc 1 1665 0
+.LVL2299:
 	entry	sp, 32
 .LCFI111:
-	.loc 1 1800 0
+	.loc 1 1666 0
 	mov.n	a13, a5
 	mov.n	a12, a4
 	mov.n	a11, a3
 	mov.n	a10, a2
 	call8	XmlInitUnknownEncoding
-.LVL2301:
-	.loc 1 1801 0
-	beqz.n	a10, .L3397
-	.loc 1 1802 0
+.LVL2300:
+	.loc 1 1667 0
+	beqz.n	a10, .L3395
+	.loc 1 1668 0
 	movi.n	a8, 0x17
 	s8i	a8, a10, 130
-.L3397:
-	.loc 1 1804 0
+.L3395:
+	.loc 1 1670 0
 	mov.n	a2, a10
-.LVL2302:
+.LVL2301:
 	retw.n
 .LFE135:
 	.size	XmlInitUnknownEncodingNS, .-XmlInitUnknownEncodingNS
-	.section	.rodata.encodingNames$5076,"a",@progbits
+	.section	.rodata.encodingNames$5073,"a",@progbits
 	.align	4
-	.type	encodingNames$5076, @object
-	.size	encodingNames$5076, 24
-encodingNames$5076:
+	.type	encodingNames$5073, @object
+	.size	encodingNames$5073, 24
+encodingNames$5073:
 	.word	KW_ISO_8859_1
 	.word	KW_US_ASCII
 	.word	KW_UTF_8
@@ -27559,14 +27557,14 @@ namingBitmap:
 	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/nametab.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x5ffa
+	.4byte	0x6019
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF335
+	.4byte	.LASF333
 	.byte	0xc
-	.4byte	.LASF336
+	.4byte	.LASF334
 	.4byte	.Ldebug_ranges0+0x4c8
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -27648,173 +27646,173 @@ namingBitmap:
 	.uleb128 0x2
 	.4byte	.LASF13
 	.byte	0x5
-	.byte	0x9b
+	.byte	0x97
 	.4byte	0x7f
 	.uleb128 0xa
 	.4byte	.LASF23
 	.byte	0x8
 	.byte	0x6
-	.byte	0x8c
+	.byte	0x8e
 	.4byte	0xde
 	.uleb128 0xb
 	.4byte	.LASF14
 	.byte	0x6
-	.byte	0x8e
+	.byte	0x90
 	.4byte	0xae
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LASF15
 	.byte	0x6
-	.byte	0x8f
+	.byte	0x91
 	.4byte	0xae
 	.byte	0x4
 	.byte	0
 	.uleb128 0x2
 	.4byte	.LASF16
 	.byte	0x6
-	.byte	0x90
+	.byte	0x92
 	.4byte	0xb9
 	.uleb128 0xc
 	.byte	0x10
 	.byte	0x6
-	.byte	0x92
+	.byte	0x94
 	.4byte	0x122
 	.uleb128 0xb
 	.4byte	.LASF17
 	.byte	0x6
-	.byte	0x93
+	.byte	0x95
 	.4byte	0x93
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LASF18
 	.byte	0x6
-	.byte	0x94
+	.byte	0x96
 	.4byte	0x93
 	.byte	0x4
 	.uleb128 0xb
 	.4byte	.LASF19
 	.byte	0x6
-	.byte	0x95
+	.byte	0x97
 	.4byte	0x93
 	.byte	0x8
 	.uleb128 0xb
 	.4byte	.LASF20
 	.byte	0x6
-	.byte	0x96
+	.byte	0x98
 	.4byte	0x8c
 	.byte	0xc
 	.byte	0
 	.uleb128 0x2
 	.4byte	.LASF21
 	.byte	0x6
-	.byte	0x97
+	.byte	0x99
 	.4byte	0xe9
 	.uleb128 0x2
 	.4byte	.LASF22
 	.byte	0x6
-	.byte	0x9a
+	.byte	0x9c
 	.4byte	0x138
 	.uleb128 0xa
 	.4byte	.LASF24
 	.byte	0x48
 	.byte	0x6
-	.byte	0xa7
+	.byte	0xa8
 	.4byte	0x1f9
 	.uleb128 0xb
 	.4byte	.LASF25
 	.byte	0x6
-	.byte	0xa8
+	.byte	0xa9
 	.4byte	0x25c
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LASF26
 	.byte	0x6
-	.byte	0xa9
+	.byte	0xaa
 	.4byte	0x26c
 	.byte	0x10
 	.uleb128 0xb
 	.4byte	.LASF27
 	.byte	0x6
-	.byte	0xaa
+	.byte	0xab
 	.4byte	0x29a
 	.byte	0x18
 	.uleb128 0xb
 	.4byte	.LASF28
 	.byte	0x6
-	.byte	0xae
+	.byte	0xad
 	.4byte	0x2b4
 	.byte	0x1c
 	.uleb128 0xb
 	.4byte	.LASF29
 	.byte	0x6
-	.byte	0xaf
+	.byte	0xae
 	.4byte	0x2ce
 	.byte	0x20
 	.uleb128 0xb
 	.4byte	.LASF30
 	.byte	0x6
-	.byte	0xb0
+	.byte	0xaf
 	.4byte	0x2f8
 	.byte	0x24
 	.uleb128 0xb
 	.4byte	.LASF31
 	.byte	0x6
-	.byte	0xb4
+	.byte	0xb1
 	.4byte	0x2b4
 	.byte	0x28
 	.uleb128 0xb
 	.4byte	.LASF32
 	.byte	0x6
-	.byte	0xb5
+	.byte	0xb2
 	.4byte	0x317
 	.byte	0x2c
 	.uleb128 0xb
 	.4byte	.LASF33
 	.byte	0x6
-	.byte	0xb8
+	.byte	0xb4
 	.4byte	0x33d
 	.byte	0x30
 	.uleb128 0xb
 	.4byte	.LASF34
 	.byte	0x6
-	.byte	0xbc
+	.byte	0xb6
 	.4byte	0x204
 	.byte	0x34
 	.uleb128 0xb
 	.4byte	.LASF35
 	.byte	0x6
-	.byte	0xc0
+	.byte	0xb8
 	.4byte	0x36c
 	.byte	0x38
 	.uleb128 0xb
 	.4byte	.LASF36
 	.byte	0x6
-	.byte	0xc5
+	.byte	0xbc
 	.4byte	0x3ac
 	.byte	0x3c
 	.uleb128 0xb
 	.4byte	.LASF37
 	.byte	0x6
-	.byte	0xca
+	.byte	0xc1
 	.4byte	0x2c
 	.byte	0x40
 	.uleb128 0xb
 	.4byte	.LASF38
 	.byte	0x6
-	.byte	0xcb
+	.byte	0xc2
 	.4byte	0x8c
 	.byte	0x44
 	.uleb128 0xb
 	.4byte	.LASF39
 	.byte	0x6
-	.byte	0xcc
+	.byte	0xc3
 	.4byte	0x8c
 	.byte	0x45
 	.byte	0
 	.uleb128 0x2
 	.4byte	.LASF40
 	.byte	0x6
-	.byte	0x9c
+	.byte	0x9e
 	.4byte	0x204
 	.uleb128 0x6
 	.byte	0x4
@@ -27840,7 +27838,7 @@ namingBitmap:
 	.byte	0x4
 	.4byte	0x93
 	.uleb128 0xf
-	.4byte	.LASF337
+	.4byte	.LASF335
 	.byte	0x4
 	.4byte	0x3e
 	.byte	0x6
@@ -28006,18 +28004,18 @@ namingBitmap:
 	.uleb128 0x12
 	.byte	0x4c
 	.byte	0x6
-	.2byte	0x122
+	.2byte	0x115
 	.4byte	0x3d6
 	.uleb128 0x13
 	.4byte	.LASF44
 	.byte	0x6
-	.2byte	0x123
+	.2byte	0x116
 	.4byte	0x12d
 	.byte	0
 	.uleb128 0x13
 	.4byte	.LASF45
 	.byte	0x6
-	.2byte	0x124
+	.2byte	0x117
 	.4byte	0x3d6
 	.byte	0x48
 	.byte	0
@@ -28027,12 +28025,12 @@ namingBitmap:
 	.uleb128 0x14
 	.4byte	.LASF46
 	.byte	0x6
-	.2byte	0x125
+	.2byte	0x118
 	.4byte	0x3b2
 	.uleb128 0x14
 	.4byte	.LASF47
 	.byte	0x6
-	.2byte	0x13a
+	.2byte	0x127
 	.4byte	0x3f4
 	.uleb128 0x6
 	.byte	0x4
@@ -28049,72 +28047,72 @@ namingBitmap:
 	.4byte	.LASF48
 	.2byte	0x16c
 	.byte	0x1
-	.byte	0xd0
+	.byte	0xba
 	.4byte	0x4a9
 	.uleb128 0x16
 	.string	"enc"
 	.byte	0x1
-	.byte	0xd1
+	.byte	0xbb
 	.4byte	0x12d
 	.byte	0
 	.uleb128 0xb
 	.4byte	.LASF49
 	.byte	0x1
-	.byte	0xd2
+	.byte	0xbc
 	.4byte	0x4a9
 	.byte	0x48
 	.uleb128 0x17
 	.4byte	.LASF50
 	.byte	0x1
-	.byte	0xda
+	.byte	0xc4
 	.4byte	0x2b4
 	.2byte	0x148
 	.uleb128 0x17
 	.4byte	.LASF51
 	.byte	0x1
-	.byte	0xdb
+	.byte	0xc5
 	.4byte	0x2b4
 	.2byte	0x14c
 	.uleb128 0x17
 	.4byte	.LASF52
 	.byte	0x1
-	.byte	0xdc
+	.byte	0xc6
 	.4byte	0x2b4
 	.2byte	0x150
 	.uleb128 0x17
 	.4byte	.LASF53
 	.byte	0x1
-	.byte	0xdd
+	.byte	0xc7
 	.4byte	0x2b4
 	.2byte	0x154
 	.uleb128 0x17
 	.4byte	.LASF54
 	.byte	0x1
-	.byte	0xde
+	.byte	0xc8
 	.4byte	0x2b4
 	.2byte	0x158
 	.uleb128 0x17
 	.4byte	.LASF55
 	.byte	0x1
-	.byte	0xdf
+	.byte	0xc9
 	.4byte	0x2b4
 	.2byte	0x15c
 	.uleb128 0x17
 	.4byte	.LASF56
 	.byte	0x1
-	.byte	0xe0
+	.byte	0xca
 	.4byte	0x2b4
 	.2byte	0x160
 	.uleb128 0x17
 	.4byte	.LASF57
 	.byte	0x1
-	.byte	0xe1
+	.byte	0xcb
 	.4byte	0x2b4
 	.2byte	0x164
 	.uleb128 0x17
 	.4byte	.LASF58
 	.byte	0x1
-	.byte	0xe2
+	.byte	0xcc
 	.4byte	0x2b4
 	.2byte	0x168
 	.byte	0
@@ -28247,7 +28245,7 @@ namingBitmap:
 	.byte	0x4
 	.4byte	0x3e
 	.byte	0x1
-	.2byte	0x165
+	.2byte	0x139
 	.4byte	0x5ca
 	.uleb128 0x10
 	.4byte	.LASF96
@@ -28266,36 +28264,36 @@ namingBitmap:
 	.4byte	.LASF100
 	.2byte	0x774
 	.byte	0x1
-	.2byte	0x573
+	.2byte	0x51d
 	.4byte	0x61e
 	.uleb128 0x13
 	.4byte	.LASF101
 	.byte	0x1
-	.2byte	0x574
+	.2byte	0x51e
 	.4byte	0x40e
 	.byte	0
 	.uleb128 0x1b
 	.4byte	.LASF102
 	.byte	0x1
-	.2byte	0x575
+	.2byte	0x51f
 	.4byte	0x3e8
 	.2byte	0x16c
 	.uleb128 0x1b
 	.4byte	.LASF103
 	.byte	0x1
-	.2byte	0x576
+	.2byte	0x520
 	.4byte	0x7d
 	.2byte	0x170
 	.uleb128 0x1b
 	.4byte	.LASF104
 	.byte	0x1
-	.2byte	0x577
+	.2byte	0x521
 	.4byte	0x61e
 	.2byte	0x174
 	.uleb128 0x1b
 	.4byte	.LASF105
 	.byte	0x1
-	.2byte	0x578
+	.2byte	0x522
 	.4byte	0x62e
 	.2byte	0x374
 	.byte	0
@@ -28320,7 +28318,7 @@ namingBitmap:
 	.byte	0x4
 	.4byte	0x2c
 	.byte	0x1
-	.2byte	0x62d
+	.2byte	0x5c2
 	.4byte	0x682
 	.uleb128 0x1c
 	.4byte	.LASF106
@@ -28348,106 +28346,106 @@ namingBitmap:
 	.byte	0x6
 	.byte	0
 	.uleb128 0x1d
-	.4byte	.LASF115
+	.4byte	.LASF114
 	.byte	0x1
-	.byte	0xbf
+	.byte	0xa9
 	.4byte	0x2c
 	.byte	0x1
 	.4byte	0x6a7
 	.uleb128 0x1e
-	.4byte	.LASF114
+	.string	"enc"
 	.byte	0x1
-	.byte	0xbf
+	.byte	0xa9
 	.4byte	0x228
-	.uleb128 0x1f
+	.uleb128 0x1e
 	.string	"p"
 	.byte	0x1
-	.byte	0xbf
+	.byte	0xa9
 	.4byte	0x93
 	.byte	0
 	.uleb128 0x1d
-	.4byte	.LASF116
+	.4byte	.LASF115
 	.byte	0x1
-	.byte	0xcb
+	.byte	0xb5
 	.4byte	0x2c
 	.byte	0x1
 	.4byte	0x6cc
 	.uleb128 0x1e
-	.4byte	.LASF114
+	.string	"enc"
 	.byte	0x1
-	.byte	0xcb
+	.byte	0xb5
 	.4byte	0x228
-	.uleb128 0x1f
+	.uleb128 0x1e
 	.string	"p"
 	.byte	0x1
-	.byte	0xcb
+	.byte	0xb5
 	.4byte	0x93
 	.byte	0
 	.uleb128 0x1d
-	.4byte	.LASF117
+	.4byte	.LASF116
 	.byte	0x2
 	.byte	0xdd
 	.4byte	0x2c
 	.byte	0x1
 	.4byte	0x714
 	.uleb128 0x1e
-	.4byte	.LASF114
+	.string	"enc"
 	.byte	0x2
 	.byte	0xdd
 	.4byte	0x228
-	.uleb128 0x1f
+	.uleb128 0x1e
 	.string	"ptr"
 	.byte	0x2
 	.byte	0xdd
 	.4byte	0x93
-	.uleb128 0x1f
+	.uleb128 0x1e
 	.string	"end"
 	.byte	0x2
-	.byte	0xde
+	.byte	0xdd
 	.4byte	0x93
-	.uleb128 0x1e
-	.4byte	.LASF118
+	.uleb128 0x1f
+	.4byte	.LASF117
 	.byte	0x2
 	.byte	0xde
 	.4byte	0x714
 	.uleb128 0x20
-	.4byte	.LASF121
+	.4byte	.LASF120
 	.byte	0x2
-	.byte	0xe0
+	.byte	0xdf
 	.4byte	0x2c
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x2c
 	.uleb128 0x21
-	.4byte	.LASF119
+	.4byte	.LASF118
 	.byte	0x2
-	.2byte	0x145
+	.2byte	0x146
 	.4byte	0x2c
 	.byte	0x1
 	.4byte	0x779
 	.uleb128 0x22
-	.4byte	.LASF114
+	.string	"enc"
 	.byte	0x2
-	.2byte	0x145
+	.2byte	0x146
 	.4byte	0x228
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"ptr"
-	.byte	0x2
-	.2byte	0x145
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
 	.byte	0x2
 	.2byte	0x146
 	.4byte	0x93
 	.uleb128 0x22
-	.4byte	.LASF120
+	.string	"end"
 	.byte	0x2
 	.2byte	0x146
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
+	.byte	0x2
+	.2byte	0x147
 	.4byte	0x233
 	.uleb128 0x24
-	.4byte	.LASF124
+	.4byte	.LASF123
 	.byte	0x2
 	.2byte	0x148
 	.4byte	0x789
@@ -28474,67 +28472,67 @@ namingBitmap:
 	.uleb128 0x7
 	.4byte	0x779
 	.uleb128 0x1d
-	.4byte	.LASF122
+	.4byte	.LASF121
 	.byte	0x2
 	.byte	0xdd
 	.4byte	0x2c
 	.byte	0x1
 	.4byte	0x7d6
 	.uleb128 0x1e
-	.4byte	.LASF114
+	.string	"enc"
 	.byte	0x2
 	.byte	0xdd
 	.4byte	0x228
-	.uleb128 0x1f
+	.uleb128 0x1e
 	.string	"ptr"
 	.byte	0x2
 	.byte	0xdd
 	.4byte	0x93
-	.uleb128 0x1f
+	.uleb128 0x1e
 	.string	"end"
 	.byte	0x2
-	.byte	0xde
+	.byte	0xdd
 	.4byte	0x93
-	.uleb128 0x1e
-	.4byte	.LASF118
+	.uleb128 0x1f
+	.4byte	.LASF117
 	.byte	0x2
 	.byte	0xde
 	.4byte	0x714
 	.uleb128 0x20
-	.4byte	.LASF121
+	.4byte	.LASF120
 	.byte	0x2
-	.byte	0xe0
+	.byte	0xdf
 	.4byte	0x2c
 	.byte	0
 	.uleb128 0x21
-	.4byte	.LASF123
+	.4byte	.LASF122
 	.byte	0x2
-	.2byte	0x145
+	.2byte	0x146
 	.4byte	0x2c
 	.byte	0x1
 	.4byte	0x835
 	.uleb128 0x22
-	.4byte	.LASF114
+	.string	"enc"
 	.byte	0x2
-	.2byte	0x145
+	.2byte	0x146
 	.4byte	0x228
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"ptr"
-	.byte	0x2
-	.2byte	0x145
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
 	.byte	0x2
 	.2byte	0x146
 	.4byte	0x93
 	.uleb128 0x22
-	.4byte	.LASF120
+	.string	"end"
 	.byte	0x2
 	.2byte	0x146
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
+	.byte	0x2
+	.2byte	0x147
 	.4byte	0x233
 	.uleb128 0x24
-	.4byte	.LASF124
+	.4byte	.LASF123
 	.byte	0x2
 	.2byte	0x148
 	.4byte	0x835
@@ -28554,67 +28552,67 @@ namingBitmap:
 	.uleb128 0x7
 	.4byte	0x779
 	.uleb128 0x1d
-	.4byte	.LASF125
+	.4byte	.LASF124
 	.byte	0x2
 	.byte	0xdd
 	.4byte	0x2c
 	.byte	0x1
 	.4byte	0x882
 	.uleb128 0x1e
-	.4byte	.LASF114
+	.string	"enc"
 	.byte	0x2
 	.byte	0xdd
 	.4byte	0x228
-	.uleb128 0x1f
+	.uleb128 0x1e
 	.string	"ptr"
 	.byte	0x2
 	.byte	0xdd
 	.4byte	0x93
-	.uleb128 0x1f
+	.uleb128 0x1e
 	.string	"end"
 	.byte	0x2
-	.byte	0xde
+	.byte	0xdd
 	.4byte	0x93
-	.uleb128 0x1e
-	.4byte	.LASF118
+	.uleb128 0x1f
+	.4byte	.LASF117
 	.byte	0x2
 	.byte	0xde
 	.4byte	0x714
 	.uleb128 0x20
-	.4byte	.LASF121
+	.4byte	.LASF120
 	.byte	0x2
-	.byte	0xe0
+	.byte	0xdf
 	.4byte	0x2c
 	.byte	0
 	.uleb128 0x21
-	.4byte	.LASF126
+	.4byte	.LASF125
 	.byte	0x2
-	.2byte	0x145
+	.2byte	0x146
 	.4byte	0x2c
 	.byte	0x1
 	.4byte	0x8e1
 	.uleb128 0x22
-	.4byte	.LASF114
+	.string	"enc"
 	.byte	0x2
-	.2byte	0x145
+	.2byte	0x146
 	.4byte	0x228
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"ptr"
-	.byte	0x2
-	.2byte	0x145
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
 	.byte	0x2
 	.2byte	0x146
 	.4byte	0x93
 	.uleb128 0x22
-	.4byte	.LASF120
+	.string	"end"
 	.byte	0x2
 	.2byte	0x146
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
+	.byte	0x2
+	.2byte	0x147
 	.4byte	0x233
 	.uleb128 0x24
-	.4byte	.LASF124
+	.4byte	.LASF123
 	.byte	0x2
 	.2byte	0x148
 	.4byte	0x8e1
@@ -28634,133 +28632,133 @@ namingBitmap:
 	.uleb128 0x7
 	.4byte	0x779
 	.uleb128 0x21
-	.4byte	.LASF127
+	.4byte	.LASF126
 	.byte	0x1
-	.2byte	0x464
+	.2byte	0x425
 	.4byte	0x2c
 	.byte	0x1
 	.4byte	0x962
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"enc"
 	.byte	0x1
-	.2byte	0x464
+	.2byte	0x425
 	.4byte	0x228
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"ptr"
 	.byte	0x1
-	.2byte	0x465
+	.2byte	0x425
 	.4byte	0x93
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"end"
 	.byte	0x1
-	.2byte	0x466
+	.2byte	0x425
 	.4byte	0x93
-	.uleb128 0x22
+	.uleb128 0x23
+	.4byte	.LASF127
+	.byte	0x1
+	.2byte	0x426
+	.4byte	0x233
+	.uleb128 0x23
 	.4byte	.LASF128
 	.byte	0x1
-	.2byte	0x467
+	.2byte	0x426
 	.4byte	0x233
-	.uleb128 0x22
+	.uleb128 0x23
 	.4byte	.LASF129
 	.byte	0x1
-	.2byte	0x468
+	.2byte	0x427
 	.4byte	0x233
-	.uleb128 0x22
-	.4byte	.LASF130
+	.uleb128 0x23
+	.4byte	.LASF119
 	.byte	0x1
-	.2byte	0x469
-	.4byte	0x233
-	.uleb128 0x22
-	.4byte	.LASF120
-	.byte	0x1
-	.2byte	0x46a
+	.2byte	0x427
 	.4byte	0x233
 	.uleb128 0x25
 	.string	"c"
 	.byte	0x1
-	.2byte	0x46c
+	.2byte	0x428
 	.4byte	0x2c
 	.uleb128 0x26
-	.4byte	.LASF131
+	.4byte	.LASF130
 	.byte	0x1
-	.2byte	0x46d
+	.2byte	0x429
 	.4byte	0x8c
 	.byte	0
 	.uleb128 0x27
-	.4byte	.LASF135
+	.4byte	.LASF134
 	.byte	0x1
-	.2byte	0x53d
+	.2byte	0x4e9
 	.4byte	0x2c
 	.byte	0x1
 	.4byte	0x9aa
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"c"
 	.byte	0x1
-	.2byte	0x53d
+	.2byte	0x4e9
 	.4byte	0x2c
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"buf"
 	.byte	0x1
-	.2byte	0x53d
+	.2byte	0x4e9
 	.4byte	0x86
 	.uleb128 0x28
 	.byte	0x4
 	.4byte	0x3e
 	.byte	0x1
-	.2byte	0x53f
+	.2byte	0x4ea
 	.uleb128 0x10
-	.4byte	.LASF132
+	.4byte	.LASF131
 	.byte	0x80
 	.uleb128 0x29
-	.4byte	.LASF133
+	.4byte	.LASF132
 	.2byte	0x800
 	.uleb128 0x2a
-	.4byte	.LASF134
+	.4byte	.LASF133
 	.4byte	0x10000
 	.byte	0
 	.byte	0
 	.uleb128 0x27
-	.4byte	.LASF136
+	.4byte	.LASF135
 	.byte	0x1
-	.2byte	0x5da
+	.2byte	0x579
 	.4byte	0xa0c
 	.byte	0x1
 	.4byte	0xa0c
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"mem"
 	.byte	0x1
-	.2byte	0x5da
+	.2byte	0x579
 	.4byte	0x7d
-	.uleb128 0x22
-	.4byte	.LASF137
+	.uleb128 0x23
+	.4byte	.LASF136
 	.byte	0x1
-	.2byte	0x5db
+	.2byte	0x579
 	.4byte	0x714
-	.uleb128 0x22
+	.uleb128 0x23
 	.4byte	.LASF102
 	.byte	0x1
-	.2byte	0x5dc
+	.2byte	0x579
 	.4byte	0x3e8
-	.uleb128 0x22
+	.uleb128 0x23
 	.4byte	.LASF103
 	.byte	0x1
-	.2byte	0x5dd
+	.2byte	0x57a
 	.4byte	0x7d
 	.uleb128 0x25
 	.string	"i"
 	.byte	0x1
-	.2byte	0x5df
+	.2byte	0x57b
 	.4byte	0x2c
 	.uleb128 0x25
 	.string	"e"
 	.byte	0x1
-	.2byte	0x5e0
+	.2byte	0x57c
 	.4byte	0xa12
 	.uleb128 0x2b
 	.uleb128 0x25
 	.string	"c"
 	.byte	0x1
-	.2byte	0x5e9
+	.2byte	0x583
 	.4byte	0x2c
 	.byte	0
 	.byte	0
@@ -28771,182 +28769,182 @@ namingBitmap:
 	.byte	0x4
 	.4byte	0x5ca
 	.uleb128 0x2c
-	.4byte	.LASF139
+	.4byte	.LASF137
 	.byte	0x1
-	.byte	0x9d
+	.byte	0x86
 	.4byte	0x2c
 	.4byte	.LFB0
 	.4byte	.LFE0-.LFB0
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xa4e
+	.4byte	0xa4c
 	.uleb128 0x2d
-	.4byte	.LASF114
+	.string	"enc"
 	.byte	0x1
-	.byte	0x9d
+	.byte	0x86
 	.4byte	0x228
 	.4byte	.LLST0
 	.uleb128 0x2e
-	.4byte	.LASF138
+	.string	"p"
 	.byte	0x1
-	.byte	0x9d
+	.byte	0x86
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x53
 	.byte	0
 	.uleb128 0x2c
-	.4byte	.LASF140
+	.4byte	.LASF138
 	.byte	0x1
-	.byte	0xa3
+	.byte	0x8d
 	.4byte	0x2c
 	.4byte	.LFB1
 	.4byte	.LFE1-.LFB1
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xa84
+	.4byte	0xa82
 	.uleb128 0x2d
-	.4byte	.LASF114
+	.string	"enc"
 	.byte	0x1
-	.byte	0xa3
+	.byte	0x8d
 	.4byte	0x228
 	.4byte	.LLST1
-	.uleb128 0x2f
+	.uleb128 0x2d
 	.string	"p"
 	.byte	0x1
-	.byte	0xa3
+	.byte	0x8d
 	.4byte	0x93
 	.4byte	.LLST2
 	.byte	0
 	.uleb128 0x2c
-	.4byte	.LASF141
+	.4byte	.LASF139
 	.byte	0x1
-	.byte	0xa9
+	.byte	0x93
 	.4byte	0x2c
 	.4byte	.LFB2
 	.4byte	.LFE2-.LFB2
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xaba
+	.4byte	0xab8
 	.uleb128 0x2d
-	.4byte	.LASF114
+	.string	"enc"
 	.byte	0x1
-	.byte	0xa9
+	.byte	0x93
 	.4byte	0x228
 	.4byte	.LLST3
-	.uleb128 0x2f
+	.uleb128 0x2d
 	.string	"p"
 	.byte	0x1
-	.byte	0xa9
+	.byte	0x93
 	.4byte	0x93
 	.4byte	.LLST4
 	.byte	0
 	.uleb128 0x2c
-	.4byte	.LASF142
+	.4byte	.LASF140
 	.byte	0x1
-	.byte	0xb1
+	.byte	0x9b
 	.4byte	0x2c
 	.4byte	.LFB3
 	.4byte	.LFE3-.LFB3
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xaf0
+	.4byte	0xaee
 	.uleb128 0x2d
-	.4byte	.LASF114
+	.string	"enc"
 	.byte	0x1
-	.byte	0xb1
+	.byte	0x9b
 	.4byte	0x228
 	.4byte	.LLST5
-	.uleb128 0x2f
+	.uleb128 0x2d
 	.string	"p"
 	.byte	0x1
-	.byte	0xb1
+	.byte	0x9b
 	.4byte	0x93
 	.4byte	.LLST6
 	.byte	0
 	.uleb128 0x2c
-	.4byte	.LASF143
+	.4byte	.LASF141
 	.byte	0x1
-	.byte	0xb7
+	.byte	0xa1
 	.4byte	0x2c
 	.4byte	.LFB4
 	.4byte	.LFE4-.LFB4
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xb26
+	.4byte	0xb24
 	.uleb128 0x2d
-	.4byte	.LASF114
+	.string	"enc"
 	.byte	0x1
-	.byte	0xb7
+	.byte	0xa1
 	.4byte	0x228
 	.4byte	.LLST7
-	.uleb128 0x2f
+	.uleb128 0x2d
 	.string	"p"
 	.byte	0x1
-	.byte	0xb7
+	.byte	0xa1
 	.4byte	0x93
 	.4byte	.LLST8
 	.byte	0
 	.uleb128 0x2c
-	.4byte	.LASF144
+	.4byte	.LASF142
 	.byte	0x1
-	.byte	0xc5
+	.byte	0xaf
 	.4byte	0x2c
 	.4byte	.LFB6
 	.4byte	.LFE6-.LFB6
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xb5c
+	.4byte	0xb5a
 	.uleb128 0x2d
-	.4byte	.LASF114
+	.string	"enc"
 	.byte	0x1
-	.byte	0xc5
+	.byte	0xaf
 	.4byte	0x228
 	.4byte	.LLST9
-	.uleb128 0x2f
+	.uleb128 0x2d
 	.string	"p"
 	.byte	0x1
-	.byte	0xc5
+	.byte	0xaf
 	.4byte	0x93
 	.4byte	.LLST10
 	.byte	0
 	.uleb128 0x2c
-	.4byte	.LASF145
+	.4byte	.LASF143
 	.byte	0x2
-	.byte	0x8a
+	.byte	0x87
 	.4byte	0x2c
 	.4byte	.LFB8
 	.4byte	.LFE8-.LFB8
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xbee
-	.uleb128 0x2f
+	.4byte	0xbec
+	.uleb128 0x2d
 	.string	"enc"
 	.byte	0x2
-	.byte	0x8a
+	.byte	0x87
 	.4byte	0x228
 	.4byte	.LLST11
-	.uleb128 0x2f
+	.uleb128 0x2d
 	.string	"ptr"
 	.byte	0x2
-	.byte	0x8a
+	.byte	0x87
 	.4byte	0x93
 	.4byte	.LLST12
-	.uleb128 0x2f
+	.uleb128 0x2d
 	.string	"end"
 	.byte	0x2
-	.byte	0x8b
+	.byte	0x87
 	.4byte	0x93
 	.4byte	.LLST13
-	.uleb128 0x2e
-	.4byte	.LASF120
+	.uleb128 0x2f
+	.4byte	.LASF119
 	.byte	0x2
-	.byte	0x8b
+	.byte	0x88
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x30
 	.4byte	.LVL23
-	.4byte	0xbc5
+	.4byte	0xbc3
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -28962,7 +28960,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL26
-	.4byte	0xbdb
+	.4byte	0xbd9
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -28993,25 +28991,25 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF146
+	.4byte	.LASF144
 	.byte	0x2
-	.2byte	0x158
+	.2byte	0x159
 	.4byte	0x2c
 	.4byte	.LFB13
 	.4byte	.LFE13-.LFB13
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xcd9
+	.4byte	0xcd7
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x158
+	.2byte	0x159
 	.4byte	0x228
 	.4byte	.LLST14
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x158
+	.2byte	0x159
 	.4byte	0x93
 	.4byte	.LLST15
 	.uleb128 0x34
@@ -29021,9 +29019,9 @@ namingBitmap:
 	.4byte	0x93
 	.4byte	.LLST16
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x159
+	.2byte	0x15a
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
@@ -29032,7 +29030,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0xc5f
+	.4byte	0xc5d
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -29051,7 +29049,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0xc78
+	.4byte	0xc76
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -29070,7 +29068,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0xc91
+	.4byte	0xc8f
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -29089,7 +29087,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
-	.4byte	0xcaa
+	.4byte	0xca8
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -29108,7 +29106,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
-	.4byte	0xcc3
+	.4byte	0xcc1
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -29142,133 +29140,133 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x21
-	.4byte	.LASF147
+	.4byte	.LASF145
 	.byte	0x2
-	.2byte	0x1f3
+	.2byte	0x1f7
 	.4byte	0x2c
 	.byte	0x1
-	.4byte	0xd1b
-	.uleb128 0x23
+	.4byte	0xd19
+	.uleb128 0x22
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x1f3
+	.2byte	0x1f7
 	.4byte	0x228
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x1f3
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
-	.byte	0x2
-	.2byte	0x1f4
+	.2byte	0x1f7
 	.4byte	0x93
 	.uleb128 0x22
-	.4byte	.LASF120
+	.string	"end"
 	.byte	0x2
-	.2byte	0x1f4
+	.2byte	0x1f7
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
+	.byte	0x2
+	.2byte	0x1f8
 	.4byte	0x233
 	.byte	0
 	.uleb128 0x21
-	.4byte	.LASF148
+	.4byte	.LASF146
 	.byte	0x2
-	.2byte	0x1d3
+	.2byte	0x1d8
 	.4byte	0x2c
 	.byte	0x1
-	.4byte	0xd5d
-	.uleb128 0x23
+	.4byte	0xd5b
+	.uleb128 0x22
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x1d3
+	.2byte	0x1d8
 	.4byte	0x228
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x1d3
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
-	.byte	0x2
-	.2byte	0x1d4
+	.2byte	0x1d8
 	.4byte	0x93
 	.uleb128 0x22
-	.4byte	.LASF120
+	.string	"end"
 	.byte	0x2
-	.2byte	0x1d4
+	.2byte	0x1d8
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
+	.byte	0x2
+	.2byte	0x1d9
 	.4byte	0x233
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF149
+	.4byte	.LASF147
 	.byte	0x2
-	.2byte	0x213
+	.2byte	0x216
 	.4byte	0x2c
 	.4byte	.LFB17
 	.4byte	.LFE17-.LFB17
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xeb4
+	.4byte	0xeb2
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x213
+	.2byte	0x216
 	.4byte	0x228
 	.4byte	.LLST17
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x213
+	.2byte	0x216
 	.4byte	0x93
 	.4byte	.LLST18
 	.uleb128 0x38
 	.string	"end"
 	.byte	0x2
-	.2byte	0x213
+	.2byte	0x216
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x214
+	.2byte	0x217
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x39
-	.4byte	0xcd9
+	.4byte	0xcd7
 	.4byte	.LBB7
 	.4byte	.LBE7-.LBB7
 	.byte	0x2
-	.2byte	0x21a
-	.4byte	0xe21
+	.2byte	0x21c
+	.4byte	0xe1f
 	.uleb128 0x3a
-	.4byte	0xd0e
+	.4byte	0xd0c
 	.4byte	.LLST19
 	.uleb128 0x3a
-	.4byte	0xd02
+	.4byte	0xd00
 	.4byte	.LLST20
 	.uleb128 0x3a
-	.4byte	0xcf6
+	.4byte	0xcf4
 	.4byte	.LLST21
 	.uleb128 0x3a
-	.4byte	0xcea
+	.4byte	0xce8
 	.4byte	.LLST22
 	.uleb128 0x3b
-	.4byte	0xd1b
+	.4byte	0xd19
 	.4byte	.LBB9
 	.4byte	.LBE9-.LBB9
 	.byte	0x2
-	.2byte	0x1f8
+	.2byte	0x1fb
 	.uleb128 0x3a
-	.4byte	0xd50
+	.4byte	0xd4e
 	.4byte	.LLST23
 	.uleb128 0x3a
-	.4byte	0xd44
+	.4byte	0xd42
 	.4byte	.LLST24
 	.uleb128 0x3a
-	.4byte	0xd38
+	.4byte	0xd36
 	.4byte	.LLST25
 	.uleb128 0x3a
-	.4byte	0xd2c
+	.4byte	0xd2a
 	.4byte	.LLST26
 	.byte	0
 	.byte	0
@@ -29277,7 +29275,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0xe3a
+	.4byte	0xe38
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -29296,7 +29294,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0xe53
+	.4byte	0xe51
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -29315,7 +29313,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0xe6c
+	.4byte	0xe6a
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -29334,7 +29332,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
-	.4byte	0xe85
+	.4byte	0xe83
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -29353,7 +29351,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
-	.4byte	0xe9e
+	.4byte	0xe9c
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -29387,38 +29385,38 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF150
+	.4byte	.LASF148
 	.byte	0x2
-	.2byte	0x38c
+	.2byte	0x391
 	.4byte	0x2c
 	.4byte	.LFB21
 	.4byte	.LFE21-.LFB21
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xf94
+	.4byte	0xf92
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x38c
+	.2byte	0x391
 	.4byte	0x228
 	.4byte	.LLST27
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x38c
+	.2byte	0x391
 	.4byte	0x93
 	.4byte	.LLST28
 	.uleb128 0x38
 	.string	"end"
 	.byte	0x2
-	.2byte	0x38c
+	.2byte	0x391
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x38d
+	.2byte	0x392
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
@@ -29427,7 +29425,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0xf23
+	.4byte	0xf21
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -29446,7 +29444,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0xf3c
+	.4byte	0xf3a
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -29465,7 +29463,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0xf55
+	.4byte	0xf53
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -29481,7 +29479,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL130
-	.4byte	0xf6b
+	.4byte	0xf69
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -29497,7 +29495,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL132
-	.4byte	0xf81
+	.4byte	0xf7f
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -29528,43 +29526,43 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF151
+	.4byte	.LASF149
 	.byte	0x2
-	.2byte	0x3c2
+	.2byte	0x3cd
 	.4byte	0x2c
 	.4byte	.LFB23
 	.4byte	.LFE23-.LFB23
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x104f
+	.4byte	0x104d
 	.uleb128 0x3c
-	.4byte	.LASF131
+	.4byte	.LASF130
 	.byte	0x2
-	.2byte	0x3c2
+	.2byte	0x3cd
 	.4byte	0x2c
 	.4byte	.LLST29
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x3c2
+	.2byte	0x3cd
 	.4byte	0x228
 	.4byte	.LLST30
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x3c3
+	.2byte	0x3cd
 	.4byte	0x93
 	.4byte	.LLST31
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x3c3
+	.2byte	0x3cd
 	.4byte	0x93
 	.4byte	.LLST32
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x3c4
+	.2byte	0x3ce
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x56
@@ -29573,12 +29571,12 @@ namingBitmap:
 	.uleb128 0x3e
 	.string	"t"
 	.byte	0x2
-	.2byte	0x3c7
+	.2byte	0x3d0
 	.4byte	0x2c
 	.4byte	.LLST33
 	.uleb128 0x30
 	.4byte	.LVL144
-	.4byte	0x1025
+	.4byte	0x1023
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -29594,7 +29592,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL147
-	.4byte	0x103b
+	.4byte	0x1039
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -29626,154 +29624,154 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF152
+	.4byte	.LASF150
 	.byte	0x2
-	.2byte	0x4c6
+	.2byte	0x4df
 	.4byte	0x2c
 	.4byte	.LFB25
 	.4byte	.LFE25-.LFB25
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x10bb
+	.4byte	0x10b9
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x4c6
+	.2byte	0x4df
 	.4byte	0x228
 	.4byte	.LLST34
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x4c6
+	.2byte	0x4df
 	.4byte	0x93
 	.4byte	.LLST35
 	.uleb128 0x38
 	.string	"end"
 	.byte	0x2
-	.2byte	0x4c7
+	.2byte	0x4df
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x4c7
+	.2byte	0x4e0
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x26
-	.4byte	.LASF153
+	.4byte	.LASF151
 	.byte	0x2
-	.2byte	0x4c9
+	.2byte	0x4e1
 	.4byte	0x93
 	.uleb128 0x3f
 	.4byte	.LVL172
-	.4byte	0xd5d
+	.4byte	0xd5b
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF154
+	.4byte	.LASF152
 	.byte	0x2
-	.2byte	0x508
+	.2byte	0x524
 	.4byte	0x2c
 	.4byte	.LFB26
 	.4byte	.LFE26-.LFB26
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x114e
+	.4byte	0x114c
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x508
+	.2byte	0x524
 	.4byte	0x228
 	.4byte	.LLST36
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x508
+	.2byte	0x524
 	.4byte	0x93
 	.4byte	.LLST37
 	.uleb128 0x38
 	.string	"end"
 	.byte	0x2
-	.2byte	0x509
+	.2byte	0x524
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x509
+	.2byte	0x525
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x26
-	.4byte	.LASF153
+	.4byte	.LASF151
 	.byte	0x2
-	.2byte	0x50b
+	.2byte	0x526
 	.4byte	0x93
 	.uleb128 0x40
 	.4byte	.LBB14
 	.4byte	.LBE14-.LBB14
-	.4byte	0x1144
+	.4byte	0x1142
 	.uleb128 0x3e
 	.string	"tok"
 	.byte	0x2
-	.2byte	0x524
+	.2byte	0x543
 	.4byte	0x2c
 	.4byte	.LLST38
 	.uleb128 0x3f
 	.4byte	.LVL195
-	.4byte	0xeb4
+	.4byte	0xeb2
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL192
-	.4byte	0xd5d
+	.4byte	0xd5b
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF155
+	.4byte	.LASF153
 	.byte	0x2
-	.2byte	0x549
+	.2byte	0x567
 	.4byte	0x2c
 	.4byte	.LFB27
 	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x11f3
+	.4byte	0x11f1
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x549
+	.2byte	0x567
 	.4byte	0x228
 	.4byte	.LLST39
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x549
+	.2byte	0x567
 	.4byte	0x93
 	.4byte	.LLST40
 	.uleb128 0x38
 	.string	"end"
 	.byte	0x2
-	.2byte	0x54a
+	.2byte	0x567
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x54a
+	.2byte	0x568
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x41
-	.4byte	.LASF156
+	.4byte	.LASF154
 	.byte	0x2
-	.2byte	0x54c
+	.2byte	0x569
 	.4byte	0x2c
 	.4byte	.LLST41
 	.uleb128 0x30
 	.4byte	.LVL209
-	.4byte	0x11ca
+	.4byte	0x11c8
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -29789,7 +29787,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL212
-	.4byte	0x11e0
+	.4byte	0x11de
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -29820,74 +29818,74 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF157
+	.4byte	.LASF155
 	.byte	0x2
-	.2byte	0x57e
+	.2byte	0x59b
 	.4byte	0x2c
 	.4byte	.LFB28
 	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x124c
+	.4byte	0x124a
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x57e
+	.2byte	0x59b
 	.4byte	0x228
 	.4byte	.LLST42
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x57e
+	.2byte	0x59b
 	.4byte	0x93
 	.4byte	.LLST43
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x57e
+	.2byte	0x59b
 	.4byte	0x93
 	.4byte	.LLST44
 	.uleb128 0x35
-	.4byte	.LASF158
+	.4byte	.LASF156
 	.byte	0x2
-	.2byte	0x57f
+	.2byte	0x59c
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF159
+	.4byte	.LASF157
 	.byte	0x2
-	.2byte	0x5ba
+	.2byte	0x5d7
 	.4byte	0x2c
 	.4byte	.LFB29
 	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x12f3
+	.4byte	0x12f1
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x5ba
+	.2byte	0x5d7
 	.4byte	0x228
 	.4byte	.LLST45
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x5ba
+	.2byte	0x5d7
 	.4byte	0x93
 	.4byte	.LLST46
 	.uleb128 0x35
-	.4byte	.LASF160
+	.4byte	.LASF158
 	.byte	0x2
-	.2byte	0x5bb
+	.2byte	0x5d7
 	.4byte	0x2c
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x35
-	.4byte	.LASF161
+	.4byte	.LASF159
 	.byte	0x2
-	.2byte	0x5bb
+	.2byte	0x5d8
 	.4byte	0x2f2
 	.uleb128 0x1
 	.byte	0x55
@@ -29895,310 +29893,310 @@ namingBitmap:
 	.byte	0x4
 	.4byte	0x3e
 	.byte	0x2
-	.2byte	0x5bd
-	.4byte	0x12c2
+	.2byte	0x5d9
+	.4byte	0x12c0
 	.uleb128 0x10
-	.4byte	.LASF162
+	.4byte	.LASF160
 	.byte	0
 	.uleb128 0x10
-	.4byte	.LASF163
+	.4byte	.LASF161
 	.byte	0x1
 	.uleb128 0x10
-	.4byte	.LASF164
+	.4byte	.LASF162
 	.byte	0x2
 	.byte	0
 	.uleb128 0x41
-	.4byte	.LASF165
+	.4byte	.LASF163
 	.byte	0x2
-	.2byte	0x5bd
-	.4byte	0x12a2
+	.2byte	0x5d9
+	.4byte	0x12a0
 	.4byte	.LLST47
 	.uleb128 0x41
-	.4byte	.LASF166
+	.4byte	.LASF164
 	.byte	0x2
-	.2byte	0x5be
+	.2byte	0x5da
 	.4byte	0x2c
 	.4byte	.LLST48
 	.uleb128 0x41
-	.4byte	.LASF131
+	.4byte	.LASF130
 	.byte	0x2
-	.2byte	0x5bf
+	.2byte	0x5db
 	.4byte	0x2c
 	.4byte	.LLST49
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF167
+	.4byte	.LASF165
 	.byte	0x2
-	.2byte	0x643
+	.2byte	0x66e
 	.4byte	0x2c
 	.4byte	.LFB31
 	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x133e
-	.uleb128 0x3c
-	.4byte	.LASF114
+	.4byte	0x133c
+	.uleb128 0x34
+	.string	"enc"
 	.byte	0x2
-	.2byte	0x643
+	.2byte	0x66e
 	.4byte	0x228
 	.4byte	.LLST50
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x643
+	.2byte	0x66e
 	.4byte	0x93
 	.4byte	.LLST51
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x644
+	.2byte	0x66f
 	.4byte	0x93
 	.4byte	.LLST52
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF168
+	.4byte	.LASF166
 	.byte	0x2
-	.2byte	0x679
+	.2byte	0x6a4
 	.4byte	0x2c
 	.4byte	.LFB32
 	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1397
-	.uleb128 0x3c
-	.4byte	.LASF114
+	.4byte	0x1395
+	.uleb128 0x34
+	.string	"enc"
 	.byte	0x2
-	.2byte	0x679
+	.2byte	0x6a4
 	.4byte	0x228
 	.4byte	.LLST53
 	.uleb128 0x3c
-	.4byte	.LASF169
+	.4byte	.LASF167
 	.byte	0x2
-	.2byte	0x679
+	.2byte	0x6a4
 	.4byte	0x93
 	.4byte	.LLST54
 	.uleb128 0x35
-	.4byte	.LASF170
+	.4byte	.LASF168
 	.byte	0x2
-	.2byte	0x67a
+	.2byte	0x6a5
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x3c
-	.4byte	.LASF171
+	.4byte	.LASF169
 	.byte	0x2
-	.2byte	0x67a
+	.2byte	0x6a5
 	.4byte	0x93
 	.4byte	.LLST55
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF172
+	.4byte	.LASF170
 	.byte	0x2
-	.2byte	0x68c
+	.2byte	0x6b7
 	.4byte	0x2c
 	.4byte	.LFB33
 	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x13e0
+	.4byte	0x13de
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x68c
+	.2byte	0x6b7
 	.4byte	0x228
 	.4byte	.LLST56
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x68c
+	.2byte	0x6b7
 	.4byte	0x93
 	.4byte	.LLST57
 	.uleb128 0x42
-	.4byte	.LASF153
+	.4byte	.LASF151
 	.byte	0x2
-	.2byte	0x68e
+	.2byte	0x6b8
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x53
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF173
+	.4byte	.LASF171
 	.byte	0x2
-	.2byte	0x6a7
+	.2byte	0x6d5
 	.4byte	0x93
 	.4byte	.LFB34
 	.4byte	.LFE34-.LFB34
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x141b
+	.4byte	0x1419
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x6a7
+	.2byte	0x6d5
 	.4byte	0x228
 	.4byte	.LLST58
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x6a7
+	.2byte	0x6d5
 	.4byte	0x93
 	.4byte	.LLST59
 	.byte	0
 	.uleb128 0x43
-	.4byte	.LASF204
+	.4byte	.LASF202
 	.byte	0x2
-	.2byte	0x6b7
+	.2byte	0x6e4
 	.4byte	.LFB35
 	.4byte	.LFE35-.LFB35
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x146c
+	.4byte	0x146a
 	.uleb128 0x38
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x6b7
+	.2byte	0x6e4
 	.4byte	0x228
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x6b8
+	.2byte	0x6e4
 	.4byte	0x93
 	.4byte	.LLST60
 	.uleb128 0x38
 	.string	"end"
 	.byte	0x2
-	.2byte	0x6b9
+	.2byte	0x6e4
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x38
 	.string	"pos"
 	.byte	0x2
-	.2byte	0x6ba
+	.2byte	0x6e5
 	.4byte	0x337
 	.uleb128 0x1
 	.byte	0x55
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF174
+	.4byte	.LASF172
 	.byte	0x1
-	.2byte	0x1b8
+	.2byte	0x18f
 	.4byte	0x239
 	.4byte	.LFB38
 	.4byte	.LFE38-.LFB38
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x151e
+	.4byte	0x151c
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x1
-	.2byte	0x1b8
+	.2byte	0x18f
 	.4byte	0x228
 	.4byte	.LLST61
 	.uleb128 0x35
-	.4byte	.LASF175
+	.4byte	.LASF173
 	.byte	0x1
-	.2byte	0x1b9
+	.2byte	0x18f
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x35
-	.4byte	.LASF176
+	.4byte	.LASF174
 	.byte	0x1
-	.2byte	0x1b9
+	.2byte	0x18f
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x38
 	.string	"toP"
 	.byte	0x1
-	.2byte	0x1ba
+	.2byte	0x190
 	.4byte	0x395
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x35
-	.4byte	.LASF177
+	.4byte	.LASF175
 	.byte	0x1
-	.2byte	0x1ba
+	.2byte	0x190
 	.4byte	0x3a1
 	.uleb128 0x1
 	.byte	0x56
 	.uleb128 0x3e
 	.string	"res"
 	.byte	0x1
-	.2byte	0x1bc
+	.2byte	0x191
 	.4byte	0x239
 	.4byte	.LLST62
 	.uleb128 0x3e
 	.string	"to"
 	.byte	0x1
-	.2byte	0x1bd
+	.2byte	0x192
 	.4byte	0x39b
 	.4byte	.LLST63
 	.uleb128 0x41
-	.4byte	.LASF178
+	.4byte	.LASF176
 	.byte	0x1
-	.2byte	0x1be
+	.2byte	0x193
 	.4byte	0x93
 	.4byte	.LLST64
 	.uleb128 0x44
-	.4byte	.LASF338
+	.4byte	.LASF336
 	.byte	0x1
-	.2byte	0x1ed
+	.2byte	0x1c0
 	.4byte	.L427
 	.uleb128 0x3d
 	.4byte	.Ldebug_ranges0+0x20
 	.uleb128 0x3e
 	.string	"n"
 	.byte	0x1
-	.2byte	0x1d4
+	.2byte	0x1a8
 	.4byte	0x7f
 	.4byte	.LLST65
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF179
+	.4byte	.LASF177
 	.byte	0x1
-	.2byte	0x222
+	.2byte	0x1f1
 	.4byte	0x239
 	.4byte	.LFB39
 	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1599
-	.uleb128 0x3c
-	.4byte	.LASF114
+	.4byte	0x1597
+	.uleb128 0x34
+	.string	"enc"
 	.byte	0x1
-	.2byte	0x222
+	.2byte	0x1f1
 	.4byte	0x228
 	.4byte	.LLST66
 	.uleb128 0x35
-	.4byte	.LASF175
+	.4byte	.LASF173
 	.byte	0x1
-	.2byte	0x223
+	.2byte	0x1f1
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x35
-	.4byte	.LASF176
+	.4byte	.LASF174
 	.byte	0x1
-	.2byte	0x223
+	.2byte	0x1f1
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x38
 	.string	"toP"
 	.byte	0x1
-	.2byte	0x224
+	.2byte	0x1f2
 	.4byte	0x366
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x35
-	.4byte	.LASF177
+	.4byte	.LASF175
 	.byte	0x1
-	.2byte	0x224
+	.2byte	0x1f2
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x56
@@ -30208,437 +30206,437 @@ namingBitmap:
 	.uleb128 0x3e
 	.string	"c"
 	.byte	0x1
-	.2byte	0x227
+	.2byte	0x1f5
 	.4byte	0x53
 	.4byte	.LLST67
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF180
+	.4byte	.LASF178
 	.byte	0x1
-	.2byte	0x23b
+	.2byte	0x208
 	.4byte	0x239
 	.4byte	.LFB40
 	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x15fc
-	.uleb128 0x3c
-	.4byte	.LASF114
+	.4byte	0x15fa
+	.uleb128 0x34
+	.string	"enc"
 	.byte	0x1
-	.2byte	0x23b
+	.2byte	0x208
 	.4byte	0x228
 	.4byte	.LLST68
 	.uleb128 0x35
-	.4byte	.LASF175
+	.4byte	.LASF173
 	.byte	0x1
-	.2byte	0x23c
+	.2byte	0x208
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x35
-	.4byte	.LASF176
+	.4byte	.LASF174
 	.byte	0x1
-	.2byte	0x23c
+	.2byte	0x208
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x38
 	.string	"toP"
 	.byte	0x1
-	.2byte	0x23d
+	.2byte	0x209
 	.4byte	0x395
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x35
-	.4byte	.LASF177
+	.4byte	.LASF175
 	.byte	0x1
-	.2byte	0x23d
+	.2byte	0x209
 	.4byte	0x3a1
 	.uleb128 0x1
 	.byte	0x56
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF181
+	.4byte	.LASF179
 	.byte	0x1
-	.2byte	0x261
+	.2byte	0x22b
 	.4byte	0x239
 	.4byte	.LFB41
 	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x165f
-	.uleb128 0x3c
-	.4byte	.LASF114
+	.4byte	0x165d
+	.uleb128 0x34
+	.string	"enc"
 	.byte	0x1
-	.2byte	0x261
+	.2byte	0x22b
 	.4byte	0x228
 	.4byte	.LLST69
 	.uleb128 0x35
-	.4byte	.LASF175
+	.4byte	.LASF173
 	.byte	0x1
-	.2byte	0x262
+	.2byte	0x22b
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x35
-	.4byte	.LASF176
+	.4byte	.LASF174
 	.byte	0x1
-	.2byte	0x262
+	.2byte	0x22b
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x38
 	.string	"toP"
 	.byte	0x1
-	.2byte	0x263
+	.2byte	0x22c
 	.4byte	0x366
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x35
-	.4byte	.LASF177
+	.4byte	.LASF175
 	.byte	0x1
-	.2byte	0x263
+	.2byte	0x22c
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x56
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF182
+	.4byte	.LASF180
 	.byte	0x1
-	.2byte	0x287
+	.2byte	0x24e
 	.4byte	0x2c
 	.4byte	.LFB42
 	.4byte	.LFE42-.LFB42
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1698
+	.4byte	0x1696
 	.uleb128 0x34
 	.string	"hi"
 	.byte	0x1
-	.2byte	0x287
+	.2byte	0x24e
 	.4byte	0x8c
 	.4byte	.LLST70
 	.uleb128 0x34
 	.string	"lo"
 	.byte	0x1
-	.2byte	0x287
+	.2byte	0x24e
 	.4byte	0x8c
 	.4byte	.LLST71
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF183
+	.4byte	.LASF181
 	.byte	0x1
-	.2byte	0x2fc
+	.2byte	0x2cd
 	.4byte	0x239
 	.4byte	.LFB43
 	.4byte	.LFE43-.LFB43
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1751
-	.uleb128 0x3c
-	.4byte	.LASF114
+	.4byte	0x174f
+	.uleb128 0x34
+	.string	"enc"
 	.byte	0x1
-	.2byte	0x2fc
+	.2byte	0x2cd
 	.4byte	0x228
 	.4byte	.LLST72
 	.uleb128 0x35
-	.4byte	.LASF175
+	.4byte	.LASF173
 	.byte	0x1
-	.2byte	0x2fc
+	.2byte	0x2cd
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x3c
-	.4byte	.LASF176
+	.4byte	.LASF174
 	.byte	0x1
-	.2byte	0x2fc
+	.2byte	0x2cd
 	.4byte	0x93
 	.4byte	.LLST73
 	.uleb128 0x38
 	.string	"toP"
 	.byte	0x1
-	.2byte	0x2fc
+	.2byte	0x2cd
 	.4byte	0x366
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x35
-	.4byte	.LASF177
+	.4byte	.LASF175
 	.byte	0x1
-	.2byte	0x2fc
+	.2byte	0x2cd
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x56
 	.uleb128 0x41
-	.4byte	.LASF178
+	.4byte	.LASF176
 	.byte	0x1
-	.2byte	0x2fc
+	.2byte	0x2cd
 	.4byte	0x93
 	.4byte	.LLST74
 	.uleb128 0x3d
 	.4byte	.Ldebug_ranges0+0x48
 	.uleb128 0x41
-	.4byte	.LASF184
+	.4byte	.LASF182
 	.byte	0x1
-	.2byte	0x2fc
+	.2byte	0x2cd
 	.4byte	0x2c
 	.4byte	.LLST75
 	.uleb128 0x3e
 	.string	"lo2"
 	.byte	0x1
-	.2byte	0x2fc
+	.2byte	0x2cd
 	.4byte	0x53
 	.4byte	.LLST76
 	.uleb128 0x3e
 	.string	"lo"
 	.byte	0x1
-	.2byte	0x2fc
+	.2byte	0x2cd
 	.4byte	0x53
 	.4byte	.LLST77
 	.uleb128 0x3e
 	.string	"hi"
 	.byte	0x1
-	.2byte	0x2fc
+	.2byte	0x2cd
 	.4byte	0x53
 	.4byte	.LLST78
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF185
+	.4byte	.LASF183
 	.byte	0x1
-	.2byte	0x2fd
+	.2byte	0x2ce
 	.4byte	0x239
 	.4byte	.LFB44
 	.4byte	.LFE44-.LFB44
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x17c6
-	.uleb128 0x3c
-	.4byte	.LASF114
+	.4byte	0x17c4
+	.uleb128 0x34
+	.string	"enc"
 	.byte	0x1
-	.2byte	0x2fd
+	.2byte	0x2ce
 	.4byte	0x228
 	.4byte	.LLST79
 	.uleb128 0x35
-	.4byte	.LASF175
+	.4byte	.LASF173
 	.byte	0x1
-	.2byte	0x2fd
+	.2byte	0x2ce
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x3c
-	.4byte	.LASF176
+	.4byte	.LASF174
 	.byte	0x1
-	.2byte	0x2fd
+	.2byte	0x2ce
 	.4byte	0x93
 	.4byte	.LLST80
 	.uleb128 0x38
 	.string	"toP"
 	.byte	0x1
-	.2byte	0x2fd
+	.2byte	0x2ce
 	.4byte	0x395
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x35
-	.4byte	.LASF177
+	.4byte	.LASF175
 	.byte	0x1
-	.2byte	0x2fd
+	.2byte	0x2ce
 	.4byte	0x3a1
 	.uleb128 0x1
 	.byte	0x56
 	.uleb128 0x3e
 	.string	"res"
 	.byte	0x1
-	.2byte	0x2fd
+	.2byte	0x2ce
 	.4byte	0x239
 	.4byte	.LLST81
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF186
+	.4byte	.LASF184
 	.byte	0x1
-	.2byte	0x308
+	.2byte	0x2d8
 	.4byte	0x239
 	.4byte	.LFB45
 	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x187f
-	.uleb128 0x3c
-	.4byte	.LASF114
+	.4byte	0x187d
+	.uleb128 0x34
+	.string	"enc"
 	.byte	0x1
-	.2byte	0x308
+	.2byte	0x2d8
 	.4byte	0x228
 	.4byte	.LLST82
 	.uleb128 0x35
-	.4byte	.LASF175
+	.4byte	.LASF173
 	.byte	0x1
-	.2byte	0x308
+	.2byte	0x2d8
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x3c
-	.4byte	.LASF176
+	.4byte	.LASF174
 	.byte	0x1
-	.2byte	0x308
+	.2byte	0x2d8
 	.4byte	0x93
 	.4byte	.LLST83
 	.uleb128 0x38
 	.string	"toP"
 	.byte	0x1
-	.2byte	0x308
+	.2byte	0x2d8
 	.4byte	0x366
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x35
-	.4byte	.LASF177
+	.4byte	.LASF175
 	.byte	0x1
-	.2byte	0x308
+	.2byte	0x2d8
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x56
 	.uleb128 0x41
-	.4byte	.LASF178
+	.4byte	.LASF176
 	.byte	0x1
-	.2byte	0x308
+	.2byte	0x2d8
 	.4byte	0x93
 	.4byte	.LLST84
 	.uleb128 0x3d
 	.4byte	.Ldebug_ranges0+0x60
 	.uleb128 0x41
-	.4byte	.LASF184
+	.4byte	.LASF182
 	.byte	0x1
-	.2byte	0x308
+	.2byte	0x2d8
 	.4byte	0x2c
 	.4byte	.LLST85
 	.uleb128 0x3e
 	.string	"lo2"
 	.byte	0x1
-	.2byte	0x308
+	.2byte	0x2d8
 	.4byte	0x53
 	.4byte	.LLST86
 	.uleb128 0x3e
 	.string	"lo"
 	.byte	0x1
-	.2byte	0x308
+	.2byte	0x2d8
 	.4byte	0x53
 	.4byte	.LLST87
 	.uleb128 0x3e
 	.string	"hi"
 	.byte	0x1
-	.2byte	0x308
+	.2byte	0x2d8
 	.4byte	0x53
 	.4byte	.LLST88
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF187
+	.4byte	.LASF185
 	.byte	0x1
-	.2byte	0x309
+	.2byte	0x2d9
 	.4byte	0x239
 	.4byte	.LFB46
 	.4byte	.LFE46-.LFB46
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x18f4
-	.uleb128 0x3c
-	.4byte	.LASF114
+	.4byte	0x18f2
+	.uleb128 0x34
+	.string	"enc"
 	.byte	0x1
-	.2byte	0x309
+	.2byte	0x2d9
 	.4byte	0x228
 	.4byte	.LLST89
 	.uleb128 0x35
-	.4byte	.LASF175
+	.4byte	.LASF173
 	.byte	0x1
-	.2byte	0x309
+	.2byte	0x2d9
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x3c
-	.4byte	.LASF176
+	.4byte	.LASF174
 	.byte	0x1
-	.2byte	0x309
+	.2byte	0x2d9
 	.4byte	0x93
 	.4byte	.LLST90
 	.uleb128 0x38
 	.string	"toP"
 	.byte	0x1
-	.2byte	0x309
+	.2byte	0x2d9
 	.4byte	0x395
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x35
-	.4byte	.LASF177
+	.4byte	.LASF175
 	.byte	0x1
-	.2byte	0x309
+	.2byte	0x2d9
 	.4byte	0x3a1
 	.uleb128 0x1
 	.byte	0x56
 	.uleb128 0x3e
 	.string	"res"
 	.byte	0x1
-	.2byte	0x309
+	.2byte	0x2d9
 	.4byte	0x239
 	.4byte	.LLST91
 	.byte	0
 	.uleb128 0x2c
-	.4byte	.LASF188
+	.4byte	.LASF186
 	.byte	0x2
-	.byte	0x8a
+	.byte	0x87
 	.4byte	0x2c
 	.4byte	.LFB47
 	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1951
-	.uleb128 0x2f
+	.4byte	0x194f
+	.uleb128 0x2d
 	.string	"enc"
 	.byte	0x2
-	.byte	0x8a
+	.byte	0x87
 	.4byte	0x228
 	.4byte	.LLST92
-	.uleb128 0x2f
+	.uleb128 0x2d
 	.string	"ptr"
 	.byte	0x2
-	.byte	0x8a
+	.byte	0x87
 	.4byte	0x93
 	.4byte	.LLST93
-	.uleb128 0x2f
+	.uleb128 0x2d
 	.string	"end"
 	.byte	0x2
-	.byte	0x8b
+	.byte	0x87
 	.4byte	0x93
 	.4byte	.LLST94
-	.uleb128 0x2e
-	.4byte	.LASF120
+	.uleb128 0x2f
+	.4byte	.LASF119
 	.byte	0x2
-	.byte	0x8b
+	.byte	0x88
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x3f
 	.4byte	.LVL438
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF189
+	.4byte	.LASF187
 	.byte	0x2
-	.2byte	0x158
+	.2byte	0x159
 	.4byte	0x2c
 	.4byte	.LFB52
 	.4byte	.LFE52-.LFB52
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x19dd
+	.4byte	0x19db
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x158
+	.2byte	0x159
 	.4byte	0x228
 	.4byte	.LLST95
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x158
+	.2byte	0x159
 	.4byte	0x93
 	.4byte	.LLST96
 	.uleb128 0x34
@@ -30648,15 +30646,15 @@ namingBitmap:
 	.4byte	0x93
 	.4byte	.LLST97
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x159
+	.2byte	0x15a
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x46
 	.4byte	.Ldebug_ranges0+0x78
-	.4byte	0x19c1
+	.4byte	0x19bf
 	.uleb128 0x3e
 	.string	"n"
 	.byte	0x2
@@ -30666,162 +30664,162 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL459
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL470
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL483
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x21
-	.4byte	.LASF190
+	.4byte	.LASF188
 	.byte	0x2
-	.2byte	0x1f3
+	.2byte	0x1f7
 	.4byte	0x2c
 	.byte	0x1
-	.4byte	0x1a1f
-	.uleb128 0x23
+	.4byte	0x1a1d
+	.uleb128 0x22
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x1f3
+	.2byte	0x1f7
 	.4byte	0x228
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x1f3
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
-	.byte	0x2
-	.2byte	0x1f4
+	.2byte	0x1f7
 	.4byte	0x93
 	.uleb128 0x22
-	.4byte	.LASF120
+	.string	"end"
 	.byte	0x2
-	.2byte	0x1f4
+	.2byte	0x1f7
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
+	.byte	0x2
+	.2byte	0x1f8
 	.4byte	0x233
 	.byte	0
 	.uleb128 0x21
-	.4byte	.LASF191
+	.4byte	.LASF189
 	.byte	0x2
-	.2byte	0x1d3
+	.2byte	0x1d8
 	.4byte	0x2c
 	.byte	0x1
-	.4byte	0x1a61
-	.uleb128 0x23
+	.4byte	0x1a5f
+	.uleb128 0x22
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x1d3
+	.2byte	0x1d8
 	.4byte	0x228
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x1d3
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
-	.byte	0x2
-	.2byte	0x1d4
+	.2byte	0x1d8
 	.4byte	0x93
 	.uleb128 0x22
-	.4byte	.LASF120
+	.string	"end"
 	.byte	0x2
-	.2byte	0x1d4
+	.2byte	0x1d8
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
+	.byte	0x2
+	.2byte	0x1d9
 	.4byte	0x233
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF192
+	.4byte	.LASF190
 	.byte	0x2
-	.2byte	0x213
+	.2byte	0x216
 	.4byte	0x2c
 	.4byte	.LFB56
 	.4byte	.LFE56-.LFB56
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1b78
+	.4byte	0x1b76
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x213
+	.2byte	0x216
 	.4byte	0x228
 	.4byte	.LLST99
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x213
+	.2byte	0x216
 	.4byte	0x93
 	.4byte	.LLST100
 	.uleb128 0x38
 	.string	"end"
 	.byte	0x2
-	.2byte	0x213
+	.2byte	0x216
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x214
+	.2byte	0x217
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x47
-	.4byte	0x19dd
+	.4byte	0x19db
 	.4byte	.LBB31
 	.4byte	.Ldebug_ranges0+0x98
 	.byte	0x2
-	.2byte	0x21a
-	.4byte	0x1b4d
+	.2byte	0x21c
+	.4byte	0x1b4b
 	.uleb128 0x3a
-	.4byte	0x1a12
+	.4byte	0x1a10
 	.4byte	.LLST101
 	.uleb128 0x3a
-	.4byte	0x1a06
+	.4byte	0x1a04
 	.4byte	.LLST102
 	.uleb128 0x3a
-	.4byte	0x19fa
+	.4byte	0x19f8
 	.4byte	.LLST103
 	.uleb128 0x3a
-	.4byte	0x19ee
+	.4byte	0x19ec
 	.4byte	.LLST104
 	.uleb128 0x47
-	.4byte	0x1a1f
+	.4byte	0x1a1d
 	.4byte	.LBB33
 	.4byte	.Ldebug_ranges0+0xb8
 	.byte	0x2
-	.2byte	0x1f8
-	.4byte	0x1b3a
+	.2byte	0x1fb
+	.4byte	0x1b38
 	.uleb128 0x3a
-	.4byte	0x1a54
+	.4byte	0x1a52
 	.4byte	.LLST105
 	.uleb128 0x3a
-	.4byte	0x1a48
+	.4byte	0x1a46
 	.4byte	.LLST106
 	.uleb128 0x3a
-	.4byte	0x1a3c
+	.4byte	0x1a3a
 	.4byte	.LLST107
 	.uleb128 0x3a
-	.4byte	0x1a30
+	.4byte	0x1a2e
 	.4byte	.LLST108
 	.uleb128 0x3f
 	.4byte	.LVL494
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL500
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL503
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL506
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL490
-	.4byte	0x165f
-	.4byte	0x1b67
+	.4byte	0x165d
+	.4byte	0x1b65
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -30837,7 +30835,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x49
 	.4byte	.LVL511
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -30847,45 +30845,45 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF193
+	.4byte	.LASF191
 	.byte	0x2
-	.2byte	0x38c
+	.2byte	0x391
 	.4byte	0x2c
 	.4byte	.LFB60
 	.4byte	.LFE60-.LFB60
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1bf9
+	.4byte	0x1bf7
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x38c
+	.2byte	0x391
 	.4byte	0x228
 	.4byte	.LLST109
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x38c
+	.2byte	0x391
 	.4byte	0x93
 	.4byte	.LLST110
 	.uleb128 0x38
 	.string	"end"
 	.byte	0x2
-	.2byte	0x38c
+	.2byte	0x391
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x38d
+	.2byte	0x392
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x48
 	.4byte	.LVL520
-	.4byte	0x165f
-	.4byte	0x1be8
+	.4byte	0x165d
+	.4byte	0x1be6
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -30901,7 +30899,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x49
 	.4byte	.LVL522
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5b
@@ -30911,43 +30909,43 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF194
+	.4byte	.LASF192
 	.byte	0x2
-	.2byte	0x3c2
+	.2byte	0x3cd
 	.4byte	0x2c
 	.4byte	.LFB62
 	.4byte	.LFE62-.LFB62
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1c88
+	.4byte	0x1c86
 	.uleb128 0x3c
-	.4byte	.LASF131
+	.4byte	.LASF130
 	.byte	0x2
-	.2byte	0x3c2
+	.2byte	0x3cd
 	.4byte	0x2c
 	.4byte	.LLST111
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x3c2
+	.2byte	0x3cd
 	.4byte	0x228
 	.4byte	.LLST112
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x3c3
+	.2byte	0x3cd
 	.4byte	0x93
 	.4byte	.LLST113
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x3c3
+	.2byte	0x3cd
 	.4byte	0x93
 	.4byte	.LLST114
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x3c4
+	.2byte	0x3ce
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x56
@@ -30956,64 +30954,64 @@ namingBitmap:
 	.uleb128 0x3e
 	.string	"t"
 	.byte	0x2
-	.2byte	0x3c7
+	.2byte	0x3d0
 	.4byte	0x2c
 	.4byte	.LLST115
 	.uleb128 0x3f
 	.4byte	.LVL527
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL539
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF195
+	.4byte	.LASF193
 	.byte	0x2
-	.2byte	0x4c6
+	.2byte	0x4df
 	.4byte	0x2c
 	.4byte	.LFB64
 	.4byte	.LFE64-.LFB64
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1d25
+	.4byte	0x1d23
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x4c6
+	.2byte	0x4df
 	.4byte	0x228
 	.4byte	.LLST116
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x4c6
+	.2byte	0x4df
 	.4byte	0x93
 	.4byte	.LLST117
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x4c7
+	.2byte	0x4df
 	.4byte	0x93
 	.4byte	.LLST118
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x4c7
+	.2byte	0x4e0
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x26
-	.4byte	.LASF153
+	.4byte	.LASF151
 	.byte	0x2
-	.2byte	0x4c9
+	.2byte	0x4e1
 	.4byte	0x93
 	.uleb128 0x3f
 	.4byte	.LVL551
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x48
 	.4byte	.LVL554
-	.4byte	0x1a61
-	.4byte	0x1d1b
+	.4byte	0x1a5f
+	.4byte	0x1d19
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -31041,61 +31039,61 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL561
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF196
+	.4byte	.LASF194
 	.byte	0x2
-	.2byte	0x508
+	.2byte	0x524
 	.4byte	0x2c
 	.4byte	.LFB65
 	.4byte	.LFE65-.LFB65
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1e02
+	.4byte	0x1e00
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x508
+	.2byte	0x524
 	.4byte	0x228
 	.4byte	.LLST119
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x508
+	.2byte	0x524
 	.4byte	0x93
 	.4byte	.LLST120
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x509
+	.2byte	0x524
 	.4byte	0x93
 	.4byte	.LLST121
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x509
+	.2byte	0x525
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x26
-	.4byte	.LASF153
+	.4byte	.LASF151
 	.byte	0x2
-	.2byte	0x50b
+	.2byte	0x526
 	.4byte	0x93
 	.uleb128 0x40
 	.4byte	.LBB44
 	.4byte	.LBE44-.LBB44
-	.4byte	0x1dc9
+	.4byte	0x1dc7
 	.uleb128 0x3e
 	.string	"tok"
 	.byte	0x2
-	.2byte	0x524
+	.2byte	0x543
 	.4byte	0x2c
 	.4byte	.LLST122
 	.uleb128 0x49
 	.4byte	.LVL576
-	.4byte	0x1b78
+	.4byte	0x1b76
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -31124,11 +31122,11 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL572
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x48
 	.4byte	.LVL575
-	.4byte	0x1a61
-	.4byte	0x1df8
+	.4byte	0x1a5f
+	.4byte	0x1df6
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -31156,102 +31154,102 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL587
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF197
+	.4byte	.LASF195
 	.byte	0x2
-	.2byte	0x549
+	.2byte	0x567
 	.4byte	0x2c
 	.4byte	.LFB66
 	.4byte	.LFE66-.LFB66
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1e90
+	.4byte	0x1e8e
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x549
+	.2byte	0x567
 	.4byte	0x228
 	.4byte	.LLST123
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x549
+	.2byte	0x567
 	.4byte	0x93
 	.4byte	.LLST124
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x54a
+	.2byte	0x567
 	.4byte	0x93
 	.4byte	.LLST125
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x54a
+	.2byte	0x568
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x41
-	.4byte	.LASF156
+	.4byte	.LASF154
 	.byte	0x2
-	.2byte	0x54c
+	.2byte	0x569
 	.4byte	0x2c
 	.4byte	.LLST126
 	.uleb128 0x40
 	.4byte	.LBB45
 	.4byte	.LBE45-.LBB45
-	.4byte	0x1e86
+	.4byte	0x1e84
 	.uleb128 0x3e
 	.string	"n"
 	.byte	0x2
-	.2byte	0x54e
+	.2byte	0x56b
 	.4byte	0x33
 	.4byte	.LLST127
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL602
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF198
+	.4byte	.LASF196
 	.byte	0x2
-	.2byte	0x57e
+	.2byte	0x59b
 	.4byte	0x2c
 	.4byte	.LFB67
 	.4byte	.LFE67-.LFB67
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1eff
+	.4byte	0x1efd
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x57e
+	.2byte	0x59b
 	.4byte	0x228
 	.4byte	.LLST128
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x57e
+	.2byte	0x59b
 	.4byte	0x93
 	.4byte	.LLST129
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x57e
+	.2byte	0x59b
 	.4byte	0x93
 	.4byte	.LLST130
 	.uleb128 0x35
-	.4byte	.LASF158
+	.4byte	.LASF156
 	.byte	0x2
-	.2byte	0x57f
+	.2byte	0x59c
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x49
 	.4byte	.LVL630
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -31267,38 +31265,38 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF199
+	.4byte	.LASF197
 	.byte	0x2
-	.2byte	0x5ba
+	.2byte	0x5d7
 	.4byte	0x2c
 	.4byte	.LFB68
 	.4byte	.LFE68-.LFB68
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1fb8
+	.4byte	0x1fb6
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x5ba
+	.2byte	0x5d7
 	.4byte	0x228
 	.4byte	.LLST131
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x5ba
+	.2byte	0x5d7
 	.4byte	0x93
 	.4byte	.LLST132
 	.uleb128 0x35
-	.4byte	.LASF160
+	.4byte	.LASF158
 	.byte	0x2
-	.2byte	0x5bb
+	.2byte	0x5d7
 	.4byte	0x2c
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x35
-	.4byte	.LASF161
+	.4byte	.LASF159
 	.byte	0x2
-	.2byte	0x5bb
+	.2byte	0x5d8
 	.4byte	0x2f2
 	.uleb128 0x1
 	.byte	0x55
@@ -31306,269 +31304,269 @@ namingBitmap:
 	.byte	0x4
 	.4byte	0x3e
 	.byte	0x2
-	.2byte	0x5bd
-	.4byte	0x1f75
+	.2byte	0x5d9
+	.4byte	0x1f73
 	.uleb128 0x10
-	.4byte	.LASF162
+	.4byte	.LASF160
 	.byte	0
 	.uleb128 0x10
-	.4byte	.LASF163
+	.4byte	.LASF161
 	.byte	0x1
 	.uleb128 0x10
-	.4byte	.LASF164
+	.4byte	.LASF162
 	.byte	0x2
 	.byte	0
 	.uleb128 0x41
-	.4byte	.LASF165
+	.4byte	.LASF163
 	.byte	0x2
-	.2byte	0x5bd
-	.4byte	0x1f55
+	.2byte	0x5d9
+	.4byte	0x1f53
 	.4byte	.LLST133
 	.uleb128 0x41
-	.4byte	.LASF166
+	.4byte	.LASF164
 	.byte	0x2
-	.2byte	0x5be
+	.2byte	0x5da
 	.4byte	0x2c
 	.4byte	.LLST134
 	.uleb128 0x41
-	.4byte	.LASF131
+	.4byte	.LASF130
 	.byte	0x2
-	.2byte	0x5bf
+	.2byte	0x5db
 	.4byte	0x2c
 	.4byte	.LLST135
 	.uleb128 0x3f
 	.4byte	.LVL640
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL660
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF200
+	.4byte	.LASF198
 	.byte	0x2
-	.2byte	0x643
+	.2byte	0x66e
 	.4byte	0x2c
 	.4byte	.LFB70
 	.4byte	.LFE70-.LFB70
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2003
-	.uleb128 0x3c
-	.4byte	.LASF114
+	.4byte	0x2001
+	.uleb128 0x34
+	.string	"enc"
 	.byte	0x2
-	.2byte	0x643
+	.2byte	0x66e
 	.4byte	0x228
 	.4byte	.LLST136
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x643
+	.2byte	0x66e
 	.4byte	0x93
 	.4byte	.LLST137
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x644
+	.2byte	0x66f
 	.4byte	0x93
 	.4byte	.LLST138
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF201
+	.4byte	.LASF199
 	.byte	0x2
-	.2byte	0x679
+	.2byte	0x6a4
 	.4byte	0x2c
 	.4byte	.LFB71
 	.4byte	.LFE71-.LFB71
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x205c
-	.uleb128 0x3c
-	.4byte	.LASF114
+	.4byte	0x205a
+	.uleb128 0x34
+	.string	"enc"
 	.byte	0x2
-	.2byte	0x679
+	.2byte	0x6a4
 	.4byte	0x228
 	.4byte	.LLST139
 	.uleb128 0x3c
-	.4byte	.LASF169
+	.4byte	.LASF167
 	.byte	0x2
-	.2byte	0x679
+	.2byte	0x6a4
 	.4byte	0x93
 	.4byte	.LLST140
 	.uleb128 0x35
-	.4byte	.LASF170
+	.4byte	.LASF168
 	.byte	0x2
-	.2byte	0x67a
+	.2byte	0x6a5
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x3c
-	.4byte	.LASF171
+	.4byte	.LASF169
 	.byte	0x2
-	.2byte	0x67a
+	.2byte	0x6a5
 	.4byte	0x93
 	.4byte	.LLST141
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF202
+	.4byte	.LASF200
 	.byte	0x2
-	.2byte	0x68c
+	.2byte	0x6b7
 	.4byte	0x2c
 	.4byte	.LFB72
 	.4byte	.LFE72-.LFB72
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x20ae
+	.4byte	0x20ac
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x68c
+	.2byte	0x6b7
 	.4byte	0x228
 	.4byte	.LLST142
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x68c
+	.2byte	0x6b7
 	.4byte	0x93
 	.4byte	.LLST143
 	.uleb128 0x42
-	.4byte	.LASF153
+	.4byte	.LASF151
 	.byte	0x2
-	.2byte	0x68e
+	.2byte	0x6b8
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x3f
 	.4byte	.LVL693
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF203
+	.4byte	.LASF201
 	.byte	0x2
-	.2byte	0x6a7
+	.2byte	0x6d5
 	.4byte	0x93
 	.4byte	.LFB73
 	.4byte	.LFE73-.LFB73
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x20f2
+	.4byte	0x20f0
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x6a7
+	.2byte	0x6d5
 	.4byte	0x228
 	.4byte	.LLST144
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x6a7
+	.2byte	0x6d5
 	.4byte	0x93
 	.4byte	.LLST145
 	.uleb128 0x3f
 	.4byte	.LVL699
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x43
-	.4byte	.LASF205
+	.4byte	.LASF203
 	.byte	0x2
-	.2byte	0x6b7
+	.2byte	0x6e4
 	.4byte	.LFB74
 	.4byte	.LFE74-.LFB74
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2155
+	.4byte	0x2153
 	.uleb128 0x38
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x6b7
+	.2byte	0x6e4
 	.4byte	0x228
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x6b8
+	.2byte	0x6e4
 	.4byte	0x93
 	.4byte	.LLST146
 	.uleb128 0x38
 	.string	"end"
 	.byte	0x2
-	.2byte	0x6b9
+	.2byte	0x6e4
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x38
 	.string	"pos"
 	.byte	0x2
-	.2byte	0x6ba
+	.2byte	0x6e5
 	.4byte	0x337
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x3f
 	.4byte	.LVL703
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL707
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x2c
-	.4byte	.LASF206
+	.4byte	.LASF204
 	.byte	0x2
-	.byte	0x8a
+	.byte	0x87
 	.4byte	0x2c
 	.4byte	.LFB75
 	.4byte	.LFE75-.LFB75
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x21b2
-	.uleb128 0x2f
+	.4byte	0x21b0
+	.uleb128 0x2d
 	.string	"enc"
 	.byte	0x2
-	.byte	0x8a
+	.byte	0x87
 	.4byte	0x228
 	.4byte	.LLST147
-	.uleb128 0x2f
+	.uleb128 0x2d
 	.string	"ptr"
 	.byte	0x2
-	.byte	0x8a
+	.byte	0x87
 	.4byte	0x93
 	.4byte	.LLST148
-	.uleb128 0x2f
+	.uleb128 0x2d
 	.string	"end"
 	.byte	0x2
-	.byte	0x8b
+	.byte	0x87
 	.4byte	0x93
 	.4byte	.LLST149
-	.uleb128 0x2e
-	.4byte	.LASF120
+	.uleb128 0x2f
+	.4byte	.LASF119
 	.byte	0x2
-	.byte	0x8b
+	.byte	0x88
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x3f
 	.4byte	.LVL714
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF207
+	.4byte	.LASF205
 	.byte	0x2
-	.2byte	0x158
+	.2byte	0x159
 	.4byte	0x2c
 	.4byte	.LFB80
 	.4byte	.LFE80-.LFB80
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x223e
+	.4byte	0x223c
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x158
+	.2byte	0x159
 	.4byte	0x228
 	.4byte	.LLST150
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x158
+	.2byte	0x159
 	.4byte	0x93
 	.4byte	.LLST151
 	.uleb128 0x34
@@ -31578,15 +31576,15 @@ namingBitmap:
 	.4byte	0x93
 	.4byte	.LLST152
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x159
+	.2byte	0x15a
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x46
 	.4byte	.Ldebug_ranges0+0xf0
-	.4byte	0x2222
+	.4byte	0x2220
 	.uleb128 0x3e
 	.string	"n"
 	.byte	0x2
@@ -31596,162 +31594,162 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL735
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL746
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL759
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x21
-	.4byte	.LASF208
+	.4byte	.LASF206
 	.byte	0x2
-	.2byte	0x1f3
+	.2byte	0x1f7
 	.4byte	0x2c
 	.byte	0x1
-	.4byte	0x2280
-	.uleb128 0x23
+	.4byte	0x227e
+	.uleb128 0x22
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x1f3
+	.2byte	0x1f7
 	.4byte	0x228
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x1f3
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
-	.byte	0x2
-	.2byte	0x1f4
+	.2byte	0x1f7
 	.4byte	0x93
 	.uleb128 0x22
-	.4byte	.LASF120
+	.string	"end"
 	.byte	0x2
-	.2byte	0x1f4
+	.2byte	0x1f7
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
+	.byte	0x2
+	.2byte	0x1f8
 	.4byte	0x233
 	.byte	0
 	.uleb128 0x21
-	.4byte	.LASF209
+	.4byte	.LASF207
 	.byte	0x2
-	.2byte	0x1d3
+	.2byte	0x1d8
 	.4byte	0x2c
 	.byte	0x1
-	.4byte	0x22c2
-	.uleb128 0x23
+	.4byte	0x22c0
+	.uleb128 0x22
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x1d3
+	.2byte	0x1d8
 	.4byte	0x228
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x1d3
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
-	.byte	0x2
-	.2byte	0x1d4
+	.2byte	0x1d8
 	.4byte	0x93
 	.uleb128 0x22
-	.4byte	.LASF120
+	.string	"end"
 	.byte	0x2
-	.2byte	0x1d4
+	.2byte	0x1d8
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
+	.byte	0x2
+	.2byte	0x1d9
 	.4byte	0x233
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF210
+	.4byte	.LASF208
 	.byte	0x2
-	.2byte	0x213
+	.2byte	0x216
 	.4byte	0x2c
 	.4byte	.LFB84
 	.4byte	.LFE84-.LFB84
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x23d9
+	.4byte	0x23d7
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x213
+	.2byte	0x216
 	.4byte	0x228
 	.4byte	.LLST154
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x213
+	.2byte	0x216
 	.4byte	0x93
 	.4byte	.LLST155
 	.uleb128 0x38
 	.string	"end"
 	.byte	0x2
-	.2byte	0x213
+	.2byte	0x216
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x214
+	.2byte	0x217
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x47
-	.4byte	0x223e
+	.4byte	0x223c
 	.4byte	.LBB53
 	.4byte	.Ldebug_ranges0+0x110
 	.byte	0x2
-	.2byte	0x21a
-	.4byte	0x23ae
+	.2byte	0x21c
+	.4byte	0x23ac
 	.uleb128 0x3a
-	.4byte	0x2273
+	.4byte	0x2271
 	.4byte	.LLST156
 	.uleb128 0x3a
-	.4byte	0x2267
+	.4byte	0x2265
 	.4byte	.LLST157
 	.uleb128 0x3a
-	.4byte	0x225b
+	.4byte	0x2259
 	.4byte	.LLST158
 	.uleb128 0x3a
-	.4byte	0x224f
+	.4byte	0x224d
 	.4byte	.LLST159
 	.uleb128 0x47
-	.4byte	0x2280
+	.4byte	0x227e
 	.4byte	.LBB55
 	.4byte	.Ldebug_ranges0+0x130
 	.byte	0x2
-	.2byte	0x1f8
-	.4byte	0x239b
+	.2byte	0x1fb
+	.4byte	0x2399
 	.uleb128 0x3a
-	.4byte	0x22b5
+	.4byte	0x22b3
 	.4byte	.LLST160
 	.uleb128 0x3a
-	.4byte	0x22a9
+	.4byte	0x22a7
 	.4byte	.LLST161
 	.uleb128 0x3a
-	.4byte	0x229d
+	.4byte	0x229b
 	.4byte	.LLST162
 	.uleb128 0x3a
-	.4byte	0x2291
+	.4byte	0x228f
 	.4byte	.LLST163
 	.uleb128 0x3f
 	.4byte	.LVL770
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL776
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL779
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL782
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL766
-	.4byte	0x165f
-	.4byte	0x23c8
+	.4byte	0x165d
+	.4byte	0x23c6
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -31767,7 +31765,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x49
 	.4byte	.LVL787
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -31777,45 +31775,45 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF211
+	.4byte	.LASF209
 	.byte	0x2
-	.2byte	0x38c
+	.2byte	0x391
 	.4byte	0x2c
 	.4byte	.LFB88
 	.4byte	.LFE88-.LFB88
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x245a
+	.4byte	0x2458
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x38c
+	.2byte	0x391
 	.4byte	0x228
 	.4byte	.LLST164
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x38c
+	.2byte	0x391
 	.4byte	0x93
 	.4byte	.LLST165
 	.uleb128 0x38
 	.string	"end"
 	.byte	0x2
-	.2byte	0x38c
+	.2byte	0x391
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x38d
+	.2byte	0x392
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x48
 	.4byte	.LVL796
-	.4byte	0x165f
-	.4byte	0x2449
+	.4byte	0x165d
+	.4byte	0x2447
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -31831,7 +31829,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x49
 	.4byte	.LVL798
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5b
@@ -31841,43 +31839,43 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF212
+	.4byte	.LASF210
 	.byte	0x2
-	.2byte	0x3c2
+	.2byte	0x3cd
 	.4byte	0x2c
 	.4byte	.LFB90
 	.4byte	.LFE90-.LFB90
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x24e9
+	.4byte	0x24e7
 	.uleb128 0x3c
-	.4byte	.LASF131
+	.4byte	.LASF130
 	.byte	0x2
-	.2byte	0x3c2
+	.2byte	0x3cd
 	.4byte	0x2c
 	.4byte	.LLST166
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x3c2
+	.2byte	0x3cd
 	.4byte	0x228
 	.4byte	.LLST167
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x3c3
+	.2byte	0x3cd
 	.4byte	0x93
 	.4byte	.LLST168
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x3c3
+	.2byte	0x3cd
 	.4byte	0x93
 	.4byte	.LLST169
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x3c4
+	.2byte	0x3ce
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x56
@@ -31886,64 +31884,64 @@ namingBitmap:
 	.uleb128 0x3e
 	.string	"t"
 	.byte	0x2
-	.2byte	0x3c7
+	.2byte	0x3d0
 	.4byte	0x2c
 	.4byte	.LLST170
 	.uleb128 0x3f
 	.4byte	.LVL803
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL815
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF213
+	.4byte	.LASF211
 	.byte	0x2
-	.2byte	0x4c6
+	.2byte	0x4df
 	.4byte	0x2c
 	.4byte	.LFB92
 	.4byte	.LFE92-.LFB92
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2586
+	.4byte	0x2584
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x4c6
+	.2byte	0x4df
 	.4byte	0x228
 	.4byte	.LLST171
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x4c6
+	.2byte	0x4df
 	.4byte	0x93
 	.4byte	.LLST172
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x4c7
+	.2byte	0x4df
 	.4byte	0x93
 	.4byte	.LLST173
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x4c7
+	.2byte	0x4e0
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x26
-	.4byte	.LASF153
+	.4byte	.LASF151
 	.byte	0x2
-	.2byte	0x4c9
+	.2byte	0x4e1
 	.4byte	0x93
 	.uleb128 0x3f
 	.4byte	.LVL827
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x48
 	.4byte	.LVL830
-	.4byte	0x22c2
-	.4byte	0x257c
+	.4byte	0x22c0
+	.4byte	0x257a
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -31971,61 +31969,61 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL837
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF214
+	.4byte	.LASF212
 	.byte	0x2
-	.2byte	0x508
+	.2byte	0x524
 	.4byte	0x2c
 	.4byte	.LFB93
 	.4byte	.LFE93-.LFB93
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2663
+	.4byte	0x2661
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x508
+	.2byte	0x524
 	.4byte	0x228
 	.4byte	.LLST174
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x508
+	.2byte	0x524
 	.4byte	0x93
 	.4byte	.LLST175
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x509
+	.2byte	0x524
 	.4byte	0x93
 	.4byte	.LLST176
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x509
+	.2byte	0x525
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x26
-	.4byte	.LASF153
+	.4byte	.LASF151
 	.byte	0x2
-	.2byte	0x50b
+	.2byte	0x526
 	.4byte	0x93
 	.uleb128 0x40
 	.4byte	.LBB66
 	.4byte	.LBE66-.LBB66
-	.4byte	0x262a
+	.4byte	0x2628
 	.uleb128 0x3e
 	.string	"tok"
 	.byte	0x2
-	.2byte	0x524
+	.2byte	0x543
 	.4byte	0x2c
 	.4byte	.LLST177
 	.uleb128 0x49
 	.4byte	.LVL852
-	.4byte	0x23d9
+	.4byte	0x23d7
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -32054,11 +32052,11 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL848
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x48
 	.4byte	.LVL851
-	.4byte	0x22c2
-	.4byte	0x2659
+	.4byte	0x22c0
+	.4byte	0x2657
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -32086,102 +32084,102 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL863
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF215
+	.4byte	.LASF213
 	.byte	0x2
-	.2byte	0x549
+	.2byte	0x567
 	.4byte	0x2c
 	.4byte	.LFB94
 	.4byte	.LFE94-.LFB94
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x26f1
+	.4byte	0x26ef
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x549
+	.2byte	0x567
 	.4byte	0x228
 	.4byte	.LLST178
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x549
+	.2byte	0x567
 	.4byte	0x93
 	.4byte	.LLST179
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x54a
+	.2byte	0x567
 	.4byte	0x93
 	.4byte	.LLST180
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x54a
+	.2byte	0x568
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x41
-	.4byte	.LASF156
+	.4byte	.LASF154
 	.byte	0x2
-	.2byte	0x54c
+	.2byte	0x569
 	.4byte	0x2c
 	.4byte	.LLST181
 	.uleb128 0x40
 	.4byte	.LBB67
 	.4byte	.LBE67-.LBB67
-	.4byte	0x26e7
+	.4byte	0x26e5
 	.uleb128 0x3e
 	.string	"n"
 	.byte	0x2
-	.2byte	0x54e
+	.2byte	0x56b
 	.4byte	0x33
 	.4byte	.LLST182
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL878
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF216
+	.4byte	.LASF214
 	.byte	0x2
-	.2byte	0x57e
+	.2byte	0x59b
 	.4byte	0x2c
 	.4byte	.LFB95
 	.4byte	.LFE95-.LFB95
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2760
+	.4byte	0x275e
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x57e
+	.2byte	0x59b
 	.4byte	0x228
 	.4byte	.LLST183
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x57e
+	.2byte	0x59b
 	.4byte	0x93
 	.4byte	.LLST184
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x57e
+	.2byte	0x59b
 	.4byte	0x93
 	.4byte	.LLST185
 	.uleb128 0x35
-	.4byte	.LASF158
+	.4byte	.LASF156
 	.byte	0x2
-	.2byte	0x57f
+	.2byte	0x59c
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x49
 	.4byte	.LVL906
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -32197,38 +32195,38 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF217
+	.4byte	.LASF215
 	.byte	0x2
-	.2byte	0x5ba
+	.2byte	0x5d7
 	.4byte	0x2c
 	.4byte	.LFB96
 	.4byte	.LFE96-.LFB96
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2819
+	.4byte	0x2817
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x5ba
+	.2byte	0x5d7
 	.4byte	0x228
 	.4byte	.LLST186
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x5ba
+	.2byte	0x5d7
 	.4byte	0x93
 	.4byte	.LLST187
 	.uleb128 0x35
-	.4byte	.LASF160
+	.4byte	.LASF158
 	.byte	0x2
-	.2byte	0x5bb
+	.2byte	0x5d7
 	.4byte	0x2c
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x35
-	.4byte	.LASF161
+	.4byte	.LASF159
 	.byte	0x2
-	.2byte	0x5bb
+	.2byte	0x5d8
 	.4byte	0x2f2
 	.uleb128 0x1
 	.byte	0x55
@@ -32236,230 +32234,230 @@ namingBitmap:
 	.byte	0x4
 	.4byte	0x3e
 	.byte	0x2
-	.2byte	0x5bd
-	.4byte	0x27d6
+	.2byte	0x5d9
+	.4byte	0x27d4
 	.uleb128 0x10
-	.4byte	.LASF162
+	.4byte	.LASF160
 	.byte	0
 	.uleb128 0x10
-	.4byte	.LASF163
+	.4byte	.LASF161
 	.byte	0x1
 	.uleb128 0x10
-	.4byte	.LASF164
+	.4byte	.LASF162
 	.byte	0x2
 	.byte	0
 	.uleb128 0x41
-	.4byte	.LASF165
+	.4byte	.LASF163
 	.byte	0x2
-	.2byte	0x5bd
-	.4byte	0x27b6
+	.2byte	0x5d9
+	.4byte	0x27b4
 	.4byte	.LLST188
 	.uleb128 0x41
-	.4byte	.LASF166
+	.4byte	.LASF164
 	.byte	0x2
-	.2byte	0x5be
+	.2byte	0x5da
 	.4byte	0x2c
 	.4byte	.LLST189
 	.uleb128 0x41
-	.4byte	.LASF131
+	.4byte	.LASF130
 	.byte	0x2
-	.2byte	0x5bf
+	.2byte	0x5db
 	.4byte	0x2c
 	.4byte	.LLST190
 	.uleb128 0x3f
 	.4byte	.LVL916
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL936
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF218
+	.4byte	.LASF216
 	.byte	0x2
-	.2byte	0x643
+	.2byte	0x66e
 	.4byte	0x2c
 	.4byte	.LFB98
 	.4byte	.LFE98-.LFB98
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2864
-	.uleb128 0x3c
-	.4byte	.LASF114
+	.4byte	0x2862
+	.uleb128 0x34
+	.string	"enc"
 	.byte	0x2
-	.2byte	0x643
+	.2byte	0x66e
 	.4byte	0x228
 	.4byte	.LLST191
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x643
+	.2byte	0x66e
 	.4byte	0x93
 	.4byte	.LLST192
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x644
+	.2byte	0x66f
 	.4byte	0x93
 	.4byte	.LLST193
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF219
+	.4byte	.LASF217
 	.byte	0x2
-	.2byte	0x679
+	.2byte	0x6a4
 	.4byte	0x2c
 	.4byte	.LFB99
 	.4byte	.LFE99-.LFB99
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x28bd
-	.uleb128 0x3c
-	.4byte	.LASF114
+	.4byte	0x28bb
+	.uleb128 0x34
+	.string	"enc"
 	.byte	0x2
-	.2byte	0x679
+	.2byte	0x6a4
 	.4byte	0x228
 	.4byte	.LLST194
 	.uleb128 0x3c
-	.4byte	.LASF169
+	.4byte	.LASF167
 	.byte	0x2
-	.2byte	0x679
+	.2byte	0x6a4
 	.4byte	0x93
 	.4byte	.LLST195
 	.uleb128 0x35
-	.4byte	.LASF170
+	.4byte	.LASF168
 	.byte	0x2
-	.2byte	0x67a
+	.2byte	0x6a5
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x3c
-	.4byte	.LASF171
+	.4byte	.LASF169
 	.byte	0x2
-	.2byte	0x67a
+	.2byte	0x6a5
 	.4byte	0x93
 	.4byte	.LLST196
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF220
+	.4byte	.LASF218
 	.byte	0x2
-	.2byte	0x68c
+	.2byte	0x6b7
 	.4byte	0x2c
 	.4byte	.LFB100
 	.4byte	.LFE100-.LFB100
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x290f
+	.4byte	0x290d
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x68c
+	.2byte	0x6b7
 	.4byte	0x228
 	.4byte	.LLST197
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x68c
+	.2byte	0x6b7
 	.4byte	0x93
 	.4byte	.LLST198
 	.uleb128 0x42
-	.4byte	.LASF153
+	.4byte	.LASF151
 	.byte	0x2
-	.2byte	0x68e
+	.2byte	0x6b8
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x3f
 	.4byte	.LVL969
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF221
+	.4byte	.LASF219
 	.byte	0x2
-	.2byte	0x6a7
+	.2byte	0x6d5
 	.4byte	0x93
 	.4byte	.LFB101
 	.4byte	.LFE101-.LFB101
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2953
+	.4byte	0x2951
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x6a7
+	.2byte	0x6d5
 	.4byte	0x228
 	.4byte	.LLST199
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x6a7
+	.2byte	0x6d5
 	.4byte	0x93
 	.4byte	.LLST200
 	.uleb128 0x3f
 	.4byte	.LVL975
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x43
-	.4byte	.LASF222
+	.4byte	.LASF220
 	.byte	0x2
-	.2byte	0x6b7
+	.2byte	0x6e4
 	.4byte	.LFB102
 	.4byte	.LFE102-.LFB102
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x29b6
+	.4byte	0x29b4
 	.uleb128 0x38
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x6b7
+	.2byte	0x6e4
 	.4byte	0x228
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x6b8
+	.2byte	0x6e4
 	.4byte	0x93
 	.4byte	.LLST201
 	.uleb128 0x38
 	.string	"end"
 	.byte	0x2
-	.2byte	0x6b9
+	.2byte	0x6e4
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x38
 	.string	"pos"
 	.byte	0x2
-	.2byte	0x6ba
+	.2byte	0x6e5
 	.4byte	0x337
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x3f
 	.4byte	.LVL979
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL983
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF223
+	.4byte	.LASF221
 	.byte	0x1
-	.2byte	0x42b
+	.2byte	0x3ef
 	.4byte	0x2c
 	.4byte	.LFB103
 	.4byte	.LFE103-.LFB103
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2a13
+	.4byte	0x2a11
 	.uleb128 0x34
 	.string	"s1"
 	.byte	0x1
-	.2byte	0x42b
+	.2byte	0x3ef
 	.4byte	0x93
 	.4byte	.LLST202
 	.uleb128 0x34
 	.string	"s2"
 	.byte	0x1
-	.2byte	0x42b
+	.2byte	0x3ef
 	.4byte	0x93
 	.4byte	.LLST203
 	.uleb128 0x3d
@@ -32467,57 +32465,57 @@ namingBitmap:
 	.uleb128 0x3e
 	.string	"c1"
 	.byte	0x1
-	.2byte	0x42e
+	.2byte	0x3f1
 	.4byte	0x8c
 	.4byte	.LLST204
 	.uleb128 0x3e
 	.string	"c2"
 	.byte	0x1
-	.2byte	0x42f
+	.2byte	0x3f2
 	.4byte	0x8c
 	.4byte	.LLST205
 	.byte	0
 	.byte	0
 	.uleb128 0x43
-	.4byte	.LASF224
+	.4byte	.LASF222
 	.byte	0x1
-	.2byte	0x441
+	.2byte	0x404
 	.4byte	.LFB104
 	.4byte	.LFE104-.LFB104
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2a87
-	.uleb128 0x35
-	.4byte	.LASF114
+	.4byte	0x2a85
+	.uleb128 0x38
+	.string	"enc"
 	.byte	0x1
-	.2byte	0x441
+	.2byte	0x404
 	.4byte	0x228
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x38
 	.string	"ptr"
 	.byte	0x1
-	.2byte	0x441
+	.2byte	0x404
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x38
 	.string	"end"
 	.byte	0x1
-	.2byte	0x442
+	.2byte	0x404
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x38
 	.string	"pos"
 	.byte	0x1
-	.2byte	0x442
+	.2byte	0x405
 	.4byte	0x337
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x49
 	.4byte	.LVL999
-	.4byte	0x141b
+	.4byte	0x1419
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -32545,46 +32543,46 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF225
+	.4byte	.LASF223
 	.byte	0x1
-	.2byte	0x448
+	.2byte	0x40b
 	.4byte	0x2c
 	.4byte	.LFB105
 	.4byte	.LFE105-.LFB105
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2b14
+	.4byte	0x2b12
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x1
-	.2byte	0x448
+	.2byte	0x40b
 	.4byte	0x228
 	.4byte	.LLST206
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x1
-	.2byte	0x448
+	.2byte	0x40b
 	.4byte	0x93
 	.4byte	.LLST207
 	.uleb128 0x38
 	.string	"end"
 	.byte	0x1
-	.2byte	0x448
+	.2byte	0x40b
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x4a
 	.string	"buf"
 	.byte	0x1
-	.2byte	0x44a
-	.4byte	0x2b14
+	.2byte	0x40c
+	.4byte	0x2b12
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -60
 	.uleb128 0x4a
 	.string	"p"
 	.byte	0x1
-	.2byte	0x44b
+	.2byte	0x40d
 	.4byte	0x86
 	.uleb128 0x2
 	.byte	0x91
@@ -32629,232 +32627,232 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x8
 	.4byte	0x8c
-	.4byte	0x2b24
+	.4byte	0x2b22
 	.uleb128 0x9
 	.4byte	0x76
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF226
+	.4byte	.LASF224
 	.byte	0x1
-	.2byte	0x454
+	.2byte	0x416
 	.4byte	0x2c
 	.4byte	.LFB106
 	.4byte	.LFE106-.LFB106
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2b4d
+	.4byte	0x2b4b
 	.uleb128 0x34
 	.string	"c"
 	.byte	0x1
-	.2byte	0x454
+	.2byte	0x416
 	.4byte	0x2c
 	.4byte	.LLST208
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF227
+	.4byte	.LASF225
 	.byte	0x1
-	.2byte	0x52a
+	.2byte	0x4d1
 	.4byte	0x2c
 	.4byte	.LFB109
 	.4byte	.LFE109-.LFB109
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2b78
+	.4byte	0x2b76
 	.uleb128 0x3c
-	.4byte	.LASF228
+	.4byte	.LASF226
 	.byte	0x1
-	.2byte	0x52a
+	.2byte	0x4d1
 	.4byte	0x2c
 	.4byte	.LLST209
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF229
+	.4byte	.LASF227
 	.byte	0x2
-	.2byte	0x617
+	.2byte	0x634
 	.4byte	0x2c
 	.4byte	.LFB30
 	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2bfc
-	.uleb128 0x3c
-	.4byte	.LASF114
+	.4byte	0x2bfa
+	.uleb128 0x34
+	.string	"enc"
 	.byte	0x2
-	.2byte	0x617
+	.2byte	0x634
 	.4byte	0x228
 	.4byte	.LLST210
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x617
+	.2byte	0x634
 	.4byte	0x93
 	.4byte	.LLST211
 	.uleb128 0x41
-	.4byte	.LASF228
+	.4byte	.LASF226
 	.byte	0x2
-	.2byte	0x619
+	.2byte	0x635
 	.4byte	0x2c
 	.4byte	.LLST212
 	.uleb128 0x46
 	.4byte	.Ldebug_ranges0+0x180
-	.4byte	0x2bda
+	.4byte	0x2bd8
 	.uleb128 0x3e
 	.string	"c"
 	.byte	0x2
-	.2byte	0x638
+	.2byte	0x663
 	.4byte	0x2c
 	.4byte	.LLST213
 	.byte	0
 	.uleb128 0x46
 	.4byte	.Ldebug_ranges0+0x198
-	.4byte	0x2bf2
+	.4byte	0x2bf0
 	.uleb128 0x3e
 	.string	"c"
 	.byte	0x2
-	.2byte	0x620
+	.2byte	0x63c
 	.4byte	0x2c
 	.4byte	.LLST214
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1035
-	.4byte	0x2b4d
+	.4byte	0x2b4b
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF230
+	.4byte	.LASF228
 	.byte	0x2
-	.2byte	0x617
+	.2byte	0x634
 	.4byte	0x2c
 	.4byte	.LFB69
 	.4byte	.LFE69-.LFB69
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2c7c
-	.uleb128 0x3c
-	.4byte	.LASF114
+	.4byte	0x2c7a
+	.uleb128 0x34
+	.string	"enc"
 	.byte	0x2
-	.2byte	0x617
+	.2byte	0x634
 	.4byte	0x228
 	.4byte	.LLST215
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x617
+	.2byte	0x634
 	.4byte	0x93
 	.4byte	.LLST216
 	.uleb128 0x41
-	.4byte	.LASF228
+	.4byte	.LASF226
 	.byte	0x2
-	.2byte	0x619
+	.2byte	0x635
 	.4byte	0x2c
 	.4byte	.LLST217
 	.uleb128 0x46
 	.4byte	.Ldebug_ranges0+0x1b8
-	.4byte	0x2c5a
+	.4byte	0x2c58
 	.uleb128 0x25
 	.string	"c"
 	.byte	0x2
-	.2byte	0x638
+	.2byte	0x663
 	.4byte	0x2c
 	.byte	0
 	.uleb128 0x46
 	.4byte	.Ldebug_ranges0+0x1d0
-	.4byte	0x2c72
+	.4byte	0x2c70
 	.uleb128 0x3e
 	.string	"c"
 	.byte	0x2
-	.2byte	0x620
+	.2byte	0x63c
 	.4byte	0x2c
 	.4byte	.LLST218
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1065
-	.4byte	0x2b4d
+	.4byte	0x2b4b
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF231
+	.4byte	.LASF229
 	.byte	0x2
-	.2byte	0x617
+	.2byte	0x634
 	.4byte	0x2c
 	.4byte	.LFB97
 	.4byte	.LFE97-.LFB97
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2cfc
-	.uleb128 0x3c
-	.4byte	.LASF114
+	.4byte	0x2cfa
+	.uleb128 0x34
+	.string	"enc"
 	.byte	0x2
-	.2byte	0x617
+	.2byte	0x634
 	.4byte	0x228
 	.4byte	.LLST219
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x617
+	.2byte	0x634
 	.4byte	0x93
 	.4byte	.LLST220
 	.uleb128 0x41
-	.4byte	.LASF228
+	.4byte	.LASF226
 	.byte	0x2
-	.2byte	0x619
+	.2byte	0x635
 	.4byte	0x2c
 	.4byte	.LLST221
 	.uleb128 0x46
 	.4byte	.Ldebug_ranges0+0x1f0
-	.4byte	0x2cda
+	.4byte	0x2cd8
 	.uleb128 0x25
 	.string	"c"
 	.byte	0x2
-	.2byte	0x638
+	.2byte	0x663
 	.4byte	0x2c
 	.byte	0
 	.uleb128 0x46
 	.4byte	.Ldebug_ranges0+0x208
-	.4byte	0x2cf2
+	.4byte	0x2cf0
 	.uleb128 0x3e
 	.string	"c"
 	.byte	0x2
-	.2byte	0x620
+	.2byte	0x63c
 	.4byte	0x2c
 	.4byte	.LLST222
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1095
-	.4byte	0x2b4d
+	.4byte	0x2b4b
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF232
+	.4byte	.LASF230
 	.byte	0x1
-	.2byte	0x584
+	.2byte	0x52d
 	.4byte	0x2c
 	.4byte	.LFB113
 	.4byte	.LFE113-.LFB113
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2d5b
+	.4byte	0x2d59
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x1
-	.2byte	0x584
+	.2byte	0x52d
 	.4byte	0x228
 	.4byte	.LLST223
 	.uleb128 0x38
 	.string	"p"
 	.byte	0x1
-	.2byte	0x584
+	.2byte	0x52d
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x41
-	.4byte	.LASF233
+	.4byte	.LASF231
 	.byte	0x1
-	.2byte	0x586
-	.4byte	0x2d5b
+	.2byte	0x52e
+	.4byte	0x2d59
 	.4byte	.LLST224
 	.uleb128 0x4a
 	.string	"c"
 	.byte	0x1
-	.2byte	0x587
+	.2byte	0x52f
 	.4byte	0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -32870,42 +32868,42 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x2d61
+	.4byte	0x2d5f
 	.uleb128 0x7
 	.4byte	0x5ca
 	.uleb128 0x33
-	.4byte	.LASF234
+	.4byte	.LASF232
 	.byte	0x1
-	.2byte	0x58e
+	.2byte	0x536
 	.4byte	0x2c
 	.4byte	.LFB114
 	.4byte	.LFE114-.LFB114
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2dc5
+	.4byte	0x2dc3
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x1
-	.2byte	0x58e
+	.2byte	0x536
 	.4byte	0x228
 	.4byte	.LLST225
 	.uleb128 0x38
 	.string	"p"
 	.byte	0x1
-	.2byte	0x58e
+	.2byte	0x536
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x41
-	.4byte	.LASF233
+	.4byte	.LASF231
 	.byte	0x1
-	.2byte	0x590
-	.4byte	0x2d5b
+	.2byte	0x537
+	.4byte	0x2d59
 	.4byte	.LLST226
 	.uleb128 0x4a
 	.string	"c"
 	.byte	0x1
-	.2byte	0x591
+	.2byte	0x538
 	.4byte	0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -32920,43 +32918,43 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF235
+	.4byte	.LASF233
 	.byte	0x1
-	.2byte	0x598
+	.2byte	0x53f
 	.4byte	0x2c
 	.4byte	.LFB115
 	.4byte	.LFE115-.LFB115
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2e33
+	.4byte	0x2e31
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x1
-	.2byte	0x598
+	.2byte	0x53f
 	.4byte	0x228
 	.4byte	.LLST227
 	.uleb128 0x38
 	.string	"p"
 	.byte	0x1
-	.2byte	0x598
+	.2byte	0x53f
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x41
-	.4byte	.LASF233
+	.4byte	.LASF231
 	.byte	0x1
-	.2byte	0x59a
-	.4byte	0x2d5b
+	.2byte	0x540
+	.4byte	0x2d59
 	.4byte	.LLST228
 	.uleb128 0x3e
 	.string	"c"
 	.byte	0x1
-	.2byte	0x59b
+	.2byte	0x541
 	.4byte	0x2c
 	.4byte	.LLST229
 	.uleb128 0x30
 	.4byte	.LVL1108
-	.4byte	0x2e29
+	.4byte	0x2e27
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5b
@@ -32966,101 +32964,101 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1110
-	.4byte	0x2b4d
+	.4byte	0x2b4b
 	.byte	0
 	.uleb128 0x4b
-	.4byte	.LASF236
+	.4byte	.LASF234
 	.byte	0x1
-	.2byte	0x5c1
+	.2byte	0x564
 	.4byte	0x239
 	.4byte	.LFB117
 	.4byte	.LFE117-.LFB117
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2eba
+	.4byte	0x2eb8
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x1
-	.2byte	0x5c1
+	.2byte	0x564
 	.4byte	0x228
 	.4byte	.LLST230
 	.uleb128 0x35
-	.4byte	.LASF175
+	.4byte	.LASF173
 	.byte	0x1
-	.2byte	0x5c2
+	.2byte	0x564
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x35
-	.4byte	.LASF176
+	.4byte	.LASF174
 	.byte	0x1
-	.2byte	0x5c2
+	.2byte	0x564
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x38
 	.string	"toP"
 	.byte	0x1
-	.2byte	0x5c3
+	.2byte	0x565
 	.4byte	0x395
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x35
-	.4byte	.LASF177
+	.4byte	.LASF175
 	.byte	0x1
-	.2byte	0x5c3
+	.2byte	0x565
 	.4byte	0x3a1
 	.uleb128 0x1
 	.byte	0x56
 	.uleb128 0x41
-	.4byte	.LASF233
+	.4byte	.LASF231
 	.byte	0x1
-	.2byte	0x5c5
-	.4byte	0x2d5b
+	.2byte	0x566
+	.4byte	0x2d59
 	.4byte	.LLST231
 	.uleb128 0x3d
 	.4byte	.Ldebug_ranges0+0x228
 	.uleb128 0x3e
 	.string	"c"
 	.byte	0x1
-	.2byte	0x5c7
+	.2byte	0x568
 	.4byte	0x45
 	.4byte	.LLST232
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF237
+	.4byte	.LASF235
 	.byte	0x1
-	.2byte	0x651
+	.2byte	0x5e0
 	.4byte	0x2c
 	.4byte	.LFB119
 	.4byte	.LFE119-.LFB119
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2f15
+	.4byte	0x2f13
 	.uleb128 0x3c
 	.4byte	.LASF17
 	.byte	0x1
-	.2byte	0x651
+	.2byte	0x5e0
 	.4byte	0x93
 	.4byte	.LLST233
 	.uleb128 0x42
-	.4byte	.LASF238
+	.4byte	.LASF236
 	.byte	0x1
-	.2byte	0x653
-	.4byte	0x2f25
+	.2byte	0x5e1
+	.4byte	0x2f23
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	encodingNames$5076
+	.4byte	encodingNames$5073
 	.uleb128 0x3e
 	.string	"i"
 	.byte	0x1
-	.2byte	0x65b
+	.2byte	0x5e4
 	.4byte	0x2c
 	.4byte	.LLST234
 	.uleb128 0x49
 	.4byte	.LVL1125
-	.4byte	0x29b6
+	.4byte	0x29b4
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -33071,65 +33069,65 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x8
 	.4byte	0x93
-	.4byte	0x2f25
+	.4byte	0x2f23
 	.uleb128 0x9
 	.4byte	0x76
 	.byte	0x5
 	.byte	0
 	.uleb128 0x7
-	.4byte	0x2f15
+	.4byte	0x2f13
 	.uleb128 0x4b
-	.4byte	.LASF239
+	.4byte	.LASF237
 	.byte	0x1
-	.2byte	0x674
+	.2byte	0x5fc
 	.4byte	0x2c
 	.4byte	.LFB120
 	.4byte	.LFE120-.LFB120
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2fc9
+	.4byte	0x2fc7
 	.uleb128 0x3c
-	.4byte	.LASF240
+	.4byte	.LASF238
 	.byte	0x1
-	.2byte	0x674
-	.4byte	0x2fc9
+	.2byte	0x5fc
+	.4byte	0x2fc7
 	.4byte	.LLST235
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x1
-	.2byte	0x675
-	.4byte	0x2fd4
+	.2byte	0x5fc
+	.4byte	0x2fd2
 	.4byte	.LLST236
 	.uleb128 0x3c
-	.4byte	.LASF165
+	.4byte	.LASF163
 	.byte	0x1
-	.2byte	0x676
+	.2byte	0x5fd
 	.4byte	0x2c
 	.4byte	.LLST237
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x1
-	.2byte	0x677
+	.2byte	0x5fd
 	.4byte	0x93
 	.4byte	.LLST238
 	.uleb128 0x38
 	.string	"end"
 	.byte	0x1
-	.2byte	0x678
+	.2byte	0x5fd
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x56
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x1
-	.2byte	0x679
+	.2byte	0x5fd
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x57
 	.uleb128 0x41
 	.4byte	.LASF45
 	.byte	0x1
-	.2byte	0x67b
+	.2byte	0x5fe
 	.4byte	0x3d6
 	.4byte	.LLST239
 	.uleb128 0x45
@@ -33138,61 +33136,61 @@ namingBitmap:
 	.uleb128 0x3e
 	.string	"e"
 	.byte	0x1
-	.2byte	0x6bd
+	.2byte	0x63c
 	.4byte	0x2c
 	.4byte	.LLST240
 	.byte	0
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x2fcf
+	.4byte	0x2fcd
 	.uleb128 0x7
 	.4byte	0x228
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x2fda
+	.4byte	0x2fd8
 	.uleb128 0x7
 	.4byte	0x3dc
 	.uleb128 0x2c
-	.4byte	.LASF241
+	.4byte	.LASF239
 	.byte	0x3
-	.byte	0x43
+	.byte	0x3d
 	.4byte	0x2c
 	.4byte	.LFB123
 	.4byte	.LFE123-.LFB123
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x305f
-	.uleb128 0x2f
+	.4byte	0x305d
+	.uleb128 0x2d
 	.string	"enc"
 	.byte	0x3
-	.byte	0x43
+	.byte	0x3d
 	.4byte	0x228
 	.4byte	.LLST241
-	.uleb128 0x4c
+	.uleb128 0x2e
 	.string	"ptr"
 	.byte	0x3
-	.byte	0x43
+	.byte	0x3d
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x53
-	.uleb128 0x4c
+	.uleb128 0x2e
 	.string	"end"
 	.byte	0x3
-	.byte	0x43
+	.byte	0x3d
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
-	.uleb128 0x2e
-	.4byte	.LASF120
+	.uleb128 0x2f
+	.4byte	.LASF119
 	.byte	0x3
-	.byte	0x44
+	.byte	0x3e
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x49
 	.4byte	.LVL1154
-	.4byte	0x2f2a
+	.4byte	0x2f28
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -33231,45 +33229,45 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x2c
-	.4byte	.LASF242
+	.4byte	.LASF240
 	.byte	0x3
-	.byte	0x4b
+	.byte	0x44
 	.4byte	0x2c
 	.4byte	.LFB124
 	.4byte	.LFE124-.LFB124
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x30df
-	.uleb128 0x2f
+	.4byte	0x30dd
+	.uleb128 0x2d
 	.string	"enc"
 	.byte	0x3
-	.byte	0x4b
+	.byte	0x44
 	.4byte	0x228
 	.4byte	.LLST242
-	.uleb128 0x4c
+	.uleb128 0x2e
 	.string	"ptr"
 	.byte	0x3
-	.byte	0x4b
+	.byte	0x44
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x53
-	.uleb128 0x4c
+	.uleb128 0x2e
 	.string	"end"
 	.byte	0x3
-	.byte	0x4b
+	.byte	0x44
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
-	.uleb128 0x2e
-	.4byte	.LASF120
+	.uleb128 0x2f
+	.4byte	.LASF119
 	.byte	0x3
-	.byte	0x4c
+	.byte	0x45
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x49
 	.4byte	.LVL1157
-	.4byte	0x2f2a
+	.4byte	0x2f28
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -33308,59 +33306,59 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x2c
-	.4byte	.LASF243
+	.4byte	.LASF241
 	.byte	0x3
-	.byte	0x63
+	.byte	0x5a
 	.4byte	0x228
 	.4byte	.LFB126
 	.4byte	.LFE126-.LFB126
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x31a4
-	.uleb128 0x2f
+	.4byte	0x31a2
+	.uleb128 0x2d
 	.string	"enc"
 	.byte	0x3
-	.byte	0x63
+	.byte	0x5a
 	.4byte	0x228
 	.4byte	.LLST243
-	.uleb128 0x4c
+	.uleb128 0x2e
 	.string	"ptr"
 	.byte	0x3
-	.byte	0x63
+	.byte	0x5a
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x53
-	.uleb128 0x2f
+	.uleb128 0x2d
 	.string	"end"
 	.byte	0x3
-	.byte	0x63
+	.byte	0x5a
 	.4byte	0x93
 	.4byte	.LLST244
-	.uleb128 0x4d
+	.uleb128 0x4c
 	.string	"buf"
 	.byte	0x3
-	.byte	0x66
-	.4byte	0x31a4
+	.byte	0x5c
+	.4byte	0x31a2
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -192
-	.uleb128 0x4d
+	.uleb128 0x4c
 	.string	"p"
 	.byte	0x3
-	.byte	0x67
+	.byte	0x5d
 	.4byte	0x86
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
-	.uleb128 0x4e
+	.uleb128 0x4d
 	.string	"i"
 	.byte	0x3
-	.byte	0x68
+	.byte	0x5e
 	.4byte	0x2c
 	.4byte	.LLST245
 	.uleb128 0x30
 	.4byte	.LVL1160
-	.4byte	0x3174
+	.4byte	0x3172
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -33394,8 +33392,8 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL1165
-	.4byte	0x29b6
-	.4byte	0x3192
+	.4byte	0x29b4
+	.4byte	0x3190
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -33411,7 +33409,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x49
 	.4byte	.LVL1166
-	.4byte	0x2eba
+	.4byte	0x2eb8
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -33422,51 +33420,51 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x8
 	.4byte	0x8c
-	.4byte	0x31b4
+	.4byte	0x31b2
 	.uleb128 0x9
 	.4byte	0x76
 	.byte	0x7f
 	.byte	0
 	.uleb128 0x2c
-	.4byte	.LASF244
+	.4byte	.LASF242
 	.byte	0x3
-	.byte	0x43
+	.byte	0x3d
 	.4byte	0x2c
 	.4byte	.LFB130
 	.4byte	.LFE130-.LFB130
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x3234
-	.uleb128 0x2f
+	.4byte	0x3232
+	.uleb128 0x2d
 	.string	"enc"
 	.byte	0x3
-	.byte	0x43
+	.byte	0x3d
 	.4byte	0x228
 	.4byte	.LLST246
-	.uleb128 0x4c
+	.uleb128 0x2e
 	.string	"ptr"
 	.byte	0x3
-	.byte	0x43
+	.byte	0x3d
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x53
-	.uleb128 0x4c
+	.uleb128 0x2e
 	.string	"end"
 	.byte	0x3
-	.byte	0x43
+	.byte	0x3d
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
-	.uleb128 0x2e
-	.4byte	.LASF120
+	.uleb128 0x2f
+	.4byte	.LASF119
 	.byte	0x3
-	.byte	0x44
+	.byte	0x3e
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x49
 	.4byte	.LVL1170
-	.4byte	0x2f2a
+	.4byte	0x2f28
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -33505,45 +33503,45 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x2c
-	.4byte	.LASF245
+	.4byte	.LASF243
 	.byte	0x3
-	.byte	0x4b
+	.byte	0x44
 	.4byte	0x2c
 	.4byte	.LFB131
 	.4byte	.LFE131-.LFB131
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x32b4
-	.uleb128 0x2f
+	.4byte	0x32b2
+	.uleb128 0x2d
 	.string	"enc"
 	.byte	0x3
-	.byte	0x4b
+	.byte	0x44
 	.4byte	0x228
 	.4byte	.LLST247
-	.uleb128 0x4c
+	.uleb128 0x2e
 	.string	"ptr"
 	.byte	0x3
-	.byte	0x4b
+	.byte	0x44
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x53
-	.uleb128 0x4c
+	.uleb128 0x2e
 	.string	"end"
 	.byte	0x3
-	.byte	0x4b
+	.byte	0x44
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
-	.uleb128 0x2e
-	.4byte	.LASF120
+	.uleb128 0x2f
+	.4byte	.LASF119
 	.byte	0x3
-	.byte	0x4c
+	.byte	0x45
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x49
 	.4byte	.LVL1173
-	.4byte	0x2f2a
+	.4byte	0x2f28
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -33582,59 +33580,59 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x2c
-	.4byte	.LASF246
+	.4byte	.LASF244
 	.byte	0x3
-	.byte	0x63
+	.byte	0x5a
 	.4byte	0x228
 	.4byte	.LFB133
 	.4byte	.LFE133-.LFB133
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x3379
-	.uleb128 0x2f
+	.4byte	0x3377
+	.uleb128 0x2d
 	.string	"enc"
 	.byte	0x3
-	.byte	0x63
+	.byte	0x5a
 	.4byte	0x228
 	.4byte	.LLST248
-	.uleb128 0x4c
+	.uleb128 0x2e
 	.string	"ptr"
 	.byte	0x3
-	.byte	0x63
+	.byte	0x5a
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x53
-	.uleb128 0x2f
+	.uleb128 0x2d
 	.string	"end"
 	.byte	0x3
-	.byte	0x63
+	.byte	0x5a
 	.4byte	0x93
 	.4byte	.LLST249
-	.uleb128 0x4d
+	.uleb128 0x4c
 	.string	"buf"
 	.byte	0x3
-	.byte	0x66
-	.4byte	0x31a4
+	.byte	0x5c
+	.4byte	0x31a2
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -192
-	.uleb128 0x4d
+	.uleb128 0x4c
 	.string	"p"
 	.byte	0x3
-	.byte	0x67
+	.byte	0x5d
 	.4byte	0x86
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
-	.uleb128 0x4e
+	.uleb128 0x4d
 	.string	"i"
 	.byte	0x3
-	.byte	0x68
+	.byte	0x5e
 	.4byte	0x2c
 	.4byte	.LLST250
 	.uleb128 0x30
 	.4byte	.LVL1176
-	.4byte	0x3349
+	.4byte	0x3347
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -33668,8 +33666,8 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL1181
-	.4byte	0x29b6
-	.4byte	0x3367
+	.4byte	0x29b4
+	.4byte	0x3365
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -33685,7 +33683,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x49
 	.4byte	.LVL1182
-	.4byte	0x2eba
+	.4byte	0x2eb8
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -33694,13 +33692,13 @@ namingBitmap:
 	.sleb128 -192
 	.byte	0
 	.byte	0
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	0x682
 	.4byte	.LFB5
 	.4byte	.LFE5-.LFB5
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x33bb
+	.4byte	0x33b9
 	.uleb128 0x3a
 	.4byte	0x692
 	.4byte	.LLST251
@@ -33718,13 +33716,13 @@ namingBitmap:
 	.4byte	.LLST254
 	.byte	0
 	.byte	0
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	0x6a7
 	.4byte	.LFB7
 	.4byte	.LFE7-.LFB7
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x33fd
+	.4byte	0x33fb
 	.uleb128 0x3a
 	.4byte	0x6b7
 	.4byte	.LLST255
@@ -33742,30 +33740,30 @@ namingBitmap:
 	.4byte	.LLST258
 	.byte	0
 	.byte	0
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	0x6cc
 	.4byte	.LFB138
 	.4byte	.LFE138-.LFB138
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x3479
+	.4byte	0x3477
 	.uleb128 0x3a
 	.4byte	0x6e7
 	.4byte	.LLST259
 	.uleb128 0x3a
 	.4byte	0x6f2
 	.4byte	.LLST260
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	0x6fd
 	.uleb128 0x1
 	.byte	0x54
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	0x6dc
 	.uleb128 0x6
 	.byte	0xfa
 	.4byte	0x6dc
 	.byte	0x9f
-	.uleb128 0x51
+	.uleb128 0x50
 	.4byte	0x708
 	.byte	0
 	.uleb128 0x45
@@ -33774,7 +33772,7 @@ namingBitmap:
 	.uleb128 0x3a
 	.4byte	0x6f2
 	.4byte	.LLST261
-	.uleb128 0x52
+	.uleb128 0x51
 	.4byte	0x6dc
 	.uleb128 0x3a
 	.4byte	0x6fd
@@ -33785,14 +33783,14 @@ namingBitmap:
 	.uleb128 0x45
 	.4byte	.LBB99
 	.4byte	.LBE99-.LBB99
-	.uleb128 0x53
+	.uleb128 0x52
 	.4byte	0x708
 	.4byte	.LLST264
 	.byte	0
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF247
+	.4byte	.LASF245
 	.byte	0x2
 	.2byte	0x10a
 	.4byte	0x2c
@@ -33800,7 +33798,7 @@ namingBitmap:
 	.4byte	.LFE11-.LFB11
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x3615
+	.4byte	0x3613
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
@@ -33816,11 +33814,11 @@ namingBitmap:
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x10b
+	.2byte	0x10a
 	.4byte	0x93
 	.4byte	.LLST267
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
 	.2byte	0x10b
 	.4byte	0x233
@@ -33829,15 +33827,15 @@ namingBitmap:
 	.uleb128 0x4a
 	.string	"tok"
 	.byte	0x2
-	.2byte	0x10d
+	.2byte	0x10c
 	.4byte	0x2c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
 	.uleb128 0x41
-	.4byte	.LASF248
+	.4byte	.LASF246
 	.byte	0x2
-	.2byte	0x10e
+	.2byte	0x10d
 	.4byte	0x93
 	.4byte	.LLST268
 	.uleb128 0x36
@@ -33845,7 +33843,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0x3509
+	.4byte	0x3507
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -33864,7 +33862,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0x3522
+	.4byte	0x3520
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -33883,7 +33881,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0x353b
+	.4byte	0x3539
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -33899,7 +33897,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL1221
-	.4byte	0x3551
+	.4byte	0x354f
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -33915,7 +33913,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL1223
-	.4byte	0x3567
+	.4byte	0x3565
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -33931,7 +33929,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL1225
-	.4byte	0x357d
+	.4byte	0x357b
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -33947,8 +33945,8 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL1227
-	.4byte	0x33fd
-	.4byte	0x35a5
+	.4byte	0x33fb
+	.4byte	0x35a3
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -33967,7 +33965,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
-	.uleb128 0x54
+	.uleb128 0x53
 	.4byte	0x6dc
 	.uleb128 0x2
 	.byte	0x72
@@ -33978,7 +33976,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0x35be
+	.4byte	0x35bc
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -33997,7 +33995,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0x35d7
+	.4byte	0x35d5
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34016,7 +34014,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0x35f0
+	.4byte	0x35ee
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34032,7 +34030,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x49
 	.4byte	.LVL1244
-	.4byte	0x33fd
+	.4byte	0x33fb
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34051,7 +34049,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
-	.uleb128 0x54
+	.uleb128 0x53
 	.4byte	0x6dc
 	.uleb128 0x2
 	.byte	0x72
@@ -34059,124 +34057,124 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x1d
-	.4byte	.LASF249
+	.4byte	.LASF247
 	.byte	0x2
-	.byte	0xb0
+	.byte	0xac
 	.4byte	0x2c
 	.byte	0x1
-	.4byte	0x3652
-	.uleb128 0x1f
+	.4byte	0x3650
+	.uleb128 0x1e
 	.string	"enc"
 	.byte	0x2
-	.byte	0xb0
+	.byte	0xac
 	.4byte	0x228
-	.uleb128 0x1f
+	.uleb128 0x1e
 	.string	"ptr"
 	.byte	0x2
-	.byte	0xb0
-	.4byte	0x93
-	.uleb128 0x1f
-	.string	"end"
-	.byte	0x2
-	.byte	0xb1
+	.byte	0xac
 	.4byte	0x93
 	.uleb128 0x1e
-	.4byte	.LASF120
+	.string	"end"
 	.byte	0x2
-	.byte	0xb1
+	.byte	0xac
+	.4byte	0x93
+	.uleb128 0x1f
+	.4byte	.LASF119
+	.byte	0x2
+	.byte	0xad
 	.4byte	0x233
 	.byte	0
 	.uleb128 0x21
-	.4byte	.LASF250
+	.4byte	.LASF248
 	.byte	0x2
-	.2byte	0x3a8
+	.2byte	0x3af
 	.4byte	0x2c
 	.byte	0x1
-	.4byte	0x3694
-	.uleb128 0x23
+	.4byte	0x3692
+	.uleb128 0x22
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x3a8
+	.2byte	0x3af
 	.4byte	0x228
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x3a8
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
-	.byte	0x2
-	.2byte	0x3a8
+	.2byte	0x3af
 	.4byte	0x93
 	.uleb128 0x22
-	.4byte	.LASF120
+	.string	"end"
 	.byte	0x2
-	.2byte	0x3a9
+	.2byte	0x3af
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
+	.byte	0x2
+	.2byte	0x3b0
 	.4byte	0x233
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF251
+	.4byte	.LASF249
 	.byte	0x2
-	.2byte	0x3e2
+	.2byte	0x3ef
 	.4byte	0x2c
 	.4byte	.LFB24
 	.4byte	.LFE24-.LFB24
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x3997
+	.4byte	0x3995
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x3e2
+	.2byte	0x3ef
 	.4byte	0x228
 	.4byte	.LLST269
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x3e2
+	.2byte	0x3ef
 	.4byte	0x93
 	.4byte	.LLST270
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x3e2
+	.2byte	0x3ef
 	.4byte	0x93
 	.4byte	.LLST271
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x3e3
+	.2byte	0x3f0
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x3e
 	.string	"tok"
 	.byte	0x2
-	.2byte	0x3e5
+	.2byte	0x3f1
 	.4byte	0x2c
 	.4byte	.LLST272
 	.uleb128 0x47
-	.4byte	0x3615
+	.4byte	0x3613
 	.4byte	.LBB104
 	.4byte	.Ldebug_ranges0+0x240
 	.byte	0x2
-	.2byte	0x3fc
-	.4byte	0x3757
+	.2byte	0x407
+	.4byte	0x3755
 	.uleb128 0x3a
-	.4byte	0x3646
+	.4byte	0x3644
 	.4byte	.LLST273
 	.uleb128 0x3a
-	.4byte	0x363b
+	.4byte	0x3639
 	.4byte	.LLST274
 	.uleb128 0x3a
-	.4byte	0x3630
+	.4byte	0x362e
 	.4byte	.LLST275
 	.uleb128 0x3a
-	.4byte	0x3625
+	.4byte	0x3623
 	.4byte	.LLST276
 	.uleb128 0x49
 	.4byte	.LVL1262
-	.4byte	0xb5c
+	.4byte	0xb5a
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34204,30 +34202,30 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x47
-	.4byte	0x3652
+	.4byte	0x3650
 	.4byte	.LBB110
 	.4byte	.Ldebug_ranges0+0x260
 	.byte	0x2
-	.2byte	0x45b
-	.4byte	0x3822
+	.2byte	0x46c
+	.4byte	0x3820
 	.uleb128 0x3a
-	.4byte	0x3687
+	.4byte	0x3685
 	.4byte	.LLST277
 	.uleb128 0x3a
-	.4byte	0x367b
+	.4byte	0x3679
 	.4byte	.LLST278
 	.uleb128 0x3a
-	.4byte	0x366f
+	.4byte	0x366d
 	.4byte	.LLST279
 	.uleb128 0x3a
-	.4byte	0x3663
+	.4byte	0x3661
 	.4byte	.LLST280
 	.uleb128 0x36
 	.4byte	.LVL1304
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 0
-	.4byte	0x37a8
+	.4byte	0x37a6
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34246,7 +34244,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 0
-	.4byte	0x37c1
+	.4byte	0x37bf
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34265,7 +34263,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 0
-	.4byte	0x37da
+	.4byte	0x37d8
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34284,7 +34282,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 0
-	.4byte	0x37f3
+	.4byte	0x37f1
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34303,7 +34301,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 0
-	.4byte	0x380c
+	.4byte	0x380a
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34338,11 +34336,11 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1257
-	.4byte	0xf94
+	.4byte	0xf92
 	.uleb128 0x48
 	.4byte	.LVL1273
-	.4byte	0x3479
-	.4byte	0x3851
+	.4byte	0x3477
+	.4byte	0x384f
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34370,8 +34368,8 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL1280
-	.4byte	0xeb4
-	.4byte	0x3877
+	.4byte	0xeb2
+	.4byte	0x3875
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34402,7 +34400,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0x3890
+	.4byte	0x388e
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34421,7 +34419,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0x38a9
+	.4byte	0x38a7
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34440,7 +34438,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0x38c2
+	.4byte	0x38c0
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34459,7 +34457,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0x38db
+	.4byte	0x38d9
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34478,7 +34476,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0x38f4
+	.4byte	0x38f2
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34497,7 +34495,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0x390d
+	.4byte	0x390b
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34513,7 +34511,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL1346
-	.4byte	0x3923
+	.4byte	0x3921
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34529,7 +34527,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL1349
-	.4byte	0x3939
+	.4byte	0x3937
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34545,7 +34543,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL1352
-	.4byte	0x394f
+	.4byte	0x394d
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34564,7 +34562,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 0
-	.4byte	0x3968
+	.4byte	0x3966
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34583,7 +34581,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 0
-	.4byte	0x3981
+	.4byte	0x397f
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34617,217 +34615,217 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x21
-	.4byte	.LASF252
+	.4byte	.LASF250
 	.byte	0x2
-	.2byte	0x2c8
+	.2byte	0x2cb
 	.4byte	0x2c
 	.byte	0x1
-	.4byte	0x39f4
-	.uleb128 0x23
+	.4byte	0x39f2
+	.uleb128 0x22
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x2c8
+	.2byte	0x2cb
 	.4byte	0x228
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x2c8
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
-	.byte	0x2
-	.2byte	0x2c8
+	.2byte	0x2cb
 	.4byte	0x93
 	.uleb128 0x22
-	.4byte	.LASF120
+	.string	"end"
 	.byte	0x2
-	.2byte	0x2c9
-	.4byte	0x233
-	.uleb128 0x26
-	.4byte	.LASF253
+	.2byte	0x2cb
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
 	.byte	0x2
 	.2byte	0x2cc
-	.4byte	0x2c
-	.uleb128 0x55
-	.string	"gt"
+	.4byte	0x233
+	.uleb128 0x26
+	.4byte	.LASF251
 	.byte	0x2
-	.2byte	0x313
-	.uleb128 0x55
-	.string	"sol"
+	.2byte	0x2ce
+	.4byte	0x2c
+	.uleb128 0x54
+	.string	"gt"
 	.byte	0x2
 	.2byte	0x317
-	.byte	0
-	.uleb128 0x21
-	.4byte	.LASF254
-	.byte	0x2
-	.2byte	0x1a3
-	.4byte	0x2c
-	.byte	0x1
-	.4byte	0x3a36
-	.uleb128 0x23
-	.string	"enc"
-	.byte	0x2
-	.2byte	0x1a3
-	.4byte	0x228
-	.uleb128 0x23
-	.string	"ptr"
-	.byte	0x2
-	.2byte	0x1a3
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
-	.byte	0x2
-	.2byte	0x1a4
-	.4byte	0x93
-	.uleb128 0x22
-	.4byte	.LASF120
-	.byte	0x2
-	.2byte	0x1a4
-	.4byte	0x233
-	.byte	0
-	.uleb128 0x21
-	.4byte	.LASF255
-	.byte	0x2
-	.2byte	0x230
-	.4byte	0x2c
-	.byte	0x1
-	.4byte	0x3acb
-	.uleb128 0x23
-	.string	"enc"
-	.byte	0x2
-	.2byte	0x230
-	.4byte	0x228
-	.uleb128 0x23
-	.string	"ptr"
-	.byte	0x2
-	.2byte	0x230
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
-	.byte	0x2
-	.2byte	0x230
-	.4byte	0x93
-	.uleb128 0x22
-	.4byte	.LASF120
-	.byte	0x2
-	.2byte	0x231
-	.4byte	0x233
-	.uleb128 0x26
-	.4byte	.LASF253
-	.byte	0x2
-	.2byte	0x234
-	.4byte	0x2c
-	.uleb128 0x55
+	.uleb128 0x54
 	.string	"sol"
 	.byte	0x2
-	.2byte	0x2ac
-	.uleb128 0x55
+	.2byte	0x31b
+	.byte	0
+	.uleb128 0x21
+	.4byte	.LASF252
+	.byte	0x2
+	.2byte	0x1a5
+	.4byte	0x2c
+	.byte	0x1
+	.4byte	0x3a34
+	.uleb128 0x22
+	.string	"enc"
+	.byte	0x2
+	.2byte	0x1a5
+	.4byte	0x228
+	.uleb128 0x22
+	.string	"ptr"
+	.byte	0x2
+	.2byte	0x1a5
+	.4byte	0x93
+	.uleb128 0x22
+	.string	"end"
+	.byte	0x2
+	.2byte	0x1a5
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
+	.byte	0x2
+	.2byte	0x1a6
+	.4byte	0x233
+	.byte	0
+	.uleb128 0x21
+	.4byte	.LASF253
+	.byte	0x2
+	.2byte	0x232
+	.4byte	0x2c
+	.byte	0x1
+	.4byte	0x3ac9
+	.uleb128 0x22
+	.string	"enc"
+	.byte	0x2
+	.2byte	0x232
+	.4byte	0x228
+	.uleb128 0x22
+	.string	"ptr"
+	.byte	0x2
+	.2byte	0x232
+	.4byte	0x93
+	.uleb128 0x22
+	.string	"end"
+	.byte	0x2
+	.2byte	0x232
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
+	.byte	0x2
+	.2byte	0x233
+	.4byte	0x233
+	.uleb128 0x26
+	.4byte	.LASF251
+	.byte	0x2
+	.2byte	0x235
+	.4byte	0x2c
+	.uleb128 0x54
+	.string	"sol"
+	.byte	0x2
+	.2byte	0x2af
+	.uleb128 0x54
 	.string	"gt"
 	.byte	0x2
-	.2byte	0x2a8
-	.uleb128 0x56
-	.4byte	0x3aa2
+	.2byte	0x2ab
+	.uleb128 0x55
+	.4byte	0x3aa0
 	.uleb128 0x25
 	.string	"t"
 	.byte	0x2
-	.2byte	0x24c
+	.2byte	0x24f
 	.4byte	0x2c
 	.byte	0
 	.uleb128 0x2b
 	.uleb128 0x26
-	.4byte	.LASF131
+	.4byte	.LASF130
 	.byte	0x2
-	.2byte	0x260
+	.2byte	0x262
 	.4byte	0x2c
 	.uleb128 0x2b
 	.uleb128 0x25
 	.string	"t"
 	.byte	0x2
-	.2byte	0x277
+	.2byte	0x279
 	.4byte	0x2c
 	.uleb128 0x2b
 	.uleb128 0x25
 	.string	"tok"
 	.byte	0x2
-	.2byte	0x280
+	.2byte	0x281
 	.4byte	0x2c
 	.byte	0
 	.byte	0
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF256
+	.4byte	.LASF254
 	.byte	0x2
-	.2byte	0x329
+	.2byte	0x32d
 	.4byte	0x2c
 	.4byte	.LFB20
 	.4byte	.LFE20-.LFB20
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x407e
+	.4byte	0x407c
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x329
+	.2byte	0x32d
 	.4byte	0x228
 	.4byte	.LLST281
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x329
+	.2byte	0x32d
 	.4byte	0x93
 	.4byte	.LLST282
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x329
+	.2byte	0x32d
 	.4byte	0x93
 	.4byte	.LLST283
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x32a
+	.2byte	0x32e
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x39
-	.4byte	0x3997
+	.4byte	0x3995
 	.4byte	.LBB126
 	.4byte	.LBE126-.LBB126
 	.byte	0x2
-	.2byte	0x339
-	.4byte	0x3fc5
+	.2byte	0x33c
+	.4byte	0x3fc3
 	.uleb128 0x3a
-	.4byte	0x39cc
+	.4byte	0x39ca
 	.4byte	.LLST284
 	.uleb128 0x3a
-	.4byte	0x39c0
+	.4byte	0x39be
 	.4byte	.LLST285
 	.uleb128 0x3a
-	.4byte	0x39b4
+	.4byte	0x39b2
 	.4byte	.LLST286
 	.uleb128 0x3a
-	.4byte	0x39a8
+	.4byte	0x39a6
 	.4byte	.LLST287
 	.uleb128 0x45
 	.4byte	.LBB127
 	.4byte	.LBE127-.LBB127
-	.uleb128 0x53
-	.4byte	0x39d8
+	.uleb128 0x52
+	.4byte	0x39d6
 	.4byte	.LLST288
-	.uleb128 0x57
-	.4byte	0x39e4
+	.uleb128 0x56
+	.4byte	0x39e2
 	.4byte	.L2022
-	.uleb128 0x57
-	.4byte	0x39eb
+	.uleb128 0x56
+	.4byte	0x39e9
 	.4byte	.L2023
 	.uleb128 0x39
 	.4byte	0x71a
 	.4byte	.LBB128
 	.4byte	.LBE128-.LBB128
 	.byte	0x2
-	.2byte	0x2d8
-	.4byte	0x3bd6
+	.2byte	0x2da
+	.4byte	0x3bd4
 	.uleb128 0x3a
 	.4byte	0x72b
 	.4byte	.LLST289
@@ -34843,10 +34841,10 @@ namingBitmap:
 	.uleb128 0x45
 	.4byte	.LBB129
 	.4byte	.LBE129-.LBB129
-	.uleb128 0x53
+	.uleb128 0x52
 	.4byte	0x76e
 	.4byte	.LLST293
-	.uleb128 0x58
+	.uleb128 0x57
 	.4byte	0x75b
 	.uleb128 0x5
 	.byte	0x3
@@ -34854,30 +34852,30 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x39
-	.4byte	0x39f4
+	.4byte	0x39f2
 	.4byte	.LBB130
 	.4byte	.LBE130-.LBB130
 	.byte	0x2
-	.2byte	0x2e0
-	.4byte	0x3ca1
+	.2byte	0x2e1
+	.4byte	0x3c9f
 	.uleb128 0x3a
-	.4byte	0x3a29
+	.4byte	0x3a27
 	.4byte	.LLST294
 	.uleb128 0x3a
-	.4byte	0x3a1d
+	.4byte	0x3a1b
 	.4byte	.LLST295
 	.uleb128 0x3a
-	.4byte	0x3a11
+	.4byte	0x3a0f
 	.4byte	.LLST296
 	.uleb128 0x3a
-	.4byte	0x3a05
+	.4byte	0x3a03
 	.4byte	.LLST297
 	.uleb128 0x36
 	.4byte	.LVL1418
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 0
-	.4byte	0x3c27
+	.4byte	0x3c25
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34896,7 +34894,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 0
-	.4byte	0x3c40
+	.4byte	0x3c3e
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34915,7 +34913,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 0
-	.4byte	0x3c59
+	.4byte	0x3c57
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34934,7 +34932,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 0
-	.4byte	0x3c72
+	.4byte	0x3c70
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34953,7 +34951,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 0
-	.4byte	0x3c8b
+	.4byte	0x3c89
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -34987,68 +34985,68 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x39
-	.4byte	0x3a36
+	.4byte	0x3a34
 	.4byte	.LBB132
 	.4byte	.LBE132-.LBB132
 	.byte	0x2
-	.2byte	0x30e
-	.4byte	0x3e58
+	.2byte	0x312
+	.4byte	0x3e56
 	.uleb128 0x3a
-	.4byte	0x3a6b
+	.4byte	0x3a69
 	.4byte	.LLST298
 	.uleb128 0x3a
-	.4byte	0x3a5f
+	.4byte	0x3a5d
 	.4byte	.LLST299
 	.uleb128 0x3a
-	.4byte	0x3a53
+	.4byte	0x3a51
 	.4byte	.LLST300
 	.uleb128 0x3a
-	.4byte	0x3a47
+	.4byte	0x3a45
 	.4byte	.LLST301
 	.uleb128 0x45
 	.4byte	.LBB133
 	.4byte	.LBE133-.LBB133
-	.uleb128 0x53
-	.4byte	0x3a77
+	.uleb128 0x52
+	.4byte	0x3a75
 	.4byte	.LLST302
-	.uleb128 0x57
-	.4byte	0x3a83
+	.uleb128 0x56
+	.4byte	0x3a81
 	.4byte	.L2105
-	.uleb128 0x57
-	.4byte	0x3a8b
+	.uleb128 0x56
+	.4byte	0x3a89
 	.4byte	.L2104
 	.uleb128 0x40
 	.4byte	.LBB134
 	.4byte	.LBE134-.LBB134
-	.4byte	0x3d14
-	.uleb128 0x53
-	.4byte	0x3a97
+	.4byte	0x3d12
+	.uleb128 0x52
+	.4byte	0x3a95
 	.4byte	.LLST303
 	.byte	0
 	.uleb128 0x40
 	.4byte	.LBB135
 	.4byte	.LBE135-.LBB135
-	.4byte	0x3dd6
-	.uleb128 0x53
-	.4byte	0x3aa3
+	.4byte	0x3dd4
+	.uleb128 0x52
+	.4byte	0x3aa1
 	.4byte	.LLST304
 	.uleb128 0x40
 	.4byte	.LBB136
 	.4byte	.LBE136-.LBB136
-	.4byte	0x3da0
-	.uleb128 0x53
-	.4byte	0x3ab0
+	.4byte	0x3d9e
+	.uleb128 0x52
+	.4byte	0x3aae
 	.4byte	.LLST305
 	.uleb128 0x40
 	.4byte	.LBB137
 	.4byte	.LBE137-.LBB137
-	.4byte	0x3d73
-	.uleb128 0x53
-	.4byte	0x3abb
+	.4byte	0x3d71
+	.uleb128 0x52
+	.4byte	0x3ab9
 	.4byte	.LLST306
 	.uleb128 0x49
 	.4byte	.LVL1495
-	.4byte	0xd5d
+	.4byte	0xd5b
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35071,7 +35069,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL1486
-	.4byte	0x3d83
+	.4byte	0x3d81
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35081,7 +35079,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL1488
-	.4byte	0x3d93
+	.4byte	0x3d91
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35104,7 +35102,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
-	.4byte	0x3db3
+	.4byte	0x3db1
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35117,7 +35115,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
-	.4byte	0x3dc6
+	.4byte	0x3dc4
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35143,7 +35141,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
-	.4byte	0x3def
+	.4byte	0x3ded
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35162,7 +35160,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
-	.4byte	0x3e08
+	.4byte	0x3e06
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35181,7 +35179,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
-	.4byte	0x3e21
+	.4byte	0x3e1f
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35200,7 +35198,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
-	.4byte	0x3e34
+	.4byte	0x3e32
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35213,7 +35211,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
-	.4byte	0x3e47
+	.4byte	0x3e45
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35240,7 +35238,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 0
-	.4byte	0x3e71
+	.4byte	0x3e6f
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35259,7 +35257,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 0
-	.4byte	0x3e8a
+	.4byte	0x3e88
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35278,7 +35276,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 0
-	.4byte	0x3ea3
+	.4byte	0x3ea1
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35294,8 +35292,8 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL1406
-	.4byte	0xb5c
-	.4byte	0x3ec9
+	.4byte	0xb5a
+	.4byte	0x3ec7
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35323,8 +35321,8 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL1413
-	.4byte	0x3479
-	.4byte	0x3eef
+	.4byte	0x3477
+	.4byte	0x3eed
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35355,7 +35353,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 0
-	.4byte	0x3f08
+	.4byte	0x3f06
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35374,7 +35372,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 0
-	.4byte	0x3f21
+	.4byte	0x3f1f
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35393,7 +35391,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x77
 	.sleb128 0
-	.4byte	0x3f3a
+	.4byte	0x3f38
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35409,7 +35407,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL1451
-	.4byte	0x3f50
+	.4byte	0x3f4e
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35425,7 +35423,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL1454
-	.4byte	0x3f66
+	.4byte	0x3f64
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35441,7 +35439,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL1457
-	.4byte	0x3f7c
+	.4byte	0x3f7a
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35460,7 +35458,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0x3f95
+	.4byte	0x3f93
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35479,7 +35477,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0x3fae
+	.4byte	0x3fac
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35515,8 +35513,8 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL1521
-	.4byte	0xd5d
-	.4byte	0x3feb
+	.4byte	0xd5b
+	.4byte	0x3fe9
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35547,7 +35545,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0x4004
+	.4byte	0x4002
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35566,7 +35564,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0x401d
+	.4byte	0x401b
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35585,7 +35583,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x76
 	.sleb128 0
-	.4byte	0x4036
+	.4byte	0x4034
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35604,7 +35602,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
-	.4byte	0x404f
+	.4byte	0x404d
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35623,7 +35621,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
-	.4byte	0x4068
+	.4byte	0x4066
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35656,30 +35654,30 @@ namingBitmap:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	0x78e
 	.4byte	.LFB141
 	.4byte	.LFE141-.LFB141
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x40f2
+	.4byte	0x40f0
 	.uleb128 0x3a
 	.4byte	0x7a9
 	.4byte	.LLST307
 	.uleb128 0x3a
 	.4byte	0x7b4
 	.4byte	.LLST308
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	0x7bf
 	.uleb128 0x1
 	.byte	0x54
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	0x79e
 	.uleb128 0x6
 	.byte	0xfa
 	.4byte	0x79e
 	.byte	0x9f
-	.uleb128 0x51
+	.uleb128 0x50
 	.4byte	0x7ca
 	.byte	0
 	.uleb128 0x3d
@@ -35687,7 +35685,7 @@ namingBitmap:
 	.uleb128 0x3a
 	.4byte	0x7b4
 	.4byte	.LLST309
-	.uleb128 0x52
+	.uleb128 0x51
 	.4byte	0x79e
 	.uleb128 0x3a
 	.4byte	0x7bf
@@ -35697,14 +35695,14 @@ namingBitmap:
 	.4byte	.LLST311
 	.uleb128 0x3d
 	.4byte	.Ldebug_ranges0+0x278
-	.uleb128 0x53
+	.uleb128 0x52
 	.4byte	0x7ca
 	.4byte	.LLST312
 	.byte	0
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF257
+	.4byte	.LASF255
 	.byte	0x2
 	.2byte	0x10a
 	.4byte	0x2c
@@ -35712,7 +35710,7 @@ namingBitmap:
 	.4byte	.LFE50-.LFB50
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x41e2
+	.4byte	0x41e0
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
@@ -35728,11 +35726,11 @@ namingBitmap:
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x10b
+	.2byte	0x10a
 	.4byte	0x93
 	.4byte	.LLST315
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
 	.2byte	0x10b
 	.4byte	0x233
@@ -35741,21 +35739,21 @@ namingBitmap:
 	.uleb128 0x4a
 	.string	"tok"
 	.byte	0x2
-	.2byte	0x10d
+	.2byte	0x10c
 	.4byte	0x2c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
 	.uleb128 0x41
-	.4byte	.LASF248
+	.4byte	.LASF246
 	.byte	0x2
-	.2byte	0x10e
+	.2byte	0x10d
 	.4byte	0x93
 	.4byte	.LLST316
 	.uleb128 0x48
 	.4byte	.LVL1566
-	.4byte	0x165f
-	.4byte	0x4183
+	.4byte	0x165d
+	.4byte	0x4181
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35771,11 +35769,11 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1572
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x48
 	.4byte	.LVL1574
-	.4byte	0x407e
-	.4byte	0x41b4
+	.4byte	0x407c
+	.4byte	0x41b2
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35794,7 +35792,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
-	.uleb128 0x54
+	.uleb128 0x53
 	.4byte	0x79e
 	.uleb128 0x2
 	.byte	0x72
@@ -35802,10 +35800,10 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1577
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x49
 	.4byte	.LVL1587
-	.4byte	0x407e
+	.4byte	0x407c
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35824,7 +35822,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
-	.uleb128 0x54
+	.uleb128 0x53
 	.4byte	0x79e
 	.uleb128 0x2
 	.byte	0x72
@@ -35832,137 +35830,137 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x1d
-	.4byte	.LASF258
+	.4byte	.LASF256
 	.byte	0x2
-	.byte	0xb0
+	.byte	0xac
 	.4byte	0x2c
 	.byte	0x1
-	.4byte	0x421f
-	.uleb128 0x1f
+	.4byte	0x421d
+	.uleb128 0x1e
 	.string	"enc"
 	.byte	0x2
-	.byte	0xb0
+	.byte	0xac
 	.4byte	0x228
-	.uleb128 0x1f
+	.uleb128 0x1e
 	.string	"ptr"
 	.byte	0x2
-	.byte	0xb0
-	.4byte	0x93
-	.uleb128 0x1f
-	.string	"end"
-	.byte	0x2
-	.byte	0xb1
+	.byte	0xac
 	.4byte	0x93
 	.uleb128 0x1e
-	.4byte	.LASF120
+	.string	"end"
 	.byte	0x2
-	.byte	0xb1
+	.byte	0xac
+	.4byte	0x93
+	.uleb128 0x1f
+	.4byte	.LASF119
+	.byte	0x2
+	.byte	0xad
 	.4byte	0x233
 	.byte	0
 	.uleb128 0x21
-	.4byte	.LASF259
+	.4byte	.LASF257
 	.byte	0x2
-	.2byte	0x3a8
+	.2byte	0x3af
 	.4byte	0x2c
 	.byte	0x1
-	.4byte	0x4261
-	.uleb128 0x23
+	.4byte	0x425f
+	.uleb128 0x22
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x3a8
+	.2byte	0x3af
 	.4byte	0x228
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x3a8
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
-	.byte	0x2
-	.2byte	0x3a8
+	.2byte	0x3af
 	.4byte	0x93
 	.uleb128 0x22
-	.4byte	.LASF120
+	.string	"end"
 	.byte	0x2
-	.2byte	0x3a9
+	.2byte	0x3af
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
+	.byte	0x2
+	.2byte	0x3b0
 	.4byte	0x233
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF260
+	.4byte	.LASF258
 	.byte	0x2
-	.2byte	0x3e2
+	.2byte	0x3ef
 	.4byte	0x2c
 	.4byte	.LFB63
 	.4byte	.LFE63-.LFB63
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x4454
+	.4byte	0x4452
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x3e2
+	.2byte	0x3ef
 	.4byte	0x228
 	.4byte	.LLST317
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x3e2
+	.2byte	0x3ef
 	.4byte	0x93
 	.4byte	.LLST318
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x3e2
+	.2byte	0x3ef
 	.4byte	0x93
 	.4byte	.LLST319
 	.uleb128 0x3c
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x3e3
+	.2byte	0x3f0
 	.4byte	0x233
 	.4byte	.LLST320
 	.uleb128 0x3e
 	.string	"tok"
 	.byte	0x2
-	.2byte	0x3e5
+	.2byte	0x3f1
 	.4byte	0x2c
 	.4byte	.LLST321
 	.uleb128 0x46
 	.4byte	.Ldebug_ranges0+0x298
-	.4byte	0x42e3
+	.4byte	0x42e1
 	.uleb128 0x3e
 	.string	"n"
 	.byte	0x2
-	.2byte	0x3e9
+	.2byte	0x3f5
 	.4byte	0x33
 	.4byte	.LLST322
 	.byte	0
 	.uleb128 0x47
-	.4byte	0x41e2
+	.4byte	0x41e0
 	.4byte	.LBB153
 	.4byte	.Ldebug_ranges0+0x2d0
 	.byte	0x2
-	.2byte	0x3fc
-	.4byte	0x4358
+	.2byte	0x407
+	.4byte	0x4356
 	.uleb128 0x3a
-	.4byte	0x4213
+	.4byte	0x4211
 	.4byte	.LLST323
 	.uleb128 0x3a
-	.4byte	0x4208
+	.4byte	0x4206
 	.4byte	.LLST324
 	.uleb128 0x3a
-	.4byte	0x41fd
+	.4byte	0x41fb
 	.4byte	.LLST325
 	.uleb128 0x3a
-	.4byte	0x41f2
+	.4byte	0x41f0
 	.4byte	.LLST326
 	.uleb128 0x3f
 	.4byte	.LVL1618
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x48
 	.4byte	.LVL1620
-	.4byte	0x18f4
-	.4byte	0x4345
+	.4byte	0x18f2
+	.4byte	0x4343
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -35985,34 +35983,34 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1626
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL1628
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x47
-	.4byte	0x421f
+	.4byte	0x421d
 	.4byte	.LBB162
 	.4byte	.Ldebug_ranges0+0x2f0
 	.byte	0x2
-	.2byte	0x45b
-	.4byte	0x43c1
+	.2byte	0x46c
+	.4byte	0x43bf
 	.uleb128 0x3a
-	.4byte	0x4254
+	.4byte	0x4252
 	.4byte	.LLST327
 	.uleb128 0x3a
-	.4byte	0x4248
+	.4byte	0x4246
 	.4byte	.LLST328
 	.uleb128 0x3a
-	.4byte	0x423c
+	.4byte	0x423a
 	.4byte	.LLST329
 	.uleb128 0x3a
-	.4byte	0x4230
+	.4byte	0x422e
 	.4byte	.LLST330
 	.uleb128 0x48
 	.4byte	.LVL1663
-	.4byte	0x165f
-	.4byte	0x43aa
+	.4byte	0x165d
+	.4byte	0x43a8
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -36028,7 +36026,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x49
 	.4byte	.LVL1671
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -36045,8 +36043,8 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL1607
-	.4byte	0x165f
-	.4byte	0x43db
+	.4byte	0x165d
+	.4byte	0x43d9
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -36062,14 +36060,14 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1612
-	.4byte	0x1bf9
+	.4byte	0x1bf7
 	.uleb128 0x3f
 	.4byte	.LVL1615
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x48
 	.4byte	.LVL1634
-	.4byte	0x40f2
-	.4byte	0x440e
+	.4byte	0x40f0
+	.4byte	0x440c
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -36092,11 +36090,11 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1640
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x48
 	.4byte	.LVL1643
-	.4byte	0x1b78
-	.4byte	0x4438
+	.4byte	0x1b76
+	.4byte	0x4436
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -36119,235 +36117,235 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1656
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL1686
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL1697
-	.4byte	0x165f
+	.4byte	0x165d
+	.byte	0
+	.uleb128 0x21
+	.4byte	.LASF259
+	.byte	0x2
+	.2byte	0x2cb
+	.4byte	0x2c
+	.byte	0x1
+	.4byte	0x44af
+	.uleb128 0x22
+	.string	"enc"
+	.byte	0x2
+	.2byte	0x2cb
+	.4byte	0x228
+	.uleb128 0x22
+	.string	"ptr"
+	.byte	0x2
+	.2byte	0x2cb
+	.4byte	0x93
+	.uleb128 0x22
+	.string	"end"
+	.byte	0x2
+	.2byte	0x2cb
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
+	.byte	0x2
+	.2byte	0x2cc
+	.4byte	0x233
+	.uleb128 0x26
+	.4byte	.LASF251
+	.byte	0x2
+	.2byte	0x2ce
+	.4byte	0x2c
+	.uleb128 0x54
+	.string	"gt"
+	.byte	0x2
+	.2byte	0x317
+	.uleb128 0x54
+	.string	"sol"
+	.byte	0x2
+	.2byte	0x31b
+	.byte	0
+	.uleb128 0x21
+	.4byte	.LASF260
+	.byte	0x2
+	.2byte	0x1a5
+	.4byte	0x2c
+	.byte	0x1
+	.4byte	0x44f1
+	.uleb128 0x22
+	.string	"enc"
+	.byte	0x2
+	.2byte	0x1a5
+	.4byte	0x228
+	.uleb128 0x22
+	.string	"ptr"
+	.byte	0x2
+	.2byte	0x1a5
+	.4byte	0x93
+	.uleb128 0x22
+	.string	"end"
+	.byte	0x2
+	.2byte	0x1a5
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
+	.byte	0x2
+	.2byte	0x1a6
+	.4byte	0x233
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LASF261
 	.byte	0x2
-	.2byte	0x2c8
+	.2byte	0x232
 	.4byte	0x2c
 	.byte	0x1
-	.4byte	0x44b1
-	.uleb128 0x23
+	.4byte	0x4586
+	.uleb128 0x22
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x2c8
+	.2byte	0x232
 	.4byte	0x228
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x2c8
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
-	.byte	0x2
-	.2byte	0x2c8
+	.2byte	0x232
 	.4byte	0x93
 	.uleb128 0x22
-	.4byte	.LASF120
+	.string	"end"
 	.byte	0x2
-	.2byte	0x2c9
+	.2byte	0x232
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
+	.byte	0x2
+	.2byte	0x233
 	.4byte	0x233
 	.uleb128 0x26
-	.4byte	.LASF253
+	.4byte	.LASF251
 	.byte	0x2
-	.2byte	0x2cc
+	.2byte	0x235
 	.4byte	0x2c
-	.uleb128 0x55
-	.string	"gt"
-	.byte	0x2
-	.2byte	0x313
-	.uleb128 0x55
+	.uleb128 0x54
 	.string	"sol"
 	.byte	0x2
-	.2byte	0x317
-	.byte	0
-	.uleb128 0x21
-	.4byte	.LASF262
-	.byte	0x2
-	.2byte	0x1a3
-	.4byte	0x2c
-	.byte	0x1
-	.4byte	0x44f3
-	.uleb128 0x23
-	.string	"enc"
-	.byte	0x2
-	.2byte	0x1a3
-	.4byte	0x228
-	.uleb128 0x23
-	.string	"ptr"
-	.byte	0x2
-	.2byte	0x1a3
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
-	.byte	0x2
-	.2byte	0x1a4
-	.4byte	0x93
-	.uleb128 0x22
-	.4byte	.LASF120
-	.byte	0x2
-	.2byte	0x1a4
-	.4byte	0x233
-	.byte	0
-	.uleb128 0x21
-	.4byte	.LASF263
-	.byte	0x2
-	.2byte	0x230
-	.4byte	0x2c
-	.byte	0x1
-	.4byte	0x4588
-	.uleb128 0x23
-	.string	"enc"
-	.byte	0x2
-	.2byte	0x230
-	.4byte	0x228
-	.uleb128 0x23
-	.string	"ptr"
-	.byte	0x2
-	.2byte	0x230
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
-	.byte	0x2
-	.2byte	0x230
-	.4byte	0x93
-	.uleb128 0x22
-	.4byte	.LASF120
-	.byte	0x2
-	.2byte	0x231
-	.4byte	0x233
-	.uleb128 0x26
-	.4byte	.LASF253
-	.byte	0x2
-	.2byte	0x234
-	.4byte	0x2c
-	.uleb128 0x55
-	.string	"sol"
-	.byte	0x2
-	.2byte	0x2ac
-	.uleb128 0x55
+	.2byte	0x2af
+	.uleb128 0x54
 	.string	"gt"
 	.byte	0x2
-	.2byte	0x2a8
-	.uleb128 0x56
-	.4byte	0x455f
+	.2byte	0x2ab
+	.uleb128 0x55
+	.4byte	0x455d
 	.uleb128 0x25
 	.string	"t"
 	.byte	0x2
-	.2byte	0x24c
+	.2byte	0x24f
 	.4byte	0x2c
 	.byte	0
 	.uleb128 0x2b
 	.uleb128 0x26
-	.4byte	.LASF131
+	.4byte	.LASF130
 	.byte	0x2
-	.2byte	0x260
+	.2byte	0x262
 	.4byte	0x2c
 	.uleb128 0x2b
 	.uleb128 0x25
 	.string	"t"
 	.byte	0x2
-	.2byte	0x277
+	.2byte	0x279
 	.4byte	0x2c
 	.uleb128 0x2b
 	.uleb128 0x25
 	.string	"tok"
 	.byte	0x2
-	.2byte	0x280
+	.2byte	0x281
 	.4byte	0x2c
 	.byte	0
 	.byte	0
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF264
+	.4byte	.LASF262
 	.byte	0x2
-	.2byte	0x329
+	.2byte	0x32d
 	.4byte	0x2c
 	.4byte	.LFB59
 	.4byte	.LFE59-.LFB59
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x4913
+	.4byte	0x4911
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x329
+	.2byte	0x32d
 	.4byte	0x228
 	.4byte	.LLST331
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x329
+	.2byte	0x32d
 	.4byte	0x93
 	.4byte	.LLST332
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x329
+	.2byte	0x32d
 	.4byte	0x93
 	.4byte	.LLST333
 	.uleb128 0x3c
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x32a
+	.2byte	0x32e
 	.4byte	0x233
 	.4byte	.LLST334
 	.uleb128 0x40
 	.4byte	.LBB196
 	.4byte	.LBE196-.LBB196
-	.4byte	0x45fe
+	.4byte	0x45fc
 	.uleb128 0x3e
 	.string	"n"
 	.byte	0x2
-	.2byte	0x32f
+	.2byte	0x332
 	.4byte	0x33
 	.4byte	.LLST335
 	.byte	0
 	.uleb128 0x47
-	.4byte	0x4454
+	.4byte	0x4452
 	.4byte	.LBB197
 	.4byte	.Ldebug_ranges0+0x348
 	.byte	0x2
-	.2byte	0x339
-	.4byte	0x48d0
+	.2byte	0x33c
+	.4byte	0x48ce
 	.uleb128 0x3a
-	.4byte	0x4489
+	.4byte	0x4487
 	.4byte	.LLST336
 	.uleb128 0x3a
-	.4byte	0x447d
+	.4byte	0x447b
 	.4byte	.LLST337
 	.uleb128 0x3a
-	.4byte	0x4471
+	.4byte	0x446f
 	.4byte	.LLST338
 	.uleb128 0x3a
-	.4byte	0x4465
+	.4byte	0x4463
 	.4byte	.LLST339
 	.uleb128 0x3d
 	.4byte	.Ldebug_ranges0+0x348
-	.uleb128 0x53
-	.4byte	0x4495
+	.uleb128 0x52
+	.4byte	0x4493
 	.4byte	.LLST340
-	.uleb128 0x57
-	.4byte	0x44a1
+	.uleb128 0x56
+	.4byte	0x449f
 	.4byte	.L2543
-	.uleb128 0x57
-	.4byte	0x44a8
+	.uleb128 0x56
+	.4byte	0x44a6
 	.4byte	.L2544
 	.uleb128 0x39
 	.4byte	0x7d6
 	.4byte	.LBB199
 	.4byte	.LBE199-.LBB199
 	.byte	0x2
-	.2byte	0x2d8
-	.4byte	0x46ad
+	.2byte	0x2da
+	.4byte	0x46ab
 	.uleb128 0x3a
 	.4byte	0x7e7
 	.4byte	.LLST341
@@ -36363,10 +36361,10 @@ namingBitmap:
 	.uleb128 0x45
 	.4byte	.LBB200
 	.4byte	.LBE200-.LBB200
-	.uleb128 0x53
+	.uleb128 0x52
 	.4byte	0x82a
 	.4byte	.LLST345
-	.uleb128 0x58
+	.uleb128 0x57
 	.4byte	0x817
 	.uleb128 0x5
 	.byte	0x3
@@ -36374,28 +36372,28 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x47
-	.4byte	0x44b1
+	.4byte	0x44af
 	.4byte	.LBB201
 	.4byte	.Ldebug_ranges0+0x360
 	.byte	0x2
-	.2byte	0x2e0
-	.4byte	0x471d
+	.2byte	0x2e1
+	.4byte	0x471b
 	.uleb128 0x3a
-	.4byte	0x44e6
+	.4byte	0x44e4
 	.4byte	.LLST346
 	.uleb128 0x3a
-	.4byte	0x44da
+	.4byte	0x44d8
 	.4byte	.LLST347
 	.uleb128 0x3a
-	.4byte	0x44ce
+	.4byte	0x44cc
 	.4byte	.LLST348
 	.uleb128 0x3a
-	.4byte	0x44c2
+	.4byte	0x44c0
 	.4byte	.LLST349
 	.uleb128 0x48
 	.4byte	.LVL1744
-	.4byte	0x165f
-	.4byte	0x46ff
+	.4byte	0x165d
+	.4byte	0x46fd
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -36411,8 +36409,8 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL1749
-	.4byte	0x165f
-	.4byte	0x4713
+	.4byte	0x165d
+	.4byte	0x4711
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -36422,74 +36420,74 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1751
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x39
-	.4byte	0x44f3
+	.4byte	0x44f1
 	.4byte	.LBB204
 	.4byte	.LBE204-.LBB204
 	.byte	0x2
-	.2byte	0x30e
-	.4byte	0x484c
+	.2byte	0x312
+	.4byte	0x484a
 	.uleb128 0x3a
-	.4byte	0x4528
+	.4byte	0x4526
 	.4byte	.LLST350
 	.uleb128 0x3a
-	.4byte	0x451c
+	.4byte	0x451a
 	.4byte	.LLST351
 	.uleb128 0x3a
-	.4byte	0x4510
+	.4byte	0x450e
 	.4byte	.LLST352
 	.uleb128 0x3a
-	.4byte	0x4504
+	.4byte	0x4502
 	.4byte	.LLST353
 	.uleb128 0x45
 	.4byte	.LBB205
 	.4byte	.LBE205-.LBB205
-	.uleb128 0x53
-	.4byte	0x4534
+	.uleb128 0x52
+	.4byte	0x4532
 	.4byte	.LLST354
-	.uleb128 0x57
-	.4byte	0x4540
+	.uleb128 0x56
+	.4byte	0x453e
 	.4byte	.L2623
-	.uleb128 0x57
-	.4byte	0x4548
+	.uleb128 0x56
+	.4byte	0x4546
 	.4byte	.L2622
 	.uleb128 0x40
 	.4byte	.LBB206
 	.4byte	.LBE206-.LBB206
-	.4byte	0x4799
-	.uleb128 0x53
-	.4byte	0x4554
+	.4byte	0x4797
+	.uleb128 0x52
+	.4byte	0x4552
 	.4byte	.LLST355
 	.uleb128 0x3f
 	.4byte	.LVL1782
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x40
 	.4byte	.LBB207
 	.4byte	.LBE207-.LBB207
-	.4byte	0x4826
-	.uleb128 0x53
-	.4byte	0x4560
+	.4byte	0x4824
+	.uleb128 0x52
+	.4byte	0x455e
 	.4byte	.LLST356
 	.uleb128 0x40
 	.4byte	.LBB208
 	.4byte	.LBE208-.LBB208
-	.4byte	0x480a
-	.uleb128 0x53
-	.4byte	0x456d
+	.4byte	0x4808
+	.uleb128 0x52
+	.4byte	0x456b
 	.4byte	.LLST357
 	.uleb128 0x40
 	.4byte	.LBB209
 	.4byte	.LBE209-.LBB209
-	.4byte	0x4800
-	.uleb128 0x53
-	.4byte	0x4578
+	.4byte	0x47fe
+	.uleb128 0x52
+	.4byte	0x4576
 	.4byte	.LLST358
 	.uleb128 0x49
 	.4byte	.LVL1791
-	.4byte	0x1a61
+	.4byte	0x1a5f
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -36519,22 +36517,22 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1787
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1785
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL1797
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL1798
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL1777
-	.4byte	0x165f
-	.4byte	0x483a
+	.4byte	0x165d
+	.4byte	0x4838
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5b
@@ -36544,7 +36542,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x49
 	.4byte	.LVL1779
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5b
@@ -36556,14 +36554,14 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1722
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL1730
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x48
 	.4byte	.LVL1731
-	.4byte	0x18f4
-	.4byte	0x4885
+	.4byte	0x18f2
+	.4byte	0x4883
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -36592,8 +36590,8 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL1741
-	.4byte	0x40f2
-	.4byte	0x48ac
+	.4byte	0x40f0
+	.4byte	0x48aa
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -36622,13 +36620,13 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1758
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL1764
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x49
 	.4byte	.LVL1771
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -36640,11 +36638,11 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1720
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x48
 	.4byte	.LVL1811
-	.4byte	0x1a61
-	.4byte	0x4900
+	.4byte	0x1a5f
+	.4byte	0x48fe
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -36673,35 +36671,35 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1813
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL1829
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	0x83a
 	.4byte	.LFB144
 	.4byte	.LFE144-.LFB144
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x4987
+	.4byte	0x4985
 	.uleb128 0x3a
 	.4byte	0x855
 	.4byte	.LLST359
 	.uleb128 0x3a
 	.4byte	0x860
 	.4byte	.LLST360
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	0x86b
 	.uleb128 0x1
 	.byte	0x54
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	0x84a
 	.uleb128 0x6
 	.byte	0xfa
 	.4byte	0x84a
 	.byte	0x9f
-	.uleb128 0x51
+	.uleb128 0x50
 	.4byte	0x876
 	.byte	0
 	.uleb128 0x3d
@@ -36709,7 +36707,7 @@ namingBitmap:
 	.uleb128 0x3a
 	.4byte	0x860
 	.4byte	.LLST361
-	.uleb128 0x52
+	.uleb128 0x51
 	.4byte	0x84a
 	.uleb128 0x3a
 	.4byte	0x86b
@@ -36719,14 +36717,14 @@ namingBitmap:
 	.4byte	.LLST363
 	.uleb128 0x3d
 	.4byte	.Ldebug_ranges0+0x378
-	.uleb128 0x53
+	.uleb128 0x52
 	.4byte	0x876
 	.4byte	.LLST364
 	.byte	0
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF265
+	.4byte	.LASF263
 	.byte	0x2
 	.2byte	0x10a
 	.4byte	0x2c
@@ -36734,7 +36732,7 @@ namingBitmap:
 	.4byte	.LFE78-.LFB78
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x4a77
+	.4byte	0x4a75
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
@@ -36750,11 +36748,11 @@ namingBitmap:
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x10b
+	.2byte	0x10a
 	.4byte	0x93
 	.4byte	.LLST367
 	.uleb128 0x35
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
 	.2byte	0x10b
 	.4byte	0x233
@@ -36763,21 +36761,21 @@ namingBitmap:
 	.uleb128 0x4a
 	.string	"tok"
 	.byte	0x2
-	.2byte	0x10d
+	.2byte	0x10c
 	.4byte	0x2c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
 	.uleb128 0x41
-	.4byte	.LASF248
+	.4byte	.LASF246
 	.byte	0x2
-	.2byte	0x10e
+	.2byte	0x10d
 	.4byte	0x93
 	.4byte	.LLST368
 	.uleb128 0x48
 	.4byte	.LVL1851
-	.4byte	0x165f
-	.4byte	0x4a18
+	.4byte	0x165d
+	.4byte	0x4a16
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -36793,11 +36791,11 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1857
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x48
 	.4byte	.LVL1859
-	.4byte	0x4913
-	.4byte	0x4a49
+	.4byte	0x4911
+	.4byte	0x4a47
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -36816,7 +36814,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
-	.uleb128 0x54
+	.uleb128 0x53
 	.4byte	0x84a
 	.uleb128 0x2
 	.byte	0x72
@@ -36824,10 +36822,10 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1862
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x49
 	.4byte	.LVL1872
-	.4byte	0x4913
+	.4byte	0x4911
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -36846,7 +36844,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
-	.uleb128 0x54
+	.uleb128 0x53
 	.4byte	0x84a
 	.uleb128 0x2
 	.byte	0x72
@@ -36854,137 +36852,137 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x1d
-	.4byte	.LASF266
+	.4byte	.LASF264
 	.byte	0x2
-	.byte	0xb0
+	.byte	0xac
 	.4byte	0x2c
 	.byte	0x1
-	.4byte	0x4ab4
-	.uleb128 0x1f
+	.4byte	0x4ab2
+	.uleb128 0x1e
 	.string	"enc"
 	.byte	0x2
-	.byte	0xb0
+	.byte	0xac
 	.4byte	0x228
-	.uleb128 0x1f
+	.uleb128 0x1e
 	.string	"ptr"
 	.byte	0x2
-	.byte	0xb0
-	.4byte	0x93
-	.uleb128 0x1f
-	.string	"end"
-	.byte	0x2
-	.byte	0xb1
+	.byte	0xac
 	.4byte	0x93
 	.uleb128 0x1e
-	.4byte	.LASF120
+	.string	"end"
 	.byte	0x2
-	.byte	0xb1
+	.byte	0xac
+	.4byte	0x93
+	.uleb128 0x1f
+	.4byte	.LASF119
+	.byte	0x2
+	.byte	0xad
 	.4byte	0x233
 	.byte	0
 	.uleb128 0x21
-	.4byte	.LASF267
+	.4byte	.LASF265
 	.byte	0x2
-	.2byte	0x3a8
+	.2byte	0x3af
 	.4byte	0x2c
 	.byte	0x1
-	.4byte	0x4af6
-	.uleb128 0x23
+	.4byte	0x4af4
+	.uleb128 0x22
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x3a8
+	.2byte	0x3af
 	.4byte	0x228
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x3a8
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
-	.byte	0x2
-	.2byte	0x3a8
+	.2byte	0x3af
 	.4byte	0x93
 	.uleb128 0x22
-	.4byte	.LASF120
+	.string	"end"
 	.byte	0x2
-	.2byte	0x3a9
+	.2byte	0x3af
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
+	.byte	0x2
+	.2byte	0x3b0
 	.4byte	0x233
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF268
+	.4byte	.LASF266
 	.byte	0x2
-	.2byte	0x3e2
+	.2byte	0x3ef
 	.4byte	0x2c
 	.4byte	.LFB91
 	.4byte	.LFE91-.LFB91
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x4ce9
+	.4byte	0x4ce7
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x3e2
+	.2byte	0x3ef
 	.4byte	0x228
 	.4byte	.LLST369
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x3e2
+	.2byte	0x3ef
 	.4byte	0x93
 	.4byte	.LLST370
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x3e2
+	.2byte	0x3ef
 	.4byte	0x93
 	.4byte	.LLST371
 	.uleb128 0x3c
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x3e3
+	.2byte	0x3f0
 	.4byte	0x233
 	.4byte	.LLST372
 	.uleb128 0x3e
 	.string	"tok"
 	.byte	0x2
-	.2byte	0x3e5
+	.2byte	0x3f1
 	.4byte	0x2c
 	.4byte	.LLST373
 	.uleb128 0x46
 	.4byte	.Ldebug_ranges0+0x398
-	.4byte	0x4b78
+	.4byte	0x4b76
 	.uleb128 0x3e
 	.string	"n"
 	.byte	0x2
-	.2byte	0x3e9
+	.2byte	0x3f5
 	.4byte	0x33
 	.4byte	.LLST374
 	.byte	0
 	.uleb128 0x47
-	.4byte	0x4a77
+	.4byte	0x4a75
 	.4byte	.LBB228
 	.4byte	.Ldebug_ranges0+0x3d0
 	.byte	0x2
-	.2byte	0x3fc
-	.4byte	0x4bed
+	.2byte	0x407
+	.4byte	0x4beb
 	.uleb128 0x3a
-	.4byte	0x4aa8
+	.4byte	0x4aa6
 	.4byte	.LLST375
 	.uleb128 0x3a
-	.4byte	0x4a9d
+	.4byte	0x4a9b
 	.4byte	.LLST376
 	.uleb128 0x3a
-	.4byte	0x4a92
+	.4byte	0x4a90
 	.4byte	.LLST377
 	.uleb128 0x3a
-	.4byte	0x4a87
+	.4byte	0x4a85
 	.4byte	.LLST378
 	.uleb128 0x3f
 	.4byte	.LVL1903
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x48
 	.4byte	.LVL1905
-	.4byte	0x2155
-	.4byte	0x4bda
+	.4byte	0x2153
+	.4byte	0x4bd8
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37007,34 +37005,34 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1911
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL1913
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x47
-	.4byte	0x4ab4
+	.4byte	0x4ab2
 	.4byte	.LBB237
 	.4byte	.Ldebug_ranges0+0x3f0
 	.byte	0x2
-	.2byte	0x45b
-	.4byte	0x4c56
+	.2byte	0x46c
+	.4byte	0x4c54
 	.uleb128 0x3a
-	.4byte	0x4ae9
+	.4byte	0x4ae7
 	.4byte	.LLST379
 	.uleb128 0x3a
-	.4byte	0x4add
+	.4byte	0x4adb
 	.4byte	.LLST380
 	.uleb128 0x3a
-	.4byte	0x4ad1
+	.4byte	0x4acf
 	.4byte	.LLST381
 	.uleb128 0x3a
-	.4byte	0x4ac5
+	.4byte	0x4ac3
 	.4byte	.LLST382
 	.uleb128 0x48
 	.4byte	.LVL1948
-	.4byte	0x165f
-	.4byte	0x4c3f
+	.4byte	0x165d
+	.4byte	0x4c3d
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37050,7 +37048,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x49
 	.4byte	.LVL1956
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37067,8 +37065,8 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL1892
-	.4byte	0x165f
-	.4byte	0x4c70
+	.4byte	0x165d
+	.4byte	0x4c6e
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37084,14 +37082,14 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1897
-	.4byte	0x245a
+	.4byte	0x2458
 	.uleb128 0x3f
 	.4byte	.LVL1900
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x48
 	.4byte	.LVL1919
-	.4byte	0x4987
-	.4byte	0x4ca3
+	.4byte	0x4985
+	.4byte	0x4ca1
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37114,11 +37112,11 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1925
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x48
 	.4byte	.LVL1928
-	.4byte	0x23d9
-	.4byte	0x4ccd
+	.4byte	0x23d7
+	.4byte	0x4ccb
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37141,235 +37139,235 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL1941
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL1971
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL1982
-	.4byte	0x165f
+	.4byte	0x165d
+	.byte	0
+	.uleb128 0x21
+	.4byte	.LASF267
+	.byte	0x2
+	.2byte	0x2cb
+	.4byte	0x2c
+	.byte	0x1
+	.4byte	0x4d44
+	.uleb128 0x22
+	.string	"enc"
+	.byte	0x2
+	.2byte	0x2cb
+	.4byte	0x228
+	.uleb128 0x22
+	.string	"ptr"
+	.byte	0x2
+	.2byte	0x2cb
+	.4byte	0x93
+	.uleb128 0x22
+	.string	"end"
+	.byte	0x2
+	.2byte	0x2cb
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
+	.byte	0x2
+	.2byte	0x2cc
+	.4byte	0x233
+	.uleb128 0x26
+	.4byte	.LASF251
+	.byte	0x2
+	.2byte	0x2ce
+	.4byte	0x2c
+	.uleb128 0x54
+	.string	"gt"
+	.byte	0x2
+	.2byte	0x317
+	.uleb128 0x54
+	.string	"sol"
+	.byte	0x2
+	.2byte	0x31b
+	.byte	0
+	.uleb128 0x21
+	.4byte	.LASF268
+	.byte	0x2
+	.2byte	0x1a5
+	.4byte	0x2c
+	.byte	0x1
+	.4byte	0x4d86
+	.uleb128 0x22
+	.string	"enc"
+	.byte	0x2
+	.2byte	0x1a5
+	.4byte	0x228
+	.uleb128 0x22
+	.string	"ptr"
+	.byte	0x2
+	.2byte	0x1a5
+	.4byte	0x93
+	.uleb128 0x22
+	.string	"end"
+	.byte	0x2
+	.2byte	0x1a5
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
+	.byte	0x2
+	.2byte	0x1a6
+	.4byte	0x233
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LASF269
 	.byte	0x2
-	.2byte	0x2c8
+	.2byte	0x232
 	.4byte	0x2c
 	.byte	0x1
-	.4byte	0x4d46
-	.uleb128 0x23
+	.4byte	0x4e1b
+	.uleb128 0x22
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x2c8
+	.2byte	0x232
 	.4byte	0x228
-	.uleb128 0x23
+	.uleb128 0x22
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x2c8
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
-	.byte	0x2
-	.2byte	0x2c8
+	.2byte	0x232
 	.4byte	0x93
 	.uleb128 0x22
-	.4byte	.LASF120
+	.string	"end"
 	.byte	0x2
-	.2byte	0x2c9
+	.2byte	0x232
+	.4byte	0x93
+	.uleb128 0x23
+	.4byte	.LASF119
+	.byte	0x2
+	.2byte	0x233
 	.4byte	0x233
 	.uleb128 0x26
-	.4byte	.LASF253
+	.4byte	.LASF251
 	.byte	0x2
-	.2byte	0x2cc
+	.2byte	0x235
 	.4byte	0x2c
-	.uleb128 0x55
-	.string	"gt"
-	.byte	0x2
-	.2byte	0x313
-	.uleb128 0x55
+	.uleb128 0x54
 	.string	"sol"
 	.byte	0x2
-	.2byte	0x317
-	.byte	0
-	.uleb128 0x21
-	.4byte	.LASF270
-	.byte	0x2
-	.2byte	0x1a3
-	.4byte	0x2c
-	.byte	0x1
-	.4byte	0x4d88
-	.uleb128 0x23
-	.string	"enc"
-	.byte	0x2
-	.2byte	0x1a3
-	.4byte	0x228
-	.uleb128 0x23
-	.string	"ptr"
-	.byte	0x2
-	.2byte	0x1a3
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
-	.byte	0x2
-	.2byte	0x1a4
-	.4byte	0x93
-	.uleb128 0x22
-	.4byte	.LASF120
-	.byte	0x2
-	.2byte	0x1a4
-	.4byte	0x233
-	.byte	0
-	.uleb128 0x21
-	.4byte	.LASF271
-	.byte	0x2
-	.2byte	0x230
-	.4byte	0x2c
-	.byte	0x1
-	.4byte	0x4e1d
-	.uleb128 0x23
-	.string	"enc"
-	.byte	0x2
-	.2byte	0x230
-	.4byte	0x228
-	.uleb128 0x23
-	.string	"ptr"
-	.byte	0x2
-	.2byte	0x230
-	.4byte	0x93
-	.uleb128 0x23
-	.string	"end"
-	.byte	0x2
-	.2byte	0x230
-	.4byte	0x93
-	.uleb128 0x22
-	.4byte	.LASF120
-	.byte	0x2
-	.2byte	0x231
-	.4byte	0x233
-	.uleb128 0x26
-	.4byte	.LASF253
-	.byte	0x2
-	.2byte	0x234
-	.4byte	0x2c
-	.uleb128 0x55
-	.string	"sol"
-	.byte	0x2
-	.2byte	0x2ac
-	.uleb128 0x55
+	.2byte	0x2af
+	.uleb128 0x54
 	.string	"gt"
 	.byte	0x2
-	.2byte	0x2a8
-	.uleb128 0x56
-	.4byte	0x4df4
+	.2byte	0x2ab
+	.uleb128 0x55
+	.4byte	0x4df2
 	.uleb128 0x25
 	.string	"t"
 	.byte	0x2
-	.2byte	0x24c
+	.2byte	0x24f
 	.4byte	0x2c
 	.byte	0
 	.uleb128 0x2b
 	.uleb128 0x26
-	.4byte	.LASF131
+	.4byte	.LASF130
 	.byte	0x2
-	.2byte	0x260
+	.2byte	0x262
 	.4byte	0x2c
 	.uleb128 0x2b
 	.uleb128 0x25
 	.string	"t"
 	.byte	0x2
-	.2byte	0x277
+	.2byte	0x279
 	.4byte	0x2c
 	.uleb128 0x2b
 	.uleb128 0x25
 	.string	"tok"
 	.byte	0x2
-	.2byte	0x280
+	.2byte	0x281
 	.4byte	0x2c
 	.byte	0
 	.byte	0
 	.byte	0
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF272
+	.4byte	.LASF270
 	.byte	0x2
-	.2byte	0x329
+	.2byte	0x32d
 	.4byte	0x2c
 	.4byte	.LFB87
 	.4byte	.LFE87-.LFB87
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x51a8
+	.4byte	0x51a6
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x2
-	.2byte	0x329
+	.2byte	0x32d
 	.4byte	0x228
 	.4byte	.LLST383
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x2
-	.2byte	0x329
+	.2byte	0x32d
 	.4byte	0x93
 	.4byte	.LLST384
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x2
-	.2byte	0x329
+	.2byte	0x32d
 	.4byte	0x93
 	.4byte	.LLST385
 	.uleb128 0x3c
-	.4byte	.LASF120
+	.4byte	.LASF119
 	.byte	0x2
-	.2byte	0x32a
+	.2byte	0x32e
 	.4byte	0x233
 	.4byte	.LLST386
 	.uleb128 0x40
 	.4byte	.LBB271
 	.4byte	.LBE271-.LBB271
-	.4byte	0x4e93
+	.4byte	0x4e91
 	.uleb128 0x3e
 	.string	"n"
 	.byte	0x2
-	.2byte	0x32f
+	.2byte	0x332
 	.4byte	0x33
 	.4byte	.LLST387
 	.byte	0
 	.uleb128 0x47
-	.4byte	0x4ce9
+	.4byte	0x4ce7
 	.4byte	.LBB272
 	.4byte	.Ldebug_ranges0+0x448
 	.byte	0x2
-	.2byte	0x339
-	.4byte	0x5165
+	.2byte	0x33c
+	.4byte	0x5163
 	.uleb128 0x3a
-	.4byte	0x4d1e
+	.4byte	0x4d1c
 	.4byte	.LLST388
 	.uleb128 0x3a
-	.4byte	0x4d12
+	.4byte	0x4d10
 	.4byte	.LLST389
 	.uleb128 0x3a
-	.4byte	0x4d06
+	.4byte	0x4d04
 	.4byte	.LLST390
 	.uleb128 0x3a
-	.4byte	0x4cfa
+	.4byte	0x4cf8
 	.4byte	.LLST391
 	.uleb128 0x3d
 	.4byte	.Ldebug_ranges0+0x448
-	.uleb128 0x53
-	.4byte	0x4d2a
+	.uleb128 0x52
+	.4byte	0x4d28
 	.4byte	.LLST392
-	.uleb128 0x57
-	.4byte	0x4d36
+	.uleb128 0x56
+	.4byte	0x4d34
 	.4byte	.L3040
-	.uleb128 0x57
-	.4byte	0x4d3d
+	.uleb128 0x56
+	.4byte	0x4d3b
 	.4byte	.L3041
 	.uleb128 0x39
 	.4byte	0x882
 	.4byte	.LBB274
 	.4byte	.LBE274-.LBB274
 	.byte	0x2
-	.2byte	0x2d8
-	.4byte	0x4f42
+	.2byte	0x2da
+	.4byte	0x4f40
 	.uleb128 0x3a
 	.4byte	0x893
 	.4byte	.LLST393
@@ -37385,10 +37383,10 @@ namingBitmap:
 	.uleb128 0x45
 	.4byte	.LBB275
 	.4byte	.LBE275-.LBB275
-	.uleb128 0x53
+	.uleb128 0x52
 	.4byte	0x8d6
 	.4byte	.LLST397
-	.uleb128 0x58
+	.uleb128 0x57
 	.4byte	0x8c3
 	.uleb128 0x5
 	.byte	0x3
@@ -37396,28 +37394,28 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x47
-	.4byte	0x4d46
+	.4byte	0x4d44
 	.4byte	.LBB276
 	.4byte	.Ldebug_ranges0+0x460
 	.byte	0x2
-	.2byte	0x2e0
-	.4byte	0x4fb2
+	.2byte	0x2e1
+	.4byte	0x4fb0
 	.uleb128 0x3a
-	.4byte	0x4d7b
+	.4byte	0x4d79
 	.4byte	.LLST398
 	.uleb128 0x3a
-	.4byte	0x4d6f
+	.4byte	0x4d6d
 	.4byte	.LLST399
 	.uleb128 0x3a
-	.4byte	0x4d63
+	.4byte	0x4d61
 	.4byte	.LLST400
 	.uleb128 0x3a
-	.4byte	0x4d57
+	.4byte	0x4d55
 	.4byte	.LLST401
 	.uleb128 0x48
 	.4byte	.LVL2029
-	.4byte	0x165f
-	.4byte	0x4f94
+	.4byte	0x165d
+	.4byte	0x4f92
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37433,8 +37431,8 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL2034
-	.4byte	0x165f
-	.4byte	0x4fa8
+	.4byte	0x165d
+	.4byte	0x4fa6
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37444,74 +37442,74 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL2036
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x39
-	.4byte	0x4d88
+	.4byte	0x4d86
 	.4byte	.LBB279
 	.4byte	.LBE279-.LBB279
 	.byte	0x2
-	.2byte	0x30e
-	.4byte	0x50e1
+	.2byte	0x312
+	.4byte	0x50df
 	.uleb128 0x3a
-	.4byte	0x4dbd
+	.4byte	0x4dbb
 	.4byte	.LLST402
 	.uleb128 0x3a
-	.4byte	0x4db1
+	.4byte	0x4daf
 	.4byte	.LLST403
 	.uleb128 0x3a
-	.4byte	0x4da5
+	.4byte	0x4da3
 	.4byte	.LLST404
 	.uleb128 0x3a
-	.4byte	0x4d99
+	.4byte	0x4d97
 	.4byte	.LLST405
 	.uleb128 0x45
 	.4byte	.LBB280
 	.4byte	.LBE280-.LBB280
-	.uleb128 0x53
-	.4byte	0x4dc9
+	.uleb128 0x52
+	.4byte	0x4dc7
 	.4byte	.LLST406
-	.uleb128 0x57
-	.4byte	0x4dd5
+	.uleb128 0x56
+	.4byte	0x4dd3
 	.4byte	.L3120
-	.uleb128 0x57
-	.4byte	0x4ddd
+	.uleb128 0x56
+	.4byte	0x4ddb
 	.4byte	.L3119
 	.uleb128 0x40
 	.4byte	.LBB281
 	.4byte	.LBE281-.LBB281
-	.4byte	0x502e
-	.uleb128 0x53
-	.4byte	0x4de9
+	.4byte	0x502c
+	.uleb128 0x52
+	.4byte	0x4de7
 	.4byte	.LLST407
 	.uleb128 0x3f
 	.4byte	.LVL2067
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x40
 	.4byte	.LBB282
 	.4byte	.LBE282-.LBB282
-	.4byte	0x50bb
-	.uleb128 0x53
-	.4byte	0x4df5
+	.4byte	0x50b9
+	.uleb128 0x52
+	.4byte	0x4df3
 	.4byte	.LLST408
 	.uleb128 0x40
 	.4byte	.LBB283
 	.4byte	.LBE283-.LBB283
-	.4byte	0x509f
-	.uleb128 0x53
-	.4byte	0x4e02
+	.4byte	0x509d
+	.uleb128 0x52
+	.4byte	0x4e00
 	.4byte	.LLST409
 	.uleb128 0x40
 	.4byte	.LBB284
 	.4byte	.LBE284-.LBB284
-	.4byte	0x5095
-	.uleb128 0x53
-	.4byte	0x4e0d
+	.4byte	0x5093
+	.uleb128 0x52
+	.4byte	0x4e0b
 	.4byte	.LLST410
 	.uleb128 0x49
 	.4byte	.LVL2076
-	.4byte	0x22c2
+	.4byte	0x22c0
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37541,22 +37539,22 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL2072
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL2070
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL2082
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL2083
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL2062
-	.4byte	0x165f
-	.4byte	0x50cf
+	.4byte	0x165d
+	.4byte	0x50cd
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5b
@@ -37566,7 +37564,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x49
 	.4byte	.LVL2064
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5b
@@ -37578,14 +37576,14 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL2007
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL2015
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x48
 	.4byte	.LVL2016
-	.4byte	0x2155
-	.4byte	0x511a
+	.4byte	0x2153
+	.4byte	0x5118
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37614,8 +37612,8 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL2026
-	.4byte	0x4987
-	.4byte	0x5141
+	.4byte	0x4985
+	.4byte	0x513f
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37644,13 +37642,13 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL2043
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL2049
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x49
 	.4byte	.LVL2056
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37662,11 +37660,11 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL2005
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x48
 	.4byte	.LVL2096
-	.4byte	0x22c2
-	.4byte	0x5195
+	.4byte	0x22c0
+	.4byte	0x5193
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37695,25 +37693,25 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL2098
-	.4byte	0x165f
+	.4byte	0x165d
 	.uleb128 0x3f
 	.4byte	.LVL2114
-	.4byte	0x165f
+	.4byte	0x165d
 	.byte	0
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	0x8e6
 	.4byte	.LFB107
 	.4byte	.LFE107-.LFB107
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x5352
+	.4byte	0x5350
 	.uleb128 0x3a
 	.4byte	0x8f7
 	.4byte	.LLST411
 	.uleb128 0x3a
 	.4byte	0x903
 	.4byte	.LLST412
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	0x90f
 	.uleb128 0x1
 	.byte	0x54
@@ -37726,47 +37724,47 @@ namingBitmap:
 	.uleb128 0x3a
 	.4byte	0x933
 	.4byte	.LLST415
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	0x93f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x59
+	.uleb128 0x58
 	.4byte	0x94b
-	.uleb128 0x59
+	.uleb128 0x58
 	.4byte	0x955
 	.uleb128 0x40
 	.4byte	.LBB290
 	.4byte	.LBE290-.LBB290
-	.4byte	0x5328
-	.uleb128 0x52
+	.4byte	0x5326
+	.uleb128 0x51
 	.4byte	0x93f
-	.uleb128 0x52
+	.uleb128 0x51
 	.4byte	0x933
-	.uleb128 0x52
+	.uleb128 0x51
 	.4byte	0x927
-	.uleb128 0x52
+	.uleb128 0x51
 	.4byte	0x91b
-	.uleb128 0x52
+	.uleb128 0x51
 	.4byte	0x90f
 	.uleb128 0x3a
 	.4byte	0x903
 	.4byte	.LLST416
-	.uleb128 0x52
+	.uleb128 0x51
 	.4byte	0x8f7
 	.uleb128 0x45
 	.4byte	.LBB291
 	.4byte	.LBE291-.LBB291
-	.uleb128 0x53
+	.uleb128 0x52
 	.4byte	0x94b
 	.4byte	.LLST417
-	.uleb128 0x53
+	.uleb128 0x52
 	.4byte	0x955
 	.4byte	.LLST418
 	.uleb128 0x48
 	.4byte	.LVL2135
-	.4byte	0x2a87
-	.4byte	0x5270
+	.4byte	0x2a85
+	.4byte	0x526e
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37788,11 +37786,11 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL2136
-	.4byte	0x2b24
+	.4byte	0x2b22
 	.uleb128 0x48
 	.4byte	.LVL2137
-	.4byte	0x2a87
-	.4byte	0x5299
+	.4byte	0x2a85
+	.4byte	0x5297
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37814,11 +37812,11 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL2138
-	.4byte	0x2b24
+	.4byte	0x2b22
 	.uleb128 0x48
 	.4byte	.LVL2141
-	.4byte	0x2a87
-	.4byte	0x52c2
+	.4byte	0x2a85
+	.4byte	0x52c0
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37840,8 +37838,8 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL2143
-	.4byte	0x2b24
-	.4byte	0x52d6
+	.4byte	0x2b22
+	.4byte	0x52d4
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37851,8 +37849,8 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL2153
-	.4byte	0x2a87
-	.4byte	0x52f6
+	.4byte	0x2a85
+	.4byte	0x52f4
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37874,8 +37872,8 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL2155
-	.4byte	0x2b24
-	.4byte	0x530a
+	.4byte	0x2b22
+	.4byte	0x5308
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37885,7 +37883,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x49
 	.4byte	.LVL2159
-	.4byte	0x2a87
+	.4byte	0x2a85
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37909,8 +37907,8 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL2130
-	.4byte	0x2a87
-	.4byte	0x5348
+	.4byte	0x2a85
+	.4byte	0x5346
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -37932,76 +37930,76 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL2131
-	.4byte	0x2b24
+	.4byte	0x2b22
 	.byte	0
 	.uleb128 0x33
-	.4byte	.LASF273
+	.4byte	.LASF271
 	.byte	0x1
-	.2byte	0x4ce
+	.2byte	0x480
 	.4byte	0x2c
 	.4byte	.LFB108
 	.4byte	.LFE108-.LFB108
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x55c5
+	.4byte	0x55c3
 	.uleb128 0x3c
-	.4byte	.LASF274
+	.4byte	.LASF272
 	.byte	0x1
-	.2byte	0x4ce
-	.4byte	0x55de
+	.2byte	0x480
+	.4byte	0x55dc
 	.4byte	.LLST419
 	.uleb128 0x3c
-	.4byte	.LASF275
+	.4byte	.LASF273
 	.byte	0x1
-	.2byte	0x4d1
+	.2byte	0x482
 	.4byte	0x2c
 	.4byte	.LLST420
 	.uleb128 0x38
 	.string	"enc"
 	.byte	0x1
-	.2byte	0x4d2
+	.2byte	0x482
 	.4byte	0x228
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x34
 	.string	"ptr"
 	.byte	0x1
-	.2byte	0x4d3
+	.2byte	0x482
 	.4byte	0x93
 	.4byte	.LLST421
 	.uleb128 0x34
 	.string	"end"
 	.byte	0x1
-	.2byte	0x4d4
+	.2byte	0x483
 	.4byte	0x93
 	.4byte	.LLST422
 	.uleb128 0x35
-	.4byte	.LASF158
+	.4byte	.LASF156
 	.byte	0x1
-	.2byte	0x4d5
+	.2byte	0x483
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x57
 	.uleb128 0x35
-	.4byte	.LASF276
+	.4byte	.LASF274
 	.byte	0x1
-	.2byte	0x4d6
+	.2byte	0x483
 	.4byte	0x233
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x35
-	.4byte	.LASF277
+	.4byte	.LASF275
 	.byte	0x1
-	.2byte	0x4d7
+	.2byte	0x484
 	.4byte	0x233
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 4
 	.uleb128 0x35
-	.4byte	.LASF278
+	.4byte	.LASF276
 	.byte	0x1
-	.2byte	0x4d8
+	.2byte	0x484
 	.4byte	0x233
 	.uleb128 0x2
 	.byte	0x91
@@ -38009,15 +38007,15 @@ namingBitmap:
 	.uleb128 0x35
 	.4byte	.LASF24
 	.byte	0x1
-	.2byte	0x4d9
+	.2byte	0x485
 	.4byte	0x3d6
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 12
 	.uleb128 0x35
-	.4byte	.LASF279
+	.4byte	.LASF277
 	.byte	0x1
-	.2byte	0x4da
+	.2byte	0x485
 	.4byte	0x714
 	.uleb128 0x2
 	.byte	0x91
@@ -38025,7 +38023,7 @@ namingBitmap:
 	.uleb128 0x4a
 	.string	"val"
 	.byte	0x1
-	.2byte	0x4dc
+	.2byte	0x486
 	.4byte	0x93
 	.uleb128 0x2
 	.byte	0x91
@@ -38033,15 +38031,15 @@ namingBitmap:
 	.uleb128 0x42
 	.4byte	.LASF17
 	.byte	0x1
-	.2byte	0x4dd
+	.2byte	0x487
 	.4byte	0x93
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -60
 	.uleb128 0x42
-	.4byte	.LASF280
+	.4byte	.LASF278
 	.byte	0x1
-	.2byte	0x4de
+	.2byte	0x488
 	.4byte	0x93
 	.uleb128 0x2
 	.byte	0x91
@@ -38049,17 +38047,17 @@ namingBitmap:
 	.uleb128 0x40
 	.4byte	.LBB292
 	.4byte	.LBE292-.LBB292
-	.4byte	0x54b5
+	.4byte	0x54b3
 	.uleb128 0x3e
 	.string	"c"
 	.byte	0x1
-	.2byte	0x4ff
+	.2byte	0x4a8
 	.4byte	0x2c
 	.4byte	.LLST423
 	.uleb128 0x48
 	.4byte	.LVL2185
-	.4byte	0x2a87
-	.4byte	0x5475
+	.4byte	0x2a85
+	.4byte	0x5473
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -38075,7 +38073,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL2189
-	.4byte	0x5485
+	.4byte	0x5483
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -38128,7 +38126,7 @@ namingBitmap:
 	.uleb128 0x48
 	.4byte	.LVL2170
 	.4byte	0x8e6
-	.4byte	0x54e8
+	.4byte	0x54e6
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -38169,7 +38167,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL2171
-	.4byte	0x5501
+	.4byte	0x54ff
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -38186,7 +38184,7 @@ namingBitmap:
 	.uleb128 0x48
 	.4byte	.LVL2175
 	.4byte	0x8e6
-	.4byte	0x5534
+	.4byte	0x5532
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -38227,7 +38225,7 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x30
 	.4byte	.LVL2180
-	.4byte	0x554d
+	.4byte	0x554b
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -38246,7 +38244,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x72
 	.sleb128 0
-	.4byte	0x5569
+	.4byte	0x5567
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -38265,7 +38263,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
-	.4byte	0x5585
+	.4byte	0x5583
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -38284,7 +38282,7 @@ namingBitmap:
 	.uleb128 0x2
 	.byte	0x72
 	.sleb128 0
-	.4byte	0x55a1
+	.4byte	0x559f
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -38300,8 +38298,8 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LVL2195
-	.4byte	0x2a87
-	.4byte	0x55bb
+	.4byte	0x2a85
+	.4byte	0x55b9
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -38317,11 +38315,11 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL2196
-	.4byte	0x2b24
+	.4byte	0x2b22
 	.byte	0
 	.uleb128 0xd
 	.4byte	0x228
-	.4byte	0x55de
+	.4byte	0x55dc
 	.uleb128 0xe
 	.4byte	0x228
 	.uleb128 0xe
@@ -38331,133 +38329,133 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x55c5
-	.uleb128 0x5a
-	.4byte	.LASF339
+	.4byte	0x55c3
+	.uleb128 0x59
+	.4byte	.LASF337
 	.byte	0x1
-	.2byte	0x16d
+	.2byte	0x141
 	.4byte	.LFB36
 	.4byte	.LFE36-.LFB36
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x564d
+	.4byte	0x564b
 	.uleb128 0x35
-	.4byte	.LASF178
+	.4byte	.LASF176
 	.byte	0x1
-	.2byte	0x16d
+	.2byte	0x141
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x35
-	.4byte	.LASF281
+	.4byte	.LASF279
 	.byte	0x1
-	.2byte	0x16d
+	.2byte	0x142
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x41
-	.4byte	.LASF176
+	.4byte	.LASF174
 	.byte	0x1
-	.2byte	0x16f
+	.2byte	0x143
 	.4byte	0x93
 	.4byte	.LLST424
 	.uleb128 0x41
-	.4byte	.LASF282
+	.4byte	.LASF280
 	.byte	0x1
-	.2byte	0x170
+	.2byte	0x144
 	.4byte	0x33
 	.4byte	.LLST425
 	.uleb128 0x3d
 	.4byte	.Ldebug_ranges0+0x478
 	.uleb128 0x41
-	.4byte	.LASF283
+	.4byte	.LASF281
 	.byte	0x1
-	.2byte	0x172
-	.4byte	0x564d
+	.2byte	0x146
+	.4byte	0x564b
 	.4byte	.LLST426
 	.byte	0
 	.byte	0
 	.uleb128 0x7
 	.4byte	0x53
 	.uleb128 0x33
-	.4byte	.LASF284
+	.4byte	.LASF282
 	.byte	0x1
-	.2byte	0x190
+	.2byte	0x168
 	.4byte	0x239
 	.4byte	.LFB37
 	.4byte	.LFE37-.LFB37
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x574d
-	.uleb128 0x3c
-	.4byte	.LASF114
+	.4byte	0x574b
+	.uleb128 0x34
+	.string	"enc"
 	.byte	0x1
-	.2byte	0x190
+	.2byte	0x168
 	.4byte	0x228
 	.4byte	.LLST427
 	.uleb128 0x3c
-	.4byte	.LASF175
+	.4byte	.LASF173
 	.byte	0x1
-	.2byte	0x191
+	.2byte	0x168
 	.4byte	0x233
 	.4byte	.LLST428
 	.uleb128 0x3c
-	.4byte	.LASF176
+	.4byte	.LASF174
 	.byte	0x1
-	.2byte	0x191
+	.2byte	0x168
 	.4byte	0x93
 	.4byte	.LLST429
 	.uleb128 0x38
 	.string	"toP"
 	.byte	0x1
-	.2byte	0x192
+	.2byte	0x169
 	.4byte	0x366
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x3c
-	.4byte	.LASF177
+	.4byte	.LASF175
 	.byte	0x1
-	.2byte	0x192
+	.2byte	0x169
 	.4byte	0x93
 	.4byte	.LLST430
 	.uleb128 0x41
+	.4byte	.LASF283
+	.byte	0x1
+	.2byte	0x16a
+	.4byte	0x574b
+	.4byte	.LLST431
+	.uleb128 0x41
+	.4byte	.LASF284
+	.byte	0x1
+	.2byte	0x16b
+	.4byte	0x574b
+	.4byte	.LLST432
+	.uleb128 0x41
 	.4byte	.LASF285
 	.byte	0x1
-	.2byte	0x194
-	.4byte	0x574d
-	.4byte	.LLST431
+	.2byte	0x16e
+	.4byte	0x5752
+	.4byte	.LLST433
 	.uleb128 0x41
 	.4byte	.LASF286
 	.byte	0x1
-	.2byte	0x195
-	.4byte	0x574d
-	.4byte	.LLST432
-	.uleb128 0x41
-	.4byte	.LASF287
-	.byte	0x1
-	.2byte	0x198
-	.4byte	0x5754
-	.4byte	.LLST433
-	.uleb128 0x41
-	.4byte	.LASF288
-	.byte	0x1
-	.2byte	0x199
-	.4byte	0x5754
+	.2byte	0x16f
+	.4byte	0x5752
 	.4byte	.LLST434
 	.uleb128 0x40
 	.4byte	.LBB296
 	.4byte	.LBE296-.LBB296
-	.4byte	0x5726
+	.4byte	0x5724
 	.uleb128 0x42
-	.4byte	.LASF289
+	.4byte	.LASF287
 	.byte	0x1
-	.2byte	0x1a1
-	.4byte	0x5759
+	.2byte	0x178
+	.4byte	0x5757
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x49
 	.4byte	.LVL2225
-	.4byte	0x55e4
+	.4byte	0x55e2
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5b
@@ -38469,14 +38467,14 @@ namingBitmap:
 	.uleb128 0x3d
 	.4byte	.Ldebug_ranges0+0x498
 	.uleb128 0x41
-	.4byte	.LASF290
+	.4byte	.LASF288
 	.byte	0x1
-	.2byte	0x1a9
-	.4byte	0x5754
+	.2byte	0x180
+	.4byte	0x5752
 	.4byte	.LLST435
 	.uleb128 0x49
 	.4byte	.LVL2229
-	.4byte	0x5ff4
+	.4byte	0x6013
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5c
@@ -38489,22 +38487,22 @@ namingBitmap:
 	.uleb128 0x4
 	.byte	0x1
 	.byte	0x2
-	.4byte	.LASF291
+	.4byte	.LASF289
 	.uleb128 0x7
 	.4byte	0x21
 	.uleb128 0x7
 	.4byte	0x93
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	0x962
 	.4byte	.LFB110
 	.4byte	.LFE110-.LFB110
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x57a7
+	.4byte	0x57a5
 	.uleb128 0x3a
 	.4byte	0x973
 	.4byte	.LLST436
-	.uleb128 0x50
+	.uleb128 0x4f
 	.4byte	0x97d
 	.uleb128 0x1
 	.byte	0x53
@@ -38517,66 +38515,66 @@ namingBitmap:
 	.uleb128 0x3a
 	.4byte	0x973
 	.4byte	.LLST438
-	.uleb128 0x5b
+	.uleb128 0x5a
 	.4byte	.LBB302
 	.4byte	.LBE302-.LBB302
 	.byte	0
 	.byte	0
 	.uleb128 0x4b
-	.4byte	.LASF292
+	.4byte	.LASF290
 	.byte	0x1
-	.2byte	0x5a0
+	.2byte	0x546
 	.4byte	0x239
 	.4byte	.LFB116
 	.4byte	.LFE116-.LFB116
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x5882
+	.4byte	0x5880
 	.uleb128 0x34
 	.string	"enc"
 	.byte	0x1
-	.2byte	0x5a0
+	.2byte	0x546
 	.4byte	0x228
 	.4byte	.LLST439
 	.uleb128 0x35
-	.4byte	.LASF175
+	.4byte	.LASF173
 	.byte	0x1
-	.2byte	0x5a1
+	.2byte	0x546
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x35
-	.4byte	.LASF176
+	.4byte	.LASF174
 	.byte	0x1
-	.2byte	0x5a1
+	.2byte	0x546
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x38
 	.string	"toP"
 	.byte	0x1
-	.2byte	0x5a2
+	.2byte	0x547
 	.4byte	0x366
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x35
-	.4byte	.LASF177
+	.4byte	.LASF175
 	.byte	0x1
-	.2byte	0x5a2
+	.2byte	0x547
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x56
 	.uleb128 0x41
-	.4byte	.LASF233
+	.4byte	.LASF231
 	.byte	0x1
-	.2byte	0x5a4
-	.4byte	0x2d5b
+	.2byte	0x548
+	.4byte	0x2d59
 	.4byte	.LLST440
 	.uleb128 0x4a
 	.string	"buf"
 	.byte	0x1
-	.2byte	0x5a5
-	.4byte	0x5882
+	.2byte	0x549
+	.4byte	0x5880
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
@@ -38585,23 +38583,23 @@ namingBitmap:
 	.uleb128 0x41
 	.4byte	.LASF105
 	.byte	0x1
-	.2byte	0x5a7
+	.2byte	0x54b
 	.4byte	0x93
 	.4byte	.LLST441
 	.uleb128 0x3e
 	.string	"n"
 	.byte	0x1
-	.2byte	0x5a8
+	.2byte	0x54c
 	.4byte	0x2c
 	.4byte	.LLST442
 	.uleb128 0x40
 	.4byte	.LBB304
 	.4byte	.LBE304-.LBB304
-	.4byte	0x5877
+	.4byte	0x5875
 	.uleb128 0x3e
 	.string	"c"
 	.byte	0x1
-	.2byte	0x5ae
+	.2byte	0x552
 	.4byte	0x2c
 	.4byte	.LLST443
 	.uleb128 0x49
@@ -38617,104 +38615,105 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x3f
 	.4byte	.LVL2255
-	.4byte	0x5ff4
+	.4byte	0x6013
 	.byte	0
 	.byte	0
 	.uleb128 0x8
 	.4byte	0x8c
-	.4byte	0x5892
+	.4byte	0x5890
 	.uleb128 0x9
 	.4byte	0x76
 	.byte	0x3
 	.byte	0
-	.uleb128 0x5c
-	.4byte	.LASF297
+	.uleb128 0x5b
+	.4byte	.LASF295
 	.byte	0x1
-	.2byte	0x562
+	.2byte	0x50d
 	.4byte	0x2c
 	.4byte	.LFB111
 	.4byte	.LFE111-.LFB111
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x58cb
+	.4byte	0x58c9
 	.uleb128 0x3c
-	.4byte	.LASF293
+	.4byte	.LASF291
 	.byte	0x1
-	.2byte	0x562
+	.2byte	0x50d
 	.4byte	0x2c
 	.4byte	.LLST444
 	.uleb128 0x38
 	.string	"buf"
 	.byte	0x1
-	.2byte	0x562
+	.2byte	0x50d
 	.4byte	0x39b
 	.uleb128 0x1
 	.byte	0x53
 	.byte	0
-	.uleb128 0x5d
-	.4byte	.LASF294
+	.uleb128 0x5c
+	.4byte	.LASF292
 	.byte	0x1
-	.2byte	0x57e
+	.2byte	0x528
 	.4byte	0x2c
 	.4byte	.LFB112
 	.4byte	.LFE112-.LFB112
 	.uleb128 0x1
 	.byte	0x9c
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.4byte	0x9aa
 	.4byte	.LFB118
 	.4byte	.LFE118-.LFB118
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x599c
+	.4byte	0x59bb
 	.uleb128 0x3a
 	.4byte	0x9bb
 	.4byte	.LLST445
 	.uleb128 0x3a
 	.4byte	0x9c7
 	.4byte	.LLST446
-	.uleb128 0x3a
+	.uleb128 0x4f
 	.4byte	0x9d3
-	.4byte	.LLST447
+	.uleb128 0x1
+	.byte	0x54
 	.uleb128 0x3a
 	.4byte	0x9df
-	.4byte	.LLST448
-	.uleb128 0x53
+	.4byte	.LLST447
+	.uleb128 0x52
 	.4byte	0x9eb
-	.4byte	.LLST449
-	.uleb128 0x53
+	.4byte	.LLST448
+	.uleb128 0x52
 	.4byte	0x9f5
-	.4byte	.LLST450
-	.uleb128 0x45
+	.4byte	.LLST449
+	.uleb128 0x40
 	.4byte	.LBB309
 	.4byte	.LBE309-.LBB309
-	.uleb128 0x52
+	.4byte	0x599d
+	.uleb128 0x51
 	.4byte	0x9df
-	.uleb128 0x52
+	.uleb128 0x51
 	.4byte	0x9d3
-	.uleb128 0x52
+	.uleb128 0x51
 	.4byte	0x9c7
-	.uleb128 0x52
+	.uleb128 0x51
 	.4byte	0x9bb
 	.uleb128 0x45
 	.4byte	.LBB310
 	.4byte	.LBE310-.LBB310
-	.uleb128 0x58
+	.uleb128 0x52
 	.4byte	0x9eb
-	.uleb128 0x1
-	.byte	0x54
-	.uleb128 0x59
+	.4byte	.LLST450
+	.uleb128 0x58
 	.4byte	0x9f5
 	.uleb128 0x45
 	.4byte	.LBB311
 	.4byte	.LBE311-.LBB311
-	.uleb128 0x53
+	.uleb128 0x52
 	.4byte	0xa00
 	.4byte	.LLST451
 	.uleb128 0x48
-	.4byte	.LVL2282
-	.4byte	0x2b4d
-	.4byte	0x5982
+	.4byte	.LVL2280
+	.4byte	0x2b4b
+	.4byte	0x5984
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -38723,7 +38722,7 @@ namingBitmap:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x49
-	.4byte	.LVL2285
+	.4byte	.LVL2284
 	.4byte	0x962
 	.uleb128 0x31
 	.uleb128 0x1
@@ -38741,9 +38740,31 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.byte	0
+	.uleb128 0x49
+	.4byte	.LVL2264
+	.4byte	0x6013
+	.uleb128 0x31
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x72
+	.sleb128 0
+	.uleb128 0x31
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x75
+	.sleb128 0
+	.uleb128 0x31
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x3
+	.byte	0xa
+	.2byte	0x16c
 	.byte	0
-	.uleb128 0x5e
-	.4byte	.LASF295
+	.byte	0
+	.uleb128 0x5d
+	.4byte	.LASF293
 	.byte	0x3
 	.byte	0x24
 	.4byte	0x228
@@ -38751,55 +38772,55 @@ namingBitmap:
 	.4byte	.LFE121-.LFB121
 	.uleb128 0x1
 	.byte	0x9c
-	.uleb128 0x5e
-	.4byte	.LASF296
+	.uleb128 0x5d
+	.4byte	.LASF294
 	.byte	0x3
-	.byte	0x2a
+	.byte	0x29
 	.4byte	0x228
 	.4byte	.LFB122
 	.4byte	.LFE122-.LFB122
 	.uleb128 0x1
 	.byte	0x9c
-	.uleb128 0x5f
-	.4byte	.LASF298
+	.uleb128 0x5e
+	.4byte	.LASF296
 	.byte	0x3
-	.byte	0x53
+	.byte	0x4b
 	.4byte	0x2c
 	.4byte	.LFB125
 	.4byte	.LFE125-.LFB125
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x5a22
-	.uleb128 0x2f
+	.4byte	0x5a41
+	.uleb128 0x2d
 	.string	"p"
 	.byte	0x3
-	.byte	0x53
-	.4byte	0x5a22
+	.byte	0x4b
+	.4byte	0x5a41
 	.4byte	.LLST452
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.4byte	.LASF45
 	.byte	0x3
-	.byte	0x53
+	.byte	0x4b
 	.4byte	0x3d6
 	.uleb128 0x1
 	.byte	0x53
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.4byte	.LASF17
 	.byte	0x3
-	.byte	0x54
+	.byte	0x4c
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
-	.uleb128 0x4d
+	.uleb128 0x4c
 	.string	"i"
 	.byte	0x3
-	.byte	0x56
+	.byte	0x4d
 	.4byte	0x2c
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x49
-	.4byte	.LVL2289
-	.4byte	0x2eba
+	.4byte	.LVL2288
+	.4byte	0x2eb8
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -38811,92 +38832,92 @@ namingBitmap:
 	.uleb128 0x6
 	.byte	0x4
 	.4byte	0x3dc
-	.uleb128 0x5f
-	.4byte	.LASF299
+	.uleb128 0x5e
+	.4byte	.LASF297
 	.byte	0x3
-	.byte	0x76
+	.byte	0x6c
 	.4byte	0x2c
 	.4byte	.LFB127
 	.4byte	.LFE127-.LFB127
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x5b22
-	.uleb128 0x2d
-	.4byte	.LASF275
+	.4byte	0x5b41
+	.uleb128 0x5f
+	.4byte	.LASF273
 	.byte	0x3
-	.byte	0x76
+	.byte	0x6c
 	.4byte	0x2c
 	.4byte	.LLST453
-	.uleb128 0x4c
+	.uleb128 0x2e
 	.string	"enc"
 	.byte	0x3
-	.byte	0x77
+	.byte	0x6c
 	.4byte	0x228
 	.uleb128 0x1
 	.byte	0x53
-	.uleb128 0x4c
+	.uleb128 0x2e
 	.string	"ptr"
 	.byte	0x3
-	.byte	0x78
+	.byte	0x6d
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
-	.uleb128 0x4c
+	.uleb128 0x2e
 	.string	"end"
 	.byte	0x3
-	.byte	0x79
+	.byte	0x6d
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x55
-	.uleb128 0x2e
-	.4byte	.LASF158
+	.uleb128 0x2f
+	.4byte	.LASF156
 	.byte	0x3
-	.byte	0x7a
+	.byte	0x6d
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x56
-	.uleb128 0x2e
-	.4byte	.LASF276
+	.uleb128 0x2f
+	.4byte	.LASF274
 	.byte	0x3
-	.byte	0x7b
+	.byte	0x6e
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x57
-	.uleb128 0x2e
-	.4byte	.LASF277
+	.uleb128 0x2f
+	.4byte	.LASF275
 	.byte	0x3
-	.byte	0x7c
+	.byte	0x6e
 	.4byte	0x233
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x2e
-	.4byte	.LASF278
+	.uleb128 0x2f
+	.4byte	.LASF276
 	.byte	0x3
-	.byte	0x7d
+	.byte	0x6f
 	.4byte	0x233
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 4
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.4byte	.LASF24
 	.byte	0x3
-	.byte	0x7e
+	.byte	0x6f
 	.4byte	0x3d6
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x2e
-	.4byte	.LASF279
+	.uleb128 0x2f
+	.4byte	.LASF277
 	.byte	0x3
-	.byte	0x7f
+	.byte	0x70
 	.4byte	0x714
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 12
 	.uleb128 0x49
-	.4byte	.LVL2292
-	.4byte	0x5352
+	.4byte	.LVL2291
+	.4byte	0x5350
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -38974,8 +38995,8 @@ namingBitmap:
 	.byte	0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x5e
-	.4byte	.LASF300
+	.uleb128 0x5d
+	.4byte	.LASF298
 	.byte	0x3
 	.byte	0x24
 	.4byte	0x228
@@ -38983,55 +39004,55 @@ namingBitmap:
 	.4byte	.LFE128-.LFB128
 	.uleb128 0x1
 	.byte	0x9c
-	.uleb128 0x5e
-	.4byte	.LASF301
+	.uleb128 0x5d
+	.4byte	.LASF299
 	.byte	0x3
-	.byte	0x2a
+	.byte	0x29
 	.4byte	0x228
 	.4byte	.LFB129
 	.4byte	.LFE129-.LFB129
 	.uleb128 0x1
 	.byte	0x9c
-	.uleb128 0x5f
-	.4byte	.LASF302
+	.uleb128 0x5e
+	.4byte	.LASF300
 	.byte	0x3
-	.byte	0x53
+	.byte	0x4b
 	.4byte	0x2c
 	.4byte	.LFB132
 	.4byte	.LFE132-.LFB132
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x5ba8
-	.uleb128 0x2f
+	.4byte	0x5bc7
+	.uleb128 0x2d
 	.string	"p"
 	.byte	0x3
-	.byte	0x53
-	.4byte	0x5a22
+	.byte	0x4b
+	.4byte	0x5a41
 	.4byte	.LLST454
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.4byte	.LASF45
 	.byte	0x3
-	.byte	0x53
+	.byte	0x4b
 	.4byte	0x3d6
 	.uleb128 0x1
 	.byte	0x53
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.4byte	.LASF17
 	.byte	0x3
-	.byte	0x54
+	.byte	0x4c
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
-	.uleb128 0x4d
+	.uleb128 0x4c
 	.string	"i"
 	.byte	0x3
-	.byte	0x56
+	.byte	0x4d
 	.4byte	0x2c
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x49
-	.4byte	.LVL2295
-	.4byte	0x2eba
+	.4byte	.LVL2294
+	.4byte	0x2eb8
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -39040,92 +39061,92 @@ namingBitmap:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0x5f
-	.4byte	.LASF303
+	.uleb128 0x5e
+	.4byte	.LASF301
 	.byte	0x3
-	.byte	0x76
+	.byte	0x6c
 	.4byte	0x2c
 	.4byte	.LFB134
 	.4byte	.LFE134-.LFB134
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x5ca2
-	.uleb128 0x2d
-	.4byte	.LASF275
+	.4byte	0x5cc1
+	.uleb128 0x5f
+	.4byte	.LASF273
 	.byte	0x3
-	.byte	0x76
+	.byte	0x6c
 	.4byte	0x2c
 	.4byte	.LLST455
-	.uleb128 0x4c
+	.uleb128 0x2e
 	.string	"enc"
 	.byte	0x3
-	.byte	0x77
+	.byte	0x6c
 	.4byte	0x228
 	.uleb128 0x1
 	.byte	0x53
-	.uleb128 0x4c
+	.uleb128 0x2e
 	.string	"ptr"
 	.byte	0x3
-	.byte	0x78
+	.byte	0x6d
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x54
-	.uleb128 0x4c
+	.uleb128 0x2e
 	.string	"end"
 	.byte	0x3
-	.byte	0x79
+	.byte	0x6d
 	.4byte	0x93
 	.uleb128 0x1
 	.byte	0x55
-	.uleb128 0x2e
-	.4byte	.LASF158
+	.uleb128 0x2f
+	.4byte	.LASF156
 	.byte	0x3
-	.byte	0x7a
+	.byte	0x6d
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x56
-	.uleb128 0x2e
-	.4byte	.LASF276
+	.uleb128 0x2f
+	.4byte	.LASF274
 	.byte	0x3
-	.byte	0x7b
+	.byte	0x6e
 	.4byte	0x233
 	.uleb128 0x1
 	.byte	0x57
-	.uleb128 0x2e
-	.4byte	.LASF277
+	.uleb128 0x2f
+	.4byte	.LASF275
 	.byte	0x3
-	.byte	0x7c
+	.byte	0x6e
 	.4byte	0x233
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x2e
-	.4byte	.LASF278
+	.uleb128 0x2f
+	.4byte	.LASF276
 	.byte	0x3
-	.byte	0x7d
+	.byte	0x6f
 	.4byte	0x233
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 4
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.4byte	.LASF24
 	.byte	0x3
-	.byte	0x7e
+	.byte	0x6f
 	.4byte	0x3d6
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x2e
-	.4byte	.LASF279
+	.uleb128 0x2f
+	.4byte	.LASF277
 	.byte	0x3
-	.byte	0x7f
+	.byte	0x70
 	.4byte	0x714
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 12
 	.uleb128 0x49
-	.4byte	.LVL2298
-	.4byte	0x5352
+	.4byte	.LVL2297
+	.4byte	0x5350
 	.uleb128 0x31
 	.uleb128 0x1
 	.byte	0x5a
@@ -39203,52 +39224,52 @@ namingBitmap:
 	.byte	0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x5c
-	.4byte	.LASF304
+	.uleb128 0x5b
+	.4byte	.LASF302
 	.byte	0x1
-	.2byte	0x703
+	.2byte	0x680
 	.4byte	0xa0c
 	.4byte	.LFB135
 	.4byte	.LFE135-.LFB135
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x5d27
+	.4byte	0x5d46
 	.uleb128 0x34
 	.string	"mem"
 	.byte	0x1
-	.2byte	0x703
+	.2byte	0x680
 	.4byte	0x7d
 	.4byte	.LLST456
 	.uleb128 0x35
-	.4byte	.LASF137
+	.4byte	.LASF136
 	.byte	0x1
-	.2byte	0x704
+	.2byte	0x680
 	.4byte	0x714
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x35
 	.4byte	.LASF102
 	.byte	0x1
-	.2byte	0x705
+	.2byte	0x680
 	.4byte	0x3e8
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x35
 	.4byte	.LASF103
 	.byte	0x1
-	.2byte	0x706
+	.2byte	0x681
 	.4byte	0x7d
 	.uleb128 0x1
 	.byte	0x55
 	.uleb128 0x4a
 	.string	"enc"
 	.byte	0x1
-	.2byte	0x708
+	.2byte	0x682
 	.4byte	0xa0c
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x49
-	.4byte	.LVL2301
+	.4byte	.LVL2300
 	.4byte	0x9aa
 	.uleb128 0x31
 	.uleb128 0x1
@@ -39278,160 +39299,160 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x8
 	.4byte	0x3e
-	.4byte	0x5d38
+	.4byte	0x5d57
 	.uleb128 0x60
 	.4byte	0x76
 	.2byte	0x13f
 	.byte	0
 	.uleb128 0x61
-	.4byte	.LASF305
+	.4byte	.LASF303
 	.byte	0x8
 	.byte	0x21
-	.4byte	0x5d49
+	.4byte	0x5d68
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	namingBitmap
 	.uleb128 0x7
-	.4byte	0x5d27
+	.4byte	0x5d46
 	.uleb128 0x61
-	.4byte	.LASF306
+	.4byte	.LASF304
 	.byte	0x8
-	.byte	0x73
-	.4byte	0x5d5f
+	.byte	0x59
+	.4byte	0x5d7e
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	nmstrtPages
 	.uleb128 0x7
 	.4byte	0x4a9
 	.uleb128 0x61
-	.4byte	.LASF307
+	.4byte	.LASF305
 	.byte	0x8
-	.byte	0x95
-	.4byte	0x5d75
+	.byte	0x71
+	.4byte	0x5d94
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	namePages
 	.uleb128 0x7
 	.4byte	0x4a9
 	.uleb128 0x42
-	.4byte	.LASF308
+	.4byte	.LASF306
 	.byte	0x1
-	.2byte	0x1f4
-	.4byte	0x5d8c
+	.2byte	0x1c7
+	.4byte	0x5dab
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	utf8_encoding_ns
 	.uleb128 0x7
 	.4byte	0x40e
 	.uleb128 0x42
-	.4byte	.LASF309
+	.4byte	.LASF307
 	.byte	0x1
-	.2byte	0x1fe
-	.4byte	0x5d8c
+	.2byte	0x1d0
+	.4byte	0x5dab
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	utf8_encoding
 	.uleb128 0x42
-	.4byte	.LASF310
+	.4byte	.LASF308
 	.byte	0x1
-	.2byte	0x20b
-	.4byte	0x5d8c
+	.2byte	0x1dc
+	.4byte	0x5dab
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	internal_utf8_encoding_ns
 	.uleb128 0x42
-	.4byte	.LASF311
+	.4byte	.LASF309
 	.byte	0x1
-	.2byte	0x216
-	.4byte	0x5d8c
+	.2byte	0x1e6
+	.4byte	0x5dab
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	internal_utf8_encoding
 	.uleb128 0x42
-	.4byte	.LASF312
+	.4byte	.LASF310
 	.byte	0x1
-	.2byte	0x24a
-	.4byte	0x5d8c
+	.2byte	0x216
+	.4byte	0x5dab
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	latin1_encoding_ns
 	.uleb128 0x42
-	.4byte	.LASF313
+	.4byte	.LASF311
 	.byte	0x1
-	.2byte	0x255
-	.4byte	0x5d8c
+	.2byte	0x220
+	.4byte	0x5dab
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	latin1_encoding
 	.uleb128 0x42
-	.4byte	.LASF314
+	.4byte	.LASF312
 	.byte	0x1
-	.2byte	0x270
-	.4byte	0x5d8c
+	.2byte	0x239
+	.4byte	0x5dab
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	ascii_encoding_ns
 	.uleb128 0x42
-	.4byte	.LASF315
+	.4byte	.LASF313
 	.byte	0x1
-	.2byte	0x27b
-	.4byte	0x5d8c
+	.2byte	0x243
+	.4byte	0x5dab
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	ascii_encoding
 	.uleb128 0x42
-	.4byte	.LASF316
+	.4byte	.LASF314
 	.byte	0x1
-	.2byte	0x35d
-	.4byte	0x5d8c
+	.2byte	0x32b
+	.4byte	0x5dab
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	little2_encoding_ns
 	.uleb128 0x42
-	.4byte	.LASF317
+	.4byte	.LASF315
 	.byte	0x1
-	.2byte	0x36e
-	.4byte	0x5d8c
+	.2byte	0x33b
+	.4byte	0x5dab
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	little2_encoding
 	.uleb128 0x42
-	.4byte	.LASF318
+	.4byte	.LASF316
 	.byte	0x1
-	.2byte	0x383
-	.4byte	0x5d8c
+	.2byte	0x34f
+	.4byte	0x5dab
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	internal_little2_encoding_ns
 	.uleb128 0x42
-	.4byte	.LASF319
+	.4byte	.LASF317
 	.byte	0x1
-	.2byte	0x38e
-	.4byte	0x5d8c
+	.2byte	0x359
+	.4byte	0x5dab
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	internal_little2_encoding
 	.uleb128 0x42
-	.4byte	.LASF320
+	.4byte	.LASF318
 	.byte	0x1
-	.2byte	0x3ea
-	.4byte	0x5d8c
+	.2byte	0x3b2
+	.4byte	0x5dab
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	big2_encoding_ns
 	.uleb128 0x42
-	.4byte	.LASF321
+	.4byte	.LASF319
 	.byte	0x1
-	.2byte	0x3fb
-	.4byte	0x5d8c
+	.2byte	0x3c2
+	.4byte	0x5dab
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	big2_encoding
 	.uleb128 0x42
-	.4byte	.LASF322
+	.4byte	.LASF320
 	.byte	0x1
-	.2byte	0x4b8
-	.4byte	0x5e8d
+	.2byte	0x471
+	.4byte	0x5eac
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	KW_version
@@ -39439,90 +39460,90 @@ namingBitmap:
 	.4byte	0x9e
 	.uleb128 0x8
 	.4byte	0x8c
-	.4byte	0x5ea2
+	.4byte	0x5ec1
 	.uleb128 0x9
 	.4byte	0x76
 	.byte	0x8
 	.byte	0
 	.uleb128 0x42
-	.4byte	.LASF323
+	.4byte	.LASF321
 	.byte	0x1
-	.2byte	0x4bc
-	.4byte	0x5eb4
+	.2byte	0x474
+	.4byte	0x5ed3
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	KW_encoding
 	.uleb128 0x7
-	.4byte	0x5e92
+	.4byte	0x5eb1
 	.uleb128 0x8
 	.4byte	0x8c
-	.4byte	0x5ec9
+	.4byte	0x5ee8
 	.uleb128 0x9
 	.4byte	0x76
 	.byte	0xa
 	.byte	0
 	.uleb128 0x42
-	.4byte	.LASF324
+	.4byte	.LASF322
 	.byte	0x1
-	.2byte	0x4c0
-	.4byte	0x5edb
+	.2byte	0x477
+	.4byte	0x5efa
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	KW_standalone
 	.uleb128 0x7
-	.4byte	0x5eb9
+	.4byte	0x5ed8
 	.uleb128 0x42
-	.4byte	.LASF325
+	.4byte	.LASF323
 	.byte	0x1
-	.2byte	0x4c5
-	.4byte	0x5ef2
+	.2byte	0x47b
+	.4byte	0x5f11
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	KW_yes
 	.uleb128 0x7
-	.4byte	0x5882
+	.4byte	0x5880
 	.uleb128 0x8
 	.4byte	0x8c
-	.4byte	0x5f07
+	.4byte	0x5f26
 	.uleb128 0x9
 	.4byte	0x76
 	.byte	0x2
 	.byte	0
 	.uleb128 0x42
-	.4byte	.LASF326
+	.4byte	.LASF324
 	.byte	0x1
-	.2byte	0x4c9
-	.4byte	0x5f19
+	.2byte	0x47d
+	.4byte	0x5f38
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	KW_no
 	.uleb128 0x7
-	.4byte	0x5ef7
+	.4byte	0x5f16
 	.uleb128 0x42
-	.4byte	.LASF327
+	.4byte	.LASF325
 	.byte	0x1
-	.2byte	0x639
-	.4byte	0x5f30
+	.2byte	0x5ce
+	.4byte	0x5f4f
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	KW_ISO_8859_1
 	.uleb128 0x7
-	.4byte	0x5eb9
+	.4byte	0x5ed8
 	.uleb128 0x42
-	.4byte	.LASF328
+	.4byte	.LASF326
 	.byte	0x1
-	.2byte	0x63d
-	.4byte	0x5f47
+	.2byte	0x5d1
+	.4byte	0x5f66
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	KW_US_ASCII
 	.uleb128 0x7
-	.4byte	0x5e92
+	.4byte	0x5eb1
 	.uleb128 0x42
-	.4byte	.LASF329
+	.4byte	.LASF327
 	.byte	0x1
-	.2byte	0x641
-	.4byte	0x5f5e
+	.2byte	0x5d4
+	.4byte	0x5f7d
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	KW_UTF_8
@@ -39530,71 +39551,71 @@ namingBitmap:
 	.4byte	0x779
 	.uleb128 0x8
 	.4byte	0x8c
-	.4byte	0x5f73
+	.4byte	0x5f92
 	.uleb128 0x9
 	.4byte	0x76
 	.byte	0x6
 	.byte	0
 	.uleb128 0x42
-	.4byte	.LASF330
+	.4byte	.LASF328
 	.byte	0x1
-	.2byte	0x644
-	.4byte	0x5f85
+	.2byte	0x5d6
+	.4byte	0x5fa4
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	KW_UTF_16
 	.uleb128 0x7
-	.4byte	0x5f63
+	.4byte	0x5f82
 	.uleb128 0x42
-	.4byte	.LASF331
+	.4byte	.LASF329
 	.byte	0x1
-	.2byte	0x647
-	.4byte	0x5f9c
+	.2byte	0x5d8
+	.4byte	0x5fbb
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	KW_UTF_16BE
 	.uleb128 0x7
-	.4byte	0x5e92
+	.4byte	0x5eb1
 	.uleb128 0x42
-	.4byte	.LASF332
+	.4byte	.LASF330
 	.byte	0x1
-	.2byte	0x64b
-	.4byte	0x5fb3
+	.2byte	0x5db
+	.4byte	0x5fd2
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	KW_UTF_16LE
 	.uleb128 0x7
-	.4byte	0x5e92
+	.4byte	0x5eb1
 	.uleb128 0x8
 	.4byte	0x228
-	.4byte	0x5fc8
+	.4byte	0x5fe7
 	.uleb128 0x9
 	.4byte	0x76
 	.byte	0x6
 	.byte	0
 	.uleb128 0x61
-	.4byte	.LASF333
+	.4byte	.LASF331
 	.byte	0x3
-	.byte	0x38
-	.4byte	0x5fd9
+	.byte	0x35
+	.4byte	0x5ff8
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	encodings
 	.uleb128 0x7
-	.4byte	0x5fb8
+	.4byte	0x5fd7
 	.uleb128 0x61
-	.4byte	.LASF334
+	.4byte	.LASF332
 	.byte	0x3
-	.byte	0x38
-	.4byte	0x5fef
+	.byte	0x35
+	.4byte	0x600e
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	encodingsNS
 	.uleb128 0x7
-	.4byte	0x5fb8
+	.4byte	0x5fd7
 	.uleb128 0x62
-	.4byte	.LASF340
-	.4byte	.LASF340
+	.4byte	.LASF338
+	.4byte	.LASF338
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -39965,7 +39986,7 @@ namingBitmap:
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
-	.uleb128 0xe
+	.uleb128 0x8
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
@@ -39978,7 +39999,7 @@ namingBitmap:
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
-	.uleb128 0x8
+	.uleb128 0xe
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
@@ -40023,7 +40044,7 @@ namingBitmap:
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
-	.uleb128 0xe
+	.uleb128 0x8
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
@@ -40036,7 +40057,7 @@ namingBitmap:
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
-	.uleb128 0x8
+	.uleb128 0xe
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
@@ -40172,7 +40193,7 @@ namingBitmap:
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
-	.uleb128 0xe
+	.uleb128 0x8
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
@@ -40187,7 +40208,7 @@ namingBitmap:
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
-	.uleb128 0xe
+	.uleb128 0x8
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
@@ -40202,7 +40223,7 @@ namingBitmap:
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
-	.uleb128 0x8
+	.uleb128 0xe
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
@@ -40210,7 +40231,7 @@ namingBitmap:
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x2
-	.uleb128 0x17
+	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x30
@@ -40588,7 +40609,7 @@ namingBitmap:
 	.byte	0
 	.byte	0
 	.uleb128 0x4c
-	.uleb128 0x5
+	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0x8
@@ -40614,25 +40635,10 @@ namingBitmap:
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x4e
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x31
@@ -40649,7 +40655,7 @@ namingBitmap:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x50
+	.uleb128 0x4f
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x31
@@ -40658,7 +40664,7 @@ namingBitmap:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x51
+	.uleb128 0x50
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x31
@@ -40667,14 +40673,14 @@ namingBitmap:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x51
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x31
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x52
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x31
@@ -40683,7 +40689,7 @@ namingBitmap:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x53
 	.uleb128 0x410a
 	.byte	0
 	.uleb128 0x31
@@ -40692,7 +40698,7 @@ namingBitmap:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x54
 	.uleb128 0xa
 	.byte	0
 	.uleb128 0x3
@@ -40703,14 +40709,14 @@ namingBitmap:
 	.uleb128 0x5
 	.byte	0
 	.byte	0
-	.uleb128 0x56
+	.uleb128 0x55
 	.uleb128 0xb
 	.byte	0x1
 	.uleb128 0x1
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x57
+	.uleb128 0x56
 	.uleb128 0xa
 	.byte	0
 	.uleb128 0x31
@@ -40719,7 +40725,7 @@ namingBitmap:
 	.uleb128 0x1
 	.byte	0
 	.byte	0
-	.uleb128 0x58
+	.uleb128 0x57
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x31
@@ -40728,14 +40734,14 @@ namingBitmap:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x59
+	.uleb128 0x58
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x31
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x5a
+	.uleb128 0x59
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -40760,7 +40766,7 @@ namingBitmap:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x5b
+	.uleb128 0x5a
 	.uleb128 0xb
 	.byte	0
 	.uleb128 0x11
@@ -40769,7 +40775,7 @@ namingBitmap:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x5c
+	.uleb128 0x5b
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -40794,6 +40800,31 @@ namingBitmap:
 	.uleb128 0x19
 	.uleb128 0x1
 	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x5c
+	.uleb128 0x2e
+	.byte	0
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x27
+	.uleb128 0x19
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x6
+	.uleb128 0x40
+	.uleb128 0x18
+	.uleb128 0x2117
+	.uleb128 0x19
 	.byte	0
 	.byte	0
 	.uleb128 0x5d
@@ -40806,7 +40837,7 @@ namingBitmap:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0x5
+	.uleb128 0xb
 	.uleb128 0x27
 	.uleb128 0x19
 	.uleb128 0x49
@@ -40823,31 +40854,6 @@ namingBitmap:
 	.byte	0
 	.uleb128 0x5e
 	.uleb128 0x2e
-	.byte	0
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x27
-	.uleb128 0x19
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x6
-	.uleb128 0x40
-	.uleb128 0x18
-	.uleb128 0x2117
-	.uleb128 0x19
-	.byte	0
-	.byte	0
-	.uleb128 0x5f
-	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
 	.uleb128 0x19
@@ -40871,6 +40877,21 @@ namingBitmap:
 	.uleb128 0x19
 	.uleb128 0x1
 	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x5f
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x17
 	.byte	0
 	.byte	0
 	.uleb128 0x60
@@ -45054,8 +45075,8 @@ namingBitmap:
 	.4byte	.LVL774
 	.4byte	.LVL775
 	.2byte	0x3
-	.byte	0x77
-	.sleb128 -4
+	.byte	0x73
+	.sleb128 -6
 	.byte	0x9f
 	.4byte	.LVL775
 	.4byte	.LVL778
@@ -45152,8 +45173,8 @@ namingBitmap:
 	.4byte	.LVL774
 	.4byte	.LVL775
 	.2byte	0x3
-	.byte	0x77
-	.sleb128 -2
+	.byte	0x73
+	.sleb128 -4
 	.byte	0x9f
 	.4byte	.LVL775
 	.4byte	.LVL778
@@ -54029,17 +54050,17 @@ namingBitmap:
 	.4byte	0
 .LLST445:
 	.4byte	.LVL2261
-	.4byte	.LVL2269
+	.4byte	.LVL2267
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL2269
-	.4byte	.LVL2270
+	.4byte	.LVL2267
+	.4byte	.LVL2268
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
 	.byte	0x52
 	.byte	0x9f
-	.4byte	.LVL2270
+	.4byte	.LVL2268
 	.4byte	.LFE118
 	.2byte	0x1
 	.byte	0x52
@@ -54047,25 +54068,25 @@ namingBitmap:
 	.4byte	0
 .LLST446:
 	.4byte	.LVL2261
-	.4byte	.LVL2267
+	.4byte	.LVL2265
 	.2byte	0x1
 	.byte	0x53
-	.4byte	.LVL2267
-	.4byte	.LVL2268
+	.4byte	.LVL2265
+	.4byte	.LVL2266
 	.2byte	0x1
-	.byte	0x58
+	.byte	0x59
+	.4byte	.LVL2266
 	.4byte	.LVL2268
-	.4byte	.LVL2270
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
 	.byte	0x53
 	.byte	0x9f
-	.4byte	.LVL2270
-	.4byte	.LVL2273
+	.4byte	.LVL2268
+	.4byte	.LVL2271
 	.2byte	0x1
-	.byte	0x58
-	.4byte	.LVL2273
+	.byte	0x59
+	.4byte	.LVL2271
 	.4byte	.LFE118
 	.2byte	0x4
 	.byte	0xf3
@@ -54078,136 +54099,116 @@ namingBitmap:
 	.4byte	.LVL2261
 	.4byte	.LVL2263
 	.2byte	0x1
-	.byte	0x54
+	.byte	0x55
 	.4byte	.LVL2263
-	.4byte	.LVL2268
+	.4byte	.LVL2266
 	.2byte	0x2
 	.byte	0x91
-	.sleb128 -64
+	.sleb128 -60
+	.4byte	.LVL2266
 	.4byte	.LVL2268
-	.4byte	.LVL2270
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
-	.byte	0x54
+	.byte	0x55
 	.byte	0x9f
-	.4byte	.LVL2270
-	.4byte	.LVL2273
+	.4byte	.LVL2268
+	.4byte	.LVL2271
 	.2byte	0x2
 	.byte	0x91
-	.sleb128 -64
-	.4byte	.LVL2273
+	.sleb128 -60
+	.4byte	.LVL2271
 	.4byte	.LFE118
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
-	.byte	0x54
+	.byte	0x55
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
 .LLST448:
-	.4byte	.LVL2261
 	.4byte	.LVL2264
+	.4byte	.LVL2265
+	.2byte	0x2
+	.byte	0x30
+	.byte	0x9f
+	.4byte	.LVL2265
+	.4byte	.LVL2266
 	.2byte	0x1
-	.byte	0x55
-	.4byte	.LVL2264
-	.4byte	.LVL2268
-	.2byte	0x2
-	.byte	0x91
-	.sleb128 -60
+	.byte	0x56
 	.4byte	.LVL2268
 	.4byte	.LVL2270
-	.2byte	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x55
-	.byte	0x9f
-	.4byte	.LVL2270
-	.4byte	.LVL2273
-	.2byte	0x2
-	.byte	0x91
-	.sleb128 -60
-	.4byte	.LVL2273
-	.4byte	.LFE118
-	.2byte	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x55
-	.byte	0x9f
+	.2byte	0x1
+	.byte	0x56
 	.4byte	0
 	.4byte	0
 .LLST449:
 	.4byte	.LVL2262
-	.4byte	.LVL2264
-	.2byte	0x2
-	.byte	0x30
-	.byte	0x9f
-	.4byte	.LVL2264
-	.4byte	.LVL2266
-	.2byte	0x1
-	.byte	0x55
 	.4byte	.LVL2267
-	.4byte	.LVL2268
-	.2byte	0x1
-	.byte	0x56
-	.4byte	.LVL2270
-	.4byte	.LVL2272
-	.2byte	0x1
-	.byte	0x56
-	.4byte	0
-	.4byte	0
-.LLST450:
-	.4byte	.LVL2262
-	.4byte	.LVL2269
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL2269
-	.4byte	.LVL2270
+	.4byte	.LVL2267
+	.4byte	.LVL2268
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
 	.byte	0x52
 	.byte	0x9f
-	.4byte	.LVL2270
+	.4byte	.LVL2268
 	.4byte	.LFE118
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
 	.4byte	0
+.LLST450:
+	.4byte	.LVL2271
+	.4byte	.LVL2280-1
+	.2byte	0x1
+	.byte	0x58
+	.4byte	.LVL2281
+	.4byte	.LVL2284-1
+	.2byte	0x1
+	.byte	0x58
+	.4byte	.LVL2286
+	.4byte	.LFE118
+	.2byte	0x1
+	.byte	0x58
+	.4byte	0
+	.4byte	0
 .LLST451:
+	.4byte	.LVL2272
+	.4byte	.LVL2273
+	.2byte	0x1
+	.byte	0x55
 	.4byte	.LVL2274
 	.4byte	.LVL2275
 	.2byte	0x1
 	.byte	0x55
+	.4byte	.LVL2275
 	.4byte	.LVL2276
-	.4byte	.LVL2277
-	.2byte	0x1
-	.byte	0x55
+	.2byte	0x2
+	.byte	0x79
+	.sleb128 0
 	.4byte	.LVL2277
 	.4byte	.LVL2278
-	.2byte	0x2
-	.byte	0x78
-	.sleb128 0
+	.2byte	0x1
+	.byte	0x55
 	.4byte	.LVL2279
-	.4byte	.LVL2280
+	.4byte	.LVL2282
 	.2byte	0x1
 	.byte	0x55
-	.4byte	.LVL2281
 	.4byte	.LVL2283
-	.2byte	0x1
-	.byte	0x55
-	.4byte	.LVL2284
-	.4byte	.LVL2286
+	.4byte	.LVL2285
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
 	.4byte	0
 .LLST452:
-	.4byte	.LVL2288
-	.4byte	.LVL2290
+	.4byte	.LVL2287
+	.4byte	.LVL2289
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL2290
+	.4byte	.LVL2289
 	.4byte	.LFE125
 	.2byte	0x4
 	.byte	0xf3
@@ -54217,11 +54218,11 @@ namingBitmap:
 	.4byte	0
 	.4byte	0
 .LLST453:
-	.4byte	.LVL2291
-	.4byte	.LVL2293
+	.4byte	.LVL2290
+	.4byte	.LVL2292
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL2293
+	.4byte	.LVL2292
 	.4byte	.LFE127
 	.2byte	0x4
 	.byte	0xf3
@@ -54231,11 +54232,11 @@ namingBitmap:
 	.4byte	0
 	.4byte	0
 .LLST454:
-	.4byte	.LVL2294
-	.4byte	.LVL2296
+	.4byte	.LVL2293
+	.4byte	.LVL2295
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL2296
+	.4byte	.LVL2295
 	.4byte	.LFE132
 	.2byte	0x4
 	.byte	0xf3
@@ -54245,11 +54246,11 @@ namingBitmap:
 	.4byte	0
 	.4byte	0
 .LLST455:
-	.4byte	.LVL2297
-	.4byte	.LVL2299
+	.4byte	.LVL2296
+	.4byte	.LVL2298
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL2299
+	.4byte	.LVL2298
 	.4byte	.LFE134
 	.2byte	0x4
 	.byte	0xf3
@@ -54259,11 +54260,11 @@ namingBitmap:
 	.4byte	0
 	.4byte	0
 .LLST456:
-	.4byte	.LVL2300
-	.4byte	.LVL2302
+	.4byte	.LVL2299
+	.4byte	.LVL2301
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL2302
+	.4byte	.LVL2301
 	.4byte	.LFE135
 	.2byte	0x4
 	.byte	0xf3
@@ -55045,59 +55046,59 @@ namingBitmap:
 	.section	.debug_str,"MS",@progbits,1
 .LASF90:
 	.string	"BT_LPAR"
-.LASF297:
+.LASF295:
 	.string	"XmlUtf16Encode"
-.LASF184:
+.LASF182:
 	.string	"plane"
-.LASF326:
+.LASF324:
 	.string	"KW_no"
-.LASF234:
+.LASF232:
 	.string	"unknown_isNmstrt"
-.LASF178:
+.LASF176:
 	.string	"from"
-.LASF263:
+.LASF261:
 	.string	"little2_scanAtts"
 .LASF93:
 	.string	"BT_PLUS"
 .LASF31:
 	.string	"charRefNumber"
-.LASF152:
+.LASF150:
 	.string	"normal_attributeValueTok"
 .LASF16:
 	.string	"POSITION"
-.LASF155:
+.LASF153:
 	.string	"normal_ignoreSectionTok"
-.LASF219:
+.LASF217:
 	.string	"big2_nameMatchesAscii"
 .LASF107:
 	.string	"ISO_8859_1_ENC"
 .LASF20:
 	.string	"normalized"
-.LASF122:
+.LASF121:
 	.string	"little2_checkPiTarget"
 .LASF2:
 	.string	"unsigned int"
-.LASF170:
+.LASF168:
 	.string	"end1"
-.LASF324:
+.LASF322:
 	.string	"KW_standalone"
 .LASF29:
 	.string	"skipS"
-.LASF315:
+.LASF313:
 	.string	"ascii_encoding"
-.LASF283:
+.LASF281:
 	.string	"prev"
-.LASF328:
+.LASF326:
 	.string	"KW_US_ASCII"
-.LASF115:
+.LASF114:
 	.string	"utf8_isInvalid2"
-.LASF194:
+.LASF192:
 	.string	"little2_scanLit"
-.LASF303:
+.LASF301:
 	.string	"XmlParseXmlDeclNS"
-.LASF323:
+.LASF321:
 	.string	"KW_encoding"
-.LASF156:
+.LASF154:
 	.string	"level"
 .LASF83:
 	.string	"BT_HEX"
@@ -55105,11 +55106,11 @@ namingBitmap:
 	.string	"normal_encoding"
 .LASF76:
 	.string	"BT_SOL"
-.LASF158:
+.LASF156:
 	.string	"badPtr"
-.LASF337:
+.LASF335:
 	.string	"XML_Convert_Result"
-.LASF221:
+.LASF219:
 	.string	"big2_skipS"
 .LASF53:
 	.string	"isNmstrt2"
@@ -55117,33 +55118,33 @@ namingBitmap:
 	.string	"isNmstrt3"
 .LASF55:
 	.string	"isNmstrt4"
-.LASF321:
+.LASF319:
 	.string	"big2_encoding"
-.LASF148:
+.LASF146:
 	.string	"normal_scanHexCharRef"
-.LASF195:
+.LASF193:
 	.string	"little2_attributeValueTok"
 .LASF14:
 	.string	"lineNumber"
 .LASF69:
 	.string	"BT_LF"
-.LASF327:
+.LASF325:
 	.string	"KW_ISO_8859_1"
-.LASF308:
+.LASF306:
 	.string	"utf8_encoding_ns"
-.LASF117:
+.LASF116:
 	.string	"normal_checkPiTarget"
-.LASF241:
+.LASF239:
 	.string	"initScanProlog"
 .LASF61:
 	.string	"BT_LT"
-.LASF172:
+.LASF170:
 	.string	"normal_nameLength"
 .LASF59:
 	.string	"BT_NONXML"
-.LASF199:
+.LASF197:
 	.string	"little2_getAtts"
-.LASF262:
+.LASF260:
 	.string	"little2_scanEndTag"
 .LASF56:
 	.string	"isInvalid2"
@@ -55151,159 +55152,157 @@ namingBitmap:
 	.string	"isInvalid3"
 .LASF58:
 	.string	"isInvalid4"
-.LASF325:
+.LASF323:
 	.string	"KW_yes"
-.LASF310:
+.LASF308:
 	.string	"internal_utf8_encoding_ns"
-.LASF176:
+.LASF174:
 	.string	"fromLim"
-.LASF201:
+.LASF199:
 	.string	"little2_nameMatchesAscii"
-.LASF278:
+.LASF276:
 	.string	"encodingName"
 .LASF110:
 	.string	"UTF_16_ENC"
-.LASF301:
+.LASF299:
 	.string	"XmlGetUtf16InternalEncodingNS"
-.LASF114:
-	.string	"UNUSED_enc"
-.LASF159:
+.LASF157:
 	.string	"normal_getAtts"
-.LASF306:
+.LASF304:
 	.string	"nmstrtPages"
-.LASF264:
+.LASF262:
 	.string	"little2_contentTok"
-.LASF207:
+.LASF205:
 	.string	"big2_cdataSectionTok"
-.LASF179:
+.LASF177:
 	.string	"latin1_toUtf8"
 .LASF79:
 	.string	"BT_LSQB"
-.LASF196:
+.LASF194:
 	.string	"little2_entityValueTok"
-.LASF274:
+.LASF272:
 	.string	"encodingFinder"
-.LASF266:
+.LASF264:
 	.string	"big2_scanDecl"
-.LASF164:
+.LASF162:
 	.string	"inValue"
-.LASF146:
+.LASF144:
 	.string	"normal_cdataSectionTok"
-.LASF228:
+.LASF226:
 	.string	"result"
-.LASF282:
+.LASF280:
 	.string	"walked"
-.LASF119:
+.LASF118:
 	.string	"normal_scanCdataSection"
 .LASF40:
 	.string	"SCANNER"
 .LASF8:
 	.string	"long long unsigned int"
-.LASF226:
+.LASF224:
 	.string	"isSpace"
-.LASF118:
+.LASF117:
 	.string	"tokPtr"
 .LASF75:
 	.string	"BT_EXCL"
 .LASF92:
 	.string	"BT_AST"
-.LASF161:
+.LASF159:
 	.string	"atts"
-.LASF222:
+.LASF220:
 	.string	"big2_updatePosition"
 .LASF102:
 	.string	"convert"
-.LASF169:
+.LASF167:
 	.string	"ptr1"
 .LASF80:
 	.string	"BT_S"
-.LASF298:
+.LASF296:
 	.string	"XmlInitEncoding"
-.LASF288:
+.LASF286:
 	.string	"bytesStorable"
-.LASF142:
+.LASF140:
 	.string	"utf8_isNmstrt2"
-.LASF143:
+.LASF141:
 	.string	"utf8_isNmstrt3"
-.LASF220:
+.LASF218:
 	.string	"big2_nameLength"
 .LASF27:
 	.string	"nameMatchesAscii"
 .LASF84:
 	.string	"BT_DIGIT"
-.LASF335:
+.LASF333:
 	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
-.LASF128:
+.LASF127:
 	.string	"namePtr"
-.LASF293:
+.LASF291:
 	.string	"charNum"
-.LASF231:
+.LASF229:
 	.string	"big2_charRefNumber"
 .LASF1:
 	.string	"size_t"
-.LASF135:
+.LASF134:
 	.string	"XmlUtf8Encode"
-.LASF154:
+.LASF152:
 	.string	"normal_entityValueTok"
-.LASF225:
-	.string	"toAscii"
-.LASF209:
-	.string	"big2_scanHexCharRef"
-.LASF269:
-	.string	"big2_scanLt"
-.LASF339:
-	.string	"_INTERNAL_trim_to_complete_utf8_characters"
-.LASF240:
-	.string	"encodingTable"
-.LASF287:
-	.string	"bytesAvailable"
-.LASF233:
-	.string	"uenc"
-.LASF291:
-	.string	"_Bool"
-.LASF238:
-	.string	"encodingNames"
-.LASF261:
-	.string	"little2_scanLt"
-.LASF139:
-	.string	"isNever"
 .LASF223:
+	.string	"toAscii"
+.LASF207:
+	.string	"big2_scanHexCharRef"
+.LASF267:
+	.string	"big2_scanLt"
+.LASF337:
+	.string	"_INTERNAL_trim_to_complete_utf8_characters"
+.LASF238:
+	.string	"encodingTable"
+.LASF285:
+	.string	"bytesAvailable"
+.LASF231:
+	.string	"uenc"
+.LASF289:
+	.string	"_Bool"
+.LASF236:
+	.string	"encodingNames"
+.LASF259:
+	.string	"little2_scanLt"
+.LASF137:
+	.string	"isNever"
+.LASF221:
 	.string	"streqci"
-.LASF211:
+.LASF209:
 	.string	"big2_scanPercent"
 .LASF95:
 	.string	"BT_VERBAR"
-.LASF319:
+.LASF317:
 	.string	"internal_little2_encoding"
-.LASF311:
+.LASF309:
 	.string	"internal_utf8_encoding"
-.LASF300:
+.LASF298:
 	.string	"XmlGetUtf8InternalEncodingNS"
 .LASF33:
 	.string	"updatePosition"
-.LASF133:
+.LASF132:
 	.string	"min3"
-.LASF134:
+.LASF133:
 	.string	"min4"
-.LASF208:
+.LASF206:
 	.string	"big2_scanCharRef"
-.LASF317:
+.LASF315:
 	.string	"little2_encoding"
-.LASF181:
+.LASF179:
 	.string	"ascii_toUtf8"
-.LASF249:
+.LASF247:
 	.string	"normal_scanDecl"
-.LASF320:
+.LASF318:
 	.string	"big2_encoding_ns"
 .LASF41:
 	.string	"XML_CONVERT_COMPLETED"
-.LASF171:
+.LASF169:
 	.string	"ptr2"
 .LASF109:
 	.string	"UTF_8_ENC"
-.LASF334:
+.LASF332:
 	.string	"encodingsNS"
-.LASF316:
+.LASF314:
 	.string	"little2_encoding_ns"
 .LASF50:
 	.string	"isName2"
@@ -55313,11 +55312,11 @@ namingBitmap:
 	.string	"isName4"
 .LASF12:
 	.string	"char"
-.LASF237:
+.LASF235:
 	.string	"getEncodingIndex"
-.LASF215:
+.LASF213:
 	.string	"big2_ignoreSectionTok"
-.LASF270:
+.LASF268:
 	.string	"big2_scanEndTag"
 .LASF106:
 	.string	"UNKNOWN_ENC"
@@ -55325,23 +55324,23 @@ namingBitmap:
 	.string	"encoding"
 .LASF0:
 	.string	"ptrdiff_t"
-.LASF255:
+.LASF253:
 	.string	"normal_scanAtts"
-.LASF175:
+.LASF173:
 	.string	"fromP"
-.LASF218:
+.LASF216:
 	.string	"big2_predefinedEntityName"
-.LASF137:
+.LASF136:
 	.string	"table"
-.LASF299:
+.LASF297:
 	.string	"XmlParseXmlDecl"
-.LASF256:
+.LASF254:
 	.string	"normal_contentTok"
-.LASF163:
+.LASF161:
 	.string	"inName"
-.LASF174:
+.LASF172:
 	.string	"utf8_toUtf16"
-.LASF322:
+.LASF320:
 	.string	"KW_version"
 .LASF77:
 	.string	"BT_SEMI"
@@ -55353,27 +55352,27 @@ namingBitmap:
 	.string	"BT_LEAD4"
 .LASF91:
 	.string	"BT_RPAR"
-.LASF191:
+.LASF189:
 	.string	"little2_scanHexCharRef"
 .LASF46:
 	.string	"INIT_ENCODING"
-.LASF302:
+.LASF300:
 	.string	"XmlInitEncodingNS"
-.LASF180:
+.LASF178:
 	.string	"latin1_toUtf16"
-.LASF173:
+.LASF171:
 	.string	"normal_skipS"
 .LASF82:
 	.string	"BT_COLON"
-.LASF276:
+.LASF274:
 	.string	"versionPtr"
-.LASF307:
+.LASF305:
 	.string	"namePages"
 .LASF100:
 	.string	"unknown_encoding"
-.LASF295:
+.LASF293:
 	.string	"XmlGetUtf8InternalEncoding"
-.LASF289:
+.LASF287:
 	.string	"fromLimBefore"
 .LASF7:
 	.string	"long long int"
@@ -55383,113 +55382,111 @@ namingBitmap:
 	.string	"US_ASCII_ENC"
 .LASF81:
 	.string	"BT_NMSTRT"
-.LASF214:
+.LASF212:
 	.string	"big2_entityValueTok"
-.LASF138:
-	.string	"UNUSED_p"
-.LASF268:
+.LASF266:
 	.string	"big2_prologTok"
-.LASF157:
+.LASF155:
 	.string	"normal_isPublicId"
-.LASF124:
+.LASF123:
 	.string	"CDATA_LSQB"
-.LASF332:
+.LASF330:
 	.string	"KW_UTF_16LE"
 .LASF60:
 	.string	"BT_MALFORM"
-.LASF275:
+.LASF273:
 	.string	"isGeneralTextEntity"
 .LASF67:
 	.string	"BT_TRAIL"
-.LASF248:
+.LASF246:
 	.string	"target"
-.LASF280:
+.LASF278:
 	.string	"nameEnd"
-.LASF309:
+.LASF307:
 	.string	"utf8_encoding"
-.LASF333:
+.LASF331:
 	.string	"encodings"
-.LASF294:
+.LASF292:
 	.string	"XmlSizeOfUnknownEncoding"
 .LASF78:
 	.string	"BT_NUM"
 .LASF111:
 	.string	"UTF_16BE_ENC"
-.LASF250:
+.LASF248:
 	.string	"normal_scanPoundName"
-.LASF243:
+.LASF241:
 	.string	"findEncoding"
 .LASF74:
 	.string	"BT_QUEST"
-.LASF212:
+.LASF210:
 	.string	"big2_scanLit"
-.LASF235:
+.LASF233:
 	.string	"unknown_isInvalid"
-.LASF285:
+.LASF283:
 	.string	"input_incomplete"
 .LASF26:
 	.string	"literalScanners"
-.LASF271:
+.LASF269:
 	.string	"big2_scanAtts"
 .LASF68:
 	.string	"BT_CR"
 .LASF72:
 	.string	"BT_APOS"
-.LASF265:
+.LASF263:
 	.string	"big2_scanPi"
-.LASF224:
+.LASF222:
 	.string	"initUpdatePosition"
-.LASF258:
+.LASF256:
 	.string	"little2_scanDecl"
-.LASF198:
+.LASF196:
 	.string	"little2_isPublicId"
-.LASF187:
+.LASF185:
 	.string	"big2_toUtf16"
-.LASF329:
+.LASF327:
 	.string	"KW_UTF_8"
-.LASF230:
+.LASF228:
 	.string	"little2_charRefNumber"
 .LASF113:
 	.string	"NO_ENC"
-.LASF126:
+.LASF125:
 	.string	"big2_scanCdataSection"
-.LASF206:
+.LASF204:
 	.string	"big2_scanComment"
-.LASF129:
+.LASF128:
 	.string	"nameEndPtr"
 .LASF32:
 	.string	"predefinedEntityName"
-.LASF252:
+.LASF250:
 	.string	"normal_scanLt"
-.LASF336:
+.LASF334:
 	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
-.LASF254:
+.LASF252:
 	.string	"normal_scanEndTag"
-.LASF193:
+.LASF191:
 	.string	"little2_scanPercent"
 .LASF112:
 	.string	"UTF_16LE_ENC"
-.LASF150:
+.LASF148:
 	.string	"normal_scanPercent"
-.LASF202:
+.LASF200:
 	.string	"little2_nameLength"
-.LASF246:
+.LASF244:
 	.string	"findEncodingNS"
-.LASF296:
+.LASF294:
 	.string	"XmlGetUtf16InternalEncoding"
-.LASF190:
+.LASF188:
 	.string	"little2_scanCharRef"
 .LASF39:
 	.string	"isUtf16"
-.LASF236:
+.LASF234:
 	.string	"unknown_toUtf16"
 .LASF44:
 	.string	"initEnc"
 .LASF35:
 	.string	"utf8Convert"
-.LASF144:
+.LASF142:
 	.string	"utf8_isInvalid3"
-.LASF116:
+.LASF115:
 	.string	"utf8_isInvalid4"
 .LASF37:
 	.string	"minBytesPerChar"
@@ -55497,117 +55494,117 @@ namingBitmap:
 	.string	"columnNumber"
 .LASF18:
 	.string	"valuePtr"
-.LASF239:
+.LASF237:
 	.string	"initScan"
 .LASF21:
 	.string	"ATTRIBUTE"
-.LASF210:
+.LASF208:
 	.string	"big2_scanRef"
-.LASF318:
+.LASF316:
 	.string	"internal_little2_encoding_ns"
-.LASF273:
+.LASF271:
 	.string	"doParseXmlDecl"
 .LASF6:
 	.string	"short int"
-.LASF245:
+.LASF243:
 	.string	"initScanContentNS"
 .LASF47:
 	.string	"CONVERTER"
-.LASF229:
+.LASF227:
 	.string	"normal_charRefNumber"
 .LASF9:
 	.string	"long int"
 .LASF63:
 	.string	"BT_RSQB"
-.LASF314:
+.LASF312:
 	.string	"ascii_encoding_ns"
-.LASF330:
+.LASF328:
 	.string	"KW_UTF_16"
-.LASF151:
+.LASF149:
 	.string	"normal_scanLit"
-.LASF272:
+.LASF270:
 	.string	"big2_contentTok"
-.LASF168:
+.LASF166:
 	.string	"normal_nameMatchesAscii"
-.LASF232:
+.LASF230:
 	.string	"unknown_isName"
 .LASF104:
 	.string	"utf16"
-.LASF227:
+.LASF225:
 	.string	"checkCharRefNumber"
-.LASF251:
+.LASF249:
 	.string	"normal_prologTok"
 .LASF105:
 	.string	"utf8"
 .LASF86:
 	.string	"BT_MINUS"
-.LASF123:
+.LASF122:
 	.string	"little2_scanCdataSection"
-.LASF204:
+.LASF202:
 	.string	"normal_updatePosition"
-.LASF136:
+.LASF135:
 	.string	"XmlInitUnknownEncoding"
 .LASF94:
 	.string	"BT_COMMA"
-.LASF213:
+.LASF211:
 	.string	"big2_attributeValueTok"
-.LASF132:
+.LASF131:
 	.string	"min2"
-.LASF203:
+.LASF201:
 	.string	"little2_skipS"
-.LASF259:
+.LASF257:
 	.string	"little2_scanPoundName"
-.LASF338:
+.LASF336:
 	.string	"after"
-.LASF279:
+.LASF277:
 	.string	"standalone"
 .LASF17:
 	.string	"name"
-.LASF153:
+.LASF151:
 	.string	"start"
-.LASF147:
+.LASF145:
 	.string	"normal_scanCharRef"
-.LASF131:
+.LASF130:
 	.string	"open"
-.LASF192:
+.LASF190:
 	.string	"little2_scanRef"
 .LASF38:
 	.string	"isUtf8"
-.LASF160:
+.LASF158:
 	.string	"attsMax"
-.LASF292:
+.LASF290:
 	.string	"unknown_toUtf8"
-.LASF186:
+.LASF184:
 	.string	"big2_toUtf8"
 .LASF10:
 	.string	"sizetype"
-.LASF189:
+.LASF187:
 	.string	"little2_cdataSectionTok"
 .LASF11:
 	.string	"long unsigned int"
 .LASF71:
 	.string	"BT_QUOT"
-.LASF125:
+.LASF124:
 	.string	"big2_checkPiTarget"
-.LASF253:
+.LASF251:
 	.string	"hadColon"
-.LASF185:
+.LASF183:
 	.string	"little2_toUtf16"
-.LASF140:
+.LASF138:
 	.string	"utf8_isName2"
-.LASF141:
+.LASF139:
 	.string	"utf8_isName3"
-.LASF313:
+.LASF311:
 	.string	"latin1_encoding"
-.LASF149:
+.LASF147:
 	.string	"normal_scanRef"
-.LASF281:
+.LASF279:
 	.string	"fromLimRef"
 .LASF42:
 	.string	"XML_CONVERT_INPUT_INCOMPLETE"
 .LASF101:
 	.string	"normal"
-.LASF182:
+.LASF180:
 	.string	"unicode_byte_type"
 .LASF49:
 	.string	"type"
@@ -55627,45 +55624,45 @@ namingBitmap:
 	.string	"isPublicId"
 .LASF70:
 	.string	"BT_GT"
-.LASF121:
+.LASF120:
 	.string	"upper"
-.LASF166:
+.LASF164:
 	.string	"nAtts"
-.LASF331:
+.LASF329:
 	.string	"KW_UTF_16BE"
-.LASF247:
+.LASF245:
 	.string	"normal_scanPi"
 .LASF13:
 	.string	"XML_Size"
-.LASF188:
+.LASF186:
 	.string	"little2_scanComment"
-.LASF120:
+.LASF119:
 	.string	"nextTokPtr"
 .LASF62:
 	.string	"BT_AMP"
-.LASF312:
+.LASF310:
 	.string	"latin1_encoding_ns"
-.LASF165:
+.LASF163:
 	.string	"state"
 .LASF30:
 	.string	"getAtts"
-.LASF267:
+.LASF265:
 	.string	"big2_scanPoundName"
 .LASF28:
 	.string	"nameLength"
 .LASF19:
 	.string	"valueEnd"
-.LASF130:
+.LASF129:
 	.string	"valPtr"
 .LASF25:
 	.string	"scanners"
 .LASF73:
 	.string	"BT_EQUALS"
-.LASF242:
+.LASF240:
 	.string	"initScanContent"
-.LASF197:
+.LASF195:
 	.string	"little2_ignoreSectionTok"
-.LASF290:
+.LASF288:
 	.string	"bytesToCopy"
 .LASF88:
 	.string	"BT_NONASCII"
@@ -55677,52 +55674,52 @@ namingBitmap:
 	.string	"userData"
 .LASF3:
 	.string	"short unsigned int"
-.LASF162:
+.LASF160:
 	.string	"other"
-.LASF340:
+.LASF338:
 	.string	"memcpy"
-.LASF177:
+.LASF175:
 	.string	"toLim"
-.LASF305:
+.LASF303:
 	.string	"namingBitmap"
-.LASF284:
+.LASF282:
 	.string	"utf8_toUtf8"
-.LASF257:
+.LASF255:
 	.string	"little2_scanPi"
-.LASF277:
+.LASF275:
 	.string	"versionEndPtr"
-.LASF200:
+.LASF198:
 	.string	"little2_predefinedEntityName"
 .LASF87:
 	.string	"BT_OTHER"
-.LASF216:
+.LASF214:
 	.string	"big2_isPublicId"
-.LASF167:
+.LASF165:
 	.string	"normal_predefinedEntityName"
-.LASF260:
+.LASF258:
 	.string	"little2_prologTok"
-.LASF244:
+.LASF242:
 	.string	"initScanPrologNS"
-.LASF304:
+.LASF302:
 	.string	"XmlInitUnknownEncodingNS"
 .LASF36:
 	.string	"utf16Convert"
-.LASF183:
+.LASF181:
 	.string	"little2_toUtf8"
 .LASF85:
 	.string	"BT_NAME"
-.LASF217:
+.LASF215:
 	.string	"big2_getAtts"
 .LASF89:
 	.string	"BT_PERCNT"
-.LASF145:
+.LASF143:
 	.string	"normal_scanComment"
 .LASF23:
 	.string	"position"
-.LASF286:
+.LASF284:
 	.string	"output_exhausted"
-.LASF127:
+.LASF126:
 	.string	"parsePseudoAttribute"
-.LASF205:
+.LASF203:
 	.string	"little2_updatePosition"
 	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

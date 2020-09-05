@@ -14,7 +14,7 @@
 	.literal .LC6, s_dma_desc
 	.literal .LC7, -2147483648
 	.literal .LC9, .LC8
-	.literal .LC10, __func__$6152
+	.literal .LC10, __func__$6198
 	.literal .LC12, .LC11
 	.literal .LC13, 4096
 	.literal .LC15, .LC14
@@ -23,7 +23,7 @@
 	.align	4
 	.type	fill_dma_descriptors, @function
 fill_dma_descriptors:
-.LFB23:
+.LFB32:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdmmc_transaction.c"
 	.loc 1 208 0
 .LVL0:
@@ -182,7 +182,7 @@ fill_dma_descriptors:
 .L1:
 	retw.n
 .LBE9:
-.LFE23:
+.LFE32:
 	.size	fill_dma_descriptors, .-fill_dma_descriptors
 	.section	.rodata.str1.1
 .LC21:
@@ -193,12 +193,12 @@ fill_dma_descriptors:
 	.literal .LC19, SDMMC+48
 	.literal .LC20, SDMMC
 	.literal .LC22, .LC21
-	.literal .LC23, __func__$6184
+	.literal .LC23, __func__$6230
 	.literal .LC24, .LC11
 	.align	4
 	.type	process_command_response, @function
 process_command_response:
-.LFB28:
+.LFB37:
 	.loc 1 331 0 is_stmt 1
 .LVL19:
 	entry	sp, 32
@@ -281,7 +281,7 @@ process_command_response:
 	.loc 1 355 0
 	bnez.n	a2, .L40
 	retw.n
-.LFE28:
+.LFE37:
 	.size	process_command_response, .-process_command_response
 	.section	.text.process_data_status,"ax",@progbits
 	.literal_position
@@ -290,7 +290,7 @@ process_command_response:
 	.align	4
 	.type	process_data_status, @function
 process_data_status:
-.LFB29:
+.LFB38:
 	.loc 1 363 0
 .LVL28:
 	entry	sp, 32
@@ -353,7 +353,7 @@ process_data_status:
 	retw.n
 .LBE16:
 .LBE15:
-.LFE29:
+.LFE38:
 	.size	process_data_status, .-process_data_status
 	.section	.rodata.str1.1
 .LC29:
@@ -364,7 +364,7 @@ process_data_status:
 	.literal_position
 	.literal .LC28, s_request_mutex
 	.literal .LC30, .LC29
-	.literal .LC31, __func__$6119
+	.literal .LC31, __func__$6165
 	.literal .LC32, .LC11
 	.literal .LC33, s_pm_lock
 	.literal .LC35, .LC34
@@ -372,7 +372,7 @@ process_data_status:
 	.global	sdmmc_host_transaction_handler_init
 	.type	sdmmc_host_transaction_handler_init, @function
 sdmmc_host_transaction_handler_init:
-.LFB19:
+.LFB28:
 	.loc 1 87 0
 	entry	sp, 32
 .LCFI3:
@@ -424,7 +424,7 @@ sdmmc_host_transaction_handler_init:
 .L77:
 	.loc 1 103 0
 	retw.n
-.LFE19:
+.LFE28:
 	.size	sdmmc_host_transaction_handler_init, .-sdmmc_host_transaction_handler_init
 	.section	.rodata.str1.1
 .LC37:
@@ -433,14 +433,14 @@ sdmmc_host_transaction_handler_init:
 	.literal_position
 	.literal .LC36, s_request_mutex
 	.literal .LC38, .LC37
-	.literal .LC39, __func__$6123
+	.literal .LC39, __func__$6169
 	.literal .LC40, .LC11
 	.literal .LC41, s_pm_lock
 	.align	4
 	.global	sdmmc_host_transaction_handler_deinit
 	.type	sdmmc_host_transaction_handler_deinit, @function
 sdmmc_host_transaction_handler_deinit:
-.LFB20:
+.LFB29:
 	.loc 1 106 0
 	entry	sp, 32
 .LCFI4:
@@ -474,7 +474,7 @@ sdmmc_host_transaction_handler_deinit:
 	.loc 1 113 0
 	s32i.n	a3, a2, 0
 	retw.n
-.LFE20:
+.LFE29:
 	.size	sdmmc_host_transaction_handler_deinit, .-sdmmc_host_transaction_handler_deinit
 	.section	.rodata.str1.1
 .LC44:
@@ -493,7 +493,7 @@ sdmmc_host_transaction_handler_deinit:
 	.literal .LC47, .LC46
 	.literal .LC48, 4096
 	.literal .LC50, .LC49
-	.literal .LC51, __func__$6178
+	.literal .LC51, __func__$6224
 	.literal .LC52, .LC11
 	.literal .LC53, 34867200
 	.literal .LC54, -4097
@@ -516,7 +516,7 @@ sdmmc_host_transaction_handler_deinit:
 	.global	sdmmc_host_do_transaction
 	.type	sdmmc_host_do_transaction, @function
 sdmmc_host_do_transaction:
-.LFB21:
+.LFB30:
 	.loc 1 117 0
 .LVL45:
 	entry	sp, 80
@@ -1254,32 +1254,32 @@ sdmmc_host_do_transaction:
 .LVL157:
 	bbci	a4, 13, .L98
 	j	.L123
-.LFE21:
+.LFE30:
 	.size	sdmmc_host_do_transaction, .-sdmmc_host_do_transaction
-	.section	.rodata.__func__$6184,"a",@progbits
-	.type	__func__$6184, @object
-	.size	__func__$6184, 25
-__func__$6184:
+	.section	.rodata.__func__$6230,"a",@progbits
+	.type	__func__$6230, @object
+	.size	__func__$6230, 25
+__func__$6230:
 	.string	"process_command_response"
-	.section	.rodata.__func__$6152,"a",@progbits
-	.type	__func__$6152, @object
-	.size	__func__$6152, 21
-__func__$6152:
+	.section	.rodata.__func__$6198,"a",@progbits
+	.type	__func__$6198, @object
+	.size	__func__$6198, 21
+__func__$6198:
 	.string	"fill_dma_descriptors"
-	.section	.rodata.__func__$6178,"a",@progbits
-	.type	__func__$6178, @object
-	.size	__func__$6178, 12
-__func__$6178:
+	.section	.rodata.__func__$6224,"a",@progbits
+	.type	__func__$6224, @object
+	.size	__func__$6224, 12
+__func__$6224:
 	.string	"make_hw_cmd"
-	.section	.rodata.__func__$6123,"a",@progbits
-	.type	__func__$6123, @object
-	.size	__func__$6123, 38
-__func__$6123:
+	.section	.rodata.__func__$6169,"a",@progbits
+	.type	__func__$6169, @object
+	.size	__func__$6169, 38
+__func__$6169:
 	.string	"sdmmc_host_transaction_handler_deinit"
-	.section	.rodata.__func__$6119,"a",@progbits
-	.type	__func__$6119, @object
-	.size	__func__$6119, 36
-__func__$6119:
+	.section	.rodata.__func__$6165,"a",@progbits
+	.type	__func__$6165, @object
+	.size	__func__$6165, 36
+__func__$6165:
 	.string	"sdmmc_host_transaction_handler_init"
 	.section	.bss.s_pm_lock,"aw",@nobits
 	.align	4
@@ -1345,10 +1345,10 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI0-.LFB23
+	.4byte	.LCFI0-.LFB32
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1357,10 +1357,10 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.byte	0x4
-	.4byte	.LCFI1-.LFB28
+	.4byte	.LCFI1-.LFB37
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1369,10 +1369,10 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.byte	0x4
-	.4byte	.LCFI2-.LFB29
+	.4byte	.LCFI2-.LFB38
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1381,10 +1381,10 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI3-.LFB19
+	.4byte	.LCFI3-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1393,10 +1393,10 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI4-.LFB20
+	.4byte	.LCFI4-.LFB29
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1405,10 +1405,10 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI5-.LFB21
+	.4byte	.LCFI5-.LFB30
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -1431,7 +1431,7 @@ SDMMC_DATA_ERR_MASK:
 	.file 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x2033
+	.4byte	0x2034
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -1627,28 +1627,28 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xc
 	.byte	0x4
 	.byte	0xa
-	.byte	0x25
+	.byte	0x27
 	.4byte	0x1ad
 	.uleb128 0xd
 	.4byte	.LASF35
 	.byte	0xa
-	.byte	0x26
+	.byte	0x28
 	.4byte	0xa2
 	.uleb128 0xd
 	.4byte	.LASF36
 	.byte	0xa
-	.byte	0x27
+	.byte	0x29
 	.4byte	0xa2
 	.byte	0
 	.uleb128 0xe
 	.byte	0x10
 	.byte	0xa
-	.byte	0x17
+	.byte	0x19
 	.4byte	0x27c
 	.uleb128 0xf
 	.4byte	.LASF37
 	.byte	0xa
-	.byte	0x18
+	.byte	0x1a
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1657,7 +1657,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF38
 	.byte	0xa
-	.byte	0x19
+	.byte	0x1b
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1666,7 +1666,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF39
 	.byte	0xa
-	.byte	0x1a
+	.byte	0x1c
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1675,7 +1675,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF40
 	.byte	0xa
-	.byte	0x1b
+	.byte	0x1d
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1684,7 +1684,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF41
 	.byte	0xa
-	.byte	0x1c
+	.byte	0x1e
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1693,7 +1693,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF42
 	.byte	0xa
-	.byte	0x1d
+	.byte	0x1f
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1702,7 +1702,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF43
 	.byte	0xa
-	.byte	0x1e
+	.byte	0x20
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x18
@@ -1711,7 +1711,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF44
 	.byte	0xa
-	.byte	0x1f
+	.byte	0x21
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1720,7 +1720,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF45
 	.byte	0xa
-	.byte	0x20
+	.byte	0x22
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1729,7 +1729,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF46
 	.byte	0xa
-	.byte	0x21
+	.byte	0x23
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0xd
@@ -1738,7 +1738,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF47
 	.byte	0xa
-	.byte	0x22
+	.byte	0x24
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0xd
@@ -1747,7 +1747,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF48
 	.byte	0xa
-	.byte	0x23
+	.byte	0x25
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x6
@@ -1756,7 +1756,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x10
 	.4byte	.LASF140
 	.byte	0xa
-	.byte	0x24
+	.byte	0x26
 	.4byte	0xa2
 	.byte	0x8
 	.uleb128 0x11
@@ -1766,17 +1766,17 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x3
 	.4byte	.LASF49
 	.byte	0xa
-	.byte	0x29
+	.byte	0x2b
 	.4byte	0x1ad
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0xa
-	.byte	0x30
+	.byte	0x32
 	.4byte	0x3e8
 	.uleb128 0xf
 	.4byte	.LASF50
 	.byte	0xa
-	.byte	0x31
+	.byte	0x33
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x6
@@ -1785,7 +1785,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF51
 	.byte	0xa
-	.byte	0x32
+	.byte	0x34
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1794,7 +1794,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF52
 	.byte	0xa
-	.byte	0x33
+	.byte	0x35
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1803,7 +1803,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF53
 	.byte	0xa
-	.byte	0x34
+	.byte	0x36
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1812,7 +1812,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF54
 	.byte	0xa
-	.byte	0x35
+	.byte	0x37
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1821,7 +1821,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"rw"
 	.byte	0xa
-	.byte	0x36
+	.byte	0x38
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1830,7 +1830,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF55
 	.byte	0xa
-	.byte	0x37
+	.byte	0x39
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1839,7 +1839,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF56
 	.byte	0xa
-	.byte	0x38
+	.byte	0x3a
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1848,7 +1848,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF57
 	.byte	0xa
-	.byte	0x39
+	.byte	0x3b
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1857,7 +1857,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF58
 	.byte	0xa
-	.byte	0x3a
+	.byte	0x3c
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1866,7 +1866,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF59
 	.byte	0xa
-	.byte	0x3b
+	.byte	0x3d
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1875,7 +1875,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF60
 	.byte	0xa
-	.byte	0x3c
+	.byte	0x3e
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x5
@@ -1884,7 +1884,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF61
 	.byte	0xa
-	.byte	0x3d
+	.byte	0x3f
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1893,7 +1893,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF62
 	.byte	0xa
-	.byte	0x3e
+	.byte	0x40
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1902,7 +1902,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF63
 	.byte	0xa
-	.byte	0x3f
+	.byte	0x41
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1911,7 +1911,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF64
 	.byte	0xa
-	.byte	0x40
+	.byte	0x42
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1920,7 +1920,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF65
 	.byte	0xa
-	.byte	0x41
+	.byte	0x43
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1929,7 +1929,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF66
 	.byte	0xa
-	.byte	0x42
+	.byte	0x44
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1938,7 +1938,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF67
 	.byte	0xa
-	.byte	0x43
+	.byte	0x45
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1947,7 +1947,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF68
 	.byte	0xa
-	.byte	0x44
+	.byte	0x46
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1956,7 +1956,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF69
 	.byte	0xa
-	.byte	0x45
+	.byte	0x47
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1965,7 +1965,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF70
 	.byte	0xa
-	.byte	0x46
+	.byte	0x48
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1974,7 +1974,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF71
 	.byte	0xa
-	.byte	0x47
+	.byte	0x49
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -1984,17 +1984,17 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x3
 	.4byte	.LASF72
 	.byte	0xa
-	.byte	0x48
+	.byte	0x4a
 	.4byte	0x287
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0xa
-	.byte	0x4f
+	.byte	0x51
 	.4byte	0x50a
 	.uleb128 0xf
 	.4byte	.LASF73
 	.byte	0xa
-	.byte	0x50
+	.byte	0x52
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2003,7 +2003,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF74
 	.byte	0xa
-	.byte	0x51
+	.byte	0x53
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2012,7 +2012,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF75
 	.byte	0xa
-	.byte	0x52
+	.byte	0x54
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2021,7 +2021,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF37
 	.byte	0xa
-	.byte	0x53
+	.byte	0x55
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2030,7 +2030,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF76
 	.byte	0xa
-	.byte	0x54
+	.byte	0x56
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2039,7 +2039,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF77
 	.byte	0xa
-	.byte	0x55
+	.byte	0x57
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2048,7 +2048,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF78
 	.byte	0xa
-	.byte	0x56
+	.byte	0x58
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2057,7 +2057,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF79
 	.byte	0xa
-	.byte	0x57
+	.byte	0x59
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2066,7 +2066,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF80
 	.byte	0xa
-	.byte	0x58
+	.byte	0x5a
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2075,7 +2075,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF81
 	.byte	0xa
-	.byte	0x59
+	.byte	0x5b
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2084,7 +2084,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF82
 	.byte	0xa
-	.byte	0x5a
+	.byte	0x5c
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2093,7 +2093,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF83
 	.byte	0xa
-	.byte	0x5b
+	.byte	0x5d
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2102,7 +2102,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF43
 	.byte	0xa
-	.byte	0x5c
+	.byte	0x5e
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x4
@@ -2111,7 +2111,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF84
 	.byte	0xa
-	.byte	0x5d
+	.byte	0x5f
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x4
@@ -2120,7 +2120,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF85
 	.byte	0xa
-	.byte	0x5e
+	.byte	0x60
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x4
@@ -2129,7 +2129,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF86
 	.byte	0xa
-	.byte	0x5f
+	.byte	0x61
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2138,7 +2138,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF87
 	.byte	0xa
-	.byte	0x60
+	.byte	0x62
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2147,7 +2147,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF48
 	.byte	0xa
-	.byte	0x61
+	.byte	0x63
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x6
@@ -2157,25 +2157,25 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xc
 	.byte	0x4
 	.byte	0xa
-	.byte	0x4e
+	.byte	0x50
 	.4byte	0x523
 	.uleb128 0x13
 	.4byte	0x3f3
 	.uleb128 0x14
 	.string	"val"
 	.byte	0xa
-	.byte	0x63
+	.byte	0x65
 	.4byte	0xd3
 	.byte	0
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0xa
-	.byte	0x69
+	.byte	0x6b
 	.4byte	0x568
 	.uleb128 0xf
 	.4byte	.LASF88
 	.byte	0xa
-	.byte	0x6a
+	.byte	0x6c
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x8
@@ -2184,7 +2184,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF89
 	.byte	0xa
-	.byte	0x6b
+	.byte	0x6d
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x8
@@ -2193,7 +2193,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF90
 	.byte	0xa
-	.byte	0x6c
+	.byte	0x6e
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x8
@@ -2202,7 +2202,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF91
 	.byte	0xa
-	.byte	0x6d
+	.byte	0x6f
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x8
@@ -2212,25 +2212,25 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xc
 	.byte	0x4
 	.byte	0xa
-	.byte	0x68
+	.byte	0x6a
 	.4byte	0x581
 	.uleb128 0x13
 	.4byte	0x523
 	.uleb128 0x14
 	.string	"val"
 	.byte	0xa
-	.byte	0x6f
+	.byte	0x71
 	.4byte	0xd3
 	.byte	0
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0xa
-	.byte	0x73
+	.byte	0x75
 	.4byte	0x5b7
 	.uleb128 0xf
 	.4byte	.LASF92
 	.byte	0xa
-	.byte	0x74
+	.byte	0x76
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x2
@@ -2239,7 +2239,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF93
 	.byte	0xa
-	.byte	0x75
+	.byte	0x77
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x2
@@ -2248,7 +2248,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF70
 	.byte	0xa
-	.byte	0x76
+	.byte	0x78
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1c
@@ -2258,25 +2258,25 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xc
 	.byte	0x4
 	.byte	0xa
-	.byte	0x72
+	.byte	0x74
 	.4byte	0x5d0
 	.uleb128 0x13
 	.4byte	0x581
 	.uleb128 0x14
 	.string	"val"
 	.byte	0xa
-	.byte	0x78
+	.byte	0x7a
 	.4byte	0xd3
 	.byte	0
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0xa
-	.byte	0x7c
+	.byte	0x7e
 	.4byte	0x5f7
 	.uleb128 0xf
 	.4byte	.LASF94
 	.byte	0xa
-	.byte	0x7d
+	.byte	0x7f
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x10
@@ -2285,7 +2285,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF95
 	.byte	0xa
-	.byte	0x7e
+	.byte	0x80
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x10
@@ -2295,25 +2295,25 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xc
 	.byte	0x4
 	.byte	0xa
-	.byte	0x7b
+	.byte	0x7d
 	.4byte	0x610
 	.uleb128 0x13
 	.4byte	0x5d0
 	.uleb128 0x14
 	.string	"val"
 	.byte	0xa
-	.byte	0x80
+	.byte	0x82
 	.4byte	0xd3
 	.byte	0
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0xa
-	.byte	0x84
+	.byte	0x86
 	.4byte	0x637
 	.uleb128 0xf
 	.4byte	.LASF96
 	.byte	0xa
-	.byte	0x85
+	.byte	0x87
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x8
@@ -2322,7 +2322,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF97
 	.byte	0xa
-	.byte	0x86
+	.byte	0x88
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x18
@@ -2332,25 +2332,25 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xc
 	.byte	0x4
 	.byte	0xa
-	.byte	0x83
+	.byte	0x85
 	.4byte	0x650
 	.uleb128 0x13
 	.4byte	0x610
 	.uleb128 0x14
 	.string	"val"
 	.byte	0xa
-	.byte	0x88
+	.byte	0x8a
 	.4byte	0xd3
 	.byte	0
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0xa
-	.byte	0x8c
+	.byte	0x8e
 	.4byte	0x677
 	.uleb128 0xf
 	.4byte	.LASF98
 	.byte	0xa
-	.byte	0x8d
+	.byte	0x8f
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x10
@@ -2359,7 +2359,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF99
 	.byte	0xa
-	.byte	0x8e
+	.byte	0x90
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x10
@@ -2369,25 +2369,25 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xc
 	.byte	0x4
 	.byte	0xa
-	.byte	0x8b
+	.byte	0x8d
 	.4byte	0x690
 	.uleb128 0x13
 	.4byte	0x650
 	.uleb128 0x14
 	.string	"val"
 	.byte	0xa
-	.byte	0x90
+	.byte	0x92
 	.4byte	0xd3
 	.byte	0
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0xa
-	.byte	0x99
+	.byte	0x9b
 	.4byte	0x796
 	.uleb128 0x12
 	.string	"cd"
 	.byte	0xa
-	.byte	0x9a
+	.byte	0x9c
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2396,7 +2396,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"re"
 	.byte	0xa
-	.byte	0x9b
+	.byte	0x9d
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2405,7 +2405,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF100
 	.byte	0xa
-	.byte	0x9c
+	.byte	0x9e
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2414,7 +2414,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"dto"
 	.byte	0xa
-	.byte	0x9d
+	.byte	0x9f
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2423,7 +2423,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF101
 	.byte	0xa
-	.byte	0x9e
+	.byte	0xa0
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2432,7 +2432,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF102
 	.byte	0xa
-	.byte	0x9f
+	.byte	0xa1
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2441,7 +2441,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF103
 	.byte	0xa
-	.byte	0xa0
+	.byte	0xa2
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2450,7 +2450,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF104
 	.byte	0xa
-	.byte	0xa1
+	.byte	0xa3
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2459,7 +2459,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"rto"
 	.byte	0xa
-	.byte	0xa2
+	.byte	0xa4
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2468,7 +2468,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF105
 	.byte	0xa
-	.byte	0xa3
+	.byte	0xa5
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2477,7 +2477,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"hto"
 	.byte	0xa
-	.byte	0xa4
+	.byte	0xa6
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2486,7 +2486,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF106
 	.byte	0xa
-	.byte	0xa5
+	.byte	0xa7
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2495,7 +2495,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"hle"
 	.byte	0xa
-	.byte	0xa6
+	.byte	0xa8
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2504,7 +2504,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF107
 	.byte	0xa
-	.byte	0xa7
+	.byte	0xa9
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2513,7 +2513,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"acd"
 	.byte	0xa
-	.byte	0xa8
+	.byte	0xaa
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2522,7 +2522,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"ebe"
 	.byte	0xa
-	.byte	0xa9
+	.byte	0xab
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2531,7 +2531,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF108
 	.byte	0xa
-	.byte	0xaa
+	.byte	0xac
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x10
@@ -2541,25 +2541,25 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xc
 	.byte	0x4
 	.byte	0xa
-	.byte	0x98
+	.byte	0x9a
 	.4byte	0x7af
 	.uleb128 0x13
 	.4byte	0x690
 	.uleb128 0x14
 	.string	"val"
 	.byte	0xa
-	.byte	0xac
+	.byte	0xae
 	.4byte	0xd3
 	.byte	0
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0xa
-	.byte	0xb6
+	.byte	0xb8
 	.4byte	0x8b5
 	.uleb128 0x12
 	.string	"cd"
 	.byte	0xa
-	.byte	0xb7
+	.byte	0xb9
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2568,7 +2568,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"re"
 	.byte	0xa
-	.byte	0xb8
+	.byte	0xba
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2577,7 +2577,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF100
 	.byte	0xa
-	.byte	0xb9
+	.byte	0xbb
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2586,7 +2586,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"dto"
 	.byte	0xa
-	.byte	0xba
+	.byte	0xbc
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2595,7 +2595,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF101
 	.byte	0xa
-	.byte	0xbb
+	.byte	0xbd
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2604,7 +2604,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF102
 	.byte	0xa
-	.byte	0xbc
+	.byte	0xbe
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2613,7 +2613,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF103
 	.byte	0xa
-	.byte	0xbd
+	.byte	0xbf
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2622,7 +2622,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF104
 	.byte	0xa
-	.byte	0xbe
+	.byte	0xc0
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2631,7 +2631,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"rto"
 	.byte	0xa
-	.byte	0xbf
+	.byte	0xc1
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2640,7 +2640,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF105
 	.byte	0xa
-	.byte	0xc0
+	.byte	0xc2
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2649,7 +2649,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"hto"
 	.byte	0xa
-	.byte	0xc1
+	.byte	0xc3
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2658,7 +2658,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF106
 	.byte	0xa
-	.byte	0xc2
+	.byte	0xc4
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2667,7 +2667,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"hle"
 	.byte	0xa
-	.byte	0xc3
+	.byte	0xc5
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2676,7 +2676,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF107
 	.byte	0xa
-	.byte	0xc4
+	.byte	0xc6
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2685,7 +2685,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"acd"
 	.byte	0xa
-	.byte	0xc5
+	.byte	0xc7
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2694,7 +2694,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"ebe"
 	.byte	0xa
-	.byte	0xc6
+	.byte	0xc8
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2703,7 +2703,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF108
 	.byte	0xa
-	.byte	0xc7
+	.byte	0xc9
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x10
@@ -2713,25 +2713,25 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xc
 	.byte	0x4
 	.byte	0xa
-	.byte	0xb5
+	.byte	0xb7
 	.4byte	0x8ce
 	.uleb128 0x13
 	.4byte	0x7af
 	.uleb128 0x14
 	.string	"val"
 	.byte	0xa
-	.byte	0xc9
+	.byte	0xcb
 	.4byte	0xd3
 	.byte	0
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0xa
-	.byte	0xcd
+	.byte	0xcf
 	.4byte	0x9d4
 	.uleb128 0x12
 	.string	"cd"
 	.byte	0xa
-	.byte	0xce
+	.byte	0xd0
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2740,7 +2740,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"re"
 	.byte	0xa
-	.byte	0xcf
+	.byte	0xd1
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2749,7 +2749,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF100
 	.byte	0xa
-	.byte	0xd0
+	.byte	0xd2
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2758,7 +2758,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"dto"
 	.byte	0xa
-	.byte	0xd1
+	.byte	0xd3
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2767,7 +2767,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF101
 	.byte	0xa
-	.byte	0xd2
+	.byte	0xd4
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2776,7 +2776,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF102
 	.byte	0xa
-	.byte	0xd3
+	.byte	0xd5
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2785,7 +2785,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF103
 	.byte	0xa
-	.byte	0xd4
+	.byte	0xd6
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2794,7 +2794,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF104
 	.byte	0xa
-	.byte	0xd5
+	.byte	0xd7
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2803,7 +2803,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"rto"
 	.byte	0xa
-	.byte	0xd6
+	.byte	0xd8
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2812,7 +2812,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF105
 	.byte	0xa
-	.byte	0xd7
+	.byte	0xd9
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2821,7 +2821,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"hto"
 	.byte	0xa
-	.byte	0xd8
+	.byte	0xda
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2830,7 +2830,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF106
 	.byte	0xa
-	.byte	0xd9
+	.byte	0xdb
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2839,7 +2839,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"hle"
 	.byte	0xa
-	.byte	0xda
+	.byte	0xdc
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2848,7 +2848,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF107
 	.byte	0xa
-	.byte	0xdb
+	.byte	0xdd
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2857,7 +2857,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"acd"
 	.byte	0xa
-	.byte	0xdc
+	.byte	0xde
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2866,7 +2866,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x12
 	.string	"ebe"
 	.byte	0xa
-	.byte	0xdd
+	.byte	0xdf
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2875,7 +2875,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF108
 	.byte	0xa
-	.byte	0xde
+	.byte	0xe0
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x10
@@ -2885,25 +2885,25 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xc
 	.byte	0x4
 	.byte	0xa
-	.byte	0xcc
+	.byte	0xce
 	.4byte	0x9ed
 	.uleb128 0x13
 	.4byte	0x8ce
 	.uleb128 0x14
 	.string	"val"
 	.byte	0xa
-	.byte	0xe0
+	.byte	0xe2
 	.4byte	0xd3
 	.byte	0
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0xa
-	.byte	0xe4
+	.byte	0xe6
 	.4byte	0xaaa
 	.uleb128 0xf
 	.4byte	.LASF109
 	.byte	0xa
-	.byte	0xe5
+	.byte	0xe7
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2912,7 +2912,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF110
 	.byte	0xa
-	.byte	0xe6
+	.byte	0xe8
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2921,7 +2921,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF111
 	.byte	0xa
-	.byte	0xe7
+	.byte	0xe9
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2930,7 +2930,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF112
 	.byte	0xa
-	.byte	0xe8
+	.byte	0xea
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2939,7 +2939,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF113
 	.byte	0xa
-	.byte	0xe9
+	.byte	0xeb
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x4
@@ -2948,7 +2948,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF114
 	.byte	0xa
-	.byte	0xea
+	.byte	0xec
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2957,7 +2957,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF115
 	.byte	0xa
-	.byte	0xeb
+	.byte	0xed
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2966,7 +2966,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF116
 	.byte	0xa
-	.byte	0xec
+	.byte	0xee
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -2975,7 +2975,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF117
 	.byte	0xa
-	.byte	0xed
+	.byte	0xef
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x6
@@ -2984,7 +2984,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF118
 	.byte	0xa
-	.byte	0xee
+	.byte	0xf0
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0xd
@@ -2993,7 +2993,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF119
 	.byte	0xa
-	.byte	0xef
+	.byte	0xf1
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3002,7 +3002,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF120
 	.byte	0xa
-	.byte	0xf0
+	.byte	0xf2
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3012,25 +3012,25 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xc
 	.byte	0x4
 	.byte	0xa
-	.byte	0xe3
+	.byte	0xe5
 	.4byte	0xac3
 	.uleb128 0x13
 	.4byte	0x9ed
 	.uleb128 0x14
 	.string	"val"
 	.byte	0xa
-	.byte	0xf2
+	.byte	0xf4
 	.4byte	0xd3
 	.byte	0
 	.uleb128 0xe
 	.byte	0x4
 	.byte	0xa
-	.byte	0xf6
+	.byte	0xf8
 	.4byte	0xb17
 	.uleb128 0xf
 	.4byte	.LASF121
 	.byte	0xa
-	.byte	0xf7
+	.byte	0xf9
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0xc
@@ -3039,7 +3039,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF37
 	.byte	0xa
-	.byte	0xf8
+	.byte	0xfa
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x4
@@ -3048,7 +3048,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF122
 	.byte	0xa
-	.byte	0xf9
+	.byte	0xfb
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0xc
@@ -3057,7 +3057,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF123
 	.byte	0xa
-	.byte	0xfa
+	.byte	0xfc
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x3
@@ -3066,7 +3066,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xf
 	.4byte	.LASF43
 	.byte	0xa
-	.byte	0xfb
+	.byte	0xfd
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3076,25 +3076,25 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0xc
 	.byte	0x4
 	.byte	0xa
-	.byte	0xf5
+	.byte	0xf7
 	.4byte	0xb30
 	.uleb128 0x13
 	.4byte	0xac3
 	.uleb128 0x14
 	.string	"val"
 	.byte	0xa
-	.byte	0xfd
+	.byte	0xff
 	.4byte	0xd3
 	.byte	0
 	.uleb128 0x15
 	.byte	0x4
 	.byte	0xa
-	.2byte	0x101
+	.2byte	0x103
 	.4byte	0xb5a
 	.uleb128 0x16
 	.4byte	.LASF124
 	.byte	0xa
-	.2byte	0x102
+	.2byte	0x104
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x2
@@ -3103,7 +3103,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF70
 	.byte	0xa
-	.2byte	0x103
+	.2byte	0x105
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1e
@@ -3113,25 +3113,25 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x17
 	.byte	0x4
 	.byte	0xa
-	.2byte	0x100
+	.2byte	0x102
 	.4byte	0xb75
 	.uleb128 0x13
 	.4byte	0xb30
 	.uleb128 0x18
 	.string	"val"
 	.byte	0xa
-	.2byte	0x105
+	.2byte	0x107
 	.4byte	0xd3
 	.byte	0
 	.uleb128 0x15
 	.byte	0x4
 	.byte	0xa
-	.2byte	0x109
+	.2byte	0x10b
 	.4byte	0xb9f
 	.uleb128 0x16
 	.4byte	.LASF124
 	.byte	0xa
-	.2byte	0x10a
+	.2byte	0x10c
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x2
@@ -3140,7 +3140,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF70
 	.byte	0xa
-	.2byte	0x10b
+	.2byte	0x10d
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1e
@@ -3150,25 +3150,25 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x17
 	.byte	0x4
 	.byte	0xa
-	.2byte	0x108
+	.2byte	0x10a
 	.4byte	0xbba
 	.uleb128 0x13
 	.4byte	0xb75
 	.uleb128 0x18
 	.string	"val"
 	.byte	0xa
-	.2byte	0x10d
+	.2byte	0x10f
 	.4byte	0xd3
 	.byte	0
 	.uleb128 0x15
 	.byte	0x4
 	.byte	0xa
-	.2byte	0x115
+	.2byte	0x117
 	.4byte	0xbe4
 	.uleb128 0x16
 	.4byte	.LASF125
 	.byte	0xa
-	.2byte	0x116
+	.2byte	0x118
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x18
@@ -3177,7 +3177,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF70
 	.byte	0xa
-	.2byte	0x117
+	.2byte	0x119
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x8
@@ -3187,7 +3187,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x17
 	.byte	0x4
 	.byte	0xa
-	.2byte	0x114
+	.2byte	0x116
 	.4byte	0xbf3
 	.uleb128 0x13
 	.4byte	0xbba
@@ -3195,12 +3195,12 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x15
 	.byte	0x4
 	.byte	0xa
-	.2byte	0x11f
+	.2byte	0x121
 	.4byte	0xc1d
 	.uleb128 0x16
 	.4byte	.LASF126
 	.byte	0xa
-	.2byte	0x120
+	.2byte	0x122
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x10
@@ -3209,7 +3209,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x19
 	.string	"ddr"
 	.byte	0xa
-	.2byte	0x121
+	.2byte	0x123
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x10
@@ -3219,7 +3219,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x17
 	.byte	0x4
 	.byte	0xa
-	.2byte	0x11e
+	.2byte	0x120
 	.4byte	0xc2c
 	.uleb128 0x13
 	.4byte	0xbf3
@@ -3227,12 +3227,12 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x15
 	.byte	0x4
 	.byte	0xa
-	.2byte	0x126
+	.2byte	0x128
 	.4byte	0xc56
 	.uleb128 0x16
 	.4byte	.LASF124
 	.byte	0xa
-	.2byte	0x127
+	.2byte	0x129
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x2
@@ -3241,7 +3241,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF70
 	.byte	0xa
-	.2byte	0x128
+	.2byte	0x12a
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1e
@@ -3251,7 +3251,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x17
 	.byte	0x4
 	.byte	0xa
-	.2byte	0x125
+	.2byte	0x127
 	.4byte	0xc65
 	.uleb128 0x13
 	.4byte	0xc2c
@@ -3259,12 +3259,12 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x15
 	.byte	0x4
 	.byte	0xa
-	.2byte	0x12f
+	.2byte	0x131
 	.4byte	0xcce
 	.uleb128 0x16
 	.4byte	.LASF127
 	.byte	0xa
-	.2byte	0x130
+	.2byte	0x132
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3273,7 +3273,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x19
 	.string	"fb"
 	.byte	0xa
-	.2byte	0x131
+	.2byte	0x133
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3282,7 +3282,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x19
 	.string	"dsl"
 	.byte	0xa
-	.2byte	0x132
+	.2byte	0x134
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x5
@@ -3291,7 +3291,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF128
 	.byte	0xa
-	.2byte	0x133
+	.2byte	0x135
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3300,7 +3300,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x19
 	.string	"pbl"
 	.byte	0xa
-	.2byte	0x134
+	.2byte	0x136
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x3
@@ -3309,7 +3309,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF70
 	.byte	0xa
-	.2byte	0x135
+	.2byte	0x137
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x15
@@ -3319,25 +3319,25 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x17
 	.byte	0x4
 	.byte	0xa
-	.2byte	0x12e
+	.2byte	0x130
 	.4byte	0xce9
 	.uleb128 0x13
 	.4byte	0xc65
 	.uleb128 0x18
 	.string	"val"
 	.byte	0xa
-	.2byte	0x137
+	.2byte	0x139
 	.4byte	0xd3
 	.byte	0
 	.uleb128 0x15
 	.byte	0x4
 	.byte	0xa
-	.2byte	0x13e
+	.2byte	0x140
 	.4byte	0xda0
 	.uleb128 0x19
 	.string	"ti"
 	.byte	0xa
-	.2byte	0x13f
+	.2byte	0x141
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3346,7 +3346,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x19
 	.string	"ri"
 	.byte	0xa
-	.2byte	0x140
+	.2byte	0x142
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3355,7 +3355,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x19
 	.string	"fbe"
 	.byte	0xa
-	.2byte	0x141
+	.2byte	0x143
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3364,7 +3364,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF37
 	.byte	0xa
-	.2byte	0x142
+	.2byte	0x144
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3373,7 +3373,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x19
 	.string	"du"
 	.byte	0xa
-	.2byte	0x143
+	.2byte	0x145
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3382,7 +3382,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x19
 	.string	"ces"
 	.byte	0xa
-	.2byte	0x144
+	.2byte	0x146
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3391,7 +3391,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF43
 	.byte	0xa
-	.2byte	0x145
+	.2byte	0x147
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x2
@@ -3400,7 +3400,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x19
 	.string	"nis"
 	.byte	0xa
-	.2byte	0x146
+	.2byte	0x148
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3409,7 +3409,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF129
 	.byte	0xa
-	.2byte	0x147
+	.2byte	0x149
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x3
@@ -3418,7 +3418,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x19
 	.string	"fsm"
 	.byte	0xa
-	.2byte	0x148
+	.2byte	0x14a
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x4
@@ -3427,7 +3427,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF48
 	.byte	0xa
-	.2byte	0x149
+	.2byte	0x14b
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0xf
@@ -3437,25 +3437,25 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x17
 	.byte	0x4
 	.byte	0xa
-	.2byte	0x13d
+	.2byte	0x13f
 	.4byte	0xdbb
 	.uleb128 0x13
 	.4byte	0xce9
 	.uleb128 0x18
 	.string	"val"
 	.byte	0xa
-	.2byte	0x14b
+	.2byte	0x14d
 	.4byte	0xd3
 	.byte	0
 	.uleb128 0x15
 	.byte	0x4
 	.byte	0xa
-	.2byte	0x14f
+	.2byte	0x151
 	.4byte	0xe60
 	.uleb128 0x19
 	.string	"ti"
 	.byte	0xa
-	.2byte	0x150
+	.2byte	0x152
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3464,7 +3464,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x19
 	.string	"ri"
 	.byte	0xa
-	.2byte	0x151
+	.2byte	0x153
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3473,7 +3473,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x19
 	.string	"fbe"
 	.byte	0xa
-	.2byte	0x152
+	.2byte	0x154
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3482,7 +3482,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF37
 	.byte	0xa
-	.2byte	0x153
+	.2byte	0x155
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3491,7 +3491,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x19
 	.string	"du"
 	.byte	0xa
-	.2byte	0x154
+	.2byte	0x156
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3500,7 +3500,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x19
 	.string	"ces"
 	.byte	0xa
-	.2byte	0x155
+	.2byte	0x157
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3509,7 +3509,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF43
 	.byte	0xa
-	.2byte	0x156
+	.2byte	0x158
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x2
@@ -3518,7 +3518,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x19
 	.string	"ni"
 	.byte	0xa
-	.2byte	0x157
+	.2byte	0x159
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3527,7 +3527,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x19
 	.string	"ai"
 	.byte	0xa
-	.2byte	0x158
+	.2byte	0x15a
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3536,7 +3536,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF48
 	.byte	0xa
-	.2byte	0x159
+	.2byte	0x15b
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x16
@@ -3546,25 +3546,25 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x17
 	.byte	0x4
 	.byte	0xa
-	.2byte	0x14e
+	.2byte	0x150
 	.4byte	0xe7b
 	.uleb128 0x13
 	.4byte	0xdbb
 	.uleb128 0x18
 	.string	"val"
 	.byte	0xa
-	.2byte	0x15b
+	.2byte	0x15d
 	.4byte	0xd3
 	.byte	0
 	.uleb128 0x15
 	.byte	0x4
 	.byte	0xa
-	.2byte	0x165
+	.2byte	0x167
 	.4byte	0xed5
 	.uleb128 0x16
 	.4byte	.LASF130
 	.byte	0xa
-	.2byte	0x166
+	.2byte	0x168
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3573,7 +3573,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF131
 	.byte	0xa
-	.2byte	0x167
+	.2byte	0x169
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3582,7 +3582,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF132
 	.byte	0xa
-	.2byte	0x168
+	.2byte	0x16a
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x1
@@ -3591,7 +3591,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF37
 	.byte	0xa
-	.2byte	0x169
+	.2byte	0x16b
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0xd
@@ -3600,7 +3600,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF133
 	.byte	0xa
-	.2byte	0x16a
+	.2byte	0x16c
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0xc
@@ -3610,25 +3610,25 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x17
 	.byte	0x4
 	.byte	0xa
-	.2byte	0x164
+	.2byte	0x166
 	.4byte	0xef0
 	.uleb128 0x13
 	.4byte	0xe7b
 	.uleb128 0x18
 	.string	"val"
 	.byte	0xa
-	.2byte	0x16c
+	.2byte	0x16e
 	.4byte	0xd3
 	.byte	0
 	.uleb128 0x15
 	.byte	0x4
 	.byte	0xa
-	.2byte	0x174
+	.2byte	0x176
 	.4byte	0xf5a
 	.uleb128 0x16
 	.4byte	.LASF134
 	.byte	0xa
-	.2byte	0x175
+	.2byte	0x177
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x3
@@ -3637,7 +3637,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF135
 	.byte	0xa
-	.2byte	0x176
+	.2byte	0x178
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x3
@@ -3646,7 +3646,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF136
 	.byte	0xa
-	.2byte	0x177
+	.2byte	0x179
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x3
@@ -3655,7 +3655,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF137
 	.byte	0xa
-	.2byte	0x178
+	.2byte	0x17a
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x4
@@ -3664,7 +3664,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF138
 	.byte	0xa
-	.2byte	0x179
+	.2byte	0x17b
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x4
@@ -3673,7 +3673,7 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x16
 	.4byte	.LASF139
 	.byte	0xa
-	.2byte	0x17a
+	.2byte	0x17c
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x4
@@ -3683,67 +3683,67 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x17
 	.byte	0x4
 	.byte	0xa
-	.2byte	0x173
+	.2byte	0x175
 	.4byte	0xf75
 	.uleb128 0x13
 	.4byte	0xef0
 	.uleb128 0x18
 	.string	"val"
 	.byte	0xa
-	.2byte	0x17c
+	.2byte	0x17e
 	.4byte	0xd3
 	.byte	0
 	.uleb128 0x1a
 	.2byte	0x804
 	.byte	0xa
-	.byte	0x4d
-	.4byte	0x11db
+	.byte	0x4f
+	.4byte	0x11dc
 	.uleb128 0x10
 	.4byte	.LASF141
 	.byte	0xa
-	.byte	0x64
+	.byte	0x66
 	.4byte	0x50a
 	.byte	0
 	.uleb128 0x10
 	.4byte	.LASF142
 	.byte	0xa
-	.byte	0x66
+	.byte	0x68
 	.4byte	0xd3
 	.byte	0x4
 	.uleb128 0x10
 	.4byte	.LASF143
 	.byte	0xa
-	.byte	0x70
+	.byte	0x72
 	.4byte	0x568
 	.byte	0x8
 	.uleb128 0x10
 	.4byte	.LASF144
 	.byte	0xa
-	.byte	0x79
+	.byte	0x7b
 	.4byte	0x5b7
 	.byte	0xc
 	.uleb128 0x10
 	.4byte	.LASF145
 	.byte	0xa
-	.byte	0x81
+	.byte	0x83
 	.4byte	0x5f7
 	.byte	0x10
 	.uleb128 0x10
 	.4byte	.LASF146
 	.byte	0xa
-	.byte	0x89
+	.byte	0x8b
 	.4byte	0x637
 	.byte	0x14
 	.uleb128 0x10
 	.4byte	.LASF147
 	.byte	0xa
-	.byte	0x91
+	.byte	0x93
 	.4byte	0x677
 	.byte	0x18
 	.uleb128 0xf
 	.4byte	.LASF148
 	.byte	0xa
-	.byte	0x93
+	.byte	0x95
 	.4byte	0xd3
 	.byte	0x4
 	.byte	0x10
@@ -3752,241 +3752,241 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x10
 	.4byte	.LASF149
 	.byte	0xa
-	.byte	0x96
+	.byte	0x98
 	.4byte	0xd3
 	.byte	0x20
 	.uleb128 0x10
 	.4byte	.LASF150
 	.byte	0xa
-	.byte	0xad
+	.byte	0xaf
 	.4byte	0x796
 	.byte	0x24
 	.uleb128 0x10
 	.4byte	.LASF151
 	.byte	0xa
-	.byte	0xaf
+	.byte	0xb1
 	.4byte	0xd3
 	.byte	0x28
 	.uleb128 0x1b
 	.string	"cmd"
 	.byte	0xa
-	.byte	0xb1
+	.byte	0xb3
 	.4byte	0x3e8
 	.byte	0x2c
 	.uleb128 0x10
 	.4byte	.LASF152
 	.byte	0xa
-	.byte	0xb3
-	.4byte	0x11db
+	.byte	0xb5
+	.4byte	0x11dc
 	.byte	0x30
 	.uleb128 0x10
 	.4byte	.LASF153
 	.byte	0xa
-	.byte	0xca
+	.byte	0xcc
 	.4byte	0x8b5
 	.byte	0x40
 	.uleb128 0x10
 	.4byte	.LASF154
 	.byte	0xa
-	.byte	0xe1
+	.byte	0xe3
 	.4byte	0x9d4
 	.byte	0x44
 	.uleb128 0x10
 	.4byte	.LASF155
 	.byte	0xa
-	.byte	0xf3
+	.byte	0xf5
 	.4byte	0xaaa
 	.byte	0x48
-	.uleb128 0x10
+	.uleb128 0x1c
 	.4byte	.LASF156
 	.byte	0xa
-	.byte	0xfe
+	.2byte	0x100
 	.4byte	0xb17
 	.byte	0x4c
 	.uleb128 0x1c
 	.4byte	.LASF157
 	.byte	0xa
-	.2byte	0x106
+	.2byte	0x108
 	.4byte	0xb5a
 	.byte	0x50
 	.uleb128 0x1c
 	.4byte	.LASF158
 	.byte	0xa
-	.2byte	0x10e
+	.2byte	0x110
 	.4byte	0xb9f
 	.byte	0x54
 	.uleb128 0x1c
 	.4byte	.LASF159
 	.byte	0xa
-	.2byte	0x110
+	.2byte	0x112
 	.4byte	0xd3
 	.byte	0x58
 	.uleb128 0x1c
 	.4byte	.LASF160
 	.byte	0xa
-	.2byte	0x111
+	.2byte	0x113
 	.4byte	0xd3
 	.byte	0x5c
 	.uleb128 0x1c
 	.4byte	.LASF161
 	.byte	0xa
-	.2byte	0x112
+	.2byte	0x114
 	.4byte	0xd3
 	.byte	0x60
 	.uleb128 0x1c
 	.4byte	.LASF162
 	.byte	0xa
-	.2byte	0x119
+	.2byte	0x11b
 	.4byte	0xbe4
 	.byte	0x64
 	.uleb128 0x1c
 	.4byte	.LASF163
 	.byte	0xa
-	.2byte	0x11b
+	.2byte	0x11d
 	.4byte	0xd3
 	.byte	0x68
 	.uleb128 0x1c
 	.4byte	.LASF164
 	.byte	0xa
-	.2byte	0x11c
+	.2byte	0x11e
 	.4byte	0xd3
 	.byte	0x6c
 	.uleb128 0x1c
 	.4byte	.LASF165
 	.byte	0xa
-	.2byte	0x11d
+	.2byte	0x11f
 	.4byte	0xd3
 	.byte	0x70
 	.uleb128 0x1d
 	.string	"uhs"
 	.byte	0xa
-	.2byte	0x123
+	.2byte	0x125
 	.4byte	0xc1d
 	.byte	0x74
 	.uleb128 0x1c
 	.4byte	.LASF166
 	.byte	0xa
-	.2byte	0x12a
+	.2byte	0x12c
 	.4byte	0xc56
 	.byte	0x78
 	.uleb128 0x1c
 	.4byte	.LASF167
 	.byte	0xa
-	.2byte	0x12c
+	.2byte	0x12e
 	.4byte	0xd3
 	.byte	0x7c
 	.uleb128 0x1c
 	.4byte	.LASF168
 	.byte	0xa
-	.2byte	0x138
+	.2byte	0x13a
 	.4byte	0xcce
 	.byte	0x80
 	.uleb128 0x1c
 	.4byte	.LASF169
 	.byte	0xa
-	.2byte	0x13a
+	.2byte	0x13c
 	.4byte	0xd3
 	.byte	0x84
 	.uleb128 0x1c
 	.4byte	.LASF170
 	.byte	0xa
-	.2byte	0x13b
-	.4byte	0x11eb
+	.2byte	0x13d
+	.4byte	0x11ec
 	.byte	0x88
 	.uleb128 0x1c
 	.4byte	.LASF171
 	.byte	0xa
-	.2byte	0x14c
+	.2byte	0x14e
 	.4byte	0xda0
 	.byte	0x8c
 	.uleb128 0x1c
 	.4byte	.LASF172
 	.byte	0xa
-	.2byte	0x15c
+	.2byte	0x15e
 	.4byte	0xe60
 	.byte	0x90
 	.uleb128 0x1c
 	.4byte	.LASF173
 	.byte	0xa
-	.2byte	0x15e
+	.2byte	0x160
 	.4byte	0xd3
 	.byte	0x94
 	.uleb128 0x1c
 	.4byte	.LASF174
 	.byte	0xa
-	.2byte	0x15f
+	.2byte	0x161
 	.4byte	0xd3
 	.byte	0x98
 	.uleb128 0x1c
 	.4byte	.LASF175
 	.byte	0xa
-	.2byte	0x160
+	.2byte	0x162
 	.4byte	0xd3
 	.byte	0x9c
 	.uleb128 0x1c
 	.4byte	.LASF176
 	.byte	0xa
-	.2byte	0x161
+	.2byte	0x163
 	.4byte	0xd3
 	.byte	0xa0
 	.uleb128 0x1c
 	.4byte	.LASF177
 	.byte	0xa
-	.2byte	0x162
+	.2byte	0x164
 	.4byte	0xd3
 	.byte	0xa4
 	.uleb128 0x1c
 	.4byte	.LASF178
 	.byte	0xa
-	.2byte	0x163
-	.4byte	0x11f1
+	.2byte	0x165
+	.4byte	0x11f2
 	.byte	0xa8
 	.uleb128 0x1e
 	.4byte	.LASF179
 	.byte	0xa
-	.2byte	0x16d
+	.2byte	0x16f
 	.4byte	0xed5
 	.2byte	0x100
 	.uleb128 0x1e
 	.4byte	.LASF180
 	.byte	0xa
-	.2byte	0x16e
+	.2byte	0x170
 	.4byte	0xd3
 	.2byte	0x104
 	.uleb128 0x1e
 	.4byte	.LASF181
 	.byte	0xa
-	.2byte	0x16f
+	.2byte	0x171
 	.4byte	0xd3
 	.2byte	0x108
 	.uleb128 0x1e
 	.4byte	.LASF182
 	.byte	0xa
-	.2byte	0x170
+	.2byte	0x172
 	.4byte	0xd3
 	.2byte	0x10c
 	.uleb128 0x1e
 	.4byte	.LASF183
 	.byte	0xa
-	.2byte	0x171
+	.2byte	0x173
 	.4byte	0xd3
 	.2byte	0x110
 	.uleb128 0x1e
 	.4byte	.LASF184
 	.byte	0xa
-	.2byte	0x172
-	.4byte	0x1201
+	.2byte	0x174
+	.4byte	0x1202
 	.2byte	0x114
 	.uleb128 0x1e
 	.4byte	.LASF185
 	.byte	0xa
-	.2byte	0x17d
+	.2byte	0x17f
 	.4byte	0xf5a
 	.2byte	0x800
 	.byte	0
 	.uleb128 0x1f
 	.4byte	0xd3
-	.4byte	0x11eb
+	.4byte	0x11ec
 	.uleb128 0x20
 	.4byte	0x9b
 	.byte	0x3
@@ -3996,14 +3996,14 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	0x27c
 	.uleb128 0x1f
 	.4byte	0xd3
-	.4byte	0x1201
+	.4byte	0x1202
 	.uleb128 0x20
 	.4byte	0x9b
 	.byte	0x15
 	.byte	0
 	.uleb128 0x1f
 	.4byte	0xd3
-	.4byte	0x1212
+	.4byte	0x1213
 	.uleb128 0x21
 	.4byte	0x9b
 	.2byte	0x1ba
@@ -4011,20 +4011,20 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x22
 	.4byte	.LASF186
 	.byte	0xa
-	.2byte	0x17e
-	.4byte	0x121e
+	.2byte	0x180
+	.4byte	0x121f
 	.uleb128 0x23
 	.4byte	0xf75
 	.uleb128 0x3
 	.4byte	.LASF187
 	.byte	0xb
 	.byte	0x45
-	.4byte	0x11db
+	.4byte	0x11dc
 	.uleb128 0xe
 	.byte	0x30
 	.byte	0xb
 	.byte	0x51
-	.4byte	0x12a3
+	.4byte	0x12a4
 	.uleb128 0x10
 	.4byte	.LASF188
 	.byte	0xb
@@ -4041,7 +4041,7 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LASF96
 	.byte	0xb
 	.byte	0x54
-	.4byte	0x1223
+	.4byte	0x1224
 	.byte	0x8
 	.uleb128 0x10
 	.4byte	.LASF97
@@ -4084,19 +4084,19 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LASF194
 	.byte	0xb
 	.byte	0x76
-	.4byte	0x122e
+	.4byte	0x122f
 	.uleb128 0x4
 	.byte	0x4
 	.byte	0x4
 	.4byte	.LASF195
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x12a3
+	.4byte	0x12a4
 	.uleb128 0xe
 	.byte	0x8
 	.byte	0xc
 	.byte	0x18
-	.4byte	0x12dc
+	.4byte	0x12dd
 	.uleb128 0x10
 	.4byte	.LASF196
 	.byte	0xc
@@ -4114,13 +4114,13 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LASF198
 	.byte	0xc
 	.byte	0x1b
-	.4byte	0x12bb
+	.4byte	0x12bc
 	.uleb128 0x9
 	.byte	0x4
 	.4byte	0x37
 	.byte	0x1
 	.byte	0x27
-	.4byte	0x130c
+	.4byte	0x130d
 	.uleb128 0xa
 	.4byte	.LASF199
 	.byte	0
@@ -4138,17 +4138,17 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LASF203
 	.byte	0x1
 	.byte	0x2c
-	.4byte	0x12e7
+	.4byte	0x12e8
 	.uleb128 0xe
 	.byte	0x10
 	.byte	0x1
 	.byte	0x2e
-	.4byte	0x1350
+	.4byte	0x1351
 	.uleb128 0x1b
 	.string	"ptr"
 	.byte	0x1
 	.byte	0x2f
-	.4byte	0x1350
+	.4byte	0x1351
 	.byte	0
 	.uleb128 0x10
 	.4byte	.LASF204
@@ -4176,13 +4176,13 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LASF207
 	.byte	0x1
 	.byte	0x33
-	.4byte	0x1317
+	.4byte	0x1318
 	.uleb128 0x24
 	.4byte	.LASF221
 	.byte	0x1
 	.2byte	0x16a
 	.byte	0x1
-	.4byte	0x1394
+	.4byte	0x1395
 	.uleb128 0x25
 	.4byte	.LASF155
 	.byte	0x1
@@ -4192,33 +4192,33 @@ SDMMC_DATA_ERR_MASK:
 	.string	"cmd"
 	.byte	0x1
 	.2byte	0x16a
-	.4byte	0x12b5
+	.4byte	0x12b6
 	.uleb128 0x27
 	.4byte	.LASF210
-	.4byte	0x13a4
+	.4byte	0x13a5
 	.4byte	.LASF221
 	.byte	0
 	.uleb128 0x1f
 	.4byte	0xab
-	.4byte	0x13a4
+	.4byte	0x13a5
 	.uleb128 0x20
 	.4byte	0x9b
 	.byte	0x13
 	.byte	0
 	.uleb128 0x7
-	.4byte	0x1394
+	.4byte	0x1395
 	.uleb128 0x28
 	.4byte	.LASF211
 	.byte	0x1
 	.2byte	0x182
 	.4byte	0x12c
 	.byte	0x3
-	.4byte	0x13df
+	.4byte	0x13e0
 	.uleb128 0x25
 	.4byte	.LASF208
 	.byte	0x1
 	.2byte	0x182
-	.4byte	0x13df
+	.4byte	0x13e0
 	.uleb128 0x25
 	.4byte	.LASF209
 	.byte	0x1
@@ -4239,7 +4239,7 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0x8e
 	.4byte	0x12c
 	.byte	0x3
-	.4byte	0x13ff
+	.4byte	0x1400
 	.uleb128 0x2b
 	.string	"p"
 	.byte	0xd
@@ -4250,11 +4250,11 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LASF217
 	.byte	0x1
 	.byte	0xcf
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x149f
+	.4byte	0x14a0
 	.uleb128 0x2d
 	.4byte	.LASF219
 	.byte	0x1
@@ -4263,10 +4263,10 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LLST0
 	.uleb128 0x2e
 	.4byte	.LASF210
-	.4byte	0x14af
+	.4byte	0x14b0
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6152
+	.4byte	__func__$6198
 	.uleb128 0x2f
 	.4byte	.LBB9
 	.4byte	.LBE9-.LBB9
@@ -4282,13 +4282,13 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LASF213
 	.byte	0x1
 	.byte	0xd5
-	.4byte	0x14b4
+	.4byte	0x14b5
 	.4byte	.LLST2
 	.uleb128 0x32
 	.4byte	.LASF214
 	.byte	0x1
 	.byte	0xd6
-	.4byte	0x11eb
+	.4byte	0x11ec
 	.4byte	.LLST3
 	.uleb128 0x32
 	.4byte	.LASF215
@@ -4304,7 +4304,7 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LLST5
 	.uleb128 0x33
 	.4byte	.LVL13
-	.4byte	0x1f59
+	.4byte	0x1f5a
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5a
@@ -4317,24 +4317,24 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x1f
 	.4byte	0xab
-	.4byte	0x14af
+	.4byte	0x14b0
 	.uleb128 0x20
 	.4byte	0x9b
 	.byte	0x14
 	.byte	0
 	.uleb128 0x7
-	.4byte	0x149f
+	.4byte	0x14a0
 	.uleb128 0x7
 	.4byte	0x2c
 	.uleb128 0x35
 	.4byte	.LASF218
 	.byte	0x1
 	.2byte	0x14a
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x155f
+	.4byte	0x1560
 	.uleb128 0x36
 	.4byte	.LASF155
 	.byte	0x1
@@ -4345,7 +4345,7 @@ SDMMC_DATA_ERR_MASK:
 	.string	"cmd"
 	.byte	0x1
 	.2byte	0x14a
-	.4byte	0x12b5
+	.4byte	0x12b6
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x38
@@ -4356,14 +4356,14 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LLST7
 	.uleb128 0x2e
 	.4byte	.LASF210
-	.4byte	0x156f
+	.4byte	0x1570
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6184
+	.4byte	__func__$6230
 	.uleb128 0x39
 	.4byte	.LVL20
-	.4byte	0x1f64
-	.4byte	0x1525
+	.4byte	0x1f65
+	.4byte	0x1526
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5a
@@ -4378,8 +4378,8 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x39
 	.4byte	.LVL22
-	.4byte	0x1f59
-	.4byte	0x1555
+	.4byte	0x1f5a
+	.4byte	0x1556
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5a
@@ -4397,7 +4397,7 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6184
+	.4byte	__func__$6230
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5d
@@ -4407,50 +4407,50 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x3a
 	.4byte	.LVL24
-	.4byte	0x1f6d
+	.4byte	0x1f6e
 	.byte	0
 	.uleb128 0x1f
 	.4byte	0xab
-	.4byte	0x156f
+	.4byte	0x1570
 	.uleb128 0x20
 	.4byte	0x9b
 	.byte	0x18
 	.byte	0
 	.uleb128 0x7
-	.4byte	0x155f
+	.4byte	0x1560
 	.uleb128 0x3b
-	.4byte	0x1361
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	0x1362
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x15d1
+	.4byte	0x15d2
 	.uleb128 0x3c
-	.4byte	0x136e
+	.4byte	0x136f
 	.4byte	.LLST8
 	.uleb128 0x3d
-	.4byte	0x137a
+	.4byte	0x137b
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x3e
-	.4byte	0x1386
+	.4byte	0x1387
 	.uleb128 0x2f
 	.4byte	.LBB15
 	.4byte	.LBE15-.LBB15
 	.uleb128 0x3c
-	.4byte	0x136e
+	.4byte	0x136f
 	.4byte	.LLST9
 	.uleb128 0x3c
-	.4byte	0x137a
+	.4byte	0x137b
 	.4byte	.LLST10
 	.uleb128 0x2f
 	.4byte	.LBB16
 	.4byte	.LBE16-.LBB16
 	.uleb128 0x3e
-	.4byte	0x1386
+	.4byte	0x1387
 	.uleb128 0x3a
 	.4byte	.LVL35
-	.4byte	0x1f6d
+	.4byte	0x1f6e
 	.byte	0
 	.byte	0
 	.byte	0
@@ -4459,17 +4459,17 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0x1
 	.byte	0x56
 	.4byte	0xf0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x167f
+	.4byte	0x1680
 	.uleb128 0x2e
 	.4byte	.LASF210
-	.4byte	0x168f
+	.4byte	0x1690
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6119
+	.4byte	__func__$6165
 	.uleb128 0x30
 	.string	"err"
 	.byte	0x1
@@ -4478,8 +4478,8 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LLST11
 	.uleb128 0x39
 	.4byte	.LVL36
-	.4byte	0x1f59
-	.4byte	0x1637
+	.4byte	0x1f5a
+	.4byte	0x1638
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5a
@@ -4497,7 +4497,7 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6119
+	.4byte	__func__$6165
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5d
@@ -4507,8 +4507,8 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x39
 	.4byte	.LVL37
-	.4byte	0x1f78
-	.4byte	0x164a
+	.4byte	0x1f79
+	.4byte	0x164b
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5a
@@ -4517,8 +4517,8 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x39
 	.4byte	.LVL38
-	.4byte	0x1f84
-	.4byte	0x1675
+	.4byte	0x1f85
+	.4byte	0x1676
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5a
@@ -4545,36 +4545,36 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x3a
 	.4byte	.LVL40
-	.4byte	0x1f8f
+	.4byte	0x1f90
 	.byte	0
 	.uleb128 0x1f
 	.4byte	0xab
-	.4byte	0x168f
+	.4byte	0x1690
 	.uleb128 0x20
 	.4byte	0x9b
 	.byte	0x23
 	.byte	0
 	.uleb128 0x7
-	.4byte	0x167f
+	.4byte	0x1680
 	.uleb128 0x40
 	.4byte	.LASF274
 	.byte	0x1
 	.byte	0x69
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x16fa
+	.4byte	0x16fb
 	.uleb128 0x2e
 	.4byte	.LASF210
-	.4byte	0x170a
+	.4byte	0x170b
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6123
+	.4byte	__func__$6169
 	.uleb128 0x39
 	.4byte	.LVL42
-	.4byte	0x1f59
-	.4byte	0x16e7
+	.4byte	0x1f5a
+	.4byte	0x16e8
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5a
@@ -4592,7 +4592,7 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6123
+	.4byte	__func__$6169
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5d
@@ -4602,32 +4602,32 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x3a
 	.4byte	.LVL43
-	.4byte	0x1f9b
+	.4byte	0x1f9c
 	.uleb128 0x3a
 	.4byte	.LVL44
-	.4byte	0x1f8f
+	.4byte	0x1f90
 	.byte	0
 	.uleb128 0x1f
 	.4byte	0xab
-	.4byte	0x170a
+	.4byte	0x170b
 	.uleb128 0x20
 	.4byte	0x9b
 	.byte	0x25
 	.byte	0
 	.uleb128 0x7
-	.4byte	0x16fa
+	.4byte	0x16fb
 	.uleb128 0x28
 	.4byte	.LASF220
 	.byte	0x1
 	.2byte	0x123
 	.4byte	0x3e8
 	.byte	0x1
-	.4byte	0x1746
+	.4byte	0x1747
 	.uleb128 0x26
 	.string	"cmd"
 	.byte	0x1
 	.2byte	0x123
-	.4byte	0x12b5
+	.4byte	0x12b6
 	.uleb128 0x29
 	.string	"res"
 	.byte	0x1
@@ -4635,30 +4635,30 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	0x3e8
 	.uleb128 0x27
 	.4byte	.LASF210
-	.4byte	0x1756
+	.4byte	0x1757
 	.4byte	.LASF220
 	.byte	0
 	.uleb128 0x1f
 	.4byte	0xab
-	.4byte	0x1756
+	.4byte	0x1757
 	.uleb128 0x20
 	.4byte	0x9b
 	.byte	0xb
 	.byte	0
 	.uleb128 0x7
-	.4byte	0x1746
+	.4byte	0x1747
 	.uleb128 0x41
 	.4byte	.LASF222
 	.byte	0x1
 	.byte	0xed
 	.4byte	0xf0
 	.byte	0x1
-	.4byte	0x1777
+	.4byte	0x1778
 	.uleb128 0x42
 	.string	"evt"
 	.byte	0x1
 	.byte	0xf3
-	.4byte	0x12dc
+	.4byte	0x12dd
 	.byte	0
 	.uleb128 0x28
 	.4byte	.LASF223
@@ -4666,45 +4666,45 @@ SDMMC_DATA_ERR_MASK:
 	.2byte	0x119
 	.4byte	0x12c
 	.byte	0x1
-	.4byte	0x1795
+	.4byte	0x1796
 	.uleb128 0x26
 	.string	"cmd"
 	.byte	0x1
 	.2byte	0x119
-	.4byte	0x1795
+	.4byte	0x1796
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x179b
+	.4byte	0x179c
 	.uleb128 0x7
-	.4byte	0x12a3
+	.4byte	0x12a4
 	.uleb128 0x28
 	.4byte	.LASF224
 	.byte	0x1
 	.2byte	0x103
 	.4byte	0xf0
 	.byte	0x1
-	.4byte	0x17ee
+	.4byte	0x17ef
 	.uleb128 0x26
 	.string	"cmd"
 	.byte	0x1
 	.2byte	0x103
-	.4byte	0x12b5
+	.4byte	0x12b6
 	.uleb128 0x25
 	.4byte	.LASF208
 	.byte	0x1
 	.2byte	0x103
-	.4byte	0x17ee
+	.4byte	0x17ef
 	.uleb128 0x25
 	.4byte	.LASF225
 	.byte	0x1
 	.2byte	0x104
-	.4byte	0x17f4
+	.4byte	0x17f5
 	.uleb128 0x43
 	.4byte	.LASF226
 	.byte	0x1
 	.2byte	0x106
-	.4byte	0x12dc
+	.4byte	0x12dd
 	.uleb128 0x29
 	.string	"err"
 	.byte	0x1
@@ -4713,61 +4713,61 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x130c
+	.4byte	0x130d
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x12dc
+	.4byte	0x12dd
 	.uleb128 0x28
 	.4byte	.LASF227
 	.byte	0x1
 	.2byte	0x188
 	.4byte	0xf0
 	.byte	0x1
-	.4byte	0x1887
+	.4byte	0x1888
 	.uleb128 0x26
 	.string	"evt"
 	.byte	0x1
 	.2byte	0x188
-	.4byte	0x12dc
+	.4byte	0x12dd
 	.uleb128 0x26
 	.string	"cmd"
 	.byte	0x1
 	.2byte	0x188
-	.4byte	0x12b5
+	.4byte	0x12b6
 	.uleb128 0x25
 	.4byte	.LASF228
 	.byte	0x1
 	.2byte	0x189
-	.4byte	0x17ee
+	.4byte	0x17ef
 	.uleb128 0x25
 	.4byte	.LASF225
 	.byte	0x1
 	.2byte	0x189
-	.4byte	0x17f4
+	.4byte	0x17f5
 	.uleb128 0x43
 	.4byte	.LASF229
 	.byte	0x1
 	.2byte	0x18b
-	.4byte	0x1897
+	.4byte	0x1898
 	.uleb128 0x43
 	.4byte	.LASF230
 	.byte	0x1
 	.2byte	0x191
-	.4byte	0x12dc
+	.4byte	0x12dd
 	.uleb128 0x27
 	.4byte	.LASF210
-	.4byte	0x18ac
+	.4byte	0x18ad
 	.4byte	.LASF227
 	.uleb128 0x43
 	.4byte	.LASF231
 	.byte	0x1
 	.2byte	0x194
-	.4byte	0x130c
+	.4byte	0x130d
 	.uleb128 0x43
 	.4byte	.LASF208
 	.byte	0x1
 	.2byte	0x195
-	.4byte	0x130c
+	.4byte	0x130d
 	.uleb128 0x44
 	.uleb128 0x43
 	.4byte	.LASF232
@@ -4778,34 +4778,34 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x1f
 	.4byte	0xb2
-	.4byte	0x1897
+	.4byte	0x1898
 	.uleb128 0x20
 	.4byte	0x9b
 	.byte	0x3
 	.byte	0
 	.uleb128 0x7
-	.4byte	0x1887
+	.4byte	0x1888
 	.uleb128 0x1f
 	.4byte	0xab
-	.4byte	0x18ac
+	.4byte	0x18ad
 	.uleb128 0x20
 	.4byte	0x9b
 	.byte	0xe
 	.byte	0
 	.uleb128 0x7
-	.4byte	0x189c
+	.4byte	0x189d
 	.uleb128 0x41
 	.4byte	.LASF233
 	.byte	0x1
 	.byte	0xb9
 	.4byte	0x2c
 	.byte	0x1
-	.4byte	0x18f0
+	.4byte	0x18f1
 	.uleb128 0x45
 	.4byte	.LASF213
 	.byte	0x1
 	.byte	0xbb
-	.4byte	0x14b4
+	.4byte	0x14b5
 	.uleb128 0x45
 	.4byte	.LASF234
 	.byte	0x1
@@ -4822,7 +4822,7 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LASF214
 	.byte	0x1
 	.byte	0xc2
-	.4byte	0x11eb
+	.4byte	0x11ec
 	.byte	0
 	.byte	0
 	.byte	0
@@ -4832,7 +4832,7 @@ SDMMC_DATA_ERR_MASK:
 	.2byte	0x1d7
 	.4byte	0x12c
 	.byte	0x1
-	.4byte	0x191a
+	.4byte	0x191b
 	.uleb128 0x25
 	.4byte	.LASF193
 	.byte	0x1
@@ -4849,11 +4849,11 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0x1
 	.byte	0x74
 	.4byte	0xf0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1e8f
+	.4byte	0x1e90
 	.uleb128 0x2d
 	.4byte	.LASF237
 	.byte	0x1
@@ -4864,7 +4864,7 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LASF238
 	.byte	0x1
 	.byte	0x74
-	.4byte	0x12b5
+	.4byte	0x12b6
 	.4byte	.LLST13
 	.uleb128 0x30
 	.string	"ret"
@@ -4879,7 +4879,7 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	0x3e8
 	.uleb128 0x47
 	.4byte	.LASF210
-	.4byte	0x1e9f
+	.4byte	0x1ea0
 	.uleb128 0x48
 	.string	"out"
 	.byte	0x1
@@ -4889,36 +4889,36 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LASF208
 	.byte	0x1
 	.byte	0xa2
-	.4byte	0x130c
+	.4byte	0x130d
 	.4byte	.LLST15
 	.uleb128 0x32
 	.4byte	.LASF225
 	.byte	0x1
 	.byte	0xa3
-	.4byte	0x12dc
+	.4byte	0x12dd
 	.4byte	.LLST16
 	.uleb128 0x49
-	.4byte	0x175b
+	.4byte	0x175c
 	.4byte	.LBB46
 	.4byte	.LBE46-.LBB46
 	.byte	0x1
 	.byte	0x7c
-	.4byte	0x1a16
+	.4byte	0x1a17
 	.uleb128 0x2f
 	.4byte	.LBB47
 	.4byte	.LBE47-.LBB47
 	.uleb128 0x4a
-	.4byte	0x176b
+	.4byte	0x176c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
 	.uleb128 0x3a
 	.4byte	.LVL49
-	.4byte	0x1fa6
+	.4byte	0x1fa7
 	.uleb128 0x39
 	.4byte	.LVL50
-	.4byte	0x1fb1
-	.4byte	0x19ff
+	.4byte	0x1fb2
+	.4byte	0x1a00
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5a
@@ -4952,7 +4952,7 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x33
 	.4byte	.LVL51
-	.4byte	0x1fbc
+	.4byte	0x1fbd
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5a
@@ -4968,40 +4968,40 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.byte	0
 	.uleb128 0x49
-	.4byte	0x170f
+	.4byte	0x1710
 	.4byte	.LBB48
 	.4byte	.LBE48-.LBB48
 	.byte	0x1
 	.byte	0x7e
-	.4byte	0x1a9b
+	.4byte	0x1a9c
 	.uleb128 0x3c
-	.4byte	0x1720
+	.4byte	0x1721
 	.4byte	.LLST17
 	.uleb128 0x2f
 	.4byte	.LBB49
 	.4byte	.LBE49-.LBB49
 	.uleb128 0x4b
-	.4byte	0x172c
+	.4byte	0x172d
 	.4byte	.LLST18
 	.uleb128 0x4a
-	.4byte	0x1738
+	.4byte	0x1739
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6178
+	.4byte	__func__$6224
 	.uleb128 0x4c
-	.4byte	0x1777
+	.4byte	0x1778
 	.4byte	.LBB50
 	.4byte	.LBE50-.LBB50
 	.byte	0x1
 	.2byte	0x142
-	.4byte	0x1a6d
+	.4byte	0x1a6e
 	.uleb128 0x3c
-	.4byte	0x1788
+	.4byte	0x1789
 	.4byte	.LLST19
 	.byte	0
 	.uleb128 0x33
 	.4byte	.LVL64
-	.4byte	0x1f59
+	.4byte	0x1f5a
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5a
@@ -5019,7 +5019,7 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6178
+	.4byte	__func__$6224
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5d
@@ -5030,177 +5030,177 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.byte	0
 	.uleb128 0x49
-	.4byte	0x17a0
+	.4byte	0x17a1
 	.4byte	.LBB52
 	.4byte	.LBE52-.LBB52
 	.byte	0x1
 	.byte	0xa5
-	.4byte	0x1d96
+	.4byte	0x1d97
 	.uleb128 0x3c
-	.4byte	0x17c9
+	.4byte	0x17ca
 	.4byte	.LLST20
 	.uleb128 0x3c
-	.4byte	0x17bd
+	.4byte	0x17be
 	.4byte	.LLST21
 	.uleb128 0x3c
-	.4byte	0x17b1
+	.4byte	0x17b2
 	.4byte	.LLST22
 	.uleb128 0x2f
 	.4byte	.LBB53
 	.4byte	.LBE53-.LBB53
 	.uleb128 0x4a
-	.4byte	0x17d5
+	.4byte	0x17d6
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
 	.uleb128 0x4b
-	.4byte	0x17e1
+	.4byte	0x17e2
 	.4byte	.LLST23
 	.uleb128 0x4d
-	.4byte	0x17fa
+	.4byte	0x17fb
 	.4byte	.LBB54
 	.4byte	.Ldebug_ranges0+0x20
 	.byte	0x1
 	.2byte	0x114
-	.4byte	0x1d3a
+	.4byte	0x1d3b
 	.uleb128 0x3c
-	.4byte	0x182f
+	.4byte	0x1830
 	.4byte	.LLST24
 	.uleb128 0x3c
-	.4byte	0x1823
+	.4byte	0x1824
 	.4byte	.LLST25
 	.uleb128 0x4e
-	.4byte	0x1817
+	.4byte	0x1818
 	.uleb128 0x3c
-	.4byte	0x180b
+	.4byte	0x180c
 	.4byte	.LLST26
 	.uleb128 0x31
 	.4byte	.Ldebug_ranges0+0x20
 	.uleb128 0x3e
-	.4byte	0x183b
+	.4byte	0x183c
 	.uleb128 0x4b
-	.4byte	0x1847
+	.4byte	0x1848
 	.4byte	.LLST27
 	.uleb128 0x4b
-	.4byte	0x1860
+	.4byte	0x1861
 	.4byte	.LLST28
 	.uleb128 0x4b
-	.4byte	0x186c
+	.4byte	0x186d
 	.4byte	.LLST29
 	.uleb128 0x3e
-	.4byte	0x1853
+	.4byte	0x1854
 	.uleb128 0x4d
-	.4byte	0x13a9
+	.4byte	0x13aa
 	.4byte	.LBB56
 	.4byte	.Ldebug_ranges0+0x40
 	.byte	0x1
 	.2byte	0x19d
-	.4byte	0x1b77
+	.4byte	0x1b78
 	.uleb128 0x3c
-	.4byte	0x13c6
+	.4byte	0x13c7
 	.4byte	.LLST30
 	.uleb128 0x3c
-	.4byte	0x13ba
+	.4byte	0x13bb
 	.4byte	.LLST31
 	.uleb128 0x31
 	.4byte	.Ldebug_ranges0+0x40
 	.uleb128 0x4b
-	.4byte	0x13d2
+	.4byte	0x13d3
 	.4byte	.LLST32
 	.byte	0
 	.byte	0
 	.uleb128 0x4c
-	.4byte	0x13a9
+	.4byte	0x13aa
 	.4byte	.LBB60
 	.4byte	.LBE60-.LBB60
 	.byte	0x1
 	.2byte	0x1a1
-	.4byte	0x1bb1
+	.4byte	0x1bb2
 	.uleb128 0x3c
-	.4byte	0x13c6
+	.4byte	0x13c7
 	.4byte	.LLST33
 	.uleb128 0x3c
-	.4byte	0x13ba
+	.4byte	0x13bb
 	.4byte	.LLST34
 	.uleb128 0x2f
 	.4byte	.LBB61
 	.4byte	.LBE61-.LBB61
 	.uleb128 0x4b
-	.4byte	0x13d2
+	.4byte	0x13d3
 	.4byte	.LLST35
 	.byte	0
 	.byte	0
 	.uleb128 0x4c
-	.4byte	0x13a9
+	.4byte	0x13aa
 	.4byte	.LBB62
 	.4byte	.LBE62-.LBB62
 	.byte	0x1
 	.2byte	0x1b2
-	.4byte	0x1beb
+	.4byte	0x1bec
 	.uleb128 0x3c
-	.4byte	0x13c6
+	.4byte	0x13c7
 	.4byte	.LLST36
 	.uleb128 0x3c
-	.4byte	0x13ba
+	.4byte	0x13bb
 	.4byte	.LLST37
 	.uleb128 0x2f
 	.4byte	.LBB63
 	.4byte	.LBE63-.LBB63
 	.uleb128 0x4b
-	.4byte	0x13d2
+	.4byte	0x13d3
 	.4byte	.LLST38
 	.byte	0
 	.byte	0
 	.uleb128 0x4c
-	.4byte	0x13a9
+	.4byte	0x13aa
 	.4byte	.LBB64
 	.4byte	.LBE64-.LBB64
 	.byte	0x1
 	.2byte	0x1b6
-	.4byte	0x1c25
+	.4byte	0x1c26
 	.uleb128 0x3c
-	.4byte	0x13c6
+	.4byte	0x13c7
 	.4byte	.LLST39
 	.uleb128 0x3c
-	.4byte	0x13ba
+	.4byte	0x13bb
 	.4byte	.LLST40
 	.uleb128 0x2f
 	.4byte	.LBB65
 	.4byte	.LBE65-.LBB65
 	.uleb128 0x4b
-	.4byte	0x13d2
+	.4byte	0x13d3
 	.4byte	.LLST41
 	.byte	0
 	.byte	0
 	.uleb128 0x4f
 	.4byte	.Ldebug_ranges0+0x58
-	.4byte	0x1c91
+	.4byte	0x1c92
 	.uleb128 0x3e
-	.4byte	0x1879
+	.4byte	0x187a
 	.uleb128 0x4d
-	.4byte	0x18b1
+	.4byte	0x18b2
 	.4byte	.LBB67
 	.4byte	.Ldebug_ranges0+0x70
 	.byte	0x1
 	.2byte	0x1b9
-	.4byte	0x1c7e
+	.4byte	0x1c7f
 	.uleb128 0x31
 	.4byte	.Ldebug_ranges0+0x70
 	.uleb128 0x4b
-	.4byte	0x18c1
+	.4byte	0x18c2
 	.4byte	.LLST42
 	.uleb128 0x4b
-	.4byte	0x18cc
+	.4byte	0x18cd
 	.4byte	.LLST43
 	.uleb128 0x31
 	.4byte	.Ldebug_ranges0+0x88
 	.uleb128 0x4b
-	.4byte	0x18d8
+	.4byte	0x18d9
 	.4byte	.LLST44
 	.uleb128 0x31
 	.4byte	.Ldebug_ranges0+0x88
 	.uleb128 0x4b
-	.4byte	0x18e2
+	.4byte	0x18e3
 	.4byte	.LLST45
 	.byte	0
 	.byte	0
@@ -5208,36 +5208,36 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x3a
 	.4byte	.LVL128
-	.4byte	0x13ff
+	.4byte	0x1400
 	.uleb128 0x3a
 	.4byte	.LVL129
-	.4byte	0x1fc7
+	.4byte	0x1fc8
 	.byte	0
 	.uleb128 0x4c
-	.4byte	0x13a9
+	.4byte	0x13aa
 	.4byte	.LBB76
 	.4byte	.LBE76-.LBB76
 	.byte	0x1
 	.2byte	0x1c9
-	.4byte	0x1ccb
+	.4byte	0x1ccc
 	.uleb128 0x3c
-	.4byte	0x13c6
+	.4byte	0x13c7
 	.4byte	.LLST46
 	.uleb128 0x3c
-	.4byte	0x13ba
+	.4byte	0x13bb
 	.4byte	.LLST47
 	.uleb128 0x2f
 	.4byte	.LBB77
 	.4byte	.LBE77-.LBB77
 	.uleb128 0x4b
-	.4byte	0x13d2
+	.4byte	0x13d3
 	.4byte	.LLST48
 	.byte	0
 	.byte	0
 	.uleb128 0x39
 	.4byte	.LVL104
-	.4byte	0x14b9
-	.4byte	0x1ce5
+	.4byte	0x14ba
+	.4byte	0x1ce6
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5a
@@ -5253,8 +5253,8 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x39
 	.4byte	.LVL108
-	.4byte	0x14b9
-	.4byte	0x1cff
+	.4byte	0x14ba
+	.4byte	0x1d00
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5a
@@ -5270,8 +5270,8 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x39
 	.4byte	.LVL112
-	.4byte	0x1361
-	.4byte	0x1d19
+	.4byte	0x1362
+	.4byte	0x1d1a
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5a
@@ -5287,10 +5287,10 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x3a
 	.4byte	.LVL113
-	.4byte	0x1f6d
+	.4byte	0x1f6e
 	.uleb128 0x33
 	.4byte	.LVL135
-	.4byte	0x1361
+	.4byte	0x1362
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5a
@@ -5308,8 +5308,8 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x39
 	.4byte	.LVL93
-	.4byte	0x1fbc
-	.4byte	0x1d4e
+	.4byte	0x1fbd
+	.4byte	0x1d4f
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5b
@@ -5319,11 +5319,11 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x3a
 	.4byte	.LVL95
-	.4byte	0x1fa6
+	.4byte	0x1fa7
 	.uleb128 0x39
 	.4byte	.LVL96
-	.4byte	0x1fb1
-	.4byte	0x1d8b
+	.4byte	0x1fb2
+	.4byte	0x1d8c
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5a
@@ -5356,33 +5356,33 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x3a
 	.4byte	.LVL97
-	.4byte	0x1f6d
+	.4byte	0x1f6e
 	.byte	0
 	.byte	0
 	.uleb128 0x50
-	.4byte	0x18f0
+	.4byte	0x18f1
 	.4byte	.LBB82
 	.4byte	.Ldebug_ranges0+0xa0
 	.byte	0x1
 	.byte	0xab
-	.4byte	0x1de3
+	.4byte	0x1de4
 	.uleb128 0x3c
-	.4byte	0x1901
+	.4byte	0x1902
 	.4byte	.LLST49
 	.uleb128 0x31
 	.4byte	.Ldebug_ranges0+0xa0
 	.uleb128 0x4b
-	.4byte	0x190d
+	.4byte	0x190e
 	.4byte	.LLST50
 	.uleb128 0x3a
 	.4byte	.LVL143
-	.4byte	0x1fd2
+	.4byte	0x1fd3
 	.uleb128 0x3a
 	.4byte	.LVL150
-	.4byte	0x1fd2
+	.4byte	0x1fd3
 	.uleb128 0x33
 	.4byte	.LVL152
-	.4byte	0x1fdd
+	.4byte	0x1fde
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5a
@@ -5393,8 +5393,8 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x39
 	.4byte	.LVL47
-	.4byte	0x1fe9
-	.4byte	0x1e01
+	.4byte	0x1fea
+	.4byte	0x1e02
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5b
@@ -5414,11 +5414,11 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x3a
 	.4byte	.LVL48
-	.4byte	0x1ff5
+	.4byte	0x1ff6
 	.uleb128 0x39
 	.4byte	.LVL85
-	.4byte	0x2000
-	.4byte	0x1e2a
+	.4byte	0x2001
+	.4byte	0x1e2b
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5a
@@ -5440,8 +5440,8 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x39
 	.4byte	.LVL87
-	.4byte	0x13ff
-	.4byte	0x1e3d
+	.4byte	0x1400
+	.4byte	0x1e3e
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5a
@@ -5450,8 +5450,8 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x39
 	.4byte	.LVL88
-	.4byte	0x2009
-	.4byte	0x1e51
+	.4byte	0x200a
+	.4byte	0x1e52
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5a
@@ -5461,8 +5461,8 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x39
 	.4byte	.LVL89
-	.4byte	0x2014
-	.4byte	0x1e6c
+	.4byte	0x2015
+	.4byte	0x1e6d
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5a
@@ -5479,10 +5479,10 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x3a
 	.4byte	.LVL154
-	.4byte	0x201f
+	.4byte	0x2020
 	.uleb128 0x33
 	.4byte	.LVL155
-	.4byte	0x202a
+	.4byte	0x202b
 	.uleb128 0x34
 	.uleb128 0x1
 	.byte	0x5b
@@ -5502,13 +5502,13 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.uleb128 0x1f
 	.4byte	0xab
-	.4byte	0x1e9f
+	.4byte	0x1ea0
 	.uleb128 0x20
 	.4byte	0x9b
 	.byte	0x19
 	.byte	0
 	.uleb128 0x7
-	.4byte	0x1e8f
+	.4byte	0x1e90
 	.uleb128 0x51
 	.string	"TAG"
 	.byte	0x1
@@ -5520,7 +5520,7 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0x9f
 	.uleb128 0x1f
 	.4byte	0x27c
-	.4byte	0x1ec6
+	.4byte	0x1ec7
 	.uleb128 0x20
 	.4byte	0x9b
 	.byte	0x3
@@ -5529,7 +5529,7 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LASF240
 	.byte	0x1
 	.byte	0x43
-	.4byte	0x1eb6
+	.4byte	0x1eb7
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	s_dma_desc
@@ -5537,7 +5537,7 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LASF241
 	.byte	0x1
 	.byte	0x44
-	.4byte	0x1356
+	.4byte	0x1357
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	s_cur_transfer
@@ -5565,13 +5565,13 @@ SDMMC_DATA_ERR_MASK:
 	.uleb128 0x53
 	.4byte	.LASF245
 	.byte	0xa
-	.2byte	0x17f
-	.4byte	0x1212
+	.2byte	0x181
+	.4byte	0x1213
 	.uleb128 0x54
 	.4byte	.LASF246
 	.byte	0x1
 	.byte	0x35
-	.4byte	0x1f32
+	.4byte	0x1f33
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	SDMMC_DATA_ERR_MASK
@@ -5581,7 +5581,7 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LASF247
 	.byte	0x1
 	.byte	0x3a
-	.4byte	0x1f32
+	.4byte	0x1f33
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	SDMMC_DMA_DONE_MASK
@@ -5589,7 +5589,7 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LASF248
 	.byte	0x1
 	.byte	0x3e
-	.4byte	0x1f32
+	.4byte	0x1f33
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	SDMMC_CMD_ERR_MASK
@@ -6902,7 +6902,7 @@ SDMMC_DATA_ERR_MASK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL18
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -6917,7 +6917,7 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL2
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -7094,7 +7094,7 @@ SDMMC_DATA_ERR_MASK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL27
-	.4byte	.LFE28
+	.4byte	.LFE37
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7118,7 +7118,7 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL26
-	.4byte	.LFE28
+	.4byte	.LFE37
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -7151,7 +7151,7 @@ SDMMC_DATA_ERR_MASK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL33
-	.4byte	.LFE29
+	.4byte	.LFE38
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7194,7 +7194,7 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0x91
 	.sleb128 -48
 	.4byte	.LVL92
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -7215,7 +7215,7 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0x53
 	.byte	0x9f
 	.4byte	.LVL156
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -7240,7 +7240,7 @@ SDMMC_DATA_ERR_MASK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL156
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
@@ -7265,7 +7265,7 @@ SDMMC_DATA_ERR_MASK:
 	.2byte	0x1
 	.byte	0x59
 	.4byte	.LVL156
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x1
 	.byte	0x59
 	.4byte	0
@@ -7335,7 +7335,7 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0x93
 	.uleb128 0x4
 	.4byte	.LVL157
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x5
 	.byte	0x93
 	.uleb128 0x4
@@ -7357,7 +7357,7 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0x53
 	.byte	0x9f
 	.4byte	.LVL156
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -8885,13 +8885,13 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LVL153
 	.2byte	0x6
 	.byte	0xf2
-	.4byte	.Ldebug_info0+6542
+	.4byte	.Ldebug_info0+6543
 	.sleb128 0
 	.4byte	.LVL156
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x6
 	.byte	0xf2
-	.4byte	.Ldebug_info0+6542
+	.4byte	.Ldebug_info0+6543
 	.sleb128 0
 	.4byte	0
 	.4byte	0
@@ -8900,13 +8900,13 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LVL153
 	.2byte	0x6
 	.byte	0xf2
-	.4byte	.Ldebug_info0+6527
+	.4byte	.Ldebug_info0+6528
 	.sleb128 0
 	.4byte	.LVL156
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x6
 	.byte	0xf2
-	.4byte	.Ldebug_info0+6527
+	.4byte	.Ldebug_info0+6528
 	.sleb128 0
 	.4byte	0
 	.4byte	0
@@ -8923,7 +8923,7 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0x53
 	.byte	0x9f
 	.4byte	.LVL156
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -8938,7 +8938,7 @@ SDMMC_DATA_ERR_MASK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL156
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -8948,7 +8948,7 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LVL139
 	.2byte	0x6
 	.byte	0xf2
-	.4byte	.Ldebug_info0+6542
+	.4byte	.Ldebug_info0+6543
 	.sleb128 0
 	.4byte	0
 	.4byte	0
@@ -8957,7 +8957,7 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LVL139
 	.2byte	0x6
 	.byte	0xf2
-	.4byte	.Ldebug_info0+6527
+	.4byte	.Ldebug_info0+6528
 	.sleb128 0
 	.4byte	0
 	.4byte	0
@@ -9125,7 +9125,7 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LVL109
 	.2byte	0x6
 	.byte	0xf2
-	.4byte	.Ldebug_info0+6926
+	.4byte	.Ldebug_info0+6927
 	.sleb128 0
 	.4byte	0
 	.4byte	0
@@ -9167,7 +9167,7 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LVL109
 	.2byte	0x6
 	.byte	0xf2
-	.4byte	.Ldebug_info0+6926
+	.4byte	.Ldebug_info0+6927
 	.sleb128 0
 	.4byte	0
 	.4byte	0
@@ -9196,7 +9196,7 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LVL132
 	.2byte	0x6
 	.byte	0xf2
-	.4byte	.Ldebug_info0+6926
+	.4byte	.Ldebug_info0+6927
 	.sleb128 0
 	.4byte	0
 	.4byte	0
@@ -9225,7 +9225,7 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LVL132
 	.2byte	0x6
 	.byte	0xf2
-	.4byte	.Ldebug_info0+6926
+	.4byte	.Ldebug_info0+6927
 	.sleb128 4
 	.4byte	0
 	.4byte	0
@@ -9370,7 +9370,7 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LVL136
 	.2byte	0x6
 	.byte	0xf2
-	.4byte	.Ldebug_info0+6926
+	.4byte	.Ldebug_info0+6927
 	.sleb128 0
 	.4byte	0
 	.4byte	0
@@ -9437,18 +9437,18 @@ SDMMC_DATA_ERR_MASK:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.4byte	.LFB28
 	.4byte	.LFE28-.LFB28
 	.4byte	.LFB29
 	.4byte	.LFE29-.LFB29
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -9499,18 +9499,18 @@ SDMMC_DATA_ERR_MASK:
 	.4byte	.LBE85
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB23
-	.4byte	.LFE23
+	.4byte	.LFB32
+	.4byte	.LFE32
+	.4byte	.LFB37
+	.4byte	.LFE37
+	.4byte	.LFB38
+	.4byte	.LFE38
 	.4byte	.LFB28
 	.4byte	.LFE28
 	.4byte	.LFB29
 	.4byte	.LFE29
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB21
-	.4byte	.LFE21
+	.4byte	.LFB30
+	.4byte	.LFE30
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

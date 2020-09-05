@@ -985,15 +985,15 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h" 1
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h"
@@ -1001,7 +1001,7 @@ void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h" 2
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc_io_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc_io_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc_io_struct.h"
 typedef volatile struct {
     union {
         struct {
@@ -1271,7 +1271,7 @@ extern rtc_io_dev_t RTCIO;
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/sens_reg.h" 1
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/sens_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/sens_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/sens_struct.h"
 typedef volatile struct {
     union {
         struct {
@@ -1576,7 +1576,7 @@ extern sens_dev_t SENS;
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc_cntl_reg.h" 1
 # 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc_cntl_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc_cntl_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc_cntl_struct.h"
 typedef volatile struct {
     union {
         struct {
@@ -2119,7 +2119,7 @@ extern rtc_cntl_dev_t RTCCNTL;
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/syscon_reg.h" 1
 # 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/syscon_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/syscon_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/syscon_struct.h"
 typedef volatile struct {
     union {
         struct {
@@ -3115,7 +3115,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 2
 
@@ -3141,7 +3141,7 @@ void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int l
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 1
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
 typedef volatile struct {
     uint32_t bt_select;
     uint32_t out;
@@ -3359,6 +3359,9 @@ static inline void __attribute__ ((deprecated)) PIN_PULLDWN_EN(uint32_t PIN_NAME
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_pins.h" 1
@@ -3480,7 +3483,7 @@ void esp_intr_noniram_disable();
 void esp_intr_noniram_enable();
 # 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
 extern const uint32_t GPIO_PIN_MUX_REG[40];
 # 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
@@ -4822,6 +4825,77 @@ typedef void (*TaskFunction_t)( void * );
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/deprecated_definitions.h" 1
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 2
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void *get_sp()
+{
+    void *sp;
+    asm volatile ("mov %0, sp;" : "=r" (sp));
+    return sp;
+}
+
+
+
+
+
+static inline void cpu_write_dtlb(uint32_t vpn, unsigned attr)
+{
+    asm volatile ("wdtlb  %1, %0; dsync\n" :: "r" (vpn), "r" (attr));
+}
+
+
+static inline void cpu_write_itlb(unsigned vpn, unsigned attr)
+{
+    asm volatile ("witlb  %1, %0; isync\n" :: "r" (vpn), "r" (attr));
+}
+
+static inline void cpu_init_memctl()
+{
+
+    uint32_t memctl = 0x00000000;
+    asm volatile ("wsr %0, " "MEMCTL" : : "r" (memctl));;
+
+}
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void cpu_configure_region_protection()
+{
+    const uint32_t pages_to_protect[] = {0x00000000, 0x80000000, 0xa0000000, 0xc0000000, 0xe0000000};
+    for (int i = 0; i < sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
+        cpu_write_dtlb(pages_to_protect[i], 0xf);
+        cpu_write_itlb(pages_to_protect[i], 0xf);
+    }
+    cpu_write_dtlb(0x20000000, 0);
+    cpu_write_itlb(0x20000000, 0);
+}
+
+
+
+
+
+void esp_cpu_stall(int cpu_id);
+
+
+
+
+
+void esp_cpu_unstall(int cpu_id);
+
+
+
+
+
+void esp_cpu_reset(int cpu_id);
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 3 4
+_Bool 
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+    esp_cpu_in_ocd_debug_mode();
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+
 
 
 
@@ -5248,7 +5322,7 @@ inline static
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_dma_capable(const void *p)
+                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
 {
     return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
 }
@@ -5257,24 +5331,37 @@ inline static
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_executable(const void *p)
+                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
+{
+    return ((intptr_t)p) % 4 == 0;
+}
+
+inline static 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
 {
     intptr_t ip = (intptr_t) p;
     return (ip >= 0x400D0000 && ip < 0x40400000)
         || (ip >= 0x40080000 && ip < 0x400A0000)
+        || (ip >= 0x40000000 && ip < 0x40070000)
+
+        || (ip >= 0x40078000 && ip < 0x40080000)
+
         || (ip >= 0x400C0000 && ip < 0x400C2000);
 }
 
 inline static 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_byte_accessible(const void *p)
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
 {
     
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x40000000);
 
@@ -5284,14 +5371,14 @@ inline static
 }
 
 inline static 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_internal(const void *p) {
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
     
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
     r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
@@ -5300,18 +5387,18 @@ inline static
 
 
 inline static 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_external_ram(const void *p) {
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
     return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
 }
 
 inline static 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_iram(const void *p) {
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
 
 
 
@@ -5320,19 +5407,35 @@ inline static
 }
 
 inline static 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_drom(const void *p) {
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
     return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
 }
 
 inline static 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_dram(const void *p) {
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
     return ((intptr_t)p >= 0x3FAE0000 && (intptr_t)p < 0x40000000);
+}
+
+inline static 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
+    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x3FFFFFFC);
+}
+
+inline static 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
+    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400BFFFC);
 }
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
@@ -5381,24 +5484,24 @@ typedef struct {
 void vPortAssertIfInISR();
 # 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortCPUInitializeMutex(portMUX_TYPE *mux);
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vTaskExitCritical( portMUX_TYPE *mux );
 void vTaskEnterCritical( portMUX_TYPE *mux );
 void vPortCPUAcquireMutex(portMUX_TYPE *mux);
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
 _Bool 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
     vPortCPUAcquireMutexTimeout(portMUX_TYPE *mux, int timeout_cycles);
 void vPortCPUReleaseMutex(portMUX_TYPE *mux);
-# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline unsigned portENTER_CRITICAL_NESTED() {
  unsigned state = ({ unsigned __tmp; __asm__ __volatile__( "rsil	%0, " "3" "\n" : "=a" (__tmp) : : "memory" ); __tmp;});
  ;
  return state;
 }
-# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, uint32_t *set) {
     __asm__ __volatile__ (
         "WSR 	    %2,SCOMPARE1 \n"
@@ -5407,20 +5510,20 @@ static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, u
         :"r"(addr), "r"(compare), "0"(*set)
         );
 }
-# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortYield( void );
 void _frxt_setup_switch( void );
 
 
 
 static inline uint32_t xPortGetCoreID();
-# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef struct {
 
  volatile StackType_t* coproc_area;
-# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 } xMPU_SETTINGS;
-# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 extern void esp_vApplicationIdleHook( void );
 extern void esp_vApplicationTickHook( void );
 
@@ -5431,10 +5534,10 @@ extern void esp_vApplicationTickHook( void );
 
 void _xt_coproc_release(volatile void * coproc_sa_base);
 void vApplicationSleep( TickType_t xExpectedIdleTime );
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/mpu_wrappers.h" 1
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h" 1
@@ -5491,25 +5594,25 @@ typedef enum {
 typedef esp_sleep_source_t esp_sleep_wakeup_cause_t;
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_disable_wakeup_source(esp_sleep_source_t source);
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ulp_wakeup();
-# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_timer_wakeup(uint64_t time_in_us);
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_touchpad_wakeup();
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 touch_pad_t esp_sleep_get_touchpad_wakeup_status();
-# 161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext0_wakeup(gpio_num_t gpio_num, int level);
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext1_wakeup(uint64_t mask, esp_sleep_ext1_wakeup_mode_t mode);
-# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_gpio_wakeup();
-# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_uart_wakeup(int uart_num);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 uint64_t esp_sleep_get_ext1_wakeup_status();
-# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
                                    esp_sleep_pd_option_t option);
 
@@ -5519,11 +5622,11 @@ esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
 
 
 void esp_deep_sleep_start() __attribute__((noreturn));
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_light_sleep_start();
-# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_deep_sleep(uint64_t time_in_us) __attribute__((noreturn));
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated));
 
 
@@ -5533,7 +5636,7 @@ void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated)
 
 
 esp_sleep_wakeup_cause_t esp_sleep_get_wakeup_cause();
-# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_wake_deep_sleep(void);
 
 
@@ -5541,7 +5644,7 @@ void esp_wake_deep_sleep(void);
 
 
 typedef void (*esp_deep_sleep_wake_stub_fn_t)(void);
-# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_set_deep_sleep_wake_stub(esp_deep_sleep_wake_stub_fn_t new_stub);
 
 
@@ -5565,6 +5668,12 @@ void esp_default_wake_deep_sleep(void);
 
 void esp_deep_sleep_disable_rom_logging(void);
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+       
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+const char* esp_get_idf_version(void);
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
 
 
 
@@ -5576,7 +5685,7 @@ typedef enum {
     ESP_MAC_BT,
     ESP_MAC_ETH,
 } esp_mac_type_t;
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef enum {
     ESP_RST_UNKNOWN,
     ESP_RST_POWERON,
@@ -5619,9 +5728,9 @@ typedef void (*shutdown_handler_t)(void);
 
 
 esp_err_t esp_register_shutdown_handler(shutdown_handler_t handle);
-# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_restart(void) __attribute__ ((noreturn));
-# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
@@ -5630,11 +5739,11 @@ void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
 esp_reset_reason_t esp_reset_reason(void);
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_time(void) __attribute__ ((deprecated));
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_get_free_heap_size(void);
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
@@ -5644,36 +5753,28 @@ uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
 uint32_t esp_get_minimum_free_heap_size( void );
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_random(void);
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_fill_random(void *buf, size_t len);
-# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_set(uint8_t *mac);
-# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_get(uint8_t *mac);
-# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_custom(uint8_t *mac);
-# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_default(uint8_t *mac);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t system_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_read_mac(uint8_t* mac, esp_mac_type_t type);
-# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_derive_local_mac(uint8_t* local_mac, const uint8_t* universal_mac);
-# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 const char* system_get_sdk_version(void) __attribute__ ((deprecated));
-
-
-
-
-
-
-
-const char* esp_get_idf_version(void);
 
 
 
@@ -5682,7 +5783,7 @@ const char* esp_get_idf_version(void);
 typedef enum {
     CHIP_ESP32 = 1,
 } esp_chip_model_t;
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef struct {
     esp_chip_model_t model;
     uint32_t features;
@@ -5695,10 +5796,10 @@ typedef struct {
 
 
 void esp_chip_info(esp_chip_info_t* out_info);
-# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters, BaseType_t xRunPrivileged ) ;
-# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 BaseType_t xPortStartScheduler( void ) ;
 
 
@@ -5734,14 +5835,14 @@ BaseType_t xPortInIsrContext();
 
 
 BaseType_t xPortInterruptedFromISRContext();
-# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  struct xMEMORY_REGION;
  void vPortStoreTaskMPUSettings( xMPU_SETTINGS *xMPUSettings, const struct xMEMORY_REGION * const xRegions, StackType_t *pxBottomOfStack, uint32_t usStackDepth ) ;
  void vPortReleaseTaskMPUSettings( xMPU_SETTINGS *xMPUSettings );
 
 
 
-static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
+static inline uint32_t __attribute__((section(".iram1" "." "11"))) xPortGetCoreID() {
     int id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -5752,6 +5853,21 @@ static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
 
 
 uint32_t xPortGetTickRateHz(void);
+
+
+static inline 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 3 4
+             _Bool 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+                  __attribute__((section(".iram1" "." "12"))) xPortCanYield(void)
+{
+    uint32_t ps_reg = 0;
+
+
+    asm volatile ("rsr %0, " "PS" : "=r" (ps_reg));;
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+    return ((ps_reg & 0x0000000F) == 0);
+}
 
 
 
@@ -6162,7 +6278,7 @@ typedef enum
           TaskHandle_t * const pvCreatedTask,
           const BaseType_t xCoreID);
 # 432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
- static inline __attribute__((section(".iram1"))) BaseType_t xTaskCreate(
+ static inline __attribute__((section(".iram1" "." "13"))) BaseType_t xTaskCreate(
    TaskFunction_t pvTaskCode,
    const char * const pcName,
    const uint32_t usStackDepth,
@@ -7242,17 +7358,17 @@ esp_err_t touch_pad_clear_group_mask(uint16_t set1_mask, uint16_t set2_mask, uin
     return 0;
 }
 
-uint32_t __attribute__((section(".iram1"))) touch_pad_get_status()
+uint32_t __attribute__((section(".iram1" "." "14"))) touch_pad_get_status()
 {
     uint32_t status = SENS.sar_touch_ctrl2.touch_meas_en;
     return (((status >> TOUCH_PAD_NUM8) & 0x1) == ((status >> TOUCH_PAD_NUM9) & 0x1) ? (status) : ((status) ^ ((0x1 <<TOUCH_PAD_NUM8) | (0x1 << TOUCH_PAD_NUM9))));
 }
 
-esp_err_t __attribute__((section(".iram1"))) touch_pad_clear_status()
+esp_err_t __attribute__((section(".iram1" "." "15"))) touch_pad_clear_status()
 {
-    vTaskEnterCritical(&rtc_spinlock);
+    do { if (xPortInIsrContext()) { vTaskEnterCritical(&rtc_spinlock); } else { vTaskEnterCritical(&rtc_spinlock); } } while(0);
     SENS.sar_touch_ctrl2.touch_meas_en_clr = 1;
-    vTaskExitCritical(&rtc_spinlock);
+    do { if (xPortInIsrContext()) { vTaskExitCritical(&rtc_spinlock); } else { vTaskExitCritical(&rtc_spinlock); } } while(0);
     return 0;
 }
 
@@ -7430,7 +7546,7 @@ esp_err_t touch_pad_read(touch_pad_t touch_num, uint16_t *touch_value)
     return res;
 }
 
-__attribute__((section(".iram1"))) esp_err_t touch_pad_read_raw_data(touch_pad_t touch_num, uint16_t *touch_value)
+__attribute__((section(".iram1" "." "16"))) esp_err_t touch_pad_read_raw_data(touch_pad_t touch_num, uint16_t *touch_value)
 {
     if (!(rtc_touch_mux != 
 # 922 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
@@ -7455,7 +7571,7 @@ __attribute__((section(".iram1"))) esp_err_t touch_pad_read_raw_data(touch_pad_t
     return 0;
 }
 
-__attribute__((section(".iram1"))) esp_err_t touch_pad_read_filtered(touch_pad_t touch_num, uint16_t *touch_value)
+__attribute__((section(".iram1" "." "17"))) esp_err_t touch_pad_read_filtered(touch_pad_t touch_num, uint16_t *touch_value)
 {
     if (!(rtc_touch_mux != 
 # 935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
@@ -7604,7 +7720,7 @@ esp_err_t touch_pad_filter_start(uint32_t filter_period_ms)
 # 998 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
        ((void *)0)
 # 998 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
-           , touch_pad_filter_cb);
+           , (void(*)(TimerHandle_t))touch_pad_filter_cb);
         if (s_touch_pad_filter->timer == 
 # 999 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                         ((void *)0)
@@ -7903,10 +8019,12 @@ esp_err_t adc_set_data_inv(adc_unit_t adc_unit,
     if (adc_unit & ADC_UNIT_1) {
 
         SENS.sar_read_ctrl.sar1_data_inv = inv_en;
+        SYSCON.saradc_ctrl2.sar1_inv = inv_en;
     }
     if (adc_unit & ADC_UNIT_2) {
 
         SENS.sar_read_ctrl2.sar2_data_inv = inv_en;
+        SYSCON.saradc_ctrl2.sar2_inv = inv_en;
     }
     vTaskExitCritical(&rtc_spinlock);
     return 0;
@@ -7914,8 +8032,8 @@ esp_err_t adc_set_data_inv(adc_unit_t adc_unit,
 
 esp_err_t adc_set_data_width(adc_unit_t adc_unit, adc_bits_width_t bits)
 {
-    if (!(adc_unit < ADC_UNIT_2)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1231, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1231, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1231, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1231, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1231, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } } while(0); } while(0); return (0x102); };
-    if (!(bits < ADC_WIDTH_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1232, __FUNCTION__, "ADC bit width error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1232, __FUNCTION__, "ADC bit width error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1232, __FUNCTION__, "ADC bit width error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1232, __FUNCTION__, "ADC bit width error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1232, __FUNCTION__, "ADC bit width error"); } } while(0); } while(0); return (0x102); };
+    if (!(adc_unit < ADC_UNIT_2)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1233, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1233, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1233, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1233, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1233, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } } while(0); } while(0); return (0x102); };
+    if (!(bits < ADC_WIDTH_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1234, __FUNCTION__, "ADC bit width error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1234, __FUNCTION__, "ADC bit width error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1234, __FUNCTION__, "ADC bit width error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1234, __FUNCTION__, "ADC bit width error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1234, __FUNCTION__, "ADC bit width error"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&rtc_spinlock);
     if (adc_unit & ADC_UNIT_1) {
         SENS.sar_start_force.sar1_bit_width = bits;
@@ -7936,83 +8054,83 @@ static void adc_set_controller(adc_unit_t unit, adc_controller_t ctrl )
         switch( ctrl ) {
             case ADC_CTRL_RTC:
                 SENS.sar_read_ctrl.sar1_dig_force = 
-# 1252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                    0
-# 1252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                         ;
                 SENS.sar_meas_start1.meas1_start_force = 
-# 1253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                         1
-# 1253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                             ;
                 SENS.sar_meas_start1.sar1_en_pad_force = 
-# 1254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1256 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                         1
-# 1254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1256 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                             ;
                 SENS.sar_touch_ctrl1.xpd_hall_force = 
-# 1255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1257 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                      1
-# 1255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1257 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                          ;
                 SENS.sar_touch_ctrl1.hall_phase_force = 
-# 1256 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                        1
-# 1256 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                            ;
                 break;
             case ADC_CTRL_ULP:
                 SENS.sar_read_ctrl.sar1_dig_force = 
-# 1259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                    0
-# 1259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                         ;
                 SENS.sar_meas_start1.meas1_start_force = 
-# 1260 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                         0
-# 1260 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                              ;
                 SENS.sar_meas_start1.sar1_en_pad_force = 
-# 1261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1263 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                         0
-# 1261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1263 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                              ;
                 SENS.sar_touch_ctrl1.xpd_hall_force = 
-# 1262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1264 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                      0
-# 1262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1264 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                           ;
                 SENS.sar_touch_ctrl1.hall_phase_force = 
-# 1263 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                        0
-# 1263 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                             ;
                 break;
             case ADC_CTRL_DIG:
                 SENS.sar_read_ctrl.sar1_dig_force = 
-# 1266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1268 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                    1
-# 1266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1268 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                        ;
                 SENS.sar_meas_start1.meas1_start_force = 
-# 1267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                         1
-# 1267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                             ;
                 SENS.sar_meas_start1.sar1_en_pad_force = 
-# 1268 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                         1
-# 1268 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                             ;
                 SENS.sar_touch_ctrl1.xpd_hall_force = 
-# 1269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                      1
-# 1269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                          ;
                 SENS.sar_touch_ctrl1.hall_phase_force = 
-# 1270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                        1
-# 1270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                            ;
                 break;
             default:
@@ -8023,111 +8141,111 @@ static void adc_set_controller(adc_unit_t unit, adc_controller_t ctrl )
         switch( ctrl ) {
             case ADC_CTRL_RTC:
                 SENS.sar_meas_start2.meas2_start_force = 
-# 1279 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                         1
-# 1279 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                             ;
                 SENS.sar_meas_start2.sar2_en_pad_force = 
-# 1280 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                         1
-# 1280 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                             ;
                 SENS.sar_read_ctrl2.sar2_dig_force = 
-# 1281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                     0
-# 1281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                          ;
                 SENS.sar_read_ctrl2.sar2_pwdet_force = 
-# 1282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                       0
-# 1282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                            ;
                 SYSCON.saradc_ctrl.sar2_mux = 
-# 1283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                              1
-# 1283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                  ;
                 break;
             case ADC_CTRL_ULP:
                 SENS.sar_meas_start2.meas2_start_force = 
-# 1286 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                         0
-# 1286 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                              ;
                 SENS.sar_meas_start2.sar2_en_pad_force = 
-# 1287 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                         0
-# 1287 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                              ;
                 SENS.sar_read_ctrl2.sar2_dig_force = 
-# 1288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                     0
-# 1288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                          ;
                 SENS.sar_read_ctrl2.sar2_pwdet_force = 
-# 1289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                       0
-# 1289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                            ;
                 SYSCON.saradc_ctrl.sar2_mux = 
-# 1290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                              1
-# 1290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                  ;
                 break;
             case ADC_CTRL_DIG:
                 SENS.sar_meas_start2.meas2_start_force = 
-# 1293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                         1
-# 1293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                             ;
                 SENS.sar_meas_start2.sar2_en_pad_force = 
-# 1294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                         1
-# 1294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                             ;
                 SENS.sar_read_ctrl2.sar2_dig_force = 
-# 1295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                     1
-# 1295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                         ;
                 SENS.sar_read_ctrl2.sar2_pwdet_force = 
-# 1296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                       0
-# 1296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                            ;
                 SYSCON.saradc_ctrl.sar2_mux = 
-# 1297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                              1
-# 1297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                  ;
                 break;
             case ADC2_CTRL_PWDET:
 
                 SENS.sar_meas_start2.meas2_start_force = 
-# 1301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1303 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                         1
-# 1301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1303 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                             ;
                 SENS.sar_meas_start2.sar2_en_pad_force = 
-# 1302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                         1
-# 1302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                             ;
                 SENS.sar_read_ctrl2.sar2_dig_force = 
-# 1303 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1305 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                     0
-# 1303 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1305 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                          ;
                 SENS.sar_read_ctrl2.sar2_pwdet_force = 
-# 1304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                       1
-# 1304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                           ;
                 SYSCON.saradc_ctrl.sar2_mux = 
-# 1305 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1307 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                              0
-# 1305 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1307 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                   ;
                 break;
             default:
@@ -8136,7 +8254,7 @@ static void adc_set_controller(adc_unit_t unit, adc_controller_t ctrl )
         }
     } else {
       do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "invalid adc unit" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "invalid adc unit" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "invalid adc unit" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "invalid adc unit" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "invalid adc unit" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-      ((0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1313, __func__, "0"));
+      ((0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1315, __func__, "0"));
     }
 }
 
@@ -8170,8 +8288,8 @@ static int adc_convert( adc_unit_t unit, int channel)
 
 static esp_err_t adc_set_i2s_data_len(adc_unit_t adc_unit, int patt_len)
 {
-    if (!(adc_unit < ADC_UNIT_2)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1347, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1347, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1347, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1347, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1347, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } } while(0); } while(0); return (0x102); };
-    if (!((patt_len < (16)) && (patt_len > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1348, __FUNCTION__, "ADC pattern length error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1348, __FUNCTION__, "ADC pattern length error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1348, __FUNCTION__, "ADC pattern length error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1348, __FUNCTION__, "ADC pattern length error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1348, __FUNCTION__, "ADC pattern length error"); } } while(0); } while(0); return (0x102); };
+    if (!(adc_unit < ADC_UNIT_2)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1349, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1349, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1349, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1349, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1349, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } } while(0); } while(0); return (0x102); };
+    if (!((patt_len < (16)) && (patt_len > 0))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1350, __FUNCTION__, "ADC pattern length error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1350, __FUNCTION__, "ADC pattern length error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1350, __FUNCTION__, "ADC pattern length error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1350, __FUNCTION__, "ADC pattern length error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1350, __FUNCTION__, "ADC pattern length error"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&rtc_spinlock);
     if(adc_unit & ADC_UNIT_1) {
         SYSCON.saradc_ctrl.sar1_patt_len = patt_len - 1;
@@ -8185,12 +8303,12 @@ static esp_err_t adc_set_i2s_data_len(adc_unit_t adc_unit, int patt_len)
 
 static esp_err_t adc_set_i2s_data_pattern(adc_unit_t adc_unit, int seq_num, adc_channel_t channel, adc_bits_width_t bits, adc_atten_t atten)
 {
-    if (!(adc_unit < ADC_UNIT_2)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1362, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1362, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1362, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1362, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1362, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } } while(0); } while(0); return (0x102); };
+    if (!(adc_unit < ADC_UNIT_2)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1364, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1364, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1364, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1364, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1364, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } } while(0); } while(0); return (0x102); };
     if (adc_unit & ADC_UNIT_1) {
-        if (!((adc1_channel_t) channel < ADC1_CHANNEL_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1364, __FUNCTION__, "ADC1 channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1364, __FUNCTION__, "ADC1 channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1364, __FUNCTION__, "ADC1 channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1364, __FUNCTION__, "ADC1 channel error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1364, __FUNCTION__, "ADC1 channel error"); } } while(0); } while(0); return (0x102); };
+        if (!((adc1_channel_t) channel < ADC1_CHANNEL_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1366, __FUNCTION__, "ADC1 channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1366, __FUNCTION__, "ADC1 channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1366, __FUNCTION__, "ADC1 channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1366, __FUNCTION__, "ADC1 channel error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1366, __FUNCTION__, "ADC1 channel error"); } } while(0); } while(0); return (0x102); };
     }
-    if (!(bits < ADC_WIDTH_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1366, __FUNCTION__, "ADC bit width error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1366, __FUNCTION__, "ADC bit width error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1366, __FUNCTION__, "ADC bit width error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1366, __FUNCTION__, "ADC bit width error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1366, __FUNCTION__, "ADC bit width error"); } } while(0); } while(0); return (0x102); };
-    if (!(atten < ADC_ATTEN_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1367, __FUNCTION__, "ADC Atten Err"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1367, __FUNCTION__, "ADC Atten Err"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1367, __FUNCTION__, "ADC Atten Err"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1367, __FUNCTION__, "ADC Atten Err"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1367, __FUNCTION__, "ADC Atten Err"); } } while(0); } while(0); return (0x102); };
+    if (!(bits < ADC_WIDTH_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1368, __FUNCTION__, "ADC bit width error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1368, __FUNCTION__, "ADC bit width error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1368, __FUNCTION__, "ADC bit width error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1368, __FUNCTION__, "ADC bit width error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1368, __FUNCTION__, "ADC bit width error"); } } while(0); } while(0); return (0x102); };
+    if (!(atten < ADC_ATTEN_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1369, __FUNCTION__, "ADC Atten Err"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1369, __FUNCTION__, "ADC Atten Err"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1369, __FUNCTION__, "ADC Atten Err"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1369, __FUNCTION__, "ADC Atten Err"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1369, __FUNCTION__, "ADC Atten Err"); } } while(0); } while(0); return (0x102); };
 
     vTaskEnterCritical(&rtc_spinlock);
 
@@ -8212,9 +8330,9 @@ static esp_err_t adc_set_i2s_data_pattern(adc_unit_t adc_unit, int seq_num, adc_
 
 esp_err_t adc_i2s_mode_init(adc_unit_t adc_unit, adc_channel_t channel)
 {
-    if (!(adc_unit < ADC_UNIT_2)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1389, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1389, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1389, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1389, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1389, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } } while(0); } while(0); return (0x102); };
+    if (!(adc_unit < ADC_UNIT_2)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1391, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1391, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1391, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1391, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1391, __FUNCTION__, "ADC unit error, only support ADC1 for now"); } } while(0); } while(0); return (0x102); };
     if (adc_unit & ADC_UNIT_1) {
-        if (!((adc1_channel_t) channel < ADC1_CHANNEL_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1391, __FUNCTION__, "ADC1 channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1391, __FUNCTION__, "ADC1 channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1391, __FUNCTION__, "ADC1 channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1391, __FUNCTION__, "ADC1 channel error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1391, __FUNCTION__, "ADC1 channel error"); } } while(0); } while(0); return (0x102); };
+        if (!((adc1_channel_t) channel < ADC1_CHANNEL_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1393, __FUNCTION__, "ADC1 channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1393, __FUNCTION__, "ADC1 channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1393, __FUNCTION__, "ADC1 channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1393, __FUNCTION__, "ADC1 channel error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1393, __FUNCTION__, "ADC1 channel error"); } } while(0); } while(0); return (0x102); };
     }
 
     uint8_t table_len = 1;
@@ -8241,9 +8359,9 @@ esp_err_t adc_i2s_mode_init(adc_unit_t adc_unit, adc_channel_t channel)
     adc_set_measure_limit((255), (1));
 
     adc_set_data_inv(adc_unit, 
-# 1417 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1419 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                               1
-# 1417 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1419 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                   );
     return 0;
  }
@@ -8253,7 +8371,7 @@ esp_err_t adc_i2s_mode_init(adc_unit_t adc_unit, adc_channel_t channel)
 
 esp_err_t adc1_pad_get_io_num(adc1_channel_t channel, gpio_num_t *gpio_num)
 {
-    if (!(channel < ADC1_CHANNEL_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1426, __FUNCTION__, "ADC1 Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1426, __FUNCTION__, "ADC1 Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1426, __FUNCTION__, "ADC1 Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1426, __FUNCTION__, "ADC1 Channel Err"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1426, __FUNCTION__, "ADC1 Channel Err"); } } while(0); } while(0); return (0x102); };
+    if (!(channel < ADC1_CHANNEL_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1428, __FUNCTION__, "ADC1 Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1428, __FUNCTION__, "ADC1 Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1428, __FUNCTION__, "ADC1 Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1428, __FUNCTION__, "ADC1 Channel Err"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1428, __FUNCTION__, "ADC1 Channel Err"); } } while(0); } while(0); return (0x102); };
 
     switch (channel) {
     case ADC1_CHANNEL_0:
@@ -8289,8 +8407,8 @@ esp_err_t adc1_pad_get_io_num(adc1_channel_t channel, gpio_num_t *gpio_num)
 
 esp_err_t adc1_config_channel_atten(adc1_channel_t channel, adc_atten_t atten)
 {
-    if (!(channel < ADC1_CHANNEL_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1462, __FUNCTION__, "ADC Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1462, __FUNCTION__, "ADC Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1462, __FUNCTION__, "ADC Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1462, __FUNCTION__, "ADC Channel Err"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1462, __FUNCTION__, "ADC Channel Err"); } } while(0); } while(0); return (0x102); };
-    if (!(atten < ADC_ATTEN_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1463, __FUNCTION__, "ADC Atten Err"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1463, __FUNCTION__, "ADC Atten Err"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1463, __FUNCTION__, "ADC Atten Err"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1463, __FUNCTION__, "ADC Atten Err"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1463, __FUNCTION__, "ADC Atten Err"); } } while(0); } while(0); return (0x102); };
+    if (!(channel < ADC1_CHANNEL_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1464, __FUNCTION__, "ADC Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1464, __FUNCTION__, "ADC Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1464, __FUNCTION__, "ADC Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1464, __FUNCTION__, "ADC Channel Err"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1464, __FUNCTION__, "ADC Channel Err"); } } while(0); } while(0); return (0x102); };
+    if (!(atten < ADC_ATTEN_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1465, __FUNCTION__, "ADC Atten Err"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1465, __FUNCTION__, "ADC Atten Err"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1465, __FUNCTION__, "ADC Atten Err"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1465, __FUNCTION__, "ADC Atten Err"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1465, __FUNCTION__, "ADC Atten Err"); } } while(0); } while(0); return (0x102); };
     adc_gpio_init(ADC_UNIT_1, channel);
     adc_set_atten(ADC_UNIT_1, channel, atten);
     return 0;
@@ -8298,12 +8416,12 @@ esp_err_t adc1_config_channel_atten(adc1_channel_t channel, adc_atten_t atten)
 
 esp_err_t adc1_config_width(adc_bits_width_t width_bit)
 {
-    if (!(width_bit < ADC_WIDTH_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1471, __FUNCTION__, "ADC bit width error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1471, __FUNCTION__, "ADC bit width error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1471, __FUNCTION__, "ADC bit width error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1471, __FUNCTION__, "ADC bit width error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1471, __FUNCTION__, "ADC bit width error"); } } while(0); } while(0); return (0x102); };
+    if (!(width_bit < ADC_WIDTH_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1473, __FUNCTION__, "ADC bit width error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1473, __FUNCTION__, "ADC bit width error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1473, __FUNCTION__, "ADC bit width error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1473, __FUNCTION__, "ADC bit width error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1473, __FUNCTION__, "ADC bit width error"); } } while(0); } while(0); return (0x102); };
     adc_set_data_width(ADC_UNIT_1, width_bit);
     adc_set_data_inv(ADC_UNIT_1, 
-# 1473 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                 1
-# 1473 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                     );
     return 0;
 }
@@ -8355,10 +8473,10 @@ esp_err_t adc1_adc_mode_acquire()
 esp_err_t adc1_lock_release()
 {
     if (!((uint32_t*)adc1_i2s_lock != 
-# 1523 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1525 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
    ((void *)0)
-# 1523 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1523, __FUNCTION__, "adc1 lock release called before acquire"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1523, __FUNCTION__, "adc1 lock release called before acquire"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1523, __FUNCTION__, "adc1 lock release called before acquire"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1523, __FUNCTION__, "adc1 lock release called before acquire"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1523, __FUNCTION__, "adc1 lock release called before acquire"); } } while(0); } while(0); return (0x103); };
+# 1525 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1525, __FUNCTION__, "adc1 lock release called before acquire"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1525, __FUNCTION__, "adc1 lock release called before acquire"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1525, __FUNCTION__, "adc1 lock release called before acquire"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1525, __FUNCTION__, "adc1 lock release called before acquire"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1525, __FUNCTION__, "adc1 lock release called before acquire"); } } while(0); } while(0); return (0x103); };
 
 
 
@@ -8371,16 +8489,16 @@ esp_err_t adc1_lock_release()
 int adc1_get_raw(adc1_channel_t channel)
 {
     uint16_t adc_value;
-    if (!(channel < ADC1_CHANNEL_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1536, __FUNCTION__, "ADC Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1536, __FUNCTION__, "ADC Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1536, __FUNCTION__, "ADC Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1536, __FUNCTION__, "ADC Channel Err"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1536, __FUNCTION__, "ADC Channel Err"); } } while(0); } while(0); return (0x102); };
+    if (!(channel < ADC1_CHANNEL_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1538, __FUNCTION__, "ADC Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1538, __FUNCTION__, "ADC Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1538, __FUNCTION__, "ADC Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1538, __FUNCTION__, "ADC Channel Err"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1538, __FUNCTION__, "ADC Channel Err"); } } while(0); } while(0); return (0x102); };
     adc1_adc_mode_acquire();
     adc_power_on();
 
     vTaskEnterCritical(&rtc_spinlock);
 
     adc1_hall_enable(
-# 1542 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                     0
-# 1542 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                          );
     adc1_fsm_disable();
 
@@ -8407,9 +8525,9 @@ void adc1_ulp_enable(void)
 
     adc1_fsm_disable();
     adc1_hall_enable(
-# 1567 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                     0
-# 1567 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                          );
     vTaskExitCritical(&rtc_spinlock);
 }
@@ -8419,7 +8537,7 @@ void adc1_ulp_enable(void)
 
 esp_err_t adc2_pad_get_io_num(adc2_channel_t channel, gpio_num_t *gpio_num)
 {
-    if (!(channel < ADC2_CHANNEL_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1576, __FUNCTION__, "ADC2 Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1576, __FUNCTION__, "ADC2 Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1576, __FUNCTION__, "ADC2 Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1576, __FUNCTION__, "ADC2 Channel Err"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1576, __FUNCTION__, "ADC2 Channel Err"); } } while(0); } while(0); return (0x102); };
+    if (!(channel < ADC2_CHANNEL_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1578, __FUNCTION__, "ADC2 Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1578, __FUNCTION__, "ADC2 Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1578, __FUNCTION__, "ADC2 Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1578, __FUNCTION__, "ADC2 Channel Err"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1578, __FUNCTION__, "ADC2 Channel Err"); } } while(0); } while(0); return (0x102); };
 
     switch (channel) {
     case ADC2_CHANNEL_0:
@@ -8471,10 +8589,10 @@ esp_err_t adc2_wifi_acquire()
 esp_err_t adc2_wifi_release()
 {
     if (!((uint32_t*)adc2_wifi_lock != 
-# 1627 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
    ((void *)0)
-# 1627 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1627, __FUNCTION__, "wifi release called before acquire"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1627, __FUNCTION__, "wifi release called before acquire"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1627, __FUNCTION__, "wifi release called before acquire"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1627, __FUNCTION__, "wifi release called before acquire"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1627, __FUNCTION__, "wifi release called before acquire"); } } while(0); } while(0); return (0x103); };
+# 1629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1629, __FUNCTION__, "wifi release called before acquire"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1629, __FUNCTION__, "wifi release called before acquire"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1629, __FUNCTION__, "wifi release called before acquire"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1629, __FUNCTION__, "wifi release called before acquire"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1629, __FUNCTION__, "wifi release called before acquire"); } } while(0); } while(0); return (0x103); };
 
     _lock_release( &adc2_wifi_lock );
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Wi-Fi returns adc2 lock." "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Wi-Fi returns adc2 lock." "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "Wi-Fi returns adc2 lock." "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "Wi-Fi returns adc2 lock." "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Wi-Fi returns adc2 lock." "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG); } } while(0); } while(0);
@@ -8484,18 +8602,18 @@ esp_err_t adc2_wifi_release()
 static esp_err_t adc2_pad_init(adc2_channel_t channel)
 {
     gpio_num_t gpio_num = 0;
-    do { if(adc2_pad_get_io_num(channel, &gpio_num)!=0){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1637); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1637); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1637); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1637); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1637); } } while(0); } while(0); return -1;} }while (0);
-    do { if(rtc_gpio_init(gpio_num)!=0){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1638); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1638); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1638); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1638); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1638); } } while(0); } while(0); return -1;} }while (0);
-    do { if(rtc_gpio_output_disable(gpio_num)!=0){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1639); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1639); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1639); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1639); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1639); } } while(0); } while(0); return -1;} }while (0);
-    do { if(rtc_gpio_input_disable(gpio_num)!=0){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1640); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1640); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1640); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1640); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1640); } } while(0); } while(0); return -1;} }while (0);
-    do { if(gpio_set_pull_mode(gpio_num, GPIO_FLOATING)!=0){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1641); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1641); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1641); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1641); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1641); } } while(0); } while(0); return -1;} }while (0);
+    do { if(adc2_pad_get_io_num(channel, &gpio_num)!=0){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1639); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1639); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1639); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1639); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1639); } } while(0); } while(0); return -1;} }while (0);
+    do { if(rtc_gpio_init(gpio_num)!=0){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1640); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1640); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1640); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1640); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1640); } } while(0); } while(0); return -1;} }while (0);
+    do { if(rtc_gpio_output_disable(gpio_num)!=0){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1641); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1641); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1641); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1641); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1641); } } while(0); } while(0); return -1;} }while (0);
+    do { if(rtc_gpio_input_disable(gpio_num)!=0){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1642); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1642); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1642); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1642); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1642); } } while(0); } while(0); return -1;} }while (0);
+    do { if(gpio_set_pull_mode(gpio_num, GPIO_FLOATING)!=0){ do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1643); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1643); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1643); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1643); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d\n" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG,__FUNCTION__,1643); } } while(0); } while(0); return -1;} }while (0);
     return 0;
 }
 
 esp_err_t adc2_config_channel_atten(adc2_channel_t channel, adc_atten_t atten)
 {
-    if (!(channel < ADC2_CHANNEL_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1647, __FUNCTION__, "ADC2 Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1647, __FUNCTION__, "ADC2 Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1647, __FUNCTION__, "ADC2 Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1647, __FUNCTION__, "ADC2 Channel Err"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1647, __FUNCTION__, "ADC2 Channel Err"); } } while(0); } while(0); return (0x102); };
-    if (!(atten <= ADC_ATTEN_DB_11)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1648, __FUNCTION__, "ADC2 Atten Err"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1648, __FUNCTION__, "ADC2 Atten Err"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1648, __FUNCTION__, "ADC2 Atten Err"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1648, __FUNCTION__, "ADC2 Atten Err"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1648, __FUNCTION__, "ADC2 Atten Err"); } } while(0); } while(0); return (0x102); };
+    if (!(channel < ADC2_CHANNEL_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1649, __FUNCTION__, "ADC2 Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1649, __FUNCTION__, "ADC2 Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1649, __FUNCTION__, "ADC2 Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1649, __FUNCTION__, "ADC2 Channel Err"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1649, __FUNCTION__, "ADC2 Channel Err"); } } while(0); } while(0); return (0x102); };
+    if (!(atten <= ADC_ATTEN_DB_11)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1650, __FUNCTION__, "ADC2 Atten Err"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1650, __FUNCTION__, "ADC2 Atten Err"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1650, __FUNCTION__, "ADC2 Atten Err"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1650, __FUNCTION__, "ADC2 Atten Err"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1650, __FUNCTION__, "ADC2 Atten Err"); } } while(0); } while(0); return (0x102); };
 
     adc2_pad_init(channel);
     vTaskEnterCritical(&adc2_spinlock);
@@ -8533,15 +8651,15 @@ static inline void adc2_dac_disable( adc2_channel_t channel)
 {
     if ( channel == ADC2_CHANNEL_8 ) {
         dac_output_set_enable( DAC_CHANNEL_1, 
-# 1685 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
-                                             0 
-# 1685 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
-                                                   );
-    } else if ( channel == ADC2_CHANNEL_9 ) {
-        dac_output_set_enable( DAC_CHANNEL_2, 
 # 1687 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                              0 
 # 1687 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+                                                   );
+    } else if ( channel == ADC2_CHANNEL_9 ) {
+        dac_output_set_enable( DAC_CHANNEL_2, 
+# 1689 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+                                             0 
+# 1689 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                    );
     }
 }
@@ -8551,7 +8669,7 @@ static inline void adc2_dac_disable( adc2_channel_t channel)
 esp_err_t adc2_get_raw(adc2_channel_t channel, adc_bits_width_t width_bit, int* raw_out)
 {
     uint16_t adc_value = 0;
-    if (!(channel < ADC2_CHANNEL_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1696, __FUNCTION__, "ADC Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1696, __FUNCTION__, "ADC Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1696, __FUNCTION__, "ADC Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1696, __FUNCTION__, "ADC Channel Err"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1696, __FUNCTION__, "ADC Channel Err"); } } while(0); } while(0); return (0x102); };
+    if (!(channel < ADC2_CHANNEL_MAX)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1698, __FUNCTION__, "ADC Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1698, __FUNCTION__, "ADC Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1698, __FUNCTION__, "ADC Channel Err"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1698, __FUNCTION__, "ADC Channel Err"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1698, __FUNCTION__, "ADC Channel Err"); } } while(0); } while(0); return (0x102); };
 
 
     adc_power_on();
@@ -8625,8 +8743,8 @@ esp_err_t adc2_vref_to_gpio(gpio_num_t gpio)
 
 esp_err_t dac_pad_get_io_num(dac_channel_t channel, gpio_num_t *gpio_num)
 {
-    if (!((channel >= DAC_CHANNEL_1) && (channel < DAC_CHANNEL_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1770, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1770, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1770, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1770, __FUNCTION__, "DAC channel error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1770, __FUNCTION__, "DAC channel error"); } } while(0); } while(0); return (0x102); };
-    if (!(gpio_num)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1771, __FUNCTION__, "Param null"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1771, __FUNCTION__, "Param null"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1771, __FUNCTION__, "Param null"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1771, __FUNCTION__, "Param null"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1771, __FUNCTION__, "Param null"); } } while(0); } while(0); return (0x102); };
+    if (!((channel >= DAC_CHANNEL_1) && (channel < DAC_CHANNEL_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1772, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1772, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1772, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1772, __FUNCTION__, "DAC channel error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1772, __FUNCTION__, "DAC channel error"); } } while(0); } while(0); return (0x102); };
+    if (!(gpio_num)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1773, __FUNCTION__, "Param null"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1773, __FUNCTION__, "Param null"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1773, __FUNCTION__, "Param null"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1773, __FUNCTION__, "Param null"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1773, __FUNCTION__, "Param null"); } } while(0); } while(0); return (0x102); };
 
     switch (channel) {
     case DAC_CHANNEL_1:
@@ -8644,7 +8762,7 @@ esp_err_t dac_pad_get_io_num(dac_channel_t channel, gpio_num_t *gpio_num)
 
 static esp_err_t dac_rtc_pad_init(dac_channel_t channel)
 {
-    if (!((channel >= DAC_CHANNEL_1) && (channel < DAC_CHANNEL_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1789, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1789, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1789, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1789, __FUNCTION__, "DAC channel error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1789, __FUNCTION__, "DAC channel error"); } } while(0); } while(0); return (0x102); };
+    if (!((channel >= DAC_CHANNEL_1) && (channel < DAC_CHANNEL_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1791, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1791, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1791, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1791, __FUNCTION__, "DAC channel error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1791, __FUNCTION__, "DAC channel error"); } } while(0); } while(0); return (0x102); };
     gpio_num_t gpio_num = 0;
     dac_pad_get_io_num(channel, &gpio_num);
     rtc_gpio_init(gpio_num);
@@ -8657,9 +8775,9 @@ static esp_err_t dac_rtc_pad_init(dac_channel_t channel)
 }
 
 static inline void dac_output_set_enable(dac_channel_t channel, 
-# 1801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1803 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                                _Bool 
-# 1801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1803 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                                     enable)
 {
     RTCIO.pad_dac[channel-DAC_CHANNEL_1].dac_xpd_force = enable;
@@ -8668,13 +8786,13 @@ static inline void dac_output_set_enable(dac_channel_t channel,
 
 esp_err_t dac_output_enable(dac_channel_t channel)
 {
-    if (!((channel >= DAC_CHANNEL_1) && (channel < DAC_CHANNEL_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1809, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1809, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1809, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1809, __FUNCTION__, "DAC channel error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1809, __FUNCTION__, "DAC channel error"); } } while(0); } while(0); return (0x102); };
+    if (!((channel >= DAC_CHANNEL_1) && (channel < DAC_CHANNEL_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1811, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1811, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1811, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1811, __FUNCTION__, "DAC channel error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1811, __FUNCTION__, "DAC channel error"); } } while(0); } while(0); return (0x102); };
     dac_rtc_pad_init(channel);
     vTaskEnterCritical(&rtc_spinlock);
     dac_output_set_enable(channel, 
-# 1812 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1814 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                   1
-# 1812 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1814 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                       );
     vTaskExitCritical(&rtc_spinlock);
 
@@ -8683,12 +8801,12 @@ esp_err_t dac_output_enable(dac_channel_t channel)
 
 esp_err_t dac_output_disable(dac_channel_t channel)
 {
-    if (!((channel >= DAC_CHANNEL_1) && (channel < DAC_CHANNEL_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1820, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1820, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1820, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1820, __FUNCTION__, "DAC channel error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1820, __FUNCTION__, "DAC channel error"); } } while(0); } while(0); return (0x102); };
+    if (!((channel >= DAC_CHANNEL_1) && (channel < DAC_CHANNEL_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1822, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1822, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1822, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1822, __FUNCTION__, "DAC channel error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1822, __FUNCTION__, "DAC channel error"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&rtc_spinlock);
     dac_output_set_enable(channel, 
-# 1822 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1824 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                   0
-# 1822 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1824 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                        );
     vTaskExitCritical(&rtc_spinlock);
 
@@ -8697,7 +8815,7 @@ esp_err_t dac_output_disable(dac_channel_t channel)
 
 esp_err_t dac_output_voltage(dac_channel_t channel, uint8_t dac_value)
 {
-    if (!((channel >= DAC_CHANNEL_1) && (channel < DAC_CHANNEL_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1830, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1830, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1830, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1830, __FUNCTION__, "DAC channel error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1830, __FUNCTION__, "DAC channel error"); } } while(0); } while(0); return (0x102); };
+    if (!((channel >= DAC_CHANNEL_1) && (channel < DAC_CHANNEL_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1832, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1832, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1832, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1832, __FUNCTION__, "DAC channel error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1832, __FUNCTION__, "DAC channel error"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&rtc_spinlock);
 
     ({ ; ({ ; (*((volatile uint32_t *)(((0x3ff48800 + 0x0098))))) = (uint32_t)((({ ; (*((volatile uint32_t *)((0x3ff48800 + 0x0098)))); })&(~(((1UL << (16))))))); }); });
@@ -8723,7 +8841,7 @@ esp_err_t dac_output_voltage(dac_channel_t channel, uint8_t dac_value)
 
 esp_err_t dac_out_voltage(dac_channel_t channel, uint8_t dac_value)
 {
-    if (!((channel >= DAC_CHANNEL_1) && (channel < DAC_CHANNEL_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1856, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1856, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1856, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1856, __FUNCTION__, "DAC channel error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1856, __FUNCTION__, "DAC channel error"); } } while(0); } while(0); return (0x102); };
+    if (!((channel >= DAC_CHANNEL_1) && (channel < DAC_CHANNEL_MAX))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, RTC_MODULE_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1858, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, RTC_MODULE_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1858, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, RTC_MODULE_TAG, "D" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1858, __FUNCTION__, "DAC channel error"); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, RTC_MODULE_TAG, "V" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1858, __FUNCTION__, "DAC channel error"); } else { esp_log_write(ESP_LOG_INFO, RTC_MODULE_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s:%d (%s):%s" "\033[0m" "\n", esp_log_timestamp(), RTC_MODULE_TAG, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c", 1858, __FUNCTION__, "DAC channel error"); } } while(0); } while(0); return (0x102); };
     vTaskEnterCritical(&rtc_spinlock);
 
     ({ ; ({ ; (*((volatile uint32_t *)(((0x3ff48800 + 0x0098))))) = (uint32_t)((({ ; (*((volatile uint32_t *)((0x3ff48800 + 0x0098)))); })&(~(((1UL << (16))))))); }); });
@@ -8771,9 +8889,9 @@ esp_err_t dac_i2s_disable()
 
 
 static inline void adc1_hall_enable(
-# 1903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                    _Bool 
-# 1903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                         enable)
 {
     RTCIO.hall_sens.xpd_hall = enable;
@@ -8793,9 +8911,9 @@ static int hall_sensor_get_value()
 
     adc1_fsm_disable();
     adc1_hall_enable(
-# 1921 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1923 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                     1
-# 1921 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1923 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                         );
 
     adc_set_controller( ADC_UNIT_1, ADC_CTRL_RTC );
@@ -8835,9 +8953,9 @@ typedef struct rtc_isr_handler_ {
 
 static struct rtc_isr_handler_list_ { struct rtc_isr_handler_ *slh_first; } s_rtc_isr_handler_list =
         { 
-# 1959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1961 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
        ((void *)0) 
-# 1959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1961 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
        };
 portMUX_TYPE s_rtc_isr_handler_list_lock = { .owner = 0xB33FFFFF, .count = 0, };
 static intr_handle_t s_rtc_isr_handle;
@@ -8869,9 +8987,9 @@ static esp_err_t rtc_isr_ensure_installed()
     ({ ; (*(volatile uint32_t *)((0x3ff48000 + 0x3c))) = (0); });
     ({ ; (*(volatile uint32_t *)((0x3ff48000 + 0x48))) = (0xffffffffUL); });
     err = esp_intr_alloc(46, 0, &rtc_isr, 
-# 1989 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 1991 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                                                                ((void *)0)
-# 1989 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 1991 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                                                    , &s_rtc_isr_handle);
     if (err != 0) {
         goto out;
@@ -8892,9 +9010,9 @@ esp_err_t rtc_isr_register(intr_handler_t handler, void* handler_arg, uint32_t r
 
     rtc_isr_handler_t* item = malloc(sizeof(*item));
     if (item == 
-# 2008 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 2010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                ((void *)0)
-# 2008 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 2010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                    ) {
         return 0x101;
     }
@@ -8911,18 +9029,18 @@ esp_err_t rtc_isr_deregister(intr_handler_t handler, void* handler_arg)
 {
     rtc_isr_handler_t* it;
     rtc_isr_handler_t* prev = 
-# 2023 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 2025 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                              ((void *)0)
-# 2023 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 2025 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                                  ;
     
-# 2024 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 2026 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
    _Bool 
-# 2024 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 2026 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
         found = 
-# 2024 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 2026 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                 0
-# 2024 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 2026 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                      ;
     vTaskEnterCritical(&s_rtc_isr_handler_list_lock);
     for ((it) = (((&s_rtc_isr_handler_list))->slh_first); (it); (it) = (((it))->next.sle_next)) {
@@ -8933,9 +9051,9 @@ esp_err_t rtc_isr_deregister(intr_handler_t handler, void* handler_arg)
                 do { ((prev)->next.sle_next) = ((((prev)->next.sle_next))->next.sle_next); } while (0);
             }
             found = 
-# 2033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
+# 2035 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c" 3 4
                    1
-# 2033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
+# 2035 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/rtc_module.c"
                        ;
             free(it);
             break;

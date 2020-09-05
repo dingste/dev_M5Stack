@@ -8,7 +8,7 @@
 	.type	task_ms_to_tick_wrapper, @function
 task_ms_to_tick_wrapper:
 .LFB85:
-	.file 1 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/esp_adapter.c"
+	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/esp_adapter.c"
 	.loc 1 366 0
 .LVL0:
 	entry	sp, 32
@@ -47,10 +47,10 @@ coex_is_in_isr_wrapper:
 .LVL2:
 .LBB6:
 .LBB7:
-	.file 2 "/home/dieter/SoftwareDevelop/esp-idf/components/freertos/include/freertos/portable.h"
+	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 	.loc 2 226 0
 #APP
-# 226 "/home/dieter/SoftwareDevelop/esp-idf/components/freertos/include/freertos/portable.h" 1
+# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 1
 	rsr a2, PS
 # 0 "" 2
 .LVL3:
@@ -566,7 +566,7 @@ task_create_wrapper:
 .LVL68:
 .LBB14:
 .LBB15:
-	.file 3 "/home/dieter/SoftwareDevelop/esp-idf/components/freertos/include/freertos/task.h"
+	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 	.loc 3 440 0
 	l32r	a8, .LC6
 .LBE15:
@@ -605,28 +605,27 @@ task_create_pinned_to_core_wrapper:
 .LVL71:
 	entry	sp, 48
 .LCFI27:
-	.loc 1 356 0
-	l32i.n	a9, sp, 48
-	mov.n	a15, a7
-	mov.n	a10, a2
-	mov.n	a11, a3
-	mov.n	a12, a4
-	mov.n	a13, a5
-	mov.n	a14, a6
 	.loc 1 357 0
-	l32r	a8, .LC7
-	bgeui	a9, 2, .L45
-	.loc 1 357 0 is_stmt 0 discriminator 1
-	mov.n	a8, a9
-.LVL72:
-.L45:
-	.loc 1 357 0 discriminator 4
+	l32r	a10, .LC7
+	l32i.n	a9, sp, 48
+	movi.n	a8, 0
+	movnez	a8, a10, a9
+	.loc 1 356 0
+	mov.n	a15, a7
+	.loc 1 357 0
 	s32i.n	a8, sp, 0
+	mov.n	a14, a6
+	mov.n	a13, a5
+	mov.n	a12, a4
+	mov.n	a11, a3
+	mov.n	a10, a2
 	call8	xTaskCreatePinnedToCore
-.LVL73:
-	.loc 1 358 0 is_stmt 1 discriminator 4
+.LVL72:
+	.loc 1 358 0
 	mov.n	a2, a10
-.LVL74:
+.LVL73:
+	.loc 1 356 0
+	.loc 1 358 0
 	retw.n
 .LFE83:
 	.size	task_create_pinned_to_core_wrapper, .-task_create_pinned_to_core_wrapper
@@ -636,7 +635,7 @@ task_create_pinned_to_core_wrapper:
 queue_send_to_front_wrapper:
 .LFB80:
 	.loc 1 333 0
-.LVL75:
+.LVL74:
 	entry	sp, 32
 .LCFI28:
 	.loc 1 334 0
@@ -645,10 +644,10 @@ queue_send_to_front_wrapper:
 	mov.n	a11, a3
 	mov.n	a10, a2
 	call8	xQueueGenericSend
-.LVL76:
+.LVL75:
 	.loc 1 335 0
 	mov.n	a2, a10
-.LVL77:
+.LVL76:
 	retw.n
 .LFE80:
 	.size	queue_send_to_front_wrapper, .-queue_send_to_front_wrapper
@@ -658,7 +657,7 @@ queue_send_to_front_wrapper:
 queue_send_to_back_wrapper:
 .LFB79:
 	.loc 1 328 0
-.LVL78:
+.LVL77:
 	entry	sp, 32
 .LCFI29:
 	.loc 1 329 0
@@ -667,10 +666,10 @@ queue_send_to_back_wrapper:
 	mov.n	a11, a3
 	mov.n	a10, a2
 	call8	xQueueGenericSend
-.LVL79:
+.LVL78:
 	.loc 1 330 0
 	mov.n	a2, a10
-.LVL80:
+.LVL79:
 	retw.n
 .LFE79:
 	.size	queue_send_to_back_wrapper, .-queue_send_to_back_wrapper
@@ -680,7 +679,7 @@ queue_send_to_back_wrapper:
 semphr_give_wrapper:
 .LFB70:
 	.loc 1 279 0
-.LVL81:
+.LVL80:
 	entry	sp, 32
 .LCFI30:
 	.loc 1 280 0
@@ -689,10 +688,10 @@ semphr_give_wrapper:
 	mov.n	a11, a13
 	mov.n	a10, a2
 	call8	xQueueGenericSend
-.LVL82:
+.LVL81:
 	.loc 1 281 0
 	mov.n	a2, a10
-.LVL83:
+.LVL82:
 	retw.n
 .LFE70:
 	.size	semphr_give_wrapper, .-semphr_give_wrapper
@@ -702,7 +701,7 @@ semphr_give_wrapper:
 queue_send_from_isr_wrapper:
 .LFB78:
 	.loc 1 323 0
-.LVL84:
+.LVL83:
 	entry	sp, 32
 .LCFI31:
 	.loc 1 324 0
@@ -711,10 +710,10 @@ queue_send_from_isr_wrapper:
 	mov.n	a11, a3
 	mov.n	a10, a2
 	call8	xQueueGenericSendFromISR
-.LVL85:
+.LVL84:
 	.loc 1 325 0
 	mov.n	a2, a10
-.LVL86:
+.LVL85:
 	retw.n
 .LFE78:
 	.size	queue_send_from_isr_wrapper, .-queue_send_from_isr_wrapper
@@ -724,16 +723,16 @@ queue_send_from_isr_wrapper:
 mutex_unlock_wrapper:
 .LFB75:
 	.loc 1 304 0
-.LVL87:
+.LVL86:
 	entry	sp, 32
 .LCFI32:
 	.loc 1 305 0
 	mov.n	a10, a2
 	call8	xQueueGiveMutexRecursive
-.LVL88:
+.LVL87:
 	.loc 1 306 0
 	mov.n	a2, a10
-.LVL89:
+.LVL88:
 	retw.n
 .LFE75:
 	.size	mutex_unlock_wrapper, .-mutex_unlock_wrapper
@@ -743,17 +742,17 @@ mutex_unlock_wrapper:
 mutex_lock_wrapper:
 .LFB74:
 	.loc 1 299 0
-.LVL90:
+.LVL89:
 	entry	sp, 32
 .LCFI33:
 	.loc 1 300 0
 	movi.n	a11, -1
 	mov.n	a10, a2
 	call8	xQueueTakeMutexRecursive
-.LVL91:
+.LVL90:
 	.loc 1 301 0
 	mov.n	a2, a10
-.LVL92:
+.LVL91:
 	retw.n
 .LFE74:
 	.size	mutex_lock_wrapper, .-mutex_lock_wrapper
@@ -768,7 +767,7 @@ recursive_mutex_create_wrapper:
 	.loc 1 285 0
 	movi.n	a10, 4
 	call8	xQueueCreateMutex
-.LVL93:
+.LVL92:
 	.loc 1 286 0
 	mov.n	a2, a10
 	retw.n
@@ -785,7 +784,7 @@ mutex_create_wrapper:
 	.loc 1 290 0
 	movi.n	a10, 1
 	call8	xQueueCreateMutex
-.LVL94:
+.LVL93:
 	.loc 1 291 0
 	mov.n	a2, a10
 	retw.n
@@ -797,17 +796,17 @@ mutex_create_wrapper:
 semphr_create_wrapper:
 .LFB63:
 	.loc 1 215 0
-.LVL95:
+.LVL94:
 	entry	sp, 32
 .LCFI36:
 	.loc 1 216 0
 	mov.n	a11, a3
 	mov.n	a10, a2
 	call8	xQueueCreateCountingSemaphore
-.LVL96:
+.LVL95:
 	.loc 1 217 0
 	mov.n	a2, a10
-.LVL97:
+.LVL96:
 	retw.n
 .LFE63:
 	.size	semphr_create_wrapper, .-semphr_create_wrapper
@@ -821,7 +820,7 @@ task_yield_from_isr_wrapper:
 .LCFI37:
 	.loc 1 211 0
 	call8	_frxt_setup_switch
-.LVL98:
+.LVL97:
 	retw.n
 .LFE62:
 	.size	task_yield_from_isr_wrapper, .-task_yield_from_isr_wrapper
@@ -831,16 +830,16 @@ task_yield_from_isr_wrapper:
 wifi_int_restore_wrapper:
 .LFB61:
 	.loc 1 201 0
-.LVL99:
+.LVL98:
 	entry	sp, 32
 .LCFI38:
 	.loc 1 202 0
 	call8	xPortInIsrContext
-.LVL100:
+.LVL99:
 	.loc 1 203 0
 	mov.n	a10, a2
 	call8	vTaskExitCritical
-.LVL101:
+.LVL100:
 	retw.n
 .LFE61:
 	.size	wifi_int_restore_wrapper, .-wifi_int_restore_wrapper
@@ -850,19 +849,19 @@ wifi_int_restore_wrapper:
 wifi_int_disable_wrapper:
 .LFB60:
 	.loc 1 190 0
-.LVL102:
+.LVL101:
 	entry	sp, 32
 .LCFI39:
 	.loc 1 191 0
 	call8	xPortInIsrContext
-.LVL103:
+.LVL102:
 	.loc 1 192 0
 	mov.n	a10, a2
 	call8	vTaskEnterCritical
-.LVL104:
+.LVL103:
 	.loc 1 198 0
 	movi.n	a2, 0
-.LVL105:
+.LVL104:
 	retw.n
 .LFE60:
 	.size	wifi_int_disable_wrapper, .-wifi_int_disable_wrapper
@@ -872,7 +871,7 @@ wifi_int_disable_wrapper:
 set_isr_wrapper:
 .LFB58:
 	.loc 1 173 0
-.LVL106:
+.LVL105:
 	entry	sp, 32
 .LCFI40:
 	.loc 1 174 0
@@ -880,7 +879,7 @@ set_isr_wrapper:
 	mov.n	a11, a3
 	mov.n	a10, a2
 	call8	xt_set_interrupt_handler
-.LVL107:
+.LVL106:
 	retw.n
 .LFE58:
 	.size	set_isr_wrapper, .-set_isr_wrapper
@@ -890,17 +889,17 @@ set_isr_wrapper:
 semphr_give_from_isr_wrapper:
 .LFB68:
 	.loc 1 265 0
-.LVL108:
+.LVL107:
 	entry	sp, 32
 .LCFI41:
 	.loc 1 266 0
 	mov.n	a11, a3
 	mov.n	a10, a2
 	call8	xQueueGiveFromISR
-.LVL109:
+.LVL108:
 	.loc 1 267 0
 	mov.n	a2, a10
-.LVL110:
+.LVL109:
 	retw.n
 .LFE68:
 	.size	semphr_give_from_isr_wrapper, .-semphr_give_from_isr_wrapper
@@ -910,7 +909,7 @@ semphr_give_from_isr_wrapper:
 semphr_take_from_isr_wrapper:
 .LFB67:
 	.loc 1 260 0
-.LVL111:
+.LVL110:
 	entry	sp, 32
 .LCFI42:
 	.loc 1 261 0
@@ -918,10 +917,10 @@ semphr_take_from_isr_wrapper:
 	movi.n	a11, 0
 	mov.n	a10, a2
 	call8	xQueueReceiveFromISR
-.LVL112:
+.LVL111:
 	.loc 1 262 0
 	mov.n	a2, a10
-.LVL113:
+.LVL112:
 	retw.n
 .LFE67:
 	.size	semphr_take_from_isr_wrapper, .-semphr_take_from_isr_wrapper
@@ -931,7 +930,7 @@ semphr_take_from_isr_wrapper:
 event_group_wait_bits_wrapper:
 .LFB82:
 	.loc 1 347 0
-.LVL114:
+.LVL113:
 	entry	sp, 32
 .LCFI43:
 	.loc 1 347 0
@@ -942,10 +941,10 @@ event_group_wait_bits_wrapper:
 	mov.n	a14, a6
 	.loc 1 351 0
 	call8	xEventGroupWaitBits
-.LVL115:
+.LVL114:
 	.loc 1 353 0
 	mov.n	a2, a10
-.LVL116:
+.LVL115:
 	retw.n
 .LFE82:
 	.size	event_group_wait_bits_wrapper, .-event_group_wait_bits_wrapper
@@ -955,7 +954,7 @@ event_group_wait_bits_wrapper:
 queue_recv_wrapper:
 .LFB81:
 	.loc 1 338 0
-.LVL117:
+.LVL116:
 	entry	sp, 32
 .LCFI44:
 	.loc 1 338 0
@@ -970,10 +969,10 @@ queue_recv_wrapper:
 .LBE22:
 	.loc 1 342 0
 	call8	xQueueGenericReceive
-.LVL118:
+.LVL117:
 	.loc 1 344 0
 	mov.n	a2, a10
-.LVL119:
+.LVL118:
 	retw.n
 .LFE81:
 	.size	queue_recv_wrapper, .-queue_recv_wrapper
@@ -983,7 +982,7 @@ queue_recv_wrapper:
 semphr_take_wrapper:
 .LFB69:
 	.loc 1 270 0
-.LVL120:
+.LVL119:
 	entry	sp, 32
 .LCFI45:
 .LBB26:
@@ -1003,10 +1002,10 @@ semphr_take_wrapper:
 .LBE29:
 	.loc 1 274 0
 	call8	xQueueGenericReceive
-.LVL121:
+.LVL120:
 	.loc 1 276 0
 	mov.n	a2, a10
-.LVL122:
+.LVL121:
 	retw.n
 .LFE69:
 	.size	semphr_take_wrapper, .-semphr_take_wrapper
@@ -1016,7 +1015,7 @@ semphr_take_wrapper:
 queue_send_wrapper:
 .LFB77:
 	.loc 1 314 0
-.LVL123:
+.LVL122:
 	entry	sp, 32
 .LCFI46:
 	.loc 1 314 0
@@ -1031,18 +1030,18 @@ queue_send_wrapper:
 .LBE32:
 	.loc 1 318 0
 	call8	xQueueGenericSend
-.LVL124:
+.LVL123:
 	.loc 1 320 0
 	mov.n	a2, a10
-.LVL125:
+.LVL124:
 	retw.n
 .LFE77:
 	.size	queue_send_wrapper, .-queue_send_wrapper
 	.section	.text.wifi_thread_semphr_get_wrapper,"ax",@progbits
 	.literal_position
-	.literal .LC8, s_wifi_thread_sem_key_init$8891
+	.literal .LC8, s_wifi_thread_sem_key_init$8887
 	.literal .LC9, wifi_thread_semphr_free
-	.literal .LC10, s_wifi_thread_sem_key$8892
+	.literal .LC10, s_wifi_thread_sem_key$8888
 	.align	4
 	.type	wifi_thread_semphr_get_wrapper, @function
 wifi_thread_semphr_get_wrapper:
@@ -1050,7 +1049,7 @@ wifi_thread_semphr_get_wrapper:
 	.loc 1 234 0
 	entry	sp, 32
 .LCFI47:
-.LVL126:
+.LVL125:
 	.loc 1 239 0
 	l32r	a3, .LC8
 	l32r	a4, .LC10
@@ -1060,7 +1059,7 @@ wifi_thread_semphr_get_wrapper:
 	l32r	a11, .LC9
 	mov.n	a10, a4
 	call8	pthread_key_create
-.LVL127:
+.LVL126:
 	bnez.n	a10, .L76
 	.loc 1 243 0
 	movi.n	a2, 1
@@ -1069,9 +1068,9 @@ wifi_thread_semphr_get_wrapper:
 	.loc 1 246 0
 	l32i.n	a10, a4, 0
 	call8	pthread_getspecific
-.LVL128:
+.LVL127:
 	mov.n	a2, a10
-.LVL129:
+.LVL128:
 	.loc 1 247 0
 	bnez.n	a10, .L76
 .LBB36:
@@ -1080,18 +1079,18 @@ wifi_thread_semphr_get_wrapper:
 	mov.n	a11, a10
 	movi.n	a10, 1
 	call8	xQueueCreateCountingSemaphore
-.LVL130:
+.LVL129:
 	mov.n	a3, a10
-.LVL131:
+.LVL130:
 	.loc 1 249 0
 	beqz.n	a10, .L76
 	.loc 1 250 0
 	mov.n	a11, a10
 	l32i.n	a10, a4, 0
 	mov.n	a2, a3
-.LVL132:
+.LVL131:
 	call8	pthread_setspecific
-.LVL133:
+.LVL132:
 .L76:
 .LBE37:
 .LBE36:
@@ -1120,21 +1119,21 @@ semphr_delete_wrapper:
 wifi_create_queue:
 .LFB54:
 	.loc 1 108 0
-.LVL134:
+.LVL133:
 	.loc 1 108 0
 	entry	sp, 32
 .LCFI49:
-.LVL135:
+.LVL134:
 	.loc 1 111 0
 	l32r	a11, .LC11
 	movi.n	a10, 8
 	call8	heap_caps_malloc
-.LVL136:
+.LVL135:
 	.loc 1 108 0
 	mov.n	a4, a2
 	.loc 1 111 0
 	mov.n	a2, a10
-.LVL137:
+.LVL136:
 	.loc 1 112 0
 	beqz.n	a10, .L83
 	.loc 1 142 0
@@ -1142,7 +1141,7 @@ wifi_create_queue:
 	mov.n	a11, a3
 	mov.n	a10, a4
 	call8	xQueueGenericCreate
-.LVL138:
+.LVL137:
 	s32i.n	a10, a2, 0
 .L83:
 	.loc 1 145 0
@@ -1155,17 +1154,17 @@ wifi_create_queue:
 wifi_create_queue_wrapper:
 .LFB56:
 	.loc 1 163 0
-.LVL139:
+.LVL138:
 	entry	sp, 32
 .LCFI50:
 	.loc 1 164 0
 	mov.n	a11, a3
 	mov.n	a10, a2
 	call8	wifi_create_queue
-.LVL140:
+.LVL139:
 	.loc 1 165 0
 	mov.n	a2, a10
-.LVL141:
+.LVL140:
 	retw.n
 .LFE56:
 	.size	wifi_create_queue_wrapper, .-wifi_create_queue_wrapper
@@ -1176,7 +1175,7 @@ wifi_create_queue_wrapper:
 wifi_delete_queue:
 .LFB55:
 	.loc 1 148 0
-.LVL142:
+.LVL141:
 	entry	sp, 32
 .LCFI51:
 	.loc 1 149 0
@@ -1184,11 +1183,11 @@ wifi_delete_queue:
 	.loc 1 150 0
 	l32i.n	a10, a2, 0
 	call8	vQueueDelete
-.LVL143:
+.LVL142:
 	.loc 1 158 0
 	mov.n	a10, a2
 	call8	free
-.LVL144:
+.LVL143:
 .L88:
 	retw.n
 .LFE55:
@@ -1199,13 +1198,13 @@ wifi_delete_queue:
 wifi_delete_queue_wrapper:
 .LFB57:
 	.loc 1 168 0
-.LVL145:
+.LVL144:
 	entry	sp, 32
 .LCFI52:
 	.loc 1 169 0
 	mov.n	a10, a2
 	call8	wifi_delete_queue
-.LVL146:
+.LVL145:
 	retw.n
 .LFE57:
 	.size	wifi_delete_queue_wrapper, .-wifi_delete_queue_wrapper
@@ -1216,7 +1215,7 @@ wifi_delete_queue_wrapper:
 coex_bt_request_wrapper:
 .LFB102:
 	.loc 1 469 0
-.LVL147:
+.LVL146:
 	entry	sp, 32
 .LCFI53:
 	.loc 1 471 0
@@ -1224,10 +1223,10 @@ coex_bt_request_wrapper:
 	mov.n	a11, a3
 	mov.n	a10, a2
 	call8	coex_bt_request
-.LVL148:
+.LVL147:
 	.loc 1 475 0
 	mov.n	a2, a10
-.LVL149:
+.LVL148:
 	retw.n
 .LFE102:
 	.size	coex_bt_request_wrapper, .-coex_bt_request_wrapper
@@ -1238,16 +1237,16 @@ coex_bt_request_wrapper:
 coex_bt_release_wrapper:
 .LFB103:
 	.loc 1 478 0
-.LVL150:
+.LVL149:
 	entry	sp, 32
 .LCFI54:
 	.loc 1 480 0
 	mov.n	a10, a2
 	call8	coex_bt_release
-.LVL151:
+.LVL150:
 	.loc 1 484 0
 	mov.n	a2, a10
-.LVL152:
+.LVL151:
 	retw.n
 .LFE103:
 	.size	coex_bt_release_wrapper, .-coex_bt_release_wrapper
@@ -1258,16 +1257,16 @@ coex_bt_release_wrapper:
 coex_register_bt_cb_wrapper:
 .LFB104:
 	.loc 1 487 0
-.LVL153:
+.LVL152:
 	entry	sp, 32
 .LCFI55:
 	.loc 1 489 0
 	mov.n	a10, a2
 	call8	coex_register_bt_cb
-.LVL154:
+.LVL153:
 	.loc 1 493 0
 	mov.n	a2, a10
-.LVL155:
+.LVL154:
 	retw.n
 .LFE104:
 	.size	coex_register_bt_cb_wrapper, .-coex_register_bt_cb_wrapper
@@ -1282,7 +1281,7 @@ coex_bb_reset_lock_wrapper:
 .LCFI56:
 	.loc 1 498 0
 	call8	coex_bb_reset_lock
-.LVL156:
+.LVL155:
 	.loc 1 502 0
 	mov.n	a2, a10
 	retw.n
@@ -1295,26 +1294,26 @@ coex_bb_reset_lock_wrapper:
 coex_bb_reset_unlock_wrapper:
 .LFB106:
 	.loc 1 505 0
-.LVL157:
+.LVL156:
 	entry	sp, 32
 .LCFI57:
 	.loc 1 507 0
 	mov.n	a10, a2
 	call8	coex_bb_reset_unlock
-.LVL158:
+.LVL157:
 	retw.n
 .LFE106:
 	.size	coex_bb_reset_unlock_wrapper, .-coex_bb_reset_unlock_wrapper
-	.section	.bss.s_wifi_thread_sem_key$8892,"aw",@nobits
+	.section	.bss.s_wifi_thread_sem_key$8888,"aw",@nobits
 	.align	4
-	.type	s_wifi_thread_sem_key$8892, @object
-	.size	s_wifi_thread_sem_key$8892, 4
-s_wifi_thread_sem_key$8892:
+	.type	s_wifi_thread_sem_key$8888, @object
+	.size	s_wifi_thread_sem_key$8888, 4
+s_wifi_thread_sem_key$8888:
 	.zero	4
-	.section	.bss.s_wifi_thread_sem_key_init$8891,"aw",@nobits
-	.type	s_wifi_thread_sem_key_init$8891, @object
-	.size	s_wifi_thread_sem_key_init$8891, 1
-s_wifi_thread_sem_key_init$8891:
+	.section	.bss.s_wifi_thread_sem_key_init$8887,"aw",@nobits
+	.type	s_wifi_thread_sem_key_init$8887, @object
+	.size	s_wifi_thread_sem_key_init$8887, 1
+s_wifi_thread_sem_key_init$8887:
 	.zero	1
 	.global	g_coex_adapter_funcs
 	.section	.data.g_coex_adapter_funcs,"aw",@progbits
@@ -2160,32 +2159,32 @@ g_wifi_osi_funcs:
 	.text
 .Letext0:
 	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h"
-	.file 5 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_default_types.h"
+	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
 	.file 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h"
 	.file 7 "<built-in>"
-	.file 8 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
-	.file 9 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
-	.file 10 "/home/dieter/SoftwareDevelop/esp-idf/components/freertos/include/freertos/projdefs.h"
-	.file 11 "/home/dieter/SoftwareDevelop/esp-idf/components/freertos/include/freertos/portmacro.h"
-	.file 12 "/home/dieter/SoftwareDevelop/esp-idf/components/freertos/include/freertos/xtensa_api.h"
-	.file 13 "/home/dieter/SoftwareDevelop/esp-idf/components/freertos/include/freertos/queue.h"
-	.file 14 "/home/dieter/SoftwareDevelop/esp-idf/components/freertos/include/freertos/semphr.h"
-	.file 15 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_wifi_os_adapter.h"
-	.file 16 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_wifi_internal.h"
-	.file 17 "/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log.h"
-	.file 18 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_smartconfig.h"
-	.file 19 "/home/dieter/SoftwareDevelop/esp-idf/components/smartconfig_ack/include/smartconfig_ack.h"
-	.file 20 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_coexist_adapter.h"
-	.file 21 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_coexist_internal.h"
-	.file 22 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h"
-	.file 23 "/home/dieter/SoftwareDevelop/esp-idf/components/heap/include/esp_heap_caps.h"
-	.file 24 "/home/dieter/SoftwareDevelop/esp-idf/components/wpa_supplicant/port/include/os.h"
-	.file 25 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
-	.file 26 "/home/dieter/SoftwareDevelop/esp-idf/components/freertos/include/freertos/event_groups.h"
-	.file 27 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/pthread.h"
+	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+	.file 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/projdefs.h"
+	.file 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+	.file 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_api.h"
+	.file 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
+	.file 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/semphr.h"
+	.file 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h"
+	.file 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_internal.h"
+	.file 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+	.file 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_smartconfig.h"
+	.file 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/smartconfig_ack/include/smartconfig_ack.h"
+	.file 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_coexist_adapter.h"
+	.file 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_coexist_internal.h"
+	.file 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
+	.file 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
+	.file 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h"
+	.file 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+	.file 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/event_groups.h"
+	.file 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/pthread.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x2394
+	.4byte	0x23cd
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -4092,7 +4091,7 @@ g_wifi_osi_funcs:
 	.4byte	.LLST2
 	.uleb128 0x2b
 	.4byte	.LVL6
-	.4byte	0x2194
+	.4byte	0x21cd
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4126,7 +4125,7 @@ g_wifi_osi_funcs:
 	.byte	0x5a
 	.uleb128 0x2b
 	.4byte	.LVL9
-	.4byte	0x2194
+	.4byte	0x21cd
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4159,7 +4158,7 @@ g_wifi_osi_funcs:
 	.byte	0x53
 	.uleb128 0x2b
 	.4byte	.LVL12
-	.4byte	0x219f
+	.4byte	0x21d8
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4190,7 +4189,7 @@ g_wifi_osi_funcs:
 	.byte	0x53
 	.uleb128 0x2b
 	.4byte	.LVL15
-	.4byte	0x21aa
+	.4byte	0x21e3
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4223,7 +4222,7 @@ g_wifi_osi_funcs:
 	.4byte	.LLST6
 	.uleb128 0x2b
 	.4byte	.LVL18
-	.4byte	0x21b5
+	.4byte	0x21ee
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4263,7 +4262,7 @@ g_wifi_osi_funcs:
 	.byte	0x53
 	.uleb128 0x2b
 	.4byte	.LVL21
-	.4byte	0x21c0
+	.4byte	0x21f9
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4308,7 +4307,7 @@ g_wifi_osi_funcs:
 	.byte	0x52
 	.uleb128 0x2b
 	.4byte	.LVL24
-	.4byte	0x21cc
+	.4byte	0x2205
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4342,7 +4341,7 @@ g_wifi_osi_funcs:
 	.byte	0x52
 	.uleb128 0x2b
 	.4byte	.LVL27
-	.4byte	0x21cc
+	.4byte	0x2205
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4372,7 +4371,7 @@ g_wifi_osi_funcs:
 	.4byte	.LLST8
 	.uleb128 0x2b
 	.4byte	.LVL29
-	.4byte	0x21d8
+	.4byte	0x2211
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4413,7 +4412,7 @@ g_wifi_osi_funcs:
 	.byte	0x54
 	.uleb128 0x2b
 	.4byte	.LVL32
-	.4byte	0x21e3
+	.4byte	0x221c
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4459,7 +4458,7 @@ g_wifi_osi_funcs:
 	.byte	0x53
 	.uleb128 0x2b
 	.4byte	.LVL35
-	.4byte	0x21ee
+	.4byte	0x2227
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4489,7 +4488,7 @@ g_wifi_osi_funcs:
 	.4byte	0x1312
 	.uleb128 0x3a
 	.4byte	.LVL36
-	.4byte	0x21f9
+	.4byte	0x2232
 	.byte	0
 	.uleb128 0x39
 	.4byte	.LASF209
@@ -4509,7 +4508,7 @@ g_wifi_osi_funcs:
 	.byte	0x52
 	.uleb128 0x2b
 	.4byte	.LVL38
-	.4byte	0x2204
+	.4byte	0x223d
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4554,7 +4553,7 @@ g_wifi_osi_funcs:
 	.byte	0x1
 	.uleb128 0x2b
 	.4byte	.LVL41
-	.4byte	0x21aa
+	.4byte	0x21e3
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4570,7 +4569,7 @@ g_wifi_osi_funcs:
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL43
-	.4byte	0x220f
+	.4byte	0x2248
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4615,7 +4614,7 @@ g_wifi_osi_funcs:
 	.byte	0x52
 	.uleb128 0x3e
 	.4byte	.LVL45
-	.4byte	0x2218
+	.4byte	0x2251
 	.4byte	0x1426
 	.uleb128 0x2c
 	.uleb128 0x1
@@ -4637,7 +4636,7 @@ g_wifi_osi_funcs:
 	.byte	0
 	.uleb128 0x2b
 	.4byte	.LVL47
-	.4byte	0x220f
+	.4byte	0x2248
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4682,7 +4681,7 @@ g_wifi_osi_funcs:
 	.byte	0x53
 	.uleb128 0x2b
 	.4byte	.LVL49
-	.4byte	0x2218
+	.4byte	0x2251
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4728,7 +4727,7 @@ g_wifi_osi_funcs:
 	.byte	0x53
 	.uleb128 0x2b
 	.4byte	.LVL52
-	.4byte	0x2223
+	.4byte	0x225c
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4767,7 +4766,7 @@ g_wifi_osi_funcs:
 	.4byte	.LLST15
 	.uleb128 0x2b
 	.4byte	.LVL55
-	.4byte	0x222e
+	.4byte	0x2267
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4808,7 +4807,7 @@ g_wifi_osi_funcs:
 	.byte	0x54
 	.uleb128 0x2b
 	.4byte	.LVL58
-	.4byte	0x2239
+	.4byte	0x2272
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4864,7 +4863,7 @@ g_wifi_osi_funcs:
 	.byte	0x54
 	.uleb128 0x2b
 	.4byte	.LVL60
-	.4byte	0x2245
+	.4byte	0x227e
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4903,7 +4902,7 @@ g_wifi_osi_funcs:
 	.byte	0x52
 	.uleb128 0x2b
 	.4byte	.LVL62
-	.4byte	0x2251
+	.4byte	0x228a
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4930,7 +4929,7 @@ g_wifi_osi_funcs:
 	.byte	0x52
 	.uleb128 0x2b
 	.4byte	.LVL64
-	.4byte	0x225d
+	.4byte	0x2296
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -4971,7 +4970,7 @@ g_wifi_osi_funcs:
 	.byte	0x54
 	.uleb128 0x2b
 	.4byte	.LVL66
-	.4byte	0x2269
+	.4byte	0x22a2
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -5124,7 +5123,7 @@ g_wifi_osi_funcs:
 	.4byte	.LLST17
 	.uleb128 0x2b
 	.4byte	.LVL69
-	.4byte	0x2275
+	.4byte	0x22ae
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -5180,7 +5179,7 @@ g_wifi_osi_funcs:
 	.4byte	.LFE83-.LFB83
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x188a
+	.4byte	0x18c3
 	.uleb128 0x35
 	.4byte	.LASF235
 	.byte	0x1
@@ -5222,15 +5221,71 @@ g_wifi_osi_funcs:
 	.4byte	0xb8
 	.uleb128 0x1
 	.byte	0x57
-	.uleb128 0x35
+	.uleb128 0x36
 	.4byte	.LASF241
 	.byte	0x1
 	.2byte	0x163
 	.4byte	0x166
-	.4byte	.LLST19
-	.uleb128 0x3a
-	.4byte	.LVL73
-	.4byte	0x2275
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 0
+	.uleb128 0x2b
+	.4byte	.LVL72
+	.4byte	0x22ae
+	.uleb128 0x2c
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x72
+	.sleb128 0
+	.uleb128 0x2c
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.uleb128 0x2c
+	.uleb128 0x1
+	.byte	0x5c
+	.uleb128 0x2
+	.byte	0x74
+	.sleb128 0
+	.uleb128 0x2c
+	.uleb128 0x1
+	.byte	0x5d
+	.uleb128 0x2
+	.byte	0x75
+	.sleb128 0
+	.uleb128 0x2c
+	.uleb128 0x1
+	.byte	0x5e
+	.uleb128 0x2
+	.byte	0x76
+	.sleb128 0
+	.uleb128 0x2c
+	.uleb128 0x1
+	.byte	0x5f
+	.uleb128 0x2
+	.byte	0x77
+	.sleb128 0
+	.uleb128 0x2c
+	.uleb128 0x2
+	.byte	0x71
+	.sleb128 0
+	.uleb128 0x10
+	.byte	0xc
+	.4byte	0x7fffffff
+	.byte	0x30
+	.byte	0x91
+	.sleb128 0
+	.byte	0x6
+	.byte	0x30
+	.byte	0x2e
+	.byte	0x28
+	.2byte	0x1
+	.byte	0x16
+	.byte	0x13
+	.byte	0
 	.byte	0
 	.uleb128 0x22
 	.4byte	.LASF242
@@ -5241,13 +5296,13 @@ g_wifi_osi_funcs:
 	.4byte	.LFE80-.LFB80
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x18f2
+	.4byte	0x192b
 	.uleb128 0x35
 	.4byte	.LASF180
 	.byte	0x1
 	.2byte	0x14c
 	.4byte	0xb8
-	.4byte	.LLST20
+	.4byte	.LLST19
 	.uleb128 0x36
 	.4byte	.LASF181
 	.byte	0x1
@@ -5263,8 +5318,8 @@ g_wifi_osi_funcs:
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x2b
-	.4byte	.LVL76
-	.4byte	0x2281
+	.4byte	.LVL75
+	.4byte	0x22ba
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -5299,13 +5354,13 @@ g_wifi_osi_funcs:
 	.4byte	.LFE79-.LFB79
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x195a
+	.4byte	0x1993
 	.uleb128 0x35
 	.4byte	.LASF180
 	.byte	0x1
 	.2byte	0x147
 	.4byte	0xb8
-	.4byte	.LLST21
+	.4byte	.LLST20
 	.uleb128 0x36
 	.4byte	.LASF181
 	.byte	0x1
@@ -5321,8 +5376,8 @@ g_wifi_osi_funcs:
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x2b
-	.4byte	.LVL79
-	.4byte	0x2281
+	.4byte	.LVL78
+	.4byte	0x22ba
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -5357,16 +5412,16 @@ g_wifi_osi_funcs:
 	.4byte	.LFE70-.LFB70
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x19a4
+	.4byte	0x19dd
 	.uleb128 0x35
 	.4byte	.LASF183
 	.byte	0x1
 	.2byte	0x116
 	.4byte	0xb8
-	.4byte	.LLST22
+	.4byte	.LLST21
 	.uleb128 0x2b
-	.4byte	.LVL82
-	.4byte	0x2281
+	.4byte	.LVL81
+	.4byte	0x22ba
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -5399,13 +5454,13 @@ g_wifi_osi_funcs:
 	.4byte	.LFE78-.LFB78
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1a0c
+	.4byte	0x1a45
 	.uleb128 0x35
 	.4byte	.LASF180
 	.byte	0x1
 	.2byte	0x142
 	.4byte	0xb8
-	.4byte	.LLST23
+	.4byte	.LLST22
 	.uleb128 0x36
 	.4byte	.LASF181
 	.byte	0x1
@@ -5421,8 +5476,8 @@ g_wifi_osi_funcs:
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x2b
-	.4byte	.LVL85
-	.4byte	0x228d
+	.4byte	.LVL84
+	.4byte	0x22c6
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -5457,16 +5512,16 @@ g_wifi_osi_funcs:
 	.4byte	.LFE75-.LFB75
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1a47
+	.4byte	0x1a80
 	.uleb128 0x35
 	.4byte	.LASF199
 	.byte	0x1
 	.2byte	0x12f
 	.4byte	0xb8
-	.4byte	.LLST24
+	.4byte	.LLST23
 	.uleb128 0x2b
-	.4byte	.LVL88
-	.4byte	0x2299
+	.4byte	.LVL87
+	.4byte	0x22d2
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -5484,16 +5539,16 @@ g_wifi_osi_funcs:
 	.4byte	.LFE74-.LFB74
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1a88
+	.4byte	0x1ac1
 	.uleb128 0x35
 	.4byte	.LASF199
 	.byte	0x1
 	.2byte	0x12a
 	.4byte	0xb8
-	.4byte	.LLST25
+	.4byte	.LLST24
 	.uleb128 0x2b
-	.4byte	.LVL91
-	.4byte	0x22a5
+	.4byte	.LVL90
+	.4byte	0x22de
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -5517,10 +5572,10 @@ g_wifi_osi_funcs:
 	.4byte	.LFE71-.LFB71
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1ab2
+	.4byte	0x1aeb
 	.uleb128 0x2b
-	.4byte	.LVL93
-	.4byte	0x22b1
+	.4byte	.LVL92
+	.4byte	0x22ea
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -5537,10 +5592,10 @@ g_wifi_osi_funcs:
 	.4byte	.LFE72-.LFB72
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1adc
+	.4byte	0x1b15
 	.uleb128 0x2b
-	.4byte	.LVL94
-	.4byte	0x22b1
+	.4byte	.LVL93
+	.4byte	0x22ea
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -5557,13 +5612,13 @@ g_wifi_osi_funcs:
 	.4byte	.LFE63-.LFB63
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1b28
+	.4byte	0x1b61
 	.uleb128 0x30
 	.string	"max"
 	.byte	0x1
 	.byte	0xd6
 	.4byte	0x166
-	.4byte	.LLST26
+	.4byte	.LLST25
 	.uleb128 0x31
 	.4byte	.LASF252
 	.byte	0x1
@@ -5572,8 +5627,8 @@ g_wifi_osi_funcs:
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x2b
-	.4byte	.LVL96
-	.4byte	0x22bd
+	.4byte	.LVL95
+	.4byte	0x22f6
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -5596,10 +5651,10 @@ g_wifi_osi_funcs:
 	.4byte	.LFE62-.LFB62
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1b47
+	.4byte	0x1b80
 	.uleb128 0x3a
-	.4byte	.LVL98
-	.4byte	0x22c9
+	.4byte	.LVL97
+	.4byte	0x2302
 	.byte	0
 	.uleb128 0x38
 	.4byte	.LASF254
@@ -5609,7 +5664,7 @@ g_wifi_osi_funcs:
 	.4byte	.LFE61-.LFB61
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1b90
+	.4byte	0x1bc9
 	.uleb128 0x31
 	.4byte	.LASF255
 	.byte	0x1
@@ -5625,11 +5680,11 @@ g_wifi_osi_funcs:
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x3a
-	.4byte	.LVL100
-	.4byte	0x22d5
+	.4byte	.LVL99
+	.4byte	0x230e
 	.uleb128 0x2b
-	.4byte	.LVL101
-	.4byte	0x22e0
+	.4byte	.LVL100
+	.4byte	0x2319
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -5647,19 +5702,19 @@ g_wifi_osi_funcs:
 	.4byte	.LFE60-.LFB60
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1bd2
+	.4byte	0x1c0b
 	.uleb128 0x2a
 	.4byte	.LASF255
 	.byte	0x1
 	.byte	0xbd
 	.4byte	0xb8
-	.4byte	.LLST27
+	.4byte	.LLST26
 	.uleb128 0x3a
-	.4byte	.LVL103
-	.4byte	0x22d5
+	.4byte	.LVL102
+	.4byte	0x230e
 	.uleb128 0x2b
-	.4byte	.LVL104
-	.4byte	0x22eb
+	.4byte	.LVL103
+	.4byte	0x2324
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -5676,7 +5731,7 @@ g_wifi_osi_funcs:
 	.4byte	.LFE58-.LFB58
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1c27
+	.4byte	0x1c60
 	.uleb128 0x41
 	.string	"n"
 	.byte	0x1
@@ -5699,8 +5754,8 @@ g_wifi_osi_funcs:
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x2b
-	.4byte	.LVL107
-	.4byte	0x22f6
+	.4byte	.LVL106
+	.4byte	0x232f
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -5730,13 +5785,13 @@ g_wifi_osi_funcs:
 	.4byte	.LFE68-.LFB68
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1c76
+	.4byte	0x1caf
 	.uleb128 0x35
 	.4byte	.LASF183
 	.byte	0x1
 	.2byte	0x108
 	.4byte	0xb8
-	.4byte	.LLST28
+	.4byte	.LLST27
 	.uleb128 0x36
 	.4byte	.LASF246
 	.byte	0x1
@@ -5745,8 +5800,8 @@ g_wifi_osi_funcs:
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x2b
-	.4byte	.LVL109
-	.4byte	0x2301
+	.4byte	.LVL108
+	.4byte	0x233a
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -5770,13 +5825,13 @@ g_wifi_osi_funcs:
 	.4byte	.LFE67-.LFB67
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1cca
+	.4byte	0x1d03
 	.uleb128 0x35
 	.4byte	.LASF183
 	.byte	0x1
 	.2byte	0x103
 	.4byte	0xb8
-	.4byte	.LLST29
+	.4byte	.LLST28
 	.uleb128 0x36
 	.4byte	.LASF246
 	.byte	0x1
@@ -5785,8 +5840,8 @@ g_wifi_osi_funcs:
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x2b
-	.4byte	.LVL112
-	.4byte	0x230d
+	.4byte	.LVL111
+	.4byte	0x2346
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -5812,10 +5867,10 @@ g_wifi_osi_funcs:
 	.4byte	.LFE82-.LFB82
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1d2b
+	.4byte	0x1d64
 	.uleb128 0x33
 	.4byte	0xe3f
-	.4byte	.LLST30
+	.4byte	.LLST29
 	.uleb128 0x34
 	.4byte	0xe4b
 	.uleb128 0x1
@@ -5833,8 +5888,8 @@ g_wifi_osi_funcs:
 	.uleb128 0x1
 	.byte	0x56
 	.uleb128 0x2b
-	.4byte	.LVL115
-	.4byte	0x2319
+	.4byte	.LVL114
+	.4byte	0x2352
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -5873,10 +5928,10 @@ g_wifi_osi_funcs:
 	.4byte	.LFE81-.LFB81
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1d94
+	.4byte	0x1dcd
 	.uleb128 0x33
 	.4byte	0xe8d
-	.4byte	.LLST31
+	.4byte	.LLST30
 	.uleb128 0x34
 	.4byte	0xe99
 	.uleb128 0x1
@@ -5888,7 +5943,7 @@ g_wifi_osi_funcs:
 	.uleb128 0x42
 	.4byte	.LBB22
 	.4byte	.LBE22-.LBB22
-	.4byte	0x1d72
+	.4byte	0x1dab
 	.uleb128 0x43
 	.4byte	0xea5
 	.uleb128 0x43
@@ -5897,8 +5952,8 @@ g_wifi_osi_funcs:
 	.4byte	0xe8d
 	.byte	0
 	.uleb128 0x2b
-	.4byte	.LVL118
-	.4byte	0x2325
+	.4byte	.LVL117
+	.4byte	0x235e
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -5930,25 +5985,25 @@ g_wifi_osi_funcs:
 	.4byte	.LFE69-.LFB69
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1dec
+	.4byte	0x1e25
 	.uleb128 0x33
 	.4byte	0xec3
-	.4byte	.LLST32
+	.4byte	.LLST31
 	.uleb128 0x34
 	.4byte	0xecf
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x44
 	.4byte	.Ldebug_ranges0+0x30
-	.4byte	0x1dcb
+	.4byte	0x1e04
 	.uleb128 0x43
 	.4byte	0xecf
 	.uleb128 0x43
 	.4byte	0xec3
 	.byte	0
 	.uleb128 0x2b
-	.4byte	.LVL121
-	.4byte	0x2325
+	.4byte	.LVL120
+	.4byte	0x235e
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -5979,10 +6034,10 @@ g_wifi_osi_funcs:
 	.4byte	.LFE77-.LFB77
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1e55
+	.4byte	0x1e8e
 	.uleb128 0x33
 	.4byte	0xeed
-	.4byte	.LLST33
+	.4byte	.LLST32
 	.uleb128 0x34
 	.4byte	0xef9
 	.uleb128 0x1
@@ -5994,7 +6049,7 @@ g_wifi_osi_funcs:
 	.uleb128 0x42
 	.4byte	.LBB32
 	.4byte	.LBE32-.LBB32
-	.4byte	0x1e33
+	.4byte	0x1e6c
 	.uleb128 0x43
 	.4byte	0xf05
 	.uleb128 0x43
@@ -6003,8 +6058,8 @@ g_wifi_osi_funcs:
 	.4byte	0xeed
 	.byte	0
 	.uleb128 0x2b
-	.4byte	.LVL124
-	.4byte	0x2281
+	.4byte	.LVL123
+	.4byte	0x22ba
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -6036,41 +6091,41 @@ g_wifi_osi_funcs:
 	.4byte	.LFE66-.LFB66
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1f04
+	.4byte	0x1f3d
 	.uleb128 0x45
 	.4byte	0xf22
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	s_wifi_thread_sem_key_init$8891
+	.4byte	s_wifi_thread_sem_key_init$8887
 	.uleb128 0x45
 	.4byte	0xf2d
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	s_wifi_thread_sem_key$8892
+	.4byte	s_wifi_thread_sem_key$8888
 	.uleb128 0x28
 	.4byte	0xf38
-	.4byte	.LLST34
+	.4byte	.LLST33
 	.uleb128 0x42
 	.4byte	.LBB37
 	.4byte	.LBE37-.LBB37
-	.4byte	0x1edd
+	.4byte	0x1f16
 	.uleb128 0x28
 	.4byte	0xf38
-	.4byte	.LLST35
+	.4byte	.LLST34
 	.uleb128 0x45
 	.4byte	0xf22
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	s_wifi_thread_sem_key_init$8891
+	.4byte	s_wifi_thread_sem_key_init$8887
 	.uleb128 0x45
 	.4byte	0xf2d
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	s_wifi_thread_sem_key$8892
+	.4byte	s_wifi_thread_sem_key$8888
 	.uleb128 0x3e
-	.4byte	.LVL130
-	.4byte	0x22bd
-	.4byte	0x1ecc
+	.4byte	.LVL129
+	.4byte	0x22f6
+	.4byte	0x1f05
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -6084,8 +6139,8 @@ g_wifi_osi_funcs:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.4byte	.LVL133
-	.4byte	0x2331
+	.4byte	.LVL132
+	.4byte	0x236a
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5b
@@ -6095,9 +6150,9 @@ g_wifi_osi_funcs:
 	.byte	0
 	.byte	0
 	.uleb128 0x3e
-	.4byte	.LVL127
-	.4byte	0x233d
-	.4byte	0x1efa
+	.4byte	.LVL126
+	.4byte	0x2376
+	.4byte	0x1f33
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -6112,25 +6167,25 @@ g_wifi_osi_funcs:
 	.4byte	wifi_thread_semphr_free
 	.byte	0
 	.uleb128 0x3a
-	.4byte	.LVL128
-	.4byte	0x2349
+	.4byte	.LVL127
+	.4byte	0x2382
 	.byte	0
 	.uleb128 0x29
 	.4byte	.LASF260
 	.byte	0x1
 	.byte	0x6b
-	.4byte	0x1f7e
+	.4byte	0x1fb7
 	.4byte	.LFB54
 	.4byte	.LFE54-.LFB54
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1f7e
+	.4byte	0x1fb7
 	.uleb128 0x2a
 	.4byte	.LASF197
 	.byte	0x1
 	.byte	0x6b
 	.4byte	0x25
-	.4byte	.LLST36
+	.4byte	.LLST35
 	.uleb128 0x31
 	.4byte	.LASF198
 	.byte	0x1
@@ -6142,12 +6197,12 @@ g_wifi_osi_funcs:
 	.4byte	.LASF180
 	.byte	0x1
 	.byte	0x6d
-	.4byte	0x1f7e
-	.4byte	.LLST37
+	.4byte	0x1fb7
+	.4byte	.LLST36
 	.uleb128 0x3e
-	.4byte	.LVL136
-	.4byte	0x21b5
-	.4byte	0x1f62
+	.4byte	.LVL135
+	.4byte	0x21ee
+	.4byte	0x1f9b
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -6161,8 +6216,8 @@ g_wifi_osi_funcs:
 	.2byte	0x804
 	.byte	0
 	.uleb128 0x2b
-	.4byte	.LVL138
-	.4byte	0x21c0
+	.4byte	.LVL137
+	.4byte	0x21f9
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -6194,13 +6249,13 @@ g_wifi_osi_funcs:
 	.4byte	.LFE56-.LFB56
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1fd0
+	.4byte	0x2009
 	.uleb128 0x2a
 	.4byte	.LASF197
 	.byte	0x1
 	.byte	0xa2
 	.4byte	0x25
-	.4byte	.LLST38
+	.4byte	.LLST37
 	.uleb128 0x31
 	.4byte	.LASF198
 	.byte	0x1
@@ -6209,8 +6264,8 @@ g_wifi_osi_funcs:
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x2b
-	.4byte	.LVL140
-	.4byte	0x1f04
+	.4byte	.LVL139
+	.4byte	0x1f3d
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -6233,20 +6288,20 @@ g_wifi_osi_funcs:
 	.4byte	.LFE55-.LFB55
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x200c
+	.4byte	0x2045
 	.uleb128 0x31
 	.4byte	.LASF180
 	.byte	0x1
 	.byte	0x93
-	.4byte	0x1f7e
+	.4byte	0x1fb7
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x3a
-	.4byte	.LVL143
-	.4byte	0x21cc
+	.4byte	.LVL142
+	.4byte	0x2205
 	.uleb128 0x2b
-	.4byte	.LVL144
-	.4byte	0x2355
+	.4byte	.LVL143
+	.4byte	0x238e
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -6263,7 +6318,7 @@ g_wifi_osi_funcs:
 	.4byte	.LFE57-.LFB57
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x203f
+	.4byte	0x2078
 	.uleb128 0x31
 	.4byte	.LASF180
 	.byte	0x1
@@ -6272,8 +6327,8 @@ g_wifi_osi_funcs:
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x2b
-	.4byte	.LVL146
-	.4byte	0x1fd0
+	.4byte	.LVL145
+	.4byte	0x2009
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -6291,13 +6346,13 @@ g_wifi_osi_funcs:
 	.4byte	.LFE102-.LFB102
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x20a2
+	.4byte	0x20db
 	.uleb128 0x35
 	.4byte	.LASF173
 	.byte	0x1
 	.2byte	0x1d4
 	.4byte	0x166
-	.4byte	.LLST39
+	.4byte	.LLST38
 	.uleb128 0x36
 	.4byte	.LASF203
 	.byte	0x1
@@ -6313,8 +6368,8 @@ g_wifi_osi_funcs:
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x2b
-	.4byte	.LVL148
-	.4byte	0x2360
+	.4byte	.LVL147
+	.4byte	0x2399
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -6344,16 +6399,16 @@ g_wifi_osi_funcs:
 	.4byte	.LFE103-.LFB103
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x20dd
+	.4byte	0x2116
 	.uleb128 0x35
 	.4byte	.LASF173
 	.byte	0x1
 	.2byte	0x1dd
 	.4byte	0x166
-	.4byte	.LLST40
+	.4byte	.LLST39
 	.uleb128 0x2b
-	.4byte	.LVL151
-	.4byte	0x236b
+	.4byte	.LVL150
+	.4byte	0x23a4
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -6371,16 +6426,16 @@ g_wifi_osi_funcs:
 	.4byte	.LFE104-.LFB104
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2117
+	.4byte	0x2150
 	.uleb128 0x23
 	.string	"cb"
 	.byte	0x1
 	.2byte	0x1e6
 	.4byte	0xde8
-	.4byte	.LLST41
+	.4byte	.LLST40
 	.uleb128 0x2b
-	.4byte	.LVL154
-	.4byte	0x2376
+	.4byte	.LVL153
+	.4byte	0x23af
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -6398,10 +6453,10 @@ g_wifi_osi_funcs:
 	.4byte	.LFE105-.LFB105
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x213b
+	.4byte	0x2174
 	.uleb128 0x3a
-	.4byte	.LVL156
-	.4byte	0x2381
+	.4byte	.LVL155
+	.4byte	0x23ba
 	.byte	0
 	.uleb128 0x48
 	.4byte	.LASF268
@@ -6411,7 +6466,7 @@ g_wifi_osi_funcs:
 	.4byte	.LFE106-.LFB106
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2170
+	.4byte	0x21a9
 	.uleb128 0x36
 	.4byte	.LASF269
 	.byte	0x1
@@ -6420,8 +6475,8 @@ g_wifi_osi_funcs:
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x2b
-	.4byte	.LVL158
-	.4byte	0x238c
+	.4byte	.LVL157
+	.4byte	0x23c5
 	.uleb128 0x2c
 	.uleb128 0x1
 	.byte	0x5a
@@ -7981,10 +8036,10 @@ g_wifi_osi_funcs:
 	.4byte	0
 .LLST18:
 	.4byte	.LVL71
-	.4byte	.LVL74
+	.4byte	.LVL73
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL74
+	.4byte	.LVL73
 	.4byte	.LFE83
 	.2byte	0x4
 	.byte	0xf3
@@ -7994,28 +8049,11 @@ g_wifi_osi_funcs:
 	.4byte	0
 	.4byte	0
 .LLST19:
-	.4byte	.LVL71
-	.4byte	.LVL72
-	.2byte	0x2
-	.byte	0x91
-	.sleb128 0
-	.4byte	.LVL72
-	.4byte	.LVL73-1
-	.2byte	0x1
-	.byte	0x59
-	.4byte	.LVL73-1
-	.4byte	.LFE83
-	.2byte	0x2
-	.byte	0x91
-	.sleb128 0
-	.4byte	0
-	.4byte	0
-.LLST20:
-	.4byte	.LVL75
-	.4byte	.LVL77
+	.4byte	.LVL74
+	.4byte	.LVL76
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL77
+	.4byte	.LVL76
 	.4byte	.LFE80
 	.2byte	0x4
 	.byte	0xf3
@@ -8024,12 +8062,12 @@ g_wifi_osi_funcs:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST21:
-	.4byte	.LVL78
-	.4byte	.LVL80
+.LLST20:
+	.4byte	.LVL77
+	.4byte	.LVL79
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL80
+	.4byte	.LVL79
 	.4byte	.LFE79
 	.2byte	0x4
 	.byte	0xf3
@@ -8038,12 +8076,12 @@ g_wifi_osi_funcs:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST22:
-	.4byte	.LVL81
-	.4byte	.LVL83
+.LLST21:
+	.4byte	.LVL80
+	.4byte	.LVL82
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL83
+	.4byte	.LVL82
 	.4byte	.LFE70
 	.2byte	0x4
 	.byte	0xf3
@@ -8052,12 +8090,12 @@ g_wifi_osi_funcs:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST23:
-	.4byte	.LVL84
-	.4byte	.LVL86
+.LLST22:
+	.4byte	.LVL83
+	.4byte	.LVL85
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL86
+	.4byte	.LVL85
 	.4byte	.LFE78
 	.2byte	0x4
 	.byte	0xf3
@@ -8066,12 +8104,12 @@ g_wifi_osi_funcs:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST24:
-	.4byte	.LVL87
-	.4byte	.LVL89
+.LLST23:
+	.4byte	.LVL86
+	.4byte	.LVL88
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL89
+	.4byte	.LVL88
 	.4byte	.LFE75
 	.2byte	0x4
 	.byte	0xf3
@@ -8080,12 +8118,12 @@ g_wifi_osi_funcs:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST25:
-	.4byte	.LVL90
-	.4byte	.LVL92
+.LLST24:
+	.4byte	.LVL89
+	.4byte	.LVL91
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL92
+	.4byte	.LVL91
 	.4byte	.LFE74
 	.2byte	0x4
 	.byte	0xf3
@@ -8094,12 +8132,12 @@ g_wifi_osi_funcs:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST26:
-	.4byte	.LVL95
-	.4byte	.LVL97
+.LLST25:
+	.4byte	.LVL94
+	.4byte	.LVL96
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL97
+	.4byte	.LVL96
 	.4byte	.LFE63
 	.2byte	0x4
 	.byte	0xf3
@@ -8108,12 +8146,12 @@ g_wifi_osi_funcs:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST27:
-	.4byte	.LVL102
-	.4byte	.LVL105
+.LLST26:
+	.4byte	.LVL101
+	.4byte	.LVL104
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL105
+	.4byte	.LVL104
 	.4byte	.LFE60
 	.2byte	0x4
 	.byte	0xf3
@@ -8122,12 +8160,12 @@ g_wifi_osi_funcs:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST28:
-	.4byte	.LVL108
-	.4byte	.LVL110
+.LLST27:
+	.4byte	.LVL107
+	.4byte	.LVL109
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL110
+	.4byte	.LVL109
 	.4byte	.LFE68
 	.2byte	0x4
 	.byte	0xf3
@@ -8136,12 +8174,12 @@ g_wifi_osi_funcs:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST29:
-	.4byte	.LVL111
-	.4byte	.LVL113
+.LLST28:
+	.4byte	.LVL110
+	.4byte	.LVL112
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL113
+	.4byte	.LVL112
 	.4byte	.LFE67
 	.2byte	0x4
 	.byte	0xf3
@@ -8150,12 +8188,12 @@ g_wifi_osi_funcs:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST30:
-	.4byte	.LVL114
-	.4byte	.LVL116
+.LLST29:
+	.4byte	.LVL113
+	.4byte	.LVL115
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL116
+	.4byte	.LVL115
 	.4byte	.LFE82
 	.2byte	0x4
 	.byte	0xf3
@@ -8164,12 +8202,12 @@ g_wifi_osi_funcs:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST31:
-	.4byte	.LVL117
-	.4byte	.LVL119
+.LLST30:
+	.4byte	.LVL116
+	.4byte	.LVL118
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL119
+	.4byte	.LVL118
 	.4byte	.LFE81
 	.2byte	0x4
 	.byte	0xf3
@@ -8178,12 +8216,12 @@ g_wifi_osi_funcs:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST32:
-	.4byte	.LVL120
-	.4byte	.LVL122
+.LLST31:
+	.4byte	.LVL119
+	.4byte	.LVL121
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL122
+	.4byte	.LVL121
 	.4byte	.LFE69
 	.2byte	0x4
 	.byte	0xf3
@@ -8192,12 +8230,12 @@ g_wifi_osi_funcs:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST33:
-	.4byte	.LVL123
-	.4byte	.LVL125
+.LLST32:
+	.4byte	.LVL122
+	.4byte	.LVL124
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL125
+	.4byte	.LVL124
 	.4byte	.LFE77
 	.2byte	0x4
 	.byte	0xf3
@@ -8206,54 +8244,54 @@ g_wifi_osi_funcs:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST34:
-	.4byte	.LVL126
-	.4byte	.LVL129
+.LLST33:
+	.4byte	.LVL125
+	.4byte	.LVL128
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
-	.4byte	.LVL129
-	.4byte	.LVL132
+	.4byte	.LVL128
+	.4byte	.LVL131
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
 	.4byte	0
-.LLST35:
-	.4byte	.LVL131
-	.4byte	.LVL133
+.LLST34:
+	.4byte	.LVL130
+	.4byte	.LVL132
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
 	.4byte	0
-.LLST36:
-	.4byte	.LVL134
-	.4byte	.LVL137
+.LLST35:
+	.4byte	.LVL133
+	.4byte	.LVL136
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL137
+	.4byte	.LVL136
 	.4byte	.LFE54
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
 	.4byte	0
-.LLST37:
-	.4byte	.LVL135
-	.4byte	.LVL137
+.LLST36:
+	.4byte	.LVL134
+	.4byte	.LVL136
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
-	.4byte	.LVL137
+	.4byte	.LVL136
 	.4byte	.LFE54
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
 	.4byte	0
-.LLST38:
-	.4byte	.LVL139
-	.4byte	.LVL141
+.LLST37:
+	.4byte	.LVL138
+	.4byte	.LVL140
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL141
+	.4byte	.LVL140
 	.4byte	.LFE56
 	.2byte	0x4
 	.byte	0xf3
@@ -8262,12 +8300,12 @@ g_wifi_osi_funcs:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST39:
-	.4byte	.LVL147
-	.4byte	.LVL149
+.LLST38:
+	.4byte	.LVL146
+	.4byte	.LVL148
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL149
+	.4byte	.LVL148
 	.4byte	.LFE102
 	.2byte	0x4
 	.byte	0xf3
@@ -8276,12 +8314,12 @@ g_wifi_osi_funcs:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST40:
-	.4byte	.LVL150
-	.4byte	.LVL152
+.LLST39:
+	.4byte	.LVL149
+	.4byte	.LVL151
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL152
+	.4byte	.LVL151
 	.4byte	.LFE103
 	.2byte	0x4
 	.byte	0xf3
@@ -8290,12 +8328,12 @@ g_wifi_osi_funcs:
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
-.LLST41:
-	.4byte	.LVL153
-	.4byte	.LVL155
+.LLST40:
+	.4byte	.LVL152
+	.4byte	.LVL154
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL155
+	.4byte	.LVL154
 	.4byte	.LFE104
 	.2byte	0x4
 	.byte	0xf3
@@ -8875,6 +8913,8 @@ g_wifi_osi_funcs:
 	.string	"_dport_access_stall_other_cpu_start_wrap"
 .LASF284:
 	.string	"heap_caps_realloc"
+.LASF66:
+	.string	"_mutex_unlock"
 .LASF247:
 	.string	"mutex_unlock_wrapper"
 .LASF296:
@@ -8979,8 +9019,6 @@ g_wifi_osi_funcs:
 	.string	"uint16_t"
 .LASF159:
 	.string	"token"
-.LASF317:
-	.string	"/home/dieter/SoftwareDevelop/esp-idf/components/esp32/esp_adapter.c"
 .LASF295:
 	.string	"xQueueTakeMutexRecursive"
 .LASF124:
@@ -9029,8 +9067,8 @@ g_wifi_osi_funcs:
 	.string	"coex_wifi_request_wrapper"
 .LASF47:
 	.string	"ESP_LOG_VERBOSE"
-.LASF66:
-	.string	"_mutex_unlock"
+.LASF317:
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/esp_adapter.c"
 .LASF82:
 	.string	"_task_delete"
 .LASF145:

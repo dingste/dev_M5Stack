@@ -9,13 +9,13 @@
 	.section	.text.coap_subscription_init,"ax",@progbits
 	.literal_position
 	.literal .LC1, .LC0
-	.literal .LC2, __func__$7031
+	.literal .LC2, __func__$7095
 	.literal .LC4, .LC3
 	.align	4
 	.global	coap_subscription_init
 	.type	coap_subscription_init, @function
 coap_subscription_init:
-.LFB61:
+.LFB70:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/coap/libcoap/src/subscribe.c"
 	.loc 1 20 0
 .LVL0:
@@ -39,12 +39,12 @@ coap_subscription_init:
 	call8	memset
 .LVL2:
 	retw.n
-.LFE61:
+.LFE70:
 	.size	coap_subscription_init, .-coap_subscription_init
-	.section	.rodata.__func__$7031,"a",@progbits
-	.type	__func__$7031, @object
-	.size	__func__$7031, 23
-__func__$7031:
+	.section	.rodata.__func__$7095,"a",@progbits
+	.type	__func__$7095, @object
+	.size	__func__$7095, 23
+__func__$7095:
 	.string	"coap_subscription_init"
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -65,10 +65,10 @@ __func__$7031:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB61
-	.4byte	.LFE61-.LFB61
+	.4byte	.LFB70
+	.4byte	.LFE70-.LFB70
 	.byte	0x4
-	.4byte	.LCFI0-.LFB61
+	.4byte	.LCFI0-.LFB70
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -621,8 +621,8 @@ __func__$7031:
 	.4byte	.LASF72
 	.byte	0x1
 	.byte	0x14
-	.4byte	.LFB61
-	.4byte	.LFE61-.LFB61
+	.4byte	.LFB70
+	.4byte	.LFE70-.LFB70
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x49c
@@ -638,7 +638,7 @@ __func__$7031:
 	.4byte	0x4ac
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$7031
+	.4byte	__func__$7095
 	.uleb128 0x13
 	.4byte	.LVL1
 	.4byte	0x4c1
@@ -659,7 +659,7 @@ __func__$7031:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$7031
+	.4byte	__func__$7095
 	.uleb128 0x14
 	.uleb128 0x1
 	.byte	0x5d
@@ -1048,14 +1048,14 @@ __func__$7031:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB61
-	.4byte	.LFE61-.LFB61
+	.4byte	.LFB70
+	.4byte	.LFE70-.LFB70
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB61
-	.4byte	.LFE61
+	.4byte	.LFB70
+	.4byte	.LFE70
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

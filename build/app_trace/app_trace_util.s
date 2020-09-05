@@ -8,7 +8,7 @@
 	.global	esp_apptrace_tmo_check
 	.type	esp_apptrace_tmo_check, @function
 esp_apptrace_tmo_check:
-.LFB22:
+.LFB31:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/app_trace/app_trace_util.c"
 	.loc 1 28 0
 .LVL0:
@@ -76,14 +76,14 @@ esp_apptrace_tmo_check:
 .LBE12:
 	.loc 1 42 0
 	retw.n
-.LFE22:
+.LFE31:
 	.size	esp_apptrace_tmo_check, .-esp_apptrace_tmo_check
 	.section	.text.esp_apptrace_lock_take,"ax",@progbits
 	.align	4
 	.global	esp_apptrace_lock_take
 	.type	esp_apptrace_lock_take, @function
 esp_apptrace_lock_take:
-.LFB23:
+.LFB32:
 	.loc 1 49 0
 .LVL11:
 	entry	sp, 32
@@ -94,9 +94,9 @@ esp_apptrace_lock_take:
 .LBB17:
 .LBB18:
 	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
-	.loc 2 249 0
+	.loc 2 317 0
 #APP
-# 249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 1
+# 317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 1
 	rsil	a4, 3
 
 # 0 "" 2
@@ -137,14 +137,14 @@ esp_apptrace_lock_take:
 .LBE15:
 	.loc 1 75 0
 	retw.n
-.LFE23:
+.LFE32:
 	.size	esp_apptrace_lock_take, .-esp_apptrace_lock_take
 	.section	.text.esp_apptrace_lock_give,"ax",@progbits
 	.align	4
 	.global	esp_apptrace_lock_give
 	.type	esp_apptrace_lock_give, @function
 esp_apptrace_lock_give:
-.LFB24:
+.LFB33:
 	.loc 1 78 0
 .LVL20:
 	entry	sp, 32
@@ -165,14 +165,14 @@ esp_apptrace_lock_give:
 	movi.n	a2, 0
 .LVL24:
 	retw.n
-.LFE24:
+.LFE33:
 	.size	esp_apptrace_lock_give, .-esp_apptrace_lock_give
 	.section	.text.esp_apptrace_rb_produce,"ax",@progbits
 	.align	4
 	.global	esp_apptrace_rb_produce
 	.type	esp_apptrace_rb_produce, @function
 esp_apptrace_rb_produce:
-.LFB25:
+.LFB34:
 	.loc 1 97 0
 .LVL25:
 	entry	sp, 32
@@ -294,14 +294,14 @@ esp_apptrace_rb_produce:
 .L21:
 	.loc 1 136 0
 	retw.n
-.LFE25:
+.LFE34:
 	.size	esp_apptrace_rb_produce, .-esp_apptrace_rb_produce
 	.section	.text.esp_apptrace_rb_consume,"ax",@progbits
 	.align	4
 	.global	esp_apptrace_rb_consume
 	.type	esp_apptrace_rb_consume, @function
 esp_apptrace_rb_consume:
-.LFB26:
+.LFB35:
 	.loc 1 139 0
 .LVL34:
 	entry	sp, 32
@@ -383,14 +383,14 @@ esp_apptrace_rb_consume:
 .L33:
 	.loc 1 162 0
 	retw.n
-.LFE26:
+.LFE35:
 	.size	esp_apptrace_rb_consume, .-esp_apptrace_rb_consume
 	.section	.text.esp_apptrace_rb_read_size_get,"ax",@progbits
 	.align	4
 	.global	esp_apptrace_rb_read_size_get
 	.type	esp_apptrace_rb_read_size_get, @function
 esp_apptrace_rb_read_size_get:
-.LFB27:
+.LFB36:
 	.loc 1 165 0
 .LVL40:
 	entry	sp, 32
@@ -418,14 +418,14 @@ esp_apptrace_rb_read_size_get:
 .LVL43:
 	.loc 1 175 0
 	retw.n
-.LFE27:
+.LFE36:
 	.size	esp_apptrace_rb_read_size_get, .-esp_apptrace_rb_read_size_get
 	.section	.text.esp_apptrace_rb_write_size_get,"ax",@progbits
 	.align	4
 	.global	esp_apptrace_rb_write_size_get
 	.type	esp_apptrace_rb_write_size_get, @function
 esp_apptrace_rb_write_size_get:
-.LFB28:
+.LFB37:
 	.loc 1 178 0
 .LVL44:
 	entry	sp, 32
@@ -472,7 +472,7 @@ esp_apptrace_rb_write_size_get:
 	.loc 1 191 0
 	mov.n	a2, a8
 	retw.n
-.LFE28:
+.LFE37:
 	.size	esp_apptrace_rb_write_size_get, .-esp_apptrace_rb_write_size_get
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -493,10 +493,10 @@ esp_apptrace_rb_write_size_get:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI0-.LFB22
+	.4byte	.LCFI0-.LFB31
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -505,10 +505,10 @@ esp_apptrace_rb_write_size_get:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI1-.LFB23
+	.4byte	.LCFI1-.LFB32
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -517,10 +517,10 @@ esp_apptrace_rb_write_size_get:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI2-.LFB24
+	.4byte	.LCFI2-.LFB33
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -529,10 +529,10 @@ esp_apptrace_rb_write_size_get:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.byte	0x4
-	.4byte	.LCFI3-.LFB25
+	.4byte	.LCFI3-.LFB34
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -541,10 +541,10 @@ esp_apptrace_rb_write_size_get:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.byte	0x4
-	.4byte	.LCFI4-.LFB26
+	.4byte	.LCFI4-.LFB35
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -553,10 +553,10 @@ esp_apptrace_rb_write_size_get:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.byte	0x4
-	.4byte	.LCFI5-.LFB27
+	.4byte	.LCFI5-.LFB36
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -565,10 +565,10 @@ esp_apptrace_rb_write_size_get:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.byte	0x4
-	.4byte	.LCFI6-.LFB28
+	.4byte	.LCFI6-.LFB37
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -584,7 +584,7 @@ esp_apptrace_rb_write_size_get:
 	.file 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/xtruntime.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x50d
+	.4byte	0x511
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -835,102 +835,102 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0xf
 	.4byte	.LASF51
 	.byte	0x2
-	.byte	0xf8
+	.2byte	0x13c
 	.4byte	0x2c
 	.byte	0x3
-	.4byte	0x219
-	.uleb128 0xc
+	.4byte	0x21c
+	.uleb128 0x10
 	.4byte	.LASF32
 	.byte	0x2
-	.byte	0xf9
+	.2byte	0x13d
 	.4byte	0x2c
 	.uleb128 0xd
-	.uleb128 0xc
+	.uleb128 0x10
 	.4byte	.LASF33
 	.byte	0x2
-	.byte	0xf9
+	.2byte	0x13d
 	.4byte	0x2c
 	.byte	0
 	.byte	0
-	.uleb128 0x10
+	.uleb128 0x11
 	.4byte	0x1b6
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x29d
-	.uleb128 0x11
+	.4byte	0x2a0
+	.uleb128 0x12
 	.4byte	0x1c6
 	.4byte	.LLST0
-	.uleb128 0x12
+	.uleb128 0x13
 	.4byte	0x1d1
 	.4byte	.LLST1
-	.uleb128 0x13
+	.uleb128 0x14
 	.4byte	.LBB11
 	.4byte	.LBE11-.LBB11
-	.4byte	0x25e
-	.uleb128 0x12
+	.4byte	0x261
+	.uleb128 0x13
 	.4byte	0x1dd
 	.4byte	.LLST2
-	.uleb128 0x14
+	.uleb128 0x15
 	.4byte	.LVL3
-	.4byte	0x4d8
+	.4byte	0x4db
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x14
 	.4byte	.LBB12
 	.4byte	.LBE12-.LBB12
-	.4byte	0x293
-	.uleb128 0x11
+	.4byte	0x296
+	.uleb128 0x12
 	.4byte	0x1c6
 	.4byte	.LLST3
-	.uleb128 0x15
+	.uleb128 0x16
 	.4byte	.LBB13
 	.4byte	.LBE13-.LBB13
-	.uleb128 0x16
+	.uleb128 0x17
 	.4byte	0x1d1
-	.uleb128 0x15
+	.uleb128 0x16
 	.4byte	.LBB14
 	.4byte	.LBE14-.LBB14
-	.uleb128 0x16
+	.uleb128 0x17
 	.4byte	0x1dd
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x15
 	.4byte	.LVL1
-	.4byte	0x4e4
+	.4byte	0x4e7
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF36
 	.byte	0x1
 	.byte	0x30
 	.4byte	0xbb
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x377
-	.uleb128 0x18
+	.4byte	0x37a
+	.uleb128 0x19
 	.4byte	.LASF34
 	.byte	0x1
 	.byte	0x30
-	.4byte	0x377
+	.4byte	0x37a
 	.4byte	.LLST4
-	.uleb128 0x19
+	.uleb128 0x1a
 	.string	"tmo"
 	.byte	0x1
 	.byte	0x30
 	.4byte	0x1ea
 	.uleb128 0x1
 	.byte	0x53
-	.uleb128 0x1a
+	.uleb128 0x1b
 	.string	"res"
 	.byte	0x1
 	.byte	0x32
 	.4byte	0x25
 	.uleb128 0x1
 	.byte	0x5a
-	.uleb128 0x15
+	.uleb128 0x16
 	.4byte	.LBB15
 	.4byte	.LBE15-.LBB15
 	.uleb128 0xc
@@ -938,67 +938,67 @@ esp_apptrace_rb_write_size_get:
 	.byte	0x1
 	.byte	0x36
 	.4byte	0x2c
-	.uleb128 0x1b
+	.uleb128 0x1c
 	.4byte	.LASF35
 	.byte	0x1
 	.byte	0x3d
 	.4byte	0xc6
 	.4byte	.LLST5
-	.uleb128 0x1c
+	.uleb128 0x1d
 	.4byte	0x1f0
 	.4byte	.LBB16
 	.4byte	.LBE16-.LBB16
 	.byte	0x1
 	.byte	0x36
-	.4byte	0x338
-	.uleb128 0x15
+	.4byte	0x33b
+	.uleb128 0x16
 	.4byte	.LBB17
 	.4byte	.LBE17-.LBB17
-	.uleb128 0x1d
-	.4byte	0x200
+	.uleb128 0x1e
+	.4byte	0x201
 	.uleb128 0x1
 	.byte	0x54
-	.uleb128 0x15
+	.uleb128 0x16
 	.4byte	.LBB18
 	.4byte	.LBE18-.LBB18
-	.uleb128 0x1d
-	.4byte	0x20c
+	.uleb128 0x1e
+	.4byte	0x20e
 	.uleb128 0x1
 	.byte	0x54
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x1e
-	.4byte	.LVL13
-	.4byte	0x4ef
-	.4byte	0x351
 	.uleb128 0x1f
+	.4byte	.LVL13
+	.4byte	0x4f2
+	.4byte	0x354
+	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x2
 	.byte	0x72
 	.sleb128 0
-	.uleb128 0x1f
+	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5b
 	.uleb128 0x1
 	.byte	0x30
 	.byte	0
-	.uleb128 0x1e
-	.4byte	.LVL17
-	.4byte	0x4fa
-	.4byte	0x365
 	.uleb128 0x1f
+	.4byte	.LVL17
+	.4byte	0x4fd
+	.4byte	0x368
+	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x2
 	.byte	0x74
 	.sleb128 0
 	.byte	0
-	.uleb128 0x20
+	.uleb128 0x21
 	.4byte	.LVL18
 	.4byte	0x1b6
-	.uleb128 0x1f
+	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x2
@@ -1010,33 +1010,33 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x8
 	.byte	0x4
 	.4byte	0x152
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF37
 	.byte	0x1
 	.byte	0x4d
 	.4byte	0xbb
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x3da
-	.uleb128 0x18
+	.4byte	0x3dd
+	.uleb128 0x19
 	.4byte	.LASF34
 	.byte	0x1
 	.byte	0x4d
-	.4byte	0x377
+	.4byte	0x37a
 	.4byte	.LLST6
-	.uleb128 0x1b
+	.uleb128 0x1c
 	.4byte	.LASF25
 	.byte	0x1
 	.byte	0x50
 	.4byte	0x2c
 	.4byte	.LLST7
-	.uleb128 0x1e
-	.4byte	.LVL22
-	.4byte	0x505
-	.4byte	0x3c9
 	.uleb128 0x1f
+	.4byte	.LVL22
+	.4byte	0x508
+	.4byte	0x3cc
+	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x3
@@ -1044,10 +1044,10 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x1
 	.byte	0x52
 	.byte	0
-	.uleb128 0x20
+	.uleb128 0x21
 	.4byte	.LVL23
-	.4byte	0x4fa
-	.uleb128 0x1f
+	.4byte	0x4fd
+	.uleb128 0x20
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x2
@@ -1055,29 +1055,29 @@ esp_apptrace_rb_write_size_get:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF38
 	.byte	0x1
 	.byte	0x60
 	.4byte	0x1a0
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x420
-	.uleb128 0x21
+	.4byte	0x423
+	.uleb128 0x22
 	.string	"rb"
 	.byte	0x1
 	.byte	0x60
-	.4byte	0x420
+	.4byte	0x423
 	.4byte	.LLST8
-	.uleb128 0x18
+	.uleb128 0x19
 	.4byte	.LASF28
 	.byte	0x1
 	.byte	0x60
 	.4byte	0xb0
 	.4byte	.LLST9
-	.uleb128 0x22
+	.uleb128 0x23
 	.string	"ptr"
 	.byte	0x1
 	.byte	0x62
@@ -1087,29 +1087,29 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x8
 	.byte	0x4
 	.4byte	0x1ab
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF39
 	.byte	0x1
 	.byte	0x8a
 	.4byte	0x1a0
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x46a
-	.uleb128 0x21
+	.4byte	0x46d
+	.uleb128 0x22
 	.string	"rb"
 	.byte	0x1
 	.byte	0x8a
-	.4byte	0x420
+	.4byte	0x423
 	.4byte	.LLST11
-	.uleb128 0x18
+	.uleb128 0x19
 	.4byte	.LASF28
 	.byte	0x1
 	.byte	0x8a
 	.4byte	0xb0
 	.4byte	.LLST12
-	.uleb128 0x1a
+	.uleb128 0x1b
 	.string	"ptr"
 	.byte	0x1
 	.byte	0x8c
@@ -1117,68 +1117,68 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x1
 	.byte	0x59
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF40
 	.byte	0x1
 	.byte	0xa4
 	.4byte	0xb0
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x4a1
-	.uleb128 0x21
+	.4byte	0x4a4
+	.uleb128 0x22
 	.string	"rb"
 	.byte	0x1
 	.byte	0xa4
-	.4byte	0x420
+	.4byte	0x423
 	.4byte	.LLST13
-	.uleb128 0x1b
+	.uleb128 0x1c
 	.4byte	.LASF28
 	.byte	0x1
 	.byte	0xa6
 	.4byte	0xb0
 	.4byte	.LLST14
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.4byte	.LASF41
 	.byte	0x1
 	.byte	0xb1
 	.4byte	0xb0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x4d8
-	.uleb128 0x21
+	.4byte	0x4db
+	.uleb128 0x22
 	.string	"rb"
 	.byte	0x1
 	.byte	0xb1
-	.4byte	0x420
+	.4byte	0x423
 	.4byte	.LLST15
-	.uleb128 0x1b
+	.uleb128 0x1c
 	.4byte	.LASF28
 	.byte	0x1
 	.byte	0xb3
 	.4byte	0xb0
 	.4byte	.LLST16
 	.byte	0
-	.uleb128 0x23
+	.uleb128 0x24
 	.4byte	.LASF42
 	.4byte	.LASF42
 	.byte	0x7
 	.2byte	0x2d4
-	.uleb128 0x24
+	.uleb128 0x25
 	.4byte	.LASF43
 	.4byte	.LASF43
 	.byte	0x8
-	.byte	0x34
-	.uleb128 0x24
+	.byte	0x35
+	.uleb128 0x25
 	.4byte	.LASF44
 	.4byte	.LASF44
 	.byte	0x2
-	.byte	0xe5
-	.uleb128 0x24
+	.byte	0xff
+	.uleb128 0x25
 	.4byte	.LASF45
 	.4byte	.LASF45
 	.byte	0x9
@@ -1187,7 +1187,7 @@ esp_apptrace_rb_write_size_get:
 	.4byte	.LASF46
 	.4byte	.LASF46
 	.byte	0x2
-	.byte	0xe6
+	.2byte	0x100
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -1377,7 +1377,7 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
+	.uleb128 0x5
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x20
@@ -1387,6 +1387,19 @@ esp_apptrace_rb_write_size_get:
 	.byte	0
 	.byte	0
 	.uleb128 0x10
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x11
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x31
@@ -1403,7 +1416,7 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x11
+	.uleb128 0x12
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x31
@@ -1412,7 +1425,7 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x12
+	.uleb128 0x13
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x31
@@ -1421,7 +1434,7 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x14
 	.uleb128 0xb
 	.byte	0x1
 	.uleb128 0x11
@@ -1432,7 +1445,7 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x15
 	.uleb128 0x4109
 	.byte	0
 	.uleb128 0x11
@@ -1441,7 +1454,7 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x15
+	.uleb128 0x16
 	.uleb128 0xb
 	.byte	0x1
 	.uleb128 0x11
@@ -1450,14 +1463,14 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x16
+	.uleb128 0x17
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x31
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x18
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -1484,7 +1497,7 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x18
+	.uleb128 0x19
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -1499,23 +1512,8 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x19
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
 	.uleb128 0x1a
-	.uleb128 0x34
+	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0x8
@@ -1533,6 +1531,21 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x1c
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
 	.uleb128 0xe
 	.uleb128 0x3a
 	.uleb128 0xb
@@ -1544,7 +1557,7 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x1c
+	.uleb128 0x1d
 	.uleb128 0x1d
 	.byte	0x1
 	.uleb128 0x31
@@ -1561,7 +1574,7 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x1d
+	.uleb128 0x1e
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x31
@@ -1570,7 +1583,7 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x1e
+	.uleb128 0x1f
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
@@ -1581,7 +1594,7 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x1f
+	.uleb128 0x20
 	.uleb128 0x410a
 	.byte	0
 	.uleb128 0x2
@@ -1590,7 +1603,7 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x20
+	.uleb128 0x21
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
@@ -1599,7 +1612,7 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x22
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -1614,7 +1627,7 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x22
+	.uleb128 0x23
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -1629,7 +1642,7 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x23
+	.uleb128 0x24
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -1646,7 +1659,7 @@ esp_apptrace_rb_write_size_get:
 	.uleb128 0x5
 	.byte	0
 	.byte	0
-	.uleb128 0x24
+	.uleb128 0x25
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -1672,7 +1685,7 @@ esp_apptrace_rb_write_size_get:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL9
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1729,7 +1742,7 @@ esp_apptrace_rb_write_size_get:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL19
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1754,7 +1767,7 @@ esp_apptrace_rb_write_size_get:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL22-1
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1775,7 +1788,7 @@ esp_apptrace_rb_write_size_get:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL26
-	.4byte	.LFE25
+	.4byte	.LFE34
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -1804,7 +1817,7 @@ esp_apptrace_rb_write_size_get:
 	.byte	0x53
 	.byte	0x9f
 	.4byte	.LVL33
-	.4byte	.LFE25
+	.4byte	.LFE34
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -1830,7 +1843,7 @@ esp_apptrace_rb_write_size_get:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL35
-	.4byte	.LFE26
+	.4byte	.LFE35
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -1852,7 +1865,7 @@ esp_apptrace_rb_write_size_get:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL39
-	.4byte	.LFE26
+	.4byte	.LFE35
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1866,7 +1879,7 @@ esp_apptrace_rb_write_size_get:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL42
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1881,7 +1894,7 @@ esp_apptrace_rb_write_size_get:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL43
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -1903,7 +1916,7 @@ esp_apptrace_rb_write_size_get:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL49
-	.4byte	.LFE28
+	.4byte	.LFE37
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1927,7 +1940,7 @@ esp_apptrace_rb_write_size_get:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL51
-	.4byte	.LFE28
+	.4byte	.LFE37
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -1940,38 +1953,38 @@ esp_apptrace_rb_write_size_get:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB24
-	.4byte	.LFE24
-	.4byte	.LFB25
-	.4byte	.LFE25
-	.4byte	.LFB26
-	.4byte	.LFE26
-	.4byte	.LFB27
-	.4byte	.LFE27
-	.4byte	.LFB28
-	.4byte	.LFE28
+	.4byte	.LFB31
+	.4byte	.LFE31
+	.4byte	.LFB32
+	.4byte	.LFE32
+	.4byte	.LFB33
+	.4byte	.LFE33
+	.4byte	.LFB34
+	.4byte	.LFE34
+	.4byte	.LFB35
+	.4byte	.LFE35
+	.4byte	.LFB36
+	.4byte	.LFE36
+	.4byte	.LFB37
+	.4byte	.LFE37
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

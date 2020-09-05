@@ -18,13 +18,13 @@
 	.literal .LC3, .LC2
 	.literal .LC5, .LC4
 	.literal .LC7, .LC6
-	.literal .LC8, __FUNCTION__$6387
+	.literal .LC8, __FUNCTION__$6459
 	.literal .LC10, .LC9
 	.align	4
 	.global	platform_create_id_string
 	.type	platform_create_id_string, @function
 platform_create_id_string:
-.LFB36:
+.LFB45:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mqtt/esp-mqtt/lib/platform_esp32_idf.c"
 	.loc 1 13 0
 	entry	sp, 64
@@ -73,14 +73,14 @@ platform_create_id_string:
 .LVL5:
 	.loc 1 20 0
 	retw.n
-.LFE36:
+.LFE45:
 	.size	platform_create_id_string, .-platform_create_id_string
 	.section	.text.platform_random,"ax",@progbits
 	.align	4
 	.global	platform_random
 	.type	platform_random, @function
 platform_random:
-.LFB37:
+.LFB46:
 	.loc 1 23 0
 .LVL6:
 	entry	sp, 32
@@ -92,7 +92,7 @@ platform_random:
 	remu	a2, a10, a2
 .LVL8:
 	retw.n
-.LFE37:
+.LFE46:
 	.size	platform_random, .-platform_random
 	.section	.text.platform_tick_get_ms,"ax",@progbits
 	.literal_position
@@ -101,7 +101,7 @@ platform_random:
 	.global	platform_tick_get_ms
 	.type	platform_tick_get_ms, @function
 platform_tick_get_ms:
-.LFB38:
+.LFB47:
 	.loc 1 28 0
 	entry	sp, 48
 .LCFI2:
@@ -133,7 +133,7 @@ platform_tick_get_ms:
 	add.n	a3, a3, a9
 .LVL11:
 	retw.n
-.LFE38:
+.LFE47:
 	.size	platform_tick_get_ms, .-platform_tick_get_ms
 	.section	.text.ms_to_timeval,"ax",@progbits
 	.literal_position
@@ -142,7 +142,7 @@ platform_tick_get_ms:
 	.global	ms_to_timeval
 	.type	ms_to_timeval, @function
 ms_to_timeval:
-.LFB39:
+.LFB48:
 	.loc 1 37 0
 .LVL12:
 	entry	sp, 32
@@ -166,12 +166,12 @@ ms_to_timeval:
 	slli	a8, a8, 3
 	s32i.n	a8, a3, 4
 	retw.n
-.LFE39:
+.LFE48:
 	.size	ms_to_timeval, .-ms_to_timeval
-	.section	.rodata.__FUNCTION__$6387,"a",@progbits
-	.type	__FUNCTION__$6387, @object
-	.size	__FUNCTION__$6387, 26
-__FUNCTION__$6387:
+	.section	.rodata.__FUNCTION__$6459,"a",@progbits
+	.type	__FUNCTION__$6459, @object
+	.size	__FUNCTION__$6459, 26
+__FUNCTION__$6459:
 	.string	"platform_create_id_string"
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -192,10 +192,10 @@ __FUNCTION__$6387:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.byte	0x4
-	.4byte	.LCFI0-.LFB36
+	.4byte	.LCFI0-.LFB45
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -204,10 +204,10 @@ __FUNCTION__$6387:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.byte	0x4
-	.4byte	.LCFI1-.LFB37
+	.4byte	.LCFI1-.LFB46
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -216,10 +216,10 @@ __FUNCTION__$6387:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI2-.LFB38
+	.4byte	.LCFI2-.LFB47
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -228,10 +228,10 @@ __FUNCTION__$6387:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI3-.LFB39
+	.4byte	.LCFI3-.LFB48
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -344,7 +344,7 @@ __FUNCTION__$6387:
 	.byte	0x4
 	.4byte	0x2c
 	.byte	0x6
-	.byte	0x1b
+	.byte	0x1c
 	.4byte	0xe3
 	.uleb128 0x9
 	.4byte	.LASF16
@@ -380,12 +380,15 @@ __FUNCTION__$6387:
 	.4byte	0xab
 	.byte	0x4
 	.byte	0
+	.uleb128 0x5
+	.byte	0x4
+	.4byte	0xe8
 	.uleb128 0x8
 	.byte	0x4
 	.4byte	0x2c
 	.byte	0x7
 	.byte	0x1f
-	.4byte	0x13e
+	.4byte	0x144
 	.uleb128 0x9
 	.4byte	.LASF22
 	.byte	0
@@ -410,16 +413,16 @@ __FUNCTION__$6387:
 	.byte	0x1
 	.byte	0xc
 	.4byte	0x7d
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x227
+	.4byte	0x22d
 	.uleb128 0xd
 	.string	"mac"
 	.byte	0x1
 	.byte	0xe
-	.4byte	0x227
+	.4byte	0x22d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
@@ -431,15 +434,15 @@ __FUNCTION__$6387:
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0xf
-	.4byte	.LASF31
-	.4byte	0x247
+	.4byte	.LASF32
+	.4byte	0x24d
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$6387
+	.4byte	__FUNCTION__$6459
 	.uleb128 0x10
 	.4byte	.LVL0
 	.4byte	0x30c
-	.4byte	0x19a
+	.4byte	0x1a0
 	.uleb128 0x11
 	.uleb128 0x1
 	.byte	0x5a
@@ -458,7 +461,7 @@ __FUNCTION__$6387:
 	.uleb128 0x10
 	.4byte	.LVL3
 	.4byte	0x322
-	.4byte	0x1f4
+	.4byte	0x1fa
 	.uleb128 0x11
 	.uleb128 0x1
 	.byte	0x5a
@@ -500,7 +503,7 @@ __FUNCTION__$6387:
 	.sleb128 4
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$6387
+	.4byte	__FUNCTION__$6459
 	.uleb128 0x11
 	.uleb128 0x2
 	.byte	0x71
@@ -512,7 +515,7 @@ __FUNCTION__$6387:
 	.uleb128 0x10
 	.4byte	.LVL4
 	.4byte	0x32d
-	.4byte	0x20d
+	.4byte	0x213
 	.uleb128 0x11
 	.uleb128 0x1
 	.byte	0x5a
@@ -544,31 +547,31 @@ __FUNCTION__$6387:
 	.byte	0
 	.uleb128 0x14
 	.4byte	0x95
-	.4byte	0x237
+	.4byte	0x23d
 	.uleb128 0x15
 	.4byte	0x6f
 	.byte	0x5
 	.byte	0
 	.uleb128 0x14
 	.4byte	0x83
-	.4byte	0x247
+	.4byte	0x24d
 	.uleb128 0x15
 	.4byte	0x6f
 	.byte	0x19
 	.byte	0
 	.uleb128 0x6
-	.4byte	0x237
-	.uleb128 0x16
-	.4byte	.LASF46
+	.4byte	0x23d
+	.uleb128 0xc
+	.4byte	.LASF30
 	.byte	0x1
 	.byte	0x16
 	.4byte	0x25
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x27e
-	.uleb128 0x17
+	.4byte	0x284
+	.uleb128 0x16
 	.string	"max"
 	.byte	0x1
 	.byte	0x16
@@ -579,15 +582,15 @@ __FUNCTION__$6387:
 	.4byte	0x344
 	.byte	0
 	.uleb128 0xc
-	.4byte	.LASF30
+	.4byte	.LASF31
 	.byte	0x1
 	.byte	0x1b
 	.4byte	0x5a
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2c5
+	.4byte	0x2cb
 	.uleb128 0xd
 	.string	"te"
 	.byte	0x1
@@ -596,8 +599,8 @@ __FUNCTION__$6387:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
-	.uleb128 0x18
-	.4byte	.LASF32
+	.uleb128 0x17
+	.4byte	.LASF33
 	.byte	0x1
 	.byte	0x1f
 	.4byte	0x5a
@@ -617,33 +620,30 @@ __FUNCTION__$6387:
 	.byte	0x30
 	.byte	0
 	.byte	0
-	.uleb128 0x19
-	.4byte	.LASF33
+	.uleb128 0x18
+	.4byte	.LASF46
 	.byte	0x1
 	.byte	0x24
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x2f4
-	.uleb128 0x1a
+	.4byte	0x2fa
+	.uleb128 0x19
 	.4byte	.LASF34
 	.byte	0x1
 	.byte	0x24
 	.4byte	0x25
 	.uleb128 0x1
 	.byte	0x52
-	.uleb128 0x1b
+	.uleb128 0x1a
 	.string	"tv"
 	.byte	0x1
 	.byte	0x24
-	.4byte	0x2f4
+	.4byte	0x10d
 	.uleb128 0x1
 	.byte	0x53
 	.byte	0
-	.uleb128 0x5
-	.byte	0x4
-	.4byte	0xe8
 	.uleb128 0xd
 	.string	"TAG"
 	.byte	0x1
@@ -653,37 +653,37 @@ __FUNCTION__$6387:
 	.byte	0x3
 	.4byte	.LC2
 	.byte	0x9f
-	.uleb128 0x1c
+	.uleb128 0x1b
 	.4byte	.LASF35
 	.4byte	.LASF35
 	.byte	0x8
 	.byte	0x57
-	.uleb128 0x1c
+	.uleb128 0x1b
 	.4byte	.LASF36
 	.4byte	.LASF36
 	.byte	0x7
 	.byte	0x57
-	.uleb128 0x1c
+	.uleb128 0x1b
 	.4byte	.LASF37
 	.4byte	.LASF37
 	.byte	0x7
 	.byte	0x6b
-	.uleb128 0x1d
+	.uleb128 0x1c
 	.4byte	.LASF38
 	.4byte	.LASF38
 	.byte	0x6
-	.2byte	0x10a
-	.uleb128 0x1c
+	.2byte	0x10b
+	.uleb128 0x1b
 	.4byte	.LASF39
 	.4byte	.LASF39
 	.byte	0x9
 	.byte	0xde
-	.uleb128 0x1c
+	.uleb128 0x1b
 	.4byte	.LASF40
 	.4byte	.LASF40
 	.byte	0x6
-	.byte	0xa7
-	.uleb128 0x1c
+	.byte	0xa8
+	.uleb128 0x1b
 	.4byte	.LASF41
 	.4byte	.LASF41
 	.byte	0x5
@@ -839,6 +839,8 @@ __FUNCTION__$6387:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
+	.uleb128 0x27
+	.uleb128 0x19
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x11
@@ -953,33 +955,6 @@ __FUNCTION__$6387:
 	.byte	0
 	.byte	0
 	.uleb128 0x16
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x27
-	.uleb128 0x19
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x6
-	.uleb128 0x40
-	.uleb128 0x18
-	.uleb128 0x2117
-	.uleb128 0x19
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x17
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -994,7 +969,7 @@ __FUNCTION__$6387:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x18
+	.uleb128 0x17
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -1007,7 +982,7 @@ __FUNCTION__$6387:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x19
+	.uleb128 0x18
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -1032,7 +1007,7 @@ __FUNCTION__$6387:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x1a
+	.uleb128 0x19
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -1047,7 +1022,7 @@ __FUNCTION__$6387:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x1b
+	.uleb128 0x1a
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -1062,7 +1037,7 @@ __FUNCTION__$6387:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x1c
+	.uleb128 0x1b
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -1079,7 +1054,7 @@ __FUNCTION__$6387:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x1d
+	.uleb128 0x1c
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -1105,7 +1080,7 @@ __FUNCTION__$6387:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL8
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1121,26 +1096,26 @@ __FUNCTION__$6387:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB36
-	.4byte	.LFE36
-	.4byte	.LFB37
-	.4byte	.LFE37
-	.4byte	.LFB38
-	.4byte	.LFE38
-	.4byte	.LFB39
-	.4byte	.LFE39
+	.4byte	.LFB45
+	.4byte	.LFE45
+	.4byte	.LFB46
+	.4byte	.LFE46
+	.4byte	.LFB47
+	.4byte	.LFE47
+	.4byte	.LFB48
+	.4byte	.LFE48
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -1168,7 +1143,7 @@ __FUNCTION__$6387:
 	.string	"esp_random"
 .LASF25:
 	.string	"ESP_LOG_INFO"
-.LASF46:
+.LASF30:
 	.string	"platform_random"
 .LASF42:
 	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
@@ -1180,9 +1155,9 @@ __FUNCTION__$6387:
 	.string	"short unsigned int"
 .LASF9:
 	.string	"long unsigned int"
-.LASF33:
+.LASF46:
 	.string	"ms_to_timeval"
-.LASF31:
+.LASF32:
 	.string	"__FUNCTION__"
 .LASF45:
 	.string	"timeval"
@@ -1200,7 +1175,7 @@ __FUNCTION__$6387:
 	.string	"time_t"
 .LASF21:
 	.string	"tv_usec"
-.LASF32:
+.LASF33:
 	.string	"milliseconds"
 .LASF6:
 	.string	"long long unsigned int"
@@ -1222,7 +1197,7 @@ __FUNCTION__$6387:
 	.string	"calloc"
 .LASF22:
 	.string	"ESP_LOG_NONE"
-.LASF30:
+.LASF31:
 	.string	"platform_tick_get_ms"
 .LASF37:
 	.string	"esp_log_write"

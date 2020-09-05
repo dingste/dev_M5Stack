@@ -9,7 +9,7 @@
 	.align	4
 	.type	getCharPtr, @function
 getCharPtr:
-.LFB59:
+.LFB68:
 	.file 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/tft.c"
 	.loc 1 1434 0
 .LVL0:
@@ -156,7 +156,7 @@ getCharPtr:
 	.loc 1 1446 0
 	mov.n	a10, a9
 	j	.L9
-.LFE59:
+.LFE68:
 	.size	getCharPtr, .-getCharPtr
 	.section	.text._7seg_width,"ax",@progbits
 	.literal_position
@@ -164,7 +164,7 @@ getCharPtr:
 	.align	4
 	.type	_7seg_width, @function
 _7seg_width:
-.LFB65:
+.LFB74:
 	.loc 1 1779 0
 	entry	sp, 32
 .LCFI1:
@@ -177,7 +177,7 @@ _7seg_width:
 	.loc 1 1781 0
 	add.n	a2, a8, a2
 	retw.n
-.LFE65:
+.LFE74:
 	.size	_7seg_width, .-_7seg_width
 	.section	.text._7seg_height,"ax",@progbits
 	.literal_position
@@ -185,7 +185,7 @@ _7seg_width:
 	.align	4
 	.type	_7seg_height, @function
 _7seg_height:
-.LFB66:
+.LFB75:
 	.loc 1 1785 0
 	entry	sp, 32
 .LCFI2:
@@ -199,7 +199,7 @@ _7seg_height:
 	.loc 1 1787 0
 	addx2	a2, a8, a2
 	retw.n
-.LFE66:
+.LFE75:
 	.size	_7seg_height, .-_7seg_height
 	.section	.text._drawPixel,"ax",@progbits
 	.literal_position
@@ -207,7 +207,7 @@ _7seg_height:
 	.align	4
 	.type	_drawPixel, @function
 _drawPixel:
-.LFB20:
+.LFB29:
 	.loc 1 151 0
 .LVL16:
 	entry	sp, 48
@@ -239,7 +239,7 @@ _drawPixel:
 .LVL17:
 .L20:
 	retw.n
-.LFE20:
+.LFE29:
 	.size	_drawPixel, .-_drawPixel
 	.section	.text._drawFastVLine,"ax",@progbits
 	.literal_position
@@ -247,7 +247,7 @@ _drawPixel:
 	.align	4
 	.type	_drawFastVLine, @function
 _drawFastVLine:
-.LFB23:
+.LFB32:
 	.loc 1 175 0
 .LVL18:
 	entry	sp, 48
@@ -308,13 +308,13 @@ _drawFastVLine:
 .LVL26:
 .L22:
 	retw.n
-.LFE23:
+.LFE32:
 	.size	_drawFastVLine, .-_drawFastVLine
 	.section	.text.fillCircleHelper,"ax",@progbits
 	.align	4
 	.type	fillCircleHelper, @function
 fillCircleHelper:
-.LFB36:
+.LFB45:
 	.loc 1 392 0
 .LVL27:
 	entry	sp, 64
@@ -514,13 +514,13 @@ fillCircleHelper:
 	blt	a10, a8, .L36
 	.loc 1 418 0
 	retw.n
-.LFE36:
+.LFE45:
 	.size	fillCircleHelper, .-fillCircleHelper
 	.section	.text._draw_filled_ellipse_section,"ax",@progbits
 	.align	4
 	.type	_draw_filled_ellipse_section, @function
 _draw_filled_ellipse_section:
-.LFB50:
+.LFB59:
 	.loc 1 755 0
 .LVL51:
 	entry	sp, 48
@@ -579,7 +579,7 @@ _draw_filled_ellipse_section:
 .LVL55:
 .L49:
 	retw.n
-.LFE50:
+.LFE59:
 	.size	_draw_filled_ellipse_section, .-_draw_filled_ellipse_section
 	.section	.text._drawFastHLine,"ax",@progbits
 	.literal_position
@@ -587,7 +587,7 @@ _draw_filled_ellipse_section:
 	.align	4
 	.type	_drawFastHLine, @function
 _drawFastHLine:
-.LFB24:
+.LFB33:
 	.loc 1 190 0 is_stmt 1
 .LVL56:
 	entry	sp, 48
@@ -648,13 +648,13 @@ _drawFastHLine:
 .LVL64:
 .L66:
 	retw.n
-.LFE24:
+.LFE33:
 	.size	_drawFastHLine, .-_drawFastHLine
 	.section	.text._drawLine,"ax",@progbits
 	.align	4
 	.type	_drawLine, @function
 _drawLine:
-.LFB27:
+.LFB36:
 	.loc 1 220 0
 .LVL65:
 	entry	sp, 48
@@ -913,13 +913,13 @@ _drawLine:
 .LVL114:
 .L71:
 	retw.n
-.LFE27:
+.LFE36:
 	.size	_drawLine, .-_drawLine
 	.section	.text._drawTriangle,"ax",@progbits
 	.align	4
 	.type	_drawTriangle, @function
 _drawTriangle:
-.LFB42:
+.LFB51:
 	.loc 1 492 0 is_stmt 1
 .LVL115:
 	entry	sp, 32
@@ -960,13 +960,13 @@ _drawTriangle:
 	call8	_drawLine
 .LVL119:
 	retw.n
-.LFE42:
+.LFE51:
 	.size	_drawTriangle, .-_drawTriangle
 	.section	.text._drawRect,"ax",@progbits
 	.align	4
 	.type	_drawRect, @function
 _drawRect:
-.LFB33:
+.LFB42:
 	.loc 1 337 0
 .LVL120:
 	entry	sp, 48
@@ -1023,13 +1023,13 @@ _drawRect:
 	call8	_drawFastVLine
 .LVL127:
 	retw.n
-.LFE33:
+.LFE42:
 	.size	_drawRect, .-_drawRect
 	.section	.text._fillTriangle,"ax",@progbits
 	.align	4
 	.type	_fillTriangle, @function
 _fillTriangle:
-.LFB44:
+.LFB53:
 	.loc 1 516 0
 .LVL128:
 	entry	sp, 80
@@ -1336,7 +1336,7 @@ _fillTriangle:
 	.loc 1 524 0
 	bltu	a8, a5, .L123
 	j	.L106
-.LFE44:
+.LFE53:
 	.size	_fillTriangle, .-_fillTriangle
 	.section	.text._fillRect,"ax",@progbits
 	.literal_position
@@ -1344,7 +1344,7 @@ _fillTriangle:
 	.align	4
 	.type	_fillRect, @function
 _fillRect:
-.LFB29:
+.LFB38:
 	.loc 1 289 0
 .LVL195:
 	entry	sp, 48
@@ -1433,7 +1433,7 @@ _fillRect:
 .LVL211:
 .L125:
 	retw.n
-.LFE29:
+.LFE38:
 	.size	_fillRect, .-_fillRect
 	.section	.text.barVert,"ax",@progbits
 	.literal_position
@@ -1441,7 +1441,7 @@ _fillRect:
 	.align	4
 	.type	barVert, @function
 barVert:
-.LFB69:
+.LFB78:
 	.loc 1 1850 0
 .LVL212:
 	entry	sp, 96
@@ -1580,7 +1580,7 @@ barVert:
 .LVL222:
 .L133:
 	retw.n
-.LFE69:
+.LFE78:
 	.size	barVert, .-barVert
 	.section	.text.barHor,"ax",@progbits
 	.literal_position
@@ -1588,7 +1588,7 @@ barVert:
 	.align	4
 	.type	barHor, @function
 barHor:
-.LFB70:
+.LFB79:
 	.loc 1 1863 0
 .LVL223:
 	entry	sp, 96
@@ -1729,13 +1729,13 @@ barHor:
 .LVL233:
 .L138:
 	retw.n
-.LFE70:
+.LFE79:
 	.size	barHor, .-barHor
 	.section	.text.drawCircleHelper,"ax",@progbits
 	.align	4
 	.type	drawCircleHelper, @function
 drawCircleHelper:
-.LFB35:
+.LFB44:
 	.loc 1 352 0
 .LVL234:
 	entry	sp, 64
@@ -1929,13 +1929,13 @@ drawCircleHelper:
 	call8	disp_deselect
 .LVL255:
 	retw.n
-.LFE35:
+.LFE44:
 	.size	drawCircleHelper, .-drawCircleHelper
 	.section	.text._draw_ellipse_section,"ax",@progbits
 	.align	4
 	.type	_draw_ellipse_section, @function
 _draw_ellipse_section:
-.LFB48:
+.LFB57:
 	.loc 1 653 0
 .LVL256:
 	entry	sp, 48
@@ -1998,7 +1998,7 @@ _draw_ellipse_section:
 	call8	disp_deselect
 .LVL262:
 	retw.n
-.LFE48:
+.LFE57:
 	.size	_draw_ellipse_section, .-_draw_ellipse_section
 	.global	__divsf3
 	.global	__extendsfdf2
@@ -2016,7 +2016,7 @@ _draw_ellipse_section:
 	.align	4
 	.type	_fillArcOffsetted, @function
 _fillArcOffsetted:
-.LFB52:
+.LFB61:
 	.loc 1 858 0
 .LVL263:
 	entry	sp, 80
@@ -2363,13 +2363,13 @@ _fillArcOffsetted:
 	call8	disp_deselect
 .LVL304:
 	retw.n
-.LFE52:
+.LFE61:
 	.size	_fillArcOffsetted, .-_fillArcOffsetted
 	.section	.text.tjd_buf_input,"ax",@progbits
 	.align	4
 	.type	tjd_buf_input, @function
 tjd_buf_input:
-.LFB85:
+.LFB94:
 	.loc 1 2318 0
 .LVL305:
 	entry	sp, 32
@@ -2421,7 +2421,7 @@ tjd_buf_input:
 .L240:
 	.loc 1 2334 0
 	retw.n
-.LFE85:
+.LFE94:
 	.size	tjd_buf_input, .-tjd_buf_input
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC18:
@@ -2457,7 +2457,7 @@ tjd_buf_input:
 	.align	4
 	.type	load_file_font, @function
 load_file_font:
-.LFB55:
+.LFB64:
 	.loc 1 1044 0
 .LVL310:
 	entry	sp, 352
@@ -2728,7 +2728,7 @@ load_file_font:
 .L278:
 	.loc 1 1168 0
 	retw.n
-.LFE55:
+.LFE64:
 	.size	load_file_font, .-load_file_font
 	.section	.text.tjd_output,"ax",@progbits
 	.literal_position
@@ -2736,7 +2736,7 @@ load_file_font:
 	.align	4
 	.type	tjd_output, @function
 tjd_output:
-.LFB86:
+.LFB95:
 	.loc 1 2343 0
 .LVL359:
 	entry	sp, 64
@@ -2939,13 +2939,13 @@ tjd_output:
 .L286:
 	.loc 1 2399 0
 	retw.n
-.LFE86:
+.LFE95:
 	.size	tjd_output, .-tjd_output
 	.section	.text.tjd_input,"ax",@progbits
 	.align	4
 	.type	tjd_input, @function
 tjd_input:
-.LFB84:
+.LFB93:
 	.loc 1 2297 0
 .LVL392:
 	entry	sp, 32
@@ -2982,14 +2982,14 @@ tjd_input:
 	mov.n	a2, a10
 .LVL400:
 	retw.n
-.LFE84:
+.LFE93:
 	.size	tjd_input, .-tjd_input
 	.section	.text.TFT_compare_colors,"ax",@progbits
 	.align	4
 	.global	TFT_compare_colors
 	.type	TFT_compare_colors, @function
 TFT_compare_colors:
-.LFB19:
+.LFB28:
 	.loc 1 140 0
 	entry	sp, 48
 .LCFI22:
@@ -3022,7 +3022,7 @@ TFT_compare_colors:
 .L326:
 	.loc 1 146 0
 	retw.n
-.LFE19:
+.LFE28:
 	.size	TFT_compare_colors, .-TFT_compare_colors
 	.section	.text.TFT_drawPixel,"ax",@progbits
 	.literal_position
@@ -3031,7 +3031,7 @@ TFT_compare_colors:
 	.global	TFT_drawPixel
 	.type	TFT_drawPixel, @function
 TFT_drawPixel:
-.LFB21:
+.LFB30:
 	.loc 1 159 0
 .LVL401:
 	entry	sp, 48
@@ -3049,7 +3049,7 @@ TFT_drawPixel:
 	call8	_drawPixel
 .LVL402:
 	retw.n
-.LFE21:
+.LFE30:
 	.size	TFT_drawPixel, .-TFT_drawPixel
 	.section	.text.TFT_readPixel,"ax",@progbits
 	.literal_position
@@ -3058,7 +3058,7 @@ TFT_drawPixel:
 	.global	TFT_readPixel
 	.type	TFT_readPixel, @function
 TFT_readPixel:
-.LFB22:
+.LFB31:
 	.loc 1 166 0
 .LVL403:
 	entry	sp, 48
@@ -3109,7 +3109,7 @@ TFT_readPixel:
 	.loc 1 171 0
 	or	a2, a8, a2
 	retw.n
-.LFE22:
+.LFE31:
 	.size	TFT_readPixel, .-TFT_readPixel
 	.section	.text.TFT_drawFastVLine,"ax",@progbits
 	.literal_position
@@ -3118,7 +3118,7 @@ TFT_readPixel:
 	.global	TFT_drawFastVLine
 	.type	TFT_drawFastVLine, @function
 TFT_drawFastVLine:
-.LFB25:
+.LFB34:
 	.loc 1 206 0
 .LVL406:
 	entry	sp, 48
@@ -3136,7 +3136,7 @@ TFT_drawFastVLine:
 	call8	_drawFastVLine
 .LVL407:
 	retw.n
-.LFE25:
+.LFE34:
 	.size	TFT_drawFastVLine, .-TFT_drawFastVLine
 	.section	.text.TFT_drawFastHLine,"ax",@progbits
 	.literal_position
@@ -3145,7 +3145,7 @@ TFT_drawFastVLine:
 	.global	TFT_drawFastHLine
 	.type	TFT_drawFastHLine, @function
 TFT_drawFastHLine:
-.LFB26:
+.LFB35:
 	.loc 1 212 0
 .LVL408:
 	entry	sp, 48
@@ -3163,7 +3163,7 @@ TFT_drawFastHLine:
 	call8	_drawFastHLine
 .LVL409:
 	retw.n
-.LFE26:
+.LFE35:
 	.size	TFT_drawFastHLine, .-TFT_drawFastHLine
 	.section	.text.TFT_drawLine,"ax",@progbits
 	.literal_position
@@ -3172,7 +3172,7 @@ TFT_drawFastHLine:
 	.global	TFT_drawLine
 	.type	TFT_drawLine, @function
 TFT_drawLine:
-.LFB28:
+.LFB37:
 	.loc 1 282 0
 .LVL410:
 	entry	sp, 48
@@ -3193,7 +3193,7 @@ TFT_drawLine:
 	call8	_drawLine
 .LVL411:
 	retw.n
-.LFE28:
+.LFE37:
 	.size	TFT_drawLine, .-TFT_drawLine
 	.section	.text.TFT_fillRect,"ax",@progbits
 	.literal_position
@@ -3202,7 +3202,7 @@ TFT_drawLine:
 	.global	TFT_fillRect
 	.type	TFT_fillRect, @function
 TFT_fillRect:
-.LFB30:
+.LFB39:
 	.loc 1 313 0
 .LVL412:
 	entry	sp, 48
@@ -3221,7 +3221,7 @@ TFT_fillRect:
 	call8	_fillRect
 .LVL413:
 	retw.n
-.LFE30:
+.LFE39:
 	.size	TFT_fillRect, .-TFT_fillRect
 	.section	.text.TFT_fillScreen,"ax",@progbits
 	.literal_position
@@ -3231,7 +3231,7 @@ TFT_fillRect:
 	.global	TFT_fillScreen
 	.type	TFT_fillScreen, @function
 TFT_fillScreen:
-.LFB31:
+.LFB40:
 	.loc 1 319 0
 	entry	sp, 48
 .LCFI29:
@@ -3249,7 +3249,7 @@ TFT_fillScreen:
 	call8	TFT_pushColorRep
 .LVL414:
 	retw.n
-.LFE31:
+.LFE40:
 	.size	TFT_fillScreen, .-TFT_fillScreen
 	.section	.text.TFT_fillWindow,"ax",@progbits
 	.literal_position
@@ -3258,7 +3258,7 @@ TFT_fillScreen:
 	.global	TFT_fillWindow
 	.type	TFT_fillWindow, @function
 TFT_fillWindow:
-.LFB32:
+.LFB41:
 	.loc 1 325 0
 	entry	sp, 48
 .LCFI30:
@@ -3279,7 +3279,7 @@ TFT_fillWindow:
 	call8	TFT_pushColorRep
 .LVL415:
 	retw.n
-.LFE32:
+.LFE41:
 	.size	TFT_fillWindow, .-TFT_fillWindow
 	.section	.text.TFT_drawRect,"ax",@progbits
 	.literal_position
@@ -3288,7 +3288,7 @@ TFT_fillWindow:
 	.global	TFT_drawRect
 	.type	TFT_drawRect, @function
 TFT_drawRect:
-.LFB34:
+.LFB43:
 	.loc 1 346 0
 .LVL416:
 	entry	sp, 48
@@ -3307,7 +3307,7 @@ TFT_drawRect:
 	call8	_drawRect
 .LVL417:
 	retw.n
-.LFE34:
+.LFE43:
 	.size	TFT_drawRect, .-TFT_drawRect
 	.section	.text.TFT_drawRoundRect,"ax",@progbits
 	.literal_position
@@ -3316,7 +3316,7 @@ TFT_drawRect:
 	.global	TFT_drawRoundRect
 	.type	TFT_drawRoundRect, @function
 TFT_drawRoundRect:
-.LFB37:
+.LFB46:
 	.loc 1 423 0
 .LVL418:
 	entry	sp, 48
@@ -3455,7 +3455,7 @@ TFT_drawRoundRect:
 	call8	drawCircleHelper
 .LVL435:
 	retw.n
-.LFE37:
+.LFE46:
 	.size	TFT_drawRoundRect, .-TFT_drawRoundRect
 	.section	.text.TFT_fillRoundRect,"ax",@progbits
 	.literal_position
@@ -3464,7 +3464,7 @@ TFT_drawRoundRect:
 	.global	TFT_fillRoundRect
 	.type	TFT_fillRoundRect, @function
 TFT_fillRoundRect:
-.LFB38:
+.LFB47:
 	.loc 1 443 0
 .LVL436:
 	entry	sp, 48
@@ -3551,7 +3551,7 @@ TFT_fillRoundRect:
 	call8	fillCircleHelper
 .LVL447:
 	retw.n
-.LFE38:
+.LFE47:
 	.size	TFT_fillRoundRect, .-TFT_fillRoundRect
 	.global	__floatsidf
 	.global	__adddf3
@@ -3565,7 +3565,7 @@ TFT_fillRoundRect:
 	.global	TFT_drawLineByAngle
 	.type	TFT_drawLineByAngle, @function
 TFT_drawLineByAngle:
-.LFB41:
+.LFB50:
 	.loc 1 480 0
 .LVL448:
 	entry	sp, 112
@@ -3830,7 +3830,7 @@ TFT_drawLineByAngle:
 	retw.n
 .LBE23:
 .LBE22:
-.LFE41:
+.LFE50:
 	.size	TFT_drawLineByAngle, .-TFT_drawLineByAngle
 	.section	.text.TFT_drawTriangle,"ax",@progbits
 	.literal_position
@@ -3839,7 +3839,7 @@ TFT_drawLineByAngle:
 	.global	TFT_drawTriangle
 	.type	TFT_drawTriangle, @function
 TFT_drawTriangle:
-.LFB43:
+.LFB52:
 	.loc 1 500 0
 .LVL496:
 	entry	sp, 32
@@ -3911,7 +3911,7 @@ TFT_drawTriangle:
 	call8	_drawLine
 .LVL512:
 	retw.n
-.LFE43:
+.LFE52:
 	.size	TFT_drawTriangle, .-TFT_drawTriangle
 	.section	.text.TFT_fillTriangle,"ax",@progbits
 	.literal_position
@@ -3920,7 +3920,7 @@ TFT_drawTriangle:
 	.global	TFT_fillTriangle
 	.type	TFT_fillTriangle, @function
 TFT_fillTriangle:
-.LFB45:
+.LFB54:
 	.loc 1 596 0
 .LVL513:
 	entry	sp, 48
@@ -3951,7 +3951,7 @@ TFT_fillTriangle:
 	call8	_fillTriangle
 .LVL514:
 	retw.n
-.LFE45:
+.LFE54:
 	.size	TFT_fillTriangle, .-TFT_fillTriangle
 	.section	.text.TFT_drawCircle,"ax",@progbits
 	.literal_position
@@ -3960,7 +3960,7 @@ TFT_fillTriangle:
 	.global	TFT_drawCircle
 	.type	TFT_drawCircle, @function
 TFT_drawCircle:
-.LFB46:
+.LFB55:
 	.loc 1 606 0
 .LVL515:
 	entry	sp, 64
@@ -4160,7 +4160,7 @@ TFT_drawCircle:
 	call8	disp_deselect
 .LVL541:
 	retw.n
-.LFE46:
+.LFE55:
 	.size	TFT_drawCircle, .-TFT_drawCircle
 	.section	.text.TFT_fillCircle,"ax",@progbits
 	.literal_position
@@ -4169,7 +4169,7 @@ TFT_drawCircle:
 	.global	TFT_fillCircle
 	.type	TFT_fillCircle, @function
 TFT_fillCircle:
-.LFB47:
+.LFB56:
 	.loc 1 643 0
 .LVL542:
 	entry	sp, 48
@@ -4217,7 +4217,7 @@ TFT_fillCircle:
 	call8	fillCircleHelper
 .LVL548:
 	retw.n
-.LFE47:
+.LFE56:
 	.size	TFT_fillCircle, .-TFT_fillCircle
 	.section	.text.TFT_drawEllipse,"ax",@progbits
 	.literal_position
@@ -4226,7 +4226,7 @@ TFT_fillCircle:
 	.global	TFT_drawEllipse
 	.type	TFT_drawEllipse, @function
 TFT_drawEllipse:
-.LFB49:
+.LFB58:
 	.loc 1 668 0
 .LVL549:
 	entry	sp, 80
@@ -4446,7 +4446,7 @@ TFT_drawEllipse:
 	bge	a8, a3, .L360
 	.loc 1 751 0
 	retw.n
-.LFE49:
+.LFE58:
 	.size	TFT_drawEllipse, .-TFT_drawEllipse
 	.section	.text.TFT_fillEllipse,"ax",@progbits
 	.literal_position
@@ -4455,7 +4455,7 @@ TFT_drawEllipse:
 	.global	TFT_fillEllipse
 	.type	TFT_fillEllipse, @function
 TFT_fillEllipse:
-.LFB51:
+.LFB60:
 	.loc 1 768 0
 .LVL590:
 	entry	sp, 80
@@ -4675,7 +4675,7 @@ TFT_fillEllipse:
 	bge	a8, a3, .L367
 	.loc 1 851 0
 	retw.n
-.LFE51:
+.LFE60:
 	.size	TFT_fillEllipse, .-TFT_fillEllipse
 	.section	.text.TFT_drawArc,"ax",@progbits
 	.literal_position
@@ -4688,7 +4688,7 @@ TFT_fillEllipse:
 	.global	TFT_drawArc
 	.type	TFT_drawArc, @function
 TFT_drawArc:
-.LFB53:
+.LFB62:
 	.loc 1 901 0
 .LVL631:
 	entry	sp, 96
@@ -5136,7 +5136,7 @@ TFT_drawArc:
 .LVL704:
 .L368:
 	retw.n
-.LFE53:
+.LFE62:
 	.size	TFT_drawArc, .-TFT_drawArc
 	.section	.text.TFT_drawPolygon,"ax",@progbits
 	.literal_position
@@ -5148,7 +5148,7 @@ TFT_drawArc:
 	.global	TFT_drawPolygon
 	.type	TFT_drawPolygon, @function
 TFT_drawPolygon:
-.LFB54:
+.LFB63:
 	.loc 1 947 0
 .LVL705:
 	entry	sp, 128
@@ -5533,7 +5533,7 @@ TFT_drawPolygon:
 	blt	a5, a4, .L403
 	retw.n
 .LBE27:
-.LFE54:
+.LFE63:
 	.size	TFT_drawPolygon, .-TFT_drawPolygon
 	.section	.rodata.str1.1
 .LC75:
@@ -5598,7 +5598,7 @@ TFT_drawPolygon:
 	.global	compile_font_file
 	.type	compile_font_file, @function
 compile_font_file:
-.LFB56:
+.LFB65:
 	.loc 1 1172 0
 .LVL761:
 	entry	sp, 400
@@ -6145,7 +6145,7 @@ compile_font_file:
 .L457:
 	.loc 1 1333 0
 	retw.n
-.LFE56:
+.LFE65:
 	.size	compile_font_file, .-compile_font_file
 	.section	.text.getFontCharacters,"ax",@progbits
 	.literal_position
@@ -6154,7 +6154,7 @@ compile_font_file:
 	.global	getFontCharacters
 	.type	getFontCharacters, @function
 getFontCharacters:
-.LFB57:
+.LFB66:
 	.loc 1 1355 0
 .LVL867:
 	entry	sp, 32
@@ -6312,7 +6312,7 @@ getFontCharacters:
 .LVL890:
 	s8i	a2, a3, 0
 	retw.n
-.LFE57:
+.LFE66:
 	.size	getFontCharacters, .-getFontCharacters
 	.section	.text.TFT_setFont,"ax",@progbits
 	.literal_position
@@ -6327,7 +6327,7 @@ getFontCharacters:
 	.global	TFT_setFont
 	.type	TFT_setFont, @function
 TFT_setFont:
-.LFB60:
+.LFB69:
 	.loc 1 1505 0
 .LVL891:
 	entry	sp, 32
@@ -6552,7 +6552,7 @@ TFT_setFont:
 	retw.n
 .LBE38:
 .LBE37:
-.LFE60:
+.LFE69:
 	.size	TFT_setFont, .-TFT_setFont
 	.section	.text.TFT_getStringWidth,"ax",@progbits
 	.literal_position
@@ -6562,7 +6562,7 @@ TFT_setFont:
 	.global	TFT_getStringWidth
 	.type	TFT_getStringWidth, @function
 TFT_getStringWidth:
-.LFB67:
+.LFB76:
 	.loc 1 1793 0
 .LVL912:
 	entry	sp, 32
@@ -6632,7 +6632,7 @@ TFT_getStringWidth:
 .LBE46:
 	.loc 1 1809 0
 	retw.n
-.LFE67:
+.LFE76:
 	.size	TFT_getStringWidth, .-TFT_getStringWidth
 	.section	.text.TFT_print,"ax",@progbits
 	.literal_position
@@ -6666,7 +6666,7 @@ TFT_getStringWidth:
 	.global	TFT_print
 	.type	TFT_print, @function
 TFT_print:
-.LFB72:
+.LFB81:
 	.loc 1 1960 0
 .LVL926:
 	entry	sp, 176
@@ -8997,7 +8997,7 @@ TFT_print:
 .LVL1184:
 .L514:
 	retw.n
-.LFE72:
+.LFE81:
 	.size	TFT_print, .-TFT_print
 	.section	.text.TFT_setRotation,"ax",@progbits
 	.literal_position
@@ -9010,7 +9010,7 @@ TFT_print:
 	.global	TFT_setRotation
 	.type	TFT_setRotation, @function
 TFT_setRotation:
-.LFB73:
+.LFB82:
 	.loc 1 2076 0 is_stmt 1
 .LVL1185:
 	entry	sp, 48
@@ -9085,7 +9085,7 @@ TFT_setRotation:
 	call8	TFT_fillScreen
 .LVL1194:
 	retw.n
-.LFE73:
+.LFE82:
 	.size	TFT_setRotation, .-TFT_setRotation
 	.section	.rodata.str1.1
 .LC168:
@@ -9097,7 +9097,7 @@ TFT_setRotation:
 	.global	TFT_invertDisplay
 	.type	TFT_invertDisplay, @function
 TFT_invertDisplay:
-.LFB74:
+.LFB83:
 	.loc 1 2100 0
 .LVL1195:
 	entry	sp, 32
@@ -9128,14 +9128,14 @@ TFT_invertDisplay:
 	call8	disp_deselect
 .LVL1199:
 	retw.n
-.LFE74:
+.LFE83:
 	.size	TFT_invertDisplay, .-TFT_invertDisplay
 	.section	.text.TFT_setGammaCurve,"ax",@progbits
 	.align	4
 	.global	TFT_setGammaCurve
 	.type	TFT_setGammaCurve, @function
 TFT_setGammaCurve:
-.LFB75:
+.LFB84:
 	.loc 1 2115 0
 .LVL1200:
 	entry	sp, 48
@@ -9155,7 +9155,7 @@ TFT_setGammaCurve:
 	call8	disp_spi_transfer_cmd_data
 .LVL1202:
 	retw.n
-.LFE75:
+.LFE84:
 	.size	TFT_setGammaCurve, .-TFT_setGammaCurve
 	.global	__subdf3
 	.global	__fixunsdfsi
@@ -9171,7 +9171,7 @@ TFT_setGammaCurve:
 	.global	HSBtoRGB
 	.type	HSBtoRGB, @function
 HSBtoRGB:
-.LFB76:
+.LFB85:
 	.loc 1 2122 0
 .LVL1203:
 	entry	sp, 80
@@ -9466,7 +9466,7 @@ HSBtoRGB:
 	.loc 1 2188 0
 	or	a2, a2, a10
 	retw.n
-.LFE76:
+.LFE85:
 	.size	HSBtoRGB, .-HSBtoRGB
 	.section	.text.TFT_setclipwin,"ax",@progbits
 	.literal_position
@@ -9477,7 +9477,7 @@ HSBtoRGB:
 	.global	TFT_setclipwin
 	.type	TFT_setclipwin, @function
 TFT_setclipwin:
-.LFB77:
+.LFB86:
 	.loc 1 2191 0
 .LVL1274:
 	entry	sp, 32
@@ -9529,7 +9529,7 @@ TFT_setclipwin:
 	s16i	a9, a8, 2
 .L765:
 	retw.n
-.LFE77:
+.LFE86:
 	.size	TFT_setclipwin, .-TFT_setclipwin
 	.section	.text.TFT_resetclipwin,"ax",@progbits
 	.literal_position
@@ -9540,7 +9540,7 @@ TFT_setclipwin:
 	.global	TFT_resetclipwin
 	.type	TFT_resetclipwin, @function
 TFT_resetclipwin:
-.LFB78:
+.LFB87:
 	.loc 1 2205 0 is_stmt 1
 	entry	sp, 32
 .LCFI53:
@@ -9561,7 +9561,7 @@ TFT_resetclipwin:
 	.loc 1 2209 0
 	s16i	a9, a8, 2
 	retw.n
-.LFE78:
+.LFE87:
 	.size	TFT_resetclipwin, .-TFT_resetclipwin
 	.section	.text.set_7seg_font_atrib,"ax",@progbits
 	.literal_position
@@ -9570,7 +9570,7 @@ TFT_resetclipwin:
 	.global	set_7seg_font_atrib
 	.type	set_7seg_font_atrib, @function
 set_7seg_font_atrib:
-.LFB79:
+.LFB88:
 	.loc 1 2214 0
 .LVL1276:
 	entry	sp, 48
@@ -9627,7 +9627,7 @@ set_7seg_font_atrib:
 .LVL1283:
 .L771:
 	retw.n
-.LFE79:
+.LFE88:
 	.size	set_7seg_font_atrib, .-set_7seg_font_atrib
 	.section	.text.TFT_getfontsize,"ax",@progbits
 	.literal_position
@@ -9636,7 +9636,7 @@ set_7seg_font_atrib:
 	.global	TFT_getfontsize
 	.type	TFT_getfontsize, @function
 TFT_getfontsize:
-.LFB80:
+.LFB89:
 	.loc 1 2231 0
 .LVL1284:
 	entry	sp, 32
@@ -9688,7 +9688,7 @@ TFT_getfontsize:
 .LVL1291:
 	.loc 1 2246 0
 	retw.n
-.LFE80:
+.LFE89:
 	.size	TFT_getfontsize, .-TFT_getfontsize
 	.section	.text.TFT_getfontheight,"ax",@progbits
 	.literal_position
@@ -9697,7 +9697,7 @@ TFT_getfontsize:
 	.global	TFT_getfontheight
 	.type	TFT_getfontheight, @function
 TFT_getfontheight:
-.LFB81:
+.LFB90:
 	.loc 1 2250 0
 	entry	sp, 32
 .LCFI56:
@@ -9720,7 +9720,7 @@ TFT_getfontheight:
 	.loc 1 2254 0 is_stmt 1
 	mov.n	a2, a10
 	retw.n
-.LFE81:
+.LFE90:
 	.size	TFT_getfontheight, .-TFT_getfontheight
 	.section	.text.TFT_clearStringRect,"ax",@progbits
 	.literal_position
@@ -9730,7 +9730,7 @@ TFT_getfontheight:
 	.global	TFT_clearStringRect
 	.type	TFT_clearStringRect, @function
 TFT_clearStringRect:
-.LFB68:
+.LFB77:
 	.loc 1 1813 0
 .LVL1293:
 	entry	sp, 32
@@ -9767,7 +9767,7 @@ TFT_clearStringRect:
 	call8	TFT_fillRect
 .LVL1299:
 	retw.n
-.LFE68:
+.LFE77:
 	.size	TFT_clearStringRect, .-TFT_clearStringRect
 	.section	.text.TFT_saveClipWin,"ax",@progbits
 	.literal_position
@@ -9777,7 +9777,7 @@ TFT_clearStringRect:
 	.global	TFT_saveClipWin
 	.type	TFT_saveClipWin, @function
 TFT_saveClipWin:
-.LFB82:
+.LFB91:
 	.loc 1 2258 0
 	entry	sp, 32
 .LCFI58:
@@ -9798,7 +9798,7 @@ TFT_saveClipWin:
 	.loc 1 2262 0
 	s16i	a9, a8, 6
 	retw.n
-.LFE82:
+.LFE91:
 	.size	TFT_saveClipWin, .-TFT_saveClipWin
 	.section	.text.TFT_restoreClipWin,"ax",@progbits
 	.literal_position
@@ -9808,7 +9808,7 @@ TFT_saveClipWin:
 	.global	TFT_restoreClipWin
 	.type	TFT_restoreClipWin, @function
 TFT_restoreClipWin:
-.LFB83:
+.LFB92:
 	.loc 1 2267 0
 	entry	sp, 32
 .LCFI59:
@@ -9829,7 +9829,7 @@ TFT_restoreClipWin:
 	.loc 1 2271 0
 	s16i	a9, a8, 6
 	retw.n
-.LFE83:
+.LFE92:
 	.size	TFT_restoreClipWin, .-TFT_restoreClipWin
 	.section	.rodata.str1.1
 .LC195:
@@ -9867,7 +9867,7 @@ TFT_restoreClipWin:
 	.global	TFT_jpg_image
 	.type	TFT_jpg_image, @function
 TFT_jpg_image:
-.LFB87:
+.LFB96:
 	.loc 1 2405 0
 .LVL1300:
 	entry	sp, 288
@@ -10178,7 +10178,7 @@ TFT_jpg_image:
 	call8	free
 .LVL1346:
 	j	.L816
-.LFE87:
+.LFE96:
 	.size	TFT_jpg_image, .-TFT_jpg_image
 	.section	.rodata.str1.1
 .LC217:
@@ -10223,7 +10223,7 @@ TFT_jpg_image:
 	.global	TFT_bmp_image
 	.type	TFT_bmp_image, @function
 TFT_bmp_image:
-.LFB88:
+.LFB97:
 	.loc 1 2504 0
 .LVL1347:
 	entry	sp, 352
@@ -11236,7 +11236,7 @@ TFT_bmp_image:
 .L916:
 	.loc 1 2792 0
 	retw.n
-.LFE88:
+.LFE97:
 	.size	TFT_bmp_image, .-TFT_bmp_image
 	.section	.rodata.font_bcd,"a",@progbits
 	.align	2
@@ -11574,10 +11574,10 @@ TFT_BLACK:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB59
-	.4byte	.LFE59-.LFB59
+	.4byte	.LFB68
+	.4byte	.LFE68-.LFB68
 	.byte	0x4
-	.4byte	.LCFI0-.LFB59
+	.4byte	.LCFI0-.LFB68
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -11586,10 +11586,10 @@ TFT_BLACK:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB65
-	.4byte	.LFE65-.LFB65
+	.4byte	.LFB74
+	.4byte	.LFE74-.LFB74
 	.byte	0x4
-	.4byte	.LCFI1-.LFB65
+	.4byte	.LCFI1-.LFB74
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -11598,10 +11598,10 @@ TFT_BLACK:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB66
-	.4byte	.LFE66-.LFB66
+	.4byte	.LFB75
+	.4byte	.LFE75-.LFB75
 	.byte	0x4
-	.4byte	.LCFI2-.LFB66
+	.4byte	.LCFI2-.LFB75
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -11610,10 +11610,10 @@ TFT_BLACK:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI3-.LFB20
+	.4byte	.LCFI3-.LFB29
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -11622,10 +11622,10 @@ TFT_BLACK:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI4-.LFB23
+	.4byte	.LCFI4-.LFB32
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -11634,10 +11634,10 @@ TFT_BLACK:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.byte	0x4
-	.4byte	.LCFI5-.LFB36
+	.4byte	.LCFI5-.LFB45
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -11646,10 +11646,10 @@ TFT_BLACK:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB50
-	.4byte	.LFE50-.LFB50
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
 	.byte	0x4
-	.4byte	.LCFI6-.LFB50
+	.4byte	.LCFI6-.LFB59
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -11658,10 +11658,10 @@ TFT_BLACK:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI7-.LFB24
+	.4byte	.LCFI7-.LFB33
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -11670,10 +11670,10 @@ TFT_BLACK:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.byte	0x4
-	.4byte	.LCFI8-.LFB27
+	.4byte	.LCFI8-.LFB36
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -11682,10 +11682,10 @@ TFT_BLACK:
 	.4byte	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.4byte	.Lframe0
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.byte	0x4
-	.4byte	.LCFI9-.LFB42
+	.4byte	.LCFI9-.LFB51
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -11694,10 +11694,10 @@ TFT_BLACK:
 	.4byte	.LEFDE20-.LASFDE20
 .LASFDE20:
 	.4byte	.Lframe0
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.byte	0x4
-	.4byte	.LCFI10-.LFB33
+	.4byte	.LCFI10-.LFB42
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -11706,10 +11706,10 @@ TFT_BLACK:
 	.4byte	.LEFDE22-.LASFDE22
 .LASFDE22:
 	.4byte	.Lframe0
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.byte	0x4
-	.4byte	.LCFI11-.LFB44
+	.4byte	.LCFI11-.LFB53
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -11718,10 +11718,10 @@ TFT_BLACK:
 	.4byte	.LEFDE24-.LASFDE24
 .LASFDE24:
 	.4byte	.Lframe0
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.byte	0x4
-	.4byte	.LCFI12-.LFB29
+	.4byte	.LCFI12-.LFB38
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -11730,10 +11730,10 @@ TFT_BLACK:
 	.4byte	.LEFDE26-.LASFDE26
 .LASFDE26:
 	.4byte	.Lframe0
-	.4byte	.LFB69
-	.4byte	.LFE69-.LFB69
+	.4byte	.LFB78
+	.4byte	.LFE78-.LFB78
 	.byte	0x4
-	.4byte	.LCFI13-.LFB69
+	.4byte	.LCFI13-.LFB78
 	.byte	0xe
 	.uleb128 0x60
 	.align	4
@@ -11742,10 +11742,10 @@ TFT_BLACK:
 	.4byte	.LEFDE28-.LASFDE28
 .LASFDE28:
 	.4byte	.Lframe0
-	.4byte	.LFB70
-	.4byte	.LFE70-.LFB70
+	.4byte	.LFB79
+	.4byte	.LFE79-.LFB79
 	.byte	0x4
-	.4byte	.LCFI14-.LFB70
+	.4byte	.LCFI14-.LFB79
 	.byte	0xe
 	.uleb128 0x60
 	.align	4
@@ -11754,10 +11754,10 @@ TFT_BLACK:
 	.4byte	.LEFDE30-.LASFDE30
 .LASFDE30:
 	.4byte	.Lframe0
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.byte	0x4
-	.4byte	.LCFI15-.LFB35
+	.4byte	.LCFI15-.LFB44
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -11766,10 +11766,10 @@ TFT_BLACK:
 	.4byte	.LEFDE32-.LASFDE32
 .LASFDE32:
 	.4byte	.Lframe0
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
 	.byte	0x4
-	.4byte	.LCFI16-.LFB48
+	.4byte	.LCFI16-.LFB57
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -11778,10 +11778,10 @@ TFT_BLACK:
 	.4byte	.LEFDE34-.LASFDE34
 .LASFDE34:
 	.4byte	.Lframe0
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
 	.byte	0x4
-	.4byte	.LCFI17-.LFB52
+	.4byte	.LCFI17-.LFB61
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -11790,10 +11790,10 @@ TFT_BLACK:
 	.4byte	.LEFDE36-.LASFDE36
 .LASFDE36:
 	.4byte	.Lframe0
-	.4byte	.LFB85
-	.4byte	.LFE85-.LFB85
+	.4byte	.LFB94
+	.4byte	.LFE94-.LFB94
 	.byte	0x4
-	.4byte	.LCFI18-.LFB85
+	.4byte	.LCFI18-.LFB94
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -11802,10 +11802,10 @@ TFT_BLACK:
 	.4byte	.LEFDE38-.LASFDE38
 .LASFDE38:
 	.4byte	.Lframe0
-	.4byte	.LFB55
-	.4byte	.LFE55-.LFB55
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
 	.byte	0x4
-	.4byte	.LCFI19-.LFB55
+	.4byte	.LCFI19-.LFB64
 	.byte	0xe
 	.uleb128 0x160
 	.align	4
@@ -11814,10 +11814,10 @@ TFT_BLACK:
 	.4byte	.LEFDE40-.LASFDE40
 .LASFDE40:
 	.4byte	.Lframe0
-	.4byte	.LFB86
-	.4byte	.LFE86-.LFB86
+	.4byte	.LFB95
+	.4byte	.LFE95-.LFB95
 	.byte	0x4
-	.4byte	.LCFI20-.LFB86
+	.4byte	.LCFI20-.LFB95
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -11826,10 +11826,10 @@ TFT_BLACK:
 	.4byte	.LEFDE42-.LASFDE42
 .LASFDE42:
 	.4byte	.Lframe0
-	.4byte	.LFB84
-	.4byte	.LFE84-.LFB84
+	.4byte	.LFB93
+	.4byte	.LFE93-.LFB93
 	.byte	0x4
-	.4byte	.LCFI21-.LFB84
+	.4byte	.LCFI21-.LFB93
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -11838,10 +11838,10 @@ TFT_BLACK:
 	.4byte	.LEFDE44-.LASFDE44
 .LASFDE44:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI22-.LFB19
+	.4byte	.LCFI22-.LFB28
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -11850,10 +11850,10 @@ TFT_BLACK:
 	.4byte	.LEFDE46-.LASFDE46
 .LASFDE46:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI23-.LFB21
+	.4byte	.LCFI23-.LFB30
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -11862,10 +11862,10 @@ TFT_BLACK:
 	.4byte	.LEFDE48-.LASFDE48
 .LASFDE48:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI24-.LFB22
+	.4byte	.LCFI24-.LFB31
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -11874,10 +11874,10 @@ TFT_BLACK:
 	.4byte	.LEFDE50-.LASFDE50
 .LASFDE50:
 	.4byte	.Lframe0
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.byte	0x4
-	.4byte	.LCFI25-.LFB25
+	.4byte	.LCFI25-.LFB34
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -11886,10 +11886,10 @@ TFT_BLACK:
 	.4byte	.LEFDE52-.LASFDE52
 .LASFDE52:
 	.4byte	.Lframe0
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.byte	0x4
-	.4byte	.LCFI26-.LFB26
+	.4byte	.LCFI26-.LFB35
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -11898,10 +11898,10 @@ TFT_BLACK:
 	.4byte	.LEFDE54-.LASFDE54
 .LASFDE54:
 	.4byte	.Lframe0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.byte	0x4
-	.4byte	.LCFI27-.LFB28
+	.4byte	.LCFI27-.LFB37
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -11910,10 +11910,10 @@ TFT_BLACK:
 	.4byte	.LEFDE56-.LASFDE56
 .LASFDE56:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI28-.LFB30
+	.4byte	.LCFI28-.LFB39
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -11922,10 +11922,10 @@ TFT_BLACK:
 	.4byte	.LEFDE58-.LASFDE58
 .LASFDE58:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI29-.LFB31
+	.4byte	.LCFI29-.LFB40
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -11934,10 +11934,10 @@ TFT_BLACK:
 	.4byte	.LEFDE60-.LASFDE60
 .LASFDE60:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.byte	0x4
-	.4byte	.LCFI30-.LFB32
+	.4byte	.LCFI30-.LFB41
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -11946,10 +11946,10 @@ TFT_BLACK:
 	.4byte	.LEFDE62-.LASFDE62
 .LASFDE62:
 	.4byte	.Lframe0
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.byte	0x4
-	.4byte	.LCFI31-.LFB34
+	.4byte	.LCFI31-.LFB43
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -11958,10 +11958,10 @@ TFT_BLACK:
 	.4byte	.LEFDE64-.LASFDE64
 .LASFDE64:
 	.4byte	.Lframe0
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.byte	0x4
-	.4byte	.LCFI32-.LFB37
+	.4byte	.LCFI32-.LFB46
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -11970,10 +11970,10 @@ TFT_BLACK:
 	.4byte	.LEFDE66-.LASFDE66
 .LASFDE66:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI33-.LFB38
+	.4byte	.LCFI33-.LFB47
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -11982,10 +11982,10 @@ TFT_BLACK:
 	.4byte	.LEFDE68-.LASFDE68
 .LASFDE68:
 	.4byte	.Lframe0
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.byte	0x4
-	.4byte	.LCFI34-.LFB41
+	.4byte	.LCFI34-.LFB50
 	.byte	0xe
 	.uleb128 0x70
 	.align	4
@@ -11994,10 +11994,10 @@ TFT_BLACK:
 	.4byte	.LEFDE70-.LASFDE70
 .LASFDE70:
 	.4byte	.Lframe0
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.byte	0x4
-	.4byte	.LCFI35-.LFB43
+	.4byte	.LCFI35-.LFB52
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -12006,10 +12006,10 @@ TFT_BLACK:
 	.4byte	.LEFDE72-.LASFDE72
 .LASFDE72:
 	.4byte	.Lframe0
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.byte	0x4
-	.4byte	.LCFI36-.LFB45
+	.4byte	.LCFI36-.LFB54
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -12018,10 +12018,10 @@ TFT_BLACK:
 	.4byte	.LEFDE74-.LASFDE74
 .LASFDE74:
 	.4byte	.Lframe0
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.byte	0x4
-	.4byte	.LCFI37-.LFB46
+	.4byte	.LCFI37-.LFB55
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -12030,10 +12030,10 @@ TFT_BLACK:
 	.4byte	.LEFDE76-.LASFDE76
 .LASFDE76:
 	.4byte	.Lframe0
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.byte	0x4
-	.4byte	.LCFI38-.LFB47
+	.4byte	.LCFI38-.LFB56
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -12042,10 +12042,10 @@ TFT_BLACK:
 	.4byte	.LEFDE78-.LASFDE78
 .LASFDE78:
 	.4byte	.Lframe0
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
 	.byte	0x4
-	.4byte	.LCFI39-.LFB49
+	.4byte	.LCFI39-.LFB58
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -12054,10 +12054,10 @@ TFT_BLACK:
 	.4byte	.LEFDE80-.LASFDE80
 .LASFDE80:
 	.4byte	.Lframe0
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.byte	0x4
-	.4byte	.LCFI40-.LFB51
+	.4byte	.LCFI40-.LFB60
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -12066,10 +12066,10 @@ TFT_BLACK:
 	.4byte	.LEFDE82-.LASFDE82
 .LASFDE82:
 	.4byte	.Lframe0
-	.4byte	.LFB53
-	.4byte	.LFE53-.LFB53
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
 	.byte	0x4
-	.4byte	.LCFI41-.LFB53
+	.4byte	.LCFI41-.LFB62
 	.byte	0xe
 	.uleb128 0x60
 	.align	4
@@ -12078,10 +12078,10 @@ TFT_BLACK:
 	.4byte	.LEFDE84-.LASFDE84
 .LASFDE84:
 	.4byte	.Lframe0
-	.4byte	.LFB54
-	.4byte	.LFE54-.LFB54
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
 	.byte	0x4
-	.4byte	.LCFI42-.LFB54
+	.4byte	.LCFI42-.LFB63
 	.byte	0xc
 	.uleb128 0x7
 	.uleb128 0x80
@@ -12091,10 +12091,10 @@ TFT_BLACK:
 	.4byte	.LEFDE86-.LASFDE86
 .LASFDE86:
 	.4byte	.Lframe0
-	.4byte	.LFB56
-	.4byte	.LFE56-.LFB56
+	.4byte	.LFB65
+	.4byte	.LFE65-.LFB65
 	.byte	0x4
-	.4byte	.LCFI43-.LFB56
+	.4byte	.LCFI43-.LFB65
 	.byte	0xe
 	.uleb128 0x190
 	.align	4
@@ -12103,10 +12103,10 @@ TFT_BLACK:
 	.4byte	.LEFDE88-.LASFDE88
 .LASFDE88:
 	.4byte	.Lframe0
-	.4byte	.LFB57
-	.4byte	.LFE57-.LFB57
+	.4byte	.LFB66
+	.4byte	.LFE66-.LFB66
 	.byte	0x4
-	.4byte	.LCFI44-.LFB57
+	.4byte	.LCFI44-.LFB66
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -12115,10 +12115,10 @@ TFT_BLACK:
 	.4byte	.LEFDE90-.LASFDE90
 .LASFDE90:
 	.4byte	.Lframe0
-	.4byte	.LFB60
-	.4byte	.LFE60-.LFB60
+	.4byte	.LFB69
+	.4byte	.LFE69-.LFB69
 	.byte	0x4
-	.4byte	.LCFI45-.LFB60
+	.4byte	.LCFI45-.LFB69
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -12127,10 +12127,10 @@ TFT_BLACK:
 	.4byte	.LEFDE92-.LASFDE92
 .LASFDE92:
 	.4byte	.Lframe0
-	.4byte	.LFB67
-	.4byte	.LFE67-.LFB67
+	.4byte	.LFB76
+	.4byte	.LFE76-.LFB76
 	.byte	0x4
-	.4byte	.LCFI46-.LFB67
+	.4byte	.LCFI46-.LFB76
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -12139,10 +12139,10 @@ TFT_BLACK:
 	.4byte	.LEFDE94-.LASFDE94
 .LASFDE94:
 	.4byte	.Lframe0
-	.4byte	.LFB72
-	.4byte	.LFE72-.LFB72
+	.4byte	.LFB81
+	.4byte	.LFE81-.LFB81
 	.byte	0x4
-	.4byte	.LCFI47-.LFB72
+	.4byte	.LCFI47-.LFB81
 	.byte	0xe
 	.uleb128 0xb0
 	.align	4
@@ -12151,10 +12151,10 @@ TFT_BLACK:
 	.4byte	.LEFDE96-.LASFDE96
 .LASFDE96:
 	.4byte	.Lframe0
-	.4byte	.LFB73
-	.4byte	.LFE73-.LFB73
+	.4byte	.LFB82
+	.4byte	.LFE82-.LFB82
 	.byte	0x4
-	.4byte	.LCFI48-.LFB73
+	.4byte	.LCFI48-.LFB82
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -12163,10 +12163,10 @@ TFT_BLACK:
 	.4byte	.LEFDE98-.LASFDE98
 .LASFDE98:
 	.4byte	.Lframe0
-	.4byte	.LFB74
-	.4byte	.LFE74-.LFB74
+	.4byte	.LFB83
+	.4byte	.LFE83-.LFB83
 	.byte	0x4
-	.4byte	.LCFI49-.LFB74
+	.4byte	.LCFI49-.LFB83
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -12175,10 +12175,10 @@ TFT_BLACK:
 	.4byte	.LEFDE100-.LASFDE100
 .LASFDE100:
 	.4byte	.Lframe0
-	.4byte	.LFB75
-	.4byte	.LFE75-.LFB75
+	.4byte	.LFB84
+	.4byte	.LFE84-.LFB84
 	.byte	0x4
-	.4byte	.LCFI50-.LFB75
+	.4byte	.LCFI50-.LFB84
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -12187,10 +12187,10 @@ TFT_BLACK:
 	.4byte	.LEFDE102-.LASFDE102
 .LASFDE102:
 	.4byte	.Lframe0
-	.4byte	.LFB76
-	.4byte	.LFE76-.LFB76
+	.4byte	.LFB85
+	.4byte	.LFE85-.LFB85
 	.byte	0x4
-	.4byte	.LCFI51-.LFB76
+	.4byte	.LCFI51-.LFB85
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -12199,10 +12199,10 @@ TFT_BLACK:
 	.4byte	.LEFDE104-.LASFDE104
 .LASFDE104:
 	.4byte	.Lframe0
-	.4byte	.LFB77
-	.4byte	.LFE77-.LFB77
+	.4byte	.LFB86
+	.4byte	.LFE86-.LFB86
 	.byte	0x4
-	.4byte	.LCFI52-.LFB77
+	.4byte	.LCFI52-.LFB86
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -12211,10 +12211,10 @@ TFT_BLACK:
 	.4byte	.LEFDE106-.LASFDE106
 .LASFDE106:
 	.4byte	.Lframe0
-	.4byte	.LFB78
-	.4byte	.LFE78-.LFB78
+	.4byte	.LFB87
+	.4byte	.LFE87-.LFB87
 	.byte	0x4
-	.4byte	.LCFI53-.LFB78
+	.4byte	.LCFI53-.LFB87
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -12223,10 +12223,10 @@ TFT_BLACK:
 	.4byte	.LEFDE108-.LASFDE108
 .LASFDE108:
 	.4byte	.Lframe0
-	.4byte	.LFB79
-	.4byte	.LFE79-.LFB79
+	.4byte	.LFB88
+	.4byte	.LFE88-.LFB88
 	.byte	0x4
-	.4byte	.LCFI54-.LFB79
+	.4byte	.LCFI54-.LFB88
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -12235,10 +12235,10 @@ TFT_BLACK:
 	.4byte	.LEFDE110-.LASFDE110
 .LASFDE110:
 	.4byte	.Lframe0
-	.4byte	.LFB80
-	.4byte	.LFE80-.LFB80
+	.4byte	.LFB89
+	.4byte	.LFE89-.LFB89
 	.byte	0x4
-	.4byte	.LCFI55-.LFB80
+	.4byte	.LCFI55-.LFB89
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -12247,10 +12247,10 @@ TFT_BLACK:
 	.4byte	.LEFDE112-.LASFDE112
 .LASFDE112:
 	.4byte	.Lframe0
-	.4byte	.LFB81
-	.4byte	.LFE81-.LFB81
+	.4byte	.LFB90
+	.4byte	.LFE90-.LFB90
 	.byte	0x4
-	.4byte	.LCFI56-.LFB81
+	.4byte	.LCFI56-.LFB90
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -12259,10 +12259,10 @@ TFT_BLACK:
 	.4byte	.LEFDE114-.LASFDE114
 .LASFDE114:
 	.4byte	.Lframe0
-	.4byte	.LFB68
-	.4byte	.LFE68-.LFB68
+	.4byte	.LFB77
+	.4byte	.LFE77-.LFB77
 	.byte	0x4
-	.4byte	.LCFI57-.LFB68
+	.4byte	.LCFI57-.LFB77
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -12271,10 +12271,10 @@ TFT_BLACK:
 	.4byte	.LEFDE116-.LASFDE116
 .LASFDE116:
 	.4byte	.Lframe0
-	.4byte	.LFB82
-	.4byte	.LFE82-.LFB82
+	.4byte	.LFB91
+	.4byte	.LFE91-.LFB91
 	.byte	0x4
-	.4byte	.LCFI58-.LFB82
+	.4byte	.LCFI58-.LFB91
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -12283,10 +12283,10 @@ TFT_BLACK:
 	.4byte	.LEFDE118-.LASFDE118
 .LASFDE118:
 	.4byte	.Lframe0
-	.4byte	.LFB83
-	.4byte	.LFE83-.LFB83
+	.4byte	.LFB92
+	.4byte	.LFE92-.LFB92
 	.byte	0x4
-	.4byte	.LCFI59-.LFB83
+	.4byte	.LCFI59-.LFB92
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -12295,10 +12295,10 @@ TFT_BLACK:
 	.4byte	.LEFDE120-.LASFDE120
 .LASFDE120:
 	.4byte	.Lframe0
-	.4byte	.LFB87
-	.4byte	.LFE87-.LFB87
+	.4byte	.LFB96
+	.4byte	.LFE96-.LFB96
 	.byte	0x4
-	.4byte	.LCFI60-.LFB87
+	.4byte	.LCFI60-.LFB96
 	.byte	0xe
 	.uleb128 0x120
 	.align	4
@@ -12307,10 +12307,10 @@ TFT_BLACK:
 	.4byte	.LEFDE122-.LASFDE122
 .LASFDE122:
 	.4byte	.Lframe0
-	.4byte	.LFB88
-	.4byte	.LFE88-.LFB88
+	.4byte	.LFB97
+	.4byte	.LFE97-.LFB97
 	.byte	0x4
-	.4byte	.LCFI61-.LFB88
+	.4byte	.LCFI61-.LFB97
 	.byte	0xe
 	.uleb128 0x160
 	.align	4
@@ -14183,8 +14183,8 @@ TFT_BLACK:
 	.byte	0x1
 	.2byte	0x59a
 	.4byte	0x9b5
-	.4byte	.LFB59
-	.4byte	.LFE59-.LFB59
+	.4byte	.LFB68
+	.4byte	.LFE68-.LFB68
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xf06
@@ -14206,8 +14206,8 @@ TFT_BLACK:
 	.byte	0x1
 	.2byte	0x6f3
 	.4byte	0x33
-	.4byte	.LFB65
-	.4byte	.LFE65-.LFB65
+	.4byte	.LFB74
+	.4byte	.LFE74-.LFB74
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x23
@@ -14215,16 +14215,16 @@ TFT_BLACK:
 	.byte	0x1
 	.2byte	0x6f9
 	.4byte	0x33
-	.4byte	.LFB66
-	.4byte	.LFE66-.LFB66
+	.4byte	.LFB75
+	.4byte	.LFE75-.LFB75
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x24
 	.4byte	.LASF232
 	.byte	0x1
 	.byte	0x97
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xf95
@@ -14284,8 +14284,8 @@ TFT_BLACK:
 	.4byte	.LASF233
 	.byte	0x1
 	.byte	0xaf
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xff4
@@ -14337,8 +14337,8 @@ TFT_BLACK:
 	.4byte	.LASF234
 	.byte	0x1
 	.2byte	0x188
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1135
@@ -14508,8 +14508,8 @@ TFT_BLACK:
 	.4byte	.LASF240
 	.byte	0x1
 	.2byte	0x2f3
-	.4byte	.LFB50
-	.4byte	.LFE50-.LFB50
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1259
@@ -14718,8 +14718,8 @@ TFT_BLACK:
 	.4byte	.LASF242
 	.byte	0x1
 	.byte	0xbe
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x12b8
@@ -14771,8 +14771,8 @@ TFT_BLACK:
 	.4byte	.LASF243
 	.byte	0x1
 	.byte	0xdc
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x13ff
@@ -14927,8 +14927,8 @@ TFT_BLACK:
 	.4byte	.LASF247
 	.byte	0x1
 	.2byte	0x1ec
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x14e3
@@ -15072,8 +15072,8 @@ TFT_BLACK:
 	.4byte	.LASF248
 	.byte	0x1
 	.2byte	0x151
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x15bc
@@ -15205,8 +15205,8 @@ TFT_BLACK:
 	.4byte	.LASF249
 	.byte	0x1
 	.2byte	0x204
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1749
@@ -15373,8 +15373,8 @@ TFT_BLACK:
 	.4byte	.LASF257
 	.byte	0x1
 	.2byte	0x121
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x17b0
@@ -15418,8 +15418,8 @@ TFT_BLACK:
 	.4byte	.LASF258
 	.byte	0x1
 	.2byte	0x73a
-	.4byte	.LFB69
-	.4byte	.LFE69-.LFB69
+	.4byte	.LFB78
+	.4byte	.LFE78-.LFB78
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1947
@@ -15709,8 +15709,8 @@ TFT_BLACK:
 	.4byte	.LASF260
 	.byte	0x1
 	.2byte	0x747
-	.4byte	.LFB70
-	.4byte	.LFE70-.LFB70
+	.4byte	.LFB79
+	.4byte	.LFE79-.LFB79
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1add
@@ -16000,8 +16000,8 @@ TFT_BLACK:
 	.4byte	.LASF261
 	.byte	0x1
 	.2byte	0x160
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1cce
@@ -16317,8 +16317,8 @@ TFT_BLACK:
 	.4byte	.LASF262
 	.byte	0x1
 	.2byte	0x28d
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1dfa
@@ -16520,8 +16520,8 @@ TFT_BLACK:
 	.4byte	.LASF263
 	.byte	0x1
 	.2byte	0x35a
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1f58
@@ -16677,8 +16677,8 @@ TFT_BLACK:
 	.byte	0x1
 	.2byte	0x90a
 	.4byte	0xbb1
-	.4byte	.LFB85
-	.4byte	.LFE85-.LFB85
+	.4byte	.LFB94
+	.4byte	.LFE94-.LFB94
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1fbd
@@ -16727,8 +16727,8 @@ TFT_BLACK:
 	.byte	0x1
 	.2byte	0x414
 	.4byte	0x33
-	.4byte	.LFB55
-	.4byte	.LFE55-.LFB55
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x22f5
@@ -17150,8 +17150,8 @@ TFT_BLACK:
 	.byte	0x1
 	.2byte	0x923
 	.4byte	0xbb1
-	.4byte	.LFB86
-	.4byte	.LFE86-.LFB86
+	.4byte	.LFB95
+	.4byte	.LFE95-.LFB95
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x246c
@@ -17320,8 +17320,8 @@ TFT_BLACK:
 	.byte	0x1
 	.2byte	0x8f5
 	.4byte	0xbb1
-	.4byte	.LFB84
-	.4byte	.LFE84-.LFB84
+	.4byte	.LFB93
+	.4byte	.LFE93-.LFB93
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x250c
@@ -17399,8 +17399,8 @@ TFT_BLACK:
 	.byte	0x1
 	.byte	0x8c
 	.4byte	0x33
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2540
@@ -17425,8 +17425,8 @@ TFT_BLACK:
 	.4byte	.LASF293
 	.byte	0x1
 	.byte	0x9f
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x259a
@@ -17478,8 +17478,8 @@ TFT_BLACK:
 	.byte	0x1
 	.byte	0xa6
 	.4byte	0xa35
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x25d5
@@ -17504,8 +17504,8 @@ TFT_BLACK:
 	.4byte	.LASF294
 	.byte	0x1
 	.byte	0xce
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x262e
@@ -17557,8 +17557,8 @@ TFT_BLACK:
 	.4byte	.LASF295
 	.byte	0x1
 	.byte	0xd4
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2687
@@ -17610,8 +17610,8 @@ TFT_BLACK:
 	.4byte	.LASF296
 	.byte	0x1
 	.2byte	0x11a
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x26ea
@@ -17659,8 +17659,8 @@ TFT_BLACK:
 	.4byte	.LASF297
 	.byte	0x1
 	.2byte	0x139
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x275e
@@ -17729,8 +17729,8 @@ TFT_BLACK:
 	.4byte	.LASF298
 	.byte	0x1
 	.2byte	0x13f
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2798
@@ -17761,8 +17761,8 @@ TFT_BLACK:
 	.4byte	.LASF299
 	.byte	0x1
 	.2byte	0x145
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x27c7
@@ -17782,8 +17782,8 @@ TFT_BLACK:
 	.4byte	.LASF300
 	.byte	0x1
 	.2byte	0x15a
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x283d
@@ -17850,8 +17850,8 @@ TFT_BLACK:
 	.4byte	.LASF301
 	.byte	0x1
 	.2byte	0x1a7
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x29da
@@ -18132,8 +18132,8 @@ TFT_BLACK:
 	.4byte	.LASF302
 	.byte	0x1
 	.2byte	0x1bb
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2ace
@@ -18366,8 +18366,8 @@ TFT_BLACK:
 	.4byte	.LASF307
 	.byte	0x1
 	.2byte	0x1e0
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2c87
@@ -18479,8 +18479,8 @@ TFT_BLACK:
 	.4byte	.LASF308
 	.byte	0x1
 	.2byte	0x1f4
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2d75
@@ -18619,8 +18619,8 @@ TFT_BLACK:
 	.4byte	.LASF309
 	.byte	0x1
 	.2byte	0x254
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2df2
@@ -18682,8 +18682,8 @@ TFT_BLACK:
 	.4byte	.LASF310
 	.byte	0x1
 	.2byte	0x25e
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x3036
@@ -19053,8 +19053,8 @@ TFT_BLACK:
 	.4byte	.LASF311
 	.byte	0x1
 	.2byte	0x283
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x30eb
@@ -19174,8 +19174,8 @@ TFT_BLACK:
 	.4byte	.LASF312
 	.byte	0x1
 	.2byte	0x29c
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x3246
@@ -19354,8 +19354,8 @@ TFT_BLACK:
 	.4byte	.LASF319
 	.byte	0x1
 	.2byte	0x300
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x33a1
@@ -19534,8 +19534,8 @@ TFT_BLACK:
 	.4byte	.LASF320
 	.byte	0x1
 	.2byte	0x385
-	.4byte	.LFB53
-	.4byte	.LFE53-.LFB53
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x368e
@@ -20026,8 +20026,8 @@ TFT_BLACK:
 	.4byte	.LASF324
 	.byte	0x1
 	.2byte	0x3b3
-	.4byte	.LFB54
-	.4byte	.LFE54-.LFB54
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x387c
@@ -20265,8 +20265,8 @@ TFT_BLACK:
 	.byte	0x1
 	.2byte	0x494
 	.4byte	0x33
-	.4byte	.LFB56
-	.4byte	.LFE56-.LFB56
+	.4byte	.LFB65
+	.4byte	.LFE65-.LFB65
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x3f11
@@ -21202,8 +21202,8 @@ TFT_BLACK:
 	.4byte	.LASF344
 	.byte	0x1
 	.2byte	0x54b
-	.4byte	.LFB57
-	.4byte	.LFE57-.LFB57
+	.4byte	.LFB66
+	.4byte	.LFE66-.LFB66
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x3fd7
@@ -21306,8 +21306,8 @@ TFT_BLACK:
 	.4byte	.LASF345
 	.byte	0x1
 	.2byte	0x5e1
-	.4byte	.LFB60
-	.4byte	.LFE60-.LFB60
+	.4byte	.LFB69
+	.4byte	.LFE69-.LFB69
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x40bb
@@ -21360,8 +21360,8 @@ TFT_BLACK:
 	.byte	0
 	.uleb128 0x4e
 	.4byte	0xe95
-	.4byte	.LFB67
-	.4byte	.LFE67-.LFB67
+	.4byte	.LFB76
+	.4byte	.LFE76-.LFB76
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x4150
@@ -21812,8 +21812,8 @@ TFT_BLACK:
 	.4byte	.LASF364
 	.byte	0x1
 	.2byte	0x7a8
-	.4byte	.LFB72
-	.4byte	.LFE72-.LFB72
+	.4byte	.LFB81
+	.4byte	.LFE81-.LFB81
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x5124
@@ -23784,8 +23784,8 @@ TFT_BLACK:
 	.4byte	.LASF367
 	.byte	0x1
 	.2byte	0x81c
-	.4byte	.LFB73
-	.4byte	.LFE73-.LFB73
+	.4byte	.LFB82
+	.4byte	.LFE82-.LFB82
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x51ab
@@ -23847,8 +23847,8 @@ TFT_BLACK:
 	.4byte	.LASF369
 	.byte	0x1
 	.2byte	0x834
-	.4byte	.LFB74
-	.4byte	.LFE74-.LFB74
+	.4byte	.LFB83
+	.4byte	.LFE83-.LFB83
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x5202
@@ -23886,8 +23886,8 @@ TFT_BLACK:
 	.4byte	.LASF371
 	.byte	0x1
 	.2byte	0x843
-	.4byte	.LFB75
-	.4byte	.LFE75-.LFB75
+	.4byte	.LFB84
+	.4byte	.LFE84-.LFB84
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x5257
@@ -23932,8 +23932,8 @@ TFT_BLACK:
 	.byte	0x1
 	.2byte	0x84a
 	.4byte	0xa35
-	.4byte	.LFB76
-	.4byte	.LFE76-.LFB76
+	.4byte	.LFB85
+	.4byte	.LFE85-.LFB85
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x5339
@@ -24018,8 +24018,8 @@ TFT_BLACK:
 	.4byte	.LASF381
 	.byte	0x1
 	.2byte	0x88f
-	.4byte	.LFB77
-	.4byte	.LFE77-.LFB77
+	.4byte	.LFB86
+	.4byte	.LFE86-.LFB86
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x5386
@@ -24055,16 +24055,16 @@ TFT_BLACK:
 	.4byte	.LASF386
 	.byte	0x1
 	.2byte	0x89d
-	.4byte	.LFB78
-	.4byte	.LFE78-.LFB78
+	.4byte	.LFB87
+	.4byte	.LFE87-.LFB87
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x3e
 	.4byte	.LASF382
 	.byte	0x1
 	.2byte	0x8a6
-	.4byte	.LFB79
-	.4byte	.LFE79-.LFB79
+	.4byte	.LFB88
+	.4byte	.LFE88-.LFB88
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x53e8
@@ -24101,8 +24101,8 @@ TFT_BLACK:
 	.byte	0x1
 	.2byte	0x8b7
 	.4byte	0x33
-	.4byte	.LFB80
-	.4byte	.LFE80-.LFB80
+	.4byte	.LFB89
+	.4byte	.LFE89-.LFB89
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x5433
@@ -24134,8 +24134,8 @@ TFT_BLACK:
 	.byte	0x1
 	.2byte	0x8ca
 	.4byte	0x33
-	.4byte	.LFB81
-	.4byte	.LFE81-.LFB81
+	.4byte	.LFB90
+	.4byte	.LFE90-.LFB90
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x545d
@@ -24147,8 +24147,8 @@ TFT_BLACK:
 	.4byte	.LASF385
 	.byte	0x1
 	.2byte	0x715
-	.4byte	.LFB68
-	.4byte	.LFE68-.LFB68
+	.4byte	.LFB77
+	.4byte	.LFE77-.LFB77
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x54f3
@@ -24227,16 +24227,16 @@ TFT_BLACK:
 	.4byte	.LASF387
 	.byte	0x1
 	.2byte	0x8d2
-	.4byte	.LFB82
-	.4byte	.LFE82-.LFB82
+	.4byte	.LFB91
+	.4byte	.LFE91-.LFB91
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x54
 	.4byte	.LASF388
 	.byte	0x1
 	.2byte	0x8db
-	.4byte	.LFB83
-	.4byte	.LFE83-.LFB83
+	.4byte	.LFB92
+	.4byte	.LFE92-.LFB92
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x49
@@ -24244,8 +24244,8 @@ TFT_BLACK:
 	.byte	0x1
 	.2byte	0x965
 	.4byte	0xb9f
-	.4byte	.LFB87
-	.4byte	.LFE87-.LFB87
+	.4byte	.LFB96
+	.4byte	.LFE96-.LFB96
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x575c
@@ -24531,8 +24531,8 @@ TFT_BLACK:
 	.byte	0x1
 	.2byte	0x9c8
 	.4byte	0x33
-	.4byte	.LFB88
-	.4byte	.LFE88-.LFB88
+	.4byte	.LFB97
+	.4byte	.LFE97-.LFB97
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x5e48
@@ -28200,7 +28200,7 @@ TFT_BLACK:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL15
-	.4byte	.LFE59
+	.4byte	.LFE68
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -28320,7 +28320,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL30
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -28338,7 +28338,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL36
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -60
@@ -28354,7 +28354,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL33
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -28368,7 +28368,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL31
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -28382,7 +28382,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL29
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -28400,7 +28400,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL46
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -28436,7 +28436,7 @@ TFT_BLACK:
 	.sleb128 -1
 	.byte	0x9f
 	.4byte	.LVL50
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x3
 	.byte	0x73
 	.sleb128 -1
@@ -28453,7 +28453,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL50
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -28464,7 +28464,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL41
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x1
 	.byte	0x57
 	.4byte	0
@@ -28834,7 +28834,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL117
-	.4byte	.LFE42
+	.4byte	.LFE51
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -28848,7 +28848,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL121
-	.4byte	.LFE33
+	.4byte	.LFE42
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -28862,7 +28862,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL123
-	.4byte	.LFE33
+	.4byte	.LFE42
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -28876,7 +28876,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL125
-	.4byte	.LFE33
+	.4byte	.LFE42
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -28907,7 +28907,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL151
-	.4byte	.LFE44
+	.4byte	.LFE53
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -28946,7 +28946,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL194
-	.4byte	.LFE44
+	.4byte	.LFE53
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -28969,7 +28969,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL149
-	.4byte	.LFE44
+	.4byte	.LFE53
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -29020,7 +29020,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL194
-	.4byte	.LFE44
+	.4byte	.LFE53
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -29053,7 +29053,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL194
-	.4byte	.LFE44
+	.4byte	.LFE53
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -29099,7 +29099,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL194
-	.4byte	.LFE44
+	.4byte	.LFE53
 	.2byte	0x1
 	.byte	0x57
 	.4byte	0
@@ -29397,7 +29397,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL213
-	.4byte	.LFE69
+	.4byte	.LFE78
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -72
@@ -29409,7 +29409,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL217
-	.4byte	.LFE69
+	.4byte	.LFE78
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -29427,7 +29427,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL216-1
-	.4byte	.LFE69
+	.4byte	.LFE78
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -29441,7 +29441,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL214
-	.4byte	.LFE69
+	.4byte	.LFE78
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -29455,7 +29455,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL228
-	.4byte	.LFE70
+	.4byte	.LFE79
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -29469,7 +29469,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL225
-	.4byte	.LFE70
+	.4byte	.LFE79
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -29487,7 +29487,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x59
 	.4byte	.LVL227-1
-	.4byte	.LFE70
+	.4byte	.LFE79
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -29501,7 +29501,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL226
-	.4byte	.LFE70
+	.4byte	.LFE79
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -29515,7 +29515,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL237
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -29533,7 +29533,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL244
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x1
 	.byte	0x57
 	.4byte	0
@@ -29575,7 +29575,7 @@ TFT_BLACK:
 	.uleb128 0x1
 	.byte	0x9f
 	.4byte	.LVL254
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x7
 	.byte	0x76
 	.sleb128 0
@@ -29609,7 +29609,7 @@ TFT_BLACK:
 	.sleb128 -1
 	.byte	0x9f
 	.4byte	.LVL254
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x3
 	.byte	0x76
 	.sleb128 -1
@@ -29628,7 +29628,7 @@ TFT_BLACK:
 	.sleb128 1
 	.byte	0x9f
 	.4byte	.LVL240
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -29639,7 +29639,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL270
-	.4byte	.LFE52
+	.4byte	.LFE61
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -29653,7 +29653,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL271
-	.4byte	.LFE52
+	.4byte	.LFE61
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -29667,7 +29667,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL293
-	.4byte	.LFE52
+	.4byte	.LFE61
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -29707,7 +29707,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x64
 	.4byte	.LVL292-1
-	.4byte	.LFE52
+	.4byte	.LFE61
 	.2byte	0x6
 	.byte	0xf3
 	.uleb128 0x3
@@ -29723,7 +29723,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL265
-	.4byte	.LFE52
+	.4byte	.LFE61
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -80
@@ -29735,7 +29735,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL278
-	.4byte	.LFE52
+	.4byte	.LFE61
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -76
@@ -29794,7 +29794,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x5e
 	.4byte	.LVL303
-	.4byte	.LFE52
+	.4byte	.LFE61
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -29832,7 +29832,7 @@ TFT_BLACK:
 	.byte	0x1e
 	.byte	0x9f
 	.4byte	.LVL303
-	.4byte	.LFE52
+	.4byte	.LFE61
 	.2byte	0x6
 	.byte	0x72
 	.sleb128 -1
@@ -29848,7 +29848,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL307
-	.4byte	.LFE85
+	.4byte	.LFE94
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -29862,7 +29862,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL308
-	.4byte	.LFE85
+	.4byte	.LFE94
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -29884,7 +29884,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL320
-	.4byte	.LFE55
+	.4byte	.LFE64
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -30237,7 +30237,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL363
-	.4byte	.LFE86
+	.4byte	.LFE95
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -30251,7 +30251,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL368
-	.4byte	.LFE86
+	.4byte	.LFE95
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -48
@@ -30263,7 +30263,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL365
-	.4byte	.LFE86
+	.4byte	.LFE95
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -30629,7 +30629,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL400
-	.4byte	.LFE84
+	.4byte	.LFE93
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -30643,7 +30643,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL398
-	.4byte	.LFE84
+	.4byte	.LFE93
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -30689,7 +30689,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL405-1
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -30747,7 +30747,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x5f
 	.4byte	.LVL424-1
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -30761,7 +30761,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL427
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -30775,7 +30775,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL432
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -30835,7 +30835,7 @@ TFT_BLACK:
 	.sleb128 1
 	.byte	0x9f
 	.4byte	.LVL444
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -30874,7 +30874,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL456
-	.4byte	.LFE41
+	.4byte	.LFE50
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -30888,7 +30888,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL459
-	.4byte	.LFE41
+	.4byte	.LFE50
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -30917,7 +30917,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL480
-	.4byte	.LFE41
+	.4byte	.LFE50
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -31183,7 +31183,7 @@ TFT_BLACK:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL518
-	.4byte	.LFE46
+	.4byte	.LFE55
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -31201,7 +31201,7 @@ TFT_BLACK:
 	.byte	0x53
 	.byte	0x9f
 	.4byte	.LVL519
-	.4byte	.LFE46
+	.4byte	.LFE55
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -31212,7 +31212,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL526
-	.4byte	.LFE46
+	.4byte	.LFE55
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -31226,7 +31226,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL540
-	.4byte	.LFE46
+	.4byte	.LFE55
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -31270,7 +31270,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL529
-	.4byte	.LFE46
+	.4byte	.LFE55
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -60
@@ -31316,7 +31316,7 @@ TFT_BLACK:
 	.byte	0x53
 	.byte	0x9f
 	.4byte	.LVL546
-	.4byte	.LFE47
+	.4byte	.LFE56
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -31334,7 +31334,7 @@ TFT_BLACK:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL553
-	.4byte	.LFE49
+	.4byte	.LFE58
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -72
@@ -31353,7 +31353,7 @@ TFT_BLACK:
 	.byte	0x53
 	.byte	0x9f
 	.4byte	.LVL555
-	.4byte	.LFE49
+	.4byte	.LFE58
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -68
@@ -31365,7 +31365,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL559
-	.4byte	.LFE49
+	.4byte	.LFE58
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -64
@@ -31377,7 +31377,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL578
-	.4byte	.LFE49
+	.4byte	.LFE58
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -31395,7 +31395,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL551
-	.4byte	.LFE49
+	.4byte	.LFE58
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -52
@@ -31440,7 +31440,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL589
-	.4byte	.LFE49
+	.4byte	.LFE58
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -31484,7 +31484,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL589
-	.4byte	.LFE49
+	.4byte	.LFE58
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -31514,7 +31514,7 @@ TFT_BLACK:
 	.byte	0x22
 	.byte	0x9f
 	.4byte	.LVL589
-	.4byte	.LFE49
+	.4byte	.LFE58
 	.2byte	0x1
 	.byte	0x59
 	.4byte	0
@@ -31548,7 +31548,7 @@ TFT_BLACK:
 	.byte	0x31
 	.byte	0x9f
 	.4byte	.LVL573
-	.4byte	.LFE49
+	.4byte	.LFE58
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -31585,7 +31585,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL589
-	.4byte	.LFE49
+	.4byte	.LFE58
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -31617,7 +31617,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL589
-	.4byte	.LFE49
+	.4byte	.LFE58
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -31653,7 +31653,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL589
-	.4byte	.LFE49
+	.4byte	.LFE58
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -31671,7 +31671,7 @@ TFT_BLACK:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL594
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -72
@@ -31690,7 +31690,7 @@ TFT_BLACK:
 	.byte	0x53
 	.byte	0x9f
 	.4byte	.LVL596
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -68
@@ -31702,7 +31702,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL600
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -64
@@ -31714,7 +31714,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL619
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -31732,7 +31732,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL592
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -52
@@ -31777,7 +31777,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL630
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -31821,7 +31821,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL630
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -31851,7 +31851,7 @@ TFT_BLACK:
 	.byte	0x22
 	.byte	0x9f
 	.4byte	.LVL630
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x1
 	.byte	0x59
 	.4byte	0
@@ -31885,7 +31885,7 @@ TFT_BLACK:
 	.byte	0x31
 	.byte	0x9f
 	.4byte	.LVL614
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -31922,7 +31922,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL630
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -31954,7 +31954,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL630
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -31990,7 +31990,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL630
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -32041,7 +32041,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL680
-	.4byte	.LFE53
+	.4byte	.LFE62
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -32107,7 +32107,7 @@ TFT_BLACK:
 	.byte	0x13
 	.byte	0x9f
 	.4byte	.LVL680
-	.4byte	.LFE53
+	.4byte	.LFE62
 	.2byte	0x2f
 	.byte	0xf3
 	.uleb128 0x1
@@ -32176,7 +32176,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x64
 	.4byte	.LVL640-1
-	.4byte	.LFE53
+	.4byte	.LFE62
 	.2byte	0x6
 	.byte	0xf3
 	.uleb128 0x3
@@ -32196,7 +32196,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x63
 	.4byte	.LVL637-1
-	.4byte	.LFE53
+	.4byte	.LFE62
 	.2byte	0x6
 	.byte	0xf3
 	.uleb128 0x3
@@ -32257,7 +32257,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x65
 	.4byte	.LVL658-1
-	.4byte	.LFE53
+	.4byte	.LFE62
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -72
@@ -32341,7 +32341,7 @@ TFT_BLACK:
 	.byte	0x91
 	.sleb128 -56
 	.4byte	.LVL735
-	.4byte	.LFE54
+	.4byte	.LFE63
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -32424,7 +32424,7 @@ TFT_BLACK:
 	.sleb128 -104
 	.byte	0x6
 	.4byte	.LVL735
-	.4byte	.LFE54
+	.4byte	.LFE63
 	.2byte	0x2
 	.byte	0x71
 	.sleb128 16
@@ -32493,7 +32493,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL760
-	.4byte	.LFE54
+	.4byte	.LFE63
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -32611,7 +32611,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL858
-	.4byte	.LFE56
+	.4byte	.LFE65
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -32625,7 +32625,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL763
-	.4byte	.LFE56
+	.4byte	.LFE65
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -52
@@ -33039,7 +33039,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL890
-	.4byte	.LFE57
+	.4byte	.LFE66
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -33086,7 +33086,7 @@ TFT_BLACK:
 	.sleb128 -1
 	.byte	0x9f
 	.4byte	.LVL888
-	.4byte	.LFE57
+	.4byte	.LFE66
 	.2byte	0x1
 	.byte	0x5b
 	.4byte	0
@@ -33107,7 +33107,7 @@ TFT_BLACK:
 	.byte	0x78
 	.sleb128 0
 	.4byte	.LVL889
-	.4byte	.LFE57
+	.4byte	.LFE66
 	.2byte	0x1
 	.byte	0x5e
 	.4byte	0
@@ -33165,7 +33165,7 @@ TFT_BLACK:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL878
-	.4byte	.LFE57
+	.4byte	.LFE66
 	.2byte	0x1
 	.byte	0x5c
 	.4byte	0
@@ -33214,7 +33214,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL892
-	.4byte	.LFE60
+	.4byte	.LFE69
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -33266,7 +33266,7 @@ TFT_BLACK:
 	.sleb128 -1
 	.byte	0x9f
 	.4byte	.LVL911
-	.4byte	.LFE60
+	.4byte	.LFE69
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -33282,7 +33282,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL911
-	.4byte	.LFE60
+	.4byte	.LFE69
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -33377,7 +33377,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL920
-	.4byte	.LFE67
+	.4byte	.LFE76
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -33400,7 +33400,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL925
-	.4byte	.LFE67
+	.4byte	.LFE76
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -33439,7 +33439,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL927
-	.4byte	.LFE72
+	.4byte	.LFE81
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -104
@@ -34716,7 +34716,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL1193-1
-	.4byte	.LFE73
+	.4byte	.LFE82
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -34730,7 +34730,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL1201
-	.4byte	.LFE75
+	.4byte	.LFE84
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -34826,7 +34826,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL1262
-	.4byte	.LFE76
+	.4byte	.LFE85
 	.2byte	0x6
 	.byte	0xf3
 	.uleb128 0x3
@@ -34905,7 +34905,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x63
 	.4byte	.LVL1262
-	.4byte	.LFE76
+	.4byte	.LFE85
 	.2byte	0x6
 	.byte	0xf3
 	.uleb128 0x3
@@ -35261,7 +35261,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL1275
-	.4byte	.LFE77
+	.4byte	.LFE86
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -35387,7 +35387,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL1291
-	.4byte	.LFE80
+	.4byte	.LFE89
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -35401,7 +35401,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL1297
-	.4byte	.LFE68
+	.4byte	.LFE77
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -35415,7 +35415,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL1295
-	.4byte	.LFE68
+	.4byte	.LFE77
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -35466,7 +35466,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL1341
-	.4byte	.LFE87
+	.4byte	.LFE96
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -35495,7 +35495,7 @@ TFT_BLACK:
 	.byte	0x54
 	.byte	0x9f
 	.4byte	.LVL1322
-	.4byte	.LFE87
+	.4byte	.LFE96
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -35613,7 +35613,7 @@ TFT_BLACK:
 	.byte	0x13
 	.byte	0x9f
 	.4byte	.LVL1345
-	.4byte	.LFE87
+	.4byte	.LFE96
 	.2byte	0x14
 	.byte	0xf3
 	.uleb128 0x1
@@ -35642,7 +35642,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL1311
-	.4byte	.LFE87
+	.4byte	.LFE96
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -35661,7 +35661,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL1345
-	.4byte	.LFE87
+	.4byte	.LFE96
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -35816,7 +35816,7 @@ TFT_BLACK:
 	.byte	0x13
 	.byte	0x9f
 	.4byte	.LVL1482
-	.4byte	.LFE88
+	.4byte	.LFE97
 	.2byte	0x14
 	.byte	0xf3
 	.uleb128 0x1
@@ -35856,7 +35856,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL1482
-	.4byte	.LFE88
+	.4byte	.LFE97
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -35888,7 +35888,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL1367
-	.4byte	.LFE88
+	.4byte	.LFE97
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -88
@@ -35931,7 +35931,7 @@ TFT_BLACK:
 	.2byte	0x1
 	.byte	0x59
 	.4byte	.LVL1482
-	.4byte	.LFE88
+	.4byte	.LFE97
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -100
@@ -36559,7 +36559,7 @@ TFT_BLACK:
 	.uleb128 0x1
 	.byte	0x9f
 	.4byte	.LVL1482
-	.4byte	.LFE88
+	.4byte	.LFE97
 	.2byte	0x16
 	.byte	0xf3
 	.uleb128 0x1
@@ -36639,130 +36639,130 @@ TFT_BLACK:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB59
-	.4byte	.LFE59-.LFB59
-	.4byte	.LFB65
-	.4byte	.LFE65-.LFB65
-	.4byte	.LFB66
-	.4byte	.LFE66-.LFB66
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
-	.4byte	.LFB50
-	.4byte	.LFE50-.LFB50
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB68
+	.4byte	.LFE68-.LFB68
+	.4byte	.LFB74
+	.4byte	.LFE74-.LFB74
+	.4byte	.LFB75
+	.4byte	.LFE75-.LFB75
 	.4byte	.LFB29
 	.4byte	.LFE29-.LFB29
-	.4byte	.LFB69
-	.4byte	.LFE69-.LFB69
-	.4byte	.LFB70
-	.4byte	.LFE70-.LFB70
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
-	.4byte	.LFB85
-	.4byte	.LFE85-.LFB85
-	.4byte	.LFB55
-	.4byte	.LFE55-.LFB55
-	.4byte	.LFB86
-	.4byte	.LFE86-.LFB86
-	.4byte	.LFB84
-	.4byte	.LFE84-.LFB84
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
+	.4byte	.LFB78
+	.4byte	.LFE78-.LFB78
+	.4byte	.LFB79
+	.4byte	.LFE79-.LFB79
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
+	.4byte	.LFB94
+	.4byte	.LFE94-.LFB94
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
+	.4byte	.LFB95
+	.4byte	.LFE95-.LFB95
+	.4byte	.LFB93
+	.4byte	.LFE93-.LFB93
 	.4byte	.LFB28
 	.4byte	.LFE28-.LFB28
 	.4byte	.LFB30
 	.4byte	.LFE30-.LFB30
 	.4byte	.LFB31
 	.4byte	.LFE31-.LFB31
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
 	.4byte	.LFB34
 	.4byte	.LFE34-.LFB34
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.4byte	.LFB37
 	.4byte	.LFE37-.LFB37
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.4byte	.LFB41
 	.4byte	.LFE41-.LFB41
 	.4byte	.LFB43
 	.4byte	.LFE43-.LFB43
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
 	.4byte	.LFB46
 	.4byte	.LFE46-.LFB46
 	.4byte	.LFB47
 	.4byte	.LFE47-.LFB47
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
-	.4byte	.LFB53
-	.4byte	.LFE53-.LFB53
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.4byte	.LFB54
 	.4byte	.LFE54-.LFB54
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.4byte	.LFB56
 	.4byte	.LFE56-.LFB56
-	.4byte	.LFB57
-	.4byte	.LFE57-.LFB57
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
 	.4byte	.LFB60
 	.4byte	.LFE60-.LFB60
-	.4byte	.LFB67
-	.4byte	.LFE67-.LFB67
-	.4byte	.LFB72
-	.4byte	.LFE72-.LFB72
-	.4byte	.LFB73
-	.4byte	.LFE73-.LFB73
-	.4byte	.LFB74
-	.4byte	.LFE74-.LFB74
-	.4byte	.LFB75
-	.4byte	.LFE75-.LFB75
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
+	.4byte	.LFB65
+	.4byte	.LFE65-.LFB65
+	.4byte	.LFB66
+	.4byte	.LFE66-.LFB66
+	.4byte	.LFB69
+	.4byte	.LFE69-.LFB69
 	.4byte	.LFB76
 	.4byte	.LFE76-.LFB76
-	.4byte	.LFB77
-	.4byte	.LFE77-.LFB77
-	.4byte	.LFB78
-	.4byte	.LFE78-.LFB78
-	.4byte	.LFB79
-	.4byte	.LFE79-.LFB79
-	.4byte	.LFB80
-	.4byte	.LFE80-.LFB80
 	.4byte	.LFB81
 	.4byte	.LFE81-.LFB81
-	.4byte	.LFB68
-	.4byte	.LFE68-.LFB68
 	.4byte	.LFB82
 	.4byte	.LFE82-.LFB82
 	.4byte	.LFB83
 	.4byte	.LFE83-.LFB83
+	.4byte	.LFB84
+	.4byte	.LFE84-.LFB84
+	.4byte	.LFB85
+	.4byte	.LFE85-.LFB85
+	.4byte	.LFB86
+	.4byte	.LFE86-.LFB86
 	.4byte	.LFB87
 	.4byte	.LFE87-.LFB87
 	.4byte	.LFB88
 	.4byte	.LFE88-.LFB88
+	.4byte	.LFB89
+	.4byte	.LFE89-.LFB89
+	.4byte	.LFB90
+	.4byte	.LFE90-.LFB90
+	.4byte	.LFB77
+	.4byte	.LFE77-.LFB77
+	.4byte	.LFB91
+	.4byte	.LFE91-.LFB91
+	.4byte	.LFB92
+	.4byte	.LFE92-.LFB92
+	.4byte	.LFB96
+	.4byte	.LFE96-.LFB96
+	.4byte	.LFB97
+	.4byte	.LFE97-.LFB97
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -36859,130 +36859,130 @@ TFT_BLACK:
 	.4byte	.LBE102
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB59
-	.4byte	.LFE59
-	.4byte	.LFB65
-	.4byte	.LFE65
-	.4byte	.LFB66
-	.4byte	.LFE66
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB36
-	.4byte	.LFE36
-	.4byte	.LFB50
-	.4byte	.LFE50
-	.4byte	.LFB24
-	.4byte	.LFE24
-	.4byte	.LFB27
-	.4byte	.LFE27
-	.4byte	.LFB42
-	.4byte	.LFE42
-	.4byte	.LFB33
-	.4byte	.LFE33
-	.4byte	.LFB44
-	.4byte	.LFE44
+	.4byte	.LFB68
+	.4byte	.LFE68
+	.4byte	.LFB74
+	.4byte	.LFE74
+	.4byte	.LFB75
+	.4byte	.LFE75
 	.4byte	.LFB29
 	.4byte	.LFE29
-	.4byte	.LFB69
-	.4byte	.LFE69
-	.4byte	.LFB70
-	.4byte	.LFE70
-	.4byte	.LFB35
-	.4byte	.LFE35
-	.4byte	.LFB48
-	.4byte	.LFE48
-	.4byte	.LFB52
-	.4byte	.LFE52
-	.4byte	.LFB85
-	.4byte	.LFE85
-	.4byte	.LFB55
-	.4byte	.LFE55
-	.4byte	.LFB86
-	.4byte	.LFE86
-	.4byte	.LFB84
-	.4byte	.LFE84
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB25
-	.4byte	.LFE25
-	.4byte	.LFB26
-	.4byte	.LFE26
+	.4byte	.LFB32
+	.4byte	.LFE32
+	.4byte	.LFB45
+	.4byte	.LFE45
+	.4byte	.LFB59
+	.4byte	.LFE59
+	.4byte	.LFB33
+	.4byte	.LFE33
+	.4byte	.LFB36
+	.4byte	.LFE36
+	.4byte	.LFB51
+	.4byte	.LFE51
+	.4byte	.LFB42
+	.4byte	.LFE42
+	.4byte	.LFB53
+	.4byte	.LFE53
+	.4byte	.LFB38
+	.4byte	.LFE38
+	.4byte	.LFB78
+	.4byte	.LFE78
+	.4byte	.LFB79
+	.4byte	.LFE79
+	.4byte	.LFB44
+	.4byte	.LFE44
+	.4byte	.LFB57
+	.4byte	.LFE57
+	.4byte	.LFB61
+	.4byte	.LFE61
+	.4byte	.LFB94
+	.4byte	.LFE94
+	.4byte	.LFB64
+	.4byte	.LFE64
+	.4byte	.LFB95
+	.4byte	.LFE95
+	.4byte	.LFB93
+	.4byte	.LFE93
 	.4byte	.LFB28
 	.4byte	.LFE28
 	.4byte	.LFB30
 	.4byte	.LFE30
 	.4byte	.LFB31
 	.4byte	.LFE31
-	.4byte	.LFB32
-	.4byte	.LFE32
 	.4byte	.LFB34
 	.4byte	.LFE34
+	.4byte	.LFB35
+	.4byte	.LFE35
 	.4byte	.LFB37
 	.4byte	.LFE37
-	.4byte	.LFB38
-	.4byte	.LFE38
+	.4byte	.LFB39
+	.4byte	.LFE39
+	.4byte	.LFB40
+	.4byte	.LFE40
 	.4byte	.LFB41
 	.4byte	.LFE41
 	.4byte	.LFB43
 	.4byte	.LFE43
-	.4byte	.LFB45
-	.4byte	.LFE45
 	.4byte	.LFB46
 	.4byte	.LFE46
 	.4byte	.LFB47
 	.4byte	.LFE47
-	.4byte	.LFB49
-	.4byte	.LFE49
-	.4byte	.LFB51
-	.4byte	.LFE51
-	.4byte	.LFB53
-	.4byte	.LFE53
+	.4byte	.LFB50
+	.4byte	.LFE50
+	.4byte	.LFB52
+	.4byte	.LFE52
 	.4byte	.LFB54
 	.4byte	.LFE54
+	.4byte	.LFB55
+	.4byte	.LFE55
 	.4byte	.LFB56
 	.4byte	.LFE56
-	.4byte	.LFB57
-	.4byte	.LFE57
+	.4byte	.LFB58
+	.4byte	.LFE58
 	.4byte	.LFB60
 	.4byte	.LFE60
-	.4byte	.LFB67
-	.4byte	.LFE67
-	.4byte	.LFB72
-	.4byte	.LFE72
-	.4byte	.LFB73
-	.4byte	.LFE73
-	.4byte	.LFB74
-	.4byte	.LFE74
-	.4byte	.LFB75
-	.4byte	.LFE75
+	.4byte	.LFB62
+	.4byte	.LFE62
+	.4byte	.LFB63
+	.4byte	.LFE63
+	.4byte	.LFB65
+	.4byte	.LFE65
+	.4byte	.LFB66
+	.4byte	.LFE66
+	.4byte	.LFB69
+	.4byte	.LFE69
 	.4byte	.LFB76
 	.4byte	.LFE76
-	.4byte	.LFB77
-	.4byte	.LFE77
-	.4byte	.LFB78
-	.4byte	.LFE78
-	.4byte	.LFB79
-	.4byte	.LFE79
-	.4byte	.LFB80
-	.4byte	.LFE80
 	.4byte	.LFB81
 	.4byte	.LFE81
-	.4byte	.LFB68
-	.4byte	.LFE68
 	.4byte	.LFB82
 	.4byte	.LFE82
 	.4byte	.LFB83
 	.4byte	.LFE83
+	.4byte	.LFB84
+	.4byte	.LFE84
+	.4byte	.LFB85
+	.4byte	.LFE85
+	.4byte	.LFB86
+	.4byte	.LFE86
 	.4byte	.LFB87
 	.4byte	.LFE87
 	.4byte	.LFB88
 	.4byte	.LFE88
+	.4byte	.LFB89
+	.4byte	.LFE89
+	.4byte	.LFB90
+	.4byte	.LFE90
+	.4byte	.LFB77
+	.4byte	.LFE77
+	.4byte	.LFB91
+	.4byte	.LFE91
+	.4byte	.LFB92
+	.4byte	.LFE92
+	.4byte	.LFB96
+	.4byte	.LFE96
+	.4byte	.LFB97
+	.4byte	.LFE97
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

@@ -5,7 +5,7 @@
 	.align	4
 	.type	spiffs_stat_pix, @function
 spiffs_stat_pix:
-.LFB35:
+.LFB44:
 	.file 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/spiffs/spiffs_hydrogen.c"
 	.loc 1 699 0
 .LVL0:
@@ -110,7 +110,7 @@ spiffs_stat_pix:
 	mov.n	a2, a4
 	.loc 1 723 0
 	retw.n
-.LFE35:
+.LFE44:
 	.size	spiffs_stat_pix, .-spiffs_stat_pix
 	.section	.text.spiffs_read_dir_v,"ax",@progbits
 	.literal_position
@@ -119,7 +119,7 @@ spiffs_stat_pix:
 	.align	4
 	.type	spiffs_read_dir_v, @function
 spiffs_read_dir_v:
-.LFB45:
+.LFB54:
 	.loc 1 992 0
 .LVL10:
 	entry	sp, 176
@@ -220,13 +220,13 @@ spiffs_read_dir_v:
 .LBE3:
 	.loc 1 1021 0
 	retw.n
-.LFE45:
+.LFE54:
 	.size	spiffs_read_dir_v, .-spiffs_read_dir_v
 	.section	.text.spiffs_hydro_write$isra$0,"ax",@progbits
 	.align	4
 	.type	spiffs_hydro_write$isra$0, @function
 spiffs_hydro_write$isra$0:
-.LFB60:
+.LFB69:
 	.loc 1 423 0
 .LVL23:
 	entry	sp, 32
@@ -294,13 +294,13 @@ spiffs_hydro_write$isra$0:
 .L22:
 	.loc 1 443 0
 	retw.n
-.LFE60:
+.LFE69:
 	.size	spiffs_hydro_write$isra$0, .-spiffs_hydro_write$isra$0
 	.section	.text.spiffs_fflush_cache,"ax",@progbits
 	.align	4
 	.type	spiffs_fflush_cache, @function
 spiffs_fflush_cache:
-.LFB38:
+.LFB47:
 	.loc 1 772 0
 .LVL37:
 	entry	sp, 48
@@ -372,14 +372,14 @@ spiffs_fflush_cache:
 	mov.n	a2, a3
 .LVL46:
 	retw.n
-.LFE38:
+.LFE47:
 	.size	spiffs_fflush_cache, .-spiffs_fflush_cache
 	.section	.text.SPIFFS_mounted,"ax",@progbits
 	.align	4
 	.global	SPIFFS_mounted
 	.type	SPIFFS_mounted, @function
 SPIFFS_mounted:
-.LFB17:
+.LFB26:
 	.loc 1 34 0
 .LVL47:
 	entry	sp, 32
@@ -392,7 +392,7 @@ SPIFFS_mounted:
 	movnez	a2, a9, a8
 	.loc 1 36 0
 	retw.n
-.LFE17:
+.LFE26:
 	.size	SPIFFS_mounted, .-SPIFFS_mounted
 	.section	.text.SPIFFS_format,"ax",@progbits
 	.literal_position
@@ -405,7 +405,7 @@ SPIFFS_mounted:
 	.global	SPIFFS_format
 	.type	SPIFFS_format, @function
 SPIFFS_format:
-.LFB18:
+.LFB27:
 	.loc 1 38 0
 .LVL49:
 	entry	sp, 32
@@ -497,14 +497,14 @@ SPIFFS_format:
 	extui	a3, a3, 0, 16
 .LVL64:
 	j	.L46
-.LFE18:
+.LFE27:
 	.size	SPIFFS_format, .-SPIFFS_format
 	.section	.text.SPIFFS_probe_fs,"ax",@progbits
 	.align	4
 	.global	SPIFFS_probe_fs
 	.type	SPIFFS_probe_fs, @function
 SPIFFS_probe_fs:
-.LFB19:
+.LFB28:
 	.loc 1 71 0
 .LVL65:
 	entry	sp, 32
@@ -517,7 +517,7 @@ SPIFFS_probe_fs:
 	mov.n	a2, a10
 .LVL67:
 	retw.n
-.LFE19:
+.LFE28:
 	.size	SPIFFS_probe_fs, .-SPIFFS_probe_fs
 	.section	.text.SPIFFS_mount,"ax",@progbits
 	.literal_position
@@ -529,7 +529,7 @@ SPIFFS_probe_fs:
 	.global	SPIFFS_mount
 	.type	SPIFFS_mount, @function
 SPIFFS_mount:
-.LFB20:
+.LFB29:
 	.loc 1 81 0
 .LVL68:
 	entry	sp, 48
@@ -743,7 +743,7 @@ SPIFFS_mount:
 .LVL104:
 	.loc 1 148 0
 	retw.n
-.LFE20:
+.LFE29:
 	.size	SPIFFS_mount, .-SPIFFS_mount
 	.section	.text.SPIFFS_unmount,"ax",@progbits
 	.literal_position
@@ -753,7 +753,7 @@ SPIFFS_mount:
 	.global	SPIFFS_unmount
 	.type	SPIFFS_unmount, @function
 SPIFFS_unmount:
-.LFB21:
+.LFB30:
 	.loc 1 150 0
 .LVL105:
 	entry	sp, 32
@@ -819,14 +819,14 @@ SPIFFS_unmount:
 .LVL112:
 .L78:
 	retw.n
-.LFE21:
+.LFE30:
 	.size	SPIFFS_unmount, .-SPIFFS_unmount
 	.section	.text.SPIFFS_errno,"ax",@progbits
 	.align	4
 	.global	SPIFFS_errno
 	.type	SPIFFS_errno, @function
 SPIFFS_errno:
-.LFB22:
+.LFB31:
 	.loc 1 169 0
 .LVL113:
 	entry	sp, 32
@@ -835,14 +835,14 @@ SPIFFS_errno:
 	l32i	a2, a2, 68
 .LVL114:
 	retw.n
-.LFE22:
+.LFE31:
 	.size	SPIFFS_errno, .-SPIFFS_errno
 	.section	.text.SPIFFS_clearerr,"ax",@progbits
 	.align	4
 	.global	SPIFFS_clearerr
 	.type	SPIFFS_clearerr, @function
 SPIFFS_clearerr:
-.LFB23:
+.LFB32:
 	.loc 1 173 0
 .LVL115:
 	entry	sp, 32
@@ -851,7 +851,7 @@ SPIFFS_clearerr:
 	movi.n	a8, 0
 	s32i	a8, a2, 68
 	retw.n
-.LFE23:
+.LFE32:
 	.size	SPIFFS_clearerr, .-SPIFFS_clearerr
 	.section	.text.SPIFFS_creat,"ax",@progbits
 	.literal_position
@@ -864,7 +864,7 @@ SPIFFS_clearerr:
 	.global	SPIFFS_creat
 	.type	SPIFFS_creat, @function
 SPIFFS_creat:
-.LFB24:
+.LFB33:
 	.loc 1 177 0
 .LVL116:
 	entry	sp, 48
@@ -973,7 +973,7 @@ SPIFFS_creat:
 .LVL136:
 	.loc 1 199 0
 	retw.n
-.LFE24:
+.LFE33:
 	.size	SPIFFS_creat, .-SPIFFS_creat
 	.section	.text.SPIFFS_open,"ax",@progbits
 	.literal_position
@@ -988,7 +988,7 @@ SPIFFS_creat:
 	.global	SPIFFS_open
 	.type	SPIFFS_open, @function
 SPIFFS_open:
-.LFB25:
+.LFB34:
 	.loc 1 201 0
 .LVL137:
 	entry	sp, 64
@@ -1277,7 +1277,7 @@ SPIFFS_open:
 	.loc 1 265 0
 	bbsi	a4, 1, .L115
 	j	.L113
-.LFE25:
+.LFE34:
 	.size	SPIFFS_open, .-SPIFFS_open
 	.section	.text.SPIFFS_open_by_dirent,"ax",@progbits
 	.literal_position
@@ -1289,7 +1289,7 @@ SPIFFS_open:
 	.global	SPIFFS_open_by_dirent
 	.type	SPIFFS_open_by_dirent, @function
 SPIFFS_open_by_dirent:
-.LFB26:
+.LFB35:
 	.loc 1 281 0
 .LVL178:
 	entry	sp, 64
@@ -1418,7 +1418,7 @@ SPIFFS_open_by_dirent:
 	.loc 1 297 0
 	bbsi	a4, 1, .L142
 	j	.L141
-.LFE26:
+.LFE35:
 	.size	SPIFFS_open_by_dirent, .-SPIFFS_open_by_dirent
 	.section	.text.SPIFFS_open_by_page,"ax",@progbits
 	.literal_position
@@ -1434,7 +1434,7 @@ SPIFFS_open_by_dirent:
 	.global	SPIFFS_open_by_page
 	.type	SPIFFS_open_by_page, @function
 SPIFFS_open_by_page:
-.LFB27:
+.LFB36:
 	.loc 1 313 0
 .LVL194:
 	entry	sp, 64
@@ -1613,7 +1613,7 @@ SPIFFS_open_by_page:
 	.loc 1 343 0
 	bbsi	a4, 1, .L158
 	j	.L157
-.LFE27:
+.LFE36:
 	.size	SPIFFS_open_by_page, .-SPIFFS_open_by_page
 	.section	.text.SPIFFS_read,"ax",@progbits
 	.literal_position
@@ -1627,7 +1627,7 @@ SPIFFS_open_by_page:
 	.global	SPIFFS_read
 	.type	SPIFFS_read, @function
 SPIFFS_read:
-.LFB29:
+.LFB38:
 	.loc 1 413 0
 .LVL220:
 	entry	sp, 64
@@ -1813,7 +1813,7 @@ SPIFFS_read:
 .LVL247:
 	.loc 1 419 0
 	retw.n
-.LFE29:
+.LFE38:
 	.size	SPIFFS_read, .-SPIFFS_read
 	.section	.text.SPIFFS_write,"ax",@progbits
 	.literal_position
@@ -1826,7 +1826,7 @@ SPIFFS_read:
 	.global	SPIFFS_write
 	.type	SPIFFS_write, @function
 SPIFFS_write:
-.LFB31:
+.LFB40:
 	.loc 1 446 0
 .LVL248:
 	entry	sp, 64
@@ -2180,7 +2180,7 @@ SPIFFS_write:
 	mov.n	a2, a14
 	j	.L214
 .LBE19:
-.LFE31:
+.LFE40:
 	.size	SPIFFS_write, .-SPIFFS_write
 	.section	.text.SPIFFS_lseek,"ax",@progbits
 	.literal_position
@@ -2194,7 +2194,7 @@ SPIFFS_write:
 	.global	SPIFFS_lseek
 	.type	SPIFFS_lseek, @function
 SPIFFS_lseek:
-.LFB32:
+.LFB41:
 	.loc 1 574 0
 .LVL290:
 	entry	sp, 64
@@ -2384,7 +2384,7 @@ SPIFFS_lseek:
 	movi.n	a3, 0
 .LVL325:
 	j	.L257
-.LFE32:
+.LFE41:
 	.size	SPIFFS_lseek, .-SPIFFS_lseek
 	.section	.text.SPIFFS_remove,"ax",@progbits
 	.literal_position
@@ -2397,7 +2397,7 @@ SPIFFS_lseek:
 	.global	SPIFFS_remove
 	.type	SPIFFS_remove, @function
 SPIFFS_remove:
-.LFB33:
+.LFB42:
 	.loc 1 623 0
 .LVL326:
 	entry	sp, 48
@@ -2554,7 +2554,7 @@ SPIFFS_remove:
 	movi.n	a2, 0
 	.loc 1 663 0
 	retw.n
-.LFE33:
+.LFE42:
 	.size	SPIFFS_remove, .-SPIFFS_remove
 	.section	.text.SPIFFS_fremove,"ax",@progbits
 	.literal_position
@@ -2567,7 +2567,7 @@ SPIFFS_remove:
 	.global	SPIFFS_fremove
 	.type	SPIFFS_fremove, @function
 SPIFFS_fremove:
-.LFB34:
+.LFB43:
 	.loc 1 665 0
 .LVL344:
 	entry	sp, 48
@@ -2676,7 +2676,7 @@ SPIFFS_fremove:
 .LVL363:
 	.loc 1 697 0
 	retw.n
-.LFE34:
+.LFE43:
 	.size	SPIFFS_fremove, .-SPIFFS_fremove
 	.section	.text.SPIFFS_stat,"ax",@progbits
 	.literal_position
@@ -2689,7 +2689,7 @@ SPIFFS_fremove:
 	.global	SPIFFS_stat
 	.type	SPIFFS_stat, @function
 SPIFFS_stat:
-.LFB36:
+.LFB45:
 	.loc 1 725 0
 .LVL364:
 	entry	sp, 48
@@ -2776,7 +2776,7 @@ SPIFFS_stat:
 .LVL379:
 	.loc 1 744 0
 	retw.n
-.LFE36:
+.LFE45:
 	.size	SPIFFS_stat, .-SPIFFS_stat
 	.section	.text.SPIFFS_fstat,"ax",@progbits
 	.literal_position
@@ -2788,7 +2788,7 @@ SPIFFS_stat:
 	.global	SPIFFS_fstat
 	.type	SPIFFS_fstat, @function
 SPIFFS_fstat:
-.LFB37:
+.LFB46:
 	.loc 1 746 0
 .LVL380:
 	entry	sp, 48
@@ -2871,7 +2871,7 @@ SPIFFS_fstat:
 .LVL392:
 	.loc 1 767 0
 	retw.n
-.LFE37:
+.LFE46:
 	.size	SPIFFS_fstat, .-SPIFFS_fstat
 	.section	.text.SPIFFS_fflush,"ax",@progbits
 	.literal_position
@@ -2883,7 +2883,7 @@ SPIFFS_fstat:
 	.global	SPIFFS_fflush
 	.type	SPIFFS_fflush, @function
 SPIFFS_fflush:
-.LFB39:
+.LFB48:
 	.loc 1 805 0
 .LVL393:
 	entry	sp, 32
@@ -2943,7 +2943,7 @@ SPIFFS_fflush:
 .LVL400:
 	.loc 1 819 0
 	retw.n
-.LFE39:
+.LFE48:
 	.size	SPIFFS_fflush, .-SPIFFS_fflush
 	.section	.text.SPIFFS_close,"ax",@progbits
 	.literal_position
@@ -2955,7 +2955,7 @@ SPIFFS_fflush:
 	.global	SPIFFS_close
 	.type	SPIFFS_close, @function
 SPIFFS_close:
-.LFB40:
+.LFB49:
 	.loc 1 821 0
 .LVL401:
 	entry	sp, 32
@@ -3035,7 +3035,7 @@ SPIFFS_close:
 .LVL411:
 	.loc 1 839 0
 	retw.n
-.LFE40:
+.LFE49:
 	.size	SPIFFS_close, .-SPIFFS_close
 	.section	.text.SPIFFS_rename,"ax",@progbits
 	.literal_position
@@ -3050,7 +3050,7 @@ SPIFFS_close:
 	.global	SPIFFS_rename
 	.type	SPIFFS_rename, @function
 SPIFFS_rename:
-.LFB41:
+.LFB50:
 	.loc 1 841 0
 .LVL412:
 	entry	sp, 64
@@ -3237,7 +3237,7 @@ SPIFFS_rename:
 .LVL436:
 	.loc 1 893 0
 	retw.n
-.LFE41:
+.LFE50:
 	.size	SPIFFS_rename, .-SPIFFS_rename
 	.section	.text.SPIFFS_update_meta,"ax",@progbits
 	.literal_position
@@ -3249,7 +3249,7 @@ SPIFFS_rename:
 	.global	SPIFFS_update_meta
 	.type	SPIFFS_update_meta, @function
 SPIFFS_update_meta:
-.LFB42:
+.LFB51:
 	.loc 1 896 0
 .LVL437:
 	entry	sp, 64
@@ -3387,7 +3387,7 @@ SPIFFS_update_meta:
 .LVL453:
 	.loc 1 931 0
 	retw.n
-.LFE42:
+.LFE51:
 	.size	SPIFFS_update_meta, .-SPIFFS_update_meta
 	.section	.text.SPIFFS_fupdate_meta,"ax",@progbits
 	.literal_position
@@ -3400,7 +3400,7 @@ SPIFFS_update_meta:
 	.global	SPIFFS_fupdate_meta
 	.type	SPIFFS_fupdate_meta, @function
 SPIFFS_fupdate_meta:
-.LFB43:
+.LFB52:
 	.loc 1 933 0
 .LVL454:
 	entry	sp, 64
@@ -3510,7 +3510,7 @@ SPIFFS_fupdate_meta:
 .LVL470:
 	.loc 1 964 0
 	retw.n
-.LFE43:
+.LFE52:
 	.size	SPIFFS_fupdate_meta, .-SPIFFS_fupdate_meta
 	.section	.text.SPIFFS_opendir,"ax",@progbits
 	.literal_position
@@ -3521,7 +3521,7 @@ SPIFFS_fupdate_meta:
 	.global	SPIFFS_opendir
 	.type	SPIFFS_opendir, @function
 SPIFFS_opendir:
-.LFB44:
+.LFB53:
 	.loc 1 967 0
 .LVL471:
 	entry	sp, 32
@@ -3562,7 +3562,7 @@ SPIFFS_opendir:
 .LVL477:
 	.loc 1 984 0
 	retw.n
-.LFE44:
+.LFE53:
 	.size	SPIFFS_opendir, .-SPIFFS_opendir
 	.section	.text.SPIFFS_readdir,"ax",@progbits
 	.literal_position
@@ -3573,7 +3573,7 @@ SPIFFS_opendir:
 	.global	SPIFFS_readdir
 	.type	SPIFFS_readdir, @function
 SPIFFS_readdir:
-.LFB46:
+.LFB55:
 	.loc 1 1023 0
 .LVL478:
 	entry	sp, 64
@@ -3655,7 +3655,7 @@ SPIFFS_readdir:
 	mov.n	a2, a3
 	.loc 1 1055 0
 	retw.n
-.LFE46:
+.LFE55:
 	.size	SPIFFS_readdir, .-SPIFFS_readdir
 	.section	.text.SPIFFS_closedir,"ax",@progbits
 	.literal_position
@@ -3666,7 +3666,7 @@ SPIFFS_readdir:
 	.global	SPIFFS_closedir
 	.type	SPIFFS_closedir, @function
 SPIFFS_closedir:
-.LFB47:
+.LFB56:
 	.loc 1 1057 0
 .LVL491:
 	entry	sp, 32
@@ -3694,7 +3694,7 @@ SPIFFS_closedir:
 .L382:
 	.loc 1 1061 0 is_stmt 1
 	retw.n
-.LFE47:
+.LFE56:
 	.size	SPIFFS_closedir, .-SPIFFS_closedir
 	.section	.text.SPIFFS_check,"ax",@progbits
 	.literal_position
@@ -3706,7 +3706,7 @@ SPIFFS_closedir:
 	.global	SPIFFS_check
 	.type	SPIFFS_check, @function
 SPIFFS_check:
-.LFB48:
+.LFB57:
 	.loc 1 1063 0
 .LVL493:
 	entry	sp, 32
@@ -3767,7 +3767,7 @@ SPIFFS_check:
 .LVL502:
 	.loc 1 1084 0
 	retw.n
-.LFE48:
+.LFE57:
 	.size	SPIFFS_check, .-SPIFFS_check
 	.section	.text.SPIFFS_info,"ax",@progbits
 	.literal_position
@@ -3779,7 +3779,7 @@ SPIFFS_check:
 	.global	SPIFFS_info
 	.type	SPIFFS_info, @function
 SPIFFS_info:
-.LFB49:
+.LFB58:
 	.loc 1 1086 0
 .LVL503:
 	entry	sp, 32
@@ -3872,7 +3872,7 @@ SPIFFS_info:
 	movi.n	a2, 0
 	.loc 1 1108 0
 	retw.n
-.LFE49:
+.LFE58:
 	.size	SPIFFS_info, .-SPIFFS_info
 	.section	.text.SPIFFS_gc_quick,"ax",@progbits
 	.literal_position
@@ -3884,7 +3884,7 @@ SPIFFS_info:
 	.global	SPIFFS_gc_quick
 	.type	SPIFFS_gc_quick, @function
 SPIFFS_gc_quick:
-.LFB50:
+.LFB59:
 	.loc 1 1110 0
 .LVL522:
 	entry	sp, 32
@@ -3953,7 +3953,7 @@ SPIFFS_gc_quick:
 .LVL531:
 	.loc 1 1126 0
 	retw.n
-.LFE50:
+.LFE59:
 	.size	SPIFFS_gc_quick, .-SPIFFS_gc_quick
 	.section	.text.SPIFFS_gc,"ax",@progbits
 	.literal_position
@@ -3965,7 +3965,7 @@ SPIFFS_gc_quick:
 	.global	SPIFFS_gc
 	.type	SPIFFS_gc, @function
 SPIFFS_gc:
-.LFB51:
+.LFB60:
 	.loc 1 1129 0
 .LVL532:
 	entry	sp, 32
@@ -4033,7 +4033,7 @@ SPIFFS_gc:
 .LVL543:
 	.loc 1 1145 0
 	retw.n
-.LFE51:
+.LFE60:
 	.size	SPIFFS_gc, .-SPIFFS_gc
 	.section	.text.SPIFFS_eof,"ax",@progbits
 	.literal_position
@@ -4045,7 +4045,7 @@ SPIFFS_gc:
 	.global	SPIFFS_eof
 	.type	SPIFFS_eof, @function
 SPIFFS_eof:
-.LFB52:
+.LFB61:
 	.loc 1 1147 0
 .LVL544:
 	entry	sp, 48
@@ -4152,7 +4152,7 @@ SPIFFS_eof:
 .LVL561:
 	.loc 1 1168 0 discriminator 4
 	retw.n
-.LFE52:
+.LFE61:
 	.size	SPIFFS_eof, .-SPIFFS_eof
 	.section	.text.SPIFFS_tell,"ax",@progbits
 	.literal_position
@@ -4164,7 +4164,7 @@ SPIFFS_eof:
 	.global	SPIFFS_tell
 	.type	SPIFFS_tell, @function
 SPIFFS_tell:
-.LFB53:
+.LFB62:
 	.loc 1 1170 0
 .LVL562:
 	entry	sp, 48
@@ -4263,7 +4263,7 @@ SPIFFS_tell:
 .LVL578:
 	.loc 1 1191 0
 	retw.n
-.LFE53:
+.LFE62:
 	.size	SPIFFS_tell, .-SPIFFS_tell
 	.section	.text.SPIFFS_set_file_callback_func,"ax",@progbits
 	.literal_position
@@ -4272,7 +4272,7 @@ SPIFFS_tell:
 	.global	SPIFFS_set_file_callback_func
 	.type	SPIFFS_set_file_callback_func, @function
 SPIFFS_set_file_callback_func:
-.LFB54:
+.LFB63:
 	.loc 1 1193 0
 .LVL579:
 	entry	sp, 32
@@ -4299,7 +4299,7 @@ SPIFFS_set_file_callback_func:
 	movi.n	a2, 0
 .LVL582:
 	retw.n
-.LFE54:
+.LFE63:
 	.size	SPIFFS_set_file_callback_func, .-SPIFFS_set_file_callback_func
 	.section	.text.SPIFFS_ix_map,"ax",@progbits
 	.literal_position
@@ -4312,7 +4312,7 @@ SPIFFS_set_file_callback_func:
 	.global	SPIFFS_ix_map
 	.type	SPIFFS_ix_map, @function
 SPIFFS_ix_map:
-.LFB55:
+.LFB64:
 	.loc 1 1203 0
 .LVL583:
 	entry	sp, 64
@@ -4452,7 +4452,7 @@ SPIFFS_ix_map:
 .LVL602:
 	.loc 1 1233 0
 	retw.n
-.LFE55:
+.LFE64:
 	.size	SPIFFS_ix_map, .-SPIFFS_ix_map
 	.section	.text.SPIFFS_ix_unmap,"ax",@progbits
 	.literal_position
@@ -4465,7 +4465,7 @@ SPIFFS_ix_map:
 	.global	SPIFFS_ix_unmap
 	.type	SPIFFS_ix_unmap, @function
 SPIFFS_ix_unmap:
-.LFB56:
+.LFB65:
 	.loc 1 1235 0
 .LVL603:
 	entry	sp, 48
@@ -4550,7 +4550,7 @@ SPIFFS_ix_unmap:
 .LVL613:
 	.loc 1 1255 0
 	retw.n
-.LFE56:
+.LFE65:
 	.size	SPIFFS_ix_unmap, .-SPIFFS_ix_unmap
 	.section	.text.SPIFFS_ix_remap,"ax",@progbits
 	.literal_position
@@ -4563,7 +4563,7 @@ SPIFFS_ix_unmap:
 	.global	SPIFFS_ix_remap
 	.type	SPIFFS_ix_remap, @function
 SPIFFS_ix_remap:
-.LFB57:
+.LFB66:
 	.loc 1 1257 0
 .LVL614:
 	entry	sp, 48
@@ -4782,7 +4782,7 @@ SPIFFS_ix_remap:
 .LVL648:
 	.loc 1 1317 0
 	retw.n
-.LFE57:
+.LFE66:
 	.size	SPIFFS_ix_remap, .-SPIFFS_ix_remap
 	.section	.text.SPIFFS_bytes_to_ix_map_entries,"ax",@progbits
 	.literal_position
@@ -4792,7 +4792,7 @@ SPIFFS_ix_remap:
 	.global	SPIFFS_bytes_to_ix_map_entries
 	.type	SPIFFS_bytes_to_ix_map_entries, @function
 SPIFFS_bytes_to_ix_map_entries:
-.LFB58:
+.LFB67:
 	.loc 1 1319 0
 .LVL649:
 	entry	sp, 32
@@ -4819,7 +4819,7 @@ SPIFFS_bytes_to_ix_map_entries:
 	quou	a2, a3, a2
 	.loc 1 1323 0
 	retw.n
-.LFE58:
+.LFE67:
 	.size	SPIFFS_bytes_to_ix_map_entries, .-SPIFFS_bytes_to_ix_map_entries
 	.section	.text.SPIFFS_ix_map_entries_to_bytes,"ax",@progbits
 	.literal_position
@@ -4829,7 +4829,7 @@ SPIFFS_bytes_to_ix_map_entries:
 	.global	SPIFFS_ix_map_entries_to_bytes
 	.type	SPIFFS_ix_map_entries_to_bytes, @function
 SPIFFS_ix_map_entries_to_bytes:
-.LFB59:
+.LFB68:
 	.loc 1 1325 0
 .LVL655:
 	entry	sp, 32
@@ -4854,7 +4854,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	mull	a2, a2, a3
 	.loc 1 1328 0
 	retw.n
-.LFE59:
+.LFE68:
 	.size	SPIFFS_ix_map_entries_to_bytes, .-SPIFFS_ix_map_entries_to_bytes
 	.comm	spiffs_mutex,4,4
 	.section	.debug_frame,"",@progbits
@@ -4876,10 +4876,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.byte	0x4
-	.4byte	.LCFI0-.LFB35
+	.4byte	.LCFI0-.LFB44
 	.byte	0xe
 	.uleb128 0xb0
 	.align	4
@@ -4888,10 +4888,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.byte	0x4
-	.4byte	.LCFI1-.LFB45
+	.4byte	.LCFI1-.LFB54
 	.byte	0xe
 	.uleb128 0xb0
 	.align	4
@@ -4900,10 +4900,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB60
-	.4byte	.LFE60-.LFB60
+	.4byte	.LFB69
+	.4byte	.LFE69-.LFB69
 	.byte	0x4
-	.4byte	.LCFI2-.LFB60
+	.4byte	.LCFI2-.LFB69
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4912,10 +4912,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI3-.LFB38
+	.4byte	.LCFI3-.LFB47
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -4924,10 +4924,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.byte	0x4
-	.4byte	.LCFI4-.LFB17
+	.4byte	.LCFI4-.LFB26
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4936,10 +4936,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI5-.LFB18
+	.4byte	.LCFI5-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4948,10 +4948,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI6-.LFB19
+	.4byte	.LCFI6-.LFB28
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4960,10 +4960,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI7-.LFB20
+	.4byte	.LCFI7-.LFB29
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -4972,10 +4972,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI8-.LFB21
+	.4byte	.LCFI8-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4984,10 +4984,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI9-.LFB22
+	.4byte	.LCFI9-.LFB31
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -4996,10 +4996,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE20-.LASFDE20
 .LASFDE20:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI10-.LFB23
+	.4byte	.LCFI10-.LFB32
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -5008,10 +5008,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE22-.LASFDE22
 .LASFDE22:
 	.4byte	.Lframe0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI11-.LFB24
+	.4byte	.LCFI11-.LFB33
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -5020,10 +5020,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE24-.LASFDE24
 .LASFDE24:
 	.4byte	.Lframe0
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.byte	0x4
-	.4byte	.LCFI12-.LFB25
+	.4byte	.LCFI12-.LFB34
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -5032,10 +5032,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE26-.LASFDE26
 .LASFDE26:
 	.4byte	.Lframe0
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.byte	0x4
-	.4byte	.LCFI13-.LFB26
+	.4byte	.LCFI13-.LFB35
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -5044,10 +5044,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE28-.LASFDE28
 .LASFDE28:
 	.4byte	.Lframe0
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.byte	0x4
-	.4byte	.LCFI14-.LFB27
+	.4byte	.LCFI14-.LFB36
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -5056,10 +5056,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE30-.LASFDE30
 .LASFDE30:
 	.4byte	.Lframe0
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.byte	0x4
-	.4byte	.LCFI15-.LFB29
+	.4byte	.LCFI15-.LFB38
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -5068,10 +5068,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE32-.LASFDE32
 .LASFDE32:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI16-.LFB31
+	.4byte	.LCFI16-.LFB40
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -5080,10 +5080,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE34-.LASFDE34
 .LASFDE34:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.byte	0x4
-	.4byte	.LCFI17-.LFB32
+	.4byte	.LCFI17-.LFB41
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -5092,10 +5092,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE36-.LASFDE36
 .LASFDE36:
 	.4byte	.Lframe0
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.byte	0x4
-	.4byte	.LCFI18-.LFB33
+	.4byte	.LCFI18-.LFB42
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -5104,10 +5104,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE38-.LASFDE38
 .LASFDE38:
 	.4byte	.Lframe0
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.byte	0x4
-	.4byte	.LCFI19-.LFB34
+	.4byte	.LCFI19-.LFB43
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -5116,10 +5116,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE40-.LASFDE40
 .LASFDE40:
 	.4byte	.Lframe0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.byte	0x4
-	.4byte	.LCFI20-.LFB36
+	.4byte	.LCFI20-.LFB45
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -5128,10 +5128,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE42-.LASFDE42
 .LASFDE42:
 	.4byte	.Lframe0
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.byte	0x4
-	.4byte	.LCFI21-.LFB37
+	.4byte	.LCFI21-.LFB46
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -5140,10 +5140,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE44-.LASFDE44
 .LASFDE44:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI22-.LFB39
+	.4byte	.LCFI22-.LFB48
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -5152,10 +5152,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE46-.LASFDE46
 .LASFDE46:
 	.4byte	.Lframe0
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.byte	0x4
-	.4byte	.LCFI23-.LFB40
+	.4byte	.LCFI23-.LFB49
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -5164,10 +5164,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE48-.LASFDE48
 .LASFDE48:
 	.4byte	.Lframe0
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.byte	0x4
-	.4byte	.LCFI24-.LFB41
+	.4byte	.LCFI24-.LFB50
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -5176,10 +5176,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE50-.LASFDE50
 .LASFDE50:
 	.4byte	.Lframe0
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.byte	0x4
-	.4byte	.LCFI25-.LFB42
+	.4byte	.LCFI25-.LFB51
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -5188,10 +5188,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE52-.LASFDE52
 .LASFDE52:
 	.4byte	.Lframe0
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.byte	0x4
-	.4byte	.LCFI26-.LFB43
+	.4byte	.LCFI26-.LFB52
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -5200,10 +5200,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE54-.LASFDE54
 .LASFDE54:
 	.4byte	.Lframe0
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.byte	0x4
-	.4byte	.LCFI27-.LFB44
+	.4byte	.LCFI27-.LFB53
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -5212,10 +5212,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE56-.LASFDE56
 .LASFDE56:
 	.4byte	.Lframe0
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.byte	0x4
-	.4byte	.LCFI28-.LFB46
+	.4byte	.LCFI28-.LFB55
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -5224,10 +5224,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE58-.LASFDE58
 .LASFDE58:
 	.4byte	.Lframe0
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.byte	0x4
-	.4byte	.LCFI29-.LFB47
+	.4byte	.LCFI29-.LFB56
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -5236,10 +5236,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE60-.LASFDE60
 .LASFDE60:
 	.4byte	.Lframe0
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
 	.byte	0x4
-	.4byte	.LCFI30-.LFB48
+	.4byte	.LCFI30-.LFB57
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -5248,10 +5248,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE62-.LASFDE62
 .LASFDE62:
 	.4byte	.Lframe0
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
 	.byte	0x4
-	.4byte	.LCFI31-.LFB49
+	.4byte	.LCFI31-.LFB58
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -5260,10 +5260,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE64-.LASFDE64
 .LASFDE64:
 	.4byte	.Lframe0
-	.4byte	.LFB50
-	.4byte	.LFE50-.LFB50
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
 	.byte	0x4
-	.4byte	.LCFI32-.LFB50
+	.4byte	.LCFI32-.LFB59
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -5272,10 +5272,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE66-.LASFDE66
 .LASFDE66:
 	.4byte	.Lframe0
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.byte	0x4
-	.4byte	.LCFI33-.LFB51
+	.4byte	.LCFI33-.LFB60
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -5284,10 +5284,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE68-.LASFDE68
 .LASFDE68:
 	.4byte	.Lframe0
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
 	.byte	0x4
-	.4byte	.LCFI34-.LFB52
+	.4byte	.LCFI34-.LFB61
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -5296,10 +5296,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE70-.LASFDE70
 .LASFDE70:
 	.4byte	.Lframe0
-	.4byte	.LFB53
-	.4byte	.LFE53-.LFB53
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
 	.byte	0x4
-	.4byte	.LCFI35-.LFB53
+	.4byte	.LCFI35-.LFB62
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -5308,10 +5308,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE72-.LASFDE72
 .LASFDE72:
 	.4byte	.Lframe0
-	.4byte	.LFB54
-	.4byte	.LFE54-.LFB54
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
 	.byte	0x4
-	.4byte	.LCFI36-.LFB54
+	.4byte	.LCFI36-.LFB63
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -5320,10 +5320,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE74-.LASFDE74
 .LASFDE74:
 	.4byte	.Lframe0
-	.4byte	.LFB55
-	.4byte	.LFE55-.LFB55
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
 	.byte	0x4
-	.4byte	.LCFI37-.LFB55
+	.4byte	.LCFI37-.LFB64
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -5332,10 +5332,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE76-.LASFDE76
 .LASFDE76:
 	.4byte	.Lframe0
-	.4byte	.LFB56
-	.4byte	.LFE56-.LFB56
+	.4byte	.LFB65
+	.4byte	.LFE65-.LFB65
 	.byte	0x4
-	.4byte	.LCFI38-.LFB56
+	.4byte	.LCFI38-.LFB65
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -5344,10 +5344,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE78-.LASFDE78
 .LASFDE78:
 	.4byte	.Lframe0
-	.4byte	.LFB57
-	.4byte	.LFE57-.LFB57
+	.4byte	.LFB66
+	.4byte	.LFE66-.LFB66
 	.byte	0x4
-	.4byte	.LCFI39-.LFB57
+	.4byte	.LCFI39-.LFB66
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -5356,10 +5356,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE80-.LASFDE80
 .LASFDE80:
 	.4byte	.Lframe0
-	.4byte	.LFB58
-	.4byte	.LFE58-.LFB58
+	.4byte	.LFB67
+	.4byte	.LFE67-.LFB67
 	.byte	0x4
-	.4byte	.LCFI40-.LFB58
+	.4byte	.LCFI40-.LFB67
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -5368,10 +5368,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LEFDE82-.LASFDE82
 .LASFDE82:
 	.4byte	.Lframe0
-	.4byte	.LFB59
-	.4byte	.LFE59-.LFB59
+	.4byte	.LFB68
+	.4byte	.LFE68-.LFB68
 	.byte	0x4
-	.4byte	.LCFI41-.LFB59
+	.4byte	.LCFI41-.LFB68
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -6463,8 +6463,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x2bb
 	.4byte	0xe1
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x9f9
@@ -6642,8 +6642,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x3da
 	.4byte	0xe1
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xb20
@@ -6795,8 +6795,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	0x4e7
 	.uleb128 0x2e
 	.4byte	0x852
-	.4byte	.LFB60
-	.4byte	.LFE60-.LFB60
+	.4byte	.LFB69
+	.4byte	.LFE69-.LFB69
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xbd8
@@ -6892,8 +6892,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x304
 	.4byte	0xe1
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xc8f
@@ -6989,8 +6989,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.byte	0x22
 	.4byte	0x10d
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xcb7
@@ -7006,8 +7006,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.byte	0x26
 	.4byte	0xe1
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xd6d
@@ -7114,8 +7114,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.byte	0x47
 	.4byte	0xe1
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xdb3
@@ -7151,8 +7151,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.byte	0x4e
 	.4byte	0xe1
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xf79
@@ -7395,8 +7395,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LASF146
 	.byte	0x1
 	.byte	0x96
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x102f
@@ -7497,8 +7497,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.byte	0xa9
 	.4byte	0xe1
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1057
@@ -7513,8 +7513,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LASF147
 	.byte	0x1
 	.byte	0xad
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1079
@@ -7531,8 +7531,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.byte	0xb1
 	.4byte	0xe1
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x11aa
@@ -7720,8 +7720,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.byte	0xc9
 	.4byte	0x148
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x13ff
@@ -8085,8 +8085,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x119
 	.4byte	0x148
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1549
@@ -8280,8 +8280,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x139
 	.4byte	0x148
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x169d
@@ -8519,8 +8519,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x19d
 	.4byte	0xe1
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1876
@@ -8715,8 +8715,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x1be
 	.4byte	0xe1
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1a71
@@ -8979,8 +8979,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x23e
 	.4byte	0xe1
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1bda
@@ -9170,8 +9170,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x26f
 	.4byte	0xe1
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1d63
@@ -9403,8 +9403,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x299
 	.4byte	0xe1
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1e46
@@ -9532,8 +9532,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x2d5
 	.4byte	0xe1
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1f52
@@ -9692,8 +9692,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x2ea
 	.4byte	0xe1
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2068
@@ -9864,8 +9864,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x325
 	.4byte	0xe1
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2102
@@ -9950,8 +9950,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x335
 	.4byte	0xe1
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x21d3
@@ -10073,8 +10073,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x349
 	.4byte	0xe1
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x23ba
@@ -10374,8 +10374,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x380
 	.4byte	0xe1
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x253e
@@ -10609,8 +10609,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x3a5
 	.4byte	0xe1
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x264a
@@ -10774,8 +10774,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x3c7
 	.4byte	0x2690
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2690
@@ -10807,8 +10807,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x3ff
 	.4byte	0xb20
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2780
@@ -10948,8 +10948,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x421
 	.4byte	0xe1
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x27a9
@@ -10965,8 +10965,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x427
 	.4byte	0xe1
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x286d
@@ -11078,8 +11078,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x43e
 	.4byte	0xe1
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2947
@@ -11188,8 +11188,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x456
 	.4byte	0xe1
-	.4byte	.LFB50
-	.4byte	.LFE50-.LFB50
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2a03
@@ -11295,8 +11295,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x469
 	.4byte	0xe1
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2ab9
@@ -11402,8 +11402,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x47b
 	.4byte	0xe1
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2bbe
@@ -11562,8 +11562,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x492
 	.4byte	0xe1
-	.4byte	.LFB53
-	.4byte	.LFE53-.LFB53
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2cc0
@@ -11719,8 +11719,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x4a9
 	.4byte	0xe1
-	.4byte	.LFB54
-	.4byte	.LFE54-.LFB54
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2d2f
@@ -11783,8 +11783,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x4b2
 	.4byte	0xe1
-	.4byte	.LFB55
-	.4byte	.LFE55-.LFB55
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2e6f
@@ -11965,8 +11965,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x4d3
 	.4byte	0xe1
-	.4byte	.LFB56
-	.4byte	.LFE56-.LFB56
+	.4byte	.LFB65
+	.4byte	.LFE65-.LFB65
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2f14
@@ -12053,8 +12053,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x4e9
 	.4byte	0xe1
-	.4byte	.LFB57
-	.4byte	.LFE57-.LFB57
+	.4byte	.LFB66
+	.4byte	.LFE66-.LFB66
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x308f
@@ -12261,8 +12261,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x527
 	.4byte	0xe1
-	.4byte	.LFB58
-	.4byte	.LFE58-.LFB58
+	.4byte	.LFB67
+	.4byte	.LFE67-.LFB67
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x30ce
@@ -12284,8 +12284,8 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x1
 	.2byte	0x52d
 	.4byte	0xe1
-	.4byte	.LFB59
-	.4byte	.LFE59-.LFB59
+	.4byte	.LFB68
+	.4byte	.LFE68-.LFB68
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x3108
@@ -13474,7 +13474,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL7
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -13488,7 +13488,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL6
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -13502,7 +13502,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL6
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -13528,7 +13528,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL17-1
-	.4byte	.LFE45
+	.4byte	.LFE54
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -13542,7 +13542,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL21
-	.4byte	.LFE45
+	.4byte	.LFE54
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -13556,7 +13556,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL12
-	.4byte	.LFE45
+	.4byte	.LFE54
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -13581,7 +13581,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL14
-	.4byte	.LFE45
+	.4byte	.LFE54
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -13595,7 +13595,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL16
-	.4byte	.LFE45
+	.4byte	.LFE54
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -13621,7 +13621,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL32
-	.4byte	.LFE60
+	.4byte	.LFE69
 	.2byte	0x1
 	.byte	0x57
 	.4byte	0
@@ -13632,7 +13632,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL29
-	.4byte	.LFE60
+	.4byte	.LFE69
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -13643,7 +13643,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL30
-	.4byte	.LFE60
+	.4byte	.LFE69
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -13668,7 +13668,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL36
-	.4byte	.LFE60
+	.4byte	.LFE69
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -13716,7 +13716,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL46
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -13730,7 +13730,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL40
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -13749,7 +13749,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL44
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -13760,7 +13760,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL48
-	.4byte	.LFE17
+	.4byte	.LFE26
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -13803,7 +13803,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL62
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -13820,7 +13820,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0xd8d5
 	.byte	0x9f
 	.4byte	.LVL62
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
@@ -13847,7 +13847,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.sleb128 -1
 	.byte	0x9f
 	.4byte	.LVL64
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -13858,7 +13858,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL67
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -13883,7 +13883,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL104
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -13897,7 +13897,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL74
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -13911,7 +13911,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL77
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14111,7 +14111,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL114
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14147,7 +14147,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL136
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14194,7 +14194,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL133
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14208,7 +14208,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL117
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14222,7 +14222,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL133
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -14233,7 +14233,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL138
-	.4byte	.LFE25
+	.4byte	.LFE34
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -14244,7 +14244,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL142
-	.4byte	.LFE25
+	.4byte	.LFE34
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -48
@@ -14282,7 +14282,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x54
 	.byte	0x9f
 	.4byte	.LVL176
-	.4byte	.LFE25
+	.4byte	.LFE34
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -14293,7 +14293,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL145
-	.4byte	.LFE25
+	.4byte	.LFE34
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -44
@@ -14347,7 +14347,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL177
-	.4byte	.LFE25
+	.4byte	.LFE34
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -14358,7 +14358,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL180
-	.4byte	.LFE26
+	.4byte	.LFE35
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -14369,7 +14369,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL188
-	.4byte	.LFE26
+	.4byte	.LFE35
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14387,7 +14387,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x5e
 	.4byte	.LVL181-1
-	.4byte	.LFE26
+	.4byte	.LFE35
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14405,7 +14405,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL188
-	.4byte	.LFE26
+	.4byte	.LFE35
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -14445,7 +14445,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL219
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -14460,7 +14460,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x59
 	.4byte	.LVL196-1
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14474,7 +14474,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL212
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14488,7 +14488,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL207
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14512,7 +14512,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0xd8d1
 	.byte	0x9f
 	.4byte	.LVL208
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -14523,7 +14523,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL222
-	.4byte	.LFE29
+	.4byte	.LFE38
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -14534,7 +14534,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL233
-	.4byte	.LFE29
+	.4byte	.LFE38
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14548,7 +14548,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL246
-	.4byte	.LFE29
+	.4byte	.LFE38
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14573,7 +14573,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL239
-	.4byte	.LFE29
+	.4byte	.LFE38
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14616,7 +14616,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL246
-	.4byte	.LFE29
+	.4byte	.LFE38
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14644,7 +14644,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL222
-	.4byte	.LFE29
+	.4byte	.LFE38
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -14706,7 +14706,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL278
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x1
 	.byte	0x57
 	.4byte	0
@@ -14732,7 +14732,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL254
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14746,7 +14746,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL259
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -48
@@ -14803,7 +14803,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL288
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -14820,7 +14820,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x31
 	.byte	0x9f
 	.4byte	.LVL288
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x2
 	.byte	0x31
 	.byte	0x9f
@@ -14923,7 +14923,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL291
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -14941,7 +14941,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x53
 	.byte	0x9f
 	.4byte	.LVL322
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -14992,7 +14992,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL322
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -15013,7 +15013,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL306
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15111,7 +15111,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x13
 	.byte	0x9f
 	.4byte	.LVL325
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x11
 	.byte	0x79
 	.sleb128 8
@@ -15148,7 +15148,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.uleb128 0
 	.byte	0x9f
 	.4byte	.LVL323
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0xc
 	.byte	0x74
 	.sleb128 0
@@ -15181,7 +15181,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL327
-	.4byte	.LFE33
+	.4byte	.LFE42
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -15192,7 +15192,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL334
-	.4byte	.LFE33
+	.4byte	.LFE42
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15206,7 +15206,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL334
-	.4byte	.LFE33
+	.4byte	.LFE42
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -15228,7 +15228,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL363
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15260,7 +15260,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL351
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15292,7 +15292,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL361
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -15314,7 +15314,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL378
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15361,7 +15361,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL375
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15375,7 +15375,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL378
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -15397,7 +15397,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL391
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15419,7 +15419,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x5c
 	.4byte	.LVL390-1
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15433,7 +15433,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL391
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -15444,7 +15444,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL400
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15495,7 +15495,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL402
-	.4byte	.LFE40
+	.4byte	.LFE49
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -15506,7 +15506,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL404
-	.4byte	.LFE40
+	.4byte	.LFE49
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -15522,7 +15522,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL410
-	.4byte	.LFE40
+	.4byte	.LFE49
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -15533,7 +15533,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL413
-	.4byte	.LFE41
+	.4byte	.LFE50
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -15544,7 +15544,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL434
-	.4byte	.LFE41
+	.4byte	.LFE50
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15570,7 +15570,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL432
-	.4byte	.LFE41
+	.4byte	.LFE50
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -15581,7 +15581,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL438
-	.4byte	.LFE42
+	.4byte	.LFE51
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -15592,7 +15592,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL443
-	.4byte	.LFE42
+	.4byte	.LFE51
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15606,7 +15606,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL450
-	.4byte	.LFE42
+	.4byte	.LFE51
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15624,7 +15624,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL451
-	.4byte	.LFE42
+	.4byte	.LFE51
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -15635,7 +15635,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL455
-	.4byte	.LFE43
+	.4byte	.LFE52
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -15664,7 +15664,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL461
-	.4byte	.LFE43
+	.4byte	.LFE52
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15692,7 +15692,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL469
-	.4byte	.LFE43
+	.4byte	.LFE52
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -15714,7 +15714,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL477
-	.4byte	.LFE44
+	.4byte	.LFE53
 	.2byte	0x2
 	.byte	0x72
 	.sleb128 0
@@ -15744,7 +15744,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x54
 	.byte	0x9f
 	.4byte	.LVL476
-	.4byte	.LFE44
+	.4byte	.LFE53
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -15777,7 +15777,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL486
-	.4byte	.LFE46
+	.4byte	.LFE55
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15791,7 +15791,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL487
-	.4byte	.LFE46
+	.4byte	.LFE55
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15822,7 +15822,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL488
-	.4byte	.LFE46
+	.4byte	.LFE55
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -15833,7 +15833,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL492
-	.4byte	.LFE47
+	.4byte	.LFE56
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15858,7 +15858,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL501
-	.4byte	.LFE48
+	.4byte	.LFE57
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -15883,7 +15883,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL517
-	.4byte	.LFE49
+	.4byte	.LFE58
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16013,7 +16013,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL531
-	.4byte	.LFE50
+	.4byte	.LFE59
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16027,7 +16027,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL523
-	.4byte	.LFE50
+	.4byte	.LFE59
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16052,7 +16052,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL543
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16088,7 +16088,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL540
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16124,7 +16124,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL558
-	.4byte	.LFE52
+	.4byte	.LFE61
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16156,7 +16156,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL556
-	.4byte	.LFE52
+	.4byte	.LFE61
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16178,7 +16178,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL560
-	.4byte	.LFE52
+	.4byte	.LFE61
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -16211,7 +16211,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL576
-	.4byte	.LFE53
+	.4byte	.LFE62
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16243,7 +16243,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL574
-	.4byte	.LFE53
+	.4byte	.LFE62
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16261,7 +16261,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL577
-	.4byte	.LFE53
+	.4byte	.LFE62
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -16272,7 +16272,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL582
-	.4byte	.LFE54
+	.4byte	.LFE63
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16286,7 +16286,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL585
-	.4byte	.LFE55
+	.4byte	.LFE64
 	.2byte	0x1
 	.byte	0x57
 	.4byte	0
@@ -16315,7 +16315,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL592
-	.4byte	.LFE55
+	.4byte	.LFE64
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16334,7 +16334,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x74
 	.sleb128 4
 	.4byte	.LVL599-1
-	.4byte	.LFE55
+	.4byte	.LFE64
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16363,7 +16363,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x5e
 	.4byte	.LVL590-1
-	.4byte	.LFE55
+	.4byte	.LFE64
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16392,7 +16392,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL590-1
-	.4byte	.LFE55
+	.4byte	.LFE64
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16414,7 +16414,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL601
-	.4byte	.LFE55
+	.4byte	.LFE64
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -16425,7 +16425,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL604
-	.4byte	.LFE56
+	.4byte	.LFE65
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -16454,7 +16454,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL611
-	.4byte	.LFE56
+	.4byte	.LFE65
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16468,7 +16468,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL648
-	.4byte	.LFE57
+	.4byte	.LFE66
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16553,7 +16553,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x23
 	.uleb128 0x4
 	.4byte	.LVL642-1
-	.4byte	.LFE57
+	.4byte	.LFE66
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16678,7 +16678,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL653
-	.4byte	.LFE58
+	.4byte	.LFE67
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16703,7 +16703,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL654
-	.4byte	.LFE58
+	.4byte	.LFE67
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16728,7 +16728,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL659
-	.4byte	.LFE59
+	.4byte	.LFE68
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16749,7 +16749,7 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0x53
 	.byte	0x9f
 	.4byte	.LVL658
-	.4byte	.LFE59
+	.4byte	.LFE68
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -16762,38 +16762,24 @@ SPIFFS_ix_map_entries_to_bytes:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
-	.4byte	.LFB60
-	.4byte	.LFE60-.LFB60
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
+	.4byte	.LFB69
+	.4byte	.LFE69-.LFB69
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.4byte	.LFB26
 	.4byte	.LFE26-.LFB26
 	.4byte	.LFB27
 	.4byte	.LFE27-.LFB27
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.4byte	.LFB29
 	.4byte	.LFE29-.LFB29
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.4byte	.LFB31
 	.4byte	.LFE31-.LFB31
 	.4byte	.LFB32
@@ -16802,12 +16788,12 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LFE33-.LFB33
 	.4byte	.LFB34
 	.4byte	.LFE34-.LFB34
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.4byte	.LFB36
 	.4byte	.LFE36-.LFB36
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.4byte	.LFB40
 	.4byte	.LFE40-.LFB40
 	.4byte	.LFB41
@@ -16816,12 +16802,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LFE42-.LFB42
 	.4byte	.LFB43
 	.4byte	.LFE43-.LFB43
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.4byte	.LFB46
 	.4byte	.LFE46-.LFB46
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
 	.4byte	.LFB48
 	.4byte	.LFE48-.LFB48
 	.4byte	.LFB49
@@ -16834,8 +16818,6 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LFE52-.LFB52
 	.4byte	.LFB53
 	.4byte	.LFE53-.LFB53
-	.4byte	.LFB54
-	.4byte	.LFE54-.LFB54
 	.4byte	.LFB55
 	.4byte	.LFE55-.LFB55
 	.4byte	.LFB56
@@ -16846,6 +16828,24 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LFE58-.LFB58
 	.4byte	.LFB59
 	.4byte	.LFE59-.LFB59
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
+	.4byte	.LFB65
+	.4byte	.LFE65-.LFB65
+	.4byte	.LFB66
+	.4byte	.LFE66-.LFB66
+	.4byte	.LFB67
+	.4byte	.LFE67-.LFB67
+	.4byte	.LFB68
+	.4byte	.LFE68-.LFB68
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -16868,38 +16868,24 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LBE19
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB35
-	.4byte	.LFE35
-	.4byte	.LFB45
-	.4byte	.LFE45
-	.4byte	.LFB60
-	.4byte	.LFE60
-	.4byte	.LFB38
-	.4byte	.LFE38
-	.4byte	.LFB17
-	.4byte	.LFE17
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB24
-	.4byte	.LFE24
-	.4byte	.LFB25
-	.4byte	.LFE25
+	.4byte	.LFB44
+	.4byte	.LFE44
+	.4byte	.LFB54
+	.4byte	.LFE54
+	.4byte	.LFB69
+	.4byte	.LFE69
+	.4byte	.LFB47
+	.4byte	.LFE47
 	.4byte	.LFB26
 	.4byte	.LFE26
 	.4byte	.LFB27
 	.4byte	.LFE27
+	.4byte	.LFB28
+	.4byte	.LFE28
 	.4byte	.LFB29
 	.4byte	.LFE29
+	.4byte	.LFB30
+	.4byte	.LFE30
 	.4byte	.LFB31
 	.4byte	.LFE31
 	.4byte	.LFB32
@@ -16908,12 +16894,12 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LFE33
 	.4byte	.LFB34
 	.4byte	.LFE34
+	.4byte	.LFB35
+	.4byte	.LFE35
 	.4byte	.LFB36
 	.4byte	.LFE36
-	.4byte	.LFB37
-	.4byte	.LFE37
-	.4byte	.LFB39
-	.4byte	.LFE39
+	.4byte	.LFB38
+	.4byte	.LFE38
 	.4byte	.LFB40
 	.4byte	.LFE40
 	.4byte	.LFB41
@@ -16922,12 +16908,10 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LFE42
 	.4byte	.LFB43
 	.4byte	.LFE43
-	.4byte	.LFB44
-	.4byte	.LFE44
+	.4byte	.LFB45
+	.4byte	.LFE45
 	.4byte	.LFB46
 	.4byte	.LFE46
-	.4byte	.LFB47
-	.4byte	.LFE47
 	.4byte	.LFB48
 	.4byte	.LFE48
 	.4byte	.LFB49
@@ -16940,8 +16924,6 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LFE52
 	.4byte	.LFB53
 	.4byte	.LFE53
-	.4byte	.LFB54
-	.4byte	.LFE54
 	.4byte	.LFB55
 	.4byte	.LFE55
 	.4byte	.LFB56
@@ -16952,6 +16934,24 @@ SPIFFS_ix_map_entries_to_bytes:
 	.4byte	.LFE58
 	.4byte	.LFB59
 	.4byte	.LFE59
+	.4byte	.LFB60
+	.4byte	.LFE60
+	.4byte	.LFB61
+	.4byte	.LFE61
+	.4byte	.LFB62
+	.4byte	.LFE62
+	.4byte	.LFB63
+	.4byte	.LFE63
+	.4byte	.LFB64
+	.4byte	.LFE64
+	.4byte	.LFB65
+	.4byte	.LFE65
+	.4byte	.LFB66
+	.4byte	.LFE66
+	.4byte	.LFB67
+	.4byte	.LFE67
+	.4byte	.LFB68
+	.4byte	.LFE68
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

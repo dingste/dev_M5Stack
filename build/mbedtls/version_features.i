@@ -677,7 +677,7 @@ extern long double strtold (const char *restrict, char **restrict);
 void *esp_mbedtls_mem_calloc(size_t n, size_t size);
 void esp_mbedtls_mem_free(void *ptr);
 # 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
-# 2717 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h"
+# 2758 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h" 1
 # 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 1
@@ -685,9 +685,9 @@ void esp_mbedtls_mem_free(void *ptr);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed/limits.h" 1 3 4
 # 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 2
 # 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h" 2
-# 681 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
+# 706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
 typedef int mbedtls_iso_c_forbids_empty_translation_units;
-# 2718 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
+# 2759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
 # 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c" 2
 
 
@@ -844,9 +844,9 @@ static const char *features[] = {
 
 
     "MBEDTLS_PLATFORM_MEMORY",
-# 91 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
     "MBEDTLS_AES_ALT",
-# 151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
     "MBEDTLS_SHA1_ALT",
 
 
@@ -854,12 +854,12 @@ static const char *features[] = {
 
 
     "MBEDTLS_SHA512_ALT",
-# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
     "MBEDTLS_ENTROPY_HARDWARE_ALT",
 
 
     "MBEDTLS_AES_ROM_TABLES",
-# 265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
     "MBEDTLS_CIPHER_MODE_CBC",
 
 
@@ -888,7 +888,7 @@ static const char *features[] = {
 
 
     "MBEDTLS_CIPHER_PADDING_ZEROS",
-# 301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 313 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
     "MBEDTLS_ECP_DP_SECP192R1_ENABLED",
 
 
@@ -929,6 +929,9 @@ static const char *features[] = {
 
 
     "MBEDTLS_ECP_NIST_OPTIM",
+
+
+
 
 
     "MBEDTLS_ECDSA_DETERMINISTIC",
@@ -983,7 +986,7 @@ static const char *features[] = {
 
 
     "MBEDTLS_NO_PLATFORM_ENTROPY",
-# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
     "MBEDTLS_PK_RSA_ALT_SUPPORT",
 
 
@@ -1003,7 +1006,7 @@ static const char *features[] = {
 
 
     "MBEDTLS_SSL_ALL_ALERT_MESSAGES",
-# 436 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 451 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
     "MBEDTLS_SSL_ENCRYPT_THEN_MAC",
 
 
@@ -1011,9 +1014,9 @@ static const char *features[] = {
 
 
     "MBEDTLS_SSL_FALLBACK_SCSV",
-# 451 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 466 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
     "MBEDTLS_SSL_RENEGOTIATION",
-# 460 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
     "MBEDTLS_SSL_MAX_FRAGMENT_LENGTH",
 
 
@@ -1057,9 +1060,9 @@ static const char *features[] = {
 
 
     "MBEDTLS_SSL_TRUNCATED_HMAC",
-# 514 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 529 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
     "MBEDTLS_VERSION_FEATURES",
-# 523 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
     "MBEDTLS_X509_CHECK_KEY_USAGE",
 
 
@@ -1091,12 +1094,12 @@ static const char *features[] = {
 
 
     "MBEDTLS_BIGNUM_C",
-# 565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 580 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
     "MBEDTLS_CCM_C",
 
 
     "MBEDTLS_CERTS_C",
-# 577 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
     "MBEDTLS_CIPHER_C",
 
 
@@ -1104,7 +1107,7 @@ static const char *features[] = {
 
 
     "MBEDTLS_CTR_DRBG_C",
-# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
     "MBEDTLS_DHM_C",
 
 
@@ -1127,7 +1130,7 @@ static const char *features[] = {
 
 
     "MBEDTLS_GCM_C",
-# 622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 637 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
     "MBEDTLS_HMAC_DRBG_C",
 
 
@@ -1135,9 +1138,9 @@ static const char *features[] = {
 
 
     "MBEDTLS_MD_C",
-# 637 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 652 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
     "MBEDTLS_MD5_C",
-# 646 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 661 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
     "MBEDTLS_OID_C",
 
 
@@ -1169,7 +1172,7 @@ static const char *features[] = {
 
 
     "MBEDTLS_PLATFORM_C",
-# 685 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
     "MBEDTLS_RSA_C",
 
 
@@ -1198,7 +1201,7 @@ static const char *features[] = {
 
 
     "MBEDTLS_SSL_TLS_C",
-# 721 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 736 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
     "MBEDTLS_VERSION_C",
 
 
@@ -1227,10 +1230,10 @@ static const char *features[] = {
 
 
     
-# 748 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c" 3 4
+# 763 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c" 3 4
    ((void *)0)
 
-# 749 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 764 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
 };
 
 int mbedtls_version_check_feature( const char *feature )
@@ -1238,23 +1241,23 @@ int mbedtls_version_check_feature( const char *feature )
     const char **idx = features;
 
     if( *idx == 
-# 755 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c" 3 4
+# 770 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c" 3 4
                ((void *)0) 
-# 755 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 770 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
                     )
         return( -2 );
 
     if( feature == 
-# 758 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c" 3 4
+# 773 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c" 3 4
                   ((void *)0) 
-# 758 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 773 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
                        )
         return( -1 );
 
     while( *idx != 
-# 761 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c" 3 4
+# 776 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c" 3 4
                   ((void *)0) 
-# 761 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
+# 776 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/version_features.c"
                        )
     {
         if( !strcmp( *idx, feature ) )

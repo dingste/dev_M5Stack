@@ -677,7 +677,7 @@ extern long double strtold (const char *restrict, char **restrict);
 void *esp_mbedtls_mem_calloc(size_t n, size_t size);
 void esp_mbedtls_mem_free(void *ptr);
 # 122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
-# 2717 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h"
+# 2758 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h" 1
 # 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 1
@@ -685,9 +685,9 @@ void esp_mbedtls_mem_free(void *ptr);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed/limits.h" 1 3 4
 # 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 2
 # 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h" 2
-# 681 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
+# 706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h"
 typedef int mbedtls_iso_c_forbids_empty_translation_units;
-# 2718 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
+# 2759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h" 2
 # 42 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 2
 
 
@@ -1358,15 +1358,15 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h" 2
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
     typedef int32_t mbedtls_mpi_sint;
     typedef uint32_t mbedtls_mpi_uint;
 
         typedef uint64_t mbedtls_t_udbl;
-# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 187 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 typedef struct mbedtls_mpi
 {
     int s;
@@ -1374,20 +1374,15 @@ typedef struct mbedtls_mpi
     mbedtls_mpi_uint *p;
 }
 mbedtls_mpi;
-# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 void mbedtls_mpi_init( mbedtls_mpi *X );
-
-
-
-
-
-
+# 212 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 void mbedtls_mpi_free( mbedtls_mpi *X );
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_grow( mbedtls_mpi *X, size_t nblimbs );
-# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_shrink( mbedtls_mpi *X, size_t nblimbs );
-# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_copy( mbedtls_mpi *X, const mbedtls_mpi *Y );
 
 
@@ -1397,93 +1392,124 @@ int mbedtls_mpi_copy( mbedtls_mpi *X, const mbedtls_mpi *Y );
 
 
 void mbedtls_mpi_swap( mbedtls_mpi *X, mbedtls_mpi *Y );
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_safe_cond_assign( mbedtls_mpi *X, const mbedtls_mpi *Y, unsigned char assign );
-# 289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 318 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_safe_cond_swap( mbedtls_mpi *X, mbedtls_mpi *Y, unsigned char assign );
-# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_lset( mbedtls_mpi *X, mbedtls_mpi_sint z );
-# 310 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_get_bit( const mbedtls_mpi *X, size_t pos );
-# 326 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_set_bit( mbedtls_mpi *X, size_t pos, unsigned char val );
-# 336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 373 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 size_t mbedtls_mpi_lsb( const mbedtls_mpi *X );
-# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 size_t mbedtls_mpi_bitlen( const mbedtls_mpi *X );
-
-
-
-
-
-
+# 402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 size_t mbedtls_mpi_size( const mbedtls_mpi *X );
-# 364 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 414 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_read_string( mbedtls_mpi *X, int radix, const char *s );
-# 382 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_write_string( const mbedtls_mpi *X, int radix,
                               char *buf, size_t buflen, size_t *olen );
-# 406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_read_file( mbedtls_mpi *X, int radix, FILE *fin );
-# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_write_file( const char *p, const mbedtls_mpi *X, int radix, FILE *fout );
-# 433 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_read_binary( mbedtls_mpi *X, const unsigned char *buf, size_t buflen );
-# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_write_binary( const mbedtls_mpi *X, unsigned char *buf, size_t buflen );
-# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 480 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_write_file( const char *p, const mbedtls_mpi *X,
+                            int radix, FILE *fout );
+# 496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_read_binary( mbedtls_mpi *X, const unsigned char *buf,
+                             size_t buflen );
+# 513 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_write_binary( const mbedtls_mpi *X, unsigned char *buf,
+                              size_t buflen );
+# 526 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_shift_l( mbedtls_mpi *X, size_t count );
-# 469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_shift_r( mbedtls_mpi *X, size_t count );
-# 481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_cmp_abs( const mbedtls_mpi *X, const mbedtls_mpi *Y );
-# 493 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_cmp_mpi( const mbedtls_mpi *X, const mbedtls_mpi *Y );
-# 505 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 579 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_lt_mpi_ct( const mbedtls_mpi *X, const mbedtls_mpi *Y,
+        unsigned *ret );
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_cmp_int( const mbedtls_mpi *X, mbedtls_mpi_sint z );
-# 517 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_add_abs( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 529 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_sub_abs( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 541 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_add_mpi( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_sub_mpi( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_add_int( mbedtls_mpi *X, const mbedtls_mpi *A, mbedtls_mpi_sint b );
-# 577 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_sub_int( mbedtls_mpi *X, const mbedtls_mpi *A, mbedtls_mpi_sint b );
-# 589 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_mul_mpi( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 603 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_mul_int( mbedtls_mpi *X, const mbedtls_mpi *A, mbedtls_mpi_uint b );
-# 619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_div_mpi( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_div_int( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A, mbedtls_mpi_sint b );
-# 649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_mod_mpi( mbedtls_mpi *R, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 663 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_mod_int( mbedtls_mpi_uint *r, const mbedtls_mpi *A, mbedtls_mpi_sint b );
-# 683 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_exp_mod( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *E, const mbedtls_mpi *N, mbedtls_mpi *_RR );
-# 700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_add_abs( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 620 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_sub_abs( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 634 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_add_mpi( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 648 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_sub_mpi( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 662 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_add_int( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b );
+# 677 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_sub_int( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b );
+# 692 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_mul_mpi( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 708 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_mul_int( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         mbedtls_mpi_uint b );
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_div_mpi( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 750 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_div_int( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b );
+# 770 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_mod_mpi( mbedtls_mpi *R, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B );
+# 789 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_mod_int( mbedtls_mpi_uint *r, const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b );
+# 818 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_exp_mod( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *E, const mbedtls_mpi *N,
+                         mbedtls_mpi *_RR );
+# 839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_fill_random( mbedtls_mpi *X, size_t size,
                      int (*f_rng)(void *, unsigned char *, size_t),
                      void *p_rng );
-# 714 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_gcd( mbedtls_mpi *G, const mbedtls_mpi *A, const mbedtls_mpi *B );
-# 728 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_inv_mod( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *N );
-# 741 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_is_prime( const mbedtls_mpi *X,
-                  int (*f_rng)(void *, unsigned char *, size_t),
-                  void *p_rng );
-# 759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
-int mbedtls_mpi_gen_prime( mbedtls_mpi *X, size_t nbits, int dh_flag,
+# 854 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_gcd( mbedtls_mpi *G, const mbedtls_mpi *A,
+                     const mbedtls_mpi *B );
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_inv_mod( mbedtls_mpi *X, const mbedtls_mpi *A,
+                         const mbedtls_mpi *N );
+# 901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+ int mbedtls_mpi_is_prime( const mbedtls_mpi *X,
+                          int (*f_rng)(void *, unsigned char *, size_t),
+                          void *p_rng );
+# 934 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_is_prime_ext( const mbedtls_mpi *X, int rounds,
+                              int (*f_rng)(void *, unsigned char *, size_t),
+                              void *p_rng );
+
+
+
+
+
+
+typedef enum {
+    MBEDTLS_MPI_GEN_PRIME_FLAG_DH = 0x0001,
+    MBEDTLS_MPI_GEN_PRIME_FLAG_LOW_ERR = 0x0002,
+} mbedtls_mpi_gen_prime_flag_t;
+# 967 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+int mbedtls_mpi_gen_prime( mbedtls_mpi *X, size_t nbits, int flags,
                    int (*f_rng)(void *, unsigned char *, size_t),
                    void *p_rng );
-# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
+# 981 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h"
 int mbedtls_mpi_self_test( int verbose );
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/bignum.h" 2
 # 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/port/include/mbedtls/bignum.h"
@@ -1494,15 +1520,15 @@ void esp_mpi_release_hardware(void);
 int esp_mpi_mul_mpi_mod(mbedtls_mpi *Z, const mbedtls_mpi *X, const mbedtls_mpi *Y, const mbedtls_mpi *M);
 # 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bn_mul.h" 1
-# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bn_mul.h"
+# 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bn_mul.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bignum.h" 1
-# 42 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bn_mul.h" 2
+# 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/bn_mul.h" 2
 # 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h" 1
 # 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
 # 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h" 2
-# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h"
+# 159 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_util.h"
 void mbedtls_platform_zeroize( void *buf, size_t len );
 # 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 2
 
@@ -1735,26 +1761,26 @@ int clock_getres (clockid_t clock_id, struct timespec *res);
 # 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform_time.h" 2
 typedef time_t mbedtls_time_t;
 # 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h" 2
-# 123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h" 2
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h" 2
 extern void *mbedtls_calloc( size_t n, size_t size );
 extern void mbedtls_free( void *ptr );
-# 136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 int mbedtls_platform_set_calloc_free( void * (*calloc_func)( size_t, size_t ),
                               void (*free_func)( void * ) );
-# 318 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 typedef struct mbedtls_platform_context
 {
     char dummy;
 }
 mbedtls_platform_context;
-# 343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 int mbedtls_platform_setup( mbedtls_platform_context *ctx );
-# 358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
+# 361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/include/mbedtls/platform.h"
 void mbedtls_platform_teardown( mbedtls_platform_context *ctx );
 # 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 2
-# 78 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 83 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
 static void mbedtls_mpi_zeroize( mbedtls_mpi_uint *v, size_t n )
 {
     mbedtls_platform_zeroize( v, (sizeof(mbedtls_mpi_uint)) * n );
@@ -1765,19 +1791,14 @@ static void mbedtls_mpi_zeroize( mbedtls_mpi_uint *v, size_t n )
 
 void mbedtls_mpi_init( mbedtls_mpi *X )
 {
-    if( X == 
-# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
-            ((void *)0) 
-# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
-                 )
-        return;
+    do { } while( 0 );
 
     X->s = 1;
     X->n = 0;
     X->p = 
-# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
           ((void *)0)
-# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
               ;
 }
 
@@ -1787,16 +1808,16 @@ void mbedtls_mpi_init( mbedtls_mpi *X )
 void mbedtls_mpi_free( mbedtls_mpi *X )
 {
     if( X == 
-# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
             ((void *)0) 
-# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
                  )
         return;
 
     if( X->p != 
-# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+# 108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
                ((void *)0) 
-# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
                     )
     {
         mbedtls_mpi_zeroize( X->p, X->n );
@@ -1806,9 +1827,9 @@ void mbedtls_mpi_free( mbedtls_mpi *X )
     X->s = 1;
     X->n = 0;
     X->p = 
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+# 116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
           ((void *)0)
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
               ;
 }
 
@@ -1818,6 +1839,7 @@ void mbedtls_mpi_free( mbedtls_mpi *X )
 int mbedtls_mpi_grow( mbedtls_mpi *X, size_t nblimbs )
 {
     mbedtls_mpi_uint *p;
+    do { } while( 0 );
 
     if( nblimbs > 10000 )
         return( -0x0010 );
@@ -1825,16 +1847,16 @@ int mbedtls_mpi_grow( mbedtls_mpi *X, size_t nblimbs )
     if( X->n < nblimbs )
     {
         if( ( p = (mbedtls_mpi_uint*)mbedtls_calloc( nblimbs, (sizeof(mbedtls_mpi_uint)) ) ) == 
-# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
                                                                         ((void *)0) 
-# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
                                                                              )
             return( -0x0010 );
 
         if( X->p != 
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
                    ((void *)0) 
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
                         )
         {
             memcpy( p, X->p, X->n * (sizeof(mbedtls_mpi_uint)) );
@@ -1857,10 +1879,15 @@ int mbedtls_mpi_shrink( mbedtls_mpi *X, size_t nblimbs )
 {
     mbedtls_mpi_uint *p;
     size_t i;
+    do { } while( 0 );
+
+    if( nblimbs > 10000 )
+        return( -0x0010 );
 
 
     if( X->n <= nblimbs )
         return( mbedtls_mpi_grow( X, nblimbs ) );
+
 
     for( i = X->n - 1; i > 0; i-- )
         if( X->p[i] != 0 )
@@ -1871,16 +1898,16 @@ int mbedtls_mpi_shrink( mbedtls_mpi *X, size_t nblimbs )
         i = nblimbs;
 
     if( ( p = (mbedtls_mpi_uint*)mbedtls_calloc( i, (sizeof(mbedtls_mpi_uint)) ) ) == 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
                                                               ((void *)0) 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
                                                                    )
         return( -0x0010 );
 
     if( X->p != 
-# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
                ((void *)0) 
-# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
                     )
     {
         memcpy( p, X->p, i * (sizeof(mbedtls_mpi_uint)) );
@@ -1901,15 +1928,13 @@ int mbedtls_mpi_copy( mbedtls_mpi *X, const mbedtls_mpi *Y )
 {
     int ret = 0;
     size_t i;
+    do { } while( 0 );
+    do { } while( 0 );
 
     if( X == Y )
         return( 0 );
 
-    if( Y->p == 
-# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
-               ((void *)0) 
-# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
-                    )
+    if( Y->n == 0 )
     {
         mbedtls_mpi_free( X );
         return( 0 );
@@ -1924,7 +1949,7 @@ int mbedtls_mpi_copy( mbedtls_mpi *X, const mbedtls_mpi *Y )
 
     if( X->n < i )
     {
-        do { if( ( ret = mbedtls_mpi_grow( X, i ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_grow( X, i )) ) != 0 ) goto cleanup; } while( 0 );
     }
     else
     {
@@ -1944,6 +1969,8 @@ cleanup:
 void mbedtls_mpi_swap( mbedtls_mpi *X, mbedtls_mpi *Y )
 {
     mbedtls_mpi T;
+    do { } while( 0 );
+    do { } while( 0 );
 
     memcpy( &T, X, sizeof( mbedtls_mpi ) );
     memcpy( X, Y, sizeof( mbedtls_mpi ) );
@@ -1959,11 +1986,13 @@ int mbedtls_mpi_safe_cond_assign( mbedtls_mpi *X, const mbedtls_mpi *Y, unsigned
 {
     int ret = 0;
     size_t i;
+    do { } while( 0 );
+    do { } while( 0 );
 
 
     assign = (assign | (unsigned char)-assign) >> 7;
 
-    do { if( ( ret = mbedtls_mpi_grow( X, Y->n ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_grow( X, Y->n )) ) != 0 ) goto cleanup; } while( 0 );
 
     X->s = X->s * ( 1 - assign ) + Y->s * assign;
 
@@ -1988,6 +2017,8 @@ int mbedtls_mpi_safe_cond_swap( mbedtls_mpi *X, mbedtls_mpi *Y, unsigned char sw
     int ret, s;
     size_t i;
     mbedtls_mpi_uint tmp;
+    do { } while( 0 );
+    do { } while( 0 );
 
     if( X == Y )
         return( 0 );
@@ -1995,8 +2026,8 @@ int mbedtls_mpi_safe_cond_swap( mbedtls_mpi *X, mbedtls_mpi *Y, unsigned char sw
 
     swap = (swap | (unsigned char)-swap) >> 7;
 
-    do { if( ( ret = mbedtls_mpi_grow( X, Y->n ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_grow( Y, X->n ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_grow( X, Y->n )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_grow( Y, X->n )) ) != 0 ) goto cleanup; } while( 0 );
 
     s = X->s;
     X->s = X->s * ( 1 - swap ) + Y->s * swap;
@@ -2020,8 +2051,9 @@ cleanup:
 int mbedtls_mpi_lset( mbedtls_mpi *X, mbedtls_mpi_sint z )
 {
     int ret;
+    do { } while( 0 );
 
-    do { if( ( ret = mbedtls_mpi_grow( X, 1 ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_grow( X, 1 )) ) != 0 ) goto cleanup; } while( 0 );
     memset( X->p, 0, X->n * (sizeof(mbedtls_mpi_uint)) );
 
     X->p[0] = ( z < 0 ) ? -z : z;
@@ -2037,20 +2069,20 @@ cleanup:
 
 int mbedtls_mpi_get_bit( const mbedtls_mpi *X, size_t pos )
 {
+    do { } while( 0 );
+
     if( X->n * ((sizeof(mbedtls_mpi_uint)) << 3) <= pos )
         return( 0 );
 
     return( ( X->p[pos / ((sizeof(mbedtls_mpi_uint)) << 3)] >> ( pos % ((sizeof(mbedtls_mpi_uint)) << 3) ) ) & 0x01 );
 }
-
-
-
-
+# 354 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
 int mbedtls_mpi_set_bit( mbedtls_mpi *X, size_t pos, unsigned char val )
 {
     int ret = 0;
     size_t off = pos / ((sizeof(mbedtls_mpi_uint)) << 3);
     size_t idx = pos % ((sizeof(mbedtls_mpi_uint)) << 3);
+    do { } while( 0 );
 
     if( val != 0 && val != 1 )
         return( -0x0004 );
@@ -2060,7 +2092,7 @@ int mbedtls_mpi_set_bit( mbedtls_mpi *X, size_t pos, unsigned char val )
         if( val == 0 )
             return( 0 );
 
-        do { if( ( ret = mbedtls_mpi_grow( X, off + 1 ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_grow( X, off + 1 )) ) != 0 ) goto cleanup; } while( 0 );
     }
 
     X->p[off] &= ~( (mbedtls_mpi_uint) 0x01 << idx );
@@ -2077,6 +2109,7 @@ cleanup:
 size_t mbedtls_mpi_lsb( const mbedtls_mpi *X )
 {
     size_t i, j, count = 0;
+    do { } while( 0 );
 
     for( i = 0; i < X->n; i++ )
         for( j = 0; j < ((sizeof(mbedtls_mpi_uint)) << 3); j++, count++ )
@@ -2157,6 +2190,8 @@ int mbedtls_mpi_read_string( mbedtls_mpi *X, int radix, const char *s )
     size_t i, j, slen, n;
     mbedtls_mpi_uint d;
     mbedtls_mpi T;
+    do { } while( 0 );
+    do { } while( 0 );
 
     if( radix < 2 || radix > 16 )
         return( -0x0004 );
@@ -2172,8 +2207,8 @@ int mbedtls_mpi_read_string( mbedtls_mpi *X, int radix, const char *s )
 
         n = ( (slen << 2) / ((sizeof(mbedtls_mpi_uint)) << 3) + ( (slen << 2) % ((sizeof(mbedtls_mpi_uint)) << 3) != 0 ) );
 
-        do { if( ( ret = mbedtls_mpi_grow( X, n ) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_lset( X, 0 ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_grow( X, n )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_lset( X, 0 )) ) != 0 ) goto cleanup; } while( 0 );
 
         for( i = slen, j = 0; i > 0; i--, j++ )
         {
@@ -2183,13 +2218,13 @@ int mbedtls_mpi_read_string( mbedtls_mpi *X, int radix, const char *s )
                 break;
             }
 
-            do { if( ( ret = mpi_get_digit( &d, radix, s[i - 1] ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mpi_get_digit( &d, radix, s[i - 1] )) ) != 0 ) goto cleanup; } while( 0 );
             X->p[j / ( 2 * (sizeof(mbedtls_mpi_uint)) )] |= d << ( ( j % ( 2 * (sizeof(mbedtls_mpi_uint)) ) ) << 2 );
         }
     }
     else
     {
-        do { if( ( ret = mbedtls_mpi_lset( X, 0 ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_lset( X, 0 )) ) != 0 ) goto cleanup; } while( 0 );
 
         for( i = 0; i < slen; i++ )
         {
@@ -2199,16 +2234,16 @@ int mbedtls_mpi_read_string( mbedtls_mpi *X, int radix, const char *s )
                 continue;
             }
 
-            do { if( ( ret = mpi_get_digit( &d, radix, s[i] ) ) != 0 ) goto cleanup; } while( 0 );
-            do { if( ( ret = mbedtls_mpi_mul_int( &T, X, radix ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mpi_get_digit( &d, radix, s[i] )) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_mul_int( &T, X, radix )) ) != 0 ) goto cleanup; } while( 0 );
 
             if( X->s == 1 )
             {
-                do { if( ( ret = mbedtls_mpi_add_int( X, &T, d ) ) != 0 ) goto cleanup; } while( 0 );
+                do { if( ( ret = (mbedtls_mpi_add_int( X, &T, d )) ) != 0 ) goto cleanup; } while( 0 );
             }
             else
             {
-                do { if( ( ret = mbedtls_mpi_sub_int( X, &T, d ) ) != 0 ) goto cleanup; } while( 0 );
+                do { if( ( ret = (mbedtls_mpi_sub_int( X, &T, d )) ) != 0 ) goto cleanup; } while( 0 );
             }
         }
     }
@@ -2223,28 +2258,40 @@ cleanup:
 
 
 
-static int mpi_write_hlp( mbedtls_mpi *X, int radix, char **p )
+static int mpi_write_hlp( mbedtls_mpi *X, int radix,
+                          char **p, const size_t buflen )
 {
     int ret;
     mbedtls_mpi_uint r;
+    size_t length = 0;
+    char *p_end = *p + buflen;
 
-    if( radix < 2 || radix > 16 )
-        return( -0x0004 );
+    do
+    {
+        if( length >= buflen )
+        {
+            return( -0x0008 );
+        }
 
-    do { if( ( ret = mbedtls_mpi_mod_int( &r, X, radix ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_div_int( X, 
-# 515 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
-   ((void *)0)
-# 515 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
-   , X, radix ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_mod_int( &r, X, radix )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_div_int( X, 
+# 551 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+       ((void *)0)
+# 551 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+       , X, radix )) ) != 0 ) goto cleanup; } while( 0 );
 
-    if( mbedtls_mpi_cmp_int( X, 0 ) != 0 )
-        do { if( ( ret = mpi_write_hlp( X, radix, p ) ) != 0 ) goto cleanup; } while( 0 );
 
-    if( r < 10 )
-        *(*p)++ = (char)( r + 0x30 );
-    else
-        *(*p)++ = (char)( r + 0x37 );
+
+        if( r < 0xA )
+            *(--p_end) = (char)( '0' + r );
+        else
+            *(--p_end) = (char)( 'A' + ( r - 0xA ) );
+
+        length++;
+    } while( mbedtls_mpi_cmp_int( X, 0 ) != 0 );
+
+    memmove( *p, p_end, length );
+    *p += length;
 
 cleanup:
 
@@ -2261,19 +2308,27 @@ int mbedtls_mpi_write_string( const mbedtls_mpi *X, int radix,
     size_t n;
     char *p;
     mbedtls_mpi T;
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
 
     if( radix < 2 || radix > 16 )
         return( -0x0004 );
 
     n = mbedtls_mpi_bitlen( X );
     if( radix >= 4 ) n >>= 1;
+
+
+
     if( radix >= 16 ) n >>= 1;
 
 
+    n += 1;
+    n += 1;
 
+    n += 1;
+    n += ( n & 1 );
 
-
-    n += 3 + ( ( n + 1 ) & 1 );
 
     if( buflen < n )
     {
@@ -2285,7 +2340,10 @@ int mbedtls_mpi_write_string( const mbedtls_mpi *X, int radix,
     mbedtls_mpi_init( &T );
 
     if( X->s == -1 )
+    {
         *p++ = '-';
+        buflen--;
+    }
 
     if( radix == 16 )
     {
@@ -2309,12 +2367,12 @@ int mbedtls_mpi_write_string( const mbedtls_mpi *X, int radix,
     }
     else
     {
-        do { if( ( ret = mbedtls_mpi_copy( &T, X ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_copy( &T, X )) ) != 0 ) goto cleanup; } while( 0 );
 
         if( T.s == -1 )
             T.s = 1;
 
-        do { if( ( ret = mpi_write_hlp( &T, radix, &p ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mpi_write_hlp( &T, radix, &p, buflen )) ) != 0 ) goto cleanup; } while( 0 );
     }
 
     *p++ = '\0';
@@ -2342,11 +2400,17 @@ int mbedtls_mpi_read_file( mbedtls_mpi *X, int radix, FILE *fin )
 
     char s[ ( ((( 100 * ( 8 * 1024 ) ) + 332 - 1) / 332) + 10 + 6 ) ];
 
+    do { } while( 0 );
+    do { } while( 0 );
+
+    if( radix < 2 || radix > 16 )
+        return( -0x0004 );
+
     memset( s, 0, sizeof( s ) );
     if( fgets( s, sizeof( s ) - 1, fin ) == 
-# 622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+# 680 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
                                            ((void *)0) 
-# 622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 680 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
                                                 )
         return( -0x0002 );
 
@@ -2377,15 +2441,19 @@ int mbedtls_mpi_write_file( const char *p, const mbedtls_mpi *X, int radix, FILE
 
 
     char s[ ( ((( 100 * ( 8 * 1024 ) ) + 332 - 1) / 332) + 10 + 6 ) ];
+    do { } while( 0 );
+
+    if( radix < 2 || radix > 16 )
+        return( -0x0004 );
 
     memset( s, 0, sizeof( s ) );
 
-    do { if( ( ret = mbedtls_mpi_write_string( X, radix, s, sizeof( s ) - 2, &n ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_write_string( X, radix, s, sizeof( s ) - 2, &n )) ) != 0 ) goto cleanup; } while( 0 );
 
     if( p == 
-# 657 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+# 719 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
             ((void *)0) 
-# 657 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 719 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
                  ) p = "";
 
     plen = strlen( p );
@@ -2394,9 +2462,9 @@ int mbedtls_mpi_write_file( const char *p, const mbedtls_mpi *X, int radix, FILE
     s[slen++] = '\n';
 
     if( fout != 
-# 664 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+# 726 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
                ((void *)0) 
-# 664 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 726 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
                     )
     {
         if( fwrite( p, 1, plen, fout ) != plen ||
@@ -2415,24 +2483,96 @@ cleanup:
 
 
 
+
+static mbedtls_mpi_uint mpi_uint_bigendian_to_host_c( mbedtls_mpi_uint x )
+{
+    uint8_t i;
+    unsigned char *x_ptr;
+    mbedtls_mpi_uint tmp = 0;
+
+    for( i = 0, x_ptr = (unsigned char*) &x; i < (sizeof(mbedtls_mpi_uint)); i++, x_ptr++ )
+    {
+        tmp <<= 8;
+        tmp |= (mbedtls_mpi_uint) *x_ptr;
+    }
+
+    return( tmp );
+}
+
+static mbedtls_mpi_uint mpi_uint_bigendian_to_host( mbedtls_mpi_uint x )
+{
+# 787 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+    switch( sizeof(mbedtls_mpi_uint) )
+    {
+        case 4:
+            return( __builtin_bswap32(x) );
+        case 8:
+            return( __builtin_bswap64(x) );
+    }
+
+
+
+
+
+
+    return( mpi_uint_bigendian_to_host_c( x ) );
+}
+
+static void mpi_bigendian_to_host( mbedtls_mpi_uint * const p, size_t limbs )
+{
+    mbedtls_mpi_uint *cur_limb_left;
+    mbedtls_mpi_uint *cur_limb_right;
+    if( limbs == 0 )
+        return;
+# 819 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+    for( cur_limb_left = p, cur_limb_right = p + ( limbs - 1 );
+         cur_limb_left <= cur_limb_right;
+         cur_limb_left++, cur_limb_right-- )
+    {
+        mbedtls_mpi_uint tmp;
+
+
+        tmp = mpi_uint_bigendian_to_host( *cur_limb_left );
+        *cur_limb_left = mpi_uint_bigendian_to_host( *cur_limb_right );
+        *cur_limb_right = tmp;
+    }
+}
+
+
+
+
 int mbedtls_mpi_read_binary( mbedtls_mpi *X, const unsigned char *buf, size_t buflen )
 {
     int ret;
-    size_t i, j;
     size_t const limbs = ( (buflen) / (sizeof(mbedtls_mpi_uint)) + ( (buflen) % (sizeof(mbedtls_mpi_uint)) != 0 ) );
+    size_t const overhead = ( limbs * (sizeof(mbedtls_mpi_uint)) ) - buflen;
+    unsigned char *Xp;
+
+    do { } while( 0 );
+    do { } while( 0 );
 
 
     if( X->n != limbs )
     {
         mbedtls_mpi_free( X );
         mbedtls_mpi_init( X );
-        do { if( ( ret = mbedtls_mpi_grow( X, limbs ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_grow( X, limbs )) ) != 0 ) goto cleanup; } while( 0 );
     }
+    do { if( ( ret = (mbedtls_mpi_lset( X, 0 )) ) != 0 ) goto cleanup; } while( 0 );
 
-    do { if( ( ret = mbedtls_mpi_lset( X, 0 ) ) != 0 ) goto cleanup; } while( 0 );
 
-    for( i = buflen, j = 0; i > 0; i--, j++ )
-        X->p[j / (sizeof(mbedtls_mpi_uint))] |= ((mbedtls_mpi_uint) buf[i - 1]) << ((j % (sizeof(mbedtls_mpi_uint))) << 3);
+
+    if( buf != 
+# 856 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+              ((void *)0) 
+# 856 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+                   )
+    {
+        Xp = (unsigned char*) X->p;
+        memcpy( Xp + overhead, buf, buflen );
+
+        mpi_bigendian_to_host( X->p, limbs );
+    }
 
 cleanup:
 
@@ -2442,19 +2582,45 @@ cleanup:
 
 
 
-int mbedtls_mpi_write_binary( const mbedtls_mpi *X, unsigned char *buf, size_t buflen )
+int mbedtls_mpi_write_binary( const mbedtls_mpi *X,
+                              unsigned char *buf, size_t buflen )
 {
-    size_t i, j, n;
+    size_t stored_bytes;
+    size_t bytes_to_copy;
+    unsigned char *p;
+    size_t i;
 
-    n = mbedtls_mpi_size( X );
+    do { } while( 0 );
+    do { } while( 0 );
 
-    if( buflen < n )
-        return( -0x0008 );
+    stored_bytes = X->n * (sizeof(mbedtls_mpi_uint));
 
-    memset( buf, 0, buflen );
+    if( stored_bytes < buflen )
+    {
 
-    for( i = buflen - 1, j = 0; n > 0; i--, j++, n-- )
-        buf[i] = (unsigned char)( X->p[j / (sizeof(mbedtls_mpi_uint))] >> ((j % (sizeof(mbedtls_mpi_uint))) << 3) );
+
+
+
+
+        bytes_to_copy = stored_bytes;
+        p = buf + buflen - stored_bytes;
+        memset( buf, 0, buflen - stored_bytes );
+    }
+    else
+    {
+
+
+        bytes_to_copy = buflen;
+        p = buf;
+        for( i = bytes_to_copy; i < stored_bytes; i++ )
+        {
+            if( ( ( ( X )->p[( i ) / (sizeof(mbedtls_mpi_uint))] >> ( ( ( i ) % (sizeof(mbedtls_mpi_uint)) ) * 8 ) ) & 0xff ) != 0 )
+                return( -0x0008 );
+        }
+    }
+
+    for( i = 0; i < bytes_to_copy; i++ )
+        p[bytes_to_copy - i - 1] = ( ( ( X )->p[( i ) / (sizeof(mbedtls_mpi_uint))] >> ( ( ( i ) % (sizeof(mbedtls_mpi_uint)) ) * 8 ) ) & 0xff );
 
     return( 0 );
 }
@@ -2467,6 +2633,7 @@ int mbedtls_mpi_shift_l( mbedtls_mpi *X, size_t count )
     int ret;
     size_t i, v0, t1;
     mbedtls_mpi_uint r0 = 0, r1;
+    do { } while( 0 );
 
     v0 = count / (((sizeof(mbedtls_mpi_uint)) << 3) );
     t1 = count & (((sizeof(mbedtls_mpi_uint)) << 3) - 1);
@@ -2474,7 +2641,7 @@ int mbedtls_mpi_shift_l( mbedtls_mpi *X, size_t count )
     i = mbedtls_mpi_bitlen( X ) + count;
 
     if( X->n * ((sizeof(mbedtls_mpi_uint)) << 3) < i )
-        do { if( ( ret = mbedtls_mpi_grow( X, ( (i) / ((sizeof(mbedtls_mpi_uint)) << 3) + ( (i) % ((sizeof(mbedtls_mpi_uint)) << 3) != 0 ) ) ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_grow( X, ( (i) / ((sizeof(mbedtls_mpi_uint)) << 3) + ( (i) % ((sizeof(mbedtls_mpi_uint)) << 3) != 0 ) ) )) ) != 0 ) goto cleanup; } while( 0 );
 
     ret = 0;
 
@@ -2516,6 +2683,7 @@ int mbedtls_mpi_shift_r( mbedtls_mpi *X, size_t count )
 {
     size_t i, v0, v1;
     mbedtls_mpi_uint r0 = 0, r1;
+    do { } while( 0 );
 
     v0 = count / ((sizeof(mbedtls_mpi_uint)) << 3);
     v1 = count & (((sizeof(mbedtls_mpi_uint)) << 3) - 1);
@@ -2558,6 +2726,8 @@ int mbedtls_mpi_shift_r( mbedtls_mpi *X, size_t count )
 int mbedtls_mpi_cmp_abs( const mbedtls_mpi *X, const mbedtls_mpi *Y )
 {
     size_t i, j;
+    do { } while( 0 );
+    do { } while( 0 );
 
     for( i = X->n; i > 0; i-- )
         if( X->p[i - 1] != 0 )
@@ -2588,6 +2758,8 @@ int mbedtls_mpi_cmp_abs( const mbedtls_mpi *X, const mbedtls_mpi *Y )
 int mbedtls_mpi_cmp_mpi( const mbedtls_mpi *X, const mbedtls_mpi *Y )
 {
     size_t i, j;
+    do { } while( 0 );
+    do { } while( 0 );
 
     for( i = X->n; i > 0; i-- )
         if( X->p[i - 1] != 0 )
@@ -2614,6 +2786,93 @@ int mbedtls_mpi_cmp_mpi( const mbedtls_mpi *X, const mbedtls_mpi *Y )
 
     return( 0 );
 }
+# 1084 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+static unsigned ct_lt_mpi_uint( const mbedtls_mpi_uint x,
+        const mbedtls_mpi_uint y )
+{
+    mbedtls_mpi_uint ret;
+    mbedtls_mpi_uint cond;
+
+
+
+
+    cond = ( x ^ y );
+
+
+
+
+    ret = ( x - y ) & ~cond;
+
+
+
+
+
+    ret |= y & cond;
+
+
+    ret = ret >> ( ((sizeof(mbedtls_mpi_uint)) << 3) - 1 );
+
+    return (unsigned) ret;
+}
+
+
+
+
+int mbedtls_mpi_lt_mpi_ct( const mbedtls_mpi *X, const mbedtls_mpi *Y,
+        unsigned *ret )
+{
+    size_t i;
+
+    unsigned cond, done, X_is_negative, Y_is_negative;
+
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+
+    if( X->n != Y->n )
+        return -0x0004;
+
+
+
+
+
+    X_is_negative = ( X->s & 2 ) >> 1;
+    Y_is_negative = ( Y->s & 2 ) >> 1;
+
+
+
+
+
+
+    cond = ( X_is_negative ^ Y_is_negative );
+    *ret = cond & X_is_negative;
+
+
+
+
+
+    done = cond;
+
+    for( i = X->n; i > 0; i-- )
+    {
+
+
+
+
+
+
+
+        cond = ct_lt_mpi_uint( Y->p[i - 1], X->p[i - 1] );
+        *ret |= cond & ( 1 - done ) & X_is_negative;
+        done |= cond;
+# 1170 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+        cond = ct_lt_mpi_uint( X->p[i - 1], Y->p[i - 1] );
+        *ret |= cond & ( 1 - done ) & ( 1 - X_is_negative );
+        done |= cond;
+    }
+
+    return( 0 );
+}
 
 
 
@@ -2622,6 +2881,7 @@ int mbedtls_mpi_cmp_int( const mbedtls_mpi *X, mbedtls_mpi_sint z )
 {
     mbedtls_mpi Y;
     mbedtls_mpi_uint p[1];
+    do { } while( 0 );
 
     *p = ( z < 0 ) ? -z : z;
     Y.s = ( z < 0 ) ? -1 : 1;
@@ -2639,6 +2899,9 @@ int mbedtls_mpi_add_abs( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi
     int ret;
     size_t i, j;
     mbedtls_mpi_uint *o, *p, c, tmp;
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
 
     if( X == B )
     {
@@ -2646,7 +2909,7 @@ int mbedtls_mpi_add_abs( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi
     }
 
     if( X != A )
-        do { if( ( ret = mbedtls_mpi_copy( X, A ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_copy( X, A )) ) != 0 ) goto cleanup; } while( 0 );
 
 
 
@@ -2657,7 +2920,7 @@ int mbedtls_mpi_add_abs( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi
         if( B->p[j - 1] != 0 )
             break;
 
-    do { if( ( ret = mbedtls_mpi_grow( X, j ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_grow( X, j )) ) != 0 ) goto cleanup; } while( 0 );
 
     o = B->p; p = X->p; c = 0;
 
@@ -2675,7 +2938,7 @@ int mbedtls_mpi_add_abs( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi
     {
         if( i >= X->n )
         {
-            do { if( ( ret = mbedtls_mpi_grow( X, i + 1 ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_grow( X, i + 1 )) ) != 0 ) goto cleanup; } while( 0 );
             p = X->p + i;
         }
 
@@ -2716,6 +2979,9 @@ int mbedtls_mpi_sub_abs( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi
     mbedtls_mpi TB;
     int ret;
     size_t n;
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
 
     if( mbedtls_mpi_cmp_abs( A, B ) < 0 )
         return( -0x000A );
@@ -2724,12 +2990,12 @@ int mbedtls_mpi_sub_abs( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi
 
     if( X == B )
     {
-        do { if( ( ret = mbedtls_mpi_copy( &TB, B ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_copy( &TB, B )) ) != 0 ) goto cleanup; } while( 0 );
         B = &TB;
     }
 
     if( X != A )
-        do { if( ( ret = mbedtls_mpi_copy( X, A ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_copy( X, A )) ) != 0 ) goto cleanup; } while( 0 );
 
 
 
@@ -2756,24 +3022,28 @@ cleanup:
 
 int mbedtls_mpi_add_mpi( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B )
 {
-    int ret, s = A->s;
+    int ret, s;
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
 
+    s = A->s;
     if( A->s * B->s < 0 )
     {
         if( mbedtls_mpi_cmp_abs( A, B ) >= 0 )
         {
-            do { if( ( ret = mbedtls_mpi_sub_abs( X, A, B ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_sub_abs( X, A, B )) ) != 0 ) goto cleanup; } while( 0 );
             X->s = s;
         }
         else
         {
-            do { if( ( ret = mbedtls_mpi_sub_abs( X, B, A ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_sub_abs( X, B, A )) ) != 0 ) goto cleanup; } while( 0 );
             X->s = -s;
         }
     }
     else
     {
-        do { if( ( ret = mbedtls_mpi_add_abs( X, A, B ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_add_abs( X, A, B )) ) != 0 ) goto cleanup; } while( 0 );
         X->s = s;
     }
 
@@ -2787,24 +3057,28 @@ cleanup:
 
 int mbedtls_mpi_sub_mpi( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi *B )
 {
-    int ret, s = A->s;
+    int ret, s;
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
 
+    s = A->s;
     if( A->s * B->s > 0 )
     {
         if( mbedtls_mpi_cmp_abs( A, B ) >= 0 )
         {
-            do { if( ( ret = mbedtls_mpi_sub_abs( X, A, B ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_sub_abs( X, A, B )) ) != 0 ) goto cleanup; } while( 0 );
             X->s = s;
         }
         else
         {
-            do { if( ( ret = mbedtls_mpi_sub_abs( X, B, A ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_sub_abs( X, B, A )) ) != 0 ) goto cleanup; } while( 0 );
             X->s = -s;
         }
     }
     else
     {
-        do { if( ( ret = mbedtls_mpi_add_abs( X, A, B ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_add_abs( X, A, B )) ) != 0 ) goto cleanup; } while( 0 );
         X->s = s;
     }
 
@@ -2820,6 +3094,8 @@ int mbedtls_mpi_add_int( mbedtls_mpi *X, const mbedtls_mpi *A, mbedtls_mpi_sint 
 {
     mbedtls_mpi _B;
     mbedtls_mpi_uint p[1];
+    do { } while( 0 );
+    do { } while( 0 );
 
     p[0] = ( b < 0 ) ? -b : b;
     _B.s = ( b < 0 ) ? -1 : 1;
@@ -2836,6 +3112,8 @@ int mbedtls_mpi_sub_int( mbedtls_mpi *X, const mbedtls_mpi *A, mbedtls_mpi_sint 
 {
     mbedtls_mpi _B;
     mbedtls_mpi_uint p[1];
+    do { } while( 0 );
+    do { } while( 0 );
 
     p[0] = ( b < 0 ) ? -b : b;
     _B.s = ( b < 0 ) ? -1 : 1;
@@ -2844,11 +3122,13 @@ int mbedtls_mpi_sub_int( mbedtls_mpi *X, const mbedtls_mpi *A, mbedtls_mpi_sint 
 
     return( mbedtls_mpi_sub_mpi( X, A, &_B ) );
 }
-# 1231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 1549 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
 int mbedtls_mpi_mul_int( mbedtls_mpi *X, const mbedtls_mpi *A, mbedtls_mpi_uint b )
 {
     mbedtls_mpi _B;
     mbedtls_mpi_uint p[1];
+    do { } while( 0 );
+    do { } while( 0 );
 
     _B.s = 1;
     _B.n = 1;
@@ -2867,13 +3147,13 @@ static mbedtls_mpi_uint mbedtls_int_div_int( mbedtls_mpi_uint u1,
 {
 
     mbedtls_t_udbl dividend, quotient;
-# 1264 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 1584 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
     if( 0 == d || u1 >= d )
     {
         if (r != 
-# 1266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+# 1586 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
                 ((void *)0)
-# 1266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 1586 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
                     ) *r = ~0;
 
         return ( ~0 );
@@ -2887,24 +3167,27 @@ static mbedtls_mpi_uint mbedtls_int_div_int( mbedtls_mpi_uint u1,
         quotient = ( (mbedtls_t_udbl) 1 << ((sizeof(mbedtls_mpi_uint)) << 3) ) - 1;
 
     if( r != 
-# 1278 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+# 1598 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
             ((void *)0) 
-# 1278 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 1598 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
                  )
         *r = (mbedtls_mpi_uint)( dividend - (quotient * d ) );
 
     return (mbedtls_mpi_uint) quotient;
-# 1338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 1658 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
 }
 
 
 
 
-int mbedtls_mpi_div_mpi( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A, const mbedtls_mpi *B )
+int mbedtls_mpi_div_mpi( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A,
+                         const mbedtls_mpi *B )
 {
     int ret;
     size_t i, n, t, k;
     mbedtls_mpi X, Y, Z, T1, T2;
+    do { } while( 0 );
+    do { } while( 0 );
 
     if( mbedtls_mpi_cmp_int( B, 0 ) == 0 )
         return( -0x000C );
@@ -2915,46 +3198,46 @@ int mbedtls_mpi_div_mpi( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A, c
     if( mbedtls_mpi_cmp_abs( A, B ) < 0 )
     {
         if( Q != 
-# 1357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+# 1680 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
                 ((void *)0) 
-# 1357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
-                     ) do { if( ( ret = mbedtls_mpi_lset( Q, 0 ) ) != 0 ) goto cleanup; } while( 0 );
+# 1680 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+                     ) do { if( ( ret = (mbedtls_mpi_lset( Q, 0 )) ) != 0 ) goto cleanup; } while( 0 );
         if( R != 
-# 1358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+# 1681 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
                 ((void *)0) 
-# 1358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
-                     ) do { if( ( ret = mbedtls_mpi_copy( R, A ) ) != 0 ) goto cleanup; } while( 0 );
+# 1681 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+                     ) do { if( ( ret = (mbedtls_mpi_copy( R, A )) ) != 0 ) goto cleanup; } while( 0 );
         return( 0 );
     }
 
-    do { if( ( ret = mbedtls_mpi_copy( &X, A ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_copy( &Y, B ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_copy( &X, A )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_copy( &Y, B )) ) != 0 ) goto cleanup; } while( 0 );
     X.s = Y.s = 1;
 
-    do { if( ( ret = mbedtls_mpi_grow( &Z, A->n + 2 ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_lset( &Z, 0 ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_grow( &T1, 2 ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_grow( &T2, 3 ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_grow( &Z, A->n + 2 )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_lset( &Z, 0 )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_grow( &T1, 2 )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_grow( &T2, 3 )) ) != 0 ) goto cleanup; } while( 0 );
 
     k = mbedtls_mpi_bitlen( &Y ) % ((sizeof(mbedtls_mpi_uint)) << 3);
     if( k < ((sizeof(mbedtls_mpi_uint)) << 3) - 1 )
     {
         k = ((sizeof(mbedtls_mpi_uint)) << 3) - 1 - k;
-        do { if( ( ret = mbedtls_mpi_shift_l( &X, k ) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_shift_l( &Y, k ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_shift_l( &X, k )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_shift_l( &Y, k )) ) != 0 ) goto cleanup; } while( 0 );
     }
     else k = 0;
 
     n = X.n - 1;
     t = Y.n - 1;
-    do { if( ( ret = mbedtls_mpi_shift_l( &Y, ((sizeof(mbedtls_mpi_uint)) << 3) * ( n - t ) ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_shift_l( &Y, ((sizeof(mbedtls_mpi_uint)) << 3) * ( n - t ) )) ) != 0 ) goto cleanup; } while( 0 );
 
     while( mbedtls_mpi_cmp_mpi( &X, &Y ) >= 0 )
     {
         Z.p[n - t]++;
-        do { if( ( ret = mbedtls_mpi_sub_mpi( &X, &X, &Y ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_sub_mpi( &X, &X, &Y )) ) != 0 ) goto cleanup; } while( 0 );
     }
-    do { if( ( ret = mbedtls_mpi_shift_r( &Y, ((sizeof(mbedtls_mpi_uint)) << 3) * ( n - t ) ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_shift_r( &Y, ((sizeof(mbedtls_mpi_uint)) << 3) * ( n - t ) )) ) != 0 ) goto cleanup; } while( 0 );
 
     for( i = n; i > t ; i-- )
     {
@@ -2964,9 +3247,9 @@ int mbedtls_mpi_div_mpi( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A, c
         {
             Z.p[i - t - 1] = mbedtls_int_div_int( X.p[i], X.p[i - 1],
                                                             Y.p[t], 
-# 1398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+# 1721 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
                                                                    ((void *)0)
-# 1398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 1721 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
                                                                        );
         }
 
@@ -2975,50 +3258,50 @@ int mbedtls_mpi_div_mpi( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A, c
         {
             Z.p[i - t - 1]--;
 
-            do { if( ( ret = mbedtls_mpi_lset( &T1, 0 ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_lset( &T1, 0 )) ) != 0 ) goto cleanup; } while( 0 );
             T1.p[0] = ( t < 1 ) ? 0 : Y.p[t - 1];
             T1.p[1] = Y.p[t];
-            do { if( ( ret = mbedtls_mpi_mul_int( &T1, &T1, Z.p[i - t - 1] ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_mul_int( &T1, &T1, Z.p[i - t - 1] )) ) != 0 ) goto cleanup; } while( 0 );
 
-            do { if( ( ret = mbedtls_mpi_lset( &T2, 0 ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_lset( &T2, 0 )) ) != 0 ) goto cleanup; } while( 0 );
             T2.p[0] = ( i < 2 ) ? 0 : X.p[i - 2];
             T2.p[1] = ( i < 1 ) ? 0 : X.p[i - 1];
             T2.p[2] = X.p[i];
         }
         while( mbedtls_mpi_cmp_mpi( &T1, &T2 ) > 0 );
 
-        do { if( ( ret = mbedtls_mpi_mul_int( &T1, &Y, Z.p[i - t - 1] ) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_shift_l( &T1, ((sizeof(mbedtls_mpi_uint)) << 3) * ( i - t - 1 ) ) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_sub_mpi( &X, &X, &T1 ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_mul_int( &T1, &Y, Z.p[i - t - 1] )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_shift_l( &T1, ((sizeof(mbedtls_mpi_uint)) << 3) * ( i - t - 1 ) )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_sub_mpi( &X, &X, &T1 )) ) != 0 ) goto cleanup; } while( 0 );
 
         if( mbedtls_mpi_cmp_int( &X, 0 ) < 0 )
         {
-            do { if( ( ret = mbedtls_mpi_copy( &T1, &Y ) ) != 0 ) goto cleanup; } while( 0 );
-            do { if( ( ret = mbedtls_mpi_shift_l( &T1, ((sizeof(mbedtls_mpi_uint)) << 3) * ( i - t - 1 ) ) ) != 0 ) goto cleanup; } while( 0 );
-            do { if( ( ret = mbedtls_mpi_add_mpi( &X, &X, &T1 ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_copy( &T1, &Y )) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_shift_l( &T1, ((sizeof(mbedtls_mpi_uint)) << 3) * ( i - t - 1 ) )) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_add_mpi( &X, &X, &T1 )) ) != 0 ) goto cleanup; } while( 0 );
             Z.p[i - t - 1]--;
         }
     }
 
     if( Q != 
-# 1431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+# 1754 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
             ((void *)0) 
-# 1431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 1754 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
                  )
     {
-        do { if( ( ret = mbedtls_mpi_copy( Q, &Z ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_copy( Q, &Z )) ) != 0 ) goto cleanup; } while( 0 );
         Q->s = A->s * B->s;
     }
 
     if( R != 
-# 1437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+# 1760 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
             ((void *)0) 
-# 1437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 1760 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
                  )
     {
-        do { if( ( ret = mbedtls_mpi_shift_r( &X, k ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_shift_r( &X, k )) ) != 0 ) goto cleanup; } while( 0 );
         X.s = A->s;
-        do { if( ( ret = mbedtls_mpi_copy( R, &X ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_copy( R, &X )) ) != 0 ) goto cleanup; } while( 0 );
 
         if( mbedtls_mpi_cmp_int( R, 0 ) == 0 )
             R->s = 1;
@@ -3035,10 +3318,13 @@ cleanup:
 
 
 
-int mbedtls_mpi_div_int( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A, mbedtls_mpi_sint b )
+int mbedtls_mpi_div_int( mbedtls_mpi *Q, mbedtls_mpi *R,
+                         const mbedtls_mpi *A,
+                         mbedtls_mpi_sint b )
 {
     mbedtls_mpi _B;
     mbedtls_mpi_uint p[1];
+    do { } while( 0 );
 
     p[0] = ( b < 0 ) ? -b : b;
     _B.s = ( b < 0 ) ? -1 : 1;
@@ -3054,21 +3340,24 @@ int mbedtls_mpi_div_int( mbedtls_mpi *Q, mbedtls_mpi *R, const mbedtls_mpi *A, m
 int mbedtls_mpi_mod_mpi( mbedtls_mpi *R, const mbedtls_mpi *A, const mbedtls_mpi *B )
 {
     int ret;
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
 
     if( mbedtls_mpi_cmp_int( B, 0 ) < 0 )
         return( -0x000A );
 
-    do { if( ( ret = mbedtls_mpi_div_mpi( 
-# 1481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+    do { if( ( ret = (mbedtls_mpi_div_mpi( 
+# 1810 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
    ((void *)0)
-# 1481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
-   , R, A, B ) ) != 0 ) goto cleanup; } while( 0 );
+# 1810 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+   , R, A, B )) ) != 0 ) goto cleanup; } while( 0 );
 
     while( mbedtls_mpi_cmp_int( R, 0 ) < 0 )
-      do { if( ( ret = mbedtls_mpi_add_mpi( R, R, B ) ) != 0 ) goto cleanup; } while( 0 );
+      do { if( ( ret = (mbedtls_mpi_add_mpi( R, R, B )) ) != 0 ) goto cleanup; } while( 0 );
 
     while( mbedtls_mpi_cmp_mpi( R, B ) >= 0 )
-      do { if( ( ret = mbedtls_mpi_sub_mpi( R, R, B ) ) != 0 ) goto cleanup; } while( 0 );
+      do { if( ( ret = (mbedtls_mpi_sub_mpi( R, R, B )) ) != 0 ) goto cleanup; } while( 0 );
 
 cleanup:
 
@@ -3082,6 +3371,8 @@ int mbedtls_mpi_mod_int( mbedtls_mpi_uint *r, const mbedtls_mpi *A, mbedtls_mpi_
 {
     size_t i;
     mbedtls_mpi_uint x, y, z;
+    do { } while( 0 );
+    do { } while( 0 );
 
     if( b == 0 )
         return( -0x000C );
@@ -3131,17 +3422,21 @@ int mbedtls_mpi_mod_int( mbedtls_mpi_uint *r, const mbedtls_mpi *A, mbedtls_mpi_
 
     return( 0 );
 }
-# 1839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 2180 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
 int mbedtls_mpi_gcd( mbedtls_mpi *G, const mbedtls_mpi *A, const mbedtls_mpi *B )
 {
     int ret;
     size_t lz, lzt;
     mbedtls_mpi TG, TA, TB;
 
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
+
     mbedtls_mpi_init( &TG ); mbedtls_mpi_init( &TA ); mbedtls_mpi_init( &TB );
 
-    do { if( ( ret = mbedtls_mpi_copy( &TA, A ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_copy( &TB, B ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_copy( &TA, A )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_copy( &TB, B )) ) != 0 ) goto cleanup; } while( 0 );
 
     lz = mbedtls_mpi_lsb( &TA );
     lzt = mbedtls_mpi_lsb( &TB );
@@ -3149,30 +3444,30 @@ int mbedtls_mpi_gcd( mbedtls_mpi *G, const mbedtls_mpi *A, const mbedtls_mpi *B 
     if( lzt < lz )
         lz = lzt;
 
-    do { if( ( ret = mbedtls_mpi_shift_r( &TA, lz ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_shift_r( &TB, lz ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_shift_r( &TA, lz )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_shift_r( &TB, lz )) ) != 0 ) goto cleanup; } while( 0 );
 
     TA.s = TB.s = 1;
 
     while( mbedtls_mpi_cmp_int( &TA, 0 ) != 0 )
     {
-        do { if( ( ret = mbedtls_mpi_shift_r( &TA, mbedtls_mpi_lsb( &TA ) ) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_shift_r( &TB, mbedtls_mpi_lsb( &TB ) ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_shift_r( &TA, mbedtls_mpi_lsb( &TA ) )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_shift_r( &TB, mbedtls_mpi_lsb( &TB ) )) ) != 0 ) goto cleanup; } while( 0 );
 
         if( mbedtls_mpi_cmp_mpi( &TA, &TB ) >= 0 )
         {
-            do { if( ( ret = mbedtls_mpi_sub_abs( &TA, &TA, &TB ) ) != 0 ) goto cleanup; } while( 0 );
-            do { if( ( ret = mbedtls_mpi_shift_r( &TA, 1 ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_sub_abs( &TA, &TA, &TB )) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_shift_r( &TA, 1 )) ) != 0 ) goto cleanup; } while( 0 );
         }
         else
         {
-            do { if( ( ret = mbedtls_mpi_sub_abs( &TB, &TB, &TA ) ) != 0 ) goto cleanup; } while( 0 );
-            do { if( ( ret = mbedtls_mpi_shift_r( &TB, 1 ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_sub_abs( &TB, &TB, &TA )) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_shift_r( &TB, 1 )) ) != 0 ) goto cleanup; } while( 0 );
         }
     }
 
-    do { if( ( ret = mbedtls_mpi_shift_l( &TB, lz ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_copy( G, &TB ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_shift_l( &TB, lz )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_copy( G, &TB )) ) != 0 ) goto cleanup; } while( 0 );
 
 cleanup:
 
@@ -3180,22 +3475,34 @@ cleanup:
 
     return( ret );
 }
-# 1895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 2240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
 int mbedtls_mpi_fill_random( mbedtls_mpi *X, size_t size,
                      int (*f_rng)(void *, unsigned char *, size_t),
                      void *p_rng )
 {
     int ret;
-    unsigned char buf[1024];
+    size_t const limbs = ( (size) / (sizeof(mbedtls_mpi_uint)) + ( (size) % (sizeof(mbedtls_mpi_uint)) != 0 ) );
+    size_t const overhead = ( limbs * (sizeof(mbedtls_mpi_uint)) ) - size;
+    unsigned char *Xp;
 
-    if( size > 1024 )
-        return( -0x0004 );
+    do { } while( 0 );
+    do { } while( 0 );
 
-    do { if( ( ret = f_rng( p_rng, buf, size ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_read_binary( X, buf, size ) ) != 0 ) goto cleanup; } while( 0 );
+
+    if( X->n != limbs )
+    {
+        mbedtls_mpi_free( X );
+        mbedtls_mpi_init( X );
+        do { if( ( ret = (mbedtls_mpi_grow( X, limbs )) ) != 0 ) goto cleanup; } while( 0 );
+    }
+    do { if( ( ret = (mbedtls_mpi_lset( X, 0 )) ) != 0 ) goto cleanup; } while( 0 );
+
+    Xp = (unsigned char*) X->p;
+    f_rng( p_rng, Xp + overhead, size );
+
+    mpi_bigendian_to_host( X->p, limbs );
 
 cleanup:
-    mbedtls_platform_zeroize( buf, sizeof( buf ) );
     return( ret );
 }
 
@@ -3206,6 +3513,9 @@ int mbedtls_mpi_inv_mod( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi
 {
     int ret;
     mbedtls_mpi G, TA, TU, U1, U2, TB, TV, V1, V2;
+    do { } while( 0 );
+    do { } while( 0 );
+    do { } while( 0 );
 
     if( mbedtls_mpi_cmp_int( N, 1 ) <= 0 )
         return( -0x0004 );
@@ -3214,7 +3524,7 @@ int mbedtls_mpi_inv_mod( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi
     mbedtls_mpi_init( &G ); mbedtls_mpi_init( &TB ); mbedtls_mpi_init( &TV );
     mbedtls_mpi_init( &V1 ); mbedtls_mpi_init( &V2 );
 
-    do { if( ( ret = mbedtls_mpi_gcd( &G, A, N ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_gcd( &G, A, N )) ) != 0 ) goto cleanup; } while( 0 );
 
     if( mbedtls_mpi_cmp_int( &G, 1 ) != 0 )
     {
@@ -3222,68 +3532,68 @@ int mbedtls_mpi_inv_mod( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi
         goto cleanup;
     }
 
-    do { if( ( ret = mbedtls_mpi_mod_mpi( &TA, A, N ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_copy( &TU, &TA ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_copy( &TB, N ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_copy( &TV, N ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mod_mpi( &TA, A, N )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_copy( &TU, &TA )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_copy( &TB, N )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_copy( &TV, N )) ) != 0 ) goto cleanup; } while( 0 );
 
-    do { if( ( ret = mbedtls_mpi_lset( &U1, 1 ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_lset( &U2, 0 ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_lset( &V1, 0 ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_lset( &V2, 1 ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_lset( &U1, 1 )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_lset( &U2, 0 )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_lset( &V1, 0 )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_lset( &V2, 1 )) ) != 0 ) goto cleanup; } while( 0 );
 
     do
     {
         while( ( TU.p[0] & 1 ) == 0 )
         {
-            do { if( ( ret = mbedtls_mpi_shift_r( &TU, 1 ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_shift_r( &TU, 1 )) ) != 0 ) goto cleanup; } while( 0 );
 
             if( ( U1.p[0] & 1 ) != 0 || ( U2.p[0] & 1 ) != 0 )
             {
-                do { if( ( ret = mbedtls_mpi_add_mpi( &U1, &U1, &TB ) ) != 0 ) goto cleanup; } while( 0 );
-                do { if( ( ret = mbedtls_mpi_sub_mpi( &U2, &U2, &TA ) ) != 0 ) goto cleanup; } while( 0 );
+                do { if( ( ret = (mbedtls_mpi_add_mpi( &U1, &U1, &TB )) ) != 0 ) goto cleanup; } while( 0 );
+                do { if( ( ret = (mbedtls_mpi_sub_mpi( &U2, &U2, &TA )) ) != 0 ) goto cleanup; } while( 0 );
             }
 
-            do { if( ( ret = mbedtls_mpi_shift_r( &U1, 1 ) ) != 0 ) goto cleanup; } while( 0 );
-            do { if( ( ret = mbedtls_mpi_shift_r( &U2, 1 ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_shift_r( &U1, 1 )) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_shift_r( &U2, 1 )) ) != 0 ) goto cleanup; } while( 0 );
         }
 
         while( ( TV.p[0] & 1 ) == 0 )
         {
-            do { if( ( ret = mbedtls_mpi_shift_r( &TV, 1 ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_shift_r( &TV, 1 )) ) != 0 ) goto cleanup; } while( 0 );
 
             if( ( V1.p[0] & 1 ) != 0 || ( V2.p[0] & 1 ) != 0 )
             {
-                do { if( ( ret = mbedtls_mpi_add_mpi( &V1, &V1, &TB ) ) != 0 ) goto cleanup; } while( 0 );
-                do { if( ( ret = mbedtls_mpi_sub_mpi( &V2, &V2, &TA ) ) != 0 ) goto cleanup; } while( 0 );
+                do { if( ( ret = (mbedtls_mpi_add_mpi( &V1, &V1, &TB )) ) != 0 ) goto cleanup; } while( 0 );
+                do { if( ( ret = (mbedtls_mpi_sub_mpi( &V2, &V2, &TA )) ) != 0 ) goto cleanup; } while( 0 );
             }
 
-            do { if( ( ret = mbedtls_mpi_shift_r( &V1, 1 ) ) != 0 ) goto cleanup; } while( 0 );
-            do { if( ( ret = mbedtls_mpi_shift_r( &V2, 1 ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_shift_r( &V1, 1 )) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_shift_r( &V2, 1 )) ) != 0 ) goto cleanup; } while( 0 );
         }
 
         if( mbedtls_mpi_cmp_mpi( &TU, &TV ) >= 0 )
         {
-            do { if( ( ret = mbedtls_mpi_sub_mpi( &TU, &TU, &TV ) ) != 0 ) goto cleanup; } while( 0 );
-            do { if( ( ret = mbedtls_mpi_sub_mpi( &U1, &U1, &V1 ) ) != 0 ) goto cleanup; } while( 0 );
-            do { if( ( ret = mbedtls_mpi_sub_mpi( &U2, &U2, &V2 ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_sub_mpi( &TU, &TU, &TV )) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_sub_mpi( &U1, &U1, &V1 )) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_sub_mpi( &U2, &U2, &V2 )) ) != 0 ) goto cleanup; } while( 0 );
         }
         else
         {
-            do { if( ( ret = mbedtls_mpi_sub_mpi( &TV, &TV, &TU ) ) != 0 ) goto cleanup; } while( 0 );
-            do { if( ( ret = mbedtls_mpi_sub_mpi( &V1, &V1, &U1 ) ) != 0 ) goto cleanup; } while( 0 );
-            do { if( ( ret = mbedtls_mpi_sub_mpi( &V2, &V2, &U2 ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_sub_mpi( &TV, &TV, &TU )) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_sub_mpi( &V1, &V1, &U1 )) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_sub_mpi( &V2, &V2, &U2 )) ) != 0 ) goto cleanup; } while( 0 );
         }
     }
     while( mbedtls_mpi_cmp_int( &TU, 0 ) != 0 );
 
     while( mbedtls_mpi_cmp_int( &V1, 0 ) < 0 )
-        do { if( ( ret = mbedtls_mpi_add_mpi( &V1, &V1, N ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_add_mpi( &V1, &V1, N )) ) != 0 ) goto cleanup; } while( 0 );
 
     while( mbedtls_mpi_cmp_mpi( &V1, N ) >= 0 )
-        do { if( ( ret = mbedtls_mpi_sub_mpi( &V1, &V1, N ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_sub_mpi( &V1, &V1, N )) ) != 0 ) goto cleanup; } while( 0 );
 
-    do { if( ( ret = mbedtls_mpi_copy( X, &V1 ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_copy( X, &V1 )) ) != 0 ) goto cleanup; } while( 0 );
 
 cleanup:
 
@@ -3320,7 +3630,7 @@ static const int small_prime[] =
       887, 907, 911, 919, 929, 937, 941, 947,
       953, 967, 971, 977, 983, 991, 997, -103
 };
-# 2044 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 2404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
 static int mpi_check_small_factors( const mbedtls_mpi *X )
 {
     int ret = 0;
@@ -3335,7 +3645,7 @@ static int mpi_check_small_factors( const mbedtls_mpi *X )
         if( mbedtls_mpi_cmp_int( X, small_prime[i] ) <= 0 )
             return( 1 );
 
-        do { if( ( ret = mbedtls_mpi_mod_int( &r, X, small_prime[i] ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_mod_int( &r, X, small_prime[i] )) ) != 0 ) goto cleanup; } while( 0 );
 
         if( r == 0 )
             return( -0x000E );
@@ -3348,60 +3658,48 @@ cleanup:
 
 
 
-static int mpi_miller_rabin( const mbedtls_mpi *X,
+static int mpi_miller_rabin( const mbedtls_mpi *X, size_t rounds,
                              int (*f_rng)(void *, unsigned char *, size_t),
                              void *p_rng )
 {
     int ret, count;
-    size_t i, j, k, n, s;
+    size_t i, j, k, s;
     mbedtls_mpi W, R, T, A, RR;
 
-    mbedtls_mpi_init( &W ); mbedtls_mpi_init( &R ); mbedtls_mpi_init( &T ); mbedtls_mpi_init( &A );
+    do { } while( 0 );
+    do { } while( 0 );
+
+    mbedtls_mpi_init( &W ); mbedtls_mpi_init( &R );
+    mbedtls_mpi_init( &T ); mbedtls_mpi_init( &A );
     mbedtls_mpi_init( &RR );
 
 
 
 
 
-    do { if( ( ret = mbedtls_mpi_sub_int( &W, X, 1 ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_sub_int( &W, X, 1 )) ) != 0 ) goto cleanup; } while( 0 );
     s = mbedtls_mpi_lsb( &W );
-    do { if( ( ret = mbedtls_mpi_copy( &R, &W ) ) != 0 ) goto cleanup; } while( 0 );
-    do { if( ( ret = mbedtls_mpi_shift_r( &R, s ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_copy( &R, &W )) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_shift_r( &R, s )) ) != 0 ) goto cleanup; } while( 0 );
 
-    i = mbedtls_mpi_bitlen( X );
-
-
-
-    n = ( ( i >= 1300 ) ? 2 : ( i >= 850 ) ? 3 :
-          ( i >= 650 ) ? 4 : ( i >= 350 ) ? 8 :
-          ( i >= 250 ) ? 12 : ( i >= 150 ) ? 18 : 27 );
-
-    for( i = 0; i < n; i++ )
+    for( i = 0; i < rounds; i++ )
     {
 
 
 
-        do { if( ( ret = mbedtls_mpi_fill_random( &A, X->n * (sizeof(mbedtls_mpi_uint)), f_rng, p_rng ) ) != 0 ) goto cleanup; } while( 0 );
-
-        if( mbedtls_mpi_cmp_mpi( &A, &W ) >= 0 )
-        {
-            j = mbedtls_mpi_bitlen( &A ) - mbedtls_mpi_bitlen( &W );
-            do { if( ( ret = mbedtls_mpi_shift_r( &A, j + 1 ) ) != 0 ) goto cleanup; } while( 0 );
-        }
-        A.p[0] |= 3;
-
         count = 0;
         do {
-            do { if( ( ret = mbedtls_mpi_fill_random( &A, X->n * (sizeof(mbedtls_mpi_uint)), f_rng, p_rng ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_fill_random( &A, X->n * (sizeof(mbedtls_mpi_uint)), f_rng, p_rng )) ) != 0 ) goto cleanup; } while( 0 );
 
             j = mbedtls_mpi_bitlen( &A );
             k = mbedtls_mpi_bitlen( &W );
             if (j > k) {
-                do { if( ( ret = mbedtls_mpi_shift_r( &A, j - k ) ) != 0 ) goto cleanup; } while( 0 );
+                A.p[A.n - 1] &= ( (mbedtls_mpi_uint) 1 << ( k - ( A.n - 1 ) * ((sizeof(mbedtls_mpi_uint)) << 3) - 1 ) ) - 1;
             }
 
             if (count++ > 30) {
-                return -0x000E;
+                ret = -0x000E;
+                goto cleanup;
             }
 
         } while ( mbedtls_mpi_cmp_mpi( &A, &W ) >= 0 ||
@@ -3410,7 +3708,7 @@ static int mpi_miller_rabin( const mbedtls_mpi *X,
 
 
 
-        do { if( ( ret = mbedtls_mpi_exp_mod( &A, &A, &R, X, &RR ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_exp_mod( &A, &A, &R, X, &RR )) ) != 0 ) goto cleanup; } while( 0 );
 
         if( mbedtls_mpi_cmp_mpi( &A, &W ) == 0 ||
             mbedtls_mpi_cmp_int( &A, 1 ) == 0 )
@@ -3422,8 +3720,8 @@ static int mpi_miller_rabin( const mbedtls_mpi *X,
 
 
 
-            do { if( ( ret = mbedtls_mpi_mul_mpi( &T, &A, &A ) ) != 0 ) goto cleanup; } while( 0 );
-            do { if( ( ret = mbedtls_mpi_mod_mpi( &A, &T, X ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_mul_mpi( &T, &A, &A )) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_mod_mpi( &A, &T, X )) ) != 0 ) goto cleanup; } while( 0 );
 
             if( mbedtls_mpi_cmp_int( &A, 1 ) == 0 )
                 break;
@@ -3443,7 +3741,8 @@ static int mpi_miller_rabin( const mbedtls_mpi *X,
     }
 
 cleanup:
-    mbedtls_mpi_free( &W ); mbedtls_mpi_free( &R ); mbedtls_mpi_free( &T ); mbedtls_mpi_free( &A );
+    mbedtls_mpi_free( &W ); mbedtls_mpi_free( &R );
+    mbedtls_mpi_free( &T ); mbedtls_mpi_free( &A );
     mbedtls_mpi_free( &RR );
 
     return( ret );
@@ -3452,12 +3751,14 @@ cleanup:
 
 
 
-int mbedtls_mpi_is_prime( const mbedtls_mpi *X,
-                  int (*f_rng)(void *, unsigned char *, size_t),
-                  void *p_rng )
+int mbedtls_mpi_is_prime_ext( const mbedtls_mpi *X, int rounds,
+                              int (*f_rng)(void *, unsigned char *, size_t),
+                              void *p_rng )
 {
     int ret;
     mbedtls_mpi XX;
+    do { } while( 0 );
+    do { } while( 0 );
 
     XX.s = 1;
     XX.n = X->n;
@@ -3478,10 +3779,29 @@ int mbedtls_mpi_is_prime( const mbedtls_mpi *X,
         return( ret );
     }
 
-    return( mpi_miller_rabin( &XX, f_rng, p_rng ) );
+    return( mpi_miller_rabin( &XX, rounds, f_rng, p_rng ) );
 }
-# 2211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
-int mbedtls_mpi_gen_prime( mbedtls_mpi *X, size_t nbits, int dh_flag,
+
+
+
+
+
+int mbedtls_mpi_is_prime( const mbedtls_mpi *X,
+                  int (*f_rng)(void *, unsigned char *, size_t),
+                  void *p_rng )
+{
+    do { } while( 0 );
+    do { } while( 0 );
+
+
+
+
+
+
+    return( mbedtls_mpi_is_prime_ext( X, 40, f_rng, p_rng ) );
+}
+# 2582 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+int mbedtls_mpi_gen_prime( mbedtls_mpi *X, size_t nbits, int flags,
                    int (*f_rng)(void *, unsigned char *, size_t),
                    void *p_rng )
 {
@@ -3494,8 +3814,12 @@ int mbedtls_mpi_gen_prime( mbedtls_mpi *X, size_t nbits, int dh_flag,
 
     int ret = -0x000E;
     size_t k, n;
+    int rounds;
     mbedtls_mpi_uint r;
     mbedtls_mpi Y;
+
+    do { } while( 0 );
+    do { } while( 0 );
 
     if( nbits < 3 || nbits > ( 8 * 1024 ) )
         return( -0x0004 );
@@ -3504,19 +3828,40 @@ int mbedtls_mpi_gen_prime( mbedtls_mpi *X, size_t nbits, int dh_flag,
 
     n = ( (nbits) / ((sizeof(mbedtls_mpi_uint)) << 3) + ( (nbits) % ((sizeof(mbedtls_mpi_uint)) << 3) != 0 ) );
 
+    if( ( flags & MBEDTLS_MPI_GEN_PRIME_FLAG_LOW_ERR ) == 0 )
+    {
+
+
+
+        rounds = ( ( nbits >= 1300 ) ? 2 : ( nbits >= 850 ) ? 3 :
+                   ( nbits >= 650 ) ? 4 : ( nbits >= 350 ) ? 8 :
+                   ( nbits >= 250 ) ? 12 : ( nbits >= 150 ) ? 18 : 27 );
+    }
+    else
+    {
+
+
+
+
+        rounds = ( ( nbits >= 1450 ) ? 4 : ( nbits >= 1150 ) ? 5 :
+                   ( nbits >= 1000 ) ? 6 : ( nbits >= 850 ) ? 7 :
+                   ( nbits >= 750 ) ? 8 : ( nbits >= 500 ) ? 13 :
+                   ( nbits >= 250 ) ? 28 : ( nbits >= 150 ) ? 40 : 51 );
+    }
+
     while( 1 )
     {
-        do { if( ( ret = mbedtls_mpi_fill_random( X, n * (sizeof(mbedtls_mpi_uint)), f_rng, p_rng ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_fill_random( X, n * (sizeof(mbedtls_mpi_uint)), f_rng, p_rng )) ) != 0 ) goto cleanup; } while( 0 );
 
         if( X->p[n-1] < 0xb504f334U ) continue;
 
         k = n * ((sizeof(mbedtls_mpi_uint)) << 3);
-        if( k > nbits ) do { if( ( ret = mbedtls_mpi_shift_r( X, k - nbits ) ) != 0 ) goto cleanup; } while( 0 );
+        if( k > nbits ) do { if( ( ret = (mbedtls_mpi_shift_r( X, k - nbits )) ) != 0 ) goto cleanup; } while( 0 );
         X->p[0] |= 1;
 
-        if( dh_flag == 0 )
+        if( ( flags & MBEDTLS_MPI_GEN_PRIME_FLAG_DH ) == 0 )
         {
-            ret = mbedtls_mpi_is_prime( X, f_rng, p_rng );
+            ret = mbedtls_mpi_is_prime_ext( X, rounds, f_rng, p_rng );
 
             if( ret != -0x000E )
                 goto cleanup;
@@ -3531,15 +3876,15 @@ int mbedtls_mpi_gen_prime( mbedtls_mpi *X, size_t nbits, int dh_flag,
 
             X->p[0] |= 2;
 
-            do { if( ( ret = mbedtls_mpi_mod_int( &r, X, 3 ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_mod_int( &r, X, 3 )) ) != 0 ) goto cleanup; } while( 0 );
             if( r == 0 )
-                do { if( ( ret = mbedtls_mpi_add_int( X, X, 8 ) ) != 0 ) goto cleanup; } while( 0 );
+                do { if( ( ret = (mbedtls_mpi_add_int( X, X, 8 )) ) != 0 ) goto cleanup; } while( 0 );
             else if( r == 1 )
-                do { if( ( ret = mbedtls_mpi_add_int( X, X, 4 ) ) != 0 ) goto cleanup; } while( 0 );
+                do { if( ( ret = (mbedtls_mpi_add_int( X, X, 4 )) ) != 0 ) goto cleanup; } while( 0 );
 
 
-            do { if( ( ret = mbedtls_mpi_copy( &Y, X ) ) != 0 ) goto cleanup; } while( 0 );
-            do { if( ( ret = mbedtls_mpi_shift_r( &Y, 1 ) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_copy( &Y, X )) ) != 0 ) goto cleanup; } while( 0 );
+            do { if( ( ret = (mbedtls_mpi_shift_r( &Y, 1 )) ) != 0 ) goto cleanup; } while( 0 );
 
             while( 1 )
             {
@@ -3549,8 +3894,10 @@ int mbedtls_mpi_gen_prime( mbedtls_mpi *X, size_t nbits, int dh_flag,
 
                 if( ( ret = mpi_check_small_factors( X ) ) == 0 &&
                     ( ret = mpi_check_small_factors( &Y ) ) == 0 &&
-                    ( ret = mpi_miller_rabin( X, f_rng, p_rng ) ) == 0 &&
-                    ( ret = mpi_miller_rabin( &Y, f_rng, p_rng ) ) == 0 )
+                    ( ret = mpi_miller_rabin( X, rounds, f_rng, p_rng ) )
+                                                                    == 0 &&
+                    ( ret = mpi_miller_rabin( &Y, rounds, f_rng, p_rng ) )
+                                                                    == 0 )
                     goto cleanup;
 
                 if( ret != -0x000E )
@@ -3561,8 +3908,8 @@ int mbedtls_mpi_gen_prime( mbedtls_mpi *X, size_t nbits, int dh_flag,
 
 
 
-                do { if( ( ret = mbedtls_mpi_add_int( X, X, 12 ) ) != 0 ) goto cleanup; } while( 0 );
-                do { if( ( ret = mbedtls_mpi_add_int( &Y, &Y, 6 ) ) != 0 ) goto cleanup; } while( 0 );
+                do { if( ( ret = (mbedtls_mpi_add_int( X, X, 12 )) ) != 0 ) goto cleanup; } while( 0 );
+                do { if( ( ret = (mbedtls_mpi_add_int( &Y, &Y, 6 )) ) != 0 ) goto cleanup; } while( 0 );
             }
         }
     }
@@ -3573,7 +3920,7 @@ cleanup:
 
     return( ret );
 }
-# 2311 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+# 2709 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
 static const int gcd_pairs[3][3] =
 {
     { 693, 609, 21 },
@@ -3592,26 +3939,26 @@ int mbedtls_mpi_self_test( int verbose )
     mbedtls_mpi_init( &A ); mbedtls_mpi_init( &E ); mbedtls_mpi_init( &N ); mbedtls_mpi_init( &X );
     mbedtls_mpi_init( &Y ); mbedtls_mpi_init( &U ); mbedtls_mpi_init( &V );
 
-    do { if( ( ret = mbedtls_mpi_read_string( &A, 16, "EFE021C2645FD1DC586E69184AF4A31E" "D5F53E93B5F123FA41680867BA110131" "944FE7952E2517337780CB0DB80E61AA" "E7C8DDC6C5C6AADEB34EB38A2F40D5E6" ) ) != 0 ) goto cleanup; } while( 0 )
+    do { if( ( ret = (mbedtls_mpi_read_string( &A, 16, "EFE021C2645FD1DC586E69184AF4A31E" "D5F53E93B5F123FA41680867BA110131" "944FE7952E2517337780CB0DB80E61AA" "E7C8DDC6C5C6AADEB34EB38A2F40D5E6" )) ) != 0 ) goto cleanup; } while( 0 )
 
 
 
                                               ;
 
-    do { if( ( ret = mbedtls_mpi_read_string( &E, 16, "B2E7EFD37075B9F03FF989C7C5051C20" "34D2A323810251127E7BF8625A4F49A5" "F3E27F4DA8BD59C47D6DAABA4C8127BD" "5B5C25763222FEFCCFC38B832366C29E" ) ) != 0 ) goto cleanup; } while( 0 )
+    do { if( ( ret = (mbedtls_mpi_read_string( &E, 16, "B2E7EFD37075B9F03FF989C7C5051C20" "34D2A323810251127E7BF8625A4F49A5" "F3E27F4DA8BD59C47D6DAABA4C8127BD" "5B5C25763222FEFCCFC38B832366C29E" )) ) != 0 ) goto cleanup; } while( 0 )
 
 
 
                                               ;
 
-    do { if( ( ret = mbedtls_mpi_read_string( &N, 16, "0066A198186C18C10B2F5ED9B522752A" "9830B69916E535C8F047518A889A43A5" "94B6BED27A168D31D4A52F88925AA8F5" ) ) != 0 ) goto cleanup; } while( 0 )
+    do { if( ( ret = (mbedtls_mpi_read_string( &N, 16, "0066A198186C18C10B2F5ED9B522752A" "9830B69916E535C8F047518A889A43A5" "94B6BED27A168D31D4A52F88925AA8F5" )) ) != 0 ) goto cleanup; } while( 0 )
 
 
                                               ;
 
-    do { if( ( ret = mbedtls_mpi_mul_mpi( &X, &A, &N ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_mul_mpi( &X, &A, &N )) ) != 0 ) goto cleanup; } while( 0 );
 
-    do { if( ( ret = mbedtls_mpi_read_string( &U, 16, "602AB7ECA597A3D6B56FF9829A5E8B85" "9E857EA95A03512E2BAE7391688D264A" "A5663B0341DB9CCFD2C4C5F421FEC814" "8001B72E848A38CAE1C65F78E56ABDEF" "E12D3C039B8A02D6BE593F0BBBDA56F1" "ECF677152EF804370C1A305CAF3B5BF1" "30879B56C61DE584A0F53A2447A51E" ) ) != 0 ) goto cleanup; } while( 0 )
+    do { if( ( ret = (mbedtls_mpi_read_string( &U, 16, "602AB7ECA597A3D6B56FF9829A5E8B85" "9E857EA95A03512E2BAE7391688D264A" "A5663B0341DB9CCFD2C4C5F421FEC814" "8001B72E848A38CAE1C65F78E56ABDEF" "E12D3C039B8A02D6BE593F0BBBDA56F1" "ECF677152EF804370C1A305CAF3B5BF1" "30879B56C61DE584A0F53A2447A51E" )) ) != 0 ) goto cleanup; } while( 0 )
 
 
 
@@ -3635,12 +3982,12 @@ int mbedtls_mpi_self_test( int verbose )
     if( verbose != 0 )
         printf( "passed\n" );
 
-    do { if( ( ret = mbedtls_mpi_div_mpi( &X, &Y, &A, &N ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_div_mpi( &X, &Y, &A, &N )) ) != 0 ) goto cleanup; } while( 0 );
 
-    do { if( ( ret = mbedtls_mpi_read_string( &U, 16, "256567336059E52CAE22925474705F39A94" ) ) != 0 ) goto cleanup; } while( 0 )
+    do { if( ( ret = (mbedtls_mpi_read_string( &U, 16, "256567336059E52CAE22925474705F39A94" )) ) != 0 ) goto cleanup; } while( 0 )
                                                  ;
 
-    do { if( ( ret = mbedtls_mpi_read_string( &V, 16, "6613F26162223DF488E9CD48CC132C7A" "0AC93C701B001B092E4E5B9F73BCD27B" "9EE50D0657C77F374E903CDFA4C642" ) ) != 0 ) goto cleanup; } while( 0 )
+    do { if( ( ret = (mbedtls_mpi_read_string( &V, 16, "6613F26162223DF488E9CD48CC132C7A" "0AC93C701B001B092E4E5B9F73BCD27B" "9EE50D0657C77F374E903CDFA4C642" )) ) != 0 ) goto cleanup; } while( 0 )
 
 
                                             ;
@@ -3661,13 +4008,13 @@ int mbedtls_mpi_self_test( int verbose )
     if( verbose != 0 )
         printf( "passed\n" );
 
-    do { if( ( ret = mbedtls_mpi_exp_mod( &X, &A, &E, &N, 
-# 2398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
+    do { if( ( ret = (mbedtls_mpi_exp_mod( &X, &A, &E, &N, 
+# 2796 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c" 3 4
    ((void *)0) 
-# 2398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
-   ) ) != 0 ) goto cleanup; } while( 0 );
+# 2796 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mbedtls/mbedtls/library/bignum.c"
+   )) ) != 0 ) goto cleanup; } while( 0 );
 
-    do { if( ( ret = mbedtls_mpi_read_string( &U, 16, "36E139AEA55215609D2816998ED020BB" "BD96C37890F65171D948E9BC7CBAA4D9" "325D24D6A3C12710F10A09FA08AB87" ) ) != 0 ) goto cleanup; } while( 0 )
+    do { if( ( ret = (mbedtls_mpi_read_string( &U, 16, "36E139AEA55215609D2816998ED020BB" "BD96C37890F65171D948E9BC7CBAA4D9" "325D24D6A3C12710F10A09FA08AB87" )) ) != 0 ) goto cleanup; } while( 0 )
 
 
                                             ;
@@ -3687,9 +4034,9 @@ int mbedtls_mpi_self_test( int verbose )
     if( verbose != 0 )
         printf( "passed\n" );
 
-    do { if( ( ret = mbedtls_mpi_inv_mod( &X, &A, &N ) ) != 0 ) goto cleanup; } while( 0 );
+    do { if( ( ret = (mbedtls_mpi_inv_mod( &X, &A, &N )) ) != 0 ) goto cleanup; } while( 0 );
 
-    do { if( ( ret = mbedtls_mpi_read_string( &U, 16, "003A0AAEDD7E784FC07D8F9EC6E3BFD5" "C3DBA76456363A10869622EAC2DD84EC" "C5B8A74DAC4D09E03B5E0BE779F2DF61" ) ) != 0 ) goto cleanup; } while( 0 )
+    do { if( ( ret = (mbedtls_mpi_read_string( &U, 16, "003A0AAEDD7E784FC07D8F9EC6E3BFD5" "C3DBA76456363A10869622EAC2DD84EC" "C5B8A74DAC4D09E03B5E0BE779F2DF61" )) ) != 0 ) goto cleanup; } while( 0 )
 
 
                                               ;
@@ -3714,10 +4061,10 @@ int mbedtls_mpi_self_test( int verbose )
 
     for( i = 0; i < 3; i++ )
     {
-        do { if( ( ret = mbedtls_mpi_lset( &X, gcd_pairs[i][0] ) ) != 0 ) goto cleanup; } while( 0 );
-        do { if( ( ret = mbedtls_mpi_lset( &Y, gcd_pairs[i][1] ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_lset( &X, gcd_pairs[i][0] )) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_lset( &Y, gcd_pairs[i][1] )) ) != 0 ) goto cleanup; } while( 0 );
 
-        do { if( ( ret = mbedtls_mpi_gcd( &A, &X, &Y ) ) != 0 ) goto cleanup; } while( 0 );
+        do { if( ( ret = (mbedtls_mpi_gcd( &A, &X, &Y )) ) != 0 ) goto cleanup; } while( 0 );
 
         if( mbedtls_mpi_cmp_int( &A, gcd_pairs[i][2] ) != 0 )
         {

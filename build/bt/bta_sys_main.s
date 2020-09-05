@@ -10,7 +10,7 @@
 	.global	bta_sys_sm_execute
 	.type	bta_sys_sm_execute, @function
 bta_sys_sm_execute:
-.LFB32:
+.LFB41:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/bta/sys/bta_sys_main.c"
 	.loc 1 211 0
 .LVL0:
@@ -64,7 +64,7 @@ bta_sys_sm_execute:
 	movi.n	a2, 1
 .LVL8:
 	retw.n
-.LFE32:
+.LFE41:
 	.size	bta_sys_sm_execute, .-bta_sys_sm_execute
 	.section	.text.bta_sys_hw_error,"ax",@progbits
 	.literal_position
@@ -73,7 +73,7 @@ bta_sys_sm_execute:
 	.global	bta_sys_hw_error
 	.type	bta_sys_hw_error, @function
 bta_sys_hw_error:
-.LFB36:
+.LFB45:
 	.loc 1 298 0
 .LVL9:
 	entry	sp, 32
@@ -93,7 +93,7 @@ bta_sys_hw_error:
 .LVL11:
 .L7:
 	retw.n
-.LFE36:
+.LFE45:
 	.size	bta_sys_hw_error, .-bta_sys_hw_error
 	.section	.text.bta_sys_hw_evt_disabled,"ax",@progbits
 	.literal_position
@@ -102,7 +102,7 @@ bta_sys_hw_error:
 	.global	bta_sys_hw_evt_disabled
 	.type	bta_sys_hw_evt_disabled, @function
 bta_sys_hw_evt_disabled:
-.LFB40:
+.LFB49:
 	.loc 1 435 0
 .LVL12:
 	entry	sp, 32
@@ -130,7 +130,7 @@ bta_sys_hw_evt_disabled:
 .LVL16:
 .L15:
 	retw.n
-.LFE40:
+.LFE49:
 	.size	bta_sys_hw_evt_disabled, .-bta_sys_hw_evt_disabled
 	.section	.text.bta_sys_hw_evt_stack_enabled,"ax",@progbits
 	.literal_position
@@ -139,7 +139,7 @@ bta_sys_hw_evt_disabled:
 	.global	bta_sys_hw_evt_stack_enabled
 	.type	bta_sys_hw_evt_stack_enabled, @function
 bta_sys_hw_evt_stack_enabled:
-.LFB41:
+.LFB50:
 	.loc 1 458 0
 .LVL17:
 	entry	sp, 32
@@ -167,14 +167,14 @@ bta_sys_hw_evt_stack_enabled:
 .LVL21:
 .L24:
 	retw.n
-.LFE41:
+.LFE50:
 	.size	bta_sys_hw_evt_stack_enabled, .-bta_sys_hw_evt_stack_enabled
 	.section	.text.bta_sys_hw_evt_enabled,"ax",@progbits
 	.align	4
 	.global	bta_sys_hw_evt_enabled
 	.type	bta_sys_hw_evt_enabled, @function
 bta_sys_hw_evt_enabled:
-.LFB39:
+.LFB48:
 	.loc 1 418 0
 .LVL22:
 	entry	sp, 32
@@ -184,14 +184,14 @@ bta_sys_hw_evt_enabled:
 	call8	BTM_DeviceReset
 .LVL23:
 	retw.n
-.LFE39:
+.LFE48:
 	.size	bta_sys_hw_evt_enabled, .-bta_sys_hw_evt_enabled
 	.section	.text.hash_iter_ro_cb,"ax",@progbits
 	.align	4
 	.global	hash_iter_ro_cb
 	.type	hash_iter_ro_cb, @function
 hash_iter_ro_cb:
-.LFB49:
+.LFB58:
 	.loc 1 621 0
 .LVL24:
 	entry	sp, 32
@@ -216,7 +216,7 @@ hash_iter_ro_cb:
 	movi.n	a2, 1
 .LVL27:
 	retw.n
-.LFE49:
+.LFE58:
 	.size	hash_iter_ro_cb, .-hash_iter_ro_cb
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC6:
@@ -226,13 +226,13 @@ hash_iter_ro_cb:
 	.section	.text.bta_alarm_cb,"ax",@progbits
 	.literal_position
 	.literal .LC7, .LC6
-	.literal .LC8, __func__$9051
+	.literal .LC8, __func__$9124
 	.literal .LC10, .LC9
 	.align	4
 	.global	bta_alarm_cb
 	.type	bta_alarm_cb, @function
 bta_alarm_cb:
-.LFB47:
+.LFB56:
 	.loc 1 590 0
 .LVL28:
 	entry	sp, 32
@@ -259,7 +259,7 @@ bta_alarm_cb:
 	call8	btu_task_post
 .LVL31:
 	retw.n
-.LFE47:
+.LFE56:
 	.size	bta_alarm_cb, .-bta_alarm_cb
 	.section	.text.bta_sys_init,"ax",@progbits
 	.literal_position
@@ -275,7 +275,7 @@ bta_alarm_cb:
 	.global	bta_sys_init
 	.type	bta_sys_init, @function
 bta_sys_init:
-.LFB30:
+.LFB39:
 	.loc 1 169 0
 	entry	sp, 32
 .LCFI7:
@@ -325,7 +325,7 @@ bta_sys_init:
 	call8	BTM_RegisterForDeviceStatusNotif
 .LVL36:
 	retw.n
-.LFE30:
+.LFE39:
 	.size	bta_sys_init, .-bta_sys_init
 	.section	.text.bta_sys_free,"ax",@progbits
 	.literal_position
@@ -336,7 +336,7 @@ bta_sys_init:
 	.global	bta_sys_free
 	.type	bta_sys_free, @function
 bta_sys_free:
-.LFB31:
+.LFB40:
 	.loc 1 192 0
 	entry	sp, 32
 .LCFI8:
@@ -360,7 +360,7 @@ bta_sys_free:
 	s32i.n	a8, a2, 0
 .L39:
 	retw.n
-.LFE31:
+.LFE40:
 	.size	bta_sys_free, .-bta_sys_free
 	.section	.text.bta_sys_hw_register,"ax",@progbits
 	.literal_position
@@ -369,7 +369,7 @@ bta_sys_free:
 	.global	bta_sys_hw_register
 	.type	bta_sys_hw_register, @function
 bta_sys_hw_register:
-.LFB33:
+.LFB42:
 	.loc 1 238 0 is_stmt 1
 .LVL40:
 	entry	sp, 32
@@ -384,7 +384,7 @@ bta_sys_hw_register:
 .LVL41:
 	s32i	a3, a2, 232
 	retw.n
-.LFE33:
+.LFE42:
 	.size	bta_sys_hw_register, .-bta_sys_hw_register
 	.section	.text.bta_sys_hw_unregister,"ax",@progbits
 	.literal_position
@@ -393,7 +393,7 @@ bta_sys_hw_register:
 	.global	bta_sys_hw_unregister
 	.type	bta_sys_hw_unregister, @function
 bta_sys_hw_unregister:
-.LFB34:
+.LFB43:
 	.loc 1 244 0
 .LVL42:
 	entry	sp, 32
@@ -411,7 +411,7 @@ bta_sys_hw_unregister:
 	movi.n	a8, 0
 	s32i.n	a8, a2, 8
 	retw.n
-.LFE34:
+.LFE43:
 	.size	bta_sys_hw_unregister, .-bta_sys_hw_unregister
 	.section	.rodata.str1.1
 .LC26:
@@ -428,7 +428,7 @@ bta_sys_hw_unregister:
 	.global	bta_sys_event
 	.type	bta_sys_event, @function
 bta_sys_event:
-.LFB42:
+.LFB51:
 	.loc 1 485 0
 .LVL45:
 	entry	sp, 32
@@ -482,7 +482,7 @@ bta_sys_event:
 .LVL53:
 .L46:
 	retw.n
-.LFE42:
+.LFE51:
 	.size	bta_sys_event, .-bta_sys_event
 	.section	.text.bta_sys_register,"ax",@progbits
 	.literal_position
@@ -491,7 +491,7 @@ bta_sys_event:
 	.global	bta_sys_register
 	.type	bta_sys_register, @function
 bta_sys_register:
-.LFB43:
+.LFB52:
 	.loc 1 519 0
 .LVL54:
 	entry	sp, 32
@@ -510,7 +510,7 @@ bta_sys_register:
 	movi.n	a8, 1
 	s8i	a8, a2, 184
 	retw.n
-.LFE43:
+.LFE52:
 	.size	bta_sys_register, .-bta_sys_register
 	.section	.text.bta_sys_deregister,"ax",@progbits
 	.literal_position
@@ -519,7 +519,7 @@ bta_sys_register:
 	.global	bta_sys_deregister
 	.type	bta_sys_deregister, @function
 bta_sys_deregister:
-.LFB44:
+.LFB53:
 	.loc 1 536 0
 .LVL56:
 	entry	sp, 32
@@ -537,7 +537,7 @@ bta_sys_deregister:
 	movi.n	a8, 0
 	s8i	a8, a2, 0
 	retw.n
-.LFE44:
+.LFE53:
 	.size	bta_sys_deregister, .-bta_sys_deregister
 	.section	.text.bta_sys_is_register,"ax",@progbits
 	.literal_position
@@ -546,7 +546,7 @@ bta_sys_deregister:
 	.global	bta_sys_is_register
 	.type	bta_sys_is_register, @function
 bta_sys_is_register:
-.LFB45:
+.LFB54:
 	.loc 1 552 0
 .LVL58:
 	entry	sp, 32
@@ -562,14 +562,14 @@ bta_sys_is_register:
 	.loc 1 554 0
 	l8ui	a2, a2, 184
 	retw.n
-.LFE45:
+.LFE54:
 	.size	bta_sys_is_register, .-bta_sys_is_register
 	.section	.text.bta_sys_sendmsg,"ax",@progbits
 	.align	4
 	.global	bta_sys_sendmsg
 	.type	bta_sys_sendmsg, @function
 bta_sys_sendmsg:
-.LFB46:
+.LFB55:
 	.loc 1 569 0
 .LVL60:
 	entry	sp, 32
@@ -587,14 +587,14 @@ bta_sys_sendmsg:
 .LVL62:
 .L56:
 	retw.n
-.LFE46:
+.LFE55:
 	.size	bta_sys_sendmsg, .-bta_sys_sendmsg
 	.section	.text.bta_sys_hw_btm_cback,"ax",@progbits
 	.align	4
 	.global	bta_sys_hw_btm_cback
 	.type	bta_sys_hw_btm_cback, @function
 bta_sys_hw_btm_cback:
-.LFB35:
+.LFB44:
 	.loc 1 259 0
 .LVL63:
 	entry	sp, 32
@@ -634,7 +634,7 @@ bta_sys_hw_btm_cback:
 .LVL68:
 .L61:
 	retw.n
-.LFE35:
+.LFE44:
 	.size	bta_sys_hw_btm_cback, .-bta_sys_hw_btm_cback
 	.section	.text.bta_sys_hw_api_enable,"ax",@progbits
 	.literal_position
@@ -643,7 +643,7 @@ bta_sys_hw_btm_cback:
 	.global	bta_sys_hw_api_enable
 	.type	bta_sys_hw_api_enable, @function
 bta_sys_hw_api_enable:
-.LFB37:
+.LFB46:
 	.loc 1 335 0
 .LVL69:
 	entry	sp, 32
@@ -698,7 +698,7 @@ bta_sys_hw_api_enable:
 .LVL73:
 .L70:
 	retw.n
-.LFE37:
+.LFE46:
 	.size	bta_sys_hw_api_enable, .-bta_sys_hw_api_enable
 	.section	.rodata.str1.1
 .LC34:
@@ -710,7 +710,7 @@ bta_sys_hw_api_enable:
 	.section	.text.bta_sys_start_timer,"ax",@progbits
 	.literal_position
 	.literal .LC35, .LC34
-	.literal .LC36, __func__$9058
+	.literal .LC36, __func__$9131
 	.literal .LC37, .LC9
 	.literal .LC38, bta_alarm_lock
 	.literal .LC39, bta_alarm_hash_map
@@ -724,7 +724,7 @@ bta_sys_hw_api_enable:
 	.global	bta_sys_start_timer
 	.type	bta_sys_start_timer, @function
 bta_sys_start_timer:
-.LFB48:
+.LFB57:
 	.loc 1 598 0
 .LVL74:
 	entry	sp, 32
@@ -810,7 +810,7 @@ bta_sys_start_timer:
 .LVL86:
 .L81:
 	retw.n
-.LFE48:
+.LFE57:
 	.size	bta_sys_start_timer, .-bta_sys_start_timer
 	.section	.text.bta_sys_get_remaining_ticks,"ax",@progbits
 	.literal_position
@@ -822,7 +822,7 @@ bta_sys_start_timer:
 	.global	bta_sys_get_remaining_ticks
 	.type	bta_sys_get_remaining_ticks, @function
 bta_sys_get_remaining_ticks:
-.LFB50:
+.LFB59:
 	.loc 1 629 0
 .LVL87:
 	entry	sp, 48
@@ -856,19 +856,19 @@ bta_sys_get_remaining_ticks:
 	.loc 1 636 0
 	l32i.n	a2, sp, 0
 	retw.n
-.LFE50:
+.LFE59:
 	.size	bta_sys_get_remaining_ticks, .-bta_sys_get_remaining_ticks
 	.section	.text.bta_sys_stop_timer,"ax",@progbits
 	.literal_position
 	.literal .LC52, .LC34
-	.literal .LC53, __func__$9073
+	.literal .LC53, __func__$9146
 	.literal .LC54, .LC9
 	.literal .LC55, bta_alarm_hash_map
 	.align	4
 	.global	bta_sys_stop_timer
 	.type	bta_sys_stop_timer, @function
 bta_sys_stop_timer:
-.LFB51:
+.LFB60:
 	.loc 1 649 0
 .LVL92:
 	entry	sp, 32
@@ -897,19 +897,19 @@ bta_sys_stop_timer:
 .LVL95:
 .L90:
 	retw.n
-.LFE51:
+.LFE60:
 	.size	bta_sys_stop_timer, .-bta_sys_stop_timer
 	.section	.text.bta_sys_free_timer,"ax",@progbits
 	.literal_position
 	.literal .LC56, .LC34
-	.literal .LC57, __func__$9078
+	.literal .LC57, __func__$9151
 	.literal .LC58, .LC9
 	.literal .LC59, bta_alarm_hash_map
 	.align	4
 	.global	bta_sys_free_timer
 	.type	bta_sys_free_timer, @function
 bta_sys_free_timer:
-.LFB52:
+.LFB61:
 	.loc 1 670 0
 .LVL96:
 	entry	sp, 32
@@ -942,7 +942,7 @@ bta_sys_free_timer:
 .LVL100:
 .L96:
 	retw.n
-.LFE52:
+.LFE61:
 	.size	bta_sys_free_timer, .-bta_sys_free_timer
 	.section	.rodata.str1.1
 .LC62:
@@ -957,7 +957,7 @@ bta_sys_free_timer:
 	.global	bta_sys_disable
 	.type	bta_sys_disable, @function
 bta_sys_disable:
-.LFB53:
+.LFB62:
 	.loc 1 692 0
 .LVL101:
 	entry	sp, 32
@@ -1018,7 +1018,7 @@ bta_sys_disable:
 .LVL111:
 .L102:
 	retw.n
-.LFE53:
+.LFE62:
 	.size	bta_sys_disable, .-bta_sys_disable
 	.section	.text.bta_sys_hw_api_disable,"ax",@progbits
 	.literal_position
@@ -1027,7 +1027,7 @@ bta_sys_disable:
 	.global	bta_sys_hw_api_disable
 	.type	bta_sys_hw_api_disable, @function
 bta_sys_hw_api_disable:
-.LFB38:
+.LFB47:
 	.loc 1 373 0
 .LVL112:
 	entry	sp, 32
@@ -1083,7 +1083,7 @@ bta_sys_hw_api_disable:
 .L120:
 	retw.n
 .LBE15:
-.LFE38:
+.LFE47:
 	.size	bta_sys_hw_api_disable, .-bta_sys_hw_api_disable
 	.section	.text.bta_sys_set_trace_level,"ax",@progbits
 	.literal_position
@@ -1092,7 +1092,7 @@ bta_sys_hw_api_disable:
 	.global	bta_sys_set_trace_level
 	.type	bta_sys_set_trace_level, @function
 bta_sys_set_trace_level:
-.LFB54:
+.LFB63:
 	.loc 1 727 0
 .LVL120:
 	entry	sp, 32
@@ -1101,7 +1101,7 @@ bta_sys_set_trace_level:
 	l32r	a8, .LC66
 	s8i	a2, a8, 0
 	retw.n
-.LFE54:
+.LFE63:
 	.size	bta_sys_set_trace_level, .-bta_sys_set_trace_level
 	.section	.text.bta_sys_get_sys_features,"ax",@progbits
 	.literal_position
@@ -1110,7 +1110,7 @@ bta_sys_set_trace_level:
 	.global	bta_sys_get_sys_features
 	.type	bta_sys_get_sys_features, @function
 bta_sys_get_sys_features:
-.LFB55:
+.LFB64:
 	.loc 1 741 0
 	entry	sp, 32
 .LCFI25:
@@ -1120,27 +1120,27 @@ bta_sys_get_sys_features:
 	.loc 1 743 0
 	l16ui	a2, a8, 244
 	retw.n
-.LFE55:
+.LFE64:
 	.size	bta_sys_get_sys_features, .-bta_sys_get_sys_features
-	.section	.rodata.__func__$9078,"a",@progbits
-	.type	__func__$9078, @object
-	.size	__func__$9078, 19
-__func__$9078:
+	.section	.rodata.__func__$9151,"a",@progbits
+	.type	__func__$9151, @object
+	.size	__func__$9151, 19
+__func__$9151:
 	.string	"bta_sys_free_timer"
-	.section	.rodata.__func__$9073,"a",@progbits
-	.type	__func__$9073, @object
-	.size	__func__$9073, 19
-__func__$9073:
+	.section	.rodata.__func__$9146,"a",@progbits
+	.type	__func__$9146, @object
+	.size	__func__$9146, 19
+__func__$9146:
 	.string	"bta_sys_stop_timer"
-	.section	.rodata.__func__$9058,"a",@progbits
-	.type	__func__$9058, @object
-	.size	__func__$9058, 20
-__func__$9058:
+	.section	.rodata.__func__$9131,"a",@progbits
+	.type	__func__$9131, @object
+	.size	__func__$9131, 20
+__func__$9131:
 	.string	"bta_sys_start_timer"
-	.section	.rodata.__func__$9051,"a",@progbits
-	.type	__func__$9051, @object
-	.size	__func__$9051, 13
-__func__$9051:
+	.section	.rodata.__func__$9124,"a",@progbits
+	.type	__func__$9124, @object
+	.size	__func__$9124, 13
+__func__$9124:
 	.string	"bta_alarm_cb"
 	.global	bta_sys_st_tbl
 	.section	.rodata.bta_sys_st_tbl,"a",@progbits
@@ -1307,10 +1307,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.byte	0x4
-	.4byte	.LCFI0-.LFB32
+	.4byte	.LCFI0-.LFB41
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1319,10 +1319,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.byte	0x4
-	.4byte	.LCFI1-.LFB36
+	.4byte	.LCFI1-.LFB45
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1331,10 +1331,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.byte	0x4
-	.4byte	.LCFI2-.LFB40
+	.4byte	.LCFI2-.LFB49
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1343,10 +1343,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.byte	0x4
-	.4byte	.LCFI3-.LFB41
+	.4byte	.LCFI3-.LFB50
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1355,10 +1355,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI4-.LFB39
+	.4byte	.LCFI4-.LFB48
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1367,10 +1367,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
 	.byte	0x4
-	.4byte	.LCFI5-.LFB49
+	.4byte	.LCFI5-.LFB58
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1379,10 +1379,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.byte	0x4
-	.4byte	.LCFI6-.LFB47
+	.4byte	.LCFI6-.LFB56
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1391,10 +1391,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI7-.LFB30
+	.4byte	.LCFI7-.LFB39
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1403,10 +1403,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI8-.LFB31
+	.4byte	.LCFI8-.LFB40
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1415,10 +1415,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.4byte	.Lframe0
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.byte	0x4
-	.4byte	.LCFI9-.LFB33
+	.4byte	.LCFI9-.LFB42
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1427,10 +1427,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE20-.LASFDE20
 .LASFDE20:
 	.4byte	.Lframe0
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.byte	0x4
-	.4byte	.LCFI10-.LFB34
+	.4byte	.LCFI10-.LFB43
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1439,10 +1439,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE22-.LASFDE22
 .LASFDE22:
 	.4byte	.Lframe0
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.byte	0x4
-	.4byte	.LCFI11-.LFB42
+	.4byte	.LCFI11-.LFB51
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1451,10 +1451,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE24-.LASFDE24
 .LASFDE24:
 	.4byte	.Lframe0
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.byte	0x4
-	.4byte	.LCFI12-.LFB43
+	.4byte	.LCFI12-.LFB52
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1463,10 +1463,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE26-.LASFDE26
 .LASFDE26:
 	.4byte	.Lframe0
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.byte	0x4
-	.4byte	.LCFI13-.LFB44
+	.4byte	.LCFI13-.LFB53
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1475,10 +1475,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE28-.LASFDE28
 .LASFDE28:
 	.4byte	.Lframe0
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.byte	0x4
-	.4byte	.LCFI14-.LFB45
+	.4byte	.LCFI14-.LFB54
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1487,10 +1487,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE30-.LASFDE30
 .LASFDE30:
 	.4byte	.Lframe0
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.byte	0x4
-	.4byte	.LCFI15-.LFB46
+	.4byte	.LCFI15-.LFB55
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1499,10 +1499,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE32-.LASFDE32
 .LASFDE32:
 	.4byte	.Lframe0
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.byte	0x4
-	.4byte	.LCFI16-.LFB35
+	.4byte	.LCFI16-.LFB44
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1511,10 +1511,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE34-.LASFDE34
 .LASFDE34:
 	.4byte	.Lframe0
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.byte	0x4
-	.4byte	.LCFI17-.LFB37
+	.4byte	.LCFI17-.LFB46
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1523,10 +1523,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE36-.LASFDE36
 .LASFDE36:
 	.4byte	.Lframe0
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
 	.byte	0x4
-	.4byte	.LCFI18-.LFB48
+	.4byte	.LCFI18-.LFB57
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1535,10 +1535,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE38-.LASFDE38
 .LASFDE38:
 	.4byte	.Lframe0
-	.4byte	.LFB50
-	.4byte	.LFE50-.LFB50
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
 	.byte	0x4
-	.4byte	.LCFI19-.LFB50
+	.4byte	.LCFI19-.LFB59
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -1547,10 +1547,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE40-.LASFDE40
 .LASFDE40:
 	.4byte	.Lframe0
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.byte	0x4
-	.4byte	.LCFI20-.LFB51
+	.4byte	.LCFI20-.LFB60
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1559,10 +1559,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE42-.LASFDE42
 .LASFDE42:
 	.4byte	.Lframe0
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
 	.byte	0x4
-	.4byte	.LCFI21-.LFB52
+	.4byte	.LCFI21-.LFB61
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1571,10 +1571,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE44-.LASFDE44
 .LASFDE44:
 	.4byte	.Lframe0
-	.4byte	.LFB53
-	.4byte	.LFE53-.LFB53
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
 	.byte	0x4
-	.4byte	.LCFI22-.LFB53
+	.4byte	.LCFI22-.LFB62
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1583,10 +1583,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE46-.LASFDE46
 .LASFDE46:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI23-.LFB38
+	.4byte	.LCFI23-.LFB47
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1595,10 +1595,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE48-.LASFDE48
 .LASFDE48:
 	.4byte	.Lframe0
-	.4byte	.LFB54
-	.4byte	.LFE54-.LFB54
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
 	.byte	0x4
-	.4byte	.LCFI24-.LFB54
+	.4byte	.LCFI24-.LFB63
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1607,10 +1607,10 @@ bta_alarm_hash_map:
 	.4byte	.LEFDE50-.LASFDE50
 .LASFDE50:
 	.4byte	.Lframe0
-	.4byte	.LFB55
-	.4byte	.LFE55-.LFB55
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
 	.byte	0x4
-	.4byte	.LCFI25-.LFB55
+	.4byte	.LCFI25-.LFB64
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -1620,19 +1620,19 @@ bta_alarm_hash_map:
 	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h"
 	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
 	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
-	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/alarm.h"
+	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/alarm.h"
 	.file 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
-	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
-	.file 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_defs.h"
-	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
-	.file 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/thread.h"
+	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+	.file 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/thread.h"
+	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/bt_types.h"
+	.file 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/common/include/common/bt_defs.h"
 	.file 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/stack/include/stack/btm_api.h"
 	.file 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/bta/include/bta/bta_sys.h"
 	.file 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/bta/sys/include/bta_sys_int.h"
-	.file 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/hash_map.h"
+	.file 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/hash_map.h"
 	.file 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/semphr.h"
-	.file 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/osi/include/osi/mutex.h"
+	.file 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/common/osi/include/osi/mutex.h"
 	.file 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
 	.file 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 	.section	.debug_info,"",@progbits
@@ -1793,254 +1793,254 @@ bta_alarm_hash_map:
 	.byte	0x7
 	.byte	0x58
 	.4byte	0xad
-	.uleb128 0x3
-	.4byte	.LASF27
-	.byte	0x8
-	.byte	0x21
-	.4byte	0xbe
-	.uleb128 0x3
-	.4byte	.LASF28
-	.byte	0x8
-	.byte	0x22
-	.4byte	0xc9
-	.uleb128 0x3
-	.4byte	.LASF29
-	.byte	0x8
-	.byte	0x23
-	.4byte	0xdf
-	.uleb128 0x3
-	.4byte	.LASF30
-	.byte	0x8
-	.byte	0x28
-	.4byte	0xd4
-	.uleb128 0x3
-	.4byte	.LASF31
-	.byte	0x8
-	.byte	0x29
-	.4byte	0x128
 	.uleb128 0xc
+	.byte	0x4
+	.4byte	0x37
 	.byte	0x8
-	.byte	0x8
-	.byte	0xc6
-	.4byte	0x1c1
+	.byte	0x1f
+	.4byte	0x176
 	.uleb128 0xd
-	.4byte	.LASF32
-	.byte	0x8
-	.byte	0xc7
-	.4byte	0xc9
+	.4byte	.LASF27
 	.byte	0
-	.uleb128 0xe
-	.string	"len"
-	.byte	0x8
-	.byte	0xc8
-	.4byte	0xc9
+	.uleb128 0xd
+	.4byte	.LASF28
+	.byte	0x1
+	.uleb128 0xd
+	.4byte	.LASF29
 	.byte	0x2
 	.uleb128 0xd
-	.4byte	.LASF33
-	.byte	0x8
-	.byte	0xc9
-	.4byte	0xc9
+	.4byte	.LASF30
+	.byte	0x3
+	.uleb128 0xd
+	.4byte	.LASF31
 	.byte	0x4
 	.uleb128 0xd
+	.4byte	.LASF32
+	.byte	0x5
+	.byte	0
+	.uleb128 0xc
+	.byte	0x4
+	.4byte	0x37
+	.byte	0x9
+	.byte	0x31
+	.4byte	0x1b3
+	.uleb128 0xd
+	.4byte	.LASF33
+	.byte	0
+	.uleb128 0xd
 	.4byte	.LASF34
-	.byte	0x8
-	.byte	0xca
-	.4byte	0xc9
-	.byte	0x6
+	.byte	0x1
 	.uleb128 0xd
 	.4byte	.LASF35
+	.byte	0x2
+	.uleb128 0xd
+	.4byte	.LASF36
+	.byte	0x3
+	.uleb128 0xd
+	.4byte	.LASF37
+	.byte	0x4
+	.uleb128 0xd
+	.4byte	.LASF38
+	.byte	0x5
+	.uleb128 0xd
+	.4byte	.LASF39
+	.byte	0x6
+	.uleb128 0xd
+	.4byte	.LASF40
+	.byte	0x7
+	.byte	0
+	.uleb128 0xc
+	.byte	0x4
+	.4byte	0x37
+	.byte	0x9
+	.byte	0x62
+	.4byte	0x1cc
+	.uleb128 0xd
+	.4byte	.LASF41
+	.byte	0
+	.uleb128 0xd
+	.4byte	.LASF42
+	.byte	0x1
+	.byte	0
+	.uleb128 0x3
+	.4byte	.LASF43
+	.byte	0xa
+	.byte	0x1a
+	.4byte	0xbe
+	.uleb128 0x3
+	.4byte	.LASF44
+	.byte	0xa
+	.byte	0x1b
+	.4byte	0xc9
+	.uleb128 0x3
+	.4byte	.LASF45
+	.byte	0xa
+	.byte	0x1c
+	.4byte	0xdf
+	.uleb128 0x3
+	.4byte	.LASF46
+	.byte	0xa
+	.byte	0x21
+	.4byte	0xd4
+	.uleb128 0x3
+	.4byte	.LASF47
+	.byte	0xa
+	.byte	0x22
+	.4byte	0x128
+	.uleb128 0xe
 	.byte	0x8
-	.byte	0xcb
-	.4byte	0x1c1
+	.byte	0xa
+	.byte	0xbf
+	.4byte	0x248
+	.uleb128 0xf
+	.4byte	.LASF48
+	.byte	0xa
+	.byte	0xc0
+	.4byte	0xc9
+	.byte	0
+	.uleb128 0x10
+	.string	"len"
+	.byte	0xa
+	.byte	0xc1
+	.4byte	0xc9
+	.byte	0x2
+	.uleb128 0xf
+	.4byte	.LASF49
+	.byte	0xa
+	.byte	0xc2
+	.4byte	0xc9
+	.byte	0x4
+	.uleb128 0xf
+	.4byte	.LASF50
+	.byte	0xa
+	.byte	0xc3
+	.4byte	0xc9
+	.byte	0x6
+	.uleb128 0xf
+	.4byte	.LASF51
+	.byte	0xa
+	.byte	0xc4
+	.4byte	0x248
 	.byte	0x8
 	.byte	0
-	.uleb128 0xf
+	.uleb128 0x11
 	.4byte	0xbe
-	.4byte	0x1d0
-	.uleb128 0x10
+	.4byte	0x257
+	.uleb128 0x12
 	.4byte	0xa6
 	.byte	0
 	.uleb128 0x3
-	.4byte	.LASF36
-	.byte	0x8
-	.byte	0xcc
-	.4byte	0x17c
-	.uleb128 0xf
-	.4byte	0x145
-	.4byte	0x1eb
+	.4byte	.LASF52
+	.byte	0xa
+	.byte	0xc5
+	.4byte	0x203
 	.uleb128 0x11
+	.4byte	0x1cc
+	.4byte	0x272
+	.uleb128 0x13
 	.4byte	0xa6
 	.byte	0x5
 	.byte	0
 	.uleb128 0x7
 	.byte	0x4
-	.4byte	0x145
-	.uleb128 0xf
-	.4byte	0x145
-	.4byte	0x201
+	.4byte	0x1cc
 	.uleb128 0x11
+	.4byte	0x1cc
+	.4byte	0x288
+	.uleb128 0x13
 	.4byte	0xa6
 	.byte	0x2
 	.byte	0
-	.uleb128 0x12
-	.byte	0x4
-	.4byte	0x37
-	.byte	0xa
-	.byte	0x1f
-	.4byte	0x232
-	.uleb128 0x13
-	.4byte	.LASF37
-	.byte	0
-	.uleb128 0x13
-	.4byte	.LASF38
-	.byte	0x1
-	.uleb128 0x13
-	.4byte	.LASF39
-	.byte	0x2
-	.uleb128 0x13
-	.4byte	.LASF40
-	.byte	0x3
-	.uleb128 0x13
-	.4byte	.LASF41
-	.byte	0x4
-	.uleb128 0x13
-	.4byte	.LASF42
-	.byte	0x5
-	.byte	0
 	.uleb128 0x3
-	.4byte	.LASF43
-	.byte	0x9
+	.4byte	.LASF53
+	.byte	0xb
 	.byte	0x20
 	.4byte	0x102
 	.uleb128 0x14
 	.4byte	.LASF173
 	.byte	0x20
-	.byte	0x9
+	.byte	0xb
 	.byte	0x21
-	.4byte	0x2b6
-	.uleb128 0xd
-	.4byte	.LASF44
-	.byte	0x9
+	.4byte	0x30c
+	.uleb128 0xf
+	.4byte	.LASF54
+	.byte	0xb
 	.byte	0x22
-	.4byte	0x2b6
+	.4byte	0x30c
 	.byte	0
-	.uleb128 0xd
-	.4byte	.LASF45
-	.byte	0x9
+	.uleb128 0xf
+	.4byte	.LASF55
+	.byte	0xb
 	.byte	0x23
-	.4byte	0x2b6
+	.4byte	0x30c
 	.byte	0x4
-	.uleb128 0xd
-	.4byte	.LASF46
-	.byte	0x9
+	.uleb128 0xf
+	.4byte	.LASF56
+	.byte	0xb
 	.byte	0x24
-	.4byte	0x2bc
+	.4byte	0x312
 	.byte	0x8
-	.uleb128 0xd
-	.4byte	.LASF47
-	.byte	0x9
+	.uleb128 0xf
+	.4byte	.LASF57
+	.byte	0xb
 	.byte	0x25
-	.4byte	0x166
+	.4byte	0x1ed
 	.byte	0xc
-	.uleb128 0xd
-	.4byte	.LASF48
-	.byte	0x9
+	.uleb128 0xf
+	.4byte	.LASF58
+	.byte	0xb
 	.byte	0x26
-	.4byte	0x166
+	.4byte	0x1ed
 	.byte	0x10
-	.uleb128 0xd
-	.4byte	.LASF49
-	.byte	0x9
+	.uleb128 0xf
+	.4byte	.LASF59
+	.byte	0xb
 	.byte	0x27
-	.4byte	0x15b
+	.4byte	0x1e2
 	.byte	0x14
-	.uleb128 0xd
-	.4byte	.LASF35
-	.byte	0x9
+	.uleb128 0xf
+	.4byte	.LASF51
+	.byte	0xb
 	.byte	0x28
-	.4byte	0x15b
+	.4byte	0x1e2
 	.byte	0x18
-	.uleb128 0xd
-	.4byte	.LASF32
-	.byte	0x9
+	.uleb128 0xf
+	.4byte	.LASF48
+	.byte	0xb
 	.byte	0x29
-	.4byte	0x150
+	.4byte	0x1d7
 	.byte	0x1c
-	.uleb128 0xd
-	.4byte	.LASF50
-	.byte	0x9
+	.uleb128 0xf
+	.4byte	.LASF60
+	.byte	0xb
 	.byte	0x2a
-	.4byte	0x145
+	.4byte	0x1cc
 	.byte	0x1e
 	.byte	0
 	.uleb128 0x7
 	.byte	0x4
-	.4byte	0x23d
+	.4byte	0x293
 	.uleb128 0x7
 	.byte	0x4
-	.4byte	0x232
+	.4byte	0x288
 	.uleb128 0x3
-	.4byte	.LASF51
-	.byte	0x9
-	.byte	0x2b
-	.4byte	0x23d
-	.uleb128 0x12
-	.byte	0x4
-	.4byte	0x37
-	.byte	0xb
-	.byte	0x31
-	.4byte	0x30a
-	.uleb128 0x13
-	.4byte	.LASF52
-	.byte	0
-	.uleb128 0x13
-	.4byte	.LASF53
-	.byte	0x1
-	.uleb128 0x13
-	.4byte	.LASF54
-	.byte	0x2
-	.uleb128 0x13
-	.4byte	.LASF55
-	.byte	0x3
-	.uleb128 0x13
-	.4byte	.LASF56
-	.byte	0x4
-	.uleb128 0x13
-	.4byte	.LASF57
-	.byte	0x5
-	.uleb128 0x13
-	.4byte	.LASF58
-	.byte	0x6
-	.uleb128 0x13
-	.4byte	.LASF59
-	.byte	0x7
-	.byte	0
-	.uleb128 0x12
-	.byte	0x4
-	.4byte	0x37
-	.byte	0xb
-	.byte	0x6a
-	.4byte	0x323
-	.uleb128 0x13
-	.4byte	.LASF60
-	.byte	0
-	.uleb128 0x13
 	.4byte	.LASF61
-	.byte	0x1
-	.byte	0
-	.uleb128 0x12
+	.byte	0xb
+	.byte	0x2b
+	.4byte	0x293
+	.uleb128 0xc
 	.byte	0x4
 	.4byte	0x37
 	.byte	0xc
 	.byte	0x82
 	.4byte	0x342
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF62
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF63
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF64
 	.byte	0x2
 	.byte	0
@@ -2048,7 +2048,7 @@ bta_alarm_hash_map:
 	.4byte	.LASF65
 	.byte	0xc
 	.byte	0x88
-	.4byte	0x145
+	.4byte	0x1cc
 	.uleb128 0x3
 	.4byte	.LASF66
 	.byte	0xc
@@ -2065,183 +2065,183 @@ bta_alarm_hash_map:
 	.byte	0xc
 	.2byte	0x1c2
 	.4byte	0x48b
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF67
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF68
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF69
 	.byte	0x2
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF70
 	.byte	0x3
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF71
 	.byte	0x4
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF72
 	.byte	0x5
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF73
 	.byte	0x6
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF74
 	.byte	0x7
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF75
 	.byte	0x8
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF76
 	.byte	0x9
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF77
 	.byte	0xa
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF78
 	.byte	0xb
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF79
 	.byte	0xc
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF80
 	.byte	0xd
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF81
 	.byte	0xe
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF82
 	.byte	0xf
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF83
 	.byte	0x10
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF84
 	.byte	0x11
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF85
 	.byte	0x12
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF86
 	.byte	0x13
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF87
 	.byte	0x14
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF88
 	.byte	0x15
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF89
 	.byte	0x16
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF90
 	.byte	0x17
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF91
 	.byte	0x18
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF92
 	.byte	0x19
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF93
 	.byte	0x1a
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF94
 	.byte	0x1b
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF95
 	.byte	0x1c
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF96
 	.byte	0x1d
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF97
 	.byte	0x1e
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF98
 	.byte	0x1f
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF99
 	.byte	0x20
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF100
 	.byte	0x21
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF101
 	.byte	0x22
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF102
 	.byte	0x23
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF103
 	.byte	0x24
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF104
 	.byte	0x25
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF105
 	.byte	0x26
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF106
 	.byte	0x27
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF107
 	.byte	0x28
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF108
 	.byte	0x29
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF109
 	.byte	0x2a
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF110
 	.byte	0x2b
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF111
 	.byte	0x2c
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF112
 	.byte	0x2d
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF113
 	.byte	0x2e
 	.byte	0
 	.uleb128 0x7
 	.byte	0x4
-	.4byte	0x1d0
+	.4byte	0x257
 	.uleb128 0x15
 	.byte	0x4
 	.4byte	0x37
 	.byte	0xc
 	.2byte	0x6ec
 	.4byte	0x4c9
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF114
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF115
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF116
 	.byte	0x2
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF117
 	.byte	0x3
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF118
 	.byte	0x4
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF119
 	.byte	0x5
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF120
 	.byte	0x6
 	.byte	0
-	.uleb128 0xf
-	.4byte	0x145
-	.4byte	0x4d9
 	.uleb128 0x11
+	.4byte	0x1cc
+	.4byte	0x4d9
+	.uleb128 0x13
 	.4byte	0xa6
 	.byte	0x4
 	.byte	0
@@ -2251,10 +2251,10 @@ bta_alarm_hash_map:
 	.byte	0x23
 	.4byte	0x4e4
 	.uleb128 0x16
-	.4byte	0x171
+	.4byte	0x1f8
 	.4byte	0x4f8
 	.uleb128 0xa
-	.4byte	0x150
+	.4byte	0x1d7
 	.uleb128 0xa
 	.4byte	0xad
 	.byte	0
@@ -2264,7 +2264,7 @@ bta_alarm_hash_map:
 	.byte	0x26
 	.4byte	0x503
 	.uleb128 0x16
-	.4byte	0x171
+	.4byte	0x1f8
 	.4byte	0x512
 	.uleb128 0xa
 	.4byte	0x48b
@@ -2274,19 +2274,19 @@ bta_alarm_hash_map:
 	.byte	0xd
 	.byte	0x29
 	.4byte	0xb6
-	.uleb128 0x12
+	.uleb128 0xc
 	.byte	0x4
 	.4byte	0x37
 	.byte	0xd
 	.byte	0x2d
 	.4byte	0x53c
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF124
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF125
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF126
 	.byte	0x2
 	.byte	0
@@ -2294,12 +2294,12 @@ bta_alarm_hash_map:
 	.4byte	.LASF127
 	.byte	0xd
 	.byte	0x34
-	.4byte	0x150
+	.4byte	0x1d7
 	.uleb128 0x3
 	.4byte	.LASF128
 	.byte	0xd
 	.byte	0x81
-	.4byte	0x145
+	.4byte	0x1cc
 	.uleb128 0x3
 	.4byte	.LASF129
 	.byte	0xd
@@ -2310,11 +2310,11 @@ bta_alarm_hash_map:
 	.uleb128 0xa
 	.4byte	0x547
 	.uleb128 0xa
-	.4byte	0x145
+	.4byte	0x1cc
 	.uleb128 0xa
-	.4byte	0x145
+	.4byte	0x1cc
 	.uleb128 0xa
-	.4byte	0x1eb
+	.4byte	0x272
 	.byte	0
 	.uleb128 0x3
 	.4byte	.LASF130
@@ -2324,22 +2324,22 @@ bta_alarm_hash_map:
 	.uleb128 0x9
 	.4byte	0x592
 	.uleb128 0xa
-	.4byte	0x150
+	.4byte	0x1d7
 	.uleb128 0xa
-	.4byte	0x171
+	.4byte	0x1f8
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0x8
 	.byte	0xd
 	.byte	0x96
 	.4byte	0x5b3
-	.uleb128 0xd
+	.uleb128 0xf
 	.4byte	.LASF131
 	.byte	0xd
 	.byte	0x97
 	.4byte	0x5b3
 	.byte	0
-	.uleb128 0xd
+	.uleb128 0xf
 	.4byte	.LASF132
 	.byte	0xd
 	.byte	0x98
@@ -2357,18 +2357,18 @@ bta_alarm_hash_map:
 	.byte	0xd
 	.byte	0x99
 	.4byte	0x592
-	.uleb128 0xc
+	.uleb128 0xe
 	.byte	0xa
 	.byte	0xd
 	.byte	0x9c
 	.4byte	0x5eb
-	.uleb128 0xe
+	.uleb128 0x10
 	.string	"hdr"
 	.byte	0xd
 	.byte	0x9d
-	.4byte	0x1d0
+	.4byte	0x257
 	.byte	0
-	.uleb128 0xd
+	.uleb128 0xf
 	.4byte	.LASF134
 	.byte	0xd
 	.byte	0x9e
@@ -2380,53 +2380,53 @@ bta_alarm_hash_map:
 	.byte	0xd
 	.byte	0x9f
 	.4byte	0x5ca
-	.uleb128 0x12
+	.uleb128 0xc
 	.byte	0x4
 	.4byte	0x37
 	.byte	0xd
 	.byte	0xb4
 	.4byte	0x62d
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF136
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF137
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF138
 	.byte	0x2
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF139
 	.byte	0x3
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF140
 	.byte	0x4
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF141
 	.byte	0x5
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF142
 	.byte	0x6
 	.byte	0
-	.uleb128 0x12
+	.uleb128 0xc
 	.byte	0x4
 	.4byte	0x37
 	.byte	0xd
 	.byte	0xc3
 	.4byte	0x658
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF143
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF144
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF145
 	.byte	0x2
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF146
 	.byte	0x3
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF147
 	.byte	0x4
 	.byte	0
@@ -2434,7 +2434,7 @@ bta_alarm_hash_map:
 	.4byte	.LASF148
 	.byte	0xd
 	.byte	0xcb
-	.4byte	0x145
+	.4byte	0x1cc
 	.uleb128 0x3
 	.4byte	.LASF149
 	.byte	0xd
@@ -2445,22 +2445,22 @@ bta_alarm_hash_map:
 	.uleb128 0xa
 	.4byte	0x658
 	.byte	0
-	.uleb128 0x12
+	.uleb128 0xc
 	.byte	0x4
 	.4byte	0x37
 	.byte	0xe
 	.byte	0x24
 	.4byte	0x69e
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF150
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF151
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF152
 	.byte	0x2
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF153
 	.byte	0x3
 	.byte	0
@@ -2468,29 +2468,29 @@ bta_alarm_hash_map:
 	.4byte	.LASF154
 	.byte	0xe
 	.byte	0x2a
-	.4byte	0x145
-	.uleb128 0xc
+	.4byte	0x1cc
+	.uleb128 0xe
 	.byte	0x1c
 	.byte	0xe
 	.byte	0x2f
 	.4byte	0x6c9
-	.uleb128 0xe
+	.uleb128 0x10
 	.string	"id"
 	.byte	0xe
 	.byte	0x30
 	.4byte	0x4c9
 	.byte	0
-	.uleb128 0xd
+	.uleb128 0xf
 	.4byte	.LASF155
 	.byte	0xe
 	.byte	0x31
 	.4byte	0x6c9
 	.byte	0x8
 	.byte	0
-	.uleb128 0xf
-	.4byte	0x6d9
-	.4byte	0x6d9
 	.uleb128 0x11
+	.4byte	0x6d9
+	.4byte	0x6d9
+	.uleb128 0x13
 	.4byte	0xa6
 	.byte	0x4
 	.byte	0
@@ -2507,49 +2507,49 @@ bta_alarm_hash_map:
 	.byte	0xe
 	.byte	0x35
 	.4byte	0x7a2
-	.uleb128 0xe
+	.uleb128 0x10
 	.string	"reg"
 	.byte	0xe
 	.byte	0x36
 	.4byte	0x7a2
 	.byte	0
-	.uleb128 0xd
+	.uleb128 0xf
 	.4byte	.LASF157
 	.byte	0xe
 	.byte	0x37
 	.4byte	0x7b8
 	.byte	0xb8
-	.uleb128 0xd
+	.uleb128 0xf
 	.4byte	.LASF158
 	.byte	0xe
 	.byte	0x38
 	.4byte	0x69e
 	.byte	0xe6
-	.uleb128 0xd
+	.uleb128 0xf
 	.4byte	.LASF159
 	.byte	0xe
 	.byte	0x39
 	.4byte	0x7c8
 	.byte	0xe8
-	.uleb128 0xd
+	.uleb128 0xf
 	.4byte	.LASF160
 	.byte	0xe
 	.byte	0x3a
-	.4byte	0x15b
+	.4byte	0x1e2
 	.byte	0xf0
-	.uleb128 0xd
+	.uleb128 0xf
 	.4byte	.LASF161
 	.byte	0xe
 	.byte	0x3b
-	.4byte	0x150
+	.4byte	0x1d7
 	.byte	0xf4
-	.uleb128 0xd
+	.uleb128 0xf
 	.4byte	.LASF162
 	.byte	0xe
 	.byte	0x3d
 	.4byte	0x6d9
 	.byte	0xf8
-	.uleb128 0xd
+	.uleb128 0xf
 	.4byte	.LASF163
 	.byte	0xe
 	.byte	0x3e
@@ -2592,27 +2592,27 @@ bta_alarm_hash_map:
 	.4byte	0x7e4
 	.2byte	0x12c
 	.byte	0
-	.uleb128 0xf
-	.4byte	0x7b2
-	.4byte	0x7b2
 	.uleb128 0x11
+	.4byte	0x7b2
+	.4byte	0x7b2
+	.uleb128 0x13
 	.4byte	0xa6
 	.byte	0x2d
 	.byte	0
 	.uleb128 0x7
 	.byte	0x4
 	.4byte	0x5bf
-	.uleb128 0xf
-	.4byte	0x171
-	.4byte	0x7c8
 	.uleb128 0x11
+	.4byte	0x1f8
+	.4byte	0x7c8
+	.uleb128 0x13
 	.4byte	0xa6
 	.byte	0x2d
 	.byte	0
-	.uleb128 0xf
-	.4byte	0x7d8
-	.4byte	0x7d8
 	.uleb128 0x11
+	.4byte	0x7d8
+	.4byte	0x7d8
+	.uleb128 0x13
 	.4byte	0xa6
 	.byte	0x1
 	.byte	0
@@ -2643,19 +2643,19 @@ bta_alarm_hash_map:
 	.byte	0xf
 	.byte	0x1c
 	.4byte	0x836
-	.uleb128 0xe
+	.uleb128 0x10
 	.string	"key"
 	.byte	0xf
 	.byte	0x1d
 	.4byte	0xf5
 	.byte	0
-	.uleb128 0xd
-	.4byte	.LASF35
+	.uleb128 0xf
+	.4byte	.LASF51
 	.byte	0xf
 	.byte	0x1e
 	.4byte	0xad
 	.byte	0x4
-	.uleb128 0xd
+	.uleb128 0xf
 	.4byte	.LASF175
 	.byte	0xf
 	.byte	0x1f
@@ -2706,28 +2706,28 @@ bta_alarm_hash_map:
 	.uleb128 0x7
 	.byte	0x4
 	.4byte	0x5eb
-	.uleb128 0x12
+	.uleb128 0xc
 	.byte	0x4
 	.4byte	0x37
 	.byte	0x1
 	.byte	0x58
 	.4byte	0x8c6
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF180
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF181
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF182
 	.byte	0x2
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF183
 	.byte	0x3
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF184
 	.byte	0x4
-	.uleb128 0x13
+	.uleb128 0xd
 	.4byte	.LASF185
 	.byte	0x5
 	.byte	0
@@ -2738,7 +2738,7 @@ bta_alarm_hash_map:
 	.4byte	0x8d1
 	.uleb128 0x7
 	.byte	0x4
-	.4byte	0x1f1
+	.4byte	0x278
 	.uleb128 0x1a
 	.4byte	.LASF189
 	.byte	0x1
@@ -2746,7 +2746,7 @@ bta_alarm_hash_map:
 	.byte	0x1
 	.4byte	0x90a
 	.uleb128 0x1b
-	.4byte	.LASF35
+	.4byte	.LASF51
 	.byte	0x1
 	.2byte	0x24d
 	.4byte	0xad
@@ -2760,10 +2760,10 @@ bta_alarm_hash_map:
 	.2byte	0x250
 	.4byte	0x91f
 	.byte	0
-	.uleb128 0xf
+	.uleb128 0x11
 	.4byte	0xb7
 	.4byte	0x91a
-	.uleb128 0x11
+	.uleb128 0x13
 	.4byte	0xa6
 	.byte	0xc
 	.byte	0
@@ -2771,7 +2771,7 @@ bta_alarm_hash_map:
 	.4byte	0x90a
 	.uleb128 0x7
 	.byte	0x4
-	.4byte	0x2c2
+	.4byte	0x318
 	.uleb128 0x1a
 	.4byte	.LASF190
 	.byte	0x1
@@ -2782,7 +2782,7 @@ bta_alarm_hash_map:
 	.string	"id"
 	.byte	0x1
 	.2byte	0x206
-	.4byte	0x145
+	.4byte	0x1cc
 	.uleb128 0x1b
 	.4byte	.LASF191
 	.byte	0x1
@@ -2820,9 +2820,9 @@ bta_alarm_hash_map:
 	.4byte	.LASF207
 	.byte	0x1
 	.byte	0xd2
-	.4byte	0x171
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	0x1f8
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x9f1
@@ -2836,7 +2836,7 @@ bta_alarm_hash_map:
 	.4byte	.LASF196
 	.byte	0x1
 	.byte	0xd4
-	.4byte	0x171
+	.4byte	0x1f8
 	.byte	0x1
 	.uleb128 0x22
 	.4byte	.LASF197
@@ -2849,7 +2849,7 @@ bta_alarm_hash_map:
 	.4byte	.LASF198
 	.byte	0x1
 	.byte	0xd6
-	.4byte	0x145
+	.4byte	0x1cc
 	.4byte	.LLST1
 	.uleb128 0x24
 	.string	"i"
@@ -2871,8 +2871,8 @@ bta_alarm_hash_map:
 	.4byte	.LASF202
 	.byte	0x1
 	.2byte	0x129
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xa3a
@@ -2887,7 +2887,7 @@ bta_alarm_hash_map:
 	.4byte	.LASF201
 	.byte	0x1
 	.2byte	0x12b
-	.4byte	0x145
+	.4byte	0x1cc
 	.4byte	.LLST3
 	.uleb128 0x2a
 	.4byte	.LASF278
@@ -2901,10 +2901,10 @@ bta_alarm_hash_map:
 	.byte	0x34
 	.byte	0
 	.byte	0
-	.uleb128 0xf
+	.uleb128 0x11
 	.4byte	0xb7
 	.4byte	0xa4a
-	.uleb128 0x11
+	.uleb128 0x13
 	.4byte	0xa6
 	.byte	0x10
 	.byte	0
@@ -2914,8 +2914,8 @@ bta_alarm_hash_map:
 	.4byte	.LASF203
 	.byte	0x1
 	.2byte	0x1b2
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xaa3
@@ -2929,7 +2929,7 @@ bta_alarm_hash_map:
 	.4byte	.LASF204
 	.byte	0x1
 	.2byte	0x1b4
-	.4byte	0x145
+	.4byte	0x1cc
 	.4byte	.LLST5
 	.uleb128 0x2c
 	.4byte	.LVL15
@@ -2956,8 +2956,8 @@ bta_alarm_hash_map:
 	.4byte	.LASF205
 	.byte	0x1
 	.2byte	0x1c9
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xaf7
@@ -2971,7 +2971,7 @@ bta_alarm_hash_map:
 	.4byte	.LASF204
 	.byte	0x1
 	.2byte	0x1cb
-	.4byte	0x145
+	.4byte	0x1cc
 	.4byte	.LLST7
 	.uleb128 0x2c
 	.4byte	.LVL20
@@ -2998,8 +2998,8 @@ bta_alarm_hash_map:
 	.4byte	.LASF206
 	.byte	0x1
 	.2byte	0x1a1
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xb2b
@@ -3025,8 +3025,8 @@ bta_alarm_hash_map:
 	.byte	0x1
 	.2byte	0x26c
 	.4byte	0x128
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xb8b
@@ -3068,8 +3068,8 @@ bta_alarm_hash_map:
 	.4byte	0x11d
 	.uleb128 0x32
 	.4byte	0x8d7
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xc36
@@ -3081,7 +3081,7 @@ bta_alarm_hash_map:
 	.4byte	0x8f0
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$9051
+	.4byte	__func__$9124
 	.uleb128 0x34
 	.4byte	0x8fd
 	.uleb128 0x1
@@ -3102,7 +3102,7 @@ bta_alarm_hash_map:
 	.4byte	0x8f0
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$9051
+	.4byte	__func__$9124
 	.uleb128 0x2e
 	.4byte	.LVL30
 	.4byte	0x15a5
@@ -3123,7 +3123,7 @@ bta_alarm_hash_map:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$9051
+	.4byte	__func__$9124
 	.uleb128 0x26
 	.uleb128 0x1
 	.byte	0x5d
@@ -3153,8 +3153,8 @@ bta_alarm_hash_map:
 	.4byte	.LASF213
 	.byte	0x1
 	.byte	0xa8
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xcd3
@@ -3237,8 +3237,8 @@ bta_alarm_hash_map:
 	.4byte	.LASF214
 	.byte	0x1
 	.byte	0xbf
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xd12
@@ -3264,8 +3264,8 @@ bta_alarm_hash_map:
 	.4byte	.LASF215
 	.byte	0x1
 	.byte	0xed
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xd44
@@ -3287,8 +3287,8 @@ bta_alarm_hash_map:
 	.4byte	.LASF217
 	.byte	0x1
 	.byte	0xf3
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xd69
@@ -3303,8 +3303,8 @@ bta_alarm_hash_map:
 	.4byte	.LASF218
 	.byte	0x1
 	.2byte	0x1e4
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xe0d
@@ -3319,13 +3319,13 @@ bta_alarm_hash_map:
 	.string	"id"
 	.byte	0x1
 	.2byte	0x1e6
-	.4byte	0x145
+	.4byte	0x1cc
 	.4byte	.LLST13
 	.uleb128 0x29
 	.4byte	.LASF196
 	.byte	0x1
 	.2byte	0x1e7
-	.4byte	0x171
+	.4byte	0x1f8
 	.4byte	.LLST14
 	.uleb128 0x3f
 	.4byte	.LVL49
@@ -3390,8 +3390,8 @@ bta_alarm_hash_map:
 	.byte	0
 	.uleb128 0x32
 	.4byte	0x925
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xe31
@@ -3407,8 +3407,8 @@ bta_alarm_hash_map:
 	.4byte	.LASF219
 	.byte	0x1
 	.2byte	0x217
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xe57
@@ -3416,16 +3416,16 @@ bta_alarm_hash_map:
 	.string	"id"
 	.byte	0x1
 	.2byte	0x217
-	.4byte	0x145
+	.4byte	0x1cc
 	.4byte	.LLST16
 	.byte	0
 	.uleb128 0x2f
 	.4byte	.LASF220
 	.byte	0x1
 	.2byte	0x227
-	.4byte	0x171
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	0x1f8
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xe81
@@ -3433,15 +3433,15 @@ bta_alarm_hash_map:
 	.string	"id"
 	.byte	0x1
 	.2byte	0x227
-	.4byte	0x145
+	.4byte	0x1cc
 	.4byte	.LLST17
 	.byte	0
 	.uleb128 0x27
 	.4byte	.LASF221
 	.byte	0x1
 	.2byte	0x238
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xed5
@@ -3489,8 +3489,8 @@ bta_alarm_hash_map:
 	.4byte	.LASF222
 	.byte	0x1
 	.2byte	0x102
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xf31
@@ -3527,8 +3527,8 @@ bta_alarm_hash_map:
 	.4byte	.LASF225
 	.byte	0x1
 	.2byte	0x14e
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xfa0
@@ -3578,8 +3578,8 @@ bta_alarm_hash_map:
 	.4byte	.LASF226
 	.byte	0x1
 	.2byte	0x255
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1111
@@ -3593,14 +3593,14 @@ bta_alarm_hash_map:
 	.4byte	.LASF227
 	.byte	0x1
 	.2byte	0x255
-	.4byte	0x150
+	.4byte	0x1d7
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x28
 	.4byte	.LASF228
 	.byte	0x1
 	.2byte	0x255
-	.4byte	0x166
+	.4byte	0x1ed
 	.uleb128 0x1
 	.byte	0x54
 	.uleb128 0x41
@@ -3608,7 +3608,7 @@ bta_alarm_hash_map:
 	.4byte	0x1121
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$9058
+	.4byte	__func__$9131
 	.uleb128 0x29
 	.4byte	.LASF211
 	.byte	0x1
@@ -3636,7 +3636,7 @@ bta_alarm_hash_map:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$9058
+	.4byte	__func__$9131
 	.uleb128 0x26
 	.uleb128 0x1
 	.byte	0x5d
@@ -3769,16 +3769,16 @@ bta_alarm_hash_map:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$9058
+	.4byte	__func__$9131
 	.byte	0
 	.uleb128 0x31
 	.4byte	.LVL86
 	.4byte	0x166a
 	.byte	0
-	.uleb128 0xf
+	.uleb128 0x11
 	.4byte	0xb7
 	.4byte	0x1121
-	.uleb128 0x11
+	.uleb128 0x13
 	.4byte	0xa6
 	.byte	0x13
 	.byte	0
@@ -3788,9 +3788,9 @@ bta_alarm_hash_map:
 	.4byte	.LASF229
 	.byte	0x1
 	.2byte	0x274
-	.4byte	0x15b
-	.4byte	.LFB50
-	.4byte	.LFE50-.LFB50
+	.4byte	0x1e2
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x11a7
@@ -3857,8 +3857,8 @@ bta_alarm_hash_map:
 	.4byte	.LASF232
 	.byte	0x1
 	.2byte	0x288
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x122d
@@ -3874,7 +3874,7 @@ bta_alarm_hash_map:
 	.4byte	0x123d
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$9073
+	.4byte	__func__$9146
 	.uleb128 0x29
 	.4byte	.LASF211
 	.byte	0x1
@@ -3902,7 +3902,7 @@ bta_alarm_hash_map:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$9073
+	.4byte	__func__$9146
 	.uleb128 0x26
 	.uleb128 0x1
 	.byte	0x5d
@@ -3917,10 +3917,10 @@ bta_alarm_hash_map:
 	.4byte	.LVL95
 	.4byte	0x1680
 	.byte	0
-	.uleb128 0xf
+	.uleb128 0x11
 	.4byte	0xb7
 	.4byte	0x123d
-	.uleb128 0x11
+	.uleb128 0x13
 	.4byte	0xa6
 	.byte	0x12
 	.byte	0
@@ -3930,8 +3930,8 @@ bta_alarm_hash_map:
 	.4byte	.LASF233
 	.byte	0x1
 	.2byte	0x29d
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x12e3
@@ -3947,7 +3947,7 @@ bta_alarm_hash_map:
 	.4byte	0x12e3
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$9078
+	.4byte	__func__$9151
 	.uleb128 0x29
 	.4byte	.LASF211
 	.byte	0x1
@@ -3975,7 +3975,7 @@ bta_alarm_hash_map:
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$9078
+	.4byte	__func__$9151
 	.uleb128 0x26
 	.uleb128 0x1
 	.byte	0x5d
@@ -4012,8 +4012,8 @@ bta_alarm_hash_map:
 	.4byte	0x122d
 	.uleb128 0x42
 	.4byte	0x955
-	.4byte	.LFB53
-	.4byte	.LFE53-.LFB53
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x136e
@@ -4076,8 +4076,8 @@ bta_alarm_hash_map:
 	.4byte	.LASF234
 	.byte	0x1
 	.2byte	0x174
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x13e6
@@ -4130,8 +4130,8 @@ bta_alarm_hash_map:
 	.4byte	.LASF235
 	.byte	0x1
 	.2byte	0x2d6
-	.4byte	.LFB54
-	.4byte	.LFE54-.LFB54
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x140b
@@ -4139,7 +4139,7 @@ bta_alarm_hash_map:
 	.4byte	.LASF236
 	.byte	0x1
 	.2byte	0x2d6
-	.4byte	0x145
+	.4byte	0x1cc
 	.uleb128 0x1
 	.byte	0x52
 	.byte	0
@@ -4147,15 +4147,15 @@ bta_alarm_hash_map:
 	.4byte	.LASF279
 	.byte	0x1
 	.2byte	0x2e4
-	.4byte	0x150
-	.4byte	.LFB55
-	.4byte	.LFE55-.LFB55
+	.4byte	0x1d7
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x46
 	.4byte	.LASF237
-	.byte	0x8
-	.2byte	0x2cc
+	.byte	0xa
+	.2byte	0x2b8
 	.4byte	0x1434
 	.byte	0x6
 	.byte	0xff
@@ -4165,11 +4165,11 @@ bta_alarm_hash_map:
 	.byte	0xff
 	.byte	0xff
 	.uleb128 0x19
-	.4byte	0x1db
+	.4byte	0x262
 	.uleb128 0x46
 	.4byte	.LASF238
-	.byte	0x8
-	.2byte	0x2cd
+	.byte	0xa
+	.2byte	0x2b9
 	.4byte	0x144c
 	.byte	0x6
 	.byte	0
@@ -4179,7 +4179,7 @@ bta_alarm_hash_map:
 	.byte	0
 	.byte	0
 	.uleb128 0x19
-	.4byte	0x1db
+	.4byte	0x262
 	.uleb128 0x22
 	.4byte	.LASF239
 	.byte	0x1
@@ -4219,7 +4219,7 @@ bta_alarm_hash_map:
 	.4byte	.LASF243
 	.byte	0x1
 	.byte	0x3f
-	.4byte	0x145
+	.4byte	0x1cc
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	btif_trace_level
@@ -4227,7 +4227,7 @@ bta_alarm_hash_map:
 	.4byte	.LASF244
 	.byte	0x1
 	.byte	0x3e
-	.4byte	0x145
+	.4byte	0x1cc
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	appl_trace_level
@@ -4242,10 +4242,10 @@ bta_alarm_hash_map:
 	.uleb128 0x7
 	.byte	0x4
 	.4byte	0x7ea
-	.uleb128 0xf
+	.uleb128 0x11
 	.4byte	0x873
 	.4byte	0x14e4
-	.uleb128 0x11
+	.uleb128 0x13
 	.4byte	0xa6
 	.byte	0x5
 	.byte	0
@@ -4259,13 +4259,13 @@ bta_alarm_hash_map:
 	.4byte	bta_sys_action
 	.uleb128 0x19
 	.4byte	0x14d4
-	.uleb128 0xf
-	.4byte	0x145
-	.4byte	0x1510
 	.uleb128 0x11
+	.4byte	0x1cc
+	.4byte	0x1510
+	.uleb128 0x13
 	.4byte	0xa6
 	.byte	0x5
-	.uleb128 0x11
+	.uleb128 0x13
 	.4byte	0xa6
 	.byte	0x2
 	.byte	0
@@ -4309,10 +4309,10 @@ bta_alarm_hash_map:
 	.4byte	bta_sys_hw_stopping
 	.uleb128 0x19
 	.4byte	0x14fa
-	.uleb128 0xf
+	.uleb128 0x11
 	.4byte	0x8c6
 	.4byte	0x1578
-	.uleb128 0x11
+	.uleb128 0x13
 	.4byte	0xa6
 	.byte	0x3
 	.byte	0
@@ -4344,8 +4344,8 @@ bta_alarm_hash_map:
 	.uleb128 0x49
 	.4byte	.LASF255
 	.4byte	.LASF255
-	.byte	0xb
-	.byte	0x6f
+	.byte	0x9
+	.byte	0x67
 	.uleb128 0x4a
 	.4byte	.LASF280
 	.4byte	.LASF280
@@ -4382,12 +4382,12 @@ bta_alarm_hash_map:
 	.uleb128 0x49
 	.4byte	.LASF262
 	.4byte	.LASF262
-	.byte	0xa
+	.byte	0x8
 	.byte	0x57
 	.uleb128 0x49
 	.4byte	.LASF263
 	.4byte	.LASF263
-	.byte	0xa
+	.byte	0x8
 	.byte	0x6b
 	.uleb128 0x49
 	.4byte	.LASF264
@@ -4555,74 +4555,6 @@ bta_alarm_hash_map:
 	.byte	0
 	.byte	0
 	.uleb128 0xc
-	.uleb128 0x13
-	.byte	0x1
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xd
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x38
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0xe
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x38
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0xf
-	.uleb128 0x1
-	.byte	0x1
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x10
-	.uleb128 0x21
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x11
-	.uleb128 0x21
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2f
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x12
 	.uleb128 0x4
 	.byte	0x1
 	.uleb128 0xb
@@ -4637,12 +4569,80 @@ bta_alarm_hash_map:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0xd
 	.uleb128 0x28
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
 	.uleb128 0x1c
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0xe
+	.uleb128 0x13
+	.byte	0x1
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xf
+	.uleb128 0xd
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x38
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x10
+	.uleb128 0xd
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x38
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x11
+	.uleb128 0x1
+	.byte	0x1
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x12
+	.uleb128 0x21
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x13
+	.uleb128 0x21
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2f
 	.uleb128 0xb
 	.byte	0
 	.byte	0
@@ -5420,7 +5420,7 @@ bta_alarm_hash_map:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL8
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5502,7 +5502,7 @@ bta_alarm_hash_map:
 	.sleb128 -1
 	.byte	0x9f
 	.4byte	.LVL7
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -5521,7 +5521,7 @@ bta_alarm_hash_map:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL14
-	.4byte	.LFE40
+	.4byte	.LFE49
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5548,7 +5548,7 @@ bta_alarm_hash_map:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL19
-	.4byte	.LFE41
+	.4byte	.LFE50
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5575,7 +5575,7 @@ bta_alarm_hash_map:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL27
-	.4byte	.LFE49
+	.4byte	.LFE58
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5605,7 +5605,7 @@ bta_alarm_hash_map:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL41
-	.4byte	.LFE33
+	.4byte	.LFE42
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5625,7 +5625,7 @@ bta_alarm_hash_map:
 	.sleb128 -56
 	.byte	0x9f
 	.4byte	.LVL44
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5680,7 +5680,7 @@ bta_alarm_hash_map:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL55
-	.4byte	.LFE43
+	.4byte	.LFE52
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5694,7 +5694,7 @@ bta_alarm_hash_map:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL57
-	.4byte	.LFE44
+	.4byte	.LFE53
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5708,7 +5708,7 @@ bta_alarm_hash_map:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL59
-	.4byte	.LFE45
+	.4byte	.LFE54
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5722,7 +5722,7 @@ bta_alarm_hash_map:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL65
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5752,7 +5752,7 @@ bta_alarm_hash_map:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL70
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5784,7 +5784,7 @@ bta_alarm_hash_map:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL86
-	.4byte	.LFE48
+	.4byte	.LFE57
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5809,7 +5809,7 @@ bta_alarm_hash_map:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL88
-	.4byte	.LFE50
+	.4byte	.LFE59
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5837,7 +5837,7 @@ bta_alarm_hash_map:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL103
-	.4byte	.LFE53
+	.4byte	.LFE62
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5884,7 +5884,7 @@ bta_alarm_hash_map:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL118
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -5907,114 +5907,114 @@ bta_alarm_hash_map:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
 	.4byte	.LFB41
 	.4byte	.LFE41-.LFB41
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.4byte	.LFB49
 	.4byte	.LFE49-.LFB49
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.4byte	.LFB42
 	.4byte	.LFE42-.LFB42
 	.4byte	.LFB43
 	.4byte	.LFE43-.LFB43
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
-	.4byte	.LFB50
-	.4byte	.LFE50-.LFB50
 	.4byte	.LFB51
 	.4byte	.LFE51-.LFB51
 	.4byte	.LFB52
 	.4byte	.LFE52-.LFB52
 	.4byte	.LFB53
 	.4byte	.LFE53-.LFB53
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
 	.4byte	.LFB54
 	.4byte	.LFE54-.LFB54
 	.4byte	.LFB55
 	.4byte	.LFE55-.LFB55
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
+	.4byte	.LFB59
+	.4byte	.LFE59-.LFB59
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
+	.4byte	.LFB64
+	.4byte	.LFE64-.LFB64
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB32
-	.4byte	.LFE32
-	.4byte	.LFB36
-	.4byte	.LFE36
-	.4byte	.LFB40
-	.4byte	.LFE40
 	.4byte	.LFB41
 	.4byte	.LFE41
-	.4byte	.LFB39
-	.4byte	.LFE39
+	.4byte	.LFB45
+	.4byte	.LFE45
 	.4byte	.LFB49
 	.4byte	.LFE49
-	.4byte	.LFB47
-	.4byte	.LFE47
-	.4byte	.LFB30
-	.4byte	.LFE30
-	.4byte	.LFB31
-	.4byte	.LFE31
-	.4byte	.LFB33
-	.4byte	.LFE33
-	.4byte	.LFB34
-	.4byte	.LFE34
+	.4byte	.LFB50
+	.4byte	.LFE50
+	.4byte	.LFB48
+	.4byte	.LFE48
+	.4byte	.LFB58
+	.4byte	.LFE58
+	.4byte	.LFB56
+	.4byte	.LFE56
+	.4byte	.LFB39
+	.4byte	.LFE39
+	.4byte	.LFB40
+	.4byte	.LFE40
 	.4byte	.LFB42
 	.4byte	.LFE42
 	.4byte	.LFB43
 	.4byte	.LFE43
-	.4byte	.LFB44
-	.4byte	.LFE44
-	.4byte	.LFB45
-	.4byte	.LFE45
-	.4byte	.LFB46
-	.4byte	.LFE46
-	.4byte	.LFB35
-	.4byte	.LFE35
-	.4byte	.LFB37
-	.4byte	.LFE37
-	.4byte	.LFB48
-	.4byte	.LFE48
-	.4byte	.LFB50
-	.4byte	.LFE50
 	.4byte	.LFB51
 	.4byte	.LFE51
 	.4byte	.LFB52
 	.4byte	.LFE52
 	.4byte	.LFB53
 	.4byte	.LFE53
-	.4byte	.LFB38
-	.4byte	.LFE38
 	.4byte	.LFB54
 	.4byte	.LFE54
 	.4byte	.LFB55
 	.4byte	.LFE55
+	.4byte	.LFB44
+	.4byte	.LFE44
+	.4byte	.LFB46
+	.4byte	.LFE46
+	.4byte	.LFB57
+	.4byte	.LFE57
+	.4byte	.LFB59
+	.4byte	.LFE59
+	.4byte	.LFB60
+	.4byte	.LFE60
+	.4byte	.LFB61
+	.4byte	.LFE61
+	.4byte	.LFB62
+	.4byte	.LFE62
+	.4byte	.LFB47
+	.4byte	.LFE47
+	.4byte	.LFB63
+	.4byte	.LFE63
+	.4byte	.LFB64
+	.4byte	.LFE64
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
@@ -6030,7 +6030,7 @@ bta_alarm_hash_map:
 	.string	"osi_mutex_new"
 .LASF79:
 	.string	"BTM_EIR_UUID_SERVCLASS_AV_REM_CTRL_TARGET"
-.LASF43:
+.LASF53:
 	.string	"TIMER_CBACK"
 .LASF114:
 	.string	"BTM_PM_STS_ACTIVE"
@@ -6044,7 +6044,7 @@ bta_alarm_hash_map:
 	.string	"bta_sys_is_register"
 .LASF168:
 	.string	"eir_cb"
-.LASF36:
+.LASF52:
 	.string	"BT_HDR"
 .LASF153:
 	.string	"BTA_SYS_HW_STOPPING"
@@ -6056,7 +6056,7 @@ bta_alarm_hash_map:
 	.string	"BTM_EIR_UUID_SERVCLASS_OBEX_FILE_TRANSFER"
 .LASF216:
 	.string	"cback"
-.LASF28:
+.LASF44:
 	.string	"UINT16"
 .LASF0:
 	.string	"unsigned int"
@@ -6088,7 +6088,7 @@ bta_alarm_hash_map:
 	.string	"BTM_DEV_STATUS_CMD_TOUT"
 .LASF243:
 	.string	"btif_trace_level"
-.LASF31:
+.LASF47:
 	.string	"BOOLEAN"
 .LASF92:
 	.string	"BTM_EIR_UUID_SERVCLASS_HF_HANDSFREE"
@@ -6100,7 +6100,7 @@ bta_alarm_hash_map:
 	.string	"bta_sys_deregister"
 .LASF184:
 	.string	"BTA_SYS_HW_EVT_DISABLED"
-.LASF59:
+.LASF40:
 	.string	"SIG_BTU_NUM"
 .LASF272:
 	.string	"hash_map_foreach"
@@ -6118,9 +6118,9 @@ bta_alarm_hash_map:
 	.string	"hash_map_has_key"
 .LASF239:
 	.string	"bta_alarm_hash_map"
-.LASF56:
+.LASF37:
 	.string	"SIG_BTU_GENERAL_ALARM"
-.LASF29:
+.LASF45:
 	.string	"UINT32"
 .LASF20:
 	.string	"uint32_t"
@@ -6132,13 +6132,13 @@ bta_alarm_hash_map:
 	.string	"BTA_SYS_HW_STOPPING_EVT"
 .LASF111:
 	.string	"BTM_EIR_UUID_SERVCLASS_HDP_SOURCE"
-.LASF32:
+.LASF48:
 	.string	"event"
 .LASF264:
 	.string	"malloc"
 .LASF271:
 	.string	"osi_alarm_set"
-.LASF30:
+.LASF46:
 	.string	"INT32"
 .LASF12:
 	.string	"long long unsigned int"
@@ -6148,7 +6148,7 @@ bta_alarm_hash_map:
 	.string	"bta_id_max"
 .LASF160:
 	.string	"sys_hw_module_active"
-.LASF53:
+.LASF34:
 	.string	"SIG_BTU_HCI_MSG"
 .LASF106:
 	.string	"BTM_EIR_UUID_SERVCLASS_PNP_INFORMATION"
@@ -6174,7 +6174,7 @@ bta_alarm_hash_map:
 	.string	"BTM_EIR_UUID_SERVCLASS_HEADSET_HS"
 .LASF185:
 	.string	"BTA_SYS_HW_ERROR"
-.LASF39:
+.LASF29:
 	.string	"ESP_LOG_WARN"
 .LASF222:
 	.string	"bta_sys_hw_btm_cback"
@@ -6186,9 +6186,9 @@ bta_alarm_hash_map:
 	.string	"BTM_PM_STS_SSR"
 .LASF128:
 	.string	"tBTA_SYS_CONN_STATUS"
-.LASF52:
+.LASF33:
 	.string	"SIG_BTU_START_UP"
-.LASF58:
+.LASF39:
 	.string	"SIG_BTU_L2CAP_ALARM"
 .LASF269:
 	.string	"osi_mutex_unlock"
@@ -6208,7 +6208,7 @@ bta_alarm_hash_map:
 	.string	"btu_task_post"
 .LASF241:
 	.string	"bta_alarm_lock"
-.LASF33:
+.LASF49:
 	.string	"offset"
 .LASF249:
 	.string	"bta_sys_hw_on"
@@ -6230,7 +6230,7 @@ bta_alarm_hash_map:
 	.string	"BTA_SYS_MAX_HW_MODULES"
 .LASF156:
 	.string	"tBTA_SYS_COLLISION"
-.LASF37:
+.LASF27:
 	.string	"ESP_LOG_NONE"
 .LASF71:
 	.string	"BTM_EIR_UUID_SERVCLASS_IRMC_SYNC"
@@ -6246,21 +6246,21 @@ bta_alarm_hash_map:
 	.string	"p_coll_cback"
 .LASF143:
 	.string	"BTA_SYS_HW_OFF_EVT"
-.LASF60:
+.LASF41:
 	.string	"TASK_POST_SUCCESS"
-.LASF47:
+.LASF57:
 	.string	"ticks"
 .LASF204:
 	.string	"hw_module_index"
-.LASF55:
+.LASF36:
 	.string	"SIG_BTU_BTA_ALARM"
 .LASF16:
 	.string	"char"
 .LASF215:
 	.string	"bta_sys_hw_register"
-.LASF54:
+.LASF35:
 	.string	"SIG_BTU_BTA_MSG"
-.LASF61:
+.LASF42:
 	.string	"TASK_POST_FAIL"
 .LASF137:
 	.string	"BTA_SYS_EVT_ENABLED_EVT"
@@ -6270,11 +6270,11 @@ bta_alarm_hash_map:
 	.string	"BTA_SYS_HW_OFF"
 .LASF163:
 	.string	"ppm_cb"
-.LASF40:
+.LASF30:
 	.string	"ESP_LOG_INFO"
 .LASF208:
 	.string	"hash_iter_ro_cb"
-.LASF35:
+.LASF51:
 	.string	"data"
 .LASF231:
 	.string	"remaining_ms"
@@ -6282,7 +6282,7 @@ bta_alarm_hash_map:
 	.string	"QueueHandle_t"
 .LASF182:
 	.string	"BTA_SYS_HW_EVT_STACK_ENABLED"
-.LASF51:
+.LASF61:
 	.string	"TIMER_LIST_ENT"
 .LASF148:
 	.string	"tBTA_SYS_HW_EVT"
@@ -6296,7 +6296,7 @@ bta_alarm_hash_map:
 	.string	"bta_sys_hw_reg"
 .LASF139:
 	.string	"BTA_SYS_API_DISABLE_EVT"
-.LASF34:
+.LASF50:
 	.string	"layer_specific"
 .LASF253:
 	.string	"osi_alarm_get_remaining_ms"
@@ -6328,7 +6328,7 @@ bta_alarm_hash_map:
 	.string	"alarm"
 .LASF97:
 	.string	"BTM_EIR_UUID_SERVCLASS_HUMAN_INTERFACE"
-.LASF46:
+.LASF56:
 	.string	"p_cback"
 .LASF167:
 	.string	"colli_reg"
@@ -6346,7 +6346,7 @@ bta_alarm_hash_map:
 	.string	"BTM_EIR_UUID_SERVCLASS_IMAGING_REF_OBJECTS"
 .LASF142:
 	.string	"BTA_SYS_MAX_EVT"
-.LASF49:
+.LASF59:
 	.string	"param"
 .LASF277:
 	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/bt"
@@ -6354,7 +6354,7 @@ bta_alarm_hash_map:
 	.string	"_tle"
 .LASF212:
 	.string	"p_remaining_ms"
-.LASF50:
+.LASF60:
 	.string	"in_use"
 .LASF263:
 	.string	"esp_log_write"
@@ -6412,7 +6412,7 @@ bta_alarm_hash_map:
 	.string	"BTA_SYS_HW_ON_EVT"
 .LASF251:
 	.string	"bta_sys_st_tbl"
-.LASF44:
+.LASF54:
 	.string	"p_next"
 .LASF74:
 	.string	"BTM_EIR_UUID_SERVCLASS_IRMC_SYNC_COMMAND"
@@ -6432,7 +6432,7 @@ bta_alarm_hash_map:
 	.string	"bta_sys_hw_evt_enabled"
 .LASF151:
 	.string	"BTA_SYS_HW_STARTING"
-.LASF57:
+.LASF38:
 	.string	"SIG_BTU_ONESHOT_ALARM"
 .LASF197:
 	.string	"state_table"
@@ -6458,9 +6458,9 @@ bta_alarm_hash_map:
 	.string	"BTM_EIR_UUID_SERVCLASS_DIALUP_NETWORKING"
 .LASF201:
 	.string	"module_index"
-.LASF45:
+.LASF55:
 	.string	"p_prev"
-.LASF48:
+.LASF58:
 	.string	"ticks_initial"
 .LASF72:
 	.string	"BTM_EIR_UUID_SERVCLASS_OBEX_OBJECT_PUSH"
@@ -6472,7 +6472,7 @@ bta_alarm_hash_map:
 	.string	"BTM_EIR_UUID_SERVCLASS_PANU"
 .LASF252:
 	.string	"BTM_DeviceReset"
-.LASF42:
+.LASF32:
 	.string	"ESP_LOG_VERBOSE"
 .LASF152:
 	.string	"BTA_SYS_HW_ON"
@@ -6526,7 +6526,7 @@ bta_alarm_hash_map:
 	.string	"tBTA_SYS_ACTION"
 .LASF113:
 	.string	"BTM_EIR_MAX_SERVICES"
-.LASF41:
+.LASF31:
 	.string	"ESP_LOG_DEBUG"
 .LASF265:
 	.string	"osi_mutex_lock"
@@ -6566,7 +6566,7 @@ bta_alarm_hash_map:
 	.string	"BTM_EIR_UUID_SERVCLASS_HDP_SINK"
 .LASF230:
 	.string	"p_target_tle"
-.LASF27:
+.LASF43:
 	.string	"UINT8"
 .LASF176:
 	.string	"data_free_fn"
@@ -6576,7 +6576,7 @@ bta_alarm_hash_map:
 	.string	"SemaphoreHandle_t"
 .LASF119:
 	.string	"BTM_PM_STS_PENDING"
-.LASF38:
+.LASF28:
 	.string	"ESP_LOG_ERROR"
 .LASF194:
 	.string	"bta_id"

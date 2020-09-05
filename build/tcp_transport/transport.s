@@ -30,7 +30,7 @@ esp_transport_get_default_parent:
 	.literal .LC3, .LC2
 	.literal .LC5, .LC4
 	.literal .LC7, .LC6
-	.literal .LC8, __FUNCTION__$3427
+	.literal .LC8, __FUNCTION__$3432
 	.align	4
 	.global	esp_transport_list_init
 	.type	esp_transport_list_init, @function
@@ -83,7 +83,7 @@ esp_transport_list_init:
 	.literal .LC10, .LC2
 	.literal .LC11, .LC4
 	.literal .LC12, .LC6
-	.literal .LC13, __FUNCTION__$3433
+	.literal .LC13, __FUNCTION__$3438
 	.align	4
 	.global	esp_transport_list_add
 	.type	esp_transport_list_add, @function
@@ -208,7 +208,7 @@ esp_transport_list_get_transport:
 	.literal .LC15, .LC2
 	.literal .LC16, .LC4
 	.literal .LC17, .LC6
-	.literal .LC18, __FUNCTION__$3456
+	.literal .LC18, __FUNCTION__$3461
 	.align	4
 	.global	esp_transport_init
 	.type	esp_transport_init, @function
@@ -793,20 +793,20 @@ esp_transport_set_parent_transport_func:
 	retw.n
 .LFE22:
 	.size	esp_transport_set_parent_transport_func, .-esp_transport_set_parent_transport_func
-	.section	.rodata.__FUNCTION__$3456,"a",@progbits
-	.type	__FUNCTION__$3456, @object
-	.size	__FUNCTION__$3456, 19
-__FUNCTION__$3456:
+	.section	.rodata.__FUNCTION__$3461,"a",@progbits
+	.type	__FUNCTION__$3461, @object
+	.size	__FUNCTION__$3461, 19
+__FUNCTION__$3461:
 	.string	"esp_transport_init"
-	.section	.rodata.__FUNCTION__$3433,"a",@progbits
-	.type	__FUNCTION__$3433, @object
-	.size	__FUNCTION__$3433, 23
-__FUNCTION__$3433:
+	.section	.rodata.__FUNCTION__$3438,"a",@progbits
+	.type	__FUNCTION__$3438, @object
+	.size	__FUNCTION__$3438, 23
+__FUNCTION__$3438:
 	.string	"esp_transport_list_add"
-	.section	.rodata.__FUNCTION__$3427,"a",@progbits
-	.type	__FUNCTION__$3427, @object
-	.size	__FUNCTION__$3427, 24
-__FUNCTION__$3427:
+	.section	.rodata.__FUNCTION__$3432,"a",@progbits
+	.type	__FUNCTION__$3432, @object
+	.size	__FUNCTION__$3432, 24
+__FUNCTION__$3432:
 	.string	"esp_transport_list_init"
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -1501,7 +1501,7 @@ __FUNCTION__$3427:
 	.4byte	0x3b4
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$3427
+	.4byte	__FUNCTION__$3432
 	.uleb128 0x14
 	.4byte	.LVL1
 	.4byte	0xb37
@@ -1565,7 +1565,7 @@ __FUNCTION__$3427:
 	.sleb128 4
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$3427
+	.4byte	__FUNCTION__$3432
 	.uleb128 0x15
 	.uleb128 0x2
 	.byte	0x71
@@ -1617,7 +1617,7 @@ __FUNCTION__$3427:
 	.4byte	0x4b1
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$3433
+	.4byte	__FUNCTION__$3438
 	.uleb128 0x14
 	.4byte	.LVL6
 	.4byte	0xb58
@@ -1690,7 +1690,7 @@ __FUNCTION__$3427:
 	.sleb128 4
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$3433
+	.4byte	__FUNCTION__$3438
 	.uleb128 0x15
 	.uleb128 0x2
 	.byte	0x71
@@ -1781,7 +1781,7 @@ __FUNCTION__$3427:
 	.4byte	0x5bf
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$3456
+	.4byte	__FUNCTION__$3461
 	.uleb128 0x14
 	.4byte	.LVL25
 	.4byte	0xb37
@@ -1846,7 +1846,7 @@ __FUNCTION__$3427:
 	.sleb128 4
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$3456
+	.4byte	__FUNCTION__$3461
 	.uleb128 0x15
 	.uleb128 0x2
 	.byte	0x71

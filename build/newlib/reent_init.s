@@ -4,7 +4,7 @@
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC2:
 	.string	"C"
-	.section	.iram1,"ax",@progbits
+	.section	.iram1.0,"ax",@progbits
 	.literal_position
 	.literal .LC0, _global_impure_ptr
 	.literal .LC1, _cleanup_r

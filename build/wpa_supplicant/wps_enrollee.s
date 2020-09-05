@@ -107,7 +107,7 @@ wps_process_enrollee_nonce:
 	.literal .LC10, wps_crypto_funcs
 	.literal .LC12, .LC11
 	.literal .LC13, 4117
-	.literal .LC14, __FUNCTION__$6241
+	.literal .LC14, __FUNCTION__$6261
 	.literal .LC16, .LC15
 	.literal .LC18, .LC17
 	.literal .LC20, .LC19
@@ -1291,11 +1291,11 @@ wps_enrollee_get_msg:
 	.literal .LC39, .LC38
 	.literal .LC41, .LC40
 	.literal .LC42, wps_crypto_funcs
-	.literal .LC43, __FUNCTION__$6345
+	.literal .LC43, __FUNCTION__$6365
 	.literal .LC44, .LC15
 	.literal .LC45, .LC17
 	.literal .LC47, .LC46
-	.literal .LC48, __FUNCTION__$6353
+	.literal .LC48, __FUNCTION__$6373
 	.literal .LC50, .LC49
 	.literal .LC52, .LC51
 	.literal .LC54, .LC53
@@ -3239,20 +3239,20 @@ wps_enrollee_process_msg:
 	retw.n
 .LFE74:
 	.size	wps_enrollee_process_msg, .-wps_enrollee_process_msg
-	.section	.rodata.__FUNCTION__$6353,"a",@progbits
-	.type	__FUNCTION__$6353, @object
-	.size	__FUNCTION__$6353, 22
-__FUNCTION__$6353:
+	.section	.rodata.__FUNCTION__$6373,"a",@progbits
+	.type	__FUNCTION__$6373, @object
+	.size	__FUNCTION__$6373, 22
+__FUNCTION__$6373:
 	.string	"wps_process_r_snonce2"
-	.section	.rodata.__FUNCTION__$6345,"a",@progbits
-	.type	__FUNCTION__$6345, @object
-	.size	__FUNCTION__$6345, 22
-__FUNCTION__$6345:
+	.section	.rodata.__FUNCTION__$6365,"a",@progbits
+	.type	__FUNCTION__$6365, @object
+	.size	__FUNCTION__$6365, 22
+__FUNCTION__$6365:
 	.string	"wps_process_r_snonce1"
-	.section	.rodata.__FUNCTION__$6241,"a",@progbits
-	.type	__FUNCTION__$6241, @object
-	.size	__FUNCTION__$6241, 17
-__FUNCTION__$6241:
+	.section	.rodata.__FUNCTION__$6261,"a",@progbits
+	.type	__FUNCTION__$6261, @object
+	.size	__FUNCTION__$6261, 17
+__FUNCTION__$6261:
 	.string	"wps_build_e_hash"
 	.comm	wps_crypto_funcs,80,4
 	.section	.debug_frame,"",@progbits
@@ -4038,7 +4038,7 @@ __FUNCTION__$6241:
 	.byte	0x4
 	.4byte	0x74
 	.byte	0xa
-	.byte	0x38
+	.byte	0x37
 	.4byte	0x5fe
 	.uleb128 0x12
 	.4byte	.LASF171
@@ -4065,7 +4065,7 @@ __FUNCTION__$6241:
 	.uleb128 0x2
 	.4byte	.LASF178
 	.byte	0xa
-	.byte	0x40
+	.byte	0x3f
 	.4byte	0x5c7
 	.uleb128 0x3
 	.byte	0x1
@@ -4082,7 +4082,7 @@ __FUNCTION__$6241:
 	.byte	0x4
 	.4byte	0x74
 	.byte	0xa
-	.byte	0xad
+	.byte	0xae
 	.4byte	0x639
 	.uleb128 0x12
 	.4byte	.LASF180
@@ -4094,13 +4094,13 @@ __FUNCTION__$6241:
 	.uleb128 0x2
 	.4byte	.LASF182
 	.byte	0xa
-	.byte	0xb0
+	.byte	0xb1
 	.4byte	0x620
 	.uleb128 0x11
 	.byte	0x4
 	.4byte	0x74
 	.byte	0xa
-	.byte	0xb2
+	.byte	0xb3
 	.4byte	0x65d
 	.uleb128 0x12
 	.4byte	.LASF183
@@ -4112,35 +4112,35 @@ __FUNCTION__$6241:
 	.uleb128 0x2
 	.4byte	.LASF185
 	.byte	0xa
-	.byte	0xb5
+	.byte	0xb6
 	.4byte	0x644
 	.uleb128 0x18
 	.byte	0x8
 	.byte	0xa
-	.byte	0xb8
+	.byte	0xb9
 	.4byte	0x689
 	.uleb128 0x10
 	.4byte	.LASF186
 	.byte	0xa
-	.byte	0xb9
+	.byte	0xba
 	.4byte	0x89
 	.byte	0
 	.uleb128 0x10
 	.4byte	.LASF187
 	.byte	0xa
-	.byte	0xba
+	.byte	0xbb
 	.4byte	0x5fe
 	.byte	0x4
 	.byte	0
 	.uleb128 0x2
 	.4byte	.LASF188
 	.byte	0xa
-	.byte	0xbb
+	.byte	0xbc
 	.4byte	0x668
 	.uleb128 0x2
 	.4byte	.LASF189
 	.byte	0xa
-	.byte	0xbd
+	.byte	0xbe
 	.4byte	0x689
 	.uleb128 0x16
 	.4byte	0x94
@@ -4159,67 +4159,67 @@ __FUNCTION__$6241:
 	.uleb128 0x18
 	.byte	0x7c
 	.byte	0xa
-	.byte	0xde
+	.byte	0xdf
 	.4byte	0x734
 	.uleb128 0x10
 	.4byte	.LASF190
 	.byte	0xa
-	.byte	0xdf
+	.byte	0xe0
 	.4byte	0x69f
 	.byte	0
 	.uleb128 0x10
 	.4byte	.LASF191
 	.byte	0xa
-	.byte	0xe0
+	.byte	0xe1
 	.4byte	0x6af
 	.byte	0x20
 	.uleb128 0x10
 	.4byte	.LASF192
 	.byte	0xa
-	.byte	0xe1
+	.byte	0xe2
 	.4byte	0x639
 	.byte	0x60
 	.uleb128 0x10
 	.4byte	.LASF193
 	.byte	0xa
-	.byte	0xe2
+	.byte	0xe3
 	.4byte	0x609
 	.byte	0x64
 	.uleb128 0x10
 	.4byte	.LASF194
 	.byte	0xa
-	.byte	0xe3
+	.byte	0xe4
 	.4byte	0x610
 	.byte	0x65
 	.uleb128 0x10
 	.4byte	.LASF195
 	.byte	0xa
-	.byte	0xe4
+	.byte	0xe5
 	.4byte	0x94
 	.byte	0x6b
 	.uleb128 0x10
 	.4byte	.LASF196
 	.byte	0xa
-	.byte	0xe5
+	.byte	0xe6
 	.4byte	0x9f
 	.byte	0x6c
 	.uleb128 0x10
 	.4byte	.LASF197
 	.byte	0xa
-	.byte	0xe6
+	.byte	0xe7
 	.4byte	0x65d
 	.byte	0x70
 	.uleb128 0x10
 	.4byte	.LASF198
 	.byte	0xa
-	.byte	0xe7
+	.byte	0xe8
 	.4byte	0x694
 	.byte	0x74
 	.byte	0
 	.uleb128 0x2
 	.4byte	.LASF199
 	.byte	0xa
-	.byte	0xe8
+	.byte	0xe9
 	.4byte	0x6bf
 	.uleb128 0x13
 	.4byte	.LASF200
@@ -5278,7 +5278,7 @@ __FUNCTION__$6241:
 	.4byte	0x100
 	.uleb128 0x1a
 	.4byte	.LASF316
-	.2byte	0x1e0
+	.2byte	0x1e4
 	.byte	0xb
 	.2byte	0x3fb
 	.4byte	0x119f
@@ -5437,31 +5437,31 @@ __FUNCTION__$6241:
 	.byte	0xb
 	.2byte	0x417
 	.4byte	0x1a7
-	.2byte	0x122
+	.2byte	0x129
 	.uleb128 0x1c
 	.4byte	.LASF334
 	.byte	0xb
 	.2byte	0x418
 	.4byte	0x609
-	.2byte	0x123
+	.2byte	0x12a
 	.uleb128 0x1c
 	.4byte	.LASF335
 	.byte	0xb
 	.2byte	0x419
 	.4byte	0x1425
-	.2byte	0x124
+	.2byte	0x12b
 	.uleb128 0x1c
 	.4byte	.LASF336
 	.byte	0xb
 	.2byte	0x41a
 	.4byte	0x1a7
-	.2byte	0x160
+	.2byte	0x167
 	.uleb128 0x1c
 	.4byte	.LASF337
 	.byte	0xb
 	.2byte	0x41b
 	.4byte	0x734
-	.2byte	0x164
+	.2byte	0x168
 	.byte	0
 	.uleb128 0x6
 	.byte	0x4
@@ -5768,7 +5768,7 @@ __FUNCTION__$6241:
 	.4byte	0x1425
 	.uleb128 0x17
 	.4byte	0xc7
-	.byte	0x1
+	.byte	0x8
 	.byte	0
 	.uleb128 0x16
 	.4byte	0xb81
@@ -8022,7 +8022,7 @@ __FUNCTION__$6241:
 	.4byte	0x20eb
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$6241
+	.4byte	__FUNCTION__$6261
 	.uleb128 0x46
 	.4byte	0x212e
 	.4byte	.LBB79
@@ -8374,7 +8374,7 @@ __FUNCTION__$6241:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$6241
+	.4byte	__FUNCTION__$6261
 	.byte	0
 	.byte	0
 	.byte	0
@@ -10624,7 +10624,7 @@ __FUNCTION__$6241:
 	.4byte	0x326a
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$6345
+	.4byte	__FUNCTION__$6365
 	.uleb128 0x42
 	.4byte	0x212e
 	.4byte	.LBB187
@@ -10774,7 +10774,7 @@ __FUNCTION__$6241:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$6345
+	.4byte	__FUNCTION__$6365
 	.byte	0
 	.uleb128 0x36
 	.4byte	.LVL252
@@ -10991,7 +10991,7 @@ __FUNCTION__$6241:
 	.4byte	0x333c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$6353
+	.4byte	__FUNCTION__$6373
 	.uleb128 0x42
 	.4byte	0x212e
 	.4byte	.LBB196
@@ -11141,7 +11141,7 @@ __FUNCTION__$6241:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$6353
+	.4byte	__FUNCTION__$6373
 	.byte	0
 	.uleb128 0x36
 	.4byte	.LVL287

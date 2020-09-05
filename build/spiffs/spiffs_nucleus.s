@@ -10,7 +10,7 @@
 	.align	4
 	.type	spiffs_page_data_check, @function
 spiffs_page_data_check:
-.LFB17:
+.LFB26:
 	.file 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/spiffs/spiffs_nucleus.c"
 	.loc 1 4 0
 .LVL0:
@@ -50,7 +50,7 @@ spiffs_page_data_check:
 	mov.n	a2, a9
 .LVL2:
 	retw.n
-.LFE17:
+.LFE26:
 	.size	spiffs_page_data_check, .-spiffs_page_data_check
 	.section	.text.spiffs_page_index_check,"ax",@progbits
 	.literal_position
@@ -61,7 +61,7 @@ spiffs_page_data_check:
 	.align	4
 	.type	spiffs_page_index_check, @function
 spiffs_page_index_check:
-.LFB18:
+.LFB27:
 	.loc 1 34 0
 .LVL3:
 	entry	sp, 32
@@ -100,7 +100,7 @@ spiffs_page_index_check:
 	mov.n	a2, a9
 .LVL5:
 	retw.n
-.LFE18:
+.LFE27:
 	.size	spiffs_page_index_check, .-spiffs_page_index_check
 	.section	.text.spiffs_update_ix_map,"ax",@progbits
 	.literal_position
@@ -108,7 +108,7 @@ spiffs_page_index_check:
 	.align	4
 	.type	spiffs_update_ix_map, @function
 spiffs_update_ix_map:
-.LFB30:
+.LFB39:
 	.loc 1 616 0
 .LVL6:
 	entry	sp, 32
@@ -232,7 +232,7 @@ spiffs_update_ix_map:
 .LVL22:
 .L15:
 	retw.n
-.LFE30:
+.LFE39:
 	.size	spiffs_update_ix_map, .-spiffs_update_ix_map
 	.section	.text.spiffs_obj_lu_find_id_and_span_v,"ax",@progbits
 	.literal_position
@@ -240,7 +240,7 @@ spiffs_update_ix_map:
 	.align	4
 	.type	spiffs_obj_lu_find_id_and_span_v, @function
 spiffs_obj_lu_find_id_and_span_v:
-.LFB27:
+.LFB36:
 	.loc 1 513 0
 .LVL23:
 	entry	sp, 48
@@ -328,7 +328,7 @@ spiffs_obj_lu_find_id_and_span_v:
 .L38:
 	.loc 1 529 0
 	retw.n
-.LFE27:
+.LFE36:
 	.size	spiffs_obj_lu_find_id_and_span_v, .-spiffs_obj_lu_find_id_and_span_v
 	.section	.text.spiffs_populate_ix_map_v,"ax",@progbits
 	.literal_position
@@ -337,7 +337,7 @@ spiffs_obj_lu_find_id_and_span_v:
 	.align	4
 	.type	spiffs_populate_ix_map_v, @function
 spiffs_populate_ix_map_v:
-.LFB31:
+.LFB40:
 	.loc 1 680 0
 .LVL33:
 	entry	sp, 32
@@ -449,7 +449,7 @@ spiffs_populate_ix_map_v:
 	.loc 1 718 0
 	mov.n	a2, a3
 	retw.n
-.LFE31:
+.LFE40:
 	.size	spiffs_populate_ix_map_v, .-spiffs_populate_ix_map_v
 	.section	.text.spiffs_object_find_object_index_header_by_name_v,"ax",@progbits
 	.literal_position
@@ -458,7 +458,7 @@ spiffs_populate_ix_map_v:
 	.align	4
 	.type	spiffs_object_find_object_index_header_by_name_v, @function
 spiffs_object_find_object_index_header_by_name_v:
-.LFB43:
+.LFB52:
 	.loc 1 1649 0
 .LVL50:
 	entry	sp, 176
@@ -535,7 +535,7 @@ spiffs_object_find_object_index_header_by_name_v:
 .L58:
 	.loc 1 1670 0
 	retw.n
-.LFE43:
+.LFE52:
 	.size	spiffs_object_find_object_index_header_by_name_v, .-spiffs_object_find_object_index_header_by_name_v
 	.section	.text.spiffs_obj_lu_find_free_obj_id_bitmap_v,"ax",@progbits
 	.literal_position
@@ -544,7 +544,7 @@ spiffs_object_find_object_index_header_by_name_v:
 	.align	4
 	.type	spiffs_obj_lu_find_free_obj_id_bitmap_v, @function
 spiffs_obj_lu_find_free_obj_id_bitmap_v:
-.LFB47:
+.LFB56:
 	.loc 1 2052 0
 .LVL62:
 	entry	sp, 176
@@ -659,7 +659,7 @@ spiffs_obj_lu_find_free_obj_id_bitmap_v:
 	.loc 1 2082 0
 	mov.n	a2, a4
 	retw.n
-.LFE47:
+.LFE56:
 	.size	spiffs_obj_lu_find_free_obj_id_bitmap_v, .-spiffs_obj_lu_find_free_obj_id_bitmap_v
 	.section	.text.spiffs_obj_lu_scan_v,"ax",@progbits
 	.literal_position
@@ -668,7 +668,7 @@ spiffs_obj_lu_find_free_obj_id_bitmap_v:
 	.align	4
 	.type	spiffs_obj_lu_scan_v, @function
 spiffs_obj_lu_scan_v:
-.LFB23:
+.LFB32:
 	.loc 1 330 0
 .LVL78:
 	entry	sp, 32
@@ -710,7 +710,7 @@ spiffs_obj_lu_scan_v:
 	l32r	a2, .LC17
 .LVL81:
 	retw.n
-.LFE23:
+.LFE32:
 	.size	spiffs_obj_lu_scan_v, .-spiffs_obj_lu_scan_v
 	.section	.text.spiffs_hash$isra$1,"ax",@progbits
 	.literal_position
@@ -718,7 +718,7 @@ spiffs_obj_lu_scan_v:
 	.align	4
 	.type	spiffs_hash$isra$1, @function
 spiffs_hash$isra$1:
-.LFB56:
+.LFB65:
 	.loc 1 2217 0
 .LVL82:
 	entry	sp, 32
@@ -752,7 +752,7 @@ spiffs_hash$isra$1:
 	mov.n	a2, a8
 .LVL90:
 	retw.n
-.LFE56:
+.LFE65:
 	.size	spiffs_hash$isra$1, .-spiffs_hash$isra$1
 	.section	.text.spiffs_obj_lu_find_free_obj_id_compact_v,"ax",@progbits
 	.literal_position
@@ -762,7 +762,7 @@ spiffs_hash$isra$1:
 	.align	4
 	.type	spiffs_obj_lu_find_free_obj_id_compact_v, @function
 spiffs_obj_lu_find_free_obj_id_compact_v:
-.LFB48:
+.LFB57:
 	.loc 1 2085 0
 .LVL91:
 	entry	sp, 176
@@ -862,14 +862,14 @@ spiffs_obj_lu_find_free_obj_id_compact_v:
 	.loc 1 2112 0
 	mov.n	a2, a9
 	retw.n
-.LFE48:
+.LFE57:
 	.size	spiffs_obj_lu_find_free_obj_id_compact_v, .-spiffs_obj_lu_find_free_obj_id_compact_v
 	.section	.text.spiffs_phys_cpy,"ax",@progbits
 	.align	4
 	.global	spiffs_phys_cpy
 	.type	spiffs_phys_cpy, @function
 spiffs_phys_cpy:
-.LFB19:
+.LFB28:
 	.loc 1 90 0
 .LVL105:
 	entry	sp, 288
@@ -934,7 +934,7 @@ spiffs_phys_cpy:
 .LBE21:
 	.loc 1 105 0
 	retw.n
-.LFE19:
+.LFE28:
 	.size	spiffs_phys_cpy, .-spiffs_phys_cpy
 	.section	.text.spiffs_obj_lu_find_entry_visitor,"ax",@progbits
 	.literal_position
@@ -945,7 +945,7 @@ spiffs_phys_cpy:
 	.global	spiffs_obj_lu_find_entry_visitor
 	.type	spiffs_obj_lu_find_entry_visitor, @function
 spiffs_obj_lu_find_entry_visitor:
-.LFB20:
+.LFB29:
 	.loc 1 137 0
 .LVL116:
 	entry	sp, 80
@@ -1275,7 +1275,7 @@ spiffs_obj_lu_find_entry_visitor:
 .LBE28:
 	.loc 1 226 0
 	retw.n
-.LFE20:
+.LFE29:
 	.size	spiffs_obj_lu_find_entry_visitor, .-spiffs_obj_lu_find_entry_visitor
 	.section	.text.spiffs_erase_block,"ax",@progbits
 	.literal_position
@@ -1284,7 +1284,7 @@ spiffs_obj_lu_find_entry_visitor:
 	.global	spiffs_erase_block
 	.type	spiffs_erase_block, @function
 spiffs_erase_block:
-.LFB21:
+.LFB30:
 	.loc 1 232 0
 .LVL165:
 	entry	sp, 48
@@ -1410,7 +1410,7 @@ spiffs_erase_block:
 	mov.n	a2, a4
 .LVL177:
 	retw.n
-.LFE21:
+.LFE30:
 	.size	spiffs_erase_block, .-spiffs_erase_block
 	.section	.text.spiffs_probe,"ax",@progbits
 	.literal_position
@@ -1421,7 +1421,7 @@ spiffs_erase_block:
 	.global	spiffs_probe
 	.type	spiffs_probe, @function
 spiffs_probe:
-.LFB22:
+.LFB31:
 	.loc 1 274 0
 .LVL178:
 	entry	sp, 160
@@ -1536,7 +1536,7 @@ spiffs_probe:
 	mov.n	a2, a10
 .LVL186:
 	retw.n
-.LFE22:
+.LFE31:
 	.size	spiffs_probe, .-spiffs_probe
 	.section	.text.spiffs_obj_lu_scan,"ax",@progbits
 	.literal_position
@@ -1549,7 +1549,7 @@ spiffs_probe:
 	.global	spiffs_obj_lu_scan
 	.type	spiffs_obj_lu_scan, @function
 spiffs_obj_lu_scan:
-.LFB24:
+.LFB33:
 	.loc 1 354 0
 .LVL187:
 	entry	sp, 64
@@ -1735,7 +1735,7 @@ spiffs_obj_lu_scan:
 .LVL211:
 	.loc 1 449 0
 	retw.n
-.LFE24:
+.LFE33:
 	.size	spiffs_obj_lu_scan, .-spiffs_obj_lu_scan
 	.section	.text.spiffs_obj_lu_find_id,"ax",@progbits
 	.literal_position
@@ -1745,7 +1745,7 @@ spiffs_obj_lu_scan:
 	.global	spiffs_obj_lu_find_id
 	.type	spiffs_obj_lu_find_id, @function
 spiffs_obj_lu_find_id:
-.LFB26:
+.LFB35:
 	.loc 1 498 0
 .LVL212:
 	entry	sp, 48
@@ -1777,7 +1777,7 @@ spiffs_obj_lu_find_id:
 	.loc 1 498 0
 	.loc 1 505 0
 	retw.n
-.LFE26:
+.LFE35:
 	.size	spiffs_obj_lu_find_id, .-spiffs_obj_lu_find_id
 	.section	.text.spiffs_obj_lu_find_free,"ax",@progbits
 	.literal_position
@@ -1788,7 +1788,7 @@ spiffs_obj_lu_find_id:
 	.global	spiffs_obj_lu_find_free
 	.type	spiffs_obj_lu_find_free, @function
 spiffs_obj_lu_find_free:
-.LFB25:
+.LFB34:
 	.loc 1 460 0
 .LVL217:
 	entry	sp, 48
@@ -1868,7 +1868,7 @@ spiffs_obj_lu_find_free:
 .L212:
 	.loc 1 486 0
 	retw.n
-.LFE25:
+.LFE34:
 	.size	spiffs_obj_lu_find_free, .-spiffs_obj_lu_find_free
 	.section	.text.spiffs_obj_lu_find_id_and_span,"ax",@progbits
 	.literal_position
@@ -1879,7 +1879,7 @@ spiffs_obj_lu_find_free:
 	.global	spiffs_obj_lu_find_id_and_span
 	.type	spiffs_obj_lu_find_id_and_span, @function
 spiffs_obj_lu_find_id_and_span:
-.LFB28:
+.LFB37:
 	.loc 1 539 0
 .LVL227:
 	entry	sp, 80
@@ -1951,7 +1951,7 @@ spiffs_obj_lu_find_id_and_span:
 	mov.n	a2, a10
 .LVL231:
 	retw.n
-.LFE28:
+.LFE37:
 	.size	spiffs_obj_lu_find_id_and_span, .-spiffs_obj_lu_find_id_and_span
 	.section	.text.spiffs_obj_lu_find_id_and_span_by_phdr,"ax",@progbits
 	.literal_position
@@ -1962,7 +1962,7 @@ spiffs_obj_lu_find_id_and_span:
 	.global	spiffs_obj_lu_find_id_and_span_by_phdr
 	.type	spiffs_obj_lu_find_id_and_span_by_phdr, @function
 spiffs_obj_lu_find_id_and_span_by_phdr:
-.LFB29:
+.LFB38:
 	.loc 1 579 0
 .LVL232:
 	entry	sp, 80
@@ -2034,7 +2034,7 @@ spiffs_obj_lu_find_id_and_span_by_phdr:
 	mov.n	a2, a10
 .LVL236:
 	retw.n
-.LFE29:
+.LFE38:
 	.size	spiffs_obj_lu_find_id_and_span_by_phdr, .-spiffs_obj_lu_find_id_and_span_by_phdr
 	.section	.text.spiffs_populate_ix_map,"ax",@progbits
 	.literal_position
@@ -2046,7 +2046,7 @@ spiffs_obj_lu_find_id_and_span_by_phdr:
 	.global	spiffs_populate_ix_map
 	.type	spiffs_populate_ix_map, @function
 spiffs_populate_ix_map:
-.LFB32:
+.LFB41:
 	.loc 1 722 0
 .LVL237:
 	entry	sp, 64
@@ -2155,14 +2155,14 @@ spiffs_populate_ix_map:
 .L245:
 	.loc 1 754 0
 	retw.n
-.LFE32:
+.LFE41:
 	.size	spiffs_populate_ix_map, .-spiffs_populate_ix_map
 	.section	.text.spiffs_page_allocate_data,"ax",@progbits
 	.align	4
 	.global	spiffs_page_allocate_data
 	.type	spiffs_page_allocate_data, @function
 spiffs_page_allocate_data:
-.LFB33:
+.LFB42:
 	.loc 1 772 0
 .LVL249:
 	entry	sp, 64
@@ -2350,14 +2350,14 @@ spiffs_page_allocate_data:
 	.loc 1 817 0
 	mov.n	a2, a9
 	retw.n
-.LFE33:
+.LFE42:
 	.size	spiffs_page_allocate_data, .-spiffs_page_allocate_data
 	.section	.text.spiffs_page_delete,"ax",@progbits
 	.align	4
 	.global	spiffs_page_delete
 	.type	spiffs_page_delete, @function
 spiffs_page_delete:
-.LFB35:
+.LFB44:
 	.loc 1 891 0
 .LVL270:
 	entry	sp, 48
@@ -2433,14 +2433,14 @@ spiffs_page_delete:
 	mov.n	a2, a10
 .LVL275:
 	retw.n
-.LFE35:
+.LFE44:
 	.size	spiffs_page_delete, .-spiffs_page_delete
 	.section	.text.spiffs_page_move,"ax",@progbits
 	.align	4
 	.global	spiffs_page_move
 	.type	spiffs_page_move, @function
 spiffs_page_move:
-.LFB34:
+.LFB43:
 	.loc 1 831 0
 .LVL276:
 	entry	sp, 64
@@ -2631,7 +2631,7 @@ spiffs_page_move:
 	mov.n	a2, a9
 .LVL305:
 	retw.n
-.LFE34:
+.LFE43:
 	.size	spiffs_page_move, .-spiffs_page_move
 	.section	.text.spiffs_cb_object_event,"ax",@progbits
 	.literal_position
@@ -2640,7 +2640,7 @@ spiffs_page_move:
 	.global	spiffs_cb_object_event
 	.type	spiffs_cb_object_event, @function
 spiffs_cb_object_event:
-.LFB38:
+.LFB47:
 	.loc 1 1058 0
 .LVL306:
 	entry	sp, 48
@@ -2805,7 +2805,7 @@ spiffs_cb_object_event:
 .L307:
 	retw.n
 .LBE34:
-.LFE38:
+.LFE47:
 	.size	spiffs_cb_object_event, .-spiffs_cb_object_event
 	.section	.text.spiffs_object_create,"ax",@progbits
 	.literal_position
@@ -2814,7 +2814,7 @@ spiffs_cb_object_event:
 	.global	spiffs_object_create
 	.type	spiffs_object_create, @function
 spiffs_object_create:
-.LFB36:
+.LFB45:
 	.loc 1 927 0
 .LVL322:
 	entry	sp, 224
@@ -3010,7 +3010,7 @@ spiffs_object_create:
 	.loc 1 980 0
 	mov.n	a2, a10
 	retw.n
-.LFE36:
+.LFE45:
 	.size	spiffs_object_create, .-spiffs_object_create
 	.section	.text.spiffs_object_update_index_hdr,"ax",@progbits
 	.literal_position
@@ -3024,7 +3024,7 @@ spiffs_object_create:
 	.global	spiffs_object_update_index_hdr
 	.type	spiffs_object_update_index_hdr, @function
 spiffs_object_update_index_hdr:
-.LFB37:
+.LFB46:
 	.loc 1 998 0
 .LVL342:
 	entry	sp, 80
@@ -3166,7 +3166,7 @@ spiffs_object_update_index_hdr:
 	.loc 1 1048 0 is_stmt 1
 	mov.n	a2, a9
 	retw.n
-.LFE37:
+.LFE46:
 	.size	spiffs_object_update_index_hdr, .-spiffs_object_update_index_hdr
 	.section	.text.spiffs_object_open_by_page,"ax",@progbits
 	.literal_position
@@ -3179,7 +3179,7 @@ spiffs_object_update_index_hdr:
 	.global	spiffs_object_open_by_page
 	.type	spiffs_object_open_by_page, @function
 spiffs_object_open_by_page:
-.LFB40:
+.LFB49:
 	.loc 1 1157 0
 .LVL358:
 	entry	sp, 176
@@ -3290,7 +3290,7 @@ spiffs_object_open_by_page:
 	.loc 1 1187 0
 	mov.n	a2, a8
 	retw.n
-.LFE40:
+.LFE49:
 	.size	spiffs_object_open_by_page, .-spiffs_object_open_by_page
 	.section	.text.spiffs_object_open_by_id,"ax",@progbits
 	.literal_position
@@ -3299,7 +3299,7 @@ spiffs_object_open_by_page:
 	.global	spiffs_object_open_by_id
 	.type	spiffs_object_open_by_id, @function
 spiffs_object_open_by_id:
-.LFB39:
+.LFB48:
 	.loc 1 1138 0
 .LVL372:
 	entry	sp, 48
@@ -3335,7 +3335,7 @@ spiffs_object_open_by_id:
 	mov.n	a2, a10
 .LVL377:
 	retw.n
-.LFE39:
+.LFE48:
 	.size	spiffs_object_open_by_id, .-spiffs_object_open_by_id
 	.section	.text.spiffs_object_append,"ax",@progbits
 	.literal_position
@@ -3350,7 +3350,7 @@ spiffs_object_open_by_id:
 	.global	spiffs_object_append
 	.type	spiffs_object_append, @function
 spiffs_object_append:
-.LFB41:
+.LFB50:
 	.loc 1 1193 0
 .LVL378:
 	entry	sp, 96
@@ -4119,7 +4119,7 @@ spiffs_object_append:
 	.loc 1 1434 0
 	mov.n	a2, a10
 	retw.n
-.LFE41:
+.LFE50:
 	.size	spiffs_object_append, .-spiffs_object_append
 	.section	.text.spiffs_object_modify,"ax",@progbits
 	.literal_position
@@ -4134,7 +4134,7 @@ spiffs_object_append:
 	.global	spiffs_object_modify
 	.type	spiffs_object_modify, @function
 spiffs_object_modify:
-.LFB42:
+.LFB51:
 	.loc 1 1441 0
 .LVL456:
 	entry	sp, 96
@@ -4819,7 +4819,7 @@ spiffs_object_modify:
 	.loc 1 1640 0
 	mov.n	a2, a10
 	retw.n
-.LFE42:
+.LFE51:
 	.size	spiffs_object_modify, .-spiffs_object_modify
 	.section	.text.spiffs_object_find_object_index_header_by_name,"ax",@progbits
 	.literal_position
@@ -4830,7 +4830,7 @@ spiffs_object_modify:
 	.global	spiffs_object_find_object_index_header_by_name
 	.type	spiffs_object_find_object_index_header_by_name, @function
 spiffs_object_find_object_index_header_by_name:
-.LFB44:
+.LFB53:
 	.loc 1 1677 0
 .LVL532:
 	entry	sp, 64
@@ -4890,7 +4890,7 @@ spiffs_object_find_object_index_header_by_name:
 	mov.n	a2, a10
 .LVL535:
 	retw.n
-.LFE44:
+.LFE53:
 	.size	spiffs_object_find_object_index_header_by_name, .-spiffs_object_find_object_index_header_by_name
 	.section	.text.spiffs_object_truncate,"ax",@progbits
 	.literal_position
@@ -4908,7 +4908,7 @@ spiffs_object_find_object_index_header_by_name:
 	.global	spiffs_object_truncate
 	.type	spiffs_object_truncate, @function
 spiffs_object_truncate:
-.LFB45:
+.LFB54:
 	.loc 1 1714 0
 .LVL536:
 	entry	sp, 96
@@ -5676,7 +5676,7 @@ spiffs_object_truncate:
 	.loc 1 1947 0
 	mov.n	a2, a10
 	retw.n
-.LFE45:
+.LFE54:
 	.size	spiffs_object_truncate, .-spiffs_object_truncate
 	.section	.text.spiffs_object_read,"ax",@progbits
 	.literal_position
@@ -5692,7 +5692,7 @@ spiffs_object_truncate:
 	.global	spiffs_object_read
 	.type	spiffs_object_read, @function
 spiffs_object_read:
-.LFB46:
+.LFB55:
 	.loc 1 1954 0
 .LVL634:
 	entry	sp, 80
@@ -5994,7 +5994,7 @@ spiffs_object_read:
 	bnez.n	a9, .L679
 	j	.L683
 .LBE53:
-.LFE46:
+.LFE55:
 	.size	spiffs_object_read, .-spiffs_object_read
 	.section	.text.spiffs_obj_lu_find_free_obj_id,"ax",@progbits
 	.literal_position
@@ -6008,7 +6008,7 @@ spiffs_object_read:
 	.global	spiffs_obj_lu_find_free_obj_id
 	.type	spiffs_obj_lu_find_free_obj_id, @function
 spiffs_obj_lu_find_free_obj_id:
-.LFB49:
+.LFB58:
 	.loc 1 2119 0
 .LVL681:
 	entry	sp, 64
@@ -6273,7 +6273,7 @@ spiffs_obj_lu_find_free_obj_id:
 	.loc 1 2211 0
 	mov.n	a2, a10
 	retw.n
-.LFE49:
+.LFE58:
 	.size	spiffs_obj_lu_find_free_obj_id, .-spiffs_obj_lu_find_free_obj_id
 	.section	.text.spiffs_fd_find_new,"ax",@progbits
 	.literal_position
@@ -6283,7 +6283,7 @@ spiffs_obj_lu_find_free_obj_id:
 	.global	spiffs_fd_find_new
 	.type	spiffs_fd_find_new, @function
 spiffs_fd_find_new:
-.LFB51:
+.LFB60:
 	.loc 1 2229 0
 .LVL722:
 	entry	sp, 32
@@ -6461,7 +6461,7 @@ spiffs_fd_find_new:
 	.loc 1 2305 0
 	mov.n	a2, a8
 	retw.n
-.LFE51:
+.LFE60:
 	.size	spiffs_fd_find_new, .-spiffs_fd_find_new
 	.section	.text.spiffs_fd_return,"ax",@progbits
 	.literal_position
@@ -6471,7 +6471,7 @@ spiffs_fd_find_new:
 	.global	spiffs_fd_return
 	.type	spiffs_fd_return, @function
 spiffs_fd_return:
-.LFB52:
+.LFB61:
 	.loc 1 2307 0
 .LVL752:
 	entry	sp, 32
@@ -6515,7 +6515,7 @@ spiffs_fd_return:
 .L774:
 	.loc 1 2321 0
 	retw.n
-.LFE52:
+.LFE61:
 	.size	spiffs_fd_return, .-spiffs_fd_return
 	.section	.text.spiffs_fd_get,"ax",@progbits
 	.literal_position
@@ -6525,7 +6525,7 @@ spiffs_fd_return:
 	.global	spiffs_fd_get
 	.type	spiffs_fd_get, @function
 spiffs_fd_get:
-.LFB53:
+.LFB62:
 	.loc 1 2323 0
 .LVL761:
 	entry	sp, 32
@@ -6561,14 +6561,14 @@ spiffs_fd_get:
 	.loc 1 2333 0
 	mov.n	a2, a8
 	retw.n
-.LFE53:
+.LFE62:
 	.size	spiffs_fd_get, .-spiffs_fd_get
 	.section	.text.spiffs_fd_temporal_cache_rehash,"ax",@progbits
 	.align	4
 	.global	spiffs_fd_temporal_cache_rehash
 	.type	spiffs_fd_temporal_cache_rehash, @function
 spiffs_fd_temporal_cache_rehash:
-.LFB54:
+.LFB63:
 	.loc 1 2340 0
 .LVL766:
 	entry	sp, 32
@@ -6612,7 +6612,7 @@ spiffs_fd_temporal_cache_rehash:
 	bne	a9, a11, .L786
 	.loc 1 2351 0 is_stmt 1
 	retw.n
-.LFE54:
+.LFE63:
 	.size	spiffs_fd_temporal_cache_rehash, .-spiffs_fd_temporal_cache_rehash
 	.comm	spiffs_mutex,4,4
 	.section	.debug_frame,"",@progbits
@@ -6634,10 +6634,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.byte	0x4
-	.4byte	.LCFI0-.LFB17
+	.4byte	.LCFI0-.LFB26
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -6646,10 +6646,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI1-.LFB18
+	.4byte	.LCFI1-.LFB27
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -6658,10 +6658,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.byte	0x4
-	.4byte	.LCFI2-.LFB30
+	.4byte	.LCFI2-.LFB39
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -6670,10 +6670,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.byte	0x4
-	.4byte	.LCFI3-.LFB27
+	.4byte	.LCFI3-.LFB36
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -6682,10 +6682,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.byte	0x4
-	.4byte	.LCFI4-.LFB31
+	.4byte	.LCFI4-.LFB40
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -6694,10 +6694,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.byte	0x4
-	.4byte	.LCFI5-.LFB43
+	.4byte	.LCFI5-.LFB52
 	.byte	0xe
 	.uleb128 0xb0
 	.align	4
@@ -6706,10 +6706,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.byte	0x4
-	.4byte	.LCFI6-.LFB47
+	.4byte	.LCFI6-.LFB56
 	.byte	0xe
 	.uleb128 0xb0
 	.align	4
@@ -6718,10 +6718,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI7-.LFB23
+	.4byte	.LCFI7-.LFB32
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -6730,10 +6730,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.4byte	.Lframe0
-	.4byte	.LFB56
-	.4byte	.LFE56-.LFB56
+	.4byte	.LFB65
+	.4byte	.LFE65-.LFB65
 	.byte	0x4
-	.4byte	.LCFI8-.LFB56
+	.4byte	.LCFI8-.LFB65
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -6742,10 +6742,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.4byte	.Lframe0
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
 	.byte	0x4
-	.4byte	.LCFI9-.LFB48
+	.4byte	.LCFI9-.LFB57
 	.byte	0xe
 	.uleb128 0xb0
 	.align	4
@@ -6754,10 +6754,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE20-.LASFDE20
 .LASFDE20:
 	.4byte	.Lframe0
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.byte	0x4
-	.4byte	.LCFI10-.LFB19
+	.4byte	.LCFI10-.LFB28
 	.byte	0xe
 	.uleb128 0x120
 	.align	4
@@ -6766,10 +6766,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE22-.LASFDE22
 .LASFDE22:
 	.4byte	.Lframe0
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.byte	0x4
-	.4byte	.LCFI11-.LFB20
+	.4byte	.LCFI11-.LFB29
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -6778,10 +6778,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE24-.LASFDE24
 .LASFDE24:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI12-.LFB21
+	.4byte	.LCFI12-.LFB30
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -6790,10 +6790,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE26-.LASFDE26
 .LASFDE26:
 	.4byte	.Lframe0
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.byte	0x4
-	.4byte	.LCFI13-.LFB22
+	.4byte	.LCFI13-.LFB31
 	.byte	0xe
 	.uleb128 0xa0
 	.align	4
@@ -6802,10 +6802,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE28-.LASFDE28
 .LASFDE28:
 	.4byte	.Lframe0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI14-.LFB24
+	.4byte	.LCFI14-.LFB33
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -6814,10 +6814,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE30-.LASFDE30
 .LASFDE30:
 	.4byte	.Lframe0
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.byte	0x4
-	.4byte	.LCFI15-.LFB26
+	.4byte	.LCFI15-.LFB35
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -6826,10 +6826,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE32-.LASFDE32
 .LASFDE32:
 	.4byte	.Lframe0
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.byte	0x4
-	.4byte	.LCFI16-.LFB25
+	.4byte	.LCFI16-.LFB34
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -6838,10 +6838,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE34-.LASFDE34
 .LASFDE34:
 	.4byte	.Lframe0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.byte	0x4
-	.4byte	.LCFI17-.LFB28
+	.4byte	.LCFI17-.LFB37
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -6850,10 +6850,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE36-.LASFDE36
 .LASFDE36:
 	.4byte	.Lframe0
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.byte	0x4
-	.4byte	.LCFI18-.LFB29
+	.4byte	.LCFI18-.LFB38
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -6862,10 +6862,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE38-.LASFDE38
 .LASFDE38:
 	.4byte	.Lframe0
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.byte	0x4
-	.4byte	.LCFI19-.LFB32
+	.4byte	.LCFI19-.LFB41
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -6874,10 +6874,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE40-.LASFDE40
 .LASFDE40:
 	.4byte	.Lframe0
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.byte	0x4
-	.4byte	.LCFI20-.LFB33
+	.4byte	.LCFI20-.LFB42
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -6886,10 +6886,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE42-.LASFDE42
 .LASFDE42:
 	.4byte	.Lframe0
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.byte	0x4
-	.4byte	.LCFI21-.LFB35
+	.4byte	.LCFI21-.LFB44
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -6898,10 +6898,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE44-.LASFDE44
 .LASFDE44:
 	.4byte	.Lframe0
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.byte	0x4
-	.4byte	.LCFI22-.LFB34
+	.4byte	.LCFI22-.LFB43
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -6910,10 +6910,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE46-.LASFDE46
 .LASFDE46:
 	.4byte	.Lframe0
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.byte	0x4
-	.4byte	.LCFI23-.LFB38
+	.4byte	.LCFI23-.LFB47
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -6922,10 +6922,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE48-.LASFDE48
 .LASFDE48:
 	.4byte	.Lframe0
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.byte	0x4
-	.4byte	.LCFI24-.LFB36
+	.4byte	.LCFI24-.LFB45
 	.byte	0xe
 	.uleb128 0xe0
 	.align	4
@@ -6934,10 +6934,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE50-.LASFDE50
 .LASFDE50:
 	.4byte	.Lframe0
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.byte	0x4
-	.4byte	.LCFI25-.LFB37
+	.4byte	.LCFI25-.LFB46
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -6946,10 +6946,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE52-.LASFDE52
 .LASFDE52:
 	.4byte	.Lframe0
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.byte	0x4
-	.4byte	.LCFI26-.LFB40
+	.4byte	.LCFI26-.LFB49
 	.byte	0xe
 	.uleb128 0xb0
 	.align	4
@@ -6958,10 +6958,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE54-.LASFDE54
 .LASFDE54:
 	.4byte	.Lframe0
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.byte	0x4
-	.4byte	.LCFI27-.LFB39
+	.4byte	.LCFI27-.LFB48
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -6970,10 +6970,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE56-.LASFDE56
 .LASFDE56:
 	.4byte	.Lframe0
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.byte	0x4
-	.4byte	.LCFI28-.LFB41
+	.4byte	.LCFI28-.LFB50
 	.byte	0xe
 	.uleb128 0x60
 	.align	4
@@ -6982,10 +6982,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE58-.LASFDE58
 .LASFDE58:
 	.4byte	.Lframe0
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.byte	0x4
-	.4byte	.LCFI29-.LFB42
+	.4byte	.LCFI29-.LFB51
 	.byte	0xe
 	.uleb128 0x60
 	.align	4
@@ -6994,10 +6994,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE60-.LASFDE60
 .LASFDE60:
 	.4byte	.Lframe0
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.byte	0x4
-	.4byte	.LCFI30-.LFB44
+	.4byte	.LCFI30-.LFB53
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -7006,10 +7006,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE62-.LASFDE62
 .LASFDE62:
 	.4byte	.Lframe0
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.byte	0x4
-	.4byte	.LCFI31-.LFB45
+	.4byte	.LCFI31-.LFB54
 	.byte	0xe
 	.uleb128 0x60
 	.align	4
@@ -7018,10 +7018,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE64-.LASFDE64
 .LASFDE64:
 	.4byte	.Lframe0
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.byte	0x4
-	.4byte	.LCFI32-.LFB46
+	.4byte	.LCFI32-.LFB55
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -7030,10 +7030,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE66-.LASFDE66
 .LASFDE66:
 	.4byte	.Lframe0
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
 	.byte	0x4
-	.4byte	.LCFI33-.LFB49
+	.4byte	.LCFI33-.LFB58
 	.byte	0xe
 	.uleb128 0x40
 	.align	4
@@ -7042,10 +7042,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE68-.LASFDE68
 .LASFDE68:
 	.4byte	.Lframe0
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.byte	0x4
-	.4byte	.LCFI34-.LFB51
+	.4byte	.LCFI34-.LFB60
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -7054,10 +7054,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE70-.LASFDE70
 .LASFDE70:
 	.4byte	.Lframe0
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
 	.byte	0x4
-	.4byte	.LCFI35-.LFB52
+	.4byte	.LCFI35-.LFB61
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -7066,10 +7066,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE72-.LASFDE72
 .LASFDE72:
 	.4byte	.Lframe0
-	.4byte	.LFB53
-	.4byte	.LFE53-.LFB53
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
 	.byte	0x4
-	.4byte	.LCFI36-.LFB53
+	.4byte	.LCFI36-.LFB62
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -7078,10 +7078,10 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LEFDE74-.LASFDE74
 .LASFDE74:
 	.4byte	.Lframe0
-	.4byte	.LFB54
-	.4byte	.LFE54-.LFB54
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
 	.byte	0x4
-	.4byte	.LCFI37-.LFB54
+	.4byte	.LCFI37-.LFB63
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -8190,8 +8190,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.byte	0x4
 	.4byte	0x9f
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
+	.4byte	.LFB26
+	.4byte	.LFE26-.LFB26
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x969
@@ -8234,8 +8234,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.byte	0x22
 	.4byte	0x9f
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x9c3
@@ -8277,8 +8277,8 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LASF259
 	.byte	0x1
 	.2byte	0x267
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xa92
@@ -8369,8 +8369,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x1fb
 	.4byte	0x9f
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xb64
@@ -8469,8 +8469,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x2a2
 	.4byte	0x9f
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xc7b
@@ -8621,8 +8621,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x66b
 	.4byte	0x9f
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xd6a
@@ -8740,8 +8740,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x803
 	.4byte	0x9f
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xea7
@@ -8886,8 +8886,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0
 	.uleb128 0x35
 	.4byte	0x7cb
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xf27
@@ -8939,8 +8939,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0
 	.uleb128 0x35
 	.4byte	0x824
-	.4byte	.LFB56
-	.4byte	.LFE56-.LFB56
+	.4byte	.LFB65
+	.4byte	.LFE65-.LFB65
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0xf69
@@ -8966,8 +8966,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0
 	.uleb128 0x35
 	.4byte	0x86d
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x106e
@@ -9089,8 +9089,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.byte	0x55
 	.4byte	0x9f
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
+	.4byte	.LFB28
+	.4byte	.LFE28-.LFB28
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1160
@@ -9240,8 +9240,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.byte	0x7f
 	.4byte	0x9f
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
+	.4byte	.LFB29
+	.4byte	.LFE29-.LFB29
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1311
@@ -9468,8 +9468,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.byte	0xe6
 	.4byte	0x9f
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x13f4
@@ -9590,8 +9590,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x111
 	.4byte	0x9f
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x14ab
@@ -9695,8 +9695,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x161
 	.4byte	0x9f
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1636
@@ -9926,8 +9926,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x1ec
 	.4byte	0x9f
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1704
@@ -10054,8 +10054,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x1c7
 	.4byte	0x9f
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x17bb
@@ -10155,8 +10155,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x216
 	.4byte	0x9f
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1891
@@ -10279,8 +10279,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x23e
 	.4byte	0x9f
-	.4byte	.LFB29
-	.4byte	.LFE29-.LFB29
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1967
@@ -10403,8 +10403,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x2d2
 	.4byte	0x9f
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB41
+	.4byte	.LFE41-.LFB41
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1a2a
@@ -10508,8 +10508,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x2fc
 	.4byte	0x9f
-	.4byte	.LFB33
-	.4byte	.LFE33-.LFB33
+	.4byte	.LFB42
+	.4byte	.LFE42-.LFB42
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1bb0
@@ -10747,8 +10747,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x379
 	.4byte	0x9f
-	.4byte	.LFB35
-	.4byte	.LFE35-.LFB35
+	.4byte	.LFB44
+	.4byte	.LFE44-.LFB44
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1c6d
@@ -10856,8 +10856,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x338
 	.4byte	0x9f
-	.4byte	.LFB34
-	.4byte	.LFE34-.LFB34
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1e1a
@@ -11101,8 +11101,8 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LASF241
 	.byte	0x1
 	.2byte	0x41b
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x1f43
@@ -11246,8 +11246,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x399
 	.4byte	0x9f
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
+	.4byte	.LFB45
+	.4byte	.LFE45-.LFB45
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2108
@@ -11520,8 +11520,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x3dd
 	.4byte	0x9f
-	.4byte	.LFB37
-	.4byte	.LFE37-.LFB37
+	.4byte	.LFB46
+	.4byte	.LFE46-.LFB46
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x229e
@@ -11766,8 +11766,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x480
 	.4byte	0x9f
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
+	.4byte	.LFB49
+	.4byte	.LFE49-.LFB49
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x23a3
@@ -11902,8 +11902,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x46d
 	.4byte	0x9f
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2477
@@ -12028,8 +12028,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x4a9
 	.4byte	0x9f
-	.4byte	.LFB41
-	.4byte	.LFE41-.LFB41
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2940
@@ -12804,8 +12804,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x5a1
 	.4byte	0x9f
-	.4byte	.LFB42
-	.4byte	.LFE42-.LFB42
+	.4byte	.LFB51
+	.4byte	.LFE51-.LFB51
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2dce
@@ -13535,8 +13535,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x68a
 	.4byte	0x9f
-	.4byte	.LFB44
-	.4byte	.LFE44-.LFB44
+	.4byte	.LFB53
+	.4byte	.LFE53-.LFB53
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x2e80
@@ -13641,8 +13641,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x6af
 	.4byte	0x9f
-	.4byte	.LFB45
-	.4byte	.LFE45-.LFB45
+	.4byte	.LFB54
+	.4byte	.LFE54-.LFB54
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x3301
@@ -14381,8 +14381,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x79e
 	.4byte	0x9f
-	.4byte	.LFB46
-	.4byte	.LFE46-.LFB46
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x348b
@@ -14585,8 +14585,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x847
 	.4byte	0x9f
-	.4byte	.LFB49
-	.4byte	.LFE49-.LFB49
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x365d
@@ -14848,8 +14848,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x8b5
 	.4byte	0x9f
-	.4byte	.LFB51
-	.4byte	.LFE51-.LFB51
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x3764
@@ -14959,8 +14959,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x903
 	.4byte	0x9f
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x37c1
@@ -14994,8 +14994,8 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1
 	.2byte	0x913
 	.4byte	0x9f
-	.4byte	.LFB53
-	.4byte	.LFE53-.LFB53
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x3816
@@ -15029,8 +15029,8 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LASF242
 	.byte	0x1
 	.2byte	0x921
-	.4byte	.LFB54
-	.4byte	.LFE54-.LFB54
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x38e6
@@ -16193,7 +16193,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL2
-	.4byte	.LFE17
+	.4byte	.LFE26
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16207,7 +16207,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL5
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16221,7 +16221,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL16
-	.4byte	.LFE30
+	.4byte	.LFE39
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16301,7 +16301,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL28-1
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16315,7 +16315,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL29
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16329,7 +16329,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL24
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16343,7 +16343,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL25
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16361,7 +16361,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL32
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -16372,7 +16372,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL30
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16386,7 +16386,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x59
 	.4byte	.LVL28-1
-	.4byte	.LFE27
+	.4byte	.LFE36
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -16397,7 +16397,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL48
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16411,7 +16411,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL35
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16425,7 +16425,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL37
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16439,7 +16439,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL39
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16453,7 +16453,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL36
-	.4byte	.LFE31
+	.4byte	.LFE40
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16665,7 +16665,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL59-1
-	.4byte	.LFE43
+	.4byte	.LFE52
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16685,7 +16685,7 @@ spiffs_fd_temporal_cache_rehash:
 	.sleb128 32768
 	.byte	0x9f
 	.4byte	.LVL55
-	.4byte	.LFE43
+	.4byte	.LFE52
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16699,7 +16699,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL51
-	.4byte	.LFE43
+	.4byte	.LFE52
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16713,7 +16713,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL53
-	.4byte	.LFE43
+	.4byte	.LFE52
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16843,7 +16843,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL74
-	.4byte	.LFE47
+	.4byte	.LFE56
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16883,7 +16883,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL64
-	.4byte	.LFE47
+	.4byte	.LFE56
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16897,7 +16897,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL66
-	.4byte	.LFE47
+	.4byte	.LFE56
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16911,7 +16911,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL63
-	.4byte	.LFE47
+	.4byte	.LFE56
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -16992,7 +16992,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL81
-	.4byte	.LFE23
+	.4byte	.LFE32
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -17053,7 +17053,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL84
-	.4byte	.LFE56
+	.4byte	.LFE65
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -17067,7 +17067,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL86
-	.4byte	.LFE56
+	.4byte	.LFE65
 	.2byte	0x1
 	.byte	0x58
 	.4byte	0
@@ -17089,7 +17089,7 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x72
 	.sleb128 -1
 	.4byte	.LVL90
-	.4byte	.LFE56
+	.4byte	.LFE65
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -17100,7 +17100,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL101
-	.4byte	.LFE48
+	.4byte	.LFE57
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -17114,7 +17114,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL97
-	.4byte	.LFE48
+	.4byte	.LFE57
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -17128,7 +17128,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL94
-	.4byte	.LFE48
+	.4byte	.LFE57
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -17323,7 +17323,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL106
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x1
 	.byte	0x57
 	.4byte	0
@@ -17334,7 +17334,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL113
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -17345,7 +17345,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL112
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -17356,7 +17356,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL111
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -17371,7 +17371,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL114
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -17386,7 +17386,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL115
-	.4byte	.LFE19
+	.4byte	.LFE28
 	.2byte	0x17
 	.byte	0x76
 	.sleb128 0
@@ -17439,7 +17439,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL164
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -17453,7 +17453,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL123
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -17489,7 +17489,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL131
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -17503,7 +17503,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL118
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -68
@@ -17515,7 +17515,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL120
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -56
@@ -17527,7 +17527,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL119
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -60
@@ -17598,7 +17598,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL164
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -17618,7 +17618,7 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x91
 	.sleb128 -72
 	.4byte	.LVL147
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -72
@@ -17671,7 +17671,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL161
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -17786,7 +17786,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL161
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -17797,7 +17797,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x5b
 	.4byte	.LVL134
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -52
@@ -17863,7 +17863,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL134
-	.4byte	.LFE20
+	.4byte	.LFE29
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -80
@@ -17899,7 +17899,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL177
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -17913,7 +17913,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL175
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -17931,7 +17931,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL176
-	.4byte	.LFE21
+	.4byte	.LFE30
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -17956,7 +17956,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL186
-	.4byte	.LFE22
+	.4byte	.LFE31
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18023,7 +18023,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL211
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18045,7 +18045,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL209
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -18086,7 +18086,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL208
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -18115,7 +18115,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL214
-	.4byte	.LFE26
+	.4byte	.LFE35
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18145,7 +18145,7 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x13
 	.byte	0x9f
 	.4byte	.LVL216
-	.4byte	.LFE26
+	.4byte	.LFE35
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -18164,7 +18164,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL221
-	.4byte	.LFE25
+	.4byte	.LFE34
 	.2byte	0x1
 	.byte	0x57
 	.4byte	0
@@ -18175,7 +18175,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL225
-	.4byte	.LFE25
+	.4byte	.LFE34
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18197,7 +18197,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL226
-	.4byte	.LFE25
+	.4byte	.LFE34
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -18208,7 +18208,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL231
-	.4byte	.LFE28
+	.4byte	.LFE37
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18227,7 +18227,7 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x79
 	.sleb128 0
 	.4byte	.LVL229-1
-	.4byte	.LFE28
+	.4byte	.LFE37
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -44
@@ -18246,7 +18246,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL236
-	.4byte	.LFE29
+	.4byte	.LFE38
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18265,7 +18265,7 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x79
 	.sleb128 0
 	.4byte	.LVL234-1
-	.4byte	.LFE29
+	.4byte	.LFE38
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -44
@@ -18288,7 +18288,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL247-1
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18307,7 +18307,7 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x73
 	.sleb128 0
 	.4byte	.LVL247-1
-	.4byte	.LFE32
+	.4byte	.LFE41
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18554,7 +18554,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL268
-	.4byte	.LFE33
+	.4byte	.LFE42
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18578,7 +18578,7 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x7f
 	.sleb128 0
 	.4byte	.LVL255-1
-	.4byte	.LFE33
+	.4byte	.LFE42
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -48
@@ -18590,7 +18590,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL267
-	.4byte	.LFE33
+	.4byte	.LFE42
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18604,7 +18604,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL263
-	.4byte	.LFE33
+	.4byte	.LFE42
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18618,7 +18618,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL264
-	.4byte	.LFE33
+	.4byte	.LFE42
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18632,7 +18632,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL260
-	.4byte	.LFE33
+	.4byte	.LFE42
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18686,7 +18686,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL275
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18700,7 +18700,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL272
-	.4byte	.LFE35
+	.4byte	.LFE44
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18721,7 +18721,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL305
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18746,7 +18746,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL301
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18770,7 +18770,7 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x7f
 	.sleb128 0
 	.4byte	.LVL286-1
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -48
@@ -18808,7 +18808,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL304
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18822,7 +18822,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL278
-	.4byte	.LFE34
+	.4byte	.LFE43
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18954,7 +18954,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL318
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18968,7 +18968,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL319
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -18991,7 +18991,7 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x1a
 	.byte	0x9f
 	.4byte	.LVL319
-	.4byte	.LFE38
+	.4byte	.LFE47
 	.2byte	0x8
 	.byte	0xf3
 	.uleb128 0x1
@@ -19058,7 +19058,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL340
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -19072,7 +19072,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL325
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -48
@@ -19084,7 +19084,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL336
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -19098,7 +19098,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL335
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -19112,7 +19112,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL330
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -19143,7 +19143,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL341
-	.4byte	.LFE36
+	.4byte	.LFE45
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -19154,7 +19154,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL356
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -19175,7 +19175,7 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x54
 	.byte	0x9f
 	.4byte	.LVL345
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -48
@@ -19187,7 +19187,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL352
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -19201,7 +19201,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x56
 	.4byte	.LVL353
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -19215,7 +19215,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x57
 	.4byte	.LVL350
-	.4byte	.LFE37
+	.4byte	.LFE46
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -19267,7 +19267,7 @@ spiffs_fd_temporal_cache_rehash:
 	.uleb128 0x1
 	.byte	0x54
 	.4byte	.LVL371
-	.4byte	.LFE40
+	.4byte	.LFE49
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -19281,7 +19281,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL369
-	.4byte	.LFE40
+	.4byte	.LFE49
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -19295,7 +19295,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL370
-	.4byte	.LFE40
+	.4byte	.LFE49
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -19314,7 +19314,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	.LVL367
-	.4byte	.LFE40
+	.4byte	.LFE49
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
@@ -19444,7 +19444,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL377
-	.4byte	.LFE39
+	.4byte	.LFE48
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -19470,7 +19470,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL380
-	.4byte	.LFE41
+	.4byte	.LFE50
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -19485,7 +19485,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL383
-	.4byte	.LFE41
+	.4byte	.LFE50
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -60
@@ -19497,7 +19497,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL384
-	.4byte	.LFE41
+	.4byte	.LFE50
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -44
@@ -19509,7 +19509,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL385
-	.4byte	.LFE41
+	.4byte	.LFE50
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -48
@@ -19762,7 +19762,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL460
-	.4byte	.LFE42
+	.4byte	.LFE51
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -19773,7 +19773,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL462
-	.4byte	.LFE42
+	.4byte	.LFE51
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -48
@@ -19785,7 +19785,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL457
-	.4byte	.LFE42
+	.4byte	.LFE51
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -40
@@ -19797,7 +19797,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x55
 	.4byte	.LVL461
-	.4byte	.LFE42
+	.4byte	.LFE51
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -44
@@ -20088,7 +20088,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL535
-	.4byte	.LFE44
+	.4byte	.LFE53
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -20109,7 +20109,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL539
-	.4byte	.LFE45
+	.4byte	.LFE54
 	.2byte	0x1
 	.byte	0x55
 	.4byte	0
@@ -20120,7 +20120,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL540
-	.4byte	.LFE45
+	.4byte	.LFE54
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -56
@@ -20141,7 +20141,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL546
-	.4byte	.LFE45
+	.4byte	.LFE54
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -60
@@ -20553,7 +20553,7 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x52
 	.byte	0x9f
 	.4byte	.LVL679
-	.4byte	.LFE46
+	.4byte	.LFE55
 	.2byte	0x1
 	.byte	0x52
 	.4byte	0
@@ -20564,7 +20564,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL640
-	.4byte	.LFE46
+	.4byte	.LFE55
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -20578,7 +20578,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL637
-	.4byte	.LFE46
+	.4byte	.LFE55
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -20601,7 +20601,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL664
-	.4byte	.LFE46
+	.4byte	.LFE55
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -64
@@ -20667,7 +20667,7 @@ spiffs_fd_temporal_cache_rehash:
 	.sleb128 -1
 	.byte	0x9f
 	.4byte	.LVL664
-	.4byte	.LFE46
+	.4byte	.LFE55
 	.2byte	0x1
 	.byte	0x56
 	.4byte	0
@@ -20678,7 +20678,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL663
-	.4byte	.LFE46
+	.4byte	.LFE55
 	.2byte	0x1
 	.byte	0x53
 	.4byte	0
@@ -20698,7 +20698,7 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL680
-	.4byte	.LFE46
+	.4byte	.LFE55
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
@@ -20740,7 +20740,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x59
 	.4byte	.LVL679
-	.4byte	.LFE46
+	.4byte	.LFE55
 	.2byte	0x1
 	.byte	0x59
 	.4byte	0
@@ -20773,7 +20773,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL721
-	.4byte	.LFE49
+	.4byte	.LFE58
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -20798,7 +20798,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL721
-	.4byte	.LFE49
+	.4byte	.LFE58
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -21122,7 +21122,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL751
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -21147,7 +21147,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x54
 	.4byte	.LVL751
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -21179,7 +21179,7 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0xff
 	.byte	0x9f
 	.4byte	.LVL730
-	.4byte	.LFE51
+	.4byte	.LFE60
 	.2byte	0x1
 	.byte	0x5f
 	.4byte	0
@@ -21308,7 +21308,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x58
 	.4byte	.LVL757
-	.4byte	.LFE52
+	.4byte	.LFE61
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -21322,7 +21322,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL755
-	.4byte	.LFE52
+	.4byte	.LFE61
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -21363,7 +21363,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL764
-	.4byte	.LFE53
+	.4byte	.LFE62
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -21377,7 +21377,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL763
-	.4byte	.LFE53
+	.4byte	.LFE62
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -21403,7 +21403,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL770
-	.4byte	.LFE54
+	.4byte	.LFE63
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -21417,7 +21417,7 @@ spiffs_fd_temporal_cache_rehash:
 	.2byte	0x1
 	.byte	0x53
 	.4byte	.LVL768
-	.4byte	.LFE54
+	.4byte	.LFE63
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -21432,7 +21432,7 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0x30
 	.byte	0x9f
 	.4byte	.LVL770
-	.4byte	.LFE54
+	.4byte	.LFE63
 	.2byte	0x1
 	.byte	0x59
 	.4byte	0
@@ -21462,82 +21462,82 @@ spiffs_fd_temporal_cache_rehash:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB17
-	.4byte	.LFE17-.LFB17
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
-	.4byte	.LFB30
-	.4byte	.LFE30-.LFB30
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
-	.4byte	.LFB31
-	.4byte	.LFE31-.LFB31
-	.4byte	.LFB43
-	.4byte	.LFE43-.LFB43
-	.4byte	.LFB47
-	.4byte	.LFE47-.LFB47
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB56
-	.4byte	.LFE56-.LFB56
-	.4byte	.LFB48
-	.4byte	.LFE48-.LFB48
-	.4byte	.LFB19
-	.4byte	.LFE19-.LFB19
-	.4byte	.LFB20
-	.4byte	.LFE20-.LFB20
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB22
-	.4byte	.LFE22-.LFB22
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
 	.4byte	.LFB26
 	.4byte	.LFE26-.LFB26
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
+	.4byte	.LFB39
+	.4byte	.LFE39-.LFB39
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
+	.4byte	.LFB40
+	.4byte	.LFE40-.LFB40
+	.4byte	.LFB52
+	.4byte	.LFE52-.LFB52
+	.4byte	.LFB56
+	.4byte	.LFE56-.LFB56
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
+	.4byte	.LFB65
+	.4byte	.LFE65-.LFB65
+	.4byte	.LFB57
+	.4byte	.LFE57-.LFB57
 	.4byte	.LFB28
 	.4byte	.LFE28-.LFB28
 	.4byte	.LFB29
 	.4byte	.LFE29-.LFB29
-	.4byte	.LFB32
-	.4byte	.LFE32-.LFB32
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB31
+	.4byte	.LFE31-.LFB31
 	.4byte	.LFB33
 	.4byte	.LFE33-.LFB33
 	.4byte	.LFB35
 	.4byte	.LFE35-.LFB35
 	.4byte	.LFB34
 	.4byte	.LFE34-.LFB34
-	.4byte	.LFB38
-	.4byte	.LFE38-.LFB38
-	.4byte	.LFB36
-	.4byte	.LFE36-.LFB36
 	.4byte	.LFB37
 	.4byte	.LFE37-.LFB37
-	.4byte	.LFB40
-	.4byte	.LFE40-.LFB40
-	.4byte	.LFB39
-	.4byte	.LFE39-.LFB39
+	.4byte	.LFB38
+	.4byte	.LFE38-.LFB38
 	.4byte	.LFB41
 	.4byte	.LFE41-.LFB41
 	.4byte	.LFB42
 	.4byte	.LFE42-.LFB42
 	.4byte	.LFB44
 	.4byte	.LFE44-.LFB44
+	.4byte	.LFB43
+	.4byte	.LFE43-.LFB43
+	.4byte	.LFB47
+	.4byte	.LFE47-.LFB47
 	.4byte	.LFB45
 	.4byte	.LFE45-.LFB45
 	.4byte	.LFB46
 	.4byte	.LFE46-.LFB46
 	.4byte	.LFB49
 	.4byte	.LFE49-.LFB49
+	.4byte	.LFB48
+	.4byte	.LFE48-.LFB48
+	.4byte	.LFB50
+	.4byte	.LFE50-.LFB50
 	.4byte	.LFB51
 	.4byte	.LFE51-.LFB51
-	.4byte	.LFB52
-	.4byte	.LFE52-.LFB52
 	.4byte	.LFB53
 	.4byte	.LFE53-.LFB53
 	.4byte	.LFB54
 	.4byte	.LFE54-.LFB54
+	.4byte	.LFB55
+	.4byte	.LFE55-.LFB55
+	.4byte	.LFB58
+	.4byte	.LFE58-.LFB58
+	.4byte	.LFB60
+	.4byte	.LFE60-.LFB60
+	.4byte	.LFB61
+	.4byte	.LFE61-.LFB61
+	.4byte	.LFB62
+	.4byte	.LFE62-.LFB62
+	.4byte	.LFB63
+	.4byte	.LFE63-.LFB63
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -21620,82 +21620,82 @@ spiffs_fd_temporal_cache_rehash:
 	.4byte	.LBE53
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB17
-	.4byte	.LFE17
-	.4byte	.LFB18
-	.4byte	.LFE18
-	.4byte	.LFB30
-	.4byte	.LFE30
-	.4byte	.LFB27
-	.4byte	.LFE27
-	.4byte	.LFB31
-	.4byte	.LFE31
-	.4byte	.LFB43
-	.4byte	.LFE43
-	.4byte	.LFB47
-	.4byte	.LFE47
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB56
-	.4byte	.LFE56
-	.4byte	.LFB48
-	.4byte	.LFE48
-	.4byte	.LFB19
-	.4byte	.LFE19
-	.4byte	.LFB20
-	.4byte	.LFE20
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB22
-	.4byte	.LFE22
-	.4byte	.LFB24
-	.4byte	.LFE24
 	.4byte	.LFB26
 	.4byte	.LFE26
-	.4byte	.LFB25
-	.4byte	.LFE25
+	.4byte	.LFB27
+	.4byte	.LFE27
+	.4byte	.LFB39
+	.4byte	.LFE39
+	.4byte	.LFB36
+	.4byte	.LFE36
+	.4byte	.LFB40
+	.4byte	.LFE40
+	.4byte	.LFB52
+	.4byte	.LFE52
+	.4byte	.LFB56
+	.4byte	.LFE56
+	.4byte	.LFB32
+	.4byte	.LFE32
+	.4byte	.LFB65
+	.4byte	.LFE65
+	.4byte	.LFB57
+	.4byte	.LFE57
 	.4byte	.LFB28
 	.4byte	.LFE28
 	.4byte	.LFB29
 	.4byte	.LFE29
-	.4byte	.LFB32
-	.4byte	.LFE32
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB31
+	.4byte	.LFE31
 	.4byte	.LFB33
 	.4byte	.LFE33
 	.4byte	.LFB35
 	.4byte	.LFE35
 	.4byte	.LFB34
 	.4byte	.LFE34
-	.4byte	.LFB38
-	.4byte	.LFE38
-	.4byte	.LFB36
-	.4byte	.LFE36
 	.4byte	.LFB37
 	.4byte	.LFE37
-	.4byte	.LFB40
-	.4byte	.LFE40
-	.4byte	.LFB39
-	.4byte	.LFE39
+	.4byte	.LFB38
+	.4byte	.LFE38
 	.4byte	.LFB41
 	.4byte	.LFE41
 	.4byte	.LFB42
 	.4byte	.LFE42
 	.4byte	.LFB44
 	.4byte	.LFE44
+	.4byte	.LFB43
+	.4byte	.LFE43
+	.4byte	.LFB47
+	.4byte	.LFE47
 	.4byte	.LFB45
 	.4byte	.LFE45
 	.4byte	.LFB46
 	.4byte	.LFE46
 	.4byte	.LFB49
 	.4byte	.LFE49
+	.4byte	.LFB48
+	.4byte	.LFE48
+	.4byte	.LFB50
+	.4byte	.LFE50
 	.4byte	.LFB51
 	.4byte	.LFE51
-	.4byte	.LFB52
-	.4byte	.LFE52
 	.4byte	.LFB53
 	.4byte	.LFE53
 	.4byte	.LFB54
 	.4byte	.LFE54
+	.4byte	.LFB55
+	.4byte	.LFE55
+	.4byte	.LFB58
+	.4byte	.LFE58
+	.4byte	.LFB60
+	.4byte	.LFE60
+	.4byte	.LFB61
+	.4byte	.LFE61
+	.4byte	.LFB62
+	.4byte	.LFE62
+	.4byte	.LFB63
+	.4byte	.LFE63
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

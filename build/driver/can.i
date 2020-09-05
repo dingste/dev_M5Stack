@@ -1564,6 +1564,77 @@ typedef void (*TaskFunction_t)( void * );
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/deprecated_definitions.h" 1
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 2
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void *get_sp()
+{
+    void *sp;
+    asm volatile ("mov %0, sp;" : "=r" (sp));
+    return sp;
+}
+
+
+
+
+
+static inline void cpu_write_dtlb(uint32_t vpn, unsigned attr)
+{
+    asm volatile ("wdtlb  %1, %0; dsync\n" :: "r" (vpn), "r" (attr));
+}
+
+
+static inline void cpu_write_itlb(unsigned vpn, unsigned attr)
+{
+    asm volatile ("witlb  %1, %0; isync\n" :: "r" (vpn), "r" (attr));
+}
+
+static inline void cpu_init_memctl()
+{
+
+    uint32_t memctl = 0x00000000;
+    asm volatile ("wsr %0, " "MEMCTL" : : "r" (memctl));;
+
+}
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void cpu_configure_region_protection()
+{
+    const uint32_t pages_to_protect[] = {0x00000000, 0x80000000, 0xa0000000, 0xc0000000, 0xe0000000};
+    for (int i = 0; i < sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
+        cpu_write_dtlb(pages_to_protect[i], 0xf);
+        cpu_write_itlb(pages_to_protect[i], 0xf);
+    }
+    cpu_write_dtlb(0x20000000, 0);
+    cpu_write_itlb(0x20000000, 0);
+}
+
+
+
+
+
+void esp_cpu_stall(int cpu_id);
+
+
+
+
+
+void esp_cpu_unstall(int cpu_id);
+
+
+
+
+
+void esp_cpu_reset(int cpu_id);
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 3 4
+_Bool 
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+    esp_cpu_in_ocd_debug_mode();
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+
 
 
 
@@ -2318,7 +2389,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 1
@@ -2535,6 +2606,9 @@ void heap_caps_dump_all();
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
 # 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
 typedef struct {
@@ -2590,7 +2664,7 @@ inline static
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_dma_capable(const void *p)
+                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
 {
     return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
 }
@@ -2599,24 +2673,37 @@ inline static
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_executable(const void *p)
+                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
+{
+    return ((intptr_t)p) % 4 == 0;
+}
+
+inline static 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
 {
     intptr_t ip = (intptr_t) p;
     return (ip >= 0x400D0000 && ip < 0x40400000)
         || (ip >= 0x40080000 && ip < 0x400A0000)
+        || (ip >= 0x40000000 && ip < 0x40070000)
+
+        || (ip >= 0x40078000 && ip < 0x40080000)
+
         || (ip >= 0x400C0000 && ip < 0x400C2000);
 }
 
 inline static 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_byte_accessible(const void *p)
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
 {
     
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x40000000);
 
@@ -2626,14 +2713,14 @@ inline static
 }
 
 inline static 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_internal(const void *p) {
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
     
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
     r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
@@ -2642,18 +2729,18 @@ inline static
 
 
 inline static 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_external_ram(const void *p) {
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
     return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
 }
 
 inline static 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_iram(const void *p) {
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
 
 
 
@@ -2662,19 +2749,35 @@ inline static
 }
 
 inline static 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_drom(const void *p) {
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
     return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
 }
 
 inline static 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_dram(const void *p) {
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
     return ((intptr_t)p >= 0x3FAE0000 && (intptr_t)p < 0x40000000);
+}
+
+inline static 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
+    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x3FFFFFFC);
+}
+
+inline static 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
+    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400BFFFC);
 }
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
@@ -2723,24 +2826,24 @@ typedef struct {
 void vPortAssertIfInISR();
 # 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortCPUInitializeMutex(portMUX_TYPE *mux);
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vTaskExitCritical( portMUX_TYPE *mux );
 void vTaskEnterCritical( portMUX_TYPE *mux );
 void vPortCPUAcquireMutex(portMUX_TYPE *mux);
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
 _Bool 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
     vPortCPUAcquireMutexTimeout(portMUX_TYPE *mux, int timeout_cycles);
 void vPortCPUReleaseMutex(portMUX_TYPE *mux);
-# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline unsigned portENTER_CRITICAL_NESTED() {
  unsigned state = ({ unsigned __tmp; __asm__ __volatile__( "rsil	%0, " "3" "\n" : "=a" (__tmp) : : "memory" ); __tmp;});
  ;
  return state;
 }
-# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, uint32_t *set) {
     __asm__ __volatile__ (
         "WSR 	    %2,SCOMPARE1 \n"
@@ -2749,20 +2852,20 @@ static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, u
         :"r"(addr), "r"(compare), "0"(*set)
         );
 }
-# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortYield( void );
 void _frxt_setup_switch( void );
 
 
 
 static inline uint32_t xPortGetCoreID();
-# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef struct {
 
  volatile StackType_t* coproc_area;
-# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 } xMPU_SETTINGS;
-# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 extern void esp_vApplicationIdleHook( void );
 extern void esp_vApplicationTickHook( void );
 
@@ -2773,10 +2876,10 @@ extern void esp_vApplicationTickHook( void );
 
 void _xt_coproc_release(volatile void * coproc_sa_base);
 void vApplicationSleep( TickType_t xExpectedIdleTime );
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/mpu_wrappers.h" 1
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h" 1
@@ -2798,7 +2901,7 @@ void vApplicationSleep( TickType_t xExpectedIdleTime );
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
 typedef volatile struct {
     uint32_t bt_select;
     uint32_t out;
@@ -3135,7 +3238,7 @@ void esp_intr_noniram_disable();
 void esp_intr_noniram_enable();
 # 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
 extern const uint32_t GPIO_PIN_MUX_REG[40];
 # 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
@@ -3610,25 +3713,25 @@ typedef enum {
 typedef esp_sleep_source_t esp_sleep_wakeup_cause_t;
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_disable_wakeup_source(esp_sleep_source_t source);
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ulp_wakeup();
-# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_timer_wakeup(uint64_t time_in_us);
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_touchpad_wakeup();
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 touch_pad_t esp_sleep_get_touchpad_wakeup_status();
-# 161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext0_wakeup(gpio_num_t gpio_num, int level);
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext1_wakeup(uint64_t mask, esp_sleep_ext1_wakeup_mode_t mode);
-# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_gpio_wakeup();
-# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_uart_wakeup(int uart_num);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 uint64_t esp_sleep_get_ext1_wakeup_status();
-# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
                                    esp_sleep_pd_option_t option);
 
@@ -3638,11 +3741,11 @@ esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
 
 
 void esp_deep_sleep_start() __attribute__((noreturn));
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_light_sleep_start();
-# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_deep_sleep(uint64_t time_in_us) __attribute__((noreturn));
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated));
 
 
@@ -3652,7 +3755,7 @@ void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated)
 
 
 esp_sleep_wakeup_cause_t esp_sleep_get_wakeup_cause();
-# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_wake_deep_sleep(void);
 
 
@@ -3660,7 +3763,7 @@ void esp_wake_deep_sleep(void);
 
 
 typedef void (*esp_deep_sleep_wake_stub_fn_t)(void);
-# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_set_deep_sleep_wake_stub(esp_deep_sleep_wake_stub_fn_t new_stub);
 
 
@@ -3684,6 +3787,12 @@ void esp_default_wake_deep_sleep(void);
 
 void esp_deep_sleep_disable_rom_logging(void);
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+       
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+const char* esp_get_idf_version(void);
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
 
 
 
@@ -3695,7 +3804,7 @@ typedef enum {
     ESP_MAC_BT,
     ESP_MAC_ETH,
 } esp_mac_type_t;
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef enum {
     ESP_RST_UNKNOWN,
     ESP_RST_POWERON,
@@ -3738,9 +3847,9 @@ typedef void (*shutdown_handler_t)(void);
 
 
 esp_err_t esp_register_shutdown_handler(shutdown_handler_t handle);
-# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_restart(void) __attribute__ ((noreturn));
-# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
@@ -3749,11 +3858,11 @@ void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
 esp_reset_reason_t esp_reset_reason(void);
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_time(void) __attribute__ ((deprecated));
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_get_free_heap_size(void);
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
@@ -3763,36 +3872,28 @@ uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
 uint32_t esp_get_minimum_free_heap_size( void );
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_random(void);
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_fill_random(void *buf, size_t len);
-# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_set(uint8_t *mac);
-# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_get(uint8_t *mac);
-# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_custom(uint8_t *mac);
-# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_default(uint8_t *mac);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t system_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_read_mac(uint8_t* mac, esp_mac_type_t type);
-# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_derive_local_mac(uint8_t* local_mac, const uint8_t* universal_mac);
-# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 const char* system_get_sdk_version(void) __attribute__ ((deprecated));
-
-
-
-
-
-
-
-const char* esp_get_idf_version(void);
 
 
 
@@ -3801,7 +3902,7 @@ const char* esp_get_idf_version(void);
 typedef enum {
     CHIP_ESP32 = 1,
 } esp_chip_model_t;
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef struct {
     esp_chip_model_t model;
     uint32_t features;
@@ -3814,10 +3915,10 @@ typedef struct {
 
 
 void esp_chip_info(esp_chip_info_t* out_info);
-# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters, BaseType_t xRunPrivileged ) ;
-# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 BaseType_t xPortStartScheduler( void ) ;
 
 
@@ -3853,14 +3954,14 @@ BaseType_t xPortInIsrContext();
 
 
 BaseType_t xPortInterruptedFromISRContext();
-# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  struct xMEMORY_REGION;
  void vPortStoreTaskMPUSettings( xMPU_SETTINGS *xMPUSettings, const struct xMEMORY_REGION * const xRegions, StackType_t *pxBottomOfStack, uint32_t usStackDepth ) ;
  void vPortReleaseTaskMPUSettings( xMPU_SETTINGS *xMPUSettings );
 
 
 
-static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
+static inline uint32_t __attribute__((section(".iram1" "." "11"))) xPortGetCoreID() {
     int id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -3871,6 +3972,21 @@ static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
 
 
 uint32_t xPortGetTickRateHz(void);
+
+
+static inline 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 3 4
+             _Bool 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+                  __attribute__((section(".iram1" "." "12"))) xPortCanYield(void)
+{
+    uint32_t ps_reg = 0;
+
+
+    asm volatile ("rsr %0, " "PS" : "=r" (ps_reg));;
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+    return ((ps_reg & 0x0000000F) == 0);
+}
 
 
 
@@ -4182,7 +4298,7 @@ typedef enum
           TaskHandle_t * const pvCreatedTask,
           const BaseType_t xCoreID);
 # 432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
- static inline __attribute__((section(".iram1"))) BaseType_t xTaskCreate(
+ static inline __attribute__((section(".iram1" "." "13"))) BaseType_t xTaskCreate(
    TaskFunction_t pvTaskCode,
    const char * const pcName,
    const uint32_t usStackDepth,
@@ -4496,15 +4612,15 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h" 1
@@ -4915,7 +5031,7 @@ void esp_dport_access_int_abort(void);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/uart_reg.h" 1
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h" 2
 # 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "14"))) DPORT_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -4924,7 +5040,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_
 
 }
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "15"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -4933,7 +5049,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_REA
 
 }
 # 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_READ_PERI_REG(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "16"))) DPORT_READ_PERI_REG(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -4944,7 +5060,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_READ_PERI_REG(ui
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_reg.h" 2
 # 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/can_struct.h" 1
-# 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/can_struct.h"
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/can_struct.h"
 typedef union {
     struct {
         uint32_t byte: 8;
@@ -5012,7 +5128,7 @@ typedef union {
         uint32_t tx: 1;
         uint32_t err_warn: 1;
         uint32_t data_overrun: 1;
-        uint32_t reserved1: 1;
+        uint32_t brp_div: 1;
         uint32_t err_passive: 1;
         uint32_t arb_lost: 1;
         uint32_t bus_err: 1;
@@ -5175,10 +5291,10 @@ void periph_module_disable(periph_module_t periph);
 void periph_module_reset(periph_module_t periph);
 # 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 1
-# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h" 2
-# 116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
+# 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h" 2
+# 123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
 typedef enum {
     CAN_MODE_NORMAL,
     CAN_MODE_NO_ACK,
@@ -5218,14 +5334,15 @@ typedef struct {
 
 
 typedef struct {
-    uint8_t brp;
+    uint32_t brp;
+
     uint8_t tseg_1;
     uint8_t tseg_2;
     uint8_t sjw;
     
-# 159 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h" 3 4
+# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h" 3 4
    _Bool 
-# 159 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
+# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
         triple_sampling;
 } can_timing_config_t;
 
@@ -5238,9 +5355,9 @@ typedef struct {
     uint32_t acceptance_code;
     uint32_t acceptance_mask;
     
-# 170 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h" 3 4
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h" 3 4
    _Bool 
-# 170 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
         single_filter;
 } can_filter_config_t;
 
@@ -5271,28 +5388,32 @@ typedef struct {
     uint8_t data_length_code;
     uint8_t data[8];
 } can_message_t;
-# 224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
+# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
 esp_err_t can_driver_install(const can_general_config_t *g_config, const can_timing_config_t *t_config, const can_filter_config_t *f_config);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
+# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
 esp_err_t can_driver_uninstall();
-# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
+# 263 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
 esp_err_t can_start();
-# 274 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
+# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
 esp_err_t can_stop();
-# 305 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
+# 313 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
 esp_err_t can_transmit(const can_message_t *message, TickType_t ticks_to_wait);
-# 326 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
+# 334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
 esp_err_t can_receive(can_message_t *message, TickType_t ticks_to_wait);
-# 347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
+# 355 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
 esp_err_t can_read_alerts(uint32_t *alerts, TickType_t ticks_to_wait);
-# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
+# 371 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
 esp_err_t can_reconfigure_alerts(uint32_t alerts_enabled, uint32_t *current_alerts);
-# 381 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
+# 389 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
 esp_err_t can_initiate_recovery();
-# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
+# 401 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
 esp_err_t can_get_status_info(can_status_info_t *status_info);
+# 415 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
+esp_err_t can_clear_transmit_queue();
+# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/can.h"
+esp_err_t can_clear_receive_queue();
 # 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 2
-# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
 typedef union {
     struct {
         struct {
@@ -5342,11 +5463,13 @@ typedef struct {
 } can_obj_t;
 
 static can_obj_t *p_can_obj = 
-# 138 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                              ((void *)0)
-# 138 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                  ;
 static portMUX_TYPE can_spinlock = { .owner = 0xB33FFFFF, .count = 0, };
+
+
 
 
 
@@ -5403,9 +5526,9 @@ static inline void can_config_interrupts(uint32_t interrupts)
 }
 
 static inline void can_config_bus_timing(uint32_t brp, uint32_t sjw, uint32_t tseg_1, uint32_t tseg_2, 
-# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                                                                                       _Bool 
-# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                                                                                            triple_sampling)
 {
 
@@ -5445,9 +5568,9 @@ static inline void can_config_error(int err_warn_lim, int rx_err_cnt, int tx_err
 }
 
 static inline void can_config_acceptance_filter(uint32_t code, uint32_t mask, 
-# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                                                              _Bool 
-# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                                                                   single_filter)
 {
 
@@ -5530,16 +5653,16 @@ static inline uint32_t can_get_error_code_capture()
 static inline void can_get_error_counters(uint32_t *tx_error_cnt, uint32_t *rx_error_cnt)
 {
     if (tx_error_cnt != 
-# 314 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                        ((void *)0)
-# 314 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                            ) {
         *tx_error_cnt = CAN.tx_error_counter_reg.byte;
     }
     if (rx_error_cnt != 
-# 317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                        ((void *)0)
-# 317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                            ) {
         *rx_error_cnt = CAN.rx_error_counter_reg.byte;
     }
@@ -5602,7 +5725,8 @@ static void can_intr_handler_err_warn(can_status_reg_t *status, BaseType_t *task
             can_alert_handler(0x0080, alert_req);
         } else if (p_can_obj->control_flags & 0x002) {
 
-            can_enter_reset_mode();
+            esp_err_t err = can_enter_reset_mode();
+            ((err == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 396, __func__, "err == ESP_OK"));
 
             ((p_can_obj->control_flags) &= ~(0x002 | 0x004 | 0x008 | 0x010 | 0x020))
 
@@ -5664,6 +5788,8 @@ static void can_intr_handler_rx(BaseType_t *task_woken, int *alert_req)
             can_alert_handler(0x0400, alert_req);
         }
     }
+
+
 }
 
 static void can_intr_handler_tx(can_status_reg_t *status, int *alert_req)
@@ -5678,21 +5804,29 @@ static void can_intr_handler_tx(can_status_reg_t *status, int *alert_req)
 
 
     p_can_obj->tx_msg_count--;
-    if (!(p_can_obj->tx_msg_count >= 0)) { ets_printf("%s:%d (%s)- assert failed!\n", "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 455, __FUNCTION__); abort(); };
+    ((p_can_obj->tx_msg_count >= 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 474, __func__, "p_can_obj->tx_msg_count >= 0"));
 
 
     if (p_can_obj->tx_msg_count > 0 && p_can_obj->tx_queue != 
-# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                                              ((void *)0)
-# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                                                  ) {
         can_frame_t frame;
-        if (!(xQueueReceiveFromISR(p_can_obj->tx_queue, &frame, 
-# 460 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
-       ((void *)0)
-# 460 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
-       ) == ( ( BaseType_t ) 1 ))) { ets_printf("%s:%d (%s)- assert failed!\n", "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 460, __FUNCTION__); abort(); };
-        can_set_tx_buffer_and_transmit(&frame);
+        int res = xQueueReceiveFromISR(p_can_obj->tx_queue, &frame, 
+# 479 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+                                                                   ((void *)0)
+# 479 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+                                                                       );
+        if (res == ( ( BaseType_t ) 1 )) {
+            can_set_tx_buffer_and_transmit(&frame);
+        } else {
+            ((
+# 483 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+           0 
+# 483 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+           && "failed to get a frame from TX queue") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 483, __func__, "false && \"failed to get a frame from TX queue\""));
+        }
     } else {
 
         ((p_can_obj->control_flags) &= ~(0x020));
@@ -5710,9 +5844,9 @@ static void can_intr_handler_main(void *arg)
     vTaskEnterCritical(&can_spinlock);
     status.val = can_get_status();
     intr_reason.val = (p_can_obj != 
-# 478 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 501 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                    ((void *)0)
-# 478 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 501 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                        ) ? can_get_interrupt_reason() : 0;
 
 
@@ -5736,7 +5870,6 @@ static void can_intr_handler_main(void *arg)
     }
 
 
-
     if (intr_reason.rx) {
 
         can_intr_handler_rx(&task_woken, &alert_req);
@@ -5750,9 +5883,9 @@ static void can_intr_handler_main(void *arg)
     vTaskExitCritical(&can_spinlock);
 
     if (p_can_obj->alert_semphr != 
-# 514 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 536 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                   ((void *)0) 
-# 514 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 536 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                        && alert_req) {
 
         xQueueGiveFromISR( ( QueueHandle_t ) ( p_can_obj->alert_semphr ), ( &task_woken ) );
@@ -5832,22 +5965,22 @@ static void can_configure_gpio(gpio_num_t tx, gpio_num_t rx, gpio_num_t clkout, 
 
     gpio_set_pull_mode(tx, GPIO_FLOATING);
     gpio_matrix_out(tx, 123, 
-# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                    0
-# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                         , 
-# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                           0
-# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                                );
     gpio_pad_select_gpio(tx);
 
 
     gpio_set_pull_mode(rx, GPIO_FLOATING);
     gpio_matrix_in(rx, 94, 
-# 597 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                   0
-# 597 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                        );
     gpio_pad_select_gpio(rx);
     gpio_set_direction(rx, GPIO_MODE_INPUT);
@@ -5856,13 +5989,13 @@ static void can_configure_gpio(gpio_num_t tx, gpio_num_t rx, gpio_num_t clkout, 
     if (clkout >= 0 && clkout < GPIO_NUM_MAX) {
         gpio_set_pull_mode(clkout, GPIO_FLOATING);
         gpio_matrix_out(clkout, 125, 
-# 604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 626 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                                0
-# 604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 626 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                                     , 
-# 604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 626 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                                       0
-# 604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 626 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                                            );
         gpio_pad_select_gpio(clkout);
     }
@@ -5871,13 +6004,13 @@ static void can_configure_gpio(gpio_num_t tx, gpio_num_t rx, gpio_num_t clkout, 
     if (bus_status >= 0 && bus_status < GPIO_NUM_MAX) {
         gpio_set_pull_mode(bus_status, GPIO_FLOATING);
         gpio_matrix_out(bus_status, 124, 
-# 611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 633 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                                        0
-# 611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 633 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                                             , 
-# 611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 633 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                                               0
-# 611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 633 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                                                    );
         gpio_pad_select_gpio(bus_status);
     }
@@ -5889,23 +6022,29 @@ esp_err_t can_driver_install(const can_general_config_t *g_config, const can_tim
 {
 
     ({ if (!(g_config != 
-# 621 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
    ((void *)0)
-# 621 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
    )) { return (0x102); } });
     ({ if (!(t_config != 
-# 622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 644 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
    ((void *)0)
-# 622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 644 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
    )) { return (0x102); } });
     ({ if (!(f_config != 
-# 623 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 645 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
    ((void *)0)
-# 623 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 645 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
    )) { return (0x102); } });
     ({ if (!(g_config->rx_queue_len > 0)) { return (0x102); } });
     ({ if (!(g_config->tx_io >= 0 && g_config->tx_io < GPIO_NUM_MAX)) { return (0x102); } });
     ({ if (!(g_config->rx_io >= 0 && g_config->rx_io < GPIO_NUM_MAX)) { return (0x102); } });
+
+
+
+
+    ({ if (!(((t_config->brp) >= 2 && (t_config->brp) <= 128 && ((t_config->brp) & 0x1) == 0))) { return (0x102); } });
+
 
     esp_err_t ret;
     can_obj_t *p_can_obj_dummy;
@@ -5913,32 +6052,32 @@ esp_err_t can_driver_install(const can_general_config_t *g_config, const can_tim
 
     p_can_obj_dummy = calloc(1, sizeof(can_obj_t));
     ({ if (!(p_can_obj_dummy != 
-# 633 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 661 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
    ((void *)0)
-# 633 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 661 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
    )) { return (0x101); } });
 
 
     p_can_obj_dummy->tx_queue = (g_config->tx_queue_len > 0) ? xQueueGenericCreate( ( g_config->tx_queue_len ), ( sizeof(can_frame_t) ), ( ( ( uint8_t ) 0U ) ) ) : 
-# 636 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 664 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                                                                                                           ((void *)0)
-# 636 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 664 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                                                                                                               ;
     p_can_obj_dummy->rx_queue = xQueueGenericCreate( ( g_config->rx_queue_len ), ( sizeof(can_frame_t) ), ( ( ( uint8_t ) 0U ) ) );
     p_can_obj_dummy->alert_semphr = xQueueGenericCreate( ( UBaseType_t ) 1, ( ( uint8_t ) 0U ), ( ( uint8_t ) 3U ) );
     if ((g_config->tx_queue_len > 0 && p_can_obj_dummy->tx_queue == 
-# 639 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 667 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                                                    ((void *)0)
-# 639 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 667 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                                                        ) ||
         p_can_obj_dummy->rx_queue == 
-# 640 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 668 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                     ((void *)0) 
-# 640 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 668 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                          || p_can_obj_dummy->alert_semphr == 
-# 640 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 668 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                                                              ((void *)0)
-# 640 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 668 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                                                                  ) {
         ret = 0x101;
         goto err;
@@ -5967,9 +6106,9 @@ esp_err_t can_driver_install(const can_general_config_t *g_config, const can_tim
 
     vTaskEnterCritical(&can_spinlock);
     if (p_can_obj == 
-# 667 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 695 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                     ((void *)0)
-# 667 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 695 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                         ) {
         p_can_obj = p_can_obj_dummy;
     } else {
@@ -5978,14 +6117,22 @@ esp_err_t can_driver_install(const can_general_config_t *g_config, const can_tim
         ret = 0x103;
         goto err;
     }
+    periph_module_reset(PERIPH_CAN_MODULE);
     periph_module_enable(PERIPH_CAN_MODULE);
-    if (!(can_enter_reset_mode() == 0)) { ets_printf("%s:%d (%s)- assert failed!\n", "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 676, __FUNCTION__); abort(); };
+    esp_err_t err = can_enter_reset_mode();
+    ((err == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 706, __func__, "err == ESP_OK"));
     can_config_pelican();
 
 
     can_config_mode(CAN_MODE_LISTEN_ONLY);
+
+
+
+
+
     can_config_interrupts(0xE7);
     can_config_bus_timing(t_config->brp, t_config->sjw, t_config->tseg_1, t_config->tseg_2, t_config->triple_sampling);
+
     can_config_error(96, 0, 0);
     can_config_acceptance_filter(f_config->acceptance_code, f_config->acceptance_mask, f_config->single_filter);
     can_config_clk_out(g_config->clkout_divider);
@@ -5993,68 +6140,68 @@ esp_err_t can_driver_install(const can_general_config_t *g_config, const can_tim
     can_configure_gpio(g_config->tx_io, g_config->rx_io, g_config->clkout_io, g_config->bus_off_io);
     (void) can_get_interrupt_reason();
     do { esp_err_t __err_rc = (esp_intr_alloc(45, 0, can_intr_handler_main, 
-# 689 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
    ((void *)0)
-# 689 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
-   , &p_can_obj->isr_handle)); if (__err_rc != 0) { _esp_error_check_failed(__err_rc, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 689, __func__, "esp_intr_alloc(ETS_CAN_INTR_SOURCE, 0, can_intr_handler_main, NULL, &p_can_obj->isr_handle)"); } } while(0);;
+# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+   , &p_can_obj->isr_handle)); if (__err_rc != 0) { _esp_error_check_failed(__err_rc, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 725, __func__, "esp_intr_alloc(ETS_CAN_INTR_SOURCE, 0, can_intr_handler_main, NULL, &p_can_obj->isr_handle)"); } } while(0);;
 
     vTaskExitCritical(&can_spinlock);
 
 
-    do { esp_err_t __err_rc = (esp_pm_lock_acquire(p_can_obj->pm_lock)); if (__err_rc != 0) { _esp_error_check_failed(__err_rc, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 694, __func__, "esp_pm_lock_acquire(p_can_obj->pm_lock)"); } } while(0);;
+    do { esp_err_t __err_rc = (esp_pm_lock_acquire(p_can_obj->pm_lock)); if (__err_rc != 0) { _esp_error_check_failed(__err_rc, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 730, __func__, "esp_pm_lock_acquire(p_can_obj->pm_lock)"); } } while(0);;
 
     return 0;
 
     err:
 
     if (p_can_obj_dummy != 
-# 700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 736 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                           ((void *)0)
-# 700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 736 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                               ) {
         if (p_can_obj_dummy->tx_queue != 
-# 701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 737 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                         ((void *)0)
-# 701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 737 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                             ) {
             vQueueDelete(p_can_obj_dummy->tx_queue);
             p_can_obj_dummy->tx_queue = 
-# 703 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 739 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                        ((void *)0)
-# 703 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 739 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                            ;
         }
         if (p_can_obj_dummy->rx_queue != 
-# 705 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 741 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                         ((void *)0)
-# 705 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 741 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                             ) {
             vQueueDelete(p_can_obj_dummy->rx_queue);
             p_can_obj_dummy->rx_queue = 
-# 707 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 743 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                        ((void *)0)
-# 707 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 743 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                            ;
         }
         if (p_can_obj_dummy->alert_semphr != 
-# 709 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 745 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                             ((void *)0)
-# 709 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 745 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                                 ) {
             vQueueDelete( ( QueueHandle_t ) ( p_can_obj_dummy->alert_semphr ) );
             p_can_obj_dummy->alert_semphr = 
-# 711 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 747 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                            ((void *)0)
-# 711 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 747 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                                ;
         }
 
         if (p_can_obj_dummy->pm_lock != 
-# 714 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 750 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                        ((void *)0)
-# 714 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 750 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                            ) {
-            do { esp_err_t __err_rc = (esp_pm_lock_delete(p_can_obj_dummy->pm_lock)); if (__err_rc != 0) { _esp_error_check_failed(__err_rc, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 715, __func__, "esp_pm_lock_delete(p_can_obj_dummy->pm_lock)"); } } while(0);;
+            do { esp_err_t __err_rc = (esp_pm_lock_delete(p_can_obj_dummy->pm_lock)); if (__err_rc != 0) { _esp_error_check_failed(__err_rc, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 751, __func__, "esp_pm_lock_delete(p_can_obj_dummy->pm_lock)"); } } while(0);;
         }
 
         free(p_can_obj_dummy);
@@ -6069,32 +6216,33 @@ esp_err_t can_driver_uninstall()
     vTaskEnterCritical(&can_spinlock);
 
     ({ if (!(p_can_obj != 
-# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 765 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
    ((void *)0)
-# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 765 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
    )) { vTaskExitCritical(&can_spinlock); return 0x103; } });
     ({ if (!(p_can_obj->control_flags & (0x001 | 0x010))) { vTaskExitCritical(&can_spinlock); return 0x103; } });
-    if (!(can_enter_reset_mode() == 0)) { ets_printf("%s:%d (%s)- assert failed!\n", "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 731, __FUNCTION__); abort(); };
+    esp_err_t err = can_enter_reset_mode();
+    ((err == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 768, __func__, "err == ESP_OK"));
 
     (void) can_get_interrupt_reason();
     (void) can_get_arbitration_lost_capture();
     (void) can_get_error_code_capture();
 
-    do { esp_err_t __err_rc = (esp_intr_free(p_can_obj->isr_handle)); if (__err_rc != 0) { _esp_error_check_failed(__err_rc, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 737, __func__, "esp_intr_free(p_can_obj->isr_handle)"); } } while(0);;
+    do { esp_err_t __err_rc = (esp_intr_free(p_can_obj->isr_handle)); if (__err_rc != 0) { _esp_error_check_failed(__err_rc, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 774, __func__, "esp_intr_free(p_can_obj->isr_handle)"); } } while(0);;
     periph_module_disable(PERIPH_CAN_MODULE);
     p_can_obj_dummy = p_can_obj;
     p_can_obj = 
-# 740 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 777 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                ((void *)0)
-# 740 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 777 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                    ;
     vTaskExitCritical(&can_spinlock);
 
 
     if (p_can_obj_dummy->tx_queue != 
-# 744 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 781 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                     ((void *)0)
-# 744 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 781 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                         ) {
         vQueueDelete(p_can_obj_dummy->tx_queue);
     }
@@ -6102,8 +6250,8 @@ esp_err_t can_driver_uninstall()
     vQueueDelete( ( QueueHandle_t ) ( p_can_obj_dummy->alert_semphr ) );
 
 
-    do { esp_err_t __err_rc = (esp_pm_lock_release(p_can_obj_dummy->pm_lock)); if (__err_rc != 0) { _esp_error_check_failed(__err_rc, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 751, __func__, "esp_pm_lock_release(p_can_obj_dummy->pm_lock)"); } } while(0);;
-    do { esp_err_t __err_rc = (esp_pm_lock_delete(p_can_obj_dummy->pm_lock)); if (__err_rc != 0) { _esp_error_check_failed(__err_rc, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 752, __func__, "esp_pm_lock_delete(p_can_obj_dummy->pm_lock)"); } } while(0);;
+    do { esp_err_t __err_rc = (esp_pm_lock_release(p_can_obj_dummy->pm_lock)); if (__err_rc != 0) { _esp_error_check_failed(__err_rc, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 788, __func__, "esp_pm_lock_release(p_can_obj_dummy->pm_lock)"); } } while(0);;
+    do { esp_err_t __err_rc = (esp_pm_lock_delete(p_can_obj_dummy->pm_lock)); if (__err_rc != 0) { _esp_error_check_failed(__err_rc, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 789, __func__, "esp_pm_lock_delete(p_can_obj_dummy->pm_lock)"); } } while(0);;
 
     free(p_can_obj_dummy);
 
@@ -6115,16 +6263,17 @@ esp_err_t can_start()
 
     vTaskEnterCritical(&can_spinlock);
     ({ if (!(p_can_obj != 
-# 763 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 800 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
    ((void *)0)
-# 763 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 800 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
    )) { vTaskExitCritical(&can_spinlock); return 0x103; } });
     ({ if (!(p_can_obj->control_flags & 0x001)) { vTaskExitCritical(&can_spinlock); return 0x103; } });
 
 
     xQueueGenericReset( p_can_obj->rx_queue, ( ( BaseType_t ) 0 ) );
     p_can_obj->rx_msg_count = 0;
-    if (!(can_enter_reset_mode() == 0)) { ets_printf("%s:%d (%s)- assert failed!\n", "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 769, __FUNCTION__); abort(); };
+    esp_err_t err = can_enter_reset_mode();
+    ((err == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 807, __func__, "err == ESP_OK"));
 
 
     can_mode_t mode;
@@ -6137,7 +6286,8 @@ esp_err_t can_start()
     }
     can_config_mode(mode);
     (void) can_get_interrupt_reason();
-    if (!(can_exit_reset_mode() == 0)) { ets_printf("%s:%d (%s)- assert failed!\n", "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 782, __FUNCTION__); abort(); };
+    err = can_exit_reset_mode();
+    ((err == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 821, __func__, "err == ESP_OK"));
 
     ((p_can_obj->control_flags) &= ~(0x001));
     vTaskExitCritical(&can_spinlock);
@@ -6149,14 +6299,15 @@ esp_err_t can_stop()
 
     vTaskEnterCritical(&can_spinlock);
     ({ if (!(p_can_obj != 
-# 793 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
    ((void *)0)
-# 793 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
    )) { vTaskExitCritical(&can_spinlock); return 0x103; } });
     ({ if (!(!(p_can_obj->control_flags & (0x001 | 0x010)))) { vTaskExitCritical(&can_spinlock); return 0x103; } });
 
 
-    if (!(can_enter_reset_mode() == 0)) { ets_printf("%s:%d (%s)- assert failed!\n", "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 797, __FUNCTION__); abort(); };
+    esp_err_t err = can_enter_reset_mode();
+    ((err == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 837, __func__, "err == ESP_OK"));
     (void) can_get_interrupt_reason();
     can_config_mode(CAN_MODE_LISTEN_ONLY);
     ((p_can_obj->control_flags) &= ~(0x020));
@@ -6164,9 +6315,9 @@ esp_err_t can_stop()
 
 
     if (p_can_obj->tx_queue != 
-# 804 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 844 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                               ((void *)0)
-# 804 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 844 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                   ) {
         xQueueGenericReset( p_can_obj->tx_queue, ( ( BaseType_t ) 0 ) );
     }
@@ -6181,14 +6332,14 @@ esp_err_t can_transmit(const can_message_t *message, TickType_t ticks_to_wait)
 {
 
     ({ if (!(p_can_obj != 
-# 817 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 857 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
    ((void *)0)
-# 817 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 857 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
    )) { return (0x103); } });
     ({ if (!(message != 
-# 818 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 858 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
    ((void *)0)
-# 818 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 858 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
    )) { return (0x102); } });
     ({ if (!((message->data_length_code <= 8) || (message->flags & 0x10))) { return (0x102); } });
 
@@ -6212,9 +6363,9 @@ esp_err_t can_transmit(const can_message_t *message, TickType_t ticks_to_wait)
 
     if (ret != 0) {
         if (p_can_obj->tx_queue == 
-# 840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 880 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                                   ((void *)0)
-# 840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 880 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                       ) {
 
             ret = -1;
@@ -6223,11 +6374,13 @@ esp_err_t can_transmit(const can_message_t *message, TickType_t ticks_to_wait)
             vTaskEnterCritical(&can_spinlock);
             if (p_can_obj->control_flags & (0x001 | 0x010)) {
 
-                if (!(xQueueGenericReceive( ( p_can_obj->tx_queue ), ( &tx_frame ), ( 0 ), ( ( BaseType_t ) 0 ) ) == ( ( BaseType_t ) 1 ))) { ets_printf("%s:%d (%s)- assert failed!\n", "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 848, __FUNCTION__); abort(); };
+                int res = xQueueGenericReceive( ( p_can_obj->tx_queue ), ( &tx_frame ), ( 0 ), ( ( BaseType_t ) 0 ) );
+                ((res == ( ( BaseType_t ) 1 )) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 889, __func__, "res == pdTRUE"));
                 ret = 0x103;
             } else if ((p_can_obj->tx_msg_count == 0) && !(p_can_obj->control_flags & 0x020)) {
 
-                if (!(xQueueGenericReceive( ( p_can_obj->tx_queue ), ( &tx_frame ), ( 0 ), ( ( BaseType_t ) 0 ) ) == ( ( BaseType_t ) 1 ))) { ets_printf("%s:%d (%s)- assert failed!\n", "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 852, __FUNCTION__); abort(); };
+                int res = xQueueGenericReceive( ( p_can_obj->tx_queue ), ( &tx_frame ), ( 0 ), ( ( BaseType_t ) 0 ) );
+                ((res == ( ( BaseType_t ) 1 )) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 894, __func__, "res == pdTRUE"));
                 can_set_tx_buffer_and_transmit(&tx_frame);
                 p_can_obj->tx_msg_count++;
                 ((p_can_obj->control_flags) |= (0x020));
@@ -6250,14 +6403,14 @@ esp_err_t can_receive(can_message_t *message, TickType_t ticks_to_wait)
 {
 
     ({ if (!(p_can_obj != 
-# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 916 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
    ((void *)0)
-# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 916 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
    )) { return (0x103); } });
     ({ if (!(message != 
-# 875 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 917 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
    ((void *)0)
-# 875 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 917 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
    )) { return (0x102); } });
 
 
@@ -6279,21 +6432,21 @@ esp_err_t can_read_alerts(uint32_t *alerts, TickType_t ticks_to_wait)
 {
 
     ({ if (!(p_can_obj != 
-# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
    ((void *)0)
-# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
    )) { return (0x103); } });
     ({ if (!(alerts != 
-# 896 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 938 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
    ((void *)0)
-# 896 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 938 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
    )) { return (0x102); } });
 
 
     if (xQueueGenericReceive( ( QueueHandle_t ) ( p_can_obj->alert_semphr ), 
-# 899 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 941 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
        ((void *)0)
-# 899 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 941 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
        , ( ticks_to_wait ), ( ( BaseType_t ) 0 ) ) == ( ( BaseType_t ) 1 )) {
         vTaskEnterCritical(&can_spinlock);
         *alerts = p_can_obj->alerts_triggered;
@@ -6309,20 +6462,20 @@ esp_err_t can_read_alerts(uint32_t *alerts, TickType_t ticks_to_wait)
 esp_err_t can_reconfigure_alerts(uint32_t alerts_enabled, uint32_t *current_alerts)
 {
     ({ if (!(p_can_obj != 
-# 913 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 955 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
    ((void *)0)
-# 913 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 955 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
    )) { return (0x103); } });
     vTaskEnterCritical(&can_spinlock);
     uint32_t cur_alerts;
-    cur_alerts = can_read_alerts(&cur_alerts, 0);
+    can_read_alerts(&cur_alerts, 0);
     p_can_obj->alerts_enabled = alerts_enabled;
     vTaskExitCritical(&can_spinlock);
 
     if (current_alerts != 
-# 920 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 962 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                          ((void *)0)
-# 920 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 962 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                              ) {
         *current_alerts = cur_alerts;
     }
@@ -6334,18 +6487,18 @@ esp_err_t can_initiate_recovery()
     vTaskEnterCritical(&can_spinlock);
 
     ({ if (!(p_can_obj != 
-# 930 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
    ((void *)0)
-# 930 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
    )) { vTaskExitCritical(&can_spinlock); return 0x103; } });
     ({ if (!(p_can_obj->control_flags & 0x010)) { vTaskExitCritical(&can_spinlock); return 0x103; } });
     ({ if (!(!(p_can_obj->control_flags & 0x002))) { vTaskExitCritical(&can_spinlock); return 0x103; } });
 
 
     if (p_can_obj->tx_queue != 
-# 935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 977 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
                               ((void *)0)
-# 935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 977 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
                                   ) {
         xQueueGenericReset( p_can_obj->tx_queue, ( ( BaseType_t ) 0 ) );
     }
@@ -6354,7 +6507,8 @@ esp_err_t can_initiate_recovery()
     ((p_can_obj->control_flags) |= (0x002));
 
 
-    if (!(can_exit_reset_mode() == 0)) { ets_printf("%s:%d (%s)- assert failed!\n", "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 943, __FUNCTION__); abort(); };
+    esp_err_t err = can_exit_reset_mode();
+    ((err == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c", 986, __func__, "err == ESP_OK"));
     vTaskExitCritical(&can_spinlock);
 
     return 0;
@@ -6364,14 +6518,14 @@ esp_err_t can_get_status_info(can_status_info_t *status_info)
 {
 
     ({ if (!(p_can_obj != 
-# 952 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
    ((void *)0)
-# 952 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
    )) { return (0x103); } });
     ({ if (!(status_info != 
-# 953 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+# 996 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
    ((void *)0)
-# 953 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+# 996 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
    )) { return (0x102); } });
 
     vTaskEnterCritical(&can_spinlock);
@@ -6394,6 +6548,46 @@ esp_err_t can_get_status_info(can_status_info_t *status_info)
     } else {
         status_info->state = CAN_STATE_RUNNING;
     }
+    vTaskExitCritical(&can_spinlock);
+
+    return 0;
+}
+
+esp_err_t can_clear_transmit_queue()
+{
+
+    ({ if (!(p_can_obj != 
+# 1026 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+   ((void *)0)
+# 1026 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+   )) { return (0x103); } });
+    ({ if (!(p_can_obj->tx_queue != 
+# 1027 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+   ((void *)0)
+# 1027 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+   )) { return (0x106); } });
+
+    vTaskEnterCritical(&can_spinlock);
+
+    p_can_obj->tx_msg_count = (p_can_obj->control_flags & 0x020) ? 1 : 0;
+    xQueueGenericReset( p_can_obj->tx_queue, ( ( BaseType_t ) 0 ) );
+    vTaskExitCritical(&can_spinlock);
+
+    return 0;
+}
+
+esp_err_t can_clear_receive_queue()
+{
+
+    ({ if (!(p_can_obj != 
+# 1041 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c" 3 4
+   ((void *)0)
+# 1041 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/can.c"
+   )) { return (0x103); } });
+
+    vTaskEnterCritical(&can_spinlock);
+    p_can_obj->rx_msg_count = 0;
+    xQueueGenericReset( p_can_obj->rx_queue, ( ( BaseType_t ) 0 ) );
     vTaskExitCritical(&can_spinlock);
 
     return 0;

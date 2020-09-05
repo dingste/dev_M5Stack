@@ -8,7 +8,7 @@
 	.global	ethip6_output
 	.type	ethip6_output, @function
 ethip6_output:
-.LFB18:
+.LFB27:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/core/ipv6/ethip6.c"
 	.loc 1 80 0
 .LVL0:
@@ -75,7 +75,7 @@ ethip6_output:
 	mov.n	a2, a10
 .LVL6:
 	retw.n
-.LFE18:
+.LFE27:
 	.size	ethip6_output, .-ethip6_output
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -96,10 +96,10 @@ ethip6_output:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.byte	0x4
-	.4byte	.LCFI0-.LFB18
+	.4byte	.LCFI0-.LFB27
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -905,8 +905,8 @@ ethip6_output:
 	.byte	0x1
 	.byte	0x4f
 	.4byte	0x10d
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x749
@@ -1515,7 +1515,7 @@ ethip6_output:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL6
-	.4byte	.LFE18
+	.4byte	.LFE27
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -1538,14 +1538,14 @@ ethip6_output:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB18
-	.4byte	.LFE18-.LFB18
+	.4byte	.LFB27
+	.4byte	.LFE27-.LFB27
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB18
-	.4byte	.LFE18
+	.4byte	.LFB27
+	.4byte	.LFE27
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits

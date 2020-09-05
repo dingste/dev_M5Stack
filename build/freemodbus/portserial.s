@@ -13,13 +13,13 @@
 	.align	4
 	.type	vUartTask, @function
 vUartTask:
-.LFB24:
+.LFB33:
 	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freemodbus/port/portserial.c"
-	.loc 1 139 0
+	.loc 1 137 0
 .LVL0:
 	entry	sp, 48
 .LCFI0:
-	.loc 1 142 0
+	.loc 1 140 0
 	l32r	a3, .LC0
 .LVL1:
 .L2:
@@ -30,39 +30,39 @@ vUartTask:
 	call8	xQueueGenericReceive
 .LVL2:
 	bnei	a10, 1, .L2
-	.loc 1 145 0
+	.loc 1 143 0
 	l32i.n	a8, sp, 0
 	beqi	a8, 2, .L4
 	beqi	a8, 3, .L5
 	bnez.n	a8, .L2
 .LBB5:
 .LBB6:
-	.loc 1 98 0
+	.loc 1 96 0
 	l32r	a2, .LC1
-	.loc 1 99 0
+	.loc 1 97 0
 	mov.n	a4, a8
 	l8ui	a2, a2, 0
 .LBE6:
 .LBE5:
-	.loc 1 150 0
+	.loc 1 148 0
 	l32i.n	a12, sp, 4
 .LVL3:
 .LBB9:
 .LBB8:
-	.loc 1 99 0
+	.loc 1 97 0
 	movnez	a4, a10, a2
 	extui	a2, a4, 0, 8
 	beqz.n	a2, .L2
 	moveqz	a10, a8, a12
 	extui	a10, a10, 0, 8
 	beqz.n	a10, .L2
-	.loc 1 101 0
+	.loc 1 99 0
 	l32r	a4, .LC2
-	.loc 1 100 0
+	.loc 1 98 0
 	movi	a2, 0x100
 	minu	a12, a12, a2
 .LVL4:
-	.loc 1 101 0
+	.loc 1 99 0
 	l16ui	a2, a4, 0
 	movi	a6, 0xff
 	add.n	a5, a2, a12
@@ -70,7 +70,7 @@ vUartTask:
 	mov.n	a2, a8
 .L7:
 	s16i	a2, a4, 0
-	.loc 1 103 0
+	.loc 1 101 0
 	l32r	a4, .LC4
 	l32r	a11, .LC3
 	l8ui	a10, a4, 0
@@ -81,31 +81,31 @@ vUartTask:
 	extui	a5, a10, 0, 16
 .LVL6:
 .LBB7:
-	.loc 1 104 0
+	.loc 1 102 0
 	movi.n	a2, 0
-	.loc 1 106 0
+	.loc 1 104 0
 	l32r	a6, .LC5
 	j	.L8
 .LVL7:
 .L9:
 	l32i.n	a10, a6, 0
-	.loc 1 104 0
+	.loc 1 102 0
 	addi.n	a2, a2, 1
 .LVL8:
-	.loc 1 106 0
+	.loc 1 104 0
 	callx8	a10
 .LVL9:
-	.loc 1 104 0
+	.loc 1 102 0
 	extui	a2, a2, 0, 16
 .LVL10:
 .L8:
 	bltu	a2, a5, .L9
 .LBE7:
-	.loc 1 109 0
+	.loc 1 107 0
 	l8ui	a10, a4, 0
 	call8	uart_flush_input
 .LVL11:
-	.loc 1 113 0
+	.loc 1 111 0
 	l32r	a2, .LC6
 .LVL12:
 	l32i.n	a10, a2, 0
@@ -116,27 +116,27 @@ vUartTask:
 .L5:
 .LBE8:
 .LBE9:
-	.loc 1 155 0
+	.loc 1 153 0
 	l32i.n	a10, a3, 0
 	movi.n	a11, 0
 	call8	xQueueGenericReset
 .LVL15:
-	.loc 1 156 0
+	.loc 1 154 0
 	j	.L2
 .L4:
-	.loc 1 160 0
+	.loc 1 158 0
 	l32i.n	a10, a3, 0
 	movi.n	a11, 0
 	call8	xQueueGenericReset
 .LVL16:
-	.loc 1 161 0
+	.loc 1 159 0
 	l32r	a2, .LC4
 	l8ui	a10, a2, 0
 	call8	uart_flush_input
 .LVL17:
-	.loc 1 162 0
+	.loc 1 160 0
 	j	.L2
-.LFE24:
+.LFE33:
 	.size	vUartTask, .-vUartTask
 	.section	.text.vMBPortSerialEnable,"ax",@progbits
 	.literal_position
@@ -147,55 +147,48 @@ vUartTask:
 	.global	vMBPortSerialEnable
 	.type	vMBPortSerialEnable, @function
 vMBPortSerialEnable:
-.LFB21:
+.LFB30:
 	.loc 1 75 0
 .LVL18:
 	entry	sp, 32
 .LCFI1:
-	.loc 1 77 0
-	call8	vMBPortEnterCritical
-.LVL19:
 	.loc 1 75 0
 	extui	a2, a2, 0, 8
 	extui	a3, a3, 0, 8
 	l32r	a4, .LC7
 	l32r	a8, .LC8
-	.loc 1 78 0
+	.loc 1 77 0
 	beqz.n	a2, .L18
-	.loc 1 81 0
-	l32i.n	a10, a8, 0
 	.loc 1 80 0
+	l32i.n	a10, a8, 0
+	.loc 1 79 0
 	movi.n	a2, 1
-.LVL20:
+.LVL19:
 	s8i	a2, a4, 0
-	.loc 1 81 0
+	.loc 1 80 0
 	call8	vTaskResume
-.LVL21:
+.LVL20:
 	j	.L19
 .L18:
-	.loc 1 83 0
+	.loc 1 82 0
 	l32i.n	a10, a8, 0
 	call8	vTaskSuspend
-.LVL22:
-	.loc 1 84 0
+.LVL21:
+	.loc 1 83 0
 	s8i	a2, a4, 0
 .L19:
 	l32r	a8, .LC9
-	.loc 1 86 0
+	.loc 1 85 0
 	beqz.n	a3, .L20
-	.loc 1 87 0
+	.loc 1 86 0
 	movi.n	a2, 1
 	s8i	a2, a8, 0
-	j	.L21
-.L20:
-	.loc 1 89 0
-	s8i	a3, a8, 0
-.L21:
-	.loc 1 91 0
-	call8	vMBPortExitCritical
-.LVL23:
 	retw.n
-.LFE21:
+.L20:
+	.loc 1 88 0
+	s8i	a3, a8, 0
+	retw.n
+.LFE30:
 	.size	vMBPortSerialEnable, .-vMBPortSerialEnable
 	.section	.text.xMBPortSerialTxPoll,"ax",@progbits
 	.literal_position
@@ -205,43 +198,43 @@ vMBPortSerialEnable:
 	.global	xMBPortSerialTxPoll
 	.type	xMBPortSerialTxPoll, @function
 xMBPortSerialTxPoll:
-.LFB23:
-	.loc 1 121 0
+.LFB32:
+	.loc 1 119 0
 	entry	sp, 32
 .LCFI2:
-.LVL24:
-	.loc 1 126 0
+.LVL22:
+	.loc 1 124 0
 	l32r	a2, .LC10
 	movi	a3, 0x101
 	l8ui	a2, a2, 0
-	.loc 1 130 0
+	.loc 1 128 0
 	l32r	a4, .LC11
-	.loc 1 126 0
+	.loc 1 124 0
 	bnez.n	a2, .L29
 	retw.n
-.LVL25:
+.LVL23:
 .L26:
-	.loc 1 130 0
+	.loc 1 128 0
 	l32i.n	a10, a4, 0
 	callx8	a10
-.LVL26:
-	.loc 1 128 0
+.LVL24:
+	.loc 1 126 0
 	beqz.n	a10, .L29
-.LVL27:
+.LVL25:
 .L27:
-	.loc 1 133 0
+	.loc 1 131 0
 	movi.n	a2, 1
 	retw.n
 .L29:
-.LVL28:
+.LVL26:
 	addi.n	a3, a3, -1
-.LVL29:
+.LVL27:
 	extui	a3, a3, 0, 16
-.LVL30:
-	.loc 1 128 0 discriminator 1
+.LVL28:
+	.loc 1 126 0 discriminator 1
 	bnez.n	a3, .L26
 	j	.L27
-.LFE23:
+.LFE32:
 	.size	xMBPortSerialTxPoll, .-xMBPortSerialTxPoll
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC13:
@@ -260,7 +253,7 @@ xMBPortSerialTxPoll:
 	.string	"\033[0;31mE (%d) %s: %s(%u): mb stack serial task creation error. xTaskCreate() returned (0x%x).\033[0m\n"
 	.section	.text.xMBPortSerialInit,"ax",@progbits
 	.literal_position
-	.literal .LC12, __FUNCTION__$6468
+	.literal .LC12, __FUNCTION__$6514
 	.literal .LC14, .LC13
 	.literal .LC16, .LC15
 	.literal .LC17, ucUartNumber
@@ -280,23 +273,23 @@ xMBPortSerialTxPoll:
 	.global	xMBPortSerialInit
 	.type	xMBPortSerialInit, @function
 xMBPortSerialInit:
-.LFB25:
-	.loc 1 186 0
-.LVL31:
+.LFB34:
+	.loc 1 184 0
+.LVL29:
 	entry	sp, 80
 .LCFI3:
-.LVL32:
-	.loc 1 186 0
+.LVL30:
+	.loc 1 184 0
 	extui	a2, a2, 0, 8
 	extui	a4, a4, 0, 8
-	.loc 1 188 0
+	.loc 1 186 0
 	bltui	a5, 3, .L32
-	.loc 1 188 0 is_stmt 0 discriminator 4
+	.loc 1 186 0 is_stmt 0 discriminator 4
 	call8	esp_log_timestamp
-.LVL33:
+.LVL31:
 	l32r	a11, .LC14
-	movi	a2, 0xbc
-.LVL34:
+	movi	a2, 0xba
+.LVL32:
 	l32r	a15, .LC12
 	l32r	a12, .LC16
 	mov.n	a13, a10
@@ -304,90 +297,90 @@ xMBPortSerialInit:
 	mov.n	a14, a11
 	movi.n	a10, 1
 	call8	esp_log_write
-.LVL35:
+.LVL33:
 	j	.L45
 .L32:
-	.loc 1 190 0 is_stmt 1
+	.loc 1 188 0 is_stmt 1
 	l32r	a6, .LC17
-	.loc 1 199 0
+	.loc 1 197 0
 	movi.n	a7, 3
-	.loc 1 190 0
+	.loc 1 188 0
 	s8i	a2, a6, 0
-.LVL36:
-	.loc 1 194 0
-	beqi	a5, 1, .L34
+.LVL34:
 	.loc 1 192 0
+	beqi	a5, 1, .L34
+	.loc 1 190 0
 	addi	a5, a5, -2
-.LVL37:
+.LVL35:
 	movi.n	a8, 0
 	movi.n	a7, 2
 	movnez	a7, a8, a5
-.LVL38:
+.LVL36:
 .L34:
 	addi	a4, a4, -5
-.LVL39:
+.LVL37:
 	extui	a4, a4, 0, 8
-.LVL40:
+.LVL38:
 	movi.n	a5, 3
 	bgeui	a4, 4, .L37
 	l32r	a5, .LC18
 	add.n	a4, a5, a4
 	l8ui	a5, a4, 0
 .L37:
-.LVL41:
-	.loc 1 222 0
+.LVL39:
+	.loc 1 220 0
 	movi.n	a12, 0x18
 	movi.n	a11, 0
 	addi	a10, sp, 16
 	call8	memset
-.LVL42:
-	.loc 1 231 0
+.LVL40:
+	.loc 1 229 0
 	mov.n	a10, a2
-	.loc 1 222 0
+	.loc 1 220 0
 	s32i.n	a3, sp, 16
 	s32i.n	a5, sp, 20
 	movi.n	a3, 2
-.LVL43:
+.LVL41:
 	movi.n	a5, 1
-.LVL44:
-	.loc 1 231 0
+.LVL42:
+	.loc 1 229 0
 	addi	a11, sp, 16
-.LVL45:
-	.loc 1 222 0
+.LVL43:
+	.loc 1 220 0
 	s32i.n	a7, sp, 24
 	s32i.n	a5, sp, 28
 	s8i	a3, sp, 36
-	.loc 1 231 0
+	.loc 1 229 0
 	call8	uart_param_config
-.LVL46:
+.LVL44:
 	mov.n	a2, a10
-.LVL47:
-	.loc 1 232 0
+.LVL45:
+	.loc 1 230 0
 	beqz.n	a10, .L38
-	.loc 1 232 0 is_stmt 0 discriminator 4
+	.loc 1 230 0 is_stmt 0 discriminator 4
 	call8	esp_log_timestamp
-.LVL48:
+.LVL46:
 	l32r	a11, .LC14
 	s32i.n	a2, sp, 4
 	l32r	a15, .LC12
-	movi	a2, 0xe9
-.LVL49:
+	movi	a2, 0xe7
+.LVL47:
 	l32r	a12, .LC20
 	s32i.n	a2, sp, 0
 	mov.n	a14, a11
 	mov.n	a13, a10
-.LVL50:
+.LVL48:
 .L46:
 	mov.n	a10, a5
 	call8	esp_log_write
-.LVL51:
+.LVL49:
 .L45:
-	.loc 1 232 0 is_stmt 1 discriminator 4
+	.loc 1 230 0 is_stmt 1 discriminator 4
 	movi.n	a2, 0
 	retw.n
-.LVL52:
+.LVL50:
 .L38:
-	.loc 1 235 0
+	.loc 1 233 0
 	movi	a12, 0x100
 	l32r	a14, .LC21
 	l8ui	a10, a6, 0
@@ -395,44 +388,44 @@ xMBPortSerialInit:
 	movi.n	a13, 0x14
 	mov.n	a11, a12
 	call8	uart_driver_install
-.LVL53:
+.LVL51:
 	mov.n	a3, a10
-.LVL54:
-	.loc 1 237 0
+.LVL52:
+	.loc 1 235 0
 	beqz.n	a10, .L39
-	.loc 1 237 0 is_stmt 0 discriminator 4
+	.loc 1 235 0 is_stmt 0 discriminator 4
 	call8	esp_log_timestamp
-.LVL55:
+.LVL53:
 	l32r	a11, .LC14
 	s32i.n	a3, sp, 4
 	l32r	a15, .LC12
-	movi	a3, 0xee
-.LVL56:
+	movi	a3, 0xec
+.LVL54:
 	l32r	a12, .LC23
 	mov.n	a13, a10
 	s32i.n	a3, sp, 0
 	mov.n	a14, a11
 	mov.n	a10, a5
 	call8	esp_log_write
-.LVL57:
-	.loc 1 237 0 is_stmt 1 discriminator 4
+.LVL55:
+	.loc 1 235 0 is_stmt 1 discriminator 4
 	retw.n
-.LVL58:
+.LVL56:
 .L39:
-	.loc 1 241 0
+	.loc 1 239 0
 	l8ui	a10, a6, 0
 	movi.n	a11, 3
 	call8	uart_set_rx_timeout
-.LVL59:
+.LVL57:
 	mov.n	a4, a10
-.LVL60:
-	.loc 1 242 0
+.LVL58:
+	.loc 1 240 0
 	beqz.n	a10, .L40
-	.loc 1 242 0 is_stmt 0 discriminator 4
+	.loc 1 240 0 is_stmt 0 discriminator 4
 	call8	esp_log_timestamp
-.LVL61:
+.LVL59:
 	l32r	a11, .LC14
-	movi	a2, 0xf3
+	movi	a2, 0xf1
 	s32i.n	a4, sp, 4
 	s32i.n	a2, sp, 0
 	l32r	a15, .LC12
@@ -441,7 +434,7 @@ xMBPortSerialInit:
 	l32r	a12, .LC25
 	j	.L46
 .L40:
-.LVL62:
+.LVL60:
 .LBB12:
 .LBB13:
 	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
@@ -456,23 +449,23 @@ xMBPortSerialInit:
 	mov.n	a15, a3
 	movi.n	a14, 0xa
 	call8	xTaskCreatePinnedToCore
-.LVL63:
+.LVL61:
 	mov.n	a2, a10
 .LBE13:
 .LBE12:
-	.loc 1 249 0
+	.loc 1 247 0
 	l32i.n	a10, a3, 0
-	.loc 1 248 0
+	.loc 1 246 0
 	beqi	a2, 1, .L41
-	.loc 1 249 0
+	.loc 1 247 0
 	call8	vTaskDelete
-.LVL64:
-	.loc 1 251 0
+.LVL62:
+	.loc 1 249 0
 	call8	esp_log_timestamp
-.LVL65:
+.LVL63:
 	l32r	a11, .LC14
 	s32i.n	a2, sp, 4
-	movi	a2, 0xfd
+	movi	a2, 0xfb
 	s32i.n	a2, sp, 0
 	l32r	a15, .LC12
 	mov.n	a14, a11
@@ -480,15 +473,15 @@ xMBPortSerialInit:
 	l32r	a12, .LC33
 	j	.L46
 .L41:
-	.loc 1 255 0
+	.loc 1 253 0
 	call8	vTaskSuspend
-.LVL66:
-	.loc 1 257 0
+.LVL64:
+	.loc 1 255 0
 	l32r	a3, .LC34
 	s16i	a4, a3, 0
-	.loc 1 259 0
+	.loc 1 257 0
 	retw.n
-.LFE25:
+.LFE34:
 	.size	xMBPortSerialInit, .-xMBPortSerialInit
 	.section	.rodata.str1.1
 .LC37:
@@ -500,43 +493,43 @@ xMBPortSerialInit:
 	.literal .LC35, xMbTaskHandle
 	.literal .LC36, ucUartNumber
 	.literal .LC38, .LC37
-	.literal .LC39, __func__$6486
+	.literal .LC39, __func__$6532
 	.literal .LC41, .LC40
 	.align	4
 	.global	vMBPortSerialClose
 	.type	vMBPortSerialClose, @function
 vMBPortSerialClose:
-.LFB26:
-	.loc 1 262 0
+.LFB35:
+	.loc 1 260 0
 	entry	sp, 32
 .LCFI4:
-	.loc 1 263 0
+	.loc 1 261 0
 	l32r	a2, .LC35
 	l32i.n	a10, a2, 0
 	call8	vTaskSuspend
-.LVL67:
-	.loc 1 264 0
+.LVL65:
+	.loc 1 262 0
 	l32i.n	a10, a2, 0
 	call8	vTaskDelete
-.LVL68:
+.LVL66:
 .LBB14:
-	.loc 1 265 0
+	.loc 1 263 0
 	l32r	a2, .LC36
 	l8ui	a10, a2, 0
 	call8	uart_driver_delete
-.LVL69:
+.LVL67:
 	beqz.n	a10, .L47
-	.loc 1 265 0 is_stmt 0 discriminator 1
+	.loc 1 263 0 is_stmt 0 discriminator 1
 	l32r	a14, .LC38
 	l32r	a13, .LC39
 	l32r	a11, .LC41
-	movi	a12, 0x109
+	movi	a12, 0x107
 	call8	_esp_error_check_failed
-.LVL70:
+.LVL68:
 .L47:
 	retw.n
 .LBE14:
-.LFE26:
+.LFE35:
 	.size	vMBPortSerialClose, .-vMBPortSerialClose
 	.section	.text.xMBPortSerialPutByte,"ax",@progbits
 	.literal_position
@@ -545,32 +538,32 @@ vMBPortSerialClose:
 	.global	xMBPortSerialPutByte
 	.type	xMBPortSerialPutByte, @function
 xMBPortSerialPutByte:
-.LFB27:
-	.loc 1 269 0 is_stmt 1
-.LVL71:
+.LFB36:
+	.loc 1 267 0 is_stmt 1
+.LVL69:
 	entry	sp, 48
 .LCFI5:
-	.loc 1 269 0
+	.loc 1 267 0
 	s8i	a2, sp, 0
-	.loc 1 272 0
+	.loc 1 270 0
 	l32r	a2, .LC42
-.LVL72:
+.LVL70:
 	movi.n	a12, 1
 	l8ui	a10, a2, 0
 	mov.n	a11, sp
-.LVL73:
+.LVL71:
 	call8	uart_write_bytes
-.LVL74:
-	.loc 1 273 0
+.LVL72:
+	.loc 1 271 0
 	extui	a10, a10, 0, 8
 	addi.n	a10, a10, -1
-.LVL75:
+.LVL73:
 	movi.n	a8, 1
 	movi.n	a2, 0
 	moveqz	a2, a8, a10
-	.loc 1 274 0
+	.loc 1 272 0
 	retw.n
-.LFE27:
+.LFE36:
 	.size	xMBPortSerialPutByte, .-xMBPortSerialPutByte
 	.section	.rodata.str1.1
 .LC43:
@@ -580,10 +573,10 @@ xMBPortSerialPutByte:
 	.section	.text.xMBPortSerialGetByte,"ax",@progbits
 	.literal_position
 	.literal .LC44, .LC43
-	.literal .LC45, __func__$6494
+	.literal .LC45, __func__$6540
 	.literal .LC46, .LC40
 	.literal .LC47, uiRxBufferPos
-	.literal .LC48, __FUNCTION__$6495
+	.literal .LC48, __FUNCTION__$6541
 	.literal .LC49, .LC13
 	.literal .LC51, .LC50
 	.literal .LC52, ucBuffer
@@ -591,32 +584,32 @@ xMBPortSerialPutByte:
 	.global	xMBPortSerialGetByte
 	.type	xMBPortSerialGetByte, @function
 xMBPortSerialGetByte:
-.LFB28:
-	.loc 1 278 0
-.LVL76:
+.LFB37:
+	.loc 1 276 0
+.LVL74:
 	entry	sp, 48
 .LCFI6:
-	.loc 1 279 0
+	.loc 1 277 0
 	bnez.n	a2, .L51
-	.loc 1 279 0 is_stmt 0 discriminator 1
+	.loc 1 277 0 is_stmt 0 discriminator 1
 	l32r	a13, .LC44
 	l32r	a12, .LC45
 	l32r	a10, .LC46
-	movi	a11, 0x117
+	movi	a11, 0x115
 	call8	__assert_func
-.LVL77:
+.LVL75:
 .L51:
-	.loc 1 280 0 is_stmt 1
+	.loc 1 278 0 is_stmt 1
 	l32r	a10, .LC47
 	movi	a9, 0xff
 	l16ui	a8, a10, 0
 	bgeu	a9, a8, .L52
-	.loc 1 280 0 is_stmt 0 discriminator 4
+	.loc 1 278 0 is_stmt 0 discriminator 4
 	call8	esp_log_timestamp
-.LVL78:
+.LVL76:
 	l32r	a11, .LC49
-	movi	a2, 0x119
-.LVL79:
+	movi	a2, 0x117
+.LVL77:
 	l32r	a15, .LC48
 	l32r	a12, .LC51
 	s32i.n	a2, sp, 0
@@ -624,28 +617,28 @@ xMBPortSerialGetByte:
 	mov.n	a14, a11
 	movi.n	a10, 1
 	call8	esp_log_write
-.LVL80:
-	.loc 1 280 0 is_stmt 1 discriminator 4
+.LVL78:
+	.loc 1 278 0 is_stmt 1 discriminator 4
 	movi.n	a2, 0
 	retw.n
-.LVL81:
+.LVL79:
 .L52:
-	.loc 1 282 0
+	.loc 1 280 0
 	l32r	a9, .LC52
 	add.n	a9, a9, a8
 	l8ui	a9, a9, 0
-	.loc 1 283 0
+	.loc 1 281 0
 	addi.n	a8, a8, 1
-	.loc 1 282 0
+	.loc 1 280 0
 	s8i	a9, a2, 0
-	.loc 1 283 0
+	.loc 1 281 0
 	s16i	a8, a10, 0
-	.loc 1 284 0
+	.loc 1 282 0
 	movi.n	a2, 1
-.LVL82:
-	.loc 1 285 0
+.LVL80:
+	.loc 1 283 0
 	retw.n
-.LFE28:
+.LFE37:
 	.size	xMBPortSerialGetByte, .-xMBPortSerialGetByte
 	.section	.rodata.CSWTCH$33,"a",@progbits
 	.type	CSWTCH$33, @object
@@ -655,25 +648,25 @@ CSWTCH$33:
 	.byte	1
 	.byte	2
 	.byte	3
-	.section	.rodata.__FUNCTION__$6495,"a",@progbits
-	.type	__FUNCTION__$6495, @object
-	.size	__FUNCTION__$6495, 21
-__FUNCTION__$6495:
+	.section	.rodata.__FUNCTION__$6541,"a",@progbits
+	.type	__FUNCTION__$6541, @object
+	.size	__FUNCTION__$6541, 21
+__FUNCTION__$6541:
 	.string	"xMBPortSerialGetByte"
-	.section	.rodata.__func__$6494,"a",@progbits
-	.type	__func__$6494, @object
-	.size	__func__$6494, 21
-__func__$6494:
+	.section	.rodata.__func__$6540,"a",@progbits
+	.type	__func__$6540, @object
+	.size	__func__$6540, 21
+__func__$6540:
 	.string	"xMBPortSerialGetByte"
-	.section	.rodata.__func__$6486,"a",@progbits
-	.type	__func__$6486, @object
-	.size	__func__$6486, 19
-__func__$6486:
+	.section	.rodata.__func__$6532,"a",@progbits
+	.type	__func__$6532, @object
+	.size	__func__$6532, 19
+__func__$6532:
 	.string	"vMBPortSerialClose"
-	.section	.rodata.__FUNCTION__$6468,"a",@progbits
-	.type	__FUNCTION__$6468, @object
-	.size	__FUNCTION__$6468, 18
-__FUNCTION__$6468:
+	.section	.rodata.__FUNCTION__$6514,"a",@progbits
+	.type	__FUNCTION__$6514, @object
+	.size	__FUNCTION__$6514, 18
+__FUNCTION__$6514:
 	.string	"xMBPortSerialInit"
 	.section	.bss.uiRxBufferPos,"aw",@nobits
 	.align	2
@@ -732,10 +725,10 @@ xMbUartQueue:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.byte	0x4
-	.4byte	.LCFI0-.LFB24
+	.4byte	.LCFI0-.LFB33
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -744,10 +737,10 @@ xMbUartQueue:
 	.4byte	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.4byte	.Lframe0
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.byte	0x4
-	.4byte	.LCFI1-.LFB21
+	.4byte	.LCFI1-.LFB30
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -756,10 +749,10 @@ xMbUartQueue:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.byte	0x4
-	.4byte	.LCFI2-.LFB23
+	.4byte	.LCFI2-.LFB32
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -768,10 +761,10 @@ xMbUartQueue:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.byte	0x4
-	.4byte	.LCFI3-.LFB25
+	.4byte	.LCFI3-.LFB34
 	.byte	0xe
 	.uleb128 0x50
 	.align	4
@@ -780,10 +773,10 @@ xMbUartQueue:
 	.4byte	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.4byte	.Lframe0
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.byte	0x4
-	.4byte	.LCFI4-.LFB26
+	.4byte	.LCFI4-.LFB35
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -792,10 +785,10 @@ xMbUartQueue:
 	.4byte	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.4byte	.Lframe0
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.byte	0x4
-	.4byte	.LCFI5-.LFB27
+	.4byte	.LCFI5-.LFB36
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -804,10 +797,10 @@ xMbUartQueue:
 	.4byte	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.4byte	.Lframe0
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.byte	0x4
-	.4byte	.LCFI6-.LFB28
+	.4byte	.LCFI6-.LFB37
 	.byte	0xe
 	.uleb128 0x30
 	.align	4
@@ -828,15 +821,15 @@ xMbUartQueue:
 	.file 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0xbf6
+	.4byte	0xbce
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF153
+	.4byte	.LASF151
 	.byte	0xc
-	.4byte	.LASF154
-	.4byte	.LASF155
+	.4byte	.LASF152
+	.4byte	.LASF153
 	.4byte	.Ldebug_ranges0+0x18
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -1250,27 +1243,27 @@ xMbUartQueue:
 	.uleb128 0x3
 	.4byte	.LASF80
 	.byte	0xc
-	.byte	0x42
+	.byte	0x45
 	.4byte	0xd7
 	.uleb128 0x3
 	.4byte	.LASF81
 	.byte	0xc
-	.byte	0x44
+	.byte	0x47
 	.4byte	0x37
 	.uleb128 0x3
 	.4byte	.LASF82
 	.byte	0xc
-	.byte	0x45
+	.byte	0x48
 	.4byte	0xd7
 	.uleb128 0x3
 	.4byte	.LASF83
 	.byte	0xc
-	.byte	0x47
+	.byte	0x4a
 	.4byte	0x50
 	.uleb128 0x3
 	.4byte	.LASF84
 	.byte	0xc
-	.byte	0x4a
+	.byte	0x4d
 	.4byte	0xd0
 	.uleb128 0xa
 	.byte	0x4
@@ -1294,7 +1287,7 @@ xMbUartQueue:
 	.byte	0x3c
 	.4byte	0x388
 	.uleb128 0xe
-	.4byte	.LASF156
+	.4byte	.LASF154
 	.byte	0x2
 	.2byte	0x1b0
 	.4byte	0x117
@@ -1341,48 +1334,48 @@ xMbUartQueue:
 	.uleb128 0x7
 	.4byte	0x416
 	.uleb128 0x10
-	.4byte	.LASF157
+	.4byte	.LASF155
 	.byte	0x1
-	.byte	0x5e
+	.byte	0x5c
 	.byte	0x1
 	.4byte	0x451
 	.uleb128 0x11
 	.4byte	.LASF95
 	.byte	0x1
-	.byte	0x5e
+	.byte	0x5c
 	.4byte	0xb5
 	.uleb128 0x12
 	.4byte	.LASF96
 	.byte	0x1
-	.byte	0x60
+	.byte	0x5e
 	.4byte	0x372
 	.uleb128 0x13
 	.uleb128 0x12
 	.4byte	.LASF97
 	.byte	0x1
-	.byte	0x68
+	.byte	0x66
 	.4byte	0x372
 	.byte	0
 	.byte	0
 	.uleb128 0x14
-	.4byte	.LASF158
+	.4byte	.LASF156
 	.byte	0x1
-	.byte	0x8a
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
+	.byte	0x88
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
 	.uleb128 0x1
 	.byte	0x9c
 	.4byte	0x53e
 	.uleb128 0x15
 	.4byte	.LASF92
 	.byte	0x1
-	.byte	0x8a
+	.byte	0x88
 	.4byte	0xce
 	.4byte	.LLST0
 	.uleb128 0x16
 	.4byte	.LASF102
 	.byte	0x1
-	.byte	0x8c
+	.byte	0x8a
 	.4byte	0x315
 	.uleb128 0x2
 	.byte	0x91
@@ -1392,7 +1385,7 @@ xMbUartQueue:
 	.4byte	.LBB5
 	.4byte	.Ldebug_ranges0+0
 	.byte	0x1
-	.byte	0x96
+	.byte	0x94
 	.4byte	0x4ef
 	.uleb128 0x18
 	.4byte	0x42d
@@ -1412,7 +1405,7 @@ xMbUartQueue:
 	.byte	0
 	.uleb128 0x1c
 	.4byte	.LVL5
-	.4byte	0xb04
+	.4byte	0xaf2
 	.4byte	0x4e4
 	.uleb128 0x1d
 	.uleb128 0x1
@@ -1432,12 +1425,12 @@ xMbUartQueue:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL11
-	.4byte	0xb10
+	.4byte	0xafe
 	.byte	0
 	.byte	0
 	.uleb128 0x1c
 	.4byte	.LVL2
-	.4byte	0xb1c
+	.4byte	0xb0a
 	.4byte	0x50e
 	.uleb128 0x1d
 	.uleb128 0x1
@@ -1459,7 +1452,7 @@ xMbUartQueue:
 	.byte	0
 	.uleb128 0x1c
 	.4byte	.LVL15
-	.4byte	0xb28
+	.4byte	0xb16
 	.4byte	0x521
 	.uleb128 0x1d
 	.uleb128 0x1
@@ -1469,7 +1462,7 @@ xMbUartQueue:
 	.byte	0
 	.uleb128 0x1c
 	.4byte	.LVL16
-	.4byte	0xb28
+	.4byte	0xb16
 	.4byte	0x534
 	.uleb128 0x1d
 	.uleb128 0x1
@@ -1479,17 +1472,17 @@ xMbUartQueue:
 	.byte	0
 	.uleb128 0x1e
 	.4byte	.LVL17
-	.4byte	0xb10
+	.4byte	0xafe
 	.byte	0
 	.uleb128 0x1f
 	.4byte	.LASF100
 	.byte	0x1
 	.byte	0x4a
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x594
+	.4byte	0x582
 	.uleb128 0x15
 	.4byte	.LASF98
 	.byte	0x1
@@ -1504,109 +1497,103 @@ xMbUartQueue:
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x1e
-	.4byte	.LVL19
-	.4byte	0xb34
+	.4byte	.LVL20
+	.4byte	0xb22
 	.uleb128 0x1e
 	.4byte	.LVL21
-	.4byte	0xb3f
-	.uleb128 0x1e
-	.4byte	.LVL22
-	.4byte	0xb4b
-	.uleb128 0x1e
-	.4byte	.LVL23
-	.4byte	0xb57
+	.4byte	0xb2e
 	.byte	0
 	.uleb128 0x21
 	.4byte	.LASF101
 	.byte	0x1
-	.byte	0x78
+	.byte	0x76
 	.4byte	0x351
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x5d8
+	.4byte	0x5c6
 	.uleb128 0x22
 	.4byte	.LASF103
 	.byte	0x1
-	.byte	0x7a
+	.byte	0x78
 	.4byte	0x351
 	.byte	0
 	.uleb128 0x23
 	.4byte	.LASF104
 	.byte	0x1
-	.byte	0x7b
+	.byte	0x79
 	.4byte	0x372
 	.4byte	.LLST5
 	.uleb128 0x23
 	.4byte	.LASF105
 	.byte	0x1
-	.byte	0x7c
+	.byte	0x7a
 	.4byte	0x351
 	.4byte	.LLST6
 	.byte	0
 	.uleb128 0x24
 	.4byte	.LASF118
 	.byte	0x1
-	.byte	0xb8
+	.byte	0xb6
 	.4byte	0x351
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x853
+	.4byte	0x841
 	.uleb128 0x15
 	.4byte	.LASF106
 	.byte	0x1
-	.byte	0xb8
+	.byte	0xb6
 	.4byte	0x35c
 	.4byte	.LLST7
 	.uleb128 0x15
 	.4byte	.LASF107
 	.byte	0x1
-	.byte	0xb8
+	.byte	0xb6
 	.4byte	0x37d
 	.4byte	.LLST8
 	.uleb128 0x15
 	.4byte	.LASF108
 	.byte	0x1
-	.byte	0xb9
+	.byte	0xb7
 	.4byte	0x35c
 	.4byte	.LLST9
 	.uleb128 0x15
 	.4byte	.LASF109
 	.byte	0x1
-	.byte	0xb9
+	.byte	0xb7
 	.4byte	0x3a7
 	.4byte	.LLST10
 	.uleb128 0x23
 	.4byte	.LASF110
 	.byte	0x1
-	.byte	0xbb
+	.byte	0xb9
 	.4byte	0xe9
 	.4byte	.LLST11
 	.uleb128 0x25
 	.4byte	.LASF111
-	.4byte	0x863
+	.4byte	0x851
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$6468
+	.4byte	__FUNCTION__$6514
 	.uleb128 0x23
 	.4byte	.LASF112
 	.byte	0x1
-	.byte	0xc0
+	.byte	0xbe
 	.4byte	0x35c
 	.4byte	.LLST12
 	.uleb128 0x23
 	.4byte	.LASF113
 	.byte	0x1
-	.byte	0xc1
+	.byte	0xbf
 	.4byte	0x35c
 	.4byte	.LLST13
 	.uleb128 0x16
 	.4byte	.LASF114
 	.byte	0x1
-	.byte	0xde
+	.byte	0xdc
 	.4byte	0x29b
 	.uleb128 0x2
 	.byte	0x91
@@ -1614,15 +1601,15 @@ xMbUartQueue:
 	.uleb128 0x12
 	.4byte	.LASF115
 	.byte	0x1
-	.byte	0xf6
+	.byte	0xf4
 	.4byte	0x117
 	.uleb128 0x26
 	.4byte	0x3b2
 	.4byte	.LBB12
 	.4byte	.LBE12-.LBB12
 	.byte	0x1
-	.byte	0xf6
-	.4byte	0x708
+	.byte	0xf4
+	.4byte	0x6f6
 	.uleb128 0x27
 	.4byte	0x3c3
 	.uleb128 0x6
@@ -1651,8 +1638,8 @@ xMbUartQueue:
 	.4byte	xMbTaskHandle
 	.byte	0x9f
 	.uleb128 0x2a
-	.4byte	.LVL63
-	.4byte	0xb62
+	.4byte	.LVL61
+	.4byte	0xb3a
 	.uleb128 0x1d
 	.uleb128 0x1
 	.byte	0x5a
@@ -1698,12 +1685,12 @@ xMbUartQueue:
 	.byte	0
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL33
-	.4byte	0xb6e
+	.4byte	.LVL31
+	.4byte	0xb46
 	.uleb128 0x1c
-	.4byte	.LVL35
-	.4byte	0xb79
-	.4byte	0x74f
+	.4byte	.LVL33
+	.4byte	0xb51
+	.4byte	0x73d
 	.uleb128 0x1d
 	.uleb128 0x1
 	.byte	0x5a
@@ -1732,7 +1719,7 @@ xMbUartQueue:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$6468
+	.4byte	__FUNCTION__$6514
 	.uleb128 0x1d
 	.uleb128 0x2
 	.byte	0x71
@@ -1742,9 +1729,9 @@ xMbUartQueue:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1c
-	.4byte	.LVL42
-	.4byte	0xb84
-	.4byte	0x76d
+	.4byte	.LVL40
+	.4byte	0xb5c
+	.4byte	0x75b
 	.uleb128 0x1d
 	.uleb128 0x1
 	.byte	0x5a
@@ -1763,9 +1750,9 @@ xMbUartQueue:
 	.byte	0x48
 	.byte	0
 	.uleb128 0x1c
-	.4byte	.LVL46
-	.4byte	0xb8d
-	.4byte	0x787
+	.4byte	.LVL44
+	.4byte	0xb65
+	.4byte	0x775
 	.uleb128 0x1d
 	.uleb128 0x1
 	.byte	0x5a
@@ -1780,12 +1767,12 @@ xMbUartQueue:
 	.sleb128 -64
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL48
-	.4byte	0xb6e
+	.4byte	.LVL46
+	.4byte	0xb46
 	.uleb128 0x1c
-	.4byte	.LVL51
-	.4byte	0xb79
-	.4byte	0x7a4
+	.4byte	.LVL49
+	.4byte	0xb51
+	.4byte	0x792
 	.uleb128 0x1d
 	.uleb128 0x1
 	.byte	0x5a
@@ -1794,9 +1781,9 @@ xMbUartQueue:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1c
-	.4byte	.LVL53
-	.4byte	0xb99
-	.4byte	0x7d3
+	.4byte	.LVL51
+	.4byte	0xb71
+	.4byte	0x7c1
 	.uleb128 0x1d
 	.uleb128 0x1
 	.byte	0x5b
@@ -1827,12 +1814,12 @@ xMbUartQueue:
 	.byte	0x3e
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL55
-	.4byte	0xb6e
+	.4byte	.LVL53
+	.4byte	0xb46
 	.uleb128 0x1c
-	.4byte	.LVL57
-	.4byte	0xb79
-	.4byte	0x81b
+	.4byte	.LVL55
+	.4byte	0xb51
+	.4byte	0x809
 	.uleb128 0x1d
 	.uleb128 0x1
 	.byte	0x5a
@@ -1862,7 +1849,7 @@ xMbUartQueue:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$6468
+	.4byte	__FUNCTION__$6514
 	.uleb128 0x1d
 	.uleb128 0x2
 	.byte	0x71
@@ -1872,9 +1859,9 @@ xMbUartQueue:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1c
-	.4byte	.LVL59
-	.4byte	0xba5
-	.4byte	0x82e
+	.4byte	.LVL57
+	.4byte	0xb7d
+	.4byte	0x81c
 	.uleb128 0x1d
 	.uleb128 0x1
 	.byte	0x5b
@@ -1882,58 +1869,58 @@ xMbUartQueue:
 	.byte	0x33
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL61
-	.4byte	0xb6e
+	.4byte	.LVL59
+	.4byte	0xb46
+	.uleb128 0x1e
+	.4byte	.LVL62
+	.4byte	0xb89
+	.uleb128 0x1e
+	.4byte	.LVL63
+	.4byte	0xb46
 	.uleb128 0x1e
 	.4byte	.LVL64
-	.4byte	0xbb1
-	.uleb128 0x1e
-	.4byte	.LVL65
-	.4byte	0xb6e
-	.uleb128 0x1e
-	.4byte	.LVL66
-	.4byte	0xb4b
+	.4byte	0xb2e
 	.byte	0
 	.uleb128 0x2b
 	.4byte	0xd7
-	.4byte	0x863
+	.4byte	0x851
 	.uleb128 0x2c
 	.4byte	0xc7
 	.byte	0x11
 	.byte	0
 	.uleb128 0x7
-	.4byte	0x853
+	.4byte	0x841
 	.uleb128 0x2d
-	.4byte	.LASF159
+	.4byte	.LASF157
 	.byte	0x1
-	.2byte	0x105
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
+	.2byte	0x103
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x8f3
+	.4byte	0x8e1
 	.uleb128 0x25
 	.4byte	.LASF116
-	.4byte	0x903
+	.4byte	0x8f1
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6486
+	.4byte	__func__$6532
 	.uleb128 0x1b
 	.4byte	.LBB14
 	.4byte	.LBE14-.LBB14
-	.4byte	0x8e0
+	.4byte	0x8ce
 	.uleb128 0x2e
 	.4byte	.LASF117
 	.byte	0x1
-	.2byte	0x109
+	.2byte	0x107
 	.4byte	0xe9
 	.4byte	.LLST14
 	.uleb128 0x1e
-	.4byte	.LVL69
-	.4byte	0xbbd
+	.4byte	.LVL67
+	.4byte	0xb95
 	.uleb128 0x2a
-	.4byte	.LVL70
-	.4byte	0xbc9
+	.4byte	.LVL68
+	.4byte	0xba1
 	.uleb128 0x1d
 	.uleb128 0x1
 	.byte	0x5b
@@ -1945,13 +1932,13 @@ xMbUartQueue:
 	.byte	0x5c
 	.uleb128 0x3
 	.byte	0xa
-	.2byte	0x109
+	.2byte	0x107
 	.uleb128 0x1d
 	.uleb128 0x1
 	.byte	0x5d
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6486
+	.4byte	__func__$6532
 	.uleb128 0x1d
 	.uleb128 0x1
 	.byte	0x5e
@@ -1961,46 +1948,46 @@ xMbUartQueue:
 	.byte	0
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL67
-	.4byte	0xb4b
+	.4byte	.LVL65
+	.4byte	0xb2e
 	.uleb128 0x1e
-	.4byte	.LVL68
-	.4byte	0xbb1
+	.4byte	.LVL66
+	.4byte	0xb89
 	.byte	0
 	.uleb128 0x2b
 	.4byte	0xd7
-	.4byte	0x903
+	.4byte	0x8f1
 	.uleb128 0x2c
 	.4byte	0xc7
 	.byte	0x12
 	.byte	0
 	.uleb128 0x7
-	.4byte	0x8f3
+	.4byte	0x8e1
 	.uleb128 0x2f
 	.4byte	.LASF119
 	.byte	0x1
-	.2byte	0x10c
+	.2byte	0x10a
 	.4byte	0x351
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x958
+	.4byte	0x946
 	.uleb128 0x30
 	.4byte	.LASF120
 	.byte	0x1
-	.2byte	0x10c
+	.2byte	0x10a
 	.4byte	0x367
 	.4byte	.LLST15
 	.uleb128 0x2e
 	.4byte	.LASF121
 	.byte	0x1
-	.2byte	0x110
+	.2byte	0x10e
 	.4byte	0x35c
 	.4byte	.LLST16
 	.uleb128 0x2a
-	.4byte	.LVL74
-	.4byte	0xbd4
+	.4byte	.LVL72
+	.4byte	0xbac
 	.uleb128 0x1d
 	.uleb128 0x1
 	.byte	0x5b
@@ -2017,35 +2004,35 @@ xMbUartQueue:
 	.uleb128 0x2f
 	.4byte	.LASF122
 	.byte	0x1
-	.2byte	0x115
+	.2byte	0x113
 	.4byte	0x351
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xa14
+	.4byte	0xa02
 	.uleb128 0x30
 	.4byte	.LASF123
 	.byte	0x1
-	.2byte	0x115
-	.4byte	0xa14
+	.2byte	0x113
+	.4byte	0xa02
 	.4byte	.LLST17
 	.uleb128 0x25
 	.4byte	.LASF116
-	.4byte	0xa2a
+	.4byte	0xa18
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6494
+	.4byte	__func__$6540
 	.uleb128 0x25
 	.4byte	.LASF111
-	.4byte	0xa2f
+	.4byte	0xa1d
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$6495
+	.4byte	__FUNCTION__$6541
 	.uleb128 0x1c
-	.4byte	.LVL77
-	.4byte	0xbe0
-	.4byte	0x9d0
+	.4byte	.LVL75
+	.4byte	0xbb8
+	.4byte	0x9be
 	.uleb128 0x1d
 	.uleb128 0x1
 	.byte	0x5a
@@ -2057,13 +2044,13 @@ xMbUartQueue:
 	.byte	0x5b
 	.uleb128 0x3
 	.byte	0xa
-	.2byte	0x117
+	.2byte	0x115
 	.uleb128 0x1d
 	.uleb128 0x1
 	.byte	0x5c
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__func__$6494
+	.4byte	__func__$6540
 	.uleb128 0x1d
 	.uleb128 0x1
 	.byte	0x5d
@@ -2072,11 +2059,11 @@ xMbUartQueue:
 	.4byte	.LC43
 	.byte	0
 	.uleb128 0x1e
-	.4byte	.LVL78
-	.4byte	0xb6e
+	.4byte	.LVL76
+	.4byte	0xb46
 	.uleb128 0x2a
-	.4byte	.LVL80
-	.4byte	0xb79
+	.4byte	.LVL78
+	.4byte	0xb51
 	.uleb128 0x1d
 	.uleb128 0x1
 	.byte	0x5a
@@ -2105,7 +2092,7 @@ xMbUartQueue:
 	.byte	0x5f
 	.uleb128 0x5
 	.byte	0x3
-	.4byte	__FUNCTION__$6495
+	.4byte	__FUNCTION__$6541
 	.uleb128 0x1d
 	.uleb128 0x2
 	.byte	0x71
@@ -2120,15 +2107,15 @@ xMbUartQueue:
 	.4byte	0x367
 	.uleb128 0x2b
 	.4byte	0xd7
-	.4byte	0xa2a
+	.4byte	0xa18
 	.uleb128 0x2c
 	.4byte	0xc7
 	.byte	0x14
 	.byte	0
 	.uleb128 0x7
-	.4byte	0xa1a
+	.4byte	0xa08
 	.uleb128 0x7
-	.4byte	0xa1a
+	.4byte	0xa08
 	.uleb128 0x16
 	.4byte	.LASF124
 	.byte	0x1
@@ -2149,14 +2136,14 @@ xMbUartQueue:
 	.string	"TAG"
 	.byte	0x1
 	.byte	0x3f
-	.4byte	0xa68
+	.4byte	0xa56
 	.uleb128 0x6
 	.byte	0xf2
-	.4byte	.Ldebug_info0+3051
+	.4byte	.Ldebug_info0+3011
 	.sleb128 0
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0xa6e
+	.4byte	0xa5c
 	.uleb128 0x7
 	.4byte	0x367
 	.uleb128 0x16
@@ -2185,7 +2172,7 @@ xMbUartQueue:
 	.4byte	bTxStateEnabled
 	.uleb128 0x2b
 	.4byte	0x35c
-	.4byte	0xab6
+	.4byte	0xaa4
 	.uleb128 0x2c
 	.4byte	0xc7
 	.byte	0xff
@@ -2194,7 +2181,7 @@ xMbUartQueue:
 	.4byte	.LASF129
 	.byte	0x1
 	.byte	0x47
-	.4byte	0xaa6
+	.4byte	0xa94
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	ucBuffer
@@ -2212,20 +2199,20 @@ xMbUartQueue:
 	.4byte	.LASF131
 	.byte	0xd
 	.byte	0x6c
-	.4byte	0xae8
+	.4byte	0xad6
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0xad8
+	.4byte	0xac6
 	.uleb128 0x33
 	.4byte	.LASF132
 	.byte	0xd
 	.byte	0x6e
-	.4byte	0xae8
+	.4byte	0xad6
 	.uleb128 0x33
 	.4byte	.LASF133
 	.byte	0xd
 	.byte	0x70
-	.4byte	0xae8
+	.4byte	0xad6
 	.uleb128 0x34
 	.4byte	.LASF134
 	.4byte	.LASF134
@@ -2246,82 +2233,72 @@ xMbUartQueue:
 	.4byte	.LASF137
 	.byte	0x9
 	.2byte	0x665
-	.uleb128 0x35
-	.4byte	.LASF138
-	.4byte	.LASF138
-	.byte	0xc
-	.byte	0x57
 	.uleb128 0x34
-	.4byte	.LASF139
-	.4byte	.LASF139
+	.4byte	.LASF138
+	.4byte	.LASF138
 	.byte	0x2
 	.2byte	0x42d
 	.uleb128 0x34
-	.4byte	.LASF140
-	.4byte	.LASF140
+	.4byte	.LASF139
+	.4byte	.LASF139
 	.byte	0x2
 	.2byte	0x400
-	.uleb128 0x35
-	.4byte	.LASF141
-	.4byte	.LASF141
-	.byte	0xc
-	.byte	0x59
 	.uleb128 0x34
-	.4byte	.LASF142
-	.4byte	.LASF142
+	.4byte	.LASF140
+	.4byte	.LASF140
 	.byte	0x2
 	.2byte	0x151
 	.uleb128 0x35
-	.4byte	.LASF143
-	.4byte	.LASF143
+	.4byte	.LASF141
+	.4byte	.LASF141
 	.byte	0xb
 	.byte	0x57
 	.uleb128 0x35
-	.4byte	.LASF144
-	.4byte	.LASF144
+	.4byte	.LASF142
+	.4byte	.LASF142
 	.byte	0xb
 	.byte	0x6b
 	.uleb128 0x36
-	.4byte	.LASF160
-	.4byte	.LASF160
+	.4byte	.LASF158
+	.4byte	.LASF158
 	.uleb128 0x34
-	.4byte	.LASF145
-	.4byte	.LASF145
+	.4byte	.LASF143
+	.4byte	.LASF143
 	.byte	0xa
 	.2byte	0x1f1
 	.uleb128 0x34
-	.4byte	.LASF146
-	.4byte	.LASF146
+	.4byte	.LASF144
+	.4byte	.LASF144
 	.byte	0xa
 	.2byte	0x215
 	.uleb128 0x34
-	.4byte	.LASF147
-	.4byte	.LASF147
+	.4byte	.LASF145
+	.4byte	.LASF145
 	.byte	0xa
 	.2byte	0x30a
 	.uleb128 0x34
-	.4byte	.LASF148
-	.4byte	.LASF148
+	.4byte	.LASF146
+	.4byte	.LASF146
 	.byte	0x2
 	.2byte	0x2fb
 	.uleb128 0x34
-	.4byte	.LASF149
-	.4byte	.LASF149
+	.4byte	.LASF147
+	.4byte	.LASF147
 	.byte	0xa
 	.2byte	0x220
 	.uleb128 0x35
-	.4byte	.LASF150
-	.4byte	.LASF150
+	.4byte	.LASF148
+	.4byte	.LASF148
 	.byte	0x6
 	.byte	0x4f
 	.uleb128 0x34
-	.4byte	.LASF151
-	.4byte	.LASF151
+	.4byte	.LASF149
+	.4byte	.LASF149
 	.byte	0xa
 	.2byte	0x250
 	.uleb128 0x35
-	.4byte	.LASF152
-	.4byte	.LASF152
+	.4byte	.LASF150
+	.4byte	.LASF150
 	.byte	0xe
 	.byte	0x29
 	.uleb128 0x37
@@ -3093,7 +3070,7 @@ xMbUartQueue:
 	.2byte	0x1
 	.byte	0x52
 	.4byte	.LVL1
-	.4byte	.LFE24
+	.4byte	.LFE33
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3143,11 +3120,11 @@ xMbUartQueue:
 	.4byte	0
 .LLST4:
 	.4byte	.LVL18
-	.4byte	.LVL20
+	.4byte	.LVL19
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL20
-	.4byte	.LFE21
+	.4byte	.LVL19
+	.4byte	.LFE30
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3156,12 +3133,21 @@ xMbUartQueue:
 	.4byte	0
 	.4byte	0
 .LLST5:
-	.4byte	.LVL24
-	.4byte	.LVL25
+	.4byte	.LVL22
+	.4byte	.LVL23
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
+	.4byte	.LVL23
 	.4byte	.LVL25
+	.2byte	0x7
+	.byte	0xa
+	.2byte	0x102
+	.byte	0x73
+	.sleb128 0
+	.byte	0x1c
+	.byte	0x9f
+	.4byte	.LVL26
 	.4byte	.LVL27
 	.2byte	0x7
 	.byte	0xa
@@ -3170,17 +3156,8 @@ xMbUartQueue:
 	.sleb128 0
 	.byte	0x1c
 	.byte	0x9f
+	.4byte	.LVL27
 	.4byte	.LVL28
-	.4byte	.LVL29
-	.2byte	0x7
-	.byte	0xa
-	.2byte	0x102
-	.byte	0x73
-	.sleb128 0
-	.byte	0x1c
-	.byte	0x9f
-	.4byte	.LVL29
-	.4byte	.LVL30
 	.2byte	0x7
 	.byte	0xa
 	.2byte	0x102
@@ -3191,29 +3168,29 @@ xMbUartQueue:
 	.4byte	0
 	.4byte	0
 .LLST6:
+	.4byte	.LVL22
 	.4byte	.LVL24
-	.4byte	.LVL26
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
-	.4byte	.LVL26
-	.4byte	.LVL27
+	.4byte	.LVL24
+	.4byte	.LVL25
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL28
-	.4byte	.LFE23
+	.4byte	.LVL26
+	.4byte	.LFE32
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
 .LLST7:
-	.4byte	.LVL31
-	.4byte	.LVL34
+	.4byte	.LVL29
+	.4byte	.LVL32
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL34
-	.4byte	.LFE25
+	.4byte	.LVL32
+	.4byte	.LFE34
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3222,22 +3199,22 @@ xMbUartQueue:
 	.4byte	0
 	.4byte	0
 .LLST8:
-	.4byte	.LVL31
-	.4byte	.LVL43
+	.4byte	.LVL29
+	.4byte	.LVL41
 	.2byte	0x1
 	.byte	0x53
+	.4byte	.LVL41
 	.4byte	.LVL43
-	.4byte	.LVL45
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -64
-	.4byte	.LVL45
-	.4byte	.LVL46-1
+	.4byte	.LVL43
+	.4byte	.LVL44-1
 	.2byte	0x2
 	.byte	0x7b
 	.sleb128 0
-	.4byte	.LVL46-1
-	.4byte	.LFE25
+	.4byte	.LVL44-1
+	.4byte	.LFE34
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3246,18 +3223,18 @@ xMbUartQueue:
 	.4byte	0
 	.4byte	0
 .LLST9:
-	.4byte	.LVL31
-	.4byte	.LVL39
+	.4byte	.LVL29
+	.4byte	.LVL37
 	.2byte	0x1
 	.byte	0x54
-	.4byte	.LVL39
-	.4byte	.LVL40
+	.4byte	.LVL37
+	.4byte	.LVL38
 	.2byte	0x3
 	.byte	0x74
 	.sleb128 5
 	.byte	0x9f
-	.4byte	.LVL40
-	.4byte	.LFE25
+	.4byte	.LVL38
+	.4byte	.LFE34
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3266,18 +3243,18 @@ xMbUartQueue:
 	.4byte	0
 	.4byte	0
 .LLST10:
-	.4byte	.LVL31
-	.4byte	.LVL37
+	.4byte	.LVL29
+	.4byte	.LVL35
 	.2byte	0x1
 	.byte	0x55
-	.4byte	.LVL37
-	.4byte	.LVL38
+	.4byte	.LVL35
+	.4byte	.LVL36
 	.2byte	0x3
 	.byte	0x75
 	.sleb128 2
 	.byte	0x9f
-	.4byte	.LVL38
-	.4byte	.LFE25
+	.4byte	.LVL36
+	.4byte	.LFE34
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3286,116 +3263,116 @@ xMbUartQueue:
 	.4byte	0
 	.4byte	0
 .LLST11:
-	.4byte	.LVL32
-	.4byte	.LVL47
+	.4byte	.LVL30
+	.4byte	.LVL45
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
+	.4byte	.LVL45
 	.4byte	.LVL47
-	.4byte	.LVL49
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL49
-	.4byte	.LVL50
+	.4byte	.LVL47
+	.4byte	.LVL48
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -76
+	.4byte	.LVL50
+	.4byte	.LVL52
+	.2byte	0x1
+	.byte	0x52
 	.4byte	.LVL52
 	.4byte	.LVL54
 	.2byte	0x1
-	.byte	0x52
-	.4byte	.LVL54
-	.4byte	.LVL56
-	.2byte	0x1
 	.byte	0x53
-	.4byte	.LVL56
-	.4byte	.LVL57-1
+	.4byte	.LVL54
+	.4byte	.LVL55-1
 	.2byte	0x3
 	.byte	0x91
 	.sleb128 -76
+	.4byte	.LVL56
 	.4byte	.LVL58
-	.4byte	.LVL60
 	.2byte	0x1
 	.byte	0x53
-	.4byte	.LVL60
-	.4byte	.LFE25
+	.4byte	.LVL58
+	.4byte	.LFE34
 	.2byte	0x1
 	.byte	0x54
 	.4byte	0
 	.4byte	0
 .LLST12:
+	.4byte	.LVL34
 	.4byte	.LVL36
-	.4byte	.LVL38
 	.2byte	0x2
 	.byte	0x30
 	.byte	0x9f
-	.4byte	.LVL38
-	.4byte	.LVL51
+	.4byte	.LVL36
+	.4byte	.LVL49
 	.2byte	0x1
 	.byte	0x57
-	.4byte	.LVL52
-	.4byte	.LFE25
+	.4byte	.LVL50
+	.4byte	.LFE34
 	.2byte	0x1
 	.byte	0x57
 	.4byte	0
 	.4byte	0
 .LLST13:
-	.4byte	.LVL36
-	.4byte	.LVL41
+	.4byte	.LVL34
+	.4byte	.LVL39
 	.2byte	0x2
 	.byte	0x33
 	.byte	0x9f
-	.4byte	.LVL41
-	.4byte	.LVL44
+	.4byte	.LVL39
+	.4byte	.LVL42
 	.2byte	0x1
 	.byte	0x55
-	.4byte	.LVL44
-	.4byte	.LVL46-1
+	.4byte	.LVL42
+	.4byte	.LVL44-1
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -60
 	.4byte	0
 	.4byte	0
 .LLST14:
-	.4byte	.LVL69
-	.4byte	.LVL70-1
+	.4byte	.LVL67
+	.4byte	.LVL68-1
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL70
-	.4byte	.LFE26
+	.4byte	.LVL68
+	.4byte	.LFE35
 	.2byte	0x1
 	.byte	0x5a
 	.4byte	0
 	.4byte	0
 .LLST15:
-	.4byte	.LVL71
-	.4byte	.LVL72
+	.4byte	.LVL69
+	.4byte	.LVL70
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL72
-	.4byte	.LVL73
+	.4byte	.LVL70
+	.4byte	.LVL71
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -48
-	.4byte	.LVL73
-	.4byte	.LVL74-1
+	.4byte	.LVL71
+	.4byte	.LVL72-1
 	.2byte	0x2
 	.byte	0x7b
 	.sleb128 0
-	.4byte	.LVL74-1
-	.4byte	.LFE27
+	.4byte	.LVL72-1
+	.4byte	.LFE36
 	.2byte	0x2
 	.byte	0x91
 	.sleb128 -48
 	.4byte	0
 	.4byte	0
 .LLST16:
-	.4byte	.LVL74
-	.4byte	.LVL75
+	.4byte	.LVL72
+	.4byte	.LVL73
 	.2byte	0x1
 	.byte	0x5a
-	.4byte	.LVL75
-	.4byte	.LFE27
+	.4byte	.LVL73
+	.4byte	.LFE36
 	.2byte	0x3
 	.byte	0x7a
 	.sleb128 1
@@ -3403,23 +3380,23 @@ xMbUartQueue:
 	.4byte	0
 	.4byte	0
 .LLST17:
-	.4byte	.LVL76
-	.4byte	.LVL79
+	.4byte	.LVL74
+	.4byte	.LVL77
 	.2byte	0x1
 	.byte	0x52
+	.4byte	.LVL77
 	.4byte	.LVL79
-	.4byte	.LVL81
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
 	.byte	0x52
 	.byte	0x9f
-	.4byte	.LVL81
-	.4byte	.LVL82
+	.4byte	.LVL79
+	.4byte	.LVL80
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL82
-	.4byte	.LFE28
+	.4byte	.LVL80
+	.4byte	.LFE37
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -3435,20 +3412,20 @@ xMbUartQueue:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB24
-	.4byte	.LFE24-.LFB24
-	.4byte	.LFB21
-	.4byte	.LFE21-.LFB21
-	.4byte	.LFB23
-	.4byte	.LFE23-.LFB23
-	.4byte	.LFB25
-	.4byte	.LFE25-.LFB25
-	.4byte	.LFB26
-	.4byte	.LFE26-.LFB26
-	.4byte	.LFB27
-	.4byte	.LFE27-.LFB27
-	.4byte	.LFB28
-	.4byte	.LFE28-.LFB28
+	.4byte	.LFB33
+	.4byte	.LFE33-.LFB33
+	.4byte	.LFB30
+	.4byte	.LFE30-.LFB30
+	.4byte	.LFB32
+	.4byte	.LFE32-.LFB32
+	.4byte	.LFB34
+	.4byte	.LFE34-.LFB34
+	.4byte	.LFB35
+	.4byte	.LFE35-.LFB35
+	.4byte	.LFB36
+	.4byte	.LFE36-.LFB36
+	.4byte	.LFB37
+	.4byte	.LFE37-.LFB37
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
@@ -3459,42 +3436,42 @@ xMbUartQueue:
 	.4byte	.LBE9
 	.4byte	0
 	.4byte	0
-	.4byte	.LFB24
-	.4byte	.LFE24
-	.4byte	.LFB21
-	.4byte	.LFE21
-	.4byte	.LFB23
-	.4byte	.LFE23
-	.4byte	.LFB25
-	.4byte	.LFE25
-	.4byte	.LFB26
-	.4byte	.LFE26
-	.4byte	.LFB27
-	.4byte	.LFE27
-	.4byte	.LFB28
-	.4byte	.LFE28
+	.4byte	.LFB33
+	.4byte	.LFE33
+	.4byte	.LFB30
+	.4byte	.LFE30
+	.4byte	.LFB32
+	.4byte	.LFE32
+	.4byte	.LFB34
+	.4byte	.LFE34
+	.4byte	.LFB35
+	.4byte	.LFE35
+	.4byte	.LFB36
+	.4byte	.LFE36
+	.4byte	.LFB37
+	.4byte	.LFE37
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
-.LASF149:
+.LASF147:
 	.string	"uart_driver_delete"
-.LASF140:
+.LASF139:
 	.string	"vTaskSuspend"
-.LASF156:
+.LASF154:
 	.string	"xTaskCreate"
 .LASF15:
 	.string	"size_t"
-.LASF159:
+.LASF157:
 	.string	"vMBPortSerialClose"
-.LASF146:
+.LASF144:
 	.string	"uart_driver_install"
 .LASF47:
 	.string	"UART_HW_FLOWCTRL_DISABLE"
 .LASF3:
 	.string	"__uint8_t"
-.LASF145:
+.LASF143:
 	.string	"uart_param_config"
 .LASF71:
 	.string	"type"
@@ -3512,7 +3489,7 @@ xMbUartQueue:
 	.string	"baud_rate"
 .LASF61:
 	.string	"UART_DATA"
-.LASF154:
+.LASF152:
 	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freemodbus/port/portserial.c"
 .LASF26:
 	.string	"QueueHandle_t"
@@ -3520,8 +3497,6 @@ xMbUartQueue:
 	.string	"stop_bits"
 .LASF36:
 	.string	"UART_STOP_BITS_2"
-.LASF141:
-	.string	"vMBPortExitCritical"
 .LASF88:
 	.string	"eMBParity"
 .LASF136:
@@ -3546,7 +3521,7 @@ xMbUartQueue:
 	.string	"__err_rc"
 .LASF81:
 	.string	"UCHAR"
-.LASF142:
+.LASF140:
 	.string	"xTaskCreatePinnedToCore"
 .LASF113:
 	.string	"ucData"
@@ -3554,13 +3529,13 @@ xMbUartQueue:
 	.string	"UART_PARITY_ERR"
 .LASF31:
 	.string	"UART_DATA_8_BITS"
-.LASF144:
+.LASF142:
 	.string	"esp_log_write"
 .LASF27:
 	.string	"TaskHandle_t"
 .LASF97:
 	.string	"usCnt"
-.LASF151:
+.LASF149:
 	.string	"uart_write_bytes"
 .LASF85:
 	.string	"MB_PAR_NONE"
@@ -3590,7 +3565,7 @@ xMbUartQueue:
 	.string	"xErr"
 .LASF28:
 	.string	"UART_DATA_5_BITS"
-.LASF150:
+.LASF148:
 	.string	"_esp_error_check_failed"
 .LASF8:
 	.string	"unsigned int"
@@ -3606,7 +3581,7 @@ xMbUartQueue:
 	.string	"UART_FIFO_OVF"
 .LASF111:
 	.string	"__FUNCTION__"
-.LASF153:
+.LASF151:
 	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
 .LASF121:
 	.string	"ucLength"
@@ -3616,7 +3591,7 @@ xMbUartQueue:
 	.string	"xMBPortSerialInit"
 .LASF63:
 	.string	"UART_BUFFER_FULL"
-.LASF139:
+.LASF138:
 	.string	"vTaskResume"
 .LASF120:
 	.string	"ucByte"
@@ -3640,7 +3615,7 @@ xMbUartQueue:
 	.string	"sizetype"
 .LASF128:
 	.string	"bTxStateEnabled"
-.LASF143:
+.LASF141:
 	.string	"esp_log_timestamp"
 .LASF101:
 	.string	"xMBPortSerialTxPoll"
@@ -3680,8 +3655,6 @@ xMbUartQueue:
 	.string	"ULONG"
 .LASF106:
 	.string	"ucPORT"
-.LASF138:
-	.string	"vMBPortEnterCritical"
 .LASF65:
 	.string	"UART_FRAME_ERR"
 .LASF22:
@@ -3696,7 +3669,7 @@ xMbUartQueue:
 	.string	"UART_DATA_6_BITS"
 .LASF2:
 	.string	"short int"
-.LASF160:
+.LASF158:
 	.string	"memset"
 .LASF57:
 	.string	"flow_ctrl"
@@ -3704,7 +3677,7 @@ xMbUartQueue:
 	.string	"ESP_LOG_ERROR"
 .LASF62:
 	.string	"UART_BREAK"
-.LASF147:
+.LASF145:
 	.string	"uart_set_rx_timeout"
 .LASF116:
 	.string	"__func__"
@@ -3724,11 +3697,11 @@ xMbUartQueue:
 	.string	"char"
 .LASF79:
 	.string	"ESP_LOG_VERBOSE"
-.LASF157:
+.LASF155:
 	.string	"vMBPortSerialRxPoll"
 .LASF4:
 	.string	"__uint16_t"
-.LASF148:
+.LASF146:
 	.string	"vTaskDelete"
 .LASF74:
 	.string	"ESP_LOG_NONE"
@@ -3746,11 +3719,11 @@ xMbUartQueue:
 	.string	"rx_flow_ctrl_thresh"
 .LASF42:
 	.string	"UART_NUM_MAX"
-.LASF158:
+.LASF156:
 	.string	"vUartTask"
 .LASF127:
 	.string	"bRxStateEnabled"
-.LASF155:
+.LASF153:
 	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/freemodbus"
 .LASF21:
 	.string	"TaskFunction_t"
@@ -3778,7 +3751,7 @@ xMbUartQueue:
 	.string	"bTxEnable"
 .LASF112:
 	.string	"ucParity"
-.LASF152:
+.LASF150:
 	.string	"__assert_func"
 .LASF103:
 	.string	"bStatus"

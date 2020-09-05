@@ -23,7 +23,7 @@
 	.type	set_config_endpoint, @function
 set_config_endpoint:
 .LFB34:
-	.file 1 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/src/scheme_ble.c"
+	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/src/scheme_ble.c"
 	.loc 1 121 0
 .LVL0:
 	entry	sp, 32
@@ -276,22 +276,22 @@ delete_config:
 	.string	"\033[0;31mE (%d) %s: Error allocating memory for new configuration\033[0m\n"
 	.section	.rodata
 .LC0:
-	.byte	-5
-	.byte	52
+	.byte	7
+	.byte	-19
 	.byte	-101
-	.byte	95
-	.byte	-128
-	.byte	0
-	.byte	0
-	.byte	-128
-	.byte	0
-	.byte	16
-	.byte	0
-	.byte	0
-	.byte	-1
-	.byte	-1
-	.byte	0
-	.byte	0
+	.byte	45
+	.byte	15
+	.byte	6
+	.byte	124
+	.byte	-121
+	.byte	-101
+	.byte	67
+	.byte	67
+	.byte	107
+	.byte	77
+	.byte	36
+	.byte	117
+	.byte	23
 	.section	.text.new_config,"ax",@progbits
 	.literal_position
 	.literal .LC19, .LC1
@@ -805,19 +805,19 @@ custom_service_uuid:
 .LEFDE16:
 	.text
 .Letext0:
-	.file 2 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_default_types.h"
-	.file 3 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h"
-	.file 4 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
-	.file 5 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
-	.file 6 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h"
-	.file 7 "/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log.h"
-	.file 8 "/home/dieter/SoftwareDevelop/esp-idf/components/bt/include/esp_bt.h"
-	.file 9 "/home/dieter/SoftwareDevelop/esp-idf/components/protocomm/include/common/protocomm.h"
-	.file 10 "/home/dieter/SoftwareDevelop/esp-idf/components/protocomm/include/transports/protocomm_ble.h"
-	.file 11 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_wifi_types.h"
-	.file 12 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/include/wifi_provisioning/manager.h"
-	.file 13 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/string.h"
-	.file 14 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h"
+	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+	.file 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
+	.file 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+	.file 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/include/esp_bt.h"
+	.file 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h"
+	.file 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/transports/protocomm_ble.h"
+	.file 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+	.file 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/include/wifi_provisioning/manager.h"
+	.file 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+	.file 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
 	.4byte	0xb90
@@ -3412,14 +3412,12 @@ custom_service_uuid:
 	.string	"name"
 .LASF90:
 	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/wifi_provisioning"
-.LASF3:
-	.string	"unsigned char"
 .LASF52:
 	.string	"WIFI_PROV_DEINIT"
 .LASF29:
 	.string	"ESP_BT_MODE_BTDM"
-.LASF89:
-	.string	"/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/src/scheme_ble.c"
+.LASF3:
+	.string	"unsigned char"
 .LASF35:
 	.string	"device_name"
 .LASF86:
@@ -3488,6 +3486,8 @@ custom_service_uuid:
 	.string	"wifi_prov_scheme"
 .LASF48:
 	.string	"WIFI_PROV_CRED_RECV"
+.LASF89:
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/src/scheme_ble.c"
 .LASF23:
 	.string	"ESP_LOG_VERBOSE"
 .LASF71:

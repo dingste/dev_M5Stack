@@ -1203,7 +1203,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 1
@@ -1614,7 +1614,7 @@ typedef enum {
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/spi_reg.h" 2
 # 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/spi_periph.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/spi_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/spi_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/spi_struct.h"
 typedef volatile struct {
     union {
         struct {
@@ -2329,45 +2329,57 @@ typedef struct {
 
 
 } spi_bus_config_t;
-# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+# 108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
 
-# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
+# 108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
 _Bool 
-# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
-    spicommon_periph_claim(spi_host_device_t host);
+# 108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+    spicommon_periph_claim(spi_host_device_t host, const char* source);
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
 
-
-
-
-
-
-
-
-# 114 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
 _Bool 
-# 114 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+    spicommon_periph_in_use(spi_host_device_t host);
+
+
+
+
+
+
+
+
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
+_Bool 
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
     spicommon_periph_free(spi_host_device_t host);
-# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
 
-# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
+# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
 _Bool 
-# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
     spicommon_dma_chan_claim(int dma_chan);
-# 134 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
 
-# 134 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
+# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
 _Bool 
-# 134 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+    spicommon_dma_chan_in_use(int dma_chan);
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
+_Bool 
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
     spicommon_dma_chan_free(int dma_chan);
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+# 209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
 esp_err_t spicommon_bus_initialize_io(spi_host_device_t host, const spi_bus_config_t *bus_config, int dma_chan, uint32_t flags, uint32_t *flags_o);
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
 esp_err_t spicommon_bus_free_io(spi_host_device_t host) __attribute__((deprecated));
-# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
 esp_err_t spicommon_bus_free_io_cfg(const spi_bus_config_t *bus_cfg);
-# 213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+# 245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
 void spicommon_cs_initialize(spi_host_device_t host, int cs_io_num, int cs_num, int force_gpio_matrix);
-# 222 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+# 254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
 void spicommon_cs_free(spi_host_device_t host, int cs_num) __attribute__((deprecated));
 
 
@@ -2376,26 +2388,26 @@ void spicommon_cs_free(spi_host_device_t host, int cs_num) __attribute__((deprec
 
 
 void spicommon_cs_free_io(int cs_gpio_num);
-# 245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+# 277 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
 void spicommon_setup_dma_desc_links(lldesc_t *dmadesc, int len, const uint8_t *data, 
-# 245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
+# 277 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
                                                                                     _Bool 
-# 245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+# 277 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
                                                                                          isrx);
-# 254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+# 286 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
 spi_dev_t *spicommon_hw_for_host(spi_host_device_t host);
-# 263 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+# 295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
 int spicommon_irqsource_for_host(spi_host_device_t host);
 
 
 
 
 typedef void(*dmaworkaround_cb_t)(void *arg);
-# 291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
 
-# 291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
+# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
 _Bool 
-# 291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
     spicommon_dmaworkaround_req_reset(int dmachan, dmaworkaround_cb_t cb, void *arg);
 
 
@@ -2405,11 +2417,11 @@ _Bool
 
 
 
-# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
+# 331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h" 3 4
 _Bool 
-# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+# 331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
     spicommon_dmaworkaround_reset_in_progress();
-# 308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
+# 340 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_common.h"
 void spicommon_dmaworkaround_idle(int dmachan);
 
 
@@ -3212,6 +3224,77 @@ typedef void (*TaskFunction_t)( void * );
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/deprecated_definitions.h" 1
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 2
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void *get_sp()
+{
+    void *sp;
+    asm volatile ("mov %0, sp;" : "=r" (sp));
+    return sp;
+}
+
+
+
+
+
+static inline void cpu_write_dtlb(uint32_t vpn, unsigned attr)
+{
+    asm volatile ("wdtlb  %1, %0; dsync\n" :: "r" (vpn), "r" (attr));
+}
+
+
+static inline void cpu_write_itlb(unsigned vpn, unsigned attr)
+{
+    asm volatile ("witlb  %1, %0; isync\n" :: "r" (vpn), "r" (attr));
+}
+
+static inline void cpu_init_memctl()
+{
+
+    uint32_t memctl = 0x00000000;
+    asm volatile ("wsr %0, " "MEMCTL" : : "r" (memctl));;
+
+}
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void cpu_configure_region_protection()
+{
+    const uint32_t pages_to_protect[] = {0x00000000, 0x80000000, 0xa0000000, 0xc0000000, 0xe0000000};
+    for (int i = 0; i < sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
+        cpu_write_dtlb(pages_to_protect[i], 0xf);
+        cpu_write_itlb(pages_to_protect[i], 0xf);
+    }
+    cpu_write_dtlb(0x20000000, 0);
+    cpu_write_itlb(0x20000000, 0);
+}
+
+
+
+
+
+void esp_cpu_stall(int cpu_id);
+
+
+
+
+
+void esp_cpu_unstall(int cpu_id);
+
+
+
+
+
+void esp_cpu_reset(int cpu_id);
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 3 4
+_Bool 
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+    esp_cpu_in_ocd_debug_mode();
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+
 
 
 
@@ -3585,6 +3668,9 @@ void heap_caps_dump_all();
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
 # 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
 typedef struct {
@@ -3640,7 +3726,7 @@ inline static
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_dma_capable(const void *p)
+                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
 {
     return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
 }
@@ -3649,24 +3735,37 @@ inline static
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_executable(const void *p)
+                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
+{
+    return ((intptr_t)p) % 4 == 0;
+}
+
+inline static 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
 {
     intptr_t ip = (intptr_t) p;
     return (ip >= 0x400D0000 && ip < 0x40400000)
         || (ip >= 0x40080000 && ip < 0x400A0000)
+        || (ip >= 0x40000000 && ip < 0x40070000)
+
+        || (ip >= 0x40078000 && ip < 0x40080000)
+
         || (ip >= 0x400C0000 && ip < 0x400C2000);
 }
 
 inline static 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_byte_accessible(const void *p)
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
 {
     
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x40000000);
 
@@ -3676,14 +3775,14 @@ inline static
 }
 
 inline static 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_internal(const void *p) {
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
     
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
     r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
@@ -3692,18 +3791,18 @@ inline static
 
 
 inline static 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_external_ram(const void *p) {
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
     return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
 }
 
 inline static 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_iram(const void *p) {
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
 
 
 
@@ -3712,19 +3811,35 @@ inline static
 }
 
 inline static 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_drom(const void *p) {
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
     return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
 }
 
 inline static 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_dram(const void *p) {
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
     return ((intptr_t)p >= 0x3FAE0000 && (intptr_t)p < 0x40000000);
+}
+
+inline static 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
+    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x3FFFFFFC);
+}
+
+inline static 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
+    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400BFFFC);
 }
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
@@ -3773,24 +3888,24 @@ typedef struct {
 void vPortAssertIfInISR();
 # 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortCPUInitializeMutex(portMUX_TYPE *mux);
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vTaskExitCritical( portMUX_TYPE *mux );
 void vTaskEnterCritical( portMUX_TYPE *mux );
 void vPortCPUAcquireMutex(portMUX_TYPE *mux);
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
 _Bool 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
     vPortCPUAcquireMutexTimeout(portMUX_TYPE *mux, int timeout_cycles);
 void vPortCPUReleaseMutex(portMUX_TYPE *mux);
-# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline unsigned portENTER_CRITICAL_NESTED() {
  unsigned state = ({ unsigned __tmp; __asm__ __volatile__( "rsil	%0, " "3" "\n" : "=a" (__tmp) : : "memory" ); __tmp;});
  ;
  return state;
 }
-# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, uint32_t *set) {
     __asm__ __volatile__ (
         "WSR 	    %2,SCOMPARE1 \n"
@@ -3799,20 +3914,20 @@ static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, u
         :"r"(addr), "r"(compare), "0"(*set)
         );
 }
-# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortYield( void );
 void _frxt_setup_switch( void );
 
 
 
 static inline uint32_t xPortGetCoreID();
-# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef struct {
 
  volatile StackType_t* coproc_area;
-# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 } xMPU_SETTINGS;
-# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 extern void esp_vApplicationIdleHook( void );
 extern void esp_vApplicationTickHook( void );
 
@@ -3823,10 +3938,10 @@ extern void esp_vApplicationTickHook( void );
 
 void _xt_coproc_release(volatile void * coproc_sa_base);
 void vApplicationSleep( TickType_t xExpectedIdleTime );
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/mpu_wrappers.h" 1
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h" 1
@@ -3845,7 +3960,7 @@ void vApplicationSleep( TickType_t xExpectedIdleTime );
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 1
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
 typedef volatile struct {
     uint32_t bt_select;
     uint32_t out;
@@ -4181,7 +4296,7 @@ void esp_intr_noniram_disable();
 void esp_intr_noniram_enable();
 # 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
 extern const uint32_t GPIO_PIN_MUX_REG[40];
 # 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
@@ -4656,25 +4771,25 @@ typedef enum {
 typedef esp_sleep_source_t esp_sleep_wakeup_cause_t;
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_disable_wakeup_source(esp_sleep_source_t source);
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ulp_wakeup();
-# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_timer_wakeup(uint64_t time_in_us);
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_touchpad_wakeup();
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 touch_pad_t esp_sleep_get_touchpad_wakeup_status();
-# 161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext0_wakeup(gpio_num_t gpio_num, int level);
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext1_wakeup(uint64_t mask, esp_sleep_ext1_wakeup_mode_t mode);
-# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_gpio_wakeup();
-# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_uart_wakeup(int uart_num);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 uint64_t esp_sleep_get_ext1_wakeup_status();
-# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
                                    esp_sleep_pd_option_t option);
 
@@ -4684,11 +4799,11 @@ esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
 
 
 void esp_deep_sleep_start() __attribute__((noreturn));
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_light_sleep_start();
-# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_deep_sleep(uint64_t time_in_us) __attribute__((noreturn));
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated));
 
 
@@ -4698,7 +4813,7 @@ void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated)
 
 
 esp_sleep_wakeup_cause_t esp_sleep_get_wakeup_cause();
-# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_wake_deep_sleep(void);
 
 
@@ -4706,7 +4821,7 @@ void esp_wake_deep_sleep(void);
 
 
 typedef void (*esp_deep_sleep_wake_stub_fn_t)(void);
-# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_set_deep_sleep_wake_stub(esp_deep_sleep_wake_stub_fn_t new_stub);
 
 
@@ -4730,6 +4845,12 @@ void esp_default_wake_deep_sleep(void);
 
 void esp_deep_sleep_disable_rom_logging(void);
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+       
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+const char* esp_get_idf_version(void);
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
 
 
 
@@ -4741,7 +4862,7 @@ typedef enum {
     ESP_MAC_BT,
     ESP_MAC_ETH,
 } esp_mac_type_t;
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef enum {
     ESP_RST_UNKNOWN,
     ESP_RST_POWERON,
@@ -4784,9 +4905,9 @@ typedef void (*shutdown_handler_t)(void);
 
 
 esp_err_t esp_register_shutdown_handler(shutdown_handler_t handle);
-# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_restart(void) __attribute__ ((noreturn));
-# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
@@ -4795,11 +4916,11 @@ void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
 esp_reset_reason_t esp_reset_reason(void);
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_time(void) __attribute__ ((deprecated));
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_get_free_heap_size(void);
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
@@ -4809,36 +4930,28 @@ uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
 uint32_t esp_get_minimum_free_heap_size( void );
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_random(void);
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_fill_random(void *buf, size_t len);
-# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_set(uint8_t *mac);
-# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_get(uint8_t *mac);
-# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_custom(uint8_t *mac);
-# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_default(uint8_t *mac);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t system_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_read_mac(uint8_t* mac, esp_mac_type_t type);
-# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_derive_local_mac(uint8_t* local_mac, const uint8_t* universal_mac);
-# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 const char* system_get_sdk_version(void) __attribute__ ((deprecated));
-
-
-
-
-
-
-
-const char* esp_get_idf_version(void);
 
 
 
@@ -4847,7 +4960,7 @@ const char* esp_get_idf_version(void);
 typedef enum {
     CHIP_ESP32 = 1,
 } esp_chip_model_t;
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef struct {
     esp_chip_model_t model;
     uint32_t features;
@@ -4860,10 +4973,10 @@ typedef struct {
 
 
 void esp_chip_info(esp_chip_info_t* out_info);
-# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters, BaseType_t xRunPrivileged ) ;
-# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 BaseType_t xPortStartScheduler( void ) ;
 
 
@@ -4899,14 +5012,14 @@ BaseType_t xPortInIsrContext();
 
 
 BaseType_t xPortInterruptedFromISRContext();
-# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  struct xMEMORY_REGION;
  void vPortStoreTaskMPUSettings( xMPU_SETTINGS *xMPUSettings, const struct xMEMORY_REGION * const xRegions, StackType_t *pxBottomOfStack, uint32_t usStackDepth ) ;
  void vPortReleaseTaskMPUSettings( xMPU_SETTINGS *xMPUSettings );
 
 
 
-static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
+static inline uint32_t __attribute__((section(".iram1" "." "11"))) xPortGetCoreID() {
     int id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -4917,6 +5030,21 @@ static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
 
 
 uint32_t xPortGetTickRateHz(void);
+
+
+static inline 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 3 4
+             _Bool 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+                  __attribute__((section(".iram1" "." "12"))) xPortCanYield(void)
+{
+    uint32_t ps_reg = 0;
+
+
+    asm volatile ("rsr %0, " "PS" : "=r" (ps_reg));;
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+    return ((ps_reg & 0x0000000F) == 0);
+}
 
 
 
@@ -5215,27 +5343,27 @@ typedef struct {
 
 
 typedef struct spi_device_t* spi_device_handle_t;
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
+# 181 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
 esp_err_t spi_bus_initialize(spi_host_device_t host, const spi_bus_config_t *bus_config, int dma_chan);
-# 190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
 esp_err_t spi_bus_free(spi_host_device_t host);
-# 211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
+# 215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
 esp_err_t spi_bus_add_device(spi_host_device_t host, const spi_device_interface_config_t *dev_config, spi_device_handle_t *handle);
-# 223 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
 esp_err_t spi_bus_remove_device(spi_device_handle_t handle);
-# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
+# 247 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
 esp_err_t spi_device_queue_trans(spi_device_handle_t handle, spi_transaction_t *trans_desc, TickType_t ticks_to_wait);
-# 265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
+# 269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
 esp_err_t spi_device_get_trans_result(spi_device_handle_t handle, spi_transaction_t **trans_desc, TickType_t ticks_to_wait);
-# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
+# 288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
 esp_err_t spi_device_transmit(spi_device_handle_t handle, spi_transaction_t *trans_desc);
-# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
+# 310 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
 esp_err_t spi_device_polling_start(spi_device_handle_t handle, spi_transaction_t *trans_desc, TickType_t ticks_to_wait);
-# 324 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
+# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
 esp_err_t spi_device_polling_end(spi_device_handle_t handle, TickType_t ticks_to_wait);
-# 343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
+# 347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
 esp_err_t spi_device_polling_transmit(spi_device_handle_t handle, spi_transaction_t *trans_desc);
-# 360 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
+# 364 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
 esp_err_t spi_device_acquire_bus(spi_device_handle_t device, TickType_t wait);
 
 
@@ -5244,19 +5372,19 @@ esp_err_t spi_device_acquire_bus(spi_device_handle_t device, TickType_t wait);
 
 
 void spi_device_release_bus(spi_device_handle_t dev);
-# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
+# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
 int spi_cal_clock(int fapb, int hz, int duty_cycle, uint32_t* reg_o);
-# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
+# 399 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
 void spi_get_timing(
-# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h" 3 4
+# 399 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h" 3 4
                    _Bool 
-# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
+# 399 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
                         gpio_is_used, int input_delay_ns, int eff_clk, int* dummy_o, int* cycles_remain_o);
-# 406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
 int spi_get_freq_limit(
-# 406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h" 3 4
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h" 3 4
                       _Bool 
-# 406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/spi_master.h"
                            gpio_is_used, int input_delay_ns);
 # 124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_reg.h" 1
@@ -5284,7 +5412,7 @@ void esp_dport_access_int_abort(void);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/uart_reg.h" 1
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h" 2
 # 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "13"))) DPORT_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -5293,7 +5421,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_
 
 }
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "14"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -5302,7 +5430,7 @@ static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_REA
 
 }
 # 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
-static inline uint32_t __attribute__((section(".iram1"))) DPORT_READ_PERI_REG(uint32_t reg)
+static inline uint32_t __attribute__((section(".iram1" "." "15"))) DPORT_READ_PERI_REG(uint32_t reg)
 {
 
     return (*(volatile uint32_t *)(reg));
@@ -5351,15 +5479,15 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_pm.h" 1
@@ -5926,7 +6054,7 @@ typedef enum
           TaskHandle_t * const pvCreatedTask,
           const BaseType_t xCoreID);
 # 432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
- static inline __attribute__((section(".iram1"))) BaseType_t xTaskCreate(
+ static inline __attribute__((section(".iram1" "." "16"))) BaseType_t xTaskCreate(
    TaskFunction_t pvTaskCode,
    const char * const pcName,
    const uint32_t usStackDepth,
@@ -6336,7 +6464,7 @@ esp_err_t spi_bus_initialize(spi_host_device_t host, const spi_bus_config_t *bus
 
 
 
-    spi_chan_claimed=spicommon_periph_claim(host);
+    spi_chan_claimed=spicommon_periph_claim(host, "spi master");
     if (!(spi_chan_claimed)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""host already in use" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 242); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""host already in use" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 242); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""host already in use" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 242); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""host already in use" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 242); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""host already in use" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 242); } } while(0); } while(0); return (0x103); };
 
     if ( dma_chan != 0 ) {
@@ -6518,11 +6646,14 @@ void spi_get_timing(
                         gpio_is_used, int input_delay_ns, int eff_clk, int* dummy_o, int* cycles_remain_o)
 {
     const int apbclk_kHz = ( 80*1000000 )/1000;
+
     const int apbclk_n = ( 80*1000000 )/eff_clk;
     const int gpio_delay_ns = gpio_is_used ? 25 : 0;
 
 
     int apb_period_n = (1 + input_delay_ns + gpio_delay_ns)*apbclk_kHz/1000/1000;
+    if (apb_period_n < 0) apb_period_n = 0;
+
     int dummy_required = apb_period_n/apbclk_n;
 
     int miso_delay = 0;
@@ -6535,22 +6666,22 @@ void spi_get_timing(
         if (apb_period_n*4 <= apbclk_n) miso_delay = -1;
     }
     if (dummy_o!=
-# 399 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                 ((void *)0)
-# 399 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                     ) *dummy_o = dummy_required;
     if (cycles_remain_o!=
-# 400 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 403 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                         ((void *)0)
-# 400 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 403 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                             ) *cycles_remain_o = miso_delay;
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "eff: %d, limit: %dk(/%d), %d dummy, %d delay" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, eff_clk/1000, apbclk_kHz/(apb_period_n+1), apb_period_n, dummy_required, miso_delay); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "eff: %d, limit: %dk(/%d), %d dummy, %d delay" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, eff_clk/1000, apbclk_kHz/(apb_period_n+1), apb_period_n, dummy_required, miso_delay); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "eff: %d, limit: %dk(/%d), %d dummy, %d delay" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, eff_clk/1000, apbclk_kHz/(apb_period_n+1), apb_period_n, dummy_required, miso_delay); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "eff: %d, limit: %dk(/%d), %d dummy, %d delay" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, eff_clk/1000, apbclk_kHz/(apb_period_n+1), apb_period_n, dummy_required, miso_delay); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "eff: %d, limit: %dk(/%d), %d dummy, %d delay" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, eff_clk/1000, apbclk_kHz/(apb_period_n+1), apb_period_n, dummy_required, miso_delay); } } while(0); } while(0);
 }
 
 int spi_get_freq_limit(
-# 404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 407 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                       _Bool 
-# 404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 407 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                            gpio_is_used, int input_delay_ns)
 {
     const int apbclk_kHz = ( 80*1000000 )/1000;
@@ -6558,6 +6689,8 @@ int spi_get_freq_limit(
 
 
     int apb_period_n = (1 + input_delay_ns + gpio_delay_ns)*apbclk_kHz/1000/1000;
+    if (apb_period_n < 0) apb_period_n = 0;
+
     return ( 80*1000000 )/(apb_period_n+1);
 }
 
@@ -6575,41 +6708,41 @@ esp_err_t spi_bus_add_device(spi_host_device_t host, const spi_device_interface_
     int miso_delay;
 
     spi_clock_reg_t clk_reg;
-    if (!(host>=SPI_HOST && host<=VSPI_HOST)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""invalid host" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 428); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""invalid host" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 428); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""invalid host" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 428); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""invalid host" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 428); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""invalid host" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 428); } } while(0); } while(0); return (0x102); };
+    if (!(host>=SPI_HOST && host<=VSPI_HOST)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""invalid host" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 433); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""invalid host" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 433); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""invalid host" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 433); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""invalid host" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 433); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""invalid host" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 433); } } while(0); } while(0); return (0x102); };
     if (!(spihost[host]!=
-# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 434 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
    ((void *)0)
-# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""host not initialized" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 429); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""host not initialized" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 429); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""host not initialized" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 429); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""host not initialized" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 429); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""host not initialized" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 429); } } while(0); } while(0); return (0x103); };
-    if (!(dev_config->spics_io_num < 0 || ((((dev_config->spics_io_num < 40 && GPIO_PIN_MUX_REG[dev_config->spics_io_num] != 0))) && (dev_config->spics_io_num < 34)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""spics pin invalid" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 430); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""spics pin invalid" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 430); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""spics pin invalid" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 430); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""spics pin invalid" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 430); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""spics pin invalid" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 430); } } while(0); } while(0); return (0x102); };
-    if (!(dev_config->clock_speed_hz > 0)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""invalid sclk speed" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 431); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""invalid sclk speed" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 431); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""invalid sclk speed" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 431); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""invalid sclk speed" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 431); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""invalid sclk speed" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 431); } } while(0); } while(0); return (0x102); };
+# 434 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""host not initialized" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 434); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""host not initialized" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 434); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""host not initialized" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 434); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""host not initialized" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 434); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""host not initialized" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 434); } } while(0); } while(0); return (0x103); };
+    if (!(dev_config->spics_io_num < 0 || ((((dev_config->spics_io_num < 40 && GPIO_PIN_MUX_REG[dev_config->spics_io_num] != 0))) && (dev_config->spics_io_num < 34)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""spics pin invalid" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 435); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""spics pin invalid" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 435); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""spics pin invalid" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 435); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""spics pin invalid" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 435); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""spics pin invalid" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 435); } } while(0); } while(0); return (0x102); };
+    if (!(dev_config->clock_speed_hz > 0)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""invalid sclk speed" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 436); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""invalid sclk speed" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 436); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""invalid sclk speed" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 436); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""invalid sclk speed" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 436); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""invalid sclk speed" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 436); } } while(0); } while(0); return (0x102); };
     for (freecs=0; freecs<3; freecs++) {
 
         void* null=
-# 434 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 439 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                   ((void *)0)
-# 434 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 439 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                       ;
         if (__atomic_compare_exchange_n(&(&spihost[host]->device[freecs])->__val, &null, (spi_device_t *)1, 0, memory_order_seq_cst, memory_order_seq_cst)) break;
     }
-    if (!(freecs!=3)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""no free cs pins for host" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 437); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""no free cs pins for host" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 437); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""no free cs pins for host" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 437); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""no free cs pins for host" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 437); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""no free cs pins for host" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 437); } } while(0); } while(0); return (0x105); };
+    if (!(freecs!=3)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""no free cs pins for host" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 442); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""no free cs pins for host" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 442); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""no free cs pins for host" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 442); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""no free cs pins for host" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 442); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""no free cs pins for host" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 442); } } while(0); } while(0); return (0x105); };
 
 
     if (!(dev_config->cs_ena_pretrans <= 1 || (dev_config->address_bits == 0 && dev_config->command_bits == 0) || (dev_config->flags & (1<<4)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""In full-duplex mode, only support cs pretrans delay = 1 and without address_bits and command_bits" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
- 441
-# 440 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+ 446
+# 445 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
     ); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""In full-duplex mode, only support cs pretrans delay = 1 and without address_bits and command_bits" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
- 441
-# 440 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+ 446
+# 445 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
     ); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""In full-duplex mode, only support cs pretrans delay = 1 and without address_bits and command_bits" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
- 441
-# 440 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+ 446
+# 445 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
     ); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""In full-duplex mode, only support cs pretrans delay = 1 and without address_bits and command_bits" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
- 441
-# 440 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+ 446
+# 445 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
     ); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""In full-duplex mode, only support cs pretrans delay = 1 and without address_bits and command_bits" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
- 441
-# 440 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+ 446
+# 445 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
     ); } } while(0); } while(0); return (0x102); }
                                                                                                                                                                               ;
 
@@ -6617,45 +6750,50 @@ esp_err_t spi_bus_add_device(spi_host_device_t host, const spi_device_interface_
     eff_clk = spi_cal_clock(apbclk, dev_config->clock_speed_hz, duty_cycle, (uint32_t*)&clk_reg);
     int freq_limit = spi_get_freq_limit(!(spihost[host]->flags&(1<<1)), dev_config->input_delay_ns);
 
-    if (!(eff_clk <= 40*1000*1000 || spihost[host]->flags&(1<<1))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""80MHz only supported on iomux pins" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 447); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""80MHz only supported on iomux pins" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 447); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""80MHz only supported on iomux pins" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 447); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""80MHz only supported on iomux pins" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 447); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""80MHz only supported on iomux pins" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 447); } } while(0); } while(0); return (0x102); };
 
     spi_get_timing(!(spihost[host]->flags&(1<<1)), dev_config->input_delay_ns, eff_clk, &dummy_required, &miso_delay);
-    if (!(dev_config->flags & (1<<4) || dummy_required == 0 || dev_config->flags & (1<<6))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""When GPIO matrix is used in full-duplex mode at frequency > %.1fMHz, device cannot read correct data.\nPlease note the SPI can only work at divisors of 80MHz, and the driver always tries to find the closest frequency to your configuration.\nSpecify ``SPI_DEVICE_NO_DUMMY`` to ignore this checking. Then you can output data at higher speed, or read data at your own risk." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
+    if (!(dev_config->flags & (1<<4) || dummy_required == 0 || dev_config->flags & (1<<6))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""When work in full-duplex mode at frequency > %.1fMHz, device cannot read correct data.\nTry to use IOMUX pins to increase the frequency limit, or use the half duplex mode.\nPlease note the SPI master can only work at divisors of 80MHz, and the driver always tries to find the closest frequency to your configuration.\nSpecify ``SPI_DEVICE_NO_DUMMY`` to ignore this checking. Then you can output data at higher speed, or read data at your own risk." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
 
 
 
 
- 455
-# 450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
-    , freq_limit/1000./1000); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""When GPIO matrix is used in full-duplex mode at frequency > %.1fMHz, device cannot read correct data.\nPlease note the SPI can only work at divisors of 80MHz, and the driver always tries to find the closest frequency to your configuration.\nSpecify ``SPI_DEVICE_NO_DUMMY`` to ignore this checking. Then you can output data at higher speed, or read data at your own risk." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
+
+ 460
+# 454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+    , freq_limit/1000./1000); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""When work in full-duplex mode at frequency > %.1fMHz, device cannot read correct data.\nTry to use IOMUX pins to increase the frequency limit, or use the half duplex mode.\nPlease note the SPI master can only work at divisors of 80MHz, and the driver always tries to find the closest frequency to your configuration.\nSpecify ``SPI_DEVICE_NO_DUMMY`` to ignore this checking. Then you can output data at higher speed, or read data at your own risk." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
 
 
 
 
- 455
-# 450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
-    , freq_limit/1000./1000); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""When GPIO matrix is used in full-duplex mode at frequency > %.1fMHz, device cannot read correct data.\nPlease note the SPI can only work at divisors of 80MHz, and the driver always tries to find the closest frequency to your configuration.\nSpecify ``SPI_DEVICE_NO_DUMMY`` to ignore this checking. Then you can output data at higher speed, or read data at your own risk." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
+
+ 460
+# 454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+    , freq_limit/1000./1000); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""When work in full-duplex mode at frequency > %.1fMHz, device cannot read correct data.\nTry to use IOMUX pins to increase the frequency limit, or use the half duplex mode.\nPlease note the SPI master can only work at divisors of 80MHz, and the driver always tries to find the closest frequency to your configuration.\nSpecify ``SPI_DEVICE_NO_DUMMY`` to ignore this checking. Then you can output data at higher speed, or read data at your own risk." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
 
 
 
 
- 455
-# 450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
-    , freq_limit/1000./1000); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""When GPIO matrix is used in full-duplex mode at frequency > %.1fMHz, device cannot read correct data.\nPlease note the SPI can only work at divisors of 80MHz, and the driver always tries to find the closest frequency to your configuration.\nSpecify ``SPI_DEVICE_NO_DUMMY`` to ignore this checking. Then you can output data at higher speed, or read data at your own risk." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
+
+ 460
+# 454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+    , freq_limit/1000./1000); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""When work in full-duplex mode at frequency > %.1fMHz, device cannot read correct data.\nTry to use IOMUX pins to increase the frequency limit, or use the half duplex mode.\nPlease note the SPI master can only work at divisors of 80MHz, and the driver always tries to find the closest frequency to your configuration.\nSpecify ``SPI_DEVICE_NO_DUMMY`` to ignore this checking. Then you can output data at higher speed, or read data at your own risk." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
 
 
 
 
- 455
-# 450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
-    , freq_limit/1000./1000); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""When GPIO matrix is used in full-duplex mode at frequency > %.1fMHz, device cannot read correct data.\nPlease note the SPI can only work at divisors of 80MHz, and the driver always tries to find the closest frequency to your configuration.\nSpecify ``SPI_DEVICE_NO_DUMMY`` to ignore this checking. Then you can output data at higher speed, or read data at your own risk." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
+
+ 460
+# 454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+    , freq_limit/1000./1000); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""When work in full-duplex mode at frequency > %.1fMHz, device cannot read correct data.\nTry to use IOMUX pins to increase the frequency limit, or use the half duplex mode.\nPlease note the SPI master can only work at divisors of 80MHz, and the driver always tries to find the closest frequency to your configuration.\nSpecify ``SPI_DEVICE_NO_DUMMY`` to ignore this checking. Then you can output data at higher speed, or read data at your own risk." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
 
 
 
 
- 455
-# 450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+
+ 460
+# 454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
     , freq_limit/1000./1000); } } while(0); } while(0); return (0x102); }
+
 
 
 
@@ -6665,17 +6803,17 @@ esp_err_t spi_bus_add_device(spi_host_device_t host, const spi_device_interface_
 
     spi_device_t *dev=malloc(sizeof(spi_device_t));
     if (dev==
-# 459 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 464 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
             ((void *)0)
-# 459 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 464 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                 ) goto nomem;
     memset(dev, 0, sizeof(spi_device_t));
     __atomic_store_n(&(&spihost[host]->device[freecs])->__val, dev, memory_order_seq_cst);
     dev->id = freecs;
     dev->waiting = 
-# 463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 468 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                   0
-# 463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 468 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                        ;
 
 
@@ -6715,7 +6853,7 @@ esp_err_t spi_bus_add_device(spi_host_device_t host, const spi_device_interface_
     spihost[host]->hw->ctrl2.mosi_delay_mode = 0;
     spihost[host]->hw->ctrl2.mosi_delay_num = 0;
     *handle=dev;
-    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "SPI%d: New device added to CS%d, effective clock: %dkHz" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, host, freecs, dev->clk_cfg.eff_clk/1000); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "SPI%d: New device added to CS%d, effective clock: %dkHz" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, host, freecs, dev->clk_cfg.eff_clk/1000); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "SPI%d: New device added to CS%d, effective clock: %dkHz" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, host, freecs, dev->clk_cfg.eff_clk/1000); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "SPI%d: New device added to CS%d, effective clock: %dkHz" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, host, freecs, dev->clk_cfg.eff_clk/1000); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "SPI%d: New device added to CS%d, effective clock: %dkHz" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, host, freecs, dev->clk_cfg.eff_clk/1000); } } while(0); } while(0);
+    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "SPI%d: New device added to CS%d, effective clock: %dkHz" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, host+1, freecs, dev->clk_cfg.eff_clk/1000); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "SPI%d: New device added to CS%d, effective clock: %dkHz" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, host+1, freecs, dev->clk_cfg.eff_clk/1000); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "SPI%d: New device added to CS%d, effective clock: %dkHz" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, host+1, freecs, dev->clk_cfg.eff_clk/1000); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "SPI%d: New device added to CS%d, effective clock: %dkHz" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, host+1, freecs, dev->clk_cfg.eff_clk/1000); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "SPI%d: New device added to CS%d, effective clock: %dkHz" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, host+1, freecs, dev->clk_cfg.eff_clk/1000); } } while(0); } while(0);
     return 0;
 
 nomem:
@@ -6732,15 +6870,15 @@ esp_err_t spi_bus_remove_device(spi_device_handle_t handle)
 {
     int x;
     if (!(handle!=
-# 518 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 523 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
    ((void *)0)
-# 518 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""invalid handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 518); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""invalid handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 518); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""invalid handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 518); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""invalid handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 518); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""invalid handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 518); } } while(0); } while(0); return (0x102); };
+# 523 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""invalid handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 523); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""invalid handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 523); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""invalid handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 523); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""invalid handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 523); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""invalid handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 523); } } while(0); } while(0); return (0x102); };
 
 
-    if (!(uxQueueMessagesWaiting(handle->trans_queue)==0)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 521); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 521); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 521); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 521); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 521); } } while(0); } while(0); return (0x103); };
-    if (!(handle->host->cur_cs == 3 || __atomic_load_n(&(&handle->host->device[handle->host->cur_cs])->__val, memory_order_seq_cst)!=handle)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 522); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 522); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 522); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 522); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 522); } } while(0); } while(0); return (0x103); };
-    if (!(uxQueueMessagesWaiting(handle->ret_queue)==0)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 523); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 523); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 523); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 523); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 523); } } while(0); } while(0); return (0x103); };
+    if (!(uxQueueMessagesWaiting(handle->trans_queue)==0)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 526); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 526); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 526); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 526); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 526); } } while(0); } while(0); return (0x103); };
+    if (!(handle->host->cur_cs == 3 || __atomic_load_n(&(&handle->host->device[handle->host->cur_cs])->__val, memory_order_seq_cst)!=handle)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 527); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 527); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 527); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 527); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 527); } } while(0); } while(0); return (0x103); };
+    if (!(uxQueueMessagesWaiting(handle->ret_queue)==0)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 528); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 528); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 528); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 528); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""Have unfinished transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 528); } } while(0); } while(0); return (0x103); };
 
 
     int spics_io_num = handle->cfg.spics_io_num;
@@ -6754,9 +6892,9 @@ esp_err_t spi_bus_remove_device(spi_device_handle_t handle)
     for (x=0; x<3; x++) {
         if (__atomic_load_n(&(&handle->host->device[x])->__val, memory_order_seq_cst) == handle){
             __atomic_store_n(&(&handle->host->device[x])->__val, 
-# 536 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 541 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
            ((void *)0)
-# 536 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 541 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
            , memory_order_seq_cst);
             if (x == handle->host->prev_cs) handle->host->prev_cs = 3;
         }
@@ -6823,9 +6961,9 @@ int spi_cal_clock(int fapb, int hz, int duty_cycle, uint32_t *reg_o)
         eff_clk=spi_freq_for_pre_n(fapb, pre, n);
     }
     if (reg_o != 
-# 601 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 606 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                 ((void *)0)
-# 601 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 606 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                     ) *reg_o = reg.val;
     return eff_clk;
 }
@@ -6833,7 +6971,7 @@ int spi_cal_clock(int fapb, int hz, int duty_cycle, uint32_t *reg_o)
 
 
 
-static inline void __attribute__((section(".iram1"))) spi_set_clock(spi_dev_t *hw, spi_clock_reg_t reg)
+static inline void __attribute__((section(".iram1" "." "17"))) spi_set_clock(spi_dev_t *hw, spi_clock_reg_t reg)
 {
     hw->clock.val = reg.val;
 }
@@ -6841,7 +6979,7 @@ static inline void __attribute__((section(".iram1"))) spi_set_clock(spi_dev_t *h
 
 
 
-static void __attribute__((section(".iram1"))) spi_setup_device(spi_host_t *host, int dev_id )
+static void __attribute__((section(".iram1" "." "18"))) spi_setup_device(spi_host_t *host, int dev_id )
 {
 
     if (dev_id == host->prev_cs) {
@@ -6906,28 +7044,28 @@ static inline void spi_isr_invoke(spi_device_t *dev)
 
 
 
-static __attribute__((section(".iram1"))) esp_err_t device_acquire_bus_internal(spi_device_t *handle, TickType_t wait)
+static __attribute__((section(".iram1" "." "19"))) esp_err_t device_acquire_bus_internal(spi_device_t *handle, TickType_t wait)
 {
     spi_host_t *host = handle->host;
-    if (!(wait==( TickType_t ) 0xffffffffUL)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""acquire finite time not supported now." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 684); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""acquire finite time not supported now." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 684); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""acquire finite time not supported now." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 684); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""acquire finite time not supported now." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 684); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""acquire finite time not supported now." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 684); } } while(0); } while(0); return (0x102); };
+    if (!(wait==( TickType_t ) 0xffffffffUL)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""acquire finite time not supported now." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 689); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""acquire finite time not supported now." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 689); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""acquire finite time not supported now." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 689); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""acquire finite time not supported now." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 689); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""acquire finite time not supported now." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 689); } } while(0); } while(0); return (0x102); };
 
     if (__atomic_load_n(&(&host->acquire_cs)->__val, memory_order_seq_cst) == handle->id) {
 
 
-        ((host->bus_locked) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c", 689, __func__, "host->bus_locked"));
+        ((host->bus_locked) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c", 694, __func__, "host->bus_locked"));
         return 0;
     } else {
 
         handle->waiting = 
-# 693 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 698 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                          1
-# 693 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 698 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                              ;
 
         xQueueGenericReceive( ( QueueHandle_t ) ( handle->semphr_polling ), 
-# 695 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
        ((void *)0)
-# 695 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
        , ( 0 ), ( ( BaseType_t ) 0 ) );
 
         int no_cs = 3;
@@ -6935,17 +7073,17 @@ static __attribute__((section(".iram1"))) esp_err_t device_acquire_bus_internal(
         if (__atomic_load_n(&(&host->acquire_cs)->__val, memory_order_seq_cst) != handle->id) {
 
             BaseType_t ret = xQueueGenericReceive( ( QueueHandle_t ) ( handle->semphr_polling ), 
-# 701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                             ((void *)0)
-# 701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                             , ( wait ), ( ( BaseType_t ) 0 ) );
 
             if (ret == ( ( BaseType_t ) 0 )) return 0x107;
         }
         handle->waiting = 
-# 705 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 710 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                          0
-# 705 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 710 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                               ;
     }
     return 0;
@@ -6953,22 +7091,22 @@ static __attribute__((section(".iram1"))) esp_err_t device_acquire_bus_internal(
 
 
 
-static inline __attribute__((section(".iram1"))) esp_err_t device_wait_for_isr_idle(spi_device_t *handle, TickType_t wait)
+static inline __attribute__((section(".iram1" "." "20"))) esp_err_t device_wait_for_isr_idle(spi_device_t *handle, TickType_t wait)
 {
 
     if (!handle->host->isr_free) {
 
         xQueueGenericReceive( ( QueueHandle_t ) ( handle->semphr_polling ), 
-# 717 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 722 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
        ((void *)0)
-# 717 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 722 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
        , ( 0 ), ( ( BaseType_t ) 0 ) );
         if (!handle->host->isr_free) {
 
             BaseType_t ret = xQueueGenericReceive( ( QueueHandle_t ) ( handle->semphr_polling ), 
-# 720 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                             ((void *)0)
-# 720 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                             , ( wait ), ( ( BaseType_t ) 0 ) );
 
             if (ret == ( ( BaseType_t ) 0 )) return 0x107;
@@ -6981,7 +7119,7 @@ static inline __attribute__((section(".iram1"))) esp_err_t device_wait_for_isr_i
 
 
 
-static __attribute__((section(".iram1"))) void device_release_bus_internal(spi_host_t *host)
+static __attribute__((section(".iram1" "." "21"))) void device_release_bus_internal(spi_host_t *host)
 {
 
     __atomic_store_n(&(&host->acquire_cs)->__val, 3, memory_order_seq_cst);
@@ -7002,9 +7140,9 @@ static __attribute__((section(".iram1"))) void device_release_bus_internal(spi_h
                 } else {
 
                     xQueueGenericSend( ( QueueHandle_t ) ( dev->semphr_polling ), 
-# 752 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 757 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                    ((void *)0)
-# 752 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 757 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
                 }
             }
@@ -7015,9 +7153,9 @@ static __attribute__((section(".iram1"))) void device_release_bus_internal(spi_h
     for( int i = 0; i < 3; i++) {
         spi_device_t *dev = __atomic_load_n(&(&host->device[i])->__val, memory_order_seq_cst);
         if (dev == 
-# 761 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 766 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                   ((void *)0)
-# 761 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 766 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                       ) continue;
         BaseType_t ret = uxQueueMessagesWaiting(dev->trans_queue);
         if ( ret != 0) {
@@ -7027,10 +7165,10 @@ static __attribute__((section(".iram1"))) void device_release_bus_internal(spi_h
     }
 }
 
-static inline __attribute__((section(".iram1"))) 
-# 770 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+static inline __attribute__((section(".iram1" "." "22"))) 
+# 775 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                                  _Bool 
-# 770 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 775 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                                       device_is_polling(spi_device_t *handle)
 {
     return __atomic_load_n(&(&handle->host->acquire_cs)->__val, memory_order_seq_cst) == handle->id && handle->host->polling;
@@ -7042,12 +7180,12 @@ static inline __attribute__((section(".iram1")))
 
 
 
-static void __attribute__((section(".iram1"))) spi_new_trans(spi_device_t *dev, spi_trans_priv_t *trans_buf)
+static void __attribute__((section(".iram1" "." "23"))) spi_new_trans(spi_device_t *dev, spi_trans_priv_t *trans_buf)
 {
     spi_transaction_t *trans = 
-# 783 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                               ((void *)0)
-# 783 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                                   ;
     spi_host_t *host = dev->host;
     int dev_id = dev->id;
@@ -7058,7 +7196,7 @@ static void __attribute__((section(".iram1"))) spi_new_trans(spi_device_t *dev, 
     trans = trans_buf->trans;
     host->cur_cs = dev_id;
 
-    ((host->hw->cmd.usr == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c", 793, __func__, "host->hw->cmd.usr == 0"));
+    ((host->hw->cmd.usr == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c", 798, __func__, "host->hw->cmd.usr == 0"));
 
 
     spi_setup_device(host, dev_id);
@@ -7101,9 +7239,9 @@ static void __attribute__((section(".iram1"))) spi_new_trans(spi_device_t *dev, 
 
         } else {
             spicommon_setup_dma_desc_links(host->dmadesc_rx, ((trans->rxlength+7)/8), (uint8_t*)trans_buf->buffer_to_rcv, 
-# 835 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                                                                                                                          1
-# 835 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                                                                                                                              );
             host->hw->dma_in_link.addr=(int)(&host->dmadesc_rx[0]) & 0xFFFFF;
             host->hw->dma_in_link.start=1;
@@ -7131,9 +7269,9 @@ static void __attribute__((section(".iram1"))) spi_new_trans(spi_device_t *dev, 
             }
         } else {
             spicommon_setup_dma_desc_links(host->dmadesc_tx, (trans->length+7)/8, (uint8_t*)trans_buf->buffer_to_send, 
-# 861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 866 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                                                                                                                       0
-# 861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 866 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                                                                                                                            );
             host->hw->dma_out_link.addr=(int)(&host->dmadesc_tx[0]) & 0xFFFFF;
             host->hw->dma_out_link.start=1;
@@ -7214,7 +7352,7 @@ static void __attribute__((section(".iram1"))) spi_new_trans(spi_device_t *dev, 
 
 
 
-        host->hw->user2.usr_command_value = __builtin_bswap32((uint32_t)trans->cmd<<(32-cmdlen));
+        host->hw->user2.usr_command_value = __builtin_bswap32((uint32_t)(trans->cmd)<<(32-(cmdlen)));
 
 
 
@@ -7225,7 +7363,7 @@ static void __attribute__((section(".iram1"))) spi_new_trans(spi_device_t *dev, 
             host->hw->addr = trans->addr << (32 - addrlen);
         }
     } else {
-# 962 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 967 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
         host->hw->user2.usr_command_value = trans->cmd;
         uint64_t addr = __builtin_bswap64(trans->addr);
         host->hw->addr = addr>>32;
@@ -7248,7 +7386,7 @@ static void __attribute__((section(".iram1"))) spi_new_trans(spi_device_t *dev, 
 
 
 
-static void __attribute__((section(".iram1"))) spi_post_trans(spi_host_t *host)
+static void __attribute__((section(".iram1" "." "24"))) spi_post_trans(spi_host_t *host)
 {
     spi_transaction_t *cur_trans = host->cur_trans_buf.trans;
     if (host->cur_trans_buf.buffer_to_rcv && host->dma_chan == 0 ) {
@@ -7269,14 +7407,14 @@ static void __attribute__((section(".iram1"))) spi_post_trans(spi_host_t *host)
 }
 
 
-static void __attribute__((section(".iram1"))) spi_intr(void *arg)
+static void __attribute__((section(".iram1" "." "25"))) spi_intr(void *arg)
 {
     int i;
     BaseType_t r;
     BaseType_t do_yield = ( ( BaseType_t ) 0 );
     spi_host_t *host = (spi_host_t *)arg;
 
-    ((host->hw->slave.trans_done == 1) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c", 1012, __func__, "host->hw->slave.trans_done == 1"));
+    ((host->hw->slave.trans_done == 1) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c", 1017, __func__, "host->hw->slave.trans_done == 1"));
 
 
     if (host->cur_cs != 3) {
@@ -7298,14 +7436,14 @@ static void __attribute__((section(".iram1"))) spi_intr(void *arg)
     }
 
 
-    ((host->cur_cs == 3) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c", 1034, __func__, "host->cur_cs == NO_CS"));
+    ((host->cur_cs == 3) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c", 1039, __func__, "host->cur_cs == NO_CS"));
 
 
 
     host->isr_free = 
-# 1038 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 1043 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                     0
-# 1038 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 1043 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                          ;
 
 
@@ -7319,16 +7457,16 @@ static void __attribute__((section(".iram1"))) spi_intr(void *arg)
 
         i = acquire_cs;
         spi_device_t* dev = __atomic_load_n(&(&host->device[i])->__val, memory_order_seq_cst);
-        ((dev) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c", 1051, __func__, "dev"));
+        ((dev) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c", 1056, __func__, "dev"));
         r = xQueueReceiveFromISR(dev->trans_queue, &host->cur_trans_buf, &do_yield);
 
 
         if (!r) {
 
             host->isr_free = 
-# 1057 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 1062 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                             1
-# 1057 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 1062 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                                 ;
             xQueueGiveFromISR( ( QueueHandle_t ) ( dev->semphr_polling ), ( &do_yield ) );
             i = 3;
@@ -7346,9 +7484,9 @@ static void __attribute__((section(".iram1"))) spi_intr(void *arg)
         }
         if (i==3) {
             host->isr_free = 
-# 1073 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 1078 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                             1
-# 1073 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 1078 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                                 ;
         }
     }
@@ -7367,48 +7505,99 @@ static void __attribute__((section(".iram1"))) spi_intr(void *arg)
     if (do_yield) {; _frxt_setup_switch();};
 }
 
-static __attribute__((section(".iram1"))) esp_err_t check_trans_valid(spi_device_handle_t handle, spi_transaction_t *trans_desc)
+static __attribute__((section(".iram1" "." "26"))) esp_err_t check_trans_valid(spi_device_handle_t handle, spi_transaction_t *trans_desc)
 {
     if (!(handle!=
-# 1093 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 1098 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
    ((void *)0)
-# 1093 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1093); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1093); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1093); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1093); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1093); } } while(0); } while(0); return (0x102); };
+# 1098 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1098); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1098); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1098); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1098); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1098); } } while(0); } while(0); return (0x102); };
     spi_host_t *host = handle->host;
 
-    if (!((trans_desc->flags & (1<<2))==0 ||trans_desc->rxlength <= 32)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""rxdata transfer > 32 bits without configured DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1096); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""rxdata transfer > 32 bits without configured DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1096); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""rxdata transfer > 32 bits without configured DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1096); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""rxdata transfer > 32 bits without configured DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1096); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""rxdata transfer > 32 bits without configured DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1096); } } while(0); } while(0); return (0x102); };
-    if (!((trans_desc->flags & (1<<3))==0 ||trans_desc->length <= 32)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""txdata transfer > 32 bits without configured DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1097); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""txdata transfer > 32 bits without configured DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1097); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""txdata transfer > 32 bits without configured DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1097); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""txdata transfer > 32 bits without configured DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1097); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""txdata transfer > 32 bits without configured DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1097); } } while(0); } while(0); return (0x102); };
-    if (!(trans_desc->length <= handle->host->max_transfer_sz*8)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""txdata transfer > host maximum" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1098); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""txdata transfer > host maximum" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1098); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""txdata transfer > host maximum" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1098); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""txdata transfer > host maximum" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1098); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""txdata transfer > host maximum" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1098); } } while(0); } while(0); return (0x102); };
-    if (!(trans_desc->rxlength <= handle->host->max_transfer_sz*8)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""rxdata transfer > host maximum" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1099); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""rxdata transfer > host maximum" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1099); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""rxdata transfer > host maximum" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1099); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""rxdata transfer > host maximum" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1099); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""rxdata transfer > host maximum" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1099); } } while(0); } while(0); return (0x102); };
-    if (!((handle->cfg.flags & (1<<4)) || trans_desc->rxlength <= trans_desc->length)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""rx length > tx length in full duplex mode" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1100); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""rx length > tx length in full duplex mode" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1100); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""rx length > tx length in full duplex mode" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1100); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""rx length > tx length in full duplex mode" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1100); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""rx length > tx length in full duplex mode" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1100); } } while(0); } while(0); return (0x102); };
+    if (!((trans_desc->flags & (1<<2))==0 ||trans_desc->rxlength <= 32)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""rxdata transfer > 32 bits without configured DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1101); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""rxdata transfer > 32 bits without configured DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1101); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""rxdata transfer > 32 bits without configured DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1101); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""rxdata transfer > 32 bits without configured DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1101); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""rxdata transfer > 32 bits without configured DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1101); } } while(0); } while(0); return (0x102); };
+    if (!((trans_desc->flags & (1<<3))==0 ||trans_desc->length <= 32)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""txdata transfer > 32 bits without configured DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1102); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""txdata transfer > 32 bits without configured DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1102); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""txdata transfer > 32 bits without configured DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1102); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""txdata transfer > 32 bits without configured DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1102); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""txdata transfer > 32 bits without configured DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1102); } } while(0); } while(0); return (0x102); };
+    if (!(trans_desc->length <= handle->host->max_transfer_sz*8)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""txdata transfer > host maximum" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1103); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""txdata transfer > host maximum" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1103); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""txdata transfer > host maximum" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1103); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""txdata transfer > host maximum" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1103); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""txdata transfer > host maximum" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1103); } } while(0); } while(0); return (0x102); };
+    if (!(trans_desc->rxlength <= handle->host->max_transfer_sz*8)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""rxdata transfer > host maximum" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1104); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""rxdata transfer > host maximum" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1104); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""rxdata transfer > host maximum" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1104); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""rxdata transfer > host maximum" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1104); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""rxdata transfer > host maximum" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1104); } } while(0); } while(0); return (0x102); };
+    if (!((handle->cfg.flags & (1<<4)) || trans_desc->rxlength <= trans_desc->length)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""rx length > tx length in full duplex mode" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1105); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""rx length > tx length in full duplex mode" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1105); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""rx length > tx length in full duplex mode" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1105); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""rx length > tx length in full duplex mode" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1105); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""rx length > tx length in full duplex mode" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1105); } } while(0); } while(0); return (0x102); };
 
-    if (!(!((trans_desc->flags & ((1<<0)|(1<<1))) && (handle->cfg.flags & (1<<2))))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""incompatible iface params" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1102); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""incompatible iface params" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1102); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""incompatible iface params" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1102); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""incompatible iface params" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1102); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""incompatible iface params" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1102); } } while(0); } while(0); return (0x102); };
-    if (!(!((trans_desc->flags & ((1<<0)|(1<<1))) && (!(handle->cfg.flags & (1<<4)))))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""incompatible iface params" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1103); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""incompatible iface params" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1103); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""incompatible iface params" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1103); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""incompatible iface params" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1103); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""incompatible iface params" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1103); } } while(0); } while(0); return (0x102); };
+    if (!(!((trans_desc->flags & ((1<<0)|(1<<1))) && (handle->cfg.flags & (1<<2))))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""incompatible iface params" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1107); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""incompatible iface params" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1107); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""incompatible iface params" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1107); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""incompatible iface params" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1107); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""incompatible iface params" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1107); } } while(0); } while(0); return (0x102); };
+    if (!(!((trans_desc->flags & ((1<<0)|(1<<1))) && (!(handle->cfg.flags & (1<<4)))))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""incompatible iface params" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1108); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""incompatible iface params" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1108); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""incompatible iface params" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1108); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""incompatible iface params" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1108); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""incompatible iface params" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1108); } } while(0); } while(0); return (0x102); };
     if (!(!(handle->cfg.flags & (1<<4)) || host->dma_chan == 0 || !(trans_desc->flags & (1<<2) || trans_desc->rx_buffer != 
-# 1104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 1109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
    ((void *)0)
-# 1104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 1109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
    ) || !(trans_desc->flags & (1<<3) || trans_desc->tx_buffer!=
-# 1104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 1109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
    ((void *)0)
-# 1104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 1109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
    ))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""SPI half duplex mode does not support using DMA with both MOSI and MISO phases." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
- 1105
-# 1104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+ 1110
+# 1109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
     ); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""SPI half duplex mode does not support using DMA with both MOSI and MISO phases." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
- 1105
-# 1104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+ 1110
+# 1109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
     ); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""SPI half duplex mode does not support using DMA with both MOSI and MISO phases." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
- 1105
-# 1104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+ 1110
+# 1109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
     ); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""SPI half duplex mode does not support using DMA with both MOSI and MISO phases." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
- 1105
-# 1104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+ 1110
+# 1109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
     ); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""SPI half duplex mode does not support using DMA with both MOSI and MISO phases." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
- 1105
-# 1104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+ 1110
+# 1109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
     ); } } while(0); } while(0); return (0x102); }
                                                                                                                                                                                                ;
+
+    if (!(trans_desc->length != 0 || (trans_desc->tx_buffer == 
+# 1112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+   ((void *)0) 
+# 1112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+   && !(trans_desc->flags & (1<<3))))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""trans tx_buffer should be NULL and SPI_TRANS_USE_TXDATA should be cleared to skip MOSI phase." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
+ 1113
+# 1112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+    ); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""trans tx_buffer should be NULL and SPI_TRANS_USE_TXDATA should be cleared to skip MOSI phase." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
+ 1113
+# 1112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+    ); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""trans tx_buffer should be NULL and SPI_TRANS_USE_TXDATA should be cleared to skip MOSI phase." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
+ 1113
+# 1112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+    ); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""trans tx_buffer should be NULL and SPI_TRANS_USE_TXDATA should be cleared to skip MOSI phase." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
+ 1113
+# 1112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+    ); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""trans tx_buffer should be NULL and SPI_TRANS_USE_TXDATA should be cleared to skip MOSI phase." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
+ 1113
+# 1112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+    ); } } while(0); } while(0); return (0x102); }
+                                                                                                                             ;
+
+
+    if (!(!(handle->cfg.flags & (1<<4)) || trans_desc->rxlength != 0 || (trans_desc->rx_buffer == 
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+   ((void *)0) 
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+   && ((trans_desc->flags & (1<<2))==0)))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""trans rx_buffer should be NULL and SPI_TRANS_USE_RXDATA should be cleared to skip MISO phase." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
+
+ 1118
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+    ); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""trans rx_buffer should be NULL and SPI_TRANS_USE_RXDATA should be cleared to skip MISO phase." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
+
+ 1118
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+    ); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""trans rx_buffer should be NULL and SPI_TRANS_USE_RXDATA should be cleared to skip MISO phase." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
+
+ 1118
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+    ); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""trans rx_buffer should be NULL and SPI_TRANS_USE_RXDATA should be cleared to skip MISO phase." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
+
+ 1118
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+    ); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""trans rx_buffer should be NULL and SPI_TRANS_USE_RXDATA should be cleared to skip MISO phase." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__,
+
+ 1118
+# 1116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+    ); } } while(0); } while(0); return (0x102); }
+
+                                                                                                                             ;
 
 
     if (trans_desc->rxlength==0 && !(handle->cfg.flags & (1<<4))) {
@@ -7418,7 +7607,7 @@ static __attribute__((section(".iram1"))) esp_err_t check_trans_valid(spi_device
     return 0;
 }
 
-static __attribute__((section(".iram1"))) void uninstall_priv_desc(spi_trans_priv_t* trans_buf)
+static __attribute__((section(".iram1" "." "27"))) void uninstall_priv_desc(spi_trans_priv_t* trans_buf)
 {
     spi_transaction_t *trans_desc = trans_buf->trans;
     if ((void *)trans_buf->buffer_to_send != &trans_desc->tx_data[0] &&
@@ -7437,10 +7626,10 @@ static __attribute__((section(".iram1"))) void uninstall_priv_desc(spi_trans_pri
     }
 }
 
-static __attribute__((section(".iram1"))) esp_err_t setup_priv_desc(spi_transaction_t *trans_desc, spi_trans_priv_t* new_desc, 
-# 1134 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+static __attribute__((section(".iram1" "." "28"))) esp_err_t setup_priv_desc(spi_transaction_t *trans_desc, spi_trans_priv_t* new_desc, 
+# 1147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                                                                                                                _Bool 
-# 1134 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 1147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                                                                                                                     isdma)
 {
     *new_desc = (spi_trans_priv_t) { .trans = trans_desc, };
@@ -7458,9 +7647,9 @@ static __attribute__((section(".iram1"))) esp_err_t setup_priv_desc(spi_transact
         do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Allocate RX buffer for DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Allocate RX buffer for DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "Allocate RX buffer for DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "Allocate RX buffer for DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Allocate RX buffer for DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } } while(0); } while(0);
         rcv_ptr = heap_caps_malloc((trans_desc->rxlength + 31) / 8, (1<<3));
         if (rcv_ptr == 
-# 1150 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 1163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                       ((void *)0)
-# 1150 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 1163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                           ) goto clean_up;
     }
     new_desc->buffer_to_rcv = rcv_ptr;
@@ -7475,12 +7664,12 @@ static __attribute__((section(".iram1"))) esp_err_t setup_priv_desc(spi_transact
     }
     if (send_ptr && isdma && !esp_ptr_dma_capable( send_ptr )) {
 
-        do { if ( 3 >= ESP_LOG_INFO ) do { if (ESP_LOG_INFO==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Allocate TX buffer for DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } else if (ESP_LOG_INFO==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Allocate TX buffer for DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } else if (ESP_LOG_INFO==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "Allocate TX buffer for DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } else if (ESP_LOG_INFO==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "Allocate TX buffer for DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Allocate TX buffer for DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } } while(0); } while(0);
+        do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Allocate TX buffer for DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Allocate TX buffer for DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "Allocate TX buffer for DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "Allocate TX buffer for DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Allocate TX buffer for DMA" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } } while(0); } while(0);
         uint32_t *temp = heap_caps_malloc((trans_desc->length + 7) / 8, (1<<3));
         if (temp == 
-# 1166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 1179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                    ((void *)0)
-# 1166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 1179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                        ) goto clean_up;
 
         memcpy( temp, send_ptr, (trans_desc->length + 7) / 8 );
@@ -7502,7 +7691,7 @@ esp_err_t spi_device_queue_trans(spi_device_handle_t handle, spi_transaction_t *
 
     spi_host_t *host = handle->host;
 
-    if (!(!device_is_polling(handle))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""Cannot queue new transaction while previous polling transaction is not terminated." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1187); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""Cannot queue new transaction while previous polling transaction is not terminated." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1187); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""Cannot queue new transaction while previous polling transaction is not terminated." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1187); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""Cannot queue new transaction while previous polling transaction is not terminated." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1187); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""Cannot queue new transaction while previous polling transaction is not terminated." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1187); } } while(0); } while(0); return (0x103); };
+    if (!(!device_is_polling(handle))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""Cannot queue new transaction while previous polling transaction is not terminated." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1200); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""Cannot queue new transaction while previous polling transaction is not terminated." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1200); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""Cannot queue new transaction while previous polling transaction is not terminated." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1200); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""Cannot queue new transaction while previous polling transaction is not terminated." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1200); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""Cannot queue new transaction while previous polling transaction is not terminated." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1200); } } while(0); } while(0); return (0x103); };
 
     spi_trans_priv_t trans_buf;
     ret = setup_priv_desc(trans_desc, &trans_buf, (host->dma_chan!=0));
@@ -7535,10 +7724,10 @@ esp_err_t spi_device_get_trans_result(spi_device_handle_t handle, spi_transactio
     BaseType_t r;
     spi_trans_priv_t trans_buf;
     if (!(handle!=
-# 1219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 1232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
    ((void *)0)
-# 1219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1219); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1219); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1219); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1219); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1219); } } while(0); } while(0); return (0x102); };
+# 1232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1232); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1232); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1232); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1232); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1232); } } while(0); } while(0); return (0x102); };
 
 
     r=xQueueGenericReceive( ( handle->ret_queue ), ( (void*)&trans_buf ), ( ticks_to_wait ), ( ( BaseType_t ) 0 ) );
@@ -7567,15 +7756,15 @@ esp_err_t spi_device_transmit(spi_device_handle_t handle, spi_transaction_t *tra
     ret = spi_device_get_trans_result(handle, &ret_trans, ( TickType_t ) 0xffffffffUL);
     if (ret != 0) return ret;
 
-    ((ret_trans == trans_desc) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c", 1248, __func__, "ret_trans == trans_desc"));
+    ((ret_trans == trans_desc) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c", 1261, __func__, "ret_trans == trans_desc"));
     return 0;
 }
 
 esp_err_t spi_device_acquire_bus(spi_device_t *device, TickType_t wait)
 {
     spi_host_t *const host = device->host;
-    if (!(wait==( TickType_t ) 0xffffffffUL)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""acquire finite time not supported now." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1255); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""acquire finite time not supported now." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1255); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""acquire finite time not supported now." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1255); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""acquire finite time not supported now." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1255); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""acquire finite time not supported now." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1255); } } while(0); } while(0); return (0x102); };
-    if (!(!device_is_polling(device))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""Cannot acquire bus when a polling transaction is in progress." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1256); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""Cannot acquire bus when a polling transaction is in progress." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1256); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""Cannot acquire bus when a polling transaction is in progress." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1256); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""Cannot acquire bus when a polling transaction is in progress." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1256); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""Cannot acquire bus when a polling transaction is in progress." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1256); } } while(0); } while(0); return (0x103); };
+    if (!(wait==( TickType_t ) 0xffffffffUL)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""acquire finite time not supported now." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1268); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""acquire finite time not supported now." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1268); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""acquire finite time not supported now." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1268); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""acquire finite time not supported now." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1268); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""acquire finite time not supported now." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1268); } } while(0); } while(0); return (0x102); };
+    if (!(!device_is_polling(device))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""Cannot acquire bus when a polling transaction is in progress." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1269); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""Cannot acquire bus when a polling transaction is in progress." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1269); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""Cannot acquire bus when a polling transaction is in progress." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1269); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""Cannot acquire bus when a polling transaction is in progress." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1269); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""Cannot acquire bus when a polling transaction is in progress." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1269); } } while(0); } while(0); return (0x103); };
 
     esp_err_t ret = device_acquire_bus_internal(device, ( TickType_t ) 0xffffffffUL);
     if (ret != 0) return ret;
@@ -7583,9 +7772,9 @@ esp_err_t spi_device_acquire_bus(spi_device_t *device, TickType_t wait)
     if (ret != 0) return ret;
 
     device->host->bus_locked = 
-# 1263 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 1276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                               1
-# 1263 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 1276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                                   ;
 
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "device%d acquired the bus" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, device->id); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "device%d acquired the bus" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, device->id); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "device%d acquired the bus" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, device->id); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "device%d acquired the bus" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, device->id); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "device%d acquired the bus" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, device->id); } } while(0); } while(0);
@@ -7611,7 +7800,7 @@ void spi_device_release_bus(spi_device_t *dev)
 
     if (device_is_polling(dev)){
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot release bus when a polling transaction is in progress." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot release bus when a polling transaction is in progress." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "Cannot release bus when a polling transaction is in progress." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "Cannot release bus when a polling transaction is in progress." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot release bus when a polling transaction is in progress." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } } while(0); } while(0);
-        ((0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c", 1288, __func__, "0"));
+        ((0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c", 1301, __func__, "0"));
     }
 
     if (host->dma_chan != 0) {
@@ -7627,23 +7816,23 @@ void spi_device_release_bus(spi_device_t *dev)
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "device%d release bus" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, dev->id); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "device%d release bus" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, dev->id); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "device%d release bus" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, dev->id); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "device%d release bus" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, dev->id); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "device%d release bus" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, dev->id); } } while(0); } while(0);
 
     dev->host->bus_locked = 
-# 1303 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 1316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                            0
-# 1303 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 1316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                                 ;
     device_release_bus_internal(dev->host);
 }
 
-esp_err_t __attribute__((section(".iram1"))) spi_device_polling_start(spi_device_handle_t handle, spi_transaction_t *trans_desc, TickType_t ticks_to_wait)
+esp_err_t __attribute__((section(".iram1" "." "29"))) spi_device_polling_start(spi_device_handle_t handle, spi_transaction_t *trans_desc, TickType_t ticks_to_wait)
 {
     esp_err_t ret;
-    if (!(ticks_to_wait == ( TickType_t ) 0xffffffffUL)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""currently timeout is not available for polling transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1310); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""currently timeout is not available for polling transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1310); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""currently timeout is not available for polling transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1310); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""currently timeout is not available for polling transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1310); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""currently timeout is not available for polling transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1310); } } while(0); } while(0); return (0x102); };
+    if (!(ticks_to_wait == ( TickType_t ) 0xffffffffUL)) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""currently timeout is not available for polling transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1323); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""currently timeout is not available for polling transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1323); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""currently timeout is not available for polling transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1323); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""currently timeout is not available for polling transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1323); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""currently timeout is not available for polling transactions" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1323); } } while(0); } while(0); return (0x102); };
 
     spi_host_t *host = handle->host;
     ret = check_trans_valid(handle, trans_desc);
     if (ret!=0) return ret;
 
-    if (!(!device_is_polling(handle))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""Cannot send polling transaction while the previous polling transaction is not terminated." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1316); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""Cannot send polling transaction while the previous polling transaction is not terminated." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1316); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""Cannot send polling transaction while the previous polling transaction is not terminated." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1316); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""Cannot send polling transaction while the previous polling transaction is not terminated." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1316); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""Cannot send polling transaction while the previous polling transaction is not terminated." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1316); } } while(0); } while(0); return (0x103); };
+    if (!(!device_is_polling(handle))) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""Cannot send polling transaction while the previous polling transaction is not terminated." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1329); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""Cannot send polling transaction while the previous polling transaction is not terminated." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1329); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""Cannot send polling transaction while the previous polling transaction is not terminated." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1329); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""Cannot send polling transaction while the previous polling transaction is not terminated." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1329); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""Cannot send polling transaction while the previous polling transaction is not terminated." "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1329); } } while(0); } while(0); return (0x103); };
 
     ret = setup_priv_desc(trans_desc, &host->cur_trans_buf, (handle->host->dma_chan!=0));
     if (ret!=0) return ret;
@@ -7651,14 +7840,14 @@ esp_err_t __attribute__((section(".iram1"))) spi_device_polling_start(spi_device
     device_acquire_bus_internal(handle, ( TickType_t ) 0xffffffffUL);
     device_wait_for_isr_idle(handle, ( TickType_t ) 0xffffffffUL);
 
-    ((__atomic_load_n(&(&host->acquire_cs)->__val, memory_order_seq_cst) == handle->id) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c", 1324, __func__, "atomic_load(&host->acquire_cs) == handle->id"));
-    ((host->isr_free) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c", 1325, __func__, "host->isr_free"));
+    ((__atomic_load_n(&(&host->acquire_cs)->__val, memory_order_seq_cst) == handle->id) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c", 1337, __func__, "atomic_load(&host->acquire_cs) == handle->id"));
+    ((host->isr_free) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c", 1338, __func__, "host->isr_free"));
 
 
     host->polling = 
-# 1328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 1341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                    1
-# 1328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 1341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                        ;
 
     do { if ( 3 >= ESP_LOG_VERBOSE ) do { if (ESP_LOG_VERBOSE==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "polling trans" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } else if (ESP_LOG_VERBOSE==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "polling trans" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } else if (ESP_LOG_VERBOSE==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "polling trans" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } else if (ESP_LOG_VERBOSE==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "polling trans" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "polling trans" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG); } } while(0); } while(0);
@@ -7667,17 +7856,17 @@ esp_err_t __attribute__((section(".iram1"))) spi_device_polling_start(spi_device
     return 0;
 }
 
-esp_err_t __attribute__((section(".iram1"))) spi_device_polling_end(spi_device_handle_t handle, TickType_t ticks_to_wait)
+esp_err_t __attribute__((section(".iram1" "." "30"))) spi_device_polling_end(spi_device_handle_t handle, TickType_t ticks_to_wait)
 {
     if (!(handle != 
-# 1338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 1351 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
    ((void *)0)
-# 1338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
-   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1338); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1338); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1338); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1338); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1338); } } while(0); } while(0); return (0x102); };
+# 1351 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+   )) { do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, SPI_TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1351); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, SPI_TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1351); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, SPI_TAG, "D" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1351); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, SPI_TAG, "V" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1351); } else { esp_log_write(ESP_LOG_INFO, SPI_TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s(%d): ""invalid dev handle" "\033[0m" "\n", esp_log_timestamp(), SPI_TAG, __FUNCTION__, 1351); } } while(0); } while(0); return (0x102); };
     spi_host_t *host = handle->host;
 
 
-    ((host->cur_cs == __atomic_load_n(&(&host->acquire_cs)->__val, memory_order_seq_cst)) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c", 1342, __func__, "host->cur_cs == atomic_load(&host->acquire_cs)"));
+    ((host->cur_cs == __atomic_load_n(&(&host->acquire_cs)->__val, memory_order_seq_cst)) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c", 1355, __func__, "host->cur_cs == atomic_load(&host->acquire_cs)"));
     TickType_t start = xTaskGetTickCount();
 
     while (!host->hw->slave.trans_done) {
@@ -7692,9 +7881,9 @@ esp_err_t __attribute__((section(".iram1"))) spi_device_polling_end(spi_device_h
 
     uninstall_priv_desc(&host->cur_trans_buf);
     host->polling = 
-# 1356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
+# 1369 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c" 3 4
                    0
-# 1356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
+# 1369 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/spi_master.c"
                         ;
 
     if (!host->bus_locked) {
@@ -7704,7 +7893,7 @@ esp_err_t __attribute__((section(".iram1"))) spi_device_polling_end(spi_device_h
     return 0;
 }
 
-esp_err_t __attribute__((section(".iram1"))) spi_device_polling_transmit(spi_device_handle_t handle, spi_transaction_t* trans_desc)
+esp_err_t __attribute__((section(".iram1" "." "31"))) spi_device_polling_transmit(spi_device_handle_t handle, spi_transaction_t* trans_desc)
 {
     esp_err_t ret;
     ret = spi_device_polling_start(handle, trans_desc, ( TickType_t ) 0xffffffffUL);

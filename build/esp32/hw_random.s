@@ -1,7 +1,7 @@
 	.file	"hw_random.c"
 	.text
 .Ltext0:
-	.section	.iram1,"ax",@progbits
+	.section	.iram1.0,"ax",@progbits
 	.literal_position
 	.literal .LC0, last_ccount$2907
 	.literal .LC1, 1610830148
@@ -448,12 +448,12 @@ last_ccount$2907:
 	.4byte	.LASF24
 	.4byte	.LASF24
 	.byte	0x5
-	.byte	0x34
+	.byte	0x35
 	.uleb128 0x15
 	.4byte	.LASF25
 	.4byte	.LASF25
 	.byte	0x5
-	.byte	0x3f
+	.byte	0x40
 	.uleb128 0x16
 	.4byte	.LASF32
 	.4byte	.LASF32

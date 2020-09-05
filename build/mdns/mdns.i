@@ -7,7 +7,7 @@
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/include/mdns.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/include/mdns.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 1
-# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 1
 # 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h" 1
@@ -130,7 +130,7 @@ typedef __uint_least64_t uint_least64_t;
 
 typedef __intptr_t intptr_t;
 typedef __uintptr_t uintptr_t;
-# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/queue.h" 1
 # 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/queue.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 1
@@ -146,13 +146,11 @@ typedef unsigned int size_t;
 typedef short unsigned int wchar_t;
 # 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 2
 # 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/queue.h" 2
-# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 1
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdbool.h" 1 3 4
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 2
-# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/queue.h" 1
-# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 1
 # 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
        
@@ -1094,7 +1092,7 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 1
@@ -1382,7 +1380,9 @@ void _esp_error_check_failed(esp_err_t rc, const char *file, int line, const cha
 
 
 void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int line, const char *function, const char *expression);
-# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 2
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_interface.h" 1
 # 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_interface.h"
 typedef enum {
@@ -1391,7 +1391,8 @@ typedef enum {
     ESP_IF_ETH,
     ESP_IF_MAX
 } esp_interface_t;
-# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h" 2
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 2
 
 
 
@@ -1464,6 +1465,8 @@ typedef enum {
     WIFI_REASON_AUTH_FAIL = 202,
     WIFI_REASON_ASSOC_FAIL = 203,
     WIFI_REASON_HANDSHAKE_TIMEOUT = 204,
+    WIFI_REASON_CONNECTION_FAIL = 205,
+    WIFI_REASON_AUTH_CHANGED = 206,
 } wifi_err_reason_t;
 
 typedef enum {
@@ -1485,7 +1488,7 @@ typedef struct {
 } wifi_active_scan_time_t;
 
 
-typedef union {
+typedef struct {
     wifi_active_scan_time_t active;
     uint32_t passive;
 
@@ -1497,9 +1500,9 @@ typedef struct {
     uint8_t *bssid;
     uint8_t channel;
     
-# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
-# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         show_hidden;
     wifi_scan_type_t scan_type;
     wifi_scan_time_t scan_time;
@@ -1568,7 +1571,7 @@ typedef enum {
     WIFI_PS_MIN_MODEM,
     WIFI_PS_MAX_MODEM,
 } wifi_ps_type_t;
-# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
 typedef enum {
     WIFI_BW_HT20 = 1,
     WIFI_BW_HT40,
@@ -1592,9 +1595,9 @@ typedef struct {
     uint8_t password[64];
     wifi_scan_method_t scan_method;
     
-# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
-# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         bssid_set;
     uint8_t bssid[6];
     uint8_t channel;
@@ -1660,7 +1663,7 @@ typedef enum {
     WIFI_VND_IE_ID_0,
     WIFI_VND_IE_ID_1,
 } wifi_vendor_ie_id_t;
-# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
 typedef struct {
     uint8_t element_id;
     uint8_t length;
@@ -1719,41 +1722,41 @@ typedef enum {
     WIFI_PKT_DATA,
     WIFI_PKT_MISC,
 } wifi_promiscuous_pkt_type_t;
-# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 380 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
 typedef struct {
     uint32_t filter_mask;
 } wifi_promiscuous_filter_t;
-# 391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-typedef struct {
-    
-# 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
-   _Bool 
 # 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        lltf_en;
+typedef struct {
     
 # 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
 # 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        htltf_en;
+        lltf_en;
     
 # 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
 # 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        stbc_htltf2_en;
+        htltf_en;
     
 # 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
 # 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        ltf_merge_en;
+        stbc_htltf2_en;
     
 # 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
 # 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
-        channel_filter_en;
+        ltf_merge_en;
     
 # 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
 # 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+        channel_filter_en;
+    
+# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+   _Bool 
+# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         manu_scale;
     uint8_t shift;
 } wifi_csi_config_t;
@@ -1766,9 +1769,9 @@ typedef struct {
     wifi_pkt_rx_ctrl_t rx_ctrl;
     uint8_t mac[6];
     
-# 408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
+# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
-# 408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         first_word_invalid;
     int8_t *buf;
     uint16_t len;
@@ -1854,9 +1857,37 @@ typedef enum {
     WIFI_PHY_RATE_LORA_500K = 0x2A,
     WIFI_PHY_RATE_MAX,
 } wifi_phy_rate_t;
-# 42 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
+
+
+
+
+
+typedef enum {
+    WIFI_IOCTL_SET_STA_HT2040_COEX = 1,
+    WIFI_IOCTL_GET_STA_HT2040_COEX,
+    WIFI_IOCTL_MAX,
+} wifi_ioctl_cmd_t;
+
+
+
+
+
+typedef struct {
+    int enable;
+} wifi_ht2040_coex_t;
+
+
+
+
+
+typedef struct {
+    union {
+        wifi_ht2040_coex_t ht2040_coex;
+    } data;
+} wifi_ioctl_config_t;
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
 
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h" 1
@@ -3128,7 +3159,7 @@ typedef enum {
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 2
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h" 1
-# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
 typedef volatile struct {
     uint32_t bt_select;
     uint32_t out;
@@ -3347,6 +3378,9 @@ static inline void __attribute__ ((deprecated)) PIN_PULLDWN_EN(uint32_t PIN_NAME
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h" 1
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 2
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h" 2
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_pins.h" 1
@@ -3468,7 +3502,7 @@ void esp_intr_noniram_disable();
 void esp_intr_noniram_enable();
 # 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h" 1
-# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
 extern const uint32_t GPIO_PIN_MUX_REG[40];
 # 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
 # 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
@@ -3943,25 +3977,25 @@ typedef enum {
 typedef esp_sleep_source_t esp_sleep_wakeup_cause_t;
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_disable_wakeup_source(esp_sleep_source_t source);
-# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ulp_wakeup();
-# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_timer_wakeup(uint64_t time_in_us);
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_touchpad_wakeup();
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 touch_pad_t esp_sleep_get_touchpad_wakeup_status();
-# 161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext0_wakeup(gpio_num_t gpio_num, int level);
-# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_ext1_wakeup(uint64_t mask, esp_sleep_ext1_wakeup_mode_t mode);
-# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_gpio_wakeup();
-# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_enable_uart_wakeup(int uart_num);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 uint64_t esp_sleep_get_ext1_wakeup_status();
-# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
                                    esp_sleep_pd_option_t option);
 
@@ -3971,11 +4005,11 @@ esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
 
 
 void esp_deep_sleep_start() __attribute__((noreturn));
-# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 esp_err_t esp_light_sleep_start();
-# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_deep_sleep(uint64_t time_in_us) __attribute__((noreturn));
-# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated));
 
 
@@ -3985,7 +4019,7 @@ void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated)
 
 
 esp_sleep_wakeup_cause_t esp_sleep_get_wakeup_cause();
-# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_wake_deep_sleep(void);
 
 
@@ -3993,7 +4027,7 @@ void esp_wake_deep_sleep(void);
 
 
 typedef void (*esp_deep_sleep_wake_stub_fn_t)(void);
-# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
 void esp_set_deep_sleep_wake_stub(esp_deep_sleep_wake_stub_fn_t new_stub);
 
 
@@ -4017,6 +4051,12 @@ void esp_default_wake_deep_sleep(void);
 
 void esp_deep_sleep_disable_rom_logging(void);
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+       
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_idf_version.h"
+const char* esp_get_idf_version(void);
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
 
 
 
@@ -4028,7 +4068,7 @@ typedef enum {
     ESP_MAC_BT,
     ESP_MAC_ETH,
 } esp_mac_type_t;
-# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef enum {
     ESP_RST_UNKNOWN,
     ESP_RST_POWERON,
@@ -4071,9 +4111,9 @@ typedef void (*shutdown_handler_t)(void);
 
 
 esp_err_t esp_register_shutdown_handler(shutdown_handler_t handle);
-# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_restart(void) __attribute__ ((noreturn));
-# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
@@ -4082,11 +4122,11 @@ void system_restart(void) __attribute__ ((deprecated, noreturn));
 
 
 esp_reset_reason_t esp_reset_reason(void);
-# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_time(void) __attribute__ ((deprecated));
-# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_get_free_heap_size(void);
-# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
@@ -4096,36 +4136,28 @@ uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
 
 
 uint32_t esp_get_minimum_free_heap_size( void );
-# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_random(void);
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_fill_random(void *buf, size_t len);
-# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_set(uint8_t *mac);
-# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_get(uint8_t *mac);
-# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_custom(uint8_t *mac);
-# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 228 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_default(uint8_t *mac);
-# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t system_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
-# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_read_mac(uint8_t* mac, esp_mac_type_t type);
-# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_derive_local_mac(uint8_t* local_mac, const uint8_t* universal_mac);
-# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 const char* system_get_sdk_version(void) __attribute__ ((deprecated));
-
-
-
-
-
-
-
-const char* esp_get_idf_version(void);
 
 
 
@@ -4134,7 +4166,7 @@ const char* esp_get_idf_version(void);
 typedef enum {
     CHIP_ESP32 = 1,
 } esp_chip_model_t;
-# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef struct {
     esp_chip_model_t model;
     uint32_t features;
@@ -4150,7 +4182,61 @@ void esp_chip_info(esp_chip_info_t* out_info);
 # 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
 # 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/sntp.h" 1
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/sntp.h"
+typedef enum {
+    SNTP_SYNC_MODE_IMMED,
+    SNTP_SYNC_MODE_SMOOTH,
+} sntp_sync_mode_t;
 
+
+typedef enum {
+    SNTP_SYNC_STATUS_RESET,
+    SNTP_SYNC_STATUS_COMPLETED,
+    SNTP_SYNC_STATUS_IN_PROGRESS,
+} sntp_sync_status_t;
+
+
+
+
+
+
+typedef void (*sntp_sync_time_cb_t) (struct timeval *tv);
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/sntp.h"
+void sntp_sync_time(struct timeval *tv);
+
+
+
+
+
+
+
+void sntp_set_sync_mode(sntp_sync_mode_t sync_mode);
+
+
+
+
+
+
+
+sntp_sync_mode_t sntp_get_sync_mode(void);
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/sntp/sntp.h"
+sntp_sync_status_t sntp_get_sync_status(void);
+
+
+
+
+
+
+void sntp_set_sync_status(sntp_sync_status_t sync_status);
+
+
+
+
+
+
+void sntp_set_time_sync_notification_cb(sntp_sync_time_cb_t callback);
+# 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/lwipopts.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h" 1
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h"
 
@@ -4217,6 +4303,77 @@ typedef void (*TaskFunction_t)( void * );
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/deprecated_definitions.h" 1
 # 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 2
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void *get_sp()
+{
+    void *sp;
+    asm volatile ("mov %0, sp;" : "=r" (sp));
+    return sp;
+}
+
+
+
+
+
+static inline void cpu_write_dtlb(uint32_t vpn, unsigned attr)
+{
+    asm volatile ("wdtlb  %1, %0; dsync\n" :: "r" (vpn), "r" (attr));
+}
+
+
+static inline void cpu_write_itlb(unsigned vpn, unsigned attr)
+{
+    asm volatile ("witlb  %1, %0; isync\n" :: "r" (vpn), "r" (attr));
+}
+
+static inline void cpu_init_memctl()
+{
+
+    uint32_t memctl = 0x00000000;
+    asm volatile ("wsr %0, " "MEMCTL" : : "r" (memctl));;
+
+}
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+static inline void cpu_configure_region_protection()
+{
+    const uint32_t pages_to_protect[] = {0x00000000, 0x80000000, 0xa0000000, 0xc0000000, 0xe0000000};
+    for (int i = 0; i < sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
+        cpu_write_dtlb(pages_to_protect[i], 0xf);
+        cpu_write_itlb(pages_to_protect[i], 0xf);
+    }
+    cpu_write_dtlb(0x20000000, 0);
+    cpu_write_itlb(0x20000000, 0);
+}
+
+
+
+
+
+void esp_cpu_stall(int cpu_id);
+
+
+
+
+
+void esp_cpu_unstall(int cpu_id);
+
+
+
+
+
+void esp_cpu_reset(int cpu_id);
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h" 3 4
+_Bool 
+# 111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/cpu.h"
+    esp_cpu_in_ocd_debug_mode();
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 
 
 
@@ -4644,7 +4801,7 @@ inline static
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_dma_capable(const void *p)
+                  __attribute__((section(".iram1" "." "0"))) esp_ptr_dma_capable(const void *p)
 {
     return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
 }
@@ -4653,24 +4810,37 @@ inline static
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
 # 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_executable(const void *p)
+                  __attribute__((section(".iram1" "." "1"))) esp_ptr_word_aligned(const void *p)
+{
+    return ((intptr_t)p) % 4 == 0;
+}
+
+inline static 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "2"))) esp_ptr_executable(const void *p)
 {
     intptr_t ip = (intptr_t) p;
     return (ip >= 0x400D0000 && ip < 0x40400000)
         || (ip >= 0x40080000 && ip < 0x400A0000)
+        || (ip >= 0x40000000 && ip < 0x40070000)
+
+        || (ip >= 0x40078000 && ip < 0x40080000)
+
         || (ip >= 0x400C0000 && ip < 0x400C2000);
 }
 
 inline static 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_byte_accessible(const void *p)
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "3"))) esp_ptr_byte_accessible(const void *p)
 {
     
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x40000000);
 
@@ -4680,14 +4850,14 @@ inline static
 }
 
 inline static 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_internal(const void *p) {
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "4"))) esp_ptr_internal(const void *p) {
     
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
    _Bool 
-# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
         r;
     r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
     r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
@@ -4696,18 +4866,18 @@ inline static
 
 
 inline static 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_external_ram(const void *p) {
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "5"))) esp_ptr_external_ram(const void *p) {
     return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
 }
 
 inline static 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_iram(const void *p) {
+# 186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "6"))) esp_ptr_in_iram(const void *p) {
 
 
 
@@ -4716,19 +4886,35 @@ inline static
 }
 
 inline static 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_drom(const void *p) {
+# 194 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "7"))) esp_ptr_in_drom(const void *p) {
     return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
 }
 
 inline static 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
              _Bool 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
-                  __attribute__((section(".iram1"))) esp_ptr_in_dram(const void *p) {
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "8"))) esp_ptr_in_dram(const void *p) {
     return ((intptr_t)p >= 0x3FAE0000 && (intptr_t)p < 0x40000000);
+}
+
+inline static 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "9"))) esp_ptr_in_diram_dram(const void *p) {
+    return ((intptr_t)p >= 0x3FFE0000 && (intptr_t)p < 0x3FFFFFFC);
+}
+
+inline static 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1" "." "10"))) esp_ptr_in_diram_iram(const void *p) {
+    return ((intptr_t)p >= 0x400A0000 && (intptr_t)p < 0x400BFFFC);
 }
 # 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 # 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
@@ -4777,24 +4963,24 @@ typedef struct {
 void vPortAssertIfInISR();
 # 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortCPUInitializeMutex(portMUX_TYPE *mux);
-# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vTaskExitCritical( portMUX_TYPE *mux );
 void vTaskEnterCritical( portMUX_TYPE *mux );
 void vPortCPUAcquireMutex(portMUX_TYPE *mux);
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
 _Bool 
-# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
     vPortCPUAcquireMutexTimeout(portMUX_TYPE *mux, int timeout_cycles);
 void vPortCPUReleaseMutex(portMUX_TYPE *mux);
-# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline unsigned portENTER_CRITICAL_NESTED() {
  unsigned state = ({ unsigned __tmp; __asm__ __volatile__( "rsil	%0, " "3" "\n" : "=a" (__tmp) : : "memory" ); __tmp;});
  ;
  return state;
 }
-# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, uint32_t *set) {
     __asm__ __volatile__ (
         "WSR 	    %2,SCOMPARE1 \n"
@@ -4803,20 +4989,20 @@ static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, u
         :"r"(addr), "r"(compare), "0"(*set)
         );
 }
-# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortYield( void );
 void _frxt_setup_switch( void );
 
 
 
 static inline uint32_t xPortGetCoreID();
-# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef struct {
 
  volatile StackType_t* coproc_area;
-# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 } xMPU_SETTINGS;
-# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 extern void esp_vApplicationIdleHook( void );
 extern void esp_vApplicationTickHook( void );
 
@@ -4827,13 +5013,13 @@ extern void esp_vApplicationTickHook( void );
 
 void _xt_coproc_release(volatile void * coproc_sa_base);
 void vApplicationSleep( TickType_t xExpectedIdleTime );
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/mpu_wrappers.h" 1
-# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters, BaseType_t xRunPrivileged ) ;
-# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 BaseType_t xPortStartScheduler( void ) ;
 
 
@@ -4869,14 +5055,14 @@ BaseType_t xPortInIsrContext();
 
 
 BaseType_t xPortInterruptedFromISRContext();
-# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  struct xMEMORY_REGION;
  void vPortStoreTaskMPUSettings( xMPU_SETTINGS *xMPUSettings, const struct xMEMORY_REGION * const xRegions, StackType_t *pxBottomOfStack, uint32_t usStackDepth ) ;
  void vPortReleaseTaskMPUSettings( xMPU_SETTINGS *xMPUSettings );
 
 
 
-static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
+static inline uint32_t __attribute__((section(".iram1" "." "11"))) xPortGetCoreID() {
     int id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
@@ -4887,6 +5073,21 @@ static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
 
 
 uint32_t xPortGetTickRateHz(void);
+
+
+static inline 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 3 4
+             _Bool 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+                  __attribute__((section(".iram1" "." "12"))) xPortCanYield(void)
+{
+    uint32_t ps_reg = 0;
+
+
+    asm volatile ("rsr %0, " "PS" : "=r" (ps_reg));;
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+    return ((ps_reg & 0x0000000F) == 0);
+}
 
 
 
@@ -5196,7 +5397,7 @@ typedef enum
           TaskHandle_t * const pvCreatedTask,
           const BaseType_t xCoreID);
 # 432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
- static inline __attribute__((section(".iram1"))) BaseType_t xTaskCreate(
+ static inline __attribute__((section(".iram1" "." "13"))) BaseType_t xTaskCreate(
    TaskFunction_t pvTaskCode,
    const char * const pcName,
    const uint32_t usStackDepth,
@@ -5503,6 +5704,10 @@ sys_sem_t* sys_thread_sem_get(void);
 
 
 
+
+
+
+
 typedef uint8_t u8_t;
 typedef int8_t s8_t;
 typedef uint16_t u16_t;
@@ -5660,7 +5865,7 @@ extern const ip_addr_t ip_addr_any;
 extern const ip_addr_t ip_addr_broadcast;
 # 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h"
 extern const ip_addr_t ip6_addr_any;
-# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h" 1
 # 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h"
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
@@ -5756,30 +5961,40 @@ _Bool
 void dhcps_dns_setserver(const ip_addr_t *dnsserver);
 ip4_addr_t dhcps_dns_getserver();
 void dhcps_set_new_lease_cb(dhcps_cb_t cb);
-# 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
-# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 2
+
+typedef dhcps_lease_t tcpip_adapter_dhcps_lease_t;
+# 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 typedef struct {
     ip4_addr_t ip;
     ip4_addr_t netmask;
     ip4_addr_t gw;
 } tcpip_adapter_ip_info_t;
 
+
+
 typedef struct {
     ip6_addr_t ip;
 } tcpip_adapter_ip6_info_t;
 
-typedef dhcps_lease_t tcpip_adapter_dhcps_lease_t;
+
+
+
 
 typedef struct {
     uint8_t mac[6];
     ip4_addr_t ip;
 } tcpip_adapter_sta_info_t;
 
+
+
+
+
 typedef struct {
     tcpip_adapter_sta_info_t sta[(10)];
     int num;
 } tcpip_adapter_sta_list_t;
-# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 typedef enum {
     TCPIP_ADAPTER_IF_STA = 0,
     TCPIP_ADAPTER_IF_AP,
@@ -5814,7 +6029,11 @@ typedef enum{
     TCPIP_ADAPTER_OP_SET,
     TCPIP_ADAPTER_OP_GET,
     TCPIP_ADAPTER_OP_MAX
-} tcpip_adapter_option_mode_t;
+} tcpip_adapter_dhcp_option_mode_t;
+
+
+typedef tcpip_adapter_dhcp_option_mode_t tcpip_adapter_option_mode_t;
+
 
 typedef enum{
     TCPIP_ADAPTER_DOMAIN_NAME_SERVER = 6,
@@ -5822,32 +6041,10 @@ typedef enum{
     TCPIP_ADAPTER_REQUESTED_IP_ADDRESS = 50,
     TCPIP_ADAPTER_IP_ADDRESS_LEASE_TIME = 51,
     TCPIP_ADAPTER_IP_REQUEST_RETRY_TIME = 52,
-} tcpip_adapter_option_id_t;
+} tcpip_adapter_dhcp_option_id_t;
 
-struct tcpip_adapter_api_msg_s;
-typedef int (*tcpip_adapter_api_fn)(struct tcpip_adapter_api_msg_s *msg);
-typedef struct tcpip_adapter_api_msg_s {
-    int type;
-    int ret;
-    tcpip_adapter_api_fn api_fn;
-    tcpip_adapter_if_t tcpip_if;
-    tcpip_adapter_ip_info_t *ip_info;
-    uint8_t *mac;
-    void *data;
-} tcpip_adapter_api_msg_t;
 
-typedef struct tcpip_adapter_dns_param_s {
-    tcpip_adapter_dns_type_t dns_type;
-    tcpip_adapter_dns_info_t *dns_info;
-} tcpip_adapter_dns_param_t;
-# 188 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
-typedef struct tcpip_adatper_ip_lost_timer_s {
-    
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 3 4
-   _Bool 
-# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
-        timer_running;
-} tcpip_adapter_ip_lost_timer_t;
+typedef tcpip_adapter_dhcp_option_id_t tcpip_adapter_option_id_t;
 
 
 
@@ -5855,71 +6052,73 @@ typedef struct tcpip_adatper_ip_lost_timer_s {
 
 
 void tcpip_adapter_init(void);
-# 209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_eth_start(uint8_t *mac, tcpip_adapter_ip_info_t *ip_info);
-# 223 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_sta_start(uint8_t *mac, tcpip_adapter_ip_info_t *ip_info);
-# 239 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_ap_start(uint8_t *mac, tcpip_adapter_ip_info_t *ip_info);
-# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 220 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_stop(tcpip_adapter_if_t tcpip_if);
-# 264 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_up(tcpip_adapter_if_t tcpip_if);
-# 276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_down(tcpip_adapter_if_t tcpip_if);
-# 290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_get_ip_info(tcpip_adapter_if_t tcpip_if, tcpip_adapter_ip_info_t *ip_info);
-# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
-esp_err_t tcpip_adapter_set_ip_info(tcpip_adapter_if_t tcpip_if, tcpip_adapter_ip_info_t *ip_info);
-# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_set_ip_info(tcpip_adapter_if_t tcpip_if, const tcpip_adapter_ip_info_t *ip_info);
+# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_set_dns_info(tcpip_adapter_if_t tcpip_if, tcpip_adapter_dns_type_t type, tcpip_adapter_dns_info_t *dns);
-# 347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_get_dns_info(tcpip_adapter_if_t tcpip_if, tcpip_adapter_dns_type_t type, tcpip_adapter_dns_info_t *dns);
-# 362 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_get_old_ip_info(tcpip_adapter_if_t tcpip_if, tcpip_adapter_ip_info_t *ip_info);
-# 377 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
-esp_err_t tcpip_adapter_set_old_ip_info(tcpip_adapter_if_t tcpip_if, tcpip_adapter_ip_info_t *ip_info);
-# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_set_old_ip_info(tcpip_adapter_if_t tcpip_if, const tcpip_adapter_ip_info_t *ip_info);
+# 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_create_ip6_linklocal(tcpip_adapter_if_t tcpip_if);
 # 407 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_get_ip6_linklocal(tcpip_adapter_if_t tcpip_if, ip6_addr_t *if_ip6);
-# 423 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 422 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_get_ip6_global(tcpip_adapter_if_t tcpip_if, ip6_addr_t *if_ip6);
+# 439 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_dhcps_get_status(tcpip_adapter_if_t tcpip_if, tcpip_adapter_dhcp_status_t *status);
-# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
-esp_err_t tcpip_adapter_dhcps_option(tcpip_adapter_option_mode_t opt_op, tcpip_adapter_option_id_t opt_id, void *opt_val, uint32_t opt_len);
-# 451 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 455 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_dhcps_option(tcpip_adapter_dhcp_option_mode_t opt_op, tcpip_adapter_dhcp_option_id_t opt_id, void *opt_val, uint32_t opt_len);
+# 469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_dhcps_start(tcpip_adapter_if_t tcpip_if);
-# 465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_dhcps_stop(tcpip_adapter_if_t tcpip_if);
-# 475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 495 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_dhcpc_get_status(tcpip_adapter_if_t tcpip_if, tcpip_adapter_dhcp_status_t *status);
-# 489 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
-esp_err_t tcpip_adapter_dhcpc_option(tcpip_adapter_option_mode_t opt_op, tcpip_adapter_option_id_t opt_id, void *opt_val, uint32_t opt_len);
-# 503 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 510 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_dhcpc_option(tcpip_adapter_dhcp_option_mode_t opt_op, tcpip_adapter_dhcp_option_id_t opt_id, void *opt_val, uint32_t opt_len);
+# 527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_dhcpc_start(tcpip_adapter_if_t tcpip_if);
-# 517 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_dhcpc_stop(tcpip_adapter_if_t tcpip_if);
-# 530 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 560 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_eth_input(void *buffer, uint16_t len, void *eb);
-# 543 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 578 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_sta_input(void *buffer, uint16_t len, void *eb);
-# 556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 596 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_ap_input(void *buffer, uint16_t len, void *eb);
-# 570 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_interface_t tcpip_adapter_get_esp_if(void *dev);
-# 582 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
-esp_err_t tcpip_adapter_get_sta_list(wifi_sta_list_t *wifi_sta_list, tcpip_adapter_sta_list_t *tcpip_sta_list);
-# 595 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+esp_err_t tcpip_adapter_get_sta_list(const wifi_sta_list_t *wifi_sta_list, tcpip_adapter_sta_list_t *tcpip_sta_list);
+# 638 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_set_hostname(tcpip_adapter_if_t tcpip_if, const char *hostname);
-# 607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 651 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_get_hostname(tcpip_adapter_if_t tcpip_if, const char **hostname);
-# 619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 666 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 esp_err_t tcpip_adapter_get_netif(tcpip_adapter_if_t tcpip_if, void ** netif);
-# 629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 677 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
 
-# 629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 3 4
+# 677 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h" 3 4
 _Bool 
-# 629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
+# 677 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h"
     tcpip_adapter_is_netif_up(tcpip_adapter_if_t tcpip_if);
 # 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/include/mdns.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h" 1
@@ -5957,6 +6156,7 @@ typedef enum {
     SYSTEM_EVENT_STA_WPS_ER_FAILED,
     SYSTEM_EVENT_STA_WPS_ER_TIMEOUT,
     SYSTEM_EVENT_STA_WPS_ER_PIN,
+    SYSTEM_EVENT_STA_WPS_ER_PBC_OVERLAP,
     SYSTEM_EVENT_AP_START,
     SYSTEM_EVENT_AP_STOP,
     SYSTEM_EVENT_AP_STACONNECTED,
@@ -6011,9 +6211,9 @@ typedef struct {
 typedef struct {
     tcpip_adapter_ip_info_t ip_info;
     
-# 96 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h" 3 4
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h" 3 4
    _Bool 
-# 96 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
         ip_changed;
 } system_event_sta_got_ip_t;
 
@@ -6041,6 +6241,10 @@ typedef struct {
     uint8_t mac[6];
 } system_event_ap_probe_req_rx_t;
 
+typedef struct {
+    ip4_addr_t ip;
+} system_event_ap_staipassigned_t;
+
 typedef union {
     system_event_sta_connected_t connected;
     system_event_sta_disconnected_t disconnected;
@@ -6052,6 +6256,7 @@ typedef union {
     system_event_ap_staconnected_t sta_connected;
     system_event_ap_stadisconnected_t sta_disconnected;
     system_event_ap_probe_req_rx_t ap_probereqrecved;
+    system_event_ap_staipassigned_t ap_staipassigned;
     system_event_got_ip6_t got_ip6;
 } system_event_info_t;
 
@@ -6061,9 +6266,9 @@ typedef struct {
 } system_event_t;
 
 typedef esp_err_t (*system_event_handler_t)(system_event_t *event);
-# 154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
+# 160 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
 esp_err_t esp_event_send(system_event_t *event);
-# 169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_event_legacy.h"
 esp_err_t esp_event_process_default(system_event_t *event);
 
 
@@ -6109,33 +6314,33 @@ esp_err_t esp_event_handler_register(esp_event_base_t event_base,
                                         int32_t event_id,
                                         esp_event_handler_t event_handler,
                                         void* event_handler_arg);
-# 168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+# 171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
 esp_err_t esp_event_handler_register_with(esp_event_loop_handle_t event_loop,
                                             esp_event_base_t event_base,
                                             int32_t event_id,
                                             esp_event_handler_t event_handler,
                                             void* event_handler_arg);
-# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
 esp_err_t esp_event_handler_unregister(esp_event_base_t event_base, int32_t event_id, esp_event_handler_t event_handler);
-# 213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
 esp_err_t esp_event_handler_unregister_with(esp_event_loop_handle_t event_loop,
                                             esp_event_base_t event_base,
                                             int32_t event_id,
                                             esp_event_handler_t event_handler);
-# 237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
 esp_err_t esp_event_post(esp_event_base_t event_base,
                             int32_t event_id,
                             void* event_data,
                             size_t event_data_size,
                             TickType_t ticks_to_wait);
-# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+# 269 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
 esp_err_t esp_event_post_to(esp_event_loop_handle_t event_loop,
                             esp_event_base_t event_base,
                             int32_t event_id,
                             void* event_data,
                             size_t event_data_size,
                             TickType_t ticks_to_wait);
-# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
+# 320 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_event/include/esp_event.h"
 esp_err_t esp_event_dump(FILE* file);
 # 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/include/mdns.h" 2
 # 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/include/mdns.h"
@@ -6711,7 +6916,7 @@ u16_t pbuf_strstr(const struct pbuf* p, const char* substr);
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/mem.h" 1
 # 50 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/mem.h"
 typedef size_t mem_size_t;
-# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/mem.h"
+# 72 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/lwip/lwip/src/include/lwip/mem.h"
 void mem_init(void);
 void *mem_trim(void *mem, mem_size_t size);
 void *mem_malloc(mem_size_t size);
@@ -7704,10 +7909,10 @@ struct tcpip_msg {
 # 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/private_include/mdns_networking.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 1
 # 65 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_private.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_private.h"
 # 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
-# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 2
-
-
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_private.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h" 1
 # 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef enum {
@@ -8053,8 +8258,7 @@ typedef struct{
     esp_aes_128_encrypt_t aes_128_encrypt;
     esp_aes_128_decrypt_t aes_128_decrypt;
 } mesh_crypto_funcs_t;
-# 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 2
-
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_private.h" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h" 1
 # 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h"
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
@@ -8075,14 +8279,12 @@ typedef struct {
     void (* _spin_lock_delete)(void *lock);
     uint32_t (*_wifi_int_disable)(void *wifi_int_mux);
     void (*_wifi_int_restore)(void *wifi_int_mux, uint32_t tmp);
-    void (*_task_yield)(void);
     void (*_task_yield_from_isr)(void);
     void *(*_semphr_create)(uint32_t max, uint32_t init);
     void (*_semphr_delete)(void *semphr);
-    int32_t (*_semphr_take_from_isr)(void *semphr, void *hptw);
-    int32_t (*_semphr_give_from_isr)(void *semphr, void *hptw);
     int32_t (*_semphr_take)(void *semphr, uint32_t block_time_tick);
     int32_t (*_semphr_give)(void *semphr);
+    void *(*_wifi_thread_semphr_get)(void);
     void *(*_mutex_create)(void);
     void *(*_recursive_mutex_create)(void);
     void (*_mutex_delete)(void *mutex);
@@ -8095,7 +8297,6 @@ typedef struct {
     int32_t (* _queue_send_to_back)(void *queue, void *item, uint32_t block_time_tick);
     int32_t (* _queue_send_to_front)(void *queue, void *item, uint32_t block_time_tick);
     int32_t (* _queue_recv)(void *queue, void *item, uint32_t block_time_tick);
-    int32_t (* _queue_recv_from_isr)(void *queue, void * const item, int32_t * const hptw);
     uint32_t (* _queue_msg_waiting)(void *queue);
     void *(* _event_group_create)(void);
     void (* _event_group_delete)(void *event);
@@ -8109,31 +8310,29 @@ typedef struct {
     int32_t (* _task_ms_to_tick)(uint32_t ms);
     void *(* _task_get_current_task)(void);
     int32_t (* _task_get_max_priority)(void);
-    int32_t (* _is_in_isr)(void);
     void *(* _malloc)(uint32_t size);
     void (* _free)(void *p);
     uint32_t (* _get_free_heap_size)(void);
     uint32_t (* _rand)(void);
     void (* _dport_access_stall_other_cpu_start_wrap)(void);
     void (* _dport_access_stall_other_cpu_end_wrap)(void);
-    int32_t (* _phy_rf_init)(const void * init_data, uint32_t mode, void * calibration_data, uint32_t module);
     int32_t (* _phy_rf_deinit)(uint32_t module);
     void (* _phy_load_cal_and_init)(uint32_t module);
+    void (* _phy_common_clock_enable)(void);
+    void (* _phy_common_clock_disable)(void);
     int32_t (* _read_mac)(uint8_t* mac, uint32_t type);
-    void (* _timer_init)(void);
-    void (* _timer_deinit)(void);
     void (* _timer_arm)(void *timer, uint32_t tmout, 
-# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h" 3 4
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h" 3 4
                                                     _Bool 
-# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h"
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h"
                                                          repeat);
     void (* _timer_disarm)(void *timer);
     void (* _timer_done)(void *ptimer);
     void (* _timer_setfn)(void *ptimer, void *pfunction, void *parg);
     void (* _timer_arm_us)(void *ptimer, uint32_t us, 
-# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h" 3 4
+# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h" 3 4
                                                      _Bool 
-# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h"
+# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h"
                                                           repeat);
     void (* _periph_module_enable)(uint32_t periph);
     void (* _periph_module_disable)(uint32_t periph);
@@ -8154,6 +8353,7 @@ typedef struct {
     int32_t (* _get_time)(void *t);
     unsigned long (* _random)(void);
     void (* _log_write)(uint32_t level, const char* tag, const char* format, ...);
+    void (* _log_writev)(uint32_t level, const char* tag, const char* format, va_list args);
     uint32_t (* _log_timestamp)(void);
     void * (* _malloc_internal)(size_t size);
     void * (* _realloc_internal)(void *ptr, size_t size);
@@ -8171,12 +8371,21 @@ typedef struct {
     int32_t (* _modem_sleep_deregister)(uint32_t module);
     void (* _sc_ack_send)(void *param);
     void (* _sc_ack_send_stop)(void);
+    uint32_t (* _coex_status_get)(void);
+    void (* _coex_condition_set)(uint32_t type, 
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h" 3 4
+                                               _Bool 
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_os_adapter.h"
+                                                    dissatisfy);
+    int32_t (* _coex_wifi_request)(uint32_t event, uint32_t latency, uint32_t duration);
+    int32_t (* _coex_wifi_release)(uint32_t event);
     int32_t _magic;
 } wifi_osi_funcs_t;
 
 extern wifi_osi_funcs_t g_wifi_osi_funcs;
-# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 2
-# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_private/esp_wifi_private.h" 2
+# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 2
+# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 typedef struct {
     system_event_handler_t event_handler;
     wifi_osi_funcs_t* osi_funcs;
@@ -8195,157 +8404,160 @@ typedef struct {
     int rx_ba_win;
     int wifi_task_core_id;
     int beacon_max_len;
+    int mgmt_sbuf_num;
     int magic;
 } wifi_init_config_t;
 # 158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 extern const wpa_crypto_funcs_t g_wifi_default_wpa_crypto_funcs;
-# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_init(const wifi_init_config_t *config);
-# 238 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_deinit(void);
-# 254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_mode(wifi_mode_t mode);
-# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 273 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_mode(wifi_mode_t *mode);
-# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_start(void);
-# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_stop(void);
-# 309 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_restore(void);
-# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_connect(void);
-# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_disconnect(void);
-# 351 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_clear_fast_connect(void);
-# 365 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 372 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_deauth_sta(uint16_t aid);
-# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_scan_start(const wifi_scan_config_t *config, 
-# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
                                                                _Bool 
-# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
                                                                     block);
-# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_scan_stop(void);
-# 413 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_scan_get_ap_num(uint16_t *number);
-# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 436 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_scan_get_ap_records(uint16_t *number, wifi_ap_record_t *ap_records);
-# 445 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_sta_get_ap_info(wifi_ap_record_t *ap_info);
-# 456 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_ps(wifi_ps_type_t type);
-# 467 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_ps(wifi_ps_type_t *type);
-# 484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 491 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_protocol(wifi_interface_t ifx, uint8_t protocol_bitmap);
-# 499 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 506 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_protocol(wifi_interface_t ifx, uint8_t *protocol_bitmap);
-# 517 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 524 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_bandwidth(wifi_interface_t ifx, wifi_bandwidth_t bw);
-# 533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 540 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_bandwidth(wifi_interface_t ifx, wifi_bandwidth_t *bw);
-# 550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 559 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_channel(uint8_t primary, wifi_second_chan_t second);
-# 565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_channel(uint8_t *primary, wifi_second_chan_t *second);
-# 591 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 600 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_country(const wifi_country_t *country);
-# 603 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_country(wifi_country_t *country);
-# 626 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_mac(wifi_interface_t ifx, const uint8_t mac[6]);
-# 640 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_mac(wifi_interface_t ifx, uint8_t mac[6]);
-# 650 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 typedef void (* wifi_promiscuous_cb_t)(void *buf, wifi_promiscuous_pkt_type_t type);
-# 663 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 672 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_promiscuous_rx_cb(wifi_promiscuous_cb_t cb);
-# 674 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 683 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_promiscuous(
-# 674 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
+# 683 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
                                   _Bool 
-# 674 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 683 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
                                        en);
-# 686 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 695 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_promiscuous(
-# 686 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
+# 695 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
                                   _Bool 
-# 686 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 695 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
                                        *en);
-# 699 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 708 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_promiscuous_filter(const wifi_promiscuous_filter_t *filter);
-# 711 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 720 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_promiscuous_filter(wifi_promiscuous_filter_t *filter);
-# 724 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 733 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_promiscuous_ctrl_filter(const wifi_promiscuous_filter_t *filter);
-# 736 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 745 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_promiscuous_ctrl_filter(wifi_promiscuous_filter_t *filter);
-# 759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 768 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_config(wifi_interface_t interface, wifi_config_t *conf);
-# 773 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 782 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_config(wifi_interface_t interface, wifi_config_t *conf);
-# 792 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_ap_get_sta_list(wifi_sta_list_t *sta);
-# 807 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 817 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+esp_err_t esp_wifi_ap_get_sta_aid(const uint8_t mac[6], uint16_t *aid);
+# 831 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_storage(wifi_storage_t storage);
-# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 845 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_auto_connect(
-# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
+# 845 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
                                    _Bool 
-# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 845 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
                                         en) __attribute__ ((deprecated));
-# 833 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 857 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_auto_connect(
-# 833 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
+# 857 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
                                    _Bool 
-# 833 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 857 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
                                         *en) __attribute__ ((deprecated));
-# 851 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
-esp_err_t esp_wifi_set_vendor_ie(
-# 851 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
-                                _Bool 
-# 851 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
-                                     enable, wifi_vendor_ie_type_t type, wifi_vendor_ie_id_t idx, const void *vnd_ie);
-# 861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 867 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 typedef void (*esp_vendor_ie_cb_t) (void *ctx, wifi_vendor_ie_type_t type, const uint8_t sa[6], const vendor_ie_data_t *vnd_ie, int rssi);
-# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+esp_err_t esp_wifi_set_vendor_ie(
+# 885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
+                                _Bool 
+# 885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+                                     enable, wifi_vendor_ie_type_t type, wifi_vendor_ie_id_t idx, const void *vnd_ie);
+# 897 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_vendor_ie_cb(esp_vendor_ie_cb_t cb, void *ctx);
-# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 941 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_max_tx_power(int8_t power);
-# 937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
-esp_err_t esp_wifi_get_max_tx_power(int8_t *power);
 # 954 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+esp_err_t esp_wifi_get_max_tx_power(int8_t *power);
+# 971 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_event_mask(uint32_t mask);
-# 966 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 983 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_event_mask(uint32_t *mask);
-# 993 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_80211_tx(wifi_interface_t ifx, const void *buffer, int len, 
-# 993 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
+# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
                                                                               _Bool 
-# 993 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
                                                                                    en_sys_seq);
-# 1004 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1021 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 typedef void (* wifi_csi_cb_t)(void *ctx, wifi_csi_info_t *data);
-# 1020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1037 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_csi_rx_cb(wifi_csi_cb_t cb, void *ctx);
-# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1050 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_csi_config(const wifi_csi_config_t *config);
-# 1046 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1063 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_csi(
-# 1046 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
+# 1063 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h" 3 4
                           _Bool 
-# 1046 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1063 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
                                en);
-# 1058 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1075 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_ant_gpio(const wifi_ant_gpio_config_t *config);
-# 1070 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1087 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_ant_gpio(wifi_ant_gpio_config_t *config);
-# 1083 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_set_ant(const wifi_ant_config_t *config);
-# 1095 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
+# 1112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi.h"
 esp_err_t esp_wifi_get_ant(wifi_ant_config_t *config);
 # 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/private_include/mdns_networking.h" 2
 
@@ -8404,15 +8616,15 @@ uint32_t esp_log_timestamp(void);
 uint32_t esp_log_early_timestamp(void);
 # 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
-
-
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
 # 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 2
 # 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 1
 # 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
@@ -8970,6 +9182,14 @@ static uint16_t _mdns_append_ptr_record(uint8_t * packet, uint16_t * index, cons
     uint16_t record_length = 0;
     uint8_t part_length;
 
+    if (service == 
+# 444 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+                  ((void *)0)
+# 444 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+                      ) {
+        return 0;
+    }
+
     str[0] = instance;
     str[1] = service;
     str[2] = proto;
@@ -8982,9 +9202,9 @@ static uint16_t _mdns_append_ptr_record(uint8_t * packet, uint16_t * index, cons
     record_length += part_length;
 
     part_length = _mdns_append_type(packet, index, 0x08, 
-# 455 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 459 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                    0
-# 455 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 459 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                         , bye?0:4500);
     if (!part_length) {
         return 0;
@@ -9000,21 +9220,29 @@ static uint16_t _mdns_append_ptr_record(uint8_t * packet, uint16_t * index, cons
     record_length += part_length;
     return record_length;
 }
-# 481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
 static uint16_t _mdns_append_sdptr_record(uint8_t * packet, uint16_t * index, mdns_service_t * service, 
-# 481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                        _Bool 
-# 481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                             flush, 
-# 481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                                    _Bool 
-# 481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                         bye)
 {
     const char * str[3];
     const char * sd_str[4];
     uint16_t record_length = 0;
     uint8_t part_length;
+
+    if (service == 
+# 492 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+                  ((void *)0)
+# 492 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+                      ) {
+        return 0;
+    }
 
     sd_str[0] = (char*)"_services";
     sd_str[1] = (char*)"_dns-sd";
@@ -9044,20 +9272,28 @@ static uint16_t _mdns_append_sdptr_record(uint8_t * packet, uint16_t * index, md
     record_length += part_length;
     return record_length;
 }
-# 527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 535 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
 static uint16_t _mdns_append_txt_record(uint8_t * packet, uint16_t * index, mdns_service_t * service, 
-# 527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 535 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                      _Bool 
-# 527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 535 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                           flush, 
-# 527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 535 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                                  _Bool 
-# 527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 535 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                       bye)
 {
     const char * str[4];
     uint16_t record_length = 0;
     uint8_t part_length;
+
+    if (service == 
+# 541 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+                  ((void *)0)
+# 541 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+                      ) {
+        return 0;
+    }
 
     str[0] = _mdns_get_service_instance_name(service);
     str[1] = service->service;
@@ -9096,7 +9332,7 @@ static uint16_t _mdns_append_txt_record(uint8_t * packet, uint16_t * index, mdns
             }
             data_len += l;
         } else {
-            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 570, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 570, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 570, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 570, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 570, esp_get_free_heap_size()); } } while(0); } while(0);;
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 582, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 582, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 582, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 582, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 582, esp_get_free_heap_size()); } } while(0); } while(0);;
 
         }
         txt = txt->next;
@@ -9110,20 +9346,28 @@ static uint16_t _mdns_append_txt_record(uint8_t * packet, uint16_t * index, mdns
     record_length += data_len;
     return record_length;
 }
-# 595 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
 static uint16_t _mdns_append_srv_record(uint8_t * packet, uint16_t * index, mdns_service_t * service, 
-# 595 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                      _Bool 
-# 595 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                           flush, 
-# 595 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                                  _Bool 
-# 595 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                       bye)
 {
     const char * str[4];
     uint16_t record_length = 0;
     uint8_t part_length;
+
+    if (service == 
+# 613 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+                  ((void *)0)
+# 613 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+                      ) {
+        return 0;
+    }
 
     str[0] = _mdns_get_service_instance_name(service);
     str[1] = service->service;
@@ -9172,15 +9416,15 @@ static uint16_t _mdns_append_srv_record(uint8_t * packet, uint16_t * index, mdns
     record_length += part_length + 6;
     return record_length;
 }
-# 659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 675 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
 static uint16_t _mdns_append_a_record(uint8_t * packet, uint16_t * index, uint32_t ip, 
-# 659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 675 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                       _Bool 
-# 659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 675 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                            flush, 
-# 659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 675 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                   _Bool 
-# 659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 675 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                        bye)
 {
     const char * str[2];
@@ -9221,15 +9465,15 @@ static uint16_t _mdns_append_a_record(uint8_t * packet, uint16_t * index, uint32
     record_length += 4;
     return record_length;
 }
-# 709 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
 static uint16_t _mdns_append_aaaa_record(uint8_t * packet, uint16_t * index, uint8_t * ipv6, 
-# 709 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                             _Bool 
-# 709 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                  flush, 
-# 709 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                         _Bool 
-# 709 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                              bye)
 {
     const char * str[2];
@@ -9319,17 +9563,17 @@ static tcpip_adapter_if_t _mdns_get_other_if (tcpip_adapter_if_t tcpip_if)
 
 
 static 
-# 797 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 813 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
       _Bool 
-# 797 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 813 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
            _mdns_if_is_dup(tcpip_adapter_if_t tcpip_if)
 {
     tcpip_adapter_if_t other_if = _mdns_get_other_if (tcpip_if);
     if (other_if == TCPIP_ADAPTER_IF_MAX) {
         return 
-# 801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 817 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               0
-# 801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 817 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                    ;
     }
     if (_mdns_server->interfaces[tcpip_if].pcbs[MDNS_IP_PROTOCOL_V4].state == PCB_DUP
@@ -9338,15 +9582,15 @@ static
         || _mdns_server->interfaces[other_if].pcbs[MDNS_IP_PROTOCOL_V6].state == PCB_DUP
     ) {
         return 
-# 808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 824 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               1
-# 808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 824 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                   ;
     }
     return 
-# 810 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 826 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
           0
-# 810 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 826 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                ;
 }
 
@@ -9354,9 +9598,9 @@ static
 
 
 static 
-# 816 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
       _Bool 
-# 816 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
            _ipv6_address_is_zero(ip6_addr_t ip6)
 {
     uint8_t i;
@@ -9364,16 +9608,16 @@ static
     for (i=0; i<16; i++) {
         if (data[i]) {
             return 
-# 822 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 838 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   0
-# 822 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 838 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                        ;
         }
     }
     return 
-# 825 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 841 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
           1
-# 825 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 841 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
               ;
 }
 
@@ -9502,7 +9746,7 @@ static void _mdns_dispatch_tx_packet(mdns_tx_packet_t * p)
         a = a->next;
     }
     _mdns_set_u16(packet, 10, count);
-# 964 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 980 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
     _mdns_udp_pcb_write(p->tcpip_if, p->ip_protocol, &p->dst, p->port, packet, index);
 }
 
@@ -9536,9 +9780,9 @@ static void _mdns_schedule_tx_packet(mdns_tx_packet_t * packet, uint32_t ms_afte
     }
     packet->send_at = (xTaskGetTickCount() * ( ( TickType_t ) 1000 / ( 100 ) )) + ms_after;
     packet->next = 
-# 996 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1012 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   ((void *)0)
-# 996 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1012 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
     if (!_mdns_server->tx_queue_head || _mdns_server->tx_queue_head->send_at > packet->send_at) {
         packet->next = _mdns_server->tx_queue_head;
@@ -9610,9 +9854,9 @@ static mdns_tx_packet_t * _mdns_get_next_pcb_packet(tcpip_adapter_if_t tcpip_if,
         q = q->next;
     }
     return 
-# 1066 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1082 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
           ((void *)0)
-# 1066 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1082 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
               ;
 }
 
@@ -9622,13 +9866,13 @@ static mdns_tx_packet_t * _mdns_get_next_pcb_packet(tcpip_adapter_if_t tcpip_if,
 static void _mdns_remove_scheduled_answer(tcpip_adapter_if_t tcpip_if, mdns_ip_protocol_t ip_protocol, uint16_t type, mdns_srv_item_t * service)
 {
     mdns_srv_item_t s = {
-# 1074 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1090 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                         ((void *)0)
-# 1074 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1090 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                             , 
-# 1074 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1090 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                               ((void *)0)
-# 1074 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1090 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                   };
     if (!service) {
         service = &s;
@@ -9666,13 +9910,13 @@ static void _mdns_dealloc_answer(mdns_out_answer_t ** destnation, uint16_t type,
         return;
     }
     mdns_srv_item_t s = {
-# 1110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                         ((void *)0)
-# 1110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                             , 
-# 1110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                               ((void *)0)
-# 1110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                   };
     if (!service) {
         service = &s;
@@ -9697,26 +9941,26 @@ static void _mdns_dealloc_answer(mdns_out_answer_t ** destnation, uint16_t type,
 
 
 static 
-# 1133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
       _Bool 
-# 1133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
            _mdns_alloc_answer(mdns_out_answer_t ** destnation, uint16_t type, mdns_service_t * service, 
-# 1133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                         _Bool 
-# 1133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                              flush, 
-# 1133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                                     _Bool 
-# 1133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                          bye)
 {
     mdns_out_answer_t * d = *destnation;
     while (d) {
         if (d->type == type && d->service == service) {
             return 
-# 1138 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   1
-# 1138 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
         }
         d = d->next;
@@ -9724,27 +9968,32 @@ static
 
     mdns_out_answer_t * a = (mdns_out_answer_t *)malloc(sizeof(mdns_out_answer_t));
     if (!a) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1145, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1145, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1145, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1145, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1145, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1161, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1161, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1161, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1161, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1161, esp_get_free_heap_size()); } } while(0); } while(0);;
         return 
-# 1146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               0
-# 1146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                    ;
     }
     a->type = type;
     a->service = service;
+    a->custom_service = 
+# 1166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+                       ((void *)0)
+# 1166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+                           ;
     a->bye = bye;
     a->flush = flush;
     a->next = 
-# 1152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
              ((void *)0)
-# 1152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                  ;
     if (!*destnation) { *destnation = a; } else { mdns_out_answer_t * _q = *destnation; while (_q->next) { _q = _q->next; } _q->next = a; };
     return 
-# 1154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
           1
-# 1154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
               ;
 }
 
@@ -9755,11 +10004,11 @@ static mdns_tx_packet_t * _mdns_alloc_packet_default(tcpip_adapter_if_t tcpip_if
 {
     mdns_tx_packet_t * packet = (mdns_tx_packet_t*)malloc(sizeof(mdns_tx_packet_t));
     if (!packet) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1164, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1164, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1164, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1164, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1164, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1181, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1181, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1181, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1181, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1181, esp_get_free_heap_size()); } } while(0); } while(0);;
         return 
-# 1165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               ((void *)0)
-# 1165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                   ;
     }
     memset((uint8_t*)packet, 0, sizeof(mdns_tx_packet_t));
@@ -9784,27 +10033,27 @@ static void _mdns_create_answer_from_parsed_packet(mdns_parsed_packet_t * parsed
         return;
     }
     
-# 1188 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
    _Bool 
-# 1188 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
         send_flush = parsed_packet->src_port == 5353;
     
-# 1189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
    _Bool 
-# 1189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
         unicast = 
-# 1189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   0
-# 1189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                        ;
     
-# 1190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1207 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
    _Bool 
-# 1190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1207 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
         shared = 
-# 1190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1207 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                  0
-# 1190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1207 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
     mdns_tx_packet_t * packet = _mdns_alloc_packet_default(parsed_packet->tcpip_if, parsed_packet->ip_protocol);
     if (!packet) {
@@ -9816,9 +10065,9 @@ static void _mdns_create_answer_from_parsed_packet(mdns_parsed_packet_t * parsed
     mdns_parsed_question_t * q = parsed_packet->questions;
     while (q) {
         mdns_srv_item_t * service = 
-# 1200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                    ((void *)0)
-# 1200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                        ;
         if (q->service && q->proto) {
             service = _mdns_get_service_item(q->service, q->proto);
@@ -9828,111 +10077,111 @@ static void _mdns_create_answer_from_parsed_packet(mdns_parsed_packet_t * parsed
         }
         if (q->unicast) {
             unicast = 
-# 1208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1225 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                      1
-# 1208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1225 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                          ;
         }
         if (service) {
             if (q->type == 0x000C || q->type == 0x00FF) {
                 if (q->type == 0x000C || !parsed_packet->probe) {
                     shared = 
-# 1213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1230 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                             1
-# 1213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1230 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                 ;
                 }
                 if (!_mdns_alloc_answer(&packet->answers, 0x000C, service->service, 
-# 1215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                           0
-# 1215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                , 
-# 1215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                  0
-# 1215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                       )
                         || !_mdns_alloc_answer(&packet->answers, 0x0021, service->service, send_flush, 
-# 1216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                              0
-# 1216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                   )
                         || !_mdns_alloc_answer(&packet->answers, 0x0010, service->service, send_flush, 
-# 1217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1234 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                              0
-# 1217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1234 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                   )
                         || !_mdns_alloc_answer(shared?&packet->additional:&packet->answers, 0x0001, 
-# 1218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                         ((void *)0)
-# 1218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                             , send_flush, 
-# 1218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                                           0
-# 1218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                                )
                         || !_mdns_alloc_answer(shared?&packet->additional:&packet->answers, 0x001C, 
-# 1219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                            ((void *)0)
-# 1219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                , send_flush, 
-# 1219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                                              0
-# 1219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                                   )) {
                     _mdns_free_tx_packet(packet);
                     return;
                 }
             } else if (q->type == 0x0021) {
                 if (!_mdns_alloc_answer(&packet->answers, 0x0021, service->service, send_flush, 
-# 1224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                       0
-# 1224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                            )
                         || !_mdns_alloc_answer(&packet->additional, 0x0001, 
-# 1225 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                 ((void *)0)
-# 1225 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                     , send_flush, 
-# 1225 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                   0
-# 1225 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                        )
                         || !_mdns_alloc_answer(&packet->additional, 0x001C, 
-# 1226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                    ((void *)0)
-# 1226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                        , send_flush, 
-# 1226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                      0
-# 1226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                           )) {
                     _mdns_free_tx_packet(packet);
                     return;
                 }
             } else if (q->type == 0x0010) {
                 if (!_mdns_alloc_answer(&packet->answers, 0x0010, service->service, send_flush, 
-# 1231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                       0
-# 1231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                            )) {
                     _mdns_free_tx_packet(packet);
                     return;
                 }
             } else if (q->type == 0x0032) {
                 shared = 
-# 1236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                         1
-# 1236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                             ;
-                if (!_mdns_alloc_answer(&packet->answers, 0x000C, service->service, 
-# 1237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
-                                                                                          0
-# 1237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
-                                                                                               , 
-# 1237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
-                                                                                                 0
-# 1237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
-                                                                                                      )) {
+                if (!_mdns_alloc_answer(&packet->answers, 0x0032, service->service, 
+# 1254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+                                                                                            0
+# 1254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+                                                                                                 , 
+# 1254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+                                                                                                   0
+# 1254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+                                                                                                        )) {
                     _mdns_free_tx_packet(packet);
                     return;
                 }
@@ -9940,34 +10189,34 @@ static void _mdns_create_answer_from_parsed_packet(mdns_parsed_packet_t * parsed
         } else {
             if (q->type == 0x00FF || q->type == 0x0001 || q->type == 0x001C) {
                 if (!_mdns_alloc_answer(&packet->answers, 0x0001, 
-# 1244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                       ((void *)0)
-# 1244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                           , send_flush, 
-# 1244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                         0
-# 1244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                              )
                         || !_mdns_alloc_answer(&packet->answers, 0x001C, 
-# 1245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                 ((void *)0)
-# 1245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                     , send_flush, 
-# 1245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                   0
-# 1245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                        )) {
                     _mdns_free_tx_packet(packet);
                     return;
                 }
             } else if (!_mdns_alloc_answer(&packet->answers, q->type, 
-# 1249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                      ((void *)0)
-# 1249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                          , send_flush, 
-# 1249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                        0
-# 1249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                             )) {
                 _mdns_free_tx_packet(packet);
                 return;
@@ -9994,9 +10243,9 @@ static void _mdns_create_answer_from_parsed_packet(mdns_parsed_packet_t * parsed
 
 
 static 
-# 1274 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
       _Bool 
-# 1274 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
            _mdns_question_exists(mdns_out_question_t * needle, mdns_out_question_t * haystack)
 {
     while (haystack) {
@@ -10005,17 +10254,17 @@ static
             && haystack->service == needle->service
             && haystack->proto == needle->proto) {
             return 
-# 1281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   1
-# 1281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
         }
         haystack = haystack->next;
     }
     return 
-# 1285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
           0
-# 1285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                ;
 }
 
@@ -10023,21 +10272,21 @@ static
 
 
 static mdns_tx_packet_t * _mdns_create_probe_packet(tcpip_adapter_if_t tcpip_if, mdns_ip_protocol_t ip_protocol, mdns_srv_item_t * services[], size_t len, 
-# 1291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                                                                           _Bool 
-# 1291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                                                                first, 
-# 1291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                                                                                       _Bool 
-# 1291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                                                                            include_ip)
 {
     mdns_tx_packet_t * packet = _mdns_alloc_packet_default(tcpip_if, ip_protocol);
     if (!packet) {
         return 
-# 1295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               ((void *)0)
-# 1295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                   ;
     }
 
@@ -10045,18 +10294,18 @@ static mdns_tx_packet_t * _mdns_create_probe_packet(tcpip_adapter_if_t tcpip_if,
     for (i=0; i<len; i++) {
         mdns_out_question_t * q = (mdns_out_question_t *)malloc(sizeof(mdns_out_question_t));
         if (!q) {
-            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1302, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1302, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1302, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1302, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1302, esp_get_free_heap_size()); } } while(0); } while(0);;
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1319, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1319, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1319, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1319, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1319, esp_get_free_heap_size()); } } while(0); } while(0);;
             _mdns_free_tx_packet(packet);
             return 
-# 1304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   ((void *)0)
-# 1304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
         }
         q->next = 
-# 1306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                  ((void *)0)
-# 1306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                      ;
         q->unicast = first;
         q->type = 0x00FF;
@@ -10071,19 +10320,19 @@ static mdns_tx_packet_t * _mdns_create_probe_packet(tcpip_adapter_if_t tcpip_if,
         }
 
         if (!q->host || !_mdns_alloc_answer(&packet->servers, 0x0021, services[i]->service, 
-# 1319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                   0
-# 1319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                        , 
-# 1319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                          0
-# 1319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                               )) {
             _mdns_free_tx_packet(packet);
             return 
-# 1321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   ((void *)0)
-# 1321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
         }
     }
@@ -10091,31 +10340,31 @@ static mdns_tx_packet_t * _mdns_create_probe_packet(tcpip_adapter_if_t tcpip_if,
     if (include_ip && !_str_null_or_empty(_mdns_server->hostname)) {
         mdns_out_question_t * q = (mdns_out_question_t *)malloc(sizeof(mdns_out_question_t));
         if (!q) {
-            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1328, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1328, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1328, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1328, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1328, esp_get_free_heap_size()); } } while(0); } while(0);;
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1345, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1345, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1345, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1345, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1345, esp_get_free_heap_size()); } } while(0); } while(0);;
             _mdns_free_tx_packet(packet);
             return 
-# 1330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   ((void *)0)
-# 1330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
         }
         q->next = 
-# 1332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1349 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                  ((void *)0)
-# 1332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1349 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                      ;
         q->unicast = first;
         q->type = 0x00FF;
         q->host = _mdns_server->hostname;
         q->service = 
-# 1336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                     ((void *)0)
-# 1336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                         ;
         q->proto = 
-# 1337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1354 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   ((void *)0)
-# 1337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1354 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
         q->domain = MDNS_DEFAULT_DOMAIN;
         if (_mdns_question_exists(q, packet->questions)) {
@@ -10126,46 +10375,46 @@ static mdns_tx_packet_t * _mdns_create_probe_packet(tcpip_adapter_if_t tcpip_if,
 
         if (_mdns_server->interfaces[tcpip_if].pcbs[MDNS_IP_PROTOCOL_V4].pcb) {
             if (!_mdns_alloc_answer(&packet->servers, 0x0001, 
-# 1346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                   ((void *)0)
-# 1346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                       , 
-# 1346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                         0
-# 1346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                              , 
-# 1346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                0
-# 1346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                     )) {
                 _mdns_free_tx_packet(packet);
                 return 
-# 1348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1365 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                       ((void *)0)
-# 1348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1365 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                           ;
             }
         }
 
         if (_mdns_server->interfaces[tcpip_if].pcbs[MDNS_IP_PROTOCOL_V6].pcb) {
             if (!_mdns_alloc_answer(&packet->servers, 0x001C, 
-# 1353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                      ((void *)0)
-# 1353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                          , 
-# 1353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                            0
-# 1353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                 , 
-# 1353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                   0
-# 1353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                        )) {
                 _mdns_free_tx_packet(packet);
                 return 
-# 1355 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1372 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                       ((void *)0)
-# 1355 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1372 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                           ;
             }
         }
@@ -10178,17 +10427,17 @@ static mdns_tx_packet_t * _mdns_create_probe_packet(tcpip_adapter_if_t tcpip_if,
 
 
 static mdns_tx_packet_t * _mdns_create_announce_packet(tcpip_adapter_if_t tcpip_if, mdns_ip_protocol_t ip_protocol, mdns_srv_item_t * services[], size_t len, 
-# 1366 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                                                                              _Bool 
-# 1366 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                                                                   include_ip)
 {
     mdns_tx_packet_t * packet = _mdns_alloc_packet_default(tcpip_if, ip_protocol);
     if (!packet) {
         return 
-# 1370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               ((void *)0)
-# 1370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                   ;
     }
     packet->flags = 0x8400;
@@ -10196,81 +10445,81 @@ static mdns_tx_packet_t * _mdns_create_announce_packet(tcpip_adapter_if_t tcpip_
     uint8_t i;
     for (i=0; i<len; i++) {
         if (!_mdns_alloc_answer(&packet->answers, 0x0032, services[i]->service, 
-# 1376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                         0
-# 1376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                              , 
-# 1376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                0
-# 1376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                     )
                 || !_mdns_alloc_answer(&packet->answers, 0x000C, services[i]->service, 
-# 1377 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                              0
-# 1377 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                   , 
-# 1377 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                     0
-# 1377 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                          )
                 || !_mdns_alloc_answer(&packet->answers, 0x0021, services[i]->service, 
-# 1378 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                              1
-# 1378 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                  , 
-# 1378 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                    0
-# 1378 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                         )
                 || !_mdns_alloc_answer(&packet->answers, 0x0010, services[i]->service, 
-# 1379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                              1
-# 1379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                  , 
-# 1379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                    0
-# 1379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                         )) {
             _mdns_free_tx_packet(packet);
             return 
-# 1381 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   ((void *)0)
-# 1381 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
         }
     }
     if (include_ip) {
         if (!_mdns_alloc_answer(&packet->answers, 0x0001, 
-# 1385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                               ((void *)0)
-# 1385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                   , 
-# 1385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                     1
-# 1385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                         , 
-# 1385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                           0
-# 1385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                )
                 || !_mdns_alloc_answer(&packet->answers, 0x001C, 
-# 1386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1403 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                         ((void *)0)
-# 1386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1403 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                             , 
-# 1386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1403 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                               1
-# 1386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1403 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                   , 
-# 1386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1403 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                     0
-# 1386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1403 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                          )) {
             _mdns_free_tx_packet(packet);
             return 
-# 1388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   ((void *)0)
-# 1388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
         }
     }
@@ -10286,9 +10535,9 @@ static mdns_tx_packet_t * _mdns_create_announce_from_probe(mdns_tx_packet_t * pr
     mdns_tx_packet_t * packet = _mdns_alloc_packet_default(probe->tcpip_if, probe->ip_protocol);
     if (!packet) {
         return 
-# 1402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1419 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               ((void *)0)
-# 1402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1419 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                   ;
     }
     packet->flags = 0x8400;
@@ -10297,68 +10546,68 @@ static mdns_tx_packet_t * _mdns_create_announce_from_probe(mdns_tx_packet_t * pr
     while (s) {
         if (s->type == 0x0021) {
             if (!_mdns_alloc_answer(&packet->answers, 0x0032, s->service, 
-# 1409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                   0
-# 1409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                        , 
-# 1409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                          0
-# 1409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                               )
                     || !_mdns_alloc_answer(&packet->answers, 0x000C, s->service, 
-# 1410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                        0
-# 1410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                             , 
-# 1410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                               0
-# 1410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                    )
                     || !_mdns_alloc_answer(&packet->answers, 0x0021, s->service, 
-# 1411 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1428 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                        1
-# 1411 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1428 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                            , 
-# 1411 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1428 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                              0
-# 1411 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1428 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                   )
                     || !_mdns_alloc_answer(&packet->answers, 0x0010, s->service, 
-# 1412 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                        1
-# 1412 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                            , 
-# 1412 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                              0
-# 1412 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                   )) {
                 _mdns_free_tx_packet(packet);
                 return 
-# 1414 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                       ((void *)0)
-# 1414 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                           ;
             }
 
         } else if (s->type == 0x0001 || s->type == 0x001C) {
             if (!_mdns_alloc_answer(&packet->answers, s->type, 
-# 1418 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                               ((void *)0)
-# 1418 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                   , 
-# 1418 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                     1
-# 1418 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                         , 
-# 1418 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                           0
-# 1418 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                )) {
                 _mdns_free_tx_packet(packet);
                 return 
-# 1420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                       ((void *)0)
-# 1420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                           ;
             }
         }
@@ -10372,9 +10621,9 @@ static mdns_tx_packet_t * _mdns_create_announce_from_probe(mdns_tx_packet_t * pr
 
 
 static void _mdns_pcb_send_bye(tcpip_adapter_if_t tcpip_if, mdns_ip_protocol_t ip_protocol, mdns_srv_item_t ** services, size_t len, 
-# 1432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1449 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                                                     _Bool 
-# 1432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1449 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                                          include_ip)
 {
     mdns_tx_packet_t * packet = _mdns_alloc_packet_default(tcpip_if, ip_protocol);
@@ -10385,42 +10634,42 @@ static void _mdns_pcb_send_bye(tcpip_adapter_if_t tcpip_if, mdns_ip_protocol_t i
     size_t i;
     for (i=0; i<len; i++) {
         if (!_mdns_alloc_answer(&packet->answers, 0x000C, services[i]->service, 
-# 1441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                       1
-# 1441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                           , 
-# 1441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                             1
-# 1441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                 )) {
             _mdns_free_tx_packet(packet);
             return;
         }
     }
     if (include_ip && (!_mdns_alloc_answer(&packet->answers, 0x0001, 
-# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                          ((void *)0)
-# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                              , 
-# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                1
-# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                    , 
-# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                      1
-# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                          ) || !_mdns_alloc_answer(&packet->answers, 0x001C, 
-# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                                                                     ((void *)0)
-# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                                                         , 
-# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                                                                           1
-# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                                                               , 
-# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                                                                                 1
-# 1446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                                                                     ))) {
         _mdns_free_tx_packet(packet);
         return;
@@ -10433,9 +10682,9 @@ static void _mdns_pcb_send_bye(tcpip_adapter_if_t tcpip_if, mdns_ip_protocol_t i
 
 
 static void _mdns_init_pcb_probe_new_service(tcpip_adapter_if_t tcpip_if, mdns_ip_protocol_t ip_protocol, mdns_srv_item_t ** services, size_t len, 
-# 1457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                                                                   _Bool 
-# 1457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                                                        probe_ip)
 {
     mdns_pcb_t * pcb = &_mdns_server->interfaces[tcpip_if].pcbs[ip_protocol];
@@ -10445,14 +10694,14 @@ static void _mdns_init_pcb_probe_new_service(tcpip_adapter_if_t tcpip_if, mdns_i
         services_final_len += pcb->probe_services_len;
     }
     mdns_srv_item_t ** _services = 
-# 1465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1482 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                   ((void *)0)
-# 1465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1482 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                       ;
     if (services_final_len) {
         _services = (mdns_srv_item_t **)malloc(sizeof(mdns_srv_item_t *) * services_final_len);
         if (!_services) {
-            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1469, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1469, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1469, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1469, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1469, esp_get_free_heap_size()); } } while(0); } while(0);;
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1486, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1486, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1486, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1486, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1486, esp_get_free_heap_size()); } } while(0); } while(0);;
             return;
         }
 
@@ -10471,26 +10720,26 @@ static void _mdns_init_pcb_probe_new_service(tcpip_adapter_if_t tcpip_if, mdns_i
     probe_ip = pcb->probe_ip || probe_ip;
 
     pcb->probe_ip = 
-# 1487 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1504 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                    0
-# 1487 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1504 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                         ;
     pcb->probe_services = 
-# 1488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1505 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                          ((void *)0)
-# 1488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1505 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                              ;
     pcb->probe_services_len = 0;
     pcb->probe_running = 
-# 1490 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1507 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                         0
-# 1490 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1507 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                              ;
 
     mdns_tx_packet_t * packet = _mdns_create_probe_packet(tcpip_if, ip_protocol, _services, services_final_len, 
-# 1492 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1509 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                                1
-# 1492 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1509 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                    , probe_ip);
     if (!packet) {
         free(_services);
@@ -10501,18 +10750,18 @@ static void _mdns_init_pcb_probe_new_service(tcpip_adapter_if_t tcpip_if, mdns_i
     pcb->probe_services = _services;
     pcb->probe_services_len = services_final_len;
     pcb->probe_running = 
-# 1501 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1518 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                         1
-# 1501 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1518 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                             ;
     _mdns_schedule_tx_packet(packet, ((pcb->failed_probes > 5)?1000:120) + (esp_random() & 0x7F));
     pcb->state = PCB_PROBE_1;
 }
-# 1513 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1530 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
 static void _mdns_init_pcb_probe(tcpip_adapter_if_t tcpip_if, mdns_ip_protocol_t ip_protocol, mdns_srv_item_t ** services, size_t len, 
-# 1513 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1530 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                                                       _Bool 
-# 1513 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1530 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                                            probe_ip)
 {
     mdns_pcb_t * pcb = &_mdns_server->interfaces[tcpip_if].pcbs[ip_protocol];
@@ -10529,22 +10778,22 @@ static void _mdns_init_pcb_probe(tcpip_adapter_if_t tcpip_if, mdns_ip_protocol_t
         mdns_srv_item_t * new_probe_services[len];
         int new_probe_service_len = 0;
         
-# 1528 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1545 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
        _Bool 
-# 1528 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1545 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
             found;
         for (int j=0; j < len; ++j) {
             found = 
-# 1530 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1547 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                    0
-# 1530 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1547 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                         ;
             for (int i=0; i < pcb->probe_services_len; ++i) {
                 if (pcb->probe_services[i] == services[j]) {
                     found = 
-# 1533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                            1
-# 1533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                ;
                     break;
                 }
@@ -10556,9 +10805,9 @@ static void _mdns_init_pcb_probe(tcpip_adapter_if_t tcpip_if, mdns_ip_protocol_t
 
         _mdns_init_pcb_probe_new_service(tcpip_if, ip_protocol,
                                          new_probe_service_len?new_probe_services:
-# 1543 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1560 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                  ((void *)0)
-# 1543 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1560 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                      , new_probe_service_len, probe_ip);
     } else {
 
@@ -10585,9 +10834,9 @@ static void _mdns_restart_pcb(tcpip_adapter_if_t tcpip_if, mdns_ip_protocol_t ip
         a = a->next;
     }
     _mdns_init_pcb_probe(tcpip_if, ip_protocol, services, srv_count, 
-# 1568 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1585 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                     1
-# 1568 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1585 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                         );
 }
 
@@ -10595,9 +10844,9 @@ static void _mdns_restart_pcb(tcpip_adapter_if_t tcpip_if, mdns_ip_protocol_t ip
 
 
 static void _mdns_send_bye(mdns_srv_item_t ** services, size_t len, 
-# 1574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1591 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                    _Bool 
-# 1574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1591 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                         include_ip)
 {
     uint8_t i, j;
@@ -10618,9 +10867,9 @@ static void _mdns_send_bye(mdns_srv_item_t ** services, size_t len,
 
 
 static void _mdns_announce_pcb(tcpip_adapter_if_t tcpip_if, mdns_ip_protocol_t ip_protocol, mdns_srv_item_t ** services, size_t len, 
-# 1593 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1610 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                                                     _Bool 
-# 1593 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1610 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                                          include_ip)
 {
     mdns_pcb_t * _pcb = &_mdns_server->interfaces[tcpip_if].pcbs[ip_protocol];
@@ -10633,80 +10882,80 @@ static void _mdns_announce_pcb(tcpip_adapter_if_t tcpip_if, mdns_ip_protocol_t i
             if (p) {
                 for (i=0; i<len; i++) {
                     if (!_mdns_alloc_answer(&p->answers, 0x0032, services[i]->service, 
-# 1604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1621 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                0
-# 1604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1621 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                     , 
-# 1604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1621 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                       0
-# 1604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1621 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                            )
                             || !_mdns_alloc_answer(&p->answers, 0x000C, services[i]->service, 
-# 1605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                     0
-# 1605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                          , 
-# 1605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                            0
-# 1605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                 )
                             || !_mdns_alloc_answer(&p->answers, 0x0021, services[i]->service, 
-# 1606 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1623 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                     1
-# 1606 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1623 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                         , 
-# 1606 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1623 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                           0
-# 1606 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1623 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                )
                             || !_mdns_alloc_answer(&p->answers, 0x0010, services[i]->service, 
-# 1607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                     1
-# 1607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                         , 
-# 1607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                           0
-# 1607 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                )) {
                         break;
                     }
                 }
                 if (include_ip) {
                     _mdns_dealloc_answer(&p->additional, 0x0001, 
-# 1612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                      ((void *)0)
-# 1612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                          );
                     _mdns_dealloc_answer(&p->additional, 0x001C, 
-# 1613 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                         ((void *)0)
-# 1613 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                             );
                     _mdns_alloc_answer(&p->answers, 0x0001, 
-# 1614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1631 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                 ((void *)0)
-# 1614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1631 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                     , 
-# 1614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1631 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                       1
-# 1614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1631 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                           , 
-# 1614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1631 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                             0
-# 1614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1631 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                  );
                     _mdns_alloc_answer(&p->answers, 0x001C, 
-# 1615 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1632 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                    ((void *)0)
-# 1615 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1632 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                        , 
-# 1615 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1632 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                          1
-# 1615 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1632 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                              , 
-# 1615 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1632 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                0
-# 1615 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1632 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                     );
                 }
                 _pcb->state = PCB_ANNOUNCE_1;
@@ -10730,13 +10979,13 @@ static void _mdns_announce_pcb(tcpip_adapter_if_t tcpip_if, mdns_ip_protocol_t i
 
 
 static void _mdns_probe_all_pcbs(mdns_srv_item_t ** services, size_t len, 
-# 1637 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1654 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                          _Bool 
-# 1637 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1654 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                               probe_ip, 
-# 1637 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1654 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                         _Bool 
-# 1637 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1654 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                              clear_old_probe)
 {
     uint8_t i, j;
@@ -10747,15 +10996,15 @@ static void _mdns_probe_all_pcbs(mdns_srv_item_t ** services, size_t len,
                 if (clear_old_probe) {
                     free(_pcb->probe_services);
                     _pcb->probe_services = 
-# 1646 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1663 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                           ((void *)0)
-# 1646 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1663 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                               ;
                     _pcb->probe_services_len = 0;
                     _pcb->probe_running = 
-# 1648 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1665 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                          0
-# 1648 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1665 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                               ;
                 }
                 _mdns_init_pcb_probe((tcpip_adapter_if_t)i, (mdns_ip_protocol_t)j, services, len, probe_ip);
@@ -10768,9 +11017,9 @@ static void _mdns_probe_all_pcbs(mdns_srv_item_t ** services, size_t len,
 
 
 static void _mdns_announce_all_pcbs(mdns_srv_item_t ** services, size_t len, 
-# 1659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1676 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                             _Bool 
-# 1659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1676 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                  include_ip)
 {
     uint8_t i, j;
@@ -10785,9 +11034,9 @@ static void _mdns_announce_all_pcbs(mdns_srv_item_t ** services, size_t len,
 
 
 static void _mdns_send_final_bye(
-# 1672 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1689 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                 _Bool 
-# 1672 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1689 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                      include_ip)
 {
 
@@ -10840,9 +11089,9 @@ static void _mdns_send_bye_all_pcbs_no_instance()
         a = a->next;
     }
     _mdns_send_bye(services, srv_count, 
-# 1723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1740 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                        0
-# 1723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1740 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                             );
 }
 
@@ -10872,13 +11121,13 @@ static void _mdns_restart_all_pcbs_no_instance()
         a = a->next;
     }
     _mdns_probe_all_pcbs(services, srv_count, 
-# 1751 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1768 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                              0
-# 1751 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1768 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                   , 
-# 1751 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1768 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                     1
-# 1751 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1768 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                         );
 }
 
@@ -10903,29 +11152,29 @@ static void _mdns_restart_all_pcbs()
     }
 
     _mdns_probe_all_pcbs(services, srv_count, 
-# 1774 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1791 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                              1
-# 1774 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1791 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                  , 
-# 1774 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1791 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                    1
-# 1774 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1791 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                        );
 }
-# 1786 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1803 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
 static mdns_txt_linked_item_t * _mdns_allocate_txt(size_t num_items, mdns_txt_item_t txt[])
 {
     mdns_txt_linked_item_t * new_txt = 
-# 1788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1805 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                       ((void *)0)
-# 1788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1805 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                           ;
     size_t i = 0;
     if (num_items) {
         for (i=0; i<num_items; i++) {
             mdns_txt_linked_item_t * new_item = (mdns_txt_linked_item_t *)malloc(sizeof(mdns_txt_linked_item_t));
             if (!new_item) {
-                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1794, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1794, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1794, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1794, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1794, esp_get_free_heap_size()); } } while(0); } while(0);;
+                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1811, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1811, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1811, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1811, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1811, esp_get_free_heap_size()); } } while(0); } while(0);;
                 break;
             }
             new_item->key = strdup(txt[i].key);
@@ -10956,39 +11205,39 @@ static void _mdns_free_linked_txt(mdns_txt_linked_item_t *txt)
         free(t);
     }
 }
-# 1837 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1854 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
 static mdns_service_t * _mdns_create_service(const char * service, const char * proto, uint16_t port, const char * instance, size_t num_items, mdns_txt_item_t txt[])
 {
     mdns_service_t * s = (mdns_service_t *)malloc(sizeof(mdns_service_t));
     if (!s) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1841, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1841, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1841, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1841, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1841, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1858, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1858, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1858, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1858, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 1858, esp_get_free_heap_size()); } } while(0); } while(0);;
         return 
-# 1842 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1859 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               ((void *)0)
-# 1842 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1859 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                   ;
     }
 
     mdns_txt_linked_item_t * new_txt = _mdns_allocate_txt(num_items, txt);
     if (num_items && new_txt == 
-# 1846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1863 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                ((void *)0)
-# 1846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1863 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                    ) {
         free(s);
         return 
-# 1848 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1865 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               ((void *)0)
-# 1848 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1865 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                   ;
     }
 
     s->priority = 0;
     s->weight = 0;
     s->instance = instance?strndup(instance, (64 +1) - 1):
-# 1853 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1870 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                    ((void *)0)
-# 1853 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1870 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                        ;
     s->txt = new_txt;
     s->port = port;
@@ -10997,9 +11246,9 @@ static mdns_service_t * _mdns_create_service(const char * service, const char * 
     if (!s->service) {
         free(s);
         return 
-# 1860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1877 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               ((void *)0)
-# 1860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1877 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                   ;
     }
 
@@ -11008,9 +11257,9 @@ static mdns_service_t * _mdns_create_service(const char * service, const char * 
         free((char *)s->service);
         free(s);
         return 
-# 1867 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1884 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               ((void *)0)
-# 1867 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1884 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                   ;
     }
 
@@ -11051,20 +11300,20 @@ static void _mdns_remove_scheduled_service_packets(mdns_service_t * service)
         return;
     }
     mdns_tx_packet_t * p = 
-# 1906 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1923 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                           ((void *)0)
-# 1906 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1923 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                               ;
     mdns_tx_packet_t * q = _mdns_server->tx_queue_head;
     while (q) {
         
-# 1909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1926 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
        _Bool 
-# 1909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1926 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
             had_answers = (q->answers != 
-# 1909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1926 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                          ((void *)0)
-# 1909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1926 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                              );
 
         _mdns_dealloc_scheduled_service_answers(&(q->answers), service);
@@ -11094,15 +11343,15 @@ static void _mdns_remove_scheduled_service_packets(mdns_service_t * service)
                         _pcb->probe_services_len = 0;
                         free(_pcb->probe_services);
                         _pcb->probe_services = 
-# 1937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1954 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                               ((void *)0)
-# 1937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1954 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                   ;
                         if (!_pcb->probe_ip) {
                             _pcb->probe_running = 
-# 1939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1956 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                  0
-# 1939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1956 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                       ;
                             _pcb->state = PCB_RUNNING;
                         }
@@ -11110,9 +11359,9 @@ static void _mdns_remove_scheduled_service_packets(mdns_service_t * service)
 
                     if (q->questions) {
                         mdns_out_question_t * qsn = 
-# 1945 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1962 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                    ((void *)0)
-# 1945 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1962 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                        ;
                         mdns_out_question_t * qs = q->questions;
                         if (qs->type == 0x00FF
@@ -11138,9 +11387,9 @@ static void _mdns_remove_scheduled_service_packets(mdns_service_t * service)
             } else if ((_pcb->state > PCB_PROBE_3 && _pcb->state < PCB_RUNNING)) {
 
                 if (had_answers && q->answers == 
-# 1969 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1986 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                 ((void *)0)
-# 1969 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1986 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                     ) {
                     _pcb->state = PCB_RUNNING;
                 }
@@ -11151,9 +11400,9 @@ static void _mdns_remove_scheduled_service_packets(mdns_service_t * service)
         q = q->next;
         if(!p->questions && !p->answers && !p->additional && !p->servers){
             if (_mdns_server->tx_queue_head) { if (_mdns_server->tx_queue_head == p) { _mdns_server->tx_queue_head = _mdns_server->tx_queue_head->next; } else { mdns_tx_packet_t * _q = _mdns_server->tx_queue_head; while (_q->next && _q->next != p) { _q = _q->next; } if (_q->next == p) { _q->next = p->next; p->next = 
-# 1978 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 1995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
            ((void *)0)
-# 1978 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 1995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
            ; } } };
             _mdns_free_tx_packet(p);
         }
@@ -11183,7 +11432,7 @@ static void _mdns_free_service(mdns_service_t * service)
     free(service->txt);
     free(service);
 }
-# 2016 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
 static int _mdns_check_srv_collision(mdns_service_t * service, uint16_t priority, uint16_t weight, uint16_t port, const char * host, const char * domain)
 {
     if (_str_null_or_empty(_mdns_server->hostname)) {
@@ -11276,7 +11525,7 @@ static int _mdns_check_txt_collision(mdns_service_t * service, const uint8_t * d
             _mdns_append_string(ours, &index, tmp);
             free(tmp);
         } else {
-            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2108, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2108, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2108, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2108, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2108, esp_get_free_heap_size()); } } while(0); } while(0);;
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2125, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2125, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2125, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2125, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2125, esp_get_free_heap_size()); } } while(0); } while(0);;
 
         }
         txt = txt->next;
@@ -11307,13 +11556,13 @@ static void _mdns_dup_interface(tcpip_adapter_if_t tcpip_if)
             }
             _mdns_server->interfaces[tcpip_if].pcbs[i].state = PCB_DUP;
             _mdns_announce_pcb(other_if, i, 
-# 2138 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                            ((void *)0)
-# 2138 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                , 0, 
-# 2138 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                     1
-# 2138 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                         );
         }
     }
@@ -11392,9 +11641,9 @@ static int _mdns_check_aaaa_collision(ip6_addr_t * ip, tcpip_adapter_if_t tcpip_
 
 
 static 
-# 2215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
       _Bool 
-# 2215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
            _mdns_name_is_discovery(mdns_name_t * name, uint16_t type)
 {
     return (
@@ -11410,17 +11659,17 @@ static
 
 
 static 
-# 2229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2246 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
       _Bool 
-# 2229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2246 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
            _mdns_name_is_ours(mdns_name_t * name)
 {
 
     if (_str_null_or_empty(name->domain) || strcasecmp(name->domain, MDNS_DEFAULT_DOMAIN)) {
         return 
-# 2233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2250 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               0
-# 2233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2250 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                    ;
     }
 
@@ -11431,53 +11680,20 @@ static
           && strcasecmp(name->host, _mdns_server->hostname) == 0)
         {
             return 
-# 2242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   1
-# 2242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
         }
         return 
-# 2244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               0
-# 2244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                    ;
     }
 
 
     if (_str_null_or_empty(name->service) || _str_null_or_empty(name->proto)) {
-        return 
-# 2249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
-              0
-# 2249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
-                   ;
-    }
-
-
-    mdns_srv_item_t * service = _mdns_get_service_item(name->service, name->proto);
-    if (!service) {
-        return 
-# 2255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
-              0
-# 2255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
-                   ;
-    }
-
-
-    if (_str_null_or_empty(name->host)) {
-        return 
-# 2260 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
-              1
-# 2260 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
-                  ;
-    }
-
-
-    const char * instance = _mdns_get_service_instance_name(service->service);
-    if (instance == 
-# 2265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
-                   ((void *)0)
-# 2265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
-                       ) {
         return 
 # 2266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               0
@@ -11486,31 +11702,64 @@ static
     }
 
 
+    mdns_srv_item_t * service = _mdns_get_service_item(name->service, name->proto);
+    if (!service) {
+        return 
+# 2272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+              0
+# 2272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+                   ;
+    }
+
+
+    if (_str_null_or_empty(name->host)) {
+        return 
+# 2277 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+              1
+# 2277 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+                  ;
+    }
+
+
+    const char * instance = _mdns_get_service_instance_name(service->service);
+    if (instance == 
+# 2282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+                   ((void *)0)
+# 2282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+                       ) {
+        return 
+# 2283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+              0
+# 2283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+                   ;
+    }
+
+
     if (strcasecmp(name->host, instance) == 0) {
         return 
-# 2271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               1
-# 2271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                   ;
     }
 
     return 
-# 2274 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
           0
-# 2274 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                ;
 }
-# 2284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
 static inline uint16_t _mdns_read_u16(const uint8_t * packet, uint16_t index)
 {
     return (uint16_t)(packet[index]) << 8 | packet[index+1];
 }
-# 2296 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2313 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
 static inline uint32_t _mdns_read_u32(const uint8_t * packet, uint16_t index)
 {
     return (uint32_t)(packet[index]) << 24 | (uint32_t)(packet[index+1]) << 16 | (uint32_t)(packet[index+2]) << 8 | packet[index+3];
 }
-# 2310 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
 static const uint8_t * _mdns_parse_fqdn(const uint8_t * packet, const uint8_t * start, mdns_name_t * name)
 {
     name->parts = 0;
@@ -11547,32 +11796,32 @@ static const uint8_t * _mdns_parse_fqdn(const uint8_t * packet, const uint8_t * 
 
 
 static 
-# 2345 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2362 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
       _Bool 
-# 2345 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2362 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
            _mdns_question_matches(mdns_parsed_question_t * question, uint16_t type, mdns_srv_item_t * service)
 {
     if (question->type != type) {
         return 
-# 2348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2365 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               0
-# 2348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2365 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                    ;
     }
     if (type == 0x0001 || type == 0x001C) {
         return 
-# 2351 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2368 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               1
-# 2351 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2368 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                   ;
     } else if (type == 0x000C || type == 0x0032) {
         if (!strcasecmp(service->service->service, question->service)
             && !strcasecmp(service->service->proto, question->proto)
             && !strcasecmp(MDNS_DEFAULT_DOMAIN, question->domain)) {
             return 
-# 2356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2373 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   1
-# 2356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2373 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
         }
     } else if (type == 0x0021 || type == 0x0010) {
@@ -11582,17 +11831,17 @@ static
             && !strcasecmp(service->service->proto, question->proto)
             && !strcasecmp(MDNS_DEFAULT_DOMAIN, question->domain)) {
             return 
-# 2364 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2381 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   1
-# 2364 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2381 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
         }
     }
 
     return 
-# 2368 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
           0
-# 2368 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                ;
 }
 
@@ -11678,9 +11927,9 @@ static int _mdns_txt_item_name_get_len(const uint8_t * data, size_t len)
 static void _mdns_result_txt_create(const uint8_t * data, size_t len, mdns_txt_item_t ** out_txt, size_t * out_count)
 {
     *out_txt = 
-# 2452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               ((void *)0)
-# 2452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                   ;
     *out_count = 0;
     uint16_t i=0, y;
@@ -11696,7 +11945,7 @@ static void _mdns_result_txt_create(const uint8_t * data, size_t len, mdns_txt_i
 
     mdns_txt_item_t * txt = (mdns_txt_item_t *)malloc(sizeof(mdns_txt_item_t) * num_items);
     if (!txt) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2467, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2467, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2467, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2467, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2467, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2484, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2484, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2484, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2484, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2484, esp_get_free_heap_size()); } } while(0); } while(0);;
         return;
     }
     memset(txt, 0, sizeof(mdns_txt_item_t) * num_items);
@@ -11719,7 +11968,7 @@ static void _mdns_result_txt_create(const uint8_t * data, size_t len, mdns_txt_i
         }
         char * key = (char *)malloc(name_len + 1);
         if (!key) {
-            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2490, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2490, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2490, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2490, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2490, esp_get_free_heap_size()); } } while(0); } while(0);;
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2507, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2507, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2507, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2507, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2507, esp_get_free_heap_size()); } } while(0); } while(0);;
             goto handle_error;
         }
 
@@ -11734,7 +11983,7 @@ static void _mdns_result_txt_create(const uint8_t * data, size_t len, mdns_txt_i
         if (value_len > 0) {
             char * value = (char *)malloc(value_len + 1);
             if (!value) {
-                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2505, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2505, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2505, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2505, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2505, esp_get_free_heap_size()); } } while(0); } while(0);;
+                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2522, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2522, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2522, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2522, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2522, esp_get_free_heap_size()); } } while(0); } while(0);;
                 goto handle_error;
             }
             memcpy(value, data + i, value_len);
@@ -11770,9 +12019,9 @@ static esp_err_t _mdns_strdup_check(char ** out, char * in)
         return 0;
     }
     *out = 
-# 2540 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2557 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
           ((void *)0)
-# 2540 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2557 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
               ;
     return 0;
 }
@@ -11790,23 +12039,23 @@ void mdns_parse_packet(mdns_rx_packet_t * packet)
     size_t len = packet->pb->len;
     const uint8_t * content = data + 12;
     
-# 2556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2573 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
    _Bool 
-# 2556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2573 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
         do_not_reply = 
-# 2556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2573 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                        0
-# 2556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2573 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                             ;
     mdns_search_once_t * search_result = 
-# 2557 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                         ((void *)0)
-# 2557 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                             ;
-# 2569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2586 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
     mdns_parsed_packet_t * parsed_packet = (mdns_parsed_packet_t *)malloc(sizeof(mdns_parsed_packet_t));
     if (!parsed_packet) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2571, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2571, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2571, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2571, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2571, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2588, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2588, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2588, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2588, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2588, esp_get_free_heap_size()); } } while(0); } while(0);;
         return;
     }
     memset(parsed_packet, 0, sizeof(mdns_parsed_packet_t));
@@ -11855,9 +12104,9 @@ void mdns_parse_packet(mdns_rx_packet_t * packet)
             uint16_t type = _mdns_read_u16(content, 0);
             uint16_t clas = _mdns_read_u16(content, 2);
             
-# 2619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2636 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
            _Bool 
-# 2619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2636 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                 unicast = !!(clas & 0x8000);
             clas &= 0x7FFF;
             content = content + 4;
@@ -11869,15 +12118,15 @@ void mdns_parse_packet(mdns_rx_packet_t * packet)
             if (_mdns_name_is_discovery(name, type)) {
 
                 parsed_packet->discovery = 
-# 2629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2646 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                           1
-# 2629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2646 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                               ;
                 mdns_srv_item_t * a = _mdns_server->services;
                 while (a) {
                     mdns_parsed_question_t * question = (mdns_parsed_question_t *)calloc(1, sizeof(mdns_parsed_question_t));
                     if (!question) {
-                        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2634, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2634, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2634, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2634, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2634, esp_get_free_heap_size()); } } while(0); } while(0);;
+                        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2651, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2651, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2651, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2651, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2651, esp_get_free_heap_size()); } } while(0); } while(0);;
                         goto clear_rx_packet;
                     }
                     question->next = parsed_packet->questions;
@@ -11886,9 +12135,9 @@ void mdns_parse_packet(mdns_rx_packet_t * packet)
                     question->unicast = unicast;
                     question->type = 0x0032;
                     question->host = 
-# 2642 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                     ((void *)0)
-# 2642 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                         ;
                     question->service = strdup(a->service->service);
                     question->proto = strdup(a->service->proto);
@@ -11905,15 +12154,15 @@ void mdns_parse_packet(mdns_rx_packet_t * packet)
 
             if (type == 0x00FF && !_str_null_or_empty(name->host)) {
                 parsed_packet->probe = 
-# 2657 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2674 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                       1
-# 2657 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2674 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                           ;
             }
 
             mdns_parsed_question_t * question = (mdns_parsed_question_t *)calloc(1, sizeof(mdns_parsed_question_t));
             if (!question) {
-                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2662, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2662, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2662, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2662, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2662, esp_get_free_heap_size()); } } while(0); } while(0);;
+                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2679, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2679, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2679, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2679, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 2679, esp_get_free_heap_size()); } } while(0); } while(0);;
                 goto clear_rx_packet;
             }
             question->next = parsed_packet->questions;
@@ -11955,27 +12204,27 @@ void mdns_parse_packet(mdns_rx_packet_t * packet)
             }
 
             
-# 2703 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2720 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
            _Bool 
-# 2703 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2720 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                 discovery = 
-# 2703 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2720 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                             0
-# 2703 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2720 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                  ;
             
-# 2704 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2721 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
            _Bool 
-# 2704 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2721 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                 ours = 
-# 2704 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2721 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                        0
-# 2704 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2721 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                             ;
             mdns_srv_item_t * service = 
-# 2705 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2722 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                        ((void *)0)
-# 2705 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2722 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                            ;
             mdns_parsed_recort_type_t record_type = MDNS_ANSWER;
 
@@ -11993,15 +12242,15 @@ void mdns_parse_packet(mdns_rx_packet_t * packet)
 
             if (parsed_packet->discovery && _mdns_name_is_discovery(name, type)) {
                 discovery = 
-# 2721 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2738 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                            1
-# 2721 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2738 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                ;
             } else if (!name->sub && _mdns_name_is_ours(name)) {
                 ours = 
-# 2723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2740 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                       1
-# 2723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2740 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                           ;
                 if (name->service && name->service[0] && name->proto && name->proto[0]) {
                     service = _mdns_get_service_item(name->service, name->proto);
@@ -12035,9 +12284,9 @@ void mdns_parse_packet(mdns_rx_packet_t * packet)
                 }
             } else if (type == 0x0021) {
                 mdns_result_t * result = 
-# 2755 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2772 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                         ((void *)0)
-# 2755 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2772 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                             ;
                 if (search_result && search_result->type == 0x000C) {
                     result = search_result->result;
@@ -12093,9 +12342,9 @@ void mdns_parse_packet(mdns_rx_packet_t * packet)
                     if (col && (parsed_packet->probe || parsed_packet->authoritative)) {
                         if (col > 0 || !port) {
                             do_not_reply = 
-# 2809 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2826 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                           1
-# 2809 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2826 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                               ;
                             if (_mdns_server->interfaces[packet->tcpip_if].pcbs[packet->ip_protocol].probe_running) {
                                 _mdns_server->interfaces[packet->tcpip_if].pcbs[packet->ip_protocol].failed_probes++;
@@ -12106,13 +12355,13 @@ void mdns_parse_packet(mdns_rx_packet_t * packet)
                                         service->service->instance = new_instance;
                                     }
                                     _mdns_probe_all_pcbs(&service, 1, 
-# 2818 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2835 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                      0
-# 2818 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2835 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                           , 
-# 2818 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2835 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                             0
-# 2818 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2835 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                  );
                                 } else if (!_str_null_or_empty(_mdns_server->instance)) {
                                     char * new_instance = _mdns_mangle_name((char *)_mdns_server->instance);
@@ -12131,14 +12380,14 @@ void mdns_parse_packet(mdns_rx_packet_t * packet)
                                 }
                             } else {
                                 _mdns_pcb_send_bye(packet->tcpip_if, packet->ip_protocol, &service, 1, 
-# 2835 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2852 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                       0
-# 2835 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2852 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                            );
                                 _mdns_init_pcb_probe(packet->tcpip_if, packet->ip_protocol, &service, 1, 
-# 2836 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2853 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                         0
-# 2836 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2853 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                              );
                             }
                         }
@@ -12149,16 +12398,16 @@ void mdns_parse_packet(mdns_rx_packet_t * packet)
             } else if (type == 0x0010) {
                 if (search_result) {
                     mdns_txt_item_t * txt = 
-# 2845 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2862 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                            ((void *)0)
-# 2845 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2862 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                ;
                     size_t txt_count = 0;
 
                     mdns_result_t * result = 
-# 2848 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2865 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                             ((void *)0)
-# 2848 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2865 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                 ;
                     if (search_result->type == 0x000C) {
                         result = search_result->result;
@@ -12205,14 +12454,14 @@ void mdns_parse_packet(mdns_rx_packet_t * packet)
                     }
                     if (col && !_mdns_server->interfaces[packet->tcpip_if].pcbs[packet->ip_protocol].probe_running) {
                         do_not_reply = 
-# 2893 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2910 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                       1
-# 2893 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2910 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                           ;
                         _mdns_init_pcb_probe(packet->tcpip_if, packet->ip_protocol, &service, 1, 
-# 2894 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2911 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                 1
-# 2894 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2911 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                     );
                     } else if (ttl > 2250 && !col && !parsed_packet->authoritative && !parsed_packet->probe && !parsed_packet->questions && !_mdns_server->interfaces[packet->tcpip_if].pcbs[packet->ip_protocol].probe_running) {
                         _mdns_remove_scheduled_answer(packet->tcpip_if, packet->ip_protocol, type, service);
@@ -12232,9 +12481,9 @@ void mdns_parse_packet(mdns_rx_packet_t * packet)
                 } else if (ours) {
                     if (parsed_packet->questions && !parsed_packet->probe) {
                         _mdns_remove_parsed_question(parsed_packet, type, 
-# 2912 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2929 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                          ((void *)0)
-# 2912 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2929 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                              );
                         continue;
                     }
@@ -12251,9 +12500,9 @@ void mdns_parse_packet(mdns_rx_packet_t * packet)
                         goto clear_rx_packet;
                     } else if (col == 1) {
                         do_not_reply = 
-# 2927 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2944 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                       1
-# 2927 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2944 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                           ;
                         if (_mdns_server->interfaces[packet->tcpip_if].pcbs[packet->ip_protocol].probe_running) {
                             if (col && (parsed_packet->probe || parsed_packet->authoritative)) {
@@ -12267,20 +12516,20 @@ void mdns_parse_packet(mdns_rx_packet_t * packet)
                             }
                         } else {
                             _mdns_init_pcb_probe(packet->tcpip_if, packet->ip_protocol, 
-# 2939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2956 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                        ((void *)0)
-# 2939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2956 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                            , 0, 
-# 2939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2956 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                 1
-# 2939 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2956 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                     );
                         }
                     } else if (ttl > 60 && !col && !parsed_packet->authoritative && !parsed_packet->probe && !parsed_packet->questions && !_mdns_server->interfaces[packet->tcpip_if].pcbs[packet->ip_protocol].probe_running) {
                         _mdns_remove_scheduled_answer(packet->tcpip_if, packet->ip_protocol, type, 
-# 2942 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                   ((void *)0)
-# 2942 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                       );
                     }
                 }
@@ -12298,9 +12547,9 @@ void mdns_parse_packet(mdns_rx_packet_t * packet)
                 } else if (ours) {
                     if (parsed_packet->questions && !parsed_packet->probe) {
                         _mdns_remove_parsed_question(parsed_packet, type, 
-# 2958 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2975 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                          ((void *)0)
-# 2958 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2975 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                              );
                         continue;
                     }
@@ -12317,9 +12566,9 @@ void mdns_parse_packet(mdns_rx_packet_t * packet)
                         goto clear_rx_packet;
                     } else if (col == 1) {
                         do_not_reply = 
-# 2973 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 2990 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                       1
-# 2973 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 2990 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                           ;
                         if (_mdns_server->interfaces[packet->tcpip_if].pcbs[packet->ip_protocol].probe_running) {
                             if (col && (parsed_packet->probe || parsed_packet->authoritative)) {
@@ -12333,20 +12582,20 @@ void mdns_parse_packet(mdns_rx_packet_t * packet)
                             }
                         } else {
                             _mdns_init_pcb_probe(packet->tcpip_if, packet->ip_protocol, 
-# 2985 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3002 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                        ((void *)0)
-# 2985 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3002 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                            , 0, 
-# 2985 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3002 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                 1
-# 2985 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3002 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                     );
                         }
                     } else if (ttl > 60 && !col && !parsed_packet->authoritative && !parsed_packet->probe && !parsed_packet->questions && !_mdns_server->interfaces[packet->tcpip_if].pcbs[packet->ip_protocol].probe_running) {
                         _mdns_remove_scheduled_answer(packet->tcpip_if, packet->ip_protocol, type, 
-# 2988 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3005 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                   ((void *)0)
-# 2988 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3005 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                       );
                     }
                 }
@@ -12428,13 +12677,13 @@ void _mdns_handle_system_event(system_event_id_t event, tcpip_adapter_if_t inter
     case SYSTEM_EVENT_STA_GOT_IP:
         _mdns_enable_pcb(TCPIP_ADAPTER_IF_STA, MDNS_IP_PROTOCOL_V4);
         _mdns_announce_pcb(TCPIP_ADAPTER_IF_STA, MDNS_IP_PROTOCOL_V6, 
-# 3068 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3085 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                      ((void *)0)
-# 3068 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3085 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                          , 0, 
-# 3068 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3085 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                               1
-# 3068 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3085 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                   );
         break;
     case SYSTEM_EVENT_STA_DISCONNECTED:
@@ -12451,13 +12700,13 @@ void _mdns_handle_system_event(system_event_id_t event, tcpip_adapter_if_t inter
     case SYSTEM_EVENT_GOT_IP6:
         _mdns_enable_pcb(interface, MDNS_IP_PROTOCOL_V6);
         _mdns_announce_pcb(interface, MDNS_IP_PROTOCOL_V4, 
-# 3083 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                           ((void *)0)
-# 3083 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                               , 0, 
-# 3083 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                    1
-# 3083 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                        );
         break;
     case SYSTEM_EVENT_ETH_CONNECTED:
@@ -12478,7 +12727,7 @@ void _mdns_handle_system_event(system_event_id_t event, tcpip_adapter_if_t inter
         break;
     }
 }
-# 3111 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
 static void _mdns_search_free(mdns_search_once_t * search)
 {
     free(search->instance);
@@ -12495,11 +12744,11 @@ static mdns_search_once_t * _mdns_search_init(const char * name, const char * se
 {
     mdns_search_once_t * search = (mdns_search_once_t *)malloc(sizeof(mdns_search_once_t));
     if (!search) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3127, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3127, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3127, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3127, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3127, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3144, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3144, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3144, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3144, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3144, esp_get_free_heap_size()); } } while(0); } while(0);;
         return 
-# 3128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3145 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               ((void *)0)
-# 3128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3145 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                   ;
     }
     memset(search, 0, sizeof(mdns_search_once_t));
@@ -12508,9 +12757,9 @@ static mdns_search_once_t * _mdns_search_init(const char * name, const char * se
     if (!search->done_semaphore) {
         free(search);
         return 
-# 3135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               ((void *)0)
-# 3135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                   ;
     }
 
@@ -12519,9 +12768,9 @@ static mdns_search_once_t * _mdns_search_init(const char * name, const char * se
         if (!search->instance) {
             _mdns_search_free(search);
             return 
-# 3142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3159 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   ((void *)0)
-# 3142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3159 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
         }
     }
@@ -12531,9 +12780,9 @@ static mdns_search_once_t * _mdns_search_init(const char * name, const char * se
         if (!search->service) {
             _mdns_search_free(search);
             return 
-# 3150 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   ((void *)0)
-# 3150 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
         }
     }
@@ -12543,9 +12792,9 @@ static mdns_search_once_t * _mdns_search_init(const char * name, const char * se
         if (!search->proto) {
             _mdns_search_free(search);
             return 
-# 3158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   ((void *)0)
-# 3158 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
         }
     }
@@ -12555,17 +12804,17 @@ static mdns_search_once_t * _mdns_search_init(const char * name, const char * se
     search->num_results = 0;
     search->max_results = max_results;
     search->result = 
-# 3166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3183 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                     ((void *)0)
-# 3166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3183 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                         ;
     search->state = SEARCH_INIT;
     search->sent_at = 0;
     search->started_at = xTaskGetTickCount() * ( ( TickType_t ) 1000 / ( 100 ) );
     search->next = 
-# 3170 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3187 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   ((void *)0)
-# 3170 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3187 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
 
     return search;
@@ -12578,14 +12827,14 @@ static void _mdns_search_finish(mdns_search_once_t * search)
 {
     search->state = SEARCH_OFF;
     if (_mdns_server->search_once) { if (_mdns_server->search_once == search) { _mdns_server->search_once = _mdns_server->search_once->next; } else { mdns_search_once_t * _q = _mdns_server->search_once; while (_q->next && _q->next != search) { _q = _q->next; } if (_q->next == search) { _q->next = search->next; search->next = 
-# 3181 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
    ((void *)0)
-# 3181 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
    ; } } };
     xQueueGenericSend( ( QueueHandle_t ) ( search->done_semaphore ), 
-# 3182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
    ((void *)0)
-# 3182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 }
 
@@ -12605,9 +12854,9 @@ static void _mdns_search_finish_done()
 {
     mdns_search_once_t * search = _mdns_server->search_once;
     mdns_search_once_t * s = 
-# 3200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                             ((void *)0)
-# 3200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                 ;
     while (search) {
         s = search;
@@ -12625,11 +12874,11 @@ static mdns_ip_addr_t * _mdns_result_addr_create_ip(ip_addr_t * ip)
 {
     mdns_ip_addr_t * a = (mdns_ip_addr_t *)malloc(sizeof(mdns_ip_addr_t));
     if (!a) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3217, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3217, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3217, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3217, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3217, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3234, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3234, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3234, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3234, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3234, esp_get_free_heap_size()); } } while(0); } while(0);;
         return 
-# 3218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               ((void *)0)
-# 3218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                   ;
     }
     memset(a, 0 , sizeof(mdns_ip_addr_t));
@@ -12673,14 +12922,14 @@ static void _mdns_result_add_ip(mdns_result_t * r, ip_addr_t * ip)
 static void _mdns_search_result_add_ip(mdns_search_once_t * search, const char * hostname, ip_addr_t * ip, tcpip_adapter_if_t tcpip_if, mdns_ip_protocol_t ip_protocol)
 {
     mdns_result_t * r = 
-# 3260 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3277 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                        ((void *)0)
-# 3260 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3277 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                            ;
     mdns_ip_addr_t * a = 
-# 3261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3278 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                         ((void *)0)
-# 3261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3278 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                             ;
 
     if ((search->type == 0x0001 && ip->type == IPADDR_TYPE_V4)
@@ -12697,7 +12946,7 @@ static void _mdns_search_result_add_ip(mdns_search_once_t * search, const char *
         if (!search->max_results || search->num_results < search->max_results) {
             r = (mdns_result_t *)malloc(sizeof(mdns_result_t));
             if (!r) {
-                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3277, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3277, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3277, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3277, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3277, esp_get_free_heap_size()); } } while(0); } while(0);;
+                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3294, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3294, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3294, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3294, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3294, esp_get_free_heap_size()); } } while(0); } while(0);;
                 return;
             }
 
@@ -12743,11 +12992,11 @@ static mdns_result_t * _mdns_search_result_add_ptr(mdns_search_once_t * search, 
     if (!search->max_results || search->num_results < search->max_results) {
         r = (mdns_result_t *)malloc(sizeof(mdns_result_t));
         if (!r) {
-            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3323, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3323, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3323, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3323, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3323, esp_get_free_heap_size()); } } while(0); } while(0);;
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3340, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3340, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3340, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3340, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3340, esp_get_free_heap_size()); } } while(0); } while(0);;
             return 
-# 3324 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   ((void *)0)
-# 3324 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
         }
 
@@ -12756,9 +13005,9 @@ static mdns_result_t * _mdns_search_result_add_ptr(mdns_search_once_t * search, 
         if (!r->instance_name) {
             free(r);
             return 
-# 3331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   ((void *)0)
-# 3331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
         }
 
@@ -12770,9 +13019,9 @@ static mdns_result_t * _mdns_search_result_add_ptr(mdns_search_once_t * search, 
         return r;
     }
     return 
-# 3341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
           ((void *)0)
-# 3341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
               ;
 }
 
@@ -12791,7 +13040,7 @@ static void _mdns_search_result_add_srv(mdns_search_once_t * search, const char 
     if (!search->max_results || search->num_results < search->max_results) {
         r = (mdns_result_t *)malloc(sizeof(mdns_result_t));
         if (!r) {
-            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3359, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3359, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3359, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3359, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3359, esp_get_free_heap_size()); } } while(0); } while(0);;
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3376, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3376, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3376, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3376, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3376, esp_get_free_heap_size()); } } while(0); } while(0);;
             return;
         }
 
@@ -12831,7 +13080,7 @@ static void _mdns_search_result_add_txt(mdns_search_once_t * search, mdns_txt_it
     if (!search->max_results || search->num_results < search->max_results) {
         r = (mdns_result_t *)malloc(sizeof(mdns_result_t));
         if (!r) {
-            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3399, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3399, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3399, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3399, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3399, esp_get_free_heap_size()); } } while(0); } while(0);;
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3416, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3416, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3416, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3416, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3416, esp_get_free_heap_size()); } } while(0); } while(0);;
             goto free_txt;
         }
 
@@ -12860,9 +13109,9 @@ free_txt:
 static mdns_search_once_t * _mdns_search_find_from(mdns_search_once_t * s, mdns_name_t * name, uint16_t type, tcpip_adapter_if_t tcpip_if, mdns_ip_protocol_t ip_protocol)
 {
     mdns_result_t * r = 
-# 3427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3444 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                        ((void *)0)
-# 3427 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3444 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                            ;
     while (s) {
         if (s->state == SEARCH_OFF) {
@@ -12872,9 +13121,9 @@ static mdns_search_once_t * _mdns_search_find_from(mdns_search_once_t * s, mdns_
 
         if (type == 0x0001 || type == 0x001C) {
             if ((s->type == 0x00FF && s->service != 
-# 3435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                           ((void *)0)
-# 3435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                               )
                 || (s->type != 0x00FF && s->type != type && s->type != 0x000C))
             {
@@ -12901,9 +13150,9 @@ static mdns_search_once_t * _mdns_search_find_from(mdns_search_once_t * s, mdns_
 
         if (type == 0x0021 || type == 0x0010) {
             if ((s->type == 0x00FF && s->service == 
-# 3460 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                           ((void *)0)
-# 3460 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                               )
                 || (s->type != 0x00FF && s->type != type && s->type != 0x000C))
             {
@@ -12934,9 +13183,9 @@ static mdns_search_once_t * _mdns_search_find_from(mdns_search_once_t * s, mdns_
     }
 
     return 
-# 3489 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3506 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
           ((void *)0)
-# 3489 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3506 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
               ;
 }
 
@@ -12946,33 +13195,33 @@ static mdns_search_once_t * _mdns_search_find_from(mdns_search_once_t * s, mdns_
 static mdns_tx_packet_t * _mdns_create_search_packet(mdns_search_once_t * search, tcpip_adapter_if_t tcpip_if, mdns_ip_protocol_t ip_protocol)
 {
     mdns_result_t * r = 
-# 3497 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3514 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                        ((void *)0)
-# 3497 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3514 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                            ;
     mdns_tx_packet_t * packet = _mdns_alloc_packet_default(tcpip_if, ip_protocol);
     if (!packet) {
         return 
-# 3500 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3517 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               ((void *)0)
-# 3500 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3517 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                   ;
     }
 
     mdns_out_question_t * q = (mdns_out_question_t *)malloc(sizeof(mdns_out_question_t));
     if (!q) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3505, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3505, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3505, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3505, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3505, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3522, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3522, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3522, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3522, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3522, esp_get_free_heap_size()); } } while(0); } while(0);;
         _mdns_free_tx_packet(packet);
         return 
-# 3507 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3524 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               ((void *)0)
-# 3507 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3524 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                   ;
     }
     q->next = 
-# 3509 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3526 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
              ((void *)0)
-# 3509 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3526 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                  ;
     q->unicast = search->type != 0x000C;
     q->type = search->type;
@@ -12987,54 +13236,54 @@ static mdns_tx_packet_t * _mdns_create_search_packet(mdns_search_once_t * search
         while (r) {
 
             if (r->tcpip_if != tcpip_if || r->ip_protocol != ip_protocol || r->instance_name == 
-# 3522 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                ((void *)0) 
-# 3522 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                     || r->hostname == 
-# 3522 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                                       ((void *)0) 
-# 3522 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                            || r->addr == 
-# 3522 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                                                          ((void *)0)
-# 3522 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                                              ) {
                 r = r->next;
                 continue;
             }
             mdns_out_answer_t * a = (mdns_out_answer_t *)malloc(sizeof(mdns_out_answer_t));
             if (!a) {
-                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3528, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3528, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3528, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3528, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3528, esp_get_free_heap_size()); } } while(0); } while(0);;
+                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3545, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3545, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3545, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3545, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3545, esp_get_free_heap_size()); } } while(0); } while(0);;
                 _mdns_free_tx_packet(packet);
                 return 
-# 3530 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3547 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                       ((void *)0)
-# 3530 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3547 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                           ;
             }
             a->type = 0x000C;
             a->service = 
-# 3533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                         ((void *)0)
-# 3533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                             ;
             a->custom_instance = r->instance_name;
             a->custom_service = search->service;
             a->custom_proto = search->proto;
             a->bye = 
-# 3537 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3554 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                     0
-# 3537 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3554 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                          ;
             a->flush = 
-# 3538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3555 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                       0
-# 3538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3555 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                            ;
             a->next = 
-# 3539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                      ((void *)0)
-# 3539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3556 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                          ;
             if (!packet->answers) { packet->answers = a; } else { mdns_out_answer_t * _q = packet->answers; while (_q->next) { _q = _q->next; } _q->next = a; };
             r = r->next;
@@ -13050,9 +13299,9 @@ static mdns_tx_packet_t * _mdns_create_search_packet(mdns_search_once_t * search
 static void _mdns_search_send_pcb(mdns_search_once_t * search, tcpip_adapter_if_t tcpip_if, mdns_ip_protocol_t ip_protocol)
 {
     mdns_tx_packet_t * packet = 
-# 3553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3570 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                ((void *)0)
-# 3553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3570 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                    ;
     if (_mdns_server->interfaces[tcpip_if].pcbs[ip_protocol].pcb && _mdns_server->interfaces[tcpip_if].pcbs[ip_protocol].state > PCB_INIT) {
         packet = _mdns_create_search_packet(search, tcpip_if, ip_protocol);
@@ -13071,21 +13320,21 @@ static void _mdns_search_send(mdns_search_once_t * search)
 {
     mdns_search_once_t* queue = _mdns_server->search_once;
     
-# 3570 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3587 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
    _Bool 
-# 3570 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3587 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
         found = 
-# 3570 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3587 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                 0
-# 3570 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3587 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                      ;
 
     while (queue) {
         if (queue == search) {
             found = 
-# 3574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3591 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                    1
-# 3574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3591 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                        ;
             break;
         }
@@ -13108,14 +13357,14 @@ static void _mdns_search_send(mdns_search_once_t * search)
 static void _mdns_tx_handle_packet(mdns_tx_packet_t * p)
 {
     mdns_tx_packet_t * a = 
-# 3595 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                           ((void *)0)
-# 3595 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                               ;
     mdns_out_question_t * q = 
-# 3596 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3613 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                              ((void *)0)
-# 3596 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3613 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                  ;
     mdns_pcb_t * pcb = &_mdns_server->interfaces[p->tcpip_if].pcbs[p->ip_protocol];
     uint32_t send_after = 1000;
@@ -13131,9 +13380,9 @@ static void _mdns_tx_handle_packet(mdns_tx_packet_t * p)
         q = p->questions;
         while (q) {
             q->unicast = 
-# 3610 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3627 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                         0
-# 3610 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3627 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                              ;
             q = q->next;
         }
@@ -13149,22 +13398,22 @@ static void _mdns_tx_handle_packet(mdns_tx_packet_t * p)
             break;
         }
         pcb->probe_running = 
-# 3624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3641 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                             0
-# 3624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3641 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                  ;
         pcb->probe_ip = 
-# 3625 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3642 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                        0
-# 3625 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3642 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                             ;
         pcb->probe_services_len = 0;
         pcb->failed_probes = 0;
         free(pcb->probe_services);
         pcb->probe_services = 
-# 3629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3646 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                              ((void *)0)
-# 3629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3646 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                  ;
         _mdns_free_tx_packet(p);
         p = a;
@@ -13241,9 +13490,9 @@ static void _mdns_free_action(mdns_action_t * action)
 static void _mdns_execute_action(mdns_action_t * action)
 {
     mdns_srv_item_t * a = 
-# 3704 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3721 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                          ((void *)0)
-# 3704 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3721 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                              ;
     mdns_service_t * service;
     char * key;
@@ -13256,9 +13505,9 @@ static void _mdns_execute_action(mdns_action_t * action)
         break;
     case ACTION_HOSTNAME_SET:
         _mdns_send_final_bye(
-# 3715 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3732 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                             1
-# 3715 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3732 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                 );
         free((char*)_mdns_server->hostname);
         _mdns_server->hostname = action->data.hostname;
@@ -13276,43 +13525,43 @@ static void _mdns_execute_action(mdns_action_t * action)
         action->data.srv_add.service->next = _mdns_server->services;
         _mdns_server->services = action->data.srv_add.service;
         _mdns_probe_all_pcbs(&action->data.srv_add.service, 1, 
-# 3731 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3748 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                               0
-# 3731 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3748 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                    , 
-# 3731 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3748 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                      0
-# 3731 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3748 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                           );
 
         break;
     case ACTION_SERVICE_INSTANCE_SET:
         if (action->data.srv_instance.service->service->instance) {
             _mdns_send_bye(&action->data.srv_instance.service, 1, 
-# 3736 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3753 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                  0
-# 3736 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3753 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                       );
             free((char*)action->data.srv_instance.service->service->instance);
         }
         action->data.srv_instance.service->service->instance = action->data.srv_instance.instance;
         _mdns_probe_all_pcbs(&action->data.srv_instance.service, 1, 
-# 3740 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3757 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                    0
-# 3740 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3757 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                         , 
-# 3740 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3757 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                           0
-# 3740 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3757 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                );
 
         break;
     case ACTION_SERVICE_PORT_SET:
         action->data.srv_port.service->service->port = action->data.srv_port.port;
         _mdns_announce_all_pcbs(&action->data.srv_port.service, 1, 
-# 3745 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3762 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                   1
-# 3745 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3762 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                       );
 
         break;
@@ -13320,16 +13569,16 @@ static void _mdns_execute_action(mdns_action_t * action)
         service = action->data.srv_txt_replace.service->service;
         txt = service->txt;
         service->txt = 
-# 3751 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3768 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                       ((void *)0)
-# 3751 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3768 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                           ;
         _mdns_free_linked_txt(txt);
         service->txt = action->data.srv_txt_replace.txt;
         _mdns_announce_all_pcbs(&action->data.srv_txt_replace.service, 1, 
-# 3754 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                          0
-# 3754 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                               );
 
         break;
@@ -13350,7 +13599,7 @@ static void _mdns_execute_action(mdns_action_t * action)
         if (!txt) {
             txt = (mdns_txt_linked_item_t *)malloc(sizeof(mdns_txt_linked_item_t));
             if (!txt) {
-                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3774, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3774, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3774, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3774, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3774, esp_get_free_heap_size()); } } while(0); } while(0);;
+                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3791, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3791, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3791, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3791, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3791, esp_get_free_heap_size()); } } while(0); } while(0);;
                 _mdns_free_action(action);
                 return;
             }
@@ -13361,9 +13610,9 @@ static void _mdns_execute_action(mdns_action_t * action)
         }
 
         _mdns_announce_all_pcbs(&action->data.srv_txt_set.service, 1, 
-# 3784 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                      0
-# 3784 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                           );
 
         break;
@@ -13396,9 +13645,9 @@ static void _mdns_execute_action(mdns_action_t * action)
         free(key);
 
         _mdns_announce_all_pcbs(&action->data.srv_txt_set.service, 1, 
-# 3815 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                      0
-# 3815 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3832 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                           );
 
         break;
@@ -13407,9 +13656,9 @@ static void _mdns_execute_action(mdns_action_t * action)
         if (_mdns_server->services == action->data.srv_del.service) {
             _mdns_server->services = a->next;
             _mdns_send_bye(&a, 1, 
-# 3822 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                  0
-# 3822 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                       );
             _mdns_remove_scheduled_service_packets(a->service);
             _mdns_free_service(a->service);
@@ -13422,9 +13671,9 @@ static void _mdns_execute_action(mdns_action_t * action)
                 mdns_srv_item_t * b = a->next;
                 a->next = a->next->next;
                 _mdns_send_bye(&b, 1, 
-# 3833 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3850 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                      0
-# 3833 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3850 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                           );
                 _mdns_remove_scheduled_service_packets(b->service);
                 _mdns_free_service(b->service);
@@ -13435,15 +13684,15 @@ static void _mdns_execute_action(mdns_action_t * action)
         break;
     case ACTION_SERVICES_CLEAR:
         _mdns_send_final_bye(
-# 3842 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3859 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                             0
-# 3842 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3859 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                  );
         a = _mdns_server->services;
         _mdns_server->services = 
-# 3844 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                 ((void *)0)
-# 3844 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                     ;
         while (a) {
             mdns_srv_item_t * s = a;
@@ -13469,9 +13718,9 @@ static void _mdns_execute_action(mdns_action_t * action)
 
             if (p && p==action->data.tx_handle.packet && p->queued) {
                 p->queued = 
-# 3868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                            0
-# 3868 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                 ;
                 _mdns_server->tx_queue_head = p->next;
                 _mdns_tx_handle_packet(p);
@@ -13497,14 +13746,14 @@ static void _mdns_execute_action(mdns_action_t * action)
 static esp_err_t _mdns_send_search_action(mdns_action_type_t type, mdns_search_once_t * search)
 {
     mdns_action_t * action = 
-# 3892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                             ((void *)0)
-# 3892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                 ;
 
     action = (mdns_action_t *)malloc(sizeof(mdns_action_t));
     if (!action) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3896, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3896, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3896, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3896, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3896, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3913, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3913, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3913, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3913, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3913, esp_get_free_heap_size()); } } while(0); } while(0);;
         return 0x101;
     }
 
@@ -13516,19 +13765,19 @@ static esp_err_t _mdns_send_search_action(mdns_action_type_t type, mdns_search_o
     }
     return 0;
 }
-# 3916 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3933 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
 static void _mdns_scheduler_run()
 {
     xQueueGenericReceive( ( QueueHandle_t ) ( _mdns_service_semaphore ), 
-# 3918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
    ((void *)0)
-# 3918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
    , ( ( TickType_t ) 0xffffffffUL ), ( ( BaseType_t ) 0 ) );
     mdns_tx_packet_t * p = _mdns_server->tx_queue_head;
     mdns_action_t * action = 
-# 3920 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                             ((void *)0)
-# 3920 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                 ;
 
 
@@ -13537,9 +13786,9 @@ static void _mdns_scheduler_run()
     }
     if (!p) {
         xQueueGenericSend( ( QueueHandle_t ) ( _mdns_service_semaphore ), 
-# 3927 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3944 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
        ((void *)0)
-# 3927 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3944 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
        , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
         return;
     }
@@ -13549,27 +13798,27 @@ static void _mdns_scheduler_run()
             action->type = ACTION_TX_HANDLE;
             action->data.tx_handle.packet = p;
             p->queued = 
-# 3935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3952 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                        1
-# 3935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3952 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                            ;
             if (xQueueGenericSend( ( _mdns_server->action_queue ), ( &action ), ( (TickType_t)0 ), ( ( BaseType_t ) 0 ) ) != ( ( ( BaseType_t ) 1 ) )) {
                 free(action);
                 p->queued = 
-# 3938 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3955 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                            0
-# 3938 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3955 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                 ;
             }
         } else {
-            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3941, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3941, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3941, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3941, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3941, esp_get_free_heap_size()); } } while(0); } while(0);;
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3958, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3958, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3958, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3958, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 3958, esp_get_free_heap_size()); } } while(0); } while(0);;
 
         }
     }
     xQueueGenericSend( ( QueueHandle_t ) ( _mdns_service_semaphore ), 
-# 3945 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3962 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
    ((void *)0)
-# 3945 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3962 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 }
 
@@ -13579,17 +13828,17 @@ static void _mdns_scheduler_run()
 static void _mdns_search_run()
 {
     xQueueGenericReceive( ( QueueHandle_t ) ( _mdns_service_semaphore ), 
-# 3953 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3970 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
    ((void *)0)
-# 3953 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3970 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
    , ( ( TickType_t ) 0xffffffffUL ), ( ( BaseType_t ) 0 ) );
     mdns_search_once_t * s = _mdns_server->search_once;
     uint32_t now = xTaskGetTickCount() * ( ( TickType_t ) 1000 / ( 100 ) );
     if (!s) {
         xQueueGenericSend( ( QueueHandle_t ) ( _mdns_service_semaphore ), 
-# 3957 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3974 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
        ((void *)0)
-# 3957 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3974 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
        , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
         return;
     }
@@ -13611,9 +13860,9 @@ static void _mdns_search_run()
         s = s->next;
     }
     xQueueGenericSend( ( QueueHandle_t ) ( _mdns_service_semaphore ), 
-# 3977 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 3994 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
    ((void *)0)
-# 3977 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 3994 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
 }
 
@@ -13623,9 +13872,9 @@ static void _mdns_search_run()
 static void _mdns_service_task(void *pvParameters)
 {
     mdns_action_t * a = 
-# 3985 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4002 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                        ((void *)0)
-# 3985 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4002 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                            ;
     for (;;) {
         if (_mdns_server && _mdns_server->action_queue) {
@@ -13634,15 +13883,15 @@ static void _mdns_service_task(void *pvParameters)
                     break;
                 }
                 xQueueGenericReceive( ( QueueHandle_t ) ( _mdns_service_semaphore ), 
-# 3992 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4009 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                ((void *)0)
-# 3992 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4009 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                , ( ( TickType_t ) 0xffffffffUL ), ( ( BaseType_t ) 0 ) );
                 _mdns_execute_action(a);
                 xQueueGenericSend( ( QueueHandle_t ) ( _mdns_service_semaphore ), 
-# 3994 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4011 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                ((void *)0)
-# 3994 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4011 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
             }
         } else {
@@ -13650,14 +13899,14 @@ static void _mdns_service_task(void *pvParameters)
         }
     }
     _mdns_service_task_handle = 
-# 4000 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4017 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                ((void *)0)
-# 4000 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4017 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                    ;
     vTaskDelete(
-# 4001 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4018 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                ((void *)0)
-# 4001 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4018 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                    );
 }
 
@@ -13671,9 +13920,9 @@ static esp_err_t _mdns_start_timer(){
     esp_timer_create_args_t timer_conf = {
         .callback = _mdns_timer_cb,
         .arg = 
-# 4013 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4030 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               ((void *)0)
-# 4013 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4030 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                   ,
         .dispatch_method = ESP_TIMER_TASK,
         .name = "mdns_timer"
@@ -13696,7 +13945,7 @@ static esp_err_t _mdns_stop_timer(){
     }
     return err;
 }
-# 4043 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4060 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
 static esp_err_t _mdns_service_task_start()
 {
     if (!_mdns_service_semaphore) {
@@ -13706,44 +13955,44 @@ static esp_err_t _mdns_service_task_start()
         }
     }
     xQueueGenericReceive( ( QueueHandle_t ) ( _mdns_service_semaphore ), 
-# 4051 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4068 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
    ((void *)0)
-# 4051 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4068 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
    , ( ( TickType_t ) 0xffffffffUL ), ( ( BaseType_t ) 0 ) );
     if (_mdns_start_timer()) {
         xQueueGenericSend( ( QueueHandle_t ) ( _mdns_service_semaphore ), 
-# 4053 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4070 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
        ((void *)0)
-# 4053 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4070 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
        , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
         return -1;
     }
     if (!_mdns_service_task_handle) {
         xTaskCreatePinnedToCore(_mdns_service_task, "mdns", 4096, 
-# 4057 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4074 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                      ((void *)0)
-# 4057 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4074 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                          , 1, (TaskHandle_t * const)(&_mdns_service_task_handle), 0);
         if (!_mdns_service_task_handle) {
             _mdns_stop_timer();
             xQueueGenericSend( ( QueueHandle_t ) ( _mdns_service_semaphore ), 
-# 4060 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
            ((void *)0)
-# 4060 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
            , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
             vQueueDelete( ( QueueHandle_t ) ( _mdns_service_semaphore ) );
             _mdns_service_semaphore = 
-# 4062 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4079 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                      ((void *)0)
-# 4062 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4079 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                          ;
             return -1;
         }
     }
     xQueueGenericSend( ( QueueHandle_t ) ( _mdns_service_semaphore ), 
-# 4066 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4083 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
    ((void *)0)
-# 4066 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4083 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
    , ( ( TickType_t ) 0U ), ( ( BaseType_t ) 0 ) );
     return 0;
 }
@@ -13764,9 +14013,9 @@ static esp_err_t _mdns_service_task_stop()
         if (xQueueGenericSend( ( _mdns_server->action_queue ), ( &a ), ( (TickType_t)0 ), ( ( BaseType_t ) 0 ) ) != ( ( ( BaseType_t ) 1 ) )) {
             vTaskDelete(_mdns_service_task_handle);
             _mdns_service_task_handle = 
-# 4085 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                        ((void *)0)
-# 4085 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                            ;
         }
         while (_mdns_service_task_handle) {
@@ -13775,9 +14024,9 @@ static esp_err_t _mdns_service_task_stop()
     }
     vQueueDelete( ( QueueHandle_t ) ( _mdns_service_semaphore ) );
     _mdns_service_semaphore = 
-# 4092 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                              ((void *)0)
-# 4092 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                  ;
     return 0;
 }
@@ -13794,7 +14043,7 @@ esp_err_t mdns_handle_system_event(void *ctx, system_event_t *event)
 
     mdns_action_t * action = (mdns_action_t *)malloc(sizeof(mdns_action_t));
     if (!action) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4108, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4108, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4108, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4108, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4108, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4125, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4125, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4125, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4125, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4125, esp_get_free_heap_size()); } } while(0); } while(0);;
         return 0;
     }
     action->type = ACTION_SYSTEM_EVENT;
@@ -13816,7 +14065,7 @@ esp_err_t mdns_init()
 
     _mdns_server = (mdns_server_t *)malloc(sizeof(mdns_server_t));
     if (!_mdns_server) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4130, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4130, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4130, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4130, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4130, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4147, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4147, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4147, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4147, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4147, esp_get_free_heap_size()); } } while(0); } while(0);;
         return 0x101;
     }
     memset((uint8_t*)_mdns_server, 0, sizeof(mdns_server_t));
@@ -13865,9 +14114,9 @@ free_lock:
 free_server:
     free(_mdns_server);
     _mdns_server = 
-# 4178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   ((void *)0)
-# 4178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
     return err;
 }
@@ -13910,9 +14159,9 @@ void mdns_free()
     vQueueDelete( ( QueueHandle_t ) ( _mdns_server->lock ) );
     free(_mdns_server);
     _mdns_server = 
-# 4219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                   ((void *)0)
-# 4219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                       ;
 }
 
@@ -13931,7 +14180,7 @@ esp_err_t mdns_hostname_set(const char * hostname)
 
     mdns_action_t * action = (mdns_action_t *)malloc(sizeof(mdns_action_t));
     if (!action) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4237, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4237, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4237, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4237, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4237, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4254, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4254, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4254, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4254, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4254, esp_get_free_heap_size()); } } while(0); } while(0);;
         free(new_hostname);
         return 0x101;
     }
@@ -13960,7 +14209,7 @@ esp_err_t mdns_instance_name_set(const char * instance)
 
     mdns_action_t * action = (mdns_action_t *)malloc(sizeof(mdns_action_t));
     if (!action) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4266, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4266, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4266, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4266, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4266, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4283, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4283, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4283, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4283, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4283, esp_get_free_heap_size()); } } while(0); } while(0);;
         free(new_instance);
         return 0x101;
     }
@@ -14000,21 +14249,21 @@ esp_err_t mdns_service_add(const char * instance, const char * service, const ch
 
     item = (mdns_srv_item_t *)malloc(sizeof(mdns_srv_item_t));
     if (!item) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4306, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4306, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4306, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4306, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4306, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4323, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4323, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4323, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4323, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4323, esp_get_free_heap_size()); } } while(0); } while(0);;
         _mdns_free_service(s);
         return 0x101;
     }
 
     item->service = s;
     item->next = 
-# 4312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                 ((void *)0)
-# 4312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                     ;
 
     mdns_action_t * action = (mdns_action_t *)malloc(sizeof(mdns_action_t));
     if (!action) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4316, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4316, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4316, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4316, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4316, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4333, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4333, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4333, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4333, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4333, esp_get_free_heap_size()); } } while(0); } while(0);;
         _mdns_free_service(s);
         free(item);
         return 0x101;
@@ -14030,9 +14279,9 @@ esp_err_t mdns_service_add(const char * instance, const char * service, const ch
 
     uint8_t i = 0;
     while (_mdns_get_service_item(service, proto) == 
-# 4331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                     ((void *)0) 
-# 4331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4348 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                          && i++ < 200) {
         vTaskDelay(1);
     }
@@ -14055,7 +14304,7 @@ esp_err_t mdns_service_port_set(const char * service, const char * proto, uint16
 
     mdns_action_t * action = (mdns_action_t *)malloc(sizeof(mdns_action_t));
     if (!action) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4353, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4353, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4353, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4353, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4353, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4370, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4370, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4370, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4370, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4370, esp_get_free_heap_size()); } } while(0); } while(0);;
         return 0x101;
     }
     action->type = ACTION_SERVICE_PORT_SET;
@@ -14071,9 +14320,9 @@ esp_err_t mdns_service_port_set(const char * service, const char * proto, uint16
 esp_err_t mdns_service_txt_set(const char * service, const char * proto, mdns_txt_item_t txt[], uint8_t num_items)
 {
     if (!_mdns_server || !_mdns_server->services || _str_null_or_empty(service) || _str_null_or_empty(proto) || (num_items && txt == 
-# 4368 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                                                                                                                     ((void *)0)
-# 4368 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                                                                                                                         )) {
         return 0x102;
     }
@@ -14083,9 +14332,9 @@ esp_err_t mdns_service_txt_set(const char * service, const char * proto, mdns_tx
     }
 
     mdns_txt_linked_item_t * new_txt = 
-# 4376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                       ((void *)0)
-# 4376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                           ;
     if (num_items){
         new_txt = _mdns_allocate_txt(num_items, txt);
@@ -14096,7 +14345,7 @@ esp_err_t mdns_service_txt_set(const char * service, const char * proto, mdns_tx
 
     mdns_action_t * action = (mdns_action_t *)malloc(sizeof(mdns_action_t));
     if (!action) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4386, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4386, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4386, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4386, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4386, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4403, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4403, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4403, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4403, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4403, esp_get_free_heap_size()); } } while(0); } while(0);;
         _mdns_free_linked_txt(new_txt);
         return 0x101;
     }
@@ -14124,7 +14373,7 @@ esp_err_t mdns_service_txt_item_set(const char * service, const char * proto, co
     }
     mdns_action_t * action = (mdns_action_t *)malloc(sizeof(mdns_action_t));
     if (!action) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4414, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4414, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4414, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4414, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4414, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4431, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4431, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4431, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4431, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4431, esp_get_free_heap_size()); } } while(0); } while(0);;
         return 0x101;
     }
 
@@ -14161,7 +14410,7 @@ esp_err_t mdns_service_txt_item_remove(const char * service, const char * proto,
     }
     mdns_action_t * action = (mdns_action_t *)malloc(sizeof(mdns_action_t));
     if (!action) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4451, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4451, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4451, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4451, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4451, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4468, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4468, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4468, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4468, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4468, esp_get_free_heap_size()); } } while(0); } while(0);;
         return 0x101;
     }
 
@@ -14199,7 +14448,7 @@ esp_err_t mdns_service_instance_name_set(const char * service, const char * prot
 
     mdns_action_t * action = (mdns_action_t *)malloc(sizeof(mdns_action_t));
     if (!action) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4489, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4489, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4489, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4489, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4489, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4506, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4506, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4506, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4506, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4506, esp_get_free_heap_size()); } } while(0); } while(0);;
         free(new_instance);
         return 0x101;
     }
@@ -14226,7 +14475,7 @@ esp_err_t mdns_service_remove(const char * service, const char * proto)
 
     mdns_action_t * action = (mdns_action_t *)malloc(sizeof(mdns_action_t));
     if (!action) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4516, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4516, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4516, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4516, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4516, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4533, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4533, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4533, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4533, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4533, esp_get_free_heap_size()); } } while(0); } while(0);;
         return 0x101;
     }
     action->type = ACTION_SERVICE_DEL;
@@ -14249,7 +14498,7 @@ esp_err_t mdns_service_remove_all()
 
     mdns_action_t * action = (mdns_action_t *)malloc(sizeof(mdns_action_t));
     if (!action) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4539, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4539, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4539, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4539, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4539, esp_get_free_heap_size()); } } while(0); } while(0);;
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4556, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4556, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4556, esp_get_free_heap_size()); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4556, esp_get_free_heap_size()); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Cannot allocate memory (line: %d, free heap: %d bytes)" "\033[0m" "\n", esp_log_timestamp(), TAG, 4556, esp_get_free_heap_size()); } } while(0); } while(0);;
         return 0x101;
     }
     action->type = ACTION_SERVICES_CLEAR;
@@ -14296,15 +14545,15 @@ void mdns_query_results_free(mdns_result_t * results)
 esp_err_t mdns_query(const char * name, const char * service, const char * proto, uint16_t type, uint32_t timeout, size_t max_results, mdns_result_t ** results)
 {
     mdns_search_once_t * search = 
-# 4585 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                  ((void *)0)
-# 4585 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                      ;
 
     *results = 
-# 4587 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
               ((void *)0)
-# 4587 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                   ;
 
     if (!_mdns_server) {
@@ -14325,9 +14574,9 @@ esp_err_t mdns_query(const char * name, const char * service, const char * proto
         return 0x101;
     }
     xQueueGenericReceive( ( QueueHandle_t ) ( search->done_semaphore ), 
-# 4606 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4623 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
    ((void *)0)
-# 4606 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4623 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
    , ( ( TickType_t ) 0xffffffffUL ), ( ( BaseType_t ) 0 ) );
 
     *results = search->result;
@@ -14343,9 +14592,9 @@ esp_err_t mdns_query_ptr(const char * service, const char * proto, uint32_t time
     }
 
     return mdns_query(
-# 4620 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4637 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                      ((void *)0)
-# 4620 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4637 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                          , service, proto, 0x000C, timeout, max_results, results);
 }
 
@@ -14370,9 +14619,9 @@ esp_err_t mdns_query_txt(const char * instance, const char * service, const char
 esp_err_t mdns_query_a(const char * name, uint32_t timeout, ip4_addr_t * addr)
 {
     mdns_result_t * result = 
-# 4643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4660 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                             ((void *)0)
-# 4643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4660 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                 ;
     esp_err_t err;
 
@@ -14381,13 +14630,13 @@ esp_err_t mdns_query_a(const char * name, uint32_t timeout, ip4_addr_t * addr)
     }
 
     err = mdns_query(name, 
-# 4650 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4667 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                           ((void *)0)
-# 4650 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4667 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                               , 
-# 4650 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4667 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                 ((void *)0)
-# 4650 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4667 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                     , 0x0001, timeout, 1, &result);
 
     if (err) {
@@ -14415,9 +14664,9 @@ esp_err_t mdns_query_a(const char * name, uint32_t timeout, ip4_addr_t * addr)
 esp_err_t mdns_query_aaaa(const char * name, uint32_t timeout, ip6_addr_t * addr)
 {
     mdns_result_t * result = 
-# 4676 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4693 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                             ((void *)0)
-# 4676 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4693 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                 ;
     esp_err_t err;
 
@@ -14426,13 +14675,13 @@ esp_err_t mdns_query_aaaa(const char * name, uint32_t timeout, ip6_addr_t * addr
     }
 
     err = mdns_query(name, 
-# 4683 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                           ((void *)0)
-# 4683 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                               , 
-# 4683 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
+# 4700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c" 3 4
                                 ((void *)0)
-# 4683 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
+# 4700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/mdns/mdns.c"
                                     , 0x001C, timeout, 1, &result);
 
     if (err) {
