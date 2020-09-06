@@ -196,13 +196,13 @@ esp_app_desc:
 	.word	-1412606926
 	.word	0
 	.zero	8
-	.string	"383c25b-dirty"
-	.zero	18
+	.string	"222f7ed5-dirty"
+	.zero	17
 	.string	"dev_M5Stack"
 	.zero	20
-	.string	"17:29:04"
+	.string	"17:48:13"
 	.zero	7
-	.string	"Sep  5 2020"
+	.string	"Sep  6 2020"
 	.zero	4
 	.string	"v3.3.2-270-gf4333c8e3"
 	.zero	10

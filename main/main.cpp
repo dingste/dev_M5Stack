@@ -17,6 +17,6 @@ void app_main() {
     Wifi* wifi = new Wifi();
     xTaskCreate(Wifi::run, "wifi", 1024, (void*) wifi, 2 | portPRIVILEGE_BIT, NULL);
 
-    ProjektEi* pei = new ProjektEi(GPIO_NUM_3, GPIO_NUM_4);
+    ProjektEi* pei = new ProjektEi(GPIO_NUM_16, GPIO_NUM_17);
 
 }

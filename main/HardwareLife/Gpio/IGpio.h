@@ -23,6 +23,7 @@ public:
     virtual int duration()=0;
     virtual int getNumber()=0;
     virtual void setONOFF(bool)=0;
+        virtual void ping()=0;
 };
 
 

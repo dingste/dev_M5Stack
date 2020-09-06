@@ -15,49 +15,61 @@
 #include "../HardwareLife/Gpio/Gpio.h"
 #include "../HardwareLife/Uart/Uart.h"
 #include "../Log.h"
+#include <stdlib.h>
 
-ProjektEi::ProjektEi(gpio_num_t rx, gpio_num_t tx) {
-    rxPin = new Gpio(rx, gpio_mode_t::GPIO_MODE_INPUT);
-    txPin = new Gpio(tx, gpio_mode_t::GPIO_MODE_OUTPUT);
-
-    serialLine = new Uart(rx, tx, UART_NUM_1);
+ProjektEi::ProjektEi(gpio_num_t pinFirst, gpio_num_t pinSecond) {
+    int randomDuration = rand() % 10 + 1;
+    pinA = new Gpio(pinFirst, gpio_mode_t::GPIO_MODE_INPUT);
+    pinB = new Gpio(pinSecond, gpio_mode_t::GPIO_MODE_OUTPUT);
 
     einEi = new Ei();
     einEi->content("superzeug");
     einEi->operation(OPERATIONS::OP_SET, ITEMS::ITEM_MEDIA, MEDIA_TYPE::TEXT);
 
-    Ei* zweitesEi = new Ei();
-    zweitesEi->content("unnütz");
-    zweitesEi->operation(OPERATIONS::OP_SET, ITEMS::ITEM_MEDIA, MEDIA_TYPE::TEXT);
-
     karton = new EierKarton();
     karton->include(einEi);
-    karton->include(zweitesEi);
-    einEi->content("rabimmel");
-    einEi->operation(OPERATIONS::OP_SET, ITEMS::ITEM_MEDIA, MEDIA_TYPE::TEXT);
-    karton->include(einEi);
-
     Ei* ausJournal = karton->getJournal();
-    ausJournal->operation(OPERATIONS::OP_GET, ITEMS::ITEM_ID, MEDIA_TYPE::TEXT);
-    DEBUGOUT << ausJournal->content() << std::endl;
-    ausJournal->operation(OPERATIONS::OP_GET, ITEMS::ITEM_MEDIA, MEDIA_TYPE::TEXT);
-    DEBUGOUT << ausJournal->content() << std::endl;
 
-    karton->setJournal(ausJournal, true);
-    karton->setJournal(ausJournal, true);
+    // schleife für gpios
 
-    Ei* neuesJournal = karton->getJournal();
-    neuesJournal->operation(OPERATIONS::OP_GET, ITEMS::ITEM_ID, MEDIA_TYPE::TEXT);
-    DEBUGOUT << neuesJournal->content() << std::endl;
-    neuesJournal->operation(OPERATIONS::OP_GET, ITEMS::ITEM_MEDIA, MEDIA_TYPE::TEXT);
-    DEBUGOUT << neuesJournal->content() << std::endl;
+    while (true) { //!pinA->connected() || !pinB->connected()) {
+    /// pin einzeln abfragen
+        /// aushandeln rx / tx
+        if (pinB->connected()) {
+            DEBUGOUT << pinB->getNumber() << " pinB connected\n";
+            serialLine = new Uart(pinSecond, pinFirst, UART_NUM_1);
+            break;
+        }else {
+        pinB->ping();
+        vTaskDelay(randomDuration / portTICK_PERIOD_MS);
+        }
+        if (pinA->connected()) {
+            DEBUGOUT << pinA->getNumber() << " pinA connected\n";
+            serialLine = new Uart(pinFirst, pinSecond, UART_NUM_1);
+            break;
+        }else{
+        pinA->ping();
+        vTaskDelay(2*randomDuration / portTICK_PERIOD_MS);}
+    }
+
+
+    // schleife gui
+    // schleife data transport
+
+    /// bt aufbauen
+    /// wifi aufbauen
+    /// zuerst Ei
+    /// fingerprint zum vergleich
+    /// dann public key
+
+    delete ausJournal;
 }
 
 ProjektEi::~ProjektEi() {
-    delete rxPin;
-    delete txPin;
+    delete pinB;
+    delete pinA;
     delete einEi;
     delete serialLine;
-
+    delete karton;
 }
 

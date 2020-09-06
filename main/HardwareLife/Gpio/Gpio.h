@@ -21,15 +21,17 @@ class Gpio : public IGpio {
 public:
     Gpio(gpio_num_t pin, gpio_mode_t io);
     virtual ~Gpio();
-
-    int duration();
-    bool connected();
-    bool pending();
     int atPin();
-    void ping();
-    int getNumber();
-    void setONOFF(bool);
 
+    
+    protected:
+    int duration() override;
+    bool connected()override;
+    bool pending()override;
+    int getNumber()override;
+    void setONOFF(bool)override;
+    void ping()override;
+    
 private:
     gpio_num_t gpioNumber;
     int durationTime;

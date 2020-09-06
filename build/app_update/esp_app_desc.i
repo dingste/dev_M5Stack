@@ -1878,7 +1878,7 @@ const __attribute__((section(".rodata_desc"))) esp_app_desc_t esp_app_desc = {
 
 
 
-    .version = "383c25b-dirty",
+    .version = "222f7ed5-dirty",
 
 
 
@@ -1895,8 +1895,8 @@ const __attribute__((section(".rodata_desc"))) esp_app_desc_t esp_app_desc = {
 
 
 
-    .time = "17:29:04",
-    .date = "Sep  5 2020",
+    .time = "17:48:13",
+    .date = "Sep  6 2020",
 
 
 
@@ -1905,7 +1905,7 @@ const __attribute__((section(".rodata_desc"))) esp_app_desc_t esp_app_desc = {
 
 
 
-_Static_assert(sizeof("383c25b-dirty") <= sizeof(esp_app_desc.version), "PROJECT_VER is longer than version field in structure");
+_Static_assert(sizeof("222f7ed5-dirty") <= sizeof(esp_app_desc.version), "PROJECT_VER is longer than version field in structure");
 
 _Static_assert(sizeof("v3.3.2-270-gf4333c8e3") <= sizeof(esp_app_desc.idf_ver), "IDF_VER is longer than idf_ver field in structure");
 

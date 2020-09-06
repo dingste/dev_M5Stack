@@ -30,15 +30,15 @@
 #include "driver/gpio.h"
 class ProjektEi {
 public:
-    ProjektEi(gpio_num_t rx, gpio_num_t tx);
+    ProjektEi(gpio_num_t, gpio_num_t);
     virtual ~ProjektEi();
     
 private:
     METHODS* actualMethod;
     ITEMS* actualItem;
     
-    IGpio* txPin;
-    IGpio* rxPin;
+    IGpio* pinA;
+    IGpio* pinB;
     
     IUart* serialLine;
     
